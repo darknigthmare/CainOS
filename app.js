@@ -1564,6 +1564,11 @@ const OS = {
         "Leur absence de visage aide CainOS a economiser de la memoire.",
         "Pomni les classe automatiquement comme malaise prioritaire."
       ]},
+      additionalvoices: { name: "Additional Voices", age: "NPC", stress: "13%", avatar: "additionalvoices", signal: "V", color: "#d78aff", facts: [
+        "Mannequin rose/violet sans visage, archive sous son nom de fiche : Additional Voices.",
+        "Sa pose appuyee contre une console sert a le distinguer des mannequins blancs generiques.",
+        "CainOS le classe comme personnage de fond, pas comme Abel."
+      ]},
       abel: { name: "Abel", age: "Archive", stress: "88%", avatar: "abel", signal: "A", color: "#66ccff", facts: [
         "Profil d acces lie aux archives finales du projet CainOS.",
         "Sa silhouette est volontairement rendue comme un avatar admin.",
@@ -2142,6 +2147,10 @@ const OS = {
     if (abelVariantSheetMap[avatar]) {
       const [col, row] = abelVariantSheetMap[avatar];
       return `<span class="pixel-sheet-avatar-abel avatar-ab-c${col}-r${row}" style="--avatar-size:${size}px" aria-hidden="true"></span>`;
+    }
+
+    if (avatar === 'additionalvoices') {
+      return `<span class="pixel-sheet-avatar-additional-voices" style="--avatar-size:${size}px" aria-hidden="true"></span>`;
     }
 
     const px = (x, y, w, h, fill) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${fill}"/>`;
