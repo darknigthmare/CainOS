@@ -1848,6 +1848,31 @@ const OS = {
         "Ombre de Caine centree sur les dents, les yeux et la presence d administrateur.",
         "CainOS la signale comme intrusion theatrale plutot que comme entite separee.",
         "La forme sert aux moments ou le systeme transforme l animateur en menace."
+      ]},
+      horrorghost: { name: "Horror Ghost Lady", age: "Entite spectrale", stress: "??", avatar: "horrorghost", signal: "H", color: "#58fff0", facts: [
+        "Fantome cyan a grand chapeau, archivee comme presence spectrale de manoir.",
+        "Les yeux blancs et le contour lumineux gardent l aspect apparition.",
+        "CainOS la traite comme entite d ambiance, pas comme membre du cirque."
+      ]},
+      horrormonster: { name: "Horror Screaming Monster", age: "Anomalie", stress: "100%", avatar: "horrormonster", signal: "M", color: "#f2f2f2", facts: [
+        "Monstre au masque blanc avec bouche verticale et dents multiples.",
+        "Les yeux spirales et les traces rouges servent de signal panique.",
+        "Archive CainOS creee pour les sequences horror non gore."
+      ]},
+      horrorpomnivoid: { name: "Horror Pomni Void-Eyes", age: "Variante cauchemar", stress: "100%", avatar: "horrorpomnivoid", signal: "V", color: "#1b1b1b", facts: [
+        "Pomni horrifique avec grands yeux noirs et larmes d ombre.",
+        "Les deux accessoires ronds rappellent la scene de manoir sans changer son identite.",
+        "Classee projection de peur, pas vraie transformation definitive."
+      ]},
+      horrorpomnispiral: { name: "Horror Pomni Spiral-Eyes", age: "Variante cauchemar", stress: "100%", avatar: "horrorpomnispiral", signal: "O", color: "#ff8a18", facts: [
+        "Pomni corrompue par des yeux spirales lumineux et un sourire trop large.",
+        "Le rouge, bleu et jaune restent visibles sous la lumiere verte et orange.",
+        "CainOS l utilise pour les moments ou le systeme accentue la menace."
+      ]},
+      horrorpomniskull: { name: "Horror Pomni Skull-Mask", age: "Variante cauchemar", stress: "98%", avatar: "horrorpomniskull", signal: "K", color: "#ffb32c", facts: [
+        "Pomni avec masque jaune-orange, yeux noirs tombants et petites dents serrees.",
+        "La silhouette de bouffon reste lisible malgre le visage skull.",
+        "Skin horrifique separe des versions Shadow et Evil."
       ]}
     };
 
@@ -2029,6 +2054,15 @@ const OS = {
     if (shadowVariantSheetMap[avatar]) {
       const [col, row] = shadowVariantSheetMap[avatar];
       return `<span class="pixel-sheet-avatar-shadow avatar-sh-c${col}-r${row}" style="--avatar-size:${size}px" aria-hidden="true"></span>`;
+    }
+
+    const horrorVariantSheetMap = {
+      horrorghost: [0, 0], horrormonster: [1, 0], horrorpomnivoid: [2, 0],
+      horrorpomnispiral: [3, 0], horrorpomniskull: [4, 0]
+    };
+    if (horrorVariantSheetMap[avatar]) {
+      const [col, row] = horrorVariantSheetMap[avatar];
+      return `<span class="pixel-sheet-avatar-horror avatar-hr-c${col}-r${row}" style="--avatar-size:${size}px" aria-hidden="true"></span>`;
     }
 
     const px = (x, y, w, h, fill) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${fill}"/>`;

@@ -1735,6 +1735,17 @@ body {
   image-rendering: pixelated;
 }
 
+.pixel-sheet-avatar-horror {
+  --avatar-size: 46px;
+  display: block;
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  background-image: url('assets/images/cainos-pixel-cast-sheet-horror-pack.png');
+  background-repeat: no-repeat;
+  background-size: 500% 100%;
+  image-rendering: pixelated;
+}
+
 .avatar-c0-r0 { background-position: 0% 0%; }
 .avatar-c1-r0 { background-position: 20% 0%; }
 .avatar-c2-r0 { background-position: 40% 0%; }
@@ -1819,6 +1830,12 @@ body {
 .avatar-sh-c4-r0 { background-position: 66.6667% 0%; }
 .avatar-sh-c5-r0 { background-position: 83.3333% 0%; }
 .avatar-sh-c6-r0 { background-position: 100% 0%; }
+
+.avatar-hr-c0-r0 { background-position: 0% 0%; }
+.avatar-hr-c1-r0 { background-position: 25% 0%; }
+.avatar-hr-c2-r0 { background-position: 50% 0%; }
+.avatar-hr-c3-r0 { background-position: 75% 0%; }
+.avatar-hr-c4-r0 { background-position: 100% 0%; }
 
 .cast-profile-panel {
   flex-grow: 1;
