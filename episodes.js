@@ -2522,6 +2522,95 @@ const EpisodeManager = {
     this.activeStoryMicroGame.prepare();
   },
 
+  escapeRegExp(value) {
+    return String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  },
+
+  getStorySpeakerTags(text) {
+    const matches = Array.from(String(text).matchAll(/\[([^\]\r\n]{1,40})\]:/g));
+    const tags = [];
+    matches.forEach(match => {
+      const tag = match[1].trim();
+      if (tag && !tags.some(existing => existing.toLowerCase() === tag.toLowerCase())) {
+        tags.push(tag);
+      }
+    });
+    return tags;
+  },
+
+  isStageOnlyTransmission(text) {
+    const body = String(text)
+      .replace(/^\s*\[[0-9:.]+\]\s*/, "")
+      .replace(/[♪\s-]+/g, "")
+      .trim();
+    return body.length > 0 && /^(?:\[[^\]]+\]|\([^)]+\)|[!?.,:;])+$/i.test(body);
+  },
+
+  isTechnicalSystemTransmission(text) {
+    const normalized = String(text)
+      .replace(/^\s*\[[0-9:.]+\]\s*/, "")
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toUpperCase();
+    return /\b(SYSTEME|SYSTEM|INITIALISATION|PROTOCOLE|CONNEXION|SIGNAL|CALIBRATION|SYNCHRONISATION|TRANSMISSION|ERREUR|ALERTE|MEMOIRE|CHARGEMENT|ARCHIVE|BIOS|C&A|CAINOS|MAINFRAME|VERIFICATION|INTEGRITE|ACCES|SIMULATION)\b/.test(normalized);
+  },
+
+  stripLeadingSpeakerTag(text, speaker) {
+    if (!speaker) return String(text).trim();
+    const pattern = new RegExp(`\\[${this.escapeRegExp(speaker)}\\]:\\s*`, "i");
+    const match = pattern.exec(String(text));
+    if (!match) return String(text).trim();
+
+    const before = String(text).slice(0, match.index);
+    const beforeIsCueOnly = before
+      .replace(/^\s*\[[0-9:.]+\]\s*/, "")
+      .replace(/\[[^\]]+\]/g, "")
+      .replace(/[-\s]/g, "")
+      .length === 0;
+    if (!beforeIsCueOnly) return String(text).trim();
+
+    return (before + String(text).slice(match.index + match[0].length)).trim();
+  },
+
+  getStoryDisplayLine(line) {
+    const rawSpeaker = String(line.speaker || "SYSTEM").trim();
+    const text = String(line.text || "");
+    const tags = this.getStorySpeakerTags(text);
+    let speaker = rawSpeaker;
+    let displayText = text;
+    let isSystemAudio = rawSpeaker.toUpperCase() === "SYSTEM";
+
+    if (isSystemAudio) {
+      if (tags.length === 1) {
+        speaker = tags[0];
+        displayText = this.stripLeadingSpeakerTag(text, speaker);
+        isSystemAudio = false;
+      } else if (tags.length > 1) {
+        speaker = "CAST";
+        isSystemAudio = false;
+      } else {
+        speaker = this.isStageOnlyTransmission(text) ? "ARCHIVE" : (this.isTechnicalSystemTransmission(text) ? "SYSTEM" : "CAST");
+      }
+    } else {
+      displayText = this.stripLeadingSpeakerTag(text, rawSpeaker);
+    }
+
+    return {
+      speaker: speaker.toUpperCase(),
+      text: displayText,
+      isSystemAudio
+    };
+  },
+
+  formatStoryLine(line, includeLeadingBreak = true) {
+    const displayLine = this.getStoryDisplayLine(line);
+    const prefix = `${includeLeadingBreak ? "\n" : ""}[${displayLine.speaker}] : `;
+    return {
+      ...displayLine,
+      formattedText: prefix + displayLine.text
+    };
+  },
+
   typeNextLine() {
     if (this.storyIndex >= this.storyLines.length) {
       const nextBtn = document.getElementById('btn-story-next');
@@ -2534,8 +2623,8 @@ const EpisodeManager = {
     }
     
     const line = this.storyLines[this.storyIndex];
-    const prefix = line.speaker === "SYSTEM" ? `\n[SYSTEM] : ` : `\n${line.speaker} : `;
-    this.currentLineText = prefix + line.text;
+    const displayLine = this.formatStoryLine(line);
+    this.currentLineText = displayLine.formattedText;
     this.charIndex = 0;
     this.isTyping = true;
     
@@ -2543,8 +2632,8 @@ const EpisodeManager = {
     
     if (this.typewriterTimer) clearInterval(this.typewriterTimer);
     
-    // Adaptive speed: SYSTEM lines type faster, speed multiplier applies
-    const baseDelay = line.speaker === 'SYSTEM' ? 12 : 25;
+    // Adaptive speed: archive lines type faster, speed multiplier applies
+    const baseDelay = displayLine.isSystemAudio ? 12 : 25;
     const delay = Math.max(3, Math.round(baseDelay / this.storySpeed));
 
     this.typewriterTimer = setInterval(() => {
@@ -2560,7 +2649,7 @@ const EpisodeManager = {
         textPane.scrollTop = textPane.scrollHeight;
         
         if (Math.random() < 0.4) {
-          if (line.speaker === "SYSTEM") {
+          if (displayLine.isSystemAudio) {
             SoundManager.play(400, 0.02, 'sine', 0.02);
           } else {
             SoundManager.play(600 + Math.random() * 300, 0.015, 'triangle', 0.02);
@@ -2600,8 +2689,8 @@ const EpisodeManager = {
     let allText = "";
     for (let i = 0; i < this.storyLines.length; i++) {
       const line = this.storyLines[i];
-      const prefix = line.speaker === "SYSTEM" ? `[SYSTEM] : ` : `${line.speaker} : `;
-      allText += (i > 0 ? "\n" : "") + prefix + line.text;
+      const displayLine = this.formatStoryLine(line, false);
+      allText += (i > 0 ? "\n" : "") + displayLine.formattedText;
     }
     this.displayedText = allText;
     textPane.innerText = allText;
