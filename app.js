@@ -1878,6 +1878,36 @@ const OS = {
         "Variante chasseur de Jax avec tenue beige, chapeau et posture de traque.",
         "Les longues oreilles, la peau violette et le regard jaune gardent son identite.",
         "CainOS la classe comme costume d aventure, pas comme nouveau Jax."
+      ]},
+      gloinkstar: { name: "Star Gloink", age: "Gloink", stress: "19%", avatar: "gloinkstar", signal: "S", color: "#7348ff", facts: [
+        "Gloink etoile violette avec deux yeux asymetriques et levres jaunes.",
+        "La forme a cinq pointes est son identifiant principal dans CainOS.",
+        "Classee petite entite Gloink, separee de la Gloink Queen."
+      ]},
+      gloinkcube: { name: "Cube Gloink", age: "Gloink", stress: "22%", avatar: "gloinkcube", signal: "C", color: "#2fb642", facts: [
+        "Gloink cube vert avec yeux cercles de violet et petite bouche rouge.",
+        "Sa silhouette en bloc permet de la distinguer des autres formes.",
+        "CainOS la traite comme variante de forme, pas comme PNJ majeur."
+      ]},
+      gloinkpyramid: { name: "Pyramid Gloink", age: "Gloink", stress: "24%", avatar: "gloinkpyramid", signal: "P", color: "#b41432", facts: [
+        "Gloink pyramide rouge avec yeux decales et petite bouche bleue.",
+        "Le triangle reste lisible meme en icone basse resolution.",
+        "Archivee avec les autres formes Gloink simples."
+      ]},
+      gloinkcrescent: { name: "Crescent Gloink", age: "Gloink", stress: "18%", avatar: "gloinkcrescent", signal: "L", color: "#8b3cff", facts: [
+        "Gloink croissant violet avec yeux places sur la courbe.",
+        "La bouche bleue et la forme de lune gardent son profil distinct.",
+        "CainOS la classe comme forme Gloink non royale."
+      ]},
+      gloinkpin: { name: "Pin Gloink", age: "Gloink", stress: "21%", avatar: "gloinkpin", signal: "I", color: "#35c641", facts: [
+        "Gloink vert en forme de quille avec yeux lateraux et levres jaunes.",
+        "Son corps haut et arrondi evite la confusion avec le cube.",
+        "La fiche conserve la logique toy-like des Gloinks."
+      ]},
+      gloinkround: { name: "Round Gloink", age: "Gloink", stress: "17%", avatar: "gloinkround", signal: "O", color: "#c4b62d", facts: [
+        "Gloink rond jaune avec deux yeux et petite bouche rouge.",
+        "Forme compacte, simple a lire sur le radar CainOS.",
+        "Classee petite entite Gloink de base."
       ]}
     };
 
@@ -2076,6 +2106,15 @@ const OS = {
     if (hunterVariantSheetMap[avatar]) {
       const [col, row] = hunterVariantSheetMap[avatar];
       return `<span class="pixel-sheet-avatar-hunter avatar-hn-c${col}-r${row}" style="--avatar-size:${size}px" aria-hidden="true"></span>`;
+    }
+
+    const gloinkVariantSheetMap = {
+      gloinkstar: [0, 0], gloinkcube: [1, 0], gloinkpyramid: [2, 0],
+      gloinkcrescent: [3, 0], gloinkpin: [4, 0], gloinkround: [5, 0]
+    };
+    if (gloinkVariantSheetMap[avatar]) {
+      const [col, row] = gloinkVariantSheetMap[avatar];
+      return `<span class="pixel-sheet-avatar-gloinks avatar-gl-c${col}-r${row}" style="--avatar-size:${size}px" aria-hidden="true"></span>`;
     }
 
     const px = (x, y, w, h, fill) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${fill}"/>`;
