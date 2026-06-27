@@ -194,9 +194,18 @@ body {
   margin-top: 20px;
 }
 
+.boot-init-button {
+  display: inline-block;
+  margin-top: 10px;
+  min-width: 150px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 13px;
+}
+
 .press-key-msg {
   animation: blink-anim 1s infinite alternate;
   font-weight: bold;
+  margin: 8px 0 0;
 }
 
 .blink {
@@ -1899,6 +1908,15 @@ body {
   color: var(--terminal-cyan);
 }
 
+.ep0-hud {
+  font-size: 12px;
+  gap: 8px;
+}
+
+.ep0-hud > div {
+  white-space: nowrap;
+}
+
 .ep0-game-container, .ep4-game-container, .ep5-game-container, .ep6-game-container, .ep7-game-container, .ep8-game-container, .ep9-game-container {
   display: flex;
   gap: 10px;
@@ -1918,6 +1936,11 @@ body {
   flex-direction: column;
   gap: 6px;
   align-items: stretch;
+}
+
+.ep0-controls-pane .instructions-box {
+  font-size: 9.5px;
+  line-height: 1.35;
 }
 
 /* ==========================================================================

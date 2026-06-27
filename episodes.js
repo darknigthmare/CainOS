@@ -4917,6 +4917,7 @@ class Episode0Game {
     this.handleCanvasClick = this.handleCanvasClick.bind(this);
     this.handleReset = this.handleReset.bind(this);
     this.handleMouseMove = this.handleMouseMove.bind(this);
+    this.handleKeyDown = this.handleKeyDown.bind(this);
   }
 
   resetState() {
@@ -4937,6 +4938,7 @@ class Episode0Game {
     this.canvas.addEventListener('click', this.handleCanvasClick);
     this.canvas.addEventListener('mousemove', this.handleMouseMove);
     this.resetBtn.addEventListener('click', this.handleReset);
+    window.addEventListener('keydown', this.handleKeyDown);
     
     this.generateTarget();
     
@@ -4958,17 +4960,29 @@ class Episode0Game {
     this.canvas.removeEventListener('click', this.handleCanvasClick);
     this.canvas.removeEventListener('mousemove', this.handleMouseMove);
     this.resetBtn.removeEventListener('click', this.handleReset);
+    window.removeEventListener('keydown', this.handleKeyDown);
   }
 
   handleReset() {
     SoundManager.playClick();
+    if (this.timerId) clearInterval(this.timerId);
+    if (this.loopId) cancelAnimationFrame(this.loopId);
     this.resetState();
     this.generateTarget();
+    this.timerId = setInterval(() => {
+      this.timeLeft--;
+      if (this.timerSpan) this.timerSpan.innerText = `${this.timeLeft}s`;
+      if (this.timeLeft <= 0) {
+        EpisodeManager.gameOver("Calibration Ã©chouÃ©e. Impossible d'Ã©tablir la liaison.");
+      }
+    }, 1000);
+    this.lastTick = Date.now();
+    this.loop();
   }
 
   generateTarget() {
-    this.target.x = 40 + Math.random() * (this.canvas.width - 80);
-    this.target.y = 40 + Math.random() * (this.canvas.height - 80);
+    this.target.x = 95 + Math.random() * (this.canvas.width - 190);
+    this.target.y = 65 + Math.random() * (this.canvas.height - 140);
   }
 
   handleMouseMove(e) {
@@ -4989,19 +5003,31 @@ class Episode0Game {
     const dist = Math.sqrt(dx*dx + dy*dy);
     
     if (dist <= this.target.radius + 10) {
-      SoundManager.playBeep();
-      this.score++;
-      if (this.scoreSpan) this.scoreSpan.innerText = `${this.score} / 3`;
-      
-      if (this.score >= 3) {
-        this.winTriggered = true;
-        clearInterval(this.timerId);
-        this.runCalibrationCompletionSequence();
-      } else {
-        this.generateTarget();
-      }
+      this.calibrateCurrentTarget();
     } else {
       SoundManager.playError();
+    }
+  }
+
+  handleKeyDown(e) {
+    if (this.winTriggered) return;
+    if (e.key === ' ' || e.key === 'Enter') {
+      e.preventDefault();
+      this.calibrateCurrentTarget();
+    }
+  }
+
+  calibrateCurrentTarget() {
+    SoundManager.playBeep();
+    this.score++;
+    if (this.scoreSpan) this.scoreSpan.innerText = `${this.score} / 3`;
+
+    if (this.score >= 3) {
+      this.winTriggered = true;
+      clearInterval(this.timerId);
+      this.runCalibrationCompletionSequence();
+    } else {
+      this.generateTarget();
     }
   }
 
@@ -5160,9 +5186,9 @@ class Episode0Game {
     this.ctx.fillRect(0, 0, this.canvas.width, 25);
     
     this.ctx.fillStyle = '#39ff14';
-    this.ctx.font = 'bold 9px monospace';
+    this.ctx.font = 'bold 8px monospace';
     this.ctx.textAlign = 'center';
-    this.ctx.fillText("ETALONNAGE VR : CLIQUEZ SUR LE NODE CLIGNOTANT", this.canvas.width / 2, 16);
+    this.ctx.fillText("VALIDEZ LE NODE", this.canvas.width / 2, 16);
 
     if (!this.winTriggered) {
       const dx = this.mouse.x - this.target.x;
@@ -5223,9 +5249,9 @@ class Episode0Game {
         this.ctx.font = 'bold 10px monospace';
         const blink = Math.floor(Date.now() / 250) % 2 === 0;
         if (blink) {
-          this.ctx.fillText(">> LOCK [CLIQUEZ ICI] <<", this.target.x - 60, this.target.y + pulse + 15);
+          this.ctx.fillText(">> LOCK : VALIDEZ <<", this.target.x - 52, this.target.y + pulse + 15);
         } else {
-          this.ctx.fillText(">> LOCK ACTIVE <<", this.target.x - 45, this.target.y + pulse + 15);
+          this.ctx.fillText(">> LOCK ACTIF <<", this.target.x - 42, this.target.y + pulse + 15);
         }
       } else {
         this.ctx.fillStyle = 'rgba(57, 255, 20, 0.7)';

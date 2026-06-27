@@ -396,6 +396,7 @@ const OS = {
     const log = document.getElementById('boot-log');
     const prompt = document.getElementById('boot-prompt');
     const bootScreen = document.getElementById('boot-screen');
+    const initButton = document.getElementById('boot-init-button');
     const desktop = document.getElementById('desktop-workspace');
 
     const progress = (typeof EpisodeManager !== 'undefined') ? EpisodeManager.getProgress() : [];
@@ -434,27 +435,41 @@ const OS = {
         setTimeout(printLine, 150 + Math.random() * 180);
       } else {
         prompt.style.display = 'block';
+        const pressKeyMsg = prompt.querySelector('.press-key-msg');
+        if (pressKeyMsg) {
+          pressKeyMsg.innerText = 'APPUYEZ SUR ENTREE OU CLIQUEZ INITIALISER';
+        }
         SoundManager.play(1000, 0.2, 'sine', 0.15);
         
+        let bootCompleted = false;
+        const completeBoot = () => {
+          if (bootCompleted) return;
+          bootCompleted = true;
+          SoundManager.playWin();
+          bootScreen.style.display = 'none';
+          desktop.style.display = 'flex';
+          this.isBooted = true;
+          document.getElementById('power-led').classList.add('active');
+          document.getElementById('power-button').classList.add('active');
+          window.removeEventListener('keydown', pressEnter);
+          bootScreen.removeEventListener('click', pressEnter);
+          if (initButton) initButton.removeEventListener('click', pressEnter);
+          this.applySystemStateUI();
+          this.selectEpisodeForCurrentProgress();
+          this.openWindow('simulations');
+        };
+
         const pressEnter = (e) => {
+          if (e.type === 'click' && e.target === initButton) {
+            e.stopPropagation();
+          }
           if (e.key === 'Enter' || e.type === 'click') {
-            SoundManager.playWin();
-            bootScreen.style.display = 'none';
-            desktop.style.display = 'flex';
-            this.isBooted = true;
-            document.getElementById('power-led').classList.add('active');
-            document.getElementById('power-button').classList.add('active');
-            window.removeEventListener('keydown', pressEnter);
-            bootScreen.removeEventListener('click', pressEnter);
-            this.applySystemStateUI();
-            
-            this.selectEpisodeForCurrentProgress();
-            
-            this.openWindow('simulations');
+            completeBoot();
           }
         };
         window.addEventListener('keydown', pressEnter);
         bootScreen.addEventListener('click', pressEnter);
+        if (initButton) initButton.addEventListener('click', pressEnter);
       }
     };
 
