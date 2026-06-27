@@ -448,21 +448,7 @@ const OS = {
             bootScreen.removeEventListener('click', pressEnter);
             this.applySystemStateUI();
             
-            // If Episode 0 has been won, make sure we select the appropriate episode
-            if (typeof EpisodeManager !== 'undefined') {
-              EpisodeManager.updateLocksUI();
-              const progress = EpisodeManager.getProgress();
-              if (progress.includes(0)) {
-                let highest = 1;
-                for (let i = 2; i <= 9; i++) {
-                  if (progress.includes(i - 1)) highest = i;
-                }
-                if (progress.includes(9)) highest = -1;
-                EpisodeManager.selectEpisode(highest);
-              } else {
-                EpisodeManager.selectEpisode(0);
-              }
-            }
+            this.selectEpisodeForCurrentProgress();
             
             this.openWindow('simulations');
           }
@@ -473,6 +459,53 @@ const OS = {
     };
 
     setTimeout(printLine, 500);
+  },
+
+  playLoginJingle() {
+    if (typeof SoundManager === 'undefined') return;
+    SoundManager.playWin();
+    setTimeout(() => SoundManager.play(659, 0.12, 'sine', 0.08), 180);
+    setTimeout(() => SoundManager.play(880, 0.18, 'sine', 0.1), 340);
+  },
+
+  selectEpisodeForCurrentProgress() {
+    if (typeof EpisodeManager === 'undefined') return;
+    EpisodeManager.updateLocksUI();
+    const progress = EpisodeManager.getProgress();
+    if (progress.includes(0)) {
+      let highest = 1;
+      for (let i = 2; i <= 9; i++) {
+        if (progress.includes(i - 1)) highest = i;
+      }
+      if (progress.includes(9)) highest = -1;
+      EpisodeManager.selectEpisode(highest);
+    } else {
+      EpisodeManager.selectEpisode(0);
+    }
+  },
+
+  openSessionAfterCalibration() {
+    const bootScreen = document.getElementById('boot-screen');
+    const desktop = document.getElementById('desktop-workspace');
+    const log = document.getElementById('boot-log');
+    const prompt = document.getElementById('boot-prompt');
+    const powerBtn = document.getElementById('power-button');
+    const powerLed = document.getElementById('power-led');
+
+    if (log) log.innerHTML = "";
+    if (prompt) prompt.style.display = 'none';
+    if (bootScreen) bootScreen.style.display = 'none';
+    if (desktop) desktop.style.display = 'flex';
+    if (powerBtn) powerBtn.classList.add('active');
+    if (powerLed) powerLed.classList.add('active');
+
+    this.isBooted = true;
+    this.wasShutdownByCalibration = false;
+    localStorage.removeItem('was_shutdown_by_calibration');
+    this.applySystemStateUI();
+    this.selectEpisodeForCurrentProgress();
+    this.playLoginJingle();
+    this.openWindow('simulations');
   },
 
   setupClock() {
@@ -618,9 +651,8 @@ const OS = {
         SoundManager.startMainframeHum();
         const wasShutdownVal = localStorage.getItem('was_shutdown_by_calibration');
         if (wasShutdownVal === 'true' || this.wasShutdownByCalibration) {
-          this.wasShutdownByCalibration = false;
-          localStorage.removeItem('was_shutdown_by_calibration');
-          this.isBooted = false;
+          this.openSessionAfterCalibration();
+          return;
         }
         this.applySystemStateUI();
         if (!this.isBooted) this.runBootSequence();
