@@ -1693,6 +1693,16 @@ const OS = {
         "Variante maid de Pomni avec silhouette compacte et air inquiet.",
         "Le bonnet conserve la logique du costume de bouffon en version maid.",
         "CainOS l affiche comme variante cosmétique de Pomni."
+      ]},
+      maidgangle: { name: "Maid Gangle", age: "Variante fan", stress: "57%", avatar: "maidgangle", signal: "M", color: "#e7455e", facts: [
+        "Variante maid de Gangle ajoutee depuis les references que tu as envoyees.",
+        "Le masque blanc et les rubans rouges restent les reperes essentiels.",
+        "CainOS la classe comme costume alternatif, pas comme nouvelle entite."
+      ]},
+      jaxgirl: { name: "Jax Girl", age: "Variante fan", stress: "48%", avatar: "jaxgirl", signal: "X", color: "#8d65ff", facts: [
+        "Variante feminine de Jax inspiree de l image casual que tu as envoyee.",
+        "Les oreilles, la peau violette et les yeux jaunes gardent le lien avec Jax.",
+        "La tenue casual est archivee comme skin fan hors lore principal."
       ]}
     };
 
@@ -1830,6 +1840,14 @@ const OS = {
     if (requestedVariantSheetMap[avatar]) {
       const [col, row] = requestedVariantSheetMap[avatar];
       return `<span class="pixel-sheet-avatar-requested avatar-r-c${col}-r${row}" style="--avatar-size:${size}px" aria-hidden="true"></span>`;
+    }
+
+    const extraVariantSheetMap = {
+      maidgangle: [0, 0], jaxgirl: [1, 0]
+    };
+    if (extraVariantSheetMap[avatar]) {
+      const [col, row] = extraVariantSheetMap[avatar];
+      return `<span class="pixel-sheet-avatar-extra avatar-e-c${col}-r${row}" style="--avatar-size:${size}px" aria-hidden="true"></span>`;
     }
 
     const px = (x, y, w, h, fill) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${fill}"/>`;

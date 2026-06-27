@@ -1680,6 +1680,17 @@ body {
   image-rendering: pixelated;
 }
 
+.pixel-sheet-avatar-extra {
+  --avatar-size: 46px;
+  display: block;
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  background-image: url('assets/images/cainos-pixel-cast-sheet-extra-variants.png');
+  background-repeat: no-repeat;
+  background-size: 200% 100%;
+  image-rendering: pixelated;
+}
+
 .avatar-c0-r0 { background-position: 0% 0%; }
 .avatar-c1-r0 { background-position: 20% 0%; }
 .avatar-c2-r0 { background-position: 40% 0%; }
@@ -1728,6 +1739,9 @@ body {
 .avatar-r-c2-r0 { background-position: 50% 0%; }
 .avatar-r-c3-r0 { background-position: 75% 0%; }
 .avatar-r-c4-r0 { background-position: 100% 0%; }
+
+.avatar-e-c0-r0 { background-position: 0% 0%; }
+.avatar-e-c1-r0 { background-position: 100% 0%; }
 
 .cast-profile-panel {
   flex-grow: 1;
