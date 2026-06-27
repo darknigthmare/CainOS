@@ -1703,6 +1703,56 @@ const OS = {
         "Variante feminine de Jax inspiree de l image casual que tu as envoyee.",
         "Les oreilles, la peau violette et les yeux jaunes gardent le lien avec Jax.",
         "La tenue casual est archivee comme skin fan hors lore principal."
+      ]},
+      beachgangle: { name: "Beach Gangle", age: "Variante fan", stress: "21%", avatar: "beachgangle", signal: "B", color: "#6fb8ff", facts: [
+        "Variante plage de Gangle inspiree de ta reference soleil et parasol.",
+        "Le grand chapeau, le bleu estival et les rubans rouges gardent la lecture immediate.",
+        "CainOS la marque comme skin vacances, hors aventure principale."
+      ]},
+      japanesegangle: { name: "Japanese Gangle", age: "Variante fan", stress: "34%", avatar: "japanesegangle", signal: "G", color: "#f05c6a", facts: [
+        "Variante uniforme japonais de Gangle avec ambiance cerisiers.",
+        "Le masque et les rubans restent prioritaires sur le costume.",
+        "Archivee comme version anime/school, pas comme nouvel etat canon."
+      ]},
+      rhinogangle: { name: "Rhino Gangle", age: "Variante fan", stress: "67%", avatar: "rhinogangle", signal: "N", color: "#e8e1d6", facts: [
+        "Variante rhino de Gangle basee sur la silhouette a corne que tu as montree.",
+        "La tete blanche et le corps ressort gardent une lecture volontairement bizarre.",
+        "CainOS la range dans les costumes experimentaux."
+      ]},
+      workgangle: { name: "Work Gangle", age: "Variante fan", stress: "74%", avatar: "workgangle", signal: "W", color: "#477da8", facts: [
+        "Variante travail de Gangle en chemise bleue et pantalon sombre.",
+        "Le badge et la posture fatiguee rappellent le rendu manager.",
+        "Classee comme skin bureau, pas comme progression narrative."
+      ]},
+      japanesejax: { name: "Japanese Jax", age: "Variante fan", stress: "52%", avatar: "japanesejax", signal: "J", color: "#7c55df", facts: [
+        "Version anime school de Jax avec blazer sombre et cravate.",
+        "Les oreilles violettes et les yeux jaunes gardent l identite du profil.",
+        "CainOS la lie a Jax comme costume alternatif."
+      ]},
+      japaneseragatha: { name: "Japanese Ragatha", age: "Variante fan", stress: "40%", avatar: "japaneseragatha", signal: "R", color: "#e85b58", facts: [
+        "Version anime school de Ragatha avec uniforme et cheveux rouges.",
+        "Le bouton et le sourire doux restent les reperes du personnage.",
+        "Archivee comme variante scolaire fan."
+      ]},
+      japanesepomni: { name: "Japanese Pomni", age: "Variante fan", stress: "89%", avatar: "japanesepomni", signal: "P", color: "#4a8dff", facts: [
+        "Version anime school de Pomni avec uniforme et details de bouffon.",
+        "La petite silhouette inquiete reste volontairement conservee.",
+        "CainOS la garde comme variante visuelle non canonique."
+      ]},
+      japanesekinger: { name: "Japanese Kinger", age: "Variante fan", stress: "96%", avatar: "japanesekinger", signal: "K", color: "#e5cf99", facts: [
+        "Version anime school de Kinger avec sac et uniforme.",
+        "La piece d echecs et la couronne restent les marqueurs principaux.",
+        "Le stress reste haut meme en uniforme scolaire."
+      ]},
+      japanesezooble: { name: "Japanese Zooble", age: "Variante fan", stress: "69%", avatar: "japanesezooble", signal: "Z", color: "#f06cb8", facts: [
+        "Version anime school de Zooble avec pieces modulaires et sac.",
+        "La tete angulaire et les membres incompatibles restent visibles.",
+        "Classee skin scolaire fan dans CainOS."
+      ]},
+      japanesegummigoo: { name: "Japanese Gummigoo", age: "Variante fan", stress: "43%", avatar: "japanesegummigoo", signal: "Y", color: "#78c84a", facts: [
+        "Version anime school de Gummigoo avec uniforme et touches candy-western.",
+        "La silhouette alligator reste differente de Max et Chad.",
+        "Archivee comme variante fan liee au groupe gummy."
       ]}
     };
 
@@ -1848,6 +1898,15 @@ const OS = {
     if (extraVariantSheetMap[avatar]) {
       const [col, row] = extraVariantSheetMap[avatar];
       return `<span class="pixel-sheet-avatar-extra avatar-e-c${col}-r${row}" style="--avatar-size:${size}px" aria-hidden="true"></span>`;
+    }
+
+    const japaneseVariantSheetMap = {
+      beachgangle: [0, 0], japanesegangle: [1, 0], rhinogangle: [2, 0], workgangle: [3, 0], japanesejax: [4, 0],
+      japaneseragatha: [0, 1], japanesepomni: [1, 1], japanesekinger: [2, 1], japanesezooble: [3, 1], japanesegummigoo: [4, 1]
+    };
+    if (japaneseVariantSheetMap[avatar]) {
+      const [col, row] = japaneseVariantSheetMap[avatar];
+      return `<span class="pixel-sheet-avatar-japanese avatar-jp-c${col}-r${row}" style="--avatar-size:${size}px" aria-hidden="true"></span>`;
     }
 
     const px = (x, y, w, h, fill) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${fill}"/>`;
