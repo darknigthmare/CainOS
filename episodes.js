@@ -3316,6 +3316,7 @@ class Episode1Game {
     this.placingFirewall = false;
     this.loopId = null;
     this.lastTick = 0;
+    this.finished = false;
   }
 
   start() {
@@ -3325,7 +3326,7 @@ class Episode1Game {
     this.firewallBtn.addEventListener('click', this.handleFirewallToggle);
     
     this.stabilizeBtn.innerText = `STABILISER (${this.stabilizers})`;
-    this.firewallBtn.innerText = `PLAGER PARE-FEU (${this.firewallsLeft})`;
+    this.firewallBtn.innerText = `PLACER PARE-FEU (${this.firewallsLeft})`;
     this.firewallBtn.classList.remove('btn-primary-retro');
     
     this.lastTick = Date.now();
@@ -3333,6 +3334,7 @@ class Episode1Game {
   }
 
   stop() {
+    this.finished = true;
     if (this.loopId) cancelAnimationFrame(this.loopId);
     this.canvas.removeEventListener('click', this.handleCanvasClick);
     this.stabilizeBtn.removeEventListener('click', this.handleStabilize);
@@ -3340,6 +3342,7 @@ class Episode1Game {
   }
 
   handleCanvasClick(e) {
+    if (this.finished) return;
     const rect = this.canvas.getBoundingClientRect();
     const clickX = (e.clientX - rect.left) * (this.canvas.width / rect.width);
     const clickY = (e.clientY - rect.top) * (this.canvas.height / rect.height);
@@ -3372,6 +3375,7 @@ class Episode1Game {
   }
 
   handleStabilize() {
+    if (this.finished) return;
     if (this.stabilizers > 0 && this.sanity < 100) {
       SoundManager.playWin();
       this.sanity = Math.min(100, this.sanity + 30);
@@ -3384,6 +3388,7 @@ class Episode1Game {
   }
 
   handleFirewallToggle() {
+    if (this.finished) return;
     SoundManager.playClick();
     this.placingFirewall = !this.placingFirewall;
     if (this.placingFirewall) {
@@ -3406,14 +3411,18 @@ class Episode1Game {
   }
 
   loop() {
+    if (this.finished) return;
     const now = Date.now();
     const dt = (now - this.lastTick) / 1000;
     this.lastTick = now;
 
     this.update(dt);
+    if (this.finished) return;
     this.draw();
 
-    this.loopId = requestAnimationFrame(() => this.loop());
+    if (!this.finished) {
+      this.loopId = requestAnimationFrame(() => this.loop());
+    }
   }
 
   isWall(x, y) {
@@ -3463,6 +3472,8 @@ class Episode1Game {
   }
 
   update(dt) {
+    if (this.finished) return;
+
     // 1. Pomni movement logic
     this.pomni.t += this.pomni.speed;
     if (this.pomni.t >= 1) {
@@ -3515,7 +3526,9 @@ class Episode1Game {
       // Win Condition: reached office exit
       if (this.inOffice && this.pomni.x === 10 && this.pomni.y === 1) {
         // Red room final cutscene: she sees table
+        this.finished = true;
         EpisodeManager.gameWon("Pomni a trouvé la sortie... Mais elle n'a trouvé que le Vide et le bureau C&A. Elle est téléportée à la table du banquet.");
+        return;
       }
     } else {
       // Interpolate position
@@ -3568,7 +3581,9 @@ class Episode1Game {
     this.updateSanityUI();
 
     if (this.sanity <= 0) {
+      this.finished = true;
       EpisodeManager.gameOver("Pomni a perdu toute raison. Elle s'est abstraite dans la cave.");
+      return;
     }
   }
 
