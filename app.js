@@ -1753,6 +1753,36 @@ const OS = {
         "Version anime school de Gummigoo avec uniforme et touches candy-western.",
         "La silhouette alligator reste differente de Max et Chad.",
         "Archivee comme variante fan liee au groupe gummy."
+      ]},
+      baseballjax: { name: "Baseball Jax", age: "Variante fan", stress: "46%", avatar: "baseballjax", signal: "B", color: "#b874e8", facts: [
+        "Variante baseball de Jax avec uniforme rose, casquette bleue et gant jaune.",
+        "Les longues oreilles et le sourire moqueur restent les reperes du profil.",
+        "CainOS la classe comme costume sportif fan."
+      ]},
+      baseballzooble: { name: "Baseball Zooble", age: "Variante fan", stress: "64%", avatar: "baseballzooble", signal: "O", color: "#f27ad3", facts: [
+        "Variante baseball de Zooble avec casquette bleue et membres sportifs depareilles.",
+        "La tete angulaire et les pieces incompatibles restent visibles.",
+        "Le module radar la lie a Zooble malgre l equipement."
+      ]},
+      baseballgangle: { name: "Baseball Gangle", age: "Variante fan", stress: "78%", avatar: "baseballgangle", signal: "G", color: "#d84747", facts: [
+        "Variante baseball de Gangle avec casquette bleue et jersey leger.",
+        "Le corps reste un ruban rouge, pas des jambes humaines.",
+        "CainOS garde l expression triste du masque comme signature."
+      ]},
+      baseballragatha: { name: "Baseball Ragatha", age: "Variante fan", stress: "36%", avatar: "baseballragatha", signal: "R", color: "#6d86dd", facts: [
+        "Variante baseball de Ragatha en robe uniforme bleue avec batte.",
+        "Les cheveux rouges et l oeil bouton restent le point d ancrage.",
+        "Archivee comme skin match, hors episode interactif principal."
+      ]},
+      baseballpomni: { name: "Baseball Pomni", age: "Variante fan", stress: "91%", avatar: "baseballpomni", signal: "P", color: "#4068e8", facts: [
+        "Variante baseball de Pomni avec casquette bleue et tenue compacte.",
+        "La silhouette de bouffon reste visible sous l equipement sportif.",
+        "Le stress CainOS reste eleve meme pendant le match."
+      ]},
+      baseballkinger: { name: "Baseball Kinger", age: "Variante fan", stress: "99%", avatar: "baseballkinger", signal: "K", color: "#d7c9aa", facts: [
+        "Variante baseball de Kinger avec casquette et gant.",
+        "La piece d echecs haute et les yeux paniques restent prioritaires.",
+        "CainOS recommande de ne pas lui confier la strategie de l equipe."
       ]}
     };
 
@@ -1907,6 +1937,15 @@ const OS = {
     if (japaneseVariantSheetMap[avatar]) {
       const [col, row] = japaneseVariantSheetMap[avatar];
       return `<span class="pixel-sheet-avatar-japanese avatar-jp-c${col}-r${row}" style="--avatar-size:${size}px" aria-hidden="true"></span>`;
+    }
+
+    const baseballVariantSheetMap = {
+      baseballjax: [0, 0], baseballzooble: [1, 0], baseballgangle: [2, 0],
+      baseballragatha: [3, 0], baseballpomni: [4, 0], baseballkinger: [5, 0]
+    };
+    if (baseballVariantSheetMap[avatar]) {
+      const [col, row] = baseballVariantSheetMap[avatar];
+      return `<span class="pixel-sheet-avatar-baseball avatar-bb-c${col}-r${row}" style="--avatar-size:${size}px" aria-hidden="true"></span>`;
     }
 
     const px = (x, y, w, h, fill) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${fill}"/>`;
