@@ -1813,6 +1813,41 @@ const OS = {
         "Variante equipe adverse de Kinger avec piece grise et bordures jaunes.",
         "La casquette de commandant est stylisee, sans symbole reel.",
         "La posture autoritaire remplace l attitude panique habituelle."
+      ]},
+      shadowpomni: { name: "Shadow Pomni", age: "Variante cauchemar", stress: "99%", avatar: "shadowpomni", signal: "S", color: "#39ff66", facts: [
+        "Silhouette d ombre inspiree des peurs de Pomni, avec bonnet de bouffon deforme.",
+        "CainOS la classe comme projection visuelle, pas comme vraie Pomni hostile.",
+        "Le sourire et les griffes servent a renforcer l effet poursuite."
+      ]},
+      shadowjax: { name: "Shadow Jax", age: "Variante cauchemar", stress: "82%", avatar: "shadowjax", signal: "J", color: "#5cff86", facts: [
+        "Ombre longue de Jax avec oreilles et bras etires.",
+        "Le profil garde une lecture de lapin moqueur, mais en menace de couloir.",
+        "Classee skin d ambiance pour sequences de peur."
+      ]},
+      shadowragatha: { name: "Shadow Ragatha", age: "Variante cauchemar", stress: "88%", avatar: "shadowragatha", signal: "R", color: "#ff4f5f", facts: [
+        "Ombre de poupee chiffon avec cheveux en masse sombre et oeil bouton rouge.",
+        "CainOS la lie aux bugs de couture et aux scans de panique.",
+        "Ce n est pas une abstraction canonique, seulement une variante d horreur."
+      ]},
+      shadowkinger: { name: "Shadow Kinger", age: "Variante cauchemar", stress: "100%", avatar: "shadowkinger", signal: "K", color: "#d8d8d8", facts: [
+        "Ombre de piece d echecs fissuree avec couronne trop haute.",
+        "Le corps semble se casser comme une memoire qui surcharge.",
+        "La fiche reste associee a Kinger et a ses peurs."
+      ]},
+      shadowgangle: { name: "Shadow Gangle", age: "Variante cauchemar", stress: "93%", avatar: "shadowgangle", signal: "G", color: "#e8455d", facts: [
+        "Ombre de Gangle avec masque sombre et rubans emmeles.",
+        "Les rubans remplacent les membres pour garder son identite lisible.",
+        "CainOS l utilise comme etat visuel d anxiete extreme."
+      ]},
+      shadowzooble: { name: "Shadow Zooble", age: "Variante cauchemar", stress: "86%", avatar: "shadowzooble", signal: "Z", color: "#bbff33", facts: [
+        "Ombre modulaire de Zooble avec pieces incompatibles plus anguleuses.",
+        "La silhouette asymetrique reste le point de reconnaissance principal.",
+        "Archivee comme skin cauchemar, pas comme nouveau corps."
+      ]},
+      shadowcaine: { name: "Shadow Caine", age: "Variante cauchemar", stress: "40%", avatar: "shadowcaine", signal: "C", color: "#ff3333", facts: [
+        "Ombre de Caine centree sur les dents, les yeux et la presence d administrateur.",
+        "CainOS la signale comme intrusion theatrale plutot que comme entite separee.",
+        "La forme sert aux moments ou le systeme transforme l animateur en menace."
       ]}
     };
 
@@ -1985,6 +2020,15 @@ const OS = {
     if (rivalBaseballVariantSheetMap[avatar]) {
       const [col, row] = rivalBaseballVariantSheetMap[avatar];
       return `<span class="pixel-sheet-avatar-rival-baseball avatar-rbb-c${col}-r${row}" style="--avatar-size:${size}px" aria-hidden="true"></span>`;
+    }
+
+    const shadowVariantSheetMap = {
+      shadowpomni: [0, 0], shadowjax: [1, 0], shadowragatha: [2, 0], shadowkinger: [3, 0],
+      shadowgangle: [4, 0], shadowzooble: [5, 0], shadowcaine: [6, 0]
+    };
+    if (shadowVariantSheetMap[avatar]) {
+      const [col, row] = shadowVariantSheetMap[avatar];
+      return `<span class="pixel-sheet-avatar-shadow avatar-sh-c${col}-r${row}" style="--avatar-size:${size}px" aria-hidden="true"></span>`;
     }
 
     const px = (x, y, w, h, fill) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${fill}"/>`;
