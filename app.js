@@ -307,6 +307,9 @@ const OS = {
       'start-btn': 'Ouvrir le menu C&A Start.',
       'dialog-close-x': 'Fermer cette fenetre de dialogue.',
       'dialog-btn-ok': 'Confirmer le message systeme.',
+      'circus-dos-close': 'Fermer la representation DOS du cirque.',
+      'circus-dos-launch': 'Ouvrir le panneau de simulation apres le rendu DOS.',
+      'circus-dos-dismiss': 'Retourner au bureau CainOS.',
       'caine-btn-dismiss': 'Fermer l intrusion de Caine.',
       'power-button': 'Eteindre ou rallumer l ecran CainOS.'
     };
@@ -611,6 +614,9 @@ const OS = {
         document.querySelectorAll('.desktop-icon').forEach(i => i.classList.remove('selected'));
         icon.classList.add('selected');
         this.selectedIcon = icon.getAttribute('data-window');
+        if (this.selectedIcon === 'simulations') {
+          this.showCircusDosPreview();
+        }
       });
 
       icon.addEventListener('dblclick', (e) => {
@@ -625,6 +631,23 @@ const OS = {
       this.selectedIcon = null;
       document.getElementById('start-menu').style.display = 'none';
     });
+
+    const closeCircusDos = () => {
+      SoundManager.playClick();
+      this.hideCircusDosPreview();
+    };
+    ['circus-dos-close', 'circus-dos-dismiss'].forEach(id => {
+      const button = document.getElementById(id);
+      if (button) button.addEventListener('click', closeCircusDos);
+    });
+    const launchCircus = document.getElementById('circus-dos-launch');
+    if (launchCircus) {
+      launchCircus.addEventListener('click', () => {
+        SoundManager.playWin();
+        this.hideCircusDosPreview();
+        this.openWindow('simulations');
+      });
+    }
 
     // Start Button
     const startBtn = document.getElementById('start-btn');
@@ -1034,6 +1057,54 @@ const OS = {
         }
       } catch(e) {}
     }
+  },
+
+  showCircusDosPreview() {
+    const overlay = document.getElementById('circus-dos-overlay');
+    const art = document.getElementById('circus-dos-art');
+    if (!overlay || !art) return;
+
+    const progress = (typeof EpisodeManager !== 'undefined') ? EpisodeManager.getProgress() : [];
+    const unlockedCount = progress.filter(ep => ep >= 0 && ep <= 9).length;
+    const abstractionRisk = unlockedCount >= 7 ? 'CRITICAL' : (unlockedCount >= 3 ? 'ELEVATED' : 'STABLE');
+
+    art.innerText = [
+      'C:\\\\CAINE\\\\CIRCUS> render_circus.exe /mode:dos /source:C&A_ARCHIVE',
+      'CAINE ADVENTURE SHELL v0.98',
+      'NEURAL LINK............. ONLINE',
+      `EPISODE MODULES......... ${String(unlockedCount).padStart(2, '0')} / 10`,
+      `ABSTRACTION RISK........ ${abstractionRisk}`,
+      '',
+      '                 .-""""""""""""""""-.',
+      '              .-"   THE AMAZING      "-.',
+      '            ."      DIGITAL CIRCUS      ".',
+      '           /============================\\',
+      '          /  /\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\  \\',
+      '         /__/__/__/__/__/__/__/__/__/__\\',
+      '          |  CAINE MODULE : ONLINE     |',
+      '          |  WACKY WATCH : LISTENING   |',
+      '          |  EXIT DOOR   : UNTRUSTED   |',
+      '          |____________________________|',
+      '            /  []   []   []   []   \\',
+      '           /____POMNI_SIGNAL_LOCK____\\',
+      '',
+      '   [P] NEW SUBJECT        [K] ABSTRACTED KAUFMO TRACE',
+      '   [C] CAINE ROUTINE      [A] C&A ARCHIVE FRAGMENT',
+      '',
+      'C:\\\\CAINE\\\\CIRCUS> note',
+      '"Aucune sortie valide detectee. Veuillez profiter de l aventure."',
+      '',
+      'C:\\\\CAINE\\\\CIRCUS> press LANCER_LE_MODULE to continue'
+    ].join('\\n');
+
+    overlay.style.display = 'flex';
+    SoundManager.play(520, 0.05, 'square', 0.06);
+    setTimeout(() => SoundManager.play(780, 0.05, 'square', 0.05), 80);
+  },
+
+  hideCircusDosPreview() {
+    const overlay = document.getElementById('circus-dos-overlay');
+    if (overlay) overlay.style.display = 'none';
   },
 
   // Window Management
