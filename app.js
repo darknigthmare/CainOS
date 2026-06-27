@@ -1569,6 +1569,11 @@ const OS = {
         "Sa pose appuyee contre une console sert a le distinguer des mannequins blancs generiques.",
         "CainOS le classe comme personnage de fond, pas comme Abel."
       ]},
+      ming: { name: "Ming", age: "NPC", stress: "27%", avatar: "ming", signal: "M", color: "#b7c7d8", facts: [
+        "Mannequin gris argente avec visage noir, grands yeux blancs et petit chapeau bleu clair.",
+        "CainOS le separe d Abel grace a sa palette froide et son regard rond.",
+        "Classe comme personnage de fond lie aux mannequins, pas comme archive Abel."
+      ]},
       themachine: { name: "The Machine", age: "NPC Objet", stress: "58%", avatar: "themachine", signal: "T", color: "#7d4dff", facts: [
         "Boite-machine violette avec yeux globuleux, bouche ouverte, cables et calculatrice bleue.",
         "CainOS la classe comme objet vivant de decor actif, pas comme mannequin.",
@@ -2160,6 +2165,10 @@ const OS = {
 
     if (avatar === 'themachine') {
       return `<span class="pixel-sheet-avatar-the-machine" style="--avatar-size:${size}px" aria-hidden="true"></span>`;
+    }
+
+    if (avatar === 'ming') {
+      return `<span class="pixel-sheet-avatar-ming" style="--avatar-size:${size}px" aria-hidden="true"></span>`;
     }
 
     const px = (x, y, w, h, fill) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${fill}"/>`;
