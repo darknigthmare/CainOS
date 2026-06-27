@@ -246,6 +246,7 @@ const OS = {
   init() {
     this.setupAudio();
     this.setupDials();
+    this.applyButtonTooltips();
     
     // Check if the system was left in a shutdown state by calibration
     const wasShutdownVal = localStorage.getItem('was_shutdown_by_calibration');
@@ -271,6 +272,72 @@ const OS = {
     this.setupIntrusionTriggers();
     this.updateDiagnosticsUI();
     this.applySystemStateUI();
+  },
+
+  applyButtonTooltips() {
+    const tooltips = {
+      'boot-init-button': 'Ouvrir une session CainOS.',
+      'btn-back-to-files': 'Revenir a la liste des fichiers C&A.',
+      'btn-start-simulation': 'Lancer le transcript ou le mini-jeu de l episode selectionne.',
+      'ep0-btn-reset': 'Recommencer la calibration synaptique.',
+      'ep1-btn-stabilize': 'Restaurer une partie de la stabilite mentale de Pomni.',
+      'ep1-btn-firewall': 'Activer le mode placement de pare-feu sur la grille.',
+      'ep2-btn-inject': 'Injecter le patch choisi dans la memoire de Gummigoo.',
+      'ep3-btn-flashlight': 'Allumer ou eteindre la lampe pour reveler la zone proche.',
+      'ep3-btn-decoy': 'Lancer un leurre sonore pour detourner la menace.',
+      'ep3-btn-shotgun': 'Utiliser le fusil de Kinger en dernier recours.',
+      'ep4-btn-reset': 'Reinitialiser la file de commandes Spudsy.',
+      'ep5-btn-reset': 'Relancer la sequence de mini-aventures.',
+      'ep6-btn-reset': 'Recharger la simulation du stand de tir.',
+      'ep7-btn-reset': 'Realimenter les systemes du lac digital.',
+      'ep8-btn-reset': 'Realigner les souvenirs et fragments d origine.',
+      'ep9-btn-reset': 'Redemarrer la simulation noir et blanc.',
+      'ep-1-btn-reset': 'Realigner la liaison synaptique prequelle.',
+      'ep-2-btn-steer': 'Recibler la fusion des noyaux IA.',
+      'btn-story-speed': 'Changer la vitesse de defilement du transcript.',
+      'btn-story-skip': 'Ignorer le reste du transcript et acceder a l etape suivante.',
+      'btn-story-next': 'Afficher la ligne suivante ou continuer la sequence.',
+      'btn-story-micro-action': 'Demarrer l objectif interactif du sous-episode.',
+      'btn-retry-simulation': 'Recommencer la simulation apres un echec.',
+      'btn-victory-continue': 'Valider la simulation terminee et enregistrer la progression.',
+      'watch-btn-cast': 'Afficher les profils des personnages suivis par CainOS.',
+      'watch-btn-radar': 'Afficher le radar du Vide et les signaux detectes.',
+      'watch-btn-refresh-fact': 'Afficher un autre fait Wacky Watch sur ce personnage.',
+      'watch-btn-ping': 'Envoyer un ping de rappel Caine dans le radar.',
+      'start-btn': 'Ouvrir le menu C&A Start.',
+      'dialog-close-x': 'Fermer cette fenetre de dialogue.',
+      'dialog-btn-ok': 'Confirmer le message systeme.',
+      'caine-btn-dismiss': 'Fermer l intrusion de Caine.',
+      'power-button': 'Eteindre ou rallumer l ecran CainOS.'
+    };
+
+    Object.entries(tooltips).forEach(([id, tooltip]) => {
+      const button = document.getElementById(id);
+      if (!button) return;
+      button.setAttribute('title', tooltip);
+      button.setAttribute('aria-label', tooltip);
+    });
+
+    document.querySelectorAll('.win-btn.win-min').forEach(button => {
+      button.setAttribute('title', 'Reduire la fenetre.');
+      button.setAttribute('aria-label', 'Reduire la fenetre');
+    });
+    document.querySelectorAll('.win-btn.win-max').forEach(button => {
+      button.setAttribute('title', 'Agrandir ou restaurer la fenetre.');
+      button.setAttribute('aria-label', 'Agrandir ou restaurer la fenetre');
+    });
+    document.querySelectorAll('.win-btn.win-close').forEach(button => {
+      button.setAttribute('title', 'Fermer la fenetre.');
+      button.setAttribute('aria-label', 'Fermer la fenetre');
+    });
+
+    document.querySelectorAll('button:not([title])').forEach(button => {
+      const label = button.innerText.trim();
+      if (!label) return;
+      const tooltip = `Action CainOS : ${label}`;
+      button.setAttribute('title', tooltip);
+      button.setAttribute('aria-label', tooltip);
+    });
   },
 
   setupAudio() {
