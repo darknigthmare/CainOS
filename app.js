@@ -1873,6 +1873,11 @@ const OS = {
         "Pomni avec masque jaune-orange, yeux noirs tombants et petites dents serrees.",
         "La silhouette de bouffon reste lisible malgre le visage skull.",
         "Skin horrifique separe des versions Shadow et Evil."
+      ]},
+      hunterjax: { name: "Hunter Jax", age: "Variante fan", stress: "47%", avatar: "hunterjax", signal: "H", color: "#c4a45f", facts: [
+        "Variante chasseur de Jax avec tenue beige, chapeau et posture de traque.",
+        "Les longues oreilles, la peau violette et le regard jaune gardent son identite.",
+        "CainOS la classe comme costume d aventure, pas comme nouveau Jax."
       ]}
     };
 
@@ -2063,6 +2068,14 @@ const OS = {
     if (horrorVariantSheetMap[avatar]) {
       const [col, row] = horrorVariantSheetMap[avatar];
       return `<span class="pixel-sheet-avatar-horror avatar-hr-c${col}-r${row}" style="--avatar-size:${size}px" aria-hidden="true"></span>`;
+    }
+
+    const hunterVariantSheetMap = {
+      hunterjax: [0, 0]
+    };
+    if (hunterVariantSheetMap[avatar]) {
+      const [col, row] = hunterVariantSheetMap[avatar];
+      return `<span class="pixel-sheet-avatar-hunter avatar-hn-c${col}-r${row}" style="--avatar-size:${size}px" aria-hidden="true"></span>`;
     }
 
     const px = (x, y, w, h, fill) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${fill}"/>`;
