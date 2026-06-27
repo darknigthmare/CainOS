@@ -1524,6 +1524,21 @@ const OS = {
         "Son profil C&A alterne entre NPC et HUMAN selon le patch.",
         "Le canyon des sucreries conserve sa signature de sirop."
       ]},
+      max: { name: "Max", age: "NPC", stress: "54%", avatar: "max", signal: "X", color: "#75bd3f", facts: [
+        "Alligator gummy associe a la bande de Gummigoo.",
+        "CainOS le classe comme PNJ de l aventure sucree, pas comme humain connecte.",
+        "Sa silhouette western sert a le distinguer de Chad dans les archives."
+      ]},
+      chad: { name: "Chad", age: "NPC", stress: "49%", avatar: "chad", signal: "H", color: "#8bd64a", facts: [
+        "Partenaire gummy de Gummigoo et Max dans le meme sous-systeme narratif.",
+        "Son profil garde un signal candy-western stable.",
+        "Les logs CainOS le traitent comme PNJ de groupe."
+      ]},
+      orbsman: { name: "Orbsman", age: "NPC", stress: "33%", avatar: "orbsman", signal: "O", color: "#6dd8ff", facts: [
+        "PNJ compose de spheres colorees et de membres segmentes.",
+        "Son corps par orbites donne un bon signal radar dans la Wacky Watch.",
+        "CainOS le range avec les entites de decor actif et les PNJ episodiques."
+      ]},
       loolilalu: { name: "Princess Loolilalu", age: "NPC", stress: "28%", avatar: "loolilalu", signal: "L", color: "#ff9ad5", facts: [
         "Signature royale detectee dans le royaume des sucreries.",
         "Son portrait CainOS utilise un diademe simplifie en pixels.",
@@ -1608,6 +1623,51 @@ const OS = {
         "Creature vert clair en forme de bulbe, rattachee aux membres abstraits.",
         "Le nez vert, le noeud orange et les paupieres violettes sont conserves.",
         "CainOS l affiche en archive pour respecter son statut hors episode actif."
+      ]},
+      ganglekawaii: { name: "Kawaii Gangle", age: "Variante", stress: "24%", avatar: "ganglekawaii", signal: "K", color: "#ff9fcd", facts: [
+        "Variante visuelle archivee pour les modes stylises de CainOS.",
+        "Ce n est pas une nouvelle personne, mais un skin de Gangle.",
+        "Le style kawaii garde les rubans et le masque comme points de fidelite."
+      ]},
+      ganglecomedy: { name: "Gangle Comedy Mask", age: "Variante", stress: "31%", avatar: "ganglecomedy", signal: "C", color: "#ff6d4a", facts: [
+        "Etat de Gangle quand le masque de comedie tient encore.",
+        "CainOS le separe pour clarifier les changements d humeur.",
+        "Le radar garde le profil lie a Gangle, pas a un autre membre."
+      ]},
+      gangletragedy: { name: "Gangle Tragedy Mask", age: "Variante", stress: "82%", avatar: "gangletragedy", signal: "T", color: "#8fa8ff", facts: [
+        "Etat triste associe au masque endommage ou perdu.",
+        "La Wacky Watch l affiche comme variante d etat emotionnel.",
+        "Les rubans restent le marqueur principal du profil."
+      ]},
+      evilpomni: { name: "Evil Pomni", age: "PNJ Variant", stress: "91%", avatar: "evilpomni", signal: "E", color: "#c12b3f", facts: [
+        "Contrepartie Evil Big Top traitee comme PNJ variant.",
+        "CainOS ne la confond pas avec la vraie Pomni connectee.",
+        "Palette sombre et formes de bouffon inversent son signal habituel."
+      ]},
+      eviljax: { name: "Evil Jax", age: "PNJ Variant", stress: "66%", avatar: "eviljax", signal: "V", color: "#7436c9", facts: [
+        "Contrepartie Evil Big Top de Jax, classee PNJ hostile.",
+        "La fiche garde les oreilles et la silhouette de lapin comme repere.",
+        "CainOS isole ce profil pour eviter les faux positifs du radar."
+      ]},
+      evilragatha: { name: "Evil Ragatha", age: "PNJ Variant", stress: "76%", avatar: "evilragatha", signal: "A", color: "#b64058", facts: [
+        "Contrepartie Evil Big Top de Ragatha en version poupee sombre.",
+        "Les coutures et le sourire sont marques comme signaux de variant.",
+        "Cette entree reste un PNJ miroir, pas un etat canonique de Ragatha."
+      ]},
+      evilkinger: { name: "Evil Kinger", age: "PNJ Variant", stress: "97%", avatar: "evilkinger", signal: "I", color: "#b8a06d", facts: [
+        "Contrepartie Evil Big Top de Kinger avec couronne fissuree.",
+        "Le signal conserve la silhouette de piece d echecs.",
+        "CainOS le garde hors des souvenirs de Queenie pour ne pas brouiller le lore."
+      ]},
+      evilzooble: { name: "Evil Zooble", age: "PNJ Variant", stress: "73%", avatar: "evilzooble", signal: "Z", color: "#f05db6", facts: [
+        "Contrepartie Evil Big Top de Zooble, composee de pieces plus agressives.",
+        "La modularite reste le point commun avec le profil original.",
+        "CainOS l affiche comme variante PNJ, pas comme nouveau corps de Zooble."
+      ]},
+      evilorbsman: { name: "Evil Orbsman", age: "PNJ Variant", stress: "68%", avatar: "evilorbsman", signal: "Q", color: "#a34dff", facts: [
+        "Contrepartie Evil Big Top d Orbsman, utilisee a la place d une Evil Gangle.",
+        "La structure en spheres reste visible malgre la corruption visuelle.",
+        "Cette entree evite d inventer une contrepartie hostile directe de Gangle."
       ]}
     };
 
@@ -1727,6 +1787,16 @@ const OS = {
     if (abstractedSheetMap[avatar]) {
       const [col, row] = abstractedSheetMap[avatar];
       return `<span class="pixel-sheet-avatar-abstracted avatar-a-c${col}-r${row}" style="--avatar-size:${size}px" aria-hidden="true"></span>`;
+    }
+
+    const variantSheetMap = {
+      max: [0, 0], chad: [1, 0], orbsman: [2, 0], ganglekawaii: [3, 0],
+      ganglecomedy: [0, 1], gangletragedy: [1, 1], evilpomni: [2, 1], eviljax: [3, 1],
+      evilragatha: [0, 2], evilkinger: [1, 2], evilzooble: [2, 2], evilorbsman: [3, 2]
+    };
+    if (variantSheetMap[avatar]) {
+      const [col, row] = variantSheetMap[avatar];
+      return `<span class="pixel-sheet-avatar-variants avatar-v-c${col}-r${row}" style="--avatar-size:${size}px" aria-hidden="true"></span>`;
     }
 
     const px = (x, y, w, h, fill) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${fill}"/>`;
