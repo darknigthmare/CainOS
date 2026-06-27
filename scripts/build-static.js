@@ -12,3 +12,9 @@ for (const file of files) {
   fs.copyFileSync(path.join(root, file), path.join(dist, file));
   console.log(`copied ${file} -> dist/${file}`);
 }
+
+const assetsDir = path.join(root, 'assets');
+if (fs.existsSync(assetsDir)) {
+  fs.cpSync(assetsDir, path.join(dist, 'assets'), { recursive: true });
+  console.log('copied assets -> dist/assets');
+}

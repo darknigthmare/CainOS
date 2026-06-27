@@ -1660,6 +1660,16 @@ const OS = {
   },
 
   getPixelAvatarSvg(avatar, size = 46) {
+    const sheetMap = {
+      pomni: [0, 0], caine: [1, 0], bubble: [2, 0], jax: [3, 0], ragatha: [4, 0], kinger: [5, 0],
+      gangle: [0, 1], zooble: [1, 1], queenie: [2, 1], kaufmo: [3, 1], gummigoo: [4, 1], loolilalu: [5, 1],
+      fudge: [0, 2], gloinkqueen: [1, 2], mannequin: [2, 2], abel: [3, 2], moon: [4, 2], sun: [5, 2]
+    };
+    if (sheetMap[avatar]) {
+      const [col, row] = sheetMap[avatar];
+      return `<span class="pixel-sheet-avatar avatar-c${col}-r${row}" style="--avatar-size:${size}px" aria-hidden="true"></span>`;
+    }
+
     const px = (x, y, w, h, fill) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${fill}"/>`;
     const bg = px(0, 0, 16, 16, '#101318');
     const sprites = {
