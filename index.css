@@ -1768,6 +1768,21 @@ body {
   image-rendering: pixelated;
 }
 
+.pixel-sheet-avatar-gloink-queen-scale {
+  --avatar-size: 46px;
+  display: block;
+  width: calc(var(--avatar-size) * 2.8);
+  height: var(--avatar-size);
+  background-image: url('assets/images/cainos-pixel-cast-sheet-gloink-queen-scale.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  image-rendering: pixelated;
+}
+
+.cast-pixel-icon .pixel-sheet-avatar-gloink-queen-scale {
+  width: var(--avatar-size);
+}
+
 .avatar-c0-r0 { background-position: 0% 0%; }
 .avatar-c1-r0 { background-position: 20% 0%; }
 .avatar-c2-r0 { background-position: 40% 0%; }
@@ -1893,6 +1908,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.profile-avatar.profile-avatar-wide {
+  width: 136px;
+  height: 56px;
 }
 
 .profile-meta h3 {

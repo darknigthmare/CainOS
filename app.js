@@ -1554,6 +1554,11 @@ const OS = {
         "Son sprite est rendu comme un noyau a couronne angulaire.",
         "Les capteurs la confondent parfois avec un bug de collision."
       ]},
+      gloinkqueenscale: { name: "Gloink Queen True Scale", age: "NPC Boss", stress: "67%", avatar: "gloinkqueenscale", signal: "Q", color: "#f06f82", facts: [
+        "Version taille reelle : la Queen est volontairement enorme face aux Gloinks simples.",
+        "Le long corps rose, les taches jaunes, les yeux multiples et les bandes bleues gardent son identite.",
+        "CainOS l affiche en format boss pour eviter de la reduire a une petite icone."
+      ]},
       mannequin: { name: "Mannequins", age: "NPC", stress: "0%", avatar: "mannequin", signal: "N", color: "#d8d8d8", facts: [
         "Corps blancs generiques utilises par Caine pour peupler les scenes.",
         "Leur absence de visage aide CainOS a economiser de la memoire.",
@@ -2117,6 +2122,10 @@ const OS = {
       return `<span class="pixel-sheet-avatar-gloinks avatar-gl-c${col}-r${row}" style="--avatar-size:${size}px" aria-hidden="true"></span>`;
     }
 
+    if (avatar === 'gloinkqueenscale') {
+      return `<span class="pixel-sheet-avatar-gloink-queen-scale" style="--avatar-size:${size}px" aria-hidden="true"></span>`;
+    }
+
     const px = (x, y, w, h, fill) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${fill}"/>`;
     const bg = px(0, 0, 16, 16, '#101318');
     const sprites = {
@@ -2150,6 +2159,7 @@ const OS = {
     
     // Draw simple avatar SVG inside #watch-profile-avatar
     const container = document.getElementById('watch-profile-avatar');
+    container.classList.toggle('profile-avatar-wide', char.avatar === 'gloinkqueenscale');
     container.innerHTML = this.getPixelAvatarSvg(char.avatar, 46);
     return;
     let svg = "";
