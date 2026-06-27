@@ -2382,6 +2382,10 @@ const EpisodeManager = {
     const cardEl = document.querySelector(`.sim-card[data-episode="${num}"]`);
     if (cardEl) cardEl.classList.add('active');
 
+    if (window.OS && typeof window.OS.updateWackyWatchCastUI === 'function') {
+      window.OS.updateWackyWatchCastUI();
+    }
+
     this.showStartScreen(num);
   },
 

@@ -1438,7 +1438,7 @@ const OS = {
         delete castData.pomni;
       }
 
-      const fullCastData = this.getWackyCastData();
+      const fullCastData = this.getFilteredWackyCastData();
       const character = castData[this.activeWackyCast] || fullCastData[this.activeWackyCast];
       if (character) {
         const facts = character.facts;
@@ -1944,6 +1944,82 @@ const OS = {
     return castData;
   },
 
+  getEpisodeCastKeys(episodeNum) {
+    const episodeCastMap = {
+      "-2": [
+        "abel", "abelmannequin", "abelfullbody", "caine", "bubble", "sun", "moon"
+      ],
+      "-1": [
+        "kinger", "queenie", "caine", "abel", "abelmannequin", "abelfullbody", "shadowkinger"
+      ],
+      0: [
+        "pomni", "caine", "bubble", "jax", "ragatha", "kinger", "queenie", "gangle", "zooble", "kaufmo",
+        "gloinkqueen", "gloinkqueenscale", "gloinkstar", "gloinkcube", "gloinkpyramid", "gloinkcrescent", "gloinkpin", "gloinkround",
+        "mannequin", "additionalvoices", "ming", "themachine",
+        "ribbit", "scratch", "wormo", "bizco", "rattie", "spike", "pinkcyclops", "yellowclown", "oyster", "bulbcreature"
+      ],
+      1: [
+        "pomni", "caine", "bubble", "jax", "ragatha", "kinger", "gangle", "zooble", "kaufmo",
+        "gloinkqueen", "gloinkqueenscale", "gloinkstar", "gloinkcube", "gloinkpyramid", "gloinkcrescent", "gloinkpin", "gloinkround",
+        "mannequin", "moon", "sun"
+      ],
+      2: [
+        "pomni", "caine", "bubble", "jax", "ragatha", "kinger", "gangle", "zooble",
+        "gummigoo", "max", "chad", "loolilalu", "fudge", "japanesegummigoo"
+      ],
+      3: [
+        "pomni", "jax", "ragatha", "kinger", "gangle", "zooble", "caine", "bubble",
+        "horrorghost", "horrormonster", "horrorpomnivoid", "horrorpomnispiral", "horrorpomniskull",
+        "shadowpomni", "shadowkinger", "shadowjax", "shadowcaine"
+      ],
+      4: [
+        "gangle", "workgangle", "ganglekawaii", "ganglecomedy", "gangletragedy", "pomni", "jax", "ragatha", "kinger", "zooble", "caine", "bubble"
+      ],
+      5: [
+        "caine", "bubble", "pomni", "jax", "ragatha", "kinger", "gangle", "zooble",
+        "orbsman", "evilorbsman", "evilpomni", "eviljax", "evilragatha", "evilkinger", "evilzooble", "shadowcaine"
+      ],
+      6: [
+        "jax", "hunterjax", "pomni", "ragatha", "kinger", "gangle", "zooble", "caine",
+        "baseballjax", "baseballzooble", "baseballgangle", "baseballragatha", "baseballpomni", "baseballkinger",
+        "rivalbaseballzooble", "rivalbaseballpomni", "rivalbaseballpinkgiant", "rivalbaseballragatha", "rivalbaseballjax", "rivalbaseballkinger"
+      ],
+      7: [
+        "gangle", "beachgangle", "pomni", "jax", "hunterjax", "ragatha", "kinger", "zooble", "caine", "bubble"
+      ],
+      8: [
+        "kinger", "queenie", "caine", "bubble", "pomni", "ragatha", "jax",
+        "japanesekinger", "evilkinger", "shadowkinger", "horrorghost", "abel", "abelmannequin", "abelfullbody"
+      ],
+      9: [
+        "pomni", "caine", "bubble", "abel", "abelmannequin", "abelfullbody", "mannequin", "additionalvoices", "ming", "themachine",
+        "shadowpomni", "shadowcaine", "shadowjax", "shadowragatha", "shadowgangle", "shadowzooble"
+      ]
+    };
+
+    const key = String(episodeNum);
+    return episodeCastMap[key] || null;
+  },
+
+  getFilteredWackyCastData() {
+    const allCastData = this.getWackyCastData();
+    const episodeNum = (typeof EpisodeManager !== 'undefined') ? EpisodeManager.currentEpisode : null;
+    const episodeKeys = this.getEpisodeCastKeys(episodeNum);
+
+    if (!episodeKeys) {
+      return allCastData;
+    }
+
+    const filteredCastData = {};
+    episodeKeys.forEach(key => {
+      if (allCastData[key]) {
+        filteredCastData[key] = allCastData[key];
+      }
+    });
+
+    return Object.keys(filteredCastData).length ? filteredCastData : allCastData;
+  },
+
   updateWackyWatchCastUI() {
     const progress = (typeof EpisodeManager !== 'undefined') ? EpisodeManager.getProgress() : [];
     const showPomni = progress.includes(0);
@@ -1986,7 +2062,7 @@ const OS = {
     }
 
     Object.keys(castData).forEach(key => delete castData[key]);
-    Object.assign(castData, this.getWackyCastData());
+    Object.assign(castData, this.getFilteredWackyCastData());
 
     const castList = document.getElementById('watch-cast-list');
     if (castList) {
@@ -1994,7 +2070,7 @@ const OS = {
 
       // Determine active cast member
       if (!this.activeWackyCast || !castData[this.activeWackyCast]) {
-        this.activeWackyCast = showPomni ? 'pomni' : 'kinger';
+        this.activeWackyCast = castData.pomni ? 'pomni' : Object.keys(castData)[0];
       }
 
       // Populate list
