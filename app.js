@@ -882,6 +882,8 @@ const OS = {
     this.isBooted = false;
     
     this.playShutdownSound();
+    SoundManager.stopMainframeHum();
+    SoundManager.stopTheme();
     
     const powerBtn = document.getElementById('power-button');
     const powerLed = document.getElementById('power-led');
@@ -935,7 +937,10 @@ const OS = {
         this.renderTrashList();
       }
       if (winId === 'simulations') {
-        SoundManager.startTheme();
+        const powerLed = document.getElementById('power-led');
+        if (powerLed && powerLed.classList.contains('active')) {
+          SoundManager.startTheme();
+        }
       }
       this.focusWindow(winId);
       this.updateTaskbar();
