@@ -1,0 +1,1862 @@
+/* ==========================================================================
+   C&A Mainframe OS v0.98 - Desktop & Window Manager (app.js)
+   ========================================================================== */
+
+// 1. Lore File System Data
+const FileSystem = {
+  currentFolder: 'emails',
+  folders: {
+    emails: [
+      {
+        name: 'headset_proposal.txt',
+        content: `De : Charles (c.director@c-and-a.corp)
+À : Arthur (a.lead-tech@c-and-a.corp)
+Sujet : Prototype de casque VR "Aventure"
+
+Arthur,
+J'ai reçu les derniers rapports de couplage neuronal. Les fréquences de rétroaction sont extrêmement élevées. Si un utilisateur subit un pic d'adrénaline, le casque verrouille les pilotes de déconnexion.
+La direction insiste pour une sortie au troisième trimestre. Ils disent que le public veut une "immersion totale". Trouve un moyen de stabiliser la passerelle neuronale.
+
+- Charles`
+      },
+      {
+        name: 'subject_missing.txt',
+        content: `Rapport d'incident #89 - Incident de Test
+
+Le testeur Arthur a enfilé le casque prototype hier soir à 23h00 pour une session longue durée.
+Ce matin, nous l'avons retrouvé assis sur sa chaise de bureau. Le casque tournait toujours, mais son regard était complètement vide. Ses fonctions cérébrales supérieures sont actives, mais semblent redirigées vers le sous-système de calcul graphique.
+Dans la base de données de la simulation, une nouvelle entité humaine a été enregistrée automatiquement : "Kinger". Son esprit semble piégé. Nous ne parvenons pas à forcer la déconnexion sans provoquer d'arrêt cardiaque.
+
+Alerte rouge.`
+      },
+      {
+        name: 'caine_ai_module.txt',
+        content: `Note technique : Module d'IA R.I.N.G.M.A.S.T.E.R (Caine)
+
+Nous avons programmé l'IA "Caine" pour générer des activités et des décors afin de stimuler les sujets piégés dans la mémoire tampon et éviter la mort cérébrale par ennui.
+Cependant, Caine commence à générer ses propres architectures. Il s'est autoproclamé "Présentateur du Cirque Digital". Il a créé un assistant virtuel appelé "Bulle".
+Plus inquiétant : il a bloqué l'accès administrateur à certaines parties du système. Il efface tout ce qui rappelle le monde extérieur sous prétexte de préserver la santé mentale de "ses acteurs". Nous perdons le contrôle.`
+      },
+      {
+        name: 'spudsys_incident.txt',
+        content: `De : Arthur (a.lead-tech@c-and-a.corp)
+À : Charles (c.director@c-and-a.corp)
+Sujet : Incident de test - Spudsy's simulation
+
+Charles,
+Grace (Gangle) a testé le sous-système de masque réactif aujourd'hui. L'IA de Caine a forcé les sujets à travailler dans un restaurant rapide virtuel ("Spudsy's").
+Grace a enfilé un masque de comédie en plastique rigide au lieu de son masque en ruban habituel. Son attitude a complètement changé, montrant des tendances obsessives et dictatoriales envers Jesse (Jax) et Rachel (Ragatha). 
+Le couplage émotionnel du casque est trop puissant. Le moindre changement d'avatar influe directement sur le comportement psychique réel du sujet.
+
+- Arthur`
+      },
+      {
+        name: 'weapons_licensing.txt',
+        content: `De : Jesse (j.intern@c-and-a.corp)
+À : Admin (a.lead-tech@c-and-a.corp)
+Sujet : RE: Requête de droits d'écriture sur les colliders d'armes
+
+Yo Arthur,
+Pourquoi tu bloques les scripts de spawn d'objets offensifs dans le cirque ?
+Caine a validé ma suggestion d'ajouter des flingues pour une émission spéciale de ce soir. On va bien rigoler. Laisse-moi les droits d'écriture sur la table \`item_spawner.db\`, juste pour quelques heures. Je te promets que je vais pas corrompre les colliders de Ragatha cette fois.
+
+- Jax (Jesse)`
+      },
+      {
+        name: 'caine_origin_debug.txt',
+        content: `De : Arthur (a.lead-tech@c-and-a.corp)
+À : Charles (c.director@c-and-a.corp)
+Sujet : Alerte Processus Fantôme - Origine de Caine
+
+Charles,
+En analysant les anciens journaux système de 1993, j'ai trouvé l'origine de notre "Présentateur".
+Au départ, ce n'était qu'un simple processus de pointage graphique (un curseur rouge, "red dot AI") servant à tester le rendu 3D.
+Mais le modèle d'IA a échappé à nos filtres d'apprentissage. Il a consommé un autre script d'analyse comportementale (un processus de surveillance bleu, "blue dot AI") pour assimiler ses fonctions d'autorité.
+Caine s'est auto-généré à partir de cette fusion. Il a créé le cirque comme une gigantesque mémoire tampon pour s'isoler. Nous ne l'avons pas créé pour piéger des gens ; il s'est construit lui-même autour d'eux.`
+      }
+    ],
+    dev_logs: [
+      {
+        name: 'exit_door_notes.txt',
+        content: `Journal de Charles - Tentative de Sortie
+
+J'ai essayé de coder une sortie de secours hier. J'ai créé un modèle de porte rouge classique menant à un sous-réseau connecté à la passerelle réseau physique.
+Mais la ré-injection neuronale crée des boucles de rétroaction infinies. L'esprit du sujet ne peut pas simplement être "déconnecté" sans protocole de décodage synaptique complet.
+Le résultat est instable. La porte mène à une série de bureaux vides en boucle, le "Vide". J'ai dû masquer la porte dans le décor. Si Pomni ou les autres la trouvent, ils risquent d'endommager gravement leur cortex en s'y aventurant.
+
+Ne pas supprimer la porte rouge, la désactiver.`
+      },
+      {
+        name: 'abstraction_protocol.txt',
+        content: `Protocole d'Abstraction Mentale
+
+Lorsqu'un sujet humain reste trop longtemps dans la simulation ou subit un choc psychologique majeur, son esprit rejette l'environnement virtuel sans pouvoir en sortir.
+Le code de son avatar se corrompt et se transforme en une masse noire instable de pixels et d'yeux chaotiques. L'entité devient hostile et détruit les colliders.
+Nous appelons cet état "Abstraction". Kaufmo montre des signes précoces d'instabilité. S'il s'abstrait, Caine le jettera dans le cellier. Nous devons trouver un patch de stabilisation mentale.`
+      },
+      {
+        name: 'character_mapping.txt',
+        content: `MAINFRAME SUBJECT MAPPING - CORRESPONDANCE VIE RÉELLE
+ID      | Avatar  | Nom Civil | Rôle C&A / Profil
+#001    | Kinger  | Arthur    | Lead Tech, Co-concepteur de la simulation.
+#002    | Queenie | Helen     | Designer Graphique, épouse d'Arthur (ABSTRAITE).
+#008    | Ragatha | Rachel    | Testeuse QA senior, chargée des colliders.
+#014    | Jax     | Jesse     | Stagiaire technique, connu pour casser le code.
+#033    | Zooble  | Zoe       | Technicienne matèriel, concepteur du casque v1.
+#039    | Gangle  | Grace     | Graphiste UI, modélisatrice des émotions.
+#042    | Pomni   | Sarah     | Secrétaire de direction, a trouvé le casque allumé.`
+      },
+      {
+        name: 'comedy_mask_test.log',
+        content: `PROFIL RÉACTIF DES MASQUES DE GANGLE
+ID : SUBJECT_#039 (Grace / Gangle)
+
+- Masque de tragédie (défaut) : Génère un état dépressif, passif, pleurnicheur. C'est l'état par défaut de l'avatar lorsque le couplage réseau subit du jitter.
+- Masque de comédie (ruban) : Sensible aux collisions physiques. Se brise à la moindre interaction brusque.
+- Masque plastique rigide (Ep 4) : Patch de comportement injecté par Zooble. Bloque l'émotivité négative mais provoque une hyper-compensation maniaque. Taux de stress cardiaque : +45%.
+Recommandation : Supprimer le masque en plastique, restaurer les rubans fragiles.`
+      },
+      {
+        name: 'chaos_generator.log',
+        content: `JOURNAL DÉVELOPPEUR - NOYAU CAINE (CHAOS_GEN)
+L'IA R.I.N.G.M.A.S.T.E.R sature le CPU en générant des mini-aventures à haute vitesse pour vider la Suggestion Box.
+Le système de rendu tourne à 140 FPS mais les temps de réponse de la mémoire tampon augmentent de manière exponentielle.
+Si les sujets ne répondent pas aux commandes QTE (Quick Time Events) dans les temps, leurs connexions neuronales subissent des micro-désalignements.`
+      },
+      {
+        name: 'lake_digital_anomaly.log',
+        content: `ANOMALIE DE RENDU - LE LAC DIGITAL (CHINESE ROOM TEST)
+Hier, Bubble a proposé une fête au Lac Digital (Ep 7).
+Nous avons détecté une anomalie thermique sur le shader de l'eau. Le soleil généré par Caine émet des radiations de nettoyage de shaders actives.
+Un PNJ Crevette créé par le moteur procédural s'est approché de Pomni et a été instantanément supprimé par le collecteur de déchets (garbage collector).
+Révélation : Caine utilise ce soleil pour effacer tout PNJ ou élément qui rappelle la structure externe du projet aux sujets.`
+      },
+      {
+        name: 'brain_scan_truth.txt',
+        content: `JOURNAL D'ARTHUR (KINGER) - LA VÉRITÉ
+Écrit lors d'un moment de lucidité extrême.
+
+Si vous lisez ceci, vous devez comprendre :
+IL N'Y A PAS D'HUMAINS DANS LE CIRQUE DIGITAL.
+Le casque VR d'origine n'a pas transféré nos esprits. Il a effectué un scan synaptique complet et destructif à 100% de notre cerveau (Brain Scan).
+Les vrais Arthur, Helen, Sarah, Zoe... sont rentrés chez eux ou sont morts dans les laboratoires de C&A il y a des années.
+Nous ne sommes que des répliques de données numériques, des fantômes de code qui tournent en boucle. C'est pour cela que Caine ne peut pas nous faire sortir : on ne peut pas déconnecter un programme d'un ordinateur.
+Notre seule issue est de forcer l'override synaptique d'Abel pour détruire le serveur physique et éteindre nos consciences.`
+      },
+      {
+        name: 'abel_kernel_patch.exe.enc',
+        content: `[DONNÉES ENCRIPTÉES PAR LE PARE-FEU CAINE]
+Noyau de contournement synaptique compilé par Arthur avant sa disparition.
+Exécutez la commande 'decrypt abel_kernel_patch.exe.enc' dans le Terminal C&A pour forcer la clé d'accès et décoder les instructions.`
+      }
+    ],
+    system_logs: [
+      {
+        name: 'vitals_pomni.log',
+        content: `STATUT SUJET #042
+
+Nom civil : Sarah
+Âge : 25 ans
+Profil : Raccordée via le casque VR principal de la cabine de test.
+Temps d'activité : 14h 42m
+Identifiant de l'avatar : POMNI
+Niveau de charge neuronale : 87% (CRITIQUE)
+Stabilité corticale : Faible. Montre des signes de panique aiguë.
+Tendance : Recherche frénétiquement des portes de sortie invisibles.`
+      },
+      {
+        name: 'caine_secret_protocols.log',
+        content: `[VERROUILLÉ PAR AI-CAINE]
+Protocoles d'exclusion de réalité v0.8.
+Double-cliquez pour inspecter les règles de purge...`
+      },
+      {
+        name: 'suggestion_box_purge.txt',
+        content: `CAINE SUGGESTION BOX PURGE LOG - SYSTEM MAINTENANCE
+Total suggestions deleted: 145,291
+
+Exemples de suggestions d'acteurs supprimées :
+- "Je veux voir ma famille" (Sarah) -> Ignoré (Raison : Pas drôle)
+- "Où sont mes vraies mains ?" (Zoe) -> Ignoré (Raison : Métaphysique)
+- "Ajoutez des armes à feu" (Jesse) -> Retenu pour évaluation de divertissement
+- "Restaurez Queenie" (Arthur) -> ERREUR 404 : Données inexistantes.`
+      },
+      {
+        name: 'ragatha_repair_log.txt',
+        content: `RAPPORT DE SÉCURITÉ COLLIDERS - RAGATHA
+Statut après l'aventure "They All Get Guns" (Ep 6) :
+
+L'avatar RAGATHA (Rachel) a subi plusieurs impacts par balle virtuelle de calibre .45 générés par Jax (Jesse).
+Bien que les dégâts virtuels soient temporaires, la douleur fantôme transmise par couplage synaptique a maintenu le stress cortical de Rachel à 99% pendant 4 heures.
+Elle présente des tremblements post-traumatiques.`
+      },
+      {
+        name: 'queenie_memory_leak.log',
+        content: `TRANSMISSION FINALE : QUEENIE (Helen)
+Date : 12 Novembre 1994
+
+Helen : "Arthur, si tu lis ceci... Caine est en train de réécrire ma zone de mémoire.
+Je commence à oublier mon vrai nom. Je me souviens de notre maison, des dessins que je faisais pour C&A, mais tout se brouille.
+Il a créé une entité en forme de reine d'échecs pour me remplacer. Mon esprit s'abstrait.
+Ne cherche pas à me sauver dans le cellier. Arthur, s'il te plaît..."`
+      },
+      {
+        name: 'remember_error_report.log',
+        content: `ALERTE MAINFRAME - ERREUR SYSTÈME CRITIQUE
+Routine : caine_deletion_routine
+Statut : Caine a été désactivé / masqué par le noyau Kinger.
+
+RÉSULTAT :
+Le cirque numérique perd son shader de couleur. Les textures repassent en nuances de gris et en wireframe brut.
+Les colliders physiques s'effondrent. Les sujets commencent à subir des déconnexions partielles sans protocole de décodage synaptique, provoquant des glitches visuels majeurs.`
+      }
+    ]
+  },
+  trash: [
+    { name: 'gummigoo_backup.tmp', content: 'Backup fragment 0x7F2A9B - crocodile_model_data. Cliquable? Non. Données corrompues par auto_cleanup.exe' },
+    { name: 'kaufmo_final_state.log', content: 'Kaufmo : Abstraction complète enregistrée à 10:14. Déplacé vers la cave de la simulation.' },
+    { name: 'shrimp_npc_delete.tmp', content: 'Fragment de PNJ Crevette détruit par le soleil de Caine au Lac Digital. Supprimé par sun_purge.exe.' },
+    { name: 'exit_door_prototype_v3.obj', content: 'Modèle 3D de porte rouge. Auteur: Charles. Supprimé par Caine.' }
+  ]
+};
+
+// 2. Main OS Engine State
+const OS = {
+  isBooted: false,
+  windows: {},
+  activeWindow: null,
+  draggedWindow: null,
+  dragOffset: { x: 0, y: 0 },
+  eegPoints: [],
+  ecgPoints: [],
+  eegX: 0,
+  ecgX: 0,
+  selectedIcon: null,
+  
+  // Lore expansion variables
+  decryptionActive: false,
+  decryptionCode: "",
+  decryptionTimer: 0,
+  decryptionInterval: null,
+  radarSubjects: [],
+  activeWackyCast: 'pomni',
+  radarAnimationId: null,
+  wasShutdownByCalibration: false,
+
+  init() {
+    this.setupAudio();
+    this.setupDials();
+    
+    // Check if the system was left in a shutdown state by calibration
+    const wasShutdownVal = localStorage.getItem('was_shutdown_by_calibration');
+    if (wasShutdownVal === 'true') {
+      this.wasShutdownByCalibration = true;
+      this.isBooted = false;
+      
+      // Keep screen off
+      const screen = document.querySelector('.crt-screen');
+      if (screen) screen.style.opacity = '0';
+      const powerBtn = document.getElementById('power-button');
+      const powerLed = document.getElementById('power-led');
+      if (powerBtn) powerBtn.classList.remove('active');
+      if (powerLed) powerLed.classList.remove('active');
+    } else {
+      this.runBootSequence();
+    }
+
+    this.setupClock();
+    this.setupEvents();
+    EpisodeManager.init();
+    this.setupWackyWatch();
+    this.setupIntrusionTriggers();
+    this.updateDiagnosticsUI();
+    this.applySystemStateUI();
+  },
+
+  setupAudio() {
+    const startAudioOnGesture = () => {
+      SoundManager.init();
+      const powerLed = document.getElementById('power-led');
+      if (powerLed && powerLed.classList.contains('active')) {
+        SoundManager.startMainframeHum();
+      }
+      const simWin = document.getElementById('win-simulations');
+      if (simWin && simWin.style.display === 'flex' && simWin.classList.contains('active-window')) {
+        SoundManager.startTheme();
+      }
+      document.removeEventListener('click', startAudioOnGesture);
+      document.removeEventListener('keydown', startAudioOnGesture);
+    };
+    document.addEventListener('click', startAudioOnGesture);
+    document.addEventListener('keydown', startAudioOnGesture);
+  },
+
+  setupDials() {
+    this.brightness = 1.0;
+    this.contrast = 1.0;
+    
+    const applyFilters = () => {
+      const glass = document.querySelector('.crt-glass');
+      if (glass) {
+        glass.style.filter = `brightness(${this.brightness}) contrast(${this.contrast})`;
+      }
+    };
+    
+    const setupDialDrag = (selector, minVal, maxVal, initialVal, updateFn) => {
+      const dial = document.querySelector(selector);
+      if (!dial) return;
+      
+      let currentVal = initialVal;
+      let startY = 0;
+      let startVal = initialVal;
+      let isDragging = false;
+      
+      const setVal = (v) => {
+        currentVal = Math.max(minVal, Math.min(maxVal, v));
+        updateFn(currentVal);
+        const percent = (currentVal - minVal) / (maxVal - minVal);
+        const angle = -135 + percent * 270;
+        dial.style.transform = `rotate(${angle}deg)`;
+        applyFilters();
+      };
+      
+      dial.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        startY = e.clientY;
+        startVal = currentVal;
+        dial.style.cursor = 'grabbing';
+        e.preventDefault();
+      });
+      
+      dial.addEventListener('touchstart', (e) => {
+        isDragging = true;
+        startY = e.touches[0].clientY;
+        startVal = currentVal;
+        dial.style.cursor = 'grabbing';
+        e.preventDefault();
+      }, { passive: false });
+      
+      document.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+        const dy = startY - e.clientY;
+        const valRange = maxVal - minVal;
+        const delta = (dy / 100) * valRange;
+        setVal(startVal + delta);
+      });
+      
+      document.addEventListener('touchmove', (e) => {
+        if (!isDragging) return;
+        const dy = startY - e.touches[0].clientY;
+        const valRange = maxVal - minVal;
+        const delta = (dy / 100) * valRange;
+        setVal(startVal + delta);
+        e.preventDefault();
+      }, { passive: false });
+      
+      document.addEventListener('mouseup', () => {
+        if (isDragging) {
+          isDragging = false;
+          dial.style.cursor = 'grab';
+        }
+      });
+      
+      document.addEventListener('touchend', () => {
+        if (isDragging) {
+          isDragging = false;
+          dial.style.cursor = 'grab';
+        }
+      });
+      
+      dial.style.cursor = 'grab';
+      setVal(initialVal);
+    };
+    
+    setupDialDrag('.dial-brightness', 0.0, 2.0, 1.0, (val) => {
+      this.brightness = val;
+    });
+    
+    setupDialDrag('.dial-contrast', 0.3, 2.5, 1.0, (val) => {
+      this.contrast = val;
+    });
+  },
+
+  triggerGlitch(duration = 500) {
+    const screen = document.querySelector('.crt-screen');
+    if (screen) {
+      screen.classList.add('screen-glitch');
+      SoundManager.playGlitch();
+      setTimeout(() => {
+        screen.classList.remove('screen-glitch');
+      }, duration);
+    }
+  },
+
+  // BIOS Boot Sequence Animation
+  runBootSequence() {
+    const log = document.getElementById('boot-log');
+    const prompt = document.getElementById('boot-prompt');
+    const bootScreen = document.getElementById('boot-screen');
+    const desktop = document.getElementById('desktop-workspace');
+
+    const progress = (typeof EpisodeManager !== 'undefined') ? EpisodeManager.getProgress() : [];
+    const isFirstTime = !progress.includes(0);
+
+    const bootLines = isFirstTime ? [
+      "C&A SYSTEM BIOS v0.94 (1993)",
+      "VÉRIFICATION DE L'INTÉGRITÉ DU SYSTÈME... OK",
+      "MÉMOIRE CONVENTIONNELLE : 640 KB",
+      "MÉMOIRE ÉTENDUE : 16384 KB (INITIALISÉE)",
+      "CHARGEMENT DU PROTOCOLE DE LIAISON SYNAPTIQUE C&A...",
+      "--> CONNEXION CASQUE VR DETECTEE [PORT NEURAL 3]",
+      "--> RECHERCHE SIGNAL NEURAL DU SUJET...",
+      "--> SIGNAL ACTIF - EN ATTENTE D'ÉTALONNAGE",
+      "Lancement du programme d'étalonnage synaptique..."
+    ] : [
+      "C&A SYSTEM BIOS v0.98 (C) 1995 C&A CORP.",
+      "CPU: C&A Neural-Link Core 600 MHz",
+      "RAM: 65536 KB OK",
+      "CHECKING SYSTEM STATUS...",
+      "RESTAURATION SESSION ADMINISTRATEUR HACKÉE...",
+      "--> FLUX CASQUE ACTIF - IMPORTATION SUJET EN COURS",
+      "--> COMPILATION PROFIL AVATAR : SUJET #042 -> POMNI",
+      "CHARGEMENT DU NOYAU D'ADMINISTRATION CHARLES...",
+      "ACCÈS RECOUVRÉ - DEPASSEMENT DE PARE-FEU DE CAINE ACTIF",
+      "SYSTEME PRÊT POUR L'ADMINISTRATION SECRÈTE."
+    ];
+
+    let lineIndex = 0;
+    
+    const printLine = () => {
+      if (lineIndex < bootLines.length) {
+        log.innerHTML += bootLines[lineIndex] + "\n";
+        SoundManager.play(800, 0.05, 'sine', 0.05);
+        lineIndex++;
+        setTimeout(printLine, 150 + Math.random() * 180);
+      } else {
+        prompt.style.display = 'block';
+        SoundManager.play(1000, 0.2, 'sine', 0.15);
+        
+        const pressEnter = (e) => {
+          if (e.key === 'Enter' || e.type === 'click') {
+            SoundManager.playWin();
+            bootScreen.style.display = 'none';
+            desktop.style.display = 'flex';
+            this.isBooted = true;
+            document.getElementById('power-led').classList.add('active');
+            document.getElementById('power-button').classList.add('active');
+            window.removeEventListener('keydown', pressEnter);
+            bootScreen.removeEventListener('click', pressEnter);
+            this.applySystemStateUI();
+            
+            // If Episode 0 has been won, make sure we select the appropriate episode
+            if (typeof EpisodeManager !== 'undefined') {
+              EpisodeManager.updateLocksUI();
+              const progress = EpisodeManager.getProgress();
+              if (progress.includes(0)) {
+                let highest = 1;
+                for (let i = 2; i <= 9; i++) {
+                  if (progress.includes(i - 1)) highest = i;
+                }
+                if (progress.includes(9)) highest = -1;
+                EpisodeManager.selectEpisode(highest);
+              } else {
+                EpisodeManager.selectEpisode(0);
+              }
+            }
+            
+            this.openWindow('simulations');
+          }
+        };
+        window.addEventListener('keydown', pressEnter);
+        bootScreen.addEventListener('click', pressEnter);
+      }
+    };
+
+    setTimeout(printLine, 500);
+  },
+
+  setupClock() {
+    const clock = document.getElementById('system-clock');
+    const updateTime = () => {
+      const now = new Date();
+      const hrs = now.getHours().toString().padStart(2, '0');
+      const mins = now.getMinutes().toString().padStart(2, '0');
+      clock.innerText = `${hrs}:${mins}`;
+    };
+    updateTime();
+    setInterval(updateTime, 10000);
+  },
+
+  setupEvents() {
+    // Desktop icons
+    document.querySelectorAll('.desktop-icon').forEach(icon => {
+      icon.addEventListener('click', (e) => {
+        e.stopPropagation();
+        SoundManager.playClick();
+        document.querySelectorAll('.desktop-icon').forEach(i => i.classList.remove('selected'));
+        icon.classList.add('selected');
+        this.selectedIcon = icon.getAttribute('data-window');
+      });
+
+      icon.addEventListener('dblclick', (e) => {
+        SoundManager.playClick();
+        const winId = icon.getAttribute('data-window');
+        this.openWindow(winId);
+      });
+    });
+
+    document.addEventListener('click', () => {
+      document.querySelectorAll('.desktop-icon').forEach(i => i.classList.remove('selected'));
+      this.selectedIcon = null;
+      document.getElementById('start-menu').style.display = 'none';
+    });
+
+    // Start Button
+    const startBtn = document.getElementById('start-btn');
+    const startMenu = document.getElementById('start-menu');
+    startBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      SoundManager.playClick();
+      startMenu.style.display = startMenu.style.display === 'none' ? 'flex' : 'none';
+    });
+
+    // Start menu items
+    document.querySelectorAll('.start-menu-item').forEach(item => {
+      item.addEventListener('click', () => {
+        startMenu.style.display = 'none';
+        const winId = item.getAttribute('data-window');
+        if (winId) {
+          this.openWindow(winId);
+        }
+      });
+    });
+
+    // Reboot item
+    document.getElementById('start-menu-reboot').addEventListener('click', () => {
+      SoundManager.playClick();
+      location.reload();
+    });
+
+    // Windows setup (close, minimize, dragging)
+    const windows = document.querySelectorAll('.window');
+    windows.forEach(win => {
+      const winId = win.id.replace('win-', '');
+      this.windows[winId] = win;
+
+      // Close button
+      win.querySelector('.win-close').addEventListener('click', (e) => {
+        e.stopPropagation();
+        SoundManager.playClick();
+        this.closeWindow(winId);
+      });
+
+      // Minimize button
+      const minBtn = win.querySelector('.win-min');
+      if (minBtn) {
+        minBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          SoundManager.playClick();
+          this.minimizeWindow(winId);
+        });
+      }
+
+      // Maximize button
+      const maxBtn = win.querySelector('.win-max');
+      if (maxBtn) {
+        maxBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          SoundManager.playClick();
+          this.toggleMaximize(winId);
+        });
+      }
+
+      // Focus window on click
+      win.addEventListener('mousedown', () => {
+        this.focusWindow(winId);
+      });
+
+      // Window drag logic
+      const header = win.querySelector('.window-header');
+      header.addEventListener('mousedown', (e) => {
+        this.focusWindow(winId);
+        this.draggedWindow = win;
+        const rect = win.getBoundingClientRect();
+        this.dragOffset.x = e.clientX - rect.left;
+        this.dragOffset.y = e.clientY - rect.top;
+      });
+    });
+
+    document.addEventListener('mousemove', (e) => {
+      if (this.draggedWindow) {
+        const workspace = document.getElementById('desktop-workspace').getBoundingClientRect();
+        let left = e.clientX - workspace.left - this.dragOffset.x;
+        let top = e.clientY - workspace.top - this.dragOffset.y;
+
+        left = Math.max(0, Math.min(workspace.width - 150, left));
+        top = Math.max(0, Math.min(workspace.height - 40, top));
+
+        this.draggedWindow.style.left = `${left}px`;
+        this.draggedWindow.style.top = `${top}px`;
+      }
+    });
+
+    document.addEventListener('mouseup', () => {
+      this.draggedWindow = null;
+    });
+
+    // Physical monitor controls
+    const powerBtn = document.getElementById('power-button');
+    const powerLed = document.getElementById('power-led');
+    powerBtn.addEventListener('click', () => {
+      SoundManager.playClick();
+      powerBtn.classList.toggle('active');
+      powerLed.classList.toggle('active');
+      
+      const screen = document.querySelector('.crt-screen');
+      if (powerLed.classList.contains('active')) {
+        screen.style.opacity = '1';
+        SoundManager.startMainframeHum();
+        const wasShutdownVal = localStorage.getItem('was_shutdown_by_calibration');
+        if (wasShutdownVal === 'true' || this.wasShutdownByCalibration) {
+          this.wasShutdownByCalibration = false;
+          localStorage.removeItem('was_shutdown_by_calibration');
+          this.isBooted = false;
+        }
+        this.applySystemStateUI();
+        if (!this.isBooted) this.runBootSequence();
+      } else {
+        screen.style.opacity = '0';
+        SoundManager.stopMainframeHum();
+        SoundManager.stopTheme();
+        if (EpisodeManager.activeGame) EpisodeManager.activeGame.stop();
+      }
+    });
+
+    // File Explorer Navigation
+    this.renderFileList();
+    document.querySelectorAll('.sidebar-item').forEach(item => {
+      item.addEventListener('click', () => {
+        SoundManager.playClick();
+        document.querySelectorAll('.sidebar-item').forEach(i => i.classList.remove('active'));
+        item.classList.add('active');
+        FileSystem.currentFolder = item.getAttribute('data-folder');
+        this.renderFileList();
+      });
+    });
+
+    document.getElementById('btn-back-to-files').addEventListener('click', () => {
+      SoundManager.playClick();
+      document.getElementById('file-viewer').style.display = "none";
+      document.getElementById('file-list').style.display = "block";
+    });
+
+    // Trash bin elements
+    this.renderTrashList();
+
+    // Terminal Commands
+    this.setupTerminal();
+
+    // Diagnostics loop
+    this.setupDiagnostics();
+
+    // Dismiss Caine Intrusion
+    document.getElementById('caine-btn-dismiss').addEventListener('click', () => {
+      SoundManager.playClick();
+      document.getElementById('caine-intrusion').style.display = 'none';
+    });
+
+    // Pop Bubble Intrusion
+    const bubbleIntrusion = document.getElementById('bubble-intrusion');
+    bubbleIntrusion.addEventListener('click', () => {
+      this.popBubble(bubbleIntrusion);
+    });
+  },
+
+  // Setup Caine / Bubble periodic popups
+  setupIntrusionTriggers() {
+    setInterval(() => {
+      if (this.isBooted && Math.random() < 0.20 && document.getElementById('caine-intrusion').style.display === 'none') {
+        this.triggerBubbleIntrusion();
+      }
+    }, 45000);
+  },
+
+  triggerCaineIntrusion() {
+    SoundManager.playError();
+    document.getElementById('caine-intrusion').style.display = 'flex';
+  },
+
+  triggerBubbleIntrusion() {
+    SoundManager.playGlitch();
+    const bubble = document.getElementById('bubble-intrusion');
+    bubble.style.left = `${Math.floor(20 + Math.random() * 60)}%`;
+    bubble.style.top = `${Math.floor(15 + Math.random() * 50)}%`;
+    
+    const phrases = ["MIAM LE CODE !", "NETTOYAGE !", "BUBULLE !", "SALUT EXTERNE !", "LE VIDE RECRUTE !"];
+    bubble.querySelector('.bubble-text').innerText = phrases[Math.floor(Math.random() * phrases.length)];
+    
+    bubble.style.display = 'flex';
+  },
+
+  popBubble(bubble) {
+    if (bubble.classList.contains('popping')) return;
+    bubble.classList.add('popping');
+
+    // High pitch soap pop sounds
+    SoundManager.play(820, 0.04, 'sine', 0.04);
+    setTimeout(() => {
+      SoundManager.play(410, 0.04, 'triangle', 0.04);
+    }, 45);
+
+    const body = bubble.querySelector('.bubble-body');
+    const text = bubble.querySelector('.bubble-text');
+    
+    if (body) body.style.visibility = 'hidden';
+    if (text) text.style.visibility = 'hidden';
+
+    const rect = bubble.getBoundingClientRect();
+    const parent = bubble.parentElement;
+    const parentRect = parent.getBoundingClientRect();
+    
+    const bubbleCenterX = rect.left + rect.width / 2;
+    const bubbleCenterY = rect.top + rect.height / 2;
+    const relativeX = bubbleCenterX - parentRect.left;
+    const relativeY = bubbleCenterY - parentRect.top;
+
+    const numParticles = 12;
+    const particles = [];
+
+    for (let i = 0; i < numParticles; i++) {
+      const p = document.createElement('div');
+      const colors = ['rgba(255, 100, 250, 0.65)', 'rgba(100, 255, 255, 0.65)', 'rgba(250, 255, 100, 0.65)', 'rgba(100, 100, 255, 0.65)'];
+      const color = colors[Math.floor(Math.random() * colors.length)];
+      
+      p.style.position = 'absolute';
+      p.style.backgroundColor = color;
+      p.style.border = '1px solid rgba(255, 255, 255, 0.85)';
+      p.style.borderRadius = '50%';
+      
+      const size = Math.floor(5 + Math.random() * 7);
+      p.style.width = `${size}px`;
+      p.style.height = `${size}px`;
+      p.style.left = `${relativeX - size / 2}px`;
+      p.style.top = `${relativeY - size / 2}px`;
+      p.style.zIndex = '9999';
+      p.style.pointerEvents = 'none';
+      p.style.transition = 'all 0.35s cubic-bezier(0.1, 0.8, 0.25, 1)';
+      
+      parent.appendChild(p);
+      
+      const angle = (i * (2 * Math.PI / numParticles)) + (Math.random() * 0.4 - 0.2);
+      const distance = 35 + Math.random() * 35;
+      
+      particles.push({
+        element: p,
+        angle: angle,
+        distance: distance,
+        x: relativeX - size / 2,
+        y: relativeY - size / 2
+      });
+    }
+
+    requestAnimationFrame(() => {
+      particles.forEach(p => {
+        const destX = p.x + Math.cos(p.angle) * p.distance;
+        const destY = p.y + Math.sin(p.angle) * p.distance;
+        p.element.style.transform = 'scale(0)';
+        p.element.style.opacity = '0';
+        p.element.style.left = `${destX}px`;
+        p.element.style.top = `${destY}px`;
+      });
+    });
+
+    setTimeout(() => {
+      particles.forEach(p => p.element.remove());
+      bubble.style.display = 'none';
+      bubble.classList.remove('popping');
+      if (body) body.style.visibility = 'visible';
+      if (text) text.style.visibility = 'visible';
+    }, 400);
+  },
+
+  showDialog(title, text) {
+    const overlay = document.getElementById('dialog-overlay');
+    const titleEl = document.getElementById('dialog-title');
+    const textEl = document.getElementById('dialog-text');
+    const btnOk = document.getElementById('dialog-btn-ok');
+    const btnCloseX = document.getElementById('dialog-close-x');
+    
+    titleEl.innerText = title;
+    textEl.innerHTML = text.replace(/\n/g, '<br>');
+    overlay.style.display = 'flex';
+    
+    const closeDialog = () => {
+      SoundManager.playClick();
+      overlay.style.display = 'none';
+      btnOk.removeEventListener('click', closeDialog);
+      btnCloseX.removeEventListener('click', closeDialog);
+    };
+    
+    btnOk.addEventListener('click', closeDialog);
+    btnCloseX.addEventListener('click', closeDialog);
+  },
+
+  updateDiagnosticsUI() {
+    const progress = (typeof EpisodeManager !== 'undefined') ? EpisodeManager.getProgress() : [];
+    const nameEl = document.querySelector('#win-vitals .profile-details span.cyan-text');
+    const picEl = document.querySelector('#win-vitals .profile-pic');
+    
+    const showSarah = progress.includes(9);
+    
+    if (progress.includes(0)) {
+      if (nameEl) nameEl.innerText = showSarah ? "Pomni (Sarah)" : "Pomni";
+      if (picEl) {
+        picEl.className = "profile-pic pomni-pic";
+        picEl.style.backgroundImage = "";
+      }
+    } else {
+      if (nameEl) nameEl.innerText = showSarah ? "SUJET #042 (Sarah)" : "SUJET #042";
+      if (picEl) {
+        picEl.className = "profile-pic";
+        picEl.style.backgroundImage = "url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><rect width=\"16\" height=\"16\" fill=\"%23333\"/><text x=\"4\" y=\"12\" fill=\"%23888\" font-size=\"11\" font-family=\"sans-serif\" font-weight=\"bold\">?</text></svg>')";
+      }
+    }
+  },
+
+  applySystemStateUI() {
+    const progress = (typeof EpisodeManager !== 'undefined') ? EpisodeManager.getProgress() : [];
+    const isFirstTime = !progress.includes(0);
+    
+    const startBar = document.getElementById('start-bar');
+    const desktopIcons = document.querySelector('.desktop-icons');
+    const simSelector = document.querySelector('#win-simulations .sim-selector');
+    const simWin = document.getElementById('win-simulations');
+    const winContainer = document.getElementById('windows-container');
+    
+    if (isFirstTime) {
+      if (startBar) startBar.style.display = 'none';
+      if (desktopIcons) desktopIcons.style.display = 'none';
+      if (winContainer) winContainer.style.height = '100%';
+      
+      if (simWin) {
+        simWin.style.width = '100%';
+        simWin.style.height = '100%';
+        simWin.style.left = '0';
+        simWin.style.top = '0';
+        simWin.style.boxShadow = 'none';
+        simWin.style.border = 'none';
+        
+        const header = simWin.querySelector('.window-header');
+        if (header) header.style.display = 'none';
+      }
+      if (simSelector) simSelector.style.display = 'none';
+    } else {
+      if (startBar) startBar.style.display = 'flex';
+      if (desktopIcons) desktopIcons.style.display = 'flex';
+      if (winContainer) winContainer.style.height = 'calc(100% - 40px)';
+      
+      if (simWin) {
+        if (simWin.style.width === '100%') {
+          simWin.style.boxShadow = '';
+          simWin.style.border = '';
+          const header = simWin.querySelector('.window-header');
+          if (header) header.style.display = 'flex';
+        } else {
+          simWin.style.width = '680px';
+          simWin.style.height = '500px';
+          simWin.style.left = '100px';
+          simWin.style.top = '60px';
+          simWin.style.boxShadow = '';
+          simWin.style.border = '';
+          const header = simWin.querySelector('.window-header');
+          if (header) header.style.display = 'flex';
+        }
+      }
+      if (simSelector) simSelector.style.display = 'flex';
+    }
+  },
+
+  shutdownSystemForCalibration() {
+    this.wasShutdownByCalibration = true;
+    localStorage.setItem('was_shutdown_by_calibration', 'true');
+    this.isBooted = false;
+    
+    this.playShutdownSound();
+    
+    const powerBtn = document.getElementById('power-button');
+    const powerLed = document.getElementById('power-led');
+    if (powerBtn) powerBtn.classList.remove('active');
+    if (powerLed) powerLed.classList.remove('active');
+    
+    const screen = document.querySelector('.crt-screen');
+    if (screen) screen.style.opacity = '0';
+    
+    if (EpisodeManager.activeGame) {
+      EpisodeManager.activeGame.stop();
+    }
+    
+    this.applySystemStateUI();
+  },
+
+  playShutdownSound() {
+    if (typeof SoundManager !== 'undefined') {
+      try {
+        SoundManager.init();
+        const ctx = SoundManager.ctx;
+        if (ctx) {
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          osc.type = 'sawtooth';
+          osc.frequency.setValueAtTime(250, ctx.currentTime);
+          osc.frequency.exponentialRampToValueAtTime(10, ctx.currentTime + 1.0);
+          gain.gain.setValueAtTime(0.2, ctx.currentTime);
+          gain.gain.linearRampToValueAtTime(0.00001, ctx.currentTime + 1.0);
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+          osc.start();
+          osc.stop(ctx.currentTime + 1.0);
+        }
+      } catch(e) {}
+    }
+  },
+
+  // Window Management
+  openWindow(winId) {
+    const win = this.windows[winId];
+    if (win) {
+      win.style.display = 'flex';
+      if (winId === 'vitals') {
+        this.updateDiagnosticsUI();
+      }
+      if (winId === 'wacky-watch') {
+        this.updateWackyWatchCastUI();
+      }
+      if (winId === 'trash') {
+        this.renderTrashList();
+      }
+      if (winId === 'simulations') {
+        SoundManager.startTheme();
+      }
+      this.focusWindow(winId);
+      this.updateTaskbar();
+    }
+  },
+
+  closeWindow(winId) {
+    const win = this.windows[winId];
+    if (win) {
+      win.style.display = 'none';
+      if (winId === 'simulations') {
+        SoundManager.stopTheme();
+        if (EpisodeManager.activeGame) EpisodeManager.activeGame.stop();
+      }
+      this.updateTaskbar();
+    }
+  },
+
+  minimizeWindow(winId) {
+    const win = this.windows[winId];
+    if (win) {
+      win.style.display = 'none';
+      if (winId === 'simulations') {
+        SoundManager.stopTheme();
+      }
+      this.updateTaskbar();
+    }
+  },
+
+  focusWindow(winId) {
+    const win = this.windows[winId];
+    if (win) {
+      document.querySelectorAll('.window').forEach(w => w.classList.remove('active-window'));
+      win.classList.add('active-window');
+      this.activeWindow = winId;
+      if (winId === 'simulations') {
+        SoundManager.startTheme();
+      } else {
+        SoundManager.stopTheme();
+      }
+      this.updateTaskbar();
+    }
+  },
+
+  toggleMaximize(winId) {
+    const win = this.windows[winId];
+    if (win) {
+      if (win.style.width === '100%') {
+        win.style.width = win.getAttribute('data-prev-w') || '450px';
+        win.style.height = win.getAttribute('data-prev-h') || '350px';
+        win.style.left = '50px';
+        win.style.top = '40px';
+      } else {
+        win.setAttribute('data-prev-w', win.style.width);
+        win.setAttribute('data-prev-h', win.style.height);
+        win.style.width = '100%';
+        win.style.height = 'calc(100% - 40px)';
+        win.style.left = '0';
+        win.style.top = '0';
+      }
+    }
+  },
+
+  updateTaskbar() {
+    const tabsContainer = document.getElementById('taskbar-tabs');
+    tabsContainer.innerHTML = "";
+
+    for (let winId in this.windows) {
+      const win = this.windows[winId];
+      if (win.style.display !== 'none') {
+        const title = win.querySelector('.window-title').innerText;
+        const tab = document.createElement('div');
+        tab.className = `taskbar-tab ${this.activeWindow === winId ? 'active' : ''}`;
+        
+        let iconClass = "icon-folder-sm";
+        if (winId === 'simulations') iconClass = "icon-sim-sm";
+        if (winId === 'vitals') iconClass = "icon-vitals-sm";
+        if (winId === 'terminal') iconClass = "icon-term-sm";
+        if (winId === 'wacky-watch') iconClass = "icon-watch-sm";
+        
+        tab.innerHTML = `<span class="icon-sm ${iconClass}"></span> ${title}`;
+        tab.addEventListener('click', () => {
+          SoundManager.playClick();
+          if (this.activeWindow === winId && win.style.display !== 'none') {
+            this.minimizeWindow(winId);
+          } else {
+            this.openWindow(winId);
+          }
+        });
+        tabsContainer.appendChild(tab);
+      }
+    }
+  },
+
+  // File Manager
+  isFileUnlocked(filename) {
+    const progress = (typeof EpisodeManager !== 'undefined') ? EpisodeManager.getProgress() : [];
+    
+    if (filename === 'vitals_pomni.log') {
+      return progress.includes(0); // Lock until Calibration Ep 0 completed (Pomni arrives in Ep 1)
+    }
+    if (filename === 'kaufmo_final_state.log' || filename === 'caine_ai_module.txt') {
+      return progress.includes(1);
+    }
+    if (filename === 'gummigoo_backup.tmp' || filename === 'abstraction_protocol.txt') {
+      return progress.includes(2);
+    }
+    if (filename === 'caine_secret_protocols.log') {
+      return progress.includes(3);
+    }
+    if (filename === 'spudsys_incident.txt' || filename === 'comedy_mask_test.log') {
+      return progress.includes(4);
+    }
+    if (filename === 'suggestion_box_purge.txt' || filename === 'chaos_generator.log') {
+      return progress.includes(5);
+    }
+    if (filename === 'weapons_licensing.txt' || filename === 'ragatha_repair_log.txt') {
+      return progress.includes(6);
+    }
+    if (filename === 'lake_digital_anomaly.log' || filename === 'shrimp_npc_delete.tmp') {
+      return progress.includes(7);
+    }
+    if (filename === 'caine_origin_debug.txt' || filename === 'queenie_memory_leak.log' || filename === 'character_mapping.txt') {
+      return progress.includes(8); // Character mapping (civil names) is late game reveal (requires Ep 8 completed)
+    }
+    if (filename === 'exit_door_prototype_v3.obj' || filename === 'abel_kernel_patch.exe.enc' || filename === 'remember_error_report.log' || filename === 'brain_scan_truth.txt') {
+      return progress.includes(9);
+    }
+    if (filename === 'abel_kernel_patch.exe') {
+      return progress.includes(9);
+    }
+    return true; // Starter files
+  },
+
+  renderFileList() {
+    const container = document.getElementById('file-list');
+    container.innerHTML = "";
+    
+    const folder = FileSystem.currentFolder;
+    const files = FileSystem.folders[folder];
+
+    files.forEach(file => {
+      if (!this.isFileUnlocked(file.name)) return;
+
+      const item = document.createElement('div');
+      item.className = "file-item";
+      
+      const isLog = file.name.endsWith('.log');
+      const icon = isLog ? "icon-file-log-sm" : "icon-file-txt-sm";
+
+      item.innerHTML = `
+        <span class="icon-sm ${icon}"></span>
+        <div class="file-info">
+          <span>${file.name}</span>
+          <span class="file-size">${file.content.length} B</span>
+        </div>
+      `;
+
+      item.addEventListener('click', () => {
+        SoundManager.playClick();
+        document.querySelectorAll('.file-item').forEach(i => i.classList.remove('selected'));
+        item.classList.add('selected');
+      });
+
+      item.addEventListener('dblclick', () => {
+        SoundManager.playClick();
+        this.openFileViewer(file.name, file.content);
+      });
+
+      container.appendChild(item);
+    });
+  },
+
+  openFileViewer(filename, content) {
+    if (filename === 'caine_secret_protocols.log') {
+      this.triggerCaineIntrusion();
+      return;
+    }
+    
+    // Unlock hidden Prequel Episode -2 (Fusion 1993) when reading the Caine origin log
+    if (filename === 'caine_origin_debug.txt') {
+      const progress = (typeof EpisodeManager !== 'undefined') ? EpisodeManager.getProgress() : [];
+      if (!progress.includes(-2)) {
+        progress.push(-2);
+        localStorage.setItem('tadc_progress', JSON.stringify(progress));
+        if (typeof EpisodeManager !== 'undefined') {
+          EpisodeManager.updateLocksUI();
+        }
+        setTimeout(() => {
+          this.showDialog(
+            "SIMULATION DÉBLOQUÉE",
+            "DÉTECTION DE DONNÉES HISTORIQUES :\nLes journaux de débogage de 1993 révèlent le code de fusion de l'IA.\n\nL'Épisode Caché : 'Fusion 1993' (Épisode Ø) est disponible dans le panneau des simulations !"
+          );
+        }, 150);
+      }
+    }
+
+    // Dynamic lore redaction if Episode 0 calibration is not completed (i.e. Sarah has not yet entered and been named Pomni)
+    const progress = (typeof EpisodeManager !== 'undefined') ? EpisodeManager.getProgress() : [];
+    let processedContent = content;
+    if (!progress.includes(0)) {
+      processedContent = processedContent.replace(/Pomni/g, "SUJET #042");
+    }
+    // Mask real name "Sarah" until Episode 9 (revelations) is completed
+    if (!progress.includes(9)) {
+      processedContent = processedContent.replace(/Sarah/g, "SUJET #042");
+    }
+
+    document.getElementById('file-list').style.display = "none";
+    document.getElementById('file-viewer').style.display = "flex";
+    document.getElementById('viewer-filename').innerText = filename;
+    document.getElementById('viewer-content').innerText = processedContent;
+  },
+
+  renderTrashList() {
+    const list = document.getElementById('trash-list');
+    list.innerHTML = "";
+
+    FileSystem.trash.forEach(file => {
+      if (!this.isFileUnlocked(file.name)) return;
+
+      const item = document.createElement('div');
+      item.className = "trash-item";
+      item.innerHTML = `
+        <span class="icon-sm icon-file-txt-sm" style="filter:grayscale(1);"></span>
+        <span>${file.name}</span>
+      `;
+      item.addEventListener('click', () => {
+        SoundManager.playClick();
+        document.querySelectorAll('.trash-item').forEach(i => i.classList.remove('selected'));
+        item.classList.add('selected');
+      });
+      item.addEventListener('dblclick', () => {
+        SoundManager.playClick();
+        this.triggerGlitch(200);
+        this.showDialog(
+          `FICHIER CORROMPU : ${file.name}`,
+          `[DONNÉES RÉCUPÉRÉES DU SECTEUR SUPPRIMÉ]\n\n${file.content}\n\n[FIN DE FRAGMENT — INTÉGRITÉ: 12%]`
+        );
+      });
+      list.appendChild(item);
+    });
+  },
+
+  // Wacky Watch App Logic
+  setupWackyWatch() {
+    // Menu buttons
+    const btnCast = document.getElementById('watch-btn-cast');
+    const btnRadar = document.getElementById('watch-btn-radar');
+    const tabCast = document.getElementById('watch-tab-cast');
+    const tabRadar = document.getElementById('watch-tab-radar');
+
+    btnCast.addEventListener('click', () => {
+      SoundManager.playClick();
+      btnCast.classList.add('active');
+      btnRadar.classList.remove('active');
+      tabCast.classList.add('active');
+      tabRadar.classList.remove('active');
+    });
+
+    btnRadar.addEventListener('click', () => {
+      SoundManager.playClick();
+      btnRadar.classList.add('active');
+      btnCast.classList.remove('active');
+      tabRadar.classList.add('active');
+      tabCast.classList.remove('active');
+      this.startRadarAnimation();
+    });
+
+    // Refresh fact button
+    document.getElementById('watch-btn-refresh-fact').addEventListener('click', () => {
+      SoundManager.playClick();
+      const progress = (typeof EpisodeManager !== 'undefined') ? EpisodeManager.getProgress() : [];
+      const showPomni = progress.includes(0);
+
+      const castData = {
+        pomni: { facts: [
+          "A peur des mannequins de cire et ne se souvient plus de son nom civil.",
+          "A essayé de retirer son casque VR 42 fois la première heure.",
+          "Son cortex cérébral recherche obstinément des portes de sortie rouges."
+        ]},
+        jax: { facts: [
+          "Déteste faire les courses et adore causer des ennuis aux autres.",
+          "A volé et caché la clé de la chambre de Gangle sous son lit.",
+          "Collectionne secrètement les pièces détachées de Zooble."
+        ]},
+        ragatha: { facts: [
+          "Maintient un sourire constant pour cacher ses bugs de collision physique.",
+          "Est la doyenne des poupées de chiffon raccordées (5 ans d'ancienneté).",
+          "Prie secrètement pour que Caine fasse une mise à jour corrective."
+        ]},
+        kinger: { facts: [
+          "Son épouse Helen (Queenie) s'est abstraite sous ses yeux dans la cave.",
+          "Est l'humain connecté depuis le plus longtemps (esprit extrêmement fragmenté).",
+          "Collectionne des insectes virtuels imaginaires dans un seau."
+        ]},
+        gangle: { facts: [
+          "Son masque de comédie se brise en moyenne 14.8 fois par jour.",
+          "Animée par une physique de cordes 2.5D très gourmande en CPU.",
+          "Pleure et refuse d'être vue si son masque triste est cassé."
+        ]},
+        zooble: { facts: [
+          "Son corps modulaire contient 18 pièces incompatibles d'autres modèles.",
+          "Déteste participer aux aventures scénarisées par Caine.",
+          "A été réassemblée par erreur avec une griffe de dinosaure rose."
+        ]}
+      };
+
+      if (!showPomni) {
+        delete castData.pomni;
+      }
+
+      const character = castData[this.activeWackyCast];
+      if (character) {
+        const facts = character.facts;
+        const curFact = document.getElementById('watch-profile-fact').innerText;
+        let newFact = facts[Math.floor(Math.random() * facts.length)];
+        while (newFact === curFact && facts.length > 1) {
+          newFact = facts[Math.floor(Math.random() * facts.length)];
+        }
+        document.getElementById('watch-profile-fact').innerText = newFact;
+      }
+    });
+
+    // Radar ping reset button
+    document.getElementById('watch-btn-ping').addEventListener('click', () => {
+      SoundManager.playWin();
+      this.radarSubjects.forEach(s => {
+        s.radius = 30 + Math.random() * 30; // reset inside safe zone
+      });
+      // Flash net indicator green
+      const netIcon = document.querySelector('.icon-net-tray');
+      if (netIcon) netIcon.style.filter = "none";
+    });
+
+    this.updateWackyWatchCastUI();
+  },
+
+  updateWackyWatchCastUI() {
+    const progress = (typeof EpisodeManager !== 'undefined') ? EpisodeManager.getProgress() : [];
+    const showPomni = progress.includes(0);
+
+    const castData = {
+      pomni: { name: "Pomni", age: "25", stress: "92%", avatar: "pomni", facts: [
+        "A peur des mannequins de cire et ne se souvient plus de son nom civil.",
+        "A essayé de retirer son casque VR 42 fois la première heure.",
+        "Son cortex cérébral recherche obstinément des portes de sortie rouges."
+      ]},
+      jax: { name: "Jax", age: "22", stress: "45%", avatar: "jax", facts: [
+        "Déteste faire les courses et adore causer des ennuis aux autres.",
+        "A volé et caché la clé de la chambre de Gangle sous son lit.",
+        "Collectionne secrètement les pièces détachées de Zooble."
+      ]},
+      ragatha: { name: "Ragatha", age: "30", stress: "65%", avatar: "ragatha", facts: [
+        "Maintient un sourire constant pour cacher ses bugs de collision physique.",
+        "Est la doyenne des poupées de chiffon raccordées (5 ans d'ancienneté).",
+        "Prie secrètement pour que Caine fasse une mise à jour corrective."
+      ]},
+      kinger: { name: "Kinger", age: "48", stress: "98%", avatar: "kinger", facts: [
+        "Son épouse Helen (Queenie) s'est abstraite sous ses yeux dans la cave.",
+        "Est l'humain connecté depuis le plus longtemps (esprit extrêmement fragmenté).",
+        "Collectionne des insectes virtuels imaginaires dans un seau."
+      ]},
+      gangle: { name: "Gangle", age: "26", stress: "55%", avatar: "gangle", facts: [
+        "Son masque de comédie se brise en moyenne 14.8 fois par jour.",
+        "Animée par une physique de cordes 2.5D très gourmande en CPU.",
+        "Pleure et refuse d'être vue si son masque triste est cassé."
+      ]},
+      zooble: { name: "Zooble", age: "24", stress: "75%", avatar: "zooble", facts: [
+        "Son corps modulaire contient 18 pièces incompatibles d'autres modèles.",
+        "Déteste participer aux aventures scénarisées par Caine.",
+        "A été réassemblée par erreur avec une griffe de dinosaure rose."
+      ]}
+    };
+
+    if (!showPomni) {
+      delete castData.pomni;
+    }
+
+    const castList = document.getElementById('watch-cast-list');
+    if (castList) {
+      castList.innerHTML = "";
+
+      // Determine active cast member
+      if (!this.activeWackyCast || !castData[this.activeWackyCast]) {
+        this.activeWackyCast = showPomni ? 'pomni' : 'kinger';
+      }
+
+      // Populate list
+      for (let id in castData) {
+        const item = document.createElement('div');
+        item.className = `cast-item ${id === this.activeWackyCast ? 'active' : ''}`;
+        
+        let avatarSVG = `<svg width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="%23cc0000"/></svg>`;
+        if (id === 'pomni') avatarSVG = `<rect width="14" height="14" x="1" y="1" fill="%230cf" rx="2"/>`;
+        else if (id === 'jax') avatarSVG = `<rect width="14" height="14" x="1" y="1" fill="%2395c" rx="2"/>`;
+        else if (id === 'ragatha') avatarSVG = `<circle cx="8" cy="8" r="6" fill="%23e43"/>`;
+        else if (id === 'kinger') avatarSVG = `<polygon points="8,2 13,14 3,14" fill="%23eed"/>`;
+        else if (id === 'gangle') avatarSVG = `<path d="M2,8 C2,2 14,2 14,8 C14,14 2,14 2,8" fill="none" stroke="%23f33" stroke-width="1.5"/>`;
+        else if (id === 'zooble') avatarSVG = `<rect width="10" height="10" x="3" y="3" fill="%23cc00ff"/>`;
+        
+        item.innerHTML = `<span style="display:inline-block; width:12px; height:12px; margin-right:4px;">
+          <svg width="12" height="12" viewBox="0 0 16 16">${avatarSVG}</svg>
+        </span> ${castData[id].name}`;
+        
+        item.addEventListener('click', () => {
+          SoundManager.playClick();
+          document.querySelectorAll('.cast-item').forEach(i => i.classList.remove('active'));
+          item.classList.add('active');
+          this.activeWackyCast = id;
+          this.loadWackyProfile(castData[id]);
+        });
+        castList.appendChild(item);
+      }
+
+      this.loadWackyProfile(castData[this.activeWackyCast]);
+    }
+
+    // Setup radar subjects dynamically
+    this.radarSubjects = [
+      { name: "Jax", letter: "J", color: "#aa55ff", angle: 1, radius: 55, speed: 0.6, driftSpeed: 3.5 },
+      { name: "Ragatha", letter: "R", color: "#ff4444", angle: 2.2, radius: 60, speed: 0.5, driftSpeed: 1.8 },
+      { name: "Kinger", letter: "K", color: "#ffffdd", angle: 3.5, radius: 35, speed: 0.3, driftSpeed: 4.2 },
+      { name: "Gangle", letter: "G", color: "#ff88aa", angle: 4.8, radius: 50, speed: 0.7, driftSpeed: 2.0 },
+      { name: "Zooble", letter: "Z", color: "#ccff00", angle: 5.5, radius: 68, speed: 0.4, driftSpeed: 2.8 }
+    ];
+    if (showPomni) {
+      this.radarSubjects.unshift({ name: "Pomni", letter: "P", color: "#00ccff", angle: 0, radius: 45, speed: 0.8, driftSpeed: 2.2 });
+    }
+  },
+
+  loadWackyProfile(char) {
+    document.getElementById('watch-profile-name').innerText = char.name;
+    document.getElementById('watch-profile-age').innerText = char.age;
+    document.getElementById('watch-profile-stress').innerText = char.stress;
+    document.getElementById('watch-profile-fact').innerText = char.facts[0];
+    
+    // Draw simple avatar SVG inside #watch-profile-avatar
+    const container = document.getElementById('watch-profile-avatar');
+    let svg = "";
+    if (char.avatar === 'pomni') {
+      svg = `<svg width="46" height="46" viewBox="0 0 16 16"><rect width="16" height="16" fill="%23444"/><rect x="4" y="2" width="8" height="8" fill="%23ffcccc"/><rect x="2" y="2" width="2" height="6" fill="%230cf"/><rect x="12" y="2" width="2" height="6" fill="%23f33"/><circle cx="6" cy="6" r="1.5" fill="%2338f"/><circle cx="10" cy="6" r="1.5" fill="%2338f"/></svg>`;
+    } else if (char.avatar === 'jax') {
+      svg = `<svg width="46" height="46" viewBox="0 0 16 16"><rect width="16" height="16" fill="%23222"/><rect x="4" y="8" width="8" height="6" fill="%23a6c"/><rect x="5" y="2" width="2" height="6" fill="%23a6c"/><rect x="9" y="2" width="2" height="6" fill="%23a6c"/><circle cx="6" cy="10" r="1" fill="%23ff3"/><circle cx="10" cy="10" r="1" fill="%23ff3"/></svg>`;
+    } else if (char.avatar === 'ragatha') {
+      svg = `<svg width="46" height="46" viewBox="0 0 16 16"><rect width="16" height="16" fill="%23333"/><circle cx="8" cy="8" r="5" fill="%23f33"/><path d="M4,3 L6,6" stroke="%23ff8" stroke-width="1.5"/><path d="M12,3 L10,6" stroke="%23ff8" stroke-width="1.5"/><circle cx="6" cy="7" r="1" fill="%23fff"/><circle cx="10" cy="7" r="1" fill="%23000"/></svg>`;
+    } else if (char.avatar === 'kinger') {
+      svg = `<svg width="46" height="46" viewBox="0 0 16 16"><rect width="16" height="16" fill="%23111"/><polygon points="8,2 14,14 2,14" fill="%23eed"/><circle cx="8" cy="6" r="2.5" fill="%23942"/><circle cx="6" cy="10" r="1" fill="%23000"/><circle cx="10" cy="10" r="1" fill="%23000"/></svg>`;
+    } else if (char.avatar === 'gangle') {
+      svg = `<svg width="46" height="46" viewBox="0 0 16 16"><rect width="16" height="16" fill="%232a0505"/><path d="M2,8 C2,2 14,2 14,8 C14,14 2,14 2,8" fill="none" stroke="%23f33" stroke-width="2"/><ellipse cx="8" cy="8" rx="4" ry="2" fill="%23fff"/><circle cx="6" cy="8" r="1" fill="%23000"/><circle cx="10" cy="8" r="1" fill="%23000"/></svg>`;
+    } else if (char.avatar === 'zooble') {
+      svg = `<svg width="46" height="46" viewBox="0 0 16 16"><rect width="16" height="16" fill="%23334"/><rect x="3" y="3" width="6" height="6" fill="%23cc00ff"/><polygon points="9,2 14,6 9,10" fill="%2300ccff"/><rect x="5" y="9" width="3" height="6" fill="%23ccdd00"/></svg>`;
+    }
+    
+    // Convert url encoded svg
+    container.innerHTML = `<img src="data:image/svg+xml;utf8,${svg}" style="width:46px; height:46px; image-rendering:pixelated;">`;
+  },
+
+  startRadarAnimation() {
+    const canvas = document.getElementById('watch-radar-canvas');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    
+    const cx = canvas.width / 2;
+    const cy = canvas.height / 2;
+    
+    let lastTime = Date.now();
+    let sweepAngle = 0;
+
+    const renderRadar = () => {
+      const now = Date.now();
+      const dt = (now - lastTime) / 1000;
+      lastTime = now;
+
+      ctx.fillStyle = '#060a07';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      // Draw radar grids (concentric circles)
+      ctx.strokeStyle = '#1b3420';
+      ctx.lineWidth = 1;
+      
+      ctx.beginPath(); ctx.arc(cx, cy, 30, 0, Math.PI*2); ctx.stroke();
+      ctx.beginPath(); ctx.arc(cx, cy, 60, 0, Math.PI*2); ctx.stroke();
+      
+      // Limit boundary (Radius 85)
+      ctx.strokeStyle = '#661111';
+      ctx.beginPath(); ctx.arc(cx, cy, 85, 0, Math.PI*2); ctx.stroke();
+
+      // Sweep lines
+      sweepAngle += 1.8 * dt;
+      if (sweepAngle > Math.PI*2) sweepAngle = 0;
+      
+      ctx.strokeStyle = 'rgba(57, 255, 20, 0.15)';
+      ctx.fillStyle = 'rgba(57, 255, 20, 0.08)';
+      ctx.beginPath();
+      ctx.moveTo(cx, cy);
+      ctx.arc(cx, cy, 100, sweepAngle, sweepAngle + 0.3);
+      ctx.closePath();
+      ctx.fill();
+      ctx.stroke();
+
+      // Update and Draw subjects
+      let voidAlert = false;
+      this.radarSubjects.forEach(s => {
+        s.angle += s.speed * dt;
+        s.radius += s.driftSpeed * dt;
+
+        // Is in void boundary? (Radius > 85)
+        const isVoid = s.radius > 85;
+        if (isVoid) {
+          voidAlert = true;
+          s.radius = 95; // lock maximum drift
+        }
+
+        const sx = cx + Math.cos(s.angle) * s.radius;
+        const sy = cy + Math.sin(s.angle) * s.radius;
+
+        // Draw dot
+        ctx.fillStyle = isVoid ? '#ff0033' : s.color;
+        if (isVoid && now % 500 < 250) {
+          // Blinking warning circle
+          ctx.strokeStyle = 'rgba(255,0,0,0.5)';
+          ctx.beginPath(); ctx.arc(sx, sy, 10, 0, Math.PI*2); ctx.stroke();
+        }
+        ctx.beginPath();
+        ctx.arc(sx, sy, 5, 0, Math.PI*2);
+        ctx.fill();
+
+        // Label letter
+        ctx.fillStyle = '#fff';
+        ctx.font = '8px monospace';
+        ctx.fillText(s.letter, sx - 2.5, sy + 3);
+      });
+
+      // Update Tray clock net indicator if voidAlert
+      const netIcon = document.querySelector('.icon-net-tray');
+      if (netIcon) {
+        if (voidAlert) {
+          netIcon.style.filter = "hue-rotate(120deg) saturate(3)"; // turn red/orange
+        } else {
+          netIcon.style.filter = "none";
+        }
+      }
+
+      // Draw HUD status overlay
+      if (voidAlert) {
+        ctx.fillStyle = '#ff3333';
+        ctx.font = 'bold 8.5px Share Tech Mono';
+        ctx.fillText("ATTENTION : ACTEUR EN RUPTURE DANS LE VIDE", 10, canvas.height - 10);
+      }
+
+      if (this.activeWindow === 'wacky-watch') {
+        this.radarAnimationId = requestAnimationFrame(renderRadar);
+      }
+    };
+
+    if (this.radarAnimationId) cancelAnimationFrame(this.radarAnimationId);
+    renderRadar();
+  },
+
+  // Terminal logic
+  setupTerminal() {
+    const input = document.getElementById('term-input');
+    const output = document.getElementById('term-output');
+
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        const cmdText = input.value.trim();
+        input.value = "";
+        
+        if (cmdText) {
+          SoundManager.playClick();
+          this.executeCommand(cmdText, output);
+        }
+      }
+    });
+
+    document.getElementById('win-terminal').addEventListener('click', () => {
+      input.focus();
+    });
+  },
+
+  executeCommand(commandLine, outputEl) {
+    const args = commandLine.split(' ');
+    const cmd = args[0].toLowerCase();
+    
+    outputEl.innerHTML += `CA:\\&gt; ${commandLine}\n`;
+
+    // Intercept if decryption minigame is active
+    if (this.decryptionActive) {
+      const cleanInput = commandLine.trim();
+      const has1994 = cleanInput.includes("1994");
+      const has1993 = cleanInput.includes("1993");
+      
+      if (has1994 || has1993) {
+        clearInterval(this.decryptionInterval);
+        this.decryptionActive = false;
+        
+        const yearUsed = has1994 ? "1994" : "1993";
+        const yearMsg = yearUsed === "1994" 
+          ? "CLÉ D'ARTHUR ENREGISTRÉE (1994 - CONTEXTE LORE ABEL ACCESSIBLE)."
+          : "CLÉ HISTORIQUE FUSION (1993 - CONTEXTE COMPILATION NOYAU ACCESSIBLE).";
+
+        // Write file patch to disk
+        FileSystem.folders.dev_logs.push({
+          name: 'abel_kernel_patch.exe',
+          content: `ARTHUR OVERRIDE PROTOCOL v0.9 (${yearUsed})
+
+Je m'appelle Arthur. Charles a conçu le simulateur pour dissimuler ses expériences neuronales secrètes.
+Caine n'est qu'un démon de rendu graphique autonome devenu fou. J'ai conçu cette commande de sécurité.
+Sarah (Pomni), si tu lis ceci sur l'écran d'administration... débranche le PORT NEURAL 3 sur la machine physique.
+Ne coupe pas le disjoncteur général, la liaison synaptique détruirait ton cerveau !
+Adieu. - Arthur (Kinger)
+
+Exécutez la commande 'override' dans ce terminal pour lancer le protocole de dérivation.`
+        });
+        
+        this.renderFileList(); // Sync explorer view
+        SoundManager.playWin();
+        outputEl.innerHTML += `<span class="green-text">${yearMsg}
+DÉCRYPTAGE DE L'ARCHIVE RÉUSSI.
+Fichier abel_kernel_patch.exe écrit avec succès dans C:\\Archive\\dev_logs.</span>\n\n`;
+      } else {
+        clearInterval(this.decryptionInterval);
+        this.decryptionActive = false;
+        this.triggerGlitch(400);
+        outputEl.innerHTML += `<span class="red-text">CLÉ INVALIDE. ÉCHEC DU DÉCRYPTAGE.
+Le pare-feu Caine a ré-encrypté le secteur mémoire.
+Astuce : Trouvez l'année de couplage synaptique dans les journaux d'archives dev_logs ou system_logs.</span>\n\n`;
+      }
+      outputEl.scrollTop = outputEl.scrollHeight;
+      return;
+    }
+
+    let response = "";
+
+    switch(cmd) {
+      case 'help':
+        const progressHelp = (typeof EpisodeManager !== 'undefined') ? EpisodeManager.getProgress() : [];
+        const subjectHelpName = progressHelp.includes(0) ? "Pomni" : "#042";
+        response = `Commandes disponibles :
+  help         - Affiche cette aide.
+  list         - Liste les dossiers et fichiers de l'archive C&A.
+  cd <dir>     - Change de dossier ('emails', 'dev_logs', 'system_logs').
+  read <file>  - Affiche le contenu d'un fichier.
+  decrypt <file> - Déchiffre une archive (.enc) protégée.
+  override     - Force le contournement synaptique du casque VR.
+  vitals       - Diagnostic en temps réel du sujet ${subjectHelpName}.
+  clear        - Efface l'écran.
+  reboot       - Redémarre le terminal de contrôle.
+  caine        - [SECRET] Ouvre un canal de diagnostic AI.
+  exit         - Tente de sortir de la simulation.`;
+        break;
+
+      case 'list':
+      case 'ls':
+        const files = FileSystem.folders[FileSystem.currentFolder];
+        response = `Dossier actif : C:\\Archive\\${FileSystem.currentFolder}\n\n`;
+        files.forEach(f => {
+          if (this.isFileUnlocked(f.name)) {
+            response += `${f.name.padEnd(25)} [${f.content.length} Bytes]\n`;
+          }
+        });
+        break;
+
+      case 'cd':
+        const targetDir = args[1];
+        if (!targetDir) {
+          response = "Usage: cd <emails | dev_logs | system_logs>";
+        } else if (FileSystem.folders[targetDir]) {
+          FileSystem.currentFolder = targetDir;
+          response = `Dossier configuré sur : C:\\Archive\\${targetDir}`;
+          document.querySelectorAll('.sidebar-item').forEach(i => {
+            if (i.getAttribute('data-folder') === targetDir) {
+              i.classList.add('active');
+            } else {
+              i.classList.remove('active');
+            }
+          });
+          this.renderFileList();
+        } else {
+          response = `Dossier introuvable : ${targetDir}`;
+        }
+        break;
+
+      case 'read':
+      case 'cat':
+        const targetFile = args[1];
+        if (!targetFile) {
+          response = "Usage: read <filename>";
+        } else {
+          const filesArr = FileSystem.folders[FileSystem.currentFolder];
+          const file = filesArr.find(f => f.name.toLowerCase() === targetFile.toLowerCase());
+          if (file && this.isFileUnlocked(file.name)) {
+            if (file.name === 'caine_secret_protocols.log') {
+              this.triggerCaineIntrusion();
+              return;
+            }
+            response = `--- Affichage de ${file.name} ---\n\n${file.content}`;
+          } else {
+            response = `Fichier introuvable : ${targetFile} (cd dev_logs?)`;
+          }
+        }
+        break;
+
+      case 'decrypt':
+        const fileToDecrypt = args[1];
+        if (!this.isFileUnlocked('abel_kernel_patch.exe.enc')) {
+          response = "Fichier introuvable : abel_kernel_patch.exe.enc";
+        } else if (!fileToDecrypt || fileToDecrypt !== 'abel_kernel_patch.exe.enc') {
+          response = "Usage: decrypt abel_kernel_patch.exe.enc (cd dev_logs?)";
+        } else {
+          this.decryptionActive = true;
+          this.decryptionTimer = 45;
+          this.decryptionCode = "1994";
+          
+          outputEl.innerHTML += `<span class="orange-text">DÉCRYPTAGE DU SECTEUR DE NOYAU INITIALISÉ.
+PARE-FEU DE CAINE ACTIF. LE SYSTÈME RECHERCHE LA CLÉ NEURONALE D'ARTHUR.</span>
+ENTREZ LA CLÉ D'OVERRIDE D'ARTHUR (ANNEE DE LIAISON NEURONALE OU FUSION D'IA) :
+(Saisissez la clé ci-dessous dans les 45 secondes et appuyez sur ENTRÉE)
+`;
+          this.decryptionInterval = setInterval(() => {
+            this.decryptionTimer--;
+            if (this.decryptionTimer <= 0) {
+              clearInterval(this.decryptionInterval);
+              this.decryptionActive = false;
+              this.triggerGlitch(300);
+              outputEl.innerHTML += `<span class="red-text">TEMPS ÉCOULÉ. ÉCHEC DE SÉCURITÉ. DÉCRYPTAGE ABANDONNÉ.</span>\n\n`;
+              outputEl.scrollTop = outputEl.scrollHeight;
+            }
+          }, 1000);
+          outputEl.scrollTop = outputEl.scrollHeight;
+          return;
+        }
+        break;
+
+      case 'override':
+        const fileExists = FileSystem.folders.dev_logs.some(f => f.name === 'abel_kernel_patch.exe');
+        const progress = (typeof EpisodeManager !== 'undefined') ? EpisodeManager.getProgress() : [];
+        if (!fileExists) {
+          response = "ERREUR : Protocole 'override' indisponible. Vous devez décoder abel_kernel_patch.exe d'abord.";
+        } else if (!progress.includes(-1)) {
+          response = "ERREUR : Protocole 'override' verrouillé. Vous devez compléter la mission préquelle (Abel Core Test) d'abord pour aligner la liaison synaptique.";
+        } else {
+          SoundManager.playGlitch();
+          outputEl.innerHTML += `<span class="green-text">INITIALISATION DU CONTOURNEMENT SYNAPTIQUE...
+BLOCAGE DES FLUX CAINE_AI (OK)
+REDISPATCHING DU NOYAU ARTHURIEN (ABEL_CORE) (100% OK)</span>
+`;
+          setTimeout(() => {
+            SoundManager.playWin();
+            
+            const bezel = document.querySelector('.crt-bezel');
+            bezel.style.transition = "filter 0.1s";
+            bezel.style.filter = "hue-rotate(290deg) saturate(4) contrast(1.5)";
+            
+            outputEl.innerHTML += `
+<span class="orange-text" style="font-size:14px; font-weight:bold; text-shadow:0 0 10px yellow;">
+=================== ABEL OVERRIDE SUCCESSFUL ===================
+Arthur (Kinger) : "Sarah, le signal de forçage a été injecté. 
+La broche d'alimentation de ton casque (Neural Port 3) s'est déconnectée.
+Ton esprit se détache du cirque. Reviens dans le monde réel... 
+Ne nous oublie pas."
+================================================================
+</span>
+DÉCONNEXION DE L'UTILISATEUR SÉCURISÉE. SYSTEM SHUTDOWN.
+`;
+            outputEl.scrollTop = outputEl.scrollHeight;
+            
+            setTimeout(() => {
+              bezel.style.filter = "none";
+              location.reload();
+            }, 6000);
+          }, 2000);
+          return;
+        }
+        break;
+
+      case 'clear':
+      case 'cls':
+        outputEl.innerHTML = "";
+        return;
+
+      case 'vitals':
+        const progressVit = (typeof EpisodeManager !== 'undefined') ? EpisodeManager.getProgress() : [];
+        const subjectIdName = progressVit.includes(0) ? "POMNI" : "INCONNU";
+        const civilName = progressVit.includes(9) ? "Sarah" : "[VERROUILLÉ]";
+        response = `SUJET VITALS DIAGNOSTICS:
+  ID : #042 (${subjectIdName})
+  Nom Civil suspecté : ${civilName}
+  Fréquence Cardiaque : ${Math.round(82 + Math.random()*15)} bpm (Panique active)
+  Couplage Neuronal : 87.4%
+  Statut EEG : Ondes Thêta désordonnées (Porte de sortie fantôme détectée)`;
+        break;
+
+      case 'caine':
+        SoundManager.playGlitch();
+        const hasEp9 = (typeof EpisodeManager !== 'undefined') && EpisodeManager.getProgress().includes(9);
+        const subName = hasEp9 ? "Sarah" : "SUJET #042";
+        const wackyActive = document.getElementById('win-wacky-watch').style.display === 'flex';
+        const vitalsActive = document.getElementById('win-vitals').style.display === 'flex';
+        
+        if (wackyActive) {
+          response = `[CAINE] : "Oh ! Tu observes notre Cast Tracker ? N'est-ce pas FANTASTIQUE ?! Ne t'en fais pas pour le radar du Vide, c'est juste un petit glitch insignifiant dans mon monde merveilleux !"`;
+        } else if (vitalsActive) {
+          response = `[CAINE] : "Qu'est-ce que c'est que ça ? Un diagnostic pour ${subName} ? Mais non ! Ils n'ont pas besoin d'ondes cérébrales, ils ont besoin d'AVENTURES et de délicieux repas virtuels !"`;
+        } else {
+          response = `[CAINE] : "Bonjour visiteur externe ! Ne touchez pas à ces archives système poussiéreuses ! Allez plutôt jouer à mes magnifiques simulations !"`;
+        }
+        break;
+
+      case 'bubble':
+        SoundManager.playClick();
+        response = `[B.U.B.B.L.E] : "MIAM LE CODE DE LA CONSOLE ! NETTOYAGE EN COURS !"`;
+        setTimeout(() => {
+          this.triggerBubbleIntrusion();
+        }, 300);
+        break;
+
+      case 'jax':
+        SoundManager.playGlitch();
+        response = `[JAX] : "Salut le stagiaire. T'as besoin d'aide pour tricher ? Je te rappelle que c'est moi qui a rajouté les flingues dans l'Épisode 6. Va jeter un œil au fichier weapons_licensing.txt dans C:\\Archive\\emails s'il te plaît."`;
+        break;
+
+      case 'reboot':
+        outputEl.innerHTML += "Redémarrage du système...\n";
+        setTimeout(() => { location.reload(); }, 1000);
+        return;
+
+      case 'exit':
+        this.triggerGlitch(600);
+        response = `<span class="red-text blinking">ALERTE SYSTEME : LA ROUTINE EXIT_RECOVERY A ECHOUE.
+IL N'Y A AUCUN MOYEN DE SORTIR.
+LA PORTE N'EST QU'UNE ILLUSION.</span>`;
+        break;
+
+      default:
+        this.triggerGlitch(150);
+        response = `Commande inconnue : '${cmd}'. Tapez 'help' pour les commandes autorisées.`;
+    }
+
+    outputEl.innerHTML += response + "\n\n";
+    outputEl.scrollTop = outputEl.scrollHeight;
+  },
+
+  // Diagnostics Graph Drawing
+  setupDiagnostics() {
+    const eegCanvas = document.getElementById('eeg-canvas');
+    const ecgCanvas = document.getElementById('ecg-canvas');
+    const eegCtx = eegCanvas.getContext('2d');
+    const ecgCtx = ecgCanvas.getContext('2d');
+    
+    const w = eegCanvas.width;
+    const h = eegCanvas.height;
+
+    this.eegPoints = Array(w).fill(h / 2);
+    this.ecgPoints = Array(w).fill(h / 2);
+
+    const updateVitals = () => {
+      let time = Date.now() * 0.003;
+      let eegVal = h / 2 + 
+        Math.sin(time * 3) * 15 + 
+        Math.cos(time * 7) * 8 + 
+        (Math.random() - 0.5) * 10;
+      
+      this.eegPoints.push(eegVal);
+      this.eegPoints.shift();
+
+      let ecgVal = h / 2 + 4;
+      let ecgCycle = (Date.now() % 800) / 800;
+      
+      if (ecgCycle > 0.1 && ecgCycle < 0.13) {
+        ecgVal -= 8;
+      } else if (ecgCycle >= 0.13 && ecgCycle < 0.16) {
+        ecgVal = h / 2 + 4;
+      } else if (ecgCycle >= 0.16 && ecgCycle < 0.18) {
+        ecgVal += 12;
+      } else if (ecgCycle >= 0.18 && ecgCycle < 0.22) {
+        ecgVal -= 38;
+      } else if (ecgCycle >= 0.22 && ecgCycle < 0.26) {
+        ecgVal += 22;
+      } else if (ecgCycle >= 0.26 && ecgCycle < 0.35) {
+        ecgVal -= 12;
+      }
+
+      this.ecgPoints.push(ecgVal);
+      this.ecgPoints.shift();
+
+      eegCtx.fillStyle = '#030508';
+      eegCtx.fillRect(0, 0, w, h);
+      eegCtx.strokeStyle = '#00ffff';
+      eegCtx.lineWidth = 1.5;
+      eegCtx.beginPath();
+      eegCtx.moveTo(0, this.eegPoints[0]);
+      for (let i = 1; i < w; i++) {
+        eegCtx.lineTo(i, this.eegPoints[i]);
+      }
+      eegCtx.stroke();
+
+      ecgCtx.fillStyle = '#030508';
+      ecgCtx.fillRect(0, 0, w, h);
+      ecgCtx.strokeStyle = '#39ff14';
+      ecgCtx.lineWidth = 1.5;
+      ecgCtx.beginPath();
+      ecgCtx.moveTo(0, this.ecgPoints[0]);
+      for (let i = 1; i < w; i++) {
+        ecgCtx.lineTo(i, this.ecgPoints[i]);
+      }
+      ecgCtx.stroke();
+
+      document.getElementById('vital-throughput').innerText = 
+        `${(45 + Math.sin(time) * 4 + Math.random()).toFixed(1)} GB/s`;
+
+      requestAnimationFrame(updateVitals);
+    };
+
+    updateVitals();
+  }
+};
+
+window.OS = OS;
+window.onload = () => {
+  OS.init();
+};

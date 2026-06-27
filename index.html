@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C&A Mainframe Console - OS v0.98</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Retro pixel and terminal fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=VT323&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Physical CRT Monitor Frame -->
+  <div class="crt-monitor">
+    <div class="crt-bezel">
+      <div class="crt-screen">
+        <div class="crt-glass">
+          <!-- Scanline overlay and flicker -->
+          <div class="scanlines"></div>
+          <div class="flicker"></div>
+          <div class="vignette"></div>
+
+          <!-- 1. BOOT BIOS SCREEN -->
+          <div id="boot-screen" class="terminal-theme">
+            <div class="boot-log" id="boot-log"></div>
+            <div class="boot-prompt" id="boot-prompt" style="display: none;">
+              <span class="blink">_</span>
+              <p class="press-key-msg">APPUYEZ SUR ENTRÉE POUR INITIALISER LE SYSTÈME</p>
+            </div>
+          </div>
+
+          <!-- 2. DESKTOP WORKSPACE (Hidden initially) -->
+          <div id="desktop-workspace" style="display: none;">
+            <!-- Desktop Grid Icons -->
+            <div class="desktop-icons">
+              <div class="desktop-icon" data-window="simulations">
+                <div class="icon-img icon-sim"></div>
+                <div class="icon-label">Simulation_Control.exe</div>
+              </div>
+              <div class="desktop-icon" data-window="wacky-watch">
+                <div class="icon-img icon-watch"></div>
+                <div class="icon-label">Wacky_Watch.app</div>
+              </div>
+              <div class="desktop-icon" data-window="files">
+                <div class="icon-img icon-folder"></div>
+                <div class="icon-label">C&A_Archive</div>
+              </div>
+              <div class="desktop-icon" data-window="vitals">
+                <div class="icon-img icon-vitals"></div>
+                <div class="icon-label">Sujet_Diagnostic.sys</div>
+              </div>
+              <div class="desktop-icon" data-window="terminal">
+                <div class="icon-img icon-term"></div>
+                <div class="icon-label">C&A_Terminal.com</div>
+              </div>
+              <div class="desktop-icon" data-window="trash">
+                <div class="icon-img icon-trash"></div>
+                <div class="icon-label">Corbeille</div>
+              </div>
+            </div>
+
+            <!-- Draggable Window Container -->
+            <div id="windows-container">
+              <!-- Window template: File Explorer -->
+              <div id="win-files" class="window" style="width: 480px; height: 350px; left: 50px; top: 40px; display: none;">
+                <div class="window-header">
+                  <span class="window-title">C:\Archive - Explorateur de fichiers</span>
+                  <div class="window-controls">
+                    <button class="win-btn win-min" title="Réduire">_</button>
+                    <button class="win-btn win-max" title="Agrandir">[]</button>
+                    <button class="win-btn win-close" title="Fermer">X</button>
+                  </div>
+                </div>
+                <div class="window-body file-explorer-body">
+                  <div class="sidebar">
+                    <div class="sidebar-item active" data-folder="emails"><span class="icon-sm icon-folder-sm"></span> e-mails</div>
+                    <div class="sidebar-item" data-folder="dev_logs"><span class="icon-sm icon-folder-sm"></span> dev_logs</div>
+                    <div class="sidebar-item" data-folder="system_logs"><span class="icon-sm icon-folder-sm"></span> system_logs</div>
+                  </div>
+                  <div class="file-list-pane">
+                    <div class="file-list" id="file-list">
+                      <!-- Rendered dynamically by app.js -->
+                    </div>
+                    <div class="file-viewer" id="file-viewer" style="display: none;">
+                      <div class="viewer-header">
+                        <button id="btn-back-to-files" class="retro-btn">&lt; Retour</button>
+                        <span id="viewer-filename">doc.txt</span>
+                      </div>
+                      <div class="viewer-content" id="viewer-content">
+                        <!-- Read content here -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Window template: Simulations Panel -->
+              <div id="win-simulations" class="window" style="width: 680px; height: 500px; left: 100px; top: 60px; display: none;">
+                <div class="window-header">
+                  <span class="window-title">TADC Simulation Panel - Core v0.98</span>
+                  <div class="window-controls">
+                    <button class="win-btn win-min">_</button>
+                    <button class="win-btn win-max">[]</button>
+                    <button class="win-btn win-close">X</button>
+                  </div>
+                </div>
+                <div class="window-body sim-window-body">
+                  <div class="sim-selector">
+                    <h3>Simulation d'Épisodes</h3>
+                    <div class="sim-card active" data-episode="0">
+                      <div class="sim-card-icon">00</div>
+                      <div class="sim-card-info">
+                        <div class="sim-card-title">Calibration C&A</div>
+                        <div class="sim-card-desc">Simulateur d'intégration et calibrage initial.</div>
+                      </div>
+                    </div>
+                    <div class="sim-card" data-episode="1">
+                      <div class="sim-card-icon">01</div>
+                      <div class="sim-card-info">
+                        <div class="sim-card-title">Épisode 1: Le Pilote</div>
+                        <div class="sim-card-desc">L'illusion de la sortie. Guidez Pomni.</div>
+                      </div>
+                    </div>
+                    <div class="sim-card" data-episode="2">
+                      <div class="sim-card-icon">02</div>
+                      <div class="sim-card-info">
+                        <div class="sim-card-title">Épisode 2: Canyon des Sucreries</div>
+                        <div class="sim-card-desc">Gérez la physique et piratez la base NPC.</div>
+                      </div>
+                    </div>
+                    <div class="sim-card" data-episode="3">
+                      <div class="sim-card-icon">03</div>
+                      <div class="sim-card-info">
+                        <div class="sim-card-title">Épisode 3: Manoir de Mildenhall</div>
+                        <div class="sim-card-desc">Descente sonar dans le mature rated zone.</div>
+                      </div>
+                    </div>
+                    <div class="sim-card" data-episode="4">
+                      <div class="sim-card-icon">04</div>
+                      <div class="sim-card-info">
+                        <div class="sim-card-title">Épisode 4: Fast Food Masquerade</div>
+                        <div class="sim-card-desc">Gangle gère les commandes chez Spudsy's.</div>
+                      </div>
+                    </div>
+                    <div class="sim-card" data-episode="5">
+                      <div class="sim-card-icon">05</div>
+                      <div class="sim-card-info">
+                        <div class="sim-card-title">Épisode 5: Sans titre</div>
+                        <div class="sim-card-desc">Mini-aventures effrénées lancées par Caine.</div>
+                      </div>
+                    </div>
+                    <div class="sim-card" data-episode="6">
+                      <div class="sim-card-icon">06</div>
+                      <div class="sim-card-info">
+                        <div class="sim-card-title">Épisode 6: Armes pour tous</div>
+                        <div class="sim-card-desc">Survival par équipe avec des armes virtuelles.</div>
+                      </div>
+                    </div>
+                    <div class="sim-card" data-episode="7">
+                      <div class="sim-card-icon">07</div>
+                      <div class="sim-card-info">
+                        <div class="sim-card-title">Épisode 7: Épisode de plage</div>
+                        <div class="sim-card-desc">Détente et révélations sombres au Lac Digital.</div>
+                      </div>
+                    </div>
+                    <div class="sim-card" data-episode="8">
+                      <div class="sim-card-icon">08</div>
+                      <div class="sim-card-info">
+                        <div class="sim-card-title">Épisode 8: hjsakldfhl</div>
+                        <div class="sim-card-desc">Origines de Caine et souvenirs fragmentés.</div>
+                      </div>
+                    </div>
+                    <div class="sim-card" data-episode="9">
+                      <div class="sim-card-icon">09</div>
+                      <div class="sim-card-info">
+                        <div class="sim-card-title">Épisode 9: Remember</div>
+                        <div class="sim-card-desc">Le cirque perd ses couleurs. La fin.</div>
+                      </div>
+                    </div>
+                    <div class="sim-card" data-episode="-1" id="sim-card-minus1" style="display: none;">
+                      <div class="sim-card-icon">??</div>
+                      <div class="sim-card-info">
+                        <div class="sim-card-title">Mission Préquelle: Abel Core Test</div>
+                        <div class="sim-card-desc">Arthur (Kinger) tente la liaison synaptique (1994).</div>
+                      </div>
+                    </div>
+                    <div class="sim-card" data-episode="-2" id="sim-card-minus2" style="display: none;">
+                      <div class="sim-card-icon">Ø</div>
+                      <div class="sim-card-info">
+                        <div class="sim-card-title">Épisode Caché: Fusion 1993</div>
+                        <div class="sim-card-desc">Red Dot AI et Blue Dot AI fusionnent pour créer Caine.</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sim-viewport-pane">
+                    <!-- Dynamic screen for active episode game -->
+                    <div class="sim-game-wrapper" id="sim-game-wrapper">
+                      <!-- Start screen -->
+                      <div id="sim-start-screen" class="sim-screen active">
+                        <h2 id="sim-game-title">Épisode 0: Calibration C&A</h2>
+                        <p id="sim-game-description">Avant de lancer le simulateur principal, synchronisez les senseurs neuraux. Cliquez sur les points de calibration clignotants pour stabiliser la bande passante.</p>
+                        <button id="btn-start-simulation" class="retro-btn btn-primary-retro">DÉMARRER LA SIMULATION</button>
+                      </div>
+                      <!-- Episode 0 Frame -->
+                      <div id="sim-ep0" class="sim-screen">
+                        <div class="ep0-hud">
+                          <div>Système: <span class="cyan-text">CALIBRATION</span></div>
+                          <div>Nodes calibrés: <span id="ep0-calib-score" class="green-text">0 / 3</span></div>
+                          <div>Temps restant: <span id="ep0-timer" class="green-text">20s</span></div>
+                        </div>
+                        <div class="ep0-game-container">
+                          <canvas id="ep0-canvas" width="350" height="280"></canvas>
+                          <div class="ep0-controls-pane">
+                            <p class="panel-label">Commandes</p>
+                            <button id="ep0-btn-reset" class="retro-btn btn-sm">RE-CALIBRER</button>
+                            <div class="instructions-box">
+                              <strong>Calibration synaptique:</strong> Cliquez sur les 3 nodes clignotants pour synchroniser le casque de simulation.
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Episode 1 Frame -->
+                      <div id="sim-ep1" class="sim-screen">
+                        <div class="ep1-hud">
+                          <div>Sujet: <span class="cyan-text">POMNI</span></div>
+                          <div>Stabilité Mentale: <span id="ep1-sanity" class="alert-pulse green-text">100%</span></div>
+                          <div>Obstacles: <span class="red-text">KAUFMO</span></div>
+                        </div>
+                        <div class="ep1-game-container">
+                          <canvas id="ep1-canvas" width="360" height="280"></canvas>
+                          <div class="ep1-controls-pane">
+                            <p class="panel-label">Console d'accès</p>
+                            <button id="ep1-btn-stabilize" class="retro-btn btn-sm">STABILISATEUR NEURAL</button>
+                            <button id="ep1-btn-firewall" class="retro-btn btn-sm">ACTIVER PARE-FEU</button>
+                            <div class="instructions-box">
+                              <strong>Objectif:</strong> Guidez Pomni (P) vers la sortie rouge (E) en ouvrant les pare-feux sur son chemin. Bloquez l'abstrait Kaufmo (K) avec des pare-feux. Stabilisez Pomni si sa santé mentale chute.
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Episode 2 Frame -->
+                      <div id="sim-ep2" class="sim-screen">
+                        <div class="ep2-hack-container" id="ep2-phase1">
+                          <div class="ep2-hud">
+                            <div>Erreur système: <span class="red-text blinking">COLLISION DETECTED</span></div>
+                            <div>Intégrité de la carte: <span id="ep2-integrity" class="green-text">100%</span></div>
+                          </div>
+                          <div class="ep2-runner-view">
+                            <canvas id="ep2-runner-canvas" width="400" height="150"></canvas>
+                          </div>
+                          <div class="ep2-hack-puzzle">
+                            <p class="puzzle-instructions">PIRATEZ LES MODULES DE COLLISION (Alignez les blocs de données en cliquant dessus au bon moment)</p>
+                            <div class="puzzle-grid" id="ep2-puzzle-grid">
+                              <!-- Will be generated by JS -->
+                            </div>
+                          </div>
+                        </div>
+                        <div class="ep2-registry-container" id="ep2-phase2" style="display: none;">
+                          <div class="registry-header">
+                            <span class="blinking red-text">!!! ALERTE INTRUSION CAINE !!!</span>
+                            <span>SUPPRESSION NPC : GUMMIGOO (0x7F2A9B)</span>
+                          </div>
+                          <div class="registry-editor">
+                            <div class="memory-dump" id="ep2-memory-dump">
+                              <!-- Hex data here -->
+                            </div>
+                            <div class="editor-pane">
+                              <p>Bypass de sécurité: <span id="ep2-bypass-timer" class="red-text font-lg">30s</span></p>
+                              <div class="form-group">
+                                <label>Entité_ID:</label>
+                                <span class="cyan-text">Gummigoo_0x7F2A9B</span>
+                              </div>
+                              <div class="form-group">
+                                <label>Type de classe:</label>
+                                <select id="ep2-class-select" class="retro-select">
+                                  <option value="NPC">NPC (Non-Joueur)</option>
+                                  <option value="HUMAN">HUMAN (Humain Raccordé)</option>
+                                  <option value="AI">AI (Intelligence Artificielle)</option>
+                                </select>
+                              </div>
+                              <div class="form-group">
+                                <label>Flag d'exclusion:</label>
+                                <input type="checkbox" id="ep2-flag-exclude" class="retro-checkbox">
+                                <span class="label-inline">Empêcher le nettoyage automatique</span>
+                              </div>
+                              <button id="ep2-btn-inject" class="retro-btn btn-primary-retro">INJECTER LE PATCH MÉMOIRE</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Episode 3 Frame -->
+                      <div id="sim-ep3" class="sim-screen">
+                        <div class="ep3-hud">
+                          <div>Sonde Sonar: <span class="green-text">ACTIVE</span></div>
+                          <div>Sujets: <span class="cyan-text">KINGER / POMNI</span></div>
+                          <div>Bruit ambiant: <span id="ep3-noise" class="green-text">BAS (0 dB)</span></div>
+                        </div>
+                        <div class="ep3-sonar-container">
+                          <canvas id="ep3-sonar-canvas" width="340" height="280"></canvas>
+                          <div class="ep3-controls-pane">
+                            <p class="panel-label">Commandes Tactiques</p>
+                            <button id="ep3-btn-flashlight" class="retro-btn btn-sm">LAMPE TORCHE (OFF)</button>
+                            <button id="ep3-btn-decoy" class="retro-btn btn-sm">LEURRE SONORE</button>
+                            <button id="ep3-btn-shotgun" class="retro-btn btn-sm">FUSIL DE KINGER</button>
+                            <div class="instructions-box">
+                              <strong>Manoir de Mildenhall:</strong> Le monstre (B) traque le bruit et la lumière. Kinger (K) et Pomni (P) doivent atteindre la trappe de sortie. Allumer la lampe révèle le chemin mais attire le monstre. Les leurres dévient sa trajectoire. Le fusil détruit les barrières mais fait un bruit énorme.
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Episode 4 Frame -->
+                      <div id="sim-ep4" class="sim-screen">
+                        <div class="ep4-hud">
+                          <div>Sujet: <span class="cyan-text">GANGLE (SPUDSY'S)</span></div>
+                          <div>Commandes: <span id="ep4-score" class="green-text">0 / 3</span></div>
+                          <div>Temps: <span id="ep4-timer" class="green-text">45s</span></div>
+                        </div>
+                        <div class="ep4-game-container">
+                          <canvas id="ep4-canvas" width="350" height="280"></canvas>
+                          <div class="ep4-controls-pane">
+                            <p class="panel-label">Spudsy's Shift</p>
+                            <button id="ep4-btn-reset" class="retro-btn btn-sm">RÉINITIALISER</button>
+                            <div class="instructions-box">
+                              <strong>Fast Food Masquerade:</strong> Gangle (en masque plastique) doit préparer 3 burgers. Déplacez Gangle (souris/flèches) pour attraper les ingrédients qui tombent dans l'ordre : Pain du bas, Viande, Fromage, Salade, Pain du haut !
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Episode 5 Frame -->
+                      <div id="sim-ep5" class="sim-screen">
+                        <div class="ep5-hud">
+                          <div>Système: <span class="cyan-text">SUGGESTION_BOX</span></div>
+                          <div>Actions: <span id="ep5-score" class="green-text">0 / 12</span></div>
+                          <div>Temps QTE: <span id="ep5-timer" class="green-text">3.0s</span></div>
+                        </div>
+                        <div class="ep5-game-container">
+                          <canvas id="ep5-canvas" width="350" height="280"></canvas>
+                          <div class="ep5-controls-pane">
+                            <p class="panel-label">Suggestion Box QTE</p>
+                            <button id="ep5-btn-reset" class="retro-btn btn-sm">RÉESSAYER</button>
+                            <div class="instructions-box">
+                              <strong>QTE Suggestions:</strong> Appuyez sur la flèche du clavier (← ↑ ↓ →) affichée à l'écran avant que la jauge ne se vide. Validez 12 QTE de suite pour vider la Suggestion Box !
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Episode 6 Frame -->
+                      <div id="sim-ep6" class="sim-screen">
+                        <div class="ep6-hud">
+                          <div>Sujet: <span class="cyan-text">ARMES POUR TOUS</span></div>
+                          <div>Cibles: <span id="ep6-score" class="green-text">0 / 15</span></div>
+                          <div>Vies: <span id="ep6-lives" class="red-text">3</span></div>
+                        </div>
+                        <div class="ep6-game-container">
+                          <canvas id="ep6-canvas" width="350" height="280"></canvas>
+                          <div class="ep6-controls-pane">
+                            <p class="panel-label">Stand de Tir</p>
+                            <button id="ep6-btn-reset" class="retro-btn btn-sm">RECHARGER</button>
+                            <div class="instructions-box">
+                              <strong>They All Get Guns:</strong> Tirez sur les cibles Jax en mouvement avec votre curseur (clic gauche). Attention : ne tirez pas sur Ragatha et évitez les tirs ennemis (orbes rouges) !
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Episode 7 Frame -->
+                      <div id="sim-ep7" class="sim-screen">
+                        <div class="ep7-hud">
+                          <div>Sujet: <span class="cyan-text">LAC DIGITAL</span></div>
+                          <div>Sauvées: <span id="ep7-score" class="green-text">0 / 8 Crevettes</span></div>
+                          <div>Alerte Soleil: <span id="ep7-alert" class="red-text">NORMAL</span></div>
+                        </div>
+                        <div class="ep7-game-container">
+                          <canvas id="ep7-canvas" width="350" height="280"></canvas>
+                          <div class="ep7-controls-pane">
+                            <p class="panel-label">Parasol Ombrelle</p>
+                            <button id="ep7-btn-reset" class="retro-btn btn-sm">RÉALIMENTER</button>
+                            <div class="instructions-box">
+                              <strong>Beach Episode:</strong> Utilisez votre souris pour guider l'ombrelle protectrice. Empêchez les rayons solaires de Caine de brûler les Crevettes NPCs qui courent sur le plage !
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Episode 8 Frame -->
+                      <div id="sim-ep8" class="sim-screen">
+                        <div class="ep8-hud">
+                          <div>Sujet: <span class="cyan-text">ORIGINE CAINE & HELEN</span></div>
+                          <div>Souvenirs: <span id="ep8-score" class="green-text">0 / 5</span></div>
+                          <div>Radar: <span id="ep8-radar" class="green-text">BALAYAGE...</span></div>
+                        </div>
+                        <div class="ep8-game-container">
+                          <canvas id="ep8-canvas" width="350" height="280"></canvas>
+                          <div class="ep8-controls-pane">
+                            <p class="panel-label">Secteurs Mémoire</p>
+                            <button id="ep8-btn-reset" class="retro-btn btn-sm">RÉALIGNER</button>
+                            <div class="instructions-box">
+                              <strong>hjsakldfhl:</strong> Guidez Kinger (K) avec les flèches ou WASD dans la mémoire tampon. Collectez les orbes de souvenirs (H) de Queenie en évitant le projecteur rouge de Caine.
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Episode 9 Frame -->
+                      <div id="sim-ep9" class="sim-screen">
+                        <div class="ep9-hud">
+                          <div>Sujet: <span class="cyan-text">REMEMBER</span></div>
+                          <div>Couleur: <span id="ep9-score" class="green-text">0%</span></div>
+                          <div>Crash système: <span id="ep9-timer" class="red-text blinking">50s</span></div>
+                        </div>
+                        <div class="ep9-game-container">
+                          <canvas id="ep9-canvas" width="350" height="280"></canvas>
+                          <div class="ep9-controls-pane">
+                            <p class="panel-label">Détecteur de Pixels</p>
+                            <button id="ep9-btn-reset" class="retro-btn btn-sm">REBOOT</button>
+                            <div class="instructions-box">
+                              <strong>Remember Finale:</strong> Le cirque perd ses couleurs. Peignez en survolant les dalles grises clignotantes de l'écran avec votre souris pour restaurer au moins 75% des couleurs avant le crash !
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Episode -1 Prequel Frame -->
+                      <div id="sim-ep-1" class="sim-screen">
+                        <div class="ep0-hud">
+                          <div>Système: <span class="cyan-text">ABEL_CORE_V0.1</span></div>
+                          <div>Synapse: <span id="ep-1-connected" class="orange-text">NON-CONNECTÉ</span></div>
+                          <div>Temps CPU restant: <span id="ep-1-timer" class="green-text">35s</span></div>
+                        </div>
+                        <div class="ep0-game-container">
+                          <canvas id="ep-1-canvas" width="350" height="280"></canvas>
+                          <div class="ep0-controls-pane">
+                            <p class="panel-label">Déviation de Signal</p>
+                            <button id="ep-1-btn-reset" class="retro-btn btn-sm">RÉALIGNER</button>
+                            <div class="instructions-box">
+                              <strong>Arthur's Synaptic Lock:</strong> Connectez le cerveau d'Arthur (A) à la base de données C&A (D) en cliquant sur les commutateurs réseau pour les faire pivoter. Créez un canal de données continu avant que le balayage de Caine n'intercepte le signal !
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Episode -2 Prequel Frame (Caine Origin) -->
+                      <div id="sim-ep-2" class="sim-screen">
+                        <div class="ep0-hud">
+                          <div>Système: <span class="cyan-text">RED_DOT.EXE (1993)</span></div>
+                          <div>Fusion: <span id="ep-2-fusion-percent" class="orange-text">0%</span></div>
+                          <div>Intégrité Noyau: <span id="ep-2-integrity" class="green-text">100%</span></div>
+                        </div>
+                        <div class="ep0-game-container">
+                          <canvas id="ep-2-canvas" width="350" height="280"></canvas>
+                          <div class="ep0-controls-pane">
+                            <p class="panel-label">Déviation d'IA</p>
+                            <button id="ep-2-btn-steer" class="retro-btn btn-sm" style="display:none;">RE-CIBLER</button>
+                            <div class="instructions-box">
+                              <strong>Fusion d'IA :</strong> Déplacez votre curseur sur le canvas pour guider le point rouge (RED_DOT) vers le point bleu mobile (BLUE_DOT). Absorbez-le 4 fois pour fusionner les codes d'IA et compiler Caine. Évitez les filtres de sécurité gris mobiles !
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Narrative Story Screen -->
+                      <div id="sim-story-screen" class="sim-screen">
+                        <div class="story-header">
+                          <h2 id="sim-story-title">Épisode X</h2>
+                          <span id="sim-story-phase-label">[PHASE INTRODUISANTE]</span>
+                        </div>
+                        <div id="sim-story-text" class="story-text-pane"></div>
+                        <div class="story-progress-bar">
+                          <span id="sim-story-progress-label" class="progress-label">[TRANSMISSION 0/0 — 0%]</span>
+                          <div class="progress-track">
+                            <div class="progress-fill" id="sim-story-progress-fill" style="width: 0%;"></div>
+                          </div>
+                        </div>
+                        <div class="story-controls">
+                          <button id="btn-story-speed" class="retro-btn btn-sm" title="Vitesse de transmission">⚡ x1</button>
+                          <button id="btn-story-skip" class="retro-btn">ACCÉDER AU SIMULATEUR</button>
+                          <button id="btn-story-next" class="retro-btn btn-primary-retro">CONTINUER</button>
+                        </div>
+                      </div>
+
+                      <!-- Short interactive cuts inserted between transcript blocks -->
+                      <div id="sim-story-micro-screen" class="sim-screen">
+                        <div class="micro-header">
+                          <div>
+                            <h2 id="story-micro-title">MICRO-SIMULATION</h2>
+                            <span id="story-micro-subtitle">[SOUS-EPISODE INTERACTIF]</span>
+                          </div>
+                          <div id="story-micro-status" class="micro-status">0 / 0</div>
+                        </div>
+                        <canvas id="story-micro-canvas" width="500" height="280"></canvas>
+                        <div class="micro-footer">
+                          <p id="story-micro-objective">Objectif de synchronisation.</p>
+                          <button id="btn-story-micro-action" class="retro-btn btn-primary-retro">INITIALISER</button>
+                        </div>
+                      </div>
+
+                      <!-- Game Over Screen -->
+                      <div id="sim-gameover-screen" class="sim-screen">
+                        <h2 id="sim-over-title" class="red-text blinking">SIMULATION ABORTED</h2>
+                        <p id="sim-over-reason">Sujet a subi une abstraction mentale.</p>
+                        <button id="btn-retry-simulation" class="retro-btn">RÉESSAYER</button>
+                      </div>
+
+                      <!-- Game Won Screen -->
+                      <div id="sim-victory-screen" class="sim-screen">
+                        <h2 class="green-text blinking">SIMULATION COMPLETED</h2>
+                        <p id="sim-victory-desc">Les données de la simulation ont été enregistrées avec succès.</p>
+                        <div id="sim-victory-bonus" class="cyan-text"></div>
+                        <button id="btn-victory-continue" class="retro-btn">TERMINER</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Window template: Wacky Watch -->
+              <div id="win-wacky-watch" class="window" style="width: 540px; height: 400px; left: 140px; top: 90px; display: none;">
+                <div class="window-header">
+                  <span class="window-title">The Wacky Watch - Cast Tracker v1.0</span>
+                  <div class="window-controls">
+                    <button class="win-btn win-min">_</button>
+                    <button class="win-btn win-max">[]</button>
+                    <button class="win-btn win-close">X</button>
+                  </div>
+                </div>
+                <div class="window-body watch-window-body">
+                  <div class="watch-menu">
+                    <button id="watch-btn-cast" class="watch-menu-btn active">PERSONNAGES</button>
+                    <button id="watch-btn-radar" class="watch-menu-btn">RADAR DU VIDE</button>
+                  </div>
+                  <div class="watch-content-pane">
+                    <!-- Cast List Tab -->
+                    <div id="watch-tab-cast" class="watch-tab active">
+                      <div class="cast-selector" id="watch-cast-list">
+                        <!-- Filled by JS -->
+                      </div>
+                      <div class="cast-profile-panel" id="watch-cast-profile">
+                        <div class="profile-header">
+                          <div class="profile-avatar" id="watch-profile-avatar"></div>
+                          <div class="profile-meta">
+                            <h3 id="watch-profile-name">Pomni</h3>
+                            <p>Âge approx: <span id="watch-profile-age" class="cyan-text">25</span></p>
+                            <p>Stress: <span id="watch-profile-stress" class="red-text">92%</span></p>
+                          </div>
+                        </div>
+                        <div class="profile-fact-box">
+                          <p class="panel-label">Fait Insolite (Wacky Fact)</p>
+                          <p id="watch-profile-fact" class="fact-text">A peur des mannequins de cire et ne se souvient plus de son nom civil.</p>
+                          <button id="watch-btn-refresh-fact" class="retro-btn btn-sm" style="margin-top: 8px;">AUTRE FAIT</button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Radar Tab -->
+                    <div id="watch-tab-radar" class="watch-tab">
+                      <div class="radar-hud">
+                        <div>Limites du Vide : <span class="red-text font-bold blinking">DANGER</span></div>
+                        <button id="watch-btn-ping" class="retro-btn btn-sm">PING DE RAPPEL CAINE</button>
+                      </div>
+                      <canvas id="watch-radar-canvas" width="310" height="230"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Window template: Diagnostics -->
+              <div id="win-vitals" class="window" style="width: 420px; height: 380px; left: 160px; top: 120px; display: none;">
+                <div class="window-header">
+                  <span class="window-title">Diagnostics Cerveau-Machine - Sujet #042</span>
+                  <div class="window-controls">
+                    <button class="win-btn win-min">_</button>
+                    <button class="win-btn win-max">[]</button>
+                    <button class="win-btn win-close">X</button>
+                  </div>
+                </div>
+                <div class="window-body diagnostics-body">
+                  <div class="diagnostic-profile">
+                    <div class="profile-pic"></div>
+                    <div class="profile-details">
+                      <div><label>Sujet:</label> <span class="cyan-text">SUJET #042</span></div>
+                      <div><label>Raccordement:</label> <span class="green-text">Casque VR v1.4</span></div>
+                      <div><label>Statut:</label> <span class="green-text pulse-text">Connecté</span></div>
+                      <div><label>Débit Neuronal:</label> <span id="vital-throughput">48.2 GB/s</span></div>
+                    </div>
+                  </div>
+                  <div class="diagnostic-charts">
+                    <div class="chart-wrapper">
+                      <span class="chart-label">Ondes Cérébrales (EEG)</span>
+                      <canvas id="eeg-canvas" width="380" height="70"></canvas>
+                    </div>
+                    <div class="chart-wrapper">
+                      <span class="chart-label">Rythme Cardiaque (ECG)</span>
+                      <canvas id="ecg-canvas" width="380" height="70"></canvas>
+                    </div>
+                  </div>
+                  <div class="diagnostic-warnings">
+                    <span class="alert-pulse red-text">ATTENTION: Anomalie de l'hippocampe détectée. La déconnexion forcée peut causer des dommages irréversibles.</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Window template: Terminal -->
+              <div id="win-terminal" class="window" style="width: 500px; height: 350px; left: 240px; top: 80px; display: none;">
+                <div class="window-header">
+                  <span class="window-title">Console Terminal C&A - OS v0.98</span>
+                  <div class="window-controls">
+                    <button class="win-btn win-min">_</button>
+                    <button class="win-btn win-max">[]</button>
+                    <button class="win-btn win-close">X</button>
+                  </div>
+                </div>
+                <div class="window-body terminal-window-body">
+                  <div class="terminal-output" id="term-output">
+                    <div>C&A Mainframe Terminal (OS v0.98)</div>
+                    <div>Tapez 'help' pour la liste des commandes.</div>
+                    <br>
+                  </div>
+                  <div class="terminal-input-line">
+                    <span class="terminal-prompt">CA:\&gt;</span>
+                    <input type="text" id="term-input" class="term-input-box" autofocus autocomplete="off">
+                  </div>
+                </div>
+              </div>
+
+              <!-- Window template: Trash Bin -->
+              <div id="win-trash" class="window" style="width: 380px; height: 260px; left: 300px; top: 150px; display: none;">
+                <div class="window-header">
+                  <span class="window-title">Corbeille</span>
+                  <div class="window-controls">
+                    <button class="win-btn win-min">_</button>
+                    <button class="win-btn win-max">[]</button>
+                    <button class="win-btn win-close">X</button>
+                  </div>
+                </div>
+                <div class="window-body trash-body">
+                  <div class="trash-list" id="trash-list">
+                    <!-- Rendered dynamically by app.js -->
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Start Bar (Classic OS style) -->
+            <div id="start-bar">
+              <button id="start-btn" class="retro-btn">
+                <span class="logo-icon-sm"></span> C&A Start
+              </button>
+              <div class="taskbar-tabs" id="taskbar-tabs">
+                <!-- Open windows represented here -->
+              </div>
+              <div class="system-tray">
+                <div class="tray-icon icon-headset-tray" title="Casque VR Connecté"></div>
+                <div class="tray-icon icon-net-tray" title="Réseau Simulation Stable"></div>
+                <span id="system-clock">12:00</span>
+              </div>
+            </div>
+
+            <!-- Start Menu (Classic OS style, hidden initially) -->
+            <div id="start-menu" style="display: none;">
+              <div class="start-menu-sidebar">
+                <span class="rotated-title">C&A OS 98</span>
+              </div>
+              <div class="start-menu-items">
+                <div class="start-menu-item" data-window="simulations">
+                  <span class="icon-sm icon-sim-sm"></span> Simulation Panel
+                </div>
+                <div class="start-menu-item" data-window="files">
+                  <span class="icon-sm icon-folder-sm"></span> C&A Archives
+                </div>
+                <div class="start-menu-item" data-window="vitals">
+                  <span class="icon-sm icon-vitals-sm"></span> Diagnostic Sujet
+                </div>
+                <div class="start-menu-item" data-window="terminal">
+                  <span class="icon-sm icon-term-sm"></span> Invite de commande
+                </div>
+                <div class="start-menu-item" id="start-menu-reboot">
+                  <span class="icon-sm icon-reboot-sm"></span> Redémarrer le terminal
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. DIALOG POPUPS -->
+          <div id="dialog-overlay" class="dialog-overlay" style="display: none;">
+            <div class="dialog-box">
+              <div class="dialog-header">
+                <span id="dialog-title">Message Système</span>
+                <button id="dialog-close-x" class="win-btn">X</button>
+              </div>
+              <div class="dialog-body">
+                <p id="dialog-text">Contenu du message...</p>
+                <div class="dialog-buttons">
+                  <button id="dialog-btn-ok" class="retro-btn">OK</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. LORE INTRUSIONS -->
+          <!-- Caine Warning Overlay -->
+          <div id="caine-intrusion" class="caine-intrusion-overlay" style="display: none;">
+            <div class="caine-face">
+              <div class="caine-eyes">
+                <div class="caine-eye left"></div>
+                <div class="caine-eye right"></div>
+              </div>
+              <div class="caine-jaws">
+                <div class="caine-teeth top"></div>
+                <div class="caine-teeth bottom"></div>
+              </div>
+            </div>
+            <div class="caine-bubble-msg">
+              <p>"DÉFAUT D'AUTORISATION ! Ce dossier contient des données confidentielles. Allez plutôt vous amuser avec mes fantastiques aventures !"</p>
+              <button id="caine-btn-dismiss" class="retro-btn btn-primary-retro">DÉSOLÉ CAINE</button>
+            </div>
+          </div>
+
+          <!-- Bubble Intrusion Sprite -->
+          <div id="bubble-intrusion" class="bubble-intrusion-sprite" style="display: none;">
+            <div class="bubble-body"></div>
+            <div class="bubble-teeth"></div>
+            <div class="bubble-text">MIAM LE CODE !</div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+    <!-- Monitor controls under screen -->
+    <div class="monitor-controls">
+      <span class="brand-name">C&A Mainframe Terminal v0.98</span>
+      <div class="dials">
+        <div class="dial dial-brightness"></div>
+        <div class="dial dial-contrast"></div>
+        <div class="power-btn-container">
+          <button class="power-btn" id="power-button" title="Éteindre/Allumer l'écran"></button>
+          <div class="power-led" id="power-led"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Audio elements & Scripts -->
+  <script src="episodes.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
