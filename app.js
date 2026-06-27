@@ -1783,6 +1783,36 @@ const OS = {
         "Variante baseball de Kinger avec casquette et gant.",
         "La piece d echecs haute et les yeux paniques restent prioritaires.",
         "CainOS recommande de ne pas lui confier la strategie de l equipe."
+      ]},
+      rivalbaseballzooble: { name: "Rival Baseball Zooble", age: "Variante fan", stress: "72%", avatar: "rivalbaseballzooble", signal: "Z", color: "#f5d33b", facts: [
+        "Variante equipe adverse de Zooble en couleurs jaune, bleu et rose.",
+        "Les pieces modulaires restent volontairement asymetriques.",
+        "CainOS la distingue du costume baseball principal par son signal rival."
+      ]},
+      rivalbaseballpomni: { name: "Rival Baseball Pomni", age: "Variante fan", stress: "94%", avatar: "rivalbaseballpomni", signal: "P", color: "#d7382f", facts: [
+        "Variante equipe adverse de Pomni avec uniforme jaune et rouge.",
+        "Le regard plus determine rappelle le camp oppose.",
+        "Le profil reste un skin fan, pas une nouvelle Pomni."
+      ]},
+      rivalbaseballpinkgiant: { name: "Rival Baseball Pink Giant", age: "Variante fan", stress: "59%", avatar: "rivalbaseballpinkgiant", signal: "G", color: "#f05a9f", facts: [
+        "Gros joueur rose de l equipe adverse, separe de Gangle dans CainOS.",
+        "Son corps rond segmente reste lisse, sans armure ni epaulettes.",
+        "La fiche corrige l ancien amalgame avec Gangle."
+      ]},
+      rivalbaseballragatha: { name: "Rival Baseball Ragatha", age: "Variante fan", stress: "44%", avatar: "rivalbaseballragatha", signal: "R", color: "#e86493", facts: [
+        "Variante equipe adverse de Ragatha en uniforme rose.",
+        "Les cheveux bleus et l oeil bouton gardent l identite de ce costume.",
+        "Archivee comme skin rival baseball."
+      ]},
+      rivalbaseballjax: { name: "Rival Baseball Jax", age: "Variante fan", stress: "50%", avatar: "rivalbaseballjax", signal: "J", color: "#7a244d", facts: [
+        "Variante equipe adverse de Jax avec peau bordeaux et tenue bleue.",
+        "Pas de chapeau : les longues oreilles restent visibles.",
+        "CainOS l associe au camp oppose du match."
+      ]},
+      rivalbaseballkinger: { name: "Rival Baseball Kinger", age: "Variante fan", stress: "99%", avatar: "rivalbaseballkinger", signal: "Q", color: "#8e8f9b", facts: [
+        "Variante equipe adverse de Kinger avec piece grise et bordures jaunes.",
+        "La casquette de commandant est stylisee, sans symbole reel.",
+        "La posture autoritaire remplace l attitude panique habituelle."
       ]}
     };
 
@@ -1946,6 +1976,15 @@ const OS = {
     if (baseballVariantSheetMap[avatar]) {
       const [col, row] = baseballVariantSheetMap[avatar];
       return `<span class="pixel-sheet-avatar-baseball avatar-bb-c${col}-r${row}" style="--avatar-size:${size}px" aria-hidden="true"></span>`;
+    }
+
+    const rivalBaseballVariantSheetMap = {
+      rivalbaseballzooble: [0, 0], rivalbaseballpomni: [1, 0], rivalbaseballpinkgiant: [2, 0],
+      rivalbaseballragatha: [3, 0], rivalbaseballjax: [4, 0], rivalbaseballkinger: [5, 0]
+    };
+    if (rivalBaseballVariantSheetMap[avatar]) {
+      const [col, row] = rivalBaseballVariantSheetMap[avatar];
+      return `<span class="pixel-sheet-avatar-rival-baseball avatar-rbb-c${col}-r${row}" style="--avatar-size:${size}px" aria-hidden="true"></span>`;
     }
 
     const px = (x, y, w, h, fill) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${fill}"/>`;
