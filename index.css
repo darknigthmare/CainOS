@@ -1647,6 +1647,17 @@ body {
   image-rendering: pixelated;
 }
 
+.pixel-sheet-avatar-abstracted {
+  --avatar-size: 46px;
+  display: block;
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  background-image: url('assets/images/cainos-pixel-cast-sheet-abstracted.png');
+  background-repeat: no-repeat;
+  background-size: 500% 200%;
+  image-rendering: pixelated;
+}
+
 .avatar-c0-r0 { background-position: 0% 0%; }
 .avatar-c1-r0 { background-position: 20% 0%; }
 .avatar-c2-r0 { background-position: 40% 0%; }
@@ -1665,6 +1676,17 @@ body {
 .avatar-c3-r2 { background-position: 60% 100%; }
 .avatar-c4-r2 { background-position: 80% 100%; }
 .avatar-c5-r2 { background-position: 100% 100%; }
+
+.avatar-a-c0-r0 { background-position: 0% 0%; }
+.avatar-a-c1-r0 { background-position: 25% 0%; }
+.avatar-a-c2-r0 { background-position: 50% 0%; }
+.avatar-a-c3-r0 { background-position: 75% 0%; }
+.avatar-a-c4-r0 { background-position: 100% 0%; }
+.avatar-a-c0-r1 { background-position: 0% 100%; }
+.avatar-a-c1-r1 { background-position: 25% 100%; }
+.avatar-a-c2-r1 { background-position: 50% 100%; }
+.avatar-a-c3-r1 { background-position: 75% 100%; }
+.avatar-a-c4-r1 { background-position: 100% 100%; }
 
 .cast-profile-panel {
   flex-grow: 1;

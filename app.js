@@ -1558,6 +1558,56 @@ const OS = {
         "Source lumineuse agressive dans les logs du lac digital.",
         "Ses rayons peuvent etre interpretes comme routines de purge.",
         "Le rendu pixel-art garde un avertissement thermique."
+      ]},
+      ribbit: { name: "Ribbit", age: "Abstrait", stress: "100%", avatar: "ribbit", signal: "R", color: "#63d35f", facts: [
+        "Membre abstrait repertorie dans les archives des Circus Members.",
+        "Silhouette de grenouille verte avec noeud rose et regard fige.",
+        "CainOS le classe comme residu de joueur, pas comme PNJ actif."
+      ]},
+      scratch: { name: "Scratch", age: "Abstrait", stress: "100%", avatar: "scratch", signal: "D", color: "#ffd341", facts: [
+        "Membre abstrait a apparence canine, conserve en fiche fantome.",
+        "Son chandail rouge reste lisible malgre la corruption du profil.",
+        "Les scans le separent des animaux decoratifs du cirque."
+      ]},
+      wormo: { name: "Wormo", age: "Abstrait", stress: "100%", avatar: "wormo", signal: "W", color: "#70c64f", facts: [
+        "Corps de ver a rayures, catalogue comme ancien membre du cirque.",
+        "Ses yeux asymetriques reviennent dans les vignettes d archive.",
+        "CainOS limite son rendu aux modes basse resolution."
+      ]},
+      bizco: { name: "Bizco", age: "Abstrait", stress: "100%", avatar: "bizco", signal: "B", color: "#b45cff", facts: [
+        "Ancien membre au motif de bouffon multicolore.",
+        "Ses gants flottants declenchent des erreurs de hitbox dans CainOS.",
+        "La fiche conserve les pois et les yeux spirales comme marqueurs."
+      ]},
+      rattie: { name: "Rattie", age: "Abstrait", stress: "100%", avatar: "rattie", signal: "T", color: "#b7a891", facts: [
+        "Petit profil souris archive parmi les membres abstraits.",
+        "La fleur rouge et la bande faciale servent d identifiants visuels.",
+        "CainOS evite de le melanger avec les mannequins generiques."
+      ]},
+      spike: { name: "Spike", age: "Abstrait", stress: "100%", avatar: "spike", signal: "S", color: "#8d5cff", facts: [
+        "Dinosaurien violet conserve comme signature d abstraction.",
+        "Les formes colorees sur son dos stabilisent le rendu pixel-art.",
+        "Aucun ping humain coherent ne subsiste dans son profil."
+      ]},
+      pinkcyclops: { name: "Pink Furry Cyclops", age: "Abstrait", stress: "100%", avatar: "pinkcyclops", signal: "P", color: "#ff80bd", facts: [
+        "Creature rose cyclope, classee comme membre abstrait.",
+        "Son unique oeil violet reste le point d ancrage de l avatar.",
+        "CainOS marque la fourrure comme bruit visuel persistant."
+      ]},
+      yellowclown: { name: "Frowning Yellow Clown Creature", age: "Abstrait", stress: "100%", avatar: "yellowclown", signal: "Y", color: "#ffd33f", facts: [
+        "Creature clown jaune au visage triste, archivee en profil abstrait.",
+        "La collerette bleue et les antennes rouges la rendent identifiable.",
+        "Le module Wacky Watch la garde en zone memoire verrouillee."
+      ]},
+      oyster: { name: "The Oyster", age: "Abstrait", stress: "100%", avatar: "oyster", signal: "O", color: "#8fb7ff", facts: [
+        "Membre abstrait en forme d huitre, detecte dans les archives du cirque.",
+        "Le corps sombre et les yeux jaunes servent de signature CainOS.",
+        "Son signal apparait comme un objet vivant plutot qu un decor."
+      ]},
+      bulbcreature: { name: "Light Green Bulb Creature", age: "Abstrait", stress: "100%", avatar: "bulbcreature", signal: "U", color: "#a8e85b", facts: [
+        "Creature vert clair en forme de bulbe, rattachee aux membres abstraits.",
+        "Le nez vert, le noeud orange et les paupieres violettes sont conserves.",
+        "CainOS l affiche en archive pour respecter son statut hors episode actif."
       ]}
     };
 
@@ -1668,6 +1718,15 @@ const OS = {
     if (sheetMap[avatar]) {
       const [col, row] = sheetMap[avatar];
       return `<span class="pixel-sheet-avatar avatar-c${col}-r${row}" style="--avatar-size:${size}px" aria-hidden="true"></span>`;
+    }
+
+    const abstractedSheetMap = {
+      ribbit: [0, 0], scratch: [1, 0], wormo: [2, 0], bizco: [3, 0], rattie: [4, 0],
+      spike: [0, 1], pinkcyclops: [1, 1], yellowclown: [2, 1], oyster: [3, 1], bulbcreature: [4, 1]
+    };
+    if (abstractedSheetMap[avatar]) {
+      const [col, row] = abstractedSheetMap[avatar];
+      return `<span class="pixel-sheet-avatar-abstracted avatar-a-c${col}-r${row}" style="--avatar-size:${size}px" aria-hidden="true"></span>`;
     }
 
     const px = (x, y, w, h, fill) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${fill}"/>`;
