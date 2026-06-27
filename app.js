@@ -1569,6 +1569,16 @@ const OS = {
         "Sa silhouette est volontairement rendue comme un avatar admin.",
         "Le terminal marque ses donnees comme reconstruites."
       ]},
+      abelmannequin: { name: "Abel Mannequin", age: "Archive", stress: "64%", avatar: "abelmannequin", signal: "M", color: "#ff7a1a", facts: [
+        "Version mannequin orange sans visage, proche du corps generique montre en reference.",
+        "Les articulations et la posture raide gardent l aspect pantin de test.",
+        "CainOS la classe comme forme physique archivee d Abel."
+      ]},
+      abelfullbody: { name: "Abel Full Body", age: "Archive", stress: "42%", avatar: "abelfullbody", signal: "F", color: "#f08a28", facts: [
+        "Version full body orange avec visage souriant simple.",
+        "Le corps articule reste proche du mannequin, mais avec identite faciale lisible.",
+        "Archivee comme deuxieme rendu d Abel, separee du mannequin sans visage."
+      ]},
       moon: { name: "Moon", age: "Decor", stress: "??", avatar: "moon", signal: "M", color: "#d6d6ff", facts: [
         "Entite celeste associee aux routines absurdes de Caine.",
         "CainOS la garde dans la section decor actif.",
@@ -2124,6 +2134,14 @@ const OS = {
 
     if (avatar === 'gloinkqueenscale') {
       return `<span class="pixel-sheet-avatar-gloink-queen-scale" style="--avatar-size:${size}px" aria-hidden="true"></span>`;
+    }
+
+    const abelVariantSheetMap = {
+      abelmannequin: [0, 0], abelfullbody: [1, 0]
+    };
+    if (abelVariantSheetMap[avatar]) {
+      const [col, row] = abelVariantSheetMap[avatar];
+      return `<span class="pixel-sheet-avatar-abel avatar-ab-c${col}-r${row}" style="--avatar-size:${size}px" aria-hidden="true"></span>`;
     }
 
     const px = (x, y, w, h, fill) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${fill}"/>`;
