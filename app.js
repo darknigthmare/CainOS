@@ -1668,6 +1668,31 @@ const OS = {
         "Contrepartie Evil Big Top d Orbsman, utilisee a la place d une Evil Gangle.",
         "La structure en spheres reste visible malgre la corruption visuelle.",
         "Cette entree evite d inventer une contrepartie hostile directe de Gangle."
+      ]},
+      darkduojax: { name: "Dark Duo Jax", age: "Variante fan", stress: "58%", avatar: "darkduojax", signal: "D", color: "#7b46d8", facts: [
+        "Variante sombre inspiree du duo Jax et Gangle que tu as montre.",
+        "CainOS la traite comme costume alternatif, pas comme entite canon separee.",
+        "Le costume noir et les accents rouges gardent le signal de Jax lisible."
+      ]},
+      darkduogangle: { name: "Dark Duo Gangle", age: "Variante fan", stress: "61%", avatar: "darkduogangle", signal: "G", color: "#d83d5a", facts: [
+        "Variante sombre de Gangle avec rubans rouges et tenue noire.",
+        "Le masque blanc souriant reste le marqueur principal du profil.",
+        "Classee skin visuel pour eviter de l afficher comme nouvelle personne."
+      ]},
+      maidjax: { name: "Maid Jax", age: "Variante fan", stress: "42%", avatar: "maidjax", signal: "J", color: "#c88aff", facts: [
+        "Variante maid de Jax basee sur la reference que tu as fournie.",
+        "Le grand corps de lapin et les yeux jaunes restent conserves.",
+        "CainOS la range dans les costumes, hors progression narrative."
+      ]},
+      maidragatha: { name: "Maid Ragatha", age: "Variante fan", stress: "37%", avatar: "maidragatha", signal: "R", color: "#ff6b64", facts: [
+        "Variante maid de Ragatha avec tablier long et cheveux rouges.",
+        "Le bouton et le calme du profil original restent les reperes visuels.",
+        "La fiche est une archive de skin, pas une nouvelle timeline."
+      ]},
+      maidpomni: { name: "Maid Pomni", age: "Variante fan", stress: "86%", avatar: "maidpomni", signal: "P", color: "#f0f0f0", facts: [
+        "Variante maid de Pomni avec silhouette compacte et air inquiet.",
+        "Le bonnet conserve la logique du costume de bouffon en version maid.",
+        "CainOS l affiche comme variante cosmétique de Pomni."
       ]}
     };
 
@@ -1797,6 +1822,14 @@ const OS = {
     if (variantSheetMap[avatar]) {
       const [col, row] = variantSheetMap[avatar];
       return `<span class="pixel-sheet-avatar-variants avatar-v-c${col}-r${row}" style="--avatar-size:${size}px" aria-hidden="true"></span>`;
+    }
+
+    const requestedVariantSheetMap = {
+      darkduojax: [0, 0], darkduogangle: [1, 0], maidjax: [2, 0], maidragatha: [3, 0], maidpomni: [4, 0]
+    };
+    if (requestedVariantSheetMap[avatar]) {
+      const [col, row] = requestedVariantSheetMap[avatar];
+      return `<span class="pixel-sheet-avatar-requested avatar-r-c${col}-r${row}" style="--avatar-size:${size}px" aria-hidden="true"></span>`;
     }
 
     const px = (x, y, w, h, fill) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${fill}"/>`;
