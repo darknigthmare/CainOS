@@ -2129,6 +2129,7 @@ const EpisodeManager = {
   bonusTextPending: "",
   completedStoryCheckpoints: null,
   activeStoryMicroGame: null,
+  nextEpisodeAfterVictory: null,
   storyCheckpointConfig: {
     1: [
       { after: 55, title: "Reception du nouveau sujet", objective: "Cliquez les pulses bleus pour stabiliser Pomni avant que le flux d'arrivee ne sature.", mode: "click", goal: 6, duration: 16, target: "PULSE", hazard: "PANIC" },
@@ -2189,7 +2190,11 @@ const EpisodeManager = {
 
     document.getElementById('btn-victory-continue').addEventListener('click', () => {
       SoundManager.playClick();
-      this.showStartScreen(this.currentEpisode);
+      if (this.nextEpisodeAfterVictory !== null && !this.isLocked(this.nextEpisodeAfterVictory)) {
+        this.selectEpisode(this.nextEpisodeAfterVictory);
+      } else {
+        this.showStartScreen(this.currentEpisode);
+      }
     });
 
     const storyNextBtn = document.getElementById('btn-story-next');
@@ -2818,6 +2823,18 @@ const EpisodeManager = {
     document.querySelectorAll('.sim-screen').forEach(s => s.classList.remove('active'));
     document.getElementById('sim-victory-screen').classList.add('active');
     document.getElementById('sim-victory-bonus').innerText = bonusText;
+    this.nextEpisodeAfterVictory = this.getNextEpisodeAfter(this.currentEpisode);
+    const continueBtn = document.getElementById('btn-victory-continue');
+    if (continueBtn) {
+      continueBtn.innerText = this.nextEpisodeAfterVictory !== null && !this.isLocked(this.nextEpisodeAfterVictory) ? "CONTINUER LA SUITE" : "TERMINER";
+    }
+  },
+
+  getNextEpisodeAfter(num) {
+    if (num >= 0 && num < 9) return num + 1;
+    if (num === 9) return -1;
+    if (num === -1 && this.getProgress().includes(-2)) return -2;
+    return null;
   }
 };
 
