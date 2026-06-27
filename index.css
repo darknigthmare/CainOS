@@ -1619,6 +1619,23 @@ body {
   font-weight: bold;
 }
 
+.cast-pixel-icon {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #060606;
+  border: 1px solid #333;
+  image-rendering: pixelated;
+}
+
+.pixel-avatar-svg {
+  display: block;
+  image-rendering: pixelated;
+}
+
 .cast-profile-panel {
   flex-grow: 1;
   padding: 15px;
@@ -1638,11 +1655,12 @@ body {
   width: 50px;
   height: 50px;
   border: 2px solid #cc0000;
-  background-size: cover;
-  background-position: center;
   background-color: #222;
   image-rendering: pixelated;
   box-shadow: 0 0 10px rgba(204, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .profile-meta h3 {

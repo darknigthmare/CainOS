@@ -1438,7 +1438,8 @@ const OS = {
         delete castData.pomni;
       }
 
-      const character = castData[this.activeWackyCast];
+      const fullCastData = this.getWackyCastData();
+      const character = castData[this.activeWackyCast] || fullCastData[this.activeWackyCast];
       if (character) {
         const facts = character.facts;
         const curFact = document.getElementById('watch-profile-fact').innerText;
@@ -1462,6 +1463,105 @@ const OS = {
     });
 
     this.updateWackyWatchCastUI();
+  },
+
+  getWackyCastData() {
+    const progress = (typeof EpisodeManager !== 'undefined') ? EpisodeManager.getProgress() : [];
+    const showPomni = progress.includes(0);
+    const castData = {
+      pomni: { name: "Pomni", age: "25", stress: "92%", avatar: "pomni", signal: "P", color: "#00ccff", facts: [
+        "A peur des mannequins de cire et ne se souvient plus de son nom civil.",
+        "A essaye de retirer son casque VR 42 fois la premiere heure.",
+        "Son cortex cerebral recherche obstinement des portes de sortie rouges."
+      ]},
+      caine: { name: "Caine", age: "IA", stress: "12%", avatar: "caine", signal: "C", color: "#ff3333", facts: [
+        "Presente chaque anomalie comme une aventure parfaitement volontaire.",
+        "Ses dents sont traitees comme un masque d interface admin.",
+        "Le module CainOS le classe comme animateur, gardien et bug critique."
+      ]},
+      bubble: { name: "Bubble", age: "IA", stress: "5%", avatar: "bubble", signal: "B", color: "#f7f7ff", facts: [
+        "Apparait dans les logs comme assistant oral de Caine.",
+        "Son sprite est presque entierement bouche et dents.",
+        "Le filtre C&A signale une appetence anormale pour les donnees inutiles."
+      ]},
+      jax: { name: "Jax", age: "22", stress: "45%", avatar: "jax", signal: "J", color: "#aa55ff", facts: [
+        "Deteste faire les courses et adore causer des ennuis aux autres.",
+        "A vole et cache la cle de la chambre de Gangle sous son lit.",
+        "Collectionne secretement les pieces detachees de Zooble."
+      ]},
+      ragatha: { name: "Ragatha", age: "30", stress: "65%", avatar: "ragatha", signal: "R", color: "#ff4444", facts: [
+        "Maintient un sourire constant pour cacher ses bugs de collision physique.",
+        "Ses coutures repondent comme des points de sauvegarde emotionnels.",
+        "Prie secretement pour que Caine fasse une mise a jour corrective."
+      ]},
+      kinger: { name: "Kinger", age: "48", stress: "98%", avatar: "kinger", signal: "K", color: "#ffffdd", facts: [
+        "Son epouse Helen, alias Queenie, s est abstraite sous ses yeux.",
+        "Est l humain connecte depuis le plus longtemps selon CainOS.",
+        "Collectionne des insectes virtuels imaginaires dans un seau."
+      ]},
+      queenie: { name: "Queenie", age: "Archive", stress: "ERR", avatar: "queenie", signal: "Q", color: "#f7eecb", facts: [
+        "Signal conserve sous forme de residu royal dans la memoire tampon.",
+        "CainOS la classe comme sujet abstrait lie au profil de Kinger.",
+        "Sa couronne apparait parfois dans les scans de souvenirs."
+      ]},
+      gangle: { name: "Gangle", age: "26", stress: "55%", avatar: "gangle", signal: "G", color: "#ff88aa", facts: [
+        "Son masque de comedie se brise en moyenne 14.8 fois par jour.",
+        "Animee par une physique de cordes 2.5D tres gourmande en CPU.",
+        "Son humeur suit l integrite du masque actif."
+      ]},
+      zooble: { name: "Zooble", age: "24", stress: "75%", avatar: "zooble", signal: "Z", color: "#ccff00", facts: [
+        "Son corps modulaire contient des pieces incompatibles d autres modeles.",
+        "Deteste participer aux aventures scenarisees par Caine.",
+        "Sa fiche CainOS change de silhouette a chaque rendu."
+      ]},
+      kaufmo: { name: "Kaufmo", age: "Abstrait", stress: "100%", avatar: "kaufmo", signal: "!", color: "#111111", facts: [
+        "Dernier etat connu : abstraction complete.",
+        "La cave de Caine contient encore son empreinte de collision.",
+        "Ses anciens marqueurs comiques ne repondent plus aux pings."
+      ]},
+      gummigoo: { name: "Gummigoo", age: "NPC", stress: "63%", avatar: "gummigoo", signal: "M", color: "#d8a23a", facts: [
+        "PNJ crocodilien dont la memoire a ete menacee par l auto-cleanup.",
+        "Son profil C&A alterne entre NPC et HUMAN selon le patch.",
+        "Le canyon des sucreries conserve sa signature de sirop."
+      ]},
+      loolilalu: { name: "Princess Loolilalu", age: "NPC", stress: "28%", avatar: "loolilalu", signal: "L", color: "#ff9ad5", facts: [
+        "Signature royale detectee dans le royaume des sucreries.",
+        "Son portrait CainOS utilise un diademe simplifie en pixels.",
+        "Classee NPC narratif, autorite locale."
+      ]},
+      fudge: { name: "The Fudge", age: "NPC", stress: "70%", avatar: "fudge", signal: "F", color: "#7a3d1a", facts: [
+        "Masse de confiserie instable signalee dans les logs du canyon.",
+        "Sa silhouette est plus facile a lire en tache qu en visage.",
+        "CainOS recommande de ne pas le laisser pres des sorties."
+      ]},
+      gloinkqueen: { name: "Gloink Queen", age: "NPC", stress: "41%", avatar: "gloinkqueen", signal: "O", color: "#58d66b", facts: [
+        "Source majeure de proliferation Gloink.",
+        "Son sprite est rendu comme un noyau a couronne angulaire.",
+        "Les capteurs la confondent parfois avec un bug de collision."
+      ]},
+      mannequin: { name: "Mannequins", age: "NPC", stress: "0%", avatar: "mannequin", signal: "N", color: "#d8d8d8", facts: [
+        "Corps blancs generiques utilises par Caine pour peupler les scenes.",
+        "Leur absence de visage aide CainOS a economiser de la memoire.",
+        "Pomni les classe automatiquement comme malaise prioritaire."
+      ]},
+      abel: { name: "Abel", age: "Archive", stress: "88%", avatar: "abel", signal: "A", color: "#66ccff", facts: [
+        "Profil d acces lie aux archives finales du projet CainOS.",
+        "Sa silhouette est volontairement rendue comme un avatar admin.",
+        "Le terminal marque ses donnees comme reconstruites."
+      ]},
+      moon: { name: "Moon", age: "Decor", stress: "??", avatar: "moon", signal: "M", color: "#d6d6ff", facts: [
+        "Entite celeste associee aux routines absurdes de Caine.",
+        "CainOS la garde dans la section decor actif.",
+        "Son visage est reduit a un croissant de pixels."
+      ]},
+      sun: { name: "Sun", age: "Decor", stress: "99%", avatar: "sun", signal: "S", color: "#ffd84a", facts: [
+        "Source lumineuse agressive dans les logs du lac digital.",
+        "Ses rayons peuvent etre interpretes comme routines de purge.",
+        "Le rendu pixel-art garde un avertissement thermique."
+      ]}
+    };
+
+    return castData;
   },
 
   updateWackyWatchCastUI() {
@@ -1505,6 +1605,9 @@ const OS = {
       delete castData.pomni;
     }
 
+    Object.keys(castData).forEach(key => delete castData[key]);
+    Object.assign(castData, this.getWackyCastData());
+
     const castList = document.getElementById('watch-cast-list');
     if (castList) {
       castList.innerHTML = "";
@@ -1518,18 +1621,7 @@ const OS = {
       for (let id in castData) {
         const item = document.createElement('div');
         item.className = `cast-item ${id === this.activeWackyCast ? 'active' : ''}`;
-        
-        let avatarSVG = `<svg width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="%23cc0000"/></svg>`;
-        if (id === 'pomni') avatarSVG = `<rect width="14" height="14" x="1" y="1" fill="%230cf" rx="2"/>`;
-        else if (id === 'jax') avatarSVG = `<rect width="14" height="14" x="1" y="1" fill="%2395c" rx="2"/>`;
-        else if (id === 'ragatha') avatarSVG = `<circle cx="8" cy="8" r="6" fill="%23e43"/>`;
-        else if (id === 'kinger') avatarSVG = `<polygon points="8,2 13,14 3,14" fill="%23eed"/>`;
-        else if (id === 'gangle') avatarSVG = `<path d="M2,8 C2,2 14,2 14,8 C14,14 2,14 2,8" fill="none" stroke="%23f33" stroke-width="1.5"/>`;
-        else if (id === 'zooble') avatarSVG = `<rect width="10" height="10" x="3" y="3" fill="%23cc00ff"/>`;
-        
-        item.innerHTML = `<span style="display:inline-block; width:12px; height:12px; margin-right:4px;">
-          <svg width="12" height="12" viewBox="0 0 16 16">${avatarSVG}</svg>
-        </span> ${castData[id].name}`;
+        item.innerHTML = `<span class="cast-pixel-icon">${this.getPixelAvatarSvg(castData[id].avatar, 16)}</span> ${castData[id].name}`;
         
         item.addEventListener('click', () => {
           SoundManager.playClick();
@@ -1555,6 +1647,42 @@ const OS = {
     if (showPomni) {
       this.radarSubjects.unshift({ name: "Pomni", letter: "P", color: "#00ccff", angle: 0, radius: 45, speed: 0.8, driftSpeed: 2.2 });
     }
+
+    this.radarSubjects = Object.values(castData).map((character, index) => ({
+      name: character.name,
+      letter: character.signal || character.name.charAt(0),
+      color: character.color || "#39ff14",
+      angle: index * 0.42,
+      radius: 28 + (index % 5) * 9,
+      speed: 0.25 + (index % 4) * 0.13,
+      driftSpeed: 0.9 + (index % 6) * 0.35
+    }));
+  },
+
+  getPixelAvatarSvg(avatar, size = 46) {
+    const px = (x, y, w, h, fill) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${fill}"/>`;
+    const bg = px(0, 0, 16, 16, '#101318');
+    const sprites = {
+      pomni: [bg, px(3,2,3,4,'#20c7ff'), px(10,2,3,4,'#e13b4b'), px(5,4,6,7,'#ffd2cb'), px(4,9,8,4,'#2a58d8'), px(6,7,1,1,'#1644b5'), px(9,7,1,1,'#1644b5'), px(7,10,2,1,'#f7f7f7'), px(2,5,2,2,'#ffd84a'), px(12,5,2,2,'#ffd84a')],
+      caine: [bg, px(2,4,12,7,'#f7f7f7'), px(3,5,10,2,'#222'), px(4,8,8,2,'#d61f2c'), px(4,10,1,1,'#fff'), px(6,10,1,1,'#fff'), px(9,10,1,1,'#fff'), px(11,10,1,1,'#fff'), px(5,2,2,2,'#22d6ff'), px(9,2,2,2,'#ff3333'), px(6,13,4,1,'#333')],
+      bubble: [bg, px(3,3,10,10,'#f3fbff'), px(4,4,8,8,'#d9f3ff'), px(5,8,6,2,'#111'), px(5,10,1,1,'#fff'), px(7,10,1,1,'#fff'), px(9,10,1,1,'#fff'), px(6,6,1,1,'#111'), px(10,6,1,1,'#111')],
+      jax: [bg, px(5,1,2,6,'#9656d8'), px(10,1,2,6,'#9656d8'), px(4,6,8,7,'#8750cf'), px(5,8,1,1,'#ffe45c'), px(10,8,1,1,'#ffe45c'), px(5,11,6,1,'#f7f7f7'), px(3,13,10,1,'#6b39aa')],
+      ragatha: [bg, px(4,3,8,8,'#ffd0bd'), px(3,2,10,3,'#d92626'), px(2,5,2,6,'#d92626'), px(12,5,2,6,'#d92626'), px(5,7,1,1,'#111'), px(10,7,1,1,'#1f55dd'), px(6,10,4,1,'#b41414'), px(6,13,4,2,'#3d60d8')],
+      kinger: [bg, px(4,2,8,11,'#f5eed2'), px(3,4,10,2,'#f5eed2'), px(6,5,4,4,'#6b3523'), px(6,10,1,1,'#111'), px(9,10,1,1,'#111'), px(5,1,6,1,'#ffd84a'), px(4,2,1,1,'#ffd84a'), px(11,2,1,1,'#ffd84a')],
+      queenie: [bg, px(4,2,8,11,'#eee2c5'), px(3,5,10,2,'#eee2c5'), px(6,5,4,4,'#3a1d42'), px(6,10,1,1,'#111'), px(9,10,1,1,'#111'), px(4,1,8,1,'#ffdf58'), px(5,0,1,1,'#ffdf58'), px(8,0,1,1,'#ffdf58'), px(11,0,1,1,'#ffdf58')],
+      gangle: [bg, px(5,3,6,5,'#f7f7f7'), px(5,3,6,1,'#d61f2c'), px(5,7,6,1,'#d61f2c'), px(6,5,1,1,'#111'), px(9,5,1,1,'#111'), px(7,6,2,1,'#d61f2c'), px(3,9,10,1,'#d61f2c'), px(2,11,4,1,'#d61f2c'), px(10,12,4,1,'#d61f2c')],
+      zooble: [bg, px(4,4,5,5,'#d633ff'), px(9,3,4,4,'#30d6ff'), px(3,9,4,3,'#b7e300'), px(8,9,5,2,'#ff7a30'), px(5,5,1,1,'#111'), px(10,5,1,1,'#111'), px(11,11,2,3,'#ff5eb8')],
+      kaufmo: [px(0,0,16,16,'#050505'), px(2,2,12,12,'#111'), px(3,5,2,2,'#fff'), px(8,3,2,2,'#fff'), px(11,8,2,2,'#fff'), px(5,11,2,2,'#fff'), px(4,6,1,1,'#f00'), px(9,4,1,1,'#f00'), px(12,9,1,1,'#f00'), px(6,12,1,1,'#f00')],
+      gummigoo: [bg, px(2,6,12,5,'#d8a23a'), px(3,4,8,3,'#c78c2b'), px(10,5,3,2,'#e8bd54'), px(5,5,1,1,'#111'), px(11,6,1,1,'#111'), px(6,10,6,1,'#fff'), px(3,12,3,2,'#5ca650'), px(10,12,3,2,'#5ca650')],
+      loolilalu: [bg, px(4,4,8,8,'#ffb7df'), px(5,2,6,2,'#ffd85e'), px(6,1,1,1,'#ffd85e'), px(9,1,1,1,'#ffd85e'), px(6,6,1,1,'#111'), px(10,6,1,1,'#111'), px(6,10,5,1,'#fff'), px(3,12,10,2,'#ff69b4')],
+      fudge: [bg, px(3,4,10,8,'#7a3d1a'), px(2,6,12,4,'#6b2f14'), px(5,6,1,1,'#fff'), px(10,6,1,1,'#fff'), px(6,9,4,1,'#2b1208'), px(4,12,8,2,'#4a210f')],
+      gloinkqueen: [bg, px(4,5,8,7,'#58d66b'), px(3,4,10,2,'#4ebf5c'), px(5,2,6,2,'#73ff83'), px(6,7,1,1,'#111'), px(10,7,1,1,'#111'), px(6,10,4,1,'#1d6b2b')],
+      mannequin: [bg, px(5,3,6,8,'#eeeeee'), px(6,5,4,1,'#d0d0d0'), px(4,11,8,2,'#dddddd'), px(6,13,1,2,'#eeeeee'), px(9,13,1,2,'#eeeeee')],
+      abel: [bg, px(4,3,8,8,'#bdeaff'), px(5,2,6,2,'#2d5d9f'), px(5,6,1,1,'#111'), px(10,6,1,1,'#111'), px(6,10,4,1,'#2d5d9f'), px(3,12,10,2,'#4d6f8f'), px(12,4,2,5,'#66ccff')],
+      moon: [bg, px(4,3,7,9,'#d6d6ff'), px(8,3,4,9,'#101318'), px(6,6,1,1,'#111'), px(6,9,3,1,'#9f9fe8')],
+      sun: [bg, px(6,2,4,2,'#ffd84a'), px(6,12,4,2,'#ffd84a'), px(2,6,2,4,'#ffd84a'), px(12,6,2,4,'#ffd84a'), px(5,5,6,6,'#ffb22e'), px(6,7,1,1,'#6b2b00'), px(9,7,1,1,'#6b2b00'), px(6,10,4,1,'#6b2b00')]
+    };
+    return `<svg class="pixel-avatar-svg" width="${size}" height="${size}" viewBox="0 0 16 16" shape-rendering="crispEdges" aria-hidden="true">${(sprites[avatar] || sprites.mannequin).join('')}</svg>`;
   },
 
   loadWackyProfile(char) {
@@ -1565,6 +1693,8 @@ const OS = {
     
     // Draw simple avatar SVG inside #watch-profile-avatar
     const container = document.getElementById('watch-profile-avatar');
+    container.innerHTML = this.getPixelAvatarSvg(char.avatar, 46);
+    return;
     let svg = "";
     if (char.avatar === 'pomni') {
       svg = `<svg width="46" height="46" viewBox="0 0 16 16"><rect width="16" height="16" fill="%23444"/><rect x="4" y="2" width="8" height="8" fill="%23ffcccc"/><rect x="2" y="2" width="2" height="6" fill="%230cf"/><rect x="12" y="2" width="2" height="6" fill="%23f33"/><circle cx="6" cy="6" r="1.5" fill="%2338f"/><circle cx="10" cy="6" r="1.5" fill="%2338f"/></svg>`;
