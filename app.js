@@ -764,12 +764,24 @@ const OS = {
     };
   },
 
+  getDefaultDesktopIconPosition(winId, index) {
+    const defaultLayout = {
+      simulations: { x: 14, y: 14 },
+      'wacky-watch': { x: 122, y: 14 },
+      files: { x: 14, y: 106 },
+      vitals: { x: 122, y: 106 },
+      terminal: { x: 14, y: 198 },
+      trash: { x: 122, y: 198 }
+    };
+    return defaultLayout[winId] || { x: 14 + (index % 2) * 108, y: 14 + Math.floor(index / 2) * 92 };
+  },
+
   positionDesktopIcons() {
     const positions = this.getDesktopIconPositions();
     const used = new Set();
     document.querySelectorAll('.desktop-icon').forEach((icon, index) => {
       const winId = icon.getAttribute('data-window');
-      const fallback = this.getSnappedDesktopIconPosition(14, 14 + index * 92);
+      const fallback = this.getDefaultDesktopIconPosition(winId, index);
       let pos = positions[winId] || fallback;
       pos = this.getSnappedDesktopIconPosition(pos.x, pos.y);
 
