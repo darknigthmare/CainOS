@@ -6866,7 +6866,7 @@ const EpisodeManager = {
           meta.className = 'sim-card-meta';
           info.appendChild(meta);
         }
-        const count = (this.storyCheckpointConfig[num] || []).length;
+        const count = this.getSubepisodeSegments(num).length;
         meta.innerText = count > 0 ? `${count} sous-episodes` : "Simulation directe";
       }
       if (this.isLocked(num)) {
@@ -7062,6 +7062,7 @@ const EpisodeManager = {
   },
 
   getSubepisodeSegments(num) {
+    if (num === 0) return [];
     const data = this.storyData[num];
     const checkpoints = this.storyCheckpointConfig[num] || [];
     if (!data || !data.intro || checkpoints.length === 0) return [];
@@ -7233,6 +7234,7 @@ const EpisodeManager = {
 
   getPendingStoryCheckpoint() {
     if (this.storyPhase !== 'intro') return null;
+    if (this.currentEpisode === 0) return null;
     if (!this.storyLines || this.storyIndex <= 0) return null;
     if (this.activeSubepisodeCheckpoint) {
       const checkpoint = this.activeSubepisodeCheckpoint;
