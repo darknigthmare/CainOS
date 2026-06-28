@@ -219,6 +219,10 @@ const EpisodeManager = {
   currentEpisode: null,
   activeGame: null,
   storySpeed: 1,
+  selectedSubepisodeIndex: 0,
+  activeSubepisodeIndex: null,
+  activeSubepisodeCheckpoint: null,
+  activeSubepisodeTotal: 0,
   
   // Story Engine State
   storyData: {
@@ -2269,12 +2273,12 @@ const EpisodeManager = {
       // Transmission received sound
       SoundManager.play(600, 0.08, 'sine', 0.1);
       setTimeout(() => SoundManager.play(900, 0.08, 'sine', 0.1), 80);
-      this.startStory(this.currentEpisode, 'intro');
+      this.launchSelectedEpisode();
     });
 
     document.getElementById('btn-retry-simulation').addEventListener('click', () => {
       SoundManager.playClick();
-      this.startStory(this.currentEpisode, 'intro');
+      this.launchSelectedEpisode();
     });
 
     document.getElementById('btn-victory-continue').addEventListener('click', () => {
@@ -2301,6 +2305,10 @@ const EpisodeManager = {
         } else if (this.storyIndex < this.storyLines.length) {
           this.typeNextLine();
         } else {
+          if (this.activeSubepisodeIndex !== null) {
+            this.finishActiveSubepisode();
+            return;
+          }
           if (this.storyPhase === 'intro') {
             this.startGameplay();
           } else {
@@ -2317,7 +2325,11 @@ const EpisodeManager = {
         clearInterval(this.typewriterTimer);
         this.isTyping = false;
         if (this.storyPhase === 'intro') {
-          this.startGameplay();
+          if (this.activeSubepisodeIndex !== null) {
+            this.finishActiveSubepisode();
+          } else {
+            this.startGameplay();
+          }
         } else {
           this.completeEpisode(this.bonusTextPending);
         }
@@ -2477,6 +2489,10 @@ const EpisodeManager = {
     }
 
     this.currentEpisode = num;
+    this.selectedSubepisodeIndex = this.getNextPlayableSubepisodeIndex(num);
+    this.activeSubepisodeIndex = null;
+    this.activeSubepisodeCheckpoint = null;
+    this.activeSubepisodeTotal = 0;
     
     document.querySelectorAll('.sim-card').forEach(c => c.classList.remove('active'));
     const cardEl = document.querySelector(`.sim-card[data-episode="${num}"]`);
@@ -2552,6 +2568,7 @@ const EpisodeManager = {
       startBtn.setAttribute('aria-label', startBtn.title);
     }
     this.renderSubepisodeMenu(num);
+    this.updateSubepisodeStartButton(num);
   },
 
   escapeHTML(value) {
@@ -2566,24 +2583,31 @@ const EpisodeManager = {
     const menu = document.getElementById('sim-subepisode-menu');
     if (!menu) return;
 
-    const checkpoints = this.storyCheckpointConfig[num] || [];
-    if (checkpoints.length === 0) {
+    const segments = this.getSubepisodeSegments(num);
+    if (segments.length === 0) {
       menu.hidden = true;
       menu.innerHTML = "";
       return;
     }
 
     menu.hidden = false;
-    const countLabel = `${checkpoints.length} sous-episodes interactifs`;
-    const items = checkpoints.map((checkpoint, index) => `
-      <div class="subepisode-item">
+    const completed = this.getSubepisodeProgress(num);
+    const countLabel = `${segments.length} sous-episodes interactifs`;
+    const items = segments.map((segment, index) => {
+      const locked = this.isSubepisodeLocked(num, index);
+      const done = completed.includes(index);
+      const selected = index === this.selectedSubepisodeIndex;
+      const state = done ? "TERMINE" : (locked ? "VERROUILLE" : (selected ? "PRET" : "OUVERT"));
+      return `
+      <button type="button" class="subepisode-item ${done ? "done" : ""} ${selected ? "selected" : ""} ${locked ? "locked" : ""}" data-subepisode-index="${index}" ${locked ? "disabled" : ""}>
         <div class="subepisode-index">${String(index + 1).padStart(2, '0')}</div>
         <div>
-          <div class="subepisode-name">${this.escapeHTML(checkpoint.title)}</div>
-          <div class="subepisode-objective">${this.escapeHTML(checkpoint.objective)}</div>
+          <div class="subepisode-name">${this.escapeHTML(segment.title)} <span class="subepisode-state">${state}</span></div>
+          <div class="subepisode-objective">${this.escapeHTML(segment.objective)}</div>
         </div>
-      </div>
-    `).join("");
+      </button>
+    `;
+    }).join("");
 
     menu.innerHTML = `
       <div class="subepisode-menu-title">
@@ -2592,6 +2616,153 @@ const EpisodeManager = {
       </div>
       <div class="subepisode-list">${items}</div>
     `;
+
+    menu.querySelectorAll('.subepisode-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const index = parseInt(item.getAttribute('data-subepisode-index'), 10);
+        if (this.isSubepisodeLocked(num, index)) {
+          SoundManager.playError();
+          return;
+        }
+        SoundManager.playClick();
+        this.selectedSubepisodeIndex = index;
+        this.renderSubepisodeMenu(num);
+        this.updateSubepisodeStartButton(num);
+      });
+    });
+  },
+
+  getSubepisodeProgress(num) {
+    try {
+      const raw = localStorage.getItem(`tadc_subepisode_progress_${num}`);
+      const parsed = raw ? JSON.parse(raw) : [];
+      return Array.isArray(parsed) ? parsed.filter(Number.isInteger) : [];
+    } catch (e) {
+      return [];
+    }
+  },
+
+  markSubepisodeComplete(num, index) {
+    const progress = this.getSubepisodeProgress(num);
+    if (!progress.includes(index)) {
+      progress.push(index);
+      progress.sort((a, b) => a - b);
+      localStorage.setItem(`tadc_subepisode_progress_${num}`, JSON.stringify(progress));
+    }
+  },
+
+  getSubepisodeSegments(num) {
+    const data = this.storyData[num];
+    const checkpoints = this.storyCheckpointConfig[num] || [];
+    if (!data || !data.intro || checkpoints.length === 0) return [];
+
+    let cursor = 0;
+    return checkpoints.map((checkpoint, index) => {
+      const end = Math.min(Math.max(checkpoint.after, cursor + 1), data.intro.length);
+      const start = cursor;
+      cursor = end;
+      return {
+        ...checkpoint,
+        index,
+        totalParts: checkpoints.length,
+        start,
+        end,
+        localAfter: end - start
+      };
+    }).filter(segment => segment.localAfter > 0);
+  },
+
+  getNextPlayableSubepisodeIndex(num) {
+    const segments = this.getSubepisodeSegments(num);
+    if (segments.length === 0) return 0;
+    const completed = this.getSubepisodeProgress(num);
+    const next = segments.find(segment => !completed.includes(segment.index));
+    return next ? next.index : 0;
+  },
+
+  isSubepisodeLocked(num, index) {
+    if (this.getProgress().includes(num)) return false;
+    if (index <= 0) return false;
+    const completed = this.getSubepisodeProgress(num);
+    return !completed.includes(index - 1);
+  },
+
+  updateSubepisodeStartButton(num) {
+    const startBtn = document.getElementById('btn-start-simulation');
+    if (!startBtn) return;
+    const segments = this.getSubepisodeSegments(num);
+    if (segments.length === 0) return;
+    const selected = segments[this.selectedSubepisodeIndex] || segments[0];
+    const replay = this.getProgress().includes(num) || this.getSubepisodeProgress(num).includes(selected.index);
+    startBtn.innerText = `${replay ? "REJOUER" : "LANCER"} SOUS-EPISODE ${selected.index + 1}/${segments.length}`;
+    startBtn.title = `${selected.title} - ${selected.objective}`;
+    startBtn.setAttribute('aria-label', startBtn.title);
+  },
+
+  launchSelectedEpisode() {
+    if (this.getSubepisodeSegments(this.currentEpisode).length > 0) {
+      this.startSubepisode(this.currentEpisode, this.selectedSubepisodeIndex);
+    } else {
+      this.startStory(this.currentEpisode, 'intro');
+    }
+  },
+
+  startSubepisode(num, index) {
+    const data = this.storyData[num];
+    const segments = this.getSubepisodeSegments(num);
+    const segment = segments[index] || segments[0];
+    if (!data || !segment) {
+      this.startStory(num, 'intro');
+      return;
+    }
+    if (this.isSubepisodeLocked(num, segment.index)) {
+      SoundManager.playError();
+      if (window.OS && typeof window.OS.showDialog === 'function') {
+        window.OS.showDialog('SOUS-EPISODE VERROUILLE', 'Terminez le sous-episode precedent avant de continuer cette archive.');
+      }
+      return;
+    }
+
+    this.currentEpisode = num;
+    this.storyPhase = 'intro';
+    this.storyIndex = 0;
+    this.bonusTextPending = "";
+    this.completedStoryCheckpoints = new Set();
+    this.selectedSubepisodeIndex = segment.index;
+    this.activeSubepisodeIndex = segment.index;
+    this.activeSubepisodeTotal = segments.length;
+    this.activeSubepisodeCheckpoint = {
+      ...segment,
+      after: segment.localAfter,
+      part: segment.index + 1,
+      totalParts: segments.length
+    };
+    this.storyLines = data.intro.slice(segment.start, segment.end);
+
+    if (this.activeStoryMicroGame) {
+      this.activeStoryMicroGame.stop();
+      this.activeStoryMicroGame = null;
+    }
+
+    document.querySelectorAll('.sim-screen').forEach(s => s.classList.remove('active'));
+    document.getElementById('sim-story-screen').classList.add('active');
+    document.getElementById('sim-story-title').innerText = `${data.title} // ${segment.title}`;
+    document.getElementById('sim-story-phase-label').innerText = `[SOUS-EPISODE ${segment.index + 1}/${segments.length} - ARCHIVE INTERACTIVE]`;
+
+    const textPane = document.getElementById('sim-story-text');
+    textPane.innerHTML = "";
+    this.displayedText = "";
+
+    const nextBtn = document.getElementById('btn-story-next');
+    if (nextBtn) nextBtn.innerText = "CONTINUER";
+
+    const skipBtn = document.getElementById('btn-story-skip');
+    if (skipBtn) {
+      skipBtn.innerText = segment.index >= segments.length - 1 ? 'ACCEDER AU FINAL' : 'PASSER AU SUIVANT';
+    }
+
+    this.updateStoryProgress();
+    this.typeNextLine();
   },
 
   startStory(num, phase, bonusText = "") {
@@ -2600,6 +2771,9 @@ const EpisodeManager = {
     this.storyIndex = 0;
     this.bonusTextPending = bonusText;
     this.completedStoryCheckpoints = new Set();
+    this.activeSubepisodeIndex = null;
+    this.activeSubepisodeCheckpoint = null;
+    this.activeSubepisodeTotal = 0;
     if (this.activeStoryMicroGame) {
       this.activeStoryMicroGame.stop();
       this.activeStoryMicroGame = null;
@@ -2646,6 +2820,10 @@ const EpisodeManager = {
   getPendingStoryCheckpoint() {
     if (this.storyPhase !== 'intro') return null;
     if (!this.storyLines || this.storyIndex <= 0) return null;
+    if (this.activeSubepisodeCheckpoint) {
+      const checkpoint = this.activeSubepisodeCheckpoint;
+      return checkpoint.after === this.storyIndex && !this.completedStoryCheckpoints.has(checkpoint.after) ? checkpoint : null;
+    }
     const checkpoints = this.storyCheckpointConfig[this.currentEpisode] || [];
     return checkpoints.find(cp => cp.after === this.storyIndex && !this.completedStoryCheckpoints.has(cp.after)) || null;
   },
@@ -2672,11 +2850,11 @@ const EpisodeManager = {
     document.getElementById('sim-story-micro-screen').classList.add('active');
 
     const checkpoints = this.storyCheckpointConfig[this.currentEpisode] || [];
-    const checkpointIndex = checkpoints.findIndex(cp => cp.after === config.after);
+    const checkpointIndex = this.activeSubepisodeIndex !== null ? this.activeSubepisodeIndex : checkpoints.findIndex(cp => cp.after === config.after);
     const microConfig = {
       ...config,
       part: checkpointIndex >= 0 ? checkpointIndex + 1 : 1,
-      totalParts: checkpoints.length || 1
+      totalParts: this.activeSubepisodeTotal || checkpoints.length || 1
     };
 
     this.activeStoryMicroGame = new StoryMicroGame(microConfig, () => {
@@ -2690,12 +2868,42 @@ const EpisodeManager = {
       SoundManager.playWin();
       this.updateStoryCheckpointButton();
       setTimeout(() => {
+        if (this.activeSubepisodeIndex !== null && this.storyIndex >= this.storyLines.length) {
+          this.finishActiveSubepisode();
+          return;
+        }
         if (this.storyIndex < this.storyLines.length && !this.getPendingStoryCheckpoint()) {
           this.typeNextLine();
         }
       }, 350);
     });
     this.activeStoryMicroGame.prepare();
+  },
+
+  finishActiveSubepisode() {
+    if (this.activeSubepisodeIndex === null) {
+      this.startGameplay();
+      return;
+    }
+
+    const finishedIndex = this.activeSubepisodeIndex;
+    const episodeNum = this.currentEpisode;
+    const segments = this.getSubepisodeSegments(episodeNum);
+    this.markSubepisodeComplete(episodeNum, finishedIndex);
+    this.activeSubepisodeIndex = null;
+    this.activeSubepisodeCheckpoint = null;
+    this.activeSubepisodeTotal = 0;
+
+    if (finishedIndex < segments.length - 1) {
+      this.selectedSubepisodeIndex = finishedIndex + 1;
+      this.showStartScreen(episodeNum);
+      if (window.OS && typeof window.OS.showDialog === 'function') {
+        window.OS.showDialog('SOUS-EPISODE TERMINE', `Archive ${finishedIndex + 1}/${segments.length} validee. Le bloc suivant est pret.`);
+      }
+      return;
+    }
+
+    this.startGameplay();
   },
 
   escapeRegExp(value) {
@@ -2791,7 +2999,7 @@ const EpisodeManager = {
     if (this.storyIndex >= this.storyLines.length) {
       const nextBtn = document.getElementById('btn-story-next');
       if (this.storyPhase === 'intro') {
-        nextBtn.innerText = "COMMENCER LE MINI-JEU";
+        nextBtn.innerText = this.activeSubepisodeIndex !== null ? "TERMINER LE SOUS-EPISODE" : "COMMENCER LE MINI-JEU";
       } else {
         nextBtn.innerText = "VALIDER LA SIMULATION";
       }
@@ -2941,7 +3149,7 @@ const EpisodeManager = {
   },
 
   startActiveEpisode() {
-    this.startStory(this.currentEpisode, 'intro');
+    this.launchSelectedEpisode();
   },
 
   gameOver(reason) {

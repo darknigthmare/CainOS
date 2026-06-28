@@ -865,9 +865,36 @@ body {
   grid-template-columns: 28px 1fr;
   gap: 7px;
   align-items: start;
+  width: 100%;
   padding: 5px;
   border: 1px solid rgba(57, 255, 20, 0.18);
   background: rgba(0, 0, 0, 0.34);
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.subepisode-item:hover,
+.subepisode-item.selected {
+  border-color: rgba(57, 255, 20, 0.72);
+  background: rgba(57, 255, 20, 0.08);
+}
+
+.subepisode-item.done .subepisode-index {
+  background: var(--terminal-cyan);
+}
+
+.subepisode-item.locked {
+  opacity: 0.48;
+  cursor: not-allowed;
+}
+
+.subepisode-state {
+  color: var(--terminal-cyan);
+  font-size: 8px;
+  margin-left: 4px;
+  font-weight: normal;
 }
 
 .subepisode-index {
