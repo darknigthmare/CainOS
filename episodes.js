@@ -6579,14 +6579,14 @@ const EpisodeManager = {
   nextEpisodeAfterVictory: null,
   storyCheckpointConfig: {
     0: [
-      { after: 1, title: "Signal casque", objective: "Cliquez les pulses bleus pour accrocher la premiere liaison neuronale.", mode: "click", goal: 5, duration: 14, target: "LINK", hazard: "NOISE" },
+      { after: 1, title: "Signal casque", objective: "Cliquez les noeuds verts LINK pour accrocher la premiere liaison neuronale.", mode: "click", goal: 5, duration: 14, target: "LINK", hazard: "NOISE" },
       { after: 2, title: "Carte visuelle", objective: "Reparez les tuiles CRT afin que CainOS voie le sujet sans saturation.", mode: "repair", goal: 6, duration: 15, target: "PIXEL", hazard: "DARK" },
       { after: 3, title: "Bande passante", objective: "Reproduisez la sequence de synchronisation du casque.", mode: "sequence", goal: 4, duration: 16, target: "SYNC", hazard: "DROP" },
       { after: 4, title: "Flux cortex", objective: "Collectez les paquets stables et evitez les pics de panique.", mode: "dodge", goal: 6, duration: 16, target: "DATA", hazard: "PANIC" },
       { after: 5, title: "Ouverture session", objective: "Validez les derniers verrous pour autoriser le bureau CainOS.", mode: "click", goal: 6, duration: 16, target: "BOOT", hazard: "ERR" }
     ],
     1: [
-      { after: 21, title: "Arrivee de Pomni", objective: "Cliquez les pulses bleus pour stabiliser Pomni pendant son arrivee brutale dans le cirque.", mode: "click", goal: 6, duration: 16, target: "PULSE", hazard: "PANIC" },
+      { after: 21, title: "Arrivee de Pomni", objective: "Cliquez les noeuds verts PULSE pour stabiliser Pomni pendant son arrivee brutale dans le cirque.", mode: "click", goal: 6, duration: 16, target: "PULSE", hazard: "PANIC" },
       { after: 76, title: "Regles du cirque", objective: "Filtrez les transmissions interdites pendant que Caine explique les limites du monde digital.", mode: "sequence", goal: 5, duration: 19, target: "CENSOR", hazard: "BLEEP" },
       { after: 105, title: "Tour et porte de sortie", objective: "Reparez les tuiles du tour guide et isolez le signal rouge de la porte apercue dans le Vide.", mode: "repair", goal: 8, duration: 18, target: "DOOR", hazard: "VOID" },
       { after: 146, title: "Nom Pomni", objective: "Memorisez la sequence d'identite pendant que l'ancien nom disparait du flux.", mode: "sequence", goal: 5, duration: 20, target: "NAME", hazard: "NULL" },
@@ -7014,7 +7014,7 @@ const EpisodeManager = {
         <div>
           <div class="subepisode-name">${this.escapeHTML(segment.title)} <span class="subepisode-state">${state}</span></div>
           <div class="subepisode-context">${this.escapeHTML(segment.context || "SCENE ACTIVE")}</div>
-          <div class="subepisode-objective">${this.escapeHTML(segment.objective)}</div>
+          <div class="subepisode-objective">${this.escapeHTML(segment.playObjective || segment.objective)}</div>
         </div>
       </button>
     `;
@@ -7078,6 +7078,8 @@ const EpisodeManager = {
         index,
         totalParts: checkpoints.length,
         context: this.getSubepisodeLoreLayer(checkpoint),
+        loreObjective: checkpoint.objective,
+        playObjective: this.getMicroGamePlayObjective(checkpoint),
         start,
         end,
         localAfter: end - start
@@ -7093,6 +7095,25 @@ const EpisodeManager = {
     if (signal.includes("GHOST") || signal.includes("HORROR") || signal.includes("BEAST") || signal.includes("DARK")) return "ANOMALIE HORREUR";
     if (signal.includes("POMNI") || signal.includes("JAX") || signal.includes("RAGATHA") || signal.includes("GANGLE") || signal.includes("KINGER") || signal.includes("ZOOBLE")) return "RESIDENTS DU CIRQUE";
     return "SCENE ACTIVE";
+  },
+
+  getMicroGamePlayObjective(checkpoint) {
+    const target = checkpoint.target || "OK";
+    const hazard = checkpoint.hazard || "ERR";
+    const goal = checkpoint.goal || 5;
+    if (checkpoint.mode === "click") {
+      return `Cliquez ${goal} noeuds verts "${target}". Evitez les noeuds rouges "${hazard}".`;
+    }
+    if (checkpoint.mode === "repair") {
+      return `Cliquez ${goal} tuiles vertes "${target}" pour les valider. Les tuiles rouges "${hazard}" ralentissent la reparation.`;
+    }
+    if (checkpoint.mode === "sequence") {
+      return `Reproduisez ${goal} directions dans l'ordre. La fleche attendue est encadree en vert.`;
+    }
+    if (checkpoint.mode === "dodge") {
+      return `Deplacez le curseur blanc sur ${goal} signaux cyan "${target}" et evitez les signaux rouges "${hazard}".`;
+    }
+    return checkpoint.objective || "Terminez la micro-simulation.";
   },
 
   getNextPlayableSubepisodeIndex(num) {
@@ -7118,7 +7139,7 @@ const EpisodeManager = {
     const selected = segments[this.selectedSubepisodeIndex] || segments[0];
     const replay = this.getProgress().includes(num) || this.getSubepisodeProgress(num).includes(selected.index);
     startBtn.innerText = `${replay ? "REJOUER" : "LANCER"} SOUS-EPISODE ${selected.index + 1}/${segments.length}`;
-    startBtn.title = `${selected.title} - ${selected.objective}`;
+    startBtn.title = `${selected.title} - ${selected.playObjective || selected.objective}`;
     startBtn.setAttribute('aria-label', startBtn.title);
   },
 
@@ -7994,7 +8015,7 @@ class StoryMicroGame {
   prepare() {
     this.titleEl.innerText = this.config.title;
     this.subtitleEl.innerText = `[SOUS-EPISODE ${this.config.part}/${this.config.totalParts} // ${this.config.mode.toUpperCase()} // ${this.config.context || "SCENE ACTIVE"}]`;
-    this.objectiveEl.innerText = this.config.objective;
+    this.objectiveEl.innerText = this.config.playObjective || this.config.objective;
     this.actionBtn.disabled = false;
     this.actionBtn.innerText = "INITIALISER";
     this.resetState();
@@ -8309,6 +8330,33 @@ class StoryMicroGame {
       this.ctx.lineTo(this.canvas.width, y);
       this.ctx.stroke();
     }
+    this.drawLegend();
+  }
+
+  drawLegend() {
+    const ctx = this.ctx;
+    const target = String(this.config.target || 'OK').slice(0, 8);
+    const hazard = String(this.config.hazard || 'ERR').slice(0, 8);
+    ctx.save();
+    ctx.font = '10px Courier New';
+    ctx.textAlign = 'left';
+    ctx.fillStyle = 'rgba(1, 4, 1, 0.82)';
+    ctx.fillRect(6, 6, this.canvas.width - 12, 18);
+    if (this.config.mode === 'sequence') {
+      ctx.fillStyle = '#39ff14';
+      ctx.fillText('VERT = DIRECTION A SUIVRE', 12, 19);
+    } else if (this.config.mode === 'dodge') {
+      ctx.fillStyle = '#00d4ff';
+      ctx.fillText(`CYAN = ${target}`, 12, 19);
+      ctx.fillStyle = '#ff3344';
+      ctx.fillText(`ROUGE = ${hazard}`, 150, 19);
+    } else {
+      ctx.fillStyle = '#39ff14';
+      ctx.fillText(`VERT = ${target}`, 12, 19);
+      ctx.fillStyle = '#ff3344';
+      ctx.fillText(`ROUGE = ${hazard}`, 150, 19);
+    }
+    ctx.restore();
   }
 
   drawIdle() {
