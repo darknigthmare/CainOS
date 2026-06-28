@@ -1589,6 +1589,8 @@ const OS = {
       hotspots: [],
       interactionMessage: '',
       interactionUntil: 0,
+      interactionChoices: null,
+      lastZoneEventId: null,
       player: { x: 7.5, z: 11.2, a: -Math.PI / 2 },
       keys: new Set(),
       last: performance.now(),
@@ -1598,10 +1600,16 @@ const OS = {
     this.loadCircusAvatarSheets();
 
     this.circusDoomKeyDown = e => {
-      const key = e.key.toLowerCase();
-      if (['arrowup','arrowdown','arrowleft','arrowright','enter',' ','w','a','s','d','z','q'].includes(key)) {
+      const rawKey = e.key.toLowerCase();
+      const codeKey = (e.code || '').toLowerCase();
+      const key = (rawKey === 'digit1' || codeKey === 'digit1' || codeKey === 'numpad1') ? '1'
+        : (rawKey === 'digit2' || codeKey === 'digit2' || codeKey === 'numpad2') ? '2'
+          : (rawKey === 'digit3' || codeKey === 'digit3' || codeKey === 'numpad3') ? '3'
+            : rawKey;
+      if (['arrowup','arrowdown','arrowleft','arrowright','enter',' ','w','a','s','d','z','q','1','2','3'].includes(key)) {
         e.preventDefault();
-        if (key === 'enter' || key === ' ') this.handleCircusSimulationInput(key);
+        if (['1','2','3'].includes(key) && this.circusDoom?.interactionChoices) this.chooseCircusDialogueOption(Number(key) - 1);
+        else if (key === 'enter' || key === ' ') this.handleCircusSimulationInput(key);
         else this.circusDoom.keys.add(key);
       }
     };
@@ -1618,7 +1626,9 @@ const OS = {
       const y = (e.clientY - rect.top) * (canvas.height / rect.height);
       const hit = [...state.hotspots].reverse().find(spot => x >= spot.x && x <= spot.x + spot.w && y >= spot.y && y <= spot.y + spot.h);
       if (hit) {
-        if (hit.kind === 'character') {
+        if (hit.kind === 'dialogChoice') {
+          this.chooseCircusDialogueOption(hit.choiceIndex);
+        } else if (hit.kind === 'character') {
           this.talkToCircusCharacter(hit.sprite);
         } else if (hit.kind === 'prop') {
           this.inspectCircusProp(hit.prop);
@@ -1830,6 +1840,8 @@ const OS = {
     state.hotspots = [];
     state.interactionMessage = '';
     state.interactionUntil = 0;
+    state.interactionChoices = null;
+    state.lastZoneEventId = null;
   },
 
   getCircusDoorSlots(count, size) {
@@ -1855,6 +1867,10 @@ const OS = {
     const exits = state.scenes[state.currentZoneId]?.exits || [];
     if (!exits.length) return;
     if (key === 'enter' || key === ' ') {
+      if (state.interactionChoices) {
+        this.chooseCircusDialogueOption(0);
+        return;
+      }
       const character = this.getNearestCircusCharacter();
       if (character && character.dist < 1.9 && Math.abs(character.angle) < 0.42) {
         this.talkToCircusCharacter(character);
@@ -1877,7 +1893,7 @@ const OS = {
     const state = this.circusDoom;
     if (!state) return null;
     let best = null;
-    this.getCircusZoneSprites(state.currentZoneId).forEach((sprite, index) => {
+    this.getCircusActiveZoneSprites(state.currentZoneId, state).forEach((sprite, index) => {
       const pos = this.resolveCircusWorldPoint(sprite, state);
       const dx = pos.x - state.player.x;
       const dz = pos.z - state.player.z;
@@ -1888,6 +1904,25 @@ const OS = {
       if (!best || score < best.score) best = { ...sprite, index, dist, angle: normalized, score };
     });
     return best;
+  },
+
+  getCircusFocusedHint() {
+    const state = this.circusDoom;
+    if (!state || state.interactionChoices) return null;
+    const character = this.getNearestCircusCharacter();
+    if (character && character.dist < 2.2 && Math.abs(character.angle) < 0.48) {
+      return `ENTREE / CLIC: parler a ${character.name}  |  1-3: choix rapides apres contact`;
+    }
+    const prop = this.getNearestCircusProp();
+    if (prop && prop.dist < 2.3 && Math.abs(prop.angle) < 0.58) {
+      return `ENTREE / CLIC: scanner ${this.getCircusPropName(prop, state.currentZoneId)}`;
+    }
+    const door = this.getNearestUsableCircusDoor();
+    if (door && door.dist < 2.0 && Math.abs(door.angle) < 0.82) {
+      const target = state.portals[door.target];
+      return target?.unlocked ? `ENTREE / CLIC: passer vers ${target.short}` : `PORTE VERROUILLEE: ${target?.short || 'ZONE'}`;
+    }
+    return null;
   },
 
   getNearestCircusProp() {
@@ -1912,6 +1947,7 @@ const OS = {
     if (!state || !prop) return;
     state.interactionMessage = this.getCircusPropInteraction(prop, state.currentZoneId);
     state.interactionUntil = performance.now() + 5600;
+    state.interactionChoices = null;
     if (state.detailEl) state.detailEl.innerText = state.interactionMessage;
     SoundManager.play(390, 0.07, 'square', 0.04);
     setTimeout(() => SoundManager.play(585, 0.06, 'triangle', 0.035), 80);
@@ -2029,10 +2065,102 @@ const OS = {
   talkToCircusCharacter(sprite) {
     const state = this.circusDoom;
     if (!state || !sprite) return;
-    state.interactionMessage = this.getCircusCharacterInteraction(sprite, state.currentZoneId);
-    state.interactionUntil = performance.now() + 5600;
+    const line = this.getCircusCharacterInteraction(sprite, state.currentZoneId);
+    const choices = this.getCircusCharacterChoices(sprite, state.currentZoneId, line);
+    state.interactionMessage = choices ? choices.prompt : line;
+    state.interactionChoices = choices;
+    state.interactionUntil = performance.now() + (choices ? 12000 : 5600);
     if (state.detailEl) state.detailEl.innerText = state.interactionMessage;
     SoundManager.play(520, 0.08, 'triangle', 0.05);
+  },
+
+  chooseCircusDialogueOption(index) {
+    const state = this.circusDoom;
+    const choices = state?.interactionChoices;
+    if (!choices || !choices.options?.[index]) return;
+    const option = choices.options[index];
+    state.interactionMessage = option.response;
+    state.interactionChoices = null;
+    state.interactionUntil = performance.now() + 7200;
+    if (state.detailEl) state.detailEl.innerText = option.response;
+    SoundManager.play(620 + index * 80, 0.08, 'triangle', 0.045);
+  },
+
+  getCircusCharacterChoices(sprite, zoneId, introLine) {
+    const avatar = sprite.avatar || sprite.type;
+    const profileKey = this.getCircusCharacterProfileKey(sprite);
+    const profileLine = profileKey ? this.getCircusProfileSummary(profileKey) : "Aucun profil CainOS critique disponible pour ce signal.";
+    const zoneHint = this.getCircusZoneDialogueHint(zoneId);
+    const routineHint = this.getCircusRoutineDialogueHint(sprite, zoneId);
+    const special = {
+      pomni: [
+        { label: "Sortie", response: "Pomni: Je peux regarder les portes, mais je ne veux plus confondre une promesse avec une sortie." },
+        { label: "Rester groupee", response: "Pomni: Oui. Si je dois avancer, je prefere garder un visage connu dans mon champ de vision." }
+      ],
+      caine: [
+        { label: "Controle", response: "Caine: Controle est un mot si lourd! Disons plutot presentation active de realite fabriquee." },
+        { label: "Portes", response: "Caine: Les portes existent pour rendre les transitions plus elegantes, pas pour casser le spectacle." }
+      ],
+      gummigoo: [
+        { label: "Memoire", response: "Gummigoo: Plus je regarde les bords de cette route, plus mes souvenirs ressemblent a des accessoires." },
+        { label: "Convoi", response: "Gummigoo: Tant que le camion roule, la scene pretend que tout a un sens." }
+      ],
+      kinger: [
+        { label: "Obscurite", response: "Kinger: Les pieces sombres n'effacent pas la peur. Elles l'empechent juste de se disperser." },
+        { label: "Souvenirs", response: "Kinger: Certains souvenirs sont rangees comme des insectes. Il ne faut pas ouvrir la boite trop tot." }
+      ],
+      workgangle: [
+        { label: "Commandes", response: "Gangle: Les tickets ne sont que des mini-aventures empilees jusqu'a ce que mon masque craque." },
+        { label: "Masque", response: "Gangle: Ce masque me donne l'air fonctionnelle. Ce n'est pas la meme chose qu'aller bien." }
+      ],
+      ribbit: [
+        { label: "Archive", response: "Ribbit Archive: CainOS conserve ce signal comme trace de membre disparu, pas comme resident revenu." },
+        { label: "Final", response: "Ribbit Archive: Les reves et souvenirs du final laissent remonter les anciens profils sans les restaurer." }
+      ]
+    };
+    const specialOptions = special[avatar] || special[sprite.type] || [];
+    return {
+      speaker: sprite.name,
+      prompt: introLine,
+      options: [
+        ...(specialOptions.slice(0, 2)),
+        { label: "Zone", response: zoneHint },
+        { label: "Profil", response: profileLine },
+        { label: "Routine", response: routineHint }
+      ].slice(0, 3)
+    };
+  },
+
+  getCircusZoneDialogueHint(zoneId) {
+    const hints = {
+      2: "CainOS: Le chapiteau sert de hub stable. Chaque aventure doit revenir ici pour garder le deroule lisible.",
+      3: "CainOS: Le terrain exterieur montre les entites de spectacle et les Gloinks sans reveler les couches finales.",
+      4: "CainOS: La cave reste une zone de danger liee a Kaufmo, pas un salon de PNJ.",
+      6: "CainOS: Candy Canyon doit rester axe sur le convoi, Gummigoo et la faille de memoire NPC.",
+      8: "CainOS: Le manoir active les peurs et souvenirs; les figures horrifiques restent confinees ici.",
+      10: "CainOS: Spudsy transforme les interactions en service client et pression de masque pour Gangle.",
+      11: "CainOS: Les variantes de micro-aventure sont rangees ici pour ne pas polluer la timeline principale.",
+      12: "CainOS: Le stade autorise les costumes baseball comme scene sportive alternative.",
+      14: "CainOS: Le lac digital imite une pause, mais les PNJ et le soleil restent suspects.",
+      16: "CainOS: Le coeur C&A affiche les traces techniques, Abel et les objets actifs de fond.",
+      17: "CainOS: Le buffer memoire ne restaure pas Queenie; il donne seulement acces a la trace de Kinger.",
+      18: "CainOS: Le final accepte les signaux de reve, de couleur perdue et d'identite tardive.",
+      19: "CainOS: Les Circus Members disparus restent des archives visuelles verrouillees par progression."
+    };
+    return hints[zoneId] || "CainOS: Zone praticable. Les interactions restent limitees au lore deja debloque.";
+  },
+
+  getCircusRoutineDialogueHint(sprite, zoneId) {
+    const routine = sprite.routine || this.getCircusSpriteRoutine(sprite, zoneId);
+    const map = {
+      pace: "ROUTINE PNJ: deplacement court en boucle, comme une attente nerveuse dans la scene.",
+      hover: "ROUTINE PNJ: flottement visuel, utile pour les entites decoratives ou surnaturelles.",
+      swarm: "ROUTINE PNJ: mouvement de petit groupe, reserve aux Gloinks et signaux tres mobiles.",
+      tremble: "ROUTINE PNJ: tremblement court, associe aux abstractions, peurs ou signaux instables.",
+      patrol: "ROUTINE PNJ: garde une ligne de scene, utile pour le service, le convoi ou les figurants.",
+      idle: "ROUTINE PNJ: idle simple, pour ne pas transformer chaque archive en personnage actif."
+    };
+    return map[routine] || map.idle;
   },
 
   getCircusCharacterInteraction(sprite, zoneId) {
@@ -2382,9 +2510,11 @@ const OS = {
     if (keys.has('arrowdown') || keys.has('s')) move -= speed;
     if (move !== 0) {
       tryMove(player.x + Math.cos(player.a) * move, player.z + Math.sin(player.a) * move);
+      state.interactionChoices = null;
     }
     if (keys.has('a')) {
       tryMove(player.x + Math.cos(player.a - Math.PI / 2) * speed, player.z + Math.sin(player.a - Math.PI / 2) * speed);
+      state.interactionChoices = null;
     }
 
     const nearestDoor = this.getNearestUsableCircusDoor();
@@ -2400,13 +2530,23 @@ const OS = {
         state.zoneEl.innerText = 'ZONE: PASSERELLE INTERNE';
       }
     }
+    if (state.interactionChoices && performance.now() > state.interactionUntil) {
+      state.interactionChoices = null;
+      state.interactionMessage = '';
+    }
     if (state.detailEl) {
       if (state.interactionMessage && performance.now() < state.interactionUntil) {
         state.detailEl.innerText = state.interactionMessage;
       } else {
-        state.detailEl.innerText = portal
-          ? (portal.unlocked ? portal.detail : `VERROUILLE: terminez l episode requis avant d afficher ${portal.short}.`)
-          : 'Hub interne: traversez les couloirs pour inspecter les zones de simulation.';
+        const focus = this.getCircusFocusedHint();
+        if (focus) {
+          state.detailEl.innerText = focus;
+        } else {
+          const event = this.getCircusZoneAmbientEvent(state.currentZoneId, state);
+          state.detailEl.innerText = event?.detail || (portal
+            ? (portal.unlocked ? portal.detail : `VERROUILLE: terminez l episode requis avant d afficher ${portal.short}.`)
+            : 'Hub interne: traversez les couloirs pour inspecter les zones de simulation.');
+        }
       }
     }
   },
@@ -2427,6 +2567,7 @@ const OS = {
     state.hotspots = [];
 
     this.drawCircusRaycastRoom(ctx, w, h, state, zone);
+    this.drawCircusZoneEvents(ctx, w, h, state, zone);
     this.drawCircusDepthProps(ctx, w, h, state);
     this.drawCircusPhysicalDoors(ctx, w, h, portals, state);
     this.drawCircusImpostorSprites(ctx, w, h, state);
@@ -2563,6 +2704,125 @@ const OS = {
       ctx.strokeStyle = '#ffffff';
       for (let i = 0; i < 5; i++) ctx.strokeRect(w / 2 - 130 + i * 22, 42 + i * 14, 260 - i * 44, 150 - i * 16);
     }
+    ctx.restore();
+  },
+
+  getCircusZoneAmbientEvent(zoneId, state) {
+    const now = performance.now() / 1000;
+    const slot = Math.floor(now / 5);
+    const phase = now % 5;
+    const events = {
+      2: [
+        { id: 'spotlight_sweep', label: 'PROJECTEURS', detail: 'EVENT: les projecteurs de Caine balayent la piste.', color: '#ffd84a' },
+        { id: 'curtain_shift', label: 'RIDEAUX', detail: 'EVENT: la piste se recale comme un decor de spectacle.', color: '#e53935' }
+      ],
+      3: [
+        { id: 'gloink_swarm', label: 'GLOINK SWARM', detail: 'EVENT: petits Gloinks en mouvement autour du terrain.', color: '#7348ff' },
+        { id: 'queen_pulse', label: 'QUEEN SIGNAL', detail: 'EVENT: la Gloink Queen pulse a grande echelle.', color: '#ff7d8d' }
+      ],
+      4: [
+        { id: 'cellar_warning', label: 'ABSTRACT WARNING', detail: 'EVENT: le cellar conserve le signal Kaufmo sous alerte.', color: '#56505f' }
+      ],
+      6: [
+        { id: 'candy_convoy', label: 'CONVOI', detail: 'EVENT: poussiere sucree du camion-citerne.', color: '#ff9b37' },
+        { id: 'fudge_shift', label: 'FUDGE MOVE', detail: 'EVENT: The Fudge bouge dans le decor candy.', color: '#7a3d1a' }
+      ],
+      8: [
+        { id: 'manor_flicker', label: 'BOUGIES', detail: 'EVENT: les bougies du manoir rendent la peur visible.', color: '#b7f0ff' },
+        { id: 'ghost_pass', label: 'GHOST PASS', detail: 'EVENT: apparition spectrale en bord de scene.', color: '#7df0ff' }
+      ],
+      10: [
+        { id: 'ticket_rush', label: 'TICKET RUSH', detail: 'EVENT: Spudsy imprime trop de commandes.', color: '#ff4d4d' },
+        { id: 'counter_bell', label: 'SERVICE BELL', detail: 'EVENT: le comptoir force le rythme de Gangle.', color: '#f6d743' }
+      ],
+      11: [
+        { id: 'micro_shuffle', label: 'SUGGESTION', detail: 'EVENT: micro-aventure remelangee par Caine.', color: '#ff4fb8' }
+      ],
+      12: [
+        { id: 'score_flash', label: 'SCOREBOARD', detail: 'EVENT: le match transforme le chaos en score.', color: '#83ff57' }
+      ],
+      13: [
+        { id: 'target_ping', label: 'TARGET LOCK', detail: 'EVENT: l arene arme les cibles virtuelles.', color: '#f6d743' }
+      ],
+      14: [
+        { id: 'heat_wave', label: 'SUN PURGE', detail: 'EVENT: le soleil du lac digital devient trop agressif.', color: '#ffd84a' },
+        { id: 'wave_loop', label: 'WAVE LOOP', detail: 'EVENT: l eau boucle comme un shader trop propre.', color: '#4ee7ff' }
+      ],
+      15: [
+        { id: 'admin_scan', label: 'ADMIN SCAN', detail: 'EVENT: la zone admin relit les couches C&A.', color: '#ffcf75' }
+      ],
+      16: [
+        { id: 'core_trace', label: 'C&A TRACE', detail: 'EVENT: le coeur C&A expose des traces techniques.', color: '#ff7a30' }
+      ],
+      17: [
+        { id: 'memory_echo', label: 'MEMORY ECHO', detail: 'EVENT: la memoire Queenie remonte sans se restaurer.', color: '#d9d0a2' }
+      ],
+      18: [
+        { id: 'color_loss', label: 'COLOR LOSS', detail: 'EVENT: le final tire les couleurs hors de la piste.', color: '#e53935' }
+      ],
+      19: [
+        { id: 'archive_flicker', label: 'ARCHIVE FLICKER', detail: 'EVENT: les Circus Members clignotent comme fiches mortes.', color: '#c875ff' }
+      ]
+    };
+    const zoneEvents = events[zoneId];
+    if (!zoneEvents?.length) return null;
+    return { ...zoneEvents[slot % zoneEvents.length], phase, slot };
+  },
+
+  drawCircusZoneEvents(ctx, w, h, state, zone) {
+    const event = this.getCircusZoneAmbientEvent(state.currentZoneId, state);
+    if (!event) return;
+    const t = performance.now() / 1000;
+    ctx.save();
+    if (event.id === 'spotlight_sweep' || event.id === 'queen_pulse') {
+      const sweep = (Math.sin(t * 1.2) + 1) / 2;
+      ctx.fillStyle = `${event.color}22`;
+      ctx.beginPath();
+      ctx.moveTo(w * (0.18 + sweep * 0.38), 0);
+      ctx.lineTo(w * (0.32 + sweep * 0.38), 0);
+      ctx.lineTo(w * 0.5, h);
+      ctx.closePath();
+      ctx.fill();
+    } else if (event.id === 'gloink_swarm' || event.id === 'ticket_rush' || event.id === 'micro_shuffle') {
+      ctx.fillStyle = `${event.color}99`;
+      for (let i = 0; i < 10; i++) {
+        const x = (w * 0.14 + ((t * 45 + i * 67) % (w * 0.72)));
+        const y = h * 0.34 + Math.sin(t * 2 + i) * 18 + i % 3 * 18;
+        ctx.fillRect(x, y, 10 + (i % 3) * 4, 2);
+      }
+    } else if (event.id === 'manor_flicker' || event.id === 'ghost_pass') {
+      ctx.globalAlpha = 0.1 + Math.abs(Math.sin(t * 5.5)) * 0.18;
+      ctx.fillStyle = event.color;
+      ctx.fillRect(0, 0, w, h);
+    } else if (event.id === 'heat_wave' || event.id === 'wave_loop') {
+      ctx.strokeStyle = `${event.color}88`;
+      for (let y = Math.floor(h * 0.5); y < h; y += 18) {
+        ctx.beginPath();
+        for (let x = 0; x <= w; x += 18) {
+          const offset = Math.sin(x / 36 + t * 2.2 + y * 0.04) * 4;
+          if (x === 0) ctx.moveTo(x, y + offset);
+          else ctx.lineTo(x, y + offset);
+        }
+        ctx.stroke();
+      }
+    } else if (event.id === 'score_flash' || event.id === 'target_ping' || event.id === 'admin_scan' || event.id === 'core_trace' || event.id === 'color_loss' || event.id === 'archive_flicker' || event.id === 'memory_echo' || event.id === 'cellar_warning' || event.id === 'candy_convoy' || event.id === 'fudge_shift' || event.id === 'counter_bell' || event.id === 'curtain_shift') {
+      ctx.strokeStyle = `${event.color}99`;
+      ctx.lineWidth = 1;
+      for (let i = 0; i < 5; i++) {
+        const inset = 20 + i * 18 + Math.sin(t * 2 + i) * 4;
+        ctx.strokeRect(inset, inset * 0.45, w - inset * 2, h - inset * 0.9);
+      }
+    }
+    ctx.globalAlpha = 0.95;
+    ctx.fillStyle = 'rgba(5,2,13,0.72)';
+    ctx.strokeStyle = event.color;
+    ctx.lineWidth = 1;
+    ctx.fillRect(w - 170, 24, 148, 24);
+    ctx.strokeRect(w - 170, 24, 148, 24);
+    ctx.fillStyle = event.color;
+    ctx.font = 'bold 9px Courier New';
+    ctx.textAlign = 'center';
+    ctx.fillText(`EVENT: ${event.label}`, w - 96, 40);
     ctx.restore();
   },
 
@@ -3234,15 +3494,63 @@ const OS = {
     return byZone[zoneId] || shared.slice(0, 4);
   },
 
+  getCircusActiveZoneSprites(zoneId, state) {
+    return this.getCircusZoneSprites(zoneId).map((sprite, index) => (
+      this.applyCircusSpriteRoutine(sprite, index, zoneId, state)
+    ));
+  },
+
+  getCircusSpriteRoutine(sprite, zoneId) {
+    const avatar = sprite.avatar || sprite.type || "";
+    if (avatar.startsWith("gloink")) return "swarm";
+    if (["bubble", "horrorghost", "moon", "sun"].includes(avatar)) return "hover";
+    if (avatar.includes("horror") || avatar.startsWith("shadow") || avatar === "kaufmo") return "tremble";
+    if (["gummigoo", "max", "chad", "workgangle", "themachine", "additionalvoices", "ming"].includes(avatar)) return "patrol";
+    if (["jax", "hunterjax", "baseballjax", "eviljax"].includes(avatar)) return "pace";
+    if ([12, 14].includes(zoneId)) return "pace";
+    return "idle";
+  },
+
+  applyCircusSpriteRoutine(sprite, index, zoneId, state) {
+    const now = performance.now() / 1000;
+    const routine = sprite.routine || this.getCircusSpriteRoutine(sprite, zoneId);
+    const phase = index * 1.37 + zoneId * 0.23;
+    const animated = { ...sprite, routine };
+    if (routine === "pace") {
+      animated.x += Math.sin(now * 0.82 + phase) * 0.14;
+      animated.z += Math.cos(now * 0.55 + phase) * 0.06;
+      animated.bob = Math.sin(now * 4.2 + phase) * 0.018;
+    } else if (routine === "patrol") {
+      animated.x += Math.sin(now * 0.46 + phase) * 0.22;
+      animated.z += Math.sin(now * 0.32 + phase) * 0.08;
+      animated.bob = Math.sin(now * 2.4 + phase) * 0.012;
+    } else if (routine === "hover") {
+      animated.x += Math.sin(now * 0.62 + phase) * 0.08;
+      animated.bob = Math.sin(now * 2.1 + phase) * 0.06;
+      animated.sizeScale = (animated.sizeScale || 1) * (1 + Math.sin(now * 1.3 + phase) * 0.035);
+    } else if (routine === "swarm") {
+      animated.x += Math.sin(now * 1.65 + phase) * 0.2;
+      animated.z += Math.cos(now * 1.15 + phase) * 0.12;
+      animated.bob = Math.sin(now * 5.4 + phase) * 0.04;
+    } else if (routine === "tremble") {
+      animated.x += Math.sin(now * 12.5 + phase) * 0.025;
+      animated.z += Math.cos(now * 10.5 + phase) * 0.025;
+      animated.sizeScale = (animated.sizeScale || 1) * (1 + Math.sin(now * 9.5 + phase) * 0.018);
+    } else {
+      animated.bob = Math.sin(now * 1.6 + phase) * 0.01;
+    }
+    return animated;
+  },
+
   drawCircusImpostorSprites(ctx, w, h, state) {
-    const sprites = this.getCircusZoneSprites(state.currentZoneId)
+    const sprites = this.getCircusActiveZoneSprites(state.currentZoneId, state)
       .map(sprite => ({ ...sprite, projected: this.projectCircusPoint(sprite, state, w, h) }))
       .filter(sprite => sprite.projected)
       .sort((a, b) => b.projected.depth - a.projected.depth);
     sprites.forEach(sprite => {
       const p = sprite.projected;
       const size = Math.max(16, 70 * p.scale * (sprite.sizeScale || 1));
-      const baseY = p.y || h * 0.58;
+      const baseY = (p.y || h * 0.58) - (sprite.bob || 0) * size;
       state.hotspots.push({
         kind: 'character',
         sprite,
@@ -3406,31 +3714,62 @@ const OS = {
   drawCircusConversationOverlay(ctx, w, h, state) {
     if (!state.interactionMessage || performance.now() > state.interactionUntil) return;
     const margin = 18;
-    const boxH = 44;
+    const choices = state.interactionChoices?.options || [];
+    const boxH = choices.length ? 94 : 52;
+    const boxY = h - boxH - 24;
     ctx.save();
     ctx.fillStyle = 'rgba(5, 2, 13, 0.86)';
     ctx.strokeStyle = '#fff1a8';
     ctx.lineWidth = 2;
-    ctx.fillRect(margin, h - boxH - 26, w - margin * 2, boxH);
-    ctx.strokeRect(margin, h - boxH - 26, w - margin * 2, boxH);
+    ctx.fillRect(margin, boxY, w - margin * 2, boxH);
+    ctx.strokeRect(margin, boxY, w - margin * 2, boxH);
     ctx.fillStyle = '#fff1a8';
     ctx.font = 'bold 11px Courier New';
     ctx.textAlign = 'left';
     const text = state.interactionMessage;
     const words = text.split(' ');
     let line = '';
-    let y = h - boxH - 8;
+    let y = boxY + 17;
+    let lineCount = 0;
     words.forEach(word => {
       const next = line ? `${line} ${word}` : word;
       if (ctx.measureText(next).width > w - margin * 2 - 20) {
-        ctx.fillText(line, margin + 10, y);
-        y += 14;
+        if (!choices.length || lineCount < 2) ctx.fillText(line, margin + 10, y);
+        y += 13;
+        lineCount++;
         line = word;
       } else {
         line = next;
       }
     });
-    if (line) ctx.fillText(line, margin + 10, y);
+    if (line && (!choices.length || lineCount < 3)) ctx.fillText(line, margin + 10, y);
+    if (choices.length) {
+      const optionTop = boxY + boxH - 38;
+      const gap = 8;
+      const optionW = Math.floor((w - margin * 2 - 20 - gap * (choices.length - 1)) / choices.length);
+      choices.forEach((choice, index) => {
+        const x = margin + 10 + index * (optionW + gap);
+        state.hotspots.push({
+          kind: 'dialogChoice',
+          choiceIndex: index,
+          x,
+          y: optionTop,
+          w: optionW,
+          h: 26,
+          depth: -1
+        });
+        ctx.fillStyle = 'rgba(255,241,168,0.12)';
+        ctx.strokeStyle = index === 0 ? '#ffffff' : '#fff1a8';
+        ctx.lineWidth = index === 0 ? 2 : 1;
+        ctx.fillRect(x, optionTop, optionW, 26);
+        ctx.strokeRect(x, optionTop, optionW, 26);
+        ctx.fillStyle = '#fff1a8';
+        ctx.font = 'bold 9px Courier New';
+        ctx.textAlign = 'center';
+        const label = `${index + 1}. ${choice.label}`.slice(0, 24);
+        ctx.fillText(label, x + optionW / 2, optionTop + 17);
+      });
+    }
     ctx.restore();
   },
 
