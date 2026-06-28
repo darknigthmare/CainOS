@@ -2117,7 +2117,9 @@ const EpisodeManager = {
         { speaker: "SYSTEM", text: "ANOMALIE DE BUFFER DÉTECTÉE..." },
         { speaker: "KINGER", text: "Je sens sa présence... Queenie (Helen) est dans la mémoire tampon..." },
         { speaker: "POMNI", text: "Kinger, fais attention ! Le projecteur de Caine patrouille pour purger les résidus." },
-        { speaker: "SYSTEM", text: "Collectez les fragments d'Helen sans vous faire scanner." }
+        { speaker: "SYSTEM", text: "Collectez les fragments d'Helen sans vous faire scanner." },
+        { speaker: "ZOOBLE", text: "Si le buffer craque, tout ce qu'on croit stable peut changer de place." },
+        { speaker: "SYSTEM", text: "Fractionnez le flux : chaque fragment valide ouvre un sous-episode de memoire." }
       ],
       outro: [
         { speaker: "QUEENIE", text: "Arthur... n'oublie pas 1994... Le casque a copié nos esprits..." },
@@ -2131,7 +2133,9 @@ const EpisodeManager = {
         { speaker: "SYSTEM", text: "ERREUR DU NOYAU CAINE : IA DÉSACTIVÉE PAR USER_KINGER." },
         { speaker: "RAGATHA", text: "Le Cirque perd ses couleurs ! Les colliders s'effondrent !" },
         { speaker: "POMNI", text: "On doit restaurer la couleur avant que tout ne s'éteigne !" },
-        { speaker: "SYSTEM", text: "Repeignez les dalles grises pour stabiliser l'affichage." }
+        { speaker: "SYSTEM", text: "Repeignez les dalles grises pour stabiliser l'affichage." },
+        { speaker: "JAX", text: "Super. Meme la fin du monde a besoin d'un tutoriel." },
+        { speaker: "SYSTEM", text: "Chaque secteur restaure stabilise une portion du final." }
       ],
       outro: [
         { speaker: "SYSTEM", text: "Restauration des couleurs à 75%... Alerte, Caine redémarre !" },
@@ -2183,6 +2187,13 @@ const EpisodeManager = {
   activeStoryMicroGame: null,
   nextEpisodeAfterVictory: null,
   storyCheckpointConfig: {
+    0: [
+      { after: 1, title: "Signal casque", objective: "Cliquez les pulses bleus pour accrocher la premiere liaison neuronale.", mode: "click", goal: 5, duration: 14, target: "LINK", hazard: "NOISE" },
+      { after: 2, title: "Carte visuelle", objective: "Reparez les tuiles CRT afin que CainOS voie le sujet sans saturation.", mode: "repair", goal: 6, duration: 15, target: "PIXEL", hazard: "DARK" },
+      { after: 3, title: "Bande passante", objective: "Reproduisez la sequence de synchronisation du casque.", mode: "sequence", goal: 4, duration: 16, target: "SYNC", hazard: "DROP" },
+      { after: 4, title: "Flux cortex", objective: "Collectez les paquets stables et evitez les pics de panique.", mode: "dodge", goal: 6, duration: 16, target: "DATA", hazard: "PANIC" },
+      { after: 5, title: "Ouverture session", objective: "Validez les derniers verrous pour autoriser le bureau CainOS.", mode: "click", goal: 6, duration: 16, target: "BOOT", hazard: "ERR" }
+    ],
     1: [
       { after: 55, title: "Reception du nouveau sujet", objective: "Cliquez les pulses bleus pour stabiliser Pomni avant que le flux d'arrivee ne sature.", mode: "click", goal: 6, duration: 16, target: "PULSE", hazard: "PANIC" },
       { after: 110, title: "Tour du cirque", objective: "Reparez les tuiles corrompues du tour guide pendant que Caine force la visite.", mode: "repair", goal: 8, duration: 18, target: "TUILE", hazard: "VOID" },
@@ -2198,14 +2209,18 @@ const EpisodeManager = {
       { after: 430, title: "Cleanup Caine", objective: "Reparez les secteurs verts avant que l'auto-cleanup ne les remplace.", mode: "repair", goal: 10, duration: 20, target: "PATCH", hazard: "PURGE" }
     ],
     3: [
-      { after: 9, title: "Manoir Mildenhall", objective: "Gardez le curseur dans l'ombre et collectez les echos sonar.", mode: "dodge", goal: 5, duration: 16, target: "ECHO", hazard: "LIGHT" },
+      { after: 6, title: "Entree du manoir", objective: "Gardez le curseur dans l'ombre et collectez les echos sonar.", mode: "dodge", goal: 5, duration: 16, target: "ECHO", hazard: "LIGHT" },
+      { after: 12, title: "Pieces silencieuses", objective: "Cliquez les zones calmes sans declencher les bruits parasites.", mode: "click", goal: 6, duration: 16, target: "SILENT", hazard: "NOISE" },
       { after: 18, title: "Descente obscure", objective: "Reparez les dalles visibles seulement quand le sonar les revele.", mode: "repair", goal: 7, duration: 16, target: "DALLE", hazard: "BRUIT" },
-      { after: 27, title: "Memoire de Kinger", objective: "Reproduisez le code calme pour maintenir Kinger lucide.", mode: "sequence", goal: 4, duration: 18, target: "CALM", hazard: "PANIC" }
+      { after: 24, title: "Memoire de Kinger", objective: "Reproduisez le code calme pour maintenir Kinger lucide.", mode: "sequence", goal: 4, duration: 18, target: "CALM", hazard: "PANIC" },
+      { after: 30, title: "Sortie du sous-sol", objective: "Survivez au dernier balayage de lumiere avant la trappe.", mode: "dodge", goal: 7, duration: 17, target: "HATCH", hazard: "BEAST" }
     ],
     4: [
-      { after: 7, title: "Service Spudsy's", objective: "Cliquez les ingredients valides et evitez les commandes parasites.", mode: "click", goal: 7, duration: 15, target: "ORDER", hazard: "ERROR" },
-      { after: 14, title: "Masque de Gangle", objective: "Reproduisez la sequence de service sans casser le rythme.", mode: "sequence", goal: 5, duration: 18, target: "MASK", hazard: "STRESS" },
-      { after: 21, title: "Rush cuisine", objective: "Reparez les stations de preparation avant la fin du shift.", mode: "repair", goal: 7, duration: 16, target: "STATION", hazard: "BURN" }
+      { after: 4, title: "Ouverture Spudsy's", objective: "Cliquez les commandes valides et evitez les tickets parasites.", mode: "click", goal: 6, duration: 15, target: "ORDER", hazard: "ERROR" },
+      { after: 8, title: "Masque plastique", objective: "Reproduisez la sequence de service sans casser le rythme.", mode: "sequence", goal: 5, duration: 18, target: "MASK", hazard: "STRESS" },
+      { after: 12, title: "Poste burger", objective: "Reparez les stations de preparation avant la fin du shift.", mode: "repair", goal: 7, duration: 16, target: "STATION", hazard: "BURN" },
+      { after: 16, title: "Rush client", objective: "Collectez les tickets bleus sans toucher les reclamations rouges.", mode: "dodge", goal: 7, duration: 17, target: "TICKET", hazard: "COMPL" },
+      { after: 20, title: "Fermeture cuisine", objective: "Cliquez les validations finales avant que le masque ne surcharge.", mode: "click", goal: 8, duration: 16, target: "DONE", hazard: "BREAK" }
     ],
     5: [
       { after: 90, title: "Boite a suggestions", objective: "Cliquez les requetes stables et laissez passer les glitchs.", mode: "click", goal: 9, duration: 18, target: "REQ", hazard: "SPAM" },
@@ -2215,14 +2230,34 @@ const EpisodeManager = {
       { after: 535, title: "Dernier paquet", objective: "Collectez les validations finales sans toucher les erreurs rouges.", mode: "dodge", goal: 9, duration: 18, target: "OK", hazard: "ERR" }
     ],
     6: [
+      { after: 2, title: "Briefing armes", objective: "Reproduisez le code de securite avant le debut du stand.", mode: "sequence", goal: 4, duration: 16, target: "SAFE", hazard: "MISS" },
       { after: 5, title: "Stand de tir", objective: "Cliquez les cibles Jax et evitez les marqueurs Ragatha.", mode: "click", goal: 7, duration: 16, target: "JAX", hazard: "RAG" },
-      { after: 10, title: "Colliders armes", objective: "Reparez les impacts instables avant le prochain tir.", mode: "repair", goal: 7, duration: 16, target: "IMPACT", hazard: "MISFIRE" }
+      { after: 8, title: "Colliders armes", objective: "Reparez les impacts instables avant le prochain tir.", mode: "repair", goal: 7, duration: 16, target: "IMPACT", hazard: "MISFIRE" },
+      { after: 11, title: "Pluie de projectiles", objective: "Collectez les trajectoires stables sans toucher les balles rouges.", mode: "dodge", goal: 7, duration: 17, target: "ARC", hazard: "SHOT" },
+      { after: 13, title: "Trophee truque", objective: "Cliquez les validations de score avant que Jax ne modifie le tableau.", mode: "click", goal: 6, duration: 15, target: "SCORE", hazard: "CHEAT" }
     ],
     7: [
-      { after: 55, title: "Lac digital", objective: "Collectez les reflets stables et evitez les coups de soleil.", mode: "dodge", goal: 7, duration: 18, target: "WATER", hazard: "SUN" },
-      { after: 120, title: "Signal Abel", objective: "Reproduisez la cle d'acces avant que Caine ne revienne.", mode: "sequence", goal: 6, duration: 22, target: "ABEL", hazard: "CAINE" },
-      { after: 180, title: "Zone administrateur", objective: "Reparez les passes admin sans ouvrir les cases piegees.", mode: "repair", goal: 9, duration: 18, target: "PASS", hazard: "TRAP" },
-      { after: 240, title: "Choix final", objective: "Cliquez les votes coherents et evitez les manipulations rouges.", mode: "click", goal: 8, duration: 18, target: "VOTE", hazard: "LIE" }
+      { after: 45, title: "Arrivee au lac", objective: "Collectez les reflets stables et evitez les coups de soleil.", mode: "dodge", goal: 7, duration: 18, target: "WATER", hazard: "SUN" },
+      { after: 95, title: "Fete de plage", objective: "Cliquez les reactions coherentes sans valider les faux sourires.", mode: "click", goal: 8, duration: 17, target: "SMILE", hazard: "FAKE" },
+      { after: 145, title: "Signal Abel", objective: "Reproduisez la cle d'acces avant que Caine ne revienne.", mode: "sequence", goal: 6, duration: 22, target: "ABEL", hazard: "CAINE" },
+      { after: 195, title: "Zone administrateur", objective: "Reparez les passes admin sans ouvrir les cases piegees.", mode: "repair", goal: 9, duration: 18, target: "PASS", hazard: "TRAP" },
+      { after: 245, title: "Choix final", objective: "Cliquez les votes coherents et evitez les manipulations rouges.", mode: "click", goal: 8, duration: 18, target: "VOTE", hazard: "LIE" }
+    ],
+    8: [
+      { after: 1, title: "Anomalie buffer", objective: "Reparez les blocs de memoire avant que le flux ne perde son ordre.", mode: "repair", goal: 6, duration: 16, target: "MEM", hazard: "DROP" },
+      { after: 2, title: "Trace Queenie", objective: "Collectez les fragments bleus sans toucher le balayage rouge.", mode: "dodge", goal: 7, duration: 17, target: "FRAG", hazard: "SCAN" },
+      { after: 3, title: "Projecteur Caine", objective: "Cliquez les caches valides pour proteger le groupe du scan.", mode: "click", goal: 7, duration: 16, target: "HIDE", hazard: "LIGHT" },
+      { after: 4, title: "Fragments Helen", objective: "Reproduisez la sequence des souvenirs dans le bon ordre.", mode: "sequence", goal: 5, duration: 20, target: "ECHO", hazard: "MISS" },
+      { after: 5, title: "Buffer instable", objective: "Reparez les cellules qui tremblent avant la purge du secteur.", mode: "repair", goal: 8, duration: 18, target: "CELL", hazard: "PURGE" },
+      { after: 6, title: "Sortie memoire", objective: "Collectez les sorties vertes sans croiser les verrous de Caine.", mode: "dodge", goal: 8, duration: 18, target: "EXIT", hazard: "LOCK" }
+    ],
+    9: [
+      { after: 1, title: "Noyau Caine offline", objective: "Cliquez les modules encore actifs pour garder le final lisible.", mode: "click", goal: 6, duration: 16, target: "CORE", hazard: "NULL" },
+      { after: 2, title: "Couleurs perdues", objective: "Reparez les dalles grises avant que la scene ne s'effondre.", mode: "repair", goal: 8, duration: 18, target: "COLOR", hazard: "GRAY" },
+      { after: 3, title: "Stabilisation Pomni", objective: "Collectez les signaux calmes et evitez les pics de panique.", mode: "dodge", goal: 7, duration: 17, target: "CALM", hazard: "PANIC" },
+      { after: 4, title: "Recoloration", objective: "Reproduisez la sequence RGB pour restaurer l'affichage.", mode: "sequence", goal: 6, duration: 21, target: "RGB", hazard: "MISS" },
+      { after: 5, title: "Derniere blague Jax", objective: "Cliquez les vraies validations sans accepter les faux tickets.", mode: "click", goal: 8, duration: 17, target: "TRUE", hazard: "JOKE" },
+      { after: 6, title: "Final CainOS", objective: "Reparez les derniers secteurs avant de lancer le mini-jeu final.", mode: "repair", goal: 9, duration: 19, target: "FINAL", hazard: "CRASH" }
     ]
   },
 
@@ -2582,7 +2617,15 @@ const EpisodeManager = {
     document.querySelectorAll('.sim-screen').forEach(s => s.classList.remove('active'));
     document.getElementById('sim-story-micro-screen').classList.add('active');
 
-    this.activeStoryMicroGame = new StoryMicroGame(config, () => {
+    const checkpoints = this.storyCheckpointConfig[this.currentEpisode] || [];
+    const checkpointIndex = checkpoints.findIndex(cp => cp.after === config.after);
+    const microConfig = {
+      ...config,
+      part: checkpointIndex >= 0 ? checkpointIndex + 1 : 1,
+      totalParts: checkpoints.length || 1
+    };
+
+    this.activeStoryMicroGame = new StoryMicroGame(microConfig, () => {
       this.completedStoryCheckpoints.add(config.after);
       if (this.activeStoryMicroGame) {
         this.activeStoryMicroGame.stop();
@@ -2938,7 +2981,7 @@ class StoryMicroGame {
 
   prepare() {
     this.titleEl.innerText = this.config.title;
-    this.subtitleEl.innerText = `[${this.config.mode.toUpperCase()} // LIGNE ${this.config.after}]`;
+    this.subtitleEl.innerText = `[SOUS-EPISODE ${this.config.part}/${this.config.totalParts} // ${this.config.mode.toUpperCase()}]`;
     this.objectiveEl.innerText = this.config.objective;
     this.actionBtn.disabled = false;
     this.actionBtn.innerText = "INITIALISER";
