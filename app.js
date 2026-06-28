@@ -243,6 +243,8 @@ const OS = {
   decryptionInterval: null,
   radarSubjects: [],
   activeWackyCast: 'pomni',
+  wackyFilter: 'all',
+  wackySearchQuery: '',
   radarAnimationId: null,
   wasShutdownByCalibration: false,
   calibrationStartupTimers: [],
@@ -298,7 +300,8 @@ const OS = {
       'ep9-btn-reset': 'Redemarrer la simulation noir et blanc.',
       'ep-1-btn-reset': 'Realigner la liaison synaptique prequelle.',
       'ep-2-btn-steer': 'Recibler la fusion des noyaux IA.',
-      'btn-story-speed': 'Changer la vitesse de defilement du transcript.',
+      'btn-story-speed': 'Vitesse du texte : x1 normal, x2 rapide, x4 tres rapide, INSTANT affiche la ligne complete.',
+      'btn-story-menu': 'Revenir au menu des sous-episodes sans perdre la progression deja validee.',
       'btn-story-skip': 'Ignorer le reste du transcript et acceder a l etape suivante.',
       'btn-story-next': 'Afficher la ligne suivante ou continuer la sequence.',
       'btn-story-micro-action': 'Demarrer l objectif interactif du sous-episode.',
@@ -308,6 +311,7 @@ const OS = {
       'watch-btn-radar': 'Afficher le radar du Vide et les signaux detectes.',
       'watch-btn-refresh-fact': 'Afficher un autre fait Wacky Watch sur ce personnage.',
       'watch-btn-ping': 'Envoyer un ping de rappel Caine dans le radar.',
+      'watch-cast-search': 'Filtrer les fiches par nom, statut ou signal.',
       'start-btn': 'Ouvrir le menu C&A Start.',
       'dialog-close-x': 'Fermer cette fenetre de dialogue.',
       'dialog-btn-ok': 'Confirmer le message systeme.',
@@ -1701,6 +1705,24 @@ const OS = {
       this.startRadarAnimation();
     });
 
+    const searchInput = document.getElementById('watch-cast-search');
+    if (searchInput) {
+      searchInput.addEventListener('input', () => {
+        this.wackySearchQuery = searchInput.value.trim().toLowerCase();
+        this.updateWackyWatchCastUI();
+      });
+    }
+
+    document.querySelectorAll('.watch-filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        SoundManager.playClick();
+        this.wackyFilter = btn.getAttribute('data-watch-filter') || 'all';
+        document.querySelectorAll('.watch-filter-btn').forEach(item => item.classList.remove('active'));
+        btn.classList.add('active');
+        this.updateWackyWatchCastUI();
+      });
+    });
+
     // Refresh fact button
     document.getElementById('watch-btn-refresh-fact').addEventListener('click', () => {
       SoundManager.playClick();
@@ -2382,6 +2404,7 @@ const OS = {
   },
 
   isWackyProfileUnlocked(id) {
+    if (this.getPurchasedWackySkins().includes(id)) return true;
     const gate = this.getWackyProfileGate(id);
     if (!gate) return true;
     if (typeof EpisodeManager !== 'undefined' && typeof EpisodeManager.hasReachedLoreGate === 'function') {
@@ -2389,6 +2412,83 @@ const OS = {
     }
     const progress = (typeof EpisodeManager !== 'undefined') ? EpisodeManager.getProgress() : [];
     return progress.includes(gate.episode);
+  },
+
+  getPurchasedWackySkins() {
+    try {
+      const raw = localStorage.getItem('cainos_purchased_wacky_skins');
+      const parsed = raw ? JSON.parse(raw) : [];
+      return Array.isArray(parsed) ? parsed.filter(id => typeof id === 'string') : [];
+    } catch (e) {
+      return [];
+    }
+  },
+
+  isWackySkinStoreUnlocked() {
+    const progress = (typeof EpisodeManager !== 'undefined') ? EpisodeManager.getProgress() : [];
+    return progress.includes(9);
+  },
+
+  isFanSkin(id, char = null) {
+    const data = char || this.getWackyCastData()[id];
+    if (!data) return false;
+    return /variante fan/i.test(String(data.age || "")) || ['maid', 'japanese', 'baseball', 'rivalbaseball', 'darkduo', 'beach', 'rhino', 'work', 'jaxgirl', 'hunter'].some(token => id.includes(token));
+  },
+
+  purchaseWackySkin(id) {
+    if (!this.isWackySkinStoreUnlocked() || !this.isFanSkin(id)) {
+      SoundManager.playError();
+      if (typeof this.showDialog === 'function') {
+        this.showDialog('BOUTIQUE VERROUILLEE', 'Les skins fan se debloquent apres la fin de l episode 9 pour garder le lore principal propre.');
+      }
+      return false;
+    }
+    const purchased = this.getPurchasedWackySkins();
+    if (!purchased.includes(id)) {
+      purchased.push(id);
+      localStorage.setItem('cainos_purchased_wacky_skins', JSON.stringify(purchased));
+    }
+    SoundManager.playWin();
+    return true;
+  },
+
+  getWackyVariantGroups() {
+    return {
+      pomni: ['pomni', 'maidpomni', 'japanesepomni', 'baseballpomni', 'rivalbaseballpomni', 'shadowpomni', 'evilpomni', 'horrorpomnivoid', 'horrorpomnispiral', 'horrorpomniskull'],
+      jax: ['jax', 'maidjax', 'jaxgirl', 'japanesejax', 'baseballjax', 'rivalbaseballjax', 'hunterjax', 'darkduojax', 'shadowjax', 'eviljax'],
+      ragatha: ['ragatha', 'maidragatha', 'japaneseragatha', 'baseballragatha', 'rivalbaseballragatha', 'shadowragatha', 'evilragatha'],
+      kinger: ['kinger', 'japanesekinger', 'baseballkinger', 'rivalbaseballkinger', 'shadowkinger', 'evilkinger'],
+      gangle: ['gangle', 'ganglekawaii', 'ganglecomedy', 'gangletragedy', 'maidgangle', 'beachgangle', 'japanesegangle', 'rhinogangle', 'workgangle', 'baseballgangle', 'darkduogangle', 'shadowgangle'],
+      zooble: ['zooble', 'japanesezooble', 'baseballzooble', 'rivalbaseballzooble', 'shadowzooble', 'evilzooble'],
+      gummigoo: ['gummigoo', 'japanesegummigoo'],
+      caine: ['caine', 'shadowcaine'],
+      abel: ['abel', 'abelmannequin', 'abelfullbody'],
+      gloinkqueen: ['gloinkqueen', 'gloinkqueenscale', 'gloinkstar', 'gloinkcube', 'gloinkpyramid', 'gloinkcrescent', 'gloinkpin', 'gloinkround']
+    };
+  },
+
+  getWackyBaseProfileId(id) {
+    const groups = this.getWackyVariantGroups();
+    for (const baseId in groups) {
+      if (groups[baseId].includes(id)) return baseId;
+    }
+    return id;
+  },
+
+  applyWackyWatchListFilters(castData) {
+    const query = String(this.wackySearchQuery || '').trim().toLowerCase();
+    const filter = this.wackyFilter || 'all';
+    const entries = Object.entries(castData).filter(([id, char]) => {
+      const status = String(char.status || this.getWackyProfileStatus(id)).toLowerCase();
+      const haystack = `${id} ${char.name || ''} ${char.signal || ''} ${status}`.toLowerCase();
+      if (query && !haystack.includes(query)) return false;
+      if (filter === 'active') return status.includes('actif');
+      if (filter === 'variant') return status.includes('variante');
+      if (filter === 'archive') return status.includes('archive');
+      if (filter === 'npc') return status.includes('pnj') || status.includes('decor');
+      return true;
+    });
+    return Object.fromEntries(entries);
   },
 
   getFilteredWackyCastData() {
@@ -2484,7 +2584,7 @@ const OS = {
     }
 
     Object.keys(castData).forEach(key => delete castData[key]);
-    Object.assign(castData, this.getFilteredWackyCastData());
+    Object.assign(castData, this.applyWackyWatchListFilters(this.getFilteredWackyCastData()));
 
     const castList = document.getElementById('watch-cast-list');
     if (castList) {
@@ -2493,6 +2593,12 @@ const OS = {
       // Determine active cast member
       if (!this.activeWackyCast || !castData[this.activeWackyCast]) {
         this.activeWackyCast = castData.pomni ? 'pomni' : Object.keys(castData)[0];
+      }
+
+      if (!Object.keys(castData).length) {
+        castList.innerHTML = `<div class="watch-variant-empty">Aucun signal ne correspond au filtre actuel.</div>`;
+        this.loadWackyProfile(this.getFilteredWackyCastData().pomni || this.getWackyCastData().pomni, 'pomni');
+        return;
       }
 
       // Populate list
@@ -2507,12 +2613,12 @@ const OS = {
           document.querySelectorAll('.cast-item').forEach(i => i.classList.remove('active'));
           item.classList.add('active');
           this.activeWackyCast = id;
-          this.loadWackyProfile(castData[id]);
+          this.loadWackyProfile(castData[id], id);
         });
         castList.appendChild(item);
       }
 
-      this.loadWackyProfile(castData[this.activeWackyCast]);
+      this.loadWackyProfile(castData[this.activeWackyCast], this.activeWackyCast);
     }
 
     // Setup radar subjects dynamically
@@ -2695,7 +2801,49 @@ const OS = {
     return `<svg class="pixel-avatar-svg" width="${size}" height="${size}" viewBox="0 0 16 16" shape-rendering="crispEdges" aria-hidden="true">${(sprites[avatar] || sprites.mannequin).join('')}</svg>`;
   },
 
-  loadWackyProfile(char) {
+  renderWackyVariants(profileId) {
+    const list = document.getElementById('watch-variant-list');
+    if (!list) return;
+    const allCastData = this.getWackyCastData();
+    const groups = this.getWackyVariantGroups();
+    const baseId = this.getWackyBaseProfileId(profileId);
+    const variantIds = (groups[baseId] || [profileId]).filter(id => allCastData[id]);
+
+    if (variantIds.length <= 1) {
+      list.innerHTML = `<span class="watch-variant-empty">Aucune variante rattachee a cette fiche.</span>`;
+      return;
+    }
+
+    list.innerHTML = "";
+    variantIds.forEach(variantId => {
+      const variant = allCastData[variantId];
+      const unlocked = this.isWackyProfileUnlocked(variantId);
+      const buyable = !unlocked && this.isFanSkin(variantId, variant) && this.isWackySkinStoreUnlocked();
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = `watch-variant-btn ${variantId === profileId ? 'active' : ''} ${!unlocked ? 'locked' : ''} ${buyable ? 'buyable' : ''}`;
+      btn.innerText = unlocked ? variant.name : (buyable ? `ACHETER ${variant.name}` : `${variant.name} [LOCK]`);
+      btn.title = unlocked
+        ? `Voir ${variant.name}`
+        : (buyable ? `Acheter le skin fan ${variant.name}` : `Continuez la progression pour debloquer ${variant.name}`);
+      btn.disabled = !unlocked && !buyable;
+      btn.addEventListener('click', () => {
+        if (unlocked) {
+          SoundManager.playClick();
+          this.loadWackyProfile({ ...variant, status: this.getWackyProfileStatus(variantId) }, variantId);
+          return;
+        }
+        if (buyable && this.purchaseWackySkin(variantId)) {
+          this.loadWackyProfile({ ...variant, status: this.getWackyProfileStatus(variantId) }, variantId);
+        }
+      });
+      list.appendChild(btn);
+    });
+  },
+
+  loadWackyProfile(char, id = null) {
+    const profileId = id || this.activeWackyCast;
+    this.activeWackyCast = profileId;
     document.getElementById('watch-profile-name').innerText = char.name;
     const statusEl = document.getElementById('watch-profile-status');
     if (statusEl) statusEl.innerText = char.status || "ACTIF";
@@ -2725,6 +2873,7 @@ const OS = {
     const avatarSize = bossAvatars.has(char.avatar) ? 72 : (tallAvatars.has(char.avatar) ? 68 : 62);
     container.className = frameClass;
     container.innerHTML = this.getPixelAvatarSvg(char.avatar, avatarSize);
+    this.renderWackyVariants(profileId);
     return;
     let svg = "";
     if (char.avatar === 'pomni') {

@@ -490,6 +490,7 @@
                         </div>
                         <div class="story-controls">
                           <button id="btn-story-speed" class="retro-btn btn-sm" title="Vitesse de transmission">⚡ x1</button>
+                          <button id="btn-story-menu" class="retro-btn btn-sm">MENU EPISODE</button>
                           <button id="btn-story-skip" class="retro-btn">ACCÉDER AU SIMULATEUR</button>
                           <button id="btn-story-next" class="retro-btn btn-primary-retro">CONTINUER</button>
                         </div>
@@ -548,8 +549,18 @@
                   <div class="watch-content-pane">
                     <!-- Cast List Tab -->
                     <div id="watch-tab-cast" class="watch-tab active">
-                      <div class="cast-selector" id="watch-cast-list">
-                        <!-- Filled by JS -->
+                      <div class="cast-browser">
+                        <input id="watch-cast-search" class="watch-search-input" type="search" placeholder="RECHERCHER SIGNAL..." autocomplete="off">
+                        <div class="watch-filter-row" role="group" aria-label="Filtres Wacky Watch">
+                          <button class="watch-filter-btn active" data-watch-filter="all">TOUS</button>
+                          <button class="watch-filter-btn" data-watch-filter="active">ACTIFS</button>
+                          <button class="watch-filter-btn" data-watch-filter="variant">VARIANTES</button>
+                          <button class="watch-filter-btn" data-watch-filter="archive">ARCHIVES</button>
+                          <button class="watch-filter-btn" data-watch-filter="npc">PNJ</button>
+                        </div>
+                        <div class="cast-selector" id="watch-cast-list">
+                          <!-- Filled by JS -->
+                        </div>
                       </div>
                       <div class="cast-profile-panel" id="watch-cast-profile">
                         <div class="profile-header">
@@ -565,6 +576,10 @@
                           <p class="panel-label">Fait Insolite (Wacky Fact)</p>
                           <p id="watch-profile-fact" class="fact-text">A peur des mannequins de cire et ne se souvient plus de son nom civil.</p>
                           <button id="watch-btn-refresh-fact" class="retro-btn btn-sm" style="margin-top: 8px;">AUTRE FAIT</button>
+                        </div>
+                        <div class="profile-variant-box">
+                          <p class="panel-label">Variantes / Skins</p>
+                          <div id="watch-variant-list" class="watch-variant-list"></div>
                         </div>
                       </div>
                     </div>

@@ -6704,6 +6704,7 @@ const EpisodeManager = {
     const storyNextBtn = document.getElementById('btn-story-next');
     const storySkipBtn = document.getElementById('btn-story-skip');
     const storySpeedBtn = document.getElementById('btn-story-speed');
+    const storyMenuBtn = document.getElementById('btn-story-menu');
     const storyMicroBtn = document.getElementById('btn-story-micro-action');
 
     if (storyNextBtn) {
@@ -6729,6 +6730,22 @@ const EpisodeManager = {
       });
     }
 
+    if (storyMenuBtn) {
+      storyMenuBtn.addEventListener('click', () => {
+        SoundManager.playClick();
+        clearInterval(this.typewriterTimer);
+        this.isTyping = false;
+        if (this.activeStoryMicroGame) {
+          this.activeStoryMicroGame.stop();
+          this.activeStoryMicroGame = null;
+        }
+        this.activeSubepisodeIndex = null;
+        this.activeSubepisodeCheckpoint = null;
+        this.activeSubepisodeTotal = 0;
+        this.showStartScreen(this.currentEpisode);
+      });
+    }
+
     // Skip button: jump directly to the next interactive beat instead of validating story progress.
     if (storySkipBtn) {
       storySkipBtn.addEventListener('click', () => {
@@ -6747,6 +6764,12 @@ const EpisodeManager = {
       });
     }
 
+    if (storySpeedBtn) {
+      storySpeedBtn.addEventListener('click', () => {
+        this.storySpeedBeforeClick = this.storySpeed;
+      }, true);
+    }
+
     // Speed toggle: cycle 1x -> 2x -> 4x -> 1x
     if (storySpeedBtn) {
       storySpeedBtn.addEventListener('click', () => {
@@ -6762,6 +6785,16 @@ const EpisodeManager = {
           storySpeedBtn.innerText = '⚡ x1';
         }
       });
+    }
+
+    if (storySpeedBtn) {
+      storySpeedBtn.addEventListener('click', () => {
+        if (this.storySpeedBeforeClick === 4) {
+          this.storySpeed = 999;
+        }
+        this.updateStorySpeedButton(storySpeedBtn);
+      });
+      this.updateStorySpeedButton(storySpeedBtn);
     }
 
     if (storyMicroBtn) {
@@ -7139,9 +7172,26 @@ const EpisodeManager = {
     if (segments.length === 0) return;
     const selected = segments[this.selectedSubepisodeIndex] || segments[0];
     const replay = this.getProgress().includes(num) || this.getSubepisodeProgress(num).includes(selected.index);
-    startBtn.innerText = `${replay ? "REJOUER" : "LANCER"} SOUS-EPISODE ${selected.index + 1}/${segments.length}`;
+    const nextPlayable = this.getNextPlayableSubepisodeIndex(num);
+    const action = replay ? "REJOUER" : (selected.index === nextPlayable ? "REPRENDRE" : "LANCER");
+    startBtn.innerText = `${action} SOUS-EPISODE ${selected.index + 1}/${segments.length}`;
     startBtn.title = `${selected.title} - ${selected.playObjective || selected.objective}`;
     startBtn.setAttribute('aria-label', startBtn.title);
+  },
+
+  updateStorySpeedButton(button = null) {
+    const speedBtn = button || document.getElementById('btn-story-speed');
+    if (!speedBtn) return;
+    if (this.storySpeed >= 999) {
+      speedBtn.innerText = "INSTANT";
+      speedBtn.title = "Vitesse du texte : affiche chaque ligne complete immediatement.";
+    } else {
+      speedBtn.innerText = `x${this.storySpeed}`;
+      speedBtn.title = this.storySpeed === 1
+        ? "Vitesse du texte : normale."
+        : (this.storySpeed === 2 ? "Vitesse du texte : rapide." : "Vitesse du texte : tres rapide.");
+    }
+    speedBtn.setAttribute('aria-label', speedBtn.title);
   },
 
   launchSelectedEpisode() {
@@ -7207,6 +7257,8 @@ const EpisodeManager = {
     if (skipBtn) {
       skipBtn.innerText = 'PASSER AU MINI-JEU';
     }
+    const menuBtn = document.getElementById('btn-story-menu');
+    if (menuBtn) menuBtn.hidden = false;
 
     this.updateStoryProgress();
     this.typeNextLine();
@@ -7259,6 +7311,8 @@ const EpisodeManager = {
     if (skipBtn) {
       skipBtn.innerText = phase === 'intro' ? 'ACCÉDER AU SIMULATEUR' : 'VALIDER';
     }
+    const menuBtn = document.getElementById('btn-story-menu');
+    if (menuBtn) menuBtn.hidden = true;
 
     // Reset progress bar
     this.updateStoryProgress();
@@ -7793,12 +7847,12 @@ const EpisodeManager = {
     
     // Adaptive speed: archive lines type faster, speed multiplier applies
     const baseDelay = displayLine.isSystemAudio ? 12 : 25;
-    const delay = Math.max(3, Math.round(baseDelay / this.storySpeed));
+    const delay = this.storySpeed >= 999 ? 1 : Math.max(3, Math.round(baseDelay / this.storySpeed));
 
     this.typewriterTimer = setInterval(() => {
       if (this.charIndex < this.currentLineText.length) {
         // Type multiple chars per tick at higher speeds
-        const charsPerTick = this.storySpeed >= 4 ? 3 : (this.storySpeed >= 2 ? 2 : 1);
+        const charsPerTick = this.storySpeed >= 999 ? this.currentLineText.length : (this.storySpeed >= 4 ? 3 : (this.storySpeed >= 2 ? 2 : 1));
         for (let c = 0; c < charsPerTick && this.charIndex < this.currentLineText.length; c++) {
           const char = this.currentLineText[this.charIndex];
           this.displayedText += char;
@@ -8046,7 +8100,7 @@ class StoryMicroGame {
   prepare() {
     this.titleEl.innerText = this.config.title;
     this.subtitleEl.innerText = `[SOUS-EPISODE ${this.config.part}/${this.config.totalParts} // ${this.config.mode.toUpperCase()} // ${this.config.context || "SCENE ACTIVE"}]`;
-    this.objectiveEl.innerText = this.config.playObjective || this.config.objective;
+    this.objectiveEl.innerText = this.getPhaseObjective();
     this.actionBtn.disabled = false;
     this.actionBtn.innerText = "INITIALISER";
     this.resetState();
@@ -8058,13 +8112,14 @@ class StoryMicroGame {
     this.completed = false;
     this.score = 0;
     this.timeLeft = this.config.duration || 16;
+    this.microPhase = 'os';
     this.lastTick = 0;
     this.pointer = { x: this.canvas.width / 2, y: this.canvas.height / 2 };
     this.items = [];
     this.sequence = [];
     this.sequenceIndex = 0;
     this.grid = [];
-    this.statusEl.innerText = `0 / ${this.config.goal}`;
+    this.statusEl.innerText = `OS 0 / ${this.getRequiredScore()}`;
   }
 
   start() {
@@ -8077,13 +8132,7 @@ class StoryMicroGame {
     this.canvas.addEventListener('mousemove', this.handleMouseMove);
     window.addEventListener('keydown', this.handleKeyDown);
 
-    if (this.config.mode === 'sequence') {
-      this.sequence = this.buildSequence();
-    } else if (this.config.mode === 'repair') {
-      this.grid = this.buildGrid();
-    } else {
-      this.seedItems();
-    }
+    this.seedPhaseState();
 
     this.lastTick = Date.now();
     this.loop();
@@ -8102,7 +8151,7 @@ class StoryMicroGame {
 
   buildSequence() {
     const keys = ['UP', 'DOWN', 'LEFT', 'RIGHT'];
-    const total = this.config.goal || 5;
+    const total = this.getRequiredScore();
     const sequence = [];
     for (let i = 0; i < total; i++) {
       sequence.push(keys[Math.floor(Math.random() * keys.length)]);
@@ -8115,12 +8164,13 @@ class StoryMicroGame {
     const cols = 5;
     const rows = 3;
     const cellW = this.canvas.width / cols;
-    const cellH = (this.canvas.height - 30) / rows;
+    const topPad = 46;
+    const cellH = (this.canvas.height - topPad - 8) / rows;
     for (let y = 0; y < rows; y++) {
       for (let x = 0; x < cols; x++) {
         grid.push({
           x: x * cellW + 12,
-          y: y * cellH + 18,
+          y: y * cellH + topPad,
           w: cellW - 24,
           h: cellH - 20,
           good: Math.random() > 0.28,
@@ -8139,10 +8189,39 @@ class StoryMicroGame {
     }
   }
 
+  seedPhaseState() {
+    this.sequenceIndex = 0;
+    if (this.config.mode === 'sequence') {
+      this.sequence = this.buildSequence();
+    } else if (this.config.mode === 'repair') {
+      this.grid = this.buildGrid();
+    } else {
+      this.seedItems();
+    }
+  }
+
+  getRequiredScore() {
+    const goal = this.config.goal || 5;
+    if (this.config.dualPhase === false) return goal;
+    return Math.max(2, Math.ceil(goal / 2));
+  }
+
+  getPhaseLabel() {
+    return this.microPhase === 'simulation' ? 'SIMULATION' : 'OS CAINOS';
+  }
+
+  getPhaseObjective() {
+    const base = this.config.playObjective || this.config.objective || "Terminez la micro-simulation.";
+    const phaseText = this.microPhase === 'simulation'
+      ? "Phase 2/2 - simulation scene : appliquez la synchronisation dans l aventure."
+      : "Phase 1/2 - OS CainOS : nettoyez le flux avant d entrer dans la scene.";
+    return `${phaseText} ${base}`;
+  }
+
   createItem(good = true) {
     return {
       x: 24 + Math.random() * (this.canvas.width - 48),
-      y: 24 + Math.random() * (this.canvas.height - 56),
+      y: 52 + Math.random() * (this.canvas.height - 84),
       vx: (Math.random() - 0.5) * 80,
       vy: (Math.random() - 0.5) * 70,
       r: good ? 13 : 16,
@@ -8314,20 +8393,39 @@ class StoryMicroGame {
           SoundManager.playError();
           this.timeLeft = Math.max(2, this.timeLeft - 1.6);
           item.x = 24 + Math.random() * (this.canvas.width - 48);
-          item.y = 24 + Math.random() * (this.canvas.height - 56);
+          item.y = 52 + Math.random() * (this.canvas.height - 84);
         }
       }
     }
   }
 
   checkWin() {
-    if (this.score >= (this.config.goal || 5)) {
+    if (this.score >= this.getRequiredScore()) {
+      if (this.microPhase !== 'simulation' && this.config.dualPhase !== false) {
+        this.startSimulationPhase();
+        return;
+      }
       this.completed = true;
       this.stop();
       this.statusEl.innerText = "SYNC OK";
       this.actionBtn.disabled = true;
       setTimeout(() => this.onComplete(), 450);
     }
+  }
+
+  startSimulationPhase() {
+    SoundManager.playWin();
+    this.microPhase = 'simulation';
+    this.score = 0;
+    this.timeLeft = Math.max(8, Math.ceil((this.config.duration || 16) * 0.7));
+    this.pointer = { x: this.canvas.width / 2, y: this.canvas.height / 2 };
+    this.items = [];
+    this.sequence = [];
+    this.sequenceIndex = 0;
+    this.grid = [];
+    this.seedPhaseState();
+    this.objectiveEl.innerText = this.getPhaseObjective();
+    this.updateStatus();
   }
 
   fail() {
@@ -8342,7 +8440,7 @@ class StoryMicroGame {
   updateStatus() {
     if (this.completed) return;
     const left = Math.max(0, Math.ceil(this.timeLeft));
-    this.statusEl.innerText = `${this.score} / ${this.config.goal} | ${left}s`;
+    this.statusEl.innerText = `${this.getPhaseLabel()} ${this.score} / ${this.getRequiredScore()} | ${left}s`;
   }
 
   clear() {
@@ -8372,20 +8470,23 @@ class StoryMicroGame {
     ctx.font = '10px Courier New';
     ctx.textAlign = 'left';
     ctx.fillStyle = 'rgba(1, 4, 1, 0.82)';
-    ctx.fillRect(6, 6, this.canvas.width - 12, 18);
+    ctx.fillRect(6, 6, this.canvas.width - 12, 32);
+    ctx.fillStyle = '#8fe8ff';
+    ctx.fillText(`PHASE: ${this.getPhaseLabel()}`, 12, 19);
+    const legendY = 32;
     if (this.config.mode === 'sequence') {
       ctx.fillStyle = '#39ff14';
-      ctx.fillText('VERT = DIRECTION A SUIVRE', 12, 19);
+      ctx.fillText('VERT = DIRECTION A SUIVRE', 12, legendY);
     } else if (this.config.mode === 'dodge') {
       ctx.fillStyle = '#00d4ff';
-      ctx.fillText(`CYAN = ${target}`, 12, 19);
+      ctx.fillText(`CYAN = ${target}`, 12, legendY);
       ctx.fillStyle = '#ff3344';
-      ctx.fillText(`ROUGE = ${hazard}`, 150, 19);
+      ctx.fillText(`ROUGE = ${hazard}`, 150, legendY);
     } else {
       ctx.fillStyle = '#39ff14';
-      ctx.fillText(`VERT = ${target}`, 12, 19);
+      ctx.fillText(`VERT = ${target}`, 12, legendY);
       ctx.fillStyle = '#ff3344';
-      ctx.fillText(`ROUGE = ${hazard}`, 150, 19);
+      ctx.fillText(`ROUGE = ${hazard}`, 150, legendY);
     }
     ctx.restore();
   }
@@ -8444,7 +8545,7 @@ class StoryMicroGame {
     });
     this.ctx.fillStyle = '#9adf9a';
     this.ctx.font = '12px Courier New';
-    this.ctx.fillText(`SEQUENCE: ${this.sequence.map((s, i) => i < this.sequenceIndex ? 'OK' : s).join(' ')}`, cx, 38);
+    this.ctx.fillText(`SEQUENCE: ${this.sequence.map((s, i) => i < this.sequenceIndex ? 'OK' : s).join(' ')}`, cx, 52);
   }
 
   drawDodgeMode() {
