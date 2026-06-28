@@ -1841,10 +1841,10 @@ const OS = {
       const sideTotal = Math.ceil((count - sideIndex) / sides.length);
       const pos = Math.max(2, Math.min(size - 3, Math.round(2 + ((ordinal + 1) / (sideTotal + 1)) * (size - 5))));
       const side = sides[sideIndex];
-      if (side === 'north') slots.push({ x: pos, z: 0, inwardX: 0, inwardZ: 1 });
-      else if (side === 'south') slots.push({ x: pos, z: size - 1, inwardX: 0, inwardZ: -1 });
-      else if (side === 'east') slots.push({ x: size - 1, z: pos, inwardX: -1, inwardZ: 0 });
-      else slots.push({ x: 0, z: pos, inwardX: 1, inwardZ: 0 });
+      if (side === 'north') slots.push({ side, x: pos, z: 0, inwardX: 0, inwardZ: 1 });
+      else if (side === 'south') slots.push({ side, x: pos, z: size - 1, inwardX: 0, inwardZ: -1 });
+      else if (side === 'east') slots.push({ side, x: size - 1, z: pos, inwardX: -1, inwardZ: 0 });
+      else slots.push({ side, x: 0, z: pos, inwardX: 1, inwardZ: 0 });
     }
     return slots;
   },
@@ -2088,8 +2088,49 @@ const OS = {
       max: {
         6: "Max: Si la route se repete, c'est peut-etre parce qu'on n'est pas la pour aller quelque part."
       },
+      chad: {
+        6: "Chad: On suit Gummigoo, mais cette route a trop de coutures pour etre normale."
+      },
+      loolilalu: {
+        6: "Princess Loolilalu: Le royaume garde son decor royal, meme quand Caine transforme tout en mission."
+      },
+      fudge: {
+        6: "The Fudge: La confiserie bouge comme une menace, pas comme un decor."
+      },
       horrorghost: {
         8: "Fantome: La lumiere ne chasse pas la peur. Elle la nomme."
+      },
+      horrormonster: {
+        8: "Mildenhall Monster: Le manoir grossit ce que Pomni et Kinger refusent de regarder."
+      },
+      horrorpomnivoid: {
+        8: "Possessed Pomni: Ce n'est qu'un etat de peur temporaire. Pomni n'est pas devenue ca."
+      },
+      horrorpomniskull: {
+        9: "Horror Pomni: Le sous-sol garde les traces du manoir, meme apres la fuite."
+      },
+      workgangle: {
+        10: "Gangle: Le comptoir transforme la scene en pression de travail. Mon masque tient a peine."
+      },
+      ming: {
+        10: "Ming: Signal figurant detecte. Caine a l'air beaucoup trop agace par ce profil.",
+        15: "Ming: Les couches admin classent les personnages de fond comme des anomalies presque importantes."
+      },
+      additionalvoices: {
+        7: "Additional Voices: Mannequin de fond detecte dans la couche technique, sans profil humain confirme.",
+        15: "Additional Voices: La simulation recycle meme les figurants quand le systeme manque de repere."
+      },
+      orbsman: {
+        11: "Orbsman: Micro-aventure detectee. Le corps en spheres tient mieux que la logique de Caine."
+      },
+      ganglekawaii: {
+        11: "Kawaii Gangle: Variante cosmetique. CainOS la garde hors de la timeline principale."
+      },
+      evilpomni: {
+        11: "Evil Pomni: Variante hostile issue d'une idee alternative, pas une vraie transformation de Pomni."
+      },
+      eviljax: {
+        11: "Evil Jax: Variante de micro-aventure. Le signal reste separe du Jax principal."
       },
       kaufmo: {
         4: "Kaufmo Archive: signal abstrait. Conversation impossible, danger reel."
@@ -2097,7 +2138,21 @@ const OS = {
       abelmannequin: {
         16: "Abel: Les couches C&A n'ont pas ete construites pour etre visitees par des avatars."
       },
+      abelfullbody: {
+        16: "Abel Full Body: Archive physique reconstruite, a traiter comme trace C&A et non resident actif."
+      },
+      themachine: {
+        15: "The Machine: Objet vivant ou decor actif, mais CainOS ne le classe pas comme resident du Cirque.",
+        16: "The Machine: La couche C&A laisse parfois les objets avoir plus de presence que les personnages."
+      },
+      queenie: {
+        17: "Queenie Archive: Le signal reste une memoire de Kinger, pas une residente revenue dans la piste."
+      },
+      shadowkinger: {
+        17: "Shadow Kinger: Projection de peur liee a la memoire, pas un second Kinger."
+      },
       ribbit: {
+        18: "Ribbit Dream Signal: le final laisse remonter les membres disparus sous forme de souvenir.",
         19: "Ribbit Archive: profil conserve comme trace de membre disparu."
       },
       wormo: {
@@ -2105,6 +2160,27 @@ const OS = {
       },
       scratch: {
         19: "Scratch Archive: premier bruit d'abstraction classe par CainOS."
+      },
+      bizco: {
+        19: "Bizco Archive: ancien membre conserve en signal abstrait, pas en PNJ actif."
+      },
+      rattie: {
+        19: "Rattie Archive: petit profil de membre disparu, verrouille a la couche finale."
+      },
+      spike: {
+        19: "Spike Archive: silhouette ancienne classee dans les residents disparus."
+      },
+      pinkcyclops: {
+        19: "Pink Cyclops Archive: signal de membre abstrait conserve pour l'archive visuelle."
+      },
+      yellowclown: {
+        19: "Yellow Clown Archive: le visage triste reste indexe comme ancienne presence."
+      },
+      oyster: {
+        19: "Oyster Archive: forme d'objet vivant, mais CainOS la classe comme membre disparu."
+      },
+      bulbcreature: {
+        19: "Bulb Creature Archive: signal vegetal/bulbe archive dans les Circus Members."
       }
     };
     const defaultLines = {
@@ -2117,12 +2193,37 @@ const OS = {
       gangle: "Gangle: Je peux essayer d'aider si rien ne casse.",
       zooble: "Zooble: Cette zone est praticable, ce qui est deja suspect.",
       gummigoo: "Gummigoo: Ces murs ressemblent a des donnees habillees en decor.",
+      max: "Max: La route a l'air libre, mais elle tourne en rond comme un script.",
+      chad: "Chad: Le convoi suit les rails de la scene.",
+      loolilalu: "Princess Loolilalu: Le royaume garde ses regles de conte, meme sous CainOS.",
+      fudge: "The Fudge: Signal de confiserie instable.",
       kaufmo: "Kaufmo Archive: ...",
       horrorghost: "Fantome: Le signal te regarde aussi.",
+      horrormonster: "Mildenhall Monster: Signal horrifique confine au manoir.",
+      horrorpomnivoid: "Possessed Pomni: Projection de peur, pas nouvel avatar stable.",
+      horrorpomniskull: "Horror Pomni: Trace de panique visuelle.",
+      workgangle: "Gangle: Le service client est plus dur que les aventures.",
+      ming: "Ming: Figurants et prix absurdes detectes.",
+      additionalvoices: "Additional Voices: Signal de fond classe comme personnage secondaire.",
+      themachine: "The Machine: Decor actif sous observation.",
+      orbsman: "Orbsman: Micro-aventure orbitee, logique minimale.",
+      ganglekawaii: "Kawaii Gangle: Variante cosmetique verrouillee hors canon principal.",
+      evilpomni: "Evil Pomni: Variante hostile de micro-aventure.",
+      eviljax: "Evil Jax: Variante hostile de micro-aventure.",
       abelmannequin: "Abel: Trace C&A detectee.",
+      abelfullbody: "Abel Full Body: Archive C&A detectee.",
+      queenie: "Queenie Archive: memoire protegee.",
+      shadowkinger: "Shadow Kinger: projection cauchemar detectee.",
       ribbit: "Ribbit Archive: signal secondaire.",
       wormo: "Wormo Archive: signal secondaire.",
-      scratch: "Scratch Archive: signal secondaire."
+      scratch: "Scratch Archive: signal secondaire.",
+      bizco: "Bizco Archive: signal secondaire.",
+      rattie: "Rattie Archive: signal secondaire.",
+      spike: "Spike Archive: signal secondaire.",
+      pinkcyclops: "Pink Cyclops Archive: signal secondaire.",
+      yellowclown: "Yellow Clown Archive: signal secondaire.",
+      oyster: "Oyster Archive: signal secondaire.",
+      bulbcreature: "Bulb Creature Archive: signal secondaire."
     };
     const line = zoneLines[avatar]?.[zoneId] || defaultLines[avatar] || `${sprite.name}: Signal detecte.`;
     const profileKey = this.getCircusCharacterProfileKey(sprite);
@@ -2144,12 +2245,46 @@ const OS = {
       kaufmo: "KAUFMO",
       gummigoo: "GUMMIGOO",
       max: "MAX",
+      chad: "BANDIT",
+      loolilalu: "PRINCESS_LOO",
+      fudge: "THE_FUDGE",
       horrorghost: "GHOSTLY",
+      horrormonster: "BARON_MILDENHALL",
+      horrorpomnivoid: "POSSESSED_POMNI",
+      horrorpomnispiral: "POSSESSED_POMNI",
+      horrorpomniskull: "POSSESSED_POMNI",
+      workgangle: "GANGLE",
+      ganglekawaii: "GANGLE",
+      orbsman: "ORBSMAN",
+      evilpomni: "EVIL_VARIANT",
+      eviljax: "EVIL_VARIANT",
+      shadowjax: "JAX",
+      shadowkinger: "KINGER",
+      hunterjax: "JAX",
+      beachgangle: "GANGLE",
+      ming: "MING",
+      additionalvoices: "VOICE",
+      themachine: "BACKGROUND",
       abelmannequin: "ABEL",
+      abelfullbody: "ABEL",
       abel: "ABEL",
+      queenie: "QUEENIE",
+      sun: "SUN_NPC",
+      moon: "MOON",
+      gloinkqueenscale: "GLOINK_QUEEN",
+      gloinkstar: "GLOINK",
+      gloinkcube: "GLOINK",
+      gloinkround: "GLOINK",
       ribbit: "RIBBIT",
       wormo: "WORMO",
-      scratch: "SCRATCH"
+      scratch: "SCRATCH",
+      bizco: "BIZCO",
+      rattie: "RATTIE",
+      spike: "SPIKE",
+      pinkcyclops: "PINK_FURRY_CYCLOPS",
+      yellowclown: "FROWNING_YELLOW_CLOWN_CREATURE",
+      oyster: "OYSTER",
+      bulbcreature: "LIGHT_GREEN_BULB_LIKE"
     };
     return map[key] || null;
   },
@@ -2679,6 +2814,11 @@ const OS = {
     return state.room?.doors || [];
   },
 
+  getCircusProjectedFloorY(depth, h) {
+    const lift = Math.min(h * 0.3, (1 / Math.max(0.2, depth)) * h * 0.28);
+    return Math.min(h - 18, h * 0.6 + lift);
+  },
+
   projectCircusPoint(obj, state, w, h) {
     const point = this.resolveCircusWorldPoint(obj, state);
     const dx = point.x - state.player.x;
@@ -2689,10 +2829,9 @@ const OS = {
     const rz = dx * cos + dz * sin;
     if (rz <= 0.18) return null;
     const fovScale = w * 0.52;
-    const floorLift = Math.min(h * 0.36, (1 / rz) * h * 0.24);
     return {
       x: w / 2 + (rx / rz) * fovScale,
-      y: h * 0.61 + floorLift,
+      y: this.getCircusProjectedFloorY(rz, h),
       depth: rz,
       scale: Math.min(2.2, Math.max(0.22, 2.25 / rz))
     };
@@ -2928,14 +3067,19 @@ const OS = {
       const p = door.projected;
       const selected = door.index === state.selectedExitIndex;
       const locked = !target.unlocked;
-      const doorW = 58 * p.scale;
-      const doorH = 118 * p.scale;
+      const scale = Math.max(0.28, p.scale);
+      const doorW = Math.max(24, 62 * scale);
+      const doorH = Math.max(56, 136 * scale);
       const x = p.x - doorW / 2;
-      const baseY = p.y || h * 0.58;
+      const baseY = Math.min(h - 15, p.y || this.getCircusProjectedFloorY(p.depth, h));
       const y = baseY - doorH;
-      state.hotspots.push({ x, y, w: doorW, h: doorH, target: door.target, index: door.index });
-      ctx.fillStyle = 'rgba(0,0,0,0.26)';
-      ctx.fillRect(x - doorW * 0.16, y - doorH * 0.05, doorW * 1.32, doorH * 1.12);
+      state.hotspots.push({ x: x - doorW * 0.18, y, w: doorW * 1.36, h: doorH + Math.max(8, 12 * scale), target: door.target, index: door.index });
+      ctx.fillStyle = 'rgba(0,0,0,0.44)';
+      ctx.beginPath();
+      ctx.ellipse(p.x, baseY + Math.max(2, 3 * scale), doorW * 0.66, Math.max(3, 7 * scale), 0, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.fillStyle = 'rgba(0,0,0,0.34)';
+      ctx.fillRect(x - doorW * 0.16, y - doorH * 0.05, doorW * 1.32, doorH * 1.08);
       ctx.fillStyle = locked ? '#14141a' : '#100020';
       ctx.strokeStyle = selected ? '#ffffff' : (locked ? '#56505f' : target.color);
       ctx.lineWidth = selected ? 4 : 2;
@@ -2947,14 +3091,22 @@ const OS = {
       ctx.closePath();
       ctx.fill();
       ctx.stroke();
+      ctx.strokeStyle = locked ? 'rgba(120,120,130,0.35)' : `${target.color}88`;
+      ctx.lineWidth = Math.max(1, 2 * scale);
+      ctx.beginPath();
+      ctx.moveTo(x - doorW * 0.12, y + doorH * 0.2);
+      ctx.lineTo(x - doorW * 0.12, baseY);
+      ctx.moveTo(x + doorW * 1.12, y + doorH * 0.2);
+      ctx.lineTo(x + doorW * 1.12, baseY);
+      ctx.stroke();
       ctx.fillStyle = locked ? 'rgba(0,0,0,0.5)' : `${target.color}44`;
       ctx.fillRect(x + doorW * 0.14, y + doorH * 0.22, doorW * 0.72, doorH * 0.65);
-      if (!locked) {
-        ctx.fillStyle = `${target.color}66`;
-        ctx.fillRect(x + doorW * 0.08, baseY - Math.max(2, 4 * p.scale), doorW * 0.84, Math.max(2, 3 * p.scale));
-      }
+      ctx.fillStyle = locked ? 'rgba(80,80,90,0.7)' : `${target.color}77`;
+      ctx.fillRect(x - doorW * 0.2, baseY - Math.max(4, 7 * scale), doorW * 1.4, Math.max(5, 9 * scale));
+      ctx.strokeStyle = 'rgba(255,241,168,0.28)';
+      ctx.strokeRect(x - doorW * 0.2, baseY - Math.max(4, 7 * scale), doorW * 1.4, Math.max(5, 9 * scale));
       ctx.fillStyle = selected ? '#fff1a8' : (locked ? '#8b8794' : target.color);
-      ctx.font = `bold ${Math.max(7, 12 * p.scale)}px Courier New`;
+      ctx.font = `bold ${Math.max(7, 12 * scale)}px Courier New`;
       ctx.textAlign = 'center';
       ctx.fillText(locked ? 'LOCK' : target.short, p.x, y - 6);
       if (p.depth < 1.25 && !locked) {
@@ -2975,13 +3127,109 @@ const OS = {
     ];
     const byZone = {
       2: [{ name: 'Caine', type: 'caine', avatar: 'caine', x: 0.25, z: -2.15, color: '#ffd84a' }, { name: 'Bubble', type: 'bubble', avatar: 'bubble', x: 1.25, z: -1.65, color: '#f7f7ff' }, ...shared],
-      4: [{ name: 'Kaufmo', type: 'abstract', avatar: 'kaufmo', x: 0, z: -2.25, color: '#111111' }, { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -1.4, z: -1.7, color: '#e53935' }],
-      6: [{ name: 'Gummigoo', type: 'gummigoo', avatar: 'gummigoo', x: -0.7, z: -2.2, color: '#d8a23a' }, { name: 'Max', type: 'gummigoo', avatar: 'max', x: 0.6, z: -2.55, color: '#75bd3f' }, { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 1.55, z: -1.85, color: '#e53935' }],
-      8: [{ name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -0.9, z: -2.2, color: '#d9d0a2' }, { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 0.8, z: -2.45, color: '#e53935' }, { name: 'Ghost', type: 'ghost', avatar: 'horrorghost', x: 2.15, z: -1.35, color: '#7df0ff' }],
-      10: [{ name: 'Gangle', type: 'gangle', avatar: 'workgangle', x: -0.4, z: -2.1, color: '#f7f7f7' }, { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 0.8, z: -2.4, color: '#e53935' }, { name: 'Customer', type: 'bubble', avatar: 'bubble', x: -2.0, z: -1.4, color: '#f7f7ff' }],
-      14: [{ name: 'Beach Gangle', type: 'gangle', avatar: 'beachgangle', x: -1.3, z: -2.1, color: '#f7f7f7' }, { name: 'Hunter Jax', type: 'jax', avatar: 'hunterjax', x: 1.4, z: -2.4, color: '#8a4fd6' }],
-      16: [{ name: 'Caine', type: 'caine', avatar: 'caine', x: 0, z: -2.25, color: '#ffd84a' }, { name: 'Abel', type: 'mannequin', avatar: 'abelmannequin', x: -1.6, z: -1.7, color: '#ff8a30' }],
-      19: [{ name: 'Ribbit', type: 'npc', avatar: 'ribbit', x: -1.7, z: -1.9, color: '#4ee77e' }, { name: 'Wormo', type: 'npc', avatar: 'wormo', x: 0, z: -2.25, color: '#ffcf75' }, { name: 'Scratch', type: 'npc', avatar: 'scratch', x: 1.7, z: -1.9, color: '#c875ff' }]
+      3: [
+        { name: 'Sun', type: 'npc', avatar: 'sun', x: -2.8, z: -2.2, color: '#ffd84a', sizeScale: 0.9 },
+        { name: 'Moon', type: 'npc', avatar: 'moon', x: 2.8, z: -2.25, color: '#d7e6ff', sizeScale: 0.9 },
+        { name: 'Gloink Queen', type: 'npc', avatar: 'gloinkqueenscale', x: 0, z: -3.1, color: '#ff7d8d', sizeScale: 2.2 },
+        { name: 'Star Gloink', type: 'npc', avatar: 'gloinkstar', x: -1.45, z: -1.55, color: '#7348ff', sizeScale: 0.72 },
+        { name: 'Cube Gloink', type: 'npc', avatar: 'gloinkcube', x: 1.45, z: -1.55, color: '#2fb642', sizeScale: 0.72 }
+      ],
+      4: [
+        { name: 'Kaufmo', type: 'abstract', avatar: 'kaufmo', x: 0, z: -2.25, color: '#111111', sizeScale: 1.18 },
+        { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -1.4, z: -1.7, color: '#e53935' },
+        { name: 'Gloink Round', type: 'npc', avatar: 'gloinkround', x: 1.55, z: -1.75, color: '#c4b62d', sizeScale: 0.72 }
+      ],
+      6: [
+        { name: 'Gummigoo', type: 'gummigoo', avatar: 'gummigoo', x: -1.05, z: -2.2, color: '#d8a23a' },
+        { name: 'Max', type: 'gummigoo', avatar: 'max', x: 0.2, z: -2.55, color: '#75bd3f' },
+        { name: 'Chad', type: 'gummigoo', avatar: 'chad', x: 1.25, z: -2.25, color: '#8bd64a' },
+        { name: 'Princess Loolilalu', type: 'npc', avatar: 'loolilalu', x: -2.35, z: -1.55, color: '#ff9ad5' },
+        { name: 'The Fudge', type: 'npc', avatar: 'fudge', x: 2.35, z: -1.55, color: '#7a3d1a', sizeScale: 1.2 },
+        { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 0.75, z: -1.3, color: '#e53935' }
+      ],
+      7: [
+        { name: 'Gummigoo Data Echo', type: 'gummigoo', avatar: 'gummigoo', x: -1.5, z: -2.3, color: '#d8a23a' },
+        { name: 'C&A Mannequin', type: 'mannequin', avatar: 'mannequin', x: 0.1, z: -2.05, color: '#d8d8d8' },
+        { name: 'Additional Voices', type: 'mannequin', avatar: 'additionalvoices', x: 1.65, z: -2.5, color: '#d78aff' }
+      ],
+      8: [
+        { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -1.35, z: -2.2, color: '#d9d0a2' },
+        { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 0.2, z: -2.45, color: '#e53935' },
+        { name: 'Ghost', type: 'ghost', avatar: 'horrorghost', x: 1.65, z: -1.55, color: '#7df0ff' },
+        { name: 'Mildenhall Monster', type: 'abstract', avatar: 'horrormonster', x: 2.55, z: -2.25, color: '#f2f2f2', sizeScale: 1.22 },
+        { name: 'Possessed Pomni', type: 'pomni', avatar: 'horrorpomnivoid', x: -2.55, z: -1.45, color: '#1b1b1b' }
+      ],
+      9: [
+        { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -0.9, z: -2.1, color: '#d9d0a2' },
+        { name: 'Pomni', type: 'pomni', avatar: 'horrorpomniskull', x: 0.85, z: -2.35, color: '#ffb32c' },
+        { name: 'Ghost', type: 'ghost', avatar: 'horrorghost', x: 2.1, z: -1.65, color: '#7df0ff' }
+      ],
+      10: [
+        { name: 'Work Gangle', type: 'gangle', avatar: 'workgangle', x: -0.75, z: -2.1, color: '#f7f7f7' },
+        { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 0.65, z: -2.4, color: '#e53935' },
+        { name: 'Max Customer', type: 'npc', avatar: 'max', x: -2.25, z: -1.5, color: '#75bd3f' },
+        { name: 'Ming', type: 'mannequin', avatar: 'ming', x: 1.85, z: -1.65, color: '#b7c7d8' }
+      ],
+      11: [
+        { name: 'Orbsman', type: 'npc', avatar: 'orbsman', x: -1.75, z: -2.25, color: '#6dd8ff' },
+        { name: 'Kawaii Gangle', type: 'gangle', avatar: 'ganglekawaii', x: -0.15, z: -2.45, color: '#ff9fcd' },
+        { name: 'Evil Pomni', type: 'pomni', avatar: 'evilpomni', x: 1.35, z: -2.1, color: '#c12b3f' },
+        { name: 'Evil Jax', type: 'jax', avatar: 'eviljax', x: 2.45, z: -1.45, color: '#7436c9' }
+      ],
+      12: [
+        { name: 'Baseball Jax', type: 'jax', avatar: 'baseballjax', x: -2.55, z: -1.45, color: '#b874e8' },
+        { name: 'Baseball Zooble', type: 'zooble', avatar: 'baseballzooble', x: -1.45, z: -2.2, color: '#f27ad3' },
+        { name: 'Baseball Gangle', type: 'gangle', avatar: 'baseballgangle', x: -0.25, z: -2.5, color: '#d84747' },
+        { name: 'Baseball Ragatha', type: 'ragatha', avatar: 'baseballragatha', x: 1.05, z: -2.2, color: '#6d86dd' },
+        { name: 'Baseball Pomni', type: 'pomni', avatar: 'baseballpomni', x: 2.15, z: -1.55, color: '#4068e8' },
+        { name: 'Baseball Kinger', type: 'kinger', avatar: 'baseballkinger', x: 0.75, z: -1.15, color: '#d7c9aa' }
+      ],
+      13: [
+        { name: 'Jax', type: 'jax', avatar: 'jax', x: -1.5, z: -2.1, color: '#8a4fd6' },
+        { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: 0.2, z: -2.45, color: '#d64545' },
+        { name: 'Shadow Jax', type: 'jax', avatar: 'shadowjax', x: 1.75, z: -1.65, color: '#5cff86' }
+      ],
+      14: [
+        { name: 'Beach Gangle', type: 'gangle', avatar: 'beachgangle', x: -1.55, z: -2.1, color: '#f7f7f7' },
+        { name: 'Hunter Jax', type: 'jax', avatar: 'hunterjax', x: 0.25, z: -2.4, color: '#8a4fd6' },
+        { name: 'Sun', type: 'npc', avatar: 'sun', x: 2.05, z: -1.65, color: '#ffd84a', sizeScale: 1.05 },
+        { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -2.45, z: -1.4, color: '#e53935' }
+      ],
+      15: [
+        { name: 'Ming', type: 'mannequin', avatar: 'ming', x: -1.65, z: -2.1, color: '#b7c7d8' },
+        { name: 'The Machine', type: 'npc', avatar: 'themachine', x: 0.25, z: -2.55, color: '#7d4dff', sizeScale: 1.35 },
+        { name: 'Additional Voices', type: 'mannequin', avatar: 'additionalvoices', x: 1.9, z: -1.65, color: '#d78aff' }
+      ],
+      16: [
+        { name: 'Caine', type: 'caine', avatar: 'caine', x: -1.05, z: -2.25, color: '#ffd84a' },
+        { name: 'Abel Mannequin', type: 'mannequin', avatar: 'abelmannequin', x: 0.6, z: -1.85, color: '#ff8a30' },
+        { name: 'Abel Full Body', type: 'mannequin', avatar: 'abelfullbody', x: 1.85, z: -2.55, color: '#f08a28' },
+        { name: 'The Machine', type: 'npc', avatar: 'themachine', x: -2.35, z: -1.45, color: '#7d4dff', sizeScale: 1.25 }
+      ],
+      17: [
+        { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -1.25, z: -2.2, color: '#d9d0a2' },
+        { name: 'Queenie Archive', type: 'kinger', avatar: 'queenie', x: 0.25, z: -2.55, color: '#f7eecb' },
+        { name: 'Shadow Kinger', type: 'kinger', avatar: 'shadowkinger', x: 1.75, z: -1.75, color: '#d8d8d8' }
+      ],
+      18: [
+        { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -1.8, z: -2.2, color: '#e53935' },
+        { name: 'Caine', type: 'caine', avatar: 'caine', x: 0, z: -2.55, color: '#ffd84a' },
+        { name: 'Bubble', type: 'bubble', avatar: 'bubble', x: 1.35, z: -2.15, color: '#f7f7ff' },
+        { name: 'Ribbit Dream Signal', type: 'npc', avatar: 'ribbit', x: 2.35, z: -1.45, color: '#63d35f' },
+        { name: 'Abel', type: 'mannequin', avatar: 'abelmannequin', x: -2.75, z: -1.35, color: '#ff8a30' }
+      ],
+      19: [
+        { name: 'Ribbit', type: 'npc', avatar: 'ribbit', x: -3.35, z: -1.55, color: '#4ee77e' },
+        { name: 'Scratch', type: 'npc', avatar: 'scratch', x: -2.45, z: -2.25, color: '#ffd341' },
+        { name: 'Wormo', type: 'npc', avatar: 'wormo', x: -1.55, z: -1.75, color: '#ffcf75' },
+        { name: 'Bizco', type: 'npc', avatar: 'bizco', x: -0.55, z: -2.55, color: '#b45cff' },
+        { name: 'Rattie', type: 'npc', avatar: 'rattie', x: 0.45, z: -1.75, color: '#b7a891' },
+        { name: 'Spike', type: 'npc', avatar: 'spike', x: 1.45, z: -2.55, color: '#8d5cff' },
+        { name: 'Pink Cyclops', type: 'npc', avatar: 'pinkcyclops', x: 2.35, z: -1.75, color: '#ff80bd' },
+        { name: 'Yellow Clown', type: 'npc', avatar: 'yellowclown', x: 3.25, z: -2.25, color: '#ffd33f' },
+        { name: 'Oyster', type: 'npc', avatar: 'oyster', x: -0.05, z: -3.15, color: '#8fb7ff' },
+        { name: 'Bulb Creature', type: 'npc', avatar: 'bulbcreature', x: 0.95, z: -3.15, color: '#a8e85b' }
+      ]
     };
     return byZone[zoneId] || shared.slice(0, 4);
   },
@@ -2993,7 +3241,7 @@ const OS = {
       .sort((a, b) => b.projected.depth - a.projected.depth);
     sprites.forEach(sprite => {
       const p = sprite.projected;
-      const size = Math.max(16, 70 * p.scale);
+      const size = Math.max(16, 70 * p.scale * (sprite.sizeScale || 1));
       const baseY = p.y || h * 0.58;
       state.hotspots.push({
         kind: 'character',
