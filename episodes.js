@@ -233,7 +233,7 @@ const EpisodeManager = {
     GANGLE: { color: "#f7f7f7", label: "Gangle", info: "Masque et rubans. Son etat depend fortement de son masque de comedie/tragedie.", lockedInfo: "Signal resident du Cirque. Etat emotionnel non stabilise.", unlockAt: { episode: 1, subepisode: 0 } },
     ZOOBLE: { color: "#ff4fb8", label: "Zooble", info: "Corps modulaire. Refuse souvent les aventures forcees de Caine.", lockedInfo: "Signal resident du Cirque. Profil comportemental incomplet.", unlockAt: { episode: 1, subepisode: 0 } },
     KINGER: { color: "#d9d0a2", label: "Kinger", info: "Piece d'echecs instable, ancien prisonnier du Cirque avec des souvenirs profonds.", lockedInfo: "Signal resident ancien. CainOS retient les details memoire.", unlockAt: { episode: 8, subepisode: 1 } },
-    KAUFMO: { color: "#363636", label: "Kaufmo", info: "Ancien membre abstrait. Menace noire et instable dans le pilote.", lockedInfo: "Signal resident absent. Statut non confirme dans la timeline actuelle.", unlockAt: { episode: 1, subepisode: 5 } },
+    KAUFMO: { color: "#363636", label: "Kaufmo Archive", info: "Ancien membre du Cirque deja abstrait dans la timeline du pilote. A traiter comme archive/menace abstraite, pas comme resident actif.", lockedInfo: "Signal resident absent. Statut non confirme dans la timeline actuelle.", unlockAt: { episode: 1, subepisode: 5 }, archive: true },
     GUMMIGOO: { color: "#d69b35", label: "Gummigoo", info: "PNJ crocodile du canyon. Sa nature de PNJ cree une faille de memoire.", lockedInfo: "Signal canyon detecte. Nature exacte verrouillee jusqu'a l'aventure correspondante.", unlockAt: { episode: 2, subepisode: 3 } },
     GLOINK: { color: "#6b4cff", label: "Gloink", info: "Petite entite voleuse de l'aventure du pilote. Signal geometrique instable." },
     GLOINK_QUEEN: { color: "#ff7d8d", label: "Gloink Queen", info: "Reine enorme des Gloinks, hors echelle par rapport aux autres signaux." },
@@ -257,9 +257,8 @@ const EpisodeManager = {
     ORBSMAN: { color: "#6fe8ff", label: "Orbsman", info: "Entite secondaire du Cirque, silhouette orbitee et signal bizarre." },
     ABEL: { color: "#ff9b37", label: "Abel", info: "Figure/mannequin liee aux couches C&A et aux archives profondes du projet.", lockedInfo: "Signal C&A protege. Donnees masquees jusqu'a la couche Abel.", unlockAt: { episode: 7, subepisode: 2 } },
     ARTHUR: { color: "#c0d0ff", label: "Arthur", info: "Identite humaine rattachee aux tests C&A et a la trajectoire de Kinger.", lockedInfo: "Operateur C&A detecte. CainOS masque son lien avec les residents.", unlockAt: { episode: -1, subepisode: 0 } },
-    SARAH: { color: "#ff6b6b", label: "Sarah", info: "Identite humaine suggeree derriere Pomni dans la couche CainOS.", lockedInfo: "Sujet humain C&A detecte. Le lien avec le Cirque n'est pas encore confirme.", unlockAt: { episode: 9, subepisode: 2 } },
     HELEN: { color: "#5fe9d4", label: "Helen / Queenie", lockedLabel: "Helen", info: "Trace memoire associee a Queenie et aux souvenirs enfouis de Kinger.", lockedInfo: "Trace memoire protegee. Identite complete verrouillee.", unlockAt: { episode: 8, subepisode: 1 } },
-    QUEENIE: { color: "#5fe9d4", label: "Queenie", lockedLabel: "Piece inconnue", info: "Piece disparue, memoire centrale pour Kinger.", lockedInfo: "Signal echecs disparu. Importance narrative non encore debloquee.", unlockAt: { episode: 8, subepisode: 1 } },
+    QUEENIE: { color: "#5fe9d4", label: "Queenie Archive", lockedLabel: "Piece inconnue", info: "Ancienne membre du Cirque et memoire centrale de Kinger. Son signal doit rester archive/memoire, pas resident actif.", lockedInfo: "Signal echecs disparu. Importance narrative non encore debloquee.", unlockAt: { episode: 8, subepisode: 1 }, archive: true },
     SYSTEM: { color: "#39ff14", label: "System", info: "Signal technique CainOS : chargement, archive, protocole ou bruit de scene." },
     ARCHIVE: { color: "#8fbf8f", label: "Archive", info: "Indication de scene ou audio detectee dans la transcription." },
     CAST: { color: "#ffec8b", label: "Cast", info: "Dialogue attribue au groupe ou speaker ambigu dans la transcription." },
@@ -276,11 +275,20 @@ const EpisodeManager = {
     LIAR_NPC: { color: "#ff5d7d", label: "Liar NPC", info: "PNJ de plage lie aux mensonges et aux fausses pistes de l'aventure.", unlockAt: { episode: 7, subepisode: 2 } },
     TRUTH_TELLER_NPC: { color: "#5eead4", label: "Truth-Teller NPC", info: "PNJ de plage qui annonce des verites dans le chaos de l'aventure.", unlockAt: { episode: 7, subepisode: 2 } },
     CHINESE_ROOM_NPC: { color: "#d8b4fe", label: "Chinese Room NPC", info: "Signal gag de la piece chinoise consultee par Caine avant l'idee du lac digital.", unlockAt: { episode: 7, subepisode: 0 } },
-    RIBBIT: { color: "#6ee7b7", label: "Ribbit", info: "Signal grenouille du final, lie aux scenes oniriques et aux zones de doute de Jax.", unlockAt: { episode: 9, subepisode: 2 } },
+    RIBBIT: { color: "#6ee7b7", label: "Ribbit Archive", info: "Ancien membre du Cirque vu par couches de reve/souvenir dans le final. A classer comme archive de personne disparue/abstracted.", unlockAt: { episode: 9, subepisode: 2 }, archive: true },
     DREAM_SIGNAL: { color: "#a78bfa", label: "Dream Signal", info: "Projection de reve ou souvenir deforme utilisee dans le final.", unlockAt: { episode: 9, subepisode: 2 } },
     JAX_PERSONA: { color: "#8a4fd6", label: "Jax Persona", info: "Masque social de Jax quand le final force sa facade a se fissurer.", unlockAt: { episode: 9, subepisode: 4 } },
     MOON: { color: "#d7e6ff", label: "Moon", info: "Signal cosmique secondaire du final.", unlockAt: { episode: 9 } },
     ABIGAIL: { color: "#ff6b6b", label: "Abigail / Abby", info: "Identite humaine associee a Pomni dans le final. Dans le Cirque, elle choisit de rester Pomni.", lockedInfo: "Identite humaine verrouillee jusqu'au final.", unlockAt: { episode: 9, subepisode: 7 } },
+    SCRATCH: { color: "#9ca3af", label: "Scratch Archive", info: "Premier cas d'abstraction evoque par Kinger. Profil archive uniquement.", unlockAt: { episode: 8, subepisode: 5 }, archive: true },
+    WORMO: { color: "#a3e635", label: "Wormo Archive", info: "Ancien membre du Cirque repertorie comme signal archive/abstracted.", unlockAt: { episode: 9 }, archive: true },
+    BIZCO: { color: "#f97316", label: "Bizco Archive", info: "Ancien membre du Cirque repertorie comme signal archive/abstracted.", unlockAt: { episode: 9 }, archive: true },
+    RATTIE: { color: "#94a3b8", label: "Rattie Archive", info: "Ancien membre du Cirque repertorie comme signal archive/abstracted.", unlockAt: { episode: 9 }, archive: true },
+    SPIKE: { color: "#f43f5e", label: "Spike Archive", info: "Ancien membre du Cirque repertorie comme signal archive/abstracted.", unlockAt: { episode: 9 }, archive: true },
+    PINK_FURRY_CYCLOPS: { color: "#ff7ab6", label: "Pink Furry Cyclops Archive", info: "Ancien membre du Cirque repertorie comme signal archive/abstracted.", unlockAt: { episode: 9 }, archive: true },
+    FROWNING_YELLOW_CLOWN_CREATURE: { color: "#facc15", label: "Yellow Clown Archive", info: "Ancien membre du Cirque repertorie comme signal archive/abstracted.", unlockAt: { episode: 9 }, archive: true },
+    OYSTER: { color: "#e5e7eb", label: "Oyster Archive", info: "Ancien membre du Cirque repertorie comme signal archive/abstracted.", unlockAt: { episode: 9 }, archive: true },
+    LIGHT_GREEN_BULB_LIKE: { color: "#bef264", label: "Green Bulb Archive", info: "Ancien membre du Cirque repertorie comme signal archive/abstracted.", unlockAt: { episode: 9 }, archive: true },
   },
   
   // Story Engine State
@@ -289,15 +297,15 @@ const EpisodeManager = {
       title: "Épisode 0: Calibration C&A",
       intro: [
         { speaker: "SYSTEM", text: "INITIALISATION DU SYSTÈME DE LIAISON NEURONALE C&A..." },
-        { speaker: "ARTHUR", text: "Sarah ? Est-ce que vous m'entendez ? Le scan est sur le point de commencer. Ne bougez pas." },
-        { speaker: "SARAH", text: "Où... où suis-je ? Pourquoi tout est sombre ? Je portais un casque..." },
+        { speaker: "ARTHUR", text: "Abigail ? Est-ce que vous m'entendez ? Le scan est sur le point de commencer. Ne bougez pas." },
+        { speaker: "ABIGAIL", text: "Où... où suis-je ? Pourquoi tout est sombre ? Je portais un casque..." },
         { speaker: "ARTHUR", text: "C'est la phase de calibration neuronale. Le système cartographie votre cortex visuel." },
         { speaker: "ARTHUR", text: "Cliquez sur les nodes clignotants à l'écran pour stabiliser la bande passante." }
       ],
       outro: []
     },
     1: {
-      title: "Épisode 1: Le Pilote",
+      title: "Épisode 1: Pilot",
       intro: [
         { speaker: "MUSIC", text: "[00:01] [elegant music plays]" },
         { speaker: "SFX", text: "[00:10] [drum roll]" },
@@ -788,7 +796,7 @@ const EpisodeManager = {
       ]
     },
     2: {
-      title: "Épisode 2: Canyon des Sucreries",
+      title: "Épisode 2: Candy Carrier Chaos!",
       intro: [
         { speaker: "MUSIC", text: "[00:00] [peppy electronic music plays]" },
         { speaker: "MUSIC", text: "[00:02] ♪♪" },
@@ -1361,7 +1369,7 @@ const EpisodeManager = {
       ]
     },
     3: {
-      title: "Épisode 3: Le Manoir de Mildenhall",
+      title: "Épisode 3: The Mystery of Mildenhall Manor",
       intro: [
         { speaker: "MUSIC", text: "[00:00] [upbeat techno music plays]" },
         { speaker: "MUSIC", text: "[00:03] ♪♪" },
@@ -2539,7 +2547,7 @@ const EpisodeManager = {
       ]
     },
     5: {
-      title: "Épisode 5: Suggestion Box",
+      title: "Épisode 5: Untitled",
       intro: [
         { speaker: "MUSIC", text: "[00:00] [upbeat techno music plays]" },
         { speaker: "MUSIC", text: "[00:03] ♪♪" },
@@ -3268,7 +3276,7 @@ const EpisodeManager = {
       ]
     },
     6: {
-      title: "Épisode 6: Team Adventure Awards",
+      title: "Épisode 6: They All Get Guns",
       intro: [
         { speaker: "MUSIC", text: "[00:00] [upbeat techno music plays]" },
         { speaker: "MUSIC", text: "[00:03] ♪♪" },
@@ -4210,7 +4218,7 @@ const EpisodeManager = {
       ]
     },
     7: {
-      title: "Épisode 7: Épisode de plage",
+      title: "Épisode 7: Beach Episode",
       intro: [
         { speaker: "MUSIC", text: "[00:00] [upbeat techno music plays]" },
         { speaker: "MUSIC", text: "[00:02] ♪♪" },
@@ -6923,25 +6931,25 @@ const EpisodeManager = {
         ? "Archive de calibration validee. Rejouez le protocole C&A seulement comme simulation historique : la session Pomni est deja ouverte dans CainOS."
         : "Avant de lancer le simulateur principal, synchronisez les senseurs neuraux. Cliquez sur les points de calibration clignotants pour stabiliser la bande passante.";
     } else if (num === 1) {
-      titleEl.innerText = "Épisode 1: Le Pilote";
+      titleEl.innerText = "Épisode 1: Pilot";
       descEl.innerText = "Pomni cherche désespérément une issue. Vous devez placer des pare-feux pour bloquer Kaufmo qui s'est abstrait, tout en ouvrant le chemin vers les portes de sortie. Gardez un œil sur sa stabilité mentale !";
     } else if (num === 2) {
-      titleEl.innerText = "Épisode 2: Canyon des Sucreries";
+      titleEl.innerText = "Épisode 2: Candy Carrier Chaos!";
       descEl.innerText = "Le camion citerne de sirop dévale le Canyon. Des erreurs de collisions font disparaître le sol ! Reconstruisez les colliders à temps pour sauver la cargaison, puis piratez la base de données C&A pour empêcher Caine d'effacer Gummigoo.";
     } else if (num === 3) {
-      titleEl.innerText = "Épisode 3: Le Manoir de Mildenhall";
+      titleEl.innerText = "Épisode 3: The Mystery of Mildenhall Manor";
       descEl.innerText = "Infiltrez le sous-sol secret du manoir (Mature Rated Zone) en guidant Kinger et Pomni. Utilisez votre sonar pour détecter le monstre aveugle qui chasse au bruit. Utilisez des leurres et le fusil de Kinger avec modération.";
     } else if (num === 4) {
       titleEl.innerText = "Épisode 4: Fast Food Masquerade";
       descEl.innerText = "Chez Spudsy's, Gangle a enfilé son masque de comédie en plastique rigide et gère la cuisine d'une main de fer. Attrapez les ingrédients qui tombent dans l'ordre pour assembler les burgers et satisfaire les commandes !";
     } else if (num === 5) {
-      titleEl.innerText = "Épisode 5: Suggestion Box";
+      titleEl.innerText = "Épisode 5: Untitled";
       descEl.innerText = "Caine lance une lightning round de suggestions. Traversez les micro-aventures, les votes absurdes et le softball final avant de purger la boîte à suggestions.";
     } else if (num === 6) {
-      titleEl.innerText = "Épisode 6: Team Adventure Awards";
-      descEl.innerText = "Caine transforme une aventure d équipe en vitrine pour les Favorite Character Awards. Traversez les épreuves sportives, les tensions de Jax et les derniers scores avant la cérémonie finale.";
+      titleEl.innerText = "Épisode 6: They All Get Guns";
+      descEl.innerText = "Caine lance l'aventure officielle They All Get Guns. Traversez les épreuves armées, les tensions de Jax et les derniers scores avant la cérémonie finale.";
     } else if (num === 7) {
-      titleEl.innerText = "Épisode 7: Épisode de plage";
+      titleEl.innerText = "Épisode 7: Beach Episode";
       descEl.innerText = "Caine laisse le groupe au lac digital, mais Abel et les fausses pistes C&A transforment la plage en test de confiance. Protégez les PNJ et survivez au choix final.";
     } else if (num === 8) {
       titleEl.innerText = "Épisode 8: hjsakldfhl";
@@ -7590,10 +7598,11 @@ const EpisodeManager = {
       const initials = profile.label.split(/\s+/).map(part => part[0]).join("").slice(0, 2).toUpperCase();
       const active = this.normalizeStorySpeakerName(name) === speakerKey || profile.key === this.getStoryCharacterProfile(speakerKey).key ? " active-speaker" : "";
       const locked = profile.loreKnown ? "" : " lore-locked";
+      const archived = profile.archive ? " archive-signal" : "";
       const icon = this.getStorySceneIcon(profile.key);
       return `
         <button type="button"
-          class="story-dos-point${active}${locked}"
+          class="story-dos-point${active}${locked}${archived}"
           style="left:${pos.x}%;top:${pos.y}%;--char-color:${profile.color}"
           data-character="${this.escapeHTML(profile.key)}"
           title="${this.escapeHTML(`${profile.label}: ${profile.info}`)}"
@@ -10243,7 +10252,7 @@ class Episode0Game {
         
         ctx.font = '9px monospace';
         ctx.fillStyle = '#ffb000';
-        ctx.fillText("Sujet identifié : SUJET #042 (Sarah)", canvas.width / 2, 90);
+        ctx.fillText("Sujet identifié : SUJET #042 (Abigail)", canvas.width / 2, 90);
         ctx.fillText("Implantation d'interface : 100% OK", canvas.width / 2, 105);
         
         ctx.fillStyle = '#39ff14';

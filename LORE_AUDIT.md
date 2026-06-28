@@ -31,21 +31,20 @@ Date: 2026-06-28
 - Episode 8 correctly keeps Kinger/Queenie/Caine as deep memory/core lore.
 - Episode 9 correctly unlocks Abigail/Abby late, after the final transcript has exposed that identity.
 
+## Resolved corrections
+
+1. Episode titles now use the official visible names:
+   `Pilot`, `Candy Carrier Chaos!`, `The Mystery of Mildenhall Manor`, `Fast Food Masquerade`, `Untitled`, `They All Get Guns`, `Beach Episode`, `hjsakldfhl`, `Remember`.
+
+2. Pomni's final human identity is now handled as `Abigail / Abby`.
+   Older CainOS wrong-name data was replaced or routed to the `ABIGAIL` profile as a compatibility alias.
+
+3. Former/abstracted Circus Members now use archive profiles.
+   Kaufmo, Queenie, Ribbit, Scratch, Wormo, Bizco, Rattie, Spike, Pink Furry Cyclops, Yellow Clown Creature, Oyster, and Green Bulb-like member are marked as archive signals.
+
 ## Issues to fix next
 
-1. Episode 6 title should be reviewed.
-   Fandom's episode navigation lists Episode 6 as `They All Get Guns`, while CainOS currently labels it `Team Adventure Awards`. If the local transcript is the guns/baseball/awards episode, the title should be normalized to the canonical episode title while keeping the transcript text intact.
-
-2. Episode 5 title should stay close to canon.
-   CainOS currently uses `Episode 5: Suggestion Box`. The Fandom navigation uses `Untitled`; the app can keep `Suggestion Box` as a content subtitle, but the visible title should probably become `Episode 5: Untitled` or `Episode 5: Untitled - Suggestion Box`.
-
-3. Episode 9 identity lore needs careful wording.
-   CainOS still has an older `Sarah` profile from Episode 0. Episode 9 now adds `Abigail / Abby`. Keep `Sarah` as CainOS prequel/speculative local lore only if Episode 0 is intentionally non-canon; otherwise migrate the final identity text to Abigail.
-
-4. Abstracted characters should not be presented as active cast after their abstraction point.
-   For Kaufmo, Queenie, Ribbit, Scratch, Wormo, Bizco, Rattie, Spike, the pink cyclops, yellow clown, oyster, and green bulb-like member, UI entries should unlock as archive/abstracted profiles, not as current participants.
-
-5. Mini-games should mirror transcript events more tightly.
+1. Mini-games should mirror transcript events more tightly.
    The current generic micro-games work for pacing, but each sub-episode should eventually get an event-specific variant: vote/skip for Episode 5, admin-pass/trust for Episode 7, memory/code stabilization for Episode 8, and brain-scan/rebuild/dream traversal for Episode 9.
 
 ## Recommended progression gates

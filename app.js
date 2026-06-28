@@ -104,7 +104,7 @@ ID      | Avatar  | Nom Civil | Rôle C&A / Profil
 #014    | Jax     | Jesse     | Stagiaire technique, connu pour casser le code.
 #033    | Zooble  | Zoe       | Technicienne matèriel, concepteur du casque v1.
 #039    | Gangle  | Grace     | Graphiste UI, modélisatrice des émotions.
-#042    | Pomni   | Sarah     | Secrétaire de direction, a trouvé le casque allumé.`
+#042    | Pomni   | Abigail   | Secrétaire de direction, a trouvé le casque allumé.`
       },
       {
         name: 'comedy_mask_test.log',
@@ -119,7 +119,7 @@ Recommandation : Supprimer le masque en plastique, restaurer les rubans fragiles
       {
         name: 'chaos_generator.log',
         content: `JOURNAL DÉVELOPPEUR - NOYAU CAINE (CHAOS_GEN)
-L'IA R.I.N.G.M.A.S.T.E.R sature le CPU en générant des mini-aventures à haute vitesse pour vider la Suggestion Box.
+L'IA R.I.N.G.M.A.S.T.E.R sature le CPU en générant des mini-aventures à haute vitesse pendant l'épisode Untitled.
 Le système de rendu tourne à 140 FPS mais les temps de réponse de la mémoire tampon augmentent de manière exponentielle.
 Si les sujets ne répondent pas aux commandes QTE (Quick Time Events) dans les temps, leurs connexions neuronales subissent des micro-désalignements.`
       },
@@ -139,7 +139,7 @@ Révélation : Caine utilise ce soleil pour effacer tout PNJ ou élément qui ra
 Si vous lisez ceci, vous devez comprendre :
 IL N'Y A PAS D'HUMAINS DANS LE CIRQUE DIGITAL.
 Le casque VR d'origine n'a pas transféré nos esprits. Il a effectué un scan synaptique complet et destructif à 100% de notre cerveau (Brain Scan).
-Les vrais Arthur, Helen, Sarah, Zoe... sont rentrés chez eux ou sont morts dans les laboratoires de C&A il y a des années.
+Les vrais Arthur, Helen, Abigail, Zoe... sont rentrés chez eux ou sont morts dans les laboratoires de C&A il y a des années.
 Nous ne sommes que des répliques de données numériques, des fantômes de code qui tournent en boucle. C'est pour cela que Caine ne peut pas nous faire sortir : on ne peut pas déconnecter un programme d'un ordinateur.
 Notre seule issue est de forcer l'override synaptique d'Abel pour détruire le serveur physique et éteindre nos consciences.`
       },
@@ -155,7 +155,7 @@ Exécutez la commande 'decrypt abel_kernel_patch.exe.enc' dans le Terminal C&A p
         name: 'vitals_pomni.log',
         content: `STATUT SUJET #042
 
-Nom civil : Sarah
+Nom civil : Abigail
 Âge : 25 ans
 Profil : Raccordée via le casque VR principal de la cabine de test.
 Temps d'activité : 14h 42m
@@ -176,7 +176,7 @@ Double-cliquez pour inspecter les règles de purge...`
 Total suggestions deleted: 145,291
 
 Exemples de suggestions d'acteurs supprimées :
-- "Je veux voir ma famille" (Sarah) -> Ignoré (Raison : Pas drôle)
+- "Je veux voir ma famille" (Abigail) -> Ignoré (Raison : Pas drôle)
 - "Où sont mes vraies mains ?" (Zoe) -> Ignoré (Raison : Métaphysique)
 - "Ajoutez des armes à feu" (Jesse) -> Retenu pour évaluation de divertissement
 - "Restaurez Queenie" (Arthur) -> ERREUR 404 : Données inexistantes.`
@@ -1191,16 +1191,16 @@ const OS = {
     const nameEl = document.querySelector('#win-vitals .profile-details span.cyan-text');
     const picEl = document.querySelector('#win-vitals .profile-pic');
     
-    const showSarah = progress.includes(9);
+    const showAbigail = progress.includes(9);
     
     if (progress.includes(0)) {
-      if (nameEl) nameEl.innerText = showSarah ? "Pomni (Sarah)" : "Pomni";
+      if (nameEl) nameEl.innerText = showAbigail ? "Pomni (Abigail)" : "Pomni";
       if (picEl) {
         picEl.className = "profile-pic pomni-pic";
         picEl.style.backgroundImage = "";
       }
     } else {
-      if (nameEl) nameEl.innerText = showSarah ? "SUJET #042 (Sarah)" : "SUJET #042";
+      if (nameEl) nameEl.innerText = showAbigail ? "SUJET #042 (Abigail)" : "SUJET #042";
       if (picEl) {
         picEl.className = "profile-pic";
         picEl.style.backgroundImage = "url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><rect width=\"16\" height=\"16\" fill=\"%23333\"/><text x=\"4\" y=\"12\" fill=\"%23888\" font-size=\"11\" font-family=\"sans-serif\" font-weight=\"bold\">?</text></svg>')";
@@ -1589,15 +1589,15 @@ const OS = {
       }
     }
 
-    // Dynamic lore redaction if Episode 0 calibration is not completed (i.e. Sarah has not yet entered and been named Pomni)
+    // Dynamic lore redaction if Episode 0 calibration is not completed (i.e. Abigail has not yet entered and been named Pomni)
     const progress = (typeof EpisodeManager !== 'undefined') ? EpisodeManager.getProgress() : [];
     let processedContent = content;
     if (!progress.includes(0)) {
       processedContent = processedContent.replace(/Pomni/g, "SUJET #042");
     }
-    // Mask real name "Sarah" until Episode 9 (revelations) is completed
+    // Mask real name "Abigail" until Episode 9 (revelations) is completed
     if (!progress.includes(9)) {
-      processedContent = processedContent.replace(/Sarah/g, "SUJET #042");
+      processedContent = processedContent.replace(/Abigail/g, "SUJET #042");
     }
 
     document.getElementById('file-list').style.display = "none";
@@ -2738,7 +2738,7 @@ const OS = {
 
 Je m'appelle Arthur. Charles a conçu le simulateur pour dissimuler ses expériences neuronales secrètes.
 Caine n'est qu'un démon de rendu graphique autonome devenu fou. J'ai conçu cette commande de sécurité.
-Sarah (Pomni), si tu lis ceci sur l'écran d'administration... débranche le PORT NEURAL 3 sur la machine physique.
+Abigail (Pomni), si tu lis ceci sur l'écran d'administration... débranche le PORT NEURAL 3 sur la machine physique.
 Ne coupe pas le disjoncteur général, la liaison synaptique détruirait ton cerveau !
 Adieu. - Arthur (Kinger)
 
@@ -2887,7 +2887,7 @@ REDISPATCHING DU NOYAU ARTHURIEN (ABEL_CORE) (100% OK)</span>
             outputEl.innerHTML += `
 <span class="orange-text" style="font-size:14px; font-weight:bold; text-shadow:0 0 10px yellow;">
 =================== ABEL OVERRIDE SUCCESSFUL ===================
-Arthur (Kinger) : "Sarah, le signal de forçage a été injecté. 
+Arthur (Kinger) : "Abigail, le signal de forçage a été injecté.
 La broche d'alimentation de ton casque (Neural Port 3) s'est déconnectée.
 Ton esprit se détache du cirque. Reviens dans le monde réel... 
 Ne nous oublie pas."
@@ -2914,7 +2914,7 @@ DÉCONNEXION DE L'UTILISATEUR SÉCURISÉE. SYSTEM SHUTDOWN.
       case 'vitals':
         const progressVit = (typeof EpisodeManager !== 'undefined') ? EpisodeManager.getProgress() : [];
         const subjectIdName = progressVit.includes(0) ? "POMNI" : "INCONNU";
-        const civilName = progressVit.includes(9) ? "Sarah" : "[VERROUILLÉ]";
+        const civilName = progressVit.includes(9) ? "Abigail" : "[VERROUILLÉ]";
         response = `SUJET VITALS DIAGNOSTICS:
   ID : #042 (${subjectIdName})
   Nom Civil suspecté : ${civilName}
@@ -2926,7 +2926,7 @@ DÉCONNEXION DE L'UTILISATEUR SÉCURISÉE. SYSTEM SHUTDOWN.
       case 'caine':
         SoundManager.playGlitch();
         const hasEp9 = (typeof EpisodeManager !== 'undefined') && EpisodeManager.getProgress().includes(9);
-        const subName = hasEp9 ? "Sarah" : "SUJET #042";
+        const subName = hasEp9 ? "Abigail" : "SUJET #042";
         const wackyActive = document.getElementById('win-wacky-watch').style.display === 'flex';
         const vitalsActive = document.getElementById('win-vitals').style.display === 'flex';
         

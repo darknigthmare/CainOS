@@ -2753,6 +2753,16 @@ body {
   filter: saturate(0.55);
 }
 
+.story-dos-point.archive-signal {
+  border-style: dashed;
+  opacity: 0.86;
+}
+
+.story-dos-point.archive-signal .story-dos-icon-label::before {
+  content: "ARC:";
+  color: #8fbf8f;
+}
+
 .story-dos-point.lore-locked::after {
   content: "?";
   background: #050505;
