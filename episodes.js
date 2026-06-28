@@ -6576,6 +6576,7 @@ const EpisodeManager = {
   bonusTextPending: "",
   completedStoryCheckpoints: null,
   activeStoryMicroGame: null,
+  lastRetryContext: null,
   nextEpisodeAfterVictory: null,
   storyCheckpointConfig: {
     0: [
@@ -6688,7 +6689,7 @@ const EpisodeManager = {
 
     document.getElementById('btn-retry-simulation').addEventListener('click', () => {
       SoundManager.playClick();
-      this.launchSelectedEpisode();
+      this.retryLastFailure();
     });
 
     document.getElementById('btn-victory-continue').addEventListener('click', () => {
@@ -7305,6 +7306,13 @@ const EpisodeManager = {
       part: checkpointIndex >= 0 ? checkpointIndex + 1 : 1,
       totalParts: this.activeSubepisodeTotal || checkpoints.length || 1
     };
+    this.lastRetryContext = {
+      type: 'storyMicro',
+      episode: this.currentEpisode,
+      subepisodeIndex: this.activeSubepisodeIndex,
+      storyIndex: this.storyIndex,
+      config: microConfig
+    };
 
     this.activeStoryMicroGame = new StoryMicroGame(microConfig, () => {
       this.completedStoryCheckpoints.add(config.after);
@@ -7874,6 +7882,10 @@ const EpisodeManager = {
       this.activeStoryMicroGame.stop();
       this.activeStoryMicroGame = null;
     }
+    this.lastRetryContext = {
+      type: 'gameplay',
+      episode: this.currentEpisode
+    };
     document.querySelectorAll('.sim-screen').forEach(s => s.classList.remove('active'));
 
     if (this.currentEpisode === 0) {
@@ -7920,6 +7932,25 @@ const EpisodeManager = {
   },
 
   startActiveEpisode() {
+    this.launchSelectedEpisode();
+  },
+
+  retryLastFailure() {
+    const context = this.lastRetryContext;
+    if (context && context.type === 'storyMicro') {
+      this.currentEpisode = context.episode;
+      this.activeSubepisodeIndex = context.subepisodeIndex;
+      this.storyIndex = context.storyIndex;
+      this.startStoryMicroGame(context.config);
+      return;
+    }
+
+    if (context && context.type === 'gameplay') {
+      this.currentEpisode = context.episode;
+      this.startGameplay();
+      return;
+    }
+
     this.launchSelectedEpisode();
   },
 
