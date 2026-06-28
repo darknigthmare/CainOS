@@ -624,6 +624,8 @@ const OS = {
     if (desktop) desktop.style.display = 'none';
     if (powerBtn) powerBtn.classList.add('active');
     if (powerLed) powerLed.classList.add('active');
+    const screen = document.querySelector('.crt-screen');
+    if (screen) screen.style.opacity = '1';
 
     this.isBooted = false;
     this.applySystemStateUI();
@@ -706,6 +708,12 @@ const OS = {
       if (bootScreen) bootScreen.style.display = 'none';
       if (desktop) desktop.style.display = 'flex';
       this.positionDesktopIcons();
+      const screen = document.querySelector('.crt-screen');
+      const powerBtn = document.getElementById('power-button');
+      const powerLed = document.getElementById('power-led');
+      if (screen) screen.style.opacity = '1';
+      if (powerBtn) powerBtn.classList.add('active');
+      if (powerLed) powerLed.classList.add('active');
 
       this.isBooted = true;
       this.wasShutdownByCalibration = false;
@@ -1547,24 +1555,24 @@ const OS = {
       19: { name: 'CIRCUS MEMBERS ARCHIVE', short: 'MEMBRES', detail: 'Archives visuelles des membres secondaires connues apres les episodes.', color: '#c875ff', floor: '#21142e', ceiling: '#0c0614', unlocked: unlocked(9) }
     };
     const scenes = {
-      2: { exits: [3, 4, 5, 6, 8, 10, 11, 14, 16], motif: 'circus' },
-      3: { exits: [2, 6, 11, 14], motif: 'grounds' },
-      4: { exits: [2, 5], motif: 'cellar' },
-      5: { exits: [2, 16], motif: 'exit' },
-      6: { exits: [2, 7], motif: 'candy' },
-      7: { exits: [6, 16], motif: 'test' },
-      8: { exits: [2, 9], motif: 'manor' },
-      9: { exits: [8], motif: 'basement' },
-      10: { exits: [2, 11], motif: 'spudsy' },
-      11: { exits: [2, 10, 12, 13], motif: 'micro' },
-      12: { exits: [11], motif: 'softball' },
-      13: { exits: [11], motif: 'guns' },
-      14: { exits: [2, 15], motif: 'lake' },
-      15: { exits: [14, 16], motif: 'admin' },
-      16: { exits: [2, 5, 15, 17, 18], motif: 'core' },
-      17: { exits: [16], motif: 'memory' },
-      18: { exits: [2, 16, 19], motif: 'final' },
-      19: { exits: [18], motif: 'archive' }
+      2: { exits: [3, 4, 5, 6, 8, 10, 11, 14, 16], motif: 'circus', size: 17 },
+      3: { exits: [2, 6, 11, 14], motif: 'grounds', size: 19 },
+      4: { exits: [2, 5], motif: 'cellar', size: 11 },
+      5: { exits: [2, 16], motif: 'exit', size: 13 },
+      6: { exits: [2, 7], motif: 'candy', size: 17 },
+      7: { exits: [6, 16], motif: 'test', size: 13 },
+      8: { exits: [2, 9], motif: 'manor', size: 15 },
+      9: { exits: [8], motif: 'basement', size: 11 },
+      10: { exits: [2, 11], motif: 'spudsy', size: 13 },
+      11: { exits: [2, 10, 12, 13], motif: 'micro', size: 15 },
+      12: { exits: [11], motif: 'softball', size: 19 },
+      13: { exits: [11], motif: 'guns', size: 15 },
+      14: { exits: [2, 15], motif: 'lake', size: 19 },
+      15: { exits: [14, 16], motif: 'admin', size: 13 },
+      16: { exits: [2, 5, 15, 17, 18], motif: 'core', size: 15 },
+      17: { exits: [16], motif: 'memory', size: 13 },
+      18: { exits: [2, 16, 19], motif: 'final', size: 17 },
+      19: { exits: [18], motif: 'archive', size: 15 }
     };
 
     this.circusDoom = {
@@ -1581,11 +1589,13 @@ const OS = {
       hotspots: [],
       interactionMessage: '',
       interactionUntil: 0,
-      player: { x: 0, z: 0, a: -Math.PI / 2 },
+      player: { x: 7.5, z: 11.2, a: -Math.PI / 2 },
       keys: new Set(),
       last: performance.now(),
       raf: null
     };
+    this.prepareCircusSimulationRoom();
+    this.loadCircusAvatarSheets();
 
     this.circusDoomKeyDown = e => {
       const key = e.key.toLowerCase();
@@ -1640,6 +1650,199 @@ const OS = {
     this.circusDoomClick = null;
   },
 
+  loadCircusAvatarSheets() {
+    if (this.circusAvatarSheets) return;
+    const sources = {
+      base: 'assets/images/cainos-pixel-cast-sheet.png',
+      abstracted: 'assets/images/cainos-pixel-cast-sheet-abstracted.png',
+      variants: 'assets/images/cainos-pixel-cast-sheet-variants.png',
+      requested: 'assets/images/cainos-pixel-cast-sheet-requested-variants.png',
+      extra: 'assets/images/cainos-pixel-cast-sheet-extra-variants.png',
+      japanese: 'assets/images/cainos-pixel-cast-sheet-japanese-pack.png',
+      baseball: 'assets/images/cainos-pixel-cast-sheet-baseball-pack.png',
+      rivalBaseball: 'assets/images/cainos-pixel-cast-sheet-rival-baseball-pack.png',
+      shadow: 'assets/images/cainos-pixel-cast-sheet-shadow-pack.png',
+      horror: 'assets/images/cainos-pixel-cast-sheet-horror-pack.png',
+      hunter: 'assets/images/cainos-pixel-cast-sheet-hunter-pack.png',
+      gloinks: 'assets/images/cainos-pixel-cast-sheet-gloinks-pack.png',
+      abel: 'assets/images/cainos-pixel-cast-sheet-abel-pack.png',
+      additionalvoices: 'assets/images/cainos-pixel-cast-sheet-additional-voices.png',
+      themachine: 'assets/images/cainos-pixel-cast-sheet-the-machine.png',
+      ming: 'assets/images/cainos-pixel-cast-sheet-ming.png',
+      gloinkqueenscale: 'assets/images/cainos-pixel-cast-sheet-gloink-queen-scale.png'
+    };
+    this.circusAvatarSheets = {};
+    Object.entries(sources).forEach(([key, src]) => {
+      const img = new Image();
+      img.onload = () => this.drawCircusDoom?.();
+      img.src = src;
+      this.circusAvatarSheets[key] = img;
+    });
+  },
+
+  getCircusAvatarSheetSpec(avatar) {
+    const tables = [
+      { sheet: 'base', cols: 6, rows: 3, map: {
+        pomni: [0, 0], caine: [1, 0], bubble: [2, 0], jax: [3, 0], ragatha: [4, 0], kinger: [5, 0],
+        gangle: [0, 1], zooble: [1, 1], queenie: [2, 1], kaufmo: [3, 1], gummigoo: [4, 1], loolilalu: [5, 1],
+        fudge: [0, 2], gloinkqueen: [1, 2], mannequin: [2, 2], abel: [3, 2], moon: [4, 2], sun: [5, 2]
+      }},
+      { sheet: 'abstracted', cols: 5, rows: 2, map: {
+        ribbit: [0, 0], scratch: [1, 0], wormo: [2, 0], bizco: [3, 0], rattie: [4, 0],
+        spike: [0, 1], pinkcyclops: [1, 1], yellowclown: [2, 1], oyster: [3, 1], bulbcreature: [4, 1]
+      }},
+      { sheet: 'variants', cols: 4, rows: 3, map: {
+        max: [0, 0], chad: [1, 0], orbsman: [2, 0], ganglekawaii: [3, 0],
+        ganglecomedy: [0, 1], gangletragedy: [1, 1], evilpomni: [2, 1], eviljax: [3, 1],
+        evilragatha: [0, 2], evilkinger: [1, 2], evilzooble: [2, 2], evilorbsman: [3, 2]
+      }},
+      { sheet: 'requested', cols: 5, rows: 1, map: {
+        darkduojax: [0, 0], darkduogangle: [1, 0], maidjax: [2, 0], maidragatha: [3, 0], maidpomni: [4, 0]
+      }},
+      { sheet: 'extra', cols: 2, rows: 1, map: { maidgangle: [0, 0], jaxgirl: [1, 0] }},
+      { sheet: 'japanese', cols: 5, rows: 2, map: {
+        beachgangle: [0, 0], japanesegangle: [1, 0], rhinogangle: [2, 0], workgangle: [3, 0], japanesejax: [4, 0],
+        japaneseragatha: [0, 1], japanesepomni: [1, 1], japanesekinger: [2, 1], japanesezooble: [3, 1], japanesegummigoo: [4, 1]
+      }},
+      { sheet: 'baseball', cols: 6, rows: 1, map: {
+        baseballjax: [0, 0], baseballzooble: [1, 0], baseballgangle: [2, 0],
+        baseballragatha: [3, 0], baseballpomni: [4, 0], baseballkinger: [5, 0]
+      }},
+      { sheet: 'rivalBaseball', cols: 6, rows: 1, map: {
+        rivalbaseballzooble: [0, 0], rivalbaseballpomni: [1, 0], rivalbaseballpinkgiant: [2, 0],
+        rivalbaseballragatha: [3, 0], rivalbaseballjax: [4, 0], rivalbaseballkinger: [5, 0]
+      }},
+      { sheet: 'shadow', cols: 7, rows: 1, map: {
+        shadowpomni: [0, 0], shadowjax: [1, 0], shadowragatha: [2, 0], shadowkinger: [3, 0],
+        shadowgangle: [4, 0], shadowzooble: [5, 0], shadowcaine: [6, 0]
+      }},
+      { sheet: 'horror', cols: 5, rows: 1, map: {
+        horrorghost: [0, 0], horrormonster: [1, 0], horrorpomnivoid: [2, 0],
+        horrorpomnispiral: [3, 0], horrorpomniskull: [4, 0]
+      }},
+      { sheet: 'hunter', cols: 1, rows: 1, map: { hunterjax: [0, 0] }},
+      { sheet: 'gloinks', cols: 6, rows: 1, map: {
+        gloinkstar: [0, 0], gloinkcube: [1, 0], gloinkpyramid: [2, 0],
+        gloinkcrescent: [3, 0], gloinkpin: [4, 0], gloinkround: [5, 0]
+      }},
+      { sheet: 'abel', cols: 2, rows: 1, map: { abelmannequin: [0, 0], abelfullbody: [1, 0] }},
+      { sheet: 'additionalvoices', cols: 1, rows: 1, map: { additionalvoices: [0, 0] }},
+      { sheet: 'themachine', cols: 1, rows: 1, map: { themachine: [0, 0] }},
+      { sheet: 'ming', cols: 1, rows: 1, map: { ming: [0, 0] }},
+      { sheet: 'gloinkqueenscale', cols: 1, rows: 1, map: { gloinkqueenscale: [0, 0] }}
+    ];
+    for (const table of tables) {
+      if (table.map[avatar]) {
+        const [col, row] = table.map[avatar];
+        return { sheet: table.sheet, cols: table.cols, rows: table.rows, col, row };
+      }
+    }
+    return null;
+  },
+
+  prepareCircusSimulationRoom() {
+    const state = this.circusDoom;
+    if (!state) return;
+    const scene = state.scenes[state.currentZoneId] || state.scenes[2];
+    const size = Math.max(11, scene.size || 15);
+    const grid = Array.from({ length: size }, (_, z) => (
+      Array.from({ length: size }, (_, x) => (x === 0 || z === 0 || x === size - 1 || z === size - 1 ? 1 : 0))
+    ));
+    const center = { x: size / 2, z: size / 2 };
+    const addBlock = (x, z, code = 1) => {
+      if (x <= 1 || z <= 1 || x >= size - 2 || z >= size - 2) return;
+      if (Math.abs(x + 0.5 - center.x) < 1.9 && Math.abs(z + 0.5 - center.z) < 2.2) return;
+      if (Math.abs(x + 0.5 - center.x) < 1.3 && z > size - 5) return;
+      grid[z][x] = code;
+    };
+
+    const motif = scene.motif;
+    if (['circus', 'final', 'grounds'].includes(motif)) {
+      [[3, 3], [size - 4, 3], [3, size - 5], [size - 4, size - 5]].forEach(([x, z]) => addBlock(x, z, 2));
+      for (let x = 3; x < size - 3; x += 3) addBlock(x, 2, 2);
+    } else if (['manor', 'basement', 'cellar'].includes(motif)) {
+      for (let z = 3; z < size - 3; z += 3) {
+        addBlock(3, z, 3);
+        addBlock(size - 4, z, 3);
+      }
+      if (size > 12) {
+        for (let x = 4; x < size - 4; x++) if (x !== Math.floor(center.x)) addBlock(x, 4, 1);
+      }
+    } else if (['test', 'admin', 'core'].includes(motif)) {
+      for (let x = 2; x < size - 2; x += 4) {
+        for (let z = 2; z < size - 3; z += 4) addBlock(x, z, 2);
+      }
+    } else if (motif === 'spudsy') {
+      for (let x = 3; x < size - 3; x++) if (Math.abs(x + 0.5 - center.x) > 1.4) addBlock(x, 4, 2);
+    } else if (motif === 'candy' || motif === 'lake' || motif === 'softball') {
+      for (let x = 4; x < size - 4; x += 4) addBlock(x, 3, 2);
+      for (let x = 5; x < size - 5; x += 5) addBlock(x, size - 5, 2);
+    }
+
+    const slots = this.getCircusDoorSlots((scene.exits || []).length, size);
+    const doors = slots.map((slot, index) => {
+      const target = scene.exits[index];
+      const code = 100 + index;
+      grid[slot.z][slot.x] = code;
+      for (let step = 1; step <= 4; step++) {
+        const cx = slot.x + slot.inwardX * step;
+        const cz = slot.z + slot.inwardZ * step;
+        if (grid[cz]?.[cx] !== undefined) grid[cz][cx] = 0;
+        if (slot.inwardX === 0) {
+          if (grid[cz]?.[cx - 1] !== undefined) grid[cz][cx - 1] = 0;
+          if (grid[cz]?.[cx + 1] !== undefined) grid[cz][cx + 1] = 0;
+        } else {
+          if (grid[cz - 1]?.[cx] !== undefined) grid[cz - 1][cx] = 0;
+          if (grid[cz + 1]?.[cx] !== undefined) grid[cz + 1][cx] = 0;
+        }
+      }
+      const targetPortal = state.portals[target];
+      return {
+        target,
+        index,
+        code,
+        space: 'world',
+        x: slot.x + 0.5,
+        z: slot.z + 0.5,
+        inwardX: slot.inwardX,
+        inwardZ: slot.inwardZ,
+        label: targetPortal?.short || 'ZONE'
+      };
+    });
+
+    const startX = Math.floor(center.x);
+    const startZ = size - 3;
+    for (let z = startZ - 2; z <= startZ + 1; z++) {
+      for (let x = startX - 1; x <= startX + 1; x++) {
+        if (grid[z]?.[x] !== undefined) grid[z][x] = 0;
+      }
+    }
+    state.room = { grid, size, center, doors };
+    state.player.x = center.x;
+    state.player.z = startZ + 0.35;
+    state.player.a = -Math.PI / 2;
+    state.hotspots = [];
+    state.interactionMessage = '';
+    state.interactionUntil = 0;
+  },
+
+  getCircusDoorSlots(count, size) {
+    const sides = ['north', 'east', 'west', 'south'];
+    const slots = [];
+    for (let index = 0; index < count; index++) {
+      const sideIndex = index % sides.length;
+      const ordinal = Math.floor(index / sides.length);
+      const sideTotal = Math.ceil((count - sideIndex) / sides.length);
+      const pos = Math.max(2, Math.min(size - 3, Math.round(2 + ((ordinal + 1) / (sideTotal + 1)) * (size - 5))));
+      const side = sides[sideIndex];
+      if (side === 'north') slots.push({ x: pos, z: 0, inwardX: 0, inwardZ: 1 });
+      else if (side === 'south') slots.push({ x: pos, z: size - 1, inwardX: 0, inwardZ: -1 });
+      else if (side === 'east') slots.push({ x: size - 1, z: pos, inwardX: -1, inwardZ: 0 });
+      else slots.push({ x: 0, z: pos, inwardX: 1, inwardZ: 0 });
+    }
+    return slots;
+  },
+
   handleCircusSimulationInput(key) {
     const state = this.circusDoom;
     if (!state) return;
@@ -1664,8 +1867,9 @@ const OS = {
     if (!state) return null;
     let best = null;
     this.getCircusZoneSprites(state.currentZoneId).forEach((sprite, index) => {
-      const dx = sprite.x - state.player.x;
-      const dz = sprite.z - state.player.z;
+      const pos = this.resolveCircusWorldPoint(sprite, state);
+      const dx = pos.x - state.player.x;
+      const dz = pos.z - state.player.z;
       const dist = Math.hypot(dx, dz);
       const angle = Math.atan2(dz, dx) - state.player.a;
       const normalized = Math.atan2(Math.sin(angle), Math.cos(angle));
@@ -1705,8 +1909,9 @@ const OS = {
     const doors = this.getCircusPhysicalDoors(state);
     let best = null;
     doors.forEach((door, index) => {
-      const dx = door.x - state.player.x;
-      const dz = door.z - state.player.z;
+      const pos = this.resolveCircusWorldPoint(door, state);
+      const dx = pos.x - state.player.x;
+      const dz = pos.z - state.player.z;
       const dist = Math.hypot(dx, dz);
       const angle = Math.atan2(dz, dx) - state.player.a;
       const normalized = Math.atan2(Math.sin(angle), Math.cos(angle));
@@ -1737,9 +1942,7 @@ const OS = {
     state.currentZoneId = zoneId;
     state.selectedExitIndex = 0;
     state.hotspots = [];
-    state.player.x = 0;
-    state.player.z = 0;
-    state.player.a = -Math.PI / 2;
+    this.prepareCircusSimulationRoom();
     if (playSound) SoundManager.play(660, 0.08, 'triangle', 0.05);
   },
 
@@ -1752,22 +1955,26 @@ const OS = {
     if (keys.has('arrowleft') || keys.has('q')) player.a -= turn;
     if (keys.has('arrowright') || keys.has('d')) player.a += turn;
 
+    const tryMove = (nx, nz) => {
+      const margin = 0.22;
+      const canStand = (x, z) => (
+        this.canMoveInCircusRoom(x - margin, z - margin) &&
+        this.canMoveInCircusRoom(x + margin, z - margin) &&
+        this.canMoveInCircusRoom(x - margin, z + margin) &&
+        this.canMoveInCircusRoom(x + margin, z + margin)
+      );
+      if (canStand(nx, player.z)) player.x = nx;
+      if (canStand(player.x, nz)) player.z = nz;
+    };
+
     let move = 0;
     if (keys.has('arrowup') || keys.has('w') || keys.has('z')) move += speed;
     if (keys.has('arrowdown') || keys.has('s')) move -= speed;
     if (move !== 0) {
-      player.x += Math.cos(player.a) * move;
-      player.z += Math.sin(player.a) * move;
+      tryMove(player.x + Math.cos(player.a) * move, player.z + Math.sin(player.a) * move);
     }
     if (keys.has('a')) {
-      player.x += Math.cos(player.a - Math.PI / 2) * speed;
-      player.z += Math.sin(player.a - Math.PI / 2) * speed;
-    }
-    const roomLimit = 3.45;
-    const distanceFromCenter = Math.hypot(player.x, player.z);
-    if (distanceFromCenter > roomLimit) {
-      player.x = (player.x / distanceFromCenter) * roomLimit;
-      player.z = (player.z / distanceFromCenter) * roomLimit;
+      tryMove(player.x + Math.cos(player.a - Math.PI / 2) * speed, player.z + Math.sin(player.a - Math.PI / 2) * speed);
     }
 
     const nearestDoor = this.getNearestUsableCircusDoor();
@@ -1803,27 +2010,183 @@ const OS = {
   drawCircusSimulationScene() {
     const state = this.circusDoom;
     if (!state) return;
-    const { canvas, ctx, portals, scenes, player } = state;
+    const { canvas, ctx, portals } = state;
     const w = canvas.width;
     const h = canvas.height;
     const zone = portals[state.currentZoneId] || portals[2];
-    const scene = scenes[state.currentZoneId] || scenes[2];
     state.hotspots = [];
 
-    const horizon = h * 0.47;
-    ctx.fillStyle = zone.ceiling || '#120821';
-    ctx.fillRect(0, 0, w, h);
-    ctx.fillStyle = this.shadeHex(zone.ceiling || '#120821', 1.35);
-    ctx.fillRect(0, 0, w, horizon);
-    ctx.fillStyle = zone.floor || '#24112f';
-    ctx.fillRect(0, horizon, w, h - horizon);
-
-    this.drawCircusRoomShell(ctx, w, h, zone, scene.motif, horizon);
+    this.drawCircusRaycastRoom(ctx, w, h, state, zone);
     this.drawCircusDepthProps(ctx, w, h, state);
     this.drawCircusPhysicalDoors(ctx, w, h, portals, state);
     this.drawCircusImpostorSprites(ctx, w, h, state);
     this.drawCircusConversationOverlay(ctx, w, h, state);
     this.drawCircusSimulationReticle(ctx, w, h, zone);
+    this.drawCircusRoomMinimap(ctx, w, h, state, zone);
+  },
+
+  canMoveInCircusRoom(x, z) {
+    const room = this.circusDoom?.room;
+    if (!room) return false;
+    const ix = Math.floor(x);
+    const iz = Math.floor(z);
+    if (ix < 0 || iz < 0 || ix >= room.size || iz >= room.size) return false;
+    return room.grid[iz]?.[ix] === 0;
+  },
+
+  resolveCircusWorldPoint(obj, state) {
+    if (obj.space === 'world' || !state.room) return { x: obj.x, z: obj.z };
+    const center = state.room.center;
+    return { x: center.x + obj.x, z: center.z + obj.z };
+  },
+
+  getCircusWallColor(cell, zone, state) {
+    if (cell >= 100) {
+      const door = state.room?.doors?.find(item => item.code === cell);
+      const target = door ? state.portals[door.target] : null;
+      return target?.unlocked ? (target.color || zone.color) : '#4b4b55';
+    }
+    const motif = (state.scenes[state.currentZoneId] || state.scenes[2])?.motif;
+    if (cell === 2) return {
+      circus: '#d62f3f',
+      final: '#e53935',
+      grounds: '#2a58d8',
+      candy: '#ff9b37',
+      lake: '#4ee7ff',
+      softball: '#83ff57',
+      spudsy: '#f6d743',
+      core: '#ff7a30',
+      test: '#7df0ff',
+      admin: '#ffcf75'
+    }[motif] || zone.color || '#ffd84a';
+    if (cell === 3) return '#4b4b55';
+    return zone.color || '#ffd84a';
+  },
+
+  drawCircusRaycastRoom(ctx, w, h, state, zone) {
+    if (!state.room) this.prepareCircusSimulationRoom();
+    const room = state.room;
+    const horizon = h * 0.48;
+    const ceilingGradient = ctx.createLinearGradient(0, 0, 0, horizon);
+    ceilingGradient.addColorStop(0, this.shadeHex(zone.ceiling || '#120821', 0.65));
+    ceilingGradient.addColorStop(1, this.shadeHex(zone.ceiling || '#120821', 1.24));
+    ctx.fillStyle = ceilingGradient;
+    ctx.fillRect(0, 0, w, horizon);
+
+    const floorGradient = ctx.createLinearGradient(0, horizon, 0, h);
+    floorGradient.addColorStop(0, this.shadeHex(zone.floor || '#24112f', 1.16));
+    floorGradient.addColorStop(1, this.shadeHex(zone.floor || '#24112f', 0.52));
+    ctx.fillStyle = floorGradient;
+    ctx.fillRect(0, horizon, w, h - horizon);
+
+    ctx.save();
+    ctx.strokeStyle = 'rgba(255,255,255,0.08)';
+    ctx.lineWidth = 1;
+    for (let i = 1; i < 13; i++) {
+      const t = i / 13;
+      const y = horizon + Math.pow(t, 1.9) * (h - horizon);
+      ctx.beginPath();
+      ctx.moveTo(0, y);
+      ctx.lineTo(w, y);
+      ctx.stroke();
+    }
+    for (let i = -9; i <= 9; i++) {
+      const endX = w / 2 + i * 62;
+      ctx.beginPath();
+      ctx.moveTo(w / 2, horizon);
+      ctx.lineTo(endX, h);
+      ctx.stroke();
+    }
+    ctx.restore();
+
+    const rays = 240;
+    const fov = Math.PI / 3.05;
+    const strip = Math.ceil(w / rays) + 1;
+    for (let i = 0; i < rays; i++) {
+      const ratio = i / (rays - 1);
+      const angle = state.player.a - fov / 2 + ratio * fov;
+      const rayCos = Math.cos(angle);
+      const raySin = Math.sin(angle);
+      let hit = null;
+      for (let dist = 0.05; dist < room.size * 1.55; dist += 0.035) {
+        const x = state.player.x + rayCos * dist;
+        const z = state.player.z + raySin * dist;
+        const ix = Math.floor(x);
+        const iz = Math.floor(z);
+        const cell = room.grid[iz]?.[ix] ?? 1;
+        if (cell > 0) {
+          const nearVertical = Math.abs((x % 1) - 0.5) > Math.abs((z % 1) - 0.5);
+          hit = { dist, cell, nearVertical };
+          break;
+        }
+      }
+      if (!hit) continue;
+      const corrected = Math.max(0.08, hit.dist * Math.cos(angle - state.player.a));
+      const wallH = Math.min(h * 1.9, (h * 0.72) / corrected);
+      const x = Math.floor(ratio * w);
+      const y = Math.floor(horizon - wallH * 0.52);
+      const baseColor = this.getCircusWallColor(hit.cell, zone, state);
+      const depthShade = Math.max(0.26, 1.08 - corrected / (room.size * 0.92));
+      const sideShade = hit.nearVertical ? 0.92 : 0.72;
+      ctx.fillStyle = this.shadeHex(baseColor, depthShade * sideShade);
+      ctx.fillRect(x, y, strip, Math.ceil(wallH));
+      if (hit.cell >= 100) {
+        ctx.fillStyle = 'rgba(255,255,255,0.16)';
+        ctx.fillRect(x, y + wallH * 0.1, strip, Math.max(1, wallH * 0.04));
+        ctx.fillStyle = 'rgba(0,0,0,0.28)';
+        ctx.fillRect(x, y + wallH * 0.46, strip, Math.max(1, wallH * 0.08));
+      }
+    }
+
+    const scene = state.scenes[state.currentZoneId] || state.scenes[2];
+    ctx.save();
+    ctx.globalAlpha = 0.18;
+    ctx.fillStyle = zone.color || '#ffd84a';
+    if (['circus', 'grounds', 'final'].includes(scene.motif)) {
+      ctx.beginPath();
+      ctx.ellipse(w / 2, horizon + 12, w * 0.28, 24, 0, 0, Math.PI * 2);
+      ctx.fill();
+    } else if (scene.motif === 'lake') {
+      for (let y = horizon + 16; y < h; y += 20) ctx.fillRect(0, y + Math.sin(y / 17) * 2, w, 2);
+    } else if (scene.motif === 'exit') {
+      ctx.globalAlpha = 0.22;
+      ctx.strokeStyle = '#ffffff';
+      for (let i = 0; i < 5; i++) ctx.strokeRect(w / 2 - 130 + i * 22, 42 + i * 14, 260 - i * 44, 150 - i * 16);
+    }
+    ctx.restore();
+  },
+
+  drawCircusRoomMinimap(ctx, w, h, state, zone) {
+    const room = state.room;
+    if (!room) return;
+    const cell = 4;
+    const ox = 12;
+    const oy = 46;
+    ctx.save();
+    ctx.fillStyle = 'rgba(5,2,13,0.62)';
+    ctx.fillRect(ox - 4, oy - 4, room.size * cell + 8, room.size * cell + 8);
+    for (let z = 0; z < room.size; z++) {
+      for (let x = 0; x < room.size; x++) {
+        const value = room.grid[z][x];
+        if (value === 0) ctx.fillStyle = 'rgba(255,255,255,0.08)';
+        else if (value >= 100) {
+          const door = room.doors.find(item => item.code === value);
+          const target = door ? state.portals[door.target] : null;
+          ctx.fillStyle = target?.unlocked ? (target.color || zone.color) : '#4b4b55';
+        } else {
+          ctx.fillStyle = value === 2 ? this.shadeHex(zone.color || '#ffd84a', 0.75) : '#2b1632';
+        }
+        ctx.fillRect(ox + x * cell, oy + z * cell, cell - 1, cell - 1);
+      }
+    }
+    ctx.fillStyle = '#ffffff';
+    ctx.fillRect(ox + state.player.x * cell - 2, oy + state.player.z * cell - 2, 4, 4);
+    ctx.strokeStyle = '#ffffff';
+    ctx.beginPath();
+    ctx.moveTo(ox + state.player.x * cell, oy + state.player.z * cell);
+    ctx.lineTo(ox + (state.player.x + Math.cos(state.player.a) * 0.9) * cell, oy + (state.player.z + Math.sin(state.player.a) * 0.9) * cell);
+    ctx.stroke();
+    ctx.restore();
   },
 
   drawCircusRoomShell(ctx, w, h, zone, motif, horizon) {
@@ -2038,36 +2401,25 @@ const OS = {
   },
 
   getCircusPhysicalDoors(state) {
-    const scene = state.scenes[state.currentZoneId] || state.scenes[2];
-    const exits = scene.exits || [];
-    const radius = 3.9;
-    const start = -Math.PI / 2 - ((exits.length - 1) * Math.PI / 12);
-    return exits.map((target, index) => {
-      const angle = start + index * (Math.PI / 6);
-      return {
-        target,
-        index,
-        x: Math.cos(angle) * radius,
-        z: Math.sin(angle) * radius,
-        angle
-      };
-    });
+    return state.room?.doors || [];
   },
 
   projectCircusPoint(obj, state, w, h) {
-    const dx = obj.x - state.player.x;
-    const dz = obj.z - state.player.z;
+    const point = this.resolveCircusWorldPoint(obj, state);
+    const dx = point.x - state.player.x;
+    const dz = point.z - state.player.z;
     const sin = Math.sin(state.player.a);
     const cos = Math.cos(state.player.a);
     const rx = -dx * sin + dz * cos;
     const rz = dx * cos + dz * sin;
     if (rz <= 0.18) return null;
-    const fovScale = 240;
+    const fovScale = w * 0.52;
+    const floorLift = Math.min(h * 0.36, (1 / rz) * h * 0.24);
     return {
       x: w / 2 + (rx / rz) * fovScale,
-      y: h * 0.54,
+      y: h * 0.61 + floorLift,
       depth: rz,
-      scale: Math.min(2.2, Math.max(0.25, 1 / rz))
+      scale: Math.min(2.2, Math.max(0.22, 2.25 / rz))
     };
   },
 
@@ -2113,7 +2465,7 @@ const OS = {
     const p = prop.projected;
     const s = Math.max(0.25, p.scale);
     const x = p.x;
-    const y = h * 0.58;
+    const y = p.y || h * 0.58;
     ctx.save();
     ctx.translate(x, y);
     ctx.lineWidth = Math.max(1, 2 * s);
@@ -2247,17 +2599,18 @@ const OS = {
       const doorW = 58 * p.scale;
       const doorH = 118 * p.scale;
       const x = p.x - doorW / 2;
-      const y = h * 0.55 - doorH;
+      const baseY = p.y || h * 0.58;
+      const y = baseY - doorH;
       state.hotspots.push({ x, y, w: doorW, h: doorH, target: door.target, index: door.index });
       const corridorW = doorW * 2.2;
       ctx.fillStyle = `${target.color}24`;
       ctx.strokeStyle = `${target.color}88`;
       ctx.lineWidth = 1;
       ctx.beginPath();
-      ctx.moveTo(p.x - corridorW * 0.12, h * 0.53);
+      ctx.moveTo(p.x - corridorW * 0.12, baseY - doorH * 0.06);
       ctx.lineTo(p.x - corridorW * 0.5, h);
       ctx.lineTo(p.x + corridorW * 0.5, h);
-      ctx.lineTo(p.x + corridorW * 0.12, h * 0.53);
+      ctx.lineTo(p.x + corridorW * 0.12, baseY - doorH * 0.06);
       ctx.closePath();
       ctx.fill();
       ctx.stroke();
@@ -2289,22 +2642,22 @@ const OS = {
 
   getCircusZoneSprites(zoneId) {
     const shared = [
-      { name: 'Pomni', type: 'pomni', x: -1.2, z: -2.3, color: '#e53935' },
-      { name: 'Ragatha', type: 'ragatha', x: 1.2, z: -2.55, color: '#d64545' },
-      { name: 'Jax', type: 'jax', x: -2.5, z: -1.05, color: '#8a4fd6' },
-      { name: 'Kinger', type: 'kinger', x: 2.5, z: -1.05, color: '#d9d0a2' },
-      { name: 'Gangle', type: 'gangle', x: -0.25, z: -3.05, color: '#f7f7f7' },
-      { name: 'Zooble', type: 'zooble', x: 2.0, z: -2.15, color: '#ff4fb8' }
+      { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -1.2, z: -2.3, color: '#e53935' },
+      { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: 1.2, z: -2.55, color: '#d64545' },
+      { name: 'Jax', type: 'jax', avatar: 'jax', x: -2.5, z: -1.05, color: '#8a4fd6' },
+      { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: 2.5, z: -1.05, color: '#d9d0a2' },
+      { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: -0.25, z: -3.05, color: '#f7f7f7' },
+      { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 2.0, z: -2.15, color: '#ff4fb8' }
     ];
     const byZone = {
-      2: [{ name: 'Caine', type: 'caine', x: 0.25, z: -2.15, color: '#ffd84a' }, { name: 'Bubble', type: 'bubble', x: 1.25, z: -1.65, color: '#f7f7ff' }, ...shared],
-      4: [{ name: 'Kaufmo', type: 'abstract', x: 0, z: -2.25, color: '#111111' }, { name: 'Pomni', type: 'pomni', x: -1.4, z: -1.7, color: '#e53935' }],
-      6: [{ name: 'Gummigoo', type: 'gummigoo', x: -0.7, z: -2.2, color: '#d8a23a' }, { name: 'Max', type: 'gummigoo', x: 0.6, z: -2.55, color: '#75bd3f' }, { name: 'Pomni', type: 'pomni', x: 1.55, z: -1.85, color: '#e53935' }],
-      8: [{ name: 'Kinger', type: 'kinger', x: -0.9, z: -2.2, color: '#d9d0a2' }, { name: 'Pomni', type: 'pomni', x: 0.8, z: -2.45, color: '#e53935' }, { name: 'Ghost', type: 'ghost', x: 2.15, z: -1.35, color: '#7df0ff' }],
-      10: [{ name: 'Gangle', type: 'gangle', x: -0.4, z: -2.1, color: '#f7f7f7' }, { name: 'Pomni', type: 'pomni', x: 0.8, z: -2.4, color: '#e53935' }, { name: 'Customer', type: 'bubble', x: -2.0, z: -1.4, color: '#f7f7ff' }],
-      14: [{ name: 'Beach Gangle', type: 'gangle', x: -1.3, z: -2.1, color: '#f7f7f7' }, { name: 'Hunter Jax', type: 'jax', x: 1.4, z: -2.4, color: '#8a4fd6' }],
-      16: [{ name: 'Caine', type: 'caine', x: 0, z: -2.25, color: '#ffd84a' }, { name: 'Abel', type: 'mannequin', x: -1.6, z: -1.7, color: '#ff8a30' }],
-      19: [{ name: 'Ribbit', type: 'npc', x: -1.7, z: -1.9, color: '#4ee77e' }, { name: 'Wormo', type: 'npc', x: 0, z: -2.25, color: '#ffcf75' }, { name: 'Scratch', type: 'npc', x: 1.7, z: -1.9, color: '#c875ff' }]
+      2: [{ name: 'Caine', type: 'caine', avatar: 'caine', x: 0.25, z: -2.15, color: '#ffd84a' }, { name: 'Bubble', type: 'bubble', avatar: 'bubble', x: 1.25, z: -1.65, color: '#f7f7ff' }, ...shared],
+      4: [{ name: 'Kaufmo', type: 'abstract', avatar: 'kaufmo', x: 0, z: -2.25, color: '#111111' }, { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -1.4, z: -1.7, color: '#e53935' }],
+      6: [{ name: 'Gummigoo', type: 'gummigoo', avatar: 'gummigoo', x: -0.7, z: -2.2, color: '#d8a23a' }, { name: 'Max', type: 'gummigoo', avatar: 'max', x: 0.6, z: -2.55, color: '#75bd3f' }, { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 1.55, z: -1.85, color: '#e53935' }],
+      8: [{ name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -0.9, z: -2.2, color: '#d9d0a2' }, { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 0.8, z: -2.45, color: '#e53935' }, { name: 'Ghost', type: 'ghost', avatar: 'horrorghost', x: 2.15, z: -1.35, color: '#7df0ff' }],
+      10: [{ name: 'Gangle', type: 'gangle', avatar: 'workgangle', x: -0.4, z: -2.1, color: '#f7f7f7' }, { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 0.8, z: -2.4, color: '#e53935' }, { name: 'Customer', type: 'bubble', avatar: 'bubble', x: -2.0, z: -1.4, color: '#f7f7ff' }],
+      14: [{ name: 'Beach Gangle', type: 'gangle', avatar: 'beachgangle', x: -1.3, z: -2.1, color: '#f7f7f7' }, { name: 'Hunter Jax', type: 'jax', avatar: 'hunterjax', x: 1.4, z: -2.4, color: '#8a4fd6' }],
+      16: [{ name: 'Caine', type: 'caine', avatar: 'caine', x: 0, z: -2.25, color: '#ffd84a' }, { name: 'Abel', type: 'mannequin', avatar: 'abelmannequin', x: -1.6, z: -1.7, color: '#ff8a30' }],
+      19: [{ name: 'Ribbit', type: 'npc', avatar: 'ribbit', x: -1.7, z: -1.9, color: '#4ee77e' }, { name: 'Wormo', type: 'npc', avatar: 'wormo', x: 0, z: -2.25, color: '#ffcf75' }, { name: 'Scratch', type: 'npc', avatar: 'scratch', x: 1.7, z: -1.9, color: '#c875ff' }]
     };
     return byZone[zoneId] || shared.slice(0, 4);
   },
@@ -2317,7 +2670,7 @@ const OS = {
     sprites.forEach(sprite => {
       const p = sprite.projected;
       const size = Math.max(16, 70 * p.scale);
-      const baseY = h * 0.58;
+      const baseY = p.y || h * 0.58;
       state.hotspots.push({
         kind: 'character',
         sprite,
@@ -2327,71 +2680,64 @@ const OS = {
         h: size,
         depth: p.depth
       });
-      this.drawCircusImpostor(ctx, sprite.type, p.x, baseY, size, sprite.color, sprite.name);
+      this.drawCircusImpostor(ctx, sprite.type, p.x, baseY, size, sprite.color, sprite.name, sprite.avatar);
     });
   },
 
-  drawCircusImpostor(ctx, type, x, baseY, size, color, label) {
+  drawCircusImpostor(ctx, type, x, baseY, size, color, label, avatar) {
+    if (this.drawCircusWackyAvatar(ctx, avatar || type, x, baseY, size, label, color)) return;
+
     ctx.save();
     ctx.translate(x, baseY);
     ctx.imageSmoothingEnabled = false;
-    ctx.shadowColor = 'rgba(0,0,0,0.6)';
-    ctx.shadowBlur = 8;
     ctx.fillStyle = 'rgba(0,0,0,0.35)';
     ctx.beginPath();
     ctx.ellipse(0, 4, size * 0.32, size * 0.08, 0, 0, Math.PI * 2);
     ctx.fill();
-    ctx.shadowBlur = 0;
-    const px = (rx, ry, rw, rh, fill) => {
-      ctx.fillStyle = fill;
-      ctx.fillRect(Math.round(rx * size), Math.round(ry * size), Math.round(rw * size), Math.round(rh * size));
-    };
-    const pixelPattern = this.getCircusCanvasAvatarPattern(type);
-    if (pixelPattern) {
-      const unit = size / 16;
-      const startX = -size / 2;
-      const startY = -size;
-      pixelPattern.forEach(cell => {
-        ctx.fillStyle = cell[4];
-        ctx.fillRect(Math.round(startX + cell[0] * unit), Math.round(startY + cell[1] * unit), Math.ceil(cell[2] * unit), Math.ceil(cell[3] * unit));
-      });
-    } else if (type === 'pomni') {
-      px(-0.18, -0.88, 0.16, 0.22, '#2a58d8'); px(0.02, -0.88, 0.16, 0.22, '#e53935');
-      px(-0.2, -0.68, 0.4, 0.42, '#ffd2cb'); px(-0.28, -0.48, 0.56, 0.5, '#2a58d8');
-      px(-0.3, -0.74, 0.16, 0.16, '#ffd84a'); px(0.14, -0.74, 0.16, 0.16, '#ffd84a');
-    } else if (type === 'jax') {
-      px(-0.12, -1.02, 0.08, 0.42, '#8a4fd6'); px(0.1, -1.02, 0.08, 0.42, '#8a4fd6');
-      px(-0.22, -0.62, 0.44, 0.64, '#8a4fd6'); px(-0.16, -0.48, 0.06, 0.06, '#ffd84a'); px(0.1, -0.48, 0.06, 0.06, '#ffd84a');
-    } else if (type === 'ragatha') {
-      px(-0.26, -0.82, 0.52, 0.24, '#d64545'); px(-0.2, -0.68, 0.4, 0.46, '#ffd0bd');
-      px(-0.34, -0.5, 0.14, 0.5, '#d64545'); px(0.2, -0.5, 0.14, 0.5, '#d64545'); px(-0.2, -0.2, 0.4, 0.24, '#3d60d8');
-    } else if (type === 'kinger') {
-      px(-0.22, -0.86, 0.44, 0.8, '#f5eed2'); px(-0.28, -0.7, 0.56, 0.12, '#f5eed2');
-      px(-0.1, -0.55, 0.2, 0.22, '#6b3523'); px(-0.17, -0.96, 0.34, 0.06, '#ffd84a');
-    } else if (type === 'gangle') {
-      px(-0.18, -0.82, 0.36, 0.34, '#f7f7f7'); px(-0.2, -0.82, 0.4, 0.06, '#d61f2c');
-      for (let i = 0; i < 5; i++) px(-0.35 + i * 0.14, -0.38 + i * 0.08, 0.08, 0.04, '#d61f2c');
-    } else if (type === 'zooble') {
-      px(-0.18, -0.72, 0.34, 0.34, '#d633ff'); px(0.08, -0.82, 0.24, 0.22, '#30d6ff');
-      px(-0.24, -0.32, 0.34, 0.24, '#b7e300'); px(0.08, -0.28, 0.28, 0.14, '#ff7a30');
-    } else if (type === 'caine') {
-      px(-0.32, -0.74, 0.64, 0.38, '#f7f7f7'); px(-0.24, -0.64, 0.48, 0.1, '#111');
-      px(-0.18, -0.46, 0.36, 0.12, '#d61f2c'); px(-0.08, -0.98, 0.16, 0.22, '#222');
-    } else if (type === 'bubble' || type === 'ghost') {
-      ctx.fillStyle = type === 'ghost' ? '#7df0ffaa' : '#f3fbffaa';
-      ctx.beginPath(); ctx.arc(0, -size * 0.48, size * 0.23, 0, Math.PI * 2); ctx.fill();
-    } else if (type === 'abstract') {
-      ctx.fillStyle = '#050505'; ctx.beginPath(); ctx.arc(0, -size * 0.42, size * 0.28, 0, Math.PI * 2); ctx.fill();
-      ctx.fillStyle = '#ff3333'; px(-0.08, -0.55, 0.05, 0.05, '#ff3333'); px(0.06, -0.45, 0.05, 0.05, '#ff3333');
-    } else {
-      px(-0.18, -0.78, 0.36, 0.7, color);
-      px(-0.12, -0.9, 0.24, 0.18, this.shadeHex(color, 1.25));
-    }
+    ctx.fillStyle = 'rgba(5,2,13,0.86)';
+    ctx.strokeStyle = color || '#fff1a8';
+    ctx.lineWidth = Math.max(1, size * 0.035);
+    ctx.fillRect(-size * 0.24, -size * 0.78, size * 0.48, size * 0.62);
+    ctx.strokeRect(-size * 0.24, -size * 0.78, size * 0.48, size * 0.62);
+    ctx.fillStyle = color || '#fff1a8';
+    ctx.font = `bold ${Math.max(6, size * 0.12)}px Courier New`;
+    ctx.textAlign = 'center';
+    ctx.fillText('IMG', 0, -size * 0.46);
     ctx.fillStyle = '#fff1a8';
     ctx.font = `${Math.max(6, size * 0.13)}px Courier New`;
     ctx.textAlign = 'center';
     ctx.fillText(label, 0, -size * 1.05);
     ctx.restore();
+  },
+
+  drawCircusWackyAvatar(ctx, avatar, x, baseY, size, label, color) {
+    const spec = this.getCircusAvatarSheetSpec(avatar);
+    const img = spec ? this.circusAvatarSheets?.[spec.sheet] : null;
+    if (!spec || !img || !img.complete || !img.naturalWidth || !img.naturalHeight) return false;
+    const frameW = img.naturalWidth / spec.cols;
+    const frameH = img.naturalHeight / spec.rows;
+    const sx = frameW * spec.col;
+    const sy = frameH * spec.row;
+    const drawH = size * (avatar === 'gloinkqueenscale' ? 1.35 : 1);
+    const drawW = drawH * (frameW / frameH);
+    const drawX = x - drawW / 2;
+    const drawY = baseY - drawH;
+    ctx.save();
+    ctx.imageSmoothingEnabled = false;
+    ctx.fillStyle = 'rgba(0,0,0,0.38)';
+    ctx.beginPath();
+    ctx.ellipse(x, baseY + 4, Math.max(10, drawW * 0.36), Math.max(3, drawH * 0.075), 0, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.shadowColor = 'rgba(0,0,0,0.7)';
+    ctx.shadowBlur = 8;
+    ctx.drawImage(img, sx, sy, frameW, frameH, Math.round(drawX), Math.round(drawY), Math.round(drawW), Math.round(drawH));
+    ctx.shadowBlur = 0;
+    ctx.fillStyle = color || '#fff1a8';
+    ctx.font = `${Math.max(6, size * 0.13)}px Courier New`;
+    ctx.textAlign = 'center';
+    ctx.fillText(label, x, drawY - 6);
+    ctx.restore();
+    return true;
   },
 
   getCircusCanvasAvatarPattern(type) {
@@ -2424,11 +2770,6 @@ const OS = {
     ctx.moveTo(w / 2, h / 2 - 8);
     ctx.lineTo(w / 2, h / 2 + 8);
     ctx.stroke();
-    ctx.globalAlpha = 1;
-    ctx.fillStyle = zone.color || '#ffd84a';
-    ctx.font = 'bold 10px Courier New';
-    ctx.textAlign = 'center';
-    ctx.fillText('Z/QS/D: NAVIGUER  |  FLECHES: TOURNER/AVANCER  |  ENTREE: OUVRIR LA PORTE', w / 2, h - 8);
     ctx.restore();
   },
 
