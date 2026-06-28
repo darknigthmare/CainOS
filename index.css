@@ -2718,6 +2718,17 @@ body {
   border-color: #fff;
 }
 
+.story-dos-point.lore-locked {
+  filter: saturate(0.55);
+}
+
+.story-dos-point.lore-locked::after {
+  content: "?";
+  color: #050505;
+  font-size: 8px;
+  margin-left: 2px;
+}
+
 .story-dos-point:hover,
 .story-dos-point:focus {
   outline: 1px solid #fff;

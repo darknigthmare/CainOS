@@ -225,25 +225,25 @@ const EpisodeManager = {
   activeSubepisodeTotal: 0,
   activeStorySceneCharacters: [],
   storyCharacterProfiles: {
-    POMNI: { color: "#e53935", label: "Pomni", info: "Nouvelle humaine piegee dans le Cirque. Signal panique eleve, obsession de la sortie." },
-    CAINE: { color: "#f6d743", label: "Caine", info: "Ringmaster IA. Controle les aventures, les decors et les transitions de simulation." },
+    POMNI: { color: "#e53935", label: "Pomni", info: "Nouvelle humaine piegee dans le Cirque. Signal panique eleve, obsession de la sortie.", lockedInfo: "Nouveau signal joueur detecte. Identite et stabilite encore inconnues.", unlockAt: { episode: 1, subepisode: 0 } },
+    CAINE: { color: "#f6d743", label: "Caine", info: "Ringmaster IA. Controle les aventures, les decors et les transitions de simulation.", lockedInfo: "Signal maitre de ceremonie detecte. Niveau d'autorite exact encore inconnu.", unlockAt: { episode: 1, subepisode: 0 } },
     BUBBLE: { color: "#f7f7ff", label: "Bubble", info: "Assistant flottant de Caine. Presque toujours colle au show et aux mauvaises idees." },
-    RAGATHA: { color: "#d64545", label: "Ragatha", info: "Poupée de chiffon bienveillante. Stabilise souvent Pomni et le groupe." },
-    JAX: { color: "#8a4fd6", label: "Jax", info: "Lapin violet sarcastique. Forte probabilite de sabotage ou de provocation." },
-    GANGLE: { color: "#f7f7f7", label: "Gangle", info: "Masque et rubans. Son etat depend fortement de son masque de comedie/tragedie." },
-    ZOOBLE: { color: "#ff4fb8", label: "Zooble", info: "Corps modulaire. Refuse souvent les aventures forcees de Caine." },
-    KINGER: { color: "#d9d0a2", label: "Kinger", info: "Piece d'echecs instable, ancien prisonnier du Cirque avec des souvenirs profonds." },
-    KAUFMO: { color: "#363636", label: "Kaufmo", info: "Ancien membre abstrait. Menace noire et instable dans le pilote." },
-    GUMMIGOO: { color: "#d69b35", label: "Gummigoo", info: "PNJ crocodile du canyon. Sa nature de PNJ cree une faille de memoire." },
+    RAGATHA: { color: "#d64545", label: "Ragatha", info: "Poupée de chiffon bienveillante. Stabilise souvent Pomni et le groupe.", lockedInfo: "Signal resident du Cirque. Role relationnel pas encore etabli.", unlockAt: { episode: 1, subepisode: 0 } },
+    JAX: { color: "#8a4fd6", label: "Jax", info: "Lapin violet sarcastique. Forte probabilite de sabotage ou de provocation.", lockedInfo: "Signal resident du Cirque. Intention encore non classee.", unlockAt: { episode: 1, subepisode: 0 } },
+    GANGLE: { color: "#f7f7f7", label: "Gangle", info: "Masque et rubans. Son etat depend fortement de son masque de comedie/tragedie.", lockedInfo: "Signal resident du Cirque. Etat emotionnel non stabilise.", unlockAt: { episode: 1, subepisode: 0 } },
+    ZOOBLE: { color: "#ff4fb8", label: "Zooble", info: "Corps modulaire. Refuse souvent les aventures forcees de Caine.", lockedInfo: "Signal resident du Cirque. Profil comportemental incomplet.", unlockAt: { episode: 1, subepisode: 0 } },
+    KINGER: { color: "#d9d0a2", label: "Kinger", info: "Piece d'echecs instable, ancien prisonnier du Cirque avec des souvenirs profonds.", lockedInfo: "Signal resident ancien. CainOS retient les details memoire.", unlockAt: { episode: 8, subepisode: 1 } },
+    KAUFMO: { color: "#363636", label: "Kaufmo", info: "Ancien membre abstrait. Menace noire et instable dans le pilote.", lockedInfo: "Signal resident absent. Statut non confirme dans la timeline actuelle.", unlockAt: { episode: 1, subepisode: 5 } },
+    GUMMIGOO: { color: "#d69b35", label: "Gummigoo", info: "PNJ crocodile du canyon. Sa nature de PNJ cree une faille de memoire.", lockedInfo: "Signal canyon detecte. Nature exacte verrouillee jusqu'a l'aventure correspondante.", unlockAt: { episode: 2, subepisode: 3 } },
     GLOINK: { color: "#6b4cff", label: "Gloink", info: "Petite entite voleuse de l'aventure du pilote. Signal geometrique instable." },
     GLOINK_QUEEN: { color: "#ff7d8d", label: "Gloink Queen", info: "Reine enorme des Gloinks, hors echelle par rapport aux autres signaux." },
     LOO: { color: "#ffb7d5", label: "Princess Loolilalu", info: "Princesse du Royaume des Sucreries, liee a l'aventure du canyon." },
     ORBSMAN: { color: "#6fe8ff", label: "Orbsman", info: "Entite secondaire du Cirque, silhouette orbitee et signal bizarre." },
-    ABEL: { color: "#ff9b37", label: "Abel", info: "Figure/mannequin liee aux couches C&A et aux archives profondes du projet." },
-    ARTHUR: { color: "#c0d0ff", label: "Arthur", info: "Identite humaine rattachee aux tests C&A et a la trajectoire de Kinger." },
-    SARAH: { color: "#ff6b6b", label: "Sarah", info: "Identite humaine suggeree derriere Pomni dans la couche CainOS." },
-    HELEN: { color: "#5fe9d4", label: "Helen / Queenie", info: "Trace memoire associee a Queenie et aux souvenirs enfouis de Kinger." },
-    QUEENIE: { color: "#5fe9d4", label: "Queenie", info: "Piece disparue, memoire centrale pour Kinger." },
+    ABEL: { color: "#ff9b37", label: "Abel", info: "Figure/mannequin liee aux couches C&A et aux archives profondes du projet.", lockedInfo: "Signal C&A protege. Donnees masquees jusqu'a la couche Abel.", unlockAt: { episode: 7, subepisode: 2 } },
+    ARTHUR: { color: "#c0d0ff", label: "Arthur", info: "Identite humaine rattachee aux tests C&A et a la trajectoire de Kinger.", lockedInfo: "Operateur C&A detecte. CainOS masque son lien avec les residents.", unlockAt: { episode: -1, subepisode: 0 } },
+    SARAH: { color: "#ff6b6b", label: "Sarah", info: "Identite humaine suggeree derriere Pomni dans la couche CainOS.", lockedInfo: "Sujet humain C&A detecte. Le lien avec le Cirque n'est pas encore confirme.", unlockAt: { episode: 9, subepisode: 2 } },
+    HELEN: { color: "#5fe9d4", label: "Helen / Queenie", lockedLabel: "Helen", info: "Trace memoire associee a Queenie et aux souvenirs enfouis de Kinger.", lockedInfo: "Trace memoire protegee. Identite complete verrouillee.", unlockAt: { episode: 8, subepisode: 1 } },
+    QUEENIE: { color: "#5fe9d4", label: "Queenie", lockedLabel: "Piece inconnue", info: "Piece disparue, memoire centrale pour Kinger.", lockedInfo: "Signal echecs disparu. Importance narrative non encore debloquee.", unlockAt: { episode: 8, subepisode: 1 } },
     SYSTEM: { color: "#39ff14", label: "System", info: "Signal technique CainOS : chargement, archive, protocole ou bruit de scene." },
     ARCHIVE: { color: "#8fbf8f", label: "Archive", info: "Indication de scene ou audio detectee dans la transcription." },
     CAST: { color: "#ffec8b", label: "Cast", info: "Dialogue attribue au groupe ou speaker ambigu dans la transcription." }
@@ -3021,6 +3021,32 @@ const EpisodeManager = {
       .toUpperCase();
   },
 
+  hasReachedLoreGate(gate) {
+    if (!gate) return true;
+    const progress = this.getProgress();
+    const episode = gate.episode;
+    const subepisode = Number.isInteger(gate.subepisode) ? gate.subepisode : null;
+
+    if (progress.includes(episode)) return true;
+
+    if (episode >= 0) {
+      for (let i = episode + 1; i <= 9; i++) {
+        if (progress.includes(i)) return true;
+      }
+      if (progress.includes(-1) || progress.includes(-2)) return true;
+    }
+
+    if (this.currentEpisode === episode) {
+      if (subepisode === null) return true;
+      const completed = this.getSubepisodeProgress(episode);
+      if (completed.some(index => index >= subepisode)) return true;
+      if (this.activeSubepisodeIndex !== null && this.activeSubepisodeIndex >= subepisode) return true;
+      if (this.selectedSubepisodeIndex > subepisode && completed.includes(subepisode)) return true;
+    }
+
+    return false;
+  },
+
   getStoryCharacterProfile(name) {
     const normalized = this.normalizeStorySpeakerName(name);
     const aliases = {
@@ -3036,7 +3062,12 @@ const EpisodeManager = {
       label: String(name || "Signal"),
       info: "Signal personnage detecte dans la transmission, fiche CainOS incomplete."
     };
-    return { key, ...profile };
+    const loreKnown = this.hasReachedLoreGate(profile.unlockAt);
+    const info = loreKnown
+      ? profile.info
+      : (profile.lockedInfo || "Information verrouillee : continuez les episodes pour identifier ce signal sans spoiler.");
+    const label = loreKnown ? profile.label : (profile.lockedLabel || profile.label);
+    return { key, ...profile, label, info, loreKnown };
   },
 
   getStorySceneSpeakers(line, displayLine) {
@@ -3090,9 +3121,10 @@ const EpisodeManager = {
       const pos = positions[index] || positions[0];
       const initials = profile.label.split(/\s+/).map(part => part[0]).join("").slice(0, 2).toUpperCase();
       const active = this.normalizeStorySpeakerName(name) === speakerKey ? " active-speaker" : "";
+      const locked = profile.loreKnown ? "" : " lore-locked";
       return `
         <button type="button"
-          class="story-dos-point${active}"
+          class="story-dos-point${active}${locked}"
           style="left:${pos.x}%;top:${pos.y}%;--char-color:${profile.color}"
           data-character="${this.escapeHTML(profile.key)}"
           title="${this.escapeHTML(`${profile.label}: ${profile.info}`)}"
@@ -3101,7 +3133,8 @@ const EpisodeManager = {
     }).join("");
 
     const activeProfile = this.getStoryCharacterProfile(displayLine?.speaker || speakers[0]);
-    status.innerText = `${activeProfile.label.toUpperCase()} // ${speakers.length} SIGNAL${speakers.length > 1 ? "S" : ""}`;
+    const lockLabel = activeProfile.loreKnown ? "INFO OK" : "INFO VERROUILLEE";
+    status.innerText = `${activeProfile.label.toUpperCase()} // ${speakers.length} SIGNAL${speakers.length > 1 ? "S" : ""} // ${lockLabel}`;
     tooltip.innerText = `${activeProfile.label}: ${activeProfile.info}`;
 
     map.querySelectorAll('.story-dos-point').forEach(point => {
