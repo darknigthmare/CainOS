@@ -1620,6 +1620,8 @@ const OS = {
       if (hit) {
         if (hit.kind === 'character') {
           this.talkToCircusCharacter(hit.sprite);
+        } else if (hit.kind === 'prop') {
+          this.inspectCircusProp(hit.prop);
         } else {
           state.selectedExitIndex = hit.index;
           this.enterCircusSimulationExit(hit.target);
@@ -1858,6 +1860,11 @@ const OS = {
         this.talkToCircusCharacter(character);
         return;
       }
+      const prop = this.getNearestCircusProp();
+      if (prop && prop.dist < 2.15 && Math.abs(prop.angle) < 0.55) {
+        this.inspectCircusProp(prop);
+        return;
+      }
       const door = this.getNearestUsableCircusDoor();
       this.enterCircusSimulationExit(door?.target ?? exits[state.selectedExitIndex]);
     } else if (key === 'arrowdown') {
@@ -1883,28 +1890,292 @@ const OS = {
     return best;
   },
 
+  getNearestCircusProp() {
+    const state = this.circusDoom;
+    if (!state) return null;
+    let best = null;
+    this.getCircusZoneProps(state.currentZoneId).forEach((prop, index) => {
+      const pos = this.resolveCircusWorldPoint(prop, state);
+      const dx = pos.x - state.player.x;
+      const dz = pos.z - state.player.z;
+      const dist = Math.hypot(dx, dz);
+      const angle = Math.atan2(dz, dx) - state.player.a;
+      const normalized = Math.atan2(Math.sin(angle), Math.cos(angle));
+      const score = dist + Math.abs(normalized) * 2.15;
+      if (!best || score < best.score) best = { ...prop, index, dist, angle: normalized, score };
+    });
+    return best;
+  },
+
+  inspectCircusProp(prop) {
+    const state = this.circusDoom;
+    if (!state || !prop) return;
+    state.interactionMessage = this.getCircusPropInteraction(prop, state.currentZoneId);
+    state.interactionUntil = performance.now() + 5600;
+    if (state.detailEl) state.detailEl.innerText = state.interactionMessage;
+    SoundManager.play(390, 0.07, 'square', 0.04);
+    setTimeout(() => SoundManager.play(585, 0.06, 'triangle', 0.035), 80);
+  },
+
+  getCircusPropInteraction(prop, zoneId) {
+    const name = this.getCircusPropName(prop, zoneId);
+    const lines = {
+      '2:ring': "La piste centrale agit comme point d'ancrage: toutes les aventures reviennent vers le chapiteau.",
+      '2:spotlight': "Les projecteurs suivent les avatars, pas les corps. CainOS detecte seulement des silhouettes numeriques.",
+      '2:pillar': "Pilier de chapiteau: structure stable, couleurs primaires, aucune sortie reelle dans la toile.",
+      '3:tent': "Vue exterieure du chapiteau: le decor boucle vers les aventures de Caine.",
+      '3:balloon': "Ballon de terrain: objet de fete banal, mais il sert de repere spatial dans la simulation.",
+      '4:crate': "Caisse du cellar: stockage de traces dangereuses. Le systeme evite de nommer Kaufmo trop tot.",
+      '4:eye': "Signal d'abstraction: les yeux ne sont pas un personnage actif, mais une menace archivee.",
+      '5:exitframe': "Cadre de sortie: prototype visuel. CainOS marque la porte comme espoir, pas comme preuve.",
+      '5:desk': "Bureau impossible: trace de l'illusion de sortie du pilote.",
+      '6:candy': "Relief bonbon: decor sucre, mais route fortement scriptée autour du convoi.",
+      '6:truck': "Camion-citerne: objet central du convoi. Les donnees NPC y collent plus que la physique.",
+      '7:console': "Console de test: couche technique ou les PNJ deviennent lisibles comme donnees.",
+      '7:gridnode': "Noeud de grille: raccourci de debug, pas un element visible pour les residents.",
+      '8:window': "Fenetre du manoir: ouverture vers la peur, pas vers l'exterieur.",
+      '8:table': "Table Mildenhall: point de scene ou les personnages sont forces de rester dans le role.",
+      '8:candle': "Bougie: elle stabilise la piece juste assez pour rendre l'horreur visible.",
+      '9:stairs': "Escalier du sous-sol: descente vers la memoire, avec moins de spectacle et plus de menace.",
+      '9:barrel': "Baril du sous-sol: decor secondaire, utile comme repere dans une zone sombre.",
+      '10:counter': "Comptoir Spudsy: transforme l'aventure en pression de service.",
+      '10:menu': "Menu Spudsy: interface de travail absurde, parfaite pour casser le masque de Gangle.",
+      '11:card': "Carte de suggestion: micro-aventure potentielle. Caine peut en faire une regle entiere.",
+      '12:base': "Base de softball: terrain de jeu fabrique, costume sportif, logique de match.",
+      '12:scoreboard': "Scoreboard: la simulation adore transformer le chaos en score lisible.",
+      '13:target': "Cible de l'arene: l'episode arme rend la tension plus directe, mais toujours simulee.",
+      '14:umbrella': "Parasol du lac: faux repos. Le decor promet une pause que Caine ne sait pas tenir.",
+      '14:wave': "Vague digitale: eau de simulation, comportement trop propre pour etre naturel.",
+      '14:sun': "Soleil du lac: PNJ ou menace selon le gag actif.",
+      '15:console': "Console admin: passerelle vers les questions de controle et les couches C&A.",
+      '15:gridnode': "Noeud admin: connecte le lac digital aux couches systeme plus profondes.",
+      '16:desk': "Bureau de Caine: la mise en scene devient administration pure.",
+      '16:console': "Console C&A: les traces techniques deviennent plus importantes que l'aventure.",
+      '16:eye': "Oeil de monitoring: CainOS observe la simulation comme un dossier, pas comme un monde.",
+      '17:memory': "Fragment memoire: zone a traiter comme archive emotionnelle, pas comme attraction.",
+      '18:spotlight': "Spot final: tout revient sur les avatars quand le systeme perd sa stabilite.",
+      '19:archive': "Cadre archive: membre repertorie, presence narrative verrouillee par la progression."
+    };
+    const key = `${zoneId}:${prop.kind}`;
+    const fallback = `${name}: objet de scene detecte. CainOS l'utilise comme repere interactif de la zone.`;
+    const profileKey = this.getCircusPropProfileKey(prop, zoneId);
+    const profileLine = profileKey ? this.getCircusProfileSummary(profileKey) : "";
+    const line = lines[key] || fallback;
+    return profileLine ? `SCAN ${name}: ${line} ${profileLine}` : `SCAN ${name}: ${line}`;
+  },
+
+  getCircusPropName(prop, zoneId) {
+    const names = {
+      pillar: "pilier",
+      ring: "piste",
+      spotlight: "projecteur",
+      tent: "chapiteau",
+      balloon: "ballon",
+      crate: "caisse",
+      eye: "oeil systeme",
+      exitframe: "cadre de sortie",
+      desk: zoneId === 16 ? "bureau de Caine" : "bureau",
+      candy: "relief bonbon",
+      truck: "camion citerne",
+      console: "console",
+      gridnode: "noeud grille",
+      window: "fenetre",
+      table: "table",
+      candle: "bougie",
+      stairs: "escalier",
+      barrel: "baril",
+      counter: "comptoir",
+      menu: "menu",
+      card: "carte suggestion",
+      base: "base",
+      scoreboard: "scoreboard",
+      target: "cible",
+      umbrella: "parasol",
+      wave: "vague",
+      sun: "soleil",
+      memory: "fragment memoire",
+      archive: "cadre archive"
+    };
+    return names[prop.kind] || prop.kind || "objet";
+  },
+
+  getCircusPropProfileKey(prop, zoneId) {
+    const zoneMap = {
+      '2:ring': 'CAINE',
+      '4:eye': 'KAUFMO',
+      '5:exitframe': 'POMNI',
+      '6:truck': 'GUMMIGOO',
+      '7:console': 'GUMMIGOO',
+      '8:window': 'BARON_MILDENHALL',
+      '8:candle': 'GHOSTLY',
+      '10:counter': 'GANGLE',
+      '10:menu': 'TRAINING_VIDEO',
+      '11:card': 'INTERMISSION_VOICE',
+      '12:scoreboard': 'COMMITTEE_MEMBER',
+      '13:target': 'JAX',
+      '14:umbrella': 'SUN_NPC',
+      '14:sun': 'SUN_NPC',
+      '15:console': 'CHINESE_ROOM_NPC',
+      '16:desk': 'CAINE',
+      '16:console': 'ABEL',
+      '16:eye': 'ABEL',
+      '17:memory': 'QUEENIE',
+      '18:spotlight': 'ABIGAIL',
+      '19:archive': 'RIBBIT'
+    };
+    return zoneMap[`${zoneId}:${prop.kind}`] || null;
+  },
+
   talkToCircusCharacter(sprite) {
     const state = this.circusDoom;
     if (!state || !sprite) return;
-    const lines = {
-      pomni: "Pomni: Je cherche encore une sortie, mais au moins cette fois les portes existent vraiment.",
-      ragatha: "Ragatha: Reste calme. Les couloirs changent, mais on peut suivre les portes une par une.",
-      jax: "Jax: Super. Un labyrinthe en plus. Caine adore vraiment compliquer les choses.",
-      kinger: "Kinger: Les pieces ont une structure. Les couloirs cachent souvent la vraie memoire.",
-      gangle: "Gangle: Si mon masque tient, je peux peut-etre guider le chemin...",
-      zooble: "Zooble: Je deteste les aventures forcees, mais cette interface est au moins praticable.",
-      caine: "Caine: Bienvenue dans une experience immersive entierement sure, probablement!",
-      bubble: "Bubble: Porte! Porte! Porte!",
-      gummigoo: "Gummigoo: Ces portes ressemblent a des raccourcis de donnees. Pas tres naturel, hein?",
-      abstract: "Kaufmo: ...",
-      ghost: "Fantome: La lumiere te voit aussi.",
-      mannequin: "Abel: Les traces C&A ne devraient pas etre ici.",
-      npc: "Archive: Signal secondaire indexe."
-    };
-    state.interactionMessage = lines[sprite.type] || `${sprite.name}: Signal detecte.`;
-    state.interactionUntil = performance.now() + 4200;
+    state.interactionMessage = this.getCircusCharacterInteraction(sprite, state.currentZoneId);
+    state.interactionUntil = performance.now() + 5600;
     if (state.detailEl) state.detailEl.innerText = state.interactionMessage;
     SoundManager.play(520, 0.08, 'triangle', 0.05);
+  },
+
+  getCircusCharacterInteraction(sprite, zoneId) {
+    const avatar = sprite.avatar || sprite.type;
+    const zoneLines = {
+      pomni: {
+        2: "Pomni: Le chapiteau est stable, mais chaque porte ressemble encore a une fausse promesse.",
+        4: "Pomni: Je reconnais trop bien cette pression. Kaufmo n'est pas une porte de sortie.",
+        6: "Pomni: Le canyon a l'air ouvert, mais les murs de donnees reviennent toujours.",
+        8: "Pomni: Le manoir force les souvenirs a remonter. Je prefere rester pres de Kinger.",
+        10: "Pomni: Les commandes vont trop vite. Gangle tient a peine le rythme.",
+        14: "Pomni: Le lac fait semblant d'etre calme. Caine fait toujours semblant.",
+        18: "Pomni: Si tout perd ses couleurs, au moins on peut encore se retrouver ici."
+      },
+      caine: {
+        2: "Caine: Une scene praticable, des portes splendides, et aucune garantie de sortie!",
+        16: "Caine: Le coeur C&A est un local technique, pas une salle de pause pour sujets curieux.",
+        18: "Caine: Le spectacle continue tant que le systeme peut encore sourire."
+      },
+      bubble: {
+        2: "Bubble: Je vote pour la porte la plus brillante!",
+        10: "Bubble: Commande supplementaire! Mauvaise idee supplementaire!"
+      },
+      jax: {
+        2: "Jax: Si une porte est verrouillee, c'est probablement la seule interessante.",
+        14: "Jax: Version chasseur, meme probleme: Caine appelle ca des vacances.",
+        18: "Jax: Le final dramatique, c'est vraiment pas mon style."
+      },
+      ragatha: {
+        2: "Ragatha: Avance doucement. Les salles changent moins vite si on garde un repere.",
+        8: "Ragatha: Le manoir n'est pas juste un decor. Il appuie sur les failles.",
+        18: "Ragatha: Meme quand la scene casse, le groupe doit rester ensemble."
+      },
+      kinger: {
+        2: "Kinger: Les murs ont une memoire. Les portes aussi, malheureusement.",
+        8: "Kinger: Les pieces sombres protegent parfois mieux les souvenirs.",
+        17: "Kinger: Ce buffer n'est pas un puzzle. C'est une cicatrice rangee par le systeme."
+      },
+      gangle: {
+        2: "Gangle: Tant que mon masque tient, je peux te dire quelle porte a l'air moins terrible.",
+        10: "Gangle: Spudsy transforme tout en service client, meme la panique.",
+        14: "Gangle: La plage est jolie, mais mon signal n'aime pas le soleil."
+      },
+      zooble: {
+        2: "Zooble: Caine appelle ca immersion. Moi j'appelle ca etre enferme avec style.",
+        11: "Zooble: Les micro-aventures sont juste des problemes plus courts.",
+        18: "Zooble: Si ce monde s'effondre, je veux au moins choisir ma posture."
+      },
+      gummigoo: {
+        6: "Gummigoo: Le canyon a des bords. Les souvenirs, eux, ont l'air fabriques.",
+        7: "Gummigoo: Cette couche de test me fait comprendre trop de choses."
+      },
+      max: {
+        6: "Max: Si la route se repete, c'est peut-etre parce qu'on n'est pas la pour aller quelque part."
+      },
+      horrorghost: {
+        8: "Fantome: La lumiere ne chasse pas la peur. Elle la nomme."
+      },
+      kaufmo: {
+        4: "Kaufmo Archive: signal abstrait. Conversation impossible, danger reel."
+      },
+      abelmannequin: {
+        16: "Abel: Les couches C&A n'ont pas ete construites pour etre visitees par des avatars."
+      },
+      ribbit: {
+        19: "Ribbit Archive: profil conserve comme trace de membre disparu."
+      },
+      wormo: {
+        19: "Wormo Archive: signal ancien indexe dans les membres du cirque."
+      },
+      scratch: {
+        19: "Scratch Archive: premier bruit d'abstraction classe par CainOS."
+      }
+    };
+    const defaultLines = {
+      pomni: "Pomni: Je cherche encore une sortie, mais je peux au moins te suivre.",
+      caine: "Caine: Bienvenue dans une experience immersive entierement sure, probablement!",
+      bubble: "Bubble: Porte! Porte! Porte!",
+      ragatha: "Ragatha: On reste calme et on observe la scene.",
+      jax: "Jax: Super. Une interface qui donne envie de toucher a tout.",
+      kinger: "Kinger: Les pieces ont une structure, meme quand elles mentent.",
+      gangle: "Gangle: Je peux essayer d'aider si rien ne casse.",
+      zooble: "Zooble: Cette zone est praticable, ce qui est deja suspect.",
+      gummigoo: "Gummigoo: Ces murs ressemblent a des donnees habillees en decor.",
+      kaufmo: "Kaufmo Archive: ...",
+      horrorghost: "Fantome: Le signal te regarde aussi.",
+      abelmannequin: "Abel: Trace C&A detectee.",
+      ribbit: "Ribbit Archive: signal secondaire.",
+      wormo: "Wormo Archive: signal secondaire.",
+      scratch: "Scratch Archive: signal secondaire."
+    };
+    const line = zoneLines[avatar]?.[zoneId] || defaultLines[avatar] || `${sprite.name}: Signal detecte.`;
+    const profileKey = this.getCircusCharacterProfileKey(sprite);
+    const profileLine = profileKey ? this.getCircusProfileSummary(profileKey) : "";
+    return profileLine ? `${line} ${profileLine}` : line;
+  },
+
+  getCircusCharacterProfileKey(sprite) {
+    const key = sprite.avatar || sprite.type || "";
+    const map = {
+      pomni: "POMNI",
+      caine: "CAINE",
+      bubble: "BUBBLE",
+      ragatha: "RAGATHA",
+      jax: "JAX",
+      kinger: "KINGER",
+      gangle: "GANGLE",
+      zooble: "ZOOBLE",
+      kaufmo: "KAUFMO",
+      gummigoo: "GUMMIGOO",
+      max: "MAX",
+      horrorghost: "GHOSTLY",
+      abelmannequin: "ABEL",
+      abel: "ABEL",
+      ribbit: "RIBBIT",
+      wormo: "WORMO",
+      scratch: "SCRATCH"
+    };
+    return map[key] || null;
+  },
+
+  getCircusProfileSummary(profileKey) {
+    const profile = (typeof EpisodeManager !== 'undefined') ? EpisodeManager.storyCharacterProfiles?.[profileKey] : null;
+    if (!profile) return "";
+    const known = this.hasCircusLoreGate(profile.unlockAt);
+    const label = known ? (profile.label || profileKey) : (profile.lockedLabel || "Signal verrouille");
+    const info = known
+      ? (profile.info || "Profil CainOS disponible.")
+      : (profile.lockedInfo || "Information verrouillee: continuez les episodes pour eviter les spoilers.");
+    return `[${known ? "INFO OK" : "INFO VERROUILLEE"} - ${label}] ${info}`;
+  },
+
+  hasCircusLoreGate(gate) {
+    if (!gate) return true;
+    if (typeof EpisodeManager !== 'undefined' && typeof EpisodeManager.hasReachedLoreGate === 'function') {
+      return EpisodeManager.hasReachedLoreGate(gate);
+    }
+    const progress = (typeof EpisodeManager !== 'undefined') ? EpisodeManager.getProgress() : [];
+    if (progress.includes(gate.episode)) return true;
+    for (let i = (gate.episode || 0) + 1; i <= 9; i++) {
+      if (progress.includes(i)) return true;
+    }
+    return false;
   },
 
   getNearestUsableCircusDoor() {
@@ -2462,7 +2733,48 @@ const OS = {
       .map(prop => ({ ...prop, projected: this.projectCircusPoint(prop, state, w, h) }))
       .filter(prop => prop.projected)
       .sort((a, b) => b.projected.depth - a.projected.depth);
-    props.forEach(prop => this.drawCircusProp(ctx, prop, w, h));
+    props.forEach(prop => {
+      this.addCircusPropHotspot(state, prop);
+      this.drawCircusProp(ctx, prop, w, h);
+    });
+  },
+
+  addCircusPropHotspot(state, prop) {
+    if (!state || !prop.projected) return;
+    const box = this.getCircusPropScreenBox(prop);
+    state.hotspots.push({
+      kind: 'prop',
+      prop,
+      x: box.x,
+      y: box.y,
+      w: box.w,
+      h: box.h,
+      depth: prop.projected.depth
+    });
+  },
+
+  getCircusPropScreenBox(prop) {
+    const p = prop.projected;
+    const s = Math.max(0.25, p.scale);
+    const wideKinds = new Set(['ring', 'counter', 'truck', 'scoreboard', 'table', 'desk', 'exitframe']);
+    const tallKinds = new Set(['pillar', 'tent', 'spotlight', 'umbrella', 'window', 'archive', 'console']);
+    const smallKinds = new Set(['candle', 'balloon', 'eye', 'sun', 'base', 'target', 'memory']);
+    let width = 82 * s;
+    let height = 86 * s;
+    if (wideKinds.has(prop.kind)) width = 122 * s;
+    if (tallKinds.has(prop.kind)) height = 126 * s;
+    if (smallKinds.has(prop.kind)) {
+      width = 62 * s;
+      height = 78 * s;
+    }
+    width = Math.max(22, width);
+    height = Math.max(28, height);
+    return {
+      x: p.x - width / 2,
+      y: (p.y || 0) - height,
+      w: width,
+      h: height
+    };
   },
 
   drawCircusProp(ctx, prop, w, h) {
@@ -2585,6 +2897,22 @@ const OS = {
       ctx.moveTo(0, -52 * s);
       ctx.lineTo(0, -8 * s);
       ctx.stroke();
+    }
+    if (p.depth < 6.2) {
+      ctx.globalAlpha = 0.86;
+      ctx.fillStyle = '#fff1a8';
+      ctx.strokeStyle = '#05020d';
+      ctx.lineWidth = Math.max(1, 1.5 * s);
+      const markerY = -Math.max(50, 96 * s);
+      ctx.beginPath();
+      ctx.arc(0, markerY, Math.max(4, 7 * s), 0, Math.PI * 2);
+      ctx.fill();
+      ctx.stroke();
+      ctx.fillStyle = '#05020d';
+      ctx.font = `bold ${Math.max(6, 9 * s)}px Courier New`;
+      ctx.textAlign = 'center';
+      ctx.fillText('i', 0, markerY + Math.max(2, 3 * s));
+      ctx.globalAlpha = 1;
     }
     ctx.restore();
   },
