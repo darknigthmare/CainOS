@@ -913,6 +913,14 @@ body {
   line-height: 1.2;
 }
 
+.subepisode-context {
+  color: #7df0ff;
+  font-size: 9px;
+  line-height: 1.2;
+  margin-top: 1px;
+  text-transform: uppercase;
+}
+
 .subepisode-objective {
   color: #a9d6a9;
   font-size: 9.5px;
@@ -1813,6 +1821,19 @@ body {
   background-color: #cc0000;
   color: #fff;
   font-weight: bold;
+}
+
+.cast-item.cast-archive {
+  border-bottom-style: dashed;
+  color: #c8c8c8;
+}
+
+.cast-item.cast-variante {
+  color: #f5d77a;
+}
+
+.cast-item.cast-pnj-decor {
+  color: #8fe8ff;
 }
 
 .cast-pixel-icon {

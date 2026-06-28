@@ -7013,6 +7013,7 @@ const EpisodeManager = {
         <div class="subepisode-index">${String(index + 1).padStart(2, '0')}</div>
         <div>
           <div class="subepisode-name">${this.escapeHTML(segment.title)} <span class="subepisode-state">${state}</span></div>
+          <div class="subepisode-context">${this.escapeHTML(segment.context || "SCENE ACTIVE")}</div>
           <div class="subepisode-objective">${this.escapeHTML(segment.objective)}</div>
         </div>
       </button>
@@ -7076,11 +7077,22 @@ const EpisodeManager = {
         ...checkpoint,
         index,
         totalParts: checkpoints.length,
+        context: this.getSubepisodeLoreLayer(checkpoint),
         start,
         end,
         localAfter: end - start
       };
     }).filter(segment => segment.localAfter > 0);
+  },
+
+  getSubepisodeLoreLayer(checkpoint) {
+    const signal = `${checkpoint.title || ""} ${checkpoint.objective || ""} ${checkpoint.target || ""} ${checkpoint.hazard || ""}`.toUpperCase();
+    if (signal.includes("C&A") || signal.includes("ABEL") || signal.includes("PASS") || signal.includes("CODE") || signal.includes("LOCK")) return "ARCHIVE C&A";
+    if (signal.includes("QUEENIE") || signal.includes("MEMORY") || signal.includes("SOUVENIR") || signal.includes("RIBBIT")) return "MEMOIRE / ARCHIVE";
+    if (signal.includes("GUMMIGOO") || signal.includes("NPC") || signal.includes("SPUDSY") || signal.includes("KINGDOM") || signal.includes("GLOINK") || signal.includes("FUDGE")) return "PNJ / AVENTURE";
+    if (signal.includes("GHOST") || signal.includes("HORROR") || signal.includes("BEAST") || signal.includes("DARK")) return "ANOMALIE HORREUR";
+    if (signal.includes("POMNI") || signal.includes("JAX") || signal.includes("RAGATHA") || signal.includes("GANGLE") || signal.includes("KINGER") || signal.includes("ZOOBLE")) return "RESIDENTS DU CIRQUE";
+    return "SCENE ACTIVE";
   },
 
   getNextPlayableSubepisodeIndex(num) {
@@ -7981,7 +7993,7 @@ class StoryMicroGame {
 
   prepare() {
     this.titleEl.innerText = this.config.title;
-    this.subtitleEl.innerText = `[SOUS-EPISODE ${this.config.part}/${this.config.totalParts} // ${this.config.mode.toUpperCase()}]`;
+    this.subtitleEl.innerText = `[SOUS-EPISODE ${this.config.part}/${this.config.totalParts} // ${this.config.mode.toUpperCase()} // ${this.config.context || "SCENE ACTIVE"}]`;
     this.objectiveEl.innerText = this.config.objective;
     this.actionBtn.disabled = false;
     this.actionBtn.innerText = "INITIALISER";

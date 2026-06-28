@@ -1745,7 +1745,7 @@ const OS = {
       }
 
       const fullCastData = this.getFilteredWackyCastData();
-      const character = castData[this.activeWackyCast] || fullCastData[this.activeWackyCast];
+      const character = fullCastData[this.activeWackyCast];
       if (character) {
         const facts = character.facts;
         const curFact = document.getElementById('watch-profile-fact').innerText;
@@ -1801,8 +1801,8 @@ const OS = {
         "Prie secretement pour que Caine fasse une mise a jour corrective."
       ]},
       kinger: { name: "Kinger", age: "48", stress: "98%", avatar: "kinger", signal: "K", color: "#ffffdd", facts: [
-        "Son epouse Helen, alias Queenie, s est abstraite sous ses yeux.",
-        "Est l humain connecte depuis le plus longtemps selon CainOS.",
+        "CainOS detecte une anciennete anormale et des trous memoire non resolus.",
+        "Est l un des signaux residents les plus anciens du Cirque.",
         "Collectionne des insectes virtuels imaginaires dans un seau."
       ]},
       queenie: { name: "Queenie", age: "Archive", stress: "ERR", avatar: "queenie", signal: "Q", color: "#f7eecb", facts: [
@@ -2259,10 +2259,7 @@ const OS = {
         "kinger", "queenie", "caine", "abel", "abelmannequin", "abelfullbody", "shadowkinger"
       ],
       0: [
-        "pomni", "caine", "bubble", "jax", "ragatha", "kinger", "queenie", "gangle", "zooble", "kaufmo",
-        "gloinkqueen", "gloinkqueenscale", "gloinkstar", "gloinkcube", "gloinkpyramid", "gloinkcrescent", "gloinkpin", "gloinkround",
-        "mannequin", "additionalvoices", "ming", "themachine",
-        "ribbit", "scratch", "wormo", "bizco", "rattie", "spike", "pinkcyclops", "yellowclown", "oyster", "bulbcreature"
+        "mannequin", "themachine"
       ],
       1: [
         "pomni", "caine", "bubble", "jax", "ragatha", "kinger", "gangle", "zooble", "kaufmo",
@@ -2307,23 +2304,142 @@ const OS = {
     return episodeCastMap[key] || null;
   },
 
+  getWackyProfileGate(id) {
+    const gates = {
+      pomni: { episode: 1, subepisode: 0 },
+      caine: { episode: 1, subepisode: 0 },
+      bubble: { episode: 1, subepisode: 0 },
+      jax: { episode: 1, subepisode: 0 },
+      ragatha: { episode: 1, subepisode: 0 },
+      kinger: { episode: 1, subepisode: 0 },
+      gangle: { episode: 1, subepisode: 0 },
+      zooble: { episode: 1, subepisode: 0 },
+      kaufmo: { episode: 1, subepisode: 5 },
+      gloinkqueen: { episode: 1, subepisode: 4 },
+      gloinkqueenscale: { episode: 1, subepisode: 4 },
+      gloinkstar: { episode: 1, subepisode: 4 },
+      gloinkcube: { episode: 1, subepisode: 4 },
+      gloinkpyramid: { episode: 1, subepisode: 4 },
+      gloinkcrescent: { episode: 1, subepisode: 4 },
+      gloinkpin: { episode: 1, subepisode: 4 },
+      gloinkround: { episode: 1, subepisode: 4 },
+      gummigoo: { episode: 2, subepisode: 3 },
+      max: { episode: 2, subepisode: 3 },
+      chad: { episode: 2, subepisode: 3 },
+      loolilalu: { episode: 2, subepisode: 1 },
+      fudge: { episode: 2, subepisode: 6 },
+      horrorghost: { episode: 3, subepisode: 1 },
+      horrormonster: { episode: 3, subepisode: 2 },
+      horrorpomnivoid: { episode: 3, subepisode: 5 },
+      horrorpomnispiral: { episode: 3, subepisode: 5 },
+      horrorpomniskull: { episode: 3, subepisode: 5 },
+      maxspudsy: { episode: 4, subepisode: 4 },
+      orbsman: { episode: 5, subepisode: 6 },
+      evilorbsman: { episode: 5, subepisode: 6 },
+      evilpomni: { episode: 5, subepisode: 6 },
+      eviljax: { episode: 5, subepisode: 6 },
+      evilragatha: { episode: 5, subepisode: 6 },
+      evilkinger: { episode: 5, subepisode: 6 },
+      evilzooble: { episode: 5, subepisode: 6 },
+      ming: { episode: 6, subepisode: 7 },
+      beachgangle: { episode: 7, subepisode: 1 },
+      hunterjax: { episode: 7, subepisode: 1 },
+      abel: { episode: 7, subepisode: 3 },
+      abelmannequin: { episode: 7, subepisode: 3 },
+      abelfullbody: { episode: 7, subepisode: 3 },
+      queenie: { episode: 8, subepisode: 1 },
+      scratch: { episode: 8, subepisode: 5 },
+      ribbit: { episode: 9, subepisode: 2 },
+      wormo: { episode: 9, subepisode: 2 },
+      bizco: { episode: 9, subepisode: 2 },
+      rattie: { episode: 9, subepisode: 2 },
+      spike: { episode: 9, subepisode: 2 },
+      pinkcyclops: { episode: 9, subepisode: 2 },
+      yellowclown: { episode: 9, subepisode: 2 },
+      oyster: { episode: 9, subepisode: 2 },
+      bulbcreature: { episode: 9, subepisode: 2 }
+    };
+
+    if (id.includes("baseball") || id.includes("rivalbaseball")) return { episode: 6, subepisode: 1 };
+    if (id.startsWith("shadow")) return { episode: 3, subepisode: 1 };
+    if (id.startsWith("japanese")) return { episode: 3, subepisode: 0 };
+    if (id.includes("gangle") && (id.includes("kawaii") || id.includes("comedy") || id.includes("tragedy"))) return { episode: 4, subepisode: 0 };
+    if (id.includes("maid") || id.includes("jaxgirl") || id.includes("darkduo")) return { episode: 4, subepisode: 0 };
+    if (id.startsWith("gloink")) return { episode: 1, subepisode: 4 };
+    return gates[id] || null;
+  },
+
+  getWackyProfileStatus(id) {
+    const archiveIds = new Set([
+      'kaufmo', 'queenie', 'ribbit', 'scratch', 'wormo', 'bizco', 'rattie', 'spike',
+      'pinkcyclops', 'yellowclown', 'oyster', 'bulbcreature', 'abel', 'abelmannequin', 'abelfullbody'
+    ]);
+    const variantSignals = ['evil', 'shadow', 'maid', 'japanese', 'baseball', 'rivalbaseball', 'darkduo', 'kawaii', 'comedy', 'tragedy', 'hunter', 'beach', 'rhino', 'work', 'jaxgirl'];
+    if (archiveIds.has(id)) return "ARCHIVE";
+    if (variantSignals.some(token => id.includes(token))) return "VARIANTE";
+    if (id.startsWith("gloink") || ['gummigoo', 'max', 'chad', 'loolilalu', 'fudge', 'orbsman', 'ming', 'mannequin', 'additionalvoices', 'themachine', 'sun', 'moon'].includes(id)) return "PNJ / DECOR";
+    return "ACTIF";
+  },
+
+  isWackyProfileUnlocked(id) {
+    const gate = this.getWackyProfileGate(id);
+    if (!gate) return true;
+    if (typeof EpisodeManager !== 'undefined' && typeof EpisodeManager.hasReachedLoreGate === 'function') {
+      return EpisodeManager.hasReachedLoreGate(gate);
+    }
+    const progress = (typeof EpisodeManager !== 'undefined') ? EpisodeManager.getProgress() : [];
+    return progress.includes(gate.episode);
+  },
+
   getFilteredWackyCastData() {
     const allCastData = this.getWackyCastData();
     const episodeNum = (typeof EpisodeManager !== 'undefined') ? EpisodeManager.currentEpisode : null;
     const episodeKeys = this.getEpisodeCastKeys(episodeNum);
 
     if (!episodeKeys) {
-      return allCastData;
+      const unlockedData = {};
+      Object.keys(allCastData).forEach(key => {
+        if (this.isWackyProfileUnlocked(key)) {
+          unlockedData[key] = {
+            ...allCastData[key],
+            status: this.getWackyProfileStatus(key)
+          };
+        }
+      });
+      if (Object.keys(unlockedData).length) return unlockedData;
+      const fallback = {};
+      ['mannequin', 'themachine'].forEach(key => {
+        if (allCastData[key]) {
+          fallback[key] = {
+            ...allCastData[key],
+            status: this.getWackyProfileStatus(key)
+          };
+        }
+      });
+      return fallback;
     }
 
     const filteredCastData = {};
     episodeKeys.forEach(key => {
-      if (allCastData[key]) {
-        filteredCastData[key] = allCastData[key];
+      if (allCastData[key] && this.isWackyProfileUnlocked(key)) {
+        filteredCastData[key] = {
+          ...allCastData[key],
+          status: this.getWackyProfileStatus(key)
+        };
       }
     });
 
-    return Object.keys(filteredCastData).length ? filteredCastData : allCastData;
+    if (Object.keys(filteredCastData).length) return filteredCastData;
+    const fallback = {};
+    ['mannequin', 'themachine'].forEach(key => {
+      if (allCastData[key]) {
+        fallback[key] = {
+          ...allCastData[key],
+          status: this.getWackyProfileStatus(key)
+        };
+      }
+    });
+    return fallback;
   },
 
   updateWackyWatchCastUI() {
@@ -2382,7 +2498,8 @@ const OS = {
       // Populate list
       for (let id in castData) {
         const item = document.createElement('div');
-        item.className = `cast-item ${id === this.activeWackyCast ? 'active' : ''}`;
+        const statusClass = `cast-${String(castData[id].status || 'ACTIF').toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
+        item.className = `cast-item ${statusClass} ${id === this.activeWackyCast ? 'active' : ''}`;
         item.innerHTML = `<span class="cast-pixel-icon">${this.getPixelAvatarSvg(castData[id].avatar, 16)}</span> ${castData[id].name}`;
         
         item.addEventListener('click', () => {
@@ -2580,6 +2697,8 @@ const OS = {
 
   loadWackyProfile(char) {
     document.getElementById('watch-profile-name').innerText = char.name;
+    const statusEl = document.getElementById('watch-profile-status');
+    if (statusEl) statusEl.innerText = char.status || "ACTIF";
     document.getElementById('watch-profile-age').innerText = char.age;
     document.getElementById('watch-profile-stress').innerText = char.stress;
     document.getElementById('watch-profile-fact').innerText = char.facts[0];
