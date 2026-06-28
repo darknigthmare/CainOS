@@ -1709,6 +1709,7 @@ body {
   background: #060606;
   border: 1px solid #333;
   image-rendering: pixelated;
+  overflow: hidden;
 }
 
 .pixel-avatar-svg {
@@ -1859,10 +1860,6 @@ body {
   image-rendering: pixelated;
 }
 
-.cast-pixel-icon .pixel-sheet-avatar-gloink-queen-scale {
-  width: var(--avatar-size);
-}
-
 .pixel-sheet-avatar-abel {
   --avatar-size: 46px;
   display: block;
@@ -1905,6 +1902,50 @@ body {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   image-rendering: pixelated;
+}
+
+.pixel-sheet-avatar,
+.pixel-sheet-avatar-abstracted,
+.pixel-sheet-avatar-variants,
+.pixel-sheet-avatar-requested,
+.pixel-sheet-avatar-extra,
+.pixel-sheet-avatar-japanese,
+.pixel-sheet-avatar-baseball,
+.pixel-sheet-avatar-rival-baseball,
+.pixel-sheet-avatar-shadow,
+.pixel-sheet-avatar-horror,
+.pixel-sheet-avatar-hunter,
+.pixel-sheet-avatar-gloinks,
+.pixel-sheet-avatar-gloink-queen-scale,
+.pixel-sheet-avatar-abel,
+.pixel-sheet-avatar-additional-voices,
+.pixel-sheet-avatar-the-machine,
+.pixel-sheet-avatar-ming,
+.pixel-avatar-svg {
+  flex: 0 0 auto;
+  margin: auto;
+}
+
+.pixel-sheet-avatar { --avatar-ratio: 0.75; width: calc(var(--avatar-size) * var(--avatar-ratio)); height: var(--avatar-size); }
+.pixel-sheet-avatar-abstracted { --avatar-ratio: 0.6; width: calc(var(--avatar-size) * var(--avatar-ratio)); height: var(--avatar-size); }
+.pixel-sheet-avatar-variants { --avatar-ratio: 1.125; width: calc(var(--avatar-size) * var(--avatar-ratio)); height: var(--avatar-size); }
+.pixel-sheet-avatar-requested { --avatar-ratio: 0.5; width: calc(var(--avatar-size) * var(--avatar-ratio)); height: var(--avatar-size); }
+.pixel-sheet-avatar-extra { --avatar-ratio: 0.75; width: calc(var(--avatar-size) * var(--avatar-ratio)); height: var(--avatar-size); }
+.pixel-sheet-avatar-japanese { --avatar-ratio: 0.6; width: calc(var(--avatar-size) * var(--avatar-ratio)); height: var(--avatar-size); }
+.pixel-sheet-avatar-baseball { --avatar-ratio: 0.5; width: calc(var(--avatar-size) * var(--avatar-ratio)); height: var(--avatar-size); }
+.pixel-sheet-avatar-rival-baseball { --avatar-ratio: 0.5; width: calc(var(--avatar-size) * var(--avatar-ratio)); height: var(--avatar-size); }
+.pixel-sheet-avatar-shadow { --avatar-ratio: 0.417; width: calc(var(--avatar-size) * var(--avatar-ratio)); height: var(--avatar-size); }
+.pixel-sheet-avatar-horror { --avatar-ratio: 0.6; width: calc(var(--avatar-size) * var(--avatar-ratio)); height: var(--avatar-size); }
+.pixel-sheet-avatar-hunter { --avatar-ratio: 0.667; width: calc(var(--avatar-size) * var(--avatar-ratio)); height: var(--avatar-size); }
+.pixel-sheet-avatar-gloinks { --avatar-ratio: 0.5; width: calc(var(--avatar-size) * var(--avatar-ratio)); height: var(--avatar-size); }
+.pixel-sheet-avatar-gloink-queen-scale { --avatar-ratio: 2.586; width: calc(var(--avatar-size) * var(--avatar-ratio)); height: var(--avatar-size); }
+.pixel-sheet-avatar-abel { --avatar-ratio: 1; width: calc(var(--avatar-size) * var(--avatar-ratio)); height: var(--avatar-size); }
+.pixel-sheet-avatar-additional-voices { --avatar-ratio: 0.75; width: calc(var(--avatar-size) * var(--avatar-ratio)); height: var(--avatar-size); }
+.pixel-sheet-avatar-the-machine { --avatar-ratio: 0.914; width: calc(var(--avatar-size) * var(--avatar-ratio)); height: var(--avatar-size); }
+.pixel-sheet-avatar-ming { --avatar-ratio: 0.667; width: calc(var(--avatar-size) * var(--avatar-ratio)); height: var(--avatar-size); }
+
+.cast-pixel-icon .pixel-sheet-avatar-gloink-queen-scale {
+  --avatar-size: 6px !important;
 }
 
 .avatar-c0-r0 { background-position: 0% 0%; }
@@ -2026,8 +2067,8 @@ body {
 }
 
 .profile-avatar {
-  width: 50px;
-  height: 50px;
+  width: 76px;
+  height: 76px;
   border: 2px solid #cc0000;
   background-color: #222;
   image-rendering: pixelated;
@@ -2035,11 +2076,24 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 4px;
 }
 
 .profile-avatar.profile-avatar-wide {
-  width: 136px;
-  height: 56px;
+  width: 208px;
+  height: 92px;
+}
+
+.profile-avatar.profile-avatar-tall {
+  width: 86px;
+  height: 92px;
+}
+
+.profile-avatar > * {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .profile-meta h3 {

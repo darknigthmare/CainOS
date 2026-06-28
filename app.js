@@ -2398,10 +2398,28 @@ const OS = {
     document.getElementById('watch-profile-stress').innerText = char.stress;
     document.getElementById('watch-profile-fact').innerText = char.facts[0];
     
-    // Draw simple avatar SVG inside #watch-profile-avatar
     const container = document.getElementById('watch-profile-avatar');
-    container.classList.toggle('profile-avatar-wide', char.avatar === 'gloinkqueenscale');
-    container.innerHTML = this.getPixelAvatarSvg(char.avatar, 46);
+    const bossAvatars = new Set(['gloinkqueenscale']);
+    const tallAvatars = new Set([
+      'ming', 'additionalvoices', 'themachine', 'hunterjax',
+      'darkduojax', 'darkduogangle', 'maidjax', 'maidragatha', 'maidpomni',
+      'maidgangle', 'jaxgirl', 'beachgangle', 'japanesegangle', 'rhinogangle',
+      'workgangle', 'japanesejax', 'japaneseragatha', 'japanesepomni',
+      'japanesekinger', 'japanesezooble', 'japanesegummigoo',
+      'baseballjax', 'baseballzooble', 'baseballgangle', 'baseballragatha',
+      'baseballpomni', 'baseballkinger', 'rivalbaseballzooble',
+      'rivalbaseballpomni', 'rivalbaseballpinkgiant', 'rivalbaseballragatha',
+      'rivalbaseballjax', 'rivalbaseballkinger', 'horrorghost',
+      'horrormonster', 'horrorpomnivoid', 'horrorpomnispiral', 'horrorpomniskull',
+      'gloinkstar', 'gloinkcube', 'gloinkpyramid', 'gloinkcrescent',
+      'gloinkpin', 'gloinkround'
+    ]);
+    const frameClass = bossAvatars.has(char.avatar)
+      ? 'profile-avatar profile-avatar-wide'
+      : (tallAvatars.has(char.avatar) ? 'profile-avatar profile-avatar-tall' : 'profile-avatar');
+    const avatarSize = bossAvatars.has(char.avatar) ? 72 : (tallAvatars.has(char.avatar) ? 68 : 62);
+    container.className = frameClass;
+    container.innerHTML = this.getPixelAvatarSvg(char.avatar, avatarSize);
     return;
     let svg = "";
     if (char.avatar === 'pomni') {
