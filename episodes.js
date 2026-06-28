@@ -8191,6 +8191,10 @@ class StoryMicroGame {
 
   seedPhaseState() {
     this.sequenceIndex = 0;
+    if (this.microPhase === 'simulation') {
+      this.seedSimulationGameState();
+      return;
+    }
     if (this.config.mode === 'sequence') {
       this.sequence = this.buildSequence();
     } else if (this.config.mode === 'repair') {
@@ -8302,6 +8306,11 @@ class StoryMicroGame {
     if (!this.running || this.completed) return;
     const pos = this.getCanvasPos(e);
 
+    if (this.microPhase === 'simulation') {
+      this.handleSimulationClick(pos);
+      return;
+    }
+
     if (this.config.mode === 'click') {
       this.handleTargetClick(pos);
     } else if (this.config.mode === 'repair') {
@@ -8405,6 +8414,18 @@ class StoryMicroGame {
     this.lastTick = now;
     this.timeLeft -= dt;
 
+    if (this.microPhase === 'simulation') {
+      this.updateSimulationGame(dt);
+      this.drawSimulationGame();
+      if (this.timeLeft <= 0) {
+        this.fail();
+        return;
+      }
+      this.updateStatus();
+      this.loopId = requestAnimationFrame(() => this.loop());
+      return;
+    }
+
     if (this.config.mode === 'click') {
       this.updateItems(dt);
       this.drawClickMode();
@@ -8489,6 +8510,155 @@ class StoryMicroGame {
     this.seedPhaseState();
     this.objectiveEl.innerText = this.getPhaseObjective();
     this.updateStatus();
+  }
+
+  seedSimulationGameState() {
+    const type = this.getSimulationSceneType();
+    this.simSceneType = type;
+    this.simSpawnTimer = 0;
+    this.simEntities = [];
+    this.simPlayer = {
+      x: type === 'restaurant' ? this.canvas.width / 2 : 86,
+      y: type === 'restaurant' ? this.canvas.height - 34 : this.canvas.height - 76,
+      w: type === 'truck' ? 62 : 34,
+      h: type === 'truck' ? 26 : 34
+    };
+    if (type === 'arena') {
+      for (let i = 0; i < 3; i++) this.spawnSimulationEntity();
+    } else {
+      for (let i = 0; i < 4; i++) this.spawnSimulationEntity(i * 70);
+    }
+  }
+
+  spawnSimulationEntity(offset = 0) {
+    const type = this.simSceneType || this.getSimulationSceneType();
+    const good = Math.random() > 0.32;
+    const base = { good, r: good ? 12 : 14, label: good ? this.config.target : this.config.hazard };
+    if (type === 'restaurant') {
+      this.simEntities.push({
+        ...base,
+        x: 28 + Math.random() * (this.canvas.width - 56),
+        y: -offset,
+        vx: 0,
+        vy: 82 + Math.random() * 70
+      });
+      return;
+    }
+    if (type === 'beach') {
+      this.simEntities.push({
+        ...base,
+        x: 24 + Math.random() * (this.canvas.width - 48),
+        y: -offset,
+        vx: 0,
+        vy: 95 + Math.random() * 85
+      });
+      return;
+    }
+    if (type === 'arena') {
+      this.simEntities.push({
+        ...base,
+        x: Math.random() < 0.5 ? -30 - offset : this.canvas.width + 30 + offset,
+        y: 78 + Math.random() * 128,
+        vx: (good ? 78 : 110) * (Math.random() < 0.5 ? 1 : -1),
+        vy: (Math.random() - 0.5) * 22
+      });
+      return;
+    }
+    if (type === 'manor' || type === 'memory' || type === 'office') {
+      this.simEntities.push({
+        ...base,
+        x: this.canvas.width + 28 + offset,
+        y: 70 + Math.random() * 150,
+        vx: -(70 + Math.random() * 60),
+        vy: (Math.random() - 0.5) * 34
+      });
+      return;
+    }
+    this.simEntities.push({
+      ...base,
+      x: this.canvas.width + 28 + offset,
+      y: 82 + Math.random() * 132,
+      vx: -(90 + Math.random() * 80),
+      vy: (Math.random() - 0.5) * 20
+    });
+  }
+
+  updateSimulationGame(dt) {
+    const type = this.simSceneType || this.getSimulationSceneType();
+    if (type === 'restaurant') {
+      this.simPlayer.x = Math.max(34, Math.min(this.canvas.width - 34, this.pointer.x));
+      this.simPlayer.y = this.canvas.height - 34;
+    } else if (type === 'beach') {
+      this.simPlayer.x = Math.max(40, Math.min(this.canvas.width - 40, this.pointer.x));
+      this.simPlayer.y = Math.max(80, Math.min(this.canvas.height - 42, this.pointer.y));
+    } else if (type === 'manor' || type === 'memory' || type === 'office') {
+      this.simPlayer.x = Math.max(46, Math.min(this.canvas.width - 46, this.pointer.x));
+      this.simPlayer.y = Math.max(70, Math.min(this.canvas.height - 38, this.pointer.y));
+    } else {
+      this.simPlayer.x = type === 'arena' ? this.simPlayer.x : 86;
+      this.simPlayer.y = Math.max(76, Math.min(this.canvas.height - 36, this.pointer.y));
+    }
+
+    this.simSpawnTimer += dt;
+    const spawnDelay = type === 'arena' ? 1.1 : 0.85;
+    if (this.simSpawnTimer >= spawnDelay) {
+      this.simSpawnTimer = 0;
+      this.spawnSimulationEntity();
+    }
+
+    this.simEntities.forEach(entity => {
+      entity.x += entity.vx * dt;
+      entity.y += entity.vy * dt;
+      if (type === 'arena' && (entity.y < 56 || entity.y > this.canvas.height - 38)) entity.vy *= -1;
+    });
+
+    if (type !== 'arena') {
+      for (let i = this.simEntities.length - 1; i >= 0; i--) {
+        const entity = this.simEntities[i];
+        const hit = Math.abs(entity.x - this.simPlayer.x) < this.simPlayer.w / 2 + entity.r &&
+          Math.abs(entity.y - this.simPlayer.y) < this.simPlayer.h / 2 + entity.r;
+        if (hit) {
+          if (entity.good) {
+            this.score++;
+            SoundManager.playClick();
+          } else {
+            this.timeLeft = Math.max(2, this.timeLeft - 2);
+            SoundManager.playError();
+          }
+          this.simEntities.splice(i, 1);
+          this.spawnSimulationEntity(80);
+          this.checkWin();
+        }
+      }
+    }
+
+    this.simEntities = this.simEntities.filter(entity => {
+      if (type === 'restaurant' || type === 'beach') return entity.y < this.canvas.height + 34;
+      return entity.x > -46 && entity.x < this.canvas.width + 46;
+    });
+  }
+
+  handleSimulationClick(pos) {
+    const type = this.simSceneType || this.getSimulationSceneType();
+    if (type !== 'arena' && type !== 'manor' && type !== 'office') return;
+    for (let i = this.simEntities.length - 1; i >= 0; i--) {
+      const entity = this.simEntities[i];
+      const dist = Math.hypot(pos.x - entity.x, pos.y - entity.y);
+      if (dist <= entity.r + 10) {
+        if (entity.good) {
+          this.score++;
+          SoundManager.playClick();
+        } else {
+          this.timeLeft = Math.max(2, this.timeLeft - 2);
+          SoundManager.playError();
+        }
+        this.simEntities.splice(i, 1);
+        this.spawnSimulationEntity(60);
+        this.checkWin();
+        this.updateStatus();
+        return;
+      }
+    }
   }
 
   fail() {
@@ -8930,6 +9100,64 @@ class StoryMicroGame {
     this.ctx.fill();
     this.ctx.strokeStyle = palette.accent;
     this.ctx.stroke();
+  }
+
+  drawSimulationGame() {
+    this.drawSimulationScene();
+    this.drawLegend();
+    const type = this.simSceneType || this.getSimulationSceneType();
+    const palette = this.getPhasePalette();
+
+    this.simEntities.forEach(entity => {
+      this.drawSimulationPickup(entity.x, entity.y, entity.r, entity.good ? palette.good : palette.bad, entity.label, entity.good);
+    });
+
+    if (type === 'truck') {
+      this.drawPixelTruck(this.simPlayer.x, this.simPlayer.y);
+    } else if (type === 'restaurant') {
+      this.drawPixelGangle(this.simPlayer.x, this.simPlayer.y);
+      this.ctx.fillStyle = '#742314';
+      this.ctx.fillRect(this.simPlayer.x - 32, this.simPlayer.y + 4, 64, 12);
+    } else if (type === 'beach') {
+      this.drawPixelUmbrella(this.simPlayer.x, this.simPlayer.y);
+    } else if (type === 'manor') {
+      this.ctx.fillStyle = 'rgba(183,240,255,0.28)';
+      this.ctx.beginPath();
+      this.ctx.moveTo(this.simPlayer.x, this.simPlayer.y);
+      this.ctx.lineTo(this.simPlayer.x + 120, this.simPlayer.y - 54);
+      this.ctx.lineTo(this.simPlayer.x + 120, this.simPlayer.y + 54);
+      this.ctx.closePath();
+      this.ctx.fill();
+      this.drawPixelPomni(this.simPlayer.x, this.simPlayer.y + 16);
+    } else if (type === 'arena') {
+      this.drawPixelJax(86, this.canvas.height - 68);
+      this.ctx.fillStyle = '#ffffff';
+      this.ctx.fillRect(this.pointer.x - 10, this.pointer.y - 1, 20, 2);
+      this.ctx.fillRect(this.pointer.x - 1, this.pointer.y - 10, 2, 20);
+    } else if (type === 'memory') {
+      this.drawPixelKinger(this.simPlayer.x, this.simPlayer.y + 18);
+    } else if (type === 'office') {
+      this.drawPixelMannequin(this.simPlayer.x, this.simPlayer.y + 18);
+    } else {
+      this.drawPixelPomni(this.simPlayer.x, this.simPlayer.y + 14);
+    }
+
+    this.ctx.fillStyle = palette.text;
+    this.ctx.font = '10px Courier New';
+    this.ctx.textAlign = 'right';
+    this.ctx.fillText(this.getSimulationInstruction(), this.canvas.width - 10, this.canvas.height - 10);
+  }
+
+  getSimulationInstruction() {
+    const type = this.simSceneType || this.getSimulationSceneType();
+    if (type === 'truck') return 'SOURIS: PILOTER LE CAMION';
+    if (type === 'restaurant') return 'SOURIS: ATTRAPER LES COMMANDES';
+    if (type === 'beach') return 'SOURIS: PLACER LE PARASOL';
+    if (type === 'manor') return 'SOURIS/CLIC: GUIDER LA LAMPE';
+    if (type === 'arena') return 'CLIC: TOUCHER LES CIBLES';
+    if (type === 'memory') return 'SOURIS: RAMASSER LES SOUVENIRS';
+    if (type === 'office') return 'CLIC/SOURIS: RECUPERER LES CLES';
+    return 'SOURIS: JOUER LA SCENE';
   }
 
   drawNode(x, y, r, color, label, good = true) {
