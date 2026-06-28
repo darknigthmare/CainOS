@@ -242,6 +242,7 @@ const OS = {
   activeWackyCast: 'pomni',
   radarAnimationId: null,
   wasShutdownByCalibration: false,
+  calibrationStartupTimers: [],
 
   init() {
     this.setupAudio();
@@ -553,6 +554,20 @@ const OS = {
     setTimeout(() => SoundManager.play(880, 0.18, 'sine', 0.1), 340);
   },
 
+  clearCalibrationStartupTimers() {
+    this.calibrationStartupTimers.forEach(timerId => clearTimeout(timerId));
+    this.calibrationStartupTimers = [];
+  },
+
+  scheduleCalibrationStartupStep(callback, delay) {
+    const timerId = setTimeout(() => {
+      this.calibrationStartupTimers = this.calibrationStartupTimers.filter(id => id !== timerId);
+      callback();
+    }, delay);
+    this.calibrationStartupTimers.push(timerId);
+    return timerId;
+  },
+
   selectEpisodeForCurrentProgress() {
     if (typeof EpisodeManager === 'undefined') return;
     EpisodeManager.updateLocksUI();
@@ -577,20 +592,106 @@ const OS = {
     const powerBtn = document.getElementById('power-button');
     const powerLed = document.getElementById('power-led');
 
+    this.clearCalibrationStartupTimers();
+
     if (log) log.innerHTML = "";
     if (prompt) prompt.style.display = 'none';
-    if (bootScreen) bootScreen.style.display = 'none';
-    if (desktop) desktop.style.display = 'flex';
+    if (bootScreen) bootScreen.style.display = 'flex';
+    if (desktop) desktop.style.display = 'none';
     if (powerBtn) powerBtn.classList.add('active');
     if (powerLed) powerLed.classList.add('active');
 
-    this.isBooted = true;
-    this.wasShutdownByCalibration = false;
-    localStorage.removeItem('was_shutdown_by_calibration');
+    this.isBooted = false;
     this.applySystemStateUI();
-    this.selectEpisodeForCurrentProgress();
-    this.playLoginJingle();
-    this.openWindow('simulations');
+
+    const terminalLines = [
+      "C&A SYSTEM BIOS v0.98 (C) 1995 C&A CORP.",
+      "POST-CALIBRATION RESTART SEQUENCE",
+      "CPU: C&A Neural-Link Core 600 MHz",
+      "RAM CHECK: 65536 KB OK",
+      "VR PORT NEURAL 3.............. LINK RESTORED",
+      "SUBJECT #042.................. PROFILE COMPILED",
+      "AVATAR PACKAGE................ POMNI.DLL LOADED",
+      "CIRCUS SHELL.................. CAINOS_98",
+      "MOUNTING WACKY WATCH DRIVER... OK",
+      "STARTING PROTECTED SESSION..."
+    ];
+
+    let lineIndex = 0;
+    const printTerminalLine = () => {
+      if (!log) return;
+      if (lineIndex < terminalLines.length) {
+        log.innerHTML += `${terminalLines[lineIndex]}\n`;
+        SoundManager.play(620 + (lineIndex * 18), 0.045, 'square', 0.045);
+        lineIndex++;
+        this.scheduleCalibrationStartupStep(printTerminalLine, 190 + Math.random() * 120);
+        return;
+      }
+
+      this.scheduleCalibrationStartupStep(showCainOsLoader, 520);
+    };
+
+    const showCainOsLoader = () => {
+      if (!log) return;
+      log.innerHTML = `
+        <div class="win98-startup">
+          <div class="win98-logo">CainOS 98</div>
+          <div class="win98-subtitle">C&A Digital Circus Session Loader</div>
+          <div class="win98-clouds">
+            <span></span><span></span><span></span><span></span>
+          </div>
+          <div class="win98-status" id="win98-startup-status">Chargement du bureau...</div>
+          <div class="win98-progress">
+            <div class="win98-progress-fill" id="win98-progress-fill"></div>
+          </div>
+        </div>
+      `;
+
+      const fill = document.getElementById('win98-progress-fill');
+      const status = document.getElementById('win98-startup-status');
+      const statusLines = [
+        "Chargement du bureau...",
+        "Restauration des icones C&A...",
+        "Initialisation de la session Pomni...",
+        "Connexion au Wacky Watch...",
+        "Ouverture du shell CainOS..."
+      ];
+      let percent = 0;
+      const advanceLoader = () => {
+        percent = Math.min(100, percent + 12 + Math.floor(Math.random() * 12));
+        if (fill) fill.style.width = `${percent}%`;
+        if (status) {
+          const statusIndex = Math.min(statusLines.length - 1, Math.floor(percent / 24));
+          status.innerText = statusLines[statusIndex];
+        }
+        SoundManager.play(720 + percent, 0.035, 'sine', 0.045);
+
+        if (percent < 100) {
+          this.scheduleCalibrationStartupStep(advanceLoader, 260);
+        } else {
+          this.scheduleCalibrationStartupStep(completeStartup, 650);
+        }
+      };
+
+      this.scheduleCalibrationStartupStep(advanceLoader, 180);
+    };
+
+    const completeStartup = () => {
+      this.clearCalibrationStartupTimers();
+      if (log) log.innerHTML = "";
+      if (bootScreen) bootScreen.style.display = 'none';
+      if (desktop) desktop.style.display = 'flex';
+
+      this.isBooted = true;
+      this.wasShutdownByCalibration = false;
+      localStorage.removeItem('was_shutdown_by_calibration');
+      this.applySystemStateUI();
+      this.selectEpisodeForCurrentProgress();
+      this.playLoginJingle();
+      this.openWindow('simulations');
+    };
+
+    this.scheduleCalibrationStartupStep(printTerminalLine, 220);
   },
 
   setupClock() {
@@ -762,6 +863,7 @@ const OS = {
         this.applySystemStateUI();
         if (!this.isBooted) this.runBootSequence();
       } else {
+        this.clearCalibrationStartupTimers();
         screen.style.opacity = '0';
         SoundManager.stopMainframeHum();
         SoundManager.stopTheme();

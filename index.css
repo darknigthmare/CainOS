@@ -190,6 +190,86 @@ body {
   white-space: pre-wrap;
 }
 
+.win98-startup {
+  min-height: 100%;
+  color: #ffffff;
+  background:
+    linear-gradient(180deg, rgba(70, 148, 255, 0.95), rgba(8, 33, 117, 0.96)),
+    repeating-linear-gradient(90deg, rgba(255,255,255,0.05) 0 2px, transparent 2px 6px);
+  border: 2px solid #d8d8d8;
+  box-shadow: inset -2px -2px 0 #6b6b6b, inset 2px 2px 0 #ffffff;
+  padding: 28px;
+  font-family: 'Share Tech Mono', monospace;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+  position: relative;
+  overflow: hidden;
+}
+
+.win98-logo {
+  font-size: clamp(34px, 8vw, 68px);
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+.win98-subtitle {
+  font-size: 16px;
+  color: #fff3a8;
+}
+
+.win98-clouds {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.42;
+}
+
+.win98-clouds span {
+  position: absolute;
+  width: 96px;
+  height: 34px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 0;
+  box-shadow:
+    18px -14px 0 rgba(255, 255, 255, 0.62),
+    42px -8px 0 rgba(255, 255, 255, 0.68),
+    66px 2px 0 rgba(255, 255, 255, 0.52);
+}
+
+.win98-clouds span:nth-child(1) { top: 18%; left: 10%; }
+.win98-clouds span:nth-child(2) { top: 32%; right: 16%; transform: scale(0.8); }
+.win98-clouds span:nth-child(3) { bottom: 24%; left: 22%; transform: scale(0.65); }
+.win98-clouds span:nth-child(4) { bottom: 14%; right: 10%; transform: scale(0.95); }
+
+.win98-status {
+  margin-top: 32px;
+  font-size: 14px;
+  color: #ffffff;
+  z-index: 1;
+}
+
+.win98-progress {
+  width: min(420px, 100%);
+  height: 22px;
+  background: #c0c0c0;
+  border: 2px solid #ffffff;
+  box-shadow: inset -2px -2px 0 #808080, inset 2px 2px 0 #f7f7f7;
+  padding: 3px;
+  z-index: 1;
+}
+
+.win98-progress-fill {
+  width: 0%;
+  height: 100%;
+  background:
+    repeating-linear-gradient(90deg, #001d8f 0 12px, #1048ff 12px 18px);
+  transition: width 0.2s steps(4, end);
+}
+
 .boot-prompt {
   margin-top: 20px;
 }
