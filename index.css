@@ -310,12 +310,7 @@ body {
 }
 
 .desktop-icons {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 20px;
-  align-content: flex-start;
+  display: block;
   height: calc(100% - 40px); /* Leave room for taskbar */
   position: absolute;
   top: 0;
@@ -326,14 +321,18 @@ body {
 
 .desktop-icon {
   width: 90px;
+  min-height: 70px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  cursor: pointer;
+  cursor: grab;
   padding: 5px;
   border-radius: 3px;
   border: 1px transparent dashed;
+  position: absolute;
+  user-select: none;
+  touch-action: none;
 }
 
 .desktop-icon:hover {
@@ -344,6 +343,13 @@ body {
 .desktop-icon.selected {
   background-color: rgba(0, 0, 128, 0.5);
   border: 1px #0000ff dotted;
+}
+
+.desktop-icon.dragging {
+  cursor: grabbing;
+  background-color: rgba(0, 0, 128, 0.38);
+  border: 1px #9ac8ff dashed;
+  z-index: 45;
 }
 
 .icon-img {

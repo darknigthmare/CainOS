@@ -226,6 +226,9 @@ const OS = {
   windows: {},
   activeWindow: null,
   draggedWindow: null,
+  draggedDesktopIcon: null,
+  desktopIconDragStart: null,
+  desktopIconMoved: false,
   dragOffset: { x: 0, y: 0 },
   eegPoints: [],
   ecgPoints: [],
@@ -312,7 +315,9 @@ const OS = {
       'circus-dos-launch': 'Ouvrir le panneau de simulation apres le rendu DOS.',
       'circus-dos-dismiss': 'Retourner au bureau CainOS.',
       'caine-btn-dismiss': 'Fermer l intrusion de Caine.',
-      'power-button': 'Eteindre ou rallumer l ecran CainOS.'
+      'power-button': 'Eteindre ou rallumer l ecran CainOS.',
+      'dial-brightness': 'Regler la luminosite du tube CRT CainOS.',
+      'dial-contrast': 'Regler le contraste du tube CRT CainOS.'
     };
 
     Object.entries(tooltips).forEach(([id, tooltip]) => {
@@ -320,6 +325,16 @@ const OS = {
       if (!button) return;
       button.setAttribute('title', tooltip);
       button.setAttribute('aria-label', tooltip);
+    });
+
+    document.querySelectorAll('.dial').forEach(dial => {
+      const tooltip = dial.classList.contains('dial-brightness')
+        ? 'Regler la luminosite du tube CRT CainOS.'
+        : 'Regler le contraste du tube CRT CainOS.';
+      dial.setAttribute('title', tooltip);
+      dial.setAttribute('aria-label', tooltip);
+      dial.setAttribute('role', 'slider');
+      dial.setAttribute('tabindex', '0');
     });
 
     document.querySelectorAll('.win-btn.win-min').forEach(button => {
@@ -376,6 +391,8 @@ const OS = {
     const setupDialDrag = (selector, minVal, maxVal, initialVal, updateFn) => {
       const dial = document.querySelector(selector);
       if (!dial) return;
+      dial.setAttribute('aria-valuemin', String(minVal));
+      dial.setAttribute('aria-valuemax', String(maxVal));
       
       let currentVal = initialVal;
       let startY = 0;
@@ -388,6 +405,7 @@ const OS = {
         const percent = (currentVal - minVal) / (maxVal - minVal);
         const angle = -135 + percent * 270;
         dial.style.transform = `rotate(${angle}deg)`;
+        dial.setAttribute('aria-valuenow', currentVal.toFixed(2));
         applyFilters();
       };
       
@@ -706,11 +724,98 @@ const OS = {
     setInterval(updateTime, 10000);
   },
 
+  getDesktopIconPositions() {
+    try {
+      return JSON.parse(localStorage.getItem('cainos_desktop_icon_positions') || '{}');
+    } catch (e) {
+      return {};
+    }
+  },
+
+  saveDesktopIconPositions() {
+    const positions = {};
+    document.querySelectorAll('.desktop-icon').forEach(icon => {
+      const winId = icon.getAttribute('data-window');
+      if (!winId) return;
+      positions[winId] = {
+        x: parseInt(icon.style.left || '0', 10),
+        y: parseInt(icon.style.top || '0', 10)
+      };
+    });
+    try {
+      localStorage.setItem('cainos_desktop_icon_positions', JSON.stringify(positions));
+    } catch (e) {}
+  },
+
+  getSnappedDesktopIconPosition(x, y) {
+    const container = document.querySelector('.desktop-icons');
+    if (!container) return { x: 0, y: 0 };
+    const rect = container.getBoundingClientRect();
+    const gridX = 108;
+    const gridY = 92;
+    const padding = 14;
+    const maxX = Math.max(padding, rect.width - 96);
+    const maxY = Math.max(padding, rect.height - 78);
+    const snappedX = Math.round((Math.max(padding, Math.min(maxX, x)) - padding) / gridX) * gridX + padding;
+    const snappedY = Math.round((Math.max(padding, Math.min(maxY, y)) - padding) / gridY) * gridY + padding;
+    return {
+      x: Math.max(padding, Math.min(maxX, snappedX)),
+      y: Math.max(padding, Math.min(maxY, snappedY))
+    };
+  },
+
+  positionDesktopIcons() {
+    const positions = this.getDesktopIconPositions();
+    const used = new Set();
+    document.querySelectorAll('.desktop-icon').forEach((icon, index) => {
+      const winId = icon.getAttribute('data-window');
+      const fallback = this.getSnappedDesktopIconPosition(14, 14 + index * 92);
+      let pos = positions[winId] || fallback;
+      pos = this.getSnappedDesktopIconPosition(pos.x, pos.y);
+
+      let guard = 0;
+      while (used.has(`${pos.x}:${pos.y}`) && guard < 24) {
+        pos = this.getSnappedDesktopIconPosition(pos.x + 108, pos.y);
+        if (used.has(`${pos.x}:${pos.y}`)) {
+          pos = this.getSnappedDesktopIconPosition(14, pos.y + 92);
+        }
+        guard++;
+      }
+
+      used.add(`${pos.x}:${pos.y}`);
+      icon.style.left = `${pos.x}px`;
+      icon.style.top = `${pos.y}px`;
+    });
+  },
+
   setupEvents() {
+    this.positionDesktopIcons();
+
     // Desktop icons
     document.querySelectorAll('.desktop-icon').forEach(icon => {
+      icon.addEventListener('mousedown', (e) => {
+        if (e.button !== 0) return;
+        e.stopPropagation();
+        const container = document.querySelector('.desktop-icons');
+        if (!container) return;
+        const iconRect = icon.getBoundingClientRect();
+        this.draggedDesktopIcon = icon;
+        this.desktopIconMoved = false;
+        this.desktopIconDragStart = {
+          offsetX: e.clientX - iconRect.left,
+          offsetY: e.clientY - iconRect.top,
+          startX: e.clientX,
+          startY: e.clientY
+        };
+        icon.classList.add('dragging');
+      });
+
       icon.addEventListener('click', (e) => {
         e.stopPropagation();
+        if (this.desktopIconMoved) {
+          this.desktopIconMoved = false;
+          return;
+        }
         SoundManager.playClick();
         document.querySelectorAll('.desktop-icon').forEach(i => i.classList.remove('selected'));
         icon.classList.add('selected');
@@ -721,6 +826,11 @@ const OS = {
       });
 
       icon.addEventListener('dblclick', (e) => {
+        if (this.desktopIconMoved) {
+          e.preventDefault();
+          this.desktopIconMoved = false;
+          return;
+        }
         SoundManager.playClick();
         const winId = icon.getAttribute('data-window');
         this.openWindow(winId);
@@ -826,6 +936,24 @@ const OS = {
     });
 
     document.addEventListener('mousemove', (e) => {
+      if (this.draggedDesktopIcon && this.desktopIconDragStart) {
+        const container = document.querySelector('.desktop-icons');
+        if (!container) return;
+        const rect = container.getBoundingClientRect();
+        const rawX = e.clientX - rect.left - this.desktopIconDragStart.offsetX;
+        const rawY = e.clientY - rect.top - this.desktopIconDragStart.offsetY;
+        const pos = this.getSnappedDesktopIconPosition(rawX, rawY);
+        this.draggedDesktopIcon.style.left = `${pos.x}px`;
+        this.draggedDesktopIcon.style.top = `${pos.y}px`;
+
+        const movedX = Math.abs(e.clientX - this.desktopIconDragStart.startX);
+        const movedY = Math.abs(e.clientY - this.desktopIconDragStart.startY);
+        if (movedX > 4 || movedY > 4) {
+          this.desktopIconMoved = true;
+        }
+        return;
+      }
+
       if (this.draggedWindow) {
         const workspace = document.getElementById('desktop-workspace').getBoundingClientRect();
         let left = e.clientX - workspace.left - this.dragOffset.x;
@@ -840,6 +968,12 @@ const OS = {
     });
 
     document.addEventListener('mouseup', () => {
+      if (this.draggedDesktopIcon) {
+        this.draggedDesktopIcon.classList.remove('dragging');
+        this.draggedDesktopIcon = null;
+        this.desktopIconDragStart = null;
+        this.saveDesktopIconPositions();
+      }
       this.draggedWindow = null;
     });
 
