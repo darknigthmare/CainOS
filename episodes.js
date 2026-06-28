@@ -7163,6 +7163,7 @@ const EpisodeManager = {
     textPane.innerHTML = "";
     this.displayedText = "";
     this.resetStoryScene();
+    this.updateStorySceneVisibility();
 
     const nextBtn = document.getElementById('btn-story-next');
     if (nextBtn) nextBtn.innerText = "CONTINUER";
@@ -7213,6 +7214,7 @@ const EpisodeManager = {
     textPane.innerHTML = "";
     this.displayedText = "";
     this.resetStoryScene();
+    this.updateStorySceneVisibility();
     
     const nextBtn = document.getElementById('btn-story-next');
     nextBtn.innerText = "CONTINUER";
@@ -7630,11 +7632,29 @@ const EpisodeManager = {
     if (status) status.innerText = "AUCUN SIGNAL PERSONNAGE";
   },
 
+  shouldShowStoryScene() {
+    return this.currentEpisode !== 0;
+  },
+
+  updateStorySceneVisibility() {
+    const scene = document.getElementById('sim-story-scene');
+    if (!scene) return;
+    const visible = this.shouldShowStoryScene();
+    scene.hidden = !visible;
+    scene.setAttribute('aria-hidden', visible ? 'false' : 'true');
+    if (!visible) this.resetStoryScene();
+  },
+
   updateStoryScene(line, displayLine) {
+    if (!this.shouldShowStoryScene()) {
+      this.updateStorySceneVisibility();
+      return;
+    }
     const map = document.getElementById('story-scene-map');
     const tooltip = document.getElementById('story-scene-tooltip');
     const status = document.getElementById('story-scene-status');
     if (!map || !tooltip || !status) return;
+    this.updateStorySceneVisibility();
 
     const speakerKey = this.normalizeStorySpeakerName(displayLine?.speaker || "ARCHIVE");
     const newSpeakers = this.getStorySceneSpeakers(line, displayLine);
