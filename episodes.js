@@ -2195,11 +2195,13 @@ const EpisodeManager = {
       { after: 5, title: "Ouverture session", objective: "Validez les derniers verrous pour autoriser le bureau CainOS.", mode: "click", goal: 6, duration: 16, target: "BOOT", hazard: "ERR" }
     ],
     1: [
-      { after: 55, title: "Reception du nouveau sujet", objective: "Cliquez les pulses bleus pour stabiliser Pomni avant que le flux d'arrivee ne sature.", mode: "click", goal: 6, duration: 16, target: "PULSE", hazard: "PANIC" },
-      { after: 110, title: "Tour du cirque", objective: "Reparez les tuiles corrompues du tour guide pendant que Caine force la visite.", mode: "repair", goal: 8, duration: 18, target: "TUILE", hazard: "VOID" },
-      { after: 175, title: "Alerte Gloink", objective: "Memorisez la sequence de confinement pour eviter que les Gloinks volent les pieces du decor.", mode: "sequence", goal: 5, duration: 20, target: "CODE", hazard: "VOL" },
-      { after: 245, title: "Trace de la sortie", objective: "Gardez le curseur loin des glitchs et collectez les fragments rouges de porte.", mode: "dodge", goal: 7, duration: 18, target: "EXIT", hazard: "GLITCH" },
-      { after: 310, title: "Abstraction Kaufmo", objective: "Cliquez les verrous verts pour retarder Kaufmo le temps que la scene se stabilise.", mode: "click", goal: 8, duration: 18, target: "LOCK", hazard: "KAUFMO" }
+      { after: 21, title: "Arrivee de Pomni", objective: "Cliquez les pulses bleus pour stabiliser Pomni pendant son arrivee brutale dans le cirque.", mode: "click", goal: 6, duration: 16, target: "PULSE", hazard: "PANIC" },
+      { after: 75, title: "Regles du cirque", objective: "Filtrez les transmissions interdites pendant que Caine explique les limites du monde digital.", mode: "sequence", goal: 5, duration: 19, target: "CENSOR", hazard: "BLEEP" },
+      { after: 107, title: "Tour et porte de sortie", objective: "Reparez les tuiles du tour guide et isolez le signal rouge de la porte apercue dans le Vide.", mode: "repair", goal: 8, duration: 18, target: "DOOR", hazard: "VOID" },
+      { after: 137, title: "Nom Pomni", objective: "Memorisez la sequence d'identite pendant que l'ancien nom disparait du flux.", mode: "sequence", goal: 5, duration: 20, target: "NAME", hazard: "NULL" },
+      { after: 181, title: "Aventure Gloink", objective: "Attrapez les marqueurs Gloink avant qu'ils ne volent les pieces de Zooble.", mode: "click", goal: 8, duration: 18, target: "GLOINK", hazard: "THEFT" },
+      { after: 251, title: "Kaufmo abstrait", objective: "Gardez le curseur loin de Kaufmo et collectez les signaux de secours de Ragatha.", mode: "dodge", goal: 7, duration: 18, target: "HELP", hazard: "KAUFMO" },
+      { after: 328, title: "Chercher Caine", objective: "Reparez les fragments de chemin avant le mini-jeu final de la fausse sortie.", mode: "repair", goal: 9, duration: 19, target: "CAINE", hazard: "LOST" }
     ],
     2: [
       { after: 70, title: "Canyon des sucreries", objective: "Reparez rapidement les colliders du canyon avant le passage du camion.", mode: "repair", goal: 9, duration: 18, target: "COLLIDER", hazard: "TROU" },
@@ -2434,6 +2436,17 @@ const EpisodeManager = {
     document.querySelectorAll('.sim-card').forEach(card => {
       const num = parseInt(card.getAttribute('data-episode'));
       card.classList.remove('locked-card', 'completed-card', 'current-card');
+      const info = card.querySelector('.sim-card-info');
+      if (info) {
+        let meta = info.querySelector('.sim-card-meta');
+        if (!meta) {
+          meta = document.createElement('div');
+          meta.className = 'sim-card-meta';
+          info.appendChild(meta);
+        }
+        const count = (this.storyCheckpointConfig[num] || []).length;
+        meta.innerText = count > 0 ? `${count} sous-episodes` : "Simulation directe";
+      }
       if (this.isLocked(num)) {
         card.classList.add('locked-card');
       } else if (progress.includes(num)) {
@@ -2538,6 +2551,47 @@ const EpisodeManager = {
       }
       startBtn.setAttribute('aria-label', startBtn.title);
     }
+    this.renderSubepisodeMenu(num);
+  },
+
+  escapeHTML(value) {
+    return String(value)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  },
+
+  renderSubepisodeMenu(num) {
+    const menu = document.getElementById('sim-subepisode-menu');
+    if (!menu) return;
+
+    const checkpoints = this.storyCheckpointConfig[num] || [];
+    if (checkpoints.length === 0) {
+      menu.hidden = true;
+      menu.innerHTML = "";
+      return;
+    }
+
+    menu.hidden = false;
+    const countLabel = `${checkpoints.length} sous-episodes interactifs`;
+    const items = checkpoints.map((checkpoint, index) => `
+      <div class="subepisode-item">
+        <div class="subepisode-index">${String(index + 1).padStart(2, '0')}</div>
+        <div>
+          <div class="subepisode-name">${this.escapeHTML(checkpoint.title)}</div>
+          <div class="subepisode-objective">${this.escapeHTML(checkpoint.objective)}</div>
+        </div>
+      </div>
+    `).join("");
+
+    menu.innerHTML = `
+      <div class="subepisode-menu-title">
+        <span>Decoupage narratif</span>
+        <span>${this.escapeHTML(countLabel)}</span>
+      </div>
+      <div class="subepisode-list">${items}</div>
+    `;
   },
 
   startStory(num, phase, bonusText = "") {

@@ -749,8 +749,26 @@ body {
   color: #555;
 }
 
+.sim-card-meta {
+  display: inline-block;
+  margin-top: 3px;
+  padding: 1px 4px;
+  border: 1px solid #8a8a8a;
+  background: #efefef;
+  color: #333;
+  font-size: 8.5px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
 .sim-card.active .sim-card-desc {
   color: #ddd;
+}
+
+.sim-card.active .sim-card-meta {
+  border-color: rgba(255,255,255,0.55);
+  background: rgba(255,255,255,0.12);
+  color: #fff;
 }
 
 .sim-viewport-pane {
@@ -804,10 +822,75 @@ body {
 
 #sim-start-screen p {
   font-size: 12px;
-  margin-bottom: 25px;
+  margin-bottom: 14px;
   max-width: 320px;
   color: #ccc;
   line-height: 1.4;
+}
+
+.subepisode-menu {
+  width: min(92%, 500px);
+  max-height: 220px;
+  margin-bottom: 16px;
+  padding: 8px;
+  border: 1px solid rgba(0, 204, 255, 0.35);
+  background: rgba(0, 20, 30, 0.72);
+  box-shadow: inset 0 0 12px rgba(0, 204, 255, 0.12);
+  overflow-y: auto;
+  text-align: left;
+}
+
+.subepisode-menu[hidden] {
+  display: none;
+}
+
+.subepisode-menu-title {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  color: var(--terminal-cyan);
+  font-size: 11px;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.subepisode-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5px;
+}
+
+.subepisode-item {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 7px;
+  align-items: start;
+  padding: 5px;
+  border: 1px solid rgba(57, 255, 20, 0.18);
+  background: rgba(0, 0, 0, 0.34);
+}
+
+.subepisode-index {
+  color: #050505;
+  background: var(--terminal-green);
+  font-weight: bold;
+  text-align: center;
+  padding: 2px 0;
+  font-size: 10px;
+}
+
+.subepisode-name {
+  color: #eaffea;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.subepisode-objective {
+  color: #a9d6a9;
+  font-size: 9.5px;
+  line-height: 1.25;
+  margin-top: 2px;
 }
 
 /* HUD styles */
