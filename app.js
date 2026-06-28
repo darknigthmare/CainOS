@@ -1672,9 +1672,13 @@ const OS = {
       gloinkqueenscale: 'assets/images/cainos-pixel-cast-sheet-gloink-queen-scale.png'
     };
     this.circusAvatarSheets = {};
+    this.circusAvatarFrameCache = {};
     Object.entries(sources).forEach(([key, src]) => {
       const img = new Image();
-      img.onload = () => this.drawCircusDoom?.();
+      img.onload = () => {
+        this.circusAvatarFrameCache = {};
+        this.drawCircusDoom?.();
+      };
       img.src = src;
       this.circusAvatarSheets[key] = img;
     });
@@ -2602,18 +2606,6 @@ const OS = {
       const baseY = p.y || h * 0.58;
       const y = baseY - doorH;
       state.hotspots.push({ x, y, w: doorW, h: doorH, target: door.target, index: door.index });
-      const corridorW = doorW * 2.2;
-      ctx.fillStyle = `${target.color}24`;
-      ctx.strokeStyle = `${target.color}88`;
-      ctx.lineWidth = 1;
-      ctx.beginPath();
-      ctx.moveTo(p.x - corridorW * 0.12, baseY - doorH * 0.06);
-      ctx.lineTo(p.x - corridorW * 0.5, h);
-      ctx.lineTo(p.x + corridorW * 0.5, h);
-      ctx.lineTo(p.x + corridorW * 0.12, baseY - doorH * 0.06);
-      ctx.closePath();
-      ctx.fill();
-      ctx.stroke();
       ctx.fillStyle = 'rgba(0,0,0,0.26)';
       ctx.fillRect(x - doorW * 0.16, y - doorH * 0.05, doorW * 1.32, doorH * 1.12);
       ctx.fillStyle = locked ? '#14141a' : '#100020';
@@ -2629,6 +2621,10 @@ const OS = {
       ctx.stroke();
       ctx.fillStyle = locked ? 'rgba(0,0,0,0.5)' : `${target.color}44`;
       ctx.fillRect(x + doorW * 0.14, y + doorH * 0.22, doorW * 0.72, doorH * 0.65);
+      if (!locked) {
+        ctx.fillStyle = `${target.color}66`;
+        ctx.fillRect(x + doorW * 0.08, baseY - Math.max(2, 4 * p.scale), doorW * 0.84, Math.max(2, 3 * p.scale));
+      }
       ctx.fillStyle = selected ? '#fff1a8' : (locked ? '#8b8794' : target.color);
       ctx.font = `bold ${Math.max(7, 12 * p.scale)}px Courier New`;
       ctx.textAlign = 'center';
@@ -2714,12 +2710,10 @@ const OS = {
     const spec = this.getCircusAvatarSheetSpec(avatar);
     const img = spec ? this.circusAvatarSheets?.[spec.sheet] : null;
     if (!spec || !img || !img.complete || !img.naturalWidth || !img.naturalHeight) return false;
-    const frameW = img.naturalWidth / spec.cols;
-    const frameH = img.naturalHeight / spec.rows;
-    const sx = frameW * spec.col;
-    const sy = frameH * spec.row;
+    const frame = this.getCircusTransparentAvatarFrame(img, spec);
+    if (!frame) return false;
     const drawH = size * (avatar === 'gloinkqueenscale' ? 1.35 : 1);
-    const drawW = drawH * (frameW / frameH);
+    const drawW = drawH * (frame.width / frame.height);
     const drawX = x - drawW / 2;
     const drawY = baseY - drawH;
     ctx.save();
@@ -2730,7 +2724,7 @@ const OS = {
     ctx.fill();
     ctx.shadowColor = 'rgba(0,0,0,0.7)';
     ctx.shadowBlur = 8;
-    ctx.drawImage(img, sx, sy, frameW, frameH, Math.round(drawX), Math.round(drawY), Math.round(drawW), Math.round(drawH));
+    ctx.drawImage(frame.canvas, Math.round(drawX), Math.round(drawY), Math.round(drawW), Math.round(drawH));
     ctx.shadowBlur = 0;
     ctx.fillStyle = color || '#fff1a8';
     ctx.font = `${Math.max(6, size * 0.13)}px Courier New`;
@@ -2738,6 +2732,66 @@ const OS = {
     ctx.fillText(label, x, drawY - 6);
     ctx.restore();
     return true;
+  },
+
+  getCircusTransparentAvatarFrame(img, spec) {
+    this.circusAvatarFrameCache = this.circusAvatarFrameCache || {};
+    const frameW = Math.floor(img.naturalWidth / spec.cols);
+    const frameH = Math.floor(img.naturalHeight / spec.rows);
+    const cacheKey = `${spec.sheet}:${spec.col}:${spec.row}:${img.naturalWidth}x${img.naturalHeight}`;
+    if (this.circusAvatarFrameCache[cacheKey]) return this.circusAvatarFrameCache[cacheKey];
+
+    const canvas = document.createElement('canvas');
+    canvas.width = frameW;
+    canvas.height = frameH;
+    const frameCtx = canvas.getContext('2d', { willReadFrequently: true });
+    if (!frameCtx) return null;
+    frameCtx.imageSmoothingEnabled = false;
+    frameCtx.drawImage(img, frameW * spec.col, frameH * spec.row, frameW, frameH, 0, 0, frameW, frameH);
+
+    const imageData = frameCtx.getImageData(0, 0, frameW, frameH);
+    const { data } = imageData;
+    const seen = new Uint8Array(frameW * frameH);
+    const stack = [];
+    const isEdgeBlack = pixelIndex => (
+      data[pixelIndex + 3] > 0 &&
+      data[pixelIndex] <= 18 &&
+      data[pixelIndex + 1] <= 18 &&
+      data[pixelIndex + 2] <= 18
+    );
+    const push = (px, py) => {
+      if (px < 0 || py < 0 || px >= frameW || py >= frameH) return;
+      const index = py * frameW + px;
+      if (seen[index]) return;
+      const dataIndex = index * 4;
+      if (!isEdgeBlack(dataIndex)) return;
+      seen[index] = 1;
+      stack.push([px, py]);
+    };
+
+    for (let px = 0; px < frameW; px++) {
+      push(px, 0);
+      push(px, frameH - 1);
+    }
+    for (let py = 0; py < frameH; py++) {
+      push(0, py);
+      push(frameW - 1, py);
+    }
+
+    while (stack.length) {
+      const [px, py] = stack.pop();
+      const dataIndex = (py * frameW + px) * 4;
+      data[dataIndex + 3] = 0;
+      push(px + 1, py);
+      push(px - 1, py);
+      push(px, py + 1);
+      push(px, py - 1);
+    }
+
+    frameCtx.putImageData(imageData, 0, 0);
+    const frame = { canvas, width: frameW, height: frameH };
+    this.circusAvatarFrameCache[cacheKey] = frame;
+    return frame;
   },
 
   getCircusCanvasAvatarPattern(type) {
