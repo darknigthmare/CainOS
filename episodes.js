@@ -8211,11 +8211,65 @@ class StoryMicroGame {
   }
 
   getPhaseObjective() {
-    const base = this.config.playObjective || this.config.objective || "Terminez la micro-simulation.";
     const phaseText = this.microPhase === 'simulation'
-      ? "Phase 2/2 - simulation scene : appliquez la synchronisation dans l aventure."
+      ? "Phase 2/2 - scene virtuelle : agissez directement dans l aventure."
       : "Phase 1/2 - OS CainOS : nettoyez le flux avant d entrer dans la scene.";
-    return `${phaseText} ${base}`;
+    return `${phaseText} ${this.getPhasePlayObjective()}`;
+  }
+
+  getPhasePlayObjective() {
+    const target = this.config.target || "OK";
+    const hazard = this.config.hazard || "ERR";
+    const goal = this.getRequiredScore();
+    if (this.microPhase !== 'simulation') {
+      return this.config.playObjective || this.config.objective || "Terminez la micro-simulation.";
+    }
+    if (this.config.mode === "click") {
+      return `Cliquez ${goal} fragments dores "${target}". Evitez les glitches magenta "${hazard}".`;
+    }
+    if (this.config.mode === "repair") {
+      return `Validez ${goal} tuiles de decor dorees "${target}". Les tuiles magenta "${hazard}" destabilisent la scene.`;
+    }
+    if (this.config.mode === "sequence") {
+      return `Reproduisez ${goal} directions dans la scene. La direction attendue brille en jaune.`;
+    }
+    if (this.config.mode === "dodge") {
+      return `Guidez le curseur vers ${goal} signaux de scene dores "${target}" et evitez les glitches magenta "${hazard}".`;
+    }
+    return "Terminez l action de simulation.";
+  }
+
+  getPhasePalette() {
+    if (this.microPhase === 'simulation') {
+      return {
+        bg: '#120821',
+        grid: 'rgba(255,216,74,0.16)',
+        panel: 'rgba(18,8,33,0.88)',
+        accent: '#7df0ff',
+        good: '#ffd84a',
+        goodSoft: '#3b2f13',
+        goodStroke: '#ffe78a',
+        bad: '#ff4fb8',
+        badSoft: '#42122d',
+        text: '#fff1b8',
+        labelGood: 'JAUNE',
+        labelBad: 'MAGENTA'
+      };
+    }
+    return {
+      bg: '#010401',
+      grid: 'rgba(57,255,20,0.12)',
+      panel: 'rgba(1,4,1,0.82)',
+      accent: '#8fe8ff',
+      good: '#39ff14',
+      goodSoft: '#123d22',
+      goodStroke: '#2fb86a',
+      bad: '#ff3344',
+      badSoft: '#401018',
+      text: '#d6ffd6',
+      labelGood: 'VERT',
+      labelBad: 'ROUGE'
+    };
   }
 
   createItem(good = true) {
@@ -8444,9 +8498,29 @@ class StoryMicroGame {
   }
 
   clear() {
-    this.ctx.fillStyle = '#010401';
+    const palette = this.getPhasePalette();
+    this.ctx.fillStyle = palette.bg;
     this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
-    this.ctx.strokeStyle = 'rgba(57,255,20,0.12)';
+
+    if (this.microPhase === 'simulation') {
+      const gradient = this.ctx.createLinearGradient(0, 0, this.canvas.width, this.canvas.height);
+      gradient.addColorStop(0, '#21104a');
+      gradient.addColorStop(0.48, '#120821');
+      gradient.addColorStop(1, '#341124');
+      this.ctx.fillStyle = gradient;
+      this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
+      this.ctx.fillStyle = 'rgba(255,216,74,0.08)';
+      for (let i = 0; i < 7; i++) {
+        this.ctx.beginPath();
+        this.ctx.arc(58 + i * 72, 212 + Math.sin(i) * 18, 34, 0, Math.PI * 2);
+        this.ctx.fill();
+      }
+      this.ctx.fillStyle = 'rgba(255,79,184,0.08)';
+      this.ctx.fillRect(0, 0, 42, this.canvas.height);
+      this.ctx.fillRect(this.canvas.width - 42, 0, 42, this.canvas.height);
+    }
+
+    this.ctx.strokeStyle = palette.grid;
     for (let x = 0; x < this.canvas.width; x += 25) {
       this.ctx.beginPath();
       this.ctx.moveTo(x, 0);
@@ -8464,29 +8538,30 @@ class StoryMicroGame {
 
   drawLegend() {
     const ctx = this.ctx;
+    const palette = this.getPhasePalette();
     const target = String(this.config.target || 'OK').slice(0, 8);
     const hazard = String(this.config.hazard || 'ERR').slice(0, 8);
     ctx.save();
     ctx.font = '10px Courier New';
     ctx.textAlign = 'left';
-    ctx.fillStyle = 'rgba(1, 4, 1, 0.82)';
+    ctx.fillStyle = palette.panel;
     ctx.fillRect(6, 6, this.canvas.width - 12, 32);
-    ctx.fillStyle = '#8fe8ff';
+    ctx.fillStyle = palette.accent;
     ctx.fillText(`PHASE: ${this.getPhaseLabel()}`, 12, 19);
     const legendY = 32;
     if (this.config.mode === 'sequence') {
-      ctx.fillStyle = '#39ff14';
-      ctx.fillText('VERT = DIRECTION A SUIVRE', 12, legendY);
+      ctx.fillStyle = palette.good;
+      ctx.fillText(`${palette.labelGood} = DIRECTION A SUIVRE`, 12, legendY);
     } else if (this.config.mode === 'dodge') {
-      ctx.fillStyle = '#00d4ff';
-      ctx.fillText(`CYAN = ${target}`, 12, legendY);
-      ctx.fillStyle = '#ff3344';
-      ctx.fillText(`ROUGE = ${hazard}`, 150, legendY);
+      ctx.fillStyle = palette.good;
+      ctx.fillText(`${palette.labelGood} = ${target}`, 12, legendY);
+      ctx.fillStyle = palette.bad;
+      ctx.fillText(`${palette.labelBad} = ${hazard}`, 150, legendY);
     } else {
-      ctx.fillStyle = '#39ff14';
-      ctx.fillText(`VERT = ${target}`, 12, legendY);
-      ctx.fillStyle = '#ff3344';
-      ctx.fillText(`ROUGE = ${hazard}`, 150, legendY);
+      ctx.fillStyle = palette.good;
+      ctx.fillText(`${palette.labelGood} = ${target}`, 12, legendY);
+      ctx.fillStyle = palette.bad;
+      ctx.fillText(`${palette.labelBad} = ${hazard}`, 150, legendY);
     }
     ctx.restore();
   }
@@ -8503,19 +8578,21 @@ class StoryMicroGame {
 
   drawClickMode() {
     this.clear();
+    const palette = this.getPhasePalette();
     this.items.forEach(item => {
-      this.drawNode(item.x, item.y, item.r, item.good ? '#39ff14' : '#ff3344', item.good ? this.config.target : this.config.hazard);
+      this.drawNode(item.x, item.y, item.r, item.good ? palette.good : palette.bad, item.good ? this.config.target : this.config.hazard, item.good);
     });
   }
 
   drawRepairMode() {
     this.clear();
+    const palette = this.getPhasePalette();
     this.grid.forEach(cell => {
-      this.ctx.fillStyle = cell.fixed ? '#0b3817' : (cell.good ? '#123d22' : '#401018');
+      this.ctx.fillStyle = cell.fixed ? palette.goodSoft : (cell.good ? palette.goodSoft : palette.badSoft);
       this.ctx.fillRect(cell.x, cell.y, cell.w, cell.h);
-      this.ctx.strokeStyle = cell.fixed ? '#39ff14' : (cell.good ? '#2fb86a' : '#ff3344');
+      this.ctx.strokeStyle = cell.fixed ? palette.good : (cell.good ? palette.goodStroke : palette.bad);
       this.ctx.strokeRect(cell.x, cell.y, cell.w, cell.h);
-      this.ctx.fillStyle = cell.fixed ? '#39ff14' : '#d5ffd5';
+      this.ctx.fillStyle = cell.fixed ? palette.good : palette.text;
       this.ctx.font = '11px Courier New';
       this.ctx.textAlign = 'center';
       this.ctx.fillText(cell.fixed ? 'OK' : (cell.good ? this.config.target : this.config.hazard), cell.x + cell.w / 2, cell.y + cell.h / 2 + 4);
@@ -8524,6 +8601,7 @@ class StoryMicroGame {
 
   drawSequenceMode() {
     this.clear();
+    const palette = this.getPhasePalette();
     const cx = this.canvas.width / 2;
     const cy = this.canvas.height / 2 + 8;
     const pads = [
@@ -8534,37 +8612,50 @@ class StoryMicroGame {
     ];
     const expected = this.sequence[this.sequenceIndex];
     pads.forEach(pad => {
-      this.ctx.fillStyle = pad.dir === expected ? '#174a2c' : '#101710';
+      this.ctx.fillStyle = pad.dir === expected ? palette.goodSoft : (this.microPhase === 'simulation' ? '#1b1230' : '#101710');
       this.ctx.fillRect(pad.x, pad.y, 64, 48);
-      this.ctx.strokeStyle = pad.dir === expected ? '#39ff14' : '#2f6d45';
+      this.ctx.strokeStyle = pad.dir === expected ? palette.good : palette.goodStroke;
       this.ctx.strokeRect(pad.x, pad.y, 64, 48);
-      this.ctx.fillStyle = '#d6ffd6';
+      this.ctx.fillStyle = palette.text;
       this.ctx.font = '24px Courier New';
       this.ctx.textAlign = 'center';
       this.ctx.fillText(pad.label, pad.x + 32, pad.y + 31);
     });
-    this.ctx.fillStyle = '#9adf9a';
+    this.ctx.fillStyle = palette.text;
     this.ctx.font = '12px Courier New';
     this.ctx.fillText(`SEQUENCE: ${this.sequence.map((s, i) => i < this.sequenceIndex ? 'OK' : s).join(' ')}`, cx, 52);
   }
 
   drawDodgeMode() {
     this.clear();
+    const palette = this.getPhasePalette();
     this.items.forEach(item => {
-      this.drawNode(item.x, item.y, item.r, item.good ? '#00d4ff' : '#ff3344', item.good ? this.config.target : this.config.hazard);
+      this.drawNode(item.x, item.y, item.r, item.good ? palette.good : palette.bad, item.good ? this.config.target : this.config.hazard, item.good);
     });
     this.ctx.fillStyle = '#ffffff';
     this.ctx.beginPath();
     this.ctx.arc(this.pointer.x, this.pointer.y, 9, 0, Math.PI * 2);
     this.ctx.fill();
-    this.ctx.strokeStyle = '#39ff14';
+    this.ctx.strokeStyle = palette.accent;
     this.ctx.stroke();
   }
 
-  drawNode(x, y, r, color, label) {
+  drawNode(x, y, r, color, label, good = true) {
     this.ctx.fillStyle = color;
     this.ctx.beginPath();
-    this.ctx.arc(x, y, r, 0, Math.PI * 2);
+    if (this.microPhase === 'simulation') {
+      if (good) {
+        this.ctx.moveTo(x, y - r);
+        this.ctx.lineTo(x + r, y);
+        this.ctx.lineTo(x, y + r);
+        this.ctx.lineTo(x - r, y);
+        this.ctx.closePath();
+      } else {
+        this.ctx.rect(x - r, y - r, r * 2, r * 2);
+      }
+    } else {
+      this.ctx.arc(x, y, r, 0, Math.PI * 2);
+    }
     this.ctx.fill();
     this.ctx.strokeStyle = '#ffffff';
     this.ctx.stroke();
