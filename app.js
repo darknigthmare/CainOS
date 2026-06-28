@@ -279,7 +279,7 @@ const OS = {
     const tooltips = {
       'boot-init-button': 'Ouvrir une session CainOS.',
       'btn-back-to-files': 'Revenir a la liste des fichiers C&A.',
-      'btn-start-simulation': 'Lancer le transcript ou le mini-jeu de l episode selectionne.',
+      'btn-start-simulation': 'Lancer ou rejouer le transcript et les mini-jeux de l episode selectionne.',
       'ep0-btn-reset': 'Recommencer la calibration synaptique.',
       'ep1-btn-stabilize': 'Restaurer une partie de la stabilite mentale de Pomni.',
       'ep1-btn-firewall': 'Activer le mode placement de pare-feu sur la grille.',
@@ -688,7 +688,7 @@ const OS = {
       this.applySystemStateUI();
       this.selectEpisodeForCurrentProgress();
       this.playLoginJingle();
-      this.openWindow('simulations');
+      this.closeAllWindows();
     };
 
     this.scheduleCalibrationStartupStep(printTerminalLine, 220);
@@ -1244,6 +1244,24 @@ const OS = {
       }
       this.updateTaskbar();
     }
+  },
+
+  closeAllWindows() {
+    Object.keys(this.windows).forEach(winId => {
+      const win = this.windows[winId];
+      if (win) {
+        win.style.display = 'none';
+        win.classList.remove('active-window');
+      }
+    });
+    this.activeWindow = null;
+    this.selectedIcon = null;
+    document.querySelectorAll('.desktop-icon').forEach(icon => icon.classList.remove('selected'));
+    const startMenu = document.getElementById('start-menu');
+    if (startMenu) startMenu.style.display = 'none';
+    SoundManager.stopTheme();
+    if (EpisodeManager.activeGame) EpisodeManager.activeGame.stop();
+    this.updateTaskbar();
   },
 
   minimizeWindow(winId) {

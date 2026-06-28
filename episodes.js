@@ -2395,10 +2395,15 @@ const EpisodeManager = {
 
     const titleEl = document.getElementById('sim-game-title');
     const descEl = document.getElementById('sim-game-description');
+    const startBtn = document.getElementById('btn-start-simulation');
+    const progress = this.getProgress();
+    const isCompleted = progress.includes(num);
 
     if (num === 0) {
       titleEl.innerText = "Épisode 0: Calibration C&A";
-      descEl.innerText = "Avant de lancer le simulateur principal, synchronisez les senseurs neuraux. Cliquez sur les points de calibration clignotants pour stabiliser la bande passante.";
+      descEl.innerText = isCompleted
+        ? "Archive de calibration validee. Rejouez le protocole C&A seulement comme simulation historique : la session Pomni est deja ouverte dans CainOS."
+        : "Avant de lancer le simulateur principal, synchronisez les senseurs neuraux. Cliquez sur les points de calibration clignotants pour stabiliser la bande passante.";
     } else if (num === 1) {
       titleEl.innerText = "Épisode 1: Le Pilote";
       descEl.innerText = "Pomni cherche désespérément une issue. Vous devez placer des pare-feux pour bloquer Kaufmo qui s'est abstrait, tout en ouvrant le chemin vers les portes de sortie. Gardez un œil sur sa stabilité mentale !";
@@ -2432,6 +2437,19 @@ const EpisodeManager = {
     } else if (num === -2) {
       titleEl.innerText = "Épisode Caché: Fusion Red/Blue (1993)";
       descEl.innerText = "Avant le Cirque, il y avait le code brut. Guidez le point rouge (curseur de test 3D) pour capturer et fusionner avec le point bleu (module de surveillance d'IA). Évitez les filtres de sécurité gris de l'administrateur.";
+    }
+    if (startBtn) {
+      if (isCompleted) {
+        startBtn.innerText = num === 0 ? "REJOUER LA CALIBRATION" : "REJOUER L'EPISODE";
+        startBtn.title = "Archive deja validee : relancer ce module en mode replay.";
+      } else if (num === 0) {
+        startBtn.innerText = "LANCER LA CALIBRATION";
+        startBtn.title = "Demarrer le protocole initial C&A.";
+      } else {
+        startBtn.innerText = "DEMARRER LA SIMULATION";
+        startBtn.title = "Demarrer le transcript et les mini-jeux de cet episode.";
+      }
+      startBtn.setAttribute('aria-label', startBtn.title);
     }
   },
 
