@@ -7514,6 +7514,42 @@ const EpisodeManager = {
     return Array.from(names).slice(0, 8);
   },
 
+  getStorySceneIcon(key) {
+    const iconMap = {
+      POMNI: "J",
+      CAINE: "T",
+      BUBBLE: "O",
+      RAGATHA: "D",
+      JAX: "R",
+      GANGLE: "M",
+      ZOOBLE: "Z",
+      KINGER: "K",
+      KAUFMO: "C",
+      GUMMIGOO: "G",
+      GLOINK: "*",
+      GLOINK_QUEEN: "Q",
+      QUEENIE: "Q",
+      HELEN: "Q",
+      ABEL: "A",
+      RIBBIT: "F",
+      MOON: ")",
+      SUN_NPC: "S",
+      SHRIMP_NPC: "S",
+      LIAR_NPC: "L",
+      TRUTH_TELLER_NPC: "T",
+      CHINESE_ROOM_NPC: "C",
+      EVIL_VARIANT: "!",
+      DREAM_SIGNAL: "~",
+      JAX_PERSONA: "R",
+      ABIGAIL: "P",
+      CAST: "#",
+      ARCHIVE: "::",
+      MUSIC: "♪",
+      SFX: "!"
+    };
+    return iconMap[key] || String(key || "?").slice(0, 1);
+  },
+
   resetStoryScene() {
     this.activeStorySceneCharacters = [];
     const map = document.getElementById('story-scene-map');
@@ -7531,25 +7567,40 @@ const EpisodeManager = {
     if (!map || !tooltip || !status) return;
 
     const speakerKey = this.normalizeStorySpeakerName(displayLine?.speaker || "ARCHIVE");
-    const speakers = this.getStorySceneSpeakers(line, displayLine);
+    const newSpeakers = this.getStorySceneSpeakers(line, displayLine);
+    const activeScene = [];
+    newSpeakers.forEach(name => {
+      const key = this.getStoryCharacterProfile(name).key;
+      if (!activeScene.includes(key)) activeScene.push(key);
+    });
+    (this.activeStorySceneCharacters || []).forEach(name => {
+      const key = this.getStoryCharacterProfile(name).key;
+      if (!activeScene.includes(key)) activeScene.push(key);
+    });
+    this.activeStorySceneCharacters = activeScene.slice(0, 8);
+    const speakers = this.activeStorySceneCharacters;
     const positions = [
-      { x: 18, y: 58 }, { x: 32, y: 35 }, { x: 47, y: 55 }, { x: 61, y: 34 },
-      { x: 75, y: 57 }, { x: 88, y: 38 }, { x: 12, y: 30 }, { x: 92, y: 62 }
+      { x: 18, y: 59 }, { x: 31, y: 36 }, { x: 45, y: 60 }, { x: 58, y: 36 },
+      { x: 72, y: 59 }, { x: 86, y: 39 }, { x: 11, y: 31 }, { x: 93, y: 63 }
     ];
 
     map.innerHTML = speakers.map((name, index) => {
       const profile = this.getStoryCharacterProfile(name);
       const pos = positions[index] || positions[0];
       const initials = profile.label.split(/\s+/).map(part => part[0]).join("").slice(0, 2).toUpperCase();
-      const active = this.normalizeStorySpeakerName(name) === speakerKey ? " active-speaker" : "";
+      const active = this.normalizeStorySpeakerName(name) === speakerKey || profile.key === this.getStoryCharacterProfile(speakerKey).key ? " active-speaker" : "";
       const locked = profile.loreKnown ? "" : " lore-locked";
+      const icon = this.getStorySceneIcon(profile.key);
       return `
         <button type="button"
           class="story-dos-point${active}${locked}"
           style="left:${pos.x}%;top:${pos.y}%;--char-color:${profile.color}"
           data-character="${this.escapeHTML(profile.key)}"
           title="${this.escapeHTML(`${profile.label}: ${profile.info}`)}"
-          aria-label="${this.escapeHTML(`${profile.label}: ${profile.info}`)}">${this.escapeHTML(initials)}</button>
+          aria-label="${this.escapeHTML(`${profile.label}: ${profile.info}`)}">
+          <span class="story-dos-avatar" aria-hidden="true">${this.escapeHTML(icon)}</span>
+          <span class="story-dos-icon-label">${this.escapeHTML(initials)}</span>
+        </button>
       `;
     }).join("");
 

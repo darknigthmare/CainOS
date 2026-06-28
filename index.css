@@ -2695,27 +2695,58 @@ body {
 
 .story-dos-point {
   --char-color: var(--terminal-green);
-  background: var(--char-color);
-  border: 1px solid #050505;
-  box-shadow: 0 0 8px var(--char-color);
-  color: #050505;
+  align-items: center;
+  background: rgba(2, 6, 2, 0.92);
+  border: 1px solid var(--char-color);
+  box-shadow: 0 0 8px rgba(57, 255, 20, 0.16), 0 0 10px var(--char-color);
+  color: var(--char-color);
   cursor: pointer;
+  display: grid;
   font-family: 'Share Tech Mono', monospace;
   font-size: 9px;
   font-weight: bold;
-  height: 18px;
-  line-height: 15px;
-  min-width: 18px;
-  padding: 0 3px;
+  grid-template-rows: 22px 11px;
+  height: 36px;
+  justify-items: center;
+  line-height: 1;
+  min-width: 32px;
+  padding: 1px 3px 2px;
   position: absolute;
   text-align: center;
   transform: translate(-50%, -50%);
   z-index: 2;
 }
 
+.story-dos-avatar {
+  align-items: center;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.16), transparent 40%),
+    var(--char-color);
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.28);
+  color: #050505;
+  display: flex;
+  font-size: 13px;
+  height: 21px;
+  justify-content: center;
+  min-width: 21px;
+  padding: 0 2px;
+  text-shadow: none;
+}
+
+.story-dos-icon-label {
+  color: #d8ffd8;
+  font-size: 8px;
+  max-width: 34px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .story-dos-point.active-speaker {
   animation: story-point-pulse 0.85s infinite alternate;
   border-color: #fff;
+  background: rgba(8, 18, 8, 0.98);
 }
 
 .story-dos-point.lore-locked {
@@ -2724,9 +2755,15 @@ body {
 
 .story-dos-point.lore-locked::after {
   content: "?";
-  color: #050505;
+  background: #050505;
+  border: 1px solid var(--char-color);
+  color: var(--char-color);
   font-size: 8px;
-  margin-left: 2px;
+  line-height: 10px;
+  min-width: 10px;
+  position: absolute;
+  right: -5px;
+  top: -5px;
 }
 
 .story-dos-point:hover,
