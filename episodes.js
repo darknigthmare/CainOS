@@ -6728,7 +6728,7 @@ const EpisodeManager = {
       });
     }
 
-    // Skip button: jump directly to game (intro) or complete (outro)
+    // Skip button: jump directly to the next interactive beat instead of validating story progress.
     if (storySkipBtn) {
       storySkipBtn.addEventListener('click', () => {
         SoundManager.playClick();
@@ -6736,7 +6736,7 @@ const EpisodeManager = {
         this.isTyping = false;
         if (this.storyPhase === 'intro') {
           if (this.activeSubepisodeIndex !== null) {
-            this.finishActiveSubepisode();
+            this.skipToActiveSubepisodeMicroGame();
           } else {
             this.startGameplay();
           }
@@ -7169,7 +7169,7 @@ const EpisodeManager = {
 
     const skipBtn = document.getElementById('btn-story-skip');
     if (skipBtn) {
-      skipBtn.innerText = segment.index >= segments.length - 1 ? 'ACCEDER AU FINAL' : 'PASSER AU SUIVANT';
+      skipBtn.innerText = 'PASSER AU MINI-JEU';
     }
 
     this.updateStoryProgress();
@@ -7290,6 +7290,53 @@ const EpisodeManager = {
       }, 350);
     });
     this.activeStoryMicroGame.prepare();
+  },
+
+  skipToActiveSubepisodeMicroGame() {
+    if (!this.activeSubepisodeCheckpoint) {
+      this.skipRemainingStory();
+      const checkpoint = this.getPendingStoryCheckpoint();
+      if (checkpoint) {
+        this.startStoryMicroGame(checkpoint);
+      }
+      return;
+    }
+
+    const checkpoint = this.activeSubepisodeCheckpoint;
+    if (this.completedStoryCheckpoints.has(checkpoint.after)) {
+      this.finishActiveSubepisode();
+      return;
+    }
+
+    clearInterval(this.typewriterTimer);
+    this.isTyping = false;
+
+    const targetIndex = Math.min(checkpoint.after, this.storyLines.length);
+    const textPane = document.getElementById('sim-story-text');
+    let allText = "";
+    for (let i = 0; i < targetIndex; i++) {
+      const displayLine = this.formatStoryLine(this.storyLines[i], false);
+      allText += (i > 0 ? "\n" : "") + displayLine.formattedText;
+    }
+
+    this.displayedText = allText;
+    if (textPane) {
+      textPane.innerText = allText;
+      textPane.scrollTop = textPane.scrollHeight;
+    }
+
+    this.storyIndex = targetIndex;
+    if (targetIndex > 0) {
+      const lastLine = this.storyLines[targetIndex - 1];
+      this.updateStoryScene(lastLine, this.formatStoryLine(lastLine, false));
+    }
+    this.updateStoryProgress();
+    this.updateStoryCheckpointButton();
+
+    const pendingCheckpoint = this.getPendingStoryCheckpoint();
+    if (pendingCheckpoint) {
+      this.startStoryMicroGame(pendingCheckpoint);
+    }
   },
 
   finishActiveSubepisode() {
