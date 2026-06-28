@@ -223,6 +223,31 @@ const EpisodeManager = {
   activeSubepisodeIndex: null,
   activeSubepisodeCheckpoint: null,
   activeSubepisodeTotal: 0,
+  activeStorySceneCharacters: [],
+  storyCharacterProfiles: {
+    POMNI: { color: "#e53935", label: "Pomni", info: "Nouvelle humaine piegee dans le Cirque. Signal panique eleve, obsession de la sortie." },
+    CAINE: { color: "#f6d743", label: "Caine", info: "Ringmaster IA. Controle les aventures, les decors et les transitions de simulation." },
+    BUBBLE: { color: "#f7f7ff", label: "Bubble", info: "Assistant flottant de Caine. Presque toujours colle au show et aux mauvaises idees." },
+    RAGATHA: { color: "#d64545", label: "Ragatha", info: "Poupée de chiffon bienveillante. Stabilise souvent Pomni et le groupe." },
+    JAX: { color: "#8a4fd6", label: "Jax", info: "Lapin violet sarcastique. Forte probabilite de sabotage ou de provocation." },
+    GANGLE: { color: "#f7f7f7", label: "Gangle", info: "Masque et rubans. Son etat depend fortement de son masque de comedie/tragedie." },
+    ZOOBLE: { color: "#ff4fb8", label: "Zooble", info: "Corps modulaire. Refuse souvent les aventures forcees de Caine." },
+    KINGER: { color: "#d9d0a2", label: "Kinger", info: "Piece d'echecs instable, ancien prisonnier du Cirque avec des souvenirs profonds." },
+    KAUFMO: { color: "#363636", label: "Kaufmo", info: "Ancien membre abstrait. Menace noire et instable dans le pilote." },
+    GUMMIGOO: { color: "#d69b35", label: "Gummigoo", info: "PNJ crocodile du canyon. Sa nature de PNJ cree une faille de memoire." },
+    GLOINK: { color: "#6b4cff", label: "Gloink", info: "Petite entite voleuse de l'aventure du pilote. Signal geometrique instable." },
+    GLOINK_QUEEN: { color: "#ff7d8d", label: "Gloink Queen", info: "Reine enorme des Gloinks, hors echelle par rapport aux autres signaux." },
+    LOO: { color: "#ffb7d5", label: "Princess Loolilalu", info: "Princesse du Royaume des Sucreries, liee a l'aventure du canyon." },
+    ORBSMAN: { color: "#6fe8ff", label: "Orbsman", info: "Entite secondaire du Cirque, silhouette orbitee et signal bizarre." },
+    ABEL: { color: "#ff9b37", label: "Abel", info: "Figure/mannequin liee aux couches C&A et aux archives profondes du projet." },
+    ARTHUR: { color: "#c0d0ff", label: "Arthur", info: "Identite humaine rattachee aux tests C&A et a la trajectoire de Kinger." },
+    SARAH: { color: "#ff6b6b", label: "Sarah", info: "Identite humaine suggeree derriere Pomni dans la couche CainOS." },
+    HELEN: { color: "#5fe9d4", label: "Helen / Queenie", info: "Trace memoire associee a Queenie et aux souvenirs enfouis de Kinger." },
+    QUEENIE: { color: "#5fe9d4", label: "Queenie", info: "Piece disparue, memoire centrale pour Kinger." },
+    SYSTEM: { color: "#39ff14", label: "System", info: "Signal technique CainOS : chargement, archive, protocole ou bruit de scene." },
+    ARCHIVE: { color: "#8fbf8f", label: "Archive", info: "Indication de scene ou audio detectee dans la transcription." },
+    CAST: { color: "#ffec8b", label: "Cast", info: "Dialogue attribue au groupe ou speaker ambigu dans la transcription." }
+  },
   
   // Story Engine State
   storyData: {
@@ -2752,6 +2777,7 @@ const EpisodeManager = {
     const textPane = document.getElementById('sim-story-text');
     textPane.innerHTML = "";
     this.displayedText = "";
+    this.resetStoryScene();
 
     const nextBtn = document.getElementById('btn-story-next');
     if (nextBtn) nextBtn.innerText = "CONTINUER";
@@ -2801,6 +2827,7 @@ const EpisodeManager = {
     const textPane = document.getElementById('sim-story-text');
     textPane.innerHTML = "";
     this.displayedText = "";
+    this.resetStoryScene();
     
     const nextBtn = document.getElementById('btn-story-next');
     nextBtn.innerText = "CONTINUER";
@@ -2986,6 +3013,107 @@ const EpisodeManager = {
     };
   },
 
+  normalizeStorySpeakerName(value) {
+    return String(value || "")
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/[^A-Z0-9]+/gi, "")
+      .toUpperCase();
+  },
+
+  getStoryCharacterProfile(name) {
+    const normalized = this.normalizeStorySpeakerName(name);
+    const aliases = {
+      PRINCESSLOOLILALU: "LOO",
+      LOOLILALU: "LOO",
+      GLOINKQUEEN: "GLOINK_QUEEN",
+      GLOINKSQUEEN: "GLOINK_QUEEN",
+      QUEENIEHELEN: "QUEENIE"
+    };
+    const key = aliases[normalized] || normalized;
+    const profile = this.storyCharacterProfiles[key] || {
+      color: "#39ff14",
+      label: String(name || "Signal"),
+      info: "Signal personnage detecte dans la transmission, fiche CainOS incomplete."
+    };
+    return { key, ...profile };
+  },
+
+  getStorySceneSpeakers(line, displayLine) {
+    const names = new Set();
+    const addName = (name) => {
+      const key = this.normalizeStorySpeakerName(name);
+      if (key && key !== "UNKNOWN") names.add(key);
+    };
+
+    if (displayLine && displayLine.speaker) addName(displayLine.speaker);
+    this.getStorySpeakerTags(line?.text || "").forEach(addName);
+
+    const haystack = `${line?.speaker || ""} ${line?.text || ""}`.toUpperCase();
+    Object.keys(this.storyCharacterProfiles).forEach(key => {
+      const profile = this.storyCharacterProfiles[key];
+      const tokens = [key, profile.label].filter(Boolean);
+      if (tokens.some(token => haystack.includes(String(token).toUpperCase()))) {
+        addName(key);
+      }
+    });
+
+    if (names.size === 0) addName("ARCHIVE");
+    return Array.from(names).slice(0, 8);
+  },
+
+  resetStoryScene() {
+    this.activeStorySceneCharacters = [];
+    const map = document.getElementById('story-scene-map');
+    const tooltip = document.getElementById('story-scene-tooltip');
+    const status = document.getElementById('story-scene-status');
+    if (map) map.innerHTML = "";
+    if (tooltip) tooltip.innerText = "Selectionnez un point colore pour lire l'identite du personnage.";
+    if (status) status.innerText = "AUCUN SIGNAL PERSONNAGE";
+  },
+
+  updateStoryScene(line, displayLine) {
+    const map = document.getElementById('story-scene-map');
+    const tooltip = document.getElementById('story-scene-tooltip');
+    const status = document.getElementById('story-scene-status');
+    if (!map || !tooltip || !status) return;
+
+    const speakerKey = this.normalizeStorySpeakerName(displayLine?.speaker || "ARCHIVE");
+    const speakers = this.getStorySceneSpeakers(line, displayLine);
+    const positions = [
+      { x: 18, y: 58 }, { x: 32, y: 35 }, { x: 47, y: 55 }, { x: 61, y: 34 },
+      { x: 75, y: 57 }, { x: 88, y: 38 }, { x: 12, y: 30 }, { x: 92, y: 62 }
+    ];
+
+    map.innerHTML = speakers.map((name, index) => {
+      const profile = this.getStoryCharacterProfile(name);
+      const pos = positions[index] || positions[0];
+      const initials = profile.label.split(/\s+/).map(part => part[0]).join("").slice(0, 2).toUpperCase();
+      const active = this.normalizeStorySpeakerName(name) === speakerKey ? " active-speaker" : "";
+      return `
+        <button type="button"
+          class="story-dos-point${active}"
+          style="left:${pos.x}%;top:${pos.y}%;--char-color:${profile.color}"
+          data-character="${this.escapeHTML(profile.key)}"
+          title="${this.escapeHTML(`${profile.label}: ${profile.info}`)}"
+          aria-label="${this.escapeHTML(`${profile.label}: ${profile.info}`)}">${this.escapeHTML(initials)}</button>
+      `;
+    }).join("");
+
+    const activeProfile = this.getStoryCharacterProfile(displayLine?.speaker || speakers[0]);
+    status.innerText = `${activeProfile.label.toUpperCase()} // ${speakers.length} SIGNAL${speakers.length > 1 ? "S" : ""}`;
+    tooltip.innerText = `${activeProfile.label}: ${activeProfile.info}`;
+
+    map.querySelectorAll('.story-dos-point').forEach(point => {
+      const showInfo = () => {
+        const profile = this.getStoryCharacterProfile(point.getAttribute('data-character'));
+        tooltip.innerText = `${profile.label}: ${profile.info}`;
+      };
+      point.addEventListener('click', showInfo);
+      point.addEventListener('focus', showInfo);
+    });
+  },
+
   formatStoryLine(line, includeLeadingBreak = true) {
     const displayLine = this.getStoryDisplayLine(line);
     const prefix = `${includeLeadingBreak ? "\n" : ""}[${displayLine.speaker}] : `;
@@ -3008,6 +3136,7 @@ const EpisodeManager = {
     
     const line = this.storyLines[this.storyIndex];
     const displayLine = this.formatStoryLine(line);
+    this.updateStoryScene(line, displayLine);
     this.currentLineText = displayLine.formattedText;
     this.charIndex = 0;
     this.isTyping = true;
@@ -3081,6 +3210,10 @@ const EpisodeManager = {
     textPane.scrollTop = textPane.scrollHeight;
     
     this.storyIndex = this.storyLines.length;
+    if (this.storyLines.length > 0) {
+      const lastLine = this.storyLines[this.storyLines.length - 1];
+      this.updateStoryScene(lastLine, this.formatStoryLine(lastLine, false));
+    }
     this.updateStoryProgress();
     this.updateStoryCheckpointButton();
   },
