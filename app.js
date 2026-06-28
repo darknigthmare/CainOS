@@ -313,11 +313,11 @@ const OS = {
       'watch-btn-ping': 'Envoyer un ping de rappel Caine dans le radar.',
       'watch-cast-search': 'Filtrer les fiches par nom, statut ou signal.',
       'start-btn': 'Ouvrir le menu C&A Start.',
-      'taskbar-circus-entry': 'Assembler le chapiteau digital et entrer dans la simulation comme un resident du cirque.',
+      'taskbar-circus-entry': 'Ouvrir l entree immersive du chapiteau digital, separee du controle des episodes.',
       'dialog-close-x': 'Fermer cette fenetre de dialogue.',
       'dialog-btn-ok': 'Confirmer le message systeme.',
       'circus-dos-close': 'Fermer la representation DOS du cirque.',
-      'circus-dos-launch': 'Entrer dans la simulation depuis le chapiteau assemble.',
+      'circus-dos-launch': 'Passer du rendu chapiteau a la vue interne du cirque.',
       'circus-dos-dismiss': 'Retourner au bureau CainOS.',
       'caine-btn-dismiss': 'Fermer l intrusion de Caine.',
       'power-button': 'Eteindre ou rallumer l ecran CainOS.',
@@ -863,9 +863,6 @@ const OS = {
         document.querySelectorAll('.desktop-icon').forEach(i => i.classList.remove('selected'));
         icon.classList.add('selected');
         this.selectedIcon = icon.getAttribute('data-window');
-        if (this.selectedIcon === 'simulations') {
-          this.showCircusDosPreview();
-        }
       });
 
       icon.addEventListener('dblclick', (e) => {
@@ -898,8 +895,7 @@ const OS = {
     if (launchCircus) {
       launchCircus.addEventListener('click', () => {
         SoundManager.playWin();
-        this.hideCircusDosPreview();
-        this.openWindow('simulations');
+        this.enterCircusInteriorView();
       });
     }
     const taskbarCircusEntry = document.getElementById('taskbar-circus-entry');
@@ -1438,7 +1434,7 @@ const OS = {
       if (status) status.innerText = 'CHAPITEAU ASSEMBLE - ENTREE SIMULATION DISPONIBLE';
       if (launch) {
         launch.disabled = false;
-        launch.innerText = 'ENTRER DANS LA SIMULATION';
+        launch.innerText = 'ENTRER DANS LE CHAPITEAU';
       }
       SoundManager.playWin();
     }, 2850));
@@ -1453,7 +1449,7 @@ const OS = {
     const taskbarEntry = document.getElementById('taskbar-circus-entry');
     if (overlay) {
       overlay.style.display = 'none';
-      overlay.classList.remove('rendering');
+      overlay.classList.remove('rendering', 'inside');
     }
     if (taskbarEntry) taskbarEntry.classList.remove('active');
   },
@@ -1463,6 +1459,41 @@ const OS = {
       this.circusRenderTimers.forEach(timer => clearTimeout(timer));
     }
     this.circusRenderTimers = [];
+  },
+
+  enterCircusInteriorView() {
+    const overlay = document.getElementById('circus-dos-overlay');
+    const art = document.getElementById('circus-dos-art');
+    const status = document.getElementById('circus-dos-status');
+    const launch = document.getElementById('circus-dos-launch');
+    if (!overlay || !art) return;
+
+    this.clearCircusRenderTimers();
+    overlay.classList.add('inside');
+    if (status) status.innerText = 'VUE INTERNE SYNCHRONISEE - VOUS ETES DANS LA SIMULATION';
+    art.innerText = [
+      'C:\\\\CAINE\\\\CIRCUS> perspective = SUBJECT_INTERNAL',
+      'VISUAL LAYER............ CIRCUS FLOOR',
+      'BODY SIGNAL............. DIGITAL AVATAR',
+      'EXIT VECTOR............. NOT TRUSTED',
+      '',
+      '        *        *           *',
+      '          \\      |      /',
+      '       ----  CHAPITEAU DIGITAL  ----',
+      '          /      |      \\',
+      '        *        O           *',
+      '',
+      'Vous voyez maintenant la scene depuis l interieur du cirque.',
+      'Le panneau Simulation_Control.exe reste le controle technique des episodes.',
+      '',
+      'C:\\\\CAINE\\\\CIRCUS> return_bureau ou ouvrir Simulation_Control.exe pour choisir un episode'
+    ].join('\\n');
+    if (launch) {
+      launch.disabled = true;
+      launch.innerText = 'VUE INTERNE ACTIVE';
+    }
+    SoundManager.play(660, 0.12, 'triangle', 0.08);
+    setTimeout(() => SoundManager.play(990, 0.12, 'sine', 0.06), 120);
   },
 
   // Window Management
