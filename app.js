@@ -537,6 +537,7 @@ const OS = {
           SoundManager.playWin();
           bootScreen.style.display = 'none';
           desktop.style.display = 'flex';
+          this.positionDesktopIcons();
           this.isBooted = true;
           document.getElementById('power-led').classList.add('active');
           document.getElementById('power-button').classList.add('active');
@@ -699,6 +700,7 @@ const OS = {
       if (log) log.innerHTML = "";
       if (bootScreen) bootScreen.style.display = 'none';
       if (desktop) desktop.style.display = 'flex';
+      this.positionDesktopIcons();
 
       this.isBooted = true;
       this.wasShutdownByCalibration = false;
@@ -751,17 +753,49 @@ const OS = {
     const container = document.querySelector('.desktop-icons');
     if (!container) return { x: 0, y: 0 };
     const rect = container.getBoundingClientRect();
+    const width = rect.width || container.clientWidth || 360;
+    const height = rect.height || container.clientHeight || 320;
     const gridX = 108;
     const gridY = 92;
     const padding = 14;
-    const maxX = Math.max(padding, rect.width - 96);
-    const maxY = Math.max(padding, rect.height - 78);
+    const maxX = Math.max(padding, width - 96);
+    const maxY = Math.max(padding, height - 78);
     const snappedX = Math.round((Math.max(padding, Math.min(maxX, x)) - padding) / gridX) * gridX + padding;
     const snappedY = Math.round((Math.max(padding, Math.min(maxY, y)) - padding) / gridY) * gridY + padding;
     return {
       x: Math.max(padding, Math.min(maxX, snappedX)),
       y: Math.max(padding, Math.min(maxY, snappedY))
     };
+  },
+
+  getNearestFreeDesktopIconPosition(pos, used) {
+    let candidate = this.getSnappedDesktopIconPosition(pos.x, pos.y);
+    if (!used.has(`${candidate.x}:${candidate.y}`)) return candidate;
+
+    const gridX = 108;
+    const gridY = 92;
+    const padding = 14;
+    const container = document.querySelector('.desktop-icons');
+    const rect = container ? container.getBoundingClientRect() : { width: 360, height: 320 };
+    const width = rect.width || container?.clientWidth || 360;
+    const height = rect.height || container?.clientHeight || 320;
+    const maxX = Math.max(padding, width - 96);
+    const maxY = Math.max(padding, height - 78);
+    const cols = Math.max(1, Math.floor((maxX - padding) / gridX) + 1);
+    const rows = Math.max(1, Math.floor((maxY - padding) / gridY) + 1);
+    const startCol = Math.round((candidate.x - padding) / gridX);
+    const startRow = Math.round((candidate.y - padding) / gridY);
+
+    for (let radius = 0; radius <= Math.max(cols, rows); radius++) {
+      for (let row = Math.max(0, startRow - radius); row <= Math.min(rows - 1, startRow + radius); row++) {
+        for (let col = Math.max(0, startCol - radius); col <= Math.min(cols - 1, startCol + radius); col++) {
+          const test = this.getSnappedDesktopIconPosition(padding + col * gridX, padding + row * gridY);
+          if (!used.has(`${test.x}:${test.y}`)) return test;
+        }
+      }
+    }
+
+    return candidate;
   },
 
   getDefaultDesktopIconPosition(winId, index) {
@@ -783,21 +817,13 @@ const OS = {
       const winId = icon.getAttribute('data-window');
       const fallback = this.getDefaultDesktopIconPosition(winId, index);
       let pos = positions[winId] || fallback;
-      pos = this.getSnappedDesktopIconPosition(pos.x, pos.y);
-
-      let guard = 0;
-      while (used.has(`${pos.x}:${pos.y}`) && guard < 24) {
-        pos = this.getSnappedDesktopIconPosition(pos.x + 108, pos.y);
-        if (used.has(`${pos.x}:${pos.y}`)) {
-          pos = this.getSnappedDesktopIconPosition(14, pos.y + 92);
-        }
-        guard++;
-      }
+      pos = this.getNearestFreeDesktopIconPosition(pos, used);
 
       used.add(`${pos.x}:${pos.y}`);
       icon.style.left = `${pos.x}px`;
       icon.style.top = `${pos.y}px`;
     });
+    this.saveDesktopIconPositions();
   },
 
   setupEvents() {
@@ -981,6 +1007,20 @@ const OS = {
 
     document.addEventListener('mouseup', () => {
       if (this.draggedDesktopIcon) {
+        const used = new Set();
+        document.querySelectorAll('.desktop-icon').forEach(icon => {
+          if (icon === this.draggedDesktopIcon) return;
+          const x = parseInt(icon.style.left || '0', 10);
+          const y = parseInt(icon.style.top || '0', 10);
+          used.add(`${x}:${y}`);
+        });
+        const current = {
+          x: parseInt(this.draggedDesktopIcon.style.left || '0', 10),
+          y: parseInt(this.draggedDesktopIcon.style.top || '0', 10)
+        };
+        const pos = this.getNearestFreeDesktopIconPosition(current, used);
+        this.draggedDesktopIcon.style.left = `${pos.x}px`;
+        this.draggedDesktopIcon.style.top = `${pos.y}px`;
         this.draggedDesktopIcon.classList.remove('dragging');
         this.draggedDesktopIcon = null;
         this.desktopIconDragStart = null;
