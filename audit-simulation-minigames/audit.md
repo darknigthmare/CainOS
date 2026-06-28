@@ -107,3 +107,12 @@ La capture navigateur locale n'a pas pu etre finalisee via l'in-app browser: le 
 3. Remplacer progressivement les sprites canvas par les assets pixel art CainOS deja crees.
 
 4. Faire un vrai passage screenshot apres stabilisation du navigateur local.
+
+## Mise a jour - mapping par sous-episode
+
+Correction ajoutee le 2026-06-28:
+
+- Chaque sous-episode des episodes 1 a 9 a maintenant une specification de mini-jeu de simulation explicite dans `StoryMicroGame.getSimulationGameSpec()`.
+- Le moteur n'utilise plus seulement des mots-clefs pour choisir l'action de simulation.
+- Les objectifs, instructions, labels bons et labels dangereux viennent de cette specification.
+- Verification de couverture: 72 checkpoints d'episodes, 72 specifications, 0 manque, 0 doublon.

@@ -8228,6 +8228,8 @@ class StoryMicroGame {
     if (this.microPhase !== 'simulation') {
       return this.config.playObjective || this.config.objective || "Terminez la micro-simulation.";
     }
+    const spec = this.getSimulationGameSpec();
+    if (spec?.objective) return spec.objective;
     if (this.config.mode === "click") {
       return `Cliquez ${goal} fragments dores "${target}". Evitez les glitches magenta "${hazard}".`;
     }
@@ -8243,7 +8245,91 @@ class StoryMicroGame {
     return "Terminez l action de simulation.";
   }
 
+  getSimulationGameSpec() {
+    const specData = {
+      "Arrivee de Pomni": ["circus", "Stabilisez Pomni dans l'arrivee au cirque et evitez les faux signaux de sortie.", "SOURIS: STABILISER POMNI", "POMNI", "PANIC"],
+      "Regles du cirque": ["circus", "Rattrapez les pictogrammes des regles avant que les censures de Caine brouillent la piste.", "SOURIS: SUIVRE LES REGLES", "REGLE", "CENSURE"],
+      "Tour et porte de sortie": ["office", "Scannez les traces de porte de sortie sans valider les verrous impossibles.", "CLIC: TESTER LA SORTIE", "EXIT", "LOCK"],
+      "Nom Pomni": ["memory", "Assemblez les fragments de nom autour de Pomni avant que l'identite ne se brouille.", "SOURIS: RETROUVER LE NOM", "NOM", "NULL"],
+      "Aventure Gloink": ["circus", "Ramassez les Gloinks errants avant qu'ils ne volent les morceaux du decor.", "SOURIS: ATTRAPER GLOINK", "GLOINK", "VOL"],
+      "Kaufmo abstrait": ["manor", "Eclairez le chemin hors de Kaufmo abstrait sans toucher les griffes noires.", "SOURIS/CLIC: EVITER KAUFMO", "ISSUE", "ABSTRAIT"],
+      "Secours de Ragatha": ["circus", "Recuperez les signaux de Ragatha et Zooble pendant que la scene s'effondre.", "SOURIS: SECOURIR RAGATHA", "AIDE", "CHUTE"],
+      "Fausse sortie": ["office", "Suivez les indices de l'Exit Office, mais refusez les verrous qui menent au vide.", "CLIC/SOURIS: TRIER LES PORTES", "PORTE", "VIDE"],
+      "Reveil de Pomni": ["memory", "Rassemblez les souvenirs du reveil avant que la panique ne reprenne.", "SOURIS: CALMER POMNI", "CALME", "REVEIL"],
+      "Candy Canyon Kingdom": ["truck", "Chargez les caisses de sirop du royaume sans percuter les parasites du canyon.", "SOURIS: PREPARER LE CONVOI", "SIROP", "PARASITE"],
+      "Audience royale": ["truck", "Gardez le convoi presentable devant la princesse et evitez les faux ordres.", "SOURIS: PROTEGER L'AUDIENCE", "COURONNE", "FAUX"],
+      "Course du tanker": ["truck", "Pilotez le tanker dans Candy Canyon et gardez le chargement intact.", "SOURIS: PILOTER LE TANKER", "BONBON", "ROCHER"],
+      "Chute avec Gummigoo": ["truck", "Recuperez les echos de Gummigoo pendant la chute sans toucher les fragments instables.", "SOURIS: GUIDER GUMMIGOO", "GUMMI", "FAILLE"],
+      "Crise NPC": ["memory", "Separez les souvenirs de Gummigoo des alertes PNJ interdites.", "SOURIS: TRIER LES SOUVENIRS", "GUMMI", "NPC"],
+      "Retour impossible": ["office", "Cherchez une cle de retour, mais evitez les verrous qui effacent les PNJ.", "CLIC/SOURIS: TESTER LE RETOUR", "RETOUR", "RESET"],
+      "Fin du convoi": ["truck", "Ramenez le convoi au cirque sans perdre le dernier signal Candy Canyon.", "SOURIS: FINIR LE CONVOI", "CONVOI", "CHOC"],
+      "Zone bleue": ["circus", "Suivez les marqueurs bleus de Caine vers la zone reservee.", "SOURIS: SUIVRE LA ZONE", "BLEU", "ROUGE"],
+      "Manoir mature": ["manor", "Entrez dans le manoir en gardant la lampe sur les passages surs.", "SOURIS/CLIC: AVANCER DANS LE MANOIR", "LAMPE", "OMBRE"],
+      "Baron Mildenhall": ["manor", "Exposez les traces du Baron Mildenhall avant que son piege ne se referme.", "SOURIS/CLIC: TROUVER LE BARON", "INDICE", "BETE"],
+      "Premiere chasse": ["manor", "Chassez les signaux de la creature sans vous jeter dans les ombres.", "SOURIS/CLIC: PREMIERE CHASSE", "TRACE", "OMBRE"],
+      "Equipe separee": ["manor", "Rejoignez les signaux des groupes separes sans suivre les leurres.", "SOURIS: RECONNECTER L'EQUIPE", "EQUIPE", "LEURRE"],
+      "Sous-sol Mildenhall": ["manor", "Traversez le sous-sol et gardez la lumiere sur les sorties utilisables.", "SOURIS/CLIC: SORTIR DU SOUS-SOL", "SORTIE", "NOIR"],
+      "Souvenir de Queenie": ["memory", "Protegez le souvenir de Queenie sans casser la memoire de Kinger.", "SOURIS: PROTEGER QUEENIE", "QUEENIE", "FISSURE"],
+      "Sortie du sous-sol": ["manor", "Ramenez Pomni et Kinger vers la sortie avant que le manoir ne se referme.", "SOURIS/CLIC: REMONTER", "ESCALIER", "PIEGE"],
+      "Masque plastique": ["circus", "Rattrapez les morceaux du masque de Gangle sans nourrir la dispute.", "SOURIS: REPARER LE MASQUE", "MASQUE", "TENSION"],
+      "Briefing Spudsy": ["restaurant", "Validez les consignes Spudsy avant le debut du service.", "SOURIS: PRENDRE LES CONSIGNES", "POSTE", "CONFUS"],
+      "Arrivee au restaurant": ["restaurant", "Installez l'equipe au comptoir sans laisser les tickets se melanger.", "SOURIS: OUVRIR SPUDSY", "TICKET", "PANNE"],
+      "Premier rush": ["restaurant", "Servez les premieres commandes avant que la file ne sature.", "SOURIS: ATTRAPER LES COMMANDES", "COMMANDE", "RETARD"],
+      "Max et les clients": ["restaurant", "Gerez Max et les clients difficiles sans casser le rythme du service.", "SOURIS: GERER LES CLIENTS", "CLIENT", "MAX"],
+      "Video formation": ["restaurant", "Recuperez les bons pictogrammes de formation et ignorez les consignes absurdes.", "SOURIS: SUIVRE LA FORMATION", "VIDEO", "ABSURDE"],
+      "Crise de Gangle": ["restaurant", "Stabilisez Gangle pendant le service sans empiler les erreurs de caisse.", "SOURIS: CALMER GANGLE", "CALME", "ERREUR"],
+      "Fin de service": ["restaurant", "Fermez Spudsy proprement et evitez les derniers tickets parasites.", "SOURIS: FERMER LE SERVICE", "FERME", "TICKET"],
+      "Retour trempe": ["beach", "Protegez l'equipe trempee du soleil digital et rassemblez les abris.", "SOURIS: PLACER LES ABRIS", "ABRI", "SOLEIL"],
+      "Boite a suggestions": ["circus", "Triez les suggestions utiles avant que Caine ne lance une idee dangereuse.", "SOURIS: TRIER LES IDEES", "IDEE", "BUG"],
+      "Poach Everything": ["arena", "Evitez les tirs de chasse et recuperez uniquement les cibles valides.", "CLIC: ESQUIVER LA CHASSE", "CIBLE", "TIR"],
+      "President Pomni": ["office", "Validez les dossiers de Presidente Pomni sans signer les fausses directives.", "CLIC/SOURIS: GERER LES DOSSIERS", "DOSSIER", "ORDRE"],
+      "Intermission": ["circus", "Gardez le spectacle en pause stable sans declencher un nouveau numero.", "SOURIS: TENIR L'ENTRACTE", "PAUSE", "NUMERO"],
+      "Ragatha fatigue": ["memory", "Recuperez les signaux de Ragatha sans empirer sa fatigue.", "SOURIS: SOUTENIR RAGATHA", "SOUTIEN", "FATIGUE"],
+      "Softball de Caine": ["arena", "Visez les balles de softball de Caine sans toucher les tirs parasites.", "CLIC: FRAPPER LES BALLES", "BALLE", "FAUTE"],
+      "Troisieme home run": ["arena", "Alignez le troisieme home run avant que la partie ne devienne incontrolable.", "CLIC: HOME RUN", "HOME", "MISS"],
+      "Zooble se cache": ["circus", "Trouvez les signaux de Zooble sans forcer son retrait de la scene.", "SOURIS: RESPECTER ZOOBLE", "ZOOBLE", "FORCE"],
+      "Team adventure": ["arena", "Formez la team adventure et recuperez les roles sans confusion.", "SOURIS: SYNCHRO EQUIPE", "ROLE", "CHAOS"],
+      "Epreuves de Caine": ["arena", "Reussissez les epreuves de Caine en gardant les cibles officielles.", "CLIC: PASSER L'EPREUVE", "EPREUVE", "PIEGE"],
+      "Jax sous pression": ["arena", "Gardez Jax dans l'action sans le pousser vers le mauvais signal.", "CLIC: CANALISER JAX", "COURAGE", "FUITE"],
+      "Trajectoires croisees": ["arena", "Croisez les trajectoires de l'equipe sans collision entre objectifs.", "CLIC: ALIGNER LES TRAJECTOIRES", "TRAJET", "CHOC"],
+      "Kinger et Pomni": ["memory", "Gardez Pomni avec Kinger et ramassez les souvenirs qui stabilisent la scene.", "SOURIS: SUIVRE KINGER", "KINGER", "PANIC"],
+      "Alliance chaotique": ["arena", "Transformez le chaos d'equipe en alliance utilisable.", "CLIC: FIXER L'ALLIANCE", "ALLIE", "CHAOS"],
+      "Avant les awards": ["arena", "Preparez les awards sans declencher les recompenses parasites.", "CLIC: PREPARER LES AWARDS", "AWARD", "BUG"],
+      "Jour sans aventure": ["circus", "Gardez le cirque calme pendant le jour sans aventure.", "SOURIS: MAINTENIR LE CALME", "CALME", "ENNUI"],
+      "Lac digital": ["beach", "Traversez le lac digital en gardant l'abri entre l'equipe et le soleil.", "SOURIS: TRAVERSER LE LAC", "LAC", "SOLEIL"],
+      "Cabine et PNJ": ["beach", "Rapprochez les PNJ de la cabine sans perdre les signaux de confiance.", "SOURIS: GUIDER LES PNJ", "PNJ", "DOUTE"],
+      "Signal C&A": ["office", "Isolez le signal C&A sans ouvrir les verrous inconnus trop tot.", "CLIC/SOURIS: ISOLER C&A", "C&A", "LOCK"],
+      "Plan des passes": ["office", "Assemblez le plan des passes et refusez les faux codes.", "CLIC/SOURIS: ASSEMBLER LES PASSES", "PASSE", "FAUX"],
+      "Confiance fragile": ["memory", "Renforcez la confiance fragile avant que la peur ne la fissure.", "SOURIS: PROTEGER LA CONFIANCE", "CONFI", "PEUR"],
+      "Choix de sortie": ["office", "Comparez les sorties possibles et ignorez les boutons pieges.", "CLIC/SOURIS: CHOISIR LA SORTIE", "SORTIE", "PIEGE"],
+      "Bon bouton": ["office", "Trouvez le bon bouton sans valider les commandes de reset.", "CLIC: APPUYER LE BON BOUTON", "BOUTON", "RESET"],
+      "Queenie dans le noir": ["memory", "Suivez Queenie dans le noir sans casser les souvenirs de Kinger.", "SOURIS: SUIVRE QUEENIE", "QUEENIE", "NOIR"],
+      "Piece d'echecs": ["memory", "Protegez la piece d'echecs et gardez sa trajectoire lisible.", "SOURIS: PROTEGER LA PIECE", "PIECE", "CHUTE"],
+      "Briefing de Caine": ["circus", "Ecoutez le briefing de Caine et retenez les vrais objectifs.", "SOURIS: FILTRER LE BRIEFING", "BRIEF", "GLITCH"],
+      "Pression du groupe": ["circus", "Absorbez la pression du groupe sans laisser la scene saturer.", "SOURIS: EQUILIBRER LE GROUPE", "GROUPE", "TENSION"],
+      "C&A en surface": ["office", "Faites remonter les traces C&A sans debloquer les dossiers interdits.", "CLIC/SOURIS: REMONTER C&A", "TRACE", "INTERDIT"],
+      "Console impossible": ["office", "Travaillez la console impossible et rejetez les commandes invalides.", "CLIC/SOURIS: GERER LA CONSOLE", "CONSOLE", "INVALIDE"],
+      "Caine refuse": ["office", "Gardez les preuves pendant que Caine refuse l'information.", "CLIC/SOURIS: TENIR LES PREUVES", "PREUVE", "REFUS"],
+      "Avant le crash": ["memory", "Stabilisez les derniers souvenirs avant le crash.", "SOURIS: STABILISER AVANT CRASH", "STABLE", "CRASH"],
+      "Brain scans": ["office", "Collectez les bons brain scans sans accepter les fichiers corrompus.", "CLIC/SOURIS: TRIER LES SCANS", "SCAN", "CORRUPT"],
+      "Console de Kinger": ["office", "Aidez Kinger a garder la console lisible pendant la crise.", "CLIC/SOURIS: GUIDER KINGER", "KINGER", "ERREUR"],
+      "Ribbit": ["memory", "Protegez le signal Ribbit et ignorez les echos qui brouillent la memoire.", "SOURIS: PROTEGER RIBBIT", "RIBBIT", "ECHO"],
+      "Caine affaibli": ["circus", "Gardez la scene debout pendant que Caine perd en stabilite.", "SOURIS: STABILISER CAINE", "CAINE", "FAIL"],
+      "Jax fissure": ["memory", "Rassemblez les morceaux de Jax sans toucher les fissures de rupture.", "SOURIS: RECADRER JAX", "JAX", "FISSURE"],
+      "Souvenirs humains": ["memory", "Recuperez les souvenirs humains dans l'ordre sans les melanger au cirque.", "SOURIS: TRIER LES HUMAINS", "HUMAIN", "CIRQUE"],
+      "Marques dehors": ["memory", "Gardez les marques du dehors lisibles avant qu'elles ne disparaissent.", "SOURIS: GARDER LES MARQUES", "MARQUE", "EFFACE"],
+      "Avant Abby": ["memory", "Stabilisez le dernier flux avant l'arrivee d'Abby.", "SOURIS: PREPARER ABBY", "ABBY", "VOID"]
+    };
+    const entry = specData[this.config.title];
+    if (!entry) return null;
+    const [scene, objective, instruction, goodLabel, badLabel] = entry;
+    const id = this.config.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+    return { id, scene, objective, instruction, goodLabel, badLabel };
+  }
+
   getSimulationSceneType() {
+    const spec = this.getSimulationGameSpec();
+    if (spec?.scene) return spec.scene;
     const signal = `${this.config.context || ""} ${this.config.title || ""} ${this.config.objective || ""} ${this.config.target || ""} ${this.config.hazard || ""}`.toUpperCase();
     if (signal.includes("CANYON") || signal.includes("TRUCK") || signal.includes("TANKER") || signal.includes("GUMMIGOO") || signal.includes("SYRUP")) return "truck";
     if (signal.includes("SPUDSY") || signal.includes("ORDER") || signal.includes("SHIFT") || signal.includes("GANGLE") || signal.includes("CUSTOMER")) return "restaurant";
@@ -8532,8 +8618,13 @@ class StoryMicroGame {
 
   spawnSimulationEntity(offset = 0) {
     const type = this.simSceneType || this.getSimulationSceneType();
+    const spec = this.getSimulationGameSpec();
     const good = Math.random() > 0.32;
-    const base = { good, r: good ? 12 : 14, label: good ? this.config.target : this.config.hazard };
+    const base = {
+      good,
+      r: good ? 12 : 14,
+      label: good ? (spec?.goodLabel || this.config.target) : (spec?.badLabel || this.config.hazard)
+    };
     if (type === 'restaurant') {
       this.simEntities.push({
         ...base,
@@ -8826,8 +8917,9 @@ class StoryMicroGame {
   drawLegend() {
     const ctx = this.ctx;
     const palette = this.getPhasePalette();
-    const target = String(this.config.target || 'OK').slice(0, 8);
-    const hazard = String(this.config.hazard || 'ERR').slice(0, 8);
+    const spec = this.microPhase === 'simulation' ? this.getSimulationGameSpec() : null;
+    const target = String(spec?.goodLabel || this.config.target || 'OK').slice(0, 8);
+    const hazard = String(spec?.badLabel || this.config.hazard || 'ERR').slice(0, 8);
     ctx.save();
     ctx.font = '10px Courier New';
     ctx.textAlign = 'left';
@@ -9149,6 +9241,8 @@ class StoryMicroGame {
   }
 
   getSimulationInstruction() {
+    const spec = this.getSimulationGameSpec();
+    if (spec?.instruction) return spec.instruction;
     const type = this.simSceneType || this.getSimulationSceneType();
     if (type === 'truck') return 'SOURIS: PILOTER LE CAMION';
     if (type === 'restaurant') return 'SOURIS: ATTRAPER LES COMMANDES';
