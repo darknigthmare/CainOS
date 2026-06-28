@@ -7501,24 +7501,39 @@ const EpisodeManager = {
 
   getStorySceneSpeakers(line, displayLine) {
     const names = new Set();
+    const speakerKey = this.normalizeStorySpeakerName(displayLine?.speaker || line?.speaker || "");
+    const technicalSceneSignals = new Set([
+      "MUSIC",
+      "SFX",
+      "CAPTION",
+      "BACKGROUND",
+      "ARCHIVE",
+      "SYSTEM",
+      "VOICE",
+      "VOICES",
+      "UNIDENTIFIED"
+    ]);
+    const isTechnicalSceneLine = technicalSceneSignals.has(speakerKey);
     const addName = (name) => {
       const key = this.normalizeStorySpeakerName(name);
-      if (key && key !== "UNKNOWN") names.add(key);
+      if (key && key !== "UNKNOWN" && !technicalSceneSignals.has(key)) names.add(key);
     };
 
-    if (displayLine && displayLine.speaker) addName(displayLine.speaker);
-    this.getStorySpeakerTags(line?.text || "").forEach(addName);
+    if (!isTechnicalSceneLine && displayLine && displayLine.speaker) addName(displayLine.speaker);
+    if (!isTechnicalSceneLine) this.getStorySpeakerTags(line?.text || "").forEach(addName);
 
-    const haystack = `${line?.speaker || ""} ${line?.text || ""}`.toUpperCase();
-    Object.keys(this.storyCharacterProfiles).forEach(key => {
-      const profile = this.storyCharacterProfiles[key];
-      const tokens = [key, profile.label].filter(Boolean);
-      if (tokens.some(token => haystack.includes(String(token).toUpperCase()))) {
-        addName(key);
-      }
-    });
+    if (!isTechnicalSceneLine) {
+      const haystack = `${line?.speaker || ""} ${line?.text || ""}`.toUpperCase();
+      Object.keys(this.storyCharacterProfiles).forEach(key => {
+        if (technicalSceneSignals.has(key)) return;
+        const profile = this.storyCharacterProfiles[key];
+        const tokens = [key, profile.label].filter(Boolean);
+        if (tokens.some(token => haystack.includes(String(token).toUpperCase()))) {
+          addName(key);
+        }
+      });
+    }
 
-    if (names.size === 0) addName("ARCHIVE");
     return Array.from(names).slice(0, 8);
   },
 
@@ -7587,6 +7602,12 @@ const EpisodeManager = {
     });
     this.activeStorySceneCharacters = activeScene.slice(0, 8);
     const speakers = this.activeStorySceneCharacters;
+    if (speakers.length === 0) {
+      map.innerHTML = "";
+      status.innerText = "AUCUN SIGNAL PERSONNAGE";
+      tooltip.innerText = "Aucun personnage actif dans cette ligne technique.";
+      return;
+    }
     const positions = [
       { x: 18, y: 59 }, { x: 31, y: 36 }, { x: 45, y: 60 }, { x: 58, y: 36 },
       { x: 72, y: 59 }, { x: 86, y: 39 }, { x: 11, y: 31 }, { x: 93, y: 63 }
@@ -7613,7 +7634,8 @@ const EpisodeManager = {
       `;
     }).join("");
 
-    const activeProfile = this.getStoryCharacterProfile(displayLine?.speaker || speakers[0]);
+    const activeName = newSpeakers.length > 0 ? (displayLine?.speaker || newSpeakers[0]) : speakers[0];
+    const activeProfile = this.getStoryCharacterProfile(activeName);
     const lockLabel = activeProfile.loreKnown ? "INFO OK" : "INFO VERROUILLEE";
     status.innerText = `${activeProfile.label.toUpperCase()} // ${speakers.length} SIGNAL${speakers.length > 1 ? "S" : ""} // ${lockLabel}`;
     tooltip.innerText = `${activeProfile.label}: ${activeProfile.info}`;
