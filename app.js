@@ -1365,6 +1365,8 @@ const OS = {
     if (!overlay || !art) return;
 
     this.clearCircusRenderTimers();
+    this.stopCircusDoomView();
+    overlay.classList.remove('inside', 'doom');
 
     const progress = (typeof EpisodeManager !== 'undefined') ? EpisodeManager.getProgress() : [];
     const unlockedCount = progress.filter(ep => ep >= 0 && ep <= 9).length;
@@ -1445,11 +1447,12 @@ const OS = {
 
   hideCircusDosPreview() {
     this.clearCircusRenderTimers();
+    this.stopCircusDoomView();
     const overlay = document.getElementById('circus-dos-overlay');
     const taskbarEntry = document.getElementById('taskbar-circus-entry');
     if (overlay) {
       overlay.style.display = 'none';
-      overlay.classList.remove('rendering', 'inside');
+      overlay.classList.remove('rendering', 'inside', 'doom');
     }
     if (taskbarEntry) taskbarEntry.classList.remove('active');
   },
@@ -1494,6 +1497,209 @@ const OS = {
     }
     SoundManager.play(660, 0.12, 'triangle', 0.08);
     setTimeout(() => SoundManager.play(990, 0.12, 'sine', 0.06), 120);
+    this.startCircusDoomView();
+  },
+
+  startCircusDoomView() {
+    const overlay = document.getElementById('circus-dos-overlay');
+    const canvas = document.getElementById('circus-doom-canvas');
+    const zoneEl = document.getElementById('circus-doom-zone');
+    if (!overlay || !canvas) return;
+
+    this.stopCircusDoomView();
+    overlay.classList.add('doom');
+    canvas.focus();
+
+    const progress = (typeof EpisodeManager !== 'undefined') ? EpisodeManager.getProgress() : [];
+    const unlocked = ep => progress.includes(ep);
+    const map = [
+      [1,1,1,1,1,1,1,1,1,1,1,1],
+      [1,0,0,0,2,0,0,0,3,0,0,1],
+      [1,0,1,0,1,0,1,0,1,0,0,1],
+      [1,0,1,0,0,0,1,0,0,0,4,1],
+      [1,0,1,1,1,0,1,1,1,0,1,1],
+      [1,0,0,0,0,0,0,0,1,0,0,1],
+      [1,5,1,0,1,1,1,0,1,1,0,1],
+      [1,0,0,0,1,6,0,0,0,7,0,1],
+      [1,1,1,1,1,1,1,1,1,1,1,1]
+    ];
+    const portals = {
+      2: { name: 'PISTE DU CIRQUE', color: '#ffd84a', unlocked: true },
+      3: { name: 'CANDY CANYON', color: '#ff9b37', unlocked: unlocked(2) },
+      4: { name: 'MANOIR MILDENHALL', color: '#b7f0ff', unlocked: unlocked(3) },
+      5: { name: 'SPUDSY SERVICE', color: '#ff4d4d', unlocked: unlocked(4) },
+      6: { name: 'LAC DIGITAL', color: '#7df0ff', unlocked: unlocked(7) },
+      7: { name: 'COUCHE C&A', color: '#ff9b37', unlocked: unlocked(8) || unlocked(9) }
+    };
+
+    this.circusDoom = {
+      canvas,
+      ctx: canvas.getContext('2d'),
+      zoneEl,
+      map,
+      portals,
+      player: { x: 2.4, y: 5.4, a: -0.08 },
+      keys: new Set(),
+      last: performance.now(),
+      raf: null
+    };
+
+    this.circusDoomKeyDown = e => {
+      const key = e.key.toLowerCase();
+      if (['arrowup','arrowdown','arrowleft','arrowright','w','a','s','d','z','q'].includes(key)) {
+        e.preventDefault();
+        this.circusDoom.keys.add(key);
+      }
+    };
+    this.circusDoomKeyUp = e => {
+      this.circusDoom?.keys.delete(e.key.toLowerCase());
+    };
+    window.addEventListener('keydown', this.circusDoomKeyDown);
+    window.addEventListener('keyup', this.circusDoomKeyUp);
+
+    const loop = now => {
+      if (!this.circusDoom) return;
+      const dt = Math.min(0.05, (now - this.circusDoom.last) / 1000);
+      this.circusDoom.last = now;
+      this.updateCircusDoom(dt);
+      this.drawCircusDoom();
+      this.circusDoom.raf = requestAnimationFrame(loop);
+    };
+    this.circusDoom.raf = requestAnimationFrame(loop);
+  },
+
+  stopCircusDoomView() {
+    if (this.circusDoom?.raf) cancelAnimationFrame(this.circusDoom.raf);
+    if (this.circusDoomKeyDown) window.removeEventListener('keydown', this.circusDoomKeyDown);
+    if (this.circusDoomKeyUp) window.removeEventListener('keyup', this.circusDoomKeyUp);
+    this.circusDoom = null;
+    this.circusDoomKeyDown = null;
+    this.circusDoomKeyUp = null;
+  },
+
+  updateCircusDoom(dt) {
+    const state = this.circusDoom;
+    if (!state) return;
+    const { player, keys, map, portals } = state;
+    const turn = 2.3 * dt;
+    const speed = 2.1 * dt;
+    if (keys.has('arrowleft') || keys.has('a') || keys.has('q')) player.a -= turn;
+    if (keys.has('arrowright') || keys.has('d')) player.a += turn;
+
+    let move = 0;
+    if (keys.has('arrowup') || keys.has('w') || keys.has('z')) move += speed;
+    if (keys.has('arrowdown') || keys.has('s')) move -= speed;
+    if (move !== 0) {
+      const nx = player.x + Math.cos(player.a) * move;
+      const ny = player.y + Math.sin(player.a) * move;
+      const cell = map[Math.floor(ny)]?.[Math.floor(nx)] ?? 1;
+      if (cell === 0 || portals[cell]?.unlocked) {
+        player.x = nx;
+        player.y = ny;
+      } else {
+        SoundManager.playError();
+      }
+    }
+
+    const cell = map[Math.floor(player.y)]?.[Math.floor(player.x)] ?? 0;
+    const portal = portals[cell];
+    if (state.zoneEl) {
+      if (portal) {
+        state.zoneEl.innerText = `ZONE: ${portal.name}${portal.unlocked ? '' : ' / VERROUILLEE'}`;
+      } else {
+        state.zoneEl.innerText = 'ZONE: CHAPITEAU INTERNE';
+      }
+    }
+  },
+
+  drawCircusDoom() {
+    const state = this.circusDoom;
+    if (!state) return;
+    const { canvas, ctx, player, map, portals } = state;
+    const w = canvas.width;
+    const h = canvas.height;
+    const fov = Math.PI / 3;
+    const cols = 160;
+    const strip = w / cols;
+
+    ctx.fillStyle = '#120821';
+    ctx.fillRect(0, 0, w, h / 2);
+    ctx.fillStyle = '#24112f';
+    ctx.fillRect(0, h / 2, w, h / 2);
+
+    for (let col = 0; col < cols; col++) {
+      const rayA = player.a - fov / 2 + (col / cols) * fov;
+      let dist = 0;
+      let hit = 0;
+      let shade = 1;
+      while (dist < 12 && !hit) {
+        dist += 0.035;
+        const rx = player.x + Math.cos(rayA) * dist;
+        const ry = player.y + Math.sin(rayA) * dist;
+        hit = map[Math.floor(ry)]?.[Math.floor(rx)] ?? 1;
+      }
+      const corrected = dist * Math.cos(rayA - player.a);
+      const wallH = Math.min(h, h / Math.max(0.18, corrected));
+      const y = (h - wallH) / 2;
+      shade = Math.max(0.25, 1 - corrected / 9);
+      const portal = portals[hit];
+      const color = portal ? (portal.unlocked ? portal.color : '#56505f') : '#e53935';
+      ctx.fillStyle = this.shadeHex(color, shade);
+      ctx.fillRect(col * strip, y, Math.ceil(strip) + 1, wallH);
+      if (portal && !portal.unlocked) {
+        ctx.fillStyle = 'rgba(0,0,0,0.35)';
+        ctx.fillRect(col * strip, y, Math.ceil(strip) + 1, wallH);
+      }
+    }
+
+    this.drawCircusDoomSprites(ctx, w, h);
+    this.drawCircusDoomMap(ctx, map, portals, player);
+  },
+
+  drawCircusDoomSprites(ctx, w, h) {
+    ctx.save();
+    ctx.textAlign = 'center';
+    ctx.font = 'bold 12px Courier New';
+    ctx.fillStyle = '#ffd84a';
+    ctx.fillText('THE DIGITAL CIRCUS', w / 2, 24);
+    ctx.fillStyle = '#7df0ff';
+    ctx.fillText('PORTAILS LORE-WISE SELON PROGRESSION', w / 2, 40);
+    ctx.restore();
+  },
+
+  drawCircusDoomMap(ctx, map, portals, player) {
+    const scale = 7;
+    const ox = 10;
+    const oy = 54;
+    ctx.save();
+    ctx.fillStyle = 'rgba(0,0,0,0.52)';
+    ctx.fillRect(ox - 4, oy - 4, map[0].length * scale + 8, map.length * scale + 8);
+    for (let y = 0; y < map.length; y++) {
+      for (let x = 0; x < map[y].length; x++) {
+        const cell = map[y][x];
+        if (cell === 1) ctx.fillStyle = '#5a1732';
+        else if (portals[cell]) ctx.fillStyle = portals[cell].unlocked ? portals[cell].color : '#4b4b55';
+        else ctx.fillStyle = '#111827';
+        ctx.fillRect(ox + x * scale, oy + y * scale, scale - 1, scale - 1);
+      }
+    }
+    ctx.fillStyle = '#ffffff';
+    ctx.fillRect(ox + player.x * scale - 2, oy + player.y * scale - 2, 4, 4);
+    ctx.strokeStyle = '#ffffff';
+    ctx.beginPath();
+    ctx.moveTo(ox + player.x * scale, oy + player.y * scale);
+    ctx.lineTo(ox + (player.x + Math.cos(player.a) * 0.7) * scale, oy + (player.y + Math.sin(player.a) * 0.7) * scale);
+    ctx.stroke();
+    ctx.restore();
+  },
+
+  shadeHex(hex, amount) {
+    const clean = hex.replace('#', '');
+    const num = parseInt(clean, 16);
+    const r = Math.max(0, Math.min(255, Math.floor(((num >> 16) & 255) * amount)));
+    const g = Math.max(0, Math.min(255, Math.floor(((num >> 8) & 255) * amount)));
+    const b = Math.max(0, Math.min(255, Math.floor((num & 255) * amount)));
+    return `rgb(${r},${g},${b})`;
   },
 
   // Window Management

@@ -1641,6 +1641,32 @@ body {
   border-top: 1px solid rgba(125, 240, 255, 0.25);
 }
 
+.circus-doom-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  image-rendering: pixelated;
+  background: #080414;
+  z-index: 3;
+}
+
+.circus-doom-hud {
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+  z-index: 5;
+  display: none;
+  justify-content: space-between;
+  gap: 8px;
+  color: #fff1a8;
+  font: bold 10px "Courier New", monospace;
+  text-shadow: 0 0 4px #000;
+  pointer-events: none;
+}
+
 .circus-shape {
   position: absolute;
   opacity: 0;
@@ -1814,6 +1840,32 @@ body {
   opacity: 1;
   transform: translateX(-50%) scale(1.45);
   animation: circusInteriorPulse 1.3s ease-in-out infinite alternate;
+}
+
+.circus-dos-overlay.doom .circus-render-stage {
+  background: #05020d;
+  border-color: #7df0ff;
+  box-shadow: inset 0 0 28px rgba(125, 240, 255, 0.18), 0 0 24px rgba(255, 216, 74, 0.18);
+}
+
+.circus-dos-overlay.doom .circus-render-stage::before,
+.circus-dos-overlay.doom .circus-shape,
+.circus-dos-overlay.doom .circus-sky,
+.circus-dos-overlay.doom .circus-entry-glow {
+  display: none;
+}
+
+.circus-dos-overlay.doom .circus-render-stage::after {
+  content: "SUBJECT INTERNAL VIEW // RAYCAST";
+  z-index: 6;
+}
+
+.circus-dos-overlay.doom .circus-doom-canvas {
+  display: block;
+}
+
+.circus-dos-overlay.doom .circus-doom-hud {
+  display: flex;
 }
 
 .circus-dos-status {

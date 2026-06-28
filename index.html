@@ -738,9 +738,14 @@
                 <button id="circus-dos-close" class="win-btn" title="Fermer la representation DOS du cirque" aria-label="Fermer la representation DOS du cirque">X</button>
               </div>
               <div class="circus-dos-body">
-                <div class="circus-render-stage" aria-hidden="true">
+                <div class="circus-render-stage" aria-label="Vue interne navigable du chapiteau digital">
                   <div class="circus-scanline"></div>
                   <div class="circus-sky"></div>
+                  <canvas id="circus-doom-canvas" class="circus-doom-canvas" width="640" height="240" tabindex="0" aria-label="Vue pseudo 3D du chapiteau digital. Utilisez ZQSD ou les fleches pour vous deplacer."></canvas>
+                  <div id="circus-doom-hud" class="circus-doom-hud">
+                    <span>WASD/FLECHES: NAVIGUER</span>
+                    <span id="circus-doom-zone">ZONE: PASSERELLE</span>
+                  </div>
                   <div class="circus-shape circus-shape-ring"></div>
                   <div class="circus-shape circus-shape-left"></div>
                   <div class="circus-shape circus-shape-right"></div>
