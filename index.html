@@ -677,6 +677,9 @@
               <button id="start-btn" class="retro-btn">
                 <span class="logo-icon-sm"></span> C&A Start
               </button>
+              <button id="taskbar-circus-entry" class="taskbar-circus-entry" title="Assembler le chapiteau digital et entrer dans la simulation" aria-label="Assembler le chapiteau digital et entrer dans la simulation">
+                <span class="icon-sm icon-sim-sm"></span>
+              </button>
               <div class="taskbar-tabs" id="taskbar-tabs">
                 <!-- Open windows represented here -->
               </div>
@@ -735,9 +738,23 @@
                 <button id="circus-dos-close" class="win-btn" title="Fermer la representation DOS du cirque" aria-label="Fermer la representation DOS du cirque">X</button>
               </div>
               <div class="circus-dos-body">
+                <div class="circus-render-stage" aria-hidden="true">
+                  <div class="circus-scanline"></div>
+                  <div class="circus-sky"></div>
+                  <div class="circus-shape circus-shape-ring"></div>
+                  <div class="circus-shape circus-shape-left"></div>
+                  <div class="circus-shape circus-shape-right"></div>
+                  <div class="circus-shape circus-shape-roof"></div>
+                  <div class="circus-shape circus-shape-base"></div>
+                  <div class="circus-shape circus-shape-door"></div>
+                  <div class="circus-shape circus-shape-star star-a"></div>
+                  <div class="circus-shape circus-shape-star star-b"></div>
+                  <div class="circus-entry-glow"></div>
+                </div>
+                <div id="circus-dos-status" class="circus-dos-status">INITIALISATION DU RENDU...</div>
                 <pre id="circus-dos-art" class="circus-dos-art"></pre>
                 <div class="circus-dos-actions">
-                  <button id="circus-dos-launch" class="retro-btn btn-primary-retro" title="Ouvrir le panneau de simulation apres le rendu DOS" aria-label="Ouvrir le panneau de simulation apres le rendu DOS">LANCER LE MODULE</button>
+                  <button id="circus-dos-launch" class="retro-btn btn-primary-retro" title="Entrer dans la simulation depuis le chapiteau assemble" aria-label="Entrer dans la simulation depuis le chapiteau assemble">ENTRER DANS LA SIMULATION</button>
                   <button id="circus-dos-dismiss" class="retro-btn" title="Retourner au bureau CainOS" aria-label="Retourner au bureau CainOS">RETOUR BUREAU</button>
                 </div>
               </div>

@@ -313,10 +313,11 @@ const OS = {
       'watch-btn-ping': 'Envoyer un ping de rappel Caine dans le radar.',
       'watch-cast-search': 'Filtrer les fiches par nom, statut ou signal.',
       'start-btn': 'Ouvrir le menu C&A Start.',
+      'taskbar-circus-entry': 'Assembler le chapiteau digital et entrer dans la simulation comme un resident du cirque.',
       'dialog-close-x': 'Fermer cette fenetre de dialogue.',
       'dialog-btn-ok': 'Confirmer le message systeme.',
       'circus-dos-close': 'Fermer la representation DOS du cirque.',
-      'circus-dos-launch': 'Ouvrir le panneau de simulation apres le rendu DOS.',
+      'circus-dos-launch': 'Entrer dans la simulation depuis le chapiteau assemble.',
       'circus-dos-dismiss': 'Retourner au bureau CainOS.',
       'caine-btn-dismiss': 'Fermer l intrusion de Caine.',
       'power-button': 'Eteindre ou rallumer l ecran CainOS.',
@@ -901,6 +902,14 @@ const OS = {
         this.openWindow('simulations');
       });
     }
+    const taskbarCircusEntry = document.getElementById('taskbar-circus-entry');
+    if (taskbarCircusEntry) {
+      taskbarCircusEntry.addEventListener('click', (e) => {
+        e.stopPropagation();
+        SoundManager.playClick();
+        this.showCircusDosPreview();
+      });
+    }
 
     // Start Button
     const startBtn = document.getElementById('start-btn');
@@ -1354,49 +1363,106 @@ const OS = {
   showCircusDosPreview() {
     const overlay = document.getElementById('circus-dos-overlay');
     const art = document.getElementById('circus-dos-art');
+    const status = document.getElementById('circus-dos-status');
+    const launch = document.getElementById('circus-dos-launch');
+    const taskbarEntry = document.getElementById('taskbar-circus-entry');
     if (!overlay || !art) return;
+
+    this.clearCircusRenderTimers();
 
     const progress = (typeof EpisodeManager !== 'undefined') ? EpisodeManager.getProgress() : [];
     const unlockedCount = progress.filter(ep => ep >= 0 && ep <= 9).length;
     const abstractionRisk = unlockedCount >= 7 ? 'CRITICAL' : (unlockedCount >= 3 ? 'ELEVATED' : 'STABLE');
 
-    art.innerText = [
-      'C:\\\\CAINE\\\\CIRCUS> render_circus.exe /mode:dos /source:C&A_ARCHIVE',
+    if (launch) {
+      launch.disabled = true;
+      launch.innerText = 'RENDU EN COURS...';
+    }
+    if (taskbarEntry) taskbarEntry.classList.add('active');
+    if (status) status.innerText = 'INITIALISATION DU RENDU GEOMETRIQUE...';
+
+    const baseLines = [
+      'C:\\\\CAINE\\\\CIRCUS> render_circus.exe /mode:inside /source:CAINE_STAGE',
       'CAINE ADVENTURE SHELL v0.98',
       'NEURAL LINK............. ONLINE',
       `EPISODE MODULES......... ${String(unlockedCount).padStart(2, '0')} / 10`,
       `ABSTRACTION RISK........ ${abstractionRisk}`,
       '',
-      '                 .-""""""""""""""""-.',
-      '              .-"   THE AMAZING      "-.',
-      '            ."      DIGITAL CIRCUS      ".',
-      '           /============================\\',
-      '          /  /\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\  \\',
-      '         /__/__/__/__/__/__/__/__/__/__\\',
-      '          |  CAINE MODULE : ONLINE     |',
-      '          |  WACKY WATCH : LISTENING   |',
-      '          |  EXIT DOOR   : UNTRUSTED   |',
-      '          |____________________________|',
-      '            /  []   []   []   []   \\',
-      '           /____POMNI_SIGNAL_LOCK____\\',
+      'GEOMETRY BUFFER......... EMPTY',
+      'COLOR PLANES............ RED / BLUE / YELLOW',
+      'PORTAL DEPTH............ CALCULATING',
       '',
       '   [P] NEW SUBJECT        [K] ABSTRACTED KAUFMO TRACE',
       '   [C] CAINE ROUTINE      [A] C&A ARCHIVE FRAGMENT',
       '',
-      'C:\\\\CAINE\\\\CIRCUS> note',
-      '"Aucune sortie valide detectee. Veuillez profiter de l aventure."',
-      '',
-      'C:\\\\CAINE\\\\CIRCUS> press LANCER_LE_MODULE to continue'
-    ].join('\\n');
+      'C:\\\\CAINE\\\\CIRCUS> assembling tent primitives...'
+    ];
+    art.innerText = baseLines.join('\\n');
 
     overlay.style.display = 'flex';
+    overlay.classList.remove('rendering');
+    void overlay.offsetWidth;
+    overlay.classList.add('rendering');
+
+    const statusSteps = [
+      { t: 420, text: 'ANNEAU DE PISTE VERROUILLE...' },
+      { t: 920, text: 'PANNEAUX ROUGE/BLEU EN ROTATION...' },
+      { t: 1380, text: 'TOIT PRINCIPAL ATTACHE AU CIEL DIGITAL...' },
+      { t: 1880, text: 'PORTE DU CHAPITEAU SYNCHRONISEE...' },
+      { t: 2420, text: 'POINT DE VUE INTERNE PRET.' }
+    ];
+    this.circusRenderTimers = statusSteps.map(step => setTimeout(() => {
+      if (status) status.innerText = step.text;
+      SoundManager.play(420 + Math.random() * 260, 0.045, 'square', 0.035);
+    }, step.t));
+
+    this.circusRenderTimers.push(setTimeout(() => {
+      art.innerText = [
+        ...baseLines.slice(0, 6),
+        'GEOMETRY BUFFER......... CHAPITEAU COMPLETE',
+        'COLOR PLANES............ STABLE',
+        'PORTAL DEPTH............ INTERIOR VIEW',
+        '',
+        '                 /\\',
+        '              __/  \\__',
+        '           __/  RED   \\__',
+        '          / BLUE  YELLOW \\',
+        '         /________________\\',
+        '         |  DIGITAL CIRCUS |',
+        '         |  ENTRY PORTAL   |',
+        '         |_____[  O  ]_____|',
+        '',
+        'C:\\\\CAINE\\\\CIRCUS> perspective = SUBJECT_INTERNAL',
+        '"Vous ne regardez plus le module. Vous entrez dans la scene."'
+      ].join('\\n');
+      if (status) status.innerText = 'CHAPITEAU ASSEMBLE - ENTREE SIMULATION DISPONIBLE';
+      if (launch) {
+        launch.disabled = false;
+        launch.innerText = 'ENTRER DANS LA SIMULATION';
+      }
+      SoundManager.playWin();
+    }, 2850));
+
     SoundManager.play(520, 0.05, 'square', 0.06);
     setTimeout(() => SoundManager.play(780, 0.05, 'square', 0.05), 80);
   },
 
   hideCircusDosPreview() {
+    this.clearCircusRenderTimers();
     const overlay = document.getElementById('circus-dos-overlay');
-    if (overlay) overlay.style.display = 'none';
+    const taskbarEntry = document.getElementById('taskbar-circus-entry');
+    if (overlay) {
+      overlay.style.display = 'none';
+      overlay.classList.remove('rendering');
+    }
+    if (taskbarEntry) taskbarEntry.classList.remove('active');
+  },
+
+  clearCircusRenderTimers() {
+    if (this.circusRenderTimers) {
+      this.circusRenderTimers.forEach(timer => clearTimeout(timer));
+    }
+    this.circusRenderTimers = [];
   },
 
   // Window Management

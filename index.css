@@ -1359,6 +1359,26 @@ body {
   height: 28px;
 }
 
+.taskbar-circus-entry {
+  width: 32px;
+  height: 28px;
+  flex: 0 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--win-bg);
+  border: 2px solid;
+  border-color: var(--win-border-light) var(--win-border-dark) var(--win-border-dark) var(--win-border-light);
+  cursor: pointer;
+  padding: 0;
+}
+
+.taskbar-circus-entry:active,
+.taskbar-circus-entry.active {
+  border-color: var(--win-border-dark) var(--win-border-light) var(--win-border-light) var(--win-border-dark);
+  background-color: #dfdfdf;
+}
+
 .taskbar-tab {
   background-color: var(--win-bg);
   border: 2px solid;
@@ -1540,7 +1560,7 @@ body {
 }
 
 .circus-dos-box {
-  width: min(560px, calc(100% - 28px));
+  width: min(720px, calc(100% - 28px));
   max-height: calc(100% - 48px);
   border: 2px solid #67ff7c;
   background: #020502;
@@ -1568,9 +1588,199 @@ body {
   overflow: auto;
 }
 
+.circus-render-stage {
+  position: relative;
+  height: 240px;
+  margin-bottom: 12px;
+  border: 1px solid #1e8f33;
+  background:
+    linear-gradient(180deg, rgba(20, 10, 40, 0.92), rgba(5, 5, 20, 0.98)),
+    repeating-linear-gradient(0deg, rgba(125, 255, 131, 0.08) 0, rgba(125, 255, 131, 0.08) 1px, transparent 1px, transparent 6px);
+  overflow: hidden;
+  box-shadow: inset 0 0 24px rgba(125, 255, 131, 0.18);
+}
+
+.circus-render-stage::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(255, 216, 74, 0.18), transparent 28%),
+    linear-gradient(90deg, transparent 0 49%, rgba(125, 255, 131, 0.12) 50%, transparent 51% 100%);
+  opacity: 0.9;
+}
+
+.circus-render-stage::after {
+  content: "C&A SIMULATION VIEWPORT";
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  color: rgba(217, 255, 221, 0.72);
+  font: 10px "Courier New", monospace;
+  letter-spacing: 1px;
+}
+
+.circus-scanline {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 22px;
+  top: -22px;
+  background: linear-gradient(180deg, transparent, rgba(125, 255, 131, 0.22), transparent);
+  animation: circusScan 2.2s linear infinite;
+  z-index: 4;
+}
+
+.circus-sky {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 56px;
+  background: linear-gradient(180deg, transparent, rgba(255, 79, 184, 0.2));
+  border-top: 1px solid rgba(125, 240, 255, 0.25);
+}
+
+.circus-shape {
+  position: absolute;
+  opacity: 0;
+  filter: drop-shadow(0 0 8px rgba(125, 255, 131, 0.32));
+}
+
+.circus-shape-ring {
+  width: 320px;
+  height: 118px;
+  left: 50%;
+  top: 86px;
+  transform: translateX(-50%) scaleX(0.2);
+  border: 3px solid #ffd84a;
+  border-radius: 50% 50% 8px 8px;
+}
+
+.circus-shape-left,
+.circus-shape-right {
+  width: 0;
+  height: 0;
+  top: 56px;
+  border-bottom: 112px solid #e53935;
+  border-left: 92px solid transparent;
+  border-right: 92px solid transparent;
+}
+
+.circus-shape-left {
+  left: 162px;
+  transform: translate(-170px, -90px) rotate(-18deg);
+}
+
+.circus-shape-right {
+  right: 162px;
+  transform: translate(170px, -90px) rotate(18deg);
+  border-bottom-color: #2a58d8;
+}
+
+.circus-shape-roof {
+  left: 50%;
+  top: 34px;
+  width: 0;
+  height: 0;
+  border-left: 112px solid transparent;
+  border-right: 112px solid transparent;
+  border-bottom: 132px solid #ffd84a;
+  transform: translate(-50%, -160px) scale(0.8);
+}
+
+.circus-shape-base {
+  left: 50%;
+  bottom: 34px;
+  width: 310px;
+  height: 70px;
+  transform: translate(-50%, 120px);
+  background:
+    repeating-linear-gradient(90deg, #e53935 0 34px, #fff1a8 34px 68px, #2a58d8 68px 102px, #fff1a8 102px 136px);
+  border: 3px solid #ffd84a;
+}
+
+.circus-shape-door {
+  left: 50%;
+  bottom: 36px;
+  width: 54px;
+  height: 66px;
+  transform: translate(-50%, 120px);
+  background: #100020;
+  border: 3px solid #7df0ff;
+  border-radius: 26px 26px 0 0;
+  box-shadow: inset 0 0 18px rgba(125, 240, 255, 0.45);
+}
+
+.circus-shape-star {
+  width: 20px;
+  height: 20px;
+  background: #7df0ff;
+  clip-path: polygon(50% 0, 62% 36%, 100% 50%, 62% 64%, 50% 100%, 38% 64%, 0 50%, 38% 36%);
+}
+
+.star-a {
+  left: 118px;
+  top: 38px;
+  transform: translate(-80px, -40px) rotate(30deg);
+}
+
+.star-b {
+  right: 118px;
+  top: 66px;
+  transform: translate(80px, -50px) rotate(-20deg);
+  background: #ff4fb8;
+}
+
+.circus-entry-glow {
+  position: absolute;
+  left: 50%;
+  bottom: 34px;
+  width: 82px;
+  height: 82px;
+  transform: translateX(-50%) scale(0.15);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(125, 240, 255, 0.75), rgba(255, 216, 74, 0.2), transparent 72%);
+  opacity: 0;
+}
+
+.circus-dos-overlay.rendering .circus-shape-ring {
+  animation: circusRing 0.75s 0.15s forwards;
+}
+
+.circus-dos-overlay.rendering .circus-shape-left,
+.circus-dos-overlay.rendering .circus-shape-right {
+  animation: circusSide 0.7s 0.55s forwards;
+}
+
+.circus-dos-overlay.rendering .circus-shape-roof {
+  animation: circusRoof 0.7s 0.95s forwards;
+}
+
+.circus-dos-overlay.rendering .circus-shape-base,
+.circus-dos-overlay.rendering .circus-shape-door {
+  animation: circusBase 0.72s 1.35s forwards;
+}
+
+.circus-dos-overlay.rendering .circus-shape-star {
+  animation: circusStars 0.55s 1.85s forwards;
+}
+
+.circus-dos-overlay.rendering .circus-entry-glow {
+  animation: circusPortal 0.9s 2.2s forwards;
+}
+
+.circus-dos-status {
+  min-height: 20px;
+  margin-bottom: 8px;
+  color: #ffd84a;
+  font: bold 11px "Courier New", monospace;
+  text-shadow: 0 0 6px rgba(255, 216, 74, 0.35);
+}
+
 .circus-dos-art {
   margin: 0;
-  min-height: 280px;
+  min-height: 150px;
   color: #7dff83;
   text-shadow: 0 0 6px rgba(64, 255, 88, 0.55);
   font-family: "Courier New", monospace;
@@ -1584,6 +1794,40 @@ body {
   justify-content: flex-end;
   gap: 8px;
   margin-top: 12px;
+}
+
+.circus-dos-actions .retro-btn:disabled {
+  opacity: 0.55;
+  cursor: wait;
+}
+
+@keyframes circusScan {
+  from { transform: translateY(0); }
+  to { transform: translateY(284px); }
+}
+
+@keyframes circusRing {
+  to { opacity: 1; transform: translateX(-50%) scaleX(1); }
+}
+
+@keyframes circusSide {
+  to { opacity: 1; transform: translate(0, 0) rotate(0deg); }
+}
+
+@keyframes circusRoof {
+  to { opacity: 1; transform: translate(-50%, 0) scale(1); }
+}
+
+@keyframes circusBase {
+  to { opacity: 1; transform: translate(-50%, 0); }
+}
+
+@keyframes circusStars {
+  to { opacity: 1; transform: translate(0, 0) rotate(0deg); }
+}
+
+@keyframes circusPortal {
+  to { opacity: 1; transform: translateX(-50%) scale(1); }
 }
 
 /* ==========================================================================
