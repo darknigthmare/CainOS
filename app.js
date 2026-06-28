@@ -1579,7 +1579,7 @@ const OS = {
       selectedExitIndex: 0,
       history: [],
       hotspots: [],
-      player: { x: 2.25, y: 9.45, a: -1.35 },
+      player: { x: 0, z: 0, a: -Math.PI / 2 },
       keys: new Set(),
       last: performance.now(),
       raf: null
@@ -1589,7 +1589,8 @@ const OS = {
       const key = e.key.toLowerCase();
       if (['arrowup','arrowdown','arrowleft','arrowright','enter',' ','w','a','s','d','z','q'].includes(key)) {
         e.preventDefault();
-        this.handleCircusSimulationInput(key);
+        if (key === 'enter' || key === ' ') this.handleCircusSimulationInput(key);
+        else this.circusDoom.keys.add(key);
       }
     };
     this.circusDoomKeyUp = e => {
@@ -1603,7 +1604,7 @@ const OS = {
       const rect = canvas.getBoundingClientRect();
       const x = (e.clientX - rect.left) * (canvas.width / rect.width);
       const y = (e.clientY - rect.top) * (canvas.height / rect.height);
-      const hit = state.hotspots.find(spot => x >= spot.x && x <= spot.x + spot.w && y >= spot.y && y <= spot.y + spot.h);
+      const hit = [...state.hotspots].reverse().find(spot => x >= spot.x && x <= spot.x + spot.w && y >= spot.y && y <= spot.y + spot.h);
       if (hit) {
         state.selectedExitIndex = hit.index;
         this.enterCircusSimulationExit(hit.target);
@@ -1638,18 +1639,30 @@ const OS = {
     if (!state) return;
     const exits = state.scenes[state.currentZoneId]?.exits || [];
     if (!exits.length) return;
-    if (key === 'arrowleft' || key === 'a' || key === 'q') {
-      state.selectedExitIndex = (state.selectedExitIndex + exits.length - 1) % exits.length;
-      SoundManager.play(360, 0.04, 'square', 0.03);
-    } else if (key === 'arrowright' || key === 'd') {
-      state.selectedExitIndex = (state.selectedExitIndex + 1) % exits.length;
-      SoundManager.play(420, 0.04, 'square', 0.03);
-    } else if (key === 'arrowup' || key === 'w' || key === 'z' || key === 'enter' || key === ' ') {
-      this.enterCircusSimulationExit(exits[state.selectedExitIndex]);
-    } else if (key === 'arrowdown' || key === 's') {
+    if (key === 'enter' || key === ' ') {
+      const door = this.getNearestUsableCircusDoor();
+      this.enterCircusSimulationExit(door?.target ?? exits[state.selectedExitIndex]);
+    } else if (key === 'arrowdown') {
       const previous = state.history.pop();
       if (previous) this.setCircusSimulationZone(previous, false);
     }
+  },
+
+  getNearestUsableCircusDoor() {
+    const state = this.circusDoom;
+    if (!state) return null;
+    const doors = this.getCircusPhysicalDoors(state);
+    let best = null;
+    doors.forEach((door, index) => {
+      const dx = door.x - state.player.x;
+      const dz = door.z - state.player.z;
+      const dist = Math.hypot(dx, dz);
+      const angle = Math.atan2(dz, dx) - state.player.a;
+      const normalized = Math.atan2(Math.sin(angle), Math.cos(angle));
+      const score = dist + Math.abs(normalized) * 2.8;
+      if (!best || score < best.score) best = { ...door, index, dist, angle: normalized, score };
+    });
+    return best;
   },
 
   enterCircusSimulationExit(targetId) {
@@ -1673,12 +1686,44 @@ const OS = {
     state.currentZoneId = zoneId;
     state.selectedExitIndex = 0;
     state.hotspots = [];
+    state.player.x = 0;
+    state.player.z = 0;
+    state.player.a = -Math.PI / 2;
     if (playSound) SoundManager.play(660, 0.08, 'triangle', 0.05);
   },
 
   updateCircusDoom(dt) {
     const state = this.circusDoom;
     if (!state) return;
+    const { player, keys } = state;
+    const turn = 2.35 * dt;
+    const speed = 2.15 * dt;
+    if (keys.has('arrowleft') || keys.has('q')) player.a -= turn;
+    if (keys.has('arrowright') || keys.has('d')) player.a += turn;
+
+    let move = 0;
+    if (keys.has('arrowup') || keys.has('w') || keys.has('z')) move += speed;
+    if (keys.has('arrowdown') || keys.has('s')) move -= speed;
+    if (move !== 0) {
+      player.x += Math.cos(player.a) * move;
+      player.z += Math.sin(player.a) * move;
+    }
+    if (keys.has('a')) {
+      player.x += Math.cos(player.a - Math.PI / 2) * speed;
+      player.z += Math.sin(player.a - Math.PI / 2) * speed;
+    }
+    const roomLimit = 3.45;
+    const distanceFromCenter = Math.hypot(player.x, player.z);
+    if (distanceFromCenter > roomLimit) {
+      player.x = (player.x / distanceFromCenter) * roomLimit;
+      player.z = (player.z / distanceFromCenter) * roomLimit;
+    }
+
+    const nearestDoor = this.getNearestUsableCircusDoor();
+    if (nearestDoor && Math.abs(nearestDoor.angle) < 0.85) {
+      state.selectedExitIndex = nearestDoor.index;
+    }
+
     const portal = state.portals[state.currentZoneId];
     if (state.zoneEl) {
       if (portal) {
@@ -1703,23 +1748,29 @@ const OS = {
   drawCircusSimulationScene() {
     const state = this.circusDoom;
     if (!state) return;
-    const { canvas, ctx, portals, scenes } = state;
+    const { canvas, ctx, portals, scenes, player } = state;
     const w = canvas.width;
     const h = canvas.height;
     const zone = portals[state.currentZoneId] || portals[2];
     const scene = scenes[state.currentZoneId] || scenes[2];
-    const exits = scene.exits || [];
     state.hotspots = [];
 
+    const horizon = h * 0.47;
     ctx.fillStyle = zone.ceiling || '#120821';
     ctx.fillRect(0, 0, w, h);
-    const skyPulse = 0.5 + Math.sin(performance.now() / 700) * 0.5;
-    const horizon = h * 0.46;
-
     ctx.fillStyle = this.shadeHex(zone.ceiling || '#120821', 1.35);
     ctx.fillRect(0, 0, w, horizon);
     ctx.fillStyle = zone.floor || '#24112f';
     ctx.fillRect(0, horizon, w, h - horizon);
+
+    this.drawCircusRoomShell(ctx, w, h, zone, scene.motif, horizon);
+    this.drawCircusPhysicalDoors(ctx, w, h, portals, state);
+    this.drawCircusImpostorSprites(ctx, w, h, state);
+    this.drawCircusSimulationReticle(ctx, w, h, zone);
+  },
+
+  drawCircusRoomShell(ctx, w, h, zone, motif, horizon) {
+    const pulse = 0.5 + Math.sin(performance.now() / 700) * 0.5;
     ctx.fillStyle = 'rgba(255,255,255,0.08)';
     for (let i = 0; i < 12; i++) {
       const y = horizon + Math.pow(i / 11, 1.7) * (h - horizon);
@@ -1734,61 +1785,50 @@ const OS = {
       ctx.stroke();
     }
 
-    const drawTent = () => {
-      ctx.fillStyle = '#e53935';
-      ctx.beginPath();
-      ctx.moveTo(w * 0.18, horizon + 54);
-      ctx.lineTo(w * 0.5, 32);
-      ctx.lineTo(w * 0.82, horizon + 54);
-      ctx.closePath();
-      ctx.fill();
-      ctx.fillStyle = '#fff1a8';
-      for (let i = 0; i < 5; i++) {
-        ctx.beginPath();
-        ctx.moveTo(w * (0.24 + i * 0.11), horizon + 52);
-        ctx.lineTo(w * 0.5, 36);
-        ctx.lineTo(w * (0.3 + i * 0.11), horizon + 52);
-        ctx.closePath();
-        ctx.fill();
-      }
-      ctx.fillStyle = '#2a58d8';
-      ctx.fillRect(w * 0.22, horizon + 52, w * 0.56, 58);
-      ctx.fillStyle = '#100020';
-      ctx.beginPath();
-      ctx.ellipse(w / 2, horizon + 110, 46, 62, 0, Math.PI, 0);
-      ctx.fill();
-      ctx.strokeStyle = '#ffd84a';
-      ctx.lineWidth = 3;
-      ctx.stroke();
-    };
-
-    const drawSign = (text, x, y, color = '#ffd84a') => {
+    const drawSign = (text, x, y, color = '#ffd84a', width = 118) => {
       ctx.fillStyle = '#14091f';
       ctx.strokeStyle = color;
       ctx.lineWidth = 2;
-      ctx.fillRect(x - 52, y - 18, 104, 30);
-      ctx.strokeRect(x - 52, y - 18, 104, 30);
+      ctx.fillRect(x - width / 2, y - 18, width, 30);
+      ctx.strokeRect(x - width / 2, y - 18, width, 30);
       ctx.fillStyle = color;
       ctx.font = 'bold 10px Courier New';
       ctx.textAlign = 'center';
       ctx.fillText(text, x, y + 2);
     };
 
-    const motif = scene.motif;
     if (motif === 'circus' || motif === 'grounds' || motif === 'final') {
-      drawTent();
-      drawSign(motif === 'final' ? 'BACKSTAGE' : 'DIGITAL CIRCUS', w / 2, 28, '#ffd84a');
-      ctx.fillStyle = `rgba(125,240,255,${0.18 + skyPulse * 0.1})`;
+      ctx.fillStyle = '#e53935';
       ctx.beginPath();
-      ctx.arc(w / 2, horizon + 80, 76, 0, Math.PI * 2);
+      ctx.moveTo(w * 0.16, horizon + 34);
+      ctx.lineTo(w * 0.5, 22);
+      ctx.lineTo(w * 0.84, horizon + 34);
+      ctx.closePath();
+      ctx.fill();
+      ctx.fillStyle = '#fff1a8';
+      for (let i = 0; i < 6; i++) {
+        ctx.beginPath();
+        ctx.moveTo(w * (0.2 + i * 0.1), horizon + 32);
+        ctx.lineTo(w * 0.5, 26);
+        ctx.lineTo(w * (0.25 + i * 0.1), horizon + 32);
+        ctx.closePath();
+        ctx.fill();
+      }
+      ctx.strokeStyle = '#ffd84a';
+      ctx.lineWidth = 3;
+      ctx.beginPath();
+      ctx.ellipse(w / 2, horizon + 10, 190, 32, 0, 0, Math.PI * 2);
+      ctx.stroke();
+      drawSign(motif === 'final' ? 'BACKSTAGE' : 'DIGITAL CIRCUS', w / 2, 28, '#ffd84a', 148);
+      ctx.fillStyle = `rgba(125,240,255,${0.1 + pulse * 0.08})`;
+      ctx.beginPath();
+      ctx.arc(w / 2, horizon + 42, 74, 0, Math.PI * 2);
       ctx.fill();
     } else if (motif === 'cellar') {
       ctx.fillStyle = '#050508';
-      ctx.fillRect(0, 0, w, h);
-      ctx.fillStyle = '#15151d';
-      ctx.fillRect(70, 42, w - 140, h - 84);
+      ctx.fillRect(44, 28, w - 88, h - 58);
       ctx.strokeStyle = '#56505f';
-      for (let x = 90; x < w - 60; x += 52) ctx.strokeRect(x, 64, 34, 88);
+      for (let x = 72; x < w - 60; x += 52) ctx.strokeRect(x, 64, 34, 106);
       drawSign('CELLAR', w / 2, 36, '#9a9aa8');
     } else if (motif === 'exit') {
       ctx.fillStyle = '#050505';
@@ -1887,8 +1927,187 @@ const OS = {
       }
       drawSign('MEMBER ARCHIVE', w / 2, 34, '#c875ff');
     }
+  },
 
-    this.drawCircusSimulationExits(ctx, w, h, exits, portals, state.selectedExitIndex);
+  getCircusPhysicalDoors(state) {
+    const scene = state.scenes[state.currentZoneId] || state.scenes[2];
+    const exits = scene.exits || [];
+    const radius = 3.9;
+    const start = -Math.PI / 2 - ((exits.length - 1) * Math.PI / 12);
+    return exits.map((target, index) => {
+      const angle = start + index * (Math.PI / 6);
+      return {
+        target,
+        index,
+        x: Math.cos(angle) * radius,
+        z: Math.sin(angle) * radius,
+        angle
+      };
+    });
+  },
+
+  projectCircusPoint(obj, state, w, h) {
+    const dx = obj.x - state.player.x;
+    const dz = obj.z - state.player.z;
+    const sin = Math.sin(state.player.a);
+    const cos = Math.cos(state.player.a);
+    const rx = -dx * sin + dz * cos;
+    const rz = dx * cos + dz * sin;
+    if (rz <= 0.18) return null;
+    const fovScale = 240;
+    return {
+      x: w / 2 + (rx / rz) * fovScale,
+      y: h * 0.54,
+      depth: rz,
+      scale: Math.min(2.2, Math.max(0.25, 1 / rz))
+    };
+  },
+
+  drawCircusPhysicalDoors(ctx, w, h, portals, state) {
+    const doors = this.getCircusPhysicalDoors(state)
+      .map(door => ({ ...door, projected: this.projectCircusPoint(door, state, w, h) }))
+      .filter(door => door.projected)
+      .sort((a, b) => b.projected.depth - a.projected.depth);
+    doors.forEach(door => {
+      const target = portals[door.target];
+      if (!target) return;
+      const p = door.projected;
+      const selected = door.index === state.selectedExitIndex;
+      const locked = !target.unlocked;
+      const doorW = 58 * p.scale;
+      const doorH = 118 * p.scale;
+      const x = p.x - doorW / 2;
+      const y = h * 0.55 - doorH;
+      state.hotspots.push({ x, y, w: doorW, h: doorH, target: door.target, index: door.index });
+      ctx.fillStyle = locked ? '#14141a' : '#100020';
+      ctx.strokeStyle = selected ? '#ffffff' : (locked ? '#56505f' : target.color);
+      ctx.lineWidth = selected ? 4 : 2;
+      ctx.beginPath();
+      ctx.moveTo(x, y + doorH);
+      ctx.lineTo(x, y + doorH * 0.25);
+      ctx.quadraticCurveTo(p.x, y - doorH * 0.08, x + doorW, y + doorH * 0.25);
+      ctx.lineTo(x + doorW, y + doorH);
+      ctx.closePath();
+      ctx.fill();
+      ctx.stroke();
+      ctx.fillStyle = locked ? 'rgba(0,0,0,0.5)' : `${target.color}44`;
+      ctx.fillRect(x + doorW * 0.14, y + doorH * 0.22, doorW * 0.72, doorH * 0.65);
+      ctx.fillStyle = selected ? '#fff1a8' : (locked ? '#8b8794' : target.color);
+      ctx.font = `bold ${Math.max(7, 12 * p.scale)}px Courier New`;
+      ctx.textAlign = 'center';
+      ctx.fillText(locked ? 'LOCK' : target.short, p.x, y - 6);
+      if (p.depth < 1.25 && !locked) {
+        ctx.font = 'bold 9px Courier New';
+        ctx.fillText('ENTREE / CLIC', p.x, y + doorH + 12);
+      }
+    });
+  },
+
+  getCircusZoneSprites(zoneId) {
+    const shared = [
+      { name: 'Pomni', type: 'pomni', x: -1.2, z: -2.3, color: '#e53935' },
+      { name: 'Ragatha', type: 'ragatha', x: 1.2, z: -2.55, color: '#d64545' },
+      { name: 'Jax', type: 'jax', x: -2.5, z: -1.05, color: '#8a4fd6' },
+      { name: 'Kinger', type: 'kinger', x: 2.5, z: -1.05, color: '#d9d0a2' },
+      { name: 'Gangle', type: 'gangle', x: -0.25, z: -3.05, color: '#f7f7f7' },
+      { name: 'Zooble', type: 'zooble', x: 2.0, z: -2.15, color: '#ff4fb8' }
+    ];
+    const byZone = {
+      2: [{ name: 'Caine', type: 'caine', x: 0.25, z: -2.15, color: '#ffd84a' }, { name: 'Bubble', type: 'bubble', x: 1.25, z: -1.65, color: '#f7f7ff' }, ...shared],
+      4: [{ name: 'Kaufmo', type: 'abstract', x: 0, z: -2.25, color: '#111111' }, { name: 'Pomni', type: 'pomni', x: -1.4, z: -1.7, color: '#e53935' }],
+      6: [{ name: 'Gummigoo', type: 'gummigoo', x: -0.7, z: -2.2, color: '#d8a23a' }, { name: 'Max', type: 'gummigoo', x: 0.6, z: -2.55, color: '#75bd3f' }, { name: 'Pomni', type: 'pomni', x: 1.55, z: -1.85, color: '#e53935' }],
+      8: [{ name: 'Kinger', type: 'kinger', x: -0.9, z: -2.2, color: '#d9d0a2' }, { name: 'Pomni', type: 'pomni', x: 0.8, z: -2.45, color: '#e53935' }, { name: 'Ghost', type: 'ghost', x: 2.15, z: -1.35, color: '#7df0ff' }],
+      10: [{ name: 'Gangle', type: 'gangle', x: -0.4, z: -2.1, color: '#f7f7f7' }, { name: 'Pomni', type: 'pomni', x: 0.8, z: -2.4, color: '#e53935' }, { name: 'Customer', type: 'bubble', x: -2.0, z: -1.4, color: '#f7f7ff' }],
+      14: [{ name: 'Beach Gangle', type: 'gangle', x: -1.3, z: -2.1, color: '#f7f7f7' }, { name: 'Hunter Jax', type: 'jax', x: 1.4, z: -2.4, color: '#8a4fd6' }],
+      16: [{ name: 'Caine', type: 'caine', x: 0, z: -2.25, color: '#ffd84a' }, { name: 'Abel', type: 'mannequin', x: -1.6, z: -1.7, color: '#ff8a30' }],
+      19: [{ name: 'Ribbit', type: 'npc', x: -1.7, z: -1.9, color: '#4ee77e' }, { name: 'Wormo', type: 'npc', x: 0, z: -2.25, color: '#ffcf75' }, { name: 'Scratch', type: 'npc', x: 1.7, z: -1.9, color: '#c875ff' }]
+    };
+    return byZone[zoneId] || shared.slice(0, 4);
+  },
+
+  drawCircusImpostorSprites(ctx, w, h, state) {
+    const sprites = this.getCircusZoneSprites(state.currentZoneId)
+      .map(sprite => ({ ...sprite, projected: this.projectCircusPoint(sprite, state, w, h) }))
+      .filter(sprite => sprite.projected)
+      .sort((a, b) => b.projected.depth - a.projected.depth);
+    sprites.forEach(sprite => {
+      const p = sprite.projected;
+      const size = Math.max(16, 70 * p.scale);
+      const baseY = h * 0.58;
+      this.drawCircusImpostor(ctx, sprite.type, p.x, baseY, size, sprite.color, sprite.name);
+    });
+  },
+
+  drawCircusImpostor(ctx, type, x, baseY, size, color, label) {
+    ctx.save();
+    ctx.translate(x, baseY);
+    ctx.imageSmoothingEnabled = false;
+    ctx.shadowColor = 'rgba(0,0,0,0.6)';
+    ctx.shadowBlur = 8;
+    ctx.fillStyle = 'rgba(0,0,0,0.35)';
+    ctx.beginPath();
+    ctx.ellipse(0, 4, size * 0.32, size * 0.08, 0, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.shadowBlur = 0;
+    const px = (rx, ry, rw, rh, fill) => {
+      ctx.fillStyle = fill;
+      ctx.fillRect(Math.round(rx * size), Math.round(ry * size), Math.round(rw * size), Math.round(rh * size));
+    };
+    if (type === 'pomni') {
+      px(-0.18, -0.88, 0.16, 0.22, '#2a58d8'); px(0.02, -0.88, 0.16, 0.22, '#e53935');
+      px(-0.2, -0.68, 0.4, 0.42, '#ffd2cb'); px(-0.28, -0.48, 0.56, 0.5, '#2a58d8');
+      px(-0.3, -0.74, 0.16, 0.16, '#ffd84a'); px(0.14, -0.74, 0.16, 0.16, '#ffd84a');
+    } else if (type === 'jax') {
+      px(-0.12, -1.02, 0.08, 0.42, '#8a4fd6'); px(0.1, -1.02, 0.08, 0.42, '#8a4fd6');
+      px(-0.22, -0.62, 0.44, 0.64, '#8a4fd6'); px(-0.16, -0.48, 0.06, 0.06, '#ffd84a'); px(0.1, -0.48, 0.06, 0.06, '#ffd84a');
+    } else if (type === 'ragatha') {
+      px(-0.26, -0.82, 0.52, 0.24, '#d64545'); px(-0.2, -0.68, 0.4, 0.46, '#ffd0bd');
+      px(-0.34, -0.5, 0.14, 0.5, '#d64545'); px(0.2, -0.5, 0.14, 0.5, '#d64545'); px(-0.2, -0.2, 0.4, 0.24, '#3d60d8');
+    } else if (type === 'kinger') {
+      px(-0.22, -0.86, 0.44, 0.8, '#f5eed2'); px(-0.28, -0.7, 0.56, 0.12, '#f5eed2');
+      px(-0.1, -0.55, 0.2, 0.22, '#6b3523'); px(-0.17, -0.96, 0.34, 0.06, '#ffd84a');
+    } else if (type === 'gangle') {
+      px(-0.18, -0.82, 0.36, 0.34, '#f7f7f7'); px(-0.2, -0.82, 0.4, 0.06, '#d61f2c');
+      for (let i = 0; i < 5; i++) px(-0.35 + i * 0.14, -0.38 + i * 0.08, 0.08, 0.04, '#d61f2c');
+    } else if (type === 'zooble') {
+      px(-0.18, -0.72, 0.34, 0.34, '#d633ff'); px(0.08, -0.82, 0.24, 0.22, '#30d6ff');
+      px(-0.24, -0.32, 0.34, 0.24, '#b7e300'); px(0.08, -0.28, 0.28, 0.14, '#ff7a30');
+    } else if (type === 'caine') {
+      px(-0.32, -0.74, 0.64, 0.38, '#f7f7f7'); px(-0.24, -0.64, 0.48, 0.1, '#111');
+      px(-0.18, -0.46, 0.36, 0.12, '#d61f2c'); px(-0.08, -0.98, 0.16, 0.22, '#222');
+    } else if (type === 'bubble' || type === 'ghost') {
+      ctx.fillStyle = type === 'ghost' ? '#7df0ffaa' : '#f3fbffaa';
+      ctx.beginPath(); ctx.arc(0, -size * 0.48, size * 0.23, 0, Math.PI * 2); ctx.fill();
+    } else if (type === 'abstract') {
+      ctx.fillStyle = '#050505'; ctx.beginPath(); ctx.arc(0, -size * 0.42, size * 0.28, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = '#ff3333'; px(-0.08, -0.55, 0.05, 0.05, '#ff3333'); px(0.06, -0.45, 0.05, 0.05, '#ff3333');
+    } else {
+      px(-0.18, -0.78, 0.36, 0.7, color);
+      px(-0.12, -0.9, 0.24, 0.18, this.shadeHex(color, 1.25));
+    }
+    ctx.fillStyle = '#fff1a8';
+    ctx.font = `${Math.max(6, size * 0.13)}px Courier New`;
+    ctx.textAlign = 'center';
+    ctx.fillText(label, 0, -size * 1.05);
+    ctx.restore();
+  },
+
+  drawCircusSimulationReticle(ctx, w, h, zone) {
+    ctx.save();
+    ctx.strokeStyle = '#fff1a8';
+    ctx.globalAlpha = 0.75;
+    ctx.beginPath();
+    ctx.moveTo(w / 2 - 8, h / 2);
+    ctx.lineTo(w / 2 + 8, h / 2);
+    ctx.moveTo(w / 2, h / 2 - 8);
+    ctx.lineTo(w / 2, h / 2 + 8);
+    ctx.stroke();
+    ctx.globalAlpha = 1;
+    ctx.fillStyle = zone.color || '#ffd84a';
+    ctx.font = 'bold 10px Courier New';
+    ctx.textAlign = 'center';
+    ctx.fillText('Z/QS/D: NAVIGUER  |  FLECHES: TOURNER/AVANCER  |  ENTREE: OUVRIR LA PORTE', w / 2, h - 8);
+    ctx.restore();
   },
 
   drawCircusSimulationExits(ctx, w, h, exits, portals, selectedIndex) {
