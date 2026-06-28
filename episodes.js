@@ -137,26 +137,61 @@ const SoundManager = {
     this.init();
     if (!this.ctx) return;
     const NOTE_FREQS = {
-      'A3': 220.00, 'D4': 293.66, 'F4': 349.23, 'G4': 392.00, 'A4': 440.00, 'Bb4': 466.16,
-      'C5': 523.25, 'C#5': 554.37, 'D5': 587.33, 'E5': 659.25, 'F5': 698.46, 'G5': 783.99,
-      'A5': 880.00, 'Bb5': 932.33, 'B5': 987.77
+      'D3': 146.83, 'F3': 174.61, 'G3': 196.00, 'A3': 220.00, 'Bb3': 233.08, 'C4': 261.63,
+      'D4': 293.66, 'E4': 329.63, 'F4': 349.23, 'G4': 392.00, 'A4': 440.00, 'Bb4': 466.16,
+      'C5': 523.25, 'D5': 587.33, 'E5': 659.25, 'F5': 698.46, 'G5': 783.99,
+      'A5': 880.00, 'Bb5': 932.33, 'C6': 1046.50
     };
+
+    // Original CainOS circus loop. Do not copy any official TADC melody/tab.
     const melody = [
-      { note: 'D5', dur: 200 }, { note: 'A4', dur: 200 }, { note: 'F4', dur: 200 }, { note: 'A4', dur: 200 },
-      { note: 'D5', dur: 200 }, { note: 'E5', dur: 200 }, { note: 'F5', dur: 200 }, { note: 'G5', dur: 200 },
-      { note: 'A5', dur: 400 }, { note: 'F5', dur: 400 }, { note: 'D5', dur: 400 }, { note: 'A4', dur: 400 },
-      { note: 'G5', dur: 200 }, { note: 'F5', dur: 200 }, { note: 'E5', dur: 200 }, { note: 'D5', dur: 200 },
-      { note: 'C#5', dur: 400 }, { note: 'E5', dur: 400 }, { note: 'D5', dur: 600 }, { note: null, dur: 200 }
+      { note: 'D5', dur: 180, chord: ['D4', 'F4', 'A4'], bass: 'D3' },
+      { note: 'F5', dur: 180, chord: ['D4', 'F4', 'A4'], bass: null },
+      { note: 'A5', dur: 180, chord: ['D4', 'F4', 'A4'], bass: 'A3' },
+      { note: 'G5', dur: 180, chord: ['D4', 'F4', 'A4'], bass: null },
+      { note: 'F5', dur: 240, chord: ['F4', 'A4', 'C5'], bass: 'F3' },
+      { note: 'E5', dur: 120, chord: ['F4', 'A4', 'C5'], bass: null },
+      { note: 'D5', dur: 240, chord: ['F4', 'A4', 'C5'], bass: 'C4' },
+      { note: null, dur: 120, chord: ['F4', 'A4', 'C5'], bass: null },
+      { note: 'G5', dur: 180, chord: ['G4', 'Bb4', 'D5'], bass: 'G3' },
+      { note: 'Bb5', dur: 180, chord: ['G4', 'Bb4', 'D5'], bass: null },
+      { note: 'A5', dur: 180, chord: ['G4', 'Bb4', 'D5'], bass: 'D4' },
+      { note: 'F5', dur: 180, chord: ['G4', 'Bb4', 'D5'], bass: null },
+      { note: 'E5', dur: 240, chord: ['A4', 'C5', 'E5'], bass: 'A3' },
+      { note: 'C5', dur: 120, chord: ['A4', 'C5', 'E5'], bass: null },
+      { note: 'D5', dur: 360, chord: ['D4', 'F4', 'A4'], bass: 'D3' },
+      { note: null, dur: 120, chord: ['D4', 'F4', 'A4'], bass: null },
+      { note: 'A4', dur: 160, chord: ['Bb3', 'D4', 'F4'], bass: 'Bb3' },
+      { note: 'D5', dur: 160, chord: ['Bb3', 'D4', 'F4'], bass: null },
+      { note: 'F5', dur: 160, chord: ['Bb3', 'D4', 'F4'], bass: 'F3' },
+      { note: 'A5', dur: 160, chord: ['Bb3', 'D4', 'F4'], bass: null },
+      { note: 'C6', dur: 240, chord: ['A3', 'C4', 'E4'], bass: 'A3' },
+      { note: 'Bb5', dur: 120, chord: ['A3', 'C4', 'E4'], bass: null },
+      { note: 'A5', dur: 240, chord: ['G3', 'Bb3', 'D4'], bass: 'G3' },
+      { note: 'F5', dur: 120, chord: ['G3', 'Bb3', 'D4'], bass: null },
+      { note: 'E5', dur: 160, chord: ['D4', 'F4', 'A4'], bass: 'D3' },
+      { note: 'F5', dur: 160, chord: ['D4', 'F4', 'A4'], bass: null },
+      { note: 'G5', dur: 160, chord: ['D4', 'F4', 'A4'], bass: 'A3' },
+      { note: 'E5', dur: 160, chord: ['D4', 'F4', 'A4'], bass: null },
+      { note: 'D5', dur: 320, chord: ['D4', 'F4', 'A4'], bass: 'D3' },
+      { note: 'F4', dur: 160, chord: ['D4', 'F4', 'A4'], bass: null },
+      { note: 'A4', dur: 160, chord: ['D4', 'F4', 'A4'], bass: 'A3' },
+      { note: null, dur: 240, chord: ['D4', 'F4', 'A4'], bass: null }
     ];
     const step = melody[this.themeIndex];
     if (step.note && NOTE_FREQS[step.note]) {
       const freq = NOTE_FREQS[step.note];
-      this.play(freq, step.dur / 1000, 'square', 0.04);
-      if (this.themeIndex % 2 === 0) {
-        const bassNotes = ['D3', 'F3', 'A3', 'F3', 'D3', 'F3', 'A3', 'A3', 'D3'];
-        const bassFreq = NOTE_FREQS[bassNotes[Math.floor(this.themeIndex / 2) % bassNotes.length].replace('3', '4')] / 2;
-        this.play(bassFreq, step.dur / 500, 'triangle', 0.06);
-      }
+      this.play(freq, step.dur / 1000, 'square', 0.035);
+      setTimeout(() => this.play(freq * 2, Math.min(0.08, step.dur / 2000), 'triangle', 0.012), 38);
+    }
+    if (step.bass && NOTE_FREQS[step.bass]) {
+      this.play(NOTE_FREQS[step.bass], Math.max(0.18, step.dur / 720), 'triangle', 0.055);
+    }
+    if (step.chord && this.themeIndex % 2 === 0) {
+      step.chord.forEach((note, i) => {
+        if (!NOTE_FREQS[note]) return;
+        setTimeout(() => this.play(NOTE_FREQS[note], 0.075, 'sine', 0.018), i * 44);
+      });
     }
     this.themeIndex = (this.themeIndex + 1) % melody.length;
     this.themeTimer = setTimeout(() => this.playThemeStep(), step.dur);
