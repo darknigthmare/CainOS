@@ -156,7 +156,7 @@ Exécutez la commande 'decrypt abel_kernel_patch.exe.enc' dans le Terminal C&A p
         content: `STATUT SUJET #042
 
 Nom civil : Abigail
-Âge : 25 ans
+Age : 25 ans
 Profil : Raccordée via le casque VR principal de la cabine de test.
 Temps d'activité : 14h 42m
 Identifiant de l'avatar : POMNI

@@ -218,6 +218,18 @@ const SoundManager = {
 const EpisodeManager = {
   currentEpisode: null,
   activeGame: null,
+  stopActiveGame() {
+    const game = this.activeGame;
+    if (!game) return;
+    game.__cainosStopped = true;
+    game.finished = true;
+    game.running = false;
+    game.loop = () => {};
+    if (typeof game.stop === 'function') {
+      game.stop();
+    }
+    this.activeGame = null;
+  },
   storySpeed: 1,
   selectedSubepisodeIndex: 0,
   activeSubepisodeIndex: null,
@@ -7936,6 +7948,7 @@ const EpisodeManager = {
       this.activeStoryMicroGame.stop();
       this.activeStoryMicroGame = null;
     }
+    this.stopActiveGame();
     this.lastRetryContext = {
       type: 'gameplay',
       episode: this.currentEpisode
@@ -8009,7 +8022,7 @@ const EpisodeManager = {
   },
 
   gameOver(reason) {
-    if (this.activeGame) this.activeGame.stop();
+    this.stopActiveGame();
     // Alert system sound (grave buzz)
     SoundManager.playError();
     SoundManager.play(80, 0.4, 'sawtooth', 0.15);
@@ -8019,7 +8032,7 @@ const EpisodeManager = {
   },
 
   gameWon(bonusText = "") {
-    if (this.activeGame) this.activeGame.stop();
+    this.stopActiveGame();
     // Compilation success arpeggio
     SoundManager.playWin();
     setTimeout(() => SoundManager.play(440, 0.15, 'sine', 0.08), 500);
@@ -11178,7 +11191,7 @@ class Episode0Game {
       this.timeLeft--;
       if (this.timerSpan) this.timerSpan.innerText = `${this.timeLeft}s`;
       if (this.timeLeft <= 0) {
-        EpisodeManager.gameOver("Calibration Ã©chouÃ©e. Impossible d'Ã©tablir la liaison.");
+        EpisodeManager.gameOver("Calibration echouee. Impossible d'etablir la liaison.");
       }
     }, 1000);
     this.lastTick = Date.now();
