@@ -44,6 +44,40 @@ const SoundManager = {
       // Audio context might fail to initialize without user gesture
     }
   },
+  playHammerOn(fromFreq, toFreq, duration = 0.14, type = 'triangle', volume = 0.05) {
+    try {
+      this.init();
+      if (!this.ctx) return;
+      if (this.ctx.state === 'suspended') {
+        this.ctx.resume();
+      }
+
+      const osc = this.ctx.createOscillator();
+      const gain = this.ctx.createGain();
+      const filter = this.ctx.createBiquadFilter();
+      const now = this.ctx.currentTime;
+
+      osc.type = type;
+      osc.frequency.setValueAtTime(fromFreq, now);
+      osc.frequency.exponentialRampToValueAtTime(toFreq, now + Math.max(0.025, duration * 0.38));
+      osc.frequency.setValueAtTime(toFreq, now + duration);
+
+      filter.type = 'bandpass';
+      filter.frequency.setValueAtTime(toFreq * 1.6, now);
+      filter.Q.setValueAtTime(3.5, now);
+
+      gain.gain.setValueAtTime(0.00001, now);
+      gain.gain.exponentialRampToValueAtTime(volume, now + 0.012);
+      gain.gain.exponentialRampToValueAtTime(0.00001, now + duration);
+
+      osc.connect(filter);
+      filter.connect(gain);
+      gain.connect(this.ctx.destination);
+
+      osc.start(now);
+      osc.stop(now + duration + 0.02);
+    } catch (e) {}
+  },
   playBeep() { this.play(800, 0.1, 'sine', 0.15); },
   playClick() { this.play(1500, 0.03, 'triangle', 0.08); },
   playError() {
@@ -145,15 +179,15 @@ const SoundManager = {
 
     // Original CainOS circus loop. Do not copy any official TADC melody/tab.
     const melody = [
-      { note: 'D5', dur: 180, chord: ['D4', 'F4', 'A4'], bass: 'D3' },
+      { note: 'D5', hammerFrom: 'A4', dur: 180, chord: ['D4', 'F4', 'A4'], bass: 'D3' },
       { note: 'F5', dur: 180, chord: ['D4', 'F4', 'A4'], bass: null },
-      { note: 'A5', dur: 180, chord: ['D4', 'F4', 'A4'], bass: 'A3' },
+      { note: 'A5', hammerFrom: 'G5', dur: 180, chord: ['D4', 'F4', 'A4'], bass: 'A3' },
       { note: 'G5', dur: 180, chord: ['D4', 'F4', 'A4'], bass: null },
       { note: 'F5', dur: 240, chord: ['F4', 'A4', 'C5'], bass: 'F3' },
       { note: 'E5', dur: 120, chord: ['F4', 'A4', 'C5'], bass: null },
-      { note: 'D5', dur: 240, chord: ['F4', 'A4', 'C5'], bass: 'C4' },
+      { note: 'D5', hammerFrom: 'C5', dur: 240, chord: ['F4', 'A4', 'C5'], bass: 'C4' },
       { note: null, dur: 120, chord: ['F4', 'A4', 'C5'], bass: null },
-      { note: 'G5', dur: 180, chord: ['G4', 'Bb4', 'D5'], bass: 'G3' },
+      { note: 'G5', hammerFrom: 'E5', dur: 180, chord: ['G4', 'Bb4', 'D5'], bass: 'G3' },
       { note: 'Bb5', dur: 180, chord: ['G4', 'Bb4', 'D5'], bass: null },
       { note: 'A5', dur: 180, chord: ['G4', 'Bb4', 'D5'], bass: 'D4' },
       { note: 'F5', dur: 180, chord: ['G4', 'Bb4', 'D5'], bass: null },
@@ -162,8 +196,8 @@ const SoundManager = {
       { note: 'D5', dur: 360, chord: ['D4', 'F4', 'A4'], bass: 'D3' },
       { note: null, dur: 120, chord: ['D4', 'F4', 'A4'], bass: null },
       { note: 'A4', dur: 160, chord: ['Bb3', 'D4', 'F4'], bass: 'Bb3' },
-      { note: 'D5', dur: 160, chord: ['Bb3', 'D4', 'F4'], bass: null },
-      { note: 'F5', dur: 160, chord: ['Bb3', 'D4', 'F4'], bass: 'F3' },
+      { note: 'D5', hammerFrom: 'A4', dur: 160, chord: ['Bb3', 'D4', 'F4'], bass: null },
+      { note: 'F5', hammerFrom: 'D5', dur: 160, chord: ['Bb3', 'D4', 'F4'], bass: 'F3' },
       { note: 'A5', dur: 160, chord: ['Bb3', 'D4', 'F4'], bass: null },
       { note: 'C6', dur: 240, chord: ['A3', 'C4', 'E4'], bass: 'A3' },
       { note: 'Bb5', dur: 120, chord: ['A3', 'C4', 'E4'], bass: null },
@@ -171,7 +205,7 @@ const SoundManager = {
       { note: 'F5', dur: 120, chord: ['G3', 'Bb3', 'D4'], bass: null },
       { note: 'E5', dur: 160, chord: ['D4', 'F4', 'A4'], bass: 'D3' },
       { note: 'F5', dur: 160, chord: ['D4', 'F4', 'A4'], bass: null },
-      { note: 'G5', dur: 160, chord: ['D4', 'F4', 'A4'], bass: 'A3' },
+      { note: 'G5', hammerFrom: 'F5', dur: 160, chord: ['D4', 'F4', 'A4'], bass: 'A3' },
       { note: 'E5', dur: 160, chord: ['D4', 'F4', 'A4'], bass: null },
       { note: 'D5', dur: 320, chord: ['D4', 'F4', 'A4'], bass: 'D3' },
       { note: 'F4', dur: 160, chord: ['D4', 'F4', 'A4'], bass: null },
@@ -181,7 +215,12 @@ const SoundManager = {
     const step = melody[this.themeIndex];
     if (step.note && NOTE_FREQS[step.note]) {
       const freq = NOTE_FREQS[step.note];
-      this.play(freq, step.dur / 1000, 'square', 0.035);
+      if (step.hammerFrom && NOTE_FREQS[step.hammerFrom]) {
+        this.playHammerOn(NOTE_FREQS[step.hammerFrom], freq, Math.min(0.16, step.dur / 850), 'triangle', 0.052);
+        setTimeout(() => this.play(freq, step.dur / 1200, 'square', 0.022), 58);
+      } else {
+        this.play(freq, step.dur / 1000, 'square', 0.035);
+      }
       setTimeout(() => this.play(freq * 2, Math.min(0.08, step.dur / 2000), 'triangle', 0.012), 38);
     }
     if (step.bass && NOTE_FREQS[step.bass]) {
