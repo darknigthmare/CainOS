@@ -1504,6 +1504,7 @@ const OS = {
     const overlay = document.getElementById('circus-dos-overlay');
     const canvas = document.getElementById('circus-doom-canvas');
     const zoneEl = document.getElementById('circus-doom-zone');
+    const detailEl = document.getElementById('circus-doom-detail');
     if (!overlay || !canvas) return;
 
     this.stopCircusDoomView();
@@ -1513,32 +1514,47 @@ const OS = {
     const progress = (typeof EpisodeManager !== 'undefined') ? EpisodeManager.getProgress() : [];
     const unlocked = ep => progress.includes(ep);
     const map = [
-      [1,1,1,1,1,1,1,1,1,1,1,1],
-      [1,0,0,0,2,0,0,0,3,0,0,1],
-      [1,0,1,0,1,0,1,0,1,0,0,1],
-      [1,0,1,0,0,0,1,0,0,0,4,1],
-      [1,0,1,1,1,0,1,1,1,0,1,1],
-      [1,0,0,0,0,0,0,0,1,0,0,1],
-      [1,5,1,0,1,1,1,0,1,1,0,1],
-      [1,0,0,0,1,6,0,0,0,7,0,1],
-      [1,1,1,1,1,1,1,1,1,1,1,1]
+      [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+      [1,2,2,0,3,3,0,6,6,0,8,8,0,10,10,0,14,14,1],
+      [1,2,2,0,3,3,0,6,6,0,8,8,0,10,10,0,14,14,1],
+      [1,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,1],
+      [1,4,4,0,5,5,0,7,7,0,9,9,0,11,11,0,15,15,1],
+      [1,4,4,0,5,5,0,7,7,0,9,9,0,11,11,0,15,15,1],
+      [1,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,1],
+      [1,12,12,0,13,13,0,16,16,0,17,17,0,18,18,0,19,19,1],
+      [1,12,12,0,13,13,0,16,16,0,17,17,0,18,18,0,19,19,1],
+      [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+      [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
     ];
     const portals = {
-      2: { name: 'PISTE DU CIRQUE', color: '#ffd84a', unlocked: true },
-      3: { name: 'CANDY CANYON', color: '#ff9b37', unlocked: unlocked(2) },
-      4: { name: 'MANOIR MILDENHALL', color: '#b7f0ff', unlocked: unlocked(3) },
-      5: { name: 'SPUDSY SERVICE', color: '#ff4d4d', unlocked: unlocked(4) },
-      6: { name: 'LAC DIGITAL', color: '#7df0ff', unlocked: unlocked(7) },
-      7: { name: 'COUCHE C&A', color: '#ff9b37', unlocked: unlocked(8) || unlocked(9) }
+      2: { name: 'CHAPITEAU / PISTE', short: 'CIRQUE', detail: 'Hub principal, scene, coulisses visibles depuis le monde digital.', color: '#ffd84a', floor: '#251018', ceiling: '#19102f', unlocked: true },
+      3: { name: 'TERRAIN DU CIRQUE', short: 'TERRAIN', detail: 'Exterieur immediat du chapiteau et acces aux aventures de Caine.', color: '#7df0ff', floor: '#113036', ceiling: '#16112d', unlocked: true },
+      4: { name: 'CELLAR / KAUFMO', short: 'CELLAR', detail: 'Zone de stockage des abstraits et trace Kaufmo apres le pilote.', color: '#56505f', floor: '#111117', ceiling: '#050508', unlocked: unlocked(1) },
+      5: { name: 'PORTE DE SORTIE / VIDE', short: 'EXIT', detail: 'Prototype de sortie, couloirs impossibles et bureau apparu dans le pilote.', color: '#ffffff', floor: '#18202a', ceiling: '#060606', unlocked: unlocked(1) },
+      6: { name: 'CANDY CANYON KINGDOM', short: 'CANDY', detail: 'Royaume bonbon, convoi sirop et route du tanker.', color: '#ff9b37', floor: '#4b2436', ceiling: '#24234f', unlocked: unlocked(2) },
+      7: { name: 'TEST LEVEL / NPC SCAN', short: 'TEST', detail: 'Sous-couche technique liee a Gummigoo et aux donnees NPC.', color: '#9cff6d', floor: '#1d2b1f', ceiling: '#0f1b12', unlocked: unlocked(2) },
+      8: { name: 'MILDENHALL MANOR', short: 'MANOR', detail: 'Manoir horrifique, baron, fantome et menace qui reagit aux signaux.', color: '#b7f0ff', floor: '#1d1827', ceiling: '#050816', unlocked: unlocked(3) },
+      9: { name: 'SOUS-SOL MILDENHALL', short: 'CAVE', detail: 'Trappes, obscurite, armes de Kinger et fuite sous le manoir.', color: '#7c88a1', floor: '#0d1018', ceiling: '#03040a', unlocked: unlocked(3) },
+      10: { name: "SPUDSY'S", short: 'SPUDSY', detail: 'Restaurant rapide, comptoir, tickets et stress de service de Gangle.', color: '#ff4d4d', floor: '#3b1a17', ceiling: '#251308', unlocked: unlocked(4) },
+      11: { name: 'SUGGESTION BOX / MICRO-ZONES', short: 'IDEES', detail: 'Suite de micro-aventures generees par Caine depuis les suggestions.', color: '#ff4fb8', floor: '#2c1434', ceiling: '#160d25', unlocked: unlocked(5) },
+      12: { name: 'SOFTBALL STADIUM', short: 'BALL', detail: 'Terrain de match, costumes sportifs et equipe adverse alternative.', color: '#83ff57', floor: '#173416', ceiling: '#14152f', unlocked: unlocked(5) },
+      13: { name: 'THEY ALL GET GUNS', short: 'GUNS', detail: 'Arena d epreuves armees, scores et tension autour de Jax.', color: '#f6d743', floor: '#2f2610', ceiling: '#17110a', unlocked: unlocked(6) },
+      14: { name: 'DIGITAL LAKE / BEACH', short: 'LAC', detail: 'Lac digital, plage, soleil dangereux et faux repos de Caine.', color: '#4ee7ff', floor: '#073844', ceiling: '#114071', unlocked: unlocked(7) },
+      15: { name: 'CHINESE ROOM / ADMIN ZONE', short: 'ADMIN', detail: 'Zone de questionnement, anomalie C&A et couches systeme sous le lac.', color: '#ffcf75', floor: '#302318', ceiling: '#09111e', unlocked: unlocked(7) },
+      16: { name: 'CAINE OFFICE / C&A CORE', short: 'CORE', detail: 'Bureau de Caine, origine IA et couches C&A que CainOS revele tard.', color: '#ff7a30', floor: '#291915', ceiling: '#10070d', unlocked: unlocked(8) || unlocked(9) },
+      17: { name: 'KINGER MEMORY BUFFER', short: 'MEMOIRE', detail: 'Fragments Queenie, souvenirs et noyau emotionnel de Kinger.', color: '#d9d0a2', floor: '#252316', ceiling: '#0e0e12', unlocked: unlocked(8) },
+      18: { name: 'FINAL CIRCUS / BACKSTAGE', short: 'FINAL', detail: 'Retour au cirque, brain scans, Ribbit et dernier etat de Pomni/Caine.', color: '#e53935', floor: '#2b1018', ceiling: '#09060d', unlocked: unlocked(9) },
+      19: { name: 'CIRCUS MEMBERS ARCHIVE', short: 'MEMBRES', detail: 'Archives visuelles des membres secondaires connues apres les episodes.', color: '#c875ff', floor: '#21142e', ceiling: '#0c0614', unlocked: unlocked(9) }
     };
 
     this.circusDoom = {
       canvas,
       ctx: canvas.getContext('2d'),
       zoneEl,
+      detailEl,
       map,
       portals,
-      player: { x: 2.4, y: 5.4, a: -0.08 },
+      player: { x: 2.25, y: 9.45, a: -1.35 },
       keys: new Set(),
       last: performance.now(),
       raf: null
@@ -1607,8 +1623,13 @@ const OS = {
       if (portal) {
         state.zoneEl.innerText = `ZONE: ${portal.name}${portal.unlocked ? '' : ' / VERROUILLEE'}`;
       } else {
-        state.zoneEl.innerText = 'ZONE: CHAPITEAU INTERNE';
+        state.zoneEl.innerText = 'ZONE: PASSERELLE INTERNE';
       }
+    }
+    if (state.detailEl) {
+      state.detailEl.innerText = portal
+        ? (portal.unlocked ? portal.detail : `VERROUILLE: terminez l episode requis avant d afficher ${portal.short}.`)
+        : 'Hub interne: traversez les couloirs pour inspecter les zones de simulation.';
     }
   },
 
@@ -1621,11 +1642,17 @@ const OS = {
     const fov = Math.PI / 3;
     const cols = 160;
     const strip = w / cols;
+    const currentCell = map[Math.floor(player.y)]?.[Math.floor(player.x)] ?? 0;
+    const currentZone = portals[currentCell];
 
-    ctx.fillStyle = '#120821';
+    ctx.fillStyle = currentZone?.ceiling || '#120821';
     ctx.fillRect(0, 0, w, h / 2);
-    ctx.fillStyle = '#24112f';
+    ctx.fillStyle = currentZone?.floor || '#24112f';
     ctx.fillRect(0, h / 2, w, h / 2);
+    ctx.fillStyle = 'rgba(255,255,255,0.08)';
+    for (let y = h / 2 + 12; y < h; y += 18) {
+      ctx.fillRect(0, y, w, 1);
+    }
 
     for (let col = 0; col < cols; col++) {
       const rayA = player.a - fov / 2 + (col / cols) * fov;
@@ -1646,6 +1673,10 @@ const OS = {
       const color = portal ? (portal.unlocked ? portal.color : '#56505f') : '#e53935';
       ctx.fillStyle = this.shadeHex(color, shade);
       ctx.fillRect(col * strip, y, Math.ceil(strip) + 1, wallH);
+      if (portal && portal.unlocked) {
+        ctx.fillStyle = this.shadeHex('#ffffff', shade * 0.16);
+        ctx.fillRect(col * strip, y + wallH * 0.18, Math.ceil(strip) + 1, Math.max(1, wallH * 0.04));
+      }
       if (portal && !portal.unlocked) {
         ctx.fillStyle = 'rgba(0,0,0,0.35)';
         ctx.fillRect(col * strip, y, Math.ceil(strip) + 1, wallH);
@@ -1657,21 +1688,39 @@ const OS = {
   },
 
   drawCircusDoomSprites(ctx, w, h) {
+    const state = this.circusDoom;
+    const currentCell = state?.map[Math.floor(state.player.y)]?.[Math.floor(state.player.x)] ?? 0;
+    const zone = state?.portals[currentCell];
     ctx.save();
     ctx.textAlign = 'center';
     ctx.font = 'bold 12px Courier New';
-    ctx.fillStyle = '#ffd84a';
-    ctx.fillText('THE DIGITAL CIRCUS', w / 2, 24);
+    ctx.fillStyle = zone?.color || '#ffd84a';
+    ctx.fillText(zone?.name || 'THE DIGITAL CIRCUS SIMULATION HUB', w / 2, 24);
+    ctx.font = '10px Courier New';
     ctx.fillStyle = '#7df0ff';
-    ctx.fillText('PORTAILS LORE-WISE SELON PROGRESSION', w / 2, 40);
+    ctx.fillText('ZONES CONNUES // FIDELES AU DEROULE DES EPISODES // ASSETS ORIGINAUX', w / 2, 40);
+    if (zone) {
+      ctx.strokeStyle = zone.color;
+      ctx.strokeRect(w / 2 - 66, h / 2 - 28, 132, 54);
+      ctx.fillStyle = 'rgba(0,0,0,0.32)';
+      ctx.fillRect(w / 2 - 64, h / 2 - 26, 128, 50);
+      ctx.fillStyle = zone.color;
+      ctx.font = 'bold 11px Courier New';
+      ctx.fillText(zone.short, w / 2, h / 2 - 6);
+      ctx.fillStyle = '#fff1a8';
+      ctx.fillText(zone.unlocked ? 'ACCES AUTORISE' : 'INFO VERROUILLEE', w / 2, h / 2 + 12);
+    }
     ctx.restore();
   },
 
   drawCircusDoomMap(ctx, map, portals, player) {
-    const scale = 7;
+    const scale = 5;
     const ox = 10;
-    const oy = 54;
+    const oy = 52;
     ctx.save();
+    ctx.font = 'bold 5px Courier New';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
     ctx.fillStyle = 'rgba(0,0,0,0.52)';
     ctx.fillRect(ox - 4, oy - 4, map[0].length * scale + 8, map.length * scale + 8);
     for (let y = 0; y < map.length; y++) {
@@ -1681,6 +1730,10 @@ const OS = {
         else if (portals[cell]) ctx.fillStyle = portals[cell].unlocked ? portals[cell].color : '#4b4b55';
         else ctx.fillStyle = '#111827';
         ctx.fillRect(ox + x * scale, oy + y * scale, scale - 1, scale - 1);
+        if (portals[cell] && x > 0 && map[y][x - 1] !== cell) {
+          ctx.fillStyle = '#05020d';
+          ctx.fillText(portals[cell].short.slice(0, 2), ox + x * scale + scale, oy + y * scale + scale);
+        }
       }
     }
     ctx.fillStyle = '#ffffff';
