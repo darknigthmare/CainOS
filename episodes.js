@@ -171,60 +171,38 @@ const SoundManager = {
     this.init();
     if (!this.ctx) return;
     const NOTE_FREQS = {
-      'D3': 146.83, 'F3': 174.61, 'G3': 196.00, 'A3': 220.00, 'Bb3': 233.08, 'C4': 261.63,
-      'D4': 293.66, 'E4': 329.63, 'F4': 349.23, 'G4': 392.00, 'A4': 440.00, 'Bb4': 466.16,
-      'C5': 523.25, 'D5': 587.33, 'E5': 659.25, 'F5': 698.46, 'G5': 783.99,
-      'A5': 880.00, 'Bb5': 932.33, 'C6': 1046.50
+      'B3': 246.94, 'C4': 261.63, 'D4': 293.66, 'E4': 329.63, 'F4': 349.23, 'G4': 392.00, 'A4': 440.00,
+      'B4': 493.88, 'C5': 523.25, 'D5': 587.33, 'E5': 659.25, 'F5': 698.46, 'G5': 783.99,
+      'A5': 880.00, 'B5': 987.77
     };
+    const midiToFreq = (pitch) => 440 * Math.pow(2, (pitch - 69) / 12);
+    const beatMs = 60000 / 140;
 
-    // Original CainOS circus loop. Do not copy any official TADC melody/tab.
+    // User-provided CainOS MIDI theme, rendered as a small retro synth loop.
     const melody = [
-      { note: 'D5', hammerFrom: 'A4', dur: 180, chord: ['D4', 'F4', 'A4'], bass: 'D3' },
-      { note: 'F5', dur: 180, chord: ['D4', 'F4', 'A4'], bass: null },
-      { note: 'A5', hammerFrom: 'G5', dur: 180, chord: ['D4', 'F4', 'A4'], bass: 'A3' },
-      { note: 'G5', dur: 180, chord: ['D4', 'F4', 'A4'], bass: null },
-      { note: 'F5', dur: 240, chord: ['F4', 'A4', 'C5'], bass: 'F3' },
-      { note: 'E5', dur: 120, chord: ['F4', 'A4', 'C5'], bass: null },
-      { note: 'D5', hammerFrom: 'C5', dur: 240, chord: ['F4', 'A4', 'C5'], bass: 'C4' },
-      { note: null, dur: 120, chord: ['F4', 'A4', 'C5'], bass: null },
-      { note: 'G5', hammerFrom: 'E5', dur: 180, chord: ['G4', 'Bb4', 'D5'], bass: 'G3' },
-      { note: 'Bb5', dur: 180, chord: ['G4', 'Bb4', 'D5'], bass: null },
-      { note: 'A5', dur: 180, chord: ['G4', 'Bb4', 'D5'], bass: 'D4' },
-      { note: 'F5', dur: 180, chord: ['G4', 'Bb4', 'D5'], bass: null },
-      { note: 'E5', dur: 240, chord: ['A4', 'C5', 'E5'], bass: 'A3' },
-      { note: 'C5', dur: 120, chord: ['A4', 'C5', 'E5'], bass: null },
-      { note: 'D5', dur: 360, chord: ['D4', 'F4', 'A4'], bass: 'D3' },
-      { note: null, dur: 120, chord: ['D4', 'F4', 'A4'], bass: null },
-      { note: 'A4', dur: 160, chord: ['Bb3', 'D4', 'F4'], bass: 'Bb3' },
-      { note: 'D5', hammerFrom: 'A4', dur: 160, chord: ['Bb3', 'D4', 'F4'], bass: null },
-      { note: 'F5', hammerFrom: 'D5', dur: 160, chord: ['Bb3', 'D4', 'F4'], bass: 'F3' },
-      { note: 'A5', dur: 160, chord: ['Bb3', 'D4', 'F4'], bass: null },
-      { note: 'C6', dur: 240, chord: ['A3', 'C4', 'E4'], bass: 'A3' },
-      { note: 'Bb5', dur: 120, chord: ['A3', 'C4', 'E4'], bass: null },
-      { note: 'A5', dur: 240, chord: ['G3', 'Bb3', 'D4'], bass: 'G3' },
-      { note: 'F5', dur: 120, chord: ['G3', 'Bb3', 'D4'], bass: null },
-      { note: 'E5', dur: 160, chord: ['D4', 'F4', 'A4'], bass: 'D3' },
-      { note: 'F5', dur: 160, chord: ['D4', 'F4', 'A4'], bass: null },
-      { note: 'G5', hammerFrom: 'F5', dur: 160, chord: ['D4', 'F4', 'A4'], bass: 'A3' },
-      { note: 'E5', dur: 160, chord: ['D4', 'F4', 'A4'], bass: null },
-      { note: 'D5', dur: 320, chord: ['D4', 'F4', 'A4'], bass: 'D3' },
-      { note: 'F4', dur: 160, chord: ['D4', 'F4', 'A4'], bass: null },
-      { note: 'A4', dur: 160, chord: ['D4', 'F4', 'A4'], bass: 'A3' },
-      { note: null, dur: 240, chord: ['D4', 'F4', 'A4'], bass: null }
+      { pitch: 72, beats: 0.5, chord: ['C4', 'E4', 'G4'], bass: 'C4' },
+      { pitch: 76, beats: 0.5, chord: ['C4', 'E4', 'G4'], bass: null },
+      { pitch: 79, beats: 0.5, chord: ['C4', 'E4', 'G4'], bass: 'G4' },
+      { pitch: 76, beats: 0.5, chord: ['C4', 'E4', 'G4'], bass: null },
+      { pitch: 72, beats: 0.5, chord: ['C4', 'E4', 'G4'], bass: 'C4' },
+      { pitch: 76, beats: 0.5, chord: ['C4', 'E4', 'G4'], bass: null },
+      { pitch: 79, beats: 1.0, chord: ['C4', 'E4', 'G4'], bass: 'G4' },
+      { pitch: 77, beats: 0.5, chord: ['B3', 'D4', 'F4'], bass: 'B3' },
+      { pitch: 74, beats: 0.5, chord: ['B3', 'D4', 'F4'], bass: null },
+      { pitch: 71, beats: 0.5, chord: ['B3', 'D4', 'F4'], bass: 'F4' },
+      { pitch: 74, beats: 0.5, chord: ['B3', 'D4', 'F4'], bass: null },
+      { pitch: 77, beats: 1.0, chord: ['B3', 'D4', 'F4'], bass: 'B3' },
+      { pitch: 79, beats: 1.0, chord: ['C4', 'E4', 'G4'], bass: 'C4' }
     ];
     const step = melody[this.themeIndex];
-    if (step.note && NOTE_FREQS[step.note]) {
-      const freq = NOTE_FREQS[step.note];
-      if (step.hammerFrom && NOTE_FREQS[step.hammerFrom]) {
-        this.playHammerOn(NOTE_FREQS[step.hammerFrom], freq, Math.min(0.16, step.dur / 850), 'triangle', 0.052);
-        setTimeout(() => this.play(freq, step.dur / 1200, 'square', 0.022), 58);
-      } else {
-        this.play(freq, step.dur / 1000, 'square', 0.035);
-      }
-      setTimeout(() => this.play(freq * 2, Math.min(0.08, step.dur / 2000), 'triangle', 0.012), 38);
+    const stepDur = step.beats * beatMs;
+    if (Number.isFinite(step.pitch)) {
+      const freq = midiToFreq(step.pitch);
+      this.play(freq, stepDur / 1000, 'square', 0.04);
+      setTimeout(() => this.play(freq * 2, Math.min(0.08, stepDur / 2000), 'triangle', 0.012), 38);
     }
     if (step.bass && NOTE_FREQS[step.bass]) {
-      this.play(NOTE_FREQS[step.bass], Math.max(0.18, step.dur / 720), 'triangle', 0.055);
+      this.play(NOTE_FREQS[step.bass] / 2, Math.max(0.18, stepDur / 720), 'triangle', 0.05);
     }
     if (step.chord && this.themeIndex % 2 === 0) {
       step.chord.forEach((note, i) => {
@@ -233,7 +211,7 @@ const SoundManager = {
       });
     }
     this.themeIndex = (this.themeIndex + 1) % melody.length;
-    this.themeTimer = setTimeout(() => this.playThemeStep(), step.dur);
+    this.themeTimer = setTimeout(() => this.playThemeStep(), stepDur);
   }
 };
 
