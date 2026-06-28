@@ -1546,6 +1546,26 @@ const OS = {
       18: { name: 'FINAL CIRCUS / BACKSTAGE', short: 'FINAL', detail: 'Retour au cirque, brain scans, Ribbit et dernier etat de Pomni/Caine.', color: '#e53935', floor: '#2b1018', ceiling: '#09060d', unlocked: unlocked(9) },
       19: { name: 'CIRCUS MEMBERS ARCHIVE', short: 'MEMBRES', detail: 'Archives visuelles des membres secondaires connues apres les episodes.', color: '#c875ff', floor: '#21142e', ceiling: '#0c0614', unlocked: unlocked(9) }
     };
+    const scenes = {
+      2: { exits: [3, 4, 5, 6, 8, 10, 11, 14, 16], motif: 'circus' },
+      3: { exits: [2, 6, 11, 14], motif: 'grounds' },
+      4: { exits: [2, 5], motif: 'cellar' },
+      5: { exits: [2, 16], motif: 'exit' },
+      6: { exits: [2, 7], motif: 'candy' },
+      7: { exits: [6, 16], motif: 'test' },
+      8: { exits: [2, 9], motif: 'manor' },
+      9: { exits: [8], motif: 'basement' },
+      10: { exits: [2, 11], motif: 'spudsy' },
+      11: { exits: [2, 10, 12, 13], motif: 'micro' },
+      12: { exits: [11], motif: 'softball' },
+      13: { exits: [11], motif: 'guns' },
+      14: { exits: [2, 15], motif: 'lake' },
+      15: { exits: [14, 16], motif: 'admin' },
+      16: { exits: [2, 5, 15, 17, 18], motif: 'core' },
+      17: { exits: [16], motif: 'memory' },
+      18: { exits: [2, 16, 19], motif: 'final' },
+      19: { exits: [18], motif: 'archive' }
+    };
 
     this.circusDoom = {
       canvas,
@@ -1554,6 +1574,11 @@ const OS = {
       detailEl,
       map,
       portals,
+      scenes,
+      currentZoneId: 2,
+      selectedExitIndex: 0,
+      history: [],
+      hotspots: [],
       player: { x: 2.25, y: 9.45, a: -1.35 },
       keys: new Set(),
       last: performance.now(),
@@ -1562,9 +1587,9 @@ const OS = {
 
     this.circusDoomKeyDown = e => {
       const key = e.key.toLowerCase();
-      if (['arrowup','arrowdown','arrowleft','arrowright','w','a','s','d','z','q'].includes(key)) {
+      if (['arrowup','arrowdown','arrowleft','arrowright','enter',' ','w','a','s','d','z','q'].includes(key)) {
         e.preventDefault();
-        this.circusDoom.keys.add(key);
+        this.handleCircusSimulationInput(key);
       }
     };
     this.circusDoomKeyUp = e => {
@@ -1572,6 +1597,19 @@ const OS = {
     };
     window.addEventListener('keydown', this.circusDoomKeyDown);
     window.addEventListener('keyup', this.circusDoomKeyUp);
+    this.circusDoomClick = e => {
+      const state = this.circusDoom;
+      if (!state) return;
+      const rect = canvas.getBoundingClientRect();
+      const x = (e.clientX - rect.left) * (canvas.width / rect.width);
+      const y = (e.clientY - rect.top) * (canvas.height / rect.height);
+      const hit = state.hotspots.find(spot => x >= spot.x && x <= spot.x + spot.w && y >= spot.y && y <= spot.y + spot.h);
+      if (hit) {
+        state.selectedExitIndex = hit.index;
+        this.enterCircusSimulationExit(hit.target);
+      }
+    };
+    canvas.addEventListener('click', this.circusDoomClick);
 
     const loop = now => {
       if (!this.circusDoom) return;
@@ -1588,40 +1626,63 @@ const OS = {
     if (this.circusDoom?.raf) cancelAnimationFrame(this.circusDoom.raf);
     if (this.circusDoomKeyDown) window.removeEventListener('keydown', this.circusDoomKeyDown);
     if (this.circusDoomKeyUp) window.removeEventListener('keyup', this.circusDoomKeyUp);
+    if (this.circusDoomClick && this.circusDoom?.canvas) this.circusDoom.canvas.removeEventListener('click', this.circusDoomClick);
     this.circusDoom = null;
     this.circusDoomKeyDown = null;
     this.circusDoomKeyUp = null;
+    this.circusDoomClick = null;
+  },
+
+  handleCircusSimulationInput(key) {
+    const state = this.circusDoom;
+    if (!state) return;
+    const exits = state.scenes[state.currentZoneId]?.exits || [];
+    if (!exits.length) return;
+    if (key === 'arrowleft' || key === 'a' || key === 'q') {
+      state.selectedExitIndex = (state.selectedExitIndex + exits.length - 1) % exits.length;
+      SoundManager.play(360, 0.04, 'square', 0.03);
+    } else if (key === 'arrowright' || key === 'd') {
+      state.selectedExitIndex = (state.selectedExitIndex + 1) % exits.length;
+      SoundManager.play(420, 0.04, 'square', 0.03);
+    } else if (key === 'arrowup' || key === 'w' || key === 'z' || key === 'enter' || key === ' ') {
+      this.enterCircusSimulationExit(exits[state.selectedExitIndex]);
+    } else if (key === 'arrowdown' || key === 's') {
+      const previous = state.history.pop();
+      if (previous) this.setCircusSimulationZone(previous, false);
+    }
+  },
+
+  enterCircusSimulationExit(targetId) {
+    const state = this.circusDoom;
+    if (!state) return;
+    const target = state.portals[targetId];
+    if (!target?.unlocked) {
+      SoundManager.playError();
+      if (state.detailEl) {
+        state.detailEl.innerText = `VERROUILLE: continuez les episodes avant d ouvrir ${target?.name || 'cette zone'}.`;
+      }
+      return;
+    }
+    state.history.push(state.currentZoneId);
+    this.setCircusSimulationZone(targetId, true);
+  },
+
+  setCircusSimulationZone(zoneId, playSound = true) {
+    const state = this.circusDoom;
+    if (!state || !state.portals[zoneId]) return;
+    state.currentZoneId = zoneId;
+    state.selectedExitIndex = 0;
+    state.hotspots = [];
+    if (playSound) SoundManager.play(660, 0.08, 'triangle', 0.05);
   },
 
   updateCircusDoom(dt) {
     const state = this.circusDoom;
     if (!state) return;
-    const { player, keys, map, portals } = state;
-    const turn = 2.3 * dt;
-    const speed = 2.1 * dt;
-    if (keys.has('arrowleft') || keys.has('a') || keys.has('q')) player.a -= turn;
-    if (keys.has('arrowright') || keys.has('d')) player.a += turn;
-
-    let move = 0;
-    if (keys.has('arrowup') || keys.has('w') || keys.has('z')) move += speed;
-    if (keys.has('arrowdown') || keys.has('s')) move -= speed;
-    if (move !== 0) {
-      const nx = player.x + Math.cos(player.a) * move;
-      const ny = player.y + Math.sin(player.a) * move;
-      const cell = map[Math.floor(ny)]?.[Math.floor(nx)] ?? 1;
-      if (cell === 0 || portals[cell]?.unlocked) {
-        player.x = nx;
-        player.y = ny;
-      } else {
-        SoundManager.playError();
-      }
-    }
-
-    const cell = map[Math.floor(player.y)]?.[Math.floor(player.x)] ?? 0;
-    const portal = portals[cell];
+    const portal = state.portals[state.currentZoneId];
     if (state.zoneEl) {
       if (portal) {
-        state.zoneEl.innerText = `ZONE: ${portal.name}${portal.unlocked ? '' : ' / VERROUILLEE'}`;
+        state.zoneEl.innerText = `ZONE: ${portal.name}`;
       } else {
         state.zoneEl.innerText = 'ZONE: PASSERELLE INTERNE';
       }
@@ -1636,55 +1697,232 @@ const OS = {
   drawCircusDoom() {
     const state = this.circusDoom;
     if (!state) return;
-    const { canvas, ctx, player, map, portals } = state;
+    this.drawCircusSimulationScene();
+  },
+
+  drawCircusSimulationScene() {
+    const state = this.circusDoom;
+    if (!state) return;
+    const { canvas, ctx, portals, scenes } = state;
     const w = canvas.width;
     const h = canvas.height;
-    const fov = Math.PI / 3;
-    const cols = 160;
-    const strip = w / cols;
-    const currentCell = map[Math.floor(player.y)]?.[Math.floor(player.x)] ?? 0;
-    const currentZone = portals[currentCell];
+    const zone = portals[state.currentZoneId] || portals[2];
+    const scene = scenes[state.currentZoneId] || scenes[2];
+    const exits = scene.exits || [];
+    state.hotspots = [];
 
-    ctx.fillStyle = currentZone?.ceiling || '#120821';
-    ctx.fillRect(0, 0, w, h / 2);
-    ctx.fillStyle = currentZone?.floor || '#24112f';
-    ctx.fillRect(0, h / 2, w, h / 2);
+    ctx.fillStyle = zone.ceiling || '#120821';
+    ctx.fillRect(0, 0, w, h);
+    const skyPulse = 0.5 + Math.sin(performance.now() / 700) * 0.5;
+    const horizon = h * 0.46;
+
+    ctx.fillStyle = this.shadeHex(zone.ceiling || '#120821', 1.35);
+    ctx.fillRect(0, 0, w, horizon);
+    ctx.fillStyle = zone.floor || '#24112f';
+    ctx.fillRect(0, horizon, w, h - horizon);
     ctx.fillStyle = 'rgba(255,255,255,0.08)';
-    for (let y = h / 2 + 12; y < h; y += 18) {
+    for (let i = 0; i < 12; i++) {
+      const y = horizon + Math.pow(i / 11, 1.7) * (h - horizon);
       ctx.fillRect(0, y, w, 1);
     }
-
-    for (let col = 0; col < cols; col++) {
-      const rayA = player.a - fov / 2 + (col / cols) * fov;
-      let dist = 0;
-      let hit = 0;
-      let shade = 1;
-      while (dist < 12 && !hit) {
-        dist += 0.035;
-        const rx = player.x + Math.cos(rayA) * dist;
-        const ry = player.y + Math.sin(rayA) * dist;
-        hit = map[Math.floor(ry)]?.[Math.floor(rx)] ?? 1;
-      }
-      const corrected = dist * Math.cos(rayA - player.a);
-      const wallH = Math.min(h, h / Math.max(0.18, corrected));
-      const y = (h - wallH) / 2;
-      shade = Math.max(0.25, 1 - corrected / 9);
-      const portal = portals[hit];
-      const color = portal ? (portal.unlocked ? portal.color : '#56505f') : '#e53935';
-      ctx.fillStyle = this.shadeHex(color, shade);
-      ctx.fillRect(col * strip, y, Math.ceil(strip) + 1, wallH);
-      if (portal && portal.unlocked) {
-        ctx.fillStyle = this.shadeHex('#ffffff', shade * 0.16);
-        ctx.fillRect(col * strip, y + wallH * 0.18, Math.ceil(strip) + 1, Math.max(1, wallH * 0.04));
-      }
-      if (portal && !portal.unlocked) {
-        ctx.fillStyle = 'rgba(0,0,0,0.35)';
-        ctx.fillRect(col * strip, y, Math.ceil(strip) + 1, wallH);
-      }
+    ctx.strokeStyle = 'rgba(255,255,255,0.08)';
+    for (let i = -5; i <= 5; i++) {
+      const x = w / 2 + i * 48;
+      ctx.beginPath();
+      ctx.moveTo(w / 2, horizon);
+      ctx.lineTo(x, h);
+      ctx.stroke();
     }
 
-    this.drawCircusDoomSprites(ctx, w, h);
-    this.drawCircusDoomMap(ctx, map, portals, player);
+    const drawTent = () => {
+      ctx.fillStyle = '#e53935';
+      ctx.beginPath();
+      ctx.moveTo(w * 0.18, horizon + 54);
+      ctx.lineTo(w * 0.5, 32);
+      ctx.lineTo(w * 0.82, horizon + 54);
+      ctx.closePath();
+      ctx.fill();
+      ctx.fillStyle = '#fff1a8';
+      for (let i = 0; i < 5; i++) {
+        ctx.beginPath();
+        ctx.moveTo(w * (0.24 + i * 0.11), horizon + 52);
+        ctx.lineTo(w * 0.5, 36);
+        ctx.lineTo(w * (0.3 + i * 0.11), horizon + 52);
+        ctx.closePath();
+        ctx.fill();
+      }
+      ctx.fillStyle = '#2a58d8';
+      ctx.fillRect(w * 0.22, horizon + 52, w * 0.56, 58);
+      ctx.fillStyle = '#100020';
+      ctx.beginPath();
+      ctx.ellipse(w / 2, horizon + 110, 46, 62, 0, Math.PI, 0);
+      ctx.fill();
+      ctx.strokeStyle = '#ffd84a';
+      ctx.lineWidth = 3;
+      ctx.stroke();
+    };
+
+    const drawSign = (text, x, y, color = '#ffd84a') => {
+      ctx.fillStyle = '#14091f';
+      ctx.strokeStyle = color;
+      ctx.lineWidth = 2;
+      ctx.fillRect(x - 52, y - 18, 104, 30);
+      ctx.strokeRect(x - 52, y - 18, 104, 30);
+      ctx.fillStyle = color;
+      ctx.font = 'bold 10px Courier New';
+      ctx.textAlign = 'center';
+      ctx.fillText(text, x, y + 2);
+    };
+
+    const motif = scene.motif;
+    if (motif === 'circus' || motif === 'grounds' || motif === 'final') {
+      drawTent();
+      drawSign(motif === 'final' ? 'BACKSTAGE' : 'DIGITAL CIRCUS', w / 2, 28, '#ffd84a');
+      ctx.fillStyle = `rgba(125,240,255,${0.18 + skyPulse * 0.1})`;
+      ctx.beginPath();
+      ctx.arc(w / 2, horizon + 80, 76, 0, Math.PI * 2);
+      ctx.fill();
+    } else if (motif === 'cellar') {
+      ctx.fillStyle = '#050508';
+      ctx.fillRect(0, 0, w, h);
+      ctx.fillStyle = '#15151d';
+      ctx.fillRect(70, 42, w - 140, h - 84);
+      ctx.strokeStyle = '#56505f';
+      for (let x = 90; x < w - 60; x += 52) ctx.strokeRect(x, 64, 34, 88);
+      drawSign('CELLAR', w / 2, 36, '#9a9aa8');
+    } else if (motif === 'exit') {
+      ctx.fillStyle = '#050505';
+      ctx.fillRect(0, 0, w, h);
+      ctx.strokeStyle = '#ffffff';
+      ctx.lineWidth = 3;
+      for (let i = 0; i < 7; i++) ctx.strokeRect(w / 2 - 150 + i * 24, 38 + i * 13, 300 - i * 48, 158 - i * 20);
+      drawSign('EXIT DOOR', w / 2, 34, '#ffffff');
+    } else if (motif === 'candy') {
+      ctx.fillStyle = '#472056';
+      ctx.fillRect(0, 0, w, horizon);
+      ctx.fillStyle = '#ff9b37';
+      for (let x = -20; x < w; x += 80) {
+        ctx.beginPath();
+        ctx.arc(x, horizon + 22, 46, Math.PI, 0);
+        ctx.fill();
+      }
+      ctx.fillStyle = '#ffd84a';
+      ctx.fillRect(80, horizon + 38, w - 160, 26);
+      drawSign('CANDY CANYON', w / 2, 38, '#ffcf75');
+    } else if (motif === 'test' || motif === 'admin' || motif === 'core') {
+      ctx.fillStyle = '#05120d';
+      ctx.fillRect(0, 0, w, h);
+      ctx.strokeStyle = motif === 'core' ? '#ff7a30' : '#7df0ff';
+      ctx.lineWidth = 1;
+      for (let x = 0; x < w; x += 32) {
+        ctx.beginPath();
+        ctx.moveTo(x, 0);
+        ctx.lineTo(x + 80, h);
+        ctx.stroke();
+      }
+      for (let y = 0; y < h; y += 24) ctx.strokeRect(0, y, w, 1);
+      drawSign(motif === 'core' ? 'C&A CORE' : motif === 'admin' ? 'ADMIN ZONE' : 'TEST LEVEL', w / 2, 34, ctx.strokeStyle);
+    } else if (motif === 'manor' || motif === 'basement') {
+      ctx.fillStyle = '#050816';
+      ctx.fillRect(0, 0, w, h);
+      ctx.fillStyle = motif === 'basement' ? '#151018' : '#242033';
+      ctx.fillRect(120, 38, w - 240, 138);
+      ctx.fillStyle = '#0a0610';
+      for (let x = 150; x < w - 150; x += 72) ctx.fillRect(x, 74, 38, 58);
+      ctx.strokeStyle = '#b7f0ff';
+      ctx.strokeRect(120, 38, w - 240, 138);
+      drawSign(motif === 'basement' ? 'MANOR BASEMENT' : 'MILDENHALL MANOR', w / 2, 32, '#b7f0ff');
+    } else if (motif === 'spudsy') {
+      ctx.fillStyle = '#3b1a17';
+      ctx.fillRect(0, 0, w, h);
+      ctx.fillStyle = '#f6d743';
+      ctx.fillRect(92, 42, w - 184, 92);
+      ctx.fillStyle = '#ff4d4d';
+      ctx.fillRect(118, 58, w - 236, 22);
+      drawSign("SPUDSY'S", w / 2, 70, '#ffffff');
+      ctx.fillStyle = '#251308';
+      ctx.fillRect(70, horizon + 48, w - 140, 42);
+    } else if (motif === 'micro') {
+      drawTent();
+      for (let i = 0; i < 5; i++) drawSign('IDEA', 120 + i * 98, 60 + (i % 2) * 36, i % 2 ? '#ff4fb8' : '#7df0ff');
+    } else if (motif === 'softball' || motif === 'guns') {
+      ctx.fillStyle = motif === 'softball' ? '#173416' : '#201310';
+      ctx.fillRect(0, 0, w, h);
+      ctx.strokeStyle = motif === 'softball' ? '#83ff57' : '#f6d743';
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.arc(w / 2, horizon + 84, 96, 0, Math.PI * 2);
+      ctx.stroke();
+      drawSign(motif === 'softball' ? 'SOFTBALL' : 'GUNS ARENA', w / 2, 36, ctx.strokeStyle);
+    } else if (motif === 'lake') {
+      ctx.fillStyle = '#114071';
+      ctx.fillRect(0, 0, w, horizon);
+      ctx.fillStyle = '#ffe57d';
+      ctx.beginPath();
+      ctx.arc(w - 110, 54, 32, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.fillStyle = '#4ee7ff';
+      for (let y = horizon; y < h; y += 18) {
+        ctx.fillRect(0, y + Math.sin(y / 13 + skyPulse) * 3, w, 2);
+      }
+      drawSign('DIGITAL LAKE', w / 2, 36, '#4ee7ff');
+    } else if (motif === 'memory') {
+      ctx.fillStyle = '#0e0e12';
+      ctx.fillRect(0, 0, w, h);
+      for (let i = 0; i < 18; i++) {
+        ctx.fillStyle = i % 2 ? '#d9d0a2' : '#7df0ff';
+        ctx.globalAlpha = 0.18;
+        ctx.fillRect(40 + (i * 43) % (w - 80), 42 + (i * 31) % 130, 32, 18);
+      }
+      ctx.globalAlpha = 1;
+      drawSign('MEMORY BUFFER', w / 2, 34, '#d9d0a2');
+    } else if (motif === 'archive') {
+      ctx.fillStyle = '#0c0614';
+      ctx.fillRect(0, 0, w, h);
+      for (let y = 54; y < 170; y += 42) {
+        for (let x = 96; x < w - 80; x += 58) {
+          ctx.strokeStyle = '#c875ff';
+          ctx.strokeRect(x, y, 34, 28);
+        }
+      }
+      drawSign('MEMBER ARCHIVE', w / 2, 34, '#c875ff');
+    }
+
+    this.drawCircusSimulationExits(ctx, w, h, exits, portals, state.selectedExitIndex);
+  },
+
+  drawCircusSimulationExits(ctx, w, h, exits, portals, selectedIndex) {
+    const state = this.circusDoom;
+    if (!state) return;
+    exits.forEach((targetId, index) => {
+      const target = portals[targetId];
+      if (!target) return;
+      const row = Math.floor(index / 5);
+      const col = index % 5;
+      const rowCount = Math.min(5, exits.length - row * 5);
+      const x = w / 2 - (rowCount - 1) * 58 + col * 116;
+      const y = h - 56 - row * 48;
+      const selected = index === selectedIndex;
+      const locked = !target.unlocked;
+      const box = { x: x - 44, y: y - 30, w: 88, h: 46, target: targetId, index };
+      state.hotspots.push(box);
+      ctx.fillStyle = locked ? 'rgba(20,20,26,0.88)' : 'rgba(10,6,20,0.86)';
+      ctx.strokeStyle = selected ? '#ffffff' : (locked ? '#56505f' : target.color);
+      ctx.lineWidth = selected ? 3 : 2;
+      ctx.fillRect(box.x, box.y, box.w, box.h);
+      ctx.strokeRect(box.x, box.y, box.w, box.h);
+      ctx.fillStyle = locked ? '#8b8794' : target.color;
+      ctx.font = 'bold 10px Courier New';
+      ctx.textAlign = 'center';
+      ctx.fillText(locked ? 'LOCKED' : target.short, x, y - 10);
+      ctx.font = '8px Courier New';
+      ctx.fillStyle = '#fff1a8';
+      ctx.fillText(target.name.slice(0, 15), x, y + 5);
+    });
+    ctx.fillStyle = '#fff1a8';
+    ctx.font = 'bold 9px Courier New';
+    ctx.textAlign = 'center';
+    ctx.fillText('CLIC / ENTREE: CHANGER DE LIEU  |  GAUCHE/DROITE: SORTIE  |  BAS: RETOUR', w / 2, h - 8);
   },
 
   drawCircusDoomSprites(ctx, w, h) {

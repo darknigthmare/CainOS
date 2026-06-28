@@ -1649,6 +1649,7 @@ body {
   display: none;
   image-rendering: pixelated;
   background: #080414;
+  cursor: crosshair;
   z-index: 3;
 }
 
