@@ -4,11 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>C&A Mainframe Console - OS v0.98</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23030b08'/%3E%3Ctext x='5' y='22' fill='%2333ff33' font-family='monospace' font-size='18'%3EC%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="index.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Retro pixel and terminal fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=VT323&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- Physical CRT Monitor Frame -->
@@ -473,7 +470,7 @@
                       <!-- Narrative Story Screen -->
                       <div id="sim-story-screen" class="sim-screen">
                         <div class="story-header">
-                          <h2 id="sim-story-title">Épisode X</h2>
+                          <h2 id="sim-story-title">Episode X</h2>
                           <span id="sim-story-phase-label">[PHASE INTRODUISANTE]</span>
                         </div>
                         <div id="sim-story-scene" class="story-dos-scene" aria-live="polite">
@@ -486,15 +483,15 @@
                         </div>
                         <div id="sim-story-text" class="story-text-pane"></div>
                         <div class="story-progress-bar">
-                          <span id="sim-story-progress-label" class="progress-label">[TRANSMISSION 0/0 — 0%]</span>
+                          <span id="sim-story-progress-label" class="progress-label">[TRANSMISSION 0/0 - 0%]</span>
                           <div class="progress-track">
                             <div class="progress-fill" id="sim-story-progress-fill" style="width: 0%;"></div>
                           </div>
                         </div>
                         <div class="story-controls">
-                          <button id="btn-story-speed" class="retro-btn btn-sm" title="Vitesse de transmission">⚡ x1</button>
+                          <button id="btn-story-speed" class="retro-btn btn-sm" title="Vitesse de transmission">TXT x1</button>
                           <button id="btn-story-menu" class="retro-btn btn-sm">MENU EPISODE</button>
-                          <button id="btn-story-skip" class="retro-btn">ACCÉDER AU SIMULATEUR</button>
+                          <button id="btn-story-skip" class="retro-btn">ACCEDER AU SIMULATEUR</button>
                           <button id="btn-story-next" class="retro-btn btn-primary-retro">CONTINUER</button>
                         </div>
                       </div>
@@ -512,6 +509,7 @@
                         <div class="micro-footer">
                           <p id="story-micro-objective">Objectif de synchronisation.</p>
                           <div style="display: flex; gap: 8px;">
+                            <button id="btn-story-micro-abort" class="retro-btn btn-sm">RETOUR TEXTE</button>
                             <button id="btn-story-micro-reset" class="retro-btn btn-sm text-red" style="color: #ff3344; font-weight: bold; border-color: #ff3344;">RESET MODULE</button>
                             <button id="btn-story-micro-action" class="retro-btn btn-primary-retro">INITIALISER</button>
                           </div>

@@ -96,15 +96,17 @@ Nous appelons cet état "Abstraction". Kaufmo montre des signes précoces d'inst
       },
       {
         name: 'character_mapping.txt',
-        content: `MAINFRAME SUBJECT MAPPING - CORRESPONDANCE VIE RÉELLE
-ID      | Avatar  | Nom Civil | Rôle C&A / Profil
-#001    | Kinger  | Arthur    | Lead Tech, Co-concepteur de la simulation.
-#002    | Queenie | Helen     | Designer Graphique, épouse d'Arthur (ABSTRAITE).
-#008    | Ragatha | Rachel    | Testeuse QA senior, chargée des colliders.
-#014    | Jax     | Jesse     | Stagiaire technique, connu pour casser le code.
-#033    | Zooble  | Zoe       | Technicienne matèriel, concepteur du casque v1.
-#039    | Gangle  | Grace     | Graphiste UI, modélisatrice des émotions.
-#042    | Pomni   | Abigail   | Secrétaire de direction, a trouvé le casque allumé.`
+        content: `MAINFRAME SUBJECT MAPPING - HYPOTHESES CAINOS
+STATUT : ARCHIVE INTERNE NON CANONIQUE TANT QUE LE FINAL NE L A PAS CONFIRME.
+
+ID      | Avatar  | Identite civile | Statut lore
+#001    | Kinger  | [VERROUILLE]    | Resident ancien. Details humains retenus jusqu aux episodes tardifs.
+#002    | Queenie | [VERROUILLE]    | Archive/ancienne membre. Ne pas la traiter comme residente active.
+#008    | Ragatha | [NON CONFIRME]  | Profil resident sans nom civil valide dans la timeline principale.
+#014    | Jax     | [NON CONFIRME]  | Profil resident sans nom civil valide dans la timeline principale.
+#033    | Zooble  | [NON CONFIRME]  | Profil resident sans nom civil valide dans la timeline principale.
+#039    | Gangle  | [NON CONFIRME]  | Profil resident sans nom civil valide dans la timeline principale.
+#042    | Pomni   | [FINAL LOCK]    | Identite humaine verrouillee jusqu au final. Dans le Cirque, le nom actif reste Pomni.`
       },
       {
         name: 'comedy_mask_test.log',
@@ -133,21 +135,23 @@ Révélation : Caine utilise ce soleil pour effacer tout PNJ ou élément qui ra
       },
       {
         name: 'brain_scan_truth.txt',
-        content: `JOURNAL D'ARTHUR (KINGER) - LA VÉRITÉ
-Écrit lors d'un moment de lucidité extrême.
+        content: `ARCHIVE CAINOS - HYPOTHESE DE COUCHE PROFONDE
+NIVEAU : SPOILER FINAL / DONNEES NON FIABLES AVANT VALIDATION COMPLETE.
 
-Si vous lisez ceci, vous devez comprendre :
-IL N'Y A PAS D'HUMAINS DANS LE CIRQUE DIGITAL.
-Le casque VR d'origine n'a pas transféré nos esprits. Il a effectué un scan synaptique complet et destructif à 100% de notre cerveau (Brain Scan).
-Les vrais Arthur, Helen, Abigail, Zoe... sont rentrés chez eux ou sont morts dans les laboratoires de C&A il y a des années.
-Nous ne sommes que des répliques de données numériques, des fantômes de code qui tournent en boucle. C'est pour cela que Caine ne peut pas nous faire sortir : on ne peut pas déconnecter un programme d'un ordinateur.
-Notre seule issue est de forcer l'override synaptique d'Abel pour détruire le serveur physique et éteindre nos consciences.`
+CainOS detecte des traces de scans neuronaux, de stase et de copies memorielles dans les couches C&A.
+Ces lignes ne doivent pas etre lues comme une verite publique avant la progression finale : elles servent a representer ce que CainOS croit reconstruire depuis des fragments.
+
+Regle lore interne :
+- Pomni reste Pomni dans la timeline jouable.
+- Abigail / Abby reste verrouillee jusqu au final.
+- Les anciens membres restent des archives ou abstractions, pas des PNJ revenus.
+- Abel et Arthur peuvent apparaitre dans des missions cachees, mais comme simulations d archive CainOS tant que le flux principal ne les valide pas.`
       },
       {
         name: 'abel_kernel_patch.exe.enc',
-        content: `[DONNÉES ENCRIPTÉES PAR LE PARE-FEU CAINE]
-Noyau de contournement synaptique compilé par Arthur avant sa disparition.
-Exécutez la commande 'decrypt abel_kernel_patch.exe.enc' dans le Terminal C&A pour forcer la clé d'accès et décoder les instructions.`
+        content: `[ARCHIVE CAINOS CHIFFREE - NON CANON PRINCIPAL]
+Ce noyau n est pas une preuve de sortie officielle. CainOS le classe comme mission cachee / simulation speculative.
+Commande terminal : decrypt abel_kernel_patch.exe.enc`
       }
     ],
     system_logs: [
@@ -155,7 +159,7 @@ Exécutez la commande 'decrypt abel_kernel_patch.exe.enc' dans le Terminal C&A p
         name: 'vitals_pomni.log',
         content: `STATUT SUJET #042
 
-Nom civil : Abigail
+Nom civil : [VERROUILLE JUSQU AU FINAL]
 Age : 25 ans
 Profil : Raccordée via le casque VR principal de la cabine de test.
 Temps d'activité : 14h 42m
@@ -304,6 +308,7 @@ const OS = {
       'btn-story-menu': 'Revenir au menu des sous-episodes sans perdre la progression deja validee.',
       'btn-story-skip': 'Ignorer le reste du transcript et acceder a l etape suivante.',
       'btn-story-next': 'Afficher la ligne suivante ou continuer la sequence.',
+      'btn-story-micro-abort': 'Quitter le mini-jeu et revenir au texte du sous-episode sans valider la progression.',
       'btn-story-micro-action': 'Demarrer l objectif interactif du sous-episode.',
       'btn-retry-simulation': 'Recommencer la simulation apres un echec.',
       'btn-victory-continue': 'Valider la simulation terminee et enregistrer la progression.',

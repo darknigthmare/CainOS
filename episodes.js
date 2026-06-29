@@ -7557,7 +7557,7 @@ const EpisodeManager = {
     // Update skip button label
     const skipBtn = document.getElementById('btn-story-skip');
     if (skipBtn) {
-      skipBtn.innerText = phase === 'intro' ? 'ACCÉDER AU SIMULATEUR' : 'VALIDER';
+      skipBtn.innerText = phase === 'intro' ? 'ACCEDER AU SIMULATEUR' : 'VALIDER';
     }
     const menuBtn = document.getElementById('btn-story-menu');
     if (menuBtn) menuBtn.hidden = true;
@@ -7640,6 +7640,16 @@ const EpisodeManager = {
       }, 350);
     });
     this.activeStoryMicroGame.prepare();
+  },
+
+  returnFromStoryMicroGame() {
+    if (this.activeStoryMicroGame) {
+      this.activeStoryMicroGame.stop();
+      this.activeStoryMicroGame = null;
+    }
+    document.querySelectorAll('.sim-screen').forEach(s => s.classList.remove('active'));
+    document.getElementById('sim-story-screen').classList.add('active');
+    this.updateStoryCheckpointButton();
   },
 
   skipToActiveSubepisodeMicroGame() {
@@ -8178,7 +8188,7 @@ const EpisodeManager = {
     const current = Math.min(this.storyIndex, total);
     const percent = total > 0 ? Math.round((current / total) * 100) : 0;
 
-    label.innerText = `[TRANSMISSION ${current}/${total} — ${percent}% DÉCHIFFRÉ]`;
+    label.innerText = `[TRANSMISSION ${current}/${total} - ${percent}% DECHIFFRE]`;
     fill.style.width = `${percent}%`;
   },
 
@@ -8342,12 +8352,16 @@ class StoryMicroGame {
     this.statusEl = document.getElementById('story-micro-status');
     this.objectiveEl = document.getElementById('story-micro-objective');
     this.actionBtn = document.getElementById('btn-story-micro-action');
+    this.abortBtn = document.getElementById('btn-story-micro-abort');
     this.loopId = null;
     this.running = false;
     this.completed = false;
+    this.lastProgressAt = Date.now();
+    this.assistShown = false;
     this.handleClick = this.handleClick.bind(this);
     this.handleMouseMove = this.handleMouseMove.bind(this);
     this.handleKeyDown = this.handleKeyDown.bind(this);
+    this.handleAbort = this.handleAbort.bind(this);
   }
 
   prepare() {
@@ -8356,6 +8370,7 @@ class StoryMicroGame {
     this.objectiveEl.innerText = this.getPhaseObjective();
     this.actionBtn.disabled = false;
     this.actionBtn.innerText = "INITIALISER";
+    if (this.abortBtn) this.abortBtn.disabled = false;
     this.resetState();
     this.drawIdle();
   }
@@ -8372,6 +8387,8 @@ class StoryMicroGame {
     this.sequence = [];
     this.sequenceIndex = 0;
     this.grid = [];
+    this.lastProgressAt = Date.now();
+    this.assistShown = false;
     this.statusEl.innerText = `OS 0 / ${this.getRequiredScore()}`;
   }
 
@@ -8384,6 +8401,7 @@ class StoryMicroGame {
     this.canvas.addEventListener('click', this.handleClick);
     this.canvas.addEventListener('mousemove', this.handleMouseMove);
     window.addEventListener('keydown', this.handleKeyDown);
+    if (this.abortBtn) this.abortBtn.addEventListener('click', this.handleAbort);
 
     this.seedPhaseState();
 
@@ -8398,8 +8416,42 @@ class StoryMicroGame {
       this.canvas.removeEventListener('click', this.handleClick);
       this.canvas.removeEventListener('mousemove', this.handleMouseMove);
       window.removeEventListener('keydown', this.handleKeyDown);
+      if (this.abortBtn) this.abortBtn.removeEventListener('click', this.handleAbort);
     }
     this.running = false;
+  }
+
+  handleAbort() {
+    this.stop();
+    if (typeof EpisodeManager !== 'undefined' && typeof EpisodeManager.returnFromStoryMicroGame === 'function') {
+      EpisodeManager.returnFromStoryMicroGame();
+    }
+  }
+
+  registerProgress() {
+    this.lastProgressAt = Date.now();
+    this.assistShown = false;
+  }
+
+  applyStallAssist() {
+    if (!this.running || this.completed) return;
+    const elapsed = Date.now() - this.lastProgressAt;
+    if (elapsed < 7000 || this.assistShown) return;
+    this.assistShown = true;
+    this.timeLeft = Math.max(this.timeLeft, 6);
+    if (this.objectiveEl) {
+      this.objectiveEl.innerText = `${this.getPhaseObjective()} CainOS aide: cherchez la cible claire, pas le signal rouge/magenta.`;
+    }
+    if (this.microPhase === 'simulation') {
+      if (!this.simEntities.some(entity => entity.good)) this.spawnSimulationEntity(10, true);
+      return;
+    }
+    if (this.config.mode === 'click' || this.config.mode === 'dodge') {
+      if (!this.items.some(item => item.good)) this.items.push(this.createItem(true));
+    } else if (this.config.mode === 'repair') {
+      const open = this.grid.find(cell => !cell.fixed);
+      if (open) open.good = true;
+    }
   }
 
   buildSequence() {
@@ -8700,6 +8752,7 @@ class StoryMicroGame {
       if (dist <= item.r + 4) {
         if (item.good) {
           this.score++;
+          this.registerProgress();
           SoundManager.playClick();
           this.items.splice(i, 1);
           this.items.push(this.createItem(Math.random() > 0.25));
@@ -8720,6 +8773,7 @@ class StoryMicroGame {
     if (cell.good) {
       cell.fixed = true;
       this.score++;
+      this.registerProgress();
       SoundManager.playClick();
       this.checkWin();
     } else {
@@ -8735,6 +8789,7 @@ class StoryMicroGame {
     if (dir === expected) {
       this.sequenceIndex++;
       this.score = this.sequenceIndex;
+      this.registerProgress();
       SoundManager.playClick();
       this.checkWin();
     } else {
@@ -8755,6 +8810,7 @@ class StoryMicroGame {
 
     if (this.microPhase === 'simulation') {
       this.updateSimulationGame(dt);
+      this.applyStallAssist();
       this.drawSimulationGame();
       if (this.timeLeft <= 0) {
         this.fail();
@@ -8767,13 +8823,17 @@ class StoryMicroGame {
 
     if (this.config.mode === 'click') {
       this.updateItems(dt);
+      this.applyStallAssist();
       this.drawClickMode();
     } else if (this.config.mode === 'repair') {
+      this.applyStallAssist();
       this.drawRepairMode();
     } else if (this.config.mode === 'sequence') {
+      this.applyStallAssist();
       this.drawSequenceMode();
     } else if (this.config.mode === 'dodge') {
       this.updateDodge(dt);
+      this.applyStallAssist();
       this.drawDodgeMode();
     }
 
@@ -8808,6 +8868,7 @@ class StoryMicroGame {
       if (dist <= item.r + 10) {
         if (item.good) {
           this.score++;
+          this.registerProgress();
           SoundManager.playClick();
           this.items.splice(i, 1);
           this.items.push(this.createItem(Math.random() > 0.45));
@@ -8846,6 +8907,8 @@ class StoryMicroGame {
     this.sequence = [];
     this.sequenceIndex = 0;
     this.grid = [];
+    this.lastProgressAt = Date.now();
+    this.assistShown = false;
     this.seedPhaseState();
     this.objectiveEl.innerText = this.getPhaseObjective();
     this.updateStatus();
@@ -8869,10 +8932,10 @@ class StoryMicroGame {
     }
   }
 
-  spawnSimulationEntity(offset = 0) {
+  spawnSimulationEntity(offset = 0, forcedGood = null) {
     const type = this.simSceneType || this.getSimulationSceneType();
     const spec = this.getSimulationGameSpec();
-    const good = Math.random() > 0.32;
+    const good = forcedGood === null ? Math.random() > 0.32 : forcedGood;
     const base = {
       good,
       r: good ? 12 : 14,
@@ -8964,6 +9027,7 @@ class StoryMicroGame {
         if (hit) {
           if (entity.good) {
             this.score++;
+            this.registerProgress();
             SoundManager.playClick();
           } else {
             this.timeLeft = Math.max(2, this.timeLeft - 2);
@@ -8991,6 +9055,7 @@ class StoryMicroGame {
       if (dist <= entity.r + 10) {
         if (entity.good) {
           this.score++;
+          this.registerProgress();
           SoundManager.playClick();
         } else {
           this.timeLeft = Math.max(2, this.timeLeft - 2);
