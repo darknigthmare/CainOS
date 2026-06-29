@@ -7,6 +7,7 @@ const SoundManager = {
   themeTimer: null,
   themeIndex: 0,
   isThemePlaying: false,
+  activeThemeChannel: 1,
   humOsc: null,
   humLFO: null,
   humGain: null,
@@ -16,10 +17,28 @@ const SoundManager = {
       const AudioCtx = window.AudioContext || window.webkitAudioContext;
       if (AudioCtx) {
         this.ctx = new AudioCtx();
+        try {
+          // Advanced digital delay/echo effect path
+          this.delayNode = this.ctx.createDelay(1.0);
+          this.delayNode.delayTime.setValueAtTime(0.24, this.ctx.currentTime); // 240ms echo
+
+          this.delayFeedback = this.ctx.createGain();
+          this.delayFeedback.gain.setValueAtTime(0.32, this.ctx.currentTime); // 32% feedback
+
+          this.delayGain = this.ctx.createGain();
+          this.delayGain.gain.setValueAtTime(0.2, this.ctx.currentTime); // echo mix
+
+          this.delayNode.connect(this.delayFeedback);
+          this.delayFeedback.connect(this.delayNode);
+          this.delayNode.connect(this.delayGain);
+          this.delayGain.connect(this.ctx.destination);
+        } catch (e) {
+          console.warn("Advanced Delay Setup Failed", e);
+        }
       }
     }
   },
-  play(freq, duration, type = 'sine', volume = 0.1) {
+  play(freq, duration, type = 'sine', volume = 0.1, sendToDelay = false) {
     try {
       this.init();
       if (!this.ctx) return;
@@ -28,16 +47,20 @@ const SoundManager = {
       }
       const osc = this.ctx.createOscillator();
       const gain = this.ctx.createGain();
-      
+
       osc.type = type;
       osc.frequency.setValueAtTime(freq, this.ctx.currentTime);
-      
+
       gain.gain.setValueAtTime(volume, this.ctx.currentTime);
       gain.gain.exponentialRampToValueAtTime(0.00001, this.ctx.currentTime + duration);
-      
+
       osc.connect(gain);
       gain.connect(this.ctx.destination);
-      
+
+      if (sendToDelay && this.delayNode && this.delayGain) {
+        gain.connect(this.delayNode);
+      }
+
       osc.start();
       osc.stop(this.ctx.currentTime + duration);
     } catch (e) {
@@ -171,45 +194,189 @@ const SoundManager = {
     this.init();
     if (!this.ctx) return;
     const NOTE_FREQS = {
-      'B3': 246.94, 'C4': 261.63, 'D4': 293.66, 'E4': 329.63, 'F4': 349.23, 'G4': 392.00, 'A4': 440.00,
-      'B4': 493.88, 'C5': 523.25, 'D5': 587.33, 'E5': 659.25, 'F5': 698.46, 'G5': 783.99,
-      'A5': 880.00, 'B5': 987.77
+      'C2': 65.41, 'D2': 73.42, 'E2': 82.41, 'F2': 87.31, 'G2': 98.00, 'A2': 110.00, 'B2': 123.47, 'C3': 130.81,
+      'D3': 146.83, 'E3': 164.81, 'F3': 174.61, 'G3': 196.00, 'A3': 220.00, 'B3': 246.94, 'C4': 261.63, 'D4': 293.66,
+      'E4': 329.63, 'F4': 349.23, 'G4': 392.00, 'A4': 440.00, 'B4': 493.88, 'C5': 523.25, 'D5': 587.33, 'E5': 659.25,
+      'F5': 698.46, 'G5': 783.99, 'A5': 880.00, 'B5': 987.77, 'C6': 1046.50, 'D6': 1174.66, 'E6': 1318.51, 'F6': 1396.91,
+      'G6': 1567.98
     };
     const midiToFreq = (pitch) => 440 * Math.pow(2, (pitch - 69) / 12);
-    const beatMs = 60000 / 140;
 
-    // User-provided CainOS MIDI theme, rendered as a small retro synth loop.
-    const melody = [
-      { pitch: 72, beats: 0.5, chord: ['C4', 'E4', 'G4'], bass: 'C4' },
-      { pitch: 76, beats: 0.5, chord: ['C4', 'E4', 'G4'], bass: null },
-      { pitch: 79, beats: 0.5, chord: ['C4', 'E4', 'G4'], bass: 'G4' },
-      { pitch: 76, beats: 0.5, chord: ['C4', 'E4', 'G4'], bass: null },
-      { pitch: 72, beats: 0.5, chord: ['C4', 'E4', 'G4'], bass: 'C4' },
-      { pitch: 76, beats: 0.5, chord: ['C4', 'E4', 'G4'], bass: null },
-      { pitch: 79, beats: 1.0, chord: ['C4', 'E4', 'G4'], bass: 'G4' },
-      { pitch: 77, beats: 0.5, chord: ['B3', 'D4', 'F4'], bass: 'B3' },
-      { pitch: 74, beats: 0.5, chord: ['B3', 'D4', 'F4'], bass: null },
-      { pitch: 71, beats: 0.5, chord: ['B3', 'D4', 'F4'], bass: 'F4' },
-      { pitch: 74, beats: 0.5, chord: ['B3', 'D4', 'F4'], bass: null },
-      { pitch: 77, beats: 1.0, chord: ['B3', 'D4', 'F4'], bass: 'B3' },
-      { pitch: 79, beats: 1.0, chord: ['C4', 'E4', 'G4'], bass: 'C4' }
+    // Channel 1: C-major waltz (Your New Home) - 125 BPM
+    const melody1 = [
+      // Measure 1
+      { pitch: 67, beats: 1.0, chord: null, bass: 'C3' }, // G4
+      { pitch: 72, beats: 1.0, chord: ['C4', 'E4', 'G4'], bass: null }, // C5
+      { pitch: 76, beats: 1.0, chord: ['C4', 'E4', 'G4'], bass: null }, // E5
+
+      // Measure 2
+      { pitch: 74, beats: 1.0, chord: null, bass: 'C3' }, // D5
+      { pitch: 72, beats: 1.0, chord: ['C4', 'E4', 'G4'], bass: null }, // C5
+      { pitch: 76, beats: 1.0, chord: ['C4', 'E4', 'G4'], bass: null }, // E5
+
+      // Measure 3
+      { pitch: 74, beats: 1.0, chord: null, bass: 'G2' }, // D5
+      { pitch: 72, beats: 1.0, chord: ['G3', 'B3', 'D4'], bass: null }, // C5
+      { pitch: 67, beats: 1.0, chord: ['G3', 'B3', 'D4'], bass: null }, // G4
+
+      // Measure 4
+      { pitch: 72, beats: 1.0, chord: null, bass: 'C3' }, // C5
+      { pitch: 76, beats: 1.0, chord: ['C4', 'E4', 'G4'], bass: null }, // E5
+      { pitch: 79, beats: 1.0, chord: ['C4', 'E4', 'G4'], bass: null }, // G5
+
+      // Measure 5
+      { pitch: 81, beats: 1.0, chord: null, bass: 'F2' }, // A5
+      { pitch: 79, beats: 1.0, chord: ['F3', 'A3', 'C4'], bass: null }, // G5
+      { pitch: 77, beats: 1.0, chord: ['F3', 'A3', 'C4'], bass: null }, // F5
+
+      // Measure 6
+      { pitch: 76, beats: 1.0, chord: null, bass: 'G2' }, // E5
+      { pitch: 74, beats: 1.0, chord: ['G3', 'B3', 'D4'], bass: null }, // D5
+      { pitch: 71, beats: 1.0, chord: ['G3', 'B3', 'D4'], bass: null }, // B4
+
+      // Measure 7
+      { pitch: 72, beats: 1.0, chord: null, bass: 'C3' }, // C5
+      { pitch: null, beats: 1.0, chord: ['C4', 'E4', 'G4'], bass: null },
+      { pitch: null, beats: 1.0, chord: ['C4', 'E4', 'G4'], bass: null },
+
+      // Measure 8 (Part B)
+      { pitch: 67, beats: 1.0, chord: null, bass: 'C3' }, // G4
+      { pitch: 72, beats: 1.0, chord: ['C4', 'E4', 'G4'], bass: null }, // C5
+      { pitch: 76, beats: 1.0, chord: ['C4', 'E4', 'G4'], bass: null }, // E5
+
+      // Measure 9
+      { pitch: 74, beats: 1.0, chord: null, bass: 'C3' }, // D5
+      { pitch: 72, beats: 1.0, chord: ['C4', 'E4', 'G4'], bass: null }, // C5
+      { pitch: 76, beats: 1.0, chord: ['C4', 'E4', 'G4'], bass: null }, // E5
+
+      // Measure 10
+      { pitch: 74, beats: 1.0, chord: null, bass: 'F2' }, // D5
+      { pitch: 72, beats: 1.0, chord: ['F3', 'A3', 'C4'], bass: null }, // C5
+      { pitch: 69, beats: 1.0, chord: ['F3', 'A3', 'C4'], bass: null }, // A4
+
+      // Measure 11
+      { pitch: 72, beats: 1.0, chord: null, bass: 'F2' }, // C5
+      { pitch: 69, beats: 1.0, chord: ['F3', 'A3', 'C4'], bass: null }, // A4
+      { pitch: 65, beats: 1.0, chord: ['F3', 'A3', 'C4'], bass: null }, // F4
+
+      // Measure 12
+      { pitch: 65, beats: 1.0, chord: null, bass: 'F2' }, // F4
+      { pitch: 69, beats: 1.0, chord: ['F3', 'A3', 'C4'], bass: null }, // A4
+      { pitch: 72, beats: 1.0, chord: ['F3', 'A3', 'C4'], bass: null }, // C5
+
+      // Measure 13
+      { pitch: 76, beats: 1.0, chord: null, bass: 'C3' }, // E5
+      { pitch: 74, beats: 1.0, chord: ['C4', 'E4', 'G4'], bass: null }, // D5
+      { pitch: 72, beats: 1.0, chord: ['C4', 'E4', 'G4'], bass: null }, // C5
+
+      // Measure 14
+      { pitch: 71, beats: 1.0, chord: null, bass: 'G2' }, // B4
+      { pitch: 72, beats: 1.0, chord: ['G3', 'B3', 'D4'], bass: null }, // C5
+      { pitch: 74, beats: 1.0, chord: ['G3', 'B3', 'D4'], bass: null }, // D5
+
+      // Measure 15
+      { pitch: 72, beats: 1.0, chord: null, bass: 'C3' }, // C5
+      { pitch: null, beats: 1.0, chord: ['C4', 'E4', 'G4'], bass: null },
+      { pitch: null, beats: 1.0, chord: ['C4', 'E4', 'G4'], bass: null }
     ];
+
+    // Channel 2: Fast energetic Main Theme (4/4 and 15/8 section) - 172 BPM
+    const melody2 = [
+      // Measure 1: C major
+      { pitch: 67, beats: 0.5, chord: ['C4', 'E4'], bass: 'C3' }, // G4
+      { pitch: 72, beats: 0.5, chord: null, bass: null },        // C5
+      { pitch: 76, beats: 0.5, chord: ['C4', 'E4'], bass: 'C3' }, // E5
+      { pitch: 74, beats: 0.5, chord: null, bass: null },        // D5
+      { pitch: 72, beats: 0.5, chord: ['C4', 'E4'], bass: 'C3' }, // C5
+      { pitch: 76, beats: 0.5, chord: null, bass: null },        // E5
+      { pitch: 74, beats: 0.5, chord: ['C4', 'E4'], bass: 'C3' }, // D5
+      { pitch: 72, beats: 0.5, chord: null, bass: null },        // C5
+
+      // Measure 2: C major
+      { pitch: 67, beats: 0.5, chord: ['C4', 'E4'], bass: 'C3' }, // G4
+      { pitch: 72, beats: 0.5, chord: null, bass: null },        // C5
+      { pitch: 76, beats: 0.5, chord: ['C4', 'E4'], bass: 'C3' }, // E5
+      { pitch: 74, beats: 0.5, chord: null, bass: null },        // D5
+      { pitch: 72, beats: 0.5, chord: ['C4', 'E4'], bass: 'C3' }, // C5
+      { pitch: 76, beats: 0.5, chord: null, bass: null },        // E5
+      { pitch: 79, beats: 0.5, chord: ['C4', 'E4'], bass: 'C3' }, // G5
+      { pitch: 77, beats: 0.5, chord: null, bass: null },        // F5
+      { pitch: 76, beats: 0.5, chord: ['C4', 'E4'], bass: 'C3' }, // E5
+      { pitch: 74, beats: 0.5, chord: null, bass: null },        // D5
+
+      // Measure 3: D minor
+      { pitch: 69, beats: 0.5, chord: ['D4', 'F4'], bass: 'D3' }, // A4
+      { pitch: 74, beats: 0.5, chord: null, bass: null },        // D5
+      { pitch: 77, beats: 0.5, chord: ['D4', 'F4'], bass: 'D3' }, // F5
+      { pitch: 76, beats: 0.5, chord: null, bass: null },        // E5
+      { pitch: 74, beats: 0.5, chord: ['D4', 'F4'], bass: 'D3' }, // D5
+      { pitch: 77, beats: 0.5, chord: null, bass: null },        // F5
+      { pitch: 76, beats: 0.5, chord: ['D4', 'F4'], bass: 'D3' }, // E5
+      { pitch: 74, beats: 0.5, chord: null, bass: null },        // D5
+
+      // Measure 4: D minor
+      { pitch: 69, beats: 0.5, chord: ['D4', 'F4'], bass: 'D3' }, // A4
+      { pitch: 74, beats: 0.5, chord: null, bass: null },        // D5
+      { pitch: 77, beats: 0.5, chord: ['D4', 'F4'], bass: 'D3' }, // F5
+      { pitch: 76, beats: 0.5, chord: null, bass: null },        // E5
+      { pitch: 74, beats: 0.5, chord: ['D4', 'F4'], bass: 'D3' }, // D5
+      { pitch: 77, beats: 0.5, chord: null, bass: null },        // F5
+      { pitch: 81, beats: 0.5, chord: ['D4', 'F4'], bass: 'D3' }, // A5
+      { pitch: 79, beats: 0.5, chord: null, bass: null },        // G5
+      { pitch: 77, beats: 0.5, chord: ['D4', 'F4'], bass: 'D3' }, // F5
+      { pitch: 76, beats: 0.5, chord: null, bass: null },        // E5
+
+      // Measure 5: G7 / Chromatic (15/8 section)
+      { pitch: 71, beats: 0.5, chord: ['F4', 'G4'], bass: 'G3' }, // B4
+      { pitch: 74, beats: 0.5, chord: null, bass: null },        // D5
+      { pitch: 77, beats: 0.5, chord: ['F4', 'G4'], bass: 'G3' }, // F5
+      { pitch: 76, beats: 0.5, chord: null, bass: null },        // E5
+      { pitch: 74, beats: 0.5, chord: ['F4', 'G4'], bass: 'G3' }, // D5
+      { pitch: 77, beats: 0.5, chord: null, bass: null },        // F5
+      { pitch: 76, beats: 0.5, chord: ['F4', 'G4'], bass: 'G3' }, // E5
+      { pitch: 74, beats: 0.5, chord: null, bass: null },        // D5
+      { pitch: 71, beats: 0.5, chord: ['F4', 'G4'], bass: 'G3' }, // B4
+      { pitch: 74, beats: 0.5, chord: null, bass: null },        // D5
+      { pitch: 77, beats: 0.5, chord: ['F4', 'G4'], bass: 'G3' }, // F5
+      { pitch: 79, beats: 0.5, chord: null, bass: null },        // G5
+      { pitch: 80, beats: 0.5, chord: ['F4', 'G4'], bass: 'G3' }, // Ab5
+      { pitch: 79, beats: 0.5, chord: null, bass: null },        // G5
+      { pitch: 77, beats: 0.5, chord: ['F4', 'G4'], bass: 'G3' }, // F5
+
+      // Measure 6: Resolution to C Major
+      { pitch: 72, beats: 1.0, chord: ['C4', 'E4', 'G4'], bass: 'C3' }, // C5
+      { pitch: null, beats: 1.0, chord: null, bass: null }
+    ];
+
+    const melody = this.activeThemeChannel === 2 ? melody2 : melody1;
+    const beatMs = 60000 / (this.activeThemeChannel === 2 ? 172 : 125);
+
+    if (this.themeIndex >= melody.length) {
+      this.themeIndex = 0;
+    }
     const step = melody[this.themeIndex];
     const stepDur = step.beats * beatMs;
+
     if (Number.isFinite(step.pitch)) {
       const freq = midiToFreq(step.pitch);
-      this.play(freq, stepDur / 1000, 'square', 0.04);
-      setTimeout(() => this.play(freq * 2, Math.min(0.08, stepDur / 2000), 'triangle', 0.012), 38);
+      // Play melody using a spacey chiptune pulse wave with stereo delay enabled (sendToDelay = true)
+      this.play(freq, (stepDur / 1000) * 0.9, 'square', 0.04, true);
+      setTimeout(() => this.play(freq * 0.5, Math.min(0.08, stepDur / 2000), 'triangle', 0.012), 38);
     }
+
     if (step.bass && NOTE_FREQS[step.bass]) {
-      this.play(NOTE_FREQS[step.bass] / 2, Math.max(0.18, stepDur / 720), 'triangle', 0.05);
+      // Play retro bass note
+      this.play(NOTE_FREQS[step.bass], (stepDur / 1000) * 1.5, 'triangle', 0.06);
     }
-    if (step.chord && this.themeIndex % 2 === 0) {
+
+    if (step.chord) {
+      // Play accompaniment chords
       step.chord.forEach((note, i) => {
         if (!NOTE_FREQS[note]) return;
-        setTimeout(() => this.play(NOTE_FREQS[note], 0.075, 'sine', 0.018), i * 44);
+        setTimeout(() => this.play(NOTE_FREQS[note], (stepDur / 1000) * 0.85, 'sine', 0.014), i * 32);
       });
     }
+
     this.themeIndex = (this.themeIndex + 1) % melody.length;
     this.themeTimer = setTimeout(() => this.playThemeStep(), stepDur);
   }
@@ -218,7 +385,43 @@ const SoundManager = {
 const EpisodeManager = {
   currentEpisode: null,
   activeGame: null,
+  activeTimers: [],
+  originalTimeout: null,
+  wrapTimeout() {
+    if (this.originalTimeout) return;
+    this.originalTimeout = window.setTimeout;
+    window.setTimeout = (fn, delay, ...args) => {
+      const id = this.originalTimeout(() => {
+        if (this.activeTimers) {
+          this.activeTimers = this.activeTimers.filter(t => t !== id);
+        }
+        fn(...args);
+      }, delay);
+      this.activeTimers.push(id);
+      return id;
+    };
+  },
+  unwrapTimeout() {
+    if (this.originalTimeout) {
+      window.setTimeout = this.originalTimeout;
+      this.originalTimeout = null;
+    }
+  },
+  clearAllTimers() {
+    if (this.activeTimers && this.activeTimers.length > 0) {
+      this.activeTimers.forEach(id => {
+        if (this.originalTimeout) {
+          window.clearTimeout(id);
+        } else {
+          clearTimeout(id);
+        }
+      });
+      this.activeTimers = [];
+    }
+  },
   stopActiveGame() {
+    this.clearAllTimers();
+    this.unwrapTimeout();
     const game = this.activeGame;
     if (!game) return;
     game.__cainosStopped = true;
@@ -302,7 +505,7 @@ const EpisodeManager = {
     OYSTER: { color: "#e5e7eb", label: "Oyster Archive", info: "Ancien membre du Cirque repertorie comme signal archive/abstracted.", unlockAt: { episode: 9 }, archive: true },
     LIGHT_GREEN_BULB_LIKE: { color: "#bef264", label: "Green Bulb Archive", info: "Ancien membre du Cirque repertorie comme signal archive/abstracted.", unlockAt: { episode: 9 }, archive: true },
   },
-  
+
   // Story Engine State
   storyData: {
     0: {
@@ -6818,6 +7021,18 @@ const EpisodeManager = {
       });
     }
 
+    const storyMicroResetBtn = document.getElementById('btn-story-micro-reset');
+    if (storyMicroResetBtn) {
+      storyMicroResetBtn.addEventListener('click', () => {
+        SoundManager.playClick();
+        if (this.activeStoryMicroGame && this.activeStoryMicroGame.config) {
+          const config = this.activeStoryMicroGame.config;
+          this.activeStoryMicroGame.stop();
+          this.startStoryMicroGame(config);
+        }
+      });
+    }
+
     // Episode selection cards
     const cards = document.querySelectorAll('.sim-card');
     cards.forEach(card => {
@@ -6835,7 +7050,7 @@ const EpisodeManager = {
     });
 
     this.updateLocksUI();
-    
+
     // Select the highest unlocked episode on startup
     const progress = this.getProgress();
     if (progress.includes(0)) {
@@ -6847,6 +7062,27 @@ const EpisodeManager = {
       this.selectEpisode(highest);
     } else {
       this.selectEpisode(0);
+    }
+
+    const toggleMusicBtn = document.getElementById('btn-toggle-music');
+    if (toggleMusicBtn) {
+      toggleMusicBtn.addEventListener('click', () => {
+        SoundManager.playClick();
+        if (SoundManager.activeThemeChannel === 1) {
+          SoundManager.activeThemeChannel = 2;
+          toggleMusicBtn.innerText = '🎵 CANAL: INSANE (15/8)';
+        } else if (SoundManager.activeThemeChannel === 2) {
+          SoundManager.activeThemeChannel = 3;
+          toggleMusicBtn.innerText = '🎵 CANAL: CAINE (SHOW)';
+        } else {
+          SoundManager.activeThemeChannel = 1;
+          toggleMusicBtn.innerText = '🎵 CANAL: VALSE';
+        }
+        if (SoundManager.isThemePlaying) {
+          SoundManager.stopTheme();
+          SoundManager.startTheme();
+        }
+      });
     }
   },
 
@@ -6862,7 +7098,7 @@ const EpisodeManager = {
   isLocked(num) {
     if (num === 0) return false;
     const progress = this.getProgress();
-    
+
     if (num === 1) return !progress.includes(0);
     if (num === 2) return !progress.includes(1);
     if (num === 3) return !progress.includes(2);
@@ -6879,7 +7115,7 @@ const EpisodeManager = {
 
   updateLocksUI() {
     const progress = this.getProgress();
-    
+
     // Show Prequel Card if Episode 9 is completed
     const cardMinus1 = document.getElementById('sim-card-minus1');
     if (cardMinus1) {
@@ -6949,7 +7185,7 @@ const EpisodeManager = {
     this.activeSubepisodeIndex = null;
     this.activeSubepisodeCheckpoint = null;
     this.activeSubepisodeTotal = 0;
-    
+
     document.querySelectorAll('.sim-card').forEach(c => c.classList.remove('active'));
     const cardEl = document.querySelector(`.sim-card[data-episode="${num}"]`);
     if (cardEl) cardEl.classList.add('active');
@@ -7289,7 +7525,7 @@ const EpisodeManager = {
       this.activeStoryMicroGame.stop();
       this.activeStoryMicroGame = null;
     }
-    
+
     const data = this.storyData[num];
     if (!data || (phase === 'outro' && (!data.outro || data.outro.length === 0))) {
       if (phase === 'intro') {
@@ -7299,22 +7535,22 @@ const EpisodeManager = {
       }
       return;
     }
-    
+
     this.storyLines = phase === 'intro' ? data.intro : data.outro;
-    
+
     document.querySelectorAll('.sim-screen').forEach(s => s.classList.remove('active'));
     const storyScreen = document.getElementById('sim-story-screen');
     storyScreen.classList.add('active');
-    
+
     document.getElementById('sim-story-title').innerText = data.title;
     document.getElementById('sim-story-phase-label').innerText = phase === 'intro' ? "[INITIALISATION - INTRO NARRATIVE]" : "[COMPILATION - OUTRO NARRATIVE]";
-    
+
     const textPane = document.getElementById('sim-story-text');
     textPane.innerHTML = "";
     this.displayedText = "";
     this.resetStoryScene();
     this.updateStorySceneVisibility();
-    
+
     const nextBtn = document.getElementById('btn-story-next');
     nextBtn.innerText = "CONTINUER";
 
@@ -7328,7 +7564,7 @@ const EpisodeManager = {
 
     // Reset progress bar
     this.updateStoryProgress();
-    
+
     this.typeNextLine();
   },
 
@@ -7364,6 +7600,9 @@ const EpisodeManager = {
     this.isTyping = false;
     document.querySelectorAll('.sim-screen').forEach(s => s.classList.remove('active'));
     document.getElementById('sim-story-micro-screen').classList.add('active');
+
+    this.stopActiveGame();
+    this.wrapTimeout();
 
     const checkpoints = this.storyCheckpointConfig[this.currentEpisode] || [];
     const checkpointIndex = this.activeSubepisodeIndex !== null ? this.activeSubepisodeIndex : checkpoints.findIndex(cp => cp.after === config.after);
@@ -7845,18 +8084,18 @@ const EpisodeManager = {
       }
       return;
     }
-    
+
     const line = this.storyLines[this.storyIndex];
     const displayLine = this.formatStoryLine(line);
     this.updateStoryScene(line, displayLine);
     this.currentLineText = displayLine.formattedText;
     this.charIndex = 0;
     this.isTyping = true;
-    
+
     const textPane = document.getElementById('sim-story-text');
-    
+
     if (this.typewriterTimer) clearInterval(this.typewriterTimer);
-    
+
     // Adaptive speed: archive lines type faster, speed multiplier applies
     const baseDelay = displayLine.isSystemAudio ? 12 : 25;
     const delay = this.storySpeed >= 999 ? 1 : Math.max(3, Math.round(baseDelay / this.storySpeed));
@@ -7872,7 +8111,7 @@ const EpisodeManager = {
         }
         textPane.innerText = this.displayedText;
         textPane.scrollTop = textPane.scrollHeight;
-        
+
         if (Math.random() < 0.4) {
           if (displayLine.isSystemAudio) {
             SoundManager.play(400, 0.02, 'sine', 0.02);
@@ -7894,13 +8133,13 @@ const EpisodeManager = {
     if (!this.isTyping) return;
     clearInterval(this.typewriterTimer);
     this.isTyping = false;
-    
+
     const textPane = document.getElementById('sim-story-text');
     const remaining = this.currentLineText.substring(this.charIndex);
     this.displayedText += remaining;
     textPane.innerText = this.displayedText;
     textPane.scrollTop = textPane.scrollHeight;
-    
+
     this.storyIndex++;
     this.updateStoryProgress();
     this.updateStoryCheckpointButton();
@@ -7909,7 +8148,7 @@ const EpisodeManager = {
   skipRemainingStory() {
     clearInterval(this.typewriterTimer);
     this.isTyping = false;
-    
+
     const textPane = document.getElementById('sim-story-text');
     let allText = "";
     for (let i = 0; i < this.storyLines.length; i++) {
@@ -7920,7 +8159,7 @@ const EpisodeManager = {
     this.displayedText = allText;
     textPane.innerText = allText;
     textPane.scrollTop = textPane.scrollHeight;
-    
+
     this.storyIndex = this.storyLines.length;
     if (this.storyLines.length > 0) {
       const lastLine = this.storyLines[this.storyLines.length - 1];
@@ -7934,11 +8173,11 @@ const EpisodeManager = {
     const label = document.getElementById('sim-story-progress-label');
     const fill = document.getElementById('sim-story-progress-fill');
     if (!label || !fill || !this.storyLines) return;
-    
+
     const total = this.storyLines.length;
     const current = Math.min(this.storyIndex, total);
     const percent = total > 0 ? Math.round((current / total) * 100) : 0;
-    
+
     label.innerText = `[TRANSMISSION ${current}/${total} — ${percent}% DÉCHIFFRÉ]`;
     fill.style.width = `${percent}%`;
   },
@@ -7949,6 +8188,7 @@ const EpisodeManager = {
       this.activeStoryMicroGame = null;
     }
     this.stopActiveGame();
+    this.wrapTimeout();
     this.lastRetryContext = {
       type: 'gameplay',
       episode: this.currentEpisode
@@ -8039,7 +8279,7 @@ const EpisodeManager = {
     setTimeout(() => SoundManager.play(554, 0.15, 'sine', 0.08), 650);
     setTimeout(() => SoundManager.play(659, 0.2, 'sine', 0.1), 800);
     this.bonusTextPending = bonusText;
-    
+
     // Switch to outro story narrative
     this.startStory(this.currentEpisode, 'outro', bonusText);
   },
@@ -8050,9 +8290,9 @@ const EpisodeManager = {
       progress.push(this.currentEpisode);
       localStorage.setItem('tadc_progress', JSON.stringify(progress));
     }
-    
+
     this.updateLocksUI();
-    
+
     if (window.OS) {
       if (typeof window.OS.renderFileList === 'function') {
         window.OS.renderFileList();
@@ -9384,17 +9624,17 @@ class Episode1Game {
     this.canvas = document.getElementById('ep1-canvas');
     this.ctx = this.canvas.getContext('2d');
     this.sanitySpan = document.getElementById('ep1-sanity');
-    
+
     // Buttons
     this.stabilizeBtn = document.getElementById('ep1-btn-stabilize');
     this.firewallBtn = document.getElementById('ep1-btn-firewall');
-    
+
     this.gridWidth = 12;
     this.gridHeight = 9;
     this.cellSize = 30; // 360 x 270 offset by 5px top/left
-    
+
     this.resetState();
-    
+
     // Bind canvas clicks
     this.handleCanvasClick = this.handleCanvasClick.bind(this);
     this.handleStabilize = this.handleStabilize.bind(this);
@@ -9419,13 +9659,13 @@ class Episode1Game {
     this.sanity = 100;
     this.firewallsLeft = 3;
     this.stabilizers = 2;
-    
+
     this.pomni = { x: 1, y: 1, targetX: 1, targetY: 1, speed: 0.05, t: 0 };
     this.kaufmo = { x: 10, y: 7, targetX: 10, targetY: 7, speed: 0.03, t: 0 };
-    
+
     this.exit = { x: 11, y: 5 }; // Final exit
     this.officeExit = { x: 10, y: 1 }; // Real exit in office maze
-    
+
     this.firewalls = []; // Array of {x, y}
     this.placingFirewall = false;
     this.loopId = null;
@@ -9438,11 +9678,11 @@ class Episode1Game {
     this.canvas.addEventListener('click', this.handleCanvasClick);
     this.stabilizeBtn.addEventListener('click', this.handleStabilize);
     this.firewallBtn.addEventListener('click', this.handleFirewallToggle);
-    
+
     this.stabilizeBtn.innerText = `STABILISER (${this.stabilizers})`;
     this.firewallBtn.innerText = `PLACER PARE-FEU (${this.firewallsLeft})`;
     this.firewallBtn.classList.remove('btn-primary-retro');
-    
+
     this.lastTick = Date.now();
     this.loop();
   }
@@ -9460,13 +9700,13 @@ class Episode1Game {
     const rect = this.canvas.getBoundingClientRect();
     const clickX = (e.clientX - rect.left) * (this.canvas.width / rect.width);
     const clickY = (e.clientY - rect.top) * (this.canvas.height / rect.height);
-    
+
     const x = Math.floor(clickX / this.cellSize);
     const y = Math.floor(clickY / this.cellSize);
 
     if (x >= 0 && x < this.gridWidth && y >= 0 && y < this.gridHeight) {
       SoundManager.playClick();
-      
+
       // Check if clicked cell is empty floor (0)
       if (this.grid[y][x] === 0) {
         // Toggle firewall
@@ -9598,7 +9838,7 @@ class Episode1Game {
       // Determine target: Pomni wants to reach exit
       let target = this.inOffice ? this.officeExit : this.exit;
       let path = this.findPath(this.pomni, target);
-      
+
       if (path && path.length > 1) {
         this.pomni.targetX = path[1].x;
         this.pomni.targetY = path[1].y;
@@ -9680,7 +9920,7 @@ class Episode1Game {
     let dx = this.pomni.x - this.kaufmo.x;
     let dy = this.pomni.y - this.kaufmo.y;
     let dist = Math.sqrt(dx*dx + dy*dy);
-    
+
     if (dist < 1.5) {
       this.sanity -= dt * 30; // Rapid drain close to Kaufmo
       SoundManager.playGlitch();
@@ -9756,13 +9996,13 @@ class Episode1Game {
     // Draw Pomni
     const pX = this.pomni.x * this.cellSize + this.cellSize / 2;
     const pY = this.pomni.y * this.cellSize + this.cellSize / 2;
-    
+
     // Draw Pomni icon (Blue & red circles/jester shape)
     this.ctx.fillStyle = '#0088ff';
     this.ctx.beginPath();
     this.ctx.arc(pX - 4, pY - 2, 5, 0, Math.PI * 2);
     this.ctx.fill();
-    
+
     this.ctx.fillStyle = '#ff3333';
     this.ctx.beginPath();
     this.ctx.arc(pX + 4, pY - 2, 5, 0, Math.PI * 2);
@@ -9772,7 +10012,7 @@ class Episode1Game {
     this.ctx.beginPath();
     this.ctx.arc(pX, pY, 6, 0, Math.PI * 2);
     this.ctx.fill();
-    
+
     this.ctx.fillStyle = '#000';
     this.ctx.font = 'bold 9px monospace';
     this.ctx.fillText("P", pX - 3, pY + 3);
@@ -9780,17 +10020,17 @@ class Episode1Game {
     // Draw Kaufmo (Abstracted Monster glitch effect)
     const kX = this.kaufmo.x * this.cellSize + this.cellSize / 2;
     const kY = this.kaufmo.y * this.cellSize + this.cellSize / 2;
-    
+
     this.ctx.fillStyle = 'rgba(0, 0, 0, 0.9)';
     this.ctx.fillRect(kX - 10, kY - 10, 20, 20);
-    
+
     // Glitching colored pixels inside Kaufmo
     const colors = ['#ff00ff', '#00ffff', '#39ff14', '#ffffff', '#ff3333'];
     for (let i = 0; i < 6; i++) {
       this.ctx.fillStyle = colors[Math.floor(Math.random() * colors.length)];
       this.ctx.fillRect(kX - 9 + Math.random()*14, kY - 9 + Math.random()*14, 4, 4);
     }
-    
+
     this.ctx.fillStyle = '#ffffff';
     this.ctx.font = 'bold 11px Courier';
     this.ctx.fillText("K", kX - 3, kY + 4);
@@ -9806,23 +10046,23 @@ class Episode2Game {
   constructor() {
     this.canvas = document.getElementById('ep2-runner-canvas');
     this.ctx = this.canvas.getContext('2d');
-    
+
     // UI Panels
     this.phase1Panel = document.getElementById('ep2-phase1');
     this.phase2Panel = document.getElementById('ep2-phase2');
     this.integritySpan = document.getElementById('ep2-integrity');
     this.puzzleGrid = document.getElementById('ep2-puzzle-grid');
     this.memoryDump = document.getElementById('ep2-memory-dump');
-    
+
     // Registry Forms
     this.classSelect = document.getElementById('ep2-class-select');
     this.excludeCheck = document.getElementById('ep2-flag-exclude');
     this.injectBtn = document.getElementById('ep2-btn-inject');
     this.timerSpan = document.getElementById('ep2-bypass-timer');
-    
+
     // Bindings
     this.handleInject = this.handleInject.bind(this);
-    
+
     this.phase = 1; // 1 = Runner patch, 2 = DB Hack
     this.loopId = null;
   }
@@ -9831,28 +10071,28 @@ class Episode2Game {
     this.phase = 1;
     this.integrity = 100;
     this.integritySpan.innerText = "100%";
-    
+
     this.phase1Panel.style.display = "flex";
     this.phase2Panel.style.display = "none";
-    
+
     this.classSelect.value = "NPC";
     this.excludeCheck.checked = false;
     this.injectBtn.addEventListener('click', this.handleInject);
-    
+
     // Setup Phase 1: Puzzle grid tracks
     this.setupTracks();
-    
+
     // Truck properties
     this.truckX = 50;
     this.truckY = 100;
     this.wheelRotation = 0;
-    
+
     // Gaps logic
     this.gaps = []; // X offsets
     this.gapSpawnTimer = 0;
     this.roadOffset = 0;
     this.isGlitching = false;
-    
+
     this.lastTick = Date.now();
     this.loop();
   }
@@ -9866,22 +10106,22 @@ class Episode2Game {
   setupTracks() {
     this.puzzleGrid.innerHTML = "";
     this.tracks = [];
-    
+
     for (let i = 0; i < 4; i++) {
       const trackEl = document.createElement('div');
       trackEl.className = "puzzle-track";
       trackEl.setAttribute('data-track', i);
-      
+
       const targetZone = document.createElement('div');
       targetZone.className = "puzzle-target-zone";
-      
+
       const block = document.createElement('div');
       block.className = "puzzle-block";
-      
+
       trackEl.appendChild(targetZone);
       trackEl.appendChild(block);
       this.puzzleGrid.appendChild(trackEl);
-      
+
       // Track State
       const trackState = {
         element: trackEl,
@@ -9892,21 +10132,21 @@ class Episode2Game {
         targetYStart: 80,
         targetYEnd: 100
       };
-      
+
       this.tracks.push(trackState);
 
       // Event listener to patch track
       trackEl.addEventListener('click', () => {
         if (trackState.patched) return;
-        
+
         SoundManager.playClick();
-        
+
         // Check if block is inside target zone
         if (trackState.blockY >= trackState.targetYStart && trackState.blockY <= trackState.targetYEnd) {
           trackState.patched = true;
           trackEl.classList.add('patched');
           SoundManager.playBeep();
-          
+
           // Check if all tracks patched
           if (this.tracks.every(t => t.patched)) {
             setTimeout(() => this.initiatePhase2(), 1000);
@@ -9918,7 +10158,7 @@ class Episode2Game {
           this.isGlitching = true;
           SoundManager.playError();
           setTimeout(() => this.isGlitching = false, 200);
-          
+
           if (this.integrity <= 0) {
             EpisodeManager.gameOver("Le camion-citerne s'est écrasé suite à l'effondrement de la route.");
           }
@@ -9936,7 +10176,7 @@ class Episode2Game {
           track.blockEl.style.top = `${track.blockY}px`;
           return;
         }
-        
+
         track.blockY += track.speed * dt;
         if (track.blockY > 120) {
           track.blockY = 0; // Loop
@@ -9948,7 +10188,7 @@ class Episode2Game {
       // Move road
       this.roadOffset -= 150 * dt;
       if (this.roadOffset < -40) this.roadOffset = 0;
-      
+
       this.wheelRotation += 10 * dt;
 
       // Spawn gap/glitches on road if not all patched
@@ -9963,7 +10203,7 @@ class Episode2Game {
           this.isGlitching = true;
           SoundManager.playGlitch();
           setTimeout(() => this.isGlitching = false, 200);
-          
+
           if (this.integrity <= 0) {
             EpisodeManager.gameOver("Le camion s'est brisé dans le vide d'une erreur de collision.");
           }
@@ -9989,29 +10229,29 @@ class Episode2Game {
       // Draw road (Canyon Bridge)
       this.ctx.fillStyle = '#221122';
       this.ctx.fillRect(0, 115, this.canvas.width, 35);
-      
+
       // Draw Candies on bridge (dotted pink/yellow)
       this.ctx.fillStyle = '#ff88aa';
       for (let i = 0; i < this.canvas.width + 40; i += 40) {
         this.ctx.fillRect(i + (this.roadOffset % 40), 115, 20, 4);
       }
-      
+
       // Draw Truck (Syrup Tanker)
       const tx = this.truckX;
       const ty = this.truckY;
-      
+
       // Tank (Grey capsule)
       this.ctx.fillStyle = '#888899';
       this.ctx.fillRect(tx - 30, ty - 25, 60, 25);
       this.ctx.fillStyle = '#ff9900'; // Syrup logo
       this.ctx.fillRect(tx - 15, ty - 20, 30, 15);
-      
+
       // Cab (Red box)
       this.ctx.fillStyle = '#cc2222';
       this.ctx.fillRect(tx + 30, ty - 20, 20, 20);
       this.ctx.fillStyle = '#00ffff'; // Window
       this.ctx.fillRect(tx + 40, ty - 17, 8, 8);
-      
+
       // Wheels (black circles)
       this.ctx.fillStyle = '#111';
       this.ctx.beginPath();
@@ -10060,14 +10300,14 @@ class Episode2Game {
     // Setup Hack Timer (30s)
     this.timeLeft = 30;
     this.timerSpan.innerText = `${this.timeLeft}s`;
-    
+
     // Setup Memory Dump view
     this.setupMemoryDump();
 
     this.hackTimerId = setInterval(() => {
       this.timeLeft--;
       this.timerSpan.innerText = `${this.timeLeft}s`;
-      
+
       // Update memory dump with some blinking values
       this.updateMemoryDump();
 
@@ -10091,7 +10331,7 @@ class Episode2Game {
       const addr = (0x7F2A90 + i * 8).toString(16).toUpperCase();
       let hex = "";
       let ascii = "";
-      
+
       for (let j = 0; j < 8; j++) {
         const val = Math.floor(Math.random() * 256);
         hex += val.toString(16).padStart(2, '0') + " ";
@@ -10175,17 +10415,17 @@ class Episode3Game {
     this.canvas = document.getElementById('ep3-sonar-canvas');
     this.ctx = this.canvas.getContext('2d');
     this.noiseSpan = document.getElementById('ep3-noise');
-    
+
     // Buttons
     this.lightBtn = document.getElementById('ep3-btn-flashlight');
     this.decoyBtn = document.getElementById('ep3-btn-decoy');
     this.shotgunBtn = document.getElementById('ep3-btn-shotgun');
-    
+
     this.handleFlashlight = this.handleFlashlight.bind(this);
     this.handleDecoy = this.handleDecoy.bind(this);
     this.handleShotgun = this.handleShotgun.bind(this);
     this.handleCanvasClick = this.handleCanvasClick.bind(this);
-    
+
     this.loopId = null;
     this.mapWidth = 340;
     this.mapHeight = 280;
@@ -10196,24 +10436,24 @@ class Episode3Game {
     this.beast = { x: 300, y: 240, radius: 8, speed: 45, state: 'patrol', targetX: 300, targetY: 240, patrolTimer: 0 };
     this.exit = { x: 310, y: 140, radius: 10 };
     this.key = { x: 170, y: 220, radius: 5, collected: false };
-    
+
     // Barricade blocking exit
     this.barrier = { x: 260, y: 110, w: 15, h: 60, destroyed: false };
-    
+
     this.flashlight = false;
     this.decoy = null; // {x, y, timer}
-    
+
     // Sonic waves
     this.sonarCircle = { r: 0, maxR: 200, active: true };
     this.noiseLevel = 0; // dB
-    
+
     // Maze Walls (Array of Rects)
     this.walls = [
       { x: 0, y: 0, w: 340, h: 10 },
       { x: 0, y: 270, w: 340, h: 10 },
       { x: 0, y: 0, w: 10, h: 280 },
       { x: 330, y: 0, w: 10, h: 280 },
-      
+
       // Internal maze
       { x: 90, y: 10, w: 15, h: 120 },
       { x: 90, y: 180, w: 15, h: 100 },
@@ -10221,9 +10461,9 @@ class Episode3Game {
       { x: 250, y: 10, w: 15, h: 100 },
       { x: 250, y: 170, w: 15, h: 110 },
     ];
-    
+
     this.keysPressed = {};
-    
+
     // Bind Key events
     this.handleKeyDown = (e) => { this.keysPressed[e.key] = true; };
     this.handleKeyUp = (e) => { this.keysPressed[e.key] = false; };
@@ -10231,19 +10471,19 @@ class Episode3Game {
 
   start() {
     this.resetState();
-    
+
     window.addEventListener('keydown', this.handleKeyDown);
     window.addEventListener('keyup', this.handleKeyUp);
-    
+
     this.lightBtn.addEventListener('click', this.handleFlashlight);
     this.decoyBtn.addEventListener('click', this.handleDecoy);
     this.shotgunBtn.addEventListener('click', this.handleShotgun);
     this.canvas.addEventListener('click', this.handleCanvasClick);
-    
+
     this.lightBtn.innerText = "LAMPE TORCHE (OFF)";
     this.decoyBtn.disabled = false;
     this.shotgunBtn.disabled = false;
-    
+
     this.lastTick = Date.now();
     this.loop();
   }
@@ -10252,7 +10492,7 @@ class Episode3Game {
     if (this.loopId) cancelAnimationFrame(this.loopId);
     window.removeEventListener('keydown', this.handleKeyDown);
     window.removeEventListener('keyup', this.handleKeyUp);
-    
+
     this.lightBtn.removeEventListener('click', this.handleFlashlight);
     this.decoyBtn.removeEventListener('click', this.handleDecoy);
     this.shotgunBtn.removeEventListener('click', this.handleShotgun);
@@ -10281,7 +10521,7 @@ class Episode3Game {
       const rect = this.canvas.getBoundingClientRect();
       const clickX = (e.clientX - rect.left) * (this.canvas.width / rect.width);
       const clickY = (e.clientY - rect.top) * (this.canvas.height / rect.height);
-      
+
       SoundManager.playBeep();
       this.decoy = { x: clickX, y: clickY, life: 3.5 };
       this.noiseLevel = 80;
@@ -10296,12 +10536,12 @@ class Episode3Game {
     SoundManager.playExplosion();
     this.noiseLevel = 120;
     this.noiseSpan.innerText = "EXPLOSION (120 dB)";
-    
+
     // Check if player is close to barrier
     let dx = this.player.x - (this.barrier.x + this.barrier.w/2);
     let dy = this.player.y - (this.barrier.y + this.barrier.h/2);
     let dist = Math.sqrt(dx*dx + dy*dy);
-    
+
     if (dist < 60 && !this.barrier.destroyed) {
       this.barrier.destroyed = true;
       this.walls = this.walls.filter(w => w !== this.barrier);
@@ -10309,13 +10549,13 @@ class Episode3Game {
     } else {
       alert("Coup de feu dans le vide ! Le bruit a alerté la bête !");
     }
-    
+
     // Beast enters rage
     this.beast.state = 'chase';
     this.beast.speed = 85;
     this.beast.targetX = this.player.x;
     this.beast.targetY = this.player.y;
-    
+
     // Cool down
     this.shotgunBtn.disabled = true;
     setTimeout(() => { this.shotgunBtn.disabled = false; }, 8000);
@@ -10331,7 +10571,7 @@ class Episode3Game {
         return true;
       }
     }
-    
+
     // Check barrier if not destroyed
     if (!this.barrier.destroyed) {
       let w = this.barrier;
@@ -10351,7 +10591,7 @@ class Episode3Game {
     // 1. Move Player based on keyboard
     let dx = 0;
     let dy = 0;
-    
+
     if (this.keysPressed['ArrowUp'] || this.keysPressed['z'] || this.keysPressed['w']) dy = -1;
     if (this.keysPressed['ArrowDown'] || this.keysPressed['s']) dy = 1;
     if (this.keysPressed['ArrowLeft'] || this.keysPressed['q'] || this.keysPressed['a']) dx = -1;
@@ -10382,7 +10622,7 @@ class Episode3Game {
     // Flashlight draws beast attention if line of sight
     if (this.flashlight) {
       this.noiseLevel = Math.max(this.noiseLevel, 20); // light hum
-      
+
       // Beast detects light if within range and not blocked
       let bdx = this.player.x - this.beast.x;
       let bdy = this.player.y - this.beast.y;
@@ -10506,14 +10746,14 @@ class Episode3Game {
     // Draw walls if revealed by flashlight or sonar sweep
     this.walls.forEach(w => {
       let isVisible = false;
-      
+
       // Flashlight visibility
       if (this.flashlight) {
         let dx = (w.x + w.w/2) - this.player.x;
         let dy = (w.y + w.h/2) - this.player.y;
         if (Math.sqrt(dx*dx + dy*dy) < 80) isVisible = true;
       }
-      
+
       // Sonar visibility
       let dx = (w.x + w.w/2) - this.player.x;
       let dy = (w.y + w.h/2) - this.player.y;
@@ -10540,7 +10780,7 @@ class Episode3Game {
       let dx = (this.barrier.x + this.barrier.w/2) - this.player.x;
       let dy = (this.barrier.y + this.barrier.h/2) - this.player.y;
       let dist = Math.sqrt(dx*dx + dy*dy);
-      
+
       if (this.flashlight && dist < 85) revealBarrier = true;
       if (Math.abs(dist - this.sonarCircle.r) < 20) revealBarrier = true;
 
@@ -10558,7 +10798,7 @@ class Episode3Game {
     let edist = Math.sqrt(edx*edx + edy*edy);
     if (this.flashlight && edist < 100) revealExit = true;
     if (Math.abs(edist - this.sonarCircle.r) < 20) revealExit = true;
-    
+
     if (revealExit) {
       this.ctx.fillStyle = '#aa8822';
       this.ctx.beginPath();
@@ -10577,7 +10817,7 @@ class Episode3Game {
       let kdist = Math.sqrt(kdx*kdx + kdy*kdy);
       if (this.flashlight && kdist < 80) revealKey = true;
       if (Math.abs(kdist - this.sonarCircle.r) < 20) revealKey = true;
-      
+
       if (revealKey) {
         this.ctx.fillStyle = '#00ffff';
         this.ctx.beginPath();
@@ -10592,7 +10832,7 @@ class Episode3Game {
       this.ctx.beginPath();
       this.ctx.arc(this.decoy.x, this.decoy.y, (1 - this.decoy.life / 3.5) * 80, 0, Math.PI*2);
       this.ctx.stroke();
-      
+
       this.ctx.fillStyle = '#ffff00';
       this.ctx.fillRect(this.decoy.x - 3, this.decoy.y - 3, 6, 6);
     }
@@ -10601,7 +10841,7 @@ class Episode3Game {
     let bdx = this.beast.x - this.player.x;
     let bdy = this.beast.y - this.player.y;
     let bdist = Math.sqrt(bdx*bdx + bdy*bdy);
-    
+
     let beastVisible = false;
     if (bdist < 30) beastVisible = true;
     if (this.flashlight && bdist < 90) beastVisible = true;
@@ -10622,7 +10862,7 @@ class Episode3Game {
     this.ctx.beginPath();
     this.ctx.arc(this.player.x, this.player.y, this.player.radius, 0, Math.PI*2);
     this.ctx.fill();
-    
+
     this.ctx.fillStyle = '#000';
     this.ctx.font = 'bold 8px sans-serif';
     this.ctx.fillText("K", this.player.x - 3, this.player.y + 3);
@@ -10641,9 +10881,9 @@ class Episode4ObsoleteGame {
     this.scoreSpan = document.getElementById('ep4-score');
     this.timerSpan = document.getElementById('ep4-timer');
     this.resetBtn = document.getElementById('ep4-btn-reset');
-    
+
     this.resetState();
-    
+
     this.handleMouseDown = this.handleMouseDown.bind(this);
     this.handleMouseMove = this.handleMouseMove.bind(this);
     this.handleMouseUp = this.handleMouseUp.bind(this);
@@ -10654,9 +10894,9 @@ class Episode4ObsoleteGame {
     this.timeLeft = 45;
     this.timerId = null;
     this.loopId = null;
-    
+
     this.targetCenter = { x: 175, y: 140 };
-    
+
     // Zooble parts definition
     this.parts = [
       {
@@ -10704,10 +10944,10 @@ class Episode4ObsoleteGame {
         shape: 'hook'
       }
     ];
-    
+
     this.draggedPart = null;
     this.dragOffset = { x: 0, y: 0 };
-    
+
     // Gloinks definition
     this.gloinks = [
       { x: -20, y: 80, speed: 45, targetIdx: 0, isCarrying: false, isSquashed: false, respawnT: 0, width: 22, height: 16 },
@@ -10715,7 +10955,7 @@ class Episode4ObsoleteGame {
       { x: 100, y: -20, speed: 38, targetIdx: 2, isCarrying: false, isSquashed: false, respawnT: 0, width: 22, height: 16 },
       { x: 250, y: 300, speed: 42, targetIdx: 3, isCarrying: false, isSquashed: false, respawnT: 0, width: 22, height: 16 }
     ];
-    
+
     this.score = 0;
     this.scoreSpan.innerText = "0 / 4";
     this.timerSpan.innerText = "45s";
@@ -10723,12 +10963,12 @@ class Episode4ObsoleteGame {
 
   start() {
     this.resetState();
-    
+
     this.canvas.addEventListener('mousedown', this.handleMouseDown);
     this.canvas.addEventListener('mousemove', this.handleMouseMove);
     this.canvas.addEventListener('mouseup', this.handleMouseUp);
     this.resetBtn.addEventListener('click', this.handleReset);
-    
+
     // Setup timer
     this.timerId = setInterval(() => {
       this.timeLeft--;
@@ -10737,7 +10977,7 @@ class Episode4ObsoleteGame {
         EpisodeManager.gameOver("Temps écoulé. Zooble est restée inachevée et a été mangée par les Gloinks.");
       }
     }, 1000);
-    
+
     this.lastTick = Date.now();
     this.loop();
   }
@@ -10745,7 +10985,7 @@ class Episode4ObsoleteGame {
   stop() {
     if (this.loopId) cancelAnimationFrame(this.loopId);
     if (this.timerId) clearInterval(this.timerId);
-    
+
     this.canvas.removeEventListener('mousedown', this.handleMouseDown);
     this.canvas.removeEventListener('mousemove', this.handleMouseMove);
     this.canvas.removeEventListener('mouseup', this.handleMouseUp);
@@ -10777,7 +11017,7 @@ class Episode4ObsoleteGame {
     const rect = this.canvas.getBoundingClientRect();
     const clickX = (e.clientX - rect.left) * (this.canvas.width / rect.width);
     const clickY = (e.clientY - rect.top) * (this.canvas.height / rect.height);
-    
+
     // 1. Check if clicked on a Gloink to squash it
     for (let i = 0; i < this.gloinks.length; i++) {
       const g = this.gloinks[i];
@@ -10796,7 +11036,7 @@ class Episode4ObsoleteGame {
         }
       }
     }
-    
+
     // 2. Check if clicked on a modular part (draggable)
     // Check top layer first (reverse order)
     for (let i = this.parts.length - 1; i >= 0; i--) {
@@ -10806,7 +11046,7 @@ class Episode4ObsoleteGame {
         this.draggedPart = p;
         this.dragOffset.x = clickX - p.x;
         this.dragOffset.y = clickY - p.y;
-        
+
         // Remove from carrying gloink
         this.gloinks.forEach(g => {
           if (g.targetIdx === i) g.isCarrying = false;
@@ -10821,7 +11061,7 @@ class Episode4ObsoleteGame {
       const rect = this.canvas.getBoundingClientRect();
       const mX = (e.clientX - rect.left) * (this.canvas.width / rect.width);
       const mY = (e.clientY - rect.top) * (this.canvas.height / rect.height);
-      
+
       this.draggedPart.x = Math.max(10, Math.min(this.canvas.width - 10, mX - this.dragOffset.x));
       this.draggedPart.y = Math.max(10, Math.min(this.canvas.height - 10, mY - this.dragOffset.y));
     }
@@ -10830,23 +11070,23 @@ class Episode4ObsoleteGame {
   handleMouseUp(e) {
     if (this.draggedPart) {
       SoundManager.playClick();
-      
+
       // Check snap to silhouette slot
       const p = this.draggedPart;
       let dx = p.x - p.targetX;
       let dy = p.y - p.targetY;
       let dist = Math.sqrt(dx*dx + dy*dy);
-      
+
       if (dist < 22) {
         // Snap!
         p.x = p.targetX;
         p.y = p.targetY;
         p.assembled = true;
         SoundManager.playWin();
-        
+
         this.score++;
         this.scoreSpan.innerText = `${this.score} / 4`;
-        
+
         // Check victory
         if (this.score === 4) {
           EpisodeManager.gameWon("Zooble est entièrement réassemblée ! Elle pousse un soupir d'agacement face à son modèle absurde et quitte l'arène.");
@@ -10869,7 +11109,7 @@ class Episode4ObsoleteGame {
           else if (side === 1) { g.x = 370; g.y = Math.random() * 280; }
           else if (side === 2) { g.x = Math.random() * 350; g.y = -20; }
           else { g.x = Math.random() * 350; g.y = 300; }
-          
+
           // Re-target random unassembled part
           let unassembled = this.parts.filter(p => !p.assembled);
           if (unassembled.length > 0) {
@@ -10879,9 +11119,9 @@ class Episode4ObsoleteGame {
         }
         return;
       }
-      
+
       const targetPart = this.parts[g.targetIdx];
-      
+
       if (targetPart.assembled) {
         // Find another unassembled part
         let unassembled = this.parts.filter(p => !p.assembled);
@@ -10894,13 +11134,13 @@ class Episode4ObsoleteGame {
           return;
         }
       }
-      
+
       if (!g.isCarrying) {
         // Move towards target part
         let dx = targetPart.x - g.x;
         let dy = targetPart.y - g.y;
         let dist = Math.sqrt(dx*dx + dy*dy);
-        
+
         if (dist > 5) {
           g.x += (dx / dist) * g.speed * dt;
           g.y += (dy / dist) * g.speed * dt;
@@ -10916,7 +11156,7 @@ class Episode4ObsoleteGame {
         let dx = edgeX - g.x;
         let dy = 0;
         let dist = Math.abs(dx);
-        
+
         if (dist > 5) {
           let mx = (dx / dist) * g.speed * 0.9 * dt;
           g.x += mx;
@@ -10929,7 +11169,7 @@ class Episode4ObsoleteGame {
           targetPart.x = targetPart.spawnX;
           targetPart.y = targetPart.spawnY;
           SoundManager.playError();
-          
+
           // Re-spawn Gloink at another edge
           g.x = g.x < 175 ? 380 : -30;
           g.y = Math.random() * 280;
@@ -10961,11 +11201,11 @@ class Episode4ObsoleteGame {
     // Draw Zooble Blueprint Silhouette in center
     const cx = this.targetCenter.x;
     const cy = this.targetCenter.y;
-    
+
     this.ctx.strokeStyle = 'rgba(0, 255, 255, 0.25)';
     this.ctx.lineWidth = 2.5;
     this.ctx.setLineDash([4, 4]);
-    
+
     // Head slot (triangle)
     this.ctx.beginPath();
     this.ctx.moveTo(cx, cy - 80);
@@ -10973,24 +11213,24 @@ class Episode4ObsoleteGame {
     this.ctx.lineTo(cx + 15, cy - 55);
     this.ctx.closePath();
     this.ctx.stroke();
-    
+
     // Body slot (rect)
     this.ctx.strokeRect(cx - 16, cy - 50, 32, 48);
-    
+
     // Wing slot (left)
     this.ctx.beginPath();
     this.ctx.arc(cx - 28, cy - 26, 12, 0, Math.PI*2);
     this.ctx.stroke();
-    
+
     // Leg slot (bottom hook)
     this.ctx.strokeRect(cx - 5, cy + 2, 10, 22);
-    
+
     this.ctx.setLineDash([]); // clear dash
 
     // Draw unassembled parts
     this.parts.forEach(p => {
       if (p.assembled) return;
-      
+
       this.ctx.fillStyle = p.color;
       this.ctx.strokeStyle = '#fff';
       this.ctx.lineWidth = 1.5;
@@ -11074,11 +11314,11 @@ class Episode4ObsoleteGame {
         this.ctx.fillText("SPLAT", g.x - 10, g.y - 4);
         return;
       }
-      
+
       // Draw standard Gloink (Glitch-beetle shape, crawling eyes)
       this.ctx.fillStyle = '#993399'; // Purple body
       this.ctx.fillRect(g.x - g.width/2, g.y - g.height/2, g.width, g.height);
-      
+
       // Tiny crawling legs
       this.ctx.strokeStyle = '#551155';
       this.ctx.lineWidth = 1.5;
@@ -11094,7 +11334,7 @@ class Episode4ObsoleteGame {
       this.ctx.fillStyle = '#ffff00';
       this.ctx.fillRect(g.x - 6, g.y - 4, 3, 3);
       this.ctx.fillRect(g.x + 3, g.y - 4, 3, 3);
-      
+
       if (g.isCarrying) {
         // Draw warning thief line
         this.ctx.strokeStyle = 'rgba(255, 0, 0, 0.4)';
@@ -11129,9 +11369,9 @@ class Episode0Game {
     this.scoreSpan = document.getElementById('ep0-calib-score');
     this.timerSpan = document.getElementById('ep0-timer');
     this.resetBtn = document.getElementById('ep0-btn-reset');
-    
+
     this.resetState();
-    
+
     this.handleCanvasClick = this.handleCanvasClick.bind(this);
     this.handleReset = this.handleReset.bind(this);
     this.handleMouseMove = this.handleMouseMove.bind(this);
@@ -11145,7 +11385,7 @@ class Episode0Game {
     this.score = 0;
     this.winTriggered = false;
     this.mouse = { x: 175, y: 140 };
-    
+
     this.target = { x: 175, y: 140, radius: 15, active: true };
     if (this.scoreSpan) this.scoreSpan.innerText = "0 / 3";
     if (this.timerSpan) this.timerSpan.innerText = "20s";
@@ -11157,9 +11397,9 @@ class Episode0Game {
     this.canvas.addEventListener('mousemove', this.handleMouseMove);
     this.resetBtn.addEventListener('click', this.handleReset);
     window.addEventListener('keydown', this.handleKeyDown);
-    
+
     this.generateTarget();
-    
+
     this.timerId = setInterval(() => {
       this.timeLeft--;
       if (this.timerSpan) this.timerSpan.innerText = `${this.timeLeft}s`;
@@ -11167,7 +11407,7 @@ class Episode0Game {
         EpisodeManager.gameOver("Calibration échouée. Impossible d'établir la liaison.");
       }
     }, 1000);
-    
+
     this.lastTick = Date.now();
     this.loop();
   }
@@ -11211,15 +11451,15 @@ class Episode0Game {
 
   handleCanvasClick(e) {
     if (this.winTriggered) return;
-    
+
     const rect = this.canvas.getBoundingClientRect();
     const clickX = (e.clientX - rect.left) * (this.canvas.width / rect.width);
     const clickY = (e.clientY - rect.top) * (this.canvas.height / rect.height);
-    
+
     const dx = clickX - this.target.x;
     const dy = clickY - this.target.y;
     const dist = Math.sqrt(dx*dx + dy*dy);
-    
+
     if (dist <= this.target.radius + 10) {
       this.calibrateCurrentTarget();
     } else {
@@ -11253,19 +11493,19 @@ class Episode0Game {
     let step = 0;
     const canvas = this.canvas;
     const ctx = this.ctx;
-    
+
     if (this.loopId) {
       cancelAnimationFrame(this.loopId);
       this.loopId = null;
     }
-    
+
     let startTime = Date.now();
     let lastBeepTime = 0;
 
     const drawStep = () => {
       ctx.fillStyle = '#020503';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
-      
+
       // Draw grid
       ctx.strokeStyle = '#051808';
       ctx.lineWidth = 0.5;
@@ -11281,31 +11521,31 @@ class Episode0Game {
         ctx.lineTo(canvas.width, y);
         ctx.stroke();
       }
-      
+
       ctx.fillStyle = '#39ff14';
       ctx.textAlign = 'center';
-      
+
       if (step === 0) {
         ctx.font = 'bold 12px monospace';
         ctx.fillText("ETALONNAGE COMPLÉTÉ", canvas.width / 2, 70);
-        
+
         ctx.font = '10px monospace';
         ctx.fillText("INITIALISATION DU SCAN CÉRÉBRAL...", canvas.width / 2, 100);
-        
+
         // Progress bar
         ctx.strokeStyle = '#39ff14';
         ctx.lineWidth = 1;
         ctx.strokeRect(50, 120, canvas.width - 100, 20);
-        
+
         const elapsed = Date.now() - startTime;
         const progressVal = Math.min(100, Math.floor(elapsed / 25)); // 2.5 seconds to fill
-        
+
         ctx.fillStyle = '#39ff14';
         ctx.fillRect(54, 124, (canvas.width - 108) * (progressVal / 100), 12);
-        
+
         ctx.fillStyle = '#39ff14';
         ctx.fillText(`LIAISON SYNAPTIQUE : ${progressVal}%`, canvas.width / 2, 165);
-        
+
         // Play click sound periodic beep
         if (progressVal % 15 === 0 && elapsed - lastBeepTime > 150 && progressVal < 100) {
           SoundManager.play(600 + progressVal * 4, 0.05, 'sine', 0.08);
@@ -11320,16 +11560,16 @@ class Episode0Game {
       } else if (step === 1) {
         ctx.font = 'bold 12px monospace';
         ctx.fillText("SCAN RÉUSSI - DONNÉES ENREGISTRÉES", canvas.width / 2, 60);
-        
+
         ctx.font = '9px monospace';
         ctx.fillStyle = '#ffb000';
         ctx.fillText("Sujet identifié : SUJET #042 (Abigail)", canvas.width / 2, 90);
         ctx.fillText("Implantation d'interface : 100% OK", canvas.width / 2, 105);
-        
+
         ctx.fillStyle = '#39ff14';
         ctx.fillText("Merci pour votre participation au projet C&A.", canvas.width / 2, 140);
         ctx.fillText("Liaison établie. Fermeture de la session...", canvas.width / 2, 160);
-        
+
         const elapsed = Date.now() - startTime;
         if (elapsed > 4000) {
           step = 2;
@@ -11341,17 +11581,17 @@ class Episode0Game {
         ctx.fillText("ARRÊT DU SYSTÈME EN COURS...", canvas.width / 2, 100);
         ctx.font = '9px monospace';
         ctx.fillText("DECONNEXION DU TERMINAL PHYSIQUE...", canvas.width / 2, 130);
-        
+
         const elapsed = Date.now() - startTime;
         if (elapsed > 2000) {
           this.triggerSystemShutdown();
           return;
         }
       }
-      
+
       this.loopId = requestAnimationFrame(drawStep);
     };
-    
+
     drawStep();
   }
 
@@ -11360,14 +11600,14 @@ class Episode0Game {
       cancelAnimationFrame(this.loopId);
       this.loopId = null;
     }
-    
+
     // Save progress to localStorage (Episode 0 won!)
     const progress = EpisodeManager.getProgress();
     if (!progress.includes(0)) {
       progress.push(0);
       localStorage.setItem('tadc_progress', JSON.stringify(progress));
     }
-    
+
     // Trigger OS shutdown
     if (window.OS) {
       window.OS.shutdownSystemForCalibration();
@@ -11402,7 +11642,7 @@ class Episode0Game {
     // Top instruction banner
     this.ctx.fillStyle = '#1c351f';
     this.ctx.fillRect(0, 0, this.canvas.width, 25);
-    
+
     this.ctx.fillStyle = '#39ff14';
     this.ctx.font = 'bold 8px monospace';
     this.ctx.textAlign = 'center';
@@ -11580,7 +11820,7 @@ class Episode4Game {
     } else {
       typeId = Math.floor(Math.random() * 5);
     }
-    
+
     this.fallingIngredients.push({
       x: 20 + Math.random() * (this.canvas.width - 40),
       y: 0,
@@ -11605,7 +11845,7 @@ class Episode4Game {
           if (ing.type.id === expectedId) {
             SoundManager.playBeep();
             this.currentStack.push(ing.type);
-            
+
             if (this.currentStack.length === 5) {
               this.score++;
               this.scoreSpan.innerText = `${this.score} / 3`;
@@ -11637,7 +11877,7 @@ class Episode4Game {
 
     this.ctx.fillStyle = '#ff69b4';
     this.ctx.fillRect(this.gangleX - this.gangleW/2, this.canvas.height - 25, this.gangleW, this.gangleH);
-    
+
     this.ctx.fillStyle = '#fff';
     this.ctx.beginPath();
     this.ctx.arc(this.gangleX, this.canvas.height - 18, 6, 0, Math.PI*2);
@@ -11704,7 +11944,7 @@ class Episode5Game {
     this.resetBtn.addEventListener('click', this.handleReset);
 
     this.generateQTE();
-    
+
     this.lastTick = Date.now();
     this.loop();
   }
@@ -11729,13 +11969,13 @@ class Episode5Game {
 
   handleKeyDown(e) {
     if (this.winTriggered) return;
-    
+
     let pressed = "";
     if (e.key === "ArrowUp" || e.key.toLowerCase() === "z" || e.key.toLowerCase() === "w") pressed = "UP";
     else if (e.key === "ArrowDown" || e.key.toLowerCase() === "s") pressed = "DOWN";
     else if (e.key === "ArrowLeft" || e.key.toLowerCase() === "q" || e.key.toLowerCase() === "a") pressed = "LEFT";
     else if (e.key === "ArrowRight" || e.key.toLowerCase() === "d") pressed = "RIGHT";
-    
+
     if (!pressed) return;
 
     e.preventDefault();
@@ -11744,7 +11984,7 @@ class Episode5Game {
       SoundManager.playBeep();
       this.score++;
       this.scoreSpan.innerText = `${this.score} / 12`;
-      
+
       if (this.score >= 12) {
         this.winTriggered = true;
         setTimeout(() => {
@@ -11769,7 +12009,7 @@ class Episode5Game {
     if (!this.winTriggered) {
       this.timerQTE -= dt;
       this.timerSpan.innerText = `${Math.max(0, this.timerQTE).toFixed(1)}s`;
-      
+
       if (this.timerQTE <= 0) {
         SoundManager.playError();
         this.score = 0;
@@ -11792,10 +12032,10 @@ class Episode5Game {
       const barH = 10;
       const x = (this.canvas.width - barW) / 2;
       const y = 200;
-      
+
       this.ctx.fillStyle = '#333';
       this.ctx.fillRect(x, y, barW, barH);
-      
+
       const maxTimer = Math.max(1.2, 3.0 - (this.score * 0.15));
       const fillW = Math.max(0, (this.timerQTE / maxTimer) * barW);
       this.ctx.fillStyle = this.timerQTE < 1.0 ? '#ff0055' : '#00ffff';
@@ -11803,7 +12043,7 @@ class Episode5Game {
 
       this.ctx.save();
       this.ctx.translate(this.canvas.width / 2, 100);
-      
+
       if (this.currentDirection === "UP") this.ctx.rotate(0);
       else if (this.currentDirection === "RIGHT") this.ctx.rotate(Math.PI / 2);
       else if (this.currentDirection === "DOWN") this.ctx.rotate(Math.PI);
@@ -11823,7 +12063,7 @@ class Episode5Game {
       this.ctx.closePath();
       this.ctx.stroke();
       this.ctx.fill();
-      
+
       this.ctx.restore();
 
       this.ctx.fillStyle = '#fff';
@@ -11928,7 +12168,7 @@ class Episode6Game {
     this.lives--;
     this.livesSpan.innerText = this.lives;
     SoundManager.playError();
-    
+
     if (this.lives <= 1) {
       this.livesSpan.className = "red-text blinking";
     } else {
@@ -11966,12 +12206,12 @@ class Episode6Game {
     this.targets.forEach((t, idx) => {
       if (clickX >= t.x && clickX <= t.x + t.w && clickY >= t.y && clickY <= t.y + t.h) {
         this.targets.splice(idx, 1);
-        
+
         if (t.isJax) {
           SoundManager.playBeep();
           this.score++;
           this.scoreSpan.innerText = `${this.score} / 15`;
-          
+
           if (this.score >= 15) {
             this.winTriggered = true;
             clearInterval(this.spawnInterval);
@@ -12012,7 +12252,7 @@ class Episode6Game {
     this.targets.forEach(t => {
       this.ctx.fillStyle = t.color;
       this.ctx.fillRect(t.x, t.y, t.w, t.h);
-      
+
       this.ctx.fillStyle = '#fff';
       if (t.isJax) {
         this.ctx.fillRect(t.x + 4, t.y - 8, 4, 8);
@@ -12110,7 +12350,7 @@ class Episode7Game {
     const rect = this.canvas.getBoundingClientRect();
     const clickX = (e.clientX - rect.left) * (this.canvas.width / rect.width);
     const clickY = (e.clientY - rect.top) * (this.canvas.height / rect.height);
-    
+
     this.umbrellaX = Math.max(30, Math.min(this.canvas.width - 30, clickX));
     this.umbrellaY = Math.max(60, Math.min(this.canvas.height - 40, clickY));
   }
@@ -12146,7 +12386,7 @@ class Episode7Game {
       const dx = l.x - this.umbrellaX;
       const dy = l.y - this.umbrellaY;
       const dist = Math.sqrt(dx*dx + dy*dy);
-      
+
       if (dist <= this.umbrellaR && dy < 0) {
         SoundManager.playClick();
         this.lasers.splice(lIdx, 1);
@@ -12158,7 +12398,7 @@ class Episode7Game {
           s.alive = false;
           SoundManager.playExplosion();
           this.lasers.splice(lIdx, 1);
-          
+
           this.alertSpan.innerText = "PURGE ACTIVE";
           this.alertSpan.className = "red-text blinking";
           setTimeout(() => {
@@ -12182,7 +12422,7 @@ class Episode7Game {
           SoundManager.playBeep();
           this.score++;
           this.scoreSpan.innerText = `${this.score} / 8 Crevettes`;
-          
+
           if (this.score >= 8) {
             this.winTriggered = true;
             clearInterval(this.spawnInterval);
@@ -12264,7 +12504,7 @@ class Episode8Game {
     this.loopId = null;
 
     this.kinger = { x: 40, y: 40, speed: 120 };
-    
+
     this.memories = [
       { x: 120, y: 60, active: true },
       { x: 260, y: 70, active: true },
@@ -12309,7 +12549,7 @@ class Episode8Game {
   handleKeyDown(e) {
     if (this.winTriggered) return;
     const dist = 15;
-    
+
     if (e.key === "ArrowUp" || e.key.toLowerCase() === "z" || e.key.toLowerCase() === "w") {
       this.kinger.y = Math.max(20, this.kinger.y - dist);
       e.preventDefault();
@@ -12341,7 +12581,7 @@ class Episode8Game {
     const kdx = this.kinger.x - this.searchlight.x;
     const kdy = this.kinger.y - this.searchlight.y;
     const kdist = Math.sqrt(kdx*kdx + kdy*kdy);
-    
+
     if (!this.winTriggered) {
       if (kdist < this.searchlight.r) {
         this.stability -= 25 * dt;
@@ -12368,7 +12608,7 @@ class Episode8Game {
             SoundManager.playBeep();
             this.score++;
             this.scoreSpan.innerText = `${this.score} / 5`;
-            
+
             if (this.score >= 5) {
               this.winTriggered = true;
               setTimeout(() => {
@@ -12397,12 +12637,12 @@ class Episode8Game {
         this.ctx.fillStyle = '#ffd700';
         this.ctx.shadowColor = '#ffd700';
         this.ctx.shadowBlur = 8;
-        
+
         this.ctx.beginPath();
         this.ctx.arc(m.x, m.y, size, 0, Math.PI*2);
         this.ctx.fill();
         this.ctx.shadowBlur = 0;
-        
+
         this.ctx.fillStyle = '#fff';
         this.ctx.font = 'bold 8px monospace';
         this.ctx.fillText("H", m.x - 3, m.y + 3);
@@ -12416,7 +12656,7 @@ class Episode8Game {
     this.ctx.arc(this.kinger.x, this.kinger.y, 10, 0, Math.PI*2);
     this.ctx.fill();
     this.ctx.stroke();
-    
+
     this.ctx.fillStyle = '#ffd700';
     this.ctx.beginPath();
     this.ctx.moveTo(this.kinger.x - 6, this.kinger.y - 8);
@@ -12536,7 +12776,7 @@ class Episode9Game {
         if (this.grid[r][c].painted) paintedCount++;
       }
     }
-    
+
     const percent = Math.round((paintedCount / total) * 100);
     this.scoreSpan.innerText = `${percent}%`;
 
@@ -12567,7 +12807,7 @@ class Episode9Game {
           let flicker = Math.sin(Date.now() * 0.01 + r * c) * 20;
           this.ctx.fillStyle = tile.glitching ? `rgb(${60+flicker}, ${60+flicker}, ${60+flicker})` : '#181818';
           this.ctx.fillRect(x, y, this.tileW - 1, this.tileH - 1);
-          
+
           this.ctx.strokeStyle = '#333';
           this.ctx.strokeRect(x, y, this.tileW, this.tileH);
         }
@@ -12588,14 +12828,14 @@ class EpisodePrequelGame {
     this.timerSpan = document.getElementById('ep-1-timer');
     this.connectSpan = document.getElementById('ep-1-connected');
     this.resetBtn = document.getElementById('ep-1-btn-reset');
-    
+
     this.cellW = 55;
     this.cellH = 55;
     this.offsetX = 40;
     this.offsetY = 35;
-    
+
     this.resetState();
-    
+
     this.handleCanvasClick = this.handleCanvasClick.bind(this);
     this.handleReset = this.handleReset.bind(this);
   }
@@ -12606,27 +12846,27 @@ class EpisodePrequelGame {
     this.loopId = null;
     this.connected = false;
     this.winTriggered = false;
-    
+
     this.nodes = [
       { col: 1, row: 0, type: 'corner', rotation: 90, connected: false },
       { col: 2, row: 0, type: 'straight', rotation: 0, connected: false },
       { col: 3, row: 0, type: 'corner', rotation: 180, connected: false },
-      
+
       { col: 0, row: 1, type: 'start', rotation: 0, connected: true },
       { col: 1, row: 1, type: 'corner', rotation: 270, connected: false },
       { col: 2, row: 1, type: 'corner', rotation: 90, connected: false },
       { col: 3, row: 1, type: 'straight', rotation: 90, connected: false },
-      
+
       { col: 1, row: 2, type: 'straight', rotation: 0, connected: false },
       { col: 2, row: 2, type: 'cross', rotation: 0, connected: false },
       { col: 3, row: 2, type: 'corner', rotation: 0, connected: false },
       { col: 4, row: 2, type: 'end', rotation: 0, connected: false },
-      
+
       { col: 1, row: 3, type: 'corner', rotation: 180, connected: false },
       { col: 2, row: 3, type: 'straight', rotation: 90, connected: false },
       { col: 3, row: 3, type: 'corner', rotation: 270, connected: false }
     ];
-    
+
     this.connectSpan.innerText = "NON-CONNECTÉ";
     this.connectSpan.className = "orange-text blinking";
     this.timerSpan.innerText = "35s";
@@ -12636,18 +12876,18 @@ class EpisodePrequelGame {
     this.resetState();
     this.canvas.addEventListener('click', this.handleCanvasClick);
     this.resetBtn.addEventListener('click', this.handleReset);
-    
+
     this.checkConnection();
-    
+
     this.timerId = setInterval(() => {
       this.timeLeft--;
       this.timerSpan.innerText = `${this.timeLeft}s`;
-      
+
       if (this.timeLeft <= 0) {
         EpisodeManager.gameOver("Balayage Caine engagé. Arthur a été détecté et effacé avant le raccordement.");
       }
     }, 1000);
-    
+
     this.lastTick = Date.now();
     this.loop();
   }
@@ -12675,7 +12915,7 @@ class EpisodePrequelGame {
 
   getExitDirection(node, entryDir) {
     const rot = node.rotation % 360;
-    
+
     if (node.type === 'straight') {
       if (rot === 0 || rot === 180) {
         if (entryDir === 'left') return 'right';
@@ -12711,26 +12951,26 @@ class EpisodePrequelGame {
     this.nodes.forEach(n => {
       if (n.type !== 'start') n.connected = false;
     });
-    
+
     const start = this.getNode(0, 1);
     if (!start) return;
-    
+
     let current = { col: 1, row: 1 };
     let entryDir = 'left';
-    
+
     const maxSteps = 25;
     let steps = 0;
-    
+
     while(steps < maxSteps) {
       steps++;
       const node = this.getNode(current.col, current.row);
       if (!node) break;
-      
+
       const exitDir = this.getExitDirection(node, entryDir);
       if (!exitDir) break;
-      
+
       node.connected = true;
-      
+
       if (exitDir === 'right') {
         current.col++;
         entryDir = 'left';
@@ -12744,14 +12984,14 @@ class EpisodePrequelGame {
         current.row++;
         entryDir = 'up';
       }
-      
+
       if (current.col === 4 && current.row === 2 && entryDir === 'left') {
         const dest = this.getNode(4, 2);
         if (dest) dest.connected = true;
         this.connected = true;
         this.connectSpan.innerText = "SYNAPSE CONNECTÉE";
         this.connectSpan.className = "green-text font-bold";
-        
+
         if (!this.winTriggered) {
           this.winTriggered = true;
           clearInterval(this.timerId);
@@ -12762,7 +13002,7 @@ class EpisodePrequelGame {
         return;
       }
     }
-    
+
     this.connected = false;
     this.connectSpan.innerText = "NON-CONNECTÉ";
     this.connectSpan.className = "orange-text blinking";
@@ -12770,14 +13010,14 @@ class EpisodePrequelGame {
 
   handleCanvasClick(e) {
     if (this.winTriggered) return;
-    
+
     const rect = this.canvas.getBoundingClientRect();
     const clickX = (e.clientX - rect.left) * (this.canvas.width / rect.width);
     const clickY = (e.clientY - rect.top) * (this.canvas.height / rect.height);
-    
+
     const col = Math.floor((clickX - this.offsetX) / this.cellW);
     const row = Math.floor((clickY - this.offsetY) / this.cellH);
-    
+
     const node = this.getNode(col, row);
     if (node && node.type !== 'start' && node.type !== 'end') {
       SoundManager.playClick();
@@ -12824,11 +13064,11 @@ class EpisodePrequelGame {
         this.ctx.arc(0, 0, 18, 0, Math.PI*2);
         this.ctx.fill();
         this.ctx.stroke();
-        
+
         this.ctx.fillStyle = '#fff';
         this.ctx.font = 'bold 9px monospace';
         this.ctx.fillText("BRAIN", -13, 3);
-        
+
         this.ctx.strokeStyle = node.connected ? '#ff9900' : '#1a4c28';
         this.ctx.lineWidth = 4;
         this.ctx.beginPath();
@@ -12841,7 +13081,7 @@ class EpisodePrequelGame {
         this.ctx.lineWidth = 2;
         this.ctx.strokeRect(-16, -16, 32, 32);
         this.ctx.fillRect(-16, -16, 32, 32);
-        
+
         this.ctx.fillStyle = '#fff';
         this.ctx.font = 'bold 8px monospace';
         this.ctx.fillText("MATRIX", -14, 3);
@@ -12854,7 +13094,7 @@ class EpisodePrequelGame {
         this.ctx.stroke();
       } else {
         this.ctx.rotate(node.rotation * Math.PI / 180);
-        
+
         this.ctx.fillStyle = '#0f1f13';
         this.ctx.beginPath();
         this.ctx.arc(0, 0, 14, 0, Math.PI*2);
@@ -12912,9 +13152,9 @@ class EpisodeMinus2Game {
     this.ctx = this.canvas.getContext('2d');
     this.fusionSpan = document.getElementById('ep-2-fusion-percent');
     this.integritySpan = document.getElementById('ep-2-integrity');
-    
+
     this.resetState();
-    
+
     this.handleMouseMove = this.handleMouseMove.bind(this);
     this.handleTouchMove = this.handleTouchMove.bind(this);
   }
@@ -12926,12 +13166,12 @@ class EpisodeMinus2Game {
     this.gameOverTriggered = false;
     this.loopId = null;
     this.lastTick = Date.now();
-    
+
     this.red = { x: 50, y: 140, r: 8, vx: 0, vy: 0 };
     this.target = { x: 50, y: 140 };
-    
+
     this.blue = { x: 280, y: 140, r: 8, targetX: 280, targetY: 140, timer: 0 };
-    
+
     this.obstacles = [
       { x: 150, y: 50, r: 6, vx: 0, vy: 80, limitY1: 30, limitY2: 250 },
       { x: 220, y: 230, r: 6, vx: 0, vy: -100, limitY1: 30, limitY2: 250 },
@@ -12947,10 +13187,10 @@ class EpisodeMinus2Game {
 
   start() {
     this.resetState();
-    
+
     this.canvas.addEventListener('mousemove', this.handleMouseMove);
     this.canvas.addEventListener('touchmove', this.handleTouchMove);
-    
+
     this.lastTick = Date.now();
     this.loop();
   }
@@ -12983,7 +13223,7 @@ class EpisodeMinus2Game {
 
     const dx = this.target.x - this.red.x;
     const dy = this.target.y - this.red.y;
-    
+
     this.red.x += dx * 0.1;
     this.red.y += dy * 0.1;
 
@@ -12996,7 +13236,7 @@ class EpisodeMinus2Game {
       this.blue.targetY = Math.random() * (this.canvas.height - 40) + 20;
       this.blue.timer = 1.0 + Math.random() * 1.5;
     }
-    
+
     const distToRed = Math.hypot(this.blue.x - this.red.x, this.blue.y - this.red.y);
     if (distToRed < 80) {
       const repelAngle = Math.atan2(this.blue.y - this.red.y, this.blue.x - this.red.x);
@@ -13013,7 +13253,7 @@ class EpisodeMinus2Game {
     this.obstacles.forEach(o => {
       o.x += o.vx * dt;
       o.y += o.vy * dt;
-      
+
       if (o.vy !== 0) {
         if (o.y <= o.limitY1) { o.y = o.limitY1; o.vy = -o.vy; }
         if (o.y >= o.limitY2) { o.y = o.limitY2; o.vy = -o.vy; }
@@ -13028,9 +13268,9 @@ class EpisodeMinus2Game {
     if (distBlue < (this.red.r + this.blue.r)) {
       this.fusion += 25;
       SoundManager.play(400 + this.fusion * 4, 0.1, 'sine', 0.1);
-      
+
       if (this.fusionSpan) this.fusionSpan.innerText = `${this.fusion}%`;
-      
+
       if (this.fusion >= 100) {
         this.triggerWinSequence();
         return;
@@ -13049,9 +13289,9 @@ class EpisodeMinus2Game {
       if (distObstacle < (this.red.r + o.r) && o.cooldown <= 0) {
         this.integrity -= 20;
         o.cooldown = 1.0;
-        
+
         SoundManager.play(150, 0.2, 'triangle', 0.2);
-        
+
         if (this.integritySpan) {
           this.integritySpan.innerText = `${this.integrity}%`;
           if (this.integrity <= 40) {
@@ -13076,40 +13316,40 @@ class EpisodeMinus2Game {
 
   triggerWinSequence() {
     this.winTriggered = true;
-    
+
     let compileTime = 0;
     const compileDuration = 2.0;
-    
+
     const winLoop = () => {
       const now = Date.now();
       const dt = (now - this.lastTick) / 1000;
       this.lastTick = now;
-      
+
       compileTime += dt;
-      
+
       this.ctx.fillStyle = '#020503';
       this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
       this.drawGrid();
-      
+
       const centerX = this.canvas.width / 2;
       const centerY = this.canvas.height / 2;
-      
+
       const progress = Math.min(1.0, compileTime / compileDuration);
-      
+
       this.ctx.save();
-      
+
       const size = progress * 60;
-      
+
       if (Math.random() < 0.25) {
         this.ctx.translate(Math.random() * 6 - 3, Math.random() * 6 - 3);
       }
-      
+
       this.ctx.strokeStyle = `rgba(255, 0, 0, ${progress})`;
       this.ctx.lineWidth = 2;
       this.ctx.strokeRect(centerX - size/2, centerY - size/4, size, size/2);
       this.ctx.fillStyle = `rgba(200, 0, 0, ${progress * 0.3})`;
       this.ctx.fillRect(centerX - size/2, centerY - size/4, size, size/2);
-      
+
       this.ctx.strokeStyle = '#fff';
       this.ctx.lineWidth = 1.5;
       this.ctx.beginPath();
@@ -13124,13 +13364,13 @@ class EpisodeMinus2Game {
         this.ctx.lineTo(x + 10, centerY + size/4);
       }
       this.ctx.stroke();
-      
+
       this.ctx.fillStyle = '#fff';
       this.ctx.beginPath();
       this.ctx.arc(centerX - size/4, centerY - size/8, size/8, 0, Math.PI*2);
       this.ctx.arc(centerX + size/4, centerY - size/8, size/8, 0, Math.PI*2);
       this.ctx.fill();
-      
+
       this.ctx.fillStyle = '#00f';
       this.ctx.beginPath();
       this.ctx.arc(centerX - size/4, centerY - size/8, size/24, 0, Math.PI*2);
@@ -13139,9 +13379,9 @@ class EpisodeMinus2Game {
       this.ctx.beginPath();
       this.ctx.arc(centerX + size/4, centerY - size/8, size/24, 0, Math.PI*2);
       this.ctx.fill();
-      
+
       this.ctx.restore();
-      
+
       if (Math.random() < 0.15) {
         SoundManager.play(200 + progress * 800, 0.05, 'sawtooth', 0.05);
       }
@@ -13153,7 +13393,7 @@ class EpisodeMinus2Game {
         this.loopId = requestAnimationFrame(winLoop);
       }
     };
-    
+
     this.loopId = requestAnimationFrame(winLoop);
   }
 

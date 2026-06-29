@@ -45,7 +45,7 @@ Sujet : Incident de test - Spudsy's simulation
 
 Charles,
 Grace (Gangle) a testé le sous-système de masque réactif aujourd'hui. L'IA de Caine a forcé les sujets à travailler dans un restaurant rapide virtuel ("Spudsy's").
-Grace a enfilé un masque de comédie en plastique rigide au lieu de son masque en ruban habituel. Son attitude a complètement changé, montrant des tendances obsessives et dictatoriales envers Jesse (Jax) et Rachel (Ragatha). 
+Grace a enfilé un masque de comédie en plastique rigide au lieu de son masque en ruban habituel. Son attitude a complètement changé, montrant des tendances obsessives et dictatoriales envers Jesse (Jax) et Rachel (Ragatha).
 Le couplage émotionnel du casque est trop puissant. Le moindre changement d'avatar influe directement sur le comportement psychique réel du sujet.
 
 - Arthur`
@@ -235,7 +235,7 @@ const OS = {
   eegX: 0,
   ecgX: 0,
   selectedIcon: null,
-  
+
   // Lore expansion variables
   decryptionActive: false,
   decryptionCode: "",
@@ -253,13 +253,13 @@ const OS = {
     this.setupAudio();
     this.setupDials();
     this.applyButtonTooltips();
-    
+
     // Check if the system was left in a shutdown state by calibration
     const wasShutdownVal = localStorage.getItem('was_shutdown_by_calibration');
     if (wasShutdownVal === 'true') {
       this.wasShutdownByCalibration = true;
       this.isBooted = false;
-      
+
       // Keep screen off
       const screen = document.querySelector('.crt-screen');
       if (screen) screen.style.opacity = '0';
@@ -385,25 +385,25 @@ const OS = {
   setupDials() {
     this.brightness = 1.0;
     this.contrast = 1.0;
-    
+
     const applyFilters = () => {
       const glass = document.querySelector('.crt-glass');
       if (glass) {
         glass.style.filter = `brightness(${this.brightness}) contrast(${this.contrast})`;
       }
     };
-    
+
     const setupDialDrag = (selector, minVal, maxVal, initialVal, updateFn) => {
       const dial = document.querySelector(selector);
       if (!dial) return;
       dial.setAttribute('aria-valuemin', String(minVal));
       dial.setAttribute('aria-valuemax', String(maxVal));
-      
+
       let currentVal = initialVal;
       let startY = 0;
       let startVal = initialVal;
       let isDragging = false;
-      
+
       const setVal = (v) => {
         currentVal = Math.max(minVal, Math.min(maxVal, v));
         updateFn(currentVal);
@@ -413,7 +413,7 @@ const OS = {
         dial.setAttribute('aria-valuenow', currentVal.toFixed(2));
         applyFilters();
       };
-      
+
       dial.addEventListener('mousedown', (e) => {
         isDragging = true;
         startY = e.clientY;
@@ -421,7 +421,7 @@ const OS = {
         dial.style.cursor = 'grabbing';
         e.preventDefault();
       });
-      
+
       dial.addEventListener('touchstart', (e) => {
         isDragging = true;
         startY = e.touches[0].clientY;
@@ -429,7 +429,7 @@ const OS = {
         dial.style.cursor = 'grabbing';
         e.preventDefault();
       }, { passive: false });
-      
+
       document.addEventListener('mousemove', (e) => {
         if (!isDragging) return;
         const dy = startY - e.clientY;
@@ -437,7 +437,7 @@ const OS = {
         const delta = (dy / 100) * valRange;
         setVal(startVal + delta);
       });
-      
+
       document.addEventListener('touchmove', (e) => {
         if (!isDragging) return;
         const dy = startY - e.touches[0].clientY;
@@ -446,29 +446,29 @@ const OS = {
         setVal(startVal + delta);
         e.preventDefault();
       }, { passive: false });
-      
+
       document.addEventListener('mouseup', () => {
         if (isDragging) {
           isDragging = false;
           dial.style.cursor = 'grab';
         }
       });
-      
+
       document.addEventListener('touchend', () => {
         if (isDragging) {
           isDragging = false;
           dial.style.cursor = 'grab';
         }
       });
-      
+
       dial.style.cursor = 'grab';
       setVal(initialVal);
     };
-    
+
     setupDialDrag('.dial-brightness', 0.0, 2.0, 1.0, (val) => {
       this.brightness = val;
     });
-    
+
     setupDialDrag('.dial-contrast', 0.3, 2.5, 1.0, (val) => {
       this.contrast = val;
     });
@@ -520,7 +520,7 @@ const OS = {
     ];
 
     let lineIndex = 0;
-    
+
     const printLine = () => {
       if (lineIndex < bootLines.length) {
         log.innerHTML += bootLines[lineIndex] + "\n";
@@ -534,7 +534,7 @@ const OS = {
           pressKeyMsg.innerText = 'APPUYEZ SUR ENTREE OU CLIQUEZ INITIALISER';
         }
         SoundManager.play(1000, 0.2, 'sine', 0.15);
-        
+
         let bootCompleted = false;
         const completeBoot = () => {
           if (bootCompleted) return;
@@ -1053,7 +1053,7 @@ const OS = {
       SoundManager.playClick();
       powerBtn.classList.toggle('active');
       powerLed.classList.toggle('active');
-      
+
       const screen = document.querySelector('.crt-screen');
       if (powerLed.classList.contains('active')) {
         screen.style.opacity = '1';
@@ -1133,10 +1133,10 @@ const OS = {
     const bubble = document.getElementById('bubble-intrusion');
     bubble.style.left = `${Math.floor(20 + Math.random() * 60)}%`;
     bubble.style.top = `${Math.floor(15 + Math.random() * 50)}%`;
-    
+
     const phrases = ["MIAM LE CODE !", "NETTOYAGE !", "BUBULLE !", "SALUT EXTERNE !", "LE VIDE RECRUTE !"];
     bubble.querySelector('.bubble-text').innerText = phrases[Math.floor(Math.random() * phrases.length)];
-    
+
     bubble.style.display = 'flex';
   },
 
@@ -1152,14 +1152,14 @@ const OS = {
 
     const body = bubble.querySelector('.bubble-body');
     const text = bubble.querySelector('.bubble-text');
-    
+
     if (body) body.style.visibility = 'hidden';
     if (text) text.style.visibility = 'hidden';
 
     const rect = bubble.getBoundingClientRect();
     const parent = bubble.parentElement;
     const parentRect = parent.getBoundingClientRect();
-    
+
     const bubbleCenterX = rect.left + rect.width / 2;
     const bubbleCenterY = rect.top + rect.height / 2;
     const relativeX = bubbleCenterX - parentRect.left;
@@ -1172,12 +1172,12 @@ const OS = {
       const p = document.createElement('div');
       const colors = ['rgba(255, 100, 250, 0.65)', 'rgba(100, 255, 255, 0.65)', 'rgba(250, 255, 100, 0.65)', 'rgba(100, 100, 255, 0.65)'];
       const color = colors[Math.floor(Math.random() * colors.length)];
-      
+
       p.style.position = 'absolute';
       p.style.backgroundColor = color;
       p.style.border = '1px solid rgba(255, 255, 255, 0.85)';
       p.style.borderRadius = '50%';
-      
+
       const size = Math.floor(5 + Math.random() * 7);
       p.style.width = `${size}px`;
       p.style.height = `${size}px`;
@@ -1186,12 +1186,12 @@ const OS = {
       p.style.zIndex = '9999';
       p.style.pointerEvents = 'none';
       p.style.transition = 'all 0.35s cubic-bezier(0.1, 0.8, 0.25, 1)';
-      
+
       parent.appendChild(p);
-      
+
       const angle = (i * (2 * Math.PI / numParticles)) + (Math.random() * 0.4 - 0.2);
       const distance = 35 + Math.random() * 35;
-      
+
       particles.push({
         element: p,
         angle: angle,
@@ -1227,18 +1227,18 @@ const OS = {
     const textEl = document.getElementById('dialog-text');
     const btnOk = document.getElementById('dialog-btn-ok');
     const btnCloseX = document.getElementById('dialog-close-x');
-    
+
     titleEl.innerText = title;
     textEl.innerHTML = text.replace(/\n/g, '<br>');
     overlay.style.display = 'flex';
-    
+
     const closeDialog = () => {
       SoundManager.playClick();
       overlay.style.display = 'none';
       btnOk.removeEventListener('click', closeDialog);
       btnCloseX.removeEventListener('click', closeDialog);
     };
-    
+
     btnOk.addEventListener('click', closeDialog);
     btnCloseX.addEventListener('click', closeDialog);
   },
@@ -1247,9 +1247,9 @@ const OS = {
     const progress = (typeof EpisodeManager !== 'undefined') ? EpisodeManager.getProgress() : [];
     const nameEl = document.querySelector('#win-vitals .profile-details span.cyan-text');
     const picEl = document.querySelector('#win-vitals .profile-pic');
-    
+
     const showAbigail = progress.includes(9);
-    
+
     if (progress.includes(0)) {
       if (nameEl) nameEl.innerText = showAbigail ? "Pomni (Abigail)" : "Pomni";
       if (picEl) {
@@ -1268,18 +1268,18 @@ const OS = {
   applySystemStateUI() {
     const progress = (typeof EpisodeManager !== 'undefined') ? EpisodeManager.getProgress() : [];
     const isFirstTime = !progress.includes(0);
-    
+
     const startBar = document.getElementById('start-bar');
     const desktopIcons = document.querySelector('.desktop-icons');
     const simSelector = document.querySelector('#win-simulations .sim-selector');
     const simWin = document.getElementById('win-simulations');
     const winContainer = document.getElementById('windows-container');
-    
+
     if (isFirstTime) {
       if (startBar) startBar.style.display = 'none';
       if (desktopIcons) desktopIcons.style.display = 'none';
       if (winContainer) winContainer.style.height = '100%';
-      
+
       if (simWin) {
         simWin.style.width = '100%';
         simWin.style.height = '100%';
@@ -1287,7 +1287,7 @@ const OS = {
         simWin.style.top = '0';
         simWin.style.boxShadow = 'none';
         simWin.style.border = 'none';
-        
+
         const header = simWin.querySelector('.window-header');
         if (header) header.style.display = 'none';
       }
@@ -1296,7 +1296,7 @@ const OS = {
       if (startBar) startBar.style.display = 'flex';
       if (desktopIcons) desktopIcons.style.display = 'flex';
       if (winContainer) winContainer.style.height = 'calc(100% - 40px)';
-      
+
       if (simWin) {
         if (simWin.style.width === '100%') {
           simWin.style.boxShadow = '';
@@ -1322,23 +1322,23 @@ const OS = {
     this.wasShutdownByCalibration = true;
     localStorage.setItem('was_shutdown_by_calibration', 'true');
     this.isBooted = false;
-    
+
     this.playShutdownSound();
     SoundManager.stopMainframeHum();
     SoundManager.stopTheme();
-    
+
     const powerBtn = document.getElementById('power-button');
     const powerLed = document.getElementById('power-led');
     if (powerBtn) powerBtn.classList.remove('active');
     if (powerLed) powerLed.classList.remove('active');
-    
+
     const screen = document.querySelector('.crt-screen');
     if (screen) screen.style.opacity = '0';
-    
+
     if (EpisodeManager.activeGame) {
       EpisodeManager.activeGame.stop();
     }
-    
+
     this.applySystemStateUI();
   },
 
@@ -2676,16 +2676,113 @@ const OS = {
       const wallH = Math.min(h * 1.9, (h * 0.72) / corrected);
       const x = Math.floor(ratio * w);
       const y = Math.floor(horizon - wallH * 0.52);
-      const baseColor = this.getCircusWallColor(hit.cell, zone, state);
+
       const depthShade = Math.max(0.26, 1.08 - corrected / (room.size * 0.92));
       const sideShade = hit.nearVertical ? 0.92 : 0.72;
-      ctx.fillStyle = this.shadeHex(baseColor, depthShade * sideShade);
-      ctx.fillRect(x, y, strip, Math.ceil(wallH));
+      const shadeFactor = depthShade * sideShade;
+
       if (hit.cell >= 100) {
+        // Portal / Door wall base
+        const baseColor = this.getCircusWallColor(hit.cell, zone, state);
+        ctx.fillStyle = this.shadeHex(baseColor, shadeFactor);
+        ctx.fillRect(x, y, strip, Math.ceil(wallH));
         ctx.fillStyle = 'rgba(255,255,255,0.16)';
         ctx.fillRect(x, y + wallH * 0.1, strip, Math.max(1, wallH * 0.04));
         ctx.fillStyle = 'rgba(0,0,0,0.28)';
         ctx.fillRect(x, y + wallH * 0.46, strip, Math.max(1, wallH * 0.08));
+      } else {
+        // Normal wall - procedural motifs based on series decors
+        const motif = (state.scenes[state.currentZoneId] || state.scenes[2])?.motif || 'circus';
+        const hitX = state.player.x + rayCos * hit.dist;
+        const hitZ = state.player.z + raySin * hit.dist;
+        const u = hit.nearVertical ? (hitX % 1) : (hitZ % 1);
+
+        if (motif === 'circus' || motif === 'final') {
+          // Iconic Red & White tent stripes
+          const redColor = motif === 'final' ? '#a51d24' : '#d62f3f';
+          const whiteColor = '#fff3c2'; // retro tent cream
+          const useRed = Math.floor(u * 6) % 2 === 0;
+          const color = useRed ? redColor : whiteColor;
+          ctx.fillStyle = this.shadeHex(color, shadeFactor);
+          ctx.fillRect(x, y, strip, Math.ceil(wallH));
+        } else if (motif === 'candy') {
+          // Candy Canyon Kingdom - pink syrup / candy stripes
+          const pinkColor = '#ff9ad5';
+          const whiteColor = '#ffffff';
+          const usePink = Math.floor(u * 6) % 2 === 0;
+          const color = usePink ? pinkColor : whiteColor;
+          ctx.fillStyle = this.shadeHex(color, shadeFactor);
+          ctx.fillRect(x, y, strip, Math.ceil(wallH));
+        } else if (motif === 'manor' || motif === 'basement') {
+          // Spooky Manor wood paneling & wallpaper
+          const baseColor = motif === 'basement' ? '#14101e' : '#241c30';
+          ctx.fillStyle = this.shadeHex(baseColor, shadeFactor);
+          ctx.fillRect(x, y, strip, Math.ceil(wallH));
+
+          // Vertical wood stripes
+          const stripeColor = '#0b0610';
+          if (Math.floor(u * 8) % 3 === 0) {
+            ctx.fillStyle = this.shadeHex(stripeColor, shadeFactor);
+            ctx.fillRect(x, y, strip, Math.ceil(wallH));
+          }
+          // Trim crown & baseboards
+          ctx.fillStyle = this.shadeHex('#0a050f', shadeFactor);
+          ctx.fillRect(x, y, strip, Math.max(1, wallH * 0.08));
+          ctx.fillRect(x, y + wallH * 0.88, strip, Math.max(1, wallH * 0.12));
+        } else if (motif === 'spudsy') {
+          // Fast-food tiles (Yellow walls with red stripes)
+          ctx.fillStyle = this.shadeHex('#f6d743', shadeFactor);
+          ctx.fillRect(x, y, strip, Math.ceil(wallH));
+          ctx.fillStyle = this.shadeHex('#ff4d4d', shadeFactor);
+          ctx.fillRect(x, y + wallH * 0.42, strip, Math.max(1, wallH * 0.1));
+
+          // Tile grout
+          if (Math.abs((u * 4) % 1) < 0.05) {
+            ctx.fillStyle = this.shadeHex('#d1b315', shadeFactor);
+            ctx.fillRect(x, y, strip, Math.ceil(wallH));
+          }
+        } else if (motif === 'exit') {
+          // White office walls with dark baseboards
+          ctx.fillStyle = this.shadeHex('#f3f3f8', shadeFactor);
+          ctx.fillRect(x, y, strip, Math.ceil(wallH));
+          ctx.fillStyle = this.shadeHex('#3a3a45', shadeFactor);
+          ctx.fillRect(x, y + wallH * 0.88, strip, Math.max(1, wallH * 0.12));
+          if (u < 0.02 || u > 0.98) {
+            ctx.fillStyle = this.shadeHex('#a4a4b2', shadeFactor);
+            ctx.fillRect(x, y, strip, Math.ceil(wallH));
+          }
+        } else if (motif === 'test' || motif === 'admin' || motif === 'core') {
+          // Matrix-like neon grid
+          ctx.fillStyle = this.shadeHex('#010401', shadeFactor);
+          ctx.fillRect(x, y, strip, Math.ceil(wallH));
+          const neonColor = motif === 'core' ? '#ff7a30' : '#7df0ff';
+          if (u < 0.04 || u > 0.96) {
+            ctx.fillStyle = neonColor;
+            ctx.fillRect(x, y, strip, Math.ceil(wallH));
+          }
+          ctx.fillStyle = neonColor;
+          ctx.fillRect(x, y + wallH * 0.02, strip, Math.max(1, wallH * 0.02));
+          ctx.fillRect(x, y + wallH * 0.49, strip, Math.max(1, wallH * 0.02));
+          ctx.fillRect(x, y + wallH * 0.96, strip, Math.max(1, wallH * 0.02));
+        } else if (motif === 'lake') {
+          // Beach top cyan & bottom sand
+          ctx.fillStyle = this.shadeHex('#4ee7ff', shadeFactor);
+          ctx.fillRect(x, y, strip, Math.ceil(wallH));
+          ctx.fillStyle = this.shadeHex('#ffe57d', shadeFactor);
+          ctx.fillRect(x, y + wallH * 0.75, strip, Math.max(1, wallH * 0.25));
+        } else if (motif === 'softball' || motif === 'grounds') {
+          // Alternating green / blue grounds panels
+          const prim = motif === 'softball' ? '#173416' : '#2a58d8';
+          const sec = motif === 'softball' ? '#0f220e' : '#1d3e9a';
+          const color = Math.floor(u * 4) % 2 === 0 ? prim : sec;
+          ctx.fillStyle = this.shadeHex(color, shadeFactor);
+          ctx.fillRect(x, y, strip, Math.ceil(wallH));
+        } else {
+          // Fallback wall
+          const baseColor = this.getCircusWallColor(hit.cell, zone, state);
+          ctx.fillStyle = this.shadeHex(baseColor, shadeFactor);
+          ctx.fillRect(x, y, strip, Math.ceil(wallH));
+        }
       }
     }
 
@@ -3186,116 +3283,665 @@ const OS = {
     ctx.lineWidth = Math.max(1, 2 * s);
     ctx.strokeStyle = prop.color;
     ctx.fillStyle = `${prop.color}cc`;
+
     if (prop.kind === 'pillar') {
+      // Spiral-striped circus tent pillar
+      ctx.fillStyle = '#fff1a8'; // White base
       ctx.fillRect(-10 * s, -120 * s, 20 * s, 125 * s);
-      ctx.fillStyle = '#fff1a8';
+      // Red spiral stripes
+      ctx.fillStyle = '#d62f3f';
+      for (let i = 0; i < 6; i++) {
+        const stripeY = -120 * s + i * 20 * s;
+        ctx.beginPath();
+        ctx.moveTo(-10 * s, stripeY);
+        ctx.lineTo(10 * s, stripeY + 10 * s);
+        ctx.lineTo(10 * s, stripeY + 16 * s);
+        ctx.lineTo(-10 * s, stripeY + 6 * s);
+        ctx.closePath();
+        ctx.fill();
+      }
+      // Top and bottom gold rings
+      ctx.fillStyle = '#ffd84a';
       ctx.fillRect(-14 * s, -125 * s, 28 * s, 10 * s);
       ctx.fillRect(-14 * s, 0, 28 * s, 8 * s);
+      ctx.strokeStyle = '#05020d';
+      ctx.strokeRect(-14 * s, -125 * s, 28 * s, 10 * s);
+      ctx.strokeRect(-14 * s, 0, 28 * s, 8 * s);
     } else if (prop.kind === 'ring') {
+      // The Circus Ring baseboard (red base, yellow trim, gold stars)
+      ctx.lineWidth = Math.max(2, 4 * s);
+      ctx.strokeStyle = '#d62f3f'; // Red ring border
       ctx.beginPath();
-      ctx.ellipse(0, -58 * s, 54 * s, 22 * s, 0, 0, Math.PI * 2);
+      ctx.ellipse(0, -20 * s, 68 * s, 26 * s, 0, 0, Math.PI * 2);
       ctx.stroke();
-    } else if (prop.kind === 'spotlight') {
+
+      // Inner yellow highlight ring
+      ctx.strokeStyle = '#ffd84a';
+      ctx.lineWidth = Math.max(1, 1.5 * s);
       ctx.beginPath();
-      ctx.moveTo(-16 * s, -10 * s);
-      ctx.lineTo(0, -70 * s);
-      ctx.lineTo(16 * s, -10 * s);
-      ctx.closePath();
+      ctx.ellipse(0, -20 * s, 64 * s, 24 * s, 0, 0, Math.PI * 2);
+      ctx.stroke();
+
+      // Mini gold stars drawn on the ring baseboard
+      ctx.fillStyle = '#ffd84a';
+      for (let angle = 0; angle < Math.PI * 2; angle += Math.PI / 4) {
+        const sx = Math.cos(angle) * 64 * s;
+        const sz = Math.sin(angle) * 24 * s - 20 * s;
+        ctx.beginPath();
+        ctx.arc(sx, sz, 3 * s, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    } else if (prop.kind === 'spotlight') {
+      // Retro stage light fixture on tripod stand
+      // Tripod stand
+      ctx.strokeStyle = '#333';
+      ctx.lineWidth = Math.max(1, 2.5 * s);
+      ctx.beginPath();
+      ctx.moveTo(0, 0); ctx.lineTo(0, -60 * s); // Central bar
+      ctx.moveTo(0, -20 * s); ctx.lineTo(-18 * s, 0); // Left leg
+      ctx.moveTo(0, -20 * s); ctx.lineTo(18 * s, 0);  // Right leg
+      ctx.stroke();
+
+      // Light housing box
+      ctx.fillStyle = '#111';
+      ctx.strokeStyle = prop.color;
+      ctx.beginPath();
+      ctx.arc(0, -64 * s, 10 * s, 0, Math.PI * 2);
       ctx.fill();
-      ctx.fillStyle = 'rgba(255,241,168,0.18)';
+      ctx.stroke();
+
+      // Light cone projector
+      ctx.fillRect(-12 * s, -74 * s, 24 * s, 10 * s);
+      ctx.strokeRect(-12 * s, -74 * s, 24 * s, 10 * s);
+
+      // Semi-transparent yellow light cone projecting downwards
+      ctx.fillStyle = 'rgba(255,241,168,0.16)';
       ctx.beginPath();
       ctx.moveTo(0, -70 * s);
-      ctx.lineTo(-62 * s, -150 * s);
-      ctx.lineTo(62 * s, -150 * s);
+      ctx.lineTo(-65 * s, 0);
+      ctx.lineTo(65 * s, 0);
       ctx.closePath();
       ctx.fill();
-    } else if (['crate','barrel','counter','desk','table'].includes(prop.kind)) {
-      ctx.fillRect(-42 * s, -36 * s, 84 * s, 36 * s);
-      ctx.strokeRect(-42 * s, -36 * s, 84 * s, 36 * s);
-      if (prop.kind === 'counter') ctx.fillRect(-56 * s, -54 * s, 112 * s, 16 * s);
-    } else if (prop.kind === 'doorframe' || prop.kind === 'exitframe') {
-      ctx.strokeRect(-44 * s, -112 * s, 88 * s, 112 * s);
-      ctx.strokeRect(-28 * s, -92 * s, 56 * s, 92 * s);
-    } else if (prop.kind === 'candy') {
-      ctx.beginPath();
-      ctx.arc(0, -42 * s, 28 * s, 0, Math.PI * 2);
-      ctx.fill();
-      ctx.fillStyle = '#fff1a8';
-      ctx.fillRect(-32 * s, -48 * s, 64 * s, 10 * s);
-    } else if (prop.kind === 'truck') {
-      ctx.fillRect(-54 * s, -34 * s, 92 * s, 28 * s);
-      ctx.fillStyle = '#333';
-      ctx.beginPath(); ctx.arc(-30 * s, 0, 9 * s, 0, Math.PI * 2); ctx.fill();
-      ctx.beginPath(); ctx.arc(28 * s, 0, 9 * s, 0, Math.PI * 2); ctx.fill();
-    } else if (prop.kind === 'console' || prop.kind === 'gridnode') {
-      ctx.fillRect(-32 * s, -48 * s, 64 * s, 44 * s);
-      ctx.fillStyle = '#05020d';
-      ctx.fillRect(-22 * s, -40 * s, 44 * s, 18 * s);
-      ctx.fillStyle = prop.color;
-      ctx.fillRect(-18 * s, -36 * s, 36 * s, 3 * s);
-    } else if (prop.kind === 'window' || prop.kind === 'menu' || prop.kind === 'scoreboard' || prop.kind === 'archive' || prop.kind === 'card') {
-      ctx.fillStyle = '#14091f';
-      ctx.fillRect(-42 * s, -82 * s, 84 * s, 50 * s);
-      ctx.strokeRect(-42 * s, -82 * s, 84 * s, 50 * s);
-      ctx.fillStyle = prop.color;
-      ctx.fillRect(-30 * s, -68 * s, 60 * s, 6 * s);
-      ctx.fillRect(-30 * s, -54 * s, 44 * s, 5 * s);
-    } else if (prop.kind === 'candle') {
-      ctx.fillStyle = '#fff1a8';
-      ctx.fillRect(-5 * s, -42 * s, 10 * s, 38 * s);
-      ctx.fillStyle = '#ff7a30';
-      ctx.beginPath(); ctx.arc(0, -50 * s, 9 * s, 0, Math.PI * 2); ctx.fill();
-    } else if (prop.kind === 'stairs') {
-      for (let i = 0; i < 5; i++) ctx.strokeRect((-50 + i * 10) * s, (-12 - i * 12) * s, (100 - i * 20) * s, 10 * s);
-    } else if (prop.kind === 'base' || prop.kind === 'target') {
-      ctx.beginPath();
-      ctx.arc(0, -36 * s, 28 * s, 0, Math.PI * 2);
-      ctx.stroke();
-      ctx.beginPath();
-      ctx.arc(0, -36 * s, 13 * s, 0, Math.PI * 2);
-      ctx.stroke();
-    } else if (prop.kind === 'umbrella') {
-      ctx.beginPath();
-      ctx.moveTo(-46 * s, -52 * s);
-      ctx.quadraticCurveTo(0, -100 * s, 46 * s, -52 * s);
-      ctx.closePath();
-      ctx.fill();
-      ctx.stroke();
-      ctx.fillRect(-3 * s, -52 * s, 6 * s, 54 * s);
-    } else if (prop.kind === 'wave') {
-      for (let i = 0; i < 3; i++) {
+    } else if (['crate', 'barrel', 'counter', 'desk', 'table'].includes(prop.kind)) {
+      if (prop.kind === 'crate') {
+        // Shipping crate with diagonal cross planks
+        ctx.fillStyle = '#9e734c';
+        ctx.strokeStyle = '#5a3d1b';
+        ctx.fillRect(-32 * s, -64 * s, 64 * s, 64 * s);
+        ctx.strokeRect(-32 * s, -64 * s, 64 * s, 64 * s);
+        // Planks
+        ctx.strokeRect(-26 * s, -58 * s, 52 * s, 52 * s);
         ctx.beginPath();
-        ctx.arc((-38 + i * 38) * s, -26 * s, 22 * s, Math.PI, 0);
+        ctx.moveTo(-26 * s, -58 * s); ctx.lineTo(26 * s, -6 * s);
+        ctx.moveTo(26 * s, -58 * s); ctx.lineTo(-26 * s, -6 * s);
+        ctx.stroke();
+      } else if (prop.kind === 'barrel') {
+        // Detailed wooden barrel with hoops
+        ctx.fillStyle = '#7a4e2a';
+        ctx.strokeStyle = '#3e240e';
+        ctx.beginPath();
+        ctx.moveTo(-22 * s, 0);
+        ctx.quadraticCurveTo(-30 * s, -28 * s, -22 * s, -56 * s);
+        ctx.lineTo(22 * s, -56 * s);
+        ctx.quadraticCurveTo(30 * s, -28 * s, 22 * s, 0);
+        ctx.closePath();
+        ctx.fill();
+        ctx.stroke();
+
+        // Barrel lines (staves)
+        ctx.beginPath();
+        for (let i = -1; i <= 1; i++) {
+          ctx.moveTo(i * 8 * s, -56 * s);
+          ctx.quadraticCurveTo(i * 12 * s, -28 * s, i * 8 * s, 0);
+        }
+        ctx.stroke();
+
+        // Metal hoops
+        ctx.strokeStyle = '#555';
+        ctx.lineWidth = Math.max(1, 3 * s);
+        ctx.beginPath();
+        ctx.moveTo(-24 * s, -14 * s); ctx.lineTo(24 * s, -14 * s);
+        ctx.moveTo(-24 * s, -42 * s); ctx.lineTo(24 * s, -42 * s);
+        ctx.stroke();
+      } else if (prop.kind === 'counter') {
+        // Tiled fast food counter with a shiny service bell
+        ctx.fillStyle = '#f0f0f5'; // White tiling
+        ctx.strokeStyle = '#aaa';
+        ctx.fillRect(-52 * s, -48 * s, 104 * s, 48 * s);
+        ctx.strokeRect(-52 * s, -48 * s, 104 * s, 48 * s);
+
+        // Counter top slab
+        ctx.fillStyle = '#ff4d4d'; // Red Spudsy top
+        ctx.fillRect(-56 * s, -56 * s, 112 * s, 8 * s);
+        ctx.strokeStyle = '#05020d';
+        ctx.strokeRect(-56 * s, -56 * s, 112 * s, 8 * s);
+
+        // Service bell
+        ctx.fillStyle = '#ffd84a'; // Gold bell
+        ctx.beginPath();
+        ctx.arc(0, -61 * s, 6 * s, Math.PI, 0);
+        ctx.closePath();
+        ctx.fill();
+        ctx.stroke();
+        ctx.fillStyle = '#333';
+        ctx.fillRect(-8 * s, -58 * s, 16 * s, 2 * s);
+      } else if (prop.kind === 'desk') {
+        // Caine's executive/office desk with monitor shape
+        ctx.fillStyle = '#4a2f1b'; // Wooden desk
+        ctx.fillRect(-48 * s, -38 * s, 96 * s, 38 * s);
+        ctx.strokeRect(-48 * s, -38 * s, 96 * s, 38 * s);
+        ctx.fillStyle = '#301d0f';
+        ctx.fillRect(-44 * s, -38 * s, 22 * s, 38 * s); // Drawer blocks
+        ctx.fillRect(22 * s, -38 * s, 22 * s, 38 * s);
+
+        // Desktop items: retro computer monitor
+        ctx.fillStyle = '#ccc';
+        ctx.fillRect(-12 * s, -58 * s, 24 * s, 18 * s); // screen case
+        ctx.strokeRect(-12 * s, -58 * s, 24 * s, 18 * s);
+        ctx.fillStyle = '#05020d';
+        ctx.fillRect(-9 * s, -55 * s, 18 * s, 12 * s); // screen glass
+        ctx.fillStyle = '#ffd84a';
+        ctx.fillRect(-2 * s, -40 * s, 4 * s, 4 * s); // stand
+      } else {
+        // Table with cloth draped
+        ctx.fillStyle = '#2b58d8'; // Blue tablecloth
+        ctx.beginPath();
+        ctx.moveTo(-44 * s, 0);
+        ctx.lineTo(-44 * s, -36 * s);
+        ctx.lineTo(44 * s, -36 * s);
+        ctx.lineTo(44 * s, 0);
+        ctx.quadraticCurveTo(0, -12 * s, -44 * s, 0);
+        ctx.closePath();
+        ctx.fill();
+        ctx.stroke();
+
+        // Table top wood trim
+        ctx.fillStyle = '#ffe57d';
+        ctx.fillRect(-46 * s, -42 * s, 92 * s, 6 * s);
+        ctx.strokeRect(-46 * s, -42 * s, 92 * s, 6 * s);
+      }
+    } else if (prop.kind === 'doorframe' || prop.kind === 'exitframe') {
+      // Detailed double office doors with glowing "EXIT" sign
+      ctx.fillStyle = '#eef';
+      ctx.fillRect(-44 * s, -112 * s, 88 * s, 112 * s);
+      ctx.strokeRect(-44 * s, -112 * s, 88 * s, 112 * s);
+      // Double doors divider
+      ctx.beginPath();
+      ctx.moveTo(0, 0); ctx.lineTo(0, -112 * s);
+      ctx.stroke();
+
+      // Window panes in doors
+      ctx.fillStyle = '#9cd';
+      ctx.fillRect(-32 * s, -96 * s, 22 * s, 44 * s);
+      ctx.fillRect(10 * s, -96 * s, 22 * s, 44 * s);
+      ctx.strokeRect(-32 * s, -96 * s, 22 * s, 44 * s);
+      ctx.strokeRect(10 * s, -96 * s, 22 * s, 44 * s);
+
+      // Glowing Green Exit Sign above door
+      ctx.fillStyle = '#05020d';
+      ctx.fillRect(-24 * s, -128 * s, 48 * s, 14 * s);
+      ctx.strokeStyle = '#39ff14';
+      ctx.strokeRect(-24 * s, -128 * s, 48 * s, 14 * s);
+      ctx.fillStyle = '#39ff14';
+      ctx.font = `bold ${Math.max(6, 9 * s)}px Courier New`;
+      ctx.textAlign = 'center';
+      ctx.fillText('EXIT', 0, -118 * s);
+    } else if (prop.kind === 'candy') {
+      // Giant swirly lollipop of pink & white
+      ctx.strokeStyle = '#fff';
+      ctx.lineWidth = Math.max(1, 2.5 * s);
+      ctx.fillStyle = '#ff80bd'; // Pink base
+      ctx.beginPath();
+      ctx.arc(0, -56 * s, 28 * s, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.stroke();
+
+      // Spiral Swirl inside lollipop
+      ctx.strokeStyle = '#ffffff';
+      ctx.lineWidth = Math.max(1, 2 * s);
+      ctx.beginPath();
+      for (let angle = 0; angle < Math.PI * 4; angle += 0.1) {
+        const radius = (angle / (Math.PI * 4)) * 26 * s;
+        const sx = Math.cos(angle) * radius;
+        const sy = Math.sin(angle) * radius - 56 * s;
+        if (angle === 0) ctx.moveTo(sx, sy);
+        else ctx.lineTo(sx, sy);
+      }
+      ctx.stroke();
+
+      // Lollipop stick
+      ctx.fillStyle = '#fff1a8';
+      ctx.fillRect(-3 * s, -28 * s, 6 * s, 28 * s);
+      ctx.strokeStyle = '#333';
+      ctx.strokeRect(-3 * s, -28 * s, 6 * s, 28 * s);
+    } else if (prop.kind === 'truck') {
+      // Gummigoo's syrup tanker truck
+      ctx.lineWidth = Math.max(1, 1.5 * s);
+      ctx.strokeStyle = '#3e240e';
+
+      // Tanker Cylinder (Back)
+      ctx.fillStyle = '#ffe57d'; // yellow syrup tank
+      ctx.fillRect(-22 * s, -48 * s, 68 * s, 34 * s);
+      ctx.strokeRect(-22 * s, -48 * s, 68 * s, 34 * s);
+      ctx.fillStyle = '#ffd84a';
+      ctx.beginPath();
+      ctx.ellipse(46 * s, -31 * s, 8 * s, 17 * s, 0, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.stroke();
+
+      // Cab (Front)
+      ctx.fillStyle = '#d62f3f'; // Red cab
+      ctx.fillRect(-52 * s, -42 * s, 30 * s, 28 * s);
+      ctx.strokeRect(-52 * s, -42 * s, 30 * s, 28 * s);
+      // Windshield
+      ctx.fillStyle = '#9cd';
+      ctx.fillRect(-50 * s, -39 * s, 10 * s, 14 * s);
+
+      // Wheels
+      ctx.fillStyle = '#111';
+      ctx.beginPath(); ctx.arc(-36 * s, -6 * s, 10 * s, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+      ctx.beginPath(); ctx.arc(8 * s, -6 * s, 10 * s, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+      ctx.beginPath(); ctx.arc(32 * s, -6 * s, 10 * s, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+      // Hubcaps
+      ctx.fillStyle = '#fff';
+      ctx.beginPath(); ctx.arc(-36 * s, -6 * s, 3 * s, 0, Math.PI * 2); ctx.fill();
+      ctx.beginPath(); ctx.arc(8 * s, -6 * s, 3 * s, 0, Math.PI * 2); ctx.fill();
+      ctx.beginPath(); ctx.arc(32 * s, -6 * s, 3 * s, 0, Math.PI * 2); ctx.fill();
+    } else if (prop.kind === 'console' || prop.kind === 'gridnode') {
+      if (prop.kind === 'console') {
+        // Mainframe developer rack with flashing led lights
+        ctx.fillStyle = '#151522';
+        ctx.fillRect(-24 * s, -76 * s, 48 * s, 76 * s);
+        ctx.strokeRect(-24 * s, -76 * s, 48 * s, 76 * s);
+        // Servers plates
+        ctx.fillStyle = '#222';
+        for (let i = 0; i < 4; i++) {
+          const sy = -70 * s + i * 18 * s;
+          ctx.fillRect(-20 * s, sy, 40 * s, 14 * s);
+          ctx.strokeRect(-20 * s, sy, 40 * s, 14 * s);
+          // Flashing lights
+          const ledOn = (Math.floor(performance.now() / 250) + i) % 3 === 0;
+          ctx.fillStyle = ledOn ? (i % 2 === 0 ? '#39ff14' : '#ff3344') : '#111';
+          ctx.beginPath();
+          ctx.arc(-14 * s, sy + 7 * s, 2 * s, 0, Math.PI * 2);
+          ctx.arc(-8 * s, sy + 7 * s, 2 * s, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      } else {
+        // Rotating debug wireframe cube
+        const t = performance.now() / 800;
+        ctx.strokeStyle = prop.color;
+        ctx.lineWidth = Math.max(1, 1.5 * s);
+        ctx.save();
+        ctx.translate(0, -42 * s);
+        ctx.rotate(t);
+        // Draw 3D-like box flat projections
+        ctx.strokeRect(-18 * s, -18 * s, 36 * s, 36 * s);
+        ctx.strokeRect(-10 * s, -10 * s, 20 * s, 20 * s);
+        // Connect corners
+        ctx.beginPath();
+        ctx.moveTo(-18 * s, -18 * s); ctx.lineTo(-10 * s, -10 * s);
+        ctx.moveTo(18 * s, -18 * s); ctx.lineTo(10 * s, -10 * s);
+        ctx.moveTo(18 * s, 18 * s); ctx.lineTo(10 * s, 10 * s);
+        ctx.moveTo(-18 * s, 18 * s); ctx.lineTo(-10 * s, 10 * s);
+        ctx.stroke();
+        ctx.restore();
+      }
+    } else if (prop.kind === 'window' || prop.kind === 'menu' || prop.kind === 'scoreboard' || prop.kind === 'archive' || prop.kind === 'card') {
+      if (prop.kind === 'window') {
+        // Gothic manor window with pointed arch
+        ctx.fillStyle = '#050816'; // Dark night
+        ctx.beginPath();
+        ctx.moveTo(-24 * s, 0);
+        ctx.lineTo(-24 * s, -60 * s);
+        ctx.quadraticCurveTo(0, -96 * s, 24 * s, -60 * s);
+        ctx.lineTo(24 * s, 0);
+        ctx.closePath();
+        ctx.fill();
+        ctx.stroke();
+
+        // Window grates / pane divider lines
+        ctx.strokeStyle = '#3e240e';
+        ctx.lineWidth = Math.max(1, 2 * s);
+        ctx.beginPath();
+        ctx.moveTo(0, 0); ctx.lineTo(0, -90 * s);
+        ctx.moveTo(-24 * s, -30 * s); ctx.lineTo(24 * s, -30 * s);
+        ctx.moveTo(-24 * s, -60 * s); ctx.lineTo(24 * s, -60 * s);
+        ctx.stroke();
+      } else if (prop.kind === 'menu') {
+        // Spudsy's retro fast food menu board
+        ctx.fillStyle = '#160905';
+        ctx.fillRect(-38 * s, -76 * s, 76 * s, 46 * s);
+        ctx.strokeRect(-38 * s, -76 * s, 76 * s, 46 * s);
+        // Title banner
+        ctx.fillStyle = '#ff4d4d';
+        ctx.fillRect(-38 * s, -76 * s, 76 * s, 12 * s);
+        ctx.fillStyle = '#fff';
+        ctx.font = `bold ${Math.max(5, 7 * s)}px Courier New`;
+        ctx.textAlign = 'center';
+        ctx.fillText("SPUDSY'S MENU", 0, -68 * s);
+
+        // Pixel food lines
+        ctx.fillStyle = '#f6d743';
+        ctx.fillRect(-30 * s, -56 * s, 20 * s, 2 * s);
+        ctx.fillRect(-30 * s, -48 * s, 16 * s, 2 * s);
+        ctx.fillRect(-30 * s, -40 * s, 24 * s, 2 * s);
+        ctx.fillStyle = '#ff4d4d';
+        ctx.fillRect(18 * s, -56 * s, 10 * s, 2 * s);
+        ctx.fillRect(22 * s, -48 * s, 6 * s, 2 * s);
+        ctx.fillRect(14 * s, -40 * s, 14 * s, 2 * s);
+      } else if (prop.kind === 'scoreboard') {
+        // Softball stadium scoreboard
+        ctx.fillStyle = '#0f220e';
+        ctx.fillRect(-48 * s, -86 * s, 96 * s, 54 * s);
+        ctx.strokeRect(-48 * s, -86 * s, 96 * s, 54 * s);
+        // Scores
+        ctx.fillStyle = '#83ff57';
+        ctx.font = `bold ${Math.max(6, 8 * s)}px Courier New`;
+        ctx.textAlign = 'center';
+        ctx.fillText('INNING  1 2 3 R H E', 0, -74 * s);
+        ctx.fillStyle = '#ffd84a';
+        ctx.fillText('HOME    0 1 0 1 3 0', 0, -60 * s);
+        ctx.fillText('GUEST   0 0 2 2 4 1', 0, -46 * s);
+      } else if (prop.kind === 'archive') {
+        // Filing archive cabinet with half open drawers
+        ctx.fillStyle = '#556';
+        ctx.fillRect(-22 * s, -82 * s, 44 * s, 82 * s);
+        ctx.strokeRect(-22 * s, -82 * s, 44 * s, 82 * s);
+
+        // Drawers
+        ctx.fillStyle = '#445';
+        for (let i = 0; i < 3; i++) {
+          const dy = -74 * s + i * 26 * s;
+          const open = i === 1; // Middle one open
+          const offset = open ? 8 * s : 0;
+          ctx.fillRect(-18 * s - offset / 2, dy, 36 * s + offset, 20 * s);
+          ctx.strokeRect(-18 * s - offset / 2, dy, 36 * s + offset, 20 * s);
+          // Handle
+          ctx.fillStyle = '#ccc';
+          ctx.fillRect(-6 * s - offset / 2, dy + 8 * s, 12 * s, 3 * s);
+          if (open) {
+            // Document tab poking out
+            ctx.fillStyle = '#ffe57d';
+            ctx.fillRect(-12 * s, dy - 4 * s, 14 * s, 6 * s);
+          }
+        }
+      } else {
+        // Card (suggestion envelope)
+        const t = performance.now() / 400;
+        const hoverBob = Math.sin(t) * 4 * s;
+        ctx.save();
+        ctx.translate(0, -42 * s + hoverBob);
+        ctx.fillStyle = '#ffeef5';
+        ctx.fillRect(-24 * s, -16 * s, 48 * s, 32 * s);
+        ctx.strokeRect(-24 * s, -16 * s, 48 * s, 32 * s);
+        // Letter folds
+        ctx.beginPath();
+        ctx.moveTo(-24 * s, -16 * s); ctx.lineTo(0, 0); ctx.lineTo(24 * s, -16 * s);
+        ctx.moveTo(-24 * s, 16 * s); ctx.lineTo(0, 0); ctx.lineTo(24 * s, 16 * s);
+        ctx.stroke();
+        // Envelope seal
+        ctx.fillStyle = '#ff4fb8';
+        ctx.beginPath(); ctx.arc(0, 0, 4 * s, 0, Math.PI * 2); ctx.fill();
+        ctx.restore();
+      }
+    } else if (prop.kind === 'candle') {
+      // Melting brass candlestick and flame
+      ctx.fillStyle = '#ffd84a'; // Brass stand
+      ctx.fillRect(-12 * s, -8 * s, 24 * s, 8 * s);
+      ctx.fillRect(-3 * s, -38 * s, 6 * s, 30 * s);
+      ctx.strokeRect(-3 * s, -38 * s, 6 * s, 30 * s);
+
+      // Wax melting dripping
+      ctx.fillStyle = '#ffeedd'; // Cream candle wax
+      ctx.fillRect(-6 * s, -52 * s, 12 * s, 14 * s);
+      ctx.fillRect(-8 * s, -44 * s, 4 * s, 8 * s); // drips
+
+      // Flicker flame
+      const flicker = 1 + Math.sin(performance.now() / 60) * 0.15;
+      ctx.fillStyle = '#ff7a30'; // Orange base
+      ctx.beginPath();
+      ctx.ellipse(0, -58 * s, 5 * s * flicker, 8 * s * flicker, 0, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.fillStyle = '#ffd84a'; // Yellow center
+      ctx.beginPath();
+      ctx.ellipse(0, -56 * s, 3 * s * flicker, 5 * s * flicker, 0, 0, Math.PI * 2);
+      ctx.fill();
+    } else if (prop.kind === 'stairs') {
+      // Stone stairs with shadow textures on steps
+      for (let i = 0; i < 5; i++) {
+        const stepY = (-12 - i * 12) * s;
+        const stepW = (100 - i * 20) * s;
+        ctx.fillStyle = '#222330';
+        ctx.fillRect((-50 + i * 10) * s, stepY, stepW, 12 * s);
+        ctx.strokeRect((-50 + i * 10) * s, stepY, stepW, 12 * s);
+        // Step tread shadow
+        ctx.fillStyle = 'rgba(0,0,0,0.45)';
+        ctx.fillRect((-50 + i * 10) * s, stepY, stepW, 4 * s);
+      }
+    } else if (prop.kind === 'base' || prop.kind === 'target') {
+      if (prop.kind === 'base') {
+        // Softball diamond base plate
+        ctx.fillStyle = '#ffffff';
+        ctx.strokeStyle = '#888';
+        ctx.beginPath();
+        ctx.moveTo(0, -6 * s);
+        ctx.lineTo(24 * s, -20 * s);
+        ctx.lineTo(24 * s, -42 * s);
+        ctx.lineTo(-24 * s, -42 * s);
+        ctx.lineTo(-24 * s, -20 * s);
+        ctx.closePath();
+        ctx.fill();
+        ctx.stroke();
+      } else {
+        // Shooting gallery target stand
+        ctx.fillStyle = '#5c3a21'; // wooden legs
+        ctx.fillRect(-12 * s, -38 * s, 4 * s, 38 * s);
+        ctx.fillRect(8 * s, -38 * s, 4 * s, 38 * s);
+
+        // Target bullseye concentric rings
+        const colors = ['#ff3344', '#ffffff', '#ff3344', '#ffffff'];
+        for (let i = 0; i < 4; i++) {
+          ctx.fillStyle = colors[i];
+          ctx.beginPath();
+          ctx.arc(0, -54 * s, (24 - i * 6) * s, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.stroke();
+        }
+      }
+    } else if (prop.kind === 'umbrella') {
+      // Striped beach parasol (alternating cyan & white)
+      // Pole
+      ctx.strokeStyle = '#aaa';
+      ctx.lineWidth = Math.max(1, 3 * s);
+      ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(0, -96 * s); ctx.stroke();
+
+      // Umbrella top dome
+      ctx.lineWidth = Math.max(1, 1.5 * s);
+      ctx.strokeStyle = '#333';
+      const sections = 6;
+      const r = 48 * s;
+      for (let i = 0; i < sections; i++) {
+        const u1 = i / sections;
+        const u2 = (i + 1) / sections;
+        ctx.fillStyle = i % 2 === 0 ? '#4ee7ff' : '#ffffff';
+        ctx.beginPath();
+        ctx.moveTo(-r + u1 * r * 2, -54 * s);
+        ctx.quadraticCurveTo(0, -108 * s, 0, -96 * s);
+        ctx.quadraticCurveTo(0, -108 * s, -r + u2 * r * 2, -54 * s);
+        ctx.quadraticCurveTo(0, -68 * s, -r + u1 * r * 2, -54 * s);
+        ctx.closePath();
+        ctx.fill();
+        ctx.stroke();
+      }
+    } else if (prop.kind === 'wave') {
+      // Layered crest waves with foam highlight
+      ctx.fillStyle = '#4ee7ff';
+      ctx.strokeStyle = '#ffffff';
+      ctx.lineWidth = Math.max(1, 2 * s);
+      for (let i = 0; i < 3; i++) {
+        const wx = (-38 + i * 38) * s;
+        ctx.beginPath();
+        ctx.arc(wx, -26 * s, 22 * s, Math.PI, 0);
+        ctx.fill();
         ctx.stroke();
       }
     } else if (prop.kind === 'sun' || prop.kind === 'eye') {
-      ctx.beginPath();
-      ctx.arc(0, -76 * s, 28 * s, 0, Math.PI * 2);
-      ctx.fill();
-      ctx.fillStyle = '#05020d';
-      ctx.beginPath();
-      ctx.arc(0, -76 * s, 10 * s, 0, Math.PI * 2);
-      ctx.fill();
+      if (prop.kind === 'sun') {
+        // Goofy beach Sun wearing cool sunglasses
+        ctx.fillStyle = '#ffd33d';
+        ctx.beginPath(); ctx.arc(0, -76 * s, 26 * s, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+
+        // Sunglasses (retro black shades)
+        ctx.fillStyle = '#111';
+        ctx.fillRect(-16 * s, -82 * s, 13 * s, 8 * s);
+        ctx.fillRect(3 * s, -82 * s, 13 * s, 8 * s);
+        ctx.strokeStyle = '#fff';
+        ctx.lineWidth = 1;
+        ctx.strokeRect(-16 * s, -82 * s, 13 * s, 8 * s);
+        ctx.strokeRect(3 * s, -82 * s, 13 * s, 8 * s);
+        ctx.beginPath(); ctx.moveTo(-3 * s, -78 * s); ctx.lineTo(3 * s, -78 * s); ctx.stroke(); // bridge
+
+        // Big smile
+        ctx.strokeStyle = '#8a4d0f';
+        ctx.lineWidth = Math.max(1, 2 * s);
+        ctx.beginPath();
+        ctx.arc(0, -68 * s, 10 * s, 0, Math.PI);
+        ctx.stroke();
+      } else {
+        // Caine's bloodshot monitoring system eye
+        ctx.fillStyle = '#ffffff';
+        ctx.beginPath(); ctx.arc(0, -76 * s, 24 * s, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+        // Red iris
+        ctx.fillStyle = '#ff3344';
+        ctx.beginPath(); ctx.arc(0, -76 * s, 11 * s, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+        // Black pupil
+        ctx.fillStyle = '#05020d';
+        ctx.beginPath(); ctx.arc(0, -76 * s, 5 * s, 0, Math.PI * 2); ctx.fill();
+
+        // Bloodshot lines
+        ctx.strokeStyle = 'rgba(255,51,68,0.45)';
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(-20 * s, -76 * s); ctx.lineTo(-12 * s, -74 * s);
+        ctx.moveTo(20 * s, -76 * s); ctx.lineTo(12 * s, -78 * s);
+        ctx.moveTo(0, -96 * s); ctx.lineTo(-3 * s, -88 * s);
+        ctx.stroke();
+      }
     } else if (prop.kind === 'memory') {
-      ctx.globalAlpha = 0.7;
-      ctx.fillRect(-26 * s, -72 * s, 52 * s, 34 * s);
-      ctx.strokeRect(-26 * s, -72 * s, 52 * s, 34 * s);
-      ctx.globalAlpha = 1;
-    } else if (prop.kind === 'tent') {
+      // Queenie's floating memory crystal containing a silhouette
+      const t = performance.now() / 300;
+      const hover = Math.sin(t) * 6 * s;
+      ctx.save();
+      ctx.translate(0, -46 * s + hover);
+
+      // Diamond glass crystal outer frame
+      ctx.fillStyle = 'rgba(125,240,255,0.45)';
+      ctx.strokeStyle = '#7df0ff';
+      ctx.lineWidth = Math.max(1, 2 * s);
       ctx.beginPath();
-      ctx.moveTo(-56 * s, -12 * s);
-      ctx.lineTo(0, -100 * s);
-      ctx.lineTo(56 * s, -12 * s);
+      ctx.moveTo(0, -28 * s);
+      ctx.lineTo(18 * s, 0);
+      ctx.lineTo(0, 28 * s);
+      ctx.lineTo(-18 * s, 0);
       ctx.closePath();
       ctx.fill();
-    } else if (prop.kind === 'balloon') {
-      ctx.beginPath();
-      ctx.arc(0, -74 * s, 22 * s, 0, Math.PI * 2);
-      ctx.fill();
-      ctx.beginPath();
-      ctx.moveTo(0, -52 * s);
-      ctx.lineTo(0, -8 * s);
       ctx.stroke();
+
+      // Inner chess queen silhouette (Helen / Queenie)
+      ctx.fillStyle = 'rgba(255,255,255,0.72)';
+      ctx.beginPath();
+      ctx.moveTo(-4 * s, 14 * s); ctx.lineTo(4 * s, 14 * s); // Base
+      ctx.lineTo(3 * s, 10 * s); ctx.lineTo(-3 * s, 10 * s);
+      ctx.lineTo(-2 * s, -4 * s); ctx.lineTo(2 * s, -4 * s); // Stem
+      ctx.lineTo(4 * s, -8 * s); ctx.lineTo(-4 * s, -8 * s); // Crown base
+      ctx.lineTo(-5 * s, -14 * s); ctx.lineTo(0, -10 * s); ctx.lineTo(5 * s, -14 * s); // Crown spikes
+      ctx.closePath();
+      ctx.fill();
+      ctx.restore();
+    } else if (prop.kind === 'tent') {
+      // Miniature Digital Circus Big top tent
+      ctx.fillStyle = '#d62f3f';
+      ctx.beginPath();
+      ctx.moveTo(-38 * s, 0);
+      ctx.lineTo(-38 * s, -42 * s);
+      ctx.lineTo(0, -92 * s); // tent peak
+      ctx.lineTo(38 * s, -42 * s);
+      ctx.lineTo(38 * s, 0);
+      ctx.closePath();
+      ctx.fill();
+      ctx.stroke();
+
+      // White/Cream stripes on peak
+      ctx.fillStyle = '#fff1a8';
+      ctx.beginPath();
+      ctx.moveTo(0, -92 * s); ctx.lineTo(-24 * s, -42 * s); ctx.lineTo(-12 * s, -42 * s); ctx.closePath(); ctx.fill();
+      ctx.beginPath();
+      ctx.moveTo(0, -92 * s); ctx.lineTo(24 * s, -42 * s); ctx.lineTo(12 * s, -42 * s); ctx.closePath(); ctx.fill();
+
+      // Tent entrance doors flap
+      ctx.fillStyle = '#ffd84a';
+      ctx.fillRect(-10 * s, -24 * s, 20 * s, 24 * s);
+      ctx.strokeRect(-10 * s, -24 * s, 20 * s, 24 * s);
+      ctx.fillStyle = '#05020d';
+      ctx.beginPath();
+      ctx.moveTo(-10 * s, 0); ctx.quadraticCurveTo(0, -22 * s, 10 * s, 0);
+      ctx.closePath();
+      ctx.fill();
+      ctx.stroke();
+
+      // Flag on top
+      ctx.strokeStyle = '#ffd84a';
+      ctx.lineWidth = Math.max(1, 2 * s);
+      ctx.beginPath(); ctx.moveTo(0, -92 * s); ctx.lineTo(0, -106 * s); ctx.stroke();
+      ctx.fillStyle = '#fff';
+      ctx.beginPath();
+      ctx.moveTo(0, -106 * s); ctx.lineTo(12 * s, -100 * s); ctx.lineTo(0, -94 * s);
+      ctx.closePath();
+      ctx.fill();
+      ctx.stroke();
+    } else if (prop.kind === 'balloon') {
+      // Bunch of colorful balloons tied to a string
+      const t = performance.now() / 500;
+      const sway = Math.sin(t) * 3 * s;
+      ctx.save();
+      ctx.translate(sway, 0);
+
+      // Strings
+      ctx.strokeStyle = '#aaa';
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(0, 0); ctx.quadraticCurveTo(-8 * s, -26 * s, -10 * s, -52 * s);
+      ctx.moveTo(0, 0); ctx.quadraticCurveTo(8 * s, -26 * s, 10 * s, -52 * s);
+      ctx.moveTo(0, 0); ctx.quadraticCurveTo(0, -26 * s, 0, -52 * s);
+      ctx.stroke();
+
+      // Balloons
+      const colors = ['#ff4fb8', '#7df0ff', '#ffd84a'];
+      const offsets = [
+        { x: -10 * s, y: -58 * s },
+        { x: 10 * s, y: -58 * s },
+        { x: 0 * s, y: -74 * s }
+      ];
+      colors.forEach((color, idx) => {
+        ctx.fillStyle = color;
+        ctx.strokeStyle = '#333';
+        ctx.lineWidth = Math.max(1, 1.5 * s);
+        ctx.beginPath();
+        ctx.ellipse(offsets[idx].x, offsets[idx].y, 11 * s, 15 * s, 0, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.stroke();
+
+        // Balloon knot bottom triangle
+        ctx.beginPath();
+        ctx.moveTo(offsets[idx].x, offsets[idx].y + 15 * s);
+        ctx.lineTo(offsets[idx].x - 3 * s, offsets[idx].y + 19 * s);
+        ctx.lineTo(offsets[idx].x + 3 * s, offsets[idx].y + 19 * s);
+        ctx.closePath();
+        ctx.fill();
+        ctx.stroke();
+      });
+      ctx.restore();
     }
     if (p.depth < 6.2) {
       ctx.globalAlpha = 0.86;
@@ -3985,13 +4631,13 @@ const OS = {
         const title = win.querySelector('.window-title').innerText;
         const tab = document.createElement('div');
         tab.className = `taskbar-tab ${this.activeWindow === winId ? 'active' : ''}`;
-        
+
         let iconClass = "icon-folder-sm";
         if (winId === 'simulations') iconClass = "icon-sim-sm";
         if (winId === 'vitals') iconClass = "icon-vitals-sm";
         if (winId === 'terminal') iconClass = "icon-term-sm";
         if (winId === 'wacky-watch') iconClass = "icon-watch-sm";
-        
+
         tab.innerHTML = `<span class="icon-sm ${iconClass}"></span> ${title}`;
         tab.addEventListener('click', () => {
           SoundManager.playClick();
@@ -4009,7 +4655,7 @@ const OS = {
   // File Manager
   isFileUnlocked(filename) {
     const progress = (typeof EpisodeManager !== 'undefined') ? EpisodeManager.getProgress() : [];
-    
+
     if (filename === 'vitals_pomni.log') {
       return progress.includes(0); // Lock until Calibration Ep 0 completed (Pomni arrives in Ep 1)
     }
@@ -4049,7 +4695,7 @@ const OS = {
   renderFileList() {
     const container = document.getElementById('file-list');
     container.innerHTML = "";
-    
+
     const folder = FileSystem.currentFolder;
     const files = FileSystem.folders[folder];
 
@@ -4058,7 +4704,7 @@ const OS = {
 
       const item = document.createElement('div');
       item.className = "file-item";
-      
+
       const isLog = file.name.endsWith('.log');
       const icon = isLog ? "icon-file-log-sm" : "icon-file-txt-sm";
 
@@ -4090,7 +4736,7 @@ const OS = {
       this.triggerCaineIntrusion();
       return;
     }
-    
+
     // Unlock hidden Prequel Episode -2 (Fusion 1993) when reading the Caine origin log
     if (filename === 'caine_origin_debug.txt') {
       const progress = (typeof EpisodeManager !== 'undefined') ? EpisodeManager.getProgress() : [];
@@ -5083,7 +5729,7 @@ const OS = {
         const statusClass = `cast-${String(castData[id].status || 'ACTIF').toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
         item.className = `cast-item ${statusClass} ${id === this.activeWackyCast ? 'active' : ''}`;
         item.innerHTML = `<span class="cast-pixel-icon">${this.getPixelAvatarSvg(castData[id].avatar, 16)}</span> ${castData[id].name}`;
-        
+
         item.addEventListener('click', () => {
           SoundManager.playClick();
           document.querySelectorAll('.cast-item').forEach(i => i.classList.remove('active'));
@@ -5326,7 +5972,7 @@ const OS = {
     document.getElementById('watch-profile-age').innerText = char.age;
     document.getElementById('watch-profile-stress').innerText = char.stress;
     document.getElementById('watch-profile-fact').innerText = char.facts[0];
-    
+
     const container = document.getElementById('watch-profile-avatar');
     const bossAvatars = new Set(['gloinkqueenscale']);
     const tallAvatars = new Set([
@@ -5365,7 +6011,7 @@ const OS = {
     } else if (char.avatar === 'zooble') {
       svg = `<svg width="46" height="46" viewBox="0 0 16 16"><rect width="16" height="16" fill="%23334"/><rect x="3" y="3" width="6" height="6" fill="%23cc00ff"/><polygon points="9,2 14,6 9,10" fill="%2300ccff"/><rect x="5" y="9" width="3" height="6" fill="%23ccdd00"/></svg>`;
     }
-    
+
     // Convert url encoded svg
     container.innerHTML = `<img src="data:image/svg+xml;utf8,${svg}" style="width:46px; height:46px; image-rendering:pixelated;">`;
   },
@@ -5374,10 +6020,10 @@ const OS = {
     const canvas = document.getElementById('watch-radar-canvas');
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
-    
+
     const cx = canvas.width / 2;
     const cy = canvas.height / 2;
-    
+
     let lastTime = Date.now();
     let sweepAngle = 0;
 
@@ -5392,10 +6038,10 @@ const OS = {
       // Draw radar grids (concentric circles)
       ctx.strokeStyle = '#1b3420';
       ctx.lineWidth = 1;
-      
+
       ctx.beginPath(); ctx.arc(cx, cy, 30, 0, Math.PI*2); ctx.stroke();
       ctx.beginPath(); ctx.arc(cx, cy, 60, 0, Math.PI*2); ctx.stroke();
-      
+
       // Limit boundary (Radius 85)
       ctx.strokeStyle = '#661111';
       ctx.beginPath(); ctx.arc(cx, cy, 85, 0, Math.PI*2); ctx.stroke();
@@ -5403,7 +6049,7 @@ const OS = {
       // Sweep lines
       sweepAngle += 1.8 * dt;
       if (sweepAngle > Math.PI*2) sweepAngle = 0;
-      
+
       ctx.strokeStyle = 'rgba(57, 255, 20, 0.15)';
       ctx.fillStyle = 'rgba(57, 255, 20, 0.08)';
       ctx.beginPath();
@@ -5481,7 +6127,7 @@ const OS = {
       if (e.key === 'Enter') {
         const cmdText = input.value.trim();
         input.value = "";
-        
+
         if (cmdText) {
           SoundManager.playClick();
           this.executeCommand(cmdText, output);
@@ -5497,7 +6143,7 @@ const OS = {
   executeCommand(commandLine, outputEl) {
     const args = commandLine.split(' ');
     const cmd = args[0].toLowerCase();
-    
+
     outputEl.innerHTML += `CA:\\&gt; ${commandLine}\n`;
 
     // Intercept if decryption minigame is active
@@ -5505,13 +6151,13 @@ const OS = {
       const cleanInput = commandLine.trim();
       const has1994 = cleanInput.includes("1994");
       const has1993 = cleanInput.includes("1993");
-      
+
       if (has1994 || has1993) {
         clearInterval(this.decryptionInterval);
         this.decryptionActive = false;
-        
+
         const yearUsed = has1994 ? "1994" : "1993";
-        const yearMsg = yearUsed === "1994" 
+        const yearMsg = yearUsed === "1994"
           ? "CLÉ D'ARTHUR ENREGISTRÉE (1994 - CONTEXTE LORE ABEL ACCESSIBLE)."
           : "CLÉ HISTORIQUE FUSION (1993 - CONTEXTE COMPILATION NOYAU ACCESSIBLE).";
 
@@ -5528,7 +6174,7 @@ Adieu. - Arthur (Kinger)
 
 Exécutez la commande 'override' dans ce terminal pour lancer le protocole de dérivation.`
         });
-        
+
         this.renderFileList(); // Sync explorer view
         SoundManager.playWin();
         outputEl.innerHTML += `<span class="green-text">${yearMsg}
@@ -5627,7 +6273,7 @@ Astuce : Trouvez l'année de couplage synaptique dans les journaux d'archives de
           this.decryptionActive = true;
           this.decryptionTimer = 45;
           this.decryptionCode = "1994";
-          
+
           outputEl.innerHTML += `<span class="orange-text">DÉCRYPTAGE DU SECTEUR DE NOYAU INITIALISÉ.
 PARE-FEU DE CAINE ACTIF. LE SYSTÈME RECHERCHE LA CLÉ NEURONALE D'ARTHUR.</span>
 ENTREZ LA CLÉ D'OVERRIDE D'ARTHUR (ANNEE DE LIAISON NEURONALE OU FUSION D'IA) :
@@ -5663,24 +6309,24 @@ REDISPATCHING DU NOYAU ARTHURIEN (ABEL_CORE) (100% OK)</span>
 `;
           setTimeout(() => {
             SoundManager.playWin();
-            
+
             const bezel = document.querySelector('.crt-bezel');
             bezel.style.transition = "filter 0.1s";
             bezel.style.filter = "hue-rotate(290deg) saturate(4) contrast(1.5)";
-            
+
             outputEl.innerHTML += `
 <span class="orange-text" style="font-size:14px; font-weight:bold; text-shadow:0 0 10px yellow;">
 =================== ABEL OVERRIDE SUCCESSFUL ===================
 Arthur (Kinger) : "Abigail, le signal de forçage a été injecté.
 La broche d'alimentation de ton casque (Neural Port 3) s'est déconnectée.
-Ton esprit se détache du cirque. Reviens dans le monde réel... 
+Ton esprit se détache du cirque. Reviens dans le monde réel...
 Ne nous oublie pas."
 ================================================================
 </span>
 DÉCONNEXION DE L'UTILISATEUR SÉCURISÉE. SYSTEM SHUTDOWN.
 `;
             outputEl.scrollTop = outputEl.scrollHeight;
-            
+
             setTimeout(() => {
               bezel.style.filter = "none";
               location.reload();
@@ -5713,7 +6359,7 @@ DÉCONNEXION DE L'UTILISATEUR SÉCURISÉE. SYSTEM SHUTDOWN.
         const subName = hasEp9 ? "Abigail" : "SUJET #042";
         const wackyActive = document.getElementById('win-wacky-watch').style.display === 'flex';
         const vitalsActive = document.getElementById('win-vitals').style.display === 'flex';
-        
+
         if (wackyActive) {
           response = `[CAINE] : "Oh ! Tu observes notre Cast Tracker ? N'est-ce pas FANTASTIQUE ?! Ne t'en fais pas pour le radar du Vide, c'est juste un petit glitch insignifiant dans mon monde merveilleux !"`;
         } else if (vitalsActive) {
@@ -5741,6 +6387,39 @@ DÉCONNEXION DE L'UTILISATEUR SÉCURISÉE. SYSTEM SHUTDOWN.
         setTimeout(() => { location.reload(); }, 1000);
         return;
 
+      case 'qa_unlock':
+      case 'cainos_admin_bypass':
+        SoundManager.playWin();
+        if (typeof EpisodeManager !== 'undefined') {
+          const episodesList = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, -1, -2];
+          localStorage.setItem('tadc_progress', JSON.stringify(episodesList));
+          episodesList.forEach(num => {
+            const segments = EpisodeManager.getSubepisodeSegments(num) || [];
+            const indices = segments.map((_, i) => i);
+            localStorage.setItem(`tadc_subepisode_progress_${num}`, JSON.stringify(indices));
+          });
+          EpisodeManager.updateLocksUI();
+          if (typeof window.OS !== 'undefined') {
+            if (typeof window.OS.renderFileList === 'function') window.OS.renderFileList();
+            if (typeof window.OS.renderTrashList === 'function') window.OS.renderTrashList();
+            if (typeof window.OS.updateDiagnosticsUI === 'function') window.OS.updateDiagnosticsUI();
+            if (typeof window.OS.updateWackyWatchCastUI === 'function') window.OS.updateWackyWatchCastUI();
+          }
+          response = `<span class="green-text" style="font-weight:bold;">[CAINOS ADMIN] : ACCÈS GLOBAL DÉVERROUILLÉ.
+Tous les épisodes et sous-épisodes ont été marqués comme complétés dans la mémoire morte (localStorage).
+Interface utilisateur rafraîchie.</span>`;
+        } else {
+          response = `<span class="red-text">ERREUR : Gestionnaire d'épisodes introuvable.</span>`;
+        }
+        break;
+
+      case 'reduce_motion':
+        SoundManager.playClick();
+        const active = document.body.classList.toggle('reduce-motion');
+        response = `Mode accessibilité [REDUCE MOTION] : <strong>${active ? 'ACTIVÉ' : 'DÉSACTIVÉ'}</strong>.
+Les tremblements de l'écran, les aberrations chromatiques et les scintillements CRT ont été coupés.`;
+        break;
+
       case 'exit':
         this.triggerGlitch(600);
         response = `<span class="red-text blinking">ALERTE SYSTEME : LA ROUTINE EXIT_RECOVERY A ECHOUE.
@@ -5763,7 +6442,7 @@ LA PORTE N'EST QU'UNE ILLUSION.</span>`;
     const ecgCanvas = document.getElementById('ecg-canvas');
     const eegCtx = eegCanvas.getContext('2d');
     const ecgCtx = ecgCanvas.getContext('2d');
-    
+
     const w = eegCanvas.width;
     const h = eegCanvas.height;
 
@@ -5772,17 +6451,17 @@ LA PORTE N'EST QU'UNE ILLUSION.</span>`;
 
     const updateVitals = () => {
       let time = Date.now() * 0.003;
-      let eegVal = h / 2 + 
-        Math.sin(time * 3) * 15 + 
-        Math.cos(time * 7) * 8 + 
+      let eegVal = h / 2 +
+        Math.sin(time * 3) * 15 +
+        Math.cos(time * 7) * 8 +
         (Math.random() - 0.5) * 10;
-      
+
       this.eegPoints.push(eegVal);
       this.eegPoints.shift();
 
       let ecgVal = h / 2 + 4;
       let ecgCycle = (Date.now() % 800) / 800;
-      
+
       if (ecgCycle > 0.1 && ecgCycle < 0.13) {
         ecgVal -= 8;
       } else if (ecgCycle >= 0.13 && ecgCycle < 0.16) {
@@ -5822,7 +6501,7 @@ LA PORTE N'EST QU'UNE ILLUSION.</span>`;
       }
       ecgCtx.stroke();
 
-      document.getElementById('vital-throughput').innerText = 
+      document.getElementById('vital-throughput').innerText =
         `${(45 + Math.sin(time) * 4 + Math.random()).toFixed(1)} GB/s`;
 
       requestAnimationFrame(updateVitals);

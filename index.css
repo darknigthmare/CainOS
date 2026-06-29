@@ -3500,3 +3500,30 @@ body {
 .sim-card.current-card {
   animation: pulse-border 2s ease-in-out infinite;
 }
+
+/* Reduce Motion accessibility overrides */
+body.reduce-motion *,
+body.reduce-motion *::before,
+body.reduce-motion *::after {
+  animation-delay: -1ms !important;
+  animation-duration: 1ms !important;
+  animation-iteration-count: 1 !important;
+  background-attachment: scroll !important;
+  scroll-behavior: auto !important;
+  transition-duration: 0s !important;
+  transition-delay: 0s !important;
+}
+
+body.reduce-motion .crt-flicker,
+body.reduce-motion .crt-bezel::after,
+body.reduce-motion .crt-bezel::before {
+  animation: none !important;
+}
+
+body.reduce-motion .glitch-active,
+body.reduce-motion .shake-active,
+body.reduce-motion .glitching,
+body.reduce-motion .crt-shake-active {
+  animation: none !important;
+  transform: none !important;
+}

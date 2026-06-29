@@ -108,7 +108,10 @@
                 </div>
                 <div class="window-body sim-window-body">
                   <div class="sim-selector">
-                    <h3>Simulation d'Épisodes</h3>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                      <h3 style="margin: 0;">Simulation d'Épisodes</h3>
+                      <button id="btn-toggle-music" class="retro-btn btn-sm" style="font-weight: bold; min-width: 155px;" title="Changer de canal musical">🎵 CANAL: VALSE</button>
+                    </div>
                     <div class="sim-card active" data-episode="0">
                       <div class="sim-card-icon">00</div>
                       <div class="sim-card-info">
@@ -508,7 +511,10 @@
                         <canvas id="story-micro-canvas" width="500" height="280"></canvas>
                         <div class="micro-footer">
                           <p id="story-micro-objective">Objectif de synchronisation.</p>
-                          <button id="btn-story-micro-action" class="retro-btn btn-primary-retro">INITIALISER</button>
+                          <div style="display: flex; gap: 8px;">
+                            <button id="btn-story-micro-reset" class="retro-btn btn-sm text-red" style="color: #ff3344; font-weight: bold; border-color: #ff3344;">RESET MODULE</button>
+                            <button id="btn-story-micro-action" class="retro-btn btn-primary-retro">INITIALISER</button>
+                          </div>
                         </div>
                       </div>
 
