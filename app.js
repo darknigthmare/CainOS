@@ -252,6 +252,7 @@ const OS = {
   radarAnimationId: null,
   wasShutdownByCalibration: false,
   calibrationStartupTimers: [],
+  toolsActiveTab: 'map',
 
   init() {
     this.setupAudio();
@@ -279,6 +280,7 @@ const OS = {
     this.setupEvents();
     EpisodeManager.init();
     this.setupWackyWatch();
+    this.setupCainOSTools();
     this.setupIntrusionTriggers();
     this.updateDiagnosticsUI();
     this.applySystemStateUI();
@@ -318,6 +320,19 @@ const OS = {
       'watch-btn-refresh-fact': 'Afficher un autre fait Wacky Watch sur ce personnage.',
       'watch-btn-ping': 'Envoyer un ping de rappel Caine dans le radar.',
       'watch-cast-search': 'Filtrer les fiches par nom, statut ou signal.',
+      'tools-tab-map': 'Afficher les lieux de simulation visites et verrouilles.',
+      'tools-tab-evidence': 'Afficher les preuves lore et leurs sources de progression.',
+      'tools-tab-inventory': 'Afficher les objets de scene recuperes dans la simulation.',
+      'tools-tab-relations': 'Afficher la confiance/tension par personnage.',
+      'tools-tab-achievements': 'Afficher les succes lore et progression.',
+      'tools-tab-inspector': 'Verifier les incoherences lore ou progression.',
+      'tools-tab-settings': 'Regler les options de confort, audio et accessibilite.',
+      'setting-comfort-reading': 'Agrandir et aerer le texte narratif.',
+      'setting-line-pause': 'Ajouter une pause apres les lignes importantes du transcript.',
+      'setting-easy-minigames': 'Assouplir les objectifs des mini-jeux sans changer le lore.',
+      'setting-reader-only': 'Autoriser la lecture des episodes sans validation de mini-jeu.',
+      'setting-audio-ambience': 'Regler le volume des ambiances originales CainOS.',
+      'setting-audio-glitch': 'Regler le niveau des effets glitch originaux.',
       'start-btn': 'Ouvrir le menu C&A Start.',
       'taskbar-circus-entry': 'Ouvrir l entree immersive du chapiteau digital, separee du controle des episodes.',
       'dialog-close-x': 'Fermer cette fenetre de dialogue.',
@@ -824,7 +839,8 @@ const OS = {
       files: { x: 14, y: 106 },
       vitals: { x: 122, y: 106 },
       terminal: { x: 14, y: 198 },
-      trash: { x: 122, y: 198 }
+      trash: { x: 122, y: 198 },
+      'cainos-tools': { x: 230, y: 14 }
     };
     return defaultLayout[winId] || { x: 14 + (index % 2) * 108, y: 14 + Math.floor(index / 2) * 92 };
   },
@@ -1608,6 +1624,7 @@ const OS = {
       raf: null
     };
     this.prepareCircusSimulationRoom();
+    this.markCainOSZoneVisited(2);
     this.loadCircusAvatarSheets();
     if (typeof SoundManager.startContextPulse === 'function') {
       SoundManager.startContextPulse('circus');
@@ -2099,6 +2116,10 @@ const OS = {
     state.interactionMessage = option.response;
     state.interactionChoices = null;
     state.interactionUntil = performance.now() + 7200;
+    if (choices.avatar) {
+      const delta = option.label === 'Profil' ? 1 : option.label === 'Routine' ? 0 : 3;
+      this.adjustCainOSRelation(choices.avatar, delta);
+    }
     if (state.detailEl) state.detailEl.innerText = option.response;
     SoundManager.play(620 + index * 80, 0.08, 'triangle', 0.045);
   },
@@ -2138,6 +2159,7 @@ const OS = {
     const specialOptions = special[avatar] || special[sprite.type] || [];
     return {
       speaker: sprite.name,
+      avatar,
       prompt: introLine,
       options: [
         ...(specialOptions.slice(0, 2)),
@@ -2498,6 +2520,7 @@ const OS = {
     state.selectedExitIndex = 0;
     state.hotspots = [];
     this.prepareCircusSimulationRoom();
+    this.markCainOSZoneVisited(zoneId);
     if (playSound) SoundManager.play(660, 0.08, 'triangle', 0.05);
     if (typeof SoundManager.startContextPulse === 'function') {
       const motif = state.scenes[zoneId]?.motif || 'circus';
@@ -4607,6 +4630,9 @@ const OS = {
       if (winId === 'trash') {
         this.renderTrashList();
       }
+      if (winId === 'cainos-tools') {
+        this.renderCainOSTools();
+      }
       if (winId === 'simulations') {
         const powerLed = document.getElementById('power-led');
         if (powerLed && powerLed.classList.contains('active')) {
@@ -4873,6 +4899,270 @@ const OS = {
       });
       list.appendChild(item);
     });
+  },
+
+  setupCainOSTools() {
+    const tabTooltips = {
+      map: 'Afficher les lieux de simulation visites et verrouilles.',
+      evidence: 'Afficher les preuves lore et leurs sources de progression.',
+      inventory: 'Afficher les objets de scene recuperes dans la simulation.',
+      relations: 'Afficher la confiance/tension par personnage.',
+      achievements: 'Afficher les succes lore et progression.',
+      inspector: 'Verifier les incoherences lore ou progression.',
+      settings: 'Regler les options de confort, audio et accessibilite.'
+    };
+    document.querySelectorAll('.tools-tab').forEach(button => {
+      const tabKey = button.getAttribute('data-tools-tab');
+      if (tabTooltips[tabKey]) {
+        button.setAttribute('title', tabTooltips[tabKey]);
+        button.setAttribute('aria-label', tabTooltips[tabKey]);
+      }
+      button.addEventListener('click', () => {
+        SoundManager.playClick();
+        this.toolsActiveTab = button.getAttribute('data-tools-tab') || 'map';
+        document.querySelectorAll('.tools-tab').forEach(tab => tab.classList.remove('active'));
+        document.querySelectorAll('.tools-panel').forEach(panel => panel.classList.remove('active'));
+        button.classList.add('active');
+        document.getElementById(`tools-tab-${this.toolsActiveTab}`)?.classList.add('active');
+        this.renderCainOSTools();
+      });
+    });
+
+    ['comfort-reading', 'line-pause', 'easy-minigames', 'reader-only'].forEach(key => {
+      const input = document.getElementById(`setting-${key}`);
+      if (!input) return;
+      input.checked = !!this.getCainOSSetting(key);
+      input.addEventListener('change', () => {
+        this.setCainOSSetting(key, input.checked);
+        this.applyCainOSSettings();
+        this.renderCainOSTools();
+      });
+    });
+
+    ['audio-ambience', 'audio-glitch'].forEach(key => {
+      const input = document.getElementById(`setting-${key}`);
+      if (!input) return;
+      input.value = String(this.getCainOSSetting(key, key === 'audio-ambience' ? 70 : 45));
+      input.addEventListener('input', () => {
+        this.setCainOSSetting(key, Number(input.value));
+        this.applyCainOSSettings();
+      });
+    });
+
+    this.applyCainOSSettings();
+    this.renderCainOSTools();
+  },
+
+  getCainOSStorage(key, fallback) {
+    try {
+      const raw = localStorage.getItem(`cainos_${key}`);
+      return raw ? JSON.parse(raw) : fallback;
+    } catch (e) {
+      return fallback;
+    }
+  },
+
+  setCainOSStorage(key, value) {
+    localStorage.setItem(`cainos_${key}`, JSON.stringify(value));
+  },
+
+  getCainOSSetting(key, fallback = false) {
+    const settings = this.getCainOSStorage('settings', {});
+    return Object.prototype.hasOwnProperty.call(settings, key) ? settings[key] : fallback;
+  },
+
+  setCainOSSetting(key, value) {
+    const settings = this.getCainOSStorage('settings', {});
+    settings[key] = value;
+    this.setCainOSStorage('settings', settings);
+  },
+
+  applyCainOSSettings() {
+    document.body.classList.toggle('comfort-reading', !!this.getCainOSSetting('comfort-reading'));
+    if (typeof SoundManager !== 'undefined') {
+      SoundManager.ambienceVolume = Number(this.getCainOSSetting('audio-ambience', 70)) / 100;
+      SoundManager.glitchVolume = Number(this.getCainOSSetting('audio-glitch', 45)) / 100;
+    }
+  },
+
+  getCainOSVisitedZones() {
+    return this.getCainOSStorage('visited_zones', [2]);
+  },
+
+  markCainOSZoneVisited(zoneId) {
+    const zones = this.getCainOSVisitedZones();
+    if (!zones.includes(zoneId)) {
+      zones.push(zoneId);
+      this.setCainOSStorage('visited_zones', zones);
+      this.unlockCainOSAchievement('mapper', 'Cartographe du chapiteau');
+    }
+    this.renderCainOSTools();
+  },
+
+  getCainOSRelations() {
+    return {
+      pomni: 42, ragatha: 56, jax: 24, kinger: 38, gangle: 44, zooble: 31, caine: 18,
+      ...this.getCainOSStorage('relations', {})
+    };
+  },
+
+  adjustCainOSRelation(key, delta) {
+    const aliases = {
+      workgangle: 'gangle', beachgangle: 'gangle', japanesegangle: 'gangle', rhinogangle: 'gangle',
+      hunterjax: 'jax', eviljax: 'jax', jaxgirl: 'jax',
+      evilpomni: 'pomni', horrorpomnivoid: 'pomni', horrorpomnispiral: 'pomni', horrorpomniskull: 'pomni',
+      evilragatha: 'ragatha', evilkinger: 'kinger', evilzooble: 'zooble'
+    };
+    key = aliases[key] || key;
+    const relations = this.getCainOSRelations();
+    relations[key] = Math.max(0, Math.min(100, (relations[key] || 35) + delta));
+    this.setCainOSStorage('relations', relations);
+    if (relations[key] >= 70) this.unlockCainOSAchievement(`trust_${key}`, `Lien stabilise: ${key}`);
+    this.renderCainOSTools();
+  },
+
+  getCainOSAchievements() {
+    return this.getCainOSStorage('achievements', {});
+  },
+
+  unlockCainOSAchievement(id, title) {
+    const achievements = this.getCainOSAchievements();
+    if (!achievements[id]) {
+      achievements[id] = { title, at: new Date().toISOString() };
+      this.setCainOSStorage('achievements', achievements);
+    }
+  },
+
+  getCainOSLoreZones() {
+    const progress = (typeof EpisodeManager !== 'undefined') ? EpisodeManager.getProgress() : [];
+    const unlocked = ep => ep === 0 || progress.includes(ep) || progress.some(done => done > ep && done <= 9);
+    return [
+      { id: 2, ep: 0, name: 'Chapiteau / piste', desc: 'Hub stable du Cirque et retour naturel des aventures.', item: 'Plan du chapiteau', unlocked: true },
+      { id: 4, ep: 1, name: 'Cellar / Kaufmo', desc: 'Archive dangereuse de Kaufmo abstrait.', item: 'Fragment abstrait', unlocked: unlocked(1) },
+      { id: 5, ep: 1, name: 'Porte de sortie / Vide', desc: 'Fausse issue et bureaux impossibles.', item: 'Trace de porte rouge', unlocked: unlocked(1) },
+      { id: 6, ep: 2, name: 'Candy Canyon', desc: 'Convoi de sirop et faille de memoire PNJ.', item: 'Ticket sirop', unlocked: unlocked(2) },
+      { id: 8, ep: 3, name: 'Mildenhall Manor', desc: 'Zone mature, peur, fantome et souvenirs enfouis.', item: 'Bougie du manoir', unlocked: unlocked(3) },
+      { id: 10, ep: 4, name: "Spudsy's", desc: 'Pression de service et masque de Gangle.', item: 'Ticket Spudsy', unlocked: unlocked(4) },
+      { id: 11, ep: 5, name: 'Suggestion Box', desc: 'Micro-aventures et skins hors timeline principale.', item: 'Fiche suggestion', unlocked: unlocked(5) },
+      { id: 13, ep: 6, name: 'Arena armes', desc: 'Epreuves virtuelles, scores et tensions de groupe.', item: 'Douille virtuelle', unlocked: unlocked(6) },
+      { id: 14, ep: 7, name: 'Digital Lake', desc: 'Fausse pause, soleil dangereux et PNJ fragiles.', item: 'Coquillage digital', unlocked: unlocked(7) },
+      { id: 16, ep: 8, name: 'C&A Core', desc: 'Couches techniques, Abel et origine tardive.', item: 'Pass admin', unlocked: unlocked(8) },
+      { id: 17, ep: 8, name: 'Kinger Memory Buffer', desc: 'Souvenirs de Queenie sans restauration active.', item: 'Piece memoire', unlocked: unlocked(8) },
+      { id: 18, ep: 9, name: 'Final Circus', desc: 'Brain scans, reves, couleur et choix de Pomni.', item: 'Fragment couleur', unlocked: unlocked(9) },
+      { id: 19, ep: 9, name: 'Circus Members Archive', desc: 'Archives visuelles des membres disparus/secondaires.', item: 'Badge archive', unlocked: unlocked(9) }
+    ];
+  },
+
+  getCainOSEvidence() {
+    return this.getCainOSJournalEntries().map(entry => ({
+      ...entry,
+      source: entry.gate === 0 ? 'Episode 0 / calibration CainOS' : `Episode ${entry.gate} / sous-episodes valides`,
+      rule: entry.gate >= 8 ? 'Spoiler tardif, verrouillage strict' : 'Visible apres progression normale'
+    }));
+  },
+
+  getCainOSInventory() {
+    const visited = this.getCainOSVisitedZones();
+    return this.getCainOSLoreZones().map(zone => ({
+      name: zone.item,
+      from: zone.name,
+      unlocked: zone.unlocked && visited.includes(zone.id),
+      desc: zone.unlocked ? 'Objet de scene utilisable comme preuve ou declencheur de dialogue.' : 'Objet masque pour eviter un spoiler de progression.'
+    }));
+  },
+
+  getCainOSAchievementList() {
+    const progress = (typeof EpisodeManager !== 'undefined') ? EpisodeManager.getProgress() : [];
+    const unlocked = this.getCainOSAchievements();
+    const base = [
+      { id: 'ep0', title: 'Session ouverte', done: progress.includes(0), desc: 'Calibration terminee et bureau CainOS accessible.' },
+      { id: 'mapper', title: 'Cartographe du chapiteau', done: this.getCainOSVisitedZones().length >= 3 || !!unlocked.mapper, desc: 'Visiter plusieurs zones depuis l entree simulation.' },
+      { id: 'proofs', title: 'Archiviste prudent', done: progress.length >= 4, desc: 'Distinguer canon, archive, variante et hypothese.' },
+      { id: 'final', title: 'Final accepte', done: progress.includes(9), desc: 'Atteindre la fin avant les missions bonus.' },
+      { id: 'postfinal', title: 'Show bonus de Caine', done: progress.includes(9), desc: 'Debloque les aventures originales non canon.' },
+      ...Object.entries(unlocked).map(([id, data]) => ({ id, title: data.title, done: true, desc: 'Debloque par interaction CainOS.' }))
+    ];
+    return base.filter((item, index, arr) => arr.findIndex(other => other.id === item.id) === index);
+  },
+
+  getCainOSInspectorFindings() {
+    const progress = (typeof EpisodeManager !== 'undefined') ? EpisodeManager.getProgress() : [];
+    const lockedVisited = this.getCainOSLoreZones().filter(zone => !zone.unlocked && this.getCainOSVisitedZones().includes(zone.id));
+    return [
+      lockedVisited.length
+        ? { level: 'WARN', title: 'Zone visitee trop tot', desc: lockedVisited.map(z => z.name).join(', ') }
+        : { level: 'OK', title: 'Carte progression', desc: 'Aucune zone spoiler visitee avant son episode.' },
+      { level: progress.includes(9) ? 'OK' : 'INFO', title: 'Mode post-final', desc: progress.includes(9) ? 'Aventures originales autorisees comme bonus non canon.' : 'Verrouille jusqu au final pour proteger la timeline.' },
+      { level: 'OK', title: 'Transcripts', desc: 'Les outils ajoutent des couches autour du texte sans remplacer les dialogues.' },
+      { level: this.getCainOSSetting('reader-only') ? 'INFO' : 'OK', title: 'Lecture sans gameplay', desc: this.getCainOSSetting('reader-only') ? 'Option active : utile accessibilite, pas canon gameplay.' : 'Progression normale par texte et mini-jeux.' }
+    ];
+  },
+
+  renderCainOSTools() {
+    const progress = (typeof EpisodeManager !== 'undefined') ? EpisodeManager.getProgress() : [];
+    const visited = this.getCainOSVisitedZones();
+    const renderCards = items => items.map(item => `
+      <div class="tools-card ${item.unlocked === false || item.done === false ? 'locked' : ''} ${item.visited ? 'visited' : ''}">
+        <div class="tools-card-title"><span>${this.escapeHTML(item.title || item.name)}</span><span>${this.escapeHTML(item.badge || item.level || '')}</span></div>
+        <p>${this.escapeHTML(item.desc || item.text || '')}</p>
+        ${item.meta ? `<div class="tools-pill-row">${item.meta.map(meta => `<span class="tools-pill">${this.escapeHTML(meta)}</span>`).join('')}</div>` : ''}
+      </div>
+    `).join('');
+
+    const mapEl = document.getElementById('tools-tab-map');
+    if (mapEl) mapEl.innerHTML = `<div class="tools-grid">${renderCards(this.getCainOSLoreZones().map(zone => ({
+      name: zone.name,
+      desc: zone.unlocked ? zone.desc : 'Zone verrouillee par progression pour ne pas casser la timeline.',
+      unlocked: zone.unlocked,
+      visited: visited.includes(zone.id),
+      badge: zone.unlocked ? (visited.includes(zone.id) ? 'VISITEE' : `EP${zone.ep}`) : 'LOCK',
+      meta: [zone.item, zone.id === 11 || progress.includes(9) ? 'Bonus non canon possible' : 'Timeline principale']
+    })))}</div>`;
+
+    const evidenceEl = document.getElementById('tools-tab-evidence');
+    if (evidenceEl) evidenceEl.innerHTML = `<div class="tools-grid">${renderCards(this.getCainOSEvidence().map(entry => {
+      const unlocked = progress.includes(entry.gate) || progress.some(ep => ep > entry.gate && ep <= 9);
+      return {
+        title: unlocked ? entry.title : 'Preuve verrouillee',
+        desc: unlocked ? entry.text : 'Source masquee pour eviter un spoiler.',
+        unlocked,
+        badge: unlocked ? entry.tag : 'LOCK',
+        meta: [entry.source, entry.rule]
+      };
+    }))}</div>`;
+
+    const inventoryEl = document.getElementById('tools-tab-inventory');
+    if (inventoryEl) inventoryEl.innerHTML = `<div class="tools-grid">${renderCards(this.getCainOSInventory().map(item => ({
+      title: item.unlocked ? item.name : 'Objet verrouille',
+      desc: item.desc,
+      unlocked: item.unlocked,
+      badge: item.unlocked ? 'OBJET' : 'LOCK',
+      meta: [item.from]
+    })))}</div>`;
+
+    const relationEl = document.getElementById('tools-tab-relations');
+    if (relationEl) {
+      const names = { pomni: 'Pomni', ragatha: 'Ragatha', jax: 'Jax', kinger: 'Kinger', gangle: 'Gangle', zooble: 'Zooble', caine: 'Caine' };
+      const relations = this.getCainOSRelations();
+      relationEl.innerHTML = `<div class="tools-grid">${Object.entries(names).map(([key, name]) => {
+        const value = relations[key] || 0;
+        return `<div class="tools-card">
+          <div class="tools-card-title"><span>${name}</span><span>${value}%</span></div>
+          <p>${value >= 70 ? 'Confiance stabilisee.' : value >= 40 ? 'Relation praticable, encore fragile.' : 'Tension ou distance encore forte.'}</p>
+          <div class="relation-meter"><div class="relation-meter-fill" style="width:${value}%"></div></div>
+        </div>`;
+      }).join('')}</div>`;
+    }
+
+    const achievementsEl = document.getElementById('tools-tab-achievements');
+    if (achievementsEl) achievementsEl.innerHTML = `<div class="tools-grid">${renderCards(this.getCainOSAchievementList().map(item => ({
+      title: item.title, desc: item.desc, done: item.done, badge: item.done ? 'OK' : 'LOCK'
+    })))}</div>`;
+
+    const inspectorEl = document.getElementById('tools-tab-inspector');
+    if (inspectorEl) inspectorEl.innerHTML = `<div class="tools-grid">${renderCards(this.getCainOSInspectorFindings().map(item => ({
+      title: item.title, desc: item.desc, badge: item.level, unlocked: item.level !== 'WARN'
+    })))}</div>`;
   },
 
   // Wacky Watch App Logic

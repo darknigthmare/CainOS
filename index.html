@@ -56,6 +56,10 @@
                 <div class="icon-img icon-trash"></div>
                 <div class="icon-label">Corbeille</div>
               </div>
+              <div class="desktop-icon" data-window="cainos-tools">
+                <div class="icon-img icon-tools"></div>
+                <div class="icon-label">CainOS_Tools.sys</div>
+              </div>
             </div>
 
             <!-- Draggable Window Container -->
@@ -610,6 +614,66 @@
                 </div>
               </div>
 
+              <!-- Window template: CainOS Tools -->
+              <div id="win-cainos-tools" class="window" style="width: 610px; height: 430px; left: 170px; top: 70px; display: none;">
+                <div class="window-header">
+                  <span class="window-title">CainOS Tools - Lore, QOL & Simulation Inspector</span>
+                  <div class="window-controls">
+                    <button class="win-btn win-min">_</button>
+                    <button class="win-btn win-max">[]</button>
+                    <button class="win-btn win-close">X</button>
+                  </div>
+                </div>
+                <div class="window-body tools-window-body">
+                  <div class="tools-tabs" role="tablist" aria-label="Outils CainOS">
+                    <button class="tools-tab active" data-tools-tab="map">CARTE</button>
+                    <button class="tools-tab" data-tools-tab="evidence">PREUVES</button>
+                    <button class="tools-tab" data-tools-tab="inventory">OBJETS</button>
+                    <button class="tools-tab" data-tools-tab="relations">LIENS</button>
+                    <button class="tools-tab" data-tools-tab="achievements">SUCCES</button>
+                    <button class="tools-tab" data-tools-tab="inspector">INSPECTEUR</button>
+                    <button class="tools-tab" data-tools-tab="settings">CONFORT</button>
+                  </div>
+                  <div class="tools-content">
+                    <div id="tools-tab-map" class="tools-panel active"></div>
+                    <div id="tools-tab-evidence" class="tools-panel"></div>
+                    <div id="tools-tab-inventory" class="tools-panel"></div>
+                    <div id="tools-tab-relations" class="tools-panel"></div>
+                    <div id="tools-tab-achievements" class="tools-panel"></div>
+                    <div id="tools-tab-inspector" class="tools-panel"></div>
+                    <div id="tools-tab-settings" class="tools-panel">
+                      <div class="settings-grid">
+                        <label class="settings-row">
+                          <span>Mode lecture confortable</span>
+                          <input type="checkbox" id="setting-comfort-reading">
+                        </label>
+                        <label class="settings-row">
+                          <span>Pause apres ligne importante</span>
+                          <input type="checkbox" id="setting-line-pause">
+                        </label>
+                        <label class="settings-row">
+                          <span>Mini-jeux faciles</span>
+                          <input type="checkbox" id="setting-easy-minigames">
+                        </label>
+                        <label class="settings-row">
+                          <span>Lire sans gameplay</span>
+                          <input type="checkbox" id="setting-reader-only">
+                        </label>
+                        <label class="settings-row">
+                          <span>Ambiance CainOS</span>
+                          <input type="range" id="setting-audio-ambience" min="0" max="100" value="70">
+                        </label>
+                        <label class="settings-row">
+                          <span>Glitch audio</span>
+                          <input type="range" id="setting-audio-glitch" min="0" max="100" value="45">
+                        </label>
+                      </div>
+                      <p class="tools-note">Ces options n'effacent pas la progression et ne modifient pas les transcripts.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <!-- Window template: Diagnostics -->
               <div id="win-vitals" class="window" style="width: 420px; height: 380px; left: 160px; top: 120px; display: none;">
                 <div class="window-header">
@@ -722,6 +786,9 @@
                 </div>
                 <div class="start-menu-item" data-window="terminal">
                   <span class="icon-sm icon-term-sm"></span> Invite de commande
+                </div>
+                <div class="start-menu-item" data-window="cainos-tools">
+                  <span class="icon-sm icon-tools-sm"></span> CainOS Tools
                 </div>
                 <div class="start-menu-item" id="start-menu-reboot">
                   <span class="icon-sm icon-reboot-sm"></span> Redémarrer le terminal

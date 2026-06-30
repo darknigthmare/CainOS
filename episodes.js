@@ -11,6 +11,8 @@ const SoundManager = {
   humOsc: null,
   humLFO: null,
   humGain: null,
+  ambienceVolume: 0.7,
+  glitchVolume: 0.45,
 
   init() {
     if (!this.ctx) {
@@ -114,7 +116,7 @@ const SoundManager = {
     });
   },
   playGlitch() {
-    this.play(200 + Math.random() * 600, 0.05, 'sawtooth', 0.12);
+    this.play(200 + Math.random() * 600, 0.05, 'sawtooth', 0.12 * (this.glitchVolume ?? 0.45));
   },
   playExplosion() {
     this.play(90, 0.5, 'triangle', 0.3);
@@ -232,7 +234,7 @@ const SoundManager = {
     };
     const motif = motifs[this.contextPulse.context] || motifs.circus;
     const note = motif.notes[this.contextPulse.index % motif.notes.length];
-    this.play(note, 0.08, motif.wave, motif.volume, true);
+    this.play(note, 0.08, motif.wave, motif.volume * (this.ambienceVolume ?? 0.7), true);
     this.contextPulse.index++;
     this.contextPulse.timer = setTimeout(() => this.playContextPulseStep(), motif.gap);
   },
@@ -7666,6 +7668,25 @@ const EpisodeManager = {
       config: microConfig
     };
 
+    if (window.OS?.getCainOSSetting?.('reader-only')) {
+      this.completedStoryCheckpoints.add(config.after);
+      window.OS.unlockCainOSAchievement?.('reader_only', 'Lecture assistee activee');
+      document.querySelectorAll('.sim-screen').forEach(s => s.classList.remove('active'));
+      document.getElementById('sim-story-screen').classList.add('active');
+      SoundManager.playWin();
+      this.updateStoryCheckpointButton();
+      setTimeout(() => {
+        if (this.activeSubepisodeIndex !== null && this.storyIndex >= this.storyLines.length) {
+          this.finishActiveSubepisode();
+          return;
+        }
+        if (this.storyIndex < this.storyLines.length && !this.getPendingStoryCheckpoint()) {
+          this.typeNextLine();
+        }
+      }, 220);
+      return;
+    }
+
     this.activeStoryMicroGame = new StoryMicroGame(microConfig, () => {
       this.completedStoryCheckpoints.add(config.after);
       if (this.activeStoryMicroGame) {
@@ -7756,6 +7777,10 @@ const EpisodeManager = {
     const episodeNum = this.currentEpisode;
     const segments = this.getSubepisodeSegments(episodeNum);
     this.markSubepisodeComplete(episodeNum, finishedIndex);
+    if (window.OS) {
+      window.OS.unlockCainOSAchievement?.(`subepisode_${episodeNum}_${finishedIndex}`, `Sous-episode ${episodeNum}.${finishedIndex + 1} valide`);
+      window.OS.renderCainOSTools?.();
+    }
     this.activeSubepisodeIndex = null;
     this.activeSubepisodeCheckpoint = null;
     this.activeSubepisodeTotal = 0;
@@ -8366,6 +8391,12 @@ const EpisodeManager = {
       if (typeof window.OS.renderCainOSJournal === 'function') {
         window.OS.renderCainOSJournal();
       }
+      if (typeof window.OS.unlockCainOSAchievement === 'function') {
+        window.OS.unlockCainOSAchievement(`episode_${this.currentEpisode}`, `Episode ${this.currentEpisode} valide`);
+      }
+      if (typeof window.OS.renderCainOSTools === 'function') {
+        window.OS.renderCainOSTools();
+      }
     }
 
     document.querySelectorAll('.sim-screen').forEach(s => s.classList.remove('active'));
@@ -8571,8 +8602,10 @@ class StoryMicroGame {
 
   getRequiredScore() {
     const goal = this.config.goal || 5;
-    if (this.config.dualPhase === false) return goal;
-    return Math.max(2, Math.ceil(goal / 2));
+    const easy = !!window.OS?.getCainOSSetting?.('easy-minigames');
+    const adjusted = easy ? Math.max(2, Math.ceil(goal * 0.7)) : goal;
+    if (this.config.dualPhase === false) return adjusted;
+    return Math.max(2, Math.ceil(adjusted / 2));
   }
 
   getPhaseLabel() {
