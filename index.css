@@ -2116,6 +2116,7 @@ body {
   padding: 8px 10px;
   font-family: 'Share Tech Mono', monospace;
   font-size: 10.5px;
+  line-height: 1.15;
   text-align: left;
   cursor: pointer;
   outline: none;
@@ -2716,6 +2717,12 @@ body {
   flex-direction: column;
 }
 
+#watch-tab-journal {
+  padding: 10px;
+  flex-direction: column;
+  gap: 8px;
+}
+
 .radar-hud {
   display: flex;
   justify-content: space-between;
@@ -2731,6 +2738,59 @@ body {
   border: 1px solid #1a2c1d;
   width: 100%;
   flex-grow: 1;
+}
+
+.journal-hud {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  color: var(--terminal-cyan);
+  border-bottom: 1px solid #263626;
+  padding-bottom: 6px;
+  font-size: 10px;
+}
+
+.watch-journal-list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.journal-entry {
+  border: 1px solid #263626;
+  background: #071008;
+  padding: 8px;
+  border-radius: 4px;
+  box-shadow: inset 0 0 10px rgba(57, 255, 20, 0.05);
+}
+
+.journal-entry.locked {
+  opacity: 0.6;
+  filter: grayscale(0.5);
+}
+
+.journal-entry-title {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  color: #d6ffd6;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.journal-entry-title span:last-child {
+  color: var(--terminal-amber);
+  white-space: nowrap;
+}
+
+.journal-entry p {
+  margin: 5px 0 0;
+  color: #9ed39e;
+  font-size: 10px;
+  line-height: 1.35;
 }
 
 /* ==========================================================================

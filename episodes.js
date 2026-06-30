@@ -189,6 +189,53 @@ const SoundManager = {
       this.themeTimer = null;
     }
   },
+  startContextPulse(context = 'circus') {
+    this.stopContextPulse();
+    this.contextPulse = {
+      context,
+      index: 0,
+      timer: null
+    };
+    this.playContextPulseStep();
+  },
+  stopContextPulse() {
+    if (this.contextPulse?.timer) {
+      clearTimeout(this.contextPulse.timer);
+    }
+    this.contextPulse = null;
+  },
+  playContextPulseStep() {
+    if (!this.contextPulse) return;
+    this.init();
+    if (!this.ctx) return;
+    const motifs = {
+      circus: { notes: [523, 659, 784, 659], wave: 'triangle', volume: 0.022, gap: 920 },
+      grounds: { notes: [392, 523, 587, 523], wave: 'sine', volume: 0.018, gap: 980 },
+      candy: { notes: [659, 784, 880, 784], wave: 'square', volume: 0.018, gap: 780 },
+      truck: { notes: [196, 247, 294, 247], wave: 'sawtooth', volume: 0.014, gap: 650 },
+      manor: { notes: [146, 196, 185, 130], wave: 'triangle', volume: 0.02, gap: 1120 },
+      basement: { notes: [98, 130, 123, 92], wave: 'sine', volume: 0.018, gap: 1250 },
+      spudsy: { notes: [440, 554, 659, 554], wave: 'square', volume: 0.016, gap: 690 },
+      lake: { notes: [330, 494, 659, 494], wave: 'sine', volume: 0.017, gap: 1040 },
+      admin: { notes: [220, 330, 440, 660], wave: 'triangle', volume: 0.014, gap: 860 },
+      core: { notes: [165, 247, 330, 494], wave: 'sawtooth', volume: 0.014, gap: 900 },
+      memory: { notes: [262, 392, 494, 392], wave: 'sine', volume: 0.018, gap: 1180 },
+      final: { notes: [196, 262, 311, 392], wave: 'triangle', volume: 0.02, gap: 980 },
+      archive: { notes: [247, 294, 370, 294], wave: 'sine', volume: 0.016, gap: 1160 },
+      arena: { notes: [294, 392, 494, 392], wave: 'square', volume: 0.017, gap: 740 },
+      softball: { notes: [330, 415, 523, 415], wave: 'triangle', volume: 0.016, gap: 760 },
+      micro: { notes: [523, 622, 740, 622], wave: 'square', volume: 0.014, gap: 620 },
+      exit: { notes: [262, 262, 196, 131], wave: 'sine', volume: 0.016, gap: 1320 },
+      cellar: { notes: [110, 82, 110, 98], wave: 'triangle', volume: 0.018, gap: 1380 },
+      test: { notes: [330, 660, 495, 660], wave: 'square', volume: 0.012, gap: 820 },
+      guns: { notes: [196, 247, 196, 165], wave: 'sawtooth', volume: 0.014, gap: 680 }
+    };
+    const motif = motifs[this.contextPulse.context] || motifs.circus;
+    const note = motif.notes[this.contextPulse.index % motif.notes.length];
+    this.play(note, 0.08, motif.wave, motif.volume, true);
+    this.contextPulse.index++;
+    this.contextPulse.timer = setTimeout(() => this.playContextPulseStep(), motif.gap);
+  },
   playThemeStep() {
     if (!this.isThemePlaying) return;
     this.init();
@@ -8316,6 +8363,9 @@ const EpisodeManager = {
       if (typeof window.OS.updateWackyWatchCastUI === 'function') {
         window.OS.updateWackyWatchCastUI();
       }
+      if (typeof window.OS.renderCainOSJournal === 'function') {
+        window.OS.renderCainOSJournal();
+      }
     }
 
     document.querySelectorAll('.sim-screen').forEach(s => s.classList.remove('active'));
@@ -8358,6 +8408,7 @@ class StoryMicroGame {
     this.completed = false;
     this.lastProgressAt = Date.now();
     this.assistShown = false;
+    this.lastFailureHint = "";
     this.handleClick = this.handleClick.bind(this);
     this.handleMouseMove = this.handleMouseMove.bind(this);
     this.handleKeyDown = this.handleKeyDown.bind(this);
@@ -8389,6 +8440,7 @@ class StoryMicroGame {
     this.grid = [];
     this.lastProgressAt = Date.now();
     this.assistShown = false;
+    this.lastFailureHint = "";
     this.statusEl.innerText = `OS 0 / ${this.getRequiredScore()}`;
   }
 
@@ -8431,6 +8483,14 @@ class StoryMicroGame {
   registerProgress() {
     this.lastProgressAt = Date.now();
     this.assistShown = false;
+    this.lastFailureHint = "";
+  }
+
+  setFailureHint(reason) {
+    this.lastFailureHint = reason;
+    if (this.objectiveEl && reason) {
+      this.objectiveEl.innerText = `${reason} ${this.getPhaseObjective()}`;
+    }
   }
 
   applyStallAssist() {
@@ -8759,6 +8819,7 @@ class StoryMicroGame {
           this.checkWin();
         } else {
           SoundManager.playError();
+          this.setFailureHint(`Mauvaise cible: vous avez touche "${this.config.hazard || 'ERR'}".`);
           this.timeLeft = Math.max(2, this.timeLeft - 2);
         }
         this.updateStatus();
@@ -8778,6 +8839,7 @@ class StoryMicroGame {
       this.checkWin();
     } else {
       SoundManager.playError();
+      this.setFailureHint(`Tuile parasite: "${this.config.hazard || 'ERR'}" devient reparable, mais le temps baisse.`);
       cell.good = true;
       this.timeLeft = Math.max(2, this.timeLeft - 2);
     }
@@ -8794,6 +8856,7 @@ class StoryMicroGame {
       this.checkWin();
     } else {
       SoundManager.playError();
+      this.setFailureHint(`Mauvaise direction: attendu ${expected}, reculez d un cran.`);
       this.sequenceIndex = Math.max(0, this.sequenceIndex - 1);
       this.score = this.sequenceIndex;
       this.timeLeft = Math.max(2, this.timeLeft - 1.5);
@@ -8813,7 +8876,7 @@ class StoryMicroGame {
       this.applyStallAssist();
       this.drawSimulationGame();
       if (this.timeLeft <= 0) {
-        this.fail();
+        this.fail("Temps ecoule pendant la phase simulation.");
         return;
       }
       this.updateStatus();
@@ -8838,7 +8901,7 @@ class StoryMicroGame {
     }
 
     if (this.timeLeft <= 0) {
-      this.fail();
+      this.fail("Temps ecoule pendant la phase OS CainOS.");
       return;
     }
 
@@ -8875,6 +8938,7 @@ class StoryMicroGame {
           this.checkWin();
         } else {
           SoundManager.playError();
+          this.setFailureHint(`Collision dangereuse: signal "${this.config.hazard || 'ERR'}" touche.`);
           this.timeLeft = Math.max(2, this.timeLeft - 1.6);
           item.x = 24 + Math.random() * (this.canvas.width - 48);
           item.y = 52 + Math.random() * (this.canvas.height - 84);
@@ -9031,6 +9095,7 @@ class StoryMicroGame {
             SoundManager.playClick();
           } else {
             this.timeLeft = Math.max(2, this.timeLeft - 2);
+            this.setFailureHint(`Mauvais contact simulation: "${entity.label}" destabilise la scene.`);
             SoundManager.playError();
           }
           this.simEntities.splice(i, 1);
@@ -9059,6 +9124,7 @@ class StoryMicroGame {
           SoundManager.playClick();
         } else {
           this.timeLeft = Math.max(2, this.timeLeft - 2);
+          this.setFailureHint(`Mauvais clic simulation: "${entity.label}" n etait pas la cible.`);
           SoundManager.playError();
         }
         this.simEntities.splice(i, 1);
@@ -9070,13 +9136,17 @@ class StoryMicroGame {
     }
   }
 
-  fail() {
+  fail(reason = "") {
     this.stop();
     this.statusEl.innerText = "DESYNC";
     this.actionBtn.disabled = false;
     this.actionBtn.innerText = "REESSAYER";
+    const finalReason = reason || this.lastFailureHint || "Synchronisation perdue.";
+    if (this.objectiveEl) {
+      this.objectiveEl.innerText = `${finalReason} Cliquez REESSAYER pour relancer exactement ce mini-jeu.`;
+    }
     SoundManager.playError();
-    this.drawFail();
+    this.drawFail(finalReason);
   }
 
   updateStatus() {
@@ -9667,7 +9737,7 @@ class StoryMicroGame {
     ctx.restore();
   }
 
-  drawFail() {
+  drawFail(reason = "") {
     this.clear();
     this.ctx.fillStyle = '#ff3344';
     this.ctx.font = '20px Courier New';
@@ -9675,7 +9745,9 @@ class StoryMicroGame {
     this.ctx.fillText('DESYNCHRONISATION', this.canvas.width / 2, 130);
     this.ctx.fillStyle = '#ffd6d6';
     this.ctx.font = '12px Courier New';
-    this.ctx.fillText('Relancez la micro-simulation.', this.canvas.width / 2, 154);
+    const line = reason.length > 48 ? `${reason.slice(0, 45)}...` : reason;
+    this.ctx.fillText(line || 'Relancez la micro-simulation.', this.canvas.width / 2, 154);
+    this.ctx.fillText('REESSAYER relance ce mini-jeu exact.', this.canvas.width / 2, 172);
   }
 }
 

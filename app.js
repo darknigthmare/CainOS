@@ -314,6 +314,7 @@ const OS = {
       'btn-victory-continue': 'Valider la simulation terminee et enregistrer la progression.',
       'watch-btn-cast': 'Afficher les profils des personnages suivis par CainOS.',
       'watch-btn-radar': 'Afficher le radar du Vide et les signaux detectes.',
+      'watch-btn-journal': 'Afficher le journal CainOS des evenements debloques par progression.',
       'watch-btn-refresh-fact': 'Afficher un autre fait Wacky Watch sur ce personnage.',
       'watch-btn-ping': 'Envoyer un ping de rappel Caine dans le radar.',
       'watch-cast-search': 'Filtrer les fiches par nom, statut ou signal.',
@@ -1075,6 +1076,7 @@ const OS = {
         screen.style.opacity = '0';
         SoundManager.stopMainframeHum();
         SoundManager.stopTheme();
+        if (typeof SoundManager.stopContextPulse === 'function') SoundManager.stopContextPulse();
         if (EpisodeManager.activeGame) EpisodeManager.activeGame.stop();
       }
     });
@@ -1331,6 +1333,7 @@ const OS = {
     this.playShutdownSound();
     SoundManager.stopMainframeHum();
     SoundManager.stopTheme();
+    if (typeof SoundManager.stopContextPulse === 'function') SoundManager.stopContextPulse();
 
     const powerBtn = document.getElementById('power-button');
     const powerLed = document.getElementById('power-led');
@@ -1461,6 +1464,9 @@ const OS = {
   hideCircusDosPreview() {
     this.clearCircusRenderTimers();
     this.stopCircusDoomView();
+    if (typeof SoundManager !== 'undefined' && typeof SoundManager.stopContextPulse === 'function') {
+      SoundManager.stopContextPulse();
+    }
     const overlay = document.getElementById('circus-dos-overlay');
     const taskbarEntry = document.getElementById('taskbar-circus-entry');
     if (overlay) {
@@ -1603,6 +1609,9 @@ const OS = {
     };
     this.prepareCircusSimulationRoom();
     this.loadCircusAvatarSheets();
+    if (typeof SoundManager.startContextPulse === 'function') {
+      SoundManager.startContextPulse('circus');
+    }
 
     this.circusDoomKeyDown = e => {
       const rawKey = e.key.toLowerCase();
@@ -1665,6 +1674,9 @@ const OS = {
     this.circusDoomKeyDown = null;
     this.circusDoomKeyUp = null;
     this.circusDoomClick = null;
+    if (typeof SoundManager !== 'undefined' && typeof SoundManager.stopContextPulse === 'function') {
+      SoundManager.stopContextPulse();
+    }
   },
 
   loadCircusAvatarSheets() {
@@ -2487,6 +2499,10 @@ const OS = {
     state.hotspots = [];
     this.prepareCircusSimulationRoom();
     if (playSound) SoundManager.play(660, 0.08, 'triangle', 0.05);
+    if (typeof SoundManager.startContextPulse === 'function') {
+      const motif = state.scenes[zoneId]?.motif || 'circus';
+      SoundManager.startContextPulse(motif);
+    }
   },
 
   updateCircusDoom(dt) {
@@ -3226,7 +3242,57 @@ const OS = {
       18: [...basePillars, { kind: 'spotlight', x: 0, z: -2.6, color: '#e53935' }],
       19: [{ kind: 'archive', x: -2.0, z: -2.1, color: '#c875ff' }, { kind: 'archive', x: 0, z: -2.7, color: '#7df0ff' }, { kind: 'archive', x: 2.0, z: -2.1, color: '#ffd84a' }]
     };
-    return byZone[zoneId] || basePillars;
+    return [...(byZone[zoneId] || basePillars), ...this.getCircusExtraZoneProps(zoneId)];
+  },
+
+  getCircusExtraZoneProps(zoneId) {
+    const extras = {
+      2: [
+        { kind: 'balloon', x: -3.35, z: -0.95, color: '#ff4fb8' },
+        { kind: 'card', x: 3.35, z: -1.05, color: '#7df0ff' }
+      ],
+      3: [
+        { kind: 'ring', x: -3.2, z: -1.1, color: '#ffd84a' },
+        { kind: 'candy', x: 3.15, z: -1.35, color: '#ff9b37' }
+      ],
+      4: [
+        { kind: 'eye', x: -2.7, z: -1.2, color: '#ff3333' },
+        { kind: 'barrel', x: 2.85, z: -1.15, color: '#56505f' }
+      ],
+      5: [
+        { kind: 'exitframe', x: 2.15, z: -1.35, color: '#ffffff' },
+        { kind: 'desk', x: -2.65, z: -1.25, color: '#a0a8b8' }
+      ],
+      6: [
+        { kind: 'candy', x: -3.1, z: -1.15, color: '#ff4fb8' },
+        { kind: 'truck', x: 2.8, z: -1.35, color: '#ffd84a' }
+      ],
+      8: [
+        { kind: 'candle', x: -3.1, z: -1.15, color: '#ffd84a' },
+        { kind: 'window', x: 3.05, z: -1.2, color: '#b7f0ff' }
+      ],
+      10: [
+        { kind: 'counter', x: -3.05, z: -1.05, color: '#f6d743' },
+        { kind: 'menu', x: 3.1, z: -1.15, color: '#ff4d4d' }
+      ],
+      12: [
+        { kind: 'base', x: -3.15, z: -1.0, color: '#ffffff' },
+        { kind: 'base', x: 3.15, z: -1.0, color: '#ffffff' }
+      ],
+      14: [
+        { kind: 'umbrella', x: -3.2, z: -1.15, color: '#ffd84a' },
+        { kind: 'wave', x: 3.05, z: -1.2, color: '#4ee7ff' }
+      ],
+      16: [
+        { kind: 'console', x: 2.95, z: -1.15, color: '#7df0ff' },
+        { kind: 'gridnode', x: -3.0, z: -1.1, color: '#ff7a30' }
+      ],
+      18: [
+        { kind: 'archive', x: -3.05, z: -1.1, color: '#c875ff' },
+        { kind: 'spotlight', x: 3.05, z: -1.2, color: '#fff1a8' }
+      ]
+    };
+    return extras[zoneId] || [];
   },
 
   drawCircusDepthProps(ctx, w, h, state) {
@@ -4536,6 +4602,7 @@ const OS = {
       }
       if (winId === 'wacky-watch') {
         this.updateWackyWatchCastUI();
+        this.renderCainOSJournal();
       }
       if (winId === 'trash') {
         this.renderTrashList();
@@ -4577,6 +4644,7 @@ const OS = {
     const startMenu = document.getElementById('start-menu');
     if (startMenu) startMenu.style.display = 'none';
     SoundManager.stopTheme();
+    if (typeof SoundManager.stopContextPulse === 'function') SoundManager.stopContextPulse();
     if (EpisodeManager.activeGame) EpisodeManager.activeGame.stop();
     this.updateTaskbar();
   },
@@ -4812,25 +4880,36 @@ const OS = {
     // Menu buttons
     const btnCast = document.getElementById('watch-btn-cast');
     const btnRadar = document.getElementById('watch-btn-radar');
+    const btnJournal = document.getElementById('watch-btn-journal');
     const tabCast = document.getElementById('watch-tab-cast');
     const tabRadar = document.getElementById('watch-tab-radar');
+    const tabJournal = document.getElementById('watch-tab-journal');
+
+    const activateWatchTab = (activeBtn, activeTab) => {
+      [btnCast, btnRadar, btnJournal].forEach(btn => btn?.classList.remove('active'));
+      [tabCast, tabRadar, tabJournal].forEach(tab => tab?.classList.remove('active'));
+      activeBtn?.classList.add('active');
+      activeTab?.classList.add('active');
+    };
 
     btnCast.addEventListener('click', () => {
       SoundManager.playClick();
-      btnCast.classList.add('active');
-      btnRadar.classList.remove('active');
-      tabCast.classList.add('active');
-      tabRadar.classList.remove('active');
+      activateWatchTab(btnCast, tabCast);
     });
 
     btnRadar.addEventListener('click', () => {
       SoundManager.playClick();
-      btnRadar.classList.add('active');
-      btnCast.classList.remove('active');
-      tabRadar.classList.add('active');
-      tabCast.classList.remove('active');
+      activateWatchTab(btnRadar, tabRadar);
       this.startRadarAnimation();
     });
+
+    if (btnJournal) {
+      btnJournal.addEventListener('click', () => {
+        SoundManager.playClick();
+        activateWatchTab(btnJournal, tabJournal);
+        this.renderCainOSJournal();
+      });
+    }
 
     const searchInput = document.getElementById('watch-cast-search');
     if (searchInput) {
@@ -4918,6 +4997,60 @@ const OS = {
     });
 
     this.updateWackyWatchCastUI();
+    this.renderCainOSJournal();
+  },
+
+  escapeHTML(value) {
+    return String(value)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  },
+
+  getCainOSJournalEntries() {
+    return [
+      { gate: 0, tag: 'BOOT', title: 'Session Pomni ouverte', text: 'Le protocole de calibration a ferme l ecran puis relance CainOS sur un bureau propre. Le Cirque devient accessible depuis la barre des taches.' },
+      { gate: 1, tag: 'PILOT', title: 'Kaufmo abstrait et fausse sortie', text: 'Le pilote confirme le piege narratif : la porte de sortie existe comme illusion de scene, pas comme liberation fiable.' },
+      { gate: 2, tag: 'NPC', title: 'Gummigoo et les donnees PNJ', text: 'Candy Canyon revele que certains personnages sont generes comme PNJ, avec une memoire suffisamment stable pour troubler Pomni.' },
+      { gate: 3, tag: 'HORROR', title: 'Manoir Mildenhall et memoire de Kinger', text: 'L obscurite du manoir sert de zone de peur et de memoire. CainOS garde Queenie comme archive, pas comme residente revenue.' },
+      { gate: 4, tag: 'SPUDSY', title: 'Masque de Gangle sous pression', text: 'Spudsy transforme le groupe en employes. Le masque de Gangle devient un systeme de comportement, pas seulement un costume.' },
+      { gate: 5, tag: 'MICRO', title: 'Suggestions de Caine', text: 'Les micro-aventures doivent rester separees du canon principal : utiles pour les skins et variantes, dangereuses pour la timeline.' },
+      { gate: 6, tag: 'TEAM', title: 'Epreuves armees et tensions de groupe', text: 'Les armes et scores sont des regles de simulation. CainOS suit surtout les ruptures de confiance et les roles imposes.' },
+      { gate: 7, tag: 'LAKE', title: 'Lac digital et fausse pause', text: 'Le lac ressemble a une zone de repos, mais les PNJ, le soleil et les indices C&A gardent la scene sous controle.' },
+      { gate: 8, tag: 'CORE', title: 'Couches C&A et origine tardive', text: 'Les traces techniques deviennent consultables seulement lorsque la progression rend ces informations moins spoiler.' },
+      { gate: 9, tag: 'FINAL', title: 'Pomni choisit son nom actif', text: 'Le final autorise les donnees Abigail/Abby, mais la timeline jouable continue de traiter Pomni comme identite active dans le Cirque.' }
+    ];
+  },
+
+  renderCainOSJournal() {
+    const list = document.getElementById('watch-journal-list');
+    const count = document.getElementById('watch-journal-count');
+    if (!list) return;
+    const progress = (typeof EpisodeManager !== 'undefined') ? EpisodeManager.getProgress() : [];
+    const entries = this.getCainOSJournalEntries();
+    const visible = entries.map(entry => ({
+      ...entry,
+      unlocked: progress.includes(entry.gate) || progress.some(ep => ep > entry.gate && ep <= 9)
+    }));
+    const unlockedCount = visible.filter(entry => entry.unlocked).length;
+    if (count) count.innerText = `${unlockedCount}/${entries.length} signaux`;
+    list.innerHTML = visible.map(entry => {
+      const text = entry.unlocked
+        ? entry.text
+        : 'Information verrouillee. Terminez les episodes precedents pour eviter les spoilers de timeline.';
+      const title = entry.unlocked ? entry.title : 'Archive verrouillee';
+      const state = entry.unlocked ? 'OK' : 'LOCK';
+      return `
+        <div class="journal-entry ${entry.unlocked ? '' : 'locked'}">
+          <div class="journal-entry-title">
+            <span>${this.escapeHTML(title)}</span>
+            <span>${this.escapeHTML(entry.tag)} ${state}</span>
+          </div>
+          <p>${this.escapeHTML(text)}</p>
+        </div>
+      `;
+    }).join('');
   },
 
   getWackyCastData() {
@@ -5562,6 +5695,18 @@ const OS = {
     return /variante fan/i.test(String(data.age || "")) || ['maid', 'japanese', 'baseball', 'rivalbaseball', 'darkduo', 'beach', 'rhino', 'work', 'jaxgirl', 'hunter'].some(token => id.includes(token));
   },
 
+  getWackyLoreStatus(id, char = null) {
+    const data = char || this.getWackyCastData()[id] || {};
+    const status = String(data.status || this.getWackyProfileStatus(id) || '').toUpperCase();
+    const age = String(data.age || '').toUpperCase();
+    if (!this.isWackyProfileUnlocked(id)) return "VERROUILLE PAR PROGRESSION";
+    if (this.isFanSkin(id, data)) return "SKIN FAN / HORS TIMELINE";
+    if (status.includes("VARIANTE")) return "VARIANTE VISUELLE";
+    if (status.includes("ARCHIVE") || age.includes("ARCHIVE") || age.includes("ABSTRAIT")) return "ARCHIVE CAINOS";
+    if (status.includes("PNJ") || age.includes("NPC") || age.includes("DECOR")) return "PNJ / DECOR DE SIMULATION";
+    return "TIMELINE ACTIVE";
+  },
+
   purchaseWackySkin(id) {
     if (!this.isWackySkinStoreUnlocked() || !this.isFanSkin(id)) {
       SoundManager.playError();
@@ -5976,6 +6121,8 @@ const OS = {
     if (statusEl) statusEl.innerText = char.status || "ACTIF";
     document.getElementById('watch-profile-age').innerText = char.age;
     document.getElementById('watch-profile-stress').innerText = char.stress;
+    const loreEl = document.getElementById('watch-profile-lore');
+    if (loreEl) loreEl.innerText = this.getWackyLoreStatus(profileId, char);
     document.getElementById('watch-profile-fact').innerText = char.facts[0];
 
     const container = document.getElementById('watch-profile-avatar');

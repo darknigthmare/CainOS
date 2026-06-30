@@ -520,6 +520,7 @@
                       <div id="sim-gameover-screen" class="sim-screen">
                         <h2 id="sim-over-title" class="red-text blinking">SIMULATION ABORTED</h2>
                         <p id="sim-over-reason">Sujet a subi une abstraction mentale.</p>
+                        <p id="sim-over-hint" class="cyan-text">Le bouton relance exactement le dernier module actif.</p>
                         <button id="btn-retry-simulation" class="retro-btn">RÉESSAYER</button>
                       </div>
 
@@ -549,6 +550,7 @@
                   <div class="watch-menu">
                     <button id="watch-btn-cast" class="watch-menu-btn active">PERSONNAGES</button>
                     <button id="watch-btn-radar" class="watch-menu-btn">RADAR DU VIDE</button>
+                    <button id="watch-btn-journal" class="watch-menu-btn">JOURNAL CAINOS</button>
                   </div>
                   <div class="watch-content-pane">
                     <!-- Cast List Tab -->
@@ -574,6 +576,7 @@
                             <p>Statut: <span id="watch-profile-status" class="cyan-text">ACTIF</span></p>
                             <p>Age approx: <span id="watch-profile-age" class="cyan-text">25</span></p>
                             <p>Stress: <span id="watch-profile-stress" class="red-text">92%</span></p>
+                            <p>Lore: <span id="watch-profile-lore" class="cyan-text">TIMELINE ACTIVE</span></p>
                           </div>
                         </div>
                         <div class="profile-fact-box">
@@ -594,6 +597,14 @@
                         <button id="watch-btn-ping" class="retro-btn btn-sm">PING DE RAPPEL CAINE</button>
                       </div>
                       <canvas id="watch-radar-canvas" width="310" height="230"></canvas>
+                    </div>
+                    <!-- CainOS Journal Tab -->
+                    <div id="watch-tab-journal" class="watch-tab">
+                      <div class="journal-hud">
+                        <div>Chronologie CainOS</div>
+                        <span id="watch-journal-count">0 signaux</span>
+                      </div>
+                      <div id="watch-journal-list" class="watch-journal-list"></div>
                     </div>
                   </div>
                 </div>
