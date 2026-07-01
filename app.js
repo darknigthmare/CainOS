@@ -2676,7 +2676,7 @@ const OS = {
     ctx.fillRect(0, 0, w, horizon);
 
     if (motif === 'circus') {
-      this.drawCircusSplitRingFloor(ctx, w, h, horizon);
+      this.drawCircusSplitRingFloor(ctx, w, h, horizon, state);
     } else {
       const floorGradient = ctx.createLinearGradient(0, horizon, 0, h);
       floorGradient.addColorStop(0, this.shadeHex(zone.floor || '#24112f', 1.16));
@@ -2859,73 +2859,76 @@ const OS = {
     ctx.restore();
   },
 
-  drawCircusSplitRingFloor(ctx, w, h, horizon) {
-    const splitX = w * 0.5;
+  drawCircusSplitRingFloor(ctx, w, h, horizon, state) {
+    const room = state.room;
+    const center = room?.center || { x: state.player.x, z: state.player.z };
     const floorH = h - horizon;
-    const orangeGradient = ctx.createLinearGradient(0, horizon, 0, h);
-    orangeGradient.addColorStop(0, '#ffb15a');
-    orangeGradient.addColorStop(0.42, '#e06f24');
-    orangeGradient.addColorStop(1, '#8f3215');
-    ctx.fillStyle = orangeGradient;
-    ctx.fillRect(0, horizon, splitX, floorH);
-
-    ctx.fillStyle = '#f4f0df';
-    ctx.fillRect(splitX, horizon, w - splitX, floorH);
-    const rows = 11;
-    const cols = 7;
-    for (let row = 0; row < rows; row++) {
-      const t1 = row / rows;
-      const t2 = (row + 1) / rows;
-      const y1 = horizon + Math.pow(t1, 1.75) * floorH;
-      const y2 = horizon + Math.pow(t2, 1.75) * floorH;
-      for (let col = 0; col < cols; col++) {
-        if ((row + col) % 2 !== 0) continue;
-        const x1 = splitX + (col / cols) * (w - splitX);
-        const x2 = splitX + ((col + 1) / cols) * (w - splitX);
-        ctx.fillStyle = row < 2 ? '#dad7c9' : '#080808';
-        ctx.beginPath();
-        ctx.moveTo(x1, y1);
-        ctx.lineTo(x2, y1);
-        ctx.lineTo(x2 + (col - cols / 2) * 1.8, y2);
-        ctx.lineTo(x1 + (col - cols / 2) * 1.8, y2);
-        ctx.closePath();
-        ctx.fill();
+    const fov = Math.PI / 3.05;
+    const xStep = 5;
+    const yStep = 3;
+    const checkerScale = 1.35;
+    for (let sy = Math.floor(horizon); sy < h; sy += yStep) {
+      const depthT = Math.max(0.02, (sy - horizon) / floorH);
+      const rowDistance = 0.42 / depthT;
+      const shade = Math.max(0.48, Math.min(1.22, 1.08 - depthT * 0.42));
+      for (let sx = 0; sx < w; sx += xStep) {
+        const screenRatio = sx / Math.max(1, w - 1);
+        const rayAngle = state.player.a - fov / 2 + screenRatio * fov;
+        const lateral = (screenRatio - 0.5) * rowDistance * 0.36;
+        const worldX = state.player.x + Math.cos(rayAngle) * rowDistance + Math.cos(rayAngle + Math.PI / 2) * lateral;
+        const worldZ = state.player.z + Math.sin(rayAngle) * rowDistance + Math.sin(rayAngle + Math.PI / 2) * lateral;
+        const isOrangeSide = worldX < center.x;
+        if (isOrangeSide) {
+          const stripe = Math.floor(worldZ * 1.2) % 2 === 0 ? 1 : 0.86;
+          ctx.fillStyle = this.shadeHex(stripe > 0.95 ? '#e06f24' : '#bd521c', shade);
+        } else {
+          const checker = (Math.floor(worldX * checkerScale) + Math.floor(worldZ * checkerScale)) % 2 === 0;
+          ctx.fillStyle = checker ? this.shadeHex('#f4f0df', shade) : this.shadeHex('#080808', Math.max(0.7, shade));
+        }
+        ctx.fillRect(sx, sy, xStep + 1, yStep + 1);
       }
     }
 
     ctx.save();
-    ctx.strokeStyle = 'rgba(255,255,255,0.22)';
+    ctx.globalAlpha = 0.55;
+    ctx.strokeStyle = 'rgba(255,238,168,0.28)';
     ctx.lineWidth = 1;
-    ctx.beginPath();
-    ctx.moveTo(splitX, horizon);
-    ctx.lineTo(splitX, h);
-    ctx.stroke();
-
-    ctx.strokeStyle = 'rgba(0,0,0,0.38)';
-    for (let i = 0; i <= cols; i++) {
-      const x = splitX + (i / cols) * (w - splitX);
-      ctx.beginPath();
-      ctx.moveTo(splitX, horizon);
-      ctx.lineTo(x, h);
-      ctx.stroke();
+    for (let i = -4; i <= 4; i++) {
+      const worldLineX = center.x + i;
+      const near = this.projectCircusFloorPoint(worldLineX, center.z - 8, state, w, h, horizon, fov);
+      const far = this.projectCircusFloorPoint(worldLineX, center.z + 8, state, w, h, horizon, fov);
+      if (near && far) {
+        ctx.beginPath();
+        ctx.moveTo(near.x, near.y);
+        ctx.lineTo(far.x, far.y);
+        ctx.stroke();
+      }
     }
-    for (let row = 1; row < rows; row++) {
-      const y = horizon + Math.pow(row / rows, 1.75) * floorH;
-      ctx.beginPath();
-      ctx.moveTo(splitX, y);
-      ctx.lineTo(w, y);
-      ctx.stroke();
-    }
-
-    ctx.strokeStyle = 'rgba(255,238,168,0.25)';
-    for (let i = 1; i < 5; i++) {
-      const y = horizon + Math.pow(i / 5, 1.9) * floorH;
-      ctx.beginPath();
-      ctx.moveTo(0, y);
-      ctx.quadraticCurveTo(splitX * 0.34, y + 12, splitX, y + 4);
-      ctx.stroke();
+    ctx.strokeStyle = 'rgba(0,0,0,0.35)';
+    for (let i = -5; i <= 5; i++) {
+      const worldLineZ = center.z + i;
+      const near = this.projectCircusFloorPoint(center.x - 8, worldLineZ, state, w, h, horizon, fov);
+      const far = this.projectCircusFloorPoint(center.x + 8, worldLineZ, state, w, h, horizon, fov);
+      if (near && far) {
+        ctx.beginPath();
+        ctx.moveTo(near.x, near.y);
+        ctx.lineTo(far.x, far.y);
+        ctx.stroke();
+      }
     }
     ctx.restore();
+  },
+
+  projectCircusFloorPoint(worldX, worldZ, state, w, h, horizon, fov) {
+    const dx = worldX - state.player.x;
+    const dz = worldZ - state.player.z;
+    const forward = Math.cos(state.player.a) * dx + Math.sin(state.player.a) * dz;
+    if (forward <= 0.08) return null;
+    const side = Math.cos(state.player.a + Math.PI / 2) * dx + Math.sin(state.player.a + Math.PI / 2) * dz;
+    const screenX = w / 2 + (side / forward) * (w / Math.tan(fov / 2)) * 0.5;
+    const screenY = horizon + (h - horizon) * Math.min(1.4, 0.42 / forward);
+    if (screenX < -80 || screenX > w + 80 || screenY < horizon || screenY > h + 80) return null;
+    return { x: screenX, y: screenY };
   },
 
   getCircusZoneAmbientEvent(zoneId, state) {
