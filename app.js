@@ -1874,9 +1874,19 @@ const OS = {
       }
     }
     state.room = { grid, size, center, doors };
-    state.player.x = center.x;
-    state.player.z = startZ + 0.35;
-    state.player.a = -Math.PI / 2;
+    const entryDoor = Number.isFinite(state.pendingEntryFromZoneId)
+      ? doors.find(door => door.target === state.pendingEntryFromZoneId)
+      : null;
+    if (entryDoor) {
+      state.player.x = entryDoor.x + entryDoor.inwardX * 1.25;
+      state.player.z = entryDoor.z + entryDoor.inwardZ * 1.25;
+      state.player.a = Math.atan2(entryDoor.inwardZ, entryDoor.inwardX);
+      state.selectedExitIndex = entryDoor.index;
+    } else {
+      state.player.x = center.x;
+      state.player.z = startZ + 0.35;
+      state.player.a = -Math.PI / 2;
+    }
     state.hotspots = [];
     state.interactionMessage = '';
     state.interactionUntil = 0;
@@ -1925,7 +1935,7 @@ const OS = {
       this.enterCircusSimulationExit(door?.target ?? exits[state.selectedExitIndex]);
     } else if (key === 'arrowdown') {
       const previous = state.history.pop();
-      if (previous) this.setCircusSimulationZone(previous, false);
+      if (previous) this.setCircusSimulationZone(previous, false, state.currentZoneId);
     }
   },
 
@@ -2515,17 +2525,20 @@ const OS = {
       }
       return;
     }
-    state.history.push(state.currentZoneId);
-    this.setCircusSimulationZone(targetId, true);
+    const fromZoneId = state.currentZoneId;
+    state.history.push(fromZoneId);
+    this.setCircusSimulationZone(targetId, true, fromZoneId);
   },
 
-  setCircusSimulationZone(zoneId, playSound = true) {
+  setCircusSimulationZone(zoneId, playSound = true, entryFromZoneId = null) {
     const state = this.circusDoom;
     if (!state || !state.portals[zoneId]) return;
     state.currentZoneId = zoneId;
     state.selectedExitIndex = 0;
     state.hotspots = [];
+    state.pendingEntryFromZoneId = Number.isFinite(entryFromZoneId) ? entryFromZoneId : null;
     this.prepareCircusSimulationRoom();
+    state.pendingEntryFromZoneId = null;
     this.markCainOSZoneVisited(zoneId);
     if (playSound) SoundManager.play(660, 0.08, 'triangle', 0.05);
     if (typeof SoundManager.startContextPulse === 'function') {
