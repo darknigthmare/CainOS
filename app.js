@@ -2682,21 +2682,8 @@ const OS = {
     const room = state.room;
     const horizon = h * 0.48;
     const motif = (state.scenes[state.currentZoneId] || state.scenes[2])?.motif || 'circus';
-    const ceilingGradient = ctx.createLinearGradient(0, 0, 0, horizon);
-    ceilingGradient.addColorStop(0, this.shadeHex(zone.ceiling || '#120821', 0.65));
-    ceilingGradient.addColorStop(1, this.shadeHex(zone.ceiling || '#120821', 1.24));
-    ctx.fillStyle = ceilingGradient;
-    ctx.fillRect(0, 0, w, horizon);
-
-    if (motif === 'circus') {
-      this.drawCircusSplitRingFloor(ctx, w, h, horizon, state);
-    } else {
-      const floorGradient = ctx.createLinearGradient(0, horizon, 0, h);
-      floorGradient.addColorStop(0, this.shadeHex(zone.floor || '#24112f', 1.16));
-      floorGradient.addColorStop(1, this.shadeHex(zone.floor || '#24112f', 0.52));
-      ctx.fillStyle = floorGradient;
-      ctx.fillRect(0, horizon, w, h - horizon);
-    }
+    this.drawCircusThemedCeiling(ctx, w, h, horizon, state, zone, motif);
+    this.drawCircusThemedFloor(ctx, w, h, horizon, state, zone, motif);
 
     ctx.save();
     ctx.strokeStyle = 'rgba(255,255,255,0.08)';
@@ -2845,6 +2832,56 @@ const OS = {
           const color = Math.floor(u * 4) % 2 === 0 ? prim : sec;
           ctx.fillStyle = this.shadeHex(color, shadeFactor);
           ctx.fillRect(x, y, strip, Math.ceil(wallH));
+        } else if (motif === 'cellar') {
+          // Kaufmo cellar containment walls: dark blocks, warning cuts, hidden eyes.
+          ctx.fillStyle = this.shadeHex('#101018', shadeFactor);
+          ctx.fillRect(x, y, strip, Math.ceil(wallH));
+          if (Math.floor(u * 10) % 4 === 0) {
+            ctx.fillStyle = this.shadeHex('#2a2834', shadeFactor);
+            ctx.fillRect(x, y, strip, Math.ceil(wallH));
+          }
+          ctx.fillStyle = this.shadeHex('#56505f', shadeFactor);
+          ctx.fillRect(x, y + wallH * 0.18, strip, Math.max(1, wallH * 0.025));
+          ctx.fillRect(x, y + wallH * 0.74, strip, Math.max(1, wallH * 0.025));
+        } else if (motif === 'micro') {
+          // Suggestion-box micro-zones: shuffled idea cards and neon door fragments.
+          const colors = ['#ff4fb8', '#7df0ff', '#ffd84a', '#c875ff'];
+          const color = colors[Math.abs(Math.floor((u + corrected) * 9)) % colors.length];
+          ctx.fillStyle = this.shadeHex('#190d24', shadeFactor);
+          ctx.fillRect(x, y, strip, Math.ceil(wallH));
+          ctx.fillStyle = this.shadeHex(color, shadeFactor);
+          ctx.fillRect(x, y + wallH * 0.16, strip, Math.max(1, wallH * 0.08));
+          ctx.fillRect(x, y + wallH * 0.62, strip, Math.max(1, wallH * 0.06));
+        } else if (motif === 'guns') {
+          // Action arena: dark cover panels and yellow lane safety marks.
+          ctx.fillStyle = this.shadeHex('#201310', shadeFactor);
+          ctx.fillRect(x, y, strip, Math.ceil(wallH));
+          if (Math.floor(u * 6) % 2 === 0) {
+            ctx.fillStyle = this.shadeHex('#463228', shadeFactor);
+            ctx.fillRect(x, y, strip, Math.ceil(wallH));
+          }
+          ctx.fillStyle = this.shadeHex('#f6d743', shadeFactor);
+          ctx.fillRect(x, y + wallH * 0.5, strip, Math.max(1, wallH * 0.045));
+        } else if (motif === 'memory') {
+          // Kinger memory buffer: black room with chess-like ivory fragments.
+          ctx.fillStyle = this.shadeHex('#0e0e12', shadeFactor);
+          ctx.fillRect(x, y, strip, Math.ceil(wallH));
+          if (Math.floor(u * 8) % 2 === 0) {
+            ctx.fillStyle = this.shadeHex('#d9d0a2', shadeFactor * 0.85);
+            ctx.fillRect(x, y + wallH * 0.24, strip, Math.max(1, wallH * 0.13));
+          }
+          ctx.fillStyle = this.shadeHex('#7df0ff', shadeFactor * 0.72);
+          ctx.fillRect(x, y + wallH * 0.72, strip, Math.max(1, wallH * 0.025));
+        } else if (motif === 'archive') {
+          // Circus members archive: purple cabinet stacks and locked profile slots.
+          ctx.fillStyle = this.shadeHex('#13091d', shadeFactor);
+          ctx.fillRect(x, y, strip, Math.ceil(wallH));
+          const slot = Math.floor(u * 12) % 3 === 0;
+          if (slot) {
+            ctx.fillStyle = this.shadeHex('#c875ff', shadeFactor * 0.8);
+            ctx.fillRect(x, y + wallH * 0.2, strip, Math.max(1, wallH * 0.18));
+            ctx.fillRect(x, y + wallH * 0.55, strip, Math.max(1, wallH * 0.18));
+          }
         } else {
           // Fallback wall
           const baseColor = this.getCircusWallColor(hit.cell, zone, state);
@@ -2870,6 +2907,169 @@ const OS = {
       for (let i = 0; i < 5; i++) ctx.strokeRect(w / 2 - 130 + i * 22, 42 + i * 14, 260 - i * 44, 150 - i * 16);
     }
     ctx.restore();
+  },
+
+  getCircusRoomTheme(motif, zone = {}) {
+    const themes = {
+      circus: { ceilingTop: '#0b0824', ceilingBottom: '#24112f', floorA: '#e06f24', floorB: '#080808', floorC: '#f4f0df', grid: 'rgba(255,241,168,0.1)' },
+      final: { ceilingTop: '#080510', ceilingBottom: '#261020', floorA: '#1b0f16', floorB: '#a51d24', floorC: '#fff1a8', grid: 'rgba(255,90,105,0.12)' },
+      grounds: { ceilingTop: '#153a85', ceilingBottom: '#5f8ee8', floorA: '#315f2d', floorB: '#244f21', floorC: '#c64a31', grid: 'rgba(255,241,168,0.12)' },
+      cellar: { ceilingTop: '#050509', ceilingBottom: '#15131b', floorA: '#171721', floorB: '#25232d', floorC: '#56505f', grid: 'rgba(155,150,170,0.12)' },
+      exit: { ceilingTop: '#e7eaf2', ceilingBottom: '#ffffff', floorA: '#d9dce5', floorB: '#f3f3f8', floorC: '#a4a4b2', grid: 'rgba(20,20,28,0.11)' },
+      candy: { ceilingTop: '#7d3f8c', ceilingBottom: '#ffb3d8', floorA: '#ff9b37', floorB: '#ff4fb8', floorC: '#fff1a8', grid: 'rgba(255,255,255,0.15)' },
+      test: { ceilingTop: '#030808', ceilingBottom: '#071c1e', floorA: '#021012', floorB: '#083036', floorC: '#7df0ff', grid: 'rgba(125,240,255,0.28)' },
+      manor: { ceilingTop: '#090713', ceilingBottom: '#241c30', floorA: '#201522', floorB: '#392336', floorC: '#6d4b42', grid: 'rgba(183,240,255,0.1)' },
+      basement: { ceilingTop: '#050509', ceilingBottom: '#14101e', floorA: '#12121a', floorB: '#23202b', floorC: '#3a3542', grid: 'rgba(160,160,175,0.12)' },
+      spudsy: { ceilingTop: '#4a1714', ceilingBottom: '#f6d743', floorA: '#e9e1cf', floorB: '#f7f1df', floorC: '#ff4d4d', grid: 'rgba(100,42,20,0.16)' },
+      micro: { ceilingTop: '#1b0d2b', ceilingBottom: '#3a1b4f', floorA: '#211230', floorB: '#2f1a41', floorC: '#ff4fb8', grid: 'rgba(125,240,255,0.18)' },
+      softball: { ceilingTop: '#102d66', ceilingBottom: '#76a4d9', floorA: '#173416', floorB: '#2d6329', floorC: '#ffffff', grid: 'rgba(255,255,255,0.18)' },
+      guns: { ceilingTop: '#190d0b', ceilingBottom: '#35201a', floorA: '#2a1b17', floorB: '#463228', floorC: '#f6d743', grid: 'rgba(246,215,67,0.18)' },
+      lake: { ceilingTop: '#0f4e8a', ceilingBottom: '#78e8ff', floorA: '#ffe57d', floorB: '#f7c65e', floorC: '#4ee7ff', grid: 'rgba(255,255,255,0.18)' },
+      admin: { ceilingTop: '#080808', ceilingBottom: '#1a1a1a', floorA: '#f2f2f2', floorB: '#050505', floorC: '#ffcf75', grid: 'rgba(255,207,117,0.18)' },
+      core: { ceilingTop: '#120806', ceilingBottom: '#3b180d', floorA: '#0a0705', floorB: '#2a1008', floorC: '#ff7a30', grid: 'rgba(255,122,48,0.25)' },
+      memory: { ceilingTop: '#06070c', ceilingBottom: '#15151f', floorA: '#0e0e12', floorB: '#22202a', floorC: '#d9d0a2', grid: 'rgba(217,208,162,0.16)' },
+      archive: { ceilingTop: '#07020f', ceilingBottom: '#20102e', floorA: '#13091d', floorB: '#251234', floorC: '#c875ff', grid: 'rgba(200,117,255,0.16)' }
+    };
+    const base = themes[motif] || themes.circus;
+    return {
+      ...base,
+      ceilingTop: zone.ceiling ? this.shadeHex(zone.ceiling, 0.72) : base.ceilingTop,
+      ceilingBottom: zone.ceiling ? this.shadeHex(zone.ceiling, 1.2) : base.ceilingBottom
+    };
+  },
+
+  drawCircusThemedCeiling(ctx, w, h, horizon, state, zone, motif) {
+    const theme = this.getCircusRoomTheme(motif, zone);
+    const gradient = ctx.createLinearGradient(0, 0, 0, horizon);
+    gradient.addColorStop(0, theme.ceilingTop);
+    gradient.addColorStop(1, theme.ceilingBottom);
+    ctx.fillStyle = gradient;
+    ctx.fillRect(0, 0, w, horizon);
+
+    ctx.save();
+    const pulse = 0.55 + Math.sin(performance.now() / 700) * 0.45;
+    if (['circus', 'grounds', 'final'].includes(motif)) {
+      ctx.strokeStyle = motif === 'final' ? 'rgba(255,70,80,0.32)' : 'rgba(255,241,168,0.26)';
+      ctx.lineWidth = 2;
+      for (let i = -4; i <= 4; i++) {
+        ctx.beginPath();
+        ctx.moveTo(w / 2, 12);
+        ctx.lineTo(w / 2 + i * 92, horizon);
+        ctx.stroke();
+      }
+      ctx.fillStyle = `rgba(255,216,74,${0.08 + pulse * 0.06})`;
+      ctx.beginPath();
+      ctx.arc(w / 2, 22, 54, 0, Math.PI * 2);
+      ctx.fill();
+    } else if (motif === 'candy' || motif === 'lake') {
+      ctx.fillStyle = motif === 'lake' ? 'rgba(255,229,125,0.8)' : 'rgba(255,255,255,0.35)';
+      for (let i = 0; i < 7; i++) {
+        const x = (i * 137 + Math.sin(performance.now() / 1300 + i) * 12) % (w + 120) - 60;
+        const y = 28 + (i % 3) * 34;
+        ctx.beginPath();
+        ctx.ellipse(x, y, 34, 11, 0, 0, Math.PI * 2);
+        ctx.ellipse(x + 28, y + 4, 25, 9, 0, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    } else if (['test', 'admin', 'core'].includes(motif)) {
+      ctx.strokeStyle = theme.grid;
+      for (let x = -80; x < w + 80; x += 42) {
+        ctx.beginPath();
+        ctx.moveTo(x, 0);
+        ctx.lineTo(x + 100, horizon);
+        ctx.stroke();
+      }
+      for (let y = 0; y < horizon; y += 24) {
+        ctx.beginPath();
+        ctx.moveTo(0, y);
+        ctx.lineTo(w, y);
+        ctx.stroke();
+      }
+    } else if (['manor', 'basement'].includes(motif)) {
+      ctx.fillStyle = 'rgba(0,0,0,0.38)';
+      for (let i = 0; i < 6; i++) {
+        const x = 70 + i * 120;
+        ctx.fillRect(x, 0, 10, horizon);
+      }
+      ctx.fillStyle = 'rgba(255,216,120,0.16)';
+      ctx.beginPath();
+      ctx.ellipse(w / 2, 50, 92, 18, 0, 0, Math.PI * 2);
+      ctx.fill();
+    } else if (motif === 'spudsy') {
+      ctx.fillStyle = 'rgba(255,77,77,0.22)';
+      ctx.fillRect(0, horizon * 0.58, w, 14);
+      ctx.fillStyle = 'rgba(255,255,255,0.12)';
+      for (let x = 0; x < w; x += 54) ctx.fillRect(x, 0, 2, horizon);
+    } else {
+      ctx.strokeStyle = theme.grid;
+      for (let x = 0; x < w; x += 64) {
+        ctx.beginPath();
+        ctx.moveTo(x, 0);
+        ctx.lineTo(w - x, horizon);
+        ctx.stroke();
+      }
+    }
+    ctx.restore();
+  },
+
+  drawCircusThemedFloor(ctx, w, h, horizon, state, zone, motif) {
+    if (motif === 'circus') {
+      this.drawCircusSplitRingFloor(ctx, w, h, horizon, state);
+      return;
+    }
+    const floorH = h - horizon;
+    const fov = Math.PI / 3.05;
+    const xStep = 5;
+    const yStep = 3;
+    for (let sy = Math.floor(horizon); sy < h; sy += yStep) {
+      const depthT = Math.max(0.02, (sy - horizon) / floorH);
+      const rowDistance = 0.42 / depthT;
+      const shade = Math.max(0.5, Math.min(1.2, 1.08 - depthT * 0.38));
+      for (let sx = 0; sx < w; sx += xStep) {
+        const ratio = sx / Math.max(1, w - 1);
+        const rayAngle = state.player.a - fov / 2 + ratio * fov;
+        const lateral = (ratio - 0.5) * rowDistance * 0.36;
+        const worldX = state.player.x + Math.cos(rayAngle) * rowDistance + Math.cos(rayAngle + Math.PI / 2) * lateral;
+        const worldZ = state.player.z + Math.sin(rayAngle) * rowDistance + Math.sin(rayAngle + Math.PI / 2) * lateral;
+        ctx.fillStyle = this.getCircusFloorSample(worldX, worldZ, shade, motif, zone);
+        ctx.fillRect(sx, sy, xStep + 1, yStep + 1);
+      }
+    }
+  },
+
+  getCircusFloorSample(worldX, worldZ, shade, motif, zone) {
+    const theme = this.getCircusRoomTheme(motif, zone);
+    const checker = (scale = 1) => (Math.floor(worldX * scale) + Math.floor(worldZ * scale)) % 2 === 0;
+    let color = theme.floorA;
+    if (motif === 'final') {
+      const crack = Math.abs(Math.sin(worldX * 2.4 + worldZ * 1.8)) < 0.12;
+      color = crack ? theme.floorC : (checker(1.25) ? theme.floorA : theme.floorB);
+    } else if (motif === 'grounds') {
+      const path = Math.abs(worldX - worldZ * 0.16) < 0.55;
+      color = path ? theme.floorC : (checker(1.1) ? theme.floorA : theme.floorB);
+    } else if (motif === 'cellar' || motif === 'basement' || motif === 'manor') {
+      const plank = Math.floor(worldX * 2.1) % 2 === 0;
+      const seam = Math.abs((worldX * 2.1) % 1) < 0.08;
+      color = seam ? theme.floorC : (plank ? theme.floorA : theme.floorB);
+    } else if (motif === 'exit' || motif === 'spudsy' || motif === 'admin') {
+      color = checker(motif === 'admin' ? 1.45 : 1.35) ? theme.floorA : theme.floorB;
+    } else if (motif === 'candy') {
+      const syrup = Math.sin(worldX * 1.7 + worldZ * 0.9) > 0.42;
+      color = syrup ? theme.floorB : (checker(0.85) ? theme.floorA : theme.floorC);
+    } else if (motif === 'test' || motif === 'core' || motif === 'micro' || motif === 'archive' || motif === 'memory') {
+      const gridLine = Math.abs((worldX * 1.25) % 1) < 0.04 || Math.abs((worldZ * 1.25) % 1) < 0.04;
+      color = gridLine ? theme.floorC : (checker(0.62) ? theme.floorA : theme.floorB);
+    } else if (motif === 'softball') {
+      const diamond = Math.abs(Math.abs(worldX - 6) + Math.abs(worldZ - 6) - 2.8) < 0.18;
+      color = diamond ? theme.floorC : (checker(1.5) ? theme.floorA : theme.floorB);
+    } else if (motif === 'guns') {
+      const lane = Math.abs((worldX * 0.55) % 1) < 0.08;
+      color = lane ? theme.floorC : (checker(0.9) ? theme.floorA : theme.floorB);
+    } else if (motif === 'lake') {
+      const water = worldZ > 6.1 + Math.sin(worldX * 0.8) * 0.22;
+      color = water ? theme.floorC : (checker(0.9) ? theme.floorA : theme.floorB);
+    }
+    return this.shadeHex(color, shade);
   },
 
   drawCircusSplitRingFloor(ctx, w, h, horizon, state) {
@@ -3342,24 +3542,24 @@ const OS = {
       { kind: 'pillar', x: 3.15, z: -3.1, color: '#ffd84a' }
     ];
     const byZone = {
-      2: [...basePillars, { kind: 'ring', x: 0, z: -2.9, color: '#7df0ff' }, { kind: 'spotlight', x: -1.8, z: -2.2, color: '#fff1a8' }, { kind: 'spotlight', x: 1.8, z: -2.2, color: '#fff1a8' }],
-      3: [{ kind: 'tent', x: 0, z: -3.0, color: '#e53935' }, { kind: 'balloon', x: -2.3, z: -2.2, color: '#ff4fb8' }, { kind: 'balloon', x: 2.3, z: -2.4, color: '#7df0ff' }],
-      4: [{ kind: 'crate', x: -1.8, z: -2.0, color: '#56505f' }, { kind: 'eye', x: 0.9, z: -2.7, color: '#ff3333' }, { kind: 'crate', x: 2.2, z: -1.7, color: '#33333a' }],
-      5: [{ kind: 'exitframe', x: 0, z: -3.1, color: '#ffffff' }, { kind: 'desk', x: -1.5, z: -2.1, color: '#a0a8b8' }],
-      6: [{ kind: 'candy', x: -2.2, z: -2.2, color: '#ff9b37' }, { kind: 'truck', x: 0.4, z: -2.8, color: '#ffd84a' }, { kind: 'candy', x: 2.3, z: -1.8, color: '#ff4fb8' }],
-      7: [{ kind: 'console', x: -1.6, z: -2.2, color: '#9cff6d' }, { kind: 'gridnode', x: 1.4, z: -2.6, color: '#7df0ff' }],
-      8: [{ kind: 'window', x: -2.2, z: -2.5, color: '#b7f0ff' }, { kind: 'table', x: 0.2, z: -2.9, color: '#7c88a1' }, { kind: 'candle', x: 1.8, z: -1.9, color: '#ffd84a' }],
-      9: [{ kind: 'stairs', x: 0, z: -2.8, color: '#7c88a1' }, { kind: 'barrel', x: -2.1, z: -1.9, color: '#56505f' }],
-      10: [{ kind: 'counter', x: 0, z: -2.7, color: '#f6d743' }, { kind: 'menu', x: -1.9, z: -2.3, color: '#ff4d4d' }, { kind: 'menu', x: 1.9, z: -2.3, color: '#ff4d4d' }],
-      11: [{ kind: 'card', x: -1.8, z: -2.1, color: '#ff4fb8' }, { kind: 'card', x: 0, z: -2.7, color: '#7df0ff' }, { kind: 'card', x: 1.8, z: -2.1, color: '#ffd84a' }],
-      12: [{ kind: 'base', x: 0, z: -2.6, color: '#ffffff' }, { kind: 'scoreboard', x: 0, z: -3.25, color: '#83ff57' }],
-      13: [{ kind: 'target', x: -1.8, z: -2.3, color: '#f6d743' }, { kind: 'target', x: 1.8, z: -2.3, color: '#ff4d4d' }],
-      14: [{ kind: 'umbrella', x: -1.8, z: -2.1, color: '#ffd84a' }, { kind: 'wave', x: 0, z: -3.0, color: '#4ee7ff' }, { kind: 'sun', x: 2.4, z: -2.8, color: '#ffe57d' }],
-      15: [{ kind: 'console', x: 0, z: -2.7, color: '#ffcf75' }, { kind: 'gridnode', x: -2.0, z: -2.0, color: '#7df0ff' }],
-      16: [{ kind: 'desk', x: 0, z: -2.9, color: '#ff7a30' }, { kind: 'console', x: -2.0, z: -2.2, color: '#7df0ff' }, { kind: 'eye', x: 2.1, z: -2.2, color: '#ff3333' }],
-      17: [{ kind: 'memory', x: -1.8, z: -2.0, color: '#d9d0a2' }, { kind: 'memory', x: 0, z: -2.6, color: '#7df0ff' }, { kind: 'memory', x: 1.8, z: -2.0, color: '#d9d0a2' }],
-      18: [...basePillars, { kind: 'spotlight', x: 0, z: -2.6, color: '#e53935' }],
-      19: [{ kind: 'archive', x: -2.0, z: -2.1, color: '#c875ff' }, { kind: 'archive', x: 0, z: -2.7, color: '#7df0ff' }, { kind: 'archive', x: 2.0, z: -2.1, color: '#ffd84a' }]
+      2: [...basePillars, { kind: 'ring', x: 0, z: -2.9, color: '#7df0ff' }, { kind: 'spotlight', x: -1.8, z: -2.2, color: '#fff1a8' }, { kind: 'spotlight', x: 1.8, z: -2.2, color: '#fff1a8' }, { kind: 'balloon', x: -0.8, z: -1.35, color: '#ff4fb8' }],
+      3: [{ kind: 'tent', x: 0, z: -3.0, color: '#e53935' }, { kind: 'balloon', x: -2.3, z: -2.2, color: '#ff4fb8' }, { kind: 'balloon', x: 2.3, z: -2.4, color: '#7df0ff' }, { kind: 'ring', x: 0, z: -1.45, color: '#ffd84a' }, { kind: 'candy', x: 3.0, z: -2.95, color: '#ff9b37' }],
+      4: [{ kind: 'crate', x: -1.8, z: -2.0, color: '#56505f' }, { kind: 'eye', x: 0.9, z: -2.7, color: '#ff3333' }, { kind: 'crate', x: 2.2, z: -1.7, color: '#33333a' }, { kind: 'barrel', x: -0.35, z: -1.25, color: '#26232d' }, { kind: 'stairs', x: 2.75, z: -2.75, color: '#4d4a58' }],
+      5: [{ kind: 'exitframe', x: 0, z: -3.1, color: '#ffffff' }, { kind: 'desk', x: -1.5, z: -2.1, color: '#a0a8b8' }, { kind: 'exitframe', x: 2.25, z: -2.2, color: '#ffffff' }, { kind: 'console', x: -2.65, z: -1.35, color: '#b8d7ff' }],
+      6: [{ kind: 'candy', x: -2.2, z: -2.2, color: '#ff9b37' }, { kind: 'truck', x: 0.4, z: -2.8, color: '#ffd84a' }, { kind: 'candy', x: 2.3, z: -1.8, color: '#ff4fb8' }, { kind: 'barrel', x: -0.9, z: -1.25, color: '#ffcf75' }, { kind: 'candy', x: 3.1, z: -2.75, color: '#7df0ff' }],
+      7: [{ kind: 'console', x: -1.6, z: -2.2, color: '#9cff6d' }, { kind: 'gridnode', x: 1.4, z: -2.6, color: '#7df0ff' }, { kind: 'gridnode', x: -0.1, z: -1.35, color: '#ff7a30' }, { kind: 'archive', x: 2.7, z: -2.0, color: '#9cff6d' }],
+      8: [{ kind: 'window', x: -2.2, z: -2.5, color: '#b7f0ff' }, { kind: 'table', x: 0.2, z: -2.9, color: '#7c88a1' }, { kind: 'candle', x: 1.8, z: -1.9, color: '#ffd84a' }, { kind: 'window', x: 2.7, z: -2.65, color: '#b7f0ff' }, { kind: 'candle', x: -0.85, z: -1.4, color: '#ffd84a' }],
+      9: [{ kind: 'stairs', x: 0, z: -2.8, color: '#7c88a1' }, { kind: 'barrel', x: -2.1, z: -1.9, color: '#56505f' }, { kind: 'barrel', x: 1.95, z: -1.75, color: '#3a3542' }, { kind: 'candle', x: -0.6, z: -1.25, color: '#ffd84a' }],
+      10: [{ kind: 'counter', x: 0, z: -2.7, color: '#f6d743' }, { kind: 'menu', x: -1.9, z: -2.3, color: '#ff4d4d' }, { kind: 'menu', x: 1.9, z: -2.3, color: '#ff4d4d' }, { kind: 'table', x: -2.65, z: -1.35, color: '#f6d743' }, { kind: 'counter', x: 2.75, z: -1.4, color: '#ffffff' }],
+      11: [{ kind: 'card', x: -1.8, z: -2.1, color: '#ff4fb8' }, { kind: 'card', x: 0, z: -2.7, color: '#7df0ff' }, { kind: 'card', x: 1.8, z: -2.1, color: '#ffd84a' }, { kind: 'doorframe', x: -2.9, z: -2.9, color: '#c875ff' }, { kind: 'gridnode', x: 2.9, z: -1.3, color: '#7df0ff' }],
+      12: [{ kind: 'base', x: 0, z: -2.6, color: '#ffffff' }, { kind: 'scoreboard', x: 0, z: -3.25, color: '#83ff57' }, { kind: 'base', x: -1.45, z: -1.6, color: '#ffffff' }, { kind: 'base', x: 1.45, z: -1.6, color: '#ffffff' }, { kind: 'spotlight', x: 2.8, z: -2.75, color: '#fff1a8' }],
+      13: [{ kind: 'target', x: -1.8, z: -2.3, color: '#f6d743' }, { kind: 'target', x: 1.8, z: -2.3, color: '#ff4d4d' }, { kind: 'target', x: 0, z: -3.05, color: '#ffffff' }, { kind: 'crate', x: -2.9, z: -1.35, color: '#5c3a21' }, { kind: 'barrel', x: 2.85, z: -1.35, color: '#463228' }],
+      14: [{ kind: 'umbrella', x: -1.8, z: -2.1, color: '#ffd84a' }, { kind: 'wave', x: 0, z: -3.0, color: '#4ee7ff' }, { kind: 'sun', x: 2.4, z: -2.8, color: '#ffe57d' }, { kind: 'umbrella', x: 1.65, z: -1.35, color: '#ff9b37' }, { kind: 'wave', x: -2.95, z: -2.85, color: '#4ee7ff' }],
+      15: [{ kind: 'console', x: 0, z: -2.7, color: '#ffcf75' }, { kind: 'gridnode', x: -2.0, z: -2.0, color: '#7df0ff' }, { kind: 'table', x: 1.75, z: -1.6, color: '#ffffff' }, { kind: 'card', x: 2.75, z: -2.45, color: '#ffcf75' }],
+      16: [{ kind: 'desk', x: 0, z: -2.9, color: '#ff7a30' }, { kind: 'console', x: -2.0, z: -2.2, color: '#7df0ff' }, { kind: 'eye', x: 2.1, z: -2.2, color: '#ff3333' }, { kind: 'gridnode', x: 0.95, z: -1.35, color: '#ff7a30' }, { kind: 'archive', x: -2.9, z: -1.4, color: '#7df0ff' }],
+      17: [{ kind: 'memory', x: -1.8, z: -2.0, color: '#d9d0a2' }, { kind: 'memory', x: 0, z: -2.6, color: '#7df0ff' }, { kind: 'memory', x: 1.8, z: -2.0, color: '#d9d0a2' }, { kind: 'table', x: 0.55, z: -1.35, color: '#d9d0a2' }, { kind: 'candle', x: -2.75, z: -1.4, color: '#ffd84a' }],
+      18: [...basePillars, { kind: 'spotlight', x: 0, z: -2.6, color: '#e53935' }, { kind: 'archive', x: -2.2, z: -2.25, color: '#c875ff' }, { kind: 'gridnode', x: 2.2, z: -1.45, color: '#ff4d4d' }],
+      19: [{ kind: 'archive', x: -2.0, z: -2.1, color: '#c875ff' }, { kind: 'archive', x: 0, z: -2.7, color: '#7df0ff' }, { kind: 'archive', x: 2.0, z: -2.1, color: '#ffd84a' }, { kind: 'card', x: -3.0, z: -1.35, color: '#ff4fb8' }, { kind: 'card', x: 3.0, z: -1.35, color: '#ffd84a' }]
     };
     return [...(byZone[zoneId] || basePillars), ...this.getCircusExtraZoneProps(zoneId)];
   },
@@ -3386,29 +3586,57 @@ const OS = {
         { kind: 'candy', x: -3.1, z: -1.15, color: '#ff4fb8' },
         { kind: 'truck', x: 2.8, z: -1.35, color: '#ffd84a' }
       ],
+      7: [
+        { kind: 'console', x: -3.0, z: -1.15, color: '#9cff6d' },
+        { kind: 'gridnode', x: 3.0, z: -1.15, color: '#7df0ff' }
+      ],
       8: [
         { kind: 'candle', x: -3.1, z: -1.15, color: '#ffd84a' },
         { kind: 'window', x: 3.05, z: -1.2, color: '#b7f0ff' }
+      ],
+      9: [
+        { kind: 'stairs', x: -3.0, z: -1.15, color: '#4d4a58' },
+        { kind: 'barrel', x: 3.05, z: -1.15, color: '#26232d' }
       ],
       10: [
         { kind: 'counter', x: -3.05, z: -1.05, color: '#f6d743' },
         { kind: 'menu', x: 3.1, z: -1.15, color: '#ff4d4d' }
       ],
+      11: [
+        { kind: 'card', x: -3.2, z: -1.05, color: '#ff4fb8' },
+        { kind: 'card', x: 3.2, z: -1.05, color: '#ffd84a' }
+      ],
       12: [
         { kind: 'base', x: -3.15, z: -1.0, color: '#ffffff' },
         { kind: 'base', x: 3.15, z: -1.0, color: '#ffffff' }
+      ],
+      13: [
+        { kind: 'target', x: -3.15, z: -1.05, color: '#f6d743' },
+        { kind: 'target', x: 3.15, z: -1.05, color: '#ff4d4d' }
       ],
       14: [
         { kind: 'umbrella', x: -3.2, z: -1.15, color: '#ffd84a' },
         { kind: 'wave', x: 3.05, z: -1.2, color: '#4ee7ff' }
       ],
+      15: [
+        { kind: 'card', x: -3.05, z: -1.1, color: '#ffffff' },
+        { kind: 'console', x: 3.05, z: -1.15, color: '#ffcf75' }
+      ],
       16: [
         { kind: 'console', x: 2.95, z: -1.15, color: '#7df0ff' },
         { kind: 'gridnode', x: -3.0, z: -1.1, color: '#ff7a30' }
       ],
+      17: [
+        { kind: 'memory', x: -3.0, z: -1.15, color: '#d9d0a2' },
+        { kind: 'memory', x: 3.0, z: -1.15, color: '#7df0ff' }
+      ],
       18: [
         { kind: 'archive', x: -3.05, z: -1.1, color: '#c875ff' },
         { kind: 'spotlight', x: 3.05, z: -1.2, color: '#fff1a8' }
+      ],
+      19: [
+        { kind: 'archive', x: -3.2, z: -1.05, color: '#c875ff' },
+        { kind: 'archive', x: 3.2, z: -1.05, color: '#ffd84a' }
       ]
     };
     return extras[zoneId] || [];
