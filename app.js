@@ -4916,6 +4916,7 @@ const OS = {
   setupCainOSTools() {
     const tabTooltips = {
       map: 'Afficher les lieux de simulation visites et verrouilles.',
+      content: 'Afficher le plan contenu episode par episode, les replays et les collectibles.',
       evidence: 'Afficher les preuves lore et leurs sources de progression.',
       inventory: 'Afficher les objets de scene recuperes dans la simulation.',
       relations: 'Afficher la confiance/tension par personnage.',
@@ -5019,6 +5020,21 @@ const OS = {
           EpisodeManager.selectedSubepisodeIndex = subepisode;
           EpisodeManager.renderSubepisodeMenu(episode);
           EpisodeManager.updateSubepisodeStartButton(episode);
+        }
+      }
+      if (action === 'play-subepisode' && typeof EpisodeManager !== 'undefined' && Number.isFinite(episode) && Number.isInteger(subepisode)) {
+        const mode = button.getAttribute('data-mode') || 'text';
+        SoundManager.playClick();
+        this.openWindow('simulations');
+        EpisodeManager.selectEpisode(episode);
+        EpisodeManager.selectedSubepisodeIndex = subepisode;
+        EpisodeManager.renderSubepisodeMenu(episode);
+        EpisodeManager.updateSubepisodeStartButton(episode);
+        if (mode === 'text' || mode === 'micro') {
+          EpisodeManager.startSubepisode(episode, subepisode);
+          if (mode === 'micro') {
+            setTimeout(() => EpisodeManager.skipToActiveSubepisodeMicroGame?.(), 180);
+          }
         }
       }
       if (action === 'open-zone') {
@@ -5180,6 +5196,92 @@ const OS = {
     ];
   },
 
+  getCainOSContentMatrix() {
+    if (typeof EpisodeManager === 'undefined') return [];
+    const progress = EpisodeManager.getProgress();
+    const zoneByEpisode = {
+      1: [2, 4, 5],
+      2: [6],
+      3: [8],
+      4: [10],
+      5: [11, 12],
+      6: [13],
+      7: [14],
+      8: [16, 17],
+      9: [18, 19]
+    };
+    return Array.from({ length: 9 }, (_, offset) => {
+      const ep = offset + 1;
+      const segments = EpisodeManager.getSubepisodeSegments?.(ep) || [];
+      const completed = EpisodeManager.getSubepisodeProgress?.(ep) || [];
+      const zones = (zoneByEpisode[ep] || []).map(zoneId => this.getCainOSLoreZones().find(zone => zone.id === zoneId)).filter(Boolean);
+      const next = segments.find(segment => !completed.includes(segment.index));
+      return {
+        ep,
+        title: EpisodeManager.storyData?.[ep]?.title || `Episode ${ep}`,
+        total: segments.length,
+        completed: completed.length,
+        done: progress.includes(ep),
+        next,
+        zones,
+        segments
+      };
+    });
+  },
+
+  getCainOSCollectibles() {
+    const visited = this.getCainOSVisitedZones();
+    const progress = (typeof EpisodeManager !== 'undefined') ? EpisodeManager.getProgress() : [];
+    const subDone = ep => (typeof EpisodeManager !== 'undefined') ? (EpisodeManager.getSubepisodeProgress?.(ep) || []) : [];
+    const unlocked = (ep, sub = null) => progress.includes(ep) || progress.some(done => done > ep && done <= 9) || (sub !== null && subDone(ep).includes(sub));
+    return [
+      { id: 'ticket_exit', ep: 1, sub: 2, zone: 5, title: 'Trace de porte rouge', desc: 'Preuve que la sortie est une illusion exploitable, pas une liberation valide.' },
+      { id: 'gloink_chip', ep: 1, sub: 4, zone: 3, title: 'Eclat Gloink', desc: 'Petit fragment vole au decor pendant la proliferation Gloink.' },
+      { id: 'syrup_ticket', ep: 2, sub: 3, zone: 6, title: 'Bon de sirop', desc: 'Repere Candy Canyon lie au convoi et a Gummigoo.' },
+      { id: 'gummigoo_memory', ep: 2, sub: 5, zone: 6, title: 'Memoire PNJ', desc: 'Fragment de profil a manipuler sans pretendre que Gummigoo est humain.' },
+      { id: 'mildenhall_candle', ep: 3, sub: 1, zone: 8, title: 'Bougie Mildenhall', desc: 'Objet-lumiere de la zone horreur, utile contre les leurres.' },
+      { id: 'queenie_piece', ep: 3, sub: 6, zone: 17, title: 'Piece Queenie', desc: 'Souvenir archive : il stabilise Kinger sans restaurer Queenie comme PNJ actif.' },
+      { id: 'spudsy_receipt', ep: 4, sub: 3, zone: 10, title: 'Ticket Spudsy', desc: 'Collectible de service, lie au masque et a la pression de Gangle.' },
+      { id: 'suggestion_stub', ep: 5, sub: 1, zone: 11, title: 'Fiche suggestion', desc: 'Declencheur de micro-aventures, range hors timeline stricte.' },
+      { id: 'virtual_shell', ep: 6, sub: 3, zone: 13, title: 'Douille virtuelle', desc: 'Preuve que les armes restent des regles de simulation.' },
+      { id: 'digital_shell', ep: 7, sub: 1, zone: 14, title: 'Coquillage digital', desc: 'Indice de fausse pause au lac digital.' },
+      { id: 'admin_pass', ep: 8, sub: 4, zone: 16, title: 'Pass admin C&A', desc: 'Objet tardif pour acceder aux couches techniques.' },
+      { id: 'color_fragment', ep: 9, sub: 3, zone: 18, title: 'Fragment couleur', desc: 'Marqueur du final et de la recoloration progressive.' }
+    ].map(item => ({
+      ...item,
+      unlocked: unlocked(item.ep, item.sub),
+      found: unlocked(item.ep, item.sub) && visited.includes(item.zone)
+    }));
+  },
+
+  getCainOSAnomalyScore() {
+    const progress = (typeof EpisodeManager !== 'undefined') ? EpisodeManager.getProgress() : [];
+    const zones = this.getCainOSVisitedZones();
+    const collectibles = this.getCainOSCollectibles();
+    const achievements = Object.keys(this.getCainOSAchievements()).length;
+    const subCount = (typeof EpisodeManager !== 'undefined')
+      ? Array.from({ length: 9 }, (_, offset) => EpisodeManager.getSubepisodeProgress?.(offset + 1)?.length || 0).reduce((a, b) => a + b, 0)
+      : 0;
+    const raw = progress.filter(ep => ep >= 0).length * 6 + zones.length * 3 + collectibles.filter(item => item.found).length * 4 + achievements * 2 + subCount;
+    const score = Math.min(100, raw);
+    const level = score >= 75 ? 'CRITIQUE' : (score >= 45 ? 'INSTABLE' : (score >= 20 ? 'SURVEILLE' : 'FAIBLE'));
+    return { score, level };
+  },
+
+  getCainOSSkinStoreSummary() {
+    const cast = this.getWackyCastData();
+    const purchased = this.getPurchasedWackySkins();
+    const fanSkins = Object.entries(cast)
+      .filter(([id, data]) => this.isFanSkin(id, data))
+      .map(([id, data]) => ({ id, name: data.name, purchased: purchased.includes(id), unlocked: this.isWackySkinStoreUnlocked() }));
+    return {
+      unlocked: this.isWackySkinStoreUnlocked(),
+      total: fanSkins.length,
+      purchased: fanSkins.filter(item => item.purchased).length,
+      preview: fanSkins.slice(0, 8)
+    };
+  },
+
   getCainOSEvidence() {
     return this.getCainOSJournalEntries().map(entry => ({
       ...entry,
@@ -5190,13 +5292,21 @@ const OS = {
 
   getCainOSInventory() {
     const visited = this.getCainOSVisitedZones();
-    return this.getCainOSLoreZones().map(zone => ({
+    const zoneItems = this.getCainOSLoreZones().map(zone => ({
       name: zone.item,
       from: zone.name,
       zoneId: zone.id,
       unlocked: zone.unlocked && visited.includes(zone.id),
       desc: zone.unlocked ? 'Objet de scene utilisable comme preuve ou declencheur de dialogue.' : 'Objet masque pour eviter un spoiler de progression.'
     }));
+    const collectibles = this.getCainOSCollectibles().map(item => ({
+      name: item.title,
+      from: `EP${item.ep}.${item.sub + 1}`,
+      zoneId: item.zone,
+      unlocked: item.found,
+      desc: item.unlocked ? item.desc : 'Collectible verrouille par sous-episode pour eviter les spoilers.'
+    }));
+    return [...zoneItems, ...collectibles];
   },
 
   getCainOSAchievementList() {
@@ -5240,6 +5350,94 @@ const OS = {
     ];
   },
 
+  renderCainOSContentPanel(renderCards) {
+    const contentEl = document.getElementById('tools-tab-content');
+    if (!contentEl) return;
+    const matrix = this.getCainOSContentMatrix();
+    const collectibles = this.getCainOSCollectibles();
+    const anomaly = this.getCainOSAnomalyScore();
+    const skinStore = this.getCainOSSkinStoreSummary();
+    const episodeCards = matrix.map(entry => {
+      const next = entry.next;
+      const unlocked = typeof EpisodeManager !== 'undefined' && !EpisodeManager.isLocked(entry.ep);
+      const desc = next
+        ? `Prochain bloc: ${next.title}. ${next.playObjective || next.objective}`
+        : (entry.done ? 'Episode termine : replay, mini-jeux et archives disponibles.' : 'En attente de progression precedente.');
+      const actions = [];
+      if (unlocked) {
+        actions.push(`<button class="tools-pill tools-action" data-tools-action="open-episode" data-episode="${entry.ep}">MENU EP${entry.ep}</button>`);
+        if (next) {
+          actions.push(`<button class="tools-pill tools-action" data-tools-action="play-subepisode" data-episode="${entry.ep}" data-subepisode="${next.index}" data-mode="text">CONTINUER</button>`);
+          actions.push(`<button class="tools-pill tools-action" data-tools-action="play-subepisode" data-episode="${entry.ep}" data-subepisode="${next.index}" data-mode="micro">MINI-JEU</button>`);
+        } else if (entry.segments[0]) {
+          actions.push(`<button class="tools-pill tools-action" data-tools-action="play-subepisode" data-episode="${entry.ep}" data-subepisode="0" data-mode="text">REJOUER TEXTE</button>`);
+          actions.push(`<button class="tools-pill tools-action" data-tools-action="play-subepisode" data-episode="${entry.ep}" data-subepisode="0" data-mode="micro">REJOUER MINI-JEU</button>`);
+        }
+      }
+      return {
+        title: `EP${entry.ep} - ${entry.title}`,
+        desc,
+        unlocked,
+        visited: entry.done,
+        badge: entry.done ? 'TERMINE' : `${entry.completed}/${entry.total}`,
+        meta: [
+          `${entry.total} sous-episodes`,
+          entry.zones.map(zone => zone.name).join(' + ') || 'Zone a definir',
+          next ? next.context : 'Replay disponible'
+        ],
+        actions
+      };
+    });
+    const collectibleCards = collectibles.map(item => ({
+      title: item.found ? item.title : 'Collectible verrouille',
+      desc: item.unlocked ? item.desc : `Terminez EP${item.ep}.${item.sub + 1} puis visitez la zone liee pour le recuperer.`,
+      unlocked: item.found,
+      badge: item.found ? 'TROUVE' : (item.unlocked ? 'A CHERCHER' : 'LOCK'),
+      meta: [`EP${item.ep}.${item.sub + 1}`, `ZONE ${item.zone}`],
+      actions: item.unlocked ? [`<button class="tools-pill tools-action" data-tools-action="open-zone" data-zone="${item.zone}">ALLER ZONE</button>`] : null
+    }));
+    const skinCards = skinStore.preview.map(item => ({
+      title: item.unlocked ? item.name : 'Skin fan verrouille',
+      desc: item.unlocked
+        ? (item.purchased ? 'Skin fan achete : utilisable en aventure originale, hors timeline principale.' : 'Skin fan achetable depuis la fiche Wacky Watch du personnage.')
+        : 'Verrouille jusqu a la fin de l episode 9 pour ne pas casser le canon principal.',
+      unlocked: item.unlocked,
+      visited: item.purchased,
+      badge: item.purchased ? 'ACHETE' : (item.unlocked ? 'BOUTIQUE' : 'POST-FINAL'),
+      meta: ['Fan / non canon principal']
+    }));
+    contentEl.innerHTML = `
+      <div class="content-summary-grid">
+        <div class="content-summary-card">
+          <span>ANOMALIE CAINOS</span>
+          <strong>${anomaly.score}%</strong>
+          <em>${anomaly.level}</em>
+        </div>
+        <div class="content-summary-card">
+          <span>SOUS-EPISODES</span>
+          <strong>${matrix.reduce((sum, item) => sum + item.completed, 0)}/${matrix.reduce((sum, item) => sum + item.total, 0)}</strong>
+          <em>progression narrative</em>
+        </div>
+        <div class="content-summary-card">
+          <span>COLLECTIBLES</span>
+          <strong>${collectibles.filter(item => item.found).length}/${collectibles.length}</strong>
+          <em>lore verrouille</em>
+        </div>
+        <div class="content-summary-card">
+          <span>SKINS FAN</span>
+          <strong>${skinStore.purchased}/${skinStore.total}</strong>
+          <em>${skinStore.unlocked ? 'post-final actif' : 'verrou post-final'}</em>
+        </div>
+      </div>
+      <div class="tools-section-title">Episodes et replay</div>
+      <div class="tools-grid">${renderCards(episodeCards)}</div>
+      <div class="tools-section-title">Collectibles lore</div>
+      <div class="tools-grid">${renderCards(collectibleCards)}</div>
+      <div class="tools-section-title">Skins fan post-game</div>
+      <div class="tools-grid">${renderCards(skinCards)}</div>
+    `;
+  },
+
   renderCainOSTools() {
     const progress = (typeof EpisodeManager !== 'undefined') ? EpisodeManager.getProgress() : [];
     const visited = this.getCainOSVisitedZones();
@@ -5265,6 +5463,8 @@ const OS = {
         Number.isFinite(zone.ep) && zone.ep > 0 ? `<button class="tools-pill tools-action" data-tools-action="open-episode" data-episode="${zone.ep}">EP${zone.ep}</button>` : ''
       ].filter(Boolean) : null
     })))}</div>`;
+
+    this.renderCainOSContentPanel(renderCards);
 
     const evidenceEl = document.getElementById('tools-tab-evidence');
     if (evidenceEl) evidenceEl.innerHTML = `<div class="tools-grid">${renderCards(this.getCainOSEvidence().map(entry => {
@@ -5448,7 +5648,7 @@ const OS = {
   },
 
   getCainOSJournalEntries() {
-    return [
+    const baseEntries = [
       { gate: 0, tag: 'BOOT', title: 'Session Pomni ouverte', text: 'Le protocole de calibration a ferme l ecran puis relance CainOS sur un bureau propre. Le Cirque devient accessible depuis la barre des taches.' },
       { gate: 1, tag: 'PILOT', title: 'Kaufmo abstrait et fausse sortie', text: 'Le pilote confirme le piege narratif : la porte de sortie existe comme illusion de scene, pas comme liberation fiable.' },
       { gate: 2, tag: 'NPC', title: 'Gummigoo et les donnees PNJ', text: 'Candy Canyon revele que certains personnages sont generes comme PNJ, avec une memoire suffisamment stable pour troubler Pomni.' },
@@ -5460,6 +5660,24 @@ const OS = {
       { gate: 8, tag: 'CORE', title: 'Couches C&A et origine tardive', text: 'Les traces techniques deviennent consultables seulement lorsque la progression rend ces informations moins spoiler.' },
       { gate: 9, tag: 'FINAL', title: 'Pomni choisit son nom actif', text: 'Le final autorise les donnees Abigail/Abby, mais la timeline jouable continue de traiter Pomni comme identite active dans le Cirque.' }
     ];
+    if (typeof EpisodeManager === 'undefined') return baseEntries;
+    const subEntries = [];
+    for (let ep = 1; ep <= 9; ep++) {
+      const completed = EpisodeManager.getSubepisodeProgress?.(ep) || [];
+      const segments = EpisodeManager.getSubepisodeSegments?.(ep) || [];
+      completed.forEach(index => {
+        const segment = segments.find(item => item.index === index);
+        if (!segment) return;
+        subEntries.push({
+          gate: ep,
+          subGate: index,
+          tag: `EP${ep}.${index + 1}`,
+          title: segment.title,
+          text: `${segment.context}: ${segment.objective}`
+        });
+      });
+    }
+    return [...baseEntries, ...subEntries];
   },
 
   renderCainOSJournal() {
@@ -5470,7 +5688,9 @@ const OS = {
     const entries = this.getCainOSJournalEntries();
     const visible = entries.map(entry => ({
       ...entry,
-      unlocked: progress.includes(entry.gate) || progress.some(ep => ep > entry.gate && ep <= 9)
+      unlocked: entry.subGate !== undefined
+        ? (typeof EpisodeManager !== 'undefined' && (EpisodeManager.getSubepisodeProgress?.(entry.gate) || []).includes(entry.subGate))
+        : (progress.includes(entry.gate) || progress.some(ep => ep > entry.gate && ep <= 9))
     }));
     const unlockedCount = visible.filter(entry => entry.unlocked).length;
     if (count) count.innerText = `${unlockedCount}/${entries.length} signaux`;
