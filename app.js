@@ -331,8 +331,14 @@ const OS = {
       'setting-line-pause': 'Ajouter une pause apres les lignes importantes du transcript.',
       'setting-easy-minigames': 'Assouplir les objectifs des mini-jeux sans changer le lore.',
       'setting-reader-only': 'Autoriser la lecture des episodes sans validation de mini-jeu.',
+      'setting-crt-readable': 'Reduire les scanlines et augmenter legerement la lisibilite CRT.',
       'setting-audio-ambience': 'Regler le volume des ambiances originales CainOS.',
       'setting-audio-glitch': 'Regler le niveau des effets glitch originaux.',
+      'btn-save-export': 'Exporter la progression locale CainOS/TADC dans le buffer.',
+      'btn-save-import': 'Importer la progression depuis le JSON colle dans le buffer.',
+      'btn-save-reset-skins': 'Effacer seulement les skins fan achetes.',
+      'btn-save-reset-episodes': 'Effacer seulement la progression episodes et sous-episodes.',
+      'btn-save-reset-all': 'Effacer toute la progression locale CainOS/TADC.',
       'start-btn': 'Ouvrir le menu C&A Start.',
       'taskbar-circus-entry': 'Ouvrir l entree immersive du chapiteau digital, separee du controle des episodes.',
       'dialog-close-x': 'Fermer cette fenetre de dialogue.',
@@ -4300,12 +4306,12 @@ const OS = {
         h: size,
         depth: p.depth
       });
-      this.drawCircusImpostor(ctx, sprite.type, p.x, baseY, size, sprite.color, sprite.name, sprite.avatar);
+      this.drawCircusImpostor(ctx, sprite.type, p.x, baseY, size, sprite.color, sprite.name, sprite.avatar, sprite.routine);
     });
   },
 
-  drawCircusImpostor(ctx, type, x, baseY, size, color, label, avatar) {
-    if (this.drawCircusWackyAvatar(ctx, avatar || type, x, baseY, size, label, color)) return;
+  drawCircusImpostor(ctx, type, x, baseY, size, color, label, avatar, routine = 'idle') {
+    if (this.drawCircusWackyAvatar(ctx, avatar || type, x, baseY, size, label, color, routine)) return;
 
     ctx.save();
     ctx.translate(x, baseY);
@@ -4327,10 +4333,13 @@ const OS = {
     ctx.font = `${Math.max(6, size * 0.13)}px Courier New`;
     ctx.textAlign = 'center';
     ctx.fillText(label, 0, -size * 1.05);
+    ctx.fillStyle = '#7df0ff';
+    ctx.font = `${Math.max(5, size * 0.09)}px Courier New`;
+    ctx.fillText(`PNJ:${routine.toUpperCase()}`, 0, -size * 0.9);
     ctx.restore();
   },
 
-  drawCircusWackyAvatar(ctx, avatar, x, baseY, size, label, color) {
+  drawCircusWackyAvatar(ctx, avatar, x, baseY, size, label, color, routine = 'idle') {
     const spec = this.getCircusAvatarSheetSpec(avatar);
     const img = spec ? this.circusAvatarSheets?.[spec.sheet] : null;
     if (!spec || !img || !img.complete || !img.naturalWidth || !img.naturalHeight) return false;
@@ -4354,6 +4363,9 @@ const OS = {
     ctx.font = `${Math.max(6, size * 0.13)}px Courier New`;
     ctx.textAlign = 'center';
     ctx.fillText(label, x, drawY - 6);
+    ctx.fillStyle = '#7df0ff';
+    ctx.font = `${Math.max(5, size * 0.09)}px Courier New`;
+    ctx.fillText(`PNJ:${routine.toUpperCase()}`, x, drawY + Math.max(5, size * 0.11));
     ctx.restore();
     return true;
   },
@@ -4909,6 +4921,7 @@ const OS = {
       relations: 'Afficher la confiance/tension par personnage.',
       achievements: 'Afficher les succes lore et progression.',
       inspector: 'Verifier les incoherences lore ou progression.',
+      save: 'Exporter, importer ou reinitialiser la sauvegarde locale CainOS.',
       settings: 'Regler les options de confort, audio et accessibilite.'
     };
     document.querySelectorAll('.tools-tab').forEach(button => {
@@ -4928,7 +4941,7 @@ const OS = {
       });
     });
 
-    ['comfort-reading', 'line-pause', 'easy-minigames', 'reader-only'].forEach(key => {
+    ['comfort-reading', 'line-pause', 'easy-minigames', 'reader-only', 'crt-readable'].forEach(key => {
       const input = document.getElementById(`setting-${key}`);
       if (!input) return;
       input.checked = !!this.getCainOSSetting(key);
@@ -4950,6 +4963,8 @@ const OS = {
     });
 
     this.applyCainOSSettings();
+    this.setupCainOSSaveManager();
+    this.setupCainOSToolActions();
     this.renderCainOSTools();
   },
 
@@ -4979,10 +4994,122 @@ const OS = {
 
   applyCainOSSettings() {
     document.body.classList.toggle('comfort-reading', !!this.getCainOSSetting('comfort-reading'));
+    document.body.classList.toggle('crt-readable', !!this.getCainOSSetting('crt-readable'));
     if (typeof SoundManager !== 'undefined') {
       SoundManager.ambienceVolume = Number(this.getCainOSSetting('audio-ambience', 70)) / 100;
       SoundManager.glitchVolume = Number(this.getCainOSSetting('audio-glitch', 45)) / 100;
     }
+  },
+
+  setupCainOSToolActions() {
+    const root = document.getElementById('win-cainos-tools');
+    if (!root || root.dataset.actionsReady === 'true') return;
+    root.dataset.actionsReady = 'true';
+    root.addEventListener('click', event => {
+      const button = event.target.closest('[data-tools-action]');
+      if (!button) return;
+      const action = button.getAttribute('data-tools-action');
+      const episode = Number(button.getAttribute('data-episode'));
+      const subepisode = button.hasAttribute('data-subepisode') ? Number(button.getAttribute('data-subepisode')) : null;
+      if (action === 'open-episode' && typeof EpisodeManager !== 'undefined' && Number.isFinite(episode)) {
+        SoundManager.playClick();
+        this.openWindow('simulations');
+        EpisodeManager.selectEpisode(episode);
+        if (Number.isInteger(subepisode)) {
+          EpisodeManager.selectedSubepisodeIndex = subepisode;
+          EpisodeManager.renderSubepisodeMenu(episode);
+          EpisodeManager.updateSubepisodeStartButton(episode);
+        }
+      }
+      if (action === 'open-zone') {
+        SoundManager.playClick();
+        this.showCircusDosPreview();
+        setTimeout(() => {
+          this.enterCircusInteriorView();
+          const zone = Number(button.getAttribute('data-zone'));
+          if (Number.isFinite(zone)) this.setCircusSimulationZone(zone, true);
+        }, 120);
+      }
+    });
+  },
+
+  setupCainOSSaveManager() {
+    const exportBtn = document.getElementById('btn-save-export');
+    const importBtn = document.getElementById('btn-save-import');
+    const resetSkinsBtn = document.getElementById('btn-save-reset-skins');
+    const resetEpisodesBtn = document.getElementById('btn-save-reset-episodes');
+    const resetAllBtn = document.getElementById('btn-save-reset-all');
+    const buffer = document.getElementById('save-manager-buffer');
+    const status = document.getElementById('save-manager-status');
+    if (!buffer || buffer.dataset.ready === 'true') return;
+    buffer.dataset.ready = 'true';
+    const setStatus = text => { if (status) status.innerText = text; };
+    exportBtn?.addEventListener('click', () => {
+      buffer.value = JSON.stringify(this.exportCainOSSave(), null, 2);
+      setStatus('Export genere dans le buffer SAVE_MANAGER.sys.');
+      SoundManager.playWin();
+    });
+    importBtn?.addEventListener('click', () => {
+      try {
+        const parsed = JSON.parse(buffer.value);
+        this.importCainOSSave(parsed);
+        setStatus('Save importee. Les fenetres CainOS ont ete rafraichies.');
+        SoundManager.playWin();
+      } catch (e) {
+        setStatus('Import refuse: JSON invalide ou incomplet.');
+        SoundManager.playError();
+      }
+    });
+    resetSkinsBtn?.addEventListener('click', () => {
+      localStorage.removeItem('cainos_purchased_wacky_skins');
+      this.updateWackyWatchCastUI();
+      this.renderCainOSTools();
+      setStatus('Skins achetes reinitialises.');
+    });
+    resetEpisodesBtn?.addEventListener('click', () => {
+      this.resetCainOSKeys(/^tadc_progress$|^tadc_subepisode_progress_/);
+      EpisodeManager.updateLocksUI?.();
+      EpisodeManager.showStartScreen?.(EpisodeManager.currentEpisode ?? 0);
+      this.updateWackyWatchCastUI();
+      this.renderCainOSTools();
+      setStatus('Progression episodes reinitialisee.');
+    });
+    resetAllBtn?.addEventListener('click', () => {
+      this.resetCainOSKeys(/^tadc_|^cainos_/);
+      this.applyCainOSSettings();
+      EpisodeManager.updateLocksUI?.();
+      this.updateWackyWatchCastUI();
+      this.renderCainOSTools();
+      setStatus('Reset total local effectue.');
+    });
+  },
+
+  resetCainOSKeys(pattern) {
+    Object.keys(localStorage)
+      .filter(key => pattern.test(key))
+      .forEach(key => localStorage.removeItem(key));
+  },
+
+  exportCainOSSave() {
+    const keys = Object.keys(localStorage).filter(key => /^tadc_|^cainos_/.test(key));
+    return {
+      schema: 'CainOS_SAVE_V1',
+      exportedAt: new Date().toISOString(),
+      data: Object.fromEntries(keys.map(key => [key, localStorage.getItem(key)]))
+    };
+  },
+
+  importCainOSSave(save) {
+    if (!save || save.schema !== 'CainOS_SAVE_V1' || !save.data || typeof save.data !== 'object') {
+      throw new Error('Invalid CainOS save');
+    }
+    Object.entries(save.data).forEach(([key, value]) => {
+      if (/^tadc_|^cainos_/.test(key) && typeof value === 'string') localStorage.setItem(key, value);
+    });
+    this.applyCainOSSettings();
+    this.updateWackyWatchCastUI();
+    this.renderCainOSJournal();
+    this.renderCainOSTools();
   },
 
   getCainOSVisitedZones() {
@@ -5066,6 +5193,7 @@ const OS = {
     return this.getCainOSLoreZones().map(zone => ({
       name: zone.item,
       from: zone.name,
+      zoneId: zone.id,
       unlocked: zone.unlocked && visited.includes(zone.id),
       desc: zone.unlocked ? 'Objet de scene utilisable comme preuve ou declencheur de dialogue.' : 'Objet masque pour eviter un spoiler de progression.'
     }));
@@ -5079,7 +5207,7 @@ const OS = {
       { id: 'mapper', title: 'Cartographe du chapiteau', done: this.getCainOSVisitedZones().length >= 3 || !!unlocked.mapper, desc: 'Visiter plusieurs zones depuis l entree simulation.' },
       { id: 'proofs', title: 'Archiviste prudent', done: progress.length >= 4, desc: 'Distinguer canon, archive, variante et hypothese.' },
       { id: 'final', title: 'Final accepte', done: progress.includes(9), desc: 'Atteindre la fin avant les missions bonus.' },
-      { id: 'postfinal', title: 'Show bonus de Caine', done: progress.includes(9), desc: 'Debloque les aventures originales non canon.' },
+      { id: 'postfinal', title: 'Show bonus de Caine', done: progress.includes(9), desc: 'Debloque les aventures originales non canon.', actions: progress.includes(9) ? [`<button class="tools-pill tools-action" data-tools-action="open-episode" data-episode="-1">MISSION BONUS</button>`] : null },
       ...Object.entries(unlocked).map(([id, data]) => ({ id, title: data.title, done: true, desc: 'Debloque par interaction CainOS.' }))
     ];
     return base.filter((item, index, arr) => arr.findIndex(other => other.id === item.id) === index);
@@ -5088,10 +5216,24 @@ const OS = {
   getCainOSInspectorFindings() {
     const progress = (typeof EpisodeManager !== 'undefined') ? EpisodeManager.getProgress() : [];
     const lockedVisited = this.getCainOSLoreZones().filter(zone => !zone.unlocked && this.getCainOSVisitedZones().includes(zone.id));
+    const missingSegments = [];
+    if (typeof EpisodeManager !== 'undefined') {
+      for (let ep = 1; ep <= 9; ep++) {
+        if ((EpisodeManager.getSubepisodeSegments?.(ep) || []).length === 0) missingSegments.push(ep);
+      }
+    }
+    const purchased = this.getCainOSStorage('purchased_wacky_skins', []);
+    const fanBeforeFinal = Array.isArray(purchased) && purchased.length > 0 && !progress.includes(9);
     return [
       lockedVisited.length
         ? { level: 'WARN', title: 'Zone visitee trop tot', desc: lockedVisited.map(z => z.name).join(', ') }
         : { level: 'OK', title: 'Carte progression', desc: 'Aucune zone spoiler visitee avant son episode.' },
+      missingSegments.length
+        ? { level: 'WARN', title: 'Sous-episodes manquants', desc: `Episodes sans decoupage detecte: ${missingSegments.join(', ')}.` }
+        : { level: 'OK', title: 'Sous-episodes', desc: 'Les episodes 1 a 9 exposent un decoupage interactif.' },
+      fanBeforeFinal
+        ? { level: 'WARN', title: 'Skins fan avant final', desc: 'Des skins fan sont achetes avant le mode post-final; CainOS doit les garder hors timeline.' }
+        : { level: 'OK', title: 'Skins et timeline', desc: 'Aucun skin fan ne pollue la timeline principale avant le final.' },
       { level: progress.includes(9) ? 'OK' : 'INFO', title: 'Mode post-final', desc: progress.includes(9) ? 'Aventures originales autorisees comme bonus non canon.' : 'Verrouille jusqu au final pour proteger la timeline.' },
       { level: 'OK', title: 'Transcripts', desc: 'Les outils ajoutent des couches autour du texte sans remplacer les dialogues.' },
       { level: this.getCainOSSetting('reader-only') ? 'INFO' : 'OK', title: 'Lecture sans gameplay', desc: this.getCainOSSetting('reader-only') ? 'Option active : utile accessibilite, pas canon gameplay.' : 'Progression normale par texte et mini-jeux.' }
@@ -5106,6 +5248,7 @@ const OS = {
         <div class="tools-card-title"><span>${this.escapeHTML(item.title || item.name)}</span><span>${this.escapeHTML(item.badge || item.level || '')}</span></div>
         <p>${this.escapeHTML(item.desc || item.text || '')}</p>
         ${item.meta ? `<div class="tools-pill-row">${item.meta.map(meta => `<span class="tools-pill">${this.escapeHTML(meta)}</span>`).join('')}</div>` : ''}
+        ${item.actions ? `<div class="tools-pill-row">${item.actions.join('')}</div>` : ''}
       </div>
     `).join('');
 
@@ -5116,7 +5259,11 @@ const OS = {
       unlocked: zone.unlocked,
       visited: visited.includes(zone.id),
       badge: zone.unlocked ? (visited.includes(zone.id) ? 'VISITEE' : `EP${zone.ep}`) : 'LOCK',
-      meta: [zone.item, zone.id === 11 || progress.includes(9) ? 'Bonus non canon possible' : 'Timeline principale']
+      meta: [zone.item, zone.id === 11 ? 'Zone variantes / micro-aventures' : 'Timeline principale'],
+      actions: zone.unlocked ? [
+        `<button class="tools-pill tools-action" data-tools-action="open-zone" data-zone="${zone.id}">OUVRIR ZONE</button>`,
+        Number.isFinite(zone.ep) && zone.ep > 0 ? `<button class="tools-pill tools-action" data-tools-action="open-episode" data-episode="${zone.ep}">EP${zone.ep}</button>` : ''
+      ].filter(Boolean) : null
     })))}</div>`;
 
     const evidenceEl = document.getElementById('tools-tab-evidence');
@@ -5127,7 +5274,8 @@ const OS = {
         desc: unlocked ? entry.text : 'Source masquee pour eviter un spoiler.',
         unlocked,
         badge: unlocked ? entry.tag : 'LOCK',
-        meta: [entry.source, entry.rule]
+        meta: [entry.source, entry.rule],
+        actions: unlocked && entry.gate > 0 ? [`<button class="tools-pill tools-action" data-tools-action="open-episode" data-episode="${entry.gate}">OUVRIR EP${entry.gate}</button>`] : null
       };
     }))}</div>`;
 
@@ -5137,7 +5285,8 @@ const OS = {
       desc: item.desc,
       unlocked: item.unlocked,
       badge: item.unlocked ? 'OBJET' : 'LOCK',
-      meta: [item.from]
+      meta: [item.from],
+      actions: item.zoneId ? [`<button class="tools-pill tools-action" data-tools-action="open-zone" data-zone="${item.zoneId}">RETOUR ZONE</button>`] : null
     })))}</div>`;
 
     const relationEl = document.getElementById('tools-tab-relations');
@@ -5156,7 +5305,7 @@ const OS = {
 
     const achievementsEl = document.getElementById('tools-tab-achievements');
     if (achievementsEl) achievementsEl.innerHTML = `<div class="tools-grid">${renderCards(this.getCainOSAchievementList().map(item => ({
-      title: item.title, desc: item.desc, done: item.done, badge: item.done ? 'OK' : 'LOCK'
+      title: item.title, desc: item.desc, done: item.done, badge: item.done ? 'OK' : 'LOCK', actions: item.actions
     })))}</div>`;
 
     const inspectorEl = document.getElementById('tools-tab-inspector');

@@ -34,11 +34,11 @@
             <div class="desktop-icons">
               <div class="desktop-icon" data-window="simulations">
                 <div class="icon-img icon-sim"></div>
-                <div class="icon-label">Simulation_Control.exe</div>
+                <div class="icon-label" title="Simulation_Control.exe">Simulation Control</div>
               </div>
               <div class="desktop-icon" data-window="wacky-watch">
                 <div class="icon-img icon-watch"></div>
-                <div class="icon-label">Wacky_Watch.app</div>
+                <div class="icon-label" title="Wacky_Watch.app">Wacky Watch</div>
               </div>
               <div class="desktop-icon" data-window="files">
                 <div class="icon-img icon-folder"></div>
@@ -46,11 +46,11 @@
               </div>
               <div class="desktop-icon" data-window="vitals">
                 <div class="icon-img icon-vitals"></div>
-                <div class="icon-label">Sujet_Diagnostic.sys</div>
+                <div class="icon-label" title="Sujet_Diagnostic.sys">Diagnostic</div>
               </div>
               <div class="desktop-icon" data-window="terminal">
                 <div class="icon-img icon-term"></div>
-                <div class="icon-label">C&A_Terminal.com</div>
+                <div class="icon-label" title="C&A_Terminal.com">Terminal C&A</div>
               </div>
               <div class="desktop-icon" data-window="trash">
                 <div class="icon-img icon-trash"></div>
@@ -58,7 +58,7 @@
               </div>
               <div class="desktop-icon" data-window="cainos-tools">
                 <div class="icon-img icon-tools"></div>
-                <div class="icon-label">CainOS_Tools.sys</div>
+                <div class="icon-label" title="CainOS_Tools.sys">CainOS Tools</div>
               </div>
             </div>
 
@@ -632,6 +632,7 @@
                     <button class="tools-tab" data-tools-tab="relations">LIENS</button>
                     <button class="tools-tab" data-tools-tab="achievements">SUCCES</button>
                     <button class="tools-tab" data-tools-tab="inspector">INSPECTEUR</button>
+                    <button class="tools-tab" data-tools-tab="save">SAVE</button>
                     <button class="tools-tab" data-tools-tab="settings">CONFORT</button>
                   </div>
                   <div class="tools-content">
@@ -641,6 +642,17 @@
                     <div id="tools-tab-relations" class="tools-panel"></div>
                     <div id="tools-tab-achievements" class="tools-panel"></div>
                     <div id="tools-tab-inspector" class="tools-panel"></div>
+                    <div id="tools-tab-save" class="tools-panel">
+                      <div class="save-manager-actions">
+                        <button id="btn-save-export" class="retro-btn btn-sm">EXPORTER SAVE</button>
+                        <button id="btn-save-import" class="retro-btn btn-sm">IMPORTER SAVE</button>
+                        <button id="btn-save-reset-skins" class="retro-btn btn-sm">RESET SKINS</button>
+                        <button id="btn-save-reset-episodes" class="retro-btn btn-sm">RESET EPISODES</button>
+                        <button id="btn-save-reset-all" class="retro-btn btn-sm text-red">RESET TOTAL</button>
+                      </div>
+                      <textarea id="save-manager-buffer" class="save-manager-buffer" spellcheck="false" placeholder="Export CainOS ou save a importer..."></textarea>
+                      <p id="save-manager-status" class="tools-note">SAVE_MANAGER.sys gere uniquement localStorage CainOS/TADC.</p>
+                    </div>
                     <div id="tools-tab-settings" class="tools-panel">
                       <div class="settings-grid">
                         <label class="settings-row">
@@ -658,6 +670,10 @@
                         <label class="settings-row">
                           <span>Lire sans gameplay</span>
                           <input type="checkbox" id="setting-reader-only">
+                        </label>
+                        <label class="settings-row">
+                          <span>Lisibilite CRT</span>
+                          <input type="checkbox" id="setting-crt-readable">
                         </label>
                         <label class="settings-row">
                           <span>Ambiance CainOS</span>

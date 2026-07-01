@@ -8207,6 +8207,10 @@ const EpisodeManager = {
         this.storyIndex++;
         this.updateStoryProgress();
         this.updateStoryCheckpointButton();
+        if (window.OS?.getCainOSSetting?.('line-pause')) {
+          const nextBtn = document.getElementById('btn-story-next');
+          if (nextBtn && nextBtn.innerText === 'CONTINUER') nextBtn.innerText = 'CONTINUER APRES PAUSE';
+        }
       }
     }, delay);
   },
@@ -8225,6 +8229,10 @@ const EpisodeManager = {
     this.storyIndex++;
     this.updateStoryProgress();
     this.updateStoryCheckpointButton();
+    if (window.OS?.getCainOSSetting?.('line-pause')) {
+      const nextBtn = document.getElementById('btn-story-next');
+      if (nextBtn && nextBtn.innerText === 'CONTINUER') nextBtn.innerText = 'CONTINUER APRES PAUSE';
+    }
   },
 
   skipRemainingStory() {
