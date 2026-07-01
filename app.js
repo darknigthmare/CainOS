@@ -2668,17 +2668,22 @@ const OS = {
     if (!state.room) this.prepareCircusSimulationRoom();
     const room = state.room;
     const horizon = h * 0.48;
+    const motif = (state.scenes[state.currentZoneId] || state.scenes[2])?.motif || 'circus';
     const ceilingGradient = ctx.createLinearGradient(0, 0, 0, horizon);
     ceilingGradient.addColorStop(0, this.shadeHex(zone.ceiling || '#120821', 0.65));
     ceilingGradient.addColorStop(1, this.shadeHex(zone.ceiling || '#120821', 1.24));
     ctx.fillStyle = ceilingGradient;
     ctx.fillRect(0, 0, w, horizon);
 
-    const floorGradient = ctx.createLinearGradient(0, horizon, 0, h);
-    floorGradient.addColorStop(0, this.shadeHex(zone.floor || '#24112f', 1.16));
-    floorGradient.addColorStop(1, this.shadeHex(zone.floor || '#24112f', 0.52));
-    ctx.fillStyle = floorGradient;
-    ctx.fillRect(0, horizon, w, h - horizon);
+    if (motif === 'circus') {
+      this.drawCircusSplitRingFloor(ctx, w, h, horizon);
+    } else {
+      const floorGradient = ctx.createLinearGradient(0, horizon, 0, h);
+      floorGradient.addColorStop(0, this.shadeHex(zone.floor || '#24112f', 1.16));
+      floorGradient.addColorStop(1, this.shadeHex(zone.floor || '#24112f', 0.52));
+      ctx.fillStyle = floorGradient;
+      ctx.fillRect(0, horizon, w, h - horizon);
+    }
 
     ctx.save();
     ctx.strokeStyle = 'rgba(255,255,255,0.08)';
@@ -2850,6 +2855,75 @@ const OS = {
       ctx.globalAlpha = 0.22;
       ctx.strokeStyle = '#ffffff';
       for (let i = 0; i < 5; i++) ctx.strokeRect(w / 2 - 130 + i * 22, 42 + i * 14, 260 - i * 44, 150 - i * 16);
+    }
+    ctx.restore();
+  },
+
+  drawCircusSplitRingFloor(ctx, w, h, horizon) {
+    const splitX = w * 0.5;
+    const floorH = h - horizon;
+    const orangeGradient = ctx.createLinearGradient(0, horizon, 0, h);
+    orangeGradient.addColorStop(0, '#ffb15a');
+    orangeGradient.addColorStop(0.42, '#e06f24');
+    orangeGradient.addColorStop(1, '#8f3215');
+    ctx.fillStyle = orangeGradient;
+    ctx.fillRect(0, horizon, splitX, floorH);
+
+    ctx.fillStyle = '#f4f0df';
+    ctx.fillRect(splitX, horizon, w - splitX, floorH);
+    const rows = 11;
+    const cols = 7;
+    for (let row = 0; row < rows; row++) {
+      const t1 = row / rows;
+      const t2 = (row + 1) / rows;
+      const y1 = horizon + Math.pow(t1, 1.75) * floorH;
+      const y2 = horizon + Math.pow(t2, 1.75) * floorH;
+      for (let col = 0; col < cols; col++) {
+        if ((row + col) % 2 !== 0) continue;
+        const x1 = splitX + (col / cols) * (w - splitX);
+        const x2 = splitX + ((col + 1) / cols) * (w - splitX);
+        ctx.fillStyle = row < 2 ? '#dad7c9' : '#080808';
+        ctx.beginPath();
+        ctx.moveTo(x1, y1);
+        ctx.lineTo(x2, y1);
+        ctx.lineTo(x2 + (col - cols / 2) * 1.8, y2);
+        ctx.lineTo(x1 + (col - cols / 2) * 1.8, y2);
+        ctx.closePath();
+        ctx.fill();
+      }
+    }
+
+    ctx.save();
+    ctx.strokeStyle = 'rgba(255,255,255,0.22)';
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.moveTo(splitX, horizon);
+    ctx.lineTo(splitX, h);
+    ctx.stroke();
+
+    ctx.strokeStyle = 'rgba(0,0,0,0.38)';
+    for (let i = 0; i <= cols; i++) {
+      const x = splitX + (i / cols) * (w - splitX);
+      ctx.beginPath();
+      ctx.moveTo(splitX, horizon);
+      ctx.lineTo(x, h);
+      ctx.stroke();
+    }
+    for (let row = 1; row < rows; row++) {
+      const y = horizon + Math.pow(row / rows, 1.75) * floorH;
+      ctx.beginPath();
+      ctx.moveTo(splitX, y);
+      ctx.lineTo(w, y);
+      ctx.stroke();
+    }
+
+    ctx.strokeStyle = 'rgba(255,238,168,0.25)';
+    for (let i = 1; i < 5; i++) {
+      const y = horizon + Math.pow(i / 5, 1.9) * floorH;
+      ctx.beginPath();
+      ctx.moveTo(0, y);
+      ctx.quadraticCurveTo(splitX * 0.34, y + 12, splitX, y + 4);
+      ctx.stroke();
     }
     ctx.restore();
   },
