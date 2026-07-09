@@ -561,8 +561,8 @@ const EpisodeManager = {
       title: "Épisode 0: Calibration C&A",
       intro: [
         { speaker: "SYSTEM", text: "INITIALISATION DU SYSTÈME DE LIAISON NEURONALE C&A..." },
-        { speaker: "ARTHUR", text: "Abigail ? Est-ce que vous m'entendez ? Le scan est sur le point de commencer. Ne bougez pas." },
-        { speaker: "ABIGAIL", text: "Où... où suis-je ? Pourquoi tout est sombre ? Je portais un casque..." },
+        { speaker: "ARTHUR", text: "Sujet 251 ? Est-ce que vous m'entendez ? Le scan est sur le point de commencer. Ne bougez pas." },
+        { speaker: "SUBJECT_251", text: "Où... où suis-je ? Pourquoi tout est sombre ? Je portais un casque..." },
         { speaker: "ARTHUR", text: "C'est la phase de calibration neuronale. Le système cartographie votre cortex visuel." },
         { speaker: "ARTHUR", text: "Cliquez sur les nodes clignotants à l'écran pour stabiliser la bande passante." }
       ],
@@ -7431,7 +7431,7 @@ const EpisodeManager = {
   getMicroGamePlayObjective(checkpoint) {
     const target = checkpoint.target || "OK";
     const hazard = checkpoint.hazard || "ERR";
-    const goal = checkpoint.goal || 5;
+    const goal = this.getBalancedMicroGoal(checkpoint);
     if (checkpoint.mode === "click") {
       return `Cliquez ${goal} noeuds verts "${target}". Evitez les noeuds rouges "${hazard}".`;
     }
@@ -7445,6 +7445,14 @@ const EpisodeManager = {
       return `Deplacez le curseur blanc sur ${goal} signaux cyan "${target}" et evitez les signaux rouges "${hazard}".`;
     }
     return checkpoint.objective || "Terminez la micro-simulation.";
+  },
+
+  getBalancedMicroGoal(checkpoint) {
+    const goal = checkpoint?.goal || 5;
+    const easy = !!window.OS?.getCainOSSetting?.('easy-minigames');
+    const adjusted = easy ? Math.max(3, Math.ceil(goal * 0.68)) : goal;
+    if (checkpoint?.dualPhase === false) return adjusted;
+    return Math.max(easy ? 3 : 4, Math.ceil(adjusted * 0.75));
   },
 
   getNextPlayableSubepisodeIndex(num) {
@@ -8452,6 +8460,7 @@ class StoryMicroGame {
     this.lastProgressAt = Date.now();
     this.assistShown = false;
     this.lastFailureHint = "";
+    this.lastHazardHitAt = 0;
     this.handleClick = this.handleClick.bind(this);
     this.handleMouseMove = this.handleMouseMove.bind(this);
     this.handleKeyDown = this.handleKeyDown.bind(this);
@@ -8473,7 +8482,7 @@ class StoryMicroGame {
     this.running = false;
     this.completed = false;
     this.score = 0;
-    this.timeLeft = this.config.duration || 16;
+    this.timeLeft = this.getPhaseDuration('os');
     this.microPhase = 'os';
     this.lastTick = 0;
     this.pointer = { x: this.canvas.width / 2, y: this.canvas.height / 2 };
@@ -8484,6 +8493,7 @@ class StoryMicroGame {
     this.lastProgressAt = Date.now();
     this.assistShown = false;
     this.lastFailureHint = "";
+    this.lastHazardHitAt = 0;
     this.statusEl.innerText = `OS 0 / ${this.getRequiredScore()}`;
   }
 
@@ -8613,11 +8623,26 @@ class StoryMicroGame {
   }
 
   getRequiredScore() {
-    const goal = this.config.goal || 5;
-    const easy = !!window.OS?.getCainOSSetting?.('easy-minigames');
-    const adjusted = easy ? Math.max(2, Math.ceil(goal * 0.7)) : goal;
-    if (this.config.dualPhase === false) return adjusted;
-    return Math.max(2, Math.ceil(adjusted / 2));
+    if (typeof EpisodeManager !== 'undefined' && typeof EpisodeManager.getBalancedMicroGoal === 'function') {
+      return EpisodeManager.getBalancedMicroGoal(this.config);
+    }
+    return Math.max(4, Math.ceil((this.config.goal || 5) * 0.75));
+  }
+
+  getPhaseDuration(phase = this.microPhase) {
+    const goal = this.getRequiredScore();
+    const modeBonus = { click: 2, repair: 4, sequence: 6, dodge: 8 }[this.config.mode] || 3;
+    const declared = this.config.duration || 16;
+    const base = Math.max(declared, 13 + goal * 1.7 + modeBonus);
+    const easyBonus = window.OS?.getCainOSSetting?.('easy-minigames') ? 5 : 0;
+    return Math.ceil(base * (phase === 'simulation' ? 0.94 : 1) + easyBonus);
+  }
+
+  canApplyHazardHit(cooldown = 850) {
+    const now = Date.now();
+    if (now - this.lastHazardHitAt < cooldown) return false;
+    this.lastHazardHitAt = now;
+    return true;
   }
 
   getPhaseLabel() {
@@ -8636,6 +8661,9 @@ class StoryMicroGame {
     const hazard = this.config.hazard || "ERR";
     const goal = this.getRequiredScore();
     if (this.microPhase !== 'simulation') {
+      if (typeof EpisodeManager !== 'undefined' && typeof EpisodeManager.getMicroGamePlayObjective === 'function') {
+        return EpisodeManager.getMicroGamePlayObjective(this.config);
+      }
       return this.config.playObjective || this.config.objective || "Terminez la micro-simulation.";
     }
     const spec = this.getSimulationGameSpec();
@@ -8801,12 +8829,20 @@ class StoryMicroGame {
   }
 
   createItem(good = true) {
+    let x = 24 + Math.random() * (this.canvas.width - 48);
+    let y = 52 + Math.random() * (this.canvas.height - 84);
+    if (!good) {
+      for (let attempt = 0; attempt < 8 && Math.hypot(x - this.pointer.x, y - this.pointer.y) < 88; attempt++) {
+        x = 24 + Math.random() * (this.canvas.width - 48);
+        y = 52 + Math.random() * (this.canvas.height - 84);
+      }
+    }
     return {
-      x: 24 + Math.random() * (this.canvas.width - 48),
-      y: 52 + Math.random() * (this.canvas.height - 84),
+      x,
+      y,
       vx: (Math.random() - 0.5) * 80,
       vy: (Math.random() - 0.5) * 70,
-      r: good ? 13 : 16,
+      r: good ? 14 : 14,
       good
     };
   }
@@ -8884,7 +8920,7 @@ class StoryMicroGame {
         } else {
           SoundManager.playError();
           this.setFailureHint(`Mauvaise cible: vous avez touche "${this.config.hazard || 'ERR'}".`);
-          this.timeLeft = Math.max(2, this.timeLeft - 2);
+          if (this.canApplyHazardHit()) this.timeLeft = Math.max(2, this.timeLeft - 1.25);
         }
         this.updateStatus();
         return;
@@ -8905,7 +8941,7 @@ class StoryMicroGame {
       SoundManager.playError();
       this.setFailureHint(`Tuile parasite: "${this.config.hazard || 'ERR'}" devient reparable, mais le temps baisse.`);
       cell.good = true;
-      this.timeLeft = Math.max(2, this.timeLeft - 2);
+      if (this.canApplyHazardHit()) this.timeLeft = Math.max(2, this.timeLeft - 1.25);
     }
     this.updateStatus();
   }
@@ -8923,7 +8959,7 @@ class StoryMicroGame {
       this.setFailureHint(`Mauvaise direction: attendu ${expected}, reculez d un cran.`);
       this.sequenceIndex = Math.max(0, this.sequenceIndex - 1);
       this.score = this.sequenceIndex;
-      this.timeLeft = Math.max(2, this.timeLeft - 1.5);
+      if (this.canApplyHazardHit(600)) this.timeLeft = Math.max(2, this.timeLeft - 1);
     }
     this.updateStatus();
   }
@@ -9003,7 +9039,7 @@ class StoryMicroGame {
         } else {
           SoundManager.playError();
           this.setFailureHint(`Collision dangereuse: signal "${this.config.hazard || 'ERR'}" touche.`);
-          this.timeLeft = Math.max(2, this.timeLeft - 1.6);
+          if (this.canApplyHazardHit()) this.timeLeft = Math.max(2, this.timeLeft - 1.1);
           item.x = 24 + Math.random() * (this.canvas.width - 48);
           item.y = 52 + Math.random() * (this.canvas.height - 84);
         }
@@ -9029,7 +9065,7 @@ class StoryMicroGame {
     SoundManager.playWin();
     this.microPhase = 'simulation';
     this.score = 0;
-    this.timeLeft = Math.max(8, Math.ceil((this.config.duration || 16) * 0.7));
+    this.timeLeft = this.getPhaseDuration('simulation');
     this.pointer = { x: this.canvas.width / 2, y: this.canvas.height / 2 };
     this.items = [];
     this.sequence = [];
@@ -9037,6 +9073,7 @@ class StoryMicroGame {
     this.grid = [];
     this.lastProgressAt = Date.now();
     this.assistShown = false;
+    this.lastHazardHitAt = 0;
     this.seedPhaseState();
     this.objectiveEl.innerText = this.getPhaseObjective();
     this.updateStatus();
@@ -9065,11 +9102,11 @@ class StoryMicroGame {
     const type = this.simSceneType || this.getSimulationSceneType();
     const spec = this.getSimulationGameSpec();
     const pattern = this.simPattern || this.getSimulationMissionPattern();
-    const goodThreshold = pattern === 'survie' ? 0.58 : (pattern === 'escorte' ? 0.22 : 0.32);
+    const goodThreshold = pattern === 'survie' ? 0.48 : (pattern === 'escorte' ? 0.24 : 0.34);
     const good = forcedGood === null ? Math.random() > goodThreshold : forcedGood;
     const base = {
       good,
-      r: pattern === 'precision' ? (good ? 8 : 18) : (good ? 12 : 14),
+      r: pattern === 'precision' ? (good ? 11 : 15) : (good ? 13 : 14),
       label: good ? (spec?.goodLabel || this.config.target) : (spec?.badLabel || this.config.hazard)
     };
     if (type === 'restaurant') {
@@ -9078,7 +9115,7 @@ class StoryMicroGame {
         x: 28 + Math.random() * (this.canvas.width - 56),
         y: -offset,
         vx: 0,
-        vy: 82 + Math.random() * 70
+        vy: 70 + Math.random() * 58
       });
       return;
     }
@@ -9088,7 +9125,7 @@ class StoryMicroGame {
         x: 24 + Math.random() * (this.canvas.width - 48),
         y: -offset,
         vx: 0,
-        vy: 95 + Math.random() * 85
+        vy: 78 + Math.random() * 68
       });
       return;
     }
@@ -9097,7 +9134,7 @@ class StoryMicroGame {
         ...base,
         x: Math.random() < 0.5 ? -30 - offset : this.canvas.width + 30 + offset,
         y: 78 + Math.random() * 128,
-        vx: (good ? 78 : (pattern === 'survie' ? 145 : 110)) * (Math.random() < 0.5 ? 1 : -1),
+        vx: (good ? 72 : (pattern === 'survie' ? 122 : 98)) * (Math.random() < 0.5 ? 1 : -1),
         vy: (Math.random() - 0.5) * (pattern === 'route' ? 58 : 22)
       });
       return;
@@ -9107,7 +9144,7 @@ class StoryMicroGame {
         ...base,
         x: this.canvas.width + 28 + offset,
         y: 70 + Math.random() * 150,
-        vx: -(70 + Math.random() * 60),
+        vx: -(62 + Math.random() * 48),
         vy: (Math.random() - 0.5) * (pattern === 'route' ? 74 : 34)
       });
       return;
@@ -9116,7 +9153,7 @@ class StoryMicroGame {
       ...base,
       x: this.canvas.width + 28 + offset,
       y: 82 + Math.random() * 132,
-      vx: -(90 + Math.random() * 80),
+      vx: -(76 + Math.random() * 62),
       vy: (Math.random() - 0.5) * (pattern === 'route' ? 62 : 20)
     });
   }
@@ -9140,7 +9177,7 @@ class StoryMicroGame {
 
     this.simSpawnTimer += dt;
     const baseSpawnDelay = type === 'arena' ? 1.1 : 0.85;
-    const spawnDelay = pattern === 'survie' ? baseSpawnDelay * 0.62 : (pattern === 'precision' ? baseSpawnDelay * 1.2 : baseSpawnDelay);
+    const spawnDelay = pattern === 'survie' ? baseSpawnDelay * 0.78 : (pattern === 'precision' ? baseSpawnDelay * 1.25 : baseSpawnDelay * 1.08);
     if (this.simSpawnTimer >= spawnDelay) {
       this.simSpawnTimer = 0;
       this.spawnSimulationEntity();
@@ -9163,7 +9200,7 @@ class StoryMicroGame {
             this.registerProgress();
             SoundManager.playClick();
           } else {
-            this.timeLeft = Math.max(2, this.timeLeft - 2);
+            if (this.canApplyHazardHit()) this.timeLeft = Math.max(2, this.timeLeft - 1.35);
             this.setFailureHint(`Mauvais contact simulation: "${entity.label}" destabilise la scene.`);
             SoundManager.playError();
           }
@@ -9192,7 +9229,7 @@ class StoryMicroGame {
           this.registerProgress();
           SoundManager.playClick();
         } else {
-          this.timeLeft = Math.max(2, this.timeLeft - 2);
+          if (this.canApplyHazardHit()) this.timeLeft = Math.max(2, this.timeLeft - 1.35);
           this.setFailureHint(`Mauvais clic simulation: "${entity.label}" n etait pas la cible.`);
           SoundManager.playError();
         }
@@ -11769,7 +11806,7 @@ class Episode0Game {
 
         ctx.font = '9px monospace';
         ctx.fillStyle = '#ffb000';
-        ctx.fillText("Sujet identifié : SUJET #042 (POMNI)", canvas.width / 2, 90);
+        ctx.fillText("Sujet identifié : SUJET #251", canvas.width / 2, 90);
         ctx.fillText("Implantation d'interface : 100% OK", canvas.width / 2, 105);
 
         ctx.fillStyle = '#39ff14';

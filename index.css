@@ -1751,9 +1751,9 @@ body {
 
 .circus-shape-base {
   left: 50%;
-  bottom: 34px;
+  top: 162px;
   width: 310px;
-  height: 70px;
+  height: 92px;
   transform: translate(-50%, 120px);
   background:
     repeating-linear-gradient(90deg, #e53935 0 34px, #fff1a8 34px 68px, #2a58d8 68px 102px, #fff1a8 102px 136px);
@@ -1762,7 +1762,7 @@ body {
 
 .circus-shape-door {
   left: 50%;
-  bottom: 36px;
+  top: 188px;
   width: 54px;
   height: 66px;
   transform: translate(-50%, 120px);
@@ -1795,7 +1795,7 @@ body {
 .circus-entry-glow {
   position: absolute;
   left: 50%;
-  bottom: 34px;
+  top: 174px;
   width: 82px;
   height: 82px;
   transform: translateX(-50%) scale(0.15);

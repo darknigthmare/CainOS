@@ -106,7 +106,7 @@ ID      | Avatar  | Identite civile | Statut lore
 #014    | Jax     | [NON CONFIRME]  | Profil resident sans nom civil valide dans la timeline principale.
 #033    | Zooble  | [NON CONFIRME]  | Profil resident sans nom civil valide dans la timeline principale.
 #039    | Gangle  | [NON CONFIRME]  | Profil resident sans nom civil valide dans la timeline principale.
-#042    | Pomni   | [FINAL LOCK]    | Identite humaine verrouillee jusqu au final. Dans le Cirque, le nom actif reste Pomni.`
+#251    | Pomni   | [FINAL LOCK]    | Identite humaine verrouillee jusqu au final. Dans le Cirque, le nom actif reste Pomni.`
       },
       {
         name: 'comedy_mask_test.log',
@@ -157,7 +157,7 @@ Commande terminal : decrypt abel_kernel_patch.exe.enc`
     system_logs: [
       {
         name: 'vitals_pomni.log',
-        content: `STATUT SUJET #042
+        content: `STATUT SUJET #251
 
 Nom civil : [VERROUILLE JUSQU AU FINAL]
 Age : 25 ans
@@ -540,7 +540,7 @@ const OS = {
       "CHECKING SYSTEM STATUS...",
       "RESTAURATION SESSION ADMINISTRATEUR HACKÉE...",
       "--> FLUX CASQUE ACTIF - IMPORTATION SUJET EN COURS",
-      "--> COMPILATION PROFIL AVATAR : SUJET #042 -> POMNI",
+      `--> PROFIL AVATAR : ${this.isPomniNamed() ? 'POMNI' : 'SUJET #251 / NON NOMME'}`,
       "CHARGEMENT DU NOYAU D'ADMINISTRATION CHARLES...",
       "ACCÈS RECOUVRÉ - DEPASSEMENT DE PARE-FEU DE CAINE ACTIF",
       "SYSTEME PRÊT POUR L'ADMINISTRATION SECRÈTE."
@@ -663,8 +663,8 @@ const OS = {
       "CPU: C&A Neural-Link Core 600 MHz",
       "RAM CHECK: 65536 KB OK",
       "VR PORT NEURAL 3.............. LINK RESTORED",
-      "SUBJECT #042.................. PROFILE COMPILED",
-      "AVATAR PACKAGE................ POMNI.DLL LOADED",
+      "SUBJECT #251.................. PROFILE COMPILED",
+      "AVATAR PACKAGE................ TEMP_SUBJECT.DLL LOADED",
       "CIRCUS SHELL.................. CAINOS_98",
       "MOUNTING WACKY WATCH DRIVER... OK",
       "STARTING PROTECTED SESSION..."
@@ -705,7 +705,7 @@ const OS = {
       const statusLines = [
         "Chargement du bureau...",
         "Restauration des icones C&A...",
-        "Initialisation de la session Pomni...",
+        "Initialisation de la session Sujet 251...",
         "Connexion au Wacky Watch...",
         "Ouverture du shell CainOS..."
       ];
@@ -1277,19 +1277,27 @@ const OS = {
     const nameEl = document.querySelector('#win-vitals .profile-details span.cyan-text');
     const picEl = document.querySelector('#win-vitals .profile-pic');
 
-    if (progress.includes(0)) {
+    if (this.isPomniNamed()) {
       if (nameEl) nameEl.innerText = "Pomni";
       if (picEl) {
         picEl.className = "profile-pic pomni-pic";
         picEl.style.backgroundImage = "";
       }
     } else {
-      if (nameEl) nameEl.innerText = "SUJET #042";
+      if (nameEl) nameEl.innerText = "SUJET #251";
       if (picEl) {
         picEl.className = "profile-pic";
         picEl.style.backgroundImage = "url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><rect width=\"16\" height=\"16\" fill=\"%23333\"/><text x=\"4\" y=\"12\" fill=\"%23888\" font-size=\"11\" font-family=\"sans-serif\" font-weight=\"bold\">?</text></svg>')";
       }
     }
+  },
+
+  isPomniNamed() {
+    if (typeof EpisodeManager === 'undefined') return false;
+    const progress = EpisodeManager.getProgress?.() || [];
+    if (progress.includes(1)) return true;
+    const pilotParts = EpisodeManager.getSubepisodeProgress?.(1) || [];
+    return pilotParts.includes(3);
   },
 
   applySystemStateUI() {
@@ -1843,6 +1851,13 @@ const OS = {
       }
     } else if (motif === 'spudsy') {
       for (let x = 3; x < size - 3; x++) if (Math.abs(x + 0.5 - center.x) > 1.4) addBlock(x, 4, 2);
+    } else if (motif === 'dorm') {
+      const leftWall = Math.floor(center.x) - 2;
+      const rightWall = Math.floor(center.x) + 2;
+      for (let z = 2; z < size - 2; z++) {
+        addBlock(leftWall, z, 1);
+        addBlock(rightWall, z, 1);
+      }
     } else if (motif === 'candy' || motif === 'lake' || motif === 'softball') {
       for (let x = 4; x < size - 4; x += 4) addBlock(x, 3, 2);
       for (let x = 5; x < size - 5; x += 5) addBlock(x, size - 5, 2);
@@ -2053,7 +2068,10 @@ const OS = {
       '16:eye': "Oeil de monitoring: CainOS observe la simulation comme un dossier, pas comme un monde.",
       '17:memory': "Fragment memoire: zone a traiter comme archive emotionnelle, pas comme attraction.",
       '18:spotlight': "Spot final: tout revient sur les avatars quand le systeme perd sa stabilite.",
-      '19:archive': "Cadre archive: membre repertorie, presence narrative verrouillee par la progression."
+      '19:archive': "Cadre archive: membre repertorie, presence narrative verrouillee par la progression.",
+      '20:roomdoor': "Porte de resident: bois sombre, portrait circulaire et plaque nominative comme dans le couloir du Cirque.",
+      '20:wallart': "Tableau abstrait: decor colore place entre les chambres pour casser la repetition du corridor.",
+      '20:ceilinglight': "Plafonnier chaud: repere regulier qui accentue la profondeur du long couloir."
     };
     const key = `${zoneId}:${prop.kind}`;
     const fallback = `${name}: objet de scene detecte. CainOS l'utilise comme repere interactif de la zone.`;
@@ -2093,7 +2111,10 @@ const OS = {
       wave: "vague",
       sun: "soleil",
       memory: "fragment memoire",
-      archive: "cadre archive"
+      archive: "cadre archive",
+      roomdoor: `porte de ${prop.label || 'resident'}`,
+      wallart: "tableau abstrait",
+      ceilinglight: "plafonnier"
     };
     return names[prop.kind] || prop.kind || "objet";
   },
@@ -2213,7 +2234,8 @@ const OS = {
       16: "CainOS: Le coeur C&A affiche les traces techniques, Abel et les objets actifs de fond.",
       17: "CainOS: Le buffer memoire ne restaure pas Queenie; il donne seulement acces a la trace de Kinger.",
       18: "CainOS: Le final accepte les signaux de reve, de couleur perdue et d'identite tardive.",
-      19: "CainOS: Les Circus Members disparus restent des archives visuelles verrouillees par progression."
+      19: "CainOS: Les Circus Members disparus restent des archives visuelles verrouillees par progression.",
+      20: "CainOS: Le Resident Hall aligne les chambres sur un corridor rouge et rose. Les portraits identifient les portes sans inventer l interieur prive des residents."
     };
     return hints[zoneId] || "CainOS: Zone praticable. Les interactions restent limitees au lore deja debloque.";
   },
@@ -2698,6 +2720,13 @@ const OS = {
     this.drawCircusThemedCeiling(ctx, w, h, horizon, state, zone, motif);
     this.drawCircusThemedFloor(ctx, w, h, horizon, state, zone, motif);
 
+    if (motif === 'circus' || motif === 'final') {
+      ctx.fillStyle = motif === 'final' ? '#821922' : '#d62f3f';
+      ctx.fillRect(0, horizon - 10, w, 20);
+      ctx.fillStyle = '#fff1a8';
+      for (let x = 0; x < w; x += 74) ctx.fillRect(x, horizon - 10, 36, 20);
+    }
+
     ctx.save();
     ctx.strokeStyle = 'rgba(255,255,255,0.08)';
     ctx.lineWidth = 1;
@@ -2741,9 +2770,10 @@ const OS = {
       }
       if (!hit) continue;
       const corrected = Math.max(0.08, hit.dist * Math.cos(angle - state.player.a));
-      const wallH = Math.min(h * 1.9, (h * 0.72) / corrected);
+      const wallScale = (motif === 'circus' || motif === 'final') ? 0.92 : 0.78;
+      const wallH = Math.min(h * 1.9, (h * wallScale) / corrected);
       const x = Math.floor(ratio * w);
-      const y = Math.floor(horizon - wallH * 0.52);
+      const y = Math.floor(horizon - wallH * 0.57);
 
       const depthShade = Math.max(0.26, 1.08 - corrected / (room.size * 0.92));
       const sideShade = hit.nearVertical ? 0.92 : 0.72;
@@ -2896,14 +2926,14 @@ const OS = {
             ctx.fillRect(x, y + wallH * 0.55, strip, Math.max(1, wallH * 0.18));
           }
         } else if (motif === 'dorm') {
-          ctx.fillStyle = this.shadeHex('#3a1730', shadeFactor);
+          const wallCoord = hit.nearVertical ? hitZ : hitX;
+          const stripe = Math.floor(wallCoord * 0.72) % 2 === 0 ? '#e65b78' : '#f0b34a';
+          ctx.fillStyle = this.shadeHex(stripe, shadeFactor);
           ctx.fillRect(x, y, strip, Math.ceil(wallH));
-          if (Math.floor(u * 12) % 3 === 0) {
-            ctx.fillStyle = this.shadeHex('#ff6b9f', shadeFactor * 0.75);
-            ctx.fillRect(x, y + wallH * 0.14, strip, Math.max(1, wallH * 0.72));
-          }
-          ctx.fillStyle = this.shadeHex('#ffd84a', shadeFactor);
-          ctx.fillRect(x, y + wallH * 0.48, strip, Math.max(1, wallH * 0.025));
+          ctx.fillStyle = this.shadeHex('#6a2f2a', shadeFactor);
+          ctx.fillRect(x, y + wallH * 0.78, strip, Math.max(1, wallH * 0.22));
+          ctx.fillStyle = this.shadeHex('#ffd06a', shadeFactor);
+          ctx.fillRect(x, y + wallH * 0.76, strip, Math.max(1, wallH * 0.025));
         } else if (motif === 'cafe') {
           ctx.fillStyle = this.shadeHex('#4a2d20', shadeFactor);
           ctx.fillRect(x, y, strip, Math.ceil(wallH));
@@ -2979,7 +3009,7 @@ const OS = {
       core: { ceilingTop: '#120806', ceilingBottom: '#3b180d', floorA: '#0a0705', floorB: '#2a1008', floorC: '#ff7a30', grid: 'rgba(255,122,48,0.25)' },
       memory: { ceilingTop: '#06070c', ceilingBottom: '#15151f', floorA: '#0e0e12', floorB: '#22202a', floorC: '#d9d0a2', grid: 'rgba(217,208,162,0.16)' },
       archive: { ceilingTop: '#07020f', ceilingBottom: '#20102e', floorA: '#13091d', floorB: '#251234', floorC: '#c875ff', grid: 'rgba(200,117,255,0.16)' },
-      dorm: { ceilingTop: '#160b24', ceilingBottom: '#3a1730', floorA: '#30152a', floorB: '#4a2040', floorC: '#ffd84a', grid: 'rgba(255,107,159,0.16)' },
+      dorm: { ceilingTop: '#5d2730', ceilingBottom: '#f1c67b', floorA: '#9f2039', floorB: '#64172b', floorC: '#ffd06a', grid: 'rgba(255,208,106,0.16)' },
       cafe: { ceilingTop: '#17100d', ceilingBottom: '#3b271e', floorA: '#302018', floorB: '#4a2d20', floorC: '#d49a62', grid: 'rgba(212,154,98,0.15)' },
       aquarium: { ceilingTop: '#06202f', ceilingBottom: '#0a5068', floorA: '#073443', floorB: '#0a596b', floorC: '#63d9ff', grid: 'rgba(99,217,255,0.2)' },
       snow: { ceilingTop: '#34567a', ceilingBottom: '#9dc4dc', floorA: '#e8f7ff', floorB: '#a7c9df', floorC: '#ffffff', grid: 'rgba(255,255,255,0.22)' },
@@ -3057,6 +3087,21 @@ const OS = {
       ctx.fillRect(0, horizon * 0.58, w, 14);
       ctx.fillStyle = 'rgba(255,255,255,0.12)';
       for (let x = 0; x < w; x += 54) ctx.fillRect(x, 0, 2, horizon);
+    } else if (motif === 'dorm') {
+      ctx.fillStyle = 'rgba(255,240,190,0.2)';
+      for (let i = 0; i < 6; i++) {
+        const depth = i / 6;
+        const lampW = 112 * (1 - depth * 0.65);
+        const lampY = 22 + depth * (horizon - 36);
+        ctx.fillRect(w / 2 - lampW / 2, lampY, lampW, Math.max(3, 9 * (1 - depth * 0.5)));
+      }
+      ctx.strokeStyle = 'rgba(106,47,42,0.45)';
+      ctx.beginPath();
+      ctx.moveTo(w * 0.18, 0);
+      ctx.lineTo(w * 0.43, horizon);
+      ctx.moveTo(w * 0.82, 0);
+      ctx.lineTo(w * 0.57, horizon);
+      ctx.stroke();
     } else {
       ctx.strokeStyle = theme.grid;
       for (let x = 0; x < w; x += 64) {
@@ -3088,13 +3133,13 @@ const OS = {
         const lateral = (ratio - 0.5) * rowDistance * 0.36;
         const worldX = state.player.x + Math.cos(rayAngle) * rowDistance + Math.cos(rayAngle + Math.PI / 2) * lateral;
         const worldZ = state.player.z + Math.sin(rayAngle) * rowDistance + Math.sin(rayAngle + Math.PI / 2) * lateral;
-        ctx.fillStyle = this.getCircusFloorSample(worldX, worldZ, shade, motif, zone);
+        ctx.fillStyle = this.getCircusFloorSample(worldX, worldZ, shade, motif, zone, state);
         ctx.fillRect(sx, sy, xStep + 1, yStep + 1);
       }
     }
   },
 
-  getCircusFloorSample(worldX, worldZ, shade, motif, zone) {
+  getCircusFloorSample(worldX, worldZ, shade, motif, zone, state = null) {
     const theme = this.getCircusRoomTheme(motif, zone);
     const checker = (scale = 1) => (Math.floor(worldX * scale) + Math.floor(worldZ * scale)) % 2 === 0;
     let color = theme.floorA;
@@ -3125,6 +3170,11 @@ const OS = {
     } else if (motif === 'lake') {
       const water = worldZ > 6.1 + Math.sin(worldX * 0.8) * 0.22;
       color = water ? theme.floorC : (checker(0.9) ? theme.floorA : theme.floorB);
+    } else if (motif === 'dorm') {
+      const centerX = state?.room?.center?.x ?? 9.5;
+      const offset = Math.abs(worldX - centerX);
+      const border = offset > 1.15 && offset < 1.48;
+      color = border ? theme.floorC : (offset < 1.15 ? theme.floorA : theme.floorB);
     }
     return this.shadeHex(color, shade);
   },
@@ -3617,7 +3667,19 @@ const OS = {
       17: [{ kind: 'memory', x: -1.8, z: -2.0, color: '#d9d0a2' }, { kind: 'memory', x: 0, z: -2.6, color: '#7df0ff' }, { kind: 'memory', x: 1.8, z: -2.0, color: '#d9d0a2' }, { kind: 'table', x: 0.55, z: -1.35, color: '#d9d0a2' }, { kind: 'candle', x: -2.75, z: -1.4, color: '#ffd84a' }],
       18: [...basePillars, { kind: 'spotlight', x: 0, z: -2.6, color: '#e53935' }, { kind: 'archive', x: -2.2, z: -2.25, color: '#c875ff' }, { kind: 'gridnode', x: 2.2, z: -1.45, color: '#ff4d4d' }],
       19: [{ kind: 'archive', x: -2.0, z: -2.1, color: '#c875ff' }, { kind: 'archive', x: 0, z: -2.7, color: '#7df0ff' }, { kind: 'archive', x: 2.0, z: -2.1, color: '#ffd84a' }, { kind: 'card', x: -3.0, z: -1.35, color: '#ff4fb8' }, { kind: 'card', x: 3.0, z: -1.35, color: '#ffd84a' }],
-      20: [{ kind: 'roomdoor', avatar: 'pomni', label: 'POMNI', x: -3.2, z: -2.8, color: '#e53935' }, { kind: 'roomdoor', avatar: 'jax', label: 'JAX', x: -2.1, z: -2.95, color: '#8a4fd6' }, { kind: 'roomdoor', avatar: 'ragatha', label: 'RAGATHA', x: -0.9, z: -3.05, color: '#d64545' }, { kind: 'roomdoor', avatar: 'gangle', label: 'GANGLE', x: 0.5, z: -3.05, color: '#f7f7f7' }, { kind: 'roomdoor', avatar: 'zooble', label: 'ZOOBLE', x: 1.8, z: -2.95, color: '#ff4fb8' }, { kind: 'roomdoor', avatar: 'kinger', label: 'KINGER', x: 3.0, z: -2.8, color: '#d9d0a2' }, { kind: 'card', x: 0, z: -1.25, color: '#ffd84a' }],
+      20: [
+        { kind: 'roomdoor', avatar: 'jax', label: 'JAX', side: 'left', x: -1.62, z: 3.2, color: '#8a4fd6' },
+        { kind: 'roomdoor', avatar: 'pomni', label: 'POMNI', side: 'right', x: 1.62, z: 3.2, color: '#e53935' },
+        { kind: 'roomdoor', avatar: 'ragatha', label: 'RAGATHA', side: 'left', x: -1.62, z: 0, color: '#d64545' },
+        { kind: 'roomdoor', avatar: 'gangle', label: 'GANGLE', side: 'right', x: 1.62, z: 0, color: '#f7f7f7' },
+        { kind: 'roomdoor', avatar: 'zooble', label: 'ZOOBLE', side: 'left', x: -1.62, z: -3.2, color: '#ff4fb8' },
+        { kind: 'roomdoor', avatar: 'kinger', label: 'KINGER', side: 'right', x: 1.62, z: -3.2, color: '#d9d0a2' },
+        { kind: 'wallart', x: -1.58, z: 1.55, color: '#7df0ff', art: 'spiral' },
+        { kind: 'wallart', x: 1.58, z: -1.55, color: '#ffd84a', art: 'blocks' },
+        { kind: 'ceilinglight', x: 0, z: 3.2, color: '#fff1a8' },
+        { kind: 'ceilinglight', x: 0, z: 0, color: '#fff1a8' },
+        { kind: 'ceilinglight', x: 0, z: -3.2, color: '#fff1a8' }
+      ],
       21: [{ kind: 'counter', x: 0, z: -2.8, color: '#d49a62' }, { kind: 'table', x: -2.2, z: -1.8, color: '#7a4b32' }, { kind: 'table', x: 2.15, z: -1.9, color: '#7a4b32' }, { kind: 'menu', x: 0, z: -1.25, color: '#fff1a8' }],
       22: [{ kind: 'window', x: -2.6, z: -2.65, color: '#63d9ff' }, { kind: 'window', x: 0, z: -3.1, color: '#7df0ff' }, { kind: 'window', x: 2.6, z: -2.65, color: '#63d9ff' }, { kind: 'wave', x: -1.25, z: -1.45, color: '#4ee7ff' }, { kind: 'wave', x: 1.35, z: -1.55, color: '#4ee7ff' }],
       23: [{ kind: 'stairs', x: 0, z: -3.0, color: '#e8f7ff' }, { kind: 'pillar', x: -2.5, z: -2.2, color: '#a7c9df' }, { kind: 'pillar', x: 2.5, z: -2.2, color: '#a7c9df' }, { kind: 'spotlight', x: 0.8, z: -1.35, color: '#ffffff' }],
@@ -3735,7 +3797,7 @@ const OS = {
     const p = prop.projected;
     const s = Math.max(0.25, p.scale);
     const wideKinds = new Set(['ring', 'counter', 'truck', 'scoreboard', 'table', 'desk', 'exitframe']);
-    const tallKinds = new Set(['pillar', 'tent', 'spotlight', 'umbrella', 'window', 'archive', 'console', 'roomdoor']);
+    const tallKinds = new Set(['pillar', 'tent', 'spotlight', 'umbrella', 'window', 'archive', 'console', 'roomdoor', 'wallart', 'ceilinglight']);
     const smallKinds = new Set(['candle', 'balloon', 'eye', 'sun', 'base', 'target', 'memory']);
     let width = 82 * s;
     let height = 86 * s;
@@ -3943,30 +4005,85 @@ const OS = {
         ctx.strokeRect(-46 * s, -42 * s, 92 * s, 6 * s);
       }
     } else if (prop.kind === 'roomdoor') {
-      ctx.fillStyle = '#2b1330';
-      ctx.fillRect(-34 * s, -118 * s, 68 * s, 118 * s);
+      ctx.fillStyle = '#6b351f';
+      ctx.fillRect(-32 * s, -116 * s, 64 * s, 116 * s);
+      ctx.strokeStyle = '#32160f';
+      ctx.lineWidth = Math.max(1, 3 * s);
+      ctx.strokeRect(-32 * s, -116 * s, 64 * s, 116 * s);
+      ctx.fillStyle = '#8b4a2a';
+      ctx.fillRect(-25 * s, -108 * s, 50 * s, 100 * s);
+      ctx.strokeStyle = '#4b2418';
+      ctx.strokeRect(-25 * s, -108 * s, 50 * s, 100 * s);
+      ctx.fillStyle = '#fff0b8';
+      ctx.beginPath();
+      ctx.arc(0, -82 * s, 23 * s, 0, Math.PI * 2);
+      ctx.fill();
       ctx.strokeStyle = prop.color;
-      ctx.strokeRect(-34 * s, -118 * s, 68 * s, 118 * s);
-      ctx.fillStyle = `${prop.color}55`;
-      ctx.fillRect(-27 * s, -108 * s, 54 * s, 48 * s);
+      ctx.lineWidth = Math.max(1, 3 * s);
+      ctx.stroke();
       const spec = this.getCircusAvatarSheetSpec(prop.avatar);
       const img = spec ? this.circusAvatarSheets?.[spec.sheet] : null;
       const frame = spec && img?.complete && img.naturalWidth ? this.getCircusTransparentAvatarFrame(img, spec) : null;
       if (frame) {
+        ctx.save();
+        ctx.beginPath();
+        ctx.arc(0, -82 * s, 19 * s, 0, Math.PI * 2);
+        ctx.clip();
         ctx.imageSmoothingEnabled = false;
         const ratio = frame.width / frame.height;
-        const iconH = 42 * s;
+        const iconH = 40 * s;
         const iconW = iconH * ratio;
-        ctx.drawImage(frame.canvas, -iconW / 2, -106 * s, iconW, iconH);
+        ctx.drawImage(frame.canvas, -iconW / 2, -102 * s, iconW, iconH);
+        ctx.restore();
       }
-      ctx.fillStyle = '#fff1a8';
+      ctx.fillStyle = '#2c1310';
+      ctx.fillRect(-24 * s, -51 * s, 48 * s, 16 * s);
+      ctx.strokeStyle = '#ffd06a';
+      ctx.strokeRect(-24 * s, -51 * s, 48 * s, 16 * s);
+      ctx.fillStyle = '#fff0b8';
       ctx.font = `bold ${Math.max(6, 8 * s)}px Courier New`;
       ctx.textAlign = 'center';
-      ctx.fillText(prop.label || 'ROOM', 0, -48 * s);
+      ctx.fillText(prop.label || 'ROOM', 0, -40 * s);
       ctx.fillStyle = '#ffd84a';
       ctx.beginPath();
-      ctx.arc(22 * s, -48 * s, 3 * s, 0, Math.PI * 2);
+      ctx.arc((prop.side === 'left' ? 21 : -21) * s, -22 * s, 3 * s, 0, Math.PI * 2);
       ctx.fill();
+    } else if (prop.kind === 'wallart') {
+      ctx.fillStyle = '#5b2b1e';
+      ctx.fillRect(-34 * s, -104 * s, 68 * s, 54 * s);
+      ctx.strokeStyle = '#ffd06a';
+      ctx.lineWidth = Math.max(1, 3 * s);
+      ctx.strokeRect(-34 * s, -104 * s, 68 * s, 54 * s);
+      ctx.fillStyle = '#1d1230';
+      ctx.fillRect(-27 * s, -97 * s, 54 * s, 40 * s);
+      ctx.strokeStyle = prop.color;
+      if (prop.art === 'spiral') {
+        for (let r = 4; r < 22; r += 5) {
+          ctx.beginPath();
+          ctx.arc(0, -77 * s, r * s, 0, Math.PI * 1.55);
+          ctx.stroke();
+        }
+      } else {
+        ctx.fillStyle = prop.color;
+        ctx.fillRect(-20 * s, -90 * s, 16 * s, 13 * s);
+        ctx.fillStyle = '#ff4fb8';
+        ctx.fillRect(2 * s, -82 * s, 19 * s, 17 * s);
+        ctx.fillStyle = '#7df0ff';
+        ctx.fillRect(-9 * s, -72 * s, 13 * s, 10 * s);
+      }
+    } else if (prop.kind === 'ceilinglight') {
+      ctx.fillStyle = 'rgba(255,240,184,0.16)';
+      ctx.beginPath();
+      ctx.moveTo(-38 * s, -118 * s);
+      ctx.lineTo(38 * s, -118 * s);
+      ctx.lineTo(66 * s, 0);
+      ctx.lineTo(-66 * s, 0);
+      ctx.closePath();
+      ctx.fill();
+      ctx.fillStyle = '#fff0b8';
+      ctx.fillRect(-28 * s, -124 * s, 56 * s, 8 * s);
+      ctx.strokeStyle = '#6a2f2a';
+      ctx.strokeRect(-28 * s, -124 * s, 56 * s, 8 * s);
     } else if (prop.kind === 'doorframe' || prop.kind === 'exitframe') {
       // Detailed double office doors with glowing "EXIT" sign
       ctx.fillStyle = '#eef';
@@ -4644,9 +4761,9 @@ const OS = {
         { name: 'Bulb Creature', type: 'npc', avatar: 'bulbcreature', x: 0.95, z: -3.15, color: '#a8e85b' }
       ],
       20: [
-        { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -1.8, z: -2.2, color: '#e53935' },
-        { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: 0.15, z: -2.6, color: '#d64545' },
-        { name: 'Jax', type: 'jax', avatar: 'jax', x: 2.05, z: -1.8, color: '#8a4fd6' }
+        { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -0.82, z: -2.2, color: '#e53935' },
+        { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: 0.05, z: -2.75, color: '#d64545' },
+        { name: 'Jax', type: 'jax', avatar: 'jax', x: 0.86, z: -1.75, color: '#8a4fd6' }
       ],
       21: [
         { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: -1.6, z: -2.1, color: '#f7f7f7' },
@@ -5210,7 +5327,7 @@ const OS = {
     const progress = (typeof EpisodeManager !== 'undefined') ? EpisodeManager.getProgress() : [];
 
     if (filename === 'vitals_pomni.log') {
-      return progress.includes(0); // Lock until Calibration Ep 0 completed (Pomni arrives in Ep 1)
+      return this.isPomniNamed();
     }
     if (filename === 'kaufmo_final_state.log' || filename === 'caine_ai_module.txt') {
       return progress.includes(1);
@@ -5308,11 +5425,11 @@ const OS = {
       }
     }
 
-    // Dynamic lore redaction if Episode 0 calibration is not completed (i.e. Abigail has not yet entered and been named Pomni)
+    // Keep the assigned circus name hidden until Caine names the subject in Pilot.
     const progress = (typeof EpisodeManager !== 'undefined') ? EpisodeManager.getProgress() : [];
     let processedContent = content;
-    if (!progress.includes(0)) {
-      processedContent = processedContent.replace(/Pomni/g, "SUJET #042");
+    if (!this.isPomniNamed()) {
+      processedContent = processedContent.replace(/Pomni/g, "SUJET #251");
     }
     // The civil identity from Episode 9 stays hidden until the final reveal.
     if (!progress.includes(9)) {
@@ -6032,7 +6149,7 @@ const OS = {
     document.getElementById('watch-btn-refresh-fact').addEventListener('click', () => {
       SoundManager.playClick();
       const progress = (typeof EpisodeManager !== 'undefined') ? EpisodeManager.getProgress() : [];
-      const showPomni = progress.includes(0);
+      const showPomni = this.isPomniNamed();
 
       const castData = {
         pomni: { facts: [
@@ -6109,7 +6226,7 @@ const OS = {
 
   getCainOSJournalEntries() {
     const baseEntries = [
-      { gate: 0, tag: 'BOOT', title: 'Session Pomni ouverte', text: 'Le protocole de calibration a ferme l ecran puis relance CainOS sur un bureau propre. Le Cirque devient accessible depuis la barre des taches.' },
+      { gate: 0, tag: 'BOOT', title: 'Session Sujet 251 ouverte', text: 'La calibration relance CainOS sur un bureau propre. Le nom Pomni reste verrouille jusqu a son attribution par Caine dans Pilot.' },
       { gate: 1, tag: 'PILOT', title: 'Kaufmo abstrait et fausse sortie', text: 'Le pilote confirme le piege narratif : la porte de sortie existe comme illusion de scene, pas comme liberation fiable.' },
       { gate: 2, tag: 'NPC', title: 'Gummigoo et les donnees PNJ', text: 'Candy Canyon revele que certains personnages sont generes comme PNJ, avec une memoire suffisamment stable pour troubler Pomni.' },
       { gate: 3, tag: 'HORROR', title: 'Manoir Mildenhall et memoire de Kinger', text: 'L obscurite du manoir sert de zone de peur et de memoire. CainOS garde Queenie comme archive, pas comme residente revenue.' },
@@ -6174,7 +6291,7 @@ const OS = {
 
   getWackyCastData() {
     const progress = (typeof EpisodeManager !== 'undefined') ? EpisodeManager.getProgress() : [];
-    const showPomni = progress.includes(0);
+    const showPomni = this.isPomniNamed();
     const castData = {
       pomni: { name: "Pomni", age: "25", stress: "92%", avatar: "pomni", signal: "P", color: "#00ccff", facts: [
         "A peur des mannequins de cire et ne se souvient plus de son nom civil.",
@@ -6965,7 +7082,7 @@ const OS = {
 
   updateWackyWatchCastUI() {
     const progress = (typeof EpisodeManager !== 'undefined') ? EpisodeManager.getProgress() : [];
-    const showPomni = progress.includes(0);
+    const showPomni = this.isPomniNamed();
 
     const castData = {
       pomni: { name: "Pomni", age: "25", stress: "92%", avatar: "pomni", facts: [
@@ -7500,7 +7617,7 @@ Astuce : Trouvez l'année de couplage synaptique dans les journaux d'archives de
     switch(cmd) {
       case 'help':
         const progressHelp = (typeof EpisodeManager !== 'undefined') ? EpisodeManager.getProgress() : [];
-        const subjectHelpName = progressHelp.includes(0) ? "Pomni" : "#042";
+        const subjectHelpName = this.isPomniNamed() ? "Pomni" : "#251";
         response = `Commandes disponibles :
   help         - Affiche cette aide.
   list         - Liste les dossiers et fichiers de l'archive C&A.
@@ -7647,10 +7764,10 @@ DÉCONNEXION DE L'UTILISATEUR SÉCURISÉE. SYSTEM SHUTDOWN.
 
       case 'vitals':
         const progressVit = (typeof EpisodeManager !== 'undefined') ? EpisodeManager.getProgress() : [];
-        const subjectIdName = progressVit.includes(0) ? "POMNI" : "INCONNU";
+        const subjectIdName = this.isPomniNamed() ? "POMNI" : "NON NOMME";
         const civilName = progressVit.includes(9) ? "Abigail" : "[VERROUILLÉ]";
         response = `SUJET VITALS DIAGNOSTICS:
-  ID : #042 (${subjectIdName})
+  ID : #251 (${subjectIdName})
   Nom Civil suspecté : ${civilName}
   Fréquence Cardiaque : ${Math.round(82 + Math.random()*15)} bpm (Panique active)
   Couplage Neuronal : 87.4%
@@ -7660,7 +7777,7 @@ DÉCONNEXION DE L'UTILISATEUR SÉCURISÉE. SYSTEM SHUTDOWN.
       case 'caine':
         SoundManager.playGlitch();
         const hasEp9 = (typeof EpisodeManager !== 'undefined') && EpisodeManager.getProgress().includes(9);
-        const subName = hasEp9 ? "Abigail" : "SUJET #042";
+        const subName = hasEp9 ? "Abigail" : (this.isPomniNamed() ? "Pomni" : "SUJET #251");
         const wackyActive = document.getElementById('win-wacky-watch').style.display === 'flex';
         const vitalsActive = document.getElementById('win-vitals').style.display === 'flex';
 
