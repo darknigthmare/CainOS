@@ -438,7 +438,7 @@ const EpisodeManager = {
   originalTimeout: null,
   wrapTimeout() {
     if (this.originalTimeout) return;
-    this.originalTimeout = window.setTimeout;
+    this.originalTimeout = window.setTimeout.bind(window);
     window.setTimeout = (fn, delay, ...args) => {
       const id = this.originalTimeout(() => {
         if (this.activeTimers) {
@@ -519,9 +519,9 @@ const EpisodeManager = {
     DISAPPEARING_GUY: { color: "#98f5ff", label: "Disappearing Guy", info: "Candidat/figurant fugace de la ceremonie des awards.", unlockAt: { episode: 6, subepisode: 7 } },
     BACKGROUND: { color: "#7f8f7f", label: "Background", info: "Bruit de foule ou signal secondaire de scene.", unlockAt: { episode: 6 } },
     ORBSMAN: { color: "#6fe8ff", label: "Orbsman", info: "Entite secondaire du Cirque, silhouette orbitee et signal bizarre." },
-    ABEL: { color: "#ff9b37", label: "Abel", info: "Figure/mannequin liee aux couches C&A et aux archives profondes du projet.", lockedInfo: "Signal C&A protege. Donnees masquees jusqu'a la couche Abel.", unlockAt: { episode: 7, subepisode: 2 } },
-    ARTHUR: { color: "#c0d0ff", label: "Arthur", info: "Identite humaine rattachee aux tests C&A et a la trajectoire de Kinger.", lockedInfo: "Operateur C&A detecte. CainOS masque son lien avec les residents.", unlockAt: { episode: -1, subepisode: 0 } },
-    HELEN: { color: "#5fe9d4", label: "Helen / Queenie", lockedLabel: "Helen", info: "Trace memoire associee a Queenie et aux souvenirs enfouis de Kinger.", lockedInfo: "Trace memoire protegee. Identite complete verrouillee.", unlockAt: { episode: 8, subepisode: 1 } },
+    ABEL: { color: "#ff9b37", label: "Abel", info: "PNJ mannequin de la fausse aventure d evasion de Beach Episode. Son recit C&A est une fabrication de Caine et Abel est ensuite supprime.", lockedInfo: "Signal mannequin protege. Sa fonction reste verrouillee jusqu a Beach Episode.", unlockAt: { episode: 7, subepisode: 2 } },
+    ARTHUR: { color: "#c0d0ff", label: "Arthur (reconstruction)", info: "Identite issue d une ancienne reconstruction CainOS non confirmee par les episodes. Ne pas l assimiler a Kinger dans le canon principal.", lockedInfo: "Hypothese CainOS hors canon principal.", unlockAt: { episode: -1, subepisode: 0 } },
+    HELEN: { color: "#5fe9d4", label: "Helen (reconstruction)", lockedLabel: "Trace non confirmee", info: "Nom issu d une ancienne reconstruction CainOS. Le canon confirme Queenie et ses souvenirs avec Kinger, pas cette identite civile.", lockedInfo: "Hypothese CainOS hors canon principal.", unlockAt: { episode: 8, subepisode: 1 } },
     QUEENIE: { color: "#5fe9d4", label: "Queenie Archive", lockedLabel: "Piece inconnue", info: "Ancienne membre du Cirque et memoire centrale de Kinger. Son signal doit rester archive/memoire, pas resident actif.", lockedInfo: "Signal echecs disparu. Importance narrative non encore debloquee.", unlockAt: { episode: 8, subepisode: 1 }, archive: true },
     SYSTEM: { color: "#39ff14", label: "System", info: "Signal technique CainOS : chargement, archive, protocole ou bruit de scene." },
     ARCHIVE: { color: "#8fbf8f", label: "Archive", info: "Indication de scene ou audio detectee dans la transcription." },
@@ -6800,7 +6800,7 @@ const EpisodeManager = {
       ]
     },
     [-1]: {
-      title: "Mission Préquelle: Abel Core Test",
+      title: "Mission bonus non canon: Abel Core Test",
       intro: [
         { speaker: "SYSTEM", text: "LABORATOIRE C&A - 12 NOVEMBRE 1994..." },
         { speaker: "ARTHUR", text: "Helen est piégée dans la mémoire tampon de l'IA Caine. Je dois la sauver." },
@@ -6815,7 +6815,7 @@ const EpisodeManager = {
       ]
     },
     [-2]: {
-      title: "Épisode Caché: Fusion 1993",
+      title: "Mission bonus non canon: Fusion 1993",
       intro: [
         { speaker: "SYSTEM", text: "SYSTEM ARCHIVE - DÉBUTS DU CIRQUE DIGITAL (1993)..." },
         { speaker: "SYSTEM", text: "Fusionnez le Point Rouge (curseur 3D) et le Point Bleu (module de sécurité)." },
@@ -7284,15 +7284,15 @@ const EpisodeManager = {
       descEl.innerText = "Caine laisse le groupe au lac digital, mais Abel et les fausses pistes C&A transforment la plage en test de confiance. Protégez les PNJ et survivez au choix final.";
     } else if (num === 8) {
       titleEl.innerText = "Épisode 8: hjsakldfhl";
-      descEl.innerText = "Plongez dans le code d'origine de Caine et les souvenirs de Kinger. Récupérez les fragments de mémoire d'Helen tout en échappant au projecteur rouge de Caine qui scanne le secteur.";
+      descEl.innerText = "Traversez la crise de Caine, les souvenirs de Kinger et les fragments de Queenie sans attribuer de fausse identite civile aux personnages.";
     } else if (num === 9) {
       titleEl.innerText = "Épisode 9: Remember";
       descEl.innerText = "Le final rassemble les brain scans, les traces humaines, Ribbit et la question d Abigail. Recolorez les derniers fragments avant l epilogue de Pomni et Caine.";
     } else if (num === -1) {
-      titleEl.innerText = "Mission Préquelle: Abel Core Test (1994)";
-      descEl.innerText = "Dans la peau d'Arthur (Kinger), connectez les cellules de transmission synaptiques en les faisant pivoter pour lier le cerveau d'Arthur à la matrice réseau. Attention, le nettoyeur de processus de Caine inspecte les connexions !";
+      titleEl.innerText = "Mission bonus non canon: Abel Core Test (1994)";
+      descEl.innerText = "Reconstruction CainOS hors timeline: testez l ancienne hypothese Arthur/Kinger sans la confondre avec les revelations canoniques.";
     } else if (num === -2) {
-      titleEl.innerText = "Épisode Caché: Fusion Red/Blue (1993)";
+      titleEl.innerText = "Mission bonus non canon: Fusion Red/Blue (1993)";
       descEl.innerText = "Avant le Cirque, il y avait le code brut. Guidez le point rouge (curseur de test 3D) pour capturer et fusionner avec le point bleu (module de surveillance d'IA). Évitez les filtres de sécurité gris de l'administrateur.";
     }
     if (startBtn) {
@@ -8088,16 +8088,10 @@ const EpisodeManager = {
 
     const speakerKey = this.normalizeStorySpeakerName(displayLine?.speaker || "ARCHIVE");
     const newSpeakers = this.getStorySceneSpeakers(line, displayLine);
-    const activeScene = [];
-    newSpeakers.forEach(name => {
-      const key = this.getStoryCharacterProfile(name).key;
-      if (!activeScene.includes(key)) activeScene.push(key);
-    });
-    (this.activeStorySceneCharacters || []).forEach(name => {
-      const key = this.getStoryCharacterProfile(name).key;
-      if (!activeScene.includes(key)) activeScene.push(key);
-    });
-    this.activeStorySceneCharacters = activeScene.slice(0, 8);
+    this.activeStorySceneCharacters = newSpeakers
+      .map(name => this.getStoryCharacterProfile(name).key)
+      .filter((name, index, all) => all.indexOf(name) === index)
+      .slice(0, 8);
     const speakers = this.activeStorySceneCharacters;
     if (speakers.length === 0) {
       map.innerHTML = "";
@@ -8156,7 +8150,17 @@ const EpisodeManager = {
     };
   },
 
+  isHiddenStoryCue(line) {
+    const speaker = this.normalizeStorySpeakerName(line?.speaker || "");
+    return new Set(["MUSIC", "SFX", "VFX", "CAPTION", "BACKGROUND"]).has(speaker);
+  },
+
   typeNextLine() {
+    // Audio and staging cues remain in the source transcript but never appear as DOS dialogue.
+    while (this.storyIndex < this.storyLines.length && this.isHiddenStoryCue(this.storyLines[this.storyIndex])) {
+      this.storyIndex++;
+    }
+
     if (this.storyIndex >= this.storyLines.length) {
       const nextBtn = document.getElementById('btn-story-next');
       if (this.storyPhase === 'intro') {
@@ -8456,7 +8460,7 @@ class StoryMicroGame {
 
   prepare() {
     this.titleEl.innerText = this.config.title;
-    this.subtitleEl.innerText = `[SOUS-EPISODE ${this.config.part}/${this.config.totalParts} // ${this.config.mode.toUpperCase()} // ${this.config.context || "SCENE ACTIVE"}]`;
+    this.subtitleEl.innerText = `[SOUS-EPISODE ${this.config.part}/${this.config.totalParts} // ${this.config.mode.toUpperCase()} // ${this.getSimulationPatternLabel()} // ${this.config.context || "SCENE ACTIVE"}]`;
     this.objectiveEl.innerText = this.getPhaseObjective();
     this.actionBtn.disabled = false;
     this.actionBtn.innerText = "INITIALISER";
@@ -8747,6 +8751,25 @@ class StoryMicroGame {
     return "circus";
   }
 
+  getSimulationMissionPattern() {
+    const patterns = ['collecte', 'precision', 'escorte', 'survie', 'route'];
+    const seed = String(this.config.title || 'scene')
+      .split('')
+      .reduce((total, char) => total + char.charCodeAt(0), 0);
+    return patterns[seed % patterns.length];
+  }
+
+  getSimulationPatternLabel() {
+    const labels = {
+      collecte: 'COLLECTE',
+      precision: 'PRECISION',
+      escorte: 'ESCORTE',
+      survie: 'SURVIE',
+      route: 'TRAJECTOIRE'
+    };
+    return labels[this.getSimulationMissionPattern()] || 'ACTION';
+  }
+
   getPhasePalette() {
     if (this.microPhase === 'simulation') {
       const palettes = {
@@ -9022,6 +9045,7 @@ class StoryMicroGame {
   seedSimulationGameState() {
     const type = this.getSimulationSceneType();
     this.simSceneType = type;
+    this.simPattern = this.getSimulationMissionPattern();
     this.simSpawnTimer = 0;
     this.simEntities = [];
     this.simPlayer = {
@@ -9040,10 +9064,12 @@ class StoryMicroGame {
   spawnSimulationEntity(offset = 0, forcedGood = null) {
     const type = this.simSceneType || this.getSimulationSceneType();
     const spec = this.getSimulationGameSpec();
-    const good = forcedGood === null ? Math.random() > 0.32 : forcedGood;
+    const pattern = this.simPattern || this.getSimulationMissionPattern();
+    const goodThreshold = pattern === 'survie' ? 0.58 : (pattern === 'escorte' ? 0.22 : 0.32);
+    const good = forcedGood === null ? Math.random() > goodThreshold : forcedGood;
     const base = {
       good,
-      r: good ? 12 : 14,
+      r: pattern === 'precision' ? (good ? 8 : 18) : (good ? 12 : 14),
       label: good ? (spec?.goodLabel || this.config.target) : (spec?.badLabel || this.config.hazard)
     };
     if (type === 'restaurant') {
@@ -9071,8 +9097,8 @@ class StoryMicroGame {
         ...base,
         x: Math.random() < 0.5 ? -30 - offset : this.canvas.width + 30 + offset,
         y: 78 + Math.random() * 128,
-        vx: (good ? 78 : 110) * (Math.random() < 0.5 ? 1 : -1),
-        vy: (Math.random() - 0.5) * 22
+        vx: (good ? 78 : (pattern === 'survie' ? 145 : 110)) * (Math.random() < 0.5 ? 1 : -1),
+        vy: (Math.random() - 0.5) * (pattern === 'route' ? 58 : 22)
       });
       return;
     }
@@ -9082,7 +9108,7 @@ class StoryMicroGame {
         x: this.canvas.width + 28 + offset,
         y: 70 + Math.random() * 150,
         vx: -(70 + Math.random() * 60),
-        vy: (Math.random() - 0.5) * 34
+        vy: (Math.random() - 0.5) * (pattern === 'route' ? 74 : 34)
       });
       return;
     }
@@ -9091,12 +9117,13 @@ class StoryMicroGame {
       x: this.canvas.width + 28 + offset,
       y: 82 + Math.random() * 132,
       vx: -(90 + Math.random() * 80),
-      vy: (Math.random() - 0.5) * 20
+      vy: (Math.random() - 0.5) * (pattern === 'route' ? 62 : 20)
     });
   }
 
   updateSimulationGame(dt) {
     const type = this.simSceneType || this.getSimulationSceneType();
+    const pattern = this.simPattern || this.getSimulationMissionPattern();
     if (type === 'restaurant') {
       this.simPlayer.x = Math.max(34, Math.min(this.canvas.width - 34, this.pointer.x));
       this.simPlayer.y = this.canvas.height - 34;
@@ -9112,7 +9139,8 @@ class StoryMicroGame {
     }
 
     this.simSpawnTimer += dt;
-    const spawnDelay = type === 'arena' ? 1.1 : 0.85;
+    const baseSpawnDelay = type === 'arena' ? 1.1 : 0.85;
+    const spawnDelay = pattern === 'survie' ? baseSpawnDelay * 0.62 : (pattern === 'precision' ? baseSpawnDelay * 1.2 : baseSpawnDelay);
     if (this.simSpawnTimer >= spawnDelay) {
       this.simSpawnTimer = 0;
       this.spawnSimulationEntity();
@@ -9671,7 +9699,7 @@ class StoryMicroGame {
 
   getSimulationInstruction() {
     const spec = this.getSimulationGameSpec();
-    if (spec?.instruction) return spec.instruction;
+    if (spec?.instruction) return `${this.getSimulationPatternLabel()} // ${spec.instruction}`;
     const type = this.simSceneType || this.getSimulationSceneType();
     if (type === 'truck') return 'SOURIS: PILOTER LE CAMION';
     if (type === 'restaurant') return 'SOURIS: ATTRAPER LES COMMANDES';
@@ -11741,7 +11769,7 @@ class Episode0Game {
 
         ctx.font = '9px monospace';
         ctx.fillStyle = '#ffb000';
-        ctx.fillText("Sujet identifié : SUJET #042 (Abigail)", canvas.width / 2, 90);
+        ctx.fillText("Sujet identifié : SUJET #042 (POMNI)", canvas.width / 2, 90);
         ctx.fillText("Implantation d'interface : 100% OK", canvas.width / 2, 105);
 
         ctx.fillStyle = '#39ff14';

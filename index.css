@@ -3388,6 +3388,54 @@ body.crt-readable .journal-entry p {
   border-color: var(--win-border-light) var(--win-border-dark) var(--win-border-dark) var(--win-border-light);
 }
 
+@media (max-width: 520px), (max-height: 700px) {
+  .crt-monitor {
+    width: 96vw;
+    height: 94vh;
+    padding: 14px 14px 48px;
+    border-width: 7px;
+    border-radius: 28px;
+  }
+
+  .crt-bezel {
+    padding: 8px;
+    border-radius: 14px;
+  }
+
+  .crt-screen {
+    border-width: 3px;
+  }
+
+  .terminal-theme {
+    min-height: 0;
+    padding: 10px;
+    font-size: 15px;
+    line-height: 1.08;
+    justify-content: flex-start;
+    gap: 8px;
+  }
+
+  .boot-log {
+    flex: 0 1 auto;
+  }
+
+  .boot-prompt {
+    flex: 0 0 auto;
+    margin-top: 4px;
+    padding-bottom: 4px;
+  }
+
+  .boot-init-button {
+    margin-top: 4px;
+    min-height: 32px;
+  }
+
+  .press-key-msg {
+    margin-top: 4px;
+    font-size: 13px;
+  }
+}
+
 /* ==========================================================================
    NARRATION SCREEN & CRT GLITCH EFFECTS
    ========================================================================== */

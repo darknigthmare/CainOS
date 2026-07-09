@@ -578,7 +578,7 @@ const OS = {
           if (initButton) initButton.removeEventListener('click', pressEnter);
           this.applySystemStateUI();
           this.selectEpisodeForCurrentProgress();
-          this.openWindow('simulations');
+          this.closeAllWindows();
         };
 
         const pressEnter = (e) => {
@@ -1277,16 +1277,14 @@ const OS = {
     const nameEl = document.querySelector('#win-vitals .profile-details span.cyan-text');
     const picEl = document.querySelector('#win-vitals .profile-pic');
 
-    const showAbigail = progress.includes(9);
-
     if (progress.includes(0)) {
-      if (nameEl) nameEl.innerText = showAbigail ? "Pomni (Abigail)" : "Pomni";
+      if (nameEl) nameEl.innerText = "Pomni";
       if (picEl) {
         picEl.className = "profile-pic pomni-pic";
         picEl.style.backgroundImage = "";
       }
     } else {
-      if (nameEl) nameEl.innerText = showAbigail ? "SUJET #042 (Abigail)" : "SUJET #042";
+      if (nameEl) nameEl.innerText = "SUJET #042";
       if (picEl) {
         picEl.className = "profile-pic";
         picEl.style.backgroundImage = "url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><rect width=\"16\" height=\"16\" fill=\"%23333\"/><text x=\"4\" y=\"12\" fill=\"%23888\" font-size=\"11\" font-family=\"sans-serif\" font-weight=\"bold\">?</text></svg>')";
@@ -1351,6 +1349,7 @@ const OS = {
     this.wasShutdownByCalibration = true;
     localStorage.setItem('was_shutdown_by_calibration', 'true');
     this.isBooted = false;
+    this.closeAllWindows();
 
     this.playShutdownSound();
     SoundManager.stopMainframeHum();
@@ -1585,27 +1584,41 @@ const OS = {
       16: { name: 'CAINE OFFICE / C&A CORE', short: 'CORE', detail: 'Bureau de Caine, origine IA et couches C&A que CainOS revele tard.', color: '#ff7a30', floor: '#291915', ceiling: '#10070d', unlocked: unlocked(8) || unlocked(9) },
       17: { name: 'KINGER MEMORY BUFFER', short: 'MEMOIRE', detail: 'Fragments Queenie, souvenirs et noyau emotionnel de Kinger.', color: '#d9d0a2', floor: '#252316', ceiling: '#0e0e12', unlocked: unlocked(8) },
       18: { name: 'FINAL CIRCUS / BACKSTAGE', short: 'FINAL', detail: 'Retour au cirque, brain scans, Ribbit et dernier etat de Pomni/Caine.', color: '#e53935', floor: '#2b1018', ceiling: '#09060d', unlocked: unlocked(9) },
-      19: { name: 'CIRCUS MEMBERS ARCHIVE', short: 'MEMBRES', detail: 'Archives visuelles des membres secondaires connues apres les episodes.', color: '#c875ff', floor: '#21142e', ceiling: '#0c0614', unlocked: unlocked(9) }
+      19: { name: 'CIRCUS MEMBERS ARCHIVE', short: 'MEMBRES', detail: 'Projection CainOS non physique des anciens membres connus apres les episodes.', color: '#c875ff', floor: '#21142e', ceiling: '#0c0614', unlocked: unlocked(9) },
+      20: { name: 'RESIDENT HALL / CHAMBRES', short: 'CHAMBRES', detail: 'Couloir residentiel avec les portes personnalisees des habitants du Cirque.', color: '#ff6b9f', floor: '#30152a', ceiling: '#160b24', unlocked: unlocked(1) },
+      21: { name: "CROW'S NEST / CAFE CIRQUE", short: 'CAFE', detail: 'Cafe du Cirque utilise comme lieu de retrait et de discussion tardive.', color: '#d49a62', floor: '#302018', ceiling: '#17100d', unlocked: unlocked(8) },
+      22: { name: 'AQUARIUM', short: 'AQUARIUM', detail: 'Zone aquatique revelee dans Remember.', color: '#63d9ff', floor: '#073443', ceiling: '#06202f', unlocked: unlocked(9) },
+      23: { name: 'SNOWY SUMMIT', short: 'SOMMET', detail: 'Sommet enneige rattache aux souvenirs de Jax et Ribbit.', color: '#e8f7ff', floor: '#a7c9df', ceiling: '#34567a', unlocked: unlocked(9) },
+      24: { name: "POACHER'S PARADISE", short: 'CHASSE', detail: 'Micro-aventure de chasse d Untitled avec les transformations animales.', color: '#c4a45f', floor: '#304621', ceiling: '#16305a', unlocked: unlocked(5) },
+      25: { name: 'ANIME HIGH SCHOOL', short: 'LYCEE', detail: 'Micro-aventure scolaire anime d Untitled.', color: '#ff9fcd', floor: '#e8d7df', ceiling: '#8bc8ff', unlocked: unlocked(5) },
+      26: { name: 'WHITE HOUSE ADVENTURE', short: 'PRESIDENCE', detail: 'Micro-aventure politique de Pomni dans Untitled.', color: '#f2f2f2', floor: '#d8dce7', ceiling: '#44699a', unlocked: unlocked(5) }
     };
     const scenes = {
-      2: { exits: [3, 4, 5, 6, 8, 10, 11, 14, 16], motif: 'circus', size: 17 },
+      2: { exits: [3, 4, 5, 6, 8, 10, 11, 14, 16, 18, 20, 21], motif: 'circus', size: 21 },
       3: { exits: [2, 6, 11, 14], motif: 'grounds', size: 19 },
       4: { exits: [2, 5], motif: 'cellar', size: 11 },
-      5: { exits: [2, 16], motif: 'exit', size: 13 },
-      6: { exits: [2, 7], motif: 'candy', size: 17 },
+      5: { exits: [2, 4, 16], motif: 'exit', size: 13 },
+      6: { exits: [2, 3, 7], motif: 'candy', size: 17 },
       7: { exits: [6, 16], motif: 'test', size: 13 },
       8: { exits: [2, 9], motif: 'manor', size: 15 },
       9: { exits: [8], motif: 'basement', size: 11 },
       10: { exits: [2, 11], motif: 'spudsy', size: 13 },
-      11: { exits: [2, 10, 12, 13], motif: 'micro', size: 15 },
+      11: { exits: [2, 3, 10, 12, 13, 24, 25, 26], motif: 'micro', size: 19 },
       12: { exits: [11], motif: 'softball', size: 19 },
       13: { exits: [11], motif: 'guns', size: 15 },
-      14: { exits: [2, 15], motif: 'lake', size: 19 },
+      14: { exits: [2, 3, 15], motif: 'lake', size: 19 },
       15: { exits: [14, 16], motif: 'admin', size: 13 },
-      16: { exits: [2, 5, 15, 17, 18], motif: 'core', size: 15 },
+      16: { exits: [2, 5, 7, 15, 17, 18], motif: 'core', size: 17 },
       17: { exits: [16], motif: 'memory', size: 13 },
-      18: { exits: [2, 16, 19], motif: 'final', size: 17 },
-      19: { exits: [18], motif: 'archive', size: 15 }
+      18: { exits: [2, 16, 19, 21, 22, 23], motif: 'final', size: 19 },
+      19: { exits: [18], motif: 'archive', size: 15 },
+      20: { exits: [2], motif: 'dorm', size: 19 },
+      21: { exits: [2, 18], motif: 'cafe', size: 15 },
+      22: { exits: [18], motif: 'aquarium', size: 17 },
+      23: { exits: [18], motif: 'snow', size: 17 },
+      24: { exits: [11], motif: 'poacher', size: 17 },
+      25: { exits: [11], motif: 'school', size: 17 },
+      26: { exits: [11], motif: 'whitehouse', size: 15 }
     };
 
     this.circusDoom = {
@@ -2882,6 +2895,43 @@ const OS = {
             ctx.fillRect(x, y + wallH * 0.2, strip, Math.max(1, wallH * 0.18));
             ctx.fillRect(x, y + wallH * 0.55, strip, Math.max(1, wallH * 0.18));
           }
+        } else if (motif === 'dorm') {
+          ctx.fillStyle = this.shadeHex('#3a1730', shadeFactor);
+          ctx.fillRect(x, y, strip, Math.ceil(wallH));
+          if (Math.floor(u * 12) % 3 === 0) {
+            ctx.fillStyle = this.shadeHex('#ff6b9f', shadeFactor * 0.75);
+            ctx.fillRect(x, y + wallH * 0.14, strip, Math.max(1, wallH * 0.72));
+          }
+          ctx.fillStyle = this.shadeHex('#ffd84a', shadeFactor);
+          ctx.fillRect(x, y + wallH * 0.48, strip, Math.max(1, wallH * 0.025));
+        } else if (motif === 'cafe') {
+          ctx.fillStyle = this.shadeHex('#4a2d20', shadeFactor);
+          ctx.fillRect(x, y, strip, Math.ceil(wallH));
+          ctx.fillStyle = this.shadeHex('#d49a62', shadeFactor);
+          ctx.fillRect(x, y + wallH * 0.62, strip, Math.max(1, wallH * 0.09));
+        } else if (motif === 'aquarium') {
+          ctx.fillStyle = this.shadeHex(Math.floor(u * 8) % 2 ? '#0a5068' : '#087b91', shadeFactor);
+          ctx.fillRect(x, y, strip, Math.ceil(wallH));
+          ctx.fillStyle = 'rgba(125,240,255,0.22)';
+          ctx.fillRect(x, y + wallH * 0.22, strip, Math.max(1, wallH * 0.04));
+        } else if (motif === 'snow') {
+          ctx.fillStyle = this.shadeHex(Math.floor(u * 6) % 2 ? '#d8edf7' : '#86abc7', shadeFactor);
+          ctx.fillRect(x, y, strip, Math.ceil(wallH));
+        } else if (motif === 'poacher') {
+          ctx.fillStyle = this.shadeHex(Math.floor(u * 8) % 3 ? '#294c25' : '#18351d', shadeFactor);
+          ctx.fillRect(x, y, strip, Math.ceil(wallH));
+          ctx.fillStyle = this.shadeHex('#c4a45f', shadeFactor);
+          ctx.fillRect(x, y + wallH * 0.76, strip, Math.max(1, wallH * 0.035));
+        } else if (motif === 'school') {
+          ctx.fillStyle = this.shadeHex('#f2e7ed', shadeFactor);
+          ctx.fillRect(x, y, strip, Math.ceil(wallH));
+          ctx.fillStyle = this.shadeHex('#ff9fcd', shadeFactor);
+          ctx.fillRect(x, y + wallH * 0.38, strip, Math.max(1, wallH * 0.06));
+        } else if (motif === 'whitehouse') {
+          ctx.fillStyle = this.shadeHex('#edf0f7', shadeFactor);
+          ctx.fillRect(x, y, strip, Math.ceil(wallH));
+          ctx.fillStyle = this.shadeHex('#44699a', shadeFactor);
+          ctx.fillRect(x, y + wallH * 0.82, strip, Math.max(1, wallH * 0.12));
         } else {
           // Fallback wall
           const baseColor = this.getCircusWallColor(hit.cell, zone, state);
@@ -2928,7 +2978,14 @@ const OS = {
       admin: { ceilingTop: '#080808', ceilingBottom: '#1a1a1a', floorA: '#f2f2f2', floorB: '#050505', floorC: '#ffcf75', grid: 'rgba(255,207,117,0.18)' },
       core: { ceilingTop: '#120806', ceilingBottom: '#3b180d', floorA: '#0a0705', floorB: '#2a1008', floorC: '#ff7a30', grid: 'rgba(255,122,48,0.25)' },
       memory: { ceilingTop: '#06070c', ceilingBottom: '#15151f', floorA: '#0e0e12', floorB: '#22202a', floorC: '#d9d0a2', grid: 'rgba(217,208,162,0.16)' },
-      archive: { ceilingTop: '#07020f', ceilingBottom: '#20102e', floorA: '#13091d', floorB: '#251234', floorC: '#c875ff', grid: 'rgba(200,117,255,0.16)' }
+      archive: { ceilingTop: '#07020f', ceilingBottom: '#20102e', floorA: '#13091d', floorB: '#251234', floorC: '#c875ff', grid: 'rgba(200,117,255,0.16)' },
+      dorm: { ceilingTop: '#160b24', ceilingBottom: '#3a1730', floorA: '#30152a', floorB: '#4a2040', floorC: '#ffd84a', grid: 'rgba(255,107,159,0.16)' },
+      cafe: { ceilingTop: '#17100d', ceilingBottom: '#3b271e', floorA: '#302018', floorB: '#4a2d20', floorC: '#d49a62', grid: 'rgba(212,154,98,0.15)' },
+      aquarium: { ceilingTop: '#06202f', ceilingBottom: '#0a5068', floorA: '#073443', floorB: '#0a596b', floorC: '#63d9ff', grid: 'rgba(99,217,255,0.2)' },
+      snow: { ceilingTop: '#34567a', ceilingBottom: '#9dc4dc', floorA: '#e8f7ff', floorB: '#a7c9df', floorC: '#ffffff', grid: 'rgba(255,255,255,0.22)' },
+      poacher: { ceilingTop: '#16305a', ceilingBottom: '#426b58', floorA: '#304621', floorB: '#49652e', floorC: '#c4a45f', grid: 'rgba(196,164,95,0.16)' },
+      school: { ceilingTop: '#8bc8ff', ceilingBottom: '#f5c8df', floorA: '#e8d7df', floorB: '#f5edf1', floorC: '#ff9fcd', grid: 'rgba(120,120,160,0.16)' },
+      whitehouse: { ceilingTop: '#44699a', ceilingBottom: '#e7ecf5', floorA: '#d8dce7', floorB: '#f2f2f2', floorC: '#44699a', grid: 'rgba(68,105,154,0.16)' }
     };
     const base = themes[motif] || themes.circus;
     return {
@@ -3559,7 +3616,14 @@ const OS = {
       16: [{ kind: 'desk', x: 0, z: -2.9, color: '#ff7a30' }, { kind: 'console', x: -2.0, z: -2.2, color: '#7df0ff' }, { kind: 'eye', x: 2.1, z: -2.2, color: '#ff3333' }, { kind: 'gridnode', x: 0.95, z: -1.35, color: '#ff7a30' }, { kind: 'archive', x: -2.9, z: -1.4, color: '#7df0ff' }],
       17: [{ kind: 'memory', x: -1.8, z: -2.0, color: '#d9d0a2' }, { kind: 'memory', x: 0, z: -2.6, color: '#7df0ff' }, { kind: 'memory', x: 1.8, z: -2.0, color: '#d9d0a2' }, { kind: 'table', x: 0.55, z: -1.35, color: '#d9d0a2' }, { kind: 'candle', x: -2.75, z: -1.4, color: '#ffd84a' }],
       18: [...basePillars, { kind: 'spotlight', x: 0, z: -2.6, color: '#e53935' }, { kind: 'archive', x: -2.2, z: -2.25, color: '#c875ff' }, { kind: 'gridnode', x: 2.2, z: -1.45, color: '#ff4d4d' }],
-      19: [{ kind: 'archive', x: -2.0, z: -2.1, color: '#c875ff' }, { kind: 'archive', x: 0, z: -2.7, color: '#7df0ff' }, { kind: 'archive', x: 2.0, z: -2.1, color: '#ffd84a' }, { kind: 'card', x: -3.0, z: -1.35, color: '#ff4fb8' }, { kind: 'card', x: 3.0, z: -1.35, color: '#ffd84a' }]
+      19: [{ kind: 'archive', x: -2.0, z: -2.1, color: '#c875ff' }, { kind: 'archive', x: 0, z: -2.7, color: '#7df0ff' }, { kind: 'archive', x: 2.0, z: -2.1, color: '#ffd84a' }, { kind: 'card', x: -3.0, z: -1.35, color: '#ff4fb8' }, { kind: 'card', x: 3.0, z: -1.35, color: '#ffd84a' }],
+      20: [{ kind: 'roomdoor', avatar: 'pomni', label: 'POMNI', x: -3.2, z: -2.8, color: '#e53935' }, { kind: 'roomdoor', avatar: 'jax', label: 'JAX', x: -2.1, z: -2.95, color: '#8a4fd6' }, { kind: 'roomdoor', avatar: 'ragatha', label: 'RAGATHA', x: -0.9, z: -3.05, color: '#d64545' }, { kind: 'roomdoor', avatar: 'gangle', label: 'GANGLE', x: 0.5, z: -3.05, color: '#f7f7f7' }, { kind: 'roomdoor', avatar: 'zooble', label: 'ZOOBLE', x: 1.8, z: -2.95, color: '#ff4fb8' }, { kind: 'roomdoor', avatar: 'kinger', label: 'KINGER', x: 3.0, z: -2.8, color: '#d9d0a2' }, { kind: 'card', x: 0, z: -1.25, color: '#ffd84a' }],
+      21: [{ kind: 'counter', x: 0, z: -2.8, color: '#d49a62' }, { kind: 'table', x: -2.2, z: -1.8, color: '#7a4b32' }, { kind: 'table', x: 2.15, z: -1.9, color: '#7a4b32' }, { kind: 'menu', x: 0, z: -1.25, color: '#fff1a8' }],
+      22: [{ kind: 'window', x: -2.6, z: -2.65, color: '#63d9ff' }, { kind: 'window', x: 0, z: -3.1, color: '#7df0ff' }, { kind: 'window', x: 2.6, z: -2.65, color: '#63d9ff' }, { kind: 'wave', x: -1.25, z: -1.45, color: '#4ee7ff' }, { kind: 'wave', x: 1.35, z: -1.55, color: '#4ee7ff' }],
+      23: [{ kind: 'stairs', x: 0, z: -3.0, color: '#e8f7ff' }, { kind: 'pillar', x: -2.5, z: -2.2, color: '#a7c9df' }, { kind: 'pillar', x: 2.5, z: -2.2, color: '#a7c9df' }, { kind: 'spotlight', x: 0.8, z: -1.35, color: '#ffffff' }],
+      24: [{ kind: 'target', x: -2.2, z: -2.35, color: '#c4a45f' }, { kind: 'target', x: 2.15, z: -2.25, color: '#ff4d4d' }, { kind: 'crate', x: -0.7, z: -1.4, color: '#5c3a21' }, { kind: 'barrel', x: 1.1, z: -1.3, color: '#463228' }, { kind: 'window', x: 0, z: -3.15, color: '#7df0ff' }],
+      25: [{ kind: 'table', x: -2.25, z: -2.15, color: '#f2e7ed' }, { kind: 'table', x: 0, z: -2.75, color: '#f2e7ed' }, { kind: 'table', x: 2.25, z: -2.15, color: '#f2e7ed' }, { kind: 'card', x: -1.15, z: -1.25, color: '#ff9fcd' }, { kind: 'card', x: 1.15, z: -1.25, color: '#8bc8ff' }],
+      26: [{ kind: 'desk', x: 0, z: -2.85, color: '#edf0f7' }, { kind: 'doorframe', x: -2.55, z: -2.35, color: '#44699a' }, { kind: 'doorframe', x: 2.55, z: -2.35, color: '#44699a' }, { kind: 'table', x: 0, z: -1.35, color: '#d8dce7' }, { kind: 'card', x: 1.55, z: -1.45, color: '#e53935' }]
     };
     return [...(byZone[zoneId] || basePillars), ...this.getCircusExtraZoneProps(zoneId)];
   },
@@ -3671,7 +3735,7 @@ const OS = {
     const p = prop.projected;
     const s = Math.max(0.25, p.scale);
     const wideKinds = new Set(['ring', 'counter', 'truck', 'scoreboard', 'table', 'desk', 'exitframe']);
-    const tallKinds = new Set(['pillar', 'tent', 'spotlight', 'umbrella', 'window', 'archive', 'console']);
+    const tallKinds = new Set(['pillar', 'tent', 'spotlight', 'umbrella', 'window', 'archive', 'console', 'roomdoor']);
     const smallKinds = new Set(['candle', 'balloon', 'eye', 'sun', 'base', 'target', 'memory']);
     let width = 82 * s;
     let height = 86 * s;
@@ -3878,6 +3942,31 @@ const OS = {
         ctx.fillRect(-46 * s, -42 * s, 92 * s, 6 * s);
         ctx.strokeRect(-46 * s, -42 * s, 92 * s, 6 * s);
       }
+    } else if (prop.kind === 'roomdoor') {
+      ctx.fillStyle = '#2b1330';
+      ctx.fillRect(-34 * s, -118 * s, 68 * s, 118 * s);
+      ctx.strokeStyle = prop.color;
+      ctx.strokeRect(-34 * s, -118 * s, 68 * s, 118 * s);
+      ctx.fillStyle = `${prop.color}55`;
+      ctx.fillRect(-27 * s, -108 * s, 54 * s, 48 * s);
+      const spec = this.getCircusAvatarSheetSpec(prop.avatar);
+      const img = spec ? this.circusAvatarSheets?.[spec.sheet] : null;
+      const frame = spec && img?.complete && img.naturalWidth ? this.getCircusTransparentAvatarFrame(img, spec) : null;
+      if (frame) {
+        ctx.imageSmoothingEnabled = false;
+        const ratio = frame.width / frame.height;
+        const iconH = 42 * s;
+        const iconW = iconH * ratio;
+        ctx.drawImage(frame.canvas, -iconW / 2, -106 * s, iconW, iconH);
+      }
+      ctx.fillStyle = '#fff1a8';
+      ctx.font = `bold ${Math.max(6, 8 * s)}px Courier New`;
+      ctx.textAlign = 'center';
+      ctx.fillText(prop.label || 'ROOM', 0, -48 * s);
+      ctx.fillStyle = '#ffd84a';
+      ctx.beginPath();
+      ctx.arc(22 * s, -48 * s, 3 * s, 0, Math.PI * 2);
+      ctx.fill();
     } else if (prop.kind === 'doorframe' || prop.kind === 'exitframe') {
       // Detailed double office doors with glowing "EXIT" sign
       ctx.fillStyle = '#eef';
@@ -4492,7 +4581,7 @@ const OS = {
         { name: 'Work Gangle', type: 'gangle', avatar: 'workgangle', x: -0.75, z: -2.1, color: '#f7f7f7' },
         { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 0.65, z: -2.4, color: '#e53935' },
         { name: 'Max Customer', type: 'npc', avatar: 'max', x: -2.25, z: -1.5, color: '#75bd3f' },
-        { name: 'Ming', type: 'mannequin', avatar: 'ming', x: 1.85, z: -1.65, color: '#b7c7d8' }
+        { name: 'Gummigoo Customer', type: 'gummigoo', avatar: 'gummigoo', x: 1.85, z: -1.65, color: '#d8a23a' }
       ],
       11: [
         { name: 'Orbsman', type: 'npc', avatar: 'orbsman', x: -1.75, z: -2.25, color: '#6dd8ff' },
@@ -4515,7 +4604,7 @@ const OS = {
       ],
       14: [
         { name: 'Beach Gangle', type: 'gangle', avatar: 'beachgangle', x: -1.55, z: -2.1, color: '#f7f7f7' },
-        { name: 'Hunter Jax', type: 'jax', avatar: 'hunterjax', x: 0.25, z: -2.4, color: '#8a4fd6' },
+        { name: 'Jax', type: 'jax', avatar: 'jax', x: 0.25, z: -2.4, color: '#8a4fd6' },
         { name: 'Sun', type: 'npc', avatar: 'sun', x: 2.05, z: -1.65, color: '#ffd84a', sizeScale: 1.05 },
         { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -2.45, z: -1.4, color: '#e53935' }
       ],
@@ -4526,8 +4615,8 @@ const OS = {
       ],
       16: [
         { name: 'Caine', type: 'caine', avatar: 'caine', x: -1.05, z: -2.25, color: '#ffd84a' },
-        { name: 'Abel Mannequin', type: 'mannequin', avatar: 'abelmannequin', x: 0.6, z: -1.85, color: '#ff8a30' },
-        { name: 'Abel Full Body', type: 'mannequin', avatar: 'abelfullbody', x: 1.85, z: -2.55, color: '#f08a28' },
+        { name: 'Abel NPC Echo', type: 'mannequin', avatar: 'abelmannequin', x: 0.6, z: -1.85, color: '#ff8a30' },
+        { name: 'Deleted Abel Render', type: 'mannequin', avatar: 'abelfullbody', x: 1.85, z: -2.55, color: '#f08a28' },
         { name: 'The Machine', type: 'npc', avatar: 'themachine', x: -2.35, z: -1.45, color: '#7d4dff', sizeScale: 1.25 }
       ],
       17: [
@@ -4540,7 +4629,7 @@ const OS = {
         { name: 'Caine', type: 'caine', avatar: 'caine', x: 0, z: -2.55, color: '#ffd84a' },
         { name: 'Bubble', type: 'bubble', avatar: 'bubble', x: 1.35, z: -2.15, color: '#f7f7ff' },
         { name: 'Ribbit Dream Signal', type: 'npc', avatar: 'ribbit', x: 2.35, z: -1.45, color: '#63d35f' },
-        { name: 'Abel', type: 'mannequin', avatar: 'abelmannequin', x: -2.75, z: -1.35, color: '#ff8a30' }
+        { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -2.75, z: -1.35, color: '#d9d0a2' }
       ],
       19: [
         { name: 'Ribbit', type: 'npc', avatar: 'ribbit', x: -3.35, z: -1.55, color: '#4ee77e' },
@@ -4553,6 +4642,41 @@ const OS = {
         { name: 'Yellow Clown', type: 'npc', avatar: 'yellowclown', x: 3.25, z: -2.25, color: '#ffd33f' },
         { name: 'Oyster', type: 'npc', avatar: 'oyster', x: -0.05, z: -3.15, color: '#8fb7ff' },
         { name: 'Bulb Creature', type: 'npc', avatar: 'bulbcreature', x: 0.95, z: -3.15, color: '#a8e85b' }
+      ],
+      20: [
+        { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -1.8, z: -2.2, color: '#e53935' },
+        { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: 0.15, z: -2.6, color: '#d64545' },
+        { name: 'Jax', type: 'jax', avatar: 'jax', x: 2.05, z: -1.8, color: '#8a4fd6' }
+      ],
+      21: [
+        { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: -1.6, z: -2.1, color: '#f7f7f7' },
+        { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 0.2, z: -2.5, color: '#ff4fb8' },
+        { name: 'Jax', type: 'jax', avatar: 'jax', x: 1.8, z: -1.7, color: '#8a4fd6' }
+      ],
+      22: [
+        { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -1.3, z: -2.3, color: '#e53935' },
+        { name: 'Gloink Round', type: 'npc', avatar: 'gloinkround', x: 0.6, z: -2.6, color: '#c4b62d', sizeScale: 0.72 },
+        { name: 'Bubble', type: 'bubble', avatar: 'bubble', x: 2.0, z: -1.6, color: '#f7f7ff' }
+      ],
+      23: [
+        { name: 'Jax Memory', type: 'jax', avatar: 'jax', x: -1.25, z: -2.35, color: '#8a4fd6' },
+        { name: 'Ribbit Memory', type: 'npc', avatar: 'ribbit', x: 1.25, z: -2.35, color: '#63d35f' }
+      ],
+      24: [
+        { name: 'Hunter Jax', type: 'jax', avatar: 'hunterjax', x: -1.6, z: -2.15, color: '#8a4fd6' },
+        { name: 'Rhino Gangle', type: 'gangle', avatar: 'rhinogangle', x: 0.35, z: -2.65, color: '#e8e1d6' },
+        { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 1.85, z: -1.65, color: '#e53935' }
+      ],
+      25: [
+        { name: 'Anime Pomni', type: 'pomni', avatar: 'japanesepomni', x: -2.2, z: -1.65, color: '#e53935' },
+        { name: 'Anime Jax', type: 'jax', avatar: 'japanesejax', x: -0.75, z: -2.45, color: '#8a4fd6' },
+        { name: 'Anime Gangle', type: 'gangle', avatar: 'japanesegangle', x: 0.75, z: -2.45, color: '#f7f7f7' },
+        { name: 'Anime Ragatha', type: 'ragatha', avatar: 'japaneseragatha', x: 2.2, z: -1.65, color: '#d64545' }
+      ],
+      26: [
+        { name: 'President Pomni', type: 'pomni', avatar: 'pomni', x: 0, z: -2.65, color: '#e53935' },
+        { name: 'Gangle Extremist', type: 'gangle', avatar: 'gangle', x: -1.8, z: -1.65, color: '#f7f7f7' },
+        { name: 'Jax', type: 'jax', avatar: 'jax', x: 1.8, z: -1.65, color: '#8a4fd6' }
       ]
     };
     return byZone[zoneId] || shared.slice(0, 4);
@@ -5190,9 +5314,19 @@ const OS = {
     if (!progress.includes(0)) {
       processedContent = processedContent.replace(/Pomni/g, "SUJET #042");
     }
-    // Mask real name "Abigail" until Episode 9 (revelations) is completed
+    // The civil identity from Episode 9 stays hidden until the final reveal.
     if (!progress.includes(9)) {
-      processedContent = processedContent.replace(/Abigail/g, "SUJET #042");
+      processedContent = processedContent.replace(/Abigail|Abby/g, "[IDENTITE VERROUILLEE]");
+    }
+
+    const reconstructedArchives = new Set([
+      'headset_proposal.txt', 'subject_missing.txt', 'spudsys_incident.txt',
+      'weapons_licensing.txt', 'caine_origin_debug.txt', 'exit_door_prototype_v3.obj',
+      'ragatha_repair_log.txt', 'queenie_memory_leak.log', 'character_mapping.txt',
+      'abel_kernel_patch.exe.enc', 'abel_kernel_patch.exe'
+    ]);
+    if (reconstructedArchives.has(filename)) {
+      processedContent = `[RECONSTRUCTION CAINOS / NON CONFIRMEE PAR LE CANON]\nCe dossier est une hypothese interactive et ne remplace pas les revelations des episodes.\n\n${processedContent}`;
     }
 
     document.getElementById('file-list').style.display = "none";
@@ -5504,13 +5638,21 @@ const OS = {
       { id: 6, ep: 2, name: 'Candy Canyon', desc: 'Convoi de sirop et faille de memoire PNJ.', item: 'Ticket sirop', unlocked: unlocked(2) },
       { id: 8, ep: 3, name: 'Mildenhall Manor', desc: 'Zone mature, peur, fantome et souvenirs enfouis.', item: 'Bougie du manoir', unlocked: unlocked(3) },
       { id: 10, ep: 4, name: "Spudsy's", desc: 'Pression de service et masque de Gangle.', item: 'Ticket Spudsy', unlocked: unlocked(4) },
-      { id: 11, ep: 5, name: 'Suggestion Box', desc: 'Micro-aventures et skins hors timeline principale.', item: 'Fiche suggestion', unlocked: unlocked(5) },
+      { id: 11, ep: 5, name: 'Suggestion Box', desc: 'Hub des micro-aventures canoniques d Untitled.', item: 'Fiche suggestion', unlocked: unlocked(5) },
+      { id: 12, ep: 5, name: 'Softball Stadium', desc: 'Match canon contre les Evil Big Tops.', item: 'Balle du match', unlocked: unlocked(5) },
+      { id: 24, ep: 5, name: "Poacher's Paradise", desc: 'Chasse et transformations animales d Untitled.', item: 'Badge de chasse', unlocked: unlocked(5) },
+      { id: 25, ep: 5, name: 'Anime High School', desc: 'Micro-aventure scolaire anime.', item: 'Carte scolaire', unlocked: unlocked(5) },
+      { id: 26, ep: 5, name: 'White House Adventure', desc: 'Micro-aventure politique de Pomni.', item: 'Dossier presidentiel', unlocked: unlocked(5) },
       { id: 13, ep: 6, name: 'Arena armes', desc: 'Epreuves virtuelles, scores et tensions de groupe.', item: 'Douille virtuelle', unlocked: unlocked(6) },
       { id: 14, ep: 7, name: 'Digital Lake', desc: 'Fausse pause, soleil dangereux et PNJ fragiles.', item: 'Coquillage digital', unlocked: unlocked(7) },
-      { id: 16, ep: 8, name: 'C&A Core', desc: 'Couches techniques, Abel et origine tardive.', item: 'Pass admin', unlocked: unlocked(8) },
+      { id: 16, ep: 8, name: 'Caine Office / Core', desc: 'Bureau et couches techniques de Caine; Abel reste un PNJ supprime.', item: 'Pass admin', unlocked: unlocked(8) },
+      { id: 20, ep: 1, name: 'Resident Hall', desc: 'Couloir des chambres et portes personnalisees.', item: 'Cle de chambre', unlocked: unlocked(1) },
+      { id: 21, ep: 8, name: "Crow's Nest / Cafe Cirque", desc: 'Lieu de retrait et de discussion tardive.', item: 'Tasse du cafe', unlocked: unlocked(8) },
       { id: 17, ep: 8, name: 'Kinger Memory Buffer', desc: 'Souvenirs de Queenie sans restauration active.', item: 'Piece memoire', unlocked: unlocked(8) },
       { id: 18, ep: 9, name: 'Final Circus', desc: 'Brain scans, reves, couleur et choix de Pomni.', item: 'Fragment couleur', unlocked: unlocked(9) },
-      { id: 19, ep: 9, name: 'Circus Members Archive', desc: 'Archives visuelles des membres disparus/secondaires.', item: 'Badge archive', unlocked: unlocked(9) }
+      { id: 19, ep: 9, name: 'Circus Members Archive', desc: 'Projection CainOS non physique des membres disparus.', item: 'Badge archive', unlocked: unlocked(9) },
+      { id: 22, ep: 9, name: 'Aquarium', desc: 'Zone aquatique revelee dans Remember.', item: 'Fragment aquarium', unlocked: unlocked(9) },
+      { id: 23, ep: 9, name: 'Snowy Summit', desc: 'Lieu rattache aux souvenirs de Jax et Ribbit.', item: 'Fragment neige', unlocked: unlocked(9) }
     ];
   },
 
@@ -5518,15 +5660,15 @@ const OS = {
     if (typeof EpisodeManager === 'undefined') return [];
     const progress = EpisodeManager.getProgress();
     const zoneByEpisode = {
-      1: [2, 4, 5],
+      1: [2, 4, 5, 20],
       2: [6],
       3: [8],
       4: [10],
-      5: [11, 12],
+      5: [11, 12, 24, 25, 26],
       6: [13],
       7: [14],
-      8: [16, 17],
-      9: [18, 19]
+      8: [16, 17, 21],
+      9: [18, 19, 22, 23]
     };
     return Array.from({ length: 9 }, (_, offset) => {
       const ep = offset + 1;
@@ -5909,7 +6051,7 @@ const OS = {
           "Prie secrètement pour que Caine fasse une mise à jour corrective."
         ]},
         kinger: { facts: [
-          "Son épouse Helen (Queenie) s'est abstraite sous ses yeux dans la cave.",
+          "Queenie etait sa compagne dans le Cirque; son identite civile reste inconnue.",
           "Est l'humain connecté depuis le plus longtemps (esprit extrêmement fragmenté).",
           "Collectionne des insectes virtuels imaginaires dans un seau."
         ]},
@@ -5975,8 +6117,8 @@ const OS = {
       { gate: 5, tag: 'MICRO', title: 'Suggestions de Caine', text: 'Les micro-aventures doivent rester separees du canon principal : utiles pour les skins et variantes, dangereuses pour la timeline.' },
       { gate: 6, tag: 'TEAM', title: 'Epreuves armees et tensions de groupe', text: 'Les armes et scores sont des regles de simulation. CainOS suit surtout les ruptures de confiance et les roles imposes.' },
       { gate: 7, tag: 'LAKE', title: 'Lac digital et fausse pause', text: 'Le lac ressemble a une zone de repos, mais les PNJ, le soleil et les indices C&A gardent la scene sous controle.' },
-      { gate: 8, tag: 'CORE', title: 'Couches C&A et origine tardive', text: 'Les traces techniques deviennent consultables seulement lorsque la progression rend ces informations moins spoiler.' },
-      { gate: 9, tag: 'FINAL', title: 'Pomni choisit son nom actif', text: 'Le final autorise les donnees Abigail/Abby, mais la timeline jouable continue de traiter Pomni comme identite active dans le Cirque.' }
+      { gate: 8, tag: 'CORE', title: 'Couches C&A sous réserve', text: 'Les traces techniques sont des reconstructions CainOS. Elles se débloquent tard, mais ne deviennent pas canoniques pour autant.' },
+      { gate: 9, tag: 'FINAL', title: 'Pomni reste Pomni', text: 'Le final autorise les donnees Abigail/Abby, mais Pomni reste son identite active et le nom affiche dans le Cirque.' }
     ];
     if (typeof EpisodeManager === 'undefined') return baseEntries;
     const subEntries = [];
@@ -6144,20 +6286,20 @@ const OS = {
         "CainOS la classe comme objet vivant de decor actif, pas comme mannequin.",
         "La grande bouche sombre et le corps en carton restent les marqueurs visuels principaux."
       ]},
-      abel: { name: "Abel", age: "Archive", stress: "88%", avatar: "abel", signal: "A", color: "#66ccff", facts: [
-        "Profil d acces lie aux archives finales du projet CainOS.",
-        "Sa silhouette est volontairement rendue comme un avatar admin.",
-        "Le terminal marque ses donnees comme reconstruites."
+      abel: { name: "Abel", age: "PNJ supprime - Ep. 7", stress: "88%", avatar: "abel", signal: "A", color: "#66ccff", facts: [
+        "PNJ mannequin utilise par Caine dans la fausse aventure d evasion de Beach Episode.",
+        "Son recit sur C&A et les capsules etait une fabrication de l aventure.",
+        "Abel est supprime par Caine et ne doit pas etre traite comme un administrateur reel."
       ]},
-      abelmannequin: { name: "Abel Mannequin", age: "Archive", stress: "64%", avatar: "abelmannequin", signal: "M", color: "#ff7a1a", facts: [
+      abelmannequin: { name: "Abel Mannequin", age: "PNJ supprime - Ep. 7", stress: "64%", avatar: "abelmannequin", signal: "M", color: "#ff7a1a", facts: [
         "Version mannequin orange sans visage, proche du corps generique montre en reference.",
         "Les articulations et la posture raide gardent l aspect pantin de test.",
-        "CainOS la classe comme forme physique archivee d Abel."
+        "Forme de PNJ de l aventure d evasion, pas preuve d une identite C&A reelle."
       ]},
-      abelfullbody: { name: "Abel Full Body", age: "Archive", stress: "42%", avatar: "abelfullbody", signal: "F", color: "#f08a28", facts: [
+      abelfullbody: { name: "Abel Full Body", age: "PNJ supprime - Ep. 7", stress: "42%", avatar: "abelfullbody", signal: "F", color: "#f08a28", facts: [
         "Version full body orange avec visage souriant simple.",
         "Le corps articule reste proche du mannequin, mais avec identite faciale lisible.",
-        "Archivee comme deuxieme rendu d Abel, separee du mannequin sans visage."
+        "Variante visuelle du meme PNJ fabrique par Caine."
       ]},
       moon: { name: "Moon", age: "Decor", stress: "??", avatar: "moon", signal: "M", color: "#d6d6ff", facts: [
         "Entite celeste associee aux routines absurdes de Caine.",
@@ -6274,10 +6416,10 @@ const OS = {
         "Le masque blanc souriant reste le marqueur principal du profil.",
         "Classee skin visuel pour eviter de l afficher comme nouvelle personne."
       ]},
-      maidjax: { name: "Maid Jax", age: "Variante fan", stress: "42%", avatar: "maidjax", signal: "J", color: "#c88aff", facts: [
-        "Variante maid de Jax basee sur la reference que tu as fournie.",
+      maidjax: { name: "Maid Jax", age: "Variante canon - Ep. 5/9", stress: "42%", avatar: "maidjax", signal: "J", color: "#c88aff", facts: [
+        "Costume impose a Jax pendant le softball de l episode Untitled.",
         "Le grand corps de lapin et les yeux jaunes restent conserves.",
-        "CainOS la range dans les costumes, hors progression narrative."
+        "Cette apparence revient dans l espace mental de Jax pendant Remember."
       ]},
       maidragatha: { name: "Maid Ragatha", age: "Variante fan", stress: "37%", avatar: "maidragatha", signal: "R", color: "#ff6b64", facts: [
         "Variante maid de Ragatha avec tablier long et cheveux rouges.",
@@ -6299,112 +6441,112 @@ const OS = {
         "Les oreilles, la peau violette et les yeux jaunes gardent le lien avec Jax.",
         "La tenue casual est archivee comme skin fan hors lore principal."
       ]},
-      beachgangle: { name: "Beach Gangle", age: "Variante fan", stress: "21%", avatar: "beachgangle", signal: "B", color: "#6fb8ff", facts: [
-        "Variante plage de Gangle inspiree de ta reference soleil et parasol.",
+      beachgangle: { name: "Beach Gangle", age: "Variante canon - Ep. 7", stress: "21%", avatar: "beachgangle", signal: "B", color: "#6fb8ff", facts: [
+        "Apparence de Gangle pendant la sortie au Digital Lake.",
         "Le grand chapeau, le bleu estival et les rubans rouges gardent la lecture immediate.",
-        "CainOS la marque comme skin vacances, hors aventure principale."
+        "Debloquee uniquement avec la progression de Beach Episode."
       ]},
-      japanesegangle: { name: "Japanese Gangle", age: "Variante fan", stress: "34%", avatar: "japanesegangle", signal: "G", color: "#f05c6a", facts: [
-        "Variante uniforme japonais de Gangle avec ambiance cerisiers.",
+      japanesegangle: { name: "Japanese Gangle", age: "Variante canon - Ep. 5", stress: "34%", avatar: "japanesegangle", signal: "G", color: "#f05c6a", facts: [
+        "Forme anime scolaire generee pendant les micro-aventures d Untitled.",
         "Le masque et les rubans restent prioritaires sur le costume.",
-        "Archivee comme version anime/school, pas comme nouvel etat canon."
+        "Il s agit d un costume temporaire de simulation, pas d une nouvelle Gangle."
       ]},
-      rhinogangle: { name: "Rhino Gangle", age: "Variante fan", stress: "67%", avatar: "rhinogangle", signal: "N", color: "#e8e1d6", facts: [
-        "Variante rhino de Gangle basee sur la silhouette a corne que tu as montree.",
+      rhinogangle: { name: "Rhino Gangle", age: "Variante canon - Ep. 5", stress: "67%", avatar: "rhinogangle", signal: "N", color: "#e8e1d6", facts: [
+        "Transformation de Gangle pendant Poacher s Paradise.",
         "La tete blanche et le corps ressort gardent une lecture volontairement bizarre.",
-        "CainOS la range dans les costumes experimentaux."
+        "Debloquee avec la micro-aventure de chasse d Untitled."
       ]},
-      workgangle: { name: "Work Gangle", age: "Variante fan", stress: "74%", avatar: "workgangle", signal: "W", color: "#477da8", facts: [
-        "Variante travail de Gangle en chemise bleue et pantalon sombre.",
+      workgangle: { name: "Work Gangle", age: "Variante canon - Ep. 4", stress: "74%", avatar: "workgangle", signal: "W", color: "#477da8", facts: [
+        "Tenue de manager de Gangle pendant le service chez Spudsy s.",
         "Le badge et la posture fatiguee rappellent le rendu manager.",
-        "Classee comme skin bureau, pas comme progression narrative."
+        "Cette forme est liee a Fast Food Masquerade et a la pression du masque."
       ]},
-      japanesejax: { name: "Japanese Jax", age: "Variante fan", stress: "52%", avatar: "japanesejax", signal: "J", color: "#7c55df", facts: [
+      japanesejax: { name: "Japanese Jax", age: "Variante canon - Ep. 5", stress: "52%", avatar: "japanesejax", signal: "J", color: "#7c55df", facts: [
         "Version anime school de Jax avec blazer sombre et cravate.",
         "Les oreilles violettes et les yeux jaunes gardent l identite du profil.",
-        "CainOS la lie a Jax comme costume alternatif."
+        "Costume temporaire de la micro-aventure anime scolaire d Untitled."
       ]},
-      japaneseragatha: { name: "Japanese Ragatha", age: "Variante fan", stress: "40%", avatar: "japaneseragatha", signal: "R", color: "#e85b58", facts: [
+      japaneseragatha: { name: "Japanese Ragatha", age: "Variante canon - Ep. 5", stress: "40%", avatar: "japaneseragatha", signal: "R", color: "#e85b58", facts: [
         "Version anime school de Ragatha avec uniforme et cheveux rouges.",
         "Le bouton et le sourire doux restent les reperes du personnage.",
-        "Archivee comme variante scolaire fan."
+        "Costume temporaire de la micro-aventure anime scolaire d Untitled."
       ]},
-      japanesepomni: { name: "Japanese Pomni", age: "Variante fan", stress: "89%", avatar: "japanesepomni", signal: "P", color: "#4a8dff", facts: [
+      japanesepomni: { name: "Japanese Pomni", age: "Variante canon - Ep. 5", stress: "89%", avatar: "japanesepomni", signal: "P", color: "#4a8dff", facts: [
         "Version anime school de Pomni avec uniforme et details de bouffon.",
         "La petite silhouette inquiete reste volontairement conservee.",
-        "CainOS la garde comme variante visuelle non canonique."
+        "Costume temporaire de la micro-aventure anime scolaire d Untitled."
       ]},
-      japanesekinger: { name: "Japanese Kinger", age: "Variante fan", stress: "96%", avatar: "japanesekinger", signal: "K", color: "#e5cf99", facts: [
+      japanesekinger: { name: "Japanese Kinger", age: "Variante canon - Ep. 5", stress: "96%", avatar: "japanesekinger", signal: "K", color: "#e5cf99", facts: [
         "Version anime school de Kinger avec sac et uniforme.",
         "La piece d echecs et la couronne restent les marqueurs principaux.",
         "Le stress reste haut meme en uniforme scolaire."
       ]},
-      japanesezooble: { name: "Japanese Zooble", age: "Variante fan", stress: "69%", avatar: "japanesezooble", signal: "Z", color: "#f06cb8", facts: [
+      japanesezooble: { name: "Japanese Zooble", age: "Variante canon - Ep. 5", stress: "69%", avatar: "japanesezooble", signal: "Z", color: "#f06cb8", facts: [
         "Version anime school de Zooble avec pieces modulaires et sac.",
         "La tete angulaire et les membres incompatibles restent visibles.",
-        "Classee skin scolaire fan dans CainOS."
+        "Costume temporaire de la micro-aventure anime scolaire d Untitled."
       ]},
       japanesegummigoo: { name: "Japanese Gummigoo", age: "Variante fan", stress: "43%", avatar: "japanesegummigoo", signal: "Y", color: "#78c84a", facts: [
         "Version anime school de Gummigoo avec uniforme et touches candy-western.",
         "La silhouette alligator reste differente de Max et Chad.",
         "Archivee comme variante fan liee au groupe gummy."
       ]},
-      baseballjax: { name: "Baseball Jax", age: "Variante fan", stress: "46%", avatar: "baseballjax", signal: "B", color: "#b874e8", facts: [
+      baseballjax: { name: "Baseball Jax", age: "Variante canon - Ep. 5", stress: "46%", avatar: "baseballjax", signal: "B", color: "#b874e8", facts: [
         "Variante baseball de Jax avec uniforme rose, casquette bleue et gant jaune.",
         "Les longues oreilles et le sourire moqueur restent les reperes du profil.",
-        "CainOS la classe comme costume sportif fan."
+        "Costume du softball d Untitled, avant le vote du costume maid."
       ]},
-      baseballzooble: { name: "Baseball Zooble", age: "Variante fan", stress: "64%", avatar: "baseballzooble", signal: "O", color: "#f27ad3", facts: [
+      baseballzooble: { name: "Baseball Zooble", age: "Variante canon - Ep. 5", stress: "64%", avatar: "baseballzooble", signal: "O", color: "#f27ad3", facts: [
         "Variante baseball de Zooble avec casquette bleue et membres sportifs depareilles.",
         "La tete angulaire et les pieces incompatibles restent visibles.",
         "Le module radar la lie a Zooble malgre l equipement."
       ]},
-      baseballgangle: { name: "Baseball Gangle", age: "Variante fan", stress: "78%", avatar: "baseballgangle", signal: "G", color: "#d84747", facts: [
+      baseballgangle: { name: "Baseball Gangle", age: "Variante canon - Ep. 5", stress: "78%", avatar: "baseballgangle", signal: "G", color: "#d84747", facts: [
         "Variante baseball de Gangle avec casquette bleue et jersey leger.",
         "Le corps reste un ruban rouge, pas des jambes humaines.",
         "CainOS garde l expression triste du masque comme signature."
       ]},
-      baseballragatha: { name: "Baseball Ragatha", age: "Variante fan", stress: "36%", avatar: "baseballragatha", signal: "R", color: "#6d86dd", facts: [
+      baseballragatha: { name: "Baseball Ragatha", age: "Variante canon - Ep. 5", stress: "36%", avatar: "baseballragatha", signal: "R", color: "#6d86dd", facts: [
         "Variante baseball de Ragatha en robe uniforme bleue avec batte.",
         "Les cheveux rouges et l oeil bouton restent le point d ancrage.",
-        "Archivee comme skin match, hors episode interactif principal."
+        "Costume du softball canon d Untitled."
       ]},
-      baseballpomni: { name: "Baseball Pomni", age: "Variante fan", stress: "91%", avatar: "baseballpomni", signal: "P", color: "#4068e8", facts: [
+      baseballpomni: { name: "Baseball Pomni", age: "Variante canon - Ep. 5", stress: "91%", avatar: "baseballpomni", signal: "P", color: "#4068e8", facts: [
         "Variante baseball de Pomni avec casquette bleue et tenue compacte.",
         "La silhouette de bouffon reste visible sous l equipement sportif.",
         "Le stress CainOS reste eleve meme pendant le match."
       ]},
-      baseballkinger: { name: "Baseball Kinger", age: "Variante fan", stress: "99%", avatar: "baseballkinger", signal: "K", color: "#d7c9aa", facts: [
+      baseballkinger: { name: "Baseball Kinger", age: "Variante canon - Ep. 5", stress: "99%", avatar: "baseballkinger", signal: "K", color: "#d7c9aa", facts: [
         "Variante baseball de Kinger avec casquette et gant.",
         "La piece d echecs haute et les yeux paniques restent prioritaires.",
         "CainOS recommande de ne pas lui confier la strategie de l equipe."
       ]},
-      rivalbaseballzooble: { name: "Rival Baseball Zooble", age: "Variante fan", stress: "72%", avatar: "rivalbaseballzooble", signal: "Z", color: "#f5d33b", facts: [
+      rivalbaseballzooble: { name: "Rival Baseball Zooble", age: "PNJ canon - Evil Big Tops", stress: "72%", avatar: "rivalbaseballzooble", signal: "Z", color: "#f5d33b", facts: [
         "Variante equipe adverse de Zooble en couleurs jaune, bleu et rose.",
         "Les pieces modulaires restent volontairement asymetriques.",
         "CainOS la distingue du costume baseball principal par son signal rival."
       ]},
-      rivalbaseballpomni: { name: "Rival Baseball Pomni", age: "Variante fan", stress: "94%", avatar: "rivalbaseballpomni", signal: "P", color: "#d7382f", facts: [
+      rivalbaseballpomni: { name: "Rival Baseball Pomni", age: "PNJ canon - Evil Big Tops", stress: "94%", avatar: "rivalbaseballpomni", signal: "P", color: "#d7382f", facts: [
         "Variante equipe adverse de Pomni avec uniforme jaune et rouge.",
         "Le regard plus determine rappelle le camp oppose.",
-        "Le profil reste un skin fan, pas une nouvelle Pomni."
+        "Contrepartie PNJ de l equipe Evil Big Tops, pas une nouvelle Pomni humaine."
       ]},
-      rivalbaseballpinkgiant: { name: "Rival Baseball Pink Giant", age: "Variante fan", stress: "59%", avatar: "rivalbaseballpinkgiant", signal: "G", color: "#f05a9f", facts: [
+      rivalbaseballpinkgiant: { name: "Rival Baseball Pink Giant", age: "PNJ canon - Evil Big Tops", stress: "59%", avatar: "rivalbaseballpinkgiant", signal: "G", color: "#f05a9f", facts: [
         "Gros joueur rose de l equipe adverse, separe de Gangle dans CainOS.",
         "Son corps rond segmente reste lisse, sans armure ni epaulettes.",
         "La fiche corrige l ancien amalgame avec Gangle."
       ]},
-      rivalbaseballragatha: { name: "Rival Baseball Ragatha", age: "Variante fan", stress: "44%", avatar: "rivalbaseballragatha", signal: "R", color: "#e86493", facts: [
+      rivalbaseballragatha: { name: "Rival Baseball Ragatha", age: "PNJ canon - Evil Big Tops", stress: "44%", avatar: "rivalbaseballragatha", signal: "R", color: "#e86493", facts: [
         "Variante equipe adverse de Ragatha en uniforme rose.",
         "Les cheveux bleus et l oeil bouton gardent l identite de ce costume.",
-        "Archivee comme skin rival baseball."
+        "Contrepartie PNJ canonique du match d Untitled."
       ]},
-      rivalbaseballjax: { name: "Rival Baseball Jax", age: "Variante fan", stress: "50%", avatar: "rivalbaseballjax", signal: "J", color: "#7a244d", facts: [
+      rivalbaseballjax: { name: "Rival Baseball Jax", age: "PNJ canon - Evil Big Tops", stress: "50%", avatar: "rivalbaseballjax", signal: "J", color: "#7a244d", facts: [
         "Variante equipe adverse de Jax avec peau bordeaux et tenue bleue.",
         "Pas de chapeau : les longues oreilles restent visibles.",
         "CainOS l associe au camp oppose du match."
       ]},
-      rivalbaseballkinger: { name: "Rival Baseball Kinger", age: "Variante fan", stress: "99%", avatar: "rivalbaseballkinger", signal: "Q", color: "#8e8f9b", facts: [
+      rivalbaseballkinger: { name: "Rival Baseball Kinger", age: "PNJ canon - Evil Big Tops", stress: "99%", avatar: "rivalbaseballkinger", signal: "Q", color: "#8e8f9b", facts: [
         "Variante equipe adverse de Kinger avec piece grise et bordures jaunes.",
         "La casquette de commandant est stylisee, sans symbole reel.",
         "La posture autoritaire remplace l attitude panique habituelle."
@@ -6469,10 +6611,10 @@ const OS = {
         "La silhouette de bouffon reste lisible malgre le visage skull.",
         "Skin horrifique separe des versions Shadow et Evil."
       ]},
-      hunterjax: { name: "Hunter Jax", age: "Variante fan", stress: "47%", avatar: "hunterjax", signal: "H", color: "#c4a45f", facts: [
-        "Variante chasseur de Jax avec tenue beige, chapeau et posture de traque.",
+      hunterjax: { name: "Hunter Jax", age: "Variante canon - Ep. 5", stress: "47%", avatar: "hunterjax", signal: "H", color: "#c4a45f", facts: [
+        "Tenue de chasseur de Jax pendant Poacher s Paradise dans Untitled.",
         "Les longues oreilles, la peau violette et le regard jaune gardent son identite.",
-        "CainOS la classe comme costume d aventure, pas comme nouveau Jax."
+        "Debloquee avec la micro-aventure de chasse, pas avec Beach Episode."
       ]},
       gloinkstar: { name: "Star Gloink", age: "Gloink", stress: "19%", avatar: "gloinkstar", signal: "S", color: "#7348ff", facts: [
         "Gloink etoile violette avec deux yeux asymetriques et levres jaunes.",
@@ -6539,23 +6681,23 @@ const OS = {
       ],
       5: [
         "caine", "bubble", "pomni", "jax", "ragatha", "kinger", "gangle", "zooble",
-        "orbsman", "evilorbsman", "evilpomni", "eviljax", "evilragatha", "evilkinger", "evilzooble", "shadowcaine"
+        "hunterjax", "rhinogangle", "japanesejax", "japaneseragatha", "japanesepomni", "japanesekinger", "japanesegangle", "japanesezooble",
+        "baseballjax", "baseballzooble", "baseballgangle", "baseballragatha", "baseballpomni", "baseballkinger", "maidjax",
+        "rivalbaseballzooble", "rivalbaseballpomni", "rivalbaseballpinkgiant", "rivalbaseballragatha", "rivalbaseballjax", "rivalbaseballkinger",
+        "orbsman", "evilorbsman", "evilpomni", "eviljax", "evilragatha", "evilkinger", "evilzooble"
       ],
       6: [
-        "jax", "hunterjax", "pomni", "ragatha", "kinger", "gangle", "zooble", "caine",
-        "baseballjax", "baseballzooble", "baseballgangle", "baseballragatha", "baseballpomni", "baseballkinger",
-        "rivalbaseballzooble", "rivalbaseballpomni", "rivalbaseballpinkgiant", "rivalbaseballragatha", "rivalbaseballjax", "rivalbaseballkinger"
+        "jax", "pomni", "ragatha", "kinger", "gangle", "zooble", "caine", "bubble", "ming", "additionalvoices"
       ],
       7: [
-        "gangle", "beachgangle", "pomni", "jax", "hunterjax", "ragatha", "kinger", "zooble", "caine", "bubble"
+        "gangle", "beachgangle", "pomni", "jax", "ragatha", "kinger", "zooble", "caine", "bubble", "abel", "abelmannequin", "abelfullbody"
       ],
       8: [
-        "kinger", "queenie", "caine", "bubble", "pomni", "ragatha", "jax",
-        "japanesekinger", "evilkinger", "shadowkinger", "horrorghost", "abel", "abelmannequin", "abelfullbody"
+        "kinger", "queenie", "caine", "bubble", "pomni", "ragatha", "jax", "gangle", "zooble", "scratch", "shadowkinger"
       ],
       9: [
-        "pomni", "caine", "bubble", "abel", "abelmannequin", "abelfullbody", "mannequin", "additionalvoices", "ming", "themachine",
-        "shadowpomni", "shadowcaine", "shadowjax", "shadowragatha", "shadowgangle", "shadowzooble"
+        "pomni", "caine", "bubble", "jax", "ragatha", "kinger", "gangle", "zooble", "ribbit", "queenie", "scratch",
+        "wormo", "bizco", "rattie", "spike", "pinkcyclops", "yellowclown", "oyster", "bulbcreature", "maidjax"
       ]
     };
 
@@ -6593,6 +6735,28 @@ const OS = {
       horrorpomnispiral: { episode: 3, subepisode: 5 },
       horrorpomniskull: { episode: 3, subepisode: 5 },
       maxspudsy: { episode: 4, subepisode: 4 },
+      workgangle: { episode: 4, subepisode: 2 },
+      hunterjax: { episode: 5, subepisode: 2 },
+      rhinogangle: { episode: 5, subepisode: 2 },
+      japanesejax: { episode: 5, subepisode: 4 },
+      japaneseragatha: { episode: 5, subepisode: 4 },
+      japanesepomni: { episode: 5, subepisode: 4 },
+      japanesekinger: { episode: 5, subepisode: 4 },
+      japanesegangle: { episode: 5, subepisode: 4 },
+      japanesezooble: { episode: 5, subepisode: 4 },
+      maidjax: { episode: 5, subepisode: 6 },
+      baseballjax: { episode: 5, subepisode: 6 },
+      baseballzooble: { episode: 5, subepisode: 6 },
+      baseballgangle: { episode: 5, subepisode: 6 },
+      baseballragatha: { episode: 5, subepisode: 6 },
+      baseballpomni: { episode: 5, subepisode: 6 },
+      baseballkinger: { episode: 5, subepisode: 6 },
+      rivalbaseballzooble: { episode: 5, subepisode: 6 },
+      rivalbaseballpomni: { episode: 5, subepisode: 6 },
+      rivalbaseballpinkgiant: { episode: 5, subepisode: 6 },
+      rivalbaseballragatha: { episode: 5, subepisode: 6 },
+      rivalbaseballjax: { episode: 5, subepisode: 6 },
+      rivalbaseballkinger: { episode: 5, subepisode: 6 },
       orbsman: { episode: 5, subepisode: 6 },
       evilorbsman: { episode: 5, subepisode: 6 },
       evilpomni: { episode: 5, subepisode: 6 },
@@ -6602,7 +6766,6 @@ const OS = {
       evilzooble: { episode: 5, subepisode: 6 },
       ming: { episode: 6, subepisode: 7 },
       beachgangle: { episode: 7, subepisode: 1 },
-      hunterjax: { episode: 7, subepisode: 1 },
       abel: { episode: 7, subepisode: 3 },
       abelmannequin: { episode: 7, subepisode: 3 },
       abelfullbody: { episode: 7, subepisode: 3 },
@@ -6619,11 +6782,8 @@ const OS = {
       bulbcreature: { episode: 9, subepisode: 2 }
     };
 
-    if (id.includes("baseball") || id.includes("rivalbaseball")) return { episode: 6, subepisode: 1 };
     if (id.startsWith("shadow")) return { episode: 3, subepisode: 1 };
-    if (id.startsWith("japanese")) return { episode: 3, subepisode: 0 };
     if (id.includes("gangle") && (id.includes("kawaii") || id.includes("comedy") || id.includes("tragedy"))) return { episode: 4, subepisode: 0 };
-    if (id.includes("maid") || id.includes("jaxgirl") || id.includes("darkduo")) return { episode: 4, subepisode: 0 };
     if (id.startsWith("gloink")) return { episode: 1, subepisode: 4 };
     return gates[id] || null;
   },
@@ -6631,17 +6791,19 @@ const OS = {
   getWackyProfileStatus(id) {
     const archiveIds = new Set([
       'kaufmo', 'queenie', 'ribbit', 'scratch', 'wormo', 'bizco', 'rattie', 'spike',
-      'pinkcyclops', 'yellowclown', 'oyster', 'bulbcreature', 'abel', 'abelmannequin', 'abelfullbody'
+      'pinkcyclops', 'yellowclown', 'oyster', 'bulbcreature'
     ]);
     const variantSignals = ['evil', 'shadow', 'maid', 'japanese', 'baseball', 'rivalbaseball', 'darkduo', 'kawaii', 'comedy', 'tragedy', 'hunter', 'beach', 'rhino', 'work', 'jaxgirl'];
     if (archiveIds.has(id)) return "ARCHIVE";
     if (variantSignals.some(token => id.includes(token))) return "VARIANTE";
-    if (id.startsWith("gloink") || ['gummigoo', 'max', 'chad', 'loolilalu', 'fudge', 'orbsman', 'ming', 'mannequin', 'additionalvoices', 'themachine', 'sun', 'moon'].includes(id)) return "PNJ / DECOR";
+    if (id.startsWith("gloink") || ['gummigoo', 'max', 'chad', 'loolilalu', 'fudge', 'orbsman', 'ming', 'mannequin', 'additionalvoices', 'themachine', 'sun', 'moon', 'abel', 'abelmannequin', 'abelfullbody'].includes(id)) return "PNJ / DECOR";
     return "ACTIF";
   },
 
   isWackyProfileUnlocked(id) {
     if (this.getPurchasedWackySkins().includes(id)) return true;
+    const data = this.getWackyCastData()[id];
+    if (this.isFanSkin(id, data)) return false;
     const gate = this.getWackyProfileGate(id);
     if (!gate) return true;
     if (typeof EpisodeManager !== 'undefined' && typeof EpisodeManager.hasReachedLoreGate === 'function') {
@@ -6666,10 +6828,20 @@ const OS = {
     return progress.includes(9);
   },
 
+  isCanonicalEpisodeVariant(id) {
+    return new Set([
+      'workgangle', 'beachgangle', 'hunterjax', 'rhinogangle', 'maidjax',
+      'japanesejax', 'japaneseragatha', 'japanesepomni', 'japanesekinger', 'japanesegangle', 'japanesezooble',
+      'baseballjax', 'baseballzooble', 'baseballgangle', 'baseballragatha', 'baseballpomni', 'baseballkinger',
+      'rivalbaseballzooble', 'rivalbaseballpomni', 'rivalbaseballpinkgiant', 'rivalbaseballragatha', 'rivalbaseballjax', 'rivalbaseballkinger'
+    ]).has(id);
+  },
+
   isFanSkin(id, char = null) {
     const data = char || this.getWackyCastData()[id];
     if (!data) return false;
-    return /variante fan/i.test(String(data.age || "")) || ['maid', 'japanese', 'baseball', 'rivalbaseball', 'darkduo', 'beach', 'rhino', 'work', 'jaxgirl', 'hunter'].some(token => id.includes(token));
+    if (this.isCanonicalEpisodeVariant(id)) return false;
+    return /variante fan/i.test(String(data.age || "")) || ['darkduo', 'jaxgirl'].some(token => id.includes(token));
   },
 
   getWackyLoreStatus(id, char = null) {
@@ -6811,8 +6983,8 @@ const OS = {
         "Est la doyenne des poupées de chiffon raccordées (5 ans d'ancienneté).",
         "Prie secrètement pour que Caine fasse une mise à jour corrective."
       ]},
-      kinger: { name: "Kinger", age: "48", stress: "98%", avatar: "kinger", facts: [
-        "Son épouse Helen (Queenie) s'est abstraite sous ses yeux dans la cave.",
+      kinger: { name: "Kinger", age: "Inconnu", stress: "98%", avatar: "kinger", facts: [
+        "Queenie etait sa compagne dans le Cirque; son identite civile reste inconnue.",
         "Est l'humain connecté depuis le plus longtemps (esprit extrêmement fragmenté).",
         "Collectionne des insectes virtuels imaginaires dans un seau."
       ]},
@@ -7293,13 +7465,15 @@ const OS = {
         // Write file patch to disk
         FileSystem.folders.dev_logs.push({
           name: 'abel_kernel_patch.exe',
-          content: `ARTHUR OVERRIDE PROTOCOL v0.9 (${yearUsed})
+        content: `[RECONSTRUCTION CAINOS / MISSION BONUS NON CANONIQUE]
+
+ARTHUR OVERRIDE PROTOCOL v0.9 (${yearUsed})
 
 Je m'appelle Arthur. Charles a conçu le simulateur pour dissimuler ses expériences neuronales secrètes.
 Caine n'est qu'un démon de rendu graphique autonome devenu fou. J'ai conçu cette commande de sécurité.
 Abigail (Pomni), si tu lis ceci sur l'écran d'administration... débranche le PORT NEURAL 3 sur la machine physique.
 Ne coupe pas le disjoncteur général, la liaison synaptique détruirait ton cerveau !
-Adieu. - Arthur (Kinger)
+Adieu. - Arthur (avatar de reconstruction CainOS)
 
 Exécutez la commande 'override' dans ce terminal pour lancer le protocole de dérivation.`
         });
@@ -7432,7 +7606,8 @@ ENTREZ LA CLÉ D'OVERRIDE D'ARTHUR (ANNEE DE LIAISON NEURONALE OU FUSION D'IA) :
           response = "ERREUR : Protocole 'override' verrouillé. Vous devez compléter la mission préquelle (Abel Core Test) d'abord pour aligner la liaison synaptique.";
         } else {
           SoundManager.playGlitch();
-          outputEl.innerHTML += `<span class="green-text">INITIALISATION DU CONTOURNEMENT SYNAPTIQUE...
+          outputEl.innerHTML += `<span class="orange-text">[MISSION BONUS NON CANONIQUE / RECONSTRUCTION CAINOS]</span>
+<span class="green-text">INITIALISATION DU CONTOURNEMENT SYNAPTIQUE...
 BLOCAGE DES FLUX CAINE_AI (OK)
 REDISPATCHING DU NOYAU ARTHURIEN (ABEL_CORE) (100% OK)</span>
 `;
@@ -7446,7 +7621,7 @@ REDISPATCHING DU NOYAU ARTHURIEN (ABEL_CORE) (100% OK)</span>
             outputEl.innerHTML += `
 <span class="orange-text" style="font-size:14px; font-weight:bold; text-shadow:0 0 10px yellow;">
 =================== ABEL OVERRIDE SUCCESSFUL ===================
-Arthur (Kinger) : "Abigail, le signal de forçage a été injecté.
+Arthur (reconstruction CainOS) : "Le signal de forçage a été injecté.
 La broche d'alimentation de ton casque (Neural Port 3) s'est déconnectée.
 Ton esprit se détache du cirque. Reviens dans le monde réel...
 Ne nous oublie pas."
