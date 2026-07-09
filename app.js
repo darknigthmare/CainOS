@@ -1561,6 +1561,9 @@ const OS = {
 
     const progress = (typeof EpisodeManager !== 'undefined') ? EpisodeManager.getProgress() : [];
     const unlocked = ep => progress.includes(ep);
+    const unlockedAt = (ep, subepisode = 0) => unlocked(ep)
+      || ((typeof EpisodeManager !== 'undefined' ? EpisodeManager.getSubepisodeProgress?.(ep) : []) || [])
+        .some(index => index >= subepisode);
     const map = [
       [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
       [1,2,2,0,3,3,0,6,6,0,8,8,0,10,10,0,14,14,1],
@@ -1577,56 +1580,90 @@ const OS = {
     const portals = {
       2: { name: 'CHAPITEAU / PISTE', short: 'CIRQUE', detail: 'Hub principal, scene, coulisses visibles depuis le monde digital.', color: '#ffd84a', floor: '#251018', ceiling: '#19102f', unlocked: true },
       3: { name: 'TERRAIN DU CIRQUE', short: 'TERRAIN', detail: 'Exterieur immediat du chapiteau et acces aux aventures de Caine.', color: '#7df0ff', floor: '#113036', ceiling: '#16112d', unlocked: true },
-      4: { name: 'CELLAR / KAUFMO', short: 'CELLAR', detail: 'Zone de stockage des abstraits et trace Kaufmo apres le pilote.', color: '#56505f', floor: '#111117', ceiling: '#050508', unlocked: unlocked(1) },
-      5: { name: 'PORTE DE SORTIE / VIDE', short: 'EXIT', detail: 'Prototype de sortie, couloirs impossibles et bureau apparu dans le pilote.', color: '#ffffff', floor: '#18202a', ceiling: '#060606', unlocked: unlocked(1) },
-      6: { name: 'CANDY CANYON KINGDOM', short: 'CANDY', detail: 'Royaume bonbon, convoi sirop et route du tanker.', color: '#ff9b37', floor: '#4b2436', ceiling: '#24234f', unlocked: unlocked(2) },
-      7: { name: 'TEST LEVEL / NPC SCAN', short: 'TEST', detail: 'Sous-couche technique liee a Gummigoo et aux donnees NPC.', color: '#9cff6d', floor: '#1d2b1f', ceiling: '#0f1b12', unlocked: unlocked(2) },
-      8: { name: 'MILDENHALL MANOR', short: 'MANOR', detail: 'Manoir horrifique, baron, fantome et menace qui reagit aux signaux.', color: '#b7f0ff', floor: '#1d1827', ceiling: '#050816', unlocked: unlocked(3) },
-      9: { name: 'SOUS-SOL MILDENHALL', short: 'CAVE', detail: 'Trappes, obscurite, armes de Kinger et fuite sous le manoir.', color: '#7c88a1', floor: '#0d1018', ceiling: '#03040a', unlocked: unlocked(3) },
-      10: { name: "SPUDSY'S", short: 'SPUDSY', detail: 'Restaurant rapide, comptoir, tickets et stress de service de Gangle.', color: '#ff4d4d', floor: '#3b1a17', ceiling: '#251308', unlocked: unlocked(4) },
-      11: { name: 'SUGGESTION BOX / MICRO-ZONES', short: 'IDEES', detail: 'Suite de micro-aventures generees par Caine depuis les suggestions.', color: '#ff4fb8', floor: '#2c1434', ceiling: '#160d25', unlocked: unlocked(5) },
-      12: { name: 'SOFTBALL STADIUM', short: 'BALL', detail: 'Terrain de match, costumes sportifs et equipe adverse alternative.', color: '#83ff57', floor: '#173416', ceiling: '#14152f', unlocked: unlocked(5) },
-      13: { name: 'THEY ALL GET GUNS', short: 'GUNS', detail: 'Arena d epreuves armees, scores et tension autour de Jax.', color: '#f6d743', floor: '#2f2610', ceiling: '#17110a', unlocked: unlocked(6) },
-      14: { name: 'DIGITAL LAKE / BEACH', short: 'LAC', detail: 'Lac digital, plage, soleil dangereux et faux repos de Caine.', color: '#4ee7ff', floor: '#073844', ceiling: '#114071', unlocked: unlocked(7) },
-      15: { name: 'CHINESE ROOM / ADMIN ZONE', short: 'ADMIN', detail: 'Zone de questionnement, anomalie C&A et couches systeme sous le lac.', color: '#ffcf75', floor: '#302318', ceiling: '#09111e', unlocked: unlocked(7) },
-      16: { name: 'CAINE OFFICE / C&A CORE', short: 'CORE', detail: 'Bureau de Caine, origine IA et couches C&A que CainOS revele tard.', color: '#ff7a30', floor: '#291915', ceiling: '#10070d', unlocked: unlocked(8) || unlocked(9) },
+      4: { name: 'CELLAR / KAUFMO', short: 'CELLAR', detail: 'Zone de stockage des abstraits et trace Kaufmo apres le pilote.', color: '#56505f', floor: '#111117', ceiling: '#050508', unlocked: unlockedAt(1, 5) },
+      5: { name: 'PORTE DE SORTIE / VIDE', short: 'EXIT', detail: 'Prototype de sortie, couloirs impossibles et bureau apparu dans le pilote.', color: '#ffffff', floor: '#18202a', ceiling: '#060606', unlocked: unlockedAt(1, 2) },
+      6: { name: 'CANDY CANYON KINGDOM', short: 'CANDY', detail: 'Royaume bonbon, convoi sirop et route du tanker.', color: '#ff9b37', floor: '#4b2436', ceiling: '#24234f', unlocked: unlockedAt(2, 1) },
+      7: { name: 'TEST LEVEL / NPC SCAN', short: 'TEST', detail: 'Sous-couche technique liee a Gummigoo et aux donnees NPC.', color: '#9cff6d', floor: '#1d2b1f', ceiling: '#0f1b12', unlocked: unlockedAt(2, 4) },
+      8: { name: 'MILDENHALL MANOR', short: 'MANOR', detail: 'Manoir horrifique, baron, fantome et menace qui reagit aux signaux.', color: '#b7f0ff', floor: '#1d1827', ceiling: '#050816', unlocked: unlockedAt(3, 1) },
+      9: { name: 'SOUS-SOL MILDENHALL', short: 'CAVE', detail: 'Trappes, obscurite, armes de Kinger et fuite sous le manoir.', color: '#7c88a1', floor: '#0d1018', ceiling: '#03040a', unlocked: unlockedAt(3, 4) },
+      10: { name: "SPUDSY'S", short: 'SPUDSY', detail: 'Restaurant rapide, comptoir, tickets et stress de service de Gangle.', color: '#ff4d4d', floor: '#3b1a17', ceiling: '#251308', unlocked: unlockedAt(4, 1) },
+      11: { name: 'SUGGESTION BOX / MICRO-ZONES', short: 'IDEES', detail: 'Suite de micro-aventures generees par Caine depuis les suggestions.', color: '#ff4fb8', floor: '#2c1434', ceiling: '#160d25', unlocked: unlockedAt(5, 1) },
+      12: { name: 'SOFTBALL STADIUM', short: 'BALL', detail: 'Terrain de match, costumes sportifs et equipe adverse alternative.', color: '#83ff57', floor: '#173416', ceiling: '#14152f', unlocked: unlockedAt(5, 6) },
+      13: { name: 'THEY ALL GET GUNS', short: 'GUNS', detail: 'Arena d epreuves armees, scores et tension autour de Jax.', color: '#f6d743', floor: '#2f2610', ceiling: '#17110a', unlocked: unlockedAt(6, 2) },
+      14: { name: 'DIGITAL LAKE / BEACH', short: 'LAC', detail: 'Lac digital, plage, soleil dangereux et faux repos de Caine.', color: '#4ee7ff', floor: '#073844', ceiling: '#114071', unlocked: unlockedAt(7, 1) },
+      15: { name: 'CHINESE ROOM / ADMIN ZONE', short: 'ADMIN', detail: 'Zone de questionnement, anomalie C&A et couches systeme sous le lac.', color: '#ffcf75', floor: '#302318', ceiling: '#09111e', unlocked: unlockedAt(7, 3) },
+      16: { name: 'CAINE OFFICE / C&A CORE', short: 'CORE', detail: 'Bureau de Caine, origine IA et couches C&A que CainOS revele tard.', color: '#ff7a30', floor: '#291915', ceiling: '#10070d', unlocked: unlockedAt(7, 3) || unlocked(8) || unlocked(9) },
       17: { name: 'KINGER MEMORY BUFFER', short: 'MEMOIRE', detail: 'Fragments Queenie, souvenirs et noyau emotionnel de Kinger.', color: '#d9d0a2', floor: '#252316', ceiling: '#0e0e12', unlocked: unlocked(8) },
       18: { name: 'FINAL CIRCUS / BACKSTAGE', short: 'FINAL', detail: 'Retour au cirque, brain scans, Ribbit et dernier etat de Pomni/Caine.', color: '#e53935', floor: '#2b1018', ceiling: '#09060d', unlocked: unlocked(9) },
       19: { name: 'CIRCUS MEMBERS ARCHIVE', short: 'MEMBRES', detail: 'Projection CainOS non physique des anciens membres connus apres les episodes.', color: '#c875ff', floor: '#21142e', ceiling: '#0c0614', unlocked: unlocked(9) },
-      20: { name: 'RESIDENT HALL / CHAMBRES', short: 'CHAMBRES', detail: 'Couloir residentiel avec les portes personnalisees des habitants du Cirque.', color: '#ff6b9f', floor: '#30152a', ceiling: '#160b24', unlocked: unlocked(1) },
+      20: { name: 'RESIDENT HALL / CHAMBRES', short: 'CHAMBRES', detail: 'Couloir residentiel avec les portes personnalisees des habitants du Cirque.', color: '#ff6b9f', floor: '#30152a', ceiling: '#160b24', unlocked: unlockedAt(1, 0) },
       21: { name: "CROW'S NEST / CAFE CIRQUE", short: 'CAFE', detail: 'Cafe du Cirque utilise comme lieu de retrait et de discussion tardive.', color: '#d49a62', floor: '#302018', ceiling: '#17100d', unlocked: unlocked(8) },
       22: { name: 'AQUARIUM', short: 'AQUARIUM', detail: 'Zone aquatique revelee dans Remember.', color: '#63d9ff', floor: '#073443', ceiling: '#06202f', unlocked: unlocked(9) },
       23: { name: 'SNOWY SUMMIT', short: 'SOMMET', detail: 'Sommet enneige rattache aux souvenirs de Jax et Ribbit.', color: '#e8f7ff', floor: '#a7c9df', ceiling: '#34567a', unlocked: unlocked(9) },
-      24: { name: "POACHER'S PARADISE", short: 'CHASSE', detail: 'Micro-aventure de chasse d Untitled avec les transformations animales.', color: '#c4a45f', floor: '#304621', ceiling: '#16305a', unlocked: unlocked(5) },
-      25: { name: 'ANIME HIGH SCHOOL', short: 'LYCEE', detail: 'Micro-aventure scolaire anime d Untitled.', color: '#ff9fcd', floor: '#e8d7df', ceiling: '#8bc8ff', unlocked: unlocked(5) },
-      26: { name: 'WHITE HOUSE ADVENTURE', short: 'PRESIDENCE', detail: 'Micro-aventure politique de Pomni dans Untitled.', color: '#f2f2f2', floor: '#d8dce7', ceiling: '#44699a', unlocked: unlocked(5) }
+      24: { name: "POACHER'S PARADISE", short: 'CHASSE', detail: 'Micro-aventure de chasse d Untitled avec les transformations animales.', color: '#c4a45f', floor: '#304621', ceiling: '#16305a', unlocked: unlockedAt(5, 2) },
+      25: { name: 'ANIME HIGH SCHOOL', short: 'LYCEE', detail: 'Micro-aventure scolaire anime d Untitled.', color: '#ff9fcd', floor: '#e8d7df', ceiling: '#8bc8ff', unlocked: unlockedAt(5, 4) },
+      26: { name: 'WHITE HOUSE ADVENTURE', short: 'PRESIDENCE', detail: 'Micro-aventure politique de Pomni dans Untitled.', color: '#f2f2f2', floor: '#d8dce7', ceiling: '#44699a', unlocked: unlockedAt(5, 3) },
+      27: { name: 'THE VOID', short: 'VIDE', detail: 'Etendue blanche infinie autour du Cirque; distincte du labyrinthe de la fausse sortie.', color: '#f8f8ff', floor: '#edf1ff', ceiling: '#ffffff', unlocked: unlockedAt(1, 2) },
+      28: { name: 'TENT COMMON AREA', short: 'SALON', detail: 'Espace commun du chapiteau ou les residents se retrouvent entre les aventures.', color: '#ff6b9f', floor: '#c43a35', ceiling: '#311340', unlocked: unlockedAt(1, 0) },
+      29: { name: 'DOOR GALLERY / TUBES', short: 'PORTES', detail: 'Galerie de portes aleatoires, tunnels et toboggans internes du chapiteau.', color: '#7df0ff', floor: '#e06f24', ceiling: '#24112f', unlocked: unlockedAt(1, 0) },
+      30: { name: 'LOSER CORNER', short: 'PERDANTS', detail: 'Coin reserve aux perdants des jeux, a proximite de l aquarium du chapiteau.', color: '#63d9ff', floor: '#4c305c', ceiling: '#1b102b', unlocked: unlockedAt(6, 2) },
+      31: { name: 'THE NEST / IN-HOUSE ARCHIVE', short: 'NEST', detail: 'Aventure interne supprimee; accessible ici comme reconstruction d archive, pas comme salle permanente.', color: '#e8d6a8', floor: '#5a3c28', ceiling: '#21150f', unlocked: unlockedAt(1, 1) },
+      32: { name: 'CANDY ROYAL PALACE', short: 'PALAIS', detail: 'Salle royale de Princess Loolilalu et point de depart de la mission du sirop.', color: '#ff9ad5', floor: '#ffd6e8', ceiling: '#7d3f8c', unlocked: unlockedAt(2, 2) },
+      33: { name: 'SYRUP TANKER ROUTE', short: 'TANKER', detail: 'Route du canyon empruntee par le convoi et les bandits crocodiles.', color: '#ff9b37', floor: '#d97b35', ceiling: '#5f8ee8', unlocked: unlockedAt(2, 3) },
+      34: { name: 'MILDENHALL HELL', short: 'ENFER', detail: 'Branche infernale sous le manoir ou les ames possedent Pomni.', color: '#ff4d32', floor: '#240707', ceiling: '#080000', unlocked: unlockedAt(3, 5) },
+      35: { name: "SPUDSY'S KITCHEN", short: 'CUISINE', detail: 'Cuisine, friteuses, tickets et postes de preparation du service.', color: '#f6d743', floor: '#d9d4c7', ceiling: '#561914', unlocked: unlockedAt(4, 2) },
+      36: { name: "SPUDSY'S BATHROOM", short: 'WC', detail: 'Sanitaires decrits comme un risque biologique pendant le service.', color: '#91d4bb', floor: '#dedbd0', ceiling: '#36534d', unlocked: unlockedAt(4, 3) },
+      37: { name: 'TRAINING ROOM', short: 'FORMATION', detail: 'Piece isolee ou Jax subit la video de formation de Gangle.', color: '#e53935', floor: '#1b1717', ceiling: '#070707', unlocked: unlockedAt(4, 5) },
+      38: { name: 'FAVORITE CHARACTER AWARDS', short: 'AWARDS', detail: 'Scene de ceremonie preparee par Caine apres les epreuves de They All Get Guns.', color: '#ffd84a', floor: '#8b172b', ceiling: '#1c0a24', unlocked: unlockedAt(6, 7) },
+      39: { name: 'LAKE LIGHTHOUSE / SLIDE', short: 'PHARE', detail: 'Phare et toboggan geant dominant le lac digital.', color: '#ff5b4d', floor: '#ffe57d', ceiling: '#78e8ff', unlocked: unlockedAt(7, 1) },
+      40: { name: 'SUNKEN TREASURE', short: 'TRESOR', detail: 'Fond du lac, coffre deja pille et poissons gardiens peu convaincants.', color: '#4ee7ff', floor: '#0a596b', ceiling: '#06202f', unlocked: unlockedAt(7, 2) },
+      41: { name: 'C&A STREET MEMORY', short: 'RUE C&A', detail: 'Rue rememoree par Jax; souvenir incomplet, pas une sortie fonctionnelle.', color: '#8fa6ba', floor: '#30343a', ceiling: '#101820', unlocked: unlockedAt(7, 4) },
+      42: { name: 'DIGITAL CARNIVAL OVERLOOK', short: 'FETE', detail: 'Fete foraine visible depuis le terrain mais jamais visitee dans la serie.', color: '#ff4fb8', floor: '#315f2d', ceiling: '#5f8ee8', unlocked: unlockedAt(1, 0) },
+      43: { name: 'TENT DINING AREA', short: 'REPAS', detail: 'Table du niveau principal utilisee pour les repas du groupe.', color: '#ffd84a', floor: '#c43a35', ceiling: '#311340', unlocked: unlockedAt(1, 0) }
     };
     const scenes = {
-      2: { exits: [3, 4, 5, 6, 8, 10, 11, 14, 16, 18, 20, 21], motif: 'circus', size: 21 },
-      3: { exits: [2, 6, 11, 14], motif: 'grounds', size: 19 },
-      4: { exits: [2, 5], motif: 'cellar', size: 11 },
-      5: { exits: [2, 4, 16], motif: 'exit', size: 13 },
-      6: { exits: [2, 3, 7], motif: 'candy', size: 17 },
-      7: { exits: [6, 16], motif: 'test', size: 13 },
-      8: { exits: [2, 9], motif: 'manor', size: 15 },
-      9: { exits: [8], motif: 'basement', size: 11 },
-      10: { exits: [2, 11], motif: 'spudsy', size: 13 },
-      11: { exits: [2, 3, 10, 12, 13, 24, 25, 26], motif: 'micro', size: 19 },
+      2: { exits: [3, 4, 5, 20, 21, 28, 29, 43], motif: 'circus', size: 23 },
+      3: { exits: [2, 11, 14, 42], motif: 'grounds', size: 21 },
+      4: { exits: [2, 5], motif: 'cellar', size: 13 },
+      5: { exits: [2, 4, 16, 27], motif: 'exit', size: 15 },
+      6: { exits: [7, 29, 32, 33], motif: 'candy', size: 19 },
+      7: { exits: [6, 16, 33], motif: 'test', size: 13 },
+      8: { exits: [9, 29], motif: 'manor', size: 17 },
+      9: { exits: [8, 34], motif: 'basement', size: 13 },
+      10: { exits: [11, 29, 35, 36, 37], motif: 'spudsy', size: 17 },
+      11: { exits: [3, 10, 12, 13, 24, 25, 26, 29], motif: 'micro', size: 19 },
       12: { exits: [11], motif: 'softball', size: 19 },
-      13: { exits: [11], motif: 'guns', size: 15 },
-      14: { exits: [2, 3, 15], motif: 'lake', size: 19 },
-      15: { exits: [14, 16], motif: 'admin', size: 13 },
-      16: { exits: [2, 5, 7, 15, 17, 18], motif: 'core', size: 17 },
+      13: { exits: [11, 29, 38], motif: 'guns', size: 17 },
+      14: { exits: [3, 15, 39, 40], motif: 'lake', size: 21 },
+      15: { exits: [14, 16, 41], motif: 'admin', size: 13 },
+      16: { exits: [5, 7, 15, 17, 18, 29], motif: 'core', size: 17 },
       17: { exits: [16], motif: 'memory', size: 13 },
-      18: { exits: [2, 16, 19, 21, 22, 23], motif: 'final', size: 19 },
+      18: { exits: [16, 19, 21, 22, 23, 29], motif: 'final', size: 19 },
       19: { exits: [18], motif: 'archive', size: 15 },
-      20: { exits: [2], motif: 'dorm', size: 19 },
-      21: { exits: [2, 18], motif: 'cafe', size: 15 },
-      22: { exits: [18], motif: 'aquarium', size: 17 },
+      20: { exits: [2, 28], motif: 'dorm', size: 21 },
+      21: { exits: [2, 18, 43], motif: 'cafe', size: 15 },
+      22: { exits: [18, 30], motif: 'aquarium', size: 17 },
       23: { exits: [18], motif: 'snow', size: 17 },
       24: { exits: [11], motif: 'poacher', size: 17 },
       25: { exits: [11], motif: 'school', size: 17 },
-      26: { exits: [11], motif: 'whitehouse', size: 15 }
+      26: { exits: [11], motif: 'whitehouse', size: 15 },
+      27: { exits: [5], motif: 'void', size: 21 },
+      28: { exits: [2, 20, 29, 30, 31, 43], motif: 'common', size: 19 },
+      29: { exits: [2, 6, 8, 10, 11, 13, 16, 18, 28, 38], motif: 'tubes', size: 23 },
+      30: { exits: [28, 22], motif: 'loser', size: 13 },
+      31: { exits: [28], motif: 'nest', size: 15 },
+      32: { exits: [6, 33], motif: 'palace', size: 17 },
+      33: { exits: [6, 32, 7], motif: 'route', size: 21 },
+      34: { exits: [9], motif: 'hell', size: 15 },
+      35: { exits: [10, 36, 37], motif: 'kitchen', size: 15 },
+      36: { exits: [10, 35], motif: 'bathroom', size: 11 },
+      37: { exits: [10, 35], motif: 'training', size: 11 },
+      38: { exits: [13, 29], motif: 'awards', size: 19 },
+      39: { exits: [14], motif: 'lighthouse', size: 15 },
+      40: { exits: [14], motif: 'underwater', size: 17 },
+      41: { exits: [15], motif: 'street', size: 17 },
+      42: { exits: [3], motif: 'carnival', size: 19 },
+      43: { exits: [2, 28, 21], motif: 'dining', size: 15 }
     };
 
     this.circusDoom = {
@@ -1837,7 +1874,7 @@ const OS = {
     if (['circus', 'final', 'grounds'].includes(motif)) {
       [[3, 3], [size - 4, 3], [3, size - 5], [size - 4, size - 5]].forEach(([x, z]) => addBlock(x, z, 2));
       for (let x = 3; x < size - 3; x += 3) addBlock(x, 2, 2);
-    } else if (['manor', 'basement', 'cellar'].includes(motif)) {
+    } else if (['manor', 'basement', 'cellar', 'hell', 'nest'].includes(motif)) {
       for (let z = 3; z < size - 3; z += 3) {
         addBlock(3, z, 3);
         addBlock(size - 4, z, 3);
@@ -1849,7 +1886,7 @@ const OS = {
       for (let x = 2; x < size - 2; x += 4) {
         for (let z = 2; z < size - 3; z += 4) addBlock(x, z, 2);
       }
-    } else if (motif === 'spudsy') {
+    } else if (['spudsy', 'kitchen', 'bathroom', 'training'].includes(motif)) {
       for (let x = 3; x < size - 3; x++) if (Math.abs(x + 0.5 - center.x) > 1.4) addBlock(x, 4, 2);
     } else if (motif === 'dorm') {
       const leftWall = Math.floor(center.x) - 2;
@@ -1858,9 +1895,21 @@ const OS = {
         addBlock(leftWall, z, 1);
         addBlock(rightWall, z, 1);
       }
-    } else if (motif === 'candy' || motif === 'lake' || motif === 'softball') {
+    } else if (['candy', 'palace', 'route', 'lake', 'lighthouse', 'underwater', 'softball', 'carnival'].includes(motif)) {
       for (let x = 4; x < size - 4; x += 4) addBlock(x, 3, 2);
       for (let x = 5; x < size - 5; x += 5) addBlock(x, size - 5, 2);
+    } else if (['common', 'dining', 'loser', 'awards'].includes(motif)) {
+      [[3, 3], [size - 4, 3], [3, size - 5], [size - 4, size - 5]].forEach(([x, z]) => addBlock(x, z, 2));
+    } else if (motif === 'tubes') {
+      for (let z = 3; z < size - 3; z += 4) {
+        addBlock(3, z, 2);
+        addBlock(size - 4, z, 2);
+      }
+    } else if (motif === 'street') {
+      for (let z = 3; z < size - 3; z += 3) {
+        addBlock(3, z, 1);
+        addBlock(size - 4, z, 1);
+      }
     }
 
     const slots = this.getCircusDoorSlots((scene.exits || []).length, size);
@@ -2235,7 +2284,24 @@ const OS = {
       17: "CainOS: Le buffer memoire ne restaure pas Queenie; il donne seulement acces a la trace de Kinger.",
       18: "CainOS: Le final accepte les signaux de reve, de couleur perdue et d'identite tardive.",
       19: "CainOS: Les Circus Members disparus restent des archives visuelles verrouillees par progression.",
-      20: "CainOS: Le Resident Hall aligne les chambres sur un corridor rouge et rose. Les portraits identifient les portes sans inventer l interieur prive des residents."
+      20: "CainOS: Le Resident Hall aligne les chambres sur un corridor rouge et rose. Les portraits identifient les portes sans inventer l interieur prive des residents.",
+      27: "CainOS: Le Vide entoure le Cirque. Il ne contient ni mobilier fiable ni sortie vers le monde reel.",
+      28: "CainOS: L espace commun appartient au chapiteau et accueille les temps morts entre les aventures.",
+      29: "CainOS: Ces portes et tubes menent a des salles aleatoires; leur contenu n est pas une carte stable du Cirque.",
+      30: "CainOS: Le Loser Corner est une punition interne du chapiteau, pas une aventure autonome.",
+      31: "CainOS: The Nest est une aventure interne supprimee. Cette version est une archive balisee.",
+      32: "CainOS: Le palais royal precede la mission du convoi. Princess Loolilalu y donne l objectif du sirop.",
+      33: "CainOS: La route du tanker relie le royaume, les bandits crocodiles et la chute vers le Test Level.",
+      34: "CainOS: L Enfer du manoir concentre les ames et la possession de Pomni; Kinger y reste le point d ancrage.",
+      35: "CainOS: La cuisine Spudsy separe les postes de preparation du comptoir client.",
+      36: "CainOS: Les sanitaires sont une sous-zone de service explicitement mentionnee comme biohazard.",
+      37: "CainOS: Cette piece isole Jax face a la video de formation; elle n est pas une salle de spectacle.",
+      38: "CainOS: La scene des Awards suit les epreuves. Caine y transforme les relations du groupe en recompenses.",
+      39: "CainOS: Le phare et son toboggan dominent la plage et restent des structures du lac digital.",
+      40: "CainOS: Le coffre sous-marin a deja ete pille; les deux poissons n assurent qu une garde de gag.",
+      41: "CainOS: Cette rue est un souvenir incomplet de Jax. Elle ne constitue pas une sortie valide.",
+      42: "CainOS: La fete foraine est visible sur le terrain mais jamais visitee; seules ses formes exterieures sont fiables.",
+      43: "CainOS: La table du niveau principal est distincte du Cafe Cirque et sert aux repas communs."
     };
     return hints[zoneId] || "CainOS: Zone praticable. Les interactions restent limitees au lore deja debloque.";
   },
@@ -2962,6 +3028,75 @@ const OS = {
           ctx.fillRect(x, y, strip, Math.ceil(wallH));
           ctx.fillStyle = this.shadeHex('#44699a', shadeFactor);
           ctx.fillRect(x, y + wallH * 0.82, strip, Math.max(1, wallH * 0.12));
+        } else if (motif === 'void') {
+          ctx.fillStyle = this.shadeHex('#ffffff', Math.max(0.88, shadeFactor));
+          ctx.fillRect(x, y, strip, Math.ceil(wallH));
+          ctx.fillStyle = 'rgba(190,195,225,0.24)';
+          ctx.fillRect(x, y + wallH * 0.5, strip, Math.max(1, wallH * 0.012));
+        } else if (['common', 'dining', 'tubes', 'carnival'].includes(motif)) {
+          const colors = motif === 'carnival' ? ['#e53935', '#ffd84a', '#2a58d8', '#ff4fb8'] : ['#d62f3f', '#fff3c2', '#2a58d8'];
+          const color = colors[Math.abs(Math.floor(u * colors.length * 2)) % colors.length];
+          ctx.fillStyle = this.shadeHex(color, shadeFactor);
+          ctx.fillRect(x, y, strip, Math.ceil(wallH));
+          ctx.fillStyle = this.shadeHex('#ffd84a', shadeFactor);
+          ctx.fillRect(x, y + wallH * 0.78, strip, Math.max(1, wallH * 0.06));
+        } else if (motif === 'loser') {
+          ctx.fillStyle = this.shadeHex(Math.floor(u * 8) % 2 ? '#493060' : '#291b38', shadeFactor);
+          ctx.fillRect(x, y, strip, Math.ceil(wallH));
+          ctx.fillStyle = this.shadeHex('#63d9ff', shadeFactor);
+          ctx.fillRect(x, y + wallH * 0.42, strip, Math.max(1, wallH * 0.04));
+        } else if (motif === 'nest') {
+          ctx.fillStyle = this.shadeHex(Math.floor(u * 10) % 3 ? '#5a3c28' : '#7a5a3d', shadeFactor);
+          ctx.fillRect(x, y, strip, Math.ceil(wallH));
+          ctx.fillStyle = this.shadeHex('#e8d6a8', shadeFactor);
+          ctx.fillRect(x, y + wallH * 0.72, strip, Math.max(1, wallH * 0.035));
+        } else if (motif === 'palace') {
+          ctx.fillStyle = this.shadeHex(Math.floor(u * 8) % 2 ? '#ff9ad5' : '#fff1a8', shadeFactor);
+          ctx.fillRect(x, y, strip, Math.ceil(wallH));
+          ctx.fillStyle = this.shadeHex('#7d3f8c', shadeFactor);
+          ctx.fillRect(x, y + wallH * 0.82, strip, Math.max(1, wallH * 0.1));
+        } else if (motif === 'route') {
+          ctx.fillStyle = this.shadeHex('#8f4930', shadeFactor);
+          ctx.fillRect(x, y, strip, Math.ceil(wallH));
+          if (Math.floor(u * 8) % 3 === 0) {
+            ctx.fillStyle = this.shadeHex('#ff9b37', shadeFactor);
+            ctx.fillRect(x, y, strip, Math.ceil(wallH));
+          }
+        } else if (motif === 'hell') {
+          ctx.fillStyle = this.shadeHex(Math.floor(u * 10) % 3 ? '#240707' : '#5a0b0b', shadeFactor);
+          ctx.fillRect(x, y, strip, Math.ceil(wallH));
+          ctx.fillStyle = this.shadeHex('#ff4d32', shadeFactor);
+          ctx.fillRect(x, y + wallH * 0.72, strip, Math.max(1, wallH * 0.025));
+        } else if (['kitchen', 'bathroom', 'training'].includes(motif)) {
+          const baseColor = motif === 'bathroom' ? '#dedbd0' : motif === 'training' ? '#1b1717' : '#d9d4c7';
+          const accent = motif === 'bathroom' ? '#91d4bb' : motif === 'training' ? '#e53935' : '#f6d743';
+          ctx.fillStyle = this.shadeHex(baseColor, shadeFactor);
+          ctx.fillRect(x, y, strip, Math.ceil(wallH));
+          ctx.fillStyle = this.shadeHex(accent, shadeFactor);
+          ctx.fillRect(x, y + wallH * 0.42, strip, Math.max(1, wallH * 0.08));
+          if (Math.abs((u * 5) % 1) < 0.05) {
+            ctx.fillStyle = this.shadeHex('#6f6a62', shadeFactor);
+            ctx.fillRect(x, y, strip, Math.ceil(wallH));
+          }
+        } else if (motif === 'awards') {
+          ctx.fillStyle = this.shadeHex(Math.floor(u * 8) % 2 ? '#8b172b' : '#5a1b4c', shadeFactor);
+          ctx.fillRect(x, y, strip, Math.ceil(wallH));
+          ctx.fillStyle = this.shadeHex('#ffd84a', shadeFactor);
+          ctx.fillRect(x, y + wallH * 0.16, strip, Math.max(1, wallH * 0.06));
+          ctx.fillRect(x, y + wallH * 0.8, strip, Math.max(1, wallH * 0.06));
+        } else if (motif === 'lighthouse') {
+          ctx.fillStyle = this.shadeHex(Math.floor(u * 8) % 2 ? '#ff5b4d' : '#ffffff', shadeFactor);
+          ctx.fillRect(x, y, strip, Math.ceil(wallH));
+        } else if (motif === 'underwater') {
+          ctx.fillStyle = this.shadeHex(Math.floor(u * 8) % 2 ? '#0a5068' : '#087b91', shadeFactor);
+          ctx.fillRect(x, y, strip, Math.ceil(wallH));
+          ctx.fillStyle = 'rgba(125,240,255,0.22)';
+          ctx.fillRect(x, y + wallH * 0.25, strip, Math.max(1, wallH * 0.04));
+        } else if (motif === 'street') {
+          ctx.fillStyle = this.shadeHex(Math.floor(u * 8) % 3 ? '#59616a' : '#8fa6ba', shadeFactor);
+          ctx.fillRect(x, y, strip, Math.ceil(wallH));
+          ctx.fillStyle = this.shadeHex('#20252a', shadeFactor);
+          ctx.fillRect(x, y + wallH * 0.8, strip, Math.max(1, wallH * 0.14));
         } else {
           // Fallback wall
           const baseColor = this.getCircusWallColor(hit.cell, zone, state);
@@ -3016,6 +3151,23 @@ const OS = {
       poacher: { ceilingTop: '#16305a', ceilingBottom: '#426b58', floorA: '#304621', floorB: '#49652e', floorC: '#c4a45f', grid: 'rgba(196,164,95,0.16)' },
       school: { ceilingTop: '#8bc8ff', ceilingBottom: '#f5c8df', floorA: '#e8d7df', floorB: '#f5edf1', floorC: '#ff9fcd', grid: 'rgba(120,120,160,0.16)' },
       whitehouse: { ceilingTop: '#44699a', ceilingBottom: '#e7ecf5', floorA: '#d8dce7', floorB: '#f2f2f2', floorC: '#44699a', grid: 'rgba(68,105,154,0.16)' }
+      ,void: { ceilingTop: '#ffffff', ceilingBottom: '#f7f8ff', floorA: '#ffffff', floorB: '#edf1ff', floorC: '#d8dcff', grid: 'rgba(120,125,170,0.1)' }
+      ,common: { ceilingTop: '#24112f', ceilingBottom: '#5d2730', floorA: '#c43a35', floorB: '#f0b34a', floorC: '#fff1a8', grid: 'rgba(255,241,168,0.14)' }
+      ,tubes: { ceilingTop: '#24112f', ceilingBottom: '#5b2c73', floorA: '#e06f24', floorB: '#080808', floorC: '#f4f0df', grid: 'rgba(125,240,255,0.16)' }
+      ,loser: { ceilingTop: '#1b102b', ceilingBottom: '#493060', floorA: '#4c305c', floorB: '#291b38', floorC: '#63d9ff', grid: 'rgba(99,217,255,0.16)' }
+      ,nest: { ceilingTop: '#21150f', ceilingBottom: '#5a3c28', floorA: '#5a3c28', floorB: '#7a5a3d', floorC: '#e8d6a8', grid: 'rgba(232,214,168,0.14)' }
+      ,palace: { ceilingTop: '#7d3f8c', ceilingBottom: '#ffb3d8', floorA: '#ffd6e8', floorB: '#fff1a8', floorC: '#ff9ad5', grid: 'rgba(255,255,255,0.18)' }
+      ,route: { ceilingTop: '#315c9b', ceilingBottom: '#84c7f0', floorA: '#d97b35', floorB: '#8f4930', floorC: '#ffd84a', grid: 'rgba(255,241,168,0.14)' }
+      ,hell: { ceilingTop: '#080000', ceilingBottom: '#340505', floorA: '#240707', floorB: '#5a0b0b', floorC: '#ff4d32', grid: 'rgba(255,77,50,0.2)' }
+      ,kitchen: { ceilingTop: '#561914', ceilingBottom: '#d94734', floorA: '#d9d4c7', floorB: '#f4efe2', floorC: '#f6d743', grid: 'rgba(80,40,30,0.18)' }
+      ,bathroom: { ceilingTop: '#36534d', ceilingBottom: '#91d4bb', floorA: '#dedbd0', floorB: '#9fc9bd', floorC: '#ffffff', grid: 'rgba(40,80,75,0.18)' }
+      ,training: { ceilingTop: '#050505', ceilingBottom: '#1b1717', floorA: '#1b1717', floorB: '#342525', floorC: '#e53935', grid: 'rgba(229,57,53,0.18)' }
+      ,awards: { ceilingTop: '#1c0a24', ceilingBottom: '#5a1b4c', floorA: '#8b172b', floorB: '#d13f5a', floorC: '#ffd84a', grid: 'rgba(255,216,74,0.2)' }
+      ,lighthouse: { ceilingTop: '#218bc4', ceilingBottom: '#78e8ff', floorA: '#ffe57d', floorB: '#f7c65e', floorC: '#ff5b4d', grid: 'rgba(255,255,255,0.18)' }
+      ,underwater: { ceilingTop: '#031923', ceilingBottom: '#0a5068', floorA: '#073443', floorB: '#0a596b', floorC: '#4ee7ff', grid: 'rgba(99,217,255,0.2)' }
+      ,street: { ceilingTop: '#101820', ceilingBottom: '#516779', floorA: '#30343a', floorB: '#59616a', floorC: '#8fa6ba', grid: 'rgba(255,255,255,0.12)' }
+      ,carnival: { ceilingTop: '#153a85', ceilingBottom: '#5f8ee8', floorA: '#315f2d', floorB: '#244f21', floorC: '#ff4fb8', grid: 'rgba(255,241,168,0.16)' }
+      ,dining: { ceilingTop: '#24112f', ceilingBottom: '#5d2730', floorA: '#c43a35', floorB: '#8f2728', floorC: '#ffd84a', grid: 'rgba(255,241,168,0.14)' }
     };
     const base = themes[motif] || themes.circus;
     return {
@@ -3153,9 +3305,9 @@ const OS = {
       const plank = Math.floor(worldX * 2.1) % 2 === 0;
       const seam = Math.abs((worldX * 2.1) % 1) < 0.08;
       color = seam ? theme.floorC : (plank ? theme.floorA : theme.floorB);
-    } else if (motif === 'exit' || motif === 'spudsy' || motif === 'admin') {
+    } else if (['exit', 'spudsy', 'kitchen', 'bathroom', 'training', 'admin', 'palace', 'common', 'dining', 'loser', 'awards', 'street'].includes(motif)) {
       color = checker(motif === 'admin' ? 1.45 : 1.35) ? theme.floorA : theme.floorB;
-    } else if (motif === 'candy') {
+    } else if (motif === 'candy' || motif === 'route') {
       const syrup = Math.sin(worldX * 1.7 + worldZ * 0.9) > 0.42;
       color = syrup ? theme.floorB : (checker(0.85) ? theme.floorA : theme.floorC);
     } else if (motif === 'test' || motif === 'core' || motif === 'micro' || motif === 'archive' || motif === 'memory') {
@@ -3167,9 +3319,17 @@ const OS = {
     } else if (motif === 'guns') {
       const lane = Math.abs((worldX * 0.55) % 1) < 0.08;
       color = lane ? theme.floorC : (checker(0.9) ? theme.floorA : theme.floorB);
-    } else if (motif === 'lake') {
+    } else if (motif === 'lake' || motif === 'lighthouse') {
       const water = worldZ > 6.1 + Math.sin(worldX * 0.8) * 0.22;
       color = water ? theme.floorC : (checker(0.9) ? theme.floorA : theme.floorB);
+    } else if (motif === 'underwater') {
+      const ripple = Math.sin(worldX * 1.8 + worldZ * 1.2) > 0.35;
+      color = ripple ? theme.floorC : (checker(1.1) ? theme.floorA : theme.floorB);
+    } else if (motif === 'void') {
+      const farGrid = Math.abs((worldX * 0.5) % 1) < 0.025 || Math.abs((worldZ * 0.5) % 1) < 0.025;
+      color = farGrid ? theme.floorC : theme.floorA;
+    } else if (['tubes', 'carnival', 'nest', 'hell'].includes(motif)) {
+      color = checker(1.05) ? theme.floorA : theme.floorB;
     } else if (motif === 'dorm') {
       const centerX = state?.room?.center?.x ?? 9.5;
       const offset = Math.abs(worldX - centerX);
@@ -3685,7 +3845,24 @@ const OS = {
       23: [{ kind: 'stairs', x: 0, z: -3.0, color: '#e8f7ff' }, { kind: 'pillar', x: -2.5, z: -2.2, color: '#a7c9df' }, { kind: 'pillar', x: 2.5, z: -2.2, color: '#a7c9df' }, { kind: 'spotlight', x: 0.8, z: -1.35, color: '#ffffff' }],
       24: [{ kind: 'target', x: -2.2, z: -2.35, color: '#c4a45f' }, { kind: 'target', x: 2.15, z: -2.25, color: '#ff4d4d' }, { kind: 'crate', x: -0.7, z: -1.4, color: '#5c3a21' }, { kind: 'barrel', x: 1.1, z: -1.3, color: '#463228' }, { kind: 'window', x: 0, z: -3.15, color: '#7df0ff' }],
       25: [{ kind: 'table', x: -2.25, z: -2.15, color: '#f2e7ed' }, { kind: 'table', x: 0, z: -2.75, color: '#f2e7ed' }, { kind: 'table', x: 2.25, z: -2.15, color: '#f2e7ed' }, { kind: 'card', x: -1.15, z: -1.25, color: '#ff9fcd' }, { kind: 'card', x: 1.15, z: -1.25, color: '#8bc8ff' }],
-      26: [{ kind: 'desk', x: 0, z: -2.85, color: '#edf0f7' }, { kind: 'doorframe', x: -2.55, z: -2.35, color: '#44699a' }, { kind: 'doorframe', x: 2.55, z: -2.35, color: '#44699a' }, { kind: 'table', x: 0, z: -1.35, color: '#d8dce7' }, { kind: 'card', x: 1.55, z: -1.45, color: '#e53935' }]
+      26: [{ kind: 'desk', x: 0, z: -2.85, color: '#edf0f7' }, { kind: 'doorframe', x: -2.55, z: -2.35, color: '#44699a' }, { kind: 'doorframe', x: 2.55, z: -2.35, color: '#44699a' }, { kind: 'table', x: 0, z: -1.35, color: '#d8dce7' }, { kind: 'card', x: 1.55, z: -1.45, color: '#e53935' }],
+      27: [{ kind: 'exitframe', x: 0, z: -3.2, color: '#ffffff' }, { kind: 'eye', x: -2.7, z: -2.3, color: '#e53935' }, { kind: 'eye', x: 2.7, z: -2.3, color: '#2a58d8' }],
+      28: [{ kind: 'table', x: 0, z: -2.7, color: '#ffd84a' }, { kind: 'balloon', x: -2.4, z: -2.2, color: '#ff4fb8' }, { kind: 'balloon', x: 2.4, z: -2.2, color: '#7df0ff' }, { kind: 'ring', x: 0, z: -1.25, color: '#fff1a8' }],
+      29: [{ kind: 'doorframe', x: -2.6, z: -2.5, color: '#e53935' }, { kind: 'doorframe', x: 0, z: -3.1, color: '#7df0ff' }, { kind: 'doorframe', x: 2.6, z: -2.5, color: '#ffd84a' }, { kind: 'ring', x: -1.2, z: -1.35, color: '#ff4fb8' }, { kind: 'ring', x: 1.2, z: -1.35, color: '#2a58d8' }],
+      30: [{ kind: 'table', x: 0, z: -2.6, color: '#6e527f' }, { kind: 'window', x: 0, z: -3.15, color: '#63d9ff' }, { kind: 'card', x: -2.25, z: -1.75, color: '#ff4fb8' }],
+      31: [{ kind: 'stairs', x: 0, z: -2.9, color: '#7a5a3d' }, { kind: 'window', x: -2.3, z: -2.2, color: '#e8d6a8' }, { kind: 'window', x: 2.3, z: -2.2, color: '#e8d6a8' }, { kind: 'table', x: 0, z: -1.35, color: '#5a3c28' }],
+      32: [{ kind: 'stairs', x: 0, z: -3.0, color: '#fff1a8' }, { kind: 'pillar', x: -2.4, z: -2.2, color: '#ff9ad5' }, { kind: 'pillar', x: 2.4, z: -2.2, color: '#ff9ad5' }, { kind: 'candy', x: -1.3, z: -1.35, color: '#ffd84a' }, { kind: 'candy', x: 1.3, z: -1.35, color: '#7df0ff' }],
+      33: [{ kind: 'truck', x: 0, z: -3.0, color: '#ffd84a' }, { kind: 'candy', x: -2.8, z: -2.3, color: '#ff4fb8' }, { kind: 'candy', x: 2.8, z: -2.3, color: '#ff9b37' }, { kind: 'barrel', x: -1.5, z: -1.35, color: '#ffcf75' }],
+      34: [{ kind: 'candle', x: -2.3, z: -2.2, color: '#ff4d32' }, { kind: 'candle', x: 2.3, z: -2.2, color: '#ff4d32' }, { kind: 'eye', x: 0, z: -3.05, color: '#ffffff' }, { kind: 'stairs', x: 0.9, z: -1.35, color: '#5a0b0b' }],
+      35: [{ kind: 'counter', x: 0, z: -2.8, color: '#d9d4c7' }, { kind: 'menu', x: -2.25, z: -2.2, color: '#f6d743' }, { kind: 'menu', x: 2.25, z: -2.2, color: '#ff4d4d' }, { kind: 'barrel', x: -1.25, z: -1.3, color: '#e0b24d' }],
+      36: [{ kind: 'window', x: 0, z: -2.8, color: '#91d4bb' }, { kind: 'doorframe', x: -2.0, z: -2.0, color: '#ffffff' }, { kind: 'doorframe', x: 2.0, z: -2.0, color: '#ffffff' }, { kind: 'barrel', x: 0, z: -1.25, color: '#c7d8d2' }],
+      37: [{ kind: 'menu', x: 0, z: -3.0, color: '#e53935' }, { kind: 'spotlight', x: 0, z: -2.1, color: '#ffffff' }, { kind: 'table', x: 0, z: -1.35, color: '#342525' }],
+      38: [{ kind: 'scoreboard', x: 0, z: -3.2, color: '#ffd84a' }, { kind: 'spotlight', x: -2.2, z: -2.35, color: '#fff1a8' }, { kind: 'spotlight', x: 2.2, z: -2.35, color: '#fff1a8' }, { kind: 'stairs', x: 0, z: -1.35, color: '#8b172b' }],
+      39: [{ kind: 'pillar', x: 0, z: -3.0, color: '#ff5b4d' }, { kind: 'stairs', x: 0, z: -2.1, color: '#ffffff' }, { kind: 'wave', x: -2.5, z: -2.45, color: '#4ee7ff' }, { kind: 'wave', x: 2.5, z: -2.45, color: '#4ee7ff' }],
+      40: [{ kind: 'archive', x: 0, z: -2.9, color: '#ffd84a' }, { kind: 'wave', x: -2.3, z: -2.1, color: '#4ee7ff' }, { kind: 'wave', x: 2.3, z: -2.1, color: '#4ee7ff' }, { kind: 'eye', x: -1.1, z: -1.35, color: '#ffffff' }, { kind: 'eye', x: 1.1, z: -1.35, color: '#ffffff' }],
+      41: [{ kind: 'desk', x: -2.1, z: -2.3, color: '#59616a' }, { kind: 'doorframe', x: 0, z: -3.1, color: '#8fa6ba' }, { kind: 'window', x: 2.2, z: -2.3, color: '#d8e4ee' }, { kind: 'card', x: 0.8, z: -1.35, color: '#ff7a30' }],
+      42: [{ kind: 'ring', x: -2.5, z: -2.4, color: '#ff4fb8' }, { kind: 'ring', x: 2.5, z: -2.4, color: '#7df0ff' }, { kind: 'pillar', x: 0, z: -3.1, color: '#ffd84a' }, { kind: 'balloon', x: -1.25, z: -1.35, color: '#e53935' }, { kind: 'balloon', x: 1.25, z: -1.35, color: '#2a58d8' }],
+      43: [{ kind: 'table', x: 0, z: -2.7, color: '#7a4b32' }, { kind: 'table', x: -2.2, z: -1.8, color: '#7a4b32' }, { kind: 'table', x: 2.2, z: -1.8, color: '#7a4b32' }, { kind: 'menu', x: 0, z: -1.25, color: '#fff1a8' }]
     };
     return [...(byZone[zoneId] || basePillars), ...this.getCircusExtraZoneProps(zoneId)];
   },
@@ -4794,6 +4971,64 @@ const OS = {
         { name: 'President Pomni', type: 'pomni', avatar: 'pomni', x: 0, z: -2.65, color: '#e53935' },
         { name: 'Gangle Extremist', type: 'gangle', avatar: 'gangle', x: -1.8, z: -1.65, color: '#f7f7f7' },
         { name: 'Jax', type: 'jax', avatar: 'jax', x: 1.8, z: -1.65, color: '#8a4fd6' }
+      ],
+      27: [],
+      28: [
+        { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: -1.5, z: -2.25, color: '#d64545' },
+        { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: 0.15, z: -2.65, color: '#f7f7f7' },
+        { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 1.65, z: -1.8, color: '#ff4fb8' }
+      ],
+      29: [],
+      30: [
+        { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: -0.9, z: -2.2, color: '#ff4fb8' },
+        { name: 'Bubble', type: 'bubble', avatar: 'bubble', x: 1.0, z: -1.8, color: '#f7f7ff' }
+      ],
+      31: [
+        { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -1.2, z: -2.2, color: '#e53935' },
+        { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: 1.2, z: -2.35, color: '#d64545' }
+      ],
+      32: [
+        { name: 'Princess Loolilalu', type: 'npc', avatar: 'loolilalu', x: 0, z: -2.65, color: '#ff9ad5' },
+        { name: 'Caine', type: 'caine', avatar: 'caine', x: -1.75, z: -1.75, color: '#ffd84a' },
+        { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 1.75, z: -1.75, color: '#e53935' }
+      ],
+      33: [
+        { name: 'Gummigoo', type: 'gummigoo', avatar: 'gummigoo', x: -1.4, z: -2.3, color: '#d8a23a' },
+        { name: 'Max', type: 'gummigoo', avatar: 'max', x: 0.1, z: -2.6, color: '#75bd3f' },
+        { name: 'Chad', type: 'gummigoo', avatar: 'chad', x: 1.55, z: -2.1, color: '#8bd64a' },
+        { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 2.5, z: -1.35, color: '#e53935' }
+      ],
+      34: [
+        { name: 'Possessed Pomni', type: 'pomni', avatar: 'horrorpomnivoid', x: -1.1, z: -2.35, color: '#1b1b1b' },
+        { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: 0.7, z: -2.55, color: '#d9d0a2' },
+        { name: 'Soul', type: 'ghost', avatar: 'horrorghost', x: 2.0, z: -1.65, color: '#7df0ff' }
+      ],
+      35: [
+        { name: 'Work Gangle', type: 'gangle', avatar: 'workgangle', x: -1.4, z: -2.2, color: '#f7f7f7' },
+        { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: 0.1, z: -2.55, color: '#d64545' },
+        { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 1.55, z: -1.8, color: '#e53935' }
+      ],
+      36: [{ name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 0, z: -2.4, color: '#e53935' }],
+      37: [{ name: 'Jax', type: 'jax', avatar: 'jax', x: 0, z: -2.35, color: '#8a4fd6' }],
+      38: [
+        { name: 'Caine', type: 'caine', avatar: 'caine', x: 0, z: -2.7, color: '#ffd84a' },
+        { name: 'Ming', type: 'mannequin', avatar: 'ming', x: -1.65, z: -1.8, color: '#b7c7d8' },
+        { name: 'Disappearing Guy', type: 'mannequin', avatar: 'mannequin', x: 1.65, z: -1.8, color: '#d8d8d8' }
+      ],
+      39: [
+        { name: 'Jax', type: 'jax', avatar: 'jax', x: -1.2, z: -2.3, color: '#8a4fd6' },
+        { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 1.2, z: -2.35, color: '#e53935' }
+      ],
+      40: [
+        { name: 'Beach Gangle', type: 'gangle', avatar: 'beachgangle', x: -1.25, z: -2.3, color: '#f7f7f7' },
+        { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 1.25, z: -2.3, color: '#ff4fb8' }
+      ],
+      41: [{ name: 'Jax Memory', type: 'jax', avatar: 'jax', x: 0, z: -2.5, color: '#8a4fd6' }],
+      42: [{ name: 'Caine', type: 'caine', avatar: 'caine', x: 0, z: -2.5, color: '#ffd84a' }],
+      43: [
+        { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -1.35, z: -2.3, color: '#d9d0a2' },
+        { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: 0.1, z: -2.65, color: '#d64545' },
+        { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: 1.45, z: -1.85, color: '#f7f7f7' }
       ]
     };
     return byZone[zoneId] || shared.slice(0, 4);
@@ -5770,6 +6005,23 @@ const OS = {
       { id: 19, ep: 9, name: 'Circus Members Archive', desc: 'Projection CainOS non physique des membres disparus.', item: 'Badge archive', unlocked: unlocked(9) },
       { id: 22, ep: 9, name: 'Aquarium', desc: 'Zone aquatique revelee dans Remember.', item: 'Fragment aquarium', unlocked: unlocked(9) },
       { id: 23, ep: 9, name: 'Snowy Summit', desc: 'Lieu rattache aux souvenirs de Jax et Ribbit.', item: 'Fragment neige', unlocked: unlocked(9) }
+      ,{ id: 27, ep: 1, name: 'The Void', desc: 'Espace infini autour du Cirque, distinct de la fausse sortie.', item: 'Coordonnee du Vide', unlocked: unlocked(1) }
+      ,{ id: 28, ep: 1, name: 'Tent Common Area', desc: 'Espace commun interne du chapiteau.', item: 'Jeton de salon', unlocked: unlocked(1) }
+      ,{ id: 29, ep: 1, name: 'Door Gallery / Tubes', desc: 'Portes aleatoires, tunnels et toboggans internes.', item: 'Cle aleatoire', unlocked: unlocked(1) }
+      ,{ id: 30, ep: 6, name: 'Loser Corner', desc: 'Coin de punition des jeux internes.', item: 'Ruban perdant', unlocked: unlocked(6) }
+      ,{ id: 31, ep: 1, name: 'The Nest Archive', desc: 'Reconstruction de l aventure interne supprimee.', item: 'Fragment Nest', unlocked: unlocked(1) }
+      ,{ id: 32, ep: 2, name: 'Candy Royal Palace', desc: 'Audience royale et briefing du convoi.', item: 'Sceau royal sucre', unlocked: unlocked(2) }
+      ,{ id: 33, ep: 2, name: 'Syrup Tanker Route', desc: 'Route du convoi et poursuite des bandits.', item: 'Jauge de sirop', unlocked: unlocked(2) }
+      ,{ id: 34, ep: 3, name: 'Mildenhall Hell', desc: 'Ames, possession de Pomni et ancrage de Kinger.', item: 'Trace d ame', unlocked: unlocked(3) }
+      ,{ id: 35, ep: 4, name: "Spudsy's Kitchen", desc: 'Postes de preparation et tickets de cuisine.', item: 'Ticket cuisine', unlocked: unlocked(4) }
+      ,{ id: 36, ep: 4, name: "Spudsy's Bathroom", desc: 'Sous-zone biohazard mentionnee pendant le service.', item: 'Badge sanitaire', unlocked: unlocked(4) }
+      ,{ id: 37, ep: 4, name: 'Training Room', desc: 'Video de formation imposee a Jax.', item: 'Cassette formation', unlocked: unlocked(4) }
+      ,{ id: 38, ep: 6, name: 'Favorite Character Awards', desc: 'Scene de ceremonie apres les epreuves.', item: 'Trophee favori', unlocked: unlocked(6) }
+      ,{ id: 39, ep: 7, name: 'Lake Lighthouse', desc: 'Phare et toboggan du lac digital.', item: 'Balise du phare', unlocked: unlocked(7) }
+      ,{ id: 40, ep: 7, name: 'Sunken Treasure', desc: 'Coffre pille et poissons du fond du lac.', item: 'Coffre vide', unlocked: unlocked(7) }
+      ,{ id: 41, ep: 7, name: 'C&A Street Memory', desc: 'Souvenir incomplet de Jax, non exploitable comme sortie.', item: 'Photo de rue', unlocked: unlocked(7) }
+      ,{ id: 42, ep: 1, name: 'Digital Carnival Overlook', desc: 'Fete foraine visible mais jamais visitee.', item: 'Ticket non utilise', unlocked: unlocked(1) }
+      ,{ id: 43, ep: 1, name: 'Tent Dining Area', desc: 'Table commune du niveau principal.', item: 'Assiette digitale', unlocked: unlocked(1) }
     ];
   },
 
@@ -5777,13 +6029,13 @@ const OS = {
     if (typeof EpisodeManager === 'undefined') return [];
     const progress = EpisodeManager.getProgress();
     const zoneByEpisode = {
-      1: [2, 4, 5, 20],
-      2: [6],
-      3: [8],
-      4: [10],
+      1: [2, 4, 5, 20, 27, 28, 29, 31, 42, 43],
+      2: [6, 7, 32, 33],
+      3: [8, 9, 34],
+      4: [10, 35, 36, 37],
       5: [11, 12, 24, 25, 26],
-      6: [13],
-      7: [14],
+      6: [13, 30, 38],
+      7: [14, 15, 39, 40, 41],
       8: [16, 17, 21],
       9: [18, 19, 22, 23]
     };
