@@ -2009,7 +2009,13 @@ const OS = {
         return;
       }
       const door = this.getNearestUsableCircusDoor();
-      this.enterCircusSimulationExit(door?.target ?? exits[state.selectedExitIndex]);
+      if (door && door.dist <= 1.8 && Math.abs(door.angle) < 0.72) {
+        this.enterCircusSimulationExit(door.target);
+      } else {
+        state.interactionMessage = 'PORTE HORS DE PORTEE: approchez-vous et placez-la au centre du viseur.';
+        state.interactionUntil = performance.now() + 2400;
+        SoundManager.playError();
+      }
     } else if (key === 'arrowdown') {
       const previous = state.history.pop();
       if (previous) this.setCircusSimulationZone(previous, false, state.currentZoneId);
@@ -2021,6 +2027,7 @@ const OS = {
     if (!state) return null;
     let best = null;
     this.getCircusActiveZoneSprites(state.currentZoneId, state).forEach((sprite, index) => {
+      if (!this.isCircusWorldPointVisible(sprite, state, 0.42)) return;
       const pos = this.resolveCircusWorldPoint(sprite, state);
       const dx = pos.x - state.player.x;
       const dz = pos.z - state.player.z;
@@ -2057,6 +2064,7 @@ const OS = {
     if (!state) return null;
     let best = null;
     this.getCircusZoneProps(state.currentZoneId).forEach((prop, index) => {
+      if (!this.isCircusWorldPointVisible(prop, state, prop.anchor?.startsWith('wall') ? 0.72 : 0.42)) return;
       const pos = this.resolveCircusWorldPoint(prop, state);
       const dx = pos.x - state.player.x;
       const dz = pos.z - state.player.z;
@@ -2603,6 +2611,7 @@ const OS = {
     const doors = this.getCircusPhysicalDoors(state);
     let best = null;
     doors.forEach((door, index) => {
+      if (!this.isCircusWorldPointVisible(door, state, 0.82)) return;
       const pos = this.resolveCircusWorldPoint(door, state);
       const dx = pos.x - state.player.x;
       const dz = pos.z - state.player.z;
@@ -2618,6 +2627,16 @@ const OS = {
   enterCircusSimulationExit(targetId) {
     const state = this.circusDoom;
     if (!state) return;
+    const physicalDoor = this.getCircusPhysicalDoors(state).find(door => door.target === targetId);
+    if (!physicalDoor) return;
+    const doorPoint = this.resolveCircusWorldPoint(physicalDoor, state);
+    const doorDistance = Math.hypot(doorPoint.x - state.player.x, doorPoint.z - state.player.z);
+    if (doorDistance > 1.85) {
+      state.interactionMessage = 'PORTE HORS DE PORTEE: la perspective ne permet pas une interaction distante.';
+      state.interactionUntil = performance.now() + 2400;
+      SoundManager.playError();
+      return;
+    }
     const target = state.portals[targetId];
     if (!target?.unlocked) {
       SoundManager.playError();
@@ -2752,7 +2771,79 @@ const OS = {
   resolveCircusWorldPoint(obj, state) {
     if (obj.space === 'world' || !state.room) return { x: obj.x, z: obj.z };
     const center = state.room.center;
+    if (obj.wallSurface === 'outer' && obj.anchor === 'wall-left') {
+      return { x: 1.04, z: center.z + obj.z };
+    }
+    if (obj.wallSurface === 'outer' && obj.anchor === 'wall-right') {
+      return { x: state.room.size - 1.04, z: center.z + obj.z };
+    }
     return { x: center.x + obj.x, z: center.z + obj.z };
+  },
+
+  getCircusArchitecture(state, motif = null) {
+    const activeMotif = motif || (state.scenes[state.currentZoneId] || state.scenes[2])?.motif || 'circus';
+    const architectures = {
+      circus: { wallScale: 1.02, ceilingWorldHeight: 3.8, roof: 'tent', wallBias: 0.58 },
+      final: { wallScale: 1.02, ceilingWorldHeight: 3.8, roof: 'tent', wallBias: 0.58 },
+      grounds: { wallScale: 0.58, ceilingWorldHeight: 4.8, roof: 'open', wallBias: 0.55 },
+      candy: { wallScale: 0.78, ceilingWorldHeight: 3.2, roof: 'open', wallBias: 0.56 },
+      route: { wallScale: 0.58, ceilingWorldHeight: 4.8, roof: 'open', wallBias: 0.55 },
+      palace: { wallScale: 1.12, ceilingWorldHeight: 4.3, roof: 'vault', wallBias: 0.6 },
+      manor: { wallScale: 1.04, ceilingWorldHeight: 3.9, roof: 'beams', wallBias: 0.6 },
+      basement: { wallScale: 0.64, ceilingWorldHeight: 2.2, roof: 'beams', wallBias: 0.54 },
+      hell: { wallScale: 0.9, ceilingWorldHeight: 3.4, roof: 'cavern', wallBias: 0.58 },
+      cellar: { wallScale: 0.68, ceilingWorldHeight: 2.35, roof: 'beams', wallBias: 0.55 },
+      exit: { wallScale: 0.72, ceilingWorldHeight: 2.6, roof: 'tiles', wallBias: 0.55 },
+      void: { wallScale: 0.5, ceilingWorldHeight: 5, roof: 'open', wallBias: 0.53 },
+      test: { wallScale: 0.88, ceilingWorldHeight: 3.3, roof: 'grid', wallBias: 0.57 },
+      admin: { wallScale: 0.82, ceilingWorldHeight: 3.0, roof: 'grid', wallBias: 0.56 },
+      core: { wallScale: 1.0, ceilingWorldHeight: 3.7, roof: 'grid', wallBias: 0.59 },
+      spudsy: { wallScale: 0.7, ceilingWorldHeight: 2.55, roof: 'tiles', wallBias: 0.55 },
+      kitchen: { wallScale: 0.62, ceilingWorldHeight: 2.3, roof: 'tiles', wallBias: 0.54 },
+      bathroom: { wallScale: 0.56, ceilingWorldHeight: 2.1, roof: 'tiles', wallBias: 0.53 },
+      training: { wallScale: 0.6, ceilingWorldHeight: 2.2, roof: 'tiles', wallBias: 0.54 },
+      dorm: { wallScale: 0.76, ceilingWorldHeight: 2.7, roof: 'hall', wallBias: 0.56 },
+      common: { wallScale: 0.84, ceilingWorldHeight: 3.1, roof: 'tent', wallBias: 0.57 },
+      tubes: { wallScale: 0.9, ceilingWorldHeight: 3.35, roof: 'tent', wallBias: 0.58 },
+      loser: { wallScale: 0.64, ceilingWorldHeight: 2.3, roof: 'flat', wallBias: 0.54 },
+      nest: { wallScale: 0.86, ceilingWorldHeight: 3.2, roof: 'beams', wallBias: 0.57 },
+      cafe: { wallScale: 0.76, ceilingWorldHeight: 2.75, roof: 'beams', wallBias: 0.56 },
+      dining: { wallScale: 0.82, ceilingWorldHeight: 3.0, roof: 'tent', wallBias: 0.57 },
+      awards: { wallScale: 1.02, ceilingWorldHeight: 3.8, roof: 'stage', wallBias: 0.59 },
+      micro: { wallScale: 0.86, ceilingWorldHeight: 3.2, roof: 'grid', wallBias: 0.57 },
+      guns: { wallScale: 0.72, ceilingWorldHeight: 2.65, roof: 'flat', wallBias: 0.55 },
+      memory: { wallScale: 0.76, ceilingWorldHeight: 2.8, roof: 'grid', wallBias: 0.56 },
+      archive: { wallScale: 0.86, ceilingWorldHeight: 3.2, roof: 'grid', wallBias: 0.57 },
+      lake: { wallScale: 0.54, ceilingWorldHeight: 4.8, roof: 'open', wallBias: 0.54 },
+      lighthouse: { wallScale: 0.9, ceilingWorldHeight: 3.5, roof: 'open', wallBias: 0.58 },
+      underwater: { wallScale: 0.72, ceilingWorldHeight: 2.8, roof: 'water', wallBias: 0.56 },
+      aquarium: { wallScale: 0.7, ceilingWorldHeight: 2.6, roof: 'water', wallBias: 0.55 },
+      softball: { wallScale: 0.52, ceilingWorldHeight: 5, roof: 'open', wallBias: 0.54 },
+      snow: { wallScale: 0.58, ceilingWorldHeight: 5, roof: 'open', wallBias: 0.54 },
+      carnival: { wallScale: 0.58, ceilingWorldHeight: 5, roof: 'open', wallBias: 0.54 },
+      poacher: { wallScale: 0.58, ceilingWorldHeight: 5, roof: 'open', wallBias: 0.54 },
+      street: { wallScale: 0.66, ceilingWorldHeight: 5, roof: 'open', wallBias: 0.55 },
+      school: { wallScale: 0.74, ceilingWorldHeight: 2.7, roof: 'tiles', wallBias: 0.56 },
+      whitehouse: { wallScale: 0.9, ceilingWorldHeight: 3.4, roof: 'vault', wallBias: 0.58 }
+    };
+    return architectures[activeMotif] || { wallScale: 0.78, ceilingWorldHeight: 2.9, roof: 'flat', wallBias: 0.56 };
+  },
+
+  isCircusWorldPointVisible(obj, state, tolerance = 0.48) {
+    if (!state?.room) return true;
+    const point = this.resolveCircusWorldPoint(obj, state);
+    const dx = point.x - state.player.x;
+    const dz = point.z - state.player.z;
+    const distance = Math.hypot(dx, dz);
+    if (distance <= tolerance) return true;
+    const stepX = dx / distance;
+    const stepZ = dz / distance;
+    for (let travelled = 0.18; travelled < distance - tolerance; travelled += 0.12) {
+      const ix = Math.floor(state.player.x + stepX * travelled);
+      const iz = Math.floor(state.player.z + stepZ * travelled);
+      if ((state.room.grid[iz]?.[ix] ?? 1) > 0) return false;
+    }
+    return true;
   },
 
   getCircusWallColor(cell, zone, state) {
@@ -2783,7 +2874,9 @@ const OS = {
     const room = state.room;
     const horizon = h * 0.48;
     const motif = (state.scenes[state.currentZoneId] || state.scenes[2])?.motif || 'circus';
+    const architecture = this.getCircusArchitecture(state, motif);
     this.drawCircusThemedCeiling(ctx, w, h, horizon, state, zone, motif);
+    this.drawCircusArchitecturalCeiling(ctx, w, h, horizon, state, motif, architecture);
     this.drawCircusThemedFloor(ctx, w, h, horizon, state, zone, motif);
 
     if (motif === 'circus' || motif === 'final') {
@@ -2836,10 +2929,9 @@ const OS = {
       }
       if (!hit) continue;
       const corrected = Math.max(0.08, hit.dist * Math.cos(angle - state.player.a));
-      const wallScale = (motif === 'circus' || motif === 'final') ? 0.92 : 0.78;
-      const wallH = Math.min(h * 1.9, (h * wallScale) / corrected);
+      const wallH = Math.min(h * 1.9, (h * architecture.wallScale) / corrected);
       const x = Math.floor(ratio * w);
-      const y = Math.floor(horizon - wallH * 0.57);
+      const y = Math.floor(horizon - wallH * architecture.wallBias);
 
       const depthShade = Math.max(0.26, 1.08 - corrected / (room.size * 0.92));
       const sideShade = hit.nearVertical ? 0.92 : 0.72;
@@ -3120,6 +3212,52 @@ const OS = {
       ctx.globalAlpha = 0.22;
       ctx.strokeStyle = '#ffffff';
       for (let i = 0; i < 5; i++) ctx.strokeRect(w / 2 - 130 + i * 22, 42 + i * 14, 260 - i * 44, 150 - i * 16);
+    }
+    ctx.restore();
+  },
+
+  drawCircusArchitecturalCeiling(ctx, w, h, horizon, state, motif, architecture) {
+    if (!architecture || architecture.roof === 'open') return;
+    ctx.save();
+    const forwardPhase = ((state.player.x * Math.cos(state.player.a)) + (state.player.z * Math.sin(state.player.a))) % 1;
+    const sidePhase = ((state.player.x * -Math.sin(state.player.a)) + (state.player.z * Math.cos(state.player.a))) % 1;
+    const roofColor = ['beams', 'cavern'].includes(architecture.roof) ? 'rgba(35,18,18,0.48)'
+      : architecture.roof === 'tiles' ? 'rgba(255,255,255,0.18)'
+        : architecture.roof === 'stage' ? 'rgba(255,216,74,0.24)'
+          : 'rgba(255,241,168,0.2)';
+    ctx.strokeStyle = roofColor;
+    ctx.lineWidth = architecture.roof === 'beams' ? 5 : 2;
+    if (architecture.roof !== 'tent') {
+      const beamCount = architecture.roof === 'tiles' ? 6 : 4;
+      for (let i = -beamCount; i <= beamCount; i++) {
+        const baseX = w / 2 + (i + sidePhase) * (architecture.roof === 'tiles' ? 96 : 128);
+        ctx.beginPath();
+        ctx.moveTo(baseX, 0);
+        ctx.lineTo(w / 2 + (i * 10), horizon);
+        ctx.stroke();
+      }
+    }
+    ctx.lineWidth = architecture.roof === 'beams' ? 4 : 1;
+    const crossBeamCount = architecture.roof === 'tent' ? 4 : 6;
+    for (let i = 1; i <= crossBeamCount; i++) {
+      const depth = (i - forwardPhase + 0.2) / crossBeamCount;
+      const y = horizon * (1 - Math.pow(Math.max(0, depth), 1.65));
+      ctx.beginPath();
+      ctx.moveTo(0, y);
+      ctx.lineTo(w, y);
+      ctx.stroke();
+    }
+    if (architecture.roof === 'water') {
+      ctx.globalAlpha = 0.22;
+      ctx.strokeStyle = '#7df0ff';
+      for (let y = 18; y < horizon; y += 22) {
+        ctx.beginPath();
+        for (let x = 0; x <= w; x += 18) {
+          const waveY = y + Math.sin(x / 38 + performance.now() / 900) * 3;
+          if (x === 0) ctx.moveTo(x, waveY); else ctx.lineTo(x, waveY);
+        }
+        ctx.stroke();
+      }
     }
     ctx.restore();
   },
@@ -3792,12 +3930,30 @@ const OS = {
     const rx = -dx * sin + dz * cos;
     const rz = dx * cos + dz * sin;
     if (rz <= 0.18) return null;
+    const halfFovTangent = Math.tan((Math.PI / 3.05) / 2);
+    if (Math.abs(rx / rz) > halfFovTangent * 1.18) return null;
     const fovScale = w * 0.52;
+    const worldDistance = Math.hypot(dx, dz);
+    const scale = 2.25 / rz;
+    const floorY = this.getCircusProjectedFloorY(rz, h);
+    const architecture = this.getCircusArchitecture(state);
+    const wallScreenHeight = (h * architecture.wallScale) / Math.max(0.18, rz);
+    const anchor = obj.anchor || (obj.kind === 'ceilinglight' ? 'ceiling' : obj.kind === 'wallart' ? 'wall' : 'floor');
+    let projectedY = floorY;
+    if (anchor === 'ceiling') projectedY = floorY - wallScreenHeight * 0.9;
+    else if (anchor.startsWith('wall') && obj.kind !== 'roomdoor') projectedY = floorY - wallScreenHeight * 0.52;
+    const viewAngle = Math.atan2(state.player.z - point.z, state.player.x - point.x);
+    let facingScale = 1;
+    if (obj.anchor === 'wall-left') facingScale = Math.max(0.12, Math.abs(Math.cos(viewAngle)));
+    else if (obj.anchor === 'wall-right') facingScale = Math.max(0.12, Math.abs(Math.cos(viewAngle + Math.PI)));
     return {
       x: w / 2 + (rx / rz) * fovScale,
-      y: this.getCircusProjectedFloorY(rz, h),
+      y: projectedY,
       depth: rz,
-      scale: Math.min(2.2, Math.max(0.22, 2.25 / rz))
+      distance: worldDistance,
+      scale: Math.min(2.7, Math.max(0.035, scale)),
+      facingScale,
+      anchor
     };
   },
 
@@ -3828,17 +3984,17 @@ const OS = {
       18: [...basePillars, { kind: 'spotlight', x: 0, z: -2.6, color: '#e53935' }, { kind: 'archive', x: -2.2, z: -2.25, color: '#c875ff' }, { kind: 'gridnode', x: 2.2, z: -1.45, color: '#ff4d4d' }],
       19: [{ kind: 'archive', x: -2.0, z: -2.1, color: '#c875ff' }, { kind: 'archive', x: 0, z: -2.7, color: '#7df0ff' }, { kind: 'archive', x: 2.0, z: -2.1, color: '#ffd84a' }, { kind: 'card', x: -3.0, z: -1.35, color: '#ff4fb8' }, { kind: 'card', x: 3.0, z: -1.35, color: '#ffd84a' }],
       20: [
-        { kind: 'roomdoor', avatar: 'jax', label: 'JAX', side: 'left', x: -1.62, z: 3.2, color: '#8a4fd6' },
-        { kind: 'roomdoor', avatar: 'pomni', label: 'POMNI', side: 'right', x: 1.62, z: 3.2, color: '#e53935' },
-        { kind: 'roomdoor', avatar: 'ragatha', label: 'RAGATHA', side: 'left', x: -1.62, z: 0, color: '#d64545' },
-        { kind: 'roomdoor', avatar: 'gangle', label: 'GANGLE', side: 'right', x: 1.62, z: 0, color: '#f7f7f7' },
-        { kind: 'roomdoor', avatar: 'zooble', label: 'ZOOBLE', side: 'left', x: -1.62, z: -3.2, color: '#ff4fb8' },
-        { kind: 'roomdoor', avatar: 'kinger', label: 'KINGER', side: 'right', x: 1.62, z: -3.2, color: '#d9d0a2' },
-        { kind: 'wallart', x: -1.58, z: 1.55, color: '#7df0ff', art: 'spiral' },
-        { kind: 'wallart', x: 1.58, z: -1.55, color: '#ffd84a', art: 'blocks' },
-        { kind: 'ceilinglight', x: 0, z: 3.2, color: '#fff1a8' },
-        { kind: 'ceilinglight', x: 0, z: 0, color: '#fff1a8' },
-        { kind: 'ceilinglight', x: 0, z: -3.2, color: '#fff1a8' }
+        { kind: 'roomdoor', avatar: 'jax', label: 'JAX', side: 'left', anchor: 'wall-left', x: -1.48, z: 3.2, color: '#8a4fd6' },
+        { kind: 'roomdoor', avatar: 'pomni', label: 'POMNI', side: 'right', anchor: 'wall-right', x: 1.48, z: 3.2, color: '#e53935' },
+        { kind: 'roomdoor', avatar: 'ragatha', label: 'RAGATHA', side: 'left', anchor: 'wall-left', x: -1.48, z: 0, color: '#d64545' },
+        { kind: 'roomdoor', avatar: 'gangle', label: 'GANGLE', side: 'right', anchor: 'wall-right', x: 1.48, z: 0, color: '#f7f7f7' },
+        { kind: 'roomdoor', avatar: 'zooble', label: 'ZOOBLE', side: 'left', anchor: 'wall-left', x: -1.48, z: -3.2, color: '#ff4fb8' },
+        { kind: 'roomdoor', avatar: 'kinger', label: 'KINGER', side: 'right', anchor: 'wall-right', x: 1.48, z: -3.2, color: '#d9d0a2' },
+        { kind: 'wallart', anchor: 'wall-left', x: -1.48, z: 1.55, color: '#7df0ff', art: 'spiral' },
+        { kind: 'wallart', anchor: 'wall-right', x: 1.48, z: -1.55, color: '#ffd84a', art: 'blocks' },
+        { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'panel', x: 0, z: 3.2, color: '#fff1a8' },
+        { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'panel', x: 0, z: 0, color: '#fff1a8' },
+        { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'panel', x: 0, z: -3.2, color: '#fff1a8' }
       ],
       21: [{ kind: 'counter', x: 0, z: -2.8, color: '#d49a62' }, { kind: 'table', x: -2.2, z: -1.8, color: '#7a4b32' }, { kind: 'table', x: 2.15, z: -1.9, color: '#7a4b32' }, { kind: 'menu', x: 0, z: -1.25, color: '#fff1a8' }],
       22: [{ kind: 'window', x: -2.6, z: -2.65, color: '#63d9ff' }, { kind: 'window', x: 0, z: -3.1, color: '#7df0ff' }, { kind: 'window', x: 2.6, z: -2.65, color: '#63d9ff' }, { kind: 'wave', x: -1.25, z: -1.45, color: '#4ee7ff' }, { kind: 'wave', x: 1.35, z: -1.55, color: '#4ee7ff' }],
@@ -3864,7 +4020,61 @@ const OS = {
       42: [{ kind: 'ring', x: -2.5, z: -2.4, color: '#ff4fb8' }, { kind: 'ring', x: 2.5, z: -2.4, color: '#7df0ff' }, { kind: 'pillar', x: 0, z: -3.1, color: '#ffd84a' }, { kind: 'balloon', x: -1.25, z: -1.35, color: '#e53935' }, { kind: 'balloon', x: 1.25, z: -1.35, color: '#2a58d8' }],
       43: [{ kind: 'table', x: 0, z: -2.7, color: '#7a4b32' }, { kind: 'table', x: -2.2, z: -1.8, color: '#7a4b32' }, { kind: 'table', x: 2.2, z: -1.8, color: '#7a4b32' }, { kind: 'menu', x: 0, z: -1.25, color: '#fff1a8' }]
     };
-    return [...(byZone[zoneId] || basePillars), ...this.getCircusExtraZoneProps(zoneId)];
+    return [
+      ...(byZone[zoneId] || basePillars),
+      ...this.getCircusExtraZoneProps(zoneId),
+      ...this.getCircusArchitectureProps(zoneId)
+    ];
+  },
+
+  getCircusArchitectureProps(zoneId) {
+    const fixtures = {
+      2: [
+        { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'stage', x: -2.4, z: 0.5, color: '#fff1a8' },
+        { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'stage', x: 2.4, z: 0.5, color: '#fff1a8' }
+      ],
+      5: [{ kind: 'ceilinglight', anchor: 'ceiling', fixture: 'fluorescent', x: 0, z: -1.2, color: '#e9f2ff' }],
+      8: [
+        { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'chandelier', x: 0, z: -0.4, color: '#ffd878' },
+        { kind: 'wallart', anchor: 'wall-left', wallSurface: 'outer', x: 0, z: -1.8, color: '#7c88a1', art: 'blocks' }
+      ],
+      9: [{ kind: 'ceilinglight', anchor: 'ceiling', fixture: 'panel', x: 0, z: -0.8, color: '#d9d0a2' }],
+      10: [
+        { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'fluorescent', x: -1.8, z: -0.4, color: '#ffffff' },
+        { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'fluorescent', x: 1.8, z: -0.4, color: '#ffffff' },
+        { kind: 'wallart', anchor: 'wall-right', wallSurface: 'outer', x: 0, z: -1.8, color: '#ff4d4d', art: 'blocks' }
+      ],
+      15: [{ kind: 'ceilinglight', anchor: 'ceiling', fixture: 'fluorescent', x: 0, z: -1.2, color: '#f7f7ff' }],
+      16: [
+        { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'fluorescent', x: -1.6, z: -0.8, color: '#7df0ff' },
+        { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'fluorescent', x: 1.6, z: -0.8, color: '#ff7a30' }
+      ],
+      21: [
+        { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'chandelier', x: 0, z: -0.8, color: '#ffd878' },
+        { kind: 'wallart', anchor: 'wall-left', wallSurface: 'outer', x: 0, z: -1.5, color: '#d49a62', art: 'spiral' }
+      ],
+      25: [
+        { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'fluorescent', x: -1.7, z: -0.8, color: '#ffffff' },
+        { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'fluorescent', x: 1.7, z: -0.8, color: '#ffffff' }
+      ],
+      26: [{ kind: 'ceilinglight', anchor: 'ceiling', fixture: 'chandelier', x: 0, z: -0.8, color: '#fff1a8' }],
+      32: [
+        { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'chandelier', x: 0, z: -0.8, color: '#fff1a8' },
+        { kind: 'wallart', anchor: 'wall-right', wallSurface: 'outer', x: 0, z: -1.8, color: '#ff9ad5', art: 'spiral' }
+      ],
+      35: [
+        { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'fluorescent', x: -1.5, z: -0.5, color: '#ffffff' },
+        { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'fluorescent', x: 1.5, z: -0.5, color: '#ffffff' }
+      ],
+      36: [{ kind: 'ceilinglight', anchor: 'ceiling', fixture: 'fluorescent', x: 0, z: -0.8, color: '#e8fff9' }],
+      37: [{ kind: 'ceilinglight', anchor: 'ceiling', fixture: 'fluorescent', x: 0, z: -0.8, color: '#f2f2f2' }],
+      38: [
+        { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'stage', x: -2.3, z: -0.5, color: '#ffd84a' },
+        { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'stage', x: 2.3, z: -0.5, color: '#ffd84a' }
+      ],
+      43: [{ kind: 'ceilinglight', anchor: 'ceiling', fixture: 'chandelier', x: 0, z: -0.8, color: '#fff1a8' }]
+    };
+    return fixtures[zoneId] || [];
   },
 
   getCircusExtraZoneProps(zoneId) {
@@ -3948,7 +4158,7 @@ const OS = {
   drawCircusDepthProps(ctx, w, h, state) {
     const props = this.getCircusZoneProps(state.currentZoneId)
       .map(prop => ({ ...prop, projected: this.projectCircusPoint(prop, state, w, h) }))
-      .filter(prop => prop.projected)
+      .filter(prop => prop.projected && this.isCircusWorldPointVisible(prop, state, prop.anchor?.startsWith('wall') ? 0.72 : 0.42))
       .sort((a, b) => b.projected.depth - a.projected.depth);
     props.forEach(prop => {
       this.addCircusPropHotspot(state, prop);
@@ -3958,6 +4168,8 @@ const OS = {
 
   addCircusPropHotspot(state, prop) {
     if (!state || !prop.projected) return;
+    const interactionRange = prop.kind === 'roomdoor' ? 1.55 : 2.2;
+    if (prop.projected.distance > interactionRange) return;
     const box = this.getCircusPropScreenBox(prop);
     state.hotspots.push({
       kind: 'prop',
@@ -3972,7 +4184,7 @@ const OS = {
 
   getCircusPropScreenBox(prop) {
     const p = prop.projected;
-    const s = Math.max(0.25, p.scale);
+    const s = Math.max(0.035, p.scale);
     const wideKinds = new Set(['ring', 'counter', 'truck', 'scoreboard', 'table', 'desk', 'exitframe']);
     const tallKinds = new Set(['pillar', 'tent', 'spotlight', 'umbrella', 'window', 'archive', 'console', 'roomdoor', 'wallart', 'ceilinglight']);
     const smallKinds = new Set(['candle', 'balloon', 'eye', 'sun', 'base', 'target', 'memory']);
@@ -3984,11 +4196,14 @@ const OS = {
       width = 62 * s;
       height = 78 * s;
     }
-    width = Math.max(22, width);
-    height = Math.max(28, height);
+    width = Math.max(4, width * (p.facingScale || 1));
+    height = Math.max(6, height);
+    const anchorY = p.anchor === 'ceiling' ? (p.y - height * 0.25)
+      : p.anchor?.startsWith('wall') && prop.kind !== 'roomdoor' ? (p.y - height * 0.5)
+        : (p.y - height);
     return {
       x: p.x - width / 2,
-      y: (p.y || 0) - height,
+      y: anchorY,
       w: width,
       h: height
     };
@@ -3996,11 +4211,12 @@ const OS = {
 
   drawCircusProp(ctx, prop, w, h) {
     const p = prop.projected;
-    const s = Math.max(0.25, p.scale);
+    const s = Math.max(0.035, p.scale);
     const x = p.x;
     const y = p.y || h * 0.58;
     ctx.save();
     ctx.translate(x, y);
+    if (p.facingScale && p.facingScale < 0.999) ctx.scale(p.facingScale, 1);
     ctx.lineWidth = Math.max(1, 2 * s);
     ctx.strokeStyle = prop.color;
     ctx.fillStyle = `${prop.color}cc`;
@@ -4227,40 +4443,63 @@ const OS = {
       ctx.fill();
     } else if (prop.kind === 'wallart') {
       ctx.fillStyle = '#5b2b1e';
-      ctx.fillRect(-34 * s, -104 * s, 68 * s, 54 * s);
+      ctx.fillRect(-34 * s, -27 * s, 68 * s, 54 * s);
       ctx.strokeStyle = '#ffd06a';
       ctx.lineWidth = Math.max(1, 3 * s);
-      ctx.strokeRect(-34 * s, -104 * s, 68 * s, 54 * s);
+      ctx.strokeRect(-34 * s, -27 * s, 68 * s, 54 * s);
       ctx.fillStyle = '#1d1230';
-      ctx.fillRect(-27 * s, -97 * s, 54 * s, 40 * s);
+      ctx.fillRect(-27 * s, -20 * s, 54 * s, 40 * s);
       ctx.strokeStyle = prop.color;
       if (prop.art === 'spiral') {
         for (let r = 4; r < 22; r += 5) {
           ctx.beginPath();
-          ctx.arc(0, -77 * s, r * s, 0, Math.PI * 1.55);
+          ctx.arc(0, 0, r * s, 0, Math.PI * 1.55);
           ctx.stroke();
         }
       } else {
         ctx.fillStyle = prop.color;
-        ctx.fillRect(-20 * s, -90 * s, 16 * s, 13 * s);
+        ctx.fillRect(-20 * s, -13 * s, 16 * s, 13 * s);
         ctx.fillStyle = '#ff4fb8';
-        ctx.fillRect(2 * s, -82 * s, 19 * s, 17 * s);
+        ctx.fillRect(2 * s, -5 * s, 19 * s, 17 * s);
         ctx.fillStyle = '#7df0ff';
-        ctx.fillRect(-9 * s, -72 * s, 13 * s, 10 * s);
+        ctx.fillRect(-9 * s, 5 * s, 13 * s, 10 * s);
       }
     } else if (prop.kind === 'ceilinglight') {
-      ctx.fillStyle = 'rgba(255,240,184,0.16)';
-      ctx.beginPath();
-      ctx.moveTo(-38 * s, -118 * s);
-      ctx.lineTo(38 * s, -118 * s);
-      ctx.lineTo(66 * s, 0);
-      ctx.lineTo(-66 * s, 0);
-      ctx.closePath();
-      ctx.fill();
-      ctx.fillStyle = '#fff0b8';
-      ctx.fillRect(-28 * s, -124 * s, 56 * s, 8 * s);
-      ctx.strokeStyle = '#6a2f2a';
-      ctx.strokeRect(-28 * s, -124 * s, 56 * s, 8 * s);
+      const fixture = prop.fixture || 'panel';
+      if (fixture === 'chandelier') {
+        ctx.strokeStyle = '#4c2c1c';
+        ctx.lineWidth = Math.max(1, 2 * s);
+        ctx.beginPath();
+        ctx.moveTo(0, -28 * s);
+        ctx.lineTo(0, 8 * s);
+        ctx.moveTo(-30 * s, 8 * s);
+        ctx.lineTo(30 * s, 8 * s);
+        ctx.stroke();
+        [-30, -15, 0, 15, 30].forEach(offset => {
+          ctx.fillStyle = 'rgba(255,216,120,0.24)';
+          ctx.beginPath();
+          ctx.arc(offset * s, 14 * s, 10 * s, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.fillStyle = '#ffd878';
+          ctx.beginPath();
+          ctx.arc(offset * s, 12 * s, 3 * s, 0, Math.PI * 2);
+          ctx.fill();
+        });
+      } else {
+        const length = fixture === 'fluorescent' ? 74 : 56;
+        ctx.fillStyle = 'rgba(255,240,184,0.14)';
+        ctx.beginPath();
+        ctx.moveTo(-length * 0.42 * s, 3 * s);
+        ctx.lineTo(length * 0.42 * s, 3 * s);
+        ctx.lineTo(length * 0.7 * s, 42 * s);
+        ctx.lineTo(-length * 0.7 * s, 42 * s);
+        ctx.closePath();
+        ctx.fill();
+        ctx.fillStyle = prop.color || '#fff0b8';
+        ctx.fillRect(-length * 0.5 * s, -4 * s, length * s, 8 * s);
+        ctx.strokeStyle = fixture === 'fluorescent' ? '#68706f' : '#6a2f2a';
+        ctx.strokeRect(-length * 0.5 * s, -4 * s, length * s, 8 * s);
+      }
     } else if (prop.kind === 'doorframe' || prop.kind === 'exitframe') {
       // Detailed double office doors with glowing "EXIT" sign
       ctx.fillStyle = '#eef';
@@ -4744,12 +4983,14 @@ const OS = {
       });
       ctx.restore();
     }
-    if (p.depth < 6.2) {
+    if (p.distance <= 2.2) {
       ctx.globalAlpha = 0.86;
       ctx.fillStyle = '#fff1a8';
       ctx.strokeStyle = '#05020d';
       ctx.lineWidth = Math.max(1, 1.5 * s);
-      const markerY = -Math.max(50, 96 * s);
+      const markerY = p.anchor === 'ceiling' ? 38 * s
+        : p.anchor?.startsWith('wall') ? -42 * s
+          : -Math.max(24, 96 * s);
       ctx.beginPath();
       ctx.arc(0, markerY, Math.max(4, 7 * s), 0, Math.PI * 2);
       ctx.fill();
@@ -4766,21 +5007,29 @@ const OS = {
   drawCircusPhysicalDoors(ctx, w, h, portals, state) {
     const doors = this.getCircusPhysicalDoors(state)
       .map(door => ({ ...door, projected: this.projectCircusPoint(door, state, w, h) }))
-      .filter(door => door.projected)
+      .filter(door => door.projected && this.isCircusWorldPointVisible(door, state, 0.82))
       .sort((a, b) => b.projected.depth - a.projected.depth);
+    const architecture = this.getCircusArchitecture(state);
     doors.forEach(door => {
       const target = portals[door.target];
       if (!target) return;
       const p = door.projected;
-      const selected = door.index === state.selectedExitIndex;
+      const selected = door.index === state.selectedExitIndex && p.distance < 4.5;
       const locked = !target.unlocked;
-      const scale = Math.max(0.28, p.scale);
-      const doorW = Math.max(24, 62 * scale);
-      const doorH = Math.max(56, 136 * scale);
+      const scale = Math.max(0.035, p.scale);
+      const viewLength = Math.max(0.001, p.distance);
+      const viewToPlayerX = (state.player.x - door.x) / viewLength;
+      const viewToPlayerZ = (state.player.z - door.z) / viewLength;
+      const facing = Math.max(0.16, Math.abs(viewToPlayerX * door.inwardX + viewToPlayerZ * door.inwardZ));
+      const doorH = Math.min(h * 1.35, (h * architecture.wallScale * 0.84) / Math.max(0.18, p.depth));
+      const doorW = doorH * 0.46 * facing;
+      if (doorH < 3 || doorW < 1.5) return;
       const x = p.x - doorW / 2;
       const baseY = Math.min(h - 15, p.y || this.getCircusProjectedFloorY(p.depth, h));
       const y = baseY - doorH;
-      state.hotspots.push({ x: x - doorW * 0.18, y, w: doorW * 1.36, h: doorH + Math.max(8, 12 * scale), target: door.target, index: door.index });
+      if (p.distance <= 1.85) {
+        state.hotspots.push({ x: x - doorW * 0.12, y, w: doorW * 1.24, h: doorH + Math.max(3, 8 * scale), target: door.target, index: door.index, depth: p.depth });
+      }
       ctx.fillStyle = 'rgba(0,0,0,0.44)';
       ctx.beginPath();
       ctx.ellipse(p.x, baseY + Math.max(2, 3 * scale), doorW * 0.66, Math.max(3, 7 * scale), 0, 0, Math.PI * 2);
@@ -4812,13 +5061,15 @@ const OS = {
       ctx.fillRect(x - doorW * 0.2, baseY - Math.max(4, 7 * scale), doorW * 1.4, Math.max(5, 9 * scale));
       ctx.strokeStyle = 'rgba(255,241,168,0.28)';
       ctx.strokeRect(x - doorW * 0.2, baseY - Math.max(4, 7 * scale), doorW * 1.4, Math.max(5, 9 * scale));
-      ctx.fillStyle = selected ? '#fff1a8' : (locked ? '#8b8794' : target.color);
-      ctx.font = `bold ${Math.max(7, 12 * scale)}px Courier New`;
-      ctx.textAlign = 'center';
-      ctx.fillText(locked ? 'LOCK' : target.short, p.x, y - 6);
-      if (p.depth < 1.25 && !locked) {
-        ctx.font = 'bold 9px Courier New';
-        ctx.fillText('ENTREE / CLIC', p.x, y + doorH + 12);
+      if (p.distance < 5.5 || selected) {
+        ctx.fillStyle = selected ? '#fff1a8' : (locked ? '#8b8794' : target.color);
+        ctx.font = `bold ${Math.max(4, 11 * scale)}px Courier New`;
+        ctx.textAlign = 'center';
+        ctx.fillText(locked ? 'LOCK' : target.short, p.x, y - Math.max(2, 5 * scale));
+      }
+      if (p.distance <= 1.85 && !locked) {
+        ctx.font = `bold ${Math.max(6, 8 * scale)}px Courier New`;
+        ctx.fillText('ENTREE / CLIC', p.x, y + doorH + Math.max(7, 10 * scale));
       }
     });
   },
@@ -5085,21 +5336,23 @@ const OS = {
   drawCircusImpostorSprites(ctx, w, h, state) {
     const sprites = this.getCircusActiveZoneSprites(state.currentZoneId, state)
       .map(sprite => ({ ...sprite, projected: this.projectCircusPoint(sprite, state, w, h) }))
-      .filter(sprite => sprite.projected)
+      .filter(sprite => sprite.projected && this.isCircusWorldPointVisible(sprite, state, 0.42))
       .sort((a, b) => b.projected.depth - a.projected.depth);
     sprites.forEach(sprite => {
       const p = sprite.projected;
-      const size = Math.max(16, 70 * p.scale * (sprite.sizeScale || 1));
+      const size = Math.max(3, 70 * p.scale * (sprite.sizeScale || 1));
       const baseY = (p.y || h * 0.58) - (sprite.bob || 0) * size;
-      state.hotspots.push({
-        kind: 'character',
-        sprite,
-        x: p.x - size * 0.42,
-        y: baseY - size,
-        w: size * 0.84,
-        h: size,
-        depth: p.depth
-      });
+      if (p.distance <= 2.2) {
+        state.hotspots.push({
+          kind: 'character',
+          sprite,
+          x: p.x - size * 0.42,
+          y: baseY - size,
+          w: size * 0.84,
+          h: size,
+          depth: p.depth
+        });
+      }
       this.drawCircusImpostor(ctx, sprite.type, p.x, baseY, size, sprite.color, sprite.name, sprite.avatar, sprite.routine);
     });
   },
@@ -5119,17 +5372,20 @@ const OS = {
     ctx.lineWidth = Math.max(1, size * 0.035);
     ctx.fillRect(-size * 0.24, -size * 0.78, size * 0.48, size * 0.62);
     ctx.strokeRect(-size * 0.24, -size * 0.78, size * 0.48, size * 0.62);
-    ctx.fillStyle = color || '#fff1a8';
-    ctx.font = `bold ${Math.max(6, size * 0.12)}px Courier New`;
-    ctx.textAlign = 'center';
-    ctx.fillText('IMG', 0, -size * 0.46);
-    ctx.fillStyle = '#fff1a8';
-    ctx.font = `${Math.max(6, size * 0.13)}px Courier New`;
-    ctx.textAlign = 'center';
-    ctx.fillText(label, 0, -size * 1.05);
-    ctx.fillStyle = '#7df0ff';
-    ctx.font = `${Math.max(5, size * 0.09)}px Courier New`;
-    ctx.fillText(`PNJ:${routine.toUpperCase()}`, 0, -size * 0.9);
+    if (size >= 16) {
+      ctx.fillStyle = color || '#fff1a8';
+      ctx.font = `bold ${Math.max(3, size * 0.12)}px Courier New`;
+      ctx.textAlign = 'center';
+      ctx.fillText('IMG', 0, -size * 0.46);
+      ctx.fillStyle = '#fff1a8';
+      ctx.font = `${Math.max(4, size * 0.13)}px Courier New`;
+      ctx.fillText(label, 0, -size * 1.05);
+    }
+    if (size >= 30) {
+      ctx.fillStyle = '#7df0ff';
+      ctx.font = `${Math.max(4, size * 0.09)}px Courier New`;
+      ctx.fillText(`PNJ:${routine.toUpperCase()}`, 0, -size * 0.9);
+    }
     ctx.restore();
   },
 
@@ -5147,19 +5403,23 @@ const OS = {
     ctx.imageSmoothingEnabled = false;
     ctx.fillStyle = 'rgba(0,0,0,0.38)';
     ctx.beginPath();
-    ctx.ellipse(x, baseY + 4, Math.max(10, drawW * 0.36), Math.max(3, drawH * 0.075), 0, 0, Math.PI * 2);
+    ctx.ellipse(x, baseY + Math.max(1, 4 * size / 70), Math.max(2, drawW * 0.36), Math.max(1, drawH * 0.075), 0, 0, Math.PI * 2);
     ctx.fill();
     ctx.shadowColor = 'rgba(0,0,0,0.7)';
-    ctx.shadowBlur = 8;
+    ctx.shadowBlur = Math.max(1, Math.min(8, size * 0.11));
     ctx.drawImage(frame.canvas, Math.round(drawX), Math.round(drawY), Math.round(drawW), Math.round(drawH));
     ctx.shadowBlur = 0;
-    ctx.fillStyle = color || '#fff1a8';
-    ctx.font = `${Math.max(6, size * 0.13)}px Courier New`;
-    ctx.textAlign = 'center';
-    ctx.fillText(label, x, drawY - 6);
-    ctx.fillStyle = '#7df0ff';
-    ctx.font = `${Math.max(5, size * 0.09)}px Courier New`;
-    ctx.fillText(`PNJ:${routine.toUpperCase()}`, x, drawY + Math.max(5, size * 0.11));
+    if (size >= 16) {
+      ctx.fillStyle = color || '#fff1a8';
+      ctx.font = `${Math.max(4, size * 0.13)}px Courier New`;
+      ctx.textAlign = 'center';
+      ctx.fillText(label, x, drawY - Math.max(2, size * 0.08));
+    }
+    if (size >= 30) {
+      ctx.fillStyle = '#7df0ff';
+      ctx.font = `${Math.max(4, size * 0.09)}px Courier New`;
+      ctx.fillText(`PNJ:${routine.toUpperCase()}`, x, drawY + Math.max(5, size * 0.11));
+    }
     ctx.restore();
     return true;
   },
