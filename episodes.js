@@ -11,6 +11,8 @@ const SoundManager = {
   humOsc: null,
   humLFO: null,
   humGain: null,
+  fpsAmbience: null,
+  fpsLastFootstepAt: 0,
   ambienceVolume: 0.7,
   glitchVolume: 0.45,
 
@@ -198,6 +200,7 @@ const SoundManager = {
       index: 0,
       timer: null
     };
+    this.startFpsAmbience(context);
     this.playContextPulseStep();
   },
   stopContextPulse() {
@@ -205,6 +208,133 @@ const SoundManager = {
       clearTimeout(this.contextPulse.timer);
     }
     this.contextPulse = null;
+    this.stopFpsAmbience();
+  },
+  startFpsAmbience(context = 'circus') {
+    try {
+      this.init();
+      this.stopFpsAmbience();
+      if (!this.ctx) return;
+      const profiles = {
+        circus: { drone: 65, overtone: 130, noise: 900, type: 'triangle', gain: 0.012 },
+        grounds: { drone: 82, overtone: 247, noise: 1800, type: 'sine', gain: 0.009 },
+        candy: { drone: 110, overtone: 330, noise: 2400, type: 'triangle', gain: 0.009 },
+        route: { drone: 49, overtone: 147, noise: 1100, type: 'sawtooth', gain: 0.011 },
+        manor: { drone: 41, overtone: 123, noise: 420, type: 'sine', gain: 0.016 },
+        basement: { drone: 33, overtone: 66, noise: 260, type: 'triangle', gain: 0.017 },
+        hell: { drone: 29, overtone: 87, noise: 340, type: 'sawtooth', gain: 0.015 },
+        spudsy: { drone: 60, overtone: 180, noise: 1450, type: 'square', gain: 0.008 },
+        kitchen: { drone: 55, overtone: 165, noise: 1900, type: 'triangle', gain: 0.01 },
+        bathroom: { drone: 48, overtone: 144, noise: 800, type: 'sine', gain: 0.012 },
+        lake: { drone: 73, overtone: 220, noise: 1300, type: 'sine', gain: 0.01 },
+        underwater: { drone: 37, overtone: 111, noise: 360, type: 'sine', gain: 0.016 },
+        admin: { drone: 55, overtone: 440, noise: 2100, type: 'square', gain: 0.009 },
+        core: { drone: 44, overtone: 352, noise: 1750, type: 'sawtooth', gain: 0.012 },
+        memory: { drone: 52, overtone: 208, noise: 620, type: 'sine', gain: 0.014 },
+        archive: { drone: 46, overtone: 184, noise: 760, type: 'triangle', gain: 0.013 },
+        snow: { drone: 70, overtone: 280, noise: 2600, type: 'sine', gain: 0.009 },
+        void: { drone: 28, overtone: 224, noise: 3200, type: 'sine', gain: 0.008 }
+      };
+      const profile = profiles[context] || profiles.circus;
+      const master = this.ctx.createGain();
+      master.gain.setValueAtTime(profile.gain * (this.ambienceVolume ?? 0.7), this.ctx.currentTime);
+      master.connect(this.ctx.destination);
+
+      const drone = this.ctx.createOscillator();
+      const overtone = this.ctx.createOscillator();
+      drone.type = profile.type;
+      overtone.type = 'sine';
+      drone.frequency.setValueAtTime(profile.drone, this.ctx.currentTime);
+      overtone.frequency.setValueAtTime(profile.overtone, this.ctx.currentTime);
+      const droneGain = this.ctx.createGain();
+      const overtoneGain = this.ctx.createGain();
+      droneGain.gain.setValueAtTime(0.55, this.ctx.currentTime);
+      overtoneGain.gain.setValueAtTime(0.18, this.ctx.currentTime);
+      drone.connect(droneGain);
+      overtone.connect(overtoneGain);
+      droneGain.connect(master);
+      overtoneGain.connect(master);
+
+      const buffer = this.ctx.createBuffer(1, this.ctx.sampleRate * 2, this.ctx.sampleRate);
+      const data = buffer.getChannelData(0);
+      for (let i = 0; i < data.length; i++) data[i] = (Math.random() * 2 - 1) * 0.32;
+      const noise = this.ctx.createBufferSource();
+      noise.buffer = buffer;
+      noise.loop = true;
+      const noiseFilter = this.ctx.createBiquadFilter();
+      noiseFilter.type = ['manor', 'basement', 'hell', 'underwater'].includes(context) ? 'lowpass' : 'bandpass';
+      noiseFilter.frequency.setValueAtTime(profile.noise, this.ctx.currentTime);
+      noiseFilter.Q.setValueAtTime(0.8, this.ctx.currentTime);
+      const noiseGain = this.ctx.createGain();
+      noiseGain.gain.setValueAtTime(0.22, this.ctx.currentTime);
+      noise.connect(noiseFilter);
+      noiseFilter.connect(noiseGain);
+      noiseGain.connect(master);
+      drone.start();
+      overtone.start();
+      noise.start();
+      this.fpsAmbience = { sources: [drone, overtone, noise], master };
+    } catch (e) {}
+  },
+  stopFpsAmbience() {
+    if (!this.fpsAmbience) return;
+    try {
+      this.fpsAmbience.sources.forEach(source => {
+        try { source.stop(); } catch (e) {}
+        try { source.disconnect(); } catch (e) {}
+      });
+      this.fpsAmbience.master.disconnect();
+    } catch (e) {}
+    this.fpsAmbience = null;
+  },
+  playFpsSpatialTone(freq, duration, type = 'triangle', volume = 0.035, pan = 0, delay = false) {
+    try {
+      this.init();
+      if (!this.ctx) return;
+      const osc = this.ctx.createOscillator();
+      const gain = this.ctx.createGain();
+      const panner = typeof this.ctx.createStereoPanner === 'function' ? this.ctx.createStereoPanner() : null;
+      const now = this.ctx.currentTime;
+      osc.type = type;
+      osc.frequency.setValueAtTime(freq, now);
+      gain.gain.setValueAtTime(Math.max(0.00001, volume * (this.ambienceVolume ?? 0.7)), now);
+      gain.gain.exponentialRampToValueAtTime(0.00001, now + duration);
+      if (panner) panner.pan.setValueAtTime(Math.max(-1, Math.min(1, pan)), now);
+      osc.connect(gain);
+      if (panner) {
+        gain.connect(panner);
+        panner.connect(this.ctx.destination);
+        if (delay && this.delayNode) panner.connect(this.delayNode);
+      } else {
+        gain.connect(this.ctx.destination);
+        if (delay && this.delayNode) gain.connect(this.delayNode);
+      }
+      osc.start(now);
+      osc.stop(now + duration + 0.02);
+    } catch (e) {}
+  },
+  playFpsFootstep(context = 'circus', pan = 0) {
+    const profiles = {
+      circus: [92, 'triangle'], grounds: [68, 'triangle'], candy: [145, 'sine'], route: [62, 'sawtooth'],
+      manor: [54, 'triangle'], basement: [42, 'sine'], hell: [38, 'sawtooth'], spudsy: [108, 'square'],
+      kitchen: [122, 'square'], bathroom: [132, 'sine'], lake: [76, 'sine'], underwater: [48, 'sine'],
+      admin: [116, 'square'], core: [88, 'sawtooth'], snow: [96, 'sine'], dorm: [82, 'triangle']
+    };
+    const [freq, wave] = profiles[context] || [78, 'triangle'];
+    this.playFpsSpatialTone(freq + Math.random() * 8, 0.075, wave, 0.025, pan, false);
+    this.playFpsSpatialTone(freq * 0.62, 0.11, 'sine', 0.014, pan, false);
+  },
+  playFpsDoor(context = 'circus') {
+    const metal = ['admin', 'core', 'test', 'kitchen'].includes(context);
+    const base = metal ? 92 : context === 'manor' || context === 'basement' ? 48 : 72;
+    this.playFpsSpatialTone(base, 0.22, metal ? 'square' : 'triangle', 0.045, 0, true);
+    setTimeout(() => this.playFpsSpatialTone(base * 0.72, 0.3, 'sine', 0.032, 0, true), 90);
+  },
+  playFpsEvent(eventId = '') {
+    const dangerous = /warning|ghost|flicker|trace|loss/.test(eventId);
+    const bright = /bell|score|convoy|sweep/.test(eventId);
+    const freq = dangerous ? 74 : bright ? 520 : 220;
+    this.playFpsSpatialTone(freq, dangerous ? 0.28 : 0.12, dangerous ? 'sawtooth' : 'triangle', 0.022, 0, true);
   },
   playContextPulseStep() {
     if (!this.contextPulse) return;
@@ -214,16 +344,33 @@ const SoundManager = {
       circus: { notes: [523, 659, 784, 659], wave: 'triangle', volume: 0.022, gap: 920 },
       grounds: { notes: [392, 523, 587, 523], wave: 'sine', volume: 0.018, gap: 980 },
       candy: { notes: [659, 784, 880, 784], wave: 'square', volume: 0.018, gap: 780 },
+      palace: { notes: [523, 659, 880, 1047], wave: 'triangle', volume: 0.017, gap: 940 },
+      route: { notes: [147, 196, 247, 196], wave: 'sawtooth', volume: 0.014, gap: 640 },
       truck: { notes: [196, 247, 294, 247], wave: 'sawtooth', volume: 0.014, gap: 650 },
       manor: { notes: [146, 196, 185, 130], wave: 'triangle', volume: 0.02, gap: 1120 },
       basement: { notes: [98, 130, 123, 92], wave: 'sine', volume: 0.018, gap: 1250 },
+      hell: { notes: [55, 82, 65, 49], wave: 'sawtooth', volume: 0.018, gap: 1320 },
       spudsy: { notes: [440, 554, 659, 554], wave: 'square', volume: 0.016, gap: 690 },
+      kitchen: { notes: [220, 277, 330, 277], wave: 'square', volume: 0.013, gap: 610 },
+      bathroom: { notes: [196, 247, 294, 247], wave: 'sine', volume: 0.012, gap: 1080 },
+      training: { notes: [110, 220, 110, 165], wave: 'square', volume: 0.014, gap: 880 },
       lake: { notes: [330, 494, 659, 494], wave: 'sine', volume: 0.017, gap: 1040 },
+      lighthouse: { notes: [262, 392, 523, 392], wave: 'triangle', volume: 0.015, gap: 920 },
+      underwater: { notes: [82, 123, 165, 123], wave: 'sine', volume: 0.016, gap: 1240 },
       admin: { notes: [220, 330, 440, 660], wave: 'triangle', volume: 0.014, gap: 860 },
       core: { notes: [165, 247, 330, 494], wave: 'sawtooth', volume: 0.014, gap: 900 },
       memory: { notes: [262, 392, 494, 392], wave: 'sine', volume: 0.018, gap: 1180 },
       final: { notes: [196, 262, 311, 392], wave: 'triangle', volume: 0.02, gap: 980 },
       archive: { notes: [247, 294, 370, 294], wave: 'sine', volume: 0.016, gap: 1160 },
+      dorm: { notes: [262, 330, 392, 330], wave: 'triangle', volume: 0.013, gap: 980 },
+      common: { notes: [392, 494, 587, 494], wave: 'triangle', volume: 0.014, gap: 840 },
+      tubes: { notes: [330, 440, 554, 440], wave: 'square', volume: 0.013, gap: 720 },
+      cafe: { notes: [196, 262, 330, 262], wave: 'sine', volume: 0.014, gap: 1060 },
+      dining: { notes: [262, 392, 523, 392], wave: 'triangle', volume: 0.014, gap: 940 },
+      awards: { notes: [392, 523, 659, 784], wave: 'triangle', volume: 0.017, gap: 760 },
+      aquarium: { notes: [98, 147, 196, 147], wave: 'sine', volume: 0.015, gap: 1180 },
+      snow: { notes: [294, 440, 587, 440], wave: 'sine', volume: 0.013, gap: 1120 },
+      void: { notes: [55, 110, 220, 110], wave: 'sine', volume: 0.011, gap: 1480 },
       arena: { notes: [294, 392, 494, 392], wave: 'square', volume: 0.017, gap: 740 },
       softball: { notes: [330, 415, 523, 415], wave: 'triangle', volume: 0.016, gap: 760 },
       micro: { notes: [523, 622, 740, 622], wave: 'square', volume: 0.014, gap: 620 },

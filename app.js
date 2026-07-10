@@ -579,6 +579,9 @@ const OS = {
           this.applySystemStateUI();
           this.selectEpisodeForCurrentProgress();
           this.closeAllWindows();
+          if (isFirstTime) {
+            this.openWindow('simulations');
+          }
         };
 
         const pressEnter = (e) => {
@@ -1682,6 +1685,8 @@ const OS = {
       interactionUntil: 0,
       interactionChoices: null,
       lastZoneEventId: null,
+      nextFootstepAt: 0,
+      footstepSide: -1,
       player: { x: 7.5, z: 11.2, a: -Math.PI / 2 },
       keys: new Set(),
       last: performance.now(),
@@ -2646,6 +2651,9 @@ const OS = {
       return;
     }
     const fromZoneId = state.currentZoneId;
+    if (typeof SoundManager.playFpsDoor === 'function') {
+      SoundManager.playFpsDoor(state.scenes[fromZoneId]?.motif || 'circus');
+    }
     state.history.push(fromZoneId);
     this.setCircusSimulationZone(targetId, true, fromZoneId);
   },
@@ -2671,6 +2679,8 @@ const OS = {
     const state = this.circusDoom;
     if (!state) return;
     const { player, keys } = state;
+    const previousX = player.x;
+    const previousZ = player.z;
     const turn = 2.35 * dt;
     const speed = 2.15 * dt;
     if (keys.has('arrowleft') || keys.has('q')) player.a -= turn;
@@ -2698,6 +2708,16 @@ const OS = {
     if (keys.has('a')) {
       tryMove(player.x + Math.cos(player.a - Math.PI / 2) * speed, player.z + Math.sin(player.a - Math.PI / 2) * speed);
       state.interactionChoices = null;
+    }
+
+    const movedDistance = Math.hypot(player.x - previousX, player.z - previousZ);
+    if (movedDistance > 0.001 && performance.now() >= (state.nextFootstepAt || 0)) {
+      const motif = state.scenes[state.currentZoneId]?.motif || 'circus';
+      state.footstepSide = (state.footstepSide || -1) * -1;
+      if (typeof SoundManager.playFpsFootstep === 'function') {
+        SoundManager.playFpsFootstep(motif, state.footstepSide * 0.16);
+      }
+      state.nextFootstepAt = performance.now() + 360;
     }
 
     const nearestDoor = this.getNearestUsableCircusDoor();
@@ -2875,6 +2895,8 @@ const OS = {
     const horizon = h * 0.48;
     const motif = (state.scenes[state.currentZoneId] || state.scenes[2])?.motif || 'circus';
     const architecture = this.getCircusArchitecture(state, motif);
+    state.wallDepthBuffer = new Float32Array(w);
+    state.wallDepthBuffer.fill(Number.POSITIVE_INFINITY);
     this.drawCircusThemedCeiling(ctx, w, h, horizon, state, zone, motif);
     this.drawCircusArchitecturalCeiling(ctx, w, h, horizon, state, motif, architecture);
     this.drawCircusThemedFloor(ctx, w, h, horizon, state, zone, motif);
@@ -2932,6 +2954,9 @@ const OS = {
       const wallH = Math.min(h * 1.9, (h * architecture.wallScale) / corrected);
       const x = Math.floor(ratio * w);
       const y = Math.floor(horizon - wallH * architecture.wallBias);
+      for (let px = Math.max(0, x); px < Math.min(w, x + strip); px++) {
+        state.wallDepthBuffer[px] = Math.min(state.wallDepthBuffer[px], corrected);
+      }
 
       const depthShade = Math.max(0.26, 1.08 - corrected / (room.size * 0.92));
       const sideShade = hit.nearVertical ? 0.92 : 0.72;
@@ -3614,6 +3639,10 @@ const OS = {
   drawCircusZoneEvents(ctx, w, h, state, zone) {
     const event = this.getCircusZoneAmbientEvent(state.currentZoneId, state);
     if (!event) return;
+    if (state.lastZoneEventId !== event.id) {
+      state.lastZoneEventId = event.id;
+      if (typeof SoundManager.playFpsEvent === 'function') SoundManager.playFpsEvent(event.id);
+    }
     const t = performance.now() / 1000;
     ctx.save();
     if (event.id === 'spotlight_sweep' || event.id === 'queen_pulse') {
@@ -3957,6 +3986,42 @@ const OS = {
     };
   },
 
+  applyCircusDepthClip(ctx, box, depth, state, tolerance = 0.16) {
+    const buffer = state.wallDepthBuffer;
+    if (!buffer?.length || !box || depth <= 0) return true;
+    const left = Math.max(0, Math.floor(box.x));
+    const right = Math.min(buffer.length - 1, Math.ceil(box.x + box.w));
+    if (right < left) return false;
+    const runs = [];
+    let runStart = null;
+    for (let x = left; x <= right; x++) {
+      const wallDepth = buffer[x];
+      const visible = !Number.isFinite(wallDepth) || depth <= wallDepth + tolerance;
+      if (visible && runStart === null) runStart = x;
+      if ((!visible || x === right) && runStart !== null) {
+        const runEnd = visible && x === right ? x + 1 : x;
+        runs.push([runStart, runEnd]);
+        runStart = null;
+      }
+    }
+    if (!runs.length) return false;
+    ctx.beginPath();
+    runs.forEach(([start, end]) => ctx.rect(start, box.y, Math.max(1, end - start), box.h));
+    ctx.clip();
+    return true;
+  },
+
+  getCircusDepthLight(depth, state, fullbright = false) {
+    if (fullbright) return 1;
+    const motif = (state.scenes[state.currentZoneId] || state.scenes[2])?.motif || 'circus';
+    const darkMotifs = new Set(['cellar', 'manor', 'basement', 'hell', 'memory', 'archive', 'training']);
+    const brightMotifs = new Set(['grounds', 'candy', 'route', 'lake', 'lighthouse', 'softball', 'snow', 'carnival', 'void']);
+    const ambient = darkMotifs.has(motif) ? 0.42 : brightMotifs.has(motif) ? 0.78 : 0.6;
+    const range = Math.max(6, (state.room?.size || 15) * 0.72);
+    const falloff = Math.max(0, Math.min(1, 1 - depth / range));
+    return ambient + (1 - ambient) * falloff;
+  },
+
   getCircusZoneProps(zoneId) {
     const basePillars = [
       { kind: 'pillar', x: -2.9, z: -1.4, color: '#ffd84a' },
@@ -4158,11 +4223,21 @@ const OS = {
   drawCircusDepthProps(ctx, w, h, state) {
     const props = this.getCircusZoneProps(state.currentZoneId)
       .map(prop => ({ ...prop, projected: this.projectCircusPoint(prop, state, w, h) }))
-      .filter(prop => prop.projected && this.isCircusWorldPointVisible(prop, state, prop.anchor?.startsWith('wall') ? 0.72 : 0.42))
+      .filter(prop => prop.projected)
       .sort((a, b) => b.projected.depth - a.projected.depth);
     props.forEach(prop => {
-      this.addCircusPropHotspot(state, prop);
+      const box = this.getCircusPropScreenBox(prop);
+      ctx.save();
+      const tolerance = prop.anchor?.startsWith('wall') || prop.anchor === 'ceiling' ? 0.72 : 0.18;
+      if (!this.applyCircusDepthClip(ctx, box, prop.projected.depth, state, tolerance)) {
+        ctx.restore();
+        return;
+      }
+      const depthLight = this.getCircusDepthLight(prop.projected.depth, state, prop.kind === 'ceilinglight');
+      ctx.filter = `brightness(${Math.round((0.58 + depthLight * 0.42) * 100)}%)`;
       this.drawCircusProp(ctx, prop, w, h);
+      ctx.restore();
+      if (this.isCircusWorldPointVisible(prop, state, tolerance)) this.addCircusPropHotspot(state, prop);
     });
   },
 
@@ -5007,7 +5082,7 @@ const OS = {
   drawCircusPhysicalDoors(ctx, w, h, portals, state) {
     const doors = this.getCircusPhysicalDoors(state)
       .map(door => ({ ...door, projected: this.projectCircusPoint(door, state, w, h) }))
-      .filter(door => door.projected && this.isCircusWorldPointVisible(door, state, 0.82))
+      .filter(door => door.projected)
       .sort((a, b) => b.projected.depth - a.projected.depth);
     const architecture = this.getCircusArchitecture(state);
     doors.forEach(door => {
@@ -5027,7 +5102,15 @@ const OS = {
       const x = p.x - doorW / 2;
       const baseY = Math.min(h - 15, p.y || this.getCircusProjectedFloorY(p.depth, h));
       const y = baseY - doorH;
-      if (p.distance <= 1.85) {
+      const doorBox = { x: x - doorW * 0.2, y: y - doorH * 0.1, w: doorW * 1.4, h: doorH * 1.2 };
+      ctx.save();
+      if (!this.applyCircusDepthClip(ctx, doorBox, p.depth, state, 0.86)) {
+        ctx.restore();
+        return;
+      }
+      const doorLight = this.getCircusDepthLight(p.depth, state, false);
+      ctx.filter = `brightness(${Math.round((0.58 + doorLight * 0.42) * 100)}%)`;
+      if (p.distance <= 1.85 && this.isCircusWorldPointVisible(door, state, 0.82)) {
         state.hotspots.push({ x: x - doorW * 0.12, y, w: doorW * 1.24, h: doorH + Math.max(3, 8 * scale), target: door.target, index: door.index, depth: p.depth });
       }
       ctx.fillStyle = 'rgba(0,0,0,0.44)';
@@ -5071,6 +5154,7 @@ const OS = {
         ctx.font = `bold ${Math.max(6, 8 * scale)}px Courier New`;
         ctx.fillText('ENTREE / CLIC', p.x, y + doorH + Math.max(7, 10 * scale));
       }
+      ctx.restore();
     });
   },
 
@@ -5336,13 +5420,25 @@ const OS = {
   drawCircusImpostorSprites(ctx, w, h, state) {
     const sprites = this.getCircusActiveZoneSprites(state.currentZoneId, state)
       .map(sprite => ({ ...sprite, projected: this.projectCircusPoint(sprite, state, w, h) }))
-      .filter(sprite => sprite.projected && this.isCircusWorldPointVisible(sprite, state, 0.42))
+      .filter(sprite => sprite.projected)
       .sort((a, b) => b.projected.depth - a.projected.depth);
     sprites.forEach(sprite => {
       const p = sprite.projected;
       const size = Math.max(3, 70 * p.scale * (sprite.sizeScale || 1));
       const baseY = (p.y || h * 0.58) - (sprite.bob || 0) * size;
-      if (p.distance <= 2.2) {
+      const drawH = size * (sprite.avatar === 'gloinkqueenscale' ? 1.35 : 1);
+      const spriteBox = { x: p.x - size * 0.58, y: baseY - drawH * 1.18, w: size * 1.16, h: drawH * 1.28 };
+      ctx.save();
+      if (!this.applyCircusDepthClip(ctx, spriteBox, p.depth, state, 0.2)) {
+        ctx.restore();
+        return;
+      }
+      const fullbright = ['bubble', 'sun', 'horrorghost'].includes(sprite.avatar || sprite.type);
+      const depthLight = this.getCircusDepthLight(p.depth, state, fullbright);
+      ctx.filter = `brightness(${Math.round((0.55 + depthLight * 0.45) * 100)}%)`;
+      this.drawCircusImpostor(ctx, sprite.type, p.x, baseY, size, sprite.color, sprite.name, sprite.avatar, sprite.routine);
+      ctx.restore();
+      if (p.distance <= 2.2 && this.isCircusWorldPointVisible(sprite, state, 0.42)) {
         state.hotspots.push({
           kind: 'character',
           sprite,
@@ -5353,7 +5449,6 @@ const OS = {
           depth: p.depth
         });
       }
-      this.drawCircusImpostor(ctx, sprite.type, p.x, baseY, size, sprite.color, sprite.name, sprite.avatar, sprite.routine);
     });
   },
 
