@@ -3946,8 +3946,11 @@ const OS = {
   },
 
   getCircusProjectedFloorY(depth, h) {
-    const lift = Math.min(h * 0.3, (1 / Math.max(0.2, depth)) * h * 0.28);
-    return Math.min(h - 18, h * 0.6 + lift);
+    const horizon = h * 0.48;
+    const floorHeight = h - horizon;
+    const cameraHeight = 0.42;
+    const projectedY = horizon + floorHeight * (cameraHeight / Math.max(0.18, depth));
+    return Math.max(horizon + 1, Math.min(h - 12, projectedY));
   },
 
   projectCircusPoint(obj, state, w, h) {
