@@ -942,7 +942,9 @@ const OS = {
       taskbarCircusEntry.addEventListener('click', (e) => {
         e.stopPropagation();
         SoundManager.playClick();
-        this.showCircusDosPreview();
+        const overlay = document.getElementById('circus-dos-overlay');
+        if (overlay?.style.display === 'flex') this.hideCircusDosPreview();
+        else this.showCircusDosPreview();
       });
     }
 
@@ -1443,7 +1445,7 @@ const OS = {
       '',
       'C:\\\\CAINE\\\\CIRCUS> assembling tent primitives...'
     ];
-    art.innerText = baseLines.join('\\n');
+    art.innerText = baseLines.join('\n');
 
     overlay.style.display = 'flex';
     overlay.classList.remove('rendering');
@@ -1480,7 +1482,7 @@ const OS = {
         '',
         'C:\\\\CAINE\\\\CIRCUS> perspective = SUBJECT_INTERNAL',
         '"Vous ne regardez plus le module. Vous entrez dans la scene."'
-      ].join('\\n');
+      ].join('\n');
       if (status) status.innerText = 'CHAPITEAU ASSEMBLE - ENTREE SIMULATION DISPONIBLE';
       if (launch) {
         launch.disabled = false;
@@ -1541,7 +1543,7 @@ const OS = {
       'Le panneau Simulation_Control.exe reste le controle technique des episodes.',
       '',
       'C:\\\\CAINE\\\\CIRCUS> return_bureau ou ouvrir Simulation_Control.exe pour choisir un episode'
-    ].join('\\n');
+    ].join('\n');
     if (launch) {
       launch.disabled = true;
       launch.innerText = 'VUE INTERNE ACTIVE';
@@ -1684,6 +1686,9 @@ const OS = {
       interactionMessage: '',
       interactionUntil: 0,
       interactionChoices: null,
+      interactionOrigin: null,
+      dialogueVisits: new Map(),
+      discoveries: new Set(),
       lastZoneEventId: null,
       nextFootstepAt: 0,
       footstepSide: -1,
@@ -1973,6 +1978,7 @@ const OS = {
     state.interactionMessage = '';
     state.interactionUntil = 0;
     state.interactionChoices = null;
+    state.interactionOrigin = null;
     state.lastZoneEventId = null;
   },
 
@@ -2085,9 +2091,16 @@ const OS = {
   inspectCircusProp(prop) {
     const state = this.circusDoom;
     if (!state || !prop) return;
-    state.interactionMessage = this.getCircusPropInteraction(prop, state.currentZoneId);
+    const discoveryId = `${state.currentZoneId}:${prop.interactionId ?? prop.index ?? prop.kind}`;
+    const wasDiscovered = state.discoveries.has(discoveryId);
+    state.discoveries.add(discoveryId);
+    const zoneProps = this.getCircusZoneProps(state.currentZoneId);
+    const zoneDiscoveries = [...state.discoveries].filter(id => id.startsWith(`${state.currentZoneId}:`)).length;
+    const discoveryStatus = wasDiscovered ? 'DEJA ANALYSE' : `NOUVELLE TRACE ${zoneDiscoveries}/${zoneProps.length}`;
+    state.interactionMessage = `[${discoveryStatus}] ${this.getCircusPropInteraction(prop, state.currentZoneId)}`;
     state.interactionUntil = performance.now() + 5600;
     state.interactionChoices = null;
+    state.interactionOrigin = { x: state.player.x, z: state.player.z, range: 1.35 };
     if (state.detailEl) state.detailEl.innerText = state.interactionMessage;
     SoundManager.play(390, 0.07, 'square', 0.04);
     setTimeout(() => SoundManager.play(585, 0.06, 'triangle', 0.035), 80);
@@ -2133,7 +2146,30 @@ const OS = {
       '19:archive': "Cadre archive: membre repertorie, presence narrative verrouillee par la progression.",
       '20:roomdoor': "Porte de resident: bois sombre, portrait circulaire et plaque nominative comme dans le couloir du Cirque.",
       '20:wallart': "Tableau abstrait: decor colore place entre les chambres pour casser la repetition du corridor.",
-      '20:ceilinglight': "Plafonnier chaud: repere regulier qui accentue la profondeur du long couloir."
+      '20:ceilinglight': "Plafonnier chaud: repere regulier qui accentue la profondeur du long couloir.",
+      '21:counter': "Comptoir du Cafe Cirque: espace de pause distinct de la table commune du chapiteau.",
+      '22:window': "Vitre de l'aquarium: elle separe la galerie seche du decor aquatique simule.",
+      '23:stairs': "Relief enneige: chemin de l'aventure hivernale conserve comme scene praticable.",
+      '24:target': "Cible western: accessoire de l'aventure armee, lie aux regles de confrontation de cette scene.",
+      '25:table': "Mobilier scolaire: variante d'aventure isolee de la timeline principale.",
+      '26:desk': "Bureau officiel: decor de variante politique, non confondu avec le coeur C&A.",
+      '27:exitframe': "Cadre suspendu dans le Vide: il ressemble a une issue sans prouver qu'elle mene au monde reel.",
+      '28:table': "Table de l'espace commun: point de rassemblement entre les aventures.",
+      '29:doorframe': "Porte des tubes: destination volontairement instable dans l'infrastructure du Cirque.",
+      '30:table': "Mobilier du Loser Corner: zone punitive interne, petite et volontairement inconfortable.",
+      '31:stairs': "Acces de The Nest: trace d'une aventure supprimee, conservee comme archive balisee.",
+      '32:stairs': "Escalier du palais: parcours d'audience avant la mission du convoi de sirop.",
+      '33:truck': "Camion-citerne du convoi: objectif mobile reliant le palais, les bandits et le Test Level.",
+      '34:eye': "Ame du manoir: signal de possession confine a l'Enfer de Mildenhall.",
+      '35:counter': "Plan de preparation Spudsy: commandes et cuisine sont separees en postes de travail.",
+      '36:doorframe': "Cabine sanitaire Spudsy: sous-zone de service marquee comme biohazard.",
+      '37:menu': "Ecran de formation: Jax est isole face aux consignes, hors de la salle publique.",
+      '38:scoreboard': "Panneau des Awards: Caine convertit les epreuves et relations du groupe en recompenses.",
+      '39:pillar': "Tour du phare: structure dominante de la plage et point de depart du toboggan.",
+      '40:archive': "Coffre sous-marin: deja pille, il reste comme objectif vide de la scene.",
+      '41:doorframe': "Porte du souvenir de Jax: fragment incomplet, pas sortie fiable vers le monde reel.",
+      '42:ring': "Attraction foraine: silhouette visible depuis le terrain, mais jamais exploree dans le parcours canon.",
+      '43:table': "Table principale du chapiteau: repas communs, distincts du Cafe Cirque."
     };
     const key = `${zoneId}:${prop.kind}`;
     const fallback = `${name}: objet de scene detecte. CainOS l'utilise comme repere interactif de la zone.`;
@@ -2174,6 +2210,7 @@ const OS = {
       sun: "soleil",
       memory: "fragment memoire",
       archive: "cadre archive",
+      doorframe: "cadre de porte",
       roomdoor: `porte de ${prop.label || 'resident'}`,
       wallart: "tableau abstrait",
       ceilinglight: "plafonnier"
@@ -2216,6 +2253,7 @@ const OS = {
     state.interactionMessage = choices ? choices.prompt : line;
     state.interactionChoices = choices;
     state.interactionUntil = performance.now() + (choices ? 12000 : 5600);
+    state.interactionOrigin = { x: state.player.x, z: state.player.z, range: 1.45 };
     if (state.detailEl) state.detailEl.innerText = state.interactionMessage;
     SoundManager.play(520, 0.08, 'triangle', 0.05);
   },
@@ -2228,6 +2266,7 @@ const OS = {
     state.interactionMessage = option.response;
     state.interactionChoices = null;
     state.interactionUntil = performance.now() + 7200;
+    state.interactionOrigin = { x: state.player.x, z: state.player.z, range: 1.45 };
     if (choices.avatar) {
       const delta = option.label === 'Profil' ? 1 : option.label === 'Routine' ? 0 : 3;
       this.adjustCainOSRelation(choices.avatar, delta);
@@ -2522,7 +2561,48 @@ const OS = {
       oyster: "Oyster Archive: signal secondaire.",
       bulbcreature: "Bulb Creature Archive: signal secondaire."
     };
-    const line = zoneLines[avatar]?.[zoneId] || defaultLines[avatar] || `${sprite.name}: Signal detecte.`;
+    const baseLine = zoneLines[avatar]?.[zoneId] || defaultLines[avatar] || `${sprite.name}: Signal detecte.`;
+    const followups = {
+      pomni: [
+        "Pomni: Je prefere verifier ce qui se trouve vraiment dans la piece avant de croire une nouvelle direction.",
+        "Pomni: Si le decor change encore, garde la derniere porte comme point de repere."
+      ],
+      caine: [
+        "Caine: Chaque accessoire interactif a ete place pour une experience parfaitement controlee!",
+        "Caine: Une zone sans surprise est une zone qui attend sa prochaine aventure."
+      ],
+      jax: [
+        "Jax: Fouille les accessoires. Caine cache souvent ses meilleures erreurs dans le decor.",
+        "Jax: Les panneaux expliquent les regles. Les portes montrent ou elles cassent."
+      ],
+      ragatha: [
+        "Ragatha: Prends le temps de regarder autour de toi. Les details disent souvent dans quelle aventure on se trouve.",
+        "Ragatha: Reviens vers le groupe si la piece commence a ne plus ressembler a elle-meme."
+      ],
+      kinger: [
+        "Kinger: Les objets fixes sont de bons reperes. Sauf quand ils se souviennent de ne pas l'etre.",
+        "Kinger: Une porte vue de loin parait petite. Une mauvaise idee fait exactement l'inverse."
+      ],
+      gangle: [
+        "Gangle: Examiner les accessoires me rassure. Ils ont rarement besoin que je fasse semblant d'aller bien.",
+        "Gangle: Je peux rester ici pendant que tu verifies le reste de la scene."
+      ],
+      zooble: [
+        "Zooble: Le decor est plus honnete quand il admet que c'est un decor.",
+        "Zooble: Explore si tu veux. Moi, je garde un oeil sur les limites de la piece."
+      ],
+      gummigoo: [
+        "Gummigoo: Les objets ont une place prevue. C'est ce qui rend leurs souvenirs si suspects.",
+        "Gummigoo: Une route peut etre immense et ne mener nulle part si quelqu'un l'a ecrite comme ca."
+      ]
+    };
+    const visitKey = `${zoneId}:${avatar}:${sprite.name}`;
+    const visitCount = this.circusDoom?.dialogueVisits?.get(visitKey) || 0;
+    this.circusDoom?.dialogueVisits?.set(visitKey, visitCount + 1);
+    const alternatives = followups[avatar] || [];
+    const line = visitCount > 0 && alternatives.length
+      ? alternatives[(visitCount - 1) % alternatives.length]
+      : baseLine;
     const profileKey = this.getCircusCharacterProfileKey(sprite);
     const profileLine = profileKey ? this.getCircusProfileSummary(profileKey) : "";
     return profileLine ? `${line} ${profileLine}` : line;
@@ -2703,11 +2783,9 @@ const OS = {
     if (keys.has('arrowdown') || keys.has('s')) move -= speed;
     if (move !== 0) {
       tryMove(player.x + Math.cos(player.a) * move, player.z + Math.sin(player.a) * move);
-      state.interactionChoices = null;
     }
     if (keys.has('a')) {
       tryMove(player.x + Math.cos(player.a - Math.PI / 2) * speed, player.z + Math.sin(player.a - Math.PI / 2) * speed);
-      state.interactionChoices = null;
     }
 
     const movedDistance = Math.hypot(player.x - previousX, player.z - previousZ);
@@ -2728,14 +2806,33 @@ const OS = {
     const portal = state.portals[state.currentZoneId];
     if (state.zoneEl) {
       if (portal) {
-        state.zoneEl.innerText = `ZONE: ${portal.name}`;
+        const found = [...state.discoveries].filter(id => id.startsWith(`${state.currentZoneId}:`)).length;
+        const total = this.getCircusZoneProps(state.currentZoneId).length;
+        state.zoneEl.innerText = `ZONE: ${portal.name} | TRACES ${found}/${total}`;
       } else {
         state.zoneEl.innerText = 'ZONE: PASSERELLE INTERNE';
+      }
+    }
+    if (state.interactionMessage && state.interactionOrigin) {
+      const distanceFromContact = Math.hypot(
+        state.player.x - state.interactionOrigin.x,
+        state.player.z - state.interactionOrigin.z
+      );
+      if (distanceFromContact > state.interactionOrigin.range) {
+        state.interactionChoices = null;
+        state.interactionMessage = '';
+        state.interactionUntil = 0;
+        state.interactionOrigin = null;
       }
     }
     if (state.interactionChoices && performance.now() > state.interactionUntil) {
       state.interactionChoices = null;
       state.interactionMessage = '';
+      state.interactionOrigin = null;
+    }
+    if (state.interactionMessage && performance.now() > state.interactionUntil) {
+      state.interactionMessage = '';
+      state.interactionOrigin = null;
     }
     if (state.detailEl) {
       if (state.interactionMessage && performance.now() < state.interactionUntil) {
@@ -2962,20 +3059,24 @@ const OS = {
       const sideShade = hit.nearVertical ? 0.92 : 0.72;
       const shadeFactor = depthShade * sideShade;
 
+      const hitX = state.player.x + rayCos * hit.dist;
+      const hitZ = state.player.z + raySin * hit.dist;
+      const wallU = hit.nearVertical ? (hitZ - Math.floor(hitZ)) : (hitX - Math.floor(hitX));
       if (hit.cell >= 100) {
-        // Portal / Door wall base
+        // Recessed portal: the raycast opening and the physical door share one depth plane.
         const baseColor = this.getCircusWallColor(hit.cell, zone, state);
-        ctx.fillStyle = this.shadeHex(baseColor, shadeFactor);
+        const frameColumn = wallU < 0.14 || wallU > 0.86;
+        ctx.fillStyle = frameColumn
+          ? this.shadeHex(baseColor, Math.min(1, shadeFactor * 1.08))
+          : this.shadeHex('#090611', Math.max(0.55, shadeFactor));
         ctx.fillRect(x, y, strip, Math.ceil(wallH));
-        ctx.fillStyle = 'rgba(255,255,255,0.16)';
-        ctx.fillRect(x, y + wallH * 0.1, strip, Math.max(1, wallH * 0.04));
-        ctx.fillStyle = 'rgba(0,0,0,0.28)';
-        ctx.fillRect(x, y + wallH * 0.46, strip, Math.max(1, wallH * 0.08));
+        if (frameColumn) {
+          ctx.fillStyle = 'rgba(255,241,168,0.24)';
+          ctx.fillRect(x, y, strip, Math.max(1, wallH * 0.035));
+        }
       } else {
         // Normal wall - procedural motifs based on series decors
         const motif = (state.scenes[state.currentZoneId] || state.scenes[2])?.motif || 'circus';
-        const hitX = state.player.x + rayCos * hit.dist;
-        const hitZ = state.player.z + raySin * hit.dist;
         const u = hit.nearVertical ? (hitX % 1) : (hitZ % 1);
 
         if (motif === 'circus' || motif === 'final') {
@@ -4225,7 +4326,7 @@ const OS = {
 
   drawCircusDepthProps(ctx, w, h, state) {
     const props = this.getCircusZoneProps(state.currentZoneId)
-      .map(prop => ({ ...prop, projected: this.projectCircusPoint(prop, state, w, h) }))
+      .map((prop, interactionId) => ({ ...prop, interactionId, projected: this.projectCircusPoint(prop, state, w, h) }))
       .filter(prop => prop.projected)
       .sort((a, b) => b.projected.depth - a.projected.depth);
     props.forEach(prop => {
@@ -5099,8 +5200,8 @@ const OS = {
       const viewToPlayerX = (state.player.x - door.x) / viewLength;
       const viewToPlayerZ = (state.player.z - door.z) / viewLength;
       const facing = Math.max(0.16, Math.abs(viewToPlayerX * door.inwardX + viewToPlayerZ * door.inwardZ));
-      const doorH = Math.min(h * 1.35, (h * architecture.wallScale * 0.84) / Math.max(0.18, p.depth));
-      const doorW = doorH * 0.46 * facing;
+      const doorH = Math.min(h * 0.9, (h * architecture.wallScale * 0.76) / Math.max(0.24, p.depth));
+      const doorW = doorH * 0.5 * facing;
       if (doorH < 3 || doorW < 1.5) return;
       const x = p.x - doorW / 2;
       const baseY = Math.min(h - 15, p.y || this.getCircusProjectedFloorY(p.depth, h));
@@ -5120,8 +5221,8 @@ const OS = {
       ctx.beginPath();
       ctx.ellipse(p.x, baseY + Math.max(2, 3 * scale), doorW * 0.66, Math.max(3, 7 * scale), 0, 0, Math.PI * 2);
       ctx.fill();
-      ctx.fillStyle = 'rgba(0,0,0,0.34)';
-      ctx.fillRect(x - doorW * 0.16, y - doorH * 0.05, doorW * 1.32, doorH * 1.08);
+      ctx.fillStyle = 'rgba(0,0,0,0.46)';
+      ctx.fillRect(x - doorW * 0.13, y - doorH * 0.04, doorW * 1.26, doorH * 1.05);
       ctx.fillStyle = locked ? '#14141a' : '#100020';
       ctx.strokeStyle = selected ? '#ffffff' : (locked ? '#56505f' : target.color);
       ctx.lineWidth = selected ? 4 : 2;
@@ -5149,12 +5250,12 @@ const OS = {
       ctx.strokeRect(x - doorW * 0.2, baseY - Math.max(4, 7 * scale), doorW * 1.4, Math.max(5, 9 * scale));
       if (p.distance < 5.5 || selected) {
         ctx.fillStyle = selected ? '#fff1a8' : (locked ? '#8b8794' : target.color);
-        ctx.font = `bold ${Math.max(4, 11 * scale)}px Courier New`;
+        ctx.font = `bold ${Math.max(5, Math.min(12, 11 * scale))}px Courier New`;
         ctx.textAlign = 'center';
         ctx.fillText(locked ? 'LOCK' : target.short, p.x, y - Math.max(2, 5 * scale));
       }
       if (p.distance <= 1.85 && !locked) {
-        ctx.font = `bold ${Math.max(6, 8 * scale)}px Courier New`;
+        ctx.font = `bold ${Math.max(6, Math.min(11, 8 * scale))}px Courier New`;
         ctx.fillText('ENTREE / CLIC', p.x, y + doorH + Math.max(7, 10 * scale));
       }
       ctx.restore();
