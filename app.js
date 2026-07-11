@@ -2993,6 +2993,7 @@ const OS = {
     state.hotspots = [];
 
     this.drawCircusRaycastRoom(ctx, w, h, state, zone);
+    this.drawCircusWorldGeometryProps(ctx, w, h, state);
     this.drawCircusZoneEvents(ctx, w, h, state, zone);
     this.drawCircusDepthProps(ctx, w, h, state);
     this.drawCircusPhysicalDoors(ctx, w, h, portals, state);
@@ -3003,12 +3004,34 @@ const OS = {
   },
 
   canMoveInCircusRoom(x, z) {
-    const room = this.circusDoom?.room;
+    const state = this.circusDoom;
+    const room = state?.room;
     if (!room) return false;
     const ix = Math.floor(x);
     const iz = Math.floor(z);
     if (ix < 0 || iz < 0 || ix >= room.size || iz >= room.size) return false;
-    return room.grid[iz]?.[ix] === 0;
+    if (room.grid[iz]?.[ix] !== 0) return false;
+
+    return !this.getCircusWorldColliders(state).some(collider => {
+      const dx = x - collider.x;
+      const dz = z - collider.z;
+      if (collider.radius) return Math.hypot(dx, dz) < collider.radius + 0.18;
+      return Math.abs(dx) < collider.width / 2 + 0.18 && Math.abs(dz) < collider.depth / 2 + 0.18;
+    });
+  },
+
+  getCircusWorldColliders(state) {
+    if (state.worldColliderZoneId === state.currentZoneId && state.worldColliders) return state.worldColliders;
+    const collidableKinds = new Set(['table', 'counter', 'desk', 'pillar', 'crate', 'barrel', 'tent']);
+    state.worldColliders = this.getCircusZoneProps(state.currentZoneId)
+      .filter(prop => collidableKinds.has(prop.kind))
+      .map(prop => {
+        const center = this.resolveCircusWorldPoint(prop, state);
+        const dimensions = this.getCircusWorldPropDimensions(prop, state);
+        return { ...center, ...dimensions };
+      });
+    state.worldColliderZoneId = state.currentZoneId;
+    return state.worldColliders;
   },
 
   resolveCircusWorldPoint(obj, state) {
@@ -4490,7 +4513,262 @@ const OS = {
     return extras[zoneId] || [];
   },
 
+  getCircusWorldGeometryKinds() {
+    return new Set(['ring', 'base', 'stairs', 'table', 'counter', 'desk', 'pillar', 'crate', 'barrel', 'tent']);
+  },
+
+  projectCircusPropGroundVertex(prop, offsetX, offsetZ, state, w, h, height = 0) {
+    const center = this.resolveCircusWorldPoint(prop, state);
+    const point = this.projectCircusFloorPoint(
+      center.x + offsetX,
+      center.z + offsetZ,
+      state,
+      w,
+      h,
+      h * 0.48,
+      Math.PI / 3.05
+    );
+    if (!point) return null;
+    const angle = state.player.a;
+    const dx = center.x + offsetX - state.player.x;
+    const dz = center.z + offsetZ - state.player.z;
+    const forward = dx * Math.cos(angle) + dz * Math.sin(angle);
+    return {
+      ...point,
+      depth: forward,
+      y: point.y - (h * height * 0.34) / Math.max(0.28, forward)
+    };
+  },
+
+  getCircusWorldPropDimensions(prop, state) {
+    if (prop.kind === 'ring') {
+      const centered = Math.abs(prop.x || 0) < 0.35;
+      const scale = state.currentZoneId === 2 && centered ? 1 : centered ? 0.62 : 0.34;
+      return {
+        outerX: 2.15 * scale,
+        outerZ: 1.35 * scale,
+        innerX: 1.82 * scale,
+        innerZ: 1.06 * scale,
+        height: 0.12 * Math.max(0.7, scale)
+      };
+    }
+    return {
+      table: { width: 1.35, depth: 0.82, height: 0.52, apron: 0.1 },
+      counter: { width: 1.9, depth: 0.72, height: 0.86, apron: 0.26 },
+      desk: { width: 1.5, depth: 0.78, height: 0.74, apron: 0.2 },
+      pillar: { radius: 0.28, height: 2.05, segments: 10 },
+      barrel: { radius: 0.34, height: 0.72, segments: 10 },
+      crate: { width: 0.72, depth: 0.72, height: 0.66 },
+      tent: { width: 3.1, depth: 2.2, wallHeight: 1.05, roofHeight: 2.15 }
+    }[prop.kind] || null;
+  },
+
+  drawCircusGroundPolygon(ctx, points, fill, stroke, lineWidth = 1) {
+    if (!points?.length || points.some(point => !point)) return false;
+    ctx.beginPath();
+    points.forEach((point, index) => {
+      if (index === 0) ctx.moveTo(point.x, point.y);
+      else ctx.lineTo(point.x, point.y);
+    });
+    ctx.closePath();
+    if (fill) {
+      ctx.fillStyle = fill;
+      ctx.fill();
+    }
+    if (stroke) {
+      ctx.strokeStyle = stroke;
+      ctx.lineWidth = lineWidth;
+      ctx.stroke();
+    }
+    return true;
+  },
+
+  drawCircusWorldGeometryProps(ctx, w, h, state) {
+    const worldKinds = this.getCircusWorldGeometryKinds();
+    const props = this.getCircusZoneProps(state.currentZoneId)
+      .map((prop, interactionId) => ({
+        ...prop,
+        interactionId,
+        active: state.activeProps.get(`${state.currentZoneId}:${interactionId}`) === true,
+        projected: this.projectCircusPoint(prop, state, w, h)
+      }))
+      .filter(prop => worldKinds.has(prop.kind) && prop.projected && this.isCircusWorldPointVisible(prop, state, 0.3))
+      .sort((a, b) => b.projected.depth - a.projected.depth);
+
+    props.forEach(prop => {
+      const depthLight = this.getCircusDepthLight(prop.projected.depth, state, false);
+      const light = 0.54 + depthLight * 0.46;
+      const color = this.shadeHex(prop.color || '#fff1a8', light);
+      ctx.save();
+      if (prop.active) {
+        ctx.shadowColor = prop.color || '#7df0ff';
+        ctx.shadowBlur = 12;
+      }
+
+      if (prop.kind === 'ring') {
+        const { outerX, outerZ, innerX, innerZ, height } = this.getCircusWorldPropDimensions(prop, state);
+        const segments = 28;
+        for (let index = 0; index < segments; index++) {
+          const a0 = (index / segments) * Math.PI * 2;
+          const a1 = ((index + 1) / segments) * Math.PI * 2;
+          const outer0 = [Math.cos(a0) * outerX, Math.sin(a0) * outerZ];
+          const outer1 = [Math.cos(a1) * outerX, Math.sin(a1) * outerZ];
+          const inner1 = [Math.cos(a1) * innerX, Math.sin(a1) * innerZ];
+          const inner0 = [Math.cos(a0) * innerX, Math.sin(a0) * innerZ];
+          const top = [
+            this.projectCircusPropGroundVertex(prop, ...outer0, state, w, h, height),
+            this.projectCircusPropGroundVertex(prop, ...outer1, state, w, h, height),
+            this.projectCircusPropGroundVertex(prop, ...inner1, state, w, h, height),
+            this.projectCircusPropGroundVertex(prop, ...inner0, state, w, h, height)
+          ];
+          const segmentColor = index % 2 === 0 ? color : this.shadeHex('#fff1a8', light);
+          const outerSide = [
+            this.projectCircusPropGroundVertex(prop, ...outer0, state, w, h),
+            this.projectCircusPropGroundVertex(prop, ...outer1, state, w, h),
+            top[1],
+            top[0]
+          ];
+          this.drawCircusGroundPolygon(ctx, outerSide, this.shadeHex(segmentColor, 0.55), '#4a1120', 1);
+          this.drawCircusGroundPolygon(ctx, top, `${segmentColor}ee`, '#4a1120', 1);
+        }
+      } else if (prop.kind === 'base') {
+        const diamond = [
+          this.projectCircusPropGroundVertex(prop, 0, -0.48, state, w, h),
+          this.projectCircusPropGroundVertex(prop, 0.48, 0, state, w, h),
+          this.projectCircusPropGroundVertex(prop, 0, 0.48, state, w, h),
+          this.projectCircusPropGroundVertex(prop, -0.48, 0, state, w, h)
+        ];
+        this.drawCircusGroundPolygon(ctx, diamond, '#f7f3dd', color, 2);
+      } else if (prop.kind === 'pillar' || prop.kind === 'barrel') {
+        const dimensions = this.getCircusWorldPropDimensions(prop, state);
+        const bottom = [];
+        const top = [];
+        for (let index = 0; index < dimensions.segments; index++) {
+          const angle = (index / dimensions.segments) * Math.PI * 2;
+          const x = Math.cos(angle) * dimensions.radius;
+          const z = Math.sin(angle) * dimensions.radius;
+          bottom.push(this.projectCircusPropGroundVertex(prop, x, z, state, w, h));
+          top.push(this.projectCircusPropGroundVertex(prop, x, z, state, w, h, dimensions.height));
+        }
+        if (bottom.every(Boolean) && top.every(Boolean)) {
+          const faces = bottom.map((point, index) => {
+            const next = (index + 1) % bottom.length;
+            return {
+              depth: (point.depth + bottom[next].depth) / 2,
+              points: [point, bottom[next], top[next], top[index]],
+              index
+            };
+          }).sort((a, b) => b.depth - a.depth);
+          faces.forEach(face => {
+            const faceLight = face.index % 2 === 0 ? 0.72 : 0.58;
+            this.drawCircusGroundPolygon(ctx, face.points, this.shadeHex(color, faceLight), '#231d2b', 1);
+          });
+          this.drawCircusGroundPolygon(ctx, top, this.shadeHex(color, 1.08), '#fff1a866', 1);
+          if (prop.kind === 'barrel') {
+            const bandHeight = dimensions.height * 0.58;
+            const band = top.map((_, index) => {
+              const angle = (index / dimensions.segments) * Math.PI * 2;
+              return this.projectCircusPropGroundVertex(
+                prop,
+                Math.cos(angle) * dimensions.radius * 1.03,
+                Math.sin(angle) * dimensions.radius * 1.03,
+                state, w, h, bandHeight
+              );
+            });
+            this.drawCircusGroundPolygon(ctx, band, null, '#d3c6a8', 2);
+          }
+        }
+      } else if (prop.kind === 'crate') {
+        const dimensions = this.getCircusWorldPropDimensions(prop, state);
+        const halfW = dimensions.width / 2;
+        const halfD = dimensions.depth / 2;
+        const corners = [[-halfW, -halfD], [halfW, -halfD], [halfW, halfD], [-halfW, halfD]];
+        const bottom = corners.map(([x, z]) => this.projectCircusPropGroundVertex(prop, x, z, state, w, h));
+        const top = corners.map(([x, z]) => this.projectCircusPropGroundVertex(prop, x, z, state, w, h, dimensions.height));
+        if (bottom.every(Boolean) && top.every(Boolean)) {
+          const faces = bottom.map((point, index) => {
+            const next = (index + 1) % bottom.length;
+            return { depth: (point.depth + bottom[next].depth) / 2, points: [point, bottom[next], top[next], top[index]] };
+          }).sort((a, b) => b.depth - a.depth);
+          faces.forEach((face, index) => this.drawCircusGroundPolygon(
+            ctx, face.points, this.shadeHex(color, index % 2 === 0 ? 0.64 : 0.76), '#211d28', 1
+          ));
+          this.drawCircusGroundPolygon(ctx, top, this.shadeHex(color, 1.08), '#fff1a855', 1);
+        }
+      } else if (prop.kind === 'tent') {
+        const dimensions = this.getCircusWorldPropDimensions(prop, state);
+        const halfW = dimensions.width / 2;
+        const halfD = dimensions.depth / 2;
+        const corners = [[-halfW, -halfD], [halfW, -halfD], [halfW, halfD], [-halfW, halfD]];
+        const bottom = corners.map(([x, z]) => this.projectCircusPropGroundVertex(prop, x, z, state, w, h));
+        const wallTop = corners.map(([x, z]) => this.projectCircusPropGroundVertex(prop, x, z, state, w, h, dimensions.wallHeight));
+        const ridgeNear = this.projectCircusPropGroundVertex(prop, 0, -halfD, state, w, h, dimensions.roofHeight);
+        const ridgeFar = this.projectCircusPropGroundVertex(prop, 0, halfD, state, w, h, dimensions.roofHeight);
+        if (bottom.every(Boolean) && wallTop.every(Boolean) && ridgeNear && ridgeFar) {
+          const wallFaces = bottom.map((point, index) => {
+            const next = (index + 1) % bottom.length;
+            return { depth: (point.depth + bottom[next].depth) / 2, points: [point, bottom[next], wallTop[next], wallTop[index]], index };
+          }).sort((a, b) => b.depth - a.depth);
+          wallFaces.forEach(face => this.drawCircusGroundPolygon(
+            ctx, face.points, face.index % 2 === 0 ? '#e53935' : '#fff1a8', '#4a1120', 1
+          ));
+          this.drawCircusGroundPolygon(ctx, [wallTop[0], wallTop[1], ridgeNear], '#2a58d8', '#fff1a8', 1);
+          this.drawCircusGroundPolygon(ctx, [wallTop[1], wallTop[2], ridgeFar, ridgeNear], '#e53935', '#fff1a8', 1);
+          this.drawCircusGroundPolygon(ctx, [wallTop[2], wallTop[3], ridgeFar], '#ffd84a', '#fff1a8', 1);
+          this.drawCircusGroundPolygon(ctx, [wallTop[3], wallTop[0], ridgeNear, ridgeFar], '#2a58d8', '#fff1a8', 1);
+        }
+      } else if (prop.kind === 'stairs') {
+        for (let step = 0; step < 4; step++) {
+          const halfW = 0.9 - step * 0.09;
+          const nearZ = 0.55 - step * 0.34;
+          const farZ = nearZ - 0.3;
+          const height = 0.12 + step * 0.16;
+          const tread = [
+            this.projectCircusPropGroundVertex(prop, -halfW, nearZ, state, w, h, height),
+            this.projectCircusPropGroundVertex(prop, halfW, nearZ, state, w, h, height),
+            this.projectCircusPropGroundVertex(prop, halfW, farZ, state, w, h, height),
+            this.projectCircusPropGroundVertex(prop, -halfW, farZ, state, w, h, height)
+          ];
+          const riser = [
+            this.projectCircusPropGroundVertex(prop, -halfW, nearZ, state, w, h, Math.max(0, height - 0.16)),
+            this.projectCircusPropGroundVertex(prop, halfW, nearZ, state, w, h, Math.max(0, height - 0.16)),
+            tread[1],
+            tread[0]
+          ];
+          this.drawCircusGroundPolygon(ctx, riser, this.shadeHex(color, 0.52), '#211d28', 1);
+          this.drawCircusGroundPolygon(ctx, tread, this.shadeHex(color, 0.72 + step * 0.07), '#fff1a855', 1);
+        }
+      } else {
+        const dimensions = this.getCircusWorldPropDimensions(prop, state);
+        const halfW = dimensions.width / 2;
+        const halfD = dimensions.depth / 2;
+        const corners = [[-halfW, -halfD], [halfW, -halfD], [halfW, halfD], [-halfW, halfD]];
+        const feet = corners.map(([x, z]) => this.projectCircusPropGroundVertex(prop, x, z, state, w, h));
+        const apronBottom = corners.map(([x, z]) => this.projectCircusPropGroundVertex(
+          prop, x, z, state, w, h, dimensions.height - dimensions.apron
+        ));
+        const top = corners.map(([x, z]) => this.projectCircusPropGroundVertex(prop, x, z, state, w, h, dimensions.height));
+        if (feet.every(Boolean) && apronBottom.every(Boolean) && top.every(Boolean)) {
+          ctx.strokeStyle = this.shadeHex(color, 0.55);
+          ctx.lineWidth = Math.max(1, 2 / Math.max(0.6, prop.projected.depth));
+          feet.forEach((point, index) => {
+            ctx.beginPath();
+            ctx.moveTo(point.x, point.y);
+            ctx.lineTo(apronBottom[index].x, apronBottom[index].y);
+            ctx.stroke();
+          });
+          this.drawCircusGroundPolygon(ctx, [apronBottom[0], apronBottom[1], top[1], top[0]], this.shadeHex(color, 0.5), null);
+          this.drawCircusGroundPolygon(ctx, [apronBottom[1], apronBottom[2], top[2], top[1]], this.shadeHex(color, 0.62), null);
+          this.drawCircusGroundPolygon(ctx, feet, 'rgba(0,0,0,0.22)', null);
+          this.drawCircusGroundPolygon(ctx, top, `${color}e8`, '#fff1a866', 1);
+        }
+      }
+      ctx.restore();
+    });
+  },
+
   drawCircusDepthProps(ctx, w, h, state) {
+    const worldKinds = this.getCircusWorldGeometryKinds();
     const props = this.getCircusZoneProps(state.currentZoneId)
       .map((prop, interactionId) => ({
         ...prop,
@@ -4501,6 +4779,10 @@ const OS = {
       .filter(prop => prop.projected)
       .sort((a, b) => b.projected.depth - a.projected.depth);
     props.forEach(prop => {
+      if (worldKinds.has(prop.kind)) {
+        if (this.isCircusWorldPointVisible(prop, state, 0.3)) this.addCircusPropHotspot(state, prop);
+        return;
+      }
       const box = this.getCircusPropScreenBox(prop);
       const clipBox = {
         x: box.x - box.w * 0.22,
