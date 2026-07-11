@@ -284,6 +284,10 @@ const OS = {
     this.setupIntrusionTriggers();
     this.updateDiagnosticsUI();
     this.applySystemStateUI();
+    const fpsObjectiveAudit = this.auditCircusZoneObjectives();
+    document.body.dataset.fpsObjectiveAudit = fpsObjectiveAudit.ok ? 'ok' : fpsObjectiveAudit.errors.join(' | ');
+    document.body.dataset.fpsObjectiveMissions = String(fpsObjectiveAudit.missionCount);
+    if (!fpsObjectiveAudit.ok) console.warn('FPS objective audit:', fpsObjectiveAudit.errors);
   },
 
   applyButtonTooltips() {
@@ -1694,6 +1698,8 @@ const OS = {
       activeProps: new Map(),
       exploredCells: new Map(),
       noticedCharacters: new Set(),
+      talkedCharacters: new Set(),
+      completedZoneObjectives: new Set(),
       lastZoneEventId: null,
       nextFootstepAt: 0,
       footstepSide: -1,
@@ -2097,6 +2103,127 @@ const OS = {
     return best;
   },
 
+  getCircusZoneObjectiveConfig(zoneId) {
+    if (this.circusZoneObjectiveConfigs) return this.circusZoneObjectiveConfigs[zoneId] || null;
+    const scan = (kind, label, count = 1) => ({ type: 'scan', kind, label, count });
+    const activate = (kind, label, count = 1) => ({ type: 'activate', kind, label, count });
+    const talk = (avatar, label) => ({ type: 'talk', avatar, label });
+    const objectives = {
+      2: { title: 'RECALER LA PISTE', steps: [scan('ring', 'Inspecter la piste centrale'), activate('spotlight', 'Activer deux projecteurs', 2), talk('caine', 'Interroger Caine')] },
+      3: { title: 'CARTOGRAPHIER LE TERRAIN', steps: [scan('tent', 'Examiner le chapiteau exterieur'), scan('ring', 'Reperer une attraction'), talk('gloinkqueenscale', 'Observer la Gloink Queen')] },
+      4: { title: 'CONFINER LE SIGNAL KAUFMO', steps: [scan('eye', 'Identifier le signal d abstraction'), scan('crate', 'Verifier les caisses du cellar'), talk('kaufmo', 'Approcher Kaufmo')] },
+      5: { title: 'TESTER LA FAUSSE SORTIE', steps: [scan('exitframe', 'Comparer deux cadres de sortie', 2), scan('desk', 'Inspecter le bureau impossible'), talk('pomni', 'Parler des portes avec Pomni')] },
+      6: { title: 'SECURISER LE CONVOI', steps: [scan('truck', 'Verifier le camion-citerne'), scan('candy', 'Relever deux obstacles bonbon', 2), talk('gummigoo', 'Coordonner Gummigoo')] },
+      7: { title: 'LIRE LE TEST LEVEL', steps: [activate('console', 'Activer la console de test'), activate('gridnode', 'Synchroniser deux noeuds', 2), talk('mannequin', 'Questionner le mannequin C&A')] },
+      8: { title: 'ECLAIRER MILDENHALL', steps: [scan('window', 'Verifier une fenetre du manoir'), activate('candle', 'Allumer une bougie'), talk('kinger', 'Rester avec Kinger')] },
+      9: { title: 'DESCENDRE AU SOUS-SOL', steps: [scan('stairs', 'Examiner l escalier'), scan('barrel', 'Verifier les barils'), talk('kinger', 'Ecouter Kinger dans l obscurite')] },
+      10: { title: 'TENIR LE SERVICE SPUDSY', steps: [scan('counter', 'Verifier le comptoir'), activate('menu', 'Lire deux menus de service', 2), talk('workgangle', 'Aider Gangle')] },
+      11: { title: 'TRIER LES MICRO-AVENTURES', steps: [activate('card', 'Classer deux cartes suggestion', 2), scan('doorframe', 'Identifier une porte de variante'), talk('orbsman', 'Consulter Orbsman')] },
+      12: { title: 'PREPARER LE MATCH', steps: [scan('base', 'Verifier trois bases', 3), activate('scoreboard', 'Allumer le scoreboard'), talk('baseballjax', 'Parler a Jax avant le match')] },
+      13: { title: 'SECURISER L ARENE', steps: [scan('target', 'Verifier trois cibles', 3), scan('crate', 'Inspecter les caisses'), talk('jax', 'Confronter Jax')] },
+      14: { title: 'SONDER LE LAC', steps: [scan('umbrella', 'Verifier les parasols'), scan('wave', 'Analyser deux boucles d eau', 2), talk('beachgangle', 'Parler a Gangle sur la plage')] },
+      15: { title: 'OUVRIR LA COUCHE ADMIN', steps: [activate('console', 'Activer la console admin'), activate('gridnode', 'Synchroniser un noeud'), talk('ming', 'Questionner Ming')] },
+      16: { title: 'AUDITER LE COEUR C&A', steps: [scan('desk', 'Inspecter le bureau de Caine'), activate('console', 'Activer la console C&A'), talk('caine', 'Demander des comptes a Caine')] },
+      17: { title: 'RECONSTRUIRE LE SOUVENIR', steps: [scan('memory', 'Rassembler trois fragments', 3), talk('queenie', 'Ecouter l archive Queenie')] },
+      18: { title: 'STABILISER LE FINAL', steps: [activate('spotlight', 'Recaler le projecteur final'), talk('ribbit', 'Identifier le signal Ribbit'), talk('caine', 'Verifier l etat de Caine')] },
+      19: { title: 'INDEXER LES ANCIENS MEMBRES', steps: [activate('archive', 'Ouvrir trois cadres archive', 3), talk('ribbit', 'Consulter Ribbit')] },
+      20: { title: 'RELEVER LE COULOIR', steps: [scan('roomdoor', 'Verifier trois portes de resident', 3), scan('ceilinglight', 'Suivre les plafonniers'), talk('pomni', 'Retrouver Pomni')] },
+      21: { title: 'REMONTER LES ECHOS DU CAFE', steps: [scan('counter', 'Inspecter le comptoir'), scan('table', 'Verifier deux tables', 2), talk('gangle', 'Parler avec Gangle')] },
+      22: { title: 'CONTROLER L AQUARIUM', steps: [scan('window', 'Verifier deux vitres', 2), scan('wave', 'Analyser le courant'), talk('pomni', 'Rejoindre Pomni')] },
+      23: { title: 'RECONSTITUER LE SOMMET', steps: [scan('stairs', 'Relever le chemin enneige'), talk('jax', 'Ecouter le souvenir de Jax'), talk('ribbit', 'Comparer le souvenir Ribbit')] },
+      24: { title: 'BALISER LA CHASSE', steps: [scan('target', 'Verifier deux cibles western', 2), scan('crate', 'Inspecter les provisions'), talk('hunterjax', 'Parler au chasseur Jax')] },
+      25: { title: 'RECONSTRUIRE LE LYCEE', steps: [scan('table', 'Verifier deux pupitres', 2), activate('card', 'Lire une carte scolaire'), talk('japanesegangle', 'Parler a Gangle')] },
+      26: { title: 'VERIFIER LA PRESIDENCE', steps: [scan('desk', 'Inspecter le bureau officiel'), scan('doorframe', 'Controler les acces'), talk('pomni', 'Consulter Pomni')] },
+      27: { title: 'GARDER UN REPERE DANS LE VIDE', steps: [scan('exitframe', 'Fixer le cadre de sortie'), scan('eye', 'Relever les deux signaux', 2)] },
+      28: { title: 'RECALER L ESPACE COMMUN', steps: [scan('table', 'Verifier la table centrale'), scan('ring', 'Inspecter le repere circulaire'), talk('ragatha', 'Retrouver Ragatha')] },
+      29: { title: 'CARTOGRAPHIER LES TUBES', steps: [scan('doorframe', 'Identifier trois cadres de porte', 3), scan('ring', 'Verifier deux boucles de tube', 2)] },
+      30: { title: 'INSPECTER LE LOSER CORNER', steps: [scan('table', 'Verifier le mobilier'), scan('window', 'Localiser l aquarium'), talk('zooble', 'Parler a Zooble')] },
+      31: { title: 'BALISER THE NEST', steps: [scan('stairs', 'Verifier l acces archive'), scan('window', 'Relever deux ouvertures', 2), talk('pomni', 'Rassurer Pomni')] },
+      32: { title: 'PREPARER L AUDIENCE ROYALE', steps: [scan('stairs', 'Verifier l escalier du palais'), scan('candy', 'Relever deux ornements', 2), talk('loolilalu', 'Consulter Loolilalu')] },
+      33: { title: 'REMETTRE LE TANKER EN ROUTE', steps: [scan('truck', 'Verifier le camion-citerne'), scan('candy', 'Reperer deux obstacles', 2), talk('gummigoo', 'Retrouver Gummigoo')] },
+      34: { title: 'CONTENIR LES AMES', steps: [scan('eye', 'Identifier l ame du manoir'), activate('candle', 'Maintenir une source de lumiere'), talk('kinger', 'Rester avec Kinger')] },
+      35: { title: 'RELANCER LA CUISINE', steps: [scan('counter', 'Verifier le poste de preparation'), activate('menu', 'Traiter deux tickets', 2), talk('workgangle', 'Aider Gangle')] },
+      36: { title: 'ISOLER LE BIOHAZARD', steps: [scan('doorframe', 'Verifier deux cabines', 2), scan('barrel', 'Identifier le risque'), talk('pomni', 'Prevenir Pomni')] },
+      37: { title: 'ARRETER LA FORMATION', steps: [activate('menu', 'Interrompre l ecran de formation'), scan('spotlight', 'Verifier le projecteur'), talk('jax', 'Parler a Jax')] },
+      38: { title: 'PREPARER LES AWARDS', steps: [activate('scoreboard', 'Allumer le panneau des Awards'), scan('stairs', 'Verifier l acces scene'), talk('caine', 'Demander le verdict a Caine')] },
+      39: { title: 'ALIGNER LE PHARE', steps: [scan('pillar', 'Verifier la tour du phare'), scan('stairs', 'Inspecter le depart du toboggan'), talk('jax', 'Rejoindre Jax')] },
+      40: { title: 'RETROUVER LE COFFRE', steps: [activate('archive', 'Ouvrir le coffre deja pille'), scan('wave', 'Analyser deux courants', 2), talk('beachgangle', 'Parler a Gangle')] },
+      41: { title: 'FIXER LE SOUVENIR C&A', steps: [scan('doorframe', 'Verifier la porte du souvenir'), scan('desk', 'Inspecter le mobilier efface'), talk('jax', 'Ecouter Jax')] },
+      42: { title: 'RELEVER LA FETE FORAINE', steps: [scan('ring', 'Verifier deux attractions', 2), scan('pillar', 'Identifier le repere central'), talk('caine', 'Questionner Caine')] },
+      43: { title: 'PREPARER LE REPAS', steps: [scan('table', 'Verifier trois tables', 3), activate('menu', 'Lire le menu du repas'), talk('kinger', 'Rejoindre Kinger')] }
+    };
+    this.circusZoneObjectiveConfigs = objectives;
+    return objectives[zoneId] || null;
+  },
+
+  auditCircusZoneObjectives() {
+    const activatableKinds = new Set(['console', 'gridnode', 'spotlight', 'candle', 'target', 'scoreboard', 'menu', 'card', 'archive', 'memory', 'ring', 'doorframe']);
+    const errors = [];
+    let missionCount = 0;
+    for (let zoneId = 2; zoneId <= 43; zoneId++) {
+      const config = this.getCircusZoneObjectiveConfig(zoneId);
+      if (!config) continue;
+      missionCount++;
+      const props = this.getCircusZoneProps(zoneId);
+      const avatars = new Set(this.getCircusZoneSprites(zoneId).map(sprite => sprite.avatar || sprite.type));
+      config.steps.forEach(step => {
+        if (step.type === 'talk' && !avatars.has(step.avatar)) {
+          errors.push(`ZONE ${zoneId}: PNJ ${step.avatar} absent pour ${step.label}`);
+          return;
+        }
+        if (step.type === 'scan' || step.type === 'activate') {
+          const available = props.filter(prop => prop.kind === step.kind).length;
+          if (available < (step.count || 1)) {
+            errors.push(`ZONE ${zoneId}: ${step.kind} ${available}/${step.count || 1} pour ${step.label}`);
+          }
+          if (step.type === 'activate' && !activatableKinds.has(step.kind)) {
+            errors.push(`ZONE ${zoneId}: ${step.kind} n est pas activable`);
+          }
+        }
+      });
+    }
+    return { ok: errors.length === 0, missionCount, errors };
+  },
+
+  getCircusZoneObjectiveStatus(zoneId, state) {
+    const config = this.getCircusZoneObjectiveConfig(zoneId);
+    if (!config || !state) return null;
+    const props = this.getCircusZoneProps(zoneId);
+    const activeIds = new Set([...state.activeProps.entries()].filter(([, enabled]) => enabled).map(([id]) => id));
+    const countProps = (kind, source) => props.reduce((count, prop, index) => {
+      if (prop.kind !== kind) return count;
+      return source.has(`${zoneId}:${index}`) ? count + 1 : count;
+    }, 0);
+    const steps = config.steps.map(step => {
+      let progress = 0;
+      if (step.type === 'scan') progress = countProps(step.kind, state.discoveries);
+      else if (step.type === 'activate') progress = countProps(step.kind, activeIds);
+      else if (step.type === 'talk') {
+        progress = state.talkedCharacters.has(`${zoneId}:${step.avatar}`) ? 1 : 0;
+      }
+      const target = step.count || 1;
+      return { ...step, progress: Math.min(target, progress), target, complete: progress >= target };
+    });
+    const done = steps.filter(step => step.complete).length;
+    const lockedComplete = state.completedZoneObjectives.has(zoneId);
+    return {
+      ...config,
+      steps,
+      done: lockedComplete ? steps.length : done,
+      total: steps.length,
+      complete: lockedComplete || done === steps.length,
+      next: lockedComplete ? null : (steps.find(step => !step.complete) || null)
+    };
+  },
+
+  completeCircusZoneObjectiveIfReady(state) {
+    const status = this.getCircusZoneObjectiveStatus(state.currentZoneId, state);
+    if (!status?.complete || state.completedZoneObjectives.has(state.currentZoneId)) return false;
+    state.completedZoneObjectives.add(state.currentZoneId);
+    this.unlockCainOSAchievement(`fps_mission_${state.currentZoneId}`, `Mission FPS: ${status.title}`);
+    return true;
+  },
+
   inspectCircusProp(prop) {
     const state = this.circusDoom;
     if (!state || !prop) return;
@@ -2117,7 +2244,11 @@ const OS = {
     if (!wasDiscovered && zoneDiscoveries >= zoneProps.length) {
       this.unlockCainOSAchievement(`zone_traces_${state.currentZoneId}`, `Zone analysee: ${state.portals[state.currentZoneId]?.short || state.currentZoneId}`);
     }
-    state.interactionMessage = `[${discoveryStatus}${actionStatus}] ${this.getCircusPropInteraction(prop, state.currentZoneId)}`;
+    const missionCompleted = this.completeCircusZoneObjectiveIfReady(state);
+    const objective = this.getCircusZoneObjectiveStatus(state.currentZoneId, state);
+    const missionStatus = missionCompleted ? ' | MISSION LOCALE TERMINEE'
+      : objective ? ` | MISSION ${objective.done}/${objective.total}` : '';
+    state.interactionMessage = `[${discoveryStatus}${actionStatus}${missionStatus}] ${this.getCircusPropInteraction(prop, state.currentZoneId)}`;
     state.interactionUntil = performance.now() + 5600;
     state.interactionChoices = null;
     state.interactionOrigin = { x: state.player.x, z: state.player.z, range: 1.35 };
@@ -2270,9 +2401,12 @@ const OS = {
   talkToCircusCharacter(sprite) {
     const state = this.circusDoom;
     if (!state || !sprite) return;
+    const avatar = sprite.avatar || sprite.type;
+    state.talkedCharacters.add(`${state.currentZoneId}:${avatar}`);
     const line = this.getCircusCharacterInteraction(sprite, state.currentZoneId);
     const choices = this.getCircusCharacterChoices(sprite, state.currentZoneId, line);
-    state.interactionMessage = choices ? choices.prompt : line;
+    const missionCompleted = this.completeCircusZoneObjectiveIfReady(state);
+    state.interactionMessage = `${choices ? choices.prompt : line}${missionCompleted ? ' [MISSION LOCALE TERMINEE]' : ''}`;
     state.interactionChoices = choices;
     state.interactionUntil = performance.now() + (choices ? 12000 : 5600);
     state.interactionOrigin = { x: state.player.x, z: state.player.z, range: 1.45 };
@@ -2298,6 +2432,38 @@ const OS = {
     }
     if (state.detailEl) state.detailEl.innerText = option.response;
     SoundManager.play(620 + index * 80, 0.08, 'triangle', 0.045);
+  },
+
+  getCircusObjectiveDialogueOption(sprite, zoneId) {
+    const state = this.circusDoom;
+    const status = this.getCircusZoneObjectiveStatus(zoneId, state);
+    if (!status || status.done === 0) return null;
+    const completedResponses = {
+      2: 'Caine: Magnifique! La piste, les projecteurs et ma supervision sont de nouveau parfaitement synchronises.',
+      3: 'Caine: Le terrain est cartographie! Meme la Gloink Queen est exactement aussi enorme que prevu.',
+      4: 'Pomni: On a identifie les signes. Maintenant, on garde nos distances avec ce qui reste de Kaufmo.',
+      5: 'Pomni: Les cadres et le bureau sont reels ici, mais cela ne transforme toujours pas cette porte en sortie.',
+      6: 'Gummigoo: Le camion et la route tiennent encore. C est assez pour continuer sans oublier ce qu on a vu.',
+      8: 'Kinger: La lumiere a fixe les contours du manoir. Dans l obscurite, je me souviens mieux de ce qui compte.',
+      10: 'Gangle: Les postes sont verifies et les tickets classes. Je peux reprendre mon souffle une seconde.',
+      12: 'Jax: Les bases sont la, le score aussi. Il ne manque plus qu une regle assez mauvaise pour rendre le match interessant.',
+      13: 'Ragatha: Les cibles sont reperees. Personne ne devrait avoir a decouvrir la prochaine en se trouvant devant.',
+      14: 'Pomni: Le lac boucle encore, mais au moins nous savons quels reperes restent fixes autour de nous.',
+      15: 'Ming: Les noeuds admin repondent. La scene technique ne peut plus pretendre qu elle est seulement du decor.',
+      16: 'Caine: Audit termine! Tout est sous controle, si l on accepte une definition suffisamment festive du controle.',
+      17: 'Kinger: Les fragments ne la rameneront pas. Mais les rassembler empeche son souvenir de devenir du bruit.',
+      18: 'Ribbit Archive: Le signal est stable. Cela confirme une trace, pas un retour parmi les residents.'
+    };
+    if (status.complete) {
+      return {
+        label: 'Mission locale',
+        response: completedResponses[zoneId] || `${sprite.name}: Les principaux reperes de cette zone repondent maintenant de facon coherente.`
+      };
+    }
+    return {
+      label: 'Prochaine etape',
+      response: `${sprite.name}: Le prochain repere utile est: ${status.next?.label || 'continuer l exploration'}.`
+    };
   },
 
   getCircusCharacterChoices(sprite, zoneId, introLine) {
@@ -2409,11 +2575,13 @@ const OS = {
     ];
     const specialOptions = special[avatar] || special[sprite.type] || [];
     const dialogueOptions = dialogueByAvatar[avatar] || dialogueByAvatar[sprite.type] || fallbackDialogue;
+    const objectiveOption = this.getCircusObjectiveDialogueOption(sprite, zoneId);
     return {
       speaker: sprite.name,
       avatar,
       prompt: introLine,
       options: [
+        ...(objectiveOption ? [objectiveOption] : []),
         ...(specialOptions.slice(0, 2)),
         ...dialogueOptions
       ].slice(0, 3)
@@ -2920,7 +3088,9 @@ const OS = {
         const found = [...state.discoveries].filter(id => id.startsWith(`${state.currentZoneId}:`)).length;
         const total = this.getCircusZoneProps(state.currentZoneId).length;
         const active = [...state.activeProps.entries()].filter(([id, enabled]) => enabled && id.startsWith(`${state.currentZoneId}:`)).length;
-        state.zoneEl.innerText = `${portal.short} | TRACES ${found}/${total} | ACTIFS ${active}`;
+        const objective = this.getCircusZoneObjectiveStatus(state.currentZoneId, state);
+        const mission = objective ? ` | MISSION ${objective.done}/${objective.total}` : '';
+        state.zoneEl.innerText = `${portal.short} | TRACES ${found}/${total} | ACTIFS ${active}${mission}`;
       } else {
         state.zoneEl.innerText = 'ZONE: PASSERELLE INTERNE';
       }
@@ -2998,6 +3168,7 @@ const OS = {
     this.drawCircusDepthProps(ctx, w, h, state);
     this.drawCircusPhysicalDoors(ctx, w, h, portals, state);
     this.drawCircusImpostorSprites(ctx, w, h, state);
+    this.drawCircusZoneObjectiveHud(ctx, w, h, state);
     this.drawCircusConversationOverlay(ctx, w, h, state);
     this.drawCircusSimulationReticle(ctx, w, h, zone);
     this.drawCircusRoomMinimap(ctx, w, h, state, zone);
@@ -3981,6 +4152,36 @@ const OS = {
     ctx.restore();
   },
 
+  drawCircusZoneObjectiveHud(ctx, w, h, state) {
+    const status = this.getCircusZoneObjectiveStatus(state.currentZoneId, state);
+    if (!status) return;
+    const width = Math.min(310, w * 0.42);
+    const x = (w - width) / 2;
+    const y = 10;
+    const color = status.complete ? '#9cff6d' : '#fff1a8';
+    const ratio = status.total ? status.done / status.total : 0;
+    const next = status.complete ? 'MISSION LOCALE TERMINEE'
+      : `${status.next.label}${status.next.target > 1 ? ` ${status.next.progress}/${status.next.target}` : ''}`;
+    ctx.save();
+    ctx.fillStyle = 'rgba(5,2,13,0.8)';
+    ctx.strokeStyle = color;
+    ctx.lineWidth = 1;
+    ctx.fillRect(x, y, width, 34);
+    ctx.strokeRect(x, y, width, 34);
+    ctx.fillStyle = color;
+    ctx.font = 'bold 8px Courier New';
+    ctx.textAlign = 'left';
+    ctx.fillText(`MISSION: ${status.title}  [${status.done}/${status.total}]`.slice(0, 52), x + 7, y + 11);
+    ctx.fillStyle = '#fff1a8';
+    ctx.font = '7px Courier New';
+    ctx.fillText(next.slice(0, 58), x + 7, y + 23);
+    ctx.fillStyle = 'rgba(255,255,255,0.12)';
+    ctx.fillRect(x + 7, y + 27, width - 14, 3);
+    ctx.fillStyle = color;
+    ctx.fillRect(x + 7, y + 27, (width - 14) * ratio, 3);
+    ctx.restore();
+  },
+
   drawCircusRoomMinimap(ctx, w, h, state, zone) {
     const room = state.room;
     if (!room) return;
@@ -4316,6 +4517,8 @@ const OS = {
   },
 
   getCircusZoneProps(zoneId) {
+    this.circusZonePropsCache = this.circusZonePropsCache || new Map();
+    if (this.circusZonePropsCache.has(zoneId)) return this.circusZonePropsCache.get(zoneId);
     const basePillars = [
       { kind: 'pillar', x: -2.9, z: -1.4, color: '#ffd84a' },
       { kind: 'pillar', x: 2.9, z: -1.4, color: '#2a58d8' },
@@ -4378,11 +4581,13 @@ const OS = {
       42: [{ kind: 'ring', x: -2.5, z: -2.4, color: '#ff4fb8' }, { kind: 'ring', x: 2.5, z: -2.4, color: '#7df0ff' }, { kind: 'pillar', x: 0, z: -3.1, color: '#ffd84a' }, { kind: 'balloon', x: -1.25, z: -1.35, color: '#e53935' }, { kind: 'balloon', x: 1.25, z: -1.35, color: '#2a58d8' }],
       43: [{ kind: 'table', x: 0, z: -2.7, color: '#7a4b32' }, { kind: 'table', x: -2.2, z: -1.8, color: '#7a4b32' }, { kind: 'table', x: 2.2, z: -1.8, color: '#7a4b32' }, { kind: 'menu', x: 0, z: -1.25, color: '#fff1a8' }]
     };
-    return [
+    const props = [
       ...(byZone[zoneId] || basePillars),
       ...this.getCircusExtraZoneProps(zoneId),
       ...this.getCircusArchitectureProps(zoneId)
     ];
+    this.circusZonePropsCache.set(zoneId, props);
+    return props;
   },
 
   getCircusArchitectureProps(zoneId) {
@@ -5733,6 +5938,8 @@ const OS = {
   },
 
   getCircusZoneSprites(zoneId) {
+    this.circusZoneSpritesCache = this.circusZoneSpritesCache || new Map();
+    if (this.circusZoneSpritesCache.has(zoneId)) return this.circusZoneSpritesCache.get(zoneId);
     const shared = [
       { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -1.2, z: -2.3, color: '#e53935' },
       { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: 1.2, z: -2.55, color: '#d64545' },
@@ -5940,7 +6147,9 @@ const OS = {
         { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: 1.45, z: -1.85, color: '#f7f7f7' }
       ]
     };
-    return byZone[zoneId] || shared.slice(0, 4);
+    const sprites = byZone[zoneId] || shared.slice(0, 4);
+    this.circusZoneSpritesCache.set(zoneId, sprites);
+    return sprites;
   },
 
   getCircusActiveZoneSprites(zoneId, state) {
