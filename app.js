@@ -1687,6 +1687,8 @@ const OS = {
       interactionUntil: 0,
       interactionChoices: null,
       interactionOrigin: null,
+      interactionChannel: 'system',
+      interactionSpeaker: '',
       dialogueVisits: new Map(),
       discoveries: new Set(),
       activeProps: new Map(),
@@ -1982,6 +1984,8 @@ const OS = {
     state.interactionUntil = 0;
     state.interactionChoices = null;
     state.interactionOrigin = null;
+    state.interactionChannel = 'system';
+    state.interactionSpeaker = '';
     state.lastZoneEventId = null;
   },
 
@@ -2028,6 +2032,8 @@ const OS = {
       } else {
         state.interactionMessage = 'PORTE HORS DE PORTEE: approchez-vous et placez-la au centre du viseur.';
         state.interactionUntil = performance.now() + 2400;
+        state.interactionChannel = 'system';
+        state.interactionSpeaker = '';
         SoundManager.playError();
       }
     } else if (key === 'arrowdown') {
@@ -2115,6 +2121,8 @@ const OS = {
     state.interactionUntil = performance.now() + 5600;
     state.interactionChoices = null;
     state.interactionOrigin = { x: state.player.x, z: state.player.z, range: 1.35 };
+    state.interactionChannel = 'scan';
+    state.interactionSpeaker = this.getCircusPropName(prop, state.currentZoneId);
     if (state.detailEl) state.detailEl.innerText = state.interactionMessage;
     SoundManager.play(390, 0.07, 'square', 0.04);
     setTimeout(() => SoundManager.play(585, 0.06, 'triangle', 0.035), 80);
@@ -2268,6 +2276,8 @@ const OS = {
     state.interactionChoices = choices;
     state.interactionUntil = performance.now() + (choices ? 12000 : 5600);
     state.interactionOrigin = { x: state.player.x, z: state.player.z, range: 1.45 };
+    state.interactionChannel = 'dialogue';
+    state.interactionSpeaker = sprite.name;
     if (state.detailEl) state.detailEl.innerText = state.interactionMessage;
     SoundManager.play(520, 0.08, 'triangle', 0.05);
   },
@@ -2281,9 +2291,10 @@ const OS = {
     state.interactionChoices = null;
     state.interactionUntil = performance.now() + 7200;
     state.interactionOrigin = { x: state.player.x, z: state.player.z, range: 1.45 };
+    state.interactionChannel = 'dialogue';
+    state.interactionSpeaker = choices.speaker || '';
     if (choices.avatar) {
-      const delta = option.label === 'Profil' ? 1 : option.label === 'Routine' ? 0 : 3;
-      this.adjustCainOSRelation(choices.avatar, delta);
+      this.adjustCainOSRelation(choices.avatar, 3);
     }
     if (state.detailEl) state.detailEl.innerText = option.response;
     SoundManager.play(620 + index * 80, 0.08, 'triangle', 0.045);
@@ -2291,10 +2302,6 @@ const OS = {
 
   getCircusCharacterChoices(sprite, zoneId, introLine) {
     const avatar = sprite.avatar || sprite.type;
-    const profileKey = this.getCircusCharacterProfileKey(sprite);
-    const profileLine = profileKey ? this.getCircusProfileSummary(profileKey) : "Aucun profil CainOS critique disponible pour ce signal.";
-    const zoneHint = this.getCircusZoneDialogueHint(zoneId);
-    const routineHint = this.getCircusRoutineDialogueHint(sprite, zoneId);
     const special = {
       pomni: [
         { label: "Sortie", response: "Pomni: Je peux regarder les portes, mais je ne veux plus confondre une promesse avec une sortie." },
@@ -2317,20 +2324,98 @@ const OS = {
         { label: "Masque", response: "Gangle: Ce masque me donne l'air fonctionnelle. Ce n'est pas la meme chose qu'aller bien." }
       ],
       ribbit: [
-        { label: "Archive", response: "Ribbit Archive: CainOS conserve ce signal comme trace de membre disparu, pas comme resident revenu." },
-        { label: "Final", response: "Ribbit Archive: Les reves et souvenirs du final laissent remonter les anciens profils sans les restaurer." }
+        { label: "Archive", response: "Ribbit Archive: Je suis une trace de membre disparu, pas un resident revenu dans le Cirque." },
+        { label: "Le final", response: "Ribbit Archive: Le reve a fait remonter mon image sans restaurer celui que j etais." }
       ]
     };
+    const dialogueByAvatar = {
+      pomni: [
+        { label: 'Le decor', response: "Pomni: Les couleurs changent, mais les limites finissent toujours par revenir." },
+        { label: 'Avancer', response: "Pomni: D accord. Mais on garde une porte et quelqu un du groupe en vue." }
+      ],
+      caine: [
+        { label: 'L aventure', response: "Caine: Chaque salle attend seulement son idee brillante, son objectif et une conclusion spectaculaire!" },
+        { label: 'Le Cirque', response: "Caine: Le Cirque est un espace parfaitement organise tant que personne ne regarde derriere les decors!" }
+      ],
+      ragatha: [
+        { label: 'Le groupe', response: "Ragatha: On avance mieux quand personne n est laisse seul avec ce qui lui fait peur." },
+        { label: 'Les reperes', response: "Ragatha: Choisis un objet fixe et une porte. Si la scene change, reviens vers eux." }
+      ],
+      jax: [
+        { label: 'Les objets', response: "Jax: Touche a tout. Le pire qui puisse arriver, c est que Caine appelle ca une fonctionnalite." },
+        { label: 'Les portes', response: "Jax: Celle qui a le moins l air autorisee est probablement la plus interessante." }
+      ],
+      kinger: [
+        { label: 'La piece', response: "Kinger: Les pieces gardent parfois mieux les souvenirs que les gens." },
+        { label: 'La lumiere', response: "Kinger: L obscurite peut calmer les choses. Pas les effacer, seulement les calmer." }
+      ],
+      gangle: [
+        { label: 'Rester ici', response: "Gangle: Je peux rester pres de ce repere pendant que tu regardes le reste." },
+        { label: 'Le masque', response: "Gangle: Il aide les autres a savoir quoi attendre. Il ne m aide pas toujours, moi." }
+      ],
+      zooble: [
+        { label: 'Explorer', response: "Zooble: Explore si tu veux. Je verifierai surtout que la piece ne decide pas de nous explorer aussi." },
+        { label: 'Caine', response: "Zooble: Plus il dit que tout est sous controle, plus je regarde les murs." }
+      ],
+      gummigoo: [
+        { label: 'Les souvenirs', response: "Gummigoo: Ils semblent reels jusqu au moment ou le decor montre leurs bords." },
+        { label: 'La route', response: "Gummigoo: Tant qu elle continue, on peut choisir d avancer, meme si quelqu un d autre l a tracee." }
+      ],
+      bubble: [
+        { label: 'Une idee', response: "Bubble: On choisit une porte, on fonce, et on demande les regles apres!" },
+        { label: 'Caine', response: "Bubble: Caine a toujours un plan! Parfois meme avant que tout explose!" }
+      ],
+      max: [
+        { label: 'Le convoi', response: "Max: On protege la cargaison et on garde Gummigoo dans notre champ de vision." },
+        { label: 'La route', response: "Max: Elle parait libre, mais ses virages reviennent toujours au scenario." }
+      ],
+      chad: [
+        { label: 'Gummigoo', response: "Chad: Je le suis. Meme quand la scene commence a lui raconter une autre histoire." },
+        { label: 'Les bandits', response: "Chad: On connait notre role. C est justement ce qui devient inquietant." }
+      ],
+      loolilalu: [
+        { label: 'Le royaume', response: "Princess Loolilalu: Chaque douceur a sa place, et chaque mission doit proteger le royaume." },
+        { label: 'Le sirop', response: "Princess Loolilalu: La cargaison doit atteindre sa destination avant que les bandits ne la prennent." }
+      ],
+      fudge: [
+        { label: 'La faim', response: "The Fudge: Tout ce royaume ressemble a un festin qui essaie de m echapper." },
+        { label: 'Le decor', response: "The Fudge: Les murs sont en sucre. Cela suffit comme direction." }
+      ],
+      workgangle: [
+        { label: 'Les commandes', response: "Gangle: Elles arrivent plus vite que je ne peux les organiser, meme avec ce masque." },
+        { label: 'La cuisine', response: "Gangle: Si chaque poste reste a sa place, je peux peut etre garder le service sous controle." }
+      ],
+      horrorghost: [
+        { label: 'La lumiere', response: "Fantome: Elle ne chasse pas ce qui habite le manoir. Elle lui donne seulement une forme." },
+        { label: 'Les ames', response: "Fantome: Elles restent attachees aux pieces ou leur peur a ete nommee." }
+      ],
+      ming: [
+        { label: 'Les Awards', response: "Ming: Je reste dans le cadre tant que Caine a besoin d un figurant pour sa ceremonie." },
+        { label: 'Le signal', response: "Ming: Mon role est petit, mais la simulation continue tout de meme de me rappeler." }
+      ],
+      queenie: [
+        { label: 'Kinger', response: "Queenie Archive: Ce que tu entends vient de sa memoire, pas d un retour dans le Cirque." },
+        { label: 'Le souvenir', response: "Queenie Archive: Certaines traces restent parce que quelqu un refuse de les oublier." }
+      ],
+      ribbit: [
+        { label: 'Le reve', response: "Ribbit Archive: Le reve a laisse remonter mon image, pas restaure ma presence." },
+        { label: 'L archive', response: "Ribbit Archive: Je suis une trace lisible de ce qui existait avant votre groupe." }
+      ]
+    };
+    const fallbackDialogue = [
+      { label: 'Cette zone', response: `${sprite.name}: Mon signal appartient a ce decor et a ce moment de l aventure.` },
+      { label: 'Que faire', response: `${sprite.name}: Observe les accessoires et les portes. Ils indiquent ce que cette scene attend de nous.` },
+      { label: 'Continuer', response: `${sprite.name}: Les portes changent la scene. Approche-toi seulement de celle que tu veux vraiment suivre.` }
+    ];
     const specialOptions = special[avatar] || special[sprite.type] || [];
+    const dialogueOptions = dialogueByAvatar[avatar] || dialogueByAvatar[sprite.type] || fallbackDialogue;
     return {
       speaker: sprite.name,
       avatar,
       prompt: introLine,
       options: [
         ...(specialOptions.slice(0, 2)),
-        { label: "Zone", response: zoneHint },
-        { label: "Profil", response: profileLine },
-        { label: "Routine", response: routineHint }
+        ...dialogueOptions
       ].slice(0, 3)
     };
   },
@@ -2617,9 +2702,7 @@ const OS = {
     const line = visitCount > 0 && alternatives.length
       ? alternatives[(visitCount - 1) % alternatives.length]
       : baseLine;
-    const profileKey = this.getCircusCharacterProfileKey(sprite);
-    const profileLine = profileKey ? this.getCircusProfileSummary(profileKey) : "";
-    return profileLine ? `${line} ${profileLine}` : line;
+    return line;
   },
 
   getCircusCharacterProfileKey(sprite) {
@@ -2733,6 +2816,8 @@ const OS = {
     if (doorDistance > 1.85) {
       state.interactionMessage = 'PORTE HORS DE PORTEE: la perspective ne permet pas une interaction distante.';
       state.interactionUntil = performance.now() + 2400;
+      state.interactionChannel = 'system';
+      state.interactionSpeaker = '';
       SoundManager.playError();
       return;
     }
@@ -2870,6 +2955,8 @@ const OS = {
           state.interactionMessage = `${nearbyCharacter.name} remarque votre presence. Approchez-vous et appuyez sur ENTREE pour parler.`;
           state.interactionUntil = performance.now() + 2600;
           state.interactionOrigin = { x: player.x, z: player.z, range: 2.4 };
+          state.interactionChannel = 'proximity';
+          state.interactionSpeaker = nearbyCharacter.name;
         }
       }
     }
@@ -4415,9 +4502,15 @@ const OS = {
       .sort((a, b) => b.projected.depth - a.projected.depth);
     props.forEach(prop => {
       const box = this.getCircusPropScreenBox(prop);
+      const clipBox = {
+        x: box.x - box.w * 0.22,
+        y: box.y - box.h * 0.48,
+        w: box.w * 1.44,
+        h: box.h * 1.68
+      };
       ctx.save();
       const tolerance = prop.anchor?.startsWith('wall') || prop.anchor === 'ceiling' ? 0.72 : 0.18;
-      if (!this.applyCircusDepthClip(ctx, box, prop.projected.depth, state, tolerance)) {
+      if (!this.applyCircusDepthClip(ctx, clipBox, prop.projected.depth, state, tolerance)) {
         ctx.restore();
         return;
       }
@@ -4451,7 +4544,7 @@ const OS = {
 
   getCircusPropScreenBox(prop) {
     const p = prop.projected;
-    const s = Math.max(0.035, p.scale);
+    const s = this.getCircusPropVisualScale(prop);
     const wideKinds = new Set(['ring', 'counter', 'truck', 'scoreboard', 'table', 'desk', 'exitframe']);
     const tallKinds = new Set(['pillar', 'tent', 'spotlight', 'umbrella', 'window', 'archive', 'console', 'roomdoor', 'wallart', 'ceilinglight']);
     const smallKinds = new Set(['candle', 'balloon', 'eye', 'sun', 'base', 'target', 'memory']);
@@ -4476,9 +4569,16 @@ const OS = {
     };
   },
 
+  getCircusPropVisualScale(prop) {
+    const compactKinds = new Set(['eye', 'sun', 'balloon', 'candle', 'memory', 'base', 'target']);
+    const mountedKinds = new Set(['wallart', 'ceilinglight', 'roomdoor']);
+    const cap = compactKinds.has(prop.kind) ? 1.85 : mountedKinds.has(prop.kind) ? 2.2 : 2.7;
+    return Math.max(0.035, Math.min(cap, prop.projected?.scale || 0.035));
+  },
+
   drawCircusProp(ctx, prop, w, h) {
     const p = prop.projected;
-    const s = Math.max(0.035, p.scale);
+    const s = this.getCircusPropVisualScale(prop);
     const x = p.x;
     const y = p.y || h * 0.58;
     ctx.save();
@@ -5842,26 +5942,45 @@ const OS = {
     if (!state.interactionMessage || performance.now() > state.interactionUntil) return;
     const margin = 18;
     const choices = state.interactionChoices?.options || [];
-    const boxH = choices.length ? 94 : 52;
+    const boxH = choices.length ? 108 : 78;
     const boxY = h - boxH - 24;
+    const channel = state.interactionChannel || 'system';
+    const channelColor = channel === 'dialogue' ? '#fff1a8'
+      : channel === 'scan' ? '#7df0ff'
+        : channel === 'proximity' ? '#9cff6d'
+          : '#ff8a7a';
+    const channelLabel = channel === 'dialogue' ? `DIALOGUE - ${state.interactionSpeaker || 'PNJ'}`
+      : channel === 'scan' ? `SCAN CAINOS - ${state.interactionSpeaker || 'OBJET'}`
+        : channel === 'proximity' ? `PROXIMITE - ${state.interactionSpeaker || 'SIGNAL'}`
+          : 'SYSTEME';
     ctx.save();
     ctx.fillStyle = 'rgba(5, 2, 13, 0.86)';
-    ctx.strokeStyle = '#fff1a8';
+    ctx.strokeStyle = channelColor;
     ctx.lineWidth = 2;
     ctx.fillRect(margin, boxY, w - margin * 2, boxH);
     ctx.strokeRect(margin, boxY, w - margin * 2, boxH);
+    ctx.fillStyle = channelColor;
+    ctx.font = 'bold 9px Courier New';
+    ctx.textAlign = 'left';
+    ctx.fillText(channelLabel, margin + 10, boxY + 14);
+    ctx.strokeStyle = `${channelColor}88`;
+    ctx.beginPath();
+    ctx.moveTo(margin + 10, boxY + 20);
+    ctx.lineTo(w - margin - 10, boxY + 20);
+    ctx.stroke();
     ctx.fillStyle = '#fff1a8';
     ctx.font = 'bold 11px Courier New';
     ctx.textAlign = 'left';
     const text = state.interactionMessage;
     const words = text.split(' ');
     let line = '';
-    let y = boxY + 17;
+    let y = boxY + 35;
     let lineCount = 0;
+    const maxLines = choices.length ? 3 : 4;
     words.forEach(word => {
       const next = line ? `${line} ${word}` : word;
       if (ctx.measureText(next).width > w - margin * 2 - 20) {
-        if (!choices.length || lineCount < 2) ctx.fillText(line, margin + 10, y);
+        if (lineCount < maxLines - 1) ctx.fillText(line, margin + 10, y);
         y += 13;
         lineCount++;
         line = word;
@@ -5869,7 +5988,7 @@ const OS = {
         line = next;
       }
     });
-    if (line && (!choices.length || lineCount < 3)) ctx.fillText(line, margin + 10, y);
+    if (line && lineCount < maxLines) ctx.fillText(line, margin + 10, y);
     if (choices.length) {
       const optionTop = boxY + boxH - 38;
       const gap = 8;
