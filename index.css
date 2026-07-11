@@ -1720,10 +1720,11 @@ body {
   bottom: 8px;
   z-index: 5;
   display: none;
-  justify-content: space-between;
+  grid-template-columns: 0.9fr 1fr 1.2fr;
+  align-items: end;
   gap: 8px;
   color: #fff1a8;
-  font: bold 10px "Courier New", monospace;
+  font: bold 8px "Courier New", monospace;
   text-shadow: 0 0 4px #000;
   pointer-events: none;
 }
@@ -1731,8 +1732,8 @@ body {
 .circus-doom-hud span {
   min-width: 0;
   overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  line-height: 1.15;
+  white-space: normal;
 }
 
 .circus-doom-hud span:nth-child(2) {
@@ -1740,7 +1741,6 @@ body {
 }
 
 .circus-doom-hud span:nth-child(3) {
-  max-width: 340px;
   text-align: right;
 }
 
@@ -1764,20 +1764,20 @@ body {
 .circus-shape-right {
   width: 0;
   height: 0;
-  top: 56px;
-  border-bottom: 112px solid #e53935;
-  border-left: 92px solid transparent;
-  border-right: 92px solid transparent;
+  top: 72px;
+  border-bottom: 104px solid #e53935;
+  border-left: 68px solid transparent;
+  border-right: 68px solid transparent;
 }
 
 .circus-shape-left {
-  left: 31%;
-  transform: translate(-170px, -90px) rotate(-18deg);
+  left: 28%;
+  transform: translate(-50%, -90px) rotate(-18deg);
 }
 
 .circus-shape-right {
-  right: 31%;
-  transform: translate(170px, -90px) rotate(18deg);
+  left: 72%;
+  transform: translate(-50%, -90px) rotate(18deg);
   border-bottom-color: #2a58d8;
 }
 
@@ -1786,9 +1786,9 @@ body {
   top: 34px;
   width: 0;
   height: 0;
-  border-left: 112px solid transparent;
-  border-right: 112px solid transparent;
-  border-bottom: 132px solid #ffd84a;
+  border-left: 82px solid transparent;
+  border-right: 82px solid transparent;
+  border-bottom: 126px solid #ffd84a;
   transform: translate(-50%, -160px) scale(0.8);
 }
 
@@ -1897,11 +1897,11 @@ body {
 }
 
 .circus-dos-overlay.inside .circus-shape-left {
-  transform: translate(-22px, 12px) rotate(-7deg) scale(0.8);
+  transform: translate(-50%, 12px) rotate(-4deg) scale(0.86);
 }
 
 .circus-dos-overlay.inside .circus-shape-right {
-  transform: translate(22px, 12px) rotate(7deg) scale(0.8);
+  transform: translate(-50%, 12px) rotate(4deg) scale(0.86);
 }
 
 .circus-dos-overlay.inside .circus-shape-roof {
@@ -1945,7 +1945,7 @@ body {
 }
 
 .circus-dos-overlay.doom .circus-doom-hud {
-  display: flex;
+  display: grid;
 }
 
 .circus-dos-status {
@@ -2013,7 +2013,7 @@ body {
 }
 
 @keyframes circusSide {
-  to { opacity: 1; transform: translate(0, 0) rotate(0deg); }
+  to { opacity: 1; transform: translate(-50%, 0) rotate(0deg); }
 }
 
 @keyframes circusRoof {

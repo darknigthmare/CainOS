@@ -1689,6 +1689,9 @@ const OS = {
       interactionOrigin: null,
       dialogueVisits: new Map(),
       discoveries: new Set(),
+      activeProps: new Map(),
+      exploredCells: new Map(),
+      noticedCharacters: new Set(),
       lastZoneEventId: null,
       nextFootstepAt: 0,
       footstepSide: -1,
@@ -1711,10 +1714,10 @@ const OS = {
         : (rawKey === 'digit2' || codeKey === 'digit2' || codeKey === 'numpad2') ? '2'
           : (rawKey === 'digit3' || codeKey === 'digit3' || codeKey === 'numpad3') ? '3'
             : rawKey;
-      if (['arrowup','arrowdown','arrowleft','arrowright','enter',' ','w','a','s','d','z','q','1','2','3'].includes(key)) {
+      if (['arrowup','arrowdown','arrowleft','arrowright','enter',' ','e','shift','w','a','s','d','z','q','1','2','3'].includes(key)) {
         e.preventDefault();
         if (['1','2','3'].includes(key) && this.circusDoom?.interactionChoices) this.chooseCircusDialogueOption(Number(key) - 1);
-        else if (key === 'enter' || key === ' ') this.handleCircusSimulationInput(key);
+        else if (key === 'enter' || key === ' ' || key === 'e') this.handleCircusSimulationInput('enter');
         else this.circusDoom.keys.add(key);
       }
     };
@@ -2097,7 +2100,18 @@ const OS = {
     const zoneProps = this.getCircusZoneProps(state.currentZoneId);
     const zoneDiscoveries = [...state.discoveries].filter(id => id.startsWith(`${state.currentZoneId}:`)).length;
     const discoveryStatus = wasDiscovered ? 'DEJA ANALYSE' : `NOUVELLE TRACE ${zoneDiscoveries}/${zoneProps.length}`;
-    state.interactionMessage = `[${discoveryStatus}] ${this.getCircusPropInteraction(prop, state.currentZoneId)}`;
+    const activatableKinds = new Set(['console', 'gridnode', 'spotlight', 'candle', 'target', 'scoreboard', 'menu', 'card', 'archive', 'memory', 'ring', 'doorframe']);
+    const toggleKinds = new Set(['spotlight', 'candle', 'ring']);
+    let actionStatus = '';
+    if (activatableKinds.has(prop.kind)) {
+      const nextState = toggleKinds.has(prop.kind) ? !state.activeProps.get(discoveryId) : true;
+      state.activeProps.set(discoveryId, nextState);
+      actionStatus = nextState ? ' | OBJET ACTIVE' : ' | OBJET DESACTIVE';
+    }
+    if (!wasDiscovered && zoneDiscoveries >= zoneProps.length) {
+      this.unlockCainOSAchievement(`zone_traces_${state.currentZoneId}`, `Zone analysee: ${state.portals[state.currentZoneId]?.short || state.currentZoneId}`);
+    }
+    state.interactionMessage = `[${discoveryStatus}${actionStatus}] ${this.getCircusPropInteraction(prop, state.currentZoneId)}`;
     state.interactionUntil = performance.now() + 5600;
     state.interactionChoices = null;
     state.interactionOrigin = { x: state.player.x, z: state.player.z, range: 1.35 };
@@ -2762,7 +2776,7 @@ const OS = {
     const previousX = player.x;
     const previousZ = player.z;
     const turn = 2.35 * dt;
-    const speed = 2.15 * dt;
+    const speed = (keys.has('shift') ? 3.35 : 2.15) * dt;
     if (keys.has('arrowleft') || keys.has('q')) player.a -= turn;
     if (keys.has('arrowright') || keys.has('d')) player.a += turn;
 
@@ -2789,13 +2803,25 @@ const OS = {
     }
 
     const movedDistance = Math.hypot(player.x - previousX, player.z - previousZ);
+    let explored = state.exploredCells.get(state.currentZoneId);
+    if (!explored) {
+      explored = new Set();
+      state.exploredCells.set(state.currentZoneId, explored);
+    }
+    const playerCellX = Math.floor(player.x);
+    const playerCellZ = Math.floor(player.z);
+    for (let dz = -2; dz <= 2; dz++) {
+      for (let dx = -2; dx <= 2; dx++) {
+        if (dx * dx + dz * dz <= 6) explored.add(`${playerCellX + dx}:${playerCellZ + dz}`);
+      }
+    }
     if (movedDistance > 0.001 && performance.now() >= (state.nextFootstepAt || 0)) {
       const motif = state.scenes[state.currentZoneId]?.motif || 'circus';
       state.footstepSide = (state.footstepSide || -1) * -1;
       if (typeof SoundManager.playFpsFootstep === 'function') {
         SoundManager.playFpsFootstep(motif, state.footstepSide * 0.16);
       }
-      state.nextFootstepAt = performance.now() + 360;
+      state.nextFootstepAt = performance.now() + (keys.has('shift') ? 255 : 360);
     }
 
     const nearestDoor = this.getNearestUsableCircusDoor();
@@ -2808,7 +2834,8 @@ const OS = {
       if (portal) {
         const found = [...state.discoveries].filter(id => id.startsWith(`${state.currentZoneId}:`)).length;
         const total = this.getCircusZoneProps(state.currentZoneId).length;
-        state.zoneEl.innerText = `ZONE: ${portal.name} | TRACES ${found}/${total}`;
+        const active = [...state.activeProps.entries()].filter(([id, enabled]) => enabled && id.startsWith(`${state.currentZoneId}:`)).length;
+        state.zoneEl.innerText = `${portal.short} | TRACES ${found}/${total} | ACTIFS ${active}`;
       } else {
         state.zoneEl.innerText = 'ZONE: PASSERELLE INTERNE';
       }
@@ -2833,6 +2860,18 @@ const OS = {
     if (state.interactionMessage && performance.now() > state.interactionUntil) {
       state.interactionMessage = '';
       state.interactionOrigin = null;
+    }
+    if (!state.interactionMessage) {
+      const nearbyCharacter = this.getNearestCircusCharacter();
+      if (nearbyCharacter && nearbyCharacter.dist < 2.75 && Math.abs(nearbyCharacter.angle) < 0.9) {
+        const noticeId = `${state.currentZoneId}:${nearbyCharacter.avatar || nearbyCharacter.type}:${nearbyCharacter.name}`;
+        if (!state.noticedCharacters.has(noticeId)) {
+          state.noticedCharacters.add(noticeId);
+          state.interactionMessage = `${nearbyCharacter.name} remarque votre presence. Approchez-vous et appuyez sur ENTREE pour parler.`;
+          state.interactionUntil = performance.now() + 2600;
+          state.interactionOrigin = { x: player.x, z: player.z, range: 2.4 };
+        }
+      }
     }
     if (state.detailEl) {
       if (state.interactionMessage && performance.now() < state.interactionUntil) {
@@ -3730,7 +3769,31 @@ const OS = {
       ],
       19: [
         { id: 'archive_flicker', label: 'ARCHIVE FLICKER', detail: 'EVENT: les Circus Members clignotent comme fiches mortes.', color: '#c875ff' }
-      ]
+      ],
+      20: [{ id: 'hall_lights', label: 'HALL LIGHTS', detail: 'EVENT: les plafonniers du couloir s allument par sections.', color: '#fff1a8' }],
+      21: [{ id: 'cafe_pause', label: 'CAFE PAUSE', detail: 'EVENT: le Cafe Cirque conserve un calme provisoire entre les aventures.', color: '#d49a62' }],
+      22: [{ id: 'aquarium_current', label: 'AQUARIUM', detail: 'EVENT: un courant numerique traverse les vitres de l aquarium.', color: '#4ee7ff' }],
+      23: [{ id: 'snow_fall', label: 'SNOW LOOP', detail: 'EVENT: la neige recommence sa boucle au-dessus du parcours.', color: '#e8f7ff' }],
+      24: [{ id: 'western_dust', label: 'DUST LOOP', detail: 'EVENT: la poussiere du duel traverse les accessoires western.', color: '#c4a45f' }],
+      25: [{ id: 'school_bell', label: 'SCHOOL BELL', detail: 'EVENT: la variante scolaire relance son signal de changement de cours.', color: '#ff9fcd' }],
+      26: [{ id: 'office_signal', label: 'OFFICE FEED', detail: 'EVENT: le decor politique recycle son signal de diffusion.', color: '#edf0f7' }],
+      27: [{ id: 'void_static', label: 'VOID STATIC', detail: 'EVENT: le Vide efface les reperes qui restent trop longtemps immobiles.', color: '#ffffff' }],
+      28: [{ id: 'common_chatter', label: 'COMMON ROOM', detail: 'EVENT: des echos de conversation restent suspendus dans l espace commun.', color: '#ffd84a' }],
+      29: [{ id: 'tube_shuffle', label: 'TUBE SHUFFLE', detail: 'EVENT: les destinations des portes et tubes se remelangent.', color: '#7df0ff' }],
+      30: [{ id: 'loser_echo', label: 'LOSER ECHO', detail: 'EVENT: la punition du Loser Corner repete son propre silence.', color: '#6e527f' }],
+      31: [{ id: 'nest_archive', label: 'NEST ARCHIVE', detail: 'EVENT: l aventure supprimee laisse remonter un fragment de decor.', color: '#e8d6a8' }],
+      32: [{ id: 'palace_chime', label: 'ROYAL CHIME', detail: 'EVENT: le palais annonce une nouvelle audience de Princess Loolilalu.', color: '#ff9ad5' }],
+      33: [{ id: 'tanker_rumble', label: 'TANKER RUMBLE', detail: 'EVENT: le camion-citerne fait vibrer la route du convoi.', color: '#ffd84a' }],
+      34: [{ id: 'soul_pulse', label: 'SOUL PULSE', detail: 'EVENT: les ames du manoir reagissent a la lumiere et a la peur.', color: '#ff4d32' }],
+      35: [{ id: 'kitchen_rush', label: 'KITCHEN RUSH', detail: 'EVENT: une nouvelle vague de tickets atteint la cuisine Spudsy.', color: '#f6d743' }],
+      36: [{ id: 'biohazard_cycle', label: 'BIOHAZARD', detail: 'EVENT: la sous-zone sanitaire relance son cycle de nettoyage.', color: '#91d4bb' }],
+      37: [{ id: 'training_loop', label: 'TRAINING LOOP', detail: 'EVENT: la video de formation recommence devant Jax.', color: '#e53935' }],
+      38: [{ id: 'awards_applause', label: 'AWARDS', detail: 'EVENT: les applaudissements programmes accompagnent le verdict de Caine.', color: '#ffd84a' }],
+      39: [{ id: 'lighthouse_beam', label: 'LIGHTHOUSE', detail: 'EVENT: le faisceau du phare balaie la plage et le lac.', color: '#ffffff' }],
+      40: [{ id: 'bubble_trail', label: 'BUBBLE TRAIL', detail: 'EVENT: des bulles remontent autour du coffre sous-marin deja pille.', color: '#4ee7ff' }],
+      41: [{ id: 'memory_rain', label: 'MEMORY RAIN', detail: 'EVENT: le souvenir incomplet de Jax perd encore quelques details.', color: '#8fa6ba' }],
+      42: [{ id: 'carnival_lights', label: 'CARNIVAL', detail: 'EVENT: les attractions visibles du terrain allument leurs enseignes.', color: '#ff4fb8' }],
+      43: [{ id: 'dinner_bell', label: 'DINNER BELL', detail: 'EVENT: la table commune signale le prochain repas du groupe.', color: '#fff1a8' }]
     };
     const zoneEvents = events[zoneId];
     if (!zoneEvents?.length) return null;
@@ -3784,6 +3847,16 @@ const OS = {
         const inset = 20 + i * 18 + Math.sin(t * 2 + i) * 4;
         ctx.strokeRect(inset, inset * 0.45, w - inset * 2, h - inset * 0.9);
       }
+    } else {
+      ctx.strokeStyle = `${event.color}66`;
+      ctx.fillStyle = `${event.color}55`;
+      for (let i = 0; i < 8; i++) {
+        const x = (i * 97 + t * 18) % (w + 40) - 20;
+        const y = h * 0.2 + ((i * 43 + t * 11) % Math.max(40, h * 0.62));
+        ctx.beginPath();
+        ctx.arc(x, y, 2 + (i % 3), 0, Math.PI * 2);
+        ctx.fill();
+      }
     }
     ctx.globalAlpha = 0.95;
     ctx.fillStyle = 'rgba(5,2,13,0.72)';
@@ -3807,8 +3880,14 @@ const OS = {
     ctx.save();
     ctx.fillStyle = 'rgba(5,2,13,0.62)';
     ctx.fillRect(ox - 4, oy - 4, room.size * cell + 8, room.size * cell + 8);
+    const explored = state.exploredCells.get(state.currentZoneId) || new Set();
     for (let z = 0; z < room.size; z++) {
       for (let x = 0; x < room.size; x++) {
+        if (!explored.has(`${x}:${z}`)) {
+          ctx.fillStyle = 'rgba(0,0,0,0.82)';
+          ctx.fillRect(ox + x * cell, oy + z * cell, cell - 1, cell - 1);
+          continue;
+        }
         const value = room.grid[z][x];
         if (value === 0) ctx.fillStyle = 'rgba(255,255,255,0.08)';
         else if (value >= 100) {
@@ -4326,7 +4405,12 @@ const OS = {
 
   drawCircusDepthProps(ctx, w, h, state) {
     const props = this.getCircusZoneProps(state.currentZoneId)
-      .map((prop, interactionId) => ({ ...prop, interactionId, projected: this.projectCircusPoint(prop, state, w, h) }))
+      .map((prop, interactionId) => ({
+        ...prop,
+        interactionId,
+        active: state.activeProps.get(`${state.currentZoneId}:${interactionId}`) === true,
+        projected: this.projectCircusPoint(prop, state, w, h)
+      }))
       .filter(prop => prop.projected)
       .sort((a, b) => b.projected.depth - a.projected.depth);
     props.forEach(prop => {
@@ -4339,6 +4423,10 @@ const OS = {
       }
       const depthLight = this.getCircusDepthLight(prop.projected.depth, state, prop.kind === 'ceilinglight');
       ctx.filter = `brightness(${Math.round((0.58 + depthLight * 0.42) * 100)}%)`;
+      if (prop.active) {
+        ctx.shadowColor = prop.color || '#7df0ff';
+        ctx.shadowBlur = Math.max(6, 18 * prop.projected.scale);
+      }
       this.drawCircusProp(ctx, prop, w, h);
       ctx.restore();
       if (this.isCircusWorldPointVisible(prop, state, tolerance)) this.addCircusPropHotspot(state, prop);
@@ -5518,6 +5606,39 @@ const OS = {
     } else {
       animated.bob = Math.sin(now * 1.6 + phase) * 0.01;
     }
+    const center = state.room?.center || { x: 0, z: 0 };
+    const npcWorldX = center.x + animated.x;
+    const npcWorldZ = center.z + animated.z;
+    const toPlayerX = state.player.x - npcWorldX;
+    const toPlayerZ = state.player.z - npcWorldZ;
+    const playerDistance = Math.max(0.001, Math.hypot(toPlayerX, toPlayerZ));
+    const awareness = Math.max(0, Math.min(1, (4.2 - playerDistance) / 2.8));
+    const avatar = animated.avatar || animated.type || '';
+    const social = new Set(['pomni', 'ragatha', 'gangle', 'kinger', 'gummigoo', 'max', 'chad']);
+    const avoids = new Set(['jax', 'hunterjax', 'eviljax', 'zooble']);
+    const threats = avatar.includes('horror') || avatar.startsWith('shadow') || avatar === 'kaufmo';
+    animated.awareness = awareness;
+    animated.behavior = routine;
+    if (awareness > 0 && social.has(avatar) && playerDistance > 1.55) {
+      const approach = 0.12 * awareness;
+      animated.x += (toPlayerX / playerDistance) * approach;
+      animated.z += (toPlayerZ / playerDistance) * approach;
+      animated.behavior = 'attentif';
+    } else if (awareness > 0.25 && avoids.has(avatar) && playerDistance < 2.7) {
+      const retreat = 0.16 * awareness;
+      animated.x -= (toPlayerX / playerDistance) * retreat;
+      animated.z -= (toPlayerZ / playerDistance) * retreat;
+      animated.behavior = 'distant';
+    } else if (awareness > 0.2 && threats) {
+      const pressure = 0.08 * awareness;
+      animated.x += (toPlayerX / playerDistance) * pressure;
+      animated.z += (toPlayerZ / playerDistance) * pressure;
+      animated.behavior = 'menace';
+    } else if (awareness > 0.15 && routine === 'swarm') {
+      animated.x += Math.cos(now * 1.8 + phase) * 0.09 * awareness;
+      animated.z += Math.sin(now * 1.8 + phase) * 0.09 * awareness;
+      animated.behavior = 'curieux';
+    }
     return animated;
   },
 
@@ -5541,6 +5662,17 @@ const OS = {
       const depthLight = this.getCircusDepthLight(p.depth, state, fullbright);
       ctx.filter = `brightness(${Math.round((0.55 + depthLight * 0.45) * 100)}%)`;
       this.drawCircusImpostor(ctx, sprite.type, p.x, baseY, size, sprite.color, sprite.name, sprite.avatar, sprite.routine);
+      if (sprite.awareness > 0.18 && p.distance < 4.2 && size >= 10) {
+        const markerY = baseY - drawH - Math.max(7, size * 0.12);
+        ctx.filter = 'none';
+        ctx.fillStyle = sprite.behavior === 'menace' ? '#ff4d4d' : '#fff1a8';
+        ctx.strokeStyle = '#05020d';
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.arc(p.x, markerY, Math.max(3, Math.min(7, size * 0.08)), 0, Math.PI * 2);
+        ctx.fill();
+        ctx.stroke();
+      }
       ctx.restore();
       if (p.distance <= 2.2 && this.isCircusWorldPointVisible(sprite, state, 0.42)) {
         state.hotspots.push({
@@ -5580,11 +5712,6 @@ const OS = {
       ctx.font = `${Math.max(4, size * 0.13)}px Courier New`;
       ctx.fillText(label, 0, -size * 1.05);
     }
-    if (size >= 30) {
-      ctx.fillStyle = '#7df0ff';
-      ctx.font = `${Math.max(4, size * 0.09)}px Courier New`;
-      ctx.fillText(`PNJ:${routine.toUpperCase()}`, 0, -size * 0.9);
-    }
     ctx.restore();
   },
 
@@ -5613,11 +5740,6 @@ const OS = {
       ctx.font = `${Math.max(4, size * 0.13)}px Courier New`;
       ctx.textAlign = 'center';
       ctx.fillText(label, x, drawY - Math.max(2, size * 0.08));
-    }
-    if (size >= 30) {
-      ctx.fillStyle = '#7df0ff';
-      ctx.font = `${Math.max(4, size * 0.09)}px Courier New`;
-      ctx.fillText(`PNJ:${routine.toUpperCase()}`, x, drawY + Math.max(5, size * 0.11));
     }
     ctx.restore();
     return true;
