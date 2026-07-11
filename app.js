@@ -1560,6 +1560,9 @@ const OS = {
   },
 
   startCircusDoomView() {
+    this.circusZonePropsCache = new Map();
+    this.circusZoneSpritesCache = new Map();
+    this.circusZoneObjectiveConfigs = null;
     const overlay = document.getElementById('circus-dos-overlay');
     const canvas = document.getElementById('circus-doom-canvas');
     const zoneEl = document.getElementById('circus-doom-zone');
@@ -1630,7 +1633,9 @@ const OS = {
       40: { name: 'SUNKEN TREASURE', short: 'TRESOR', detail: 'Fond du lac, coffre deja pille et poissons gardiens peu convaincants.', color: '#4ee7ff', floor: '#0a596b', ceiling: '#06202f', unlocked: unlockedAt(7, 2) },
       41: { name: 'C&A STREET MEMORY', short: 'RUE C&A', detail: 'Rue rememoree par Jax; souvenir incomplet, pas une sortie fonctionnelle.', color: '#8fa6ba', floor: '#30343a', ceiling: '#101820', unlocked: unlockedAt(7, 4) },
       42: { name: 'DIGITAL CARNIVAL OVERLOOK', short: 'FETE', detail: 'Fete foraine visible depuis le terrain mais jamais visitee dans la serie.', color: '#ff4fb8', floor: '#315f2d', ceiling: '#5f8ee8', unlocked: unlockedAt(1, 0) },
-      43: { name: 'TENT DINING AREA', short: 'REPAS', detail: 'Table du niveau principal utilisee pour les repas du groupe.', color: '#ffd84a', floor: '#c43a35', ceiling: '#311340', unlocked: unlockedAt(1, 0) }
+      43: { name: 'TENT DINING AREA', short: 'REPAS', detail: 'Table du niveau principal utilisee pour les repas du groupe.', color: '#ffd84a', floor: '#c43a35', ceiling: '#311340', unlocked: unlockedAt(1, 0) },
+      50: { name: 'DORM HALL / ANNEXE OUEST', short: 'ANNEXE O.', detail: 'Couloir lateral des portes barrees des anciens membres. Acces archive apres Remember.', color: '#bb6a75', floor: '#4a1727', ceiling: '#25101d', unlocked: unlocked(9) },
+      51: { name: 'DORM HALL / ANNEXE EST', short: 'ANNEXE E.', detail: 'Second couloir lateral des portes barrees des anciens membres. Acces archive apres Remember.', color: '#a85e70', floor: '#431523', ceiling: '#210e1a', unlocked: unlocked(9) }
     };
     const scenes = {
       2: { exits: [3, 4, 5, 20, 21, 28, 29, 43], motif: 'circus', size: 23 },
@@ -1651,7 +1656,7 @@ const OS = {
       17: { exits: [16], motif: 'memory', size: 13 },
       18: { exits: [16, 19, 21, 22, 23, 29], motif: 'final', size: 19 },
       19: { exits: [18], motif: 'archive', size: 15 },
-      20: { exits: [2, 28], motif: 'dorm', size: 21 },
+      20: { exits: [2, 28, 50, 51], motif: 'dorm', size: 21 },
       21: { exits: [2, 18, 43], motif: 'cafe', size: 15 },
       22: { exits: [18, 30], motif: 'aquarium', size: 17 },
       23: { exits: [18], motif: 'snow', size: 17 },
@@ -1674,8 +1679,32 @@ const OS = {
       40: { exits: [14], motif: 'underwater', size: 17 },
       41: { exits: [15], motif: 'street', size: 17 },
       42: { exits: [3], motif: 'carnival', size: 19 },
-      43: { exits: [2, 28, 21], motif: 'dining', size: 15 }
+      43: { exits: [2, 28, 21], motif: 'dining', size: 15 },
+      50: { exits: [20], motif: 'dormannex', size: 21 },
+      51: { exits: [20], motif: 'dormannex', size: 21 }
     };
+
+    Object.entries(this.getCircusBedroomDefinitions()).forEach(([zoneId, room]) => {
+      const id = Number(zoneId);
+      const isArchived = this.isCircusBedroomArchived(room);
+      const archiveLabel = isArchived ? 'ARCHIVE / ' : '';
+      portals[id] = {
+        name: `${archiveLabel}CHAMBRE DE ${room.resident.toUpperCase()}`,
+        short: room.resident.toUpperCase().slice(0, 12),
+        detail: isArchived
+          ? `Chambre abandonnee de ${room.resident}. Reconstruction CainOS: la porte est canonique, mais cet interieur exact ne l est pas.`
+          : `Espace prive de ${room.resident}. Les details non montres a l ecran sont identifies comme reconstruction CainOS.`,
+        color: room.color,
+        floor: isArchived ? '#171219' : room.color,
+        ceiling: isArchived ? '#080609' : '#1a0d20',
+        unlocked: room.archived ? unlocked(9) : unlockedAt(1, 0)
+      };
+      scenes[id] = {
+        exits: [room.parent],
+        motif: isArchived ? 'archivebedroom' : 'bedroom',
+        size: isArchived ? 11 : 13
+      };
+    });
 
     this.circusDoom = {
       canvas,
@@ -1710,6 +1739,15 @@ const OS = {
       last: performance.now(),
       raf: null
     };
+    const roomAudit = this.auditCircusRoomNetwork(portals, scenes);
+    const objectiveAudit = this.auditCircusZoneObjectives();
+    document.body.dataset.fpsRoomAudit = roomAudit.ok ? 'ok' : roomAudit.errors.join(' | ');
+    document.body.dataset.fpsCurrentRooms = String(roomAudit.currentRooms);
+    document.body.dataset.fpsArchiveRooms = String(roomAudit.archiveRooms);
+    document.body.dataset.fpsObjectiveAudit = objectiveAudit.ok ? 'ok' : objectiveAudit.errors.join(' | ');
+    document.body.dataset.fpsObjectiveMissions = String(objectiveAudit.missionCount);
+    if (!roomAudit.ok) console.warn('FPS room network audit:', roomAudit.errors);
+    if (!objectiveAudit.ok) console.warn('FPS objective audit:', objectiveAudit.errors);
     this.prepareCircusSimulationRoom();
     this.markCainOSZoneVisited(2);
     this.loadCircusAvatarSheets();
@@ -1749,7 +1787,8 @@ const OS = {
         } else if (hit.kind === 'character') {
           this.talkToCircusCharacter(hit.sprite);
         } else if (hit.kind === 'prop') {
-          this.inspectCircusProp(hit.prop);
+          if (Number.isFinite(hit.prop?.target)) this.enterCircusPropPortal(hit.prop);
+          else this.inspectCircusProp(hit.prop);
         } else {
           state.selectedExitIndex = hit.index;
           this.enterCircusSimulationExit(hit.target);
@@ -1877,6 +1916,56 @@ const OS = {
     return null;
   },
 
+  getCircusBedroomDefinitions() {
+    return {
+      44: { resident: 'Jax', avatar: 'jax', color: '#8a4fd6', parent: 20, canon: 'partial', accent: '#ffd84a' },
+      45: { resident: 'Pomni', avatar: 'pomni', color: '#e53935', parent: 20, canon: 'partial', accent: '#2a58d8' },
+      46: { resident: 'Ragatha', avatar: 'ragatha', color: '#d64545', parent: 20, canon: 'merch', accent: '#78a8e8' },
+      47: { resident: 'Gangle', avatar: 'gangle', color: '#9e2638', parent: 20, canon: 'show', accent: '#f7f7f7' },
+      48: { resident: 'Zooble', avatar: 'zooble', color: '#ff4fb8', parent: 20, canon: 'show', accent: '#7df0ff' },
+      49: { resident: 'Kinger', avatar: 'kinger', color: '#5c4b82', parent: 20, canon: 'merch', accent: '#d9d0a2' },
+      52: { resident: 'Kaufmo', avatar: 'kaufmo', color: '#e53935', parent: 50, archived: true, accent: '#ffd84a' },
+      53: { resident: 'Queenie', avatar: 'queenie', color: '#2c252f', parent: 50, archived: true, accent: '#f7eecb' },
+      54: { resident: 'Ribbit', avatar: 'ribbit', color: '#4ee77e', parent: 50, archived: true, accent: '#ffd84a' },
+      55: { resident: 'Scratch', avatar: 'scratch', color: '#d6a82c', parent: 50, archived: true, accent: '#f7f7f7' },
+      56: { resident: 'Wormo', avatar: 'wormo', color: '#ef8b45', parent: 50, archived: true, accent: '#67c96f' },
+      57: { resident: 'Bizco', avatar: 'bizco', color: '#b45cff', parent: 50, archived: true, accent: '#ffcf75' },
+      58: { resident: 'Rattie', avatar: 'rattie', color: '#897765', parent: 51, archived: true, accent: '#d8c7aa' },
+      59: { resident: 'Spike', avatar: 'spike', color: '#8d5cff', parent: 51, archived: true, accent: '#7df0ff' },
+      60: { resident: 'Pink Cyclops', avatar: 'pinkcyclops', color: '#ff80bd', parent: 51, archived: true, accent: '#fff1a8' },
+      61: { resident: 'Yellow Clown', avatar: 'yellowclown', color: '#d6a82c', parent: 51, archived: true, accent: '#e53935' },
+      62: { resident: 'Oyster', avatar: 'oyster', color: '#8fb7ff', parent: 51, archived: true, accent: '#f7f7f7' },
+      63: { resident: 'Bulb Creature', avatar: 'bulbcreature', color: '#7caa42', parent: 51, archived: true, accent: '#fff1a8' }
+    };
+  },
+
+  isCircusBedroomArchived(room) {
+    if (!room) return false;
+    if (room.archived) return true;
+    const progress = (typeof EpisodeManager !== 'undefined') ? EpisodeManager.getProgress() : [];
+    return room.avatar === 'jax' && progress.includes(9);
+  },
+
+  auditCircusRoomNetwork(portals, scenes) {
+    const errors = [];
+    let currentRooms = 0;
+    let archiveRooms = 0;
+    Object.entries(this.getCircusBedroomDefinitions()).forEach(([zoneId, room]) => {
+      const id = Number(zoneId);
+      if (room.archived) archiveRooms++;
+      else currentRooms++;
+      if (!portals[id]) errors.push(`PORTAL ${id} absent`);
+      if (!scenes[id]?.exits?.includes(room.parent)) errors.push(`CHAMBRE ${id}: retour ${room.parent} absent`);
+      const parentDoor = this.getCircusZoneProps(room.parent).find(prop => prop.kind === 'roomdoor' && prop.target === id);
+      if (!parentDoor) errors.push(`COULOIR ${room.parent}: porte vers ${id} absente`);
+      if (this.isCircusBedroomArchived(room) && this.getCircusZoneSprites(id).length) errors.push(`CHAMBRE ARCHIVE ${id}: PNJ actif interdit`);
+    });
+    if (!scenes[20]?.exits?.includes(50) || !scenes[20]?.exits?.includes(51)) {
+      errors.push('COULOIR CENTRAL: annexes non raccordees');
+    }
+    return { ok: errors.length === 0, errors, currentRooms, archiveRooms };
+  },
+
   prepareCircusSimulationRoom() {
     const state = this.circusDoom;
     if (!state) return;
@@ -1911,7 +2000,7 @@ const OS = {
       }
     } else if (['spudsy', 'kitchen', 'bathroom', 'training'].includes(motif)) {
       for (let x = 3; x < size - 3; x++) if (Math.abs(x + 0.5 - center.x) > 1.4) addBlock(x, 4, 2);
-    } else if (motif === 'dorm') {
+    } else if (motif === 'dorm' || motif === 'dormannex') {
       const leftWall = Math.floor(center.x) - 2;
       const rightWall = Math.floor(center.x) + 2;
       for (let z = 2; z < size - 2; z++) {
@@ -2031,7 +2120,8 @@ const OS = {
       }
       const prop = this.getNearestCircusProp();
       if (prop && prop.dist < 2.15 && Math.abs(prop.angle) < 0.55) {
-        this.inspectCircusProp(prop);
+        if (Number.isFinite(prop.target)) this.enterCircusPropPortal(prop);
+        else this.inspectCircusProp(prop);
         return;
       }
       const door = this.getNearestUsableCircusDoor();
@@ -2077,6 +2167,12 @@ const OS = {
     }
     const prop = this.getNearestCircusProp();
     if (prop && prop.dist < 2.3 && Math.abs(prop.angle) < 0.58) {
+      if (Number.isFinite(prop.target)) {
+        const target = state.portals[prop.target];
+        return target?.unlocked
+          ? `ENTREE / CLIC: entrer dans ${target.short}`
+          : `PORTE BARREE: ${target?.short || 'ARCHIVE'}`;
+      }
       return `ENTREE / CLIC: scanner ${this.getCircusPropName(prop, state.currentZoneId)}`;
     }
     const door = this.getNearestUsableCircusDoor();
@@ -2129,7 +2225,7 @@ const OS = {
       17: { title: 'RECONSTRUIRE LE SOUVENIR', steps: [scan('memory', 'Rassembler trois fragments', 3), talk('queenie', 'Ecouter l archive Queenie')] },
       18: { title: 'STABILISER LE FINAL', steps: [activate('spotlight', 'Recaler le projecteur final'), talk('ribbit', 'Identifier le signal Ribbit'), talk('caine', 'Verifier l etat de Caine')] },
       19: { title: 'INDEXER LES ANCIENS MEMBRES', steps: [activate('archive', 'Ouvrir trois cadres archive', 3), talk('ribbit', 'Consulter Ribbit')] },
-      20: { title: 'RELEVER LE COULOIR', steps: [scan('roomdoor', 'Verifier trois portes de resident', 3), scan('ceilinglight', 'Suivre les plafonniers'), talk('pomni', 'Retrouver Pomni')] },
+      20: { title: 'RELEVER LE COULOIR', steps: [scan('wallart', 'Verifier les deux reperes du couloir', 2), scan('ceilinglight', 'Suivre les plafonniers'), talk('pomni', 'Retrouver Pomni')] },
       21: { title: 'REMONTER LES ECHOS DU CAFE', steps: [scan('counter', 'Inspecter le comptoir'), scan('table', 'Verifier deux tables', 2), talk('gangle', 'Parler avec Gangle')] },
       22: { title: 'CONTROLER L AQUARIUM', steps: [scan('window', 'Verifier deux vitres', 2), scan('wave', 'Analyser le courant'), talk('pomni', 'Rejoindre Pomni')] },
       23: { title: 'RECONSTITUER LE SOMMET', steps: [scan('stairs', 'Relever le chemin enneige'), talk('jax', 'Ecouter le souvenir de Jax'), talk('ribbit', 'Comparer le souvenir Ribbit')] },
@@ -2152,8 +2248,15 @@ const OS = {
       40: { title: 'RETROUVER LE COFFRE', steps: [activate('archive', 'Ouvrir le coffre deja pille'), scan('wave', 'Analyser deux courants', 2), talk('beachgangle', 'Parler a Gangle')] },
       41: { title: 'FIXER LE SOUVENIR C&A', steps: [scan('doorframe', 'Verifier la porte du souvenir'), scan('desk', 'Inspecter le mobilier efface'), talk('jax', 'Ecouter Jax')] },
       42: { title: 'RELEVER LA FETE FORAINE', steps: [scan('ring', 'Verifier deux attractions', 2), scan('pillar', 'Identifier le repere central'), talk('caine', 'Questionner Caine')] },
-      43: { title: 'PREPARER LE REPAS', steps: [scan('table', 'Verifier trois tables', 3), activate('menu', 'Lire le menu du repas'), talk('kinger', 'Rejoindre Kinger')] }
+      43: { title: 'PREPARER LE REPAS', steps: [scan('table', 'Verifier trois tables', 3), activate('menu', 'Lire le menu du repas'), talk('kinger', 'Rejoindre Kinger')] },
+      50: { title: 'INDEXER L ANNEXE OUEST', steps: [activate('archive', 'Ouvrir le registre de l annexe'), scan('ceilinglight', 'Verifier le balisage du couloir')] },
+      51: { title: 'INDEXER L ANNEXE EST', steps: [activate('archive', 'Ouvrir le registre de l annexe'), scan('ceilinglight', 'Verifier le balisage du couloir')] }
     };
+    Object.entries(this.getCircusBedroomDefinitions()).forEach(([zoneId, room]) => {
+      objectives[Number(zoneId)] = this.isCircusBedroomArchived(room)
+        ? { title: `RELEVER LA CHAMBRE ABANDONNEE / ${room.resident.toUpperCase()}`, steps: [scan('bed', 'Examiner la chambre vide'), activate('archive', 'Ouvrir le dossier de porte'), activate('memory', 'Stabiliser la trace residuelle')] }
+        : { title: `RELEVER LA CHAMBRE / ${room.resident.toUpperCase()}`, steps: [scan('bed', 'Examiner le mobilier principal'), activate('card', 'Identifier un objet personnel'), talk(room.avatar, `Parler a ${room.resident}`)] };
+    });
     this.circusZoneObjectiveConfigs = objectives;
     return objectives[zoneId] || null;
   },
@@ -2162,7 +2265,7 @@ const OS = {
     const activatableKinds = new Set(['console', 'gridnode', 'spotlight', 'candle', 'target', 'scoreboard', 'menu', 'card', 'archive', 'memory', 'ring', 'doorframe']);
     const errors = [];
     let missionCount = 0;
-    for (let zoneId = 2; zoneId <= 43; zoneId++) {
+    for (let zoneId = 2; zoneId <= 63; zoneId++) {
       const config = this.getCircusZoneObjectiveConfig(zoneId);
       if (!config) continue;
       missionCount++;
@@ -2263,6 +2366,17 @@ const OS = {
 
   getCircusPropInteraction(prop, zoneId) {
     const name = this.getCircusPropName(prop, zoneId);
+    const bedroom = this.getCircusBedroomDefinitions()[zoneId];
+    if (bedroom) {
+      const canonBoundary = bedroom.archived
+        ? `La porte de ${bedroom.resident} appartient a l historique du dortoir; cet interieur vide est une reconstruction CainOS et non une piece canonique confirmee.`
+        : bedroom.canon === 'show'
+          ? `La chambre de ${bedroom.resident} est montree dans la serie; CainOS en restitue les elements identifies sans pretendre reproduire chaque mesure.`
+          : bedroom.canon === 'merch'
+            ? `La chambre de ${bedroom.resident} est inspiree des representations officielles hors episode; CainOS la marque comme reconstruction partielle.`
+            : `Seules des vues partielles de la chambre de ${bedroom.resident} sont disponibles; le mobilier manquant est une reconstruction CainOS.`;
+      return `SCAN ${name}: ${canonBoundary}`;
+    }
     const lines = {
       '2:ring': "La piste centrale agit comme point d'ancrage: toutes les aventures reviennent vers le chapiteau.",
       '2:spotlight': "Les projecteurs suivent les avatars, pas les corps. CainOS detecte seulement des silhouettes numeriques.",
@@ -2302,6 +2416,10 @@ const OS = {
       '20:roomdoor': "Porte de resident: bois sombre, portrait circulaire et plaque nominative comme dans le couloir du Cirque.",
       '20:wallart': "Tableau abstrait: decor colore place entre les chambres pour casser la repetition du corridor.",
       '20:ceilinglight': "Plafonnier chaud: repere regulier qui accentue la profondeur du long couloir.",
+      '50:roomdoor': "Porte barree de l annexe ouest: ancien occupant abstrait; aucune presence active n est simulee dans la chambre.",
+      '51:roomdoor': "Porte barree de l annexe est: ancien occupant abstrait; aucune presence active n est simulee dans la chambre.",
+      '50:archive': "Registre de l annexe ouest: identites revelees tardivement, separees des residents actifs.",
+      '51:archive': "Registre de l annexe est: portes historiques conservees sans recreer leurs occupants.",
       '21:counter': "Comptoir du Cafe Cirque: espace de pause distinct de la table commune du chapiteau.",
       '22:window': "Vitre de l'aquarium: elle separe la galerie seche du decor aquatique simule.",
       '23:stairs': "Relief enneige: chemin de l'aventure hivernale conserve comme scene praticable.",
@@ -2367,6 +2485,7 @@ const OS = {
       archive: "cadre archive",
       doorframe: "cadre de porte",
       roomdoor: `porte de ${prop.label || 'resident'}`,
+      bed: "lit",
       wallart: "tableau abstrait",
       ceilinglight: "plafonnier"
     };
@@ -2434,6 +2553,36 @@ const OS = {
     }
     if (state.detailEl) state.detailEl.innerText = option.response;
     SoundManager.play(620 + index * 80, 0.08, 'triangle', 0.045);
+  },
+
+  enterCircusPropPortal(prop) {
+    const state = this.circusDoom;
+    if (!state || !prop || !Number.isFinite(prop.target)) return;
+    const worldPoint = this.resolveCircusWorldPoint(prop, state);
+    const distance = Math.hypot(worldPoint.x - state.player.x, worldPoint.z - state.player.z);
+    if (distance > 1.7) {
+      state.interactionMessage = 'PORTE HORS DE PORTEE: approchez-vous du portrait avant d entrer.';
+      state.interactionUntil = performance.now() + 2400;
+      state.interactionChannel = 'system';
+      state.interactionSpeaker = '';
+      SoundManager.playError();
+      return;
+    }
+    const target = state.portals[prop.target];
+    if (!target?.unlocked) {
+      state.interactionMessage = `PORTE BARREE: ${target?.short || 'archive'} reste verrouillee par la progression.`;
+      state.interactionUntil = performance.now() + 2800;
+      state.interactionChannel = 'system';
+      state.interactionSpeaker = '';
+      SoundManager.playError();
+      return;
+    }
+    const fromZoneId = state.currentZoneId;
+    if (typeof SoundManager.playFpsDoor === 'function') {
+      SoundManager.playFpsDoor(state.scenes[fromZoneId]?.motif || 'dorm');
+    }
+    state.history.push(fromZoneId);
+    this.setCircusSimulationZone(prop.target, true, fromZoneId);
   },
 
   getCircusObjectiveDialogueOption(sprite, zoneId) {
@@ -3195,7 +3344,7 @@ const OS = {
 
   getCircusWorldColliders(state) {
     if (state.worldColliderZoneId === state.currentZoneId && state.worldColliders) return state.worldColliders;
-    const collidableKinds = new Set(['table', 'counter', 'desk', 'pillar', 'crate', 'barrel', 'tent']);
+    const collidableKinds = new Set(['table', 'counter', 'desk', 'bed', 'pillar', 'crate', 'barrel', 'tent']);
     state.worldColliders = this.getCircusZoneProps(state.currentZoneId)
       .filter(prop => collidableKinds.has(prop.kind))
       .map(prop => {
@@ -3242,6 +3391,9 @@ const OS = {
       bathroom: { wallScale: 0.56, ceilingWorldHeight: 2.1, roof: 'tiles', wallBias: 0.53 },
       training: { wallScale: 0.6, ceilingWorldHeight: 2.2, roof: 'tiles', wallBias: 0.54 },
       dorm: { wallScale: 0.76, ceilingWorldHeight: 2.7, roof: 'hall', wallBias: 0.56 },
+      dormannex: { wallScale: 0.76, ceilingWorldHeight: 2.7, roof: 'hall', wallBias: 0.56 },
+      bedroom: { wallScale: 0.7, ceilingWorldHeight: 2.55, roof: 'flat', wallBias: 0.55 },
+      archivebedroom: { wallScale: 0.64, ceilingWorldHeight: 2.35, roof: 'flat', wallBias: 0.54 },
       common: { wallScale: 0.84, ceilingWorldHeight: 3.1, roof: 'tent', wallBias: 0.57 },
       tubes: { wallScale: 0.9, ceilingWorldHeight: 3.35, roof: 'tent', wallBias: 0.58 },
       loser: { wallScale: 0.64, ceilingWorldHeight: 2.3, roof: 'flat', wallBias: 0.54 },
@@ -3531,15 +3683,29 @@ const OS = {
             ctx.fillRect(x, y + wallH * 0.2, strip, Math.max(1, wallH * 0.18));
             ctx.fillRect(x, y + wallH * 0.55, strip, Math.max(1, wallH * 0.18));
           }
-        } else if (motif === 'dorm') {
+        } else if (motif === 'dorm' || motif === 'dormannex') {
           const wallCoord = hit.nearVertical ? hitZ : hitX;
-          const stripe = Math.floor(wallCoord * 0.72) % 2 === 0 ? '#e65b78' : '#f0b34a';
+          const stripe = motif === 'dormannex'
+            ? (Math.floor(wallCoord * 0.72) % 2 === 0 ? '#8f4656' : '#5b2938')
+            : (Math.floor(wallCoord * 0.72) % 2 === 0 ? '#e65b78' : '#f0b34a');
           ctx.fillStyle = this.shadeHex(stripe, shadeFactor);
           ctx.fillRect(x, y, strip, Math.ceil(wallH));
-          ctx.fillStyle = this.shadeHex('#6a2f2a', shadeFactor);
+          ctx.fillStyle = this.shadeHex(motif === 'dormannex' ? '#2f1620' : '#6a2f2a', shadeFactor);
           ctx.fillRect(x, y + wallH * 0.78, strip, Math.max(1, wallH * 0.22));
-          ctx.fillStyle = this.shadeHex('#ffd06a', shadeFactor);
+          ctx.fillStyle = this.shadeHex(motif === 'dormannex' ? '#a56b72' : '#ffd06a', shadeFactor);
           ctx.fillRect(x, y + wallH * 0.76, strip, Math.max(1, wallH * 0.025));
+        } else if (motif === 'bedroom' || motif === 'archivebedroom') {
+          const archived = motif === 'archivebedroom';
+          const wallBase = archived ? '#171219' : (zone.color || '#6a2f48');
+          const panel = archived ? '#2c2530' : this.shadeHex(zone.color || '#6a2f48', 0.62);
+          ctx.fillStyle = this.shadeHex(wallBase, shadeFactor * (archived ? 0.72 : 0.88));
+          ctx.fillRect(x, y, strip, Math.ceil(wallH));
+          if (Math.floor(u * 8) % 2 === 0) {
+            ctx.fillStyle = this.shadeHex(panel, shadeFactor);
+            ctx.fillRect(x, y, strip, Math.ceil(wallH));
+          }
+          ctx.fillStyle = this.shadeHex(archived ? '#695b68' : '#fff1a8', shadeFactor * 0.82);
+          ctx.fillRect(x, y + wallH * 0.78, strip, Math.max(1, wallH * 0.035));
         } else if (motif === 'cafe') {
           ctx.fillStyle = this.shadeHex('#4a2d20', shadeFactor);
           ctx.fillRect(x, y, strip, Math.ceil(wallH));
@@ -3731,6 +3897,9 @@ const OS = {
       memory: { ceilingTop: '#06070c', ceilingBottom: '#15151f', floorA: '#0e0e12', floorB: '#22202a', floorC: '#d9d0a2', grid: 'rgba(217,208,162,0.16)' },
       archive: { ceilingTop: '#07020f', ceilingBottom: '#20102e', floorA: '#13091d', floorB: '#251234', floorC: '#c875ff', grid: 'rgba(200,117,255,0.16)' },
       dorm: { ceilingTop: '#5d2730', ceilingBottom: '#f1c67b', floorA: '#9f2039', floorB: '#64172b', floorC: '#ffd06a', grid: 'rgba(255,208,106,0.16)' },
+      dormannex: { ceilingTop: '#21101a', ceilingBottom: '#6b3442', floorA: '#6b2135', floorB: '#35121f', floorC: '#a56b72', grid: 'rgba(180,125,135,0.14)' },
+      bedroom: { ceilingTop: '#160b1e', ceilingBottom: '#3d203d', floorA: '#6a2f48', floorB: '#3d2134', floorC: '#fff1a8', grid: 'rgba(255,241,168,0.12)' },
+      archivebedroom: { ceilingTop: '#050407', ceilingBottom: '#171219', floorA: '#171219', floorB: '#0b090d', floorC: '#695b68', grid: 'rgba(160,145,160,0.1)' },
       cafe: { ceilingTop: '#17100d', ceilingBottom: '#3b271e', floorA: '#302018', floorB: '#4a2d20', floorC: '#d49a62', grid: 'rgba(212,154,98,0.15)' },
       aquarium: { ceilingTop: '#06202f', ceilingBottom: '#0a5068', floorA: '#073443', floorB: '#0a596b', floorC: '#63d9ff', grid: 'rgba(99,217,255,0.2)' },
       snow: { ceilingTop: '#34567a', ceilingBottom: '#9dc4dc', floorA: '#e8f7ff', floorB: '#a7c9df', floorC: '#ffffff', grid: 'rgba(255,255,255,0.22)' },
@@ -3825,7 +3994,7 @@ const OS = {
       ctx.fillRect(0, horizon * 0.58, w, 14);
       ctx.fillStyle = 'rgba(255,255,255,0.12)';
       for (let x = 0; x < w; x += 54) ctx.fillRect(x, 0, 2, horizon);
-    } else if (motif === 'dorm') {
+    } else if (motif === 'dorm' || motif === 'dormannex') {
       ctx.fillStyle = 'rgba(255,240,190,0.2)';
       for (let i = 0; i < 6; i++) {
         const depth = i / 6;
@@ -3916,11 +4085,25 @@ const OS = {
       color = farGrid ? theme.floorC : theme.floorA;
     } else if (['tubes', 'carnival', 'nest', 'hell'].includes(motif)) {
       color = checker(1.05) ? theme.floorA : theme.floorB;
-    } else if (motif === 'dorm') {
+    } else if (motif === 'dorm' || motif === 'dormannex') {
       const centerX = state?.room?.center?.x ?? 9.5;
       const offset = Math.abs(worldX - centerX);
       const border = offset > 1.15 && offset < 1.48;
       color = border ? theme.floorC : (offset < 1.15 ? theme.floorA : theme.floorB);
+    } else if (motif === 'bedroom') {
+      const roomId = state?.currentZoneId;
+      if (roomId === 49) color = checker(1.15) ? '#eee9d3' : '#17131d';
+      else if (roomId === 48) {
+        const pattern = Math.abs(Math.sin(worldX * 1.5) + Math.cos(worldZ * 1.7));
+        color = pattern > 1.05 ? '#7df0ff' : (checker(1.15) ? theme.floorA : theme.floorB);
+      } else if (roomId === 47) color = checker(1.1) ? '#16090d' : '#2b0c16';
+      else if (roomId === 46) {
+        const seam = Math.abs((worldX * 2.4) % 1) < 0.07;
+        color = seam ? '#3d241d' : (checker(0.55) ? '#8b5a3c' : '#72452f');
+      } else color = checker(1.05) ? theme.floorA : theme.floorB;
+    } else if (motif === 'archivebedroom') {
+      const gridLine = Math.abs((worldX * 1.1) % 1) < 0.035 || Math.abs((worldZ * 1.1) % 1) < 0.035;
+      color = gridLine ? theme.floorC : (checker(0.55) ? theme.floorA : theme.floorB);
     }
     return this.shadeHex(color, shade);
   },
@@ -4510,7 +4693,7 @@ const OS = {
   getCircusDepthLight(depth, state, fullbright = false) {
     if (fullbright) return 1;
     const motif = (state.scenes[state.currentZoneId] || state.scenes[2])?.motif || 'circus';
-    const darkMotifs = new Set(['cellar', 'manor', 'basement', 'hell', 'memory', 'archive', 'training']);
+    const darkMotifs = new Set(['cellar', 'manor', 'basement', 'hell', 'memory', 'archive', 'archivebedroom', 'training']);
     const brightMotifs = new Set(['grounds', 'candy', 'route', 'lake', 'lighthouse', 'softball', 'snow', 'carnival', 'void']);
     const ambient = darkMotifs.has(motif) ? 0.42 : brightMotifs.has(motif) ? 0.78 : 0.6;
     const range = Math.max(6, (state.room?.size || 15) * 0.72);
@@ -4518,9 +4701,52 @@ const OS = {
     return ambient + (1 - ambient) * falloff;
   },
 
+  getCircusBedroomProps(zoneId) {
+    const room = this.getCircusBedroomDefinitions()[zoneId];
+    if (!room) return null;
+    if (this.isCircusBedroomArchived(room)) {
+      return [
+        { kind: 'bed', x: 0.7, z: -2.35, color: this.shadeHex(room.color, 0.72), accent: room.accent },
+        { kind: 'archive', x: -1.55, z: -2.15, color: room.color, label: room.resident },
+        { kind: 'memory', x: -0.85, z: -1.25, color: room.accent, label: room.resident },
+        { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'panel', x: 0, z: -1.4, color: '#8b8794' }
+      ];
+    }
+    const shared = [
+      { kind: 'bed', x: 0.65, z: -2.45, color: room.color, accent: room.accent },
+      { kind: 'desk', x: -1.7, z: -2.0, color: this.shadeHex(room.color, 0.72) },
+      { kind: 'card', x: -1.2, z: -1.15, color: room.accent, label: `${room.resident} personal item` },
+      { kind: 'ceilinglight', anchor: 'ceiling', fixture: zoneId === 47 ? 'panel' : 'chandelier', x: 0, z: -1.1, color: room.accent }
+    ];
+    if (zoneId === 46) {
+      shared.push({ kind: 'wallart', anchor: 'wall-left', wallSurface: 'outer', x: 0, z: -1.4, color: '#78a8e8', art: 'blocks' });
+      shared.push({ kind: 'crate', x: 1.95, z: -1.1, color: '#8b5a3c', label: 'toybox' });
+    } else if (zoneId === 47) {
+      shared.push({ kind: 'card', x: 1.65, z: -1.2, color: '#e53935', label: 'drawings' });
+      shared.push({ kind: 'wallart', anchor: 'wall-right', wallSurface: 'outer', x: 0, z: -1.4, color: '#f7f7f7', art: 'spiral' });
+    } else if (zoneId === 48) {
+      shared.push({ kind: 'crate', x: 1.8, z: -1.2, color: '#7df0ff', label: 'Zooble Box' });
+      shared.push({ kind: 'wallart', anchor: 'wall-left', wallSurface: 'outer', x: 0, z: -1.7, color: '#ff4fb8', art: 'blocks' });
+      shared.push({ kind: 'wallart', anchor: 'wall-right', wallSurface: 'outer', x: 0, z: -1.7, color: '#7df0ff', art: 'spiral' });
+    } else if (zoneId === 49) {
+      shared.push({ kind: 'memory', x: 1.8, z: -1.2, color: '#d9d0a2', label: 'Queenie memory' });
+      shared.push({ kind: 'candle', x: -0.35, z: -1.25, color: '#ffd84a' });
+    } else if (zoneId === 45) {
+      shared.push({ kind: 'wallart', anchor: 'wall-right', wallSurface: 'outer', x: 0, z: -1.6, color: '#2a58d8', art: 'blocks' });
+    } else if (zoneId === 44) {
+      shared.push({ kind: 'barrel', x: 1.8, z: -1.2, color: '#ffd84a', label: 'barrel of monkeys' });
+    }
+    return shared;
+  },
+
   getCircusZoneProps(zoneId) {
     this.circusZonePropsCache = this.circusZonePropsCache || new Map();
     if (this.circusZonePropsCache.has(zoneId)) return this.circusZonePropsCache.get(zoneId);
+    const bedroomProps = this.getCircusBedroomProps(zoneId);
+    if (bedroomProps) {
+      this.circusZonePropsCache.set(zoneId, bedroomProps);
+      return bedroomProps;
+    }
     const basePillars = [
       { kind: 'pillar', x: -2.9, z: -1.4, color: '#ffd84a' },
       { kind: 'pillar', x: 2.9, z: -1.4, color: '#2a58d8' },
@@ -4547,12 +4773,12 @@ const OS = {
       18: [...basePillars, { kind: 'spotlight', x: 0, z: -2.6, color: '#e53935' }, { kind: 'archive', x: -2.2, z: -2.25, color: '#c875ff' }, { kind: 'gridnode', x: 2.2, z: -1.45, color: '#ff4d4d' }],
       19: [{ kind: 'archive', x: -2.0, z: -2.1, color: '#c875ff' }, { kind: 'archive', x: 0, z: -2.7, color: '#7df0ff' }, { kind: 'archive', x: 2.0, z: -2.1, color: '#ffd84a' }, { kind: 'card', x: -3.0, z: -1.35, color: '#ff4fb8' }, { kind: 'card', x: 3.0, z: -1.35, color: '#ffd84a' }],
       20: [
-        { kind: 'roomdoor', avatar: 'jax', label: 'JAX', side: 'left', anchor: 'wall-left', x: -1.48, z: 3.2, color: '#8a4fd6' },
-        { kind: 'roomdoor', avatar: 'pomni', label: 'POMNI', side: 'right', anchor: 'wall-right', x: 1.48, z: 3.2, color: '#e53935' },
-        { kind: 'roomdoor', avatar: 'ragatha', label: 'RAGATHA', side: 'left', anchor: 'wall-left', x: -1.48, z: 0, color: '#d64545' },
-        { kind: 'roomdoor', avatar: 'gangle', label: 'GANGLE', side: 'right', anchor: 'wall-right', x: 1.48, z: 0, color: '#f7f7f7' },
-        { kind: 'roomdoor', avatar: 'zooble', label: 'ZOOBLE', side: 'left', anchor: 'wall-left', x: -1.48, z: -3.2, color: '#ff4fb8' },
-        { kind: 'roomdoor', avatar: 'kinger', label: 'KINGER', side: 'right', anchor: 'wall-right', x: 1.48, z: -3.2, color: '#d9d0a2' },
+        { kind: 'roomdoor', avatar: 'jax', label: 'JAX', side: 'left', anchor: 'wall-left', x: -1.48, z: 3.2, color: '#8a4fd6', target: 44 },
+        { kind: 'roomdoor', avatar: 'pomni', label: 'POMNI', side: 'right', anchor: 'wall-right', x: 1.48, z: 3.2, color: '#e53935', target: 45 },
+        { kind: 'roomdoor', avatar: 'ragatha', label: 'RAGATHA', side: 'left', anchor: 'wall-left', x: -1.48, z: 0, color: '#d64545', target: 46 },
+        { kind: 'roomdoor', avatar: 'gangle', label: 'GANGLE', side: 'right', anchor: 'wall-right', x: 1.48, z: 0, color: '#f7f7f7', target: 47 },
+        { kind: 'roomdoor', avatar: 'zooble', label: 'ZOOBLE', side: 'left', anchor: 'wall-left', x: -1.48, z: -3.2, color: '#ff4fb8', target: 48 },
+        { kind: 'roomdoor', avatar: 'kinger', label: 'KINGER', side: 'right', anchor: 'wall-right', x: 1.48, z: -3.2, color: '#d9d0a2', target: 49 },
         { kind: 'wallart', anchor: 'wall-left', x: -1.48, z: 1.55, color: '#7df0ff', art: 'spiral' },
         { kind: 'wallart', anchor: 'wall-right', x: 1.48, z: -1.55, color: '#ffd84a', art: 'blocks' },
         { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'panel', x: 0, z: 3.2, color: '#fff1a8' },
@@ -4581,13 +4807,39 @@ const OS = {
       40: [{ kind: 'archive', x: 0, z: -2.9, color: '#ffd84a' }, { kind: 'wave', x: -2.3, z: -2.1, color: '#4ee7ff' }, { kind: 'wave', x: 2.3, z: -2.1, color: '#4ee7ff' }, { kind: 'eye', x: -1.1, z: -1.35, color: '#ffffff' }, { kind: 'eye', x: 1.1, z: -1.35, color: '#ffffff' }],
       41: [{ kind: 'desk', x: -2.1, z: -2.3, color: '#59616a' }, { kind: 'doorframe', x: 0, z: -3.1, color: '#8fa6ba' }, { kind: 'window', x: 2.2, z: -2.3, color: '#d8e4ee' }, { kind: 'card', x: 0.8, z: -1.35, color: '#ff7a30' }],
       42: [{ kind: 'ring', x: -2.5, z: -2.4, color: '#ff4fb8' }, { kind: 'ring', x: 2.5, z: -2.4, color: '#7df0ff' }, { kind: 'pillar', x: 0, z: -3.1, color: '#ffd84a' }, { kind: 'balloon', x: -1.25, z: -1.35, color: '#e53935' }, { kind: 'balloon', x: 1.25, z: -1.35, color: '#2a58d8' }],
-      43: [{ kind: 'table', x: 0, z: -2.7, color: '#7a4b32' }, { kind: 'table', x: -2.2, z: -1.8, color: '#7a4b32' }, { kind: 'table', x: 2.2, z: -1.8, color: '#7a4b32' }, { kind: 'menu', x: 0, z: -1.25, color: '#fff1a8' }]
+      43: [{ kind: 'table', x: 0, z: -2.7, color: '#7a4b32' }, { kind: 'table', x: -2.2, z: -1.8, color: '#7a4b32' }, { kind: 'table', x: 2.2, z: -1.8, color: '#7a4b32' }, { kind: 'menu', x: 0, z: -1.25, color: '#fff1a8' }],
+      50: [
+        { kind: 'roomdoor', avatar: 'kaufmo', label: 'KAUFMO', side: 'left', anchor: 'wall-left', x: -1.48, z: 3.2, color: '#e53935', target: 52, archived: true },
+        { kind: 'roomdoor', avatar: 'queenie', label: 'QUEENIE', side: 'right', anchor: 'wall-right', x: 1.48, z: 3.2, color: '#f7eecb', target: 53, archived: true },
+        { kind: 'roomdoor', avatar: 'ribbit', label: 'RIBBIT', side: 'left', anchor: 'wall-left', x: -1.48, z: 0, color: '#4ee77e', target: 54, archived: true },
+        { kind: 'roomdoor', avatar: 'scratch', label: 'SCRATCH', side: 'right', anchor: 'wall-right', x: 1.48, z: 0, color: '#d6a82c', target: 55, archived: true },
+        { kind: 'roomdoor', avatar: 'wormo', label: 'WORMO', side: 'left', anchor: 'wall-left', x: -1.48, z: -3.2, color: '#ef8b45', target: 56, archived: true },
+        { kind: 'roomdoor', avatar: 'bizco', label: 'BIZCO', side: 'right', anchor: 'wall-right', x: 1.48, z: -3.2, color: '#b45cff', target: 57, archived: true },
+        { kind: 'archive', x: 0, z: -4.25, color: '#c875ff', label: 'WEST ANNEX' },
+        { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'panel', x: 0, z: 0, color: '#8b8794' }
+      ],
+      51: [
+        { kind: 'roomdoor', avatar: 'rattie', label: 'RATTIE', side: 'left', anchor: 'wall-left', x: -1.48, z: 3.2, color: '#897765', target: 58, archived: true },
+        { kind: 'roomdoor', avatar: 'spike', label: 'SPIKE', side: 'right', anchor: 'wall-right', x: 1.48, z: 3.2, color: '#8d5cff', target: 59, archived: true },
+        { kind: 'roomdoor', avatar: 'pinkcyclops', label: 'PINK CYCLOPS', side: 'left', anchor: 'wall-left', x: -1.48, z: 0, color: '#ff80bd', target: 60, archived: true },
+        { kind: 'roomdoor', avatar: 'yellowclown', label: 'YELLOW CLOWN', side: 'right', anchor: 'wall-right', x: 1.48, z: 0, color: '#d6a82c', target: 61, archived: true },
+        { kind: 'roomdoor', avatar: 'oyster', label: 'OYSTER', side: 'left', anchor: 'wall-left', x: -1.48, z: -3.2, color: '#8fb7ff', target: 62, archived: true },
+        { kind: 'roomdoor', avatar: 'bulbcreature', label: 'BULB CREATURE', side: 'right', anchor: 'wall-right', x: 1.48, z: -3.2, color: '#7caa42', target: 63, archived: true },
+        { kind: 'archive', x: 0, z: -4.25, color: '#c875ff', label: 'EAST ANNEX' },
+        { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'panel', x: 0, z: 0, color: '#8b8794' }
+      ]
     };
-    const props = [
+    let props = [
       ...(byZone[zoneId] || basePillars),
       ...this.getCircusExtraZoneProps(zoneId),
       ...this.getCircusArchitectureProps(zoneId)
     ];
+    if (zoneId === 20) {
+      const jaxRoom = this.getCircusBedroomDefinitions()[44];
+      if (this.isCircusBedroomArchived(jaxRoom)) {
+        props = props.map(prop => prop.kind === 'roomdoor' && prop.target === 44 ? { ...prop, archived: true } : prop);
+      }
+    }
     this.circusZonePropsCache.set(zoneId, props);
     return props;
   },
@@ -4721,7 +4973,7 @@ const OS = {
   },
 
   getCircusWorldGeometryKinds() {
-    return new Set(['ring', 'base', 'stairs', 'table', 'counter', 'desk', 'pillar', 'crate', 'barrel', 'tent']);
+    return new Set(['ring', 'base', 'stairs', 'table', 'counter', 'desk', 'bed', 'pillar', 'crate', 'barrel', 'tent']);
   },
 
   projectCircusPropGroundVertex(prop, offsetX, offsetZ, state, w, h, height = 0) {
@@ -4763,6 +5015,7 @@ const OS = {
       table: { width: 1.35, depth: 0.82, height: 0.52, apron: 0.1 },
       counter: { width: 1.9, depth: 0.72, height: 0.86, apron: 0.26 },
       desk: { width: 1.5, depth: 0.78, height: 0.74, apron: 0.2 },
+      bed: { width: 1.35, depth: 2.05, height: 0.48, apron: 0.32 },
       pillar: { radius: 0.28, height: 2.05, segments: 10 },
       barrel: { radius: 0.34, height: 0.72, segments: 10 },
       crate: { width: 0.72, depth: 0.72, height: 0.66 },
@@ -4884,6 +5137,25 @@ const OS = {
             });
             this.drawCircusGroundPolygon(ctx, band, null, '#d3c6a8', 2);
           }
+        }
+      } else if (prop.kind === 'bed') {
+        const dimensions = this.getCircusWorldPropDimensions(prop, state);
+        const halfW = dimensions.width / 2;
+        const halfD = dimensions.depth / 2;
+        const corners = [[-halfW, -halfD], [halfW, -halfD], [halfW, halfD], [-halfW, halfD]];
+        const bottom = corners.map(([x, z]) => this.projectCircusPropGroundVertex(prop, x, z, state, w, h, 0.1));
+        const top = corners.map(([x, z]) => this.projectCircusPropGroundVertex(prop, x, z, state, w, h, dimensions.height));
+        if (bottom.every(Boolean) && top.every(Boolean)) {
+          this.drawCircusGroundPolygon(ctx, [bottom[0], bottom[1], top[1], top[0]], this.shadeHex(color, 0.52), '#211d28', 1);
+          this.drawCircusGroundPolygon(ctx, [bottom[1], bottom[2], top[2], top[1]], this.shadeHex(color, 0.64), '#211d28', 1);
+          this.drawCircusGroundPolygon(ctx, top, this.shadeHex(color, 1.04), '#fff1a866', 1);
+          const pillow = [
+            this.projectCircusPropGroundVertex(prop, -halfW * 0.72, -halfD * 0.72, state, w, h, dimensions.height + 0.035),
+            this.projectCircusPropGroundVertex(prop, halfW * 0.72, -halfD * 0.72, state, w, h, dimensions.height + 0.035),
+            this.projectCircusPropGroundVertex(prop, halfW * 0.72, -halfD * 0.32, state, w, h, dimensions.height + 0.035),
+            this.projectCircusPropGroundVertex(prop, -halfW * 0.72, -halfD * 0.32, state, w, h, dimensions.height + 0.035)
+          ];
+          this.drawCircusGroundPolygon(ctx, pillow, this.shadeHex(prop.accent || '#fff1a8', 1.02), '#211d28', 1);
         }
       } else if (prop.kind === 'crate') {
         const dimensions = this.getCircusWorldPropDimensions(prop, state);
@@ -5297,6 +5569,19 @@ const OS = {
       ctx.beginPath();
       ctx.arc((prop.side === 'left' ? 21 : -21) * s, -22 * s, 3 * s, 0, Math.PI * 2);
       ctx.fill();
+      if (prop.archived) {
+        ctx.strokeStyle = '#d93131';
+        ctx.lineWidth = Math.max(2, 6 * s);
+        ctx.beginPath();
+        ctx.moveTo(-25 * s, -106 * s);
+        ctx.lineTo(25 * s, -57 * s);
+        ctx.moveTo(25 * s, -106 * s);
+        ctx.lineTo(-25 * s, -57 * s);
+        ctx.stroke();
+        ctx.fillStyle = '#d93131';
+        ctx.font = `bold ${Math.max(6, 7 * s)}px Courier New`;
+        ctx.fillText('ARCHIVE', 0, -5 * s);
+      }
     } else if (prop.kind === 'wallart') {
       ctx.fillStyle = '#5b2b1e';
       ctx.fillRect(-34 * s, -27 * s, 68 * s, 54 * s);
@@ -5942,6 +6227,19 @@ const OS = {
   getCircusZoneSprites(zoneId) {
     this.circusZoneSpritesCache = this.circusZoneSpritesCache || new Map();
     if (this.circusZoneSpritesCache.has(zoneId)) return this.circusZoneSpritesCache.get(zoneId);
+    const bedroom = this.getCircusBedroomDefinitions()[zoneId];
+    if (bedroom) {
+      const sprites = this.isCircusBedroomArchived(bedroom) ? [] : [{
+        name: bedroom.resident,
+        type: bedroom.avatar,
+        avatar: bedroom.avatar,
+        x: -0.75,
+        z: -1.85,
+        color: bedroom.color
+      }];
+      this.circusZoneSpritesCache.set(zoneId, sprites);
+      return sprites;
+    }
     const shared = [
       { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -1.2, z: -2.3, color: '#e53935' },
       { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: 1.2, z: -2.55, color: '#d64545' },
@@ -6147,7 +6445,9 @@ const OS = {
         { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -1.35, z: -2.3, color: '#d9d0a2' },
         { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: 0.1, z: -2.65, color: '#d64545' },
         { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: 1.45, z: -1.85, color: '#f7f7f7' }
-      ]
+      ],
+      50: [],
+      51: []
     };
     const sprites = byZone[zoneId] || shared.slice(0, 4);
     this.circusZoneSpritesCache.set(zoneId, sprites);
@@ -7192,6 +7492,14 @@ const OS = {
       { id: 14, ep: 7, name: 'Digital Lake', desc: 'Fausse pause, soleil dangereux et PNJ fragiles.', item: 'Coquillage digital', unlocked: unlocked(7) },
       { id: 16, ep: 8, name: 'Caine Office / Core', desc: 'Bureau et couches techniques de Caine; Abel reste un PNJ supprime.', item: 'Pass admin', unlocked: unlocked(8) },
       { id: 20, ep: 1, name: 'Resident Hall', desc: 'Couloir des chambres et portes personnalisees.', item: 'Cle de chambre', unlocked: unlocked(1) },
+      { id: 44, ep: 1, name: 'Chambre de Jax', desc: 'Espace prive relie a la porte de Jax; reconstruction partielle.', item: 'Plaque Jax', unlocked: unlocked(1) },
+      { id: 45, ep: 1, name: 'Chambre de Pomni', desc: 'Espace prive relie a la porte de Pomni; reconstruction partielle.', item: 'Plaque Pomni', unlocked: unlocked(1) },
+      { id: 46, ep: 1, name: 'Chambre de Ragatha', desc: 'Reconstruction inspiree des representations officielles.', item: 'Plaque Ragatha', unlocked: unlocked(1) },
+      { id: 47, ep: 9, name: 'Chambre de Gangle', desc: 'Piece sombre, lit rouge et espace de dessin vus dans Remember.', item: 'Dessin de Gangle', unlocked: unlocked(9) },
+      { id: 48, ep: 1, name: 'Chambre de Zooble', desc: 'Piece coloree avec lit, miroirs et Zooble Box.', item: 'Piece Zooble', unlocked: unlocked(1) },
+      { id: 49, ep: 1, name: 'Chambre de Kinger', desc: 'Reconstruction officielle partielle au sol en damier.', item: 'Piece d echecs', unlocked: unlocked(1) },
+      { id: 50, ep: 9, name: 'Dorm Hall / Annexe ouest', desc: 'Portes barrees des anciens membres, sans occupants actifs.', item: 'Registre ouest', unlocked: unlocked(9) },
+      { id: 51, ep: 9, name: 'Dorm Hall / Annexe est', desc: 'Seconde rangee de portes barrees et chambres abandonnees.', item: 'Registre est', unlocked: unlocked(9) },
       { id: 21, ep: 8, name: "Crow's Nest / Cafe Cirque", desc: 'Lieu de retrait et de discussion tardive.', item: 'Tasse du cafe', unlocked: unlocked(8) },
       { id: 17, ep: 8, name: 'Kinger Memory Buffer', desc: 'Souvenirs de Queenie sans restauration active.', item: 'Piece memoire', unlocked: unlocked(8) },
       { id: 18, ep: 9, name: 'Final Circus', desc: 'Brain scans, reves, couleur et choix de Pomni.', item: 'Fragment couleur', unlocked: unlocked(9) },
