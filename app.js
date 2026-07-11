@@ -1461,7 +1461,9 @@ const OS = {
       { t: 920, text: 'PANNEAUX ROUGE/BLEU EN ROTATION...' },
       { t: 1380, text: 'TOIT PRINCIPAL ATTACHE AU CIEL DIGITAL...' },
       { t: 1880, text: 'PORTE DU CHAPITEAU SYNCHRONISEE...' },
-      { t: 2420, text: 'POINT DE VUE INTERNE PRET.' }
+      { t: 2420, text: 'POINT DE VUE INTERNE PRET.' },
+      { t: 3180, text: 'TITRE DU PROGRAMME EN ASSEMBLAGE...' },
+      { t: 4480, text: 'IDENTITE VISUELLE SYNCHRONISEE.' }
     ];
     this.circusRenderTimers = statusSteps.map(step => setTimeout(() => {
       if (status) status.innerText = step.text;
@@ -1493,7 +1495,7 @@ const OS = {
         launch.innerText = 'ENTRER DANS LE CHAPITEAU';
       }
       SoundManager.playWin();
-    }, 2850));
+    }, 4620));
 
     SoundManager.play(520, 0.05, 'square', 0.06);
     setTimeout(() => SoundManager.play(780, 0.05, 'square', 0.05), 80);

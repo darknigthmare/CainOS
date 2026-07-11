@@ -1847,6 +1847,190 @@ body {
   opacity: 0;
 }
 
+.circus-title-logo {
+  position: absolute;
+  left: 50%;
+  top: 52%;
+  z-index: 3;
+  width: min(520px, 92%);
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+  user-select: none;
+  isolation: isolate;
+}
+
+.circus-title-kicker {
+  opacity: 0;
+  color: #ffd84a;
+  font: 900 20px/1 "Arial Black", Impact, sans-serif;
+  letter-spacing: 0;
+  -webkit-text-stroke: 1px #3b2200;
+  text-shadow: 0 2px 0 #8a5b00, 2px 3px 0 #05020d;
+  transform: translateY(-72px) rotate(-6deg) scale(0.65);
+}
+
+.circus-title-word {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 0.88;
+}
+
+.circus-title-digital {
+  margin-top: 3px;
+}
+
+.circus-title-circus {
+  margin-top: 4px;
+}
+
+.circus-title-letter {
+  --letter-color: #e53935;
+  --letter-dark: #84151d;
+  --launch-x: 0px;
+  --launch-rotate: 0deg;
+  --settle-rotate: 0deg;
+  --settle-y: 0px;
+  position: relative;
+  display: inline-block;
+  opacity: 0;
+  color: var(--letter-color);
+  font-family: "Arial Black", Impact, sans-serif;
+  font-weight: 900;
+  letter-spacing: 0;
+  -webkit-text-stroke: 2px #29120d;
+  filter:
+    drop-shadow(0 3px 0 var(--letter-dark))
+    drop-shadow(2px 5px 0 #05020d);
+  transform-origin: 50% 78%;
+}
+
+.circus-title-digital .circus-title-letter {
+  flex: 0 1 58px;
+  font-size: 54px;
+  text-align: center;
+}
+
+.circus-title-circus .circus-title-letter {
+  flex: 0 1 64px;
+  font-size: 58px;
+  text-align: center;
+  background:
+    radial-gradient(circle at 28% 25%, #fff 0 5%, transparent 6%),
+    radial-gradient(circle at 72% 38%, #fff 0 6%, transparent 7%),
+    radial-gradient(circle at 42% 72%, #fff 0 5%, transparent 6%),
+    radial-gradient(circle at 78% 82%, #fff 0 4%, transparent 5%),
+    var(--letter-color);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.logo-red {
+  --letter-color: #ed3433;
+  --letter-dark: #8e181d;
+}
+
+.logo-blue {
+  --letter-color: #2f64dc;
+  --letter-dark: #143589;
+}
+
+.logo-yellow {
+  --letter-color: #f3d929;
+  --letter-dark: #957a00;
+}
+
+.circus-title-digital .circus-title-letter:nth-child(1),
+.circus-title-circus .circus-title-letter:nth-child(4) {
+  --launch-x: -110px;
+  --launch-rotate: -24deg;
+  --settle-rotate: -5deg;
+  --settle-y: 2px;
+}
+
+.circus-title-digital .circus-title-letter:nth-child(2),
+.circus-title-circus .circus-title-letter:nth-child(6) {
+  --launch-x: 82px;
+  --launch-rotate: 20deg;
+  --settle-rotate: 3deg;
+  --settle-y: -3px;
+}
+
+.circus-title-digital .circus-title-letter:nth-child(3),
+.circus-title-circus .circus-title-letter:nth-child(1) {
+  --launch-x: -46px;
+  --launch-rotate: 14deg;
+  --settle-rotate: 4deg;
+  --settle-y: -2px;
+}
+
+.circus-title-digital .circus-title-letter:nth-child(4),
+.circus-title-circus .circus-title-letter:nth-child(2) {
+  --launch-x: 38px;
+  --launch-rotate: -18deg;
+  --settle-rotate: -2deg;
+  --settle-y: 3px;
+}
+
+.circus-title-digital .circus-title-letter:nth-child(5),
+.circus-title-circus .circus-title-letter:nth-child(3) {
+  --launch-x: 96px;
+  --launch-rotate: 25deg;
+  --settle-rotate: 2deg;
+  --settle-y: 1px;
+}
+
+.circus-title-digital .circus-title-letter:nth-child(6),
+.circus-title-circus .circus-title-letter:nth-child(5) {
+  --launch-x: -74px;
+  --launch-rotate: -21deg;
+  --settle-rotate: -3deg;
+  --settle-y: -1px;
+}
+
+.circus-title-digital .circus-title-letter:nth-child(7) {
+  --launch-x: 124px;
+  --launch-rotate: 28deg;
+  --settle-rotate: 5deg;
+  --settle-y: 2px;
+}
+
+.circus-dos-overlay.rendering .circus-title-kicker {
+  animation: circusTitleKicker 0.62s 1.9s cubic-bezier(0.2, 0.9, 0.28, 1.35) forwards;
+}
+
+.circus-dos-overlay.rendering .circus-title-letter {
+  animation: circusTitleLetter 0.82s cubic-bezier(0.18, 0.82, 0.24, 1.25) forwards;
+}
+
+.circus-dos-overlay.rendering .circus-title-digital .circus-title-letter:nth-child(1) { animation-delay: 2.15s; }
+.circus-dos-overlay.rendering .circus-title-digital .circus-title-letter:nth-child(2) { animation-delay: 2.26s; }
+.circus-dos-overlay.rendering .circus-title-digital .circus-title-letter:nth-child(3) { animation-delay: 2.37s; }
+.circus-dos-overlay.rendering .circus-title-digital .circus-title-letter:nth-child(4) { animation-delay: 2.48s; }
+.circus-dos-overlay.rendering .circus-title-digital .circus-title-letter:nth-child(5) { animation-delay: 2.59s; }
+.circus-dos-overlay.rendering .circus-title-digital .circus-title-letter:nth-child(6) { animation-delay: 2.7s; }
+.circus-dos-overlay.rendering .circus-title-digital .circus-title-letter:nth-child(7) { animation-delay: 2.81s; }
+
+.circus-dos-overlay.rendering .circus-title-circus .circus-title-letter:nth-child(1) { animation-delay: 3.02s; }
+.circus-dos-overlay.rendering .circus-title-circus .circus-title-letter:nth-child(2) { animation-delay: 3.15s; }
+.circus-dos-overlay.rendering .circus-title-circus .circus-title-letter:nth-child(3) { animation-delay: 3.28s; }
+.circus-dos-overlay.rendering .circus-title-circus .circus-title-letter:nth-child(4) { animation-delay: 3.41s; }
+.circus-dos-overlay.rendering .circus-title-circus .circus-title-letter:nth-child(5) { animation-delay: 3.54s; }
+.circus-dos-overlay.rendering .circus-title-circus .circus-title-letter:nth-child(6) { animation-delay: 3.67s; }
+
+.circus-dos-overlay.inside .circus-title-logo,
+.circus-dos-overlay.doom .circus-title-logo {
+  opacity: 0;
+  transform: translateX(-50%) translateY(30px) scale(0.75);
+  transition: opacity 0.24s ease, transform 0.24s ease;
+}
+
 .circus-dos-overlay.rendering .circus-shape-ring {
   animation: circusRing 0.75s 0.15s forwards;
 }
@@ -1931,7 +2115,8 @@ body {
 .circus-dos-overlay.doom .circus-render-stage::before,
 .circus-dos-overlay.doom .circus-shape,
 .circus-dos-overlay.doom .circus-sky,
-.circus-dos-overlay.doom .circus-entry-glow {
+.circus-dos-overlay.doom .circus-entry-glow,
+.circus-dos-overlay.doom .circus-title-logo {
   display: none;
 }
 
@@ -1996,6 +2181,52 @@ body {
   .circus-dos-overlay:not(.doom) .circus-render-stage {
     flex: 0 0 250px;
   }
+
+  .circus-title-logo {
+    top: 66%;
+    width: 94%;
+    transform: translateX(-50%) scale(0.66);
+    transform-origin: top center;
+  }
+
+  .circus-shape-ring {
+    top: 44px;
+    scale: 0.72;
+    transform-origin: top center;
+  }
+
+  .circus-shape-left,
+  .circus-shape-right {
+    top: 36px;
+    scale: 0.72;
+    transform-origin: top center;
+  }
+
+  .circus-shape-roof {
+    top: 8px;
+    scale: 0.72;
+    transform-origin: top center;
+  }
+
+  .circus-shape-base {
+    top: 104px;
+    height: 64px;
+    scale: 0.72;
+    transform-origin: top center;
+  }
+
+  .circus-shape-door {
+    top: 122px;
+    height: 46px;
+    scale: 0.72;
+    transform-origin: top center;
+  }
+
+  .circus-entry-glow {
+    top: 110px;
+    scale: 0.72;
+    transform-origin: top center;
+  }
 }
 
 .circus-dos-actions .retro-btn:disabled {
@@ -2032,9 +2263,43 @@ body {
   to { opacity: 1; transform: translateX(-50%) scale(1); }
 }
 
+@keyframes circusTitleKicker {
+  0% { opacity: 0; transform: translateY(-72px) rotate(-6deg) scale(0.65); }
+  66% { opacity: 1; transform: translateY(7px) rotate(3deg) scale(1.08, 0.92); }
+  82% { transform: translateY(-4px) rotate(-1deg) scale(0.97, 1.04); }
+  100% { opacity: 1; transform: translateY(0) rotate(0) scale(1); }
+}
+
+@keyframes circusTitleLetter {
+  0% {
+    opacity: 0;
+    transform: translate(var(--launch-x), -130px) rotate(var(--launch-rotate)) scale(0.3);
+  }
+  58% {
+    opacity: 1;
+    transform: translate(0, calc(var(--settle-y) + 12px)) rotate(0deg) scale(1.12, 0.86);
+  }
+  76% {
+    transform: translate(0, calc(var(--settle-y) - 7px)) rotate(var(--settle-rotate)) scale(0.96, 1.08);
+  }
+  90% {
+    transform: translate(0, calc(var(--settle-y) + 3px)) rotate(var(--settle-rotate)) scale(1.03, 0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, var(--settle-y)) rotate(var(--settle-rotate)) scale(1);
+  }
+}
+
 @keyframes circusInteriorPulse {
   from { filter: brightness(0.8); opacity: 0.68; }
   to { filter: brightness(1.25); opacity: 1; }
+}
+
+body.reduce-motion .circus-dos-overlay.rendering .circus-title-kicker,
+body.reduce-motion .circus-dos-overlay.rendering .circus-title-letter {
+  opacity: 1;
+  transform: translate(0, 0) rotate(0deg) scale(1);
 }
 
 /* ==========================================================================
