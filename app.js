@@ -1771,6 +1771,7 @@ const OS = {
     const roomAudit = this.auditCircusRoomNetwork(portals, scenes);
     const objectiveAudit = this.auditCircusZoneObjectives();
     const gameplayAudit = this.auditCircusGameplaySystems(portals, scenes);
+    const verticalAudit = this.auditCircusVerticalRendering();
     document.body.dataset.fpsRoomAudit = roomAudit.ok ? 'ok' : roomAudit.errors.join(' | ');
     document.body.dataset.fpsCurrentRooms = String(roomAudit.currentRooms);
     document.body.dataset.fpsArchiveRooms = String(roomAudit.archiveRooms);
@@ -1779,9 +1780,12 @@ const OS = {
     document.body.dataset.fpsGameplayAudit = gameplayAudit.ok ? 'ok' : gameplayAudit.errors.join(' | ');
     document.body.dataset.fpsAdventureWorlds = String(gameplayAudit.worldCount);
     document.body.dataset.fpsIntroSteps = String(gameplayAudit.introSteps);
+    document.body.dataset.fpsVerticalAudit = verticalAudit.ok ? 'ok' : verticalAudit.errors.join(' | ');
+    document.body.dataset.fpsTallStructures = String(verticalAudit.structureCount);
     if (!roomAudit.ok) console.warn('FPS room network audit:', roomAudit.errors);
     if (!objectiveAudit.ok) console.warn('FPS objective audit:', objectiveAudit.errors);
     if (!gameplayAudit.ok) console.warn('FPS gameplay audit:', gameplayAudit.errors);
+    if (!verticalAudit.ok) console.warn('FPS vertical rendering audit:', verticalAudit.errors);
     this.prepareCircusSimulationRoom();
     this.markCainOSZoneVisited(2);
     this.loadCircusAvatarSheets();
@@ -1907,7 +1911,8 @@ const OS = {
       additionalvoices: 'assets/images/cainos-pixel-cast-sheet-additional-voices.png',
       themachine: 'assets/images/cainos-pixel-cast-sheet-the-machine.png',
       ming: 'assets/images/cainos-pixel-cast-sheet-ming.png',
-      gloinkqueenscale: 'assets/images/cainos-pixel-cast-sheet-gloink-queen-scale.png'
+      gloinkqueenscale: 'assets/images/cainos-pixel-cast-sheet-gloink-queen-scale.png',
+      pomnianimation: 'assets/images/cainos-pomni-animation-sheet.png'
     };
     this.circusAvatarSheets = {};
     this.circusAvatarFrameCache = {};
@@ -1980,6 +1985,29 @@ const OS = {
       }
     }
     return null;
+  },
+
+  getCircusAvatarAnimationSpec(avatar, sprite = {}) {
+    if (avatar !== 'pomni') return null;
+    const state = this.circusDoom;
+    const speaking = state?.interactionChannel === 'dialogue'
+      && state?.interactionSpeaker === sprite.name
+      && performance.now() <= (state?.interactionUntil || 0);
+    const animation = speaking ? 'talk'
+      : sprite.behavior === 'menace' ? 'hurt'
+        : sprite.behavior === 'attentif' ? 'interact'
+          : ['pace', 'patrol', 'follow'].includes(sprite.routine) ? 'walk'
+            : 'idle';
+    const frames = {
+      idle: [0, 1],
+      walk: [2, 3],
+      talk: [4, 5],
+      interact: [6],
+      hurt: [7]
+    }[animation];
+    const speed = animation === 'walk' ? 5.5 : animation === 'talk' ? 4.5 : 2.2;
+    const frameIndex = frames[Math.floor(performance.now() / 1000 * speed) % frames.length];
+    return { sheet: 'pomnianimation', cols: 4, rows: 2, frameIndex, animation };
   },
 
   getCircusAdventureWorlds() {
@@ -2317,6 +2345,37 @@ const OS = {
     return { ok: errors.length === 0, errors, worldCount: worlds.length, introSteps };
   },
 
+  auditCircusVerticalRendering() {
+    const errors = [];
+    const targets = [
+      { zone: 8, kind: 'building', minHeight: 4.2 },
+      { zone: 26, kind: 'building', minHeight: 3.2 },
+      { zone: 32, kind: 'building', minHeight: 4.0 },
+      { zone: 39, kind: 'lighthouse', minHeight: 6.0 }
+    ];
+    const heights = [];
+    targets.forEach(target => {
+      const prop = this.getCircusZoneProps(target.zone).find(candidate => candidate.kind === target.kind);
+      if (!prop) {
+        errors.push(`VERTICAL ${target.zone}: ${target.kind} absent`);
+        return;
+      }
+      const dimensions = this.getCircusWorldPropDimensions(prop, this.circusDoom || { currentZoneId: target.zone });
+      if (!dimensions || dimensions.height < target.minHeight) {
+        errors.push(`VERTICAL ${target.zone}: hauteur ${dimensions?.height || 0}/${target.minHeight}`);
+      }
+      heights.push(dimensions?.height || 0);
+    });
+    if (new Set(heights.map(height => height.toFixed(2))).size < 3) {
+      errors.push('VERTICAL: silhouettes trop uniformes');
+    }
+    const pomniAnimation = this.getCircusAvatarAnimationSpec('pomni', { name: 'Pomni', routine: 'idle' });
+    if (!pomniAnimation || pomniAnimation.cols !== 4 || pomniAnimation.rows !== 2) {
+      errors.push('ANIMATION POMNI: planche 4x2 absente');
+    }
+    return { ok: errors.length === 0, errors, structureCount: targets.length };
+  },
+
   prepareCircusSimulationRoom() {
     const state = this.circusDoom;
     if (!state) return;
@@ -2602,7 +2661,7 @@ const OS = {
       36: { title: 'ISOLER LE BIOHAZARD', steps: [scan('doorframe', 'Verifier deux cabines', 2), scan('barrel', 'Identifier le risque'), talk('pomni', 'Prevenir Pomni')] },
       37: { title: 'ARRETER LA FORMATION', steps: [activate('menu', 'Interrompre l ecran de formation'), scan('spotlight', 'Verifier le projecteur'), talk('jax', 'Parler a Jax')] },
       38: { title: 'PREPARER LES AWARDS', steps: [activate('scoreboard', 'Allumer le panneau des Awards'), scan('stairs', 'Verifier l acces scene'), talk('caine', 'Demander le verdict a Caine')] },
-      39: { title: 'ALIGNER LE PHARE', steps: [scan('pillar', 'Verifier la tour du phare'), scan('stairs', 'Inspecter le depart du toboggan'), talk('jax', 'Rejoindre Jax')] },
+      39: { title: 'ALIGNER LE PHARE', steps: [scan('lighthouse', 'Verifier la tour du phare'), scan('stairs', 'Inspecter le depart du toboggan'), talk('jax', 'Rejoindre Jax')] },
       40: { title: 'RETROUVER LE COFFRE', steps: [activate('archive', 'Ouvrir le coffre deja pille'), scan('wave', 'Analyser deux courants', 2), talk('beachgangle', 'Parler a Gangle')] },
       41: { title: 'FIXER LE SOUVENIR C&A', steps: [scan('doorframe', 'Verifier la porte du souvenir'), scan('desk', 'Inspecter le mobilier efface'), talk('jax', 'Ecouter Jax')] },
       42: { title: 'RELEVER LA FETE FORAINE', steps: [scan('ring', 'Verifier deux attractions', 2), scan('pillar', 'Identifier le repere central'), talk('caine', 'Questionner Caine')] },
@@ -2863,6 +2922,7 @@ const OS = {
       '7:console': "Console de test: couche technique ou les PNJ deviennent lisibles comme donnees.",
       '7:gridnode': "Noeud de grille: raccourci de debug, pas un element visible pour les residents.",
       '8:window': "Fenetre du manoir: ouverture vers la peur, pas vers l'exterieur.",
+      '8:building': "Mildenhall Manor: volume principal restitue a grande echelle; les mesures restent une reconstruction CainOS.",
       '8:table': "Table Mildenhall: point de scene ou les personnages sont forces de rester dans le role.",
       '8:candle': "Bougie: elle stabilise la piece juste assez pour rendre l'horreur visible.",
       '9:stairs': "Escalier du sous-sol: descente vers la memoire, avec moins de spectacle et plus de menace.",
@@ -2897,19 +2957,21 @@ const OS = {
       '24:target': "Cible western: accessoire de l'aventure armee, lie aux regles de confrontation de cette scene.",
       '25:table': "Mobilier scolaire: variante d'aventure isolee de la timeline principale.",
       '26:desk': "Bureau officiel: decor de variante politique, non confondu avec le coeur C&A.",
+      '26:building': "Facade de la Maison-Blanche: repere monumental de cette micro-aventure, sans lien avec une sortie reelle.",
       '27:exitframe': "Cadre suspendu dans le Vide: il ressemble a une issue sans prouver qu'elle mene au monde reel.",
       '28:table': "Table de l'espace commun: point de rassemblement entre les aventures.",
       '29:doorframe': "Porte des tubes: destination volontairement instable dans l'infrastructure du Cirque.",
       '30:table': "Mobilier du Loser Corner: zone punitive interne, petite et volontairement inconfortable.",
       '31:stairs': "Acces de The Nest: trace d'une aventure supprimee, conservee comme archive balisee.",
       '32:stairs': "Escalier du palais: parcours d'audience avant la mission du convoi de sirop.",
+      '32:building': "Palais royal Candy Canyon: silhouette dominante du royaume et point de depart du convoi.",
       '33:truck': "Camion-citerne du convoi: objectif mobile reliant le palais, les bandits et le Test Level.",
       '34:eye': "Ame du manoir: signal de possession confine a l'Enfer de Mildenhall.",
       '35:counter': "Plan de preparation Spudsy: commandes et cuisine sont separees en postes de travail.",
       '36:doorframe': "Cabine sanitaire Spudsy: sous-zone de service marquee comme biohazard.",
       '37:menu': "Ecran de formation: Jax est isole face aux consignes, hors de la salle publique.",
       '38:scoreboard': "Panneau des Awards: Caine convertit les epreuves et relations du groupe en recompenses.",
-      '39:pillar': "Tour du phare: structure dominante de la plage et point de depart du toboggan.",
+      '39:lighthouse': "Tour du phare: structure dominante de la plage et point de depart du toboggan.",
       '40:archive': "Coffre sous-marin: deja pille, il reste comme objectif vide de la scene.",
       '41:doorframe': "Porte du souvenir de Jax: fragment incomplet, pas sortie fiable vers le monde reel.",
       '42:ring': "Attraction foraine: silhouette visible depuis le terrain, mais jamais exploree dans le parcours canon.",
@@ -2929,6 +2991,9 @@ const OS = {
       ring: "piste",
       spotlight: "projecteur",
       tent: "chapiteau",
+      building: prop.style === 'manor' ? "Mildenhall Manor" : prop.style === 'palace' ? "palais royal" : "batiment",
+      tower: "tour",
+      lighthouse: "phare",
       balloon: "ballon",
       crate: "caisse",
       eye: "oeil systeme",
@@ -4023,7 +4088,7 @@ const OS = {
 
   getCircusWorldColliders(state) {
     if (state.worldColliderZoneId === state.currentZoneId && state.worldColliders) return state.worldColliders;
-    const collidableKinds = new Set(['table', 'counter', 'desk', 'bed', 'pillar', 'crate', 'barrel', 'tent']);
+    const collidableKinds = new Set(['table', 'counter', 'desk', 'bed', 'pillar', 'crate', 'barrel', 'tent', 'building', 'tower', 'lighthouse']);
     state.worldColliders = this.getCircusZoneProps(state.currentZoneId)
       .map((prop, index) => ({ ...prop, interactionId: index }))
       .filter(prop => collidableKinds.has(prop.kind) && !state.collectedProps?.has(`${state.currentZoneId}:${prop.interactionId}`))
@@ -4148,6 +4213,10 @@ const OS = {
     const architecture = this.getCircusArchitecture(state, motif);
     state.wallDepthBuffer = new Float32Array(w);
     state.wallDepthBuffer.fill(Number.POSITIVE_INFINITY);
+    state.wallTopBuffer = new Float32Array(w);
+    state.wallTopBuffer.fill(h);
+    state.wallBottomBuffer = new Float32Array(w);
+    state.wallBottomBuffer.fill(0);
     this.drawCircusThemedCeiling(ctx, w, h, horizon, state, zone, motif);
     this.drawCircusArchitecturalCeiling(ctx, w, h, horizon, state, motif, architecture);
     this.drawCircusThemedFloor(ctx, w, h, horizon, state, zone, motif);
@@ -4206,7 +4275,11 @@ const OS = {
       const x = Math.floor(ratio * w);
       const y = Math.floor(horizon - wallH * architecture.wallBias);
       for (let px = Math.max(0, x); px < Math.min(w, x + strip); px++) {
-        state.wallDepthBuffer[px] = Math.min(state.wallDepthBuffer[px], corrected);
+        if (corrected < state.wallDepthBuffer[px]) {
+          state.wallDepthBuffer[px] = corrected;
+          state.wallTopBuffer[px] = y;
+          state.wallBottomBuffer[px] = y + wallH;
+        }
       }
 
       const depthShade = Math.max(0.26, 1.08 - corrected / (room.size * 0.92));
@@ -5371,7 +5444,7 @@ const OS = {
     };
   },
 
-  applyCircusDepthClip(ctx, box, depth, state, tolerance = 0.16) {
+  applyCircusDepthClip(ctx, box, depth, state, tolerance = 0.16, options = {}) {
     const buffer = state.wallDepthBuffer;
     if (!buffer?.length || !box || depth <= 0) return true;
     const left = Math.max(0, Math.floor(box.x));
@@ -5379,19 +5452,41 @@ const OS = {
     if (right < left) return false;
     const runs = [];
     let runStart = null;
+    let runTop = box.y;
+    let runBottom = box.y + box.h;
+    const closeRun = end => {
+      if (runStart === null) return;
+      runs.push([runStart, end, runTop, runBottom]);
+      runStart = null;
+    };
     for (let x = left; x <= right; x++) {
       const wallDepth = buffer[x];
-      const visible = !Number.isFinite(wallDepth) || depth <= wallDepth + tolerance;
-      if (visible && runStart === null) runStart = x;
-      if ((!visible || x === right) && runStart !== null) {
-        const runEnd = visible && x === right ? x + 1 : x;
-        runs.push([runStart, runEnd]);
-        runStart = null;
+      const inFront = !Number.isFinite(wallDepth) || depth <= wallDepth + tolerance;
+      const wallTop = state.wallTopBuffer?.[x] ?? box.y;
+      const visibleTop = box.y;
+      const visibleBottom = inFront ? box.y + box.h
+        : options.allowAboveWall ? Math.min(box.y + box.h, wallTop) : box.y;
+      const visible = visibleBottom > visibleTop + 0.5;
+      if (!visible) {
+        closeRun(x);
+        continue;
       }
+      const roundedBottom = Math.round(visibleBottom);
+      if (runStart === null) {
+        runStart = x;
+        runTop = visibleTop;
+        runBottom = roundedBottom;
+      } else if (Math.abs(runBottom - roundedBottom) > 1) {
+        closeRun(x);
+        runStart = x;
+        runTop = visibleTop;
+        runBottom = roundedBottom;
+      }
+      if (x === right) closeRun(x + 1);
     }
     if (!runs.length) return false;
     ctx.beginPath();
-    runs.forEach(([start, end]) => ctx.rect(start, box.y, Math.max(1, end - start), box.h));
+    runs.forEach(([start, end, top, bottom]) => ctx.rect(start, top, Math.max(1, end - start), Math.max(1, bottom - top)));
     ctx.clip();
     return true;
   },
@@ -5466,7 +5561,7 @@ const OS = {
       5: [{ kind: 'exitframe', x: 0, z: -3.1, color: '#ffffff' }, { kind: 'desk', x: -1.5, z: -2.1, color: '#a0a8b8' }, { kind: 'exitframe', x: 2.25, z: -2.2, color: '#ffffff' }, { kind: 'console', x: -2.65, z: -1.35, color: '#b8d7ff' }],
       6: [{ kind: 'candy', x: -2.2, z: -2.2, color: '#ff9b37' }, { kind: 'truck', x: 0.4, z: -2.8, color: '#ffd84a' }, { kind: 'candy', x: 2.3, z: -1.8, color: '#ff4fb8' }, { kind: 'barrel', x: -0.9, z: -1.25, color: '#ffcf75' }, { kind: 'candy', x: 3.1, z: -2.75, color: '#7df0ff' }],
       7: [{ kind: 'console', x: -1.6, z: -2.2, color: '#9cff6d' }, { kind: 'gridnode', x: 1.4, z: -2.6, color: '#7df0ff' }, { kind: 'gridnode', x: -0.1, z: -1.35, color: '#ff7a30' }, { kind: 'archive', x: 2.7, z: -2.0, color: '#9cff6d' }],
-      8: [{ kind: 'window', x: -2.2, z: -2.5, color: '#b7f0ff' }, { kind: 'table', x: 0.2, z: -2.9, color: '#7c88a1' }, { kind: 'candle', x: 1.8, z: -1.9, color: '#ffd84a' }, { kind: 'window', x: 2.7, z: -2.65, color: '#b7f0ff' }, { kind: 'candle', x: -0.85, z: -1.4, color: '#ffd84a' }],
+      8: [{ kind: 'building', style: 'manor', x: 0, z: -3.85, width: 4.6, depth: 2.1, height: 4.8, roofHeight: 1.35, color: '#403044', accent: '#b7f0ff' }, { kind: 'window', x: -2.2, z: -2.5, color: '#b7f0ff' }, { kind: 'table', x: 0.2, z: -2.9, color: '#7c88a1' }, { kind: 'candle', x: 1.8, z: -1.9, color: '#ffd84a' }, { kind: 'window', x: 2.7, z: -2.65, color: '#b7f0ff' }, { kind: 'candle', x: -0.85, z: -1.4, color: '#ffd84a' }],
       9: [{ kind: 'stairs', x: 0, z: -2.8, color: '#7c88a1' }, { kind: 'barrel', x: -2.1, z: -1.9, color: '#56505f' }, { kind: 'barrel', x: 1.95, z: -1.75, color: '#3a3542' }, { kind: 'candle', x: -0.6, z: -1.25, color: '#ffd84a' }],
       10: [{ kind: 'counter', x: 0, z: -2.7, color: '#f6d743' }, { kind: 'menu', x: -1.9, z: -2.3, color: '#ff4d4d' }, { kind: 'menu', x: 1.9, z: -2.3, color: '#ff4d4d' }, { kind: 'table', x: -2.65, z: -1.35, color: '#f6d743' }, { kind: 'counter', x: 2.75, z: -1.4, color: '#ffffff' }],
       11: [{ kind: 'card', x: -1.8, z: -2.1, color: '#ff4fb8' }, { kind: 'card', x: 0, z: -2.7, color: '#7df0ff' }, { kind: 'card', x: 1.8, z: -2.1, color: '#ffd84a' }, { kind: 'doorframe', x: -2.9, z: -2.9, color: '#c875ff' }, { kind: 'gridnode', x: 2.9, z: -1.3, color: '#7df0ff' }],
@@ -5496,20 +5591,20 @@ const OS = {
       23: [{ kind: 'stairs', x: 0, z: -3.0, color: '#e8f7ff' }, { kind: 'pillar', x: -2.5, z: -2.2, color: '#a7c9df' }, { kind: 'pillar', x: 2.5, z: -2.2, color: '#a7c9df' }, { kind: 'spotlight', x: 0.8, z: -1.35, color: '#ffffff' }],
       24: [{ kind: 'target', x: -2.2, z: -2.35, color: '#c4a45f' }, { kind: 'target', x: 2.15, z: -2.25, color: '#ff4d4d' }, { kind: 'crate', x: -0.7, z: -1.4, color: '#5c3a21' }, { kind: 'barrel', x: 1.1, z: -1.3, color: '#463228' }, { kind: 'window', x: 0, z: -3.15, color: '#7df0ff' }],
       25: [{ kind: 'table', x: -2.25, z: -2.15, color: '#f2e7ed' }, { kind: 'table', x: 0, z: -2.75, color: '#f2e7ed' }, { kind: 'table', x: 2.25, z: -2.15, color: '#f2e7ed' }, { kind: 'card', x: -1.15, z: -1.25, color: '#ff9fcd' }, { kind: 'card', x: 1.15, z: -1.25, color: '#8bc8ff' }],
-      26: [{ kind: 'desk', x: 0, z: -2.85, color: '#edf0f7' }, { kind: 'doorframe', x: -2.55, z: -2.35, color: '#44699a' }, { kind: 'doorframe', x: 2.55, z: -2.35, color: '#44699a' }, { kind: 'table', x: 0, z: -1.35, color: '#d8dce7' }, { kind: 'card', x: 1.55, z: -1.45, color: '#e53935' }],
+      26: [{ kind: 'building', style: 'whitehouse', x: 0, z: -3.9, width: 5.3, depth: 2.1, height: 3.65, roofHeight: 0.65, color: '#edf0f7', accent: '#44699a' }, { kind: 'desk', x: 0, z: -2.85, color: '#edf0f7' }, { kind: 'doorframe', x: -2.55, z: -2.35, color: '#44699a' }, { kind: 'doorframe', x: 2.55, z: -2.35, color: '#44699a' }, { kind: 'table', x: 0, z: -1.35, color: '#d8dce7' }, { kind: 'card', x: 1.55, z: -1.45, color: '#e53935' }],
       27: [{ kind: 'exitframe', x: 0, z: -3.2, color: '#ffffff' }, { kind: 'eye', x: -2.7, z: -2.3, color: '#e53935' }, { kind: 'eye', x: 2.7, z: -2.3, color: '#2a58d8' }],
       28: [{ kind: 'table', x: 0, z: -2.7, color: '#ffd84a' }, { kind: 'balloon', x: -2.4, z: -2.2, color: '#ff4fb8' }, { kind: 'balloon', x: 2.4, z: -2.2, color: '#7df0ff' }, { kind: 'ring', x: 0, z: -1.25, color: '#fff1a8' }],
       29: [{ kind: 'doorframe', x: -2.6, z: -2.5, color: '#e53935' }, { kind: 'doorframe', x: 0, z: -3.1, color: '#7df0ff' }, { kind: 'doorframe', x: 2.6, z: -2.5, color: '#ffd84a' }, { kind: 'ring', x: -1.2, z: -1.35, color: '#ff4fb8' }, { kind: 'ring', x: 1.2, z: -1.35, color: '#2a58d8' }],
       30: [{ kind: 'table', x: 0, z: -2.6, color: '#6e527f' }, { kind: 'window', x: 0, z: -3.15, color: '#63d9ff' }, { kind: 'card', x: -2.25, z: -1.75, color: '#ff4fb8' }],
       31: [{ kind: 'stairs', x: 0, z: -2.9, color: '#7a5a3d' }, { kind: 'window', x: -2.3, z: -2.2, color: '#e8d6a8' }, { kind: 'window', x: 2.3, z: -2.2, color: '#e8d6a8' }, { kind: 'table', x: 0, z: -1.35, color: '#5a3c28' }],
-      32: [{ kind: 'stairs', x: 0, z: -3.0, color: '#fff1a8' }, { kind: 'pillar', x: -2.4, z: -2.2, color: '#ff9ad5' }, { kind: 'pillar', x: 2.4, z: -2.2, color: '#ff9ad5' }, { kind: 'candy', x: -1.3, z: -1.35, color: '#ffd84a' }, { kind: 'candy', x: 1.3, z: -1.35, color: '#7df0ff' }],
+      32: [{ kind: 'building', style: 'palace', x: 0, z: -4.05, width: 4.8, depth: 2.2, height: 4.4, roofHeight: 1.7, color: '#ff9ad5', accent: '#7d3f8c' }, { kind: 'stairs', x: 0, z: -3.0, color: '#fff1a8' }, { kind: 'pillar', x: -2.4, z: -2.2, color: '#ff9ad5' }, { kind: 'pillar', x: 2.4, z: -2.2, color: '#ff9ad5' }, { kind: 'candy', x: -1.3, z: -1.35, color: '#ffd84a' }, { kind: 'candy', x: 1.3, z: -1.35, color: '#7df0ff' }],
       33: [{ kind: 'truck', x: 0, z: -3.0, color: '#ffd84a' }, { kind: 'candy', x: -2.8, z: -2.3, color: '#ff4fb8' }, { kind: 'candy', x: 2.8, z: -2.3, color: '#ff9b37' }, { kind: 'barrel', x: -1.5, z: -1.35, color: '#ffcf75' }],
       34: [{ kind: 'candle', x: -2.3, z: -2.2, color: '#ff4d32' }, { kind: 'candle', x: 2.3, z: -2.2, color: '#ff4d32' }, { kind: 'eye', x: 0, z: -3.05, color: '#ffffff' }, { kind: 'stairs', x: 0.9, z: -1.35, color: '#5a0b0b' }],
       35: [{ kind: 'counter', x: 0, z: -2.8, color: '#d9d4c7' }, { kind: 'menu', x: -2.25, z: -2.2, color: '#f6d743' }, { kind: 'menu', x: 2.25, z: -2.2, color: '#ff4d4d' }, { kind: 'barrel', x: -1.25, z: -1.3, color: '#e0b24d' }],
       36: [{ kind: 'window', x: 0, z: -2.8, color: '#91d4bb' }, { kind: 'doorframe', x: -2.0, z: -2.0, color: '#ffffff' }, { kind: 'doorframe', x: 2.0, z: -2.0, color: '#ffffff' }, { kind: 'barrel', x: 0, z: -1.25, color: '#c7d8d2' }],
       37: [{ kind: 'menu', x: 0, z: -3.0, color: '#e53935' }, { kind: 'spotlight', x: 0, z: -2.1, color: '#ffffff' }, { kind: 'table', x: 0, z: -1.35, color: '#342525' }],
       38: [{ kind: 'scoreboard', x: 0, z: -3.2, color: '#ffd84a' }, { kind: 'spotlight', x: -2.2, z: -2.35, color: '#fff1a8' }, { kind: 'spotlight', x: 2.2, z: -2.35, color: '#fff1a8' }, { kind: 'stairs', x: 0, z: -1.35, color: '#8b172b' }],
-      39: [{ kind: 'pillar', x: 0, z: -3.0, color: '#ff5b4d' }, { kind: 'stairs', x: 0, z: -2.1, color: '#ffffff' }, { kind: 'wave', x: -2.5, z: -2.45, color: '#4ee7ff' }, { kind: 'wave', x: 2.5, z: -2.45, color: '#4ee7ff' }],
+      39: [{ kind: 'lighthouse', x: 0, z: -3.45, radius: 0.68, height: 6.8, roofHeight: 1.1, color: '#ff5b4d', accent: '#ffffff' }, { kind: 'stairs', x: 0, z: -2.1, color: '#ffffff' }, { kind: 'wave', x: -2.5, z: -2.45, color: '#4ee7ff' }, { kind: 'wave', x: 2.5, z: -2.45, color: '#4ee7ff' }],
       40: [{ kind: 'archive', x: 0, z: -2.9, color: '#ffd84a' }, { kind: 'wave', x: -2.3, z: -2.1, color: '#4ee7ff' }, { kind: 'wave', x: 2.3, z: -2.1, color: '#4ee7ff' }, { kind: 'eye', x: -1.1, z: -1.35, color: '#ffffff' }, { kind: 'eye', x: 1.1, z: -1.35, color: '#ffffff' }],
       41: [{ kind: 'desk', x: -2.1, z: -2.3, color: '#59616a' }, { kind: 'doorframe', x: 0, z: -3.1, color: '#8fa6ba' }, { kind: 'window', x: 2.2, z: -2.3, color: '#d8e4ee' }, { kind: 'card', x: 0.8, z: -1.35, color: '#ff7a30' }],
       42: [{ kind: 'ring', x: -2.5, z: -2.4, color: '#ff4fb8' }, { kind: 'ring', x: 2.5, z: -2.4, color: '#7df0ff' }, { kind: 'pillar', x: 0, z: -3.1, color: '#ffd84a' }, { kind: 'balloon', x: -1.25, z: -1.35, color: '#e53935' }, { kind: 'balloon', x: 1.25, z: -1.35, color: '#2a58d8' }],
@@ -5683,7 +5778,7 @@ const OS = {
   },
 
   getCircusWorldGeometryKinds() {
-    return new Set(['ring', 'base', 'stairs', 'table', 'counter', 'desk', 'bed', 'pillar', 'crate', 'barrel', 'tent']);
+    return new Set(['ring', 'base', 'stairs', 'table', 'counter', 'desk', 'bed', 'pillar', 'crate', 'barrel', 'tent', 'building', 'tower', 'lighthouse']);
   },
 
   projectCircusPropGroundVertex(prop, offsetX, offsetZ, state, w, h, height = 0) {
@@ -5721,6 +5816,23 @@ const OS = {
         height: 0.12 * Math.max(0.7, scale)
       };
     }
+    if (prop.kind === 'building') {
+      return {
+        width: prop.width || 4.2,
+        depth: prop.depth || 2.2,
+        height: prop.height || 4.2,
+        roofHeight: prop.roofHeight || 1.1
+      };
+    }
+    if (prop.kind === 'tower' || prop.kind === 'lighthouse') {
+      return {
+        radius: prop.radius || 0.72,
+        topRadius: (prop.radius || 0.72) * (prop.kind === 'lighthouse' ? 0.72 : 0.86),
+        height: prop.height || (prop.kind === 'lighthouse' ? 6.6 : 5.2),
+        roofHeight: prop.roofHeight || 0.9,
+        segments: 12
+      };
+    }
     return {
       table: { width: 1.35, depth: 0.82, height: 0.52, apron: 0.1 },
       counter: { width: 1.9, depth: 0.72, height: 0.86, apron: 0.26 },
@@ -5729,7 +5841,12 @@ const OS = {
       pillar: { radius: 0.28, height: 2.05, segments: 10 },
       barrel: { radius: 0.34, height: 0.72, segments: 10 },
       crate: { width: 0.72, depth: 0.72, height: 0.66 },
-      tent: { width: 3.1, depth: 2.2, wallHeight: 1.05, roofHeight: 2.15 }
+      tent: {
+        width: prop.width || 3.8,
+        depth: prop.depth || 2.7,
+        wallHeight: prop.wallHeight || 1.75,
+        roofHeight: prop.roofHeight || 4.4
+      }
     }[prop.kind] || null;
   },
 
@@ -5751,6 +5868,100 @@ const OS = {
       ctx.stroke();
     }
     return true;
+  },
+
+  drawCircusBuildingGeometry(ctx, prop, state, w, h, color, light) {
+    const dimensions = this.getCircusWorldPropDimensions(prop, state);
+    const halfW = dimensions.width / 2;
+    const halfD = dimensions.depth / 2;
+    const corners = [[-halfW, -halfD], [halfW, -halfD], [halfW, halfD], [-halfW, halfD]];
+    const bottom = corners.map(([x, z]) => this.projectCircusPropGroundVertex(prop, x, z, state, w, h));
+    const top = corners.map(([x, z]) => this.projectCircusPropGroundVertex(prop, x, z, state, w, h, dimensions.height));
+    if (!bottom.every(Boolean) || !top.every(Boolean)) return;
+    const faces = bottom.map((point, index) => {
+      const next = (index + 1) % bottom.length;
+      return { depth: (point.depth + bottom[next].depth) / 2, points: [point, bottom[next], top[next], top[index]], index };
+    }).sort((a, b) => b.depth - a.depth);
+    faces.forEach(face => {
+      const faceLight = face.index % 2 === 0 ? 0.72 : 0.56;
+      this.drawCircusGroundPolygon(ctx, face.points, this.shadeHex(color, faceLight), '#130c18', 1);
+    });
+
+    const roofColor = prop.style === 'manor' ? '#17101c'
+      : prop.style === 'whitehouse' ? '#44699a'
+        : prop.accent || '#7d3f8c';
+    const ridgeNear = this.projectCircusPropGroundVertex(prop, 0, -halfD, state, w, h, dimensions.height + dimensions.roofHeight);
+    const ridgeFar = this.projectCircusPropGroundVertex(prop, 0, halfD, state, w, h, dimensions.height + dimensions.roofHeight);
+    if (ridgeNear && ridgeFar) {
+      this.drawCircusGroundPolygon(ctx, [top[0], top[1], ridgeNear], this.shadeHex(roofColor, light), '#fff1a855', 1);
+      this.drawCircusGroundPolygon(ctx, [top[1], top[2], ridgeFar, ridgeNear], this.shadeHex(roofColor, light * 0.82), '#fff1a855', 1);
+      this.drawCircusGroundPolygon(ctx, [top[2], top[3], ridgeFar], this.shadeHex(roofColor, light * 0.72), '#fff1a855', 1);
+      this.drawCircusGroundPolygon(ctx, [top[3], top[0], ridgeNear, ridgeFar], this.shadeHex(roofColor, light * 0.9), '#fff1a855', 1);
+    }
+
+    const facadeZ = -halfD - 0.012;
+    const floors = Math.max(2, Math.min(5, Math.round(dimensions.height / 1.05)));
+    const columns = prop.style === 'whitehouse' ? 5 : prop.style === 'palace' ? 4 : 3;
+    for (let floor = 0; floor < floors; floor++) {
+      const y0 = 0.45 + floor * ((dimensions.height - 0.85) / floors);
+      const y1 = Math.min(dimensions.height - 0.22, y0 + 0.42);
+      for (let column = 0; column < columns; column++) {
+        const centerX = -halfW + ((column + 0.5) / columns) * dimensions.width;
+        const windowHalf = Math.min(0.24, dimensions.width / columns * 0.22);
+        const window = [
+          this.projectCircusPropGroundVertex(prop, centerX - windowHalf, facadeZ, state, w, h, y0),
+          this.projectCircusPropGroundVertex(prop, centerX + windowHalf, facadeZ, state, w, h, y0),
+          this.projectCircusPropGroundVertex(prop, centerX + windowHalf, facadeZ, state, w, h, y1),
+          this.projectCircusPropGroundVertex(prop, centerX - windowHalf, facadeZ, state, w, h, y1)
+        ];
+        this.drawCircusGroundPolygon(ctx, window, prop.style === 'manor' ? '#b7f0ff99' : '#7df0ffb8', '#fff1a866', 1);
+      }
+    }
+  },
+
+  drawCircusTowerGeometry(ctx, prop, state, w, h, color, light) {
+    const dimensions = this.getCircusWorldPropDimensions(prop, state);
+    const bottom = [];
+    const top = [];
+    for (let index = 0; index < dimensions.segments; index++) {
+      const angle = (index / dimensions.segments) * Math.PI * 2;
+      bottom.push(this.projectCircusPropGroundVertex(
+        prop, Math.cos(angle) * dimensions.radius, Math.sin(angle) * dimensions.radius, state, w, h
+      ));
+      top.push(this.projectCircusPropGroundVertex(
+        prop, Math.cos(angle) * dimensions.topRadius, Math.sin(angle) * dimensions.topRadius, state, w, h, dimensions.height
+      ));
+    }
+    if (!bottom.every(Boolean) || !top.every(Boolean)) return;
+    const faces = bottom.map((point, index) => {
+      const next = (index + 1) % bottom.length;
+      return { depth: (point.depth + bottom[next].depth) / 2, points: [point, bottom[next], top[next], top[index]], index };
+    }).sort((a, b) => b.depth - a.depth);
+    faces.forEach(face => {
+      const stripe = prop.kind === 'lighthouse' && Math.floor(face.index / 2) % 2 === 0;
+      const faceColor = stripe ? (prop.accent || '#ffffff') : color;
+      this.drawCircusGroundPolygon(ctx, face.points, this.shadeHex(faceColor, face.index % 2 ? 0.62 : 0.78), '#1c1118', 1);
+    });
+    const balcony = top.map((_, index) => {
+      const angle = (index / dimensions.segments) * Math.PI * 2;
+      return this.projectCircusPropGroundVertex(
+        prop, Math.cos(angle) * dimensions.radius * 1.18, Math.sin(angle) * dimensions.radius * 1.18, state, w, h, dimensions.height
+      );
+    });
+    this.drawCircusGroundPolygon(ctx, balcony, this.shadeHex(prop.accent || '#fff1a8', light), '#fff1a8', 1);
+    const apex = this.projectCircusPropGroundVertex(prop, 0, 0, state, w, h, dimensions.height + dimensions.roofHeight);
+    if (apex) {
+      for (let index = 0; index < balcony.length; index++) {
+        const next = (index + 1) % balcony.length;
+        this.drawCircusGroundPolygon(
+          ctx,
+          [balcony[index], balcony[next], apex],
+          this.shadeHex(index % 2 ? '#23152e' : prop.color || '#ff5b4d', 0.82),
+          '#fff1a855',
+          1
+        );
+      }
+    }
   },
 
   drawCircusWorldGeometryProps(ctx, w, h, state) {
@@ -5775,7 +5986,11 @@ const OS = {
         ctx.shadowBlur = 12;
       }
 
-      if (prop.kind === 'ring') {
+      if (prop.kind === 'building') {
+        this.drawCircusBuildingGeometry(ctx, prop, state, w, h, color, light);
+      } else if (prop.kind === 'tower' || prop.kind === 'lighthouse') {
+        this.drawCircusTowerGeometry(ctx, prop, state, w, h, color, light);
+      } else if (prop.kind === 'ring') {
         const { outerX, outerZ, innerX, innerZ, height } = this.getCircusWorldPropDimensions(prop, state);
         const segments = 28;
         for (let index = 0; index < segments; index++) {
@@ -6017,7 +6232,7 @@ const OS = {
     const p = prop.projected;
     const s = this.getCircusPropVisualScale(prop);
     const wideKinds = new Set(['ring', 'counter', 'truck', 'scoreboard', 'table', 'desk', 'exitframe']);
-    const tallKinds = new Set(['pillar', 'tent', 'spotlight', 'umbrella', 'window', 'archive', 'console', 'roomdoor', 'caineportal', 'wallart', 'ceilinglight']);
+    const tallKinds = new Set(['pillar', 'tent', 'building', 'tower', 'lighthouse', 'spotlight', 'umbrella', 'window', 'archive', 'console', 'roomdoor', 'caineportal', 'wallart', 'ceilinglight']);
     const smallKinds = new Set(['candle', 'balloon', 'eye', 'sun', 'base', 'target', 'memory']);
     let width = 82 * s;
     let height = 86 * s;
@@ -7315,28 +7530,25 @@ const OS = {
       const p = sprite.projected;
       const size = Math.max(3, 70 * p.scale * (sprite.sizeScale || 1));
       const baseY = (p.y || h * 0.58) - (sprite.bob || 0) * size;
-      const drawH = size * (sprite.avatar === 'gloinkqueenscale' ? 1.35 : 1);
-      const spriteBox = { x: p.x - size * 0.58, y: baseY - drawH * 1.18, w: size * 1.16, h: drawH * 1.28 };
+      const avatar = sprite.avatar || sprite.type;
+      const drawH = size * (avatar === 'gloinkqueenscale' ? 1.35 : avatar === 'pomni' ? 1.08 : 1);
+      const halfWidth = size * (avatar === 'gloinkqueenscale' ? 0.9 : avatar === 'pomni' ? 0.72 : 0.64);
+      const spriteBox = {
+        x: p.x - halfWidth,
+        y: baseY - drawH - Math.max(14, size * 0.28),
+        w: halfWidth * 2,
+        h: drawH + Math.max(18, size * 0.36)
+      };
       ctx.save();
-      if (!this.applyCircusDepthClip(ctx, spriteBox, p.depth, state, 0.2)) {
+      if (!this.applyCircusDepthClip(ctx, spriteBox, p.depth, state, 0.48, { allowAboveWall: true })) {
         ctx.restore();
         return;
       }
-      const fullbright = ['bubble', 'sun', 'horrorghost'].includes(sprite.avatar || sprite.type);
+      const fullbright = ['bubble', 'sun', 'horrorghost'].includes(avatar);
       const depthLight = this.getCircusDepthLight(p.depth, state, fullbright);
       ctx.filter = `brightness(${Math.round((0.55 + depthLight * 0.45) * 100)}%)`;
-      this.drawCircusImpostor(ctx, sprite.type, p.x, baseY, size, sprite.color, sprite.name, sprite.avatar, sprite.routine);
-      if (sprite.awareness > 0.18 && p.distance < 4.2 && size >= 10) {
-        const markerY = baseY - drawH - Math.max(7, size * 0.12);
-        ctx.filter = 'none';
-        ctx.fillStyle = sprite.behavior === 'menace' ? '#ff4d4d' : '#fff1a8';
-        ctx.strokeStyle = '#05020d';
-        ctx.lineWidth = 2;
-        ctx.beginPath();
-        ctx.arc(p.x, markerY, Math.max(3, Math.min(7, size * 0.08)), 0, Math.PI * 2);
-        ctx.fill();
-        ctx.stroke();
-      }
+      this.drawCircusImpostor(ctx, sprite.type, p.x, baseY, size, sprite.color, sprite.name, avatar, sprite.routine, sprite);
+      this.drawCircusCharacterNameplate(ctx, sprite, p.x, baseY - drawH, size, w);
       ctx.restore();
       if (p.distance <= 2.2 && this.isCircusWorldPointVisible(sprite, state, 0.42)) {
         state.hotspots.push({
@@ -7352,8 +7564,48 @@ const OS = {
     });
   },
 
-  drawCircusImpostor(ctx, type, x, baseY, size, color, label, avatar, routine = 'idle') {
-    if (this.drawCircusWackyAvatar(ctx, avatar || type, x, baseY, size, label, color, routine)) return;
+  drawCircusCharacterNameplate(ctx, sprite, centerX, spriteTop, size, viewportWidth) {
+    if (size < 16 || !sprite.name) return;
+    const showMarker = sprite.awareness > 0.18;
+    const fontSize = Math.max(5, Math.min(11, size * 0.13));
+    const markerRadius = showMarker ? Math.max(3, Math.min(6, size * 0.065)) : 0;
+    ctx.save();
+    ctx.filter = 'none';
+    ctx.font = `bold ${fontSize}px Courier New`;
+    const textWidth = Math.min(104, ctx.measureText(sprite.name).width);
+    const padding = 4;
+    const gap = showMarker ? 4 : 0;
+    const plateW = Math.max(24, textWidth + padding * 2 + markerRadius * 2 + gap);
+    const plateH = Math.max(11, fontSize + 6);
+    const plateX = Math.max(2, Math.min(viewportWidth - plateW - 2, centerX - plateW / 2));
+    const plateY = spriteTop - plateH - Math.max(3, size * 0.055);
+    ctx.fillStyle = 'rgba(5,2,13,0.82)';
+    ctx.strokeStyle = sprite.color || '#fff1a8';
+    ctx.lineWidth = 1;
+    ctx.fillRect(plateX, plateY, plateW, plateH);
+    ctx.strokeRect(plateX, plateY, plateW, plateH);
+    let textX = plateX + plateW / 2;
+    if (showMarker) {
+      const markerX = plateX + padding + markerRadius;
+      const markerY = plateY + plateH / 2;
+      ctx.fillStyle = sprite.behavior === 'menace' ? '#ff4d4d' : '#fff1a8';
+      ctx.strokeStyle = '#05020d';
+      ctx.lineWidth = 1.5;
+      ctx.beginPath();
+      ctx.arc(markerX, markerY, markerRadius, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.stroke();
+      textX += markerRadius + gap / 2;
+    }
+    ctx.fillStyle = sprite.color || '#fff1a8';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(sprite.name, textX, plateY + plateH / 2 + 0.5, Math.max(12, textWidth));
+    ctx.restore();
+  },
+
+  drawCircusImpostor(ctx, type, x, baseY, size, color, label, avatar, routine = 'idle', sprite = {}) {
+    if (this.drawCircusWackyAvatar(ctx, avatar || type, x, baseY, size, label, color, routine, sprite)) return;
 
     ctx.save();
     ctx.translate(x, baseY);
@@ -7372,23 +7624,35 @@ const OS = {
       ctx.font = `bold ${Math.max(3, size * 0.12)}px Courier New`;
       ctx.textAlign = 'center';
       ctx.fillText('IMG', 0, -size * 0.46);
-      ctx.fillStyle = '#fff1a8';
-      ctx.font = `${Math.max(4, size * 0.13)}px Courier New`;
-      ctx.fillText(label, 0, -size * 1.05);
     }
     ctx.restore();
   },
 
-  drawCircusWackyAvatar(ctx, avatar, x, baseY, size, label, color, routine = 'idle') {
+  drawCircusWackyAvatar(ctx, avatar, x, baseY, size, label, color, routine = 'idle', sprite = {}) {
+    const animationSpec = this.getCircusAvatarAnimationSpec(avatar, sprite);
+    const animationImage = animationSpec ? this.circusAvatarSheets?.[animationSpec.sheet] : null;
+    const animatedFrame = animationSpec && animationImage?.complete && animationImage.naturalWidth
+      ? this.getCircusAnimationFrame(animationImage, animationSpec)
+      : null;
     const spec = this.getCircusAvatarSheetSpec(avatar);
     const img = spec ? this.circusAvatarSheets?.[spec.sheet] : null;
-    if (!spec || !img || !img.complete || !img.naturalWidth || !img.naturalHeight) return false;
-    const frame = this.getCircusTransparentAvatarFrame(img, spec);
+    if (!animatedFrame && (!spec || !img || !img.complete || !img.naturalWidth || !img.naturalHeight)) return false;
+    const frame = animatedFrame || this.getCircusTransparentAvatarFrame(img, spec);
     if (!frame) return false;
-    const drawH = size * (avatar === 'gloinkqueenscale' ? 1.35 : 1);
+    const drawH = size * (avatar === 'gloinkqueenscale' ? 1.35 : avatar === 'pomni' ? 1.08 : 1);
     const drawW = drawH * (frame.width / frame.height);
-    const drawX = x - drawW / 2;
-    const drawY = baseY - drawH;
+    const now = performance.now() / 1000;
+    const speaking = this.circusDoom?.interactionChannel === 'dialogue'
+      && this.circusDoom?.interactionSpeaker === sprite.name
+      && performance.now() <= (this.circusDoom?.interactionUntil || 0);
+    const walkCycle = ['pace', 'patrol', 'follow'].includes(routine) ? Math.sin(now * 7.5) : 0;
+    const hoverCycle = routine === 'hover' ? Math.sin(now * 2.2) : 0;
+    const trembleCycle = routine === 'tremble' ? Math.sin(now * 18) : 0;
+    const talkCycle = speaking ? Math.sin(now * 9) : 0;
+    const tilt = walkCycle * 0.025 + trembleCycle * 0.018;
+    const scaleX = 1 + walkCycle * 0.018 + trembleCycle * 0.014;
+    const scaleY = 1 - Math.abs(walkCycle) * 0.025 + talkCycle * 0.018;
+    const lift = hoverCycle * size * 0.045 - Math.abs(walkCycle) * size * 0.018 - talkCycle * size * 0.012;
     ctx.save();
     ctx.imageSmoothingEnabled = false;
     ctx.fillStyle = 'rgba(0,0,0,0.38)';
@@ -7397,16 +7661,57 @@ const OS = {
     ctx.fill();
     ctx.shadowColor = 'rgba(0,0,0,0.7)';
     ctx.shadowBlur = Math.max(1, Math.min(8, size * 0.11));
-    ctx.drawImage(frame.canvas, Math.round(drawX), Math.round(drawY), Math.round(drawW), Math.round(drawH));
+    ctx.translate(x, baseY + lift);
+    ctx.rotate(tilt);
+    ctx.scale(scaleX, scaleY);
+    ctx.drawImage(frame.canvas, Math.round(-drawW / 2), Math.round(-drawH), Math.round(drawW), Math.round(drawH));
     ctx.shadowBlur = 0;
-    if (size >= 16) {
-      ctx.fillStyle = color || '#fff1a8';
-      ctx.font = `${Math.max(4, size * 0.13)}px Courier New`;
-      ctx.textAlign = 'center';
-      ctx.fillText(label, x, drawY - Math.max(2, size * 0.08));
-    }
     ctx.restore();
     return true;
+  },
+
+  getCircusAnimationFrame(img, spec) {
+    this.circusAvatarFrameCache = this.circusAvatarFrameCache || {};
+    const frameW = Math.floor(img.naturalWidth / spec.cols);
+    const frameH = Math.floor(img.naturalHeight / spec.rows);
+    const col = spec.frameIndex % spec.cols;
+    const row = Math.floor(spec.frameIndex / spec.cols);
+    const cacheKey = `${spec.sheet}:animation:${spec.frameIndex}:${img.naturalWidth}x${img.naturalHeight}`;
+    if (this.circusAvatarFrameCache[cacheKey]) return this.circusAvatarFrameCache[cacheKey];
+    const source = document.createElement('canvas');
+    source.width = frameW;
+    source.height = frameH;
+    const sourceCtx = source.getContext('2d', { willReadFrequently: true });
+    if (!sourceCtx) return null;
+    sourceCtx.imageSmoothingEnabled = false;
+    sourceCtx.drawImage(img, col * frameW, row * frameH, frameW, frameH, 0, 0, frameW, frameH);
+    const pixels = sourceCtx.getImageData(0, 0, frameW, frameH).data;
+    let minX = frameW;
+    let minY = frameH;
+    let maxX = -1;
+    let maxY = -1;
+    for (let py = 0; py < frameH; py++) {
+      for (let px = 0; px < frameW; px++) {
+        if (pixels[(py * frameW + px) * 4 + 3] < 12) continue;
+        minX = Math.min(minX, px);
+        minY = Math.min(minY, py);
+        maxX = Math.max(maxX, px);
+        maxY = Math.max(maxY, py);
+      }
+    }
+    if (maxX < minX || maxY < minY) return null;
+    const safePad = 12;
+    minX = Math.max(0, minX - safePad);
+    minY = Math.max(0, minY - safePad);
+    maxX = Math.min(frameW - 1, maxX + safePad);
+    maxY = Math.min(frameH - 1, maxY + safePad);
+    const canvas = document.createElement('canvas');
+    canvas.width = maxX - minX + 1;
+    canvas.height = maxY - minY + 1;
+    canvas.getContext('2d').drawImage(source, minX, minY, canvas.width, canvas.height, 0, 0, canvas.width, canvas.height);
+    const frame = { canvas, width: canvas.width, height: canvas.height };
+    this.circusAvatarFrameCache[cacheKey] = frame;
+    return frame;
   },
 
   getCircusTransparentAvatarFrame(img, spec) {
