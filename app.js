@@ -1639,7 +1639,13 @@ const OS = {
       42: { name: 'DIGITAL CARNIVAL OVERLOOK', short: 'FETE', detail: 'Fete foraine visible depuis le terrain mais jamais visitee dans la serie.', color: '#ff4fb8', floor: '#315f2d', ceiling: '#5f8ee8', unlocked: unlockedAt(1, 0) },
       43: { name: 'TENT DINING AREA', short: 'REPAS', detail: 'Table du niveau principal utilisee pour les repas du groupe.', color: '#ffd84a', floor: '#c43a35', ceiling: '#311340', unlocked: unlockedAt(1, 0) },
       50: { name: 'DORM HALL / ANNEXE OUEST', short: 'ANNEXE O.', detail: 'Couloir lateral des portes barrees des anciens membres. Acces archive apres Remember.', color: '#bb6a75', floor: '#4a1727', ceiling: '#25101d', unlocked: unlocked(9) },
-      51: { name: 'DORM HALL / ANNEXE EST', short: 'ANNEXE E.', detail: 'Second couloir lateral des portes barrees des anciens membres. Acces archive apres Remember.', color: '#a85e70', floor: '#431523', ceiling: '#210e1a', unlocked: unlocked(9) }
+      51: { name: 'DORM HALL / ANNEXE EST', short: 'ANNEXE E.', detail: 'Second couloir lateral des portes barrees des anciens membres. Acces archive apres Remember.', color: '#a85e70', floor: '#431523', ceiling: '#210e1a', unlocked: unlocked(9) },
+      64: { name: 'MILDENHALL UPPER HALL / RECONSTRUCTION', short: 'MANOR II', detail: 'Etage praticable reconstruit par CainOS depuis les volumes visibles du manoir; son plan exact n est pas canonique.', color: '#a9c9db', floor: '#211a2c', ceiling: '#050816', unlocked: unlockedAt(3, 1) },
+      65: { name: 'MILDENHALL ATTIC / RECONSTRUCTION', short: 'GRENIER', detail: 'Grenier CainOS inspire du manoir. Les accessoires prolongent la scene sans affirmer un interieur officiel.', color: '#8a7890', floor: '#19131d', ceiling: '#030307', unlocked: unlockedAt(3, 1) },
+      66: { name: 'CANDY PALACE UPPER GALLERY / RECONSTRUCTION', short: 'PALAIS II', detail: 'Galerie haute reconstruite depuis l architecture du palais de Loolilalu; circulation CainOS non montree dans l episode.', color: '#ff9ad5', floor: '#ffe1ed', ceiling: '#7d3f8c', unlocked: unlockedAt(2, 2) },
+      67: { name: 'CANDY PALACE BALCONY / RECONSTRUCTION', short: 'BALCON', detail: 'Balcon d observation CainOS raccorde au palais. La vue respecte le royaume, mais ce niveau reste une reconstruction.', color: '#ffd84a', floor: '#ffcae1', ceiling: '#70a7ff', unlocked: unlockedAt(2, 2) },
+      68: { name: 'LIGHTHOUSE INTERIOR / RECONSTRUCTION', short: 'PHARE INT.', detail: 'Interieur praticable du phare reconstruit par CainOS depuis sa silhouette et son acces au toboggan.', color: '#ff6a55', floor: '#ead17b', ceiling: '#79e8ff', unlocked: unlockedAt(7, 1) },
+      69: { name: 'LIGHTHOUSE LANTERN / RECONSTRUCTION', short: 'LANTERNE', detail: 'Lanterne haute CainOS avec vue sur le lac. Le phare est canonique; cette circulation interieure ne l est pas.', color: '#fff1a8', floor: '#d9b94f', ceiling: '#4ee7ff', unlocked: unlockedAt(7, 1) }
     };
     const scenes = {
       2: { exits: [3, 4, 5, 20, 21, 28, 29, 43], motif: 'circus', size: 23 },
@@ -1648,7 +1654,7 @@ const OS = {
       5: { exits: [2, 4, 16, 27], motif: 'exit', size: 15 },
       6: { exits: [7, 29, 32, 33], motif: 'candy', size: 19 },
       7: { exits: [6, 16, 33], motif: 'test', size: 13 },
-      8: { exits: [9, 29], motif: 'manor', size: 17 },
+      8: { exits: [9, 29, 64], motif: 'manor', size: 17 },
       9: { exits: [8, 34], motif: 'basement', size: 13 },
       10: { exits: [11, 29, 35, 36, 37], motif: 'spudsy', size: 17 },
       11: { exits: [3, 10, 12, 13, 24, 25, 26, 29], motif: 'micro', size: 19 },
@@ -1672,20 +1678,26 @@ const OS = {
       29: { exits: [2, 6, 8, 10, 11, 13, 16, 18, 28, 38], motif: 'tubes', size: 23 },
       30: { exits: [28, 22], motif: 'loser', size: 13 },
       31: { exits: [28], motif: 'nest', size: 15 },
-      32: { exits: [6, 33], motif: 'palace', size: 17 },
+      32: { exits: [6, 33, 66], motif: 'palace', size: 17 },
       33: { exits: [6, 32, 7], motif: 'route', size: 21 },
       34: { exits: [9], motif: 'hell', size: 15 },
       35: { exits: [10, 36, 37], motif: 'kitchen', size: 15 },
       36: { exits: [10, 35], motif: 'bathroom', size: 11 },
       37: { exits: [10, 35], motif: 'training', size: 11 },
       38: { exits: [13, 29], motif: 'awards', size: 19 },
-      39: { exits: [14], motif: 'lighthouse', size: 15 },
+      39: { exits: [14, 68], motif: 'lighthouse', size: 15 },
       40: { exits: [14], motif: 'underwater', size: 17 },
       41: { exits: [15], motif: 'street', size: 17 },
       42: { exits: [3], motif: 'carnival', size: 19 },
       43: { exits: [2, 28, 21], motif: 'dining', size: 15 },
       50: { exits: [20], motif: 'dormannex', size: 21 },
-      51: { exits: [20], motif: 'dormannex', size: 21 }
+      51: { exits: [20], motif: 'dormannex', size: 21 },
+      64: { exits: [8, 65], motif: 'manor', size: 15 },
+      65: { exits: [64], motif: 'manor', size: 13 },
+      66: { exits: [32, 67], motif: 'palace', size: 15 },
+      67: { exits: [66], motif: 'palace', size: 13 },
+      68: { exits: [39, 69], motif: 'lighthouse', size: 13 },
+      69: { exits: [68, 14], motif: 'lighthouse', size: 11 }
     };
 
     Object.entries(this.getCircusBedroomDefinitions()).forEach(([zoneId, room]) => {
@@ -1750,9 +1762,15 @@ const OS = {
       portalReady: introSeen,
       adventurePortal,
       cinematic: null,
+      portalTransition: null,
       threatPositions: new Map(),
       threatCooldownUntil: 0,
       threatAlert: '',
+      noiseLevel: 0,
+      visibilityLevel: 0.45,
+      stealthAlert: '',
+      lastNoiseAt: 0,
+      routinePhase: null,
       vehicleModeUntil: 0,
       diveModeUntil: 0,
       gamepadActionDown: false,
@@ -1782,6 +1800,8 @@ const OS = {
     document.body.dataset.fpsIntroSteps = String(gameplayAudit.introSteps);
     document.body.dataset.fpsVerticalAudit = verticalAudit.ok ? 'ok' : verticalAudit.errors.join(' | ');
     document.body.dataset.fpsTallStructures = String(verticalAudit.structureCount);
+    document.body.dataset.fpsVerticalFloors = String(verticalAudit.floorCount);
+    document.body.dataset.fpsAnimationSheets = String(verticalAudit.animationCount);
     if (!roomAudit.ok) console.warn('FPS room network audit:', roomAudit.errors);
     if (!objectiveAudit.ok) console.warn('FPS objective audit:', objectiveAudit.errors);
     if (!gameplayAudit.ok) console.warn('FPS gameplay audit:', gameplayAudit.errors);
@@ -1802,7 +1822,7 @@ const OS = {
         : (rawKey === 'digit2' || codeKey === 'digit2' || codeKey === 'numpad2') ? '2'
           : (rawKey === 'digit3' || codeKey === 'digit3' || codeKey === 'numpad3') ? '3'
             : rawKey;
-      if (['arrowup','arrowdown','arrowleft','arrowright','enter',' ','e','shift','w','a','s','d','z','q','f','h','m','1','2','3'].includes(key)) {
+      if (['arrowup','arrowdown','arrowleft','arrowright','enter',' ','e','shift','w','a','s','d','z','q','c','f','h','m','1','2','3'].includes(key)) {
         e.preventDefault();
         if (['1','2','3'].includes(key) && this.circusDoom?.interactionChoices) this.chooseCircusDialogueOption(Number(key) - 1);
         else if (key === 'm' && this.circusDoom) {
@@ -1815,6 +1835,7 @@ const OS = {
         }
         else if (key === 'f' && this.circusDoom) {
           this.circusDoom.lightUntil = performance.now() + 12000;
+          this.emitCircusNoise(0.18, 'Wacky Watch');
           this.circusDoom.interactionMessage = 'LAMPE WACKY WATCH ACTIVE: protection lumineuse temporaire.';
           this.circusDoom.interactionUntil = performance.now() + 2600;
         }
@@ -1830,6 +1851,7 @@ const OS = {
     this.circusDoomClick = e => {
       const state = this.circusDoom;
       if (!state) return;
+      if (state.portalTransition) return;
       if (state.cinematic) {
         this.advanceCircusArrivalCinematic();
         return;
@@ -1912,7 +1934,13 @@ const OS = {
       themachine: 'assets/images/cainos-pixel-cast-sheet-the-machine.png',
       ming: 'assets/images/cainos-pixel-cast-sheet-ming.png',
       gloinkqueenscale: 'assets/images/cainos-pixel-cast-sheet-gloink-queen-scale.png',
-      pomnianimation: 'assets/images/cainos-pomni-animation-sheet.png'
+      pomnianimation: 'assets/images/cainos-pomni-animation-sheet.png',
+      jaxanimation: 'assets/images/cainos-jax-animation-sheet.png',
+      ragathaanimation: 'assets/images/cainos-ragatha-animation-sheet.png',
+      kingeranimation: 'assets/images/cainos-kinger-animation-sheet.png',
+      gangleanimation: 'assets/images/cainos-gangle-animation-sheet.png',
+      zoobleanimation: 'assets/images/cainos-zooble-animation-sheet.png',
+      caineanimation: 'assets/images/cainos-caine-animation-sheet.png'
     };
     this.circusAvatarSheets = {};
     this.circusAvatarFrameCache = {};
@@ -1988,7 +2016,17 @@ const OS = {
   },
 
   getCircusAvatarAnimationSpec(avatar, sprite = {}) {
-    if (avatar !== 'pomni') return null;
+    const animationSheets = {
+      pomni: 'pomnianimation',
+      jax: 'jaxanimation',
+      ragatha: 'ragathaanimation',
+      kinger: 'kingeranimation',
+      gangle: 'gangleanimation',
+      zooble: 'zoobleanimation',
+      caine: 'caineanimation'
+    };
+    const sheet = animationSheets[avatar];
+    if (!sheet) return null;
     const state = this.circusDoom;
     const speaking = state?.interactionChannel === 'dialogue'
       && state?.interactionSpeaker === sprite.name
@@ -2007,7 +2045,7 @@ const OS = {
     }[animation];
     const speed = animation === 'walk' ? 5.5 : animation === 'talk' ? 4.5 : 2.2;
     const frameIndex = frames[Math.floor(performance.now() / 1000 * speed) % frames.length];
-    return { sheet: 'pomnianimation', cols: 4, rows: 2, frameIndex, animation };
+    return { sheet, cols: 4, rows: 2, frameIndex, animation };
   },
 
   getCircusAdventureWorlds() {
@@ -2330,7 +2368,7 @@ const OS = {
       if (!scenes[world.target]) errors.push(`MONDE EP${world.episode}: scene ${world.target} absente`);
     });
     const virtualActions = new Set(['drive', 'dive', 'survive', 'give']);
-    for (let zoneId = 2; zoneId <= 63; zoneId++) {
+    for (let zoneId = 2; zoneId <= 69; zoneId++) {
       const config = this.getCircusZoneGameplayConfig(zoneId);
       if (!config) continue;
       const props = this.getCircusZoneProps(zoneId);
@@ -2369,11 +2407,26 @@ const OS = {
     if (new Set(heights.map(height => height.toFixed(2))).size < 3) {
       errors.push('VERTICAL: silhouettes trop uniformes');
     }
-    const pomniAnimation = this.getCircusAvatarAnimationSpec('pomni', { name: 'Pomni', routine: 'idle' });
-    if (!pomniAnimation || pomniAnimation.cols !== 4 || pomniAnimation.rows !== 2) {
-      errors.push('ANIMATION POMNI: planche 4x2 absente');
-    }
-    return { ok: errors.length === 0, errors, structureCount: targets.length };
+    const floorLinks = [[8, 64], [64, 65], [32, 66], [66, 67], [39, 68], [68, 69]];
+    floorLinks.forEach(([from, to]) => {
+      if (!this.circusDoom?.scenes?.[from]?.exits?.includes(to) || !this.circusDoom?.scenes?.[to]?.exits?.includes(from)) {
+        errors.push(`ETAGE ${from}/${to}: liaison reciproque absente`);
+      }
+    });
+    const animatedAvatars = ['pomni', 'jax', 'ragatha', 'kinger', 'gangle', 'zooble', 'caine'];
+    animatedAvatars.forEach(avatar => {
+      const animation = this.getCircusAvatarAnimationSpec(avatar, { name: avatar, routine: 'idle' });
+      if (!animation || animation.cols !== 4 || animation.rows !== 2) {
+        errors.push(`ANIMATION ${avatar.toUpperCase()}: planche 4x2 absente`);
+      }
+    });
+    return {
+      ok: errors.length === 0,
+      errors,
+      structureCount: targets.length,
+      floorCount: floorLinks.length,
+      animationCount: animatedAvatars.length
+    };
   },
 
   prepareCircusSimulationRoom() {
@@ -2516,6 +2569,7 @@ const OS = {
   handleCircusSimulationInput(key) {
     const state = this.circusDoom;
     if (!state) return;
+    if (state.portalTransition) return;
     if (state.cinematic) {
       this.advanceCircusArrivalCinematic();
       return;
@@ -2667,7 +2721,13 @@ const OS = {
       42: { title: 'RELEVER LA FETE FORAINE', steps: [scan('ring', 'Verifier deux attractions', 2), scan('pillar', 'Identifier le repere central'), talk('caine', 'Questionner Caine')] },
       43: { title: 'PREPARER LE REPAS', steps: [scan('table', 'Verifier trois tables', 3), activate('menu', 'Lire le menu du repas'), talk('kinger', 'Rejoindre Kinger')] },
       50: { title: 'INDEXER L ANNEXE OUEST', steps: [activate('archive', 'Ouvrir le registre de l annexe'), scan('ceilinglight', 'Verifier le balisage du couloir')] },
-      51: { title: 'INDEXER L ANNEXE EST', steps: [activate('archive', 'Ouvrir le registre de l annexe'), scan('ceilinglight', 'Verifier le balisage du couloir')] }
+      51: { title: 'INDEXER L ANNEXE EST', steps: [activate('archive', 'Ouvrir le registre de l annexe'), scan('ceilinglight', 'Verifier le balisage du couloir')] },
+      64: { title: 'MONTER DANS LE MANOIR', steps: [scan('window', 'Verifier les fenetres hautes'), activate('candle', 'Maintenir une bougie'), scan('stairs', 'Trouver le grenier')] },
+      65: { title: 'INDEXER LE GRENIER', steps: [scan('archive', 'Examiner les traces du grenier'), scan('crate', 'Verifier deux caisses', 2), talk('kinger', 'Garder Kinger comme repere')] },
+      66: { title: 'PARCOURIR LA GALERIE ROYALE', steps: [scan('pillar', 'Verifier deux piliers', 2), scan('stairs', 'Trouver le balcon'), talk('loolilalu', 'Consulter Loolilalu')] },
+      67: { title: 'OBSERVER LE ROYAUME', steps: [scan('ring', 'Relever la balustrade'), activate('spotlight', 'Activer le repere du balcon'), talk('pomni', 'Rejoindre Pomni')] },
+      68: { title: 'MONTER LE PHARE', steps: [scan('window', 'Verifier les ouvertures'), scan('stairs', 'Suivre l escalier'), talk('jax', 'Retrouver Jax')] },
+      69: { title: 'ALLUMER LA LANTERNE', steps: [activate('spotlight', 'Activer la lanterne'), activate('console', 'Calibrer le faisceau'), talk('caine', 'Signaler le phare a Caine')] }
     };
     Object.entries(this.getCircusBedroomDefinitions()).forEach(([zoneId, room]) => {
       objectives[Number(zoneId)] = this.isCircusBedroomArchived(room)
@@ -2682,7 +2742,7 @@ const OS = {
     const activatableKinds = new Set(['console', 'gridnode', 'spotlight', 'candle', 'target', 'scoreboard', 'menu', 'card', 'archive', 'memory', 'ring', 'doorframe']);
     const errors = [];
     let missionCount = 0;
-    for (let zoneId = 2; zoneId <= 63; zoneId++) {
+    for (let zoneId = 2; zoneId <= 69; zoneId++) {
       const config = this.getCircusZoneObjectiveConfig(zoneId);
       if (!config) continue;
       missionCount++;
@@ -2826,6 +2886,7 @@ const OS = {
     this.updateCircusFpsToolbar();
     this.saveCircusPersistentWorldState();
     this.renderCainOSTools();
+    this.emitCircusNoise(0.42, `prise ${name}`);
     SoundManager.play(720, 0.1, 'triangle', 0.05);
   },
 
@@ -2853,6 +2914,7 @@ const OS = {
     this.advanceCircusZoneChallenge('give', item.kind);
     this.updateCircusFpsToolbar();
     this.saveCircusPersistentWorldState();
+    this.emitCircusNoise(0.34, `objet donne a ${sprite.name}`);
     SoundManager.playWin();
   },
 
@@ -2888,6 +2950,7 @@ const OS = {
     state.interactionSpeaker = this.getCircusPropName(prop, state.currentZoneId);
     this.advanceCircusZoneChallenge(options.activate === false ? 'look' : 'use', prop.kind);
     this.saveCircusPersistentWorldState();
+    this.emitCircusNoise(options.activate === false ? 0.12 : 0.38, this.getCircusPropName(prop, state.currentZoneId));
     if (state.detailEl) state.detailEl.innerText = state.interactionMessage;
     SoundManager.play(390, 0.07, 'square', 0.04);
     setTimeout(() => SoundManager.play(585, 0.06, 'triangle', 0.035), 80);
@@ -3071,6 +3134,7 @@ const OS = {
     state.interactionOrigin = { x: state.player.x, z: state.player.z, range: 1.45 };
     state.interactionChannel = 'dialogue';
     state.interactionSpeaker = sprite.name;
+    this.emitCircusNoise(0.28, `dialogue ${sprite.name}`);
     this.saveCircusPersistentWorldState();
     if (state.detailEl) state.detailEl.innerText = state.interactionMessage;
     SoundManager.play(520, 0.08, 'triangle', 0.05);
@@ -3091,13 +3155,13 @@ const OS = {
       this.adjustCainOSRelation(choices.avatar, 3);
     }
     if (option.action === 'toggle-follow') {
-      state.follower = state.follower === choices.avatar ? null : { avatar: choices.avatar, name: choices.speaker };
+      state.follower = state.follower?.avatar === choices.avatar ? null : { avatar: choices.avatar, name: choices.speaker };
       state.interactionMessage = state.follower
         ? `${choices.speaker} va accompagner le Visiteur 251 entre les zones accessibles.`
         : `${choices.speaker} reste dans cette zone.`;
     }
     this.saveCircusPersistentWorldState();
-    if (state.detailEl) state.detailEl.innerText = option.response;
+    if (state.detailEl) state.detailEl.innerText = state.interactionMessage;
     SoundManager.play(620 + index * 80, 0.08, 'triangle', 0.045);
   },
 
@@ -3127,8 +3191,97 @@ const OS = {
     if (typeof SoundManager.playFpsDoor === 'function') {
       SoundManager.playFpsDoor(state.scenes[fromZoneId]?.motif || 'dorm');
     }
+    if (prop.kind === 'caineportal') {
+      this.beginCircusPortalTransition(prop.target, fromZoneId);
+      return;
+    }
     state.history.push(fromZoneId);
     this.setCircusSimulationZone(prop.target, true, fromZoneId);
+  },
+
+  getCircusPortalTransitionStyle(targetId) {
+    const motif = this.circusDoom?.scenes?.[targetId]?.motif || 'circus';
+    const styles = {
+      candy: { key: 'candy', color: '#ff9ad5', accent: '#ffd84a', label: 'SUCRE EN COURS DE COMPILATION' },
+      manor: { key: 'manor', color: '#14101d', accent: '#b7f0ff', label: 'LUMIERES DU MANOIR EN SYNCHRONISATION' },
+      spudsy: { key: 'spudsy', color: '#ff4d4d', accent: '#f6d743', label: 'COMMANDE D AVENTURE EN PREPARATION' },
+      guns: { key: 'guns', color: '#17110a', accent: '#f6d743', label: 'CIBLES ET REGLES EN CHARGEMENT' },
+      lake: { key: 'lake', color: '#073844', accent: '#4ee7ff', label: 'SURFACE DIGITALE EN FORMATION' },
+      core: { key: 'core', color: '#10070d', accent: '#ff7a30', label: 'COUCHE C&A EN OUVERTURE' },
+      final: { key: 'final', color: '#2b1018', accent: '#e53935', label: 'SIGNAL FINAL EN RECOMPOSITION' }
+    };
+    return styles[motif] || { key: 'circus', color: '#160d25', accent: '#7df0ff', label: 'AVENTURE EN COURS DE GENERATION' };
+  },
+
+  beginCircusPortalTransition(targetId, fromZoneId) {
+    const state = this.circusDoom;
+    if (!state || state.portalTransition) return;
+    state.portalTransition = {
+      targetId,
+      fromZoneId,
+      startedAt: performance.now(),
+      duration: 2200,
+      switched: false,
+      style: this.getCircusPortalTransitionStyle(targetId)
+    };
+    state.interactionChoices = null;
+    state.interactionMessage = state.portalTransition.style.label;
+    state.interactionUntil = performance.now() + 2400;
+    this.emitCircusNoise(0.5, 'portail de Caine');
+    SoundManager.play(280, 0.32, 'sawtooth', 0.045);
+  },
+
+  updateCircusPortalTransition() {
+    const state = this.circusDoom;
+    const transition = state?.portalTransition;
+    if (!transition) return false;
+    const progress = Math.min(1, (performance.now() - transition.startedAt) / transition.duration);
+    transition.progress = progress;
+    if (progress >= 0.48 && !transition.switched) {
+      transition.switched = true;
+      state.history.push(transition.fromZoneId);
+      this.setCircusSimulationZone(transition.targetId, false, transition.fromZoneId);
+    }
+    if (progress >= 1) {
+      state.portalTransition = null;
+      state.interactionMessage = `ARRIVEE: ${state.portals[state.currentZoneId]?.name || 'aventure'}.`;
+      state.interactionUntil = performance.now() + 2600;
+      state.interactionChannel = 'system';
+      SoundManager.play(720, 0.16, 'triangle', 0.05);
+      return false;
+    }
+    return true;
+  },
+
+  drawCircusPortalTransitionOverlay(ctx, w, h, state) {
+    const transition = state?.portalTransition;
+    if (!transition) return;
+    const p = transition.progress || 0;
+    const cover = p < 0.5 ? p * 2 : (1 - p) * 2;
+    const style = transition.style;
+    ctx.save();
+    ctx.fillStyle = `${style.color}${Math.round(cover * 235).toString(16).padStart(2, '0')}`;
+    ctx.fillRect(0, 0, w, h);
+    ctx.strokeStyle = style.accent;
+    ctx.lineWidth = 3;
+    const rings = style.key === 'candy' ? 8 : 5;
+    for (let i = 0; i < rings; i++) {
+      const radius = Math.max(8, (1 - ((p * 2 + i / rings) % 1)) * Math.max(w, h) * 0.62);
+      ctx.beginPath();
+      if (style.key === 'spudsy') ctx.rect(w / 2 - radius, h / 2 - radius * 0.45, radius * 2, radius * 0.9);
+      else ctx.arc(w / 2, h / 2, radius, 0, Math.PI * 2);
+      ctx.stroke();
+    }
+    if (style.key === 'manor') {
+      ctx.fillStyle = `rgba(0,0,0,${Math.min(0.92, cover)})`;
+      ctx.fillRect(0, 0, w * p, h);
+      ctx.fillRect(w * (1 - p), 0, w * p, h);
+    }
+    ctx.fillStyle = '#ffffff';
+    ctx.font = 'bold 11px Courier New';
+    ctx.textAlign = 'center';
+    ctx.fillText(style.label, w / 2, h * 0.82);
+    ctx.restore();
   },
 
   getCircusObjectiveDialogueOption(sprite, zoneId) {
@@ -3161,6 +3314,38 @@ const OS = {
       label: 'Prochaine etape',
       response: `${sprite.name}: Le prochain repere utile est: ${status.next?.label || 'continuer l exploration'}.`
     };
+  },
+
+  getCircusContextualDialogueOption(sprite, zoneId) {
+    const state = this.circusDoom;
+    if (!state) return null;
+    const avatar = sprite.avatar || sprite.type;
+    const held = state.heldItem;
+    if (held) {
+      const reactions = {
+        caine: `Caine: ${held.name} appartient normalement a une scene precise. Le transporter est une experience emergente non planifiee!`,
+        ragatha: `Ragatha: Garde ${held.name} visible. On pourra le rendre a la bonne scene sans perdre notre chemin.`,
+        jax: `Jax: Tu te promenes vraiment avec ${held.name}? Enfin une decision raisonnablement mauvaise.`,
+        kinger: `Kinger: ${held.name} se souvient peut-etre mieux de sa piece que nous.`,
+        gangle: `Gangle: Fais attention avec ${held.name}. Les accessoires cassent parfois au pire moment.`,
+        zooble: `Zooble: Ne me donne pas ${held.name}. J ai deja assez de pieces detachees.`
+      };
+      return { label: `Montrer ${held.name}`, response: reactions[avatar] || `${sprite.name}: Cet objet vient de ${this.circusDoom.portals[held.fromZone]?.short || 'la simulation'}.` };
+    }
+    const follower = state.follower;
+    if (follower && follower.avatar !== avatar) {
+      return {
+        label: `Avec ${follower.name}`,
+        response: `${sprite.name}: ${follower.name} connait deja une partie du trajet. Gardez une porte commune comme repere.`
+      };
+    }
+    if (zoneId >= 64 && zoneId <= 69) {
+      return {
+        label: 'Cet etage',
+        response: `${sprite.name}: Le lieu appartient bien a cette aventure, mais CainOS a reconstruit cet etage depuis les volumes visibles. Son plan exact n est pas canonique.`
+      };
+    }
+    return null;
   },
 
   getCircusCharacterChoices(sprite, zoneId, introLine) {
@@ -3273,6 +3458,7 @@ const OS = {
     const specialOptions = special[avatar] || special[sprite.type] || [];
     const dialogueOptions = dialogueByAvatar[avatar] || dialogueByAvatar[sprite.type] || fallbackDialogue;
     const objectiveOption = this.getCircusObjectiveDialogueOption(sprite, zoneId);
+    const contextualOption = this.getCircusContextualDialogueOption(sprite, zoneId);
     const followable = new Set(['pomni', 'ragatha', 'jax', 'kinger', 'gangle', 'zooble', 'gummigoo']);
     const followOption = followable.has(avatar) ? {
       label: this.circusDoom?.follower?.avatar === avatar ? 'Rester ici' : 'Me suivre',
@@ -3285,6 +3471,7 @@ const OS = {
       prompt: introLine,
       options: [
         ...(objectiveOption ? [objectiveOption] : []),
+        ...(contextualOption ? [contextualOption] : []),
         ...(followOption ? [followOption] : []),
         ...(specialOptions.slice(0, 1)),
         ...dialogueOptions
@@ -3324,7 +3511,13 @@ const OS = {
       40: "CainOS: Le coffre sous-marin a deja ete pille; les deux poissons n assurent qu une garde de gag.",
       41: "CainOS: Cette rue est un souvenir incomplet de Jax. Elle ne constitue pas une sortie valide.",
       42: "CainOS: La fete foraine est visible sur le terrain mais jamais visitee; seules ses formes exterieures sont fiables.",
-      43: "CainOS: La table du niveau principal est distincte du Cafe Cirque et sert aux repas communs."
+      43: "CainOS: La table du niveau principal est distincte du Cafe Cirque et sert aux repas communs.",
+      64: "CainOS: Etage reconstruit depuis le volume de Mildenhall. Le manoir est canonique; ce plan vertical exact ne l est pas.",
+      65: "CainOS: Grenier de gameplay marque comme reconstruction. Les signaux horrifiques restent ceux du manoir.",
+      66: "CainOS: Galerie haute du palais reconstruite pour rendre son volume visitable sans modifier la mission du royaume.",
+      67: "CainOS: Balcon CainOS raccorde au palais. La vue et les couleurs sont coherentes, la circulation est speculative.",
+      68: "CainOS: Interieur du phare reconstruit depuis sa silhouette canonique et son lien avec le toboggan.",
+      69: "CainOS: Lanterne praticable du phare. Cette hauteur sert la navigation, pas une affirmation sur un plan officiel."
     };
     return hints[zoneId] || "CainOS: Zone praticable. Les interactions restent limitees au lore deja debloque.";
   },
@@ -3352,12 +3545,17 @@ const OS = {
         8: "Pomni: Le manoir force les souvenirs a remonter. Je prefere rester pres de Kinger.",
         10: "Pomni: Les commandes vont trop vite. Gangle tient a peine le rythme.",
         14: "Pomni: Le lac fait semblant d'etre calme. Caine fait toujours semblant.",
-        18: "Pomni: Si tout perd ses couleurs, au moins on peut encore se retrouver ici."
+        18: "Pomni: Si tout perd ses couleurs, au moins on peut encore se retrouver ici.",
+        64: "Pomni: Le manoir continue au-dessus, mais CainOS a complete les passages que nous n avons pas vus.",
+        67: "Pomni: Ce balcon donne une vraie vue sur le royaume, meme si son plan est une reconstruction.",
+        68: "Pomni: Le phare parait moins simple quand on doit vraiment monter a l interieur."
       },
       caine: {
         2: "Caine: Une scene praticable, des portes splendides, et aucune garantie de sortie!",
         16: "Caine: Le coeur C&A est un local technique, pas une salle de pause pour sujets curieux.",
-        18: "Caine: Le spectacle continue tant que le systeme peut encore sourire."
+        18: "Caine: Le spectacle continue tant que le systeme peut encore sourire.",
+        67: "Caine: Un balcon royal parfaitement adapte aux besoins panoramiques de l aventure!",
+        69: "Caine: La lanterne domine le lac et rend chaque sortie de toboggan infiniment plus spectaculaire!"
       },
       bubble: {
         2: "Bubble: Je vote pour la porte la plus brillante!",
@@ -3366,17 +3564,22 @@ const OS = {
       jax: {
         2: "Jax: Si une porte est verrouillee, c'est probablement la seule interessante.",
         14: "Jax: Version chasseur, meme probleme: Caine appelle ca des vacances.",
-        18: "Jax: Le final dramatique, c'est vraiment pas mon style."
+        18: "Jax: Le final dramatique, c'est vraiment pas mon style.",
+        68: "Jax: Monter tout ca pour redescendre par un toboggan. Enfin une architecture logique.",
+        69: "Jax: De la-haut, on voit tres bien a quel point les vacances de Caine tournent en rond."
       },
       ragatha: {
         2: "Ragatha: Avance doucement. Les salles changent moins vite si on garde un repere.",
         8: "Ragatha: Le manoir n'est pas juste un decor. Il appuie sur les failles.",
-        18: "Ragatha: Meme quand la scene casse, le groupe doit rester ensemble."
+        18: "Ragatha: Meme quand la scene casse, le groupe doit rester ensemble.",
+        66: "Ragatha: La galerie reprend les couleurs du palais. Gardons l escalier comme repere."
       },
       kinger: {
         2: "Kinger: Les murs ont une memoire. Les portes aussi, malheureusement.",
         8: "Kinger: Les pieces sombres protegent parfois mieux les souvenirs.",
-        17: "Kinger: Ce buffer n'est pas un puzzle. C'est une cicatrice rangee par le systeme."
+        17: "Kinger: Ce buffer n'est pas un puzzle. C'est une cicatrice rangee par le systeme.",
+        64: "Kinger: Plus on monte, plus les souvenirs du manoir cherchent une piece ou se ranger.",
+        65: "Kinger: Le grenier n est pas confirme, mais la peur qui s y accroche ressemble bien au manoir."
       },
       gangle: {
         2: "Gangle: Tant que mon masque tient, je peux te dire quelle porte a l'air moins terrible.",
@@ -3744,7 +3947,13 @@ const OS = {
       33: { title: 'ROUTE DU TANKER', steps: [{ action: 'use', kind: 'truck', count: 1, label: 'Relancer le camion' }, { action: 'drive', kind: 'truck', count: 4, label: 'Traverser la route du canyon' }] },
       34: { title: 'AMES DU MANOIR', steps: [{ action: 'use', kind: 'candle', count: 1, label: 'Fixer une source lumineuse' }, { action: 'survive', kind: 'candle', count: 4, label: 'Resister a la possession' }] },
       35: { title: 'CUISINE SPUDSY', steps: [{ action: 'take', kind: 'menu', count: 1, label: 'Prendre un ticket cuisine' }, { action: 'use', kind: 'counter', count: 1, label: 'Assembler la commande' }, { action: 'give', kind: 'menu', count: 1, label: 'Servir la commande' }] },
-      40: { title: 'PLONGEE AU TRESOR', steps: [{ action: 'use', kind: 'wave', count: 1, label: 'Descendre sous le lac' }, { action: 'dive', kind: 'wave', count: 3, label: 'Atteindre le coffre' }, { action: 'use', kind: 'archive', count: 1, label: 'Verifier le coffre vide' }] }
+      40: { title: 'PLONGEE AU TRESOR', steps: [{ action: 'use', kind: 'wave', count: 1, label: 'Descendre sous le lac' }, { action: 'dive', kind: 'wave', count: 3, label: 'Atteindre le coffre' }, { action: 'use', kind: 'archive', count: 1, label: 'Verifier le coffre vide' }] },
+      64: { title: 'ETAGE MILDENHALL', steps: [{ action: 'look', kind: 'window', count: 2, label: 'Comparer les deux fenetres' }, { action: 'use', kind: 'candle', count: 1, label: 'Fixer un repere lumineux' }] },
+      65: { title: 'SURVIE AU GRENIER', steps: [{ action: 'use', kind: 'candle', count: 1, label: 'Allumer la bougie du grenier' }, { action: 'survive', kind: 'candle', count: 3, label: 'Rester discret face au signal' }] },
+      66: { title: 'GALERIE ROYALE', steps: [{ action: 'look', kind: 'pillar', count: 2, label: 'Verifier les piliers' }, { action: 'use', kind: 'stairs', count: 1, label: 'Ouvrir le passage du balcon' }] },
+      67: { title: 'BALCON DU ROYAUME', steps: [{ action: 'look', kind: 'ring', count: 1, label: 'Relever la balustrade' }, { action: 'use', kind: 'spotlight', count: 1, label: 'Allumer le repere royal' }] },
+      68: { title: 'ASCENSION DU PHARE', steps: [{ action: 'look', kind: 'window', count: 2, label: 'Verifier les ouvertures' }, { action: 'use', kind: 'stairs', count: 1, label: 'Monter vers la lanterne' }] },
+      69: { title: 'LANTERNE DU LAC', steps: [{ action: 'use', kind: 'spotlight', count: 1, label: 'Allumer la lanterne' }, { action: 'use', kind: 'console', count: 1, label: 'Calibrer le faisceau' }] }
     };
     if (zoneId >= 44 && zoneId <= 49) {
       return { title: 'OBJET PERSONNEL', steps: [{ action: 'take', kind: 'card', count: 1, label: 'Prendre un objet avec permission' }, { action: 'give', kind: 'card', count: 1, label: 'Le rendre a son proprietaire' }] };
@@ -3840,17 +4049,22 @@ const OS = {
       const dz = state.player.z - position.z;
       const distance = Math.max(0.001, Math.hypot(dx, dz));
       const protectedByLight = performance.now() < (state.lightUntil || 0);
-      const alerted = state.movementNoise > 0.7 || distance < 3.4 || state.currentZoneId === 4;
+      const detectionRadius = 2.0 + (state.noiseLevel || 0) * 3.2 + (state.visibilityLevel || 0) * 1.4;
+      const alerted = (state.noiseLevel || 0) > 0.25 || distance < detectionRadius || state.currentZoneId === 4;
       if (alerted && distance > 0.82) {
-        const speed = protectedByLight ? 0.12 : (state.movementNoise > 0.7 ? 0.62 : 0.38);
-        const nx = position.x + (dx / distance) * speed * dt;
-        const nz = position.z + (dz / distance) * speed * dt;
+        const repelled = protectedByLight && distance < 2.5;
+        const speed = repelled ? 0.3 : ((state.noiseLevel || 0) > 0.7 ? 0.66 : 0.36);
+        const direction = repelled ? -1 : 1;
+        const nx = position.x + (dx / distance) * speed * dt * direction;
+        const nz = position.z + (dz / distance) * speed * dt * direction;
         const ix = Math.floor(nx);
         const iz = Math.floor(nz);
         if (state.room?.grid?.[iz]?.[ix] === 0) position = { x: nx, z: nz };
       }
       state.threatPositions.set(key, position);
-      if (distance < 4.2) state.threatAlert = protectedByLight ? 'MENACE CONTENUE PAR LA LUMIERE' : `MENACE A ${distance.toFixed(1)}m - NE COUREZ PAS EN LIGNE DROITE`;
+      if (distance < 4.8) state.threatAlert = protectedByLight
+        ? 'MENACE REPOUSSEE, MAIS LA LUMIERE VOUS SIGNALE'
+        : `MENACE A ${distance.toFixed(1)}m - BRUIT ${Math.round((state.noiseLevel || 0) * 100)}%`;
       if (distance < 0.88 && performance.now() > state.threatCooldownUntil) {
         state.threatCooldownUntil = performance.now() + 2200;
         state.stability = Math.max(0, state.stability - 20);
@@ -3872,6 +4086,14 @@ const OS = {
     });
   },
 
+  emitCircusNoise(amount, source = '') {
+    const state = this.circusDoom;
+    if (!state) return;
+    state.noiseLevel = Math.max(state.noiseLevel || 0, Math.max(0, Math.min(1, amount)));
+    state.lastNoiseAt = performance.now();
+    state.noiseSource = source;
+  },
+
   drawCircusThreatHud(ctx, w, h, state) {
     if (!state?.threatAlert) return;
     ctx.save();
@@ -3886,12 +4108,49 @@ const OS = {
     ctx.restore();
   },
 
+  drawCircusStealthHud(ctx, w, h, state) {
+    if (!state?.hudVisible) return;
+    const threatZone = [4, 8, 9, 34, 64, 65].includes(state.currentZoneId);
+    if (!threatZone && (state.noiseLevel || 0) < 0.08) return;
+    const x = w - 146;
+    const y = h - 44;
+    const drawMeter = (label, value, color, offset) => {
+      ctx.fillStyle = 'rgba(5,5,12,0.78)';
+      ctx.fillRect(x, y + offset, 132, 14);
+      ctx.strokeStyle = '#8b8794';
+      ctx.strokeRect(x, y + offset, 132, 14);
+      ctx.fillStyle = color;
+      ctx.fillRect(x + 42, y + offset + 4, 84 * Math.max(0, Math.min(1, value)), 6);
+      ctx.fillStyle = '#ffffff';
+      ctx.font = 'bold 7px Courier New';
+      ctx.textAlign = 'left';
+      ctx.fillText(label, x + 4, y + offset + 10);
+    };
+    ctx.save();
+    drawMeter('BRUIT', state.noiseLevel || 0, '#ff6b4a', 0);
+    drawMeter('VISIBLE', state.visibilityLevel || 0, '#7df0ff', 17);
+    ctx.restore();
+  },
+
   updateCircusDoom(dt) {
     const state = this.circusDoom;
     if (!state) return;
     state.averageFrameTime = state.averageFrameTime ? state.averageFrameTime * 0.94 + dt * 0.06 : dt;
     state.dynamicRayCount = state.averageFrameTime > 0.027 ? 160 : state.averageFrameTime > 0.021 ? 200 : 240;
     const { player, keys } = state;
+    if (state.portalTransition) {
+      this.updateCircusPortalTransition();
+      this.updateCircusFpsToolbar();
+      return;
+    }
+    const timeline = this.getCircusTimelineContext();
+    if (state.routinePhase && state.routinePhase !== timeline.phase && !state.interactionChoices) {
+      state.interactionMessage = `ROUTINE DU CIRQUE: ${timeline.phase.toUpperCase()} / EPISODE ${timeline.episode}. Les personnages changent de zone.`;
+      state.interactionUntil = performance.now() + 3200;
+      state.interactionChannel = 'system';
+      state.interactionSpeaker = 'CAINOS';
+    }
+    state.routinePhase = timeline.phase;
     if (state.cinematic) {
       this.updateCircusCinematicCamera(dt);
       this.updateCircusFpsToolbar();
@@ -3907,9 +4166,10 @@ const OS = {
     const previousX = player.x;
     const previousZ = player.z;
     const turn = 2.35 * dt;
-    const sprinting = keys.has('shift') || !!gamepad?.buttons?.[10]?.pressed;
+    const crouching = keys.has('c');
+    const sprinting = !crouching && (keys.has('shift') || !!gamepad?.buttons?.[10]?.pressed);
     const vehicleBoost = performance.now() < (state.vehicleModeUntil || 0) ? 1.65 : 1;
-    const speed = (sprinting ? 3.35 : 2.15) * vehicleBoost * dt;
+    const speed = (crouching ? 1.25 : sprinting ? 3.35 : 2.15) * vehicleBoost * dt;
     if (keys.has('arrowleft')) player.a -= turn;
     if (keys.has('arrowright')) player.a += turn;
     player.a += axis(2) * turn * 1.35;
@@ -3940,7 +4200,14 @@ const OS = {
     }
 
     const movedDistance = Math.hypot(player.x - previousX, player.z - previousZ);
-    state.movementNoise = movedDistance > 0.001 ? (sprinting ? 1 : 0.45) : 0;
+    const targetNoise = movedDistance > 0.001 ? (crouching ? 0.12 : sprinting ? 1 : 0.45) : 0;
+    const noiseResponse = targetNoise > (state.noiseLevel || 0) ? Math.min(1, dt * 8) : Math.min(1, dt * 1.35);
+    state.noiseLevel = (state.noiseLevel || 0) + (targetNoise - (state.noiseLevel || 0)) * noiseResponse;
+    state.movementNoise = state.noiseLevel;
+    const motif = state.scenes[state.currentZoneId]?.motif || 'circus';
+    const darkZone = ['cellar', 'manor', 'basement', 'hell'].includes(motif);
+    const lightActive = performance.now() < (state.lightUntil || 0);
+    state.visibilityLevel = lightActive ? 0.96 : Math.max(0.08, (darkZone ? 0.2 : 0.56) - (crouching ? 0.1 : 0));
     this.updateCircusThreatGameplay(dt);
     this.updateCircusZoneGameplay(dt, movedDistance);
     let explored = state.exploredCells.get(state.currentZoneId);
@@ -3956,7 +4223,6 @@ const OS = {
       }
     }
     if (movedDistance > 0.001 && performance.now() >= (state.nextFootstepAt || 0)) {
-      const motif = state.scenes[state.currentZoneId]?.motif || 'circus';
       state.footstepSide = (state.footstepSide || -1) * -1;
       if (typeof SoundManager.playFpsFootstep === 'function') {
         SoundManager.playFpsFootstep(motif, state.footstepSide * 0.16);
@@ -4062,11 +4328,13 @@ const OS = {
     this.drawCircusPhysicalDoors(ctx, w, h, portals, state);
     this.drawCircusImpostorSprites(ctx, w, h, state);
     this.drawCircusThreatHud(ctx, w, h, state);
+    this.drawCircusStealthHud(ctx, w, h, state);
     if (!state.cinematic && state.hudVisible) this.drawCircusZoneObjectiveHud(ctx, w, h, state);
     if (!state.cinematic) this.drawCircusConversationOverlay(ctx, w, h, state);
     this.drawCircusSimulationReticle(ctx, w, h, zone);
     if (state.minimapVisible) this.drawCircusRoomMinimap(ctx, w, h, state, zone);
     this.drawCircusCinematicOverlay(ctx, w, h, state);
+    this.drawCircusPortalTransitionOverlay(ctx, w, h, state);
   },
 
   canMoveInCircusRoom(x, z) {
@@ -5628,7 +5896,13 @@ const OS = {
         { kind: 'roomdoor', avatar: 'bulbcreature', label: 'BULB CREATURE', side: 'right', anchor: 'wall-right', x: 1.48, z: -3.2, color: '#7caa42', target: 63, archived: true },
         { kind: 'archive', x: 0, z: -4.25, color: '#c875ff', label: 'EAST ANNEX' },
         { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'panel', x: 0, z: 0, color: '#8b8794' }
-      ]
+      ],
+      64: [{ kind: 'stairs', x: 0, z: -3.0, color: '#756a78' }, { kind: 'window', x: -2.5, z: -2.4, color: '#b7f0ff' }, { kind: 'window', x: 2.5, z: -2.4, color: '#b7f0ff' }, { kind: 'candle', x: -1.2, z: -1.35, color: '#ffd878' }, { kind: 'pillar', x: 1.5, z: -1.5, color: '#60546a' }],
+      65: [{ kind: 'archive', x: 0, z: -3.0, color: '#8a7890' }, { kind: 'crate', x: -2.1, z: -2.0, color: '#4b382d' }, { kind: 'crate', x: 2.1, z: -2.0, color: '#4b382d' }, { kind: 'candle', x: 0, z: -1.25, color: '#ffd878' }],
+      66: [{ kind: 'stairs', x: 0, z: -3.0, color: '#fff1a8' }, { kind: 'pillar', x: -2.35, z: -2.25, color: '#ff9ad5' }, { kind: 'pillar', x: 2.35, z: -2.25, color: '#ff9ad5' }, { kind: 'window', x: 0, z: -2.75, color: '#7df0ff' }, { kind: 'candy', x: -1.15, z: -1.3, color: '#ffd84a' }],
+      67: [{ kind: 'ring', x: 0, z: -2.8, color: '#fff1a8' }, { kind: 'window', x: -2.25, z: -2.2, color: '#70a7ff' }, { kind: 'window', x: 2.25, z: -2.2, color: '#70a7ff' }, { kind: 'spotlight', x: 0, z: -1.35, color: '#ffd84a' }, { kind: 'candy', x: 1.45, z: -1.4, color: '#ff4fb8' }],
+      68: [{ kind: 'stairs', x: 0, z: -3.05, color: '#ffffff' }, { kind: 'window', x: -2.1, z: -2.2, color: '#4ee7ff' }, { kind: 'window', x: 2.1, z: -2.2, color: '#4ee7ff' }, { kind: 'pillar', x: 0, z: -1.45, color: '#ff5b4d' }],
+      69: [{ kind: 'spotlight', x: 0, z: -2.7, color: '#fff1a8' }, { kind: 'console', x: -1.7, z: -1.7, color: '#ff5b4d' }, { kind: 'window', x: 1.8, z: -2.0, color: '#4ee7ff' }, { kind: 'stairs', x: 0, z: -1.2, color: '#ffffff' }]
     };
     let props = [
       ...(byZone[zoneId] || basePillars),
@@ -5694,7 +5968,13 @@ const OS = {
         { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'stage', x: -2.3, z: -0.5, color: '#ffd84a' },
         { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'stage', x: 2.3, z: -0.5, color: '#ffd84a' }
       ],
-      43: [{ kind: 'ceilinglight', anchor: 'ceiling', fixture: 'chandelier', x: 0, z: -0.8, color: '#fff1a8' }]
+      43: [{ kind: 'ceilinglight', anchor: 'ceiling', fixture: 'chandelier', x: 0, z: -0.8, color: '#fff1a8' }],
+      64: [{ kind: 'ceilinglight', anchor: 'ceiling', fixture: 'chandelier', x: 0, z: -0.5, color: '#ffd878' }],
+      65: [{ kind: 'ceilinglight', anchor: 'ceiling', fixture: 'panel', x: 0, z: -0.8, color: '#756a78' }],
+      66: [{ kind: 'ceilinglight', anchor: 'ceiling', fixture: 'chandelier', x: 0, z: -0.7, color: '#fff1a8' }],
+      67: [{ kind: 'ceilinglight', anchor: 'ceiling', fixture: 'stage', x: 0, z: -0.6, color: '#ffd84a' }],
+      68: [{ kind: 'ceilinglight', anchor: 'ceiling', fixture: 'panel', x: 0, z: -0.5, color: '#fff1a8' }],
+      69: [{ kind: 'ceilinglight', anchor: 'ceiling', fixture: 'stage', x: 0, z: -0.6, color: '#fff1a8' }]
     };
     return fixtures[zoneId] || [];
   },
@@ -7403,17 +7683,109 @@ const OS = {
         { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: 1.45, z: -1.85, color: '#f7f7f7' }
       ],
       50: [],
-      51: []
+      51: [],
+      64: [
+        { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -1.25, z: -2.3, color: '#d9d0a2' },
+        { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 1.15, z: -2.4, color: '#e53935' }
+      ],
+      65: [
+        { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -1.1, z: -2.25, color: '#d9d0a2' },
+        { name: 'Ghost Echo', type: 'ghost', avatar: 'horrorghost', x: 0.55, z: -2.45, color: '#7df0ff' },
+        { name: 'Mildenhall Signal', type: 'abstract', avatar: 'horrormonster', x: 2.15, z: -1.65, color: '#f2f2f2', sizeScale: 1.12 }
+      ],
+      66: [
+        { name: 'Princess Loolilalu', type: 'npc', avatar: 'loolilalu', x: -1.2, z: -2.45, color: '#ff9ad5' },
+        { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: 1.25, z: -2.25, color: '#d64545' }
+      ],
+      67: [
+        { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -1.15, z: -2.35, color: '#e53935' },
+        { name: 'Caine', type: 'caine', avatar: 'caine', x: 1.2, z: -2.45, color: '#ffd84a' }
+      ],
+      68: [
+        { name: 'Jax', type: 'jax', avatar: 'jax', x: -1.1, z: -2.25, color: '#8a4fd6' },
+        { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 1.15, z: -2.4, color: '#e53935' }
+      ],
+      69: [
+        { name: 'Caine', type: 'caine', avatar: 'caine', x: -1.1, z: -2.35, color: '#ffd84a' },
+        { name: 'Jax', type: 'jax', avatar: 'jax', x: 1.2, z: -2.25, color: '#8a4fd6' }
+      ]
     };
     const sprites = byZone[zoneId] || shared.slice(0, 4);
     this.circusZoneSpritesCache.set(zoneId, sprites);
     return sprites;
   },
 
+  getCircusTimelineContext() {
+    const progress = (typeof EpisodeManager !== 'undefined') ? EpisodeManager.getProgress() : [];
+    const selected = Number(typeof EpisodeManager !== 'undefined' ? EpisodeManager.currentEpisode : NaN);
+    const episode = selected >= 1 && selected <= 9
+      ? selected
+      : ([1, 2, 3, 4, 5, 6, 7, 8, 9].find(number => !progress.includes(number)) || 9);
+    const subProgress = (typeof EpisodeManager !== 'undefined' && typeof EpisodeManager.getSubepisodeProgress === 'function')
+      ? EpisodeManager.getSubepisodeProgress(1)
+      : [];
+    const cycleIndex = Math.floor(performance.now() / 75000) % 4;
+    return {
+      progress,
+      episode,
+      knowsPomni: progress.includes(1) || subProgress.length > 0 || episode > 1,
+      afterFinal: progress.includes(9) && episode === 9,
+      phase: ['briefing', 'adventure', 'recovery', 'quiet'][cycleIndex],
+      cycleIndex
+    };
+  },
+
+  getCircusScheduledNpcPlacements(state) {
+    const timeline = this.getCircusTimelineContext();
+    const adventure = this.getCircusAdventurePortalConfig();
+    const colors = {
+      pomni: '#e53935', ragatha: '#d64545', jax: '#8a4fd6', kinger: '#d9d0a2',
+      gangle: '#f7f7f7', zooble: '#ff4fb8', caine: '#ffd84a'
+    };
+    const names = { pomni: 'Pomni', ragatha: 'Ragatha', jax: 'Jax', kinger: 'Kinger', gangle: 'Gangle', zooble: 'Zooble', caine: 'Caine' };
+    const make = (zone, avatar, x, z, routine = 'idle') => ({ zone, name: names[avatar], type: avatar, avatar, x, z, color: colors[avatar], routine, scheduled: true });
+    const groups = {
+      briefing: [
+        make(2, 'caine', 0, -2.75, 'hover'), make(2, 'ragatha', -1.6, -2.2),
+        make(2, 'jax', 1.65, -2.1, 'pace'), make(2, 'gangle', -0.65, -1.6),
+        make(2, 'zooble', 0.75, -1.65), make(2, 'kinger', 2.45, -1.35)
+      ],
+      adventure: [
+        make(adventure.target, 'caine', 0, -2.8, 'hover'), make(adventure.target, 'pomni', -1.55, -2.15, 'patrol'),
+        make(adventure.target, 'ragatha', 1.5, -2.25, 'patrol'), make(adventure.target, 'jax', 2.4, -1.45, 'pace')
+      ],
+      recovery: [
+        make(28, 'pomni', -1.4, -2.3), make(28, 'ragatha', 1.35, -2.35),
+        make(21, 'gangle', -1.2, -2.2), make(21, 'zooble', 1.2, -2.25),
+        make(43, 'kinger', 0, -2.5), make(3, 'jax', 0.8, -2.3, 'pace'), make(16, 'caine', 0, -2.65, 'hover')
+      ],
+      quiet: [
+        make(45, 'pomni', 0, -2.2), make(46, 'ragatha', 0, -2.2), make(44, 'jax', 0, -2.2),
+        make(47, 'gangle', 0, -2.2), make(48, 'zooble', 0, -2.2), make(49, 'kinger', 0, -2.2),
+        make(16, 'caine', 0, -2.65, 'hover')
+      ]
+    };
+    return (groups[timeline.phase] || []).filter(sprite => {
+      if (sprite.avatar === 'pomni' && !timeline.knowsPomni) return false;
+      if (sprite.avatar === 'jax' && timeline.afterFinal) return false;
+      return true;
+    });
+  },
+
   getCircusActiveZoneSprites(zoneId, state) {
-    const sprites = this.getCircusZoneSprites(zoneId).map((sprite, index) => (
+    const timeline = this.getCircusTimelineContext();
+    const staticSprites = this.getCircusZoneSprites(zoneId).filter(sprite => {
+      const avatar = sprite.avatar || sprite.type;
+      if (avatar === 'pomni' && !timeline.knowsPomni) return false;
+      if (avatar === 'jax' && timeline.afterFinal && !/memory|archive/i.test(sprite.name || '')) return false;
+      return true;
+    });
+    const scheduled = this.getCircusScheduledNpcPlacements(state)
+      .filter(sprite => sprite.zone === zoneId && !staticSprites.some(existing => (existing.avatar || existing.type) === sprite.avatar));
+    const sprites = [...staticSprites, ...scheduled].map((sprite, index) => (
       this.applyCircusSpriteRoutine(sprite, index, zoneId, state)
     ));
+    state.routinePhase = timeline.phase;
     const follower = state?.follower;
     const jaxArchived = follower?.avatar === 'jax' && (typeof EpisodeManager !== 'undefined') && EpisodeManager.getProgress().includes(9);
     if (jaxArchived) {
