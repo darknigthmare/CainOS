@@ -338,6 +338,10 @@ const OS = {
       'setting-crt-readable': 'Reduire les scanlines et augmenter legerement la lisibilite CRT.',
       'setting-audio-ambience': 'Regler le volume des ambiances originales CainOS.',
       'setting-audio-glitch': 'Regler le niveau des effets glitch originaux.',
+      'setting-fps-fov': 'Regler le champ de vision horizontal du mode FPS.',
+      'setting-fps-sensitivity': 'Regler la vitesse de rotation lorsque la souris est verrouillee.',
+      'setting-fps-minimap': 'Afficher ou masquer la mini-carte exploratoire du mode FPS.',
+      'setting-fps-hud': 'Afficher ou masquer les objectifs du mode FPS.',
       'btn-save-export': 'Exporter la progression locale CainOS/TADC dans le buffer.',
       'btn-save-import': 'Importer la progression depuis le JSON colle dans le buffer.',
       'btn-save-reset-skins': 'Effacer seulement les skins fan achetes.',
@@ -1706,6 +1710,11 @@ const OS = {
       };
     });
 
+    const adventurePortal = this.getCircusAdventurePortalConfig();
+    if (portals[adventurePortal.target]) portals[adventurePortal.target].unlocked = true;
+    const persistentWorld = this.getCircusPersistentWorldState();
+    const introSeen = !!this.getCainOSStorage('fps_intro_seen', false);
+
     this.circusDoom = {
       canvas,
       ctx: canvas.getContext('2d'),
@@ -1724,13 +1733,33 @@ const OS = {
       interactionOrigin: null,
       interactionChannel: 'system',
       interactionSpeaker: '',
-      dialogueVisits: new Map(),
-      discoveries: new Set(),
-      activeProps: new Map(),
+      dialogueVisits: new Map(persistentWorld.dialogueVisits),
+      discoveries: new Set(persistentWorld.discoveries),
+      activeProps: new Map(persistentWorld.activeProps),
+      collectedProps: new Set(persistentWorld.collected),
+      givenProps: new Set(persistentWorld.given),
       exploredCells: new Map(),
       noticedCharacters: new Set(),
       talkedCharacters: new Set(),
-      completedZoneObjectives: new Set(),
+      completedZoneObjectives: new Set(persistentWorld.completedObjectives),
+      zoneChallenges: persistentWorld.challenges,
+      heldItem: persistentWorld.heldItem,
+      follower: persistentWorld.follower,
+      stability: persistentWorld.stability,
+      interactionVerb: persistentWorld.verb,
+      portalReady: introSeen,
+      adventurePortal,
+      cinematic: null,
+      threatPositions: new Map(),
+      threatCooldownUntil: 0,
+      threatAlert: '',
+      vehicleModeUntil: 0,
+      diveModeUntil: 0,
+      gamepadActionDown: false,
+      fov: Number(this.getCainOSSetting('fps-fov', 64)) * Math.PI / 180,
+      mouseSensitivity: Number(this.getCainOSSetting('fps-sensitivity', 45)) / 10000,
+      minimapVisible: this.getCainOSSetting('fps-minimap', true) !== false,
+      hudVisible: this.getCainOSSetting('fps-hud', true) !== false,
       lastZoneEventId: null,
       nextFootstepAt: 0,
       footstepSide: -1,
@@ -1741,16 +1770,23 @@ const OS = {
     };
     const roomAudit = this.auditCircusRoomNetwork(portals, scenes);
     const objectiveAudit = this.auditCircusZoneObjectives();
+    const gameplayAudit = this.auditCircusGameplaySystems(portals, scenes);
     document.body.dataset.fpsRoomAudit = roomAudit.ok ? 'ok' : roomAudit.errors.join(' | ');
     document.body.dataset.fpsCurrentRooms = String(roomAudit.currentRooms);
     document.body.dataset.fpsArchiveRooms = String(roomAudit.archiveRooms);
     document.body.dataset.fpsObjectiveAudit = objectiveAudit.ok ? 'ok' : objectiveAudit.errors.join(' | ');
     document.body.dataset.fpsObjectiveMissions = String(objectiveAudit.missionCount);
+    document.body.dataset.fpsGameplayAudit = gameplayAudit.ok ? 'ok' : gameplayAudit.errors.join(' | ');
+    document.body.dataset.fpsAdventureWorlds = String(gameplayAudit.worldCount);
+    document.body.dataset.fpsIntroSteps = String(gameplayAudit.introSteps);
     if (!roomAudit.ok) console.warn('FPS room network audit:', roomAudit.errors);
     if (!objectiveAudit.ok) console.warn('FPS objective audit:', objectiveAudit.errors);
+    if (!gameplayAudit.ok) console.warn('FPS gameplay audit:', gameplayAudit.errors);
     this.prepareCircusSimulationRoom();
     this.markCainOSZoneVisited(2);
     this.loadCircusAvatarSheets();
+    this.setupCircusFpsControls();
+    this.startCircusArrivalCinematic();
     if (typeof SoundManager.startContextPulse === 'function') {
       SoundManager.startContextPulse('circus');
     }
@@ -1762,9 +1798,22 @@ const OS = {
         : (rawKey === 'digit2' || codeKey === 'digit2' || codeKey === 'numpad2') ? '2'
           : (rawKey === 'digit3' || codeKey === 'digit3' || codeKey === 'numpad3') ? '3'
             : rawKey;
-      if (['arrowup','arrowdown','arrowleft','arrowright','enter',' ','e','shift','w','a','s','d','z','q','1','2','3'].includes(key)) {
+      if (['arrowup','arrowdown','arrowleft','arrowright','enter',' ','e','shift','w','a','s','d','z','q','f','h','m','1','2','3'].includes(key)) {
         e.preventDefault();
         if (['1','2','3'].includes(key) && this.circusDoom?.interactionChoices) this.chooseCircusDialogueOption(Number(key) - 1);
+        else if (key === 'm' && this.circusDoom) {
+          this.circusDoom.minimapVisible = !this.circusDoom.minimapVisible;
+          this.setCainOSSetting('fps-minimap', this.circusDoom.minimapVisible);
+        }
+        else if (key === 'h' && this.circusDoom) {
+          this.circusDoom.hudVisible = !this.circusDoom.hudVisible;
+          this.setCainOSSetting('fps-hud', this.circusDoom.hudVisible);
+        }
+        else if (key === 'f' && this.circusDoom) {
+          this.circusDoom.lightUntil = performance.now() + 12000;
+          this.circusDoom.interactionMessage = 'LAMPE WACKY WATCH ACTIVE: protection lumineuse temporaire.';
+          this.circusDoom.interactionUntil = performance.now() + 2600;
+        }
         else if (key === 'enter' || key === ' ' || key === 'e') this.handleCircusSimulationInput('enter');
         else this.circusDoom.keys.add(key);
       }
@@ -1777,6 +1826,10 @@ const OS = {
     this.circusDoomClick = e => {
       const state = this.circusDoom;
       if (!state) return;
+      if (state.cinematic) {
+        this.advanceCircusArrivalCinematic();
+        return;
+      }
       const rect = canvas.getBoundingClientRect();
       const x = (e.clientX - rect.left) * (canvas.width / rect.width);
       const y = (e.clientY - rect.top) * (canvas.height / rect.height);
@@ -1785,14 +1838,15 @@ const OS = {
         if (hit.kind === 'dialogChoice') {
           this.chooseCircusDialogueOption(hit.choiceIndex);
         } else if (hit.kind === 'character') {
-          this.talkToCircusCharacter(hit.sprite);
+          this.performCircusCharacterAction(hit.sprite);
         } else if (hit.kind === 'prop') {
-          if (Number.isFinite(hit.prop?.target)) this.enterCircusPropPortal(hit.prop);
-          else this.inspectCircusProp(hit.prop);
+          this.performCircusPropAction(hit.prop);
         } else {
           state.selectedExitIndex = hit.index;
           this.enterCircusSimulationExit(hit.target);
         }
+      } else if (document.pointerLockElement !== canvas) {
+        canvas.requestPointerLock?.();
       }
     };
     canvas.addEventListener('click', this.circusDoomClick);
@@ -1809,14 +1863,26 @@ const OS = {
   },
 
   stopCircusDoomView() {
+    this.saveCircusPersistentWorldState();
     if (this.circusDoom?.raf) cancelAnimationFrame(this.circusDoom.raf);
     if (this.circusDoomKeyDown) window.removeEventListener('keydown', this.circusDoomKeyDown);
     if (this.circusDoomKeyUp) window.removeEventListener('keyup', this.circusDoomKeyUp);
     if (this.circusDoomClick && this.circusDoom?.canvas) this.circusDoom.canvas.removeEventListener('click', this.circusDoomClick);
+    if (this.circusVerbClick) document.getElementById('circus-fps-toolbar')?.removeEventListener('click', this.circusVerbClick);
+    if (this.circusWorldChange) document.getElementById('circus-world-select')?.removeEventListener('change', this.circusWorldChange);
+    if (this.circusMouseMove) document.removeEventListener('mousemove', this.circusMouseMove);
+    if (this.circusPointerChange) document.removeEventListener('pointerlockchange', this.circusPointerChange);
+    if (this.circusCanvasDoubleClick && this.circusDoom?.canvas) this.circusDoom.canvas.removeEventListener('dblclick', this.circusCanvasDoubleClick);
+    if (document.pointerLockElement === this.circusDoom?.canvas) document.exitPointerLock?.();
     this.circusDoom = null;
     this.circusDoomKeyDown = null;
     this.circusDoomKeyUp = null;
     this.circusDoomClick = null;
+    this.circusVerbClick = null;
+    this.circusWorldChange = null;
+    this.circusMouseMove = null;
+    this.circusPointerChange = null;
+    this.circusCanvasDoubleClick = null;
     if (typeof SoundManager !== 'undefined' && typeof SoundManager.stopContextPulse === 'function') {
       SoundManager.stopContextPulse();
     }
@@ -1916,6 +1982,268 @@ const OS = {
     return null;
   },
 
+  getCircusAdventureWorlds() {
+    return [
+      { episode: 1, target: 31, label: 'EP1 - AVENTURE INTERNE / GLOINKS' },
+      { episode: 2, target: 6, label: 'EP2 - CANDY CANYON KINGDOM' },
+      { episode: 3, target: 8, label: 'EP3 - MILDENHALL MANOR' },
+      { episode: 4, target: 10, label: "EP4 - SPUDSY'S" },
+      { episode: 5, target: 11, label: 'EP5 - SUGGESTION BOX' },
+      { episode: 6, target: 13, label: 'EP6 - THEY ALL GET GUNS' },
+      { episode: 7, target: 14, label: 'EP7 - DIGITAL LAKE' },
+      { episode: 8, target: 16, label: 'EP8 - C&A CORE' },
+      { episode: 9, target: 18, label: 'EP9 - FINAL CIRCUS' }
+    ];
+  },
+
+  getCircusFreeWorlds() {
+    const canonical = this.getCircusAdventureWorlds();
+    const extras = [
+      [3, 'TERRAIN DU CIRQUE'], [4, 'CELLAR / KAUFMO'], [5, 'FAUSSE SORTIE'], [7, 'TEST LEVEL'],
+      [9, 'SOUS-SOL MILDENHALL'], [12, 'SOFTBALL STADIUM'], [17, 'MEMOIRE DE KINGER'], [19, 'ARCHIVES DES MEMBRES'],
+      [20, 'DORTOIRS'], [21, 'CAFE CIRQUE'], [22, 'AQUARIUM'], [23, 'SNOWY SUMMIT'], [24, "POACHER'S PARADISE"],
+      [25, 'ANIME HIGH SCHOOL'], [26, 'WHITE HOUSE'], [27, 'THE VOID'], [28, 'ESPACE COMMUN'], [29, 'GALERIE DES PORTES'],
+      [32, 'CANDY ROYAL PALACE'], [33, 'ROUTE DU TANKER'], [34, 'ENFER MILDENHALL'], [35, 'CUISINE SPUDSY'],
+      [38, 'FAVORITE CHARACTER AWARDS'], [39, 'PHARE DU LAC'], [40, 'TRESOR SUBMERGE'], [41, 'SOUVENIR RUE C&A'],
+      [42, 'DIGITAL CARNIVAL'], [43, 'SALLE A MANGER']
+    ].map(([target, label]) => ({ episode: 0, target, label: `LIBRE - ${label}` }));
+    return [...canonical, ...extras].filter((world, index, list) => list.findIndex(item => item.target === world.target) === index);
+  },
+
+  getCircusAdventurePortalConfig() {
+    const worlds = this.getCircusAdventureWorlds();
+    const progress = (typeof EpisodeManager !== 'undefined') ? EpisodeManager.getProgress() : [];
+    const freeMode = worlds.every(world => progress.includes(world.episode));
+    if (freeMode) {
+      const selected = Number(this.getCainOSStorage('fps_free_world', worlds[0].target));
+      const freeWorlds = this.getCircusFreeWorlds();
+      const world = freeWorlds.find(item => item.target === selected) || worlds[0];
+      return { ...world, freeMode, label: `MODE LIBRE - ${world.label.replace(/^EP\d+ - /, '')}` };
+    }
+    const selectedEpisode = Number(typeof EpisodeManager !== 'undefined' ? EpisodeManager.currentEpisode : NaN);
+    const current = worlds.find(world => world.episode === selectedEpisode && !progress.includes(world.episode))
+      || worlds.find(world => !progress.includes(world.episode))
+      || worlds[0];
+    return { ...current, freeMode, label: current.label };
+  },
+
+  getCircusPersistentWorldState() {
+    const stored = this.getCainOSStorage('fps_world_state', {});
+    return {
+      discoveries: Array.isArray(stored.discoveries) ? stored.discoveries : [],
+      activeProps: Array.isArray(stored.activeProps) ? stored.activeProps : [],
+      collected: Array.isArray(stored.collected) ? stored.collected : [],
+      given: Array.isArray(stored.given) ? stored.given : [],
+      completedObjectives: Array.isArray(stored.completedObjectives) ? stored.completedObjectives : [],
+      dialogueVisits: Array.isArray(stored.dialogueVisits) ? stored.dialogueVisits : [],
+      challenges: stored.challenges && typeof stored.challenges === 'object' ? stored.challenges : {},
+      heldItem: stored.heldItem || null,
+      follower: stored.follower || null,
+      stability: Number.isFinite(stored.stability) ? stored.stability : 100,
+      verb: ['use', 'look', 'take', 'give'].includes(stored.verb) ? stored.verb : 'use'
+    };
+  },
+
+  saveCircusPersistentWorldState() {
+    const state = this.circusDoom;
+    if (!state) return;
+    this.setCainOSStorage('fps_world_state', {
+      discoveries: [...state.discoveries],
+      activeProps: [...state.activeProps.entries()],
+      collected: [...state.collectedProps],
+      given: [...state.givenProps],
+      completedObjectives: [...state.completedZoneObjectives],
+      dialogueVisits: [...state.dialogueVisits.entries()],
+      challenges: state.zoneChallenges || {},
+      heldItem: state.heldItem || null,
+      follower: state.follower || null,
+      stability: Math.max(0, Math.min(100, state.stability || 0)),
+      verb: state.interactionVerb || 'use'
+    });
+  },
+
+  getCircusIntroSteps() {
+    const progress = (typeof EpisodeManager !== 'undefined') ? EpisodeManager.getProgress() : [];
+    const knowsPomni = progress.includes(1);
+    const afterFinal = progress.includes(9);
+    const steps = [
+      { speaker: 'CAINOS', avatar: 'caine', line: 'PROJECTION SUJET #251 TERMINEE. Le signal est injecte comme visiteur CainOS et ne remplace aucun membre du transcript.' },
+      { speaker: 'Caine', avatar: 'caine', line: 'Un avatar non repertorie sur ma piste! Magnifique! Je vais t appeler Visiteur 251 jusqu a ce que cette interface trouve mieux.' },
+      { speaker: 'Ragatha', avatar: 'ragatha', line: 'Tu n apparais pas dans nos souvenirs enregistres. Reste avec le groupe pendant que la simulation se stabilise.' }
+    ];
+    steps.push(knowsPomni
+      ? { speaker: 'Pomni', avatar: 'pomni', line: 'Ne prends pas les portes pour des sorties. Ici, elles menent surtout aux aventures de Caine.' }
+      : { speaker: 'CAINOS', avatar: 'caine', line: 'PROFIL DU PROCHAIN SUJET MASQUE: son identite et son nom ne sont pas encore connus a ce point de la chronologie.' });
+    if (!afterFinal) {
+      steps.push({ speaker: 'Jax', avatar: 'jax', line: 'Super. Un observateur avec des boutons. Essaie au moins de ne pas casser le decor avant moi.' });
+    } else {
+      steps.push({ speaker: 'Kinger', avatar: 'kinger', line: 'Le Cirque se souvient de Jax, mais il ne faut pas confondre une archive avec une presence.' });
+    }
+    steps.push(
+      { speaker: 'Gangle', avatar: 'gangle', line: 'Si tu veux aider, observe ce qui change et rapporte les objets aux bonnes personnes.' },
+      { speaker: 'Zooble', avatar: 'zooble', line: 'Tu es un visiteur, pas un nouveau jouet de Caine. Garde cette difference en tete.' },
+      { speaker: 'Caine', avatar: 'caine', line: afterFinal ? 'Les mondes restent ouverts! Choisis une destination dans le selecteur et mon portail fera le reste.' : 'L aventure correspondant a la progression est prete. Regarde la piste: je fais apparaitre le portail maintenant!' }
+    );
+    return steps;
+  },
+
+  setupCircusFpsControls() {
+    const state = this.circusDoom;
+    const canvas = state?.canvas;
+    const toolbar = document.getElementById('circus-fps-toolbar');
+    const selector = document.getElementById('circus-world-selector');
+    const select = document.getElementById('circus-world-select');
+    if (!state || !canvas || !toolbar) return;
+    this.updateCircusFpsToolbar();
+    this.circusVerbClick = event => {
+      const button = event.target.closest('[data-fps-verb]');
+      if (!button) return;
+      this.setCircusInteractionVerb(button.getAttribute('data-fps-verb'));
+    };
+    toolbar.addEventListener('click', this.circusVerbClick);
+    const config = this.getCircusAdventurePortalConfig();
+    if (selector && select) {
+      selector.hidden = !config.freeMode;
+      select.innerHTML = this.getCircusFreeWorlds().map(world => (
+        `<option value="${world.target}" ${world.target === config.target ? 'selected' : ''}>${this.escapeHTML(world.label.replace(/^EP\d+ - /, ''))}</option>`
+      )).join('');
+      this.circusWorldChange = () => {
+        const target = Number(select.value);
+        if (!Number.isFinite(target)) return;
+        this.setCainOSStorage('fps_free_world', target);
+        state.adventurePortal = this.getCircusAdventurePortalConfig();
+        if (state.portals[target]) state.portals[target].unlocked = true;
+        this.circusZonePropsCache?.delete(2);
+        state.interactionMessage = `Caine recale le portail vers ${state.adventurePortal.label}.`;
+        state.interactionUntil = performance.now() + 3200;
+        state.interactionChannel = 'system';
+        state.interactionSpeaker = 'CAINE';
+        SoundManager.play(760, 0.1, 'triangle', 0.055);
+      };
+      select.addEventListener('change', this.circusWorldChange);
+    }
+    this.circusMouseMove = event => {
+      if (document.pointerLockElement !== canvas || !this.circusDoom || this.circusDoom.cinematic) return;
+      this.circusDoom.player.a += event.movementX * this.circusDoom.mouseSensitivity;
+    };
+    this.circusPointerChange = () => canvas.classList.toggle('pointer-locked', document.pointerLockElement === canvas);
+    this.circusCanvasDoubleClick = () => canvas.requestPointerLock?.();
+    document.addEventListener('mousemove', this.circusMouseMove);
+    document.addEventListener('pointerlockchange', this.circusPointerChange);
+    canvas.addEventListener('dblclick', this.circusCanvasDoubleClick);
+  },
+
+  updateCircusFpsToolbar() {
+    const state = this.circusDoom;
+    if (!state) return;
+    document.querySelectorAll('[data-fps-verb]').forEach(button => {
+      button.classList.toggle('active', button.getAttribute('data-fps-verb') === state.interactionVerb);
+    });
+    const held = document.getElementById('circus-fps-held');
+    const stability = document.getElementById('circus-fps-stability');
+    if (held) held.innerText = state.heldItem ? `MAIN: ${state.heldItem.name}` : 'MAIN: VIDE';
+    if (stability) {
+      stability.innerText = `STABILITE ${Math.round(state.stability)}%`;
+      stability.style.color = state.stability < 35 ? '#ff5b4d' : state.stability < 65 ? '#ffd84a' : '#9cff6d';
+    }
+  },
+
+  setCircusInteractionVerb(verb) {
+    const state = this.circusDoom;
+    if (!state || !['use', 'look', 'take', 'give'].includes(verb)) return;
+    state.interactionVerb = verb;
+    this.updateCircusFpsToolbar();
+    this.saveCircusPersistentWorldState();
+    SoundManager.playClick();
+  },
+
+  startCircusArrivalCinematic() {
+    const state = this.circusDoom;
+    if (!state || this.getCainOSStorage('fps_intro_seen', false)) return;
+    state.portalReady = false;
+    state.cinematic = { index: 0, steps: this.getCircusIntroSteps(), startedAt: performance.now() };
+    state.interactionMessage = '';
+    state.interactionChoices = null;
+  },
+
+  advanceCircusArrivalCinematic() {
+    const state = this.circusDoom;
+    if (!state?.cinematic) return false;
+    state.cinematic.index++;
+    state.cinematic.startedAt = performance.now();
+    if (state.cinematic.index >= state.cinematic.steps.length) {
+      state.cinematic = null;
+      state.portalReady = true;
+      this.setCainOSStorage('fps_intro_seen', true);
+      this.circusZonePropsCache?.delete(2);
+      state.interactionMessage = `PORTAIL DE CAINE OUVERT: ${state.adventurePortal.label}`;
+      state.interactionUntil = performance.now() + 5200;
+      state.interactionChannel = 'system';
+      state.interactionSpeaker = 'CAINE';
+      this.unlockCainOSAchievement('fps_arrival', 'Visiteur 251 integre au Cirque');
+      SoundManager.playWin();
+    } else {
+      SoundManager.play(540 + state.cinematic.index * 35, 0.07, 'triangle', 0.04);
+    }
+    return true;
+  },
+
+  updateCircusCinematicCamera(dt) {
+    const state = this.circusDoom;
+    const step = state?.cinematic?.steps?.[state.cinematic.index];
+    if (!step) return;
+    const sprite = this.getCircusZoneSprites(2).find(item => (item.avatar || item.type) === step.avatar);
+    if (!sprite) return;
+    const point = this.resolveCircusWorldPoint(sprite, state);
+    const target = Math.atan2(point.z - state.player.z, point.x - state.player.x);
+    const delta = Math.atan2(Math.sin(target - state.player.a), Math.cos(target - state.player.a));
+    state.player.a += delta * Math.min(1, dt * 2.4);
+  },
+
+  drawCircusCinematicOverlay(ctx, w, h, state) {
+    const cinematic = state?.cinematic;
+    const step = cinematic?.steps?.[cinematic.index];
+    if (!step) return;
+    const fade = Math.min(1, (performance.now() - cinematic.startedAt) / 260);
+    ctx.save();
+    ctx.globalAlpha = fade;
+    ctx.fillStyle = 'rgba(0,0,0,0.9)';
+    ctx.fillRect(0, 0, w, 30);
+    ctx.fillRect(0, h - 96, w, 96);
+    ctx.fillStyle = '#fff1a8';
+    ctx.font = 'bold 10px Courier New';
+    ctx.textAlign = 'left';
+    ctx.fillText(`ARRIVEE DU VISITEUR // ${step.speaker}`, 18, h - 72);
+    ctx.strokeStyle = step.speaker === 'CAINOS' ? '#7df0ff' : '#ffd84a';
+    ctx.strokeRect(14, h - 86, w - 28, 70);
+    ctx.font = 'bold 11px Courier New';
+    const words = step.line.split(' ');
+    let line = '';
+    let y = h - 53;
+    words.forEach(word => {
+      const next = line ? `${line} ${word}` : word;
+      if (ctx.measureText(next).width > w - 52) {
+        ctx.fillText(line, 26, y);
+        line = word;
+        y += 15;
+      } else line = next;
+    });
+    if (line) ctx.fillText(line, 26, y);
+    ctx.fillStyle = '#7df0ff';
+    ctx.font = '8px Courier New';
+    ctx.textAlign = 'right';
+    ctx.fillText(`ENTREE / CLIC POUR CONTINUER  ${cinematic.index + 1}/${cinematic.steps.length}`, w - 20, h - 22);
+    ctx.restore();
+  },
+
+  getCircusCainePortalProp() {
+    const state = this.circusDoom;
+    if (!state?.portalReady) return null;
+    const config = this.getCircusAdventurePortalConfig();
+    state.adventurePortal = config;
+    return { kind: 'caineportal', x: 0, z: -4.65, color: '#7df0ff', accent: '#ffd84a', target: config.target, label: config.label };
+  },
+
   getCircusBedroomDefinitions() {
     return {
       44: { resident: 'Jax', avatar: 'jax', color: '#8a4fd6', parent: 20, canon: 'partial', accent: '#ffd84a' },
@@ -1964,6 +2292,29 @@ const OS = {
       errors.push('COULOIR CENTRAL: annexes non raccordees');
     }
     return { ok: errors.length === 0, errors, currentRooms, archiveRooms };
+  },
+
+  auditCircusGameplaySystems(portals, scenes) {
+    const errors = [];
+    const worlds = this.getCircusAdventureWorlds();
+    worlds.forEach(world => {
+      if (!portals[world.target]) errors.push(`MONDE EP${world.episode}: portail ${world.target} absent`);
+      if (!scenes[world.target]) errors.push(`MONDE EP${world.episode}: scene ${world.target} absente`);
+    });
+    const virtualActions = new Set(['drive', 'dive', 'survive', 'give']);
+    for (let zoneId = 2; zoneId <= 63; zoneId++) {
+      const config = this.getCircusZoneGameplayConfig(zoneId);
+      if (!config) continue;
+      const props = this.getCircusZoneProps(zoneId);
+      config.steps.forEach(step => {
+        if (!virtualActions.has(step.action) && !props.some(prop => prop.kind === step.kind)) {
+          errors.push(`GAMEPLAY ${zoneId}: ${step.action}/${step.kind} sans objet`);
+        }
+      });
+    }
+    const introSteps = this.getCircusIntroSteps().length;
+    if (introSteps < 6) errors.push('CINEMATIQUE: integration trop courte');
+    return { ok: errors.length === 0, errors, worldCount: worlds.length, introSteps };
   },
 
   prepareCircusSimulationRoom() {
@@ -2106,6 +2457,10 @@ const OS = {
   handleCircusSimulationInput(key) {
     const state = this.circusDoom;
     if (!state) return;
+    if (state.cinematic) {
+      this.advanceCircusArrivalCinematic();
+      return;
+    }
     const exits = state.scenes[state.currentZoneId]?.exits || [];
     if (!exits.length) return;
     if (key === 'enter' || key === ' ') {
@@ -2115,13 +2470,12 @@ const OS = {
       }
       const character = this.getNearestCircusCharacter();
       if (character && character.dist < 1.9 && Math.abs(character.angle) < 0.42) {
-        this.talkToCircusCharacter(character);
+        this.performCircusCharacterAction(character);
         return;
       }
       const prop = this.getNearestCircusProp();
       if (prop && prop.dist < 2.15 && Math.abs(prop.angle) < 0.55) {
-        if (Number.isFinite(prop.target)) this.enterCircusPropPortal(prop);
-        else this.inspectCircusProp(prop);
+        this.performCircusPropAction(prop);
         return;
       }
       const door = this.getNearestUsableCircusDoor();
@@ -2163,7 +2517,9 @@ const OS = {
     if (!state || state.interactionChoices) return null;
     const character = this.getNearestCircusCharacter();
     if (character && character.dist < 2.2 && Math.abs(character.angle) < 0.48) {
-      return `ENTREE / CLIC: parler a ${character.name}  |  1-3: choix rapides apres contact`;
+      return state.interactionVerb === 'give'
+        ? `ENTREE / CLIC: donner ${state.heldItem?.name || 'un objet'} a ${character.name}`
+        : `ENTREE / CLIC: parler a ${character.name}  |  1-3: choix rapides apres contact`;
     }
     const prop = this.getNearestCircusProp();
     if (prop && prop.dist < 2.3 && Math.abs(prop.angle) < 0.58) {
@@ -2173,7 +2529,8 @@ const OS = {
           ? `ENTREE / CLIC: entrer dans ${target.short}`
           : `PORTE BARREE: ${target?.short || 'ARCHIVE'}`;
       }
-      return `ENTREE / CLIC: scanner ${this.getCircusPropName(prop, state.currentZoneId)}`;
+      const verbLabel = { use: 'utiliser', look: 'observer', take: 'prendre', give: 'donner' }[state.interactionVerb] || 'utiliser';
+      return `ENTREE / CLIC: ${verbLabel} ${this.getCircusPropName(prop, state.currentZoneId)}`;
     }
     const door = this.getNearestUsableCircusDoor();
     if (door && door.dist < 2.0 && Math.abs(door.angle) < 0.82) {
@@ -2188,6 +2545,7 @@ const OS = {
     if (!state) return null;
     let best = null;
     this.getCircusZoneProps(state.currentZoneId).forEach((prop, index) => {
+      if (state.collectedProps?.has(`${state.currentZoneId}:${index}`)) return;
       if (!this.isCircusWorldPointVisible(prop, state, prop.anchor?.startsWith('wall') ? 0.72 : 0.42)) return;
       const pos = this.resolveCircusWorldPoint(prop, state);
       const dx = pos.x - state.player.x;
@@ -2329,7 +2687,117 @@ const OS = {
     return true;
   },
 
-  inspectCircusProp(prop) {
+  getCircusPropPersistentId(prop, zoneId = null) {
+    const state = this.circusDoom;
+    const zone = Number.isFinite(zoneId) ? zoneId : state?.currentZoneId;
+    const index = prop?.interactionId ?? prop?.index;
+    return Number.isFinite(zone) && Number.isFinite(index) ? `${zone}:${index}` : null;
+  },
+
+  isCircusPropPortable(prop) {
+    return ['card', 'memory', 'candle', 'menu'].includes(prop?.kind) || prop?.portable === true;
+  },
+
+  performCircusPropAction(prop) {
+    const state = this.circusDoom;
+    if (!state || !prop) return;
+    const verb = state.interactionVerb || 'use';
+    if (verb === 'take') {
+      this.takeCircusProp(prop);
+      return;
+    }
+    if (verb === 'give') {
+      state.interactionMessage = 'DONNER: visez un personnage, pas un objet.';
+      state.interactionUntil = performance.now() + 2600;
+      state.interactionChannel = 'system';
+      state.interactionSpeaker = 'CAINOS';
+      SoundManager.playError();
+      return;
+    }
+    if (Number.isFinite(prop.target) && verb === 'use') {
+      this.enterCircusPropPortal(prop);
+      return;
+    }
+    this.inspectCircusProp(prop, { activate: verb !== 'look' });
+  },
+
+  performCircusCharacterAction(sprite) {
+    const state = this.circusDoom;
+    if (!state || !sprite) return;
+    if (state.interactionVerb === 'give') {
+      this.giveCircusHeldItem(sprite);
+      return;
+    }
+    this.talkToCircusCharacter(sprite);
+  },
+
+  takeCircusProp(prop) {
+    const state = this.circusDoom;
+    if (!state || !prop) return;
+    if (!this.isCircusPropPortable(prop)) {
+      state.interactionMessage = `${this.getCircusPropName(prop, state.currentZoneId).toUpperCase()}: objet fixe. Utilisez OBSERVER ou UTILISER.`;
+      state.interactionUntil = performance.now() + 3000;
+      state.interactionChannel = 'system';
+      state.interactionSpeaker = 'CAINOS';
+      SoundManager.playError();
+      return;
+    }
+    const id = this.getCircusPropPersistentId(prop);
+    if (!id) return;
+    if (state.heldItem) {
+      state.interactionMessage = `MAIN OCCUPEE: donnez ${state.heldItem.name} avant de prendre autre chose.`;
+      state.interactionUntil = performance.now() + 3200;
+      state.interactionChannel = 'system';
+      state.interactionSpeaker = 'CAINOS';
+      SoundManager.playError();
+      return;
+    }
+    const name = prop.label || this.getCircusPropName(prop, state.currentZoneId);
+    state.discoveries.add(id);
+    state.collectedProps.add(id);
+    state.heldItem = { id, name, kind: prop.kind, fromZone: state.currentZoneId, color: prop.color || '#fff1a8' };
+    state.worldColliderZoneId = null;
+    state.worldColliders = null;
+    state.interactionMessage = `OBJET PRIS: ${name}. Selectionnez DONNER puis visez un personnage, ou UTILISER dans la bonne zone.`;
+    state.interactionUntil = performance.now() + 5200;
+    state.interactionChannel = 'scan';
+    state.interactionSpeaker = name;
+    state.interactionOrigin = null;
+    this.advanceCircusZoneChallenge('take', prop.kind);
+    this.updateCircusFpsToolbar();
+    this.saveCircusPersistentWorldState();
+    this.renderCainOSTools();
+    SoundManager.play(720, 0.1, 'triangle', 0.05);
+  },
+
+  giveCircusHeldItem(sprite) {
+    const state = this.circusDoom;
+    if (!state || !sprite) return;
+    if (!state.heldItem) {
+      state.interactionMessage = 'MAIN VIDE: prenez d abord un objet transportable.';
+      state.interactionUntil = performance.now() + 2600;
+      state.interactionChannel = 'system';
+      state.interactionSpeaker = 'CAINOS';
+      SoundManager.playError();
+      return;
+    }
+    const avatar = sprite.avatar || sprite.type;
+    const item = state.heldItem;
+    state.givenProps.add(item.id);
+    state.heldItem = null;
+    state.interactionMessage = `${sprite.name}: Je garde ${item.name}. CainOS enregistrera que tu as choisi de me le confier.`;
+    state.interactionUntil = performance.now() + 5200;
+    state.interactionChannel = 'dialogue';
+    state.interactionSpeaker = sprite.name;
+    state.interactionOrigin = { x: state.player.x, z: state.player.z, range: 1.6 };
+    this.adjustCainOSRelation(avatar, 5);
+    this.advanceCircusZoneChallenge('give', item.kind);
+    this.updateCircusFpsToolbar();
+    this.saveCircusPersistentWorldState();
+    SoundManager.playWin();
+  },
+
+  inspectCircusProp(prop, options = {}) {
     const state = this.circusDoom;
     if (!state || !prop) return;
     const discoveryId = `${state.currentZoneId}:${prop.interactionId ?? prop.index ?? prop.kind}`;
@@ -2341,7 +2809,7 @@ const OS = {
     const activatableKinds = new Set(['console', 'gridnode', 'spotlight', 'candle', 'target', 'scoreboard', 'menu', 'card', 'archive', 'memory', 'ring', 'doorframe']);
     const toggleKinds = new Set(['spotlight', 'candle', 'ring']);
     let actionStatus = '';
-    if (activatableKinds.has(prop.kind)) {
+    if (options.activate !== false && activatableKinds.has(prop.kind)) {
       const nextState = toggleKinds.has(prop.kind) ? !state.activeProps.get(discoveryId) : true;
       state.activeProps.set(discoveryId, nextState);
       actionStatus = nextState ? ' | OBJET ACTIVE' : ' | OBJET DESACTIVE';
@@ -2359,6 +2827,8 @@ const OS = {
     state.interactionOrigin = { x: state.player.x, z: state.player.z, range: 1.35 };
     state.interactionChannel = 'scan';
     state.interactionSpeaker = this.getCircusPropName(prop, state.currentZoneId);
+    this.advanceCircusZoneChallenge(options.activate === false ? 'look' : 'use', prop.kind);
+    this.saveCircusPersistentWorldState();
     if (state.detailEl) state.detailEl.innerText = state.interactionMessage;
     SoundManager.play(390, 0.07, 'square', 0.04);
     setTimeout(() => SoundManager.play(585, 0.06, 'triangle', 0.035), 80);
@@ -2381,6 +2851,7 @@ const OS = {
       '2:ring': "La piste centrale agit comme point d'ancrage: toutes les aventures reviennent vers le chapiteau.",
       '2:spotlight': "Les projecteurs suivent les avatars, pas les corps. CainOS detecte seulement des silhouettes numeriques.",
       '2:pillar': "Pilier de chapiteau: structure stable, couleurs primaires, aucune sortie reelle dans la toile.",
+      '2:caineportal': "Portail d aventure genere par Caine sur la piste. Sa destination suit l episode actif, puis le choix libre apres Remember.",
       '3:tent': "Vue exterieure du chapiteau: le decor boucle vers les aventures de Caine.",
       '3:balloon': "Ballon de terrain: objet de fete banal, mais il sert de repere spatial dans la simulation.",
       '4:crate': "Caisse du cellar: stockage de traces dangereuses. Le systeme evite de nommer Kaufmo trop tot.",
@@ -2485,6 +2956,7 @@ const OS = {
       archive: "cadre archive",
       doorframe: "cadre de porte",
       roomdoor: `porte de ${prop.label || 'resident'}`,
+      caineportal: `portail de Caine vers ${prop.label || 'aventure'}`,
       bed: "lit",
       wallart: "tableau abstrait",
       ceilinglight: "plafonnier"
@@ -2495,6 +2967,7 @@ const OS = {
   getCircusPropProfileKey(prop, zoneId) {
     const zoneMap = {
       '2:ring': 'CAINE',
+      '2:caineportal': 'CAINE',
       '4:eye': 'KAUFMO',
       '5:exitframe': 'POMNI',
       '6:truck': 'GUMMIGOO',
@@ -2533,6 +3006,7 @@ const OS = {
     state.interactionOrigin = { x: state.player.x, z: state.player.z, range: 1.45 };
     state.interactionChannel = 'dialogue';
     state.interactionSpeaker = sprite.name;
+    this.saveCircusPersistentWorldState();
     if (state.detailEl) state.detailEl.innerText = state.interactionMessage;
     SoundManager.play(520, 0.08, 'triangle', 0.05);
   },
@@ -2551,6 +3025,13 @@ const OS = {
     if (choices.avatar) {
       this.adjustCainOSRelation(choices.avatar, 3);
     }
+    if (option.action === 'toggle-follow') {
+      state.follower = state.follower === choices.avatar ? null : { avatar: choices.avatar, name: choices.speaker };
+      state.interactionMessage = state.follower
+        ? `${choices.speaker} va accompagner le Visiteur 251 entre les zones accessibles.`
+        : `${choices.speaker} reste dans cette zone.`;
+    }
+    this.saveCircusPersistentWorldState();
     if (state.detailEl) state.detailEl.innerText = option.response;
     SoundManager.play(620 + index * 80, 0.08, 'triangle', 0.045);
   },
@@ -2727,13 +3208,20 @@ const OS = {
     const specialOptions = special[avatar] || special[sprite.type] || [];
     const dialogueOptions = dialogueByAvatar[avatar] || dialogueByAvatar[sprite.type] || fallbackDialogue;
     const objectiveOption = this.getCircusObjectiveDialogueOption(sprite, zoneId);
+    const followable = new Set(['pomni', 'ragatha', 'jax', 'kinger', 'gangle', 'zooble', 'gummigoo']);
+    const followOption = followable.has(avatar) ? {
+      label: this.circusDoom?.follower?.avatar === avatar ? 'Rester ici' : 'Me suivre',
+      response: `${sprite.name}: D accord. Je garde le Visiteur 251 dans mon champ de vision.`,
+      action: 'toggle-follow'
+    } : null;
     return {
       speaker: sprite.name,
       avatar,
       prompt: introLine,
       options: [
         ...(objectiveOption ? [objectiveOption] : []),
-        ...(specialOptions.slice(0, 2)),
+        ...(followOption ? [followOption] : []),
+        ...(specialOptions.slice(0, 1)),
         ...dialogueOptions
       ].slice(0, 3)
     };
@@ -3159,12 +3647,15 @@ const OS = {
   setCircusSimulationZone(zoneId, playSound = true, entryFromZoneId = null) {
     const state = this.circusDoom;
     if (!state || !state.portals[zoneId]) return;
+    this.saveCircusPersistentWorldState();
     state.currentZoneId = zoneId;
     state.selectedExitIndex = 0;
     state.hotspots = [];
     state.pendingEntryFromZoneId = Number.isFinite(entryFromZoneId) ? entryFromZoneId : null;
     this.prepareCircusSimulationRoom();
     state.pendingEntryFromZoneId = null;
+    state.threatPositions.clear();
+    state.threatAlert = '';
     this.markCainOSZoneVisited(zoneId);
     if (playSound) SoundManager.play(660, 0.08, 'triangle', 0.05);
     if (typeof SoundManager.startContextPulse === 'function') {
@@ -3173,16 +3664,190 @@ const OS = {
     }
   },
 
+  getCircusZoneGameplayConfig(zoneId) {
+    const configs = {
+      5: { title: 'LABYRINTHE DE SORTIE', steps: [{ action: 'use', kind: 'exitframe', count: 3, label: 'Tester trois cadres sans les prendre pour une sortie' }] },
+      6: { title: 'CONVOI CANDY', steps: [{ action: 'look', kind: 'candy', count: 2, label: 'Lire les obstacles' }, { action: 'use', kind: 'truck', count: 1, label: 'Demarrer le tanker' }, { action: 'drive', kind: 'truck', count: 3, label: 'Maintenir le convoi en mouvement' }] },
+      8: { title: 'SURVIE MILDENHALL', steps: [{ action: 'use', kind: 'candle', count: 1, label: 'Stabiliser une bougie' }, { action: 'survive', kind: 'candle', count: 4, label: 'Tenir dans le manoir sans etre touche' }] },
+      10: { title: 'SERVICE SPUDSY', steps: [{ action: 'take', kind: 'menu', count: 1, label: 'Prendre un ticket' }, { action: 'use', kind: 'counter', count: 1, label: 'Preparer le comptoir' }, { action: 'give', kind: 'menu', count: 1, label: 'Remettre la commande a un personnage' }] },
+      11: { title: 'TRI DES IDEES', steps: [{ action: 'take', kind: 'card', count: 1, label: 'Choisir une suggestion' }, { action: 'use', kind: 'doorframe', count: 1, label: 'Affecter la suggestion a une porte' }] },
+      12: { title: 'MATCH DE SOFTBALL', steps: [{ action: 'use', kind: 'scoreboard', count: 1, label: 'Allumer le score' }, { action: 'use', kind: 'base', count: 3, label: 'Valider les trois bases' }] },
+      13: { title: 'EPREUVES ARMEES', steps: [{ action: 'use', kind: 'target', count: 3, label: 'Neutraliser les cibles annoncees' }] },
+      14: { title: 'EXPLORATION DU LAC', steps: [{ action: 'use', kind: 'wave', count: 1, label: 'Entrer dans l eau digitale' }, { action: 'dive', kind: 'wave', count: 3, label: 'Explorer avant la fin de l oxygene' }] },
+      15: { title: 'COUCHE ADMIN', steps: [{ action: 'use', kind: 'console', count: 1, label: 'Ouvrir la console' }, { action: 'use', kind: 'gridnode', count: 1, label: 'Relier le noeud admin' }] },
+      16: { title: 'AUDIT DU COEUR', steps: [{ action: 'look', kind: 'desk', count: 1, label: 'Relever le bureau de Caine' }, { action: 'use', kind: 'console', count: 1, label: 'Interroger le coeur C&A' }] },
+      33: { title: 'ROUTE DU TANKER', steps: [{ action: 'use', kind: 'truck', count: 1, label: 'Relancer le camion' }, { action: 'drive', kind: 'truck', count: 4, label: 'Traverser la route du canyon' }] },
+      34: { title: 'AMES DU MANOIR', steps: [{ action: 'use', kind: 'candle', count: 1, label: 'Fixer une source lumineuse' }, { action: 'survive', kind: 'candle', count: 4, label: 'Resister a la possession' }] },
+      35: { title: 'CUISINE SPUDSY', steps: [{ action: 'take', kind: 'menu', count: 1, label: 'Prendre un ticket cuisine' }, { action: 'use', kind: 'counter', count: 1, label: 'Assembler la commande' }, { action: 'give', kind: 'menu', count: 1, label: 'Servir la commande' }] },
+      40: { title: 'PLONGEE AU TRESOR', steps: [{ action: 'use', kind: 'wave', count: 1, label: 'Descendre sous le lac' }, { action: 'dive', kind: 'wave', count: 3, label: 'Atteindre le coffre' }, { action: 'use', kind: 'archive', count: 1, label: 'Verifier le coffre vide' }] }
+    };
+    if (zoneId >= 44 && zoneId <= 49) {
+      return { title: 'OBJET PERSONNEL', steps: [{ action: 'take', kind: 'card', count: 1, label: 'Prendre un objet avec permission' }, { action: 'give', kind: 'card', count: 1, label: 'Le rendre a son proprietaire' }] };
+    }
+    if (zoneId >= 52 && zoneId <= 63) {
+      return { title: 'TRACE ABANDONNEE', steps: [{ action: 'look', kind: 'bed', count: 1, label: 'Observer sans deplacer' }, { action: 'use', kind: 'archive', count: 1, label: 'Consulter le dossier de porte' }] };
+    }
+    return configs[zoneId] || null;
+  },
+
+  getCircusZoneChallengeStatus(zoneId) {
+    const state = this.circusDoom;
+    const config = this.getCircusZoneGameplayConfig(zoneId);
+    if (!state || !config) return null;
+    const progress = state.zoneChallenges[zoneId] || { step: 0, count: 0 };
+    const complete = progress.step >= config.steps.length;
+    return { config, progress, complete, current: complete ? null : config.steps[progress.step] };
+  },
+
+  advanceCircusZoneChallenge(action, kind) {
+    const state = this.circusDoom;
+    const status = this.getCircusZoneChallengeStatus(state?.currentZoneId);
+    if (!state || !status || status.complete) return false;
+    const expected = status.current;
+    if (expected.action !== action || expected.kind !== kind) return false;
+    const progress = state.zoneChallenges[state.currentZoneId] || { step: 0, count: 0, accumulator: 0 };
+    progress.count++;
+    if (progress.count >= expected.count) {
+      progress.step++;
+      progress.count = 0;
+      progress.accumulator = 0;
+    }
+    state.zoneChallenges[state.currentZoneId] = progress;
+    if (action === 'use' && kind === 'truck') state.vehicleModeUntil = performance.now() + 15000;
+    if (action === 'use' && kind === 'wave') state.diveModeUntil = performance.now() + 12000;
+    if (action === 'use' && kind === 'candle') state.lightUntil = performance.now() + 16000;
+    const nextStatus = this.getCircusZoneChallengeStatus(state.currentZoneId);
+    if (nextStatus?.complete) {
+      this.unlockCainOSAchievement(`fps_gameplay_${state.currentZoneId}`, `Action locale: ${status.config.title}`);
+      state.interactionMessage = `${state.interactionMessage || ''} [ACTION LOCALE TERMINEE]`.trim();
+      SoundManager.playWin();
+    }
+    this.saveCircusPersistentWorldState();
+    return true;
+  },
+
+  updateCircusZoneGameplay(dt, movedDistance) {
+    const state = this.circusDoom;
+    const status = this.getCircusZoneChallengeStatus(state?.currentZoneId);
+    if (!state || !status || status.complete || !status.current) return;
+    const progress = state.zoneChallenges[state.currentZoneId] || { step: 0, count: 0, accumulator: 0 };
+    if (status.current.action === 'drive' && performance.now() < state.vehicleModeUntil) {
+      progress.accumulator = (progress.accumulator || 0) + movedDistance;
+      if (progress.accumulator >= 1.25) {
+        progress.accumulator = 0;
+        state.zoneChallenges[state.currentZoneId] = progress;
+        this.advanceCircusZoneChallenge('drive', 'truck');
+      }
+    } else if (status.current.action === 'dive' && performance.now() < state.diveModeUntil) {
+      progress.accumulator = (progress.accumulator || 0) + movedDistance;
+      if (progress.accumulator >= 1.05) {
+        progress.accumulator = 0;
+        state.zoneChallenges[state.currentZoneId] = progress;
+        this.advanceCircusZoneChallenge('dive', 'wave');
+      }
+    } else if (status.current.action === 'survive' && performance.now() < (state.lightUntil || 0)) {
+      progress.accumulator = (progress.accumulator || 0) + dt;
+      if (progress.accumulator >= 2.2) {
+        progress.accumulator = 0;
+        state.zoneChallenges[state.currentZoneId] = progress;
+        this.advanceCircusZoneChallenge('survive', 'candle');
+      }
+    }
+  },
+
+  updateCircusThreatGameplay(dt) {
+    const state = this.circusDoom;
+    if (!state || state.cinematic) return;
+    const threats = this.getCircusZoneSprites(state.currentZoneId).filter(sprite => {
+      const avatar = sprite.avatar || sprite.type || '';
+      return avatar === 'kaufmo' || avatar === 'horrormonster' || avatar === 'horrorpomnivoid' || avatar === 'horrorpomniskull';
+    });
+    state.threatAlert = '';
+    threats.forEach(sprite => {
+      const avatar = sprite.avatar || sprite.type;
+      const key = `${state.currentZoneId}:${avatar}`;
+      let position = state.threatPositions.get(key);
+      if (!position) {
+        position = this.resolveCircusWorldPoint(sprite, state);
+        position = { x: position.x, z: position.z };
+      }
+      const dx = state.player.x - position.x;
+      const dz = state.player.z - position.z;
+      const distance = Math.max(0.001, Math.hypot(dx, dz));
+      const protectedByLight = performance.now() < (state.lightUntil || 0);
+      const alerted = state.movementNoise > 0.7 || distance < 3.4 || state.currentZoneId === 4;
+      if (alerted && distance > 0.82) {
+        const speed = protectedByLight ? 0.12 : (state.movementNoise > 0.7 ? 0.62 : 0.38);
+        const nx = position.x + (dx / distance) * speed * dt;
+        const nz = position.z + (dz / distance) * speed * dt;
+        const ix = Math.floor(nx);
+        const iz = Math.floor(nz);
+        if (state.room?.grid?.[iz]?.[ix] === 0) position = { x: nx, z: nz };
+      }
+      state.threatPositions.set(key, position);
+      if (distance < 4.2) state.threatAlert = protectedByLight ? 'MENACE CONTENUE PAR LA LUMIERE' : `MENACE A ${distance.toFixed(1)}m - NE COUREZ PAS EN LIGNE DROITE`;
+      if (distance < 0.88 && performance.now() > state.threatCooldownUntil) {
+        state.threatCooldownUntil = performance.now() + 2200;
+        state.stability = Math.max(0, state.stability - 20);
+        state.interactionMessage = `IMPACT ${sprite.name.toUpperCase()}: stabilite reduite. Repliez-vous vers une porte ou une source lumineuse.`;
+        state.interactionUntil = performance.now() + 3600;
+        state.interactionChannel = 'system';
+        state.interactionSpeaker = 'ALERTE';
+        state.player.x -= (dx / distance) * 0.7;
+        state.player.z -= (dz / distance) * 0.7;
+        if (state.stability <= 0) {
+          state.stability = 60;
+          this.prepareCircusSimulationRoom();
+          state.interactionMessage = 'SIGNAL RECONSTRUIT AU POINT D ENTREE. La progression locale est conservee.';
+          state.interactionUntil = performance.now() + 4200;
+        }
+        this.saveCircusPersistentWorldState();
+        SoundManager.playError();
+      }
+    });
+  },
+
+  drawCircusThreatHud(ctx, w, h, state) {
+    if (!state?.threatAlert) return;
+    ctx.save();
+    ctx.fillStyle = 'rgba(45,0,0,0.82)';
+    ctx.strokeStyle = '#ff4d4d';
+    ctx.fillRect(w / 2 - 150, 50, 300, 22);
+    ctx.strokeRect(w / 2 - 150, 50, 300, 22);
+    ctx.fillStyle = '#ffffff';
+    ctx.font = 'bold 8px Courier New';
+    ctx.textAlign = 'center';
+    ctx.fillText(state.threatAlert, w / 2, 64);
+    ctx.restore();
+  },
+
   updateCircusDoom(dt) {
     const state = this.circusDoom;
     if (!state) return;
+    state.averageFrameTime = state.averageFrameTime ? state.averageFrameTime * 0.94 + dt * 0.06 : dt;
+    state.dynamicRayCount = state.averageFrameTime > 0.027 ? 160 : state.averageFrameTime > 0.021 ? 200 : 240;
     const { player, keys } = state;
+    if (state.cinematic) {
+      this.updateCircusCinematicCamera(dt);
+      this.updateCircusFpsToolbar();
+      if (state.detailEl) state.detailEl.innerText = 'CINEMATIQUE D ARRIVEE: ENTREE ou CLIC pour continuer.';
+      return;
+    }
+    const gamepads = navigator.getGamepads?.();
+    const gamepad = gamepads ? Array.from(gamepads).find(pad => pad?.connected) || null : null;
+    const axis = index => Math.abs(gamepad?.axes?.[index] || 0) > 0.16 ? gamepad.axes[index] : 0;
+    const padAction = !!gamepad?.buttons?.[0]?.pressed;
+    if (padAction && !state.gamepadActionDown) this.handleCircusSimulationInput('enter');
+    state.gamepadActionDown = padAction;
     const previousX = player.x;
     const previousZ = player.z;
     const turn = 2.35 * dt;
-    const speed = (keys.has('shift') ? 3.35 : 2.15) * dt;
-    if (keys.has('arrowleft') || keys.has('q')) player.a -= turn;
-    if (keys.has('arrowright') || keys.has('d')) player.a += turn;
+    const sprinting = keys.has('shift') || !!gamepad?.buttons?.[10]?.pressed;
+    const vehicleBoost = performance.now() < (state.vehicleModeUntil || 0) ? 1.65 : 1;
+    const speed = (sprinting ? 3.35 : 2.15) * vehicleBoost * dt;
+    if (keys.has('arrowleft')) player.a -= turn;
+    if (keys.has('arrowright')) player.a += turn;
+    player.a += axis(2) * turn * 1.35;
 
     const tryMove = (nx, nz) => {
       const margin = 0.22;
@@ -3196,17 +3861,23 @@ const OS = {
       if (canStand(player.x, nz)) player.z = nz;
     };
 
-    let move = 0;
+    let move = -axis(1) * speed;
     if (keys.has('arrowup') || keys.has('w') || keys.has('z')) move += speed;
     if (keys.has('arrowdown') || keys.has('s')) move -= speed;
     if (move !== 0) {
       tryMove(player.x + Math.cos(player.a) * move, player.z + Math.sin(player.a) * move);
     }
-    if (keys.has('a')) {
-      tryMove(player.x + Math.cos(player.a - Math.PI / 2) * speed, player.z + Math.sin(player.a - Math.PI / 2) * speed);
+    let strafe = axis(0) * speed;
+    if (keys.has('a') || keys.has('q')) strafe -= speed;
+    if (keys.has('d')) strafe += speed;
+    if (strafe !== 0) {
+      tryMove(player.x + Math.cos(player.a + Math.PI / 2) * strafe, player.z + Math.sin(player.a + Math.PI / 2) * strafe);
     }
 
     const movedDistance = Math.hypot(player.x - previousX, player.z - previousZ);
+    state.movementNoise = movedDistance > 0.001 ? (sprinting ? 1 : 0.45) : 0;
+    this.updateCircusThreatGameplay(dt);
+    this.updateCircusZoneGameplay(dt, movedDistance);
     let explored = state.exploredCells.get(state.currentZoneId);
     if (!explored) {
       explored = new Set();
@@ -3225,7 +3896,7 @@ const OS = {
       if (typeof SoundManager.playFpsFootstep === 'function') {
         SoundManager.playFpsFootstep(motif, state.footstepSide * 0.16);
       }
-      state.nextFootstepAt = performance.now() + (keys.has('shift') ? 255 : 360);
+      state.nextFootstepAt = performance.now() + (sprinting ? 255 : 360);
     }
 
     const nearestDoor = this.getNearestUsableCircusDoor();
@@ -3241,7 +3912,9 @@ const OS = {
         const active = [...state.activeProps.entries()].filter(([id, enabled]) => enabled && id.startsWith(`${state.currentZoneId}:`)).length;
         const objective = this.getCircusZoneObjectiveStatus(state.currentZoneId, state);
         const mission = objective ? ` | MISSION ${objective.done}/${objective.total}` : '';
-        state.zoneEl.innerText = `${portal.short} | TRACES ${found}/${total} | ACTIFS ${active}${mission}`;
+        const challenge = this.getCircusZoneChallengeStatus(state.currentZoneId);
+        const action = challenge ? ` | ACTION ${challenge.complete ? 'OK' : `${challenge.progress.step + 1}/${challenge.config.steps.length}`}` : '';
+        state.zoneEl.innerText = `${portal.short} | TRACES ${found}/${total} | ACTIFS ${active}${mission}${action}`;
       } else {
         state.zoneEl.innerText = 'ZONE: PASSERELLE INTERNE';
       }
@@ -3289,13 +3962,17 @@ const OS = {
         if (focus) {
           state.detailEl.innerText = focus;
         } else {
+          const challenge = this.getCircusZoneChallengeStatus(state.currentZoneId);
           const event = this.getCircusZoneAmbientEvent(state.currentZoneId, state);
-          state.detailEl.innerText = event?.detail || (portal
+          state.detailEl.innerText = challenge && !challenge.complete
+            ? `ACTION ${challenge.config.title}: ${challenge.current.label} (${challenge.progress.count}/${challenge.current.count})`
+            : event?.detail || (portal
             ? (portal.unlocked ? portal.detail : `VERROUILLE: terminez l episode requis avant d afficher ${portal.short}.`)
             : 'Hub interne: traversez les couloirs pour inspecter les zones de simulation.');
         }
       }
     }
+    this.updateCircusFpsToolbar();
   },
 
   drawCircusDoom() {
@@ -3319,10 +3996,12 @@ const OS = {
     this.drawCircusDepthProps(ctx, w, h, state);
     this.drawCircusPhysicalDoors(ctx, w, h, portals, state);
     this.drawCircusImpostorSprites(ctx, w, h, state);
-    this.drawCircusZoneObjectiveHud(ctx, w, h, state);
-    this.drawCircusConversationOverlay(ctx, w, h, state);
+    this.drawCircusThreatHud(ctx, w, h, state);
+    if (!state.cinematic && state.hudVisible) this.drawCircusZoneObjectiveHud(ctx, w, h, state);
+    if (!state.cinematic) this.drawCircusConversationOverlay(ctx, w, h, state);
     this.drawCircusSimulationReticle(ctx, w, h, zone);
-    this.drawCircusRoomMinimap(ctx, w, h, state, zone);
+    if (state.minimapVisible) this.drawCircusRoomMinimap(ctx, w, h, state, zone);
+    this.drawCircusCinematicOverlay(ctx, w, h, state);
   },
 
   canMoveInCircusRoom(x, z) {
@@ -3346,7 +4025,8 @@ const OS = {
     if (state.worldColliderZoneId === state.currentZoneId && state.worldColliders) return state.worldColliders;
     const collidableKinds = new Set(['table', 'counter', 'desk', 'bed', 'pillar', 'crate', 'barrel', 'tent']);
     state.worldColliders = this.getCircusZoneProps(state.currentZoneId)
-      .filter(prop => collidableKinds.has(prop.kind))
+      .map((prop, index) => ({ ...prop, interactionId: index }))
+      .filter(prop => collidableKinds.has(prop.kind) && !state.collectedProps?.has(`${state.currentZoneId}:${prop.interactionId}`))
       .map(prop => {
         const center = this.resolveCircusWorldPoint(prop, state);
         const dimensions = this.getCircusWorldPropDimensions(prop, state);
@@ -3499,8 +4179,8 @@ const OS = {
     }
     ctx.restore();
 
-    const rays = 240;
-    const fov = Math.PI / 3.05;
+    const rays = state.dynamicRayCount || 240;
+    const fov = state.fov || Math.PI / 3.05;
     const strip = Math.ceil(w / rays) + 1;
     for (let i = 0; i < rays; i++) {
       const ratio = i / (rays - 1);
@@ -4027,7 +4707,7 @@ const OS = {
       return;
     }
     const floorH = h - horizon;
-    const fov = Math.PI / 3.05;
+    const fov = state.fov || Math.PI / 3.05;
     const xStep = 5;
     const yStep = 3;
     for (let sy = Math.floor(horizon); sy < h; sy += yStep) {
@@ -4112,7 +4792,7 @@ const OS = {
     const room = state.room;
     const center = room?.center || { x: state.player.x, z: state.player.z };
     const floorH = h - horizon;
-    const fov = Math.PI / 3.05;
+    const fov = state.fov || Math.PI / 3.05;
     const xStep = 5;
     const yStep = 3;
     const checkerScale = 1.35;
@@ -4272,6 +4952,7 @@ const OS = {
     if (state.lastZoneEventId !== event.id) {
       state.lastZoneEventId = event.id;
       if (typeof SoundManager.playFpsEvent === 'function') SoundManager.playFpsEvent(event.id);
+      this.applyCircusAmbientEventEffect(event, state);
     }
     const t = performance.now() / 1000;
     ctx.save();
@@ -4335,6 +5016,30 @@ const OS = {
     ctx.textAlign = 'center';
     ctx.fillText(`EVENT: ${event.label}`, w - 96, 40);
     ctx.restore();
+  },
+
+  applyCircusAmbientEventEffect(event, state) {
+    if (!event || !state || state.cinematic) return;
+    if (event.id === 'tube_shuffle' && state.room?.doors?.length > 1) {
+      state.selectedExitIndex = (state.selectedExitIndex + 1) % state.room.doors.length;
+      state.interactionMessage = 'TUBE SHUFFLE: les destinations restent les memes, mais leurs reperes visuels viennent de se recaler.';
+    } else if (event.id === 'heat_wave' && performance.now() >= (state.diveModeUntil || 0)) {
+      state.stability = Math.max(5, state.stability - 2);
+      state.interactionMessage = 'SUN PURGE: restez sous un parasol ou entrez dans l eau digitale.';
+    } else if (event.id === 'ticket_rush') {
+      state.interactionMessage = 'TICKET RUSH: une nouvelle commande doit etre prise puis remise au bon personnage.';
+    } else if (event.id === 'spotlight_sweep' && state.stability < 100) {
+      state.stability = Math.min(100, state.stability + 1);
+    } else if (event.id === 'color_loss') {
+      state.stability = Math.max(10, state.stability - 1);
+      state.interactionMessage = 'COLOR LOSS: restez pres du groupe pour conserver un repere.';
+    }
+    if (state.interactionMessage) {
+      state.interactionUntil = performance.now() + 2800;
+      state.interactionChannel = 'system';
+      state.interactionSpeaker = event.label;
+    }
+    this.updateCircusFpsToolbar();
   },
 
   drawCircusZoneObjectiveHud(ctx, w, h, state) {
@@ -4638,9 +5343,10 @@ const OS = {
     const rx = -dx * sin + dz * cos;
     const rz = dx * cos + dz * sin;
     if (rz <= 0.18) return null;
-    const halfFovTangent = Math.tan((Math.PI / 3.05) / 2);
-    if (Math.abs(rx / rz) > halfFovTangent * 1.18) return null;
-    const fovScale = w * 0.52;
+    const fov = state.fov || Math.PI / 3.05;
+    const halfFovTangent = Math.tan(fov / 2);
+    if (Math.abs(rx / rz) > halfFovTangent * 1.42) return null;
+    const fovScale = w / (2 * Math.max(0.32, halfFovTangent));
     const worldDistance = Math.hypot(dx, dz);
     const scale = 2.25 / rz;
     const floorY = this.getCircusProjectedFloorY(rz, h);
@@ -4834,6 +5540,10 @@ const OS = {
       ...this.getCircusExtraZoneProps(zoneId),
       ...this.getCircusArchitectureProps(zoneId)
     ];
+    if (zoneId === 2) {
+      const adventurePortal = this.getCircusCainePortalProp();
+      if (adventurePortal) props.push(adventurePortal);
+    }
     if (zoneId === 20) {
       const jaxRoom = this.getCircusBedroomDefinitions()[44];
       if (this.isCircusBedroomArchived(jaxRoom)) {
@@ -4985,7 +5695,7 @@ const OS = {
       w,
       h,
       h * 0.48,
-      Math.PI / 3.05
+      state.fov || Math.PI / 3.05
     );
     if (!point) return null;
     const angle = state.player.a;
@@ -5052,7 +5762,7 @@ const OS = {
         active: state.activeProps.get(`${state.currentZoneId}:${interactionId}`) === true,
         projected: this.projectCircusPoint(prop, state, w, h)
       }))
-      .filter(prop => worldKinds.has(prop.kind) && prop.projected && this.isCircusWorldPointVisible(prop, state, 0.3))
+      .filter(prop => !state.collectedProps?.has(`${state.currentZoneId}:${prop.interactionId}`) && worldKinds.has(prop.kind) && prop.projected && this.isCircusWorldPointVisible(prop, state, 0.3))
       .sort((a, b) => b.projected.depth - a.projected.depth);
 
     props.forEach(prop => {
@@ -5255,7 +5965,7 @@ const OS = {
         active: state.activeProps.get(`${state.currentZoneId}:${interactionId}`) === true,
         projected: this.projectCircusPoint(prop, state, w, h)
       }))
-      .filter(prop => prop.projected)
+      .filter(prop => !state.collectedProps?.has(`${state.currentZoneId}:${prop.interactionId}`) && prop.projected)
       .sort((a, b) => b.projected.depth - a.projected.depth);
     props.forEach(prop => {
       if (worldKinds.has(prop.kind)) {
@@ -5307,7 +6017,7 @@ const OS = {
     const p = prop.projected;
     const s = this.getCircusPropVisualScale(prop);
     const wideKinds = new Set(['ring', 'counter', 'truck', 'scoreboard', 'table', 'desk', 'exitframe']);
-    const tallKinds = new Set(['pillar', 'tent', 'spotlight', 'umbrella', 'window', 'archive', 'console', 'roomdoor', 'wallart', 'ceilinglight']);
+    const tallKinds = new Set(['pillar', 'tent', 'spotlight', 'umbrella', 'window', 'archive', 'console', 'roomdoor', 'caineportal', 'wallart', 'ceilinglight']);
     const smallKinds = new Set(['candle', 'balloon', 'eye', 'sun', 'base', 'target', 'memory']);
     let width = 82 * s;
     let height = 86 * s;
@@ -5332,7 +6042,7 @@ const OS = {
 
   getCircusPropVisualScale(prop) {
     const compactKinds = new Set(['eye', 'sun', 'balloon', 'candle', 'memory', 'base', 'target']);
-    const mountedKinds = new Set(['wallart', 'ceilinglight', 'roomdoor']);
+    const mountedKinds = new Set(['wallart', 'ceilinglight', 'roomdoor', 'caineportal']);
     const cap = compactKinds.has(prop.kind) ? 1.85 : mountedKinds.has(prop.kind) ? 2.2 : 2.7;
     return Math.max(0.035, Math.min(cap, prop.projected?.scale || 0.035));
   },
@@ -5525,6 +6235,37 @@ const OS = {
         ctx.fillRect(-46 * s, -42 * s, 92 * s, 6 * s);
         ctx.strokeRect(-46 * s, -42 * s, 92 * s, 6 * s);
       }
+    } else if (prop.kind === 'caineportal') {
+      const pulse = 0.72 + Math.sin(performance.now() / 180) * 0.18;
+      ctx.save();
+      ctx.shadowColor = prop.color || '#7df0ff';
+      ctx.shadowBlur = Math.max(6, 20 * s * pulse);
+      ctx.strokeStyle = prop.accent || '#ffd84a';
+      ctx.lineWidth = Math.max(2, 7 * s);
+      ctx.beginPath();
+      ctx.ellipse(0, -58 * s, 34 * s, 58 * s, 0, 0, Math.PI * 2);
+      ctx.stroke();
+      ctx.strokeStyle = prop.color || '#7df0ff';
+      ctx.lineWidth = Math.max(1, 3 * s);
+      for (let ring = 0; ring < 4; ring++) {
+        ctx.beginPath();
+        ctx.ellipse(0, -58 * s, (27 - ring * 4) * s, (49 - ring * 7) * s, performance.now() / 900 + ring, 0, Math.PI * 2);
+        ctx.stroke();
+      }
+      const gradient = ctx.createRadialGradient(0, -58 * s, 2, 0, -58 * s, 30 * s);
+      gradient.addColorStop(0, `${prop.color || '#7df0ff'}cc`);
+      gradient.addColorStop(0.55, '#281251cc');
+      gradient.addColorStop(1, '#05020dee');
+      ctx.fillStyle = gradient;
+      ctx.beginPath();
+      ctx.ellipse(0, -58 * s, 27 * s, 48 * s, 0, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.shadowBlur = 0;
+      ctx.fillStyle = '#fff1a8';
+      ctx.font = `bold ${Math.max(6, 8 * s)}px Courier New`;
+      ctx.textAlign = 'center';
+      ctx.fillText((prop.label || 'AVENTURE').slice(0, 24), 0, 9 * s);
+      ctx.restore();
     } else if (prop.kind === 'roomdoor') {
       ctx.fillStyle = '#6b351f';
       ctx.fillRect(-32 * s, -116 * s, 64 * s, 116 * s);
@@ -6455,9 +7196,33 @@ const OS = {
   },
 
   getCircusActiveZoneSprites(zoneId, state) {
-    return this.getCircusZoneSprites(zoneId).map((sprite, index) => (
+    const sprites = this.getCircusZoneSprites(zoneId).map((sprite, index) => (
       this.applyCircusSpriteRoutine(sprite, index, zoneId, state)
     ));
+    const follower = state?.follower;
+    const jaxArchived = follower?.avatar === 'jax' && (typeof EpisodeManager !== 'undefined') && EpisodeManager.getProgress().includes(9);
+    if (jaxArchived) {
+      state.follower = null;
+      this.saveCircusPersistentWorldState();
+    }
+    if (follower && !jaxArchived && !sprites.some(sprite => (sprite.avatar || sprite.type) === follower.avatar)) {
+      const colors = { pomni: '#e53935', ragatha: '#d64545', jax: '#8a4fd6', kinger: '#d9d0a2', gangle: '#f7f7f7', zooble: '#ff4fb8', gummigoo: '#d8a23a' };
+      const candidate = {
+        x: state.player.x - Math.cos(state.player.a) * 1.15 + Math.cos(state.player.a + Math.PI / 2) * 0.55,
+        z: state.player.z - Math.sin(state.player.a) * 1.15 + Math.sin(state.player.a + Math.PI / 2) * 0.55
+      };
+      sprites.push({
+        name: follower.name,
+        type: follower.avatar,
+        avatar: follower.avatar,
+        space: 'world',
+        x: candidate.x,
+        z: candidate.z,
+        color: colors[follower.avatar] || '#fff1a8',
+        routine: 'follow'
+      });
+    }
+    return sprites;
   },
 
   getCircusSpriteRoutine(sprite, zoneId) {
@@ -6476,6 +7241,7 @@ const OS = {
     const routine = sprite.routine || this.getCircusSpriteRoutine(sprite, zoneId);
     const phase = index * 1.37 + zoneId * 0.23;
     const animated = { ...sprite, routine };
+    const avatar = animated.avatar || animated.type || '';
     if (routine === "pace") {
       animated.x += Math.sin(now * 0.82 + phase) * 0.14;
       animated.z += Math.cos(now * 0.55 + phase) * 0.06;
@@ -6500,13 +7266,18 @@ const OS = {
       animated.bob = Math.sin(now * 1.6 + phase) * 0.01;
     }
     const center = state.room?.center || { x: 0, z: 0 };
+    const threatPosition = state.threatPositions?.get(`${zoneId}:${avatar}`);
+    if (threatPosition) {
+      animated.x = threatPosition.x - center.x;
+      animated.z = threatPosition.z - center.z;
+      animated.behavior = 'menace';
+    }
     const npcWorldX = center.x + animated.x;
     const npcWorldZ = center.z + animated.z;
     const toPlayerX = state.player.x - npcWorldX;
     const toPlayerZ = state.player.z - npcWorldZ;
     const playerDistance = Math.max(0.001, Math.hypot(toPlayerX, toPlayerZ));
     const awareness = Math.max(0, Math.min(1, (4.2 - playerDistance) / 2.8));
-    const avatar = animated.avatar || animated.type || '';
     const social = new Set(['pomni', 'ragatha', 'gangle', 'kinger', 'gummigoo', 'max', 'chad']);
     const avoids = new Set(['jax', 'hunterjax', 'eviljax', 'zooble']);
     const threats = avatar.includes('horror') || avatar.startsWith('shadow') || avatar === 'kaufmo';
@@ -7239,24 +8010,29 @@ const OS = {
       });
     });
 
-    ['comfort-reading', 'line-pause', 'easy-minigames', 'reader-only', 'crt-readable'].forEach(key => {
+    ['comfort-reading', 'line-pause', 'easy-minigames', 'reader-only', 'crt-readable', 'fps-minimap', 'fps-hud'].forEach(key => {
       const input = document.getElementById(`setting-${key}`);
       if (!input) return;
-      input.checked = !!this.getCainOSSetting(key);
+      input.checked = !!this.getCainOSSetting(key, key === 'fps-minimap' || key === 'fps-hud');
       input.addEventListener('change', () => {
         this.setCainOSSetting(key, input.checked);
         this.applyCainOSSettings();
+        if (this.circusDoom && key === 'fps-minimap') this.circusDoom.minimapVisible = input.checked;
+        if (this.circusDoom && key === 'fps-hud') this.circusDoom.hudVisible = input.checked;
         this.renderCainOSTools();
       });
     });
 
-    ['audio-ambience', 'audio-glitch'].forEach(key => {
+    ['audio-ambience', 'audio-glitch', 'fps-fov', 'fps-sensitivity'].forEach(key => {
       const input = document.getElementById(`setting-${key}`);
       if (!input) return;
-      input.value = String(this.getCainOSSetting(key, key === 'audio-ambience' ? 70 : 45));
+      const fallback = key === 'audio-ambience' ? 70 : key === 'audio-glitch' ? 45 : key === 'fps-fov' ? 64 : 45;
+      input.value = String(this.getCainOSSetting(key, fallback));
       input.addEventListener('input', () => {
         this.setCainOSSetting(key, Number(input.value));
         this.applyCainOSSettings();
+        if (this.circusDoom && key === 'fps-fov') this.circusDoom.fov = Number(input.value) * Math.PI / 180;
+        if (this.circusDoom && key === 'fps-sensitivity') this.circusDoom.mouseSensitivity = Number(input.value) / 10000;
       });
     });
 
@@ -7636,7 +8412,26 @@ const OS = {
       unlocked: item.found,
       desc: item.unlocked ? item.desc : 'Collectible verrouille par sous-episode pour eviter les spoilers.'
     }));
-    return [...zoneItems, ...collectibles];
+    const persistent = this.circusDoom ? {
+      collected: [...this.circusDoom.collectedProps],
+      given: [...this.circusDoom.givenProps],
+      heldItem: this.circusDoom.heldItem
+    } : this.getCircusPersistentWorldState();
+    const fpsItems = persistent.collected.map(id => {
+      const [zoneText, indexText] = String(id).split(':');
+      const zoneId = Number(zoneText);
+      const prop = this.getCircusZoneProps(zoneId)[Number(indexText)];
+      const name = persistent.heldItem?.id === id ? persistent.heldItem.name : (prop?.label || this.getCircusPropName(prop || {}, zoneId));
+      const wasGiven = persistent.given.includes(id);
+      return {
+        name,
+        from: this.getCainOSLoreZones().find(zone => zone.id === zoneId)?.name || `ZONE ${zoneId}`,
+        zoneId,
+        unlocked: true,
+        desc: wasGiven ? 'Objet remis a un personnage; son effet relationnel est conserve.' : persistent.heldItem?.id === id ? 'Objet actuellement tenu dans la simulation.' : 'Objet FPS persistant collecte dans le decor.'
+      };
+    });
+    return [...zoneItems, ...collectibles, ...fpsItems];
   },
 
   getCainOSAchievementList() {

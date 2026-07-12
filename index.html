@@ -685,6 +685,22 @@
                           <span>Glitch audio</span>
                           <input type="range" id="setting-audio-glitch" min="0" max="100" value="45">
                         </label>
+                        <label class="settings-row">
+                          <span>Champ de vision FPS</span>
+                          <input type="range" id="setting-fps-fov" min="50" max="85" value="64">
+                        </label>
+                        <label class="settings-row">
+                          <span>Sensibilite souris FPS</span>
+                          <input type="range" id="setting-fps-sensitivity" min="10" max="100" value="45">
+                        </label>
+                        <label class="settings-row">
+                          <span>Mini-carte FPS</span>
+                          <input type="checkbox" id="setting-fps-minimap">
+                        </label>
+                        <label class="settings-row">
+                          <span>Objectifs FPS</span>
+                          <input type="checkbox" id="setting-fps-hud">
+                        </label>
                       </div>
                       <p class="tools-note">Ces options n'effacent pas la progression et ne modifient pas les transcripts.</p>
                     </div>
@@ -843,9 +859,23 @@
                   <div class="circus-sky"></div>
                   <canvas id="circus-doom-canvas" class="circus-doom-canvas" width="720" height="320" tabindex="0" aria-label="Vue subjective de la simulation. Utilisez ZQSD, les fleches ou cliquez sur une sortie pour changer de lieu."></canvas>
                   <div id="circus-doom-hud" class="circus-doom-hud">
-                    <span>ZQSD: BOUGER | SHIFT: COURIR | E: ACTION</span>
+                    <span>ZQSD: BOUGER | SOURIS: REGARDER | E: ACTION</span>
                     <span id="circus-doom-zone">ZONE: PASSERELLE</span>
                     <span id="circus-doom-detail">PROGRESSION: PORTAILS LORE</span>
+                  </div>
+                  <div id="circus-fps-toolbar" class="circus-fps-toolbar" aria-label="Actions dans la simulation">
+                    <div class="circus-verb-group" role="group" aria-label="Mode d interaction">
+                      <button class="circus-verb-btn active" data-fps-verb="use" title="Utiliser ou activer l objet vise">UTILISER</button>
+                      <button class="circus-verb-btn" data-fps-verb="look" title="Observer l objet vise sans le modifier">OBSERVER</button>
+                      <button class="circus-verb-btn" data-fps-verb="take" title="Prendre un objet transportable">PRENDRE</button>
+                      <button class="circus-verb-btn" data-fps-verb="give" title="Donner l objet tenu au personnage vise">DONNER</button>
+                    </div>
+                    <span id="circus-fps-held" class="circus-fps-held">MAIN: VIDE</span>
+                    <span id="circus-fps-stability" class="circus-fps-stability">STABILITE 100%</span>
+                  </div>
+                  <div id="circus-world-selector" class="circus-world-selector" hidden>
+                    <label for="circus-world-select">PORTAIL LIBRE DE CAINE</label>
+                    <select id="circus-world-select" title="Choisir le monde affiche dans le portail de Caine"></select>
                   </div>
                   <div class="circus-shape circus-shape-ring"></div>
                   <div class="circus-shape circus-shape-left"></div>
