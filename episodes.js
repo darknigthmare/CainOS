@@ -324,17 +324,28 @@ const SoundManager = {
     this.playFpsSpatialTone(freq + Math.random() * 8, 0.075, wave, 0.025, pan, false);
     this.playFpsSpatialTone(freq * 0.62, 0.11, 'sine', 0.014, pan, false);
   },
-  playFpsDoor(context = 'circus') {
+  playFpsDoor(context = 'circus', pan = 0, volumeScale = 1) {
     const metal = ['admin', 'core', 'test', 'kitchen'].includes(context);
     const base = metal ? 92 : context === 'manor' || context === 'basement' ? 48 : 72;
-    this.playFpsSpatialTone(base, 0.22, metal ? 'square' : 'triangle', 0.045, 0, true);
-    setTimeout(() => this.playFpsSpatialTone(base * 0.72, 0.3, 'sine', 0.032, 0, true), 90);
+    this.playFpsSpatialTone(base, 0.22, metal ? 'square' : 'triangle', 0.045 * volumeScale, pan, true);
+    setTimeout(() => this.playFpsSpatialTone(base * 0.72, 0.3, 'sine', 0.032 * volumeScale, pan, true), 90);
   },
-  playFpsEvent(eventId = '') {
+  playFpsEvent(eventId = '', pan = 0, volumeScale = 1) {
     const dangerous = /warning|ghost|flicker|trace|loss/.test(eventId);
     const bright = /bell|score|convoy|sweep/.test(eventId);
     const freq = dangerous ? 74 : bright ? 520 : 220;
-    this.playFpsSpatialTone(freq, dangerous ? 0.28 : 0.12, dangerous ? 'sawtooth' : 'triangle', 0.022, 0, true);
+    this.playFpsSpatialTone(freq, dangerous ? 0.28 : 0.12, dangerous ? 'sawtooth' : 'triangle', 0.022 * volumeScale, pan, true);
+  },
+  playFpsVoice(avatar = 'npc', pan = 0, distance = 1) {
+    const profiles = {
+      caine: [620, 'square'], bubble: [880, 'sine'], pomni: [440, 'triangle'], ragatha: [392, 'sine'],
+      jax: [294, 'sawtooth'], kinger: [196, 'triangle'], gangle: [523, 'sine'], zooble: [330, 'square'],
+      gummigoo: [247, 'triangle'], kaufmo: [72, 'sawtooth']
+    };
+    const [freq, wave] = profiles[avatar] || [360, 'triangle'];
+    const attenuation = Math.max(0.14, Math.min(1, 1 / Math.max(1, distance * 0.55)));
+    this.playFpsSpatialTone(freq, 0.08, wave, 0.035 * attenuation, pan, avatar === 'caine' || avatar === 'kaufmo');
+    setTimeout(() => this.playFpsSpatialTone(freq * 1.08, 0.055, wave, 0.022 * attenuation, pan, false), 68);
   },
   playContextPulseStep() {
     if (!this.contextPulse) return;

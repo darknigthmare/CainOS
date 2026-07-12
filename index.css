@@ -3353,6 +3353,139 @@ body.reduce-motion .circus-dos-overlay.rendering .circus-title-letter {
   padding-bottom: 3px;
 }
 
+.creator-lock,
+.creator-notice,
+.creator-card {
+  border: 1px solid #315c38;
+  background: #0a150c;
+  color: #caffca;
+  padding: 10px;
+}
+
+.creator-lock {
+  max-width: 520px;
+  margin: 18px auto;
+  text-align: center;
+}
+
+.creator-lock strong,
+.creator-notice strong {
+  display: block;
+  color: var(--terminal-amber);
+  font: 18px 'VT323', monospace;
+}
+
+.creator-notice {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 10px;
+  border-color: #8a2c68;
+}
+
+.creator-notice span {
+  color: #ff9bd5;
+  font-size: 9px;
+  line-height: 1.35;
+  text-align: right;
+}
+
+.creator-form {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.creator-form label,
+.creator-cast label {
+  display: flex;
+  gap: 5px;
+  color: #9ed39e;
+  font-size: 9px;
+}
+
+.creator-form label {
+  flex-direction: column;
+}
+
+.creator-form input,
+.creator-form select {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid #3b6b43;
+  border-radius: 0;
+  background: #020904;
+  color: #d9ffd9;
+  font: 10px 'Share Tech Mono', monospace;
+  padding: 6px;
+}
+
+.creator-cast {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  margin: 10px 0;
+  border: 1px solid #315c38;
+}
+
+.creator-cast legend {
+  color: var(--terminal-cyan);
+  font-size: 9px;
+}
+
+.creator-build {
+  min-width: 190px;
+}
+
+.creator-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 8px;
+}
+
+.creator-card header {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  color: #fff;
+}
+
+.creator-card header span {
+  color: #ff79c8;
+  font-size: 8px;
+}
+
+.creator-card p,
+.creator-card small {
+  display: block;
+  margin: 7px 0;
+  color: #9ed39e;
+  font-size: 9px;
+  line-height: 1.35;
+}
+
+.creator-card div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+@media (max-width: 720px) {
+  .creator-form {
+    grid-template-columns: 1fr;
+  }
+
+  .creator-notice {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .creator-notice span {
+    text-align: left;
+  }
+}
+
 .tools-card,
 .settings-row {
   border: 1px solid #244224;
