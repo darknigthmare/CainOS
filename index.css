@@ -1829,6 +1829,85 @@ body {
   cursor: none;
 }
 
+.save-slot-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+  margin: 8px 0;
+}
+
+.save-slot-card {
+  min-width: 0;
+  padding: 7px;
+  border: 1px solid #7df0ff;
+  background: rgba(5, 2, 13, 0.78);
+  color: #fff1a8;
+  font: 8px "Courier New", monospace;
+}
+
+.save-slot-card strong,
+.save-slot-card span {
+  display: block;
+  overflow-wrap: anywhere;
+}
+
+.save-slot-actions {
+  display: flex;
+  gap: 3px;
+  margin-top: 6px;
+}
+
+.save-slot-actions button {
+  min-width: 0;
+  padding: 3px;
+  font-size: 7px;
+}
+
+.settings-row select {
+  min-width: 92px;
+  max-width: 48%;
+  border: 1px solid #7df0ff;
+  background: #120822;
+  color: #fff1a8;
+  font: 9px "Courier New", monospace;
+}
+
+.creator-preview {
+  display: flex;
+  min-height: 72px;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 8px;
+  margin: 8px 0;
+  padding: 8px;
+  border: 1px dashed #7df0ff;
+  background: repeating-linear-gradient(90deg, rgba(125, 240, 255, 0.05) 0 1px, transparent 1px 24px);
+}
+
+.creator-preview span {
+  display: grid;
+  justify-items: center;
+  min-width: 52px;
+  color: #fff1a8;
+  font: 7px "Courier New", monospace;
+  text-align: center;
+}
+
+.creator-preview b {
+  max-width: 72px;
+  overflow-wrap: anywhere;
+}
+
+.creator-cast label {
+  align-items: center;
+  gap: 4px;
+}
+
+.creator-cast select {
+  min-width: 0;
+  max-width: 132px;
+}
+
 @media (max-width: 720px) {
   .circus-fps-toolbar {
     flex-wrap: wrap;

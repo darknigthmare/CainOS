@@ -654,6 +654,7 @@
                         <button id="btn-save-reset-episodes" class="retro-btn btn-sm">RESET EPISODES</button>
                         <button id="btn-save-reset-all" class="retro-btn btn-sm text-red">RESET TOTAL</button>
                       </div>
+                      <div id="save-slot-list" class="save-slot-list" aria-label="Profils de sauvegarde CainOS"></div>
                       <textarea id="save-manager-buffer" class="save-manager-buffer" spellcheck="false" placeholder="Export CainOS ou save a importer..."></textarea>
                       <p id="save-manager-status" class="tools-note">SAVE_MANAGER.sys gere uniquement localStorage CainOS/TADC.</p>
                     </div>
@@ -703,6 +704,28 @@
                           <span>Objectifs FPS</span>
                           <input type="checkbox" id="setting-fps-hud">
                         </label>
+                        <label class="settings-row">
+                          <span>Inverser souris FPS</span>
+                          <input type="checkbox" id="setting-fps-invert-mouse">
+                        </label>
+                        <label class="settings-row">
+                          <span>Aide interaction FPS</span>
+                          <input type="checkbox" id="setting-fps-interaction-assist">
+                        </label>
+                        <label class="settings-row">
+                          <span>Intensite mouvements FPS</span>
+                          <input type="range" id="setting-fps-motion-intensity" min="0" max="100" value="100">
+                        </label>
+                        <label class="settings-row"><span>Avancer</span><select id="setting-fps-bind-forward" data-fps-binding="forward"></select></label>
+                        <label class="settings-row"><span>Reculer</span><select id="setting-fps-bind-backward" data-fps-binding="backward"></select></label>
+                        <label class="settings-row"><span>Pas gauche</span><select id="setting-fps-bind-left" data-fps-binding="left"></select></label>
+                        <label class="settings-row"><span>Pas droite</span><select id="setting-fps-bind-right" data-fps-binding="right"></select></label>
+                        <label class="settings-row"><span>Interagir</span><select id="setting-fps-bind-interact" data-fps-binding="interact"></select></label>
+                        <label class="settings-row"><span>Courir</span><select id="setting-fps-bind-sprint" data-fps-binding="sprint"></select></label>
+                        <label class="settings-row"><span>Discretion</span><select id="setting-fps-bind-crouch" data-fps-binding="crouch"></select></label>
+                        <label class="settings-row"><span>Journal</span><select id="setting-fps-bind-journal" data-fps-binding="journal"></select></label>
+                        <label class="settings-row"><span>Mini-carte</span><select id="setting-fps-bind-map" data-fps-binding="map"></select></label>
+                        <label class="settings-row"><span>Lampe</span><select id="setting-fps-bind-light" data-fps-binding="light"></select></label>
                       </div>
                       <p class="tools-note">Ces options n'effacent pas la progression et ne modifient pas les transcripts.</p>
                     </div>
@@ -872,6 +895,7 @@
                       <button class="circus-verb-btn" data-fps-verb="take" title="Prendre un objet transportable">PRENDRE</button>
                       <button class="circus-verb-btn" data-fps-verb="give" title="Donner l objet tenu au personnage vise">DONNER</button>
                     </div>
+                    <button id="circus-fps-journal" class="circus-verb-btn" title="Ouvrir le journal de mission FPS (J)">JOURNAL</button>
                     <span id="circus-fps-held" class="circus-fps-held">MAIN: VIDE</span>
                     <span id="circus-fps-stability" class="circus-fps-stability">STABILITE 100%</span>
                   </div>

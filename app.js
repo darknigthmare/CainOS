@@ -343,6 +343,9 @@ const OS = {
       'setting-fps-sensitivity': 'Regler la vitesse de rotation lorsque la souris est verrouillee.',
       'setting-fps-minimap': 'Afficher ou masquer la mini-carte exploratoire du mode FPS.',
       'setting-fps-hud': 'Afficher ou masquer les objectifs du mode FPS.',
+      'setting-fps-invert-mouse': 'Inverser la rotation horizontale de la souris dans la simulation.',
+      'setting-fps-interaction-assist': 'Elargir legerement la portee et l angle de visee des interactions FPS.',
+      'setting-fps-motion-intensity': 'Reduire les oscillations et animations secondaires des imposteurs FPS.',
       'btn-save-export': 'Exporter la progression locale CainOS/TADC dans le buffer.',
       'btn-save-import': 'Importer la progression depuis le JSON colle dans le buffer.',
       'btn-save-reset-skins': 'Effacer seulement les skins fan achetes.',
@@ -1768,6 +1771,10 @@ const OS = {
       doorStates: new Map(persistentWorld.doorStates),
       npcMemories: new Map(persistentWorld.npcMemories),
       dynamicEventState: persistentWorld.dynamicEvents,
+      missionJournal: persistentWorld.missionJournal,
+      journalVisible: false,
+      director: persistentWorld.director,
+      campaignSurvival: { key: '', elapsed: 0 },
       customAdventure: persistentWorld.customAdventure,
       currentActivity: persistentWorld.currentActivity,
       portalReady: introSeen,
@@ -1790,8 +1797,12 @@ const OS = {
       vehicleModeUntil: 0,
       diveModeUntil: 0,
       gamepadActionDown: false,
+      controlBindings: this.getCircusControlBindings(),
       fov: Number(this.getCainOSSetting('fps-fov', 64)) * Math.PI / 180,
       mouseSensitivity: Number(this.getCainOSSetting('fps-sensitivity', 45)) / 10000,
+      invertMouse: this.getCainOSSetting('fps-invert-mouse', false) === true,
+      interactionAssist: this.getCainOSSetting('fps-interaction-assist', true) !== false,
+      motionIntensity: Number(this.getCainOSSetting('fps-motion-intensity', 100)) / 100,
       minimapVisible: this.getCainOSSetting('fps-minimap', true) !== false,
       hudVisible: this.getCainOSSetting('fps-hud', true) !== false,
       lastZoneEventId: null,
@@ -1821,6 +1832,7 @@ const OS = {
     document.body.dataset.fpsAnimationSheets = String(verticalAudit.animationCount);
     document.body.dataset.fpsAdvancedAudit = advancedAudit.ok ? 'ok' : advancedAudit.errors.join(' | ');
     document.body.dataset.fpsCampaignStages = String(advancedAudit.campaignStages);
+    document.body.dataset.fpsCampaignEpisodes = String(advancedAudit.campaignEpisodes);
     document.body.dataset.fpsDynamicEventZones = String(advancedAudit.eventZones);
     document.body.dataset.fpsActivityTypes = String(advancedAudit.activityTypes);
     document.body.dataset.fpsCustomObjectives = String(advancedAudit.customObjectives);
@@ -1850,24 +1862,26 @@ const OS = {
         : (rawKey === 'digit2' || codeKey === 'digit2' || codeKey === 'numpad2') ? '2'
           : (rawKey === 'digit3' || codeKey === 'digit3' || codeKey === 'numpad3') ? '3'
             : rawKey;
-      if (['arrowup','arrowdown','arrowleft','arrowright','enter',' ','e','shift','w','a','s','d','z','q','c','f','h','m','1','2','3'].includes(key)) {
+      const action = this.getCircusControlAction(key);
+      if (action || ['arrowup','arrowdown','arrowleft','arrowright','enter',' ','h','1','2','3'].includes(key)) {
         e.preventDefault();
         if (['1','2','3'].includes(key) && this.circusDoom?.interactionChoices) this.chooseCircusDialogueOption(Number(key) - 1);
-        else if (key === 'm' && this.circusDoom) {
+        else if (action === 'map' && this.circusDoom) {
           this.circusDoom.minimapVisible = !this.circusDoom.minimapVisible;
           this.setCainOSSetting('fps-minimap', this.circusDoom.minimapVisible);
         }
+        else if (action === 'journal') this.toggleCircusMissionJournal();
         else if (key === 'h' && this.circusDoom) {
           this.circusDoom.hudVisible = !this.circusDoom.hudVisible;
           this.setCainOSSetting('fps-hud', this.circusDoom.hudVisible);
         }
-        else if (key === 'f' && this.circusDoom) {
+        else if (action === 'light' && this.circusDoom) {
           this.circusDoom.lightUntil = performance.now() + 12000;
           this.emitCircusNoise(0.18, 'Wacky Watch');
           this.circusDoom.interactionMessage = 'LAMPE WACKY WATCH ACTIVE: protection lumineuse temporaire.';
           this.circusDoom.interactionUntil = performance.now() + 2600;
         }
-        else if (key === 'enter' || key === ' ' || key === 'e') this.handleCircusSimulationInput('enter');
+        else if (key === 'enter' || key === ' ' || action === 'interact') this.handleCircusSimulationInput('enter');
         else this.circusDoom.keys.add(key);
       }
     };
@@ -2141,6 +2155,8 @@ const OS = {
       doorStates: Array.isArray(stored.doorStates) ? stored.doorStates : [],
       npcMemories: Array.isArray(stored.npcMemories) ? stored.npcMemories : [],
       dynamicEvents: stored.dynamicEvents && typeof stored.dynamicEvents === 'object' ? stored.dynamicEvents : {},
+      missionJournal: Array.isArray(stored.missionJournal) ? stored.missionJournal.slice(-80) : [],
+      director: stored.director && typeof stored.director === 'object' ? stored.director : {},
       exploredCells: Array.isArray(stored.exploredCells) ? stored.exploredCells : [],
       npcAgents: Array.isArray(stored.npcAgents) ? stored.npcAgents : [],
       campaigns: stored.campaigns && typeof stored.campaigns === 'object' ? stored.campaigns : {},
@@ -2170,6 +2186,8 @@ const OS = {
       doorStates: [...(state.doorStates || new Map()).entries()],
       npcMemories: [...(state.npcMemories || new Map()).entries()],
       dynamicEvents: state.dynamicEventState || {},
+      missionJournal: (state.missionJournal || []).slice(-80),
+      director: state.director || {},
       exploredCells: [...(state.exploredCells || new Map()).entries()].map(([zoneId, cells]) => [zoneId, [...cells]]),
       npcAgents: [...(state.npcAgents || new Map()).entries()].map(([id, agent]) => [id, {
         x: agent.x,
@@ -2183,6 +2201,34 @@ const OS = {
       customAdventure: state.customAdventure || null,
       currentActivity: state.currentActivity?.persistent ? state.currentActivity : null
     });
+  },
+
+  recordCircusMissionJournal(type, title, detail, meta = {}) {
+    const state = this.circusDoom;
+    if (!state || !title || !detail) return;
+    const previous = state.missionJournal?.[state.missionJournal.length - 1];
+    const signature = `${type}:${state.currentZoneId}:${title}:${detail}`;
+    if (previous?.signature === signature && Date.now() - previous.at < 4000) return;
+    state.missionJournal = state.missionJournal || [];
+    state.missionJournal.push({
+      signature,
+      type,
+      title,
+      detail,
+      zone: state.currentZoneId,
+      episode: this.getActiveCircusCampaignStatus()?.definition?.episode || this.getCircusTimelineContext().episode,
+      at: Date.now(),
+      ...meta
+    });
+    state.missionJournal = state.missionJournal.slice(-80);
+  },
+
+  toggleCircusMissionJournal(force = null) {
+    const state = this.circusDoom;
+    if (!state) return;
+    state.journalVisible = force === null ? !state.journalVisible : !!force;
+    state.interactionChoices = null;
+    SoundManager.playClick();
   },
 
   storeCircusZonePosition(zoneId = null) {
@@ -2204,12 +2250,7 @@ const OS = {
   },
 
   getCircusFpsCampaignDefinition(episode = 1) {
-    if (episode !== 1) return null;
-    return {
-      episode: 1,
-      title: 'PILOT / CAMPAGNE FPS',
-      canonBoundary: 'Reconstitution jouable additive. Les dialogues du transcript restent dans Simulation Control.',
-      stages: [
+    const pilotStages = [
         { title: 'Arrivee du sujet sans nom', zone: 2, guide: 'Rejoignez Caine et Ragatha sur la piste.', requirements: [
           { action: 'talk', target: 'caine', count: 1 }, { action: 'talk', target: 'ragatha', count: 1 }, { action: 'look', target: 'ring', count: 1 }
         ] },
@@ -2234,8 +2275,74 @@ const OS = {
         { title: 'Fausse sortie et retour', zone: 5, guide: 'Testez les cadres, inspectez le bureau impossible puis revenez au chapiteau.', requirements: [
           { action: 'use', target: 'exitframe', count: 3 }, { action: 'look', target: 'desk', count: 1 }, { action: 'visit', target: '2', count: 1 }
         ] }
-      ]
+    ];
+    if (episode === 1) return {
+      episode: 1,
+      title: 'PILOT / CAMPAGNE FPS',
+      canonBoundary: 'Reconstitution jouable additive. Les dialogues du transcript restent dans Simulation Control.',
+      stages: pilotStages
     };
+    const blueprints = {
+      2: { title: 'CANDY CARRIER CHAOS', steps: [
+        [2, 'talk', 'pomni'], [6, 'look', 'candy'], [32, 'talk', 'loolilalu'], [33, 'use', 'truck'],
+        [7, 'look', 'archive'], [7, 'talk', 'gummigoo'], [6, 'talk', 'gummigoo'], [6, 'look', 'candy']
+      ] },
+      3: { title: 'THE MYSTERY OF MILDENHALL MANOR', steps: [
+        [2, 'talk', 'pomni'], [8, 'use', 'candle'], [8, 'talk', 'horrorghost'], [8, 'survive', 'mildenhall'],
+        [9, 'talk', 'kinger'], [34, 'use', 'candle'], [17, 'talk', 'queenie'], [8, 'visit', '8']
+      ] },
+      4: { title: 'FAST FOOD MASQUERADE', steps: [
+        [2, 'talk', 'gangle'], [10, 'look', 'menu'], [35, 'use', 'counter'], [10, 'take', 'menu'],
+        [10, 'talk', 'max'], [37, 'look', 'archive'], [10, 'talk', 'workgangle'], [10, 'use', 'counter']
+      ] },
+      5: { title: 'UNTITLED', steps: [
+        [2, 'talk', 'ragatha'], [11, 'look', 'card'], [24, 'talk', 'hunterjax'], [26, 'look', 'console'],
+        [25, 'look', 'card'], [28, 'talk', 'ragatha'], [12, 'use', 'scoreboard'], [12, 'use', 'base']
+      ] },
+      6: { title: 'THEY ALL GET GUNS', steps: [
+        [2, 'talk', 'zooble'], [13, 'look', 'target'], [13, 'use', 'target'], [13, 'talk', 'jax'],
+        [13, 'use', 'target'], [2, 'talk', 'kinger'], [2, 'talk', 'pomni'], [38, 'look', 'spotlight']
+      ] },
+      7: { title: 'BEACH EPISODE', steps: [
+        [2, 'talk', 'caine'], [14, 'use', 'umbrella'], [14, 'talk', 'sun'], [15, 'look', 'console'],
+        [15, 'take', 'card'], [16, 'talk', 'abelmannequin'], [15, 'use', 'gridnode'], [16, 'use', 'console']
+      ] },
+      8: { title: 'REMEMBER', steps: [
+        [17, 'talk', 'queenie'], [17, 'talk', 'kinger'], [2, 'talk', 'caine'], [28, 'talk', 'ragatha'],
+        [16, 'look', 'archive'], [16, 'use', 'console'], [16, 'talk', 'caine'], [16, 'survive', 'core']
+      ] },
+      9: { title: 'THE AMAZING DIGITAL CIRCUS', steps: [
+        [18, 'look', 'memory'], [16, 'use', 'console'], [19, 'talk', 'ribbit'], [18, 'talk', 'caine'],
+        [18, 'talk', 'jax'], [41, 'look', 'memory'], [18, 'look', 'archive'], [18, 'talk', 'pomni']
+      ] }
+    };
+    const blueprint = blueprints[episode];
+    if (!blueprint) return null;
+    const checkpoints = (typeof EpisodeManager !== 'undefined' ? EpisodeManager.storyCheckpointConfig?.[episode] : null) || [];
+    const stages = blueprint.steps.map(([zone, action, target], index) => {
+      const checkpoint = checkpoints[index] || {};
+      const requirements = [{ action: 'visit', target: String(zone), count: 1 }];
+      if (!(action === 'visit' && String(target) === String(zone))) requirements.push({ action, target, count: action === 'survive' ? 4 : 1 });
+      return {
+        title: checkpoint.title || `Acte ${index + 1}`,
+        zone,
+        guide: checkpoint.objective || `Suivez le signal ${String(target).toUpperCase()} dans cette scene.`,
+        transcriptAfter: checkpoint.after || 0,
+        requirements
+      };
+    });
+    return {
+      episode,
+      title: `${blueprint.title} / CAMPAGNE FPS`,
+      canonBoundary: 'Reconstitution jouable additive issue des checkpoints du transcript. Elle ne remplace aucun dialogue canonique.',
+      stages
+    };
+  },
+
+  unlockCircusCampaignStageZone(stage) {
+    const state = this.circusDoom;
+    if (!state || !stage || !state.portals[stage.zone]) return;
+    state.portals[stage.zone].unlocked = true;
   },
 
   ensureCircusCampaignState() {
@@ -2247,6 +2354,11 @@ const OS = {
     const stored = state.campaigns[definition.episode] || { stage: 0, progress: {}, complete: false };
     state.campaigns[definition.episode] = stored;
     state.activeCampaign = stored.complete ? null : { episode: definition.episode };
+    if (!stored.complete) {
+      const stage = definition.stages[stored.stage];
+      this.unlockCircusCampaignStageZone(stage);
+      if (stage?.zone === state.currentZoneId) this.advanceCircusCampaign('visit', String(stage.zone));
+    }
   },
 
   getActiveCircusCampaignStatus() {
@@ -2280,18 +2392,24 @@ const OS = {
     const refreshed = this.getActiveCircusCampaignStatus();
     if (refreshed?.complete) {
       const completedTitle = refreshed.stage.title;
+      this.recordCircusMissionJournal('campaign', `Acte termine: ${completedTitle}`, refreshed.stage.guide, {
+        episode: refreshed.definition.episode,
+        stage: refreshed.progress.stage
+      });
       refreshed.progress.stage++;
       if (refreshed.progress.stage >= refreshed.definition.stages.length) {
         refreshed.progress.complete = true;
         state.activeCampaign = null;
-        state.interactionMessage = 'CAMPAGNE PILOT TERMINEE: retour au chapiteau. Le transcript reste disponible separement.';
-        this.unlockCainOSAchievement('fps_campaign_ep1', 'Pilot termine en campagne FPS');
+        state.interactionMessage = `CAMPAGNE EP${refreshed.definition.episode} TERMINEE: retour libre au chapiteau. Le transcript reste disponible separement.`;
+        this.unlockCainOSAchievement(`fps_campaign_ep${refreshed.definition.episode}`, `Episode ${refreshed.definition.episode} termine en campagne FPS`);
         SoundManager.playWin();
       } else {
         const next = refreshed.definition.stages[refreshed.progress.stage];
+        this.unlockCircusCampaignStageZone(next);
         state.interactionMessage = `ACTE TERMINE: ${completedTitle}. PROCHAIN: ${next.title} / ${next.guide}`;
         this.startCircusDynamicEvent('campaign-advance', { speaker: 'CAINE', text: next.guide, duration: 5200 });
         SoundManager.playWin();
+        if (next.zone === state.currentZoneId) this.advanceCircusCampaign('visit', String(next.zone));
       }
       state.interactionUntil = performance.now() + 5600;
       state.interactionChannel = 'system';
@@ -2299,6 +2417,60 @@ const OS = {
     }
     this.saveCircusPersistentWorldState();
     return true;
+  },
+
+  updateCircusCampaignTimedProgress(dt) {
+    const state = this.circusDoom;
+    const status = this.getActiveCircusCampaignStatus();
+    if (!state || !status || status.stage.zone !== state.currentZoneId) return;
+    const requirement = status.requirements.find(item => item.action === 'survive' && !item.complete);
+    if (!requirement) {
+      state.campaignSurvival = { key: '', elapsed: 0 };
+      return;
+    }
+    const key = `${status.definition.episode}:${status.progress.stage}:${requirement.target}`;
+    if (state.campaignSurvival.key !== key) state.campaignSurvival = { key, elapsed: 0 };
+    state.campaignSurvival.elapsed += dt;
+    if (state.campaignSurvival.elapsed >= 2) {
+      state.campaignSurvival.elapsed -= 2;
+      this.advanceCircusCampaign('survive', requirement.target, 1);
+    }
+  },
+
+  getCircusDirectorPool() {
+    const state = this.circusDoom;
+    const campaign = this.getActiveCircusCampaignStatus();
+    if (!state) return [];
+    const local = this.getCircusDynamicEventDefinitions(state.currentZoneId);
+    const system = campaign ? [{
+      id: `director-objective-${campaign.definition.episode}-${campaign.progress.stage}`,
+      speaker: 'CAINOS',
+      channel: 'system',
+      text: `OBJECTIF ACTIF: ${campaign.stage.guide}`,
+      duration: 4200
+    }] : [];
+    return [...local, ...system].filter(event => {
+      const minimumEpisode = Number(event.minimumEpisode || 0);
+      return !minimumEpisode || this.getCircusTimelineContext().episode >= minimumEpisode;
+    });
+  },
+
+  updateCircusEventDirector(dt) {
+    const state = this.circusDoom;
+    if (!state || state.cinematic || state.interactionChoices || state.activeDynamicEvent) return;
+    const now = performance.now();
+    state.director = state.director || {};
+    if (!Number.isFinite(state.director.nextAt)) state.director.nextAt = now + 18000;
+    if (now < state.director.nextAt) return;
+    const pool = this.getCircusDirectorPool();
+    const recent = new Set((state.director.recent || []).slice(-3));
+    const candidates = pool.filter(event => !recent.has(event.id));
+    const event = candidates[Math.floor(Math.random() * candidates.length)] || pool[0];
+    state.director.nextAt = now + 26000 + Math.random() * 18000;
+    if (!event) return;
+    state.director.recent = [...(state.director.recent || []), event.id].slice(-5);
+    this.startCircusDynamicEvent(event.id, event);
+    this.recordCircusMissionJournal(event.channel === 'system' || event.speaker === 'CainOS' ? 'system' : 'event', event.speaker, event.text);
   },
 
   drawCircusCampaignHud(ctx, w, h, state) {
@@ -2313,7 +2485,8 @@ const OS = {
     ctx.fillStyle = '#ffd84a';
     ctx.font = 'bold 8px Courier New';
     ctx.textAlign = 'left';
-    ctx.fillText(`PILOT ${status.progress.stage + 1}/8: ${status.stage.title.toUpperCase()}`, 22, 63);
+    const shortTitle = status.stage.title.toUpperCase().slice(0, 30);
+    ctx.fillText(`EP${status.definition.episode} ${status.progress.stage + 1}/${status.definition.stages.length}: ${shortTitle}`, 22, 63);
     ctx.fillStyle = '#ffffff';
     ctx.font = '7px Courier New';
     ctx.fillText(`${done}/${status.requirements.length} ETAPES | DESTINATION ${state.portals[status.stage.zone]?.short || status.stage.zone}`, 22, 77);
@@ -2322,12 +2495,49 @@ const OS = {
     ctx.restore();
   },
 
+  drawCircusMissionJournal(ctx, w, h, state) {
+    if (!state.journalVisible) return;
+    const entries = (state.missionJournal || []).slice(-7).reverse();
+    const panelW = Math.min(360, w - 30);
+    const panelH = Math.min(h - 54, 84 + entries.length * 36);
+    const x = (w - panelW) / 2;
+    const y = 42;
+    ctx.save();
+    ctx.fillStyle = 'rgba(5,2,13,0.96)';
+    ctx.strokeStyle = '#7df0ff';
+    ctx.lineWidth = 2;
+    ctx.fillRect(x, y, panelW, panelH);
+    ctx.strokeRect(x, y, panelW, panelH);
+    ctx.fillStyle = '#ffd84a';
+    ctx.font = 'bold 11px Courier New';
+    ctx.textAlign = 'left';
+    ctx.fillText('JOURNAL DU VISITEUR 251', x + 12, y + 19);
+    ctx.fillStyle = '#8b8794';
+    ctx.font = '7px Courier New';
+    ctx.fillText('J ou bouton JOURNAL pour fermer', x + 12, y + 32);
+    entries.forEach((entry, index) => {
+      const lineY = y + 52 + index * 36;
+      ctx.fillStyle = entry.type === 'campaign' ? '#ffd84a' : entry.type === 'dialogue' ? '#ff8ccc' : '#7df0ff';
+      ctx.font = 'bold 8px Courier New';
+      ctx.fillText(`[EP${entry.episode || '?'} / ${state.portals[entry.zone]?.short || entry.zone}] ${entry.title}`.slice(0, 56), x + 12, lineY);
+      ctx.fillStyle = '#ffffff';
+      ctx.font = '7px Courier New';
+      ctx.fillText(String(entry.detail).slice(0, 72), x + 12, lineY + 12);
+    });
+    if (!entries.length) {
+      ctx.fillStyle = '#ffffff';
+      ctx.font = '8px Courier New';
+      ctx.fillText('Aucune trace. Explorez, observez ou parlez a un personnage.', x + 12, y + 60);
+    }
+    ctx.restore();
+  },
+
   getCircusDynamicEventDefinitions(zoneId) {
     const events = {
       2: [
         { id: 'caine-briefing', speaker: 'Caine', text: 'Tout le monde sur la piste! Une aventure ne se lance pas toute seule, sauf quand elle le fait.', avatar: 'caine', duration: 5200 },
         { id: 'bubble-interrupt', speaker: 'Bubble', text: 'Je peux choisir la porte! Je peux aussi choisir toutes les portes!', avatar: 'bubble', duration: 4200 },
-        { id: 'group-check', speaker: 'Ragatha / Gangle', text: 'Ragatha verifie que Gangle reste pres du groupe avant le prochain portail.', avatars: ['ragatha', 'gangle'], duration: 4800 }
+        { id: 'group-check', speaker: 'CainOS', channel: 'system', text: 'MOUVEMENT DE GROUPE: Ragatha et Gangle restent pres du portail actif.', avatars: ['ragatha', 'gangle'], duration: 4800 }
       ],
       3: [
         { id: 'gloink-sweep', speaker: 'CainOS', text: 'Plusieurs petits signaux geometriques traversent le terrain en direction du chapiteau.', avatar: 'gloinkstar', duration: 4500 },
@@ -2361,12 +2571,13 @@ const OS = {
       avatar: options.avatar || null,
       avatars: options.avatars || null,
       danger: !!options.danger,
+      channel: options.channel || (['CainOS', 'CAINOS'].includes(options.speaker) ? 'system' : 'dialogue'),
       startedAt: performance.now(),
       duration: options.duration || 4500
     };
     state.interactionMessage = state.activeDynamicEvent.text;
     state.interactionUntil = performance.now() + state.activeDynamicEvent.duration;
-    state.interactionChannel = options.speaker && options.speaker !== 'CainOS' ? 'dialogue' : 'system';
+    state.interactionChannel = state.activeDynamicEvent.channel;
     state.interactionSpeaker = state.activeDynamicEvent.speaker;
     const source = options.avatar || options.avatars?.[0]
       ? { x: options.avatars?.length > 1 ? -0.8 : 0, z: -2.65 }
@@ -2456,6 +2667,27 @@ const OS = {
     return steps;
   },
 
+  getCircusControlBindings() {
+    const defaults = {
+      forward: 'z', backward: 's', left: 'q', right: 'd', interact: 'e',
+      sprint: 'shift', crouch: 'c', journal: 'j', map: 'm', light: 'f'
+    };
+    const stored = this.getCainOSSetting('fps-bindings', {});
+    return { ...defaults, ...(stored && typeof stored === 'object' ? stored : {}) };
+  },
+
+  getCircusControlAction(key) {
+    const normalized = String(key || '').toLowerCase();
+    const bindings = this.circusDoom?.controlBindings || this.getCircusControlBindings();
+    return Object.keys(bindings).find(action => bindings[action] === normalized) || null;
+  },
+
+  isCircusControlDown(action) {
+    const state = this.circusDoom;
+    const key = (state?.controlBindings || this.getCircusControlBindings())[action];
+    return !!state?.keys?.has(key);
+  },
+
   setupCircusFpsControls() {
     const state = this.circusDoom;
     const canvas = state?.canvas;
@@ -2465,6 +2697,10 @@ const OS = {
     if (!state || !canvas || !toolbar) return;
     this.updateCircusFpsToolbar();
     this.circusVerbClick = event => {
+      if (event.target.closest('#circus-fps-journal')) {
+        this.toggleCircusMissionJournal();
+        return;
+      }
       const button = event.target.closest('[data-fps-verb]');
       if (!button) return;
       this.setCircusInteractionVerb(button.getAttribute('data-fps-verb'));
@@ -2493,7 +2729,8 @@ const OS = {
     }
     this.circusMouseMove = event => {
       if (document.pointerLockElement !== canvas || !this.circusDoom || this.circusDoom.cinematic) return;
-      this.circusDoom.player.a += event.movementX * this.circusDoom.mouseSensitivity;
+      const direction = this.circusDoom.invertMouse ? -1 : 1;
+      this.circusDoom.player.a += event.movementX * this.circusDoom.mouseSensitivity * direction;
     };
     this.circusPointerChange = () => canvas.classList.toggle('pointer-locked', document.pointerLockElement === canvas);
     this.circusCanvasDoubleClick = () => canvas.requestPointerLock?.();
@@ -2734,8 +2971,21 @@ const OS = {
 
   auditCircusAdvancedGameplay() {
     const errors = [];
-    const campaignStages = this.getCircusFpsCampaignDefinition(1)?.stages?.length || 0;
-    if (campaignStages !== 8) errors.push(`CAMPAGNE PILOT: ${campaignStages}/8 actes`);
+    const campaigns = Array.from({ length: 9 }, (_, index) => this.getCircusFpsCampaignDefinition(index + 1)).filter(Boolean);
+    const campaignStages = campaigns.reduce((sum, campaign) => sum + campaign.stages.length, 0);
+    if (campaigns.length !== 9) errors.push(`CAMPAGNES: ${campaigns.length}/9 episodes`);
+    if (campaignStages !== 72) errors.push(`CAMPAGNES: ${campaignStages}/72 actes`);
+    const virtualActions = new Set(['visit', 'survive', 'give']);
+    campaigns.forEach(campaign => campaign.stages.forEach(stage => stage.requirements.forEach(requirement => {
+      if (virtualActions.has(requirement.action)) return;
+      if (requirement.action === 'talk') {
+        const available = this.getCircusZoneSprites(stage.zone).some(sprite => (sprite.avatar || sprite.type) === requirement.target);
+        if (!available) errors.push(`EP${campaign.episode} ${stage.zone}: PNJ ${requirement.target} absent`);
+        return;
+      }
+      const available = this.getCircusZoneProps(stage.zone).some(prop => prop.kind === requirement.target);
+      if (!available) errors.push(`EP${campaign.episode} ${stage.zone}: OBJET ${requirement.target} absent`);
+    })));
     const eventZones = [2, 3, 4, 5, 6, 8, 10, 12, 14, 31]
       .filter(zoneId => this.getCircusDynamicEventDefinitions(zoneId).length > 0).length;
     if (eventZones < 10) errors.push(`EVENEMENTS: ${eventZones}/10 zones`);
@@ -2762,7 +3012,7 @@ const OS = {
     ).length;
     if (navigationPath < 6) errors.push(`NAVIGATION: chemin test trop court (${navigationPath})`);
     if (!document.getElementById('tools-tab-creator')) errors.push('ATELIER: panneau HTML absent');
-    return { ok: errors.length === 0, errors, campaignStages, eventZones, activityTypes, customObjectives, directionalSectors, navigationPath };
+    return { ok: errors.length === 0, errors, campaignEpisodes: campaigns.length, campaignStages, eventZones, activityTypes, customObjectives, directionalSectors, navigationPath };
   },
 
   prepareCircusSimulationRoom() {
@@ -2914,22 +3164,23 @@ const OS = {
     const exits = state.scenes[state.currentZoneId]?.exits || [];
     if (!exits.length) return;
     if (key === 'enter' || key === ' ') {
+      const assist = state.interactionAssist ? 1.18 : 1;
       if (state.interactionChoices) {
         this.chooseCircusDialogueOption(0);
         return;
       }
       const character = this.getNearestCircusCharacter();
-      if (character && character.dist < 1.9 && Math.abs(character.angle) < 0.42) {
+      if (character && character.dist < 1.9 * assist && Math.abs(character.angle) < 0.42 * assist) {
         this.performCircusCharacterAction(character);
         return;
       }
       const prop = this.getNearestCircusProp();
-      if (prop && prop.dist < 2.15 && Math.abs(prop.angle) < 0.55) {
+      if (prop && prop.dist < 2.15 * assist && Math.abs(prop.angle) < 0.55 * assist) {
         this.performCircusPropAction(prop);
         return;
       }
       const door = this.getNearestUsableCircusDoor();
-      if (door && door.dist <= 1.8 && Math.abs(door.angle) < 0.72) {
+      if (door && door.dist <= 1.8 * assist && Math.abs(door.angle) < 0.72 * assist) {
         this.enterCircusSimulationExit(door.target);
       } else {
         state.interactionMessage = 'PORTE HORS DE PORTEE: approchez-vous et placez-la au centre du viseur.';
@@ -2965,14 +3216,15 @@ const OS = {
   getCircusFocusedHint() {
     const state = this.circusDoom;
     if (!state || state.interactionChoices) return null;
+    const assist = state.interactionAssist ? 1.18 : 1;
     const character = this.getNearestCircusCharacter();
-    if (character && character.dist < 2.2 && Math.abs(character.angle) < 0.48) {
+    if (character && character.dist < 2.2 * assist && Math.abs(character.angle) < 0.48 * assist) {
       return state.interactionVerb === 'give'
         ? `ENTREE / CLIC: donner ${state.heldItem?.name || 'un objet'} a ${character.name}`
         : `ENTREE / CLIC: parler a ${character.name}  |  1-3: choix rapides apres contact`;
     }
     const prop = this.getNearestCircusProp();
-    if (prop && prop.dist < 2.3 && Math.abs(prop.angle) < 0.58) {
+    if (prop && prop.dist < 2.3 * assist && Math.abs(prop.angle) < 0.58 * assist) {
       if (Number.isFinite(prop.target)) {
         const target = state.portals[prop.target];
         return target?.unlocked
@@ -2983,7 +3235,7 @@ const OS = {
       return `ENTREE / CLIC: ${verbLabel} ${this.getCircusPropName(prop, state.currentZoneId)}`;
     }
     const door = this.getNearestUsableCircusDoor();
-    if (door && door.dist < 2.0 && Math.abs(door.angle) < 0.82) {
+    if (door && door.dist < 2.0 * assist && Math.abs(door.angle) < 0.82 * assist) {
       const target = state.portals[door.target];
       return target?.unlocked ? `ENTREE / CLIC: passer vers ${target.short}` : `PORTE VERROUILLEE: ${target?.short || 'ZONE'}`;
     }
@@ -3260,6 +3512,7 @@ const OS = {
     state.interactionUntil = performance.now() + 5200;
     state.interactionChannel = 'dialogue';
     state.interactionSpeaker = sprite.name;
+    this.recordCircusMissionJournal('dialogue', sprite.name, line);
     state.interactionOrigin = { x: state.player.x, z: state.player.z, range: 1.6 };
     this.adjustCainOSRelation(avatar, 5);
     this.advanceCircusZoneChallenge('give', item.kind);
@@ -3297,6 +3550,7 @@ const OS = {
     const missionStatus = missionCompleted ? ' | MISSION LOCALE TERMINEE'
       : objective ? ` | MISSION ${objective.done}/${objective.total}` : '';
     state.interactionMessage = `[${discoveryStatus}${actionStatus}${missionStatus}] ${this.getCircusPropInteraction(prop, state.currentZoneId)}`;
+    this.recordCircusMissionJournal('object', this.getCircusPropName(prop, state.currentZoneId), state.interactionMessage);
     state.interactionUntil = performance.now() + 5600;
     state.interactionChoices = null;
     state.interactionOrigin = { x: state.player.x, z: state.player.z, range: 1.35 };
@@ -3512,8 +3766,9 @@ const OS = {
     state.interactionChoices = null;
     state.interactionUntil = performance.now() + 7200;
     state.interactionOrigin = { x: state.player.x, z: state.player.z, range: 1.45 };
-    state.interactionChannel = 'dialogue';
-    state.interactionSpeaker = choices.speaker || '';
+    state.interactionChannel = option.channel || 'dialogue';
+    state.interactionSpeaker = option.channel === 'system' ? 'CAINOS' : (choices.speaker || '');
+    this.recordCircusMissionJournal(option.channel === 'system' ? 'system' : 'dialogue', state.interactionSpeaker, option.response);
     if (choices.avatar) {
       this.adjustCainOSRelation(choices.avatar, 3);
     }
@@ -3604,6 +3859,7 @@ const OS = {
     if (progress >= 1) {
       state.portalTransition = null;
       state.interactionMessage = `ARRIVEE: ${state.portals[state.currentZoneId]?.name || 'aventure'}.`;
+      this.recordCircusMissionJournal('travel', 'Portail de Caine', state.interactionMessage);
       state.interactionUntil = performance.now() + 2600;
       state.interactionChannel = 'system';
       SoundManager.play(720, 0.16, 'triangle', 0.05);
@@ -3676,6 +3932,7 @@ const OS = {
     }
     if (transition.progress >= 1) {
       state.doorTransition = null;
+      this.recordCircusMissionJournal('travel', 'Passage de porte', `Arrivee dans ${state.portals[state.currentZoneId]?.name || `zone ${state.currentZoneId}`}.`);
       this.saveCircusPersistentWorldState();
       return false;
     }
@@ -3758,6 +4015,18 @@ const OS = {
       };
     }
     return null;
+  },
+
+  getCircusTimelineDialogueOption(sprite, zoneId) {
+    const campaign = this.getActiveCircusCampaignStatus();
+    if (!campaign || campaign.stage.zone !== zoneId) return null;
+    const avatar = sprite.avatar || sprite.type;
+    const involved = campaign.requirements.some(item => item.action === 'talk' && item.target === avatar);
+    return {
+      label: involved ? 'Scene actuelle' : 'Objectif actuel',
+      response: `CAINOS / RECONSTRUCTION JOUABLE EP${campaign.definition.episode}.${campaign.progress.stage + 1}: ${campaign.stage.guide}`,
+      channel: 'system'
+    };
   },
 
   getCircusCharacterChoices(sprite, zoneId, introLine) {
@@ -3871,6 +4140,7 @@ const OS = {
     const dialogueOptions = dialogueByAvatar[avatar] || dialogueByAvatar[sprite.type] || fallbackDialogue;
     const objectiveOption = this.getCircusObjectiveDialogueOption(sprite, zoneId);
     const contextualOption = this.getCircusContextualDialogueOption(sprite, zoneId);
+    const timelineOption = this.getCircusTimelineDialogueOption(sprite, zoneId);
     const followable = new Set(['pomni', 'ragatha', 'jax', 'kinger', 'gangle', 'zooble', 'gummigoo']);
     const followOption = followable.has(avatar) ? {
       label: this.circusDoom?.follower?.avatar === avatar ? 'Rester ici' : 'Me suivre',
@@ -3883,6 +4153,7 @@ const OS = {
       prompt: introLine,
       options: [
         ...(objectiveOption ? [objectiveOption] : []),
+        ...(timelineOption ? [timelineOption] : []),
         ...(contextualOption ? [contextualOption] : []),
         ...(followOption ? [followOption] : []),
         ...(specialOptions.slice(0, 1)),
@@ -4776,6 +5047,7 @@ const OS = {
     }
     state.routinePhase = timeline.phase;
     this.updateCircusDynamicEvents();
+    this.updateCircusEventDirector(dt);
     this.updateCircusSocialAI();
     if (state.cinematic) {
       this.updateCircusCinematicCamera(dt);
@@ -4792,8 +5064,8 @@ const OS = {
     const previousX = player.x;
     const previousZ = player.z;
     const turn = 2.35 * dt;
-    const crouching = keys.has('c');
-    const sprinting = !crouching && (keys.has('shift') || !!gamepad?.buttons?.[10]?.pressed);
+    const crouching = this.isCircusControlDown('crouch');
+    const sprinting = !crouching && (this.isCircusControlDown('sprint') || !!gamepad?.buttons?.[10]?.pressed);
     const vehicleBoost = performance.now() < (state.vehicleModeUntil || 0) ? 1.65 : 1;
     const speed = (crouching ? 1.25 : sprinting ? 3.35 : 2.15) * vehicleBoost * dt;
     if (keys.has('arrowleft')) player.a -= turn;
@@ -4813,14 +5085,14 @@ const OS = {
     };
 
     let move = -axis(1) * speed;
-    if (keys.has('arrowup') || keys.has('w') || keys.has('z')) move += speed;
-    if (keys.has('arrowdown') || keys.has('s')) move -= speed;
+    if (keys.has('arrowup') || this.isCircusControlDown('forward')) move += speed;
+    if (keys.has('arrowdown') || this.isCircusControlDown('backward')) move -= speed;
     if (move !== 0) {
       tryMove(player.x + Math.cos(player.a) * move, player.z + Math.sin(player.a) * move);
     }
     let strafe = axis(0) * speed;
-    if (keys.has('a') || keys.has('q')) strafe -= speed;
-    if (keys.has('d')) strafe += speed;
+    if (this.isCircusControlDown('left')) strafe -= speed;
+    if (this.isCircusControlDown('right')) strafe += speed;
     if (strafe !== 0) {
       tryMove(player.x + Math.cos(player.a + Math.PI / 2) * strafe, player.z + Math.sin(player.a + Math.PI / 2) * strafe);
     }
@@ -4837,6 +5109,7 @@ const OS = {
     this.updateCircusThreatGameplay(dt);
     this.updateCircusZoneGameplay(dt, movedDistance);
     this.updateCircusActivity(dt, movedDistance);
+    this.updateCircusCampaignTimedProgress(dt);
     this.advanceCircusCustomAdventure('move', 'player', movedDistance);
     this.advanceCircusCustomAdventure('survive', 'timer', dt);
     let explored = state.exploredCells.get(state.currentZoneId);
@@ -4963,6 +5236,7 @@ const OS = {
     this.drawCircusCustomAdventureHud(ctx, w, h, state);
     this.drawCircusActivityHud(ctx, w, h, state);
     if (!state.cinematic && state.hudVisible) this.drawCircusZoneObjectiveHud(ctx, w, h, state);
+    this.drawCircusMissionJournal(ctx, w, h, state);
     if (!state.cinematic) this.drawCircusConversationOverlay(ctx, w, h, state);
     this.drawCircusSimulationReticle(ctx, w, h, zone);
     if (state.minimapVisible) this.drawCircusRoomMinimap(ctx, w, h, state, zone);
@@ -6443,11 +6717,14 @@ const OS = {
 
   getCircusZoneProps(zoneId) {
     this.circusZonePropsCache = this.circusZonePropsCache || new Map();
-    if (this.circusZonePropsCache.has(zoneId)) return this.circusZonePropsCache.get(zoneId);
+    if (this.circusZonePropsCache.has(zoneId)) return [
+      ...this.circusZonePropsCache.get(zoneId),
+      ...this.getCircusCustomAdventureProps(zoneId)
+    ];
     const bedroomProps = this.getCircusBedroomProps(zoneId);
     if (bedroomProps) {
       this.circusZonePropsCache.set(zoneId, bedroomProps);
-      return bedroomProps;
+      return [...bedroomProps, ...this.getCircusCustomAdventureProps(zoneId)];
     }
     const basePillars = [
       { kind: 'pillar', x: -2.9, z: -1.4, color: '#ffd84a' },
@@ -6542,6 +6819,19 @@ const OS = {
       ...this.getCircusExtraZoneProps(zoneId),
       ...this.getCircusArchitectureProps(zoneId)
     ];
+    const campaignPropAdditions = {
+      18: [{ kind: 'memory', x: 0.75, z: -1.5, color: '#7df0ff', label: 'Brain scan fragment' }],
+      26: [{ kind: 'console', x: 2.35, z: -1.45, color: '#7df0ff', label: 'Suggestion console' }],
+      31: [
+        { kind: 'gloinknest', x: 0, z: -3.15, color: '#ff7aa8', label: 'Gloink Queen nest' },
+        { kind: 'zooblepart', x: -1.6, z: -1.45, color: '#ff4fb8', label: 'Piece de Zooble', portable: true }
+      ],
+      37: [{ kind: 'archive', x: 2.2, z: -1.6, color: '#7df0ff', label: 'Spudsy archive' }],
+      41: [{ kind: 'memory', x: 0.65, z: -1.45, color: '#c875ff', label: 'Human memory fragment' }]
+    };
+    (campaignPropAdditions[zoneId] || []).forEach(addition => {
+      if (!props.some(prop => prop.kind === addition.kind && prop.label === addition.label)) props.push(addition);
+    });
     if (zoneId === 2) {
       const adventurePortal = this.getCircusCainePortalProp();
       if (adventurePortal) props.push(adventurePortal);
@@ -6553,7 +6843,27 @@ const OS = {
       }
     }
     this.circusZonePropsCache.set(zoneId, props);
-    return props;
+    return [...props, ...this.getCircusCustomAdventureProps(zoneId)];
+  },
+
+  getCircusCustomAdventureProps(zoneId) {
+    const adventure = this.circusDoom?.customAdventure;
+    if (!adventure?.active || adventure.complete || adventure.zoneId !== zoneId) return [];
+    const packs = {
+      markers: [
+        { kind: 'gridnode', x: -2.4, z: -2.0, color: '#7df0ff', label: 'Balise atelier' },
+        { kind: 'gridnode', x: 2.4, z: -2.0, color: '#ff4fb8', label: 'Balise atelier' }
+      ],
+      crates: [
+        { kind: 'crate', x: -2.3, z: -2.2, color: '#8b5a3c', label: 'Caisse atelier', portable: true },
+        { kind: 'barrel', x: 2.25, z: -2.0, color: '#56505f', label: 'Accessoire atelier' }
+      ],
+      lights: [
+        { kind: 'spotlight', x: -2.1, z: -2.3, color: '#fff1a8', label: 'Projecteur atelier' },
+        { kind: 'spotlight', x: 2.1, z: -2.3, color: '#7df0ff', label: 'Projecteur atelier' }
+      ]
+    };
+    return (packs[adventure.propPack] || []).map((prop, index) => ({ ...prop, customAdventure: true, customId: `${adventure.id}:prop:${index}` }));
   },
 
   getCircusArchitectureProps(zoneId) {
@@ -8218,7 +8528,8 @@ const OS = {
         { name: 'Caine', type: 'caine', avatar: 'caine', x: 0, z: -2.55, color: '#ffd84a' },
         { name: 'Bubble', type: 'bubble', avatar: 'bubble', x: 1.35, z: -2.15, color: '#f7f7ff' },
         { name: 'Ribbit Dream Signal', type: 'npc', avatar: 'ribbit', x: 2.35, z: -1.45, color: '#63d35f' },
-        { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -2.75, z: -1.35, color: '#d9d0a2' }
+        { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -2.75, z: -1.35, color: '#d9d0a2' },
+        { name: 'Jax', type: 'jax', avatar: 'jax', x: 2.85, z: -2.75, color: '#8a4fd6' }
       ],
       19: [
         { name: 'Ribbit', type: 'npc', avatar: 'ribbit', x: -3.35, z: -1.55, color: '#4ee77e' },
@@ -8361,6 +8672,37 @@ const OS = {
     return sprites;
   },
 
+  separateCircusNpcCrowd(sprites, state) {
+    const result = sprites.map(sprite => ({ ...sprite }));
+    for (let pass = 0; pass < 2; pass++) {
+      for (let i = 0; i < result.length; i++) {
+        const avatarA = result[i].avatar || result[i].type;
+        if (avatarA === 'gloinkqueenscale') continue;
+        const a = this.resolveCircusWorldPoint(result[i], state);
+        for (let j = i + 1; j < result.length; j++) {
+          const avatarB = result[j].avatar || result[j].type;
+          if (avatarB === 'gloinkqueenscale') continue;
+          const b = this.resolveCircusWorldPoint(result[j], state);
+          const dx = b.x - a.x;
+          const dz = b.z - a.z;
+          const distance = Math.hypot(dx, dz);
+          if (distance >= 0.72) continue;
+          const push = (0.72 - Math.max(0.01, distance)) * 0.5;
+          const nx = distance > 0.01 ? dx / distance : Math.cos(j * 1.7);
+          const nz = distance > 0.01 ? dz / distance : Math.sin(j * 1.7);
+          if (result[j].space === 'world') {
+            result[j].x += nx * push;
+            result[j].z += nz * push;
+          } else {
+            result[j].x += nx * push;
+            result[j].z += nz * push;
+          }
+        }
+      }
+    }
+    return result;
+  },
+
   getCircusTimelineContext() {
     const progress = (typeof EpisodeManager !== 'undefined') ? EpisodeManager.getProgress() : [];
     const selected = Number(typeof EpisodeManager !== 'undefined' ? EpisodeManager.currentEpisode : NaN);
@@ -8465,7 +8807,7 @@ const OS = {
         routine: 'follow'
       });
     }
-    return sprites;
+    return this.separateCircusNpcCrowd(sprites, state);
   },
 
   getCircusSpriteRoutine(sprite, zoneId) {
@@ -8546,6 +8888,7 @@ const OS = {
       animated.z += Math.sin(now * 1.8 + phase) * 0.09 * awareness;
       animated.behavior = 'curieux';
     }
+    animated.bob = (animated.bob || 0) * (Number.isFinite(state.motionIntensity) ? state.motionIntensity : 1);
     return animated;
   },
 
@@ -9463,7 +9806,7 @@ const OS = {
       });
     });
 
-    ['comfort-reading', 'line-pause', 'easy-minigames', 'reader-only', 'crt-readable', 'fps-minimap', 'fps-hud'].forEach(key => {
+    ['comfort-reading', 'line-pause', 'easy-minigames', 'reader-only', 'crt-readable', 'fps-minimap', 'fps-hud', 'fps-invert-mouse', 'fps-interaction-assist'].forEach(key => {
       const input = document.getElementById(`setting-${key}`);
       if (!input) return;
       input.checked = !!this.getCainOSSetting(key, key === 'fps-minimap' || key === 'fps-hud');
@@ -9472,20 +9815,43 @@ const OS = {
         this.applyCainOSSettings();
         if (this.circusDoom && key === 'fps-minimap') this.circusDoom.minimapVisible = input.checked;
         if (this.circusDoom && key === 'fps-hud') this.circusDoom.hudVisible = input.checked;
+        if (this.circusDoom && key === 'fps-invert-mouse') this.circusDoom.invertMouse = input.checked;
+        if (this.circusDoom && key === 'fps-interaction-assist') this.circusDoom.interactionAssist = input.checked;
         this.renderCainOSTools();
       });
     });
 
-    ['audio-ambience', 'audio-glitch', 'fps-fov', 'fps-sensitivity'].forEach(key => {
+    ['audio-ambience', 'audio-glitch', 'fps-fov', 'fps-sensitivity', 'fps-motion-intensity'].forEach(key => {
       const input = document.getElementById(`setting-${key}`);
       if (!input) return;
-      const fallback = key === 'audio-ambience' ? 70 : key === 'audio-glitch' ? 45 : key === 'fps-fov' ? 64 : 45;
+      const fallback = key === 'audio-ambience' ? 70 : key === 'audio-glitch' ? 45 : key === 'fps-fov' ? 64 : key === 'fps-motion-intensity' ? 100 : 45;
       input.value = String(this.getCainOSSetting(key, fallback));
       input.addEventListener('input', () => {
         this.setCainOSSetting(key, Number(input.value));
         this.applyCainOSSettings();
         if (this.circusDoom && key === 'fps-fov') this.circusDoom.fov = Number(input.value) * Math.PI / 180;
         if (this.circusDoom && key === 'fps-sensitivity') this.circusDoom.mouseSensitivity = Number(input.value) / 10000;
+        if (this.circusDoom && key === 'fps-motion-intensity') this.circusDoom.motionIntensity = Number(input.value) / 100;
+      });
+    });
+
+    const bindingOptions = [
+      ['z', 'Z'], ['w', 'W'], ['s', 'S'], ['q', 'Q'], ['a', 'A'], ['d', 'D'], ['e', 'E'],
+      ['f', 'F'], ['c', 'C'], ['j', 'J'], ['m', 'M'], ['shift', 'MAJ'], ['r', 'R'], ['x', 'X'], ['v', 'V']
+    ];
+    const bindings = this.getCircusControlBindings();
+    document.querySelectorAll('[data-fps-binding]').forEach(select => {
+      const action = select.getAttribute('data-fps-binding');
+      select.title = `Choisir la touche pour l action FPS: ${action}.`;
+      select.innerHTML = bindingOptions.map(([value, label]) => `<option value="${value}" ${bindings[action] === value ? 'selected' : ''}>${label}</option>`).join('');
+      select.addEventListener('change', () => {
+        const next = this.getCircusControlBindings();
+        Object.keys(next).forEach(other => {
+          if (other !== action && next[other] === select.value) next[other] = bindings[other];
+        });
+        next[action] = select.value;
+        this.setCainOSSetting('fps-bindings', next);
+        if (this.circusDoom) this.circusDoom.controlBindings = next;
       });
     });
 
@@ -9633,6 +9999,17 @@ const OS = {
       this.renderCainOSTools();
       setStatus('Reset total local effectue.');
     });
+    document.getElementById('save-slot-list')?.addEventListener('click', event => {
+      const button = event.target.closest('[data-save-slot-action]');
+      if (!button) return;
+      const slot = Number(button.getAttribute('data-save-slot'));
+      const action = button.getAttribute('data-save-slot-action');
+      if (action === 'save') this.saveCainOSProfileSlot(slot);
+      if (action === 'load') this.loadCainOSProfileSlot(slot);
+      if (action === 'delete') this.deleteCainOSProfileSlot(slot);
+      this.renderCainOSSaveSlots();
+    });
+    this.renderCainOSSaveSlots();
   },
 
   resetCainOSKeys(pattern) {
@@ -9642,7 +10019,7 @@ const OS = {
   },
 
   exportCainOSSave() {
-    const keys = Object.keys(localStorage).filter(key => /^tadc_|^cainos_/.test(key));
+    const keys = Object.keys(localStorage).filter(key => /^tadc_|^cainos_/.test(key) && key !== 'cainos_save_slots');
     return {
       schema: 'CainOS_SAVE_V1',
       exportedAt: new Date().toISOString(),
@@ -9661,6 +10038,61 @@ const OS = {
     this.updateWackyWatchCastUI();
     this.renderCainOSJournal();
     this.renderCainOSTools();
+  },
+
+  getCainOSProfileSlots() {
+    const slots = this.getCainOSStorage('save_slots', []);
+    return Array.from({ length: 3 }, (_, index) => slots[index] || null);
+  },
+
+  saveCainOSProfileSlot(index) {
+    if (!Number.isInteger(index) || index < 0 || index > 2) return;
+    this.saveCircusPersistentWorldState();
+    const slots = this.getCainOSProfileSlots();
+    const progress = typeof EpisodeManager !== 'undefined' ? EpisodeManager.getProgress() : [];
+    slots[index] = {
+      savedAt: new Date().toISOString(),
+      episode: progress.length ? Math.max(...progress.filter(ep => ep <= 9)) : 0,
+      zone: this.circusDoom?.currentZoneId || this.getCircusPersistentWorldState().currentZoneId,
+      save: this.exportCainOSSave()
+    };
+    this.setCainOSStorage('save_slots', slots);
+    SoundManager.playWin();
+  },
+
+  loadCainOSProfileSlot(index) {
+    const slot = this.getCainOSProfileSlots()[index];
+    if (!slot?.save) return SoundManager.playError();
+    const preservedSlots = localStorage.getItem('cainos_save_slots');
+    this.resetCainOSKeys(/^tadc_|^cainos_/);
+    if (preservedSlots) localStorage.setItem('cainos_save_slots', preservedSlots);
+    this.importCainOSSave(slot.save);
+    EpisodeManager.updateLocksUI?.();
+    SoundManager.playWin();
+  },
+
+  deleteCainOSProfileSlot(index) {
+    const slots = this.getCainOSProfileSlots();
+    slots[index] = null;
+    this.setCainOSStorage('save_slots', slots);
+    SoundManager.playClick();
+  },
+
+  renderCainOSSaveSlots() {
+    const container = document.getElementById('save-slot-list');
+    if (!container) return;
+    container.innerHTML = this.getCainOSProfileSlots().map((slot, index) => `
+      <article class="save-slot-card">
+        <strong>PROFIL ${index + 1}</strong>
+        <span>${slot ? `EP${slot.episode} / ZONE ${slot.zone}` : 'VIDE'}</span>
+        <span>${slot ? new Date(slot.savedAt).toLocaleString('fr-FR') : 'Aucune sauvegarde'}</span>
+        <div class="save-slot-actions">
+          <button class="retro-btn" data-save-slot-action="save" data-save-slot="${index}">SAUVER</button>
+          <button class="retro-btn" data-save-slot-action="load" data-save-slot="${index}" ${slot ? '' : 'disabled'}>CHARGER</button>
+          <button class="retro-btn" data-save-slot-action="delete" data-save-slot="${index}" ${slot ? '' : 'disabled'}>VIDER</button>
+        </div>
+      </article>
+    `).join('');
   },
 
   getCainOSVisitedZones() {
@@ -10054,6 +10486,9 @@ const OS = {
     const title = String(document.getElementById('creator-title')?.value || '').trim().slice(0, 42) || 'Aventure sans titre';
     const zoneId = Number(document.getElementById('creator-world')?.value || 3);
     const cast = [...document.querySelectorAll('[name="creator-cast"]:checked')].map(input => input.value).slice(0, 5);
+    const variants = Object.fromEntries([...document.querySelectorAll('[data-creator-variant]')].map(select => [
+      select.getAttribute('data-creator-variant'), select.value
+    ]));
     const adventure = {
       id: `adv_${Date.now().toString(36)}`,
       title,
@@ -10062,6 +10497,10 @@ const OS = {
       objective: document.getElementById('creator-objective')?.value || 'explore',
       threat: document.getElementById('creator-threat')?.value || 'none',
       costume: document.getElementById('creator-costume')?.value || 'standard',
+      variants,
+      layout: document.getElementById('creator-layout')?.value || 'line',
+      propPack: document.getElementById('creator-props')?.value || 'markers',
+      entry: document.getElementById('creator-entry')?.value || 'center',
       atmosphere: document.getElementById('creator-atmosphere')?.value || 'circus',
       createdAt: new Date().toISOString(),
       completedCount: 0,
@@ -10102,6 +10541,7 @@ const OS = {
       document.body.dataset.fpsCustomAdventureId = adventure.id;
       state.activeCampaign = null;
       this.setCircusSimulationZone(adventure.zoneId, true);
+      state.player.x += adventure.entry === 'left' ? -2 : adventure.entry === 'right' ? 2 : 0;
       this.startCircusDynamicEvent('custom-adventure', {
         speaker: 'Caine',
         avatar: 'caine',
@@ -10134,15 +10574,24 @@ const OS = {
     const purchasedSkins = adventure.costume === 'fan' ? this.getCainOSStorage('purchased_wacky_skins', []) : [];
     const colors = { pomni: '#e53935', ragatha: '#d64545', jax: '#8a4fd6', kinger: '#d9d0a2', gangle: '#f7f7f7', zooble: '#ff4fb8', caine: '#ffd84a' };
     const cast = adventure.cast.map((baseAvatar, index) => {
-      const avatar = this.getCircusCustomAdventureAvatar(baseAvatar, adventure.costume, castData, purchasedSkins);
+      const selectedVariant = adventure.variants?.[baseAvatar];
+      const avatar = selectedVariant && castData[selectedVariant] && this.isWackyProfileUnlocked(selectedVariant)
+        ? selectedVariant
+        : this.getCircusCustomAdventureAvatar(baseAvatar, adventure.costume, castData, purchasedSkins);
       const profile = castData[baseAvatar] || castData[avatar] || {};
+      const count = adventure.cast.length;
+      const positions = adventure.layout === 'circle'
+        ? { x: Math.cos(index / Math.max(1, count) * Math.PI * 2) * 2.1, z: -2.8 + Math.sin(index / Math.max(1, count) * Math.PI * 2) * 1.2 }
+        : adventure.layout === 'scattered'
+          ? { x: ((index * 37) % 5 - 2) * 0.95, z: -1.7 - ((index * 53) % 4) * 0.65 }
+          : { x: (index - (count - 1) / 2) * 1.18, z: -2.2 - (index % 2) * 0.55 };
       return {
         name: profile.name || baseAvatar.toUpperCase(),
         type: avatar,
         avatar,
         baseAvatar,
-        x: (index - (adventure.cast.length - 1) / 2) * 1.18,
-        z: -2.2 - (index % 2) * 0.55,
+        x: positions.x,
+        z: positions.z,
         color: profile.color || colors[baseAvatar] || '#fff1a8',
         routine: index % 2 ? 'pace' : 'patrol',
         customAdventure: true
@@ -10251,6 +10700,13 @@ const OS = {
     ctx.restore();
   },
 
+  getCainOSCreatorVariantOptions(baseAvatar) {
+    const cast = this.getWackyCastData();
+    const variants = (this.getWackyVariantGroups()[baseAvatar] || [baseAvatar])
+      .filter(id => cast[id] && this.isWackyProfileUnlocked(id));
+    return variants.map(id => `<option value="${id}">${this.escapeHTML(cast[id]?.name || id.toUpperCase())}</option>`).join('');
+  },
+
   renderCainOSAdventureCreator() {
     const creatorEl = document.getElementById('tools-tab-creator');
     if (!creatorEl) return;
@@ -10274,8 +10730,12 @@ const OS = {
         <label><span>MENACE</span><select id="creator-threat"><option value="none">Aucune</option><option value="gloinks">Gloinks</option><option value="kaufmo">Kaufmo abstrait</option><option value="monster">Monstre Mildenhall</option></select></label>
         <label><span>VARIANTES</span><select id="creator-costume"><option value="standard">Standard</option><option value="baseball">Baseball</option><option value="japanese">Japanese</option><option value="shadow">Shadow</option><option value="fan">Fan / achetees</option></select></label>
         <label><span>AMBIANCE</span><select id="creator-atmosphere"><option value="circus">Cirque</option><option value="comedy">Comedie</option><option value="horror">Horreur</option><option value="memory">Memoire</option></select></label>
+        <label><span>FORMATION</span><select id="creator-layout"><option value="line">Ligne</option><option value="circle">Cercle</option><option value="scattered">Dispersee</option></select></label>
+        <label><span>ACCESSOIRES</span><select id="creator-props"><option value="markers">Balises</option><option value="crates">Caisses</option><option value="lights">Projecteurs</option><option value="none">Aucun</option></select></label>
+        <label><span>ENTREE</span><select id="creator-entry"><option value="center">Centre</option><option value="left">Gauche</option><option value="right">Droite</option></select></label>
       </div>
-      <fieldset class="creator-cast"><legend>GROUPE (5 MAX)</legend>${cast.map((avatar, index) => `<label><input type="checkbox" name="creator-cast" value="${avatar}" ${index < 3 ? 'checked' : ''}><span>${avatar.toUpperCase()}</span></label>`).join('')}</fieldset>
+      <fieldset class="creator-cast"><legend>GROUPE ET VARIANTE (5 MAX)</legend>${cast.map((avatar, index) => `<label><input type="checkbox" name="creator-cast" value="${avatar}" ${index < 3 ? 'checked' : ''}><span>${avatar.toUpperCase()}</span><select data-creator-variant="${avatar}" title="Variante debloquee de ${avatar}">${this.getCainOSCreatorVariantOptions(avatar)}</select></label>`).join('')}</fieldset>
+      <div id="creator-preview" class="creator-preview">${cast.slice(0, 3).map(avatar => `<span title="${avatar}">${this.getPixelAvatarSvg(avatar, 42)}<b>${avatar.toUpperCase()}</b></span>`).join('')}</div>
       <button class="retro-btn creator-build" data-tools-action="create-adventure">COMPILER L AVENTURE</button>
       <div class="tools-section-title">Aventures compilees</div>
       <div class="creator-list">${adventures.length ? adventures.map(adventure => {
@@ -10283,6 +10743,19 @@ const OS = {
         return `<article class="creator-card"><header><strong>${this.escapeHTML(adventure.title)}</strong><span>NON CANON</span></header><p>${this.escapeHTML(objective.label)} dans ${this.escapeHTML(this.getCircusFreeWorlds().find(world => world.target === adventure.zoneId)?.label || `ZONE ${adventure.zoneId}`)}.</p><small>${adventure.cast.map(name => name.toUpperCase()).join(' + ')} | ${adventure.costume.toUpperCase()} | TERMINEE ${adventure.completedCount || 0}x</small><div><button class="tools-pill tools-action" data-tools-action="launch-adventure" data-adventure-id="${adventure.id}">LANCER FPS</button><button class="tools-pill tools-action" data-tools-action="delete-adventure" data-adventure-id="${adventure.id}">SUPPRIMER</button></div></article>`;
       }).join('') : '<p class="tools-note">Aucune aventure compilee.</p>'}</div>
     `;
+    creatorEl.querySelectorAll('input, select').forEach(input => input.addEventListener('change', () => this.updateCainOSAdventurePreview()));
+  },
+
+  updateCainOSAdventurePreview() {
+    const preview = document.getElementById('creator-preview');
+    if (!preview) return;
+    const castData = this.getWackyCastData();
+    const selected = [...document.querySelectorAll('[name="creator-cast"]:checked')].slice(0, 5);
+    preview.innerHTML = selected.map(input => {
+      const base = input.value;
+      const variant = document.querySelector(`[data-creator-variant="${base}"]`)?.value || base;
+      return `<span title="${this.escapeHTML(castData[variant]?.name || variant)}">${this.getPixelAvatarSvg(variant, 42)}<b>${this.escapeHTML((castData[variant]?.name || variant).toUpperCase())}</b></span>`;
+    }).join('') || '<em>Selectionnez au moins un personnage.</em>';
   },
 
   renderCainOSTools() {

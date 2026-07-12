@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "node scripts/build-static.js",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "audit": "node scripts/audit-runtime.mjs",
+    "qa": "node --check app.js && node --check episodes.js && node scripts/audit-runtime.mjs && node scripts/audit-game-contract.mjs && node scripts/build-static.js"
   },
   "devDependencies": {
     "vite": "^5.0.0"
