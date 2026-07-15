@@ -10,6 +10,8 @@ const canonPackGUrl = new URL('../assets/images/cainos-pixel-cast-sheet-canon-np
 const canonPackHUrl = new URL('../assets/images/cainos-pixel-cast-sheet-canon-npc-pack-h.png', import.meta.url);
 const canonPackIUrl = new URL('../assets/images/cainos-pixel-cast-sheet-canon-npc-pack-i.png', import.meta.url);
 const canonPackJUrl = new URL('../assets/images/cainos-pixel-cast-sheet-canon-npc-pack-j.png', import.meta.url);
+const canonPackKUrl = new URL('../assets/images/cainos-pixel-cast-sheet-canon-npc-pack-k.png', import.meta.url);
+const canonPackLUrl = new URL('../assets/images/cainos-pixel-cast-sheet-canon-npc-pack-l.png', import.meta.url);
 
 const failures = [];
 const requireMarker = (source, marker, label = marker) => {
@@ -38,6 +40,14 @@ for (let episode = 1; episode <= 9; episode++) {
   'PAINTED_MASKS',
   'ZOOBLE_PARTS_MIRRORS',
   'LAUGHING_SHADOWS',
+  'ABSTRACTED_KAUFMO',
+  'CELLAR_ABSTRACTION',
+  'AQUATIC_ABSTRACTION',
+  'FLOATING_WORM',
+  'CREDITS_FISH',
+  'STABBED_RAGDOLLS',
+  'COILED_CENTIPEDES',
+  'UNUSED_BRAINSCANS',
   'Abigail Brooks / Abby',
   'Suzie J. Ackerman',
   'Zoey Raghavan',
@@ -77,6 +87,8 @@ for (let episode = 1; episode <= 9; episode++) {
   "canonH: 'assets/images/cainos-pixel-cast-sheet-canon-npc-pack-h.png'",
   "canonI: 'assets/images/cainos-pixel-cast-sheet-canon-npc-pack-i.png'",
   "canonJ: 'assets/images/cainos-pixel-cast-sheet-canon-npc-pack-j.png'",
+  "canonK: 'assets/images/cainos-pixel-cast-sheet-canon-npc-pack-k.png'",
+  "canonL: 'assets/images/cainos-pixel-cast-sheet-canon-npc-pack-l.png'",
   'candyguardcyan: [0, 0]',
   'gummyworm: [3, 0]',
   'barrelmonkey: [4, 0]',
@@ -89,7 +101,7 @@ for (let episode = 1; episode <= 9; episode++) {
   'stupidburgermannequin: [2, 0]',
   'cerealmannequin: [3, 0]',
   'bonepastor: [0, 0]',
-  'fourthcrocodile: [1, 0]',
+  'fourthcrocodile: [5, 0]',
   'ragathamothershadow: [2, 0]',
   'paintedmasks: [3, 0]',
   'zoobleparts: [4, 0]',
@@ -105,12 +117,24 @@ for (let episode = 1; episode <= 9; episode++) {
   'abigailfriendone: [2, 0]',
   'abigailfriendtwo: [3, 0]',
   'bestchildren: [4, 0]',
+  'abstractedkaufmo: [2, 0]',
+  'cellarabstraction: [3, 0]',
+  'aquaticabstraction: [4, 0]',
+  'floatingworm: [0, 0]',
+  'creditsfish: [1, 0]',
+  'stabbedragdolls: [2, 0]',
+  'coiledcentipedes: [3, 0]',
+  'unusedbrainscans: [4, 0]',
   "kind: 'lorebillboard', avatar: 'paintedmasks'",
   "kind: 'lorebillboard', avatar: 'zoobleparts'",
   "kind: 'lorebillboard', avatar: 'abigailbrooks'",
   "kind: 'lorebillboard', avatar: 'leeroymateo'",
   "kind: 'lorebillboard', avatar: 'jaxfather'",
   "kind: 'lorebillboard', avatar: 'bestchildren'",
+  "kind: 'lorebillboard', avatar: 'stabbedragdolls'",
+  "kind: 'lorebillboard', avatar: 'coiledcentipedes'",
+  "kind: 'lorebillboard', avatar: 'unusedbrainscans'",
+  "kind: 'lorebillboard', avatar: 'creditsfish'",
   'drawCircusMildenhallFly',
   "id: 'mildenhall_fly'",
   "typeof EpisodeManager.stopActiveGame === 'function'",
@@ -159,12 +183,16 @@ for (let episode = 2; episode <= 9; episode++) {
   '.pixel-sheet-avatar-canon-h',
   '.pixel-sheet-avatar-canon-i',
   '.pixel-sheet-avatar-canon-j',
+  '.pixel-sheet-avatar-canon-k',
+  '.pixel-sheet-avatar-canon-l',
   '.avatar-ce-c5-r0',
   '.avatar-cf-c5-r0',
   '.avatar-cg-c3-r0',
   '.avatar-ch-c5-r0',
   '.avatar-ci-c5-r0',
-  '.avatar-cj-c4-r0'
+  '.avatar-cj-c4-r0',
+  '.avatar-ck-c5-r0',
+  '.avatar-cl-c4-r0'
 ].forEach(marker => requireMarker(css, marker));
 
 if (!fs.existsSync(canonPackEUrl)) {
@@ -203,6 +231,18 @@ if (!fs.existsSync(canonPackJUrl)) {
   failures.push('Planche canon NPC pack J vide ou tronquee');
 }
 
+if (!fs.existsSync(canonPackKUrl)) {
+  failures.push('Planche canon NPC pack K absente');
+} else if (fs.statSync(canonPackKUrl).size < 100000) {
+  failures.push('Planche canon NPC pack K vide ou tronquee');
+}
+
+if (!fs.existsSync(canonPackLUrl)) {
+  failures.push('Planche canon NPC pack L absente');
+} else if (fs.statSync(canonPackLUrl).size < 100000) {
+  failures.push('Planche canon NPC pack L vide ou tronquee');
+}
+
 const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map(match => match[1]);
 const duplicateIds = [...new Set(ids.filter((id, index) => ids.indexOf(id) !== index))];
 if (duplicateIds.length) failures.push(`ID HTML DUPLIQUES: ${duplicateIds.join(', ')}`);
@@ -217,6 +257,9 @@ if (episodes.includes('speaker: "CANDY KINGDOM NPC"')) failures.push('Replique d
 if (!episodes.includes("eventId === 'mildenhall_fly'")) failures.push('Bourdonnement Mildenhall absent du moteur audio');
 if (episodes.includes('Blue AI (reconstruction CainOS)')) failures.push('Ancienne classification non canonique de Blue AI encore presente');
 if (episodes.includes('TRAINING_VIDEO: {') || episodes.includes('STRANGE_CUSTOMER: {')) failures.push('Faux profils de speakers EP4 encore presents');
+if (episodes.includes('Easter egg squelettique visible dans Mildenhall Manor')) failures.push('Bone Pastor encore presente comme canon EP3');
+if (app.includes("avatar: 'bonepastor', x:")) failures.push('Bone Pastor encore presente comme PNJ FPS');
+if (app.includes("avatar: 'spudsycustomer', x:")) failures.push('Faux client Spudsy encore present comme PNJ FPS');
 
 if (failures.length) {
   console.error(`AUDIT CAINOS: ECHEC (${failures.length})`);

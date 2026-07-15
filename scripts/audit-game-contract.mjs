@@ -96,8 +96,6 @@ const canonPackGProfileKeys = {
   cerealmannequin: 'SPUDSY_CEREAL_CUSTOMER'
 };
 const canonPackHSpritePlacements = {
-  bonepastor: 8,
-  fourthcrocodile: 16,
   ragathamothershadow: 16,
   laughingshadows: 16
 };
@@ -106,12 +104,39 @@ const canonPackHPropPlacements = {
   zoobleparts: 16
 };
 const canonPackHProfileKeys = {
-  bonepastor: 'BONE_PASTOR',
-  fourthcrocodile: 'FOURTH_CROCODILE',
   ragathamothershadow: 'FEMININE_SHADOW',
   paintedmasks: 'PAINTED_MASKS',
   zoobleparts: 'ZOOBLE_PARTS_MIRRORS',
   laughingshadows: 'LAUGHING_SHADOWS'
+};
+const canonPackKSpritePlacements = {
+  sun: 3,
+  moon: 3,
+  abstractedkaufmo: 4,
+  cellarabstraction: 4,
+  aquaticabstraction: 22,
+  fourthcrocodile: 16
+};
+const canonPackKProfileKeys = {
+  sun: 'SUN_NPC',
+  moon: 'MOON',
+  abstractedkaufmo: 'ABSTRACTED_KAUFMO',
+  cellarabstraction: 'CELLAR_ABSTRACTION',
+  aquaticabstraction: 'AQUATIC_ABSTRACTION',
+  fourthcrocodile: 'FOURTH_CROCODILE'
+};
+const canonPackLProfileKeys = {
+  floatingworm: 'FLOATING_WORM',
+  creditsfish: 'CREDITS_FISH',
+  stabbedragdolls: 'STABBED_RAGDOLLS',
+  coiledcentipedes: 'COILED_CENTIPEDES',
+  unusedbrainscans: 'UNUSED_BRAINSCANS'
+};
+const canonPackLPropPlacements = {
+  creditsfish: 19,
+  stabbedragdolls: 16,
+  coiledcentipedes: 16,
+  unusedbrainscans: 16
 };
 const canonPackIProfileKeys = {
   abigailbrooks: 'ABIGAIL',
@@ -213,6 +238,34 @@ for (const [avatar, zone] of Object.entries(canonPackHPropPlacements)) {
   if (!portrait.includes('pixel-sheet-avatar-canon-h')) failures.push(`PACK H: portrait ${avatar} hors planche H`);
 }
 
+for (const [avatar, zone] of Object.entries(canonPackKSpritePlacements)) {
+  const sprite = OS.getCircusZoneSprites(zone).find(entry => (entry.avatar || entry.type) === avatar);
+  if (!sprite) failures.push(`PACK K: ${avatar} absent zone ${zone}`);
+  if (['abstractedkaufmo', 'cellarabstraction', 'aquaticabstraction'].includes(avatar) && !sprite?.silent) {
+    failures.push(`PACK K: abstraction ${avatar} ne doit pas parler`);
+  }
+  if (['cellarabstraction', 'aquaticabstraction'].includes(avatar) && sprite?.threatActive !== false) {
+    failures.push(`PACK K: abstraction captive ${avatar} ne doit pas poursuivre le joueur`);
+  }
+  const profileKey = OS.getCircusCharacterProfileKey({ avatar });
+  if (profileKey !== canonPackKProfileKeys[avatar]) failures.push(`PACK K: profil ${avatar} incorrect (${profileKey})`);
+  if (!OS.getPixelAvatarSvg(avatar, 48).includes('pixel-sheet-avatar-canon-k')) failures.push(`PACK K: portrait ${avatar} hors planche K`);
+  if (OS.getWackyProvenanceKind(avatar) !== 'canon-visual') failures.push(`PACK K: provenance ${avatar} incorrecte`);
+}
+
+const floatingWorm = OS.getCircusZoneSprites(18).find(entry => entry.avatar === 'floatingworm');
+if (!floatingWorm?.silent || floatingWorm?.loreGate?.episode !== 9) failures.push('PACK L: Floating Worm absent ou non silencieux');
+for (const [avatar, zone] of Object.entries(canonPackLPropPlacements)) {
+  const prop = OS.getCircusZoneProps(zone).find(entry => entry.kind === 'lorebillboard' && entry.avatar === avatar);
+  if (!prop?.loreText || !prop?.loreGate) failures.push(`PACK L: objet ${avatar} absent ou sans contexte lore`);
+}
+for (const [avatar, profileKey] of Object.entries(canonPackLProfileKeys)) {
+  if (!OS.getWackyCastData()[avatar]) failures.push(`PACK L: fiche ${avatar} absente`);
+  if (OS.getCircusCharacterProfileKey({ avatar }) !== profileKey) failures.push(`PACK L: profil ${avatar} incorrect`);
+  if (!OS.getPixelAvatarSvg(avatar, 48).includes('pixel-sheet-avatar-canon-l')) failures.push(`PACK L: portrait ${avatar} hors planche L`);
+  if (OS.getWackyProvenanceKind(avatar) !== 'canon-visual') failures.push(`PACK L: provenance ${avatar} incorrecte`);
+}
+
 const episodeNineCast = OS.getEpisodeCastKeys(9) || [];
 for (const [avatar, profileKey] of Object.entries(canonPackIProfileKeys)) {
   const profile = OS.getWackyCastData()[avatar];
@@ -276,6 +329,35 @@ if (blueGate?.episode !== 9 || blueGate?.subepisode !== 6) failures.push('BLUE A
 const blueSprite = OS.getCircusZoneSprites(16).find(entry => entry.avatar === 'blueai');
 if (blueSprite?.name !== 'Blue AI' || blueSprite?.loreGate?.episode !== 9) failures.push('BLUE AI: signal FPS mal classe');
 if (OS.getWackyCastData().fly) failures.push('MOUCHE MILDENHALL: ne doit pas avoir de profil Wacky Watch');
+
+const episodeOneCast = OS.getEpisodeCastKeys(1) || [];
+for (const avatar of ['abstractedkaufmo', 'cellarabstraction']) {
+  if (!episodeOneCast.includes(avatar)) failures.push(`EP1: ${avatar} absent de la distribution canon`);
+}
+const episodeThreeCast = OS.getEpisodeCastKeys(3) || [];
+for (const avatar of ['horrorghost', 'horrormonster', 'horrorpomnivoid', 'horrorpomnispiral', 'horrorpomniskull', 'bonepastor', 'shadowpomni', 'shadowkinger', 'shadowjax', 'shadowcaine']) {
+  if (episodeThreeCast.includes(avatar)) failures.push(`EP3: contenu fan/production ${avatar} present dans la distribution canon`);
+}
+if ((OS.getEpisodeCastKeys(4) || []).includes('spudsycustomer')) failures.push('EP4: faux client Spudsy encore dans la distribution canon');
+for (const avatar of ['stabbedragdolls', 'coiledcentipedes']) {
+  if (!(OS.getEpisodeCastKeys(8) || []).includes(avatar)) failures.push(`EP8: decor ${avatar} absent`);
+}
+for (const avatar of ['moon', 'aquaticabstraction', 'floatingworm', 'creditsfish', 'unusedbrainscans']) {
+  if (!episodeNineCast.includes(avatar)) failures.push(`EP9: ${avatar} absent de la distribution`);
+}
+for (const avatar of ['horrorghost', 'horrormonster', 'horrorpomnivoid', 'horrorpomnispiral', 'horrorpomniskull', 'shadowpomni', 'shadowkinger']) {
+  if (OS.getWackyProvenanceKind(avatar) !== 'fan') failures.push(`FAN: ${avatar} n est pas isole hors timeline`);
+}
+for (const avatar of ['bonepastor', 'themachine', 'additionalvoices']) {
+  if (OS.getWackyProfileStatus(avatar) !== 'PRODUCTION / HORS TIMELINE') failures.push(`PRODUCTION: statut ${avatar} incorrect`);
+  if (OS.getWackyProvenanceKind(avatar) !== 'production') failures.push(`PRODUCTION: provenance ${avatar} incorrecte`);
+  for (let zone = 0; zone <= 69; zone += 1) {
+    if (OS.getCircusZoneSprites(zone).some(entry => (entry.avatar || entry.type) === avatar)) {
+      failures.push(`PRODUCTION: ${avatar} apparait comme PNJ physique en zone ${zone}`);
+    }
+  }
+}
+if (OS.getWackyProfileStatus('spudsycustomer') !== 'RECONSTRUCTION CAINOS') failures.push('SPUDSY: faux client non classe comme reconstruction');
 
 if (stageCount !== 72) failures.push(`${stageCount}/72 actes`);
 if (failures.length) {

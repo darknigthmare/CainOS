@@ -345,11 +345,12 @@ const SoundManager = {
     const profiles = {
       caine: [620, 'square'], bubble: [880, 'sine'], pomni: [440, 'triangle'], ragatha: [392, 'sine'],
       jax: [294, 'sawtooth'], kinger: [196, 'triangle'], gangle: [523, 'sine'], zooble: [330, 'square'],
-      gummigoo: [247, 'triangle'], kaufmo: [72, 'sawtooth']
+      gummigoo: [247, 'triangle'], abstractedkaufmo: [72, 'sawtooth'],
+      cellarabstraction: [64, 'sawtooth'], aquaticabstraction: [58, 'sawtooth']
     };
     const [freq, wave] = profiles[avatar] || [360, 'triangle'];
     const attenuation = Math.max(0.14, Math.min(1, 1 / Math.max(1, distance * 0.55)));
-    this.playFpsSpatialTone(freq, 0.08, wave, 0.035 * attenuation, pan, avatar === 'caine' || avatar === 'kaufmo');
+    this.playFpsSpatialTone(freq, 0.08, wave, 0.035 * attenuation, pan, avatar === 'caine' || avatar.includes('abstraction') || avatar === 'abstractedkaufmo');
     setTimeout(() => this.playFpsSpatialTone(freq * 1.08, 0.055, wave, 0.022 * attenuation, pan, false), 68);
   },
   playContextPulseStep() {
@@ -661,7 +662,10 @@ const EpisodeManager = {
     GANGLE: { color: "#f7f7f7", label: "Gangle", info: "Masque et rubans. Son etat depend fortement de son masque de comedie/tragedie.", lockedInfo: "Signal resident du Cirque. Etat emotionnel non stabilise.", unlockAt: { episode: 1, subepisode: 0 } },
     ZOOBLE: { color: "#ff4fb8", label: "Zooble", info: "Corps modulaire. Refuse souvent les aventures forcees de Caine.", lockedInfo: "Signal resident du Cirque. Profil comportemental incomplet.", unlockAt: { episode: 1, subepisode: 0 } },
     KINGER: { color: "#d9d0a2", label: "Kinger", info: "Piece d'echecs instable, ancien prisonnier du Cirque avec des souvenirs profonds.", lockedInfo: "Signal resident ancien. CainOS retient les details memoire.", unlockAt: { episode: 8, subepisode: 1 } },
-    KAUFMO: { color: "#363636", label: "Kaufmo Archive", info: "Ancien membre du Cirque deja abstrait dans la timeline du pilote. A traiter comme archive/menace abstraite, pas comme resident actif.", lockedInfo: "Signal resident absent. Statut non confirme dans la timeline actuelle.", unlockAt: { episode: 1, subepisode: 5 }, archive: true },
+    KAUFMO: { color: "#575057", label: "Kaufmo Archive", info: "Portrait anterieur a l abstraction. Dans la timeline du Pilote, Kaufmo est deja abstrait et cette apparence ne doit pas devenir un resident actif.", lockedInfo: "Signal resident absent. Statut non confirme dans la timeline actuelle.", unlockAt: { episode: 1, subepisode: 5 }, archive: true },
+    ABSTRACTED_KAUFMO: { color: "#050505", label: "Kaufmo abstrait", info: "Forme d abstraction noire quadrupede a tete conique et yeux multicolores. Elle ne parle pas et son contact corrompt les avatars.", unlockAt: { episode: 1, subepisode: 5 }, archive: true },
+    CELLAR_ABSTRACTION: { color: "#030303", label: "Abstraction du Cellar", info: "Etat d abstraction generique enferme par Caine dans le Cellar. Signal non verbal: cris, grondements et parasites uniquement.", unlockAt: { episode: 1, subepisode: 5 }, archive: true },
+    AQUATIC_ABSTRACTION: { color: "#02020a", label: "Abstraction aquatique", info: "Forme tentaculaire noire aux nombreux yeux multicolores visible dans l aquarium des abstractions de Remember.", unlockAt: { episode: 9, subepisode: 6 }, archive: true },
     GUMMIGOO: { color: "#d69b35", label: "Gummigoo", info: "PNJ crocodile du canyon. Sa nature de PNJ cree une faille de memoire.", lockedInfo: "Signal canyon detecte. Nature exacte verrouillee jusqu'a l'aventure correspondante.", unlockAt: { episode: 2, subepisode: 3 } },
     GLOINK: { color: "#6b4cff", label: "Gloink", info: "Petite entite voleuse de l'aventure du pilote. Signal geometrique instable." },
     GLOINK_QUEEN: { color: "#ff7d8d", label: "Gloink Queen", info: "Reine enorme des Gloinks, hors echelle par rapport aux autres signaux." },
@@ -706,17 +710,22 @@ const EpisodeManager = {
     EXTREMIST_SIGNAL: { color: "#ff9a3d", label: "Extremist Signal", info: "Role absurde issu d'une micro-aventure politique de la suggestion box.", unlockAt: { episode: 5, subepisode: 3 } },
     SINGER: { color: "#ffe56b", label: "Singer", info: "Signal musical ponctuel dans le flux de l'episode.", unlockAt: { episode: 5 } },
     UNIDENTIFIED: { color: "#9aa39a", label: "Unidentified", info: "Dialogue non attribue conserve comme trace d'archive.", unlockAt: { episode: 5 } },
-    SUN_NPC: { color: "#ffd33d", label: "Sun NPC", info: "PNJ soleil agressif du lac digital, menace de coups de soleil dans l'episode de plage.", unlockAt: { episode: 7, subepisode: 1 } },
+    SUN_NPC: { color: "#ffd33d", label: "Sun", info: "PNJ celeste jaune a couronne orange, grands yeux orange a cils et large sourire. Caine utilise sa chaleur contre les PNJ du lac digital.", unlockAt: { episode: 1, subepisode: 0 } },
     COOKIE_BUTTERFLY: { color: "#ff9e8e", label: "Cookie Butterfly", info: "Petit PNJ decoratif a motif biscuit de Candy Canyon, classe comme creature/figurant de simulation.", unlockAt: { episode: 2, subepisode: 1 } },
     GUMMY_ELEPHANT: { color: "#ff85b7", label: "Gummy Elephant", info: "Creature gummy rose et jaune qui tire le carrosse dans Candy Canyon.", unlockAt: { episode: 2, subepisode: 1 } },
     GIANT_CENTIPEDE: { color: "#c89436", label: "Giant Centipede", info: "Grand insecte segmente dans le public du match de softball, affiche a echelle superieure aux figurants standards.", unlockAt: { episode: 5, subepisode: 6 } },
     BLUE_AI: { color: "#00ddff", label: "Blue AI", lockedLabel: "Signal IA verrouille", info: "IA canonique developpee par C&A pour remplacer Caine. Caine l absorbe avant que Remember ne montre leur separation.", lockedInfo: "Signal IA tardif. Continuez Remember pour eviter de reveler sa relation avec Caine.", unlockAt: { episode: 9, subepisode: 6 } },
-    BONE_PASTOR: { color: "#e7dfc7", label: "The Bone Pastor", info: "Easter egg squelettique visible dans Mildenhall Manor. Aucun dialogue canonique ne lui est attribue.", unlockAt: { episode: 3, subepisode: 2 } },
-    FOURTH_CROCODILE: { color: "#d4c840", label: "Fourth Crocodile", info: "Crocodile jaune-olive de la sequence de tourment de l episode 8. Son identite exacte n est pas confirmee.", unlockAt: { episode: 8, subepisode: 7 } },
+    BONE_PASTOR: { color: "#e7dfc7", label: "The Bone Pastor", info: "Personnage d un comic de production hors episodes. Il ne fait pas partie de Mildenhall Manor ni de la timeline canonique jouable.", unlockAt: { episode: 9, subepisode: 7 } },
+    FOURTH_CROCODILE: { color: "#d4c840", label: "Fourth Crocodile", info: "Crocodile jaune realiste aux yeux jaune vif de la sequence de tourment de l episode 8. Son identite exacte n est pas confirmee.", unlockAt: { episode: 8, subepisode: 7 } },
     FEMININE_SHADOW: { color: "#18111f", label: "Feminine Shadow", info: "Silhouette feminine du tourment de Ragatha. La scene suggere une figure maternelle sans confirmer son identite.", unlockAt: { episode: 8, subepisode: 7 } },
     PAINTED_MASKS: { color: "#f7f7f7", label: "Painted Masks", info: "Cinq tableaux de masques de Gangle utilises comme objets de tourment, pas comme nouveaux personnages.", unlockAt: { episode: 8, subepisode: 7 } },
     ZOOBLE_PARTS_MIRRORS: { color: "#ff4fb8", label: "Body Parts and Mirrors", info: "Assemblage de pieces de Zooble et de miroirs noirs utilise comme decor de tourment.", unlockAt: { episode: 8, subepisode: 7 } },
     LAUGHING_SHADOWS: { color: "#05020d", label: "Laughing Shadows", info: "Trois silhouettes rieuses du tourment de Jax. Elles evoquent des formes connues sans restaurer leurs personnages.", unlockAt: { episode: 8, subepisode: 7 } },
+    FLOATING_WORM: { color: "#d85bd8", label: "Floating Worm", info: "Petit figurant rose-violet flottant dans un arriere-plan de Remember. Aucun dialogue ni nom propre confirme.", unlockAt: { episode: 9, subepisode: 2 } },
+    CREDITS_FISH: { color: "#ef6d62", label: "Credits Fish", info: "Poisson rouge-orange a nageoires jaunes visible pendant le generique de Remember.", unlockAt: { episode: 9, subepisode: 7 } },
+    STABBED_RAGDOLLS: { color: "#d55a5a", label: "Stabbed Ragdolls", info: "Poupees de chiffon transpercees utilisees comme decor de tourment, sans conscience ni dialogue.", unlockAt: { episode: 8, subepisode: 7 } },
+    COILED_CENTIPEDES: { color: "#8b6d35", label: "Coiled Centipedes", info: "Centipedes enroules utilises comme objets visuels pendant la sequence de tourment.", unlockAt: { episode: 8, subepisode: 7 } },
+    UNUSED_BRAINSCANS: { color: "#50d9ff", label: "Unused Brainscans", info: "Artefacts techniques C&A visibles dans Remember. Ce ne sont ni des personnages ni des consciences autonomes.", unlockAt: { episode: 9, subepisode: 6 } },
     SHRIMP_NPC: { color: "#ff9a9a", label: "Shrimp NPC", info: "PNJ crevette du lac digital, partie des signaux absurdes de la zone plage.", unlockAt: { episode: 7, subepisode: 1 } },
     LIAR_NPC: { color: "#ff3264", label: "Red Crappy Looking Fish", info: "Poisson rouge du lac digital, identifie comme Liar NPC dans le transcript.", unlockAt: { episode: 7, subepisode: 1 } },
     TRUTH_TELLER_NPC: { color: "#ff9b32", label: "Orange Crappy Looking Fish", info: "Poisson orange du lac digital, identifie comme Truth-Teller NPC et lie au coffre englouti.", unlockAt: { episode: 7, subepisode: 1 } },
@@ -724,7 +733,7 @@ const EpisodeManager = {
     RIBBIT: { color: "#6ee7b7", label: "Ribbit Archive", info: "Ancien membre du Cirque vu par couches de reve/souvenir dans le final. A classer comme archive de personne disparue/abstracted.", unlockAt: { episode: 9, subepisode: 2 }, archive: true },
     DREAM_SIGNAL: { color: "#a78bfa", label: "Dream Signal", info: "Projection de reve ou souvenir deforme utilisee dans le final.", unlockAt: { episode: 9, subepisode: 2 } },
     JAX_PERSONA: { color: "#8a4fd6", label: "Jax Persona", info: "Masque social de Jax quand le final force sa facade a se fissurer.", unlockAt: { episode: 9, subepisode: 4 } },
-    MOON: { color: "#d7e6ff", label: "Moon", info: "Signal cosmique secondaire du final.", unlockAt: { episode: 9 } },
+    MOON: { color: "#9edcff", label: "Moon", info: "PNJ celeste en croissant bleu clair aux traits bleu fonce. Elle parle directement a Caine et lui declare son affection.", unlockAt: { episode: 1, subepisode: 0 } },
     ABIGAIL: { color: "#f2c7b5", label: "Abigail Brooks / Abby", info: "Contrepartie humaine de Pomni. Elle travaille toujours comme comptable et publie encore occasionnellement des videos avec de nouveaux amis. Pomni reconnait qu elles sont deux personnes distinctes.", lockedInfo: "Identite humaine verrouillee jusqu a la presentation finale.", unlockAt: { episode: 9, subepisode: 7 } },
     SUZIE_ACKERMAN: { color: "#9b6b52", label: "Suzie J. Ackerman", info: "Contrepartie humaine de Ragatha. Elle a quitte sa ville natale, coupe la communication avec sa mere et reussi dans sa carriere.", lockedInfo: "Identite humaine verrouillee jusqu a la presentation finale.", unlockAt: { episode: 9, subepisode: 7 } },
     ZOEY_RAGHAVAN: { color: "#9b3f49", label: "Zoey Raghavan", info: "Contrepartie humaine de Gangle. Elle s est remise de ses blessures, travaille dans une petite agence de design et publie des pages de son webcomic.", lockedInfo: "Identite humaine verrouillee jusqu a la presentation finale.", unlockAt: { episode: 9, subepisode: 7 } },
