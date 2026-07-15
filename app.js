@@ -2029,6 +2029,7 @@ const OS = {
       canonG: 'assets/images/cainos-pixel-cast-sheet-canon-npc-pack-g.png',
       canonH: 'assets/images/cainos-pixel-cast-sheet-canon-npc-pack-h.png',
       canonI: 'assets/images/cainos-pixel-cast-sheet-canon-npc-pack-i.png',
+      canonJ: 'assets/images/cainos-pixel-cast-sheet-canon-npc-pack-j.png',
       pomnianimation: 'assets/images/cainos-pomni-animation-sheet.png',
       jaxanimation: 'assets/images/cainos-jax-animation-sheet.png',
       ragathaanimation: 'assets/images/cainos-ragatha-animation-sheet.png',
@@ -2178,6 +2179,10 @@ const OS = {
       { sheet: 'canonI', cols: 6, rows: 1, map: {
         abigailbrooks: [0, 0], suzieackerman: [1, 0], zoeyraghavan: [2, 0],
         rileyverselis: [3, 0], grantbest: [4, 0], leeroymateo: [5, 0]
+      }},
+      { sheet: 'canonJ', cols: 5, rows: 1, map: {
+        jaxfather: [0, 0], jaxmother: [1, 0], abigailfriendone: [2, 0],
+        abigailfriendtwo: [3, 0], bestchildren: [4, 0]
       }}
     ];
     for (const table of tables) {
@@ -4848,6 +4853,11 @@ const OS = {
       rileyverselis: "RILEY_VERSELIS",
       grantbest: "GRANT_BEST",
       leeroymateo: "LEEROY_MATEO",
+      jaxfather: "JAX_FATHER",
+      jaxmother: "JAX_MOTHER",
+      abigailfriendone: "ABIGAIL_FRIEND_ONE",
+      abigailfriendtwo: "ABIGAIL_FRIEND_TWO",
+      bestchildren: "BEST_CHILDREN",
       cookiebutterfly: "COOKIE_BUTTERFLY",
       gummyelephant: "GUMMY_ELEPHANT",
       giantcentipede: "GIANT_CENTIPEDE",
@@ -7252,6 +7262,31 @@ const OS = {
           kind: 'lorebillboard', avatar: 'leeroymateo', label: 'Leeroy Mateo', x: 3.15, z: -3.7,
           color: '#41516a', loreGate: { episode: 9, subepisode: 7 },
           loreText: "Contrepartie humaine de Jax. CainOS l indexe apres la revelation finale, sans le faire apparaitre comme PNJ actif."
+        },
+        {
+          kind: 'lorebillboard', avatar: 'jaxfather', label: 'Jax - Father', x: -5.6, z: -4.8,
+          color: '#26303d', sizeScale: 0.86, loreGate: { episode: 9, subepisode: 4 },
+          loreText: "Silhouette du pere evoque par Jax. Son nom, son visage et son apparence detaillee restent inconnus; cette archive n est pas un PNJ physique."
+        },
+        {
+          kind: 'lorebillboard', avatar: 'jaxmother', label: 'Jax - Mother', x: -2.8, z: -4.8,
+          color: '#9ca3af', sizeScale: 0.86, loreGate: { episode: 9, subepisode: 4 },
+          loreText: "Silhouette parasitee de la mere evoquee par Jax. CainOS conserve seulement la forme montree et ne lui invente aucune identite."
+        },
+        {
+          kind: 'lorebillboard', avatar: 'abigailfriendone', label: 'Abigail - Friend A', x: 0, z: -4.8,
+          color: '#66715d', sizeScale: 0.86, loreGate: { episode: 9, subepisode: 7 },
+          loreText: "Ami non nomme visible dans les videos recentes d Abigail. Il appartient au monde reel et ne peut pas apparaitre comme PNJ de simulation."
+        },
+        {
+          kind: 'lorebillboard', avatar: 'abigailfriendtwo', label: 'Abigail - Friend B', x: 2.8, z: -4.8,
+          color: '#356a4b', sizeScale: 0.86, loreGate: { episode: 9, subepisode: 7 },
+          loreText: "Second ami non nomme visible avec Abigail. Aucune biographie ni aucun nom propre ne sont ajoutes par CainOS."
+        },
+        {
+          kind: 'lorebillboard', avatar: 'bestchildren', label: 'Anne and Sam Best', x: 5.6, z: -4.8,
+          color: '#a0675f', sizeScale: 0.86, loreGate: { episode: 9, subepisode: 7 },
+          loreText: "Les deux filles de Grant et Destiny. La projection les conserve en duo car la scene ne permet pas d associer surement chaque prenom a un visage."
         }
       ],
       20: [
@@ -12438,6 +12473,31 @@ const OS = {
         "Contrepartie humaine dont la copie numerique est Jax.",
         "Apres quelques mois sans logement, il a pu vivre avec un ami proche, obtenir un emploi stable et payer son loyer.",
         "Il sort encore avec ses amis, notamment dans le bar de Riley."
+      ]},
+      jaxfather: { name: "Jax's Father", age: "Archive humaine - Ep. 9", stress: "NON APPLICABLE", avatar: "jaxfather", signal: "JF", color: "#26303d", facts: [
+        "Figure paternelle evoquee par Jax dans Remember; son nom et son visage ne sont pas reveles.",
+        "Jax dit que ses parents se sont separes a son entree au lycee, qu il n etait pas proche de son pere et qu il ne l a plus revu apres la separation.",
+        "La scene ne montre qu une silhouette; CainOS n invente ni tenue, ni traits, ni identite."
+      ]},
+      jaxmother: { name: "Jax's Mother", age: "Archive humaine - Ep. 9", stress: "NON APPLICABLE", avatar: "jaxmother", signal: "JM", color: "#9ca3af", facts: [
+        "Figure maternelle evoquee par Jax dans Remember; son nom et son visage ne sont pas reveles.",
+        "Jax decrit une relation devenue hostile apres la separation, puis un dernier contact durant lequel il l a repoussee.",
+        "Il dit ne pas savoir ce qui lui est arrive ensuite; son visuel reste donc la silhouette parasitee montree a l ecran."
+      ]},
+      abigailfriendone: { name: "Abigail's Friend A", age: "Humain du monde reel - Ep. 9", stress: "NON APPLICABLE", avatar: "abigailfriendone", signal: "A1", color: "#66715d", facts: [
+        "Un des deux nouveaux amis non nommes visibles dans les videos occasionnelles d Abigail.",
+        "La projection le montre avec un bonnet noir, une lampe frontale et un haut gris-olive.",
+        "Aucun nom, dialogue ou element biographique supplementaire n est confirme."
+      ]},
+      abigailfriendtwo: { name: "Abigail's Friend B", age: "Humain du monde reel - Ep. 9", stress: "NON APPLICABLE", avatar: "abigailfriendtwo", signal: "A2", color: "#356a4b", facts: [
+        "Second nouvel ami non nomme visible dans les videos occasionnelles d Abigail.",
+        "La projection le montre avec une casquette noire, des lunettes et un sweat vert.",
+        "Aucun nom, dialogue ou element biographique supplementaire n est confirme."
+      ]},
+      bestchildren: { name: "Anne and Sam Best", age: "Famille humaine - Ep. 9", stress: "NON APPLICABLE", avatar: "bestchildren", signal: "BS", color: "#a0675f", facts: [
+        "Anne et Sam Best sont les deux filles de Grant et Destiny.",
+        "La presentation finale les montre ensemble, sans associer explicitement chaque prenom a un visage.",
+        "CainOS les conserve donc dans une fiche duo et ne leur invente aucune biographie individuelle."
       ]}
     };
 
@@ -12500,7 +12560,8 @@ const OS = {
       9: [
         "pomni", "caine", "bubble", "jax", "ragatha", "kinger", "gangle", "zooble", "ribbit", "queenie", "scratch",
         "wormo", "bizco", "rattie", "spike", "pinkcyclops", "yellowclown", "oyster", "bulbcreature", "maidjax", "blueai",
-        "abigailbrooks", "suzieackerman", "zoeyraghavan", "rileyverselis", "grantbest", "leeroymateo"
+        "abigailbrooks", "suzieackerman", "zoeyraghavan", "rileyverselis", "grantbest", "leeroymateo",
+        "jaxfather", "jaxmother", "abigailfriendone", "abigailfriendtwo", "bestchildren"
       ]
     };
 
@@ -12625,7 +12686,12 @@ const OS = {
       zoeyraghavan: { episode: 9, subepisode: 7 },
       rileyverselis: { episode: 9, subepisode: 7 },
       grantbest: { episode: 9, subepisode: 7 },
-      leeroymateo: { episode: 9, subepisode: 7 }
+      leeroymateo: { episode: 9, subepisode: 7 },
+      jaxfather: { episode: 9, subepisode: 4 },
+      jaxmother: { episode: 9, subepisode: 4 },
+      abigailfriendone: { episode: 9, subepisode: 7 },
+      abigailfriendtwo: { episode: 9, subepisode: 7 },
+      bestchildren: { episode: 9, subepisode: 7 }
     };
 
     if (id.startsWith("shadow")) return { episode: 3, subepisode: 1 };
@@ -12643,9 +12709,13 @@ const OS = {
       'abigailbrooks', 'suzieackerman', 'zoeyraghavan',
       'rileyverselis', 'grantbest', 'leeroymateo'
     ]);
+    const humanArchiveIds = new Set(['jaxfather', 'jaxmother', 'bestchildren']);
+    const realWorldHumanIds = new Set(['abigailfriendone', 'abigailfriendtwo']);
     const variantSignals = ['evil', 'shadow', 'maid', 'japanese', 'baseball', 'rivalbaseball', 'darkduo', 'kawaii', 'comedy', 'tragedy', 'hunter', 'beach', 'rhino', 'work', 'jaxgirl'];
     if (archiveIds.has(id)) return "ARCHIVE";
     if (humanCounterpartIds.has(id)) return "CONTREPARTIE HUMAINE";
+    if (humanArchiveIds.has(id)) return "FAMILLE HUMAINE / ARCHIVE";
+    if (realWorldHumanIds.has(id)) return "HUMAIN DU MONDE REEL";
     if (variantSignals.some(token => id.includes(token))) return "VARIANTE";
     if (id.startsWith("gloink") || ['gummigoo', 'max', 'chad', 'loolilalu', 'fudge', 'orbsman', 'ming', 'mannequin', 'additionalvoices', 'themachine', 'sun', 'moon', 'abel', 'abelmannequin', 'abelfullbody', 'baronmildenhall', 'marthamildenhall', 'ghostly', 'angel', 'disappearingguy', 'committeemember', 'truthtellerfish', 'liarfish', 'shrimpnpc', 'chineseroomnpc', 'blueai', 'cookiebutterfly', 'gummyelephant', 'giantcentipede', 'drfootball', 'spudsycustomer', 'stupidburgermannequin', 'cerealmannequin', 'candyguardcyan', 'candyguardblue', 'candyguardpurple', 'redmannequin', 'orangemannequin', 'yellowmannequin', 'magentamannequin', 'gummyworm', 'barrelmonkey', 'jeffery', 'mildenhallsouls', 'albertspudsy', 'bonepastor', 'fourthcrocodile', 'ragathamothershadow', 'paintedmasks', 'zoobleparts', 'laughingshadows'].includes(id)) return "PNJ / DECOR";
     return "ACTIF";
@@ -12703,6 +12773,8 @@ const OS = {
     if (this.isFanSkin(id, data)) return "SKIN FAN / HORS TIMELINE";
     if (status.includes("RECONSTRUCTION")) return "RECONSTRUCTION CAINOS / HORS CANON";
     if (status.includes("CONTREPARTIE HUMAINE")) return "CONTREPARTIE HUMAINE / MONDE REEL";
+    if (status.includes("FAMILLE HUMAINE")) return "ARCHIVE HUMAINE / MONDE REEL";
+    if (status.includes("HUMAIN DU MONDE REEL")) return "HUMAIN / MONDE REEL";
     if (status.includes("VARIANTE")) return "VARIANTE VISUELLE";
     if (status.includes("ARCHIVE") || age.includes("ARCHIVE") || age.includes("ABSTRAIT")) return "ARCHIVE CAINOS";
     if (status.includes("PNJ") || age.includes("NPC") || age.includes("DECOR")) return "PNJ / DECOR DE SIMULATION";
@@ -12731,7 +12803,8 @@ const OS = {
       'stupidburgermannequin', 'cerealmannequin', 'blueai', 'bonepastor',
       'fourthcrocodile', 'ragathamothershadow', 'paintedmasks', 'zoobleparts',
       'laughingshadows', 'abigailbrooks', 'suzieackerman', 'zoeyraghavan',
-      'rileyverselis', 'grantbest', 'leeroymateo'
+      'rileyverselis', 'grantbest', 'leeroymateo', 'jaxfather', 'jaxmother',
+      'abigailfriendone', 'abigailfriendtwo', 'bestchildren'
     ]);
     if (canonProfiles.has(id) || id.startsWith('gloink')) return 'canon-visual';
     return 'reconstruction';
@@ -12795,6 +12868,11 @@ const OS = {
       rileyverselis: ['Contrepartie humaine de Zooble. Riley a ouvert un bar populaire ou les clients peuvent etre eux-memes sans jugement.'],
       grantbest: ['Contrepartie humaine de Kinger. Il travaille toujours dans la technologie, est marie a Destiny et a deux filles.'],
       leeroymateo: ['Contrepartie humaine de Jax. Apres une periode sans logement, il a obtenu un emploi stable et vit avec un ami proche.'],
+      jaxfather: ['Pere evoque par Jax dans Remember. Jax dit ne pas avoir ete proche de lui et ne plus l avoir revu apres la separation de ses parents; son identite reste inconnue.'],
+      jaxmother: ['Mere evoquee par Jax dans Remember. Jax dit ne pas savoir ce qui lui est arrive apres leur dernier contact; son identite reste inconnue.'],
+      abigailfriendone: ['Ami non nomme visible dans les videos recentes d Abigail. Aucun nom, dialogue ou element biographique supplementaire n est confirme.'],
+      abigailfriendtwo: ['Second ami non nomme visible dans les videos recentes d Abigail. Aucun nom, dialogue ou element biographique supplementaire n est confirme.'],
+      bestchildren: ['Anne et Sam Best sont les deux filles de Grant et Destiny. La scene ne permet pas d associer surement chaque prenom a un visage.'],
       stupidburgermannequin: ['Mannequin Spudsy sans nom propre confirme. CainOS le distingue par sa commande de Stupid Burger.'],
       cerealmannequin: ['Mannequin Spudsy sans nom propre confirme. CainOS le distingue par le bol de cereales deja en sa possession.']
     };
@@ -13233,6 +13311,15 @@ const OS = {
       return `<span class="pixel-sheet-avatar-canon-i avatar-ci-c${col}-r${row}" style="--avatar-size:${size}px" aria-hidden="true"></span>`;
     }
 
+    const canonJSheetMap = {
+      jaxfather: [0, 0], jaxmother: [1, 0], abigailfriendone: [2, 0],
+      abigailfriendtwo: [3, 0], bestchildren: [4, 0]
+    };
+    if (canonJSheetMap[avatar]) {
+      const [col, row] = canonJSheetMap[avatar];
+      return `<span class="pixel-sheet-avatar-canon-j avatar-cj-c${col}-r${row}" style="--avatar-size:${size}px" aria-hidden="true"></span>`;
+    }
+
     const px = (x, y, w, h, fill) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${fill}"/>`;
     const bg = px(0, 0, 16, 16, '#101318');
     const sprites = {
@@ -13351,6 +13438,7 @@ const OS = {
       'stupidburgermannequin', 'cerealmannequin',
       'bonepastor', 'fourthcrocodile', 'ragathamothershadow', 'paintedmasks', 'zoobleparts', 'laughingshadows',
       'abigailbrooks', 'suzieackerman', 'zoeyraghavan', 'rileyverselis', 'grantbest', 'leeroymateo',
+      'jaxfather', 'jaxmother', 'abigailfriendone', 'abigailfriendtwo', 'bestchildren',
       'gloinkstar', 'gloinkcube', 'gloinkpyramid', 'gloinkcrescent',
       'gloinkpin', 'gloinkround'
     ]);

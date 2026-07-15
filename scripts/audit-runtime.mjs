@@ -9,6 +9,7 @@ const canonPackFUrl = new URL('../assets/images/cainos-pixel-cast-sheet-canon-np
 const canonPackGUrl = new URL('../assets/images/cainos-pixel-cast-sheet-canon-npc-pack-g.png', import.meta.url);
 const canonPackHUrl = new URL('../assets/images/cainos-pixel-cast-sheet-canon-npc-pack-h.png', import.meta.url);
 const canonPackIUrl = new URL('../assets/images/cainos-pixel-cast-sheet-canon-npc-pack-i.png', import.meta.url);
+const canonPackJUrl = new URL('../assets/images/cainos-pixel-cast-sheet-canon-npc-pack-j.png', import.meta.url);
 
 const failures = [];
 const requireMarker = (source, marker, label = marker) => {
@@ -42,7 +43,12 @@ for (let episode = 1; episode <= 9; episode++) {
   'Zoey Raghavan',
   'Riley Verselis',
   'Grant Best',
-  'Leeroy Mateo'
+  'Leeroy Mateo',
+  "Jax's Father",
+  "Jax's Mother",
+  "Abigail's Friend A",
+  "Abigail's Friend B",
+  'Anne and Sam Best'
 ].forEach(marker => requireMarker(episodes, marker));
 
 [
@@ -70,6 +76,7 @@ for (let episode = 1; episode <= 9; episode++) {
   "canonG: 'assets/images/cainos-pixel-cast-sheet-canon-npc-pack-g.png'",
   "canonH: 'assets/images/cainos-pixel-cast-sheet-canon-npc-pack-h.png'",
   "canonI: 'assets/images/cainos-pixel-cast-sheet-canon-npc-pack-i.png'",
+  "canonJ: 'assets/images/cainos-pixel-cast-sheet-canon-npc-pack-j.png'",
   'candyguardcyan: [0, 0]',
   'gummyworm: [3, 0]',
   'barrelmonkey: [4, 0]',
@@ -93,10 +100,17 @@ for (let episode = 1; episode <= 9; episode++) {
   'rileyverselis: [3, 0]',
   'grantbest: [4, 0]',
   'leeroymateo: [5, 0]',
+  'jaxfather: [0, 0]',
+  'jaxmother: [1, 0]',
+  'abigailfriendone: [2, 0]',
+  'abigailfriendtwo: [3, 0]',
+  'bestchildren: [4, 0]',
   "kind: 'lorebillboard', avatar: 'paintedmasks'",
   "kind: 'lorebillboard', avatar: 'zoobleparts'",
   "kind: 'lorebillboard', avatar: 'abigailbrooks'",
   "kind: 'lorebillboard', avatar: 'leeroymateo'",
+  "kind: 'lorebillboard', avatar: 'jaxfather'",
+  "kind: 'lorebillboard', avatar: 'bestchildren'",
   'drawCircusMildenhallFly',
   "id: 'mildenhall_fly'",
   "typeof EpisodeManager.stopActiveGame === 'function'",
@@ -144,11 +158,13 @@ for (let episode = 2; episode <= 9; episode++) {
   '.pixel-sheet-avatar-canon-g',
   '.pixel-sheet-avatar-canon-h',
   '.pixel-sheet-avatar-canon-i',
+  '.pixel-sheet-avatar-canon-j',
   '.avatar-ce-c5-r0',
   '.avatar-cf-c5-r0',
   '.avatar-cg-c3-r0',
   '.avatar-ch-c5-r0',
-  '.avatar-ci-c5-r0'
+  '.avatar-ci-c5-r0',
+  '.avatar-cj-c4-r0'
 ].forEach(marker => requireMarker(css, marker));
 
 if (!fs.existsSync(canonPackEUrl)) {
@@ -179,6 +195,12 @@ if (!fs.existsSync(canonPackIUrl)) {
   failures.push('Planche canon NPC pack I absente');
 } else if (fs.statSync(canonPackIUrl).size < 100000) {
   failures.push('Planche canon NPC pack I vide ou tronquee');
+}
+
+if (!fs.existsSync(canonPackJUrl)) {
+  failures.push('Planche canon NPC pack J absente');
+} else if (fs.statSync(canonPackJUrl).size < 100000) {
+  failures.push('Planche canon NPC pack J vide ou tronquee');
 }
 
 const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map(match => match[1]);

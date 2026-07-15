@@ -3108,6 +3108,17 @@ body.reduce-motion .circus-dos-overlay.rendering .circus-title-letter {
   image-rendering: pixelated;
 }
 
+.pixel-sheet-avatar-canon-j {
+  --avatar-size: 46px;
+  display: block;
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  background-image: url('assets/images/cainos-pixel-cast-sheet-canon-npc-pack-j.png');
+  background-repeat: no-repeat;
+  background-size: 500% 100%;
+  image-rendering: pixelated;
+}
+
 .pixel-sheet-avatar,
 .pixel-sheet-avatar-abstracted,
 .pixel-sheet-avatar-variants,
@@ -3134,6 +3145,7 @@ body.reduce-motion .circus-dos-overlay.rendering .circus-title-letter {
 .pixel-sheet-avatar-canon-g,
 .pixel-sheet-avatar-canon-h,
 .pixel-sheet-avatar-canon-i,
+.pixel-sheet-avatar-canon-j,
 .pixel-avatar-svg {
   flex: 0 0 auto;
   margin: auto;
@@ -3165,6 +3177,7 @@ body.reduce-motion .circus-dos-overlay.rendering .circus-title-letter {
 .pixel-sheet-avatar-canon-g { --avatar-ratio: 0.667; width: calc(var(--avatar-size) * var(--avatar-ratio)); height: var(--avatar-size); }
 .pixel-sheet-avatar-canon-h { --avatar-ratio: 0.444; width: calc(var(--avatar-size) * var(--avatar-ratio)); height: var(--avatar-size); }
 .pixel-sheet-avatar-canon-i { --avatar-ratio: 0.444; width: calc(var(--avatar-size) * var(--avatar-ratio)); height: var(--avatar-size); }
+.pixel-sheet-avatar-canon-j { --avatar-ratio: 0.45; width: calc(var(--avatar-size) * var(--avatar-ratio)); height: var(--avatar-size); }
 
 .cast-pixel-icon .pixel-sheet-avatar-gloink-queen-scale {
   --avatar-size: 6px !important;
@@ -3242,6 +3255,11 @@ body.reduce-motion .circus-dos-overlay.rendering .circus-title-letter {
 .avatar-ci-c3-r0 { background-position: 60% 0%; }
 .avatar-ci-c4-r0 { background-position: 80% 0%; }
 .avatar-ci-c5-r0 { background-position: 100% 0%; }
+.avatar-cj-c0-r0 { background-position: 0% 0%; }
+.avatar-cj-c1-r0 { background-position: 25% 0%; }
+.avatar-cj-c2-r0 { background-position: 50% 0%; }
+.avatar-cj-c3-r0 { background-position: 75% 0%; }
+.avatar-cj-c4-r0 { background-position: 100% 0%; }
 .avatar-a-c1-r1 { background-position: 25% 100%; }
 .avatar-a-c2-r1 { background-position: 50% 100%; }
 .avatar-a-c3-r1 { background-position: 75% 100%; }

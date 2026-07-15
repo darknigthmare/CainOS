@@ -731,6 +731,11 @@ const EpisodeManager = {
     RILEY_VERSELIS: { color: "#687287", label: "Riley Verselis", info: "Contrepartie humaine de Zooble. Riley a ouvert un bar populaire ou les clients peuvent etre eux-memes sans jugement.", lockedInfo: "Identite humaine verrouillee jusqu a la presentation finale.", unlockAt: { episode: 9, subepisode: 7 } },
     GRANT_BEST: { color: "#7d668b", label: "Grant Best", info: "Contrepartie humaine de Kinger. Il travaille toujours dans la technologie, reste marie a Destiny et a deux filles.", lockedInfo: "Identite humaine verrouillee jusqu a la presentation finale.", unlockAt: { episode: 9, subepisode: 7 } },
     LEEROY_MATEO: { color: "#41516a", label: "Leeroy Mateo", info: "Contrepartie humaine de Jax. Apres une periode sans logement, il a obtenu un emploi stable, vit avec un ami proche et frequente notamment le bar de Riley.", lockedInfo: "Identite humaine verrouillee jusqu a la presentation finale.", unlockAt: { episode: 9, subepisode: 7 } },
+    JAX_FATHER: { color: "#26303d", label: "Jax's Father", info: "Pere evoque par Jax. Son nom et son visage restent inconnus; Jax dit ne plus l avoir revu apres la separation de ses parents.", lockedInfo: "Archive familiale verrouillee jusqu aux confidences de Jax.", unlockAt: { episode: 9, subepisode: 4 } },
+    JAX_MOTHER: { color: "#9ca3af", label: "Jax's Mother", info: "Mere evoquee par Jax. Son nom, son visage et ce qui lui est arrive apres leur dernier contact restent inconnus.", lockedInfo: "Archive familiale verrouillee jusqu aux confidences de Jax.", unlockAt: { episode: 9, subepisode: 4 } },
+    ABIGAIL_FRIEND_ONE: { color: "#66715d", label: "Abigail's Friend A", info: "Ami non nomme visible dans les videos recentes d Abigail. Aucun dialogue ni biographie ne sont confirmes.", lockedInfo: "Archive du monde reel verrouillee jusqu a la presentation finale.", unlockAt: { episode: 9, subepisode: 7 } },
+    ABIGAIL_FRIEND_TWO: { color: "#356a4b", label: "Abigail's Friend B", info: "Second ami non nomme visible dans les videos recentes d Abigail. Aucun dialogue ni biographie ne sont confirmes.", lockedInfo: "Archive du monde reel verrouillee jusqu a la presentation finale.", unlockAt: { episode: 9, subepisode: 7 } },
+    BEST_CHILDREN: { color: "#a0675f", label: "Anne and Sam Best", info: "Les deux filles de Grant et Destiny. La presentation ne permet pas d associer surement chaque prenom a un visage.", lockedInfo: "Archive familiale verrouillee jusqu a la presentation finale.", unlockAt: { episode: 9, subepisode: 7 } },
     SCRATCH: { color: "#9ca3af", label: "Scratch Archive", info: "Premier cas d'abstraction evoque par Kinger. Profil archive uniquement.", unlockAt: { episode: 8, subepisode: 5 }, archive: true },
     WORMO: { color: "#a3e635", label: "Wormo Archive", info: "Ancien membre du Cirque repertorie comme signal archive/abstracted.", unlockAt: { episode: 9 }, archive: true },
     BIZCO: { color: "#f97316", label: "Bizco Archive", info: "Ancien membre du Cirque repertorie comme signal archive/abstracted.", unlockAt: { episode: 9 }, archive: true },
@@ -8173,7 +8178,14 @@ const EpisodeManager = {
       ZOEYRAGHAVAN: "ZOEY_RAGHAVAN",
       RILEYVERSELIS: "RILEY_VERSELIS",
       GRANTBEST: "GRANT_BEST",
-      LEEROYMATEO: "LEEROY_MATEO"
+      LEEROYMATEO: "LEEROY_MATEO",
+      JAXFATHER: "JAX_FATHER",
+      JAXSFATHER: "JAX_FATHER",
+      JAXMOTHER: "JAX_MOTHER",
+      JAXSMOTHER: "JAX_MOTHER",
+      ABIGAILFRIENDONE: "ABIGAIL_FRIEND_ONE",
+      ABIGAILFRIENDTWO: "ABIGAIL_FRIEND_TWO",
+      BESTCHILDREN: "BEST_CHILDREN"
     };
     const key = aliases[normalized] || normalized;
     const profile = this.storyCharacterProfiles[key] || {
@@ -8271,6 +8283,11 @@ const EpisodeManager = {
       RILEY_VERSELIS: "Z",
       GRANT_BEST: "K",
       LEEROY_MATEO: "J",
+      JAX_FATHER: "F",
+      JAX_MOTHER: "M",
+      ABIGAIL_FRIEND_ONE: "1",
+      ABIGAIL_FRIEND_TWO: "2",
+      BEST_CHILDREN: "B",
       CAST: "#",
       ARCHIVE: "::",
       MUSIC: "♪",

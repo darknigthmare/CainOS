@@ -121,6 +121,27 @@ const canonPackIProfileKeys = {
   grantbest: 'GRANT_BEST',
   leeroymateo: 'LEEROY_MATEO'
 };
+const canonPackJProfileKeys = {
+  jaxfather: 'JAX_FATHER',
+  jaxmother: 'JAX_MOTHER',
+  abigailfriendone: 'ABIGAIL_FRIEND_ONE',
+  abigailfriendtwo: 'ABIGAIL_FRIEND_TWO',
+  bestchildren: 'BEST_CHILDREN'
+};
+const canonPackJGates = {
+  jaxfather: 4,
+  jaxmother: 4,
+  abigailfriendone: 7,
+  abigailfriendtwo: 7,
+  bestchildren: 7
+};
+const canonPackJStatuses = {
+  jaxfather: 'FAMILLE HUMAINE / ARCHIVE',
+  jaxmother: 'FAMILLE HUMAINE / ARCHIVE',
+  abigailfriendone: 'HUMAIN DU MONDE REEL',
+  abigailfriendtwo: 'HUMAIN DU MONDE REEL',
+  bestchildren: 'FAMILLE HUMAINE / ARCHIVE'
+};
 
 for (let episode = 1; episode <= 9; episode++) {
   const campaign = OS.getCircusFpsCampaignDefinition(episode);
@@ -213,6 +234,30 @@ for (const [avatar, profileKey] of Object.entries(canonPackIProfileKeys)) {
     }
   }
 }
+
+for (const [avatar, profileKey] of Object.entries(canonPackJProfileKeys)) {
+  const profile = OS.getWackyCastData()[avatar];
+  if (!profile) failures.push(`PACK J: fiche ${avatar} absente`);
+  if (OS.getCircusCharacterProfileKey({ avatar }) !== profileKey) failures.push(`PACK J: profil ${avatar} incorrect`);
+  if (!OS.getPixelAvatarSvg(avatar, 48).includes('pixel-sheet-avatar-canon-j')) failures.push(`PACK J: portrait ${avatar} hors planche J`);
+  if (!episodeNineCast.includes(avatar)) failures.push(`PACK J: ${avatar} absent de la distribution EP9`);
+  const gate = OS.getWackyProfileGate(avatar);
+  if (gate?.episode !== 9 || gate?.subepisode !== canonPackJGates[avatar]) failures.push(`PACK J: verrou ${avatar} incorrect`);
+  if (OS.getWackyProfileStatus(avatar) !== canonPackJStatuses[avatar]) failures.push(`PACK J: statut ${avatar} incorrect`);
+  if (OS.getWackyProvenanceKind(avatar) !== 'canon-visual') failures.push(`PACK J: provenance ${avatar} incorrecte`);
+  const archiveProp = OS.getCircusZoneProps(19).find(entry => entry.kind === 'lorebillboard' && entry.avatar === avatar);
+  if (!archiveProp?.loreText || archiveProp?.loreGate?.episode !== 9 || archiveProp?.loreGate?.subepisode !== canonPackJGates[avatar]) {
+    failures.push(`PACK J: projection archive ${avatar} absente ou mal verrouillee`);
+  }
+  for (let zone = 0; zone <= 49; zone += 1) {
+    if (OS.getCircusZoneSprites(zone).some(entry => (entry.avatar || entry.type) === avatar)) {
+      failures.push(`PACK J: ${avatar} apparait comme PNJ physique en zone ${zone}`);
+    }
+  }
+}
+
+const bestChildrenFacts = OS.getWackyCastData().bestchildren?.facts || [];
+if (!bestChildrenFacts.some(fact => fact.includes('fiche duo'))) failures.push('PACK J: Anne et Sam sont arbitrairement separees');
 
 for (const [id, profile] of Object.entries(OS.getWackyCastData())) {
   const portrait = OS.getPixelAvatarSvg(profile.avatar || id, 48);
