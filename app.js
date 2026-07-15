@@ -337,6 +337,12 @@ const OS = {
       'setting-easy-minigames': 'Assouplir les objectifs des mini-jeux sans changer le lore.',
       'setting-reader-only': 'Autoriser la lecture des episodes sans validation de mini-jeu.',
       'setting-crt-readable': 'Reduire les scanlines et augmenter legerement la lisibilite CRT.',
+      'setting-canon-strict': 'Masquer les skins fan et remplacer les donnees non confirmees par des mentions prudentes.',
+      'setting-high-contrast': 'Renforcer les contrastes du bureau, des fenetres et des textes.',
+      'setting-reduce-motion': 'Reduire les clignotements et les animations secondaires.',
+      'setting-auto-fit-windows': 'Maintenir automatiquement les fenetres visibles dans la zone du bureau.',
+      'setting-ui-scale': 'Ajuster la taille des textes et des commandes CainOS.',
+      'setting-scanline-intensity': 'Regler la force visuelle des scanlines du moniteur CRT.',
       'setting-audio-ambience': 'Regler le volume des ambiances originales CainOS.',
       'setting-audio-glitch': 'Regler le niveau des effets glitch originaux.',
       'setting-fps-fov': 'Regler le champ de vision horizontal du mode FPS.',
@@ -361,7 +367,8 @@ const OS = {
       'caine-btn-dismiss': 'Fermer l intrusion de Caine.',
       'power-button': 'Eteindre ou rallumer l ecran CainOS.',
       'dial-brightness': 'Regler la luminosite du tube CRT CainOS.',
-      'dial-contrast': 'Regler le contraste du tube CRT CainOS.'
+      'dial-contrast': 'Regler le contraste du tube CRT CainOS.',
+      'tools-canon-strict-toggle': 'Activer ou desactiver la separation stricte entre canon, reconstruction CainOS et contenu fan.'
     };
 
     Object.entries(tooltips).forEach(([id, tooltip]) => {
@@ -550,12 +557,12 @@ const OS = {
       "CPU: C&A Neural-Link Core 600 MHz",
       "RAM: 65536 KB OK",
       "CHECKING SYSTEM STATUS...",
-      "RESTAURATION SESSION ADMINISTRATEUR HACKÉE...",
+      "MONTAGE ARCHIVE CAINOS - RECONSTRUCTION NON CANONIQUE...",
       "--> FLUX CASQUE ACTIF - IMPORTATION SUJET EN COURS",
       `--> PROFIL AVATAR : ${this.isPomniNamed() ? 'POMNI' : 'SUJET #251 / NON NOMME'}`,
-      "CHARGEMENT DU NOYAU D'ADMINISTRATION CHARLES...",
-      "ACCÈS RECOUVRÉ - DEPASSEMENT DE PARE-FEU DE CAINE ACTIF",
-      "SYSTEME PRÊT POUR L'ADMINISTRATION SECRÈTE."
+      "--> COUCHE C&A HYPOTHETIQUE ISOLEE DES DONNEES CANONIQUES",
+      "--> CHARLES / ADMIN SECRET : ARCHIVE CAINOS NON CONFIRMEE",
+      "MODE ARCHIVISTE PRET - AUCUN EVENEMENT CANONIQUE MODIFIE."
     ];
 
     let lineIndex = 0;
@@ -884,6 +891,12 @@ const OS = {
 
   setupEvents() {
     this.positionDesktopIcons();
+    this.cainOSResizeHandler = () => {
+      this.positionDesktopIcons();
+      this.fitOpenWindowsToDesktop();
+      this.syncCircusDoomCanvasSize();
+    };
+    window.addEventListener('resize', this.cainOSResizeHandler);
 
     // Desktop icons
     document.querySelectorAll('.desktop-icon').forEach(icon => {
@@ -1055,12 +1068,12 @@ const OS = {
       }
 
       if (this.draggedWindow) {
-        const workspace = document.getElementById('desktop-workspace').getBoundingClientRect();
+        const workspace = document.getElementById('windows-container').getBoundingClientRect();
         let left = e.clientX - workspace.left - this.dragOffset.x;
         let top = e.clientY - workspace.top - this.dragOffset.y;
 
         left = Math.max(0, Math.min(workspace.width - 150, left));
-        top = Math.max(0, Math.min(workspace.height - 40, top));
+        top = Math.max(0, Math.min(workspace.height - 22, top));
 
         this.draggedWindow.style.left = `${left}px`;
         this.draggedWindow.style.top = `${top}px`;
@@ -1163,7 +1176,11 @@ const OS = {
   // Setup Caine / Bubble periodic popups
   setupIntrusionTriggers() {
     setInterval(() => {
-      if (this.isBooted && Math.random() < 0.20 && document.getElementById('caine-intrusion').style.display === 'none') {
+      if (this.isBooted
+        && !this.getCainOSSetting('reduce-motion')
+        && !this.activeWindow
+        && Math.random() < 0.20
+        && document.getElementById('caine-intrusion').style.display === 'none') {
         this.triggerBubbleIntrusion();
       }
     }, 45000);
@@ -1174,16 +1191,24 @@ const OS = {
     document.getElementById('caine-intrusion').style.display = 'flex';
   },
 
-  triggerBubbleIntrusion() {
+  triggerBubbleIntrusion(force = false) {
+    const circusOverlay = document.getElementById('circus-dos-overlay');
+    if (!force && (this.activeWindow || circusOverlay?.style.display === 'flex')) return;
     SoundManager.playGlitch();
     const bubble = document.getElementById('bubble-intrusion');
-    bubble.style.left = `${Math.floor(20 + Math.random() * 60)}%`;
-    bubble.style.top = `${Math.floor(15 + Math.random() * 50)}%`;
+    bubble.style.left = 'auto';
+    bubble.style.right = '18px';
+    bubble.style.top = 'auto';
+    bubble.style.bottom = '54px';
 
     const phrases = ["MIAM LE CODE !", "NETTOYAGE !", "BUBULLE !", "SALUT EXTERNE !", "LE VIDE RECRUTE !"];
     bubble.querySelector('.bubble-text').innerText = phrases[Math.floor(Math.random() * phrases.length)];
 
     bubble.style.display = 'flex';
+    clearTimeout(this.bubbleAutoDismissTimer);
+    this.bubbleAutoDismissTimer = setTimeout(() => {
+      if (!bubble.classList.contains('popping')) bubble.style.display = 'none';
+    }, 7000);
   },
 
   popBubble(bubble) {
@@ -1389,8 +1414,11 @@ const OS = {
     const screen = document.querySelector('.crt-screen');
     if (screen) screen.style.opacity = '0';
 
-    if (EpisodeManager.activeGame) {
+    if (typeof EpisodeManager.stopActiveGame === 'function') {
+      EpisodeManager.stopActiveGame();
+    } else if (EpisodeManager.activeGame) {
       EpisodeManager.activeGame.stop();
+      EpisodeManager.activeGame = null;
     }
 
     this.applySystemStateUI();
@@ -1425,6 +1453,8 @@ const OS = {
     const launch = document.getElementById('circus-dos-launch');
     const taskbarEntry = document.getElementById('taskbar-circus-entry');
     if (!overlay || !art) return;
+
+    this.updateCainOSProvenance('tent');
 
     this.clearCircusRenderTimers();
     this.stopCircusDoomView();
@@ -1522,6 +1552,7 @@ const OS = {
       overlay.classList.remove('rendering', 'inside', 'doom');
     }
     if (taskbarEntry) taskbarEntry.classList.remove('active');
+    this.updateCainOSProvenance(this.activeWindow || 'desktop');
   },
 
   clearCircusRenderTimers() {
@@ -1576,6 +1607,8 @@ const OS = {
     const zoneEl = document.getElementById('circus-doom-zone');
     const detailEl = document.getElementById('circus-doom-detail');
     if (!overlay || !canvas) return;
+
+    this.updateCainOSProvenance('fps');
 
     this.stopCircusDoomView();
     overlay.classList.add('doom');
@@ -1955,10 +1988,20 @@ const OS = {
     if (typeof SoundManager !== 'undefined' && typeof SoundManager.stopContextPulse === 'function') {
       SoundManager.stopContextPulse();
     }
+    const loading = document.getElementById('circus-fps-loading');
+    const canvas = document.getElementById('circus-doom-canvas');
+    document.getElementById('circus-doom-hud')?.classList.remove('cinematic-active', 'conversation-active', 'journal-active');
+    document.getElementById('circus-dos-overlay')?.classList.remove('cinematic-active');
+    if (loading) loading.hidden = true;
+    if (canvas) canvas.setAttribute('aria-busy', 'false');
   },
 
   loadCircusAvatarSheets() {
-    if (this.circusAvatarSheets) return;
+    if (this.circusAvatarSheets) {
+      const loading = document.getElementById('circus-fps-loading');
+      if (loading) loading.hidden = !!this.circusAvatarCoreReady;
+      return;
+    }
     const sources = {
       base: 'assets/images/cainos-pixel-cast-sheet.png',
       abstracted: 'assets/images/cainos-pixel-cast-sheet-abstracted.png',
@@ -1977,6 +2020,15 @@ const OS = {
       themachine: 'assets/images/cainos-pixel-cast-sheet-the-machine.png',
       ming: 'assets/images/cainos-pixel-cast-sheet-ming.png',
       gloinkqueenscale: 'assets/images/cainos-pixel-cast-sheet-gloink-queen-scale.png',
+      canonA: 'assets/images/cainos-pixel-cast-sheet-canon-npc-pack-a.png',
+      canonB: 'assets/images/cainos-pixel-cast-sheet-canon-npc-pack-b.png',
+      canonC: 'assets/images/cainos-pixel-cast-sheet-canon-npc-pack-c.png',
+      canonD: 'assets/images/cainos-pixel-cast-sheet-canon-npc-pack-d.png',
+      canonE: 'assets/images/cainos-pixel-cast-sheet-canon-npc-pack-e.png',
+      canonF: 'assets/images/cainos-pixel-cast-sheet-canon-npc-pack-f.png',
+      canonG: 'assets/images/cainos-pixel-cast-sheet-canon-npc-pack-g.png',
+      canonH: 'assets/images/cainos-pixel-cast-sheet-canon-npc-pack-h.png',
+      canonI: 'assets/images/cainos-pixel-cast-sheet-canon-npc-pack-i.png',
       pomnianimation: 'assets/images/cainos-pomni-animation-sheet.png',
       jaxanimation: 'assets/images/cainos-jax-animation-sheet.png',
       ragathaanimation: 'assets/images/cainos-ragatha-animation-sheet.png',
@@ -1987,15 +2039,63 @@ const OS = {
     };
     this.circusAvatarSheets = {};
     this.circusAvatarFrameCache = {};
-    Object.entries(sources).forEach(([key, src]) => {
+    this.circusAvatarCoreReady = false;
+    const coreKeys = new Set([
+      'base', 'pomnianimation', 'jaxanimation', 'ragathaanimation',
+      'kingeranimation', 'gangleanimation', 'zoobleanimation', 'caineanimation'
+    ]);
+    const coreEntries = Object.entries(sources).filter(([key]) => coreKeys.has(key));
+    const deferredEntries = Object.entries(sources).filter(([key]) => !coreKeys.has(key));
+    const loading = document.getElementById('circus-fps-loading');
+    const loadingLabel = document.getElementById('circus-fps-loading-label');
+    const loadingFill = document.getElementById('circus-fps-loading-fill');
+    const canvas = document.getElementById('circus-doom-canvas');
+    let coreFinished = 0;
+    let deferredStarted = false;
+
+    if (loading) loading.hidden = false;
+    if (loadingFill) loadingFill.style.width = '0%';
+    if (canvas) canvas.setAttribute('aria-busy', 'true');
+
+    const startDeferredLoads = () => {
+      if (deferredStarted) return;
+      deferredStarted = true;
+      deferredEntries.forEach(entry => loadImage(entry, false));
+    };
+
+    const finishCoreLoad = () => {
+      coreFinished += 1;
+      const percent = Math.round(coreFinished / Math.max(1, coreEntries.length) * 100);
+      if (loadingFill) loadingFill.style.width = `${percent}%`;
+      if (loadingLabel) loadingLabel.innerText = `AVATARS ESSENTIELS ${coreFinished}/${coreEntries.length}`;
+      if (coreFinished < coreEntries.length) return;
+      this.circusAvatarCoreReady = true;
+      if (loadingLabel) loadingLabel.innerText = 'AVATARS ESSENTIELS PRETS';
+      if (canvas) canvas.setAttribute('aria-busy', 'false');
+      setTimeout(() => {
+        if (loading) loading.hidden = true;
+      }, 220);
+      if ('requestIdleCallback' in window) window.requestIdleCallback(startDeferredLoads, { timeout: 900 });
+      else setTimeout(startDeferredLoads, 120);
+    };
+
+    const loadImage = ([key, src], isCore) => {
       const img = new Image();
-      img.onload = () => {
+      let settled = false;
+      const finish = () => {
+        if (settled) return;
+        settled = true;
         this.circusAvatarFrameCache = {};
         this.drawCircusDoom?.();
+        if (isCore) finishCoreLoad();
       };
+      img.onload = finish;
+      img.onerror = finish;
       img.src = src;
       this.circusAvatarSheets[key] = img;
-    });
+    };
+
+    coreEntries.forEach(entry => loadImage(entry, true));
   },
 
   getCircusAvatarSheetSpec(avatar) {
@@ -2047,7 +2147,38 @@ const OS = {
       { sheet: 'additionalvoices', cols: 1, rows: 1, map: { additionalvoices: [0, 0] }},
       { sheet: 'themachine', cols: 1, rows: 1, map: { themachine: [0, 0] }},
       { sheet: 'ming', cols: 1, rows: 1, map: { ming: [0, 0] }},
-      { sheet: 'gloinkqueenscale', cols: 1, rows: 1, map: { gloinkqueenscale: [0, 0] }}
+      { sheet: 'gloinkqueenscale', cols: 1, rows: 1, map: { gloinkqueenscale: [0, 0] }},
+      { sheet: 'canonA', cols: 4, rows: 1, map: {
+        baronmildenhall: [0, 0], marthamildenhall: [1, 0], ghostly: [2, 0], angel: [3, 0]
+      }},
+      { sheet: 'canonB', cols: 5, rows: 1, map: {
+        disappearingguy: [0, 0], committeemember: [1, 0], shrimpnpc: [4, 0]
+      }},
+      { sheet: 'canonC', cols: 1, rows: 1, map: { chineseroomnpc: [0, 0] }},
+      { sheet: 'canonD', cols: 6, rows: 1, map: {
+        blueai: [0, 0], cookiebutterfly: [1, 0], gummyelephant: [2, 0],
+        giantcentipede: [3, 0], drfootball: [4, 0], spudsycustomer: [5, 0]
+      }},
+      { sheet: 'canonE', cols: 6, rows: 1, map: {
+        candyguardcyan: [0, 0], candyguardblue: [1, 0], candyguardpurple: [2, 0],
+        gummyworm: [3, 0], barrelmonkey: [4, 0], jeffery: [5, 0]
+      }},
+      { sheet: 'canonF', cols: 6, rows: 1, map: {
+        redmannequin: [0, 0], orangemannequin: [1, 0], yellowmannequin: [2, 0],
+        magentamannequin: [3, 0], mildenhallsouls: [4, 0], albertspudsy: [5, 0]
+      }},
+      { sheet: 'canonG', cols: 4, rows: 1, map: {
+        truthtellerfish: [0, 0], liarfish: [1, 0],
+        stupidburgermannequin: [2, 0], cerealmannequin: [3, 0]
+      }},
+      { sheet: 'canonH', cols: 6, rows: 1, map: {
+        bonepastor: [0, 0], fourthcrocodile: [1, 0], ragathamothershadow: [2, 0],
+        paintedmasks: [3, 0], zoobleparts: [4, 0], laughingshadows: [5, 0]
+      }},
+      { sheet: 'canonI', cols: 6, rows: 1, map: {
+        abigailbrooks: [0, 0], suzieackerman: [1, 0], zoeyraghavan: [2, 0],
+        rileyverselis: [3, 0], grantbest: [4, 0], leeroymateo: [5, 0]
+      }}
     ];
     for (const table of tables) {
       if (table.map[avatar]) {
@@ -2278,40 +2409,40 @@ const OS = {
     ];
     if (episode === 1) return {
       episode: 1,
-      title: 'PILOT / CAMPAGNE FPS',
+      title: 'Pilot / CAMPAGNE FPS',
       canonBoundary: 'Reconstitution jouable additive. Les dialogues du transcript restent dans Simulation Control.',
       stages: pilotStages
     };
     const blueprints = {
-      2: { title: 'CANDY CARRIER CHAOS', steps: [
+      2: { title: 'Candy Carrier Chaos!', steps: [
         [2, 'talk', 'pomni'], [6, 'look', 'candy'], [32, 'talk', 'loolilalu'], [33, 'use', 'truck'],
         [7, 'look', 'archive'], [7, 'talk', 'gummigoo'], [6, 'talk', 'gummigoo'], [6, 'look', 'candy']
       ] },
-      3: { title: 'THE MYSTERY OF MILDENHALL MANOR', steps: [
-        [2, 'talk', 'pomni'], [8, 'use', 'candle'], [8, 'talk', 'horrorghost'], [8, 'survive', 'mildenhall'],
+      3: { title: 'The Mystery Of Mildenhall Manor', steps: [
+        [2, 'talk', 'pomni'], [8, 'use', 'candle'], [8, 'talk', 'marthamildenhall'], [8, 'survive', 'mildenhall'],
         [9, 'talk', 'kinger'], [34, 'use', 'candle'], [17, 'talk', 'queenie'], [8, 'visit', '8']
       ] },
-      4: { title: 'FAST FOOD MASQUERADE', steps: [
+      4: { title: 'Fast Food Masquerade', steps: [
         [2, 'talk', 'gangle'], [10, 'look', 'menu'], [35, 'use', 'counter'], [10, 'take', 'menu'],
         [10, 'talk', 'max'], [37, 'look', 'archive'], [10, 'talk', 'workgangle'], [10, 'use', 'counter']
       ] },
-      5: { title: 'UNTITLED', steps: [
+      5: { title: 'Untitled', steps: [
         [2, 'talk', 'ragatha'], [11, 'look', 'card'], [24, 'talk', 'hunterjax'], [26, 'look', 'console'],
         [25, 'look', 'card'], [28, 'talk', 'ragatha'], [12, 'use', 'scoreboard'], [12, 'use', 'base']
       ] },
-      6: { title: 'THEY ALL GET GUNS', steps: [
+      6: { title: 'They All Get Guns', steps: [
         [2, 'talk', 'zooble'], [13, 'look', 'target'], [13, 'use', 'target'], [13, 'talk', 'jax'],
         [13, 'use', 'target'], [2, 'talk', 'kinger'], [2, 'talk', 'pomni'], [38, 'look', 'spotlight']
       ] },
-      7: { title: 'BEACH EPISODE', steps: [
+      7: { title: 'Beach Episode', steps: [
         [2, 'talk', 'caine'], [14, 'use', 'umbrella'], [14, 'talk', 'sun'], [15, 'look', 'console'],
         [15, 'take', 'card'], [16, 'talk', 'abelmannequin'], [15, 'use', 'gridnode'], [16, 'use', 'console']
       ] },
-      8: { title: 'REMEMBER', steps: [
+      8: { title: 'hjsakldfhl', steps: [
         [17, 'talk', 'queenie'], [17, 'talk', 'kinger'], [2, 'talk', 'caine'], [28, 'talk', 'ragatha'],
         [16, 'look', 'archive'], [16, 'use', 'console'], [16, 'talk', 'caine'], [16, 'survive', 'core']
       ] },
-      9: { title: 'THE AMAZING DIGITAL CIRCUS', steps: [
+      9: { title: 'Remember', steps: [
         [18, 'look', 'memory'], [16, 'use', 'console'], [19, 'talk', 'ribbit'], [18, 'talk', 'caine'],
         [18, 'talk', 'jax'], [41, 'look', 'memory'], [18, 'look', 'archive'], [18, 'talk', 'pomni']
       ] }
@@ -2477,21 +2608,22 @@ const OS = {
     const status = this.getActiveCircusCampaignStatus();
     if (!status || !state.hudVisible) return;
     const done = status.requirements.filter(item => item.complete).length;
+    const y = w < 480 ? 148 : 48;
     ctx.save();
     ctx.fillStyle = 'rgba(5,2,13,0.84)';
     ctx.strokeStyle = '#ffd84a';
-    ctx.fillRect(14, 48, 252, 42);
-    ctx.strokeRect(14, 48, 252, 42);
+    ctx.fillRect(14, y, 252, 42);
+    ctx.strokeRect(14, y, 252, 42);
     ctx.fillStyle = '#ffd84a';
     ctx.font = 'bold 8px Courier New';
     ctx.textAlign = 'left';
     const shortTitle = status.stage.title.toUpperCase().slice(0, 30);
-    ctx.fillText(`EP${status.definition.episode} ${status.progress.stage + 1}/${status.definition.stages.length}: ${shortTitle}`, 22, 63);
+    ctx.fillText(`EP${status.definition.episode} ${status.progress.stage + 1}/${status.definition.stages.length}: ${shortTitle}`, 22, y + 15);
     ctx.fillStyle = '#ffffff';
     ctx.font = '7px Courier New';
-    ctx.fillText(`${done}/${status.requirements.length} ETAPES | DESTINATION ${state.portals[status.stage.zone]?.short || status.stage.zone}`, 22, 77);
+    ctx.fillText(`${done}/${status.requirements.length} ETAPES | DESTINATION ${state.portals[status.stage.zone]?.short || status.stage.zone}`, 22, y + 29);
     ctx.fillStyle = '#7df0ff';
-    ctx.fillRect(22, 81, 232 * (done / Math.max(1, status.requirements.length)), 4);
+    ctx.fillRect(22, y + 33, 232 * (done / Math.max(1, status.requirements.length)), 4);
     ctx.restore();
   },
 
@@ -2499,9 +2631,9 @@ const OS = {
     if (!state.journalVisible) return;
     const entries = (state.missionJournal || []).slice(-7).reverse();
     const panelW = Math.min(360, w - 30);
-    const panelH = Math.min(h - 54, 84 + entries.length * 36);
+    const y = w < 480 ? 106 : 42;
+    const panelH = Math.min(h - y - 18, 84 + entries.length * 36);
     const x = (w - panelW) / 2;
-    const y = 42;
     ctx.save();
     ctx.fillStyle = 'rgba(5,2,13,0.96)';
     ctx.strokeStyle = '#7df0ff';
@@ -2631,15 +2763,32 @@ const OS = {
     const pair = sprites.slice(0, 2);
     const pairKey = pair.map(sprite => sprite.baseAvatar || sprite.avatar || sprite.type).sort().join(':');
     const lines = {
+      'gangle:jax': 'Jax teste la patience de Gangle; elle resserre son masque et se rapproche du groupe.',
+      'gangle:kinger': 'Kinger ralentit pres de Gangle et lui indique un passage moins expose dans le decor.',
+      'gangle:pomni': 'Pomni remarque l etat du masque de Gangle; Gangle lui designe le chemin suivi par le groupe.',
+      'gangle:ragatha': 'Ragatha verifie calmement que Gangle suit encore le groupe avant de reprendre la marche.',
+      'gangle:zooble': 'Zooble baisse le ton pendant que Gangle verifie l etat de son masque.',
+      'jax:kinger': 'Jax traite le prochain obstacle comme une plaisanterie; Kinger pointe pourtant le danger exact.',
+      'jax:pomni': 'Jax indique une porte douteuse a Pomni; elle refuse de quitter le trajet deja verifie.',
       'pomni:ragatha': 'Ragatha demande a Pomni de garder une porte fixe comme repere pendant que la scene change.',
       'jax:ragatha': 'Jax provoque Ragatha; elle ramene la discussion vers le groupe sans lui donner raison.',
-      'gangle:zooble': 'Zooble baisse le ton pendant que Gangle verifie l etat de son masque.',
-      'kinger:pomni': 'Kinger parle doucement; Pomni cesse un instant de chercher une sortie dans chaque mur.'
+      'jax:zooble': 'Zooble coupe court a une provocation de Jax et reprend sa propre route sans le suivre.',
+      'kinger:pomni': 'Kinger parle doucement; Pomni cesse un instant de chercher une sortie dans chaque mur.',
+      'kinger:ragatha': 'Ragatha laisse a Kinger le temps d examiner la zone avant de rappeler le prochain objectif.',
+      'kinger:zooble': 'Zooble attend pendant que Kinger reconstruit son orientation a partir des ombres de la piece.',
+      'pomni:zooble': 'Pomni et Zooble observent la meme anomalie sans accepter la premiere explication de CainOS.',
+      'ragatha:zooble': 'Ragatha propose de rejoindre le groupe; Zooble confirme le trajet mais garde ses distances.'
     };
-    const text = lines[pairKey] || `${pair[0].name} et ${pair[1].name} comparent les changements recents de la simulation.`;
+    const text = lines[pairKey] || `${pair[0].name} et ${pair[1].name} maintiennent un repere commun pendant que le decor se recompose.`;
     state.lastSocialSceneAt = performance.now();
     state.npcMemories.set(pairKey, (state.npcMemories.get(pairKey) || 0) + 1);
-    this.startCircusDynamicEvent(`social-${pairKey}`, { speaker: `${pair[0].name} / ${pair[1].name}`, text, avatars: pair.map(sprite => sprite.avatar || sprite.type), duration: 5200 });
+    this.startCircusDynamicEvent(`social-${pairKey}`, {
+      speaker: `${pair[0].name} / ${pair[1].name}`,
+      channel: 'scene',
+      text,
+      avatars: pair.map(sprite => sprite.avatar || sprite.type),
+      duration: 5200
+    });
   },
 
   getCircusIntroSteps() {
@@ -2770,6 +2919,8 @@ const OS = {
     state.cinematic = { index: 0, steps: this.getCircusIntroSteps(), startedAt: performance.now() };
     state.interactionMessage = '';
     state.interactionChoices = null;
+    document.getElementById('circus-doom-hud')?.classList.add('cinematic-active');
+    document.getElementById('circus-dos-overlay')?.classList.add('cinematic-active');
   },
 
   advanceCircusArrivalCinematic() {
@@ -2779,6 +2930,8 @@ const OS = {
     state.cinematic.startedAt = performance.now();
     if (state.cinematic.index >= state.cinematic.steps.length) {
       state.cinematic = null;
+      document.getElementById('circus-doom-hud')?.classList.remove('cinematic-active');
+      document.getElementById('circus-dos-overlay')?.classList.remove('cinematic-active');
       state.portalReady = true;
       this.setCainOSStorage('fps_intro_seen', true);
       this.circusZonePropsCache?.delete(2);
@@ -2806,6 +2959,36 @@ const OS = {
     state.player.a += delta * Math.min(1, dt * 2.4);
   },
 
+  getCircusCanvasTextLines(ctx, text, maxWidth, maxLines = Number.POSITIVE_INFINITY) {
+    const words = String(text || '').trim().split(/\s+/).filter(Boolean);
+    if (!words.length) return [];
+    const lines = [];
+    let line = '';
+    let truncated = false;
+
+    words.forEach(word => {
+      if (truncated) return;
+      const next = line ? `${line} ${word}` : word;
+      if (ctx.measureText(next).width <= maxWidth || !line) {
+        line = next;
+        return;
+      }
+      lines.push(line);
+      line = word;
+      if (lines.length >= maxLines) truncated = true;
+    });
+
+    if (!truncated && line && lines.length < maxLines) lines.push(line);
+    if (truncated && lines.length) {
+      let tail = lines[lines.length - 1];
+      while (tail && ctx.measureText(`${tail}...`).width > maxWidth) {
+        tail = tail.slice(0, -1).trimEnd();
+      }
+      lines[lines.length - 1] = `${tail || '.'}...`;
+    }
+    return lines;
+  },
+
   drawCircusCinematicOverlay(ctx, w, h, state) {
     const cinematic = state?.cinematic;
     const step = cinematic?.steps?.[cinematic.index];
@@ -2813,32 +2996,29 @@ const OS = {
     const fade = Math.min(1, (performance.now() - cinematic.startedAt) / 260);
     ctx.save();
     ctx.globalAlpha = fade;
+    ctx.font = 'bold 11px Courier New';
+    const lineHeight = 15;
+    const maxLines = Math.max(3, Math.floor((h * 0.45 - 70) / lineHeight));
+    const lines = this.getCircusCanvasTextLines(ctx, step.line, w - 52, maxLines);
+    const boxH = Math.min(h - 38, 76 + lines.length * lineHeight);
+    const boxY = h - boxH;
     ctx.fillStyle = 'rgba(0,0,0,0.9)';
     ctx.fillRect(0, 0, w, 30);
-    ctx.fillRect(0, h - 96, w, 96);
+    ctx.fillRect(0, boxY, w, boxH);
     ctx.fillStyle = '#fff1a8';
     ctx.font = 'bold 10px Courier New';
     ctx.textAlign = 'left';
-    ctx.fillText(`ARRIVEE DU VISITEUR // ${step.speaker}`, 18, h - 72);
+    ctx.fillText(`ARRIVEE DU VISITEUR // ${step.speaker}`, 18, boxY + 24);
     ctx.strokeStyle = step.speaker === 'CAINOS' ? '#7df0ff' : '#ffd84a';
-    ctx.strokeRect(14, h - 86, w - 28, 70);
+    ctx.strokeRect(14, boxY + 10, w - 28, boxH - 22);
     ctx.font = 'bold 11px Courier New';
-    const words = step.line.split(' ');
-    let line = '';
-    let y = h - 53;
-    words.forEach(word => {
-      const next = line ? `${line} ${word}` : word;
-      if (ctx.measureText(next).width > w - 52) {
-        ctx.fillText(line, 26, y);
-        line = word;
-        y += 15;
-      } else line = next;
+    lines.forEach((line, index) => {
+      ctx.fillText(line, 26, boxY + 45 + index * lineHeight);
     });
-    if (line) ctx.fillText(line, 26, y);
     ctx.fillStyle = '#7df0ff';
     ctx.font = '8px Courier New';
     ctx.textAlign = 'right';
-    ctx.fillText(`ENTREE / CLIC POUR CONTINUER  ${cinematic.index + 1}/${cinematic.steps.length}`, w - 20, h - 22);
+    ctx.fillText(`ENTREE / CLIC POUR CONTINUER  ${cinematic.index + 1}/${cinematic.steps.length}`, w - 20, h - 9);
     ctx.restore();
   },
 
@@ -3531,7 +3711,8 @@ const OS = {
     const discoveryId = `${state.currentZoneId}:${prop.interactionId ?? prop.index ?? prop.kind}`;
     const wasDiscovered = state.discoveries.has(discoveryId);
     state.discoveries.add(discoveryId);
-    const zoneProps = this.getCircusZoneProps(state.currentZoneId);
+    const zoneProps = this.getCircusZoneProps(state.currentZoneId)
+      .filter(candidate => !candidate.loreGate || this.hasCircusLoreGate(candidate.loreGate));
     const zoneDiscoveries = [...state.discoveries].filter(id => id.startsWith(`${state.currentZoneId}:`)).length;
     const discoveryStatus = wasDiscovered ? 'DEJA ANALYSE' : `NOUVELLE TRACE ${zoneDiscoveries}/${zoneProps.length}`;
     const activatableKinds = new Set(['console', 'gridnode', 'spotlight', 'candle', 'target', 'scoreboard', 'menu', 'card', 'archive', 'memory', 'ring', 'doorframe']);
@@ -3582,6 +3763,7 @@ const OS = {
             : `Seules des vues partielles de la chambre de ${bedroom.resident} sont disponibles; le mobilier manquant est une reconstruction CainOS.`;
       return `SCAN ${name}: ${canonBoundary}`;
     }
+    if (prop.loreText) return `SCAN ${name}: ${prop.loreText}`;
     const lines = {
       '2:ring': "La piste centrale agit comme point d'ancrage: toutes les aventures reviennent vers le chapiteau.",
       '2:spotlight': "Les projecteurs suivent les avatars, pas les corps. CainOS detecte seulement des silhouettes numeriques.",
@@ -3700,7 +3882,8 @@ const OS = {
       caineportal: `portail de Caine vers ${prop.label || 'aventure'}`,
       bed: "lit",
       wallart: "tableau abstrait",
-      ceilinglight: "plafonnier"
+      ceilinglight: "plafonnier",
+      lorebillboard: prop.label || "trace visuelle"
     };
     return names[prop.kind] || prop.kind || "objet";
   },
@@ -3716,7 +3899,7 @@ const OS = {
       '8:window': 'BARON_MILDENHALL',
       '8:candle': 'GHOSTLY',
       '10:counter': 'GANGLE',
-      '10:menu': 'TRAINING_VIDEO',
+      '10:menu': 'GANGLE',
       '11:card': 'INTERMISSION_VOICE',
       '12:scoreboard': 'COMMITTEE_MEMBER',
       '13:target': 'JAX',
@@ -4290,6 +4473,21 @@ const OS = {
       fudge: {
         6: "The Fudge: La confiserie bouge comme une menace, pas comme un decor."
       },
+      baronmildenhall: {
+        8: "Baron Mildenhall: Les enregistrements du manoir veulent que tu regardes le trophée, mais pas toute la vérité.",
+        9: "Baron Mildenhall: Le sous-sol transforme la chasse en piege."
+      },
+      marthamildenhall: {
+        8: "Martha Mildenhall: La peur de Kinger n'efface pas ce qui s'est vraiment passe ici.",
+        34: "Martha Mildenhall: Ce lieu garde une faute, mais aussi un souvenir capable de la nommer."
+      },
+      ghostly: {
+        9: "Ghostly: Le manoir n'a pas que des menaces; certains signaux brillent encore."
+      },
+      angel: {
+        8: "Angel: Le manoir m'a pris pour une menace avant que le récit corrige son erreur.",
+        34: "Angel: Le sous-sol garde l'echo de ce que le Baron n'a pas compris."
+      },
       horrorghost: {
         8: "Fantome: La lumiere ne chasse pas la peur. Elle la nomme."
       },
@@ -4308,6 +4506,31 @@ const OS = {
       ming: {
         10: "Ming: Signal figurant detecte. Caine a l'air beaucoup trop agace par ce profil.",
         15: "Ming: Les couches admin classent les personnages de fond comme des anomalies presque importantes."
+      },
+      disappearingguy: {
+        38: "Disappearing Guy: He--"
+      },
+      committeemember: {
+        38: "Committee Member: La ceremonie de Caine a besoin d'un comite, meme quand le comite n'a presque rien a dire."
+      },
+      truthtellerfish: {
+        14: "Orange Crappy Looking Fish: Dude, ils ont pris le coffre. C'etait toutes mes economies."
+      },
+      liarfish: {
+        14: "Red Crappy Looking Fish: C'est moi qui raconte des mensonges."
+      },
+      stupidburgermannequin: {
+        10: "Spudsy Mannequin: Je voudrais commander le Stupid Burger. N'oublie pas la sauce."
+      },
+      cerealmannequin: {
+        10: "Spudsy Mannequin: Non merci, j'ai deja ce bol de cereales."
+      },
+      shrimpnpc: {
+        14: "Shrimp NPC: En tant que PNJ crevette, je suis surtout inquiet du soleil.",
+        40: "Shrimp NPC: Le lac digital n'est pas plus rassurant vu de pres."
+      },
+      chineseroomnpc: {
+        15: "Chinese Room NPC: Oh, merci. Cette piece etait beaucoup trop litterale."
       },
       additionalvoices: {
         7: "Additional Voices: Mannequin de fond detecte dans la couche technique, sans profil humain confirme.",
@@ -4337,6 +4560,77 @@ const OS = {
       themachine: {
         15: "The Machine: Objet vivant ou decor actif, mais CainOS ne le classe pas comme resident du Cirque.",
         16: "The Machine: La couche C&A laisse parfois les objets avoir plus de presence que les personnages."
+      },
+      blueai: {
+        16: "CainOS // ARCHIVE: Blue AI a ete developpee par C&A pour remplacer Caine, puis absorbee par lui avant leur separation dans Remember."
+      },
+      bonepastor: {
+        8: "CainOS // EASTER EGG: The Bone Pastor est visible dans Mildenhall Manor; aucun dialogue canonique n est attribue a cette apparition."
+      },
+      fourthcrocodile: {
+        16: "CainOS // ARCHIVE EP8: crocodile jaune quadrupede invoque pendant la sequence de tourment; son identite exacte n est pas confirmee."
+      },
+      ragathamothershadow: {
+        16: "CainOS // ARCHIVE EP8: silhouette feminine projetee face a Ragatha. Le lien maternel est suggere par la scene, pas confirme comme identite."
+      },
+      laughingshadows: {
+        16: "CainOS // ARCHIVE EP8: silhouettes rieuses utilisees contre Jax. Elles imitent des formes connues sans restaurer les personnages correspondants."
+      },
+      cookiebutterfly: {
+        6: "CainOS // OBSERVATION: Un Cookie Butterfly vole au-dessus du royaume sucre; aucun dialogue detecte.",
+        11: "CainOS // VISUEL: La micro-aventure reutilise un Cookie Butterfly comme figurant de simulation."
+      },
+      gummyelephant: {
+        6: "CainOS // OBSERVATION: Le Gummy Elephant attend devant le carrosse de Candy Canyon; aucun langage detecte.",
+        66: "CainOS // ARCHIVE: Le profil du Gummy Elephant reste associe au palais et a l aventure Candy Canyon."
+      },
+      giantcentipede: {
+        12: "CainOS // OBSERVATION: Un Giant Centipede domine les gradins du match; son echelle depasse celle des figurants."
+      },
+      drfootball: {
+        29: "CainOS // OBSERVATION: Dr. Football est indexe parmi les accessoires du Pilote, sans dialogue ni statut de resident."
+      },
+      candyguardcyan: {
+        32: "CainOS // OBSERVATION: Le garde mannequin cyan reste silencieux devant l acces royal."
+      },
+      candyguardblue: {
+        32: "CainOS // OBSERVATION: Le garde mannequin bleu suit une courte ronde de palais sans dialogue."
+      },
+      candyguardpurple: {
+        32: "CainOS // OBSERVATION: Le garde mannequin violet partage le meme protocole que les deux autres modeles."
+      },
+      redmannequin: {
+        32: "CainOS // OBSERVATION: Mannequin rouge de foule Candy Canyon; aucun dialogue detecte."
+      },
+      orangemannequin: {
+        32: "CainOS // OBSERVATION: Mannequin orange de foule Candy Canyon; modele visuel, pas identite individuelle."
+      },
+      yellowmannequin: {
+        32: "CainOS // OBSERVATION: Mannequin jaune de foule Candy Canyon; protocole figurant silencieux."
+      },
+      magentamannequin: {
+        32: "CainOS // OBSERVATION: Mannequin magenta de Candy Canyon; CainOS ne confirme aucun nom propre."
+      },
+      gummyworm: {
+        6: "CainOS // OBSERVATION: Un Gummy Worm segmente longe la douve chocolat; aucun langage detecte."
+      },
+      barrelmonkey: {
+        3: "SFX // BARREL MONKEY: claquements de plastique et cris de jouet sans parole."
+      },
+      jeffery: {
+        11: "CainOS // VISUEL: Jeffery adopte sa forme de danseur; le signal reste rattache a l oeil droit de Caine."
+      },
+      mildenhallsouls: {
+        9: "CainOS // OBSERVATION: Ames de Mildenhall detectees comme phenomene spectral, sans dialogue individuel indexe.",
+        34: "CainOS // OBSERVATION: Signal d ames lie a la possession et a l exorcisme du manoir."
+      },
+      albertspudsy: {
+        10: "CainOS // VISUEL: Albert Spudsy detecte comme image de marque/decoupe, pas comme PNJ actif.",
+        35: "CainOS // VISUEL: Albert Spudsy reste un visuel de restaurant; aucune interaction de personnage."
+      },
+      spudsycustomer: {
+        10: "Spudsy Customer: Mon ticket est pret depuis trois minutes. Le comptoir est le vrai boss de cette aventure.",
+        35: "Spudsy Customer: Les commandes arrivent plus vite que Gangle ne peut les absorber."
       },
       queenie: {
         17: "Queenie Archive: Le signal reste une memoire de Kinger, pas une residente revenue dans la piste."
@@ -4390,6 +4684,10 @@ const OS = {
       chad: "Chad: Le convoi suit les rails de la scene.",
       loolilalu: "Princess Loolilalu: Le royaume garde ses regles de conte, meme sous CainOS.",
       fudge: "The Fudge: Signal de confiserie instable.",
+      baronmildenhall: "Baron Mildenhall: Signal de manoir confine.",
+      marthamildenhall: "Martha Mildenhall: Presence spectrale Mildenhall detectee.",
+      ghostly: "Ghostly: Petit signal spectral detecte.",
+      angel: "Angel: Creature du manoir, statut corrige apres revelation.",
       kaufmo: "Kaufmo Archive: ...",
       horrorghost: "Fantome: Le signal te regarde aussi.",
       horrormonster: "Mildenhall Monster: Signal horrifique confine au manoir.",
@@ -4397,6 +4695,36 @@ const OS = {
       horrorpomniskull: "Horror Pomni: Trace de panique visuelle.",
       workgangle: "Gangle: Le service client est plus dur que les aventures.",
       ming: "Ming: Figurants et prix absurdes detectes.",
+      disappearingguy: "Disappearing Guy: Signal intermittent.",
+      committeemember: "Committee Member: Signal de comite detecte.",
+      truthtellerfish: "Orange Crappy Looking Fish: Signal poisson orange detecte.",
+      liarfish: "Red Crappy Looking Fish: Signal poisson rouge detecte.",
+      stupidburgermannequin: "Spudsy Mannequin: Commande Stupid Burger detectee.",
+      cerealmannequin: "Spudsy Mannequin: Bol de cereales detecte dans la file.",
+      shrimpnpc: "Shrimp NPC: Signal crevette detecte.",
+      chineseroomnpc: "Chinese Room NPC: Signal Chinese Room detecte.",
+      blueai: "CainOS // ARCHIVE: signal canonique Blue AI detecte; donnees verrouillees jusqu a sa revelation dans Remember.",
+      bonepastor: "CainOS // EASTER EGG: The Bone Pastor detecte dans le decor de Mildenhall.",
+      fourthcrocodile: "CainOS // ARCHIVE: entite crocodile de la sequence de tourment de l episode 8.",
+      ragathamothershadow: "CainOS // ARCHIVE: silhouette feminine liee au tourment de Ragatha.",
+      laughingshadows: "CainOS // ARCHIVE: groupe de silhouettes rieuses lie au tourment de Jax.",
+      cookiebutterfly: "CainOS // OBSERVATION: Cookie Butterfly detecte comme faune decorative de simulation.",
+      gummyelephant: "CainOS // OBSERVATION: Gummy Elephant detecte comme creature de Candy Canyon.",
+      giantcentipede: "CainOS // OBSERVATION: Giant Centipede detecte a grande echelle dans la simulation.",
+      drfootball: "CainOS // OBSERVATION: Dr. Football detecte comme accessoire sans dialogue.",
+      candyguardcyan: "CainOS // OBSERVATION: Garde mannequin cyan silencieux detecte.",
+      candyguardblue: "CainOS // OBSERVATION: Garde mannequin bleu silencieux detecte.",
+      candyguardpurple: "CainOS // OBSERVATION: Garde mannequin violet silencieux detecte.",
+      redmannequin: "CainOS // OBSERVATION: Mannequin rouge de foule detecte.",
+      orangemannequin: "CainOS // OBSERVATION: Mannequin orange de foule detecte.",
+      yellowmannequin: "CainOS // OBSERVATION: Mannequin jaune de foule detecte.",
+      magentamannequin: "CainOS // OBSERVATION: Mannequin magenta de foule detecte.",
+      gummyworm: "CainOS // OBSERVATION: Petite faune gommeuse sans dialogue detectee.",
+      barrelmonkey: "SFX // BARREL MONKEY: jouet articule sans dialogue detecte.",
+      jeffery: "CainOS // VISUEL: Forme de danseur de Jeffery detectee comme extension de Caine.",
+      mildenhallsouls: "CainOS // OBSERVATION: Amas spectral de Mildenhall detecte.",
+      albertspudsy: "CainOS // VISUEL: Decoupe Albert Spudsy detectee.",
+      spudsycustomer: "Spudsy Customer: Client Spudsy reconstruit detecte.",
       additionalvoices: "Additional Voices: Signal de fond classe comme personnage secondaire.",
       themachine: "The Machine: Decor actif sous observation.",
       orbsman: "Orbsman: Micro-aventure orbitee, logique minimale.",
@@ -4480,6 +4808,10 @@ const OS = {
       chad: "BANDIT",
       loolilalu: "PRINCESS_LOO",
       fudge: "THE_FUDGE",
+      baronmildenhall: "BARON_MILDENHALL",
+      marthamildenhall: "MARTHA_MILDENHALL",
+      ghostly: "GHOSTLY",
+      angel: "MOUNTED_CREATURE_HEAD",
       horrorghost: "GHOSTLY",
       horrormonster: "BARON_MILDENHALL",
       horrorpomnivoid: "POSSESSED_POMNI",
@@ -4495,6 +4827,44 @@ const OS = {
       hunterjax: "JAX",
       beachgangle: "GANGLE",
       ming: "MING",
+      disappearingguy: "DISAPPEARING_GUY",
+      committeemember: "COMMITTEE_MEMBER",
+      truthtellerfish: "TRUTH_TELLER_NPC",
+      liarfish: "LIAR_NPC",
+      stupidburgermannequin: "SPUDSY_BURGER_CUSTOMER",
+      cerealmannequin: "SPUDSY_CEREAL_CUSTOMER",
+      shrimpnpc: "SHRIMP_NPC",
+      chineseroomnpc: "CHINESE_ROOM_NPC",
+      blueai: "BLUE_AI",
+      bonepastor: "BONE_PASTOR",
+      fourthcrocodile: "FOURTH_CROCODILE",
+      ragathamothershadow: "FEMININE_SHADOW",
+      paintedmasks: "PAINTED_MASKS",
+      zoobleparts: "ZOOBLE_PARTS_MIRRORS",
+      laughingshadows: "LAUGHING_SHADOWS",
+      abigailbrooks: "ABIGAIL",
+      suzieackerman: "SUZIE_ACKERMAN",
+      zoeyraghavan: "ZOEY_RAGHAVAN",
+      rileyverselis: "RILEY_VERSELIS",
+      grantbest: "GRANT_BEST",
+      leeroymateo: "LEEROY_MATEO",
+      cookiebutterfly: "COOKIE_BUTTERFLY",
+      gummyelephant: "GUMMY_ELEPHANT",
+      giantcentipede: "GIANT_CENTIPEDE",
+      drfootball: "DR_FOOTBALL",
+      candyguardcyan: "CANDY_GUARD",
+      candyguardblue: "CANDY_GUARD",
+      candyguardpurple: "CANDY_GUARD",
+      redmannequin: "COLORED_MANNEQUIN",
+      orangemannequin: "COLORED_MANNEQUIN",
+      yellowmannequin: "COLORED_MANNEQUIN",
+      magentamannequin: "COLORED_MANNEQUIN",
+      gummyworm: "GUMMY_WORM",
+      barrelmonkey: "BARREL_MONKEY",
+      jeffery: "JEFFERY",
+      mildenhallsouls: "MILDENHALL_SOULS",
+      albertspudsy: "ALBERT_SPUDSY",
+      spudsycustomer: "SPUDSY_NPC",
       additionalvoices: "VOICE",
       themachine: "BACKGROUND",
       abelmannequin: "ABEL",
@@ -4801,32 +5171,33 @@ const OS = {
   drawCircusActivityHud(ctx, w, h, state) {
     const activity = state?.currentActivity;
     if (!activity || activity.complete || !state.hudVisible) return;
+    const y = w < 480 ? h - 142 : h - 58;
     ctx.save();
     ctx.fillStyle = 'rgba(5,2,13,0.88)';
     ctx.strokeStyle = '#7df0ff';
-    ctx.fillRect(w / 2 - 128, h - 58, 256, 42);
-    ctx.strokeRect(w / 2 - 128, h - 58, 256, 42);
+    ctx.fillRect(w / 2 - 128, y, 256, 42);
+    ctx.strokeRect(w / 2 - 128, y, 256, 42);
     ctx.fillStyle = '#ffffff';
     ctx.font = 'bold 8px Courier New';
     ctx.textAlign = 'center';
-    ctx.fillText(activity.title, w / 2, h - 44);
+    ctx.fillText(activity.title, w / 2, y + 14);
     if (activity.type === 'tanker') {
-      ctx.fillText(`ROUTE ${Math.round(activity.distance)}/48 | INTEGRITE ${Math.round(activity.integrity)}% | VOIE ${Math.round(activity.lane) + 1}`, w / 2, h - 28);
+      ctx.fillText(`ROUTE ${Math.round(activity.distance)}/48 | INTEGRITE ${Math.round(activity.integrity)}% | VOIE ${Math.round(activity.lane) + 1}`, w / 2, y + 30);
     } else if (activity.type === 'spudsy') {
       const phase = ['PRENDRE TICKET', 'UTILISER COMPTOIR', 'DONNER COMMANDE'][activity.phase];
-      ctx.fillText(`COMMANDE ${activity.order + 1}/3 | ${phase} | ${Math.ceil(activity.timeLeft)}s`, w / 2, h - 28);
+      ctx.fillText(`COMMANDE ${activity.order + 1}/3 | ${phase} | ${Math.ceil(activity.timeLeft)}s`, w / 2, y + 30);
     } else if (activity.type === 'softball') {
       ctx.fillStyle = '#294d2b';
-      ctx.fillRect(w / 2 - 78, h - 34, 156, 8);
+      ctx.fillRect(w / 2 - 78, y + 21, 156, 8);
       ctx.fillStyle = '#9cff6d';
-      ctx.fillRect(w / 2 - 12, h - 34, 24, 8);
+      ctx.fillRect(w / 2 - 12, y + 21, 24, 8);
       ctx.fillStyle = '#ffffff';
-      ctx.fillRect(w / 2 - 78 + activity.marker * 156 - 2, h - 37, 4, 14);
-      ctx.fillText(`FRAPPES ${activity.hits}/3 | E DANS LE VERT`, w / 2, h - 20);
+      ctx.fillRect(w / 2 - 78 + activity.marker * 156 - 2, y + 18, 4, 14);
+      ctx.fillText(`FRAPPES ${activity.hits}/3 | E DANS LE VERT`, w / 2, y + 39);
     } else if (activity.type === 'mildenhall') {
-      ctx.fillText(`TENIR ${Math.ceil(activity.timeLeft)}s | EXPOSITION ${Math.round(activity.exposure)}% | BRUIT ${Math.round(state.noiseLevel * 100)}%`, w / 2, h - 28);
+      ctx.fillText(`TENIR ${Math.ceil(activity.timeLeft)}s | EXPOSITION ${Math.round(activity.exposure)}% | BRUIT ${Math.round(state.noiseLevel * 100)}%`, w / 2, y + 30);
     } else if (activity.type === 'dive') {
-      ctx.fillText(`OXYGENE ${Math.round(activity.oxygen)}% | PROFONDEUR ${Math.round(activity.depth)}/18`, w / 2, h - 28);
+      ctx.fillText(`OXYGENE ${Math.round(activity.oxygen)}% | PROFONDEUR ${Math.round(activity.depth)}/18`, w / 2, y + 30);
     }
     ctx.restore();
   },
@@ -4986,15 +5357,16 @@ const OS = {
 
   drawCircusThreatHud(ctx, w, h, state) {
     if (!state?.threatAlert) return;
+    const y = w < 480 ? 106 : 50;
     ctx.save();
     ctx.fillStyle = 'rgba(45,0,0,0.82)';
     ctx.strokeStyle = '#ff4d4d';
-    ctx.fillRect(w / 2 - 150, 50, 300, 22);
-    ctx.strokeRect(w / 2 - 150, 50, 300, 22);
+    ctx.fillRect(w / 2 - 150, y, 300, 22);
+    ctx.strokeRect(w / 2 - 150, y, 300, 22);
     ctx.fillStyle = '#ffffff';
     ctx.font = 'bold 8px Courier New';
     ctx.textAlign = 'center';
-    ctx.fillText(state.threatAlert, w / 2, 64);
+    ctx.fillText(state.threatAlert, w / 2, y + 14);
     ctx.restore();
   },
 
@@ -5003,7 +5375,7 @@ const OS = {
     const threatZone = [4, 8, 9, 34, 64, 65].includes(state.currentZoneId);
     if (!threatZone && (state.noiseLevel || 0) < 0.08) return;
     const x = w - 146;
-    const y = h - 44;
+    const y = w < 480 ? h - 112 : h - 44;
     const drawMeter = (label, value, color, offset) => {
       ctx.fillStyle = 'rgba(5,5,12,0.78)';
       ctx.fillRect(x, y + offset, 132, 14);
@@ -5211,7 +5583,28 @@ const OS = {
   drawCircusDoom() {
     const state = this.circusDoom;
     if (!state) return;
+    this.syncCircusDoomCanvasSize(state);
     this.drawCircusSimulationScene();
+  },
+
+  syncCircusDoomCanvasSize(state = this.circusDoom) {
+    const canvas = state?.canvas;
+    if (!canvas || !canvas.isConnected) return false;
+    const rect = canvas.getBoundingClientRect();
+    if (rect.width < 2 || rect.height < 2) return false;
+
+    const logicalWidth = Math.max(320, Math.min(960, Math.round(rect.width)));
+    const scale = logicalWidth / rect.width;
+    const logicalHeight = Math.max(220, Math.min(720, Math.round(rect.height * scale)));
+    if (canvas.width === logicalWidth && canvas.height === logicalHeight) return false;
+
+    canvas.width = logicalWidth;
+    canvas.height = logicalHeight;
+    state.ctx = canvas.getContext('2d');
+    state.wallDepthBuffer = null;
+    state.wallTopBuffer = null;
+    state.wallBottomBuffer = null;
+    return true;
   },
 
   drawCircusSimulationScene() {
@@ -5221,6 +5614,17 @@ const OS = {
     const w = canvas.width;
     const h = canvas.height;
     const zone = portals[state.currentZoneId] || portals[2];
+    const conversationActive = !state.cinematic
+      && !!state.interactionMessage
+      && performance.now() <= state.interactionUntil;
+    const journalActive = !state.cinematic && !conversationActive && !!state.journalVisible;
+    const doomHud = document.getElementById('circus-doom-hud');
+    doomHud?.classList.toggle('conversation-active', conversationActive);
+    doomHud?.classList.toggle('journal-active', journalActive);
+    document.body.dataset.fpsInteractionChannel = state.cinematic
+      ? 'cinematic'
+      : conversationActive ? (state.interactionChannel || 'system')
+        : journalActive ? 'journal' : 'none';
     state.hotspots = [];
 
     this.drawCircusRaycastRoom(ctx, w, h, state, zone);
@@ -5230,16 +5634,18 @@ const OS = {
     this.drawCircusDepthProps(ctx, w, h, state);
     this.drawCircusPhysicalDoors(ctx, w, h, portals, state);
     this.drawCircusImpostorSprites(ctx, w, h, state);
-    this.drawCircusThreatHud(ctx, w, h, state);
-    this.drawCircusStealthHud(ctx, w, h, state);
-    this.drawCircusCampaignHud(ctx, w, h, state);
-    this.drawCircusCustomAdventureHud(ctx, w, h, state);
-    this.drawCircusActivityHud(ctx, w, h, state);
-    if (!state.cinematic && state.hudVisible) this.drawCircusZoneObjectiveHud(ctx, w, h, state);
-    this.drawCircusMissionJournal(ctx, w, h, state);
-    if (!state.cinematic) this.drawCircusConversationOverlay(ctx, w, h, state);
-    this.drawCircusSimulationReticle(ctx, w, h, zone);
-    if (state.minimapVisible) this.drawCircusRoomMinimap(ctx, w, h, state, zone);
+    if (!state.cinematic && !conversationActive && !journalActive) {
+      this.drawCircusThreatHud(ctx, w, h, state);
+      this.drawCircusStealthHud(ctx, w, h, state);
+      this.drawCircusCampaignHud(ctx, w, h, state);
+      this.drawCircusCustomAdventureHud(ctx, w, h, state);
+      this.drawCircusActivityHud(ctx, w, h, state);
+      if (state.hudVisible && !state.threatAlert) this.drawCircusZoneObjectiveHud(ctx, w, h, state);
+      this.drawCircusSimulationReticle(ctx, w, h, zone);
+      if (state.minimapVisible) this.drawCircusRoomMinimap(ctx, w, h, state, zone);
+    }
+    if (journalActive) this.drawCircusMissionJournal(ctx, w, h, state);
+    if (conversationActive) this.drawCircusConversationOverlay(ctx, w, h, state);
     this.drawCircusCinematicOverlay(ctx, w, h, state);
     this.drawCircusPortalTransitionOverlay(ctx, w, h, state);
   },
@@ -6130,7 +6536,8 @@ const OS = {
       ],
       8: [
         { id: 'manor_flicker', label: 'BOUGIES', detail: 'EVENT: les bougies du manoir rendent la peur visible.', color: '#b7f0ff' },
-        { id: 'ghost_pass', label: 'GHOST PASS', detail: 'EVENT: apparition spectrale en bord de scene.', color: '#7df0ff' }
+        { id: 'ghost_pass', label: 'GHOST PASS', detail: 'EVENT: apparition spectrale en bord de scene.', color: '#7df0ff' },
+        { id: 'mildenhall_fly', label: 'MOUCHE', detail: 'AMBIANCE: une mouche bourdonne dans le manoir, comme pendant la fuite de Pomni et Kinger.', color: '#fff1a8' }
       ],
       10: [
         { id: 'ticket_rush', label: 'TICKET RUSH', detail: 'EVENT: Spudsy imprime trop de commandes.', color: '#ff4d4d' },
@@ -6199,7 +6606,11 @@ const OS = {
     if (!event) return;
     if (state.lastZoneEventId !== event.id) {
       state.lastZoneEventId = event.id;
-      if (typeof SoundManager.playFpsEvent === 'function') SoundManager.playFpsEvent(event.id);
+      if (event.id === 'mildenhall_fly') {
+        this.playCircusSpatialObjectSound({ x: 0.85, z: -0.65 }, event.id);
+      } else if (typeof SoundManager.playFpsEvent === 'function') {
+        SoundManager.playFpsEvent(event.id);
+      }
       this.applyCircusAmbientEventEffect(event, state);
     }
     const t = performance.now() / 1000;
@@ -6220,6 +6631,8 @@ const OS = {
         const y = h * 0.34 + Math.sin(t * 2 + i) * 18 + i % 3 * 18;
         ctx.fillRect(x, y, 10 + (i % 3) * 4, 2);
       }
+    } else if (event.id === 'mildenhall_fly') {
+      this.drawCircusMildenhallFly(ctx, w, h, state, event);
     } else if (event.id === 'manor_flicker' || event.id === 'ghost_pass') {
       ctx.globalAlpha = 0.1 + Math.abs(Math.sin(t * 5.5)) * 0.18;
       ctx.fillStyle = event.color;
@@ -6266,6 +6679,43 @@ const OS = {
     ctx.restore();
   },
 
+  drawCircusMildenhallFly(ctx, w, h, state, event) {
+    if (state.currentZoneId !== 8 || !state.room) return;
+    const t = performance.now() / 1000;
+    const fly = {
+      x: 0.85 + Math.sin(t * 2.7) * 0.5,
+      z: -0.65 + Math.cos(t * 2.1) * 0.38
+    };
+    const projected = this.projectCircusPoint(fly, state, w, h);
+    if (!projected || projected.distance > 6.2) return;
+    const bodySize = Math.max(1.2, Math.min(5, projected.scale * 3.8));
+    const flyY = projected.y - Math.max(8, 43 * projected.scale + Math.sin(t * 7.5) * 5 * projected.scale);
+    const box = {
+      x: projected.x - bodySize * 3,
+      y: flyY - bodySize * 2.2,
+      w: bodySize * 6,
+      h: bodySize * 4.4
+    };
+    ctx.save();
+    if (!this.applyCircusDepthClip(ctx, box, projected.depth, state, 0.12)) {
+      ctx.restore();
+      return;
+    }
+    ctx.globalAlpha = 0.58 + Math.abs(Math.sin(t * 18)) * 0.34;
+    ctx.fillStyle = 'rgba(255,255,220,0.7)';
+    ctx.beginPath();
+    ctx.ellipse(projected.x - bodySize * 1.25, flyY - bodySize * 0.45, bodySize * 1.45, bodySize * 0.65, -0.45, 0, Math.PI * 2);
+    ctx.ellipse(projected.x + bodySize * 1.25, flyY - bodySize * 0.45, bodySize * 1.45, bodySize * 0.65, 0.45, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.globalAlpha = 1;
+    ctx.fillStyle = '#090909';
+    ctx.beginPath();
+    ctx.ellipse(projected.x, flyY, bodySize * 0.72, bodySize * 1.25, 0, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.fillRect(projected.x - bodySize * 0.16, flyY - bodySize * 1.55, bodySize * 0.32, bodySize * 0.62);
+    ctx.restore();
+  },
+
   applyCircusAmbientEventEffect(event, state) {
     if (!event || !state || state.cinematic) return;
     if (event.id === 'tube_shuffle' && state.room?.doors?.length > 1) {
@@ -6293,9 +6743,9 @@ const OS = {
   drawCircusZoneObjectiveHud(ctx, w, h, state) {
     const status = this.getCircusZoneObjectiveStatus(state.currentZoneId, state);
     if (!status) return;
-    const width = Math.min(310, w * 0.42);
+    const width = w < 480 ? w - 28 : Math.min(310, w * 0.42);
     const x = (w - width) / 2;
-    const y = 10;
+    const y = w < 480 ? 106 : 10;
     const color = status.complete ? '#9cff6d' : '#fff1a8';
     const ratio = status.total ? status.done / status.total : 0;
     const next = status.complete ? 'MISSION LOCALE TERMINEE'
@@ -6323,9 +6773,10 @@ const OS = {
   drawCircusRoomMinimap(ctx, w, h, state, zone) {
     const room = state.room;
     if (!room) return;
-    const cell = 4;
+    const compact = w < 480;
+    const cell = compact ? 3 : 4;
     const ox = 12;
-    const oy = 46;
+    const oy = compact ? 198 : 46;
     ctx.save();
     ctx.fillStyle = 'rgba(5,2,13,0.62)';
     ctx.fillRect(ox - 4, oy - 4, room.size * cell + 8, room.size * cell + 8);
@@ -6747,10 +7198,62 @@ const OS = {
       13: [{ kind: 'target', x: -1.8, z: -2.3, color: '#f6d743' }, { kind: 'target', x: 1.8, z: -2.3, color: '#ff4d4d' }, { kind: 'target', x: 0, z: -3.05, color: '#ffffff' }, { kind: 'crate', x: -2.9, z: -1.35, color: '#5c3a21' }, { kind: 'barrel', x: 2.85, z: -1.35, color: '#463228' }],
       14: [{ kind: 'umbrella', x: -1.8, z: -2.1, color: '#ffd84a' }, { kind: 'wave', x: 0, z: -3.0, color: '#4ee7ff' }, { kind: 'sun', x: 2.4, z: -2.8, color: '#ffe57d' }, { kind: 'umbrella', x: 1.65, z: -1.35, color: '#ff9b37' }, { kind: 'wave', x: -2.95, z: -2.85, color: '#4ee7ff' }],
       15: [{ kind: 'console', x: 0, z: -2.7, color: '#ffcf75' }, { kind: 'gridnode', x: -2.0, z: -2.0, color: '#7df0ff' }, { kind: 'table', x: 1.75, z: -1.6, color: '#ffffff' }, { kind: 'card', x: 2.75, z: -2.45, color: '#ffcf75' }],
-      16: [{ kind: 'desk', x: 0, z: -2.9, color: '#ff7a30' }, { kind: 'console', x: -2.0, z: -2.2, color: '#7df0ff' }, { kind: 'eye', x: 2.1, z: -2.2, color: '#ff3333' }, { kind: 'gridnode', x: 0.95, z: -1.35, color: '#ff7a30' }, { kind: 'archive', x: -2.9, z: -1.4, color: '#7df0ff' }],
+      16: [
+        { kind: 'desk', x: 0, z: -2.9, color: '#ff7a30' },
+        { kind: 'console', x: -2.0, z: -2.2, color: '#7df0ff' },
+        { kind: 'eye', x: 2.1, z: -2.2, color: '#ff3333' },
+        { kind: 'gridnode', x: 0.95, z: -1.35, color: '#ff7a30' },
+        { kind: 'archive', x: -2.9, z: -1.4, color: '#7df0ff' },
+        {
+          kind: 'lorebillboard', avatar: 'paintedmasks', label: 'Painted Masks', x: -2.75, z: -3.35,
+          color: '#f7f7f7', loreGate: { episode: 8, subepisode: 7 },
+          loreText: "Cinq peintures de masques de Gangle apparaissent pendant son tourment. Elles restent des images de scene, pas cinq nouveaux personnages."
+        },
+        {
+          kind: 'lorebillboard', avatar: 'zoobleparts', label: 'Body Parts and Mirrors', x: 2.75, z: -3.35,
+          color: '#ff4fb8', loreGate: { episode: 8, subepisode: 7 },
+          loreText: "Des pieces de Zooble et deux miroirs noirs composent son tourment. CainOS les classe comme assemblage de decor, pas comme PNJ."
+        }
+      ],
       17: [{ kind: 'memory', x: -1.8, z: -2.0, color: '#d9d0a2' }, { kind: 'memory', x: 0, z: -2.6, color: '#7df0ff' }, { kind: 'memory', x: 1.8, z: -2.0, color: '#d9d0a2' }, { kind: 'table', x: 0.55, z: -1.35, color: '#d9d0a2' }, { kind: 'candle', x: -2.75, z: -1.4, color: '#ffd84a' }],
       18: [...basePillars, { kind: 'spotlight', x: 0, z: -2.6, color: '#e53935' }, { kind: 'archive', x: -2.2, z: -2.25, color: '#c875ff' }, { kind: 'gridnode', x: 2.2, z: -1.45, color: '#ff4d4d' }],
-      19: [{ kind: 'archive', x: -2.0, z: -2.1, color: '#c875ff' }, { kind: 'archive', x: 0, z: -2.7, color: '#7df0ff' }, { kind: 'archive', x: 2.0, z: -2.1, color: '#ffd84a' }, { kind: 'card', x: -3.0, z: -1.35, color: '#ff4fb8' }, { kind: 'card', x: 3.0, z: -1.35, color: '#ffd84a' }],
+      19: [
+        { kind: 'archive', x: -2.0, z: -2.1, color: '#c875ff' },
+        { kind: 'archive', x: 0, z: -2.7, color: '#7df0ff' },
+        { kind: 'archive', x: 2.0, z: -2.1, color: '#ffd84a' },
+        { kind: 'card', x: -3.0, z: -1.35, color: '#ff4fb8' },
+        { kind: 'card', x: 3.0, z: -1.35, color: '#ffd84a' },
+        {
+          kind: 'lorebillboard', avatar: 'abigailbrooks', label: 'Abigail Brooks', x: -3.15, z: -3.7,
+          color: '#f2c7b5', loreGate: { episode: 9, subepisode: 7 },
+          loreText: "Contrepartie humaine de Pomni. Projection externe revelee par Caine; Abigail n est pas une residente physique du Cirque."
+        },
+        {
+          kind: 'lorebillboard', avatar: 'suzieackerman', label: 'Suzie J. Ackerman', x: -1.9, z: -3.7,
+          color: '#9b6b52', loreGate: { episode: 9, subepisode: 7 },
+          loreText: "Contrepartie humaine de Ragatha. Cette image vient de la presentation finale et ne represente pas un PNJ de simulation."
+        },
+        {
+          kind: 'lorebillboard', avatar: 'zoeyraghavan', label: 'Zoey Raghavan', x: -0.65, z: -3.7,
+          color: '#9b3f49', loreGate: { episode: 9, subepisode: 7 },
+          loreText: "Contrepartie humaine de Gangle. CainOS conserve son profil comme projection du monde reel uniquement."
+        },
+        {
+          kind: 'lorebillboard', avatar: 'rileyverselis', label: 'Riley Verselis', x: 0.65, z: -3.7,
+          color: '#687287', loreGate: { episode: 9, subepisode: 7 },
+          loreText: "Contrepartie humaine de Zooble. Le profil est une archive visuelle externe, pas un resident du Cirque."
+        },
+        {
+          kind: 'lorebillboard', avatar: 'grantbest', label: 'Grant Best', x: 1.9, z: -3.7,
+          color: '#7d668b', loreGate: { episode: 9, subepisode: 7 },
+          loreText: "Contrepartie humaine de Kinger. La projection montre sa vie reelle sans faire entrer Grant dans la simulation."
+        },
+        {
+          kind: 'lorebillboard', avatar: 'leeroymateo', label: 'Leeroy Mateo', x: 3.15, z: -3.7,
+          color: '#41516a', loreGate: { episode: 9, subepisode: 7 },
+          loreText: "Contrepartie humaine de Jax. CainOS l indexe apres la revelation finale, sans le faire apparaitre comme PNJ actif."
+        }
+      ],
       20: [
         { kind: 'roomdoor', avatar: 'jax', label: 'JAX', side: 'left', anchor: 'wall-left', x: -1.48, z: 3.2, color: '#8a4fd6', target: 44 },
         { kind: 'roomdoor', avatar: 'pomni', label: 'POMNI', side: 'right', anchor: 'wall-right', x: 1.48, z: 3.2, color: '#e53935', target: 45 },
@@ -7190,6 +7693,7 @@ const OS = {
   drawCircusWorldGeometryProps(ctx, w, h, state) {
     const worldKinds = this.getCircusWorldGeometryKinds();
     const props = this.getCircusZoneProps(state.currentZoneId)
+      .filter(prop => !prop.loreGate || this.hasCircusLoreGate(prop.loreGate))
       .map((prop, interactionId) => ({
         ...prop,
         interactionId,
@@ -7403,6 +7907,7 @@ const OS = {
         active: state.activeProps.get(`${state.currentZoneId}:${interactionId}`) === true,
         projected: this.projectCircusPoint(prop, state, w, h)
       }))
+      .filter(prop => !prop.loreGate || this.hasCircusLoreGate(prop.loreGate))
       .filter(prop => !state.collectedProps?.has(`${state.currentZoneId}:${prop.interactionId}`) && prop.projected)
       .sort((a, b) => b.projected.depth - a.projected.depth);
     props.forEach(prop => {
@@ -7455,7 +7960,7 @@ const OS = {
     const p = prop.projected;
     const s = this.getCircusPropVisualScale(prop);
     const wideKinds = new Set(['ring', 'counter', 'truck', 'scoreboard', 'table', 'desk', 'exitframe']);
-    const tallKinds = new Set(['pillar', 'tent', 'building', 'tower', 'lighthouse', 'spotlight', 'umbrella', 'window', 'archive', 'console', 'roomdoor', 'caineportal', 'wallart', 'ceilinglight']);
+    const tallKinds = new Set(['pillar', 'tent', 'building', 'tower', 'lighthouse', 'spotlight', 'umbrella', 'window', 'archive', 'console', 'roomdoor', 'caineportal', 'wallart', 'ceilinglight', 'lorebillboard']);
     const smallKinds = new Set(['candle', 'balloon', 'eye', 'sun', 'base', 'target', 'memory']);
     let width = 82 * s;
     let height = 86 * s;
@@ -7672,6 +8177,21 @@ const OS = {
         ctx.fillStyle = '#ffe57d';
         ctx.fillRect(-46 * s, -42 * s, 92 * s, 6 * s);
         ctx.strokeRect(-46 * s, -42 * s, 92 * s, 6 * s);
+      }
+    } else if (prop.kind === 'lorebillboard') {
+      const spec = this.getCircusAvatarSheetSpec(prop.avatar);
+      const img = spec ? this.circusAvatarSheets?.[spec.sheet] : null;
+      const frame = spec && img?.complete && img.naturalWidth ? this.getCircusTransparentAvatarFrame(img, spec) : null;
+      if (frame) {
+        const height = 118 * s * (prop.sizeScale || 1);
+        const width = height * (frame.width / frame.height);
+        ctx.imageSmoothingEnabled = false;
+        ctx.drawImage(frame.canvas, -width / 2, -height, width, height);
+      } else {
+        ctx.fillStyle = `${prop.color || '#7df0ff'}66`;
+        ctx.strokeStyle = prop.color || '#7df0ff';
+        ctx.fillRect(-26 * s, -92 * s, 52 * s, 92 * s);
+        ctx.strokeRect(-26 * s, -92 * s, 52 * s, 92 * s);
       }
     } else if (prop.kind === 'caineportal') {
       const pulse = 0.72 + Math.sin(performance.now() / 180) * 0.18;
@@ -8442,7 +8962,8 @@ const OS = {
         { name: 'Moon', type: 'npc', avatar: 'moon', x: 2.8, z: -2.25, color: '#d7e6ff', sizeScale: 0.9 },
         { name: 'Gloink Queen', type: 'npc', avatar: 'gloinkqueenscale', x: 0, z: -3.1, color: '#ff7d8d', sizeScale: 2.2 },
         { name: 'Star Gloink', type: 'npc', avatar: 'gloinkstar', x: -1.45, z: -1.55, color: '#7348ff', sizeScale: 0.72 },
-        { name: 'Cube Gloink', type: 'npc', avatar: 'gloinkcube', x: 1.45, z: -1.55, color: '#2fb642', sizeScale: 0.72 }
+        { name: 'Cube Gloink', type: 'npc', avatar: 'gloinkcube', x: 1.45, z: -1.55, color: '#2fb642', sizeScale: 0.72 },
+        { name: 'Barrel Monkey', type: 'npc', avatar: 'barrelmonkey', x: 2.55, z: -1.25, color: '#e43c32', sizeScale: 0.72 }
       ],
       4: [
         { name: 'Kaufmo', type: 'abstract', avatar: 'kaufmo', x: 0, z: -2.25, color: '#111111', sizeScale: 1.18 },
@@ -8457,7 +8978,12 @@ const OS = {
         { name: 'Chad', type: 'gummigoo', avatar: 'chad', x: 1.25, z: -2.25, color: '#8bd64a' },
         { name: 'Princess Loolilalu', type: 'npc', avatar: 'loolilalu', x: -2.35, z: -1.55, color: '#ff9ad5' },
         { name: 'The Fudge', type: 'npc', avatar: 'fudge', x: 2.35, z: -1.55, color: '#7a3d1a', sizeScale: 1.2 },
-        { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 0.75, z: -1.3, color: '#e53935' }
+        { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 0.75, z: -1.3, color: '#e53935' },
+        { name: 'Gummy Elephant', type: 'npc', avatar: 'gummyelephant', x: -3.1, z: -2.95, color: '#ff85b7', sizeScale: 0.88 },
+        { name: 'Cookie Butterfly', type: 'npc', avatar: 'cookiebutterfly', x: 2.95, z: -3.15, color: '#ff9e8e', sizeScale: 0.58 },
+        { name: 'Gummy Worm', type: 'npc', avatar: 'gummyworm', x: 1.8, z: -3.35, color: '#ef5a94', sizeScale: 0.52 },
+        { name: 'Red Mannequin', type: 'mannequin', avatar: 'redmannequin', x: -3.45, z: -3.45, color: '#f33d34', sizeScale: 0.66 },
+        { name: 'Yellow Mannequin', type: 'mannequin', avatar: 'yellowmannequin', x: 3.45, z: -3.45, color: '#ffd83f', sizeScale: 0.66 }
       ],
       7: [
         { name: 'Gummigoo Data Echo', type: 'gummigoo', avatar: 'gummigoo', x: -1.5, z: -2.3, color: '#d8a23a' },
@@ -8467,26 +8993,36 @@ const OS = {
       8: [
         { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -1.35, z: -2.2, color: '#d9d0a2' },
         { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 0.2, z: -2.45, color: '#e53935' },
-        { name: 'Ghost', type: 'ghost', avatar: 'horrorghost', x: 1.65, z: -1.55, color: '#7df0ff' },
-        { name: 'Mildenhall Monster', type: 'abstract', avatar: 'horrormonster', x: 2.55, z: -2.25, color: '#f2f2f2', sizeScale: 1.22 },
-        { name: 'Possessed Pomni', type: 'pomni', avatar: 'horrorpomnivoid', x: -2.55, z: -1.45, color: '#1b1b1b' }
+        { name: 'Martha Mildenhall', type: 'ghost', avatar: 'marthamildenhall', x: 1.65, z: -1.55, color: '#7df0ff' },
+        { name: 'Baron Mildenhall', type: 'npc', avatar: 'baronmildenhall', x: 2.55, z: -2.25, color: '#7b8dff', sizeScale: 1.12 },
+        { name: 'Angel', type: 'npc', avatar: 'angel', x: -2.75, z: -1.55, color: '#e5d7d7', sizeScale: 1.08 },
+        { name: 'Possessed Pomni', type: 'pomni', avatar: 'horrorpomnivoid', x: -2.55, z: -1.45, color: '#1b1b1b' },
+        { name: 'Mildenhall Souls', type: 'ghost', avatar: 'mildenhallsouls', x: 0.15, z: -3.15, color: '#77f5da', sizeScale: 0.8 },
+        { name: 'The Bone Pastor', type: 'npc', avatar: 'bonepastor', x: 3.15, z: -3.35, color: '#e7dfc7', sizeScale: 0.62, loreGate: { episode: 3, subepisode: 2 } }
       ],
       9: [
         { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -0.9, z: -2.1, color: '#d9d0a2' },
         { name: 'Pomni', type: 'pomni', avatar: 'horrorpomniskull', x: 0.85, z: -2.35, color: '#ffb32c' },
-        { name: 'Ghost', type: 'ghost', avatar: 'horrorghost', x: 2.1, z: -1.65, color: '#7df0ff' }
+        { name: 'Baron Mildenhall', type: 'npc', avatar: 'baronmildenhall', x: 2.1, z: -1.65, color: '#7b8dff' },
+        { name: 'Ghostly', type: 'ghost', avatar: 'ghostly', x: -2.2, z: -1.55, color: '#7dffd8', sizeScale: 0.72 },
+        { name: 'Mildenhall Souls', type: 'ghost', avatar: 'mildenhallsouls', x: 0.05, z: -3.05, color: '#77f5da', sizeScale: 0.78 }
       ],
       10: [
         { name: 'Work Gangle', type: 'gangle', avatar: 'workgangle', x: -0.75, z: -2.1, color: '#f7f7f7' },
         { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 0.65, z: -2.4, color: '#e53935' },
+        { name: 'Spudsy Customer', type: 'npc', avatar: 'spudsycustomer', x: -1.65, z: -1.65, color: '#f1c24d', sizeScale: 0.92 },
+        { name: 'Albert Spudsy Cutout', type: 'prop', avatar: 'albertspudsy', x: 0.15, z: -3.25, color: '#f2d7b2', sizeScale: 0.92 },
         { name: 'Max Customer', type: 'npc', avatar: 'max', x: -2.25, z: -1.5, color: '#75bd3f' },
-        { name: 'Gummigoo Customer', type: 'gummigoo', avatar: 'gummigoo', x: 1.85, z: -1.65, color: '#d8a23a' }
+        { name: 'Gummigoo Customer', type: 'gummigoo', avatar: 'gummigoo', x: 1.85, z: -1.65, color: '#d8a23a' },
+        { name: 'Stupid Burger Mannequin', type: 'mannequin', avatar: 'stupidburgermannequin', x: -2.85, z: -2.75, color: '#ff9b37', sizeScale: 0.9 },
+        { name: 'Cereal Bowl Mannequin', type: 'mannequin', avatar: 'cerealmannequin', x: 2.85, z: -2.7, color: '#ff9b37', sizeScale: 0.9 }
       ],
       11: [
         { name: 'Orbsman', type: 'npc', avatar: 'orbsman', x: -1.75, z: -2.25, color: '#6dd8ff' },
         { name: 'Kawaii Gangle', type: 'gangle', avatar: 'ganglekawaii', x: -0.15, z: -2.45, color: '#ff9fcd' },
         { name: 'Evil Pomni', type: 'pomni', avatar: 'evilpomni', x: 1.35, z: -2.1, color: '#c12b3f' },
-        { name: 'Evil Jax', type: 'jax', avatar: 'eviljax', x: 2.45, z: -1.45, color: '#7436c9' }
+        { name: 'Evil Jax', type: 'jax', avatar: 'eviljax', x: 2.45, z: -1.45, color: '#7436c9' },
+        { name: 'Jeffery Dancer', type: 'npc', avatar: 'jeffery', x: -2.75, z: -1.45, color: '#f4f4ee', sizeScale: 0.9 }
       ],
       12: [
         { name: 'Baseball Jax', type: 'jax', avatar: 'baseballjax', x: -2.55, z: -1.45, color: '#b874e8' },
@@ -8494,7 +9030,8 @@ const OS = {
         { name: 'Baseball Gangle', type: 'gangle', avatar: 'baseballgangle', x: -0.25, z: -2.5, color: '#d84747' },
         { name: 'Baseball Ragatha', type: 'ragatha', avatar: 'baseballragatha', x: 1.05, z: -2.2, color: '#6d86dd' },
         { name: 'Baseball Pomni', type: 'pomni', avatar: 'baseballpomni', x: 2.15, z: -1.55, color: '#4068e8' },
-        { name: 'Baseball Kinger', type: 'kinger', avatar: 'baseballkinger', x: 0.75, z: -1.15, color: '#d7c9aa' }
+        { name: 'Baseball Kinger', type: 'kinger', avatar: 'baseballkinger', x: 0.75, z: -1.15, color: '#d7c9aa' },
+        { name: 'Giant Centipede', type: 'npc', avatar: 'giantcentipede', x: 3.05, z: -3.25, color: '#c89436', sizeScale: 1.22 }
       ],
       13: [
         { name: 'Jax', type: 'jax', avatar: 'jax', x: -1.5, z: -2.1, color: '#8a4fd6' },
@@ -8505,18 +9042,26 @@ const OS = {
         { name: 'Beach Gangle', type: 'gangle', avatar: 'beachgangle', x: -1.55, z: -2.1, color: '#f7f7f7' },
         { name: 'Jax', type: 'jax', avatar: 'jax', x: 0.25, z: -2.4, color: '#8a4fd6' },
         { name: 'Sun', type: 'npc', avatar: 'sun', x: 2.05, z: -1.65, color: '#ffd84a', sizeScale: 1.05 },
-        { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -2.45, z: -1.4, color: '#e53935' }
+        { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -2.45, z: -1.4, color: '#e53935' },
+        { name: 'Shrimp NPC', type: 'npc', avatar: 'shrimpnpc', x: 1.15, z: -2.95, color: '#ff8f4a', sizeScale: 0.72 },
+        { name: 'Orange Crappy Looking Fish', type: 'npc', avatar: 'truthtellerfish', x: -0.95, z: -2.95, color: '#ff9b32', sizeScale: 0.68 },
+        { name: 'Red Crappy Looking Fish', type: 'npc', avatar: 'liarfish', x: -0.2, z: -3.18, color: '#ff3264', sizeScale: 0.64 }
       ],
       15: [
         { name: 'Ming', type: 'mannequin', avatar: 'ming', x: -1.65, z: -2.1, color: '#b7c7d8' },
         { name: 'The Machine', type: 'npc', avatar: 'themachine', x: 0.25, z: -2.55, color: '#7d4dff', sizeScale: 1.35 },
-        { name: 'Additional Voices', type: 'mannequin', avatar: 'additionalvoices', x: 1.9, z: -1.65, color: '#d78aff' }
+        { name: 'Additional Voices', type: 'mannequin', avatar: 'additionalvoices', x: 1.9, z: -1.65, color: '#d78aff' },
+        { name: 'Chinese Room NPC', type: 'mannequin', avatar: 'chineseroomnpc', x: 0.95, z: -3.05, color: '#d8b4fe', sizeScale: 1.05 }
       ],
       16: [
         { name: 'Caine', type: 'caine', avatar: 'caine', x: -1.05, z: -2.25, color: '#ffd84a' },
+        { name: 'Blue AI', type: 'system', avatar: 'blueai', x: 0, z: -3.15, color: '#00ddff', sizeScale: 0.85, loreGate: { episode: 9, subepisode: 6 } },
         { name: 'Abel NPC Echo', type: 'mannequin', avatar: 'abelmannequin', x: 0.6, z: -1.85, color: '#ff8a30' },
         { name: 'Deleted Abel Render', type: 'mannequin', avatar: 'abelfullbody', x: 1.85, z: -2.55, color: '#f08a28' },
-        { name: 'The Machine', type: 'npc', avatar: 'themachine', x: -2.35, z: -1.45, color: '#7d4dff', sizeScale: 1.25 }
+        { name: 'The Machine', type: 'npc', avatar: 'themachine', x: -2.35, z: -1.45, color: '#7d4dff', sizeScale: 1.25 },
+        { name: 'Fourth Crocodile // Archive EP8', type: 'npc', avatar: 'fourthcrocodile', x: -3.15, z: -3.2, color: '#d4c840', sizeScale: 1.18, loreGate: { episode: 8, subepisode: 7 } },
+        { name: 'Feminine Shadow // Archive EP8', type: 'ghost', avatar: 'ragathamothershadow', x: 3.2, z: -3.2, color: '#18111f', sizeScale: 1.3, loreGate: { episode: 8, subepisode: 7 } },
+        { name: 'Laughing Shadows // Archive EP8', type: 'ghost', avatar: 'laughingshadows', x: 0.25, z: -3.75, color: '#05020d', sizeScale: 1.28, loreGate: { episode: 8, subepisode: 7 } }
       ],
       17: [
         { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -1.25, z: -2.2, color: '#d9d0a2' },
@@ -8584,7 +9129,9 @@ const OS = {
         { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: 0.15, z: -2.65, color: '#f7f7f7' },
         { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 1.65, z: -1.8, color: '#ff4fb8' }
       ],
-      29: [],
+      29: [
+        { name: 'Dr. Football', type: 'prop', avatar: 'drfootball', x: 0.85, z: -2.35, color: '#d94338', sizeScale: 0.82 }
+      ],
       30: [
         { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: -0.9, z: -2.2, color: '#ff4fb8' },
         { name: 'Bubble', type: 'bubble', avatar: 'bubble', x: 1.0, z: -1.8, color: '#f7f7ff' }
@@ -8599,7 +9146,15 @@ const OS = {
       32: [
         { name: 'Princess Loolilalu', type: 'npc', avatar: 'loolilalu', x: 0, z: -2.65, color: '#ff9ad5' },
         { name: 'Caine', type: 'caine', avatar: 'caine', x: -1.75, z: -1.75, color: '#ffd84a' },
-        { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 1.75, z: -1.75, color: '#e53935' }
+        { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 1.75, z: -1.75, color: '#e53935' },
+        { name: 'Candy Guard Cyan', type: 'mannequin', avatar: 'candyguardcyan', x: -2.8, z: -2.65, color: '#27d7e7' },
+        { name: 'Candy Guard Blue', type: 'mannequin', avatar: 'candyguardblue', x: 2.8, z: -2.65, color: '#2568f5' },
+        { name: 'Candy Guard Violet', type: 'mannequin', avatar: 'candyguardpurple', x: 0.8, z: -3.3, color: '#7755e8' },
+        { name: 'Additional Voices', type: 'mannequin', avatar: 'additionalvoices', x: -0.8, z: -3.25, color: '#d78aff' },
+        { name: 'Red Mannequin', type: 'mannequin', avatar: 'redmannequin', x: -3.45, z: -3.55, color: '#f33d34', sizeScale: 0.66 },
+        { name: 'Orange Mannequin', type: 'mannequin', avatar: 'orangemannequin', x: -2.25, z: -3.65, color: '#ff8a2a', sizeScale: 0.66 },
+        { name: 'Yellow Mannequin', type: 'mannequin', avatar: 'yellowmannequin', x: 2.25, z: -3.65, color: '#ffd83f', sizeScale: 0.66 },
+        { name: 'Magenta Mannequin', type: 'mannequin', avatar: 'magentamannequin', x: 3.45, z: -3.55, color: '#f04ad8', sizeScale: 0.66 }
       ],
       33: [
         { name: 'Gummigoo', type: 'gummigoo', avatar: 'gummigoo', x: -1.4, z: -2.3, color: '#d8a23a' },
@@ -8610,19 +9165,25 @@ const OS = {
       34: [
         { name: 'Possessed Pomni', type: 'pomni', avatar: 'horrorpomnivoid', x: -1.1, z: -2.35, color: '#1b1b1b' },
         { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: 0.7, z: -2.55, color: '#d9d0a2' },
-        { name: 'Soul', type: 'ghost', avatar: 'horrorghost', x: 2.0, z: -1.65, color: '#7df0ff' }
+        { name: 'Martha Mildenhall', type: 'ghost', avatar: 'marthamildenhall', x: 2.0, z: -1.65, color: '#7df0ff' },
+        { name: 'Angel', type: 'npc', avatar: 'angel', x: -2.15, z: -1.55, color: '#e5d7d7', sizeScale: 1.05 }
       ],
       35: [
         { name: 'Work Gangle', type: 'gangle', avatar: 'workgangle', x: -1.4, z: -2.2, color: '#f7f7f7' },
         { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: 0.1, z: -2.55, color: '#d64545' },
-        { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 1.55, z: -1.8, color: '#e53935' }
+        { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 1.55, z: -1.8, color: '#e53935' },
+        { name: 'Spudsy Customer', type: 'npc', avatar: 'spudsycustomer', x: -2.45, z: -1.55, color: '#f1c24d', sizeScale: 0.92 },
+        { name: 'Albert Spudsy Cutout', type: 'prop', avatar: 'albertspudsy', x: 2.55, z: -2.95, color: '#f2d7b2', sizeScale: 0.88 }
       ],
-      36: [{ name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 0, z: -2.4, color: '#e53935' }],
+      36: [
+        { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -0.85, z: -2.4, color: '#e53935' }
+      ],
       37: [{ name: 'Jax', type: 'jax', avatar: 'jax', x: 0, z: -2.35, color: '#8a4fd6' }],
       38: [
         { name: 'Caine', type: 'caine', avatar: 'caine', x: 0, z: -2.7, color: '#ffd84a' },
         { name: 'Ming', type: 'mannequin', avatar: 'ming', x: -1.65, z: -1.8, color: '#b7c7d8' },
-        { name: 'Disappearing Guy', type: 'mannequin', avatar: 'mannequin', x: 1.65, z: -1.8, color: '#d8d8d8' }
+        { name: 'Disappearing Guy', type: 'mannequin', avatar: 'disappearingguy', x: 1.65, z: -1.8, color: '#c34232' },
+        { name: 'Committee Member', type: 'mannequin', avatar: 'committeemember', x: 0.95, z: -1.35, color: '#f4f4f0' }
       ],
       39: [
         { name: 'Jax', type: 'jax', avatar: 'jax', x: -1.2, z: -2.3, color: '#8a4fd6' },
@@ -8630,7 +9191,8 @@ const OS = {
       ],
       40: [
         { name: 'Beach Gangle', type: 'gangle', avatar: 'beachgangle', x: -1.25, z: -2.3, color: '#f7f7f7' },
-        { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 1.25, z: -2.3, color: '#ff4fb8' }
+        { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 1.25, z: -2.3, color: '#ff4fb8' },
+        { name: 'Shrimp NPC', type: 'npc', avatar: 'shrimpnpc', x: 0, z: -3.05, color: '#ff8f4a', sizeScale: 0.72 }
       ],
       41: [{ name: 'Jax Memory', type: 'jax', avatar: 'jax', x: 0, z: -2.5, color: '#8a4fd6' }],
       42: [{ name: 'Caine', type: 'caine', avatar: 'caine', x: 0, z: -2.5, color: '#ffd84a' }],
@@ -8652,7 +9214,8 @@ const OS = {
       ],
       66: [
         { name: 'Princess Loolilalu', type: 'npc', avatar: 'loolilalu', x: -1.2, z: -2.45, color: '#ff9ad5' },
-        { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: 1.25, z: -2.25, color: '#d64545' }
+        { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: 1.25, z: -2.25, color: '#d64545' },
+        { name: 'Gummy Elephant', type: 'npc', avatar: 'gummyelephant', x: 2.35, z: -1.65, color: '#ff85b7', sizeScale: 0.86 }
       ],
       67: [
         { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -1.15, z: -2.35, color: '#e53935' },
@@ -8765,6 +9328,7 @@ const OS = {
     const campaign = this.getActiveCircusCampaignStatus();
     const staticSprites = this.getCircusZoneSprites(zoneId).filter(sprite => {
       const avatar = sprite.avatar || sprite.type;
+      if (sprite.loreGate && !this.hasCircusLoreGate(sprite.loreGate)) return false;
       if (avatar === 'pomni' && !timeline.knowsPomni && campaign?.definition?.episode !== 1) return false;
       if (avatar === 'jax' && timeline.afterFinal && !/memory|archive/i.test(sprite.name || '')) return false;
       return true;
@@ -8812,11 +9376,13 @@ const OS = {
 
   getCircusSpriteRoutine(sprite, zoneId) {
     const avatar = sprite.avatar || sprite.type || "";
-    if (avatar.startsWith("gloink")) return "swarm";
-    if (["bubble", "horrorghost", "moon", "sun"].includes(avatar)) return "hover";
-    if (avatar.includes("horror") || avatar.startsWith("shadow") || avatar === "kaufmo") return "tremble";
-    if (["gummigoo", "max", "chad", "workgangle", "themachine", "additionalvoices", "ming"].includes(avatar)) return "patrol";
-    if (["jax", "hunterjax", "baseballjax", "eviljax"].includes(avatar)) return "pace";
+    if (avatar.startsWith("gloink") || avatar === "barrelmonkey") return "swarm";
+    if (["bubble", "horrorghost", "marthamildenhall", "ghostly", "angel", "moon", "sun", "blueai", "cookiebutterfly", "mildenhallsouls", "truthtellerfish", "liarfish"].includes(avatar)) return "hover";
+    if (avatar.includes("horror") || avatar.startsWith("shadow") || avatar === "kaufmo" || ["ragathamothershadow", "laughingshadows"].includes(avatar)) return "tremble";
+    if (["gummigoo", "max", "chad", "workgangle", "themachine", "additionalvoices", "ming", "spudsycustomer", "gummyelephant", "candyguardcyan", "candyguardblue", "candyguardpurple", "redmannequin", "orangemannequin", "yellowmannequin", "magentamannequin"].includes(avatar)) return "patrol";
+    if (["albertspudsy", "stupidburgermannequin", "cerealmannequin"].includes(avatar)) return "idle";
+    if (["giantcentipede", "drfootball"].includes(avatar)) return "tremble";
+    if (["jax", "hunterjax", "baseballjax", "eviljax", "gummyworm", "jeffery", "fourthcrocodile"].includes(avatar)) return "pace";
     if ([12, 14].includes(zoneId)) return "pace";
     return "idle";
   },
@@ -9020,7 +9586,7 @@ const OS = {
         ctx.restore();
         return;
       }
-      const fullbright = ['bubble', 'sun', 'horrorghost'].includes(avatar);
+      const fullbright = ['bubble', 'sun', 'horrorghost', 'marthamildenhall', 'ghostly'].includes(avatar);
       const depthLight = this.getCircusDepthLight(p.depth, state, fullbright);
       ctx.filter = `brightness(${Math.round((0.55 + depthLight * 0.45) * 100)}%)`;
       this.drawCircusImpostor(ctx, sprite.type, p.x, baseY, size, sprite.color, sprite.name, avatar, sprite.routine, sprite);
@@ -9301,18 +9867,26 @@ const OS = {
     if (!state.interactionMessage || performance.now() > state.interactionUntil) return;
     const margin = 18;
     const choices = state.interactionChoices?.options || [];
-    const boxH = choices.length ? 108 : 78;
+    const stackChoices = choices.length > 0 && w < 480;
+    ctx.save();
+    ctx.font = 'bold 11px Courier New';
+    const maxTextLines = choices.length ? (stackChoices ? 5 : 3) : 5;
+    const textLines = this.getCircusCanvasTextLines(ctx, state.interactionMessage, w - margin * 2 - 20, maxTextLines);
+    const choiceRows = choices.length ? (stackChoices ? choices.length : 1) : 0;
+    const choiceBlockH = choiceRows * 30;
+    const boxH = Math.min(h - 42, 46 + textLines.length * 13 + choiceBlockH + (choices.length ? 10 : 4));
     const boxY = h - boxH - 24;
     const channel = state.interactionChannel || 'system';
     const channelColor = channel === 'dialogue' ? '#fff1a8'
+      : channel === 'scene' ? '#ff8ccc'
       : channel === 'scan' ? '#7df0ff'
         : channel === 'proximity' ? '#9cff6d'
           : '#ff8a7a';
     const channelLabel = channel === 'dialogue' ? `DIALOGUE - ${state.interactionSpeaker || 'PNJ'}`
+      : channel === 'scene' ? `SCENE SOCIALE CAINOS - ${state.interactionSpeaker || 'GROUPE'}`
       : channel === 'scan' ? `SCAN CAINOS - ${state.interactionSpeaker || 'OBJET'}`
         : channel === 'proximity' ? `PROXIMITE - ${state.interactionSpeaker || 'SIGNAL'}`
-          : 'SYSTEME';
-    ctx.save();
+          : `SYSTEME - ${state.interactionSpeaker || 'CAINOS'}`;
     ctx.fillStyle = 'rgba(5, 2, 13, 0.86)';
     ctx.strokeStyle = channelColor;
     ctx.lineWidth = 2;
@@ -9330,35 +9904,24 @@ const OS = {
     ctx.fillStyle = '#fff1a8';
     ctx.font = 'bold 11px Courier New';
     ctx.textAlign = 'left';
-    const text = state.interactionMessage;
-    const words = text.split(' ');
-    let line = '';
-    let y = boxY + 35;
-    let lineCount = 0;
-    const maxLines = choices.length ? 3 : 4;
-    words.forEach(word => {
-      const next = line ? `${line} ${word}` : word;
-      if (ctx.measureText(next).width > w - margin * 2 - 20) {
-        if (lineCount < maxLines - 1) ctx.fillText(line, margin + 10, y);
-        y += 13;
-        lineCount++;
-        line = word;
-      } else {
-        line = next;
-      }
+    textLines.forEach((line, index) => {
+      ctx.fillText(line, margin + 10, boxY + 35 + index * 13);
     });
-    if (line && lineCount < maxLines) ctx.fillText(line, margin + 10, y);
     if (choices.length) {
-      const optionTop = boxY + boxH - 38;
+      const optionTop = boxY + 39 + textLines.length * 13;
       const gap = 8;
-      const optionW = Math.floor((w - margin * 2 - 20 - gap * (choices.length - 1)) / choices.length);
+      const availableW = w - margin * 2 - 20;
+      const optionW = stackChoices
+        ? availableW
+        : Math.floor((availableW - gap * (choices.length - 1)) / choices.length);
       choices.forEach((choice, index) => {
-        const x = margin + 10 + index * (optionW + gap);
+        const x = stackChoices ? margin + 10 : margin + 10 + index * (optionW + gap);
+        const y = stackChoices ? optionTop + index * 30 : optionTop;
         state.hotspots.push({
           kind: 'dialogChoice',
           choiceIndex: index,
           x,
-          y: optionTop,
+          y,
           w: optionW,
           h: 26,
           depth: -1
@@ -9366,13 +9929,13 @@ const OS = {
         ctx.fillStyle = 'rgba(255,241,168,0.12)';
         ctx.strokeStyle = index === 0 ? '#ffffff' : '#fff1a8';
         ctx.lineWidth = index === 0 ? 2 : 1;
-        ctx.fillRect(x, optionTop, optionW, 26);
-        ctx.strokeRect(x, optionTop, optionW, 26);
+        ctx.fillRect(x, y, optionW, 26);
+        ctx.strokeRect(x, y, optionW, 26);
         ctx.fillStyle = '#fff1a8';
         ctx.font = 'bold 9px Courier New';
         ctx.textAlign = 'center';
-        const label = `${index + 1}. ${choice.label}`.slice(0, 24);
-        ctx.fillText(label, x + optionW / 2, optionTop + 17);
+        const label = `${index + 1}. ${choice.label}`.slice(0, stackChoices ? 42 : 24);
+        ctx.fillText(label, x + optionW / 2, y + 17);
       });
     }
     ctx.restore();
@@ -9506,6 +10069,7 @@ const OS = {
       }
       this.focusWindow(winId);
       this.updateTaskbar();
+      this.fitOpenWindowsToDesktop();
     }
   },
 
@@ -9518,6 +10082,7 @@ const OS = {
         if (EpisodeManager.activeGame) EpisodeManager.activeGame.stop();
       }
       this.updateTaskbar();
+      this.updateCainOSProvenance(this.activeWindow || 'desktop');
     }
   },
 
@@ -9538,6 +10103,7 @@ const OS = {
     if (typeof SoundManager.stopContextPulse === 'function') SoundManager.stopContextPulse();
     if (EpisodeManager.activeGame) EpisodeManager.activeGame.stop();
     this.updateTaskbar();
+    this.updateCainOSProvenance('desktop');
   },
 
   minimizeWindow(winId) {
@@ -9548,6 +10114,7 @@ const OS = {
         SoundManager.stopTheme();
       }
       this.updateTaskbar();
+      this.updateCainOSProvenance('desktop');
     }
   },
 
@@ -9563,6 +10130,7 @@ const OS = {
         SoundManager.stopTheme();
       }
       this.updateTaskbar();
+      this.updateCainOSProvenance(winId);
     }
   },
 
@@ -9578,10 +10146,11 @@ const OS = {
         win.setAttribute('data-prev-w', win.style.width);
         win.setAttribute('data-prev-h', win.style.height);
         win.style.width = '100%';
-        win.style.height = 'calc(100% - 40px)';
+        win.style.height = '100%';
         win.style.left = '0';
         win.style.top = '0';
       }
+      this.fitOpenWindowsToDesktop();
     }
   },
 
@@ -9806,10 +10375,15 @@ const OS = {
       });
     });
 
-    ['comfort-reading', 'line-pause', 'easy-minigames', 'reader-only', 'crt-readable', 'fps-minimap', 'fps-hud', 'fps-invert-mouse', 'fps-interaction-assist'].forEach(key => {
+    const enabledByDefault = new Set(['canon-strict', 'auto-fit-windows', 'fps-minimap', 'fps-hud', 'fps-interaction-assist']);
+    [
+      'canon-strict', 'comfort-reading', 'line-pause', 'easy-minigames', 'reader-only',
+      'crt-readable', 'high-contrast', 'reduce-motion', 'auto-fit-windows',
+      'fps-minimap', 'fps-hud', 'fps-invert-mouse', 'fps-interaction-assist'
+    ].forEach(key => {
       const input = document.getElementById(`setting-${key}`);
       if (!input) return;
-      input.checked = !!this.getCainOSSetting(key, key === 'fps-minimap' || key === 'fps-hud');
+      input.checked = !!this.getCainOSSetting(key, enabledByDefault.has(key));
       input.addEventListener('change', () => {
         this.setCainOSSetting(key, input.checked);
         this.applyCainOSSettings();
@@ -9817,14 +10391,21 @@ const OS = {
         if (this.circusDoom && key === 'fps-hud') this.circusDoom.hudVisible = input.checked;
         if (this.circusDoom && key === 'fps-invert-mouse') this.circusDoom.invertMouse = input.checked;
         if (this.circusDoom && key === 'fps-interaction-assist') this.circusDoom.interactionAssist = input.checked;
+        if (key === 'canon-strict') this.updateWackyWatchCastUI();
         this.renderCainOSTools();
       });
     });
 
-    ['audio-ambience', 'audio-glitch', 'fps-fov', 'fps-sensitivity', 'fps-motion-intensity'].forEach(key => {
+    ['ui-scale', 'scanline-intensity', 'audio-ambience', 'audio-glitch', 'fps-fov', 'fps-sensitivity', 'fps-motion-intensity'].forEach(key => {
       const input = document.getElementById(`setting-${key}`);
       if (!input) return;
-      const fallback = key === 'audio-ambience' ? 70 : key === 'audio-glitch' ? 45 : key === 'fps-fov' ? 64 : key === 'fps-motion-intensity' ? 100 : 45;
+      const fallback = key === 'ui-scale' ? 110
+        : key === 'scanline-intensity' ? 45
+          : key === 'audio-ambience' ? 70
+            : key === 'audio-glitch' ? 45
+              : key === 'fps-fov' ? 64
+                : key === 'fps-motion-intensity' ? 100
+                  : 45;
       input.value = String(this.getCainOSSetting(key, fallback));
       input.addEventListener('input', () => {
         this.setCainOSSetting(key, Number(input.value));
@@ -9833,6 +10414,18 @@ const OS = {
         if (this.circusDoom && key === 'fps-sensitivity') this.circusDoom.mouseSensitivity = Number(input.value) / 10000;
         if (this.circusDoom && key === 'fps-motion-intensity') this.circusDoom.motionIntensity = Number(input.value) / 100;
       });
+    });
+
+    const strictToggle = document.getElementById('tools-canon-strict-toggle');
+    strictToggle?.addEventListener('click', () => {
+      SoundManager.playClick();
+      const next = !this.isCainOSCanonStrict();
+      this.setCainOSSetting('canon-strict', next);
+      const strictInput = document.getElementById('setting-canon-strict');
+      if (strictInput) strictInput.checked = next;
+      this.applyCainOSSettings();
+      this.updateWackyWatchCastUI();
+      this.renderCainOSTools();
     });
 
     const bindingOptions = [
@@ -9885,9 +10478,114 @@ const OS = {
     this.setCainOSStorage('settings', settings);
   },
 
+  isCainOSCanonStrict() {
+    return this.getCainOSSetting('canon-strict', true) !== false;
+  },
+
+  getCainOSProvenanceMeta(kind = 'reconstruction') {
+    const definitions = {
+      transcript: {
+        label: 'CANON TRANSCRIPT',
+        detail: 'Dialogue source conserve ligne par ligne; les interactions autour sont additives.'
+      },
+      'canon-visual': {
+        label: 'CANON VISUEL',
+        detail: 'Presence ou apparence rattachee a un episode; les mesures CainOS restent des estimations.'
+      },
+      'canon-summary': {
+        label: 'SYNTHESE CANON',
+        detail: 'Resume indexe sur les episodes debloques, sans remplacer leur transcript.'
+      },
+      playable: {
+        label: 'RECONSTITUTION JOUABLE',
+        detail: 'Espace ou action reconstruit par CainOS depuis le lore connu.'
+      },
+      fan: {
+        label: 'FAN POST-GAME',
+        detail: 'Contenu original hors chronologie principale, disponible seulement comme bonus.'
+      },
+      reconstruction: {
+        label: 'RECONSTRUCTION CAINOS',
+        detail: 'Archive interactive ou hypothese C&A non confirmee par les episodes.'
+      }
+    };
+    return { kind: definitions[kind] ? kind : 'reconstruction', ...(definitions[kind] || definitions.reconstruction) };
+  },
+
+  updateCainOSProvenance(scope = null) {
+    const badge = document.getElementById('cainos-provenance-badge');
+    const text = document.getElementById('cainos-provenance-text');
+    if (!badge || !text) return;
+
+    let kind = 'reconstruction';
+    const activeScope = scope || (this.circusDoom ? 'fps' : this.activeWindow || 'desktop');
+    if (activeScope === 'story') kind = 'transcript';
+    else if (activeScope === 'micro' || activeScope === 'fps' || activeScope === 'tent') kind = 'playable';
+    else if (activeScope === 'fan') kind = 'fan';
+    else if (activeScope === 'wacky-watch') {
+      kind = this.getWackyProvenanceKind(this.activeWackyCast, this.getWackyCastData?.()[this.activeWackyCast]);
+    } else if (activeScope === 'simulations') {
+      if (document.getElementById('sim-story-screen')?.classList.contains('active')) kind = 'transcript';
+      else if (document.getElementById('sim-story-micro-screen')?.classList.contains('active')) kind = 'playable';
+    }
+
+    if (this.circusDoom?.customAdventure?.active) kind = 'fan';
+    const meta = this.getCainOSProvenanceMeta(kind);
+    badge.className = `provenance-badge provenance-${meta.kind}`;
+    badge.innerText = meta.label;
+    text.innerText = `${meta.detail}${this.isCainOSCanonStrict() ? ' Mode canon strict actif.' : ''}`;
+    document.body.dataset.provenance = meta.kind;
+  },
+
+  fitOpenWindowsToDesktop() {
+    if (!this.getCainOSSetting('auto-fit-windows', true)) return;
+    const container = document.getElementById('windows-container');
+    if (!container) return;
+    const maxWidth = Math.max(280, container.clientWidth);
+    const maxHeight = Math.max(220, container.clientHeight);
+    Object.values(this.windows || {}).forEach(win => {
+      if (!win || win.style.display === 'none') return;
+      if (win.style.width === '100%') {
+        win.style.height = '100%';
+        win.style.left = '0';
+        win.style.top = '0';
+        return;
+      }
+      if (win.offsetWidth > maxWidth) win.style.width = `${maxWidth}px`;
+      if (win.offsetHeight > maxHeight) win.style.height = `${maxHeight}px`;
+      const left = Math.max(0, Math.min(parseFloat(win.style.left) || 0, maxWidth - win.offsetWidth));
+      const top = Math.max(0, Math.min(parseFloat(win.style.top) || 0, maxHeight - win.offsetHeight));
+      win.style.left = `${left}px`;
+      win.style.top = `${top}px`;
+    });
+  },
+
   applyCainOSSettings() {
     document.body.classList.toggle('comfort-reading', !!this.getCainOSSetting('comfort-reading'));
     document.body.classList.toggle('crt-readable', !!this.getCainOSSetting('crt-readable'));
+    document.body.classList.toggle('canon-strict', this.isCainOSCanonStrict());
+    document.body.classList.toggle('high-contrast', !!this.getCainOSSetting('high-contrast'));
+    document.body.classList.toggle('reduce-motion', !!this.getCainOSSetting('reduce-motion'));
+    const uiScale = Math.max(90, Math.min(140, Number(this.getCainOSSetting('ui-scale', 110)) || 110));
+    const scanlineIntensity = Math.max(0, Math.min(100, Number(this.getCainOSSetting('scanline-intensity', 45)) || 0));
+    const uiRatio = uiScale / 100;
+    document.documentElement.style.setProperty('--ui-text-scale', String(uiRatio));
+    document.documentElement.style.setProperty('--ui-font-tiny', `${(9 * uiRatio).toFixed(2)}px`);
+    document.documentElement.style.setProperty('--ui-font-small', `${(10 * uiRatio).toFixed(2)}px`);
+    document.documentElement.style.setProperty('--ui-font-base', `${(12 * uiRatio).toFixed(2)}px`);
+    document.documentElement.style.setProperty('--ui-font-large', `${(16 * uiRatio).toFixed(2)}px`);
+    document.documentElement.style.setProperty('--crt-scanline-opacity', String(scanlineIntensity / 100));
+    const uiOutput = document.getElementById('setting-ui-scale-value');
+    const scanlineOutput = document.getElementById('setting-scanline-intensity-value');
+    if (uiOutput) uiOutput.value = `${uiScale}%`;
+    if (scanlineOutput) scanlineOutput.value = `${scanlineIntensity}%`;
+    const strictToggle = document.getElementById('tools-canon-strict-toggle');
+    if (strictToggle) {
+      strictToggle.innerText = `CANON STRICT: ${this.isCainOSCanonStrict() ? 'ON' : 'OFF'}`;
+      strictToggle.setAttribute('aria-pressed', this.isCainOSCanonStrict() ? 'true' : 'false');
+    }
+    this.fitOpenWindowsToDesktop();
+    this.updateCainOSProvenance();
     if (typeof SoundManager !== 'undefined') {
       SoundManager.ambienceVolume = Number(this.getCainOSSetting('audio-ambience', 70)) / 100;
       SoundManager.glitchVolume = Number(this.getCainOSSetting('audio-glitch', 45)) / 100;
@@ -10354,6 +11052,13 @@ const OS = {
     const purchased = this.getCainOSStorage('purchased_wacky_skins', []);
     const fanBeforeFinal = Array.isArray(purchased) && purchased.length > 0 && !progress.includes(9);
     return [
+      {
+        level: this.isCainOSCanonStrict() ? 'OK' : 'INFO',
+        title: 'Provenance lore',
+        desc: this.isCainOSCanonStrict()
+          ? 'Canon, reconstruction CainOS et contenu fan sont separes dans les interfaces.'
+          : 'Mode libre actif: les etiquettes restent visibles, mais le contenu fan est affiche.'
+      },
       lockedVisited.length
         ? { level: 'WARN', title: 'Zone visitee trop tot', desc: lockedVisited.map(z => z.name).join(', ') }
         : { level: 'OK', title: 'Carte progression', desc: 'Aucune zone spoiler visitee avant son episode.' },
@@ -10396,6 +11101,7 @@ const OS = {
       return {
         title: `EP${entry.ep} - ${entry.title}`,
         desc,
+        provenance: 'canon-summary',
         unlocked,
         visited: entry.done,
         badge: entry.done ? 'TERMINE' : `${entry.completed}/${entry.total}`,
@@ -10410,6 +11116,7 @@ const OS = {
     const collectibleCards = collectibles.map(item => ({
       title: item.found ? item.title : 'Collectible verrouille',
       desc: item.unlocked ? item.desc : `Terminez EP${item.ep}.${item.sub + 1} puis visitez la zone liee pour le recuperer.`,
+      provenance: 'playable',
       unlocked: item.found,
       badge: item.found ? 'TROUVE' : (item.unlocked ? 'A CHERCHER' : 'LOCK'),
       meta: [`EP${item.ep}.${item.sub + 1}`, `ZONE ${item.zone}`],
@@ -10421,6 +11128,7 @@ const OS = {
         ? (item.purchased ? 'Skin fan achete : utilisable en aventure originale, hors timeline principale.' : 'Skin fan achetable depuis la fiche Wacky Watch du personnage.')
         : 'Verrouille jusqu a la fin de l episode 9 pour ne pas casser le canon principal.',
       unlocked: item.unlocked,
+      provenance: 'fan',
       visited: item.purchased,
       badge: item.purchased ? 'ACHETE' : (item.unlocked ? 'BOUTIQUE' : 'POST-FINAL'),
       meta: ['Fan / non canon principal']
@@ -10453,7 +11161,9 @@ const OS = {
       <div class="tools-section-title">Collectibles lore</div>
       <div class="tools-grid">${renderCards(collectibleCards)}</div>
       <div class="tools-section-title">Skins fan post-game</div>
-      <div class="tools-grid">${renderCards(skinCards)}</div>
+      ${this.isCainOSCanonStrict()
+        ? '<div class="creator-lock"><strong>MASQUE PAR CANON STRICT</strong><p>Desactivez le mode canon strict pour afficher la boutique et les variantes fan post-finale.</p></div>'
+        : `<div class="tools-grid">${renderCards(skinCards)}</div>`}
     `;
   },
 
@@ -10653,20 +11363,21 @@ const OS = {
     const adventure = state?.customAdventure;
     if (!adventure?.active || adventure.complete || !state.hudVisible) return;
     const objective = this.getCainOSCustomObjectiveDefinition(adventure.objective);
+    const y = w < 480 ? 148 : 48;
     ctx.save();
     ctx.fillStyle = 'rgba(5,2,13,0.86)';
     ctx.strokeStyle = '#ff4fb8';
-    ctx.fillRect(w - 254, 48, 240, 44);
-    ctx.strokeRect(w - 254, 48, 240, 44);
+    ctx.fillRect(w - 254, y, 240, 44);
+    ctx.strokeRect(w - 254, y, 240, 44);
     ctx.fillStyle = '#ff7fd0';
     ctx.font = 'bold 8px Courier New';
     ctx.textAlign = 'left';
-    ctx.fillText(`BONUS NON CANON: ${adventure.title.toUpperCase()}`, w - 246, 63);
+    ctx.fillText(`BONUS NON CANON: ${adventure.title.toUpperCase()}`, w - 246, y + 15);
     ctx.fillStyle = '#ffffff';
     ctx.font = '7px Courier New';
-    ctx.fillText(`${objective.label}  ${Math.floor(adventure.progress || 0)}/${objective.total}`, w - 246, 78);
+    ctx.fillText(`${objective.label}  ${Math.floor(adventure.progress || 0)}/${objective.total}`, w - 246, y + 30);
     ctx.fillStyle = '#ff4fb8';
-    ctx.fillRect(w - 246, 83, 220 * Math.min(1, (adventure.progress || 0) / objective.total), 4);
+    ctx.fillRect(w - 246, y + 35, 220 * Math.min(1, (adventure.progress || 0) / objective.total), 4);
     ctx.restore();
   },
 
@@ -10710,6 +11421,10 @@ const OS = {
   renderCainOSAdventureCreator() {
     const creatorEl = document.getElementById('tools-tab-creator');
     if (!creatorEl) return;
+    if (this.isCainOSCanonStrict()) {
+      creatorEl.innerHTML = `<div class="creator-lock"><strong>ATELIER MASQUE PAR CANON STRICT</strong><p>L atelier genere uniquement des aventures bonus non canoniques. Desactivez CANON STRICT pour l afficher sans modifier la progression principale.</p></div>`;
+      return;
+    }
     const progress = (typeof EpisodeManager !== 'undefined') ? EpisodeManager.getProgress() : [];
     const unlocked = progress.includes(9);
     if (!unlocked) {
@@ -10761,14 +11476,18 @@ const OS = {
   renderCainOSTools() {
     const progress = (typeof EpisodeManager !== 'undefined') ? EpisodeManager.getProgress() : [];
     const visited = this.getCainOSVisitedZones();
-    const renderCards = items => items.map(item => `
+    const renderCards = (items, defaultProvenance = 'reconstruction') => items.map(item => {
+      const provenance = this.getCainOSProvenanceMeta(item.provenance || defaultProvenance);
+      return `
       <div class="tools-card ${item.unlocked === false || item.done === false ? 'locked' : ''} ${item.visited ? 'visited' : ''}">
         <div class="tools-card-title"><span>${this.escapeHTML(item.title || item.name)}</span><span>${this.escapeHTML(item.badge || item.level || '')}</span></div>
+        <div class="tools-card-provenance"><span class="provenance-badge provenance-${provenance.kind}" title="${this.escapeHTML(provenance.detail)}">${this.escapeHTML(provenance.label)}</span></div>
         <p>${this.escapeHTML(item.desc || item.text || '')}</p>
         ${item.meta ? `<div class="tools-pill-row">${item.meta.map(meta => `<span class="tools-pill">${this.escapeHTML(meta)}</span>`).join('')}</div>` : ''}
         ${item.actions ? `<div class="tools-pill-row">${item.actions.join('')}</div>` : ''}
       </div>
-    `).join('');
+    `;
+    }).join('');
 
     const mapEl = document.getElementById('tools-tab-map');
     if (mapEl) mapEl.innerHTML = `<div class="tools-grid">${renderCards(this.getCainOSLoreZones().map(zone => ({
@@ -10777,6 +11496,7 @@ const OS = {
       unlocked: zone.unlocked,
       visited: visited.includes(zone.id),
       badge: zone.unlocked ? (visited.includes(zone.id) ? 'VISITEE' : `EP${zone.ep}`) : 'LOCK',
+      provenance: 'playable',
       meta: [zone.item, zone.id === 11 ? 'Zone variantes / micro-aventures' : 'Timeline principale'],
       actions: zone.unlocked ? [
         `<button class="tools-pill tools-action" data-tools-action="open-zone" data-zone="${zone.id}">OUVRIR ZONE</button>`,
@@ -10795,6 +11515,7 @@ const OS = {
         desc: unlocked ? entry.text : 'Source masquee pour eviter un spoiler.',
         unlocked,
         badge: unlocked ? entry.tag : 'LOCK',
+        provenance: 'canon-summary',
         meta: [entry.source, entry.rule],
         actions: unlocked && entry.gate > 0 ? [`<button class="tools-pill tools-action" data-tools-action="open-episode" data-episode="${entry.gate}">OUVRIR EP${entry.gate}</button>`] : null
       };
@@ -10806,6 +11527,7 @@ const OS = {
       desc: item.desc,
       unlocked: item.unlocked,
       badge: item.unlocked ? 'OBJET' : 'LOCK',
+      provenance: 'playable',
       meta: [item.from],
       actions: item.zoneId ? [`<button class="tools-pill tools-action" data-tools-action="open-zone" data-zone="${item.zoneId}">RETOUR ZONE</button>`] : null
     })))}</div>`;
@@ -10818,6 +11540,7 @@ const OS = {
         const value = relations[key] || 0;
         return `<div class="tools-card">
           <div class="tools-card-title"><span>${name}</span><span>${value}%</span></div>
+          <div class="tools-card-provenance"><span class="provenance-badge provenance-reconstruction" title="Mesure de gameplay CainOS, pas une valeur canonique.">MESURE CAINOS</span></div>
           <p>${value >= 70 ? 'Confiance stabilisee.' : value >= 40 ? 'Relation praticable, encore fragile.' : 'Tension ou distance encore forte.'}</p>
           <div class="relation-meter"><div class="relation-meter-fill" style="width:${value}%"></div></div>
         </div>`;
@@ -10932,10 +11655,9 @@ const OS = {
         delete castData.pomni;
       }
 
-      const fullCastData = this.getFilteredWackyCastData();
-      const character = fullCastData[this.activeWackyCast];
+      const character = this.getWackyCastData()[this.activeWackyCast];
       if (character) {
-        const facts = character.facts;
+        const facts = this.getWackyDisplayFacts(this.activeWackyCast, character);
         const curFact = document.getElementById('watch-profile-fact').innerText;
         let newFact = facts[Math.floor(Math.random() * facts.length)];
         while (newFact === curFact && facts.length > 1) {
@@ -11447,10 +12169,70 @@ const OS = {
         "CainOS la signale comme intrusion theatrale plutot que comme entite separee.",
         "La forme sert aux moments ou le systeme transforme l animateur en menace."
       ]},
+      baronmildenhall: { name: "Baron Theodore Mildenhall", age: "PNJ - Ep. 3", stress: "100%", avatar: "baronmildenhall", signal: "B", color: "#7b8dff", facts: [
+        "PNJ central du manoir, lie aux enregistrements et a la menace du sous-sol.",
+        "La silhouette bleutee, le costume et l arme gardent son identite de baron chasseur.",
+        "CainOS le classe comme entite de l aventure Mildenhall, pas comme resident du Cirque."
+      ]},
+      marthamildenhall: { name: "Martha Mildenhall", age: "PNJ - Ep. 3", stress: "??", avatar: "marthamildenhall", signal: "M", color: "#7df0ff", facts: [
+        "Fantome cyan-vert au grand chapeau, voix douce et role lie aux souvenirs de Kinger.",
+        "Les yeux blancs et la transparence lumineuse gardent l aspect spectral officiel.",
+        "Son profil se debloque tard dans le manoir pour eviter le spoiler de la revelation."
+      ]},
+      ghostly: { name: "Ghostly", age: "PNJ - Ep. 3", stress: "12%", avatar: "ghostly", signal: "G", color: "#7dffd8", facts: [
+        "Petit esprit lumineux du manoir, distinct de Martha.",
+        "Sa forme ronde, ses yeux brillants et son sourire le rendent lisible comme PNJ spectral.",
+        "CainOS le garde separe des projections horrifiques de Pomni."
+      ]},
+      angel: { name: "Angel", age: "PNJ - Ep. 3", stress: "91%", avatar: "angel", signal: "A", color: "#e5d7d7", facts: [
+        "Creature ailée de Mildenhall, d abord interpretee comme menace avant la correction du récit.",
+        "Les ailes ramifiees avec trous oculaires et le corps pale sont ses marqueurs visuels.",
+        "CainOS evite de la nommer monstre une fois l information de l episode connue."
+      ]},
+      disappearingguy: { name: "Disappearing Guy", age: "PNJ - Ep. 6", stress: "??", avatar: "disappearingguy", signal: "D", color: "#c34232", facts: [
+        "Mannequin rouge a chapeau, interrompu par sa disparition pendant la ceremonie.",
+        "Sa fiche est volontairement courte: le gag repose sur son apparition fugace.",
+        "CainOS le place avec les signaux des Favorite Character Awards."
+      ]},
+      committeemember: { name: "Committee Member", age: "PNJ - Ep. 6", stress: "18%", avatar: "committeemember", signal: "C", color: "#f4f4f0", facts: [
+        "Mannequin de comite lie aux Favorite Character Awards.",
+        "Le ruban et le clipboard le distinguent des mannequins generiques sans inventer une identite humaine.",
+        "Son profil reste un PNJ administratif de la ceremonie."
+      ]},
+      truthtellerfish: { name: "Orange Crappy Looking Fish", age: "PNJ - Ep. 7", stress: "61%", avatar: "truthtellerfish", signal: "O", color: "#ff9b32", facts: [
+        "Poisson orange du lac digital et frere du poisson rouge; il tente de proteger leur coffre englouti.",
+        "Le transcript l identifie comme Truth-Teller NPC avant qu il constate le vol de ses economies.",
+        "Crappy Looking Fish est un nom de groupe; Orange reste une designation descriptive, pas une identite humaine."
+      ]},
+      liarfish: { name: "Red Crappy Looking Fish", age: "PNJ - Ep. 7", stress: "37%", avatar: "liarfish", signal: "R", color: "#ff3264", facts: [
+        "Poisson rouge du lac digital et frere du poisson orange.",
+        "Le transcript l identifie comme Liar NPC; il annonce lui-meme qu il est celui qui ment.",
+        "Sa silhouette rouge, ses yeux bleus decales et ses levres epaisses suivent son apparence officielle."
+      ]},
+      stupidburgermannequin: { name: "Spudsy Mannequin - Stupid Burger", age: "PNJ mannequin - Ep. 4", stress: "NON MESURE", avatar: "stupidburgermannequin", signal: "SB", color: "#ff9b37", facts: [
+        "Mannequin en bois orange sans visage qui commande un Stupid Burger au comptoir de Spudsy's.",
+        "Il insiste sur la sauce qui rend stupide et affirme commander ce produit regulierement.",
+        "Le suffixe Stupid Burger de CainOS decrit la scene; aucun nom propre n est confirme."
+      ]},
+      cerealmannequin: { name: "Spudsy Mannequin - Cereal Bowl", age: "PNJ mannequin - Ep. 4", stress: "NON MESURE", avatar: "cerealmannequin", signal: "CB", color: "#ff9b37", facts: [
+        "Mannequin en bois orange sans visage present dans la file du rush de midi chez Spudsy's.",
+        "Il refuse de commander parce qu il possede deja un bol de cereales, puis continue a manger.",
+        "Le suffixe Cereal Bowl de CainOS decrit l accessoire; aucun nom propre n est confirme."
+      ]},
+      shrimpnpc: { name: "Shrimp NPC", age: "PNJ - Ep. 7", stress: "83%", avatar: "shrimpnpc", signal: "S", color: "#ff8f4a", facts: [
+        "Crevette du lac digital consciente d etre un PNJ dans la scene.",
+        "Ses grands yeux, ses antennes et son corps orange restent les signes visuels principaux.",
+        "CainOS la lie a la purge solaire de Caine pendant Beach Episode."
+      ]},
+      chineseroomnpc: { name: "Chinese Room NPC", age: "PNJ - Ep. 7", stress: "44%", avatar: "chineseroomnpc", signal: "C", color: "#d8b4fe", facts: [
+        "Mannequin de la Chinese Room assis derriere un dictionnaire artificiel.",
+        "Ce profil represente la couche admin gag consultee avant le lac digital.",
+        "La grande couverture C&A sert de repere pour ne pas le confondre avec Abel."
+      ]},
       horrorghost: { name: "Horror Ghost Lady", age: "Entite spectrale", stress: "??", avatar: "horrorghost", signal: "H", color: "#58fff0", facts: [
-        "Fantome cyan a grand chapeau, archivee comme presence spectrale de manoir.",
-        "Les yeux blancs et le contour lumineux gardent l aspect apparition.",
-        "CainOS la traite comme entite d ambiance, pas comme membre du cirque."
+        "Ancienne projection spectrale CainOS, conservee comme variante d ambiance.",
+        "Pour le canon Mildenhall precis, utilisez Martha Mildenhall ou Ghostly.",
+        "CainOS la garde comme skin horreur generique pour les sequences non strictement transcript."
       ]},
       horrormonster: { name: "Horror Screaming Monster", age: "Anomalie", stress: "100%", avatar: "horrormonster", signal: "M", color: "#f2f2f2", facts: [
         "Monstre au masque blanc avec bouche verticale et dents multiples.",
@@ -11506,6 +12288,156 @@ const OS = {
         "Gloink rond jaune avec deux yeux et petite bouche rouge.",
         "Forme compacte, simple a lire sur le radar CainOS.",
         "Classee petite entite Gloink de base."
+      ]},
+      blueai: { name: "Blue AI", age: "IA canonique - Ep. 9", stress: "NON MESURE", avatar: "blueai", signal: "BLUE", color: "#00ddff", facts: [
+        "Blue AI a ete developpee par C&A comme remplacement de Caine.",
+        "Caine l a absorbee, reunissant leurs capacites pendant une periode de la timeline.",
+        "Remember montre leur separation; ce profil est canonique et distinct de la mission bonus Fusion 1993."
+      ]},
+      cookiebutterfly: { name: "Cookie Butterfly", age: "PNJ", stress: "12%", avatar: "cookiebutterfly", signal: "CB", color: "#ff9e8e", facts: [
+        "Petit PNJ decoratif a ailes rose saumon, motif biscuit et corps central.",
+        "La Wacky Watch le classe comme entite de simulation, pas comme sujet connecte.",
+        "Son profil sert surtout a enrichir les zones candy/lac sans inventer de role humain."
+      ]},
+      gummyelephant: { name: "Gummy Elephant", age: "PNJ", stress: "18%", avatar: "gummyelephant", signal: "GE", color: "#ff85b7", facts: [
+        "Creature gummy rose et jaune, proche des logiques de confiserie de Candy Canyon.",
+        "CainOS le traite comme PNJ/figurant de simulation.",
+        "La trompe longue et la texture translucide sont les marqueurs visuels principaux."
+      ]},
+      giantcentipede: { name: "Giant Centipede", age: "PNJ", stress: "71%", avatar: "giantcentipede", signal: "GC", color: "#c89436", facts: [
+        "Grand insecte segmente avec tete rouge et nombreuses pattes.",
+        "Son echelle doit rester plus grande qu un figurant standard dans le mode FPS.",
+        "CainOS le classe comme menace/creature de decor selon la zone, pas comme resident."
+      ]},
+      drfootball: { name: "Dr. Football", age: "Decor", stress: "0%", avatar: "drfootball", signal: "DF", color: "#d94338", facts: [
+        "Masque rouge inquietant indexe comme prop/personnage mineur.",
+        "Ce n est pas un resident du Cirque: CainOS le range dans les objets de decor actif.",
+        "Le visage rouge, les yeux creux et la bouche ouverte restent les seules donnees fiables."
+      ]},
+      spudsycustomer: { name: "Spudsy Customer", age: "PNJ reconstruit", stress: "79%", avatar: "spudsycustomer", signal: "SC", color: "#f1c24d", facts: [
+        "Client Spudsy reconstruit pour representer les PNJ de service de l episode restaurant.",
+        "Son role est fonctionnel: pression de comptoir, file d attente et tickets de commande.",
+        "CainOS le garde separe des personnages nommes pour ne pas inventer une identite canon."
+      ]},
+      candyguardcyan: { name: "Candy Guard Cyan", age: "PNJ silencieux - Ep. 2", stress: "0%", avatar: "candyguardcyan", signal: "CG1", color: "#27d7e7", facts: [
+        "Premier des trois mannequins gardes visibles dans les donnees de Candy Canyon.",
+        "La teinte cyan distingue son modele, mais aucun nom ni caractere individuel n est confirme.",
+        "CainOS le classe comme garde silencieux de Princess Loolilalu, pas comme sujet humain."
+      ]},
+      candyguardblue: { name: "Candy Guard Blue", age: "PNJ silencieux - Ep. 2", stress: "0%", avatar: "candyguardblue", signal: "CG2", color: "#2568f5", facts: [
+        "Deuxieme mannequin garde de Candy Canyon, rendu dans un bleu plus profond.",
+        "Il partage la meme silhouette articulee et la meme fonction que les autres gardes.",
+        "Aucun dialogue ou profil individuel n est attribue a ce figurant."
+      ]},
+      candyguardpurple: { name: "Candy Guard Violet", age: "PNJ silencieux - Ep. 2", stress: "0%", avatar: "candyguardpurple", signal: "CG3", color: "#7755e8", facts: [
+        "Troisieme mannequin garde indexe dans les modeles de l aventure Candy Canyon.",
+        "Sa teinte violet-bleu est un marqueur visuel, pas une identite distincte confirmee.",
+        "CainOS le maintient dans les PNJ de palais et dans la couche de test."
+      ]},
+      gummyworm: { name: "Gummy Worm", age: "PNJ decoratif - Ep. 2", stress: "4%", avatar: "gummyworm", signal: "GW", color: "#ef5a94", facts: [
+        "Petit ver gommeux visible uniquement dans les douves chocolat du Candy Canyon Kingdom.",
+        "Son corps segmente rose sert de faune de decor; aucun dialogue n est confirme.",
+        "CainOS le garde a petite echelle pour ne pas le confondre avec Gummy Elephant."
+      ]},
+      barrelmonkey: { name: "Barrel Monkey", age: "PNJ jouet - Ep. 1", stress: "36%", avatar: "barrelmonkey", signal: "BM", color: "#e43c32", facts: [
+        "Singe jouet rouge aux bras et a la queue en crochets, present dans le Pilote.",
+        "Un exemplaire est detruit pendant la poursuite de Kaufmo abstrait.",
+        "Il reste un accessoire anime de Caine, sans identite humaine ni dialogue propre."
+      ]},
+      jeffery: { name: "Jeffery", age: "Extension de Caine", stress: "0%", avatar: "jeffery", signal: "JE", color: "#f4f4ee", facts: [
+        "Jeffery est le nom donne a l oeil droit vert de Caine dans les contenus associes a la serie.",
+        "Il peut prendre une forme de danseur humanoide a tete blanche en forme d oeil.",
+        "CainOS le classe comme extension theatrale de Caine, pas comme resident separe."
+      ]},
+      redmannequin: { name: "Red Mannequin", age: "PNJ silencieux - Ep. 2", stress: "0%", avatar: "redmannequin", signal: "MR", color: "#f33d34", facts: [
+        "Variante rouge des mannequins visibles dans les foules et decors de Candy Canyon.",
+        "CainOS l indexe comme modele de foule, sans nom, dialogue ou biographie individuelle.",
+        "Son role est visuel: densifier les zones sucreries sans creer un nouveau resident."
+      ]},
+      orangemannequin: { name: "Orange Mannequin", age: "PNJ silencieux - Ep. 2", stress: "0%", avatar: "orangemannequin", signal: "MO", color: "#ff8a2a", facts: [
+        "Variante orange des mannequins de foule du Candy Canyon Kingdom.",
+        "La couleur distingue le modele, mais ne confirme aucune identite propre.",
+        "La fiche reste classee PNJ/decor pour conserver la separation entre residents et figurants."
+      ]},
+      yellowmannequin: { name: "Yellow Mannequin", age: "PNJ silencieux - Ep. 2", stress: "0%", avatar: "yellowmannequin", signal: "MY", color: "#ffd83f", facts: [
+        "Variante jaune des mannequins de foule rattaches a l aventure Candy Canyon.",
+        "CainOS ne lui attribue aucune parole: seulement une presence visuelle de simulation.",
+        "Son deblocage suit l arrivee au royaume pour eviter les spoilers avant l episode 2."
+      ]},
+      magentamannequin: { name: "Magenta Mannequin", age: "PNJ silencieux - Ep. 2", stress: "0%", avatar: "magentamannequin", signal: "MM", color: "#f04ad8", facts: [
+        "Variante magenta des mannequins visibles dans les plans de Candy Canyon.",
+        "Elle peut renforcer une foule ou un poste de palais, sans devenir un personnage parlant.",
+        "CainOS conserve la teinte comme marqueur visuel uniquement."
+      ]},
+      mildenhallsouls: { name: "Mildenhall Souls", age: "Entite spectrale - Ep. 3", stress: "NON MESURE", avatar: "mildenhallsouls", signal: "MS", color: "#77f5da", facts: [
+        "Amas spectral lie au manoir de Mildenhall et aux manifestations qui entourent la possession.",
+        "Les ames sont traitees comme phenomene de scene, pas comme residents individuels identifies.",
+        "CainOS les affiche apres les sequences du manoir pour conserver la progression horrifique."
+      ]},
+      albertspudsy: { name: "Albert Spudsy", age: "Visuel de marque - Ep. 4", stress: "0%", avatar: "albertspudsy", signal: "AS", color: "#f2d7b2", facts: [
+        "Albert Spudsy est conserve comme image/decoupe liee a Spudsy's, pas comme PNJ vivant.",
+        "La fiche sert a reconnaitre le branding du restaurant dans le mode FPS.",
+        "CainOS bloque toute biographie inventee au-dela de son role de visuel de marque."
+      ]},
+      bonepastor: { name: "The Bone Pastor", age: "Easter egg canon - Ep. 3", stress: "NON MESURE", avatar: "bonepastor", signal: "BP", color: "#e7dfc7", facts: [
+        "Squelette en salopette tenant une pompe a velo, visible comme easter egg dans Mildenhall Manor.",
+        "Son apparition ne lui attribue aucun dialogue ni role de resident du Cirque.",
+        "CainOS le conserve comme personnage mineur de decor, sans inventer de biographie."
+      ]},
+      fourthcrocodile: { name: "Fourth Crocodile", age: "Entite de tourment - Ep. 8", stress: "NON MESURE", avatar: "fourthcrocodile", signal: "FC", color: "#d4c840", facts: [
+        "Crocodile quadrupede jaune-olive a yeux lumineux invoque pendant la sequence de tourment de l episode 8.",
+        "Aucun nom propre n est confirme dans l episode; Fourth Crocodile reste une designation descriptive.",
+        "CainOS ne confirme aucun lien familial avec Gummigoo."
+      ]},
+      ragathamothershadow: { name: "Feminine Shadow", age: "Entite de tourment - Ep. 8", stress: "NON MESURE", avatar: "ragathamothershadow", signal: "FS", color: "#18111f", facts: [
+        "Silhouette feminine sombre projetee face a Ragatha pendant la sequence de tourment.",
+        "Sa coiffure et la mise en scene suggerent une figure maternelle liee a Ragatha.",
+        "L identite Ragatha's Mother reste une interpretation; CainOS l affiche comme non confirmee."
+      ]},
+      paintedmasks: { name: "Painted Masks", age: "Decor de tourment - Ep. 8", stress: "0%", avatar: "paintedmasks", signal: "PM", color: "#f7f7f7", facts: [
+        "Ensemble de cinq peintures montrant des masques de Gangle alternant joie et tristesse.",
+        "Ces tableaux appartiennent a la sequence de tourment de Gangle.",
+        "Ils sont des objets de scene et ne constituent pas cinq personnages distincts."
+      ]},
+      zoobleparts: { name: "Body Parts and Mirrors", age: "Decor de tourment - Ep. 8", stress: "0%", avatar: "zoobleparts", signal: "ZM", color: "#ff4fb8", facts: [
+        "Assemblage de pieces corporelles de Zooble accompagne de deux miroirs noirs.",
+        "La composition apparait pendant la sequence de tourment de Zooble.",
+        "CainOS la classe comme decor inspectable, pas comme nouvel avatar de Zooble."
+      ]},
+      laughingshadows: { name: "Laughing Shadows", age: "Entites de tourment - Ep. 8", stress: "NON MESURE", avatar: "laughingshadows", signal: "LS", color: "#05020d", facts: [
+        "Trois silhouettes noires au rire cruel apparaissent pendant le tourment de Jax.",
+        "Leurs formes rappellent Kaufmo, Pomni et Ribbit sans restaurer ces personnages.",
+        "CainOS les traite comme groupe de projections, pas comme trois residents actifs."
+      ]},
+      abigailbrooks: { name: "Abigail Brooks", age: "Contrepartie humaine - Ep. 9", stress: "NON APPLICABLE", avatar: "abigailbrooks", signal: "AB", color: "#f2c7b5", facts: [
+        "Contrepartie humaine dont la copie numerique est Pomni; les deux existent comme personnes distinctes.",
+        "Elle travaille toujours comme comptable et publie encore occasionnellement des videos avec de nouveaux amis.",
+        "Son profil est une projection du monde reel revelee par Caine, pas un resident physique du Cirque."
+      ]},
+      suzieackerman: { name: "Suzie J. Ackerman", age: "Contrepartie humaine - Ep. 9", stress: "NON APPLICABLE", avatar: "suzieackerman", signal: "SA", color: "#9b6b52", facts: [
+        "Contrepartie humaine dont la copie numerique est Ragatha.",
+        "Elle a quitte sa ville natale, coupe la communication avec sa mere et reussi dans sa carriere.",
+        "La presentation finale la montre entouree d amis avec lesquels elle entretient des liens sinceres."
+      ]},
+      zoeyraghavan: { name: "Zoey Raghavan", age: "Contrepartie humaine - Ep. 9", stress: "NON APPLICABLE", avatar: "zoeyraghavan", signal: "ZR", color: "#9b3f49", facts: [
+        "Contrepartie humaine dont la copie numerique est Gangle.",
+        "Elle s est remise de ses blessures, a quitte la restauration rapide et travaille dans une petite agence de design.",
+        "Elle publie aussi des pages de sa bande dessinee en ligne."
+      ]},
+      rileyverselis: { name: "Riley Verselis", age: "Contrepartie humaine - Ep. 9", stress: "NON APPLICABLE", avatar: "rileyverselis", signal: "RV", color: "#687287", facts: [
+        "Contrepartie humaine dont la copie numerique est Zooble.",
+        "Apres plusieurs emplois, Riley a ouvert son propre bar, devenu un lieu populaire dans la ville.",
+        "La presentation le decrit comme un espace ou les clients peuvent etre eux-memes sans jugement."
+      ]},
+      grantbest: { name: "Grant Best", age: "Contrepartie humaine - Ep. 9", stress: "NON APPLICABLE", avatar: "grantbest", signal: "GB", color: "#7d668b", facts: [
+        "Contrepartie humaine dont la copie numerique est Kinger.",
+        "Il travaille toujours dans la technologie et reste marie a Destiny.",
+        "Ils ont deux filles; la presentation de Caine le montre comme un pere attentionne."
+      ]},
+      leeroymateo: { name: "Leeroy Mateo", age: "Contrepartie humaine - Ep. 9", stress: "NON APPLICABLE", avatar: "leeroymateo", signal: "LM", color: "#41516a", facts: [
+        "Contrepartie humaine dont la copie numerique est Jax.",
+        "Apres quelques mois sans logement, il a pu vivre avec un ami proche, obtenir un emploi stable et payer son loyer.",
+        "Il sort encore avec ses amis, notamment dans le bar de Riley."
       ]}
     };
 
@@ -11526,39 +12458,49 @@ const OS = {
       1: [
         "pomni", "caine", "bubble", "jax", "ragatha", "kinger", "gangle", "zooble", "kaufmo",
         "gloinkqueen", "gloinkqueenscale", "gloinkstar", "gloinkcube", "gloinkpyramid", "gloinkcrescent", "gloinkpin", "gloinkround",
-        "mannequin", "moon", "sun"
+        "mannequin", "moon", "sun", "barrelmonkey", "drfootball"
       ],
       2: [
         "pomni", "caine", "bubble", "jax", "ragatha", "kinger", "gangle", "zooble",
-        "gummigoo", "max", "chad", "loolilalu", "fudge", "japanesegummigoo"
+        "gummigoo", "max", "chad", "loolilalu", "fudge", "japanesegummigoo", "mannequin", "additionalvoices",
+        "candyguardcyan", "candyguardblue", "candyguardpurple", "redmannequin", "orangemannequin", "yellowmannequin", "magentamannequin",
+        "gummyworm", "cookiebutterfly", "gummyelephant"
       ],
       3: [
         "pomni", "jax", "ragatha", "kinger", "gangle", "zooble", "caine", "bubble",
-        "horrorghost", "horrormonster", "horrorpomnivoid", "horrorpomnispiral", "horrorpomniskull",
-        "shadowpomni", "shadowkinger", "shadowjax", "shadowcaine"
+        "baronmildenhall", "marthamildenhall", "ghostly", "angel", "horrorghost", "horrormonster",
+        "horrorpomnivoid", "horrorpomnispiral", "horrorpomniskull", "mildenhallsouls",
+        "shadowpomni", "shadowkinger", "shadowjax", "shadowcaine", "bonepastor"
       ],
       4: [
-        "gangle", "workgangle", "ganglekawaii", "ganglecomedy", "gangletragedy", "pomni", "jax", "ragatha", "kinger", "zooble", "caine", "bubble"
+        "gangle", "workgangle", "ganglekawaii", "ganglecomedy", "gangletragedy", "pomni", "jax", "ragatha", "kinger", "zooble", "caine", "bubble",
+        "spudsycustomer", "stupidburgermannequin", "cerealmannequin", "albertspudsy"
       ],
       5: [
         "caine", "bubble", "pomni", "jax", "ragatha", "kinger", "gangle", "zooble",
         "hunterjax", "rhinogangle", "japanesejax", "japaneseragatha", "japanesepomni", "japanesekinger", "japanesegangle", "japanesezooble",
         "baseballjax", "baseballzooble", "baseballgangle", "baseballragatha", "baseballpomni", "baseballkinger", "maidjax",
         "rivalbaseballzooble", "rivalbaseballpomni", "rivalbaseballpinkgiant", "rivalbaseballragatha", "rivalbaseballjax", "rivalbaseballkinger",
-        "orbsman", "evilorbsman", "evilpomni", "eviljax", "evilragatha", "evilkinger", "evilzooble"
+        "orbsman", "evilorbsman", "evilpomni", "eviljax", "evilragatha", "evilkinger", "evilzooble",
+        "jeffery", "cookiebutterfly", "giantcentipede"
       ],
       6: [
-        "jax", "pomni", "ragatha", "kinger", "gangle", "zooble", "caine", "bubble", "ming", "additionalvoices"
+        "jax", "pomni", "ragatha", "kinger", "gangle", "zooble", "caine", "bubble",
+        "ming", "additionalvoices", "disappearingguy", "committeemember"
       ],
       7: [
-        "gangle", "beachgangle", "pomni", "jax", "ragatha", "kinger", "zooble", "caine", "bubble", "abel", "abelmannequin", "abelfullbody"
+        "gangle", "beachgangle", "pomni", "jax", "ragatha", "kinger", "zooble", "caine", "bubble",
+        "abel", "abelmannequin", "abelfullbody", "truthtellerfish", "liarfish", "shrimpnpc", "chineseroomnpc",
+        "gummyelephant"
       ],
       8: [
-        "kinger", "queenie", "caine", "bubble", "pomni", "ragatha", "jax", "gangle", "zooble", "scratch", "shadowkinger"
+        "kinger", "queenie", "caine", "bubble", "pomni", "ragatha", "jax", "gangle", "zooble", "scratch", "shadowkinger",
+        "barrelmonkey", "blueai", "fourthcrocodile", "ragathamothershadow", "paintedmasks", "zoobleparts", "laughingshadows"
       ],
       9: [
         "pomni", "caine", "bubble", "jax", "ragatha", "kinger", "gangle", "zooble", "ribbit", "queenie", "scratch",
-        "wormo", "bizco", "rattie", "spike", "pinkcyclops", "yellowclown", "oyster", "bulbcreature", "maidjax"
+        "wormo", "bizco", "rattie", "spike", "pinkcyclops", "yellowclown", "oyster", "bulbcreature", "maidjax", "blueai",
+        "abigailbrooks", "suzieackerman", "zoeyraghavan", "rileyverselis", "grantbest", "leeroymateo"
       ]
     };
 
@@ -11585,18 +12527,41 @@ const OS = {
       gloinkcrescent: { episode: 1, subepisode: 4 },
       gloinkpin: { episode: 1, subepisode: 4 },
       gloinkround: { episode: 1, subepisode: 4 },
+      barrelmonkey: { episode: 1, subepisode: 5 },
+      drfootball: { episode: 1, subepisode: 5 },
       gummigoo: { episode: 2, subepisode: 3 },
       max: { episode: 2, subepisode: 3 },
       chad: { episode: 2, subepisode: 3 },
       loolilalu: { episode: 2, subepisode: 1 },
       fudge: { episode: 2, subepisode: 6 },
+      additionalvoices: { episode: 2, subepisode: 1 },
+      candyguardcyan: { episode: 2, subepisode: 1 },
+      candyguardblue: { episode: 2, subepisode: 1 },
+      candyguardpurple: { episode: 2, subepisode: 1 },
+      redmannequin: { episode: 2, subepisode: 1 },
+      orangemannequin: { episode: 2, subepisode: 1 },
+      yellowmannequin: { episode: 2, subepisode: 1 },
+      magentamannequin: { episode: 2, subepisode: 1 },
+      gummyworm: { episode: 2, subepisode: 1 },
+      cookiebutterfly: { episode: 2, subepisode: 1 },
+      gummyelephant: { episode: 2, subepisode: 1 },
+      baronmildenhall: { episode: 3, subepisode: 2 },
+      marthamildenhall: { episode: 3, subepisode: 5 },
+      ghostly: { episode: 3, subepisode: 1 },
+      angel: { episode: 3, subepisode: 3 },
       horrorghost: { episode: 3, subepisode: 1 },
       horrormonster: { episode: 3, subepisode: 2 },
       horrorpomnivoid: { episode: 3, subepisode: 5 },
       horrorpomnispiral: { episode: 3, subepisode: 5 },
       horrorpomniskull: { episode: 3, subepisode: 5 },
+      mildenhallsouls: { episode: 3, subepisode: 5 },
+      bonepastor: { episode: 3, subepisode: 2 },
       maxspudsy: { episode: 4, subepisode: 4 },
       workgangle: { episode: 4, subepisode: 2 },
+      spudsycustomer: { episode: 4, subepisode: 2 },
+      albertspudsy: { episode: 4, subepisode: 2 },
+      stupidburgermannequin: { episode: 4, subepisode: 3 },
+      cerealmannequin: { episode: 4, subepisode: 4 },
       hunterjax: { episode: 5, subepisode: 2 },
       rhinogangle: { episode: 5, subepisode: 2 },
       japanesejax: { episode: 5, subepisode: 4 },
@@ -11625,13 +12590,27 @@ const OS = {
       evilragatha: { episode: 5, subepisode: 6 },
       evilkinger: { episode: 5, subepisode: 6 },
       evilzooble: { episode: 5, subepisode: 6 },
+      jeffery: { episode: 5, subepisode: 4 },
+      giantcentipede: { episode: 5, subepisode: 6 },
       ming: { episode: 6, subepisode: 7 },
+      disappearingguy: { episode: 6, subepisode: 7 },
+      committeemember: { episode: 6, subepisode: 7 },
       beachgangle: { episode: 7, subepisode: 1 },
+      truthtellerfish: { episode: 7, subepisode: 1 },
+      liarfish: { episode: 7, subepisode: 1 },
+      shrimpnpc: { episode: 7, subepisode: 1 },
+      chineseroomnpc: { episode: 7, subepisode: 0 },
       abel: { episode: 7, subepisode: 3 },
       abelmannequin: { episode: 7, subepisode: 3 },
       abelfullbody: { episode: 7, subepisode: 3 },
       queenie: { episode: 8, subepisode: 1 },
+      blueai: { episode: 9, subepisode: 6 },
       scratch: { episode: 8, subepisode: 5 },
+      fourthcrocodile: { episode: 8, subepisode: 7 },
+      ragathamothershadow: { episode: 8, subepisode: 7 },
+      paintedmasks: { episode: 8, subepisode: 7 },
+      zoobleparts: { episode: 8, subepisode: 7 },
+      laughingshadows: { episode: 8, subepisode: 7 },
       ribbit: { episode: 9, subepisode: 2 },
       wormo: { episode: 9, subepisode: 2 },
       bizco: { episode: 9, subepisode: 2 },
@@ -11640,7 +12619,13 @@ const OS = {
       pinkcyclops: { episode: 9, subepisode: 2 },
       yellowclown: { episode: 9, subepisode: 2 },
       oyster: { episode: 9, subepisode: 2 },
-      bulbcreature: { episode: 9, subepisode: 2 }
+      bulbcreature: { episode: 9, subepisode: 2 },
+      abigailbrooks: { episode: 9, subepisode: 7 },
+      suzieackerman: { episode: 9, subepisode: 7 },
+      zoeyraghavan: { episode: 9, subepisode: 7 },
+      rileyverselis: { episode: 9, subepisode: 7 },
+      grantbest: { episode: 9, subepisode: 7 },
+      leeroymateo: { episode: 9, subepisode: 7 }
     };
 
     if (id.startsWith("shadow")) return { episode: 3, subepisode: 1 };
@@ -11654,10 +12639,15 @@ const OS = {
       'kaufmo', 'queenie', 'ribbit', 'scratch', 'wormo', 'bizco', 'rattie', 'spike',
       'pinkcyclops', 'yellowclown', 'oyster', 'bulbcreature'
     ]);
+    const humanCounterpartIds = new Set([
+      'abigailbrooks', 'suzieackerman', 'zoeyraghavan',
+      'rileyverselis', 'grantbest', 'leeroymateo'
+    ]);
     const variantSignals = ['evil', 'shadow', 'maid', 'japanese', 'baseball', 'rivalbaseball', 'darkduo', 'kawaii', 'comedy', 'tragedy', 'hunter', 'beach', 'rhino', 'work', 'jaxgirl'];
     if (archiveIds.has(id)) return "ARCHIVE";
+    if (humanCounterpartIds.has(id)) return "CONTREPARTIE HUMAINE";
     if (variantSignals.some(token => id.includes(token))) return "VARIANTE";
-    if (id.startsWith("gloink") || ['gummigoo', 'max', 'chad', 'loolilalu', 'fudge', 'orbsman', 'ming', 'mannequin', 'additionalvoices', 'themachine', 'sun', 'moon', 'abel', 'abelmannequin', 'abelfullbody'].includes(id)) return "PNJ / DECOR";
+    if (id.startsWith("gloink") || ['gummigoo', 'max', 'chad', 'loolilalu', 'fudge', 'orbsman', 'ming', 'mannequin', 'additionalvoices', 'themachine', 'sun', 'moon', 'abel', 'abelmannequin', 'abelfullbody', 'baronmildenhall', 'marthamildenhall', 'ghostly', 'angel', 'disappearingguy', 'committeemember', 'truthtellerfish', 'liarfish', 'shrimpnpc', 'chineseroomnpc', 'blueai', 'cookiebutterfly', 'gummyelephant', 'giantcentipede', 'drfootball', 'spudsycustomer', 'stupidburgermannequin', 'cerealmannequin', 'candyguardcyan', 'candyguardblue', 'candyguardpurple', 'redmannequin', 'orangemannequin', 'yellowmannequin', 'magentamannequin', 'gummyworm', 'barrelmonkey', 'jeffery', 'mildenhallsouls', 'albertspudsy', 'bonepastor', 'fourthcrocodile', 'ragathamothershadow', 'paintedmasks', 'zoobleparts', 'laughingshadows'].includes(id)) return "PNJ / DECOR";
     return "ACTIF";
   },
 
@@ -11711,10 +12701,116 @@ const OS = {
     const age = String(data.age || '').toUpperCase();
     if (!this.isWackyProfileUnlocked(id)) return "VERROUILLE PAR PROGRESSION";
     if (this.isFanSkin(id, data)) return "SKIN FAN / HORS TIMELINE";
+    if (status.includes("RECONSTRUCTION")) return "RECONSTRUCTION CAINOS / HORS CANON";
+    if (status.includes("CONTREPARTIE HUMAINE")) return "CONTREPARTIE HUMAINE / MONDE REEL";
     if (status.includes("VARIANTE")) return "VARIANTE VISUELLE";
     if (status.includes("ARCHIVE") || age.includes("ARCHIVE") || age.includes("ABSTRAIT")) return "ARCHIVE CAINOS";
     if (status.includes("PNJ") || age.includes("NPC") || age.includes("DECOR")) return "PNJ / DECOR DE SIMULATION";
     return "TIMELINE ACTIVE";
+  },
+
+  getWackyProvenanceKind(id, char = null) {
+    const data = char || this.getWackyCastData()[id];
+    if (!data) return 'reconstruction';
+    if (this.isFanSkin(id, data)) return 'fan';
+    if (this.isCanonicalEpisodeVariant(id)) return 'canon-visual';
+    const canonProfiles = new Set([
+      'pomni', 'caine', 'bubble', 'jax', 'ragatha', 'kinger', 'gangle', 'zooble',
+      'kaufmo', 'queenie', 'gummigoo', 'loolilalu', 'fudge', 'orbsman', 'sun', 'moon',
+      'ribbit', 'scratch', 'wormo', 'bizco', 'rattie', 'spike', 'pinkcyclops',
+      'yellowclown', 'oyster', 'bulbcreature', 'max', 'chad', 'ming', 'mannequin',
+      'additionalvoices', 'themachine', 'gloinkqueen', 'gloinkqueenscale',
+      'horrorghost', 'horrormonster', 'horrorpomnivoid', 'horrorpomnispiral',
+      'horrorpomniskull', 'abel', 'abelmannequin', 'abelfullbody',
+      'baronmildenhall', 'marthamildenhall', 'ghostly', 'angel', 'disappearingguy',
+      'committeemember', 'truthtellerfish', 'liarfish', 'shrimpnpc', 'chineseroomnpc',
+      'cookiebutterfly', 'gummyelephant', 'giantcentipede', 'drfootball',
+      'candyguardcyan', 'candyguardblue', 'candyguardpurple', 'gummyworm',
+      'barrelmonkey', 'jeffery', 'redmannequin', 'orangemannequin', 'yellowmannequin',
+      'magentamannequin', 'mildenhallsouls', 'albertspudsy',
+      'stupidburgermannequin', 'cerealmannequin', 'blueai', 'bonepastor',
+      'fourthcrocodile', 'ragathamothershadow', 'paintedmasks', 'zoobleparts',
+      'laughingshadows', 'abigailbrooks', 'suzieackerman', 'zoeyraghavan',
+      'rileyverselis', 'grantbest', 'leeroymateo'
+    ]);
+    if (canonProfiles.has(id) || id.startsWith('gloink')) return 'canon-visual';
+    return 'reconstruction';
+  },
+
+  getWackyDisplayFacts(id, char = null) {
+    const data = char || this.getWackyCastData()[id] || {};
+    if (!this.isCainOSCanonStrict()) {
+      return Array.isArray(data.facts) && data.facts.length ? data.facts : ['Aucune note CainOS disponible.'];
+    }
+
+    if (this.isFanSkin(id, data)) {
+      return ['Variante fan reservee aux aventures originales. Elle ne modifie pas la chronologie canonique.'];
+    }
+    if (this.isCanonicalEpisodeVariant(id)) {
+      return [`Apparence rattachee a une scene de l episode qui la debloque. Les mesures et biographies ajoutees par CainOS ne sont pas canoniques.`];
+    }
+
+    const confirmed = {
+      pomni: [
+        'Caine lui attribue le nom Pomni apres son arrivee dans le Pilote.',
+        'Elle cherche une sortie des son arrivee et reste une residente humaine piegee dans le Cirque.'
+      ],
+      caine: [
+        'Intelligence artificielle qui dirige le Cirque et organise les aventures.',
+        'Ses limites et ses intentions doivent etre lues uniquement selon les revelations deja debloquees.'
+      ],
+      bubble: ['Assistant de Caine present dans le Cirque; CainOS ne lui attribue aucune identite humaine.'],
+      jax: ['Resident du Cirque connu pour provoquer les autres; son identite civile et son age ne sont pas confirmes.'],
+      ragatha: ['Residante qui tente regulierement de rassurer Pomni et le groupe; son identite civile et son age ne sont pas confirmes.'],
+      kinger: ['Resident de longue date represente comme une piece d echecs; les revelations tardives restent verrouillees par progression.'],
+      gangle: ['Residante composee de rubans et de masques de comedie et de tragedie; son identite civile et son age ne sont pas confirmes.'],
+      zooble: ['Resident au corps modulaire qui exprime souvent son refus des aventures de Caine; son identite civile et son age ne sont pas confirmes.'],
+      kaufmo: ['Ancien resident abstrait dans le Pilote. CainOS le classe comme archive, pas comme resident revenu.'],
+      queenie: ['Ancienne membre liee a Kinger. Sa presence active n est pas affirmee hors des scenes ou souvenirs debloques.'],
+      gummigoo: ['PNJ crocodile de Candy Carrier Chaos!; CainOS ne le classe pas comme sujet humain.'],
+      candyguardcyan: ['Garde mannequin silencieux de Candy Canyon. Sa teinte cyan ne constitue pas une identite individuelle confirmee.'],
+      candyguardblue: ['Garde mannequin silencieux de Candy Canyon. Sa teinte bleue ne constitue pas une identite individuelle confirmee.'],
+      candyguardpurple: ['Garde mannequin silencieux de Candy Canyon. Sa teinte violette ne constitue pas une identite individuelle confirmee.'],
+      redmannequin: ['Mannequin rouge de foule Candy Canyon. Sa couleur ne constitue pas une identite individuelle confirmee.'],
+      orangemannequin: ['Mannequin orange de foule Candy Canyon. CainOS ne lui attribue ni nom propre ni dialogue.'],
+      yellowmannequin: ['Mannequin jaune de foule Candy Canyon. Il reste un figurant silencieux de simulation.'],
+      magentamannequin: ['Mannequin magenta de foule Candy Canyon. Sa presence est visuelle, pas biographique.'],
+      gummyworm: ['Creature gommeuse visible dans les douves chocolat de Candy Canyon; aucun dialogue ni profil humain ne lui est attribue.'],
+      barrelmonkey: ['Jouet anime present dans le Pilote. Un exemplaire est detruit pendant la poursuite de Kaufmo abstrait.'],
+      jeffery: ['Nom associe a l oeil droit vert de Caine; sa forme de danseur reste une extension theatrale de Caine.'],
+      mildenhallsouls: ['Ames/phenomene spectral du manoir de Mildenhall. CainOS ne les transforme pas en residents individuels.'],
+      albertspudsy: ['Visuel de marque Spudsy reference dans le restaurant. CainOS le classe comme decoupe/branding, pas comme PNJ vivant.'],
+      truthtellerfish: ['Poisson orange du lac digital. Le transcript le distingue comme Truth-Teller NPC et l associe au coffre englouti.'],
+      liarfish: ['Poisson rouge du lac digital. Le transcript le distingue comme Liar NPC et lui fait annoncer son propre role.'],
+      blueai: ['IA canonique developpee par C&A pour remplacer Caine, ensuite absorbee par lui puis separee de Caine dans Remember.'],
+      bonepastor: ['Easter egg squelettique visible dans Mildenhall Manor. Aucun dialogue ni statut de resident ne lui est attribue.'],
+      fourthcrocodile: ['Crocodile jaune-olive de la sequence de tourment de l episode 8. Son identite exacte et un eventuel lien avec Gummigoo ne sont pas confirmes.'],
+      ragathamothershadow: ['Silhouette feminine du tourment de Ragatha. La lecture maternelle est suggeree par la scene mais son identite n est pas explicitement confirmee.'],
+      paintedmasks: ['Cinq peintures de masques de Gangle utilisees comme objets de tourment; elles ne sont pas des personnages distincts.'],
+      zoobleparts: ['Pieces de Zooble et miroirs noirs utilisees comme assemblage de tourment; CainOS les classe comme decor.'],
+      laughingshadows: ['Trois silhouettes rieuses du tourment de Jax. Elles evoquent des personnages connus sans constituer leur retour.'],
+      abigailbrooks: ['Contrepartie humaine de Pomni. Elle travaille toujours comme comptable et publie encore occasionnellement des videos avec de nouveaux amis.'],
+      suzieackerman: ['Contrepartie humaine de Ragatha. Elle a quitte sa ville natale, coupe les ponts avec sa mere et reussi dans sa carriere.'],
+      zoeyraghavan: ['Contrepartie humaine de Gangle. Elle s est remise de ses blessures, travaille dans une petite agence de design et publie son webcomic.'],
+      rileyverselis: ['Contrepartie humaine de Zooble. Riley a ouvert un bar populaire ou les clients peuvent etre eux-memes sans jugement.'],
+      grantbest: ['Contrepartie humaine de Kinger. Il travaille toujours dans la technologie, est marie a Destiny et a deux filles.'],
+      leeroymateo: ['Contrepartie humaine de Jax. Apres une periode sans logement, il a obtenu un emploi stable et vit avec un ami proche.'],
+      stupidburgermannequin: ['Mannequin Spudsy sans nom propre confirme. CainOS le distingue par sa commande de Stupid Burger.'],
+      cerealmannequin: ['Mannequin Spudsy sans nom propre confirme. CainOS le distingue par le bol de cereales deja en sa possession.']
+    };
+    if (confirmed[id]) return confirmed[id];
+
+    const status = this.getWackyProfileStatus(id);
+    if (status === 'ARCHIVE') {
+      return ['Ancien membre classe en archive. Son apparence est referencee, mais CainOS ne pretend pas qu il soit revenu dans la timeline active.'];
+    }
+    if (status === 'PNJ / DECOR') {
+      return ['Entite ou element de simulation reference dans la serie. Aucune identite humaine ne lui est attribuee sans confirmation explicite.'];
+    }
+    if (status === 'VARIANTE') {
+      return ['Etat visuel indexe par CainOS. Sa provenance exacte reste separee des faits biographiques du personnage.'];
+    }
+    return ['Profil visuel indexe par CainOS. Les donnees biographiques non dites dans les episodes restent non confirmees.'];
   },
 
   purchaseWackySkin(id) {
@@ -11762,8 +12858,13 @@ const OS = {
     const filter = this.wackyFilter || 'all';
     const entries = Object.entries(castData).filter(([id, char]) => {
       const status = String(char.status || this.getWackyProfileStatus(id)).toLowerCase();
-      const haystack = `${id} ${char.name || ''} ${char.signal || ''} ${status}`.toLowerCase();
+      const provenance = this.getWackyProvenanceKind(id, char);
+      const isFan = provenance === 'fan';
+      if (this.isCainOSCanonStrict() && isFan) return false;
+      const haystack = `${id} ${char.name || ''} ${char.signal || ''} ${status} ${provenance}`.toLowerCase();
       if (query && !haystack.includes(query)) return false;
+      if (filter === 'canon') return !isFan;
+      if (filter === 'fan') return isFan;
       if (filter === 'active') return status.includes('actif');
       if (filter === 'variant') return status.includes('variante');
       if (filter === 'archive') return status.includes('archive');
@@ -12058,6 +13159,80 @@ const OS = {
       return `<span class="pixel-sheet-avatar-ming" style="--avatar-size:${size}px" aria-hidden="true"></span>`;
     }
 
+    const canonASheetMap = {
+      baronmildenhall: [0, 0], marthamildenhall: [1, 0], ghostly: [2, 0], angel: [3, 0]
+    };
+    if (canonASheetMap[avatar]) {
+      const [col, row] = canonASheetMap[avatar];
+      return `<span class="pixel-sheet-avatar-canon-a avatar-ca-c${col}-r${row}" style="--avatar-size:${size}px" aria-hidden="true"></span>`;
+    }
+
+    const canonBSheetMap = {
+      disappearingguy: [0, 0], committeemember: [1, 0], shrimpnpc: [4, 0]
+    };
+    if (canonBSheetMap[avatar]) {
+      const [col, row] = canonBSheetMap[avatar];
+      return `<span class="pixel-sheet-avatar-canon-b avatar-cb-c${col}-r${row}" style="--avatar-size:${size}px" aria-hidden="true"></span>`;
+    }
+
+    if (avatar === 'chineseroomnpc') {
+      return `<span class="pixel-sheet-avatar-canon-c" style="--avatar-size:${size}px" aria-hidden="true"></span>`;
+    }
+
+    const canonDSheetMap = {
+      blueai: [0, 0], cookiebutterfly: [1, 0], gummyelephant: [2, 0],
+      giantcentipede: [3, 0], drfootball: [4, 0], spudsycustomer: [5, 0]
+    };
+    if (canonDSheetMap[avatar]) {
+      const [col, row] = canonDSheetMap[avatar];
+      return `<span class="pixel-sheet-avatar-canon-d avatar-cd-c${col}-r${row}" style="--avatar-size:${size}px" aria-hidden="true"></span>`;
+    }
+
+    const canonESheetMap = {
+      candyguardcyan: [0, 0], candyguardblue: [1, 0], candyguardpurple: [2, 0],
+      gummyworm: [3, 0], barrelmonkey: [4, 0], jeffery: [5, 0]
+    };
+    if (canonESheetMap[avatar]) {
+      const [col, row] = canonESheetMap[avatar];
+      return `<span class="pixel-sheet-avatar-canon-e avatar-ce-c${col}-r${row}" style="--avatar-size:${size}px" aria-hidden="true"></span>`;
+    }
+
+    const canonFSheetMap = {
+      redmannequin: [0, 0], orangemannequin: [1, 0], yellowmannequin: [2, 0],
+      magentamannequin: [3, 0], mildenhallsouls: [4, 0], albertspudsy: [5, 0]
+    };
+    if (canonFSheetMap[avatar]) {
+      const [col, row] = canonFSheetMap[avatar];
+      return `<span class="pixel-sheet-avatar-canon-f avatar-cf-c${col}-r${row}" style="--avatar-size:${size}px" aria-hidden="true"></span>`;
+    }
+
+    const canonGSheetMap = {
+      truthtellerfish: [0, 0], liarfish: [1, 0],
+      stupidburgermannequin: [2, 0], cerealmannequin: [3, 0]
+    };
+    if (canonGSheetMap[avatar]) {
+      const [col, row] = canonGSheetMap[avatar];
+      return `<span class="pixel-sheet-avatar-canon-g avatar-cg-c${col}-r${row}" style="--avatar-size:${size}px" aria-hidden="true"></span>`;
+    }
+
+    const canonHSheetMap = {
+      bonepastor: [0, 0], fourthcrocodile: [1, 0], ragathamothershadow: [2, 0],
+      paintedmasks: [3, 0], zoobleparts: [4, 0], laughingshadows: [5, 0]
+    };
+    if (canonHSheetMap[avatar]) {
+      const [col, row] = canonHSheetMap[avatar];
+      return `<span class="pixel-sheet-avatar-canon-h avatar-ch-c${col}-r${row}" style="--avatar-size:${size}px" aria-hidden="true"></span>`;
+    }
+
+    const canonISheetMap = {
+      abigailbrooks: [0, 0], suzieackerman: [1, 0], zoeyraghavan: [2, 0],
+      rileyverselis: [3, 0], grantbest: [4, 0], leeroymateo: [5, 0]
+    };
+    if (canonISheetMap[avatar]) {
+      const [col, row] = canonISheetMap[avatar];
+      return `<span class="pixel-sheet-avatar-canon-i avatar-ci-c${col}-r${row}" style="--avatar-size:${size}px" aria-hidden="true"></span>`;
+    }
+
     const px = (x, y, w, h, fill) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${fill}"/>`;
     const bg = px(0, 0, 16, 16, '#101318');
     const sprites = {
@@ -12124,16 +13299,36 @@ const OS = {
   },
 
   loadWackyProfile(char, id = null) {
+    if (!char) return;
     const profileId = id || this.activeWackyCast;
     this.activeWackyCast = profileId;
     document.getElementById('watch-profile-name').innerText = char.name;
     const statusEl = document.getElementById('watch-profile-status');
-    if (statusEl) statusEl.innerText = char.status || "ACTIF";
-    document.getElementById('watch-profile-age').innerText = char.age;
-    document.getElementById('watch-profile-stress').innerText = char.stress;
+    const profileStatus = char.status || this.getWackyProfileStatus(profileId) || 'ACTIF';
+    if (statusEl) statusEl.innerText = profileStatus;
+    const strict = this.isCainOSCanonStrict();
+    const provenanceKind = this.getWackyProvenanceKind(profileId, char);
+    const strictAge = provenanceKind === 'fan'
+      ? 'HORS CANON'
+      : profileStatus === 'RECONSTRUCTION'
+        ? 'HORS CANON'
+      : profileStatus === 'ARCHIVE'
+        ? 'ARCHIVE'
+        : profileStatus === 'PNJ / DECOR'
+          ? 'NON APPLICABLE'
+          : 'NON CONFIRME';
+    document.getElementById('watch-profile-age').innerText = strict ? strictAge : (char.age || 'NON CONFIRME');
+    document.getElementById('watch-profile-stress').innerText = strict ? 'NON MESURE' : (char.stress || 'NON MESURE');
     const loreEl = document.getElementById('watch-profile-lore');
     if (loreEl) loreEl.innerText = this.getWackyLoreStatus(profileId, char);
-    document.getElementById('watch-profile-fact').innerText = char.facts[0];
+    const facts = this.getWackyDisplayFacts(profileId, char);
+    document.getElementById('watch-profile-fact').innerText = facts[0];
+    const provenanceEl = document.getElementById('watch-profile-provenance');
+    if (provenanceEl) {
+      const provenance = this.getCainOSProvenanceMeta(provenanceKind);
+      provenanceEl.innerHTML = `<span class="provenance-badge provenance-${provenance.kind}" title="${this.escapeHTML(provenance.detail)}">${this.escapeHTML(provenance.label)}</span>`;
+    }
+    this.updateCainOSProvenance('wacky-watch');
 
     const container = document.getElementById('watch-profile-avatar');
     const bossAvatars = new Set(['gloinkqueenscale']);
@@ -12148,6 +13343,14 @@ const OS = {
       'rivalbaseballpomni', 'rivalbaseballpinkgiant', 'rivalbaseballragatha',
       'rivalbaseballjax', 'rivalbaseballkinger', 'horrorghost',
       'horrormonster', 'horrorpomnivoid', 'horrorpomnispiral', 'horrorpomniskull',
+      'baronmildenhall', 'marthamildenhall', 'ghostly', 'angel', 'disappearingguy',
+      'committeemember', 'truthtellerfish', 'liarfish', 'shrimpnpc', 'chineseroomnpc',
+      'blueai', 'cookiebutterfly', 'gummyelephant', 'giantcentipede', 'drfootball', 'spudsycustomer',
+      'candyguardcyan', 'candyguardblue', 'candyguardpurple', 'gummyworm', 'barrelmonkey', 'jeffery',
+      'redmannequin', 'orangemannequin', 'yellowmannequin', 'magentamannequin', 'mildenhallsouls', 'albertspudsy',
+      'stupidburgermannequin', 'cerealmannequin',
+      'bonepastor', 'fourthcrocodile', 'ragathamothershadow', 'paintedmasks', 'zoobleparts', 'laughingshadows',
+      'abigailbrooks', 'suzieackerman', 'zoeyraghavan', 'rileyverselis', 'grantbest', 'leeroymateo',
       'gloinkstar', 'gloinkcube', 'gloinkpyramid', 'gloinkcrescent',
       'gloinkpin', 'gloinkround'
     ]);
@@ -12538,7 +13741,7 @@ DÉCONNEXION DE L'UTILISATEUR SÉCURISÉE. SYSTEM SHUTDOWN.
         SoundManager.playClick();
         response = `[B.U.B.B.L.E] : "MIAM LE CODE DE LA CONSOLE ! NETTOYAGE EN COURS !"`;
         setTimeout(() => {
-          this.triggerBubbleIntrusion();
+          this.triggerBubbleIntrusion(true);
         }, 300);
         break;
 

@@ -331,6 +331,11 @@ const SoundManager = {
     setTimeout(() => this.playFpsSpatialTone(base * 0.72, 0.3, 'sine', 0.032 * volumeScale, pan, true), 90);
   },
   playFpsEvent(eventId = '', pan = 0, volumeScale = 1) {
+    if (eventId === 'mildenhall_fly') {
+      this.playFpsSpatialTone(176, 0.42, 'sawtooth', 0.012 * volumeScale, pan, true);
+      setTimeout(() => this.playFpsSpatialTone(211, 0.34, 'sawtooth', 0.009 * volumeScale, pan, true), 70);
+      return;
+    }
     const dangerous = /warning|ghost|flicker|trace|loss/.test(eventId);
     const bright = /bell|score|convoy|sweep/.test(eventId);
     const freq = dangerous ? 74 : bright ? 520 : 220;
@@ -646,6 +651,7 @@ const EpisodeManager = {
   activeSubepisodeCheckpoint: null,
   activeSubepisodeTotal: 0,
   activeStorySceneCharacters: [],
+  storySceneAvatarCache: {},
   storyCharacterProfiles: {
     POMNI: { color: "#e53935", label: "Pomni", info: "Nouvelle humaine piegee dans le Cirque. Signal panique eleve, obsession de la sortie.", lockedInfo: "Nouveau signal joueur detecte. Identite et stabilite encore inconnues.", unlockAt: { episode: 1, subepisode: 0 } },
     CAINE: { color: "#f6d743", label: "Caine", info: "Ringmaster IA. Controle les aventures, les decors et les transitions de simulation.", lockedInfo: "Signal maitre de ceremonie detecte. Niveau d'autorite exact encore inconnu.", unlockAt: { episode: 1, subepisode: 0 } },
@@ -669,9 +675,17 @@ const EpisodeManager = {
     POSSESSED_POMNI: { color: "#7c1d1d", label: "Possessed Pomni", info: "Etat horrifique temporaire de Pomni pendant les manifestations du manoir.", unlockAt: { episode: 3, subepisode: 5 } },
     GHOSTLY: { color: "#b7f0ff", label: "Ghostly Signal", info: "Manifestation paranormale du manoir de Mildenhall.", unlockAt: { episode: 3, subepisode: 1 } },
     MAX: { color: "#ffcc66", label: "Max", info: "Client de Spudsy, signal comique du rush fast-food.", unlockAt: { episode: 4, subepisode: 4 } },
-    TRAINING_VIDEO: { color: "#7df0ff", label: "Training Video", info: "Video interne Spudsy qui transforme la pression du travail en protocole absurde.", unlockAt: { episode: 4, subepisode: 5 } },
-    STRANGE_CUSTOMER: { color: "#d48cff", label: "Strange Customer", info: "Client inquietant de Spudsy qui augmente la pression autour de Gangle.", unlockAt: { episode: 4, subepisode: 3 } },
     SPUDSY_NPC: { color: "#ffaa33", label: "Spudsy NPC", info: "Client ou employe NPC du restaurant Spudsy.", unlockAt: { episode: 4, subepisode: 2 } },
+    SPUDSY_BURGER_CUSTOMER: { color: "#ff9b37", label: "Spudsy Mannequin - Stupid Burger", info: "Mannequin sans nom propre qui commande le Stupid Burger et insiste sur sa sauce.", unlockAt: { episode: 4, subepisode: 3 } },
+    SPUDSY_CEREAL_CUSTOMER: { color: "#ff9b37", label: "Spudsy Mannequin - Cereal Bowl", info: "Mannequin sans nom propre qui attend dans la file avec son propre bol de cereales.", unlockAt: { episode: 4, subepisode: 4 } },
+    DR_FOOTBALL: { color: "#d94338", label: "Dr. Football", info: "Prop/visage rouge de decor du Pilote, traite comme objet de simulation et non comme resident.", unlockAt: { episode: 1, subepisode: 5 } },
+    CANDY_GUARD: { color: "#3f8fe8", label: "Candy Guard", info: "Garde mannequin silencieux de Princess Loolilalu. Les trois teintes sont des modeles visuels, pas des identites confirmees.", unlockAt: { episode: 2, subepisode: 1 } },
+    COLORED_MANNEQUIN: { color: "#ff8a2a", label: "Colored Mannequin", info: "Mannequin de foule Candy Canyon. La couleur indique un modele visuel, pas une identite individuelle.", unlockAt: { episode: 2, subepisode: 1 } },
+    GUMMY_WORM: { color: "#ef5a94", label: "Gummy Worm", info: "Petite creature gommeuse visible dans les douves chocolat de Candy Canyon.", unlockAt: { episode: 2, subepisode: 1 } },
+    BARREL_MONKEY: { color: "#e43c32", label: "Barrel Monkey", info: "Jouet anime a membres crochus present pendant la poursuite de Kaufmo dans le Pilote.", unlockAt: { episode: 1, subepisode: 5 } },
+    JEFFERY: { color: "#f4f4ee", label: "Jeffery", info: "Oeil droit vert de Caine capable de prendre une forme de danseur humanoide; ce n est pas un resident humain.", unlockAt: { episode: 5, subepisode: 4 } },
+    MILDENHALL_SOULS: { color: "#77f5da", label: "Mildenhall Souls", info: "Phenomenes spectraux du manoir. CainOS les traite comme ames/effets de scene, pas comme residents individuels.", unlockAt: { episode: 3, subepisode: 5 } },
+    ALBERT_SPUDSY: { color: "#f2d7b2", label: "Albert Spudsy", info: "Visuel de marque ou decoupe Spudsy's. A utiliser comme decor, pas comme PNJ parlant.", unlockAt: { episode: 4, subepisode: 2 } },
     MING: { color: "#c8c8c8", label: "Ming", info: "Mannequin gris gagnant du Favorite Character Award, au grand desarroi de Caine.", unlockAt: { episode: 6 } },
     COMMITTEE_MEMBER: { color: "#ffd36b", label: "Committee Member", info: "Membre du comite des Favorite Character Awards, cree pour valider la ceremonie de Caine.", unlockAt: { episode: 6, subepisode: 7 } },
     DISAPPEARING_GUY: { color: "#98f5ff", label: "Disappearing Guy", info: "Candidat/figurant fugace de la ceremonie des awards.", unlockAt: { episode: 6, subepisode: 7 } },
@@ -693,15 +707,30 @@ const EpisodeManager = {
     SINGER: { color: "#ffe56b", label: "Singer", info: "Signal musical ponctuel dans le flux de l'episode.", unlockAt: { episode: 5 } },
     UNIDENTIFIED: { color: "#9aa39a", label: "Unidentified", info: "Dialogue non attribue conserve comme trace d'archive.", unlockAt: { episode: 5 } },
     SUN_NPC: { color: "#ffd33d", label: "Sun NPC", info: "PNJ soleil agressif du lac digital, menace de coups de soleil dans l'episode de plage.", unlockAt: { episode: 7, subepisode: 1 } },
+    COOKIE_BUTTERFLY: { color: "#ff9e8e", label: "Cookie Butterfly", info: "Petit PNJ decoratif a motif biscuit de Candy Canyon, classe comme creature/figurant de simulation.", unlockAt: { episode: 2, subepisode: 1 } },
+    GUMMY_ELEPHANT: { color: "#ff85b7", label: "Gummy Elephant", info: "Creature gummy rose et jaune qui tire le carrosse dans Candy Canyon.", unlockAt: { episode: 2, subepisode: 1 } },
+    GIANT_CENTIPEDE: { color: "#c89436", label: "Giant Centipede", info: "Grand insecte segmente dans le public du match de softball, affiche a echelle superieure aux figurants standards.", unlockAt: { episode: 5, subepisode: 6 } },
+    BLUE_AI: { color: "#00ddff", label: "Blue AI", lockedLabel: "Signal IA verrouille", info: "IA canonique developpee par C&A pour remplacer Caine. Caine l absorbe avant que Remember ne montre leur separation.", lockedInfo: "Signal IA tardif. Continuez Remember pour eviter de reveler sa relation avec Caine.", unlockAt: { episode: 9, subepisode: 6 } },
+    BONE_PASTOR: { color: "#e7dfc7", label: "The Bone Pastor", info: "Easter egg squelettique visible dans Mildenhall Manor. Aucun dialogue canonique ne lui est attribue.", unlockAt: { episode: 3, subepisode: 2 } },
+    FOURTH_CROCODILE: { color: "#d4c840", label: "Fourth Crocodile", info: "Crocodile jaune-olive de la sequence de tourment de l episode 8. Son identite exacte n est pas confirmee.", unlockAt: { episode: 8, subepisode: 7 } },
+    FEMININE_SHADOW: { color: "#18111f", label: "Feminine Shadow", info: "Silhouette feminine du tourment de Ragatha. La scene suggere une figure maternelle sans confirmer son identite.", unlockAt: { episode: 8, subepisode: 7 } },
+    PAINTED_MASKS: { color: "#f7f7f7", label: "Painted Masks", info: "Cinq tableaux de masques de Gangle utilises comme objets de tourment, pas comme nouveaux personnages.", unlockAt: { episode: 8, subepisode: 7 } },
+    ZOOBLE_PARTS_MIRRORS: { color: "#ff4fb8", label: "Body Parts and Mirrors", info: "Assemblage de pieces de Zooble et de miroirs noirs utilise comme decor de tourment.", unlockAt: { episode: 8, subepisode: 7 } },
+    LAUGHING_SHADOWS: { color: "#05020d", label: "Laughing Shadows", info: "Trois silhouettes rieuses du tourment de Jax. Elles evoquent des formes connues sans restaurer leurs personnages.", unlockAt: { episode: 8, subepisode: 7 } },
     SHRIMP_NPC: { color: "#ff9a9a", label: "Shrimp NPC", info: "PNJ crevette du lac digital, partie des signaux absurdes de la zone plage.", unlockAt: { episode: 7, subepisode: 1 } },
-    LIAR_NPC: { color: "#ff5d7d", label: "Liar NPC", info: "PNJ de plage lie aux mensonges et aux fausses pistes de l'aventure.", unlockAt: { episode: 7, subepisode: 2 } },
-    TRUTH_TELLER_NPC: { color: "#5eead4", label: "Truth-Teller NPC", info: "PNJ de plage qui annonce des verites dans le chaos de l'aventure.", unlockAt: { episode: 7, subepisode: 2 } },
+    LIAR_NPC: { color: "#ff3264", label: "Red Crappy Looking Fish", info: "Poisson rouge du lac digital, identifie comme Liar NPC dans le transcript.", unlockAt: { episode: 7, subepisode: 1 } },
+    TRUTH_TELLER_NPC: { color: "#ff9b32", label: "Orange Crappy Looking Fish", info: "Poisson orange du lac digital, identifie comme Truth-Teller NPC et lie au coffre englouti.", unlockAt: { episode: 7, subepisode: 1 } },
     CHINESE_ROOM_NPC: { color: "#d8b4fe", label: "Chinese Room NPC", info: "Signal gag de la piece chinoise consultee par Caine avant l'idee du lac digital.", unlockAt: { episode: 7, subepisode: 0 } },
     RIBBIT: { color: "#6ee7b7", label: "Ribbit Archive", info: "Ancien membre du Cirque vu par couches de reve/souvenir dans le final. A classer comme archive de personne disparue/abstracted.", unlockAt: { episode: 9, subepisode: 2 }, archive: true },
     DREAM_SIGNAL: { color: "#a78bfa", label: "Dream Signal", info: "Projection de reve ou souvenir deforme utilisee dans le final.", unlockAt: { episode: 9, subepisode: 2 } },
     JAX_PERSONA: { color: "#8a4fd6", label: "Jax Persona", info: "Masque social de Jax quand le final force sa facade a se fissurer.", unlockAt: { episode: 9, subepisode: 4 } },
     MOON: { color: "#d7e6ff", label: "Moon", info: "Signal cosmique secondaire du final.", unlockAt: { episode: 9 } },
-    ABIGAIL: { color: "#ff6b6b", label: "Abigail / Abby", info: "Identite humaine associee a Pomni dans le final. Dans le Cirque, elle choisit de rester Pomni.", lockedInfo: "Identite humaine verrouillee jusqu'au final.", unlockAt: { episode: 9, subepisode: 7 } },
+    ABIGAIL: { color: "#f2c7b5", label: "Abigail Brooks / Abby", info: "Contrepartie humaine de Pomni. Elle travaille toujours comme comptable et publie encore occasionnellement des videos avec de nouveaux amis. Pomni reconnait qu elles sont deux personnes distinctes.", lockedInfo: "Identite humaine verrouillee jusqu a la presentation finale.", unlockAt: { episode: 9, subepisode: 7 } },
+    SUZIE_ACKERMAN: { color: "#9b6b52", label: "Suzie J. Ackerman", info: "Contrepartie humaine de Ragatha. Elle a quitte sa ville natale, coupe la communication avec sa mere et reussi dans sa carriere.", lockedInfo: "Identite humaine verrouillee jusqu a la presentation finale.", unlockAt: { episode: 9, subepisode: 7 } },
+    ZOEY_RAGHAVAN: { color: "#9b3f49", label: "Zoey Raghavan", info: "Contrepartie humaine de Gangle. Elle s est remise de ses blessures, travaille dans une petite agence de design et publie des pages de son webcomic.", lockedInfo: "Identite humaine verrouillee jusqu a la presentation finale.", unlockAt: { episode: 9, subepisode: 7 } },
+    RILEY_VERSELIS: { color: "#687287", label: "Riley Verselis", info: "Contrepartie humaine de Zooble. Riley a ouvert un bar populaire ou les clients peuvent etre eux-memes sans jugement.", lockedInfo: "Identite humaine verrouillee jusqu a la presentation finale.", unlockAt: { episode: 9, subepisode: 7 } },
+    GRANT_BEST: { color: "#7d668b", label: "Grant Best", info: "Contrepartie humaine de Kinger. Il travaille toujours dans la technologie, reste marie a Destiny et a deux filles.", lockedInfo: "Identite humaine verrouillee jusqu a la presentation finale.", unlockAt: { episode: 9, subepisode: 7 } },
+    LEEROY_MATEO: { color: "#41516a", label: "Leeroy Mateo", info: "Contrepartie humaine de Jax. Apres une periode sans logement, il a obtenu un emploi stable, vit avec un ami proche et frequente notamment le bar de Riley.", lockedInfo: "Identite humaine verrouillee jusqu a la presentation finale.", unlockAt: { episode: 9, subepisode: 7 } },
     SCRATCH: { color: "#9ca3af", label: "Scratch Archive", info: "Premier cas d'abstraction evoque par Kinger. Profil archive uniquement.", unlockAt: { episode: 8, subepisode: 5 }, archive: true },
     WORMO: { color: "#a3e635", label: "Wormo Archive", info: "Ancien membre du Cirque repertorie comme signal archive/abstracted.", unlockAt: { episode: 9 }, archive: true },
     BIZCO: { color: "#f97316", label: "Bizco Archive", info: "Ancien membre du Cirque repertorie comme signal archive/abstracted.", unlockAt: { episode: 9 }, archive: true },
@@ -1296,9 +1325,9 @@ const EpisodeManager = {
         { speaker: "POMNI", text: "[03:00] So, our entire existence here..." },
         { speaker: "POMNI", text: "[03:04] is just LARPing?" },
         { speaker: "CAINE", text: "[03:07] W-Well, uh --" },
-        { speaker: "CANDY KINGDOM NPC", text: "[03:07] Why are you all just standing there?!" },
-        { speaker: "CANDY KINGDOM NPC", text: "[03:09] The -- The Canyon --" },
-        { speaker: "CANDY KINGDOM NPC", text: "[03:09] C-Canyon Candy Kingdom needs you now!" },
+        { speaker: "CAINE", text: "[03:07] Why are you all just standing there?!" },
+        { speaker: "CAINE", text: "[03:09] The -- The Canyon --" },
+        { speaker: "CAINE", text: "[03:09] C-Canyon Candy Kingdom needs you now!" },
         { speaker: "JAX", text: "[03:19] Hmm?" },
         { speaker: "JAX", text: "[03:19] Nah, thanks. I'm trying to quit." },
         { speaker: "MUSIC", text: "[03:21] [majestic music plays]" },
@@ -7704,6 +7733,7 @@ const EpisodeManager = {
 
     document.querySelectorAll('.sim-screen').forEach(s => s.classList.remove('active'));
     document.getElementById('sim-story-screen').classList.add('active');
+    window.OS?.updateCainOSProvenance?.('story');
     document.getElementById('sim-story-title').innerText = `${data.title} // ${segment.title}`;
     document.getElementById('sim-story-phase-label').innerText = `[SOUS-EPISODE ${segment.index + 1}/${segments.length} - ARCHIVE INTERACTIVE]`;
 
@@ -7756,6 +7786,7 @@ const EpisodeManager = {
     document.querySelectorAll('.sim-screen').forEach(s => s.classList.remove('active'));
     const storyScreen = document.getElementById('sim-story-screen');
     storyScreen.classList.add('active');
+    window.OS?.updateCainOSProvenance?.('story');
 
     document.getElementById('sim-story-title').innerText = data.title;
     document.getElementById('sim-story-phase-label').innerText = phase === 'intro' ? "[INITIALISATION - INTRO NARRATIVE]" : "[COMPILATION - OUTRO NARRATIVE]";
@@ -7815,6 +7846,7 @@ const EpisodeManager = {
     this.isTyping = false;
     document.querySelectorAll('.sim-screen').forEach(s => s.classList.remove('active'));
     document.getElementById('sim-story-micro-screen').classList.add('active');
+    window.OS?.updateCainOSProvenance?.('micro');
 
     this.stopActiveGame();
     this.wrapTimeout();
@@ -7839,6 +7871,7 @@ const EpisodeManager = {
       window.OS.unlockCainOSAchievement?.('reader_only', 'Lecture assistee activee');
       document.querySelectorAll('.sim-screen').forEach(s => s.classList.remove('active'));
       document.getElementById('sim-story-screen').classList.add('active');
+      window.OS?.updateCainOSProvenance?.('story');
       SoundManager.playWin();
       this.updateStoryCheckpointButton();
       setTimeout(() => {
@@ -7861,6 +7894,7 @@ const EpisodeManager = {
       }
       document.querySelectorAll('.sim-screen').forEach(s => s.classList.remove('active'));
       document.getElementById('sim-story-screen').classList.add('active');
+      window.OS?.updateCainOSProvenance?.('story');
       SoundManager.playWin();
       this.updateStoryCheckpointButton();
       setTimeout(() => {
@@ -7883,6 +7917,7 @@ const EpisodeManager = {
     }
     document.querySelectorAll('.sim-screen').forEach(s => s.classList.remove('active'));
     document.getElementById('sim-story-screen').classList.add('active');
+    window.OS?.updateCainOSProvenance?.('story');
     this.updateStoryCheckpointButton();
   },
 
@@ -8093,10 +8128,10 @@ const EpisodeManager = {
       MOUNTEDCREATUREHEAD: "MOUNTED_CREATURE_HEAD",
       POSSESSED_POMNI: "POSSESSED_POMNI",
       POSSESSEDPOMNI: "POSSESSED_POMNI",
-      TRAININGVIDEO: "TRAINING_VIDEO",
-      STRANGECUSTOMER: "STRANGE_CUSTOMER",
-      NPC1: "SPUDSY_NPC",
-      NPC2: "SPUDSY_NPC",
+      TRAININGVIDEO: "GANGLE",
+      STRANGECUSTOMER: "ORBSMAN",
+      NPC1: "SPUDSY_BURGER_CUSTOMER",
+      NPC2: "SPUDSY_CEREAL_CUSTOMER",
       NPC3: "SPUDSY_NPC",
       JAXSINGING: "JAX",
       COMMITTEEMEMBER: "COMMITTEE_MEMBER",
@@ -8111,6 +8146,10 @@ const EpisodeManager = {
       TRUTHTELLERNPC: "TRUTH_TELLER_NPC",
       CHINESEROOMNPC: "CHINESE_ROOM_NPC",
       CAINEANDABEL: "CAST",
+      ALL: "CAST",
+      KINGERANDGANGLE: "CAST",
+      KINGERQUEENIE: "CAST",
+      RAGATHAJAX: "CAST",
       EVILPOMNI: "EVIL_VARIANT",
       EVILRAGATHA: "EVIL_VARIANT",
       EVILJAX: "EVIL_VARIANT",
@@ -8128,7 +8167,13 @@ const EpisodeManager = {
       JAXANDRIBBIT: "CAST",
       JAXPERSONA: "JAX_PERSONA",
       ABBY: "ABIGAIL",
-      ABIGAIL: "ABIGAIL"
+      ABIGAIL: "ABIGAIL",
+      ABIGAILBROOKS: "ABIGAIL",
+      SUZIEJACKERMAN: "SUZIE_ACKERMAN",
+      ZOEYRAGHAVAN: "ZOEY_RAGHAVAN",
+      RILEYVERSELIS: "RILEY_VERSELIS",
+      GRANTBEST: "GRANT_BEST",
+      LEEROYMATEO: "LEEROY_MATEO"
     };
     const key = aliases[normalized] || normalized;
     const profile = this.storyCharacterProfiles[key] || {
@@ -8147,6 +8192,11 @@ const EpisodeManager = {
   getStorySceneSpeakers(line, displayLine) {
     const names = new Set();
     const speakerKey = this.normalizeStorySpeakerName(displayLine?.speaker || line?.speaker || "");
+    const compositeSpeakers = {
+      KINGERANDGANGLE: ["KINGER", "GANGLE"],
+      KINGERQUEENIE: ["KINGER", "QUEENIE"],
+      RAGATHAJAX: ["RAGATHA", "JAX"]
+    };
     const technicalSceneSignals = new Set([
       "MUSIC",
       "SFX",
@@ -8164,7 +8214,11 @@ const EpisodeManager = {
       if (key && key !== "UNKNOWN" && !technicalSceneSignals.has(key)) names.add(key);
     };
 
-    if (!isTechnicalSceneLine && displayLine && displayLine.speaker) addName(displayLine.speaker);
+    if (!isTechnicalSceneLine && compositeSpeakers[speakerKey]) {
+      compositeSpeakers[speakerKey].forEach(addName);
+    } else if (!isTechnicalSceneLine && displayLine && displayLine.speaker) {
+      addName(displayLine.speaker);
+    }
     if (!isTechnicalSceneLine) this.getStorySpeakerTags(line?.text || "").forEach(addName);
 
     if (!isTechnicalSceneLine) {
@@ -8205,17 +8259,55 @@ const EpisodeManager = {
       SHRIMP_NPC: "S",
       LIAR_NPC: "L",
       TRUTH_TELLER_NPC: "T",
+      SPUDSY_BURGER_CUSTOMER: "B",
+      SPUDSY_CEREAL_CUSTOMER: "C",
       CHINESE_ROOM_NPC: "C",
       EVIL_VARIANT: "!",
       DREAM_SIGNAL: "~",
       JAX_PERSONA: "R",
       ABIGAIL: "P",
+      SUZIE_ACKERMAN: "R",
+      ZOEY_RAGHAVAN: "G",
+      RILEY_VERSELIS: "Z",
+      GRANT_BEST: "K",
+      LEEROY_MATEO: "J",
       CAST: "#",
       ARCHIVE: "::",
       MUSIC: "♪",
       SFX: "!"
     };
     return iconMap[key] || String(key || "?").slice(0, 1);
+  },
+
+  getStorySceneAvatarId(key) {
+    if (Object.prototype.hasOwnProperty.call(this.storySceneAvatarCache, key)) {
+      return this.storySceneAvatarCache[key];
+    }
+    const preferred = {
+      LOO: "loolilalu",
+      PRINCESS_LOO: "loolilalu",
+      MOUNTED_CREATURE_HEAD: "angel",
+      POSSESSED_POMNI: "horrorpomnivoid"
+    };
+    let avatarId = preferred[key] || null;
+    const os = window.OS;
+    if (!avatarId && os?.getWackyCastData && os?.getCircusCharacterProfileKey) {
+      const cast = os.getWackyCastData();
+      avatarId = Object.keys(cast).find(id => {
+        const avatar = cast[id]?.avatar || id;
+        return os.getCircusCharacterProfileKey({ avatar }) === key;
+      }) || null;
+    }
+    this.storySceneAvatarCache[key] = avatarId;
+    return avatarId;
+  },
+
+  getStorySceneAvatarMarkup(key) {
+    const avatarId = this.getStorySceneAvatarId(key);
+    if (avatarId && window.OS?.getPixelAvatarSvg) {
+      return window.OS.getPixelAvatarSvg(avatarId, 20);
+    }
+    return this.escapeHTML(this.getStorySceneIcon(key));
   },
 
   resetStoryScene() {
@@ -8277,7 +8369,7 @@ const EpisodeManager = {
       const active = this.normalizeStorySpeakerName(name) === speakerKey || profile.key === this.getStoryCharacterProfile(speakerKey).key ? " active-speaker" : "";
       const locked = profile.loreKnown ? "" : " lore-locked";
       const archived = profile.archive ? " archive-signal" : "";
-      const icon = this.getStorySceneIcon(profile.key);
+      const icon = this.getStorySceneAvatarMarkup(profile.key);
       return `
         <button type="button"
           class="story-dos-point${active}${locked}${archived}"
@@ -8285,7 +8377,7 @@ const EpisodeManager = {
           data-character="${this.escapeHTML(profile.key)}"
           title="${this.escapeHTML(`${profile.label}: ${profile.info}`)}"
           aria-label="${this.escapeHTML(`${profile.label}: ${profile.info}`)}">
-          <span class="story-dos-avatar" aria-hidden="true">${this.escapeHTML(icon)}</span>
+          <span class="story-dos-avatar" aria-hidden="true">${icon}</span>
           <span class="story-dos-icon-label">${this.escapeHTML(initials)}</span>
         </button>
       `;
@@ -8628,6 +8720,12 @@ class StoryMicroGame {
   prepare() {
     this.titleEl.innerText = this.config.title;
     this.subtitleEl.innerText = `[SOUS-EPISODE ${this.config.part}/${this.config.totalParts} // ${this.config.mode.toUpperCase()} // ${this.getSimulationPatternLabel()} // ${this.config.context || "SCENE ACTIVE"}]`;
+    const provenanceEl = document.getElementById('story-micro-provenance');
+    if (provenanceEl) {
+      const provenance = window.OS?.getCainOSProvenanceMeta?.('reconstruction') || { kind: 'reconstruction', label: 'RECONSTRUCTION CAINOS' };
+      provenanceEl.className = `story-inline-provenance provenance-${provenance.kind}`;
+      provenanceEl.innerText = `${provenance.label} // PHASE OS`;
+    }
     this.objectiveEl.innerText = this.getPhaseObjective();
     this.actionBtn.disabled = false;
     this.actionBtn.innerText = "INITIALISER";
@@ -9222,6 +9320,12 @@ class StoryMicroGame {
   startSimulationPhase() {
     SoundManager.playWin();
     this.microPhase = 'simulation';
+    const provenanceEl = document.getElementById('story-micro-provenance');
+    if (provenanceEl) {
+      const provenance = window.OS?.getCainOSProvenanceMeta?.('playable') || { kind: 'playable', label: 'ADAPTATION JOUABLE' };
+      provenanceEl.className = `story-inline-provenance provenance-${provenance.kind}`;
+      provenanceEl.innerText = `${provenance.label} // PHASE SIMULATION`;
+    }
     this.score = 0;
     this.timeLeft = this.getPhaseDuration('simulation');
     this.pointer = { x: this.canvas.width / 2, y: this.canvas.height / 2 };

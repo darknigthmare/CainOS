@@ -30,6 +30,10 @@
 
           <!-- 2. DESKTOP WORKSPACE (Hidden initially) -->
           <div id="desktop-workspace" style="display: none;">
+            <div id="cainos-provenance-bar" class="cainos-provenance-bar" role="status" aria-live="polite">
+              <span id="cainos-provenance-badge" class="provenance-badge provenance-reconstruction">RECONSTRUCTION CAINOS</span>
+              <span id="cainos-provenance-text">Interface d archive interactive. Les hypotheses C&amp;A ne valent pas confirmation canonique.</span>
+            </div>
             <!-- Desktop Grid Icons -->
             <div class="desktop-icons">
               <div class="desktop-icon" data-window="simulations">
@@ -477,6 +481,10 @@
                           <h2 id="sim-story-title">Episode X</h2>
                           <span id="sim-story-phase-label">[PHASE INTRODUISANTE]</span>
                         </div>
+                        <div class="provenance-inline" data-provenance="transcript">
+                          <span class="provenance-badge provenance-transcript">CANON TRANSCRIPT</span>
+                          <small>Dialogue source conserve; scene DOS et interactions ajoutees par CainOS.</small>
+                        </div>
                         <div id="sim-story-scene" class="story-dos-scene" aria-live="polite">
                           <div class="story-dos-header">
                             <span>SCENE.DOS</span>
@@ -508,6 +516,10 @@
                             <span id="story-micro-subtitle">[SOUS-EPISODE INTERACTIF]</span>
                           </div>
                           <div id="story-micro-status" class="micro-status">0 / 0</div>
+                        </div>
+                        <div id="story-micro-provenance" class="provenance-inline" data-provenance="reconstruction">
+                          <span class="provenance-badge provenance-reconstruction">RECONSTRUCTION CAINOS</span>
+                          <small>Phase OS additive; le transcript precedent reste la source canonique.</small>
                         </div>
                         <canvas id="story-micro-canvas" width="500" height="280"></canvas>
                         <div class="micro-footer">
@@ -541,7 +553,7 @@
               </div>
 
               <!-- Window template: Wacky Watch -->
-              <div id="win-wacky-watch" class="window" style="width: 540px; height: 400px; left: 140px; top: 90px; display: none;">
+              <div id="win-wacky-watch" class="window" style="width: 650px; height: 430px; left: 90px; top: 62px; display: none;">
                 <div class="window-header">
                   <span class="window-title">The Wacky Watch - Cast Tracker v1.0</span>
                   <div class="window-controls">
@@ -563,8 +575,10 @@
                         <input id="watch-cast-search" class="watch-search-input" type="search" placeholder="RECHERCHER SIGNAL..." autocomplete="off">
                         <div class="watch-filter-row" role="group" aria-label="Filtres Wacky Watch">
                           <button class="watch-filter-btn active" data-watch-filter="all">TOUS</button>
+                          <button class="watch-filter-btn" data-watch-filter="canon">CANON</button>
                           <button class="watch-filter-btn" data-watch-filter="active">ACTIFS</button>
                           <button class="watch-filter-btn" data-watch-filter="variant">VARIANTES</button>
+                          <button class="watch-filter-btn" data-watch-filter="fan">FAN</button>
                           <button class="watch-filter-btn" data-watch-filter="archive">ARCHIVES</button>
                           <button class="watch-filter-btn" data-watch-filter="npc">PNJ</button>
                         </div>
@@ -578,14 +592,17 @@
                           <div class="profile-meta">
                             <h3 id="watch-profile-name">Pomni</h3>
                             <p>Statut: <span id="watch-profile-status" class="cyan-text">ACTIF</span></p>
-                            <p>Age approx: <span id="watch-profile-age" class="cyan-text">25</span></p>
-                            <p>Stress: <span id="watch-profile-stress" class="red-text">92%</span></p>
+                            <p>Age approx: <span id="watch-profile-age" class="cyan-text">NON CONFIRME</span></p>
+                            <p>Stress: <span id="watch-profile-stress" class="red-text">NON MESURE</span></p>
                             <p>Lore: <span id="watch-profile-lore" class="cyan-text">TIMELINE ACTIVE</span></p>
+                            <div id="watch-profile-provenance" class="watch-profile-provenance">
+                              <span class="provenance-badge provenance-canon-visual">CANON VISUEL</span>
+                            </div>
                           </div>
                         </div>
                         <div class="profile-fact-box">
                           <p class="panel-label">Fait Insolite (Wacky Fact)</p>
-                          <p id="watch-profile-fact" class="fact-text">A peur des mannequins de cire et ne se souvient plus de son nom civil.</p>
+                          <p id="watch-profile-fact" class="fact-text">Caine lui attribue le nom Pomni apres son arrivee dans le Pilote.</p>
                           <button id="watch-btn-refresh-fact" class="retro-btn btn-sm" style="margin-top: 8px;">AUTRE FAIT</button>
                         </div>
                         <div class="profile-variant-box">
@@ -625,6 +642,11 @@
                   </div>
                 </div>
                 <div class="window-body tools-window-body">
+                  <div class="tools-scope-bar">
+                    <span class="provenance-badge provenance-reconstruction">RECONSTRUCTION CAINOS</span>
+                    <span>Archives et reconstitutions jouables</span>
+                    <button id="tools-canon-strict-toggle" class="tools-scope-toggle" type="button" aria-pressed="true">CANON STRICT: ON</button>
+                  </div>
                   <div class="tools-tabs" role="tablist" aria-label="Outils CainOS">
                     <button class="tools-tab active" data-tools-tab="map">CARTE</button>
                     <button class="tools-tab" data-tools-tab="content">CONTENU</button>
@@ -679,6 +701,30 @@
                         <label class="settings-row">
                           <span>Lisibilite CRT</span>
                           <input type="checkbox" id="setting-crt-readable">
+                        </label>
+                        <label class="settings-row">
+                          <span>Mode canon strict</span>
+                          <input type="checkbox" id="setting-canon-strict">
+                        </label>
+                        <label class="settings-row">
+                          <span>Contraste eleve</span>
+                          <input type="checkbox" id="setting-high-contrast">
+                        </label>
+                        <label class="settings-row">
+                          <span>Reduire les animations</span>
+                          <input type="checkbox" id="setting-reduce-motion">
+                        </label>
+                        <label class="settings-row">
+                          <span>Ajuster les fenetres a l ecran</span>
+                          <input type="checkbox" id="setting-auto-fit-windows">
+                        </label>
+                        <label class="settings-row settings-row-range">
+                          <span>Taille du texte <output id="setting-ui-scale-value">110%</output></span>
+                          <input type="range" id="setting-ui-scale" min="90" max="140" step="5" value="110">
+                        </label>
+                        <label class="settings-row settings-row-range">
+                          <span>Intensite scanlines <output id="setting-scanline-intensity-value">45%</output></span>
+                          <input type="range" id="setting-scanline-intensity" min="0" max="100" step="5" value="45">
                         </label>
                         <label class="settings-row">
                           <span>Ambiance CainOS</span>
@@ -883,8 +929,12 @@
                   <div class="circus-scanline"></div>
                   <div class="circus-sky"></div>
                   <canvas id="circus-doom-canvas" class="circus-doom-canvas" width="720" height="320" tabindex="0" aria-label="Vue subjective de la simulation. Utilisez ZQSD, les fleches ou cliquez sur une sortie pour changer de lieu."></canvas>
+                  <div id="circus-fps-loading" class="circus-fps-loading" hidden aria-live="polite">
+                    <span id="circus-fps-loading-label">CHARGEMENT DES AVATARS ESSENTIELS...</span>
+                    <div class="circus-fps-loading-track"><span id="circus-fps-loading-fill"></span></div>
+                  </div>
                   <div id="circus-doom-hud" class="circus-doom-hud">
-                    <span>ZQSD: BOUGER | C: DISCRETION | MAJ: COURIR | F: LUMIERE | E: ACTION</span>
+                    <span title="ZQSD: bouger; C: discretion; MAJ: courir; F: lumiere; E: action; J: journal; M: carte">ZQSD BOUGER | E ACTION | J JOURNAL</span>
                     <span id="circus-doom-zone">ZONE: PASSERELLE</span>
                     <span id="circus-doom-detail">PROGRESSION: PORTAILS LORE</span>
                   </div>
