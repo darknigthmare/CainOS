@@ -138,6 +138,54 @@ const canonPackLPropPlacements = {
   coiledcentipedes: 16,
   unusedbrainscans: 16
 };
+const canonPackMProfileKeys = {
+  abstractedjax: 'JAX',
+  abstractedqueeniedark: 'QUEENIE',
+  abstractedqueenie: 'QUEENIE',
+  peeledjax: 'JAX',
+  jaxmindviolent: 'JAX',
+  jaxmindcomic: 'JAX'
+};
+const canonPackMGates = {
+  abstractedjax: [9, 4],
+  abstractedqueeniedark: [3, 7],
+  abstractedqueenie: [8, 1],
+  peeledjax: [8, 7],
+  jaxmindviolent: [9, 4],
+  jaxmindcomic: [9, 4]
+};
+const canonPackMFirstCast = {
+  abstractedjax: 9,
+  abstractedqueeniedark: 3,
+  abstractedqueenie: 8,
+  peeledjax: 8,
+  jaxmindviolent: 9,
+  jaxmindcomic: 9
+};
+const canonPackNProfileKeys = {
+  jaxmindtrapped: 'JAX',
+  spudsypomni: 'POMNI',
+  spudsyjax: 'JAX',
+  spudsyragatha: 'RAGATHA',
+  spudsyzooble: 'ZOOBLE',
+  peekingmannequin: 'COLORED_MANNEQUIN'
+};
+const canonPackNGates = {
+  jaxmindtrapped: [9, 4],
+  spudsypomni: [4, 2],
+  spudsyjax: [4, 2],
+  spudsyragatha: [4, 2],
+  spudsyzooble: [4, 2],
+  peekingmannequin: [2, 1]
+};
+const canonPackNFirstCast = {
+  jaxmindtrapped: 9,
+  spudsypomni: 4,
+  spudsyjax: 4,
+  spudsyragatha: 4,
+  spudsyzooble: 4,
+  peekingmannequin: 2
+};
 const canonPackIProfileKeys = {
   abigailbrooks: 'ABIGAIL',
   suzieackerman: 'SUZIE_ACKERMAN',
@@ -266,6 +314,54 @@ for (const [avatar, profileKey] of Object.entries(canonPackLProfileKeys)) {
   if (OS.getWackyProvenanceKind(avatar) !== 'canon-visual') failures.push(`PACK L: provenance ${avatar} incorrecte`);
 }
 
+for (const [avatar, profileKey] of Object.entries(canonPackMProfileKeys)) {
+  if (!OS.getWackyCastData()[avatar]) failures.push(`PACK M: fiche ${avatar} absente`);
+  if (OS.getCircusCharacterProfileKey({ avatar }) !== profileKey) failures.push(`PACK M: profil ${avatar} incorrect`);
+  if (!OS.getPixelAvatarSvg(avatar, 48).includes('pixel-sheet-avatar-canon-m')) failures.push(`PACK M: portrait ${avatar} hors planche M`);
+  if (OS.getWackyProvenanceKind(avatar) !== 'canon-visual') failures.push(`PACK M: provenance ${avatar} incorrecte`);
+  const [episode, subepisode] = canonPackMGates[avatar];
+  const gate = OS.getWackyProfileGate(avatar);
+  if (gate?.episode !== episode || gate?.subepisode !== subepisode) failures.push(`PACK M: verrou ${avatar} incorrect`);
+  if (!(OS.getEpisodeCastKeys(canonPackMFirstCast[avatar]) || []).includes(avatar)) failures.push(`PACK M: ${avatar} absent de son episode`);
+}
+
+for (const [avatar, profileKey] of Object.entries(canonPackNProfileKeys)) {
+  if (!OS.getWackyCastData()[avatar]) failures.push(`PACK N: fiche ${avatar} absente`);
+  if (OS.getCircusCharacterProfileKey({ avatar }) !== profileKey) failures.push(`PACK N: profil ${avatar} incorrect`);
+  if (!OS.getPixelAvatarSvg(avatar, 48).includes('pixel-sheet-avatar-canon-n')) failures.push(`PACK N: portrait ${avatar} hors planche N`);
+  if (OS.getWackyProvenanceKind(avatar) !== 'canon-visual') failures.push(`PACK N: provenance ${avatar} incorrecte`);
+  const [episode, subepisode] = canonPackNGates[avatar];
+  const gate = OS.getWackyProfileGate(avatar);
+  if (gate?.episode !== episode || gate?.subepisode !== subepisode) failures.push(`PACK N: verrou ${avatar} incorrect`);
+  if (!(OS.getEpisodeCastKeys(canonPackNFirstCast[avatar]) || []).includes(avatar)) failures.push(`PACK N: ${avatar} absent de son episode`);
+}
+
+for (const [avatar, zone] of Object.entries({
+  abstractedjax: 18,
+  abstractedqueeniedark: 17,
+  jaxmindviolent: 41,
+  jaxmindcomic: 41,
+  jaxmindtrapped: 41,
+  spudsypomni: 10,
+  spudsyjax: 10,
+  spudsyragatha: 10,
+  spudsyzooble: 10,
+  peekingmannequin: 6
+})) {
+  const sprite = OS.getCircusZoneSprites(zone).find(entry => (entry.avatar || entry.type) === avatar);
+  if (!sprite) failures.push(`PACK M/N: ${avatar} absent de la zone ${zone}`);
+  if (['abstractedjax', 'abstractedqueeniedark', 'jaxmindviolent', 'jaxmindcomic', 'jaxmindtrapped', 'peekingmannequin'].includes(avatar) && !sprite?.silent) {
+    failures.push(`PACK M/N: ${avatar} doit rester non verbal`);
+  }
+}
+
+if (OS.getWackyProfileStatus('abstractedjax') !== 'ARCHIVE') failures.push('PACK M: Jax abstrait doit rester archive');
+if (OS.getWackyProfileStatus('abstractedqueeniedark') !== 'ARCHIVE' || OS.getWackyProfileStatus('abstractedqueenie') !== 'ARCHIVE') failures.push('PACK M: Queenie abstraite doit rester archivee');
+if (OS.getWackyProfileStatus('peeledjax') !== 'VARIANTE') failures.push('PACK M: Peeled Jax doit rester une variante temporaire');
+for (const avatar of ['jaxmindviolent', 'jaxmindcomic', 'jaxmindtrapped']) {
+  if (OS.getWackyProfileStatus(avatar) !== 'PROJECTION MENTALE') failures.push(`PACK M/N: ${avatar} doit rester une projection mentale`);
+}
+
 const episodeNineCast = OS.getEpisodeCastKeys(9) || [];
 for (const [avatar, profileKey] of Object.entries(canonPackIProfileKeys)) {
   const profile = OS.getWackyCastData()[avatar];
@@ -348,7 +444,7 @@ for (const avatar of ['moon', 'aquaticabstraction', 'floatingworm', 'creditsfish
 for (const avatar of ['horrorghost', 'horrormonster', 'horrorpomnivoid', 'horrorpomnispiral', 'horrorpomniskull', 'shadowpomni', 'shadowkinger']) {
   if (OS.getWackyProvenanceKind(avatar) !== 'fan') failures.push(`FAN: ${avatar} n est pas isole hors timeline`);
 }
-for (const avatar of ['bonepastor', 'themachine', 'additionalvoices']) {
+for (const avatar of ['bonepastor', 'themachine']) {
   if (OS.getWackyProfileStatus(avatar) !== 'PRODUCTION / HORS TIMELINE') failures.push(`PRODUCTION: statut ${avatar} incorrect`);
   if (OS.getWackyProvenanceKind(avatar) !== 'production') failures.push(`PRODUCTION: provenance ${avatar} incorrecte`);
   for (let zone = 0; zone <= 69; zone += 1) {
@@ -357,6 +453,11 @@ for (const avatar of ['bonepastor', 'themachine', 'additionalvoices']) {
     }
   }
 }
+if (OS.getWackyProfileStatus('additionalvoices') !== 'PNJ / DECOR') failures.push('EP2: Pink Mannequin mal classe');
+if (OS.getWackyProvenanceKind('additionalvoices') !== 'canon-visual') failures.push('EP2: provenance Pink Mannequin incorrecte');
+if (OS.getCircusCharacterProfileKey({ avatar: 'additionalvoices' }) !== 'COLORED_MANNEQUIN') failures.push('EP2: profil Pink Mannequin incorrect');
+const pinkMannequin = OS.getCircusZoneSprites(6).find(entry => entry.avatar === 'additionalvoices');
+if (!pinkMannequin?.silent || pinkMannequin?.loreGate?.episode !== 2) failures.push('EP2: Pink Mannequin absent ou non silencieux');
 if (OS.getWackyProfileStatus('spudsycustomer') !== 'RECONSTRUCTION CAINOS') failures.push('SPUDSY: faux client non classe comme reconstruction');
 
 if (stageCount !== 72) failures.push(`${stageCount}/72 actes`);

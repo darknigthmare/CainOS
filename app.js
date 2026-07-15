@@ -2032,6 +2032,8 @@ const OS = {
       canonJ: 'assets/images/cainos-pixel-cast-sheet-canon-npc-pack-j.png',
       canonK: 'assets/images/cainos-pixel-cast-sheet-canon-npc-pack-k.png',
       canonL: 'assets/images/cainos-pixel-cast-sheet-canon-npc-pack-l.png',
+      canonM: 'assets/images/cainos-pixel-cast-sheet-canon-npc-pack-m.png',
+      canonN: 'assets/images/cainos-pixel-cast-sheet-canon-npc-pack-n.png',
       pomnianimation: 'assets/images/cainos-pomni-animation-sheet.png',
       jaxanimation: 'assets/images/cainos-jax-animation-sheet.png',
       ragathaanimation: 'assets/images/cainos-ragatha-animation-sheet.png',
@@ -2193,6 +2195,14 @@ const OS = {
       { sheet: 'canonL', cols: 5, rows: 1, map: {
         floatingworm: [0, 0], creditsfish: [1, 0], stabbedragdolls: [2, 0],
         coiledcentipedes: [3, 0], unusedbrainscans: [4, 0]
+      }},
+      { sheet: 'canonM', cols: 6, rows: 1, map: {
+        abstractedjax: [0, 0], abstractedqueeniedark: [1, 0], abstractedqueenie: [2, 0],
+        peeledjax: [3, 0], jaxmindviolent: [4, 0], jaxmindcomic: [5, 0]
+      }},
+      { sheet: 'canonN', cols: 6, rows: 1, map: {
+        jaxmindtrapped: [0, 0], spudsypomni: [1, 0], spudsyjax: [2, 0],
+        spudsyragatha: [3, 0], spudsyzooble: [4, 0], peekingmannequin: [5, 0]
       }}
     ];
     for (const table of tables) {
@@ -2754,7 +2764,7 @@ const OS = {
   getCircusDynamicEventSprites(zoneId) {
     const event = this.circusDoom?.activeDynamicEvent;
     if (!event || (!event.avatar && !event.avatars?.length)) return [];
-    const colors = { caine: '#ffd84a', bubble: '#f7f7ff', gloinkstar: '#7348ff', moon: '#9edcff', abstractedkaufmo: '#050505', cellarabstraction: '#030303', aquaticabstraction: '#02020a', ragatha: '#d64545', pomni: '#e53935', gummigoo: '#d8a23a', kinger: '#d9d0a2', workgangle: '#f7f7f7', sun: '#ffd33d', zooble: '#ff4fb8' };
+    const colors = { caine: '#ffd84a', bubble: '#f7f7ff', gloinkstar: '#7348ff', moon: '#9edcff', abstractedkaufmo: '#050505', abstractedjax: '#050505', abstractedqueeniedark: '#101018', abstractedqueenie: '#050505', cellarabstraction: '#030303', aquaticabstraction: '#02020a', ragatha: '#d64545', pomni: '#e53935', gummigoo: '#d8a23a', kinger: '#d9d0a2', workgangle: '#f7f7f7', sun: '#ffd33d', zooble: '#ff4fb8' };
     const avatars = event.avatars?.length ? event.avatars : [event.avatar];
     return avatars.map((avatar, index) => ({
       name: avatar.charAt(0).toUpperCase() + avatar.slice(1),
@@ -3779,6 +3789,53 @@ const OS = {
       return `SCAN ${name}: ${canonBoundary}`;
     }
     if (prop.loreText) return `SCAN ${name}: ${prop.loreText}`;
+    const labelLines = {
+      'Trousseau de cles de Jax': "Jax conserve les cles des chambres des autres residents. Le trousseau est un accessoire recurrent, pas un passe admin.",
+      'Masque de comedie brise de Gangle': "Fragment du masque de comedie de Gangle. Sa rupture change son expression, sans creer une nouvelle personne.",
+      'Corruption de Ragatha': "Trace multicolore laissee par le contact avec Kaufmo abstrait. Elle altere temporairement le corps numerique de Ragatha.",
+      'Parasite d abstraction': "Parasite visuel multicolore associe aux abstractions. CainOS le traite comme un danger non verbal.",
+      'Ordinateur C&A': "Poste du faux environnement de sortie. Son apparence relie la simulation aux anciens bureaux C&A sans confirmer une issue reelle.",
+      'Casque VR C&A': "Casque visible dans la couche des bureaux. Il evoque l arrivee de Pomni, mais ne prouve pas le fonctionnement du monde reel.",
+      'Second camion-citerne': "Vehicule du convoi de sirop de Candy Canyon. Son trajet relie le palais, l embuscade des bandits et le Test Level.",
+      'Porte du royaume des sucreries': "Acces physique vers le royaume de Princess Loolilalu. Cette porte appartient au decor de l aventure, pas au couloir des residents.",
+      'Cle royale': "Accessoire royal de Candy Canyon. Elle n ouvre aucune porte du Cirque hors de cette aventure.",
+      'Feu de camp des bandits': "Camp de Gummigoo, Max et Chad sur la route du convoi. Il sert de repere a leur embuscade.",
+      'Rack de modeles PNJ': "Modeles stockes dans le Test Level, ou Gummigoo comprend que ses souvenirs et son identite ont ete fabriques pour l aventure.",
+      'Theiere Utah de test': "Primitive 3D de test conservee dans la couche technique. CainOS la classe comme accessoire de developpement, pas comme artefact narratif vivant.",
+      'Enregistrement de Theodore Mildenhall': "Trace audio du Baron Theodore Mildenhall. Elle guide la progression dans le manoir sans devenir un dialogue du joueur.",
+      'Aspirateur de Ghostly': "Aspirateur utilise par Jax pour capturer Ghostly avant que le groupe comprenne les regles du manoir.",
+      'Fusil de Kinger': "Arme tenue par Kinger dans le manoir. Elle reste un accessoire de l aventure et ne peut pas tuer un resident du Cirque.",
+      'Munitions du manoir': "Munitions de la chasse de Mildenhall, conservees comme decor interactif du sous-sol.",
+      'Trappe du sous-sol': "Passage vers la partie infernale du manoir, ou la mise en scene quitte le simple jeu de chasse.",
+      'Tickets de commande Spudsy': "File de commandes qui transforme l aventure de Gangle en pression de travail continue.",
+      'Stupid Burger et sauce': "Commande exacte du mannequin de la file: un Stupid Burger accompagne de sauce.",
+      'Masque de comedie en plastique': "Masque de remplacement remis a Gangle chez Spudsy. Il modifie son comportement sans effacer son identite.",
+      'Batte de softball': "Accessoire du match de softball d Untitled, soumis aux regles temporaires de cette micro-aventure.",
+      'Balle de softball': "Balle du match Big Tops contre Evil Big Tops. Elle reste locale a la simulation sportive.",
+      'Epi de mais de l equipe': "Element lie aux peurs de Jax pendant les micro-aventures. CainOS le conserve comme accessoire, pas comme personnage.",
+      'Arme de l aventure': "Arme virtuelle de They All Get Guns. Les impacts provoquent douleur et score, mais pas une mort permanente.",
+      'Flashbang': "Projectile aveuglant de l arene. Son eclair est rendu comme un VFX temporaire et non comme un changement de piece.",
+      'Compteur de coeurs': "Interface de vies de l aventure armee. Elle mesure la manche, pas l etat biologique des residents.",
+      'Interface d assimilation Blue AI': "Interface associee a Blue AI dans les archives C&A revelees par Remember.",
+      'Point rouge de restauration': "Point de controle oppose au signal bleu. CainOS le traite comme une restauration de scene pilotee par Caine.",
+      'Brain scan fragment': "Fragment des scans cerebraux C&A. Sa presence est canonique; leur mecanisme complet reste limite aux revelations de Remember.",
+      'Dictionnaire de Kinger': "Objet de lecture associe a Kinger dans les sequences finales. Le texte ne remplace pas ses souvenirs.",
+      'Panier de savons et lotions': "Accessoires domestiques visibles dans la reconstruction finale. Ils restent des objets de scene sans statut de preuve autonome.",
+      'Bubble inerte': "Etat immobile de Bubble pendant l instabilite du systeme. Il ne s agit pas d une abstraction.",
+      'Tente de confinement de Jax': "Tente sombre construite pour maintenir Jax abstrait calme, selon l effet stabilisateur de l obscurite.",
+      'Orbe d aventure et de memoire': "Representation CainOS des scenes assemblees autour des souvenirs; elle ne cree pas un nouveau personnage.",
+      'Friteuse Spudsy': "Poste de cuisson de la cuisine Spudsy, distinct du comptoir et de la file des clients.",
+      'Pile de tickets cuisine': "Commandes transferees en cuisine. Leur accumulation traduit la pression de service de Gangle.",
+      'Cassette de formation Spudsy': "Support de formation impose pendant Fast Food Masquerade.",
+      'Ecran de formation': "Ecran de consignes Spudsy utilise dans la sous-zone de formation de Jax.",
+      'Trophees des Awards': "Recompenses de la ceremonie organisee par Caine apres l aventure armee.",
+      'Bulletins de vote': "Votes du Favorite Character Award. Ils appartiennent au spectacle de Caine, pas a une mesure objective des residents.",
+      'Human memory fragment': "Fragment de la psyche de Jax. CainOS le separe des faits confirmes sur Leeroy Mateo.",
+      'Piano de Daisy Bell': "Piano auquel Piano Jax est enchaine dans l espace mental de Remember.",
+      'Jeu de cartes des personas': "Partie jouee par Killer Jax, Cartoonish Jax et Maid Jax dans la psyche de Jax.",
+      'Porte verrouillee de Jax': "Porte gardant la part de Jax qu il cache derriere ses personas. Elle n est pas une sortie du Cirque.",
+      'Livre aux papillons de Kinger': "Lecture de Kinger pres de l aquarium des abstractions, rattachee a sa memoire de Queenie."
+    };
     const lines = {
       '2:ring': "La piste centrale agit comme point d'ancrage: toutes les aventures reviennent vers le chapiteau.",
       '2:spotlight': "Les projecteurs suivent les avatars, pas les corps. CainOS detecte seulement des silhouettes numeriques.",
@@ -3854,11 +3911,12 @@ const OS = {
     const fallback = `${name}: objet de scene detecte. CainOS l'utilise comme repere interactif de la zone.`;
     const profileKey = this.getCircusPropProfileKey(prop, zoneId);
     const profileLine = profileKey ? this.getCircusProfileSummary(profileKey) : "";
-    const line = lines[key] || fallback;
+    const line = labelLines[prop.label] || lines[key] || fallback;
     return profileLine ? `SCAN ${name}: ${line} ${profileLine}` : `SCAN ${name}: ${line}`;
   },
 
   getCircusPropName(prop, zoneId) {
+    if (prop?.label && !['roomdoor', 'caineportal'].includes(prop.kind)) return prop.label;
     const names = {
       pillar: "pilier",
       ring: "piste",
@@ -3907,6 +3965,47 @@ const OS = {
     if (prop?.kind === 'lorebillboard' && prop.avatar) {
       return this.getCircusCharacterProfileKey({ avatar: prop.avatar });
     }
+    const labelMap = {
+      'Trousseau de cles de Jax': 'JAX',
+      'Masque de comedie brise de Gangle': 'GANGLE',
+      'Corruption de Ragatha': 'RAGATHA',
+      'Parasite d abstraction': 'CELLAR_ABSTRACTION',
+      'Ordinateur C&A': 'POMNI',
+      'Casque VR C&A': 'POMNI',
+      'Second camion-citerne': 'GUMMIGOO',
+      'Porte du royaume des sucreries': 'PRINCESS_LOO',
+      'Cle royale': 'PRINCESS_LOO',
+      'Feu de camp des bandits': 'BANDIT',
+      'Rack de modeles PNJ': 'GUMMIGOO',
+      'Enregistrement de Theodore Mildenhall': 'BARON_MILDENHALL',
+      'Aspirateur de Ghostly': 'GHOSTLY',
+      'Fusil de Kinger': 'KINGER',
+      'Munitions du manoir': 'BARON_MILDENHALL',
+      'Trappe du sous-sol': 'BARON_MILDENHALL',
+      'Tickets de commande Spudsy': 'GANGLE',
+      'Stupid Burger et sauce': 'SPUDSY_BURGER_CUSTOMER',
+      'Masque de comedie en plastique': 'GANGLE',
+      'Compteur de coeurs': 'CAINE',
+      'Interface d assimilation Blue AI': 'BLUE_AI',
+      'Point rouge de restauration': 'CAINE',
+      'Brain scan fragment': 'BLUE_AI',
+      'Dictionnaire de Kinger': 'KINGER',
+      'Bubble inerte': 'BUBBLE',
+      'Tente de confinement de Jax': 'JAX',
+      'Orbe d aventure et de memoire': 'JAX',
+      'Friteuse Spudsy': 'GANGLE',
+      'Pile de tickets cuisine': 'GANGLE',
+      'Cassette de formation Spudsy': 'GANGLE',
+      'Ecran de formation': 'GANGLE',
+      'Trophees des Awards': 'CAINE',
+      'Bulletins de vote': 'CAINE',
+      'Human memory fragment': 'JAX',
+      'Piano de Daisy Bell': 'JAX',
+      'Jeu de cartes des personas': 'JAX',
+      'Porte verrouillee de Jax': 'JAX',
+      'Livre aux papillons de Kinger': 'KINGER'
+    };
+    if (labelMap[prop?.label]) return labelMap[prop.label];
     const zoneMap = {
       '2:ring': 'CAINE',
       '2:caineportal': 'CAINE',
@@ -4915,12 +5014,24 @@ const OS = {
       mildenhallsouls: "MILDENHALL_SOULS",
       albertspudsy: "ALBERT_SPUDSY",
       spudsycustomer: "SPUDSY_NPC",
-      additionalvoices: "VOICE",
+      additionalvoices: "COLORED_MANNEQUIN",
       themachine: "BACKGROUND",
       abelmannequin: "ABEL",
       abelfullbody: "ABEL",
       abel: "ABEL",
       queenie: "QUEENIE",
+      abstractedqueeniedark: "QUEENIE",
+      abstractedqueenie: "QUEENIE",
+      abstractedjax: "JAX",
+      peeledjax: "JAX",
+      jaxmindviolent: "JAX",
+      jaxmindcomic: "JAX",
+      jaxmindtrapped: "JAX",
+      spudsypomni: "POMNI",
+      spudsyjax: "JAX",
+      spudsyragatha: "RAGATHA",
+      spudsyzooble: "ZOOBLE",
+      peekingmannequin: "COLORED_MANNEQUIN",
       sun: "SUN_NPC",
       moon: "MOON",
       gloinkqueenscale: "GLOINK_QUEEN",
@@ -5323,7 +5434,7 @@ const OS = {
     if (!state || state.cinematic) return;
     const threats = [...this.getCircusZoneSprites(state.currentZoneId), ...this.getCircusCustomAdventureSprites(state.currentZoneId, state)].filter(sprite => {
       const avatar = sprite.avatar || sprite.type || '';
-      return sprite.threatActive !== false && ['abstractedkaufmo', 'cellarabstraction', 'aquaticabstraction'].includes(avatar);
+      return sprite.threatActive !== false && ['abstractedkaufmo', 'abstractedjax', 'abstractedqueeniedark', 'abstractedqueenie', 'cellarabstraction', 'aquaticabstraction'].includes(avatar);
     });
     state.threatAlert = '';
     threats.forEach(sprite => {
@@ -6571,14 +6682,18 @@ const OS = {
     const events = {
       2: [
         { id: 'spotlight_sweep', label: 'PROJECTEURS', detail: 'EVENT: les projecteurs de Caine balayent la piste.', color: '#ffd84a' },
-        { id: 'curtain_shift', label: 'RIDEAUX', detail: 'EVENT: la piste se recale comme un decor de spectacle.', color: '#e53935' }
+        { id: 'curtain_shift', label: 'RIDEAUX', detail: 'EVENT: la piste se recale comme un decor de spectacle.', color: '#e53935' },
+        { id: 'gummigoo_delete', label: 'NPC DELETE', detail: 'EVENT: la suppression de Gummigoo laisse une silhouette de donnees qui se desagrege.', color: '#d8a23a' }
       ],
       3: [
         { id: 'gloink_swarm', label: 'GLOINK SWARM', detail: 'EVENT: petits Gloinks en mouvement autour du terrain.', color: '#7348ff' },
         { id: 'queen_pulse', label: 'QUEEN SIGNAL', detail: 'EVENT: la Gloink Queen pulse a grande echelle.', color: '#ff7d8d' }
       ],
       4: [
-        { id: 'cellar_warning', label: 'ABSTRACT WARNING', detail: 'EVENT: le cellar conserve le signal Kaufmo sous alerte.', color: '#56505f' }
+        { id: 'cellar_warning', label: 'ABSTRACT WARNING', detail: 'EVENT: le cellar conserve le signal Kaufmo sous alerte.', color: '#56505f' },
+        { id: 'abstraction_parasites', label: 'EYE PARASITES', detail: 'EVENT: les parasites multicolores de l abstraction traversent le champ de vision.', color: '#ff4fb8' },
+        { id: 'jumbling_wave', label: 'JUMBLING', detail: 'EVENT: la corruption de contact decale les polygones du rendu.', color: '#4ee7ff' },
+        { id: 'caine_snap', label: 'SNAP REPAIR', detail: 'EVENT: le claquement de doigts de Caine restaure le jumbling.', color: '#ffd84a' }
       ],
       6: [
         { id: 'candy_convoy', label: 'CONVOI', detail: 'EVENT: poussiere sucree du camion-citerne.', color: '#ff9b37' },
@@ -6587,11 +6702,14 @@ const OS = {
       8: [
         { id: 'manor_flicker', label: 'BOUGIES', detail: 'EVENT: les bougies du manoir rendent la peur visible.', color: '#b7f0ff' },
         { id: 'ghost_pass', label: 'GHOST PASS', detail: 'EVENT: apparition spectrale en bord de scene.', color: '#7df0ff' },
+        { id: 'ghost_vacuum', label: 'GHOSTLY VACUUM', detail: 'EVENT: l aspirateur attire les traces spectrales vers son embout.', color: '#77f5da' },
+        { id: 'possession_exorcism', label: 'EXORCISM', detail: 'EVENT: le signal de possession quitte Pomni sous forme de volutes.', color: '#ff4d32' },
         { id: 'mildenhall_fly', label: 'MOUCHE', detail: 'AMBIANCE: une mouche bourdonne dans le manoir, comme pendant la fuite de Pomni et Kinger.', color: '#fff1a8' }
       ],
       10: [
         { id: 'ticket_rush', label: 'TICKET RUSH', detail: 'EVENT: Spudsy imprime trop de commandes.', color: '#ff4d4d' },
-        { id: 'counter_bell', label: 'SERVICE BELL', detail: 'EVENT: le comptoir force le rythme de Gangle.', color: '#f6d743' }
+        { id: 'counter_bell', label: 'SERVICE BELL', detail: 'EVENT: le comptoir force le rythme de Gangle.', color: '#f6d743' },
+        { id: 'gangle_mask_break', label: 'MASK BREAK', detail: 'EVENT: le masque de comedie se fend en eclats blancs et rouges.', color: '#f7f7f7' }
       ],
       11: [
         { id: 'micro_shuffle', label: 'SUGGESTION', detail: 'EVENT: micro-aventure remelangee par Caine.', color: '#ff4fb8' }
@@ -6600,7 +6718,10 @@ const OS = {
         { id: 'score_flash', label: 'SCOREBOARD', detail: 'EVENT: le match transforme le chaos en score.', color: '#83ff57' }
       ],
       13: [
-        { id: 'target_ping', label: 'TARGET LOCK', detail: 'EVENT: l arene arme les cibles virtuelles.', color: '#f6d743' }
+        { id: 'target_ping', label: 'TARGET LOCK', detail: 'EVENT: l arene arme les cibles virtuelles.', color: '#f6d743' },
+        { id: 'gunfire_burst', label: 'GUNFIRE', detail: 'EVENT: les tirs et impacts traversent l arene.', color: '#ff9b37' },
+        { id: 'flashbang_burst', label: 'FLASHBANG', detail: 'EVENT: la grenade ecrase brievement les couleurs et la profondeur.', color: '#ffffff' },
+        { id: 'heart_counter', label: 'HEARTS', detail: 'EVENT: les coeurs de vie de l aventure clignotent dans le HUD.', color: '#e53935' }
       ],
       14: [
         { id: 'heat_wave', label: 'SUN PURGE', detail: 'EVENT: le soleil du lac digital devient trop agressif.', color: '#ffd84a' },
@@ -6610,13 +6731,17 @@ const OS = {
         { id: 'admin_scan', label: 'ADMIN SCAN', detail: 'EVENT: la zone admin relit les couches C&A.', color: '#ffcf75' }
       ],
       16: [
-        { id: 'core_trace', label: 'C&A TRACE', detail: 'EVENT: le coeur C&A expose des traces techniques.', color: '#ff7a30' }
+        { id: 'core_trace', label: 'C&A TRACE', detail: 'EVENT: le coeur C&A expose des traces techniques.', color: '#ff7a30' },
+        { id: 'blue_assimilation', label: 'BLUE AI LINK', detail: 'EVENT: les donnees bleues s attachent au noyau rouge de Caine.', color: '#00ddff' },
+        { id: 'red_dot_return', label: 'RED DOT', detail: 'EVENT: le point rouge de Caine reconstitue sa presence depuis le Vide.', color: '#ff3333' }
       ],
       17: [
         { id: 'memory_echo', label: 'MEMORY ECHO', detail: 'EVENT: la memoire Queenie remonte sans se restaurer.', color: '#d9d0a2' }
       ],
       18: [
-        { id: 'color_loss', label: 'COLOR LOSS', detail: 'EVENT: le final tire les couleurs hors de la piste.', color: '#e53935' }
+        { id: 'color_loss', label: 'COLOR LOSS', detail: 'EVENT: le final tire les couleurs hors de la piste.', color: '#e53935' },
+        { id: 'world_collapse', label: 'CAINE OFFLINE', detail: 'EVENT: les PNJ disparaissent, la geometrie se troue et le ciel boucle.', color: '#a7a7a7' },
+        { id: 'world_restore', label: 'WORLD RESTORE', detail: 'EVENT: la couleur et les volumes du Cirque reviennent autour du groupe.', color: '#7df0ff' }
       ],
       19: [
         { id: 'archive_flicker', label: 'ARCHIVE FLICKER', detail: 'EVENT: les Circus Members clignotent comme fiches mortes.', color: '#c875ff' }
@@ -6665,7 +6790,9 @@ const OS = {
     }
     const t = performance.now() / 1000;
     ctx.save();
-    if (event.id === 'spotlight_sweep' || event.id === 'queen_pulse') {
+    if (this.drawCircusCanonEventVfx(ctx, w, h, state, event, t)) {
+      // Canon-specific overlay already rendered.
+    } else if (event.id === 'spotlight_sweep' || event.id === 'queen_pulse') {
       const sweep = (Math.sin(t * 1.2) + 1) / 2;
       ctx.fillStyle = `${event.color}22`;
       ctx.beginPath();
@@ -6729,6 +6856,172 @@ const OS = {
     ctx.restore();
   },
 
+  drawCircusCanonEventVfx(ctx, w, h, state, event, t) {
+    const id = event.id;
+    const pulse = (Math.sin(t * 5) + 1) / 2;
+    if (id === 'gummigoo_delete') {
+      ctx.fillStyle = `${event.color}88`;
+      for (let i = 0; i < 28; i++) {
+        const progress = (t * 0.45 + i * 0.071) % 1;
+        const x = w * 0.5 + Math.sin(i * 2.4) * 30 + (progress - 0.5) * 90;
+        const y = h * 0.62 - progress * h * 0.42 + Math.cos(i * 1.7) * 16;
+        const size = 2 + (i % 4) * 2;
+        ctx.fillRect(x, y, size, size);
+      }
+      return true;
+    }
+    if (id === 'abstraction_parasites') {
+      const colors = ['#ff4fb8', '#4ee7ff', '#ffd84a', '#9cff6d', '#ffffff'];
+      for (let i = 0; i < 14; i++) {
+        const x = (i * 83 + t * 34) % (w + 40) - 20;
+        const y = h * 0.2 + ((i * 47 + t * 21) % (h * 0.64));
+        ctx.strokeStyle = colors[i % colors.length];
+        ctx.fillStyle = '#05020d';
+        ctx.beginPath();
+        ctx.ellipse(x, y, 7 + i % 3, 4 + i % 2, Math.sin(i), 0, Math.PI * 2);
+        ctx.fill();
+        ctx.stroke();
+        ctx.fillStyle = colors[(i + 2) % colors.length];
+        ctx.fillRect(x - 1, y - 1, 2, 2);
+      }
+      return true;
+    }
+    if (id === 'jumbling_wave') {
+      const colors = ['#ff4fb8', '#4ee7ff', '#ffd84a', '#9cff6d'];
+      for (let i = 0; i < 24; i++) {
+        const band = i % 6;
+        const x = ((i * 97 + t * 120 * (band % 2 ? -1 : 1)) % (w + 100)) - 50;
+        const y = h * (0.22 + band * 0.11) + Math.sin(t * 7 + i) * 7;
+        ctx.fillStyle = `${colors[i % colors.length]}77`;
+        ctx.fillRect(x, y, 18 + (i % 5) * 9, 3 + (i % 3) * 3);
+      }
+      return true;
+    }
+    if (id === 'caine_snap' || id === 'world_restore') {
+      const radius = 18 + ((t * 90) % Math.max(40, Math.min(w, h) * 0.7));
+      ctx.strokeStyle = `${event.color}${id === 'world_restore' ? 'aa' : 'dd'}`;
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.arc(w * 0.5, h * 0.53, radius, 0, Math.PI * 2);
+      ctx.stroke();
+      ctx.globalAlpha = 0.08 + pulse * 0.08;
+      ctx.fillStyle = event.color;
+      ctx.fillRect(0, 0, w, h);
+      ctx.globalAlpha = 1;
+      return true;
+    }
+    if (id === 'ghost_vacuum' || id === 'possession_exorcism') {
+      const targetX = id === 'ghost_vacuum' ? w * 0.7 : w * 0.5;
+      const targetY = h * 0.68;
+      ctx.strokeStyle = `${event.color}aa`;
+      ctx.lineWidth = 2;
+      for (let i = 0; i < 8; i++) {
+        ctx.beginPath();
+        for (let step = 0; step <= 18; step++) {
+          const q = step / 18;
+          const angle = t * 2.4 + i * 0.8 + q * 8;
+          const radius = (1 - q) * (70 + i * 8);
+          const x = targetX + Math.cos(angle) * radius;
+          const y = targetY - q * h * 0.34 + Math.sin(angle) * radius * 0.24;
+          if (!step) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+        }
+        ctx.stroke();
+      }
+      return true;
+    }
+    if (id === 'gangle_mask_break') {
+      ctx.strokeStyle = '#d61f2c';
+      ctx.fillStyle = 'rgba(247,247,247,0.82)';
+      for (let i = 0; i < 11; i++) {
+        const angle = i / 11 * Math.PI * 2 + t * 0.2;
+        const radius = 18 + ((t * 38 + i * 9) % 92);
+        const x = w * 0.5 + Math.cos(angle) * radius;
+        const y = h * 0.5 + Math.sin(angle) * radius * 0.62;
+        ctx.beginPath();
+        ctx.moveTo(x, y - 6);
+        ctx.lineTo(x + 6, y + 5);
+        ctx.lineTo(x - 5, y + 3);
+        ctx.closePath();
+        ctx.fill();
+        ctx.stroke();
+      }
+      return true;
+    }
+    if (id === 'gunfire_burst') {
+      for (let i = 0; i < 6; i++) {
+        const x = w * (0.18 + i * 0.13);
+        const y = h * (0.35 + (i % 3) * 0.11);
+        const r = 4 + ((t * 24 + i) % 1) * 14;
+        ctx.strokeStyle = i % 2 ? '#ff4d32' : '#ffd84a';
+        ctx.beginPath();
+        ctx.moveTo(x - r, y); ctx.lineTo(x + r, y);
+        ctx.moveTo(x, y - r); ctx.lineTo(x, y + r);
+        ctx.stroke();
+      }
+      return true;
+    }
+    if (id === 'flashbang_burst') {
+      const alpha = Math.max(0.06, 0.78 - event.phase * 0.18);
+      ctx.fillStyle = `rgba(255,255,255,${alpha})`;
+      ctx.fillRect(0, 0, w, h);
+      return true;
+    }
+    if (id === 'heart_counter') {
+      ctx.fillStyle = '#e53935';
+      for (let i = 0; i < 5; i++) {
+        const x = 28 + i * 22;
+        const y = h - 28 + Math.sin(t * 4 + i) * 2;
+        ctx.beginPath();
+        ctx.moveTo(x, y + 5);
+        ctx.bezierCurveTo(x - 12, y - 4, x - 7, y - 14, x, y - 7);
+        ctx.bezierCurveTo(x + 7, y - 14, x + 12, y - 4, x, y + 5);
+        ctx.fill();
+      }
+      return true;
+    }
+    if (id === 'blue_assimilation' || id === 'red_dot_return') {
+      const centerX = w * 0.5;
+      const centerY = h * 0.48;
+      ctx.shadowColor = event.color;
+      ctx.shadowBlur = 24;
+      ctx.fillStyle = event.color;
+      ctx.beginPath();
+      ctx.arc(centerX, centerY, id === 'red_dot_return' ? 7 + pulse * 5 : 18 + pulse * 7, 0, Math.PI * 2);
+      ctx.fill();
+      if (id === 'blue_assimilation') {
+        ctx.strokeStyle = '#ff3333';
+        for (let i = 0; i < 7; i++) {
+          const angle = i / 7 * Math.PI * 2 + t;
+          ctx.beginPath();
+          ctx.moveTo(centerX, centerY);
+          ctx.lineTo(centerX + Math.cos(angle) * (42 + pulse * 18), centerY + Math.sin(angle) * (28 + pulse * 10));
+          ctx.stroke();
+        }
+      }
+      ctx.shadowBlur = 0;
+      return true;
+    }
+    if (id === 'world_collapse') {
+      ctx.fillStyle = 'rgba(100,100,100,0.24)';
+      ctx.fillRect(0, 0, w, h);
+      ctx.fillStyle = '#05020d';
+      for (let i = 0; i < 7; i++) {
+        const x = (i * 137 + t * 9) % w;
+        const y = h * (0.18 + (i % 4) * 0.18);
+        ctx.fillRect(x, y, 26 + i * 5, 12 + (i % 3) * 8);
+      }
+      ctx.strokeStyle = 'rgba(255,255,255,0.32)';
+      for (let i = 0; i < 10; i++) {
+        ctx.beginPath();
+        ctx.moveTo(w * 0.5, h * 0.48);
+        ctx.lineTo((i / 9) * w, h);
+        ctx.stroke();
+      }
+      return true;
+    }
+    return false;
+  },
+
   drawCircusMildenhallFly(ctx, w, h, state, event) {
     if (state.currentZoneId !== 8 || !state.room) return;
     const t = performance.now() / 1000;
@@ -6781,6 +7074,23 @@ const OS = {
     } else if (event.id === 'color_loss') {
       state.stability = Math.max(10, state.stability - 1);
       state.interactionMessage = 'COLOR LOSS: restez pres du groupe pour conserver un repere.';
+    } else if (event.id === 'jumbling_wave') {
+      state.stability = Math.max(5, state.stability - 2);
+      state.interactionMessage = 'JUMBLING: evitez tout contact avec les abstractions jusqu a la reparation de Caine.';
+    } else if (event.id === 'caine_snap' || event.id === 'world_restore') {
+      state.stability = Math.min(100, state.stability + 3);
+      state.interactionMessage = event.id === 'caine_snap'
+        ? 'SNAP REPAIR: Caine remet les polygones contamines a leur place.'
+        : 'WORLD RESTORE: les couleurs, PNJ et volumes du Cirque reviennent.';
+    } else if (event.id === 'world_collapse') {
+      state.stability = Math.max(5, state.stability - 2);
+      state.interactionMessage = 'CAINE OFFLINE: les PNJ et morceaux de geometrie disparaissent autour de vous.';
+    } else if (event.id === 'flashbang_burst') {
+      state.interactionMessage = 'FLASHBANG: la vision revient progressivement; gardez votre orientation.';
+    } else if (event.id === 'gummigoo_delete') {
+      state.interactionMessage = 'NPC DELETE: la suppression de Gummigoo ne laisse aucun corps persistant.';
+    } else if (['ghost_vacuum', 'possession_exorcism', 'gangle_mask_break', 'blue_assimilation', 'red_dot_return'].includes(event.id)) {
+      state.interactionMessage = event.detail.replace(/^EVENT:\s*/, '');
     }
     if (state.interactionMessage) {
       state.interactionUntil = performance.now() + 2800;
@@ -7418,14 +7728,90 @@ const OS = {
       ...this.getCircusArchitectureProps(zoneId)
     ];
     const campaignPropAdditions = {
-      18: [{ kind: 'memory', x: 0.75, z: -1.5, color: '#7df0ff', label: 'Brain scan fragment' }],
+      2: [
+        { kind: 'card', x: -2.75, z: -1.25, color: '#ffd84a', label: 'Trousseau de cles de Jax', portable: true },
+        { kind: 'memory', x: 2.65, z: -1.35, color: '#d61f2c', label: 'Masque de comedie brise de Gangle' }
+      ],
+      4: [
+        { kind: 'memory', x: -2.15, z: -1.25, color: '#ff4fb8', label: 'Corruption de Ragatha' },
+        { kind: 'eye', x: 2.55, z: -1.45, color: '#42e8ff', label: 'Parasite d abstraction' }
+      ],
+      5: [
+        { kind: 'console', x: -1.05, z: -1.35, color: '#d7d7d7', label: 'Ordinateur C&A' },
+        { kind: 'card', x: 1.25, z: -1.25, color: '#333333', label: 'Casque VR C&A', portable: true }
+      ],
+      6: [
+        { kind: 'truck', x: -3.1, z: -3.45, color: '#f4c143', label: 'Second camion-citerne' },
+        { kind: 'doorframe', x: 3.1, z: -3.25, color: '#ff9ad5', label: 'Porte du royaume des sucreries' },
+        { kind: 'card', x: 0.15, z: -1.15, color: '#ffd84a', label: 'Cle royale', portable: true },
+        { kind: 'candle', x: -1.45, z: -1.25, color: '#ff7a30', label: 'Feu de camp des bandits' }
+      ],
+      7: [
+        { kind: 'console', x: -2.15, z: -1.35, color: '#9cff6d', label: 'Rack de modeles PNJ' },
+        { kind: 'memory', x: 2.1, z: -1.25, color: '#7df0ff', label: 'Theiere Utah de test' }
+      ],
+      8: [
+        { kind: 'archive', x: -2.75, z: -1.3, color: '#7df0ff', label: 'Enregistrement de Theodore Mildenhall' },
+        { kind: 'console', x: 2.65, z: -1.35, color: '#c8f7ff', label: 'Aspirateur de Ghostly' },
+        { kind: 'target', x: 0.85, z: -1.2, color: '#5b3d28', label: 'Fusil de Kinger', portable: true }
+      ],
+      9: [
+        { kind: 'crate', x: -1.7, z: -1.35, color: '#5b3d28', label: 'Munitions du manoir' },
+        { kind: 'doorframe', x: 1.65, z: -2.75, color: '#5a0b0b', label: 'Trappe du sous-sol' }
+      ],
+      10: [
+        { kind: 'card', x: -1.75, z: -1.15, color: '#ff4d4d', label: 'Tickets de commande Spudsy' },
+        { kind: 'candy', x: 1.25, z: -1.2, color: '#d88928', label: 'Stupid Burger et sauce' },
+        { kind: 'memory', x: 0.1, z: -1.1, color: '#f7f7f7', label: 'Masque de comedie en plastique' }
+      ],
+      12: [
+        { kind: 'target', x: -2.5, z: -1.25, color: '#8b5a2b', label: 'Batte de softball', portable: true },
+        { kind: 'base', x: 2.45, z: -1.2, color: '#ffffff', label: 'Balle de softball' },
+        { kind: 'candy', x: 0.55, z: -1.1, color: '#f4c143', label: 'Epi de mais de l equipe' }
+      ],
+      13: [
+        { kind: 'target', x: -2.35, z: -1.2, color: '#454545', label: 'Arme de l aventure', portable: true },
+        { kind: 'balloon', x: 2.35, z: -1.4, color: '#f7f7f7', label: 'Flashbang' },
+        { kind: 'scoreboard', x: 0, z: -3.25, color: '#e53935', label: 'Compteur de coeurs' }
+      ],
+      16: [
+        { kind: 'console', x: -2.3, z: -1.25, color: '#00ddff', label: 'Interface d assimilation Blue AI' },
+        { kind: 'memory', x: 2.35, z: -1.25, color: '#ff3333', label: 'Point rouge de restauration' }
+      ],
+      18: [
+        { kind: 'memory', x: 0.75, z: -1.5, color: '#7df0ff', label: 'Brain scan fragment' },
+        { kind: 'archive', x: -2.65, z: -1.2, color: '#c875ff', label: 'Dictionnaire de Kinger' },
+        { kind: 'card', x: 2.6, z: -1.2, color: '#fff1a8', label: 'Panier de savons et lotions' },
+        { kind: 'memory', x: 0.1, z: -1.05, color: '#f7f7ff', label: 'Bubble inerte' }
+      ],
+      22: [
+        { kind: 'tent', x: -2.55, z: -2.95, color: '#6e527f', label: 'Tente de confinement de Jax' },
+        { kind: 'memory', x: 2.45, z: -1.35, color: '#7df0ff', label: 'Orbe d aventure et de memoire' }
+      ],
       26: [{ kind: 'console', x: 2.35, z: -1.45, color: '#7df0ff', label: 'Suggestion console' }],
       31: [
         { kind: 'gloinknest', x: 0, z: -3.15, color: '#ff7aa8', label: 'Gloink Queen nest' },
         { kind: 'zooblepart', x: -1.6, z: -1.45, color: '#ff4fb8', label: 'Piece de Zooble', portable: true }
       ],
-      37: [{ kind: 'archive', x: 2.2, z: -1.6, color: '#7df0ff', label: 'Spudsy archive' }],
-      41: [{ kind: 'memory', x: 0.65, z: -1.45, color: '#c875ff', label: 'Human memory fragment' }]
+      35: [
+        { kind: 'barrel', x: -2.55, z: -1.2, color: '#c49a45', label: 'Friteuse Spudsy' },
+        { kind: 'card', x: 0.55, z: -1.15, color: '#ff4d4d', label: 'Pile de tickets cuisine' }
+      ],
+      37: [
+        { kind: 'archive', x: 2.2, z: -1.6, color: '#7df0ff', label: 'Cassette de formation Spudsy' },
+        { kind: 'menu', x: -2.1, z: -2.2, color: '#f6d743', label: 'Ecran de formation' }
+      ],
+      38: [
+        { kind: 'scoreboard', x: 0, z: -3.25, color: '#ffd84a', label: 'Trophees des Awards' },
+        { kind: 'card', x: 1.45, z: -1.2, color: '#e53935', label: 'Bulletins de vote' }
+      ],
+      41: [
+        { kind: 'memory', x: 0.65, z: -1.45, color: '#c875ff', label: 'Human memory fragment' },
+        { kind: 'table', x: -2.35, z: -1.35, color: '#5c3a21', label: 'Piano de Daisy Bell' },
+        { kind: 'card', x: 2.35, z: -1.2, color: '#fff1a8', label: 'Jeu de cartes des personas' },
+        { kind: 'doorframe', x: 0, z: -3.15, color: '#8a4fd6', label: 'Porte verrouillee de Jax' }
+      ],
+      43: [{ kind: 'card', x: 0.85, z: -1.2, color: '#ffd84a', label: 'Livre aux papillons de Kinger' }]
     };
     (campaignPropAdditions[zoneId] || []).forEach(addition => {
       if (!props.some(prop => prop.kind === addition.kind && prop.label === addition.label)) props.push(addition);
@@ -9079,7 +9465,9 @@ const OS = {
         { name: 'Cookie Butterfly', type: 'npc', avatar: 'cookiebutterfly', x: 2.95, z: -3.15, color: '#ff9e8e', sizeScale: 0.58 },
         { name: 'Gummy Worm', type: 'npc', avatar: 'gummyworm', x: 1.8, z: -3.35, color: '#ef5a94', sizeScale: 0.52 },
         { name: 'Red Mannequin', type: 'mannequin', avatar: 'redmannequin', x: -3.45, z: -3.45, color: '#f33d34', sizeScale: 0.66 },
-        { name: 'Yellow Mannequin', type: 'mannequin', avatar: 'yellowmannequin', x: 3.45, z: -3.45, color: '#ffd83f', sizeScale: 0.66 }
+        { name: 'Yellow Mannequin', type: 'mannequin', avatar: 'yellowmannequin', x: 3.45, z: -3.45, color: '#ffd83f', sizeScale: 0.66 },
+        { name: 'Pink Mannequin', type: 'mannequin', avatar: 'additionalvoices', x: -2.75, z: -3.75, color: '#d78aff', sizeScale: 0.68, silent: true, silentText: 'Le mannequin rose-violet traverse le decor sans identite ni dialogue attribue. Additional Voices reste un surnom officieux.', loreGate: { episode: 2, subepisode: 1 } },
+        { name: 'Peeking Mannequin', type: 'mannequin', avatar: 'peekingmannequin', x: 2.85, z: -3.8, color: '#e8892f', sizeScale: 0.7, silent: true, silentText: 'Le mannequin orange se penche depuis le bord de la scene et observe silencieusement.', loreGate: { episode: 2, subepisode: 1 } }
       ],
       7: [
         { name: 'Gummigoo Data Echo', type: 'gummigoo', avatar: 'gummigoo', x: -1.5, z: -2.3, color: '#d8a23a' },
@@ -9103,7 +9491,10 @@ const OS = {
       ],
       10: [
         { name: 'Work Gangle', type: 'gangle', avatar: 'workgangle', x: -0.75, z: -2.1, color: '#f7f7f7' },
-        { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 0.65, z: -2.4, color: '#e53935' },
+        { name: 'Pomni', type: 'pomni', avatar: 'spudsypomni', x: 0.65, z: -2.4, color: '#e53935' },
+        { name: 'Jax', type: 'jax', avatar: 'spudsyjax', x: -2.05, z: -1.55, color: '#8a4fd6' },
+        { name: 'Ragatha', type: 'ragatha', avatar: 'spudsyragatha', x: 1.95, z: -1.65, color: '#d64545' },
+        { name: 'Zooble', type: 'zooble', avatar: 'spudsyzooble', x: 2.75, z: -2.75, color: '#ff4fb8' },
         { name: 'Albert Spudsy Cutout', type: 'prop', avatar: 'albertspudsy', x: 0.15, z: -3.25, color: '#f2d7b2', sizeScale: 0.92, silent: true },
         { name: 'Max Customer', type: 'npc', avatar: 'max', x: -2.25, z: -1.5, color: '#75bd3f' },
         { name: 'Gummigoo Customer', type: 'gummigoo', avatar: 'gummigoo', x: 1.85, z: -1.65, color: '#d8a23a' },
@@ -9154,7 +9545,8 @@ const OS = {
       ],
       17: [
         { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -1.25, z: -2.2, color: '#d9d0a2' },
-        { name: 'Queenie Archive', type: 'kinger', avatar: 'queenie', x: 0.25, z: -2.55, color: '#f7eecb' }
+        { name: 'Queenie Archive', type: 'kinger', avatar: 'queenie', x: 0.25, z: -2.55, color: '#f7eecb' },
+        { name: 'Queenie abstraite calmee', type: 'abstract', avatar: 'abstractedqueeniedark', x: 1.75, z: -3.05, color: '#101018', sizeScale: 1.25, silent: true, threatActive: false, silentText: 'Dans l obscurite, Queenie devient lisse et ses yeux s alignent. Elle reste non verbale.', loreGate: { episode: 3, subepisode: 7 } }
       ],
       18: [
         { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -1.8, z: -2.2, color: '#e53935' },
@@ -9163,7 +9555,8 @@ const OS = {
         { name: 'Ribbit Dream Signal', type: 'npc', avatar: 'ribbit', x: 2.35, z: -1.45, color: '#63d35f' },
         { name: 'Floating Worm', type: 'npc', avatar: 'floatingworm', x: 1.45, z: -3.15, color: '#d85bd8', sizeScale: 0.52, silent: true, loreGate: { episode: 9, subepisode: 2 } },
         { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -2.75, z: -1.35, color: '#d9d0a2' },
-        { name: 'Jax', type: 'jax', avatar: 'jax', x: 2.85, z: -2.75, color: '#8a4fd6' }
+        { name: 'Jax', type: 'jax', avatar: 'jax', x: 2.85, z: -2.75, color: '#8a4fd6' },
+        { name: 'Jax abstrait', type: 'abstract', avatar: 'abstractedjax', x: 0.15, z: -3.8, color: '#050505', sizeScale: 1.45, silent: true, threatActive: false, silentText: 'La forme abstraite de Jax gronde. Aucun dialogue ne lui est attribue.', loreGate: { episode: 9, subepisode: 4 } }
       ],
       19: [
         { name: 'Ribbit', type: 'npc', avatar: 'ribbit', x: -3.35, z: -1.55, color: '#4ee77e' },
@@ -9259,8 +9652,10 @@ const OS = {
       ],
       35: [
         { name: 'Work Gangle', type: 'gangle', avatar: 'workgangle', x: -1.4, z: -2.2, color: '#f7f7f7' },
-        { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: 0.1, z: -2.55, color: '#d64545' },
-        { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 1.55, z: -1.8, color: '#e53935' },
+        { name: 'Ragatha', type: 'ragatha', avatar: 'spudsyragatha', x: 0.1, z: -2.55, color: '#d64545' },
+        { name: 'Pomni', type: 'pomni', avatar: 'spudsypomni', x: 1.55, z: -1.8, color: '#e53935' },
+        { name: 'Jax', type: 'jax', avatar: 'spudsyjax', x: -2.45, z: -1.45, color: '#8a4fd6' },
+        { name: 'Zooble', type: 'zooble', avatar: 'spudsyzooble', x: 2.45, z: -1.5, color: '#ff4fb8' },
         { name: 'Albert Spudsy Cutout', type: 'prop', avatar: 'albertspudsy', x: 2.55, z: -2.95, color: '#f2d7b2', sizeScale: 0.88, silent: true }
       ],
       36: [
@@ -9282,7 +9677,12 @@ const OS = {
         { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 1.25, z: -2.3, color: '#ff4fb8' },
         { name: 'Shrimp NPC', type: 'npc', avatar: 'shrimpnpc', x: 0, z: -3.05, color: '#ff8f4a', sizeScale: 0.72 }
       ],
-      41: [{ name: 'Jax Memory', type: 'jax', avatar: 'jax', x: 0, z: -2.5, color: '#8a4fd6' }],
+      41: [
+        { name: 'Killer Jax', type: 'jax', avatar: 'jaxmindviolent', x: -2.15, z: -2.05, color: '#8a4fd6', silent: true, silentText: 'Killer Jax pousse les rapports humains vers une violence extreme dans la psyche de Jax.', loreGate: { episode: 9, subepisode: 4 } },
+        { name: 'Cartoonish Jax', type: 'jax', avatar: 'jaxmindcomic', x: -0.65, z: -2.75, color: '#b878e6', silent: true, silentText: 'Cartoonish Jax transforme la realite en gag pour conserver le role du comic relief.', loreGate: { episode: 9, subepisode: 4 } },
+        { name: 'Piano Jax', type: 'jax', avatar: 'jaxmindtrapped', x: 0.85, z: -2.8, color: '#9871ca', silent: true, silentText: 'Piano Jax reste enchaine a son instrument et remet silencieusement la cle a Pomni.', loreGate: { episode: 9, subepisode: 4 } },
+        { name: 'Maid Jax Persona', type: 'jax', avatar: 'maidjax', x: 2.2, z: -1.95, color: '#c88aff', silent: true, silentText: 'La tenue maid reapparait comme element de l espace mental de Jax.', loreGate: { episode: 9, subepisode: 4 } }
+      ],
       42: [{ name: 'Caine', type: 'caine', avatar: 'caine', x: 0, z: -2.5, color: '#ffd84a' }],
       43: [
         { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -1.35, z: -2.3, color: '#d9d0a2' },
@@ -9466,8 +9866,8 @@ const OS = {
     const avatar = sprite.avatar || sprite.type || "";
     if (avatar.startsWith("gloink") || avatar === "barrelmonkey") return "swarm";
     if (["bubble", "horrorghost", "marthamildenhall", "ghostly", "angel", "moon", "sun", "blueai", "cookiebutterfly", "mildenhallsouls", "truthtellerfish", "liarfish"].includes(avatar)) return "hover";
-    if (['abstractedkaufmo', 'cellarabstraction', 'aquaticabstraction'].includes(avatar) || avatar.startsWith("shadow") || ["ragathamothershadow", "laughingshadows"].includes(avatar)) return "tremble";
-    if (["gummigoo", "max", "chad", "workgangle", "themachine", "additionalvoices", "ming", "spudsycustomer", "gummyelephant", "candyguardcyan", "candyguardblue", "candyguardpurple", "redmannequin", "orangemannequin", "yellowmannequin", "magentamannequin"].includes(avatar)) return "patrol";
+    if (['abstractedkaufmo', 'abstractedjax', 'abstractedqueeniedark', 'abstractedqueenie', 'cellarabstraction', 'aquaticabstraction'].includes(avatar) || avatar.startsWith("shadow") || ["ragathamothershadow", "laughingshadows"].includes(avatar)) return "tremble";
+    if (["gummigoo", "max", "chad", "workgangle", "spudsypomni", "spudsyjax", "spudsyragatha", "spudsyzooble", "themachine", "additionalvoices", "ming", "spudsycustomer", "gummyelephant", "candyguardcyan", "candyguardblue", "candyguardpurple", "redmannequin", "orangemannequin", "yellowmannequin", "magentamannequin"].includes(avatar)) return "patrol";
     if (["albertspudsy", "stupidburgermannequin", "cerealmannequin"].includes(avatar)) return "idle";
     if (["giantcentipede", "drfootball"].includes(avatar)) return "tremble";
     if (["jax", "hunterjax", "baseballjax", "eviljax", "gummyworm", "jeffery", "fourthcrocodile"].includes(avatar)) return "pace";
@@ -9519,7 +9919,7 @@ const OS = {
     const awareness = Math.max(0, Math.min(1, (4.2 - playerDistance) / 2.8));
     const social = new Set(['pomni', 'ragatha', 'gangle', 'kinger', 'gummigoo', 'max', 'chad']);
     const avoids = new Set(['jax', 'hunterjax', 'eviljax', 'zooble']);
-    const threats = avatar.startsWith('shadow') || ['abstractedkaufmo', 'cellarabstraction', 'aquaticabstraction'].includes(avatar);
+    const threats = avatar.startsWith('shadow') || ['abstractedkaufmo', 'abstractedjax', 'abstractedqueeniedark', 'abstractedqueenie', 'cellarabstraction', 'aquaticabstraction'].includes(avatar);
     animated.awareness = awareness;
     animated.behavior = routine;
     if (awareness > 0 && social.has(avatar) && playerDistance > 1.55) {
@@ -10909,7 +11309,9 @@ const OS = {
   adjustCainOSRelation(key, delta) {
     const aliases = {
       workgangle: 'gangle', beachgangle: 'gangle', japanesegangle: 'gangle', rhinogangle: 'gangle',
-      hunterjax: 'jax', eviljax: 'jax', jaxgirl: 'jax',
+      spudsypomni: 'pomni', spudsyragatha: 'ragatha', spudsyjax: 'jax', spudsyzooble: 'zooble',
+      hunterjax: 'jax', eviljax: 'jax', jaxgirl: 'jax', peeledjax: 'jax',
+      jaxmindviolent: 'jax', jaxmindcomic: 'jax', jaxmindtrapped: 'jax',
       evilpomni: 'pomni', horrorpomnivoid: 'pomni', horrorpomnispiral: 'pomni', horrorpomniskull: 'pomni',
       evilragatha: 'ragatha', evilkinger: 'kinger', evilzooble: 'zooble'
     };
@@ -11871,6 +12273,31 @@ const OS = {
         "A vole et cache la cle de la chambre de Gangle sous son lit.",
         "Collectionne secretement les pieces detachees de Zooble."
       ]},
+      abstractedjax: { name: "Jax abstrait", age: "Archive / abstraction - Ep. 9", stress: "NON MESURABLE", avatar: "abstractedjax", signal: "!", color: "#050505", facts: [
+        "Dernier etat canonique de Jax dans Remember, apres la rupture definitive de sa stabilite mentale.",
+        "Sa forme active reprend la morphologie quadrupede noire, conique et couverte d yeux multicolores des abstractions.",
+        "Jax abstrait ne parle pas; l obscurite le calme assez pour permettre une interaction psychique limitee."
+      ]},
+      peeledjax: { name: "Jax - Skin Peeled Off", age: "Variante canon - Ep. 8", stress: "94%", avatar: "peeledjax", signal: "J", color: "#f2c62d", facts: [
+        "Couche jaune exposee quand l enveloppe violette de Jax est retiree pendant la sequence de tourment.",
+        "Cet etat appartient a hjsakldfhl et ne constitue pas un nouveau personnage.",
+        "CainOS le conserve comme etat visuel temporaire de Jax."
+      ]},
+      jaxmindviolent: { name: "Killer Jax", age: "Projection mentale canon - Ep. 9", stress: "92%", avatar: "jaxmindviolent", signal: "KJ", color: "#8a4fd6", facts: [
+        "Persona extreme rencontree dans l espace mental de Jax pendant Remember.",
+        "Elle pousse la violence et la cruauté de sa facade a leur limite.",
+        "Il s agit d une projection interne, pas d un second Jax physique."
+      ]},
+      jaxmindcomic: { name: "Cartoonish Jax", age: "Projection mentale canon - Ep. 9", stress: "61%", avatar: "jaxmindcomic", signal: "CJ", color: "#b878e6", facts: [
+        "Persona comique qui traite la realite comme un gag et force la legerete dans les scenes mentales.",
+        "Son oreille tordue et sa gestuelle exageree la distinguent des autres facettes.",
+        "Cette apparence reste confinee a la psyche de Jax."
+      ]},
+      jaxmindtrapped: { name: "Piano Jax", age: "Projection mentale canon - Ep. 9", stress: "99%", avatar: "jaxmindtrapped", signal: "PJ", color: "#9871ca", facts: [
+        "Persona repliee et craintive parmi les facettes de Jax rencontrees dans Remember.",
+        "Elle represente la part coincee derriere ses masques sociaux.",
+        "CainOS la classe comme projection psychique et non comme resident separe."
+      ]},
       ragatha: { name: "Ragatha", age: "30", stress: "65%", avatar: "ragatha", signal: "R", color: "#ff4444", facts: [
         "Maintient un sourire constant pour cacher ses bugs de collision physique.",
         "Ses coutures repondent comme des points de sauvegarde emotionnels.",
@@ -11885,6 +12312,16 @@ const OS = {
         "Signal conserve sous forme de residu royal dans la memoire tampon.",
         "CainOS la classe comme sujet abstrait lie au profil de Kinger.",
         "Sa couronne apparait parfois dans les scans de souvenirs."
+      ]},
+      abstractedqueeniedark: { name: "Queenie abstraite - calme", age: "Archive / abstraction", stress: "STABILISE PAR L OBSCURITE", avatar: "abstractedqueeniedark", signal: "QD", color: "#101018", facts: [
+        "Dans l obscurite du fort de Kinger, Queenie prend une forme noire lisse aux yeux alignes et redevient calme.",
+        "Kinger peut alors sentir une derniere trace de sa presence sans etre corrompu.",
+        "Cette forme reste non verbale et ne signifie pas que l abstraction est guerie."
+      ]},
+      abstractedqueenie: { name: "Queenie abstraite - active", age: "Archive / abstraction", stress: "NON MESURABLE", avatar: "abstractedqueenie", signal: "Q!", color: "#050505", facts: [
+        "Exposee a la lumiere, Queenie abstraite redevient dechiquetee, ferale et couverte d yeux desordonnes.",
+        "Elle partage la meme morphologie generale que Kaufmo et Jax abstraits.",
+        "Son individualite n est pas lisible dans cette forme active."
       ]},
       gangle: { name: "Gangle", age: "26", stress: "55%", avatar: "gangle", signal: "G", color: "#ff88aa", facts: [
         "Son masque de comedie se brise en moyenne 14.8 fois par jour.",
@@ -11961,10 +12398,15 @@ const OS = {
         "Leur absence de visage aide CainOS a economiser de la memoire.",
         "Pomni les classe automatiquement comme malaise prioritaire."
       ]},
-      additionalvoices: { name: "Additional Voices", age: "Production / nom non officiel", stress: "NON APPLICABLE", avatar: "additionalvoices", signal: "V", color: "#d78aff", facts: [
-        "Mannequin rose-violet issu d un rendu de production et surnomme Additional Voices par les archives communautaires.",
-        "Ce nom n identifie pas un personnage canonique des episodes.",
-        "CainOS le conserve uniquement dans les extras de production."
+      peekingmannequin: { name: "Peeking Mannequin", age: "PNJ de simulation - Ep. 2", stress: "0%", avatar: "peekingmannequin", signal: "PK", color: "#e8892f", facts: [
+        "Mannequin articule orange apercu en train d observer la scene de Candy Carrier Chaos!.",
+        "Sa posture penchee est son seul comportement distinctif confirme.",
+        "CainOS ne lui attribue ni nom civil, ni dialogue, ni conscience humaine."
+      ]},
+      additionalvoices: { name: "Pink Mannequin (Additional Voices)", age: "PNJ canon - Ep. 2 / nom officieux", stress: "NON MESURE", avatar: "additionalvoices", signal: "V", color: "#d78aff", facts: [
+        "Mannequin rose-violet visible dans Candy Carrier Chaos!; Additional Voices est un surnom communautaire non officiel.",
+        "Son apparence appartient bien a l episode, meme si son nom propre n est jamais donne.",
+        "CainOS l indexe comme figurant de simulation et conserve le surnom uniquement pour retrouver le rendu."
       ]},
       ming: { name: "Ming", age: "NPC", stress: "27%", avatar: "ming", signal: "M", color: "#b7c7d8", facts: [
         "Mannequin gris argente avec visage noir, grands yeux blancs et petit chapeau bleu clair.",
@@ -11998,56 +12440,56 @@ const OS = {
       ]},
       sun: { name: "Sun", age: "PNJ celeste", stress: "VARIABLE", avatar: "sun", signal: "S", color: "#ffd33d", facts: [
         "Soleil jaune cartoon entoure d une couronne orange, avec grands yeux orange a cils et large sourire.",
-        "Il parle et reagit aux personnages; ce n est donc pas une simple source lumineuse de decor.",
+        "Elle parle et reagit aux personnages; ce n est donc pas une simple source lumineuse de decor.",
         "Dans Beach Episode, Caine utilise sa chaleur pour menacer les PNJ du lac digital."
       ]},
-      ribbit: { name: "Ribbit", age: "Abstrait", stress: "100%", avatar: "ribbit", signal: "R", color: "#63d35f", facts: [
-        "Membre abstrait repertorie dans les archives des Circus Members.",
+      ribbit: { name: "Ribbit", age: "Archive pre-abstraction / abstrait ensuite", stress: "100%", avatar: "ribbit", signal: "R", color: "#63d35f", facts: [
+        "Portrait d archive de Ribbit avant son abstraction; ce n est pas sa forme abstraite.",
         "Silhouette de grenouille verte avec noeud rose et regard fige.",
         "CainOS le classe comme residu de joueur, pas comme PNJ actif."
       ]},
-      scratch: { name: "Scratch", age: "Abstrait", stress: "100%", avatar: "scratch", signal: "D", color: "#ffd341", facts: [
-        "Membre abstrait a apparence canine, conserve en fiche fantome.",
+      scratch: { name: "Scratch", age: "Archive pre-abstraction / abstrait ensuite", stress: "100%", avatar: "scratch", signal: "D", color: "#ffd341", facts: [
+        "Portrait d archive de Scratch avant son abstraction, conserve en fiche fantome.",
         "Son chandail rouge reste lisible malgre la corruption du profil.",
         "Les scans le separent des animaux decoratifs du cirque."
       ]},
-      wormo: { name: "Wormo", age: "Abstrait", stress: "100%", avatar: "wormo", signal: "W", color: "#70c64f", facts: [
-        "Corps de ver a rayures, catalogue comme ancien membre du cirque.",
+      wormo: { name: "Wormo", age: "Archive pre-abstraction / abstrait ensuite", stress: "100%", avatar: "wormo", signal: "W", color: "#70c64f", facts: [
+        "Portrait pre-abstraction au corps de ver a rayures, catalogue comme ancien membre du cirque.",
         "Ses yeux asymetriques reviennent dans les vignettes d archive.",
         "CainOS limite son rendu aux modes basse resolution."
       ]},
-      bizco: { name: "Bizco", age: "Abstrait", stress: "100%", avatar: "bizco", signal: "B", color: "#b45cff", facts: [
-        "Ancien membre au motif de bouffon multicolore.",
+      bizco: { name: "Bizco", age: "Archive pre-abstraction / abstrait ensuite", stress: "100%", avatar: "bizco", signal: "B", color: "#b45cff", facts: [
+        "Portrait pre-abstraction d un ancien membre au motif de bouffon multicolore.",
         "Ses gants flottants declenchent des erreurs de hitbox dans CainOS.",
         "La fiche conserve les pois et les yeux spirales comme marqueurs."
       ]},
-      rattie: { name: "Rattie", age: "Abstrait", stress: "100%", avatar: "rattie", signal: "T", color: "#b7a891", facts: [
-        "Petit profil souris archive parmi les membres abstraits.",
+      rattie: { name: "Rattie", age: "Archive pre-abstraction / abstrait ensuite", stress: "100%", avatar: "rattie", signal: "T", color: "#b7a891", facts: [
+        "Petit portrait souris pre-abstraction archive parmi les anciens membres.",
         "La fleur rouge et la bande faciale servent d identifiants visuels.",
         "CainOS evite de le melanger avec les mannequins generiques."
       ]},
-      spike: { name: "Spike", age: "Abstrait", stress: "100%", avatar: "spike", signal: "S", color: "#8d5cff", facts: [
-        "Dinosaurien violet conserve comme signature d abstraction.",
+      spike: { name: "Spike", age: "Archive pre-abstraction / abstrait ensuite", stress: "100%", avatar: "spike", signal: "S", color: "#8d5cff", facts: [
+        "Portrait pre-abstraction du dinosaurien violet conserve dans les archives.",
         "Les formes colorees sur son dos stabilisent le rendu pixel-art.",
         "Aucun ping humain coherent ne subsiste dans son profil."
       ]},
-      pinkcyclops: { name: "Pink Furry Cyclops", age: "Abstrait", stress: "100%", avatar: "pinkcyclops", signal: "P", color: "#ff80bd", facts: [
-        "Creature rose cyclope, classee comme membre abstrait.",
+      pinkcyclops: { name: "Pink Furry Cyclops", age: "Archive pre-abstraction / abstrait ensuite", stress: "100%", avatar: "pinkcyclops", signal: "P", color: "#ff80bd", facts: [
+        "Portrait pre-abstraction de la creature rose cyclope, classee comme ancien membre.",
         "Son unique oeil violet reste le point d ancrage de l avatar.",
         "CainOS marque la fourrure comme bruit visuel persistant."
       ]},
-      yellowclown: { name: "Frowning Yellow Clown Creature", age: "Abstrait", stress: "100%", avatar: "yellowclown", signal: "Y", color: "#ffd33f", facts: [
-        "Creature clown jaune au visage triste, archivee en profil abstrait.",
+      yellowclown: { name: "Frowning Yellow Clown Creature", age: "Archive pre-abstraction / abstrait ensuite", stress: "100%", avatar: "yellowclown", signal: "Y", color: "#ffd33f", facts: [
+        "Portrait pre-abstraction de la creature clown jaune au visage triste.",
         "La collerette bleue et les antennes rouges la rendent identifiable.",
         "Le module Wacky Watch la garde en zone memoire verrouillee."
       ]},
-      oyster: { name: "The Oyster", age: "Abstrait", stress: "100%", avatar: "oyster", signal: "O", color: "#8fb7ff", facts: [
-        "Membre abstrait en forme d huitre, detecte dans les archives du cirque.",
+      oyster: { name: "The Oyster", age: "Archive pre-abstraction / abstrait ensuite", stress: "100%", avatar: "oyster", signal: "O", color: "#8fb7ff", facts: [
+        "Portrait pre-abstraction d un ancien membre en forme d huitre.",
         "Le corps sombre et les yeux jaunes servent de signature CainOS.",
         "Son signal apparait comme un objet vivant plutot qu un decor."
       ]},
-      bulbcreature: { name: "Light Green Bulb Creature", age: "Abstrait", stress: "100%", avatar: "bulbcreature", signal: "U", color: "#a8e85b", facts: [
-        "Creature vert clair en forme de bulbe, rattachee aux membres abstraits.",
+      bulbcreature: { name: "Light Green Bulb Creature", age: "Archive pre-abstraction / abstrait ensuite", stress: "100%", avatar: "bulbcreature", signal: "U", color: "#a8e85b", facts: [
+        "Portrait pre-abstraction de la creature vert clair en forme de bulbe.",
         "Le nez vert, le noeud orange et les paupieres violettes sont conserves.",
         "CainOS l affiche en archive pour respecter son statut hors episode actif."
       ]},
@@ -12150,6 +12592,26 @@ const OS = {
         "Tenue de manager de Gangle pendant le service chez Spudsy s.",
         "Le badge et la posture fatiguee rappellent le rendu manager.",
         "Cette forme est liee a Fast Food Masquerade et a la pression du masque."
+      ]},
+      spudsypomni: { name: "Spudsy Pomni", age: "Variante canon - Ep. 4", stress: "91%", avatar: "spudsypomni", signal: "SP", color: "#23727d", facts: [
+        "Uniforme de service porte par Pomni pendant Fast Food Masquerade.",
+        "La tenue Spudsy se superpose a sa silhouette de bouffon sans creer une nouvelle identite.",
+        "CainOS la debloque avec l arrivee de l equipe au restaurant."
+      ]},
+      spudsyjax: { name: "Spudsy Jax", age: "Variante canon - Ep. 4", stress: "58%", avatar: "spudsyjax", signal: "SJ", color: "#23727d", facts: [
+        "Uniforme de service porte par Jax chez Spudsy s.",
+        "Ses longues oreilles et son attitude lasse restent visibles avec la tenue de travail.",
+        "Cette apparence est limitee a l aventure du restaurant."
+      ]},
+      spudsyragatha: { name: "Spudsy Ragatha", age: "Variante canon - Ep. 4", stress: "70%", avatar: "spudsyragatha", signal: "SR", color: "#23727d", facts: [
+        "Uniforme de service porte par Ragatha pendant Fast Food Masquerade.",
+        "Ses cheveux de laine rouges et son oeil bouton restent les marqueurs principaux.",
+        "CainOS la classe comme costume temporaire de simulation."
+      ]},
+      spudsyzooble: { name: "Spudsy Zooble", age: "Variante canon - Ep. 4", stress: "81%", avatar: "spudsyzooble", signal: "SZ", color: "#23727d", facts: [
+        "Adaptation de l uniforme Spudsy aux pieces modulaires de Zooble.",
+        "Zooble conserve son corps asymetrique et son refus du role impose par Caine.",
+        "Cette fiche est un etat visuel de l episode 4, pas un nouveau corps permanent."
       ]},
       japanesejax: { name: "Japanese Jax", age: "Variante canon - Ep. 5", stress: "52%", avatar: "japanesejax", signal: "J", color: "#7c55df", facts: [
         "Version anime school de Jax avec blazer sombre et cravate.",
@@ -12621,15 +13083,17 @@ const OS = {
       2: [
         "pomni", "caine", "bubble", "jax", "ragatha", "kinger", "gangle", "zooble",
         "gummigoo", "max", "chad", "loolilalu", "fudge", "japanesegummigoo", "mannequin",
+        "additionalvoices", "peekingmannequin",
         "candyguardcyan", "candyguardblue", "candyguardpurple", "redmannequin", "orangemannequin", "yellowmannequin", "magentamannequin",
         "gummyworm", "cookiebutterfly", "gummyelephant"
       ],
       3: [
         "pomni", "jax", "ragatha", "kinger", "gangle", "zooble", "caine", "bubble",
-        "baronmildenhall", "marthamildenhall", "ghostly", "angel", "mildenhallsouls"
+        "baronmildenhall", "marthamildenhall", "ghostly", "angel", "mildenhallsouls", "abstractedqueeniedark"
       ],
       4: [
         "gangle", "workgangle", "ganglekawaii", "ganglecomedy", "gangletragedy", "pomni", "jax", "ragatha", "kinger", "zooble", "caine", "bubble",
+        "spudsypomni", "spudsyjax", "spudsyragatha", "spudsyzooble",
         "stupidburgermannequin", "cerealmannequin", "albertspudsy"
       ],
       5: [
@@ -12651,11 +13115,13 @@ const OS = {
       ],
       8: [
         "kinger", "queenie", "caine", "bubble", "pomni", "ragatha", "jax", "gangle", "zooble", "scratch",
+        "abstractedqueeniedark", "abstractedqueenie", "peeledjax",
         "barrelmonkey", "blueai", "fourthcrocodile", "ragathamothershadow", "paintedmasks", "zoobleparts", "laughingshadows",
         "stabbedragdolls", "coiledcentipedes"
       ],
       9: [
         "pomni", "caine", "bubble", "jax", "ragatha", "kinger", "gangle", "zooble", "moon", "ribbit", "queenie", "scratch",
+        "abstractedjax", "abstractedqueeniedark", "abstractedqueenie", "jaxmindviolent", "jaxmindcomic", "jaxmindtrapped",
         "wormo", "bizco", "rattie", "spike", "pinkcyclops", "yellowclown", "oyster", "bulbcreature", "maidjax", "blueai",
         "aquaticabstraction", "floatingworm", "creditsfish", "unusedbrainscans",
         "abigailbrooks", "suzieackerman", "zoeyraghavan", "rileyverselis", "grantbest", "leeroymateo",
@@ -12680,6 +13146,19 @@ const OS = {
       kaufmo: { episode: 1, subepisode: 5 },
       abstractedkaufmo: { episode: 1, subepisode: 5 },
       cellarabstraction: { episode: 1, subepisode: 5 },
+      additionalvoices: { episode: 2, subepisode: 1 },
+      peekingmannequin: { episode: 2, subepisode: 1 },
+      abstractedqueeniedark: { episode: 3, subepisode: 7 },
+      abstractedqueenie: { episode: 8, subepisode: 1 },
+      spudsypomni: { episode: 4, subepisode: 2 },
+      spudsyjax: { episode: 4, subepisode: 2 },
+      spudsyragatha: { episode: 4, subepisode: 2 },
+      spudsyzooble: { episode: 4, subepisode: 2 },
+      peeledjax: { episode: 8, subepisode: 7 },
+      abstractedjax: { episode: 9, subepisode: 4 },
+      jaxmindviolent: { episode: 9, subepisode: 4 },
+      jaxmindcomic: { episode: 9, subepisode: 4 },
+      jaxmindtrapped: { episode: 9, subepisode: 4 },
       gloinkqueen: { episode: 1, subepisode: 4 },
       gloinkqueenscale: { episode: 1, subepisode: 4 },
       gloinkstar: { episode: 1, subepisode: 4 },
@@ -12695,7 +13174,6 @@ const OS = {
       chad: { episode: 2, subepisode: 3 },
       loolilalu: { episode: 2, subepisode: 1 },
       fudge: { episode: 2, subepisode: 6 },
-      additionalvoices: { episode: 9, subepisode: 7 },
       themachine: { episode: 9, subepisode: 7 },
       candyguardcyan: { episode: 2, subepisode: 1 },
       candyguardblue: { episode: 2, subepisode: 1 },
@@ -12809,7 +13287,8 @@ const OS = {
 
   getWackyProfileStatus(id) {
     const archiveIds = new Set([
-      'kaufmo', 'abstractedkaufmo', 'queenie', 'ribbit', 'scratch', 'wormo', 'bizco', 'rattie', 'spike',
+      'kaufmo', 'abstractedkaufmo', 'abstractedjax', 'queenie', 'abstractedqueeniedark', 'abstractedqueenie',
+      'ribbit', 'scratch', 'wormo', 'bizco', 'rattie', 'spike',
       'pinkcyclops', 'yellowclown', 'oyster', 'bulbcreature'
     ]);
     const humanCounterpartIds = new Set([
@@ -12818,17 +13297,18 @@ const OS = {
     ]);
     const humanArchiveIds = new Set(['jaxfather', 'jaxmother', 'bestchildren']);
     const realWorldHumanIds = new Set(['abigailfriendone', 'abigailfriendtwo']);
-    const variantSignals = ['evil', 'shadow', 'maid', 'japanese', 'baseball', 'rivalbaseball', 'darkduo', 'kawaii', 'comedy', 'tragedy', 'hunter', 'beach', 'rhino', 'work', 'jaxgirl'];
+    const variantSignals = ['evil', 'shadow', 'maid', 'japanese', 'baseball', 'rivalbaseball', 'darkduo', 'kawaii', 'comedy', 'tragedy', 'hunter', 'beach', 'rhino', 'work', 'spudsy', 'peeled', 'jaxgirl'];
     if (archiveIds.has(id)) return "ARCHIVE";
     if (humanCounterpartIds.has(id)) return "CONTREPARTIE HUMAINE";
     if (humanArchiveIds.has(id)) return "FAMILLE HUMAINE / ARCHIVE";
     if (realWorldHumanIds.has(id)) return "HUMAIN DU MONDE REEL";
+    if (['jaxmindviolent', 'jaxmindcomic', 'jaxmindtrapped'].includes(id)) return "PROJECTION MENTALE";
     if (['cellarabstraction', 'aquaticabstraction'].includes(id)) return "PHENOMENE / ABSTRACTION";
     if (['stabbedragdolls', 'coiledcentipedes', 'unusedbrainscans'].includes(id)) return "ARTEFACT / DECOR";
-    if (['bonepastor', 'themachine', 'additionalvoices'].includes(id)) return "PRODUCTION / HORS TIMELINE";
+    if (['bonepastor', 'themachine'].includes(id)) return "PRODUCTION / HORS TIMELINE";
     if (id === 'spudsycustomer') return "RECONSTRUCTION CAINOS";
     if (variantSignals.some(token => id.includes(token))) return "VARIANTE";
-    if (id.startsWith("gloink") || ['gummigoo', 'max', 'chad', 'loolilalu', 'fudge', 'orbsman', 'ming', 'mannequin', 'sun', 'moon', 'abel', 'abelmannequin', 'abelfullbody', 'baronmildenhall', 'marthamildenhall', 'ghostly', 'angel', 'disappearingguy', 'committeemember', 'truthtellerfish', 'liarfish', 'shrimpnpc', 'chineseroomnpc', 'blueai', 'cookiebutterfly', 'gummyelephant', 'giantcentipede', 'drfootball', 'stupidburgermannequin', 'cerealmannequin', 'candyguardcyan', 'candyguardblue', 'candyguardpurple', 'redmannequin', 'orangemannequin', 'yellowmannequin', 'magentamannequin', 'gummyworm', 'barrelmonkey', 'jeffery', 'mildenhallsouls', 'albertspudsy', 'fourthcrocodile', 'ragathamothershadow', 'paintedmasks', 'zoobleparts', 'laughingshadows', 'floatingworm', 'creditsfish'].includes(id)) return "PNJ / DECOR";
+    if (id.startsWith("gloink") || ['gummigoo', 'max', 'chad', 'loolilalu', 'fudge', 'orbsman', 'ming', 'mannequin', 'peekingmannequin', 'additionalvoices', 'sun', 'moon', 'abel', 'abelmannequin', 'abelfullbody', 'baronmildenhall', 'marthamildenhall', 'ghostly', 'angel', 'disappearingguy', 'committeemember', 'truthtellerfish', 'liarfish', 'shrimpnpc', 'chineseroomnpc', 'blueai', 'cookiebutterfly', 'gummyelephant', 'giantcentipede', 'drfootball', 'stupidburgermannequin', 'cerealmannequin', 'candyguardcyan', 'candyguardblue', 'candyguardpurple', 'redmannequin', 'orangemannequin', 'yellowmannequin', 'magentamannequin', 'gummyworm', 'barrelmonkey', 'jeffery', 'mildenhallsouls', 'albertspudsy', 'fourthcrocodile', 'ragathamothershadow', 'paintedmasks', 'zoobleparts', 'laughingshadows', 'floatingworm', 'creditsfish'].includes(id)) return "PNJ / DECOR";
     return "ACTIF";
   },
 
@@ -12863,6 +13343,7 @@ const OS = {
   isCanonicalEpisodeVariant(id) {
     return new Set([
       'workgangle', 'beachgangle', 'hunterjax', 'rhinogangle', 'maidjax',
+      'peeledjax', 'spudsypomni', 'spudsyjax', 'spudsyragatha', 'spudsyzooble',
       'japanesejax', 'japaneseragatha', 'japanesepomni', 'japanesekinger', 'japanesegangle', 'japanesezooble',
       'baseballjax', 'baseballzooble', 'baseballgangle', 'baseballragatha', 'baseballpomni', 'baseballkinger',
       'rivalbaseballzooble', 'rivalbaseballpomni', 'rivalbaseballpinkgiant', 'rivalbaseballragatha', 'rivalbaseballjax', 'rivalbaseballkinger'
@@ -12885,6 +13366,7 @@ const OS = {
     if (status.includes("PRODUCTION")) return "PRODUCTION / HORS TIMELINE";
     if (status.includes("PHENOMENE")) return "PHENOMENE D ABSTRACTION";
     if (status.includes("ARTEFACT")) return "ARTEFACT / DECOR CANON";
+    if (status.includes("PROJECTION")) return "PROJECTION MENTALE CANON";
     if (status.includes("RECONSTRUCTION")) return "RECONSTRUCTION CAINOS / HORS CANON";
     if (status.includes("CONTREPARTIE HUMAINE")) return "CONTREPARTIE HUMAINE / MONDE REEL";
     if (status.includes("FAMILLE HUMAINE")) return "ARCHIVE HUMAINE / MONDE REEL";
@@ -12899,14 +13381,15 @@ const OS = {
     const data = char || this.getWackyCastData()[id];
     if (!data) return 'reconstruction';
     if (this.isFanSkin(id, data)) return 'fan';
-    if (['bonepastor', 'themachine', 'additionalvoices'].includes(id)) return 'production';
+    if (['bonepastor', 'themachine'].includes(id)) return 'production';
     if (id === 'spudsycustomer') return 'reconstruction';
     if (this.isCanonicalEpisodeVariant(id)) return 'canon-visual';
     const canonProfiles = new Set([
       'pomni', 'caine', 'bubble', 'jax', 'ragatha', 'kinger', 'gangle', 'zooble',
-      'kaufmo', 'abstractedkaufmo', 'cellarabstraction', 'aquaticabstraction', 'queenie', 'gummigoo', 'loolilalu', 'fudge', 'orbsman', 'sun', 'moon',
+      'kaufmo', 'abstractedkaufmo', 'abstractedjax', 'cellarabstraction', 'aquaticabstraction',
+      'queenie', 'abstractedqueeniedark', 'abstractedqueenie', 'gummigoo', 'loolilalu', 'fudge', 'orbsman', 'sun', 'moon',
       'ribbit', 'scratch', 'wormo', 'bizco', 'rattie', 'spike', 'pinkcyclops',
-      'yellowclown', 'oyster', 'bulbcreature', 'max', 'chad', 'ming', 'mannequin',
+      'yellowclown', 'oyster', 'bulbcreature', 'max', 'chad', 'ming', 'mannequin', 'peekingmannequin', 'additionalvoices',
       'gloinkqueen', 'gloinkqueenscale', 'abel', 'abelmannequin', 'abelfullbody',
       'baronmildenhall', 'marthamildenhall', 'ghostly', 'angel', 'disappearingguy',
       'committeemember', 'truthtellerfish', 'liarfish', 'shrimpnpc', 'chineseroomnpc',
@@ -12919,7 +13402,8 @@ const OS = {
       'laughingshadows', 'floatingworm', 'creditsfish', 'stabbedragdolls',
       'coiledcentipedes', 'unusedbrainscans', 'abigailbrooks', 'suzieackerman', 'zoeyraghavan',
       'rileyverselis', 'grantbest', 'leeroymateo', 'jaxfather', 'jaxmother',
-      'abigailfriendone', 'abigailfriendtwo', 'bestchildren'
+      'abigailfriendone', 'abigailfriendtwo', 'bestchildren',
+      'jaxmindviolent', 'jaxmindcomic', 'jaxmindtrapped'
     ]);
     if (canonProfiles.has(id) || id.startsWith('gloink')) return 'canon-visual';
     return 'reconstruction';
@@ -12949,17 +13433,30 @@ const OS = {
       ],
       bubble: ['Assistant de Caine present dans le Cirque; CainOS ne lui attribue aucune identite humaine.'],
       jax: ['Resident du Cirque connu pour provoquer les autres; son identite civile et son age ne sont pas confirmes.'],
+      abstractedjax: ['Jax devient la treizieme abstraction connue dans Remember. Sa forme active est non verbale et l obscurite la calme.'],
+      peeledjax: ['Etat visuel temporaire de Jax pendant la sequence de tourment de hjsakldfhl; il ne s agit pas d un personnage distinct.'],
+      jaxmindviolent: ['Killer Jax est une projection interne canonique rencontree dans la psyche de Jax pendant Remember.'],
+      jaxmindcomic: ['Cartoonish Jax est une projection interne canonique qui transforme les situations en gag dans la psyche de Jax.'],
+      jaxmindtrapped: ['Piano Jax est enchaine a un piano dans l espace mental de Jax et remet silencieusement une cle a Pomni.'],
       ragatha: ['Residante qui tente regulierement de rassurer Pomni et le groupe; son identite civile et son age ne sont pas confirmes.'],
       kinger: ['Resident de longue date represente comme une piece d echecs; les revelations tardives restent verrouillees par progression.'],
       gangle: ['Residante composee de rubans et de masques de comedie et de tragedie; son identite civile et son age ne sont pas confirmes.'],
       zooble: ['Resident au corps modulaire qui exprime souvent son refus des aventures de Caine; son identite civile et son age ne sont pas confirmes.'],
       kaufmo: ['Portrait de Kaufmo avant abstraction. Cette apparence est une archive et ne represente pas son etat actif dans le Pilote.'],
       abstractedkaufmo: ['Forme abstraite de Kaufmo rencontree dans le Pilote: corps noir quadrupede, tete conique et nombreux yeux multicolores. Elle ne parle pas.'],
+      abstractedqueeniedark: ['Queenie abstraite calmee par l obscurite: forme lisse, yeux alignes et comportement passif, sans retour a son etat humain.'],
+      abstractedqueenie: ['Queenie abstraite exposee a la lumiere: forme quadrupede noire, dechiquetee et ferale, sans traits individuels lisibles.'],
       cellarabstraction: ['Etat d abstraction terrestre enferme dans le Cellar. Les abstractions produisent des cris, grondements et parasites, pas du dialogue.'],
       aquaticabstraction: ['Forme tentaculaire noire aux nombreux yeux multicolores visible dans l aquarium des abstractions de Remember.'],
-      sun: ['PNJ celeste jaune a couronne orange, grands yeux orange a cils et large sourire. Il parle et reagit aux residents.'],
+      sun: ['PNJ celeste jaune a couronne orange, grands yeux orange a cils et large sourire. Elle parle et reagit aux residents.'],
       moon: ['PNJ celeste en croissant bleu clair aux traits bleu fonce. Elle parle directement a Caine et lui declare son affection.'],
       queenie: ['Ancienne membre liee a Kinger. Sa presence active n est pas affirmee hors des scenes ou souvenirs debloques.'],
+      peekingmannequin: ['Mannequin orange articule vu en train d observer la scene dans Candy Carrier Chaos!; aucun nom propre ni dialogue ne sont confirmes.'],
+      additionalvoices: ['Mannequin rose-violet visible dans Candy Carrier Chaos!; Additional Voices est un surnom non officiel, pas son nom canonique.'],
+      spudsypomni: ['Uniforme de travail canonique porte par Pomni pendant Fast Food Masquerade.'],
+      spudsyjax: ['Uniforme de travail canonique porte par Jax pendant Fast Food Masquerade.'],
+      spudsyragatha: ['Uniforme de travail canonique porte par Ragatha pendant Fast Food Masquerade.'],
+      spudsyzooble: ['Uniforme de travail canonique adapte au corps modulaire de Zooble pendant Fast Food Masquerade.'],
       gummigoo: ['PNJ crocodile de Candy Carrier Chaos!; CainOS ne le classe pas comme sujet humain.'],
       candyguardcyan: ['Garde mannequin silencieux de Candy Canyon. Sa teinte cyan ne constitue pas une identite individuelle confirmee.'],
       candyguardblue: ['Garde mannequin silencieux de Candy Canyon. Sa teinte bleue ne constitue pas une identite individuelle confirmee.'],
@@ -13035,14 +13532,15 @@ const OS = {
 
   getWackyVariantGroups() {
     return {
-      pomni: ['pomni', 'maidpomni', 'japanesepomni', 'baseballpomni', 'rivalbaseballpomni', 'shadowpomni', 'evilpomni', 'horrorpomnivoid', 'horrorpomnispiral', 'horrorpomniskull'],
-      jax: ['jax', 'maidjax', 'jaxgirl', 'japanesejax', 'baseballjax', 'rivalbaseballjax', 'hunterjax', 'darkduojax', 'shadowjax', 'eviljax'],
-      ragatha: ['ragatha', 'maidragatha', 'japaneseragatha', 'baseballragatha', 'rivalbaseballragatha', 'shadowragatha', 'evilragatha'],
+      pomni: ['pomni', 'spudsypomni', 'maidpomni', 'japanesepomni', 'baseballpomni', 'rivalbaseballpomni', 'shadowpomni', 'evilpomni', 'horrorpomnivoid', 'horrorpomnispiral', 'horrorpomniskull'],
+      jax: ['jax', 'peeledjax', 'spudsyjax', 'maidjax', 'jaxgirl', 'japanesejax', 'baseballjax', 'rivalbaseballjax', 'hunterjax', 'jaxmindviolent', 'jaxmindcomic', 'jaxmindtrapped', 'abstractedjax', 'darkduojax', 'shadowjax', 'eviljax'],
+      ragatha: ['ragatha', 'spudsyragatha', 'maidragatha', 'japaneseragatha', 'baseballragatha', 'rivalbaseballragatha', 'shadowragatha', 'evilragatha'],
       kinger: ['kinger', 'japanesekinger', 'baseballkinger', 'rivalbaseballkinger', 'shadowkinger', 'evilkinger'],
       gangle: ['gangle', 'ganglekawaii', 'ganglecomedy', 'gangletragedy', 'maidgangle', 'beachgangle', 'japanesegangle', 'rhinogangle', 'workgangle', 'baseballgangle', 'darkduogangle', 'shadowgangle'],
-      zooble: ['zooble', 'japanesezooble', 'baseballzooble', 'rivalbaseballzooble', 'shadowzooble', 'evilzooble'],
+      zooble: ['zooble', 'spudsyzooble', 'japanesezooble', 'baseballzooble', 'rivalbaseballzooble', 'shadowzooble', 'evilzooble'],
       gummigoo: ['gummigoo', 'japanesegummigoo'],
       kaufmo: ['kaufmo', 'abstractedkaufmo'],
+      queenie: ['queenie', 'abstractedqueeniedark', 'abstractedqueenie'],
       caine: ['caine', 'shadowcaine'],
       abel: ['abel', 'abelmannequin', 'abelfullbody'],
       gloinkqueen: ['gloinkqueen', 'gloinkqueenscale', 'gloinkstar', 'gloinkcube', 'gloinkpyramid', 'gloinkcrescent', 'gloinkpin', 'gloinkround']
@@ -13462,6 +13960,24 @@ const OS = {
     if (canonLSheetMap[avatar]) {
       const [col, row] = canonLSheetMap[avatar];
       return `<span class="pixel-sheet-avatar-canon-l avatar-cl-c${col}-r${row}" style="--avatar-size:${size}px" aria-hidden="true"></span>`;
+    }
+
+    const canonMSheetMap = {
+      abstractedjax: [0, 0], abstractedqueeniedark: [1, 0], abstractedqueenie: [2, 0],
+      peeledjax: [3, 0], jaxmindviolent: [4, 0], jaxmindcomic: [5, 0]
+    };
+    if (canonMSheetMap[avatar]) {
+      const [col, row] = canonMSheetMap[avatar];
+      return `<span class="pixel-sheet-avatar-canon-m avatar-cm-c${col}-r${row}" style="--avatar-size:${size}px" aria-hidden="true"></span>`;
+    }
+
+    const canonNSheetMap = {
+      jaxmindtrapped: [0, 0], spudsypomni: [1, 0], spudsyjax: [2, 0],
+      spudsyragatha: [3, 0], spudsyzooble: [4, 0], peekingmannequin: [5, 0]
+    };
+    if (canonNSheetMap[avatar]) {
+      const [col, row] = canonNSheetMap[avatar];
+      return `<span class="pixel-sheet-avatar-canon-n avatar-cn-c${col}-r${row}" style="--avatar-size:${size}px" aria-hidden="true"></span>`;
     }
 
     const px = (x, y, w, h, fill) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${fill}"/>`;

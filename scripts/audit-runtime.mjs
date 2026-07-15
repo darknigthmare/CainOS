@@ -12,6 +12,8 @@ const canonPackIUrl = new URL('../assets/images/cainos-pixel-cast-sheet-canon-np
 const canonPackJUrl = new URL('../assets/images/cainos-pixel-cast-sheet-canon-npc-pack-j.png', import.meta.url);
 const canonPackKUrl = new URL('../assets/images/cainos-pixel-cast-sheet-canon-npc-pack-k.png', import.meta.url);
 const canonPackLUrl = new URL('../assets/images/cainos-pixel-cast-sheet-canon-npc-pack-l.png', import.meta.url);
+const canonPackMUrl = new URL('../assets/images/cainos-pixel-cast-sheet-canon-npc-pack-m.png', import.meta.url);
+const canonPackNUrl = new URL('../assets/images/cainos-pixel-cast-sheet-canon-npc-pack-n.png', import.meta.url);
 
 const failures = [];
 const requireMarker = (source, marker, label = marker) => {
@@ -89,6 +91,8 @@ for (let episode = 1; episode <= 9; episode++) {
   "canonJ: 'assets/images/cainos-pixel-cast-sheet-canon-npc-pack-j.png'",
   "canonK: 'assets/images/cainos-pixel-cast-sheet-canon-npc-pack-k.png'",
   "canonL: 'assets/images/cainos-pixel-cast-sheet-canon-npc-pack-l.png'",
+  "canonM: 'assets/images/cainos-pixel-cast-sheet-canon-npc-pack-m.png'",
+  "canonN: 'assets/images/cainos-pixel-cast-sheet-canon-npc-pack-n.png'",
   'candyguardcyan: [0, 0]',
   'gummyworm: [3, 0]',
   'barrelmonkey: [4, 0]',
@@ -125,6 +129,18 @@ for (let episode = 1; episode <= 9; episode++) {
   'stabbedragdolls: [2, 0]',
   'coiledcentipedes: [3, 0]',
   'unusedbrainscans: [4, 0]',
+  'abstractedjax: [0, 0]',
+  'abstractedqueeniedark: [1, 0]',
+  'abstractedqueenie: [2, 0]',
+  'peeledjax: [3, 0]',
+  'jaxmindviolent: [4, 0]',
+  'jaxmindcomic: [5, 0]',
+  'jaxmindtrapped: [0, 0]',
+  'spudsypomni: [1, 0]',
+  'spudsyjax: [2, 0]',
+  'spudsyragatha: [3, 0]',
+  'spudsyzooble: [4, 0]',
+  'peekingmannequin: [5, 0]',
   "kind: 'lorebillboard', avatar: 'paintedmasks'",
   "kind: 'lorebillboard', avatar: 'zoobleparts'",
   "kind: 'lorebillboard', avatar: 'abigailbrooks'",
@@ -141,7 +157,10 @@ for (let episode = 1; episode <= 9; episode++) {
   "name: 'Blue AI'",
   "blueai: { episode: 9, subepisode: 6 }",
   "if (sprite.loreGate && !this.hasCircusLoreGate(sprite.loreGate)) return false",
-  "blueai: ['IA canonique developpee par C&A"
+  "blueai: ['IA canonique developpee par C&A",
+  'drawCircusCanonEventVfx',
+  "id === 'gummigoo_delete'",
+  "id === 'world_collapse'"
 ].forEach(marker => requireMarker(app, marker));
 
 [
@@ -185,6 +204,8 @@ for (let episode = 2; episode <= 9; episode++) {
   '.pixel-sheet-avatar-canon-j',
   '.pixel-sheet-avatar-canon-k',
   '.pixel-sheet-avatar-canon-l',
+  '.pixel-sheet-avatar-canon-m',
+  '.pixel-sheet-avatar-canon-n',
   '.avatar-ce-c5-r0',
   '.avatar-cf-c5-r0',
   '.avatar-cg-c3-r0',
@@ -192,7 +213,9 @@ for (let episode = 2; episode <= 9; episode++) {
   '.avatar-ci-c5-r0',
   '.avatar-cj-c4-r0',
   '.avatar-ck-c5-r0',
-  '.avatar-cl-c4-r0'
+  '.avatar-cl-c4-r0',
+  '.avatar-cm-c5-r0',
+  '.avatar-cn-c5-r0'
 ].forEach(marker => requireMarker(css, marker));
 
 if (!fs.existsSync(canonPackEUrl)) {
@@ -241,6 +264,18 @@ if (!fs.existsSync(canonPackLUrl)) {
   failures.push('Planche canon NPC pack L absente');
 } else if (fs.statSync(canonPackLUrl).size < 100000) {
   failures.push('Planche canon NPC pack L vide ou tronquee');
+}
+
+if (!fs.existsSync(canonPackMUrl)) {
+  failures.push('Planche canon NPC pack M absente');
+} else if (fs.statSync(canonPackMUrl).size < 100000) {
+  failures.push('Planche canon NPC pack M vide ou tronquee');
+}
+
+if (!fs.existsSync(canonPackNUrl)) {
+  failures.push('Planche canon NPC pack N absente');
+} else if (fs.statSync(canonPackNUrl).size < 100000) {
+  failures.push('Planche canon NPC pack N vide ou tronquee');
 }
 
 const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map(match => match[1]);
