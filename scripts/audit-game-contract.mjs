@@ -339,9 +339,9 @@ for (const [avatar, profileKey] of Object.entries(canonPackNProfileKeys)) {
 for (const [avatar, zone] of Object.entries({
   abstractedjax: 18,
   abstractedqueeniedark: 17,
-  jaxmindviolent: 41,
-  jaxmindcomic: 41,
-  jaxmindtrapped: 41,
+  jaxmindviolent: 74,
+  jaxmindcomic: 74,
+  jaxmindtrapped: 74,
   spudsypomni: 10,
   spudsyjax: 10,
   spudsyragatha: 10,
@@ -427,7 +427,7 @@ if (blueSprite?.name !== 'Blue AI' || blueSprite?.loreGate?.episode !== 9) failu
 if (OS.getWackyCastData().fly) failures.push('MOUCHE MILDENHALL: ne doit pas avoir de profil Wacky Watch');
 
 const episodeOneCast = OS.getEpisodeCastKeys(1) || [];
-for (const avatar of ['abstractedkaufmo', 'cellarabstraction']) {
+for (const avatar of ['abstractedkaufmo', 'cellarabstraction', 'jumbledragatha']) {
   if (!episodeOneCast.includes(avatar)) failures.push(`EP1: ${avatar} absent de la distribution canon`);
 }
 const episodeThreeCast = OS.getEpisodeCastKeys(3) || [];
@@ -438,8 +438,31 @@ if ((OS.getEpisodeCastKeys(4) || []).includes('spudsycustomer')) failures.push('
 for (const avatar of ['stabbedragdolls', 'coiledcentipedes']) {
   if (!(OS.getEpisodeCastKeys(8) || []).includes(avatar)) failures.push(`EP8: decor ${avatar} absent`);
 }
-for (const avatar of ['moon', 'aquaticabstraction', 'floatingworm', 'creditsfish', 'unusedbrainscans']) {
+for (const avatar of ['moon', 'aquaticabstraction', 'floatingworm', 'creditsfish', 'unusedbrainscans', 'abstractedribbit', 'destinybest', 'whatifragatha', 'whatifgangle', 'jumbledpomni']) {
   if (!episodeNineCast.includes(avatar)) failures.push(`EP9: ${avatar} absent de la distribution`);
+}
+for (const avatar of ['abstractedribbit', 'destinybest', 'whatifragatha', 'whatifgangle', 'jumbledragatha', 'jumbledpomni']) {
+  if (!OS.getWackyCastData()[avatar]) failures.push(`PACK O: fiche ${avatar} absente`);
+  if (!OS.getPixelAvatarSvg(avatar, 48).includes('pixel-sheet-avatar-canon-o')) failures.push(`PACK O: portrait ${avatar} hors planche O`);
+  if (OS.getWackyProvenanceKind(avatar) !== 'canon-visual') failures.push(`PACK O: provenance ${avatar} incorrecte`);
+}
+if (OS.getWackyProfileStatus('abstractedribbit') !== 'ARCHIVE') failures.push('PACK O: Ribbit abstraite doit rester archivee');
+if (OS.getWackyProfileStatus('destinybest') !== 'CONTREPARTIE HUMAINE') failures.push('PACK O: Destiny Best mal classee');
+for (const avatar of ['whatifragatha', 'whatifgangle']) {
+  if (OS.getWackyProfileStatus(avatar) !== 'PROJECTION MENTALE') failures.push(`PACK O: ${avatar} doit rester une projection mentale`);
+}
+for (const avatar of ['jumbledragatha', 'jumbledpomni']) {
+  if (OS.getWackyProfileStatus(avatar) !== 'VFX / ETAT TEMPORAIRE') failures.push(`PACK O: ${avatar} doit rester un VFX temporaire`);
+}
+if (!OS.getCircusZoneSprites(73).some(entry => entry.avatar === 'abstractedribbit' && entry.silent && entry.threatActive === false)) {
+  failures.push('PACK O: scan non hostile de Ribbit abstraite absent de la salle C&A');
+}
+if (!OS.getCircusZoneProps(19).some(entry => entry.avatar === 'destinybest' && entry.kind === 'lorebillboard')) {
+  failures.push('PACK O: projection humaine Destiny Best absente des archives');
+}
+for (const [zone, kinds] of [[70, ['building', 'wave']], [71, ['stairs', 'candle']], [72, ['building', 'spotlight']], [73, ['desk', 'console', 'memory']], [74, ['memory', 'archive']], [75, ['tower', 'ring']]]) {
+  const props = OS.getCircusZoneProps(zone);
+  for (const kind of kinds) if (!props.some(prop => prop.kind === kind)) failures.push(`FPS ${zone}: decor ${kind} absent`);
 }
 for (const avatar of ['horrorghost', 'horrormonster', 'horrorpomnivoid', 'horrorpomnispiral', 'horrorpomniskull', 'shadowpomni', 'shadowkinger']) {
   if (OS.getWackyProvenanceKind(avatar) !== 'fan') failures.push(`FAN: ${avatar} n est pas isole hors timeline`);
@@ -447,7 +470,7 @@ for (const avatar of ['horrorghost', 'horrormonster', 'horrorpomnivoid', 'horror
 for (const avatar of ['bonepastor', 'themachine']) {
   if (OS.getWackyProfileStatus(avatar) !== 'PRODUCTION / HORS TIMELINE') failures.push(`PRODUCTION: statut ${avatar} incorrect`);
   if (OS.getWackyProvenanceKind(avatar) !== 'production') failures.push(`PRODUCTION: provenance ${avatar} incorrecte`);
-  for (let zone = 0; zone <= 69; zone += 1) {
+  for (let zone = 0; zone <= 75; zone += 1) {
     if (OS.getCircusZoneSprites(zone).some(entry => (entry.avatar || entry.type) === avatar)) {
       failures.push(`PRODUCTION: ${avatar} apparait comme PNJ physique en zone ${zone}`);
     }

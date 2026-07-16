@@ -14,6 +14,7 @@ const canonPackKUrl = new URL('../assets/images/cainos-pixel-cast-sheet-canon-np
 const canonPackLUrl = new URL('../assets/images/cainos-pixel-cast-sheet-canon-npc-pack-l.png', import.meta.url);
 const canonPackMUrl = new URL('../assets/images/cainos-pixel-cast-sheet-canon-npc-pack-m.png', import.meta.url);
 const canonPackNUrl = new URL('../assets/images/cainos-pixel-cast-sheet-canon-npc-pack-n.png', import.meta.url);
+const canonPackOUrl = new URL('../assets/images/cainos-pixel-cast-sheet-canon-npc-pack-o.png', import.meta.url);
 
 const failures = [];
 const requireMarker = (source, marker, label = marker) => {
@@ -93,6 +94,7 @@ for (let episode = 1; episode <= 9; episode++) {
   "canonL: 'assets/images/cainos-pixel-cast-sheet-canon-npc-pack-l.png'",
   "canonM: 'assets/images/cainos-pixel-cast-sheet-canon-npc-pack-m.png'",
   "canonN: 'assets/images/cainos-pixel-cast-sheet-canon-npc-pack-n.png'",
+  "canonO: 'assets/images/cainos-pixel-cast-sheet-canon-npc-pack-o.png'",
   'candyguardcyan: [0, 0]',
   'gummyworm: [3, 0]',
   'barrelmonkey: [4, 0]',
@@ -141,6 +143,17 @@ for (let episode = 1; episode <= 9; episode++) {
   'spudsyragatha: [3, 0]',
   'spudsyzooble: [4, 0]',
   'peekingmannequin: [5, 0]',
+  'abstractedribbit: [0, 0]',
+  'destinybest: [1, 0]',
+  'whatifragatha: [2, 0]',
+  'whatifgangle: [3, 0]',
+  'jumbledragatha: [4, 0]',
+  'jumbledpomni: [5, 0]',
+  "name: 'SHRIMP TOWN / RECONSTRUCTION LIMITEE'",
+  "name: 'SNOWY TUNDRA'",
+  'C&A BRAIN SCANNER ROOM',
+  "name: 'JAX PSYCHE'",
+  'EXPANDED GROUNDS / POST-REMEMBER',
   "kind: 'lorebillboard', avatar: 'paintedmasks'",
   "kind: 'lorebillboard', avatar: 'zoobleparts'",
   "kind: 'lorebillboard', avatar: 'abigailbrooks'",
@@ -206,6 +219,7 @@ for (let episode = 2; episode <= 9; episode++) {
   '.pixel-sheet-avatar-canon-l',
   '.pixel-sheet-avatar-canon-m',
   '.pixel-sheet-avatar-canon-n',
+  '.pixel-sheet-avatar-canon-o',
   '.avatar-ce-c5-r0',
   '.avatar-cf-c5-r0',
   '.avatar-cg-c3-r0',
@@ -215,7 +229,8 @@ for (let episode = 2; episode <= 9; episode++) {
   '.avatar-ck-c5-r0',
   '.avatar-cl-c4-r0',
   '.avatar-cm-c5-r0',
-  '.avatar-cn-c5-r0'
+  '.avatar-cn-c5-r0',
+  '.avatar-co-c5-r0'
 ].forEach(marker => requireMarker(css, marker));
 
 if (!fs.existsSync(canonPackEUrl)) {
@@ -276,6 +291,12 @@ if (!fs.existsSync(canonPackNUrl)) {
   failures.push('Planche canon NPC pack N absente');
 } else if (fs.statSync(canonPackNUrl).size < 100000) {
   failures.push('Planche canon NPC pack N vide ou tronquee');
+}
+
+if (!fs.existsSync(canonPackOUrl)) {
+  failures.push('Planche canon NPC pack O absente');
+} else if (fs.statSync(canonPackOUrl).size < 100000) {
+  failures.push('Planche canon NPC pack O vide ou tronquee');
 }
 
 const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map(match => match[1]);

@@ -1682,26 +1682,32 @@ const OS = {
       66: { name: 'CANDY PALACE UPPER GALLERY / RECONSTRUCTION', short: 'PALAIS II', detail: 'Galerie haute reconstruite depuis l architecture du palais de Loolilalu; circulation CainOS non montree dans l episode.', color: '#ff9ad5', floor: '#ffe1ed', ceiling: '#7d3f8c', unlocked: unlockedAt(2, 2) },
       67: { name: 'CANDY PALACE BALCONY / RECONSTRUCTION', short: 'BALCON', detail: 'Balcon d observation CainOS raccorde au palais. La vue respecte le royaume, mais ce niveau reste une reconstruction.', color: '#ffd84a', floor: '#ffcae1', ceiling: '#70a7ff', unlocked: unlockedAt(2, 2) },
       68: { name: 'LIGHTHOUSE INTERIOR / RECONSTRUCTION', short: 'PHARE INT.', detail: 'Interieur praticable du phare reconstruit par CainOS depuis sa silhouette et son acces au toboggan.', color: '#ff6a55', floor: '#ead17b', ceiling: '#79e8ff', unlocked: unlockedAt(7, 1) },
-      69: { name: 'LIGHTHOUSE LANTERN / RECONSTRUCTION', short: 'LANTERNE', detail: 'Lanterne haute CainOS avec vue sur le lac. Le phare est canonique; cette circulation interieure ne l est pas.', color: '#fff1a8', floor: '#d9b94f', ceiling: '#4ee7ff', unlocked: unlockedAt(7, 1) }
+      69: { name: 'LIGHTHOUSE LANTERN / RECONSTRUCTION', short: 'LANTERNE', detail: 'Lanterne haute CainOS avec vue sur le lac. Le phare est canonique; cette circulation interieure ne l est pas.', color: '#fff1a8', floor: '#d9b94f', ceiling: '#4ee7ff', unlocked: unlockedAt(7, 1) },
+      70: { name: 'SHRIMP TOWN / RECONSTRUCTION LIMITEE', short: 'SHRIMP TOWN', detail: 'Monde nomme dans la franchise. CainOS ne reconstruit que les reperes confirmes autour du Shrimp NPC.', color: '#ff8f4a', floor: '#d9b66f', ceiling: '#69c9e8', unlocked: unlockedAt(7, 3) },
+      71: { name: 'SNOWY TUNDRA', short: 'TOUNDRA', detail: 'Micro-aventure enneigee entrevue dans Untitled; distincte du Snowy Summit de Remember.', color: '#e8f7ff', floor: '#cfe6ef', ceiling: '#7aa7cc', unlocked: unlockedAt(5, 1) },
+      72: { name: "SPUDSY'S PARKING LOT", short: 'PARKING', detail: 'Exterieur du restaurant ou le service de Gangle se termine brutalement.', color: '#ff4d4d', floor: '#36363d', ceiling: '#41213c', unlocked: unlockedAt(4, 7) },
+      73: { name: 'C&A BRAIN SCANNER ROOM', short: 'SCANNER', detail: 'Salle C&A inachevee: poste de Scratch, vieux PC, casque et scanners cerebraux de Remember.', color: '#c5d6e8', floor: '#8e959f', ceiling: '#252a31', unlocked: unlockedAt(9, 6) },
+      74: { name: 'JAX PSYCHE', short: 'PSYCHE JAX', detail: 'Espace mental de Remember contenant les personas, souvenirs et projections de Jax.', color: '#8a4fd6', floor: '#24192f', ceiling: '#08050d', unlocked: unlockedAt(9, 4) },
+      75: { name: 'EXPANDED GROUNDS / POST-REMEMBER', short: 'GROUNDS +', detail: 'Extension des Grounds apres Remember: ilots flottants, biomes relies et grand toboggan.', color: '#7df0ff', floor: '#2b5d3b', ceiling: '#4e9de0', unlocked: unlocked(9) }
     };
     const scenes = {
       2: { exits: [3, 4, 5, 20, 21, 28, 29, 43], motif: 'circus', size: 23 },
-      3: { exits: [2, 11, 14, 42], motif: 'grounds', size: 21 },
+      3: { exits: [2, 11, 14, 42, 75], motif: 'grounds', size: 21 },
       4: { exits: [2, 5], motif: 'cellar', size: 13 },
-      5: { exits: [2, 4, 16, 27], motif: 'exit', size: 15 },
+      5: { exits: [2, 4, 16, 27, 73], motif: 'exit', size: 15 },
       6: { exits: [7, 29, 32, 33], motif: 'candy', size: 19 },
       7: { exits: [6, 16, 33], motif: 'test', size: 13 },
       8: { exits: [9, 29, 64], motif: 'manor', size: 17 },
       9: { exits: [8, 34], motif: 'basement', size: 13 },
-      10: { exits: [11, 29, 35, 36, 37], motif: 'spudsy', size: 17 },
-      11: { exits: [3, 10, 12, 13, 24, 25, 26, 29], motif: 'micro', size: 19 },
+      10: { exits: [11, 29, 35, 36, 37, 72], motif: 'spudsy', size: 17 },
+      11: { exits: [3, 10, 12, 13, 24, 25, 26, 29, 71], motif: 'micro', size: 19 },
       12: { exits: [11], motif: 'softball', size: 19 },
       13: { exits: [11, 29, 38], motif: 'guns', size: 17 },
-      14: { exits: [3, 15, 39, 40], motif: 'lake', size: 21 },
+      14: { exits: [3, 15, 39, 40, 70], motif: 'lake', size: 21 },
       15: { exits: [14, 16, 41], motif: 'admin', size: 13 },
-      16: { exits: [5, 7, 15, 17, 18, 29], motif: 'core', size: 17 },
+      16: { exits: [5, 7, 15, 17, 18, 29, 73], motif: 'core', size: 17 },
       17: { exits: [16], motif: 'memory', size: 13 },
-      18: { exits: [16, 19, 21, 22, 23, 29], motif: 'final', size: 19 },
+      18: { exits: [16, 19, 21, 22, 23, 29, 74, 75], motif: 'final', size: 19 },
       19: { exits: [18], motif: 'archive', size: 15 },
       20: { exits: [2, 28, 50, 51], motif: 'dorm', size: 21 },
       21: { exits: [2, 18, 43], motif: 'cafe', size: 15 },
@@ -1734,7 +1740,13 @@ const OS = {
       66: { exits: [32, 67], motif: 'palace', size: 15 },
       67: { exits: [66], motif: 'palace', size: 13 },
       68: { exits: [39, 69], motif: 'lighthouse', size: 13 },
-      69: { exits: [68, 14], motif: 'lighthouse', size: 11 }
+      69: { exits: [68, 14], motif: 'lighthouse', size: 11 },
+      70: { exits: [14], motif: 'grounds', size: 17 },
+      71: { exits: [11], motif: 'snow', size: 19 },
+      72: { exits: [10], motif: 'street', size: 17 },
+      73: { exits: [16, 5], motif: 'exit', size: 15 },
+      74: { exits: [18], motif: 'memory', size: 17 },
+      75: { exits: [3, 18], motif: 'grounds', size: 23 }
     };
 
     Object.entries(this.getCircusBedroomDefinitions()).forEach(([zoneId, room]) => {
@@ -2034,6 +2046,7 @@ const OS = {
       canonL: 'assets/images/cainos-pixel-cast-sheet-canon-npc-pack-l.png',
       canonM: 'assets/images/cainos-pixel-cast-sheet-canon-npc-pack-m.png',
       canonN: 'assets/images/cainos-pixel-cast-sheet-canon-npc-pack-n.png',
+      canonO: 'assets/images/cainos-pixel-cast-sheet-canon-npc-pack-o.png',
       pomnianimation: 'assets/images/cainos-pomni-animation-sheet.png',
       jaxanimation: 'assets/images/cainos-jax-animation-sheet.png',
       ragathaanimation: 'assets/images/cainos-ragatha-animation-sheet.png',
@@ -2203,6 +2216,10 @@ const OS = {
       { sheet: 'canonN', cols: 6, rows: 1, map: {
         jaxmindtrapped: [0, 0], spudsypomni: [1, 0], spudsyjax: [2, 0],
         spudsyragatha: [3, 0], spudsyzooble: [4, 0], peekingmannequin: [5, 0]
+      }},
+      { sheet: 'canonO', cols: 6, rows: 1, map: {
+        abstractedribbit: [0, 0], destinybest: [1, 0], whatifragatha: [2, 0],
+        whatifgangle: [3, 0], jumbledragatha: [4, 0], jumbledpomni: [5, 0]
       }}
     ];
     for (const table of tables) {
@@ -2270,7 +2287,8 @@ const OS = {
       [25, 'ANIME HIGH SCHOOL'], [26, 'WHITE HOUSE'], [27, 'THE VOID'], [28, 'ESPACE COMMUN'], [29, 'GALERIE DES PORTES'],
       [32, 'CANDY ROYAL PALACE'], [33, 'ROUTE DU TANKER'], [34, 'ENFER MILDENHALL'], [35, 'CUISINE SPUDSY'],
       [38, 'FAVORITE CHARACTER AWARDS'], [39, 'PHARE DU LAC'], [40, 'TRESOR SUBMERGE'], [41, 'SOUVENIR RUE C&A'],
-      [42, 'DIGITAL CARNIVAL'], [43, 'SALLE A MANGER']
+      [42, 'DIGITAL CARNIVAL'], [43, 'SALLE A MANGER'], [70, 'SHRIMP TOWN'], [71, 'SNOWY TUNDRA'],
+      [72, "PARKING SPUDSY'S"], [73, 'C&A BRAIN SCANNER ROOM'], [74, 'PSYCHE DE JAX'], [75, 'GROUNDS ETENDUS']
     ].map(([target, label]) => ({ episode: 0, target, label: `LIBRE - ${label}` }));
     return [...canonical, ...extras].filter((world, index, list) => list.findIndex(item => item.target === world.target) === index);
   },
@@ -2713,7 +2731,13 @@ const OS = {
       10: [{ id: 'spudsy-rush', speaker: 'Gangle', text: 'Nouveau rush. Lis le ticket, prepare le comptoir, puis donne la bonne commande.', avatar: 'workgangle', duration: 5000 }],
       12: [{ id: 'softball-pitch', speaker: 'Caine', text: 'Batteur en place! Frappez uniquement quand le curseur traverse la zone verte!', avatar: 'caine', duration: 4600 }],
       14: [{ id: 'sun-warning', speaker: 'Sun', text: 'Le soleil digital augmente la visibilite. Les parasols deviennent des zones sures.', avatar: 'sun', duration: 4700 }],
-      31: [{ id: 'gloink-theft', speaker: 'Zooble', text: 'Ils ont encore pris une piece. Recupere-la avant d approcher la reine.', avatar: 'zooble', duration: 5200 }]
+      31: [{ id: 'gloink-theft', speaker: 'Zooble', text: 'Ils ont encore pris une piece. Recupere-la avant d approcher la reine.', avatar: 'zooble', duration: 5200 }],
+      70: [{ id: 'shrimp-town-trace', speaker: 'Shrimp NPC', text: 'Shrimp Town existe bien dans les donnees, mais cette rue est une reconstruction partielle de CainOS.', avatar: 'shrimpnpc', duration: 5200 }],
+      71: [{ id: 'tundra-briefing', speaker: 'Caine', text: 'Une toundra enneigee! Gardez le groupe visible avant que la micro-aventure ne change encore de decor!', avatar: 'caine', duration: 5000 }],
+      72: [{ id: 'parking-impact', speaker: 'Gangle', text: 'Le service est termine. Reste pres du trottoir et ne traverse pas devant les phares.', avatar: 'workgangle', duration: 5200 }],
+      73: [{ id: 'scanner-room', speaker: 'CainOS', channel: 'system', text: 'ARCHIVE C&A: poste Scratch, casque obsolete et scans cerebraux inutilises detectes.', avatar: 'unusedbrainscans', duration: 5600 }],
+      74: [{ id: 'jax-psyche', speaker: 'Pomni', text: 'Ces figures sont des facettes de Jax. Elles ne sont pas des residents separes.', avatar: 'pomni', duration: 5400 }],
+      75: [{ id: 'expanded-grounds', speaker: 'Caine', text: 'Les Grounds ont grandi! Ilots, biomes, ponts et toboggan: davantage d espace pour de futures aventures!', avatar: 'caine', duration: 5400 }]
     };
     return events[zoneId] || [];
   },
@@ -2764,7 +2788,7 @@ const OS = {
   getCircusDynamicEventSprites(zoneId) {
     const event = this.circusDoom?.activeDynamicEvent;
     if (!event || (!event.avatar && !event.avatars?.length)) return [];
-    const colors = { caine: '#ffd84a', bubble: '#f7f7ff', gloinkstar: '#7348ff', moon: '#9edcff', abstractedkaufmo: '#050505', abstractedjax: '#050505', abstractedqueeniedark: '#101018', abstractedqueenie: '#050505', cellarabstraction: '#030303', aquaticabstraction: '#02020a', ragatha: '#d64545', pomni: '#e53935', gummigoo: '#d8a23a', kinger: '#d9d0a2', workgangle: '#f7f7f7', sun: '#ffd33d', zooble: '#ff4fb8' };
+    const colors = { caine: '#ffd84a', bubble: '#f7f7ff', gloinkstar: '#7348ff', moon: '#9edcff', abstractedkaufmo: '#050505', abstractedjax: '#050505', abstractedribbit: '#050505', abstractedqueeniedark: '#101018', abstractedqueenie: '#050505', cellarabstraction: '#030303', aquaticabstraction: '#02020a', ragatha: '#d64545', pomni: '#e53935', gummigoo: '#d8a23a', kinger: '#d9d0a2', workgangle: '#f7f7f7', sun: '#ffd33d', zooble: '#ff4fb8' };
     const avatars = event.avatars?.length ? event.avatars : [event.avatar];
     return avatars.map((avatar, index) => ({
       name: avatar.charAt(0).toUpperCase() + avatar.slice(1),
@@ -3112,8 +3136,17 @@ const OS = {
       if (!portals[world.target]) errors.push(`MONDE EP${world.episode}: portail ${world.target} absent`);
       if (!scenes[world.target]) errors.push(`MONDE EP${world.episode}: scene ${world.target} absente`);
     });
+    const canonLocationChecks = [
+      [70, 14, 'SHRIMP TOWN'], [71, 11, 'SNOWY TUNDRA'], [72, 10, 'PARKING SPUDSY'],
+      [73, 16, 'BRAIN SCANNER'], [74, 18, 'JAX PSYCHE'], [75, 3, 'GROUNDS ETENDUS']
+    ];
+    canonLocationChecks.forEach(([zoneId, parentId, label]) => {
+      if (!portals[zoneId] || !scenes[zoneId]) errors.push(`${label}: zone ${zoneId} absente`);
+      if (!scenes[parentId]?.exits?.includes(zoneId)) errors.push(`${label}: acces depuis ${parentId} absent`);
+      if (!scenes[zoneId]?.exits?.includes(parentId)) errors.push(`${label}: retour vers ${parentId} absent`);
+    });
     const virtualActions = new Set(['drive', 'dive', 'survive', 'give']);
-    for (let zoneId = 2; zoneId <= 69; zoneId++) {
+    for (let zoneId = 2; zoneId <= 75; zoneId++) {
       const config = this.getCircusZoneGameplayConfig(zoneId);
       if (!config) continue;
       const props = this.getCircusZoneProps(zoneId);
@@ -3134,7 +3167,8 @@ const OS = {
       { zone: 8, kind: 'building', minHeight: 4.2 },
       { zone: 26, kind: 'building', minHeight: 3.2 },
       { zone: 32, kind: 'building', minHeight: 4.0 },
-      { zone: 39, kind: 'lighthouse', minHeight: 6.0 }
+      { zone: 39, kind: 'lighthouse', minHeight: 6.0 },
+      { zone: 75, kind: 'tower', minHeight: 7.5 }
     ];
     const heights = [];
     targets.forEach(target => {
@@ -3521,7 +3555,13 @@ const OS = {
       66: { title: 'PARCOURIR LA GALERIE ROYALE', steps: [scan('pillar', 'Verifier deux piliers', 2), scan('stairs', 'Trouver le balcon'), talk('loolilalu', 'Consulter Loolilalu')] },
       67: { title: 'OBSERVER LE ROYAUME', steps: [scan('ring', 'Relever la balustrade'), activate('spotlight', 'Activer le repere du balcon'), talk('pomni', 'Rejoindre Pomni')] },
       68: { title: 'MONTER LE PHARE', steps: [scan('window', 'Verifier les ouvertures'), scan('stairs', 'Suivre l escalier'), talk('jax', 'Retrouver Jax')] },
-      69: { title: 'ALLUMER LA LANTERNE', steps: [activate('spotlight', 'Activer la lanterne'), activate('console', 'Calibrer le faisceau'), talk('caine', 'Signaler le phare a Caine')] }
+      69: { title: 'ALLUMER LA LANTERNE', steps: [activate('spotlight', 'Activer la lanterne'), activate('console', 'Calibrer le faisceau'), talk('caine', 'Signaler le phare a Caine')] },
+      70: { title: 'BORNER SHRIMP TOWN', steps: [scan('building', 'Relever les facades confirmees'), scan('wave', 'Suivre le bord du monde'), talk('shrimpnpc', 'Questionner le Shrimp NPC')] },
+      71: { title: 'TRAVERSER LA TOUNDRA', steps: [scan('stairs', 'Reperer le passage enneige'), activate('candle', 'Allumer deux balises', 2), talk('caine', 'Demander le rappel de mission')] },
+      72: { title: 'SECURISER LE PARKING', steps: [scan('building', 'Reperer la facade Spudsy'), activate('spotlight', 'Verifier les phares'), talk('workgangle', 'Rejoindre Gangle')] },
+      73: { title: 'RELEVER LE SCANNER C&A', steps: [scan('desk', 'Inspecter le poste de Scratch'), activate('console', 'Activer le vieux PC'), scan('memory', 'Identifier les brain scans')] },
+      74: { title: 'CARTOGRAPHIER LA PSYCHE', steps: [scan('memory', 'Stabiliser trois fragments', 3), scan('archive', 'Ouvrir le souvenir central'), talk('pomni', 'Garder Pomni comme repere')] },
+      75: { title: 'CARTOGRAPHIER LES GROUNDS ETENDUS', steps: [scan('tower', 'Relever la hauteur du grand toboggan'), scan('ring', 'Identifier deux ilots', 2), talk('caine', 'Consigner l extension avec Caine')] }
     };
     Object.entries(this.getCircusBedroomDefinitions()).forEach(([zoneId, room]) => {
       objectives[Number(zoneId)] = this.isCircusBedroomArchived(room)
@@ -3536,7 +3576,7 @@ const OS = {
     const activatableKinds = new Set(['console', 'gridnode', 'spotlight', 'candle', 'target', 'scoreboard', 'menu', 'card', 'archive', 'memory', 'ring', 'doorframe']);
     const errors = [];
     let missionCount = 0;
-    for (let zoneId = 2; zoneId <= 69; zoneId++) {
+    for (let zoneId = 2; zoneId <= 75; zoneId++) {
       const config = this.getCircusZoneObjectiveConfig(zoneId);
       if (!config) continue;
       missionCount++;
@@ -4290,7 +4330,13 @@ const OS = {
       15: 'Ming: Les noeuds admin repondent. La scene technique ne peut plus pretendre qu elle est seulement du decor.',
       16: 'Caine: Audit termine! Tout est sous controle, si l on accepte une definition suffisamment festive du controle.',
       17: 'Kinger: Les fragments ne la rameneront pas. Mais les rassembler empeche son souvenir de devenir du bruit.',
-      18: 'Ribbit Archive: Le signal est stable. Cela confirme une trace, pas un retour parmi les residents.'
+      18: 'Ribbit Archive: Le signal est stable. Cela confirme une trace, pas un retour parmi les residents.',
+      70: 'Shrimp NPC: Les limites sont marquees. CainOS ne pretend plus que la reconstruction couvre toute la ville.',
+      71: 'Caine: Les deux balises tiennent! La toundra est officiellement traversable et officieusement glaciale!',
+      72: 'Gangle: Les phares sont coupes et la sortie est reperee. On peut quitter le parking sans relancer le service.',
+      73: 'CainOS: Poste Scratch, ordinateur, casque et scans cerebraux indexes sans fusion avec la fausse sortie.',
+      74: 'Pomni: Les trois facettes sont stabilisees. Elles restent des parties de Jax, pas de nouveaux residents.',
+      75: 'Caine: Ilots synchronises et toboggan calibre! Les nouveaux Grounds sont entierement cartographies!'
     };
     if (status.complete) {
       return {
@@ -4327,10 +4373,12 @@ const OS = {
         response: `${sprite.name}: ${follower.name} connait deja une partie du trajet. Gardez une porte commune comme repere.`
       };
     }
-    if (zoneId >= 64 && zoneId <= 69) {
+    if ((zoneId >= 64 && zoneId <= 69) || zoneId === 70) {
       return {
         label: 'Cet etage',
-        response: `${sprite.name}: Le lieu appartient bien a cette aventure, mais CainOS a reconstruit cet etage depuis les volumes visibles. Son plan exact n est pas canonique.`
+        response: zoneId === 70
+          ? `${sprite.name}: Shrimp Town est nommee dans les donnees canoniques, mais son plan complet n est pas montre. CainOS limite donc cette rue aux reperes confirmes.`
+          : `${sprite.name}: Le lieu appartient bien a cette aventure, mais CainOS a reconstruit cet etage depuis les volumes visibles. Son plan exact n est pas canonique.`
       };
     }
     return null;
@@ -4519,7 +4567,13 @@ const OS = {
       66: "CainOS: Galerie haute du palais reconstruite pour rendre son volume visitable sans modifier la mission du royaume.",
       67: "CainOS: Balcon CainOS raccorde au palais. La vue et les couleurs sont coherentes, la circulation est speculative.",
       68: "CainOS: Interieur du phare reconstruit depuis sa silhouette canonique et son lien avec le toboggan.",
-      69: "CainOS: Lanterne praticable du phare. Cette hauteur sert la navigation, pas une affirmation sur un plan officiel."
+      69: "CainOS: Lanterne praticable du phare. Cette hauteur sert la navigation, pas une affirmation sur un plan officiel.",
+      70: "CainOS: Shrimp Town est nommee mais son plan complet n est pas montre. Cette rue est volontairement marquee comme reconstruction limitee.",
+      71: "CainOS: La Snowy Tundra est une micro-aventure enneigee d Untitled et reste distincte du Snowy Summit de Remember.",
+      72: "CainOS: Le parking prolonge directement Spudsy et conserve la fin du service de Gangle comme evenement de scene.",
+      73: "CainOS: Cette salle separe enfin le poste de Scratch et les brain scans du bureau generique de la fausse sortie.",
+      74: "CainOS: Les Jax internes sont des projections psychiques de Remember; aucune facette n est un resident autonome.",
+      75: "CainOS: Les Grounds etendus appartiennent a l etat post-Remember et ne sont accessibles qu apres l episode 9."
     };
     return hints[zoneId] || "CainOS: Zone praticable. Les interactions restent limitees au lore deja debloque.";
   },
@@ -4550,14 +4604,20 @@ const OS = {
         18: "Pomni: Si tout perd ses couleurs, au moins on peut encore se retrouver ici.",
         64: "Pomni: Le manoir continue au-dessus, mais CainOS a complete les passages que nous n avons pas vus.",
         67: "Pomni: Ce balcon donne une vraie vue sur le royaume, meme si son plan est une reconstruction.",
-        68: "Pomni: Le phare parait moins simple quand on doit vraiment monter a l interieur."
+        68: "Pomni: Le phare parait moins simple quand on doit vraiment monter a l interieur.",
+        71: "Pomni: La neige cache les bords du decor. Je garde les deux balises en vue.",
+        72: "Pomni: On ne devrait pas laisser Gangle seule ici apres ce service.",
+        74: "Pomni: Ce ne sont pas plusieurs Jax. Ce sont les morceaux qu il garde derriere son role.",
+        75: "Pomni: Les Grounds sont plus grands, mais une extension n est toujours pas une sortie."
       },
       caine: {
         2: "Caine: Une scene praticable, des portes splendides, et aucune garantie de sortie!",
         16: "Caine: Le coeur C&A est un local technique, pas une salle de pause pour sujets curieux.",
         18: "Caine: Le spectacle continue tant que le systeme peut encore sourire.",
         67: "Caine: Un balcon royal parfaitement adapte aux besoins panoramiques de l aventure!",
-        69: "Caine: La lanterne domine le lac et rend chaque sortie de toboggan infiniment plus spectaculaire!"
+        69: "Caine: La lanterne domine le lac et rend chaque sortie de toboggan infiniment plus spectaculaire!",
+        71: "Caine: Neige, balises et froid simule: une micro-aventure parfaitement compacte!",
+        75: "Caine: Davantage d ilots, davantage de biomes et un toboggan encore plus haut! Le Cirque evolue!"
       },
       bubble: {
         2: "Bubble: Je vote pour la porte la plus brillante!",
@@ -4574,7 +4634,9 @@ const OS = {
         2: "Ragatha: Avance doucement. Les salles changent moins vite si on garde un repere.",
         8: "Ragatha: Le manoir n'est pas juste un decor. Il appuie sur les failles.",
         18: "Ragatha: Meme quand la scene casse, le groupe doit rester ensemble.",
-        66: "Ragatha: La galerie reprend les couleurs du palais. Gardons l escalier comme repere."
+        66: "Ragatha: La galerie reprend les couleurs du palais. Gardons l escalier comme repere.",
+        71: "Ragatha: On reste entre les balises. La neige rend les distances difficiles a lire.",
+        75: "Ragatha: Les ponts relient les ilots. On les traverse ensemble et on garde le chapiteau comme repere."
       },
       kinger: {
         2: "Kinger: Les murs ont une memoire. Les portes aussi, malheureusement.",
@@ -4637,7 +4699,8 @@ const OS = {
         9: "Horror Pomni: Le sous-sol garde les traces du manoir, meme apres la fuite."
       },
       workgangle: {
-        10: "Gangle: Le comptoir transforme la scene en pression de travail. Mon masque tient a peine."
+        10: "Gangle: Le comptoir transforme la scene en pression de travail. Mon masque tient a peine.",
+        72: "Gangle: Je veux seulement quitter le parking sans recommencer tout le service."
       },
       ming: {
         10: "Ming: Signal figurant detecte. Caine a l'air beaucoup trop agace par ce profil.",
@@ -4663,7 +4726,8 @@ const OS = {
       },
       shrimpnpc: {
         14: "Shrimp NPC: En tant que PNJ crevette, je suis surtout inquiet du soleil.",
-        40: "Shrimp NPC: Le lac digital n'est pas plus rassurant vu de pres."
+        40: "Shrimp NPC: Le lac digital n'est pas plus rassurant vu de pres.",
+        70: "Shrimp NPC: C est bien Shrimp Town, mais CainOS n en connait pas assez pour reconstruire chaque rue."
       },
       chineseroomnpc: {
         15: "Chinese Room NPC: Oh, merci. Cette piece etait beaucoup trop litterale."
@@ -5023,6 +5087,7 @@ const OS = {
       abstractedqueeniedark: "QUEENIE",
       abstractedqueenie: "QUEENIE",
       abstractedjax: "JAX",
+      abstractedribbit: "RIBBIT",
       peeledjax: "JAX",
       jaxmindviolent: "JAX",
       jaxmindcomic: "JAX",
@@ -5167,7 +5232,13 @@ const OS = {
       66: { title: 'GALERIE ROYALE', steps: [{ action: 'look', kind: 'pillar', count: 2, label: 'Verifier les piliers' }, { action: 'use', kind: 'stairs', count: 1, label: 'Ouvrir le passage du balcon' }] },
       67: { title: 'BALCON DU ROYAUME', steps: [{ action: 'look', kind: 'ring', count: 1, label: 'Relever la balustrade' }, { action: 'use', kind: 'spotlight', count: 1, label: 'Allumer le repere royal' }] },
       68: { title: 'ASCENSION DU PHARE', steps: [{ action: 'look', kind: 'window', count: 2, label: 'Verifier les ouvertures' }, { action: 'use', kind: 'stairs', count: 1, label: 'Monter vers la lanterne' }] },
-      69: { title: 'LANTERNE DU LAC', steps: [{ action: 'use', kind: 'spotlight', count: 1, label: 'Allumer la lanterne' }, { action: 'use', kind: 'console', count: 1, label: 'Calibrer le faisceau' }] }
+      69: { title: 'LANTERNE DU LAC', steps: [{ action: 'use', kind: 'spotlight', count: 1, label: 'Allumer la lanterne' }, { action: 'use', kind: 'console', count: 1, label: 'Calibrer le faisceau' }] },
+      70: { title: 'TRACE DE SHRIMP TOWN', steps: [{ action: 'look', kind: 'building', count: 1, label: 'Relever la rue reconstruite' }, { action: 'use', kind: 'wave', count: 1, label: 'Tester la limite du monde' }] },
+      71: { title: 'MICRO-AVENTURE TOUNDRA', steps: [{ action: 'use', kind: 'candle', count: 2, label: 'Allumer deux balises thermiques' }, { action: 'look', kind: 'stairs', count: 1, label: 'Trouver le passage enneige' }] },
+      72: { title: 'SORTIE DE SERVICE', steps: [{ action: 'look', kind: 'building', count: 1, label: 'Identifier la sortie Spudsy' }, { action: 'use', kind: 'spotlight', count: 1, label: 'Couper les phares du parking' }] },
+      73: { title: 'POSTE DE SCRATCH', steps: [{ action: 'look', kind: 'desk', count: 1, label: 'Examiner le poste de travail' }, { action: 'use', kind: 'console', count: 1, label: 'Lire le vieux PC C&A' }, { action: 'look', kind: 'memory', count: 1, label: 'Comparer les scans cerebraux' }] },
+      74: { title: 'ESPACE MENTAL DE JAX', steps: [{ action: 'look', kind: 'memory', count: 3, label: 'Stabiliser trois facettes' }, { action: 'use', kind: 'archive', count: 1, label: 'Ouvrir le souvenir central' }] },
+      75: { title: 'GROUNDS ETENDUS', steps: [{ action: 'look', kind: 'tower', count: 1, label: 'Relever le grand toboggan' }, { action: 'use', kind: 'ring', count: 2, label: 'Synchroniser deux ilots' }] }
     };
     if (zoneId >= 44 && zoneId <= 49) {
       const room = this.getCircusBedroomDefinitions()[zoneId];
@@ -5434,7 +5505,7 @@ const OS = {
     if (!state || state.cinematic) return;
     const threats = [...this.getCircusZoneSprites(state.currentZoneId), ...this.getCircusCustomAdventureSprites(state.currentZoneId, state)].filter(sprite => {
       const avatar = sprite.avatar || sprite.type || '';
-      return sprite.threatActive !== false && ['abstractedkaufmo', 'abstractedjax', 'abstractedqueeniedark', 'abstractedqueenie', 'cellarabstraction', 'aquaticabstraction'].includes(avatar);
+      return sprite.threatActive !== false && ['abstractedkaufmo', 'abstractedjax', 'abstractedribbit', 'abstractedqueeniedark', 'abstractedqueenie', 'cellarabstraction', 'aquaticabstraction'].includes(avatar);
     });
     state.threatAlert = '';
     threats.forEach(sprite => {
@@ -7654,6 +7725,11 @@ const OS = {
           loreText: "Les deux filles de Grant et Destiny. La projection les conserve en duo car la scene ne permet pas d associer surement chaque prenom a un visage."
         },
         {
+          kind: 'lorebillboard', avatar: 'destinybest', label: 'Destiny Best', x: 3.15, z: -5.8,
+          color: '#7e3f56', sizeScale: 0.86, loreGate: { episode: 9, subepisode: 7 },
+          loreText: "Contrepartie humaine liee a Queenie et epouse de Grant Best. Cette projection reste dans l archive du monde reel."
+        },
+        {
           kind: 'lorebillboard', avatar: 'creditsfish', label: 'Credits Fish', x: 0, z: -5.8,
           color: '#ef6d62', sizeScale: 0.72, loreGate: { episode: 9, subepisode: 7 },
           loreText: "Poisson rouge-orange visible dans le generique de Remember. Aucun nom propre ni dialogue n est confirme."
@@ -7720,7 +7796,50 @@ const OS = {
       66: [{ kind: 'stairs', x: 0, z: -3.0, color: '#fff1a8' }, { kind: 'pillar', x: -2.35, z: -2.25, color: '#ff9ad5' }, { kind: 'pillar', x: 2.35, z: -2.25, color: '#ff9ad5' }, { kind: 'window', x: 0, z: -2.75, color: '#7df0ff' }, { kind: 'candy', x: -1.15, z: -1.3, color: '#ffd84a' }],
       67: [{ kind: 'ring', x: 0, z: -2.8, color: '#fff1a8' }, { kind: 'window', x: -2.25, z: -2.2, color: '#70a7ff' }, { kind: 'window', x: 2.25, z: -2.2, color: '#70a7ff' }, { kind: 'spotlight', x: 0, z: -1.35, color: '#ffd84a' }, { kind: 'candy', x: 1.45, z: -1.4, color: '#ff4fb8' }],
       68: [{ kind: 'stairs', x: 0, z: -3.05, color: '#ffffff' }, { kind: 'window', x: -2.1, z: -2.2, color: '#4ee7ff' }, { kind: 'window', x: 2.1, z: -2.2, color: '#4ee7ff' }, { kind: 'pillar', x: 0, z: -1.45, color: '#ff5b4d' }],
-      69: [{ kind: 'spotlight', x: 0, z: -2.7, color: '#fff1a8' }, { kind: 'console', x: -1.7, z: -1.7, color: '#ff5b4d' }, { kind: 'window', x: 1.8, z: -2.0, color: '#4ee7ff' }, { kind: 'stairs', x: 0, z: -1.2, color: '#ffffff' }]
+      69: [{ kind: 'spotlight', x: 0, z: -2.7, color: '#fff1a8' }, { kind: 'console', x: -1.7, z: -1.7, color: '#ff5b4d' }, { kind: 'window', x: 1.8, z: -2.0, color: '#4ee7ff' }, { kind: 'stairs', x: 0, z: -1.2, color: '#ffffff' }],
+      70: [
+        { kind: 'building', style: 'village', x: 0, z: -4.1, width: 4.9, depth: 2.0, height: 2.8, roofHeight: 0.8, color: '#e59a62', accent: '#ffcf75', label: 'Facades limitees de Shrimp Town' },
+        { kind: 'wave', x: -2.45, z: -2.25, color: '#69c9e8', label: 'Limite cotiere reconstruite' },
+        { kind: 'wave', x: 2.45, z: -2.35, color: '#69c9e8' },
+        { kind: 'card', x: 0.8, z: -1.25, color: '#ff8f4a', label: 'Repere du Shrimp NPC' }
+      ],
+      71: [
+        { kind: 'stairs', x: 0, z: -3.15, color: '#ffffff', label: 'Passage dans la neige' },
+        { kind: 'candle', x: -2.15, z: -2.0, color: '#7df0ff', label: 'Balise thermique gauche' },
+        { kind: 'candle', x: 2.15, z: -2.0, color: '#ff7a30', label: 'Balise thermique droite' },
+        { kind: 'pillar', x: -3.0, z: -3.0, color: '#cfe6ef' },
+        { kind: 'pillar', x: 3.0, z: -3.0, color: '#cfe6ef' }
+      ],
+      72: [
+        { kind: 'building', style: 'spudsy', x: 0, z: -4.0, width: 5.4, depth: 2.2, height: 2.9, roofHeight: 0.55, color: '#f6d743', accent: '#e53935', label: "Facade de Spudsy's" },
+        { kind: 'spotlight', x: -2.1, z: -2.25, color: '#fff1a8', label: 'Phares du vehicule' },
+        { kind: 'counter', x: 2.25, z: -1.45, color: '#63636d', label: 'Bord du parking' },
+        { kind: 'card', x: -0.7, z: -1.2, color: '#e53935', label: 'Badge de manager de Gangle' }
+      ],
+      73: [
+        { kind: 'desk', x: 0, z: -2.85, color: '#aeb7c2', label: 'Poste de Scratch' },
+        { kind: 'console', x: -1.75, z: -2.1, color: '#d7d7d7', label: 'Ancien ordinateur C&A' },
+        { kind: 'card', x: 1.75, z: -1.45, color: '#333333', label: 'Casque obsolete', portable: true },
+        { kind: 'memory', x: -2.65, z: -1.35, color: '#50d9ff', label: 'Brain scans inutilises' },
+        { kind: 'gridnode', x: 2.65, z: -2.35, color: '#7df0ff', label: 'Scanner cerebral' },
+        { kind: 'card', x: 0.95, z: -1.15, color: '#d6a82c', label: 'Emballage Dobby Dog / $57.57' }
+      ],
+      74: [
+        { kind: 'memory', x: -2.35, z: -2.15, color: '#8a4fd6', label: 'Persona violente' },
+        { kind: 'memory', x: 0, z: -3.0, color: '#b878e6', label: 'Persona comique' },
+        { kind: 'memory', x: 2.35, z: -2.15, color: '#9871ca', label: 'Persona piegee' },
+        { kind: 'archive', x: 0, z: -1.25, color: '#fff1a8', label: 'Souvenir central de Jax' },
+        { kind: 'lorebillboard', avatar: 'whatifragatha', label: 'What-if Ragatha abstraction', x: -3.0, z: -3.55, color: '#d64545', loreGate: { episode: 9, subepisode: 4 }, loreText: 'Projection mentale barree de Ragatha; elle ne represente pas une abstraction survenue dans la timeline.' },
+        { kind: 'lorebillboard', avatar: 'whatifgangle', label: 'What-if Gangle abstraction', x: 3.0, z: -3.55, color: '#f7f7f7', loreGate: { episode: 9, subepisode: 4 }, loreText: 'Projection mentale barree de Gangle; elle ne represente pas une abstraction survenue dans la timeline.' }
+      ],
+      75: [
+        { kind: 'tower', x: 0, z: -5.1, radius: 0.86, height: 8.2, roofHeight: 1.1, color: '#e53935', accent: '#ffd84a', label: 'Grand toboggan des Grounds' },
+        { kind: 'ring', x: -3.0, z: -2.85, color: '#7df0ff', label: 'Ilot biome gauche' },
+        { kind: 'ring', x: 3.0, z: -2.85, color: '#ff4fb8', label: 'Ilot biome droit' },
+        { kind: 'building', style: 'circus', x: -4.3, z: -4.6, width: 2.2, depth: 1.6, height: 3.5, roofHeight: 1.0, color: '#2a58d8', accent: '#ffd84a' },
+        { kind: 'building', style: 'circus', x: 4.3, z: -4.8, width: 2.2, depth: 1.6, height: 4.4, roofHeight: 1.2, color: '#ff4fb8', accent: '#7df0ff' },
+        { kind: 'wave', x: 0, z: -1.45, color: '#4ee7ff', label: 'Pont entre biomes' }
+      ]
     };
     let props = [
       ...(byZone[zoneId] || basePillars),
@@ -7734,7 +7853,8 @@ const OS = {
       ],
       4: [
         { kind: 'memory', x: -2.15, z: -1.25, color: '#ff4fb8', label: 'Corruption de Ragatha' },
-        { kind: 'eye', x: 2.55, z: -1.45, color: '#42e8ff', label: 'Parasite d abstraction' }
+        { kind: 'eye', x: 2.55, z: -1.45, color: '#42e8ff', label: 'Parasite d abstraction' },
+        { kind: 'lorebillboard', avatar: 'jumbledragatha', label: 'Ragatha jumbled', x: 2.9, z: -3.45, color: '#d64545', loreGate: { episode: 1, subepisode: 5 }, loreText: 'Etat de Ragatha apres contact avec Kaufmo abstrait. Effet temporaire de jumbling, pas abstraction de Ragatha.' }
       ],
       5: [
         { kind: 'console', x: -1.05, z: -1.35, color: '#d7d7d7', label: 'Ordinateur C&A' },
@@ -7782,11 +7902,16 @@ const OS = {
         { kind: 'memory', x: 0.75, z: -1.5, color: '#7df0ff', label: 'Brain scan fragment' },
         { kind: 'archive', x: -2.65, z: -1.2, color: '#c875ff', label: 'Dictionnaire de Kinger' },
         { kind: 'card', x: 2.6, z: -1.2, color: '#fff1a8', label: 'Panier de savons et lotions' },
-        { kind: 'memory', x: 0.1, z: -1.05, color: '#f7f7ff', label: 'Bubble inerte' }
+        { kind: 'memory', x: 0.1, z: -1.05, color: '#f7f7ff', label: 'Bubble inerte' },
+        { kind: 'lorebillboard', avatar: 'jumbledpomni', label: 'Pomni jumbled', x: -3.0, z: -3.65, color: '#e53935', loreGate: { episode: 9, subepisode: 4 }, loreText: 'Etat complet de jumbling visible dans Remember. CainOS le classe comme VFX corporel temporaire, pas comme nouvelle Pomni.' }
       ],
       22: [
         { kind: 'tent', x: -2.55, z: -2.95, color: '#6e527f', label: 'Tente de confinement de Jax' },
         { kind: 'memory', x: 2.45, z: -1.35, color: '#7df0ff', label: 'Orbe d aventure et de memoire' }
+      ],
+      23: [
+        { kind: 'memory', x: 0, z: -1.25, color: '#f6b84d', label: 'Photo chocolat chaud: Jax, Ribbit et Kaufmo' },
+        { kind: 'card', x: 2.15, z: -1.25, color: '#ff4fb8', label: 'Noeud papillon de Ribbit' }
       ],
       26: [{ kind: 'console', x: 2.35, z: -1.45, color: '#7df0ff', label: 'Suggestion console' }],
       31: [
@@ -7901,7 +8026,12 @@ const OS = {
       66: [{ kind: 'ceilinglight', anchor: 'ceiling', fixture: 'chandelier', x: 0, z: -0.7, color: '#fff1a8' }],
       67: [{ kind: 'ceilinglight', anchor: 'ceiling', fixture: 'stage', x: 0, z: -0.6, color: '#ffd84a' }],
       68: [{ kind: 'ceilinglight', anchor: 'ceiling', fixture: 'panel', x: 0, z: -0.5, color: '#fff1a8' }],
-      69: [{ kind: 'ceilinglight', anchor: 'ceiling', fixture: 'stage', x: 0, z: -0.6, color: '#fff1a8' }]
+      69: [{ kind: 'ceilinglight', anchor: 'ceiling', fixture: 'stage', x: 0, z: -0.6, color: '#fff1a8' }],
+      73: [
+        { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'fluorescent', x: -1.55, z: -0.7, color: '#e9f2ff' },
+        { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'fluorescent', x: 1.55, z: -0.7, color: '#e9f2ff' }
+      ],
+      74: [{ kind: 'ceilinglight', anchor: 'ceiling', fixture: 'panel', x: 0, z: -0.7, color: '#8a4fd6' }]
     };
     return fixtures[zoneId] || [];
   },
@@ -9678,10 +9808,7 @@ const OS = {
         { name: 'Shrimp NPC', type: 'npc', avatar: 'shrimpnpc', x: 0, z: -3.05, color: '#ff8f4a', sizeScale: 0.72 }
       ],
       41: [
-        { name: 'Killer Jax', type: 'jax', avatar: 'jaxmindviolent', x: -2.15, z: -2.05, color: '#8a4fd6', silent: true, silentText: 'Killer Jax pousse les rapports humains vers une violence extreme dans la psyche de Jax.', loreGate: { episode: 9, subepisode: 4 } },
-        { name: 'Cartoonish Jax', type: 'jax', avatar: 'jaxmindcomic', x: -0.65, z: -2.75, color: '#b878e6', silent: true, silentText: 'Cartoonish Jax transforme la realite en gag pour conserver le role du comic relief.', loreGate: { episode: 9, subepisode: 4 } },
-        { name: 'Piano Jax', type: 'jax', avatar: 'jaxmindtrapped', x: 0.85, z: -2.8, color: '#9871ca', silent: true, silentText: 'Piano Jax reste enchaine a son instrument et remet silencieusement la cle a Pomni.', loreGate: { episode: 9, subepisode: 4 } },
-        { name: 'Maid Jax Persona', type: 'jax', avatar: 'maidjax', x: 2.2, z: -1.95, color: '#c88aff', silent: true, silentText: 'La tenue maid reapparait comme element de l espace mental de Jax.', loreGate: { episode: 9, subepisode: 4 } }
+        { name: 'Jax Memory', type: 'jax', avatar: 'jax', x: 0, z: -2.55, color: '#8a4fd6', silent: true, silentText: 'Ce Jax appartient au souvenir incomplet de la rue C&A. La scene ne constitue pas une sortie.' }
       ],
       42: [{ name: 'Caine', type: 'caine', avatar: 'caine', x: 0, z: -2.5, color: '#ffd84a' }],
       43: [
@@ -9716,6 +9843,36 @@ const OS = {
       69: [
         { name: 'Caine', type: 'caine', avatar: 'caine', x: -1.1, z: -2.35, color: '#ffd84a' },
         { name: 'Jax', type: 'jax', avatar: 'jax', x: 1.2, z: -2.25, color: '#8a4fd6' }
+      ],
+      70: [
+        { name: 'Shrimp NPC', type: 'npc', avatar: 'shrimpnpc', x: 0.25, z: -2.55, color: '#ff8f4a', sizeScale: 0.78 }
+      ],
+      71: [
+        { name: 'Caine', type: 'caine', avatar: 'caine', x: 0, z: -2.9, color: '#ffd84a' },
+        { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -1.45, z: -2.1, color: '#e53935' },
+        { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: 1.45, z: -2.15, color: '#d64545' }
+      ],
+      72: [
+        { name: 'Gangle', type: 'gangle', avatar: 'workgangle', x: 0, z: -2.35, color: '#f7f7f7' },
+        { name: 'Pomni', type: 'pomni', avatar: 'spudsypomni', x: -1.75, z: -1.75, color: '#e53935' }
+      ],
+      73: [
+        { name: 'Scratch Archive', type: 'npc', avatar: 'scratch', x: -1.35, z: -2.25, color: '#ffd341', silent: true, silentText: 'Projection du profil de Scratch rattachee a son ancien poste C&A; Scratch n est pas restaure comme resident.' },
+        { name: 'Ribbit abstrait // Scan', type: 'abstract', avatar: 'abstractedribbit', x: 1.45, z: -2.85, color: '#050505', sizeScale: 1.25, silent: true, threatActive: false, silentText: 'Le scan de Ribbit abstrait gronde sans former de langage. Il s agit d une archive visuelle, pas d une presence physique.', loreGate: { episode: 9, subepisode: 2 } }
+      ],
+      74: [
+        { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -2.65, z: -1.45, color: '#e53935' },
+        { name: 'Killer Jax', type: 'jax', avatar: 'jaxmindviolent', x: -1.35, z: -2.25, color: '#8a4fd6', silent: true, silentText: 'Killer Jax pousse la facade violente de Jax a son extreme dans sa psyche.', loreGate: { episode: 9, subepisode: 4 } },
+        { name: 'Cartoonish Jax', type: 'jax', avatar: 'jaxmindcomic', x: 0.1, z: -2.9, color: '#b878e6', silent: true, silentText: 'Cartoonish Jax transforme la realite en gag pour maintenir son role social.', loreGate: { episode: 9, subepisode: 4 } },
+        { name: 'Piano Jax', type: 'jax', avatar: 'jaxmindtrapped', x: 1.55, z: -2.6, color: '#9871ca', silent: true, silentText: 'Piano Jax reste lie a son instrument et remet la cle a Pomni.', loreGate: { episode: 9, subepisode: 4 } },
+        { name: 'Maid Jax Persona', type: 'jax', avatar: 'maidjax', x: 2.75, z: -1.65, color: '#c88aff', silent: true, silentText: 'La tenue maid reapparait comme facette visuelle de l espace mental.', loreGate: { episode: 9, subepisode: 4 } }
+      ],
+      75: [
+        { name: 'Caine', type: 'caine', avatar: 'caine', x: 0, z: -3.05, color: '#ffd84a' },
+        { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -2.15, z: -2.0, color: '#e53935' },
+        { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: -0.75, z: -2.35, color: '#d64545' },
+        { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: 0.75, z: -2.4, color: '#f7f7f7' },
+        { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 2.15, z: -1.85, color: '#ff4fb8' }
       ]
     };
     const sprites = byZone[zoneId] || shared.slice(0, 4);
@@ -9866,7 +10023,7 @@ const OS = {
     const avatar = sprite.avatar || sprite.type || "";
     if (avatar.startsWith("gloink") || avatar === "barrelmonkey") return "swarm";
     if (["bubble", "horrorghost", "marthamildenhall", "ghostly", "angel", "moon", "sun", "blueai", "cookiebutterfly", "mildenhallsouls", "truthtellerfish", "liarfish"].includes(avatar)) return "hover";
-    if (['abstractedkaufmo', 'abstractedjax', 'abstractedqueeniedark', 'abstractedqueenie', 'cellarabstraction', 'aquaticabstraction'].includes(avatar) || avatar.startsWith("shadow") || ["ragathamothershadow", "laughingshadows"].includes(avatar)) return "tremble";
+    if (['abstractedkaufmo', 'abstractedjax', 'abstractedribbit', 'abstractedqueeniedark', 'abstractedqueenie', 'cellarabstraction', 'aquaticabstraction'].includes(avatar) || avatar.startsWith("shadow") || ["ragathamothershadow", "laughingshadows"].includes(avatar)) return "tremble";
     if (["gummigoo", "max", "chad", "workgangle", "spudsypomni", "spudsyjax", "spudsyragatha", "spudsyzooble", "themachine", "additionalvoices", "ming", "spudsycustomer", "gummyelephant", "candyguardcyan", "candyguardblue", "candyguardpurple", "redmannequin", "orangemannequin", "yellowmannequin", "magentamannequin"].includes(avatar)) return "patrol";
     if (["albertspudsy", "stupidburgermannequin", "cerealmannequin"].includes(avatar)) return "idle";
     if (["giantcentipede", "drfootball"].includes(avatar)) return "tremble";
@@ -9919,7 +10076,7 @@ const OS = {
     const awareness = Math.max(0, Math.min(1, (4.2 - playerDistance) / 2.8));
     const social = new Set(['pomni', 'ragatha', 'gangle', 'kinger', 'gummigoo', 'max', 'chad']);
     const avoids = new Set(['jax', 'hunterjax', 'eviljax', 'zooble']);
-    const threats = avatar.startsWith('shadow') || ['abstractedkaufmo', 'abstractedjax', 'abstractedqueeniedark', 'abstractedqueenie', 'cellarabstraction', 'aquaticabstraction'].includes(avatar);
+    const threats = avatar.startsWith('shadow') || ['abstractedkaufmo', 'abstractedjax', 'abstractedribbit', 'abstractedqueeniedark', 'abstractedqueenie', 'cellarabstraction', 'aquaticabstraction'].includes(avatar);
     animated.awareness = awareness;
     animated.behavior = routine;
     if (awareness > 0 && social.has(avatar) && playerDistance > 1.55) {
@@ -12258,6 +12415,11 @@ const OS = {
         "A essaye de retirer son casque VR 42 fois la premiere heure.",
         "Son cortex cerebral recherche obstinement des portes de sortie rouges."
       ]},
+      jumbledpomni: { name: "Pomni jumbled", age: "VFX canon - Ep. 9", stress: "INSTABLE", avatar: "jumbledpomni", signal: "P~", color: "#e53935", facts: [
+        "Etat corporel complet de jumbling visible dans Remember.",
+        "Les couleurs et volumes de Pomni se fragmentent temporairement sans constituer une abstraction.",
+        "CainOS classe cette apparence comme effet visuel transitoire, pas comme personnage separe."
+      ]},
       caine: { name: "Caine", age: "IA", stress: "12%", avatar: "caine", signal: "C", color: "#ff3333", facts: [
         "Presente chaque anomalie comme une aventure parfaitement volontaire.",
         "Ses dents sont traitees comme un masque d interface admin.",
@@ -12298,10 +12460,25 @@ const OS = {
         "Elle represente la part coincee derriere ses masques sociaux.",
         "CainOS la classe comme projection psychique et non comme resident separe."
       ]},
+      whatifragatha: { name: "What-if Ragatha abstraction", age: "Projection mentale - Ep. 9", stress: "NON APPLICABLE", avatar: "whatifragatha", signal: "R?", color: "#d64545", facts: [
+        "Icone de Ragatha barree dans l espace mental de Jax pendant Remember.",
+        "Elle materialise une possibilite redoutee et non un evenement survenu dans la timeline.",
+        "Ragatha n est donc pas classee comme abstraite par CainOS."
+      ]},
+      whatifgangle: { name: "What-if Gangle abstraction", age: "Projection mentale - Ep. 9", stress: "NON APPLICABLE", avatar: "whatifgangle", signal: "G?", color: "#f7f7f7", facts: [
+        "Icone de Gangle barree dans l espace mental de Jax pendant Remember.",
+        "Elle represente une hypothese psychique, pas une abstraction reelle de Gangle.",
+        "La fiche reste liee a Jax Psyche et ne peut pas apparaitre comme residente active."
+      ]},
       ragatha: { name: "Ragatha", age: "30", stress: "65%", avatar: "ragatha", signal: "R", color: "#ff4444", facts: [
         "Maintient un sourire constant pour cacher ses bugs de collision physique.",
         "Ses coutures repondent comme des points de sauvegarde emotionnels.",
         "Prie secretement pour que Caine fasse une mise a jour corrective."
+      ]},
+      jumbledragatha: { name: "Ragatha jumbled", age: "VFX canon - Ep. 1", stress: "CRITIQUE", avatar: "jumbledragatha", signal: "R~", color: "#d64545", facts: [
+        "Etat temporaire provoque par le contact avec Kaufmo abstrait dans le Pilote.",
+        "Des parasites colores et une deformation instable remplacent une partie de son rendu normal.",
+        "Caine restaure Ragatha; cet effet ne signifie pas qu elle s est abstraite."
       ]},
       kinger: { name: "Kinger", age: "48", stress: "98%", avatar: "kinger", signal: "K", color: "#ffffdd", facts: [
         "CainOS detecte une anciennete anormale et des trous memoire non resolus.",
@@ -12311,7 +12488,7 @@ const OS = {
       queenie: { name: "Queenie", age: "Archive", stress: "ERR", avatar: "queenie", signal: "Q", color: "#f7eecb", facts: [
         "Signal conserve sous forme de residu royal dans la memoire tampon.",
         "CainOS la classe comme sujet abstrait lie au profil de Kinger.",
-        "Sa couronne apparait parfois dans les scans de souvenirs."
+        "Sa contrepartie humaine revelee dans Remember est Destiny Best, epouse de Grant Best."
       ]},
       abstractedqueeniedark: { name: "Queenie abstraite - calme", age: "Archive / abstraction", stress: "STABILISE PAR L OBSCURITE", avatar: "abstractedqueeniedark", signal: "QD", color: "#101018", facts: [
         "Dans l obscurite du fort de Kinger, Queenie prend une forme noire lisse aux yeux alignes et redevient calme.",
@@ -12336,7 +12513,7 @@ const OS = {
       kaufmo: { name: "Kaufmo (archive)", age: "Archive - avant abstraction", stress: "INCONNU", avatar: "kaufmo", signal: "K", color: "#575057", facts: [
         "Portrait anterieur a son abstraction, conserve pour identifier l ancien resident clown.",
         "Kaufmo est deja abstrait lorsque Pomni atteint sa chambre dans le Pilote.",
-        "Cette forme ne doit jamais apparaitre comme resident actif dans la timeline du Pilote."
+        "Remember associe sa copie numerique a la contrepartie humaine nommee Doug, sans en montrer un visage exploitable."
       ]},
       abstractedkaufmo: { name: "Kaufmo abstrait", age: "Archive / abstraction - Ep. 1", stress: "NON MESURABLE", avatar: "abstractedkaufmo", signal: "!", color: "#050505", facts: [
         "Forme noire quadrupede a tete conique et yeux multicolores rencontree dans le Pilote.",
@@ -12445,13 +12622,18 @@ const OS = {
       ]},
       ribbit: { name: "Ribbit", age: "Archive pre-abstraction / abstrait ensuite", stress: "100%", avatar: "ribbit", signal: "R", color: "#63d35f", facts: [
         "Portrait d archive de Ribbit avant son abstraction; ce n est pas sa forme abstraite.",
-        "Silhouette de grenouille verte avec noeud rose et regard fige.",
-        "CainOS le classe comme residu de joueur, pas comme PNJ actif."
+        "Silhouette de grenouille verte avec noeud rose; le profil canon emploie she/they.",
+        "Remember relie cette copie numerique a la contrepartie humaine nommee Leah, dont le visage reste inconnu."
+      ]},
+      abstractedribbit: { name: "Ribbit abstraite", age: "Archive / abstraction - Ep. 9", stress: "NON MESURABLE", avatar: "abstractedribbit", signal: "R!", color: "#050505", facts: [
+        "Forme abstraite de Ribbit revelee par les souvenirs et scans de Remember.",
+        "La masse noire dechiquetee conserve les yeux multicolores et ne produit aucun dialogue intelligible.",
+        "CainOS la rend comme archive visuelle non hostile dans le scanner, pas comme residente restauree."
       ]},
       scratch: { name: "Scratch", age: "Archive pre-abstraction / abstrait ensuite", stress: "100%", avatar: "scratch", signal: "D", color: "#ffd341", facts: [
         "Portrait d archive de Scratch avant son abstraction, conserve en fiche fantome.",
-        "Son chandail rouge reste lisible malgre la corruption du profil.",
-        "Les scans le separent des animaux decoratifs du cirque."
+        "Son ancien poste C&A, un vieux PC et un casque sont visibles dans la salle du scanner cerebral.",
+        "Remember associe sa copie numerique a Mike Dobby; CainOS ne lui invente aucun visage non montre."
       ]},
       wormo: { name: "Wormo", age: "Archive pre-abstraction / abstrait ensuite", stress: "100%", avatar: "wormo", signal: "W", color: "#70c64f", facts: [
         "Portrait pre-abstraction au corps de ver a rayures, catalogue comme ancien membre du cirque.",
@@ -13028,6 +13210,11 @@ const OS = {
         "Il travaille toujours dans la technologie et reste marie a Destiny.",
         "Ils ont deux filles; la presentation de Caine le montre comme un pere attentionne."
       ]},
+      destinybest: { name: "Destiny Best", age: "Contrepartie humaine - Ep. 9", stress: "NON APPLICABLE", avatar: "destinybest", signal: "DB", color: "#7e3f56", facts: [
+        "Contrepartie humaine reliee a Queenie dans la presentation finale de Remember.",
+        "Elle est toujours mariee a Grant Best et apparait avec leurs deux filles, Anne et Sam.",
+        "Son profil reste une projection du monde reel et ne devient jamais un PNJ physique du Cirque."
+      ]},
       leeroymateo: { name: "Leeroy Mateo", age: "Contrepartie humaine - Ep. 9", stress: "NON APPLICABLE", avatar: "leeroymateo", signal: "LM", color: "#41516a", facts: [
         "Contrepartie humaine dont la copie numerique est Jax.",
         "Apres quelques mois sans logement, il a pu vivre avec un ami proche, obtenir un emploi stable et payer son loyer.",
@@ -13076,7 +13263,7 @@ const OS = {
         "mannequin"
       ],
       1: [
-        "pomni", "caine", "bubble", "jax", "ragatha", "kinger", "gangle", "zooble", "kaufmo", "abstractedkaufmo", "cellarabstraction",
+        "pomni", "caine", "bubble", "jax", "ragatha", "jumbledragatha", "kinger", "gangle", "zooble", "kaufmo", "abstractedkaufmo", "cellarabstraction",
         "gloinkqueen", "gloinkqueenscale", "gloinkstar", "gloinkcube", "gloinkpyramid", "gloinkcrescent", "gloinkpin", "gloinkround",
         "mannequin", "moon", "sun", "barrelmonkey", "drfootball"
       ],
@@ -13121,10 +13308,11 @@ const OS = {
       ],
       9: [
         "pomni", "caine", "bubble", "jax", "ragatha", "kinger", "gangle", "zooble", "moon", "ribbit", "queenie", "scratch",
-        "abstractedjax", "abstractedqueeniedark", "abstractedqueenie", "jaxmindviolent", "jaxmindcomic", "jaxmindtrapped",
+        "abstractedjax", "abstractedribbit", "abstractedqueeniedark", "abstractedqueenie", "jaxmindviolent", "jaxmindcomic", "jaxmindtrapped",
+        "whatifragatha", "whatifgangle", "jumbledpomni",
         "wormo", "bizco", "rattie", "spike", "pinkcyclops", "yellowclown", "oyster", "bulbcreature", "maidjax", "blueai",
         "aquaticabstraction", "floatingworm", "creditsfish", "unusedbrainscans",
-        "abigailbrooks", "suzieackerman", "zoeyraghavan", "rileyverselis", "grantbest", "leeroymateo",
+        "abigailbrooks", "suzieackerman", "zoeyraghavan", "rileyverselis", "grantbest", "destinybest", "leeroymateo",
         "jaxfather", "jaxmother", "abigailfriendone", "abigailfriendtwo", "bestchildren"
       ]
     };
@@ -13145,6 +13333,7 @@ const OS = {
       zooble: { episode: 1, subepisode: 0 },
       kaufmo: { episode: 1, subepisode: 5 },
       abstractedkaufmo: { episode: 1, subepisode: 5 },
+      jumbledragatha: { episode: 1, subepisode: 5 },
       cellarabstraction: { episode: 1, subepisode: 5 },
       additionalvoices: { episode: 2, subepisode: 1 },
       peekingmannequin: { episode: 2, subepisode: 1 },
@@ -13156,9 +13345,12 @@ const OS = {
       spudsyzooble: { episode: 4, subepisode: 2 },
       peeledjax: { episode: 8, subepisode: 7 },
       abstractedjax: { episode: 9, subepisode: 4 },
+      jumbledpomni: { episode: 9, subepisode: 4 },
       jaxmindviolent: { episode: 9, subepisode: 4 },
       jaxmindcomic: { episode: 9, subepisode: 4 },
       jaxmindtrapped: { episode: 9, subepisode: 4 },
+      whatifragatha: { episode: 9, subepisode: 4 },
+      whatifgangle: { episode: 9, subepisode: 4 },
       gloinkqueen: { episode: 1, subepisode: 4 },
       gloinkqueenscale: { episode: 1, subepisode: 4 },
       gloinkstar: { episode: 1, subepisode: 4 },
@@ -13254,6 +13446,7 @@ const OS = {
       stabbedragdolls: { episode: 8, subepisode: 7 },
       coiledcentipedes: { episode: 8, subepisode: 7 },
       ribbit: { episode: 9, subepisode: 2 },
+      abstractedribbit: { episode: 9, subepisode: 2 },
       floatingworm: { episode: 9, subepisode: 2 },
       wormo: { episode: 9, subepisode: 2 },
       bizco: { episode: 9, subepisode: 2 },
@@ -13271,6 +13464,7 @@ const OS = {
       zoeyraghavan: { episode: 9, subepisode: 7 },
       rileyverselis: { episode: 9, subepisode: 7 },
       grantbest: { episode: 9, subepisode: 7 },
+      destinybest: { episode: 9, subepisode: 7 },
       leeroymateo: { episode: 9, subepisode: 7 },
       jaxfather: { episode: 9, subepisode: 4 },
       jaxmother: { episode: 9, subepisode: 4 },
@@ -13287,13 +13481,13 @@ const OS = {
 
   getWackyProfileStatus(id) {
     const archiveIds = new Set([
-      'kaufmo', 'abstractedkaufmo', 'abstractedjax', 'queenie', 'abstractedqueeniedark', 'abstractedqueenie',
+      'kaufmo', 'abstractedkaufmo', 'abstractedjax', 'abstractedribbit', 'queenie', 'abstractedqueeniedark', 'abstractedqueenie',
       'ribbit', 'scratch', 'wormo', 'bizco', 'rattie', 'spike',
       'pinkcyclops', 'yellowclown', 'oyster', 'bulbcreature'
     ]);
     const humanCounterpartIds = new Set([
       'abigailbrooks', 'suzieackerman', 'zoeyraghavan',
-      'rileyverselis', 'grantbest', 'leeroymateo'
+      'rileyverselis', 'grantbest', 'destinybest', 'leeroymateo'
     ]);
     const humanArchiveIds = new Set(['jaxfather', 'jaxmother', 'bestchildren']);
     const realWorldHumanIds = new Set(['abigailfriendone', 'abigailfriendtwo']);
@@ -13302,7 +13496,8 @@ const OS = {
     if (humanCounterpartIds.has(id)) return "CONTREPARTIE HUMAINE";
     if (humanArchiveIds.has(id)) return "FAMILLE HUMAINE / ARCHIVE";
     if (realWorldHumanIds.has(id)) return "HUMAIN DU MONDE REEL";
-    if (['jaxmindviolent', 'jaxmindcomic', 'jaxmindtrapped'].includes(id)) return "PROJECTION MENTALE";
+    if (['jaxmindviolent', 'jaxmindcomic', 'jaxmindtrapped', 'whatifragatha', 'whatifgangle'].includes(id)) return "PROJECTION MENTALE";
+    if (['jumbledragatha', 'jumbledpomni'].includes(id)) return "VFX / ETAT TEMPORAIRE";
     if (['cellarabstraction', 'aquaticabstraction'].includes(id)) return "PHENOMENE / ABSTRACTION";
     if (['stabbedragdolls', 'coiledcentipedes', 'unusedbrainscans'].includes(id)) return "ARTEFACT / DECOR";
     if (['bonepastor', 'themachine'].includes(id)) return "PRODUCTION / HORS TIMELINE";
@@ -13365,6 +13560,7 @@ const OS = {
     if (this.isFanSkin(id, data)) return "SKIN FAN / HORS TIMELINE";
     if (status.includes("PRODUCTION")) return "PRODUCTION / HORS TIMELINE";
     if (status.includes("PHENOMENE")) return "PHENOMENE D ABSTRACTION";
+    if (status.includes("VFX")) return "VFX CORPOREL CANON";
     if (status.includes("ARTEFACT")) return "ARTEFACT / DECOR CANON";
     if (status.includes("PROJECTION")) return "PROJECTION MENTALE CANON";
     if (status.includes("RECONSTRUCTION")) return "RECONSTRUCTION CAINOS / HORS CANON";
@@ -13386,7 +13582,7 @@ const OS = {
     if (this.isCanonicalEpisodeVariant(id)) return 'canon-visual';
     const canonProfiles = new Set([
       'pomni', 'caine', 'bubble', 'jax', 'ragatha', 'kinger', 'gangle', 'zooble',
-      'kaufmo', 'abstractedkaufmo', 'abstractedjax', 'cellarabstraction', 'aquaticabstraction',
+      'kaufmo', 'abstractedkaufmo', 'abstractedjax', 'abstractedribbit', 'cellarabstraction', 'aquaticabstraction',
       'queenie', 'abstractedqueeniedark', 'abstractedqueenie', 'gummigoo', 'loolilalu', 'fudge', 'orbsman', 'sun', 'moon',
       'ribbit', 'scratch', 'wormo', 'bizco', 'rattie', 'spike', 'pinkcyclops',
       'yellowclown', 'oyster', 'bulbcreature', 'max', 'chad', 'ming', 'mannequin', 'peekingmannequin', 'additionalvoices',
@@ -13401,9 +13597,10 @@ const OS = {
       'fourthcrocodile', 'ragathamothershadow', 'paintedmasks', 'zoobleparts',
       'laughingshadows', 'floatingworm', 'creditsfish', 'stabbedragdolls',
       'coiledcentipedes', 'unusedbrainscans', 'abigailbrooks', 'suzieackerman', 'zoeyraghavan',
-      'rileyverselis', 'grantbest', 'leeroymateo', 'jaxfather', 'jaxmother',
+      'rileyverselis', 'grantbest', 'destinybest', 'leeroymateo', 'jaxfather', 'jaxmother',
       'abigailfriendone', 'abigailfriendtwo', 'bestchildren',
-      'jaxmindviolent', 'jaxmindcomic', 'jaxmindtrapped'
+      'jaxmindviolent', 'jaxmindcomic', 'jaxmindtrapped', 'whatifragatha', 'whatifgangle',
+      'jumbledragatha', 'jumbledpomni'
     ]);
     if (canonProfiles.has(id) || id.startsWith('gloink')) return 'canon-visual';
     return 'reconstruction';
@@ -13434,11 +13631,16 @@ const OS = {
       bubble: ['Assistant de Caine present dans le Cirque; CainOS ne lui attribue aucune identite humaine.'],
       jax: ['Resident du Cirque connu pour provoquer les autres; son identite civile et son age ne sont pas confirmes.'],
       abstractedjax: ['Jax devient la treizieme abstraction connue dans Remember. Sa forme active est non verbale et l obscurite la calme.'],
+      abstractedribbit: ['Forme abstraite de Ribbit montree dans Remember. Elle reste non verbale et CainOS ne la presente jamais comme une Ribbit restauree.'],
       peeledjax: ['Etat visuel temporaire de Jax pendant la sequence de tourment de hjsakldfhl; il ne s agit pas d un personnage distinct.'],
       jaxmindviolent: ['Killer Jax est une projection interne canonique rencontree dans la psyche de Jax pendant Remember.'],
       jaxmindcomic: ['Cartoonish Jax est une projection interne canonique qui transforme les situations en gag dans la psyche de Jax.'],
       jaxmindtrapped: ['Piano Jax est enchaine a un piano dans l espace mental de Jax et remet silencieusement une cle a Pomni.'],
+      whatifragatha: ['Icone mentale de Ragatha barree dans Remember. Elle represente une possibilite redoutee, pas une abstraction survenue.'],
+      whatifgangle: ['Icone mentale de Gangle barree dans Remember. Elle represente une possibilite redoutee, pas une abstraction survenue.'],
       ragatha: ['Residante qui tente regulierement de rassurer Pomni et le groupe; son identite civile et son age ne sont pas confirmes.'],
+      jumbledragatha: ['Etat temporaire de Ragatha apres contact avec Kaufmo abstrait dans le Pilote. Caine la restaure ensuite.'],
+      jumbledpomni: ['Etat temporaire de jumbling complet de Pomni dans Remember; ce n est pas une abstraction ni un personnage distinct.'],
       kinger: ['Resident de longue date represente comme une piece d echecs; les revelations tardives restent verrouillees par progression.'],
       gangle: ['Residante composee de rubans et de masques de comedie et de tragedie; son identite civile et son age ne sont pas confirmes.'],
       zooble: ['Resident au corps modulaire qui exprime souvent son refus des aventures de Caine; son identite civile et son age ne sont pas confirmes.'],
@@ -13489,6 +13691,7 @@ const OS = {
       zoeyraghavan: ['Contrepartie humaine de Gangle. Elle s est remise de ses blessures, travaille dans une petite agence de design et publie son webcomic.'],
       rileyverselis: ['Contrepartie humaine de Zooble. Riley a ouvert un bar populaire ou les clients peuvent etre eux-memes sans jugement.'],
       grantbest: ['Contrepartie humaine de Kinger. Il travaille toujours dans la technologie, est marie a Destiny et a deux filles.'],
+      destinybest: ['Contrepartie humaine liee a Queenie dans Remember. Elle est mariee a Grant Best et apparait avec leurs filles Anne et Sam.'],
       leeroymateo: ['Contrepartie humaine de Jax. Apres une periode sans logement, il a obtenu un emploi stable et vit avec un ami proche.'],
       jaxfather: ['Pere evoque par Jax dans Remember. Jax dit ne pas avoir ete proche de lui et ne plus l avoir revu apres la separation de ses parents; son identite reste inconnue.'],
       jaxmother: ['Mere evoquee par Jax dans Remember. Jax dit ne pas savoir ce qui lui est arrive apres leur dernier contact; son identite reste inconnue.'],
@@ -13532,14 +13735,15 @@ const OS = {
 
   getWackyVariantGroups() {
     return {
-      pomni: ['pomni', 'spudsypomni', 'maidpomni', 'japanesepomni', 'baseballpomni', 'rivalbaseballpomni', 'shadowpomni', 'evilpomni', 'horrorpomnivoid', 'horrorpomnispiral', 'horrorpomniskull'],
+      pomni: ['pomni', 'jumbledpomni', 'spudsypomni', 'maidpomni', 'japanesepomni', 'baseballpomni', 'rivalbaseballpomni', 'shadowpomni', 'evilpomni', 'horrorpomnivoid', 'horrorpomnispiral', 'horrorpomniskull'],
       jax: ['jax', 'peeledjax', 'spudsyjax', 'maidjax', 'jaxgirl', 'japanesejax', 'baseballjax', 'rivalbaseballjax', 'hunterjax', 'jaxmindviolent', 'jaxmindcomic', 'jaxmindtrapped', 'abstractedjax', 'darkduojax', 'shadowjax', 'eviljax'],
-      ragatha: ['ragatha', 'spudsyragatha', 'maidragatha', 'japaneseragatha', 'baseballragatha', 'rivalbaseballragatha', 'shadowragatha', 'evilragatha'],
+      ragatha: ['ragatha', 'jumbledragatha', 'whatifragatha', 'spudsyragatha', 'maidragatha', 'japaneseragatha', 'baseballragatha', 'rivalbaseballragatha', 'shadowragatha', 'evilragatha'],
       kinger: ['kinger', 'japanesekinger', 'baseballkinger', 'rivalbaseballkinger', 'shadowkinger', 'evilkinger'],
-      gangle: ['gangle', 'ganglekawaii', 'ganglecomedy', 'gangletragedy', 'maidgangle', 'beachgangle', 'japanesegangle', 'rhinogangle', 'workgangle', 'baseballgangle', 'darkduogangle', 'shadowgangle'],
+      gangle: ['gangle', 'whatifgangle', 'ganglekawaii', 'ganglecomedy', 'gangletragedy', 'maidgangle', 'beachgangle', 'japanesegangle', 'rhinogangle', 'workgangle', 'baseballgangle', 'darkduogangle', 'shadowgangle'],
       zooble: ['zooble', 'spudsyzooble', 'japanesezooble', 'baseballzooble', 'rivalbaseballzooble', 'shadowzooble', 'evilzooble'],
       gummigoo: ['gummigoo', 'japanesegummigoo'],
       kaufmo: ['kaufmo', 'abstractedkaufmo'],
+      ribbit: ['ribbit', 'abstractedribbit'],
       queenie: ['queenie', 'abstractedqueeniedark', 'abstractedqueenie'],
       caine: ['caine', 'shadowcaine'],
       abel: ['abel', 'abelmannequin', 'abelfullbody'],
@@ -13978,6 +14182,15 @@ const OS = {
     if (canonNSheetMap[avatar]) {
       const [col, row] = canonNSheetMap[avatar];
       return `<span class="pixel-sheet-avatar-canon-n avatar-cn-c${col}-r${row}" style="--avatar-size:${size}px" aria-hidden="true"></span>`;
+    }
+
+    const canonOSheetMap = {
+      abstractedribbit: [0, 0], destinybest: [1, 0], whatifragatha: [2, 0],
+      whatifgangle: [3, 0], jumbledragatha: [4, 0], jumbledpomni: [5, 0]
+    };
+    if (canonOSheetMap[avatar]) {
+      const [col, row] = canonOSheetMap[avatar];
+      return `<span class="pixel-sheet-avatar-canon-o avatar-co-c${col}-r${row}" style="--avatar-size:${size}px" aria-hidden="true"></span>`;
     }
 
     const px = (x, y, w, h, fill) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${fill}"/>`;
