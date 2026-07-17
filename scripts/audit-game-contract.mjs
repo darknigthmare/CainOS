@@ -59,7 +59,7 @@ const canonPackEPlacements = {
   candyguardpurple: 32,
   gummyworm: 6,
   barrelmonkey: 2,
-  jeffery: 11
+  jeffery: 164
 };
 const canonPackEProfileKeys = {
   candyguardcyan: 'CANDY_GUARD',
@@ -502,12 +502,12 @@ for (const [zone, kinds] of [[70, ['building', 'wave']], [71, ['stairs', 'candle
 }
 const canonRoomDefinitions = OS.getCircusCanonRoomDefinitions();
 const fpsZoneMax = OS.getCircusFpsZoneMax();
-const minimumFpsZoneMax = 158;
+const minimumFpsZoneMax = 170;
 if (!Number.isInteger(fpsZoneMax) || fpsZoneMax < minimumFpsZoneMax) {
   failures.push(`FPS: borne de zones ${fpsZoneMax}/${minimumFpsZoneMax} minimum`);
 }
 const canonRoomEntries = Object.entries(canonRoomDefinitions);
-const minimumCanonRoomCount = 71;
+const minimumCanonRoomCount = 88;
 if (canonRoomEntries.length < minimumCanonRoomCount) {
   failures.push(`FPS: ${canonRoomEntries.length}/${minimumCanonRoomCount} pieces canoniques ou balisees minimum`);
 }
@@ -827,6 +827,90 @@ for (let zone = 0; zone <= fpsZoneMax; zone += 1) {
     if (avatar === 'spudsycustomer') failures.push(`EP4 FPS ${zone}: faux client Spudsy actif`);
     if (avatar === 'albertspudsy' && !sprite.silent) failures.push(`EP4 FPS ${zone}: Albert Spudsy traite comme PNJ parlant`);
   }
+}
+const episodeFiveCampaign = OS.getCircusFpsCampaignDefinition(5);
+const episodeFiveExpectedZones = [28, 159, 24, 160, 26, 161, 25, 162, 163, 164, 165, 110, 166, 167, 168, 169, 170];
+const episodeFiveActualZones = (episodeFiveCampaign?.stages || []).map(stage => stage.zone);
+if (episodeFiveCampaign?.version !== 2) failures.push('EP5 FPS: version de campagne 2 absente');
+if (episodeFiveCampaign?.stages?.length !== episodeFiveExpectedZones.length) {
+  failures.push(`EP5 FPS: ${episodeFiveCampaign?.stages?.length ?? 0}/${episodeFiveExpectedZones.length} actes montres attendus`);
+}
+if (JSON.stringify(episodeFiveActualZones) !== JSON.stringify(episodeFiveExpectedZones)) {
+  failures.push(`EP5 FPS: chronologie de zones incorrecte (${episodeFiveActualZones.join(', ')})`);
+}
+if ((episodeFiveCampaign?.stages || []).some(stage => /deux bombes|two bombs|debrief/i.test(`${stage.title} ${stage.guide}`))) {
+  failures.push('EP5 FPS: evenement invente encore present dans la campagne');
+}
+for (const zone of [11, 12, 24, 25, 26, 110, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170]) {
+  const room = canonRoomDefinitions[zone];
+  if (!room?.nonPhysical || (room?.exits || []).length) {
+    failures.push(`EP5 FPS ${zone}: coupe/reconstruction reliee au graphe physique`);
+  }
+}
+if (!/71:\s*\{\s*exits:\s*\[\],\s*motif:\s*'snow',\s*size:\s*19,\s*nonPhysical:\s*true\s*\}/.test(source)) {
+  failures.push('EP5 FPS 71: toundra non confirmee encore reliee au lightning round');
+}
+const suggestionRoster = OS.getCircusZoneSprites(11).map(sprite => sprite.avatar || sprite.type);
+if (JSON.stringify(suggestionRoster) !== JSON.stringify(['caine', 'zooble'])) {
+  failures.push(`EP5 FPS 11: selecteur CainOS peuple de personnages non montres (${suggestionRoster.join(', ')})`);
+}
+const freeFieldProps = OS.getCircusZoneProps(12);
+if (freeFieldProps.filter(prop => prop.kind === 'base').length !== 3) {
+  failures.push('EP5 FPS 12: le terrain libre doit contenir exactement trois bases');
+}
+if (OS.getCircusZoneSprites(12).some(sprite => (sprite.avatar || sprite.type) === 'maidjax')) {
+  failures.push('EP5 FPS 12: Maid Jax ne doit pas apparaitre dans la vue libre initiale');
+}
+if (getTargetCount(OS.getCircusZoneProps(24), 'preytrace') !== 5) {
+  failures.push('EP5 FPS 24: cinq traces de proies attendues');
+}
+const bombStateProps = OS.getCircusZoneProps(161);
+if (getTargetCount(bombStateProps, 'spiderbomb') !== 1 || getTargetCount(bombStateProps, 'bombwire') !== 2) {
+  failures.push('EP5 FPS 161: une bombe araignee et deux fils exactement attendus');
+}
+const stargazingProps = OS.getCircusZoneProps(163);
+const stargazingRoster = new Set(OS.getCircusZoneSprites(163).map(sprite => sprite.avatar || sprite.type));
+for (const avatar of ['pomni', 'jax', 'ragatha', 'kinger', 'gangle', 'zooble']) {
+  if (!stargazingRoster.has(avatar)) failures.push(`EP5 FPS 163: ${avatar} absent du pique-nique nocturne`);
+}
+if (stargazingRoster.has('sun') || getTargetCount(stargazingProps, 'firefly') !== 3) {
+  failures.push('EP5 FPS 163: ciel nocturne ou trois lucioles incorrects');
+}
+const observationRoster = OS.getCircusZoneSprites(164);
+const jeffery = observationRoster.find(sprite => (sprite.avatar || sprite.type) === 'jeffery');
+if (!jeffery?.silent || !observationRoster.some(sprite => (sprite.avatar || sprite.type) === 'caine')
+  || !observationRoster.some(sprite => (sprite.avatar || sprite.type) === 'bubble')) {
+  failures.push('EP5 FPS 164: plan Caine, Bubble et Jeffery silencieux incomplet');
+}
+const barOpeningRoster = new Set(OS.getCircusZoneSprites(110).map(sprite => sprite.avatar || sprite.type));
+if (getTargetCount(OS.getCircusZoneProps(110), 'drinkorder') !== 3
+  || ['caine', 'bubble', 'disappearingguy'].some(avatar => barOpeningRoster.has(avatar))) {
+  failures.push('EP5 FPS 110: commandes ou distribution du debut du bar incorrectes');
+}
+const barEndingRoster = new Set(OS.getCircusZoneSprites(166).map(sprite => sprite.avatar || sprite.type));
+if (!barEndingRoster.has('disappearingguy') || !barEndingRoster.has('bubble') || barEndingRoster.has('caine')) {
+  failures.push('EP5 FPS 166: fin du bar sans Disappearing Guy/Bubble ou avec Caine');
+}
+const teamRoster = OS.getCircusZoneSprites(167);
+const evilOrbsman = teamRoster.find(sprite => (sprite.avatar || sprite.type) === 'rivalbaseballpinkgiant');
+if (!evilOrbsman?.aliases?.includes('evilorbsman') || teamRoster.some(sprite => /pink giant/i.test(sprite.name || ''))) {
+  failures.push('EP5 FPS 167: Evil Orbsman mal identifie dans le roster adverse');
+}
+const maidInningRoster = new Set(OS.getCircusZoneSprites(168).map(sprite => sprite.avatar || sprite.type));
+if (!maidInningRoster.has('maidjax') || maidInningRoster.has('baseballjax')) {
+  failures.push('EP5 FPS 168: Jax doit utiliser uniquement sa variante maid');
+}
+const homeRunLabels = OS.getCircusZoneProps(169)
+  .filter(prop => getCampaignTarget(prop) === 'homerun')
+  .map(prop => prop.label);
+if (JSON.stringify(homeRunLabels) !== JSON.stringify(['Home run 1 / Gangle', 'Home run 2 / Zooble', 'Home run 3 / Ragatha'])) {
+  failures.push(`EP5 FPS 169: ordre des home runs incorrect (${homeRunLabels.join(', ')})`);
+}
+const finalStateProps = OS.getCircusZoneProps(170);
+const returnPortal = finalStateProps.find(prop => getCampaignTarget(prop) === 'returnportal');
+if (!returnPortal || returnPortal.kind !== 'caineportal' || returnPortal.target !== 28
+  || getTargetCount(finalStateProps, 'unknownsignal') !== 1) {
+  failures.push('EP5 FPS 170: victoire, signal inconnu ou portail final incorrect');
 }
 const legacyCandyStoryActors = new Set(['gummigoo', 'max', 'chad', 'loolilalu', 'fudge', 'pomni']);
 if (OS.getCircusZoneSprites(6).some(sprite => legacyCandyStoryActors.has(sprite.avatar || sprite.type))) {

@@ -1684,7 +1684,7 @@ const OS = {
       68: { name: 'LIGHTHOUSE INTERIOR / RECONSTRUCTION', short: 'PHARE INT.', detail: 'Interieur praticable du phare reconstruit par CainOS depuis sa silhouette et son acces au toboggan.', color: '#ff6a55', floor: '#ead17b', ceiling: '#79e8ff', unlocked: unlockedAt(7, 1) },
       69: { name: 'LIGHTHOUSE LANTERN / RECONSTRUCTION', short: 'LANTERNE', detail: 'Lanterne haute CainOS avec vue sur le lac. Le phare est canonique; cette circulation interieure ne l est pas.', color: '#fff1a8', floor: '#d9b94f', ceiling: '#4ee7ff', unlocked: unlockedAt(7, 1) },
       70: { name: 'SHRIMP TOWN / CONTREFACTUEL', short: 'SHRIMP TOWN', detail: 'Destination seulement citee comme resultat du bouton bleu. Elle n est jamais visitee dans la chronologie canonique.', color: '#ff8f4a', floor: '#d9b66f', ceiling: '#69c9e8', provenance: 'mentioned', nonPhysical: true, unlocked: unlockedAt(7, 7) },
-      71: { name: 'SNOWY TUNDRA', short: 'TOUNDRA', detail: 'Micro-aventure enneigee entrevue dans Untitled; distincte du Snowy Summit de Remember.', color: '#e8f7ff', floor: '#cfe6ef', ceiling: '#7aa7cc', unlocked: unlockedAt(5, 1) },
+      71: { name: 'SNOWY TUNDRA / CAINOS RECONSTRUCTION', short: 'TOUNDRA', detail: 'Archive visuelle isolee: le transcript local d Untitled ne confirme ni son trajet ni ses objectifs. Elle ne constitue pas une porte du lightning round.', color: '#e8f7ff', floor: '#cfe6ef', ceiling: '#7aa7cc', unlocked: unlockedAt(5, 1) },
       72: { name: "SPUDSY'S PARKING LOT", short: 'PARKING', detail: 'Exterieur du restaurant ou le service de Gangle se termine brutalement.', color: '#ff4d4d', floor: '#36363d', ceiling: '#41213c', unlocked: unlockedAt(4, 7) },
       73: { name: 'C&A BRAIN SCANNER FLASHBACK', short: 'SCANNER', detail: 'Flashback technique de Remember: poste de Scratch, vieux PC, casque et scanners cerebraux.', color: '#c5d6e8', floor: '#8e959f', ceiling: '#252a31', provenance: 'projection', nonPhysical: true, layer: 'memory', unlocked: unlockedAt(9, 6) },
       74: { name: 'JAX PSYCHE / FIVE-DOOR FOYER', short: 'FOYER PSYCHE', detail: 'Foyer mental violet de Remember; les scenarios sont des projections, pas des salles du Cirque.', color: '#8a4fd6', floor: '#24192f', ceiling: '#08050d', provenance: 'projection', nonPhysical: true, layer: 'mind', unlocked: unlockedAt(9, 4) },
@@ -1742,7 +1742,7 @@ const OS = {
       68: { exits: [39, 69], motif: 'lighthouse', size: 13 },
       69: { exits: [68, 14], motif: 'lighthouse', size: 11 },
       70: { exits: [], motif: 'grounds', size: 17 },
-      71: { exits: [11], motif: 'snow', size: 19 },
+      71: { exits: [], motif: 'snow', size: 19, nonPhysical: true },
       72: { exits: [], motif: 'street', size: 17 },
       73: { exits: [], motif: 'exit', size: 15 },
       74: { exits: [], motif: 'memory', size: 17 },
@@ -2481,7 +2481,19 @@ const OS = {
       155: { x: center.x, z: center.z + 2.0, a: -Math.PI / 2, revision: 2 },
       156: { x: center.x, z: center.z + 1.9, a: -Math.PI / 2, revision: 2 },
       157: { x: center.x, z: center.z + 1.2, a: -Math.PI / 2, revision: 2 },
-      158: { x: center.x, z: center.z + 1.6, a: -Math.PI / 2, revision: 2 }
+      158: { x: center.x, z: center.z + 1.6, a: -Math.PI / 2, revision: 2 },
+      159: { x: center.x, z: center.z + 2.2, a: -Math.PI / 2, revision: 1 },
+      160: { x: center.x, z: center.z + 1.8, a: -Math.PI / 2, revision: 1 },
+      161: { x: center.x, z: center.z + 2.0, a: -Math.PI / 2, revision: 1 },
+      162: { x: center.x, z: center.z + 1.8, a: -Math.PI / 2, revision: 1 },
+      163: { x: center.x, z: center.z + 2.4, a: -Math.PI / 2, revision: 1 },
+      164: { x: center.x, z: center.z + 1.8, a: -Math.PI / 2, revision: 1 },
+      165: { x: center.x, z: center.z + 2.0, a: -Math.PI / 2, revision: 1 },
+      166: { x: center.x, z: center.z + 2.0, a: -Math.PI / 2, revision: 1 },
+      167: { x: center.x, z: center.z + 3.0, a: -Math.PI / 2, revision: 1 },
+      168: { x: center.x, z: center.z + 2.6, a: -Math.PI / 2, revision: 1 },
+      169: { x: center.x, z: center.z + 2.6, a: -Math.PI / 2, revision: 1 },
+      170: { x: center.x, z: center.z + 2.4, a: -Math.PI / 2, revision: 1 }
     };
     return authored[zoneId] || null;
   },
@@ -3116,54 +3128,174 @@ const OS = {
           ]
         }
       ] },
-      5: { title: 'Untitled', steps: [
+      5: { title: 'Untitled', version: 2, steps: [
         {
-          title: 'Retour mouille et boite a suggestions', zone: 28, route: [28],
-          action: 'look', target: 'suggestionbox',
-          guide: 'Retrouvez le groupe encore mouille, ecoutez la fatigue de Ragatha et inspectez la boite avant le lightning round.',
-          requirements: [{ action: 'talk', target: 'ragatha', zone: 28, count: 1 }]
+          title: 'Retour trempe au Tent', zone: 28, route: [28],
+          action: 'look', target: 'wetreturn',
+          guide: 'Retrouvez le groupe encore trempe, ecoutez Ragatha epuisee et relevez les oeufs rapportes par Kinger avant l annonce de Caine.',
+          requirements: [
+            { action: 'talk', target: 'ragatha', zone: 28, count: 1 },
+            { action: 'talk', target: 'kinger', zone: 28, count: 1 }
+          ]
         },
         {
-          title: 'Poach Everything', zone: 24, route: [24], entryMode: 'cainecut',
+          title: 'Lightning round de Caine', zone: 159, route: [159], entryMode: 'cainecut',
+          action: 'use', target: 'suggestionbox',
+          guide: 'Ecoutez les propositions, relevez les trois cartes d idee et laissez Zooble proposer la boite avant la premiere coupe.',
+          requirements: [
+            { action: 'look', target: 'pitchcard', zone: 159, count: 3, distinct: true },
+            { action: 'talk', target: 'caine', zone: 159, count: 1 },
+            { action: 'talk', target: 'zooble', zone: 159, count: 1 }
+          ]
+        },
+        {
+          title: 'Poach Everything / chasse', zone: 24, route: [24], entryMode: 'cainecut',
           action: 'talk', target: 'hunterjax',
-          guide: 'Esquivez la chasse de Jax, observez Rhino Gangle et Flamingo Zooble, puis validez le vote de sortie.',
-          requirements: [{ action: 'look', target: 'votemarker', zone: 24, count: 1 }]
+          guide: 'Suivez la chasse sans attribuer de nouvelle identite aux cinq proies, puis constatez le ruban rouge de Rhino Gangle.',
+          requirements: [
+            { action: 'look', target: 'preytrace', zone: 24, count: 5, distinct: true },
+            { action: 'survive', target: 'poachhunt', zone: 24, count: 3 }
+          ]
         },
         {
-          title: 'President Pomni', zone: 26, route: [26], entryMode: 'cainecut',
-          action: 'look', target: 'brief',
-          guide: 'Lisez le briefing Australie/Nouvelle-Zelande, mettez-vous a couvert et tentez de desamorcer les deux bombes.',
-          requirements: [{ action: 'use', target: 'bomb', zone: 26, count: 2, distinct: true }]
+          title: 'Poach Everything / vote vegan', zone: 160, route: [160], entryMode: 'timeshift',
+          action: 'use', target: 'votepanel',
+          guide: 'Validez le vote de sortie et relevez la regle vegan ajoutee apres la chasse.',
+          requirements: [
+            { action: 'look', target: 'veganrule', zone: 160, count: 1 },
+            { action: 'talk', target: 'zooble', zone: 160, count: 1 }
+          ]
         },
         {
-          title: 'Anime High School', zone: 25, route: [25], entryMode: 'cainecut',
-          action: 'talk', target: 'japanesegangle',
-          guide: 'Traversez l introduction anime, inspectez la salle de classe et rejoignez le vote de sortie impose.',
-          requirements: [{ action: 'look', target: 'votemarker', zone: 25, count: 1 }]
+          title: 'President Pomni / briefing absent', zone: 26, route: [26], entryMode: 'cainecut',
+          action: 'look', target: 'missingbrief',
+          guide: 'Constatez que Pomni ne recoit aucun briefing, consultez celui de Kinger et examinez la lampe a tete de bebe.',
+          requirements: [
+            { action: 'talk', target: 'pomni', zone: 26, count: 1 },
+            { action: 'talk', target: 'kinger', zone: 26, count: 1 },
+            { action: 'use', target: 'babylamp', zone: 26, count: 1 }
+          ]
         },
         {
-          title: 'Stargazing sur les Grounds', zone: 3, route: [3], entryMode: 'cainecut',
+          title: 'President Pomni / bombe unique', zone: 161, route: [161], entryMode: 'timeshift',
+          action: 'look', target: 'spiderbomb',
+          guide: 'Identifiez la bombe unique, ses fils rouge et bleu, puis l extremiste neo-zelandais sans inventer une seconde bombe ni une resolution.',
+          requirements: [
+            { action: 'look', target: 'bombwire', zone: 161, count: 2, distinct: true },
+            { action: 'talk', target: 'newzealandextremist', zone: 161, count: 1 },
+            { action: 'survive', target: 'bombtick', zone: 161, count: 2 }
+          ]
+        },
+        {
+          title: 'Anime High School / cours', zone: 25, route: [25], entryMode: 'cainecut',
+          action: 'talk', target: 'japanesekinger',
+          guide: 'Entrez dans la salle de classe, relevez le cours d anglais de Kinger et suivez la pression exercee par Jax sur Gangle.',
+          requirements: [
+            { action: 'look', target: 'classboard', zone: 25, count: 1 },
+            { action: 'talk', target: 'japanesejax', zone: 25, count: 1 },
+            { action: 'talk', target: 'japanesegangle', zone: 25, count: 1 }
+          ]
+        },
+        {
+          title: 'Anime High School / sortie', zone: 162, route: [162], entryMode: 'timeshift',
+          action: 'use', target: 'votepanel',
+          guide: 'Laissez Gangle accepter la sortie et relevez le resultat sans prolonger artificiellement la micro-aventure.',
+          requirements: [
+            { action: 'talk', target: 'gangle', zone: 162, count: 1 },
+            { action: 'look', target: 'skipresult', zone: 162, count: 1 }
+          ]
+        },
+        {
+          title: 'Stargazing nocturne', zone: 163, route: [163], entryMode: 'cainecut',
           action: 'look', target: 'picnic',
-          guide: 'Rejoignez le pique-nique nocturne et ecoutez les conversations sans transformer ce temps calme en nouvelle epreuve.',
-          requirements: [{ action: 'talk', target: 'ragatha', zone: 3, count: 1 }]
+          guide: 'Parcourez le pique-nique nocturne, les sandwichs et les lucioles, puis ecoutez Pomni et Jax sans transformer ce temps calme en epreuve.',
+          requirements: [
+            { action: 'use', target: 'sandwich', zone: 163, count: 1 },
+            { action: 'look', target: 'firefly', zone: 163, count: 3, distinct: true },
+            { action: 'talk', target: 'jax', zone: 163, count: 1 },
+            { action: 'talk', target: 'pomni', zone: 163, count: 1 }
+          ]
         },
         {
-          title: 'Untitled Bar', zone: 110, route: [110], entryMode: 'cainecut',
-          action: 'use', target: 'counter',
-          guide: 'Entrez dans le bar noir et blanc de Zooble, servez les commandes et identifiez le Disappearing Guy.',
-          requirements: [{ action: 'talk', target: 'disappearingguy', zone: 110, count: 1 }]
+          title: 'Caine et Bubble observent', zone: 164, route: [164], entryMode: 'cainecut',
+          action: 'talk', target: 'caine',
+          guide: 'Suivez le bref plan de Caine et Bubble observant les suggestions; la beach party reste seulement mentionnee.',
+          requirements: [
+            { action: 'talk', target: 'bubble', zone: 164, count: 1 },
+            { action: 'look', target: 'suggestionmonitor', zone: 164, count: 1 }
+          ]
         },
         {
-          title: 'Softball des Big Tops', zone: 12, route: [12], entryMode: 'cainecut',
-          action: 'use', target: 'scoreboard',
-          guide: 'Lancez le match, validez les trois bases distinctes et suivez la victoire imposee sans inventer d Evil Gangle.',
-          requirements: [{ action: 'use', target: 'base', zone: 12, count: 3, distinct: true }]
+          title: 'Intermission psychedelique', zone: 165, route: [165], entryMode: 'projection',
+          action: 'use', target: 'intermissionreel',
+          guide: 'Traversez la projection psychedelique puis ecoutez l echange Caine-Zooble avant la suggestion du bar.',
+          requirements: [
+            { action: 'survive', target: 'intermission', zone: 165, count: 3 },
+            { action: 'talk', target: 'zooble', zone: 165, count: 1 },
+            { action: 'talk', target: 'caine', zone: 165, count: 1 }
+          ]
         },
         {
-          title: 'Portail de retour au Tent', zone: 28, route: [28], entryMode: 'caineportal',
-          action: 'talk', target: 'ragatha',
-          guide: 'Revenez par le portail de Caine et constatez les consequences relationnelles de la journee.',
-          requirements: [{ action: 'look', target: 'arrivalportal', zone: 28, count: 1 }]
+          title: 'Bar noir et blanc / commandes', zone: 110, route: [110], entryMode: 'cainecut',
+          action: 'use', target: 'drinkorder', count: 3, distinct: true,
+          guide: 'Servez les trois commandes identifiables, ecoutez les parcours evoques et gardez les souvenirs humains au statut de recits.',
+          requirements: [
+            { action: 'talk', target: 'zooble', zone: 110, count: 1 },
+            { action: 'talk', target: 'pomni', zone: 110, count: 1 },
+            { action: 'talk', target: 'gangle', zone: 110, count: 1 },
+            { action: 'talk', target: 'ragatha', zone: 110, count: 1 }
+          ]
+        },
+        {
+          title: 'Bar / tensions et Disappearing Guy', zone: 166, route: [166], entryMode: 'timeshift',
+          action: 'talk', target: 'disappearingguy',
+          guide: 'Suivez les excuses, le gag du mais et la breve apparition du Disappearing Guy sans lui donner un role principal.',
+          requirements: [
+            { action: 'talk', target: 'jax', zone: 166, count: 1 },
+            { action: 'talk', target: 'ragatha', zone: 166, count: 1 },
+            { action: 'use', target: 'cornprop', zone: 166, count: 1 }
+          ]
+        },
+        {
+          title: 'Softball / presentation des equipes', zone: 167, route: [167], entryMode: 'cainecut',
+          action: 'look', target: 'teamboard',
+          guide: 'Identifiez les Big Tops, les Evil Big Tops et Evil Orbsman, puis ecoutez l hymne du Disappearing Guy avec Caine et Bubble aux commentaires.',
+          requirements: [
+            { action: 'talk', target: 'caine', zone: 167, count: 1 },
+            { action: 'talk', target: 'bubble', zone: 167, count: 1 },
+            { action: 'talk', target: 'disappearingguy', zone: 167, count: 1 },
+            { action: 'look', target: 'evilorbsman', zone: 167, count: 1 }
+          ]
+        },
+        {
+          title: 'Softball / Maid Jax et balle Zooble', zone: 168, route: [168], entryMode: 'timeshift',
+          action: 'use', target: 'maidvote',
+          guide: 'Appliquez le vote qui impose la tenue de maid a Jax, relevez la balle mangee puis Zooble utilisee comme balle reglementaire.',
+          requirements: [
+            { action: 'talk', target: 'maidjax', zone: 168, count: 1 },
+            { action: 'look', target: 'eatenball', zone: 168, count: 1 },
+            { action: 'look', target: 'zoobleball', zone: 168, count: 1 }
+          ]
+        },
+        {
+          title: 'Softball / trois home runs', zone: 169, route: [169], entryMode: 'timeshift',
+          action: 'look', target: 'homerun', count: 3, distinct: true,
+          guide: 'Relevez dans l ordre les home runs de Gangle, Zooble et Ragatha remplacant Pomni; le visiteur ne marque aucun point canonique.',
+          requirements: [
+            { action: 'talk', target: 'gangle', zone: 169, count: 1 },
+            { action: 'talk', target: 'zooble', zone: 169, count: 1 },
+            { action: 'talk', target: 'ragatha', zone: 169, count: 1 },
+            { action: 'look', target: 'substitution', zone: 169, count: 1 }
+          ]
+        },
+        {
+          title: 'Victoire, chaos et portail', zone: 170, route: [170], entryMode: 'timeshift',
+          action: 'use', target: 'finalscore',
+          guide: 'Laissez Caine declarer la victoire, relevez le signal non identifie sans le nommer, puis utilisez le portail de retour.',
+          requirements: [
+            { action: 'look', target: 'unknownsignal', zone: 170, count: 1 },
+            { action: 'use', target: 'returnportal', zone: 170, count: 1 }
+          ]
         }
       ] },
       6: { title: 'They All Get Guns', steps: [
@@ -3779,7 +3911,7 @@ const OS = {
         { id: 'spudsy-six-burgers', speaker: 'Zooble', text: 'Six burgers termines sur trois cents. La commande n est clairement pas finie.', avatar: 'spudsyzooble', duration: 5200 }
       ],
       37: [{ id: 'spudsy-training-restraint', speaker: 'Jax', text: 'Les quatre mains et cette chaise ne transforment pas cette video en formation volontaire.', avatar: 'spudsyjax', duration: 5200 }],
-      12: [{ id: 'softball-pitch', speaker: 'Caine', text: 'Batteur en place! Frappez uniquement quand le curseur traverse la zone verte!', avatar: 'caine', duration: 4600 }],
+      12: [{ id: 'softball-free-view', speaker: 'CainOS', channel: 'system', text: 'VUE LIBRE DU STADE: les innings canoniques sont separes dans les etats 167 a 170.', duration: 5000 }],
       14: [
         { id: 'sun-warning', speaker: 'Sun', text: 'Le soleil digital augmente la visibilite. Les parasols deviennent des zones sures.', avatar: 'sun', duration: 4700 },
         { id: 'ragatha-eye', speaker: 'Ragatha', text: 'Mon oeil-bouton est tombe pres des jeux de plage. Gardons-le visible avant de plonger.', avatar: 'ragatha', duration: 5000 }
@@ -3848,7 +3980,37 @@ const OS = {
       155: [{ id: 'spudsy-queen-order', speaker: 'Gloink Queen', text: 'Trois cents cheeseburgers pour mes enfants.', avatar: 'gloinkqueenscale', duration: 5200 }],
       156: [{ id: 'spudsy-closing-offer', speaker: 'Pomni', text: 'Je peux fermer le restaurant. Gangle n a pas besoin de rester ici davantage.', avatar: 'spudsypomni', duration: 5200 }],
       157: [{ id: 'spudsy-mask-discard', speaker: 'Gangle', text: 'Je laisse ce masque devant le restaurant. Il ne revient pas avec moi.', avatar: 'gangletragedy', duration: 5200 }],
-      158: [{ id: 'spudsy-sauce-hallucination', speaker: 'CainOS', channel: 'system', text: 'PERCEPTION DE RAGATHA: le sourire de Gangle est deforme par la Stupid Sauce; aucune transformation reelle detectee.', duration: 5400 }]
+      158: [{ id: 'spudsy-sauce-hallucination', speaker: 'CainOS', channel: 'system', text: 'PERCEPTION DE RAGATHA: le sourire de Gangle est deforme par la Stupid Sauce; aucune transformation reelle detectee.', duration: 5400 }],
+      159: [
+        { id: 'untitled-lightning-caine', speaker: 'Caine', text: 'Un lightning round de micro-aventures! Courtes, rapides et parfaitement impossibles a oublier!', avatar: 'caine', duration: 5200 },
+        { id: 'untitled-box-zooble', speaker: 'Zooble', text: 'Utilise la boite. Au moins, les idees viendront de quelqu un d autre.', avatar: 'zooble', duration: 5200 }
+      ],
+      160: [{ id: 'untitled-poach-vote', speaker: 'Zooble', text: 'On vote pour sortir. Et on ajoute la regle vegan avant que Jax recommence.', avatar: 'zooble', duration: 5200 }],
+      161: [{ id: 'untitled-single-bomb', speaker: 'Jax', text: 'Une bombe, deux fils. Pomni n a toujours pas recu de briefing.', avatar: 'jax', duration: 5200, danger: true }],
+      162: [{ id: 'untitled-anime-skip', speaker: 'Gangle', text: 'D accord. On peut passer cette aventure maintenant.', avatar: 'japanesegangle', duration: 5000 }],
+      163: [
+        { id: 'untitled-stargazing-pomni', speaker: 'Pomni', text: 'Pour une fois, personne ne nous demande de gagner quoi que ce soit.', avatar: 'pomni', duration: 5200 },
+        { id: 'untitled-stargazing-jax', speaker: 'Jax', text: 'Ne transforme pas ca en moment sincere trop vite.', avatar: 'jax', duration: 5000 }
+      ],
+      164: [{ id: 'untitled-suggestion-observation', speaker: 'CainOS', channel: 'system', text: 'PLAN D OBSERVATION: la beach party reste une idee mentionnee, sans espace visitable confirme.', duration: 5200 }],
+      165: [{ id: 'untitled-intermission-zooble', speaker: 'Zooble', text: 'Un bar. Je sais au moins comment cette scene est censee fonctionner.', avatar: 'zooble', duration: 5200 }],
+      166: [
+        { id: 'untitled-disappearing-guy', speaker: 'Disappearing Guy', text: 'He--', avatar: 'disappearingguy', duration: 2800 },
+        { id: 'untitled-corn-gag', speaker: 'Ragatha', text: 'Eloigne ce mais de moi.', avatar: 'ragatha', duration: 4200 }
+      ],
+      167: [
+        { id: 'untitled-team-presentation', speaker: 'Caine', text: 'Les Big Tops contre les Evil Big Tops! Equipes en place!', avatar: 'caine', duration: 5200 },
+        { id: 'untitled-anthem', speaker: 'Disappearing Guy', text: 'Le signal de l hymne commence avant le premier lancer.', avatar: 'disappearingguy', duration: 4600 }
+      ],
+      168: [
+        { id: 'untitled-maid-jax', speaker: 'Zooble', text: 'Le vote est passe. Jax garde la tenue de maid.', avatar: 'baseballzooble', duration: 5000 },
+        { id: 'untitled-zooble-ball', speaker: 'Kinger', text: 'Zooble a la bonne taille pour remplacer la balle.', avatar: 'baseballkinger', duration: 5000 }
+      ],
+      169: [{ id: 'untitled-home-run-order', speaker: 'CainOS', channel: 'system', text: 'ORDRE CANONIQUE: Gangle, Zooble, puis Ragatha en remplacement de Pomni.', duration: 5600 }],
+      170: [
+        { id: 'untitled-final-score', speaker: 'Caine', text: 'Victoire des Big Tops! Retour au Tent!', avatar: 'caine', duration: 5000 },
+        { id: 'untitled-unknown-chaos', speaker: 'CainOS', channel: 'system', text: 'SIGNAL NON IDENTIFIE: aucun nom ni profil ne peut etre attribue a la forme du chaos final.', duration: 5200, danger: true }
+      ]
     };
     return events[zoneId] || [];
   },
@@ -4191,13 +4353,139 @@ const OS = {
   },
 
   getCircusFpsZoneMax() {
-    return 158;
+    return 170;
   },
 
   getCircusCanonRoomDefinitions() {
     if (this.circusCanonRoomDefinitions) return this.circusCanonRoomDefinitions;
     const scan = (title, kinds, talkAvatar = null) => ({ title, kinds, talkAvatar });
     const rooms = {
+      11: {
+        name: 'CAINOS SUGGESTION SELECTOR', short: 'SELECTEUR',
+        detail: 'Interface de reconstruction CainOS pour revisiter les micro-aventures. Ce hub n existe pas comme piece physique dans Untitled et ne relie aucune aventure au Cirque.',
+        color: '#3a1b4f', floor: '#211230', ceiling: '#090311', motif: 'micro', size: 17,
+        gateEpisode: 5, gateSubepisode: 1, provenance: 'reconstruction', layer: 'cainos', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'archive', campaignTarget: 'suggestionbox', x: 0, z: -3.1, color: '#ff4fb8', label: 'Index CainOS des suggestions' },
+          { kind: 'card', x: -2.25, z: -2.2, color: '#ffd84a', label: 'Archive Poach Everything' },
+          { kind: 'card', x: 0, z: -1.35, color: '#7df0ff', label: 'Archive President Pomni' },
+          { kind: 'card', x: 2.25, z: -2.2, color: '#ff9fcd', label: 'Archive Anime High School' },
+          { kind: 'doorframe', x: -2.9, z: -3.6, color: '#c875ff', label: 'Coupe non physique precedente' },
+          { kind: 'doorframe', x: 2.9, z: -3.6, color: '#7df0ff', label: 'Coupe non physique suivante' },
+          { kind: 'gridnode', x: 0, z: -4.6, color: '#7df0ff', label: 'Limite de reconstruction CainOS' }
+        ],
+        sprites: [
+          { name: 'Caine', type: 'caine', avatar: 'caine', x: -0.9, z: -2.55, color: '#ffd84a' },
+          { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 1.0, z: -2.65, color: '#ff4fb8' }
+        ],
+        objective: scan('CLASSER LES SUGGESTIONS SANS CREER DE HUB CANON', ['archive', 'card'], 'zooble')
+      },
+      12: {
+        name: 'UNTITLED SOFTBALL FIELD / FREE VIEW', short: 'STADE',
+        detail: 'Vue libre du terrain de softball montre dans Untitled. La campagne utilise des etats temporels separes pour respecter les changements de costumes, de balle et de score.',
+        color: '#224c22', floor: '#2d6329', ceiling: '#76a4d9', motif: 'softball', size: 23,
+        gateEpisode: 5, gateSubepisode: 6, provenance: 'shown', layer: 'free-view', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'platform', x: 0, z: -3.0, width: 8.6, depth: 6.8, height: 0.08, color: '#b98555', label: 'Losange de terre du terrain' },
+          { kind: 'base', x: -2.3, z: -2.6, color: '#ffffff', label: 'Premiere base' },
+          { kind: 'base', x: 0, z: -4.3, color: '#ffffff', label: 'Deuxieme base' },
+          { kind: 'base', x: 2.3, z: -2.6, color: '#ffffff', label: 'Troisieme base' },
+          { kind: 'scoreboard', x: 0, z: -6.5, color: '#83ff57', label: 'Tableau Big Tops / Evil Big Tops' },
+          { kind: 'target', x: -3.2, z: -1.45, color: '#8b5a2b', label: 'Batte de softball' },
+          { kind: 'target', x: 3.2, z: -1.45, color: '#ffffff', label: 'Balle de softball standard' },
+          { kind: 'fence', x: -4.5, z: -5.4, color: '#d7d7d7', label: 'Tribune gauche' },
+          { kind: 'fence', x: 4.5, z: -5.4, color: '#d7d7d7', label: 'Tribune droite' }
+        ],
+        sprites: [
+          { name: 'Baseball Jax', type: 'jax', avatar: 'baseballjax', aliases: ['jax'], x: -3.3, z: -2.0, color: '#b874e8' },
+          { name: 'Baseball Zooble', type: 'zooble', avatar: 'baseballzooble', aliases: ['zooble'], x: -2.1, z: -2.8, color: '#f27ad3' },
+          { name: 'Baseball Gangle', type: 'gangle', avatar: 'baseballgangle', aliases: ['gangle'], x: -0.8, z: -3.2, color: '#d84747' },
+          { name: 'Baseball Ragatha', type: 'ragatha', avatar: 'baseballragatha', aliases: ['ragatha'], x: 0.8, z: -3.2, color: '#6d86dd' },
+          { name: 'Baseball Pomni', type: 'pomni', avatar: 'baseballpomni', aliases: ['pomni'], x: 2.1, z: -2.8, color: '#4068e8' },
+          { name: 'Baseball Kinger', type: 'kinger', avatar: 'baseballkinger', aliases: ['kinger'], x: 3.3, z: -2.0, color: '#d7c9aa' },
+          { name: 'Evil Zooble', type: 'zooble', avatar: 'rivalbaseballzooble', aliases: ['zooble'], x: -3.5, z: -5.2, color: '#f5d33b' },
+          { name: 'Evil Pomni', type: 'pomni', avatar: 'rivalbaseballpomni', aliases: ['pomni'], x: -2.15, z: -5.7, color: '#d7382f' },
+          { name: 'Evil Orbsman', type: 'npc', avatar: 'rivalbaseballpinkgiant', aliases: ['evilorbsman', 'orbsman'], x: -0.75, z: -6.0, color: '#f05a9f', sizeScale: 1.35 },
+          { name: 'Evil Ragatha', type: 'ragatha', avatar: 'rivalbaseballragatha', aliases: ['ragatha'], x: 0.75, z: -6.0, color: '#e86493' },
+          { name: 'Evil Jax', type: 'jax', avatar: 'rivalbaseballjax', aliases: ['jax'], x: 2.15, z: -5.7, color: '#7a244d' },
+          { name: 'Evil Kinger', type: 'kinger', avatar: 'rivalbaseballkinger', aliases: ['kinger'], x: 3.5, z: -5.2, color: '#8e8f9b' },
+          { name: 'Caine', type: 'caine', avatar: 'caine', x: -1.0, z: -1.25, color: '#ffd84a' },
+          { name: 'Bubble', type: 'bubble', avatar: 'bubble', x: 0.2, z: -1.2, color: '#f7f7ff' },
+          { name: 'Disappearing Guy', type: 'mannequin', avatar: 'disappearingguy', x: 1.45, z: -1.35, color: '#55555c' },
+          { name: 'Giant Centipede', type: 'npc', avatar: 'giantcentipede', x: 4.5, z: -6.2, color: '#c89436', sizeScale: 1.22, silent: true }
+        ],
+        objective: scan('RELEVER LE TERRAIN SANS REJOUER LE SCORE CANONIQUE', ['platform', 'base', 'scoreboard'], 'caine')
+      },
+      24: {
+        name: 'POACH EVERYTHING / HUNT STATE', short: 'CHASSE',
+        detail: 'Micro-aventure de chasse de Jax. Cinq traces de proies sont conservees, mais seules Rhino Gangle et Flamingo Zooble recoivent une apparence identifiee.',
+        color: '#294c25', floor: '#304621', ceiling: '#426b58', motif: 'poacher', size: 25,
+        gateEpisode: 5, gateSubepisode: 1, provenance: 'shown', layer: 'cut', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'fence', x: 0, z: -5.8, color: '#c4a45f', label: 'Ligne de chasse de Jax' },
+          { kind: 'plant', x: -3.8, z: -3.4, color: '#18351d', label: 'Bosquet de couverture gauche' },
+          { kind: 'plant', x: 3.7, z: -4.0, color: '#294c25', label: 'Bosquet de couverture droit' },
+          { kind: 'target', campaignTarget: 'preytrace', x: -3.1, z: -2.0, color: '#d9d0a2', label: 'Trace de proie 1' },
+          { kind: 'target', campaignTarget: 'preytrace', x: -1.65, z: -3.25, color: '#f7a8c9', label: 'Trace de proie 2' },
+          { kind: 'target', campaignTarget: 'preytrace', x: 0, z: -4.25, color: '#7df0ff', label: 'Trace de proie 3' },
+          { kind: 'target', campaignTarget: 'preytrace', x: 1.65, z: -3.25, color: '#ffd84a', label: 'Trace de proie 4' },
+          { kind: 'target', campaignTarget: 'preytrace', x: 3.1, z: -2.0, color: '#ff4fb8', label: 'Trace de proie 5' },
+          { kind: 'card', x: -0.7, z: -1.25, color: '#e53935', label: 'Ruban rouge de Rhino Gangle' },
+          { kind: 'archive', x: 0.85, z: -1.3, color: '#7df0ff', label: 'Compteur: one down, four to go' }
+        ],
+        sprites: [
+          { name: 'Hunter Jax', type: 'jax', avatar: 'hunterjax', aliases: ['jax'], x: -1.65, z: -2.25, color: '#8a4fd6' },
+          { name: 'Rhino Gangle', type: 'gangle', avatar: 'rhinogangle', aliases: ['gangle'], x: 0.35, z: -3.0, color: '#e8e1d6' },
+          { name: 'Flamingo Zooble', type: 'zooble', avatar: 'zooble', aliases: ['flamingozooble'], x: 2.0, z: -2.65, color: '#ff4fb8' }
+        ],
+        objective: scan('RELEVER CINQ PROIES SANS INVENTER LEUR IDENTITE', ['target', 'card'], 'hunterjax')
+      },
+      25: {
+        name: 'ANIME HIGH SCHOOL / CLASSROOM', short: 'CLASSE ANIME',
+        detail: 'Salle de classe de la micro-aventure anime: Kinger enseigne l anglais pendant que Jax pousse Gangle a accepter la sortie.',
+        color: '#f2e7ed', floor: '#e8d7df', ceiling: '#f5c8df', motif: 'school', size: 19,
+        gateEpisode: 5, gateSubepisode: 3, provenance: 'shown', layer: 'cut', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'wallart', campaignTarget: 'classboard', anchor: 'wall', x: 0, z: -4.2, color: '#315b49', art: 'blocks', label: 'Tableau du cours d anglais de Kinger' },
+          { kind: 'desk', x: 0, z: -3.3, color: '#8b5a3c', label: 'Bureau du professeur Kinger' },
+          { kind: 'table', x: -2.3, z: -2.15, color: '#b98555', label: 'Rangee de pupitres gauche' },
+          { kind: 'table', x: 0, z: -1.55, color: '#b98555', label: 'Rangee de pupitres centrale' },
+          { kind: 'table', x: 2.3, z: -2.15, color: '#b98555', label: 'Rangee de pupitres droite' },
+          { kind: 'window', anchor: 'wall-left', wallSurface: 'outer', x: 0, z: -2.8, color: '#8bc8ff', label: 'Fenetres de la classe' },
+          { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'fluorescent', x: -1.7, z: -1.0, color: '#ffffff' },
+          { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'fluorescent', x: 1.7, z: -1.0, color: '#ffffff' }
+        ],
+        sprites: [
+          { name: 'Anime Pomni', type: 'pomni', avatar: 'japanesepomni', aliases: ['pomni'], x: -2.4, z: -2.0, color: '#e53935' },
+          { name: 'Anime Jax', type: 'jax', avatar: 'japanesejax', aliases: ['jax'], x: -0.8, z: -2.6, color: '#8a4fd6' },
+          { name: 'Anime Gangle', type: 'gangle', avatar: 'japanesegangle', aliases: ['gangle'], x: 0.8, z: -2.6, color: '#f7f7f7' },
+          { name: 'Anime Ragatha', type: 'ragatha', avatar: 'japaneseragatha', aliases: ['ragatha'], x: 2.4, z: -2.0, color: '#d64545' },
+          { name: 'Teacher Kinger', type: 'kinger', avatar: 'japanesekinger', aliases: ['kinger'], x: -1.2, z: -3.75, color: '#e5cf99' },
+          { name: 'Anime Zooble', type: 'zooble', avatar: 'japanesezooble', aliases: ['zooble'], x: 1.2, z: -3.75, color: '#f06cb8' }
+        ],
+        objective: scan('SUIVRE LE COURS PUIS LA PRESSION DU VOTE', ['wallart', 'desk'], 'japanesekinger')
+      },
+      26: {
+        name: 'PRESIDENT POMNI / BRIEFING ROOM', short: 'PRESIDENCE',
+        detail: 'Bureau presidentiel improvise. Pomni ne recoit aucun briefing; Kinger en possede un et une lampe a tete de bebe occupe le decor.',
+        color: '#edf0f7', floor: '#d8dce7', ceiling: '#e7ecf5', motif: 'whitehouse', size: 19,
+        gateEpisode: 5, gateSubepisode: 2, provenance: 'shown', layer: 'cut', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'desk', x: 0, z: -3.1, width: 3.5, depth: 1.2, height: 1.0, color: '#7a4b32', label: 'Bureau presidentiel' },
+          { kind: 'archive', campaignTarget: 'missingbrief', x: -1.1, z: -1.25, color: '#e53935', label: 'Emplacement vide du briefing de Pomni' },
+          { kind: 'card', x: 1.1, z: -1.25, color: '#44699a', label: 'Briefing remis a Kinger' },
+          { kind: 'spotlight', campaignTarget: 'babylamp', x: 2.55, z: -2.15, color: '#fff1a8', label: 'Lampe a tete de bebe' },
+          { kind: 'partition', x: 0, z: -4.9, width: 6.8, depth: 0.25, height: 3.05, color: '#edf0f7', label: 'Mur du bureau presidentiel' },
+          { kind: 'window', anchor: 'wall-left', wallSurface: 'outer', x: 0, z: -2.8, color: '#8bc8ff', label: 'Fenetre presidentielle gauche' },
+          { kind: 'window', anchor: 'wall-right', wallSurface: 'outer', x: 0, z: -2.8, color: '#8bc8ff', label: 'Fenetre presidentielle droite' }
+        ],
+        sprites: [
+          { name: 'President Pomni', type: 'pomni', avatar: 'pomni', aliases: ['presidentpomni'], x: 0, z: -2.75, color: '#e53935' },
+          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -2.0, z: -2.15, color: '#d9d0a2' },
+          { name: 'Jax', type: 'jax', avatar: 'jax', x: 1.9, z: -2.05, color: '#8a4fd6' }
+        ],
+        objective: scan('CONSTATER LE BRIEFING ABSENT', ['archive', 'card', 'spotlight'], 'pomni')
+      },
       10: {
         name: "SPUDSY'S FRONT COUNTER", short: 'COMPTOIR',
         detail: 'Comptoir principal, caisse, menus et file clients. Les personnages changent avec le petit-dejeuner, le lunch rush et le service du soir.',
@@ -4952,16 +5240,23 @@ const OS = {
       },
       110: {
         name: 'UNTITLED BAR', short: 'BAR',
-        detail: 'Bar de la suggestion de Zooble, visite entre l intermission et le match de softball dans Untitled.',
-        color: '#b96f4f', floor: '#3a251f', ceiling: '#17100d', motif: 'cafe', size: 17,
-        gateEpisode: 5, gateSubepisode: 6, provenance: 'shown', layer: 'present', nonPhysical: true, exits: [],
+        detail: 'Bar noir et blanc de la suggestion de Zooble: pluie aux fenetres, comptoir, clochette et commandes avant que les tensions du groupe ne prennent le dessus.',
+        color: '#696970', floor: '#17171a', ceiling: '#070708', motif: 'noirbar', size: 19,
+        gateEpisode: 5, gateSubepisode: 5, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
         props: [
-          { kind: 'counter', x: 0, z: -3.2, color: '#8b4f32', label: 'Comptoir du bar de Zooble' },
-          { kind: 'table', x: -2.15, z: -2.0, color: '#6f412d', label: 'Table du groupe' },
-          { kind: 'table', x: 2.15, z: -2.0, color: '#6f412d', label: 'Table avant le softball' },
-          { kind: 'card', x: -0.9, z: -1.25, color: '#7df0ff', label: 'Carte de boissons de Zooble' },
-          { kind: 'barrel', x: 1.05, z: -1.3, color: '#b96f4f', label: 'Tabouret du comptoir' },
-          { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'panel', x: 0, z: -0.4, color: '#ffd878' }
+          { kind: 'counter', x: 0, z: -3.35, width: 5.6, depth: 1.0, height: 1.1, color: '#38383d', label: 'Comptoir du bar de Zooble' },
+          { kind: 'table', x: -2.45, z: -2.0, color: '#29292d', label: 'Table du groupe gauche' },
+          { kind: 'table', x: 2.45, z: -2.0, color: '#29292d', label: 'Table du groupe droite' },
+          { kind: 'card', campaignTarget: 'drinkorder', x: -1.25, z: -1.25, color: '#f7f7f7', label: 'Whiskey sour vegan' },
+          { kind: 'card', campaignTarget: 'drinkorder', x: 0, z: -1.15, color: '#b0b0b8', label: 'Cosmopolitan' },
+          { kind: 'card', campaignTarget: 'drinkorder', x: 1.25, z: -1.25, color: '#d7d7d7', label: 'Corncob blitz' },
+          { kind: 'window', anchor: 'wall-left', wallSurface: 'outer', x: 0, z: -2.9, color: '#535866', label: 'Fenetre sous la pluie gauche' },
+          { kind: 'window', anchor: 'wall-right', wallSurface: 'outer', x: 0, z: -2.9, color: '#535866', label: 'Fenetre sous la pluie droite' },
+          { kind: 'doorframe', x: 3.25, z: -3.8, color: '#b8b8bd', label: 'Porte du bar et clochette' },
+          { kind: 'barrel', x: -3.05, z: -1.45, color: '#3f3f45', label: 'Tabouret du comptoir gauche' },
+          { kind: 'barrel', x: 3.05, z: -1.45, color: '#3f3f45', label: 'Tabouret du comptoir droit' },
+          { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'barebulb', x: -1.8, z: -1.0, color: '#f3f3f3' },
+          { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'barebulb', x: 1.8, z: -1.0, color: '#f3f3f3' }
         ],
         sprites: [
           { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: -1.55, z: -2.5, color: '#ff4fb8' },
@@ -4969,12 +5264,9 @@ const OS = {
           { name: 'Jax', type: 'jax', avatar: 'jax', x: 1.2, z: -2.55, color: '#8a4fd6' },
           { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: -2.55, z: -1.6, color: '#d64545' },
           { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: 2.55, z: -1.65, color: '#f7f7f7' },
-          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -2.7, z: -3.2, color: '#d9d0a2' },
-          { name: 'Disappearing Guy', type: 'mannequin', avatar: 'disappearingguy', x: 2.75, z: -3.25, color: '#55555c' },
-          { name: 'Caine', type: 'caine', avatar: 'caine', x: 0.25, z: -3.35, color: '#ffd84a' },
-          { name: 'Bubble', type: 'bubble', avatar: 'bubble', x: 1.65, z: -1.35, color: '#f7f7ff' }
+          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -2.7, z: -3.2, color: '#d9d0a2' }
         ],
-        objective: scan('SERVIR LE BAR AVANT LE MATCH', ['counter', 'card'], 'zooble')
+        objective: scan('SERVIR TROIS COMMANDES AVANT LES TENSIONS', ['counter', 'card', 'window'], 'zooble')
       },
       111: {
         name: 'CAINE RAPID IDEA / BOWLING ALLEY', short: 'BOWLING',
@@ -5902,6 +6194,290 @@ const OS = {
           { name: 'Gangle hallucinee', type: 'gangle', avatar: 'workgangle', x: 0.9, z: -3.4, color: '#f7f7f7', sizeScale: 1.2, silent: true, silentText: 'La silhouette sourit sans parler: elle appartient uniquement a la perception de Ragatha.' }
         ],
         objective: scan('SORTIR DE L HALLUCINATION', ['lorebillboard', 'ring'], 'ragatha')
+      },
+      159: {
+        name: 'UNTITLED LIGHTNING ROUND / TENT STATE', short: 'LIGHTNING',
+        detail: 'Etat temporel du Tent pendant la rafale de propositions de Caine. Zooble suggere la boite et les micro-aventures suivantes restent des coupes, pas des portes.',
+        color: '#8b3154', floor: '#e06f24', ceiling: '#24112f', motif: 'common', size: 21,
+        gateEpisode: 5, gateSubepisode: 1, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'ring', x: 0, z: -4.2, color: '#ffd84a', label: 'Piste de presentation des idees' },
+          { kind: 'archive', campaignTarget: 'suggestionbox', x: 0, z: -2.25, color: '#ff4fb8', label: 'Boite a suggestions proposee par Zooble' },
+          { kind: 'card', campaignTarget: 'pitchcard', x: -2.4, z: -1.35, color: '#c4a45f', label: 'Carte Poach Everything' },
+          { kind: 'card', campaignTarget: 'pitchcard', x: 0, z: -1.15, color: '#44699a', label: 'Carte President Pomni' },
+          { kind: 'card', campaignTarget: 'pitchcard', x: 2.4, z: -1.35, color: '#ff9fcd', label: 'Carte Anime High School' },
+          { kind: 'stagecurtain', x: -3.6, z: -4.7, color: '#c92536', variant: 'left', label: 'Rideau du Tent gauche' },
+          { kind: 'stagecurtain', x: 3.6, z: -4.7, color: '#c92536', variant: 'right', label: 'Rideau du Tent droit' }
+        ],
+        sprites: [
+          { name: 'Caine', type: 'caine', avatar: 'caine', x: 0, z: -3.2, color: '#ffd84a' },
+          { name: 'Bubble', type: 'bubble', avatar: 'bubble', x: 1.2, z: -3.45, color: '#f7f7ff' },
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -3.0, z: -2.0, color: '#e53935' },
+          { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: -1.9, z: -2.4, color: '#d64545' },
+          { name: 'Jax', type: 'jax', avatar: 'jax', x: -0.75, z: -2.05, color: '#8a4fd6' },
+          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: 0.75, z: -2.05, color: '#d9d0a2' },
+          { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: 1.9, z: -2.4, color: '#f7f7f7' },
+          { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 3.0, z: -2.0, color: '#ff4fb8' }
+        ],
+        objective: scan('INDEXER LES TROIS PROPOSITIONS', ['archive', 'card'], 'zooble')
+      },
+      160: {
+        name: 'POACH EVERYTHING / EXIT VOTE', short: 'VOTE CHASSE',
+        detail: 'Dernier etat de Poach Everything: le groupe vote pour sortir et une regle vegan est ajoutee apres la chasse.',
+        color: '#243f22', floor: '#304621', ceiling: '#314d3d', motif: 'poacher', size: 17,
+        gateEpisode: 5, gateSubepisode: 1, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'console', campaignTarget: 'votepanel', x: 0, z: -3.1, color: '#7df0ff', label: 'Panneau de vote de sortie' },
+          { kind: 'card', campaignTarget: 'veganrule', x: 0, z: -1.35, color: '#83ff57', label: 'Nouvelle regle vegan' },
+          { kind: 'fence', x: -3.0, z: -4.2, color: '#c4a45f', label: 'Limite de la zone de chasse' },
+          { kind: 'fence', x: 3.0, z: -4.2, color: '#c4a45f', label: 'Limite de la zone de chasse' }
+        ],
+        sprites: [
+          { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: -1.3, z: -2.45, color: '#ff4fb8' },
+          { name: 'Hunter Jax', type: 'jax', avatar: 'hunterjax', aliases: ['jax'], x: 1.2, z: -2.4, color: '#8a4fd6' },
+          { name: 'Rhino Gangle', type: 'gangle', avatar: 'rhinogangle', aliases: ['gangle'], x: -2.55, z: -3.1, color: '#e8e1d6' },
+          { name: 'Flamingo Zooble', type: 'zooble', avatar: 'zooble', aliases: ['flamingozooble'], x: 2.55, z: -3.1, color: '#ff4fb8', silent: true }
+        ],
+        objective: scan('VALIDER LA SORTIE ET LA REGLE VEGAN', ['console', 'card'], 'zooble')
+      },
+      161: {
+        name: 'PRESIDENT POMNI / BOMB STATE', short: 'BOMBE',
+        detail: 'Second etat de President Pomni: une seule bombe araignee, deux fils rouge et bleu et un extremiste neo-zelandais sans identite revelee.',
+        color: '#dfe3ed', floor: '#c8ccd6', ceiling: '#d5dbe8', motif: 'whitehouse', size: 19,
+        gateEpisode: 5, gateSubepisode: 2, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'target', campaignTarget: 'spiderbomb', x: 0, z: -3.3, color: '#222229', label: 'Bombe araignee unique' },
+          { kind: 'card', campaignTarget: 'bombwire', x: -1.1, z: -1.45, color: '#e53935', label: 'Fil rouge de la bombe' },
+          { kind: 'card', campaignTarget: 'bombwire', x: 1.1, z: -1.45, color: '#2a58d8', label: 'Fil bleu de la bombe' },
+          { kind: 'desk', x: 0, z: -4.4, color: '#7a4b32', label: 'Bureau presidentiel en alerte' },
+          { kind: 'partition', x: 0, z: -5.25, width: 7.2, depth: 0.25, height: 3.05, color: '#edf0f7', label: 'Mur de la salle de crise' },
+          { kind: 'spotlight', x: 2.8, z: -2.0, color: '#fff1a8', label: 'Lampe a tete de bebe' }
+        ],
+        sprites: [
+          { name: 'President Pomni', type: 'pomni', avatar: 'pomni', aliases: ['presidentpomni'], x: -1.6, z: -2.5, color: '#e53935' },
+          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: 0, z: -2.1, color: '#d9d0a2' },
+          { name: 'Jax', type: 'jax', avatar: 'jax', x: 1.55, z: -2.45, color: '#8a4fd6' },
+          {
+            name: 'New Zealand Extremist', type: 'mannequin', avatar: 'additionalvoices',
+            aliases: ['newzealandextremist'], x: 0, z: -4.65, color: '#d78aff', sizeScale: 0.82,
+            silentText: 'La silhouette annonce la crise. CainOS ne lui attribue ni nom civil ni seconde bombe.'
+          }
+        ],
+        objective: scan('IDENTIFIER UNE BOMBE ET DEUX FILS', ['target', 'card'], 'newzealandextremist')
+      },
+      162: {
+        name: 'ANIME HIGH SCHOOL / EXIT VOTE', short: 'VOTE ANIME',
+        detail: 'Dernier etat de la micro-aventure anime: Gangle accepte la sortie sous la pression de Jax et le decor se ferme.',
+        color: '#f0dce7', floor: '#e8d7df', ceiling: '#f5c8df', motif: 'school', size: 17,
+        gateEpisode: 5, gateSubepisode: 3, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'console', campaignTarget: 'votepanel', x: 0, z: -3.0, color: '#ff9fcd', label: 'Vote de sortie Anime High School' },
+          { kind: 'archive', campaignTarget: 'skipresult', x: 0, z: -1.35, color: '#7df0ff', label: 'Resultat: micro-aventure passee' },
+          { kind: 'table', x: -2.0, z: -2.1, color: '#b98555', label: 'Pupitres abandonnes gauche' },
+          { kind: 'table', x: 2.0, z: -2.1, color: '#b98555', label: 'Pupitres abandonnes droite' }
+        ],
+        sprites: [
+          { name: 'Anime Gangle', type: 'gangle', avatar: 'japanesegangle', aliases: ['gangle'], x: -0.9, z: -2.45, color: '#f7f7f7' },
+          { name: 'Anime Jax', type: 'jax', avatar: 'japanesejax', aliases: ['jax'], x: 0.95, z: -2.45, color: '#8a4fd6' },
+          { name: 'Teacher Kinger', type: 'kinger', avatar: 'japanesekinger', aliases: ['kinger'], x: 0, z: -3.8, color: '#e5cf99' }
+        ],
+        objective: scan('CONFIRMER LA SORTIE DE GANGLE', ['console', 'archive'], 'japanesegangle')
+      },
+      163: {
+        name: 'STARGAZING PICNIC / NIGHT GROUNDS', short: 'ETOILES',
+        detail: 'Etat nocturne des Grounds: pique-nique, sandwichs et lucioles. Pomni et Jax parlent pendant que Ragatha, Kinger, Gangle et Zooble restent dans la scene.',
+        color: '#17224d', floor: '#233d2a', ceiling: '#080d28', motif: 'stargazing', size: 25,
+        gateEpisode: 5, gateSubepisode: 4, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'platform', campaignTarget: 'picnic', x: 0, z: -3.0, width: 5.2, depth: 3.3, height: 0.06, color: '#d64545', label: 'Couverture du pique-nique nocturne' },
+          { kind: 'card', campaignTarget: 'sandwich', x: 0, z: -2.0, color: '#fff1a8', label: 'Sandwichs du pique-nique' },
+          { kind: 'candle', campaignTarget: 'firefly', x: -2.8, z: -2.4, elevation: 1.1, color: '#fff1a8', label: 'Luciole gauche' },
+          { kind: 'candle', campaignTarget: 'firefly', x: 0.45, z: -4.4, elevation: 1.5, color: '#fff1a8', label: 'Luciole centrale' },
+          { kind: 'candle', campaignTarget: 'firefly', x: 2.85, z: -2.7, elevation: 1.25, color: '#fff1a8', label: 'Luciole droite' },
+          { kind: 'plant', x: -4.0, z: -4.6, color: '#18351d', label: 'Bosquet nocturne gauche' },
+          { kind: 'plant', x: 4.0, z: -4.8, color: '#18351d', label: 'Bosquet nocturne droit' },
+          { kind: 'ring', x: 0, z: -6.0, elevation: 3.6, color: '#d7e6ff', label: 'Ciel etoile sans Sun NPC' }
+        ],
+        sprites: [
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -1.45, z: -2.6, color: '#e53935' },
+          { name: 'Jax', type: 'jax', avatar: 'jax', x: 1.45, z: -2.6, color: '#8a4fd6' },
+          { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: -3.0, z: -3.6, color: '#d64545' },
+          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -1.0, z: -4.25, color: '#d9d0a2' },
+          { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: 1.0, z: -4.25, color: '#f7f7f7' },
+          { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 3.0, z: -3.6, color: '#ff4fb8' }
+        ],
+        objective: scan('ECOUTER LA NUIT SANS EN FAIRE UNE EPREUVE', ['platform', 'card', 'candle'], 'pomni')
+      },
+      164: {
+        name: 'CAINE AND BUBBLE / SUGGESTION OBSERVATION', short: 'OBSERVATION',
+        detail: 'Bref plan de Caine et Bubble observant le lightning round. La beach party est seulement mentionnee et ne devient pas un lieu visitable.',
+        color: '#26143b', floor: '#170d22', ceiling: '#07030d', motif: 'micro', size: 15,
+        gateEpisode: 5, gateSubepisode: 4, provenance: 'shown', layer: 'cut', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'console', campaignTarget: 'suggestionmonitor', x: 0, z: -3.1, color: '#7df0ff', label: 'Moniteur des suggestions' },
+          { kind: 'card', x: -1.8, z: -1.35, color: '#ff4fb8', label: 'Beach party / idee seulement mentionnee' },
+          { kind: 'archive', x: 1.8, z: -1.35, color: '#ffd84a', label: 'Index du lightning round' },
+          { kind: 'ring', x: 0, z: -4.2, color: '#c875ff', label: 'Fenetre d observation de Caine' }
+        ],
+        sprites: [
+          { name: 'Caine', type: 'caine', avatar: 'caine', x: -0.85, z: -2.55, color: '#ffd84a' },
+          { name: 'Bubble', type: 'bubble', avatar: 'bubble', x: 0.9, z: -2.35, color: '#f7f7ff' },
+          { name: 'Jeffery', type: 'npc', avatar: 'jeffery', x: 0, z: -4.0, elevation: 0.55, color: '#f4f4ee', sizeScale: 0.86, silent: true, silentText: 'Jeffery danse sans parler; il reste une extension visuelle de l oeil droit de Caine.' }
+        ],
+        objective: scan('DISTINGUER UNE IDEE MENTIONNEE D UN LIEU MONTRE', ['console', 'card'], 'caine')
+      },
+      165: {
+        name: 'UNTITLED PSYCHEDELIC INTERMISSION', short: 'INTERMISSION',
+        detail: 'Projection psychedelique entre les micro-aventures et le bar, suivie de l echange ou Zooble propose une scene qu il sait gerer.',
+        color: '#5b1b67', floor: '#160d2d', ceiling: '#05020d', motif: 'intermission', size: 19,
+        gateEpisode: 5, gateSubepisode: 5, provenance: 'shown', layer: 'projection', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'archive', campaignTarget: 'intermissionreel', x: 0, z: -2.1, color: '#fff1a8', label: 'Bobine de l intermission psychedelique' },
+          { kind: 'ring', x: -2.6, z: -3.4, elevation: 1.2, color: '#ff4fb8', label: 'Anneau de couleur gauche' },
+          { kind: 'ring', x: 0, z: -4.6, elevation: 2.0, color: '#7df0ff', label: 'Anneau de couleur central' },
+          { kind: 'ring', x: 2.6, z: -3.4, elevation: 1.45, color: '#ffd84a', label: 'Anneau de couleur droit' },
+          { kind: 'gridnode', x: -1.4, z: -1.3, color: '#c875ff', label: 'Fragment visuel de transition' },
+          { kind: 'gridnode', x: 1.4, z: -1.3, color: '#83ff57', label: 'Fragment visuel de transition' }
+        ],
+        sprites: [
+          { name: 'Caine', type: 'caine', avatar: 'caine', x: -1.0, z: -2.8, color: '#ffd84a' },
+          { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 1.0, z: -2.65, color: '#ff4fb8' }
+        ],
+        objective: scan('TRAVERSER L INTERMISSION ET ECOUTER ZOOBLE', ['archive', 'ring'], 'zooble')
+      },
+      166: {
+        name: 'UNTITLED BAR / TENSION STATE', short: 'BAR TENSIONS',
+        detail: 'Second etat temporel du bar: excuses, peur du mais et breve apparition du Disappearing Guy. Bubble n apparait qu a la fin; Caine reste absent.',
+        color: '#54545b', floor: '#151518', ceiling: '#050506', motif: 'noirbar', size: 19,
+        gateEpisode: 5, gateSubepisode: 5, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'counter', x: 0, z: -3.35, width: 5.6, depth: 1.0, height: 1.1, color: '#303035', label: 'Comptoir apres les commandes' },
+          { kind: 'candy', campaignTarget: 'cornprop', x: 0.7, z: -1.35, color: '#f4c143', label: 'Epi de mais du gag de Ragatha' },
+          { kind: 'memory', x: -1.0, z: -1.25, color: '#d64545', label: 'Excuses et tension de Ragatha' },
+          { kind: 'doorframe', x: 3.2, z: -3.8, color: '#b8b8bd', label: 'Porte et clochette du Disappearing Guy' },
+          { kind: 'window', anchor: 'wall-left', wallSurface: 'outer', x: 0, z: -2.9, color: '#535866', label: 'Pluie sur la fenetre du bar' },
+          { kind: 'table', x: -2.45, z: -2.0, color: '#29292d', label: 'Table des conversations' },
+          { kind: 'table', x: 2.45, z: -2.0, color: '#29292d', label: 'Table avant le depart' }
+        ],
+        sprites: [
+          { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: -2.5, z: -2.5, color: '#ff4fb8' },
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -1.25, z: -2.15, color: '#e53935' },
+          { name: 'Jax', type: 'jax', avatar: 'jax', x: 0, z: -2.65, color: '#8a4fd6' },
+          { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: 1.25, z: -2.15, color: '#d64545' },
+          { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: 2.5, z: -2.5, color: '#f7f7f7' },
+          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -2.5, z: -3.6, color: '#d9d0a2' },
+          { name: 'Disappearing Guy', type: 'mannequin', avatar: 'disappearingguy', x: 2.7, z: -3.85, color: '#55555c' },
+          { name: 'Bubble', type: 'bubble', avatar: 'bubble', x: 0.9, z: -3.75, color: '#f7f7ff', silent: true, silentText: 'Bubble n apparait qu au terme de la scene du bar.' }
+        ],
+        objective: scan('SUIVRE LES TENSIONS SANS INVENTER DE CONFESSION', ['candy', 'memory', 'doorframe'], 'disappearingguy')
+      },
+      167: {
+        name: 'UNTITLED SOFTBALL / TEAM PRESENTATION', short: 'EQUIPES',
+        detail: 'Presentation des Big Tops et des Evil Big Tops avec Caine et Bubble aux commentaires. Evil Orbsman occupe la place du grand joueur rose.',
+        color: '#224c22', floor: '#2d6329', ceiling: '#76a4d9', motif: 'softball', size: 29,
+        gateEpisode: 5, gateSubepisode: 6, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'platform', x: 0, z: -4.0, width: 10.2, depth: 7.4, height: 0.08, color: '#b98555', label: 'Losange de terre du stade' },
+          { kind: 'scoreboard', campaignTarget: 'teamboard', x: 0, z: -7.4, color: '#83ff57', label: 'Big Tops contre Evil Big Tops' },
+          { kind: 'lorebillboard', campaignTarget: 'evilorbsman', avatar: 'rivalbaseballpinkgiant', x: 0, z: -6.15, color: '#f05a9f', label: 'Evil Orbsman / roster adverse', loreText: 'Joueur rose du roster Evil Big Tops, identifie comme Evil Orbsman dans le transcript.' },
+          { kind: 'console', x: -3.6, z: -1.4, color: '#ffd84a', label: 'Microphone de Caine' },
+          { kind: 'console', x: 3.6, z: -1.4, color: '#f7f7ff', label: 'Microphone de Bubble' },
+          { kind: 'fence', x: -5.4, z: -6.3, color: '#d7d7d7', label: 'Tribunes gauche' },
+          { kind: 'fence', x: 5.4, z: -6.3, color: '#d7d7d7', label: 'Tribunes droite' }
+        ],
+        sprites: [
+          { name: 'Baseball Jax', type: 'jax', avatar: 'baseballjax', aliases: ['jax'], x: -4.25, z: -2.2, color: '#b874e8' },
+          { name: 'Baseball Zooble', type: 'zooble', avatar: 'baseballzooble', aliases: ['zooble'], x: -3.0, z: -2.75, color: '#f27ad3' },
+          { name: 'Baseball Gangle', type: 'gangle', avatar: 'baseballgangle', aliases: ['gangle'], x: -1.7, z: -3.2, color: '#d84747' },
+          { name: 'Baseball Ragatha', type: 'ragatha', avatar: 'baseballragatha', aliases: ['ragatha'], x: -0.4, z: -3.5, color: '#6d86dd' },
+          { name: 'Baseball Pomni', type: 'pomni', avatar: 'baseballpomni', aliases: ['pomni'], x: 0.9, z: -3.5, color: '#4068e8' },
+          { name: 'Baseball Kinger', type: 'kinger', avatar: 'baseballkinger', aliases: ['kinger'], x: 2.2, z: -3.2, color: '#d7c9aa' },
+          { name: 'Evil Zooble', type: 'zooble', avatar: 'rivalbaseballzooble', x: -3.6, z: -5.0, color: '#f5d33b' },
+          { name: 'Evil Pomni', type: 'pomni', avatar: 'rivalbaseballpomni', x: -2.25, z: -5.5, color: '#d7382f' },
+          { name: 'Evil Orbsman', type: 'npc', avatar: 'rivalbaseballpinkgiant', aliases: ['evilorbsman', 'orbsman'], x: -0.8, z: -5.8, color: '#f05a9f', sizeScale: 1.35 },
+          { name: 'Evil Ragatha', type: 'ragatha', avatar: 'rivalbaseballragatha', x: 0.8, z: -5.8, color: '#e86493' },
+          { name: 'Evil Jax', type: 'jax', avatar: 'rivalbaseballjax', x: 2.25, z: -5.5, color: '#7a244d' },
+          { name: 'Evil Kinger', type: 'kinger', avatar: 'rivalbaseballkinger', x: 3.6, z: -5.0, color: '#8e8f9b' },
+          { name: 'Caine', type: 'caine', avatar: 'caine', x: -1.1, z: -1.25, color: '#ffd84a' },
+          { name: 'Bubble', type: 'bubble', avatar: 'bubble', x: 0.15, z: -1.2, color: '#f7f7ff' },
+          { name: 'Disappearing Guy', type: 'mannequin', avatar: 'disappearingguy', x: 1.45, z: -1.35, color: '#55555c' },
+          { name: 'Giant Centipede', type: 'npc', avatar: 'giantcentipede', x: 5.1, z: -6.8, color: '#c89436', sizeScale: 1.2, silent: true }
+        ],
+        objective: scan('IDENTIFIER LES DEUX EQUIPES ET L HYMNE', ['scoreboard', 'lorebillboard', 'console'], 'caine')
+      },
+      168: {
+        name: 'UNTITLED SOFTBALL / MAID JAX INNING', short: 'MAID JAX',
+        detail: 'Etat temporel du premier inning: Zooble impose la tenue de maid a Jax, la balle standard est mangee et Kinger utilise Zooble comme balle.',
+        color: '#21471f', floor: '#2d6329', ceiling: '#6e98c9', motif: 'softball', size: 25,
+        gateEpisode: 5, gateSubepisode: 6, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'platform', x: 0, z: -3.8, width: 9.0, depth: 6.8, height: 0.08, color: '#b98555', label: 'Terrain du premier inning' },
+          { kind: 'card', campaignTarget: 'maidvote', x: -1.4, z: -1.25, color: '#c88aff', label: 'Vote imposant la tenue de maid a Jax' },
+          { kind: 'target', campaignTarget: 'eatenball', x: 0, z: -1.2, color: '#f7f7f7', label: 'Balle standard mangee' },
+          { kind: 'target', campaignTarget: 'zoobleball', x: 1.4, z: -1.25, color: '#ff4fb8', label: 'Zooble utilisee comme balle reglementaire' },
+          { kind: 'base', x: -2.25, z: -2.7, color: '#ffffff', label: 'Premiere base' },
+          { kind: 'base', x: 0, z: -4.45, color: '#ffffff', label: 'Deuxieme base' },
+          { kind: 'base', x: 2.25, z: -2.7, color: '#ffffff', label: 'Troisieme base' },
+          { kind: 'scoreboard', x: 0, z: -6.4, color: '#83ff57', label: 'Score du premier inning' }
+        ],
+        sprites: [
+          { name: 'Maid Jax', type: 'jax', avatar: 'maidjax', aliases: ['jax'], x: -1.55, z: -2.6, color: '#c88aff' },
+          { name: 'Baseball Kinger', type: 'kinger', avatar: 'baseballkinger', aliases: ['kinger'], x: 0, z: -3.25, color: '#d7c9aa' },
+          { name: 'Baseball Zooble', type: 'zooble', avatar: 'baseballzooble', aliases: ['zooble'], x: 1.55, z: -2.75, color: '#f27ad3' },
+          { name: 'Baseball Pomni', type: 'pomni', avatar: 'baseballpomni', aliases: ['pomni'], x: -3.2, z: -3.7, color: '#4068e8' },
+          { name: 'Baseball Gangle', type: 'gangle', avatar: 'baseballgangle', aliases: ['gangle'], x: 3.2, z: -3.7, color: '#d84747' },
+          { name: 'Caine', type: 'caine', avatar: 'caine', x: -0.9, z: -1.15, color: '#ffd84a' },
+          { name: 'Bubble', type: 'bubble', avatar: 'bubble', x: 0.9, z: -1.15, color: '#f7f7ff' }
+        ],
+        objective: scan('SUIVRE LA BALLE SANS DOUBLER JAX', ['card', 'target', 'base'], 'maidjax')
+      },
+      169: {
+        name: 'UNTITLED SOFTBALL / HOME RUN SEQUENCE', short: '3 HOME RUNS',
+        detail: 'Etat temporel des trois home runs canoniques, dans l ordre Gangle, Zooble puis Ragatha remplacant Pomni.',
+        color: '#285526', floor: '#2d6329', ceiling: '#76a4d9', motif: 'softball', size: 25,
+        gateEpisode: 5, gateSubepisode: 6, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'platform', x: 0, z: -3.8, width: 9.0, depth: 6.8, height: 0.08, color: '#b98555', label: 'Terrain pendant la serie de home runs' },
+          { kind: 'scoreboard', campaignTarget: 'homerun', x: -2.4, z: -1.4, color: '#d84747', label: 'Home run 1 / Gangle' },
+          { kind: 'scoreboard', campaignTarget: 'homerun', x: 0, z: -1.15, color: '#f27ad3', label: 'Home run 2 / Zooble' },
+          { kind: 'scoreboard', campaignTarget: 'homerun', x: 2.4, z: -1.4, color: '#6d86dd', label: 'Home run 3 / Ragatha' },
+          { kind: 'card', campaignTarget: 'substitution', x: 0, z: -2.15, color: '#e53935', label: 'Ragatha remplace Pomni' },
+          { kind: 'base', x: -2.25, z: -3.0, color: '#ffffff', label: 'Premiere base' },
+          { kind: 'base', x: 0, z: -4.75, color: '#ffffff', label: 'Deuxieme base' },
+          { kind: 'base', x: 2.25, z: -3.0, color: '#ffffff', label: 'Troisieme base' }
+        ],
+        sprites: [
+          { name: 'Baseball Gangle', type: 'gangle', avatar: 'baseballgangle', aliases: ['gangle'], x: -1.75, z: -3.15, color: '#d84747' },
+          { name: 'Baseball Zooble', type: 'zooble', avatar: 'baseballzooble', aliases: ['zooble'], x: 0, z: -3.55, color: '#f27ad3' },
+          { name: 'Baseball Ragatha', type: 'ragatha', avatar: 'baseballragatha', aliases: ['ragatha'], x: 1.75, z: -3.15, color: '#6d86dd' },
+          { name: 'Baseball Pomni', type: 'pomni', avatar: 'baseballpomni', aliases: ['pomni'], x: -3.25, z: -4.2, color: '#4068e8' },
+          { name: 'Maid Jax', type: 'jax', avatar: 'maidjax', aliases: ['jax'], x: 3.25, z: -4.2, color: '#c88aff' },
+          { name: 'Caine', type: 'caine', avatar: 'caine', x: -0.9, z: -1.05, color: '#ffd84a' },
+          { name: 'Bubble', type: 'bubble', avatar: 'bubble', x: 0.9, z: -1.05, color: '#f7f7ff' }
+        ],
+        objective: scan('RELEVER GANGLE PUIS ZOOBLE PUIS RAGATHA', ['scoreboard', 'card'], 'ragatha')
+      },
+      170: {
+        name: 'UNTITLED SOFTBALL / WIN AND RETURN', short: 'RETOUR',
+        detail: 'Fin du match: Caine declare la victoire, un signal non identifie provoque le chaos et le portail ramene le groupe au Tent.',
+        color: '#1d421c', floor: '#2d6329', ceiling: '#547da8', motif: 'softball', size: 23,
+        gateEpisode: 5, gateSubepisode: 7, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'scoreboard', campaignTarget: 'finalscore', x: 0, z: -5.8, color: '#83ff57', label: 'Victoire des Big Tops declaree par Caine' },
+          { kind: 'target', campaignTarget: 'unknownsignal', x: -2.2, z: -3.1, color: '#ff4d4d', label: 'Signal non identifie du chaos final' },
+          { kind: 'caineportal', campaignTarget: 'returnportal', x: 2.2, z: -3.1, color: '#7df0ff', accent: '#ffd84a', target: 28, label: 'Portail de retour au Tent' },
+          { kind: 'platform', x: 0, z: -3.6, width: 8.5, depth: 6.0, height: 0.08, color: '#b98555', label: 'Terrain apres le score final' },
+          { kind: 'gridnode', x: -3.0, z: -1.35, color: '#e53935', label: 'Fragment de chaos gauche' },
+          { kind: 'gridnode', x: 3.0, z: -1.35, color: '#2a58d8', label: 'Fragment de chaos droit' }
+        ],
+        sprites: [
+          { name: 'Caine', type: 'caine', avatar: 'caine', x: -1.0, z: -2.45, color: '#ffd84a' },
+          { name: 'Bubble', type: 'bubble', avatar: 'bubble', x: 0.2, z: -2.15, color: '#f7f7ff' },
+          { name: 'Baseball Pomni', type: 'pomni', avatar: 'baseballpomni', aliases: ['pomni'], x: 1.45, z: -2.5, color: '#4068e8' },
+          { name: 'Baseball Ragatha', type: 'ragatha', avatar: 'baseballragatha', aliases: ['ragatha'], x: -2.6, z: -3.6, color: '#6d86dd' },
+          { name: 'Baseball Gangle', type: 'gangle', avatar: 'baseballgangle', aliases: ['gangle'], x: 2.6, z: -3.6, color: '#d84747' }
+        ],
+        objective: scan('VALIDER LE SCORE PUIS LE PORTAIL', ['scoreboard', 'target', 'caineportal'], 'caine')
       }
     };
     this.circusCanonRoomDefinitions = rooms;
@@ -6043,7 +6619,7 @@ const OS = {
     });
     const canonLocationChecks = [
       { zoneId: 70, label: 'SHRIMP TOWN', nonPhysical: true },
-      { zoneId: 71, label: 'SNOWY TUNDRA', links: [11] },
+      { zoneId: 71, label: 'SNOWY TUNDRA', nonPhysical: true },
       { zoneId: 72, label: 'PARKING SPUDSY', links: [127, 131] },
       { zoneId: 73, label: 'BRAIN SCANNER', nonPhysical: true },
       { zoneId: 74, label: 'JAX PSYCHE', nonPhysical: true },
@@ -6097,7 +6673,6 @@ const OS = {
     const errors = [];
     const targets = [
       { zone: 8, kind: 'building', minHeight: 4.2 },
-      { zone: 26, kind: 'building', minHeight: 3.2 },
       { zone: 32, kind: 'building', minHeight: 4.0 },
       { zone: 39, kind: 'lighthouse', minHeight: 6.0 },
       { zone: 75, kind: 'tower', minHeight: 7.5 }
@@ -7116,6 +7691,11 @@ const OS = {
       gangletragedy: 'gangle',
       beachgangle: 'gangle',
       japanesegangle: 'gangle',
+      japanesepomni: 'pomni',
+      japanesejax: 'jax',
+      japaneseragatha: 'ragatha',
+      japanesekinger: 'kinger',
+      japanesezooble: 'zooble',
       rhinogangle: 'gangle',
       spudsypomni: 'pomni',
       spudsyjax: 'jax',
@@ -7123,9 +7703,21 @@ const OS = {
       spudsyzooble: 'zooble',
       hunterjax: 'jax',
       maidjax: 'jax',
-      peeledjax: 'jax'
+      peeledjax: 'jax',
+      baseballpomni: 'pomni',
+      baseballragatha: 'ragatha',
+      baseballjax: 'jax',
+      baseballkinger: 'kinger',
+      baseballgangle: 'gangle',
+      baseballzooble: 'zooble',
+      rivalbaseballpomni: 'pomni',
+      rivalbaseballragatha: 'ragatha',
+      rivalbaseballjax: 'jax',
+      rivalbaseballkinger: 'kinger',
+      rivalbaseballzooble: 'zooble',
+      rivalbaseballpinkgiant: 'evilorbsman'
     };
-    return [...new Set([avatar, type, canonical[avatar]].filter(Boolean))];
+    return [...new Set([avatar, type, ...(sprite?.aliases || []), canonical[avatar]].filter(Boolean))];
   },
 
   talkToCircusCharacter(sprite) {
@@ -8139,9 +8731,55 @@ const OS = {
       bulbcreature: "Bulb Creature Archive: signal secondaire."
     };
     const identityAliases = this.getCircusCharacterIdentityAliases(sprite);
+    const activeCampaign = this.getActiveCircusCampaignStatus();
+    const campaignLines = {
+      '5:0:ragatha': "Ragatha: Je suis encore trempee et epuisee. J aimerais une pause avant la prochaine idee de Caine.",
+      '5:0:kinger': "Kinger: J ai rapporte des oeufs. Je ne sais plus exactement pourquoi, mais ils ont survecu a l aventure.",
+      '5:1:caine': "Caine: Trois micro-aventures, un lightning round et une boite pleine de possibilites!",
+      '5:1:zooble': "Zooble: Prends une suggestion dans la boite. Ce sera toujours plus honnete que de pretendre que Caine nous consulte.",
+      '5:2:hunterjax': "Jax: One down, four to go. Le ruban rouge rend au moins la cible facile a reperer.",
+      '5:3:zooble': "Zooble: On sort. Et la prochaine version de cette regle sera vegan.",
+      '5:4:pomni': "Pomni: Kinger a un briefing. Moi, je suis presidente et je n ai rien recu.",
+      '5:4:kinger': "Kinger: Mon dossier est tres detaille. Cela ne rend pas la lampe a tete de bebe moins inquietante.",
+      '5:5:additionalvoices': "New Zealand Extremist: Une seule bombe suffit. Les fils rouge et bleu sont deja visibles.",
+      '5:5:jax': "Jax: Une bombe, deux fils et aucun plan pour la presidente. C est bien une aventure de Caine.",
+      '5:6:japanesekinger': "Kinger: Le cours porte sur l anglais. Le decor anime ne change pas le sujet.",
+      '5:6:japanesejax': "Jax: Gangle peut voter maintenant et nous eviter de prolonger ce cours.",
+      '5:6:japanesegangle': "Gangle: Je peux essayer de finir la scene avant de demander la sortie.",
+      '5:7:japanesegangle': "Gangle: D accord. Je vote pour passer a la prochaine aventure.",
+      '5:8:pomni': "Pomni: Les lucioles et les sandwichs ne demandent rien de nous. Cela fait bizarre.",
+      '5:8:jax': "Jax: Tu peux regarder les etoiles sans essayer d en faire une revelation.",
+      '5:9:caine': "Caine: Le lightning round progresse admirablement! La beach party restera dans la liste des idees.",
+      '5:9:bubble': "Bubble: Je peux cocher la beach party meme si personne n y va!",
+      '5:10:caine': "Caine: Une intermission visuelle parfaitement necessaire avant notre prochaine micro-aventure!",
+      '5:10:zooble': "Zooble: Je propose un bar. Au moins, je sais comment cette scene devrait fonctionner.",
+      '5:11:zooble': "Zooble: Whiskey sour vegan, cosmopolitan, corncob blitz. Garde les commandes separees.",
+      '5:11:pomni': "Pomni: Les autres parlent de leur vie d avant. Je ne vais pas transformer leurs recits en pieces visitables.",
+      '5:11:gangle': "Gangle: Je peux parler de ce que je faisais sans que le bar devienne ce souvenir.",
+      '5:11:ragatha': "Ragatha: On peut juste rester ici et parler. Ce n est pas une aventure a gagner.",
+      '5:12:disappearingguy': "Disappearing Guy: He--",
+      '5:12:jax': "Jax: Mon histoire etait fausse. Ne la range pas comme une archive humaine.",
+      '5:12:ragatha': "Ragatha: Je suis desolee. Et je ne veux vraiment pas voir cet epi de mais.",
+      '5:13:caine': "Caine: Les Big Tops affrontent les Evil Big Tops! Tous les joueurs sont enfin presentes!",
+      '5:13:bubble': "Bubble: Je commente! Je peux aussi commenter mes propres commentaires!",
+      '5:13:disappearingguy': "Disappearing Guy: Le signal de l hymne commence ici.",
+      '5:14:maidjax': "Jax: Je n ai pas choisi cette tenue. Je ne vais pas non plus pretendre que cette balle est normale.",
+      '5:14:kinger': "Kinger: Zooble remplace la balle mangee. C est conforme aux regles que Caine vient d inventer.",
+      '5:14:zooble': "Zooble: Pose-moi avant que quelqu un appelle encore ca du softball.",
+      '5:15:gangle': "Gangle: Le premier home run est le mien. Le suivant appartient a Zooble.",
+      '5:15:zooble': "Zooble: Deuxieme home run. Ragatha remplace Pomni pour le dernier.",
+      '5:15:ragatha': "Ragatha: Je prends la place de Pomni et je termine le troisieme home run.",
+      '5:16:caine': "Caine: Victoire des Big Tops! Le signal final reste non identifie; utilisez le portail pendant qu il est encore ouvert!"
+    };
+    const campaignLine = activeCampaign?.definition?.episode && Number.isInteger(activeCampaign?.progress?.stage)
+      ? identityAliases
+        .map(identity => campaignLines[`${activeCampaign.definition.episode}:${activeCampaign.progress.stage}:${identity}`])
+        .find(Boolean)
+      : null;
     const zoneIdentity = identityAliases.find(identity => zoneLines[identity]?.[zoneId]);
     const defaultIdentity = identityAliases.find(identity => defaultLines[identity]);
-    const baseLine = (zoneIdentity ? zoneLines[zoneIdentity][zoneId] : null)
+    const baseLine = campaignLine
+      || (zoneIdentity ? zoneLines[zoneIdentity][zoneId] : null)
       || (defaultIdentity ? defaultLines[defaultIdentity] : null)
       || `${sprite.name}: Signal detecte.`;
     const followups = {
@@ -9195,6 +9833,7 @@ const OS = {
       circus: { wallScale: 1.08, ceilingWorldHeight: 5.2, roof: 'tent', wallBias: 0.61 },
       final: { wallScale: 1.02, ceilingWorldHeight: 3.8, roof: 'tent', wallBias: 0.58 },
       grounds: { wallScale: 0.5, ceilingWorldHeight: 6.2, roof: 'open', wallBias: 0.53 },
+      stargazing: { wallScale: 0.48, ceilingWorldHeight: 6.6, roof: 'open', wallBias: 0.52 },
       candy: { wallScale: 0.78, ceilingWorldHeight: 3.2, roof: 'open', wallBias: 0.56 },
       route: { wallScale: 0.58, ceilingWorldHeight: 4.8, roof: 'open', wallBias: 0.55 },
       palace: { wallScale: 1.12, ceilingWorldHeight: 4.3, roof: 'vault', wallBias: 0.6 },
@@ -9222,10 +9861,12 @@ const OS = {
       loser: { wallScale: 0.64, ceilingWorldHeight: 2.3, roof: 'flat', wallBias: 0.54 },
       nest: { wallScale: 0.96, ceilingWorldHeight: 4.8, roof: 'cavern', wallBias: 0.58 },
       cafe: { wallScale: 0.76, ceilingWorldHeight: 2.75, roof: 'beams', wallBias: 0.56 },
+      noirbar: { wallScale: 0.78, ceilingWorldHeight: 2.85, roof: 'beams', wallBias: 0.56 },
       pilotrestaurant: { wallScale: 0.96, ceilingWorldHeight: 3.7, roof: 'vault', wallBias: 0.59 },
       dining: { wallScale: 0.82, ceilingWorldHeight: 3.0, roof: 'tent', wallBias: 0.57 },
       awards: { wallScale: 1.02, ceilingWorldHeight: 3.8, roof: 'stage', wallBias: 0.59 },
       micro: { wallScale: 0.86, ceilingWorldHeight: 3.2, roof: 'grid', wallBias: 0.57 },
+      intermission: { wallScale: 0.8, ceilingWorldHeight: 3.4, roof: 'grid', wallBias: 0.57 },
       guns: { wallScale: 0.72, ceilingWorldHeight: 2.65, roof: 'flat', wallBias: 0.55 },
       memory: { wallScale: 0.76, ceilingWorldHeight: 2.8, roof: 'grid', wallBias: 0.56 },
       archive: { wallScale: 0.86, ceilingWorldHeight: 3.2, roof: 'grid', wallBias: 0.57 },
@@ -9458,6 +10099,16 @@ const OS = {
           ctx.fillRect(x, y, strip, Math.ceil(wallH));
           ctx.fillStyle = this.shadeHex('#ffe57d', shadeFactor);
           ctx.fillRect(x, y + wallH * 0.75, strip, Math.max(1, wallH * 0.25));
+        } else if (motif === 'stargazing') {
+          const wallCoord = hit.nearVertical ? hitZ : hitX;
+          ctx.fillStyle = this.shadeHex('#08112e', Math.max(0.7, shadeFactor));
+          ctx.fillRect(x, y, strip, Math.ceil(wallH));
+          if (Math.abs(Math.sin(wallCoord * 5.7)) < 0.18) {
+            ctx.fillStyle = this.shadeHex('#d7e6ff', Math.max(0.8, shadeFactor));
+            ctx.fillRect(x, y + wallH * 0.18, strip, Math.max(1, wallH * 0.018));
+          }
+          ctx.fillStyle = this.shadeHex(Math.floor(wallCoord * 1.7) % 2 ? '#18351d' : '#233d2a', shadeFactor);
+          ctx.fillRect(x, y + wallH * 0.78, strip, wallH * 0.22);
         } else if (motif === 'softball' || motif === 'grounds') {
           if (motif === 'grounds') {
             // Pilot skybox: blue sky, rounded white mountains and a low green tree line.
@@ -9489,6 +10140,15 @@ const OS = {
           ctx.fillStyle = this.shadeHex(color, shadeFactor);
           ctx.fillRect(x, y + wallH * 0.16, strip, Math.max(1, wallH * 0.08));
           ctx.fillRect(x, y + wallH * 0.62, strip, Math.max(1, wallH * 0.06));
+        } else if (motif === 'intermission') {
+          const colors = ['#ff4fb8', '#7df0ff', '#ffd84a', '#83ff57', '#c875ff'];
+          ctx.fillStyle = this.shadeHex('#120822', shadeFactor);
+          ctx.fillRect(x, y, strip, Math.ceil(wallH));
+          const color = colors[Math.abs(Math.floor((u + corrected * 0.15) * 12)) % colors.length];
+          ctx.fillStyle = this.shadeHex(color, Math.max(0.7, shadeFactor));
+          ctx.fillRect(x, y + wallH * 0.12, strip, Math.max(1, wallH * 0.1));
+          ctx.fillRect(x, y + wallH * 0.47, strip, Math.max(1, wallH * 0.07));
+          ctx.fillRect(x, y + wallH * 0.79, strip, Math.max(1, wallH * 0.05));
         } else if (motif === 'guns') {
           // Action arena: dark cover panels and yellow lane safety marks.
           ctx.fillStyle = this.shadeHex('#201310', shadeFactor);
@@ -9558,6 +10218,12 @@ const OS = {
           ctx.fillRect(x, y, strip, Math.ceil(wallH));
           ctx.fillStyle = this.shadeHex('#d49a62', shadeFactor);
           ctx.fillRect(x, y + wallH * 0.62, strip, Math.max(1, wallH * 0.09));
+        } else if (motif === 'noirbar') {
+          ctx.fillStyle = this.shadeHex(Math.floor(u * 10) % 2 ? '#232328' : '#3b3b41', shadeFactor);
+          ctx.fillRect(x, y, strip, Math.ceil(wallH));
+          ctx.fillStyle = this.shadeHex('#b8b8bd', shadeFactor);
+          ctx.fillRect(x, y + wallH * 0.18, strip, Math.max(1, wallH * 0.025));
+          ctx.fillRect(x, y + wallH * 0.78, strip, Math.max(1, wallH * 0.08));
         } else if (motif === 'aquarium') {
           ctx.fillStyle = this.shadeHex(Math.floor(u * 8) % 2 ? '#0a5068' : '#087b91', shadeFactor);
           ctx.fillRect(x, y, strip, Math.ceil(wallH));
@@ -9740,6 +10406,7 @@ const OS = {
       circus: { ceilingTop: '#0b0824', ceilingBottom: '#24112f', floorA: '#e06f24', floorB: '#080808', floorC: '#f4f0df', grid: 'rgba(255,241,168,0.1)' },
       final: { ceilingTop: '#080510', ceilingBottom: '#261020', floorA: '#1b0f16', floorB: '#a51d24', floorC: '#fff1a8', grid: 'rgba(255,90,105,0.12)' },
       grounds: { ceilingTop: '#153a85', ceilingBottom: '#5f8ee8', floorA: '#315f2d', floorB: '#244f21', floorC: '#c64a31', grid: 'rgba(255,241,168,0.12)' },
+      stargazing: { ceilingTop: '#02051a', ceilingBottom: '#17224d', floorA: '#233d2a', floorB: '#182b20', floorC: '#fff1a8', grid: 'rgba(215,230,255,0.1)' },
       cellar: { ceilingTop: '#000000', ceilingBottom: '#030207', floorA: '#02030a', floorB: '#080a14', floorC: '#291346', grid: 'rgba(142,92,205,0.08)' },
       exit: { ceilingTop: '#e7eaf2', ceilingBottom: '#ffffff', floorA: '#d9dce5', floorB: '#f3f3f8', floorC: '#a4a4b2', grid: 'rgba(20,20,28,0.11)' },
       candy: { ceilingTop: '#7d3f8c', ceilingBottom: '#ffb3d8', floorA: '#ff9b37', floorB: '#ff4fb8', floorC: '#fff1a8', grid: 'rgba(255,255,255,0.15)' },
@@ -9749,6 +10416,7 @@ const OS = {
       basement: { ceilingTop: '#050509', ceilingBottom: '#14101e', floorA: '#12121a', floorB: '#23202b', floorC: '#3a3542', grid: 'rgba(160,160,175,0.12)' },
       spudsy: { ceilingTop: '#4a1714', ceilingBottom: '#f6d743', floorA: '#e9e1cf', floorB: '#f7f1df', floorC: '#ff4d4d', grid: 'rgba(100,42,20,0.16)' },
       micro: { ceilingTop: '#1b0d2b', ceilingBottom: '#3a1b4f', floorA: '#211230', floorB: '#2f1a41', floorC: '#ff4fb8', grid: 'rgba(125,240,255,0.18)' },
+      intermission: { ceilingTop: '#05020d', ceilingBottom: '#4a1758', floorA: '#160d2d', floorB: '#5b1b67', floorC: '#7df0ff', grid: 'rgba(255,79,184,0.2)' },
       softball: { ceilingTop: '#102d66', ceilingBottom: '#76a4d9', floorA: '#173416', floorB: '#2d6329', floorC: '#ffffff', grid: 'rgba(255,255,255,0.18)' },
       guns: { ceilingTop: '#190d0b', ceilingBottom: '#35201a', floorA: '#2a1b17', floorB: '#463228', floorC: '#f6d743', grid: 'rgba(246,215,67,0.18)' },
       lake: { ceilingTop: '#0f4e8a', ceilingBottom: '#78e8ff', floorA: '#ffe57d', floorB: '#f7c65e', floorC: '#4ee7ff', grid: 'rgba(255,255,255,0.18)' },
@@ -9762,6 +10430,7 @@ const OS = {
       archivebedroom: { ceilingTop: '#050407', ceilingBottom: '#171219', floorA: '#171219', floorB: '#0b090d', floorC: '#695b68', grid: 'rgba(160,145,160,0.1)' },
       kaufmoroom: { ceilingTop: '#d7d4d0', ceilingBottom: '#aaa5a2', floorA: '#3a3033', floorB: '#211b1e', floorC: '#d52d34', grid: 'rgba(213,45,52,0.16)' },
       cafe: { ceilingTop: '#17100d', ceilingBottom: '#3b271e', floorA: '#302018', floorB: '#4a2d20', floorC: '#d49a62', grid: 'rgba(212,154,98,0.15)' },
+      noirbar: { ceilingTop: '#030304', ceilingBottom: '#242428', floorA: '#111113', floorB: '#2d2d32', floorC: '#b8b8bd', grid: 'rgba(255,255,255,0.1)' },
       aquarium: { ceilingTop: '#06202f', ceilingBottom: '#0a5068', floorA: '#073443', floorB: '#0a596b', floorC: '#63d9ff', grid: 'rgba(99,217,255,0.2)' },
       snow: { ceilingTop: '#34567a', ceilingBottom: '#9dc4dc', floorA: '#e8f7ff', floorB: '#a7c9df', floorC: '#ffffff', grid: 'rgba(255,255,255,0.22)' },
       poacher: { ceilingTop: '#16305a', ceilingBottom: '#426b58', floorA: '#304621', floorB: '#49652e', floorC: '#c4a45f', grid: 'rgba(196,164,95,0.16)' },
@@ -9827,6 +10496,26 @@ const OS = {
         ctx.ellipse(cloudX + 28, cloudY + 2, 25, 10, 0, 0, Math.PI * 2);
         ctx.fill();
       }
+    } else if (motif === 'stargazing') {
+      for (let i = 0; i < 42; i++) {
+        const starX = (i * 83 + 31) % Math.max(1, w);
+        const starY = 12 + ((i * 47) % Math.max(18, Math.floor(horizon - 24)));
+        const radius = i % 9 === 0 ? 1.8 : 0.8;
+        ctx.fillStyle = i % 7 === 0 ? 'rgba(255,241,168,0.95)' : 'rgba(215,230,255,0.82)';
+        ctx.beginPath();
+        ctx.arc(starX, starY, radius, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    } else if (motif === 'intermission') {
+      const colors = ['#ff4fb8', '#7df0ff', '#ffd84a', '#83ff57'];
+      for (let i = 0; i < 11; i++) {
+        ctx.strokeStyle = colors[i % colors.length];
+        ctx.globalAlpha = 0.15 + pulse * 0.15;
+        ctx.beginPath();
+        ctx.arc((i * 97 + 35) % Math.max(80, w), 20 + (i % 4) * 32, 8 + (i % 3) * 7, 0, Math.PI * 2);
+        ctx.stroke();
+      }
+      ctx.globalAlpha = 1;
     } else if (motif === 'cellar') {
       const beam = ctx.createRadialGradient(w / 2, 0, 4, w / 2, 0, Math.max(90, horizon * 0.95));
       beam.addColorStop(0, 'rgba(255,255,255,0.88)');
@@ -9985,6 +10674,9 @@ const OS = {
     } else if (motif === 'grounds') {
       const path = Math.abs(worldX - worldZ * 0.16) < 0.55;
       color = path ? theme.floorC : (checker(1.1) ? theme.floorA : theme.floorB);
+    } else if (motif === 'stargazing') {
+      const picnicPath = Math.abs(worldX - (state?.room?.center?.x || 0)) < 0.45;
+      color = picnicPath ? this.shadeHex(theme.floorC, 0.45) : (checker(0.8) ? theme.floorA : theme.floorB);
     } else if (motif === 'cellar') {
       const ripple = Math.abs(Math.sin(worldX * 0.65 + worldZ * 0.42)) < 0.055;
       color = ripple ? theme.floorC : (checker(0.28) ? theme.floorA : theme.floorB);
@@ -10001,16 +10693,18 @@ const OS = {
       } else {
         color = checker(1.35) ? theme.floorA : theme.floorB;
       }
-    } else if (['spudsy', 'kitchen', 'bathroom', 'training', 'admin', 'palace', 'common', 'dining', 'pilotrestaurant', 'loser', 'awards', 'street'].includes(motif)) {
+    } else if (['spudsy', 'kitchen', 'bathroom', 'training', 'admin', 'palace', 'common', 'dining', 'pilotrestaurant', 'loser', 'awards', 'street', 'noirbar'].includes(motif)) {
       color = checker(motif === 'admin' ? 1.45 : 1.35) ? theme.floorA : theme.floorB;
     } else if (motif === 'candy' || motif === 'route') {
       const syrup = Math.sin(worldX * 1.7 + worldZ * 0.9) > 0.42;
       color = syrup ? theme.floorB : (checker(0.85) ? theme.floorA : theme.floorC);
-    } else if (motif === 'test' || motif === 'core' || motif === 'micro' || motif === 'archive' || motif === 'memory') {
+    } else if (motif === 'test' || motif === 'core' || motif === 'micro' || motif === 'intermission' || motif === 'archive' || motif === 'memory') {
       const gridLine = Math.abs((worldX * 1.25) % 1) < 0.04 || Math.abs((worldZ * 1.25) % 1) < 0.04;
       color = gridLine ? theme.floorC : (checker(0.62) ? theme.floorA : theme.floorB);
     } else if (motif === 'softball') {
-      const diamond = Math.abs(Math.abs(worldX - 6) + Math.abs(worldZ - 6) - 2.8) < 0.18;
+      const centerX = state?.room?.center?.x ?? 6;
+      const centerZ = state?.room?.center?.z ?? 6;
+      const diamond = Math.abs(Math.abs(worldX - centerX) + Math.abs(worldZ - centerZ) - 2.8) < 0.18;
       color = diamond ? theme.floorC : (checker(1.5) ? theme.floorA : theme.floorB);
     } else if (motif === 'guns') {
       const lane = Math.abs((worldX * 0.55) % 1) < 0.08;
@@ -11005,7 +11699,7 @@ const OS = {
   getCircusDepthLight(depth, state, fullbright = false) {
     if (fullbright) return 1;
     const motif = (state.scenes[state.currentZoneId] || state.scenes[2])?.motif || 'circus';
-    const darkMotifs = new Set(['cellar', 'nest', 'kaufmoroom', 'manor', 'basement', 'hell', 'memory', 'archive', 'archivebedroom', 'training']);
+    const darkMotifs = new Set(['cellar', 'nest', 'kaufmoroom', 'manor', 'basement', 'hell', 'memory', 'archive', 'archivebedroom', 'training', 'stargazing', 'noirbar', 'intermission']);
     const brightMotifs = new Set(['grounds', 'candy', 'route', 'lake', 'lighthouse', 'softball', 'snow', 'carnival', 'void', 'pilotrestaurant']);
     const ambient = darkMotifs.has(motif) ? 0.42 : brightMotifs.has(motif) ? 0.78 : 0.6;
     const range = Math.max(6, (state.room?.size || 15) * 0.72);
@@ -11455,17 +12149,9 @@ const OS = {
         { kind: 'memory', x: 0, z: -1.25, color: '#f6b84d', label: 'Photo chocolat chaud: Jax, Ribbit et Kaufmo' },
         { kind: 'card', x: 2.15, z: -1.25, color: '#ff4fb8', label: 'Noeud papillon de Ribbit' }
       ],
-      24: [
-        { kind: 'target', campaignTarget: 'votemarker', campaignGate: { episode: 5, minStage: 1, maxStage: 1 }, x: 2.65, z: -1.25, color: '#7df0ff', label: 'Vote de sortie de Poach Everything' }
-      ],
-      25: [
-        { kind: 'card', campaignTarget: 'votemarker', campaignGate: { episode: 5, minStage: 3, maxStage: 3 }, x: 0, z: -1.1, color: '#ff9fcd', label: 'Vote de sortie Anime High School' }
-      ],
-      26: [
-        { kind: 'card', campaignTarget: 'brief', campaignGate: { episode: 5, minStage: 2, maxStage: 2 }, x: 0, z: -1.25, color: '#44699a', label: 'Brief Australie / Nouvelle-Zelande' },
-        { kind: 'target', campaignTarget: 'bomb', campaignGate: { episode: 5, minStage: 2, maxStage: 2 }, x: -2.3, z: -1.35, color: '#e53935', label: 'Bombe gauche et fils' },
-        { kind: 'target', campaignTarget: 'bomb', campaignGate: { episode: 5, minStage: 2, maxStage: 2 }, x: 2.3, z: -1.35, color: '#2a58d8', label: 'Bombe droite et fils' }
-      ],
+      24: [],
+      25: [],
+      26: [],
       28: [
         { kind: 'card', campaignTarget: 'spudsysuggestion', campaignGate: { episode: 4, minStage: 2, maxStage: 2 }, x: 2.3, z: -1.25, color: '#f6d743', label: 'Suggestion de travail chez Spudsy' },
         { kind: 'archive', campaignTarget: 'suggestionbox', campaignGate: { episode: 4, minStage: 2, maxStage: 2 }, x: -2.3, z: -1.25, color: '#ff4fb8', label: 'Boite a suggestions arrachee du mur' },
@@ -11473,8 +12159,8 @@ const OS = {
         { kind: 'cellaropening', campaignTarget: 'zoobletrapdoor', campaignGate: { episode: 4, minStage: 2, maxStage: 2 }, anchor: 'ceiling', x: 1.25, z: -3.0, color: '#f7f7f7', label: 'Trappe ouverte sous Zooble' },
         { kind: 'wallart', campaignTarget: 'gangleart', campaignGate: { episode: 4, minStage: 22, maxStage: 22 }, anchor: 'wall-left', x: -1.48, z: -3.1, color: '#e53935', art: 'blocks', label: 'Dessins de Gangle montres a Zooble' },
         { kind: 'memory', campaignTarget: 'waitinggroup', campaignGate: { episode: 4, minStage: 22, maxStage: 22 }, x: 2.15, z: -1.25, color: '#ffd84a', label: 'Groupe attendant Gangle et Zooble' },
-        { kind: 'card', campaignTarget: 'suggestionbox', campaignGate: { episode: 5, minStage: 0, maxStage: 0 }, x: -2.3, z: -1.25, color: '#ff4fb8', label: 'Boite a suggestions du lightning round' },
-        { kind: 'caineportal', campaignTarget: 'arrivalportal', campaignGate: { episode: 5, minStage: 7, maxStage: 7 }, x: 0, z: -4.35, color: '#7df0ff', label: 'Portail de retour du softball' }
+        { kind: 'wave', campaignTarget: 'wetreturn', campaignGate: { episode: 5, minStage: 0, maxStage: 0 }, x: 0, z: -3.05, color: '#4ee7ff', label: 'Traces d eau du retour du groupe' },
+        { kind: 'card', campaignGate: { episode: 5, minStage: 0, maxStage: 0 }, x: -2.2, z: -1.3, color: '#fff1a8', label: 'Oeufs rapportes par Kinger' }
       ],
       30: [
         { kind: 'window', campaignTarget: 'aquariumwindow', campaignGate: { episode: 6, minStage: 5, maxStage: 5 }, x: 0, z: -3.15, color: '#63d9ff', label: 'Aquarium du Loser Corner' }
@@ -11685,7 +12371,7 @@ const OS = {
   },
 
   getCircusWorldGeometryKinds() {
-    return new Set(['ring', 'base', 'stairs', 'table', 'banquettable', 'counter', 'desk', 'bed', 'partition', 'sofa', 'pillar', 'crate', 'barrel', 'tent', 'building', 'tower', 'lighthouse']);
+    return new Set(['ring', 'base', 'platform', 'stairs', 'table', 'banquettable', 'counter', 'desk', 'bed', 'partition', 'sofa', 'pillar', 'crate', 'barrel', 'tent', 'building', 'tower', 'lighthouse']);
   },
 
   projectCircusPropGroundVertex(prop, offsetX, offsetZ, state, w, h, height = 0) {
@@ -11741,6 +12427,12 @@ const OS = {
       };
     }
     return {
+      platform: {
+        width: prop.width || 2.5,
+        depth: prop.depth || 2.2,
+        height: prop.height || 0.08,
+        apron: prop.height || 0.08
+      },
       table: { width: prop.width || 1.35, depth: prop.depth || 0.82, height: prop.height || 0.52, apron: 0.1 },
       banquettable: { width: prop.width || 6.6, depth: prop.depth || 1.15, height: prop.height || 0.72, apron: 0.5 },
       counter: { width: prop.width || 1.9, depth: prop.depth || 0.72, height: prop.height || 0.86, apron: 0.26 },
@@ -13889,28 +14581,8 @@ const OS = {
         { name: 'Stupid Burger Mannequin', type: 'mannequin', avatar: 'stupidburgermannequin', x: -2.85, z: -2.75, color: '#ff9b37', sizeScale: 0.9 },
         { name: 'Cereal Bowl Mannequin', type: 'mannequin', avatar: 'cerealmannequin', x: 2.85, z: -2.7, color: '#ff9b37', sizeScale: 0.9 }
       ],
-      11: [
-        { name: 'Kawaii Gangle', type: 'gangle', avatar: 'ganglekawaii', x: -0.15, z: -2.45, color: '#ff9fcd' },
-        { name: 'Evil Pomni', type: 'pomni', avatar: 'evilpomni', x: 1.35, z: -2.1, color: '#c12b3f' },
-        { name: 'Evil Jax', type: 'jax', avatar: 'eviljax', x: 2.45, z: -1.45, color: '#7436c9' },
-        { name: 'Jeffery Dancer', type: 'npc', avatar: 'jeffery', x: -2.75, z: -1.45, color: '#f4f4ee', sizeScale: 0.9 }
-      ],
-      12: [
-        { name: 'Baseball Jax', type: 'jax', avatar: 'baseballjax', x: -2.55, z: -1.45, color: '#b874e8' },
-        { name: 'Baseball Zooble', type: 'zooble', avatar: 'baseballzooble', x: -1.45, z: -2.2, color: '#f27ad3' },
-        { name: 'Baseball Gangle', type: 'gangle', avatar: 'baseballgangle', x: -0.25, z: -2.5, color: '#d84747' },
-        { name: 'Baseball Ragatha', type: 'ragatha', avatar: 'baseballragatha', x: 1.05, z: -2.2, color: '#6d86dd' },
-        { name: 'Baseball Pomni', type: 'pomni', avatar: 'baseballpomni', x: 2.15, z: -1.55, color: '#4068e8' },
-        { name: 'Baseball Kinger', type: 'kinger', avatar: 'baseballkinger', x: 0.75, z: -1.15, color: '#d7c9aa' },
-        { name: 'Giant Centipede', type: 'npc', avatar: 'giantcentipede', x: 3.05, z: -3.25, color: '#c89436', sizeScale: 1.22 },
-        { name: 'Evil Zooble', type: 'zooble', avatar: 'rivalbaseballzooble', x: -3.5, z: -4.2, color: '#f5d33b' },
-        { name: 'Evil Pomni', type: 'pomni', avatar: 'rivalbaseballpomni', x: -2.1, z: -4.55, color: '#d7382f' },
-        { name: 'Pink Giant', type: 'npc', avatar: 'rivalbaseballpinkgiant', x: -0.75, z: -4.8, color: '#f05a9f', sizeScale: 1.35 },
-        { name: 'Evil Ragatha', type: 'ragatha', avatar: 'rivalbaseballragatha', x: 0.75, z: -4.8, color: '#e86493' },
-        { name: 'Evil Jax', type: 'jax', avatar: 'rivalbaseballjax', x: 2.1, z: -4.55, color: '#7a244d' },
-        { name: 'Evil Kinger', type: 'kinger', avatar: 'rivalbaseballkinger', x: 3.5, z: -4.2, color: '#8e8f9b' },
-        { name: 'Maid Jax', type: 'jax', avatar: 'maidjax', x: 0, z: -1.0, color: '#c88aff', campaignGate: { episode: 5, minStage: 6, maxStage: 6 } }
-      ],
+      11: [],
+      12: [],
       13: [
         { name: 'Jax', type: 'jax', avatar: 'jax', x: -1.5, z: -2.1, color: '#8a4fd6' },
         { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: 0.2, z: -2.45, color: '#d64545' },
@@ -14006,7 +14678,12 @@ const OS = {
         { name: 'Bubble', type: 'bubble', avatar: 'bubble', x: 2.75, z: -1.35, color: '#f7f7ff', campaignGate: { episode: 4, minStage: 2, maxStage: 2 } },
         { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -2.45, z: -3.0, color: '#d9d0a2', campaignGate: { episode: 4, minStage: 2, maxStage: 2 } },
         { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 2.55, z: -2.95, color: '#e53935', campaignGate: { episode: 4, minStage: 2, maxStage: 2 } },
-        { name: 'Jax', type: 'jax', avatar: 'jax', x: 0.15, z: -1.55, color: '#8a4fd6', campaignGate: { episode: 4, minStage: 2, maxStage: 2 } }
+        { name: 'Jax', type: 'jax', avatar: 'jax', x: 0.15, z: -1.55, color: '#8a4fd6', campaignGate: { episode: 4, minStage: 2, maxStage: 2 } },
+        { name: 'Caine', type: 'caine', avatar: 'caine', x: -2.65, z: -1.45, color: '#ffd84a', campaignGate: { episode: 5, minStage: 0, maxStage: 0 } },
+        { name: 'Bubble', type: 'bubble', avatar: 'bubble', x: 2.75, z: -1.35, color: '#f7f7ff', campaignGate: { episode: 5, minStage: 0, maxStage: 0 } },
+        { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -2.45, z: -3.0, color: '#d9d0a2', campaignGate: { episode: 5, minStage: 0, maxStage: 0 } },
+        { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 2.55, z: -2.95, color: '#e53935', campaignGate: { episode: 5, minStage: 0, maxStage: 0 } },
+        { name: 'Jax', type: 'jax', avatar: 'jax', x: 0.15, z: -1.55, color: '#8a4fd6', campaignGate: { episode: 5, minStage: 0, maxStage: 0 } }
       ],
       29: [],
       30: [
@@ -17200,10 +17877,10 @@ const OS = {
         "Le regard plus determine rappelle le camp oppose.",
         "Contrepartie PNJ de l equipe Evil Big Tops, pas une nouvelle Pomni humaine."
       ]},
-      rivalbaseballpinkgiant: { name: "Rival Baseball Pink Giant", age: "PNJ canon - Evil Big Tops", stress: "59%", avatar: "rivalbaseballpinkgiant", signal: "G", color: "#f05a9f", facts: [
-        "Gros joueur rose de l equipe adverse, separe de Gangle dans CainOS.",
+      rivalbaseballpinkgiant: { name: "Evil Orbsman", age: "PNJ canon - Evil Big Tops", stress: "59%", avatar: "rivalbaseballpinkgiant", signal: "O", color: "#f05a9f", facts: [
+        "Evil Orbsman est le gros joueur rose de l equipe adverse, separe de Gangle dans CainOS.",
         "Son corps rond segmente reste lisse, sans armure ni epaulettes.",
-        "La fiche corrige l ancien amalgame avec Gangle."
+        "Le nom affiche suit le transcript d Untitled; l identifiant technique historique reste conserve pour la planche."
       ]},
       rivalbaseballragatha: { name: "Rival Baseball Ragatha", age: "PNJ canon - Evil Big Tops", stress: "44%", avatar: "rivalbaseballragatha", signal: "R", color: "#e86493", facts: [
         "Variante equipe adverse de Ragatha en uniforme rose.",

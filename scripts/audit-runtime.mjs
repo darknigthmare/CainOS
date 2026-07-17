@@ -24,6 +24,13 @@ const requireMarker = (source, marker, label = marker) => {
 for (let episode = 1; episode <= 9; episode++) {
   requireMarker(episodes, `${episode}: [`, `checkpoints EP${episode}`);
 }
+const checkpointSection = episodes.slice(episodes.indexOf('storyCheckpointConfig:'));
+const episodeFiveCheckpointBlock = checkpointSection.match(/\n\s*5:\s*\[([\s\S]*?)\n\s*\],\s*\n\s*6:\s*\[/)?.[1] || '';
+const episodeFiveCheckpointAfters = [...episodeFiveCheckpointBlock.matchAll(/after:\s*(\d+)/g)].map(match => Number(match[1]));
+const expectedEpisodeFiveCheckpointAfters = [75, 99, 160, 195, 301, 478, 600, 702];
+if (JSON.stringify(episodeFiveCheckpointAfters) !== JSON.stringify(expectedEpisodeFiveCheckpointAfters)) {
+  failures.push(`Checkpoints EP5 incorrects: ${episodeFiveCheckpointAfters.join(', ') || 'introuvables'}`);
+}
 
 [
   'SPUDSY_BURGER_CUSTOMER',
@@ -150,7 +157,9 @@ for (let episode = 1; episode <= 9; episode++) {
   'jumbledragatha: [4, 0]',
   'jumbledpomni: [5, 0]',
   "name: 'SHRIMP TOWN / CONTREFACTUEL'",
-  "name: 'SNOWY TUNDRA'",
+  "name: 'SNOWY TUNDRA / CAINOS RECONSTRUCTION'",
+  "name: 'UNTITLED LIGHTNING ROUND / TENT STATE'",
+  "name: 'UNTITLED SOFTBALL / WIN AND RETURN'",
   'C&A BRAIN SCANNER ROOM',
   "name: 'JAX PSYCHE / FIVE-DOOR FOYER'",
   'EXPANDED GROUNDS / EPILOGUE PROJECTION',
@@ -319,7 +328,7 @@ if (duplicateIds.length) failures.push(`ID HTML DUPLIQUES: ${duplicateIds.join('
 if (!/campaigns\.length\s*!==\s*9/.test(app)) failures.push('Audit 9 campagnes absent');
 const zoneMaxMatch = app.match(/getCircusFpsZoneMax\(\)\s*\{\s*return\s+(\d+)\s*;/);
 const fpsZoneMax = zoneMaxMatch ? Number(zoneMaxMatch[1]) : Number.NaN;
-const minimumFpsZoneMax = 158;
+const minimumFpsZoneMax = 170;
 if (!Number.isInteger(fpsZoneMax) || fpsZoneMax < minimumFpsZoneMax) {
   failures.push(`Borne FPS ${Number.isFinite(fpsZoneMax) ? fpsZoneMax : 'introuvable'}/${minimumFpsZoneMax} minimum`);
 }

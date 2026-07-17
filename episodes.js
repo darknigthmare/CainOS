@@ -7092,14 +7092,14 @@ const EpisodeManager = {
       { after: 520, title: "Fin de service", objective: "Stabilisez la sortie du shift avant la performance review de Caine.", mode: "dodge", goal: 8, duration: 18, target: "CLOCK", hazard: "TRAFFIC" }
     ],
     5: [
-      { after: 58, title: "Retour trempe", objective: "Cliquez les avis utiles pendant que le groupe revient d'une aventure trop humide.", mode: "click", goal: 8, duration: 17, target: "VOTE", hazard: "GRUDGE" },
-      { after: 140, title: "Boite a suggestions", objective: "Reproduisez la sequence de vote avant que Caine ne transforme l'idee en chaos.", mode: "sequence", goal: 5, duration: 20, target: "BOX", hazard: "CAINE" },
-      { after: 230, title: "Poach Everything", objective: "Evitez les signaux de chasse de Jax et gardez les votes valides.", mode: "dodge", goal: 8, duration: 18, target: "SKIP", hazard: "JAX" },
-      { after: 320, title: "President Pomni", objective: "Reparez les tuiles de briefing pendant que Pomni improvise son role politique.", mode: "repair", goal: 8, duration: 18, target: "BRIEF", hazard: "WAR" },
-      { after: 410, title: "Intermission", objective: "Cliquez les marqueurs de scene sans perdre le fil des micro-aventures.", mode: "click", goal: 8, duration: 18, target: "CUT", hazard: "NOISE" },
-      { after: 500, title: "Ragatha fatigue", objective: "Filtrez les repliques qui fissurent la positivite de Ragatha.", mode: "sequence", goal: 6, duration: 22, target: "RAGATHA", hazard: "PRESSURE" },
-      { after: 600, title: "Softball de Caine", objective: "Reparez le tableau de score pendant que les regles de Caine changent sans logique.", mode: "repair", goal: 9, duration: 19, target: "SCORE", hazard: "RULE" },
-      { after: 702, title: "Troisieme home run", objective: "Survivez aux dernieres actions de l'equipe adverse avant le bilan final de Caine.", mode: "dodge", goal: 9, duration: 19, target: "HOME", hazard: "EVIL" }
+      { after: 75, title: "Retour et lightning round", objective: "Reproduisez l'ordre des propositions jusqu'a la boite a suggestions de Zooble.", mode: "sequence", goal: 6, duration: 20, target: "BOX", hazard: "CAINE" },
+      { after: 99, title: "Poach Everything", objective: "Evitez les tirs de Jax, gardez les cinq proies hors de sa trajectoire puis validez la sortie vegan.", mode: "dodge", goal: 8, duration: 19, target: "PROIE", hazard: "TIR" },
+      { after: 160, title: "President Pomni", objective: "Reparez le briefing absent et reproduisez les deux fils de l'unique bombe araignee.", mode: "repair", goal: 9, duration: 20, target: "BRIEF", hazard: "BOMBE" },
+      { after: 195, title: "Anime High School", objective: "Classez les signaux du cours puis confirmez la courte decision de sortie de Gangle.", mode: "click", goal: 8, duration: 18, target: "COURS", hazard: "JAX" },
+      { after: 301, title: "Stargazing et intermission", objective: "Stabilisez le calme du pique-nique puis reproduisez la transition jusqu'au retour de l'emission.", mode: "sequence", goal: 6, duration: 21, target: "CALME", hazard: "EGO" },
+      { after: 478, title: "Bar noir et blanc", objective: "Reparez les recits personnels, les excuses et l'epi de mais sans transformer les blagues en souvenirs.", mode: "repair", goal: 9, duration: 21, target: "RECIT", hazard: "FAUX" },
+      { after: 600, title: "Equipes et Maid Jax", objective: "Evitez les lancers pendant la presentation des rosters et le remplacement de la balle par Zooble.", mode: "dodge", goal: 9, duration: 20, target: "ZOOBLE", hazard: "BALLE" },
+      { after: 702, title: "Trois home runs et chaos", objective: "Reparez le score Gangle, Zooble, Ragatha puis survivez au signal final jusqu'au portail.", mode: "repair", goal: 10, duration: 22, target: "SCORE", hazard: "UNKNOWN" }
     ],
     6: [
       { after: 44, title: "Zooble se cache", objective: "Cliquez les signaux de Zooble avant que Jax ne previenne Caine.", mode: "click", goal: 7, duration: 16, target: "ZOOBLE", hazard: "JAX" },
