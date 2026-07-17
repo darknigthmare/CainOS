@@ -1638,7 +1638,7 @@ const OS = {
       4: { name: 'CELLAR / KAUFMO', short: 'CELLAR', detail: 'Zone de stockage des abstraits et trace Kaufmo apres le pilote.', color: '#56505f', floor: '#111117', ceiling: '#050508', unlocked: unlockedAt(1, 5) },
       5: { name: 'PORTE DE SORTIE / VIDE', short: 'EXIT', detail: 'Prototype de sortie, couloirs impossibles et bureau apparu dans le pilote.', color: '#ffffff', floor: '#18202a', ceiling: '#060606', unlocked: unlockedAt(1, 2) },
       6: { name: 'CANDY CANYON KINGDOM', short: 'CANDY', detail: 'Royaume bonbon, convoi sirop et route du tanker.', color: '#ff9b37', floor: '#4b2436', ceiling: '#24234f', unlocked: unlockedAt(2, 1) },
-      7: { name: 'TEST LEVEL / NPC SCAN', short: 'TEST', detail: 'Sous-couche technique liee a Gummigoo et aux donnees NPC.', color: '#9cff6d', floor: '#1d2b1f', ceiling: '#0f1b12', unlocked: unlockedAt(2, 4) },
+      7: { name: 'TEST LEVEL / COMPATIBILITY ARCHIVE', short: 'TEST ARCHIVE', detail: 'Ancien point d acces CainOS conserve pour le mode libre. La campagne utilise maintenant les couches 142 a 146 sans porte physique.', color: '#1c5a86', floor: '#02080d', ceiling: '#03070c', provenance: 'projection', nonPhysical: true, layer: 'under-map', unlocked: unlockedAt(2, 4) },
       8: { name: 'MILDENHALL MANOR / EXTERIOR', short: 'MANOR', detail: 'Facade et terrain du manoir avant le vestibule; les salles interieures suivent maintenant leur ordre a l ecran.', color: '#b7f0ff', floor: '#1d1827', ceiling: '#050816', unlocked: unlockedAt(3, 1) },
       9: { name: 'MILDENHALL WINE CELLAR', short: 'CAVE A VIN', detail: 'Cave a vin atteinte par le monte-plat, avec le corps du Baron et le passage vers l Enfer.', color: '#7c88a1', floor: '#0d1018', ceiling: '#03040a', unlocked: unlockedAt(3, 4) },
       10: { name: "SPUDSY'S", short: 'SPUDSY', detail: 'Restaurant rapide, comptoir, tickets et stress de service de Gangle.', color: '#ff4d4d', floor: '#3b1a17', ceiling: '#251308', unlocked: unlockedAt(4, 1) },
@@ -1648,9 +1648,9 @@ const OS = {
       14: { name: 'DIGITAL LAKE / BEACH', short: 'LAC', detail: 'Lac digital, plage, soleil dangereux et faux repos de Caine.', color: '#4ee7ff', floor: '#073844', ceiling: '#114071', unlocked: unlockedAt(7, 1) },
       15: { name: 'THE CHINESE ROOM', short: 'CHINESE ROOM', detail: 'Piece du gag de Caine contenant la porte et le dispositif de reponse en chinois; distincte de la zone administrateur.', color: '#ffcf75', floor: '#302318', ceiling: '#09111e', unlocked: unlockedAt(7, 1) },
       16: { name: "CAINE'S OFFICE", short: 'BUREAU CAINE', detail: 'Bureau personnel de Caine, separe de sa console principale cachee derriere la bibliotheque.', color: '#ff7a30', floor: '#291915', ceiling: '#10070d', unlocked: unlockedAt(7, 3) || unlocked(8) || unlocked(9) },
-      17: { name: 'KINGER MEMORY BUFFER', short: 'MEMOIRE', detail: 'Fragments Queenie, souvenirs et noyau emotionnel de Kinger.', color: '#d9d0a2', floor: '#252316', ceiling: '#0e0e12', unlocked: unlocked(8) },
-      18: { name: 'FINAL CIRCUS / BACKSTAGE', short: 'FINAL', detail: 'Retour au cirque, brain scans, Ribbit et dernier etat de Pomni/Caine.', color: '#e53935', floor: '#2b1018', ceiling: '#09060d', unlocked: unlocked(9) },
-      19: { name: 'CIRCUS MEMBERS ARCHIVE', short: 'MEMBRES', detail: 'Projection CainOS non physique des anciens membres connus apres les episodes.', color: '#c875ff', floor: '#21142e', ceiling: '#0c0614', unlocked: unlocked(9) },
+      17: { name: 'KINGER AND QUEENIE MEMORY / PROJECTION', short: 'MEMOIRE', detail: 'Souvenir de Kinger et Queenie dans l obscurite; cette couche ne restaure pas Queenie comme residente.', color: '#d9d0a2', floor: '#252316', ceiling: '#0e0e12', provenance: 'projection', nonPhysical: true, layer: 'memory', unlocked: unlocked(8) },
+      18: { name: 'FINAL CIRCUS ARCHIVE', short: 'FINAL ARCHIVE', detail: 'Index CainOS non physique des etats finaux. Les scenes de Remember restent separees dans leurs vraies couches.', color: '#e53935', floor: '#2b1018', ceiling: '#09060d', provenance: 'projection', nonPhysical: true, layer: 'archive', unlocked: unlocked(9) },
+      19: { name: 'CIRCUS MEMBERS ARCHIVE', short: 'MEMBRES', detail: 'Projection CainOS non physique des anciens membres connus apres les episodes.', color: '#c875ff', floor: '#21142e', ceiling: '#0c0614', provenance: 'projection', nonPhysical: true, layer: 'archive', unlocked: unlocked(9) },
       20: { name: 'RESIDENT HALL / CHAMBRES', short: 'CHAMBRES', detail: 'Couloir residentiel avec les portes personnalisees des habitants du Cirque.', color: '#ff6b9f', floor: '#30152a', ceiling: '#160b24', unlocked: unlockedAt(1, 0) },
       21: { name: "CROW'S NEST / CAFE CIRQUE", short: 'CAFE', detail: 'Cafe du Cirque utilise comme lieu de retrait et de discussion tardive.', color: '#d49a62', floor: '#302018', ceiling: '#17100d', unlocked: unlocked(8) },
       22: { name: 'AQUARIUM', short: 'AQUARIUM', detail: 'Zone aquatique revelee dans Remember.', color: '#63d9ff', floor: '#073443', ceiling: '#06202f', unlocked: unlocked(9) },
@@ -1667,12 +1667,12 @@ const OS = {
       33: { name: 'SYRUP TANKER ROUTE', short: 'TANKER', detail: 'Route du canyon empruntee par le convoi et les bandits crocodiles.', color: '#ff9b37', floor: '#d97b35', ceiling: '#5f8ee8', unlocked: unlockedAt(2, 3) },
       34: { name: 'MILDENHALL HELL', short: 'ENFER', detail: 'Branche infernale sous le manoir ou les ames possedent Pomni.', color: '#ff4d32', floor: '#240707', ceiling: '#080000', unlocked: unlockedAt(3, 5) },
       35: { name: "SPUDSY'S KITCHEN", short: 'CUISINE', detail: 'Cuisine, friteuses, tickets et postes de preparation du service.', color: '#f6d743', floor: '#d9d4c7', ceiling: '#561914', unlocked: unlockedAt(4, 2) },
-      36: { name: "SPUDSY'S BATHROOM", short: 'WC', detail: 'Sanitaires decrits comme un risque biologique pendant le service.', color: '#91d4bb', floor: '#dedbd0', ceiling: '#36534d', unlocked: unlockedAt(4, 3) },
+      36: { name: "SPUDSY'S BATHROOM / MENTIONED", short: 'WC MENTION', detail: 'Sanitaires seulement decrits comme un risque biologique; CainOS ne les place pas sur la route physique canonique.', color: '#91d4bb', floor: '#dedbd0', ceiling: '#36534d', provenance: 'mentioned', nonPhysical: true, unlocked: unlockedAt(4, 3) },
       37: { name: 'TRAINING ROOM', short: 'FORMATION', detail: 'Piece isolee ou Jax subit la video de formation de Gangle.', color: '#e53935', floor: '#1b1717', ceiling: '#070707', unlocked: unlockedAt(4, 5) },
       38: { name: 'FAVORITE CHARACTER AWARDS', short: 'AWARDS', detail: 'Scene de ceremonie preparee par Caine apres les epreuves de They All Get Guns.', color: '#ffd84a', floor: '#8b172b', ceiling: '#1c0a24', unlocked: unlockedAt(6, 7) },
       39: { name: 'LAKE LIGHTHOUSE / SLIDE', short: 'PHARE', detail: 'Phare et toboggan geant dominant le lac digital.', color: '#ff5b4d', floor: '#ffe57d', ceiling: '#78e8ff', unlocked: unlockedAt(7, 1) },
       40: { name: 'SUNKEN TREASURE', short: 'TRESOR', detail: 'Fond du lac, coffre deja pille et poissons gardiens peu convaincants.', color: '#4ee7ff', floor: '#0a596b', ceiling: '#06202f', unlocked: unlockedAt(7, 2) },
-      41: { name: 'C&A STREET MEMORY', short: 'RUE C&A', detail: 'Rue rememoree par Jax; souvenir incomplet, pas une sortie fonctionnelle.', color: '#8fa6ba', floor: '#30343a', ceiling: '#101820', unlocked: unlockedAt(7, 4) },
+      41: { name: 'JAX STREET VISION / PROJECTION', short: 'VISION JAX', detail: 'Vision kaleidoscopique de Jax. Cette rue n est pas confirmee comme souvenir reel ni comme sortie C&A.', color: '#8fa6ba', floor: '#30343a', ceiling: '#101820', provenance: 'projection', nonPhysical: true, unlocked: unlockedAt(7, 3) },
       42: { name: 'DIGITAL CARNIVAL OVERLOOK', short: 'FETE', detail: 'Fete foraine visible depuis le terrain mais jamais visitee dans la serie.', color: '#ff4fb8', floor: '#315f2d', ceiling: '#5f8ee8', unlocked: unlockedAt(1, 0) },
       43: { name: 'PILOT DIGITAL FEAST / TENT', short: 'FESTIN', detail: 'Longue table blanche du banquet final, installee dans le chapiteau avec les six residents et Bubble en chef.', color: '#ffd84a', floor: '#e06f24', ceiling: '#24112f', unlocked: unlockedAt(1, 6) },
       50: { name: 'DORM HALL / NPC ANNEX WEST', short: 'ANNEXE O.', detail: 'Couloir lateral de chambres de mannequins PNJ. Les anciens membres restent dans le couloir central, conformement au plan montre.', color: '#bb6a75', floor: '#4a1727', ceiling: '#25101d', unlocked: unlockedAt(1, 0) },
@@ -1683,70 +1683,70 @@ const OS = {
       67: { name: 'CANDY PALACE BALCONY / RECONSTRUCTION', short: 'BALCON', detail: 'Balcon d observation CainOS raccorde au palais. La vue respecte le royaume, mais ce niveau reste une reconstruction.', color: '#ffd84a', floor: '#ffcae1', ceiling: '#70a7ff', unlocked: unlockedAt(2, 2) },
       68: { name: 'LIGHTHOUSE INTERIOR / RECONSTRUCTION', short: 'PHARE INT.', detail: 'Interieur praticable du phare reconstruit par CainOS depuis sa silhouette et son acces au toboggan.', color: '#ff6a55', floor: '#ead17b', ceiling: '#79e8ff', unlocked: unlockedAt(7, 1) },
       69: { name: 'LIGHTHOUSE LANTERN / RECONSTRUCTION', short: 'LANTERNE', detail: 'Lanterne haute CainOS avec vue sur le lac. Le phare est canonique; cette circulation interieure ne l est pas.', color: '#fff1a8', floor: '#d9b94f', ceiling: '#4ee7ff', unlocked: unlockedAt(7, 1) },
-      70: { name: 'SHRIMP TOWN / RECONSTRUCTION LIMITEE', short: 'SHRIMP TOWN', detail: 'Monde nomme dans la franchise. CainOS ne reconstruit que les reperes confirmes autour du Shrimp NPC.', color: '#ff8f4a', floor: '#d9b66f', ceiling: '#69c9e8', unlocked: unlockedAt(7, 3) },
+      70: { name: 'SHRIMP TOWN / CONTREFACTUEL', short: 'SHRIMP TOWN', detail: 'Destination seulement citee comme resultat du bouton bleu. Elle n est jamais visitee dans la chronologie canonique.', color: '#ff8f4a', floor: '#d9b66f', ceiling: '#69c9e8', provenance: 'mentioned', nonPhysical: true, unlocked: unlockedAt(7, 7) },
       71: { name: 'SNOWY TUNDRA', short: 'TOUNDRA', detail: 'Micro-aventure enneigee entrevue dans Untitled; distincte du Snowy Summit de Remember.', color: '#e8f7ff', floor: '#cfe6ef', ceiling: '#7aa7cc', unlocked: unlockedAt(5, 1) },
       72: { name: "SPUDSY'S PARKING LOT", short: 'PARKING', detail: 'Exterieur du restaurant ou le service de Gangle se termine brutalement.', color: '#ff4d4d', floor: '#36363d', ceiling: '#41213c', unlocked: unlockedAt(4, 7) },
-      73: { name: 'C&A BRAIN SCANNER ROOM', short: 'SCANNER', detail: 'Salle C&A inachevee: poste de Scratch, vieux PC, casque et scanners cerebraux de Remember.', color: '#c5d6e8', floor: '#8e959f', ceiling: '#252a31', unlocked: unlockedAt(9, 6) },
-      74: { name: 'JAX PSYCHE / FIVE-DOOR FOYER', short: 'FOYER PSYCHE', detail: 'Foyer violet a cinq portes de Remember; les scenarios et la piece des personas sont des zones separees.', color: '#8a4fd6', floor: '#24192f', ceiling: '#08050d', unlocked: unlockedAt(9, 4) },
-      75: { name: 'EXPANDED GROUNDS / POST-REMEMBER', short: 'GROUNDS +', detail: 'Extension des Grounds apres Remember: ilots flottants, biomes relies et grand toboggan.', color: '#7df0ff', floor: '#2b5d3b', ceiling: '#4e9de0', unlocked: unlocked(9) }
+      73: { name: 'C&A BRAIN SCANNER FLASHBACK', short: 'SCANNER', detail: 'Flashback technique de Remember: poste de Scratch, vieux PC, casque et scanners cerebraux.', color: '#c5d6e8', floor: '#8e959f', ceiling: '#252a31', provenance: 'projection', nonPhysical: true, layer: 'memory', unlocked: unlockedAt(9, 6) },
+      74: { name: 'JAX PSYCHE / FIVE-DOOR FOYER', short: 'FOYER PSYCHE', detail: 'Foyer mental violet de Remember; les scenarios sont des projections, pas des salles du Cirque.', color: '#8a4fd6', floor: '#24192f', ceiling: '#08050d', provenance: 'projection', nonPhysical: true, layer: 'mind', unlocked: unlockedAt(9, 4) },
+      75: { name: 'EXPANDED GROUNDS / EPILOGUE PROJECTION', short: 'GROUNDS +', detail: 'Image d epilogue des Grounds etendus apres Remember; son plan complet n est pas confirme comme espace jouable.', color: '#7df0ff', floor: '#2b5d3b', ceiling: '#4e9de0', provenance: 'projection', nonPhysical: true, layer: 'credits', unlocked: unlocked(9) }
     };
     const scenes = {
       2: { exits: [3, 4, 5, 15, 20, 21, 28, 29, 43], motif: 'circus', size: 23 },
       3: { exits: [2, 11, 14, 42, 75], motif: 'grounds', size: 21 },
       4: { exits: [2, 5], motif: 'cellar', size: 13 },
       5: { exits: [2, 97], motif: 'exit', size: 15 },
-      6: { exits: [7, 29, 33, 83], motif: 'candy', size: 19 },
-      7: { exits: [6, 33], motif: 'test', size: 13 },
-      8: { exits: [29, 64, 85], motif: 'manor', size: 17 },
+      6: { exits: [83], motif: 'candy', size: 19 },
+      7: { exits: [], motif: 'test', size: 13, nonPhysical: true, layer: 'under-map' },
+      8: { exits: [85], motif: 'manor', size: 23 },
       9: { exits: [34, 89], motif: 'basement', size: 13 },
-      10: { exits: [11, 29, 35, 36, 37, 72], motif: 'spudsy', size: 17 },
+      10: { exits: [35, 37], motif: 'spudsy', size: 19 },
       11: { exits: [3, 10, 12, 13, 24, 25, 26, 29, 71], motif: 'micro', size: 19 },
       12: { exits: [11], motif: 'softball', size: 19 },
-      13: { exits: [11, 29, 90, 91], motif: 'guns', size: 17 },
-      14: { exits: [3, 39, 40, 70], motif: 'lake', size: 21 },
+      13: { exits: [29, 90, 91], motif: 'guns', size: 21 },
+      14: { exits: [3, 39, 40], motif: 'lake', size: 21 },
       15: { exits: [2, 94], motif: 'admin', size: 13 },
-      16: { exits: [17, 18, 73, 94, 95, 96, 107], motif: 'core', size: 17 },
-      17: { exits: [16], motif: 'memory', size: 13 },
-      18: { exits: [16, 19, 21, 22, 23, 29, 74, 75, 109], motif: 'final', size: 19 },
-      19: { exits: [18], motif: 'archive', size: 15 },
+      16: { exits: [94, 95, 96], motif: 'core', size: 17 },
+      17: { exits: [], motif: 'memory', size: 13 },
+      18: { exits: [], motif: 'archive', size: 19 },
+      19: { exits: [], motif: 'archive', size: 15 },
       20: { exits: [2, 28, 50, 51], motif: 'dorm', size: 21 },
-      21: { exits: [2, 18, 43, 108], motif: 'cafe', size: 15 },
-      22: { exits: [18, 30], motif: 'aquarium', size: 17 },
-      23: { exits: [18], motif: 'snow', size: 17 },
+      21: { exits: [2, 43], motif: 'cafe', size: 15 },
+      22: { exits: [], motif: 'aquarium', size: 17 },
+      23: { exits: [], motif: 'snow', size: 17 },
       24: { exits: [11], motif: 'poacher', size: 17 },
       25: { exits: [11], motif: 'school', size: 17 },
       26: { exits: [11], motif: 'whitehouse', size: 15 },
       27: { exits: [100], motif: 'void', size: 21 },
       28: { exits: [2, 20, 29, 30, 31, 43], motif: 'common', size: 19 },
       29: { exits: [2, 6, 8, 10, 11, 13, 16, 18, 28, 38], motif: 'tubes', size: 23 },
-      30: { exits: [28, 22], motif: 'loser', size: 13 },
+      30: { exits: [28], motif: 'loser', size: 13 },
       31: { exits: [28], motif: 'nest', size: 15 },
       32: { exits: [33, 66, 83], motif: 'palace', size: 17 },
       33: { exits: [6, 32, 7, 84], motif: 'route', size: 21 },
-      34: { exits: [9], motif: 'hell', size: 15 },
-      35: { exits: [10, 36, 37], motif: 'kitchen', size: 15 },
-      36: { exits: [10, 35], motif: 'bathroom', size: 11 },
+      34: { exits: [9, 126], motif: 'hell', size: 25 },
+      35: { exits: [10, 37], motif: 'kitchen', size: 17 },
+      36: { exits: [], motif: 'bathroom', size: 11, nonPhysical: true },
       37: { exits: [10, 35], motif: 'training', size: 11 },
       38: { exits: [91, 93], motif: 'awards', size: 19 },
       39: { exits: [14, 68], motif: 'lighthouse', size: 15 },
       40: { exits: [14], motif: 'underwater', size: 17 },
-      41: { exits: [94], motif: 'street', size: 17 },
+      41: { exits: [], motif: 'street', size: 17 },
       42: { exits: [3], motif: 'carnival', size: 19 },
       43: { exits: [2, 28], motif: 'circus', size: 19 },
       50: { exits: [20], motif: 'dormannex', size: 21 },
       51: { exits: [20], motif: 'dormannex', size: 21 },
-      64: { exits: [8, 65], motif: 'manor', size: 15 },
+      64: { exits: [65], motif: 'manor', size: 15 },
       65: { exits: [64], motif: 'manor', size: 13 },
       66: { exits: [32, 67], motif: 'palace', size: 15 },
       67: { exits: [66], motif: 'palace', size: 13 },
       68: { exits: [39, 69], motif: 'lighthouse', size: 13 },
       69: { exits: [68, 14], motif: 'lighthouse', size: 11 },
-      70: { exits: [14], motif: 'grounds', size: 17 },
+      70: { exits: [], motif: 'grounds', size: 17 },
       71: { exits: [11], motif: 'snow', size: 19 },
-      72: { exits: [10], motif: 'street', size: 17 },
-      73: { exits: [16, 98, 99], motif: 'exit', size: 15 },
-      74: { exits: [18, 101, 102, 103, 104], motif: 'memory', size: 17 },
-      75: { exits: [3, 18], motif: 'grounds', size: 23 }
+      72: { exits: [], motif: 'street', size: 17 },
+      73: { exits: [], motif: 'exit', size: 15 },
+      74: { exits: [], motif: 'memory', size: 17 },
+      75: { exits: [], motif: 'grounds', size: 23 }
     };
 
     const canonRooms = this.getCircusCanonRoomDefinitions();
@@ -1763,12 +1763,21 @@ const OS = {
         floor: room.floor,
         ceiling: room.ceiling,
         provenance: room.provenance,
+        layer: room.layer || 'present',
+        nonPhysical: !!room.nonPhysical,
         unlocked: unlockedAt(room.gateEpisode, room.gateSubepisode || 0)
       };
-      scenes[id] = { exits: [...new Set(room.exits || [])], motif: room.motif, size: room.size || 15 };
+      scenes[id] = {
+        exits: room.nonPhysical ? [] : [...new Set(room.exits || [])],
+        motif: room.motif,
+        size: room.size || 15,
+        layer: room.layer || 'present',
+        nonPhysical: !!room.nonPhysical
+      };
     });
     Object.entries(canonRooms).forEach(([zoneId, room]) => {
       const id = Number(zoneId);
+      if (room.nonPhysical) return;
       (room.exits || []).forEach(targetId => {
         if (!scenes[targetId]) return;
         scenes[targetId].exits = [...new Set([...(scenes[targetId].exits || []), id])];
@@ -2296,14 +2305,14 @@ const OS = {
   getCircusAdventureWorlds() {
     return [
       { episode: 1, target: 31, label: 'EP1 - AVENTURE INTERNE / GLOINKS' },
-      { episode: 2, target: 6, label: 'EP2 - CANDY CANYON KINGDOM' },
-      { episode: 3, target: 8, label: 'EP3 - MILDENHALL MANOR' },
-      { episode: 4, target: 10, label: "EP4 - SPUDSY'S" },
-      { episode: 5, target: 11, label: 'EP5 - SUGGESTION BOX' },
-      { episode: 6, target: 13, label: 'EP6 - THEY ALL GET GUNS' },
-      { episode: 7, target: 14, label: 'EP7 - DIGITAL LAKE' },
-      { episode: 8, target: 16, label: 'EP8 - C&A CORE' },
-      { episode: 9, target: 18, label: 'EP9 - FINAL CIRCUS' }
+      { episode: 2, target: 147, label: 'EP2 - CANDY CARRIER CHAOS! / CAUCHEMAR' },
+      { episode: 3, target: 2, label: 'EP3 - MILDENHALL / RESPIRATION ET BRIEFING' },
+      { episode: 4, target: 2, label: "EP4 - SPUDSY'S / AVANT LE SERVICE" },
+      { episode: 5, target: 28, label: 'EP5 - UNTITLED / TENT RETURN' },
+      { episode: 6, target: 122, label: 'EP6 - THEY ALL GET GUNS / OPENING' },
+      { episode: 7, target: 2, label: 'EP7 - BEACH EPISODE / FREE DAY' },
+      { episode: 8, target: 113, label: 'EP8 - HJSAKLDFHL / GENESIS' },
+      { episode: 9, target: 121, label: 'EP9 - REMEMBER / DAMAGED TENT' }
     ];
   },
 
@@ -2484,110 +2493,715 @@ const OS = {
 
   getCircusFpsCampaignDefinition(episode = 1) {
     const pilotStages = [
-      { title: 'Arrivee, regles et nom Pomni', zone: 2, guide: 'Rejoignez Caine sur la piste, calibrez la presentation et assistez a l attribution du nom Pomni.', requirements: [
+      { title: 'Arrivee, regles et nom Pomni', zone: 2, route: [2], guide: 'Rejoignez Caine sur la piste, calibrez la presentation et assistez a l attribution du nom Pomni.', requirements: [
         { action: 'talk', target: 'caine', count: 1 }, { action: 'talk', target: 'pomni', count: 1 },
         { action: 'look', target: 'ring', count: 1 }, { action: 'use', target: 'spotlight', count: 2 }
       ] },
-      { title: 'Tour du Cirque et porte EXIT', zone: 3, guide: 'Suivez le tour des Grounds, observez la fete foraine sans y entrer et relevez la porte rouge instable avant de revenir sur la piste.', requirements: [
+      { title: 'Tour du Cirque et porte EXIT', zone: 3, route: [2, 3, 42, 3, 2], guide: 'Suivez le tour des Grounds, observez la fete foraine sans y entrer et relevez la porte rouge instable avant de revenir sur la piste.', requirements: [
         { action: 'visit', target: '3', count: 1 }, { action: 'look', target: 'tent', count: 1 },
         { action: 'look', target: 'pilotexitdoor', count: 1 }, { action: 'visit', target: '42', count: 1 },
         { action: 'visit', target: '2', count: 1 }
       ] },
-      { title: 'Couloir des chambres et Kaufmo', zone: 52, guide: 'Apres la capture de Zooble, suivez la branche Pomni-Ragatha jusqu au couloir residentiel et relevez la chambre ravagee de Kaufmo.', requirements: [
+      { title: 'Couloir des chambres et Kaufmo', zone: 52, route: [2, 20, 52], guide: 'Apres la capture de Zooble, suivez la branche Pomni-Ragatha jusqu au couloir residentiel et relevez la chambre ravagee de Kaufmo.', requirements: [
         { action: 'visit', target: '20', count: 1 }, { action: 'visit', target: '52', count: 1 },
         { action: 'look', target: 'graffiti', count: 2 }, { action: 'use', target: 'crt', count: 1 }
       ] },
-      { title: 'The Nest et sauvetage de Zooble', zone: 31, guide: 'Reconstituez en parallele la branche Jax-Kinger-Gangle, identifiez la Gloink Queen et recuperez une piece de Zooble.', requirements: [
+      { title: 'The Nest et sauvetage de Zooble', zone: 31, route: [52, 20, 28, 31], guide: 'Reconstituez en parallele la branche Jax-Kinger-Gangle, identifiez la Gloink Queen et recuperez une piece de Zooble.', requirements: [
         { action: 'visit', target: '31', count: 1 }, { action: 'look', target: 'gloinknest', count: 1 },
         { action: 'take', target: 'zooblepart', count: 1 }, { action: 'talk', target: 'gloinkqueenscale', count: 1 }
       ] },
-      { title: 'Recherche de Caine porte apres porte', zone: 29, guide: 'Depuis la galerie interne, traversez les cinq salles aleatoires effectivement montrees pendant la fuite de Pomni.', requirements: [
+      { title: 'Recherche de Caine porte apres porte', zone: 29, route: [31, 28, 29, 76, 29, 77, 29, 78, 29, 79, 29, 80, 29], guide: 'Depuis la galerie interne, traversez les cinq salles aleatoires effectivement montrees pendant la fuite de Pomni.', requirements: [
         { action: 'visit', target: '29', count: 1 }, { action: 'look', target: 'doorframe', count: 3 },
         { action: 'visit', target: '76', count: 1 }, { action: 'visit', target: '77', count: 1 },
         { action: 'visit', target: '78', count: 1 }, { action: 'visit', target: '79', count: 1 },
         { action: 'visit', target: '80', count: 1 }
       ] },
-      { title: 'Fausse sortie, bureaux C&A et Vide', zone: 97, guide: 'Entrez par la porte EXIT, traversez chaque volume de bureau dans l ordre puis franchissez le hall inacheve vers le Vide.', requirements: [
+      { title: 'Fausse sortie, bureaux C&A et Vide', zone: 97, route: [29, 2, 5, 97, 98, 99, 100, 27], guide: 'Entrez par la porte EXIT, traversez chaque volume de bureau dans l ordre puis franchissez le hall inacheve vers le Vide.', requirements: [
         { action: 'visit', target: '5', count: 1 }, { action: 'visit', target: '97', count: 1 },
         { action: 'look', target: 'desk', count: 1 }, { action: 'use', target: 'console', count: 1 },
         { action: 'visit', target: '98', count: 1 }, { action: 'visit', target: '99', count: 1 },
         { action: 'visit', target: '100', count: 1 }, { action: 'visit', target: '27', count: 1 }
       ] },
-      { title: 'Pendant le Vide: WackyWatch et Cellar', zone: 120, guide: 'Reconstituez le plan parallele de Caine et Bubble au restaurant, declenchez l alerte du Vide, puis revenez au chapiteau pour observer le depot de Kaufmo dans le Cellar.', requirements: [
+      { title: 'Pendant le Vide: WackyWatch et Cellar', zone: 120, route: [120, 2, 4], entryMode: 'cainecut', entryZone: 120, guide: 'Reconstituez le plan parallele de Caine et Bubble au restaurant, declenchez l alerte du Vide, puis revenez au chapiteau pour observer le depot de Kaufmo dans le Cellar.', requirements: [
         { action: 'visit', target: '120', count: 1 }, { action: 'look', target: 'wackywatch', count: 1 },
         { action: 'talk', target: 'caine', count: 1 }, { action: 'visit', target: '2', count: 1 },
         { action: 'visit', target: '4', count: 1 }
       ] },
-      { title: 'Restauration, reassemblage et festin', zone: 43, guide: 'Rendez la piece a Zooble, constatez la restauration de Ragatha puis rejoignez le festin prepare par Bubble dans le chapiteau.', requirements: [
+      { title: 'Restauration, reassemblage et festin', zone: 43, route: [4, 2, 43], guide: 'Rendez la piece a Zooble, constatez la restauration de Ragatha puis rejoignez le festin prepare par Bubble dans le chapiteau.', requirements: [
         { action: 'visit', target: '2', count: 1 }, { action: 'give', target: 'zooblepart', count: 1 },
         { action: 'visit', target: '43', count: 1 }, { action: 'look', target: 'banquettable', count: 1 },
         { action: 'look', target: 'feastplatter', count: 2 }, { action: 'talk', target: 'bubble', count: 1 }
       ] }
     ];
+    const normalizeStageRoute = stage => {
+      const route = (Array.isArray(stage.route) && stage.route.length ? stage.route : [stage.zone])
+        .map(Number)
+        .filter(Number.isFinite);
+      if (!route.includes(stage.zone)) route.push(stage.zone);
+      const existingVisits = new Set(stage.requirements
+        .filter(requirement => requirement.action === 'visit')
+        .map(requirement => Number(requirement.target)));
+      const routeVisits = [...new Set(route)]
+        .filter(routeZone => !existingVisits.has(routeZone))
+        .map(routeZone => ({ action: 'visit', target: String(routeZone), count: 1 }));
+      return { ...stage, route, requirements: [...routeVisits, ...stage.requirements] };
+    };
     if (episode === 1) return {
       episode: 1,
       title: 'Pilot / CAMPAGNE FPS',
       canonBoundary: 'Reconstitution jouable additive. Les dialogues du transcript restent dans Simulation Control.',
-      stages: pilotStages
+      stages: pilotStages.map(normalizeStageRoute)
     };
     const blueprints = {
-      2: { title: 'Candy Carrier Chaos!', steps: [
-        [2, 'talk', 'pomni'], [6, 'look', 'candy'], [32, 'talk', 'loolilalu'], [33, 'use', 'truck'],
-        [7, 'look', 'archive'], [7, 'talk', 'gummigoo'], [6, 'talk', 'gummigoo'], [6, 'look', 'candy']
+      2: { title: 'Candy Carrier Chaos!', version: 2, steps: [
+        {
+          title: 'Cauchemar du Cellar', zone: 147, route: [147], entryMode: 'memory',
+          action: 'look', target: 'nightmarefracture',
+          guide: 'Traversez le cauchemar de Pomni comme une projection mentale. Le Cellar apercu ici n est pas un deplacement physique.'
+        },
+        {
+          title: 'Reveil dans la chambre de Pomni', zone: 45, route: [45], entryMode: 'memory',
+          action: 'talk', target: 'ragatha',
+          guide: 'Reprenez conscience dans la chambre de Pomni et laissez Ragatha venir la chercher avant de rejoindre le couloir.',
+          requirements: [{ action: 'look', target: 'bed', zone: 45, count: 1 }]
+        },
+        {
+          title: 'Briefing de Caine et refus de Zooble', zone: 2, route: [45, 20, 2],
+          action: 'talk', target: 'caine',
+          guide: 'Rejoignez la piste par le couloir residentiel, ecoutez le briefing de Caine et constatez que Zooble reste au Cirque.',
+          requirements: [
+            { action: 'talk', target: 'zooble', zone: 2, count: 1 },
+            { action: 'look', target: 'ring', zone: 2, count: 1 }
+          ]
+        },
+        {
+          title: 'Carrosse, pont-levis et capitale', zone: 83, route: [133, 134, 83], entryMode: 'caineportal', entryZone: 133,
+          action: 'look', target: 'wagon', actionZone: 133,
+          guide: 'Suivez le carrosse du Gummy Elephant, faites ouvrir le pont-levis et traversez la foule de la capitale.',
+          requirements: [{ action: 'use', target: 'drawbridge', zone: 134, count: 1 }]
+        },
+        {
+          title: 'Audience de Princess Loolilalu', zone: 135, route: [83, 135],
+          action: 'talk', target: 'loolilalu',
+          guide: 'Atteignez le parvis du chateau, recevez la mission du sirop et prenez la cle royale.',
+          requirements: [{ action: 'take', target: 'royalkey', zone: 135, count: 1 }]
+        },
+        {
+          title: 'Cour du war rig', zone: 136, route: [135, 136],
+          action: 'use', target: 'warrig',
+          guide: 'Inspectez le war rig royal et sa cargaison avant le depart.',
+          requirements: [{ action: 'look', target: 'syrupcargo', zone: 136, count: 1 }]
+        },
+        {
+          title: 'Camp des bandits crocodiles', zone: 137, route: [136, 137],
+          action: 'talk', target: 'gummigoo',
+          guide: 'Reperez Gummigoo, Max et Chad autour du feu sans les transformer en ennemis tuables.',
+          requirements: [
+            { action: 'talk', target: 'max', zone: 137, count: 1 },
+            { action: 'talk', target: 'chad', zone: 137, count: 1 },
+            { action: 'look', target: 'banditcamp', zone: 137, count: 1 }
+          ]
+        },
+        {
+          title: 'Poursuite des deux camions', zone: 138, route: [137, 138],
+          action: 'use', target: 'chaserig',
+          guide: 'Lancez la poursuite, changez de voie et gardez le war rig intact face aux obstacles.',
+          requirements: [{ action: 'drive', target: 'truck', zone: 138, count: 4 }]
+        },
+        {
+          title: 'Rocky Road et manoeuvres', zone: 139, route: [138, 139],
+          action: 'use', target: 'rockylever',
+          guide: 'Declenchez Rocky Road puis tenez la trajectoire pendant les manoeuvres du tanker.',
+          requirements: [{ action: 'survive', target: 'rockyroad', zone: 139, count: 3 }]
+        },
+        {
+          title: 'Ancre, pointes et rupture du sol', zone: 140, route: [139, 140],
+          action: 'use', target: 'anchor',
+          guide: 'Identifiez l ancre, les pointes deployables et la collision qui brise le sol sous Pomni et Gummigoo.',
+          requirements: [
+            { action: 'look', target: 'spikes', zone: 140, count: 1 },
+            { action: 'survive', target: 'collision', zone: 140, count: 2 }
+          ]
+        },
+        {
+          title: 'Branche parallele dans la riviere chocolatee', zone: 141, route: [141], entryMode: 'cainecut',
+          action: 'talk', target: 'fudge',
+          guide: 'Reconstituez en parallele le camion du groupe dans le bassin chocolate et la rencontre avec The Fudge.',
+          requirements: [{ action: 'look', target: 'chocolateriver', zone: 141, count: 1 }]
+        },
+        {
+          title: 'Chute hors carte', zone: 142, route: [142], entryMode: 'void',
+          action: 'survive', target: 'testfall', count: 3,
+          guide: 'Suivez uniquement Pomni et Gummigoo pendant la chute sous la carte. Aucun couloir physique ne relie ce puits au royaume.'
+        },
+        {
+          title: 'Labyrinthe bleu du Test Level', zone: 143, route: [143], entryMode: 'void',
+          action: 'use', target: 'mazebeacon', count: 2, distinct: true,
+          guide: 'Traversez les murs bleus quadrilles, les demi-spheres reflechissantes et les couloirs sans inventer de console parlante.',
+          requirements: [{ action: 'survive', target: 'testmaze', zone: 143, count: 3 }]
+        },
+        {
+          title: 'Salle des modeles PNJ', zone: 144, route: [144], entryMode: 'void',
+          action: 'look', target: 'gummigoomodel',
+          guide: 'Inspectez le modele inerte de Gummigoo et laissez sa crise de memoire se jouer avec Pomni.',
+          requirements: [
+            { action: 'talk', target: 'gummigoo', zone: 144, count: 1 },
+            { action: 'look', target: 'npcmodel', zone: 144, count: 2, distinct: true }
+          ]
+        },
+        {
+          title: 'Camion duplique et collision d evasion', zone: 145, route: [145], entryMode: 'void',
+          action: 'use', target: 'replicatanker',
+          guide: 'Utilisez le tanker duplique, la sucette-levier et deux blocs de collision pour remonter hors de la couche basse.',
+          requirements: [{ action: 'use', target: 'collisionblock', zone: 145, count: 2, distinct: true }]
+        },
+        {
+          title: 'Surface hors carte et theieres Utah', zone: 146, route: [146], entryMode: 'void',
+          action: 'look', target: 'utahteapot', count: 3, distinct: true,
+          guide: 'Relevez le ciel pastel, les points violets et les trois theieres geantes avant la collision de retour.'
+        },
+        {
+          title: 'Convergence et deux tankers', zone: 141, route: [141], entryMode: 'void',
+          action: 'talk', target: 'gummigoo',
+          guide: 'Retrouvez le groupe dans le bassin, constatez la presence des deux tankers et reunissez Gummigoo avec Max et Chad.',
+          requirements: [
+            { action: 'talk', target: 'max', zone: 141, count: 1 },
+            { action: 'talk', target: 'chad', zone: 141, count: 1 },
+            { action: 'look', target: 'returntanker', zone: 141, count: 2, distinct: true }
+          ]
+        },
+        {
+          title: 'Retour du convoi vers le chateau', zone: 135, route: [141, 138, 135],
+          action: 'use', target: 'returnrig', actionZone: 138,
+          guide: 'Ramenez les deux vehicules par la route deja parcourue et rejoignez le parvis.',
+          requirements: [{ action: 'drive', target: 'truck', zone: 138, count: 4 }]
+        },
+        {
+          title: 'Remise du sirop et arrivee de The Fudge', zone: 135, route: [135],
+          action: 'use', target: 'syrupdelivery',
+          guide: 'Remettez le sirop a Loolilalu, observez la porte laissee ouverte et l irruption de The Fudge.',
+          requirements: [
+            { action: 'talk', target: 'loolilalu', zone: 135, count: 1 },
+            { action: 'give', target: 'royalkey', zone: 135, count: 1 },
+            { action: 'look', target: 'fudgearrival', zone: 135, count: 1 }
+          ]
+        },
+        {
+          title: 'Retour au Tent et suppression de Gummigoo', zone: 2, route: [2], entryMode: 'caineportal',
+          action: 'talk', target: 'gummigoo',
+          guide: 'Revenez sur la piste avec Pomni et Gummigoo, puis declenchez la suppression de Caine sans laisser un PNJ permanent.',
+          requirements: [
+            { action: 'talk', target: 'caine', zone: 2, count: 1 },
+            { action: 'use', target: 'gummigoodeletion', zone: 2, count: 1 }
+          ]
+        },
+        {
+          title: 'Funerailles silencieuses de Kaufmo', zone: 148, route: [148], entryMode: 'cainecut',
+          action: 'look', target: 'kauffin',
+          guide: 'Terminez aux funerailles de Kaufmo avec Pomni, Ragatha, Zooble, Gangle et Kinger. Jax et Caine sont absents; aucun dialogue audible n est ajoute.',
+          requirements: [{ action: 'look', target: 'kaufmoportrait', zone: 148, count: 1 }]
+        }
       ] },
       3: { title: 'The Mystery Of Mildenhall Manor', steps: [
-        [8, 'visit', '8'], [85, 'look', 'ceilinglight'], [86, 'look', 'doorframe'], [88, 'look', 'lorebillboard'],
-        [89, 'visit', '89'], [9, 'talk', 'kinger'], [34, 'use', 'candle'], [17, 'talk', 'queenie']
+        {
+          title: 'Respiration et briefing du manoir', zone: 2, route: [2],
+          action: 'talk', target: 'caine',
+          guide: 'Terminez l exercice de respiration puis ecoutez le briefing sans transformer l interlude therapeutique en piece du manoir.'
+        },
+        {
+          title: 'Exterieur, vestibule et Ghostly', zone: 85, route: [8, 85], entryMode: 'caineportal', entryZone: 8,
+          action: 'talk', target: 'ghostly',
+          guide: 'Entrez par la facade, retrouvez tout le groupe dans le vestibule et inspectez l aspirateur utilise contre Ghostly.',
+          requirements: [{ action: 'look', target: 'ghostvacuum', zone: 85, count: 1 }]
+        },
+        {
+          title: 'Choix des deux portes', zone: 86, route: [85, 86],
+          action: 'look', target: 'routechoice', count: 2, distinct: true,
+          guide: 'Identifiez la porte normale a gauche et la porte vraiment effrayante a droite avant la separation.'
+        },
+        {
+          title: 'Tunnel organique effrayant', zone: 87, route: [86, 87],
+          action: 'use', target: 'organictunnel',
+          guide: 'Traversez le conduit organique a sens narratif unique sans inventer de salle supplementaire.',
+          requirements: [{ action: 'survive', target: 'organicdrop', zone: 87, count: 3 }]
+        },
+        {
+          title: 'Trophees, bandes et extinction', zone: 88, route: [87, 88],
+          action: 'look', target: 'tape', count: 2, distinct: true,
+          guide: 'Lisez les deux premiers enregistrements, observez la tete de l Angel puis laissez le courant s eteindre.',
+          requirements: [{ action: 'look', target: 'angelhead', zone: 88, count: 1 }]
+        },
+        {
+          title: 'Poursuite sonore et monte-plat', zone: 89, route: [88, 89],
+          action: 'use', target: 'dumbwaiter',
+          guide: 'Evitez la manifestation de l Angel en limitant le bruit puis descendez dans la cabine du monte-plat.',
+          requirements: [{ action: 'survive', target: 'angelchase', zone: 88, count: 4 }]
+        },
+        {
+          title: 'Cave, cadavre et fusil', zone: 9, route: [89, 9],
+          action: 'take', target: 'shotgun',
+          guide: 'Lisez la troisieme bande, recuperez le fusil pres du Baron et conservez exactement deux tirs.',
+          requirements: [{ action: 'look', target: 'tape', zone: 9, count: 1 }]
+        },
+        {
+          title: 'Deux manifestations de l Angel', zone: 9, route: [9],
+          action: 'use', target: 'angelmanifestation', count: 2, distinct: true,
+          guide: 'Neutralisez d abord le corps pres du tuyau puis la tete au puits du monte-plat; cela ne prouve pas une mort definitive.',
+          requirements: [{ action: 'look', target: 'tape', zone: 9, count: 2, distinct: true }]
+        },
+        {
+          title: 'Enfer, possession et escalier', zone: 126, route: [9, 34, 126],
+          action: 'talk', target: 'kinger',
+          guide: 'Traversez les ames, maintenez Pomni pendant la possession puis gagnez l escalier de sortie.',
+          requirements: [{ action: 'survive', target: 'holdbreath', zone: 126, count: 5 }]
+        },
+        {
+          title: 'Souvenir de Queenie dans le noir', zone: 17, route: [17], entryMode: 'memory',
+          action: 'talk', target: 'kinger',
+          guide: 'Ecoutez Kinger dans le souvenir obscur. Queenie reste une memoire et ne redevient pas une residente physique.',
+          requirements: [{ action: 'look', target: 'memory', zone: 17, count: 1 }]
+        },
+        {
+          title: 'Salon normal et reunion finale', zone: 125, route: [125], entryMode: 'cainecut',
+          action: 'talk', target: 'marthamildenhall',
+          guide: 'Rejoignez Martha, le the et les membres retenus par la route normale, puis attendez le rappel direct de Caine.',
+          requirements: [{ action: 'look', target: 'teaservice', zone: 125, count: 1 }]
+        }
       ] },
       4: { title: 'Fast Food Masquerade', steps: [
-        [2, 'talk', 'gangle'], [10, 'look', 'menu'], [35, 'use', 'counter'], [10, 'take', 'menu'],
-        [10, 'talk', 'max'], [37, 'look', 'archive'], [10, 'talk', 'workgangle'], [10, 'use', 'counter']
+        {
+          title: 'Softball au Tent', zone: 2, route: [2],
+          action: 'talk', target: 'gangle',
+          guide: 'Commencez par le match improvise au chapiteau et observez le nouveau masque avant l affectation chez Spudsy.'
+        },
+        {
+          title: 'Nouveau masque dans la chambre de Zooble', zone: 48, route: [2, 20, 48],
+          action: 'look', target: 'newmask',
+          guide: 'Inspectez le masque sans confondre cet objet avec une nouvelle identite de Gangle.'
+        },
+        {
+          title: 'Boite a suggestions et affectation', zone: 28, route: [48, 20, 28],
+          action: 'look', target: 'spudsysuggestion',
+          guide: 'Lisez la suggestion de restaurant puis laissez Caine effectuer la transition vers le lieu de travail.'
+        },
+        {
+          title: 'Arrivee devant Spudsy', zone: 127, route: [127], entryMode: 'caineportal',
+          action: 'look', target: 'spudsysign',
+          guide: 'Reperez la facade, le parking et l entree avant de commencer le service.'
+        },
+        {
+          title: 'Ouverture du service', zone: 10, route: [127, 10],
+          action: 'use', target: 'counter',
+          guide: 'Prenez votre poste, lisez les tickets et suivez les consignes de Work Gangle.',
+          requirements: [{ action: 'talk', target: 'workgangle', zone: 10, count: 1 }]
+        },
+        {
+          title: 'Petit-dejeuner avec Gummigoo, Max et Chad', zone: 10, route: [10],
+          action: 'talk', target: 'max',
+          guide: 'Servez les trois crocodiles sans faire reconnaitre Pomni par Gummigoo.',
+          requirements: [{ action: 'talk', target: 'gummigoo', zone: 10, count: 1 }]
+        },
+        {
+          title: 'Drive-through et commande de la Gloink Queen', zone: 128, route: [10, 35, 128],
+          action: 'use', target: 'orderwindow',
+          guide: 'Traitez la commande de trois cents burgers au guichet sans reduire la Gloink Queen a un PNJ de taille normale.',
+          requirements: [{ action: 'talk', target: 'gloinkqueenscale', zone: 128, count: 1 }]
+        },
+        {
+          title: 'Video de formation imposee', zone: 37, route: [128, 35, 37],
+          action: 'look', target: 'archive',
+          guide: 'Regardez la cassette dans la piece de formation et revenez au service.'
+        },
+        {
+          title: 'Calme a l arriere-service', zone: 130, route: [37, 35, 130],
+          action: 'use', target: 'backdoor',
+          guide: 'Rejoignez la zone arriere et laissez la conversation retomber avant l entretien de Gangle.'
+        },
+        {
+          title: 'Bureau du manager et parking', zone: 72, route: [130, 129, 127, 72],
+          action: 'look', target: 'managerbadge', actionZone: 129,
+          guide: 'Consultez le planning dans le bureau puis sortez sur le parking avec Gangle.'
+        },
+        {
+          title: 'Route au lampadaire', zone: 131, route: [72, 131],
+          action: 'use', target: 'streetlamp',
+          guide: 'Restez dans le cercle de lumiere et accompagnez Gangle pendant le passage calme sur la route.',
+          requirements: [{ action: 'talk', target: 'workgangle', zone: 131, count: 1 }]
+        },
+        {
+          title: 'Evaluation B+', zone: 132, route: [131, 132], entryMode: 'cainecut',
+          action: 'look', target: 'reviewgrade',
+          guide: 'Lisez le B+ dans la salle d evaluation distincte du bureau de Caine.',
+          requirements: [{ action: 'talk', target: 'caine', zone: 132, count: 1 }]
+        },
+        {
+          title: 'Retour au Tent', zone: 2, route: [2], entryMode: 'cainecut',
+          action: 'talk', target: 'ragatha',
+          guide: 'Revenez au chapiteau et laissez l epilogue relationnel se terminer sans relancer le service.'
+        }
       ] },
       5: { title: 'Untitled', steps: [
-        [2, 'talk', 'ragatha'], [11, 'look', 'card'], [24, 'talk', 'hunterjax'], [26, 'look', 'console'],
-        [25, 'look', 'card'], [28, 'talk', 'ragatha'], [12, 'use', 'scoreboard'], [12, 'use', 'base']
+        {
+          title: 'Retour mouille et boite a suggestions', zone: 28, route: [28],
+          action: 'look', target: 'suggestionbox',
+          guide: 'Retrouvez le groupe encore mouille, ecoutez la fatigue de Ragatha et inspectez la boite avant le lightning round.',
+          requirements: [{ action: 'talk', target: 'ragatha', zone: 28, count: 1 }]
+        },
+        {
+          title: 'Poach Everything', zone: 24, route: [24], entryMode: 'cainecut',
+          action: 'talk', target: 'hunterjax',
+          guide: 'Esquivez la chasse de Jax, observez Rhino Gangle et Flamingo Zooble, puis validez le vote de sortie.',
+          requirements: [{ action: 'look', target: 'votemarker', zone: 24, count: 1 }]
+        },
+        {
+          title: 'President Pomni', zone: 26, route: [26], entryMode: 'cainecut',
+          action: 'look', target: 'brief',
+          guide: 'Lisez le briefing Australie/Nouvelle-Zelande, mettez-vous a couvert et tentez de desamorcer les deux bombes.',
+          requirements: [{ action: 'use', target: 'bomb', zone: 26, count: 2, distinct: true }]
+        },
+        {
+          title: 'Anime High School', zone: 25, route: [25], entryMode: 'cainecut',
+          action: 'talk', target: 'japanesegangle',
+          guide: 'Traversez l introduction anime, inspectez la salle de classe et rejoignez le vote de sortie impose.',
+          requirements: [{ action: 'look', target: 'votemarker', zone: 25, count: 1 }]
+        },
+        {
+          title: 'Stargazing sur les Grounds', zone: 3, route: [3], entryMode: 'cainecut',
+          action: 'look', target: 'picnic',
+          guide: 'Rejoignez le pique-nique nocturne et ecoutez les conversations sans transformer ce temps calme en nouvelle epreuve.',
+          requirements: [{ action: 'talk', target: 'ragatha', zone: 3, count: 1 }]
+        },
+        {
+          title: 'Untitled Bar', zone: 110, route: [110], entryMode: 'cainecut',
+          action: 'use', target: 'counter',
+          guide: 'Entrez dans le bar noir et blanc de Zooble, servez les commandes et identifiez le Disappearing Guy.',
+          requirements: [{ action: 'talk', target: 'disappearingguy', zone: 110, count: 1 }]
+        },
+        {
+          title: 'Softball des Big Tops', zone: 12, route: [12], entryMode: 'cainecut',
+          action: 'use', target: 'scoreboard',
+          guide: 'Lancez le match, validez les trois bases distinctes et suivez la victoire imposee sans inventer d Evil Gangle.',
+          requirements: [{ action: 'use', target: 'base', zone: 12, count: 3, distinct: true }]
+        },
+        {
+          title: 'Portail de retour au Tent', zone: 28, route: [28], entryMode: 'caineportal',
+          action: 'talk', target: 'ragatha',
+          guide: 'Revenez par le portail de Caine et constatez les consequences relationnelles de la journee.',
+          requirements: [{ action: 'look', target: 'arrivalportal', zone: 28, count: 1 }]
+        }
       ] },
       6: { title: 'They All Get Guns', steps: [
-        [2, 'talk', 'zooble'], [90, 'look', 'table'], [13, 'use', 'target'], [13, 'talk', 'jax'],
-        [91, 'look', 'doorframe'], [92, 'talk', 'disappearingguy'], [93, 'look', 'card'], [38, 'talk', 'caine']
+        {
+          title: 'Zooble cache dans l alcove', zone: 122, route: [122],
+          action: 'talk', target: 'zooble',
+          guide: 'Trouvez Zooble dans l alcove bleue, inspectez le pot et revenez vers le briefing sans forcer sa participation.',
+          requirements: [{ action: 'look', target: 'plantpot', zone: 122, count: 1 }]
+        },
+        {
+          title: 'Briefing de l aventure armee', zone: 2, route: [2], entryMode: 'cainecut',
+          action: 'talk', target: 'caine',
+          guide: 'Ecoutez les regles, relevez les trois vies et gardez les armes comme accessoires non letaux de l aventure.',
+          requirements: [{ action: 'look', target: 'gunbrief', zone: 2, count: 1 }]
+        },
+        {
+          title: 'Exercice prive de confiance', zone: 90, route: [90], entryMode: 'cainecut',
+          action: 'use', target: 'table',
+          guide: 'Terminez l exercice de confiance et confirmez les trois coeurs avant l epreuve publique.',
+          requirements: [{ action: 'look', target: 'heart', zone: 90, count: 3, distinct: true }]
+        },
+        {
+          title: 'Bataille dans le chapiteau', zone: 13, route: [13], entryMode: 'cainecut',
+          action: 'use', target: 'target', count: 3,
+          guide: 'Traversez la bataille d equipe dans le decor du Tent, preserveez les vies et suivez les tensions de Jax.',
+          requirements: [{ action: 'talk', target: 'jax', zone: 13, count: 1 }, { action: 'survive', target: 'battle', zone: 13, count: 4 }]
+        },
+        {
+          title: 'Piece sombre', zone: 123, route: [123], entryMode: 'cainecut',
+          action: 'use', target: 'spotlight',
+          guide: 'Stabilisez la seule source de lumiere et traversez la piece sombre sans transformer les ombres en nouveaux personnages.',
+          requirements: [{ action: 'survive', target: 'darkroom', zone: 123, count: 3 }]
+        },
+        {
+          title: 'Pipe run et Loser Corner', zone: 30, route: [123, 29, 28, 30],
+          action: 'look', target: 'aquariumwindow',
+          guide: 'Suivez les tubes jusqu au Loser Corner et observez l aquarium comme un decor du chapiteau, pas comme la zone de Remember.',
+          requirements: [{ action: 'use', target: 'ring', zone: 29, count: 2, distinct: true }]
+        },
+        {
+          title: 'Zooble Box et flashbang', zone: 48, route: [30, 28, 20, 48],
+          action: 'use', target: 'flashbang',
+          guide: 'Rejoignez la chambre de Zooble, inspectez sa boite de pieces et terminez l action du flashbang.',
+          requirements: [{ action: 'look', target: 'zooblebox', zone: 48, count: 1 }]
+        },
+        {
+          title: 'Awards puis rencontre aux sanitaires', zone: 92, route: [48, 20, 28, 29, 38, 91, 92],
+          action: 'talk', target: 'disappearingguy',
+          guide: 'Assistez d abord aux Favorite Character Awards, puis suivez Jax jusque dans les sanitaires du theatre.',
+          requirements: [{ action: 'use', target: 'scoreboard', zone: 38, count: 1 }, { action: 'talk', target: 'caine', zone: 38, count: 1 }]
+        }
       ] },
       7: { title: 'Beach Episode', steps: [
-        [15, 'talk', 'caine'], [14, 'use', 'umbrella'], [14, 'talk', 'sun'], [94, 'look', 'console'],
-        [94, 'talk', 'abelmannequin'], [16, 'talk', 'caine'], [95, 'use', 'console'], [96, 'talk', 'jax']
+        {
+          title: 'Jour sans aventure et Chinese Room', zone: 15, route: [2, 15],
+          action: 'talk', target: 'caine',
+          guide: 'Assistez au gag du jour libre sur la piste, puis entrez dans la Chinese Room sans la confondre avec la zone administrateur.',
+          requirements: [{ action: 'use', target: 'console', zone: 15, count: 1 }]
+        },
+        {
+          title: 'Digital Lake et jeux de plage', zone: 14, route: [15, 2, 3, 14],
+          action: 'use', target: 'umbrella',
+          guide: 'Rejoignez la plage, reperez la cabine de change, l oeil-bouton de Ragatha et une zone d ombre avant la plongee.',
+          requirements: [{ action: 'look', target: 'eye', zone: 14, count: 1 }]
+        },
+        {
+          title: 'Coffre vide, chambre et vision de Jax', zone: 44, route: [14, 40, 14, 3, 2, 20, 44],
+          action: 'use', target: 'doorbell',
+          guide: 'Inspectez le coffre deja pille et ses deux poissons, puis suivez Jax jusque dans sa chambre et declenchez la vision au doorbell.',
+          requirements: [
+            { action: 'talk', target: 'truthtellerfish', zone: 40, count: 1 },
+            { action: 'look', target: 'emptychest', zone: 40, count: 1 }
+          ]
+        },
+        {
+          title: 'Abel et le plan fabrique', zone: 94, route: [44, 20, 2, 15, 94],
+          action: 'talk', target: 'abelmannequin',
+          guide: 'Rejoignez Abel dans la zone administrateur et ecoutez son plan comme un element d aventure scriptee, pas comme une preuve C&A.'
+        },
+        {
+          title: 'Six passes et cle de Caine', zone: 96, route: [94, 16, 96],
+          action: 'use', target: 'jaxkey',
+          guide: 'Activez les six passes distincts, puis suivez la scene parallele du restaurant ou Jax immobilise Caine et recupere sa cle.',
+          requirements: [{ action: 'use', target: 'adminpass', zone: 94, count: 6, distinct: true }]
+        },
+        {
+          title: 'Collision de la zone administrateur', zone: 94, route: [96, 16, 94],
+          action: 'use', target: 'gridnode',
+          guide: 'Distribuez les passes, stabilisez la collision des avatars et declenchez la transition ballon vers le bureau.',
+          requirements: [{ action: 'look', target: 'ring', zone: 94, count: 1 }]
+        },
+        {
+          title: 'Bureau, bibliotheque et bouton rouge', zone: 95, route: [94, 16, 95],
+          action: 'use', target: 'redbutton',
+          guide: 'Ouvrez la bibliotheque coulissante et atteignez la console. Le choix canonique est force par Jax sur le bouton rouge.'
+        },
+        {
+          title: 'Revelation d aventure et panier cadeau', zone: 16, route: [95, 16],
+          action: 'talk', target: 'caine',
+          guide: 'Ecoutez la revelation: Abel et les preuves C&A appartenaient a l aventure fabriquee, puis inspectez le panier de fin.',
+          requirements: [{ action: 'look', target: 'giftbasket', zone: 16, count: 1 }]
+        }
       ] },
       8: { title: 'hjsakldfhl', steps: [
-        [113, 'look', 'gridnode'], [17, 'talk', 'queenie'], [28, 'talk', 'ragatha'], [16, 'use', 'console'],
-        [111, 'use', 'target'], [114, 'look', 'lorebillboard'], [116, 'look', 'window'], [119, 'look', 'gridnode']
+        {
+          title: 'Projection de la genese', zone: 113, route: [113],
+          action: 'look', target: 'gridnode', count: 2, distinct: true,
+          guide: 'Lisez la projection historique du point rouge et du point bleu sans la confondre avec une piece physique.'
+        },
+        {
+          title: 'Souvenir de Kinger et Queenie', zone: 17, route: [17], entryMode: 'memory',
+          action: 'talk', target: 'queenie',
+          guide: 'Observez le souvenir dans l obscurite. Queenie reste une archive memoire, pas une residente restauree.',
+          requirements: [{ action: 'look', target: 'memory', zone: 17, count: 2, distinct: true }]
+        },
+        {
+          title: 'Espace commun et remise en question', zone: 28, route: [28], entryMode: 'cainecut',
+          action: 'talk', target: 'ragatha',
+          guide: 'Rejoignez le groupe dans l espace commun et inspectez le miroir pres de la fausse sortie.'
+        },
+        {
+          title: 'Bureau de Caine', zone: 16, route: [16], entryMode: 'cainecut',
+          action: 'talk', target: 'caine',
+          guide: 'Ecoutez Caine et Bubble dans son bureau. Aucune console secrete de l episode 7 ne constitue ici un objectif.'
+        },
+        {
+          title: 'Route EXIT et ordinateur portable C&A', zone: 99, route: [5, 97, 98, 99], entryMode: 'cainecut', entryZone: 5,
+          action: 'take', target: 'portablepc',
+          guide: 'Traversez la fausse sortie dans l ordre et recuperez l ordinateur portable C&A sans inventer de nouvelle salle.'
+        },
+        {
+          title: 'Fort de coussins temporaire', zone: 124, route: [124], entryMode: 'cainecut',
+          action: 'use', target: 'portablepc',
+          guide: 'Installez l ordinateur au centre du fort bas et maintenez les interferences visibles.',
+          requirements: [{ action: 'talk', target: 'kinger', zone: 124, count: 1 }]
+        },
+        {
+          title: 'Bowling improvise', zone: 111, route: [111], entryMode: 'cainecut',
+          action: 'use', target: 'target',
+          guide: 'Declenchez la boule tiree par Caine tandis que Ragatha, Gangle et Zooble servent de quilles.'
+        },
+        {
+          title: 'Arbre humain puis glob', zone: 112, route: [112], entryMode: 'cainecut',
+          action: 'look', target: 'humantree',
+          guide: 'Observez l arbre humain puis sa transformation en glob avant que Caine ne supprime encore l idee.'
+        },
+        {
+          title: 'Tourment de Pomni', zone: 118, route: [118], entryMode: 'projection',
+          action: 'look', target: 'crocodile',
+          guide: 'Traversez la vignette des crocodiles sans la traiter comme une cave physique permanente.'
+        },
+        {
+          title: 'Tourment de Ragatha', zone: 114, route: [114], entryMode: 'projection',
+          action: 'look', target: 'lorebillboard',
+          guide: 'Lisez la vignette de Ragatha, sa table, les couteaux et la silhouette sans attribuer une identite non confirmee.'
+        },
+        {
+          title: 'Tourment de Gangle', zone: 115, route: [115], entryMode: 'projection',
+          action: 'look', target: 'lorebillboard',
+          guide: 'Traversez les cinq masques peints et le souvenir du camion comme une vignette de tourment.'
+        },
+        {
+          title: 'Tourment de Zooble', zone: 116, route: [116], entryMode: 'projection',
+          action: 'look', target: 'window', count: 2, distinct: true,
+          guide: 'Inspectez les miroirs noirs et les pieces sans creer de nouveaux personnages.'
+        },
+        {
+          title: 'Tourment de Jax', zone: 117, route: [117], entryMode: 'projection',
+          action: 'look', target: 'lorebillboard',
+          guide: 'Traversez les silhouettes rieuses et l arrachement symbolique sans en faire un souvenir reel confirme.'
+        },
+        {
+          title: 'Chapiteau mort apres Caine', zone: 119, route: [119], entryMode: 'cainecut',
+          action: 'look', target: 'gridnode', count: 2, distinct: true,
+          guide: 'Balisez les trous et les couleurs mortes. La campagne s arrete ici, avant les evenements de Remember.',
+          requirements: [{ action: 'talk', target: 'kinger', zone: 119, count: 1 }]
+        }
       ] },
       9: { title: 'Remember', steps: [
-        [18, 'look', 'memory'], [74, 'look', 'doorframe'], [101, 'look', 'memory'], [104, 'talk', 'jaxmindtrapped'],
-        [105, 'look', 'archive'], [106, 'talk', 'jax'], [73, 'use', 'console'], [109, 'talk', 'pomni']
+        {
+          title: 'Chapiteau detruit monochrome', zone: 121, route: [121],
+          action: 'use', target: 'stableform', count: 3, distinct: true,
+          guide: 'Aidez Kinger a creer trois formes stables et bouchez les failles du chapiteau detruit.',
+          requirements: [{ action: 'talk', target: 'kinger', zone: 121, count: 1 }]
+        },
+        {
+          title: 'Poursuite de Jax abstrait', zone: 20, route: [121, 20],
+          action: 'use', target: 'ceilinglight', count: 3, distinct: true,
+          guide: 'Suivez Jax abstrait dans le couloir et eteignez seulement les lampes avant le contact mental.',
+          requirements: [{ action: 'talk', target: 'pomni', zone: 20, count: 1 }]
+        },
+        {
+          title: 'Psyche I / porte de Ragatha', zone: 101, route: [101], entryMode: 'mind',
+          action: 'look', target: 'memory',
+          guide: 'Lisez le premier role mental de Jax et gardez la porte de Ragatha barree.'
+        },
+        {
+          title: 'Psyche II / funerailles de Zooble', zone: 102, route: [102], entryMode: 'mind',
+          action: 'look', target: 'memory',
+          guide: 'Traversez la scene funeraire comme une projection mentale, pas comme un evenement reel.'
+        },
+        {
+          title: 'Psyche III / poursuite cartoon', zone: 103, route: [103], entryMode: 'mind',
+          action: 'look', target: 'memory',
+          guide: 'Suivez le scenario cartoon jusqu au retour vers le foyer mental.'
+        },
+        {
+          title: 'Psyche IV / quatre personas', zone: 104, route: [104], entryMode: 'mind',
+          action: 'talk', target: 'jaxmindtrapped',
+          guide: 'Observez la table, le piano et les quatre personas avant d ouvrir la memoire centrale.',
+          requirements: [{ action: 'use', target: 'pianokey', zone: 104, count: 1 }]
+        },
+        {
+          title: 'Montage de memoire de Jax', zone: 105, route: [105], entryMode: 'memory',
+          action: 'look', target: 'archive',
+          guide: 'Parcourez les ancres du montage sans modifier les souvenirs ni reveler les noms humains avant le projecteur final.'
+        },
+        {
+          title: 'Espace noir au lampadaire', zone: 106, route: [106], entryMode: 'mind',
+          action: 'talk', target: 'jax',
+          guide: 'Restez pres du vrai Jax mental sous le lampadaire. Cette scene ne guerit pas son abstraction.',
+          requirements: [{ action: 'use', target: 'spotlight', zone: 106, count: 1 }]
+        },
+        {
+          title: 'Fort sombre pour Jax', zone: 109, route: [109], entryMode: 'cainecut',
+          action: 'use', target: 'bed',
+          guide: 'Construisez et verifiez le fort de coussins sombre autour de Jax abstrait.',
+          requirements: [{ action: 'talk', target: 'zooble', zone: 109, count: 1 }]
+        },
+        {
+          title: 'Chambre de Gangle puis salon', zone: 28, route: [47, 20, 28], entryMode: 'cainecut', entryZone: 47,
+          action: 'talk', target: 'ragatha',
+          guide: 'Accompagnez Gangle dans sa chambre puis rejoignez le groupe dans l espace commun.',
+          requirements: [{ action: 'talk', target: 'gangle', zone: 47, count: 1 }]
+        },
+        {
+          title: 'Route de Caine dans le Vide', zone: 107, route: [107], entryMode: 'void',
+          action: 'use', target: 'gridnode', count: 2, distinct: true,
+          guide: 'Construisez l escalier de formes et franchissez les pare-feu sans relier cette route aux bureaux physiques.',
+          requirements: [{ action: 'talk', target: 'caine', zone: 107, count: 1 }]
+        },
+        {
+          title: 'Flashback du scanner C&A', zone: 73, route: [73], entryMode: 'memory',
+          action: 'use', target: 'console',
+          guide: 'Consultez le vieux poste de Scratch et les scans en lecture seule. Aucun ancien membre ne revient a la vie.'
+        },
+        {
+          title: 'Porte Wi-Fi et liberation du Blue AI', zone: 108, route: [108], entryMode: 'network',
+          action: 'use', target: 'console',
+          guide: 'Utilisez la porte BlueStreetCafe_FreeWifi avant son extinction et liberez le Blue AI.',
+          requirements: [{ action: 'talk', target: 'blueai', zone: 108, count: 1 }]
+        },
+        {
+          title: 'Moon et retour au Tent', zone: 3, route: [3], entryMode: 'cainecut',
+          action: 'talk', target: 'moon',
+          guide: 'Retrouvez Moon sur les Grounds puis revenez vers le groupe sans transformer le cafe humain en destination.'
+        },
+        {
+          title: 'Projecteur et choix final', zone: 2, route: [2], entryMode: 'cainecut',
+          action: 'use', target: 'projector',
+          guide: 'Activez le projecteur final, lisez les profils dans leur ordre de revelation et laissez Pomni confirmer son identite numerique.',
+          requirements: [{ action: 'talk', target: 'pomni', zone: 2, count: 1 }, { action: 'talk', target: 'caine', zone: 2, count: 1 }]
+        }
       ] }
     };
     const blueprint = blueprints[episode];
     if (!blueprint) return null;
     const checkpoints = (typeof EpisodeManager !== 'undefined' ? EpisodeManager.storyCheckpointConfig?.[episode] : null) || [];
-    const stages = blueprint.steps.map(([zone, action, target], index) => {
+    const stages = blueprint.steps.map((rawStep, index) => {
+      const step = Array.isArray(rawStep)
+        ? { zone: rawStep[0], action: rawStep[1], target: rawStep[2] }
+        : rawStep;
+      const zone = Number(step.zone);
+      const action = step.action;
+      const target = step.target;
       const checkpoint = checkpoints[index] || {};
-      const requirements = [{ action: 'visit', target: String(zone), count: 1 }];
-      if (!(action === 'visit' && String(target) === String(zone))) requirements.push({ action, target, count: action === 'survive' ? 4 : 1 });
+      const route = (Array.isArray(step.route) && step.route.length ? step.route : [zone])
+        .map(Number)
+        .filter(Number.isFinite);
+      if (!route.includes(zone)) route.push(zone);
+      const requirements = [...new Set(route)]
+        .map(routeZone => ({ action: 'visit', target: String(routeZone), count: 1 }));
+      if (action && !(action === 'visit' && String(target) === String(zone))) {
+        requirements.push({
+          action,
+          target,
+          zone: Number.isFinite(Number(step.actionZone)) ? Number(step.actionZone) : zone,
+          count: Number(step.count) || (action === 'survive' ? 4 : 1),
+          distinct: !!step.distinct
+        });
+      }
+      (step.requirements || []).forEach(requirement => {
+        requirements.push({
+          ...requirement,
+          zone: Number.isFinite(Number(requirement.zone)) ? Number(requirement.zone) : zone,
+          count: Number(requirement.count) || 1,
+          distinct: !!requirement.distinct
+        });
+      });
       return {
-        title: checkpoint.title || `Acte ${index + 1}`,
+        title: step.title || checkpoint.title || `Acte ${index + 1}`,
         zone,
-        guide: checkpoint.objective || `Suivez le signal ${String(target).toUpperCase()} dans cette scene.`,
+        route,
+        entryMode: step.entryMode || null,
+        entryZone: Number.isFinite(Number(step.entryZone)) ? Number(step.entryZone) : zone,
+        guide: step.guide || checkpoint.objective || `Suivez le signal ${String(target).toUpperCase()} dans cette scene.`,
         transcriptAfter: checkpoint.after || 0,
         requirements
       };
     });
-    if (episode === 8) {
-      stages[4].requirements.push({ action: 'visit', target: '112', count: 1 });
-      stages[5].requirements.push({ action: 'visit', target: '115', count: 1 });
-      stages[6].requirements.push({ action: 'visit', target: '117', count: 1 });
-      stages[6].requirements.push({ action: 'visit', target: '118', count: 1 });
-    }
     return {
       episode,
       title: `${blueprint.title} / CAMPAGNE FPS`,
+      version: Number(blueprint.version) || 1,
       canonBoundary: 'Reconstitution jouable additive issue des checkpoints du transcript. Elle ne remplace aucun dialogue canonique.',
       stages
     };
@@ -2596,7 +3210,10 @@ const OS = {
   unlockCircusCampaignStageZone(stage) {
     const state = this.circusDoom;
     if (!state || !stage || !state.portals[stage.zone]) return;
-    state.portals[stage.zone].unlocked = true;
+    const route = Array.isArray(stage.route) && stage.route.length ? stage.route : [stage.zone];
+    route.forEach(zoneId => {
+      if (state.portals[zoneId]) state.portals[zoneId].unlocked = true;
+    });
     stage.requirements
       .filter(requirement => requirement.action === 'visit')
       .forEach(requirement => {
@@ -2611,13 +3228,22 @@ const OS = {
     const portalEpisode = state.adventurePortal?.episode || 1;
     const definition = this.getCircusFpsCampaignDefinition(portalEpisode);
     if (!definition) return;
-    const stored = state.campaigns[definition.episode] || { stage: 0, progress: {}, complete: false };
+    const previous = state.campaigns[definition.episode];
+    const needsEpisode2Migration = definition.episode === 2
+      && Number(previous?.definitionVersion || 0) < Number(definition.version || 1);
+    const stored = !previous || needsEpisode2Migration
+      ? { stage: 0, progress: {}, evidence: {}, complete: false, definitionVersion: definition.version || 1 }
+      : previous;
+    stored.definitionVersion = Number(definition.version) || Number(stored.definitionVersion) || 1;
+    stored.evidence = stored.evidence || {};
     state.campaigns[definition.episode] = stored;
     state.activeCampaign = stored.complete ? null : { episode: definition.episode };
     if (!stored.complete) {
       const stage = definition.stages[stored.stage];
       this.unlockCircusCampaignStageZone(stage);
-      if (stage?.zone === state.currentZoneId) this.advanceCircusCampaign('visit', String(stage.zone));
+      if (stage?.route?.includes(state.currentZoneId)) {
+        this.advanceCircusCampaign('visit', String(state.currentZoneId));
+      }
     }
   },
 
@@ -2637,14 +3263,23 @@ const OS = {
     return { definition, progress, stage, requirements, complete: requirements.every(item => item.complete) };
   },
 
-  advanceCircusCampaign(action, target, amount = 1) {
+  advanceCircusCampaign(action, target, amount = 1, evidenceKey = null) {
     const state = this.circusDoom;
     const status = this.getActiveCircusCampaignStatus();
     if (!state || !status) return false;
     let changed = false;
     status.requirements.forEach((requirement, index) => {
       if (requirement.complete || requirement.action !== action || String(requirement.target) !== String(target)) return;
+      if (Number.isFinite(Number(requirement.zone)) && Number(requirement.zone) !== state.currentZoneId) return;
       const key = `${status.progress.stage}:${index}`;
+      if (requirement.distinct) {
+        if (!evidenceKey) return;
+        status.progress.evidence = status.progress.evidence || {};
+        const evidence = new Set(status.progress.evidence[key] || []);
+        if (evidence.has(String(evidenceKey))) return;
+        evidence.add(String(evidenceKey));
+        status.progress.evidence[key] = [...evidence];
+      }
       status.progress.progress[key] = Math.min(requirement.count, (status.progress.progress[key] || 0) + amount);
       changed = true;
     });
@@ -2669,7 +3304,15 @@ const OS = {
         state.interactionMessage = `ACTE TERMINE: ${completedTitle}. PROCHAIN: ${next.title} / ${next.guide}`;
         this.startCircusDynamicEvent('campaign-advance', { speaker: 'CAINE', text: next.guide, duration: 5200 });
         SoundManager.playWin();
-        if (next.zone === state.currentZoneId) this.advanceCircusCampaign('visit', String(next.zone));
+        const scriptedEntry = Number(next.entryZone);
+        if (next.entryMode && Number.isFinite(scriptedEntry) && scriptedEntry !== state.currentZoneId && state.portals[scriptedEntry]) {
+          if (next.route?.includes(state.currentZoneId)) {
+            this.advanceCircusCampaign('visit', String(state.currentZoneId), 1, `zone:${state.currentZoneId}`);
+          }
+          this.beginCircusDoorTransition(scriptedEntry, state.currentZoneId, next.entryMode);
+        } else if (next.route?.includes(state.currentZoneId)) {
+          this.advanceCircusCampaign('visit', String(state.currentZoneId));
+        }
       }
       state.interactionUntil = performance.now() + 5600;
       state.interactionChannel = 'system';
@@ -2816,7 +3459,16 @@ const OS = {
       8: [{ id: 'ghost-flicker', speaker: 'Kinger', text: 'Eteins ce qui fait trop de bruit. Dans le noir, certaines choses deviennent plus claires.', avatar: 'kinger', duration: 5200, danger: true }],
       10: [{ id: 'spudsy-rush', speaker: 'Gangle', text: 'Nouveau rush. Lis le ticket, prepare le comptoir, puis donne la bonne commande.', avatar: 'workgangle', duration: 5000 }],
       12: [{ id: 'softball-pitch', speaker: 'Caine', text: 'Batteur en place! Frappez uniquement quand le curseur traverse la zone verte!', avatar: 'caine', duration: 4600 }],
-      14: [{ id: 'sun-warning', speaker: 'Sun', text: 'Le soleil digital augmente la visibilite. Les parasols deviennent des zones sures.', avatar: 'sun', duration: 4700 }],
+      14: [
+        { id: 'sun-warning', speaker: 'Sun', text: 'Le soleil digital augmente la visibilite. Les parasols deviennent des zones sures.', avatar: 'sun', duration: 4700 },
+        { id: 'ragatha-eye', speaker: 'Ragatha', text: 'Mon oeil-bouton est tombe pres des jeux de plage. Gardons-le visible avant de plonger.', avatar: 'ragatha', duration: 5000 }
+      ],
+      40: [{ id: 'empty-lake-chest', speaker: 'Orange Crappy Looking Fish', text: 'Le coffre a deja ete pille. Il ne reste rien a prendre ici.', avatar: 'truthtellerfish', duration: 5000 }],
+      44: [{ id: 'jax-doorbell-vision', speaker: 'CainOS', channel: 'system', text: 'VISION DE JAX: sequence kaleidoscopique non confirmee comme souvenir reel. Aucun passage physique C&A n est ouvert.', duration: 5600 }],
+      94: [{ id: 'admin-pass-collision', speaker: 'CainOS', channel: 'system', text: 'AVENTURE SCRIPTEE: six passes detectes. La collision et la transition ballon restent des effets imposes par Caine.', duration: 5600 }],
+      95: [{ id: 'forced-red-button', speaker: 'Jax', text: 'Le bouton rouge est deja dans ma trajectoire. Le bleu ne devient pas une branche canonique.', avatar: 'jax', duration: 5200 }],
+      96: [{ id: 'restaurant-key-attempt', speaker: 'Jax', text: 'Le plan est de garder Caine occupe assez longtemps pour atteindre sa cle.', avatar: 'jax', duration: 5200 }],
+      16: [{ id: 'abel-script-reveal', speaker: 'Caine', text: 'Abel, les passes et les preuves C&A faisaient partie de l aventure. Cette console ne prouve aucune sortie reelle.', avatar: 'caine', duration: 5800 }],
       31: [{ id: 'gloink-theft', speaker: 'Zooble', text: 'Ils ont encore pris une piece. Recupere-la avant d approcher la reine.', avatar: 'zooble', duration: 5200 }],
       43: [
         { id: 'bubble-feast', speaker: 'Bubble', text: "Made with all the love I'm legally allowed to give.", avatar: 'bubble', duration: 5000 },
@@ -2831,6 +3483,24 @@ const OS = {
       ,120: [
         { id: 'wackywatch-alert', speaker: 'Caine', text: 'An alert on my WackyWatch at this hour? ...Oh no! Someone is venturing out into The Void!', avatar: 'caine', duration: 6200, danger: true },
         { id: 'restaurant-mannequins', speaker: 'CainOS', channel: 'system', text: 'PILOT / RESTAURANT: Caine et Bubble sont entoures de mannequins en bois silencieux.', duration: 5000 }
+      ],
+      133: [
+        { id: 'candy-wagon-arrival', speaker: 'CainOS', channel: 'system', text: 'EP2 / ARRIVEE: le carrosse et le Gummy Elephant approchent des remparts avant l audience royale.', duration: 5000 }
+      ],
+      138: [
+        { id: 'candy-two-rig-chase', speaker: 'CainOS', channel: 'system', text: 'EP2 / POURSUITE: le war rig royal et le tanker des bandits occupent deux trajectoires distinctes.', duration: 5000, danger: true }
+      ],
+      142: [
+        { id: 'test-level-fall', speaker: 'CainOS', channel: 'system', text: 'EP2 / HORS CARTE: cette chute est une rupture de collision, pas une porte physique du royaume.', duration: 5200, danger: true }
+      ],
+      144: [
+        { id: 'gummigoo-model-separation', speaker: 'CainOS', channel: 'system', text: 'EP2 / MODELES: le Gummigoo actif est distinct de sa copie inerte en T-pose.', duration: 5600 }
+      ],
+      146: [
+        { id: 'utah-teapot-surface', speaker: 'CainOS', channel: 'system', text: 'EP2 / SURFACE OOB: trois theieres Utah geantes balisent la couche technique hors carte.', duration: 5200 }
+      ],
+      148: [
+        { id: 'kaufmo-funeral-silence', speaker: 'CainOS', channel: 'system', text: 'EP2 / FUNERAILLES: aucune parole audible n est ajoutee a cette reconstruction silencieuse.', duration: 5600 }
       ]
     };
     return events[zoneId] || [];
@@ -3174,7 +3844,7 @@ const OS = {
   },
 
   getCircusFpsZoneMax() {
-    return 120;
+    return 148;
   },
 
   getCircusCanonRoomDefinitions() {
@@ -3319,17 +3989,23 @@ const OS = {
         name: 'MILDENHALL ENTRY HALL', short: 'HALL MANOIR',
         detail: 'Grand vestibule du manoir, organise autour de son lustre avant la separation du groupe.',
         color: '#55405c', floor: '#251c2d', ceiling: '#100917', motif: 'manor', size: 19,
-        gateEpisode: 3, gateSubepisode: 1, provenance: 'shown', exits: [8, 86],
+        gateEpisode: 3, gateSubepisode: 1, provenance: 'shown', exits: [8, 86, 64],
         props: [
           { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'chandelier', x: 0, z: -1.2, color: '#ffd878', label: 'Lustre du vestibule' },
           { kind: 'stairs', x: 0, z: -3.4, color: '#756a78', label: 'Escalier du grand hall' },
           { kind: 'window', x: -2.75, z: -2.5, color: '#b7f0ff' },
           { kind: 'window', x: 2.75, z: -2.5, color: '#b7f0ff' },
-          { kind: 'table', x: 0, z: -1.35, color: '#5b3d28', label: 'Table d accueil Mildenhall' }
+          { kind: 'table', x: 0, z: -1.35, color: '#5b3d28', label: 'Table d accueil Mildenhall' },
+          { kind: 'console', campaignTarget: 'ghostvacuum', x: 2.4, z: -1.35, color: '#c8f7ff', label: 'Aspirateur utilise contre Ghostly' },
+          { kind: 'memory', x: -2.35, z: -1.3, color: '#f7f7f7', label: 'Masque abandonne de Gangle' }
         ],
         sprites: [
           { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -1.25, z: -2.2, color: '#e53935' },
-          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: 1.2, z: -2.35, color: '#d9d0a2' }
+          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: 1.2, z: -2.35, color: '#d9d0a2' },
+          { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: -2.6, z: -3.1, color: '#d64545' },
+          { name: 'Jax', type: 'jax', avatar: 'jax', x: 2.6, z: -3.1, color: '#8a4fd6' },
+          { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: -0.2, z: -3.45, color: '#f7f7f7' },
+          { name: 'Ghostly', type: 'ghost', avatar: 'ghostly', x: 0.95, z: -1.35, color: '#7dffd8', sizeScale: 0.62 }
         ],
         objective: scan('ECLAIRER LE VESTIBULE', ['ceilinglight', 'stairs'], 'kinger')
       },
@@ -3337,10 +4013,10 @@ const OS = {
         name: 'MILDENHALL TWO-DOOR CHOICE', short: 'DEUX PORTES',
         detail: 'Palier du choix entre la porte normale et la porte explicitement vraiment effrayante.',
         color: '#403044', floor: '#211a2c', ceiling: '#08050d', motif: 'manor', size: 13,
-        gateEpisode: 3, gateSubepisode: 2, provenance: 'shown', exits: [85, 64, 87],
+        gateEpisode: 3, gateSubepisode: 2, provenance: 'shown', exits: [85, 87, 125],
         props: [
-          { kind: 'doorframe', x: -2.05, z: -3.0, color: '#b7f0ff', label: 'Porte normale' },
-          { kind: 'doorframe', x: 2.05, z: -3.0, color: '#e53935', label: 'Porte vraiment effrayante' },
+          { kind: 'doorframe', campaignTarget: 'routechoice', x: -2.05, z: -3.0, color: '#b7f0ff', label: 'Porte normale vers le salon' },
+          { kind: 'doorframe', campaignTarget: 'routechoice', x: 2.05, z: -3.0, color: '#e53935', label: 'Porte vraiment effrayante' },
           { kind: 'candle', x: 0, z: -1.35, color: '#ffd878', label: 'Bougie du choix' },
           { kind: 'wallart', anchor: 'wall-left', x: -1.48, z: -0.6, color: '#7c88a1', art: 'blocks' }
         ],
@@ -3356,7 +4032,7 @@ const OS = {
         color: '#7c1628', floor: '#3d0912', ceiling: '#160207', motif: 'hell', size: 15,
         gateEpisode: 3, gateSubepisode: 3, provenance: 'shown', exits: [86, 88],
         props: [
-          { kind: 'ring', x: 0, z: -3.25, color: '#a72b3f', label: 'Paroi organique annulaire' },
+          { kind: 'ring', campaignTarget: 'organictunnel', x: 0, z: -3.25, color: '#a72b3f', label: 'Paroi organique annulaire' },
           { kind: 'ring', x: 0, z: -1.75, color: '#7c1628', label: 'Contraction du tunnel' },
           { kind: 'pillar', x: 0, z: -2.8, color: '#d34d58', label: 'Langue suspendue' },
           { kind: 'eye', x: -2.1, z: -2.2, color: '#fff1a8', label: 'Oeil dans la paroi' }
@@ -3370,15 +4046,17 @@ const OS = {
         gateEpisode: 3, gateSubepisode: 3, provenance: 'shown', exits: [87, 89],
         props: [
           { kind: 'counter', x: 0, z: -3.35, color: '#5b3228', label: 'Cheminee de la salle des trophees' },
-          { kind: 'lorebillboard', avatar: 'angel', label: 'Tete de l Angel', x: 0, z: -4.0, color: '#e5d7d7', sizeScale: 1.35 },
+          { kind: 'lorebillboard', campaignTarget: 'angelhead', avatar: 'angel', label: 'Tete de l Angel', x: 0, z: -4.0, color: '#e5d7d7', sizeScale: 1.35, loreText: 'La tete reagit au bruit et declenche la poursuite; elle ne parle pas.' },
           { kind: 'wallart', anchor: 'wall-left', x: -1.48, z: -1.4, color: '#d64545', art: 'spiral', label: 'Trophees deformes gauche' },
           { kind: 'wallart', anchor: 'wall-right', x: 1.48, z: -1.4, color: '#8a4fd6', art: 'blocks', label: 'Trophees deformes droite' },
-          { kind: 'archive', x: -2.35, z: -1.25, color: '#7df0ff', label: 'Enregistrement de Theodore Mildenhall' },
-          { kind: 'target', x: 2.25, z: -1.25, color: '#5b3d28', label: 'Fusil de Kinger', portable: true }
+          { kind: 'archive', campaignTarget: 'tape', x: -2.35, z: -1.25, color: '#7df0ff', label: 'Enregistrement Mildenhall 01' },
+          { kind: 'archive', campaignTarget: 'tape', x: 2.25, z: -1.25, color: '#7df0ff', label: 'Enregistrement Mildenhall 02' },
+          { kind: 'gridnode', x: 0, z: -1.2, color: '#34313a', label: 'Circuit d eclairage coupe' }
         ],
         sprites: [
           { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -0.9, z: -2.15, color: '#e53935' },
-          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: 0.9, z: -2.2, color: '#d9d0a2' }
+          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: 0.9, z: -2.2, color: '#d9d0a2' },
+          { name: 'Angel', type: 'npc', avatar: 'angel', x: 0, z: -4.25, color: '#e5d7d7', sizeScale: 1.15, silent: true, threatActive: true, silentText: 'L Angel reagit au bruit sans produire de parole intelligible.' }
         ],
         objective: scan('RELEVER LES TROPHEES DU MANOIR', ['lorebillboard', 'archive'], 'kinger')
       },
@@ -3388,23 +4066,26 @@ const OS = {
         color: '#65556b', floor: '#171219', ceiling: '#030307', motif: 'basement', size: 9,
         gateEpisode: 3, gateSubepisode: 4, provenance: 'shown', exits: [88, 9],
         props: [
-          { kind: 'doorframe', x: 0, z: -2.4, color: '#7c88a1', label: 'Trappe du monte-plat' },
-          { kind: 'stairs', x: 0, z: -1.35, color: '#4d4a58', label: 'Descente verticale simulee' },
-          { kind: 'crate', x: -1.25, z: -2.0, color: '#4b382d', label: 'Caisse du monte-plat' },
-          { kind: 'candle', x: 1.25, z: -1.9, color: '#ffd878', label: 'Derniere lampe du puits' }
+          { kind: 'doorframe', campaignTarget: 'dumbwaiter', x: 0, z: -2.4, color: '#7c88a1', label: 'Porte de la cabine du monte-plat' },
+          { kind: 'platform', x: 0, z: -1.65, color: '#4d4a58', label: 'Plateforme mobile du monte-plat' },
+          { kind: 'partition', x: -1.2, z: -2.0, width: 0.12, depth: 2.4, height: 3.8, color: '#171219', label: 'Paroi du puits gauche' },
+          { kind: 'partition', x: 1.2, z: -2.0, width: 0.12, depth: 2.4, height: 3.8, color: '#171219', label: 'Paroi du puits droite' }
         ],
-        sprites: [], objective: scan('DESCENDRE LE MONTE-PLAT', ['doorframe', 'stairs'])
+        sprites: [], objective: scan('DESCENDRE LE MONTE-PLAT', ['doorframe', 'platform'])
       },
       90: {
         name: 'PRIVATE TRUST EXERCISE ROOM', short: 'CONFIANCE',
         detail: 'Piece privee de l aventure armee ou Caine isole un exercice de confiance avant les epreuves publiques.',
         color: '#382c1b', floor: '#2f2610', ceiling: '#17110a', motif: 'guns', size: 13,
-        gateEpisode: 6, gateSubepisode: 3, provenance: 'shown', exits: [13],
+        gateEpisode: 6, gateSubepisode: 3, provenance: 'shown', layer: 'present', nonPhysical: true, exits: [],
         props: [
           { kind: 'table', x: 0, z: -2.8, color: '#6b4a25', label: 'Table de l exercice de confiance' },
           { kind: 'target', x: -2.0, z: -2.15, color: '#f6d743', label: 'Marqueur de choix gauche' },
           { kind: 'target', x: 2.0, z: -2.15, color: '#e53935', label: 'Marqueur de choix droit' },
-          { kind: 'scoreboard', x: 0, z: -1.25, color: '#ffffff', label: 'Compteur prive de Caine' }
+          { kind: 'scoreboard', x: 0, z: -1.25, color: '#ffffff', label: 'Compteur prive de Caine' },
+          { kind: 'heart', campaignTarget: 'heart', x: -1.35, z: -1.65, color: '#e53935', label: 'Vie 1' },
+          { kind: 'heart', campaignTarget: 'heart', x: 0, z: -1.9, color: '#e53935', label: 'Vie 2' },
+          { kind: 'heart', campaignTarget: 'heart', x: 1.35, z: -1.65, color: '#e53935', label: 'Vie 3' }
         ],
         sprites: [{ name: 'Caine', type: 'caine', avatar: 'caine', x: 0.2, z: -2.2, color: '#ffd84a' }],
         objective: scan('CONTROLER L EXERCICE PRIVE', ['table', 'target'], 'caine')
@@ -3442,10 +4123,10 @@ const OS = {
         objective: scan('RELEVER LA RENCONTRE DU SANITAIRE', ['window', 'barrel'], 'disappearingguy')
       },
       93: {
-        name: 'THEATER BACKSTAGE BALLOT ROOM', short: 'COULISSES',
-        detail: 'Coulisses ou sont conserves les bulletins et accessoires du Favorite Character Award.',
+        name: 'THEATER BACKSTAGE BALLOT ROOM / RECONSTRUCTION', short: 'COULISSES R.',
+        detail: 'Coulisses CainOS reconstruites pour ranger les bulletins et accessoires; ce plan n est pas montre dans l episode.',
         color: '#552032', floor: '#27151d', ceiling: '#0e0710', motif: 'awards', size: 15,
-        gateEpisode: 6, gateSubepisode: 7, provenance: 'shown', exits: [91, 38],
+        gateEpisode: 6, gateSubepisode: 7, provenance: 'mentioned', layer: 'reconstruction', exits: [91, 38],
         props: [
           { kind: 'card', x: -1.7, z: -2.25, color: '#e53935', label: 'Bulletins de vote' },
           { kind: 'card', x: 1.7, z: -2.25, color: '#ffd84a', label: 'Resultats Favorite Character' },
@@ -3458,35 +4139,49 @@ const OS = {
       },
       94: {
         name: 'ADMINISTRATOR ZONE', short: 'ADMIN ZONE',
-        detail: 'Couche administrative separee de la Chinese Room et du bureau personnel de Caine.',
+        detail: 'Couche administrative de l aventure fabriquee par Caine, separee de la Chinese Room et de son bureau personnel.',
         color: '#ffcf75', floor: '#302318', ceiling: '#09111e', motif: 'admin', size: 17,
-        gateEpisode: 7, gateSubepisode: 3, provenance: 'shown', exits: [15, 16, 41],
+        gateEpisode: 7, gateSubepisode: 3, provenance: 'shown', exits: [15, 16],
         props: [
-          { kind: 'console', x: 0, z: -3.0, color: '#ffcf75', label: 'Console de la zone administrateur' },
-          { kind: 'gridnode', x: -2.2, z: -2.2, color: '#7df0ff', label: 'Noeud administrateur gauche' },
-          { kind: 'gridnode', x: 2.2, z: -2.2, color: '#ff7a30', label: 'Noeud administrateur droit' },
-          { kind: 'archive', x: 0, z: -1.25, color: '#c875ff', label: 'Registre C&A' }
+          { kind: 'gridnode', x: -2.7, z: -3.35, color: '#7df0ff', label: 'Armature administrateur gauche' },
+          { kind: 'gridnode', x: 2.7, z: -3.35, color: '#ff7a30', label: 'Armature administrateur droite' },
+          { kind: 'ring', x: 0, z: -3.15, color: '#fff1a8', label: 'Zone de collision des avatars' },
+          { kind: 'balloon', x: -2.35, z: -1.25, color: '#ff4fb8', label: 'Transition ballon vers le bureau' },
+          { kind: 'balloon', x: 2.35, z: -1.25, color: '#7df0ff', label: 'Transition ballon vers le bureau' },
+          { kind: 'card', campaignTarget: 'adminpass', x: -2.5, z: -2.35, color: '#e53935', label: 'Pass administrateur 1' },
+          { kind: 'card', campaignTarget: 'adminpass', x: -1.5, z: -2.6, color: '#ffd84a', label: 'Pass administrateur 2' },
+          { kind: 'card', campaignTarget: 'adminpass', x: -0.5, z: -2.8, color: '#2a58d8', label: 'Pass administrateur 3' },
+          { kind: 'card', campaignTarget: 'adminpass', x: 0.5, z: -2.8, color: '#ff4fb8', label: 'Pass administrateur 4' },
+          { kind: 'card', campaignTarget: 'adminpass', x: 1.5, z: -2.6, color: '#7df0ff', label: 'Pass administrateur 5' },
+          { kind: 'card', campaignTarget: 'adminpass', x: 2.5, z: -2.35, color: '#ff7a30', label: 'Pass administrateur 6' },
+          { kind: 'archive', x: 0, z: -1.25, color: '#c875ff', label: 'Dossier Abel / aventure scriptee' }
         ],
         sprites: [
-          { name: 'Ming', type: 'mannequin', avatar: 'ming', x: -1.0, z: -2.2, color: '#b7c7d8' },
-          { name: 'Abel Mannequin', type: 'mannequin', avatar: 'abelmannequin', x: 1.0, z: -2.35, color: '#ff8a30' }
+          { name: 'Abel', type: 'mannequin', avatar: 'abelmannequin', x: 0, z: -3.45, color: '#ff8a30' },
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -1.55, z: -2.25, color: '#e53935' },
+          { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: 1.55, z: -2.25, color: '#d64545' },
+          { name: 'Mannequin recrute', type: 'mannequin', avatar: 'mannequin', x: 2.7, z: -1.45, color: '#d8b4fe', silent: true }
         ],
-        objective: scan('OUVRIR LA ZONE ADMINISTRATEUR', ['console', 'gridnode'], 'ming')
+        objective: scan('RECONSTITUER LE PLAN DES SIX PASSES', ['card', 'gridnode'], 'abelmannequin')
       },
       95: {
         name: 'CAINE HIDDEN MAIN CONSOLE', short: 'CONSOLE MERE',
-        detail: 'Salle de la console principale cachee derriere la bibliotheque du bureau de Caine.',
+        detail: 'Salle de la fausse console principale cachee derriere la bibliotheque du bureau de Caine dans son aventure de l episode 7.',
         color: '#ff7a30', floor: '#1b1010', ceiling: '#070305', motif: 'core', size: 15,
         gateEpisode: 7, gateSubepisode: 4, provenance: 'shown', exits: [16],
         props: [
           { kind: 'archive', x: -2.35, z: -2.5, color: '#7a4b32', label: 'Bibliotheque coulissante' },
           { kind: 'console', x: 0, z: -3.25, color: '#00ddff', label: 'Console principale de Caine' },
-          { kind: 'gridnode', x: -1.6, z: -1.35, color: '#ff7a30', label: 'Controle simulation gauche' },
-          { kind: 'gridnode', x: 1.6, z: -1.35, color: '#7df0ff', label: 'Controle simulation droit' },
+          { kind: 'target', campaignTarget: 'redbutton', x: -1.15, z: -1.35, color: '#e53935', label: 'Bouton rouge presse par Jax' },
+          { kind: 'target', campaignTarget: 'bluebutton', x: 1.15, z: -1.35, color: '#2a58d8', label: 'Bouton bleu / Shrimp Town contrefactuel' },
           { kind: 'eye', x: 2.65, z: -2.4, color: '#ff3333', label: 'Monitoring de la console' }
         ],
-        sprites: [{ name: 'Caine', type: 'caine', avatar: 'caine', x: 0.75, z: -2.2, color: '#ffd84a' }],
-        objective: scan('RELEVER LA CONSOLE CACHEE', ['archive', 'console'], 'caine')
+        sprites: [
+          { name: 'Jax', type: 'jax', avatar: 'jax', x: -1.45, z: -2.2, color: '#8a4fd6' },
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 0, z: -2.55, color: '#e53935' },
+          { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: 1.45, z: -2.2, color: '#d64545' }
+        ],
+        objective: scan('RELEVER LA CONSOLE CACHEE', ['archive', 'target'], 'jax')
       },
       96: {
         name: 'CAINE AND JAX RESTAURANT', short: 'RESTAURANT',
@@ -3497,7 +4192,8 @@ const OS = {
           { kind: 'counter', x: 0, z: -3.0, color: '#d49a62', label: 'Comptoir du restaurant sans nom' },
           { kind: 'table', x: -1.8, z: -2.0, color: '#7a4b32', label: 'Table de Caine' },
           { kind: 'table', x: 1.8, z: -2.0, color: '#7a4b32', label: 'Table de Jax' },
-          { kind: 'menu', x: 0, z: -1.25, color: '#fff1a8', label: 'Menu sans enseigne' }
+          { kind: 'menu', x: 0, z: -1.25, color: '#fff1a8', label: 'Menu sans enseigne' },
+          { kind: 'card', campaignTarget: 'jaxkey', x: 0.85, z: -2.05, elevation: 0.78, color: '#ffd84a', label: 'Cle subtilisee a Caine' }
         ],
         sprites: [
           { name: 'Caine', type: 'caine', avatar: 'caine', x: -0.8, z: -2.25, color: '#ffd84a' },
@@ -3535,7 +4231,7 @@ const OS = {
         name: 'EXIT OFFICE LOUNGE AND STORAGE', short: 'BUREAUX II',
         detail: 'Suite de la fausse sortie avec canapes gris, table basse, lampe, fontaine a eau, classeurs et stockage.',
         color: '#eef1f3', floor: '#496f95', ceiling: '#ffffff', motif: 'exit', size: 13,
-        gateEpisode: 1, gateSubepisode: 4, provenance: 'shown', exits: [97, 99, 73],
+        gateEpisode: 1, gateSubepisode: 4, provenance: 'shown', exits: [97, 99],
         props: [
           { kind: 'sofa', x: -2.05, z: 1.85, width: 2.2, depth: 0.9, height: 0.94, color: '#8195a6', label: 'Canape du salon C&A' },
           { kind: 'sofa', x: 2.05, z: 1.85, width: 2.2, depth: 0.9, height: 0.94, color: '#8195a6', label: 'Second canape C&A' },
@@ -3555,10 +4251,10 @@ const OS = {
         name: 'C&A CYAN LOGO ROOM', short: 'LOGO C&A',
         detail: 'Grande salle blanche portant le logo cyan C&A dans le parcours de la fausse sortie.',
         color: '#dfe9ed', floor: '#53789b', ceiling: '#ffffff', motif: 'exit', size: 17,
-        gateEpisode: 1, gateSubepisode: 4, provenance: 'shown', exits: [98, 73, 100],
+        gateEpisode: 1, gateSubepisode: 4, provenance: 'shown', exits: [98, 100],
         props: [
           { kind: 'wallart', anchor: 'wall-right', x: 1.48, z: -1.2, color: '#00d8e8', art: 'blocks', label: 'Grand logo cyan C&A' },
-          { kind: 'console', x: 0, z: -3.0, color: '#d7d7d7', label: 'Terminal sous le logo C&A' },
+          { kind: 'console', campaignTarget: 'portablepc', x: 0, z: -3.0, color: '#d7d7d7', label: 'Ordinateur portable C&A sous le logo', portable: true },
           { kind: 'gridnode', x: -2.1, z: -2.1, color: '#00d8e8', label: 'Noeud cyan gauche' },
           { kind: 'gridnode', x: 2.1, z: -2.1, color: '#00d8e8', label: 'Noeud cyan droit' }
         ],
@@ -3610,7 +4306,7 @@ const OS = {
         name: 'JAX PSYCHE / CROSSED RAGATHA DORM', short: 'SCENARIO I',
         detail: 'Premier scenario mental: couloir residentiel, porte de Ragatha barree et facade violente de Jax.',
         color: '#6b2c6f', floor: '#34162d', ceiling: '#100713', motif: 'dorm', size: 17,
-        gateEpisode: 9, gateSubepisode: 4, provenance: 'projection', exits: [74],
+        gateEpisode: 9, gateSubepisode: 4, provenance: 'projection', layer: 'mind', nonPhysical: true, exits: [],
         props: [
           { kind: 'roomdoor', avatar: 'ragatha', label: 'RAGATHA', side: 'right', anchor: 'wall-right', x: 1.48, z: -2.6, color: '#d64545', sealed: true, archived: true },
           { kind: 'memory', x: -1.6, z: -2.2, color: '#8a4fd6', label: 'Facade violente de Jax' },
@@ -3624,7 +4320,7 @@ const OS = {
         name: 'JAX PSYCHE / ZOOBLE FUNERAL', short: 'SCENARIO II',
         detail: 'Deuxieme scenario mental: funerailles de Zooble, Gangle au masque plastique et persona maid de Jax.',
         color: '#392142', floor: '#1d111f', ceiling: '#08040a', motif: 'memory', size: 15,
-        gateEpisode: 9, gateSubepisode: 4, provenance: 'projection', exits: [74],
+        gateEpisode: 9, gateSubepisode: 4, provenance: 'projection', layer: 'mind', nonPhysical: true, exits: [],
         props: [
           { kind: 'table', x: 0, z: -3.0, color: '#151015', label: 'Cercueil symbolique de Zooble' },
           { kind: 'memory', x: -2.0, z: -2.1, color: '#f7f7f7', label: 'Masque plastique de Gangle' },
@@ -3642,7 +4338,7 @@ const OS = {
         name: 'JAX PSYCHE / LOONEY DESERT CLIFF', short: 'SCENARIO III',
         detail: 'Troisieme scenario mental: Gangle abstraite, poursuite par Zooble et falaise de desert cartoon.',
         color: '#d67b3a', floor: '#c9964d', ceiling: '#5f8ee8', motif: 'poacher', size: 21,
-        gateEpisode: 9, gateSubepisode: 4, provenance: 'projection', exits: [74],
+        gateEpisode: 9, gateSubepisode: 4, provenance: 'projection', layer: 'mind', nonPhysical: true, exits: [],
         props: [
           { kind: 'tower', x: 0, z: -4.8, radius: 1.2, height: 5.6, roofHeight: 0.4, color: '#b96c39', accent: '#e4b469', label: 'Falaise cartoon' },
           { kind: 'lorebillboard', avatar: 'whatifgangle', label: 'What-if Gangle abstraction', x: -2.7, z: -3.5, color: '#f7f7f7', loreText: 'Projection mentale; Gangle ne s abstrait pas dans la timeline.' },
@@ -3659,9 +4355,10 @@ const OS = {
         name: 'JAX PSYCHE / FOUR PERSONAS ROOM', short: '4 JAX',
         detail: 'Piece des quatre personas de Jax: piano Daisy Bell, cartes, bouteille et derniere porte condamnee.',
         color: '#8a4fd6', floor: '#24192f', ceiling: '#08050d', motif: 'memory', size: 19,
-        gateEpisode: 9, gateSubepisode: 4, provenance: 'shown', exits: [74, 105],
+        gateEpisode: 9, gateSubepisode: 4, provenance: 'projection', layer: 'mind', nonPhysical: true, exits: [],
         props: [
           { kind: 'table', x: -2.25, z: -2.5, color: '#5c3a21', label: 'Piano de Daisy Bell' },
+          { kind: 'card', campaignTarget: 'pianokey', x: -2.25, z: -1.35, color: '#f7f7f7', label: 'Touche du piano Daisy Bell' },
           { kind: 'card', x: 0.3, z: -1.25, color: '#fff1a8', label: 'Jeu de cartes des personas' },
           { kind: 'barrel', x: 2.3, z: -2.1, color: '#6e3b62', label: 'Bouteille des personas' },
           { kind: 'doorframe', x: 0, z: -3.8, color: '#8a4fd6', label: 'Porte verrouillee de Jax' },
@@ -3680,13 +4377,13 @@ const OS = {
         name: 'JAX FINAL MEMORY ROOM', short: 'MEMOIRE JAX',
         detail: 'Derniere piece de la psyche, ou le montage de vie de Jax remplace les personas par ses souvenirs humains.',
         color: '#b08ac4', floor: '#36283e', ceiling: '#0d0811', motif: 'memory', size: 17,
-        gateEpisode: 9, gateSubepisode: 5, provenance: 'shown', exits: [104, 106],
+        gateEpisode: 9, gateSubepisode: 5, provenance: 'projection', layer: 'memory', nonPhysical: true, exits: [],
         props: [
           { kind: 'archive', x: 0, z: -3.35, color: '#fff1a8', label: 'Souvenir central de Jax' },
           { kind: 'memory', x: -2.2, z: -2.2, color: '#c875ff', label: 'Fragment de vie humaine gauche' },
-          { kind: 'memory', x: 0, z: -1.3, color: '#7df0ff', label: 'Fragment Leeroy Mateo' },
+          { kind: 'memory', x: 0, z: -1.3, color: '#7df0ff', label: 'Identite humaine verrouillee jusqu au projecteur final' },
           { kind: 'memory', x: 2.2, z: -2.2, color: '#e53935', label: 'Fragment de vie humaine droit' },
-          { kind: 'lorebillboard', avatar: 'leeroymateo', label: 'Leeroy Mateo', x: 2.8, z: -3.55, color: '#8a4fd6', loreText: 'Contrepartie humaine revelee dans le montage de memoire de Jax.' }
+          { kind: 'archive', label: 'PROFIL HUMAIN // ACCES DIFFERE', x: 2.8, z: -3.55, color: '#8a4fd6' }
         ],
         sprites: [
           { name: 'Jax Memory', type: 'jax', avatar: 'jax', x: 0.75, z: -2.45, color: '#8a4fd6', silent: true },
@@ -3698,10 +4395,9 @@ const OS = {
         name: 'DARK LAMPPOST HALL', short: 'LAMPADAIRE',
         detail: 'Couloir noir isole par un unique lampadaire, ou la facade mentale cede devant le vrai Jax.',
         color: '#17121d', floor: '#09080c', ceiling: '#010102', motif: 'memory', size: 17,
-        gateEpisode: 9, gateSubepisode: 5, provenance: 'shown', exits: [105, 18],
+        gateEpisode: 9, gateSubepisode: 5, provenance: 'projection', layer: 'mind', nonPhysical: true, exits: [],
         props: [
           { kind: 'spotlight', x: 0, z: -3.1, color: '#fff1a8', label: 'Lampadaire solitaire' },
-          { kind: 'doorframe', x: 0, z: -1.2, color: '#8a4fd6', label: 'Retour hors de la psyche' },
           { kind: 'memory', x: -2.2, z: -2.1, color: '#4a3c55', label: 'Silence apres les personas' }
         ],
         sprites: [{ name: 'Jax', type: 'jax', avatar: 'jax', x: 0.55, z: -2.45, color: '#8a4fd6' }],
@@ -3711,7 +4407,7 @@ const OS = {
         name: 'CAINE VOID ROUTE / BLOCK PATH', short: 'ROUTE DU VIDE',
         detail: 'Route suivie par Caine dans le Vide vers la fausse sortie et le bloc qui lui interdit de franchir certaines limites.',
         color: '#f2f4ff', floor: '#edf1ff', ceiling: '#ffffff', motif: 'void', size: 23,
-        gateEpisode: 9, gateSubepisode: 6, provenance: 'shown', exits: [16, 5],
+        gateEpisode: 9, gateSubepisode: 6, provenance: 'shown', layer: 'void', nonPhysical: true, exits: [],
         props: [
           { kind: 'exitframe', x: 0, z: -4.0, color: '#ffffff', label: 'Porte cible de Caine' },
           { kind: 'gridnode', x: -2.4, z: -2.2, color: '#ff3333', label: 'Bloc de restriction rouge' },
@@ -3722,33 +4418,37 @@ const OS = {
         objective: scan('SUIVRE LA ROUTE INTERDITE', ['exitframe', 'gridnode'], 'caine')
       },
       108: {
-        name: 'CAFE WI-FI HOTSPOT / PROJECTION', short: 'HOTSPOT',
-        detail: 'Projection du cafe et de son point Wi-Fi dans les souvenirs humains; ce n est pas une piece physique du Cirque.',
+        name: 'BLUESTREETCAFE_FREEWIFI / NETWORK MEMORY', short: 'FREE WIFI',
+        detail: 'Signal reseau BlueStreetCafe_FreeWifi apercu dans la memoire humaine; il ne materialise ni cafe ni sortie physique dans le Cirque.',
         color: '#7a4b32', floor: '#3d2a20', ceiling: '#17100d', motif: 'cafe', size: 15,
-        gateEpisode: 9, gateSubepisode: 7, provenance: 'projection', exits: [21],
+        gateEpisode: 9, gateSubepisode: 7, provenance: 'projection', layer: 'network', nonPhysical: true, exits: [],
         props: [
-          { kind: 'counter', x: 0, z: -3.0, color: '#d49a62', label: 'Comptoir du souvenir Wi-Fi' },
-          { kind: 'table', x: -1.8, z: -2.0, color: '#7a4b32', label: 'Table du souvenir humain' },
-          { kind: 'console', x: 1.8, z: -2.0, color: '#7df0ff', label: 'Point Wi-Fi projete' },
-          { kind: 'lorebillboard', avatar: 'leeroymateo', label: 'Projection de Leeroy', x: 0, z: -3.65, color: '#8a4fd6', loreText: 'Image de memoire humaine; aucune personne reelle n est physiquement presente dans le Cirque.' }
+          { kind: 'gridnode', x: -2.2, z: -2.35, color: '#2a58d8', label: 'Paquet reseau Blue AI' },
+          { kind: 'gridnode', x: 2.2, z: -2.35, color: '#7df0ff', label: 'Paquet reseau C&A' },
+          { kind: 'console', x: 0, z: -3.15, color: '#7df0ff', label: 'SSID BlueStreetCafe_FreeWifi' },
+          { kind: 'archive', x: 0, z: -1.3, color: '#8a4fd6', label: 'Souvenir reseau non spatial' }
         ],
-        sprites: [], objective: scan('DISTINGUER LE HOTSPOT DE LA SIMULATION', ['console', 'lorebillboard'])
+        sprites: [
+          { name: 'Blue AI', type: 'system', avatar: 'blueai', x: 0.65, z: -2.65, color: '#00ddff', sizeScale: 0.85, loreGate: { episode: 9, subepisode: 6 }, campaignGate: { episode: 9, minStage: 12, maxStage: 12 } }
+        ],
+        objective: scan('DISTINGUER LE SIGNAL RESEAU DE LA SIMULATION', ['console', 'gridnode'], 'blueai')
       },
       109: {
-        name: 'DESTROYED CIRCUS / JAX PILLOW SHACK', short: 'CIRQUE RUINE',
-        detail: 'Etat detruit du Cirque dans Remember, avec abri sombre en coussins construit pour calmer Jax abstrait.',
-        color: '#63202b', floor: '#241015', ceiling: '#080408', motif: 'final', size: 23,
-        gateEpisode: 9, gateSubepisode: 4, provenance: 'shown', exits: [18],
+        name: 'RESTORED TENT / JAX PILLOW FORT', short: 'FORT DE JAX',
+        detail: 'Chapiteau restaure en couleur dans Remember, avec fort sombre en coussins construit pour calmer Jax abstrait.',
+        color: '#8b3154', floor: '#e06f24', ceiling: '#24112f', motif: 'circus', size: 23,
+        gateEpisode: 9, gateSubepisode: 4, provenance: 'shown', layer: 'present', exits: [28],
         props: [
           { kind: 'tent', x: -2.8, z: -4.2, color: '#6e527f', label: 'Abri sombre en coussins de Jax' },
           { kind: 'bed', x: -2.8, z: -2.6, color: '#47374f', accent: '#211a28', label: 'Coussins de confinement' },
-          { kind: 'crate', x: 0.2, z: -2.0, color: '#4a2024', label: 'Debris du chapiteau' },
-          { kind: 'pillar', x: 2.7, z: -3.1, color: '#821922', label: 'Pilier effondre' },
+          { kind: 'ring', x: 0.2, z: -3.65, color: '#ffd84a', label: 'Piste centrale restauree' },
+          { kind: 'stagecurtain', x: 2.7, z: -4.1, color: '#c92536', variant: 'right', label: 'Rideau restaure' },
           { kind: 'eye', x: 2.0, z: -1.35, color: '#ff3333', label: 'Signal abstrait de Jax' }
         ],
         sprites: [
           { name: 'Jax abstrait', type: 'abstract', avatar: 'abstractedjax', x: -1.25, z: -3.0, color: '#050505', sizeScale: 1.45, silent: true, threatActive: false, silentText: 'La forme abstraite reste non verbale dans l abri sombre.' },
-          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 1.1, z: -2.2, color: '#e53935' }
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 1.1, z: -2.2, color: '#e53935' },
+          { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 2.25, z: -2.65, color: '#ff4fb8', campaignGate: { episode: 9, minStage: 8, maxStage: 8 } }
         ],
         objective: scan('STABILISER LE CIRQUE DETRUIT', ['tent', 'bed'], 'pomni')
       },
@@ -3756,7 +4456,7 @@ const OS = {
         name: 'UNTITLED BAR', short: 'BAR',
         detail: 'Bar de la suggestion de Zooble, visite entre l intermission et le match de softball dans Untitled.',
         color: '#b96f4f', floor: '#3a251f', ceiling: '#17100d', motif: 'cafe', size: 17,
-        gateEpisode: 5, gateSubepisode: 6, provenance: 'shown', exits: [11, 12],
+        gateEpisode: 5, gateSubepisode: 6, provenance: 'shown', layer: 'present', nonPhysical: true, exits: [],
         props: [
           { kind: 'counter', x: 0, z: -3.2, color: '#8b4f32', label: 'Comptoir du bar de Zooble' },
           { kind: 'table', x: -2.15, z: -2.0, color: '#6f412d', label: 'Table du groupe' },
@@ -3768,8 +4468,13 @@ const OS = {
         sprites: [
           { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: -1.55, z: -2.5, color: '#ff4fb8' },
           { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -0.2, z: -2.15, color: '#e53935' },
-          { name: 'Maid Jax', type: 'jax', avatar: 'maidjax', x: 1.2, z: -2.55, color: '#8a4fd6' },
-          { name: 'Caine', type: 'caine', avatar: 'caine', x: 2.5, z: -1.65, color: '#ffd84a' }
+          { name: 'Jax', type: 'jax', avatar: 'jax', x: 1.2, z: -2.55, color: '#8a4fd6' },
+          { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: -2.55, z: -1.6, color: '#d64545' },
+          { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: 2.55, z: -1.65, color: '#f7f7f7' },
+          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -2.7, z: -3.2, color: '#d9d0a2' },
+          { name: 'Disappearing Guy', type: 'mannequin', avatar: 'disappearingguy', x: 2.75, z: -3.25, color: '#55555c' },
+          { name: 'Caine', type: 'caine', avatar: 'caine', x: 0.25, z: -3.35, color: '#ffd84a' },
+          { name: 'Bubble', type: 'bubble', avatar: 'bubble', x: 1.65, z: -1.35, color: '#f7f7ff' }
         ],
         objective: scan('SERVIR LE BAR AVANT LE MATCH', ['counter', 'card'], 'zooble')
       },
@@ -3777,7 +4482,7 @@ const OS = {
         name: 'CAINE RAPID IDEA / BOWLING ALLEY', short: 'BOWLING',
         detail: 'Piste de bowling materialisee par Caine pendant sa rafale d idees dans hjsakldfhl.',
         color: '#58c8e8', floor: '#b88955', ceiling: '#16112d', motif: 'awards', size: 19,
-        gateEpisode: 8, gateSubepisode: 6, provenance: 'shown', exits: [28, 112],
+        gateEpisode: 8, gateSubepisode: 6, provenance: 'shown', layer: 'present', nonPhysical: true, exits: [],
         props: [
           { kind: 'base', x: -1.8, z: -3.7, color: '#ffffff', label: 'Quilles de la piste gauche' },
           { kind: 'base', x: 1.8, z: -3.7, color: '#ffffff', label: 'Quilles de la piste droite' },
@@ -3789,7 +4494,8 @@ const OS = {
         sprites: [
           { name: 'Caine', type: 'caine', avatar: 'caine', x: 0.1, z: -2.8, color: '#ffd84a' },
           { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: -1.65, z: -2.1, color: '#d64545' },
-          { name: 'Jax', type: 'jax', avatar: 'jax', x: 1.7, z: -2.15, color: '#8a4fd6' }
+          { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: 0.85, z: -2.15, color: '#f7f7f7' },
+          { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 2.25, z: -2.05, color: '#ff4fb8' }
         ],
         objective: scan('TERMINER LA MANCHE IMPROVISEE', ['target', 'scoreboard'], 'caine')
       },
@@ -3797,12 +4503,12 @@ const OS = {
         name: 'CAINE RAPID IDEA / HUMAN SCULPTURE STAGE', short: 'SCULPTURE',
         detail: 'Atelier temporaire ou Caine teste les membres comme materiau de sculpture avant de supprimer l idee.',
         color: '#d8879b', floor: '#44202c', ceiling: '#10070d', motif: 'final', size: 17,
-        gateEpisode: 8, gateSubepisode: 6, provenance: 'shown', exits: [111, 28],
+        gateEpisode: 8, gateSubepisode: 6, provenance: 'shown', layer: 'present', nonPhysical: true, exits: [],
         props: [
-          { kind: 'ring', x: 0, z: -3.25, color: '#ffb0c2', label: 'Socle de sculpture humaine' },
+          { kind: 'ring', campaignTarget: 'humantree', x: 0, z: -3.25, color: '#ffb0c2', label: 'Arbre humain de Caine' },
           { kind: 'pillar', x: -1.4, z: -2.65, color: '#d8879b', label: 'Forme humaine deformee gauche' },
           { kind: 'pillar', x: 1.4, z: -2.65, color: '#b75f76', label: 'Forme humaine deformee droite' },
-          { kind: 'archive', x: 0, z: -1.25, color: '#7df0ff', label: 'Idee abandonnee par Caine' },
+          { kind: 'archive', campaignTarget: 'humanglob', x: 0, z: -1.25, color: '#7df0ff', label: 'Glob humain resultant' },
           { kind: 'spotlight', x: 0, z: -4.15, color: '#fff1a8' }
         ],
         sprites: [
@@ -3816,7 +4522,7 @@ const OS = {
         name: 'CAINE GENESIS GRID / HISTORICAL PROJECTION', short: 'GENESE',
         detail: 'Projection historique du quadrillage ou le point rouge apprend a creer, absorbe le point bleu puis forme le Cirque.',
         color: '#e53935', floor: '#070b12', ceiling: '#020307', motif: 'core', size: 21,
-        gateEpisode: 8, gateSubepisode: 1, provenance: 'projection', exits: [17],
+        gateEpisode: 8, gateSubepisode: 1, provenance: 'projection', layer: 'projector', nonPhysical: true, exits: [],
         props: [
           { kind: 'gridnode', x: -2.1, z: -2.8, color: '#e53935', label: 'Premier noyau creatif rouge' },
           { kind: 'gridnode', x: 2.1, z: -2.8, color: '#2a58d8', label: 'Second noyau creatif bleu' },
@@ -3830,7 +4536,7 @@ const OS = {
         name: 'RAGATHA TORMENT / KNIFE STAGE', short: 'TOURMENT R.',
         detail: 'Sous-espace temporaire du tourment de Ragatha, domine par une silhouette feminine et des couteaux lances.',
         color: '#4a1721', floor: '#260b11', ceiling: '#080305', motif: 'memory', size: 17,
-        gateEpisode: 8, gateSubepisode: 7, provenance: 'shown', exits: [16, 115],
+        gateEpisode: 8, gateSubepisode: 7, provenance: 'projection', layer: 'torment', nonPhysical: true, exits: [],
         props: [
           { kind: 'target', x: -2.0, z: -2.2, color: '#d7d7d7', label: 'Couteau fiche gauche' },
           { kind: 'target', x: 2.0, z: -2.2, color: '#d7d7d7', label: 'Couteau fiche droit' },
@@ -3848,7 +4554,7 @@ const OS = {
         name: 'GANGLE TORMENT / MASK GALLERY', short: 'TOURMENT G.',
         detail: 'Sous-espace temporaire ou les masques peints et le souvenir du camion encerclent Gangle.',
         color: '#9e2638', floor: '#1b0810', ceiling: '#050205', motif: 'memory', size: 17,
-        gateEpisode: 8, gateSubepisode: 7, provenance: 'shown', exits: [114, 116],
+        gateEpisode: 8, gateSubepisode: 7, provenance: 'projection', layer: 'torment', nonPhysical: true, exits: [],
         props: [
           { kind: 'lorebillboard', avatar: 'paintedmasks', label: 'Cinq masques peints', x: 0, z: -3.8, color: '#f7f7f7', loreGate: { episode: 8, subepisode: 7 }, loreText: 'Les masques sont des images du tourment de Gangle, pas cinq personnages.' },
           { kind: 'truck', x: 2.55, z: -3.2, color: '#f6d743', label: 'Souvenir du camion Spudsy' },
@@ -3863,7 +4569,7 @@ const OS = {
         name: 'ZOOBLE TORMENT / MIRROR PART PIT', short: 'TOURMENT Z.',
         detail: 'Sous-espace temporaire ou Zooble est cerne par des miroirs noirs et submerge par des pieces de corps.',
         color: '#ff4fb8', floor: '#151019', ceiling: '#040306', motif: 'memory', size: 19,
-        gateEpisode: 8, gateSubepisode: 7, provenance: 'shown', exits: [115, 117],
+        gateEpisode: 8, gateSubepisode: 7, provenance: 'projection', layer: 'torment', nonPhysical: true, exits: [],
         props: [
           { kind: 'lorebillboard', avatar: 'zoobleparts', label: 'Fosse de pieces Zooble', x: 0, z: -4.15, color: '#ff4fb8', loreGate: { episode: 8, subepisode: 7 }, loreText: 'Assemblage de pieces et de miroirs du tourment de Zooble; il ne s agit pas de PNJ.' },
           { kind: 'window', x: -2.65, z: -2.65, color: '#050505', label: 'Miroir noir gauche' },
@@ -3878,7 +4584,7 @@ const OS = {
         name: 'JAX TORMENT / SHADOW AUDIENCE', short: 'TOURMENT J.',
         detail: 'Sous-espace temporaire ou les silhouettes de Ribbit, Kaufmo et Pomni rient de Jax et arrachent son masque social.',
         color: '#18111f', floor: '#09060d', ceiling: '#020104', motif: 'memory', size: 17,
-        gateEpisode: 8, gateSubepisode: 7, provenance: 'shown', exits: [116, 118],
+        gateEpisode: 8, gateSubepisode: 7, provenance: 'projection', layer: 'torment', nonPhysical: true, exits: [],
         props: [
           { kind: 'lorebillboard', avatar: 'laughingshadows', label: 'Silhouettes rieuses', x: 0, z: -4.0, color: '#05020d', loreGate: { episode: 8, subepisode: 7 }, loreText: 'Les ombres reprennent des proches de Jax. Elles restent une projection de tourment, pas leurs personnes reelles.' },
           { kind: 'ring', x: 0, z: -2.8, color: '#8a4fd6', label: 'Cercle de contrainte' },
@@ -3895,10 +4601,11 @@ const OS = {
         name: 'POMNI TORMENT / CROCODILE CELLAR DESCENT', short: 'TOURMENT P.',
         detail: 'Sous-espace temporaire ou des crocodiles realistes traquent Pomni avant sa chute vers une vision du Cellar.',
         color: '#332217', floor: '#160f0c', ceiling: '#030303', motif: 'cellar', size: 21,
-        gateEpisode: 8, gateSubepisode: 7, provenance: 'shown', exits: [117, 119],
+        gateEpisode: 8, gateSubepisode: 7, provenance: 'projection', layer: 'torment', nonPhysical: true, exits: [],
         props: [
           { kind: 'stairs', x: 0, z: -4.1, color: '#56505f', label: 'Chute vers le Cellar cauchemardesque' },
           { kind: 'eye', x: 0, z: -3.0, color: '#ff3333', label: 'Signal d abstraction redoute' },
+          { kind: 'lorebillboard', campaignTarget: 'crocodile', avatar: 'fourthcrocodile', label: 'Silhouettes crocodiles de tourment', x: 0, z: -4.65, color: '#d4c840', loreText: 'Projection de tourment de Pomni; ces crocodiles ne sont pas presents dans le Cellar physique.' },
           { kind: 'crate', x: -2.7, z: -1.45, color: '#33333a', label: 'Debris du Cellar' },
           { kind: 'crate', x: 2.7, z: -1.45, color: '#33333a', label: 'Debris du Cellar' },
           { kind: 'spotlight', x: 0, z: -5.0, color: '#ffffff', label: 'Ouverture au-dessus de Pomni' }
@@ -3917,7 +4624,7 @@ const OS = {
         name: 'DEAD TENT / CAINE DELETED', short: 'CHAPITEAU MORT',
         detail: 'Etat gris, troue et instable du chapiteau juste apres la suppression de Caine, avant les reparations de Remember.',
         color: '#74747b', floor: '#29292d', ceiling: '#050507', motif: 'final', size: 23,
-        gateEpisode: 8, gateSubepisode: 8, provenance: 'shown', exits: [28, 109],
+        gateEpisode: 8, gateSubepisode: 8, provenance: 'shown', layer: 'present', exits: [],
         props: [
           { kind: 'tent', x: 0, z: -5.0, color: '#65656b', label: 'Chapiteau vide de couleur' },
           { kind: 'gridnode', x: -2.8, z: -3.1, color: '#050505', label: 'Trou vers le Vide gauche' },
@@ -3932,6 +4639,532 @@ const OS = {
           { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: 1.45, z: -2.4, color: '#d64545' }
         ],
         objective: scan('BALISER LE CHAPITEAU SANS CAINE', ['gridnode', 'crate'], 'kinger')
+      },
+      121: {
+        name: 'REMEMBER / DAMAGED MONOCHROME TENT', short: 'TENT DETRUIT',
+        detail: 'Chapiteau presque monochrome au debut de Remember, dechire par des ouvertures violettes vers le Vide avant la poursuite de Jax.',
+        color: '#77747f', floor: '#e7e7e4', ceiling: '#08070d', motif: 'final', size: 31,
+        gateEpisode: 9, gateSubepisode: 1, provenance: 'shown', layer: 'present', exits: [20],
+        props: [
+          { kind: 'gridnode', campaignTarget: 'stableform', x: -2.8, z: -2.4, color: '#7df0ff', label: 'Forme stable triangulaire' },
+          { kind: 'gridnode', campaignTarget: 'stableform', x: 0, z: -3.2, color: '#ffd84a', label: 'Forme stable cubique' },
+          { kind: 'gridnode', campaignTarget: 'stableform', x: 2.8, z: -2.4, color: '#ff4fb8', label: 'Forme stable circulaire' },
+          { kind: 'gridnode', x: -5.2, z: -5.8, color: '#4d185f', label: 'Faille violette gauche vers le Vide' },
+          { kind: 'gridnode', x: 5.0, z: -6.2, color: '#4d185f', label: 'Faille violette droite vers le Vide' },
+          { kind: 'gridnode', x: 0.8, z: -7.5, color: '#21102f', label: 'Ouverture haute du chapiteau' },
+          { kind: 'pillar', x: -3.6, z: -4.2, height: 7.8, color: '#5d5b64', label: 'Structure monochrome fissuree' },
+          { kind: 'pillar', x: 3.7, z: -4.5, height: 8.4, color: '#626069', label: 'Structure monochrome fissuree' },
+          { kind: 'crate', x: -1.5, z: -1.25, color: '#3f3e44', label: 'Blocs conjures par Kinger' },
+          { kind: 'crate', x: 1.45, z: -1.35, color: '#4a4850', label: 'Debris du chapiteau' }
+        ],
+        sprites: [
+          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -2.6, z: -3.3, color: '#d9d0a2' },
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -1.15, z: -2.25, color: '#e53935' },
+          { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: 0.2, z: -2.8, color: '#d64545' },
+          { name: 'Jax', type: 'jax', avatar: 'jax', x: 1.55, z: -2.2, color: '#8a4fd6' },
+          { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: 2.65, z: -3.0, color: '#f7f7f7' },
+          { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 0.95, z: -1.35, color: '#ff4fb8' }
+        ],
+        objective: scan('STABILISER LE CHAPITEAU DETRUIT', ['gridnode', 'pillar'], 'kinger')
+      },
+      122: {
+        name: 'EP6 OPENING BLUE ALCOVE', short: 'ALCOVE BLEUE',
+        detail: 'Petite alcove bleue du chapiteau ou Zooble tente de rester cache avant l aventure They All Get Guns.',
+        color: '#4d66b7', floor: '#2d3e78', ceiling: '#172149', motif: 'common', size: 11,
+        gateEpisode: 6, gateSubepisode: 1, provenance: 'shown', layer: 'present', exits: [2],
+        props: [
+          { kind: 'barrel', campaignTarget: 'plantpot', x: -1.55, z: -2.5, color: '#b8744f', label: 'Pot utilise comme cachette' },
+          { kind: 'plant', x: -1.55, z: -2.75, color: '#5bbf68', label: 'Plante de l alcove' },
+          { kind: 'partition', x: 1.8, z: -2.6, width: 0.18, depth: 2.3, height: 2.6, color: '#5675cf', label: 'Paroi bleue de l alcove' },
+          { kind: 'wallart', anchor: 'wall', x: 0, z: -3.55, color: '#7df0ff', art: 'blocks', label: 'Motif geometrique bleu' },
+          { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'panel', x: 0, z: -1.1, color: '#dce8ff' }
+        ],
+        sprites: [
+          { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: -0.75, z: -2.25, color: '#ff4fb8' },
+          { name: 'Jax', type: 'jax', avatar: 'jax', x: 1.05, z: -1.9, color: '#8a4fd6' }
+        ],
+        objective: scan('TROUVER ZOOBLE SANS LE FORCER', ['barrel', 'plant'], 'zooble')
+      },
+      123: {
+        name: 'EP6 DARK ROOM', short: 'PIECE SOMBRE',
+        detail: 'Piece presque noire traversee pendant They All Get Guns, separee du theatre et du Loser Corner.',
+        color: '#18141e', floor: '#09080c', ceiling: '#010102', motif: 'memory', size: 17,
+        gateEpisode: 6, gateSubepisode: 5, provenance: 'shown', layer: 'present', exits: [20, 29],
+        props: [
+          { kind: 'spotlight', x: 0, z: -3.7, color: '#fff1a8', label: 'Seule source de lumiere stable' },
+          { kind: 'partition', x: -2.8, z: -3.2, width: 0.2, depth: 3.0, height: 3.2, color: '#15121b', label: 'Paroi sombre gauche' },
+          { kind: 'partition', x: 2.8, z: -3.2, width: 0.2, depth: 3.0, height: 3.2, color: '#15121b', label: 'Paroi sombre droite' },
+          { kind: 'target', x: -1.4, z: -1.4, color: '#ff8a30', label: 'Reflet d arme stylisee' },
+          { kind: 'target', x: 1.45, z: -1.35, color: '#7df0ff', label: 'Second reflet d arme' }
+        ],
+        sprites: [
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -1.05, z: -2.4, color: '#e53935' },
+          { name: 'Jax', type: 'jax', avatar: 'jax', x: 1.1, z: -2.55, color: '#8a4fd6' }
+        ],
+        objective: scan('TRAVERSER LA PIECE SOMBRE', ['spotlight', 'target'], 'pomni')
+      },
+      124: {
+        name: 'EP8 TEMPORARY PILLOW FORT', short: 'FORT EP8',
+        detail: 'Fort bas en coussins construit temporairement autour de l ordinateur portable C&A pendant hjsakldfhl.',
+        color: '#6e527f', floor: '#42324e', ceiling: '#211827', motif: 'memory', size: 13,
+        gateEpisode: 8, gateSubepisode: 5, provenance: 'shown', layer: 'present', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'bed', x: -2.1, z: -3.0, width: 2.2, depth: 1.2, height: 1.15, color: '#765b8a', accent: '#c9a8dc', label: 'Mur bas de coussins gauche' },
+          { kind: 'bed', x: 2.1, z: -3.0, width: 2.2, depth: 1.2, height: 1.15, color: '#765b8a', accent: '#c9a8dc', label: 'Mur bas de coussins droit' },
+          { kind: 'bed', x: 0, z: -4.2, width: 3.2, depth: 1.0, height: 1.2, color: '#5b476b', accent: '#a88fc1', label: 'Fond du fort' },
+          { kind: 'console', campaignTarget: 'portablepc', x: 0, z: -2.65, color: '#7df0ff', label: 'Ordinateur portable C&A' },
+          { kind: 'barrel', x: -1.3, z: -1.35, color: '#aeb7c2', label: 'Seau metallique' },
+          { kind: 'window', x: 1.35, z: -1.4, color: '#050505', label: 'Ecran d interferences' },
+          { kind: 'foldingchair', x: 0, z: -1.25, color: '#6b5b73', label: 'Chaise face au PC' }
+        ],
+        sprites: [
+          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -1.25, z: -2.15, color: '#d9d0a2' },
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 0.1, z: -3.35, color: '#e53935' },
+          { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: 1.35, z: -2.15, color: '#d64545' }
+        ],
+        objective: scan('STABILISER LE PC DANS LE FORT', ['bed', 'console'], 'kinger')
+      },
+      125: {
+        name: 'MILDENHALL NORMAL PARLOR', short: 'SALON NORMAL',
+        detail: 'Salon atteint par la porte normale, ou Martha sert le the pendant que Ragatha et Gangle attendent avec Jax attache.',
+        color: '#67806a', floor: '#49352d', ceiling: '#1a1413', motif: 'manor', size: 15,
+        gateEpisode: 3, gateSubepisode: 6, provenance: 'shown', layer: 'present', exits: [86, 126],
+        props: [
+          { kind: 'table', campaignTarget: 'teaservice', x: 0, z: -2.8, color: '#5b3d28', label: 'Service a the de Martha' },
+          { kind: 'card', x: -0.75, z: -1.35, color: '#f7f1e8', label: 'Tasse de the gauche' },
+          { kind: 'card', x: 0.75, z: -1.35, color: '#f7f1e8', label: 'Tasse de the droite' },
+          { kind: 'foldingchair', x: -2.1, z: -2.0, color: '#6f4c38', label: 'Chaise de Ragatha' },
+          { kind: 'foldingchair', x: 2.1, z: -2.0, color: '#6f4c38', label: 'Chaise de Gangle' },
+          { kind: 'wallart', anchor: 'wall', x: 0, z: -3.7, color: '#d8d2bd', art: 'cross', label: 'Croix murale du salon' }
+        ],
+        sprites: [
+          { name: 'Martha Mildenhall', type: 'ghost', avatar: 'marthamildenhall', x: 0, z: -3.25, color: '#7df0ff' },
+          { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: -1.55, z: -2.25, color: '#d64545' },
+          { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: 1.55, z: -2.25, color: '#f7f7f7' },
+          { name: 'Jax attache', type: 'jax', avatar: 'jax', x: 2.55, z: -3.2, color: '#8a4fd6' }
+        ],
+        objective: scan('REJOINDRE LA ROUTE NORMALE', ['table', 'card'], 'marthamildenhall')
+      },
+      126: {
+        name: 'MILDENHALL HELL EXIT STAIR', short: 'ESCALIER ENFER',
+        detail: 'Large escalier de fuite hors de la branche infernale, atteint apres la possession et l exercice de respiration.',
+        color: '#5a3a34', floor: '#24100d', ceiling: '#070303', motif: 'hell', size: 19,
+        gateEpisode: 3, gateSubepisode: 6, provenance: 'shown', layer: 'present', exits: [34, 125],
+        props: [
+          { kind: 'stairs', x: 0, z: -4.2, color: '#73534a', label: 'Escalier final hors de l Enfer' },
+          { kind: 'candle', x: -2.3, z: -2.5, color: '#ffd878', label: 'Repere de respiration gauche' },
+          { kind: 'candle', x: 2.3, z: -2.5, color: '#ffd878', label: 'Repere de respiration droit' },
+          { kind: 'gridnode', x: 0, z: -1.35, color: '#7df0ff', label: 'Rythme de respiration de Kinger' }
+        ],
+        sprites: [
+          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -0.85, z: -2.55, color: '#d9d0a2' },
+          { name: 'Pomni possedee', type: 'pomni', avatar: 'pomni', x: 0.85, z: -2.75, color: '#e53935' }
+        ],
+        objective: scan('TENIR LA RESPIRATION JUSQU A LA SORTIE', ['stairs', 'gridnode'], 'kinger')
+      },
+      127: {
+        name: "SPUDSY'S EXTERIOR AND ENTRANCE", short: 'SPUDSY EXT.',
+        detail: 'Facade du restaurant, entree principale et bord du parking avant le debut du service.',
+        color: '#f6d743', floor: '#3b3b42', ceiling: '#5f8ee8', motif: 'street', size: 25,
+        gateEpisode: 4, gateSubepisode: 1, provenance: 'shown', layer: 'present', exits: [10, 72],
+        props: [
+          { kind: 'building', campaignTarget: 'spudsysign', style: 'spudsy', x: 0, z: -5.4, width: 7.2, depth: 2.8, height: 3.6, roofHeight: 0.65, color: '#f6d743', accent: '#e53935', label: "Enseigne et facade de Spudsy's" },
+          { kind: 'doorframe', x: 0, z: -3.9, color: '#e53935', label: 'Entree du restaurant' },
+          { kind: 'spotlight', x: -3.4, z: -2.0, color: '#fff1a8', label: 'Eclairage du parking gauche' },
+          { kind: 'spotlight', x: 3.4, z: -2.0, color: '#fff1a8', label: 'Eclairage du parking droit' },
+          { kind: 'fence', x: -4.6, z: -3.0, color: '#d7d7d7', label: 'Limite du parking' },
+          { kind: 'fence', x: 4.6, z: -3.0, color: '#d7d7d7', label: 'Limite du parking' }
+        ],
+        sprites: [
+          { name: 'Work Gangle', type: 'gangle', avatar: 'workgangle', x: -1.2, z: -2.7, color: '#f7f7f7' },
+          { name: 'Pomni', type: 'pomni', avatar: 'spudsypomni', x: 1.2, z: -2.65, color: '#e53935' }
+        ],
+        objective: scan('REPERER LA FACADE AVANT LE SERVICE', ['building', 'doorframe'], 'workgangle')
+      },
+      128: {
+        name: "SPUDSY'S DRIVE-THROUGH LANE", short: 'DRIVE',
+        detail: 'Voie exterieure et guichet de commande ou la Gloink Queen reclame trois cents burgers.',
+        color: '#f6d743', floor: '#35353b', ceiling: '#41213c', motif: 'street', size: 23,
+        gateEpisode: 4, gateSubepisode: 4, provenance: 'shown', layer: 'present', exits: [35],
+        props: [
+          { kind: 'window', campaignTarget: 'orderwindow', x: 0, z: -4.1, color: '#91d4bb', label: 'Guichet du drive-through' },
+          { kind: 'menu', x: -2.8, z: -3.15, color: '#f6d743', label: 'Menu lumineux du drive-through' },
+          { kind: 'console', x: 2.8, z: -2.8, color: '#63636d', label: 'Borne de commande' },
+          { kind: 'fence', x: -3.8, z: -2.0, color: '#ffffff', label: 'Marquage de voie gauche' },
+          { kind: 'fence', x: 3.8, z: -2.0, color: '#ffffff', label: 'Marquage de voie droit' },
+          { kind: 'card', x: 0.9, z: -1.25, color: '#e53935', label: 'Commande: 300 burgers' }
+        ],
+        sprites: [
+          { name: 'Gloink Queen', type: 'npc', avatar: 'gloinkqueenscale', x: 0, z: -5.65, color: '#ff7d8d', sizeScale: 2.65 },
+          { name: 'Work Gangle', type: 'gangle', avatar: 'workgangle', x: -1.35, z: -2.2, color: '#f7f7f7' },
+          { name: 'Pomni', type: 'pomni', avatar: 'spudsypomni', x: 1.25, z: -2.25, color: '#e53935' }
+        ],
+        objective: scan('TRAITER LA COMMANDE DU DRIVE', ['window', 'menu'], 'gloinkqueenscale')
+      },
+      129: {
+        name: "SPUDSY'S MANAGER OFFICE", short: 'BUREAU GANGLE',
+        detail: 'Petit bureau de management distinct de la salle d evaluation de Caine, avec planning et badge de Gangle.',
+        color: '#477da8', floor: '#68737a', ceiling: '#242b31', motif: 'spudsy', size: 11,
+        gateEpisode: 4, gateSubepisode: 6, provenance: 'shown', layer: 'present', exits: [127, 130],
+        props: [
+          { kind: 'desk', x: 0, z: -2.75, color: '#59616a', label: 'Bureau de management' },
+          { kind: 'card', campaignTarget: 'managerbadge', x: -1.25, z: -1.25, color: '#e53935', label: 'Badge manager de Gangle' },
+          { kind: 'archive', x: 1.2, z: -1.3, color: '#7df0ff', label: 'Planning du service' },
+          { kind: 'window', x: 0, z: -3.5, color: '#b7f0ff', label: 'Fenetre vers le parking' },
+          { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'fluorescent', x: 0, z: -0.8, color: '#ffffff' }
+        ],
+        sprites: [{ name: 'Work Gangle', type: 'gangle', avatar: 'workgangle', x: 0.7, z: -2.2, color: '#f7f7f7' }],
+        objective: scan('CONSULTER LE PLANNING DU MANAGER', ['desk', 'archive'], 'workgangle')
+      },
+      130: {
+        name: "SPUDSY'S REAR SERVICE AREA", short: 'ARRIERE',
+        detail: 'Zone de service calme derriere la cuisine, separee du parking et utilisee avant l entretien de Gangle.',
+        color: '#63636d', floor: '#4f5055', ceiling: '#25262a', motif: 'kitchen', size: 15,
+        gateEpisode: 4, gateSubepisode: 6, provenance: 'shown', layer: 'present', exits: [35, 129],
+        props: [
+          { kind: 'doorframe', campaignTarget: 'backdoor', x: 0, z: -3.5, color: '#e53935', label: 'Porte arriere de Spudsy' },
+          { kind: 'crate', x: -2.0, z: -2.2, color: '#8b5a3c', label: 'Caisse de livraison' },
+          { kind: 'barrel', x: 2.0, z: -2.25, color: '#56505f', label: 'Poubelle de service' },
+          { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'fluorescent', x: 0, z: -1.0, color: '#dce8ff' }
+        ],
+        sprites: [
+          { name: 'Work Gangle', type: 'gangle', avatar: 'workgangle', x: -0.9, z: -2.35, color: '#f7f7f7' },
+          { name: 'Pomni', type: 'pomni', avatar: 'spudsypomni', x: 0.9, z: -2.45, color: '#e53935' }
+        ],
+        objective: scan('REJOINDRE LE CALME DE L ARRIERE', ['doorframe', 'crate'], 'workgangle')
+      },
+      131: {
+        name: 'SPUDSY ROAD AND LAMPPOST', short: 'ROUTE',
+        detail: 'Segment de route nocturne isole par un lampadaire apres la sortie du parking.',
+        color: '#32415a', floor: '#292b31', ceiling: '#080b14', motif: 'street', size: 23,
+        gateEpisode: 4, gateSubepisode: 7, provenance: 'shown', layer: 'present', exits: [72],
+        props: [
+          { kind: 'spotlight', campaignTarget: 'streetlamp', x: 0, z: -4.2, color: '#fff1a8', label: 'Lampadaire de la route' },
+          { kind: 'fence', x: -3.2, z: -2.6, color: '#f7f7f7', label: 'Bord de route gauche' },
+          { kind: 'fence', x: 3.2, z: -2.6, color: '#f7f7f7', label: 'Bord de route droit' },
+          { kind: 'building', style: 'spudsy', x: 4.8, z: -6.5, width: 2.3, depth: 1.4, height: 2.1, roofHeight: 0.4, color: '#f6d743', accent: '#e53935', label: 'Spudsy au loin' }
+        ],
+        sprites: [
+          { name: 'Work Gangle', type: 'gangle', avatar: 'workgangle', x: -0.75, z: -3.0, color: '#f7f7f7' },
+          { name: 'Pomni', type: 'pomni', avatar: 'spudsypomni', x: 0.8, z: -2.75, color: '#e53935' }
+        ],
+        objective: scan('RESTER SOUS LE LAMPADAIRE', ['spotlight', 'fence'], 'workgangle')
+      },
+      132: {
+        name: 'CAINE PERFORMANCE REVIEW / B+', short: 'EVALUATION B+',
+        detail: 'Salle temporaire d evaluation du service, distincte du bureau personnel de Caine et sans connexion physique permanente.',
+        color: '#ffd84a', floor: '#8b172b', ceiling: '#1c0a24', motif: 'awards', size: 13,
+        gateEpisode: 4, gateSubepisode: 7, provenance: 'shown', layer: 'projection', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'scoreboard', campaignTarget: 'reviewgrade', x: 0, z: -3.45, color: '#ffd84a', label: 'RESULTAT DU SERVICE: B+' },
+          { kind: 'desk', x: 0, z: -2.35, color: '#f2f2f2', label: 'Pupitre d evaluation' },
+          { kind: 'spotlight', x: -2.1, z: -1.5, color: '#fff1a8' },
+          { kind: 'spotlight', x: 2.1, z: -1.5, color: '#fff1a8' }
+        ],
+        sprites: [
+          { name: 'Caine', type: 'caine', avatar: 'caine', x: -0.75, z: -2.75, color: '#ffd84a' },
+          { name: 'Work Gangle', type: 'gangle', avatar: 'workgangle', x: 0.85, z: -2.5, color: '#f7f7f7' }
+        ],
+        objective: scan('LIRE L EVALUATION B+', ['scoreboard', 'desk'], 'caine')
+      },
+      133: {
+        name: 'CANDY WAGON APPROACH', short: 'CARROSSE',
+        detail: 'Arrivee du groupe en carrosse tire par le Gummy Elephant avant les remparts de la capitale.',
+        color: '#ff9ad5', floor: '#d99058', ceiling: '#79b6ff', motif: 'candy', size: 25,
+        gateEpisode: 2, gateSubepisode: 1, provenance: 'shown', exits: [134],
+        props: [
+          { kind: 'wagon', campaignTarget: 'wagon', x: 0, z: -3.4, color: '#f6c84f', accent: '#e53935', label: 'Carrosse royal du groupe' },
+          { kind: 'candy', x: -3.2, z: -2.4, color: '#ff4fb8', label: 'Sucette de bord de route' },
+          { kind: 'candy', x: 3.1, z: -2.7, color: '#7df0ff', label: 'Formation bonbon' },
+          { kind: 'building', style: 'palace', x: 0, z: -7.2, width: 5.4, depth: 2.2, height: 6.8, roofHeight: 1.7, color: '#ff9ad5', accent: '#fff1a8', label: 'Chateau au-dela des remparts' }
+        ],
+        sprites: [
+          { name: 'Gummy Elephant', type: 'npc', avatar: 'gummyelephant', x: 0, z: -4.65, color: '#ff85b7', sizeScale: 1.05, silent: true, silentText: 'Le Gummy Elephant tire le carrosse sans dialogue intelligible.' },
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -1.75, z: -2.55, color: '#e53935' },
+          { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: -0.6, z: -2.7, color: '#d64545' },
+          { name: 'Jax', type: 'jax', avatar: 'jax', x: 0.65, z: -2.65, color: '#8a4fd6' },
+          { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: 1.7, z: -2.45, color: '#f7f7f7' },
+          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: 2.65, z: -3.05, color: '#d9d0a2' }
+        ],
+        objective: scan('SUIVRE LE CARROSSE ROYAL', ['wagon', 'building'])
+      },
+      134: {
+        name: 'CANDY CAPITAL DRAWBRIDGE', short: 'PONT-LEVIS',
+        detail: 'Douves, pont-levis et remparts franchis par le carrosse avant l entree dans la capitale.',
+        color: '#f2bb52', floor: '#c9824a', ceiling: '#70a7ff', motif: 'candy', size: 27,
+        gateEpisode: 2, gateSubepisode: 1, provenance: 'shown', exits: [133, 83],
+        props: [
+          { kind: 'bridge', campaignTarget: 'drawbridge', x: 0, z: -3.25, color: '#b86e3c', accent: '#fff1a8', label: 'Pont-levis de la capitale' },
+          { kind: 'wave', x: -3.2, z: -3.9, color: '#6fdcff', label: 'Douves gauche' },
+          { kind: 'wave', x: 3.2, z: -3.9, color: '#6fdcff', label: 'Douves droite' },
+          { kind: 'building', style: 'palace', x: -4.4, z: -5.9, width: 2.3, depth: 1.6, height: 5.6, roofHeight: 1.3, color: '#e88ac2', accent: '#ffd84a', label: 'Tour de rempart gauche' },
+          { kind: 'building', style: 'palace', x: 4.4, z: -5.9, width: 2.3, depth: 1.6, height: 5.6, roofHeight: 1.3, color: '#e88ac2', accent: '#ffd84a', label: 'Tour de rempart droite' },
+          { kind: 'doorframe', x: 0, z: -5.55, color: '#ffd84a', label: 'Porte sous les remparts' }
+        ],
+        sprites: [
+          { name: 'Candy Guard Cyan', type: 'mannequin', avatar: 'candyguardcyan', x: -1.45, z: -4.85, color: '#27d7e7', silent: true },
+          { name: 'Candy Guard Blue', type: 'mannequin', avatar: 'candyguardblue', x: 1.45, z: -4.85, color: '#2568f5', silent: true },
+          { name: 'Candy Guard Violet', type: 'mannequin', avatar: 'candyguardpurple', x: 2.75, z: -3.55, color: '#7755e8', silent: true }
+        ],
+        objective: scan('FRANCHIR LES REMPARTS', ['bridge', 'wave'])
+      },
+      135: {
+        name: 'CANDY CASTLE FORECOURT', short: 'PARVIS ROYAL',
+        detail: 'Parvis exterieur du chateau ou Princess Loolilalu confie la cle, recoit le sirop et voit arriver The Fudge.',
+        color: '#ff9ad5', floor: '#ffd4e5', ceiling: '#70a7ff', motif: 'palace', size: 25,
+        gateEpisode: 2, gateSubepisode: 2, provenance: 'shown', exits: [83, 136, 138],
+        props: [
+          { kind: 'building', style: 'palace', x: 0, z: -6.7, width: 6.2, depth: 2.4, height: 8.2, roofHeight: 2.1, color: '#ff9ad5', accent: '#fff1a8', label: 'Facade du chateau de Loolilalu' },
+          { kind: 'stairs', x: 0, z: -4.1, color: '#fff1cf', label: 'Marches du parvis' },
+          { kind: 'card', campaignTarget: 'royalkey', campaignGate: { episode: 2, minStage: 4, maxStage: 4 }, portable: true, x: -1.25, z: -2.0, color: '#ffd84a', label: 'Cle royale du convoi' },
+          { kind: 'barrel', campaignTarget: 'syrupdelivery', campaignGate: { episode: 2, minStage: 18, maxStage: 18 }, x: 0.9, z: -2.05, color: '#ffd84a', label: 'Cargaison de sirop livree' },
+          { kind: 'lorebillboard', campaignTarget: 'fudgearrival', campaignGate: { episode: 2, minStage: 18, maxStage: 18 }, avatar: 'fudge', x: 2.8, z: -3.15, color: '#7a3d1a', sizeScale: 1.35, label: 'Irruption de The Fudge', loreText: 'The Fudge entre par la porte laissee ouverte apres le retour du convoi.' },
+          { kind: 'wallart', anchor: 'wall-right', x: 0, z: -2.2, color: '#ffd84a', art: 'blocks', label: 'Representation religieuse de Caine' }
+        ],
+        sprites: [
+          { name: 'Princess Loolilalu', type: 'npc', avatar: 'loolilalu', x: 0, z: -3.6, color: '#ff9ad5' },
+          { name: 'Candy Guard Cyan', type: 'mannequin', avatar: 'candyguardcyan', x: -2.0, z: -3.35, color: '#27d7e7', silent: true },
+          { name: 'Candy Guard Blue', type: 'mannequin', avatar: 'candyguardblue', x: 2.0, z: -3.35, color: '#2568f5', silent: true },
+          { name: 'The Fudge', type: 'npc', avatar: 'fudge', x: 3.2, z: -3.5, color: '#7a3d1a', sizeScale: 1.35, campaignGate: { episode: 2, minStage: 18, maxStage: 18 }, silent: true, silentText: 'The Fudge surgit sur le parvis; la scene ne demande pas de nouvelle conversation.' }
+        ],
+        objective: scan('RELEVER LE PARVIS ROYAL', ['building', 'stairs'], 'loolilalu')
+      },
+      136: {
+        name: 'CANDY WAR RIG YARD', short: 'COUR DU RIG',
+        detail: 'Cour exterieure ou le war rig royal et sa citerne de sirop sont presentes au groupe.',
+        color: '#f6c84f', floor: '#cc8346', ceiling: '#6fa8ed', motif: 'route', size: 23,
+        gateEpisode: 2, gateSubepisode: 2, provenance: 'shown', exits: [135, 137],
+        props: [
+          { kind: 'truck', campaignTarget: 'warrig', x: 0, z: -3.25, color: '#ffd84a', label: 'War rig royal' },
+          { kind: 'barrel', campaignTarget: 'syrupcargo', x: -2.4, z: -2.1, color: '#ffe57d', label: 'Reserve de sirop' },
+          { kind: 'barrel', x: 2.35, z: -2.2, color: '#ffe57d', label: 'Cargaison du royaume' },
+          { kind: 'fence', x: 0, z: -5.0, color: '#fff1a8', label: 'Cloture de la cour' }
+        ],
+        sprites: [
+          { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: -1.7, z: -2.55, color: '#d64545' },
+          { name: 'Jax', type: 'jax', avatar: 'jax', x: 1.7, z: -2.5, color: '#8a4fd6' },
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 0.2, z: -1.65, color: '#e53935' }
+        ],
+        objective: scan('PREPARER LE WAR RIG', ['truck', 'barrel'])
+      },
+      137: {
+        name: 'CANDY BANDIT CAMP', short: 'CAMP BANDIT',
+        detail: 'Camp de Gummigoo, Max et Chad avec feu, poste d observation et tanker vole.',
+        color: '#d87d3b', floor: '#bd6d34', ceiling: '#5f8ee8', motif: 'route', size: 21,
+        gateEpisode: 2, gateSubepisode: 3, provenance: 'shown', exits: [136, 138],
+        props: [
+          { kind: 'candle', campaignTarget: 'banditcamp', x: 0, z: -2.25, color: '#ff7a30', label: 'Feu de camp des bandits' },
+          { kind: 'truck', x: 0.4, z: -4.25, color: '#d96e39', label: 'Tanker vole' },
+          { kind: 'card', x: -2.3, z: -1.45, color: '#7df0ff', label: 'Jumelles de surveillance' },
+          { kind: 'candy', x: 2.45, z: -1.75, color: '#e53935', label: 'Dague sucre d orge' },
+          { kind: 'crate', x: -2.65, z: -3.35, color: '#fff1a8', label: 'Oeuf du camp' }
+        ],
+        sprites: [
+          { name: 'Gummigoo', type: 'gummigoo', avatar: 'gummigoo', x: -1.15, z: -2.65, color: '#d8a23a' },
+          { name: 'Max', type: 'gummigoo', avatar: 'max', x: 0.35, z: -2.95, color: '#75bd3f' },
+          { name: 'Chad', type: 'gummigoo', avatar: 'chad', x: 1.65, z: -2.55, color: '#8bd64a' }
+        ],
+        objective: scan('RELEVER LE CAMP DES BANDITS', ['candle', 'truck'], 'gummigoo')
+      },
+      138: {
+        name: 'CANDY CHASE OPEN ROAD', short: 'POURSUITE',
+        detail: 'Route ouverte de la poursuite entre le war rig royal et le tanker des crocodiles.',
+        color: '#f0a04a', floor: '#c76d32', ceiling: '#5f8ee8', motif: 'route', size: 31,
+        gateEpisode: 2, gateSubepisode: 3, provenance: 'shown', exits: [137, 139, 141, 135],
+        props: [
+          { kind: 'truck', campaignTarget: 'chaserig', campaignGate: { episode: 2, minStage: 7, maxStage: 7 }, x: -1.4, z: -3.4, color: '#ffd84a', label: 'War rig en poursuite' },
+          { kind: 'truck', campaignGate: { episode: 2, minStage: 7, maxStage: 7 }, x: 1.7, z: -5.0, color: '#d96e39', label: 'Tanker des bandits' },
+          { kind: 'truck', campaignTarget: 'returnrig', campaignGate: { episode: 2, minStage: 17, maxStage: 17 }, x: 0, z: -3.7, color: '#ffd84a', label: 'Convoi de retour' },
+          { kind: 'candy', x: -3.3, z: -2.4, color: '#ff4fb8', label: 'Obstacle de voie gauche' },
+          { kind: 'candy', x: 3.2, z: -2.8, color: '#7df0ff', label: 'Obstacle de voie droite' },
+          { kind: 'target', x: 0, z: -6.1, color: '#e53935', label: 'Bazooka a chaussure' }
+        ],
+        sprites: [],
+        objective: scan('TENIR LA ROUTE DE POURSUITE', ['truck', 'target'])
+      },
+      139: {
+        name: 'CANDY ROCKY ROAD', short: 'ROCKY ROAD',
+        detail: 'Segment rocheux ou un levier modifie la route et force les deux vehicules a manoeuvrer.',
+        color: '#d97b35', floor: '#9d5930', ceiling: '#526fa8', motif: 'route', size: 27,
+        gateEpisode: 2, gateSubepisode: 3, provenance: 'shown', exits: [138, 140],
+        props: [
+          { kind: 'gridnode', campaignTarget: 'rockylever', x: 0, z: -2.0, color: '#ffd84a', label: 'Levier Rocky Road' },
+          { kind: 'candy', x: -3.1, z: -3.1, color: '#7a4b32', label: 'Amas rocheux sucre gauche' },
+          { kind: 'candy', x: 3.1, z: -3.5, color: '#7a4b32', label: 'Amas rocheux sucre droit' },
+          { kind: 'truck', x: 0.5, z: -5.0, color: '#d96e39', label: 'Tanker en manoeuvre' }
+        ],
+        sprites: [],
+        objective: scan('FRANCHIR ROCKY ROAD', ['gridnode', 'candy'])
+      },
+      140: {
+        name: 'CANDY COLLISION RIDGE', short: 'RUPTURE',
+        detail: 'Crete de la collision finale avec ancre, corde, pointes deployables et sol qui se brise.',
+        color: '#c96b34', floor: '#8f4b2a', ceiling: '#4c679b', motif: 'route', size: 23,
+        gateEpisode: 2, gateSubepisode: 3, provenance: 'shown', exits: [139, 141],
+        props: [
+          { kind: 'ring', campaignTarget: 'anchor', x: -1.8, z: -2.6, color: '#535866', label: 'Ancre et corde du tanker' },
+          { kind: 'target', campaignTarget: 'spikes', x: 1.8, z: -2.7, color: '#e8e8ef', label: 'Pointes deployables' },
+          { kind: 'truck', x: 0, z: -4.4, color: '#d96e39', label: 'Vehicules au point de collision' },
+          { kind: 'gridnode', x: 0, z: -1.25, color: '#ff4fb8', label: 'Fissure du sol simule' }
+        ],
+        sprites: [
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -0.85, z: -3.0, color: '#e53935' },
+          { name: 'Gummigoo', type: 'gummigoo', avatar: 'gummigoo', x: 0.9, z: -3.15, color: '#d8a23a' }
+        ],
+        objective: scan('RELEVER LA COLLISION', ['ring', 'target'])
+      },
+      141: {
+        name: 'CHOCOLATE RIVER BASIN', short: 'BASSIN CHOCO',
+        detail: 'Bassin de la riviere chocolatee ou le groupe rencontre The Fudge puis retrouve Pomni, Gummigoo et deux tankers.',
+        color: '#7a3d1a', floor: '#5a2a16', ceiling: '#5f8ee8', motif: 'route', size: 27,
+        gateEpisode: 2, gateSubepisode: 5, provenance: 'shown', exits: [140, 138],
+        props: [
+          { kind: 'wave', campaignTarget: 'chocolateriver', x: 0, z: -3.2, color: '#6a2f18', label: 'Riviere chocolatee' },
+          { kind: 'truck', campaignGate: { episode: 2, minStage: 10, maxStage: 10 }, x: -1.2, z: -4.5, color: '#ffd84a', label: 'War rig echoue dans le bassin' },
+          { kind: 'truck', campaignTarget: 'returntanker', campaignGate: { episode: 2, minStage: 16, maxStage: 16 }, x: -1.8, z: -4.3, color: '#ffd84a', label: 'War rig retrouve' },
+          { kind: 'truck', campaignTarget: 'returntanker', campaignGate: { episode: 2, minStage: 16, maxStage: 16 }, x: 1.8, z: -5.0, color: '#d96e39', label: 'Tanker duplique du Test Level' },
+          { kind: 'candy', x: -3.5, z: -2.15, color: '#ff9b37', label: 'Paroi candy du bassin' },
+          { kind: 'candy', x: 3.5, z: -2.35, color: '#ff4fb8', label: 'Paroi candy du bassin' }
+        ],
+        sprites: [
+          { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: -2.3, z: -2.85, color: '#d64545', campaignGate: { episode: 2, minStage: 10, maxStage: 16 } },
+          { name: 'Jax', type: 'jax', avatar: 'jax', x: -0.9, z: -3.15, color: '#8a4fd6', campaignGate: { episode: 2, minStage: 10, maxStage: 16 } },
+          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: 0.65, z: -3.0, color: '#d9d0a2', campaignGate: { episode: 2, minStage: 10, maxStage: 16 } },
+          { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: 2.1, z: -2.8, color: '#f7f7f7', campaignGate: { episode: 2, minStage: 10, maxStage: 16 } },
+          { name: 'The Fudge', type: 'npc', avatar: 'fudge', x: 0.15, z: -4.6, color: '#7a3d1a', sizeScale: 1.55, campaignGate: { episode: 2, minStage: 10, maxStage: 10 } },
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -1.75, z: -2.0, color: '#e53935', campaignGate: { episode: 2, minStage: 16, maxStage: 16 } },
+          { name: 'Gummigoo', type: 'gummigoo', avatar: 'gummigoo', x: -0.55, z: -2.15, color: '#d8a23a', campaignGate: { episode: 2, minStage: 16, maxStage: 16 } },
+          { name: 'Max', type: 'gummigoo', avatar: 'max', x: 0.75, z: -2.15, color: '#75bd3f', campaignGate: { episode: 2, minStage: 16, maxStage: 16 } },
+          { name: 'Chad', type: 'gummigoo', avatar: 'chad', x: 1.9, z: -2.0, color: '#8bd64a', campaignGate: { episode: 2, minStage: 16, maxStage: 16 } }
+        ],
+        objective: scan('RELEVER LE BASSIN CHOCOLATE', ['wave', 'truck'])
+      },
+      142: {
+        name: 'TEST LEVEL FALL SHAFT', short: 'CHUTE TEST',
+        detail: 'Chute hors carte de Pomni et Gummigoo vers la couche technique. Aucun passage physique permanent ne relie ce puits au canyon.',
+        color: '#17384f', floor: '#05090d', ceiling: '#020307', motif: 'test', size: 17,
+        gateEpisode: 2, gateSubepisode: 4, provenance: 'shown', layer: 'under-map', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'gridnode', campaignTarget: 'testfall', x: 0, z: -4.2, elevation: 2.8, color: '#7df0ff', label: 'Fissure de collision superieure' },
+          { kind: 'ring', x: 0, z: -2.4, elevation: 1.3, color: '#21557a', label: 'Anneau de chute hors carte' },
+          { kind: 'gridnode', x: -2.0, z: -1.5, color: '#245c86', label: 'Fragment de grille' },
+          { kind: 'gridnode', x: 2.0, z: -1.8, color: '#245c86', label: 'Fragment de grille' }
+        ],
+        sprites: [
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -0.8, z: -2.8, elevation: 0.65, color: '#e53935' },
+          { name: 'Gummigoo', type: 'gummigoo', avatar: 'gummigoo', x: 0.85, z: -3.0, elevation: 0.9, color: '#d8a23a' }
+        ],
+        objective: scan('SUIVRE LA CHUTE HORS CARTE', ['gridnode', 'ring'])
+      },
+      143: {
+        name: 'TEST LEVEL BLUE GRID MAZE', short: 'LABYRINTHE TEST',
+        detail: 'Labyrinthe sombre au sol noir et bleu, murs quadrilles tres hauts et demi-spheres reflechissantes.',
+        color: '#1c5a86', floor: '#02080d', ceiling: '#03070c', motif: 'test', size: 25,
+        gateEpisode: 2, gateSubepisode: 4, provenance: 'shown', layer: 'under-map', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'gridnode', campaignTarget: 'mazebeacon', x: -2.8, z: -3.4, color: '#2e80b8', label: 'Balise du couloir gauche' },
+          { kind: 'gridnode', campaignTarget: 'mazebeacon', x: 2.8, z: -4.1, color: '#2e80b8', label: 'Balise du couloir droit' },
+          { kind: 'ring', x: -1.1, z: -2.0, color: '#b8e8ff', label: 'Demi-sphere reflechissante' },
+          { kind: 'ring', x: 1.35, z: -2.35, color: '#b8e8ff', label: 'Demi-sphere reflechissante' },
+          { kind: 'partition', x: 0, z: -4.8, width: 0.25, depth: 5.8, height: 6.5, color: '#173f62', label: 'Mur quadrille central' }
+        ],
+        sprites: [
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -0.85, z: -2.85, color: '#e53935' },
+          { name: 'Gummigoo', type: 'gummigoo', avatar: 'gummigoo', x: 0.9, z: -3.0, color: '#d8a23a' }
+        ],
+        objective: scan('CARTOGRAPHIER LE LABYRINTHE TEST', ['gridnode', 'ring'])
+      },
+      144: {
+        name: 'TEST LEVEL NPC MODEL VAULT', short: 'MODELES PNJ',
+        detail: 'Salle basse contenant accessoires dupliques, cubes bleus et modeles PNJ inertes dont celui de Gummigoo.',
+        color: '#1b5275', floor: '#02090e', ceiling: '#02060a', motif: 'test', size: 23,
+        gateEpisode: 2, gateSubepisode: 4, provenance: 'shown', layer: 'under-map', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'lorebillboard', campaignTarget: 'gummigoomodel', avatar: 'gummigoo', x: 0, z: -4.5, color: '#d8a23a', label: 'Modele inerte de Gummigoo', loreText: 'Modele T-pose sans conscience. Le Gummigoo actif se tient separe de cette copie.' },
+          { kind: 'lorebillboard', campaignTarget: 'npcmodel', avatar: 'max', x: -2.3, z: -3.75, color: '#75bd3f', label: 'Modele PNJ inerte A', loreText: 'Modele de test sans dialogue ni autonomie.' },
+          { kind: 'lorebillboard', campaignTarget: 'npcmodel', avatar: 'chad', x: 2.3, z: -3.75, color: '#8bd64a', label: 'Modele PNJ inerte B', loreText: 'Modele de test sans dialogue ni autonomie.' },
+          { kind: 'lorebillboard', campaignTarget: 'npcmodel', avatar: 'loolilalu', x: -3.5, z: -5.3, color: '#ff9ad5', label: 'Modele PNJ inerte C', loreText: 'Modele de test sans dialogue ni autonomie.' },
+          { kind: 'toyblock', x: -1.6, z: -1.6, color: '#245c86', label: 'Cube bleu de collision' },
+          { kind: 'toyblock', x: 1.6, z: -1.7, color: '#245c86', label: 'Cube bleu de collision' }
+        ],
+        sprites: [
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -0.95, z: -2.7, color: '#e53935' },
+          { name: 'Gummigoo', type: 'gummigoo', avatar: 'gummigoo', x: 0.95, z: -2.85, color: '#d8a23a' }
+        ],
+        objective: scan('DISTINGUER LE PNJ DE SON MODELE', ['lorebillboard', 'toyblock'], 'gummigoo')
+      },
+      145: {
+        name: 'TEST LEVEL ESCAPE BAY', short: 'BAIE D EVASION',
+        detail: 'Zone basse ou Pomni et Gummigoo utilisent le tanker duplique, une sucette et des blocs pour provoquer une collision de sortie.',
+        color: '#205b7c', floor: '#031019', ceiling: '#02060a', motif: 'test', size: 21,
+        gateEpisode: 2, gateSubepisode: 5, provenance: 'shown', layer: 'under-map', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'truck', campaignTarget: 'replicatanker', x: 0, z: -4.1, color: '#d96e39', label: 'Tanker duplique' },
+          { kind: 'toyblock', campaignTarget: 'collisionblock', x: -2.0, z: -2.0, color: '#245c86', label: 'Bloc de collision gauche' },
+          { kind: 'toyblock', campaignTarget: 'collisionblock', x: 2.0, z: -2.15, color: '#245c86', label: 'Bloc de collision droit' },
+          { kind: 'candy', x: 0.2, z: -1.45, color: '#ff4fb8', label: 'Sucette utilisee comme levier' },
+          { kind: 'gridnode', x: 0, z: -5.4, color: '#7df0ff', label: 'Surface de collision cible' }
+        ],
+        sprites: [
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -1.0, z: -2.9, color: '#e53935' },
+          { name: 'Gummigoo', type: 'gummigoo', avatar: 'gummigoo', x: 1.05, z: -3.0, color: '#d8a23a' }
+        ],
+        objective: scan('PREPARER LA COLLISION D EVASION', ['truck', 'toyblock'], 'pomni')
+      },
+      146: {
+        name: 'TEST LEVEL OOB SURFACE', short: 'SURFACE OOB',
+        detail: 'Surface hors carte au ciel pastel, points violets et theieres Utah geantes apercues avant le retour.',
+        color: '#b78fe8', floor: '#c8a8ed', ceiling: '#8dddf2', motif: 'testsurface', size: 29,
+        gateEpisode: 2, gateSubepisode: 5, provenance: 'shown', layer: 'under-map', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'teapot', campaignTarget: 'utahteapot', x: -3.5, z: -4.7, color: '#4b73c9', sizeScale: 1.25, label: 'Theiere Utah gauche' },
+          { kind: 'teapot', campaignTarget: 'utahteapot', x: 0.1, z: -6.2, color: '#4b73c9', sizeScale: 1.65, label: 'Theiere Utah centrale' },
+          { kind: 'teapot', campaignTarget: 'utahteapot', x: 3.7, z: -4.9, color: '#4b73c9', sizeScale: 1.3, label: 'Theiere Utah droite' },
+          { kind: 'balloon', x: -2.1, z: -2.0, elevation: 2.8, color: '#9d59d2', label: 'Point violet du ciel' },
+          { kind: 'balloon', x: 2.25, z: -2.35, elevation: 3.4, color: '#9d59d2', label: 'Point violet du ciel' },
+          { kind: 'truck', x: 0, z: -3.2, color: '#d96e39', label: 'Tanker sur la surface hors carte' }
+        ],
+        sprites: [
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -0.9, z: -2.75, color: '#e53935' },
+          { name: 'Gummigoo', type: 'gummigoo', avatar: 'gummigoo', x: 0.95, z: -2.85, color: '#d8a23a' }
+        ],
+        objective: scan('RELEVER LA SURFACE HORS CARTE', ['teapot', 'balloon'])
+      },
+      147: {
+        name: 'POMNI NIGHTMARE / CELLAR PROJECTION', short: 'CAUCHEMAR',
+        detail: 'Cauchemar d ouverture de Pomni melant le Tent et le Cellar. Cette projection ne modifie pas la carte physique du Cirque.',
+        color: '#35102d', floor: '#07030a', ceiling: '#010102', motif: 'memory', size: 17,
+        gateEpisode: 2, gateSubepisode: 0, provenance: 'projection', layer: 'memory', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'memory', campaignTarget: 'nightmarefracture', x: 0, z: -3.0, color: '#e53935', label: 'Fracture du cauchemar' },
+          { kind: 'cellaropening', x: 0, z: -4.7, color: '#ffffff', label: 'Ouverture impossible vers le Cellar' },
+          { kind: 'eye', x: -2.4, z: -3.8, color: '#ff3333', label: 'Silhouette abstraite du cauchemar' },
+          { kind: 'eye', x: 2.4, z: -4.1, color: '#7df0ff', label: 'Silhouette abstraite du cauchemar' }
+        ],
+        sprites: [{ name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 0, z: -2.25, color: '#e53935' }],
+        objective: scan('TRAVERSER LE CAUCHEMAR', ['memory', 'cellaropening'])
+      },
+      148: {
+        name: 'KAUFMO FUNERAL / SILENT RECONSTRUCTION', short: 'FUNERAILLES',
+        detail: 'Funerailles de Kaufmo avec le Kauffin et son portrait. Pomni, Ragatha, Zooble, Gangle et Kinger sont presents; Jax et Caine sont absents.',
+        color: '#5f4765', floor: '#2a1d2d', ceiling: '#0a0710', motif: 'memory', size: 17,
+        gateEpisode: 2, gateSubepisode: 7, provenance: 'shown', layer: 'cut', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'coffin', campaignTarget: 'kauffin', x: 0, z: -3.7, color: '#432a4c', accent: '#ffd84a', label: 'Kauffin de Kaufmo' },
+          { kind: 'lorebillboard', campaignTarget: 'kaufmoportrait', avatar: 'kaufmo', x: 0, z: -5.15, color: '#e53935', sizeScale: 0.72, label: 'Portrait de Kaufmo', loreText: 'Portrait memorial de Kaufmo avant son abstraction.' },
+          { kind: 'foldingchair', x: -2.3, z: -1.8, color: '#77747f', label: 'Chaise pliante gauche' },
+          { kind: 'foldingchair', x: 2.3, z: -1.8, color: '#77747f', label: 'Chaise pliante droite' },
+          { kind: 'candle', x: -1.35, z: -2.65, color: '#fff1a8', label: 'Bougie memoriale' },
+          { kind: 'candle', x: 1.35, z: -2.65, color: '#fff1a8', label: 'Bougie memoriale' }
+        ],
+        sprites: [
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -2.15, z: -2.8, color: '#e53935', silent: true, silentText: 'Pomni reste silencieuse devant le memorial de Kaufmo.' },
+          { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: -1.05, z: -3.15, color: '#d64545', silent: true, silentText: 'Ragatha se recueille; aucun dialogue audible n est ajoute.' },
+          { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 0, z: -2.75, color: '#ff4fb8', silent: true, silentText: 'Zooble a organise la ceremonie et reste silencieuse.' },
+          { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: 1.1, z: -3.1, color: '#f7f7f7', silent: true, silentText: 'Gangle reste silencieuse devant le Kauffin.' },
+          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: 2.15, z: -2.8, color: '#d9d0a2', silent: true, silentText: 'Kinger se recueille sans dialogue audible.' }
+        ],
+        objective: scan('RELEVER LE MEMORIAL DE KAUFMO', ['coffin', 'lorebillboard'])
       }
     };
     this.circusCanonRoomDefinitions = rooms;
@@ -4072,13 +5305,26 @@ const OS = {
       if (!scenes[world.target]) errors.push(`MONDE EP${world.episode}: scene ${world.target} absente`);
     });
     const canonLocationChecks = [
-      [70, 14, 'SHRIMP TOWN'], [71, 11, 'SNOWY TUNDRA'], [72, 10, 'PARKING SPUDSY'],
-      [73, 16, 'BRAIN SCANNER'], [74, 18, 'JAX PSYCHE'], [75, 3, 'GROUNDS ETENDUS']
+      { zoneId: 70, label: 'SHRIMP TOWN', nonPhysical: true },
+      { zoneId: 71, label: 'SNOWY TUNDRA', links: [11] },
+      { zoneId: 72, label: 'PARKING SPUDSY', links: [127, 131] },
+      { zoneId: 73, label: 'BRAIN SCANNER', nonPhysical: true },
+      { zoneId: 74, label: 'JAX PSYCHE', nonPhysical: true },
+      { zoneId: 75, label: 'GROUNDS ETENDUS', nonPhysical: true }
     ];
-    canonLocationChecks.forEach(([zoneId, parentId, label]) => {
-      if (!portals[zoneId] || !scenes[zoneId]) errors.push(`${label}: zone ${zoneId} absente`);
-      if (!scenes[parentId]?.exits?.includes(zoneId)) errors.push(`${label}: acces depuis ${parentId} absent`);
-      if (!scenes[zoneId]?.exits?.includes(parentId)) errors.push(`${label}: retour vers ${parentId} absent`);
+    canonLocationChecks.forEach(({ zoneId, label, links = [], nonPhysical = false }) => {
+      if (!portals[zoneId] || !scenes[zoneId]) {
+        errors.push(`${label}: zone ${zoneId} absente`);
+        return;
+      }
+      if (nonPhysical) {
+        if ((scenes[zoneId].exits || []).length) errors.push(`${label}: projection reliee au graphe physique`);
+        return;
+      }
+      links.forEach(parentId => {
+        if (!scenes[parentId]?.exits?.includes(zoneId)) errors.push(`${label}: acces depuis ${parentId} absent`);
+        if (!scenes[zoneId]?.exits?.includes(parentId)) errors.push(`${label}: retour vers ${parentId} absent`);
+      });
     });
     Object.entries(this.getCircusCanonRoomDefinitions()).forEach(([zoneId, room]) => {
       const id = Number(zoneId);
@@ -4129,7 +5375,7 @@ const OS = {
     if (new Set(heights.map(height => height.toFixed(2))).size < 3) {
       errors.push('VERTICAL: silhouettes trop uniformes');
     }
-    const floorLinks = [[8, 64], [64, 65], [32, 66], [66, 67], [39, 68], [68, 69]];
+    const floorLinks = [[85, 64], [64, 65], [32, 66], [66, 67], [39, 68], [68, 69]];
     floorLinks.forEach(([from, to]) => {
       if (!this.circusDoom?.scenes?.[from]?.exits?.includes(to) || !this.circusDoom?.scenes?.[to]?.exits?.includes(from)) {
         errors.push(`ETAGE ${from}/${to}: liaison reciproque absente`);
@@ -4156,17 +5402,22 @@ const OS = {
     const campaigns = Array.from({ length: 9 }, (_, index) => this.getCircusFpsCampaignDefinition(index + 1)).filter(Boolean);
     const campaignStages = campaigns.reduce((sum, campaign) => sum + campaign.stages.length, 0);
     if (campaigns.length !== 9) errors.push(`CAMPAGNES: ${campaigns.length}/9 episodes`);
-    if (campaignStages !== 72) errors.push(`CAMPAGNES: ${campaignStages}/72 actes`);
-    const virtualActions = new Set(['visit', 'survive', 'give']);
+    if (campaignStages < 72) errors.push(`CAMPAGNES: ${campaignStages}/72 actes minimum`);
+    const virtualActions = new Set(['visit', 'survive', 'give', 'drive', 'dive']);
     campaigns.forEach(campaign => campaign.stages.forEach(stage => stage.requirements.forEach(requirement => {
       if (virtualActions.has(requirement.action)) return;
+      const requirementZone = Number.isFinite(Number(requirement.zone)) ? Number(requirement.zone) : stage.zone;
       if (requirement.action === 'talk') {
-        const available = this.getCircusZoneSprites(stage.zone).some(sprite => (sprite.avatar || sprite.type) === requirement.target);
-        if (!available) errors.push(`EP${campaign.episode} ${stage.zone}: PNJ ${requirement.target} absent`);
+        const available = this.getCircusZoneSprites(requirementZone).some(sprite => (sprite.avatar || sprite.type) === requirement.target);
+        if (!available) errors.push(`EP${campaign.episode} ${requirementZone}: PNJ ${requirement.target} absent`);
         return;
       }
-      const available = this.getCircusZoneProps(stage.zone).some(prop => prop.kind === requirement.target);
-      if (!available) errors.push(`EP${campaign.episode} ${stage.zone}: OBJET ${requirement.target} absent`);
+      const available = this.getCircusZoneProps(requirementZone)
+        .filter(prop => (prop.campaignTarget || prop.kind) === requirement.target);
+      if (!available.length) errors.push(`EP${campaign.episode} ${requirementZone}: OBJET ${requirement.target} absent`);
+      if (requirement.distinct && available.length < requirement.count) {
+        errors.push(`EP${campaign.episode} ${requirementZone}: OBJETS DISTINCTS ${requirement.target} ${available.length}/${requirement.count}`);
+      }
     })));
     const eventZones = [2, 3, 4, 5, 6, 8, 10, 12, 14, 31]
       .filter(zoneId => this.getCircusDynamicEventDefinitions(zoneId).length > 0).length;
@@ -4355,7 +5606,6 @@ const OS = {
     }
     if ((key === 'enter' || key === ' ') && this.handleCircusActivityAction()) return;
     const exits = state.scenes[state.currentZoneId]?.exits || [];
-    if (!exits.length) return;
     if (key === 'enter' || key === ' ') {
       const assist = state.interactionAssist ? 1.18 : 1;
       if (state.interactionChoices) {
@@ -4440,6 +5690,8 @@ const OS = {
     if (!state) return null;
     let best = null;
     this.getCircusZoneProps(state.currentZoneId).forEach((prop, index) => {
+      if (prop.loreGate && !this.hasCircusLoreGate(prop.loreGate)) return;
+      if (prop.campaignGate && !this.isCircusCampaignGateActive(prop.campaignGate)) return;
       if (state.collectedProps?.has(`${state.currentZoneId}:${index}`)) return;
       if (!this.isCircusWorldPointVisible(prop, state, prop.anchor?.startsWith('wall') ? 0.72 : 0.42)) return;
       const pos = this.resolveCircusWorldPoint(prop, state);
@@ -4464,8 +5716,8 @@ const OS = {
       3: { title: 'SUIVRE LE TOUR DU PILOTE', steps: [scan('tent', 'Examiner le chapiteau exterieur'), scan('tower', 'Reperer la tour et son toboggan'), scan('building', 'Localiser le carnaval'), scan('pilotexitdoor', 'Relever la porte EXIT instable'), talk('sun', 'Observer le Soleil')] },
       4: { title: 'OBSERVER LE CELLAR', steps: [scan('cellaropening', 'Identifier l ouverture de Caine'), scan('eye', 'Relever deux silhouettes abstraites', 2), talk('abstractedkaufmo', 'Observer Kaufmo sans inventer de dialogue')] },
       5: { title: 'TESTER LA FAUSSE SORTIE', steps: [scan('pilotexitdoor', 'Examiner la porte EXIT rouge'), talk('pomni', 'Parler des portes avec Pomni')] },
-      6: { title: 'SECURISER LE CONVOI', steps: [scan('truck', 'Verifier le camion-citerne'), scan('candy', 'Relever deux obstacles bonbon', 2), talk('gummigoo', 'Coordonner Gummigoo')] },
-      7: { title: 'LIRE LE TEST LEVEL', steps: [activate('console', 'Activer la console de test'), activate('gridnode', 'Synchroniser deux noeuds', 2), talk('mannequin', 'Questionner le mannequin C&A')] },
+      6: { title: 'INDEXER CANDY CANYON', steps: [scan('building', 'Relever la vue generale du royaume'), scan('candy', 'Relever deux formes bonbon', 2), activate('archive', 'Ouvrir la campagne detaillee')] },
+      7: { title: 'LIRE L ARCHIVE DU TEST LEVEL', steps: [scan('lorebillboard', 'Inspecter le modele inerte'), scan('toyblock', 'Comparer deux cubes bleus', 2), activate('archive', 'Ouvrir les couches 142-146')] },
       8: { title: 'ECLAIRER MILDENHALL', steps: [scan('window', 'Verifier une fenetre du manoir'), activate('candle', 'Allumer une bougie'), talk('kinger', 'Rester avec Kinger')] },
       9: { title: 'DESCENDRE AU SOUS-SOL', steps: [scan('stairs', 'Examiner l escalier'), scan('barrel', 'Verifier les barils'), talk('kinger', 'Ecouter Kinger dans l obscurite')] },
       10: { title: 'TENIR LE SERVICE SPUDSY', steps: [scan('counter', 'Verifier le comptoir'), activate('menu', 'Lire deux menus de service', 2), talk('workgangle', 'Aider Gangle')] },
@@ -4474,9 +5726,9 @@ const OS = {
       13: { title: 'SECURISER L ARENE', steps: [scan('target', 'Verifier trois cibles', 3), scan('crate', 'Inspecter les caisses'), talk('jax', 'Confronter Jax')] },
       14: { title: 'SONDER LE LAC', steps: [scan('umbrella', 'Verifier les parasols'), scan('wave', 'Analyser deux boucles d eau', 2), talk('beachgangle', 'Parler a Gangle sur la plage')] },
       15: { title: 'CONSULTER LA CHINESE ROOM', steps: [scan('doorframe', 'Verifier la porte mysterieuse'), activate('console', 'Activer le dispositif de consultation'), talk('caine', 'Interroger Caine sur la reponse')] },
-      16: { title: 'AUDITER LE COEUR C&A', steps: [scan('desk', 'Inspecter le bureau de Caine'), activate('console', 'Activer la console C&A'), talk('caine', 'Demander des comptes a Caine')] },
+      16: { title: 'AUDITER LE BUREAU DE CAINE', steps: [scan('desk', 'Inspecter le bureau de Caine'), scan('ring', 'Comparer les deux globes', 2), activate('archive', 'Ouvrir la bibliotheque coulissante'), talk('caine', 'Demander des comptes a Caine')] },
       17: { title: 'RECONSTRUIRE LE SOUVENIR', steps: [scan('memory', 'Rassembler trois fragments', 3), talk('queenie', 'Ecouter l archive Queenie')] },
-      18: { title: 'STABILISER LE FINAL', steps: [activate('spotlight', 'Recaler le projecteur final'), talk('ribbit', 'Identifier le signal Ribbit'), talk('caine', 'Verifier l etat de Caine')] },
+      18: { title: 'INDEXER LE FINAL', steps: [activate('spotlight', 'Recaler le projecteur d archive'), activate('archive', 'Ouvrir le dictionnaire de Kinger'), scan('gridnode', 'Verifier le fragment de couleur')] },
       19: { title: 'INDEXER LES ANCIENS MEMBRES', steps: [activate('archive', 'Ouvrir trois cadres archive', 3), talk('ribbit', 'Consulter Ribbit')] },
       20: { title: 'RELEVER LE COULOIR', steps: [scan('wallart', 'Verifier les deux reperes du couloir', 2), scan('ceilinglight', 'Suivre les plafonniers'), talk('pomni', 'Retrouver Pomni')] },
       21: { title: 'REMONTER LES ECHOS DU CAFE', steps: [scan('counter', 'Inspecter le comptoir'), scan('table', 'Verifier deux tables', 2), talk('gangle', 'Parler avec Gangle')] },
@@ -4488,7 +5740,7 @@ const OS = {
       27: { title: 'GARDER UN REPERE DANS LE VIDE', steps: [scan('exitframe', 'Fixer le cadre de sortie'), scan('eye', 'Relever les deux signaux', 2)] },
       28: { title: 'RECALER L ESPACE COMMUN', steps: [scan('table', 'Verifier la table centrale'), scan('ring', 'Inspecter le repere circulaire'), talk('ragatha', 'Retrouver Ragatha')] },
       29: { title: 'CARTOGRAPHIER LES TUBES', steps: [scan('doorframe', 'Identifier trois cadres de porte', 3), scan('ring', 'Verifier deux boucles de tube', 2)] },
-      30: { title: 'INSPECTER LE LOSER CORNER', steps: [scan('table', 'Verifier le mobilier'), scan('window', 'Localiser l aquarium'), talk('zooble', 'Parler a Zooble')] },
+      30: { title: 'INSPECTER LE LOSER CORNER', steps: [scan('table', 'Verifier le mobilier'), scan('window', 'Localiser l aquarium'), talk('kinger', 'Rejoindre Kinger')] },
       31: { title: 'BALISER THE NEST', steps: [scan('caveslide', 'Verifier le toboggan d entree'), scan('escalator', 'Relever l escalator de sortie'), scan('caveglow', 'Identifier deux formes lumineuses', 2), talk('jax', 'Retrouver le groupe de Jax')] },
       32: { title: 'PREPARER L AUDIENCE ROYALE', steps: [scan('stairs', 'Verifier l escalier du palais'), scan('candy', 'Relever deux ornements', 2), talk('loolilalu', 'Consulter Loolilalu')] },
       33: { title: 'REMETTRE LE TANKER EN ROUTE', steps: [scan('truck', 'Verifier le camion-citerne'), scan('candy', 'Reperer deux obstacles', 2), talk('gummigoo', 'Retrouver Gummigoo')] },
@@ -4498,7 +5750,7 @@ const OS = {
       37: { title: 'ARRETER LA FORMATION', steps: [activate('menu', 'Interrompre l ecran de formation'), scan('spotlight', 'Verifier le projecteur'), talk('jax', 'Parler a Jax')] },
       38: { title: 'PREPARER LES AWARDS', steps: [activate('scoreboard', 'Allumer le panneau des Awards'), scan('stairs', 'Verifier l acces scene'), talk('caine', 'Demander le verdict a Caine')] },
       39: { title: 'ALIGNER LE PHARE', steps: [scan('lighthouse', 'Verifier la tour du phare'), scan('stairs', 'Inspecter le depart du toboggan'), talk('jax', 'Rejoindre Jax')] },
-      40: { title: 'RETROUVER LE COFFRE', steps: [activate('archive', 'Ouvrir le coffre deja pille'), scan('wave', 'Analyser deux courants', 2), talk('beachgangle', 'Parler a Gangle')] },
+      40: { title: 'RETROUVER LE COFFRE', steps: [scan('crate', 'Verifier le coffre deja pille'), scan('wave', 'Analyser deux courants', 2), talk('truthtellerfish', 'Interroger le poisson orange')] },
       41: { title: 'FIXER LE SOUVENIR C&A', steps: [scan('doorframe', 'Verifier la porte du souvenir'), scan('desk', 'Inspecter le mobilier efface'), talk('jax', 'Ecouter Jax')] },
       42: { title: 'RELEVER LA FETE FORAINE', steps: [scan('ring', 'Verifier deux attractions', 2), scan('pillar', 'Identifier le repere central'), talk('caine', 'Questionner Caine')] },
       43: { title: 'RECONSTITUER LE FESTIN DU PILOTE', steps: [scan('banquettable', 'Examiner la longue table blanche'), scan('feastplatter', 'Verifier quatre plats digitaux', 4), talk('bubble', 'Rejoindre le Bubble Chef')] },
@@ -4691,7 +5943,7 @@ const OS = {
     state.interactionSpeaker = name;
     state.interactionOrigin = null;
     this.advanceCircusZoneChallenge('take', prop.kind);
-    this.advanceCircusCampaign('take', prop.campaignTarget || prop.kind);
+    this.advanceCircusCampaign('take', prop.campaignTarget || prop.kind, 1, id);
     this.advanceCircusCustomAdventure('take', id);
     this.startCircusActivityForProp(prop, 'take');
     this.advanceCircusActivity('take', prop.campaignTarget || prop.kind);
@@ -4749,7 +6001,7 @@ const OS = {
     state.interactionOrigin = { x: state.player.x, z: state.player.z, range: 1.6 };
     this.adjustCainOSRelation(avatar, 5);
     this.advanceCircusZoneChallenge('give', item.kind);
-    this.advanceCircusCampaign('give', item.campaignTarget || item.kind);
+    this.advanceCircusCampaign('give', item.campaignTarget || item.kind, 1, item.id || `${state.currentZoneId}:${item.kind}`);
     this.advanceCircusCustomAdventure('give', `${avatar}:${item.id}`);
     this.advanceCircusActivity('give', item.campaignTarget || item.kind);
     this.updateCircusFpsToolbar();
@@ -4790,11 +6042,28 @@ const OS = {
     state.interactionOrigin = { x: state.player.x, z: state.player.z, range: 1.35 };
     state.interactionChannel = 'scan';
     state.interactionSpeaker = this.getCircusPropName(prop, state.currentZoneId);
-    this.advanceCircusZoneChallenge(options.activate === false ? 'look' : 'use', prop.kind);
-    this.advanceCircusCampaign(options.activate === false ? 'look' : 'use', prop.campaignTarget || prop.kind);
-    this.advanceCircusCustomAdventure(options.activate === false ? 'look' : 'use', discoveryId);
-    this.startCircusActivityForProp(prop, options.activate === false ? 'look' : 'use');
-    this.advanceCircusActivity(options.activate === false ? 'look' : 'use', prop.campaignTarget || prop.kind);
+    const interactionAction = options.activate === false ? 'look' : 'use';
+    const campaignTarget = prop.campaignTarget || prop.kind;
+    if (interactionAction === 'use' && state.currentZoneId === 2 && campaignTarget === 'gummigoodeletion') {
+      const startedAt = performance.now();
+      state.forcedAmbientEvent = {
+        zoneId: 2,
+        startedAt,
+        until: startedAt + 1800,
+        event: {
+          id: 'gummigoo_delete',
+          label: 'NPC DELETE',
+          detail: 'EVENT: la suppression de Gummigoo laisse une silhouette de donnees qui se desagrege.',
+          color: '#d8a23a'
+        }
+      };
+      state.lastZoneEventId = null;
+    }
+    this.advanceCircusZoneChallenge(interactionAction, prop.kind);
+    this.advanceCircusCampaign(interactionAction, campaignTarget, 1, discoveryId);
+    this.advanceCircusCustomAdventure(interactionAction, discoveryId);
+    this.startCircusActivityForProp(prop, interactionAction);
+    this.advanceCircusActivity(interactionAction, campaignTarget);
     this.saveCircusPersistentWorldState();
     this.emitCircusNoise(options.activate === false ? 0.12 : 0.38, this.getCircusPropName(prop, state.currentZoneId));
     this.playCircusSpatialObjectSound(prop, options.activate === false ? 'scan' : 'activate');
@@ -4885,7 +6154,7 @@ const OS = {
       '4:eye': "Signal d'abstraction: les yeux ne sont pas un personnage actif, mais une menace archivee.",
       '5:exitframe': "Cadre de sortie: prototype visuel. CainOS marque la porte comme espoir, pas comme preuve.",
       '5:desk': "Bureau impossible: trace de l'illusion de sortie du pilote.",
-      '6:candy': "Relief bonbon: decor sucre, mais route fortement scriptée autour du convoi.",
+      '6:candy': "Relief bonbon: decor sucre, mais route fortement scriptee autour du convoi.",
       '6:truck': "Camion-citerne: objet central du convoi. Les donnees NPC y collent plus que la physique.",
       '7:console': "Console de test: couche technique ou les PNJ deviennent lisibles comme donnees.",
       '7:gridnode': "Noeud de grille: raccourci de debug, pas un element visible pour les residents.",
@@ -4940,7 +6209,7 @@ const OS = {
       '37:menu': "Ecran de formation: Jax est isole face aux consignes, hors de la salle publique.",
       '38:scoreboard': "Panneau des Awards: Caine convertit les epreuves et relations du groupe en recompenses.",
       '39:lighthouse': "Tour du phare: structure dominante de la plage et point de depart du toboggan.",
-      '40:archive': "Coffre sous-marin: deja pille, il reste comme objectif vide de la scene.",
+      '40:crate': "Coffre sous-marin: deja pille, il reste comme objectif vide de la scene.",
       '41:doorframe': "Porte du souvenir de Jax: fragment incomplet, pas sortie fiable vers le monde reel.",
       '42:ring': "Attraction foraine: silhouette visible depuis le terrain, mais jamais exploree dans le parcours canon.",
       '43:table': "Table principale du chapiteau: repas communs, distincts du Cafe Cirque."
@@ -5110,7 +6379,7 @@ const OS = {
       state.interactionOrigin = { x: state.player.x, z: state.player.z, range: 1.45 };
       state.interactionChannel = 'scan';
       state.interactionSpeaker = 'CAINOS';
-      this.advanceCircusCampaign('talk', avatar);
+      this.advanceCircusCampaign('talk', avatar, 1, `${state.currentZoneId}:${avatar}`);
       this.advanceCircusCustomAdventure('talk', sprite.baseAvatar || avatar);
       this.emitCircusNoise(sprite.type === 'abstract' ? 0.52 : 0.08, `scan ${sprite.name}`);
       this.saveCircusPersistentWorldState();
@@ -5127,7 +6396,7 @@ const OS = {
     state.interactionOrigin = { x: state.player.x, z: state.player.z, range: 1.45 };
     state.interactionChannel = 'dialogue';
     state.interactionSpeaker = sprite.name;
-    this.advanceCircusCampaign('talk', avatar);
+    this.advanceCircusCampaign('talk', avatar, 1, `${state.currentZoneId}:${avatar}`);
     this.advanceCircusCustomAdventure('talk', sprite.baseAvatar || avatar);
     this.emitCircusNoise(0.28, `dialogue ${sprite.name}`);
     this.saveCircusPersistentWorldState();
@@ -5233,7 +6502,9 @@ const OS = {
     transition.progress = progress;
     if (progress >= 0.48 && !transition.switched) {
       transition.switched = true;
-      state.history.push(transition.fromZoneId);
+      if (!['cainecut', 'caineportal', 'projection', 'memory', 'mind', 'void', 'network'].includes(transition.kind)) {
+        state.history.push(transition.fromZoneId);
+      }
       this.setCircusSimulationZone(transition.targetId, false, transition.fromZoneId);
     }
     if (progress >= 1) {
@@ -5307,7 +6578,9 @@ const OS = {
     transition.progress = Math.min(1, elapsed / transition.duration);
     if (transition.progress >= 0.58 && !transition.switched) {
       transition.switched = true;
-      state.history.push(transition.fromZoneId);
+      if (!['cainecut', 'caineportal', 'projection', 'memory', 'mind', 'void', 'network'].includes(transition.kind)) {
+        state.history.push(transition.fromZoneId);
+      }
       this.setCircusSimulationZone(transition.targetId, false, transition.fromZoneId);
     }
     if (transition.progress >= 1) {
@@ -5627,9 +6900,23 @@ const OS = {
         2: "Pomni: Le chapiteau est stable, mais chaque porte ressemble encore a une fausse promesse.",
         4: "Pomni: Je reconnais trop bien cette pression. Kaufmo n'est pas une porte de sortie.",
         6: "Pomni: Le canyon a l'air ouvert, mais les murs de donnees reviennent toujours.",
+        45: "Pomni: Le cauchemar est fini. Ragatha est bien dans ma chambre, et le briefing de Caine nous attend dehors.",
+        133: "Pomni: Le carrosse nous conduit vers la capitale. Ce royaume est encore une aventure de Caine.",
+        140: "Pomni: La collision a ouvert le sol sous Gummigoo et moi. Le groupe est reste au-dessus.",
+        141: "Pomni: Nous avons retrouve le groupe pres de la riviere avec deux tankers, pas par une porte du Test Level.",
+        142: "Pomni: Nous sommes tombes hors de la carte. Cette fissure ne ressemble pas a un passage construit.",
+        143: "Pomni: Le quadrillage continue dans toutes les directions. Il faut garder Gummigoo en vue.",
+        144: "Pomni: Ce modele lui ressemble exactement, mais il ne reagit pas. Gummigoo, lui, est juste a cote de moi.",
+        145: "Pomni: Si la collision nous a fait tomber ici, une autre collision peut peut-etre nous en sortir.",
+        146: "Pomni: Ces theieres geantes sont au-dessus de la couche de test. Le royaume est quelque part plus loin.",
+        147: "Pomni: Ce Cellar fait partie du cauchemar. Je ne suis pas physiquement descendue ici.",
         8: "Pomni: Le manoir force les souvenirs a remonter. Je prefere rester pres de Kinger.",
         10: "Pomni: Les commandes vont trop vite. Gangle tient a peine le rythme.",
         14: "Pomni: Le lac fait semblant d'etre calme. Caine fait toujours semblant.",
+        40: "Pomni: Le coffre est vide. Les poissons gardent surtout une histoire deja terminee.",
+        44: "Pomni: Les photos de Kaufmo et Ribbit rendent cette chambre moins simple que le personnage que Jax joue devant nous.",
+        94: "Pomni: Abel parle comme s il connaissait la sortie. Pour l instant, je ne vois que des accessoires de Caine.",
+        95: "Pomni: Deux boutons ne prouvent pas que nous avons un vrai choix.",
         18: "Pomni: Si tout perd ses couleurs, au moins on peut encore se retrouver ici.",
         64: "Pomni: Le manoir continue au-dessus, mais CainOS a complete les passages que nous n avons pas vus.",
         67: "Pomni: Ce balcon donne une vraie vue sur le royaume, meme si son plan est une reconstruction.",
@@ -5644,7 +6931,8 @@ const OS = {
       },
       caine: {
         2: "Caine: Une scene praticable, des portes splendides, et aucune garantie de sortie!",
-        16: "Caine: Le coeur C&A est un local technique, pas une salle de pause pour sujets curieux.",
+        15: "Caine: Une Chinese Room parfaitement litterale, sans aucun rapport avec mes dossiers administratifs!",
+        16: "Caine: Mon bureau personnel contient exactement le niveau de mystere necessaire a cette aventure!",
         18: "Caine: Le spectacle continue tant que le systeme peut encore sourire.",
         67: "Caine: Un balcon royal parfaitement adapte aux besoins panoramiques de l aventure!",
         69: "Caine: La lanterne domine le lac et rend chaque sortie de toboggan infiniment plus spectaculaire!",
@@ -5663,6 +6951,9 @@ const OS = {
       jax: {
         2: "Jax: Si une porte est verrouillee, c'est probablement la seule interessante.",
         14: "Jax: Version chasseur, meme probleme: Caine appelle ca des vacances.",
+        44: "Jax: Les photos restent ici. Le doorbell, lui, n a rien d une invitation.",
+        95: "Jax: Rouge. On ne va pas attendre que ce faux choix se prenne pour un dilemme.",
+        96: "Jax: Garde Caine occupe et la cle changera de proprietaire.",
         18: "Jax: Le final dramatique, c'est vraiment pas mon style.",
         68: "Jax: Monter tout ca pour redescendre par un toboggan. Enfin une architecture logique.",
         69: "Jax: De la-haut, on voit tres bien a quel point les vacances de Caine tournent en rond.",
@@ -5674,7 +6965,11 @@ const OS = {
       },
       ragatha: {
         2: "Ragatha: Avance doucement. Les salles changent moins vite si on garde un repere.",
+        45: "Ragatha: Tu es reveillee. On peut rejoindre les autres quand tu es prete.",
+        133: "Ragatha: Restons dans le carrosse jusqu au pont-levis. Le groupe doit arriver ensemble.",
+        141: "Ragatha: The Fudge est devant nous et Pomni manque encore. On garde la riviere comme repere.",
         8: "Ragatha: Le manoir n'est pas juste un decor. Il appuie sur les failles.",
+        14: "Ragatha: Mon oeil-bouton est tombe pres de la cabine. On le recupere avant de retourner dans l eau.",
         18: "Ragatha: Meme quand la scene casse, le groupe doit rester ensemble.",
         66: "Ragatha: La galerie reprend les couleurs du palais. Gardons l escalier comme repere.",
         71: "Ragatha: On reste entre les balises. La neige rend les distances difficiles a lire.",
@@ -5705,34 +7000,43 @@ const OS = {
       },
       gummigoo: {
         6: "Gummigoo: Le canyon a des bords. Les souvenirs, eux, ont l'air fabriques.",
-        7: "Gummigoo: Cette couche de test me fait comprendre trop de choses."
+        7: "Gummigoo: Cette couche de test me fait comprendre trop de choses.",
+        137: "Gummigoo: Max et Chad sont avec moi au camp. Le tanker vole est notre seule avance sur le war rig.",
+        140: "Gummigoo: La crete a cede sous Pomni et moi. Max et Chad ne sont pas tombes avec nous.",
+        142: "Gummigoo: Je ne reconnais rien ici. Ce n est pas une partie du canyon que nous aurions pu atteindre par la route.",
+        143: "Gummigoo: Ces murs quadrilles n ont rien d un royaume. Ils ressemblent aux coulisses du decor.",
+        144: "Gummigoo: Ce corps inerte porte mon apparence. Il ne parle pas et il ne bouge pas.",
+        145: "Gummigoo: Le tanker duplique peut nous ramener vers une surface si nous cassons la bonne collision.",
+        146: "Gummigoo: Les theieres et le ciel pastel confirment seulement que nous sommes encore hors du monde construit.",
+        141: "Gummigoo: Nous avons rejoint le bassin avec Pomni et le tanker duplique. Le groupe nous attend de l autre cote."
       },
       max: {
-        6: "Max: Si la route se repete, c'est peut-etre parce qu'on n'est pas la pour aller quelque part."
+        6: "Max: Si la route se repete, c'est peut-etre parce qu'on n'est pas la pour aller quelque part.",
+        137: "Max: Le camp tient encore. On suit Gummigoo des que le tanker repart.",
+        141: "Max: Pomni et Gummigoo sont revenus avec un second tanker. On peut enfin reprendre la route."
       },
       chad: {
-        6: "Chad: On suit Gummigoo, mais cette route a trop de coutures pour etre normale."
+        6: "Chad: On suit Gummigoo, mais cette route a trop de coutures pour etre normale.",
+        137: "Chad: Le war rig arrive. Le tanker doit quitter le camp maintenant.",
+        141: "Chad: Les deux tankers sont reunis au bassin; la poursuite peut repartir vers le chateau."
       },
       loolilalu: {
-        6: "Princess Loolilalu: Le royaume garde son decor royal, meme quand Caine transforme tout en mission."
+        6: "Princess Loolilalu: Le royaume garde son decor royal, meme quand Caine transforme tout en mission.",
+        135: "Princess Loolilalu: La cle royale ouvre la mission du sirop; le parvis reste le point de depart et de livraison."
       },
       fudge: {
-        6: "The Fudge: La confiserie bouge comme une menace, pas comme un decor."
+        6: "The Fudge: La confiserie bouge comme une menace, pas comme un decor.",
+        141: "The Fudge: Le bassin de chocolat est son territoire avant son entree dans la capitale."
       },
       baronmildenhall: {
         8: "Baron Mildenhall: Les enregistrements du manoir veulent que tu regardes le trophée, mais pas toute la vérité.",
         9: "Baron Mildenhall: Le sous-sol transforme la chasse en piege."
       },
       marthamildenhall: {
-        8: "Martha Mildenhall: La peur de Kinger n'efface pas ce qui s'est vraiment passe ici.",
-        34: "Martha Mildenhall: Ce lieu garde une faute, mais aussi un souvenir capable de la nommer."
+        125: "Martha Mildenhall: La route normale vous ramene tous dans ce salon. Le the peut attendre le rappel de Caine."
       },
       ghostly: {
-        9: "Ghostly: Le manoir n'a pas que des menaces; certains signaux brillent encore."
-      },
-      angel: {
-        8: "Angel: Le manoir m'a pris pour une menace avant que le récit corrige son erreur.",
-        34: "Angel: Le sous-sol garde l'echo de ce que le Baron n'a pas compris."
+        85: "Ghostly: Le vestibule est le seul endroit ou mon signal rejoint directement le groupe."
       },
       horrorghost: {
         8: "Fantome: La lumiere ne chasse pas la peur. Elle la nomme."
@@ -5748,23 +7052,32 @@ const OS = {
       },
       workgangle: {
         10: "Gangle: Le comptoir transforme la scene en pression de travail. Mon masque tient a peine.",
-        72: "Gangle: Je veux seulement quitter le parking sans recommencer tout le service."
+        72: "Gangle: Je veux seulement quitter le parking sans recommencer tout le service.",
+        127: "Gangle: La facade est la derniere seconde avant que le service commence.",
+        129: "Gangle: Le badge et le planning ne rendent pas ce bureau plus facile a supporter.",
+        130: "Gangle: Ici, derriere la cuisine, le bruit baisse enfin.",
+        131: "Gangle: Restons sous le lampadaire encore un instant.",
+        132: "Gangle: B+ ne dit rien de ce que cette journee a vraiment coute."
+      },
+      gloinkqueenscale: {
+        128: "Gloink Queen: Trois cents burgers. La commande doit garder ma vraie taille."
       },
       ming: {
         10: "Ming: Signal figurant detecte. Caine a l'air beaucoup trop agace par ce profil.",
         15: "Ming: Les couches admin classent les personnages de fond comme des anomalies presque importantes."
       },
       disappearingguy: {
+        110: "Disappearing Guy: He--",
         38: "Disappearing Guy: He--"
       },
       committeemember: {
         38: "Committee Member: La ceremonie de Caine a besoin d'un comite, meme quand le comite n'a presque rien a dire."
       },
       truthtellerfish: {
-        14: "Orange Crappy Looking Fish: Dude, ils ont pris le coffre. C'etait toutes mes economies."
+        40: "Orange Crappy Looking Fish: Ils ont pris le coffre. Il etait deja vide avant votre arrivee."
       },
       liarfish: {
-        14: "Red Crappy Looking Fish: C'est moi qui raconte des mensonges."
+        40: "Red Crappy Looking Fish: Je suis celui qui ment. Cela ne remplit pas le coffre."
       },
       stupidburgermannequin: {
         10: "Spudsy Mannequin: Je voudrais commander le Stupid Burger. N'oublie pas la sauce."
@@ -5773,9 +7086,7 @@ const OS = {
         10: "Spudsy Mannequin: Non merci, j'ai deja ce bol de cereales."
       },
       shrimpnpc: {
-        14: "Shrimp NPC: En tant que PNJ crevette, je suis surtout inquiet du soleil.",
-        40: "Shrimp NPC: Le lac digital n'est pas plus rassurant vu de pres.",
-        70: "Shrimp NPC: C est bien Shrimp Town, mais CainOS n en connait pas assez pour reconstruire chaque rue."
+        70: "Shrimp NPC: Shrimp Town n apparait que dans le resultat bleu raconte par Caine. Cette rue reste un contrefactuel."
       },
       chineseroomnpc: {
         15: "Chinese Room NPC: Oh, merci. Cette piece etait beaucoup trop litterale."
@@ -5800,7 +7111,7 @@ const OS = {
         4: "Kaufmo Archive: signal abstrait. Conversation impossible, danger reel."
       },
       abelmannequin: {
-        16: "Abel: Les couches C&A n'ont pas ete construites pour etre visitees par des avatars."
+        94: "Abel: Mon histoire appartient au scenario de Caine. Ne traitez ni mes passes ni mes affirmations comme une archive independante."
       },
       abelfullbody: {
         16: "Abel Full Body: Archive physique reconstruite, a traiter comme trace C&A et non resident actif."
@@ -6250,7 +7561,7 @@ const OS = {
     state.threatPositions.clear();
     state.threatAlert = '';
     this.markCainOSZoneVisited(zoneId);
-    this.advanceCircusCampaign('visit', String(zoneId));
+    this.advanceCircusCampaign('visit', String(zoneId), 1, `zone:${zoneId}`);
     this.triggerCircusZoneDynamicEvent(zoneId);
     if (playSound) SoundManager.play(660, 0.08, 'triangle', 0.05);
     if (typeof SoundManager.startContextPulse === 'function') {
@@ -6274,7 +7585,7 @@ const OS = {
       33: { title: 'ROUTE DU TANKER', steps: [{ action: 'use', kind: 'truck', count: 1, label: 'Relancer le camion' }, { action: 'drive', kind: 'truck', count: 4, label: 'Traverser la route du canyon' }] },
       34: { title: 'AMES DU MANOIR', steps: [{ action: 'use', kind: 'candle', count: 1, label: 'Fixer une source lumineuse' }, { action: 'survive', kind: 'candle', count: 4, label: 'Resister a la possession' }] },
       35: { title: 'CUISINE SPUDSY', steps: [{ action: 'take', kind: 'menu', count: 1, label: 'Prendre un ticket cuisine' }, { action: 'use', kind: 'counter', count: 1, label: 'Assembler la commande' }, { action: 'give', kind: 'menu', count: 1, label: 'Servir la commande' }] },
-      40: { title: 'PLONGEE AU TRESOR', steps: [{ action: 'use', kind: 'wave', count: 1, label: 'Descendre sous le lac' }, { action: 'dive', kind: 'wave', count: 3, label: 'Atteindre le coffre' }, { action: 'use', kind: 'archive', count: 1, label: 'Verifier le coffre vide' }] },
+      40: { title: 'PLONGEE AU TRESOR', steps: [{ action: 'use', kind: 'wave', count: 1, label: 'Descendre sous le lac' }, { action: 'dive', kind: 'wave', count: 3, label: 'Atteindre le coffre' }, { action: 'look', kind: 'crate', count: 1, label: 'Verifier le coffre vide' }] },
       43: { title: 'FESTIN FINAL DU PILOTE', steps: [{ action: 'look', kind: 'banquettable', count: 1, label: 'Examiner la longue table blanche' }, { action: 'look', kind: 'feastplatter', count: 4, label: 'Verifier les quatre services du banquet' }] },
       64: { title: 'ETAGE MILDENHALL', steps: [{ action: 'look', kind: 'window', count: 2, label: 'Comparer les deux fenetres' }, { action: 'use', kind: 'candle', count: 1, label: 'Fixer un repere lumineux' }] },
       65: { title: 'SURVIE AU GRENIER', steps: [{ action: 'use', kind: 'candle', count: 1, label: 'Allumer la bougie du grenier' }, { action: 'survive', kind: 'candle', count: 3, label: 'Rester discret face au signal' }] },
@@ -6288,6 +7599,8 @@ const OS = {
       73: { title: 'POSTE DE SCRATCH', steps: [{ action: 'look', kind: 'desk', count: 1, label: 'Examiner le poste de travail' }, { action: 'use', kind: 'console', count: 1, label: 'Lire le vieux PC C&A' }, { action: 'look', kind: 'memory', count: 1, label: 'Comparer les scans cerebraux' }] },
       74: { title: 'FOYER DE LA PSYCHE', steps: [{ action: 'look', kind: 'doorframe', count: 5, label: 'Identifier les cinq portes' }, { action: 'use', kind: 'archive', count: 1, label: 'Ouvrir l index des scenarios' }] },
       75: { title: 'GROUNDS ETENDUS', steps: [{ action: 'look', kind: 'tower', count: 1, label: 'Relever le grand toboggan' }, { action: 'use', kind: 'ring', count: 2, label: 'Synchroniser deux ilots' }] }
+      ,
+      138: { title: 'POURSUITE CANDY', steps: [{ action: 'look', kind: 'candy', count: 2, label: 'Lire les deux voies' }, { action: 'use', kind: 'truck', count: 1, label: 'Prendre le controle du rig' }, { action: 'drive', kind: 'truck', count: 4, label: 'Eviter quatre sequences d obstacles' }] }
     };
     if (zoneId >= 44 && zoneId <= 49) {
       const room = this.getCircusBedroomDefinitions()[zoneId];
@@ -6309,6 +7622,7 @@ const OS = {
     if (zoneId >= 52 && zoneId <= 63) {
       return { title: 'TRACE ABANDONNEE', steps: [{ action: 'look', kind: 'bed', count: 1, label: 'Observer sans deplacer' }, { action: 'use', kind: 'archive', count: 1, label: 'Consulter le dossier de porte' }] };
     }
+    if (configs[zoneId]) return configs[zoneId];
     const canonRoom = this.getCircusCanonRoomDefinitions()[zoneId];
     if (canonRoom) {
       const kinds = [...new Set(canonRoom.objective?.kinds || (canonRoom.props || []).slice(0, 2).map(prop => prop.kind))];
@@ -6327,7 +7641,7 @@ const OS = {
 
   getCircusActivityTypeForProp(prop, action) {
     const zoneId = this.circusDoom?.currentZoneId;
-    if (prop.kind === 'truck' && action === 'use' && [6, 33].includes(zoneId)) return 'tanker';
+    if (prop.kind === 'truck' && action === 'use' && [6, 33, 138].includes(zoneId)) return 'tanker';
     if (['menu', 'counter'].includes(prop.kind) && ['take', 'use'].includes(action) && [10, 35].includes(zoneId)) return 'spudsy';
     if (prop.kind === 'scoreboard' && action === 'use' && zoneId === 12) return 'softball';
     if (prop.kind === 'candle' && action === 'use' && [8, 34, 65].includes(zoneId)) return 'mildenhall';
@@ -6340,7 +7654,7 @@ const OS = {
     const type = this.getCircusActivityTypeForProp(prop, action);
     if (!state || !type || (state.currentActivity && !state.currentActivity.complete && state.currentActivity.type === type)) return;
     const base = { type, zoneId: state.currentZoneId, startedAt: performance.now(), complete: false, persistent: true, score: 0 };
-    if (type === 'tanker') Object.assign(base, { title: 'CONVOI TANKER', distance: 0, integrity: 100, lane: 1, hazard: 0.5, hazardTimer: 0 });
+    if (type === 'tanker') Object.assign(base, { title: 'CONVOI TANKER', distance: 0, integrity: 100, lane: 1, hazard: 0.5, hazardTimer: 0, campaignAccumulator: 0 });
     if (type === 'spudsy') Object.assign(base, { title: 'SERVICE SPUDSY', order: 0, phase: 0, timeLeft: 42, mistakes: 0 });
     if (type === 'softball') Object.assign(base, { title: 'SOFTBALL', marker: 0, markerDirection: 1, hits: 0, strikes: 0 });
     if (type === 'mildenhall') Object.assign(base, { title: 'SURVIE MILDENHALL', timeLeft: 22, exposure: 0 });
@@ -6383,6 +7697,17 @@ const OS = {
     return false;
   },
 
+  isCircusCampaignGateActive(gate) {
+    if (!gate) return true;
+    const state = this.circusDoom;
+    if (!state || state.activeCampaign?.episode !== Number(gate.episode)) return false;
+    const stored = state.campaigns?.[Number(gate.episode)];
+    const stage = Number(stored?.stage || 0);
+    const minStage = Number.isFinite(Number(gate.minStage)) ? Number(gate.minStage) : 0;
+    const maxStage = Number.isFinite(Number(gate.maxStage)) ? Number(gate.maxStage) : Number.POSITIVE_INFINITY;
+    return stage >= minStage && stage <= maxStage;
+  },
+
   handleCircusActivityAction() {
     const activity = this.circusDoom?.currentActivity;
     if (!activity || activity.complete || activity.type !== 'softball') return false;
@@ -6411,6 +7736,11 @@ const OS = {
       if (state.keys.has('a') || state.keys.has('q')) activity.lane = Math.max(0, activity.lane - dt * 2.2);
       if (state.keys.has('d')) activity.lane = Math.min(2, activity.lane + dt * 2.2);
       activity.distance += movedDistance * 4;
+      activity.campaignAccumulator = (activity.campaignAccumulator || 0) + movedDistance;
+      if (activity.campaignAccumulator >= 1.25) {
+        activity.campaignAccumulator -= 1.25;
+        this.advanceCircusCampaign('drive', 'truck', 1, `drive:${Math.floor(activity.distance)}`);
+      }
       activity.hazardTimer += dt;
       if (activity.hazardTimer >= 1.3) {
         activity.hazardTimer = 0;
@@ -6577,7 +7907,8 @@ const OS = {
     if (!state || state.cinematic) return;
     const threats = [...this.getCircusZoneSprites(state.currentZoneId), ...this.getCircusCustomAdventureSprites(state.currentZoneId, state)].filter(sprite => {
       const avatar = sprite.avatar || sprite.type || '';
-      return sprite.threatActive !== false && ['abstractedkaufmo', 'abstractedjax', 'abstractedribbit', 'abstractedqueeniedark', 'abstractedqueenie', 'cellarabstraction', 'aquaticabstraction'].includes(avatar);
+      return sprite.threatActive === true
+        || (sprite.threatActive !== false && ['abstractedkaufmo', 'abstractedjax', 'abstractedribbit', 'abstractedqueeniedark', 'abstractedqueenie', 'cellarabstraction', 'aquaticabstraction'].includes(avatar));
     });
     state.threatAlert = '';
     threats.forEach(sprite => {
@@ -6595,7 +7926,7 @@ const OS = {
       const detectionRadius = 2.0 + (state.noiseLevel || 0) * 3.2 + (state.visibilityLevel || 0) * 1.4;
       const alerted = (state.noiseLevel || 0) > 0.25 || distance < detectionRadius || state.currentZoneId === 4;
       if (alerted && distance > 0.82) {
-        const repelled = protectedByLight && distance < 2.5;
+        const repelled = avatar !== 'angel' && protectedByLight && distance < 2.5;
         const speed = repelled ? 0.3 : ((state.noiseLevel || 0) > 0.7 ? 0.66 : 0.36);
         const direction = repelled ? -1 : 1;
         const nx = position.x + (dx / distance) * speed * dt * direction;
@@ -6976,6 +8307,8 @@ const OS = {
     const collidableKinds = new Set(['table', 'banquettable', 'counter', 'desk', 'bed', 'partition', 'sofa', 'pillar', 'crate', 'barrel', 'tent', 'building', 'tower', 'lighthouse']);
     state.worldColliders = this.getCircusZoneProps(state.currentZoneId)
       .map((prop, index) => ({ ...prop, interactionId: index }))
+      .filter(prop => !prop.loreGate || this.hasCircusLoreGate(prop.loreGate))
+      .filter(prop => !prop.campaignGate || this.isCircusCampaignGateActive(prop.campaignGate))
       .filter(prop => collidableKinds.has(prop.kind) && !state.collectedProps?.has(`${state.currentZoneId}:${prop.interactionId}`))
       .map(prop => {
         const center = this.resolveCircusWorldPoint(prop, state);
@@ -7014,6 +8347,7 @@ const OS = {
       exit: { wallScale: 0.72, ceilingWorldHeight: 2.6, roof: 'tiles', wallBias: 0.55 },
       void: { wallScale: 0.5, ceilingWorldHeight: 5, roof: 'open', wallBias: 0.53 },
       test: { wallScale: 0.88, ceilingWorldHeight: 3.3, roof: 'grid', wallBias: 0.57 },
+      testsurface: { wallScale: 0.44, ceilingWorldHeight: 7.2, roof: 'open', wallBias: 0.5 },
       admin: { wallScale: 0.82, ceilingWorldHeight: 3.0, roof: 'grid', wallBias: 0.56 },
       core: { wallScale: 1.0, ceilingWorldHeight: 3.7, roof: 'grid', wallBias: 0.59 },
       spudsy: { wallScale: 0.7, ceilingWorldHeight: 2.55, roof: 'tiles', wallBias: 0.55 },
@@ -7552,6 +8886,7 @@ const OS = {
       exit: { ceilingTop: '#e7eaf2', ceilingBottom: '#ffffff', floorA: '#d9dce5', floorB: '#f3f3f8', floorC: '#a4a4b2', grid: 'rgba(20,20,28,0.11)' },
       candy: { ceilingTop: '#7d3f8c', ceilingBottom: '#ffb3d8', floorA: '#ff9b37', floorB: '#ff4fb8', floorC: '#fff1a8', grid: 'rgba(255,255,255,0.15)' },
       test: { ceilingTop: '#030808', ceilingBottom: '#071c1e', floorA: '#021012', floorB: '#083036', floorC: '#7df0ff', grid: 'rgba(125,240,255,0.28)' },
+      testsurface: { ceilingTop: '#8dddf2', ceilingBottom: '#c9a9ef', floorA: '#d7b8f2', floorB: '#a98bd5', floorC: '#9d59d2', grid: 'rgba(255,255,255,0.16)' },
       manor: { ceilingTop: '#090713', ceilingBottom: '#241c30', floorA: '#201522', floorB: '#392336', floorC: '#6d4b42', grid: 'rgba(183,240,255,0.1)' },
       basement: { ceilingTop: '#050509', ceilingBottom: '#14101e', floorA: '#12121a', floorB: '#23202b', floorC: '#3a3542', grid: 'rgba(160,160,175,0.12)' },
       spudsy: { ceilingTop: '#4a1714', ceilingBottom: '#f6d743', floorA: '#e9e1cf', floorB: '#f7f1df', floorC: '#ff4d4d', grid: 'rgba(100,42,20,0.16)' },
@@ -7942,14 +9277,24 @@ const OS = {
   },
 
   getCircusZoneAmbientEvent(zoneId, state) {
-    const now = performance.now() / 1000;
+    const nowMs = performance.now();
+    const forced = state?.forcedAmbientEvent;
+    if (forced?.zoneId === zoneId && nowMs < forced.until) {
+      const duration = Math.max(1, forced.until - forced.startedAt);
+      return {
+        ...forced.event,
+        phase: ((nowMs - forced.startedAt) / duration) * 5,
+        slot: `forced:${forced.startedAt}`
+      };
+    }
+    if (forced && nowMs >= forced.until) state.forcedAmbientEvent = null;
+    const now = nowMs / 1000;
     const slot = Math.floor(now / 5);
     const phase = now % 5;
     const events = {
       2: [
         { id: 'spotlight_sweep', label: 'PROJECTEURS', detail: 'EVENT: les projecteurs de Caine balayent la piste.', color: '#ffd84a' },
-        { id: 'curtain_shift', label: 'RIDEAUX', detail: 'EVENT: la piste se recale comme un decor de spectacle.', color: '#e53935' },
-        { id: 'gummigoo_delete', label: 'NPC DELETE', detail: 'EVENT: la suppression de Gummigoo laisse une silhouette de donnees qui se desagrege.', color: '#d8a23a' }
+        { id: 'curtain_shift', label: 'RIDEAUX', detail: 'EVENT: la piste se recale comme un decor de spectacle.', color: '#e53935' }
       ],
       3: [
         { id: 'grounds_sky', label: 'SKYBOX', detail: 'EVENT: le ciel artificiel eclaire les montagnes arrondies.', color: '#7df0ff' },
@@ -8797,7 +10142,9 @@ const OS = {
       shared.push({ kind: 'card', x: 1.65, z: -1.2, color: '#e53935', label: 'drawings' });
       shared.push({ kind: 'wallart', anchor: 'wall-right', wallSurface: 'outer', x: 0, z: -1.4, color: '#f7f7f7', art: 'spiral' });
     } else if (zoneId === 48) {
-      shared.push({ kind: 'crate', x: 1.8, z: -1.2, color: '#7df0ff', label: 'Zooble Box' });
+      shared.push({ kind: 'card', campaignTarget: 'newmask', campaignGate: { episode: 4, minStage: 1, maxStage: 1 }, x: 0.2, z: -1.1, color: '#f7f7f7', label: 'Nouveau masque de Gangle' });
+      shared.push({ kind: 'crate', campaignTarget: 'zooblebox', x: 1.8, z: -1.2, color: '#7df0ff', label: 'Zooble Box' });
+      shared.push({ kind: 'balloon', campaignTarget: 'flashbang', x: -1.95, z: -1.3, color: '#f7f7f7', label: 'Flashbang de l aventure armee' });
       shared.push({ kind: 'wallart', anchor: 'wall-left', wallSurface: 'outer', x: 0, z: -1.7, color: '#ff4fb8', art: 'blocks' });
       shared.push({ kind: 'wallart', anchor: 'wall-right', wallSurface: 'outer', x: 0, z: -1.7, color: '#7df0ff', art: 'spiral' });
     } else if (zoneId === 49) {
@@ -8806,7 +10153,12 @@ const OS = {
     } else if (zoneId === 45) {
       shared.push({ kind: 'wallart', anchor: 'wall-right', wallSurface: 'outer', x: 0, z: -1.6, color: '#2a58d8', art: 'blocks' });
     } else if (zoneId === 44) {
-      shared.push({ kind: 'barrel', x: 1.8, z: -1.2, color: '#ffd84a', label: 'barrel of monkeys' });
+      shared.push({ kind: 'barrel', x: 1.8, z: -1.2, color: '#ffd84a', label: 'Barrel of Monkeys' });
+      shared.push({ kind: 'wallart', anchor: 'wall-left', wallSurface: 'outer', x: 0, z: -2.25, color: '#e53935', art: 'blocks', label: 'Photo de Jax avec Kaufmo' });
+      shared.push({ kind: 'wallart', anchor: 'wall-right', wallSurface: 'outer', x: 0, z: -2.25, color: '#4ee77e', art: 'blocks', label: 'Photo de Jax avec Ribbit' });
+      shared.push({ kind: 'archive', x: 1.75, z: -2.75, color: '#5b3d28', label: 'Bibliotheque et bloc 57' });
+      shared.push({ kind: 'card', campaignTarget: 'doorbell', x: -2.05, z: -1.35, color: '#ffd84a', label: 'Doorbell de la vision de Jax' });
+      shared.push({ kind: 'memory', x: 0, z: -3.15, color: '#c875ff', label: 'Vision kaleidoscopique de Jax' });
     }
     return shared;
   },
@@ -8843,7 +10195,8 @@ const OS = {
         { kind: 'ring', x: 0, z: -2.9, color: '#ffd84a', label: 'Piste centrale' },
         { kind: 'spotlight', x: -2.25, z: -2.15, color: '#fff1a8' },
         { kind: 'spotlight', x: 2.25, z: -2.15, color: '#fff1a8' },
-        { kind: 'toyblock', x: -1.15, z: -1.25, color: '#2a58d8', label: 'Bloc de jeu du chapiteau' }
+        { kind: 'toyblock', x: -1.15, z: -1.25, color: '#2a58d8', label: 'Bloc de jeu du chapiteau' },
+        { kind: 'gridnode', campaignTarget: 'gummigoodeletion', campaignGate: { episode: 2, minStage: 19, maxStage: 19 }, x: 0.9, z: -1.25, color: '#ff4fb8', label: 'Flash de suppression de Gummigoo' }
       ],
       3: [
         { kind: 'tent', x: 0, z: -5.7, width: 5.6, depth: 3.4, wallHeight: 2.2, roofHeight: 5.2, color: '#e53935', label: 'Chapiteau sur la colline' },
@@ -8868,15 +10221,35 @@ const OS = {
         { kind: 'exitframe', x: 0, z: 0.55, color: '#ffffff', label: 'Cadre blanc sans issue central' },
         { kind: 'exitframe', x: 2.55, z: 1.75, color: '#ffffff', label: 'Cadre blanc sans issue droit' }
       ],
-      6: [{ kind: 'candy', x: -2.2, z: -2.2, color: '#ff9b37' }, { kind: 'truck', x: 0.4, z: -2.8, color: '#ffd84a' }, { kind: 'candy', x: 2.3, z: -1.8, color: '#ff4fb8' }, { kind: 'barrel', x: -0.9, z: -1.25, color: '#ffcf75' }, { kind: 'candy', x: 3.1, z: -2.75, color: '#7df0ff' }],
-      7: [{ kind: 'console', x: -1.6, z: -2.2, color: '#9cff6d' }, { kind: 'gridnode', x: 1.4, z: -2.6, color: '#7df0ff' }, { kind: 'gridnode', x: -0.1, z: -1.35, color: '#ff7a30' }, { kind: 'archive', x: 2.7, z: -2.0, color: '#9cff6d' }],
+      6: [
+        { kind: 'candy', x: -2.4, z: -2.35, color: '#ff9b37', label: 'Formation bonbon du royaume' },
+        { kind: 'candy', x: 2.35, z: -2.05, color: '#ff4fb8', label: 'Sucette de la capitale' },
+        { kind: 'building', style: 'village', x: 0, z: -4.8, width: 4.8, depth: 2.0, height: 3.4, roofHeight: 1.0, color: '#ffb1d6', accent: '#fff1a8', label: 'Vue generale de Candy Canyon' },
+        { kind: 'archive', x: 0, z: -1.25, color: '#7df0ff', label: 'Index vers la campagne detaillee EP2' }
+      ],
+      7: [
+        { kind: 'lorebillboard', avatar: 'gummigoo', x: 0, z: -3.8, color: '#d8a23a', label: 'Modele PNJ inerte', loreText: 'Archive de compatibilite. La salle canon jouable se trouve en zone 144.' },
+        { kind: 'toyblock', x: -1.7, z: -1.8, color: '#245c86', label: 'Cube bleu de test' },
+        { kind: 'toyblock', x: 1.7, z: -1.9, color: '#245c86', label: 'Cube bleu de test' },
+        { kind: 'archive', x: 0, z: -1.15, color: '#7df0ff', label: 'Lien CainOS vers les couches 142-146' }
+      ],
       8: [{ kind: 'building', style: 'manor', x: 0, z: -3.85, width: 4.6, depth: 2.1, height: 4.8, roofHeight: 1.35, color: '#403044', accent: '#b7f0ff' }, { kind: 'window', x: -2.2, z: -2.5, color: '#b7f0ff' }, { kind: 'table', x: 0.2, z: -2.9, color: '#7c88a1' }, { kind: 'candle', x: 1.8, z: -1.9, color: '#ffd84a' }, { kind: 'window', x: 2.7, z: -2.65, color: '#b7f0ff' }, { kind: 'candle', x: -0.85, z: -1.4, color: '#ffd84a' }],
       9: [{ kind: 'stairs', x: 0, z: -2.8, color: '#7c88a1' }, { kind: 'barrel', x: -2.1, z: -1.9, color: '#56505f' }, { kind: 'barrel', x: 1.95, z: -1.75, color: '#3a3542' }, { kind: 'candle', x: -0.6, z: -1.25, color: '#ffd84a' }],
       10: [{ kind: 'counter', x: 0, z: -2.7, color: '#f6d743' }, { kind: 'menu', x: -1.9, z: -2.3, color: '#ff4d4d' }, { kind: 'menu', x: 1.9, z: -2.3, color: '#ff4d4d' }, { kind: 'table', x: -2.65, z: -1.35, color: '#f6d743' }, { kind: 'counter', x: 2.75, z: -1.4, color: '#ffffff' }],
       11: [{ kind: 'card', x: -1.8, z: -2.1, color: '#ff4fb8' }, { kind: 'card', x: 0, z: -2.7, color: '#7df0ff' }, { kind: 'card', x: 1.8, z: -2.1, color: '#ffd84a' }, { kind: 'doorframe', x: -2.9, z: -2.9, color: '#c875ff' }, { kind: 'gridnode', x: 2.9, z: -1.3, color: '#7df0ff' }],
       12: [{ kind: 'base', x: 0, z: -2.6, color: '#ffffff' }, { kind: 'scoreboard', x: 0, z: -3.25, color: '#83ff57' }, { kind: 'base', x: -1.45, z: -1.6, color: '#ffffff' }, { kind: 'base', x: 1.45, z: -1.6, color: '#ffffff' }, { kind: 'spotlight', x: 2.8, z: -2.75, color: '#fff1a8' }],
       13: [{ kind: 'target', x: -1.8, z: -2.3, color: '#f6d743' }, { kind: 'target', x: 1.8, z: -2.3, color: '#ff4d4d' }, { kind: 'target', x: 0, z: -3.05, color: '#ffffff' }, { kind: 'crate', x: -2.9, z: -1.35, color: '#5c3a21' }, { kind: 'barrel', x: 2.85, z: -1.35, color: '#463228' }],
-      14: [{ kind: 'umbrella', x: -1.8, z: -2.1, color: '#ffd84a' }, { kind: 'wave', x: 0, z: -3.0, color: '#4ee7ff' }, { kind: 'sun', x: 2.4, z: -2.8, color: '#ffe57d' }, { kind: 'umbrella', x: 1.65, z: -1.35, color: '#ff9b37' }, { kind: 'wave', x: -2.95, z: -2.85, color: '#4ee7ff' }],
+      14: [
+        { kind: 'building', style: 'beach', x: -3.65, z: -4.1, width: 2.2, depth: 1.55, height: 2.2, roofHeight: 0.45, color: '#e53935', accent: '#fff1a8', label: 'Cabine de change rouge et blanche' },
+        { kind: 'umbrella', x: -1.8, z: -2.1, color: '#ffd84a', label: 'Parasol principal' },
+        { kind: 'wave', x: 0, z: -3.0, color: '#4ee7ff', label: 'Bord du Digital Lake' },
+        { kind: 'sun', x: 2.4, z: -2.8, color: '#ffe57d', label: 'Rayonnement du Sun NPC' },
+        { kind: 'umbrella', x: 1.65, z: -1.35, color: '#ff9b37', label: 'Zone d ombre secondaire' },
+        { kind: 'wave', x: -2.95, z: -2.85, color: '#4ee7ff', label: 'Entree de la plongee' },
+        { kind: 'eye', x: 0.95, z: -1.25, color: '#d64545', label: 'Oeil-bouton perdu par Ragatha' },
+        { kind: 'base', x: -0.55, z: -1.35, color: '#ffffff', label: 'Repere des jeux de plage' },
+        { kind: 'balloon', x: 2.9, z: -1.45, color: '#ff4fb8', label: 'Ballon de plage' }
+      ],
       15: [
         { kind: 'doorframe', x: 0, z: -3.25, color: '#e53935', label: 'Porte mysterieuse de la Chinese Room' },
         { kind: 'table', x: -1.75, z: -2.0, color: '#8b5a3c', label: 'Table de transmission des cartes' },
@@ -8884,11 +10257,12 @@ const OS = {
         { kind: 'console', x: 2.65, z: -2.45, color: '#7df0ff', label: 'Dispositif de consultation de Caine' }
       ],
       16: [
-        { kind: 'desk', x: 0, z: -2.9, color: '#ff7a30' },
-        { kind: 'console', x: -2.0, z: -2.2, color: '#7df0ff' },
-        { kind: 'eye', x: 2.1, z: -2.2, color: '#ff3333' },
-        { kind: 'gridnode', x: 0.95, z: -1.35, color: '#ff7a30' },
-        { kind: 'archive', x: -2.9, z: -1.4, color: '#7df0ff', label: 'Archives du bureau de Caine' }
+        { kind: 'desk', x: 0, z: -2.9, color: '#ff7a30', label: 'Bureau personnel de Caine' },
+        { kind: 'ring', x: -2.2, z: -2.4, color: '#7df0ff', label: 'Globe suspendu gauche' },
+        { kind: 'ring', x: 2.2, z: -2.4, color: '#ff7a30', label: 'Globe suspendu droit' },
+        { kind: 'eye', x: 2.75, z: -1.55, color: '#ff3333', label: 'Monitoring du bureau' },
+        { kind: 'archive', x: -2.85, z: -2.75, color: '#7a4b32', label: 'Bibliotheque coulissante du bureau' },
+        { kind: 'card', campaignTarget: 'giftbasket', x: 0.95, z: -1.35, color: '#fff1a8', label: 'Panier cadeau de fin d aventure' }
       ],
       17: [{ kind: 'memory', x: -1.8, z: -2.0, color: '#d9d0a2' }, { kind: 'memory', x: 0, z: -2.6, color: '#7df0ff' }, { kind: 'memory', x: 1.8, z: -2.0, color: '#d9d0a2' }, { kind: 'table', x: 0.55, z: -1.35, color: '#d9d0a2' }, { kind: 'candle', x: -2.75, z: -1.4, color: '#ffd84a' }],
       18: [...basePillars, { kind: 'spotlight', x: 0, z: -2.6, color: '#e53935' }, { kind: 'archive', x: -2.2, z: -2.25, color: '#c875ff' }, { kind: 'gridnode', x: 2.2, z: -1.45, color: '#ff4d4d' }],
@@ -9005,7 +10379,13 @@ const OS = {
       37: [{ kind: 'menu', x: 0, z: -3.0, color: '#e53935' }, { kind: 'spotlight', x: 0, z: -2.1, color: '#ffffff' }, { kind: 'table', x: 0, z: -1.35, color: '#342525' }],
       38: [{ kind: 'scoreboard', x: 0, z: -3.2, color: '#ffd84a' }, { kind: 'spotlight', x: -2.2, z: -2.35, color: '#fff1a8' }, { kind: 'spotlight', x: 2.2, z: -2.35, color: '#fff1a8' }, { kind: 'stairs', x: 0, z: -1.35, color: '#8b172b' }],
       39: [{ kind: 'lighthouse', x: 0, z: -3.45, radius: 0.68, height: 6.8, roofHeight: 1.1, color: '#ff5b4d', accent: '#ffffff' }, { kind: 'stairs', x: 0, z: -2.1, color: '#ffffff' }, { kind: 'wave', x: -2.5, z: -2.45, color: '#4ee7ff' }, { kind: 'wave', x: 2.5, z: -2.45, color: '#4ee7ff' }],
-      40: [{ kind: 'archive', x: 0, z: -2.9, color: '#ffd84a' }, { kind: 'wave', x: -2.3, z: -2.1, color: '#4ee7ff' }, { kind: 'wave', x: 2.3, z: -2.1, color: '#4ee7ff' }, { kind: 'eye', x: -1.1, z: -1.35, color: '#ffffff' }, { kind: 'eye', x: 1.1, z: -1.35, color: '#ffffff' }],
+      40: [
+        { kind: 'crate', campaignTarget: 'emptychest', x: 0, z: -3.1, color: '#8b5a3c', accent: '#ffd84a', label: 'Coffre deja pille' },
+        { kind: 'wave', x: -2.3, z: -2.1, color: '#4ee7ff', label: 'Courant sous-marin gauche' },
+        { kind: 'wave', x: 2.3, z: -2.1, color: '#4ee7ff', label: 'Courant sous-marin droit' },
+        { kind: 'eye', x: -1.1, z: -1.35, color: '#ffffff', label: 'Repere du poisson orange' },
+        { kind: 'eye', x: 1.1, z: -1.35, color: '#ffffff', label: 'Repere du poisson rouge' }
+      ],
       41: [{ kind: 'desk', x: -2.1, z: -2.3, color: '#59616a' }, { kind: 'doorframe', x: 0, z: -3.1, color: '#8fa6ba' }, { kind: 'window', x: 2.2, z: -2.3, color: '#d8e4ee' }, { kind: 'card', x: 0.8, z: -1.35, color: '#ff7a30' }],
       42: [{ kind: 'ring', x: -2.5, z: -2.4, color: '#ff4fb8' }, { kind: 'ring', x: 2.5, z: -2.4, color: '#7df0ff' }, { kind: 'pillar', x: 0, z: -3.1, color: '#ffd84a' }, { kind: 'balloon', x: -1.25, z: -1.35, color: '#e53935' }, { kind: 'balloon', x: 1.25, z: -1.35, color: '#2a58d8' }],
       43: [
@@ -9095,7 +10475,12 @@ const OS = {
     const campaignPropAdditions = {
       2: [
         { kind: 'card', x: -2.75, z: -1.25, color: '#ffd84a', label: 'Trousseau de cles de Jax', portable: true },
-        { kind: 'memory', x: 2.65, z: -1.35, color: '#d61f2c', label: 'Masque de comedie brise de Gangle' }
+        { kind: 'memory', x: 2.65, z: -1.35, color: '#d61f2c', label: 'Masque de comedie brise de Gangle' },
+        { kind: 'card', campaignTarget: 'gunbrief', campaignGate: { episode: 6, minStage: 1, maxStage: 1 }, x: -1.35, z: -1.15, color: '#f6d743', label: 'Briefing They All Get Guns' },
+        { kind: 'projector', campaignTarget: 'projector', campaignGate: { episode: 9, minStage: 14, maxStage: 14 }, x: 0, z: -3.55, color: '#fff1a8', label: 'Projecteur des profils humains' }
+      ],
+      3: [
+        { kind: 'table', campaignTarget: 'picnic', campaignGate: { episode: 5, minStage: 4, maxStage: 4 }, x: 0, z: -2.45, color: '#d64545', label: 'Couverture et panier du pique-nique nocturne' }
       ],
       4: [],
       5: [],
@@ -9115,8 +10500,11 @@ const OS = {
         { kind: 'target', x: 0.85, z: -1.2, color: '#5b3d28', label: 'Fusil de Kinger', portable: true }
       ],
       9: [
-        { kind: 'crate', x: -1.7, z: -1.35, color: '#5b3d28', label: 'Munitions du manoir' },
-        { kind: 'doorframe', x: 1.65, z: -2.75, color: '#5a0b0b', label: 'Trappe du sous-sol' }
+        { kind: 'archive', campaignTarget: 'tape', x: -2.6, z: -1.35, color: '#7df0ff', label: 'Enregistrement Mildenhall 03' },
+        { kind: 'archive', campaignTarget: 'tape', x: 2.6, z: -1.35, color: '#7df0ff', label: 'Enregistrement Mildenhall final' },
+        { kind: 'target', campaignTarget: 'shotgun', x: -1.2, z: -1.25, color: '#5b3d28', label: 'Fusil du Baron / deux cartouches', portable: true },
+        { kind: 'target', campaignTarget: 'angelmanifestation', x: -2.1, z: -2.5, color: '#e5d7d7', label: 'Manifestation corporelle pres du tuyau' },
+        { kind: 'target', campaignTarget: 'angelmanifestation', x: 2.1, z: -2.8, color: '#e5d7d7', label: 'Manifestation de la tete au puits' }
       ],
       10: [
         { kind: 'card', x: -1.75, z: -1.15, color: '#ff4d4d', label: 'Tickets de commande Spudsy' },
@@ -9133,10 +10521,7 @@ const OS = {
         { kind: 'balloon', x: 2.35, z: -1.4, color: '#f7f7f7', label: 'Flashbang' },
         { kind: 'scoreboard', x: 0, z: -3.25, color: '#e53935', label: 'Compteur de coeurs' }
       ],
-      16: [
-        { kind: 'console', x: -2.3, z: -1.25, color: '#00ddff', label: 'Interface d assimilation Blue AI' },
-        { kind: 'memory', x: 2.35, z: -1.25, color: '#ff3333', label: 'Point rouge de restauration' }
-      ],
+      16: [],
       18: [
         { kind: 'memory', x: 0.75, z: -1.5, color: '#7df0ff', label: 'Brain scan fragment' },
         { kind: 'archive', x: -2.65, z: -1.2, color: '#c875ff', label: 'Dictionnaire de Kinger' },
@@ -9152,7 +10537,25 @@ const OS = {
         { kind: 'memory', x: 0, z: -1.25, color: '#f6b84d', label: 'Photo chocolat chaud: Jax, Ribbit et Kaufmo' },
         { kind: 'card', x: 2.15, z: -1.25, color: '#ff4fb8', label: 'Noeud papillon de Ribbit' }
       ],
-      26: [{ kind: 'console', x: 2.35, z: -1.45, color: '#7df0ff', label: 'Suggestion console' }],
+      24: [
+        { kind: 'target', campaignTarget: 'votemarker', campaignGate: { episode: 5, minStage: 1, maxStage: 1 }, x: 2.65, z: -1.25, color: '#7df0ff', label: 'Vote de sortie de Poach Everything' }
+      ],
+      25: [
+        { kind: 'card', campaignTarget: 'votemarker', campaignGate: { episode: 5, minStage: 3, maxStage: 3 }, x: 0, z: -1.1, color: '#ff9fcd', label: 'Vote de sortie Anime High School' }
+      ],
+      26: [
+        { kind: 'card', campaignTarget: 'brief', campaignGate: { episode: 5, minStage: 2, maxStage: 2 }, x: 0, z: -1.25, color: '#44699a', label: 'Brief Australie / Nouvelle-Zelande' },
+        { kind: 'target', campaignTarget: 'bomb', campaignGate: { episode: 5, minStage: 2, maxStage: 2 }, x: -2.3, z: -1.35, color: '#e53935', label: 'Bombe gauche et fils' },
+        { kind: 'target', campaignTarget: 'bomb', campaignGate: { episode: 5, minStage: 2, maxStage: 2 }, x: 2.3, z: -1.35, color: '#2a58d8', label: 'Bombe droite et fils' }
+      ],
+      28: [
+        { kind: 'card', campaignTarget: 'spudsysuggestion', campaignGate: { episode: 4, minStage: 2, maxStage: 2 }, x: 2.3, z: -1.25, color: '#f6d743', label: 'Suggestion de travail chez Spudsy' },
+        { kind: 'card', campaignTarget: 'suggestionbox', campaignGate: { episode: 5, minStage: 0, maxStage: 0 }, x: -2.3, z: -1.25, color: '#ff4fb8', label: 'Boite a suggestions du lightning round' },
+        { kind: 'caineportal', campaignTarget: 'arrivalportal', campaignGate: { episode: 5, minStage: 7, maxStage: 7 }, x: 0, z: -4.35, color: '#7df0ff', label: 'Portail de retour du softball' }
+      ],
+      30: [
+        { kind: 'window', campaignTarget: 'aquariumwindow', campaignGate: { episode: 6, minStage: 5, maxStage: 5 }, x: 0, z: -3.15, color: '#63d9ff', label: 'Aquarium du Loser Corner' }
+      ],
       31: [],
       35: [
         { kind: 'barrel', x: -2.55, z: -1.2, color: '#c49a45', label: 'Friteuse Spudsy' },
@@ -9558,13 +10961,14 @@ const OS = {
   drawCircusWorldGeometryProps(ctx, w, h, state) {
     const worldKinds = this.getCircusWorldGeometryKinds();
     const props = this.getCircusZoneProps(state.currentZoneId)
-      .filter(prop => !prop.loreGate || this.hasCircusLoreGate(prop.loreGate))
       .map((prop, interactionId) => ({
         ...prop,
         interactionId,
         active: state.activeProps.get(`${state.currentZoneId}:${interactionId}`) === true,
         projected: this.projectCircusPoint(prop, state, w, h)
       }))
+      .filter(prop => !prop.loreGate || this.hasCircusLoreGate(prop.loreGate))
+      .filter(prop => !prop.campaignGate || this.isCircusCampaignGateActive(prop.campaignGate))
       .filter(prop => !state.collectedProps?.has(`${state.currentZoneId}:${prop.interactionId}`) && worldKinds.has(prop.kind) && prop.projected && this.isCircusWorldPointVisible(prop, state, 0.3))
       .sort((a, b) => b.projected.depth - a.projected.depth);
 
@@ -9810,6 +11214,7 @@ const OS = {
         projected: this.projectCircusPoint(prop, state, w, h)
       }))
       .filter(prop => !prop.loreGate || this.hasCircusLoreGate(prop.loreGate))
+      .filter(prop => !prop.campaignGate || this.isCircusCampaignGateActive(prop.campaignGate))
       .filter(prop => !state.collectedProps?.has(`${state.currentZoneId}:${prop.interactionId}`) && prop.projected)
       .sort((a, b) => b.projected.depth - a.projected.depth);
     props.forEach(prop => {
@@ -10768,6 +12173,108 @@ const OS = {
       ctx.fillRect(-3 * s, -28 * s, 6 * s, 28 * s);
       ctx.strokeStyle = '#333';
       ctx.strokeRect(-3 * s, -28 * s, 6 * s, 28 * s);
+    } else if (prop.kind === 'wagon') {
+      ctx.lineWidth = Math.max(1, 2 * s);
+      ctx.strokeStyle = '#6d351d';
+      ctx.fillStyle = prop.color || '#f6c84f';
+      ctx.fillRect(-48 * s, -48 * s, 96 * s, 34 * s);
+      ctx.strokeRect(-48 * s, -48 * s, 96 * s, 34 * s);
+      ctx.fillStyle = prop.accent || '#e53935';
+      ctx.beginPath();
+      ctx.moveTo(-42 * s, -48 * s);
+      ctx.quadraticCurveTo(0, -96 * s, 42 * s, -48 * s);
+      ctx.closePath();
+      ctx.fill();
+      ctx.stroke();
+      ctx.fillStyle = '#9cd';
+      ctx.fillRect(-28 * s, -42 * s, 22 * s, 18 * s);
+      ctx.fillRect(7 * s, -42 * s, 22 * s, 18 * s);
+      ctx.fillStyle = '#2a1b17';
+      [-32, 32].forEach(offset => {
+        ctx.beginPath();
+        ctx.arc(offset * s, -7 * s, 12 * s, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.stroke();
+      });
+      ctx.strokeStyle = '#ffd84a';
+      ctx.beginPath();
+      ctx.moveTo(48 * s, -24 * s);
+      ctx.lineTo(76 * s, -18 * s);
+      ctx.stroke();
+    } else if (prop.kind === 'bridge') {
+      ctx.fillStyle = prop.color || '#b86e3c';
+      ctx.strokeStyle = '#5b311e';
+      ctx.lineWidth = Math.max(1, 2 * s);
+      ctx.beginPath();
+      ctx.moveTo(-58 * s, 0);
+      ctx.lineTo(-44 * s, -74 * s);
+      ctx.lineTo(44 * s, -74 * s);
+      ctx.lineTo(58 * s, 0);
+      ctx.closePath();
+      ctx.fill();
+      ctx.stroke();
+      ctx.strokeStyle = prop.accent || '#fff1a8';
+      for (let plank = -36; plank <= 36; plank += 18) {
+        ctx.beginPath();
+        ctx.moveTo(plank * s, -70 * s);
+        ctx.lineTo(plank * 1.25 * s, -4 * s);
+        ctx.stroke();
+      }
+      ctx.strokeStyle = '#41302a';
+      ctx.beginPath();
+      ctx.moveTo(-48 * s, -70 * s);
+      ctx.lineTo(-72 * s, -116 * s);
+      ctx.moveTo(48 * s, -70 * s);
+      ctx.lineTo(72 * s, -116 * s);
+      ctx.stroke();
+    } else if (prop.kind === 'teapot') {
+      const potScale = prop.sizeScale || 1;
+      ctx.save();
+      ctx.scale(potScale, potScale);
+      ctx.fillStyle = prop.color || '#4b73c9';
+      ctx.strokeStyle = '#263c78';
+      ctx.lineWidth = Math.max(1, 2 * s);
+      ctx.beginPath();
+      ctx.ellipse(0, -38 * s, 38 * s, 29 * s, 0, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.moveTo(32 * s, -48 * s);
+      ctx.quadraticCurveTo(74 * s, -65 * s, 72 * s, -35 * s);
+      ctx.quadraticCurveTo(55 * s, -29 * s, 34 * s, -29 * s);
+      ctx.closePath();
+      ctx.fill();
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.arc(-35 * s, -39 * s, 24 * s, Math.PI * 0.55, Math.PI * 1.45);
+      ctx.stroke();
+      ctx.fillRect(-18 * s, -72 * s, 36 * s, 9 * s);
+      ctx.beginPath();
+      ctx.arc(0, -76 * s, 6 * s, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.stroke();
+      ctx.restore();
+    } else if (prop.kind === 'coffin') {
+      ctx.fillStyle = prop.color || '#432a4c';
+      ctx.strokeStyle = prop.accent || '#ffd84a';
+      ctx.lineWidth = Math.max(1, 3 * s);
+      ctx.beginPath();
+      ctx.moveTo(-26 * s, 0);
+      ctx.lineTo(-38 * s, -58 * s);
+      ctx.lineTo(-24 * s, -108 * s);
+      ctx.lineTo(24 * s, -108 * s);
+      ctx.lineTo(38 * s, -58 * s);
+      ctx.lineTo(26 * s, 0);
+      ctx.closePath();
+      ctx.fill();
+      ctx.stroke();
+      ctx.strokeStyle = '#e53935';
+      ctx.beginPath();
+      ctx.moveTo(-17 * s, -18 * s);
+      ctx.lineTo(17 * s, -90 * s);
+      ctx.moveTo(17 * s, -18 * s);
+      ctx.lineTo(-17 * s, -90 * s);
+      ctx.stroke();
     } else if (prop.kind === 'truck') {
       // Gummigoo's syrup tanker truck
       ctx.lineWidth = Math.max(1, 1.5 * s);
@@ -11360,6 +12867,17 @@ const OS = {
         z: -1.85,
         color: bedroom.color
       }];
+      if (Number(zoneId) === 45) {
+        sprites.push({
+          name: 'Ragatha',
+          type: 'ragatha',
+          avatar: 'ragatha',
+          x: 0.95,
+          z: -2.25,
+          color: '#d64545',
+          campaignGate: { episode: 2, minStage: 1, maxStage: 1 }
+        });
+      }
       this.circusZoneSpritesCache.set(zoneId, sprites);
       return sprites;
     }
@@ -11382,11 +12900,16 @@ const OS = {
         { name: 'Caine', type: 'caine', avatar: 'caine', x: 0.25, z: -2.15, color: '#ffd84a' },
         { name: 'Bubble', type: 'bubble', avatar: 'bubble', x: 1.25, z: -1.65, color: '#f7f7ff' },
         { name: 'Barrel Monkey', type: 'npc', avatar: 'barrelmonkey', x: 3.05, z: -2.75, color: '#e43c32', sizeScale: 0.72, silent: true },
+        { name: 'Gummigoo', type: 'gummigoo', avatar: 'gummigoo', x: -0.65, z: -2.8, color: '#d8a23a', campaignGate: { episode: 2, minStage: 19, maxStage: 19 } },
         ...shared
       ],
       3: [
         { name: 'Sun', type: 'npc', avatar: 'sun', x: -4.8, z: -6.4, color: '#ffd84a', sizeScale: 1.15, elevation: 4.2, routine: 'hover' },
-        { name: 'Moon', type: 'npc', avatar: 'moon', x: 4.8, z: -6.8, color: '#d7e6ff', sizeScale: 1.05, elevation: 4.5, routine: 'hover' }
+        { name: 'Moon', type: 'npc', avatar: 'moon', x: 4.8, z: -6.8, color: '#d7e6ff', sizeScale: 1.05, elevation: 4.5, routine: 'hover' },
+        { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: -1.9, z: -2.6, color: '#d64545', campaignGate: { episode: 5, minStage: 4, maxStage: 4 } },
+        { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -0.65, z: -2.9, color: '#e53935', campaignGate: { episode: 5, minStage: 4, maxStage: 4 } },
+        { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: 0.65, z: -2.85, color: '#f7f7f7', campaignGate: { episode: 5, minStage: 4, maxStage: 4 } },
+        { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 1.9, z: -2.55, color: '#ff4fb8', campaignGate: { episode: 5, minStage: 4, maxStage: 4 } }
       ],
       4: [
         { name: 'Kaufmo abstrait', type: 'abstract', avatar: 'abstractedkaufmo', x: -0.55, z: -4.25, color: '#050505', sizeScale: 1.5, silent: true, silentText: 'Kaufmo abstrait gronde. Aucun mot intelligible.', loreGate: { episode: 1, subepisode: 5 } },
@@ -11396,12 +12919,6 @@ const OS = {
         { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 0, z: -2.55, color: '#e53935' }
       ],
       6: [
-        { name: 'Gummigoo', type: 'gummigoo', avatar: 'gummigoo', x: -1.05, z: -2.2, color: '#d8a23a' },
-        { name: 'Max', type: 'gummigoo', avatar: 'max', x: 0.2, z: -2.55, color: '#75bd3f' },
-        { name: 'Chad', type: 'gummigoo', avatar: 'chad', x: 1.25, z: -2.25, color: '#8bd64a' },
-        { name: 'Princess Loolilalu', type: 'npc', avatar: 'loolilalu', x: -2.35, z: -1.55, color: '#ff9ad5' },
-        { name: 'The Fudge', type: 'npc', avatar: 'fudge', x: 2.35, z: -1.55, color: '#7a3d1a', sizeScale: 1.2 },
-        { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 0.75, z: -1.3, color: '#e53935' },
         { name: 'Gummy Elephant', type: 'npc', avatar: 'gummyelephant', x: -3.1, z: -2.95, color: '#ff85b7', sizeScale: 0.88 },
         { name: 'Cookie Butterfly', type: 'npc', avatar: 'cookiebutterfly', x: 2.95, z: -3.15, color: '#ff9e8e', sizeScale: 0.58 },
         { name: 'Gummy Worm', type: 'npc', avatar: 'gummyworm', x: 1.8, z: -3.35, color: '#ef5a94', sizeScale: 0.52 },
@@ -11410,16 +12927,13 @@ const OS = {
         { name: 'Pink Mannequin', type: 'mannequin', avatar: 'additionalvoices', x: -2.75, z: -3.75, color: '#d78aff', sizeScale: 0.68, silent: true, silentText: 'Le mannequin rose-violet traverse le decor sans identite ni dialogue attribue. Additional Voices reste un surnom officieux.', loreGate: { episode: 2, subepisode: 1 } },
         { name: 'Peeking Mannequin', type: 'mannequin', avatar: 'peekingmannequin', x: 2.85, z: -3.8, color: '#e8892f', sizeScale: 0.7, silent: true, silentText: 'Le mannequin orange se penche depuis le bord de la scene et observe silencieusement.', loreGate: { episode: 2, subepisode: 1 } }
       ],
-      7: [
-        { name: 'Gummigoo Data Echo', type: 'gummigoo', avatar: 'gummigoo', x: -1.5, z: -2.3, color: '#d8a23a' },
-        { name: 'C&A Mannequin', type: 'mannequin', avatar: 'mannequin', x: 0.1, z: -2.05, color: '#d8d8d8' }
-      ],
+      7: [],
       8: [
         { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -1.9, z: -2.2, color: '#d9d0a2' },
         { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -0.6, z: -2.45, color: '#e53935' },
         { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: 0.75, z: -2.35, color: '#d64545' },
         { name: 'Jax', type: 'jax', avatar: 'jax', x: 2.0, z: -1.9, color: '#8a4fd6' },
-        { name: 'Ghostly', type: 'ghost', avatar: 'ghostly', x: 2.85, z: -3.25, color: '#7dffd8', sizeScale: 0.62 }
+        { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: 2.85, z: -3.25, color: '#f7f7f7' }
       ],
       9: [
         { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -0.9, z: -2.1, color: '#d9d0a2' },
@@ -11452,20 +12966,32 @@ const OS = {
         { name: 'Baseball Ragatha', type: 'ragatha', avatar: 'baseballragatha', x: 1.05, z: -2.2, color: '#6d86dd' },
         { name: 'Baseball Pomni', type: 'pomni', avatar: 'baseballpomni', x: 2.15, z: -1.55, color: '#4068e8' },
         { name: 'Baseball Kinger', type: 'kinger', avatar: 'baseballkinger', x: 0.75, z: -1.15, color: '#d7c9aa' },
-        { name: 'Giant Centipede', type: 'npc', avatar: 'giantcentipede', x: 3.05, z: -3.25, color: '#c89436', sizeScale: 1.22 }
+        { name: 'Giant Centipede', type: 'npc', avatar: 'giantcentipede', x: 3.05, z: -3.25, color: '#c89436', sizeScale: 1.22 },
+        { name: 'Evil Zooble', type: 'zooble', avatar: 'rivalbaseballzooble', x: -3.5, z: -4.2, color: '#f5d33b' },
+        { name: 'Evil Pomni', type: 'pomni', avatar: 'rivalbaseballpomni', x: -2.1, z: -4.55, color: '#d7382f' },
+        { name: 'Pink Giant', type: 'npc', avatar: 'rivalbaseballpinkgiant', x: -0.75, z: -4.8, color: '#f05a9f', sizeScale: 1.35 },
+        { name: 'Evil Ragatha', type: 'ragatha', avatar: 'rivalbaseballragatha', x: 0.75, z: -4.8, color: '#e86493' },
+        { name: 'Evil Jax', type: 'jax', avatar: 'rivalbaseballjax', x: 2.1, z: -4.55, color: '#7a244d' },
+        { name: 'Evil Kinger', type: 'kinger', avatar: 'rivalbaseballkinger', x: 3.5, z: -4.2, color: '#8e8f9b' },
+        { name: 'Maid Jax', type: 'jax', avatar: 'maidjax', x: 0, z: -1.0, color: '#c88aff', campaignGate: { episode: 5, minStage: 6, maxStage: 6 } }
       ],
       13: [
         { name: 'Jax', type: 'jax', avatar: 'jax', x: -1.5, z: -2.1, color: '#8a4fd6' },
-        { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: 0.2, z: -2.45, color: '#d64545' }
+        { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: 0.2, z: -2.45, color: '#d64545' },
+        { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 1.55, z: -2.1, color: '#e53935', campaignGate: { episode: 6, minStage: 3, maxStage: 3 } },
+        { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: -2.65, z: -3.1, color: '#f7f7f7', campaignGate: { episode: 6, minStage: 3, maxStage: 3 } },
+        { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -0.9, z: -3.5, color: '#d9d0a2', campaignGate: { episode: 6, minStage: 3, maxStage: 3 } },
+        { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 0.9, z: -3.5, color: '#ff4fb8', campaignGate: { episode: 6, minStage: 3, maxStage: 3 } },
+        { name: 'Caine', type: 'caine', avatar: 'caine', x: 2.65, z: -3.1, color: '#ffd84a', campaignGate: { episode: 6, minStage: 3, maxStage: 3 } }
       ],
       14: [
-        { name: 'Beach Gangle', type: 'gangle', avatar: 'beachgangle', x: -1.55, z: -2.1, color: '#f7f7f7' },
-        { name: 'Jax', type: 'jax', avatar: 'jax', x: 0.25, z: -2.4, color: '#8a4fd6' },
-        { name: 'Sun', type: 'npc', avatar: 'sun', x: 2.05, z: -1.65, color: '#ffd84a', sizeScale: 1.05 },
-        { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -2.45, z: -1.4, color: '#e53935' },
-        { name: 'Shrimp NPC', type: 'npc', avatar: 'shrimpnpc', x: 1.15, z: -2.95, color: '#ff8f4a', sizeScale: 0.72 },
-        { name: 'Orange Crappy Looking Fish', type: 'npc', avatar: 'truthtellerfish', x: -0.95, z: -2.95, color: '#ff9b32', sizeScale: 0.68 },
-        { name: 'Red Crappy Looking Fish', type: 'npc', avatar: 'liarfish', x: -0.2, z: -3.18, color: '#ff3264', sizeScale: 0.64 }
+        { name: 'Beach Gangle', type: 'gangle', avatar: 'beachgangle', x: -2.3, z: -2.15, color: '#f7f7f7' },
+        { name: 'Jax', type: 'jax', avatar: 'jax', x: -0.85, z: -2.55, color: '#8a4fd6' },
+        { name: 'Sun', type: 'npc', avatar: 'sun', x: 2.8, z: -3.35, color: '#ffd84a', sizeScale: 1.05, elevation: 2.4 },
+        { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 0.7, z: -2.65, color: '#e53935' },
+        { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: 2.1, z: -2.1, color: '#d64545' },
+        { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -1.55, z: -1.35, color: '#d9d0a2' },
+        { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 1.65, z: -1.35, color: '#ff4fb8' }
       ],
       15: [
         { name: 'Caine', type: 'caine', avatar: 'caine', x: -1.55, z: -2.15, color: '#ffd84a' },
@@ -11474,25 +13000,14 @@ const OS = {
       ],
       16: [
         { name: 'Caine', type: 'caine', avatar: 'caine', x: -1.05, z: -2.25, color: '#ffd84a' },
-        { name: 'Blue AI', type: 'system', avatar: 'blueai', x: 0, z: -3.15, color: '#00ddff', sizeScale: 0.85, loreGate: { episode: 9, subepisode: 6 } },
-        { name: 'Abel NPC Echo', type: 'mannequin', avatar: 'abelmannequin', x: 0.6, z: -1.85, color: '#ff8a30' },
-        { name: 'Deleted Abel Render', type: 'mannequin', avatar: 'abelfullbody', x: 1.85, z: -2.55, color: '#f08a28' }
+        { name: 'Bubble', type: 'bubble', avatar: 'bubble', x: 1.05, z: -1.85, color: '#f7f7ff' }
       ],
       17: [
         { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -1.25, z: -2.2, color: '#d9d0a2' },
         { name: 'Queenie Archive', type: 'kinger', avatar: 'queenie', x: 0.25, z: -2.55, color: '#f7eecb' },
         { name: 'Queenie abstraite calmee', type: 'abstract', avatar: 'abstractedqueeniedark', x: 1.75, z: -3.05, color: '#101018', sizeScale: 1.25, silent: true, threatActive: false, silentText: 'Dans l obscurite, Queenie devient lisse et ses yeux s alignent. Elle reste non verbale.', loreGate: { episode: 3, subepisode: 7 } }
       ],
-      18: [
-        { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -1.8, z: -2.2, color: '#e53935' },
-        { name: 'Caine', type: 'caine', avatar: 'caine', x: 0, z: -2.55, color: '#ffd84a' },
-        { name: 'Bubble', type: 'bubble', avatar: 'bubble', x: 1.35, z: -2.15, color: '#f7f7ff' },
-        { name: 'Ribbit Dream Signal', type: 'npc', avatar: 'ribbit', x: 2.35, z: -1.45, color: '#63d35f' },
-        { name: 'Floating Worm', type: 'npc', avatar: 'floatingworm', x: 1.45, z: -3.15, color: '#d85bd8', sizeScale: 0.52, silent: true, loreGate: { episode: 9, subepisode: 2 } },
-        { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -2.75, z: -1.35, color: '#d9d0a2' },
-        { name: 'Jax', type: 'jax', avatar: 'jax', x: 2.85, z: -2.75, color: '#8a4fd6' },
-        { name: 'Jax abstrait', type: 'abstract', avatar: 'abstractedjax', x: 0.15, z: -3.8, color: '#050505', sizeScale: 1.45, silent: true, threatActive: false, silentText: 'La forme abstraite de Jax gronde. Aucun dialogue ne lui est attribue.', loreGate: { episode: 9, subepisode: 4 } }
-      ],
+      18: [],
       19: [
         { name: 'Ribbit', type: 'npc', avatar: 'ribbit', x: -3.35, z: -1.55, color: '#4ee77e' },
         { name: 'Scratch', type: 'npc', avatar: 'scratch', x: -2.45, z: -2.25, color: '#ffd341' },
@@ -11517,9 +13032,8 @@ const OS = {
       ],
       22: [
         { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -1.3, z: -2.3, color: '#e53935' },
-        { name: 'Abstraction aquatique', type: 'abstract', avatar: 'aquaticabstraction', x: 0.15, z: -3.15, color: '#02020a', sizeScale: 1.35, silent: true, threatActive: false, silentText: 'Des tentacules noires glissent derriere la vitre. Seuls des parasites et des grondements repondent.', loreGate: { episode: 9, subepisode: 6 } },
-        { name: 'Gloink Round', type: 'npc', avatar: 'gloinkround', x: 0.6, z: -2.6, color: '#c4b62d', sizeScale: 0.72 },
-        { name: 'Bubble', type: 'bubble', avatar: 'bubble', x: 2.0, z: -1.6, color: '#f7f7ff' }
+        { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: 1.35, z: -2.35, color: '#d9d0a2' },
+        { name: 'Abstraction aquatique', type: 'abstract', avatar: 'aquaticabstraction', x: 0.15, z: -3.15, color: '#02020a', sizeScale: 1.35, silent: true, threatActive: false, silentText: 'Des tentacules noires glissent derriere la vitre. Seuls des parasites et des grondements repondent.', loreGate: { episode: 9, subepisode: 6 } }
       ],
       23: [
         { name: 'Jax Memory', type: 'jax', avatar: 'jax', x: -1.25, z: -2.35, color: '#8a4fd6' },
@@ -11528,18 +13042,24 @@ const OS = {
       24: [
         { name: 'Hunter Jax', type: 'jax', avatar: 'hunterjax', x: -1.6, z: -2.15, color: '#8a4fd6' },
         { name: 'Rhino Gangle', type: 'gangle', avatar: 'rhinogangle', x: 0.35, z: -2.65, color: '#e8e1d6' },
-        { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 1.85, z: -1.65, color: '#e53935' }
+        { name: 'Flamingo Zooble', type: 'zooble', avatar: 'zooble', x: 1.35, z: -2.7, color: '#ff4fb8' },
+        { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 2.45, z: -1.65, color: '#e53935' }
       ],
       25: [
         { name: 'Anime Pomni', type: 'pomni', avatar: 'japanesepomni', x: -2.2, z: -1.65, color: '#e53935' },
         { name: 'Anime Jax', type: 'jax', avatar: 'japanesejax', x: -0.75, z: -2.45, color: '#8a4fd6' },
         { name: 'Anime Gangle', type: 'gangle', avatar: 'japanesegangle', x: 0.75, z: -2.45, color: '#f7f7f7' },
-        { name: 'Anime Ragatha', type: 'ragatha', avatar: 'japaneseragatha', x: 2.2, z: -1.65, color: '#d64545' }
+        { name: 'Anime Ragatha', type: 'ragatha', avatar: 'japaneseragatha', x: 2.2, z: -1.65, color: '#d64545' },
+        { name: 'Anime Kinger', type: 'kinger', avatar: 'japanesekinger', x: -2.9, z: -3.2, color: '#e5cf99' },
+        { name: 'Anime Zooble', type: 'zooble', avatar: 'japanesezooble', x: 2.9, z: -3.2, color: '#f06cb8' }
       ],
       26: [
         { name: 'President Pomni', type: 'pomni', avatar: 'pomni', x: 0, z: -2.65, color: '#e53935' },
         { name: 'Gangle Extremist', type: 'gangle', avatar: 'gangle', x: -1.8, z: -1.65, color: '#f7f7f7' },
-        { name: 'Jax', type: 'jax', avatar: 'jax', x: 1.8, z: -1.65, color: '#8a4fd6' }
+        { name: 'Jax Extremist', type: 'jax', avatar: 'jax', x: 1.8, z: -1.65, color: '#8a4fd6' },
+        { name: 'Kinger Assistant', type: 'kinger', avatar: 'kinger', x: -2.55, z: -3.0, color: '#d9d0a2' },
+        { name: 'Ragatha Guard', type: 'ragatha', avatar: 'ragatha', x: 1.2, z: -3.25, color: '#d64545' },
+        { name: 'Zooble Guard', type: 'zooble', avatar: 'zooble', x: 2.55, z: -3.0, color: '#ff4fb8' }
       ],
       27: [],
       28: [
@@ -11549,8 +13069,8 @@ const OS = {
       ],
       29: [],
       30: [
-        { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: -0.9, z: -2.2, color: '#ff4fb8' },
-        { name: 'Bubble', type: 'bubble', avatar: 'bubble', x: 1.0, z: -1.8, color: '#f7f7ff' }
+        { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -0.9, z: -2.2, color: '#d9d0a2' },
+        { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: 1.0, z: -1.8, color: '#d64545' }
       ],
       31: [
         { name: 'Jax', type: 'jax', avatar: 'jax', x: -2.7, z: -2.25, color: '#8a4fd6' },
@@ -11586,8 +13106,6 @@ const OS = {
       34: [
         { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -1.1, z: -2.35, color: '#e53935' },
         { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: 0.7, z: -2.55, color: '#d9d0a2' },
-        { name: 'Martha Mildenhall', type: 'ghost', avatar: 'marthamildenhall', x: 2.0, z: -1.65, color: '#7df0ff' },
-        { name: 'Angel', type: 'npc', avatar: 'angel', x: -2.15, z: -1.55, color: '#e5d7d7', sizeScale: 1.05 },
         { name: 'Mildenhall Souls', type: 'ghost', avatar: 'mildenhallsouls', x: 0.05, z: -3.15, color: '#77f5da', sizeScale: 0.82 }
       ],
       35: [
@@ -11612,9 +13130,8 @@ const OS = {
         { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 1.2, z: -2.35, color: '#e53935' }
       ],
       40: [
-        { name: 'Beach Gangle', type: 'gangle', avatar: 'beachgangle', x: -1.25, z: -2.3, color: '#f7f7f7' },
-        { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 1.25, z: -2.3, color: '#ff4fb8' },
-        { name: 'Shrimp NPC', type: 'npc', avatar: 'shrimpnpc', x: 0, z: -3.05, color: '#ff8f4a', sizeScale: 0.72 }
+        { name: 'Orange Crappy Looking Fish', type: 'npc', avatar: 'truthtellerfish', x: -0.95, z: -2.95, color: '#ff9b32', sizeScale: 0.68 },
+        { name: 'Red Crappy Looking Fish', type: 'npc', avatar: 'liarfish', x: 0.9, z: -3.15, color: '#ff3264', sizeScale: 0.64 }
       ],
       41: [
         { name: 'Jax Memory', type: 'jax', avatar: 'jax', x: 0, z: -2.55, color: '#8a4fd6', silent: true, silentText: 'Ce Jax appartient au souvenir incomplet de la rue C&A. La scene ne constitue pas une sortie.' }
@@ -11670,8 +13187,7 @@ const OS = {
         { name: 'Pomni', type: 'pomni', avatar: 'spudsypomni', x: -1.75, z: -1.75, color: '#e53935' }
       ],
       73: [
-        { name: 'Scratch Archive', type: 'npc', avatar: 'scratch', x: -1.35, z: -2.25, color: '#ffd341', silent: true, silentText: 'Projection du profil de Scratch rattachee a son ancien poste C&A; Scratch n est pas restaure comme resident.' },
-        { name: 'Ribbit abstrait // Scan', type: 'abstract', avatar: 'abstractedribbit', x: 1.45, z: -2.85, color: '#050505', sizeScale: 1.25, silent: true, threatActive: false, silentText: 'Le scan de Ribbit abstrait gronde sans former de langage. Il s agit d une archive visuelle, pas d une presence physique.', loreGate: { episode: 9, subepisode: 2 } }
+        { name: 'Scratch Archive', type: 'npc', avatar: 'scratch', x: -1.35, z: -2.25, color: '#ffd341', silent: true, silentText: 'Projection du profil de Scratch rattachee a son ancien poste C&A; Scratch n est pas restaure comme resident.' }
       ],
       74: [
         { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -0.75, z: -2.35, color: '#e53935' }
@@ -11727,12 +13243,15 @@ const OS = {
       ? selected
       : ([1, 2, 3, 4, 5, 6, 7, 8, 9].find(number => !progress.includes(number)) || 9);
     const subProgress = (typeof EpisodeManager !== 'undefined' && typeof EpisodeManager.getSubepisodeProgress === 'function')
-      ? EpisodeManager.getSubepisodeProgress(1)
+      ? EpisodeManager.getSubepisodeProgress(episode)
       : [];
+    const subepisode = subProgress.length ? Math.max(...subProgress) + 1 : 0;
     const cycleIndex = Math.floor(performance.now() / 75000) % 4;
     return {
       progress,
       episode,
+      subProgress,
+      subepisode,
       knowsPomni: progress.includes(1) || subProgress.length > 0 || episode > 1,
       afterFinal: progress.includes(9) && episode === 9,
       phase: ['briefing', 'adventure', 'recovery', 'quiet'][cycleIndex],
@@ -11741,6 +13260,7 @@ const OS = {
   },
 
   getCircusScheduledNpcPlacements(state) {
+    if (state?.activeCampaign) return [];
     const timeline = this.getCircusTimelineContext();
     const adventure = this.getCircusAdventurePortalConfig();
     const colors = {
@@ -11780,13 +13300,18 @@ const OS = {
   getCircusActiveZoneSprites(zoneId, state) {
     const timeline = this.getCircusTimelineContext();
     const campaign = this.getActiveCircusCampaignStatus();
-    const staticSprites = this.getCircusZoneSprites(zoneId).filter(sprite => {
+    let staticSprites = this.getCircusZoneSprites(zoneId).filter(sprite => {
       const avatar = sprite.avatar || sprite.type;
       if (sprite.loreGate && !this.hasCircusLoreGate(sprite.loreGate)) return false;
+      if (sprite.campaignGate && !this.isCircusCampaignGateActive(sprite.campaignGate)) return false;
       if (avatar === 'pomni' && !timeline.knowsPomni && campaign?.definition?.episode !== 1) return false;
       if (avatar === 'jax' && timeline.afterFinal && !/memory|archive/i.test(sprite.name || '')) return false;
       return true;
     });
+    if (campaign?.definition?.episode === 2 && campaign.progress.stage === 19 && Number(zoneId) === 2) {
+      const deletionRoster = new Set(['caine', 'pomni', 'gummigoo']);
+      staticSprites = staticSprites.filter(sprite => deletionRoster.has(sprite.avatar || sprite.type));
+    }
     const scheduled = this.getCircusScheduledNpcPlacements(state)
       .filter(sprite => sprite.zone === zoneId && !staticSprites.some(existing => (existing.avatar || existing.type) === sprite.avatar));
     const dynamicSprites = this.getCircusDynamicEventSprites(zoneId)
@@ -14434,10 +15959,10 @@ const OS = {
         "Son sprite est rendu comme un noyau a couronne angulaire.",
         "Les capteurs la confondent parfois avec un bug de collision."
       ]},
-      gloinkqueenscale: { name: "Gloink Queen True Scale", age: "NPC Boss", stress: "67%", avatar: "gloinkqueenscale", signal: "Q", color: "#f06f82", facts: [
+      gloinkqueenscale: { name: "Gloink Queen True Scale", age: "PNJ geant", stress: "67%", avatar: "gloinkqueenscale", signal: "Q", color: "#f06f82", facts: [
         "Version taille reelle : la Queen est volontairement enorme face aux Gloinks simples.",
         "Le long corps rose, les taches jaunes, les yeux multiples et les bandes bleues gardent son identite.",
-        "CainOS l affiche en format boss pour eviter de la reduire a une petite icone."
+        "CainOS lui reserve un cadre geant pour eviter de la reduire a une petite icone."
       ]},
       mannequin: { name: "Mannequins", age: "NPC", stress: "0%", avatar: "mannequin", signal: "N", color: "#d8d8d8", facts: [
         "Corps blancs generiques utilises par Caine pour peupler les scenes.",
@@ -14809,10 +16334,10 @@ const OS = {
         "Les ailes ramifiees avec trous oculaires et le corps pale sont ses marqueurs visuels.",
         "CainOS evite de la nommer monstre une fois l information de l episode connue."
       ]},
-      disappearingguy: { name: "Disappearing Guy", age: "PNJ - Ep. 6", stress: "??", avatar: "disappearingguy", signal: "D", color: "#c34232", facts: [
-        "Mannequin rouge a chapeau, interrompu par sa disparition pendant la ceremonie.",
-        "Sa fiche est volontairement courte: le gag repose sur son apparition fugace.",
-        "CainOS le place avec les signaux des Favorite Character Awards."
+      disappearingguy: { name: "Disappearing Guy", age: "PNJ - Ep. 5/6", stress: "??", avatar: "disappearingguy", signal: "D", color: "#55555c", facts: [
+        "Silhouette grise au bar de Zooble, puis rouge dans les scenes liees aux Favorite Character Awards.",
+        "Il disparait avant de terminer sa replique; CainOS conserve seulement le fragment confirme.",
+        "Les deux presentations appartiennent au meme personnage et non a deux profils separes."
       ]},
       committeemember: { name: "Committee Member", age: "PNJ - Ep. 6", stress: "18%", avatar: "committeemember", signal: "C", color: "#f4f4f0", facts: [
         "Mannequin de comite lie aux Favorite Character Awards.",
@@ -15294,7 +16819,7 @@ const OS = {
       jeffery: { episode: 5, subepisode: 4 },
       giantcentipede: { episode: 5, subepisode: 6 },
       ming: { episode: 6, subepisode: 7 },
-      disappearingguy: { episode: 6, subepisode: 7 },
+      disappearingguy: { episode: 5, subepisode: 6 },
       committeemember: { episode: 6, subepisode: 7 },
       beachgangle: { episode: 7, subepisode: 1 },
       truthtellerfish: { episode: 7, subepisode: 1 },

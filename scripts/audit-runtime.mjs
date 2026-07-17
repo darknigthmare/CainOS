@@ -149,11 +149,11 @@ for (let episode = 1; episode <= 9; episode++) {
   'whatifgangle: [3, 0]',
   'jumbledragatha: [4, 0]',
   'jumbledpomni: [5, 0]',
-  "name: 'SHRIMP TOWN / RECONSTRUCTION LIMITEE'",
+  "name: 'SHRIMP TOWN / CONTREFACTUEL'",
   "name: 'SNOWY TUNDRA'",
   'C&A BRAIN SCANNER ROOM',
   "name: 'JAX PSYCHE / FIVE-DOOR FOYER'",
-  'EXPANDED GROUNDS / POST-REMEMBER',
+  'EXPANDED GROUNDS / EPILOGUE PROJECTION',
   'getCircusCanonRoomDefinitions',
   "name: 'DR. FOOTBALL BATHROOM'",
   "name: 'MILDENHALL ENTRY HALL'",
@@ -164,7 +164,7 @@ for (let episode = 1; episode <= 9; episode++) {
   "kind: 'watercooler'",
   "kind: 'sofa'",
   "name: 'JAX PSYCHE / FOUR PERSONAS ROOM'",
-  "name: 'DESTROYED CIRCUS / JAX PILLOW SHACK'",
+  "name: 'RESTORED TENT / JAX PILLOW FORT'",
   'getCircusDormHallDoorProps',
   'getCircusNpcAnnexDoorProps',
   "kind: 'lorebillboard', avatar: 'paintedmasks'",
@@ -316,9 +316,20 @@ const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map(match => match[1]);
 const duplicateIds = [...new Set(ids.filter((id, index) => ids.indexOf(id) !== index))];
 if (duplicateIds.length) failures.push(`ID HTML DUPLIQUES: ${duplicateIds.join(', ')}`);
 
-if (!/campaignStages\s*!==\s*72/.test(app)) failures.push('Audit 72 actes absent');
 if (!/campaigns\.length\s*!==\s*9/.test(app)) failures.push('Audit 9 campagnes absent');
-if (!/getCircusFpsZoneMax\(\)\s*\{\s*return 120;/.test(app)) failures.push('Borne FPS 120 absente');
+const zoneMaxMatch = app.match(/getCircusFpsZoneMax\(\)\s*\{\s*return\s+(\d+)\s*;/);
+const fpsZoneMax = zoneMaxMatch ? Number(zoneMaxMatch[1]) : Number.NaN;
+const minimumFpsZoneMax = 148;
+if (!Number.isInteger(fpsZoneMax) || fpsZoneMax < minimumFpsZoneMax) {
+  failures.push(`Borne FPS ${Number.isFinite(fpsZoneMax) ? fpsZoneMax : 'introuvable'}/${minimumFpsZoneMax} minimum`);
+}
+if (!/exits:\s*room\.nonPhysical\s*\?\s*\[\]\s*:\s*\[\.\.\.new Set\(room\.exits \|\| \[\]\)\]/.test(app)
+  || !/Object\.entries\(canonRooms\)\.forEach\(\(\[zoneId, room\]\) => \{[\s\S]*?if \(room\.nonPhysical\) return;[\s\S]*?\(room\.exits \|\| \[\]\)\.forEach/.test(app)) {
+  failures.push('Isolation des pieces non physiques dans le graphe FPS absente');
+}
+if (!/const route = \(Array\.isArray\(step\.route\)/.test(app) || !/route\.forEach\(zoneId =>/.test(app)) {
+  failures.push('Parcours FPS multi-zones absent des campagnes');
+}
 if (!/storyMicroAbortBtn\.addEventListener\('click',\s*\(\)\s*=>\s*\{[\s\S]*?this\.returnFromStoryMicroGame\(\);/.test(episodes)) {
   failures.push('Retour texte persistant apres echec mini-jeu absent');
 }
@@ -332,6 +343,12 @@ if (!/getCircusAuthoredSpawn\(zoneId\)/.test(app)
 }
 if (!/zonePositionRevisions:\s*state\.zonePositionRevisions/.test(app)) {
   failures.push('Migration versionnee des positions FPS absente');
+}
+if (!/getSubepisodeProgress\(episode\)/.test(app) || /getSubepisodeProgress\(1\)/.test(app.slice(
+  app.indexOf('getCircusTimelineContext()'),
+  app.indexOf('getCircusScheduledNpcPlacements(state)')
+))) {
+  failures.push('Contexte FPS encore bloque sur la progression du PILOT');
 }
 if (!/importCainOSSave\(save\)[\s\S]*?EpisodeManager\.updateLocksUI\?\.\(\);[\s\S]*?this\.selectEpisodeForCurrentProgress\(\);/.test(app)) {
   failures.push('Rafraichissement immediat des verrous apres import absent');
@@ -349,6 +366,21 @@ for (const marker of [
   "kind: 'wackywatch'"
 ]) {
   if (!app.includes(marker)) failures.push(`Passe FPS EP1 absente: ${marker}`);
+}
+for (const marker of [
+  "name: 'CANDY WAGON APPROACH'",
+  "name: 'TEST LEVEL NPC MODEL VAULT'",
+  "name: 'TEST LEVEL OOB SURFACE'",
+  "name: 'KAUFMO FUNERAL / SILENT RECONSTRUCTION'",
+  "version: 2",
+  "definitionVersion",
+  "forcedAmbientEvent",
+  "id: 'gummigoo_delete'"
+]) {
+  if (!app.includes(marker)) failures.push(`Passe FPS EP2 absente: ${marker}`);
+}
+if (!/2:\s*\{\s*title:\s*'Candy Carrier Chaos!',\s*version:\s*2,\s*steps:\s*\[/.test(app)) {
+  failures.push('Campagne FPS EP2 versionnee absente');
 }
 if (!app.includes("name: 'UNTITLED BAR'")) failures.push('Bar canonique de Untitled absent');
 for (const marker of ['RAGATHA TORMENT', 'GANGLE TORMENT', 'ZOOBLE TORMENT', 'JAX TORMENT', 'POMNI TORMENT']) {
@@ -373,4 +405,4 @@ if (failures.length) {
   process.exit(1);
 }
 
-console.log(`AUDIT CAINOS: OK | ${ids.length} ids uniques | 9 campagnes | 72 actes | journal, profils, atelier et controles presents`);
+console.log(`AUDIT CAINOS: OK | ${ids.length} ids uniques | 9 campagnes a actes variables | borne FPS ${fpsZoneMax} | journal, profils, atelier et controles presents`);

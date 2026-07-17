@@ -7107,7 +7107,7 @@ const EpisodeManager = {
       { after: 217, title: "Epreuves de Caine", objective: "Reparez les dalles de score pendant que Caine transforme le sport en chaos.", mode: "repair", goal: 8, duration: 18, target: "SCORE", hazard: "RULE" },
       { after: 307, title: "Jax sous pression", objective: "Evitez les tirs et signaux rouges pendant que Jax perd le controle du jeu.", mode: "dodge", goal: 8, duration: 18, target: "JAX", hazard: "SHOT" },
       { after: 486, title: "Trajectoires croisees", objective: "Cliquez les trajectoires valides sans toucher les impacts de Ragatha.", mode: "click", goal: 8, duration: 18, target: "ARC", hazard: "RAGATHA" },
-      { after: 642, title: "Kinger et Pomni", objective: "Reparez les lignes calmes pendant que Kinger partage son resilience a Pomni.", mode: "repair", goal: 9, duration: 20, target: "CALM", hazard: "PANIC" },
+      { after: 642, title: "Kinger et Ragatha", objective: "Reparez les lignes calmes pendant que Kinger aide Ragatha a recuperer son dernier coeur au Loser Corner.", mode: "repair", goal: 9, duration: 20, target: "CALM", hazard: "PANIC" },
       { after: 811, title: "Alliance chaotique", objective: "Filtrez la sequence Pomni/Jax et gardez les intentions lisibles.", mode: "sequence", goal: 6, duration: 22, target: "ALLY", hazard: "BETRAY" },
       { after: 882, title: "Avant les awards", objective: "Stabilisez les derniers scores avant que Caine lance la ceremonie.", mode: "dodge", goal: 8, duration: 18, target: "AWARD", hazard: "EGO" }
     ],
@@ -9012,7 +9012,7 @@ class StoryMicroGame {
       "Epreuves de Caine": ["arena", "Reussissez les epreuves de Caine en gardant les cibles officielles.", "CLIC: PASSER L'EPREUVE", "EPREUVE", "PIEGE"],
       "Jax sous pression": ["arena", "Gardez Jax dans l'action sans le pousser vers le mauvais signal.", "CLIC: CANALISER JAX", "COURAGE", "FUITE"],
       "Trajectoires croisees": ["arena", "Croisez les trajectoires de l'equipe sans collision entre objectifs.", "CLIC: ALIGNER LES TRAJECTOIRES", "TRAJET", "CHOC"],
-      "Kinger et Pomni": ["memory", "Gardez Pomni avec Kinger et ramassez les souvenirs qui stabilisent la scene.", "SOURIS: SUIVRE KINGER", "KINGER", "PANIC"],
+      "Kinger et Ragatha": ["memory", "Gardez Ragatha avec Kinger et recuperez les signaux qui stabilisent leur checkpoint au Loser Corner.", "SOURIS: SUIVRE KINGER", "KINGER", "PANIC"],
       "Alliance chaotique": ["arena", "Transformez le chaos d'equipe en alliance utilisable.", "CLIC: FIXER L'ALLIANCE", "ALLIE", "CHAOS"],
       "Avant les awards": ["arena", "Preparez les awards sans declencher les recompenses parasites.", "CLIC: PREPARER LES AWARDS", "AWARD", "BUG"],
       "Jour sans aventure": ["circus", "Gardez le cirque calme pendant le jour sans aventure.", "SOURIS: MAINTENIR LE CALME", "CALME", "ENNUI"],

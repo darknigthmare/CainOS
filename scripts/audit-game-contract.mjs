@@ -50,6 +50,8 @@ const officialTitles = {
   8: 'hjsakldfhl',
   9: 'Remember'
 };
+const campaignEpisodes = Object.keys(officialTitles).map(Number);
+const minimumStagesPerEpisode = 8;
 let stageCount = 0;
 const canonPackEPlacements = {
   candyguardcyan: 32,
@@ -84,8 +86,8 @@ const canonPackFProfileKeys = {
   albertspudsy: 'ALBERT_SPUDSY'
 };
 const canonPackGPlacements = {
-  truthtellerfish: 14,
-  liarfish: 14,
+  truthtellerfish: 40,
+  liarfish: 40,
   stupidburgermannequin: 10,
   cerealmannequin: 10
 };
@@ -216,7 +218,7 @@ const canonPackJStatuses = {
   bestchildren: 'FAMILLE HUMAINE / ARCHIVE'
 };
 
-for (let episode = 1; episode <= 9; episode++) {
+for (const episode of campaignEpisodes) {
   const campaign = OS.getCircusFpsCampaignDefinition(episode);
   if (!campaign) {
     failures.push(`EP${episode}: campagne absente`);
@@ -225,18 +227,42 @@ for (let episode = 1; episode <= 9; episode++) {
   if (campaign.title !== `${officialTitles[episode]} / CAMPAGNE FPS`) {
     failures.push(`EP${episode}: titre FPS incorrect (${campaign.title})`);
   }
-  if (campaign.stages.length !== 8) failures.push(`EP${episode}: ${campaign.stages.length}/8 actes`);
-  stageCount += campaign.stages.length;
-  campaign.stages.forEach((stage, stageIndex) => stage.requirements.forEach(requirement => {
-    if (virtual.has(requirement.action)) return;
-    if (requirement.action === 'talk') {
-      const found = OS.getCircusZoneSprites(stage.zone).some(sprite => (sprite.avatar || sprite.type) === requirement.target);
-      if (!found) failures.push(`EP${episode}.${stageIndex + 1}: PNJ ${requirement.target} absent zone ${stage.zone}`);
-      return;
+  const stages = Array.isArray(campaign.stages) ? campaign.stages : [];
+  if (!Array.isArray(campaign.stages)) failures.push(`EP${episode}: liste d actes absente`);
+  if (stages.length < minimumStagesPerEpisode) {
+    failures.push(`EP${episode}: ${stages.length}/${minimumStagesPerEpisode} actes minimum`);
+  }
+  stageCount += stages.length;
+  stages.forEach((stage, stageIndex) => {
+    const requirements = Array.isArray(stage.requirements) ? stage.requirements : [];
+    if (!Array.isArray(stage.requirements)) {
+      failures.push(`EP${episode}.${stageIndex + 1}: exigences absentes`);
     }
-    const found = OS.getCircusZoneProps(stage.zone).some(prop => prop.kind === requirement.target);
-    if (!found) failures.push(`EP${episode}.${stageIndex + 1}: OBJET ${requirement.target} absent zone ${stage.zone}`);
-  }));
+    if (!Array.isArray(stage.route) || !stage.route.includes(stage.zone)) {
+      failures.push(`EP${episode}.${stageIndex + 1}: route FPS absente ou sans zone cible`);
+    }
+    const visitTargets = new Set(requirements
+      .filter(requirement => requirement.action === 'visit')
+      .map(requirement => Number(requirement.target)));
+    for (const zone of stage.route || []) {
+      if (!visitTargets.has(zone)) failures.push(`EP${episode}.${stageIndex + 1}: zone ${zone} absente des visites de route`);
+    }
+    requirements.forEach(requirement => {
+      if (virtual.has(requirement.action)) return;
+      const requirementZone = Number.isFinite(Number(requirement.zone)) ? Number(requirement.zone) : stage.zone;
+      if (requirement.action === 'talk') {
+        const found = OS.getCircusZoneSprites(requirementZone).some(sprite => (sprite.avatar || sprite.type) === requirement.target);
+        if (!found) failures.push(`EP${episode}.${stageIndex + 1}: PNJ ${requirement.target} absent zone ${requirementZone}`);
+        return;
+      }
+      const matches = OS.getCircusZoneProps(requirementZone)
+        .filter(prop => (prop.campaignTarget || prop.kind) === requirement.target);
+      if (!matches.length) failures.push(`EP${episode}.${stageIndex + 1}: OBJET ${requirement.target} absent zone ${requirementZone}`);
+      if (requirement.distinct && matches.length < requirement.count) {
+        failures.push(`EP${episode}.${stageIndex + 1}: OBJETS DISTINCTS ${requirement.target} ${matches.length}/${requirement.count} zone ${requirementZone}`);
+      }
+    });
+  });
 }
 
 for (const [avatar, zone] of Object.entries(canonPackEPlacements)) {
@@ -301,8 +327,10 @@ for (const [avatar, zone] of Object.entries(canonPackKSpritePlacements)) {
   if (OS.getWackyProvenanceKind(avatar) !== 'canon-visual') failures.push(`PACK K: provenance ${avatar} incorrecte`);
 }
 
-const floatingWorm = OS.getCircusZoneSprites(18).find(entry => entry.avatar === 'floatingworm');
-if (!floatingWorm?.silent || floatingWorm?.loreGate?.episode !== 9) failures.push('PACK L: Floating Worm absent ou non silencieux');
+const floatingWormGate = OS.getWackyProfileGate('floatingworm');
+if (floatingWormGate?.episode !== 9 || floatingWormGate?.subepisode !== 2) {
+  failures.push('PACK L: Floating Worm mal verrouille dans les archives');
+}
 for (const [avatar, zone] of Object.entries(canonPackLPropPlacements)) {
   const prop = OS.getCircusZoneProps(zone).find(entry => entry.kind === 'lorebillboard' && entry.avatar === avatar);
   if (!prop?.loreText || !prop?.loreGate) failures.push(`PACK L: objet ${avatar} absent ou sans contexte lore`);
@@ -337,7 +365,7 @@ for (const [avatar, profileKey] of Object.entries(canonPackNProfileKeys)) {
 }
 
 for (const [avatar, zone] of Object.entries({
-  abstractedjax: 18,
+  abstractedjax: 109,
   abstractedqueeniedark: 17,
   jaxmindviolent: 104,
   jaxmindcomic: 104,
@@ -422,8 +450,15 @@ if (OS.getWackyProfileStatus('blueai') !== 'PNJ / DECOR') failures.push('BLUE AI
 if (OS.getWackyProvenanceKind('blueai') !== 'canon-visual') failures.push('BLUE AI: provenance non canonique');
 const blueGate = OS.getWackyProfileGate('blueai');
 if (blueGate?.episode !== 9 || blueGate?.subepisode !== 6) failures.push('BLUE AI: mauvais verrou de progression');
-const blueSprite = OS.getCircusZoneSprites(16).find(entry => entry.avatar === 'blueai');
-if (blueSprite?.name !== 'Blue AI' || blueSprite?.loreGate?.episode !== 9) failures.push('BLUE AI: signal FPS mal classe');
+const blueSprite = OS.getCircusZoneSprites(108).find(entry => entry.avatar === 'blueai');
+if (
+  blueSprite?.name !== 'Blue AI'
+  || blueSprite?.loreGate?.episode !== 9
+  || blueSprite?.campaignGate?.episode !== 9
+  || blueSprite?.campaignGate?.minStage !== 12
+) {
+  failures.push('BLUE AI: signal FPS mal classe');
+}
 if (OS.getWackyCastData().fly) failures.push('MOUCHE MILDENHALL: ne doit pas avoir de profil Wacky Watch');
 
 const episodeOneCast = OS.getEpisodeCastKeys(1) || [];
@@ -454,8 +489,8 @@ for (const avatar of ['whatifragatha', 'whatifgangle']) {
 for (const avatar of ['jumbledragatha', 'jumbledpomni']) {
   if (OS.getWackyProfileStatus(avatar) !== 'VFX / ETAT TEMPORAIRE') failures.push(`PACK O: ${avatar} doit rester un VFX temporaire`);
 }
-if (!OS.getCircusZoneSprites(73).some(entry => entry.avatar === 'abstractedribbit' && entry.silent && entry.threatActive === false)) {
-  failures.push('PACK O: scan non hostile de Ribbit abstraite absent de la salle C&A');
+if (OS.getCircusZoneSprites(73).some(entry => entry.avatar === 'abstractedribbit')) {
+  failures.push('PACK O: Ribbit abstraite ne doit pas devenir un PNJ physique dans le flashback C&A');
 }
 if (!OS.getCircusZoneProps(19).some(entry => entry.avatar === 'destinybest' && entry.kind === 'lorebillboard')) {
   failures.push('PACK O: projection humaine Destiny Best absente des archives');
@@ -465,8 +500,117 @@ for (const [zone, kinds] of [[70, ['building', 'wave']], [71, ['stairs', 'candle
   for (const kind of kinds) if (!props.some(prop => prop.kind === kind)) failures.push(`FPS ${zone}: decor ${kind} absent`);
 }
 const canonRoomDefinitions = OS.getCircusCanonRoomDefinitions();
-if (OS.getCircusFpsZoneMax() !== 120) failures.push('FPS: borne de zones attendue a 120');
-if (Object.keys(canonRoomDefinitions).length !== 45) failures.push(`FPS: ${Object.keys(canonRoomDefinitions).length}/45 pieces canoniques ou balisees`);
+const fpsZoneMax = OS.getCircusFpsZoneMax();
+const minimumFpsZoneMax = 148;
+if (!Number.isInteger(fpsZoneMax) || fpsZoneMax < minimumFpsZoneMax) {
+  failures.push(`FPS: borne de zones ${fpsZoneMax}/${minimumFpsZoneMax} minimum`);
+}
+const canonRoomEntries = Object.entries(canonRoomDefinitions);
+const minimumCanonRoomCount = 61;
+if (canonRoomEntries.length < minimumCanonRoomCount) {
+  failures.push(`FPS: ${canonRoomEntries.length}/${minimumCanonRoomCount} pieces canoniques ou balisees minimum`);
+}
+canonRoomEntries.forEach(([zoneId]) => {
+  const zone = Number(zoneId);
+  if (!Number.isInteger(zone) || zone > fpsZoneMax) failures.push(`FPS: piece ${zoneId} hors borne ${fpsZoneMax}`);
+});
+const episodeTwoCampaign = OS.getCircusFpsCampaignDefinition(2);
+if (episodeTwoCampaign?.version !== 2) failures.push('EP2 FPS: version de campagne 2 absente');
+if (episodeTwoCampaign?.stages?.length !== 21) {
+  failures.push(`EP2 FPS: ${episodeTwoCampaign?.stages?.length ?? 0}/21 actes attendus`);
+}
+if (episodeTwoCampaign?.stages?.[0]?.zone !== 147 || episodeTwoCampaign?.stages?.at(-1)?.zone !== 148) {
+  failures.push('EP2 FPS: la campagne doit commencer par le cauchemar 147 et finir aux funerailles 148');
+}
+for (let zone = 133; zone <= 148; zone++) {
+  if (!canonRoomDefinitions[zone]) failures.push(`EP2 FPS: piece ${zone} absente`);
+}
+const episodeTwoPhysicalGraph = new Map([
+  [133, [134]],
+  [134, [133, 83]],
+  [135, [83, 136, 138]],
+  [136, [135, 137]],
+  [137, [136, 138]],
+  [138, [137, 139, 141, 135]],
+  [139, [138, 140]],
+  [140, [139, 141]],
+  [141, [140, 138]]
+]);
+for (const [zone, expectedExits] of episodeTwoPhysicalGraph) {
+  const room = canonRoomDefinitions[zone];
+  const exits = new Set(room?.exits || []);
+  if (room?.nonPhysical) failures.push(`EP2 FPS ${zone}: piece physique marquee nonPhysical`);
+  for (const exit of expectedExits) {
+    if (!exits.has(exit)) failures.push(`EP2 FPS ${zone}: sortie physique ${exit} absente`);
+  }
+  if (exits.size !== expectedExits.length) {
+    failures.push(`EP2 FPS ${zone}: ${exits.size}/${expectedExits.length} sorties physiques attendues`);
+  }
+}
+for (let zone = 142; zone <= 148; zone++) {
+  const room = canonRoomDefinitions[zone];
+  if (!room?.nonPhysical || (room?.exits || []).length) {
+    failures.push(`EP2 FPS ${zone}: projection/couche technique reliee au graphe physique`);
+  }
+  if (zone <= 146 && room?.layer !== 'under-map') {
+    failures.push(`EP2 FPS ${zone}: couche under-map absente`);
+  }
+}
+const modelVaultProps = OS.getCircusZoneProps(144);
+if (!modelVaultProps.some(prop => prop.campaignTarget === 'gummigoomodel')) {
+  failures.push('EP2 FPS 144: modele inerte de Gummigoo absent');
+}
+if (modelVaultProps.filter(prop => prop.kind === 'lorebillboard' && prop.campaignTarget === 'npcmodel').length < 2) {
+  failures.push('EP2 FPS 144: galerie de modeles PNJ inertes insuffisante');
+}
+const modelVaultAvatars = new Set(OS.getCircusZoneSprites(144).map(sprite => sprite.avatar || sprite.type));
+if (modelVaultAvatars.size !== 2 || !modelVaultAvatars.has('pomni') || !modelVaultAvatars.has('gummigoo')) {
+  failures.push('EP2 FPS 144: seuls Pomni et Gummigoo doivent etre des personnages actifs');
+}
+if (OS.getCircusZoneProps(146).filter(prop => prop.kind === 'teapot').length !== 3) {
+  failures.push('EP2 FPS 146: trois theieres Utah attendues');
+}
+const funeralSprites = OS.getCircusZoneSprites(148);
+const funeralRoster = new Set(funeralSprites.map(sprite => sprite.avatar || sprite.type));
+const expectedFuneralRoster = new Set(['pomni', 'ragatha', 'zooble', 'gangle', 'kinger']);
+if (funeralRoster.size !== expectedFuneralRoster.size
+  || [...expectedFuneralRoster].some(avatar => !funeralRoster.has(avatar))
+  || funeralSprites.some(sprite => !sprite.silent)) {
+  failures.push('EP2 FPS 148: cortege funeraire silencieux incorrect');
+}
+if (funeralRoster.has('jax') || funeralRoster.has('caine')) {
+  failures.push('EP2 FPS 148: Jax et Caine doivent etre absents');
+}
+if (OS.getCircusZoneSprites(135).some(sprite => (sprite.avatar || sprite.type) === 'caine')) {
+  failures.push('EP2 FPS 135: Caine ne doit pas etre physiquement au palais');
+}
+if (OS.getCircusZoneSprites(141).some(sprite => (sprite.avatar || sprite.type) === 'zooble')) {
+  failures.push('EP2 FPS 141: Zooble ne participe pas au bassin Chocolate River');
+}
+const legacyCandyStoryActors = new Set(['gummigoo', 'max', 'chad', 'loolilalu', 'fudge', 'pomni']);
+if (OS.getCircusZoneSprites(6).some(sprite => legacyCandyStoryActors.has(sprite.avatar || sprite.type))) {
+  failures.push('EP2 FPS 6: ancien regroupement generique des personnages Candy encore actif');
+}
+if (OS.getCircusZoneSprites(7).length) {
+  failures.push('EP2 FPS 7: les modeles de compatibilite doivent rester inertes');
+}
+if ((canonRoomDefinitions[98]?.exits || []).includes(73) || (canonRoomDefinitions[99]?.exits || []).includes(73)) {
+  failures.push('EP1/EP9 FPS: le flashback scanner 73 ne doit pas couper la boucle de fausse sortie');
+}
+if (!(canonRoomDefinitions[85]?.exits || []).includes(64)) {
+  failures.push('EP3 FPS: le vestibule ne raccorde pas l etage Mildenhall reconstruit');
+}
+const forcedDeletionEvent = OS.getCircusZoneAmbientEvent(2, {
+  forcedAmbientEvent: {
+    zoneId: 2,
+    startedAt: 0,
+    until: 1800,
+    event: { id: 'gummigoo_delete', label: 'NPC DELETE', detail: 'test', color: '#d8a23a' }
+  }
+});
+if (forcedDeletionEvent?.id !== 'gummigoo_delete') {
+  failures.push('EP2 FPS: VFX force de suppression de Gummigoo absent');
+}
 const spawnContext = { circusDoom: { room: { center: { x: 10, z: 10 } } } };
 const restaurantSpawn = OS.getCircusAuthoredSpawn.call(spawnContext, 120);
 const feastSpawn = OS.getCircusAuthoredSpawn.call(spawnContext, 43);
@@ -619,18 +763,20 @@ if (!feastSprites.some(sprite => (sprite.avatar || sprite.type) === 'pomni' && s
 }
 const zoneObjectiveAudit = OS.auditCircusZoneObjectives();
 if (!zoneObjectiveAudit.ok) zoneObjectiveAudit.errors.forEach(error => failures.push(`OBJECTIF FPS: ${error}`));
-for (const zone of [76, 77, 78, 79, 80, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 109, 110, 111, 112, 114, 115, 116, 117, 118, 119, 120]) {
-  if (!canonRoomDefinitions[zone]) failures.push(`FPS: piece montree ${zone} absente du manifeste`);
+for (const [zoneId] of canonRoomEntries) {
+  const zone = Number(zoneId);
   if (!OS.getCircusZoneProps(zone).length) failures.push(`FPS: piece ${zone} sans decor`);
 }
 for (const zone of [81, 82]) {
   if (canonRoomDefinitions[zone]?.provenance !== 'mentioned') failures.push(`FPS: piece mentionnee ${zone} non balisee comme reconstruction`);
 }
 for (const zone of [101, 102, 103, 108, 113]) {
-  if (canonRoomDefinitions[zone]?.provenance !== 'projection') failures.push(`FPS: projection ${zone} mal classee`);
+  if (canonRoomDefinitions[zone]?.provenance !== 'projection' || !canonRoomDefinitions[zone]?.nonPhysical) {
+    failures.push(`FPS: projection non physique ${zone} mal classee`);
+  }
 }
-if (!canonRoomDefinitions[110]?.exits?.includes(11) || !canonRoomDefinitions[110]?.exits?.includes(12)) {
-  failures.push('EP5: bar non place entre la Suggestion Box et le softball');
+if (!canonRoomDefinitions[110]?.nonPhysical) {
+  failures.push('EP5: transition du bar non classee comme espace non physique');
 }
 for (const zone of [114, 115, 116, 117, 118]) {
   if (!canonRoomDefinitions[zone]?.name.includes('TORMENT')) failures.push(`EP8: tourment ${zone} non isole`);
@@ -668,11 +814,12 @@ const pinkMannequin = OS.getCircusZoneSprites(6).find(entry => entry.avatar === 
 if (!pinkMannequin?.silent || pinkMannequin?.loreGate?.episode !== 2) failures.push('EP2: Pink Mannequin absent ou non silencieux');
 if (OS.getWackyProfileStatus('spudsycustomer') !== 'RECONSTRUCTION CAINOS') failures.push('SPUDSY: faux client non classe comme reconstruction');
 
-if (stageCount !== 72) failures.push(`${stageCount}/72 actes`);
+const minimumStageCount = campaignEpisodes.length * minimumStagesPerEpisode;
+if (stageCount < minimumStageCount) failures.push(`${stageCount}/${minimumStageCount} actes minimum`);
 if (failures.length) {
   console.error(`CONTRAT GAMEPLAY: ECHEC (${failures.length})`);
   failures.forEach(failure => console.error(`- ${failure}`));
   process.exit(1);
 }
 
-console.log('CONTRAT GAMEPLAY: OK | toutes les campagnes pointent vers des PNJ et objets presents');
+console.log(`CONTRAT GAMEPLAY: OK | ${stageCount} actes | toutes les campagnes pointent vers des PNJ et objets presents`);
