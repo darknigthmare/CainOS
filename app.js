@@ -2464,8 +2464,24 @@ const OS = {
     const center = state?.room?.center;
     if (!center) return null;
     const authored = {
+      10: { x: center.x, z: center.z + 2.4, a: -Math.PI / 2, revision: 2 },
+      35: { x: center.x, z: center.z + 2.3, a: -Math.PI / 2, revision: 2 },
+      37: { x: center.x, z: center.z + 1.9, a: -Math.PI / 2, revision: 2 },
       43: { x: center.x, z: center.z + 2.35, a: -Math.PI / 2, revision: 1 },
-      120: { x: center.x, z: center.z + 2.0, a: -Math.PI / 2, revision: 1 }
+      72: { x: center.x, z: center.z + 2.6, a: -Math.PI / 2, revision: 2 },
+      120: { x: center.x, z: center.z + 2.0, a: -Math.PI / 2, revision: 1 },
+      127: { x: center.x, z: center.z + 1.8, a: -Math.PI / 2, revision: 2 },
+      128: { x: center.x, z: center.z + 2.0, a: -Math.PI / 2, revision: 2 },
+      129: { x: center.x, z: center.z + 1.7, a: -Math.PI / 2, revision: 2 },
+      130: { x: center.x, z: center.z + 2.0, a: -Math.PI / 2, revision: 2 },
+      131: { x: center.x, z: center.z + 2.0, a: -Math.PI / 2, revision: 2 },
+      132: { x: center.x, z: center.z + 1.5, a: -Math.PI / 2, revision: 2 },
+      153: { x: center.x, z: center.z + 2.2, a: -Math.PI / 2, revision: 2 },
+      154: { x: center.x, z: center.z + 2.2, a: -Math.PI / 2, revision: 2 },
+      155: { x: center.x, z: center.z + 2.0, a: -Math.PI / 2, revision: 2 },
+      156: { x: center.x, z: center.z + 1.9, a: -Math.PI / 2, revision: 2 },
+      157: { x: center.x, z: center.z + 1.2, a: -Math.PI / 2, revision: 2 },
+      158: { x: center.x, z: center.z + 1.6, a: -Math.PI / 2, revision: 2 }
     };
     return authored[zoneId] || null;
   },
@@ -2861,76 +2877,243 @@ const OS = {
           ]
         }
       ] },
-      4: { title: 'Fast Food Masquerade', steps: [
+      4: { title: 'Fast Food Masquerade', version: 2, steps: [
         {
-          title: 'Softball au Tent', zone: 2, route: [2],
-          action: 'talk', target: 'gangle',
-          guide: 'Commencez par le match improvise au chapiteau et observez le nouveau masque avant l affectation chez Spudsy.'
+          title: 'Lecon de softball et masque brise', zone: 2, route: [2],
+          action: 'use', target: 'softballball',
+          guide: 'Suivez la demonstration de Ragatha, lancez la balle a Jax et observez le masque de comedie brise sans modifier la scene.',
+          requirements: [
+            { action: 'talk', target: 'ragatha', zone: 2, count: 1 },
+            { action: 'talk', target: 'jax', zone: 2, count: 1 },
+            { action: 'look', target: 'brokencomedymask', zone: 2, count: 1 }
+          ]
         },
         {
           title: 'Nouveau masque dans la chambre de Zooble', zone: 48, route: [2, 20, 48],
           action: 'look', target: 'newmask',
-          guide: 'Inspectez le masque sans confondre cet objet avec une nouvelle identite de Gangle.'
+          guide: 'Ouvrez la Zooble Box, ecoutez Zooble et inspectez le masque plastique avant que Gangle ne l essaie.',
+          requirements: [
+            { action: 'use', target: 'zooblebox', zone: 48, count: 1 },
+            { action: 'talk', target: 'zooble', zone: 48, count: 1 },
+            { action: 'talk', target: 'gangle', zone: 48, count: 1 }
+          ]
         },
         {
-          title: 'Boite a suggestions et affectation', zone: 28, route: [48, 20, 28],
+          title: 'Boite a suggestions et equipe forcee', zone: 28, route: [48, 20, 28],
           action: 'look', target: 'spudsysuggestion',
-          guide: 'Lisez la suggestion de restaurant puis laissez Caine effectuer la transition vers le lieu de travail.'
+          guide: 'Inspectez la boite arrachee, la fuite bouchee par Bubble et la trappe qui force Zooble a participer pendant que Kinger reste au Tent.',
+          requirements: [
+            { action: 'use', target: 'suggestionbox', zone: 28, count: 1 },
+            { action: 'look', target: 'waterleak', zone: 28, count: 1 },
+            { action: 'look', target: 'zoobletrapdoor', zone: 28, count: 1 },
+            { action: 'talk', target: 'caine', zone: 28, count: 1 },
+            { action: 'talk', target: 'kinger', zone: 28, count: 1 }
+          ]
         },
         {
-          title: 'Arrivee devant Spudsy', zone: 127, route: [127], entryMode: 'caineportal',
+          title: 'Arrivee matinale devant Spudsy', zone: 127, route: [127], entryMode: 'caineportal',
           action: 'look', target: 'spudsysign',
-          guide: 'Reperez la facade, le parking et l entree avant de commencer le service.'
+          guide: 'Reperez la facade matinale, l entree et le parking avant que le service ne commence.',
+          requirements: [{ action: 'use', target: 'frontdoor', zone: 127, count: 1 }]
         },
         {
-          title: 'Ouverture du service', zone: 10, route: [127, 10],
-          action: 'use', target: 'counter',
-          guide: 'Prenez votre poste, lisez les tickets et suivez les consignes de Work Gangle.',
-          requirements: [{ action: 'talk', target: 'workgangle', zone: 10, count: 1 }]
+          title: 'Ouverture des postes et chute de Zooble', zone: 153, route: [127, 153],
+          action: 'use', target: 'startupmachine', count: 3, distinct: true,
+          guide: 'Allumez les postes du restaurant dans l ordre, puis observez Zooble tomber de la trappe au plafond avec son uniforme.',
+          requirements: [
+            { action: 'look', target: 'ceilingtrapdoor', zone: 153, count: 1 },
+            { action: 'talk', target: 'zooble', zone: 153, count: 1 },
+            { action: 'talk', target: 'workgangle', zone: 153, count: 1 }
+          ]
         },
         {
-          title: 'Petit-dejeuner avec Gummigoo, Max et Chad', zone: 10, route: [10],
-          action: 'talk', target: 'max',
-          guide: 'Servez les trois crocodiles sans faire reconnaitre Pomni par Gummigoo.',
-          requirements: [{ action: 'talk', target: 'gummigoo', zone: 10, count: 1 }]
+          title: 'Friteuse, appel a Caine et repartition des taches', zone: 153, route: [153],
+          action: 'look', target: 'deepfryer',
+          guide: 'Constatez l incident de Ragatha, laissez Gangle appeler Caine puis relevez la station boissons attribuee a Jax.',
+          requirements: [
+            { action: 'use', target: 'managementphone', zone: 153, count: 1 },
+            { action: 'look', target: 'drinkstation', zone: 153, count: 1 },
+            { action: 'talk', target: 'jax', zone: 153, count: 1 },
+            { action: 'talk', target: 'workgangle', zone: 153, count: 1 }
+          ]
         },
         {
-          title: 'Drive-through et commande de la Gloink Queen', zone: 128, route: [10, 35, 128],
+          title: 'Petit-dejeuner et commande 57', zone: 10, route: [153, 35, 10],
+          action: 'use', target: 'register',
+          guide: 'Prenez la commande incomprehensible d Orbsman, validez le numero 57 et laissez Gangle reprendre Jax.',
+          requirements: [
+            { action: 'talk', target: 'orbsman', zone: 10, count: 1 },
+            { action: 'look', target: 'order57', zone: 10, count: 1 },
+            { action: 'talk', target: 'workgangle', zone: 10, count: 1 }
+          ]
+        },
+        {
+          title: 'Stupid Burger et hallucination de Ragatha', zone: 158, route: [10, 35, 158], entryMode: 'projection', entryZone: 35,
+          action: 'look', target: 'hallucinationgangle',
+          guide: 'Assemblez le Stupid Burger, activez la sauce puis traversez uniquement la breve hallucination de Ragatha.',
+          requirements: [
+            { action: 'use', target: 'stupidsauce', zone: 35, count: 1 },
+            { action: 'look', target: 'stupidburger', zone: 35, count: 1 },
+            { action: 'talk', target: 'ragatha', zone: 158, count: 1 }
+          ]
+        },
+        {
+          title: 'Retour de Gummigoo et table des bandits', zone: 154, route: [154], entryMode: 'timeshift',
+          action: 'talk', target: 'gummigoo',
+          guide: 'Prenez le jaffle et les six hash browns, puis rejoignez Gummigoo, Max et Chad sans leur rendre des souvenirs qu ils n ont pas.',
+          requirements: [
+            { action: 'talk', target: 'max', zone: 154, count: 1 },
+            { action: 'talk', target: 'chad', zone: 154, count: 1 },
+            { action: 'use', target: 'bandittable', zone: 154, count: 1 },
+            { action: 'look', target: 'gatortruckwindow', zone: 154, count: 1 }
+          ]
+        },
+        {
+          title: 'Passage au lunch rush par le drive', zone: 128, route: [154, 10, 128],
           action: 'use', target: 'orderwindow',
-          guide: 'Traitez la commande de trois cents burgers au guichet sans reduire la Gloink Queen a un PNJ de taille normale.',
-          requirements: [{ action: 'talk', target: 'gloinkqueenscale', zone: 128, count: 1 }]
+          guide: 'Fermez le menu du matin, lisez l horloge de midi et observez la Gloink Queen passer devant le drive avant son entree.',
+          requirements: [
+            { action: 'use', target: 'lunchmenu', zone: 10, count: 1 },
+            { action: 'look', target: 'driveclock', zone: 128, count: 1 },
+            { action: 'look', target: 'queenoutside', zone: 128, count: 1 }
+          ]
         },
         {
-          title: 'Video de formation imposee', zone: 37, route: [128, 35, 37],
-          action: 'look', target: 'archive',
-          guide: 'Regardez la cassette dans la piece de formation et revenez au service.'
+          title: 'File devoree et commande de 300 burgers', zone: 155, route: [128, 10, 155],
+          action: 'talk', target: 'gloinkqueenscale',
+          guide: 'Laissez la Queen conserver son echelle geante, constatez la file de mannequins devoree et enregistrez les trois cents burgers.',
+          requirements: [
+            { action: 'look', target: 'cerealbowl', zone: 155, count: 1 },
+            { action: 'look', target: 'eatenqueue', zone: 155, count: 1 },
+            { action: 'use', target: 'threehundredticket', zone: 155, count: 1 },
+            { action: 'look', target: 'namedgloinks', zone: 155, count: 3, distinct: true }
+          ]
         },
         {
-          title: 'Calme a l arriere-service', zone: 130, route: [37, 35, 130],
+          title: 'Adieu a Gummigoo', zone: 154, route: [155, 10, 154],
+          action: 'talk', target: 'pomni',
+          guide: 'Revenez vers la table, laissez Pomni renoncer a expliquer le passe et accompagnez seulement le depart des trois bandits.',
+          requirements: [
+            { action: 'talk', target: 'gummigoo', zone: 154, count: 1 },
+            { action: 'use', target: 'diningexit', zone: 154, count: 1 }
+          ]
+        },
+        {
+          title: 'Sanitaires mentionnes et formation forcee', zone: 37, route: [154, 10, 37],
+          action: 'use', target: 'trainingtv',
+          guide: 'Relevez la porte biohazard sans inventer un interieur, puis suivez les mains geantes qui enferment Jax devant la video.',
+          requirements: [
+            { action: 'look', target: 'biohazarddoor', zone: 10, count: 1 },
+            { action: 'look', target: 'restraintchair', zone: 37, count: 1 },
+            { action: 'use', target: 'maskflash', zone: 37, count: 2, distinct: true },
+            { action: 'talk', target: 'jax', zone: 37, count: 1 }
+          ]
+        },
+        {
+          title: 'Six burgers sur trois cents', zone: 35, route: [37, 35],
+          action: 'use', target: 'assemblyburger', count: 6, distinct: true,
+          guide: 'Assemblez les six burgers visibles, puis ecoutez Zooble, Ragatha et Gangle sans pretendre que la commande de 300 est terminee.',
+          requirements: [
+            { action: 'look', target: 'assemblycounter', zone: 35, count: 1 },
+            { action: 'talk', target: 'zooble', zone: 35, count: 1 },
+            { action: 'talk', target: 'ragatha', zone: 35, count: 1 },
+            { action: 'talk', target: 'workgangle', zone: 35, count: 1 }
+          ]
+        },
+        {
+          title: 'Horloge brisee et service du soir', zone: 10, route: [35, 10],
+          action: 'use', target: 'brokenclock',
+          guide: 'Comparez l horloge bloquee a la montre de Gangle, puis laissez les conversations de Ragatha, Jax et Pomni preceder la plonge.',
+          requirements: [
+            { action: 'look', target: 'ganglewatch', zone: 10, count: 1 },
+            { action: 'talk', target: 'ragatha', zone: 10, count: 1 },
+            { action: 'talk', target: 'jax', zone: 10, count: 1 },
+            { action: 'talk', target: 'pomni', zone: 10, count: 1 }
+          ]
+        },
+        {
+          title: 'Cri a l arriere et confidence a Pomni', zone: 130, route: [10, 35, 130],
           action: 'use', target: 'backdoor',
-          guide: 'Rejoignez la zone arriere et laissez la conversation retomber avant l entretien de Gangle.'
+          guide: 'Sortez les poubelles, observez le masque retire et laissez Pomni parler a Gangle de son mal-etre et de la sincerite de Ragatha.',
+          requirements: [
+            { action: 'look', target: 'trashbag', zone: 130, count: 1 },
+            { action: 'look', target: 'removedmask', zone: 130, count: 1 },
+            { action: 'talk', target: 'pomni', zone: 130, count: 1 },
+            { action: 'talk', target: 'workgangle', zone: 130, count: 1 }
+          ]
         },
         {
-          title: 'Bureau du manager et parking', zone: 72, route: [130, 129, 127, 72],
-          action: 'look', target: 'managerbadge', actionZone: 129,
-          guide: 'Consultez le planning dans le bureau puis sortez sur le parking avec Gangle.'
+          title: 'Jax pointe et rejoint sa voiture', zone: 72, route: [130, 72],
+          action: 'look', target: 'jaxcar',
+          guide: 'Attendez 21 heures, constatez le depart de Jax et lisez sa plaque JAX.001 sans faire disparaitre les autres vehicules.',
+          requirements: [
+            { action: 'use', target: 'timeclock', zone: 72, count: 1 },
+            { action: 'look', target: 'jaxplate', zone: 72, count: 1 },
+            { action: 'look', target: 'discardedhat', zone: 72, count: 1 },
+            { action: 'talk', target: 'jax', zone: 72, count: 1 }
+          ]
         },
         {
-          title: 'Route au lampadaire', zone: 131, route: [72, 131],
+          title: 'Bureau, nettoyage et conducteur designe', zone: 129, route: [72, 130, 129],
+          action: 'use', target: 'timesheet',
+          guide: 'Consultez les fiches horaires, puis laissez Zooble attendre Ragatha et l aider a quitter le restaurant.',
+          requirements: [
+            { action: 'use', target: 'clockrack', zone: 129, count: 1 },
+            { action: 'talk', target: 'zooble', zone: 129, count: 1 },
+            { action: 'talk', target: 'ragatha', zone: 129, count: 1 },
+            { action: 'talk', target: 'workgangle', zone: 129, count: 1 }
+          ]
+        },
+        {
+          title: 'Fermeture nocturne transferee a Pomni', zone: 156, route: [156], entryMode: 'timeshift',
+          action: 'look', target: 'darkrestaurant',
+          guide: 'Traversez le meme restaurant plonge dans le noir, puis laissez Pomni proposer de fermer a la place de Gangle.',
+          requirements: [
+            { action: 'use', target: 'closingchecklist', zone: 156, count: 1 },
+            { action: 'use', target: 'clockoutcard', zone: 156, count: 1 },
+            { action: 'talk', target: 'pomni', zone: 156, count: 1 },
+            { action: 'talk', target: 'workgangle', zone: 156, count: 1 }
+          ]
+        },
+        {
+          title: 'Masque abandonne devant Spudsy', zone: 157, route: [157], entryMode: 'timeshift',
+          action: 'look', target: 'discardedmask',
+          guide: 'Sortez par la facade, observez Gangle jeter le masque plastique et conservez le trottoir comme repere.',
+          requirements: [
+            { action: 'use', target: 'frontdoor', zone: 157, count: 1 },
+            { action: 'talk', target: 'gangletragedy', zone: 157, count: 1 }
+          ]
+        },
+        {
+          title: 'Lampadaire et camion', zone: 131, route: [157, 131],
           action: 'use', target: 'streetlamp',
-          guide: 'Restez dans le cercle de lumiere et accompagnez Gangle pendant le passage calme sur la route.',
-          requirements: [{ action: 'talk', target: 'workgangle', zone: 131, count: 1 }]
+          guide: 'Accompagnez la course sous le lampadaire; la chute et le camion restent une transition scriptnee sans faux mini-jeu d esquive.',
+          requirements: [
+            { action: 'look', target: 'curb', zone: 131, count: 1 },
+            { action: 'look', target: 'oncomingtruck', zone: 131, count: 1 },
+            { action: 'talk', target: 'workgangle', zone: 131, count: 1 }
+          ]
         },
         {
-          title: 'Evaluation B+', zone: 132, route: [131, 132], entryMode: 'cainecut',
+          title: 'Evaluation B+ et glitch de Caine', zone: 132, route: [132], entryMode: 'cainecut',
           action: 'look', target: 'reviewgrade',
-          guide: 'Lisez le B+ dans la salle d evaluation distincte du bureau de Caine.',
-          requirements: [{ action: 'talk', target: 'caine', zone: 132, count: 1 }]
+          guide: 'Refusez de deplacer la faute, lisez le B+ de Gangle et l A+ absurde de Kinger, puis observez le glitch final de Caine.',
+          requirements: [
+            { action: 'use', target: 'reviewboard', zone: 132, count: 1 },
+            { action: 'look', target: 'kingergrade', zone: 132, count: 1 },
+            { action: 'look', target: 'caineglitch', zone: 132, count: 1 },
+            { action: 'talk', target: 'caine', zone: 132, count: 1 }
+          ]
         },
         {
-          title: 'Retour au Tent', zone: 2, route: [2], entryMode: 'cainecut',
-          action: 'talk', target: 'ragatha',
-          guide: 'Revenez au chapiteau et laissez l epilogue relationnel se terminer sans relancer le service.'
+          title: 'Epilogue de Gangle et Zooble au Tent', zone: 28, route: [28], entryMode: 'cainecut',
+          action: 'talk', target: 'zooble',
+          guide: 'Retrouvez Gangle isolee, laissez Zooble confirmer leur amitie et rapportez les dessins vers le groupe sans relancer Spudsy.',
+          requirements: [
+            { action: 'talk', target: 'gangle', zone: 28, count: 1 },
+            { action: 'look', target: 'gangleart', zone: 28, count: 1 },
+            { action: 'look', target: 'waitinggroup', zone: 28, count: 1 }
+          ]
         }
       ] },
       5: { title: 'Untitled', steps: [
@@ -3409,8 +3592,33 @@ const OS = {
       state.interactionUntil = performance.now() + 5600;
       state.interactionChannel = 'system';
       state.interactionSpeaker = 'CAINOS';
+    } else {
+      this.enterCircusCampaignPendingCut(refreshed);
     }
     this.saveCircusPersistentWorldState();
+    return true;
+  },
+
+  enterCircusCampaignPendingCut(status = this.getActiveCircusCampaignStatus()) {
+    const state = this.circusDoom;
+    const stage = status?.stage;
+    if (!state || !stage?.entryMode || state.doorTransition || state.portalTransition) return false;
+    const entryZone = Number(stage.entryZone);
+    const targetZone = Number(stage.zone);
+    if (!Number.isFinite(entryZone) || !Number.isFinite(targetZone) || entryZone === targetZone) return false;
+    if (state.currentZoneId !== entryZone || !state.portals[targetZone]) return false;
+    const pending = status.requirements.filter(requirement => !requirement.complete);
+    if (!pending.length) return false;
+    const onlyTargetSceneRemains = pending.every(requirement => {
+      if (requirement.action === 'visit') return Number(requirement.target) === targetZone;
+      return Number(requirement.zone) === targetZone;
+    });
+    if (!onlyTargetSceneRemains) return false;
+    state.interactionMessage = `COUPE SCRIPTEE: ${stage.title}. La scene suivante est une couche ${stage.entryMode}, pas une porte physique permanente.`;
+    state.interactionUntil = performance.now() + 3200;
+    state.interactionChannel = 'system';
+    state.interactionSpeaker = 'CAINOS';
+    this.beginCircusDoorTransition(targetZone, entryZone, stage.entryMode);
     return true;
   },
 
@@ -3562,7 +3770,15 @@ const OS = {
         { id: 'evidence-room-powercut', speaker: 'CainOS', channel: 'system', text: 'EP3 / PREUVES: affiches, photos, seconde bande, cle du monte-plat. Coupure de courant imminente.', duration: 5600, danger: true },
         { id: 'baron-second-tape', speaker: 'Baron Theodore Mildenhall', text: 'Do not let the head out of your sight.', avatar: 'baronmildenhall', duration: 5200 }
       ],
-      10: [{ id: 'spudsy-rush', speaker: 'Gangle', text: 'Nouveau rush. Lis le ticket, prepare le comptoir, puis donne la bonne commande.', avatar: 'workgangle', duration: 5000 }],
+      10: [
+        { id: 'spudsy-breakfast-57', speaker: 'Gangle', text: 'La commande 57 est pour Orbsman. Garde le ticket pres de la caisse.', avatar: 'workgangle', duration: 5000 },
+        { id: 'spudsy-evening-clock', speaker: 'Pomni', text: 'L horloge du mur est encore bloquee. La montre de Gangle donne une autre heure.', avatar: 'spudsypomni', duration: 5200 }
+      ],
+      35: [
+        { id: 'spudsy-stupid-sauce', speaker: 'Ragatha', text: 'La sauce est allee dans mon oeil. Ce que je vois maintenant ne correspond plus a la cuisine.', avatar: 'spudsyragatha', duration: 5200 },
+        { id: 'spudsy-six-burgers', speaker: 'Zooble', text: 'Six burgers termines sur trois cents. La commande n est clairement pas finie.', avatar: 'spudsyzooble', duration: 5200 }
+      ],
+      37: [{ id: 'spudsy-training-restraint', speaker: 'Jax', text: 'Les quatre mains et cette chaise ne transforment pas cette video en formation volontaire.', avatar: 'spudsyjax', duration: 5200 }],
       12: [{ id: 'softball-pitch', speaker: 'Caine', text: 'Batteur en place! Frappez uniquement quand le curseur traverse la zone verte!', avatar: 'caine', duration: 4600 }],
       14: [
         { id: 'sun-warning', speaker: 'Sun', text: 'Le soleil digital augmente la visibilite. Les parasols deviennent des zones sures.', avatar: 'sun', duration: 4700 },
@@ -3581,7 +3797,7 @@ const OS = {
       ],
       70: [{ id: 'shrimp-town-trace', speaker: 'Shrimp NPC', text: 'Shrimp Town existe bien dans les donnees, mais cette rue est une reconstruction partielle de CainOS.', avatar: 'shrimpnpc', duration: 5200 }],
       71: [{ id: 'tundra-briefing', speaker: 'Caine', text: 'Une toundra enneigee! Gardez le groupe visible avant que la micro-aventure ne change encore de decor!', avatar: 'caine', duration: 5000 }],
-      72: [{ id: 'parking-impact', speaker: 'Gangle', text: 'Le service est termine. Reste pres du trottoir et ne traverse pas devant les phares.', avatar: 'workgangle', duration: 5200 }],
+      72: [{ id: 'spudsy-jax-clockout', speaker: 'Jax', text: 'Il est vingt-et-une heures. Ma carte est pointee et JAX.001 est juste devant.', avatar: 'spudsyjax', duration: 5200 }],
       73: [{ id: 'scanner-room', speaker: 'CainOS', channel: 'system', text: 'ARCHIVE C&A: poste Scratch, casque obsolete et scans cerebraux inutilises detectes.', avatar: 'unusedbrainscans', duration: 5600 }],
       74: [{ id: 'jax-psyche', speaker: 'Pomni', text: 'Ces figures sont des facettes de Jax. Elles ne sont pas des residents separes.', avatar: 'pomni', duration: 5400 }],
       75: [{ id: 'expanded-grounds', speaker: 'Caine', text: 'Les Grounds ont grandi! Ilots, biomes, ponts et toboggan: davantage d espace pour de futures aventures!', avatar: 'caine', duration: 5400 }]
@@ -3617,7 +3833,22 @@ const OS = {
       152: [
         { id: 'therapy-zooble-body', speaker: 'Zooble', text: 'I hate this body.', avatar: 'zooble', duration: 4600 },
         { id: 'therapy-caine-patient', speaker: 'Caine', text: 'So, what is on your mind, Zooble?', avatar: 'caine', duration: 5200 }
-      ]
+      ],
+      127: [{ id: 'spudsy-morning-arrival', speaker: 'Gangle', text: 'Le restaurant est encore ferme. On entre ensemble avant de demarrer les postes.', avatar: 'workgangle', duration: 5200 }],
+      128: [{ id: 'spudsy-queen-drive-pass', speaker: 'CainOS', channel: 'system', text: 'PASSAGE EXTERIEUR: la Gloink Queen traverse la voie du drive avant son entree dans la file.', duration: 5200 }],
+      129: [{ id: 'spudsy-designated-driver', speaker: 'Zooble', text: 'Je reste pour conduire Ragatha. Le planning confirme que les autres ont deja pointe.', avatar: 'spudsyzooble', duration: 5200 }],
+      130: [{ id: 'spudsy-back-alley-mask', speaker: 'Gangle', text: 'Sans le bruit de la cuisine, je peux enlever ce masque un instant.', avatar: 'workgangle', duration: 5200 }],
+      131: [{ id: 'spudsy-road-transition', speaker: 'CainOS', channel: 'system', text: 'TRANSITION SCRIPTEE: bordure, chute et camion. Aucun test d esquive ne remplace cette scene.', duration: 5600, danger: true }],
+      132: [{ id: 'spudsy-performance-review', speaker: 'Caine', text: 'Evaluation terminee: B+ pour Gangle, A+ pour Kinger. Le resultat ne mesure pas le cout emotionnel du service.', avatar: 'caine', duration: 5800 }],
+      153: [
+        { id: 'spudsy-machines-start', speaker: 'Gangle', text: 'Gril, friteuses, boissons. Chaque poste doit demarrer avant l ouverture.', avatar: 'workgangle', duration: 5200 },
+        { id: 'spudsy-zooble-drop', speaker: 'Zooble', text: 'Caine m a fait tomber par le plafond juste pour me mettre cet uniforme.', avatar: 'spudsyzooble', duration: 5200 }
+      ],
+      154: [{ id: 'spudsy-bandits-return', speaker: 'Pomni', text: 'Ils sont revenus, mais ils ne se souviennent pas de moi. Je ne dois pas leur imposer mes souvenirs.', avatar: 'spudsypomni', duration: 5600 }],
+      155: [{ id: 'spudsy-queen-order', speaker: 'Gloink Queen', text: 'Trois cents cheeseburgers pour mes enfants.', avatar: 'gloinkqueenscale', duration: 5200 }],
+      156: [{ id: 'spudsy-closing-offer', speaker: 'Pomni', text: 'Je peux fermer le restaurant. Gangle n a pas besoin de rester ici davantage.', avatar: 'spudsypomni', duration: 5200 }],
+      157: [{ id: 'spudsy-mask-discard', speaker: 'Gangle', text: 'Je laisse ce masque devant le restaurant. Il ne revient pas avec moi.', avatar: 'gangletragedy', duration: 5200 }],
+      158: [{ id: 'spudsy-sauce-hallucination', speaker: 'CainOS', channel: 'system', text: 'PERCEPTION DE RAGATHA: le sourire de Gangle est deforme par la Stupid Sauce; aucune transformation reelle detectee.', duration: 5400 }]
     };
     return events[zoneId] || [];
   },
@@ -3960,13 +4191,118 @@ const OS = {
   },
 
   getCircusFpsZoneMax() {
-    return 152;
+    return 158;
   },
 
   getCircusCanonRoomDefinitions() {
     if (this.circusCanonRoomDefinitions) return this.circusCanonRoomDefinitions;
     const scan = (title, kinds, talkAvatar = null) => ({ title, kinds, talkAvatar });
     const rooms = {
+      10: {
+        name: "SPUDSY'S FRONT COUNTER", short: 'COMPTOIR',
+        detail: 'Comptoir principal, caisse, menus et file clients. Les personnages changent avec le petit-dejeuner, le lunch rush et le service du soir.',
+        color: '#ff4d4d', floor: '#d8d1bf', ceiling: '#561914', motif: 'spudsy', size: 21,
+        gateEpisode: 4, gateSubepisode: 2, provenance: 'shown', exits: [127, 35, 37, 128, 154, 155],
+        props: [
+          { kind: 'counter', campaignTarget: 'register', x: 0, z: -3.0, width: 5.6, depth: 1.0, height: 1.05, color: '#f6d743', accent: '#e53935', label: 'Caisse et comptoir principal' },
+          { kind: 'menu', x: -2.15, z: -4.45, elevation: 2.3, color: '#e53935', label: 'Menu Spudsy gauche' },
+          { kind: 'menu', x: 0, z: -4.45, elevation: 2.3, color: '#f6d743', label: 'Menu Spudsy central' },
+          { kind: 'menu', x: 2.15, z: -4.45, elevation: 2.3, color: '#e53935', label: 'Menu Spudsy droit' },
+          { kind: 'card', campaignTarget: 'order57', campaignGate: { episode: 4, minStage: 6, maxStage: 6 }, x: -1.15, z: -1.35, color: '#f7f7f7', label: 'Ticket Number 57' },
+          { kind: 'card', campaignTarget: 'lunchmenu', campaignGate: { episode: 4, minStage: 9, maxStage: 9 }, x: 1.15, z: -1.35, color: '#e53935', label: 'Panneau LUNCH' },
+          { kind: 'doorframe', campaignTarget: 'biohazarddoor', campaignGate: { episode: 4, minStage: 12, maxStage: 12 }, x: 3.55, z: -3.65, color: '#91d4bb', label: 'Porte des sanitaires / BIOHAZARD mentionne' },
+          { kind: 'scoreboard', campaignTarget: 'brokenclock', campaignGate: { episode: 4, minStage: 14, maxStage: 14 }, x: 2.1, z: -3.95, color: '#f7f7f7', label: 'Horloge bloquee a 12:05' },
+          { kind: 'card', campaignTarget: 'ganglewatch', campaignGate: { episode: 4, minStage: 14, maxStage: 14 }, x: 0.75, z: -1.2, color: '#7df0ff', label: 'Montre de Gangle / heure suivante' },
+          { kind: 'counter', x: -3.25, z: -1.9, color: '#d7d7d7', label: 'Poste de plonge et vaisselle' },
+          { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'fluorescent', x: -2.2, z: -1.4, color: '#ffffff' },
+          { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'fluorescent', x: 2.2, z: -1.4, color: '#ffffff' }
+        ],
+        sprites: [
+          { name: 'Work Gangle', type: 'gangle', avatar: 'workgangle', x: -0.8, z: -2.2, color: '#f7f7f7', campaignGate: { episode: 4, minStage: 6, maxStage: 14 } },
+          { name: 'Pomni', type: 'pomni', avatar: 'spudsypomni', x: 0.75, z: -2.45, color: '#e53935', campaignGate: { episode: 4, minStage: 6, maxStage: 14 } },
+          { name: 'Jax', type: 'jax', avatar: 'spudsyjax', x: -2.35, z: -1.65, color: '#8a4fd6', campaignGate: { episode: 4, minStage: 6, maxStage: 14 } },
+          { name: 'Ragatha intoxiquee', type: 'ragatha', avatar: 'spudsyragatha', x: 2.25, z: -1.75, color: '#d64545', campaignGate: { episode: 4, minStage: 7, maxStage: 14 } },
+          { name: 'Orbsman', type: 'npc', avatar: 'orbsman', x: 0, z: -3.75, color: '#6dd8ff', campaignGate: { episode: 4, minStage: 6, maxStage: 6 } },
+          { name: 'Stupid Burger Mannequin', type: 'mannequin', avatar: 'stupidburgermannequin', x: 1.7, z: -3.55, color: '#ff9b37', sizeScale: 0.9, campaignGate: { episode: 4, minStage: 7, maxStage: 7 } },
+          { name: 'Albert Spudsy Cutout', type: 'prop', avatar: 'albertspudsy', x: -3.25, z: -4.15, color: '#f2d7b2', sizeScale: 0.88, silent: true }
+        ],
+        objective: scan('TENIR LE COMPTOIR SPUDSY', ['counter', 'menu'], 'workgangle')
+      },
+      35: {
+        name: "SPUDSY'S KITCHEN AND ASSEMBLY LINE", short: 'CUISINE',
+        detail: 'Cuisine persistante avec gril, friteuses, assemblage, sauces et sortie arriere. Elle relie tous les postes internes de Spudsy.',
+        color: '#f6d743', floor: '#d9d4c7', ceiling: '#561914', motif: 'kitchen', size: 21,
+        gateEpisode: 4, gateSubepisode: 2, provenance: 'shown', exits: [10, 37, 129, 130, 153],
+        props: [
+          { kind: 'counter', campaignTarget: 'assemblycounter', x: 0, z: -3.1, width: 5.4, depth: 1.1, height: 1.0, color: '#d7d7d7', label: 'Chaine d assemblage Spudsy' },
+          { kind: 'barrel', x: -3.0, z: -2.35, color: '#c49a45', label: 'Friteuse Spudsy gauche' },
+          { kind: 'barrel', x: -2.15, z: -2.35, color: '#c49a45', label: 'Friteuse Spudsy droite' },
+          { kind: 'counter', x: 2.75, z: -2.65, color: '#454a4d', label: 'Gril et hotte de Zooble' },
+          { kind: 'card', campaignTarget: 'stupidsauce', campaignGate: { episode: 4, minStage: 7, maxStage: 7 }, x: -1.15, z: -1.25, color: '#9ad74e', label: 'Stupid Sauce / boite C&A' },
+          { kind: 'candy', campaignTarget: 'stupidburger', campaignGate: { episode: 4, minStage: 7, maxStage: 7 }, x: 0.9, z: -1.25, color: '#d88928', label: 'Stupid Burger assemble' },
+          { kind: 'candy', campaignTarget: 'assemblyburger', campaignGate: { episode: 4, minStage: 13, maxStage: 13 }, x: -2.4, z: -1.25, color: '#d88928', label: 'Burger termine 1 / 6' },
+          { kind: 'candy', campaignTarget: 'assemblyburger', campaignGate: { episode: 4, minStage: 13, maxStage: 13 }, x: -1.45, z: -1.2, color: '#d88928', label: 'Burger termine 2 / 6' },
+          { kind: 'candy', campaignTarget: 'assemblyburger', campaignGate: { episode: 4, minStage: 13, maxStage: 13 }, x: -0.5, z: -1.25, color: '#d88928', label: 'Burger termine 3 / 6' },
+          { kind: 'candy', campaignTarget: 'assemblyburger', campaignGate: { episode: 4, minStage: 13, maxStage: 13 }, x: 0.5, z: -1.2, color: '#d88928', label: 'Burger termine 4 / 6' },
+          { kind: 'candy', campaignTarget: 'assemblyburger', campaignGate: { episode: 4, minStage: 13, maxStage: 13 }, x: 1.45, z: -1.25, color: '#d88928', label: 'Burger termine 5 / 6' },
+          { kind: 'candy', campaignTarget: 'assemblyburger', campaignGate: { episode: 4, minStage: 13, maxStage: 13 }, x: 2.4, z: -1.2, color: '#d88928', label: 'Burger termine 6 / 6' },
+          { kind: 'scoreboard', campaignGate: { episode: 4, minStage: 13, maxStage: 13 }, x: 0, z: -4.25, color: '#ff4d4d', label: 'COMPTEUR: 6 / 300' },
+          { kind: 'card', x: 2.0, z: -3.7, color: '#ff4d4d', label: 'Pile de tickets cuisine' },
+          { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'fluorescent', x: -2.2, z: -1.4, color: '#ffffff' },
+          { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'fluorescent', x: 2.2, z: -1.4, color: '#ffffff' }
+        ],
+        sprites: [
+          { name: 'Work Gangle', type: 'gangle', avatar: 'workgangle', x: -1.5, z: -2.2, color: '#f7f7f7', campaignGate: { episode: 4, minStage: 7, maxStage: 15 } },
+          { name: 'Ragatha intoxiquee', type: 'ragatha', avatar: 'spudsyragatha', x: 0, z: -2.55, color: '#d64545', campaignGate: { episode: 4, minStage: 7, maxStage: 15 } },
+          { name: 'Zooble', type: 'zooble', avatar: 'spudsyzooble', x: 1.55, z: -1.9, color: '#ff4fb8', campaignGate: { episode: 4, minStage: 6, maxStage: 15 } },
+          { name: 'Jax', type: 'jax', avatar: 'spudsyjax', x: -2.65, z: -1.55, color: '#8a4fd6', campaignGate: { episode: 4, minStage: 6, maxStage: 14 } }
+        ],
+        objective: scan('RELANCER LA CUISINE', ['counter', 'barrel', 'card'], 'workgangle')
+      },
+      37: {
+        name: "SPUDSY'S TRAINING ROOM", short: 'FORMATION',
+        detail: 'Piece noire ou les mains geantes enferment Jax devant la video de formation et la reevaluation des deux masques.',
+        color: '#e53935', floor: '#1b1717', ceiling: '#030303', motif: 'training', size: 13,
+        gateEpisode: 4, gateSubepisode: 5, provenance: 'shown', exits: [10, 35],
+        props: [
+          { kind: 'crt', campaignTarget: 'trainingtv', x: 0, z: -4.0, color: '#e53935', label: 'Video de formation Spudsy' },
+          { kind: 'foldingchair', campaignTarget: 'restraintchair', x: 0, z: -2.2, color: '#3f3f45', label: 'Chaise de reevaluation de Jax' },
+          { kind: 'toyglove', x: -2.25, z: -2.8, color: '#f7f7f7', label: 'Main geante gauche A' },
+          { kind: 'toyglove', x: -1.25, z: -3.35, color: '#f7f7f7', label: 'Main geante gauche B' },
+          { kind: 'toyglove', x: 1.25, z: -3.35, color: '#f7f7f7', label: 'Main geante droite A' },
+          { kind: 'toyglove', x: 2.25, z: -2.8, color: '#f7f7f7', label: 'Main geante droite B' },
+          { kind: 'card', campaignTarget: 'maskflash', x: -0.75, z: -1.25, color: '#f7f7f7', label: 'Masque de comedie / reevaluation' },
+          { kind: 'card', campaignTarget: 'maskflash', x: 0.75, z: -1.25, color: '#161616', label: 'Masque de tragedie / reevaluation' },
+          { kind: 'doorframe', x: 0, z: -1.0, color: '#111111', label: 'Passage obscur depuis le restaurant' },
+          { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'spot', x: 0, z: -2.2, color: '#ffffff' }
+        ],
+        sprites: [
+          { name: 'Jax en reevaluation', type: 'jax', avatar: 'spudsyjax', x: 0, z: -2.45, color: '#8a4fd6' }
+        ],
+        objective: scan('SUBIR LA FORMATION SPUDSY', ['crt', 'foldingchair', 'card'], 'jax')
+      },
+      72: {
+        name: "SPUDSY'S PARKING LOT", short: 'PARKING',
+        detail: 'Parking nocturne avec les voitures des employes, la pointeuse visible depuis l entree et la voiture JAX.001.',
+        color: '#ff4d4d', floor: '#36363d', ceiling: '#080b14', motif: 'street', size: 25,
+        gateEpisode: 4, gateSubepisode: 7, provenance: 'shown', exits: [127, 130, 131, 157],
+        props: [
+          { kind: 'building', style: 'spudsy', x: 0, z: -6.0, width: 6.8, depth: 2.6, height: 3.4, roofHeight: 0.55, color: '#f6d743', accent: '#e53935', label: "Facade nocturne de Spudsy's" },
+          { kind: 'truck', campaignTarget: 'jaxcar', x: -2.65, z: -3.2, color: '#8a4fd6', label: 'Voiture de Jax' },
+          { kind: 'card', campaignTarget: 'jaxplate', x: -2.65, z: -2.15, color: '#f7f7f7', label: 'Plaque JAX.001' },
+          { kind: 'card', campaignTarget: 'discardedhat', x: -0.7, z: -1.3, color: '#23727d', label: 'Visiere Spudsy jetee par Jax' },
+          { kind: 'console', campaignTarget: 'timeclock', x: 2.65, z: -2.0, color: '#d7d7d7', label: 'Pointeuse de sortie / 21:00' },
+          { kind: 'truck', x: 1.5, z: -3.65, color: '#d64545', label: 'Vehicule de Ragatha' },
+          { kind: 'truck', x: 3.4, z: -4.2, color: '#ff4fb8', label: 'Vehicule de Zooble' },
+          { kind: 'spotlight', x: -3.8, z: -2.0, color: '#fff1a8', label: 'Lampadaire du parking gauche' },
+          { kind: 'spotlight', x: 3.8, z: -2.0, color: '#fff1a8', label: 'Lampadaire du parking droit' }
+        ],
+        sprites: [
+          { name: 'Jax', type: 'jax', avatar: 'spudsyjax', x: -2.2, z: -2.5, color: '#8a4fd6', campaignGate: { episode: 4, minStage: 16, maxStage: 16 } },
+          { name: 'Work Gangle', type: 'gangle', avatar: 'workgangle', x: 0.25, z: -2.75, color: '#f7f7f7', campaignGate: { episode: 4, minStage: 16, maxStage: 16 } }
+        ],
+        objective: scan('SUIVRE LE DEPART DE JAX', ['truck', 'card', 'console'], 'jax')
+      },
       9: {
         name: 'MILDENHALL WINE CELLAR', short: 'CAVE A VIN',
         detail: 'Cave a vin atteinte par le monte-plat: corps du Baron, fusil a deux cartouches, troisieme bande, tete montee et derniere bande avant la chute.',
@@ -4930,65 +5266,76 @@ const OS = {
         name: "SPUDSY'S EXTERIOR AND ENTRANCE", short: 'SPUDSY EXT.',
         detail: 'Facade du restaurant, entree principale et bord du parking avant le debut du service.',
         color: '#f6d743', floor: '#3b3b42', ceiling: '#5f8ee8', motif: 'street', size: 25,
-        gateEpisode: 4, gateSubepisode: 1, provenance: 'shown', layer: 'present', exits: [10, 72],
+        gateEpisode: 4, gateSubepisode: 1, provenance: 'shown', layer: 'present', exits: [10, 72, 153, 157],
         props: [
           { kind: 'building', campaignTarget: 'spudsysign', style: 'spudsy', x: 0, z: -5.4, width: 7.2, depth: 2.8, height: 3.6, roofHeight: 0.65, color: '#f6d743', accent: '#e53935', label: "Enseigne et facade de Spudsy's" },
-          { kind: 'doorframe', x: 0, z: -3.9, color: '#e53935', label: 'Entree du restaurant' },
+          { kind: 'doorframe', campaignTarget: 'frontdoor', x: 0, z: -3.9, color: '#e53935', label: 'Entree du restaurant' },
           { kind: 'spotlight', x: -3.4, z: -2.0, color: '#fff1a8', label: 'Eclairage du parking gauche' },
           { kind: 'spotlight', x: 3.4, z: -2.0, color: '#fff1a8', label: 'Eclairage du parking droit' },
           { kind: 'fence', x: -4.6, z: -3.0, color: '#d7d7d7', label: 'Limite du parking' },
           { kind: 'fence', x: 4.6, z: -3.0, color: '#d7d7d7', label: 'Limite du parking' }
         ],
         sprites: [
-          { name: 'Work Gangle', type: 'gangle', avatar: 'workgangle', x: -1.2, z: -2.7, color: '#f7f7f7' },
-          { name: 'Pomni', type: 'pomni', avatar: 'spudsypomni', x: 1.2, z: -2.65, color: '#e53935' }
+          { name: 'Work Gangle', type: 'gangle', avatar: 'workgangle', x: -1.2, z: -2.7, color: '#f7f7f7', campaignGate: { episode: 4, minStage: 3, maxStage: 3 } },
+          { name: 'Pomni', type: 'pomni', avatar: 'spudsypomni', x: 1.2, z: -2.65, color: '#e53935', campaignGate: { episode: 4, minStage: 3, maxStage: 3 } }
         ],
         objective: scan('REPERER LA FACADE AVANT LE SERVICE', ['building', 'doorframe'], 'workgangle')
       },
       128: {
         name: "SPUDSY'S DRIVE-THROUGH LANE", short: 'DRIVE',
-        detail: 'Voie exterieure et guichet de commande ou la Gloink Queen reclame trois cents burgers.',
+        detail: 'Guichet et voie exterieure ou la Gloink Queen passe devant Jax et Pomni juste avant de barger dans la file interieure.',
         color: '#f6d743', floor: '#35353b', ceiling: '#41213c', motif: 'street', size: 23,
-        gateEpisode: 4, gateSubepisode: 4, provenance: 'shown', layer: 'present', exits: [35],
+        gateEpisode: 4, gateSubepisode: 4, provenance: 'shown', layer: 'present', exits: [10, 127],
         props: [
           { kind: 'window', campaignTarget: 'orderwindow', x: 0, z: -4.1, color: '#91d4bb', label: 'Guichet du drive-through' },
           { kind: 'menu', x: -2.8, z: -3.15, color: '#f6d743', label: 'Menu lumineux du drive-through' },
           { kind: 'console', x: 2.8, z: -2.8, color: '#63636d', label: 'Borne de commande' },
           { kind: 'fence', x: -3.8, z: -2.0, color: '#ffffff', label: 'Marquage de voie gauche' },
           { kind: 'fence', x: 3.8, z: -2.0, color: '#ffffff', label: 'Marquage de voie droit' },
-          { kind: 'card', x: 0.9, z: -1.25, color: '#e53935', label: 'Commande: 300 burgers' }
+          { kind: 'scoreboard', campaignTarget: 'driveclock', x: 2.1, z: -3.8, color: '#f7f7f7', label: 'Horloge du drive / 12:00' },
+          { kind: 'lorebillboard', campaignTarget: 'queenoutside', avatar: 'gloinkqueenscale', x: 0.85, z: -5.55, color: '#ff7d8d', sizeScale: 1.55, label: 'Gloink Queen passant devant le guichet', loreText: 'Elle ne commande pas encore ici: elle passe devant le drive puis entre dans le restaurant.' }
         ],
         sprites: [
-          { name: 'Gloink Queen', type: 'npc', avatar: 'gloinkqueenscale', x: 0, z: -5.65, color: '#ff7d8d', sizeScale: 2.65 },
-          { name: 'Work Gangle', type: 'gangle', avatar: 'workgangle', x: -1.35, z: -2.2, color: '#f7f7f7' },
-          { name: 'Pomni', type: 'pomni', avatar: 'spudsypomni', x: 1.25, z: -2.25, color: '#e53935' }
+          { name: 'Gloink Queen au-dehors', type: 'npc', avatar: 'gloinkqueenscale', x: 0, z: -6.15, color: '#ff7d8d', sizeScale: 2.65, silent: true, silentText: 'La Queen passe devant le guichet avant d entrer dans le hall.' },
+          { name: 'Pomni', type: 'pomni', avatar: 'spudsypomni', x: 1.25, z: -2.25, color: '#e53935' },
+          { name: 'Jax', type: 'jax', avatar: 'spudsyjax', x: -1.25, z: -2.15, color: '#8a4fd6' }
         ],
-        objective: scan('TRAITER LA COMMANDE DU DRIVE', ['window', 'menu'], 'gloinkqueenscale')
+        objective: scan('VOIR LA QUEEN PASSER AU DRIVE', ['window', 'scoreboard', 'lorebillboard'], 'pomni')
       },
       129: {
         name: "SPUDSY'S MANAGER OFFICE", short: 'BUREAU GANGLE',
-        detail: 'Petit bureau de management distinct de la salle d evaluation de Caine, avec planning et badge de Gangle.',
+        detail: 'Petit bureau de management avec fiches horaires, planning, pointeuse et vue sur le nettoyage de fin de service.',
         color: '#477da8', floor: '#68737a', ceiling: '#242b31', motif: 'spudsy', size: 11,
-        gateEpisode: 4, gateSubepisode: 6, provenance: 'shown', layer: 'present', exits: [127, 130],
+        gateEpisode: 4, gateSubepisode: 6, provenance: 'shown', layer: 'present', exits: [35, 130],
         props: [
           { kind: 'desk', x: 0, z: -2.75, color: '#59616a', label: 'Bureau de management' },
           { kind: 'card', campaignTarget: 'managerbadge', x: -1.25, z: -1.25, color: '#e53935', label: 'Badge manager de Gangle' },
           { kind: 'archive', x: 1.2, z: -1.3, color: '#7df0ff', label: 'Planning du service' },
           { kind: 'window', x: 0, z: -3.5, color: '#b7f0ff', label: 'Fenetre vers le parking' },
+          { kind: 'card', campaignTarget: 'timesheet', x: -1.75, z: -1.65, color: '#f7f7f7', label: 'Fiche horaire de Gangle' },
+          { kind: 'console', campaignTarget: 'clockrack', x: 1.75, z: -1.75, color: '#d7d7d7', label: 'Rack des cartes de pointage' },
+          { kind: 'card', x: -0.45, z: -1.15, color: '#d64545', label: 'Fiche horaire de Ragatha' },
+          { kind: 'card', x: 0.45, z: -1.15, color: '#ff4fb8', label: 'Fiche horaire de Zooble' },
           { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'fluorescent', x: 0, z: -0.8, color: '#ffffff' }
         ],
-        sprites: [{ name: 'Work Gangle', type: 'gangle', avatar: 'workgangle', x: 0.7, z: -2.2, color: '#f7f7f7' }],
+        sprites: [
+          { name: 'Work Gangle', type: 'gangle', avatar: 'workgangle', x: 0.65, z: -2.2, color: '#f7f7f7' },
+          { name: 'Zooble', type: 'zooble', avatar: 'spudsyzooble', x: -1.15, z: -2.35, color: '#ff4fb8', campaignGate: { episode: 4, minStage: 17, maxStage: 17 } },
+          { name: 'Ragatha intoxiquee', type: 'ragatha', avatar: 'spudsyragatha', x: 1.55, z: -2.55, color: '#d64545', campaignGate: { episode: 4, minStage: 17, maxStage: 17 } }
+        ],
         objective: scan('CONSULTER LE PLANNING DU MANAGER', ['desk', 'archive'], 'workgangle')
       },
       130: {
         name: "SPUDSY'S REAR SERVICE AREA", short: 'ARRIERE',
-        detail: 'Zone de service calme derriere la cuisine, separee du parking et utilisee avant l entretien de Gangle.',
+        detail: 'Sortie laterale et aire a poubelles ou Gangle retire son masque et parle a Pomni pendant le service du soir.',
         color: '#63636d', floor: '#4f5055', ceiling: '#25262a', motif: 'kitchen', size: 15,
-        gateEpisode: 4, gateSubepisode: 6, provenance: 'shown', layer: 'present', exits: [35, 129],
+        gateEpisode: 4, gateSubepisode: 6, provenance: 'shown', layer: 'present', exits: [35, 72, 129],
         props: [
           { kind: 'doorframe', campaignTarget: 'backdoor', x: 0, z: -3.5, color: '#e53935', label: 'Porte arriere de Spudsy' },
           { kind: 'crate', x: -2.0, z: -2.2, color: '#8b5a3c', label: 'Caisse de livraison' },
           { kind: 'barrel', x: 2.0, z: -2.25, color: '#56505f', label: 'Poubelle de service' },
+          { kind: 'card', campaignTarget: 'trashbag', x: 1.25, z: -1.25, color: '#25262a', label: 'Sac poubelle porte par Pomni' },
+          { kind: 'memory', campaignTarget: 'removedmask', x: -1.25, z: -1.25, color: '#f7f7f7', label: 'Masque plastique retire par Gangle' },
           { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'fluorescent', x: 0, z: -1.0, color: '#dce8ff' }
         ],
         sprites: [
@@ -4999,13 +5346,15 @@ const OS = {
       },
       131: {
         name: 'SPUDSY ROAD AND LAMPPOST', short: 'ROUTE',
-        detail: 'Segment de route nocturne isole par un lampadaire apres la sortie du parking.',
+        detail: 'Segment de route nocturne sous un lampadaire, avec bordure et semi-remorque avant la teleportation de Gangle.',
         color: '#32415a', floor: '#292b31', ceiling: '#080b14', motif: 'street', size: 23,
-        gateEpisode: 4, gateSubepisode: 7, provenance: 'shown', layer: 'present', exits: [72],
+        gateEpisode: 4, gateSubepisode: 7, provenance: 'shown', layer: 'present', exits: [72, 157],
         props: [
           { kind: 'spotlight', campaignTarget: 'streetlamp', x: 0, z: -4.2, color: '#fff1a8', label: 'Lampadaire de la route' },
           { kind: 'fence', x: -3.2, z: -2.6, color: '#f7f7f7', label: 'Bord de route gauche' },
           { kind: 'fence', x: 3.2, z: -2.6, color: '#f7f7f7', label: 'Bord de route droit' },
+          { kind: 'platform', campaignTarget: 'curb', x: 0, z: -2.15, color: '#b8b8bd', label: 'Bordure qui fait chuter Gangle' },
+          { kind: 'truck', campaignTarget: 'oncomingtruck', x: 0, z: -7.3, color: '#d7d7d7', accent: '#fff1a8', label: 'Semi-remorque en approche' },
           { kind: 'building', style: 'spudsy', x: 4.8, z: -6.5, width: 2.3, depth: 1.4, height: 2.1, roofHeight: 0.4, color: '#f6d743', accent: '#e53935', label: 'Spudsy au loin' }
         ],
         sprites: [
@@ -5021,7 +5370,11 @@ const OS = {
         gateEpisode: 4, gateSubepisode: 7, provenance: 'shown', layer: 'projection', nonPhysical: true, exits: [],
         props: [
           { kind: 'scoreboard', campaignTarget: 'reviewgrade', x: 0, z: -3.45, color: '#ffd84a', label: 'RESULTAT DU SERVICE: B+' },
+          { kind: 'scoreboard', campaignTarget: 'reviewboard', x: 0, z: -4.5, color: '#f7f7f7', label: 'Tableau des evaluations des employes' },
+          { kind: 'card', campaignTarget: 'kingergrade', x: 2.1, z: -2.15, color: '#d9d0a2', label: 'KINGER: A+ / aventure hors champ' },
           { kind: 'desk', x: 0, z: -2.35, color: '#f2f2f2', label: 'Pupitre d evaluation' },
+          { kind: 'console', x: -2.1, z: -2.15, color: '#7df0ff', label: 'Moniteur portant le logo C&A' },
+          { kind: 'gridnode', campaignTarget: 'caineglitch', x: -0.9, z: -1.25, color: '#e53935', label: 'Glitch final de Caine' },
           { kind: 'spotlight', x: -2.1, z: -1.5, color: '#fff1a8' },
           { kind: 'spotlight', x: 2.1, z: -1.5, color: '#fff1a8' }
         ],
@@ -5415,6 +5768,140 @@ const OS = {
           { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 1.05, z: -2.65, color: '#ff4fb8' }
         ],
         objective: scan('SUIVRE LA THERAPIE SANS LA PHYSICALISER', ['sofa', 'wallart', 'card'], 'zooble')
+      },
+      153: {
+        name: "SPUDSY'S OPENING STATIONS", short: 'OUVERTURE',
+        detail: 'Zone de demarrage des machines, station boissons et friteuses pendant la mise en service matinale et la chute de Zooble.',
+        color: '#f6d743', floor: '#d9d4c7', ceiling: '#561914', motif: 'kitchen', size: 19,
+        gateEpisode: 4, gateSubepisode: 2, provenance: 'shown', exits: [127, 35],
+        props: [
+          { kind: 'console', campaignTarget: 'startupmachine', x: -2.3, z: -2.6, color: '#e53935', label: 'Interrupteur du gril' },
+          { kind: 'console', campaignTarget: 'startupmachine', x: 0, z: -3.15, color: '#f6d743', label: 'Interrupteur des friteuses' },
+          { kind: 'console', campaignTarget: 'startupmachine', x: 2.3, z: -2.6, color: '#7df0ff', label: 'Interrupteur de la station boissons' },
+          { kind: 'cellaropening', campaignTarget: 'ceilingtrapdoor', anchor: 'ceiling', x: 0, z: -3.2, color: '#ffffff', label: 'Trappe par laquelle Zooble tombe' },
+          { kind: 'barrel', campaignTarget: 'deepfryer', x: -2.4, z: -1.45, color: '#c49a45', label: 'Friteuse ou Jax plonge Ragatha' },
+          { kind: 'console', campaignTarget: 'managementphone', x: -0.75, z: -1.25, color: '#477da8', label: 'Telephone vers upper management / Caine' },
+          { kind: 'counter', campaignTarget: 'drinkstation', x: 2.1, z: -1.55, color: '#d7d7d7', label: 'Station boissons assignee a Jax' },
+          { kind: 'card', x: 1.25, z: -1.15, color: '#5b331b', label: 'Cafe neuf' },
+          { kind: 'card', x: 2.1, z: -1.1, color: '#c97b2d', label: 'The glace' },
+          { kind: 'card', x: 2.95, z: -1.15, color: '#f7f7f7', label: 'Remplissage de la machine a glace' },
+          { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'fluorescent', x: -2.2, z: -1.0, color: '#ffffff' },
+          { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'fluorescent', x: 2.2, z: -1.0, color: '#ffffff' }
+        ],
+        sprites: [
+          { name: 'Work Gangle', type: 'gangle', avatar: 'workgangle', x: -1.4, z: -2.25, color: '#f7f7f7' },
+          { name: 'Pomni', type: 'pomni', avatar: 'spudsypomni', x: 0, z: -2.65, color: '#e53935' },
+          { name: 'Jax', type: 'jax', avatar: 'spudsyjax', x: -2.45, z: -1.65, color: '#8a4fd6' },
+          { name: 'Ragatha', type: 'ragatha', avatar: 'spudsyragatha', x: 1.25, z: -2.15, color: '#d64545' },
+          { name: 'Zooble', type: 'zooble', avatar: 'spudsyzooble', x: 2.35, z: -2.75, color: '#ff4fb8' }
+        ],
+        objective: scan('OUVRIR SPUDSY SANS PERDRE LE GROUPE', ['console', 'cellaropening', 'barrel'], 'workgangle')
+      },
+      154: {
+        name: "SPUDSY'S DINING AREA", short: 'SALLE CLIENTS',
+        detail: 'Salle clients avec la table de Gummigoo, Max et Chad, la caisse voisine et leur camion visible par la fenetre.',
+        color: '#f6d743', floor: '#e7d8bc', ceiling: '#7b241c', motif: 'spudsy', size: 19,
+        gateEpisode: 4, gateSubepisode: 3, provenance: 'shown', exits: [10],
+        props: [
+          { kind: 'table', campaignTarget: 'bandittable', x: 0, z: -3.15, width: 3.0, depth: 1.25, height: 0.8, color: '#f7f7f7', label: 'Table de Gummigoo, Max et Chad' },
+          { kind: 'card', x: -0.9, z: -2.1, color: '#d88928', label: 'Jaffle saucisse-bacon' },
+          { kind: 'card', x: 0.9, z: -2.1, color: '#d88928', label: 'Six hash browns a partager' },
+          { kind: 'window', campaignTarget: 'gatortruckwindow', x: 2.7, z: -4.1, color: '#9edcff', label: 'Fenetre donnant sur le camion des bandits' },
+          { kind: 'truck', x: 3.6, z: -5.4, color: '#d8a23a', label: 'Camion de Gummigoo visible dehors' },
+          { kind: 'doorframe', campaignTarget: 'diningexit', x: -2.8, z: -3.8, color: '#e53935', label: 'Porte de sortie avec clochette' },
+          { kind: 'table', x: -2.25, z: -1.45, color: '#f7f7f7', label: 'Table libre gauche' },
+          { kind: 'table', x: 2.25, z: -1.45, color: '#f7f7f7', label: 'Table libre droite' },
+          { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'panel', x: 0, z: -1.3, color: '#fff1a8' }
+        ],
+        sprites: [
+          { name: 'Pomni', type: 'pomni', avatar: 'spudsypomni', x: -1.45, z: -2.4, color: '#e53935' },
+          { name: 'Gummigoo', type: 'gummigoo', avatar: 'gummigoo', x: -0.45, z: -3.15, color: '#d8a23a' },
+          { name: 'Max', type: 'gummigoo', avatar: 'max', x: 0.65, z: -3.25, color: '#75bd3f' },
+          { name: 'Chad', type: 'gummigoo', avatar: 'chad', x: 1.55, z: -2.9, color: '#8bd64a' },
+          { name: 'Work Gangle', type: 'gangle', avatar: 'workgangle', x: -2.35, z: -1.75, color: '#f7f7f7' }
+        ],
+        objective: scan('SERVIR SANS REECRIRE LES SOUVENIRS', ['table', 'window', 'doorframe'], 'gummigoo')
+      },
+      155: {
+        name: "SPUDSY'S LUNCH QUEUE", short: 'RUSH MIDI',
+        detail: 'File interieure du lunch rush ou la Gloink Queen devore les mannequins puis commande trois cents cheeseburgers pour ses enfants.',
+        color: '#e53935', floor: '#d8d1bf', ceiling: '#561914', motif: 'spudsy', size: 25,
+        gateEpisode: 4, gateSubepisode: 4, provenance: 'shown', exits: [10],
+        props: [
+          { kind: 'card', campaignTarget: 'cerealbowl', x: -2.75, z: -1.25, color: '#f7f7f7', label: 'Bol de cereales du mannequin' },
+          { kind: 'memory', campaignTarget: 'eatenqueue', x: 0, z: -3.75, color: '#ff9b37', label: 'File de mannequins devoree' },
+          { kind: 'card', campaignTarget: 'threehundredticket', x: 2.5, z: -1.25, color: '#e53935', label: 'Commande: 300 cheeseburgers' },
+          { kind: 'gridnode', campaignTarget: 'namedgloinks', x: -2.1, z: -2.7, color: '#7348ff', label: 'Blumby' },
+          { kind: 'gridnode', campaignTarget: 'namedgloinks', x: 0, z: -2.35, color: '#2fb642', label: 'Skethers' },
+          { kind: 'gridnode', campaignTarget: 'namedgloinks', x: 2.1, z: -2.7, color: '#d52d34', label: 'Leotthew' },
+          { kind: 'counter', x: 0, z: -5.0, width: 5.6, depth: 1.0, height: 1.0, color: '#f6d743', label: 'Comptoir du lunch rush' },
+          { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'fluorescent', x: -2.5, z: -1.0, color: '#ffffff' },
+          { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'fluorescent', x: 2.5, z: -1.0, color: '#ffffff' }
+        ],
+        sprites: [
+          { name: 'Gloink Queen', type: 'npc', avatar: 'gloinkqueenscale', x: 0, z: -6.1, color: '#ff7d8d', sizeScale: 2.75 },
+          { name: 'Pomni', type: 'pomni', avatar: 'spudsypomni', x: -1.45, z: -2.15, color: '#e53935' },
+          { name: 'Ragatha intoxiquee', type: 'ragatha', avatar: 'spudsyragatha', x: 1.45, z: -2.25, color: '#d64545' },
+          { name: 'Cereal Bowl Mannequin', type: 'mannequin', avatar: 'cerealmannequin', x: -2.65, z: -3.3, color: '#ff9b37', sizeScale: 0.86 },
+          { name: 'Star Gloink', type: 'npc', avatar: 'gloinkstar', x: -1.9, z: -3.9, color: '#7348ff', sizeScale: 0.58 },
+          { name: 'Cube Gloink', type: 'npc', avatar: 'gloinkcube', x: 1.85, z: -4.0, color: '#2fb642', sizeScale: 0.58 },
+          { name: 'Triangle Gloink', type: 'npc', avatar: 'gloinkpyramid', x: 0.25, z: -3.4, color: '#d52d34', sizeScale: 0.55 }
+        ],
+        objective: scan('ENREGISTRER LES 300 BURGERS', ['card', 'memory', 'gridnode'], 'gloinkqueenscale')
+      },
+      156: {
+        name: "SPUDSY'S CLOSING TIME STATE", short: 'FERMETURE',
+        detail: 'Etat nocturne du meme restaurant apres le depart de Zooble et Ragatha. Ce n est pas une seconde implantation physique.',
+        color: '#3b2523', floor: '#252526', ceiling: '#050505', motif: 'kitchen', size: 19,
+        gateEpisode: 4, gateSubepisode: 7, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'memory', campaignTarget: 'darkrestaurant', x: 0, z: -4.2, color: '#151515', label: 'Restaurant silencieux et eclairage coupe' },
+          { kind: 'archive', campaignTarget: 'closingchecklist', x: -1.75, z: -1.45, color: '#f7f7f7', label: 'Checklist de fermeture transferee a Pomni' },
+          { kind: 'card', campaignTarget: 'clockoutcard', x: 1.65, z: -1.4, color: '#e53935', label: 'Carte de pointage retiree par Gangle' },
+          { kind: 'counter', x: 0, z: -3.0, color: '#56505f', label: 'Comptoir nettoye et range' },
+          { kind: 'crate', x: -2.5, z: -2.5, color: '#8b5a3c', label: 'Bacs de nourriture ranges' },
+          { kind: 'barrel', x: 2.5, z: -2.5, color: '#56505f', label: 'Materiel de nettoyage' }
+        ],
+        sprites: [
+          { name: 'Work Gangle', type: 'gangle', avatar: 'workgangle', x: -0.85, z: -2.65, color: '#f7f7f7' },
+          { name: 'Pomni', type: 'pomni', avatar: 'spudsypomni', x: 0.9, z: -2.55, color: '#e53935' }
+        ],
+        objective: scan('FERMER LE RESTAURANT POUR GANGLE', ['memory', 'archive', 'card'], 'pomni')
+      },
+      157: {
+        name: "SPUDSY'S FRONT CURB", short: 'TROTTOIR',
+        detail: 'Trottoir devant la facade nocturne ou Gangle jette le masque plastique avant de courir vers le lampadaire.',
+        color: '#45526a', floor: '#4a4a50', ceiling: '#080b14', motif: 'street', size: 21,
+        gateEpisode: 4, gateSubepisode: 7, provenance: 'shown', exits: [127, 72, 131],
+        props: [
+          { kind: 'building', style: 'spudsy', x: 0, z: -5.8, width: 7.0, depth: 2.8, height: 3.6, roofHeight: 0.6, color: '#f6d743', accent: '#e53935', label: "Facade nocturne de Spudsy's" },
+          { kind: 'doorframe', campaignTarget: 'frontdoor', x: 0, z: -4.15, color: '#e53935', label: 'Porte principale avec clochette' },
+          { kind: 'memory', campaignTarget: 'discardedmask', x: -1.2, z: -1.3, color: '#f7f7f7', label: 'Masque plastique jete par Gangle' },
+          { kind: 'platform', x: 0, z: -2.3, color: '#b8b8bd', label: 'Trottoir devant le restaurant' },
+          { kind: 'barrel', x: 2.65, z: -2.0, color: '#56505f', label: 'Poubelle de facade' },
+          { kind: 'spotlight', x: -3.0, z: -2.8, color: '#fff1a8', label: 'Eclairage de facade' }
+        ],
+        sprites: [
+          { name: 'Gangle sans masque plastique', type: 'gangle', avatar: 'gangletragedy', x: 0.65, z: -2.7, color: '#f7f7f7' }
+        ],
+        objective: scan('LAISSER LE MASQUE DEVANT SPUDSY', ['building', 'doorframe', 'memory'], 'gangletragedy')
+      },
+      158: {
+        name: 'RAGATHA STUPID SAUCE HALLUCINATION', short: 'HALLUCINATION',
+        detail: 'Projection tres breve de Ragatha apres la sauce dans son oeil. Cette image deformee de Gangle n est ni un PNJ ni une transformation reelle.',
+        color: '#361019', floor: '#14080b', ceiling: '#020102', motif: 'memory', size: 15,
+        gateEpisode: 4, gateSubepisode: 3, provenance: 'shown', layer: 'projection', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'lorebillboard', campaignTarget: 'hallucinationgangle', avatar: 'workgangle', x: 0, z: -4.1, color: '#f7f7f7', sizeScale: 1.35, label: 'Gangle au sourire deforme', loreText: 'Projection intoxiquee de Ragatha apres contact avec la Stupid Sauce.' },
+          { kind: 'ring', x: -2.0, z: -2.5, color: '#9ad74e', label: 'Distorsion de sauce gauche' },
+          { kind: 'ring', x: 2.0, z: -2.5, color: '#e53935', label: 'Distorsion de sauce droite' },
+          { kind: 'gridnode', x: 0, z: -1.35, color: '#f6d743', label: 'Retour vers la cuisine reelle' }
+        ],
+        sprites: [
+          { name: 'Ragatha intoxiquee', type: 'ragatha', avatar: 'spudsyragatha', x: -1.2, z: -2.2, color: '#d64545' },
+          { name: 'Gangle hallucinee', type: 'gangle', avatar: 'workgangle', x: 0.9, z: -3.4, color: '#f7f7f7', sizeScale: 1.2, silent: true, silentText: 'La silhouette sourit sans parler: elle appartient uniquement a la perception de Ragatha.' }
+        ],
+        objective: scan('SORTIR DE L HALLUCINATION', ['lorebillboard', 'ring'], 'ragatha')
       }
     };
     this.circusCanonRoomDefinitions = rooms;
@@ -5589,7 +6076,13 @@ const OS = {
       const config = this.getCircusZoneGameplayConfig(zoneId);
       if (!config) continue;
       const props = this.getCircusZoneProps(zoneId);
+      const sprites = this.getCircusZoneSprites(zoneId);
       config.steps.forEach(step => {
+        if (step.action === 'talk') {
+          const available = sprites.some(sprite => this.getCircusCharacterIdentityAliases(sprite).includes(step.kind));
+          if (!available) errors.push(`GAMEPLAY ${zoneId}: talk/${step.kind} sans PNJ`);
+          return;
+        }
         if (!virtualActions.has(step.action) && !props.some(prop => prop.kind === step.kind)) {
           errors.push(`GAMEPLAY ${zoneId}: ${step.action}/${step.kind} sans objet`);
         }
@@ -5658,7 +6151,8 @@ const OS = {
       if (virtualActions.has(requirement.action)) return;
       const requirementZone = Number.isFinite(Number(requirement.zone)) ? Number(requirement.zone) : stage.zone;
       if (requirement.action === 'talk') {
-        const available = this.getCircusZoneSprites(requirementZone).some(sprite => (sprite.avatar || sprite.type) === requirement.target);
+        const available = this.getCircusZoneSprites(requirementZone)
+          .some(sprite => this.getCircusCharacterIdentityAliases(sprite).includes(requirement.target));
         if (!available) errors.push(`EP${campaign.episode} ${requirementZone}: PNJ ${requirement.target} absent`);
         return;
       }
@@ -5971,7 +6465,7 @@ const OS = {
       8: { title: 'ECLAIRER MILDENHALL', steps: [scan('window', 'Verifier une fenetre du manoir'), activate('candle', 'Allumer une bougie'), talk('kinger', 'Rester avec Kinger')] },
       9: { title: 'DESCENDRE AU SOUS-SOL', steps: [scan('stairs', 'Examiner l escalier'), scan('barrel', 'Verifier les barils'), talk('kinger', 'Ecouter Kinger dans l obscurite')] },
       10: { title: 'TENIR LE SERVICE SPUDSY', steps: [scan('counter', 'Verifier le comptoir'), activate('menu', 'Lire deux menus de service', 2), talk('workgangle', 'Aider Gangle')] },
-      11: { title: 'TRIER LES MICRO-AVENTURES', steps: [activate('card', 'Classer deux cartes suggestion', 2), scan('doorframe', 'Identifier une porte de variante'), talk('orbsman', 'Consulter Orbsman')] },
+      11: { title: 'TRIER LES MICRO-AVENTURES', steps: [activate('card', 'Classer deux cartes suggestion', 2), scan('doorframe', 'Identifier une porte de variante'), talk('ganglekawaii', 'Consulter la variante Gangle')] },
       12: { title: 'PREPARER LE MATCH', steps: [scan('base', 'Verifier trois bases', 3), activate('scoreboard', 'Allumer le scoreboard'), talk('baseballjax', 'Parler a Jax avant le match')] },
       13: { title: 'SECURISER L ARENE', steps: [scan('target', 'Verifier trois cibles', 3), scan('crate', 'Inspecter les caisses'), talk('jax', 'Confronter Jax')] },
       14: { title: 'SONDER LE LAC', steps: [scan('umbrella', 'Verifier les parasols'), scan('wave', 'Analyser deux boucles d eau', 2), talk('beachgangle', 'Parler a Gangle sur la plage')] },
@@ -6045,7 +6539,7 @@ const OS = {
       if (!config) continue;
       missionCount++;
       const props = this.getCircusZoneProps(zoneId);
-      const avatars = new Set(this.getCircusZoneSprites(zoneId).map(sprite => sprite.avatar || sprite.type));
+      const avatars = new Set(this.getCircusZoneSprites(zoneId).flatMap(sprite => this.getCircusCharacterIdentityAliases(sprite)));
       config.steps.forEach(step => {
         if (step.type === 'talk' && !avatars.has(step.avatar)) {
           errors.push(`ZONE ${zoneId}: PNJ ${step.avatar} absent pour ${step.label}`);
@@ -6613,11 +7107,33 @@ const OS = {
     return zoneMap[`${zoneId}:${prop.kind}`] || null;
   },
 
+  getCircusCharacterIdentityAliases(spriteOrAvatar, explicitType = null) {
+    const sprite = typeof spriteOrAvatar === 'object' && spriteOrAvatar ? spriteOrAvatar : null;
+    const avatar = sprite ? (sprite.avatar || sprite.type) : spriteOrAvatar;
+    const type = sprite ? sprite.type : explicitType;
+    const canonical = {
+      workgangle: 'gangle',
+      gangletragedy: 'gangle',
+      beachgangle: 'gangle',
+      japanesegangle: 'gangle',
+      rhinogangle: 'gangle',
+      spudsypomni: 'pomni',
+      spudsyjax: 'jax',
+      spudsyragatha: 'ragatha',
+      spudsyzooble: 'zooble',
+      hunterjax: 'jax',
+      maidjax: 'jax',
+      peeledjax: 'jax'
+    };
+    return [...new Set([avatar, type, canonical[avatar]].filter(Boolean))];
+  },
+
   talkToCircusCharacter(sprite) {
     const state = this.circusDoom;
     if (!state || !sprite) return;
     const avatar = sprite.avatar || sprite.type;
-    state.talkedCharacters.add(`${state.currentZoneId}:${avatar}`);
+    const identityAliases = this.getCircusCharacterIdentityAliases(sprite);
+    identityAliases.forEach(identity => state.talkedCharacters.add(`${state.currentZoneId}:${identity}`));
     if (sprite.silent || sprite.type === 'abstract') {
       const missionCompleted = this.completeCircusZoneObjectiveIfReady(state);
       const nonVerbal = sprite.silentText || (sprite.type === 'abstract'
@@ -6629,8 +7145,9 @@ const OS = {
       state.interactionOrigin = { x: state.player.x, z: state.player.z, range: 1.45 };
       state.interactionChannel = 'scan';
       state.interactionSpeaker = 'CAINOS';
-      this.advanceCircusCampaign('talk', avatar, 1, `${state.currentZoneId}:${avatar}`);
-      this.advanceCircusCustomAdventure('talk', sprite.baseAvatar || avatar);
+      identityAliases.forEach(identity => this.advanceCircusCampaign('talk', identity, 1, `${state.currentZoneId}:${avatar}`));
+      identityAliases.forEach(identity => this.advanceCircusZoneChallenge('talk', identity));
+      this.advanceCircusCustomAdventure('talk', sprite.baseAvatar || identityAliases.at(-1) || avatar);
       this.emitCircusNoise(sprite.type === 'abstract' ? 0.52 : 0.08, `scan ${sprite.name}`);
       this.saveCircusPersistentWorldState();
       if (state.detailEl) state.detailEl.innerText = state.interactionMessage;
@@ -6646,8 +7163,9 @@ const OS = {
     state.interactionOrigin = { x: state.player.x, z: state.player.z, range: 1.45 };
     state.interactionChannel = 'dialogue';
     state.interactionSpeaker = sprite.name;
-    this.advanceCircusCampaign('talk', avatar, 1, `${state.currentZoneId}:${avatar}`);
-    this.advanceCircusCustomAdventure('talk', sprite.baseAvatar || avatar);
+    identityAliases.forEach(identity => this.advanceCircusCampaign('talk', identity, 1, `${state.currentZoneId}:${avatar}`));
+    identityAliases.forEach(identity => this.advanceCircusZoneChallenge('talk', identity));
+    this.advanceCircusCustomAdventure('talk', sprite.baseAvatar || identityAliases.at(-1) || avatar);
     this.emitCircusNoise(0.28, `dialogue ${sprite.name}`);
     this.saveCircusPersistentWorldState();
     if (state.detailEl) state.detailEl.innerText = state.interactionMessage;
@@ -6899,6 +7417,7 @@ const OS = {
     const state = this.circusDoom;
     if (!state) return null;
     const avatar = sprite.avatar || sprite.type;
+    const canonicalAvatar = this.getCircusCharacterIdentityAliases(sprite).at(-1) || avatar;
     const held = state.heldItem;
     if (held) {
       const reactions = {
@@ -6909,7 +7428,7 @@ const OS = {
         gangle: `Gangle: Fais attention avec ${held.name}. Les accessoires cassent parfois au pire moment.`,
         zooble: `Zooble: Ne me donne pas ${held.name}. J ai deja assez de pieces detachees.`
       };
-      return { label: `Montrer ${held.name}`, response: reactions[avatar] || `${sprite.name}: Cet objet vient de ${this.circusDoom.portals[held.fromZone]?.short || 'la simulation'}.` };
+      return { label: `Montrer ${held.name}`, response: reactions[avatar] || reactions[canonicalAvatar] || `${sprite.name}: Cet objet vient de ${this.circusDoom.portals[held.fromZone]?.short || 'la simulation'}.` };
     }
     const follower = state.follower;
     if (follower && follower.avatar !== avatar) {
@@ -7053,8 +7572,9 @@ const OS = {
     const objectiveOption = this.getCircusObjectiveDialogueOption(sprite, zoneId);
     const contextualOption = this.getCircusContextualDialogueOption(sprite, zoneId);
     const timelineOption = this.getCircusTimelineDialogueOption(sprite, zoneId);
+    const canonicalAvatar = this.getCircusCharacterIdentityAliases(sprite).at(-1) || avatar;
     const followable = new Set(['pomni', 'ragatha', 'jax', 'kinger', 'gangle', 'zooble', 'gummigoo']);
-    const followOption = followable.has(avatar) ? {
+    const followOption = followable.has(canonicalAvatar) ? {
       label: this.circusDoom?.follower?.avatar === avatar ? 'Rester ici' : 'Me suivre',
       response: `${sprite.name}: D accord. Je garde le Visiteur 251 dans mon champ de vision.`,
       action: 'toggle-follow'
@@ -7170,6 +7690,11 @@ const OS = {
         126: "Pomni: Ne respire pas. Traverse seulement jusqu a l escalier.",
         125: "Pomni: Le salon normal est revenu, mais le masque de Gangle n est plus avec nous.",
         10: "Pomni: Les commandes vont trop vite. Gangle tient a peine le rythme.",
+        127: "Pomni: La facade est calme pour l instant. Des que les machines demarrent, Caine appellera ca une aventure.",
+        130: "Pomni: Ragatha essaie d aider tout le monde, meme quand elle ne sait pas comment. Cela ne rend pas ses efforts faux.",
+        154: "Pomni: Gummigoo, Max et Chad ne me reconnaissent pas. Je ne vais pas leur imposer ce qui m est arrive avec une autre version d eux.",
+        155: "Pomni: La Queen a traverse la file entiere. Les mannequins ne sont plus que des traces dans le rush.",
+        156: "Pomni: Je peux terminer la fermeture. Gangle peut pointer et partir maintenant.",
         14: "Pomni: Le lac fait semblant d'etre calme. Caine fait toujours semblant.",
         40: "Pomni: Le coffre est vide. Les poissons gardent surtout une histoire deja terminee.",
         44: "Pomni: Les photos de Kaufmo et Ribbit rendent cette chambre moins simple que le personnage que Jax joue devant nous.",
@@ -7189,6 +7714,8 @@ const OS = {
       },
       caine: {
         2: "Caine: Une scene praticable, des portes splendides, et aucune garantie de sortie!",
+        28: "Caine: La boite a suggestions a choisi une aventure de travail parfaitement ordinaire et donc absolument passionnante!",
+        132: "Caine: B+ pour Gangle et A+ pour Kinger! Une evaluation parfaitement objective, a quelques details de contexte pres!",
         15: "Caine: Une Chinese Room parfaitement litterale, sans aucun rapport avec mes dossiers administratifs!",
         16: "Caine: Mon bureau personnel contient exactement le niveau de mystere necessaire a cette aventure!",
         18: "Caine: Le spectacle continue tant que le systeme peut encore sourire.",
@@ -7209,6 +7736,11 @@ const OS = {
       },
       jax: {
         2: "Jax: Si une porte est verrouillee, c'est probablement la seule interessante.",
+        10: "Jax: La station boissons est toujours moins mauvaise que la friteuse. Ce n est pas un compliment.",
+        37: "Jax: Une chaise, quatre mains et deux masques. Leur programme de formation manque un peu de subtilite.",
+        72: "Jax: Ma carte est pointee. La voiture avec la plaque JAX.001 est a moi, evidemment.",
+        128: "Jax: La Queen vient de passer devant le guichet. Elle ne va certainement pas prendre la file normalement.",
+        153: "Jax: Ragatha a glisse exactement au mauvais endroit. Gangle appelle deja upper management.",
         86: "Jax: Normal ou vraiment effrayante? Je peux rendre ce choix beaucoup moins ennuyeux.",
         125: "Jax: Super. Attache au salon pendant que les autres font la route dramatique.",
         14: "Jax: Version chasseur, meme probleme: Caine appelle ca des vacances.",
@@ -7226,6 +7758,12 @@ const OS = {
       },
       ragatha: {
         2: "Ragatha: Avance doucement. Les salles changent moins vite si on garde un repere.",
+        10: "Ragatha: Je peux encore parler, mais la sauce rend chaque visage beaucoup trop intense.",
+        35: "Ragatha: Six burgers, c est deja quelque chose. Je sais que ce n est pas assez pour la commande.",
+        129: "Ragatha: Zooble attend pour conduire. Je ne devrais vraiment pas essayer de partir seule.",
+        153: "Ragatha: La friteuse va bien. Moi aussi, probablement. Continuons avant que Gangle panique davantage.",
+        155: "Ragatha: Le bol de cereales etait dans la file avant que la Queen ne mange les mannequins.",
+        158: "Ragatha: Ce sourire ne peut pas etre reel. Il faut revenir vers les comptoirs et les lumieres de la cuisine.",
         125: "Ragatha: Martha sert le the ici. On reste poli et on attend que Caine nous rappelle.",
         45: "Ragatha: Tu es reveillee. On peut rejoindre les autres quand tu es prete.",
         133: "Ragatha: Restons dans le carrosse jusqu au pont-levis. Le groupe doit arriver ensemble.",
@@ -7241,6 +7779,7 @@ const OS = {
       },
       kinger: {
         2: "Kinger: Les murs ont une memoire. Les portes aussi, malheureusement.",
+        28: "Kinger: Je vais rester au chapiteau. Apparemment, cela compte tout de meme comme une excellente performance.",
         8: "Kinger: Les pieces sombres protegent parfois mieux les souvenirs.",
         88: "Kinger: La tete au-dessus de la cheminee veut qu on l entende, pas qu on la comprenne.",
         149: "Kinger: Les affiches, les photos et la seconde bande sont dans cette piece, pas dans les trophees.",
@@ -7256,6 +7795,8 @@ const OS = {
       },
       gangle: {
         2: "Gangle: Tant que mon masque tient, je peux te dire quelle porte a l'air moins terrible.",
+        28: "Gangle: Zooble a dit que ce masque venait de sa boite. Je ne sais pas encore ce qu il va changer.",
+        48: "Gangle: Ce masque en plastique est plus solide que le precedent. J espere que cela suffit.",
         86: "Gangle: Mon masque de comedie ne devrait pas passer cette porte.",
         125: "Gangle: Je n ai plus mon masque de comedie. Je crois qu il est reste de l autre cote.",
         10: "Gangle: Spudsy transforme tout en service client, meme la panique.",
@@ -7264,6 +7805,11 @@ const OS = {
       },
       zooble: {
         2: "Zooble: Caine appelle ca immersion. Moi j'appelle ca etre enferme avec style.",
+        28: "Zooble: La trappe confirme que Caine ne me demandait pas vraiment si je voulais participer.",
+        35: "Zooble: Le compteur affiche six. Gangle voit surtout les deux cent quatre-vingt-quatorze manquants.",
+        48: "Zooble: Le masque etait dans ma boite. Gangle peut l essayer, mais cela ne le rend pas normal.",
+        129: "Zooble: Je conduis Ragatha. Le service peut attendre que tout le monde rentre sans danger.",
+        153: "Zooble: Je suis tombe du plafond en uniforme. Caine appelle probablement ca une entree efficace.",
         152: "Zooble: Je ne veux pas d une autre aventure. Je veux que ce corps arrete d etre une blague.",
         11: "Zooble: Les micro-aventures sont juste des problemes plus courts.",
         18: "Zooble: Si ce monde s'effondre, je veux au moins choisir ma posture.",
@@ -7280,17 +7826,20 @@ const OS = {
         144: "Gummigoo: Ce corps inerte porte mon apparence. Il ne parle pas et il ne bouge pas.",
         145: "Gummigoo: Le tanker duplique peut nous ramener vers une surface si nous cassons la bonne collision.",
         146: "Gummigoo: Les theieres et le ciel pastel confirment seulement que nous sommes encore hors du monde construit.",
-        141: "Gummigoo: Nous avons rejoint le bassin avec Pomni et le tanker duplique. Le groupe nous attend de l autre cote."
+        141: "Gummigoo: Nous avons rejoint le bassin avec Pomni et le tanker duplique. Le groupe nous attend de l autre cote.",
+        154: "Gummigoo: Max et Chad sont avec moi. Cette fille nous connait peut-etre, mais nous ne partageons pas ses souvenirs."
       },
       max: {
         6: "Max: Si la route se repete, c'est peut-etre parce qu'on n'est pas la pour aller quelque part.",
         137: "Max: Le camp tient encore. On suit Gummigoo des que le tanker repart.",
-        141: "Max: Pomni et Gummigoo sont revenus avec un second tanker. On peut enfin reprendre la route."
+        141: "Max: Pomni et Gummigoo sont revenus avec un second tanker. On peut enfin reprendre la route.",
+        154: "Max: Le camion est dehors. On termine de manger puis on reprend la route avec Gummigoo."
       },
       chad: {
         6: "Chad: On suit Gummigoo, mais cette route a trop de coutures pour etre normale.",
         137: "Chad: Le war rig arrive. Le tanker doit quitter le camp maintenant.",
-        141: "Chad: Les deux tankers sont reunis au bassin; la poursuite peut repartir vers le chateau."
+        141: "Chad: Les deux tankers sont reunis au bassin; la poursuite peut repartir vers le chateau.",
+        154: "Chad: Le petit jouet ressemble a notre camion. Cette commande devient de plus en plus etrange."
       },
       loolilalu: {
         6: "Princess Loolilalu: Le royaume garde son decor royal, meme quand Caine transforme tout en mission.",
@@ -7327,15 +7876,23 @@ const OS = {
       },
       workgangle: {
         10: "Gangle: Le comptoir transforme la scene en pression de travail. Mon masque tient a peine.",
+        35: "Gangle: Six burgers sur trois cents. Je ne peux pas appeler ca une commande terminee.",
         72: "Gangle: Je veux seulement quitter le parking sans recommencer tout le service.",
         127: "Gangle: La facade est la derniere seconde avant que le service commence.",
         129: "Gangle: Le badge et le planning ne rendent pas ce bureau plus facile a supporter.",
         130: "Gangle: Ici, derriere la cuisine, le bruit baisse enfin.",
         131: "Gangle: Restons sous le lampadaire encore un instant.",
-        132: "Gangle: B+ ne dit rien de ce que cette journee a vraiment coute."
+        132: "Gangle: B+ ne dit rien de ce que cette journee a vraiment coute.",
+        153: "Gangle: Chaque machine doit etre allumee. Je veux que le service commence correctement.",
+        154: "Gangle: Cette table est servie. Pomni a besoin d espace pour leur dire au revoir.",
+        156: "Gangle: Pomni propose de fermer a ma place. Je devrais accepter avant de remettre ce masque."
+      },
+      gangletragedy: {
+        157: "Gangle: Ce masque reste ici. Je veux sentir ce que je ressens sans qu il decide a ma place."
       },
       gloinkqueenscale: {
-        128: "Gloink Queen: Trois cents burgers. La commande doit garder ma vraie taille."
+        128: "CainOS: La Queen passe devant le drive sans engager de dialogue.",
+        155: "Gloink Queen: Trois cents cheeseburgers pour mes enfants. La file n est plus un obstacle."
       },
       ming: {
         10: "Ming: Signal figurant detecte. Caine a l'air beaucoup trop agace par ce profil.",
@@ -7371,7 +7928,7 @@ const OS = {
         15: "Additional Voices: La simulation recycle meme les figurants quand le systeme manque de repere."
       },
       orbsman: {
-        11: "Orbsman: Micro-aventure detectee. Le corps en spheres tient mieux que la logique de Caine."
+        10: "Orbsman: La commande porte le numero 57. Sa formulation reste difficile a traduire."
       },
       ganglekawaii: {
         11: "Kawaii Gangle: Variante cosmetique. CainOS la garde hors de la timeline principale."
@@ -7581,7 +8138,12 @@ const OS = {
       oyster: "Oyster Archive: signal secondaire.",
       bulbcreature: "Bulb Creature Archive: signal secondaire."
     };
-    const baseLine = zoneLines[avatar]?.[zoneId] || defaultLines[avatar] || `${sprite.name}: Signal detecte.`;
+    const identityAliases = this.getCircusCharacterIdentityAliases(sprite);
+    const zoneIdentity = identityAliases.find(identity => zoneLines[identity]?.[zoneId]);
+    const defaultIdentity = identityAliases.find(identity => defaultLines[identity]);
+    const baseLine = (zoneIdentity ? zoneLines[zoneIdentity][zoneId] : null)
+      || (defaultIdentity ? defaultLines[defaultIdentity] : null)
+      || `${sprite.name}: Signal detecte.`;
     const followups = {
       pomni: [
         "Pomni: Je prefere verifier ce qui se trouve vraiment dans la piece avant de croire une nouvelle direction.",
@@ -7860,7 +8422,7 @@ const OS = {
       16: { title: 'AUDIT DU COEUR', steps: [{ action: 'look', kind: 'desk', count: 1, label: 'Relever le bureau de Caine' }, { action: 'use', kind: 'console', count: 1, label: 'Interroger le coeur C&A' }] },
       33: { title: 'ROUTE DU TANKER', steps: [{ action: 'use', kind: 'truck', count: 1, label: 'Relancer le camion' }, { action: 'drive', kind: 'truck', count: 4, label: 'Traverser la route du canyon' }] },
       34: { title: 'AMES DU MANOIR', steps: [{ action: 'use', kind: 'candle', count: 1, label: 'Fixer une source lumineuse' }, { action: 'survive', kind: 'candle', count: 4, label: 'Resister a la possession' }] },
-      35: { title: 'CUISINE SPUDSY', steps: [{ action: 'take', kind: 'menu', count: 1, label: 'Prendre un ticket cuisine' }, { action: 'use', kind: 'counter', count: 1, label: 'Assembler la commande' }, { action: 'give', kind: 'menu', count: 1, label: 'Servir la commande' }] },
+      35: { title: 'CUISINE SPUDSY', steps: [{ action: 'take', kind: 'card', count: 1, label: 'Prendre un ticket cuisine' }, { action: 'use', kind: 'counter', count: 1, label: 'Assembler la commande' }, { action: 'give', kind: 'card', count: 1, label: 'Servir la commande' }] },
       40: { title: 'PLONGEE AU TRESOR', steps: [{ action: 'use', kind: 'wave', count: 1, label: 'Descendre sous le lac' }, { action: 'dive', kind: 'wave', count: 3, label: 'Atteindre le coffre' }, { action: 'look', kind: 'crate', count: 1, label: 'Verifier le coffre vide' }] },
       43: { title: 'FESTIN FINAL DU PILOTE', steps: [{ action: 'look', kind: 'banquettable', count: 1, label: 'Examiner la longue table blanche' }, { action: 'look', kind: 'feastplatter', count: 4, label: 'Verifier les quatre services du banquet' }] },
       64: { title: 'ETAGE MILDENHALL', steps: [{ action: 'look', kind: 'window', count: 2, label: 'Comparer les deux fenetres' }, { action: 'use', kind: 'candle', count: 1, label: 'Fixer un repere lumineux' }] },
@@ -7875,16 +8437,28 @@ const OS = {
       73: { title: 'POSTE DE SCRATCH', steps: [{ action: 'look', kind: 'desk', count: 1, label: 'Examiner le poste de travail' }, { action: 'use', kind: 'console', count: 1, label: 'Lire le vieux PC C&A' }, { action: 'look', kind: 'memory', count: 1, label: 'Comparer les scans cerebraux' }] },
       74: { title: 'FOYER DE LA PSYCHE', steps: [{ action: 'look', kind: 'doorframe', count: 5, label: 'Identifier les cinq portes' }, { action: 'use', kind: 'archive', count: 1, label: 'Ouvrir l index des scenarios' }] },
       75: { title: 'GROUNDS ETENDUS', steps: [{ action: 'look', kind: 'tower', count: 1, label: 'Relever le grand toboggan' }, { action: 'use', kind: 'ring', count: 2, label: 'Synchroniser deux ilots' }] },
-      85: { title: 'GUIDE GHOSTLY', steps: [{ action: 'look', kind: 'stairs', count: 1, label: 'Repere le vestibule' }, { action: 'look', kind: 'ghostvacuum', count: 1, label: 'Identifier l aspirateur de Jax' }, { action: 'talk', kind: 'ghostly', count: 1, label: 'Ecouter Ghostly' }] },
+      85: { title: 'GUIDE GHOSTLY', steps: [{ action: 'look', kind: 'stairs', count: 1, label: 'Reperer le vestibule' }, { action: 'look', kind: 'console', count: 1, label: 'Identifier l aspirateur de Jax' }, { action: 'talk', kind: 'ghostly', count: 1, label: 'Ecouter Ghostly' }] },
       86: { title: 'CHOIX DES PORTES', steps: [{ action: 'look', kind: 'doorframe', count: 2, label: 'Comparer les deux portes' }, { action: 'talk', kind: 'jax', count: 1, label: 'Surveiller Jax' }, { action: 'talk', kind: 'gangle', count: 1, label: 'Confirmer le masque' }] },
       88: { title: 'TROPHEES MILDENHALL', steps: [{ action: 'look', kind: 'archive', count: 1, label: 'Lire la premiere bande' }, { action: 'look', kind: 'lorebillboard', count: 1, label: 'Observer la tete de l Angel' }, { action: 'survive', kind: 'lorebillboard', count: 4, label: 'Rester silencieux pendant la poursuite' }] },
       89: { title: 'MONTE-PLAT', steps: [{ action: 'use', kind: 'doorframe', count: 1, label: 'Ouvrir la cabine' }, { action: 'look', kind: 'platform', count: 1, label: 'Verifier la descente' }] },
       149: { title: 'PREUVES MILDENHALL', steps: [{ action: 'look', kind: 'wallart', count: 4, label: 'Indexer les preuves murales' }, { action: 'look', kind: 'archive', count: 1, label: 'Lire la seconde bande' }, { action: 'use', kind: 'card', count: 1, label: 'Valider la cle du monte-plat' }, { action: 'use', kind: 'console', count: 1, label: 'Subir la coupure de courant' }] },
       150: { title: 'BROUILLARD DES AMES', steps: [{ action: 'use', kind: 'eye', count: 1, label: 'Lancer l oeil de Kinger' }, { action: 'look', kind: 'stairs', count: 1, label: 'Reveler l escalier' }, { action: 'survive', kind: 'wave', count: 4, label: 'Resister a la possession de Pomni' }] },
       151: { title: 'REPOS DANS LE NOIR', steps: [{ action: 'talk', kind: 'kinger', count: 1, label: 'Ecouter Kinger' }, { action: 'talk', kind: 'pomni', count: 1, label: 'Repondre dans le noir' }, { action: 'look', kind: 'memory', count: 1, label: 'Garder le bon souvenir' }] },
-      152: { title: 'THERAPIE CAINE / ZOOBLE', steps: [{ action: 'talk', kind: 'zooble', count: 1, label: 'Ecouter Zooble' }, { action: 'look', kind: 'memory', count: 1, label: 'Verifier le dessin abeille' }, { action: 'use', kind: 'card', count: 3, label: 'Classer les tests inkblot' }, { action: 'look', kind: 'console', count: 1, label: 'Observer le glitch de Caine' }] }
+      152: { title: 'THERAPIE CAINE / ZOOBLE', steps: [{ action: 'talk', kind: 'zooble', count: 1, label: 'Ecouter Zooble' }, { action: 'look', kind: 'wallart', count: 1, label: 'Verifier le dessin abeille' }, { action: 'use', kind: 'card', count: 3, label: 'Classer les tests inkblot' }, { action: 'look', kind: 'gridnode', count: 1, label: 'Observer le glitch de Caine' }] }
       ,
-      138: { title: 'POURSUITE CANDY', steps: [{ action: 'look', kind: 'candy', count: 2, label: 'Lire les deux voies' }, { action: 'use', kind: 'truck', count: 1, label: 'Prendre le controle du rig' }, { action: 'drive', kind: 'truck', count: 4, label: 'Eviter quatre sequences d obstacles' }] }
+      138: { title: 'POURSUITE CANDY', steps: [{ action: 'look', kind: 'candy', count: 2, label: 'Lire les deux voies' }, { action: 'use', kind: 'truck', count: 1, label: 'Prendre le controle du rig' }, { action: 'drive', kind: 'truck', count: 4, label: 'Eviter quatre sequences d obstacles' }] },
+      127: { title: 'OUVERTURE SPUDSY', steps: [{ action: 'look', kind: 'building', count: 1, label: 'Lire la facade matinale' }, { action: 'use', kind: 'doorframe', count: 1, label: 'Entrer par la porte principale' }] },
+      128: { title: 'PASSAGE AU DRIVE', steps: [{ action: 'use', kind: 'window', count: 1, label: 'Ouvrir le guichet du drive' }, { action: 'look', kind: 'scoreboard', count: 1, label: 'Verifier le passage au lunch' }, { action: 'look', kind: 'lorebillboard', count: 1, label: 'Suivre la Queen dehors' }] },
+      129: { title: 'FIN DE SERVICE', steps: [{ action: 'use', kind: 'archive', count: 1, label: 'Verifier le planning' }, { action: 'use', kind: 'console', count: 1, label: 'Ranger les cartes de pointage' }] },
+      130: { title: 'SORTIE ARRIERE', steps: [{ action: 'use', kind: 'doorframe', count: 1, label: 'Ouvrir la porte de service' }, { action: 'look', kind: 'card', count: 1, label: 'Relever le sac poubelle' }, { action: 'look', kind: 'memory', count: 1, label: 'Observer le masque retire' }] },
+      131: { title: 'ROUTE SOUS LE LAMPADAIRE', steps: [{ action: 'use', kind: 'spotlight', count: 1, label: 'Fixer le cone de lumiere' }, { action: 'look', kind: 'platform', count: 1, label: 'Relever la bordure' }, { action: 'look', kind: 'truck', count: 1, label: 'Identifier le camion sans esquive' }] },
+      132: { title: 'EVALUATION DU SERVICE', steps: [{ action: 'use', kind: 'scoreboard', count: 2, label: 'Comparer les deux notes' }, { action: 'look', kind: 'gridnode', count: 1, label: 'Observer le glitch de Caine' }] },
+      153: { title: 'DEMARRAGE DES POSTES', steps: [{ action: 'use', kind: 'console', count: 3, label: 'Allumer trois postes distincts' }, { action: 'look', kind: 'cellaropening', count: 1, label: 'Relever la trappe de Zooble' }, { action: 'look', kind: 'barrel', count: 1, label: 'Verifier la friteuse' }] },
+      154: { title: 'TABLE DES BANDITS', steps: [{ action: 'look', kind: 'table', count: 1, label: 'Verifier la table servie' }, { action: 'look', kind: 'window', count: 1, label: 'Localiser le camion' }, { action: 'use', kind: 'doorframe', count: 1, label: 'Accompagner le depart' }] },
+      155: { title: 'COMMANDE DE LA QUEEN', steps: [{ action: 'look', kind: 'memory', count: 1, label: 'Constater la file devoree' }, { action: 'look', kind: 'gridnode', count: 3, label: 'Identifier trois Gloinks' }, { action: 'use', kind: 'card', count: 1, label: 'Enregistrer trois cents burgers' }] },
+      156: { title: 'FERMETURE NOCTURNE', steps: [{ action: 'look', kind: 'memory', count: 1, label: 'Verifier le restaurant eteint' }, { action: 'use', kind: 'archive', count: 1, label: 'Suivre la checklist' }, { action: 'use', kind: 'card', count: 1, label: 'Retirer la carte de pointage' }] },
+      157: { title: 'MASQUE SUR LE TROTTOIR', steps: [{ action: 'look', kind: 'memory', count: 1, label: 'Observer le masque abandonne' }, { action: 'use', kind: 'doorframe', count: 1, label: 'Verifier la porte de fermeture' }] },
+      158: { title: 'PERCEPTION DE RAGATHA', steps: [{ action: 'look', kind: 'lorebillboard', count: 1, label: 'Identifier la vision deformee' }, { action: 'use', kind: 'ring', count: 2, label: 'Stabiliser deux reperes visuels' }] }
     };
     if (zoneId >= 44 && zoneId <= 49) {
       const room = this.getCircusBedroomDefinitions()[zoneId];
@@ -9685,7 +10259,40 @@ const OS = {
       152: [
         { id: 'therapy_glitch', label: 'THERAPY GLITCH', detail: 'EVENT: Caine perd le controle de la seance et la piece coupe comme une archive.', color: '#ffd84a' },
         { id: 'inkblot_shift', label: 'INK BLOT', detail: 'EVENT: les tests de taches changent pendant que Zooble parle de son corps.', color: '#f7f7ff' }
-      ]
+      ],
+      127: [
+        { id: 'spudsy_morning_sign', label: 'MATIN', detail: 'AMBIANCE: la facade et le parking attendent encore l ouverture.', color: '#7db7ff' },
+        { id: 'spudsy_entry_bell', label: 'CLOCHETTE', detail: 'AMBIANCE: la porte principale annonce l equipe.', color: '#fff1a8' }
+      ],
+      128: [
+        { id: 'spudsy_drive_clock', label: '12:00', detail: 'AMBIANCE: le menu du drive bascule vers le service du midi.', color: '#f6d743' },
+        { id: 'spudsy_queen_shadow', label: 'QUEEN PASS', detail: 'AMBIANCE: une silhouette geante traverse la voie exterieure.', color: '#ff7d8d' }
+      ],
+      129: [{ id: 'spudsy_timesheets', label: 'POINTAGE', detail: 'AMBIANCE: les cartes horaires claquent dans leur rack.', color: '#d7d7d7' }],
+      130: [{ id: 'spudsy_rear_quiet', label: 'ARRIERE', detail: 'AMBIANCE: les ventilateurs de cuisine deviennent lointains.', color: '#91d4bb' }],
+      131: [
+        { id: 'spudsy_lamp_pool', label: 'LAMPADAIRE', detail: 'AMBIANCE: le cone de lumiere reste fixe sur la bordure.', color: '#fff1a8' },
+        { id: 'spudsy_truck_approach', label: 'PHARES', detail: 'EVENT: les phares du semi-remorque grandissent sur la route.', color: '#ffffff' }
+      ],
+      132: [
+        { id: 'spudsy_grade_flash', label: 'B+ / A+', detail: 'EVENT: les notes de Gangle et Kinger alternent sur le tableau.', color: '#ffd84a' },
+        { id: 'spudsy_caine_glitch', label: 'CAINE GLITCH', detail: 'EVENT: le plateau saute quand Caine doute de son evaluation.', color: '#e53935' }
+      ],
+      153: [
+        { id: 'spudsy_startup_cycle', label: 'DEMARRAGE', detail: 'AMBIANCE: les trois postes s allument l un apres l autre.', color: '#7df0ff' },
+        { id: 'spudsy_fryer_bubble', label: 'FRITEUSE', detail: 'AMBIANCE: l huile et la hotte couvrent presque les voix.', color: '#c49a45' }
+      ],
+      154: [
+        { id: 'spudsy_bandit_table', label: 'TABLE BANDITS', detail: 'AMBIANCE: le jaffle et les hash browns refroidissent sur la table.', color: '#d88928' },
+        { id: 'spudsy_exit_bell', label: 'DEPART', detail: 'AMBIANCE: la clochette suit le depart de Gummigoo, Max et Chad.', color: '#fff1a8' }
+      ],
+      155: [
+        { id: 'spudsy_queue_break', label: 'FILE DEVOREE', detail: 'EVENT: les places vides des mannequins restent devant la Queen.', color: '#ff9b37' },
+        { id: 'spudsy_300_ticket', label: '300 BURGERS', detail: 'EVENT: le ticket demesure continue de sortir de la caisse.', color: '#e53935' }
+      ],
+      156: [{ id: 'spudsy_lights_out', label: 'FERMETURE', detail: 'AMBIANCE: seuls les temoins des machines restent allumes.', color: '#56505f' }],
+      157: [{ id: 'spudsy_mask_on_curb', label: 'MASQUE', detail: 'AMBIANCE: le masque plastique reste immobile au bord du trottoir.', color: '#f7f7f7' }],
+      158: [{ id: 'spudsy_hallucination_pulse', label: 'STUPID SAUCE', detail: 'VFX: la perception de Ragatha deforme les contours sans modifier la piece reelle.', color: '#9ad74e' }]
     };
     const zoneEvents = events[zoneId];
     if (!zoneEvents?.length) return null;
@@ -10427,12 +11034,19 @@ const OS = {
       ];
     }
     if (this.isCircusBedroomArchived(room)) {
-      return [
+      const archivedProps = [
         { kind: 'bed', x: 0.7, z: -2.35, color: this.shadeHex(room.color, 0.72), accent: room.accent },
         { kind: 'archive', x: -1.55, z: -2.15, color: room.color, label: room.resident },
         { kind: 'memory', x: -0.85, z: -1.25, color: room.accent, label: room.resident },
         { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'panel', x: 0, z: -1.4, color: '#8b8794' }
       ];
+      if (zoneId === 44) {
+        archivedProps.push(
+          { kind: 'card', campaignTarget: 'doorbell', x: -2.05, z: -1.35, color: '#ffd84a', label: 'Doorbell de la vision de Jax' },
+          { kind: 'memory', x: 0, z: -3.15, color: '#c875ff', label: 'Vision kaleidoscopique de Jax' }
+        );
+      }
+      return archivedProps;
     }
     const shared = [
       { kind: 'bed', x: 0.65, z: -2.45, color: room.color, accent: room.accent },
@@ -10780,7 +11394,9 @@ const OS = {
     const campaignPropAdditions = {
       2: [
         { kind: 'card', x: -2.75, z: -1.25, color: '#ffd84a', label: 'Trousseau de cles de Jax', portable: true },
-        { kind: 'memory', x: 2.65, z: -1.35, color: '#d61f2c', label: 'Masque de comedie brise de Gangle' },
+        { kind: 'base', campaignTarget: 'softballball', campaignGate: { episode: 4, minStage: 0, maxStage: 0 }, x: -1.15, z: -1.15, color: '#ffffff', label: 'Balle de la lecon de softball' },
+        { kind: 'target', campaignGate: { episode: 4, minStage: 0, maxStage: 0 }, x: 1.15, z: -1.2, color: '#8b5a2b', label: 'Batte utilisee par Jax' },
+        { kind: 'memory', campaignTarget: 'brokencomedymask', x: 2.65, z: -1.35, color: '#d61f2c', label: 'Masque de comedie brise de Gangle' },
         { kind: 'card', campaignTarget: 'gunbrief', campaignGate: { episode: 6, minStage: 1, maxStage: 1 }, x: -1.35, z: -1.15, color: '#f6d743', label: 'Briefing They All Get Guns' },
         { kind: 'projector', campaignTarget: 'projector', campaignGate: { episode: 9, minStage: 14, maxStage: 14 }, x: 0, z: -3.55, color: '#fff1a8', label: 'Projecteur des profils humains' },
         { kind: 'bed', campaignTarget: 'kingerfort', campaignGate: { episode: 3, minStage: 18, maxStage: 18 }, x: 2.5, z: -3.1, width: 2.5, depth: 1.2, height: 1.15, color: '#5c4b82', accent: '#d9d0a2', label: 'Fort de coussins rejoint par Kinger' }
@@ -10853,6 +11469,11 @@ const OS = {
       ],
       28: [
         { kind: 'card', campaignTarget: 'spudsysuggestion', campaignGate: { episode: 4, minStage: 2, maxStage: 2 }, x: 2.3, z: -1.25, color: '#f6d743', label: 'Suggestion de travail chez Spudsy' },
+        { kind: 'archive', campaignTarget: 'suggestionbox', campaignGate: { episode: 4, minStage: 2, maxStage: 2 }, x: -2.3, z: -1.25, color: '#ff4fb8', label: 'Boite a suggestions arrachee du mur' },
+        { kind: 'wave', campaignTarget: 'waterleak', campaignGate: { episode: 4, minStage: 2, maxStage: 2 }, x: -1.2, z: -2.85, color: '#4ee7ff', label: 'Fuite d eau bouchee par Bubble' },
+        { kind: 'cellaropening', campaignTarget: 'zoobletrapdoor', campaignGate: { episode: 4, minStage: 2, maxStage: 2 }, anchor: 'ceiling', x: 1.25, z: -3.0, color: '#f7f7f7', label: 'Trappe ouverte sous Zooble' },
+        { kind: 'wallart', campaignTarget: 'gangleart', campaignGate: { episode: 4, minStage: 22, maxStage: 22 }, anchor: 'wall-left', x: -1.48, z: -3.1, color: '#e53935', art: 'blocks', label: 'Dessins de Gangle montres a Zooble' },
+        { kind: 'memory', campaignTarget: 'waitinggroup', campaignGate: { episode: 4, minStage: 22, maxStage: 22 }, x: 2.15, z: -1.25, color: '#ffd84a', label: 'Groupe attendant Gangle et Zooble' },
         { kind: 'card', campaignTarget: 'suggestionbox', campaignGate: { episode: 5, minStage: 0, maxStage: 0 }, x: -2.3, z: -1.25, color: '#ff4fb8', label: 'Boite a suggestions du lightning round' },
         { kind: 'caineportal', campaignTarget: 'arrivalportal', campaignGate: { episode: 5, minStage: 7, maxStage: 7 }, x: 0, z: -4.35, color: '#7df0ff', label: 'Portail de retour du softball' }
       ],
@@ -13184,6 +13805,17 @@ const OS = {
           campaignGate: { episode: 2, minStage: 1, maxStage: 1 }
         });
       }
+      if (Number(zoneId) === 48) {
+        sprites.push({
+          name: 'Gangle',
+          type: 'gangle',
+          avatar: 'gangle',
+          x: 0.95,
+          z: -2.25,
+          color: '#f7f7f7',
+          campaignGate: { episode: 4, minStage: 1, maxStage: 1 }
+        });
+      }
       this.circusZoneSpritesCache.set(zoneId, sprites);
       return sprites;
     }
@@ -13259,7 +13891,6 @@ const OS = {
         { name: 'Cereal Bowl Mannequin', type: 'mannequin', avatar: 'cerealmannequin', x: 2.85, z: -2.7, color: '#ff9b37', sizeScale: 0.9 }
       ],
       11: [
-        { name: 'Orbsman', type: 'npc', avatar: 'orbsman', x: -1.75, z: -2.25, color: '#6dd8ff' },
         { name: 'Kawaii Gangle', type: 'gangle', avatar: 'ganglekawaii', x: -0.15, z: -2.45, color: '#ff9fcd' },
         { name: 'Evil Pomni', type: 'pomni', avatar: 'evilpomni', x: 1.35, z: -2.1, color: '#c12b3f' },
         { name: 'Evil Jax', type: 'jax', avatar: 'eviljax', x: 2.45, z: -1.45, color: '#7436c9' },
@@ -13371,7 +14002,12 @@ const OS = {
       28: [
         { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: -1.5, z: -2.25, color: '#d64545' },
         { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: 0.15, z: -2.65, color: '#f7f7f7' },
-        { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 1.65, z: -1.8, color: '#ff4fb8' }
+        { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 1.65, z: -1.8, color: '#ff4fb8' },
+        { name: 'Caine', type: 'caine', avatar: 'caine', x: -2.65, z: -1.45, color: '#ffd84a', campaignGate: { episode: 4, minStage: 2, maxStage: 2 } },
+        { name: 'Bubble', type: 'bubble', avatar: 'bubble', x: 2.75, z: -1.35, color: '#f7f7ff', campaignGate: { episode: 4, minStage: 2, maxStage: 2 } },
+        { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -2.45, z: -3.0, color: '#d9d0a2', campaignGate: { episode: 4, minStage: 2, maxStage: 2 } },
+        { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 2.55, z: -2.95, color: '#e53935', campaignGate: { episode: 4, minStage: 2, maxStage: 2 } },
+        { name: 'Jax', type: 'jax', avatar: 'jax', x: 0.15, z: -1.55, color: '#8a4fd6', campaignGate: { episode: 4, minStage: 2, maxStage: 2 } }
       ],
       29: [],
       30: [

@@ -319,7 +319,7 @@ if (duplicateIds.length) failures.push(`ID HTML DUPLIQUES: ${duplicateIds.join('
 if (!/campaigns\.length\s*!==\s*9/.test(app)) failures.push('Audit 9 campagnes absent');
 const zoneMaxMatch = app.match(/getCircusFpsZoneMax\(\)\s*\{\s*return\s+(\d+)\s*;/);
 const fpsZoneMax = zoneMaxMatch ? Number(zoneMaxMatch[1]) : Number.NaN;
-const minimumFpsZoneMax = 152;
+const minimumFpsZoneMax = 158;
 if (!Number.isInteger(fpsZoneMax) || fpsZoneMax < minimumFpsZoneMax) {
   failures.push(`Borne FPS ${Number.isFinite(fpsZoneMax) ? fpsZoneMax : 'introuvable'}/${minimumFpsZoneMax} minimum`);
 }
@@ -403,6 +403,25 @@ for (const marker of [
 }
 if (!/3:\s*\{\s*title:\s*'The Mystery Of Mildenhall Manor',\s*version:\s*2,\s*steps:\s*\[/.test(app)) {
   failures.push('Campagne FPS EP3 versionnee absente');
+}
+for (const marker of [
+  "name: \"SPUDSY'S OPENING STATIONS\"",
+  "name: \"SPUDSY'S DINING AREA\"",
+  "name: \"SPUDSY'S LUNCH QUEUE\"",
+  "name: \"SPUDSY'S CLOSING TIME STATE\"",
+  "name: \"SPUDSY'S FRONT CURB\"",
+  "name: 'RAGATHA STUPID SAUCE HALLUCINATION'",
+  "campaignTarget: 'threehundredticket'",
+  "campaignTarget: 'oncomingtruck'",
+  "enterCircusCampaignPendingCut"
+]) {
+  if (!app.includes(marker)) failures.push(`Passe FPS EP4 absente: ${marker}`);
+}
+if (!/4:\s*\{\s*title:\s*'Fast Food Masquerade',\s*version:\s*2,\s*steps:\s*\[/.test(app)) {
+  failures.push('Campagne FPS EP4 versionnee absente');
+}
+if (!/36:\s*\{\s*name:\s*\"SPUDSY'S BATHROOM \/ MENTIONED\"[\s\S]*?nonPhysical:\s*true/.test(app)) {
+  failures.push('Sanitaires Spudsy encore materialises malgre leur simple mention');
 }
 if (!app.includes("name: 'UNTITLED BAR'")) failures.push('Bar canonique de Untitled absent');
 for (const marker of ['RAGATHA TORMENT', 'GANGLE TORMENT', 'ZOOBLE TORMENT', 'JAX TORMENT', 'POMNI TORMENT']) {

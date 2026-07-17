@@ -89,7 +89,7 @@ const canonPackGPlacements = {
   truthtellerfish: 40,
   liarfish: 40,
   stupidburgermannequin: 10,
-  cerealmannequin: 10
+  cerealmannequin: 155
 };
 const canonPackGProfileKeys = {
   truthtellerfish: 'TRUTH_TELLER_NPC',
@@ -251,7 +251,8 @@ for (const episode of campaignEpisodes) {
       if (virtual.has(requirement.action)) return;
       const requirementZone = Number.isFinite(Number(requirement.zone)) ? Number(requirement.zone) : stage.zone;
       if (requirement.action === 'talk') {
-        const found = OS.getCircusZoneSprites(requirementZone).some(sprite => (sprite.avatar || sprite.type) === requirement.target);
+        const found = OS.getCircusZoneSprites(requirementZone)
+          .some(sprite => OS.getCircusCharacterIdentityAliases(sprite).includes(requirement.target));
         if (!found) failures.push(`EP${episode}.${stageIndex + 1}: PNJ ${requirement.target} absent zone ${requirementZone}`);
         return;
       }
@@ -373,7 +374,7 @@ for (const [avatar, zone] of Object.entries({
   spudsypomni: 10,
   spudsyjax: 10,
   spudsyragatha: 10,
-  spudsyzooble: 10,
+  spudsyzooble: 35,
   peekingmannequin: 6
 })) {
   const sprite = OS.getCircusZoneSprites(zone).find(entry => (entry.avatar || entry.type) === avatar);
@@ -501,12 +502,12 @@ for (const [zone, kinds] of [[70, ['building', 'wave']], [71, ['stairs', 'candle
 }
 const canonRoomDefinitions = OS.getCircusCanonRoomDefinitions();
 const fpsZoneMax = OS.getCircusFpsZoneMax();
-const minimumFpsZoneMax = 152;
+const minimumFpsZoneMax = 158;
 if (!Number.isInteger(fpsZoneMax) || fpsZoneMax < minimumFpsZoneMax) {
   failures.push(`FPS: borne de zones ${fpsZoneMax}/${minimumFpsZoneMax} minimum`);
 }
 const canonRoomEntries = Object.entries(canonRoomDefinitions);
-const minimumCanonRoomCount = 61;
+const minimumCanonRoomCount = 71;
 if (canonRoomEntries.length < minimumCanonRoomCount) {
   failures.push(`FPS: ${canonRoomEntries.length}/${minimumCanonRoomCount} pieces canoniques ou balisees minimum`);
 }
@@ -667,6 +668,166 @@ const therapyRoster = new Set(OS.getCircusZoneSprites(152).map(sprite => sprite.
 for (const avatar of ['caine', 'zooble']) {
   if (!therapyRoster.has(avatar)) failures.push(`EP3 FPS 152: ${avatar} absent du plateau de therapie`);
 }
+const episodeFourCampaign = OS.getCircusFpsCampaignDefinition(4);
+if (episodeFourCampaign?.version !== 2) failures.push('EP4 FPS: version de campagne 2 absente');
+if (episodeFourCampaign?.stages?.length !== 23) {
+  failures.push(`EP4 FPS: ${episodeFourCampaign?.stages?.length ?? 0}/23 actes attendus`);
+}
+if (episodeFourCampaign?.stages?.[0]?.zone !== 2 || episodeFourCampaign?.stages?.at(-1)?.zone !== 28) {
+  failures.push('EP4 FPS: la campagne doit commencer par la lecon au Tent et finir par l epilogue Gangle/Zooble');
+}
+const episodeFourCampaignZones = new Set((episodeFourCampaign?.stages || []).flatMap(stage => stage.route || [stage.zone]));
+for (const zone of [10, 35, 37, 72, 127, 128, 129, 130, 131, 132, 153, 154, 155, 156, 157, 158]) {
+  if (!episodeFourCampaignZones.has(zone)) failures.push(`EP4 FPS: zone ${zone} absente du parcours`);
+  if (!canonRoomDefinitions[zone]) failures.push(`EP4 FPS: piece ${zone} absente`);
+}
+const episodeFourPhysicalGraph = new Map([
+  [127, [10, 72, 153, 157]],
+  [153, [127, 35]],
+  [35, [10, 37, 129, 130, 153]],
+  [10, [127, 35, 37, 128, 154, 155]],
+  [128, [10, 127]],
+  [154, [10]],
+  [155, [10]],
+  [37, [10, 35]],
+  [130, [35, 72, 129]],
+  [129, [35, 130]],
+  [72, [127, 130, 131, 157]],
+  [157, [127, 72, 131]],
+  [131, [72, 157]]
+]);
+for (const [zone, expectedExits] of episodeFourPhysicalGraph) {
+  const room = canonRoomDefinitions[zone];
+  const exits = new Set(room?.exits || []);
+  if (room?.nonPhysical) failures.push(`EP4 FPS ${zone}: piece physique marquee nonPhysical`);
+  if (exits.size !== expectedExits.length || expectedExits.some(exit => !exits.has(exit))) {
+    failures.push(`EP4 FPS ${zone}: topologie incorrecte (${[...exits].join(', ') || 'aucune sortie'})`);
+  }
+}
+for (const zone of [132, 156, 158]) {
+  const room = canonRoomDefinitions[zone];
+  if (!room?.nonPhysical || (room?.exits || []).length) {
+    failures.push(`EP4 FPS ${zone}: coupe non physique mal isolee`);
+  }
+}
+if (canonRoomDefinitions[156]?.layer !== 'time-state') failures.push('EP4 FPS 156: fermeture non classee comme etat temporel');
+if (canonRoomDefinitions[158]?.layer !== 'projection') failures.push('EP4 FPS 158: hallucination non classee comme projection');
+
+const savedCircusDoom = OS.circusDoom;
+const savedBeginCircusDoorTransition = OS.beginCircusDoorTransition;
+try {
+  let capturedCut = null;
+  OS.circusDoom = {
+    currentZoneId: 35,
+    portals: { 158: {} },
+    doorTransition: null,
+    portalTransition: null,
+    interactionMessage: '',
+    interactionUntil: 0,
+    interactionChannel: '',
+    interactionSpeaker: ''
+  };
+  OS.beginCircusDoorTransition = (targetId, fromZoneId, kind) => {
+    capturedCut = { targetId, fromZoneId, kind };
+  };
+  const projectionStage = {
+    entryMode: 'projection',
+    entryZone: 35,
+    zone: 158,
+    title: 'Projection Ragatha'
+  };
+  const projectionPending = {
+    stage: projectionStage,
+    requirements: [
+      { complete: false, action: 'visit', target: '158' },
+      { complete: false, action: 'talk', target: 'ragatha', zone: 158 }
+    ]
+  };
+  if (!OS.enterCircusCampaignPendingCut(projectionPending)
+    || capturedCut?.targetId !== 158
+    || capturedCut?.fromZoneId !== 35
+    || capturedCut?.kind !== 'projection') {
+    failures.push('EP4 FPS 158: coupe hallucinee non declenchee depuis la cuisine');
+  }
+
+  capturedCut = null;
+  const physicalActionPending = {
+    stage: projectionStage,
+    requirements: [
+      { complete: false, action: 'interact', target: 'stupidsauce', zone: 35 },
+      { complete: false, action: 'visit', target: '158' }
+    ]
+  };
+  if (OS.enterCircusCampaignPendingCut(physicalActionPending) || capturedCut) {
+    failures.push('EP4 FPS 158: coupe declenchee avant la fin des actions physiques');
+  }
+} finally {
+  OS.circusDoom = savedCircusDoom;
+  OS.beginCircusDoorTransition = savedBeginCircusDoorTransition;
+}
+
+const episodeFourTargets = new Map([
+  [2, { softballball: 1, brokencomedymask: 1 }],
+  [28, { spudsysuggestion: 1, suggestionbox: 1, waterleak: 1, zoobletrapdoor: 1, gangleart: 1, waitinggroup: 1 }],
+  [48, { newmask: 1, zooblebox: 1 }],
+  [127, { spudsysign: 1, frontdoor: 1 }],
+  [153, { startupmachine: 3, ceilingtrapdoor: 1, deepfryer: 1, managementphone: 1, drinkstation: 1 }],
+  [10, { register: 1, order57: 1, lunchmenu: 1, biohazarddoor: 1, brokenclock: 1, ganglewatch: 1 }],
+  [35, { stupidsauce: 1, stupidburger: 1, assemblyburger: 6, assemblycounter: 1 }],
+  [154, { bandittable: 1, gatortruckwindow: 1, diningexit: 1 }],
+  [128, { orderwindow: 1, driveclock: 1, queenoutside: 1 }],
+  [155, { cerealbowl: 1, eatenqueue: 1, threehundredticket: 1, namedgloinks: 3 }],
+  [37, { trainingtv: 1, restraintchair: 1, maskflash: 2 }],
+  [130, { backdoor: 1, trashbag: 1, removedmask: 1 }],
+  [72, { jaxcar: 1, jaxplate: 1, discardedhat: 1, timeclock: 1 }],
+  [129, { timesheet: 1, clockrack: 1 }],
+  [156, { darkrestaurant: 1, closingchecklist: 1, clockoutcard: 1 }],
+  [157, { discardedmask: 1, frontdoor: 1 }],
+  [131, { streetlamp: 1, curb: 1, oncomingtruck: 1 }],
+  [132, { reviewgrade: 1, reviewboard: 1, kingergrade: 1, caineglitch: 1 }],
+  [158, { hallucinationgangle: 1 }]
+]);
+for (const [zone, targets] of episodeFourTargets) {
+  const props = OS.getCircusZoneProps(zone);
+  for (const [target, expectedCount] of Object.entries(targets)) {
+    const count = getTargetCount(props, target);
+    if (count < expectedCount) failures.push(`EP4 FPS ${zone}: ${target} ${count}/${expectedCount}`);
+  }
+}
+if (OS.getCircusZoneProps(37).filter(prop => prop.kind === 'toyglove').length !== 4) {
+  failures.push('EP4 FPS 37: quatre mains geantes attendues');
+}
+const physicalSpudsyZones = [...episodeFourPhysicalGraph.keys()];
+for (const zone of physicalSpudsyZones) {
+  if (OS.getCircusZoneSprites(zone).some(sprite => (sprite.avatar || sprite.type) === 'kinger')) {
+    failures.push(`EP4 FPS ${zone}: Kinger ne doit pas travailler chez Spudsy`);
+  }
+}
+if (!OS.getCircusZoneSprites(10).some(sprite => (sprite.avatar || sprite.type) === 'orbsman')) {
+  failures.push('EP4 FPS 10: Orbsman absent du petit-dejeuner');
+}
+if (OS.getCircusZoneSprites(11).some(sprite => (sprite.avatar || sprite.type) === 'orbsman')) {
+  failures.push('EP4 FPS 11: Orbsman encore range dans les variantes');
+}
+const trainingRoster = OS.getCircusZoneSprites(37).map(sprite => sprite.avatar || sprite.type);
+if (trainingRoster.length !== 1 || trainingRoster[0] !== 'spudsyjax') {
+  failures.push(`EP4 FPS 37: roster de formation incorrect (${trainingRoster.join(', ')})`);
+}
+const reviewRoster = new Set(OS.getCircusZoneSprites(132).map(sprite => sprite.avatar || sprite.type));
+if (reviewRoster.size !== 2 || !reviewRoster.has('caine') || !reviewRoster.has('workgangle')) {
+  failures.push(`EP4 FPS 132: roster d evaluation incorrect (${[...reviewRoster].join(', ')})`);
+}
+for (const zone of [128, 155]) {
+  const queen = OS.getCircusZoneSprites(zone).find(sprite => (sprite.avatar || sprite.type) === 'gloinkqueenscale');
+  if (!queen || Number(queen.sizeScale) < 2.5) failures.push(`EP4 FPS ${zone}: echelle de la Gloink Queen insuffisante`);
+}
+for (let zone = 0; zone <= fpsZoneMax; zone += 1) {
+  for (const sprite of OS.getCircusZoneSprites(zone)) {
+    const avatar = sprite.avatar || sprite.type;
+    if (avatar === 'spudsycustomer') failures.push(`EP4 FPS ${zone}: faux client Spudsy actif`);
+    if (avatar === 'albertspudsy' && !sprite.silent) failures.push(`EP4 FPS ${zone}: Albert Spudsy traite comme PNJ parlant`);
+  }
+}
 const legacyCandyStoryActors = new Set(['gummigoo', 'max', 'chad', 'loolilalu', 'fudge', 'pomni']);
 if (OS.getCircusZoneSprites(6).some(sprite => legacyCandyStoryActors.has(sprite.avatar || sprite.type))) {
   failures.push('EP2 FPS 6: ancien regroupement generique des personnages Candy encore actif');
@@ -699,6 +860,54 @@ if (restaurantSpawn?.z !== 12 || restaurantSpawn?.revision !== 1 || restaurantSp
 }
 if (feastSpawn?.z !== 12.35 || feastSpawn?.revision !== 1 || feastSpawn?.a !== -Math.PI / 2) {
   failures.push('EP1 FPS 43: point d arrivee cadre invalide');
+}
+const episodeFourSpawnOffsets = new Map([
+  [10, 2.4],
+  [35, 2.3],
+  [37, 1.9],
+  [72, 2.6],
+  [127, 1.8],
+  [128, 2.0],
+  [129, 1.7],
+  [130, 2.0],
+  [131, 2.0],
+  [132, 1.5],
+  [153, 2.2],
+  [154, 2.2],
+  [155, 2.0],
+  [156, 1.9],
+  [157, 1.2],
+  [158, 1.6]
+]);
+for (const [zone, offset] of episodeFourSpawnOffsets) {
+  const spawn = OS.getCircusAuthoredSpawn.call(spawnContext, zone);
+  if (spawn?.x !== 10 || spawn?.z !== 10 + offset || spawn?.revision !== 2 || spawn?.a !== -Math.PI / 2) {
+    failures.push(`EP4 FPS ${zone}: point d arrivee cadre invalide`);
+  }
+}
+const localGameplayContracts = new Map([
+  [35, [['take', 'card'], ['use', 'counter'], ['give', 'card']]],
+  [85, [['look', 'stairs'], ['look', 'console'], ['talk', 'ghostly']]],
+  [86, [['look', 'doorframe'], ['talk', 'jax'], ['talk', 'gangle']]],
+  [151, [['talk', 'kinger'], ['talk', 'pomni'], ['look', 'memory']]],
+  [152, [['talk', 'zooble'], ['look', 'wallart'], ['use', 'card'], ['look', 'gridnode']]]
+]);
+for (const [zone, expectedSteps] of localGameplayContracts) {
+  const actualSteps = OS.getCircusZoneGameplayConfig(zone)?.steps || [];
+  const signature = actualSteps.map(step => [step.action, step.kind]);
+  if (JSON.stringify(signature) !== JSON.stringify(expectedSteps)) {
+    failures.push(`FPS ${zone}: contrat d actions locales incorrect (${JSON.stringify(signature)})`);
+  }
+}
+const savedArchiveDetector = OS.isCircusBedroomArchived;
+try {
+  OS.isCircusBedroomArchived = () => true;
+  const archivedJaxProps = OS.getCircusBedroomProps(44) || [];
+  if (!archivedJaxProps.some(prop => prop.campaignTarget === 'doorbell')) {
+    failures.push('EP7 FPS 44: doorbell absent du replay apres archivage de Jax');
+  }
+} finally {
+  OS.isCircusBedroomArchived = savedArchiveDetector;
 }
 const episodeOneRoomChecks = new Map([
   [76, ['bathtub', 'toilet', 'sink']],
