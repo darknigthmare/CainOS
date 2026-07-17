@@ -501,7 +501,7 @@ for (const [zone, kinds] of [[70, ['building', 'wave']], [71, ['stairs', 'candle
 }
 const canonRoomDefinitions = OS.getCircusCanonRoomDefinitions();
 const fpsZoneMax = OS.getCircusFpsZoneMax();
-const minimumFpsZoneMax = 148;
+const minimumFpsZoneMax = 152;
 if (!Number.isInteger(fpsZoneMax) || fpsZoneMax < minimumFpsZoneMax) {
   failures.push(`FPS: borne de zones ${fpsZoneMax}/${minimumFpsZoneMax} minimum`);
 }
@@ -586,6 +586,86 @@ if (OS.getCircusZoneSprites(135).some(sprite => (sprite.avatar || sprite.type) =
 }
 if (OS.getCircusZoneSprites(141).some(sprite => (sprite.avatar || sprite.type) === 'zooble')) {
   failures.push('EP2 FPS 141: Zooble ne participe pas au bassin Chocolate River');
+}
+const episodeThreeCampaign = OS.getCircusFpsCampaignDefinition(3);
+if (episodeThreeCampaign?.version !== 2) failures.push('EP3 FPS: version de campagne 2 absente');
+if (episodeThreeCampaign?.stages?.length !== 19) {
+  failures.push(`EP3 FPS: ${episodeThreeCampaign?.stages?.length ?? 0}/19 actes attendus`);
+}
+if (episodeThreeCampaign?.stages?.[0]?.zone !== 2 || episodeThreeCampaign?.stages?.at(-1)?.zone !== 2) {
+  failures.push('EP3 FPS: la campagne doit commencer au briefing zone 2 et finir au chapiteau zone 2');
+}
+const episodeThreeCampaignZones = new Set((episodeThreeCampaign?.stages || [])
+  .flatMap(stage => Array.isArray(stage.route) ? stage.route : [stage.zone])
+  .map(Number));
+for (const zone of [149, 150, 151, 152]) {
+  if (!episodeThreeCampaignZones.has(zone)) failures.push(`EP3 FPS: piece ${zone} absente du parcours de campagne`);
+  if (!canonRoomDefinitions[zone]) failures.push(`EP3 FPS: piece ${zone} absente`);
+}
+const episodeThreePhysicalGraph = new Map([
+  [87, [88]],
+  [88, [87, 149]],
+  [149, [88, 89]],
+  [89, [149, 9]],
+  [9, [89, 34]],
+  [34, [9, 150]],
+  [150, [34, 151]],
+  [151, [150, 126]],
+  [126, [151, 125]],
+  [125, [126, 86]],
+  [86, [125]]
+]);
+const strictEpisodeThreeSeparationZones = new Set([88, 149, 150, 151]);
+for (const [zone, expectedExits] of episodeThreePhysicalGraph) {
+  const room = canonRoomDefinitions[zone];
+  const exits = new Set(room?.exits || []);
+  if (room?.nonPhysical) failures.push(`EP3 FPS ${zone}: piece physique marquee nonPhysical`);
+  for (const exit of expectedExits) {
+    if (!exits.has(exit)) failures.push(`EP3 FPS ${zone}: sortie physique ${exit} absente`);
+  }
+  if (strictEpisodeThreeSeparationZones.has(zone)
+    && (exits.size !== expectedExits.length || [...exits].some(exit => !expectedExits.includes(exit)))) {
+    failures.push(`EP3 FPS ${zone}: separation canonique incorrecte (${[...exits].join(', ') || 'aucune sortie'})`);
+  }
+}
+const therapyRoom = canonRoomDefinitions[152];
+if (!therapyRoom?.nonPhysical || (therapyRoom?.exits || []).length) {
+  failures.push('EP3 FPS 152: le plateau de therapie doit rester non physique et sans sortie');
+}
+const getCampaignTarget = entry => entry?.campaignTarget || entry?.kind;
+const getTargetCount = (entries, target) => entries.filter(entry => getCampaignTarget(entry) === target).length;
+const trophyRoomProps = OS.getCircusZoneProps(88);
+const trophyRoomTapeTargets = trophyRoomProps
+  .map(getCampaignTarget)
+  .filter(target => /^tape\d+$/i.test(String(target || '')));
+if (getTargetCount(trophyRoomProps, 'tape01') !== 1
+  || trophyRoomTapeTargets.some(target => target !== 'tape01')) {
+  failures.push('EP3 FPS 88: seule la bande tape01 doit rester dans la salle des trophees');
+}
+const evidenceRoomProps = OS.getCircusZoneProps(149);
+for (const target of ['tape02', 'dumbwaiterkey', 'powercut']) {
+  if (!getTargetCount(evidenceRoomProps, target)) failures.push(`EP3 FPS 149: ${target} absent`);
+}
+if (getTargetCount(evidenceRoomProps, 'evidence') < 4) {
+  failures.push(`EP3 FPS 149: ${getTargetCount(evidenceRoomProps, 'evidence')}/4 preuves minimum`);
+}
+const soulFogProps = OS.getCircusZoneProps(150);
+for (const target of ['kingereye', 'hellstairs']) {
+  if (!getTargetCount(soulFogProps, target)) failures.push(`EP3 FPS 150: ${target} absent`);
+}
+if (!getTargetCount(OS.getCircusZoneProps(151), 'darkalcove')) {
+  failures.push('EP3 FPS 151: darkalcove absent');
+}
+const therapyProps = OS.getCircusZoneProps(152);
+for (const target of ['beedrawing', 'caineglitch']) {
+  if (!getTargetCount(therapyProps, target)) failures.push(`EP3 FPS 152: ${target} absent`);
+}
+if (getTargetCount(therapyProps, 'inkblot') < 3) {
+  failures.push(`EP3 FPS 152: ${getTargetCount(therapyProps, 'inkblot')}/3 tests inkblot minimum`);
+}
+const therapyRoster = new Set(OS.getCircusZoneSprites(152).map(sprite => sprite.avatar || sprite.type));
+for (const avatar of ['caine', 'zooble']) {
+  if (!therapyRoster.has(avatar)) failures.push(`EP3 FPS 152: ${avatar} absent du plateau de therapie`);
 }
 const legacyCandyStoryActors = new Set(['gummigoo', 'max', 'chad', 'loolilalu', 'fudge', 'pomni']);
 if (OS.getCircusZoneSprites(6).some(sprite => legacyCandyStoryActors.has(sprite.avatar || sprite.type))) {

@@ -1640,7 +1640,7 @@ const OS = {
       6: { name: 'CANDY CANYON KINGDOM', short: 'CANDY', detail: 'Royaume bonbon, convoi sirop et route du tanker.', color: '#ff9b37', floor: '#4b2436', ceiling: '#24234f', unlocked: unlockedAt(2, 1) },
       7: { name: 'TEST LEVEL / COMPATIBILITY ARCHIVE', short: 'TEST ARCHIVE', detail: 'Ancien point d acces CainOS conserve pour le mode libre. La campagne utilise maintenant les couches 142 a 146 sans porte physique.', color: '#1c5a86', floor: '#02080d', ceiling: '#03070c', provenance: 'projection', nonPhysical: true, layer: 'under-map', unlocked: unlockedAt(2, 4) },
       8: { name: 'MILDENHALL MANOR / EXTERIOR', short: 'MANOR', detail: 'Facade et terrain du manoir avant le vestibule; les salles interieures suivent maintenant leur ordre a l ecran.', color: '#b7f0ff', floor: '#1d1827', ceiling: '#050816', unlocked: unlockedAt(3, 1) },
-      9: { name: 'MILDENHALL WINE CELLAR', short: 'CAVE A VIN', detail: 'Cave a vin atteinte par le monte-plat, avec le corps du Baron et le passage vers l Enfer.', color: '#7c88a1', floor: '#0d1018', ceiling: '#03040a', unlocked: unlockedAt(3, 4) },
+      9: { name: 'MILDENHALL WINE CELLAR', short: 'CAVE A VIN', detail: 'Cave a vin atteinte par le monte-plat, avec le corps du Baron et le passage vers l Enfer.', color: '#7c88a1', floor: '#0d1018', ceiling: '#03040a', exits: [89, 34], unlocked: unlockedAt(3, 4) },
       10: { name: "SPUDSY'S", short: 'SPUDSY', detail: 'Restaurant rapide, comptoir, tickets et stress de service de Gangle.', color: '#ff4d4d', floor: '#3b1a17', ceiling: '#251308', unlocked: unlockedAt(4, 1) },
       11: { name: 'SUGGESTION BOX / MICRO-ZONES', short: 'IDEES', detail: 'Suite de micro-aventures generees par Caine depuis les suggestions.', color: '#ff4fb8', floor: '#2c1434', ceiling: '#160d25', unlocked: unlockedAt(5, 1) },
       12: { name: 'SOFTBALL STADIUM', short: 'BALL', detail: 'Terrain de match, costumes sportifs et equipe adverse alternative.', color: '#83ff57', floor: '#173416', ceiling: '#14152f', unlocked: unlockedAt(5, 6) },
@@ -1665,7 +1665,7 @@ const OS = {
       31: { name: 'THE NEST / IN-HOUSE ARCHIVE', short: 'NEST', detail: 'Aventure interne supprimee; accessible ici comme reconstruction d archive, pas comme salle permanente.', color: '#e8d6a8', floor: '#5a3c28', ceiling: '#21150f', unlocked: unlockedAt(1, 1) },
       32: { name: 'CANDY ROYAL PALACE', short: 'PALAIS', detail: 'Salle royale de Princess Loolilalu et point de depart de la mission du sirop.', color: '#ff9ad5', floor: '#ffd6e8', ceiling: '#7d3f8c', unlocked: unlockedAt(2, 2) },
       33: { name: 'SYRUP TANKER ROUTE', short: 'TANKER', detail: 'Route du canyon empruntee par le convoi et les bandits crocodiles.', color: '#ff9b37', floor: '#d97b35', ceiling: '#5f8ee8', unlocked: unlockedAt(2, 3) },
-      34: { name: 'MILDENHALL HELL', short: 'ENFER', detail: 'Branche infernale sous le manoir ou les ames possedent Pomni.', color: '#ff4d32', floor: '#240707', ceiling: '#080000', unlocked: unlockedAt(3, 5) },
+      34: { name: 'MILDENHALL HELL', short: 'ENFER', detail: 'Branche infernale sous le manoir ou les ames possedent Pomni.', color: '#ff4d32', floor: '#240707', ceiling: '#080000', exits: [9, 150], unlocked: unlockedAt(3, 5) },
       35: { name: "SPUDSY'S KITCHEN", short: 'CUISINE', detail: 'Cuisine, friteuses, tickets et postes de preparation du service.', color: '#f6d743', floor: '#d9d4c7', ceiling: '#561914', unlocked: unlockedAt(4, 2) },
       36: { name: "SPUDSY'S BATHROOM / MENTIONED", short: 'WC MENTION', detail: 'Sanitaires seulement decrits comme un risque biologique; CainOS ne les place pas sur la route physique canonique.', color: '#91d4bb', floor: '#dedbd0', ceiling: '#36534d', provenance: 'mentioned', nonPhysical: true, unlocked: unlockedAt(4, 3) },
       37: { name: 'TRAINING ROOM', short: 'FORMATION', detail: 'Piece isolee ou Jax subit la video de formation de Gangle.', color: '#e53935', floor: '#1b1717', ceiling: '#070707', unlocked: unlockedAt(4, 5) },
@@ -1723,7 +1723,7 @@ const OS = {
       31: { exits: [28], motif: 'nest', size: 15 },
       32: { exits: [33, 66, 83], motif: 'palace', size: 17 },
       33: { exits: [6, 32, 7, 84], motif: 'route', size: 21 },
-      34: { exits: [9, 126], motif: 'hell', size: 25 },
+      34: { exits: [9, 150], motif: 'hell', size: 25 },
       35: { exits: [10, 37], motif: 'kitchen', size: 17 },
       36: { exits: [], motif: 'bathroom', size: 11, nonPhysical: true },
       37: { exits: [10, 35], motif: 'training', size: 11 },
@@ -2702,70 +2702,163 @@ const OS = {
           requirements: [{ action: 'look', target: 'kaufmoportrait', zone: 148, count: 1 }]
         }
       ] },
-      3: { title: 'The Mystery Of Mildenhall Manor', steps: [
+      3: { title: 'The Mystery Of Mildenhall Manor', version: 2, steps: [
         {
-          title: 'Respiration et briefing du manoir', zone: 2, route: [2],
+          title: 'Respiration, changement de teinte et briefing', zone: 2, route: [2],
           action: 'talk', target: 'caine',
-          guide: 'Terminez l exercice de respiration puis ecoutez le briefing sans transformer l interlude therapeutique en piece du manoir.'
+          guide: 'Tenez pendant le changement de teinte de Pomni, retrouvez le groupe sur la piste puis ecoutez le briefing du manoir.',
+          requirements: [
+            { action: 'survive', target: 'breathtrial', zone: 2, count: 4 },
+            { action: 'talk', target: 'pomni', zone: 2, count: 1 }
+          ]
         },
         {
-          title: 'Exterieur, vestibule et Ghostly', zone: 85, route: [8, 85], entryMode: 'caineportal', entryZone: 8,
+          title: 'Facade, vestibule et guide Ghostly', zone: 85, route: [8, 85], entryMode: 'caineportal', entryZone: 8,
           action: 'talk', target: 'ghostly',
-          guide: 'Entrez par la facade, retrouvez tout le groupe dans le vestibule et inspectez l aspirateur utilise contre Ghostly.',
+          guide: 'Franchissez la facade avec les cinq participants, ecoutez Ghostly puis identifiez l aspirateur utilise par Jax.',
           requirements: [{ action: 'look', target: 'ghostvacuum', zone: 85, count: 1 }]
         },
         {
-          title: 'Choix des deux portes', zone: 86, route: [85, 86],
+          title: 'Deux portes, masque et separation', zone: 86, route: [85, 86],
           action: 'look', target: 'routechoice', count: 2, distinct: true,
-          guide: 'Identifiez la porte normale a gauche et la porte vraiment effrayante a droite avant la separation.'
+          guide: 'Comparez la porte normale et la porte vraiment effrayante avant que le masque de Gangle, Kinger et Pomni ne soient entraines.',
+          requirements: [
+            { action: 'talk', target: 'jax', zone: 86, count: 1 },
+            { action: 'talk', target: 'gangle', zone: 86, count: 1 }
+          ]
         },
         {
-          title: 'Tunnel organique effrayant', zone: 87, route: [86, 87],
-          action: 'use', target: 'organictunnel',
-          guide: 'Traversez le conduit organique a sens narratif unique sans inventer de salle supplementaire.',
-          requirements: [{ action: 'survive', target: 'organicdrop', zone: 87, count: 3 }]
+          title: 'Chute effrayante et premiere bande', zone: 88, route: [86, 87, 88],
+          action: 'use', target: 'organictunnel', actionZone: 87,
+          guide: 'Traversez le conduit organique, atteignez la salle des trophees et examinez uniquement la premiere bande avec la tete de l Angel.',
+          requirements: [
+            { action: 'look', target: 'tape01', zone: 88, count: 1 },
+            { action: 'look', target: 'angelhead', zone: 88, count: 1 }
+          ]
         },
         {
-          title: 'Trophees, bandes et extinction', zone: 88, route: [87, 88],
-          action: 'look', target: 'tape', count: 2, distinct: true,
-          guide: 'Lisez les deux premiers enregistrements, observez la tete de l Angel puis laissez le courant s eteindre.',
-          requirements: [{ action: 'look', target: 'angelhead', zone: 88, count: 1 }]
+          title: 'Therapie: le dessin de l abeille', zone: 152, route: [152], entryMode: 'cainecut',
+          action: 'talk', target: 'caine',
+          guide: 'Suivez la premiere coupe Caine-Zooble et constatez que Caine ramene la discussion aux aventures avant de montrer son dessin.',
+          requirements: [
+            { action: 'talk', target: 'zooble', zone: 152, count: 1 },
+            { action: 'look', target: 'beedrawing', zone: 152, count: 1 }
+          ]
         },
         {
-          title: 'Poursuite sonore et monte-plat', zone: 89, route: [88, 89],
-          action: 'use', target: 'dumbwaiter',
-          guide: 'Evitez la manifestation de l Angel en limitant le bruit puis descendez dans la cabine du monte-plat.',
-          requirements: [{ action: 'survive', target: 'angelchase', zone: 88, count: 4 }]
+          title: 'Salle des preuves, seconde bande et cle', zone: 149, route: [88, 149], entryMode: 'cainecut', entryZone: 88,
+          action: 'look', target: 'tape02',
+          guide: 'Quittez les trophees pour la piece distincte des affiches et photos, trouvez la cle du monte-plat puis subissez la coupure de courant.',
+          requirements: [
+            { action: 'look', target: 'evidence', zone: 149, count: 4, distinct: true },
+            { action: 'use', target: 'dumbwaiterkey', zone: 149, count: 1 },
+            { action: 'use', target: 'powercut', zone: 149, count: 1 }
+          ]
         },
         {
-          title: 'Cave, cadavre et fusil', zone: 9, route: [89, 9],
-          action: 'take', target: 'shotgun',
-          guide: 'Lisez la troisieme bande, recuperez le fusil pres du Baron et conservez exactement deux tirs.',
-          requirements: [{ action: 'look', target: 'tape', zone: 9, count: 1 }]
+          title: 'Retour silencieux, mouche et poursuite', zone: 88, route: [149, 88, 149, 89],
+          action: 'survive', target: 'angelchase', count: 4,
+          guide: 'Retournez dans les trophees, restez discret jusqu au bourdonnement de la mouche, puis rejoignez et ouvrez le monte-plat avec la cle.',
+          requirements: [{ action: 'use', target: 'dumbwaiter', zone: 89, count: 1 }]
         },
         {
-          title: 'Deux manifestations de l Angel', zone: 9, route: [9],
+          title: 'Therapie: corps, aventures et crise de Caine', zone: 152, route: [152], entryMode: 'cainecut',
+          action: 'talk', target: 'zooble',
+          guide: 'Ecoutez Zooble parler de son corps et des aventures, observez la destabilisation de Caine puis terminez les cartes de test.',
+          requirements: [
+            { action: 'talk', target: 'caine', zone: 152, count: 1 },
+            { action: 'look', target: 'caineglitch', zone: 152, count: 1 },
+            { action: 'use', target: 'inkblot', zone: 152, count: 3, distinct: true }
+          ]
+        },
+        {
+          title: 'Cave, troisieme bande et deux cartouches', zone: 9, route: [9], entryMode: 'cainecut',
+          action: 'look', target: 'tape03',
+          guide: 'Retrouvez le cadavre du Baron dans la cave, ecoutez sa troisieme bande et prenez le fusil qui ne contient que deux cartouches.',
+          requirements: [
+            { action: 'take', target: 'shotgun', zone: 9, count: 1 },
+            { action: 'look', target: 'mountedhead', zone: 9, count: 1 }
+          ]
+        },
+        {
+          title: 'Corps, tete et revelation de l Angel', zone: 9, route: [9],
           action: 'use', target: 'angelmanifestation', count: 2, distinct: true,
-          guide: 'Neutralisez d abord le corps pres du tuyau puis la tete au puits du monte-plat; cela ne prouve pas une mort definitive.',
-          requirements: [{ action: 'look', target: 'tape', zone: 9, count: 2, distinct: true }]
+          guide: 'Utilisez exactement les deux tirs sur le corps puis la tete, avant d ecouter la bande finale qui revele la nature de l Angel.',
+          requirements: [{ action: 'look', target: 'tapefinal', zone: 9, count: 1 }]
         },
         {
-          title: 'Enfer, possession et escalier', zone: 126, route: [9, 34, 126],
+          title: 'Chute dans le hall des damnes', zone: 34, route: [34], entryMode: 'hell',
           action: 'talk', target: 'kinger',
-          guide: 'Traversez les ames, maintenez Pomni pendant la possession puis gagnez l escalier de sortie.',
-          requirements: [{ action: 'survive', target: 'holdbreath', zone: 126, count: 5 }]
+          guide: 'Laissez les ames entrainer Pomni et Kinger, reprenez vos reperes dans l Enfer froid et observez le brouillard avant d avancer.',
+          requirements: [{ action: 'look', target: 'hellfog', zone: 34, count: 1 }]
         },
         {
-          title: 'Souvenir de Queenie dans le noir', zone: 17, route: [17], entryMode: 'memory',
-          action: 'talk', target: 'kinger',
-          guide: 'Ecoutez Kinger dans le souvenir obscur. Queenie reste une memoire et ne redevient pas une residente physique.',
-          requirements: [{ action: 'look', target: 'memory', zone: 17, count: 1 }]
-        },
-        {
-          title: 'Salon normal et reunion finale', zone: 125, route: [125], entryMode: 'cainecut',
+          title: 'Route pacifiste et the de Martha', zone: 125, route: [125], entryMode: 'cainecut',
           action: 'talk', target: 'marthamildenhall',
-          guide: 'Rejoignez Martha, le the et les membres retenus par la route normale, puis attendez le rappel direct de Caine.',
-          requirements: [{ action: 'look', target: 'teaservice', zone: 125, count: 1 }]
+          guide: 'Suivez en parallele la route normale: Martha sert le the a Ragatha et Gangle pendant que Jax reste attache.',
+          requirements: [
+            { action: 'talk', target: 'ragatha', zone: 125, count: 1 },
+            { action: 'look', target: 'teaservice', zone: 125, count: 1 },
+            { action: 'look', target: 'tiedjax', zone: 125, count: 1 }
+          ]
+        },
+        {
+          title: 'Brouillard des ames, oeil et possession', zone: 150, route: [34, 150], entryMode: 'cainecut', entryZone: 34,
+          action: 'use', target: 'kingereye',
+          guide: 'Lancez l oeil de Kinger dans le brouillard, reperez l escalier puis resistez a la possession de Pomni.',
+          requirements: [
+            { action: 'look', target: 'hellstairs', zone: 150, count: 1 },
+            { action: 'survive', target: 'possession', zone: 150, count: 4 }
+          ]
+        },
+        {
+          title: 'Repos dans le noir et confiance', zone: 151, route: [150, 151],
+          action: 'talk', target: 'kinger',
+          guide: 'Asseyez-vous dans l obscurite apres l exorcisme et laissez Pomni et Kinger reprendre la conversation sans nouvelle menace.',
+          requirements: [
+            { action: 'talk', target: 'pomni', zone: 151, count: 1 },
+            { action: 'look', target: 'darkalcove', zone: 151, count: 1 }
+          ]
+        },
+        {
+          title: 'Souvenir controle de Queenie', zone: 17, route: [17], entryMode: 'memory',
+          action: 'talk', target: 'kinger',
+          guide: 'Parcourez seulement la memoire de Kinger: Queenie abstraite se calme dans le noir sans redevenir une residente physique.',
+          requirements: [{ action: 'look', target: 'memory', zone: 17, count: 2, distinct: true }]
+        },
+        {
+          title: 'Derniere traversee sans respirer', zone: 126, route: [151, 126], entryMode: 'memory', entryZone: 151,
+          action: 'survive', target: 'holdbreath', count: 5,
+          guide: 'Reprenez le parcours depuis l alcove, retenez votre respiration et atteignez ensemble l escalier de sortie.',
+          requirements: [{ action: 'use', target: 'exitstairs', zone: 126, count: 1 }]
+        },
+        {
+          title: 'Reunion et masque oublie', zone: 125, route: [126, 125],
+          action: 'talk', target: 'ragatha',
+          guide: 'Retrouvez la route normale, remerciez Ragatha et constatez que le masque de comedie de Gangle est reste derriere.',
+          requirements: [
+            { action: 'talk', target: 'gangle', zone: 125, count: 1 },
+            { action: 'look', target: 'forgottenmask', zone: 125, count: 1 }
+          ]
+        },
+        {
+          title: 'Therapie inversee et rappel du groupe', zone: 152, route: [152], entryMode: 'cainecut',
+          action: 'talk', target: 'zooble',
+          guide: 'Retrouvez Zooble en position de therapeute, Caine en patient et la prise de notes juste avant le retour du groupe.',
+          requirements: [
+            { action: 'talk', target: 'caine', zone: 152, count: 1 },
+            { action: 'use', target: 'therapynotes', zone: 152, count: 1 }
+          ]
+        },
+        {
+          title: 'Retour au Tent et epilogue de Pomni', zone: 2, route: [2], entryMode: 'cainecut',
+          action: 'talk', target: 'caine',
+          guide: 'Revenez sur la piste, laissez Kinger rejoindre son fort et ecoutez Pomni repondre a Jax sans prolonger artificiellement l episode.',
+          requirements: [
+            { action: 'talk', target: 'pomni', zone: 2, count: 1 },
+            { action: 'talk', target: 'jax', zone: 2, count: 1 },
+            { action: 'look', target: 'kingerfort', zone: 2, count: 1 }
+          ]
         }
       ] },
       4: { title: 'Fast Food Masquerade', steps: [
@@ -3229,9 +3322,8 @@ const OS = {
     const definition = this.getCircusFpsCampaignDefinition(portalEpisode);
     if (!definition) return;
     const previous = state.campaigns[definition.episode];
-    const needsEpisode2Migration = definition.episode === 2
-      && Number(previous?.definitionVersion || 0) < Number(definition.version || 1);
-    const stored = !previous || needsEpisode2Migration
+    const needsDefinitionMigration = Number(previous?.definitionVersion || 0) < Number(definition.version || 1);
+    const stored = !previous || needsDefinitionMigration
       ? { stage: 0, progress: {}, evidence: {}, complete: false, definitionVersion: definition.version || 1 }
       : previous;
     stored.definitionVersion = Number(definition.version) || Number(stored.definitionVersion) || 1;
@@ -3456,7 +3548,20 @@ const OS = {
         { id: 'caine-recall', speaker: 'CainOS', channel: 'system', text: 'RAPPEL EXTERIEUR: Caine ne rejoint Pomni qu apres son passage dans le Vide.', duration: 4700 }
       ],
       6: [{ id: 'convoy-call', speaker: 'Gummigoo', text: 'Le tanker est pret. La route ne restera pas stable longtemps.', avatar: 'gummigoo', duration: 4600 }],
-      8: [{ id: 'ghost-flicker', speaker: 'Kinger', text: 'Eteins ce qui fait trop de bruit. Dans le noir, certaines choses deviennent plus claires.', avatar: 'kinger', duration: 5200, danger: true }],
+      8: [{ id: 'manor-approach', speaker: 'CainOS', channel: 'system', text: 'EP3 / EXTERIEUR: facade Mildenhall detectee. Le vestibule et les choix de portes suivent dans les salles dediees.', duration: 5000 }],
+      85: [{ id: 'ghostly-guide', speaker: 'Ghostly', text: "Hey, I'm Ghostly! And I'll be your guide today!", avatar: 'ghostly', duration: 5200 }],
+      86: [
+        { id: 'ghostly-door-choice', speaker: 'Ghostly', text: 'The door on the left is the NORMAL door. The door on the right is the really scary door.', avatar: 'ghostly', duration: 6200 },
+        { id: 'jax-mask-throw', speaker: 'Jax', text: 'Le masque de Gangle part du mauvais cote. Pomni et Kinger suivent la branche effrayante.', avatar: 'jax', duration: 5200, danger: true }
+      ],
+      88: [
+        { id: 'trophy-first-tape', speaker: 'CainOS', channel: 'system', text: 'EP3 / TROPHEES: premiere bande et tete de l Angel seulement. La seconde bande est dans la salle des preuves.', duration: 5600 },
+        { id: 'mildenhall-fly-warning', speaker: 'Kinger', text: 'Ne fais pas de bruit. Meme une mouche peut suffire ici.', avatar: 'kinger', duration: 5200, danger: true }
+      ],
+      149: [
+        { id: 'evidence-room-powercut', speaker: 'CainOS', channel: 'system', text: 'EP3 / PREUVES: affiches, photos, seconde bande, cle du monte-plat. Coupure de courant imminente.', duration: 5600, danger: true },
+        { id: 'baron-second-tape', speaker: 'Baron Theodore Mildenhall', text: 'Do not let the head out of your sight.', avatar: 'baronmildenhall', duration: 5200 }
+      ],
       10: [{ id: 'spudsy-rush', speaker: 'Gangle', text: 'Nouveau rush. Lis le ticket, prepare le comptoir, puis donne la bonne commande.', avatar: 'workgangle', duration: 5000 }],
       12: [{ id: 'softball-pitch', speaker: 'Caine', text: 'Batteur en place! Frappez uniquement quand le curseur traverse la zone verte!', avatar: 'caine', duration: 4600 }],
       14: [
@@ -3501,6 +3606,17 @@ const OS = {
       ],
       148: [
         { id: 'kaufmo-funeral-silence', speaker: 'CainOS', channel: 'system', text: 'EP2 / FUNERAILLES: aucune parole audible n est ajoutee a cette reconstruction silencieuse.', duration: 5600 }
+      ],
+      150: [
+        { id: 'kinger-eye-stairs', speaker: 'Kinger', text: "Let me try something. There's actually a staircase down there.", avatar: 'kinger', duration: 5600 },
+        { id: 'pomni-possession', speaker: 'Possessed Pomni', text: 'Freedom.', avatar: 'horrorpomnivoid', duration: 4200, danger: true }
+      ],
+      151: [
+        { id: 'dark-rest-memory', speaker: 'Kinger', text: 'Good memories can do a lot. Hold onto them.', avatar: 'kinger', duration: 5600 }
+      ],
+      152: [
+        { id: 'therapy-zooble-body', speaker: 'Zooble', text: 'I hate this body.', avatar: 'zooble', duration: 4600 },
+        { id: 'therapy-caine-patient', speaker: 'Caine', text: 'So, what is on your mind, Zooble?', avatar: 'caine', duration: 5200 }
       ]
     };
     return events[zoneId] || [];
@@ -3552,7 +3668,7 @@ const OS = {
   getCircusDynamicEventSprites(zoneId) {
     const event = this.circusDoom?.activeDynamicEvent;
     if (!event || (!event.avatar && !event.avatars?.length)) return [];
-    const colors = { caine: '#ffd84a', bubble: '#f7f7ff', gloinkstar: '#7348ff', moon: '#9edcff', abstractedkaufmo: '#050505', abstractedjax: '#050505', abstractedribbit: '#050505', abstractedqueeniedark: '#101018', abstractedqueenie: '#050505', cellarabstraction: '#030303', aquaticabstraction: '#02020a', ragatha: '#d64545', pomni: '#e53935', gummigoo: '#d8a23a', kinger: '#d9d0a2', workgangle: '#f7f7f7', sun: '#ffd33d', zooble: '#ff4fb8' };
+    const colors = { caine: '#ffd84a', bubble: '#f7f7ff', gloinkstar: '#7348ff', moon: '#9edcff', abstractedkaufmo: '#050505', abstractedjax: '#050505', abstractedribbit: '#050505', abstractedqueeniedark: '#101018', abstractedqueenie: '#050505', cellarabstraction: '#030303', aquaticabstraction: '#02020a', ragatha: '#d64545', pomni: '#e53935', gummigoo: '#d8a23a', kinger: '#d9d0a2', workgangle: '#f7f7f7', sun: '#ffd33d', zooble: '#ff4fb8', ghostly: '#7dffd8', baronmildenhall: '#7b8dff', horrorpomnivoid: '#ff8a24' };
     const avatars = event.avatars?.length ? event.avatars : [event.avatar];
     return avatars.map((avatar, index) => ({
       name: avatar.charAt(0).toUpperCase() + avatar.slice(1),
@@ -3844,13 +3960,57 @@ const OS = {
   },
 
   getCircusFpsZoneMax() {
-    return 148;
+    return 152;
   },
 
   getCircusCanonRoomDefinitions() {
     if (this.circusCanonRoomDefinitions) return this.circusCanonRoomDefinitions;
     const scan = (title, kinds, talkAvatar = null) => ({ title, kinds, talkAvatar });
     const rooms = {
+      9: {
+        name: 'MILDENHALL WINE CELLAR', short: 'CAVE A VIN',
+        detail: 'Cave a vin atteinte par le monte-plat: corps du Baron, fusil a deux cartouches, troisieme bande, tete montee et derniere bande avant la chute.',
+        color: '#7c88a1', floor: '#0d1018', ceiling: '#03040a', motif: 'basement', size: 13,
+        gateEpisode: 3, gateSubepisode: 4, provenance: 'shown', exits: [89, 34],
+        props: [
+          { kind: 'stairs', x: 0, z: -4.2, color: '#34313a', label: 'Descente depuis le monte-plat' },
+          { kind: 'barrel', x: -2.25, z: -2.4, color: '#5d3924', label: 'Barils de la cave' },
+          { kind: 'barrel', x: 2.15, z: -2.75, color: '#5d3924', label: 'Barils de la cave' },
+          { kind: 'archive', campaignTarget: 'tape03', x: -1.35, z: -1.35, color: '#7df0ff', label: 'Enregistrement Mildenhall 03' },
+          { kind: 'card', campaignTarget: 'shotgun', portable: true, x: 0.2, z: -1.55, color: '#9b7a4f', label: 'Fusil du Baron - deux cartouches' },
+          { kind: 'lorebillboard', campaignTarget: 'mountedhead', avatar: 'angel', x: 1.75, z: -3.65, color: '#e5d7d7', sizeScale: 1.15, label: 'Tete montee qui repond', loreText: 'Le trophee parle brièvement avant les deux manifestations.' },
+          { kind: 'target', campaignTarget: 'angelmanifestation', x: -1.65, z: -3.4, color: '#f7f7f7', label: 'Premiere manifestation de l Angel' },
+          { kind: 'target', campaignTarget: 'angelmanifestation', x: 1.55, z: -4.35, color: '#f7f7f7', label: 'Seconde manifestation de l Angel' },
+          { kind: 'archive', campaignTarget: 'tapefinal', x: 0, z: -2.65, color: '#ffcf75', label: 'Derniere bande du Baron' },
+          { kind: 'doorframe', x: 0, z: -5.4, color: '#5a3a34', label: 'Rupture vers l Enfer' }
+        ],
+        sprites: [
+          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -0.9, z: -2.1, color: '#d9d0a2' },
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 0.85, z: -2.35, color: '#ffb32c' },
+          { name: 'Baron Mildenhall', type: 'npc', avatar: 'baronmildenhall', x: 2.1, z: -1.65, color: '#7b8dff', silent: true, silentText: 'Le corps du Baron reste un element de scene; seul son enregistrement fournit une voix.' }
+        ],
+        objective: scan('DESCENDRE AU SOUS-SOL', ['archive', 'card', 'lorebillboard'], 'kinger')
+      },
+      34: {
+        name: 'MILDENHALL HELL', short: 'ENFER',
+        detail: 'Premiere chambre infernale sous le manoir, avant le couloir de brouillard ou Pomni est possedee.',
+        color: '#ff4d32', floor: '#240707', ceiling: '#080000', motif: 'hell', size: 25,
+        gateEpisode: 3, gateSubepisode: 5, provenance: 'shown', exits: [9, 150],
+        props: [
+          { kind: 'wave', campaignTarget: 'hellfog', x: 0, z: -4.15, color: '#6f777b', label: 'Brouillard froid du hall des damnes' },
+          { kind: 'eye', x: -1.8, z: -3.1, color: '#77f5da', label: 'Ames Mildenhall en attente' },
+          { kind: 'eye', x: 1.8, z: -3.35, color: '#77f5da', label: 'Ames Mildenhall en attente' },
+          { kind: 'candle', x: -2.35, z: -1.9, color: '#ffd878', label: 'Lueur fragile gauche' },
+          { kind: 'candle', x: 2.35, z: -1.9, color: '#ffd878', label: 'Lueur fragile droite' },
+          { kind: 'doorframe', x: 0, z: -6.2, color: '#5a3a34', label: 'Passage vers le brouillard des ames' }
+        ],
+        sprites: [
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -1.1, z: -2.35, color: '#e53935' },
+          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: 0.7, z: -2.55, color: '#d9d0a2' },
+          { name: 'Mildenhall Souls', type: 'ghost', avatar: 'mildenhallsouls', x: 0.05, z: -3.15, color: '#77f5da', sizeScale: 0.82 }
+        ],
+        objective: scan('CONTENIR LES AMES', ['wave', 'eye', 'candle'], 'kinger')
+      },
       76: {
         name: 'DR. FOOTBALL BATHROOM', short: 'DR FOOTBALL',
         detail: 'Sanitaires trouves derriere une porte aleatoire du chapiteau, avec Dr. Football dans la baignoire.',
@@ -4021,8 +4181,11 @@ const OS = {
           { kind: 'wallart', anchor: 'wall-left', x: -1.48, z: -0.6, color: '#7c88a1', art: 'blocks' }
         ],
         sprites: [
-          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -0.8, z: -2.15, color: '#e53935' },
-          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: 0.9, z: -2.2, color: '#d9d0a2' }
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -1.75, z: -2.15, color: '#e53935' },
+          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -0.65, z: -2.45, color: '#d9d0a2' },
+          { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: 0.55, z: -2.35, color: '#d64545' },
+          { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: 1.55, z: -2.65, color: '#f7f7f7' },
+          { name: 'Jax', type: 'jax', avatar: 'jax', x: 2.45, z: -1.85, color: '#8a4fd6' }
         ],
         objective: scan('IDENTIFIER LES DEUX BRANCHES', ['doorframe', 'candle'], 'pomni')
       },
@@ -4043,15 +4206,14 @@ const OS = {
         name: 'MILDENHALL TROPHY ROOM', short: 'TROPHEES',
         detail: 'Salle aux tetes deformees de membres du Cirque, avec l Angel au-dessus de la cheminee.',
         color: '#312231', floor: '#281b21', ceiling: '#09050b', motif: 'manor', size: 17,
-        gateEpisode: 3, gateSubepisode: 3, provenance: 'shown', exits: [87, 89],
+        gateEpisode: 3, gateSubepisode: 3, provenance: 'shown', exits: [87, 149],
         props: [
           { kind: 'counter', x: 0, z: -3.35, color: '#5b3228', label: 'Cheminee de la salle des trophees' },
           { kind: 'lorebillboard', campaignTarget: 'angelhead', avatar: 'angel', label: 'Tete de l Angel', x: 0, z: -4.0, color: '#e5d7d7', sizeScale: 1.35, loreText: 'La tete reagit au bruit et declenche la poursuite; elle ne parle pas.' },
           { kind: 'wallart', anchor: 'wall-left', x: -1.48, z: -1.4, color: '#d64545', art: 'spiral', label: 'Trophees deformes gauche' },
           { kind: 'wallart', anchor: 'wall-right', x: 1.48, z: -1.4, color: '#8a4fd6', art: 'blocks', label: 'Trophees deformes droite' },
-          { kind: 'archive', campaignTarget: 'tape', x: -2.35, z: -1.25, color: '#7df0ff', label: 'Enregistrement Mildenhall 01' },
-          { kind: 'archive', campaignTarget: 'tape', x: 2.25, z: -1.25, color: '#7df0ff', label: 'Enregistrement Mildenhall 02' },
-          { kind: 'gridnode', x: 0, z: -1.2, color: '#34313a', label: 'Circuit d eclairage coupe' }
+          { kind: 'archive', campaignTarget: 'tape01', x: -2.35, z: -1.25, color: '#7df0ff', label: 'Enregistrement Mildenhall 01' },
+          { kind: 'doorframe', x: 2.25, z: -1.3, color: '#4b404b', label: 'Porte condamnee par un mur de briques' }
         ],
         sprites: [
           { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -0.9, z: -2.15, color: '#e53935' },
@@ -4064,7 +4226,7 @@ const OS = {
         name: 'MILDENHALL DUMBWAITER SHAFT', short: 'MONTE-PLAT',
         detail: 'Etroit monte-plat de la salle des trophees, seul passage vers la cave a vin.',
         color: '#65556b', floor: '#171219', ceiling: '#030307', motif: 'basement', size: 9,
-        gateEpisode: 3, gateSubepisode: 4, provenance: 'shown', exits: [88, 9],
+        gateEpisode: 3, gateSubepisode: 4, provenance: 'shown', exits: [149, 9],
         props: [
           { kind: 'doorframe', campaignTarget: 'dumbwaiter', x: 0, z: -2.4, color: '#7c88a1', label: 'Porte de la cabine du monte-plat' },
           { kind: 'platform', x: 0, z: -1.65, color: '#4d4a58', label: 'Plateforme mobile du monte-plat' },
@@ -4735,7 +4897,9 @@ const OS = {
           { kind: 'card', x: 0.75, z: -1.35, color: '#f7f1e8', label: 'Tasse de the droite' },
           { kind: 'foldingchair', x: -2.1, z: -2.0, color: '#6f4c38', label: 'Chaise de Ragatha' },
           { kind: 'foldingchair', x: 2.1, z: -2.0, color: '#6f4c38', label: 'Chaise de Gangle' },
-          { kind: 'wallart', anchor: 'wall', x: 0, z: -3.7, color: '#d8d2bd', art: 'cross', label: 'Croix murale du salon' }
+          { kind: 'wallart', anchor: 'wall', x: 0, z: -3.7, color: '#d8d2bd', art: 'cross', label: 'Croix murale du salon' },
+          { kind: 'memory', campaignTarget: 'tiedjax', x: 2.55, z: -2.75, color: '#8a4fd6', label: 'Cordes retenant Jax' },
+          { kind: 'memory', campaignTarget: 'forgottenmask', x: -2.6, z: -1.25, color: '#f7f7f7', label: 'Absence du masque de comedie de Gangle' }
         ],
         sprites: [
           { name: 'Martha Mildenhall', type: 'ghost', avatar: 'marthamildenhall', x: 0, z: -3.25, color: '#7df0ff' },
@@ -4749,16 +4913,16 @@ const OS = {
         name: 'MILDENHALL HELL EXIT STAIR', short: 'ESCALIER ENFER',
         detail: 'Large escalier de fuite hors de la branche infernale, atteint apres la possession et l exercice de respiration.',
         color: '#5a3a34', floor: '#24100d', ceiling: '#070303', motif: 'hell', size: 19,
-        gateEpisode: 3, gateSubepisode: 6, provenance: 'shown', layer: 'present', exits: [34, 125],
+        gateEpisode: 3, gateSubepisode: 6, provenance: 'shown', layer: 'present', exits: [151, 125],
         props: [
-          { kind: 'stairs', x: 0, z: -4.2, color: '#73534a', label: 'Escalier final hors de l Enfer' },
+          { kind: 'stairs', campaignTarget: 'exitstairs', x: 0, z: -4.2, color: '#73534a', label: 'Escalier final hors de l Enfer' },
           { kind: 'candle', x: -2.3, z: -2.5, color: '#ffd878', label: 'Repere de respiration gauche' },
           { kind: 'candle', x: 2.3, z: -2.5, color: '#ffd878', label: 'Repere de respiration droit' },
           { kind: 'gridnode', x: 0, z: -1.35, color: '#7df0ff', label: 'Rythme de respiration de Kinger' }
         ],
         sprites: [
           { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -0.85, z: -2.55, color: '#d9d0a2' },
-          { name: 'Pomni possedee', type: 'pomni', avatar: 'pomni', x: 0.85, z: -2.75, color: '#e53935' }
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 0.85, z: -2.75, color: '#e53935' }
         ],
         objective: scan('TENIR LA RESPIRATION JUSQU A LA SORTIE', ['stairs', 'gridnode'], 'kinger')
       },
@@ -5165,6 +5329,92 @@ const OS = {
           { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: 2.15, z: -2.8, color: '#d9d0a2', silent: true, silentText: 'Kinger se recueille sans dialogue audible.' }
         ],
         objective: scan('RELEVER LE MEMORIAL DE KAUFMO', ['coffin', 'lorebillboard'])
+      },
+      149: {
+        name: 'MILDENHALL EVIDENCE ROOM', short: 'SALLE PREUVES',
+        detail: 'Piece distincte des trophees avec affiches de disparus, photos de famille, seconde bande, cle et acces verrouille au monte-plat.',
+        color: '#493947', floor: '#2d2025', ceiling: '#0b070c', motif: 'manor', size: 17,
+        gateEpisode: 3, gateSubepisode: 3, provenance: 'shown', exits: [88, 89],
+        props: [
+          { kind: 'wallart', campaignTarget: 'evidence', anchor: 'wall-left', x: -1.48, z: -1.35, color: '#d8c9a6', art: 'blocks', label: 'Affiche de personne disparue A' },
+          { kind: 'wallart', campaignTarget: 'evidence', anchor: 'wall-left', x: -1.48, z: -3.05, color: '#c7b990', art: 'blocks', label: 'Affiche de personne disparue B' },
+          { kind: 'wallart', campaignTarget: 'evidence', anchor: 'wall-right', x: 1.48, z: -1.45, color: '#7b5b4d', art: 'cross', label: 'Photographie de la famille Mildenhall A' },
+          { kind: 'wallart', campaignTarget: 'evidence', anchor: 'wall-right', x: 1.48, z: -3.15, color: '#6a4a43', art: 'blocks', label: 'Photographie de la famille Mildenhall B' },
+          { kind: 'archive', campaignTarget: 'tape02', x: -1.8, z: -2.25, color: '#7df0ff', label: 'Enregistrement Mildenhall 02' },
+          { kind: 'card', campaignTarget: 'dumbwaiterkey', x: 1.25, z: -1.4, color: '#d8c46b', label: 'Cle du monte-plat' },
+          { kind: 'gridnode', campaignTarget: 'powercut', x: 0, z: -3.35, color: '#34313a', label: 'Circuit d eclairage du manoir' },
+          { kind: 'console', x: 2.4, z: -2.45, color: '#65556b', label: 'Serrure du monte-plat' },
+          { kind: 'archive', x: 0, z: -1.25, color: '#5f473a', label: 'Dossiers de chasse de Theodore' }
+        ],
+        sprites: [
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -0.9, z: -2.45, color: '#e53935' },
+          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: 0.9, z: -2.6, color: '#d9d0a2' }
+        ],
+        objective: scan('RECUEILLIR LES PREUVES ET LA CLE', ['wallart', 'archive', 'card'], 'kinger')
+      },
+      150: {
+        name: 'MILDENHALL SOUL FOG CORRIDOR', short: 'BROUILLARD AMES',
+        detail: 'Couloir infernal noye de brouillard et traverse par de petites silhouettes d ames; Kinger y lance son oeil pour reperer l escalier.',
+        color: '#3d1618', floor: '#190707', ceiling: '#020102', motif: 'hell', size: 25,
+        gateEpisode: 3, gateSubepisode: 6, provenance: 'shown', exits: [34, 151],
+        props: [
+          { kind: 'wave', x: -2.8, z: -3.8, color: '#6f777b', label: 'Brouillard froid gauche' },
+          { kind: 'wave', x: 0, z: -5.2, color: '#858b8d', label: 'Brouillard dense du corridor' },
+          { kind: 'wave', x: 2.8, z: -4.1, color: '#6f777b', label: 'Brouillard froid droit' },
+          { kind: 'eye', campaignTarget: 'kingereye', x: -0.75, z: -2.25, color: '#f7f7f7', label: 'Oeil gauche lance par Kinger' },
+          { kind: 'stairs', campaignTarget: 'hellstairs', x: 0, z: -7.2, color: '#5a3a34', label: 'Escalier revele au-dela du brouillard' },
+          { kind: 'gridnode', x: -2.1, z: -5.8, color: '#77f5da', label: 'Petites silhouettes d ames' },
+          { kind: 'gridnode', x: 2.2, z: -6.2, color: '#77f5da', label: 'Ames cherchant un corps' },
+          { kind: 'partition', x: 0, z: -7.8, width: 6.4, depth: 0.2, height: 4.6, color: '#1a0708', label: 'Paroi infernale derriere l escalier' }
+        ],
+        sprites: [
+          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -1.0, z: -2.55, color: '#d9d0a2', campaignGate: { episode: 3, minStage: 12, maxStage: 13 } },
+          { name: 'Pomni possedee', type: 'pomni', avatar: 'horrorpomnivoid', x: 0.95, z: -3.0, color: '#ff8a24', campaignGate: { episode: 3, minStage: 12, maxStage: 12 } },
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 0.95, z: -2.8, color: '#e53935', campaignGate: { episode: 3, minStage: 13, maxStage: 13 } },
+          { name: 'Mildenhall Souls', type: 'ghost', avatar: 'mildenhallsouls', x: 0, z: -5.4, color: '#77f5da', sizeScale: 0.82, campaignGate: { episode: 3, minStage: 12, maxStage: 12 } }
+        ],
+        objective: scan('REPERER L ESCALIER SANS OFFRIR DE CORPS', ['wave', 'eye', 'stairs'], 'kinger')
+      },
+      151: {
+        name: 'MILDENHALL DARK REST CHAMBER', short: 'REPOS SOMBRE',
+        detail: 'Renfoncement obscur ou Pomni reprend son souffle et ou Kinger raconte le souvenir de Queenie avant leur derniere traversee.',
+        color: '#17121a', floor: '#09070b', ceiling: '#010102', motif: 'memory', size: 15,
+        gateEpisode: 3, gateSubepisode: 7, provenance: 'shown', exits: [150, 126],
+        props: [
+          { kind: 'platform', campaignTarget: 'darkalcove', x: 0, z: -3.15, color: '#242027', label: 'Sol bas de l alcove de repos' },
+          { kind: 'partition', x: -2.6, z: -3.5, width: 0.2, depth: 3.8, height: 3.5, color: '#0e0b10', label: 'Paroi sombre gauche' },
+          { kind: 'partition', x: 2.6, z: -3.5, width: 0.2, depth: 3.8, height: 3.5, color: '#0e0b10', label: 'Paroi sombre droite' },
+          { kind: 'memory', x: -1.45, z: -1.4, color: '#d9d0a2', label: 'Souvenir de Queenie et du fort' },
+          { kind: 'memory', x: 1.4, z: -1.45, color: '#7df0ff', label: 'Bon souvenir conserve par Pomni' }
+        ],
+        sprites: [
+          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -0.85, z: -2.55, color: '#d9d0a2', campaignGate: { episode: 3, minStage: 13, maxStage: 15 } },
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 0.85, z: -2.75, color: '#e53935', campaignGate: { episode: 3, minStage: 13, maxStage: 15 } }
+        ],
+        objective: scan('FAIRE UNE PAUSE DANS L OBSCURITE', ['platform', 'memory'], 'kinger')
+      },
+      152: {
+        name: 'CAINE AND ZOOBLE THERAPY SET', short: 'THERAPIE',
+        detail: 'Plateau temporaire cree par Caine pour parler avec Zooble pendant l aventure; il ne constitue pas une piece persistante du manoir.',
+        color: '#7aa890', floor: '#c8b397', ceiling: '#e1d6c4', motif: 'common', size: 15,
+        gateEpisode: 3, gateSubepisode: 3, provenance: 'shown', layer: 'cut', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'sofa', x: 1.45, z: -2.75, width: 2.5, depth: 1.05, height: 1.2, color: '#6b8f79', label: 'Canape de la therapie' },
+          { kind: 'foldingchair', x: -1.5, z: -2.35, color: '#8b5a3c', label: 'Fauteuil de Caine' },
+          { kind: 'table', x: 0, z: -1.45, color: '#77583f', label: 'Table basse de la therapie' },
+          { kind: 'wallart', campaignTarget: 'beedrawing', anchor: 'wall', x: 0, z: -3.65, color: '#ffd84a', art: 'blocks', label: 'Abeille dessinee par Caine' },
+          { kind: 'card', campaignTarget: 'inkblot', x: -1.5, z: -1.25, color: '#f7f7f7', label: 'Test de tache d encre A' },
+          { kind: 'card', campaignTarget: 'inkblot', x: 0, z: -1.15, color: '#f7f7f7', label: 'Test de tache d encre B' },
+          { kind: 'card', campaignTarget: 'inkblot', x: 1.5, z: -1.25, color: '#f7f7f7', label: 'Test de tache d encre C' },
+          { kind: 'gridnode', campaignTarget: 'caineglitch', x: 0, z: -3.2, color: '#e53935', label: 'Instabilite du plateau quand Caine doute' },
+          { kind: 'card', campaignTarget: 'therapynotes', x: 2.4, z: -1.55, color: '#7df0ff', label: 'Carnet de notes de Zooble' },
+          { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'panel', x: 0, z: -1.5, color: '#fff1a8', label: 'Eclairage du plateau temporaire' }
+        ],
+        sprites: [
+          { name: 'Caine', type: 'caine', avatar: 'caine', x: -1.1, z: -2.4, color: '#ffd84a' },
+          { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 1.05, z: -2.65, color: '#ff4fb8' }
+        ],
+        objective: scan('SUIVRE LA THERAPIE SANS LA PHYSICALISER', ['sofa', 'wallart', 'card'], 'zooble')
       }
     };
     this.circusCanonRoomDefinitions = rooms;
@@ -6911,6 +7161,14 @@ const OS = {
         146: "Pomni: Ces theieres geantes sont au-dessus de la couche de test. Le royaume est quelque part plus loin.",
         147: "Pomni: Ce Cellar fait partie du cauchemar. Je ne suis pas physiquement descendue ici.",
         8: "Pomni: Le manoir force les souvenirs a remonter. Je prefere rester pres de Kinger.",
+        88: "Pomni: Cette salle garde les trophees et la premiere bande. Je ne veux pas toucher a la tete.",
+        149: "Pomni: Les preuves sont ici. La cle du monte-plat aussi, avant que le courant coupe.",
+        9: "Pomni: La cave est trop etroite pour pretendre que tout va bien.",
+        34: "Pomni: Les ames nous ont tirees hors du manoir. Je n aime pas ce que ce lieu veut faire de moi.",
+        150: "Pomni: Le brouillard me rentre dans la tete. Kinger, ne me lache pas.",
+        151: "Pomni: L obscurite est moins effrayante quand Kinger se souvient pour nous deux.",
+        126: "Pomni: Ne respire pas. Traverse seulement jusqu a l escalier.",
+        125: "Pomni: Le salon normal est revenu, mais le masque de Gangle n est plus avec nous.",
         10: "Pomni: Les commandes vont trop vite. Gangle tient a peine le rythme.",
         14: "Pomni: Le lac fait semblant d'etre calme. Caine fait toujours semblant.",
         40: "Pomni: Le coffre est vide. Les poissons gardent surtout une histoire deja terminee.",
@@ -6934,6 +7192,7 @@ const OS = {
         15: "Caine: Une Chinese Room parfaitement litterale, sans aucun rapport avec mes dossiers administratifs!",
         16: "Caine: Mon bureau personnel contient exactement le niveau de mystere necessaire a cette aventure!",
         18: "Caine: Le spectacle continue tant que le systeme peut encore sourire.",
+        152: "Caine: Bienvenue a la therapie! Ou peut-etre que je suis le patient maintenant. Details mineurs!",
         67: "Caine: Un balcon royal parfaitement adapte aux besoins panoramiques de l aventure!",
         69: "Caine: La lanterne domine le lac et rend chaque sortie de toboggan infiniment plus spectaculaire!",
         71: "Caine: Neige, balises et froid simule: une micro-aventure parfaitement compacte!",
@@ -6950,6 +7209,8 @@ const OS = {
       },
       jax: {
         2: "Jax: Si une porte est verrouillee, c'est probablement la seule interessante.",
+        86: "Jax: Normal ou vraiment effrayante? Je peux rendre ce choix beaucoup moins ennuyeux.",
+        125: "Jax: Super. Attache au salon pendant que les autres font la route dramatique.",
         14: "Jax: Version chasseur, meme probleme: Caine appelle ca des vacances.",
         44: "Jax: Les photos restent ici. Le doorbell, lui, n a rien d une invitation.",
         95: "Jax: Rouge. On ne va pas attendre que ce faux choix se prenne pour un dilemme.",
@@ -6965,6 +7226,7 @@ const OS = {
       },
       ragatha: {
         2: "Ragatha: Avance doucement. Les salles changent moins vite si on garde un repere.",
+        125: "Ragatha: Martha sert le the ici. On reste poli et on attend que Caine nous rappelle.",
         45: "Ragatha: Tu es reveillee. On peut rejoindre les autres quand tu es prete.",
         133: "Ragatha: Restons dans le carrosse jusqu au pont-levis. Le groupe doit arriver ensemble.",
         141: "Ragatha: The Fudge est devant nous et Pomni manque encore. On garde la riviere comme repere.",
@@ -6980,6 +7242,13 @@ const OS = {
       kinger: {
         2: "Kinger: Les murs ont une memoire. Les portes aussi, malheureusement.",
         8: "Kinger: Les pieces sombres protegent parfois mieux les souvenirs.",
+        88: "Kinger: La tete au-dessus de la cheminee veut qu on l entende, pas qu on la comprenne.",
+        149: "Kinger: Les affiches, les photos et la seconde bande sont dans cette piece, pas dans les trophees.",
+        9: "Kinger: Le Baron a laisse deux tirs et beaucoup trop de consequences.",
+        34: "Kinger: Respire lentement. Les ames ne suivent pas toujours les memes regles que le decor.",
+        150: "Kinger: Je peux lancer mon oeil dans le brouillard. S il revient, il aura vu les marches.",
+        151: "Kinger: Dans le noir, les bons souvenirs tiennent mieux que les murs.",
+        126: "Kinger: Retenir sa respiration nous donne juste assez de temps pour atteindre l escalier.",
         17: "Kinger: Ce buffer n'est pas un puzzle. C'est une cicatrice rangee par le systeme.",
         64: "Kinger: Plus on monte, plus les souvenirs du manoir cherchent une piece ou se ranger.",
         65: "Kinger: Le grenier n est pas confirme, mais la peur qui s y accroche ressemble bien au manoir.",
@@ -6987,12 +7256,15 @@ const OS = {
       },
       gangle: {
         2: "Gangle: Tant que mon masque tient, je peux te dire quelle porte a l'air moins terrible.",
+        86: "Gangle: Mon masque de comedie ne devrait pas passer cette porte.",
+        125: "Gangle: Je n ai plus mon masque de comedie. Je crois qu il est reste de l autre cote.",
         10: "Gangle: Spudsy transforme tout en service client, meme la panique.",
         14: "Gangle: La plage est jolie, mais mon signal n'aime pas le soleil.",
         115: "Gangle: Ces masques me regardent comme si chacun connaissait la bonne facon de sourire."
       },
       zooble: {
         2: "Zooble: Caine appelle ca immersion. Moi j'appelle ca etre enferme avec style.",
+        152: "Zooble: Je ne veux pas d une autre aventure. Je veux que ce corps arrete d etre une blague.",
         11: "Zooble: Les micro-aventures sont juste des problemes plus courts.",
         18: "Zooble: Si ce monde s'effondre, je veux au moins choisir ma posture.",
         110: "Zooble: J ai demande un bar parce que je savais en tenir un. Caine a quand meme reussi a le transformer en spectacle.",
@@ -7029,14 +7301,16 @@ const OS = {
         141: "The Fudge: Le bassin de chocolat est son territoire avant son entree dans la capitale."
       },
       baronmildenhall: {
-        8: "Baron Mildenhall: Les enregistrements du manoir veulent que tu regardes le trophée, mais pas toute la vérité.",
-        9: "Baron Mildenhall: Le sous-sol transforme la chasse en piege."
+        88: "Baron Theodore Mildenhall: Les enregistrements commencent ici, avec les trophees et la tete de l Angel.",
+        149: "Baron Theodore Mildenhall: La seconde bande, les preuves et la cle appartiennent a cette salle separee.",
+        9: "Baron Theodore Mildenhall: Le sous-sol transforme la chasse en piege."
       },
       marthamildenhall: {
-        125: "Martha Mildenhall: La route normale vous ramene tous dans ce salon. Le the peut attendre le rappel de Caine."
+        125: "Martha Mildenhall: La route normale garde le the, Ragatha, Gangle et Jax loin de la cave."
       },
       ghostly: {
-        85: "Ghostly: Le vestibule est le seul endroit ou mon signal rejoint directement le groupe."
+        85: "Ghostly: Je suis votre guide aujourd hui. Avant de continuer, il faut choisir une porte.",
+        86: "Ghostly: La porte de gauche est normale. Celle de droite est vraiment effrayante."
       },
       horrorghost: {
         8: "Fantome: La lumiere ne chasse pas la peur. Elle la nomme."
@@ -7045,6 +7319,7 @@ const OS = {
         8: "Mildenhall Monster: Le manoir grossit ce que Pomni et Kinger refusent de regarder."
       },
       horrorpomnivoid: {
+        150: "Possessed Pomni: Freedom.",
         8: "Possessed Pomni: Ce n'est qu'un etat de peur temporaire. Pomni n'est pas devenue ca."
       },
       horrorpomniskull: {
@@ -7124,7 +7399,7 @@ const OS = {
         16: "CainOS // ARCHIVE: Blue AI a ete developpee par C&A pour remplacer Caine, puis absorbee par lui avant leur separation dans Remember."
       },
       bonepastor: {
-        8: "CainOS // EASTER EGG: The Bone Pastor est visible dans Mildenhall Manor; aucun dialogue canonique n est attribue a cette apparition."
+        16: "CainOS // HORS TIMELINE: The Bone Pastor reste une archive de production, pas un PNJ canonique de Mildenhall."
       },
       fourthcrocodile: {
         16: "CainOS // ARCHIVE EP8: crocodile jaune quadrupede invoque pendant la sequence de tourment; son identite exacte n est pas confirmee."
@@ -7181,7 +7456,8 @@ const OS = {
       },
       mildenhallsouls: {
         9: "CainOS // OBSERVATION: Ames de Mildenhall detectees comme phenomene spectral, sans dialogue individuel indexe.",
-        34: "CainOS // OBSERVATION: Signal d ames lie a la possession et a l exorcisme du manoir."
+        34: "CainOS // OBSERVATION: Signal d ames lie a la chute vers l Enfer du manoir.",
+        150: "CainOS // OBSERVATION: Les ames se concentrent autour de Pomni avant l exorcisme."
       },
       albertspudsy: {
         10: "CainOS // VISUEL: Albert Spudsy detecte comme image de marque/decoupe, pas comme PNJ actif.",
@@ -7598,7 +7874,15 @@ const OS = {
       72: { title: 'SORTIE DE SERVICE', steps: [{ action: 'look', kind: 'building', count: 1, label: 'Identifier la sortie Spudsy' }, { action: 'use', kind: 'spotlight', count: 1, label: 'Couper les phares du parking' }] },
       73: { title: 'POSTE DE SCRATCH', steps: [{ action: 'look', kind: 'desk', count: 1, label: 'Examiner le poste de travail' }, { action: 'use', kind: 'console', count: 1, label: 'Lire le vieux PC C&A' }, { action: 'look', kind: 'memory', count: 1, label: 'Comparer les scans cerebraux' }] },
       74: { title: 'FOYER DE LA PSYCHE', steps: [{ action: 'look', kind: 'doorframe', count: 5, label: 'Identifier les cinq portes' }, { action: 'use', kind: 'archive', count: 1, label: 'Ouvrir l index des scenarios' }] },
-      75: { title: 'GROUNDS ETENDUS', steps: [{ action: 'look', kind: 'tower', count: 1, label: 'Relever le grand toboggan' }, { action: 'use', kind: 'ring', count: 2, label: 'Synchroniser deux ilots' }] }
+      75: { title: 'GROUNDS ETENDUS', steps: [{ action: 'look', kind: 'tower', count: 1, label: 'Relever le grand toboggan' }, { action: 'use', kind: 'ring', count: 2, label: 'Synchroniser deux ilots' }] },
+      85: { title: 'GUIDE GHOSTLY', steps: [{ action: 'look', kind: 'stairs', count: 1, label: 'Repere le vestibule' }, { action: 'look', kind: 'ghostvacuum', count: 1, label: 'Identifier l aspirateur de Jax' }, { action: 'talk', kind: 'ghostly', count: 1, label: 'Ecouter Ghostly' }] },
+      86: { title: 'CHOIX DES PORTES', steps: [{ action: 'look', kind: 'doorframe', count: 2, label: 'Comparer les deux portes' }, { action: 'talk', kind: 'jax', count: 1, label: 'Surveiller Jax' }, { action: 'talk', kind: 'gangle', count: 1, label: 'Confirmer le masque' }] },
+      88: { title: 'TROPHEES MILDENHALL', steps: [{ action: 'look', kind: 'archive', count: 1, label: 'Lire la premiere bande' }, { action: 'look', kind: 'lorebillboard', count: 1, label: 'Observer la tete de l Angel' }, { action: 'survive', kind: 'lorebillboard', count: 4, label: 'Rester silencieux pendant la poursuite' }] },
+      89: { title: 'MONTE-PLAT', steps: [{ action: 'use', kind: 'doorframe', count: 1, label: 'Ouvrir la cabine' }, { action: 'look', kind: 'platform', count: 1, label: 'Verifier la descente' }] },
+      149: { title: 'PREUVES MILDENHALL', steps: [{ action: 'look', kind: 'wallart', count: 4, label: 'Indexer les preuves murales' }, { action: 'look', kind: 'archive', count: 1, label: 'Lire la seconde bande' }, { action: 'use', kind: 'card', count: 1, label: 'Valider la cle du monte-plat' }, { action: 'use', kind: 'console', count: 1, label: 'Subir la coupure de courant' }] },
+      150: { title: 'BROUILLARD DES AMES', steps: [{ action: 'use', kind: 'eye', count: 1, label: 'Lancer l oeil de Kinger' }, { action: 'look', kind: 'stairs', count: 1, label: 'Reveler l escalier' }, { action: 'survive', kind: 'wave', count: 4, label: 'Resister a la possession de Pomni' }] },
+      151: { title: 'REPOS DANS LE NOIR', steps: [{ action: 'talk', kind: 'kinger', count: 1, label: 'Ecouter Kinger' }, { action: 'talk', kind: 'pomni', count: 1, label: 'Repondre dans le noir' }, { action: 'look', kind: 'memory', count: 1, label: 'Garder le bon souvenir' }] },
+      152: { title: 'THERAPIE CAINE / ZOOBLE', steps: [{ action: 'talk', kind: 'zooble', count: 1, label: 'Ecouter Zooble' }, { action: 'look', kind: 'memory', count: 1, label: 'Verifier le dessin abeille' }, { action: 'use', kind: 'card', count: 3, label: 'Classer les tests inkblot' }, { action: 'look', kind: 'console', count: 1, label: 'Observer le glitch de Caine' }] }
       ,
       138: { title: 'POURSUITE CANDY', steps: [{ action: 'look', kind: 'candy', count: 2, label: 'Lire les deux voies' }, { action: 'use', kind: 'truck', count: 1, label: 'Prendre le controle du rig' }, { action: 'drive', kind: 'truck', count: 4, label: 'Eviter quatre sequences d obstacles' }] }
     };
@@ -9311,11 +9595,23 @@ const OS = {
         { id: 'fudge_shift', label: 'FUDGE MOVE', detail: 'EVENT: The Fudge bouge dans le decor candy.', color: '#7a3d1a' }
       ],
       8: [
-        { id: 'manor_flicker', label: 'BOUGIES', detail: 'EVENT: les bougies du manoir rendent la peur visible.', color: '#b7f0ff' },
-        { id: 'ghost_pass', label: 'GHOST PASS', detail: 'EVENT: apparition spectrale en bord de scene.', color: '#7df0ff' },
-        { id: 'ghost_vacuum', label: 'GHOSTLY VACUUM', detail: 'EVENT: l aspirateur attire les traces spectrales vers son embout.', color: '#77f5da' },
-        { id: 'possession_exorcism', label: 'EXORCISM', detail: 'EVENT: le signal de possession quitte Pomni sous forme de volutes.', color: '#ff4d32' },
-        { id: 'mildenhall_fly', label: 'MOUCHE', detail: 'AMBIANCE: une mouche bourdonne dans le manoir, comme pendant la fuite de Pomni et Kinger.', color: '#fff1a8' }
+        { id: 'manor_flicker', label: 'BOUGIES', detail: 'EVENT: les bougies de la facade rendent la peur visible.', color: '#b7f0ff' },
+        { id: 'ghost_pass', label: 'GHOST PASS', detail: 'EVENT: apparition spectrale avant le vestibule.', color: '#7df0ff' }
+      ],
+      85: [
+        { id: 'ghost_vacuum', label: 'GHOSTLY VACUUM', detail: 'EVENT: l aspirateur de Jax attire Ghostly hors du briefing.', color: '#77f5da' }
+      ],
+      86: [
+        { id: 'door_choice', label: 'NORMAL / SCARY', detail: 'EVENT: les deux portes attendent le choix de Ghostly.', color: '#b7f0ff' },
+        { id: 'mask_throw', label: 'MASQUE', detail: 'EVENT: le masque de comedie de Gangle glisse vers la mauvaise branche.', color: '#f7f7f7' }
+      ],
+      88: [
+        { id: 'trophy_stare', label: 'TROPHEES', detail: 'EVENT: les tetes de trophees accrochent la lumiere de la cheminee.', color: '#b7f0ff' },
+        { id: 'mildenhall_fly', label: 'MOUCHE', detail: 'AMBIANCE: une mouche bourdonne avant la poursuite de l Angel.', color: '#fff1a8' }
+      ],
+      149: [
+        { id: 'evidence_powercut', label: 'POWER CUT', detail: 'EVENT: les preuves restent visibles une seconde avant la coupure.', color: '#7df0ff' },
+        { id: 'tape_static', label: 'TAPE 02', detail: 'EVENT: la seconde bande parasite les photos et affiches du Baron.', color: '#d8c46b' }
       ],
       10: [
         { id: 'ticket_rush', label: 'TICKET RUSH', detail: 'EVENT: Spudsy imprime trop de commandes.', color: '#ff4d4d' },
@@ -9380,7 +9676,16 @@ const OS = {
       40: [{ id: 'bubble_trail', label: 'BUBBLE TRAIL', detail: 'EVENT: des bulles remontent autour du coffre sous-marin deja pille.', color: '#4ee7ff' }],
       41: [{ id: 'memory_rain', label: 'MEMORY RAIN', detail: 'EVENT: le souvenir incomplet de Jax perd encore quelques details.', color: '#8fa6ba' }],
       42: [{ id: 'carnival_lights', label: 'CARNIVAL', detail: 'EVENT: les attractions visibles du terrain allument leurs enseignes.', color: '#ff4fb8' }],
-      43: [{ id: 'dinner_bell', label: 'DINNER BELL', detail: 'EVENT: la table commune signale le prochain repas du groupe.', color: '#fff1a8' }]
+      43: [{ id: 'dinner_bell', label: 'DINNER BELL', detail: 'EVENT: la table commune signale le prochain repas du groupe.', color: '#fff1a8' }],
+      150: [
+        { id: 'soul_fog', label: 'SOUL FOG', detail: 'EVENT: le brouillard des ames cache l escalier jusqu au lancer de l oeil.', color: '#77f5da' },
+        { id: 'possession_exorcism', label: 'EXORCISM', detail: 'EVENT: le signal de possession quitte Pomni sous forme de volutes.', color: '#ff4d32' }
+      ],
+      151: [{ id: 'dark_rest', label: 'DARK REST', detail: 'EVENT: l obscurite stabilise la memoire de Kinger et Pomni.', color: '#5d5b75' }],
+      152: [
+        { id: 'therapy_glitch', label: 'THERAPY GLITCH', detail: 'EVENT: Caine perd le controle de la seance et la piece coupe comme une archive.', color: '#ffd84a' },
+        { id: 'inkblot_shift', label: 'INK BLOT', detail: 'EVENT: les tests de taches changent pendant que Zooble parle de son corps.', color: '#f7f7ff' }
+      ]
     };
     const zoneEvents = events[zoneId];
     if (!zoneEvents?.length) return null;
@@ -10477,7 +10782,8 @@ const OS = {
         { kind: 'card', x: -2.75, z: -1.25, color: '#ffd84a', label: 'Trousseau de cles de Jax', portable: true },
         { kind: 'memory', x: 2.65, z: -1.35, color: '#d61f2c', label: 'Masque de comedie brise de Gangle' },
         { kind: 'card', campaignTarget: 'gunbrief', campaignGate: { episode: 6, minStage: 1, maxStage: 1 }, x: -1.35, z: -1.15, color: '#f6d743', label: 'Briefing They All Get Guns' },
-        { kind: 'projector', campaignTarget: 'projector', campaignGate: { episode: 9, minStage: 14, maxStage: 14 }, x: 0, z: -3.55, color: '#fff1a8', label: 'Projecteur des profils humains' }
+        { kind: 'projector', campaignTarget: 'projector', campaignGate: { episode: 9, minStage: 14, maxStage: 14 }, x: 0, z: -3.55, color: '#fff1a8', label: 'Projecteur des profils humains' },
+        { kind: 'bed', campaignTarget: 'kingerfort', campaignGate: { episode: 3, minStage: 18, maxStage: 18 }, x: 2.5, z: -3.1, width: 2.5, depth: 1.2, height: 1.15, color: '#5c4b82', accent: '#d9d0a2', label: 'Fort de coussins rejoint par Kinger' }
       ],
       3: [
         { kind: 'table', campaignTarget: 'picnic', campaignGate: { episode: 5, minStage: 4, maxStage: 4 }, x: 0, z: -2.45, color: '#d64545', label: 'Couverture et panier du pique-nique nocturne' }
@@ -10494,17 +10800,14 @@ const OS = {
         { kind: 'console', x: -2.15, z: -1.35, color: '#9cff6d', label: 'Rack de modeles PNJ' },
         { kind: 'memory', x: 2.1, z: -1.25, color: '#7df0ff', label: 'Theiere Utah de test' }
       ],
-      8: [
-        { kind: 'archive', x: -2.75, z: -1.3, color: '#7df0ff', label: 'Enregistrement de Theodore Mildenhall' },
-        { kind: 'console', x: 2.65, z: -1.35, color: '#c8f7ff', label: 'Aspirateur de Ghostly' },
-        { kind: 'target', x: 0.85, z: -1.2, color: '#5b3d28', label: 'Fusil de Kinger', portable: true }
-      ],
+      8: [],
       9: [
-        { kind: 'archive', campaignTarget: 'tape', x: -2.6, z: -1.35, color: '#7df0ff', label: 'Enregistrement Mildenhall 03' },
-        { kind: 'archive', campaignTarget: 'tape', x: 2.6, z: -1.35, color: '#7df0ff', label: 'Enregistrement Mildenhall final' },
+        { kind: 'archive', campaignTarget: 'tape03', x: -2.6, z: -1.35, color: '#7df0ff', label: 'Enregistrement Mildenhall 03' },
+        { kind: 'archive', campaignTarget: 'tapefinal', x: 2.6, z: -1.35, color: '#7df0ff', label: 'Enregistrement Mildenhall final' },
         { kind: 'target', campaignTarget: 'shotgun', x: -1.2, z: -1.25, color: '#5b3d28', label: 'Fusil du Baron / deux cartouches', portable: true },
         { kind: 'target', campaignTarget: 'angelmanifestation', x: -2.1, z: -2.5, color: '#e5d7d7', label: 'Manifestation corporelle pres du tuyau' },
-        { kind: 'target', campaignTarget: 'angelmanifestation', x: 2.1, z: -2.8, color: '#e5d7d7', label: 'Manifestation de la tete au puits' }
+        { kind: 'target', campaignTarget: 'angelmanifestation', x: 2.1, z: -2.8, color: '#e5d7d7', label: 'Manifestation de la tete au puits' },
+        { kind: 'wallart', campaignTarget: 'mountedhead', anchor: 'wall-right', x: 1.48, z: -3.7, color: '#d2b58f', art: 'blocks', label: 'Tete de creature montee qui repond a Pomni' }
       ],
       10: [
         { kind: 'card', x: -1.75, z: -1.15, color: '#ff4d4d', label: 'Tickets de commande Spudsy' },
@@ -10557,6 +10860,9 @@ const OS = {
         { kind: 'window', campaignTarget: 'aquariumwindow', campaignGate: { episode: 6, minStage: 5, maxStage: 5 }, x: 0, z: -3.15, color: '#63d9ff', label: 'Aquarium du Loser Corner' }
       ],
       31: [],
+      34: [
+        { kind: 'wave', campaignTarget: 'hellfog', campaignGate: { episode: 3, minStage: 10, maxStage: 10 }, x: 0, z: -4.15, color: '#6f777b', label: 'Brouillard froid du hall des damnes' }
+      ],
       35: [
         { kind: 'barrel', x: -2.55, z: -1.2, color: '#c49a45', label: 'Friteuse Spudsy' },
         { kind: 'card', x: 0.55, z: -1.15, color: '#ff4d4d', label: 'Pile de tickets cuisine' }

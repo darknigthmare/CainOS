@@ -319,7 +319,7 @@ if (duplicateIds.length) failures.push(`ID HTML DUPLIQUES: ${duplicateIds.join('
 if (!/campaigns\.length\s*!==\s*9/.test(app)) failures.push('Audit 9 campagnes absent');
 const zoneMaxMatch = app.match(/getCircusFpsZoneMax\(\)\s*\{\s*return\s+(\d+)\s*;/);
 const fpsZoneMax = zoneMaxMatch ? Number(zoneMaxMatch[1]) : Number.NaN;
-const minimumFpsZoneMax = 148;
+const minimumFpsZoneMax = 152;
 if (!Number.isInteger(fpsZoneMax) || fpsZoneMax < minimumFpsZoneMax) {
   failures.push(`Borne FPS ${Number.isFinite(fpsZoneMax) ? fpsZoneMax : 'introuvable'}/${minimumFpsZoneMax} minimum`);
 }
@@ -381,6 +381,28 @@ for (const marker of [
 }
 if (!/2:\s*\{\s*title:\s*'Candy Carrier Chaos!',\s*version:\s*2,\s*steps:\s*\[/.test(app)) {
   failures.push('Campagne FPS EP2 versionnee absente');
+}
+for (const marker of [
+  "name: 'MILDENHALL EVIDENCE ROOM'",
+  "name: 'MILDENHALL SOUL FOG CORRIDOR'",
+  "name: 'MILDENHALL DARK REST CHAMBER'",
+  "name: 'CAINE AND ZOOBLE THERAPY SET'",
+  "campaignTarget: 'tape01'",
+  "campaignTarget: 'tape02'",
+  "campaignTarget: 'evidence'",
+  "campaignTarget: 'dumbwaiterkey'",
+  "campaignTarget: 'powercut'",
+  "campaignTarget: 'kingereye'",
+  "campaignTarget: 'hellstairs'",
+  "campaignTarget: 'darkalcove'",
+  "campaignTarget: 'beedrawing'",
+  "campaignTarget: 'inkblot'",
+  "campaignTarget: 'caineglitch'"
+]) {
+  if (!app.includes(marker)) failures.push(`Passe FPS EP3 absente: ${marker}`);
+}
+if (!/3:\s*\{\s*title:\s*'The Mystery Of Mildenhall Manor',\s*version:\s*2,\s*steps:\s*\[/.test(app)) {
+  failures.push('Campagne FPS EP3 versionnee absente');
 }
 if (!app.includes("name: 'UNTITLED BAR'")) failures.push('Bar canonique de Untitled absent');
 for (const marker of ['RAGATHA TORMENT', 'GANGLE TORMENT', 'ZOOBLE TORMENT', 'JAX TORMENT', 'POMNI TORMENT']) {
