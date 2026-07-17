@@ -7171,6 +7171,7 @@ const EpisodeManager = {
     const storySpeedBtn = document.getElementById('btn-story-speed');
     const storyMenuBtn = document.getElementById('btn-story-menu');
     const storyMicroBtn = document.getElementById('btn-story-micro-action');
+    const storyMicroAbortBtn = document.getElementById('btn-story-micro-abort');
 
     if (storyNextBtn) {
       storyNextBtn.addEventListener('click', () => {
@@ -7268,6 +7269,13 @@ const EpisodeManager = {
         if (this.activeStoryMicroGame) {
           this.activeStoryMicroGame.start();
         }
+      });
+    }
+
+    if (storyMicroAbortBtn) {
+      storyMicroAbortBtn.addEventListener('click', () => {
+        SoundManager.playClick();
+        this.returnFromStoryMicroGame();
       });
     }
 
@@ -8740,7 +8748,6 @@ class StoryMicroGame {
     this.handleClick = this.handleClick.bind(this);
     this.handleMouseMove = this.handleMouseMove.bind(this);
     this.handleKeyDown = this.handleKeyDown.bind(this);
-    this.handleAbort = this.handleAbort.bind(this);
   }
 
   prepare() {
@@ -8755,7 +8762,9 @@ class StoryMicroGame {
     this.objectiveEl.innerText = this.getPhaseObjective();
     this.actionBtn.disabled = false;
     this.actionBtn.innerText = "INITIALISER";
-    if (this.abortBtn) this.abortBtn.disabled = false;
+    if (this.abortBtn) {
+      this.abortBtn.disabled = false;
+    }
     this.resetState();
     this.drawIdle();
   }
@@ -8788,7 +8797,6 @@ class StoryMicroGame {
     this.canvas.addEventListener('click', this.handleClick);
     this.canvas.addEventListener('mousemove', this.handleMouseMove);
     window.addEventListener('keydown', this.handleKeyDown);
-    if (this.abortBtn) this.abortBtn.addEventListener('click', this.handleAbort);
 
     this.seedPhaseState();
 
@@ -8803,16 +8811,8 @@ class StoryMicroGame {
       this.canvas.removeEventListener('click', this.handleClick);
       this.canvas.removeEventListener('mousemove', this.handleMouseMove);
       window.removeEventListener('keydown', this.handleKeyDown);
-      if (this.abortBtn) this.abortBtn.removeEventListener('click', this.handleAbort);
     }
     this.running = false;
-  }
-
-  handleAbort() {
-    this.stop();
-    if (typeof EpisodeManager !== 'undefined' && typeof EpisodeManager.returnFromStoryMicroGame === 'function') {
-      EpisodeManager.returnFromStoryMicroGame();
-    }
   }
 
   registerProgress() {

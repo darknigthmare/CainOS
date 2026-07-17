@@ -1674,7 +1674,7 @@ const OS = {
       40: { name: 'SUNKEN TREASURE', short: 'TRESOR', detail: 'Fond du lac, coffre deja pille et poissons gardiens peu convaincants.', color: '#4ee7ff', floor: '#0a596b', ceiling: '#06202f', unlocked: unlockedAt(7, 2) },
       41: { name: 'C&A STREET MEMORY', short: 'RUE C&A', detail: 'Rue rememoree par Jax; souvenir incomplet, pas une sortie fonctionnelle.', color: '#8fa6ba', floor: '#30343a', ceiling: '#101820', unlocked: unlockedAt(7, 4) },
       42: { name: 'DIGITAL CARNIVAL OVERLOOK', short: 'FETE', detail: 'Fete foraine visible depuis le terrain mais jamais visitee dans la serie.', color: '#ff4fb8', floor: '#315f2d', ceiling: '#5f8ee8', unlocked: unlockedAt(1, 0) },
-      43: { name: 'TENT DINING AREA', short: 'REPAS', detail: 'Table du niveau principal utilisee pour les repas du groupe.', color: '#ffd84a', floor: '#c43a35', ceiling: '#311340', unlocked: unlockedAt(1, 0) },
+      43: { name: 'PILOT DIGITAL FEAST / TENT', short: 'FESTIN', detail: 'Longue table blanche du banquet final, installee dans le chapiteau avec les six residents et Bubble en chef.', color: '#ffd84a', floor: '#e06f24', ceiling: '#24112f', unlocked: unlockedAt(1, 6) },
       50: { name: 'DORM HALL / NPC ANNEX WEST', short: 'ANNEXE O.', detail: 'Couloir lateral de chambres de mannequins PNJ. Les anciens membres restent dans le couloir central, conformement au plan montre.', color: '#bb6a75', floor: '#4a1727', ceiling: '#25101d', unlocked: unlockedAt(1, 0) },
       51: { name: 'DORM HALL / NPC ANNEX EAST', short: 'ANNEXE E.', detail: 'Second couloir lateral de chambres de mannequins PNJ, sans porte attribuee aux anciens humains nommes.', color: '#a85e70', floor: '#431523', ceiling: '#210e1a', unlocked: unlockedAt(1, 0) },
       64: { name: 'MILDENHALL UPPER HALL / RECONSTRUCTION', short: 'MANOR II', detail: 'Etage praticable reconstruit par CainOS depuis les volumes visibles du manoir; son plan exact n est pas canonique.', color: '#a9c9db', floor: '#211a2c', ceiling: '#050816', unlocked: unlockedAt(3, 1) },
@@ -1732,7 +1732,7 @@ const OS = {
       40: { exits: [14], motif: 'underwater', size: 17 },
       41: { exits: [94], motif: 'street', size: 17 },
       42: { exits: [3], motif: 'carnival', size: 19 },
-      43: { exits: [2, 28, 21], motif: 'dining', size: 15 },
+      43: { exits: [2, 28], motif: 'circus', size: 19 },
       50: { exits: [20], motif: 'dormannex', size: 21 },
       51: { exits: [20], motif: 'dormannex', size: 21 },
       64: { exits: [8, 65], motif: 'manor', size: 15 },
@@ -1841,6 +1841,7 @@ const OS = {
       campaigns: persistentWorld.campaigns,
       activeCampaign: persistentWorld.activeCampaign,
       zonePositions: persistentWorld.zonePositions,
+      zonePositionRevisions: persistentWorld.zonePositionRevisions,
       doorStates: new Map(persistentWorld.doorStates),
       npcMemories: new Map(persistentWorld.npcMemories),
       dynamicEventState: persistentWorld.dynamicEvents,
@@ -2359,6 +2360,9 @@ const OS = {
       verb: ['use', 'look', 'take', 'give'].includes(stored.verb) ? stored.verb : 'use',
       currentZoneId: Number.isFinite(stored.currentZoneId) ? stored.currentZoneId : 2,
       zonePositions: stored.zonePositions && typeof stored.zonePositions === 'object' ? stored.zonePositions : {},
+      zonePositionRevisions: stored.zonePositionRevisions && typeof stored.zonePositionRevisions === 'object'
+        ? stored.zonePositionRevisions
+        : {},
       doorStates: Array.isArray(stored.doorStates) ? stored.doorStates : [],
       npcMemories: Array.isArray(stored.npcMemories) ? stored.npcMemories : [],
       dynamicEvents: stored.dynamicEvents && typeof stored.dynamicEvents === 'object' ? stored.dynamicEvents : {},
@@ -2390,6 +2394,7 @@ const OS = {
       verb: state.interactionVerb || 'use',
       currentZoneId: state.currentZoneId,
       zonePositions: state.zonePositions || {},
+      zonePositionRevisions: state.zonePositionRevisions || {},
       doorStates: [...(state.doorStates || new Map()).entries()],
       npcMemories: [...(state.npcMemories || new Map()).entries()],
       dynamicEvents: state.dynamicEventState || {},
@@ -2445,8 +2450,29 @@ const OS = {
     state.zonePositions[id] = { x: state.player.x, z: state.player.z, a: state.player.a };
   },
 
+  getCircusAuthoredSpawn(zoneId) {
+    const state = this.circusDoom;
+    const center = state?.room?.center;
+    if (!center) return null;
+    const authored = {
+      43: { x: center.x, z: center.z + 2.35, a: -Math.PI / 2, revision: 1 },
+      120: { x: center.x, z: center.z + 2.0, a: -Math.PI / 2, revision: 1 }
+    };
+    return authored[zoneId] || null;
+  },
+
   restoreCircusZonePosition(zoneId) {
     const state = this.circusDoom;
+    const authored = this.getCircusAuthoredSpawn(zoneId);
+    const storedRevision = Number(state?.zonePositionRevisions?.[zoneId] || 0);
+    if (state && authored && storedRevision < authored.revision && this.canMoveInCircusRoom(authored.x, authored.z)) {
+      state.player.x = authored.x;
+      state.player.z = authored.z;
+      state.player.a = authored.a;
+      state.zonePositionRevisions[zoneId] = authored.revision;
+      state.zonePositions[zoneId] = { x: authored.x, z: authored.z, a: authored.a };
+      return true;
+    }
     const saved = state?.zonePositions?.[zoneId];
     if (!state || !saved || !Number.isFinite(saved.x) || !Number.isFinite(saved.z)) return false;
     if (!this.canMoveInCircusRoom(saved.x, saved.z)) return false;
@@ -2458,30 +2484,45 @@ const OS = {
 
   getCircusFpsCampaignDefinition(episode = 1) {
     const pilotStages = [
-        { title: 'Arrivee du sujet sans nom', zone: 2, guide: 'Rejoignez Caine et Ragatha sur la piste.', requirements: [
-          { action: 'talk', target: 'caine', count: 1 }, { action: 'talk', target: 'ragatha', count: 1 }, { action: 'look', target: 'ring', count: 1 }
-        ] },
-        { title: 'Regles du Cirque', zone: 2, guide: 'Ecoutez Caine puis calibrez la piste et ses projecteurs.', requirements: [
-          { action: 'talk', target: 'caine', count: 1 }, { action: 'use', target: 'spotlight', count: 2 }, { action: 'look', target: 'ring', count: 1 }
-        ] },
-        { title: 'Tour, Vide et fausse sortie', zone: 3, guide: 'Suivez le tour vers le terrain, le Vide et le labyrinthe de sortie.', requirements: [
-          { action: 'visit', target: '3', count: 1 }, { action: 'visit', target: '27', count: 1 }, { action: 'visit', target: '5', count: 1 }
-        ] },
-        { title: 'Le nom Pomni', zone: 2, guide: 'Revenez sur la piste pour assister a l attribution du nom.', requirements: [
-          { action: 'visit', target: '2', count: 1 }, { action: 'talk', target: 'caine', count: 1 }, { action: 'talk', target: 'pomni', count: 1 }
-        ] },
-        { title: 'Aventure Gloink', zone: 31, guide: 'Traversez le portail, recuperez une piece de Zooble et identifiez le nid.', requirements: [
-          { action: 'visit', target: '31', count: 1 }, { action: 'look', target: 'gloinknest', count: 1 }, { action: 'take', target: 'zooblepart', count: 1 }, { action: 'talk', target: 'gloinkqueenscale', count: 1 }
-        ] },
-        { title: 'Chambre de Kaufmo', zone: 52, guide: 'Suivez Pomni et Ragatha jusqu a la chambre, puis relevez les signes de son abstraction.', requirements: [
-          { action: 'visit', target: '52', count: 1 }, { action: 'look', target: 'graffiti', count: 2 }, { action: 'use', target: 'crt', count: 1 }
-        ] },
-        { title: 'Fausse sortie et bureaux C&A', zone: 97, guide: 'Ouvrez la porte EXIT rouge, traversez les cubicles puis revenez au chapiteau.', requirements: [
-          { action: 'visit', target: '5', count: 1 }, { action: 'visit', target: '97', count: 1 }, { action: 'look', target: 'desk', count: 1 }, { action: 'use', target: 'console', count: 1 }, { action: 'visit', target: '2', count: 1 }
-        ] },
-        { title: 'Secours et fermeture du PILOT', zone: 2, guide: 'Rendez la piece a Zooble, constatez la restauration de Ragatha puis observez le Cellar via CainOS.', requirements: [
-          { action: 'talk', target: 'ragatha', count: 1 }, { action: 'talk', target: 'zooble', count: 1 }, { action: 'give', target: 'zooblepart', count: 1 }, { action: 'visit', target: '4', count: 1 }
-        ] }
+      { title: 'Arrivee, regles et nom Pomni', zone: 2, guide: 'Rejoignez Caine sur la piste, calibrez la presentation et assistez a l attribution du nom Pomni.', requirements: [
+        { action: 'talk', target: 'caine', count: 1 }, { action: 'talk', target: 'pomni', count: 1 },
+        { action: 'look', target: 'ring', count: 1 }, { action: 'use', target: 'spotlight', count: 2 }
+      ] },
+      { title: 'Tour du Cirque et porte EXIT', zone: 3, guide: 'Suivez le tour des Grounds, observez la fete foraine sans y entrer et relevez la porte rouge instable avant de revenir sur la piste.', requirements: [
+        { action: 'visit', target: '3', count: 1 }, { action: 'look', target: 'tent', count: 1 },
+        { action: 'look', target: 'pilotexitdoor', count: 1 }, { action: 'visit', target: '42', count: 1 },
+        { action: 'visit', target: '2', count: 1 }
+      ] },
+      { title: 'Couloir des chambres et Kaufmo', zone: 52, guide: 'Apres la capture de Zooble, suivez la branche Pomni-Ragatha jusqu au couloir residentiel et relevez la chambre ravagee de Kaufmo.', requirements: [
+        { action: 'visit', target: '20', count: 1 }, { action: 'visit', target: '52', count: 1 },
+        { action: 'look', target: 'graffiti', count: 2 }, { action: 'use', target: 'crt', count: 1 }
+      ] },
+      { title: 'The Nest et sauvetage de Zooble', zone: 31, guide: 'Reconstituez en parallele la branche Jax-Kinger-Gangle, identifiez la Gloink Queen et recuperez une piece de Zooble.', requirements: [
+        { action: 'visit', target: '31', count: 1 }, { action: 'look', target: 'gloinknest', count: 1 },
+        { action: 'take', target: 'zooblepart', count: 1 }, { action: 'talk', target: 'gloinkqueenscale', count: 1 }
+      ] },
+      { title: 'Recherche de Caine porte apres porte', zone: 29, guide: 'Depuis la galerie interne, traversez les cinq salles aleatoires effectivement montrees pendant la fuite de Pomni.', requirements: [
+        { action: 'visit', target: '29', count: 1 }, { action: 'look', target: 'doorframe', count: 3 },
+        { action: 'visit', target: '76', count: 1 }, { action: 'visit', target: '77', count: 1 },
+        { action: 'visit', target: '78', count: 1 }, { action: 'visit', target: '79', count: 1 },
+        { action: 'visit', target: '80', count: 1 }
+      ] },
+      { title: 'Fausse sortie, bureaux C&A et Vide', zone: 97, guide: 'Entrez par la porte EXIT, traversez chaque volume de bureau dans l ordre puis franchissez le hall inacheve vers le Vide.', requirements: [
+        { action: 'visit', target: '5', count: 1 }, { action: 'visit', target: '97', count: 1 },
+        { action: 'look', target: 'desk', count: 1 }, { action: 'use', target: 'console', count: 1 },
+        { action: 'visit', target: '98', count: 1 }, { action: 'visit', target: '99', count: 1 },
+        { action: 'visit', target: '100', count: 1 }, { action: 'visit', target: '27', count: 1 }
+      ] },
+      { title: 'Pendant le Vide: WackyWatch et Cellar', zone: 120, guide: 'Reconstituez le plan parallele de Caine et Bubble au restaurant, declenchez l alerte du Vide, puis revenez au chapiteau pour observer le depot de Kaufmo dans le Cellar.', requirements: [
+        { action: 'visit', target: '120', count: 1 }, { action: 'look', target: 'wackywatch', count: 1 },
+        { action: 'talk', target: 'caine', count: 1 }, { action: 'visit', target: '2', count: 1 },
+        { action: 'visit', target: '4', count: 1 }
+      ] },
+      { title: 'Restauration, reassemblage et festin', zone: 43, guide: 'Rendez la piece a Zooble, constatez la restauration de Ragatha puis rejoignez le festin prepare par Bubble dans le chapiteau.', requirements: [
+        { action: 'visit', target: '2', count: 1 }, { action: 'give', target: 'zooblepart', count: 1 },
+        { action: 'visit', target: '43', count: 1 }, { action: 'look', target: 'banquettable', count: 1 },
+        { action: 'look', target: 'feastplatter', count: 2 }, { action: 'talk', target: 'bubble', count: 1 }
+      ] }
     ];
     if (episode === 1) return {
       episode: 1,
@@ -2777,12 +2818,20 @@ const OS = {
       12: [{ id: 'softball-pitch', speaker: 'Caine', text: 'Batteur en place! Frappez uniquement quand le curseur traverse la zone verte!', avatar: 'caine', duration: 4600 }],
       14: [{ id: 'sun-warning', speaker: 'Sun', text: 'Le soleil digital augmente la visibilite. Les parasols deviennent des zones sures.', avatar: 'sun', duration: 4700 }],
       31: [{ id: 'gloink-theft', speaker: 'Zooble', text: 'Ils ont encore pris une piece. Recupere-la avant d approcher la reine.', avatar: 'zooble', duration: 5200 }],
+      43: [
+        { id: 'bubble-feast', speaker: 'Bubble', text: "Made with all the love I'm legally allowed to give.", avatar: 'bubble', duration: 5000 },
+        { id: 'pomni-feast-silence', speaker: 'CainOS', channel: 'system', text: 'PILOT / FESTIN: Pomni reste silencieuse au centre de la table pendant que la camera s eloigne.', duration: 5200 }
+      ],
       70: [{ id: 'shrimp-town-trace', speaker: 'Shrimp NPC', text: 'Shrimp Town existe bien dans les donnees, mais cette rue est une reconstruction partielle de CainOS.', avatar: 'shrimpnpc', duration: 5200 }],
       71: [{ id: 'tundra-briefing', speaker: 'Caine', text: 'Une toundra enneigee! Gardez le groupe visible avant que la micro-aventure ne change encore de decor!', avatar: 'caine', duration: 5000 }],
       72: [{ id: 'parking-impact', speaker: 'Gangle', text: 'Le service est termine. Reste pres du trottoir et ne traverse pas devant les phares.', avatar: 'workgangle', duration: 5200 }],
       73: [{ id: 'scanner-room', speaker: 'CainOS', channel: 'system', text: 'ARCHIVE C&A: poste Scratch, casque obsolete et scans cerebraux inutilises detectes.', avatar: 'unusedbrainscans', duration: 5600 }],
       74: [{ id: 'jax-psyche', speaker: 'Pomni', text: 'Ces figures sont des facettes de Jax. Elles ne sont pas des residents separes.', avatar: 'pomni', duration: 5400 }],
       75: [{ id: 'expanded-grounds', speaker: 'Caine', text: 'Les Grounds ont grandi! Ilots, biomes, ponts et toboggan: davantage d espace pour de futures aventures!', avatar: 'caine', duration: 5400 }]
+      ,120: [
+        { id: 'wackywatch-alert', speaker: 'Caine', text: 'An alert on my WackyWatch at this hour? ...Oh no! Someone is venturing out into The Void!', avatar: 'caine', duration: 6200, danger: true },
+        { id: 'restaurant-mannequins', speaker: 'CainOS', channel: 'system', text: 'PILOT / RESTAURANT: Caine et Bubble sont entoures de mannequins en bois silencieux.', duration: 5000 }
+      ]
     };
     return events[zoneId] || [];
   },
@@ -3125,7 +3174,7 @@ const OS = {
   },
 
   getCircusFpsZoneMax() {
-    return 119;
+    return 120;
   },
 
   getCircusCanonRoomDefinitions() {
@@ -3527,6 +3576,35 @@ const OS = {
           { kind: 'archive', x: 0, z: -1.25, color: '#c875ff', label: 'Limite de la fausse sortie' }
         ],
         sprites: [], objective: scan('SUIVRE LE HALL JUSQU AU VIDE', ['doorframe', 'exitframe'])
+      },
+      120: {
+        name: 'PILOT MANNEQUIN RESTAURANT', short: 'RESTO PILOT',
+        detail: 'Restaurant clair ou Caine et Bubble rient parmi des mannequins en bois avant que le WackyWatch ne signale Pomni dans le Vide.',
+        color: '#eadfca', floor: '#eee5d1', ceiling: '#fffaf0', motif: 'pilotrestaurant', size: 17,
+        gateEpisode: 1, gateSubepisode: 6, provenance: 'shown', exits: [2],
+        props: [
+          { kind: 'window', style: 'restaurant', anchor: 'wall-left', wallSurface: 'outer', x: 0, z: -2.7, color: '#9edcf0', label: 'Grande fenetre arquee gauche' },
+          { kind: 'window', style: 'restaurant', anchor: 'wall-right', wallSurface: 'outer', x: 0, z: -2.7, color: '#9edcf0', label: 'Grande fenetre arquee droite' },
+          { kind: 'window', style: 'restaurant', anchor: 'wall', x: 0, z: -4.2, color: '#b9e8f5', label: 'Fenetre arquee du fond' },
+          { kind: 'pillar', x: -3.15, z: -3.7, color: '#e5d5ba', label: 'Colonne claire gauche' },
+          { kind: 'pillar', x: 3.15, z: -3.7, color: '#e5d5ba', label: 'Colonne claire droite' },
+          { kind: 'table', x: -2.15, z: -2.2, width: 1.35, depth: 0.9, color: '#f5f1e6', label: 'Table des mannequins gauche' },
+          { kind: 'table', x: 0, z: -3.15, width: 1.5, depth: 0.95, color: '#f5f1e6', label: 'Table de Caine et Bubble' },
+          { kind: 'table', x: 2.15, z: -2.2, width: 1.35, depth: 0.9, color: '#f5f1e6', label: 'Table des mannequins droite' },
+          { kind: 'plant', x: -3.35, z: -1.35, color: '#4f8a48', label: 'Plante du restaurant' },
+          { kind: 'plant', x: 3.35, z: -1.35, color: '#4f8a48', label: 'Seconde plante du restaurant' },
+          { kind: 'wackywatch', campaignTarget: 'wackywatch', x: -0.55, z: -2.45, elevation: 0.78, color: '#7df0ff', label: 'Alerte WackyWatch / signal du Vide' },
+          { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'chandelier', x: 0, z: -1.0, color: '#fff1c2', label: 'Lustre du restaurant' }
+        ],
+        sprites: [
+          { name: 'Caine', type: 'caine', avatar: 'caine', x: -0.75, z: -2.8, color: '#ffd84a' },
+          { name: 'Bubble', type: 'bubble', avatar: 'bubble', x: 0.75, z: -2.65, color: '#f7f7ff', silent: true, silentText: 'Bubble rit avec Caine; aucun dialogue distinct ne lui est attribue dans cette scene du PILOT.' },
+          { name: 'Restaurant Mannequin A', type: 'mannequin', avatar: 'mannequin', x: -2.65, z: -2.0, color: '#b98c62', sizeScale: 0.82, silent: true },
+          { name: 'Restaurant Mannequin B', type: 'mannequin', avatar: 'mannequin', x: -1.75, z: -3.3, color: '#c69a70', sizeScale: 0.76, silent: true },
+          { name: 'Restaurant Mannequin C', type: 'mannequin', avatar: 'mannequin', x: 1.75, z: -3.3, color: '#b98c62', sizeScale: 0.76, silent: true },
+          { name: 'Restaurant Mannequin D', type: 'mannequin', avatar: 'mannequin', x: 2.65, z: -2.0, color: '#c69a70', sizeScale: 0.82, silent: true }
+        ],
+        objective: scan('DECLENCHER L ALERTE DU VIDE', ['window', 'table', 'wackywatch'], 'caine')
       },
       101: {
         name: 'JAX PSYCHE / CROSSED RAGATHA DORM', short: 'SCENARIO I',
@@ -4235,9 +4313,10 @@ const OS = {
       state.player.a = Math.atan2(entryDoor.inwardZ, entryDoor.inwardX);
       state.selectedExitIndex = entryDoor.index;
     } else {
-      state.player.x = center.x;
-      state.player.z = startZ + 0.35;
-      state.player.a = -Math.PI / 2;
+      const authoredSpawn = this.getCircusAuthoredSpawn(state.currentZoneId);
+      state.player.x = authoredSpawn?.x ?? center.x;
+      state.player.z = authoredSpawn?.z ?? (startZ + 0.35);
+      state.player.a = authoredSpawn?.a ?? (-Math.PI / 2);
     }
     state.hotspots = [];
     state.interactionMessage = '';
@@ -4382,7 +4461,7 @@ const OS = {
     const talk = (avatar, label) => ({ type: 'talk', avatar, label });
     const objectives = {
       2: { title: 'RECALER LA PISTE', steps: [scan('ring', 'Inspecter la piste centrale'), activate('spotlight', 'Activer deux projecteurs', 2), talk('caine', 'Interroger Caine')] },
-      3: { title: 'CARTOGRAPHIER LE TERRAIN', steps: [scan('tent', 'Examiner le chapiteau exterieur'), scan('tower', 'Reperer la tour et son toboggan'), scan('building', 'Localiser le carnaval'), talk('sun', 'Observer le Soleil')] },
+      3: { title: 'SUIVRE LE TOUR DU PILOTE', steps: [scan('tent', 'Examiner le chapiteau exterieur'), scan('tower', 'Reperer la tour et son toboggan'), scan('building', 'Localiser le carnaval'), scan('pilotexitdoor', 'Relever la porte EXIT instable'), talk('sun', 'Observer le Soleil')] },
       4: { title: 'OBSERVER LE CELLAR', steps: [scan('cellaropening', 'Identifier l ouverture de Caine'), scan('eye', 'Relever deux silhouettes abstraites', 2), talk('abstractedkaufmo', 'Observer Kaufmo sans inventer de dialogue')] },
       5: { title: 'TESTER LA FAUSSE SORTIE', steps: [scan('pilotexitdoor', 'Examiner la porte EXIT rouge'), talk('pomni', 'Parler des portes avec Pomni')] },
       6: { title: 'SECURISER LE CONVOI', steps: [scan('truck', 'Verifier le camion-citerne'), scan('candy', 'Relever deux obstacles bonbon', 2), talk('gummigoo', 'Coordonner Gummigoo')] },
@@ -4422,7 +4501,7 @@ const OS = {
       40: { title: 'RETROUVER LE COFFRE', steps: [activate('archive', 'Ouvrir le coffre deja pille'), scan('wave', 'Analyser deux courants', 2), talk('beachgangle', 'Parler a Gangle')] },
       41: { title: 'FIXER LE SOUVENIR C&A', steps: [scan('doorframe', 'Verifier la porte du souvenir'), scan('desk', 'Inspecter le mobilier efface'), talk('jax', 'Ecouter Jax')] },
       42: { title: 'RELEVER LA FETE FORAINE', steps: [scan('ring', 'Verifier deux attractions', 2), scan('pillar', 'Identifier le repere central'), talk('caine', 'Questionner Caine')] },
-      43: { title: 'PREPARER LE REPAS', steps: [scan('table', 'Verifier trois tables', 3), activate('menu', 'Lire le menu du repas'), talk('kinger', 'Rejoindre Kinger')] },
+      43: { title: 'RECONSTITUER LE FESTIN DU PILOTE', steps: [scan('banquettable', 'Examiner la longue table blanche'), scan('feastplatter', 'Verifier quatre plats digitaux', 4), talk('bubble', 'Rejoindre le Bubble Chef')] },
       50: { title: 'INDEXER L ANNEXE OUEST', steps: [activate('archive', 'Ouvrir le registre de l annexe'), scan('ceilinglight', 'Verifier le balisage du couloir')] },
       51: { title: 'INDEXER L ANNEXE EST', steps: [activate('archive', 'Ouvrir le registre de l annexe'), scan('ceilinglight', 'Verifier le balisage du couloir')] },
       64: { title: 'MONTER DANS LE MANOIR', steps: [scan('window', 'Verifier les fenetres hautes'), activate('candle', 'Maintenir une bougie'), scan('stairs', 'Trouver le grenier')] },
@@ -4638,9 +4717,20 @@ const OS = {
     const avatar = sprite.avatar || sprite.type;
     const item = state.heldItem;
     const campaign = this.getActiveCircusCampaignStatus();
-    if (item.campaignTarget === 'zooblepart' && campaign?.progress.stage < 6) {
-      state.interactionMessage = 'PIECE DE ZOOBLE: gardez-la jusqu au secours dans le cellar. La donner maintenant casserait la sequence du Pilot.';
+    const campaignExpectsItem = campaign?.requirements?.some(requirement => (
+      requirement.action === 'give' && requirement.target === item.campaignTarget
+    ));
+    if (item.campaignTarget === 'zooblepart' && !campaignExpectsItem) {
+      state.interactionMessage = 'PIECE DE ZOOBLE: gardez-la jusqu au reassemblage qui suit le retour de Caine. La donner maintenant casserait la sequence du PILOT.';
       state.interactionUntil = performance.now() + 4200;
+      state.interactionChannel = 'system';
+      state.interactionSpeaker = 'CAINOS';
+      SoundManager.playError();
+      return;
+    }
+    if (item.campaignTarget === 'zooblepart' && avatar !== 'zooble') {
+      state.interactionMessage = `PIECE DE ZOOBLE: ${sprite.name} n en est pas le destinataire. Rendez-la a Zooble.`;
+      state.interactionUntil = performance.now() + 3600;
       state.interactionChannel = 'system';
       state.interactionSpeaker = 'CAINOS';
       SoundManager.playError();
@@ -4648,7 +4738,10 @@ const OS = {
     }
     state.givenProps.add(item.id);
     state.heldItem = null;
-    state.interactionMessage = `${sprite.name}: Je garde ${item.name}. CainOS enregistrera que tu as choisi de me le confier.`;
+    const line = item.campaignTarget === 'zooblepart'
+      ? 'Zooble recupere la piece volee par les Gloinks et termine son reassemblage.'
+      : `${sprite.name}: Je garde ${item.name}. CainOS enregistrera que tu as choisi de me le confier.`;
+    state.interactionMessage = line;
     state.interactionUntil = performance.now() + 5200;
     state.interactionChannel = 'dialogue';
     state.interactionSpeaker = sprite.name;
@@ -4905,6 +4998,9 @@ const OS = {
       stagecurtain: "rideau de scene",
       stagevalance: "draperie de scene",
       pilotexitdoor: "porte EXIT du PILOT",
+      wackywatch: "WackyWatch de Caine",
+      banquettable: "longue table du festin",
+      feastplatter: prop.label || "plat du festin",
       graffiti: "graffiti de Kaufmo",
       crt: "television cathodique",
       foldingchair: "chaise pliante",
@@ -5256,6 +5352,7 @@ const OS = {
       16: 'Caine: Audit termine! Tout est sous controle, si l on accepte une definition suffisamment festive du controle.',
       17: 'Kinger: Les fragments ne la rameneront pas. Mais les rassembler empeche son souvenir de devenir du bruit.',
       18: 'Ribbit Archive: Le signal est stable. Cela confirme une trace, pas un retour parmi les residents.',
+      43: "Bubble: Made with all the love I'm legally allowed to give.",
       70: 'Shrimp NPC: Les limites sont marquees. CainOS ne pretend plus que la reconstruction couvre toute la ville.',
       71: 'Caine: Les deux balises tiennent! La toundra est officiellement traversable et officieusement glaciale!',
       72: 'Gangle: Les phares sont coupes et la sortie est reperee. On peut quitter le parking sans relancer le service.',
@@ -5486,7 +5583,7 @@ const OS = {
       40: "CainOS: Le coffre sous-marin a deja ete pille; les deux poissons n assurent qu une garde de gag.",
       41: "CainOS: Cette rue est un souvenir incomplet de Jax. Elle ne constitue pas une sortie valide.",
       42: "CainOS: La fete foraine est visible sur le terrain mais jamais visitee; seules ses formes exterieures sont fiables.",
-      43: "CainOS: La table du niveau principal est distincte du Cafe Cirque et sert aux repas communs.",
+      43: "CainOS: Le festin final du PILOT reste dans le chapiteau: longue table blanche, six residents, Bubble en chef et Pomni silencieuse au centre du cadre.",
       64: "CainOS: Etage reconstruit depuis le volume de Mildenhall. Le manoir est canonique; ce plan vertical exact ne l est pas.",
       65: "CainOS: Grenier de gameplay marque comme reconstruction. Les signaux horrifiques restent ceux du manoir.",
       66: "CainOS: Galerie haute du palais reconstruite pour rendre son volume visitable sans modifier la mission du royaume.",
@@ -5555,11 +5652,13 @@ const OS = {
         75: "Caine: Davantage d ilots, davantage de biomes et un toboggan encore plus haut! Le Cirque evolue!",
         110: "Caine: Un bar propose par Zooble! Une idee presque alarmante de sobriete narrative!",
         111: "Caine: Bowling! Une activite simple, lisible et totalement impossible a rater pendant plus de trente secondes!",
-        112: "Caine: Les humains ne sont finalement pas un materiau de sculpture assez relatable. Idee supprimee!"
+        112: "Caine: Les humains ne sont finalement pas un materiau de sculpture assez relatable. Idee supprimee!",
+        120: "Caine: An alert on my WackyWatch at this hour? ...Oh no! Someone's venturing out into The Void!"
       },
       bubble: {
         2: "Bubble: Je vote pour la porte la plus brillante!",
-        10: "Bubble: Commande supplementaire! Mauvaise idee supplementaire!"
+        10: "Bubble: Commande supplementaire! Mauvaise idee supplementaire!",
+        43: "Bubble: Made with all the love I'm legally allowed to give."
       },
       jax: {
         2: "Jax: Si une porte est verrouillee, c'est probablement la seule interessante.",
@@ -6176,6 +6275,7 @@ const OS = {
       34: { title: 'AMES DU MANOIR', steps: [{ action: 'use', kind: 'candle', count: 1, label: 'Fixer une source lumineuse' }, { action: 'survive', kind: 'candle', count: 4, label: 'Resister a la possession' }] },
       35: { title: 'CUISINE SPUDSY', steps: [{ action: 'take', kind: 'menu', count: 1, label: 'Prendre un ticket cuisine' }, { action: 'use', kind: 'counter', count: 1, label: 'Assembler la commande' }, { action: 'give', kind: 'menu', count: 1, label: 'Servir la commande' }] },
       40: { title: 'PLONGEE AU TRESOR', steps: [{ action: 'use', kind: 'wave', count: 1, label: 'Descendre sous le lac' }, { action: 'dive', kind: 'wave', count: 3, label: 'Atteindre le coffre' }, { action: 'use', kind: 'archive', count: 1, label: 'Verifier le coffre vide' }] },
+      43: { title: 'FESTIN FINAL DU PILOTE', steps: [{ action: 'look', kind: 'banquettable', count: 1, label: 'Examiner la longue table blanche' }, { action: 'look', kind: 'feastplatter', count: 4, label: 'Verifier les quatre services du banquet' }] },
       64: { title: 'ETAGE MILDENHALL', steps: [{ action: 'look', kind: 'window', count: 2, label: 'Comparer les deux fenetres' }, { action: 'use', kind: 'candle', count: 1, label: 'Fixer un repere lumineux' }] },
       65: { title: 'SURVIE AU GRENIER', steps: [{ action: 'use', kind: 'candle', count: 1, label: 'Allumer la bougie du grenier' }, { action: 'survive', kind: 'candle', count: 3, label: 'Rester discret face au signal' }] },
       66: { title: 'GALERIE ROYALE', steps: [{ action: 'look', kind: 'pillar', count: 2, label: 'Verifier les piliers' }, { action: 'use', kind: 'stairs', count: 1, label: 'Ouvrir le passage du balcon' }] },
@@ -6873,7 +6973,7 @@ const OS = {
 
   getCircusWorldColliders(state) {
     if (state.worldColliderZoneId === state.currentZoneId && state.worldColliders) return state.worldColliders;
-    const collidableKinds = new Set(['table', 'counter', 'desk', 'bed', 'partition', 'sofa', 'pillar', 'crate', 'barrel', 'tent', 'building', 'tower', 'lighthouse']);
+    const collidableKinds = new Set(['table', 'banquettable', 'counter', 'desk', 'bed', 'partition', 'sofa', 'pillar', 'crate', 'barrel', 'tent', 'building', 'tower', 'lighthouse']);
     state.worldColliders = this.getCircusZoneProps(state.currentZoneId)
       .map((prop, index) => ({ ...prop, interactionId: index }))
       .filter(prop => collidableKinds.has(prop.kind) && !state.collectedProps?.has(`${state.currentZoneId}:${prop.interactionId}`))
@@ -6930,6 +7030,7 @@ const OS = {
       loser: { wallScale: 0.64, ceilingWorldHeight: 2.3, roof: 'flat', wallBias: 0.54 },
       nest: { wallScale: 0.96, ceilingWorldHeight: 4.8, roof: 'cavern', wallBias: 0.58 },
       cafe: { wallScale: 0.76, ceilingWorldHeight: 2.75, roof: 'beams', wallBias: 0.56 },
+      pilotrestaurant: { wallScale: 0.96, ceilingWorldHeight: 3.7, roof: 'vault', wallBias: 0.59 },
       dining: { wallScale: 0.82, ceilingWorldHeight: 3.0, roof: 'tent', wallBias: 0.57 },
       awards: { wallScale: 1.02, ceilingWorldHeight: 3.8, roof: 'stage', wallBias: 0.59 },
       micro: { wallScale: 0.86, ceilingWorldHeight: 3.2, roof: 'grid', wallBias: 0.57 },
@@ -7490,6 +7591,7 @@ const OS = {
       ,street: { ceilingTop: '#101820', ceilingBottom: '#516779', floorA: '#30343a', floorB: '#59616a', floorC: '#8fa6ba', grid: 'rgba(255,255,255,0.12)' }
       ,carnival: { ceilingTop: '#153a85', ceilingBottom: '#5f8ee8', floorA: '#315f2d', floorB: '#244f21', floorC: '#ff4fb8', grid: 'rgba(255,241,168,0.16)' }
       ,dining: { ceilingTop: '#24112f', ceilingBottom: '#5d2730', floorA: '#c43a35', floorB: '#8f2728', floorC: '#ffd84a', grid: 'rgba(255,241,168,0.14)' }
+      ,pilotrestaurant: { ceilingTop: '#fffdf7', ceilingBottom: '#eadfca', floorA: '#f1ead9', floorB: '#2d292d', floorC: '#d8b76f', grid: 'rgba(111,86,60,0.12)' }
     };
     const base = themes[motif] || themes.circus;
     return {
@@ -7624,6 +7726,25 @@ const OS = {
       ctx.moveTo(w * 0.82, 0);
       ctx.lineTo(w * 0.57, horizon);
       ctx.stroke();
+    } else if (motif === 'pilotrestaurant') {
+      ctx.strokeStyle = 'rgba(119,89,55,0.28)';
+      ctx.lineWidth = 3;
+      for (let i = -4; i <= 4; i++) {
+        const archX = w / 2 + i * 92;
+        ctx.beginPath();
+        ctx.moveTo(archX - 56, horizon);
+        ctx.quadraticCurveTo(archX, 12, archX + 56, horizon);
+        ctx.stroke();
+      }
+      ctx.strokeStyle = 'rgba(216,183,111,0.34)';
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.ellipse(w / 2, horizon * 0.25, w * 0.36, horizon * 0.28, 0, 0, Math.PI * 2);
+      ctx.stroke();
+      ctx.fillStyle = `rgba(255,248,207,${0.08 + pulse * 0.06})`;
+      ctx.beginPath();
+      ctx.ellipse(w / 2, horizon * 0.2, 92, 20, 0, 0, Math.PI * 2);
+      ctx.fill();
     } else {
       ctx.strokeStyle = theme.grid;
       for (let x = 0; x < w; x += 64) {
@@ -7687,7 +7808,7 @@ const OS = {
       } else {
         color = checker(1.35) ? theme.floorA : theme.floorB;
       }
-    } else if (['spudsy', 'kitchen', 'bathroom', 'training', 'admin', 'palace', 'common', 'dining', 'loser', 'awards', 'street'].includes(motif)) {
+    } else if (['spudsy', 'kitchen', 'bathroom', 'training', 'admin', 'palace', 'common', 'dining', 'pilotrestaurant', 'loser', 'awards', 'street'].includes(motif)) {
       color = checker(motif === 'admin' ? 1.45 : 1.35) ? theme.floorA : theme.floorB;
     } else if (motif === 'candy' || motif === 'route') {
       const syrup = Math.sin(worldX * 1.7 + worldZ * 0.9) > 0.42;
@@ -8629,7 +8750,7 @@ const OS = {
     if (fullbright) return 1;
     const motif = (state.scenes[state.currentZoneId] || state.scenes[2])?.motif || 'circus';
     const darkMotifs = new Set(['cellar', 'nest', 'kaufmoroom', 'manor', 'basement', 'hell', 'memory', 'archive', 'archivebedroom', 'training']);
-    const brightMotifs = new Set(['grounds', 'candy', 'route', 'lake', 'lighthouse', 'softball', 'snow', 'carnival', 'void']);
+    const brightMotifs = new Set(['grounds', 'candy', 'route', 'lake', 'lighthouse', 'softball', 'snow', 'carnival', 'void', 'pilotrestaurant']);
     const ambient = darkMotifs.has(motif) ? 0.42 : brightMotifs.has(motif) ? 0.78 : 0.6;
     const range = Math.max(6, (state.room?.size || 15) * 0.72);
     const falloff = Math.max(0, Math.min(1, 1 - depth / range));
@@ -8728,6 +8849,7 @@ const OS = {
         { kind: 'tent', x: 0, z: -5.7, width: 5.6, depth: 3.4, wallHeight: 2.2, roofHeight: 5.2, color: '#e53935', label: 'Chapiteau sur la colline' },
         { kind: 'tower', x: -4.15, z: -4.85, radius: 0.7, height: 6.7, roofHeight: 1.0, color: '#e53935', accent: '#ffd84a', label: 'Tour et grand toboggan' },
         { kind: 'building', style: 'carnival', x: 4.15, z: -5.1, width: 3.5, depth: 2.1, height: 3.2, roofHeight: 1.1, color: '#2a58d8', accent: '#ff4fb8', label: 'Carnaval numerique' },
+        { kind: 'pilotexitdoor', x: 3.0, z: -2.65, color: '#d63135', unstable: true, label: 'Porte EXIT entrevue pendant le tour' },
         { kind: 'wave', x: -3.3, z: -2.55, color: '#4ee7ff', label: 'Lac numerique' },
         { kind: 'fence', x: 0, z: -2.05, color: '#f5e3b1', label: 'Barriere du chemin' },
         { kind: 'plant', x: -2.0, z: -3.25, color: '#4c9a3d', label: 'Bosquet arrondi' },
@@ -8886,7 +9008,15 @@ const OS = {
       40: [{ kind: 'archive', x: 0, z: -2.9, color: '#ffd84a' }, { kind: 'wave', x: -2.3, z: -2.1, color: '#4ee7ff' }, { kind: 'wave', x: 2.3, z: -2.1, color: '#4ee7ff' }, { kind: 'eye', x: -1.1, z: -1.35, color: '#ffffff' }, { kind: 'eye', x: 1.1, z: -1.35, color: '#ffffff' }],
       41: [{ kind: 'desk', x: -2.1, z: -2.3, color: '#59616a' }, { kind: 'doorframe', x: 0, z: -3.1, color: '#8fa6ba' }, { kind: 'window', x: 2.2, z: -2.3, color: '#d8e4ee' }, { kind: 'card', x: 0.8, z: -1.35, color: '#ff7a30' }],
       42: [{ kind: 'ring', x: -2.5, z: -2.4, color: '#ff4fb8' }, { kind: 'ring', x: 2.5, z: -2.4, color: '#7df0ff' }, { kind: 'pillar', x: 0, z: -3.1, color: '#ffd84a' }, { kind: 'balloon', x: -1.25, z: -1.35, color: '#e53935' }, { kind: 'balloon', x: 1.25, z: -1.35, color: '#2a58d8' }],
-      43: [{ kind: 'table', x: 0, z: -2.7, color: '#7a4b32' }, { kind: 'table', x: -2.2, z: -1.8, color: '#7a4b32' }, { kind: 'table', x: 2.2, z: -1.8, color: '#7a4b32' }, { kind: 'menu', x: 0, z: -1.25, color: '#fff1a8' }],
+      43: [
+        { kind: 'banquettable', x: 0, z: -2.75, width: 6.6, depth: 1.15, height: 0.72, color: '#f8f4ea', label: 'Longue table blanche du festin' },
+        { kind: 'feastplatter', x: -2.25, z: -2.72, elevation: 0.78, color: '#e53935', variant: 'fruit', label: 'Plateau de fruits digitaux' },
+        { kind: 'feastplatter', x: -0.75, z: -2.72, elevation: 0.78, color: '#ffd84a', variant: 'roast', label: 'Plat principal digital' },
+        { kind: 'feastplatter', x: 0.75, z: -2.72, elevation: 0.78, color: '#ff8ccc', variant: 'cake', label: 'Dessert du Bubble Chef' },
+        { kind: 'feastplatter', x: 2.25, z: -2.72, elevation: 0.78, color: '#7df0ff', variant: 'cups', label: 'Boissons du festin' },
+        { kind: 'stagecurtain', x: 0, z: -5.2, color: '#c92536', variant: 'back', label: 'Rideau du chapiteau derriere le banquet' },
+        { kind: 'stagevalance', anchor: 'ceiling', x: 0, z: -4.7, color: '#d62f3f', label: 'Draperie du banquet' }
+      ],
       50: [
         ...this.getCircusNpcAnnexDoorProps(50),
         { kind: 'archive', x: 0, z: -4.25, color: '#c875ff', label: '28 NPC ROOMS / WEST ANNEX' },
@@ -9042,7 +9172,7 @@ const OS = {
         { kind: 'card', x: 2.35, z: -1.2, color: '#fff1a8', label: 'Jeu de cartes des personas' },
         { kind: 'doorframe', x: 0, z: -3.15, color: '#8a4fd6', label: 'Porte verrouillee de Jax' }
       ],
-      43: [{ kind: 'card', x: 0.85, z: -1.2, color: '#ffd84a', label: 'Livre aux papillons de Kinger' }]
+      43: []
     };
     (campaignPropAdditions[zoneId] || []).forEach(addition => {
       if (!props.some(prop => prop.kind === addition.kind && prop.label === addition.label)) props.push(addition);
@@ -9126,7 +9256,10 @@ const OS = {
         { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'stage', x: -2.3, z: -0.5, color: '#ffd84a' },
         { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'stage', x: 2.3, z: -0.5, color: '#ffd84a' }
       ],
-      43: [{ kind: 'ceilinglight', anchor: 'ceiling', fixture: 'chandelier', x: 0, z: -0.8, color: '#fff1a8' }],
+      43: [
+        { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'stage', x: -2.3, z: -1.0, color: '#fff1a8' },
+        { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'stage', x: 2.3, z: -1.0, color: '#fff1a8' }
+      ],
       64: [{ kind: 'ceilinglight', anchor: 'ceiling', fixture: 'chandelier', x: 0, z: -0.5, color: '#ffd878' }],
       65: [{ kind: 'ceilinglight', anchor: 'ceiling', fixture: 'panel', x: 0, z: -0.8, color: '#756a78' }],
       66: [{ kind: 'ceilinglight', anchor: 'ceiling', fixture: 'chandelier', x: 0, z: -0.7, color: '#fff1a8' }],
@@ -9223,7 +9356,7 @@ const OS = {
   },
 
   getCircusWorldGeometryKinds() {
-    return new Set(['ring', 'base', 'stairs', 'table', 'counter', 'desk', 'bed', 'partition', 'sofa', 'pillar', 'crate', 'barrel', 'tent', 'building', 'tower', 'lighthouse']);
+    return new Set(['ring', 'base', 'stairs', 'table', 'banquettable', 'counter', 'desk', 'bed', 'partition', 'sofa', 'pillar', 'crate', 'barrel', 'tent', 'building', 'tower', 'lighthouse']);
   },
 
   projectCircusPropGroundVertex(prop, offsetX, offsetZ, state, w, h, height = 0) {
@@ -9280,6 +9413,7 @@ const OS = {
     }
     return {
       table: { width: prop.width || 1.35, depth: prop.depth || 0.82, height: prop.height || 0.52, apron: 0.1 },
+      banquettable: { width: prop.width || 6.6, depth: prop.depth || 1.15, height: prop.height || 0.72, apron: 0.5 },
       counter: { width: prop.width || 1.9, depth: prop.depth || 0.72, height: prop.height || 0.86, apron: 0.26 },
       desk: { width: prop.width || 1.5, depth: prop.depth || 0.78, height: prop.height || 0.74, apron: 0.2 },
       bed: { width: 1.35, depth: 2.05, height: 0.48, apron: 0.32 },
@@ -9730,7 +9864,7 @@ const OS = {
     const wideKinds = new Set([
       'ring', 'counter', 'truck', 'scoreboard', 'table', 'desk', 'exitframe',
       'stagecurtain', 'stagevalance', 'fence', 'bathtub', 'toyglove', 'carousel',
-      'gloinknest', 'caveslide', 'escalator'
+      'gloinknest', 'caveslide', 'escalator', 'feastplatter'
     ]);
     const tallKinds = new Set([
       'pillar', 'tent', 'building', 'tower', 'lighthouse', 'spotlight', 'umbrella',
@@ -9740,7 +9874,7 @@ const OS = {
     const smallKinds = new Set([
       'candle', 'balloon', 'eye', 'sun', 'base', 'target', 'memory', 'toyblock',
       'zooblepart', 'caveglow', 'toilet', 'sink', 'foldingchair', 'graffiti',
-      'cellaropening'
+      'cellaropening', 'wackywatch'
     ]);
     let width = 82 * s;
     let height = 86 * s;
@@ -9764,7 +9898,7 @@ const OS = {
   },
 
   getCircusPropVisualScale(prop) {
-    const compactKinds = new Set(['eye', 'sun', 'balloon', 'candle', 'memory', 'base', 'target', 'toyblock', 'zooblepart', 'caveglow']);
+    const compactKinds = new Set(['eye', 'sun', 'balloon', 'candle', 'memory', 'base', 'target', 'toyblock', 'zooblepart', 'caveglow', 'wackywatch']);
     const mountedKinds = new Set(['wallart', 'ceilinglight', 'roomdoor', 'caineportal', 'graffiti', 'stagevalance', 'cellaropening']);
     const cap = compactKinds.has(prop.kind) ? 1.85 : mountedKinds.has(prop.kind) ? 2.2 : 2.7;
     return Math.max(0.035, Math.min(cap, prop.projected?.scale || 0.035));
@@ -9813,6 +9947,7 @@ const OS = {
         ctx.stroke();
       }
     } else if (prop.kind === 'pilotexitdoor') {
+      if (prop.unstable) ctx.globalAlpha = 0.52 + Math.sin(performance.now() / 180) * 0.28;
       ctx.fillStyle = '#d63135';
       ctx.strokeStyle = '#5e1419';
       ctx.lineWidth = Math.max(1, 3 * s);
@@ -9932,6 +10067,73 @@ const OS = {
       ctx.closePath();
       ctx.fill();
       ctx.stroke();
+    } else if (prop.kind === 'wackywatch') {
+      const pulse = 0.72 + Math.sin(performance.now() / 170) * 0.18;
+      ctx.shadowColor = '#7df0ff';
+      ctx.shadowBlur = Math.max(4, 18 * s * pulse);
+      ctx.fillStyle = '#29383d';
+      ctx.strokeStyle = '#7df0ff';
+      ctx.lineWidth = Math.max(1, 3 * s);
+      ctx.beginPath();
+      ctx.arc(0, -23 * s, 23 * s, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.stroke();
+      ctx.fillStyle = `rgba(125,240,255,${0.35 + pulse * 0.25})`;
+      ctx.beginPath();
+      ctx.arc(0, -23 * s, 16 * s, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.strokeStyle = '#ffffff';
+      ctx.lineWidth = Math.max(1, 2 * s);
+      ctx.beginPath();
+      ctx.arc(0, -23 * s, 8 * s, -Math.PI * 0.8, Math.PI * 0.35);
+      ctx.stroke();
+      ctx.fillStyle = '#ffffff';
+      ctx.font = `bold ${Math.max(6, 8 * s)}px Courier New`;
+      ctx.textAlign = 'center';
+      ctx.fillText('W W', 0, -20 * s);
+      ctx.shadowBlur = 0;
+      ctx.fillStyle = '#283238';
+      ctx.fillRect(-9 * s, -54 * s, 18 * s, 11 * s);
+      ctx.fillRect(-9 * s, 0, 18 * s, 11 * s);
+    } else if (prop.kind === 'feastplatter') {
+      ctx.fillStyle = '#f4f0df';
+      ctx.strokeStyle = '#b89b62';
+      ctx.lineWidth = Math.max(1, 2 * s);
+      ctx.beginPath();
+      ctx.ellipse(0, -4 * s, 47 * s, 12 * s, 0, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.stroke();
+      if (prop.variant === 'fruit') {
+        ['#e53935', '#ffd84a', '#64b85d', '#8a4fd6'].forEach((fruitColor, index) => {
+          ctx.fillStyle = fruitColor;
+          ctx.beginPath();
+          ctx.arc((-21 + index * 14) * s, (-12 - (index % 2) * 7) * s, 9 * s, 0, Math.PI * 2);
+          ctx.fill();
+        });
+      } else if (prop.variant === 'roast') {
+        ctx.fillStyle = '#9b4d2c';
+        ctx.beginPath();
+        ctx.ellipse(0, -16 * s, 30 * s, 16 * s, 0, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.fillStyle = '#f2d18d';
+        ctx.fillRect(-37 * s, -20 * s, 12 * s, 6 * s);
+        ctx.fillRect(25 * s, -20 * s, 12 * s, 6 * s);
+      } else if (prop.variant === 'cake') {
+        ctx.fillStyle = '#ff8ccc';
+        ctx.fillRect(-26 * s, -30 * s, 52 * s, 25 * s);
+        ctx.fillStyle = '#fff1a8';
+        ctx.fillRect(-26 * s, -22 * s, 52 * s, 7 * s);
+        ctx.fillStyle = '#e53935';
+        ctx.beginPath();
+        ctx.arc(0, -34 * s, 7 * s, 0, Math.PI * 2);
+        ctx.fill();
+      } else {
+        [-24, 0, 24].forEach((cupX, index) => {
+          ctx.fillStyle = ['#7df0ff', '#ffd84a', '#e53935'][index];
+          ctx.fillRect((cupX - 7) * s, -30 * s, 14 * s, 25 * s);
+          ctx.strokeRect((cupX - 7) * s, -30 * s, 14 * s, 25 * s);
+        });
+      }
     } else if (prop.kind === 'fence') {
       ctx.fillStyle = prop.color || '#f5e3b1';
       ctx.strokeStyle = '#8d6841';
@@ -10470,6 +10672,33 @@ const OS = {
           ctx.arc(offset * s, 12 * s, 3 * s, 0, Math.PI * 2);
           ctx.fill();
         });
+      } else if (fixture === 'dome') {
+        ctx.save();
+        ctx.shadowColor = prop.color || '#fff1a8';
+        ctx.shadowBlur = Math.max(4, 12 * s);
+        ctx.fillStyle = '#6a2f2a';
+        ctx.fillRect(-2 * s, -18 * s, 4 * s, 19 * s);
+        ctx.fillStyle = prop.color || '#fff1a8';
+        ctx.beginPath();
+        ctx.arc(0, 7 * s, 13 * s, Math.PI, 0);
+        ctx.closePath();
+        ctx.fill();
+        ctx.restore();
+      } else if (fixture === 'barebulb') {
+        ctx.strokeStyle = '#3a3033';
+        ctx.lineWidth = Math.max(1, 2 * s);
+        ctx.beginPath();
+        ctx.moveTo(0, -24 * s);
+        ctx.lineTo(0, 5 * s);
+        ctx.stroke();
+        ctx.save();
+        ctx.shadowColor = prop.color || '#f7e6b4';
+        ctx.shadowBlur = Math.max(5, 16 * s);
+        ctx.fillStyle = prop.color || '#f7e6b4';
+        ctx.beginPath();
+        ctx.arc(0, 11 * s, 7 * s, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.restore();
       } else {
         const length = fixture === 'fluorescent' ? 74 : 56;
         ctx.fillStyle = 'rgba(255,240,184,0.14)';
@@ -10614,7 +10843,32 @@ const OS = {
       }
     } else if (prop.kind === 'window' || prop.kind === 'menu' || prop.kind === 'scoreboard' || prop.kind === 'archive' || prop.kind === 'card') {
       if (prop.kind === 'window') {
-        if (prop.style === 'bathroom') {
+        if (prop.style === 'restaurant') {
+          ctx.fillStyle = '#74c8f3';
+          ctx.strokeStyle = '#fff8e8';
+          ctx.lineWidth = Math.max(1, 6 * s);
+          ctx.beginPath();
+          ctx.moveTo(-36 * s, 0);
+          ctx.lineTo(-36 * s, -62 * s);
+          ctx.quadraticCurveTo(0, -108 * s, 36 * s, -62 * s);
+          ctx.lineTo(36 * s, 0);
+          ctx.closePath();
+          ctx.fill();
+          ctx.stroke();
+          ctx.fillStyle = 'rgba(255,255,255,0.92)';
+          ctx.beginPath();
+          ctx.ellipse(-12 * s, -52 * s, 18 * s, 7 * s, 0, 0, Math.PI * 2);
+          ctx.ellipse(14 * s, -58 * s, 21 * s, 8 * s, 0, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.strokeStyle = '#d8b76f';
+          ctx.lineWidth = Math.max(1, 2 * s);
+          ctx.beginPath();
+          ctx.moveTo(0, -100 * s);
+          ctx.lineTo(0, 0);
+          ctx.moveTo(-36 * s, -45 * s);
+          ctx.lineTo(36 * s, -45 * s);
+          ctx.stroke();
+        } else if (prop.style === 'bathroom') {
           ctx.fillStyle = '#65b4ea';
           ctx.strokeStyle = '#f5f5f0';
           ctx.lineWidth = Math.max(1, 5 * s);
@@ -11367,9 +11621,13 @@ const OS = {
       ],
       42: [{ name: 'Caine', type: 'caine', avatar: 'caine', x: 0, z: -2.5, color: '#ffd84a' }],
       43: [
-        { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -1.35, z: -2.3, color: '#d9d0a2' },
-        { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: 0.1, z: -2.65, color: '#d64545' },
-        { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: 1.45, z: -1.85, color: '#f7f7f7' }
+        { name: 'Jax', type: 'jax', avatar: 'jax', x: -3.0, z: -2.1, color: '#8a4fd6', silent: true, silentText: 'Jax participe a la conversation hors champ autour du festin; aucun dialogue audible n est attribue a ce plan.' },
+        { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: -2.0, z: -3.05, color: '#f7f7f7', silent: true, silentText: 'Gangle reste assise au banquet final; la conversation de table n est pas audible dans le PILOT.' },
+        { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -1.05, z: -2.05, color: '#d9d0a2', silent: true, silentText: 'Kinger reste a table pendant le plan final; aucun dialogue distinct n est audible.' },
+        { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 0, z: -3.2, color: '#e53935', silent: true, silentText: 'Pomni reste silencieuse au centre du festin, les yeux spirales, pendant que la camera s eloigne.' },
+        { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: 1.05, z: -2.05, color: '#d64545', silent: true, silentText: 'Ragatha est restauree et assise au banquet; la discussion autour de la table reste hors champ.' },
+        { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 2.0, z: -3.05, color: '#ff4fb8', silent: true, silentText: 'Zooble est reassemblee au banquet final; aucun dialogue distinct n est audible dans ce plan.' },
+        { name: 'Bubble Chef', type: 'bubble', avatar: 'bubble', x: 3.0, z: -2.05, color: '#f7f7ff', costume: 'chef' }
       ],
       50: [],
       51: [],
@@ -11905,7 +12163,39 @@ const OS = {
     ctx.translate(x, baseY + lift);
     ctx.rotate(tilt);
     ctx.scale(scaleX * directionalScaleX * direction.mirror, scaleY);
+    if (sprite.costume === 'chef') {
+      ctx.strokeStyle = '#d9dde3';
+      ctx.lineWidth = Math.max(2, drawW * 0.055);
+      ctx.lineCap = 'round';
+      ctx.beginPath();
+      ctx.moveTo(-drawW * 0.48, -drawH * 0.08);
+      ctx.lineTo(drawW * 0.26, -drawH * 0.74);
+      ctx.moveTo(drawW * 0.48, -drawH * 0.08);
+      ctx.lineTo(-drawW * 0.26, -drawH * 0.74);
+      ctx.stroke();
+      ctx.fillStyle = '#d9dde3';
+      ctx.fillRect(drawW * 0.19, -drawH * 0.82, drawW * 0.16, drawH * 0.08);
+      ctx.beginPath();
+      ctx.ellipse(-drawW * 0.27, -drawH * 0.79, drawW * 0.14, drawH * 0.08, -0.65, 0, Math.PI * 2);
+      ctx.fill();
+    }
     ctx.drawImage(frame.canvas, Math.round(-drawW / 2), Math.round(-drawH), Math.round(drawW), Math.round(drawH));
+    if (sprite.costume === 'chef') {
+      ctx.fillStyle = '#fffdf7';
+      ctx.strokeStyle = '#b9bec7';
+      ctx.lineWidth = Math.max(1, drawW * 0.025);
+      ctx.beginPath();
+      ctx.arc(-drawW * 0.16, -drawH * 1.01, drawW * 0.18, Math.PI, 0);
+      ctx.arc(0, -drawH * 1.08, drawW * 0.21, Math.PI, 0);
+      ctx.arc(drawW * 0.17, -drawH * 1.01, drawW * 0.18, Math.PI, 0);
+      ctx.lineTo(drawW * 0.25, -drawH * 0.88);
+      ctx.lineTo(-drawW * 0.25, -drawH * 0.88);
+      ctx.closePath();
+      ctx.fill();
+      ctx.stroke();
+      ctx.fillRect(-drawW * 0.24, -drawH * 0.93, drawW * 0.48, drawH * 0.1);
+      ctx.strokeRect(-drawW * 0.24, -drawH * 0.93, drawW * 0.48, drawH * 0.1);
+    }
     if (direction.back || direction.sector === 3 || direction.sector === 5) {
       ctx.globalCompositeOperation = 'source-atop';
       ctx.fillStyle = direction.back ? `${color || '#444444'}99` : `${color || '#444444'}55`;
@@ -12323,33 +12613,6 @@ const OS = {
       this.activeWindow = winId;
       if (winId === 'simulations') {
         SoundManager.startTheme();
-      } else if (fixture === 'dome') {
-        ctx.save();
-        ctx.shadowColor = prop.color || '#fff1a8';
-        ctx.shadowBlur = Math.max(4, 12 * s);
-        ctx.fillStyle = '#6a2f2a';
-        ctx.fillRect(-2 * s, -18 * s, 4 * s, 19 * s);
-        ctx.fillStyle = prop.color || '#fff1a8';
-        ctx.beginPath();
-        ctx.arc(0, 7 * s, 13 * s, Math.PI, 0);
-        ctx.closePath();
-        ctx.fill();
-        ctx.restore();
-      } else if (fixture === 'barebulb') {
-        ctx.strokeStyle = '#3a3033';
-        ctx.lineWidth = Math.max(1, 2 * s);
-        ctx.beginPath();
-        ctx.moveTo(0, -24 * s);
-        ctx.lineTo(0, 5 * s);
-        ctx.stroke();
-        ctx.save();
-        ctx.shadowColor = prop.color || '#f7e6b4';
-        ctx.shadowBlur = Math.max(5, 16 * s);
-        ctx.fillStyle = prop.color || '#f7e6b4';
-        ctx.beginPath();
-        ctx.arc(0, 11 * s, 7 * s, 0, Math.PI * 2);
-        ctx.fill();
-        ctx.restore();
       } else {
         SoundManager.stopTheme();
       }
@@ -12961,6 +13224,8 @@ const OS = {
       if (/^tadc_|^cainos_/.test(key) && typeof value === 'string') localStorage.setItem(key, value);
     });
     this.applyCainOSSettings();
+    EpisodeManager.updateLocksUI?.();
+    this.selectEpisodeForCurrentProgress();
     this.updateWackyWatchCastUI();
     this.renderCainOSJournal();
     this.renderCainOSTools();

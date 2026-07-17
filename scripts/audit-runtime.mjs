@@ -318,14 +318,35 @@ if (duplicateIds.length) failures.push(`ID HTML DUPLIQUES: ${duplicateIds.join('
 
 if (!/campaignStages\s*!==\s*72/.test(app)) failures.push('Audit 72 actes absent');
 if (!/campaigns\.length\s*!==\s*9/.test(app)) failures.push('Audit 9 campagnes absent');
-if (!/getCircusFpsZoneMax\(\)\s*\{\s*return 119;/.test(app)) failures.push('Borne FPS 119 absente');
+if (!/getCircusFpsZoneMax\(\)\s*\{\s*return 120;/.test(app)) failures.push('Borne FPS 120 absente');
+if (!/storyMicroAbortBtn\.addEventListener\('click',\s*\(\)\s*=>\s*\{[\s\S]*?this\.returnFromStoryMicroGame\(\);/.test(episodes)) {
+  failures.push('Retour texte persistant apres echec mini-jeu absent');
+}
+const focusWindowBlock = app.slice(app.indexOf('focusWindow(winId)'), app.indexOf('toggleMaximize(winId)'));
+if (/\bfixture\b|\bctx\b|\bprop\b/.test(focusWindowBlock)) failures.push('Rendu de luminaire injecte dans focusWindow');
+if (!/fixture === 'dome'/.test(app) || !/fixture === 'barebulb'/.test(app)) failures.push('Rendu des plafonniers du pilote incomplet');
+if (!/getCircusAuthoredSpawn\(zoneId\)/.test(app)
+  || !/43:\s*\{\s*x:\s*center\.x,\s*z:\s*center\.z\s*\+\s*2\.35/.test(app)
+  || !/120:\s*\{\s*x:\s*center\.x,\s*z:\s*center\.z\s*\+\s*2\.0/.test(app)) {
+  failures.push('Points d arrivee cadres du restaurant et du festin absents');
+}
+if (!/zonePositionRevisions:\s*state\.zonePositionRevisions/.test(app)) {
+  failures.push('Migration versionnee des positions FPS absente');
+}
+if (!/importCainOSSave\(save\)[\s\S]*?EpisodeManager\.updateLocksUI\?\.\(\);[\s\S]*?this\.selectEpisodeForCurrentProgress\(\);/.test(app)) {
+  failures.push('Rafraichissement immediat des verrous apres import absent');
+}
 for (const marker of [
   "motif: 'kaufmoroom'",
+  "motif: 'pilotrestaurant'",
   "kind: 'pilotexitdoor'",
   "kind: 'gloinknest'",
   "kind: 'cellaropening'",
   "kind: 'toyglove'",
-  "kind: 'carousel'"
+  "kind: 'carousel'",
+  "kind: 'banquettable'",
+  "kind: 'feastplatter'",
+  "kind: 'wackywatch'"
 ]) {
   if (!app.includes(marker)) failures.push(`Passe FPS EP1 absente: ${marker}`);
 }

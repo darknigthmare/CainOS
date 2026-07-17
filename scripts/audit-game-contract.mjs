@@ -465,8 +465,17 @@ for (const [zone, kinds] of [[70, ['building', 'wave']], [71, ['stairs', 'candle
   for (const kind of kinds) if (!props.some(prop => prop.kind === kind)) failures.push(`FPS ${zone}: decor ${kind} absent`);
 }
 const canonRoomDefinitions = OS.getCircusCanonRoomDefinitions();
-if (OS.getCircusFpsZoneMax() !== 119) failures.push('FPS: borne de zones attendue a 119');
-if (Object.keys(canonRoomDefinitions).length !== 44) failures.push(`FPS: ${Object.keys(canonRoomDefinitions).length}/44 pieces canoniques ou balisees`);
+if (OS.getCircusFpsZoneMax() !== 120) failures.push('FPS: borne de zones attendue a 120');
+if (Object.keys(canonRoomDefinitions).length !== 45) failures.push(`FPS: ${Object.keys(canonRoomDefinitions).length}/45 pieces canoniques ou balisees`);
+const spawnContext = { circusDoom: { room: { center: { x: 10, z: 10 } } } };
+const restaurantSpawn = OS.getCircusAuthoredSpawn.call(spawnContext, 120);
+const feastSpawn = OS.getCircusAuthoredSpawn.call(spawnContext, 43);
+if (restaurantSpawn?.z !== 12 || restaurantSpawn?.revision !== 1 || restaurantSpawn?.a !== -Math.PI / 2) {
+  failures.push('EP1 FPS 120: point d arrivee cadre invalide');
+}
+if (feastSpawn?.z !== 12.35 || feastSpawn?.revision !== 1 || feastSpawn?.a !== -Math.PI / 2) {
+  failures.push('EP1 FPS 43: point d arrivee cadre invalide');
+}
 const episodeOneRoomChecks = new Map([
   [76, ['bathtub', 'toilet', 'sink']],
   [77, ['wave', 'window']],
@@ -478,7 +487,8 @@ const episodeOneRoomChecks = new Map([
   [97, ['partition', 'desk', 'crt', 'console', 'watercooler']],
   [98, ['sofa', 'table', 'floorlamp', 'watercooler', 'archive']],
   [99, ['wallart', 'console']],
-  [100, ['doorframe', 'exitframe']]
+  [100, ['doorframe', 'exitframe']],
+  [120, ['window', 'table', 'plant', 'wackywatch', 'ceilinglight']]
 ]);
 for (const [zone, expectedKinds] of episodeOneRoomChecks) {
   const kinds = new Set(OS.getCircusZoneProps(zone).map(prop => prop.kind));
@@ -498,10 +508,11 @@ if (OS.getCircusZoneProps(98).filter(prop => prop.kind === 'sofa').length < 2) {
 }
 const episodeOneBaseChecks = new Map([
   [2, ['stagecurtain', 'stagevalance', 'ring']],
-  [3, ['tent', 'tower', 'building', 'wave', 'fence', 'plant']],
+  [3, ['tent', 'tower', 'building', 'wave', 'fence', 'plant', 'pilotexitdoor']],
   [4, ['cellaropening', 'eye']],
   [5, ['pilotexitdoor', 'exitframe']],
-  [31, ['gloinknest', 'zooblepart', 'caveglow', 'caveslide', 'escalator']]
+  [31, ['gloinknest', 'zooblepart', 'caveglow', 'caveslide', 'escalator']],
+  [43, ['banquettable', 'feastplatter', 'stagecurtain', 'stagevalance']]
 ]);
 for (const [zone, expectedKinds] of episodeOneBaseChecks) {
   const kinds = new Set(OS.getCircusZoneProps(zone).map(prop => prop.kind));
@@ -511,6 +522,16 @@ for (const [zone, expectedKinds] of episodeOneBaseChecks) {
 }
 if (OS.getCircusZoneProps(5).filter(prop => prop.kind === 'exitframe').length < 3) {
   failures.push('EP1 FPS 5: le labyrinthe ne contient pas ses trois cadres testables');
+}
+if (!OS.getCircusZoneProps(3).some(prop => prop.kind === 'pilotexitdoor' && prop.unstable)) {
+  failures.push('EP1 FPS 3: la porte EXIT du tour doit rester instable');
+}
+if (OS.getCircusZoneProps(43).filter(prop => prop.kind === 'feastplatter').length !== 4) {
+  failures.push('EP1 FPS 43: quatre services du banquet attendus');
+}
+const feastGameplayKinds = new Set(OS.getCircusZoneGameplayConfig(43)?.steps?.map(step => step.kind) || []);
+for (const kind of ['banquettable', 'feastplatter']) {
+  if (!feastGameplayKinds.has(kind)) failures.push(`EP1 FPS 43: gameplay du festin sans ${kind}`);
 }
 const kaufmoGameplayKinds = new Set(OS.getCircusZoneGameplayConfig(52)?.steps?.map(step => step.kind) || []);
 for (const kind of ['graffiti', 'crt', 'wallart']) {
@@ -563,9 +584,42 @@ if (!kaufmoStage || !kaufmoStage.requirements.some(requirement => requirement.ta
 if (pilotCampaign.stages.some(stage => stage.zone === 4 && stage.requirements.some(requirement => requirement.target === 'candle'))) {
   failures.push('EP1 FPS: ancien combat invente dans le Cellar encore actif');
 }
+const pilotVisitTargets = new Set(pilotCampaign.stages.flatMap(stage => stage.requirements
+  .filter(requirement => requirement.action === 'visit')
+  .map(requirement => Number(requirement.target))));
+for (const zone of [3, 42, 20, 52, 31, 29, 76, 77, 78, 79, 80, 5, 97, 98, 99, 100, 27, 120, 4, 43]) {
+  if (!pilotVisitTargets.has(zone)) failures.push(`EP1 FPS: zone ${zone} absente du parcours de campagne`);
+}
+for (const zone of [76, 77, 78, 79, 80]) {
+  if (canonRoomDefinitions[zone]?.provenance !== 'shown') failures.push(`EP1 FPS: piece aleatoire montree ${zone} mal classee`);
+}
+const restaurantSprites = OS.getCircusZoneSprites(120);
+const restaurantAvatars = new Set(restaurantSprites.map(sprite => sprite.avatar || sprite.type));
+for (const avatar of ['caine', 'bubble']) {
+  if (!restaurantAvatars.has(avatar)) failures.push(`EP1 FPS 120: ${avatar} absent du restaurant`);
+}
+const restaurantMannequins = restaurantSprites.filter(sprite => sprite.type === 'mannequin');
+if (restaurantMannequins.length < 4 || restaurantMannequins.some(sprite => !sprite.silent)) {
+  failures.push('EP1 FPS 120: figurants mannequins silencieux insuffisants');
+}
+if (!OS.getCircusDynamicEventDefinitions(120).some(event => event.id === 'wackywatch-alert' && event.avatar === 'caine')) {
+  failures.push('EP1 FPS 120: alerte WackyWatch de Caine absente');
+}
+const feastSprites = OS.getCircusZoneSprites(43);
+const feastAvatars = new Set(feastSprites.map(sprite => sprite.avatar || sprite.type));
+for (const avatar of ['jax', 'gangle', 'kinger', 'pomni', 'ragatha', 'zooble', 'bubble']) {
+  if (!feastAvatars.has(avatar)) failures.push(`EP1 FPS 43: ${avatar} absent du festin`);
+}
+if (feastAvatars.has('caine')) failures.push('EP1 FPS 43: Caine ne doit pas etre assis au festin final');
+if (!feastSprites.some(sprite => (sprite.avatar || sprite.type) === 'bubble' && sprite.costume === 'chef')) {
+  failures.push('EP1 FPS 43: Bubble doit porter sa tenue de chef');
+}
+if (!feastSprites.some(sprite => (sprite.avatar || sprite.type) === 'pomni' && sprite.silent)) {
+  failures.push('EP1 FPS 43: Pomni doit rester silencieuse au centre du plan final');
+}
 const zoneObjectiveAudit = OS.auditCircusZoneObjectives();
 if (!zoneObjectiveAudit.ok) zoneObjectiveAudit.errors.forEach(error => failures.push(`OBJECTIF FPS: ${error}`));
-for (const zone of [76, 77, 78, 79, 80, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 109, 110, 111, 112, 114, 115, 116, 117, 118, 119]) {
+for (const zone of [76, 77, 78, 79, 80, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 109, 110, 111, 112, 114, 115, 116, 117, 118, 119, 120]) {
   if (!canonRoomDefinitions[zone]) failures.push(`FPS: piece montree ${zone} absente du manifeste`);
   if (!OS.getCircusZoneProps(zone).length) failures.push(`FPS: piece ${zone} sans decor`);
 }
