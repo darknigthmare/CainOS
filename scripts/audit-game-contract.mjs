@@ -72,7 +72,7 @@ const canonPackFPlacements = {
   orangemannequin: 32,
   yellowmannequin: 32,
   magentamannequin: 32,
-  mildenhallsouls: 9,
+  mildenhallsouls: 34,
   albertspudsy: 10
 };
 const canonPackFProfileKeys = {
@@ -96,12 +96,12 @@ const canonPackGProfileKeys = {
   cerealmannequin: 'SPUDSY_CEREAL_CUSTOMER'
 };
 const canonPackHSpritePlacements = {
-  ragathamothershadow: 16,
-  laughingshadows: 16
+  ragathamothershadow: 114
 };
 const canonPackHPropPlacements = {
-  paintedmasks: 16,
-  zoobleparts: 16
+  paintedmasks: 115,
+  zoobleparts: 116,
+  laughingshadows: 117
 };
 const canonPackHProfileKeys = {
   ragathamothershadow: 'FEMININE_SHADOW',
@@ -115,7 +115,7 @@ const canonPackKSpritePlacements = {
   abstractedkaufmo: 4,
   cellarabstraction: 4,
   aquaticabstraction: 22,
-  fourthcrocodile: 16
+  fourthcrocodile: 118
 };
 const canonPackKProfileKeys = {
   sun: 'SUN_NPC',
@@ -134,9 +134,9 @@ const canonPackLProfileKeys = {
 };
 const canonPackLPropPlacements = {
   creditsfish: 19,
-  stabbedragdolls: 16,
-  coiledcentipedes: 16,
-  unusedbrainscans: 16
+  stabbedragdolls: 114,
+  coiledcentipedes: 114,
+  unusedbrainscans: 73
 };
 const canonPackMProfileKeys = {
   abstractedjax: 'JAX',
@@ -339,9 +339,9 @@ for (const [avatar, profileKey] of Object.entries(canonPackNProfileKeys)) {
 for (const [avatar, zone] of Object.entries({
   abstractedjax: 18,
   abstractedqueeniedark: 17,
-  jaxmindviolent: 74,
-  jaxmindcomic: 74,
-  jaxmindtrapped: 74,
+  jaxmindviolent: 104,
+  jaxmindcomic: 104,
+  jaxmindtrapped: 104,
   spudsypomni: 10,
   spudsyjax: 10,
   spudsyragatha: 10,
@@ -464,13 +464,48 @@ for (const [zone, kinds] of [[70, ['building', 'wave']], [71, ['stairs', 'candle
   const props = OS.getCircusZoneProps(zone);
   for (const kind of kinds) if (!props.some(prop => prop.kind === kind)) failures.push(`FPS ${zone}: decor ${kind} absent`);
 }
+const canonRoomDefinitions = OS.getCircusCanonRoomDefinitions();
+if (OS.getCircusFpsZoneMax() !== 119) failures.push('FPS: borne de zones attendue a 119');
+if (Object.keys(canonRoomDefinitions).length !== 44) failures.push(`FPS: ${Object.keys(canonRoomDefinitions).length}/44 pieces canoniques ou balisees`);
+const zoneObjectiveAudit = OS.auditCircusZoneObjectives();
+if (!zoneObjectiveAudit.ok) zoneObjectiveAudit.errors.forEach(error => failures.push(`OBJECTIF FPS: ${error}`));
+for (const zone of [76, 77, 78, 79, 80, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 109, 110, 111, 112, 114, 115, 116, 117, 118, 119]) {
+  if (!canonRoomDefinitions[zone]) failures.push(`FPS: piece montree ${zone} absente du manifeste`);
+  if (!OS.getCircusZoneProps(zone).length) failures.push(`FPS: piece ${zone} sans decor`);
+}
+for (const zone of [81, 82]) {
+  if (canonRoomDefinitions[zone]?.provenance !== 'mentioned') failures.push(`FPS: piece mentionnee ${zone} non balisee comme reconstruction`);
+}
+for (const zone of [101, 102, 103, 108, 113]) {
+  if (canonRoomDefinitions[zone]?.provenance !== 'projection') failures.push(`FPS: projection ${zone} mal classee`);
+}
+if (!canonRoomDefinitions[110]?.exits?.includes(11) || !canonRoomDefinitions[110]?.exits?.includes(12)) {
+  failures.push('EP5: bar non place entre la Suggestion Box et le softball');
+}
+for (const zone of [114, 115, 116, 117, 118]) {
+  if (!canonRoomDefinitions[zone]?.name.includes('TORMENT')) failures.push(`EP8: tourment ${zone} non isole`);
+}
+const officePropAvatars = OS.getCircusZoneProps(16).map(prop => prop.avatar).filter(Boolean);
+const officeSpriteAvatars = OS.getCircusZoneSprites(16).map(sprite => sprite.avatar || sprite.type);
+for (const avatar of ['paintedmasks', 'zoobleparts', 'stabbedragdolls', 'coiledcentipedes', 'fourthcrocodile', 'ragathamothershadow', 'laughingshadows']) {
+  if (officePropAvatars.includes(avatar) || officeSpriteAvatars.includes(avatar)) failures.push(`EP8: ${avatar} encore fusionne au bureau de Caine`);
+}
+const centralDormDoors = OS.getCircusZoneProps(20).filter(prop => prop.kind === 'roomdoor');
+if (centralDormDoors.length !== 28) failures.push(`DORTOIR: ${centralDormDoors.length}/28 portes dans le couloir principal`);
+if (centralDormDoors.filter(prop => Number.isFinite(prop.target)).length !== 18) failures.push('DORTOIR: 18 portes de residents nommes attendues');
+for (const zone of [50, 51]) {
+  const annexDoors = OS.getCircusZoneProps(zone).filter(prop => prop.kind === 'roomdoor');
+  if (annexDoors.length !== 28 || annexDoors.some(prop => !prop.npcRoom || Number.isFinite(prop.target))) {
+    failures.push(`DORTOIR: annexe ${zone} non reservee aux 28 chambres PNJ`);
+  }
+}
 for (const avatar of ['horrorghost', 'horrormonster', 'horrorpomnivoid', 'horrorpomnispiral', 'horrorpomniskull', 'shadowpomni', 'shadowkinger']) {
   if (OS.getWackyProvenanceKind(avatar) !== 'fan') failures.push(`FAN: ${avatar} n est pas isole hors timeline`);
 }
 for (const avatar of ['bonepastor', 'themachine']) {
   if (OS.getWackyProfileStatus(avatar) !== 'PRODUCTION / HORS TIMELINE') failures.push(`PRODUCTION: statut ${avatar} incorrect`);
   if (OS.getWackyProvenanceKind(avatar) !== 'production') failures.push(`PRODUCTION: provenance ${avatar} incorrecte`);
-  for (let zone = 0; zone <= 75; zone += 1) {
+  for (let zone = 0; zone <= OS.getCircusFpsZoneMax(); zone += 1) {
     if (OS.getCircusZoneSprites(zone).some(entry => (entry.avatar || entry.type) === avatar)) {
       failures.push(`PRODUCTION: ${avatar} apparait comme PNJ physique en zone ${zone}`);
     }

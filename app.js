@@ -1639,15 +1639,15 @@ const OS = {
       5: { name: 'PORTE DE SORTIE / VIDE', short: 'EXIT', detail: 'Prototype de sortie, couloirs impossibles et bureau apparu dans le pilote.', color: '#ffffff', floor: '#18202a', ceiling: '#060606', unlocked: unlockedAt(1, 2) },
       6: { name: 'CANDY CANYON KINGDOM', short: 'CANDY', detail: 'Royaume bonbon, convoi sirop et route du tanker.', color: '#ff9b37', floor: '#4b2436', ceiling: '#24234f', unlocked: unlockedAt(2, 1) },
       7: { name: 'TEST LEVEL / NPC SCAN', short: 'TEST', detail: 'Sous-couche technique liee a Gummigoo et aux donnees NPC.', color: '#9cff6d', floor: '#1d2b1f', ceiling: '#0f1b12', unlocked: unlockedAt(2, 4) },
-      8: { name: 'MILDENHALL MANOR', short: 'MANOR', detail: 'Manoir horrifique, baron, fantome et menace qui reagit aux signaux.', color: '#b7f0ff', floor: '#1d1827', ceiling: '#050816', unlocked: unlockedAt(3, 1) },
-      9: { name: 'SOUS-SOL MILDENHALL', short: 'CAVE', detail: 'Trappes, obscurite, armes de Kinger et fuite sous le manoir.', color: '#7c88a1', floor: '#0d1018', ceiling: '#03040a', unlocked: unlockedAt(3, 4) },
+      8: { name: 'MILDENHALL MANOR / EXTERIOR', short: 'MANOR', detail: 'Facade et terrain du manoir avant le vestibule; les salles interieures suivent maintenant leur ordre a l ecran.', color: '#b7f0ff', floor: '#1d1827', ceiling: '#050816', unlocked: unlockedAt(3, 1) },
+      9: { name: 'MILDENHALL WINE CELLAR', short: 'CAVE A VIN', detail: 'Cave a vin atteinte par le monte-plat, avec le corps du Baron et le passage vers l Enfer.', color: '#7c88a1', floor: '#0d1018', ceiling: '#03040a', unlocked: unlockedAt(3, 4) },
       10: { name: "SPUDSY'S", short: 'SPUDSY', detail: 'Restaurant rapide, comptoir, tickets et stress de service de Gangle.', color: '#ff4d4d', floor: '#3b1a17', ceiling: '#251308', unlocked: unlockedAt(4, 1) },
       11: { name: 'SUGGESTION BOX / MICRO-ZONES', short: 'IDEES', detail: 'Suite de micro-aventures generees par Caine depuis les suggestions.', color: '#ff4fb8', floor: '#2c1434', ceiling: '#160d25', unlocked: unlockedAt(5, 1) },
       12: { name: 'SOFTBALL STADIUM', short: 'BALL', detail: 'Terrain de match, costumes sportifs et equipe adverse alternative.', color: '#83ff57', floor: '#173416', ceiling: '#14152f', unlocked: unlockedAt(5, 6) },
       13: { name: 'THEY ALL GET GUNS', short: 'GUNS', detail: 'Arena d epreuves armees, scores et tension autour de Jax.', color: '#f6d743', floor: '#2f2610', ceiling: '#17110a', unlocked: unlockedAt(6, 2) },
       14: { name: 'DIGITAL LAKE / BEACH', short: 'LAC', detail: 'Lac digital, plage, soleil dangereux et faux repos de Caine.', color: '#4ee7ff', floor: '#073844', ceiling: '#114071', unlocked: unlockedAt(7, 1) },
-      15: { name: 'CHINESE ROOM / ADMIN ZONE', short: 'ADMIN', detail: 'Zone de questionnement, anomalie C&A et couches systeme sous le lac.', color: '#ffcf75', floor: '#302318', ceiling: '#09111e', unlocked: unlockedAt(7, 3) },
-      16: { name: 'CAINE OFFICE / C&A CORE', short: 'CORE', detail: 'Bureau de Caine, origine IA et couches C&A que CainOS revele tard.', color: '#ff7a30', floor: '#291915', ceiling: '#10070d', unlocked: unlockedAt(7, 3) || unlocked(8) || unlocked(9) },
+      15: { name: 'THE CHINESE ROOM', short: 'CHINESE ROOM', detail: 'Piece du gag de Caine contenant la porte et le dispositif de reponse en chinois; distincte de la zone administrateur.', color: '#ffcf75', floor: '#302318', ceiling: '#09111e', unlocked: unlockedAt(7, 1) },
+      16: { name: "CAINE'S OFFICE", short: 'BUREAU CAINE', detail: 'Bureau personnel de Caine, separe de sa console principale cachee derriere la bibliotheque.', color: '#ff7a30', floor: '#291915', ceiling: '#10070d', unlocked: unlockedAt(7, 3) || unlocked(8) || unlocked(9) },
       17: { name: 'KINGER MEMORY BUFFER', short: 'MEMOIRE', detail: 'Fragments Queenie, souvenirs et noyau emotionnel de Kinger.', color: '#d9d0a2', floor: '#252316', ceiling: '#0e0e12', unlocked: unlocked(8) },
       18: { name: 'FINAL CIRCUS / BACKSTAGE', short: 'FINAL', detail: 'Retour au cirque, brain scans, Ribbit et dernier etat de Pomni/Caine.', color: '#e53935', floor: '#2b1018', ceiling: '#09060d', unlocked: unlocked(9) },
       19: { name: 'CIRCUS MEMBERS ARCHIVE', short: 'MEMBRES', detail: 'Projection CainOS non physique des anciens membres connus apres les episodes.', color: '#c875ff', floor: '#21142e', ceiling: '#0c0614', unlocked: unlocked(9) },
@@ -1675,8 +1675,8 @@ const OS = {
       41: { name: 'C&A STREET MEMORY', short: 'RUE C&A', detail: 'Rue rememoree par Jax; souvenir incomplet, pas une sortie fonctionnelle.', color: '#8fa6ba', floor: '#30343a', ceiling: '#101820', unlocked: unlockedAt(7, 4) },
       42: { name: 'DIGITAL CARNIVAL OVERLOOK', short: 'FETE', detail: 'Fete foraine visible depuis le terrain mais jamais visitee dans la serie.', color: '#ff4fb8', floor: '#315f2d', ceiling: '#5f8ee8', unlocked: unlockedAt(1, 0) },
       43: { name: 'TENT DINING AREA', short: 'REPAS', detail: 'Table du niveau principal utilisee pour les repas du groupe.', color: '#ffd84a', floor: '#c43a35', ceiling: '#311340', unlocked: unlockedAt(1, 0) },
-      50: { name: 'DORM HALL / ANNEXE OUEST', short: 'ANNEXE O.', detail: 'Couloir lateral des portes barrees des anciens membres. Acces archive apres Remember.', color: '#bb6a75', floor: '#4a1727', ceiling: '#25101d', unlocked: unlocked(9) },
-      51: { name: 'DORM HALL / ANNEXE EST', short: 'ANNEXE E.', detail: 'Second couloir lateral des portes barrees des anciens membres. Acces archive apres Remember.', color: '#a85e70', floor: '#431523', ceiling: '#210e1a', unlocked: unlocked(9) },
+      50: { name: 'DORM HALL / NPC ANNEX WEST', short: 'ANNEXE O.', detail: 'Couloir lateral de chambres de mannequins PNJ. Les anciens membres restent dans le couloir central, conformement au plan montre.', color: '#bb6a75', floor: '#4a1727', ceiling: '#25101d', unlocked: unlockedAt(1, 0) },
+      51: { name: 'DORM HALL / NPC ANNEX EAST', short: 'ANNEXE E.', detail: 'Second couloir lateral de chambres de mannequins PNJ, sans porte attribuee aux anciens humains nommes.', color: '#a85e70', floor: '#431523', ceiling: '#210e1a', unlocked: unlockedAt(1, 0) },
       64: { name: 'MILDENHALL UPPER HALL / RECONSTRUCTION', short: 'MANOR II', detail: 'Etage praticable reconstruit par CainOS depuis les volumes visibles du manoir; son plan exact n est pas canonique.', color: '#a9c9db', floor: '#211a2c', ceiling: '#050816', unlocked: unlockedAt(3, 1) },
       65: { name: 'MILDENHALL ATTIC / RECONSTRUCTION', short: 'GRENIER', detail: 'Grenier CainOS inspire du manoir. Les accessoires prolongent la scene sans affirmer un interieur officiel.', color: '#8a7890', floor: '#19131d', ceiling: '#030307', unlocked: unlockedAt(3, 1) },
       66: { name: 'CANDY PALACE UPPER GALLERY / RECONSTRUCTION', short: 'PALAIS II', detail: 'Galerie haute reconstruite depuis l architecture du palais de Loolilalu; circulation CainOS non montree dans l episode.', color: '#ff9ad5', floor: '#ffe1ed', ceiling: '#7d3f8c', unlocked: unlockedAt(2, 2) },
@@ -1687,50 +1687,50 @@ const OS = {
       71: { name: 'SNOWY TUNDRA', short: 'TOUNDRA', detail: 'Micro-aventure enneigee entrevue dans Untitled; distincte du Snowy Summit de Remember.', color: '#e8f7ff', floor: '#cfe6ef', ceiling: '#7aa7cc', unlocked: unlockedAt(5, 1) },
       72: { name: "SPUDSY'S PARKING LOT", short: 'PARKING', detail: 'Exterieur du restaurant ou le service de Gangle se termine brutalement.', color: '#ff4d4d', floor: '#36363d', ceiling: '#41213c', unlocked: unlockedAt(4, 7) },
       73: { name: 'C&A BRAIN SCANNER ROOM', short: 'SCANNER', detail: 'Salle C&A inachevee: poste de Scratch, vieux PC, casque et scanners cerebraux de Remember.', color: '#c5d6e8', floor: '#8e959f', ceiling: '#252a31', unlocked: unlockedAt(9, 6) },
-      74: { name: 'JAX PSYCHE', short: 'PSYCHE JAX', detail: 'Espace mental de Remember contenant les personas, souvenirs et projections de Jax.', color: '#8a4fd6', floor: '#24192f', ceiling: '#08050d', unlocked: unlockedAt(9, 4) },
+      74: { name: 'JAX PSYCHE / FIVE-DOOR FOYER', short: 'FOYER PSYCHE', detail: 'Foyer violet a cinq portes de Remember; les scenarios et la piece des personas sont des zones separees.', color: '#8a4fd6', floor: '#24192f', ceiling: '#08050d', unlocked: unlockedAt(9, 4) },
       75: { name: 'EXPANDED GROUNDS / POST-REMEMBER', short: 'GROUNDS +', detail: 'Extension des Grounds apres Remember: ilots flottants, biomes relies et grand toboggan.', color: '#7df0ff', floor: '#2b5d3b', ceiling: '#4e9de0', unlocked: unlocked(9) }
     };
     const scenes = {
-      2: { exits: [3, 4, 5, 20, 21, 28, 29, 43], motif: 'circus', size: 23 },
+      2: { exits: [3, 4, 5, 15, 20, 21, 28, 29, 43], motif: 'circus', size: 23 },
       3: { exits: [2, 11, 14, 42, 75], motif: 'grounds', size: 21 },
       4: { exits: [2, 5], motif: 'cellar', size: 13 },
-      5: { exits: [2, 4, 16, 27, 73], motif: 'exit', size: 15 },
-      6: { exits: [7, 29, 32, 33], motif: 'candy', size: 19 },
-      7: { exits: [6, 16, 33], motif: 'test', size: 13 },
-      8: { exits: [9, 29, 64], motif: 'manor', size: 17 },
-      9: { exits: [8, 34], motif: 'basement', size: 13 },
+      5: { exits: [2, 97], motif: 'exit', size: 15 },
+      6: { exits: [7, 29, 33, 83], motif: 'candy', size: 19 },
+      7: { exits: [6, 33], motif: 'test', size: 13 },
+      8: { exits: [29, 64, 85], motif: 'manor', size: 17 },
+      9: { exits: [34, 89], motif: 'basement', size: 13 },
       10: { exits: [11, 29, 35, 36, 37, 72], motif: 'spudsy', size: 17 },
       11: { exits: [3, 10, 12, 13, 24, 25, 26, 29, 71], motif: 'micro', size: 19 },
       12: { exits: [11], motif: 'softball', size: 19 },
-      13: { exits: [11, 29, 38], motif: 'guns', size: 17 },
-      14: { exits: [3, 15, 39, 40, 70], motif: 'lake', size: 21 },
-      15: { exits: [14, 16, 41], motif: 'admin', size: 13 },
-      16: { exits: [5, 7, 15, 17, 18, 29, 73], motif: 'core', size: 17 },
+      13: { exits: [11, 29, 90, 91], motif: 'guns', size: 17 },
+      14: { exits: [3, 39, 40, 70], motif: 'lake', size: 21 },
+      15: { exits: [2, 94], motif: 'admin', size: 13 },
+      16: { exits: [17, 18, 73, 94, 95, 96, 107], motif: 'core', size: 17 },
       17: { exits: [16], motif: 'memory', size: 13 },
-      18: { exits: [16, 19, 21, 22, 23, 29, 74, 75], motif: 'final', size: 19 },
+      18: { exits: [16, 19, 21, 22, 23, 29, 74, 75, 109], motif: 'final', size: 19 },
       19: { exits: [18], motif: 'archive', size: 15 },
       20: { exits: [2, 28, 50, 51], motif: 'dorm', size: 21 },
-      21: { exits: [2, 18, 43], motif: 'cafe', size: 15 },
+      21: { exits: [2, 18, 43, 108], motif: 'cafe', size: 15 },
       22: { exits: [18, 30], motif: 'aquarium', size: 17 },
       23: { exits: [18], motif: 'snow', size: 17 },
       24: { exits: [11], motif: 'poacher', size: 17 },
       25: { exits: [11], motif: 'school', size: 17 },
       26: { exits: [11], motif: 'whitehouse', size: 15 },
-      27: { exits: [5], motif: 'void', size: 21 },
+      27: { exits: [100], motif: 'void', size: 21 },
       28: { exits: [2, 20, 29, 30, 31, 43], motif: 'common', size: 19 },
       29: { exits: [2, 6, 8, 10, 11, 13, 16, 18, 28, 38], motif: 'tubes', size: 23 },
       30: { exits: [28, 22], motif: 'loser', size: 13 },
       31: { exits: [28], motif: 'nest', size: 15 },
-      32: { exits: [6, 33, 66], motif: 'palace', size: 17 },
-      33: { exits: [6, 32, 7], motif: 'route', size: 21 },
+      32: { exits: [33, 66, 83], motif: 'palace', size: 17 },
+      33: { exits: [6, 32, 7, 84], motif: 'route', size: 21 },
       34: { exits: [9], motif: 'hell', size: 15 },
       35: { exits: [10, 36, 37], motif: 'kitchen', size: 15 },
       36: { exits: [10, 35], motif: 'bathroom', size: 11 },
       37: { exits: [10, 35], motif: 'training', size: 11 },
-      38: { exits: [13, 29], motif: 'awards', size: 19 },
+      38: { exits: [91, 93], motif: 'awards', size: 19 },
       39: { exits: [14, 68], motif: 'lighthouse', size: 15 },
       40: { exits: [14], motif: 'underwater', size: 17 },
-      41: { exits: [15], motif: 'street', size: 17 },
+      41: { exits: [94], motif: 'street', size: 17 },
       42: { exits: [3], motif: 'carnival', size: 19 },
       43: { exits: [2, 28, 21], motif: 'dining', size: 15 },
       50: { exits: [20], motif: 'dormannex', size: 21 },
@@ -1744,10 +1744,36 @@ const OS = {
       70: { exits: [14], motif: 'grounds', size: 17 },
       71: { exits: [11], motif: 'snow', size: 19 },
       72: { exits: [10], motif: 'street', size: 17 },
-      73: { exits: [16, 5], motif: 'exit', size: 15 },
-      74: { exits: [18], motif: 'memory', size: 17 },
+      73: { exits: [16, 98, 99], motif: 'exit', size: 15 },
+      74: { exits: [18, 101, 102, 103, 104], motif: 'memory', size: 17 },
       75: { exits: [3, 18], motif: 'grounds', size: 23 }
     };
+
+    const canonRooms = this.getCircusCanonRoomDefinitions();
+    Object.entries(canonRooms).forEach(([zoneId, room]) => {
+      const id = Number(zoneId);
+      const provenanceSuffix = room.provenance === 'mentioned'
+        ? ' / RECONSTRUCTION MENTIONNEE'
+        : room.provenance === 'projection' ? ' / PROJECTION' : '';
+      portals[id] = {
+        name: `${room.name}${provenanceSuffix}`,
+        short: room.short,
+        detail: room.detail,
+        color: room.color,
+        floor: room.floor,
+        ceiling: room.ceiling,
+        provenance: room.provenance,
+        unlocked: unlockedAt(room.gateEpisode, room.gateSubepisode || 0)
+      };
+      scenes[id] = { exits: [...new Set(room.exits || [])], motif: room.motif, size: room.size || 15 };
+    });
+    Object.entries(canonRooms).forEach(([zoneId, room]) => {
+      const id = Number(zoneId);
+      (room.exits || []).forEach(targetId => {
+        if (!scenes[targetId]) return;
+        scenes[targetId].exits = [...new Set([...(scenes[targetId].exits || []), id])];
+      });
+    });
 
     Object.entries(this.getCircusBedroomDefinitions()).forEach(([zoneId, room]) => {
       const id = Number(zoneId);
@@ -2290,7 +2316,12 @@ const OS = {
       [42, 'DIGITAL CARNIVAL'], [43, 'SALLE A MANGER'], [70, 'SHRIMP TOWN'], [71, 'SNOWY TUNDRA'],
       [72, "PARKING SPUDSY'S"], [73, 'C&A BRAIN SCANNER ROOM'], [74, 'PSYCHE DE JAX'], [75, 'GROUNDS ETENDUS']
     ].map(([target, label]) => ({ episode: 0, target, label: `LIBRE - ${label}` }));
-    return [...canonical, ...extras].filter((world, index, list) => list.findIndex(item => item.target === world.target) === index);
+    const canonRooms = Object.entries(this.getCircusCanonRoomDefinitions()).map(([target, room]) => ({
+      episode: 0,
+      target: Number(target),
+      label: `LIBRE - ${room.short}${room.provenance === 'mentioned' ? ' / RECONSTRUCTION' : room.provenance === 'projection' ? ' / PROJECTION' : ''}`
+    }));
+    return [...canonical, ...extras, ...canonRooms].filter((world, index, list) => list.findIndex(item => item.target === world.target) === index);
   },
 
   getCircusAdventurePortalConfig() {
@@ -2462,8 +2493,8 @@ const OS = {
         [7, 'look', 'archive'], [7, 'talk', 'gummigoo'], [6, 'talk', 'gummigoo'], [6, 'look', 'candy']
       ] },
       3: { title: 'The Mystery Of Mildenhall Manor', steps: [
-        [2, 'talk', 'pomni'], [8, 'use', 'candle'], [8, 'talk', 'marthamildenhall'], [8, 'survive', 'mildenhall'],
-        [9, 'talk', 'kinger'], [34, 'use', 'candle'], [17, 'talk', 'queenie'], [8, 'visit', '8']
+        [8, 'visit', '8'], [85, 'look', 'ceilinglight'], [86, 'look', 'doorframe'], [88, 'look', 'lorebillboard'],
+        [89, 'visit', '89'], [9, 'talk', 'kinger'], [34, 'use', 'candle'], [17, 'talk', 'queenie']
       ] },
       4: { title: 'Fast Food Masquerade', steps: [
         [2, 'talk', 'gangle'], [10, 'look', 'menu'], [35, 'use', 'counter'], [10, 'take', 'menu'],
@@ -2474,20 +2505,20 @@ const OS = {
         [25, 'look', 'card'], [28, 'talk', 'ragatha'], [12, 'use', 'scoreboard'], [12, 'use', 'base']
       ] },
       6: { title: 'They All Get Guns', steps: [
-        [2, 'talk', 'zooble'], [13, 'look', 'target'], [13, 'use', 'target'], [13, 'talk', 'jax'],
-        [13, 'use', 'target'], [2, 'talk', 'kinger'], [2, 'talk', 'pomni'], [38, 'look', 'spotlight']
+        [2, 'talk', 'zooble'], [90, 'look', 'table'], [13, 'use', 'target'], [13, 'talk', 'jax'],
+        [91, 'look', 'doorframe'], [92, 'talk', 'disappearingguy'], [93, 'look', 'card'], [38, 'talk', 'caine']
       ] },
       7: { title: 'Beach Episode', steps: [
-        [2, 'talk', 'caine'], [14, 'use', 'umbrella'], [14, 'talk', 'sun'], [15, 'look', 'console'],
-        [15, 'take', 'card'], [16, 'talk', 'abelmannequin'], [15, 'use', 'gridnode'], [16, 'use', 'console']
+        [15, 'talk', 'caine'], [14, 'use', 'umbrella'], [14, 'talk', 'sun'], [94, 'look', 'console'],
+        [94, 'talk', 'abelmannequin'], [16, 'talk', 'caine'], [95, 'use', 'console'], [96, 'talk', 'jax']
       ] },
       8: { title: 'hjsakldfhl', steps: [
-        [17, 'talk', 'queenie'], [17, 'talk', 'kinger'], [2, 'talk', 'caine'], [28, 'talk', 'ragatha'],
-        [16, 'look', 'archive'], [16, 'use', 'console'], [16, 'talk', 'caine'], [16, 'survive', 'core']
+        [113, 'look', 'gridnode'], [17, 'talk', 'queenie'], [28, 'talk', 'ragatha'], [16, 'use', 'console'],
+        [111, 'use', 'target'], [114, 'look', 'lorebillboard'], [116, 'look', 'window'], [119, 'look', 'gridnode']
       ] },
       9: { title: 'Remember', steps: [
-        [18, 'look', 'memory'], [16, 'use', 'console'], [19, 'talk', 'ribbit'], [18, 'talk', 'caine'],
-        [18, 'talk', 'jax'], [41, 'look', 'memory'], [18, 'look', 'archive'], [18, 'talk', 'pomni']
+        [18, 'look', 'memory'], [74, 'look', 'doorframe'], [101, 'look', 'memory'], [104, 'talk', 'jaxmindtrapped'],
+        [105, 'look', 'archive'], [106, 'talk', 'jax'], [73, 'use', 'console'], [109, 'talk', 'pomni']
       ] }
     };
     const blueprint = blueprints[episode];
@@ -2505,6 +2536,12 @@ const OS = {
         requirements
       };
     });
+    if (episode === 8) {
+      stages[4].requirements.push({ action: 'visit', target: '112', count: 1 });
+      stages[5].requirements.push({ action: 'visit', target: '115', count: 1 });
+      stages[6].requirements.push({ action: 'visit', target: '117', count: 1 });
+      stages[6].requirements.push({ action: 'visit', target: '118', count: 1 });
+    }
     return {
       episode,
       title: `${blueprint.title} / CAMPAGNE FPS`,
@@ -2517,6 +2554,12 @@ const OS = {
     const state = this.circusDoom;
     if (!state || !stage || !state.portals[stage.zone]) return;
     state.portals[stage.zone].unlocked = true;
+    stage.requirements
+      .filter(requirement => requirement.action === 'visit')
+      .forEach(requirement => {
+        const target = Number(requirement.target);
+        if (state.portals[target]) state.portals[target].unlocked = true;
+      });
   },
 
   ensureCircusCampaignState() {
@@ -3079,6 +3122,779 @@ const OS = {
     return { kind: 'caineportal', x: 0, z: -4.65, color: '#7df0ff', accent: '#ffd84a', target: config.target, label: config.label };
   },
 
+  getCircusFpsZoneMax() {
+    return 119;
+  },
+
+  getCircusCanonRoomDefinitions() {
+    if (this.circusCanonRoomDefinitions) return this.circusCanonRoomDefinitions;
+    const scan = (title, kinds, talkAvatar = null) => ({ title, kinds, talkAvatar });
+    const rooms = {
+      76: {
+        name: 'DR. FOOTBALL BATHROOM', short: 'DR FOOTBALL',
+        detail: 'Sanitaires trouves derriere une porte aleatoire du chapiteau, avec Dr. Football dans la baignoire.',
+        color: '#d94338', floor: '#d8ecf0', ceiling: '#f5fbff', motif: 'bathroom', size: 11,
+        gateEpisode: 1, gateSubepisode: 2, provenance: 'shown', exits: [29],
+        props: [
+          { kind: 'window', x: 0, z: -3.0, color: '#b8e6ef', label: 'Grand miroir embue' },
+          { kind: 'barrel', x: -1.65, z: -2.15, color: '#f5f5f0', label: 'Baignoire de Dr. Football' },
+          { kind: 'table', x: 1.75, z: -1.75, color: '#d7eef1', label: 'Lavabo du sanitaire' },
+          { kind: 'doorframe', x: 0, z: -1.2, color: '#d94338', label: 'Porte aleatoire du chapiteau' }
+        ],
+        sprites: [{ name: 'Dr. Football', type: 'prop', avatar: 'drfootball', x: -1.55, z: -2.2, color: '#d94338', sizeScale: 0.86, silent: true }],
+        objective: scan('RELEVER LE SANITAIRE IMPOSSIBLE', ['window', 'barrel'], 'drfootball')
+      },
+      77: {
+        name: 'FLOODED FISH ROOM', short: 'SALLE NOYEE',
+        detail: 'Piece aleatoire entierement inondee, peuplee de poissons sans identite confirmee.',
+        color: '#45cbe8', floor: '#0b7890', ceiling: '#bcefff', motif: 'underwater', size: 13,
+        gateEpisode: 1, gateSubepisode: 2, provenance: 'shown', exits: [29],
+        props: [
+          { kind: 'wave', x: -2.2, z: -2.1, color: '#4ee7ff', label: 'Eau jusqu au plafond' },
+          { kind: 'wave', x: 0, z: -3.0, color: '#72efff', label: 'Courant de poissons' },
+          { kind: 'wave', x: 2.2, z: -2.1, color: '#4ee7ff', label: 'Boucle de la salle noyee' },
+          { kind: 'window', x: 0, z: -1.25, color: '#d8fbff', label: 'Porte vue sous l eau' }
+        ],
+        sprites: [], objective: scan('CARTOGRAPHIER LA SALLE NOYEE', ['wave', 'window'])
+      },
+      78: {
+        name: 'BOXING GLOVE TRAP ROOM', short: 'PIEGE GANT',
+        detail: 'Piece-piege du couloir aleatoire; un gant de boxe jaillit sur ressort quand la porte est testee.',
+        color: '#e53935', floor: '#5a2442', ceiling: '#24112f', motif: 'tubes', size: 11,
+        gateEpisode: 1, gateSubepisode: 2, provenance: 'shown', exits: [29],
+        props: [
+          { kind: 'target', x: 0, z: -2.75, color: '#e53935', label: 'Gant de boxe sur ressort' },
+          { kind: 'doorframe', x: -2.1, z: -2.15, color: '#ffd84a', label: 'Premiere porte piegee' },
+          { kind: 'doorframe', x: 2.1, z: -2.15, color: '#2a58d8', label: 'Seconde porte piegee' },
+          { kind: 'ring', x: 0, z: -1.25, color: '#ff4fb8', label: 'Ressort retractable' }
+        ],
+        sprites: [], objective: scan('DESAMORCER LE GANT SUR RESSORT', ['target', 'doorframe'])
+      },
+      79: {
+        name: 'ENDLESS GOLDEN CAROUSEL VOID', short: 'CARROUSEL',
+        detail: 'Vide gigantesque rempli de carrousels dores empiles sans fin derriere une porte du chapiteau.',
+        color: '#e8bd45', floor: '#090612', ceiling: '#030106', motif: 'void', size: 21,
+        gateEpisode: 1, gateSubepisode: 2, provenance: 'shown', exits: [29],
+        props: [
+          { kind: 'ring', x: 0, z: -3.4, color: '#ffd84a', label: 'Carrousel dore principal' },
+          { kind: 'ring', x: -3.1, z: -5.0, color: '#c99b2b', label: 'Carrousel superieur gauche' },
+          { kind: 'ring', x: 3.1, z: -5.4, color: '#fff1a8', label: 'Carrousel superieur droit' },
+          { kind: 'pillar', x: 0, z: -4.1, color: '#e8bd45', label: 'Axe sans fin' },
+          { kind: 'spotlight', x: -1.8, z: -2.1, color: '#fff1a8' },
+          { kind: 'spotlight', x: 1.8, z: -2.1, color: '#fff1a8' }
+        ],
+        sprites: [], objective: scan('FIXER UN REPERE DANS LE VIDE DORE', ['ring', 'pillar'])
+      },
+      80: {
+        name: 'NESTED DOOR CORRIDOR', short: 'PORTES BIS',
+        detail: 'Couloir intermediaire qui debouche sur une nouvelle rangee de portes aleatoires.',
+        color: '#7df0ff', floor: '#db7629', ceiling: '#25102f', motif: 'tubes', size: 17,
+        gateEpisode: 1, gateSubepisode: 2, provenance: 'shown', exits: [29],
+        props: [
+          { kind: 'doorframe', x: -2.9, z: -3.1, color: '#e53935', label: 'Porte imbriquee rouge' },
+          { kind: 'doorframe', x: -1.0, z: -3.6, color: '#ffd84a', label: 'Porte imbriquee jaune' },
+          { kind: 'doorframe', x: 1.0, z: -3.6, color: '#2a58d8', label: 'Porte imbriquee bleue' },
+          { kind: 'doorframe', x: 2.9, z: -3.1, color: '#ff4fb8', label: 'Porte imbriquee rose' },
+          { kind: 'ring', x: 0, z: -1.35, color: '#7df0ff', label: 'Tube de liaison' }
+        ],
+        sprites: [], objective: scan('RELEVER LE SECOND COULOIR', ['doorframe', 'ring'])
+      },
+      81: {
+        name: 'BALL PIT / MENTIONED RECONSTRUCTION', short: 'BALL PIT',
+        detail: 'Activite citee dans le chapiteau mais jamais montree. Le volume jouable est une reconstruction CainOS explicitement non officielle.',
+        color: '#ff4fb8', floor: '#2a58d8', ceiling: '#ffd84a', motif: 'common', size: 15,
+        gateEpisode: 1, gateSubepisode: 0, provenance: 'mentioned', exits: [29],
+        props: [
+          { kind: 'ring', x: 0, z: -2.9, color: '#fff1a8', label: 'Bassin de balles reconstruit' },
+          { kind: 'balloon', x: -1.8, z: -1.7, color: '#e53935', label: 'Balle rouge' },
+          { kind: 'balloon', x: 0, z: -1.35, color: '#ffd84a', label: 'Balle jaune' },
+          { kind: 'balloon', x: 1.8, z: -1.7, color: '#2a58d8', label: 'Balle bleue' },
+          { kind: 'archive', x: 2.7, z: -2.7, color: '#c875ff', label: 'Mention canon / plan inconnu' }
+        ],
+        sprites: [], objective: scan('BORNER LA RECONSTRUCTION BALL PIT', ['ring', 'archive'])
+      },
+      82: {
+        name: 'MINI GOLF / MENTIONED RECONSTRUCTION', short: 'MINI GOLF',
+        detail: 'Mini-golf cite parmi les activites, sans plan montre. CainOS le garde comme reconstruction balisee.',
+        color: '#79d85b', floor: '#2f6b34', ceiling: '#5f8ee8', motif: 'carnival', size: 17,
+        gateEpisode: 1, gateSubepisode: 0, provenance: 'mentioned', exits: [29],
+        props: [
+          { kind: 'base', x: -2.2, z: -2.15, color: '#ffffff', label: 'Trou de mini-golf reconstruit' },
+          { kind: 'target', x: 0, z: -3.15, color: '#e53935', label: 'Obstacle moulin CainOS' },
+          { kind: 'ring', x: 2.2, z: -2.2, color: '#ffd84a', label: 'Boucle de parcours' },
+          { kind: 'archive', x: 0, z: -1.2, color: '#c875ff', label: 'Mention canon / plan inconnu' }
+        ],
+        sprites: [], objective: scan('VERIFIER LE MINI-GOLF MENTIONNE', ['base', 'archive'])
+      },
+      83: {
+        name: 'CANDY CAPITAL GATE AND VILLAGE', short: 'CAPITALE',
+        detail: 'Village bonbon et grande enceinte defensive entourant le palais central de Candy Canyon.',
+        color: '#ff9ad5', floor: '#e8a66f', ceiling: '#70a7ff', motif: 'candy', size: 23,
+        gateEpisode: 2, gateSubepisode: 1, provenance: 'shown', exits: [6, 32],
+        props: [
+          { kind: 'building', style: 'village', x: -3.4, z: -4.4, width: 2.4, depth: 1.7, height: 2.8, roofHeight: 0.9, color: '#ffb1d6', accent: '#fff1a8', label: 'Maisons du village bonbon' },
+          { kind: 'building', style: 'palace', x: 2.9, z: -4.9, width: 3.0, depth: 1.9, height: 4.5, roofHeight: 1.5, color: '#ff9ad5', accent: '#7d3f8c', label: 'Palais derriere les remparts' },
+          { kind: 'doorframe', x: 0, z: -3.4, color: '#ffd84a', label: 'Grande porte de la capitale' },
+          { kind: 'candy', x: -1.5, z: -1.45, color: '#ff4fb8' },
+          { kind: 'candy', x: 1.5, z: -1.45, color: '#7df0ff' }
+        ],
+        sprites: [
+          { name: 'Candy Guard Cyan', type: 'mannequin', avatar: 'candyguardcyan', x: -1.1, z: -2.7, color: '#27d7e7' },
+          { name: 'Candy Guard Blue', type: 'mannequin', avatar: 'candyguardblue', x: 1.1, z: -2.7, color: '#2568f5' },
+          { name: 'Orange Mannequin', type: 'mannequin', avatar: 'orangemannequin', x: -2.6, z: -1.55, color: '#ff8a2a', sizeScale: 0.72 }
+        ],
+        objective: scan('FRANCHIR LA CAPITALE BONBON', ['doorframe', 'building'], 'candyguardcyan')
+      },
+      84: {
+        name: 'FUDGE EXILE CANYON', short: 'EXIL FUDGE',
+        detail: 'Bord recule de Candy Canyon ou The Fudge est exile, hors de la capitale fortifiee.',
+        color: '#7a3d1a', floor: '#d97b35', ceiling: '#5f8ee8', motif: 'route', size: 19,
+        gateEpisode: 2, gateSubepisode: 5, provenance: 'shown', exits: [33],
+        props: [
+          { kind: 'candy', x: -2.8, z: -3.1, color: '#ff9b37', label: 'Formation rocheuse bonbon' },
+          { kind: 'candy', x: 2.8, z: -3.35, color: '#ff4fb8', label: 'Paroi du canyon sucre' },
+          { kind: 'barrel', x: -1.25, z: -1.45, color: '#5a2a12', label: 'Reserve de nourriture de Fudge' },
+          { kind: 'candle', x: 1.15, z: -1.4, color: '#ff7a30', label: 'Feu de l exile' }
+        ],
+        sprites: [{ name: 'The Fudge', type: 'npc', avatar: 'fudge', x: 0.2, z: -2.75, color: '#7a3d1a', sizeScale: 1.35 }],
+        objective: scan('RELEVER LE BORD D EXIL', ['candy', 'barrel'], 'fudge')
+      },
+      85: {
+        name: 'MILDENHALL ENTRY HALL', short: 'HALL MANOIR',
+        detail: 'Grand vestibule du manoir, organise autour de son lustre avant la separation du groupe.',
+        color: '#55405c', floor: '#251c2d', ceiling: '#100917', motif: 'manor', size: 19,
+        gateEpisode: 3, gateSubepisode: 1, provenance: 'shown', exits: [8, 86],
+        props: [
+          { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'chandelier', x: 0, z: -1.2, color: '#ffd878', label: 'Lustre du vestibule' },
+          { kind: 'stairs', x: 0, z: -3.4, color: '#756a78', label: 'Escalier du grand hall' },
+          { kind: 'window', x: -2.75, z: -2.5, color: '#b7f0ff' },
+          { kind: 'window', x: 2.75, z: -2.5, color: '#b7f0ff' },
+          { kind: 'table', x: 0, z: -1.35, color: '#5b3d28', label: 'Table d accueil Mildenhall' }
+        ],
+        sprites: [
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -1.25, z: -2.2, color: '#e53935' },
+          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: 1.2, z: -2.35, color: '#d9d0a2' }
+        ],
+        objective: scan('ECLAIRER LE VESTIBULE', ['ceilinglight', 'stairs'], 'kinger')
+      },
+      86: {
+        name: 'MILDENHALL TWO-DOOR CHOICE', short: 'DEUX PORTES',
+        detail: 'Palier du choix entre la porte normale et la porte explicitement vraiment effrayante.',
+        color: '#403044', floor: '#211a2c', ceiling: '#08050d', motif: 'manor', size: 13,
+        gateEpisode: 3, gateSubepisode: 2, provenance: 'shown', exits: [85, 64, 87],
+        props: [
+          { kind: 'doorframe', x: -2.05, z: -3.0, color: '#b7f0ff', label: 'Porte normale' },
+          { kind: 'doorframe', x: 2.05, z: -3.0, color: '#e53935', label: 'Porte vraiment effrayante' },
+          { kind: 'candle', x: 0, z: -1.35, color: '#ffd878', label: 'Bougie du choix' },
+          { kind: 'wallart', anchor: 'wall-left', x: -1.48, z: -0.6, color: '#7c88a1', art: 'blocks' }
+        ],
+        sprites: [
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -0.8, z: -2.15, color: '#e53935' },
+          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: 0.9, z: -2.2, color: '#d9d0a2' }
+        ],
+        objective: scan('IDENTIFIER LES DEUX BRANCHES', ['doorframe', 'candle'], 'pomni')
+      },
+      87: {
+        name: 'MILDENHALL ORGANIC TUNNEL', short: 'TUNNEL ORG.',
+        detail: 'Tunnel organique derriere la porte effrayante, avec parois charnelles et langue suspendue.',
+        color: '#7c1628', floor: '#3d0912', ceiling: '#160207', motif: 'hell', size: 15,
+        gateEpisode: 3, gateSubepisode: 3, provenance: 'shown', exits: [86, 88],
+        props: [
+          { kind: 'ring', x: 0, z: -3.25, color: '#a72b3f', label: 'Paroi organique annulaire' },
+          { kind: 'ring', x: 0, z: -1.75, color: '#7c1628', label: 'Contraction du tunnel' },
+          { kind: 'pillar', x: 0, z: -2.8, color: '#d34d58', label: 'Langue suspendue' },
+          { kind: 'eye', x: -2.1, z: -2.2, color: '#fff1a8', label: 'Oeil dans la paroi' }
+        ],
+        sprites: [], objective: scan('TRAVERSER LE TUNNEL ORGANIQUE', ['ring', 'pillar'])
+      },
+      88: {
+        name: 'MILDENHALL TROPHY ROOM', short: 'TROPHEES',
+        detail: 'Salle aux tetes deformees de membres du Cirque, avec l Angel au-dessus de la cheminee.',
+        color: '#312231', floor: '#281b21', ceiling: '#09050b', motif: 'manor', size: 17,
+        gateEpisode: 3, gateSubepisode: 3, provenance: 'shown', exits: [87, 89],
+        props: [
+          { kind: 'counter', x: 0, z: -3.35, color: '#5b3228', label: 'Cheminee de la salle des trophees' },
+          { kind: 'lorebillboard', avatar: 'angel', label: 'Tete de l Angel', x: 0, z: -4.0, color: '#e5d7d7', sizeScale: 1.35 },
+          { kind: 'wallart', anchor: 'wall-left', x: -1.48, z: -1.4, color: '#d64545', art: 'spiral', label: 'Trophees deformes gauche' },
+          { kind: 'wallart', anchor: 'wall-right', x: 1.48, z: -1.4, color: '#8a4fd6', art: 'blocks', label: 'Trophees deformes droite' },
+          { kind: 'archive', x: -2.35, z: -1.25, color: '#7df0ff', label: 'Enregistrement de Theodore Mildenhall' },
+          { kind: 'target', x: 2.25, z: -1.25, color: '#5b3d28', label: 'Fusil de Kinger', portable: true }
+        ],
+        sprites: [
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -0.9, z: -2.15, color: '#e53935' },
+          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: 0.9, z: -2.2, color: '#d9d0a2' }
+        ],
+        objective: scan('RELEVER LES TROPHEES DU MANOIR', ['lorebillboard', 'archive'], 'kinger')
+      },
+      89: {
+        name: 'MILDENHALL DUMBWAITER SHAFT', short: 'MONTE-PLAT',
+        detail: 'Etroit monte-plat de la salle des trophees, seul passage vers la cave a vin.',
+        color: '#65556b', floor: '#171219', ceiling: '#030307', motif: 'basement', size: 9,
+        gateEpisode: 3, gateSubepisode: 4, provenance: 'shown', exits: [88, 9],
+        props: [
+          { kind: 'doorframe', x: 0, z: -2.4, color: '#7c88a1', label: 'Trappe du monte-plat' },
+          { kind: 'stairs', x: 0, z: -1.35, color: '#4d4a58', label: 'Descente verticale simulee' },
+          { kind: 'crate', x: -1.25, z: -2.0, color: '#4b382d', label: 'Caisse du monte-plat' },
+          { kind: 'candle', x: 1.25, z: -1.9, color: '#ffd878', label: 'Derniere lampe du puits' }
+        ],
+        sprites: [], objective: scan('DESCENDRE LE MONTE-PLAT', ['doorframe', 'stairs'])
+      },
+      90: {
+        name: 'PRIVATE TRUST EXERCISE ROOM', short: 'CONFIANCE',
+        detail: 'Piece privee de l aventure armee ou Caine isole un exercice de confiance avant les epreuves publiques.',
+        color: '#382c1b', floor: '#2f2610', ceiling: '#17110a', motif: 'guns', size: 13,
+        gateEpisode: 6, gateSubepisode: 3, provenance: 'shown', exits: [13],
+        props: [
+          { kind: 'table', x: 0, z: -2.8, color: '#6b4a25', label: 'Table de l exercice de confiance' },
+          { kind: 'target', x: -2.0, z: -2.15, color: '#f6d743', label: 'Marqueur de choix gauche' },
+          { kind: 'target', x: 2.0, z: -2.15, color: '#e53935', label: 'Marqueur de choix droit' },
+          { kind: 'scoreboard', x: 0, z: -1.25, color: '#ffffff', label: 'Compteur prive de Caine' }
+        ],
+        sprites: [{ name: 'Caine', type: 'caine', avatar: 'caine', x: 0.2, z: -2.2, color: '#ffd84a' }],
+        objective: scan('CONTROLER L EXERCICE PRIVE', ['table', 'target'], 'caine')
+      },
+      91: {
+        name: 'FAVORITE CHARACTER THEATER HALLWAYS', short: 'HALL THEATRE',
+        detail: 'Couloirs du theatre reliant l auditorium, les sanitaires et les coulisses du vote.',
+        color: '#7e1d31', floor: '#3a1721', ceiling: '#160712', motif: 'awards', size: 19,
+        gateEpisode: 6, gateSubepisode: 7, provenance: 'shown', exits: [13, 38, 92, 93],
+        props: [
+          { kind: 'doorframe', x: -2.7, z: -3.15, color: '#ffd84a', label: 'Portes de l auditorium' },
+          { kind: 'doorframe', x: 0, z: -3.6, color: '#f7f7f7', label: 'Acces aux sanitaires du theatre' },
+          { kind: 'doorframe', x: 2.7, z: -3.15, color: '#e53935', label: 'Acces aux coulisses' },
+          { kind: 'wallart', anchor: 'wall-left', x: -1.48, z: -0.9, color: '#ffd84a', art: 'blocks', label: 'Affiche Favorite Character Awards' },
+          { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'stage', x: 0, z: -0.2, color: '#fff1a8' }
+        ],
+        sprites: [{ name: 'Committee Member', type: 'mannequin', avatar: 'committeemember', x: 0.8, z: -2.25, color: '#f4f4f0' }],
+        objective: scan('CARTOGRAPHIER LE THEATRE', ['doorframe', 'wallart'], 'committeemember')
+      },
+      92: {
+        name: 'FAVORITE CHARACTER THEATER BATHROOM', short: 'WC THEATRE',
+        detail: 'Sanitaires du theatre ou Jax rencontre le Disappearing Guy pendant la ceremonie.',
+        color: '#c8cec8', floor: '#dadbd6', ceiling: '#f5f5ef', motif: 'bathroom', size: 11,
+        gateEpisode: 6, gateSubepisode: 7, provenance: 'shown', exits: [91],
+        props: [
+          { kind: 'window', x: 0, z: -3.0, color: '#e8f5f4', label: 'Miroir du theatre' },
+          { kind: 'barrel', x: -1.7, z: -2.0, color: '#ffffff', label: 'Cabine sanitaire gauche' },
+          { kind: 'barrel', x: 1.7, z: -2.0, color: '#ffffff', label: 'Cabine sanitaire droite' },
+          { kind: 'doorframe', x: 0, z: -1.2, color: '#7e1d31', label: 'Retour vers le hall' }
+        ],
+        sprites: [
+          { name: 'Jax', type: 'jax', avatar: 'jax', x: -0.8, z: -2.25, color: '#8a4fd6' },
+          { name: 'Disappearing Guy', type: 'mannequin', avatar: 'disappearingguy', x: 0.9, z: -2.35, color: '#c34232' }
+        ],
+        objective: scan('RELEVER LA RENCONTRE DU SANITAIRE', ['window', 'barrel'], 'disappearingguy')
+      },
+      93: {
+        name: 'THEATER BACKSTAGE BALLOT ROOM', short: 'COULISSES',
+        detail: 'Coulisses ou sont conserves les bulletins et accessoires du Favorite Character Award.',
+        color: '#552032', floor: '#27151d', ceiling: '#0e0710', motif: 'awards', size: 15,
+        gateEpisode: 6, gateSubepisode: 7, provenance: 'shown', exits: [91, 38],
+        props: [
+          { kind: 'card', x: -1.7, z: -2.25, color: '#e53935', label: 'Bulletins de vote' },
+          { kind: 'card', x: 1.7, z: -2.25, color: '#ffd84a', label: 'Resultats Favorite Character' },
+          { kind: 'crate', x: -2.65, z: -1.35, color: '#5c3a21', label: 'Caisse de trophees' },
+          { kind: 'spotlight', x: 2.5, z: -2.8, color: '#fff1a8', label: 'Projecteur des coulisses' },
+          { kind: 'scoreboard', x: 0, z: -3.25, color: '#ffd84a', label: 'Tableau du verdict' }
+        ],
+        sprites: [{ name: 'Caine', type: 'caine', avatar: 'caine', x: 0.2, z: -2.45, color: '#ffd84a' }],
+        objective: scan('AUDITER LES BULLETINS', ['card', 'scoreboard'], 'caine')
+      },
+      94: {
+        name: 'ADMINISTRATOR ZONE', short: 'ADMIN ZONE',
+        detail: 'Couche administrative separee de la Chinese Room et du bureau personnel de Caine.',
+        color: '#ffcf75', floor: '#302318', ceiling: '#09111e', motif: 'admin', size: 17,
+        gateEpisode: 7, gateSubepisode: 3, provenance: 'shown', exits: [15, 16, 41],
+        props: [
+          { kind: 'console', x: 0, z: -3.0, color: '#ffcf75', label: 'Console de la zone administrateur' },
+          { kind: 'gridnode', x: -2.2, z: -2.2, color: '#7df0ff', label: 'Noeud administrateur gauche' },
+          { kind: 'gridnode', x: 2.2, z: -2.2, color: '#ff7a30', label: 'Noeud administrateur droit' },
+          { kind: 'archive', x: 0, z: -1.25, color: '#c875ff', label: 'Registre C&A' }
+        ],
+        sprites: [
+          { name: 'Ming', type: 'mannequin', avatar: 'ming', x: -1.0, z: -2.2, color: '#b7c7d8' },
+          { name: 'Abel Mannequin', type: 'mannequin', avatar: 'abelmannequin', x: 1.0, z: -2.35, color: '#ff8a30' }
+        ],
+        objective: scan('OUVRIR LA ZONE ADMINISTRATEUR', ['console', 'gridnode'], 'ming')
+      },
+      95: {
+        name: 'CAINE HIDDEN MAIN CONSOLE', short: 'CONSOLE MERE',
+        detail: 'Salle de la console principale cachee derriere la bibliotheque du bureau de Caine.',
+        color: '#ff7a30', floor: '#1b1010', ceiling: '#070305', motif: 'core', size: 15,
+        gateEpisode: 7, gateSubepisode: 4, provenance: 'shown', exits: [16],
+        props: [
+          { kind: 'archive', x: -2.35, z: -2.5, color: '#7a4b32', label: 'Bibliotheque coulissante' },
+          { kind: 'console', x: 0, z: -3.25, color: '#00ddff', label: 'Console principale de Caine' },
+          { kind: 'gridnode', x: -1.6, z: -1.35, color: '#ff7a30', label: 'Controle simulation gauche' },
+          { kind: 'gridnode', x: 1.6, z: -1.35, color: '#7df0ff', label: 'Controle simulation droit' },
+          { kind: 'eye', x: 2.65, z: -2.4, color: '#ff3333', label: 'Monitoring de la console' }
+        ],
+        sprites: [{ name: 'Caine', type: 'caine', avatar: 'caine', x: 0.75, z: -2.2, color: '#ffd84a' }],
+        objective: scan('RELEVER LA CONSOLE CACHEE', ['archive', 'console'], 'caine')
+      },
+      96: {
+        name: 'CAINE AND JAX RESTAURANT', short: 'RESTAURANT',
+        detail: 'Restaurant sans nom utilise par Caine et Jax; distinct du Cafe du Cirque et de Spudsy.',
+        color: '#8b2431', floor: '#4a2024', ceiling: '#1c0b10', motif: 'cafe', size: 15,
+        gateEpisode: 7, gateSubepisode: 6, provenance: 'shown', exits: [16],
+        props: [
+          { kind: 'counter', x: 0, z: -3.0, color: '#d49a62', label: 'Comptoir du restaurant sans nom' },
+          { kind: 'table', x: -1.8, z: -2.0, color: '#7a4b32', label: 'Table de Caine' },
+          { kind: 'table', x: 1.8, z: -2.0, color: '#7a4b32', label: 'Table de Jax' },
+          { kind: 'menu', x: 0, z: -1.25, color: '#fff1a8', label: 'Menu sans enseigne' }
+        ],
+        sprites: [
+          { name: 'Caine', type: 'caine', avatar: 'caine', x: -0.8, z: -2.25, color: '#ffd84a' },
+          { name: 'Jax', type: 'jax', avatar: 'jax', x: 0.9, z: -2.35, color: '#8a4fd6' }
+        ],
+        objective: scan('RELEVER LE RESTAURANT SANS NOM', ['counter', 'menu'], 'jax')
+      },
+      97: {
+        name: 'EXIT OFFICE CUBICLE LOOP', short: 'CUBICLES',
+        detail: 'Premiere boucle de bureaux de la fausse sortie: moquette bleue, cloisons et postes repetes.',
+        color: '#d9e4ee', floor: '#456a8e', ceiling: '#f3f5f5', motif: 'exit', size: 19,
+        gateEpisode: 1, gateSubepisode: 4, provenance: 'shown', exits: [5, 98],
+        props: [
+          { kind: 'desk', x: -2.7, z: -3.0, color: '#b9c6d0', label: 'Cubicle C&A 01' },
+          { kind: 'desk', x: 0, z: -3.5, color: '#b9c6d0', label: 'Cubicle C&A 02' },
+          { kind: 'desk', x: 2.7, z: -3.0, color: '#b9c6d0', label: 'Cubicle C&A 03' },
+          { kind: 'console', x: -1.3, z: -1.35, color: '#d7d7d7', label: 'Ancien terminal de bureau' },
+          { kind: 'archive', x: 1.5, z: -1.35, color: '#aeb7c2', label: 'Classeur metallique' }
+        ],
+        sprites: [], objective: scan('CARTOGRAPHIER LES CUBICLES', ['desk', 'console'])
+      },
+      98: {
+        name: 'EXIT OFFICE LOUNGE AND STORAGE', short: 'BUREAUX II',
+        detail: 'Suite de la fausse sortie avec canapes, bibliotheques, classeurs et rayonnages de stockage.',
+        color: '#eef1f3', floor: '#496f95', ceiling: '#ffffff', motif: 'exit', size: 17,
+        gateEpisode: 1, gateSubepisode: 4, provenance: 'shown', exits: [97, 99, 73],
+        props: [
+          { kind: 'table', x: -2.1, z: -2.2, color: '#66788a', label: 'Canape du salon C&A' },
+          { kind: 'table', x: 2.1, z: -2.2, color: '#66788a', label: 'Second canape C&A' },
+          { kind: 'archive', x: -2.75, z: -3.25, color: '#9ba8b5', label: 'Bibliotheque de bureau' },
+          { kind: 'archive', x: 2.75, z: -3.25, color: '#9ba8b5', label: 'Rayonnage de stockage' },
+          { kind: 'wallart', anchor: 'wall-right', x: 1.48, z: -0.6, color: '#7d8fa3', art: 'blocks', label: 'Tableau de bureau C&A' }
+        ],
+        sprites: [], objective: scan('RELEVER LE SALON DE LA FAUSSE SORTIE', ['table', 'archive'])
+      },
+      99: {
+        name: 'C&A CYAN LOGO ROOM', short: 'LOGO C&A',
+        detail: 'Grande salle blanche portant le logo cyan C&A dans le parcours de la fausse sortie.',
+        color: '#dfe9ed', floor: '#53789b', ceiling: '#ffffff', motif: 'exit', size: 17,
+        gateEpisode: 1, gateSubepisode: 4, provenance: 'shown', exits: [98, 73, 100],
+        props: [
+          { kind: 'wallart', anchor: 'wall-right', x: 1.48, z: -1.2, color: '#00d8e8', art: 'blocks', label: 'Grand logo cyan C&A' },
+          { kind: 'console', x: 0, z: -3.0, color: '#d7d7d7', label: 'Terminal sous le logo C&A' },
+          { kind: 'gridnode', x: -2.1, z: -2.1, color: '#00d8e8', label: 'Noeud cyan gauche' },
+          { kind: 'gridnode', x: 2.1, z: -2.1, color: '#00d8e8', label: 'Noeud cyan droit' }
+        ],
+        sprites: [], objective: scan('IDENTIFIER LA SALLE AU LOGO C&A', ['wallart', 'console'])
+      },
+      100: {
+        name: 'UNFINISHED FINAL EXIT HALL', short: 'HALL INACHEVE',
+        detail: 'Dernier couloir inacheve de la fausse sortie; sa porte finale debouche hors de la carte dans le Vide.',
+        color: '#bfc8d1', floor: '#4c6d8c', ceiling: '#252a31', motif: 'exit', size: 21,
+        gateEpisode: 1, gateSubepisode: 4, provenance: 'shown', exits: [99, 27],
+        props: [
+          { kind: 'doorframe', x: -2.8, z: -3.0, color: '#9ba8b5', label: 'Cadre de bureau inacheve' },
+          { kind: 'gridnode', x: 0, z: -3.8, color: '#7df0ff', label: 'Geometrie non compilee' },
+          { kind: 'exitframe', x: 2.8, z: -3.0, color: '#ffffff', label: 'Derniere porte hors carte' },
+          { kind: 'archive', x: 0, z: -1.25, color: '#c875ff', label: 'Limite de la fausse sortie' }
+        ],
+        sprites: [], objective: scan('SUIVRE LE HALL JUSQU AU VIDE', ['doorframe', 'exitframe'])
+      },
+      101: {
+        name: 'JAX PSYCHE / CROSSED RAGATHA DORM', short: 'SCENARIO I',
+        detail: 'Premier scenario mental: couloir residentiel, porte de Ragatha barree et facade violente de Jax.',
+        color: '#6b2c6f', floor: '#34162d', ceiling: '#100713', motif: 'dorm', size: 17,
+        gateEpisode: 9, gateSubepisode: 4, provenance: 'projection', exits: [74],
+        props: [
+          { kind: 'roomdoor', avatar: 'ragatha', label: 'RAGATHA', side: 'right', anchor: 'wall-right', x: 1.48, z: -2.6, color: '#d64545', sealed: true, archived: true },
+          { kind: 'memory', x: -1.6, z: -2.2, color: '#8a4fd6', label: 'Facade violente de Jax' },
+          { kind: 'lorebillboard', avatar: 'whatifragatha', label: 'What-if Ragatha abstraction', x: 2.7, z: -3.55, color: '#d64545', loreText: 'Projection mentale barree; Ragatha ne s abstrait pas dans cette timeline.' },
+          { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'panel', x: 0, z: 0, color: '#b878e6' }
+        ],
+        sprites: [{ name: 'Killer Jax', type: 'jax', avatar: 'jaxmindviolent', x: -0.35, z: -2.55, color: '#8a4fd6', silent: true }],
+        objective: scan('LIRE LE PREMIER SCENARIO', ['roomdoor', 'memory'], 'jaxmindviolent')
+      },
+      102: {
+        name: 'JAX PSYCHE / ZOOBLE FUNERAL', short: 'SCENARIO II',
+        detail: 'Deuxieme scenario mental: funerailles de Zooble, Gangle au masque plastique et persona maid de Jax.',
+        color: '#392142', floor: '#1d111f', ceiling: '#08040a', motif: 'memory', size: 15,
+        gateEpisode: 9, gateSubepisode: 4, provenance: 'projection', exits: [74],
+        props: [
+          { kind: 'table', x: 0, z: -3.0, color: '#151015', label: 'Cercueil symbolique de Zooble' },
+          { kind: 'memory', x: -2.0, z: -2.1, color: '#f7f7f7', label: 'Masque plastique de Gangle' },
+          { kind: 'archive', x: 2.0, z: -2.1, color: '#ff4fb8', label: 'Trace funeraire de Zooble' },
+          { kind: 'candle', x: -1.2, z: -1.3, color: '#fff1a8' },
+          { kind: 'candle', x: 1.2, z: -1.3, color: '#fff1a8' }
+        ],
+        sprites: [
+          { name: 'Maid Jax Persona', type: 'jax', avatar: 'maidjax', x: -0.8, z: -2.35, color: '#c88aff', silent: true },
+          { name: 'Gangle Projection', type: 'gangle', avatar: 'gangle', x: 0.9, z: -2.45, color: '#f7f7f7', silent: true }
+        ],
+        objective: scan('LIRE LE DEUXIEME SCENARIO', ['table', 'memory'], 'maidjax')
+      },
+      103: {
+        name: 'JAX PSYCHE / LOONEY DESERT CLIFF', short: 'SCENARIO III',
+        detail: 'Troisieme scenario mental: Gangle abstraite, poursuite par Zooble et falaise de desert cartoon.',
+        color: '#d67b3a', floor: '#c9964d', ceiling: '#5f8ee8', motif: 'poacher', size: 21,
+        gateEpisode: 9, gateSubepisode: 4, provenance: 'projection', exits: [74],
+        props: [
+          { kind: 'tower', x: 0, z: -4.8, radius: 1.2, height: 5.6, roofHeight: 0.4, color: '#b96c39', accent: '#e4b469', label: 'Falaise cartoon' },
+          { kind: 'lorebillboard', avatar: 'whatifgangle', label: 'What-if Gangle abstraction', x: -2.7, z: -3.5, color: '#f7f7f7', loreText: 'Projection mentale; Gangle ne s abstrait pas dans la timeline.' },
+          { kind: 'target', x: 2.35, z: -2.15, color: '#ff4fb8', label: 'Trajectoire de la poursuite Zooble' },
+          { kind: 'memory', x: 0, z: -1.3, color: '#8a4fd6', label: 'Gag de chute de Jax' }
+        ],
+        sprites: [
+          { name: 'Cartoonish Jax', type: 'jax', avatar: 'jaxmindcomic', x: -0.8, z: -2.4, color: '#b878e6', silent: true },
+          { name: 'Zooble Projection', type: 'zooble', avatar: 'zooble', x: 0.95, z: -2.5, color: '#ff4fb8', silent: true }
+        ],
+        objective: scan('LIRE LE TROISIEME SCENARIO', ['tower', 'memory'], 'jaxmindcomic')
+      },
+      104: {
+        name: 'JAX PSYCHE / FOUR PERSONAS ROOM', short: '4 JAX',
+        detail: 'Piece des quatre personas de Jax: piano Daisy Bell, cartes, bouteille et derniere porte condamnee.',
+        color: '#8a4fd6', floor: '#24192f', ceiling: '#08050d', motif: 'memory', size: 19,
+        gateEpisode: 9, gateSubepisode: 4, provenance: 'shown', exits: [74, 105],
+        props: [
+          { kind: 'table', x: -2.25, z: -2.5, color: '#5c3a21', label: 'Piano de Daisy Bell' },
+          { kind: 'card', x: 0.3, z: -1.25, color: '#fff1a8', label: 'Jeu de cartes des personas' },
+          { kind: 'barrel', x: 2.3, z: -2.1, color: '#6e3b62', label: 'Bouteille des personas' },
+          { kind: 'doorframe', x: 0, z: -3.8, color: '#8a4fd6', label: 'Porte verrouillee de Jax' },
+          { kind: 'memory', x: 0, z: -2.6, color: '#b878e6', label: 'Cle remise a Pomni' }
+        ],
+        sprites: [
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -2.7, z: -1.45, color: '#e53935' },
+          { name: 'Killer Jax', type: 'jax', avatar: 'jaxmindviolent', x: -1.35, z: -2.25, color: '#8a4fd6', silent: true },
+          { name: 'Cartoonish Jax', type: 'jax', avatar: 'jaxmindcomic', x: 0.1, z: -2.9, color: '#b878e6', silent: true },
+          { name: 'Piano Jax', type: 'jax', avatar: 'jaxmindtrapped', x: 1.55, z: -2.6, color: '#9871ca', silent: true },
+          { name: 'Maid Jax Persona', type: 'jax', avatar: 'maidjax', x: 2.75, z: -1.65, color: '#c88aff', silent: true }
+        ],
+        objective: scan('IDENTIFIER LES QUATRE PERSONAS', ['table', 'card'], 'jaxmindtrapped')
+      },
+      105: {
+        name: 'JAX FINAL MEMORY ROOM', short: 'MEMOIRE JAX',
+        detail: 'Derniere piece de la psyche, ou le montage de vie de Jax remplace les personas par ses souvenirs humains.',
+        color: '#b08ac4', floor: '#36283e', ceiling: '#0d0811', motif: 'memory', size: 17,
+        gateEpisode: 9, gateSubepisode: 5, provenance: 'shown', exits: [104, 106],
+        props: [
+          { kind: 'archive', x: 0, z: -3.35, color: '#fff1a8', label: 'Souvenir central de Jax' },
+          { kind: 'memory', x: -2.2, z: -2.2, color: '#c875ff', label: 'Fragment de vie humaine gauche' },
+          { kind: 'memory', x: 0, z: -1.3, color: '#7df0ff', label: 'Fragment Leeroy Mateo' },
+          { kind: 'memory', x: 2.2, z: -2.2, color: '#e53935', label: 'Fragment de vie humaine droit' },
+          { kind: 'lorebillboard', avatar: 'leeroymateo', label: 'Leeroy Mateo', x: 2.8, z: -3.55, color: '#8a4fd6', loreText: 'Contrepartie humaine revelee dans le montage de memoire de Jax.' }
+        ],
+        sprites: [
+          { name: 'Jax Memory', type: 'jax', avatar: 'jax', x: 0.75, z: -2.45, color: '#8a4fd6', silent: true },
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -0.85, z: -2.25, color: '#e53935' }
+        ],
+        objective: scan('STABILISER LA MEMOIRE FINALE', ['archive', 'memory'], 'pomni')
+      },
+      106: {
+        name: 'DARK LAMPPOST HALL', short: 'LAMPADAIRE',
+        detail: 'Couloir noir isole par un unique lampadaire, ou la facade mentale cede devant le vrai Jax.',
+        color: '#17121d', floor: '#09080c', ceiling: '#010102', motif: 'memory', size: 17,
+        gateEpisode: 9, gateSubepisode: 5, provenance: 'shown', exits: [105, 18],
+        props: [
+          { kind: 'spotlight', x: 0, z: -3.1, color: '#fff1a8', label: 'Lampadaire solitaire' },
+          { kind: 'doorframe', x: 0, z: -1.2, color: '#8a4fd6', label: 'Retour hors de la psyche' },
+          { kind: 'memory', x: -2.2, z: -2.1, color: '#4a3c55', label: 'Silence apres les personas' }
+        ],
+        sprites: [{ name: 'Jax', type: 'jax', avatar: 'jax', x: 0.55, z: -2.45, color: '#8a4fd6' }],
+        objective: scan('REJOINDRE LE VRAI JAX', ['spotlight', 'memory'], 'jax')
+      },
+      107: {
+        name: 'CAINE VOID ROUTE / BLOCK PATH', short: 'ROUTE DU VIDE',
+        detail: 'Route suivie par Caine dans le Vide vers la fausse sortie et le bloc qui lui interdit de franchir certaines limites.',
+        color: '#f2f4ff', floor: '#edf1ff', ceiling: '#ffffff', motif: 'void', size: 23,
+        gateEpisode: 9, gateSubepisode: 6, provenance: 'shown', exits: [16, 5],
+        props: [
+          { kind: 'exitframe', x: 0, z: -4.0, color: '#ffffff', label: 'Porte cible de Caine' },
+          { kind: 'gridnode', x: -2.4, z: -2.2, color: '#ff3333', label: 'Bloc de restriction rouge' },
+          { kind: 'gridnode', x: 2.4, z: -2.2, color: '#2a58d8', label: 'Bord du chemin compile' },
+          { kind: 'eye', x: 0, z: -1.25, color: '#ffd84a', label: 'Signal de Caine dans le Vide' }
+        ],
+        sprites: [{ name: 'Caine', type: 'caine', avatar: 'caine', x: 0.6, z: -2.65, color: '#ffd84a' }],
+        objective: scan('SUIVRE LA ROUTE INTERDITE', ['exitframe', 'gridnode'], 'caine')
+      },
+      108: {
+        name: 'CAFE WI-FI HOTSPOT / PROJECTION', short: 'HOTSPOT',
+        detail: 'Projection du cafe et de son point Wi-Fi dans les souvenirs humains; ce n est pas une piece physique du Cirque.',
+        color: '#7a4b32', floor: '#3d2a20', ceiling: '#17100d', motif: 'cafe', size: 15,
+        gateEpisode: 9, gateSubepisode: 7, provenance: 'projection', exits: [21],
+        props: [
+          { kind: 'counter', x: 0, z: -3.0, color: '#d49a62', label: 'Comptoir du souvenir Wi-Fi' },
+          { kind: 'table', x: -1.8, z: -2.0, color: '#7a4b32', label: 'Table du souvenir humain' },
+          { kind: 'console', x: 1.8, z: -2.0, color: '#7df0ff', label: 'Point Wi-Fi projete' },
+          { kind: 'lorebillboard', avatar: 'leeroymateo', label: 'Projection de Leeroy', x: 0, z: -3.65, color: '#8a4fd6', loreText: 'Image de memoire humaine; aucune personne reelle n est physiquement presente dans le Cirque.' }
+        ],
+        sprites: [], objective: scan('DISTINGUER LE HOTSPOT DE LA SIMULATION', ['console', 'lorebillboard'])
+      },
+      109: {
+        name: 'DESTROYED CIRCUS / JAX PILLOW SHACK', short: 'CIRQUE RUINE',
+        detail: 'Etat detruit du Cirque dans Remember, avec abri sombre en coussins construit pour calmer Jax abstrait.',
+        color: '#63202b', floor: '#241015', ceiling: '#080408', motif: 'final', size: 23,
+        gateEpisode: 9, gateSubepisode: 4, provenance: 'shown', exits: [18],
+        props: [
+          { kind: 'tent', x: -2.8, z: -4.2, color: '#6e527f', label: 'Abri sombre en coussins de Jax' },
+          { kind: 'bed', x: -2.8, z: -2.6, color: '#47374f', accent: '#211a28', label: 'Coussins de confinement' },
+          { kind: 'crate', x: 0.2, z: -2.0, color: '#4a2024', label: 'Debris du chapiteau' },
+          { kind: 'pillar', x: 2.7, z: -3.1, color: '#821922', label: 'Pilier effondre' },
+          { kind: 'eye', x: 2.0, z: -1.35, color: '#ff3333', label: 'Signal abstrait de Jax' }
+        ],
+        sprites: [
+          { name: 'Jax abstrait', type: 'abstract', avatar: 'abstractedjax', x: -1.25, z: -3.0, color: '#050505', sizeScale: 1.45, silent: true, threatActive: false, silentText: 'La forme abstraite reste non verbale dans l abri sombre.' },
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 1.1, z: -2.2, color: '#e53935' }
+        ],
+        objective: scan('STABILISER LE CIRQUE DETRUIT', ['tent', 'bed'], 'pomni')
+      },
+      110: {
+        name: 'UNTITLED BAR', short: 'BAR',
+        detail: 'Bar de la suggestion de Zooble, visite entre l intermission et le match de softball dans Untitled.',
+        color: '#b96f4f', floor: '#3a251f', ceiling: '#17100d', motif: 'cafe', size: 17,
+        gateEpisode: 5, gateSubepisode: 6, provenance: 'shown', exits: [11, 12],
+        props: [
+          { kind: 'counter', x: 0, z: -3.2, color: '#8b4f32', label: 'Comptoir du bar de Zooble' },
+          { kind: 'table', x: -2.15, z: -2.0, color: '#6f412d', label: 'Table du groupe' },
+          { kind: 'table', x: 2.15, z: -2.0, color: '#6f412d', label: 'Table avant le softball' },
+          { kind: 'card', x: -0.9, z: -1.25, color: '#7df0ff', label: 'Carte de boissons de Zooble' },
+          { kind: 'barrel', x: 1.05, z: -1.3, color: '#b96f4f', label: 'Tabouret du comptoir' },
+          { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'panel', x: 0, z: -0.4, color: '#ffd878' }
+        ],
+        sprites: [
+          { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: -1.55, z: -2.5, color: '#ff4fb8' },
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -0.2, z: -2.15, color: '#e53935' },
+          { name: 'Maid Jax', type: 'jax', avatar: 'maidjax', x: 1.2, z: -2.55, color: '#8a4fd6' },
+          { name: 'Caine', type: 'caine', avatar: 'caine', x: 2.5, z: -1.65, color: '#ffd84a' }
+        ],
+        objective: scan('SERVIR LE BAR AVANT LE MATCH', ['counter', 'card'], 'zooble')
+      },
+      111: {
+        name: 'CAINE RAPID IDEA / BOWLING ALLEY', short: 'BOWLING',
+        detail: 'Piste de bowling materialisee par Caine pendant sa rafale d idees dans hjsakldfhl.',
+        color: '#58c8e8', floor: '#b88955', ceiling: '#16112d', motif: 'awards', size: 19,
+        gateEpisode: 8, gateSubepisode: 6, provenance: 'shown', exits: [28, 112],
+        props: [
+          { kind: 'base', x: -1.8, z: -3.7, color: '#ffffff', label: 'Quilles de la piste gauche' },
+          { kind: 'base', x: 1.8, z: -3.7, color: '#ffffff', label: 'Quilles de la piste droite' },
+          { kind: 'target', x: 0, z: -2.5, color: '#e53935', label: 'Boule de bowling de Caine' },
+          { kind: 'scoreboard', x: 0, z: -4.35, color: '#7df0ff', label: 'Score improvise' },
+          { kind: 'spotlight', x: -2.7, z: -1.55, color: '#fff1a8' },
+          { kind: 'spotlight', x: 2.7, z: -1.55, color: '#fff1a8' }
+        ],
+        sprites: [
+          { name: 'Caine', type: 'caine', avatar: 'caine', x: 0.1, z: -2.8, color: '#ffd84a' },
+          { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: -1.65, z: -2.1, color: '#d64545' },
+          { name: 'Jax', type: 'jax', avatar: 'jax', x: 1.7, z: -2.15, color: '#8a4fd6' }
+        ],
+        objective: scan('TERMINER LA MANCHE IMPROVISEE', ['target', 'scoreboard'], 'caine')
+      },
+      112: {
+        name: 'CAINE RAPID IDEA / HUMAN SCULPTURE STAGE', short: 'SCULPTURE',
+        detail: 'Atelier temporaire ou Caine teste les membres comme materiau de sculpture avant de supprimer l idee.',
+        color: '#d8879b', floor: '#44202c', ceiling: '#10070d', motif: 'final', size: 17,
+        gateEpisode: 8, gateSubepisode: 6, provenance: 'shown', exits: [111, 28],
+        props: [
+          { kind: 'ring', x: 0, z: -3.25, color: '#ffb0c2', label: 'Socle de sculpture humaine' },
+          { kind: 'pillar', x: -1.4, z: -2.65, color: '#d8879b', label: 'Forme humaine deformee gauche' },
+          { kind: 'pillar', x: 1.4, z: -2.65, color: '#b75f76', label: 'Forme humaine deformee droite' },
+          { kind: 'archive', x: 0, z: -1.25, color: '#7df0ff', label: 'Idee abandonnee par Caine' },
+          { kind: 'spotlight', x: 0, z: -4.15, color: '#fff1a8' }
+        ],
+        sprites: [
+          { name: 'Caine', type: 'caine', avatar: 'caine', x: 0, z: -2.4, color: '#ffd84a' },
+          { name: 'Ragatha deformee', type: 'ragatha', avatar: 'jumbledragatha', x: -1.7, z: -3.05, color: '#d64545', silent: true },
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 1.65, z: -2.9, color: '#e53935' }
+        ],
+        objective: scan('IDENTIFIER L IDEE ABANDONNEE', ['ring', 'archive'], 'caine')
+      },
+      113: {
+        name: 'CAINE GENESIS GRID / HISTORICAL PROJECTION', short: 'GENESE',
+        detail: 'Projection historique du quadrillage ou le point rouge apprend a creer, absorbe le point bleu puis forme le Cirque.',
+        color: '#e53935', floor: '#070b12', ceiling: '#020307', motif: 'core', size: 21,
+        gateEpisode: 8, gateSubepisode: 1, provenance: 'projection', exits: [17],
+        props: [
+          { kind: 'gridnode', x: -2.1, z: -2.8, color: '#e53935', label: 'Premier noyau creatif rouge' },
+          { kind: 'gridnode', x: 2.1, z: -2.8, color: '#2a58d8', label: 'Second noyau creatif bleu' },
+          { kind: 'ring', x: 0, z: -3.8, color: '#ffd84a', label: 'Formation du chapiteau' },
+          { kind: 'console', x: 0, z: -1.3, color: '#7df0ff', label: 'Archive de creation C&A' },
+          { kind: 'tent', x: 0, z: -5.2, color: '#e53935', label: 'Premiere forme du Cirque' }
+        ],
+        sprites: [], objective: scan('LIRE LA GENESE SANS LA PHYSICALISER', ['gridnode', 'console'])
+      },
+      114: {
+        name: 'RAGATHA TORMENT / KNIFE STAGE', short: 'TOURMENT R.',
+        detail: 'Sous-espace temporaire du tourment de Ragatha, domine par une silhouette feminine et des couteaux lances.',
+        color: '#4a1721', floor: '#260b11', ceiling: '#080305', motif: 'memory', size: 17,
+        gateEpisode: 8, gateSubepisode: 7, provenance: 'shown', exits: [16, 115],
+        props: [
+          { kind: 'target', x: -2.0, z: -2.2, color: '#d7d7d7', label: 'Couteau fiche gauche' },
+          { kind: 'target', x: 2.0, z: -2.2, color: '#d7d7d7', label: 'Couteau fiche droit' },
+          { kind: 'lorebillboard', avatar: 'stabbedragdolls', label: 'Poupees de chiffon transpercees', x: 0, z: -3.75, color: '#d55a5a', loreGate: { episode: 8, subepisode: 7 }, loreText: 'Objets silencieux du tourment de Ragatha; aucune identite individuelle ne leur est attribuee.' },
+          { kind: 'lorebillboard', avatar: 'coiledcentipedes', label: 'Centipedes du montage', x: 2.8, z: -4.15, color: '#8b6d35', sizeScale: 0.74, loreGate: { episode: 8, subepisode: 7 }, loreText: 'Element visuel du montage de tourment. CainOS n invente pas de signification psychologique supplementaire.' },
+          { kind: 'spotlight', x: 0, z: -1.35, color: '#ff4d4d' }
+        ],
+        sprites: [
+          { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: 0, z: -2.25, color: '#d64545' },
+          { name: 'Feminine Shadow', type: 'ghost', avatar: 'ragathamothershadow', x: 0, z: -4.8, color: '#18111f', sizeScale: 1.55, silent: true, loreGate: { episode: 8, subepisode: 7 } }
+        ],
+        objective: scan('TRAVERSER LE TOURMENT DE RAGATHA', ['target', 'lorebillboard'], 'ragatha')
+      },
+      115: {
+        name: 'GANGLE TORMENT / MASK GALLERY', short: 'TOURMENT G.',
+        detail: 'Sous-espace temporaire ou les masques peints et le souvenir du camion encerclent Gangle.',
+        color: '#9e2638', floor: '#1b0810', ceiling: '#050205', motif: 'memory', size: 17,
+        gateEpisode: 8, gateSubepisode: 7, provenance: 'shown', exits: [114, 116],
+        props: [
+          { kind: 'lorebillboard', avatar: 'paintedmasks', label: 'Cinq masques peints', x: 0, z: -3.8, color: '#f7f7f7', loreGate: { episode: 8, subepisode: 7 }, loreText: 'Les masques sont des images du tourment de Gangle, pas cinq personnages.' },
+          { kind: 'truck', x: 2.55, z: -3.2, color: '#f6d743', label: 'Souvenir du camion Spudsy' },
+          { kind: 'window', x: -2.45, z: -2.6, color: '#ff4fb8', label: 'Reflet de masque brise' },
+          { kind: 'memory', x: 0, z: -1.3, color: '#e53935', label: 'Masque de comedie brise' },
+          { kind: 'spotlight', x: -1.25, z: -3.0, color: '#fff1a8' }
+        ],
+        sprites: [{ name: 'Gangle', type: 'gangle', avatar: 'gangle', x: -0.2, z: -2.35, color: '#f7f7f7' }],
+        objective: scan('TRAVERSER LE TOURMENT DE GANGLE', ['lorebillboard', 'truck'], 'gangle')
+      },
+      116: {
+        name: 'ZOOBLE TORMENT / MIRROR PART PIT', short: 'TOURMENT Z.',
+        detail: 'Sous-espace temporaire ou Zooble est cerne par des miroirs noirs et submerge par des pieces de corps.',
+        color: '#ff4fb8', floor: '#151019', ceiling: '#040306', motif: 'memory', size: 19,
+        gateEpisode: 8, gateSubepisode: 7, provenance: 'shown', exits: [115, 117],
+        props: [
+          { kind: 'lorebillboard', avatar: 'zoobleparts', label: 'Fosse de pieces Zooble', x: 0, z: -4.15, color: '#ff4fb8', loreGate: { episode: 8, subepisode: 7 }, loreText: 'Assemblage de pieces et de miroirs du tourment de Zooble; il ne s agit pas de PNJ.' },
+          { kind: 'window', x: -2.65, z: -2.65, color: '#050505', label: 'Miroir noir gauche' },
+          { kind: 'window', x: 2.65, z: -2.65, color: '#050505', label: 'Miroir noir droit' },
+          { kind: 'crate', x: -1.25, z: -1.35, color: '#7df0ff', label: 'Zooble Box renversee' },
+          { kind: 'crate', x: 1.25, z: -1.35, color: '#ffd84a', label: 'Pieces detachees' }
+        ],
+        sprites: [{ name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 0, z: -2.45, color: '#ff4fb8' }],
+        objective: scan('TRAVERSER LE TOURMENT DE ZOOBLE', ['lorebillboard', 'window'], 'zooble')
+      },
+      117: {
+        name: 'JAX TORMENT / SHADOW AUDIENCE', short: 'TOURMENT J.',
+        detail: 'Sous-espace temporaire ou les silhouettes de Ribbit, Kaufmo et Pomni rient de Jax et arrachent son masque social.',
+        color: '#18111f', floor: '#09060d', ceiling: '#020104', motif: 'memory', size: 17,
+        gateEpisode: 8, gateSubepisode: 7, provenance: 'shown', exits: [116, 118],
+        props: [
+          { kind: 'lorebillboard', avatar: 'laughingshadows', label: 'Silhouettes rieuses', x: 0, z: -4.0, color: '#05020d', loreGate: { episode: 8, subepisode: 7 }, loreText: 'Les ombres reprennent des proches de Jax. Elles restent une projection de tourment, pas leurs personnes reelles.' },
+          { kind: 'ring', x: 0, z: -2.8, color: '#8a4fd6', label: 'Cercle de contrainte' },
+          { kind: 'memory', x: -2.1, z: -1.35, color: '#4ee77e', label: 'Trace Ribbit' },
+          { kind: 'memory', x: 0, z: -1.25, color: '#e53935', label: 'Trace Kaufmo' },
+          { kind: 'memory', x: 2.1, z: -1.35, color: '#2a58d8', label: 'Trace Pomni' }
+        ],
+        sprites: [
+          { name: 'Jax', type: 'jax', avatar: 'jax', x: 0, z: -2.3, color: '#8a4fd6' }
+        ],
+        objective: scan('TRAVERSER LE TOURMENT DE JAX', ['lorebillboard', 'memory'], 'jax')
+      },
+      118: {
+        name: 'POMNI TORMENT / CROCODILE CELLAR DESCENT', short: 'TOURMENT P.',
+        detail: 'Sous-espace temporaire ou des crocodiles realistes traquent Pomni avant sa chute vers une vision du Cellar.',
+        color: '#332217', floor: '#160f0c', ceiling: '#030303', motif: 'cellar', size: 21,
+        gateEpisode: 8, gateSubepisode: 7, provenance: 'shown', exits: [117, 119],
+        props: [
+          { kind: 'stairs', x: 0, z: -4.1, color: '#56505f', label: 'Chute vers le Cellar cauchemardesque' },
+          { kind: 'eye', x: 0, z: -3.0, color: '#ff3333', label: 'Signal d abstraction redoute' },
+          { kind: 'crate', x: -2.7, z: -1.45, color: '#33333a', label: 'Debris du Cellar' },
+          { kind: 'crate', x: 2.7, z: -1.45, color: '#33333a', label: 'Debris du Cellar' },
+          { kind: 'spotlight', x: 0, z: -5.0, color: '#ffffff', label: 'Ouverture au-dessus de Pomni' }
+        ],
+        sprites: [
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 0, z: -2.2, color: '#e53935' },
+          { name: 'Gummigoo Nightmare', type: 'ghost', avatar: 'gummigoo', x: -2.4, z: -3.35, color: '#d8a23a', silent: true },
+          { name: 'Max Nightmare', type: 'ghost', avatar: 'max', x: -0.85, z: -3.8, color: '#75bd3f', silent: true },
+          { name: 'Chad Nightmare', type: 'ghost', avatar: 'chad', x: 0.85, z: -3.8, color: '#8bd64a', silent: true },
+          { name: 'Fourth Crocodile', type: 'ghost', avatar: 'fourthcrocodile', x: 2.4, z: -3.35, color: '#d4c840', silent: true, loreGate: { episode: 8, subepisode: 7 } },
+          { name: 'Abstraction Nightmare', type: 'abstract', avatar: 'cellarabstraction', x: 0, z: -4.8, color: '#030303', sizeScale: 1.3, silent: true, threatActive: false }
+        ],
+        objective: scan('TRAVERSER LE TOURMENT DE POMNI', ['stairs', 'eye'], 'pomni')
+      },
+      119: {
+        name: 'DEAD TENT / CAINE DELETED', short: 'CHAPITEAU MORT',
+        detail: 'Etat gris, troue et instable du chapiteau juste apres la suppression de Caine, avant les reparations de Remember.',
+        color: '#74747b', floor: '#29292d', ceiling: '#050507', motif: 'final', size: 23,
+        gateEpisode: 8, gateSubepisode: 8, provenance: 'shown', exits: [28, 109],
+        props: [
+          { kind: 'tent', x: 0, z: -5.0, color: '#65656b', label: 'Chapiteau vide de couleur' },
+          { kind: 'gridnode', x: -2.8, z: -3.1, color: '#050505', label: 'Trou vers le Vide gauche' },
+          { kind: 'gridnode', x: 2.8, z: -3.5, color: '#050505', label: 'Trou vers le Vide droit' },
+          { kind: 'pillar', x: -1.2, z: -2.0, color: '#4f4f55', label: 'Structure effondree' },
+          { kind: 'crate', x: 1.4, z: -1.45, color: '#3d3d43', label: 'Blocs conjures de reparation' },
+          { kind: 'archive', x: 0, z: -1.25, color: '#7df0ff', label: 'Console perdue de Kinger' }
+        ],
+        sprites: [
+          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -1.45, z: -2.4, color: '#d9d0a2' },
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 0, z: -2.65, color: '#e53935' },
+          { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: 1.45, z: -2.4, color: '#d64545' }
+        ],
+        objective: scan('BALISER LE CHAPITEAU SANS CAINE', ['gridnode', 'crate'], 'kinger')
+      }
+    };
+    this.circusCanonRoomDefinitions = rooms;
+    return rooms;
+  },
+
+  getCircusDormHallDoorProps() {
+    const rooms = this.getCircusBedroomDefinitions();
+    const byAvatar = Object.entries(rooms).reduce((result, [zoneId, room]) => {
+      result[room.avatar] = { zoneId: Number(zoneId), room };
+      return result;
+    }, {});
+    const rows = [
+      { right: 'bizco', left: 'pinkcyclops' },
+      { right: 'scratch', left: 'wormo' },
+      { right: null, left: null },
+      { right: 'ragatha', left: null },
+      { right: 'jax', left: 'pomni' },
+      { right: 'queenie', left: 'bulbcreature' },
+      { right: 'spike', left: null },
+      { right: null, left: 'oyster' },
+      { right: 'kinger', left: null },
+      { right: null, left: 'yellowclown' },
+      { right: 'zooble', left: null },
+      { right: 'gangle', left: 'kaufmo' },
+      { right: 'rattie', left: null },
+      { right: null, left: 'ribbit' }
+    ];
+    const doors = [];
+    rows.forEach((row, index) => {
+      const z = 8.45 - index * 1.3;
+      ['left', 'right'].forEach(side => {
+        const avatar = row[side];
+        const entry = avatar ? byAvatar[avatar] : null;
+        doors.push(entry ? {
+          kind: 'roomdoor', avatar, label: entry.room.resident.toUpperCase(), side,
+          anchor: `wall-${side}`, x: side === 'left' ? -1.48 : 1.48, z,
+          color: entry.room.color, target: entry.zoneId,
+          archived: this.isCircusBedroomArchived(entry.room), dormRow: index + 1
+        } : {
+          kind: 'roomdoor', label: '...', side, anchor: `wall-${side}`,
+          x: side === 'left' ? -1.48 : 1.48, z, color: '#8b8794',
+          sealed: true, emptyDoor: true, dormRow: index + 1
+        });
+      });
+    });
+    return doors;
+  },
+
+  getCircusNpcAnnexDoorProps(zoneId) {
+    const prefix = zoneId === 50 ? 'O' : 'E';
+    const doors = [];
+    for (let row = 0; row < 14; row++) {
+      const z = 8.45 - row * 1.3;
+      ['left', 'right'].forEach((side, sideIndex) => {
+        const number = row * 2 + sideIndex + 1;
+        doors.push({
+          kind: 'roomdoor', avatar: 'mannequin', label: `NPC ${prefix}-${String(number).padStart(2, '0')}`,
+          side, anchor: `wall-${side}`, x: side === 'left' ? -1.48 : 1.48, z,
+          color: zoneId === 50 ? '#bb6a75' : '#a85e70', sealed: true, npcRoom: true
+        });
+      });
+    }
+    return doors;
+  },
+
   getCircusBedroomDefinitions() {
     return {
       44: { resident: 'Jax', avatar: 'jax', color: '#8a4fd6', parent: 20, canon: 'partial', accent: '#ffd84a' },
@@ -3087,18 +3903,18 @@ const OS = {
       47: { resident: 'Gangle', avatar: 'gangle', color: '#9e2638', parent: 20, canon: 'show', accent: '#f7f7f7' },
       48: { resident: 'Zooble', avatar: 'zooble', color: '#ff4fb8', parent: 20, canon: 'show', accent: '#7df0ff' },
       49: { resident: 'Kinger', avatar: 'kinger', color: '#5c4b82', parent: 20, canon: 'merch', accent: '#d9d0a2' },
-      52: { resident: 'Kaufmo', avatar: 'kaufmo', color: '#e53935', parent: 50, archived: true, accent: '#ffd84a' },
-      53: { resident: 'Queenie', avatar: 'queenie', color: '#2c252f', parent: 50, archived: true, accent: '#f7eecb' },
-      54: { resident: 'Ribbit', avatar: 'ribbit', color: '#4ee77e', parent: 50, archived: true, accent: '#ffd84a' },
-      55: { resident: 'Scratch', avatar: 'scratch', color: '#d6a82c', parent: 50, archived: true, accent: '#f7f7f7' },
-      56: { resident: 'Wormo', avatar: 'wormo', color: '#ef8b45', parent: 50, archived: true, accent: '#67c96f' },
-      57: { resident: 'Bizco', avatar: 'bizco', color: '#b45cff', parent: 50, archived: true, accent: '#ffcf75' },
-      58: { resident: 'Rattie', avatar: 'rattie', color: '#897765', parent: 51, archived: true, accent: '#d8c7aa' },
-      59: { resident: 'Spike', avatar: 'spike', color: '#8d5cff', parent: 51, archived: true, accent: '#7df0ff' },
-      60: { resident: 'Pink Cyclops', avatar: 'pinkcyclops', color: '#ff80bd', parent: 51, archived: true, accent: '#fff1a8' },
-      61: { resident: 'Yellow Clown', avatar: 'yellowclown', color: '#d6a82c', parent: 51, archived: true, accent: '#e53935' },
-      62: { resident: 'Oyster', avatar: 'oyster', color: '#8fb7ff', parent: 51, archived: true, accent: '#f7f7f7' },
-      63: { resident: 'Bulb Creature', avatar: 'bulbcreature', color: '#7caa42', parent: 51, archived: true, accent: '#fff1a8' }
+      52: { resident: 'Kaufmo', avatar: 'kaufmo', color: '#e53935', parent: 20, archived: true, accent: '#ffd84a' },
+      53: { resident: 'Queenie', avatar: 'queenie', color: '#2c252f', parent: 20, archived: true, accent: '#f7eecb' },
+      54: { resident: 'Ribbit', avatar: 'ribbit', color: '#4ee77e', parent: 20, archived: true, accent: '#ffd84a' },
+      55: { resident: 'Scratch', avatar: 'scratch', color: '#d6a82c', parent: 20, archived: true, accent: '#f7f7f7' },
+      56: { resident: 'Wormo', avatar: 'wormo', color: '#ef8b45', parent: 20, archived: true, accent: '#67c96f' },
+      57: { resident: 'Bizco', avatar: 'bizco', color: '#b45cff', parent: 20, archived: true, accent: '#ffcf75' },
+      58: { resident: 'Rattie', avatar: 'rattie', color: '#897765', parent: 20, archived: true, accent: '#d8c7aa' },
+      59: { resident: 'Spike', avatar: 'spike', color: '#8d5cff', parent: 20, archived: true, accent: '#7df0ff' },
+      60: { resident: 'Pink Cyclops', avatar: 'pinkcyclops', color: '#ff80bd', parent: 20, archived: true, accent: '#fff1a8' },
+      61: { resident: 'Yellow Clown', avatar: 'yellowclown', color: '#d6a82c', parent: 20, archived: true, accent: '#e53935' },
+      62: { resident: 'Oyster', avatar: 'oyster', color: '#8fb7ff', parent: 20, archived: true, accent: '#f7f7f7' },
+      63: { resident: 'Bulb Creature', avatar: 'bulbcreature', color: '#7caa42', parent: 20, archived: true, accent: '#fff1a8' }
     };
   },
 
@@ -3117,6 +3933,7 @@ const OS = {
       const id = Number(zoneId);
       if (room.archived) archiveRooms++;
       else currentRooms++;
+      if (room.parent !== 20) errors.push(`CHAMBRE ${id}: doit rester dans le couloir central`);
       if (!portals[id]) errors.push(`PORTAL ${id} absent`);
       if (!scenes[id]?.exits?.includes(room.parent)) errors.push(`CHAMBRE ${id}: retour ${room.parent} absent`);
       const parentDoor = this.getCircusZoneProps(room.parent).find(prop => prop.kind === 'roomdoor' && prop.target === id);
@@ -3126,6 +3943,16 @@ const OS = {
     if (!scenes[20]?.exits?.includes(50) || !scenes[20]?.exits?.includes(51)) {
       errors.push('COULOIR CENTRAL: annexes non raccordees');
     }
+    const centralDoors = this.getCircusZoneProps(20).filter(prop => prop.kind === 'roomdoor');
+    if (centralDoors.length !== 28) errors.push(`COULOIR CENTRAL: ${centralDoors.length}/28 portes`);
+    const namedTargets = centralDoors.filter(prop => Number.isFinite(prop.target)).map(prop => prop.target).sort((a, b) => a - b);
+    const expectedTargets = Object.keys(this.getCircusBedroomDefinitions()).map(Number).sort((a, b) => a - b);
+    if (JSON.stringify(namedTargets) !== JSON.stringify(expectedTargets)) errors.push('COULOIR CENTRAL: ordre ou attribution des residents incomplet');
+    [50, 51].forEach(annexId => {
+      const annexDoors = this.getCircusZoneProps(annexId).filter(prop => prop.kind === 'roomdoor');
+      if (annexDoors.length !== 28) errors.push(`ANNEXE ${annexId}: ${annexDoors.length}/28 chambres PNJ`);
+      if (annexDoors.some(prop => !prop.npcRoom || Number.isFinite(prop.target))) errors.push(`ANNEXE ${annexId}: porte de resident nomme detectee`);
+    });
     return { ok: errors.length === 0, errors, currentRooms, archiveRooms };
   },
 
@@ -3145,8 +3972,16 @@ const OS = {
       if (!scenes[parentId]?.exits?.includes(zoneId)) errors.push(`${label}: acces depuis ${parentId} absent`);
       if (!scenes[zoneId]?.exits?.includes(parentId)) errors.push(`${label}: retour vers ${parentId} absent`);
     });
+    Object.entries(this.getCircusCanonRoomDefinitions()).forEach(([zoneId, room]) => {
+      const id = Number(zoneId);
+      if (!portals[id] || !scenes[id]) errors.push(`PIECE CANON ${id}: portail ou scene absent`);
+      (room.exits || []).forEach(targetId => {
+        if (!scenes[id]?.exits?.includes(targetId)) errors.push(`PIECE CANON ${id}: sortie ${targetId} absente`);
+        if (!scenes[targetId]?.exits?.includes(id)) errors.push(`PIECE CANON ${id}: retour depuis ${targetId} absent`);
+      });
+    });
     const virtualActions = new Set(['drive', 'dive', 'survive', 'give']);
-    for (let zoneId = 2; zoneId <= 75; zoneId++) {
+    for (let zoneId = 2; zoneId <= this.getCircusFpsZoneMax(); zoneId++) {
       const config = this.getCircusZoneGameplayConfig(zoneId);
       if (!config) continue;
       const props = this.getCircusZoneProps(zoneId);
@@ -3519,7 +4354,7 @@ const OS = {
       12: { title: 'PREPARER LE MATCH', steps: [scan('base', 'Verifier trois bases', 3), activate('scoreboard', 'Allumer le scoreboard'), talk('baseballjax', 'Parler a Jax avant le match')] },
       13: { title: 'SECURISER L ARENE', steps: [scan('target', 'Verifier trois cibles', 3), scan('crate', 'Inspecter les caisses'), talk('jax', 'Confronter Jax')] },
       14: { title: 'SONDER LE LAC', steps: [scan('umbrella', 'Verifier les parasols'), scan('wave', 'Analyser deux boucles d eau', 2), talk('beachgangle', 'Parler a Gangle sur la plage')] },
-      15: { title: 'OUVRIR LA COUCHE ADMIN', steps: [activate('console', 'Activer la console admin'), activate('gridnode', 'Synchroniser un noeud'), talk('ming', 'Questionner Ming')] },
+      15: { title: 'CONSULTER LA CHINESE ROOM', steps: [scan('doorframe', 'Verifier la porte mysterieuse'), activate('console', 'Activer le dispositif de consultation'), talk('caine', 'Interroger Caine sur la reponse')] },
       16: { title: 'AUDITER LE COEUR C&A', steps: [scan('desk', 'Inspecter le bureau de Caine'), activate('console', 'Activer la console C&A'), talk('caine', 'Demander des comptes a Caine')] },
       17: { title: 'RECONSTRUIRE LE SOUVENIR', steps: [scan('memory', 'Rassembler trois fragments', 3), talk('queenie', 'Ecouter l archive Queenie')] },
       18: { title: 'STABILISER LE FINAL', steps: [activate('spotlight', 'Recaler le projecteur final'), talk('ribbit', 'Identifier le signal Ribbit'), talk('caine', 'Verifier l etat de Caine')] },
@@ -3560,13 +4395,19 @@ const OS = {
       71: { title: 'TRAVERSER LA TOUNDRA', steps: [scan('stairs', 'Reperer le passage enneige'), activate('candle', 'Allumer deux balises', 2), talk('caine', 'Demander le rappel de mission')] },
       72: { title: 'SECURISER LE PARKING', steps: [scan('building', 'Reperer la facade Spudsy'), activate('spotlight', 'Verifier les phares'), talk('workgangle', 'Rejoindre Gangle')] },
       73: { title: 'RELEVER LE SCANNER C&A', steps: [scan('desk', 'Inspecter le poste de Scratch'), activate('console', 'Activer le vieux PC'), scan('memory', 'Identifier les brain scans')] },
-      74: { title: 'CARTOGRAPHIER LA PSYCHE', steps: [scan('memory', 'Stabiliser trois fragments', 3), scan('archive', 'Ouvrir le souvenir central'), talk('pomni', 'Garder Pomni comme repere')] },
+      74: { title: 'CARTOGRAPHIER LE FOYER DE LA PSYCHE', steps: [scan('doorframe', 'Identifier les cinq portes', 5), scan('archive', 'Ouvrir l index des scenarios'), talk('pomni', 'Garder Pomni comme repere')] },
       75: { title: 'CARTOGRAPHIER LES GROUNDS ETENDUS', steps: [scan('tower', 'Relever la hauteur du grand toboggan'), scan('ring', 'Identifier deux ilots', 2), talk('caine', 'Consigner l extension avec Caine')] }
     };
     Object.entries(this.getCircusBedroomDefinitions()).forEach(([zoneId, room]) => {
       objectives[Number(zoneId)] = this.isCircusBedroomArchived(room)
         ? { title: `RELEVER LA CHAMBRE ABANDONNEE / ${room.resident.toUpperCase()}`, steps: [scan('bed', 'Examiner la chambre vide'), activate('archive', 'Ouvrir le dossier de porte'), activate('memory', 'Stabiliser la trace residuelle')] }
         : { title: `RELEVER LA CHAMBRE / ${room.resident.toUpperCase()}`, steps: [scan('bed', 'Examiner le mobilier principal'), activate('card', 'Identifier un objet personnel'), talk(room.avatar, `Parler a ${room.resident}`)] };
+    });
+    Object.entries(this.getCircusCanonRoomDefinitions()).forEach(([roomZoneId, room]) => {
+      const objective = room.objective || { title: `RELEVER ${room.short}`, kinds: (room.props || []).slice(0, 2).map(prop => prop.kind) };
+      const steps = (objective.kinds || []).map((kind, index) => scan(kind, `Examiner ${index === 0 ? 'le repere principal' : 'le second repere'} / ${room.short}`));
+      if (objective.talkAvatar) steps.push(talk(objective.talkAvatar, `Consulter ${objective.talkAvatar}`));
+      objectives[Number(roomZoneId)] = { title: objective.title, steps };
     });
     this.circusZoneObjectiveConfigs = objectives;
     return objectives[zoneId] || null;
@@ -3576,7 +4417,7 @@ const OS = {
     const activatableKinds = new Set(['console', 'gridnode', 'spotlight', 'candle', 'target', 'scoreboard', 'menu', 'card', 'archive', 'memory', 'ring', 'doorframe']);
     const errors = [];
     let missionCount = 0;
-    for (let zoneId = 2; zoneId <= 75; zoneId++) {
+    for (let zoneId = 2; zoneId <= this.getCircusFpsZoneMax(); zoneId++) {
       const config = this.getCircusZoneObjectiveConfig(zoneId);
       if (!config) continue;
       missionCount++;
@@ -3662,6 +4503,18 @@ const OS = {
     if (verb === 'give') {
       state.interactionMessage = 'DONNER: visez un personnage, pas un objet.';
       state.interactionUntil = performance.now() + 2600;
+      state.interactionChannel = 'system';
+      state.interactionSpeaker = 'CAINOS';
+      SoundManager.playError();
+      return;
+    }
+    if (prop.sealed && verb === 'use') {
+      const reason = prop.npcRoom
+        ? 'CHAMBRE PNJ NON INSTANCIEE: aucun occupant actif n est affecte a cette porte.'
+        : prop.emptyDoor ? 'PORTE SANS RESIDENT IDENTIFIE: CainOS ne fabrique pas une identite absente du canon.'
+          : 'PASSAGE CONDAMNE: cette porte appartient a une projection ou a un souvenir.';
+      state.interactionMessage = reason;
+      state.interactionUntil = performance.now() + 3000;
       state.interactionChannel = 'system';
       state.interactionSpeaker = 'CAINOS';
       SoundManager.playError();
@@ -3827,6 +4680,16 @@ const OS = {
             ? `La chambre de ${bedroom.resident} est inspiree des representations officielles hors episode; CainOS la marque comme reconstruction partielle.`
             : `Seules des vues partielles de la chambre de ${bedroom.resident} sont disponibles; le mobilier manquant est une reconstruction CainOS.`;
       return `SCAN ${name}: ${canonBoundary}`;
+    }
+    const canonRoom = this.getCircusCanonRoomDefinitions()[zoneId];
+    if (canonRoom) {
+      const boundary = canonRoom.provenance === 'shown'
+        ? 'Cette piece et sa place dans le parcours sont montrees; les distances restent adaptees au gameplay FPS.'
+        : canonRoom.provenance === 'mentioned'
+          ? 'Le lieu est cite mais son interieur n est jamais montre; cette geometrie reste une reconstruction CainOS.'
+          : 'Cette scene est une projection mentale ou humaine, pas une salle permanente du monde digital.';
+      const specific = prop.loreText ? ` ${prop.loreText}` : '';
+      return `SCAN ${name}: ${boundary}${specific}`;
     }
     if (prop.loreText) return `SCAN ${name}: ${prop.loreText}`;
     const labelLines = {
@@ -4327,7 +5190,7 @@ const OS = {
       12: 'Jax: Les bases sont la, le score aussi. Il ne manque plus qu une regle assez mauvaise pour rendre le match interessant.',
       13: 'Ragatha: Les cibles sont reperees. Personne ne devrait avoir a decouvrir la prochaine en se trouvant devant.',
       14: 'Pomni: Le lac boucle encore, mais au moins nous savons quels reperes restent fixes autour de nous.',
-      15: 'Ming: Les noeuds admin repondent. La scene technique ne peut plus pretendre qu elle est seulement du decor.',
+      15: 'Caine: La carte a circule et une reponse est revenue! La Chinese Room reste un gag separe de mon administration.',
       16: 'Caine: Audit termine! Tout est sous controle, si l on accepte une definition suffisamment festive du controle.',
       17: 'Kinger: Les fragments ne la rameneront pas. Mais les rassembler empeche son souvenir de devenir du bruit.',
       18: 'Ribbit Archive: Le signal est stable. Cela confirme une trace, pas un retour parmi les residents.',
@@ -4335,7 +5198,7 @@ const OS = {
       71: 'Caine: Les deux balises tiennent! La toundra est officiellement traversable et officieusement glaciale!',
       72: 'Gangle: Les phares sont coupes et la sortie est reperee. On peut quitter le parking sans relancer le service.',
       73: 'CainOS: Poste Scratch, ordinateur, casque et scans cerebraux indexes sans fusion avec la fausse sortie.',
-      74: 'Pomni: Les trois facettes sont stabilisees. Elles restent des parties de Jax, pas de nouveaux residents.',
+      74: 'Pomni: Les cinq portes sont reperees. Chaque scenario reste une projection de la psyche de Jax.',
       75: 'Caine: Ilots synchronises et toboggan calibre! Les nouveaux Grounds sont entierement cartographies!'
     };
     if (status.complete) {
@@ -4575,6 +5438,13 @@ const OS = {
       74: "CainOS: Les Jax internes sont des projections psychiques de Remember; aucune facette n est un resident autonome.",
       75: "CainOS: Les Grounds etendus appartiennent a l etat post-Remember et ne sont accessibles qu apres l episode 9."
     };
+    const canonRoom = this.getCircusCanonRoomDefinitions()[zoneId];
+    if (canonRoom) {
+      const boundary = canonRoom.provenance === 'shown'
+        ? 'disposition montree, echelle adaptee au FPS'
+        : canonRoom.provenance === 'mentioned' ? 'lieu cite, geometrie reconstruite' : 'projection non permanente';
+      return `CainOS: ${canonRoom.detail} Statut: ${boundary}.`;
+    }
     return hints[zoneId] || "CainOS: Zone praticable. Les interactions restent limitees au lore deja debloque.";
   },
 
@@ -4608,7 +5478,10 @@ const OS = {
         71: "Pomni: La neige cache les bords du decor. Je garde les deux balises en vue.",
         72: "Pomni: On ne devrait pas laisser Gangle seule ici apres ce service.",
         74: "Pomni: Ce ne sont pas plusieurs Jax. Ce sont les morceaux qu il garde derriere son role.",
-        75: "Pomni: Les Grounds sont plus grands, mais une extension n est toujours pas une sortie."
+        75: "Pomni: Les Grounds sont plus grands, mais une extension n est toujours pas une sortie.",
+        110: "Pomni: Zooble a choisi ce bar. Pour une fois, la scene ressemble a quelque chose que l un de nous voulait vraiment.",
+        118: "Pomni: Ces crocodiles ont leurs visages, mais ce ne sont pas eux. Caine utilise seulement ce que je regrette.",
+        119: "Pomni: Sans Caine, les couleurs et les murs meurent. On doit reparer ensemble avant que le Vide prenne tout."
       },
       caine: {
         2: "Caine: Une scene praticable, des portes splendides, et aucune garantie de sortie!",
@@ -4617,7 +5490,10 @@ const OS = {
         67: "Caine: Un balcon royal parfaitement adapte aux besoins panoramiques de l aventure!",
         69: "Caine: La lanterne domine le lac et rend chaque sortie de toboggan infiniment plus spectaculaire!",
         71: "Caine: Neige, balises et froid simule: une micro-aventure parfaitement compacte!",
-        75: "Caine: Davantage d ilots, davantage de biomes et un toboggan encore plus haut! Le Cirque evolue!"
+        75: "Caine: Davantage d ilots, davantage de biomes et un toboggan encore plus haut! Le Cirque evolue!",
+        110: "Caine: Un bar propose par Zooble! Une idee presque alarmante de sobriete narrative!",
+        111: "Caine: Bowling! Une activite simple, lisible et totalement impossible a rater pendant plus de trente secondes!",
+        112: "Caine: Les humains ne sont finalement pas un materiau de sculpture assez relatable. Idee supprimee!"
       },
       bubble: {
         2: "Bubble: Je vote pour la porte la plus brillante!",
@@ -4628,7 +5504,12 @@ const OS = {
         14: "Jax: Version chasseur, meme probleme: Caine appelle ca des vacances.",
         18: "Jax: Le final dramatique, c'est vraiment pas mon style.",
         68: "Jax: Monter tout ca pour redescendre par un toboggan. Enfin une architecture logique.",
-        69: "Jax: De la-haut, on voit tres bien a quel point les vacances de Caine tournent en rond."
+        69: "Jax: De la-haut, on voit tres bien a quel point les vacances de Caine tournent en rond.",
+        110: "Jax: Le tablier n est pas mon choix. Le bar, au moins, est moins mauvais que le reste de la journee.",
+        117: "Jax: Ce ne sont que des ombres. Elles savent juste exactement ou regarder."
+      },
+      maidjax: {
+        110: "Jax: Le tablier n est pas mon choix. Le bar, au moins, est moins mauvais que le reste de la journee."
       },
       ragatha: {
         2: "Ragatha: Avance doucement. Les salles changent moins vite si on garde un repere.",
@@ -4636,24 +5517,30 @@ const OS = {
         18: "Ragatha: Meme quand la scene casse, le groupe doit rester ensemble.",
         66: "Ragatha: La galerie reprend les couleurs du palais. Gardons l escalier comme repere.",
         71: "Ragatha: On reste entre les balises. La neige rend les distances difficiles a lire.",
-        75: "Ragatha: Les ponts relient les ilots. On les traverse ensemble et on garde le chapiteau comme repere."
+        75: "Ragatha: Les ponts relient les ilots. On les traverse ensemble et on garde le chapiteau comme repere.",
+        114: "Ragatha: Cette silhouette et ces couteaux sont le tourment de Caine. Ils ne decident pas qui je suis.",
+        119: "Ragatha: On bouche un trou apres l autre. Personne ne reste seul pendant que le chapiteau s effondre."
       },
       kinger: {
         2: "Kinger: Les murs ont une memoire. Les portes aussi, malheureusement.",
         8: "Kinger: Les pieces sombres protegent parfois mieux les souvenirs.",
         17: "Kinger: Ce buffer n'est pas un puzzle. C'est une cicatrice rangee par le systeme.",
         64: "Kinger: Plus on monte, plus les souvenirs du manoir cherchent une piece ou se ranger.",
-        65: "Kinger: Le grenier n est pas confirme, mais la peur qui s y accroche ressemble bien au manoir."
+        65: "Kinger: Le grenier n est pas confirme, mais la peur qui s y accroche ressemble bien au manoir.",
+        119: "Kinger: Je peux conjurer des blocs, mais pas reconstruire seul tout ce que Caine tenait ensemble."
       },
       gangle: {
         2: "Gangle: Tant que mon masque tient, je peux te dire quelle porte a l'air moins terrible.",
         10: "Gangle: Spudsy transforme tout en service client, meme la panique.",
-        14: "Gangle: La plage est jolie, mais mon signal n'aime pas le soleil."
+        14: "Gangle: La plage est jolie, mais mon signal n'aime pas le soleil.",
+        115: "Gangle: Ces masques me regardent comme si chacun connaissait la bonne facon de sourire."
       },
       zooble: {
         2: "Zooble: Caine appelle ca immersion. Moi j'appelle ca etre enferme avec style.",
         11: "Zooble: Les micro-aventures sont juste des problemes plus courts.",
-        18: "Zooble: Si ce monde s'effondre, je veux au moins choisir ma posture."
+        18: "Zooble: Si ce monde s'effondre, je veux au moins choisir ma posture.",
+        110: "Zooble: J ai demande un bar parce que je savais en tenir un. Caine a quand meme reussi a le transformer en spectacle.",
+        116: "Zooble: Plus il ajoute de pieces, moins il comprend que le probleme n est pas un manque de choix."
       },
       gummigoo: {
         6: "Gummigoo: Le canyon a des bords. Les souvenirs, eux, ont l'air fabriques.",
@@ -5221,7 +6108,7 @@ const OS = {
       12: { title: 'MATCH DE SOFTBALL', steps: [{ action: 'use', kind: 'scoreboard', count: 1, label: 'Allumer le score' }, { action: 'use', kind: 'base', count: 3, label: 'Valider les trois bases' }] },
       13: { title: 'EPREUVES ARMEES', steps: [{ action: 'use', kind: 'target', count: 3, label: 'Neutraliser les cibles annoncees' }] },
       14: { title: 'EXPLORATION DU LAC', steps: [{ action: 'use', kind: 'wave', count: 1, label: 'Entrer dans l eau digitale' }, { action: 'dive', kind: 'wave', count: 3, label: 'Explorer avant la fin de l oxygene' }] },
-      15: { title: 'COUCHE ADMIN', steps: [{ action: 'use', kind: 'console', count: 1, label: 'Ouvrir la console' }, { action: 'use', kind: 'gridnode', count: 1, label: 'Relier le noeud admin' }] },
+      15: { title: 'CHINESE ROOM', steps: [{ action: 'look', kind: 'doorframe', count: 1, label: 'Examiner la porte mysterieuse' }, { action: 'use', kind: 'console', count: 1, label: 'Transmettre la carte a Caine' }] },
       16: { title: 'AUDIT DU COEUR', steps: [{ action: 'look', kind: 'desk', count: 1, label: 'Relever le bureau de Caine' }, { action: 'use', kind: 'console', count: 1, label: 'Interroger le coeur C&A' }] },
       33: { title: 'ROUTE DU TANKER', steps: [{ action: 'use', kind: 'truck', count: 1, label: 'Relancer le camion' }, { action: 'drive', kind: 'truck', count: 4, label: 'Traverser la route du canyon' }] },
       34: { title: 'AMES DU MANOIR', steps: [{ action: 'use', kind: 'candle', count: 1, label: 'Fixer une source lumineuse' }, { action: 'survive', kind: 'candle', count: 4, label: 'Resister a la possession' }] },
@@ -5237,7 +6124,7 @@ const OS = {
       71: { title: 'MICRO-AVENTURE TOUNDRA', steps: [{ action: 'use', kind: 'candle', count: 2, label: 'Allumer deux balises thermiques' }, { action: 'look', kind: 'stairs', count: 1, label: 'Trouver le passage enneige' }] },
       72: { title: 'SORTIE DE SERVICE', steps: [{ action: 'look', kind: 'building', count: 1, label: 'Identifier la sortie Spudsy' }, { action: 'use', kind: 'spotlight', count: 1, label: 'Couper les phares du parking' }] },
       73: { title: 'POSTE DE SCRATCH', steps: [{ action: 'look', kind: 'desk', count: 1, label: 'Examiner le poste de travail' }, { action: 'use', kind: 'console', count: 1, label: 'Lire le vieux PC C&A' }, { action: 'look', kind: 'memory', count: 1, label: 'Comparer les scans cerebraux' }] },
-      74: { title: 'ESPACE MENTAL DE JAX', steps: [{ action: 'look', kind: 'memory', count: 3, label: 'Stabiliser trois facettes' }, { action: 'use', kind: 'archive', count: 1, label: 'Ouvrir le souvenir central' }] },
+      74: { title: 'FOYER DE LA PSYCHE', steps: [{ action: 'look', kind: 'doorframe', count: 5, label: 'Identifier les cinq portes' }, { action: 'use', kind: 'archive', count: 1, label: 'Ouvrir l index des scenarios' }] },
       75: { title: 'GROUNDS ETENDUS', steps: [{ action: 'look', kind: 'tower', count: 1, label: 'Relever le grand toboggan' }, { action: 'use', kind: 'ring', count: 2, label: 'Synchroniser deux ilots' }] }
     };
     if (zoneId >= 44 && zoneId <= 49) {
@@ -5249,6 +6136,19 @@ const OS = {
     }
     if (zoneId >= 52 && zoneId <= 63) {
       return { title: 'TRACE ABANDONNEE', steps: [{ action: 'look', kind: 'bed', count: 1, label: 'Observer sans deplacer' }, { action: 'use', kind: 'archive', count: 1, label: 'Consulter le dossier de porte' }] };
+    }
+    const canonRoom = this.getCircusCanonRoomDefinitions()[zoneId];
+    if (canonRoom) {
+      const kinds = [...new Set(canonRoom.objective?.kinds || (canonRoom.props || []).slice(0, 2).map(prop => prop.kind))];
+      return {
+        title: canonRoom.objective?.title || `EXPLORATION / ${canonRoom.short}`,
+        steps: kinds.map((kind, index) => ({
+          action: index === kinds.length - 1 && ['console', 'archive', 'doorframe', 'target', 'ring'].includes(kind) ? 'use' : 'look',
+          kind,
+          count: 1,
+          label: `${index === 0 ? 'Identifier' : 'Verifier'} ${canonRoom.short}`
+        }))
+      };
     }
     return configs[zoneId] || null;
   },
@@ -7608,6 +8508,12 @@ const OS = {
       this.circusZonePropsCache.set(zoneId, bedroomProps);
       return [...bedroomProps, ...this.getCircusCustomAdventureProps(zoneId)];
     }
+    const canonRoom = this.getCircusCanonRoomDefinitions()[zoneId];
+    if (canonRoom) {
+      const canonProps = (canonRoom.props || []).map(prop => ({ ...prop }));
+      this.circusZonePropsCache.set(zoneId, canonProps);
+      return [...canonProps, ...this.getCircusCustomAdventureProps(zoneId)];
+    }
     const basePillars = [
       { kind: 'pillar', x: -2.9, z: -1.4, color: '#ffd84a' },
       { kind: 'pillar', x: 2.9, z: -1.4, color: '#2a58d8' },
@@ -7628,38 +8534,18 @@ const OS = {
       12: [{ kind: 'base', x: 0, z: -2.6, color: '#ffffff' }, { kind: 'scoreboard', x: 0, z: -3.25, color: '#83ff57' }, { kind: 'base', x: -1.45, z: -1.6, color: '#ffffff' }, { kind: 'base', x: 1.45, z: -1.6, color: '#ffffff' }, { kind: 'spotlight', x: 2.8, z: -2.75, color: '#fff1a8' }],
       13: [{ kind: 'target', x: -1.8, z: -2.3, color: '#f6d743' }, { kind: 'target', x: 1.8, z: -2.3, color: '#ff4d4d' }, { kind: 'target', x: 0, z: -3.05, color: '#ffffff' }, { kind: 'crate', x: -2.9, z: -1.35, color: '#5c3a21' }, { kind: 'barrel', x: 2.85, z: -1.35, color: '#463228' }],
       14: [{ kind: 'umbrella', x: -1.8, z: -2.1, color: '#ffd84a' }, { kind: 'wave', x: 0, z: -3.0, color: '#4ee7ff' }, { kind: 'sun', x: 2.4, z: -2.8, color: '#ffe57d' }, { kind: 'umbrella', x: 1.65, z: -1.35, color: '#ff9b37' }, { kind: 'wave', x: -2.95, z: -2.85, color: '#4ee7ff' }],
-      15: [{ kind: 'console', x: 0, z: -2.7, color: '#ffcf75' }, { kind: 'gridnode', x: -2.0, z: -2.0, color: '#7df0ff' }, { kind: 'table', x: 1.75, z: -1.6, color: '#ffffff' }, { kind: 'card', x: 2.75, z: -2.45, color: '#ffcf75' }],
+      15: [
+        { kind: 'doorframe', x: 0, z: -3.25, color: '#e53935', label: 'Porte mysterieuse de la Chinese Room' },
+        { kind: 'table', x: -1.75, z: -2.0, color: '#8b5a3c', label: 'Table de transmission des cartes' },
+        { kind: 'card', x: 1.75, z: -1.55, color: '#ffcf75', label: 'Reponse ecrite en chinois' },
+        { kind: 'console', x: 2.65, z: -2.45, color: '#7df0ff', label: 'Dispositif de consultation de Caine' }
+      ],
       16: [
         { kind: 'desk', x: 0, z: -2.9, color: '#ff7a30' },
         { kind: 'console', x: -2.0, z: -2.2, color: '#7df0ff' },
         { kind: 'eye', x: 2.1, z: -2.2, color: '#ff3333' },
         { kind: 'gridnode', x: 0.95, z: -1.35, color: '#ff7a30' },
-        { kind: 'archive', x: -2.9, z: -1.4, color: '#7df0ff' },
-        {
-          kind: 'lorebillboard', avatar: 'paintedmasks', label: 'Painted Masks', x: -2.75, z: -3.35,
-          color: '#f7f7f7', loreGate: { episode: 8, subepisode: 7 },
-          loreText: "Cinq peintures de masques de Gangle apparaissent pendant son tourment. Elles restent des images de scene, pas cinq nouveaux personnages."
-        },
-        {
-          kind: 'lorebillboard', avatar: 'zoobleparts', label: 'Body Parts and Mirrors', x: 2.75, z: -3.35,
-          color: '#ff4fb8', loreGate: { episode: 8, subepisode: 7 },
-          loreText: "Des pieces de Zooble et deux miroirs noirs composent son tourment. CainOS les classe comme assemblage de decor, pas comme PNJ."
-        },
-        {
-          kind: 'lorebillboard', avatar: 'stabbedragdolls', label: 'Stabbed Ragdolls', x: -1.75, z: -4.35,
-          color: '#d55a5a', sizeScale: 0.84, loreGate: { episode: 8, subepisode: 7 },
-          loreText: "Poupees de chiffon transpercees de la sequence de tourment. Objet de scene silencieux, sans identite individuelle."
-        },
-        {
-          kind: 'lorebillboard', avatar: 'coiledcentipedes', label: 'Coiled Centipedes', x: 1.75, z: -4.35,
-          color: '#8b6d35', sizeScale: 0.84, loreGate: { episode: 8, subepisode: 7 },
-          loreText: "Centipedes enroules de la sequence de tourment. CainOS les classe comme decor et non comme personnages."
-        },
-        {
-          kind: 'lorebillboard', avatar: 'unusedbrainscans', label: 'Unused Brainscans', x: 0, z: -5.1,
-          color: '#50d9ff', sizeScale: 0.9, loreGate: { episode: 9, subepisode: 6 },
-          loreText: "Scans cerebraux inutilises des archives C&A de Remember. Artefacts techniques sans conscience autonome."
-        }
+        { kind: 'archive', x: -2.9, z: -1.4, color: '#7df0ff', label: 'Archives du bureau de Caine' }
       ],
       17: [{ kind: 'memory', x: -1.8, z: -2.0, color: '#d9d0a2' }, { kind: 'memory', x: 0, z: -2.6, color: '#7df0ff' }, { kind: 'memory', x: 1.8, z: -2.0, color: '#d9d0a2' }, { kind: 'table', x: 0.55, z: -1.35, color: '#d9d0a2' }, { kind: 'candle', x: -2.75, z: -1.4, color: '#ffd84a' }],
       18: [...basePillars, { kind: 'spotlight', x: 0, z: -2.6, color: '#e53935' }, { kind: 'archive', x: -2.2, z: -2.25, color: '#c875ff' }, { kind: 'gridnode', x: 2.2, z: -1.45, color: '#ff4d4d' }],
@@ -7736,17 +8622,14 @@ const OS = {
         }
       ],
       20: [
-        { kind: 'roomdoor', avatar: 'jax', label: 'JAX', side: 'left', anchor: 'wall-left', x: -1.48, z: 3.2, color: '#8a4fd6', target: 44 },
-        { kind: 'roomdoor', avatar: 'pomni', label: 'POMNI', side: 'right', anchor: 'wall-right', x: 1.48, z: 3.2, color: '#e53935', target: 45 },
-        { kind: 'roomdoor', avatar: 'ragatha', label: 'RAGATHA', side: 'left', anchor: 'wall-left', x: -1.48, z: 0, color: '#d64545', target: 46 },
-        { kind: 'roomdoor', avatar: 'gangle', label: 'GANGLE', side: 'right', anchor: 'wall-right', x: 1.48, z: 0, color: '#f7f7f7', target: 47 },
-        { kind: 'roomdoor', avatar: 'zooble', label: 'ZOOBLE', side: 'left', anchor: 'wall-left', x: -1.48, z: -3.2, color: '#ff4fb8', target: 48 },
-        { kind: 'roomdoor', avatar: 'kinger', label: 'KINGER', side: 'right', anchor: 'wall-right', x: 1.48, z: -3.2, color: '#d9d0a2', target: 49 },
+        ...this.getCircusDormHallDoorProps(),
         { kind: 'wallart', anchor: 'wall-left', x: -1.48, z: 1.55, color: '#7df0ff', art: 'spiral' },
         { kind: 'wallart', anchor: 'wall-right', x: 1.48, z: -1.55, color: '#ffd84a', art: 'blocks' },
-        { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'panel', x: 0, z: 3.2, color: '#fff1a8' },
+        { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'panel', x: 0, z: 7.2, color: '#fff1a8' },
+        { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'panel', x: 0, z: 3.6, color: '#fff1a8' },
         { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'panel', x: 0, z: 0, color: '#fff1a8' },
-        { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'panel', x: 0, z: -3.2, color: '#fff1a8' }
+        { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'panel', x: 0, z: -3.6, color: '#fff1a8' },
+        { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'panel', x: 0, z: -7.2, color: '#fff1a8' }
       ],
       21: [{ kind: 'counter', x: 0, z: -2.8, color: '#d49a62' }, { kind: 'table', x: -2.2, z: -1.8, color: '#7a4b32' }, { kind: 'table', x: 2.15, z: -1.9, color: '#7a4b32' }, { kind: 'menu', x: 0, z: -1.25, color: '#fff1a8' }],
       22: [{ kind: 'window', x: -2.6, z: -2.65, color: '#63d9ff' }, { kind: 'window', x: 0, z: -3.1, color: '#7df0ff' }, { kind: 'window', x: 2.6, z: -2.65, color: '#63d9ff' }, { kind: 'wave', x: -1.25, z: -1.45, color: '#4ee7ff' }, { kind: 'wave', x: 1.35, z: -1.55, color: '#4ee7ff' }],
@@ -7772,24 +8655,18 @@ const OS = {
       42: [{ kind: 'ring', x: -2.5, z: -2.4, color: '#ff4fb8' }, { kind: 'ring', x: 2.5, z: -2.4, color: '#7df0ff' }, { kind: 'pillar', x: 0, z: -3.1, color: '#ffd84a' }, { kind: 'balloon', x: -1.25, z: -1.35, color: '#e53935' }, { kind: 'balloon', x: 1.25, z: -1.35, color: '#2a58d8' }],
       43: [{ kind: 'table', x: 0, z: -2.7, color: '#7a4b32' }, { kind: 'table', x: -2.2, z: -1.8, color: '#7a4b32' }, { kind: 'table', x: 2.2, z: -1.8, color: '#7a4b32' }, { kind: 'menu', x: 0, z: -1.25, color: '#fff1a8' }],
       50: [
-        { kind: 'roomdoor', avatar: 'kaufmo', label: 'KAUFMO', side: 'left', anchor: 'wall-left', x: -1.48, z: 3.2, color: '#e53935', target: 52, archived: true },
-        { kind: 'roomdoor', avatar: 'queenie', label: 'QUEENIE', side: 'right', anchor: 'wall-right', x: 1.48, z: 3.2, color: '#f7eecb', target: 53, archived: true },
-        { kind: 'roomdoor', avatar: 'ribbit', label: 'RIBBIT', side: 'left', anchor: 'wall-left', x: -1.48, z: 0, color: '#4ee77e', target: 54, archived: true },
-        { kind: 'roomdoor', avatar: 'scratch', label: 'SCRATCH', side: 'right', anchor: 'wall-right', x: 1.48, z: 0, color: '#d6a82c', target: 55, archived: true },
-        { kind: 'roomdoor', avatar: 'wormo', label: 'WORMO', side: 'left', anchor: 'wall-left', x: -1.48, z: -3.2, color: '#ef8b45', target: 56, archived: true },
-        { kind: 'roomdoor', avatar: 'bizco', label: 'BIZCO', side: 'right', anchor: 'wall-right', x: 1.48, z: -3.2, color: '#b45cff', target: 57, archived: true },
-        { kind: 'archive', x: 0, z: -4.25, color: '#c875ff', label: 'WEST ANNEX' },
-        { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'panel', x: 0, z: 0, color: '#8b8794' }
+        ...this.getCircusNpcAnnexDoorProps(50),
+        { kind: 'archive', x: 0, z: -4.25, color: '#c875ff', label: '28 NPC ROOMS / WEST ANNEX' },
+        { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'panel', x: 0, z: 4.8, color: '#8b8794' },
+        { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'panel', x: 0, z: 0, color: '#8b8794' },
+        { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'panel', x: 0, z: -4.8, color: '#8b8794' }
       ],
       51: [
-        { kind: 'roomdoor', avatar: 'rattie', label: 'RATTIE', side: 'left', anchor: 'wall-left', x: -1.48, z: 3.2, color: '#897765', target: 58, archived: true },
-        { kind: 'roomdoor', avatar: 'spike', label: 'SPIKE', side: 'right', anchor: 'wall-right', x: 1.48, z: 3.2, color: '#8d5cff', target: 59, archived: true },
-        { kind: 'roomdoor', avatar: 'pinkcyclops', label: 'PINK CYCLOPS', side: 'left', anchor: 'wall-left', x: -1.48, z: 0, color: '#ff80bd', target: 60, archived: true },
-        { kind: 'roomdoor', avatar: 'yellowclown', label: 'YELLOW CLOWN', side: 'right', anchor: 'wall-right', x: 1.48, z: 0, color: '#d6a82c', target: 61, archived: true },
-        { kind: 'roomdoor', avatar: 'oyster', label: 'OYSTER', side: 'left', anchor: 'wall-left', x: -1.48, z: -3.2, color: '#8fb7ff', target: 62, archived: true },
-        { kind: 'roomdoor', avatar: 'bulbcreature', label: 'BULB CREATURE', side: 'right', anchor: 'wall-right', x: 1.48, z: -3.2, color: '#7caa42', target: 63, archived: true },
-        { kind: 'archive', x: 0, z: -4.25, color: '#c875ff', label: 'EAST ANNEX' },
-        { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'panel', x: 0, z: 0, color: '#8b8794' }
+        ...this.getCircusNpcAnnexDoorProps(51),
+        { kind: 'archive', x: 0, z: -4.25, color: '#c875ff', label: '28 NPC ROOMS / EAST ANNEX' },
+        { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'panel', x: 0, z: 4.8, color: '#8b8794' },
+        { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'panel', x: 0, z: 0, color: '#8b8794' },
+        { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'panel', x: 0, z: -4.8, color: '#8b8794' }
       ],
       64: [{ kind: 'stairs', x: 0, z: -3.0, color: '#756a78' }, { kind: 'window', x: -2.5, z: -2.4, color: '#b7f0ff' }, { kind: 'window', x: 2.5, z: -2.4, color: '#b7f0ff' }, { kind: 'candle', x: -1.2, z: -1.35, color: '#ffd878' }, { kind: 'pillar', x: 1.5, z: -1.5, color: '#60546a' }],
       65: [{ kind: 'archive', x: 0, z: -3.0, color: '#8a7890' }, { kind: 'crate', x: -2.1, z: -2.0, color: '#4b382d' }, { kind: 'crate', x: 2.1, z: -2.0, color: '#4b382d' }, { kind: 'candle', x: 0, z: -1.25, color: '#ffd878' }],
@@ -7822,15 +8699,21 @@ const OS = {
         { kind: 'card', x: 1.75, z: -1.45, color: '#333333', label: 'Casque obsolete', portable: true },
         { kind: 'memory', x: -2.65, z: -1.35, color: '#50d9ff', label: 'Brain scans inutilises' },
         { kind: 'gridnode', x: 2.65, z: -2.35, color: '#7df0ff', label: 'Scanner cerebral' },
-        { kind: 'card', x: 0.95, z: -1.15, color: '#d6a82c', label: 'Emballage Dobby Dog / $57.57' }
+        { kind: 'card', x: 0.95, z: -1.15, color: '#d6a82c', label: 'Emballage Dobby Dog / $57.57' },
+        {
+          kind: 'lorebillboard', avatar: 'unusedbrainscans', label: 'Unused Brainscans', x: 0, z: -4.25,
+          color: '#50d9ff', sizeScale: 0.9, loreGate: { episode: 9, subepisode: 6 },
+          loreText: "Scans cerebraux inutilises des archives C&A de Remember. Artefacts techniques sans conscience autonome."
+        }
       ],
       74: [
-        { kind: 'memory', x: -2.35, z: -2.15, color: '#8a4fd6', label: 'Persona violente' },
-        { kind: 'memory', x: 0, z: -3.0, color: '#b878e6', label: 'Persona comique' },
-        { kind: 'memory', x: 2.35, z: -2.15, color: '#9871ca', label: 'Persona piegee' },
-        { kind: 'archive', x: 0, z: -1.25, color: '#fff1a8', label: 'Souvenir central de Jax' },
-        { kind: 'lorebillboard', avatar: 'whatifragatha', label: 'What-if Ragatha abstraction', x: -3.0, z: -3.55, color: '#d64545', loreGate: { episode: 9, subepisode: 4 }, loreText: 'Projection mentale barree de Ragatha; elle ne represente pas une abstraction survenue dans la timeline.' },
-        { kind: 'lorebillboard', avatar: 'whatifgangle', label: 'What-if Gangle abstraction', x: 3.0, z: -3.55, color: '#f7f7f7', loreGate: { episode: 9, subepisode: 4 }, loreText: 'Projection mentale barree de Gangle; elle ne represente pas une abstraction survenue dans la timeline.' }
+        { kind: 'doorframe', x: -3.2, z: -3.2, color: '#d64545', label: 'Scenario 1 / Couloir Ragatha' },
+        { kind: 'doorframe', x: -1.6, z: -3.65, color: '#ff4fb8', label: 'Scenario 2 / Funerailles Zooble' },
+        { kind: 'doorframe', x: 0, z: -3.85, color: '#d67b3a', label: 'Scenario 3 / Falaise cartoon' },
+        { kind: 'doorframe', x: 1.6, z: -3.65, color: '#8a4fd6', label: 'Piece des quatre personas' },
+        { kind: 'doorframe', x: 3.2, z: -3.2, color: '#4b3a50', label: 'Cinquieme porte condamnee' },
+        { kind: 'memory', x: -1.1, z: -1.3, color: '#8a4fd6', label: 'Signal des scenarios de Jax' },
+        { kind: 'archive', x: 1.1, z: -1.3, color: '#fff1a8', label: 'Index des cinq portes' }
       ],
       75: [
         { kind: 'tower', x: 0, z: -5.1, radius: 0.86, height: 8.2, roofHeight: 1.1, color: '#e53935', accent: '#ffd84a', label: 'Grand toboggan des Grounds' },
@@ -9558,6 +10441,12 @@ const OS = {
       this.circusZoneSpritesCache.set(zoneId, sprites);
       return sprites;
     }
+    const canonRoom = this.getCircusCanonRoomDefinitions()[zoneId];
+    if (canonRoom) {
+      const sprites = (canonRoom.sprites || []).map(sprite => ({ ...sprite }));
+      this.circusZoneSpritesCache.set(zoneId, sprites);
+      return sprites;
+    }
     const shared = [
       { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -1.2, z: -2.3, color: '#e53935' },
       { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: 1.2, z: -2.55, color: '#d64545' },
@@ -9604,20 +10493,16 @@ const OS = {
         { name: 'C&A Mannequin', type: 'mannequin', avatar: 'mannequin', x: 0.1, z: -2.05, color: '#d8d8d8' }
       ],
       8: [
-        { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -1.35, z: -2.2, color: '#d9d0a2' },
-        { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 0.2, z: -2.45, color: '#e53935' },
-        { name: 'Martha Mildenhall', type: 'ghost', avatar: 'marthamildenhall', x: 1.65, z: -1.55, color: '#7df0ff' },
-        { name: 'Baron Mildenhall', type: 'npc', avatar: 'baronmildenhall', x: 2.55, z: -2.25, color: '#7b8dff', sizeScale: 1.12 },
-        { name: 'Angel', type: 'npc', avatar: 'angel', x: -2.75, z: -1.55, color: '#e5d7d7', sizeScale: 1.08 },
-        { name: 'Mildenhall Souls', type: 'ghost', avatar: 'mildenhallsouls', x: 0.15, z: -3.15, color: '#77f5da', sizeScale: 0.8 },
-        { name: 'Ghostly', type: 'ghost', avatar: 'ghostly', x: 3.15, z: -3.35, color: '#7dffd8', sizeScale: 0.62 }
+        { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -1.9, z: -2.2, color: '#d9d0a2' },
+        { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -0.6, z: -2.45, color: '#e53935' },
+        { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: 0.75, z: -2.35, color: '#d64545' },
+        { name: 'Jax', type: 'jax', avatar: 'jax', x: 2.0, z: -1.9, color: '#8a4fd6' },
+        { name: 'Ghostly', type: 'ghost', avatar: 'ghostly', x: 2.85, z: -3.25, color: '#7dffd8', sizeScale: 0.62 }
       ],
       9: [
         { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -0.9, z: -2.1, color: '#d9d0a2' },
         { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 0.85, z: -2.35, color: '#ffb32c' },
-        { name: 'Baron Mildenhall', type: 'npc', avatar: 'baronmildenhall', x: 2.1, z: -1.65, color: '#7b8dff' },
-        { name: 'Ghostly', type: 'ghost', avatar: 'ghostly', x: -2.2, z: -1.55, color: '#7dffd8', sizeScale: 0.72 },
-        { name: 'Mildenhall Souls', type: 'ghost', avatar: 'mildenhallsouls', x: 0.05, z: -3.05, color: '#77f5da', sizeScale: 0.78 }
+        { name: 'Baron Mildenhall', type: 'npc', avatar: 'baronmildenhall', x: 2.1, z: -1.65, color: '#7b8dff', silent: true, silentText: 'Le corps du Baron reste un element de scene; seul son enregistrement fournit une voix.' }
       ],
       10: [
         { name: 'Work Gangle', type: 'gangle', avatar: 'workgangle', x: -0.75, z: -2.1, color: '#f7f7f7' },
@@ -9661,17 +10546,15 @@ const OS = {
         { name: 'Red Crappy Looking Fish', type: 'npc', avatar: 'liarfish', x: -0.2, z: -3.18, color: '#ff3264', sizeScale: 0.64 }
       ],
       15: [
-        { name: 'Ming', type: 'mannequin', avatar: 'ming', x: -1.65, z: -2.1, color: '#b7c7d8' },
-        { name: 'Chinese Room NPC', type: 'mannequin', avatar: 'chineseroomnpc', x: 0.95, z: -3.05, color: '#d8b4fe', sizeScale: 1.05 }
+        { name: 'Caine', type: 'caine', avatar: 'caine', x: -1.55, z: -2.15, color: '#ffd84a' },
+        { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 0.1, z: -2.45, color: '#ff4fb8' },
+        { name: 'Chinese Room NPC', type: 'mannequin', avatar: 'chineseroomnpc', x: 1.75, z: -3.05, color: '#d8b4fe', sizeScale: 1.05 }
       ],
       16: [
         { name: 'Caine', type: 'caine', avatar: 'caine', x: -1.05, z: -2.25, color: '#ffd84a' },
         { name: 'Blue AI', type: 'system', avatar: 'blueai', x: 0, z: -3.15, color: '#00ddff', sizeScale: 0.85, loreGate: { episode: 9, subepisode: 6 } },
         { name: 'Abel NPC Echo', type: 'mannequin', avatar: 'abelmannequin', x: 0.6, z: -1.85, color: '#ff8a30' },
-        { name: 'Deleted Abel Render', type: 'mannequin', avatar: 'abelfullbody', x: 1.85, z: -2.55, color: '#f08a28' },
-        { name: 'Fourth Crocodile // Archive EP8', type: 'npc', avatar: 'fourthcrocodile', x: -3.15, z: -3.2, color: '#d4c840', sizeScale: 1.18, silent: true, loreGate: { episode: 8, subepisode: 7 } },
-        { name: 'Feminine Shadow // Archive EP8', type: 'ghost', avatar: 'ragathamothershadow', x: 3.2, z: -3.2, color: '#18111f', sizeScale: 1.3, silent: true, loreGate: { episode: 8, subepisode: 7 } },
-        { name: 'Laughing Shadows // Archive EP8', type: 'ghost', avatar: 'laughingshadows', x: 0.25, z: -3.75, color: '#05020d', sizeScale: 1.28, silent: true, loreGate: { episode: 8, subepisode: 7 } }
+        { name: 'Deleted Abel Render', type: 'mannequin', avatar: 'abelfullbody', x: 1.85, z: -2.55, color: '#f08a28' }
       ],
       17: [
         { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -1.25, z: -2.2, color: '#d9d0a2' },
@@ -9742,9 +10625,7 @@ const OS = {
         { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: 0.15, z: -2.65, color: '#f7f7f7' },
         { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 1.65, z: -1.8, color: '#ff4fb8' }
       ],
-      29: [
-        { name: 'Dr. Football', type: 'prop', avatar: 'drfootball', x: 0.85, z: -2.35, color: '#d94338', sizeScale: 0.82 }
-      ],
+      29: [],
       30: [
         { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: -0.9, z: -2.2, color: '#ff4fb8' },
         { name: 'Bubble', type: 'bubble', avatar: 'bubble', x: 1.0, z: -1.8, color: '#f7f7ff' }
@@ -9778,7 +10659,8 @@ const OS = {
         { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -1.1, z: -2.35, color: '#e53935' },
         { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: 0.7, z: -2.55, color: '#d9d0a2' },
         { name: 'Martha Mildenhall', type: 'ghost', avatar: 'marthamildenhall', x: 2.0, z: -1.65, color: '#7df0ff' },
-        { name: 'Angel', type: 'npc', avatar: 'angel', x: -2.15, z: -1.55, color: '#e5d7d7', sizeScale: 1.05 }
+        { name: 'Angel', type: 'npc', avatar: 'angel', x: -2.15, z: -1.55, color: '#e5d7d7', sizeScale: 1.05 },
+        { name: 'Mildenhall Souls', type: 'ghost', avatar: 'mildenhallsouls', x: 0.05, z: -3.15, color: '#77f5da', sizeScale: 0.82 }
       ],
       35: [
         { name: 'Work Gangle', type: 'gangle', avatar: 'workgangle', x: -1.4, z: -2.2, color: '#f7f7f7' },
@@ -9795,7 +10677,6 @@ const OS = {
       38: [
         { name: 'Caine', type: 'caine', avatar: 'caine', x: 0, z: -2.7, color: '#ffd84a' },
         { name: 'Ming', type: 'mannequin', avatar: 'ming', x: -1.65, z: -1.8, color: '#b7c7d8' },
-        { name: 'Disappearing Guy', type: 'mannequin', avatar: 'disappearingguy', x: 1.65, z: -1.8, color: '#c34232' },
         { name: 'Committee Member', type: 'mannequin', avatar: 'committeemember', x: 0.95, z: -1.35, color: '#f4f4f0' }
       ],
       39: [
@@ -9861,11 +10742,7 @@ const OS = {
         { name: 'Ribbit abstrait // Scan', type: 'abstract', avatar: 'abstractedribbit', x: 1.45, z: -2.85, color: '#050505', sizeScale: 1.25, silent: true, threatActive: false, silentText: 'Le scan de Ribbit abstrait gronde sans former de langage. Il s agit d une archive visuelle, pas d une presence physique.', loreGate: { episode: 9, subepisode: 2 } }
       ],
       74: [
-        { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -2.65, z: -1.45, color: '#e53935' },
-        { name: 'Killer Jax', type: 'jax', avatar: 'jaxmindviolent', x: -1.35, z: -2.25, color: '#8a4fd6', silent: true, silentText: 'Killer Jax pousse la facade violente de Jax a son extreme dans sa psyche.', loreGate: { episode: 9, subepisode: 4 } },
-        { name: 'Cartoonish Jax', type: 'jax', avatar: 'jaxmindcomic', x: 0.1, z: -2.9, color: '#b878e6', silent: true, silentText: 'Cartoonish Jax transforme la realite en gag pour maintenir son role social.', loreGate: { episode: 9, subepisode: 4 } },
-        { name: 'Piano Jax', type: 'jax', avatar: 'jaxmindtrapped', x: 1.55, z: -2.6, color: '#9871ca', silent: true, silentText: 'Piano Jax reste lie a son instrument et remet la cle a Pomni.', loreGate: { episode: 9, subepisode: 4 } },
-        { name: 'Maid Jax Persona', type: 'jax', avatar: 'maidjax', x: 2.75, z: -1.65, color: '#c88aff', silent: true, silentText: 'La tenue maid reapparait comme facette visuelle de l espace mental.', loreGate: { episode: 9, subepisode: 4 } }
+        { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -0.75, z: -2.35, color: '#e53935' }
       ],
       75: [
         { name: 'Caine', type: 'caine', avatar: 'caine', x: 0, z: -3.05, color: '#ffd84a' },
@@ -11495,7 +12372,7 @@ const OS = {
   getCainOSLoreZones() {
     const progress = (typeof EpisodeManager !== 'undefined') ? EpisodeManager.getProgress() : [];
     const unlocked = ep => ep === 0 || progress.includes(ep) || progress.some(done => done > ep && done <= 9);
-    return [
+    const zones = [
       { id: 2, ep: 0, name: 'Chapiteau / piste', desc: 'Hub stable du Cirque et retour naturel des aventures.', item: 'Plan du chapiteau', unlocked: true },
       { id: 4, ep: 1, name: 'Cellar / Kaufmo', desc: 'Archive dangereuse de Kaufmo abstrait.', item: 'Fragment abstrait', unlocked: unlocked(1) },
       { id: 5, ep: 1, name: 'Porte de sortie / Vide', desc: 'Fausse issue et bureaux impossibles.', item: 'Trace de porte rouge', unlocked: unlocked(1) },
@@ -11543,6 +12420,25 @@ const OS = {
       ,{ id: 42, ep: 1, name: 'Digital Carnival Overlook', desc: 'Fete foraine visible mais jamais visitee.', item: 'Ticket non utilise', unlocked: unlocked(1) }
       ,{ id: 43, ep: 1, name: 'Tent Dining Area', desc: 'Table commune du niveau principal.', item: 'Assiette digitale', unlocked: unlocked(1) }
     ];
+    const known = new Set(zones.map(zone => zone.id));
+    Object.entries(this.getCircusCanonRoomDefinitions()).forEach(([zoneId, room]) => {
+      const id = Number(zoneId);
+      if (known.has(id)) return;
+      const boundary = room.provenance === 'shown'
+        ? 'Disposition montree, echelle adaptee au FPS.'
+        : room.provenance === 'mentioned'
+          ? 'Lieu cite, geometrie CainOS explicitement reconstruite.'
+          : 'Projection archivee, non permanente dans le Cirque.';
+      zones.push({
+        id,
+        ep: room.gateEpisode,
+        name: room.name,
+        desc: `${room.detail} ${boundary}`,
+        item: `Balise ${room.short}`,
+        unlocked: unlocked(room.gateEpisode)
+      });
+    });
+    return zones.sort((a, b) => a.id - b.id);
   },
 
   getCainOSContentMatrix() {
@@ -11559,11 +12455,17 @@ const OS = {
       8: [16, 17, 21],
       9: [18, 19, 22, 23]
     };
+    Object.entries(this.getCircusCanonRoomDefinitions()).forEach(([zoneId, room]) => {
+      const ep = room.gateEpisode;
+      if (!zoneByEpisode[ep]) zoneByEpisode[ep] = [];
+      zoneByEpisode[ep].push(Number(zoneId));
+    });
     return Array.from({ length: 9 }, (_, offset) => {
       const ep = offset + 1;
       const segments = EpisodeManager.getSubepisodeSegments?.(ep) || [];
       const completed = EpisodeManager.getSubepisodeProgress?.(ep) || [];
-      const zones = (zoneByEpisode[ep] || []).map(zoneId => this.getCainOSLoreZones().find(zone => zone.id === zoneId)).filter(Boolean);
+      const episodeZoneIds = [...new Set(zoneByEpisode[ep] || [])];
+      const zones = episodeZoneIds.map(zoneId => this.getCainOSLoreZones().find(zone => zone.id === zoneId)).filter(Boolean);
       const next = segments.find(segment => !completed.includes(segment.index));
       return {
         ep,

@@ -152,8 +152,18 @@ for (let episode = 1; episode <= 9; episode++) {
   "name: 'SHRIMP TOWN / RECONSTRUCTION LIMITEE'",
   "name: 'SNOWY TUNDRA'",
   'C&A BRAIN SCANNER ROOM',
-  "name: 'JAX PSYCHE'",
+  "name: 'JAX PSYCHE / FIVE-DOOR FOYER'",
   'EXPANDED GROUNDS / POST-REMEMBER',
+  'getCircusCanonRoomDefinitions',
+  "name: 'DR. FOOTBALL BATHROOM'",
+  "name: 'MILDENHALL ENTRY HALL'",
+  "name: 'PRIVATE TRUST EXERCISE ROOM'",
+  "name: 'ADMINISTRATOR ZONE'",
+  "name: 'EXIT OFFICE CUBICLE LOOP'",
+  "name: 'JAX PSYCHE / FOUR PERSONAS ROOM'",
+  "name: 'DESTROYED CIRCUS / JAX PILLOW SHACK'",
+  'getCircusDormHallDoorProps',
+  'getCircusNpcAnnexDoorProps',
   "kind: 'lorebillboard', avatar: 'paintedmasks'",
   "kind: 'lorebillboard', avatar: 'zoobleparts'",
   "kind: 'lorebillboard', avatar: 'abigailbrooks'",
@@ -305,6 +315,12 @@ if (duplicateIds.length) failures.push(`ID HTML DUPLIQUES: ${duplicateIds.join('
 
 if (!/campaignStages\s*!==\s*72/.test(app)) failures.push('Audit 72 actes absent');
 if (!/campaigns\.length\s*!==\s*9/.test(app)) failures.push('Audit 9 campagnes absent');
+if (!/getCircusFpsZoneMax\(\)\s*\{\s*return 119;/.test(app)) failures.push('Borne FPS 119 absente');
+if (!app.includes("name: 'UNTITLED BAR'")) failures.push('Bar canonique de Untitled absent');
+for (const marker of ['RAGATHA TORMENT', 'GANGLE TORMENT', 'ZOOBLE TORMENT', 'JAX TORMENT', 'POMNI TORMENT']) {
+  if (!app.includes(marker)) failures.push(`Sous-espace EP8 absent: ${marker}`);
+}
+if (!app.includes("name: 'DEAD TENT / CAINE DELETED'")) failures.push('Etat mort du chapiteau absent');
 if (!/CainOS_SAVE_V1/.test(app)) failures.push('Schema de sauvegarde absent');
 if (app.includes('CHARGEMENT DU NOYAU D\'ADMINISTRATION CHARLES')) failures.push('Boot Charles presente comme canon');
 if (app.includes("8: { title: 'REMEMBER'")) failures.push('Ancien titre FPS EP8 encore present');
