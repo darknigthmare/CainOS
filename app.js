@@ -10151,8 +10151,7 @@ const OS = {
     const phase = now % 5;
     const events = {
       2: [
-        { id: 'spotlight_sweep', label: 'PROJECTEURS', detail: 'EVENT: les projecteurs de Caine balayent la piste.', color: '#ffd84a' },
-        { id: 'curtain_shift', label: 'RIDEAUX', detail: 'EVENT: la piste se recale comme un decor de spectacle.', color: '#e53935' }
+        { id: 'spotlight_sweep', label: 'PROJECTEURS', detail: 'EVENT: les projecteurs de Caine balayent la piste.', color: '#ffd84a' }
       ],
       3: [
         { id: 'grounds_sky', label: 'SKYBOX', detail: 'EVENT: le ciel artificiel eclaire les montagnes arrondies.', color: '#7df0ff' },
@@ -10348,7 +10347,7 @@ const OS = {
         }
         ctx.stroke();
       }
-    } else if (event.id === 'score_flash' || event.id === 'target_ping' || event.id === 'admin_scan' || event.id === 'core_trace' || event.id === 'color_loss' || event.id === 'archive_flicker' || event.id === 'memory_echo' || event.id === 'cellar_warning' || event.id === 'candy_convoy' || event.id === 'fudge_shift' || event.id === 'counter_bell' || event.id === 'curtain_shift') {
+    } else if (event.id === 'score_flash' || event.id === 'target_ping' || event.id === 'admin_scan' || event.id === 'core_trace' || event.id === 'color_loss' || event.id === 'archive_flicker' || event.id === 'memory_echo' || event.id === 'cellar_warning' || event.id === 'candy_convoy' || event.id === 'fudge_shift' || event.id === 'counter_bell') {
       ctx.strokeStyle = `${event.color}99`;
       ctx.lineWidth = 1;
       for (let i = 0; i < 5; i++) {
