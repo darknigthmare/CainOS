@@ -56,7 +56,7 @@ const canonPackEPlacements = {
   candyguardblue: 32,
   candyguardpurple: 32,
   gummyworm: 6,
-  barrelmonkey: 3,
+  barrelmonkey: 2,
   jeffery: 11
 };
 const canonPackEProfileKeys = {
@@ -467,6 +467,102 @@ for (const [zone, kinds] of [[70, ['building', 'wave']], [71, ['stairs', 'candle
 const canonRoomDefinitions = OS.getCircusCanonRoomDefinitions();
 if (OS.getCircusFpsZoneMax() !== 119) failures.push('FPS: borne de zones attendue a 119');
 if (Object.keys(canonRoomDefinitions).length !== 44) failures.push(`FPS: ${Object.keys(canonRoomDefinitions).length}/44 pieces canoniques ou balisees`);
+const episodeOneRoomChecks = new Map([
+  [76, ['bathtub', 'toilet', 'sink']],
+  [77, ['wave', 'window']],
+  [78, ['toyglove', 'toyblock']],
+  [79, ['carousel']],
+  [80, ['doorframe', 'ring']],
+  [81, ['ring', 'archive']],
+  [82, ['base', 'archive']],
+  [97, ['partition', 'desk', 'crt', 'console', 'watercooler']],
+  [98, ['sofa', 'table', 'floorlamp', 'watercooler', 'archive']],
+  [99, ['wallart', 'console']],
+  [100, ['doorframe', 'exitframe']]
+]);
+for (const [zone, expectedKinds] of episodeOneRoomChecks) {
+  const kinds = new Set(OS.getCircusZoneProps(zone).map(prop => prop.kind));
+  for (const kind of expectedKinds) {
+    if (!kinds.has(kind)) failures.push(`EP1 FPS ${zone}: decor canonique ${kind} absent`);
+  }
+}
+const officeCubicleProps = OS.getCircusZoneProps(97);
+if (officeCubicleProps.filter(prop => prop.kind === 'partition').length < 4) {
+  failures.push('EP1 FPS 97: reseau de cloisons de cubicles insuffisant');
+}
+if (officeCubicleProps.filter(prop => prop.kind === 'desk').length < 4) {
+  failures.push('EP1 FPS 97: boucle de postes de travail insuffisante');
+}
+if (OS.getCircusZoneProps(98).filter(prop => prop.kind === 'sofa').length < 2) {
+  failures.push('EP1 FPS 98: salon C&A sans ses deux canapes volumetriques');
+}
+const episodeOneBaseChecks = new Map([
+  [2, ['stagecurtain', 'stagevalance', 'ring']],
+  [3, ['tent', 'tower', 'building', 'wave', 'fence', 'plant']],
+  [4, ['cellaropening', 'eye']],
+  [5, ['pilotexitdoor', 'exitframe']],
+  [31, ['gloinknest', 'zooblepart', 'caveglow', 'caveslide', 'escalator']]
+]);
+for (const [zone, expectedKinds] of episodeOneBaseChecks) {
+  const kinds = new Set(OS.getCircusZoneProps(zone).map(prop => prop.kind));
+  for (const kind of expectedKinds) {
+    if (!kinds.has(kind)) failures.push(`EP1 FPS ${zone}: element ${kind} absent`);
+  }
+}
+if (OS.getCircusZoneProps(5).filter(prop => prop.kind === 'exitframe').length < 3) {
+  failures.push('EP1 FPS 5: le labyrinthe ne contient pas ses trois cadres testables');
+}
+const kaufmoGameplayKinds = new Set(OS.getCircusZoneGameplayConfig(52)?.steps?.map(step => step.kind) || []);
+for (const kind of ['graffiti', 'crt', 'wallart']) {
+  if (!kaufmoGameplayKinds.has(kind)) failures.push(`EP1 FPS 52: gameplay Kaufmo sans ${kind}`);
+}
+const kaufmoRoom = OS.getCircusBedroomDefinitions()[52];
+if (kaufmoRoom?.gateEpisode !== 1 || kaufmoRoom?.gateSubepisode !== 4 || kaufmoRoom?.motif !== 'kaufmoroom') {
+  failures.push('EP1 FPS: chambre de Kaufmo verrouillee hors de sa scene du PILOT');
+}
+const kaufmoProps = OS.getCircusZoneProps(52);
+if (kaufmoProps.filter(prop => prop.kind === 'graffiti').length < 5 || !kaufmoProps.some(prop => prop.kind === 'crt') || kaufmoProps.some(prop => prop.kind === 'bed')) {
+  failures.push('EP1 FPS: chambre de Kaufmo non conforme aux graffiti EXIT et au mobilier montre');
+}
+const carouselProps = OS.getCircusZoneProps(79).filter(prop => prop.kind === 'carousel');
+if (carouselProps.length < 8 || new Set(carouselProps.map(prop => prop.elevation || 0)).size < 5) {
+  failures.push('EP1 FPS: le vide des carrousels ne restitue pas les empilements verticaux du PILOT');
+}
+const dormProps = OS.getCircusZoneProps(20);
+if (dormProps.filter(prop => prop.kind === 'wallart').length < 12) failures.push('EP1 FPS: tableaux du couloir des chambres insuffisants');
+if (dormProps.filter(prop => prop.kind === 'ceilinglight' && prop.fixture === 'dome').length < 7) failures.push('EP1 FPS: plafonniers ronds du dortoir absents');
+const groundsAvatars = new Set(OS.getCircusZoneSprites(3).map(sprite => sprite.avatar || sprite.type));
+if (groundsAvatars.has('gloinkqueenscale')) failures.push('EP1 FPS: Gloink Queen placee a tort sur le Grounds');
+const cellarAvatars = new Set(OS.getCircusZoneSprites(4).map(sprite => sprite.avatar || sprite.type));
+for (const avatar of ['pomni', 'ragatha', 'zooble', 'gloinkround']) {
+  if (cellarAvatars.has(avatar)) failures.push(`EP1 FPS: ${avatar} ne doit pas etre resident actif du Cellar`);
+}
+const cellarEvents = OS.getCircusDynamicEventDefinitions(4);
+if (cellarEvents.some(event => event.avatar || event.avatars?.length || event.channel !== 'system')) {
+  failures.push('EP1 FPS: le Cellar fait apparaitre ou parler un resident absent de l ouverture finale');
+}
+const exitMazeAvatars = OS.getCircusZoneSprites(5).map(sprite => sprite.avatar || sprite.type);
+if (exitMazeAvatars.length !== 1 || exitMazeAvatars[0] !== 'pomni') {
+  failures.push('EP1 FPS: la fausse sortie doit isoler Pomni du reste du groupe');
+}
+if (OS.getCircusDynamicEventDefinitions(5).some(event => event.avatar && event.avatar !== 'pomni')) {
+  failures.push('EP1 FPS: un personnage autre que Pomni apparait physiquement dans la fausse sortie');
+}
+const nestAvatars = new Set(OS.getCircusZoneSprites(31).map(sprite => sprite.avatar || sprite.type));
+for (const avatar of ['jax', 'kinger', 'gangle', 'zooble', 'gloinkqueenscale', 'gloinkstar', 'gloinkcube', 'gloinkpyramid', 'gloinkcrescent', 'gloinkpin', 'gloinkround']) {
+  if (!nestAvatars.has(avatar)) failures.push(`EP1 FPS: ${avatar} absent de la scene du Nid`);
+}
+for (const avatar of ['pomni', 'ragatha']) {
+  if (nestAvatars.has(avatar)) failures.push(`EP1 FPS: ${avatar} placee a tort dans le Nid`);
+}
+const pilotCampaign = OS.getCircusFpsCampaignDefinition(1);
+const kaufmoStage = pilotCampaign.stages.find(stage => stage.zone === 52);
+if (!kaufmoStage || !kaufmoStage.requirements.some(requirement => requirement.target === 'graffiti')) {
+  failures.push('EP1 FPS: acte de la chambre de Kaufmo absent de la campagne');
+}
+if (pilotCampaign.stages.some(stage => stage.zone === 4 && stage.requirements.some(requirement => requirement.target === 'candle'))) {
+  failures.push('EP1 FPS: ancien combat invente dans le Cellar encore actif');
+}
 const zoneObjectiveAudit = OS.auditCircusZoneObjectives();
 if (!zoneObjectiveAudit.ok) zoneObjectiveAudit.errors.forEach(error => failures.push(`OBJECTIF FPS: ${error}`));
 for (const zone of [76, 77, 78, 79, 80, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 109, 110, 111, 112, 114, 115, 116, 117, 118, 119]) {

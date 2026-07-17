@@ -1779,21 +1779,23 @@ const OS = {
       const id = Number(zoneId);
       const isArchived = this.isCircusBedroomArchived(room);
       const archiveLabel = isArchived ? 'ARCHIVE / ' : '';
+      const gateEpisode = room.gateEpisode || (room.archived ? 9 : 1);
+      const gateSubepisode = room.gateSubepisode || 0;
       portals[id] = {
         name: `${archiveLabel}CHAMBRE DE ${room.resident.toUpperCase()}`,
         short: room.resident.toUpperCase().slice(0, 12),
-        detail: isArchived
+        detail: room.detail || (isArchived
           ? `Chambre abandonnee de ${room.resident}. Reconstruction CainOS: la porte est canonique, mais cet interieur exact ne l est pas.`
-          : `Espace prive de ${room.resident}. Les details non montres a l ecran sont identifies comme reconstruction CainOS.`,
+          : `Espace prive de ${room.resident}. Les details non montres a l ecran sont identifies comme reconstruction CainOS.`),
         color: room.color,
-        floor: isArchived ? '#171219' : room.color,
-        ceiling: isArchived ? '#080609' : '#1a0d20',
-        unlocked: room.archived ? unlocked(9) : unlockedAt(1, 0)
+        floor: room.floor || (isArchived ? '#171219' : room.color),
+        ceiling: room.ceiling || (isArchived ? '#080609' : '#1a0d20'),
+        unlocked: unlockedAt(gateEpisode, gateSubepisode)
       };
       scenes[id] = {
         exits: [room.parent],
-        motif: isArchived ? 'archivebedroom' : 'bedroom',
-        size: isArchived ? 11 : 13
+        motif: room.motif || (isArchived ? 'archivebedroom' : 'bedroom'),
+        size: room.size || (isArchived ? 11 : 13)
       };
     });
 
@@ -2471,14 +2473,14 @@ const OS = {
         { title: 'Aventure Gloink', zone: 31, guide: 'Traversez le portail, recuperez une piece de Zooble et identifiez le nid.', requirements: [
           { action: 'visit', target: '31', count: 1 }, { action: 'look', target: 'gloinknest', count: 1 }, { action: 'take', target: 'zooblepart', count: 1 }, { action: 'talk', target: 'gloinkqueenscale', count: 1 }
         ] },
-        { title: 'Kaufmo abstrait', zone: 4, guide: 'Rejoignez le cellar, utilisez la lumiere et survivez au signal Kaufmo.', requirements: [
-          { action: 'visit', target: '4', count: 1 }, { action: 'use', target: 'candle', count: 1 }, { action: 'survive', target: 'kaufmo', count: 3 }
+        { title: 'Chambre de Kaufmo', zone: 52, guide: 'Suivez Pomni et Ragatha jusqu a la chambre, puis relevez les signes de son abstraction.', requirements: [
+          { action: 'visit', target: '52', count: 1 }, { action: 'look', target: 'graffiti', count: 2 }, { action: 'use', target: 'crt', count: 1 }
         ] },
-        { title: 'Secours de Ragatha et Zooble', zone: 4, guide: 'Stabilisez le groupe sans traiter Kaufmo comme un personnage actif.', requirements: [
-          { action: 'talk', target: 'ragatha', count: 1 }, { action: 'talk', target: 'zooble', count: 1 }, { action: 'give', target: 'zooblepart', count: 1 }
+        { title: 'Fausse sortie et bureaux C&A', zone: 97, guide: 'Ouvrez la porte EXIT rouge, traversez les cubicles puis revenez au chapiteau.', requirements: [
+          { action: 'visit', target: '5', count: 1 }, { action: 'visit', target: '97', count: 1 }, { action: 'look', target: 'desk', count: 1 }, { action: 'use', target: 'console', count: 1 }, { action: 'visit', target: '2', count: 1 }
         ] },
-        { title: 'Fausse sortie et retour', zone: 5, guide: 'Testez les cadres, inspectez le bureau impossible puis revenez au chapiteau.', requirements: [
-          { action: 'use', target: 'exitframe', count: 3 }, { action: 'look', target: 'desk', count: 1 }, { action: 'visit', target: '2', count: 1 }
+        { title: 'Secours et fermeture du PILOT', zone: 2, guide: 'Rendez la piece a Zooble, constatez la restauration de Ragatha puis observez le Cellar via CainOS.', requirements: [
+          { action: 'talk', target: 'ragatha', count: 1 }, { action: 'talk', target: 'zooble', count: 1 }, { action: 'give', target: 'zooblepart', count: 1 }, { action: 'visit', target: '4', count: 1 }
         ] }
     ];
     if (episode === 1) return {
@@ -2762,12 +2764,12 @@ const OS = {
         { id: 'moon-call', speaker: 'Moon', text: 'Le terrain parait ouvert, mais le ciel reste une limite de simulation.', avatar: 'moon', duration: 4600 }
       ],
       4: [
-        { id: 'kaufmo-warning', speaker: 'CainOS', text: 'ALERTE: le signal Kaufmo reagit au bruit. La lumiere le repousse a courte portee.', avatar: 'abstractedkaufmo', duration: 5200, danger: true },
-        { id: 'ragatha-rescue', speaker: 'Ragatha', text: 'Ne reste pas entre Kaufmo et la porte. Garde Zooble dans ton champ de vision.', avatar: 'ragatha', duration: 5000 }
+        { id: 'kaufmo-warning', speaker: 'CainOS', channel: 'system', text: 'RISQUE DE CONTACT: Kaufmo abstrait reste non verbal parmi les autres formes du Cellar.', duration: 5200, danger: true },
+        { id: 'cellar-opening', speaker: 'CainOS', channel: 'system', text: 'OUVERTURE TEMPORAIRE: Caine depose Kaufmo dans le Cellar; le groupe reste au-dessus de la zone.', duration: 5000 }
       ],
       5: [
         { id: 'exit-loop', speaker: 'Pomni', text: 'Les bureaux se repetent. Cette porte imite une sortie, elle ne la prouve pas.', avatar: 'pomni', duration: 5200 },
-        { id: 'caine-recall', speaker: 'Caine', text: 'Cette zone n est absolument pas une sortie autorisee! Retour vers la piste!', avatar: 'caine', duration: 4700 }
+        { id: 'caine-recall', speaker: 'CainOS', channel: 'system', text: 'RAPPEL EXTERIEUR: Caine ne rejoint Pomni qu apres son passage dans le Vide.', duration: 4700 }
       ],
       6: [{ id: 'convoy-call', speaker: 'Gummigoo', text: 'Le tanker est pret. La route ne restera pas stable longtemps.', avatar: 'gummigoo', duration: 4600 }],
       8: [{ id: 'ghost-flicker', speaker: 'Kinger', text: 'Eteins ce qui fait trop de bruit. Dans le noir, certaines choses deviennent plus claires.', avatar: 'kinger', duration: 5200, danger: true }],
@@ -3136,13 +3138,14 @@ const OS = {
         color: '#d94338', floor: '#d8ecf0', ceiling: '#f5fbff', motif: 'bathroom', size: 11,
         gateEpisode: 1, gateSubepisode: 2, provenance: 'shown', exits: [29],
         props: [
-          { kind: 'window', x: 0, z: -3.0, color: '#b8e6ef', label: 'Grand miroir embue' },
-          { kind: 'barrel', x: -1.65, z: -2.15, color: '#f5f5f0', label: 'Baignoire de Dr. Football' },
-          { kind: 'table', x: 1.75, z: -1.75, color: '#d7eef1', label: 'Lavabo du sanitaire' },
-          { kind: 'doorframe', x: 0, z: -1.2, color: '#d94338', label: 'Porte aleatoire du chapiteau' }
+          { kind: 'window', style: 'bathroom', anchor: 'wall', x: 0, z: -3.25, color: '#87ccf2', label: 'Fenetre sur ciel bleu' },
+          { kind: 'bathtub', x: -1.45, z: -2.25, color: '#f5f5f0', label: 'Baignoire de Dr. Football' },
+          { kind: 'toilet', x: 1.65, z: -2.55, color: '#f5f5f0', label: 'Toilettes du sanitaire' },
+          { kind: 'sink', x: 1.55, z: -1.35, color: '#d7eef1', label: 'Lavabo du sanitaire' },
+          { kind: 'doorframe', x: 0, z: -1.05, color: '#d94338', label: 'Porte aleatoire du chapiteau' }
         ],
         sprites: [{ name: 'Dr. Football', type: 'prop', avatar: 'drfootball', x: -1.55, z: -2.2, color: '#d94338', sizeScale: 0.86, silent: true }],
-        objective: scan('RELEVER LE SANITAIRE IMPOSSIBLE', ['window', 'barrel'], 'drfootball')
+        objective: scan('RELEVER LE SANITAIRE IMPOSSIBLE', ['bathtub', 'toilet', 'sink'], 'drfootball')
       },
       77: {
         name: 'FLOODED FISH ROOM', short: 'SALLE NOYEE',
@@ -3163,12 +3166,13 @@ const OS = {
         color: '#e53935', floor: '#5a2442', ceiling: '#24112f', motif: 'tubes', size: 11,
         gateEpisode: 1, gateSubepisode: 2, provenance: 'shown', exits: [29],
         props: [
-          { kind: 'target', x: 0, z: -2.75, color: '#e53935', label: 'Gant de boxe sur ressort' },
+          { kind: 'toyglove', x: 0, z: -2.75, color: '#e53935', label: 'Gant de boxe sur vehicule jouet' },
           { kind: 'doorframe', x: -2.1, z: -2.15, color: '#ffd84a', label: 'Premiere porte piegee' },
           { kind: 'doorframe', x: 2.1, z: -2.15, color: '#2a58d8', label: 'Seconde porte piegee' },
-          { kind: 'ring', x: 0, z: -1.25, color: '#ff4fb8', label: 'Ressort retractable' }
+          { kind: 'toyblock', x: -1.1, z: -1.25, color: '#ffd84a', label: 'Bloc jaune du mecanisme' },
+          { kind: 'toyblock', x: 1.1, z: -1.35, color: '#2a58d8', label: 'Bloc bleu du mecanisme' }
         ],
-        sprites: [], objective: scan('DESAMORCER LE GANT SUR RESSORT', ['target', 'doorframe'])
+        sprites: [], objective: scan('DESAMORCER LE GANT SUR RESSORT', ['toyglove', 'doorframe'])
       },
       79: {
         name: 'ENDLESS GOLDEN CAROUSEL VOID', short: 'CARROUSEL',
@@ -3176,14 +3180,17 @@ const OS = {
         color: '#e8bd45', floor: '#090612', ceiling: '#030106', motif: 'void', size: 21,
         gateEpisode: 1, gateSubepisode: 2, provenance: 'shown', exits: [29],
         props: [
-          { kind: 'ring', x: 0, z: -3.4, color: '#ffd84a', label: 'Carrousel dore principal' },
-          { kind: 'ring', x: -3.1, z: -5.0, color: '#c99b2b', label: 'Carrousel superieur gauche' },
-          { kind: 'ring', x: 3.1, z: -5.4, color: '#fff1a8', label: 'Carrousel superieur droit' },
-          { kind: 'pillar', x: 0, z: -4.1, color: '#e8bd45', label: 'Axe sans fin' },
-          { kind: 'spotlight', x: -1.8, z: -2.1, color: '#fff1a8' },
-          { kind: 'spotlight', x: 1.8, z: -2.1, color: '#fff1a8' }
+          { kind: 'carousel', x: 0.45, z: 2.15, elevation: 0, color: '#ffd84a', level: 0, sizeScale: 1.42, label: 'Carrousel dore inferieur' },
+          { kind: 'carousel', x: 0.22, z: 2.1, elevation: 0.9, color: '#fff1a8', level: 1, sizeScale: 1.4, label: 'Carrousel dore niveau deux' },
+          { kind: 'carousel', x: 0.02, z: 2.05, elevation: 1.8, color: '#ffd84a', level: 2, sizeScale: 1.36, label: 'Carrousel dore niveau trois' },
+          { kind: 'carousel', x: -0.18, z: 2.0, elevation: 2.7, color: '#fff1a8', level: 3, sizeScale: 1.32, label: 'Carrousel dore niveau quatre' },
+          { kind: 'carousel', x: -0.34, z: 1.95, elevation: 3.6, color: '#ffd84a', level: 3, sizeScale: 1.28, label: 'Carrousel dore niveau cinq' },
+          { kind: 'carousel', x: -0.45, z: 1.9, elevation: 4.5, color: '#fff1a8', level: 4, sizeScale: 1.22, label: 'Carrousel dore niveau six' },
+          { kind: 'carousel', x: -0.52, z: 1.85, elevation: 5.4, color: '#ffd84a', level: 4, sizeScale: 1.16, label: 'Carrousel dore niveau sept' },
+          { kind: 'carousel', x: -0.55, z: 1.8, elevation: 6.3, color: '#fff1a8', level: 5, sizeScale: 1.08, label: 'Carrousel dore niveau huit' },
+          { kind: 'carousel', x: -0.5, z: 1.75, elevation: 7.2, color: '#ffd84a', level: 5, sizeScale: 1, label: 'Carrousel dore perdu dans le vide' }
         ],
-        sprites: [], objective: scan('FIXER UN REPERE DANS LE VIDE DORE', ['ring', 'pillar'])
+        sprites: [], objective: scan('FIXER UN REPERE DANS LE VIDE DORE', ['carousel'])
       },
       80: {
         name: 'NESTED DOOR CORRIDOR', short: 'PORTES BIS',
@@ -3451,31 +3458,49 @@ const OS = {
       },
       97: {
         name: 'EXIT OFFICE CUBICLE LOOP', short: 'CUBICLES',
-        detail: 'Premiere boucle de bureaux de la fausse sortie: moquette bleue, cloisons et postes repetes.',
-        color: '#d9e4ee', floor: '#456a8e', ceiling: '#f3f5f5', motif: 'exit', size: 19,
+        detail: 'Premiere boucle de bureaux de la fausse sortie: moquette bleue, cloisons basses, postes repetes et mobilier C&A abandonne.',
+        color: '#d9e4ee', floor: '#456a8e', ceiling: '#f3f5f5', motif: 'exit', size: 15,
         gateEpisode: 1, gateSubepisode: 4, provenance: 'shown', exits: [5, 98],
         props: [
-          { kind: 'desk', x: -2.7, z: -3.0, color: '#b9c6d0', label: 'Cubicle C&A 01' },
-          { kind: 'desk', x: 0, z: -3.5, color: '#b9c6d0', label: 'Cubicle C&A 02' },
-          { kind: 'desk', x: 2.7, z: -3.0, color: '#b9c6d0', label: 'Cubicle C&A 03' },
-          { kind: 'console', x: -1.3, z: -1.35, color: '#d7d7d7', label: 'Ancien terminal de bureau' },
-          { kind: 'archive', x: 1.5, z: -1.35, color: '#aeb7c2', label: 'Classeur metallique' }
+          { kind: 'partition', x: -2.35, z: 1.2, width: 0.14, depth: 2.4, height: 1.25, color: '#c7d0d7', label: 'Cloison longitudinale gauche' },
+          { kind: 'partition', x: 2.35, z: 1.2, width: 0.14, depth: 2.4, height: 1.25, color: '#c7d0d7', label: 'Cloison longitudinale droite' },
+          { kind: 'partition', x: -1.18, z: 0.1, width: 2.2, depth: 0.14, height: 1.25, color: '#d2d9df', label: 'Separation cubicles gauche' },
+          { kind: 'partition', x: 1.18, z: 0.1, width: 2.2, depth: 0.14, height: 1.25, color: '#d2d9df', label: 'Separation cubicles droite' },
+          { kind: 'desk', x: -1.2, z: 2.8, width: 1.45, color: '#9caab5', label: 'Cubicle C&A 01' },
+          { kind: 'desk', x: 1.2, z: 2.8, width: 1.45, color: '#9caab5', label: 'Cubicle C&A 02' },
+          { kind: 'desk', x: -1.2, z: 0.7, width: 1.45, color: '#9caab5', label: 'Cubicle C&A 03' },
+          { kind: 'desk', x: 1.2, z: 0.7, width: 1.45, color: '#9caab5', label: 'Cubicle C&A 04' },
+          { kind: 'crt', x: -1.2, z: 2.65, elevation: 0.76, color: '#5b6068', label: 'Moniteur du cubicle 01' },
+          { kind: 'crt', x: 1.2, z: 2.65, elevation: 0.76, color: '#5b6068', label: 'Moniteur du cubicle 02' },
+          { kind: 'foldingchair', x: -1.2, z: 3.65, color: '#66717c', label: 'Chaise de bureau gauche' },
+          { kind: 'foldingchair', x: 1.2, z: 3.65, color: '#66717c', label: 'Chaise de bureau droite' },
+          { kind: 'console', x: -3.1, z: 2.6, color: '#d7d7d7', label: 'Ancien terminal de bureau' },
+          { kind: 'archive', x: 3.15, z: 1.0, color: '#aeb7c2', label: 'Classeur metallique' },
+          { kind: 'watercooler', x: 3.1, z: 2.65, color: '#dbe7ed', label: 'Fontaine a eau C&A' },
+          { kind: 'crate', x: -3.15, z: 0.85, color: '#917b68', label: 'Carton de dossiers' },
+          { kind: 'wallart', anchor: 'wall-left', wallSurface: 'outer', x: 0, z: 1.4, color: '#7290a8', art: 'blocks', label: 'Cadre abstrait du bureau' }
         ],
-        sprites: [], objective: scan('CARTOGRAPHIER LES CUBICLES', ['desk', 'console'])
+        sprites: [], objective: scan('CARTOGRAPHIER LES CUBICLES', ['partition', 'desk', 'console', 'watercooler'])
       },
       98: {
         name: 'EXIT OFFICE LOUNGE AND STORAGE', short: 'BUREAUX II',
-        detail: 'Suite de la fausse sortie avec canapes, bibliotheques, classeurs et rayonnages de stockage.',
-        color: '#eef1f3', floor: '#496f95', ceiling: '#ffffff', motif: 'exit', size: 17,
+        detail: 'Suite de la fausse sortie avec canapes gris, table basse, lampe, fontaine a eau, classeurs et stockage.',
+        color: '#eef1f3', floor: '#496f95', ceiling: '#ffffff', motif: 'exit', size: 13,
         gateEpisode: 1, gateSubepisode: 4, provenance: 'shown', exits: [97, 99, 73],
         props: [
-          { kind: 'table', x: -2.1, z: -2.2, color: '#66788a', label: 'Canape du salon C&A' },
-          { kind: 'table', x: 2.1, z: -2.2, color: '#66788a', label: 'Second canape C&A' },
-          { kind: 'archive', x: -2.75, z: -3.25, color: '#9ba8b5', label: 'Bibliotheque de bureau' },
-          { kind: 'archive', x: 2.75, z: -3.25, color: '#9ba8b5', label: 'Rayonnage de stockage' },
-          { kind: 'wallart', anchor: 'wall-right', x: 1.48, z: -0.6, color: '#7d8fa3', art: 'blocks', label: 'Tableau de bureau C&A' }
+          { kind: 'sofa', x: -2.05, z: 1.85, width: 2.2, depth: 0.9, height: 0.94, color: '#8195a6', label: 'Canape du salon C&A' },
+          { kind: 'sofa', x: 2.05, z: 1.85, width: 2.2, depth: 0.9, height: 0.94, color: '#8195a6', label: 'Second canape C&A' },
+          { kind: 'table', x: 0, z: 2.2, width: 1.4, depth: 0.8, color: '#8a7b6e', label: 'Table basse du salon' },
+          { kind: 'floorlamp', x: -3.0, z: 2.75, color: '#e8dfc4', label: 'Lampe sur pied du salon' },
+          { kind: 'watercooler', x: 3.05, z: 2.85, color: '#dbe7ed', label: 'Fontaine a eau et bouteilles' },
+          { kind: 'foldingchair', x: 0.8, z: 3.05, color: '#66717c', label: 'Chaise d attente' },
+          { kind: 'archive', x: -2.75, z: 0.65, color: '#9ba8b5', label: 'Bibliotheque de bureau' },
+          { kind: 'archive', x: 2.75, z: 0.65, color: '#9ba8b5', label: 'Rayonnage de stockage' },
+          { kind: 'crate', x: -1.05, z: 0.7, color: '#917b68', label: 'Carton de stockage gauche' },
+          { kind: 'crate', x: 1.05, z: 0.7, color: '#917b68', label: 'Carton de stockage droit' },
+          { kind: 'wallart', anchor: 'wall-right', wallSurface: 'outer', x: 0, z: 1.1, color: '#7d8fa3', art: 'blocks', label: 'Tableau de bureau C&A' }
         ],
-        sprites: [], objective: scan('RELEVER LE SALON DE LA FAUSSE SORTIE', ['table', 'archive'])
+        sprites: [], objective: scan('RELEVER LE SALON DE LA FAUSSE SORTIE', ['sofa', 'table', 'watercooler', 'archive'])
       },
       99: {
         name: 'C&A CYAN LOGO ROOM', short: 'LOGO C&A',
@@ -3903,7 +3928,12 @@ const OS = {
       47: { resident: 'Gangle', avatar: 'gangle', color: '#9e2638', parent: 20, canon: 'show', accent: '#f7f7f7' },
       48: { resident: 'Zooble', avatar: 'zooble', color: '#ff4fb8', parent: 20, canon: 'show', accent: '#7df0ff' },
       49: { resident: 'Kinger', avatar: 'kinger', color: '#5c4b82', parent: 20, canon: 'merch', accent: '#d9d0a2' },
-      52: { resident: 'Kaufmo', avatar: 'kaufmo', color: '#e53935', parent: 20, archived: true, accent: '#ffd84a' },
+      52: {
+        resident: 'Kaufmo', avatar: 'kaufmo', color: '#e53935', parent: 20, archived: true,
+        accent: '#ffd84a', motif: 'kaufmoroom', size: 11, gateEpisode: 1, gateSubepisode: 4,
+        floor: '#282125', ceiling: '#bbb6b2',
+        detail: 'Chambre de Kaufmo telle qu elle est decouverte dans le PILOT: murs et plafond couverts de EXIT, dessins paniques, television et mobilier renverse.'
+      },
       53: { resident: 'Queenie', avatar: 'queenie', color: '#2c252f', parent: 20, archived: true, accent: '#f7eecb' },
       54: { resident: 'Ribbit', avatar: 'ribbit', color: '#4ee77e', parent: 20, archived: true, accent: '#ffd84a' },
       55: { resident: 'Scratch', avatar: 'scratch', color: '#d6a82c', parent: 20, archived: true, accent: '#f7f7f7' },
@@ -4109,13 +4139,23 @@ const OS = {
     if (['circus', 'final', 'grounds'].includes(motif)) {
       [[3, 3], [size - 4, 3], [3, size - 5], [size - 4, size - 5]].forEach(([x, z]) => addBlock(x, z, 2));
       for (let x = 3; x < size - 3; x += 3) addBlock(x, 2, 2);
-    } else if (['manor', 'basement', 'cellar', 'hell', 'nest'].includes(motif)) {
+    } else if (['manor', 'basement', 'hell'].includes(motif)) {
       for (let z = 3; z < size - 3; z += 3) {
         addBlock(3, z, 3);
         addBlock(size - 4, z, 3);
       }
       if (size > 12) {
         for (let x = 4; x < size - 4; x++) if (x !== Math.floor(center.x)) addBlock(x, 4, 1);
+      }
+    } else if (motif === 'nest') {
+      // Irregular cave shoulders leave the long slide/escalator axis readable.
+      [[2, 3], [size - 3, 3], [3, 6], [size - 4, 7], [2, size - 5], [size - 3, size - 6]]
+        .forEach(([x, z]) => addBlock(x, z, 3));
+    } else if (motif === 'cellar') {
+      // The Cellar is a mostly empty void beneath Caine's temporary opening.
+      if (size > 12) {
+        addBlock(3, 3, 3);
+        addBlock(size - 4, 3, 3);
       }
     } else if (['test', 'admin', 'core'].includes(motif)) {
       for (let x = 2; x < size - 2; x += 4) {
@@ -4342,9 +4382,9 @@ const OS = {
     const talk = (avatar, label) => ({ type: 'talk', avatar, label });
     const objectives = {
       2: { title: 'RECALER LA PISTE', steps: [scan('ring', 'Inspecter la piste centrale'), activate('spotlight', 'Activer deux projecteurs', 2), talk('caine', 'Interroger Caine')] },
-      3: { title: 'CARTOGRAPHIER LE TERRAIN', steps: [scan('tent', 'Examiner le chapiteau exterieur'), scan('ring', 'Reperer une attraction'), talk('gloinkqueenscale', 'Observer la Gloink Queen')] },
-      4: { title: 'CONFINER LE SIGNAL KAUFMO', steps: [scan('eye', 'Identifier le signal d abstraction'), scan('crate', 'Verifier les caisses du cellar'), talk('abstractedkaufmo', 'Approcher Kaufmo abstrait')] },
-      5: { title: 'TESTER LA FAUSSE SORTIE', steps: [scan('exitframe', 'Comparer deux cadres de sortie', 2), scan('desk', 'Inspecter le bureau impossible'), talk('pomni', 'Parler des portes avec Pomni')] },
+      3: { title: 'CARTOGRAPHIER LE TERRAIN', steps: [scan('tent', 'Examiner le chapiteau exterieur'), scan('tower', 'Reperer la tour et son toboggan'), scan('building', 'Localiser le carnaval'), talk('sun', 'Observer le Soleil')] },
+      4: { title: 'OBSERVER LE CELLAR', steps: [scan('cellaropening', 'Identifier l ouverture de Caine'), scan('eye', 'Relever deux silhouettes abstraites', 2), talk('abstractedkaufmo', 'Observer Kaufmo sans inventer de dialogue')] },
+      5: { title: 'TESTER LA FAUSSE SORTIE', steps: [scan('pilotexitdoor', 'Examiner la porte EXIT rouge'), talk('pomni', 'Parler des portes avec Pomni')] },
       6: { title: 'SECURISER LE CONVOI', steps: [scan('truck', 'Verifier le camion-citerne'), scan('candy', 'Relever deux obstacles bonbon', 2), talk('gummigoo', 'Coordonner Gummigoo')] },
       7: { title: 'LIRE LE TEST LEVEL', steps: [activate('console', 'Activer la console de test'), activate('gridnode', 'Synchroniser deux noeuds', 2), talk('mannequin', 'Questionner le mannequin C&A')] },
       8: { title: 'ECLAIRER MILDENHALL', steps: [scan('window', 'Verifier une fenetre du manoir'), activate('candle', 'Allumer une bougie'), talk('kinger', 'Rester avec Kinger')] },
@@ -4370,7 +4410,7 @@ const OS = {
       28: { title: 'RECALER L ESPACE COMMUN', steps: [scan('table', 'Verifier la table centrale'), scan('ring', 'Inspecter le repere circulaire'), talk('ragatha', 'Retrouver Ragatha')] },
       29: { title: 'CARTOGRAPHIER LES TUBES', steps: [scan('doorframe', 'Identifier trois cadres de porte', 3), scan('ring', 'Verifier deux boucles de tube', 2)] },
       30: { title: 'INSPECTER LE LOSER CORNER', steps: [scan('table', 'Verifier le mobilier'), scan('window', 'Localiser l aquarium'), talk('zooble', 'Parler a Zooble')] },
-      31: { title: 'BALISER THE NEST', steps: [scan('stairs', 'Verifier l acces archive'), scan('window', 'Relever deux ouvertures', 2), talk('pomni', 'Rassurer Pomni')] },
+      31: { title: 'BALISER THE NEST', steps: [scan('caveslide', 'Verifier le toboggan d entree'), scan('escalator', 'Relever l escalator de sortie'), scan('caveglow', 'Identifier deux formes lumineuses', 2), talk('jax', 'Retrouver le groupe de Jax')] },
       32: { title: 'PREPARER L AUDIENCE ROYALE', steps: [scan('stairs', 'Verifier l escalier du palais'), scan('candy', 'Relever deux ornements', 2), talk('loolilalu', 'Consulter Loolilalu')] },
       33: { title: 'REMETTRE LE TANKER EN ROUTE', steps: [scan('truck', 'Verifier le camion-citerne'), scan('candy', 'Reperer deux obstacles', 2), talk('gummigoo', 'Retrouver Gummigoo')] },
       34: { title: 'CONTENIR LES AMES', steps: [scan('eye', 'Identifier l ame du manoir'), activate('candle', 'Maintenir une source de lumiere'), talk('kinger', 'Rester avec Kinger')] },
@@ -4399,7 +4439,9 @@ const OS = {
       75: { title: 'CARTOGRAPHIER LES GROUNDS ETENDUS', steps: [scan('tower', 'Relever la hauteur du grand toboggan'), scan('ring', 'Identifier deux ilots', 2), talk('caine', 'Consigner l extension avec Caine')] }
     };
     Object.entries(this.getCircusBedroomDefinitions()).forEach(([zoneId, room]) => {
-      objectives[Number(zoneId)] = this.isCircusBedroomArchived(room)
+      objectives[Number(zoneId)] = Number(zoneId) === 52
+        ? { title: 'RELEVER LA CHAMBRE DE KAUFMO', steps: [scan('graffiti', 'Lire deux inscriptions EXIT', 2), activate('crt', 'Allumer l ancienne television'), scan('wallart', 'Examiner les dessins paniques', 2)] }
+        : this.isCircusBedroomArchived(room)
         ? { title: `RELEVER LA CHAMBRE ABANDONNEE / ${room.resident.toUpperCase()}`, steps: [scan('bed', 'Examiner la chambre vide'), activate('archive', 'Ouvrir le dossier de porte'), activate('memory', 'Stabiliser la trace residuelle')] }
         : { title: `RELEVER LA CHAMBRE / ${room.resident.toUpperCase()}`, steps: [scan('bed', 'Examiner le mobilier principal'), activate('card', 'Identifier un objet personnel'), talk(room.avatar, `Parler a ${room.resident}`)] };
     });
@@ -4414,7 +4456,7 @@ const OS = {
   },
 
   auditCircusZoneObjectives() {
-    const activatableKinds = new Set(['console', 'gridnode', 'spotlight', 'candle', 'target', 'scoreboard', 'menu', 'card', 'archive', 'memory', 'ring', 'doorframe']);
+    const activatableKinds = new Set(['console', 'gridnode', 'spotlight', 'candle', 'target', 'scoreboard', 'menu', 'card', 'archive', 'memory', 'ring', 'doorframe', 'crt', 'pilotexitdoor']);
     const errors = [];
     let missionCount = 0;
     for (let zoneId = 2; zoneId <= this.getCircusFpsZoneMax(); zoneId++) {
@@ -4859,7 +4901,27 @@ const OS = {
       bed: "lit",
       wallart: "tableau abstrait",
       ceilinglight: "plafonnier",
-      lorebillboard: prop.label || "trace visuelle"
+      lorebillboard: prop.label || "trace visuelle",
+      stagecurtain: "rideau de scene",
+      stagevalance: "draperie de scene",
+      pilotexitdoor: "porte EXIT du PILOT",
+      graffiti: "graffiti de Kaufmo",
+      crt: "television cathodique",
+      foldingchair: "chaise pliante",
+      toyblock: "bloc de jeu",
+      fence: "barriere",
+      plant: "plante",
+      cellaropening: "ouverture du Cellar",
+      caveglow: "forme lumineuse du Nid",
+      caveslide: "toboggan du Nid",
+      escalator: "escalator du Nid",
+      gloinknest: "amas du Nid Gloink",
+      zooblepart: "piece de Zooble",
+      bathtub: "baignoire",
+      toilet: "toilettes",
+      sink: "lavabo",
+      toyglove: "gant de boxe mecanique",
+      carousel: "carrousel dore"
     };
     return names[prop.kind] || prop.kind || "objet";
   },
@@ -6134,6 +6196,16 @@ const OS = {
       }
       return { title: 'OBJET PERSONNEL', steps: [{ action: 'take', kind: 'card', count: 1, label: 'Prendre un objet avec permission' }, { action: 'give', kind: 'card', count: 1, label: 'Le rendre a son proprietaire' }] };
     }
+    if (zoneId === 52) {
+      return {
+        title: 'TRACE DE KAUFMO',
+        steps: [
+          { action: 'look', kind: 'graffiti', count: 2, label: 'Comparer deux inscriptions EXIT' },
+          { action: 'use', kind: 'crt', count: 1, label: 'Verifier l ancienne television' },
+          { action: 'look', kind: 'wallart', count: 1, label: 'Examiner un dessin sans le deplacer' }
+        ]
+      };
+    }
     if (zoneId >= 52 && zoneId <= 63) {
       return { title: 'TRACE ABANDONNEE', steps: [{ action: 'look', kind: 'bed', count: 1, label: 'Observer sans deplacer' }, { action: 'use', kind: 'archive', count: 1, label: 'Consulter le dossier de porte' }] };
     }
@@ -6801,7 +6873,7 @@ const OS = {
 
   getCircusWorldColliders(state) {
     if (state.worldColliderZoneId === state.currentZoneId && state.worldColliders) return state.worldColliders;
-    const collidableKinds = new Set(['table', 'counter', 'desk', 'bed', 'pillar', 'crate', 'barrel', 'tent', 'building', 'tower', 'lighthouse']);
+    const collidableKinds = new Set(['table', 'counter', 'desk', 'bed', 'partition', 'sofa', 'pillar', 'crate', 'barrel', 'tent', 'building', 'tower', 'lighthouse']);
     state.worldColliders = this.getCircusZoneProps(state.currentZoneId)
       .map((prop, index) => ({ ...prop, interactionId: index }))
       .filter(prop => collidableKinds.has(prop.kind) && !state.collectedProps?.has(`${state.currentZoneId}:${prop.interactionId}`))
@@ -6829,16 +6901,16 @@ const OS = {
   getCircusArchitecture(state, motif = null) {
     const activeMotif = motif || (state.scenes[state.currentZoneId] || state.scenes[2])?.motif || 'circus';
     const architectures = {
-      circus: { wallScale: 1.02, ceilingWorldHeight: 3.8, roof: 'tent', wallBias: 0.58 },
+      circus: { wallScale: 1.08, ceilingWorldHeight: 5.2, roof: 'tent', wallBias: 0.61 },
       final: { wallScale: 1.02, ceilingWorldHeight: 3.8, roof: 'tent', wallBias: 0.58 },
-      grounds: { wallScale: 0.58, ceilingWorldHeight: 4.8, roof: 'open', wallBias: 0.55 },
+      grounds: { wallScale: 0.5, ceilingWorldHeight: 6.2, roof: 'open', wallBias: 0.53 },
       candy: { wallScale: 0.78, ceilingWorldHeight: 3.2, roof: 'open', wallBias: 0.56 },
       route: { wallScale: 0.58, ceilingWorldHeight: 4.8, roof: 'open', wallBias: 0.55 },
       palace: { wallScale: 1.12, ceilingWorldHeight: 4.3, roof: 'vault', wallBias: 0.6 },
       manor: { wallScale: 1.04, ceilingWorldHeight: 3.9, roof: 'beams', wallBias: 0.6 },
       basement: { wallScale: 0.64, ceilingWorldHeight: 2.2, roof: 'beams', wallBias: 0.54 },
       hell: { wallScale: 0.9, ceilingWorldHeight: 3.4, roof: 'cavern', wallBias: 0.58 },
-      cellar: { wallScale: 0.68, ceilingWorldHeight: 2.35, roof: 'beams', wallBias: 0.55 },
+      cellar: { wallScale: 0.42, ceilingWorldHeight: 6.6, roof: 'open', wallBias: 0.5 },
       exit: { wallScale: 0.72, ceilingWorldHeight: 2.6, roof: 'tiles', wallBias: 0.55 },
       void: { wallScale: 0.5, ceilingWorldHeight: 5, roof: 'open', wallBias: 0.53 },
       test: { wallScale: 0.88, ceilingWorldHeight: 3.3, roof: 'grid', wallBias: 0.57 },
@@ -6848,14 +6920,15 @@ const OS = {
       kitchen: { wallScale: 0.62, ceilingWorldHeight: 2.3, roof: 'tiles', wallBias: 0.54 },
       bathroom: { wallScale: 0.56, ceilingWorldHeight: 2.1, roof: 'tiles', wallBias: 0.53 },
       training: { wallScale: 0.6, ceilingWorldHeight: 2.2, roof: 'tiles', wallBias: 0.54 },
-      dorm: { wallScale: 0.76, ceilingWorldHeight: 2.7, roof: 'hall', wallBias: 0.56 },
+      dorm: { wallScale: 0.82, ceilingWorldHeight: 3.15, roof: 'hall', wallBias: 0.57 },
       dormannex: { wallScale: 0.76, ceilingWorldHeight: 2.7, roof: 'hall', wallBias: 0.56 },
       bedroom: { wallScale: 0.7, ceilingWorldHeight: 2.55, roof: 'flat', wallBias: 0.55 },
       archivebedroom: { wallScale: 0.64, ceilingWorldHeight: 2.35, roof: 'flat', wallBias: 0.54 },
+      kaufmoroom: { wallScale: 0.62, ceilingWorldHeight: 2.25, roof: 'flat', wallBias: 0.54 },
       common: { wallScale: 0.84, ceilingWorldHeight: 3.1, roof: 'tent', wallBias: 0.57 },
       tubes: { wallScale: 0.9, ceilingWorldHeight: 3.35, roof: 'tent', wallBias: 0.58 },
       loser: { wallScale: 0.64, ceilingWorldHeight: 2.3, roof: 'flat', wallBias: 0.54 },
-      nest: { wallScale: 0.86, ceilingWorldHeight: 3.2, roof: 'beams', wallBias: 0.57 },
+      nest: { wallScale: 0.96, ceilingWorldHeight: 4.8, roof: 'cavern', wallBias: 0.58 },
       cafe: { wallScale: 0.76, ceilingWorldHeight: 2.75, roof: 'beams', wallBias: 0.56 },
       dining: { wallScale: 0.82, ceilingWorldHeight: 3.0, roof: 'tent', wallBias: 0.57 },
       awards: { wallScale: 1.02, ceilingWorldHeight: 3.8, roof: 'stage', wallBias: 0.59 },
@@ -7093,23 +7166,27 @@ const OS = {
           ctx.fillStyle = this.shadeHex('#ffe57d', shadeFactor);
           ctx.fillRect(x, y + wallH * 0.75, strip, Math.max(1, wallH * 0.25));
         } else if (motif === 'softball' || motif === 'grounds') {
-          // Alternating green / blue grounds panels
-          const prim = motif === 'softball' ? '#173416' : '#2a58d8';
-          const sec = motif === 'softball' ? '#0f220e' : '#1d3e9a';
-          const color = Math.floor(u * 4) % 2 === 0 ? prim : sec;
-          ctx.fillStyle = this.shadeHex(color, shadeFactor);
-          ctx.fillRect(x, y, strip, Math.ceil(wallH));
-        } else if (motif === 'cellar') {
-          // Kaufmo cellar containment walls: dark blocks, warning cuts, hidden eyes.
-          ctx.fillStyle = this.shadeHex('#101018', shadeFactor);
-          ctx.fillRect(x, y, strip, Math.ceil(wallH));
-          if (Math.floor(u * 10) % 4 === 0) {
-            ctx.fillStyle = this.shadeHex('#2a2834', shadeFactor);
+          if (motif === 'grounds') {
+            // Pilot skybox: blue sky, rounded white mountains and a low green tree line.
+            const wallCoord = hit.nearVertical ? hitZ : hitX;
+            const mountainTop = 0.46 + Math.abs(Math.sin(wallCoord * 0.68)) * 0.16;
+            ctx.fillStyle = this.shadeHex('#63a2ef', Math.max(0.72, shadeFactor));
+            ctx.fillRect(x, y, strip, Math.ceil(wallH));
+            ctx.fillStyle = this.shadeHex('#f6f6f1', Math.max(0.78, shadeFactor));
+            ctx.fillRect(x, y + wallH * mountainTop, strip, wallH * (0.82 - mountainTop));
+            ctx.fillStyle = this.shadeHex(Math.floor(wallCoord * 1.7) % 2 ? '#2e7b35' : '#4c9a3d', shadeFactor);
+            ctx.fillRect(x, y + wallH * 0.78, strip, wallH * 0.22);
+          } else {
+            const color = Math.floor(u * 4) % 2 === 0 ? '#173416' : '#0f220e';
+            ctx.fillStyle = this.shadeHex(color, shadeFactor);
             ctx.fillRect(x, y, strip, Math.ceil(wallH));
           }
-          ctx.fillStyle = this.shadeHex('#56505f', shadeFactor);
-          ctx.fillRect(x, y + wallH * 0.18, strip, Math.max(1, wallH * 0.025));
-          ctx.fillRect(x, y + wallH * 0.74, strip, Math.max(1, wallH * 0.025));
+        } else if (motif === 'cellar') {
+          // The Cellar has no constructed walls: only black distance and a water line.
+          ctx.fillStyle = '#000000';
+          ctx.fillRect(x, y, strip, Math.ceil(wallH));
+          ctx.fillStyle = 'rgba(73,48,112,0.13)';
+          ctx.fillRect(x, y + wallH * 0.91, strip, Math.max(1, wallH * 0.025));
         } else if (motif === 'micro') {
           // Suggestion-box micro-zones: shuffled idea cards and neon door fragments.
           const colors = ['#ff4fb8', '#7df0ff', '#ffd84a', '#c875ff'];
@@ -7160,6 +7237,17 @@ const OS = {
           ctx.fillRect(x, y + wallH * 0.78, strip, Math.max(1, wallH * 0.22));
           ctx.fillStyle = this.shadeHex(motif === 'dormannex' ? '#a56b72' : '#ffd06a', shadeFactor);
           ctx.fillRect(x, y + wallH * 0.76, strip, Math.max(1, wallH * 0.025));
+        } else if (motif === 'kaufmoroom') {
+          const wallCoord = hit.nearVertical ? hitZ : hitX;
+          ctx.fillStyle = this.shadeHex(Math.floor(wallCoord * 1.55) % 2 ? '#aaa5a2' : '#c8c4bf', shadeFactor);
+          ctx.fillRect(x, y, strip, Math.ceil(wallH));
+          if (Math.abs(Math.sin(wallCoord * 4.8)) < 0.28) {
+            ctx.fillStyle = this.shadeHex('#d52d34', Math.min(1.15, shadeFactor * 1.2));
+            ctx.fillRect(x, y + wallH * 0.18, strip, Math.max(1, wallH * 0.055));
+            ctx.fillRect(x, y + wallH * 0.56, strip, Math.max(1, wallH * 0.045));
+          }
+          ctx.fillStyle = this.shadeHex('#383033', shadeFactor);
+          ctx.fillRect(x, y + wallH * 0.84, strip, Math.max(1, wallH * 0.16));
         } else if (motif === 'bedroom' || motif === 'archivebedroom') {
           const archived = motif === 'archivebedroom';
           const wallBase = archived ? '#171219' : (zone.color || '#6a2f48');
@@ -7201,10 +7289,17 @@ const OS = {
           ctx.fillStyle = this.shadeHex('#44699a', shadeFactor);
           ctx.fillRect(x, y + wallH * 0.82, strip, Math.max(1, wallH * 0.12));
         } else if (motif === 'void') {
-          ctx.fillStyle = this.shadeHex('#ffffff', Math.max(0.88, shadeFactor));
-          ctx.fillRect(x, y, strip, Math.ceil(wallH));
-          ctx.fillStyle = 'rgba(190,195,225,0.24)';
-          ctx.fillRect(x, y + wallH * 0.5, strip, Math.max(1, wallH * 0.012));
+          if (state.currentZoneId === 79) {
+            ctx.fillStyle = this.shadeHex('#020103', Math.max(0.72, shadeFactor));
+            ctx.fillRect(x, y, strip, Math.ceil(wallH));
+            ctx.fillStyle = 'rgba(255,176,32,0.08)';
+            ctx.fillRect(x, y + wallH * 0.52, strip, Math.max(1, wallH * 0.01));
+          } else {
+            ctx.fillStyle = this.shadeHex('#ffffff', Math.max(0.88, shadeFactor));
+            ctx.fillRect(x, y, strip, Math.ceil(wallH));
+            ctx.fillStyle = 'rgba(190,195,225,0.24)';
+            ctx.fillRect(x, y + wallH * 0.5, strip, Math.max(1, wallH * 0.012));
+          }
         } else if (['common', 'dining', 'tubes', 'carnival'].includes(motif)) {
           const colors = motif === 'carnival' ? ['#e53935', '#ffd84a', '#2a58d8', '#ff4fb8'] : ['#d62f3f', '#fff3c2', '#2a58d8'];
           const color = colors[Math.abs(Math.floor(u * colors.length * 2)) % colors.length];
@@ -7218,10 +7313,15 @@ const OS = {
           ctx.fillStyle = this.shadeHex('#63d9ff', shadeFactor);
           ctx.fillRect(x, y + wallH * 0.42, strip, Math.max(1, wallH * 0.04));
         } else if (motif === 'nest') {
-          ctx.fillStyle = this.shadeHex(Math.floor(u * 10) % 3 ? '#5a3c28' : '#7a5a3d', shadeFactor);
+          const caveCoord = hit.nearVertical ? hitZ : hitX;
+          ctx.fillStyle = this.shadeHex(Math.floor(caveCoord * 2.4) % 3 ? '#160c36' : '#28125a', shadeFactor);
           ctx.fillRect(x, y, strip, Math.ceil(wallH));
-          ctx.fillStyle = this.shadeHex('#e8d6a8', shadeFactor);
-          ctx.fillRect(x, y + wallH * 0.72, strip, Math.max(1, wallH * 0.035));
+          const glowColors = ['#ff4fb8', '#7df0ff', '#a7ff55'];
+          if (Math.abs(Math.sin(caveCoord * 3.1)) < 0.16) {
+            ctx.fillStyle = glowColors[Math.abs(Math.floor(caveCoord * 1.7)) % glowColors.length];
+            ctx.fillRect(x, y + wallH * 0.22, strip, Math.max(1, wallH * 0.055));
+            ctx.fillRect(x, y + wallH * 0.66, strip, Math.max(1, wallH * 0.035));
+          }
         } else if (motif === 'palace') {
           ctx.fillStyle = this.shadeHex(Math.floor(u * 8) % 2 ? '#ff9ad5' : '#fff1a8', shadeFactor);
           ctx.fillRect(x, y, strip, Math.ceil(wallH));
@@ -7347,7 +7447,7 @@ const OS = {
       circus: { ceilingTop: '#0b0824', ceilingBottom: '#24112f', floorA: '#e06f24', floorB: '#080808', floorC: '#f4f0df', grid: 'rgba(255,241,168,0.1)' },
       final: { ceilingTop: '#080510', ceilingBottom: '#261020', floorA: '#1b0f16', floorB: '#a51d24', floorC: '#fff1a8', grid: 'rgba(255,90,105,0.12)' },
       grounds: { ceilingTop: '#153a85', ceilingBottom: '#5f8ee8', floorA: '#315f2d', floorB: '#244f21', floorC: '#c64a31', grid: 'rgba(255,241,168,0.12)' },
-      cellar: { ceilingTop: '#050509', ceilingBottom: '#15131b', floorA: '#171721', floorB: '#25232d', floorC: '#56505f', grid: 'rgba(155,150,170,0.12)' },
+      cellar: { ceilingTop: '#000000', ceilingBottom: '#030207', floorA: '#02030a', floorB: '#080a14', floorC: '#291346', grid: 'rgba(142,92,205,0.08)' },
       exit: { ceilingTop: '#e7eaf2', ceilingBottom: '#ffffff', floorA: '#d9dce5', floorB: '#f3f3f8', floorC: '#a4a4b2', grid: 'rgba(20,20,28,0.11)' },
       candy: { ceilingTop: '#7d3f8c', ceilingBottom: '#ffb3d8', floorA: '#ff9b37', floorB: '#ff4fb8', floorC: '#fff1a8', grid: 'rgba(255,255,255,0.15)' },
       test: { ceilingTop: '#030808', ceilingBottom: '#071c1e', floorA: '#021012', floorB: '#083036', floorC: '#7df0ff', grid: 'rgba(125,240,255,0.28)' },
@@ -7366,6 +7466,7 @@ const OS = {
       dormannex: { ceilingTop: '#21101a', ceilingBottom: '#6b3442', floorA: '#6b2135', floorB: '#35121f', floorC: '#a56b72', grid: 'rgba(180,125,135,0.14)' },
       bedroom: { ceilingTop: '#160b1e', ceilingBottom: '#3d203d', floorA: '#6a2f48', floorB: '#3d2134', floorC: '#fff1a8', grid: 'rgba(255,241,168,0.12)' },
       archivebedroom: { ceilingTop: '#050407', ceilingBottom: '#171219', floorA: '#171219', floorB: '#0b090d', floorC: '#695b68', grid: 'rgba(160,145,160,0.1)' },
+      kaufmoroom: { ceilingTop: '#d7d4d0', ceilingBottom: '#aaa5a2', floorA: '#3a3033', floorB: '#211b1e', floorC: '#d52d34', grid: 'rgba(213,45,52,0.16)' },
       cafe: { ceilingTop: '#17100d', ceilingBottom: '#3b271e', floorA: '#302018', floorB: '#4a2d20', floorC: '#d49a62', grid: 'rgba(212,154,98,0.15)' },
       aquarium: { ceilingTop: '#06202f', ceilingBottom: '#0a5068', floorA: '#073443', floorB: '#0a596b', floorC: '#63d9ff', grid: 'rgba(99,217,255,0.2)' },
       snow: { ceilingTop: '#34567a', ceilingBottom: '#9dc4dc', floorA: '#e8f7ff', floorB: '#a7c9df', floorC: '#ffffff', grid: 'rgba(255,255,255,0.22)' },
@@ -7376,7 +7477,7 @@ const OS = {
       ,common: { ceilingTop: '#24112f', ceilingBottom: '#5d2730', floorA: '#c43a35', floorB: '#f0b34a', floorC: '#fff1a8', grid: 'rgba(255,241,168,0.14)' }
       ,tubes: { ceilingTop: '#24112f', ceilingBottom: '#5b2c73', floorA: '#e06f24', floorB: '#080808', floorC: '#f4f0df', grid: 'rgba(125,240,255,0.16)' }
       ,loser: { ceilingTop: '#1b102b', ceilingBottom: '#493060', floorA: '#4c305c', floorB: '#291b38', floorC: '#63d9ff', grid: 'rgba(99,217,255,0.16)' }
-      ,nest: { ceilingTop: '#21150f', ceilingBottom: '#5a3c28', floorA: '#5a3c28', floorB: '#7a5a3d', floorC: '#e8d6a8', grid: 'rgba(232,214,168,0.14)' }
+      ,nest: { ceilingTop: '#07031a', ceilingBottom: '#20104a', floorA: '#160c36', floorB: '#28125a', floorC: '#7645b8', grid: 'rgba(125,240,255,0.13)' }
       ,palace: { ceilingTop: '#7d3f8c', ceilingBottom: '#ffb3d8', floorA: '#ffd6e8', floorB: '#fff1a8', floorC: '#ff9ad5', grid: 'rgba(255,255,255,0.18)' }
       ,route: { ceilingTop: '#315c9b', ceilingBottom: '#84c7f0', floorA: '#d97b35', floorB: '#8f4930', floorC: '#ffd84a', grid: 'rgba(255,241,168,0.14)' }
       ,hell: { ceilingTop: '#080000', ceilingBottom: '#340505', floorA: '#240707', floorB: '#5a0b0b', floorC: '#ff4d32', grid: 'rgba(255,77,50,0.2)' }
@@ -7408,7 +7509,7 @@ const OS = {
 
     ctx.save();
     const pulse = 0.55 + Math.sin(performance.now() / 700) * 0.45;
-    if (['circus', 'grounds', 'final'].includes(motif)) {
+    if (['circus', 'final'].includes(motif)) {
       ctx.strokeStyle = motif === 'final' ? 'rgba(255,70,80,0.32)' : 'rgba(255,241,168,0.26)';
       ctx.lineWidth = 2;
       for (let i = -4; i <= 4; i++) {
@@ -7421,6 +7522,54 @@ const OS = {
       ctx.beginPath();
       ctx.arc(w / 2, 22, 54, 0, Math.PI * 2);
       ctx.fill();
+    } else if (motif === 'grounds') {
+      ctx.fillStyle = 'rgba(255,255,255,0.82)';
+      for (let i = 0; i < 6; i++) {
+        const cloudX = (i * 157 + 55) % (w + 100) - 50;
+        const cloudY = 28 + (i % 3) * 38;
+        ctx.beginPath();
+        ctx.ellipse(cloudX, cloudY, 34, 12, 0, 0, Math.PI * 2);
+        ctx.ellipse(cloudX + 28, cloudY + 2, 25, 10, 0, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    } else if (motif === 'cellar') {
+      const beam = ctx.createRadialGradient(w / 2, 0, 4, w / 2, 0, Math.max(90, horizon * 0.95));
+      beam.addColorStop(0, 'rgba(255,255,255,0.88)');
+      beam.addColorStop(0.12, 'rgba(232,225,255,0.36)');
+      beam.addColorStop(1, 'rgba(0,0,0,0)');
+      ctx.fillStyle = beam;
+      ctx.beginPath();
+      ctx.moveTo(w / 2 - 30, 0);
+      ctx.lineTo(w / 2 + 30, 0);
+      ctx.lineTo(w / 2 + 150, horizon);
+      ctx.lineTo(w / 2 - 150, horizon);
+      ctx.closePath();
+      ctx.fill();
+    } else if (motif === 'nest') {
+      const colors = ['#ff4fb8', '#7df0ff', '#a7ff55'];
+      for (let i = 0; i < 9; i++) {
+        ctx.strokeStyle = colors[i % colors.length];
+        ctx.globalAlpha = 0.18 + pulse * 0.12;
+        const cx = 42 + (i * 89) % Math.max(90, w - 60);
+        const cy = 20 + (i % 3) * 34;
+        ctx.beginPath();
+        ctx.arc(cx, cy, 5 + (i % 4) * 3, 0, Math.PI * 2);
+        ctx.stroke();
+      }
+      ctx.globalAlpha = 1;
+    } else if (motif === 'kaufmoroom') {
+      ctx.fillStyle = 'rgba(210,35,45,0.82)';
+      ctx.font = 'bold 12px Courier New';
+      ctx.textAlign = 'center';
+      for (let row = 0; row < 5; row++) {
+        for (let col = 0; col < 9; col++) {
+          ctx.save();
+          ctx.translate(35 + col * 82, 22 + row * 31);
+          ctx.rotate(((row + col) % 3 - 1) * 0.1);
+          ctx.fillText('EXIT', 0, 0);
+          ctx.restore();
+        }
+      }
     } else if (motif === 'candy' || motif === 'lake') {
       ctx.fillStyle = motif === 'lake' ? 'rgba(255,229,125,0.8)' : 'rgba(255,255,255,0.35)';
       for (let i = 0; i < 7; i++) {
@@ -7522,11 +7671,23 @@ const OS = {
     } else if (motif === 'grounds') {
       const path = Math.abs(worldX - worldZ * 0.16) < 0.55;
       color = path ? theme.floorC : (checker(1.1) ? theme.floorA : theme.floorB);
-    } else if (motif === 'cellar' || motif === 'basement' || motif === 'manor') {
+    } else if (motif === 'cellar') {
+      const ripple = Math.abs(Math.sin(worldX * 0.65 + worldZ * 0.42)) < 0.055;
+      color = ripple ? theme.floorC : (checker(0.28) ? theme.floorA : theme.floorB);
+    } else if (motif === 'basement' || motif === 'manor') {
       const plank = Math.floor(worldX * 2.1) % 2 === 0;
       const seam = Math.abs((worldX * 2.1) % 1) < 0.08;
       color = seam ? theme.floorC : (plank ? theme.floorA : theme.floorB);
-    } else if (['exit', 'spudsy', 'kitchen', 'bathroom', 'training', 'admin', 'palace', 'common', 'dining', 'loser', 'awards', 'street'].includes(motif)) {
+    } else if (motif === 'exit') {
+      if (state?.currentZoneId >= 97 && state.currentZoneId <= 100) {
+        const carpetStripe = Math.abs((worldX * 0.42) % 1) < 0.035;
+        color = carpetStripe
+          ? '#6b8ba8'
+          : (checker(0.42) ? (zone.floor || '#456a8e') : '#3f607d');
+      } else {
+        color = checker(1.35) ? theme.floorA : theme.floorB;
+      }
+    } else if (['spudsy', 'kitchen', 'bathroom', 'training', 'admin', 'palace', 'common', 'dining', 'loser', 'awards', 'street'].includes(motif)) {
       color = checker(motif === 'admin' ? 1.45 : 1.35) ? theme.floorA : theme.floorB;
     } else if (motif === 'candy' || motif === 'route') {
       const syrup = Math.sin(worldX * 1.7 + worldZ * 0.9) > 0.42;
@@ -7547,9 +7708,16 @@ const OS = {
       const ripple = Math.sin(worldX * 1.8 + worldZ * 1.2) > 0.35;
       color = ripple ? theme.floorC : (checker(1.1) ? theme.floorA : theme.floorB);
     } else if (motif === 'void') {
-      const farGrid = Math.abs((worldX * 0.5) % 1) < 0.025 || Math.abs((worldZ * 0.5) % 1) < 0.025;
-      color = farGrid ? theme.floorC : theme.floorA;
-    } else if (['tubes', 'carnival', 'nest', 'hell'].includes(motif)) {
+      if (state?.currentZoneId === 79) {
+        color = Math.sin(worldX * 0.35 + worldZ * 0.2) > 0.92 ? '#120b05' : '#020103';
+      } else {
+        const farGrid = Math.abs((worldX * 0.5) % 1) < 0.025 || Math.abs((worldZ * 0.5) % 1) < 0.025;
+        color = farGrid ? theme.floorC : theme.floorA;
+      }
+    } else if (motif === 'nest') {
+      const vein = Math.abs(Math.sin(worldX * 1.9) + Math.cos(worldZ * 1.35)) > 1.72;
+      color = vein ? theme.floorC : (checker(0.52) ? theme.floorA : theme.floorB);
+    } else if (['tubes', 'carnival', 'hell'].includes(motif)) {
       color = checker(1.05) ? theme.floorA : theme.floorB;
     } else if (motif === 'dorm' || motif === 'dormannex') {
       const centerX = state?.room?.center?.x ?? 9.5;
@@ -7567,6 +7735,12 @@ const OS = {
         const seam = Math.abs((worldX * 2.4) % 1) < 0.07;
         color = seam ? '#3d241d' : (checker(0.55) ? '#8b5a3c' : '#72452f');
       } else color = checker(1.05) ? theme.floorA : theme.floorB;
+    } else if (motif === 'kaufmoroom') {
+      const scrawlSignal = Math.sin(worldX * 3.7 + Math.sin(worldZ * 2.1) * 1.8) * 0.65
+        + Math.cos(worldZ * 4.1 + Math.sin(worldX * 1.6)) * 0.35;
+      const redScrawl = Math.abs(scrawlSignal) < 0.035
+        && Math.sin(worldX * 1.2 - worldZ * 0.9) > 0.15;
+      color = redScrawl ? theme.floorC : (checker(0.75) ? theme.floorA : theme.floorB);
     } else if (motif === 'archivebedroom') {
       const gridLine = Math.abs((worldX * 1.1) % 1) < 0.035 || Math.abs((worldZ * 1.1) % 1) < 0.035;
       color = gridLine ? theme.floorC : (checker(0.55) ? theme.floorA : theme.floorB);
@@ -7657,14 +7831,14 @@ const OS = {
         { id: 'gummigoo_delete', label: 'NPC DELETE', detail: 'EVENT: la suppression de Gummigoo laisse une silhouette de donnees qui se desagrege.', color: '#d8a23a' }
       ],
       3: [
-        { id: 'gloink_swarm', label: 'GLOINK SWARM', detail: 'EVENT: petits Gloinks en mouvement autour du terrain.', color: '#7348ff' },
-        { id: 'queen_pulse', label: 'QUEEN SIGNAL', detail: 'EVENT: la Gloink Queen pulse a grande echelle.', color: '#ff7d8d' }
+        { id: 'grounds_sky', label: 'SKYBOX', detail: 'EVENT: le ciel artificiel eclaire les montagnes arrondies.', color: '#7df0ff' },
+        { id: 'carnival_motion', label: 'CARNIVAL', detail: 'EVENT: les attractions du carnaval tournent au loin.', color: '#ff4fb8' },
+        { id: 'lake_glint', label: 'DIGITAL LAKE', detail: 'EVENT: le lac numerique reflete le ciel du Grounds.', color: '#4ee7ff' }
       ],
       4: [
-        { id: 'cellar_warning', label: 'ABSTRACT WARNING', detail: 'EVENT: le cellar conserve le signal Kaufmo sous alerte.', color: '#56505f' },
-        { id: 'abstraction_parasites', label: 'EYE PARASITES', detail: 'EVENT: les parasites multicolores de l abstraction traversent le champ de vision.', color: '#ff4fb8' },
-        { id: 'jumbling_wave', label: 'JUMBLING', detail: 'EVENT: la corruption de contact decale les polygones du rendu.', color: '#4ee7ff' },
-        { id: 'caine_snap', label: 'SNAP REPAIR', detail: 'EVENT: le claquement de doigts de Caine restaure le jumbling.', color: '#ffd84a' }
+        { id: 'cellar_opening', label: 'CAINE OPENING', detail: 'EVENT: une ouverture temporaire projette sa lumiere dans le Cellar.', color: '#ffffff' },
+        { id: 'cellar_calm', label: 'ABSTRACTION CALM', detail: 'EVENT: les abstractions ralentissent dans l obscurite.', color: '#56505f' },
+        { id: 'cellar_water', label: 'DARK WATER', detail: 'EVENT: la seule surface visible ondule sous les silhouettes.', color: '#6d4c9c' }
       ],
       6: [
         { id: 'candy_convoy', label: 'CONVOI', detail: 'EVENT: poussiere sucree du camion-citerne.', color: '#ff9b37' },
@@ -8386,6 +8560,9 @@ const OS = {
     let projectedY = floorY;
     if (anchor === 'ceiling') projectedY = floorY - wallScreenHeight * 0.9;
     else if (anchor.startsWith('wall') && obj.kind !== 'roomdoor') projectedY = floorY - wallScreenHeight * 0.52;
+    if (Number.isFinite(obj.elevation)) {
+      projectedY -= (h * obj.elevation * 0.34) / Math.max(0.28, rz);
+    }
     const viewAngle = Math.atan2(state.player.z - point.z, state.player.x - point.x);
     let facingScale = 1;
     if (obj.anchor === 'wall-left') facingScale = Math.max(0.12, Math.abs(Math.cos(viewAngle)));
@@ -8451,7 +8628,7 @@ const OS = {
   getCircusDepthLight(depth, state, fullbright = false) {
     if (fullbright) return 1;
     const motif = (state.scenes[state.currentZoneId] || state.scenes[2])?.motif || 'circus';
-    const darkMotifs = new Set(['cellar', 'manor', 'basement', 'hell', 'memory', 'archive', 'archivebedroom', 'training']);
+    const darkMotifs = new Set(['cellar', 'nest', 'kaufmoroom', 'manor', 'basement', 'hell', 'memory', 'archive', 'archivebedroom', 'training']);
     const brightMotifs = new Set(['grounds', 'candy', 'route', 'lake', 'lighthouse', 'softball', 'snow', 'carnival', 'void']);
     const ambient = darkMotifs.has(motif) ? 0.42 : brightMotifs.has(motif) ? 0.78 : 0.6;
     const range = Math.max(6, (state.room?.size || 15) * 0.72);
@@ -8462,6 +8639,22 @@ const OS = {
   getCircusBedroomProps(zoneId) {
     const room = this.getCircusBedroomDefinitions()[zoneId];
     if (!room) return null;
+    if (zoneId === 52) {
+      return [
+        { kind: 'graffiti', anchor: 'wall-left', x: -1.48, z: -2.65, color: '#d52d34', text: 'EXIT', label: 'Mur EXIT gauche' },
+        { kind: 'graffiti', anchor: 'wall-left', x: -1.48, z: -0.9, color: '#d52d34', text: 'NO WAY OUT', label: 'NO WAY OUT' },
+        { kind: 'graffiti', anchor: 'wall-right', x: 1.48, z: -2.45, color: '#d52d34', text: 'EXIT', label: 'Mur EXIT droit' },
+        { kind: 'graffiti', anchor: 'wall-right', x: 1.48, z: -0.75, color: '#d52d34', text: 'EXIT?', label: 'EXIT rature' },
+        { kind: 'graffiti', anchor: 'wall', x: 0, z: -3.6, color: '#d52d34', text: 'NO EXIT', label: 'Mur du fond de Kaufmo' },
+        { kind: 'wallart', anchor: 'wall-left', wallSurface: 'outer', x: 0, z: -1.75, color: '#111111', art: 'eye', label: 'Dessin de l oeil' },
+        { kind: 'wallart', anchor: 'wall-right', wallSurface: 'outer', x: 0, z: -1.55, color: '#e53935', art: 'spiral', label: 'Portrait de clown rature' },
+        { kind: 'crt', x: -1.25, z: -2.25, color: '#4c4549', label: 'Ancienne television de Kaufmo' },
+        { kind: 'foldingchair', x: 1.15, z: -1.8, color: '#696166', label: 'Chaise pliante renversee' },
+        { kind: 'crate', x: 0.85, z: -2.75, color: '#705342', label: 'Caisse de dessins' },
+        { kind: 'card', x: -0.45, z: -1.25, color: '#e9dfcf', label: 'Croquis paniques de Kaufmo' },
+        { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'barebulb', x: 0, z: -1.35, color: '#f7e6b4' }
+      ];
+    }
     if (this.isCircusBedroomArchived(room)) {
       return [
         { kind: 'bed', x: 0.7, z: -2.35, color: this.shadeHex(room.color, 0.72), accent: room.accent },
@@ -8521,10 +8714,38 @@ const OS = {
       { kind: 'pillar', x: 3.15, z: -3.1, color: '#ffd84a' }
     ];
     const byZone = {
-      2: [...basePillars, { kind: 'ring', x: 0, z: -2.9, color: '#7df0ff' }, { kind: 'spotlight', x: -1.8, z: -2.2, color: '#fff1a8' }, { kind: 'spotlight', x: 1.8, z: -2.2, color: '#fff1a8' }, { kind: 'balloon', x: -0.8, z: -1.35, color: '#ff4fb8' }],
-      3: [{ kind: 'tent', x: 0, z: -3.0, color: '#e53935' }, { kind: 'balloon', x: -2.3, z: -2.2, color: '#ff4fb8' }, { kind: 'balloon', x: 2.3, z: -2.4, color: '#7df0ff' }, { kind: 'ring', x: 0, z: -1.45, color: '#ffd84a' }, { kind: 'candy', x: 3.0, z: -2.95, color: '#ff9b37' }],
-      4: [{ kind: 'crate', x: -1.8, z: -2.0, color: '#56505f' }, { kind: 'eye', x: 0.9, z: -2.7, color: '#ff3333' }, { kind: 'crate', x: 2.2, z: -1.7, color: '#33333a' }, { kind: 'barrel', x: -0.35, z: -1.25, color: '#26232d' }, { kind: 'stairs', x: 2.75, z: -2.75, color: '#4d4a58' }, { kind: 'candle', x: -2.7, z: -2.75, color: '#ffd84a', label: 'Lampe de secours' }],
-      5: [{ kind: 'exitframe', x: 0, z: -3.1, color: '#ffffff' }, { kind: 'desk', x: -1.5, z: -2.1, color: '#a0a8b8' }, { kind: 'exitframe', x: 2.25, z: -2.2, color: '#ffffff' }, { kind: 'console', x: -2.65, z: -1.35, color: '#b8d7ff' }],
+      2: [
+        { kind: 'stagecurtain', x: 0, z: -4.25, color: '#c92536', variant: 'back', label: 'Rideau du fond de scene' },
+        { kind: 'stagecurtain', x: -3.2, z: -3.15, color: '#a8172a', variant: 'left', label: 'Rideau lateral gauche' },
+        { kind: 'stagecurtain', x: 3.2, z: -3.15, color: '#a8172a', variant: 'right', label: 'Rideau lateral droit' },
+        { kind: 'stagevalance', anchor: 'ceiling', x: 0, z: -3.65, color: '#d62f3f', label: 'Draperie haute de la piste' },
+        { kind: 'ring', x: 0, z: -2.9, color: '#ffd84a', label: 'Piste centrale' },
+        { kind: 'spotlight', x: -2.25, z: -2.15, color: '#fff1a8' },
+        { kind: 'spotlight', x: 2.25, z: -2.15, color: '#fff1a8' },
+        { kind: 'toyblock', x: -1.15, z: -1.25, color: '#2a58d8', label: 'Bloc de jeu du chapiteau' }
+      ],
+      3: [
+        { kind: 'tent', x: 0, z: -5.7, width: 5.6, depth: 3.4, wallHeight: 2.2, roofHeight: 5.2, color: '#e53935', label: 'Chapiteau sur la colline' },
+        { kind: 'tower', x: -4.15, z: -4.85, radius: 0.7, height: 6.7, roofHeight: 1.0, color: '#e53935', accent: '#ffd84a', label: 'Tour et grand toboggan' },
+        { kind: 'building', style: 'carnival', x: 4.15, z: -5.1, width: 3.5, depth: 2.1, height: 3.2, roofHeight: 1.1, color: '#2a58d8', accent: '#ff4fb8', label: 'Carnaval numerique' },
+        { kind: 'wave', x: -3.3, z: -2.55, color: '#4ee7ff', label: 'Lac numerique' },
+        { kind: 'fence', x: 0, z: -2.05, color: '#f5e3b1', label: 'Barriere du chemin' },
+        { kind: 'plant', x: -2.0, z: -3.25, color: '#4c9a3d', label: 'Bosquet arrondi' },
+        { kind: 'plant', x: 2.2, z: -3.45, color: '#2e7b35', label: 'Bosquet arrondi' }
+      ],
+      4: [
+        { kind: 'cellaropening', anchor: 'ceiling', x: 0, z: -3.0, color: '#ffffff', label: 'Ouverture temporaire de Caine' },
+        { kind: 'eye', x: -3.4, z: -4.6, color: '#ff3333', label: 'Yeux d une abstraction' },
+        { kind: 'eye', x: 3.2, z: -4.9, color: '#7df0ff', label: 'Yeux d une abstraction' },
+        { kind: 'eye', x: -1.85, z: -6.1, color: '#ffd84a', label: 'Silhouette abstraite pacifiee' },
+        { kind: 'eye', x: 1.65, z: -6.4, color: '#ff4fb8', label: 'Silhouette abstraite pacifiee' }
+      ],
+      5: [
+        { kind: 'pilotexitdoor', x: 0, z: -3.35, color: '#d63135', label: 'Porte EXIT rouge du PILOT' },
+        { kind: 'exitframe', x: -2.55, z: 1.75, color: '#ffffff', label: 'Cadre blanc sans issue gauche' },
+        { kind: 'exitframe', x: 0, z: 0.55, color: '#ffffff', label: 'Cadre blanc sans issue central' },
+        { kind: 'exitframe', x: 2.55, z: 1.75, color: '#ffffff', label: 'Cadre blanc sans issue droit' }
+      ],
       6: [{ kind: 'candy', x: -2.2, z: -2.2, color: '#ff9b37' }, { kind: 'truck', x: 0.4, z: -2.8, color: '#ffd84a' }, { kind: 'candy', x: 2.3, z: -1.8, color: '#ff4fb8' }, { kind: 'barrel', x: -0.9, z: -1.25, color: '#ffcf75' }, { kind: 'candy', x: 3.1, z: -2.75, color: '#7df0ff' }],
       7: [{ kind: 'console', x: -1.6, z: -2.2, color: '#9cff6d' }, { kind: 'gridnode', x: 1.4, z: -2.6, color: '#7df0ff' }, { kind: 'gridnode', x: -0.1, z: -1.35, color: '#ff7a30' }, { kind: 'archive', x: 2.7, z: -2.0, color: '#9cff6d' }],
       8: [{ kind: 'building', style: 'manor', x: 0, z: -3.85, width: 4.6, depth: 2.1, height: 4.8, roofHeight: 1.35, color: '#403044', accent: '#b7f0ff' }, { kind: 'window', x: -2.2, z: -2.5, color: '#b7f0ff' }, { kind: 'table', x: 0.2, z: -2.9, color: '#7c88a1' }, { kind: 'candle', x: 1.8, z: -1.9, color: '#ffd84a' }, { kind: 'window', x: 2.7, z: -2.65, color: '#b7f0ff' }, { kind: 'candle', x: -0.85, z: -1.4, color: '#ffd84a' }],
@@ -8623,13 +8844,15 @@ const OS = {
       ],
       20: [
         ...this.getCircusDormHallDoorProps(),
-        { kind: 'wallart', anchor: 'wall-left', x: -1.48, z: 1.55, color: '#7df0ff', art: 'spiral' },
-        { kind: 'wallart', anchor: 'wall-right', x: 1.48, z: -1.55, color: '#ffd84a', art: 'blocks' },
-        { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'panel', x: 0, z: 7.2, color: '#fff1a8' },
-        { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'panel', x: 0, z: 3.6, color: '#fff1a8' },
-        { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'panel', x: 0, z: 0, color: '#fff1a8' },
-        { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'panel', x: 0, z: -3.6, color: '#fff1a8' },
-        { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'panel', x: 0, z: -7.2, color: '#fff1a8' }
+        ...[7.7, 5.1, 2.5, -0.1, -2.7, -5.3, -7.9].flatMap((z, index) => [
+          { kind: 'wallart', anchor: 'wall-left', x: -1.48, z, color: index % 2 ? '#ffd84a' : '#7df0ff', art: index % 3 ? 'blocks' : 'spiral' },
+          { kind: 'wallart', anchor: 'wall-right', x: 1.48, z: z - 0.55, color: index % 2 ? '#ff4fb8' : '#ffd84a', art: index % 3 ? 'spiral' : 'blocks' }
+        ]),
+        ...[7.2, 4.8, 2.4, 0, -2.4, -4.8, -7.2].map(z => (
+          { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'dome', x: 0, z, color: '#fff1a8' }
+        )),
+        { kind: 'plant', x: -1.0, z: -8.65, color: '#4b8d43', label: 'Plante au bout du couloir' },
+        { kind: 'toyblock', x: 0.85, z: -8.4, color: '#2a58d8', label: 'Blocs pres de l arche' }
       ],
       21: [{ kind: 'counter', x: 0, z: -2.8, color: '#d49a62' }, { kind: 'table', x: -2.2, z: -1.8, color: '#7a4b32' }, { kind: 'table', x: 2.15, z: -1.9, color: '#7a4b32' }, { kind: 'menu', x: 0, z: -1.25, color: '#fff1a8' }],
       22: [{ kind: 'window', x: -2.6, z: -2.65, color: '#63d9ff' }, { kind: 'window', x: 0, z: -3.1, color: '#7df0ff' }, { kind: 'window', x: 2.6, z: -2.65, color: '#63d9ff' }, { kind: 'wave', x: -1.25, z: -1.45, color: '#4ee7ff' }, { kind: 'wave', x: 1.35, z: -1.55, color: '#4ee7ff' }],
@@ -8641,7 +8864,17 @@ const OS = {
       28: [{ kind: 'table', x: 0, z: -2.7, color: '#ffd84a' }, { kind: 'balloon', x: -2.4, z: -2.2, color: '#ff4fb8' }, { kind: 'balloon', x: 2.4, z: -2.2, color: '#7df0ff' }, { kind: 'ring', x: 0, z: -1.25, color: '#fff1a8' }],
       29: [{ kind: 'doorframe', x: -2.6, z: -2.5, color: '#e53935' }, { kind: 'doorframe', x: 0, z: -3.1, color: '#7df0ff' }, { kind: 'doorframe', x: 2.6, z: -2.5, color: '#ffd84a' }, { kind: 'ring', x: -1.2, z: -1.35, color: '#ff4fb8' }, { kind: 'ring', x: 1.2, z: -1.35, color: '#2a58d8' }],
       30: [{ kind: 'table', x: 0, z: -2.6, color: '#6e527f' }, { kind: 'window', x: 0, z: -3.15, color: '#63d9ff' }, { kind: 'card', x: -2.25, z: -1.75, color: '#ff4fb8' }],
-      31: [{ kind: 'stairs', x: 0, z: -2.9, color: '#7a5a3d' }, { kind: 'window', x: -2.3, z: -2.2, color: '#e8d6a8' }, { kind: 'window', x: 2.3, z: -2.2, color: '#e8d6a8' }, { kind: 'table', x: 0, z: -1.35, color: '#5a3c28' }, { kind: 'archive', campaignTarget: 'gloinknest', label: 'Nid Gloink', x: -1.65, z: -1.45, color: '#7348ff' }, { kind: 'card', campaignTarget: 'zooblepart', label: 'Piece de Zooble', portable: true, x: 1.65, z: -1.45, color: '#ff4fb8' }],
+      31: [
+        { kind: 'caveslide', x: -2.9, z: -3.7, color: '#7348ff', label: 'Long toboggan d entree' },
+        { kind: 'escalator', x: 2.9, z: -3.7, color: '#7df0ff', label: 'Escalator de sortie' },
+        { kind: 'gloinknest', campaignTarget: 'gloinknest', x: 0, z: -4.45, color: '#ff7aa8', label: 'Gloink Queen nest' },
+        { kind: 'zooblepart', campaignTarget: 'zooblepart', x: -1.55, z: -1.45, color: '#ff4fb8', label: 'Piece de Zooble', portable: true },
+        { kind: 'caveglow', anchor: 'wall-left', x: -1.48, z: -2.1, color: '#ff4fb8', shape: 'star', label: 'Etoile lumineuse' },
+        { kind: 'caveglow', anchor: 'wall-right', x: 1.48, z: -2.7, color: '#7df0ff', shape: 'diamond', label: 'Losange lumineux' },
+        { kind: 'caveglow', anchor: 'wall-left', x: -1.48, z: -4.6, color: '#a7ff55', shape: 'pin', label: 'Quille lumineuse' },
+        { kind: 'caveglow', anchor: 'wall-right', x: 1.48, z: -5.1, color: '#ff4fb8', shape: 'circle', label: 'Cercle lumineux' },
+        { kind: 'toyblock', x: 1.45, z: -1.35, color: '#ffd84a', label: 'Objet vole au chapiteau' }
+      ],
       32: [{ kind: 'building', style: 'palace', x: 0, z: -4.05, width: 4.8, depth: 2.2, height: 4.4, roofHeight: 1.7, color: '#ff9ad5', accent: '#7d3f8c' }, { kind: 'stairs', x: 0, z: -3.0, color: '#fff1a8' }, { kind: 'pillar', x: -2.4, z: -2.2, color: '#ff9ad5' }, { kind: 'pillar', x: 2.4, z: -2.2, color: '#ff9ad5' }, { kind: 'candy', x: -1.3, z: -1.35, color: '#ffd84a' }, { kind: 'candy', x: 1.3, z: -1.35, color: '#7df0ff' }],
       33: [{ kind: 'truck', x: 0, z: -3.0, color: '#ffd84a' }, { kind: 'candy', x: -2.8, z: -2.3, color: '#ff4fb8' }, { kind: 'candy', x: 2.8, z: -2.3, color: '#ff9b37' }, { kind: 'barrel', x: -1.5, z: -1.35, color: '#ffcf75' }],
       34: [{ kind: 'candle', x: -2.3, z: -2.2, color: '#ff4d32' }, { kind: 'candle', x: 2.3, z: -2.2, color: '#ff4d32' }, { kind: 'eye', x: 0, z: -3.05, color: '#ffffff' }, { kind: 'stairs', x: 0.9, z: -1.35, color: '#5a0b0b' }],
@@ -8734,15 +8967,8 @@ const OS = {
         { kind: 'card', x: -2.75, z: -1.25, color: '#ffd84a', label: 'Trousseau de cles de Jax', portable: true },
         { kind: 'memory', x: 2.65, z: -1.35, color: '#d61f2c', label: 'Masque de comedie brise de Gangle' }
       ],
-      4: [
-        { kind: 'memory', x: -2.15, z: -1.25, color: '#ff4fb8', label: 'Corruption de Ragatha' },
-        { kind: 'eye', x: 2.55, z: -1.45, color: '#42e8ff', label: 'Parasite d abstraction' },
-        { kind: 'lorebillboard', avatar: 'jumbledragatha', label: 'Ragatha jumbled', x: 2.9, z: -3.45, color: '#d64545', loreGate: { episode: 1, subepisode: 5 }, loreText: 'Etat de Ragatha apres contact avec Kaufmo abstrait. Effet temporaire de jumbling, pas abstraction de Ragatha.' }
-      ],
-      5: [
-        { kind: 'console', x: -1.05, z: -1.35, color: '#d7d7d7', label: 'Ordinateur C&A' },
-        { kind: 'card', x: 1.25, z: -1.25, color: '#333333', label: 'Casque VR C&A', portable: true }
-      ],
+      4: [],
+      5: [],
       6: [
         { kind: 'truck', x: -3.1, z: -3.45, color: '#f4c143', label: 'Second camion-citerne' },
         { kind: 'doorframe', x: 3.1, z: -3.25, color: '#ff9ad5', label: 'Porte du royaume des sucreries' },
@@ -8797,10 +9023,7 @@ const OS = {
         { kind: 'card', x: 2.15, z: -1.25, color: '#ff4fb8', label: 'Noeud papillon de Ribbit' }
       ],
       26: [{ kind: 'console', x: 2.35, z: -1.45, color: '#7df0ff', label: 'Suggestion console' }],
-      31: [
-        { kind: 'gloinknest', x: 0, z: -3.15, color: '#ff7aa8', label: 'Gloink Queen nest' },
-        { kind: 'zooblepart', x: -1.6, z: -1.45, color: '#ff4fb8', label: 'Piece de Zooble', portable: true }
-      ],
+      31: [],
       35: [
         { kind: 'barrel', x: -2.55, z: -1.2, color: '#c49a45', label: 'Friteuse Spudsy' },
         { kind: 'card', x: 0.55, z: -1.15, color: '#ff4d4d', label: 'Pile de tickets cuisine' }
@@ -8914,29 +9137,31 @@ const OS = {
         { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'fluorescent', x: -1.55, z: -0.7, color: '#e9f2ff' },
         { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'fluorescent', x: 1.55, z: -0.7, color: '#e9f2ff' }
       ],
-      74: [{ kind: 'ceilinglight', anchor: 'ceiling', fixture: 'panel', x: 0, z: -0.7, color: '#8a4fd6' }]
+      74: [{ kind: 'ceilinglight', anchor: 'ceiling', fixture: 'panel', x: 0, z: -0.7, color: '#8a4fd6' }],
+      97: [
+        { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'fluorescent', x: -2.25, z: -1.0, color: '#f4fbff' },
+        { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'fluorescent', x: 0, z: -2.25, color: '#f4fbff' },
+        { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'fluorescent', x: 2.25, z: -1.0, color: '#f4fbff' }
+      ],
+      98: [
+        { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'fluorescent', x: -1.75, z: -1.1, color: '#f4fbff' },
+        { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'fluorescent', x: 1.75, z: -1.1, color: '#f4fbff' }
+      ],
+      99: [
+        { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'fluorescent', x: -1.6, z: -1.0, color: '#e9fbff' },
+        { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'fluorescent', x: 1.6, z: -1.0, color: '#e9fbff' }
+      ],
+      100: [{ kind: 'ceilinglight', anchor: 'ceiling', fixture: 'fluorescent', x: 0, z: -1.1, color: '#b6c3cf' }]
     };
     return fixtures[zoneId] || [];
   },
 
   getCircusExtraZoneProps(zoneId) {
     const extras = {
-      2: [
-        { kind: 'balloon', x: -3.35, z: -0.95, color: '#ff4fb8' },
-        { kind: 'card', x: 3.35, z: -1.05, color: '#7df0ff' }
-      ],
-      3: [
-        { kind: 'ring', x: -3.2, z: -1.1, color: '#ffd84a' },
-        { kind: 'candy', x: 3.15, z: -1.35, color: '#ff9b37' }
-      ],
-      4: [
-        { kind: 'eye', x: -2.7, z: -1.2, color: '#ff3333' },
-        { kind: 'barrel', x: 2.85, z: -1.15, color: '#56505f' }
-      ],
-      5: [
-        { kind: 'exitframe', x: 2.15, z: -1.35, color: '#ffffff' },
-        { kind: 'desk', x: -2.65, z: -1.25, color: '#a0a8b8' }
-      ],
+      2: [],
+      3: [],
+      4: [],
+      5: [],
       6: [
         { kind: 'candy', x: -3.1, z: -1.15, color: '#ff4fb8' },
         { kind: 'truck', x: 2.8, z: -1.35, color: '#ffd84a' }
@@ -8998,7 +9223,7 @@ const OS = {
   },
 
   getCircusWorldGeometryKinds() {
-    return new Set(['ring', 'base', 'stairs', 'table', 'counter', 'desk', 'bed', 'pillar', 'crate', 'barrel', 'tent', 'building', 'tower', 'lighthouse']);
+    return new Set(['ring', 'base', 'stairs', 'table', 'counter', 'desk', 'bed', 'partition', 'sofa', 'pillar', 'crate', 'barrel', 'tent', 'building', 'tower', 'lighthouse']);
   },
 
   projectCircusPropGroundVertex(prop, offsetX, offsetZ, state, w, h, height = 0) {
@@ -9054,10 +9279,22 @@ const OS = {
       };
     }
     return {
-      table: { width: 1.35, depth: 0.82, height: 0.52, apron: 0.1 },
-      counter: { width: 1.9, depth: 0.72, height: 0.86, apron: 0.26 },
-      desk: { width: 1.5, depth: 0.78, height: 0.74, apron: 0.2 },
+      table: { width: prop.width || 1.35, depth: prop.depth || 0.82, height: prop.height || 0.52, apron: 0.1 },
+      counter: { width: prop.width || 1.9, depth: prop.depth || 0.72, height: prop.height || 0.86, apron: 0.26 },
+      desk: { width: prop.width || 1.5, depth: prop.depth || 0.78, height: prop.height || 0.74, apron: 0.2 },
       bed: { width: 1.35, depth: 2.05, height: 0.48, apron: 0.32 },
+      partition: {
+        width: prop.width || 2.2,
+        depth: prop.depth || 0.14,
+        height: prop.height || 1.35,
+        apron: prop.height || 1.35
+      },
+      sofa: {
+        width: prop.width || 2.1,
+        depth: prop.depth || 0.9,
+        height: prop.height || 0.82,
+        apron: 0.44
+      },
       pillar: { radius: 0.28, height: 2.05, segments: 10 },
       barrel: { radius: 0.34, height: 0.72, segments: 10 },
       crate: { width: 0.72, depth: 0.72, height: 0.66 },
@@ -9200,8 +9437,9 @@ const OS = {
     props.forEach(prop => {
       const depthLight = this.getCircusDepthLight(prop.projected.depth, state, false);
       const light = 0.54 + depthLight * 0.46;
-      const color = this.shadeHex(prop.color || '#fff1a8', light);
+      const color = prop.color || '#fff1a8';
       ctx.save();
+      ctx.filter = `brightness(${Math.round(light * 100)}%)`;
       if (prop.active) {
         ctx.shadowColor = prop.color || '#7df0ff';
         ctx.shadowBlur = 12;
@@ -9342,6 +9580,42 @@ const OS = {
           this.drawCircusGroundPolygon(ctx, [wallTop[2], wallTop[3], ridgeFar], '#ffd84a', '#fff1a8', 1);
           this.drawCircusGroundPolygon(ctx, [wallTop[3], wallTop[0], ridgeNear, ridgeFar], '#2a58d8', '#fff1a8', 1);
         }
+      } else if (prop.kind === 'sofa') {
+        const dimensions = this.getCircusWorldPropDimensions(prop, state);
+        const halfW = dimensions.width / 2;
+        const halfD = dimensions.depth / 2;
+        const drawBox = (width, depth, bottomHeight, topHeight, offsetX = 0, offsetZ = 0, shade = 1) => {
+          const boxHalfW = width / 2;
+          const boxHalfD = depth / 2;
+          const corners = [
+            [-boxHalfW + offsetX, -boxHalfD + offsetZ],
+            [boxHalfW + offsetX, -boxHalfD + offsetZ],
+            [boxHalfW + offsetX, boxHalfD + offsetZ],
+            [-boxHalfW + offsetX, boxHalfD + offsetZ]
+          ];
+          const bottom = corners.map(([x, z]) => this.projectCircusPropGroundVertex(prop, x, z, state, w, h, bottomHeight));
+          const top = corners.map(([x, z]) => this.projectCircusPropGroundVertex(prop, x, z, state, w, h, topHeight));
+          if (!bottom.every(Boolean) || !top.every(Boolean)) return;
+          const faces = bottom.map((point, index) => {
+            const next = (index + 1) % bottom.length;
+            return {
+              depth: (point.depth + bottom[next].depth) / 2,
+              points: [point, bottom[next], top[next], top[index]]
+            };
+          }).sort((a, b) => b.depth - a.depth);
+          faces.forEach((face, index) => this.drawCircusGroundPolygon(
+            ctx,
+            face.points,
+            this.shadeHex(color, shade * (index % 2 === 0 ? 0.72 : 0.84)),
+            '#29333c',
+            1
+          ));
+          this.drawCircusGroundPolygon(ctx, top, this.shadeHex(color, shade * 1.08), '#dce6ee88', 1);
+        };
+        drawBox(dimensions.width, dimensions.depth, 0.08, 0.42);
+        drawBox(dimensions.width, 0.2, 0.38, dimensions.height, 0, -halfD + 0.1, 0.92);
+        drawBox(0.2, dimensions.depth, 0.35, 0.66, -halfW + 0.1, 0, 0.88);
+        drawBox(0.2, dimensions.depth, 0.35, 0.66, halfW - 0.1, 0, 0.88);
       } else if (prop.kind === 'stairs') {
         for (let step = 0; step < 4; step++) {
           const halfW = 0.9 - step * 0.09;
@@ -9453,9 +9727,21 @@ const OS = {
   getCircusPropScreenBox(prop) {
     const p = prop.projected;
     const s = this.getCircusPropVisualScale(prop);
-    const wideKinds = new Set(['ring', 'counter', 'truck', 'scoreboard', 'table', 'desk', 'exitframe']);
-    const tallKinds = new Set(['pillar', 'tent', 'building', 'tower', 'lighthouse', 'spotlight', 'umbrella', 'window', 'archive', 'console', 'roomdoor', 'caineportal', 'wallart', 'ceilinglight', 'lorebillboard']);
-    const smallKinds = new Set(['candle', 'balloon', 'eye', 'sun', 'base', 'target', 'memory']);
+    const wideKinds = new Set([
+      'ring', 'counter', 'truck', 'scoreboard', 'table', 'desk', 'exitframe',
+      'stagecurtain', 'stagevalance', 'fence', 'bathtub', 'toyglove', 'carousel',
+      'gloinknest', 'caveslide', 'escalator'
+    ]);
+    const tallKinds = new Set([
+      'pillar', 'tent', 'building', 'tower', 'lighthouse', 'spotlight', 'umbrella',
+      'window', 'archive', 'console', 'roomdoor', 'caineportal', 'wallart',
+      'ceilinglight', 'lorebillboard', 'pilotexitdoor', 'plant', 'crt'
+    ]);
+    const smallKinds = new Set([
+      'candle', 'balloon', 'eye', 'sun', 'base', 'target', 'memory', 'toyblock',
+      'zooblepart', 'caveglow', 'toilet', 'sink', 'foldingchair', 'graffiti',
+      'cellaropening'
+    ]);
     let width = 82 * s;
     let height = 86 * s;
     if (wideKinds.has(prop.kind)) width = 122 * s;
@@ -9478,8 +9764,8 @@ const OS = {
   },
 
   getCircusPropVisualScale(prop) {
-    const compactKinds = new Set(['eye', 'sun', 'balloon', 'candle', 'memory', 'base', 'target']);
-    const mountedKinds = new Set(['wallart', 'ceilinglight', 'roomdoor', 'caineportal']);
+    const compactKinds = new Set(['eye', 'sun', 'balloon', 'candle', 'memory', 'base', 'target', 'toyblock', 'zooblepart', 'caveglow']);
+    const mountedKinds = new Set(['wallart', 'ceilinglight', 'roomdoor', 'caineportal', 'graffiti', 'stagevalance', 'cellaropening']);
     const cap = compactKinds.has(prop.kind) ? 1.85 : mountedKinds.has(prop.kind) ? 2.2 : 2.7;
     return Math.max(0.035, Math.min(cap, prop.projected?.scale || 0.035));
   },
@@ -9496,7 +9782,369 @@ const OS = {
     ctx.strokeStyle = prop.color;
     ctx.fillStyle = `${prop.color}cc`;
 
-    if (prop.kind === 'pillar') {
+    if (prop.kind === 'stagecurtain') {
+      const side = prop.variant === 'left' || prop.variant === 'right';
+      const curtainW = (side ? 58 : 150) * s;
+      const curtainH = (side ? 132 : 118) * s;
+      ctx.fillStyle = prop.color || '#c92536';
+      ctx.strokeStyle = '#70101e';
+      ctx.fillRect(-curtainW / 2, -curtainH, curtainW, curtainH);
+      ctx.strokeRect(-curtainW / 2, -curtainH, curtainW, curtainH);
+      for (let fold = -curtainW / 2 + 8 * s; fold < curtainW / 2; fold += 14 * s) {
+        ctx.fillStyle = 'rgba(74,5,20,0.26)';
+        ctx.fillRect(fold, -curtainH, 6 * s, curtainH);
+      }
+      ctx.fillStyle = '#ffd84a';
+      ctx.fillRect(-curtainW / 2, -curtainH, curtainW, 7 * s);
+      if (side) {
+        ctx.fillStyle = '#ffd84a';
+        ctx.fillRect(-curtainW / 2, -64 * s, curtainW, 8 * s);
+      }
+    } else if (prop.kind === 'stagevalance') {
+      ctx.fillStyle = prop.color || '#d62f3f';
+      ctx.strokeStyle = '#ffd84a';
+      ctx.lineWidth = Math.max(1, 2 * s);
+      ctx.fillRect(-84 * s, -8 * s, 168 * s, 22 * s);
+      ctx.strokeRect(-84 * s, -8 * s, 168 * s, 22 * s);
+      for (let i = -5; i <= 5; i++) {
+        ctx.beginPath();
+        ctx.arc(i * 15 * s, 14 * s, 9 * s, 0, Math.PI);
+        ctx.fill();
+        ctx.stroke();
+      }
+    } else if (prop.kind === 'pilotexitdoor') {
+      ctx.fillStyle = '#d63135';
+      ctx.strokeStyle = '#5e1419';
+      ctx.lineWidth = Math.max(1, 3 * s);
+      ctx.fillRect(-32 * s, -116 * s, 64 * s, 116 * s);
+      ctx.strokeRect(-32 * s, -116 * s, 64 * s, 116 * s);
+      ctx.fillStyle = '#f5f5f2';
+      ctx.fillRect(-23 * s, -101 * s, 46 * s, 27 * s);
+      ctx.strokeStyle = '#222';
+      ctx.strokeRect(-23 * s, -101 * s, 46 * s, 27 * s);
+      ctx.fillStyle = '#222';
+      ctx.font = `bold ${Math.max(6, 9 * s)}px Courier New`;
+      ctx.textAlign = 'center';
+      ctx.fillText('EXIT', 0, -90 * s);
+      ctx.beginPath();
+      ctx.arc(-10 * s, -82 * s, 3 * s, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.fillRect(-12 * s, -79 * s, 4 * s, 8 * s);
+      ctx.fillRect(-24 * s, -48 * s, 28 * s, 4 * s);
+    } else if (prop.kind === 'graffiti') {
+      ctx.save();
+      ctx.rotate((Math.sin((prop.z || 0) * 2.3) * 0.09));
+      ctx.fillStyle = prop.color || '#d52d34';
+      ctx.strokeStyle = '#5c0b10';
+      ctx.lineWidth = Math.max(1, s);
+      ctx.font = `bold ${Math.max(7, 16 * s)}px Courier New`;
+      ctx.textAlign = 'center';
+      ctx.strokeText(prop.text || 'EXIT', 0, 0);
+      ctx.fillText(prop.text || 'EXIT', 0, 0);
+      for (let scratch = 0; scratch < 3; scratch++) {
+        ctx.beginPath();
+        ctx.moveTo((-34 + scratch * 17) * s, (7 + scratch * 3) * s);
+        ctx.lineTo((28 - scratch * 8) * s, (-8 + scratch * 2) * s);
+        ctx.stroke();
+      }
+      ctx.restore();
+    } else if (prop.kind === 'crt') {
+      ctx.fillStyle = '#5a5557';
+      ctx.strokeStyle = '#242022';
+      ctx.fillRect(-34 * s, -72 * s, 68 * s, 58 * s);
+      ctx.strokeRect(-34 * s, -72 * s, 68 * s, 58 * s);
+      ctx.fillStyle = '#11131a';
+      ctx.fillRect(-26 * s, -64 * s, 43 * s, 34 * s);
+      ctx.strokeRect(-26 * s, -64 * s, 43 * s, 34 * s);
+      ctx.fillStyle = 'rgba(213,45,52,0.55)';
+      for (let line = -58; line < -34; line += 5) ctx.fillRect(-23 * s, line * s, 37 * s, s);
+      ctx.fillStyle = '#d7c6a2';
+      ctx.beginPath();
+      ctx.arc(25 * s, -52 * s, 4 * s, 0, Math.PI * 2);
+      ctx.arc(25 * s, -38 * s, 4 * s, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.fillStyle = '#353033';
+      ctx.fillRect(-25 * s, -14 * s, 50 * s, 14 * s);
+    } else if (prop.kind === 'foldingchair') {
+      ctx.strokeStyle = prop.color || '#696166';
+      ctx.lineWidth = Math.max(1, 5 * s);
+      ctx.strokeRect(-18 * s, -52 * s, 36 * s, 24 * s);
+      ctx.beginPath();
+      ctx.moveTo(-16 * s, -28 * s); ctx.lineTo(18 * s, 0);
+      ctx.moveTo(16 * s, -28 * s); ctx.lineTo(-18 * s, 0);
+      ctx.moveTo(-21 * s, -25 * s); ctx.lineTo(21 * s, -25 * s);
+      ctx.stroke();
+    } else if (prop.kind === 'watercooler') {
+      ctx.fillStyle = 'rgba(118,205,232,0.72)';
+      ctx.strokeStyle = '#5f8090';
+      ctx.lineWidth = Math.max(1, 2 * s);
+      ctx.beginPath();
+      ctx.ellipse(0, -78 * s, 18 * s, 25 * s, 0, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.stroke();
+      ctx.fillStyle = prop.color || '#dbe7ed';
+      ctx.fillRect(-24 * s, -62 * s, 48 * s, 62 * s);
+      ctx.strokeRect(-24 * s, -62 * s, 48 * s, 62 * s);
+      ctx.fillStyle = '#7f929c';
+      ctx.fillRect(-16 * s, -48 * s, 32 * s, 17 * s);
+      ctx.fillStyle = '#d63135';
+      ctx.fillRect(-11 * s, -43 * s, 7 * s, 5 * s);
+      ctx.fillStyle = '#2a58d8';
+      ctx.fillRect(4 * s, -43 * s, 7 * s, 5 * s);
+      ctx.fillStyle = '#c7d1d6';
+      ctx.fillRect(-17 * s, -24 * s, 34 * s, 18 * s);
+    } else if (prop.kind === 'floorlamp') {
+      ctx.strokeStyle = '#6d665e';
+      ctx.lineWidth = Math.max(1, 4 * s);
+      ctx.beginPath();
+      ctx.moveTo(0, -57 * s);
+      ctx.lineTo(0, -5 * s);
+      ctx.stroke();
+      ctx.fillStyle = '#615b54';
+      ctx.beginPath();
+      ctx.ellipse(0, -3 * s, 19 * s, 5 * s, 0, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.fillStyle = prop.color || '#e8dfc4';
+      ctx.strokeStyle = '#8f826e';
+      ctx.beginPath();
+      ctx.moveTo(-25 * s, -87 * s);
+      ctx.lineTo(25 * s, -87 * s);
+      ctx.lineTo(17 * s, -57 * s);
+      ctx.lineTo(-17 * s, -57 * s);
+      ctx.closePath();
+      ctx.fill();
+      ctx.stroke();
+      ctx.fillStyle = 'rgba(255,238,184,0.22)';
+      ctx.beginPath();
+      ctx.arc(0, -69 * s, 28 * s, 0, Math.PI * 2);
+      ctx.fill();
+    } else if (prop.kind === 'toyblock') {
+      ctx.fillStyle = prop.color || '#2a58d8';
+      ctx.strokeStyle = '#261530';
+      ctx.fillRect(-24 * s, -46 * s, 48 * s, 46 * s);
+      ctx.strokeRect(-24 * s, -46 * s, 48 * s, 46 * s);
+      ctx.fillStyle = 'rgba(255,255,255,0.24)';
+      ctx.beginPath();
+      ctx.moveTo(-24 * s, -46 * s);
+      ctx.lineTo(-10 * s, -58 * s);
+      ctx.lineTo(32 * s, -58 * s);
+      ctx.lineTo(24 * s, -46 * s);
+      ctx.closePath();
+      ctx.fill();
+      ctx.stroke();
+    } else if (prop.kind === 'fence') {
+      ctx.fillStyle = prop.color || '#f5e3b1';
+      ctx.strokeStyle = '#8d6841';
+      for (let post = -3; post <= 3; post++) {
+        ctx.fillRect((post * 22 - 3) * s, -55 * s, 6 * s, 55 * s);
+        ctx.strokeRect((post * 22 - 3) * s, -55 * s, 6 * s, 55 * s);
+      }
+      ctx.fillRect(-70 * s, -46 * s, 140 * s, 7 * s);
+      ctx.fillRect(-70 * s, -22 * s, 140 * s, 7 * s);
+    } else if (prop.kind === 'plant') {
+      ctx.fillStyle = '#d8a23a';
+      ctx.strokeStyle = '#704c20';
+      ctx.beginPath();
+      ctx.moveTo(-18 * s, 0);
+      ctx.lineTo(-13 * s, -28 * s);
+      ctx.lineTo(13 * s, -28 * s);
+      ctx.lineTo(18 * s, 0);
+      ctx.closePath();
+      ctx.fill();
+      ctx.stroke();
+      ctx.fillStyle = prop.color || '#4c9a3d';
+      [[-18, -50, 22], [12, -55, 25], [0, -78, 24], [28, -72, 18]].forEach(([px, py, radius]) => {
+        ctx.beginPath();
+        ctx.arc(px * s, py * s, radius * s, 0, Math.PI * 2);
+        ctx.fill();
+      });
+    } else if (prop.kind === 'cellaropening') {
+      ctx.save();
+      ctx.shadowColor = '#ffffff';
+      ctx.shadowBlur = Math.max(8, 28 * s);
+      ctx.fillStyle = 'rgba(255,255,255,0.9)';
+      ctx.beginPath();
+      ctx.ellipse(0, 3 * s, 34 * s, 12 * s, 0, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.fillStyle = 'rgba(228,218,255,0.18)';
+      ctx.beginPath();
+      ctx.moveTo(-28 * s, 8 * s);
+      ctx.lineTo(28 * s, 8 * s);
+      ctx.lineTo(74 * s, 112 * s);
+      ctx.lineTo(-74 * s, 112 * s);
+      ctx.closePath();
+      ctx.fill();
+      ctx.restore();
+    } else if (prop.kind === 'caveglow') {
+      ctx.save();
+      ctx.shadowColor = prop.color;
+      ctx.shadowBlur = Math.max(4, 14 * s);
+      ctx.fillStyle = prop.color;
+      ctx.strokeStyle = '#ffffff';
+      if (prop.shape === 'diamond') {
+        ctx.beginPath();
+        ctx.moveTo(0, -22 * s); ctx.lineTo(18 * s, 0); ctx.lineTo(0, 22 * s); ctx.lineTo(-18 * s, 0); ctx.closePath();
+        ctx.fill();
+      } else if (prop.shape === 'pin') {
+        ctx.beginPath();
+        ctx.ellipse(0, -10 * s, 11 * s, 18 * s, 0, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.fillRect(-6 * s, 4 * s, 12 * s, 26 * s);
+      } else if (prop.shape === 'circle') {
+        ctx.beginPath(); ctx.arc(0, 0, 18 * s, 0, Math.PI * 2); ctx.fill();
+      } else {
+        ctx.beginPath();
+        for (let point = 0; point < 10; point++) {
+          const radius = (point % 2 ? 8 : 20) * s;
+          const angle = -Math.PI / 2 + point * Math.PI / 5;
+          const px = Math.cos(angle) * radius;
+          const py = Math.sin(angle) * radius;
+          if (point === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+        }
+        ctx.closePath();
+        ctx.fill();
+      }
+      ctx.restore();
+    } else if (prop.kind === 'caveslide' || prop.kind === 'escalator') {
+      const isEscalator = prop.kind === 'escalator';
+      ctx.strokeStyle = isEscalator ? '#7df0ff' : '#7348ff';
+      ctx.lineWidth = Math.max(2, 10 * s);
+      ctx.beginPath();
+      ctx.moveTo(-48 * s, 0);
+      ctx.quadraticCurveTo(isEscalator ? 0 : -30 * s, -52 * s, 46 * s, -110 * s);
+      ctx.stroke();
+      ctx.strokeStyle = '#fff1a8';
+      ctx.lineWidth = Math.max(1, 2 * s);
+      for (let step = 0; step < 7; step++) {
+        const sy = -step * 15 * s;
+        ctx.beginPath();
+        ctx.moveTo((-43 + step * 12) * s, sy);
+        ctx.lineTo((-24 + step * 12) * s, sy);
+        ctx.stroke();
+      }
+    } else if (prop.kind === 'gloinknest') {
+      ctx.fillStyle = '#251245';
+      ctx.strokeStyle = '#7df0ff';
+      ctx.beginPath();
+      ctx.ellipse(0, -18 * s, 74 * s, 24 * s, 0, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.stroke();
+      const stolen = [
+        [-46, -38, '#ffd84a'], [-20, -49, '#e53935'], [8, -43, '#2a58d8'],
+        [35, -51, '#ff4fb8'], [54, -34, '#a7ff55']
+      ];
+      stolen.forEach(([px, py, color], index) => {
+        ctx.fillStyle = color;
+        if (index % 2) {
+          ctx.fillRect((px - 9) * s, (py - 9) * s, 18 * s, 18 * s);
+        } else {
+          ctx.beginPath(); ctx.arc(px * s, py * s, 10 * s, 0, Math.PI * 2); ctx.fill();
+        }
+      });
+    } else if (prop.kind === 'zooblepart') {
+      ctx.fillStyle = prop.color || '#ff4fb8';
+      ctx.strokeStyle = '#251245';
+      ctx.beginPath();
+      ctx.moveTo(-28 * s, 0);
+      ctx.lineTo(-8 * s, -50 * s);
+      ctx.lineTo(20 * s, -35 * s);
+      ctx.lineTo(30 * s, -4 * s);
+      ctx.closePath();
+      ctx.fill();
+      ctx.stroke();
+      ctx.fillStyle = '#7df0ff';
+      ctx.beginPath(); ctx.arc(15 * s, -21 * s, 8 * s, 0, Math.PI * 2); ctx.fill();
+    } else if (prop.kind === 'bathtub') {
+      ctx.fillStyle = '#f5f5f0';
+      ctx.strokeStyle = '#7b8085';
+      ctx.beginPath();
+      ctx.ellipse(0, -24 * s, 58 * s, 24 * s, 0, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.stroke();
+      ctx.fillStyle = '#9fdcf2';
+      ctx.beginPath();
+      ctx.ellipse(0, -28 * s, 47 * s, 15 * s, 0, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.fillStyle = '#777';
+      ctx.fillRect(-42 * s, -7 * s, 8 * s, 11 * s);
+      ctx.fillRect(34 * s, -7 * s, 8 * s, 11 * s);
+    } else if (prop.kind === 'toilet') {
+      ctx.fillStyle = '#f5f5f0';
+      ctx.strokeStyle = '#7b8085';
+      ctx.fillRect(-20 * s, -62 * s, 40 * s, 33 * s);
+      ctx.strokeRect(-20 * s, -62 * s, 40 * s, 33 * s);
+      ctx.beginPath();
+      ctx.ellipse(0, -20 * s, 28 * s, 19 * s, 0, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.stroke();
+    } else if (prop.kind === 'sink') {
+      ctx.fillStyle = '#f5f5f0';
+      ctx.strokeStyle = '#7b8085';
+      ctx.beginPath();
+      ctx.ellipse(0, -45 * s, 30 * s, 13 * s, 0, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.stroke();
+      ctx.fillRect(-6 * s, -42 * s, 12 * s, 42 * s);
+      ctx.fillStyle = '#777';
+      ctx.fillRect(-3 * s, -70 * s, 6 * s, 20 * s);
+    } else if (prop.kind === 'toyglove') {
+      ctx.fillStyle = '#2a58d8';
+      ctx.strokeStyle = '#251245';
+      ctx.fillRect(-46 * s, -24 * s, 82 * s, 24 * s);
+      ctx.strokeRect(-46 * s, -24 * s, 82 * s, 24 * s);
+      ctx.fillStyle = '#ffd84a';
+      [-30, 20].forEach(px => {
+        ctx.beginPath(); ctx.arc(px * s, 0, 11 * s, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+      });
+      ctx.strokeStyle = '#ffd84a';
+      ctx.lineWidth = Math.max(2, 6 * s);
+      ctx.beginPath();
+      for (let coil = 0; coil <= 8; coil++) {
+        const px = -4 * s + coil * 8 * s;
+        const py = (-34 - (coil % 2) * 12) * s;
+        if (coil === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+      }
+      ctx.stroke();
+      ctx.fillStyle = '#e53935';
+      ctx.beginPath();
+      ctx.arc(68 * s, -50 * s, 25 * s, 0, Math.PI * 2);
+      ctx.fill();
+      for (let finger = 0; finger < 4; finger++) {
+        ctx.fillRect((54 + finger * 10) * s, (-82 - finger * 2) * s, 9 * s, 34 * s);
+      }
+    } else if (prop.kind === 'carousel') {
+      const levelScale = (prop.sizeScale || 1) * (1 + (prop.level || 0) * 0.08);
+      ctx.save();
+      ctx.scale(levelScale, levelScale);
+      ctx.shadowColor = '#ffb020';
+      ctx.shadowBlur = Math.max(4, 14 * s);
+      ctx.fillStyle = prop.color || '#ffd84a';
+      ctx.strokeStyle = '#7a301f';
+      ctx.beginPath();
+      ctx.moveTo(-62 * s, -82 * s);
+      ctx.lineTo(0, -120 * s);
+      ctx.lineTo(62 * s, -82 * s);
+      ctx.closePath();
+      ctx.fill();
+      ctx.stroke();
+      ctx.fillStyle = '#d84635';
+      ctx.fillRect(-58 * s, -82 * s, 116 * s, 11 * s);
+      [-42, -14, 14, 42].forEach((px, index) => {
+        ctx.strokeStyle = index % 2 ? '#fff1a8' : '#ffd84a';
+        ctx.lineWidth = Math.max(1, 3 * s);
+        ctx.beginPath(); ctx.moveTo(px * s, -73 * s); ctx.lineTo(px * s, -13 * s); ctx.stroke();
+        ctx.fillStyle = index % 2 ? '#e53935' : '#fff1a8';
+        ctx.beginPath();
+        ctx.ellipse((px + 6) * s, -34 * s, 12 * s, 7 * s, 0, 0, Math.PI * 2);
+        ctx.fill();
+      });
+      ctx.fillStyle = '#ffd84a';
+      ctx.beginPath();
+      ctx.ellipse(0, -8 * s, 67 * s, 14 * s, 0, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.stroke();
+      ctx.restore();
+    } else if (prop.kind === 'pillar') {
       // Spiral-striped circus tent pillar
       ctx.fillStyle = '#fff1a8'; // White base
       ctx.fillRect(-10 * s, -120 * s, 20 * s, 125 * s);
@@ -9719,12 +10367,12 @@ const OS = {
       ctx.fillText((prop.label || 'AVENTURE').slice(0, 24), 0, 9 * s);
       ctx.restore();
     } else if (prop.kind === 'roomdoor') {
-      ctx.fillStyle = '#6b351f';
+      ctx.fillStyle = '#efc982';
       ctx.fillRect(-32 * s, -116 * s, 64 * s, 116 * s);
-      ctx.strokeStyle = '#32160f';
+      ctx.strokeStyle = '#9d6534';
       ctx.lineWidth = Math.max(1, 3 * s);
       ctx.strokeRect(-32 * s, -116 * s, 64 * s, 116 * s);
-      ctx.fillStyle = '#8b4a2a';
+      ctx.fillStyle = '#6b351f';
       ctx.fillRect(-25 * s, -108 * s, 50 * s, 100 * s);
       ctx.strokeStyle = '#4b2418';
       ctx.strokeRect(-25 * s, -108 * s, 50 * s, 100 * s);
@@ -9750,14 +10398,6 @@ const OS = {
         ctx.drawImage(frame.canvas, -iconW / 2, -102 * s, iconW, iconH);
         ctx.restore();
       }
-      ctx.fillStyle = '#2c1310';
-      ctx.fillRect(-24 * s, -51 * s, 48 * s, 16 * s);
-      ctx.strokeStyle = '#ffd06a';
-      ctx.strokeRect(-24 * s, -51 * s, 48 * s, 16 * s);
-      ctx.fillStyle = '#fff0b8';
-      ctx.font = `bold ${Math.max(6, 8 * s)}px Courier New`;
-      ctx.textAlign = 'center';
-      ctx.fillText(prop.label || 'ROOM', 0, -40 * s);
       ctx.fillStyle = '#ffd84a';
       ctx.beginPath();
       ctx.arc((prop.side === 'left' ? 21 : -21) * s, -22 * s, 3 * s, 0, Math.PI * 2);
@@ -9771,9 +10411,6 @@ const OS = {
         ctx.moveTo(25 * s, -106 * s);
         ctx.lineTo(-25 * s, -57 * s);
         ctx.stroke();
-        ctx.fillStyle = '#d93131';
-        ctx.font = `bold ${Math.max(6, 7 * s)}px Courier New`;
-        ctx.fillText('ARCHIVE', 0, -5 * s);
       }
     } else if (prop.kind === 'wallart') {
       ctx.fillStyle = '#5b2b1e';
@@ -9784,7 +10421,21 @@ const OS = {
       ctx.fillStyle = '#1d1230';
       ctx.fillRect(-27 * s, -20 * s, 54 * s, 40 * s);
       ctx.strokeStyle = prop.color;
-      if (prop.art === 'spiral') {
+      if (prop.art === 'eye') {
+        ctx.fillStyle = '#e8e2d2';
+        ctx.beginPath();
+        ctx.ellipse(0, 0, 20 * s, 12 * s, 0, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.fillStyle = '#111111';
+        ctx.beginPath();
+        ctx.arc(0, 0, 7 * s, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.strokeStyle = '#d52d34';
+        ctx.beginPath();
+        ctx.moveTo(-23 * s, -15 * s);
+        ctx.lineTo(22 * s, 14 * s);
+        ctx.stroke();
+      } else if (prop.art === 'spiral') {
         for (let r = 4; r < 22; r += 5) {
           ctx.beginPath();
           ctx.arc(0, 0, r * s, 0, Math.PI * 1.55);
@@ -9963,25 +10614,42 @@ const OS = {
       }
     } else if (prop.kind === 'window' || prop.kind === 'menu' || prop.kind === 'scoreboard' || prop.kind === 'archive' || prop.kind === 'card') {
       if (prop.kind === 'window') {
-        // Gothic manor window with pointed arch
-        ctx.fillStyle = '#050816'; // Dark night
-        ctx.beginPath();
-        ctx.moveTo(-24 * s, 0);
-        ctx.lineTo(-24 * s, -60 * s);
-        ctx.quadraticCurveTo(0, -96 * s, 24 * s, -60 * s);
-        ctx.lineTo(24 * s, 0);
-        ctx.closePath();
-        ctx.fill();
-        ctx.stroke();
-
-        // Window grates / pane divider lines
-        ctx.strokeStyle = '#3e240e';
-        ctx.lineWidth = Math.max(1, 2 * s);
-        ctx.beginPath();
-        ctx.moveTo(0, 0); ctx.lineTo(0, -90 * s);
-        ctx.moveTo(-24 * s, -30 * s); ctx.lineTo(24 * s, -30 * s);
-        ctx.moveTo(-24 * s, -60 * s); ctx.lineTo(24 * s, -60 * s);
-        ctx.stroke();
+        if (prop.style === 'bathroom') {
+          ctx.fillStyle = '#65b4ea';
+          ctx.strokeStyle = '#f5f5f0';
+          ctx.lineWidth = Math.max(1, 5 * s);
+          ctx.fillRect(-32 * s, -76 * s, 64 * s, 54 * s);
+          ctx.strokeRect(-32 * s, -76 * s, 64 * s, 54 * s);
+          ctx.fillStyle = '#ffffff';
+          ctx.beginPath();
+          ctx.ellipse(-12 * s, -51 * s, 14 * s, 6 * s, 0, 0, Math.PI * 2);
+          ctx.ellipse(9 * s, -53 * s, 18 * s, 7 * s, 0, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.strokeStyle = '#dbe9ef';
+          ctx.lineWidth = Math.max(1, 2 * s);
+          ctx.beginPath();
+          ctx.moveTo(0, -76 * s); ctx.lineTo(0, -22 * s);
+          ctx.moveTo(-32 * s, -49 * s); ctx.lineTo(32 * s, -49 * s);
+          ctx.stroke();
+        } else {
+          // Gothic manor window with pointed arch
+          ctx.fillStyle = '#050816';
+          ctx.beginPath();
+          ctx.moveTo(-24 * s, 0);
+          ctx.lineTo(-24 * s, -60 * s);
+          ctx.quadraticCurveTo(0, -96 * s, 24 * s, -60 * s);
+          ctx.lineTo(24 * s, 0);
+          ctx.closePath();
+          ctx.fill();
+          ctx.stroke();
+          ctx.strokeStyle = '#3e240e';
+          ctx.lineWidth = Math.max(1, 2 * s);
+          ctx.beginPath();
+          ctx.moveTo(0, 0); ctx.lineTo(0, -90 * s);
+          ctx.moveTo(-24 * s, -30 * s); ctx.lineTo(24 * s, -30 * s);
+          ctx.moveTo(-24 * s, -60 * s); ctx.lineTo(24 * s, -60 * s);
+          ctx.stroke();
+        }
       } else if (prop.kind === 'menu') {
         // Spudsy's retro fast food menu board
         ctx.fillStyle = '#160905';
@@ -10456,22 +11124,22 @@ const OS = {
       { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 2.0, z: -2.15, color: '#ff4fb8' }
     ];
     const byZone = {
-      2: [{ name: 'Caine', type: 'caine', avatar: 'caine', x: 0.25, z: -2.15, color: '#ffd84a' }, { name: 'Bubble', type: 'bubble', avatar: 'bubble', x: 1.25, z: -1.65, color: '#f7f7ff' }, ...shared],
+      2: [
+        { name: 'Caine', type: 'caine', avatar: 'caine', x: 0.25, z: -2.15, color: '#ffd84a' },
+        { name: 'Bubble', type: 'bubble', avatar: 'bubble', x: 1.25, z: -1.65, color: '#f7f7ff' },
+        { name: 'Barrel Monkey', type: 'npc', avatar: 'barrelmonkey', x: 3.05, z: -2.75, color: '#e43c32', sizeScale: 0.72, silent: true },
+        ...shared
+      ],
       3: [
-        { name: 'Sun', type: 'npc', avatar: 'sun', x: -2.8, z: -2.2, color: '#ffd84a', sizeScale: 0.9 },
-        { name: 'Moon', type: 'npc', avatar: 'moon', x: 2.8, z: -2.25, color: '#d7e6ff', sizeScale: 0.9 },
-        { name: 'Gloink Queen', type: 'npc', avatar: 'gloinkqueenscale', x: 0, z: -3.1, color: '#ff7d8d', sizeScale: 2.2 },
-        { name: 'Star Gloink', type: 'npc', avatar: 'gloinkstar', x: -1.45, z: -1.55, color: '#7348ff', sizeScale: 0.72 },
-        { name: 'Cube Gloink', type: 'npc', avatar: 'gloinkcube', x: 1.45, z: -1.55, color: '#2fb642', sizeScale: 0.72 },
-        { name: 'Barrel Monkey', type: 'npc', avatar: 'barrelmonkey', x: 2.55, z: -1.25, color: '#e43c32', sizeScale: 0.72 }
+        { name: 'Sun', type: 'npc', avatar: 'sun', x: -4.8, z: -6.4, color: '#ffd84a', sizeScale: 1.15, elevation: 4.2, routine: 'hover' },
+        { name: 'Moon', type: 'npc', avatar: 'moon', x: 4.8, z: -6.8, color: '#d7e6ff', sizeScale: 1.05, elevation: 4.5, routine: 'hover' }
       ],
       4: [
-        { name: 'Kaufmo abstrait', type: 'abstract', avatar: 'abstractedkaufmo', x: -0.45, z: -2.45, color: '#050505', sizeScale: 1.35, silent: true, silentText: 'Kaufmo abstrait gronde et crache un parasite multicolore. Aucun mot intelligible.', loreGate: { episode: 1, subepisode: 5 } },
-        { name: 'Abstraction du Cellar', type: 'abstract', avatar: 'cellarabstraction', x: 1.65, z: -3.05, color: '#030303', sizeScale: 1.22, silent: true, threatActive: false, silentText: 'La forme abstraite siffle dans le noir. CainOS ne detecte aucune structure de langage.', loreGate: { episode: 1, subepisode: 5 } },
-        { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -1.4, z: -1.7, color: '#e53935' },
-        { name: 'Gloink Round', type: 'npc', avatar: 'gloinkround', x: 1.55, z: -1.75, color: '#c4b62d', sizeScale: 0.72 },
-        { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: -2.45, z: -2.35, color: '#d64545' },
-        { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 2.45, z: -2.35, color: '#ff4fb8' }
+        { name: 'Kaufmo abstrait', type: 'abstract', avatar: 'abstractedkaufmo', x: -0.55, z: -4.25, color: '#050505', sizeScale: 1.5, silent: true, silentText: 'Kaufmo abstrait gronde. Aucun mot intelligible.', loreGate: { episode: 1, subepisode: 5 } },
+        { name: 'Abstraction du Cellar', type: 'abstract', avatar: 'cellarabstraction', x: 2.3, z: -5.65, color: '#030303', sizeScale: 1.35, silent: true, threatActive: false, silentText: 'La forme abstraite reste calme dans le noir. CainOS ne detecte aucune structure de langage.', loreGate: { episode: 1, subepisode: 5 } }
+      ],
+      5: [
+        { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 0, z: -2.55, color: '#e53935' }
       ],
       6: [
         { name: 'Gummigoo', type: 'gummigoo', avatar: 'gummigoo', x: -1.05, z: -2.2, color: '#d8a23a' },
@@ -10631,11 +11299,17 @@ const OS = {
         { name: 'Bubble', type: 'bubble', avatar: 'bubble', x: 1.0, z: -1.8, color: '#f7f7ff' }
       ],
       31: [
-        { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -1.2, z: -2.2, color: '#e53935' },
-        { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: 1.2, z: -2.35, color: '#d64545' },
-        { name: 'Gloink Queen', type: 'npc', avatar: 'gloinkqueenscale', x: 0, z: -3.0, color: '#ff7d8d', sizeScale: 1.7 },
-        { name: 'Star Gloink', type: 'npc', avatar: 'gloinkstar', x: -2.2, z: -1.35, color: '#7348ff', sizeScale: 0.65 },
-        { name: 'Cube Gloink', type: 'npc', avatar: 'gloinkcube', x: 2.2, z: -1.35, color: '#2fb642', sizeScale: 0.65 }
+        { name: 'Jax', type: 'jax', avatar: 'jax', x: -2.7, z: -2.25, color: '#8a4fd6' },
+        { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -1.25, z: -2.85, color: '#d9d0a2' },
+        { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: 1.15, z: -2.85, color: '#f7f7f7' },
+        { name: 'Zooble capturee', type: 'zooble', avatar: 'zooble', x: 2.55, z: -2.2, color: '#ff4fb8' },
+        { name: 'Gloink Queen', type: 'npc', avatar: 'gloinkqueenscale', x: 0, z: -4.75, color: '#ff7d8d', sizeScale: 2.25 },
+        { name: 'Star Gloink', type: 'npc', avatar: 'gloinkstar', x: -3.15, z: -1.25, color: '#7348ff', sizeScale: 0.62 },
+        { name: 'Cube Gloink', type: 'npc', avatar: 'gloinkcube', x: 3.15, z: -1.25, color: '#2fb642', sizeScale: 0.62 },
+        { name: 'Triangle Gloink', type: 'npc', avatar: 'gloinkpyramid', x: -2.0, z: -1.15, color: '#d52d34', sizeScale: 0.58 },
+        { name: 'Moon Gloink', type: 'npc', avatar: 'gloinkcrescent', x: 2.0, z: -1.15, color: '#7138cf', sizeScale: 0.58 },
+        { name: 'Bowling Pin Gloink', type: 'npc', avatar: 'gloinkpin', x: -0.75, z: -1.2, color: '#2fb642', sizeScale: 0.58 },
+        { name: 'Round Gloink', type: 'npc', avatar: 'gloinkround', x: 0.7, z: -1.2, color: '#c4b62d', sizeScale: 0.58 }
       ],
       32: [
         { name: 'Princess Loolilalu', type: 'npc', avatar: 'loolilalu', x: 0, z: -2.65, color: '#ff9ad5' },
@@ -11093,7 +11767,8 @@ const OS = {
     sprites.forEach(sprite => {
       const p = sprite.projected;
       const size = Math.max(3, 70 * p.scale * (sprite.sizeScale || 1));
-      const baseY = (p.y || h * 0.58) - (sprite.bob || 0) * size;
+      const elevationOffset = (h * (sprite.elevation || 0) * 0.34) / Math.max(0.28, p.depth);
+      const baseY = (p.y || h * 0.58) - elevationOffset - (sprite.bob || 0) * size;
       const avatar = sprite.avatar || sprite.type;
       const drawH = size * (avatar === 'gloinkqueenscale' ? 1.35 : avatar === 'pomni' ? 1.08 : 1);
       const halfWidth = size * (avatar === 'gloinkqueenscale' ? 0.9 : avatar === 'pomni' ? 0.72 : 0.64);
@@ -11648,6 +12323,33 @@ const OS = {
       this.activeWindow = winId;
       if (winId === 'simulations') {
         SoundManager.startTheme();
+      } else if (fixture === 'dome') {
+        ctx.save();
+        ctx.shadowColor = prop.color || '#fff1a8';
+        ctx.shadowBlur = Math.max(4, 12 * s);
+        ctx.fillStyle = '#6a2f2a';
+        ctx.fillRect(-2 * s, -18 * s, 4 * s, 19 * s);
+        ctx.fillStyle = prop.color || '#fff1a8';
+        ctx.beginPath();
+        ctx.arc(0, 7 * s, 13 * s, Math.PI, 0);
+        ctx.closePath();
+        ctx.fill();
+        ctx.restore();
+      } else if (fixture === 'barebulb') {
+        ctx.strokeStyle = '#3a3033';
+        ctx.lineWidth = Math.max(1, 2 * s);
+        ctx.beginPath();
+        ctx.moveTo(0, -24 * s);
+        ctx.lineTo(0, 5 * s);
+        ctx.stroke();
+        ctx.save();
+        ctx.shadowColor = prop.color || '#f7e6b4';
+        ctx.shadowBlur = Math.max(5, 16 * s);
+        ctx.fillStyle = prop.color || '#f7e6b4';
+        ctx.beginPath();
+        ctx.arc(0, 11 * s, 7 * s, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.restore();
       } else {
         SoundManager.stopTheme();
       }

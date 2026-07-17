@@ -160,6 +160,9 @@ for (let episode = 1; episode <= 9; episode++) {
   "name: 'PRIVATE TRUST EXERCISE ROOM'",
   "name: 'ADMINISTRATOR ZONE'",
   "name: 'EXIT OFFICE CUBICLE LOOP'",
+  "kind: 'partition'",
+  "kind: 'watercooler'",
+  "kind: 'sofa'",
   "name: 'JAX PSYCHE / FOUR PERSONAS ROOM'",
   "name: 'DESTROYED CIRCUS / JAX PILLOW SHACK'",
   'getCircusDormHallDoorProps',
@@ -316,6 +319,16 @@ if (duplicateIds.length) failures.push(`ID HTML DUPLIQUES: ${duplicateIds.join('
 if (!/campaignStages\s*!==\s*72/.test(app)) failures.push('Audit 72 actes absent');
 if (!/campaigns\.length\s*!==\s*9/.test(app)) failures.push('Audit 9 campagnes absent');
 if (!/getCircusFpsZoneMax\(\)\s*\{\s*return 119;/.test(app)) failures.push('Borne FPS 119 absente');
+for (const marker of [
+  "motif: 'kaufmoroom'",
+  "kind: 'pilotexitdoor'",
+  "kind: 'gloinknest'",
+  "kind: 'cellaropening'",
+  "kind: 'toyglove'",
+  "kind: 'carousel'"
+]) {
+  if (!app.includes(marker)) failures.push(`Passe FPS EP1 absente: ${marker}`);
+}
 if (!app.includes("name: 'UNTITLED BAR'")) failures.push('Bar canonique de Untitled absent');
 for (const marker of ['RAGATHA TORMENT', 'GANGLE TORMENT', 'ZOOBLE TORMENT', 'JAX TORMENT', 'POMNI TORMENT']) {
   if (!app.includes(marker)) failures.push(`Sous-espace EP8 absent: ${marker}`);
