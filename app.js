@@ -1683,7 +1683,7 @@ const OS = {
       67: { name: 'CANDY PALACE BALCONY / RECONSTRUCTION', short: 'BALCON', detail: 'Balcon d observation CainOS raccorde au palais. La vue respecte le royaume, mais ce niveau reste une reconstruction.', color: '#ffd84a', floor: '#ffcae1', ceiling: '#70a7ff', unlocked: unlockedAt(2, 2) },
       68: { name: 'LIGHTHOUSE INTERIOR / RECONSTRUCTION', short: 'PHARE INT.', detail: 'Interieur praticable du phare reconstruit par CainOS depuis sa silhouette et son acces au toboggan.', color: '#ff6a55', floor: '#ead17b', ceiling: '#79e8ff', unlocked: unlockedAt(7, 1) },
       69: { name: 'LIGHTHOUSE LANTERN / RECONSTRUCTION', short: 'LANTERNE', detail: 'Lanterne haute CainOS avec vue sur le lac. Le phare est canonique; cette circulation interieure ne l est pas.', color: '#fff1a8', floor: '#d9b94f', ceiling: '#4ee7ff', unlocked: unlockedAt(7, 1) },
-      70: { name: 'SHRIMP TOWN / CONTREFACTUEL', short: 'SHRIMP TOWN', detail: 'Destination seulement citee comme resultat du bouton bleu. Elle n est jamais visitee dans la chronologie canonique.', color: '#ff8f4a', floor: '#d9b66f', ceiling: '#69c9e8', provenance: 'mentioned', nonPhysical: true, unlocked: unlockedAt(7, 7) },
+      70: { name: 'SHRIMP TOWN / CONTREFACTUEL', short: 'SHRIMP TOWN', detail: 'Destination seulement citee comme resultat du choix alternatif. Elle n est jamais visitee dans la chronologie canonique.', color: '#ff8f4a', floor: '#d9b66f', ceiling: '#69c9e8', provenance: 'mentioned', nonPhysical: true, unlocked: unlockedAt(7, 7) },
       71: { name: 'SNOWY TUNDRA / CAINOS RECONSTRUCTION', short: 'TOUNDRA', detail: 'Archive visuelle isolee: le transcript local d Untitled ne confirme ni son trajet ni ses objectifs. Elle ne constitue pas une porte du lightning round.', color: '#e8f7ff', floor: '#cfe6ef', ceiling: '#7aa7cc', unlocked: unlockedAt(5, 1) },
       72: { name: "SPUDSY'S PARKING LOT", short: 'PARKING', detail: 'Exterieur du restaurant ou le service de Gangle se termine brutalement.', color: '#ff4d4d', floor: '#36363d', ceiling: '#41213c', unlocked: unlockedAt(4, 7) },
       73: { name: 'C&A BRAIN SCANNER FLASHBACK', short: 'SCANNER', detail: 'Flashback technique de Remember: poste de Scratch, vieux PC, casque et scanners cerebraux.', color: '#c5d6e8', floor: '#8e959f', ceiling: '#252a31', provenance: 'projection', nonPhysical: true, layer: 'memory', unlocked: unlockedAt(9, 6) },
@@ -2514,7 +2514,35 @@ const OS = {
       188: { x: center.x, z: center.z + 2.2, a: -Math.PI / 2, revision: 1 },
       189: { x: center.x, z: center.z + 2.8, a: -Math.PI / 2, revision: 1 },
       190: { x: center.x, z: center.z + 1.7, a: -Math.PI / 2, revision: 1 },
-      191: { x: center.x, z: center.z + 2.8, a: -Math.PI / 2, revision: 1 }
+      191: { x: center.x, z: center.z + 2.8, a: -Math.PI / 2, revision: 1 },
+      192: { x: center.x, z: center.z + 2.5, a: -Math.PI / 2, revision: 1 },
+      193: { x: center.x, z: center.z + 2.2, a: -Math.PI / 2, revision: 1 },
+      194: { x: center.x, z: center.z + 2.8, a: -Math.PI / 2, revision: 1 },
+      195: { x: center.x, z: center.z + 2.0, a: -Math.PI / 2, revision: 1 },
+      196: { x: center.x, z: center.z + 2.4, a: -Math.PI / 2, revision: 1 },
+      197: { x: center.x, z: center.z + 2.8, a: -Math.PI / 2, revision: 1 },
+      198: { x: center.x, z: center.z + 1.8, a: -Math.PI / 2, revision: 1 },
+      199: { x: center.x, z: center.z + 1.8, a: -Math.PI / 2, revision: 1 },
+      200: { x: center.x, z: center.z + 2.0, a: -Math.PI / 2, revision: 1 },
+      201: { x: center.x, z: center.z + 2.0, a: -Math.PI / 2, revision: 1 },
+      202: { x: center.x, z: center.z + 1.8, a: -Math.PI / 2, revision: 1 },
+      203: { x: center.x, z: center.z + 2.6, a: -Math.PI / 2, revision: 1 },
+      204: { x: center.x, z: center.z + 1.8, a: -Math.PI / 2, revision: 1 },
+      205: { x: center.x, z: center.z + 2.2, a: -Math.PI / 2, revision: 1 },
+      206: { x: center.x, z: center.z + 2.0, a: -Math.PI / 2, revision: 1 },
+      207: { x: center.x, z: center.z + 2.4, a: -Math.PI / 2, revision: 1 },
+      208: { x: center.x, z: center.z + 2.8, a: -Math.PI / 2, revision: 1 },
+      209: { x: center.x, z: center.z + 1.7, a: -Math.PI / 2, revision: 1 },
+      210: { x: center.x, z: center.z + 2.0, a: -Math.PI / 2, revision: 1 },
+      211: { x: center.x, z: center.z + 2.0, a: -Math.PI / 2, revision: 1 },
+      212: { x: center.x, z: center.z + 1.8, a: -Math.PI / 2, revision: 1 },
+      213: { x: center.x, z: center.z + 2.5, a: -Math.PI / 2, revision: 1 },
+      214: { x: center.x, z: center.z + 2.6, a: -Math.PI / 2, revision: 1 },
+      215: { x: center.x, z: center.z + 2.3, a: -Math.PI / 2, revision: 1 },
+      216: { x: center.x, z: center.z + 1.8, a: -Math.PI / 2, revision: 1 },
+      217: { x: center.x, z: center.z + 2.6, a: -Math.PI / 2, revision: 1 },
+      218: { x: center.x, z: center.z + 3.2, a: -Math.PI / 2, revision: 1 },
+      219: { x: center.x, z: center.z + 2.0, a: -Math.PI / 2, revision: 1 }
     };
     return authored[zoneId] || null;
   },
@@ -3539,55 +3567,283 @@ const OS = {
           ]
         }
       ] },
-      7: { title: 'Beach Episode', steps: [
+      7: { title: 'Beach Episode', version: 2, steps: [
         {
-          title: 'Jour sans aventure et Chinese Room', zone: 15, route: [2, 15],
-          action: 'talk', target: 'caine',
-          guide: 'Assistez au gag du jour libre sur la piste, puis entrez dans la Chinese Room sans la confondre avec la zone administrateur.',
-          requirements: [{ action: 'use', target: 'console', zone: 15, count: 1 }]
-        },
-        {
-          title: 'Digital Lake et jeux de plage', zone: 14, route: [15, 2, 3, 14],
-          action: 'use', target: 'umbrella',
-          guide: 'Rejoignez la plage, reperez la cabine de change, l oeil-bouton de Ragatha et une zone d ombre avant la plongee.',
-          requirements: [{ action: 'look', target: 'eye', zone: 14, count: 1 }]
-        },
-        {
-          title: 'Coffre vide, chambre et vision de Jax', zone: 44, route: [14, 40, 14, 3, 2, 20, 44],
-          action: 'use', target: 'doorbell',
-          guide: 'Inspectez le coffre deja pille et ses deux poissons, puis suivez Jax jusque dans sa chambre et declenchez la vision au doorbell.',
+          title: 'Cachette de Zooble et jour libre', zone: 192, route: [192], entryMode: 'timeshift',
+          action: 'use', target: 'hidinglid',
+          guide: 'Sortez de la cachette avec Pomni, retrouvez Gangle et ecoutez Caine annoncer un jour sans aventure.',
           requirements: [
-            { action: 'talk', target: 'truthtellerfish', zone: 40, count: 1 },
-            { action: 'look', target: 'emptychest', zone: 40, count: 1 }
+            { action: 'talk', target: 'zooble', zone: 192, count: 1 },
+            { action: 'talk', target: 'caine', zone: 192, count: 1 }
           ]
         },
         {
-          title: 'Abel et le plan fabrique', zone: 94, route: [44, 20, 2, 15, 94],
-          action: 'talk', target: 'abelmannequin',
-          guide: 'Rejoignez Abel dans la zone administrateur et ecoutez son plan comme un element d aventure scriptee, pas comme une preuve C&A.'
+          title: 'Consultation de la Chinese Room', zone: 193, route: [193], entryMode: 'timeshift',
+          action: 'look', target: 'chinesedoor',
+          guide: 'Observez le gag prepare par Caine, l echange ecrit et l annonce du Digital Lake sans entrer encore dans la salle.',
+          requirements: [
+            { action: 'use', target: 'writtenreply', zone: 193, count: 1 },
+            { action: 'talk', target: 'caine', zone: 193, count: 1 }
+          ]
         },
         {
-          title: 'Six passes et cle de Caine', zone: 96, route: [94, 16, 96],
-          action: 'use', target: 'jaxkey',
-          guide: 'Activez les six passes distincts, puis suivez la scene parallele du restaurant ou Jax immobilise Caine et recupere sa cle.',
-          requirements: [{ action: 'use', target: 'adminpass', zone: 94, count: 6, distinct: true }]
+          title: 'Cabine magique et ombre du Sun', zone: 194, route: [194], entryMode: 'caineportal',
+          action: 'use', target: 'changingbooth',
+          guide: 'Rejoignez le Digital Lake, utilisez la cabine rouge et blanche avec Pomni, puis gagnez une zone d ombre sans provoquer le Sun.',
+          requirements: [
+            { action: 'talk', target: 'pomni', zone: 194, count: 1 },
+            { action: 'talk', target: 'ragatha', zone: 194, count: 1 },
+            { action: 'talk', target: 'sun', zone: 194, count: 1 },
+            { action: 'use', target: 'shade', zone: 194, count: 1 }
+          ]
         },
         {
-          title: 'Collision de la zone administrateur', zone: 94, route: [96, 16, 94],
-          action: 'use', target: 'gridnode',
-          guide: 'Distribuez les passes, stabilisez la collision des avatars et declenchez la transition ballon vers le bureau.',
-          requirements: [{ action: 'look', target: 'ring', zone: 94, count: 1 }]
+          title: 'Montage de plage et oeil de Ragatha', zone: 197, route: [197], entryMode: 'timeshift',
+          action: 'use', target: 'watermelonjax',
+          guide: 'Rejouez les activites montrees, observez Jax isole sur son transat, puis suivez la chute de l oeil-bouton de Ragatha.',
+          requirements: [
+            { action: 'look', target: 'jaxlounge', zone: 197, count: 1 },
+            { action: 'look', target: 'ragathaeye', zone: 197, count: 1 },
+            { action: 'talk', target: 'ragatha', zone: 197, count: 1 },
+            { action: 'talk', target: 'pomni', zone: 197, count: 1 }
+          ]
         },
         {
-          title: 'Bureau, bibliotheque et bouton rouge', zone: 95, route: [94, 16, 95],
-          action: 'use', target: 'redbutton',
-          guide: 'Ouvrez la bibliotheque coulissante et atteignez la console. Le choix canonique est force par Jax sur le bouton rouge.'
+          title: 'Coffre englouti et deux poissons', zone: 195, route: [195], entryMode: 'timeshift',
+          action: 'look', target: 'emptychest',
+          guide: 'Suivez Pomni sous l eau, interrogez les deux poissons et gardez l oeil de Ragatha comme objectif encore introuvable.',
+          requirements: [
+            { action: 'talk', target: 'truthtellerfish', zone: 195, count: 1 },
+            { action: 'talk', target: 'liarfish', zone: 195, count: 1 },
+            { action: 'look', target: 'missingeye', zone: 195, count: 1 }
+          ]
         },
         {
-          title: 'Revelation d aventure et panier cadeau', zone: 16, route: [95, 16],
-          action: 'talk', target: 'caine',
-          guide: 'Ecoutez la revelation: Abel et les preuves C&A appartenaient a l aventure fabriquee, puis inspectez le panier de fin.',
-          requirements: [{ action: 'look', target: 'giftbasket', zone: 16, count: 1 }]
+          title: 'Zooble, Jax et le Shrimp NPC', zone: 196, route: [196], entryMode: 'timeshift',
+          action: 'talk', target: 'zooble',
+          guide: 'Suivez la discussion de Zooble et Jax, puis rejoignez Pomni au moment ou le Sun grille le Shrimp NPC.',
+          requirements: [
+            { action: 'talk', target: 'jax', zone: 196, count: 1 },
+            { action: 'talk', target: 'pomni', zone: 196, count: 1 },
+            { action: 'look', target: 'shrimpsizzle', zone: 196, count: 1 },
+            { action: 'talk', target: 'sun', zone: 196, count: 1 }
+          ]
+        },
+        {
+          title: 'Mannequin cache derriere le rocher', zone: 215, route: [215], entryMode: 'timeshift',
+          action: 'look', target: 'hidingrock',
+          guide: 'Depuis la plage, suivez le regard de Pomni vers le mannequin qui lui fait signe derriere un rocher.',
+          requirements: [
+            { action: 'look', target: 'shrimpscorch', zone: 215, count: 1 },
+            { action: 'talk', target: 'pomni', zone: 215, count: 1 },
+            { action: 'talk', target: 'abelmannequin', zone: 215, count: 1 }
+          ]
+        },
+        {
+          title: 'Chambre et hallucination de Jax', zone: 216, route: [216], entryMode: 'timeshift',
+          action: 'look', target: 'blacktriangle',
+          guide: 'Explorez la chambre rose de Jax, suivez les mains vertes, puis traversez la vision kaleidoscopique sans la prendre pour un lieu physique.',
+          requirements: [
+            { action: 'use', target: 'greenhand', zone: 216, count: 1 },
+            { action: 'look', target: 'hallucinationface', zone: 216, count: 3, distinct: true },
+            { action: 'talk', target: 'jax', zone: 216, count: 1 }
+          ]
+        },
+        {
+          title: 'Sonnette et recrutement de Jax', zone: 198, route: [198], entryMode: 'timeshift',
+          action: 'use', target: 'doorbell',
+          guide: 'Interrompez la vision avec la sonnette, retrouvez Pomni, Ragatha et le mannequin au seuil, puis recuperez le seau de cles de Jax.',
+          requirements: [
+            { action: 'look', target: 'abelblank', zone: 198, count: 1 },
+            { action: 'look', target: 'keybucket', zone: 198, count: 1 },
+            { action: 'talk', target: 'abelmannequin', zone: 198, count: 1 },
+            { action: 'talk', target: 'ragatha', zone: 198, count: 1 }
+          ]
+        },
+        {
+          title: 'Trousseau et entree dans la Chinese Room', zone: 199, route: [199], entryMode: 'timeshift',
+          action: 'use', target: 'keyring',
+          guide: 'Essayez le trousseau au seuil, ouvrez la porte interieure et rejoignez le Chinese Room NPC avec le groupe.',
+          requirements: [
+            { action: 'use', target: 'chineseinnerdoor', zone: 199, count: 1 },
+            { action: 'talk', target: 'chineseroomnpc', zone: 199, count: 1 }
+          ]
+        },
+        {
+          title: 'Affirmations C&A non verifiees', zone: 200, route: [200], entryMode: 'timeshift',
+          action: 'use', target: 'abelclaim', count: 3, distinct: true,
+          guide: 'Consignez les affirmations d Abel sur C&A, les capsules et le programme partage en les marquant comme recit non verifie.',
+          requirements: [{ action: 'talk', target: 'abelmannequin', zone: 200, count: 1 }]
+        },
+        {
+          title: 'Nom Abel, visage et plan de la cle', zone: 201, route: [201], entryMode: 'timeshift',
+          action: 'use', target: 'drawnface',
+          guide: 'Donnez un visage au mannequin, relevez le nom Abel et assemblez son plan de vol de la cle sans valider son histoire.',
+          requirements: [
+            { action: 'look', target: 'keydiagram', zone: 201, count: 1 },
+            { action: 'talk', target: 'abelmannequin', zone: 201, count: 1 },
+            { action: 'talk', target: 'jax', zone: 201, count: 1 }
+          ]
+        },
+        {
+          title: 'Diner: premiere tentative interrompue', zone: 202, route: [202], entryMode: 'cainecut',
+          action: 'use', target: 'salmonmenu',
+          guide: 'Gardez Caine concentre sur le diner, provoquez le blocage dial-up et constatez que la premiere tentative de Jax est interrompue.',
+          requirements: [
+            { action: 'talk', target: 'caine', zone: 202, count: 1 },
+            { action: 'use', target: 'keyattempt', zone: 202, count: 1 },
+            { action: 'talk', target: 'jax', zone: 202, count: 1 }
+          ]
+        },
+        {
+          title: 'Marche et doutes sur Abel', zone: 203, route: [203], entryMode: 'cainecut',
+          action: 'talk', target: 'ragatha',
+          guide: 'Accompagnez Pomni, Ragatha et Abel vers la zone administrateur sans transformer Kaufmo ou Ribbit, seulement cites, en presences.',
+          requirements: [
+            { action: 'talk', target: 'pomni', zone: 203, count: 1 },
+            { action: 'talk', target: 'abelmannequin', zone: 203, count: 1 },
+            { action: 'look', target: 'routeanchor', zone: 203, count: 1 },
+            { action: 'use', target: 'adminwallportal', zone: 203, count: 1 }
+          ]
+        },
+        {
+          title: 'Diner: macroverse et cle recuperee', zone: 204, route: [204], entryMode: 'cainecut',
+          action: 'look', target: 'macroversephoto', count: 3, distinct: true,
+          guide: 'Inspectez les photographies montrees par Caine, provoquez son second blocage et laissez Jax recuperer cette fois la carte-cle.',
+          requirements: [
+            { action: 'talk', target: 'caine', zone: 204, count: 1 },
+            { action: 'talk', target: 'jax', zone: 204, count: 1 },
+            { action: 'use', target: 'jaxkey', zone: 204, count: 1 }
+          ]
+        },
+        {
+          title: 'Avertissement a Kinger', zone: 205, route: [205], entryMode: 'cainecut',
+          action: 'talk', target: 'kinger',
+          guide: 'Transmettez le plan a Kinger, constatez qu il ne connait pas Abel et attendez le retour de Jax avec la cle.',
+          requirements: [
+            { action: 'talk', target: 'zooble', zone: 205, count: 1 },
+            { action: 'talk', target: 'gangle', zone: 205, count: 1 },
+            { action: 'look', target: 'jaxkey', zone: 205, count: 1 }
+          ]
+        },
+        {
+          title: 'Creation des six passes', zone: 206, route: [206], entryMode: 'timeshift',
+          action: 'use', target: 'adminpass', count: 6, distinct: true,
+          guide: 'Generez exactement six passes dans la zone administrateur et conservez la discussion sur Kinger dans le cadre du plan.',
+          requirements: [
+            { action: 'talk', target: 'abelmannequin', zone: 206, count: 1 },
+            { action: 'talk', target: 'pomni', zone: 206, count: 1 }
+          ]
+        },
+        {
+          title: 'Reunion et activation des passes', zone: 207, route: [207], entryMode: 'timeshift',
+          action: 'use', target: 'passflare', count: 6, distinct: true,
+          guide: 'Equipez les six residents, observez le scintillement des passes et gardez le doute de Kinger visible.',
+          requirements: [
+            { action: 'talk', target: 'kinger', zone: 207, count: 1 },
+            { action: 'talk', target: 'abelmannequin', zone: 207, count: 1 }
+          ]
+        },
+        {
+          title: 'Collisions cubiques vers le bureau', zone: 208, route: [208], entryMode: 'timeshift',
+          action: 'use', target: 'cubeanchor', count: 3, distinct: true,
+          guide: 'Stabilisez les collisions, observez Jax roule en boule et envoyez le groupe vers le bureau pendant qu Abel reste en bas.',
+          requirements: [
+            { action: 'look', target: 'jaxball', zone: 208, count: 1 },
+            { action: 'talk', target: 'kinger', zone: 208, count: 1 },
+            { action: 'use', target: 'upwardslot', zone: 208, count: 1 }
+          ]
+        },
+        {
+          title: 'Coupe parallele: Caine et Bubble', zone: 209, route: [209], entryMode: 'cainecut',
+          action: 'look', target: 'purposeorb',
+          guide: 'Gardez cette courte scene Caine-Bubble separee du bureau infiltre; le lieu exact reste non confirme.',
+          requirements: [
+            { action: 'talk', target: 'caine', zone: 209, count: 1 },
+            { action: 'talk', target: 'bubble', zone: 209, count: 1 }
+          ]
+        },
+        {
+          title: 'Carte-cle, entree et grand escalier', zone: 217, route: [217], entryMode: 'timeshift',
+          action: 'use', target: 'officekeycard',
+          guide: 'Rejoignez l entree elevee du bureau, utilisez la carte-cle couverte de salive, puis montez l escalier borde des globes d aventures.',
+          requirements: [
+            { action: 'use', target: 'officedoor', zone: 217, count: 1 },
+            { action: 'use', target: 'grandstairs', zone: 217, count: 1 },
+            { action: 'look', target: 'adventureglobe', zone: 217, count: 4, distinct: true },
+            { action: 'talk', target: 'jax', zone: 217, count: 1 }
+          ]
+        },
+        {
+          title: 'Bureau et bibliotheque coulissante', zone: 210, route: [210], entryMode: 'cainecut',
+          action: 'use', target: 'bookcase',
+          guide: 'Explorez le bureau infiltre, faites coulisser la bibliotheque et ouvrez le passage cache vers la console.',
+          requirements: [
+            { action: 'use', target: 'secretdoor', zone: 210, count: 1 },
+            { action: 'talk', target: 'pomni', zone: 210, count: 1 }
+          ]
+        },
+        {
+          title: 'Armatures et couloir a colonnes', zone: 218, route: [218], entryMode: 'timeshift',
+          action: 'look', target: 'armature', count: 4, distinct: true,
+          guide: 'Relevez les quatre armatures nommees, traversez le long couloir a colonnes et atteignez la porte du terminal.',
+          requirements: [
+            { action: 'use', target: 'columnpath', zone: 218, count: 3, distinct: true },
+            { action: 'use', target: 'terminaldoor', zone: 218, count: 1 },
+            { action: 'talk', target: 'kinger', zone: 218, count: 1 }
+          ]
+        },
+        {
+          title: 'Adieux devant la console', zone: 211, route: [211], entryMode: 'timeshift',
+          action: 'talk', target: 'ragatha',
+          guide: 'Laissez les residents se parler avant le choix, puis activez la console seulement apres les echanges Gangle-Zooble.',
+          requirements: [
+            { action: 'talk', target: 'gangle', zone: 211, count: 1 },
+            { action: 'talk', target: 'zooble', zone: 211, count: 1 },
+            { action: 'use', target: 'mainconsole', zone: 211, count: 1 }
+          ]
+        },
+        {
+          title: 'Boutons rouge et bleu, panique de Jax', zone: 212, route: [212], entryMode: 'timeshift',
+          action: 'look', target: 'redbutton',
+          guide: 'Lisez les fonctions du rouge et du bleu, suivez la panique de Jax, puis reproduisez son coup sur le bouton rouge.',
+          requirements: [
+            { action: 'look', target: 'bluebutton', zone: 212, count: 1 },
+            { action: 'talk', target: 'pomni', zone: 212, count: 1 },
+            { action: 'talk', target: 'jax', zone: 212, count: 1 },
+            { action: 'use', target: 'redbutton', zone: 212, count: 1 }
+          ]
+        },
+        {
+          title: 'Ecran rouge puis ouverture du vide blanc', zone: 219, route: [219], entryMode: 'timeshift',
+          action: 'look', target: 'redscreen',
+          guide: 'Observez le resultat immediat du choix de Jax: ecran rouge, extinction, coup de sifflet, puis ouverture sur le vide blanc.',
+          requirements: [
+            { action: 'look', target: 'whitevoid', zone: 219, count: 1 },
+            { action: 'talk', target: 'ragatha', zone: 219, count: 1 },
+            { action: 'talk', target: 'jax', zone: 219, count: 1 }
+          ]
+        },
+        {
+          title: 'Revelation et suppression d Abel', zone: 213, route: [213], entryMode: 'timeshift',
+          action: 'look', target: 'fabricationreveal',
+          guide: 'Constatez que Caine a fabrique le recit C&A, les capsules et la sortie, puis observez la suppression d Abel.',
+          requirements: [
+            { action: 'talk', target: 'caine', zone: 213, count: 1 },
+            { action: 'talk', target: 'abelmannequin', zone: 213, count: 1 },
+            { action: 'use', target: 'deletepulse', zone: 213, count: 1 },
+            { action: 'look', target: 'hotdoglocket', zone: 213, count: 1 }
+          ]
+        },
+        {
+          title: 'Confrontation, Scratch et panier final', zone: 214, route: [214], entryMode: 'timeshift',
+          action: 'talk', target: 'gangle',
+          guide: 'Confrontez Caine sur les modifications mentales, gardez Scratch au statut de question de Kinger et inspectez le panier avant le retour.',
+          requirements: [
+            { action: 'talk', target: 'jax', zone: 214, count: 1 },
+            { action: 'talk', target: 'kinger', zone: 214, count: 1 },
+            { action: 'look', target: 'giftbasket', zone: 214, count: 1 }
+          ]
         }
       ] },
       8: { title: 'hjsakldfhl', steps: [
@@ -4105,14 +4361,14 @@ const OS = {
       12: [{ id: 'softball-free-view', speaker: 'CainOS', channel: 'system', text: 'VUE LIBRE DU STADE: les innings canoniques sont separes dans les etats 167 a 170.', duration: 5000 }],
       14: [
         { id: 'sun-warning', speaker: 'Sun', text: 'Le soleil digital augmente la visibilite. Les parasols deviennent des zones sures.', avatar: 'sun', duration: 4700 },
-        { id: 'ragatha-eye', speaker: 'Ragatha', text: 'Mon oeil-bouton est tombe pres des jeux de plage. Gardons-le visible avant de plonger.', avatar: 'ragatha', duration: 5000 }
+        { id: 'ragatha-eye', speaker: 'Pomni', text: 'Je replonge chercher l oeil-bouton de Ragatha. Le coffre vide ne doit pas me distraire.', avatar: 'pomni', duration: 5000 }
       ],
       40: [{ id: 'empty-lake-chest', speaker: 'Orange Crappy Looking Fish', text: 'Le coffre a deja ete pille. Il ne reste rien a prendre ici.', avatar: 'truthtellerfish', duration: 5000 }],
       44: [{ id: 'jax-doorbell-vision', speaker: 'CainOS', channel: 'system', text: 'VISION DE JAX: sequence kaleidoscopique non confirmee comme souvenir reel. Aucun passage physique C&A n est ouvert.', duration: 5600 }],
       94: [{ id: 'admin-pass-collision', speaker: 'CainOS', channel: 'system', text: 'AVENTURE SCRIPTEE: six passes detectes. La collision et la transition ballon restent des effets imposes par Caine.', duration: 5600 }],
-      95: [{ id: 'forced-red-button', speaker: 'Jax', text: 'Le bouton rouge est deja dans ma trajectoire. Le bleu ne devient pas une branche canonique.', avatar: 'jax', duration: 5200 }],
+      95: [{ id: 'jax-red-choice', speaker: 'CainOS', channel: 'system', text: 'CHOIX MONTRE: rouge pour fermer la console et rester, bleu pour deconnecter les joueurs. Jax frappe le bouton rouge.', duration: 5400 }],
       96: [{ id: 'restaurant-key-attempt', speaker: 'Jax', text: 'Le plan est de garder Caine occupe assez longtemps pour atteindre sa cle.', avatar: 'jax', duration: 5200 }],
-      16: [{ id: 'abel-script-reveal', speaker: 'Caine', text: 'Abel, les passes et les preuves C&A faisaient partie de l aventure. Cette console ne prouve aucune sortie reelle.', avatar: 'caine', duration: 5800 }],
+      16: [{ id: 'caine-office-boundary', speaker: 'CainOS', channel: 'system', text: 'BUREAU PHYSIQUE: la bibliotheque et les globes sont visibles. La revelation sur Abel reste dans son etat temporel final dedie.', duration: 5600 }],
       31: [{ id: 'gloink-theft', speaker: 'Zooble', text: 'Ils ont encore pris une piece. Recupere-la avant d approcher la reine.', avatar: 'zooble', duration: 5200 }],
       43: [
         { id: 'bubble-feast', speaker: 'Bubble', text: "Made with all the love I'm legally allowed to give.", avatar: 'bubble', duration: 5000 },
@@ -4632,7 +4888,7 @@ const OS = {
   },
 
   getCircusFpsZoneMax() {
-    return 191;
+    return 219;
   },
 
   getCircusCanonRoomDefinitions() {
@@ -5213,12 +5469,12 @@ const OS = {
           { kind: 'ring', x: 0, z: -3.15, color: '#fff1a8', label: 'Zone de collision des avatars' },
           { kind: 'balloon', x: -2.35, z: -1.25, color: '#ff4fb8', label: 'Transition ballon vers le bureau' },
           { kind: 'balloon', x: 2.35, z: -1.25, color: '#7df0ff', label: 'Transition ballon vers le bureau' },
-          { kind: 'card', campaignTarget: 'adminpass', x: -2.5, z: -2.35, color: '#e53935', label: 'Pass administrateur 1' },
-          { kind: 'card', campaignTarget: 'adminpass', x: -1.5, z: -2.6, color: '#ffd84a', label: 'Pass administrateur 2' },
-          { kind: 'card', campaignTarget: 'adminpass', x: -0.5, z: -2.8, color: '#2a58d8', label: 'Pass administrateur 3' },
-          { kind: 'card', campaignTarget: 'adminpass', x: 0.5, z: -2.8, color: '#ff4fb8', label: 'Pass administrateur 4' },
-          { kind: 'card', campaignTarget: 'adminpass', x: 1.5, z: -2.6, color: '#7df0ff', label: 'Pass administrateur 5' },
-          { kind: 'card', campaignTarget: 'adminpass', x: 2.5, z: -2.35, color: '#ff7a30', label: 'Pass administrateur 6' },
+          { kind: 'card', campaignTarget: 'adminpass', portable: false, x: -2.5, z: -2.35, color: '#e53935', label: 'Pass administrateur 1' },
+          { kind: 'card', campaignTarget: 'adminpass', portable: false, x: -1.5, z: -2.6, color: '#ffd84a', label: 'Pass administrateur 2' },
+          { kind: 'card', campaignTarget: 'adminpass', portable: false, x: -0.5, z: -2.8, color: '#2a58d8', label: 'Pass administrateur 3' },
+          { kind: 'card', campaignTarget: 'adminpass', portable: false, x: 0.5, z: -2.8, color: '#ff4fb8', label: 'Pass administrateur 4' },
+          { kind: 'card', campaignTarget: 'adminpass', portable: false, x: 1.5, z: -2.6, color: '#7df0ff', label: 'Pass administrateur 5' },
+          { kind: 'card', campaignTarget: 'adminpass', portable: false, x: 2.5, z: -2.35, color: '#ff7a30', label: 'Pass administrateur 6' },
           { kind: 'archive', x: 0, z: -1.25, color: '#c875ff', label: 'Dossier Abel / aventure scriptee' }
         ],
         sprites: [
@@ -5237,8 +5493,8 @@ const OS = {
         props: [
           { kind: 'archive', x: -2.35, z: -2.5, color: '#7a4b32', label: 'Bibliotheque coulissante' },
           { kind: 'console', x: 0, z: -3.25, color: '#00ddff', label: 'Console principale de Caine' },
-          { kind: 'target', campaignTarget: 'redbutton', x: -1.15, z: -1.35, color: '#e53935', label: 'Bouton rouge presse par Jax' },
-          { kind: 'target', campaignTarget: 'bluebutton', x: 1.15, z: -1.35, color: '#2a58d8', label: 'Bouton bleu / Shrimp Town contrefactuel' },
+          { kind: 'target', campaignTarget: 'redbutton', x: -1.15, z: -1.35, color: '#e53935', label: 'Bouton rouge / fermer la console et rester' },
+          { kind: 'target', campaignTarget: 'bluebutton', x: 1.15, z: -1.35, color: '#2a58d8', label: 'Bouton bleu / terminer le jeu et deconnecter les joueurs' },
           { kind: 'eye', x: 2.65, z: -2.4, color: '#ff3333', label: 'Monitoring de la console' }
         ],
         sprites: [
@@ -5258,7 +5514,7 @@ const OS = {
           { kind: 'table', x: -1.8, z: -2.0, color: '#7a4b32', label: 'Table de Caine' },
           { kind: 'table', x: 1.8, z: -2.0, color: '#7a4b32', label: 'Table de Jax' },
           { kind: 'menu', x: 0, z: -1.25, color: '#fff1a8', label: 'Menu sans enseigne' },
-          { kind: 'card', campaignTarget: 'jaxkey', x: 0.85, z: -2.05, elevation: 0.78, color: '#ffd84a', label: 'Cle subtilisee a Caine' }
+          { kind: 'card', campaignTarget: 'jaxkey', portable: false, x: 0.85, z: -2.05, elevation: 0.78, color: '#ffd84a', label: 'Cle subtilisee a Caine' }
         ],
         sprites: [
           { name: 'Caine', type: 'caine', avatar: 'caine', x: -0.8, z: -2.25, color: '#ffd84a' },
@@ -7234,6 +7490,616 @@ const OS = {
           { name: 'Committee Member', type: 'mannequin', avatar: 'committeemember', x: 2.75, z: -2.35, color: '#f4f4f0' }
         ],
         objective: scan('ATTRIBUER LE PRIX A MING ET RELEVER LE GLITCH', ['scoreboard', 'card', 'gridnode', 'caineportal'], 'ming')
+      },
+      192: {
+        name: 'EP7 TENT / ZOOBLE HIDING AND FREE DAY', short: 'JOUR LIBRE',
+        detail: 'Ouverture de Beach Episode: Zooble se cache dans un contenant a couvercle avant que Caine annonce une journee sans aventure.',
+        color: '#d63a42', floor: '#f0d36f', ceiling: '#8b2342', motif: 'circus', size: 23,
+        gateEpisode: 7, gateSubepisode: 0, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'crate', campaignTarget: 'hidinglid', x: -2.7, z: -3.4, width: 2.1, depth: 1.8, height: 1.45, color: '#6a5849', label: 'Cachette a couvercle de Zooble' },
+          { kind: 'ring', x: 0, z: -4.6, color: '#ffd84a', label: 'Piste du jour libre' },
+          { kind: 'scoreboard', x: 0, z: -6.2, color: '#7df0ff', label: 'AUCUNE AVENTURE AUJOURD HUI' },
+          { kind: 'toyblock', x: 3.2, z: -4.8, width: 2.0, depth: 1.8, height: 3.4, color: '#2a58d8', label: 'Bloc du Tent' },
+          { kind: 'stagevalance', anchor: 'ceiling', x: 0, z: -4.8, color: '#d62f3f', label: 'Draperie haute du Tent' }
+        ],
+        sprites: [
+          { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: -2.8, z: -2.85, color: '#ff4fb8' },
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -1.7, z: -2.55, color: '#e53935' },
+          { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: -0.6, z: -2.85, color: '#f7f7f7' },
+          { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: 0.65, z: -2.55, color: '#d64545' },
+          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: 1.75, z: -2.85, color: '#d9d0a2' },
+          { name: 'Caine', type: 'caine', avatar: 'caine', x: 2.9, z: -3.25, color: '#ffd84a' }
+        ],
+        objective: scan('SORTIR DE LA CACHETTE ET ECOUTER CAINE', ['crate', 'scoreboard'], 'zooble')
+      },
+      193: {
+        name: 'EP7 CHINESE ROOM CONSULTATION / EXTERIOR', short: 'CONSULTATION',
+        detail: 'Gag prepare par Caine devant la porte de la Chinese Room: consultation ecrite, retour de carte et proposition du Digital Lake.',
+        color: '#d63a42', floor: '#f0d36f', ceiling: '#8b2342', motif: 'circus', size: 21,
+        gateEpisode: 7, gateSubepisode: 0, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'doorframe', campaignTarget: 'chinesedoor', x: 0, z: -5.5, color: '#e53935', label: 'Porte de consultation de la Chinese Room' },
+          { kind: 'table', x: 0, z: -3.4, width: 2.6, depth: 1.1, color: '#8b5a3c', label: 'Table de transmission' },
+          { kind: 'archive', campaignTarget: 'writtenreply', x: 0, z: -2.1, color: '#ffcf75', label: 'Reponse ecrite renvoyee a Caine' },
+          { kind: 'scoreboard', x: 2.8, z: -4.7, color: '#4ee7ff', label: 'PROPOSITION: DIGITAL LAKE' },
+          { kind: 'ring', x: -2.8, z: -4.8, color: '#ffd84a', label: 'Espace du groupe' }
+        ],
+        sprites: [
+          { name: 'Caine', type: 'caine', avatar: 'caine', x: 0, z: -4.15, color: '#ffd84a' },
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -3.0, z: -2.35, color: '#e53935' },
+          { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: -2.0, z: -2.75, color: '#ff4fb8' },
+          { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: -0.9, z: -2.45, color: '#f7f7f7' },
+          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: 0.9, z: -2.45, color: '#d9d0a2' },
+          { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: 2.0, z: -2.75, color: '#d64545' },
+          { name: 'Bubble', type: 'bubble', avatar: 'bubble', x: 3.0, z: -2.35, color: '#f7f7ff' }
+        ],
+        objective: scan('SUIVRE LA CONSULTATION ECRITE', ['doorframe', 'archive', 'scoreboard'], 'caine')
+      },
+      194: {
+        name: 'EP7 DIGITAL LAKE / CHANGING BOOTH', short: 'CABINE PLAGE',
+        detail: 'Arrivee au Digital Lake: cabine rayee rouge et blanc, Pomni projetee en tenue de plage, menace du Sun et zones d ombre sous les parasols.',
+        color: '#4ee7ff', floor: '#f7d76c', ceiling: '#69d8ff', motif: 'lake', size: 27,
+        gateEpisode: 7, gateSubepisode: 1, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'building', campaignTarget: 'changingbooth', style: 'beach', x: -3.9, z: -5.1, width: 2.4, depth: 1.8, height: 2.7, roofHeight: 0.55, color: '#e53935', accent: '#fff1a8', label: 'Cabine de change magique' },
+          { kind: 'umbrella', campaignTarget: 'shade', x: 1.95, z: -3.0, color: '#ffd84a', label: 'Zone d ombre du parasol' },
+          { kind: 'wave', x: 0, z: -6.6, color: '#4ee7ff', label: 'Rive du Digital Lake' },
+          { kind: 'tower', x: 4.4, z: -7.8, width: 1.7, height: 6.4, color: '#ff5b4d', accent: '#fff1a8', label: 'Phare et depart du toboggan' },
+          { kind: 'platform', x: -0.6, z: -3.8, width: 2.2, depth: 0.9, height: 0.04, color: '#e53935', label: 'Serviette rayee de Pomni' },
+          { kind: 'platform', x: 2.8, z: -4.5, width: 2.2, depth: 0.9, height: 0.04, color: '#2a58d8', label: 'Serviette rayee de Ragatha' },
+          { kind: 'balloon', x: 3.5, z: -2.0, color: '#ff4fb8', label: 'Ballon de plage' }
+        ],
+        sprites: [
+          { name: 'Sun', type: 'npc', avatar: 'sun', x: 3.6, z: -6.1, elevation: 4.3, color: '#ffd84a', sizeScale: 1.15, routine: 'hover' },
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -2.5, z: -3.0, color: '#e53935' },
+          { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: -1.3, z: -3.35, color: '#d64545' },
+          { name: 'Beach Gangle', type: 'gangle', avatar: 'beachgangle', aliases: ['gangle'], x: -0.1, z: -3.0, color: '#f7f7f7' },
+          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: 1.1, z: -3.35, color: '#d9d0a2' },
+          { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 2.3, z: -3.0, color: '#ff4fb8' }
+        ],
+        objective: scan('UTILISER LA CABINE ET TROUVER L OMBRE', ['building', 'umbrella', 'platform'], 'pomni')
+      },
+      195: {
+        name: 'EP7 DIGITAL LAKE / SUNKEN CHEST', short: 'COFFRE ENGLOUTI',
+        detail: 'Pomni cherche l oeil-bouton de Ragatha sous le lac et rencontre les deux poissons autour de leur coffre deja pille.',
+        color: '#2abfd6', floor: '#0a596b', ceiling: '#06202f', motif: 'underwater', size: 19,
+        gateEpisode: 7, gateSubepisode: 1, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'crate', campaignTarget: 'emptychest', x: 0, z: -5.1, width: 2.8, depth: 1.8, height: 1.35, color: '#7a4b32', label: 'Coffre deja pille' },
+          { kind: 'target', campaignTarget: 'missingeye', x: -2.2, z: -1.55, color: '#d64545', label: 'Zone fouillee / oeil de Ragatha encore introuvable' },
+          { kind: 'wave', x: -2.8, z: -3.6, color: '#4ee7ff', label: 'Courant gauche' },
+          { kind: 'wave', x: 2.8, z: -4.1, color: '#4ee7ff', label: 'Courant droit' },
+          { kind: 'ring', x: -3.6, z: -6.2, color: '#3f9f78', label: 'Anneau de vegetation aquatique' },
+          { kind: 'ring', x: 3.4, z: -6.6, color: '#3f9f78', label: 'Anneau de vegetation aquatique' }
+        ],
+        sprites: [
+          { name: 'Orange Crappy Looking Fish', type: 'npc', avatar: 'truthtellerfish', x: -1.4, z: -3.6, color: '#ff9b32', sizeScale: 0.72, routine: 'hover' },
+          { name: 'Red Crappy Looking Fish', type: 'npc', avatar: 'liarfish', x: 1.35, z: -3.9, color: '#ff3264', sizeScale: 0.72, routine: 'hover' },
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -2.6, z: -5.4, color: '#e53935' }
+        ],
+        objective: scan('CHERCHER L OEIL ET VERIFIER LE COFFRE', ['target', 'crate', 'wave'], 'truthtellerfish')
+      },
+      196: {
+        name: 'EP7 BEACH / JAX ZOOBLE AND SHRIMP', short: 'SHRIMP PLAGE',
+        detail: 'Zooble confronte Jax, puis Pomni croise le Shrimp NPC que le Sun grille instantanement avant la fin de sa presentation.',
+        color: '#4ee7ff', floor: '#f7d76c', ceiling: '#69d8ff', motif: 'lake', size: 23,
+        gateEpisode: 7, gateSubepisode: 1, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'umbrella', x: -3.0, z: -5.0, color: '#ff9b37', label: 'Parasol de la conversation' },
+          { kind: 'wave', x: 0, z: -7.0, color: '#4ee7ff', label: 'Rive derriere le groupe' },
+          { kind: 'barrel', x: -2.2, z: -2.0, radius: 0.55, height: 0.7, color: '#4ee7ff', label: 'Seau d eau renverse par Zooble' },
+          { kind: 'target', campaignTarget: 'shrimpsizzle', x: 2.4, z: -2.2, color: '#3b2623', label: 'Trace carbonisee du Shrimp NPC' },
+          { kind: 'table', x: 2.5, z: -4.5, width: 1.8, depth: 1.0, color: '#8b5a3c', label: 'Table basse de plage' },
+          { kind: 'balloon', x: -1.4, z: -1.5, color: '#ff4fb8', label: 'Ballon abandonne' }
+        ],
+        sprites: [
+          { name: 'Jax', type: 'jax', avatar: 'jax', x: -0.95, z: -3.0, color: '#8a4fd6' },
+          { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 0.75, z: -3.15, color: '#ff4fb8' },
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 1.7, z: -3.65, color: '#e53935' },
+          { name: 'Shrimp NPC', type: 'npc', avatar: 'shrimpnpc', x: 2.7, z: -3.25, color: '#ff9a9a', sizeScale: 0.72 },
+          { name: 'Sun', type: 'npc', avatar: 'sun', x: 3.6, z: -6.2, elevation: 4.2, color: '#ffd84a', sizeScale: 1.0, routine: 'hover' }
+        ],
+        objective: scan('SUIVRE LA DISCUSSION ET LA FRITURE DU SHRIMP', ['umbrella', 'barrel', 'target'], 'zooble')
+      },
+      197: {
+        name: 'EP7 BEACH / ACTIVITY MONTAGE AND EYE LOSS', short: 'JEUX DE PLAGE',
+        detail: 'Montage montre du Digital Lake: serviettes, pastèque a l effigie de Jax, transat isole, jeu de balle et chute de l oeil-bouton de Ragatha.',
+        color: '#4ee7ff', floor: '#f7d76c', ceiling: '#69d8ff', motif: 'lake', size: 29,
+        gateEpisode: 7, gateSubepisode: 1, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'platform', x: -3.5, z: -4.8, width: 2.3, depth: 0.9, height: 0.04, color: '#e53935', label: 'Serviette rayee de Pomni' },
+          { kind: 'platform', x: -1.0, z: -5.2, width: 2.3, depth: 0.9, height: 0.04, color: '#2a58d8', label: 'Serviette rayee de Ragatha' },
+          { kind: 'sofa', campaignTarget: 'jaxlounge', x: 4.0, z: -5.5, width: 2.5, depth: 1.0, height: 0.8, color: '#e53935', label: 'Transat isole de Jax' },
+          { kind: 'balloon', campaignTarget: 'watermelonjax', x: -1.9, z: -2.1, color: '#4c9a3d', label: 'Pasteque dessinee a l effigie de Jax' },
+          { kind: 'target', x: -0.8, z: -1.55, color: '#8b5a3c', label: 'Batte du jeu de pasteque' },
+          { kind: 'balloon', x: 1.4, z: -3.1, color: '#ff4fb8', label: 'Balle du jeu dans le lac' },
+          { kind: 'eye', campaignTarget: 'ragathaeye', x: 2.2, z: -1.65, color: '#d64545', label: 'Oeil-bouton tombe de Ragatha' },
+          { kind: 'wave', x: 1.5, z: -6.8, color: '#4ee7ff', label: 'Zone du jeu de balle dans le lac' },
+          { kind: 'plant', x: 0, z: -7.8, color: '#4c9a3d', label: 'Palmier utilise par Kinger' }
+        ],
+        sprites: [
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -3.2, z: -3.2, color: '#e53935' },
+          { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: -2.0, z: -3.6, color: '#d64545' },
+          { name: 'Beach Gangle', type: 'gangle', avatar: 'beachgangle', aliases: ['gangle'], x: -0.7, z: -3.1, color: '#f7f7f7' },
+          { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 0.55, z: -3.6, color: '#ff4fb8' },
+          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: 1.8, z: -3.1, color: '#d9d0a2' },
+          { name: 'Jax', type: 'jax', avatar: 'jax', x: 3.9, z: -4.7, color: '#8a4fd6' }
+        ],
+        objective: scan('REJOUER LE MONTAGE ET SUIVRE L OEIL DE RAGATHA', ['platform', 'sofa', 'balloon', 'eye'], 'pomni')
+      },
+      198: {
+        name: 'EP7 JAX ROOM / DOORBELL AND ABEL', short: 'RECRUTEMENT',
+        detail: 'Seuil de la chambre apres la sonnette: Jax retrouve Pomni, Ragatha et le mannequin sans visage, puis apporte son seau de cles inconnues.',
+        color: '#5d3f75', floor: '#2e2335', ceiling: '#160d20', motif: 'jaxroom', size: 17,
+        gateEpisode: 7, gateSubepisode: 2, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'bed', x: 2.2, z: -5.0, width: 2.8, depth: 1.5, height: 1.0, color: '#633b75', accent: '#ffd84a', label: 'Lit de la chambre de Jax' },
+          { kind: 'target', campaignTarget: 'doorbell', x: -2.8, z: -1.6, color: '#ffd84a', label: 'Sonnette au seuil de la chambre' },
+          { kind: 'lorebillboard', campaignTarget: 'abelblank', avatar: 'abelmannequin', x: 0, z: -4.8, color: '#ff9b37', label: 'Mannequin Abel encore sans visage', loreText: 'Mannequin de l aventure de Caine. Son recit C&A reste non verifie a ce moment.' },
+          { kind: 'barrel', campaignTarget: 'keybucket', x: -2.8, z: -4.8, radius: 0.65, height: 0.8, color: '#8a4fd6', label: 'Seau de cles inconnues de Jax' },
+          { kind: 'wallart', anchor: 'wall-right', x: 1.48, z: -2.7, color: '#575057', art: 'blocks', label: 'Photos conservees dans la chambre' }
+        ],
+        sprites: [
+          { name: 'Jax', type: 'jax', avatar: 'jax', x: -1.2, z: -3.0, color: '#8a4fd6' },
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 0.1, z: -3.25, color: '#e53935' },
+          { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: 1.25, z: -3.0, color: '#d64545' },
+          { name: 'Abel', type: 'mannequin', avatar: 'abelmannequin', x: 2.35, z: -3.55, color: '#ff9b37' }
+        ],
+        objective: scan('DECLENCHER LA SONNETTE ET RECUPERER LES CLES', ['target', 'lorebillboard', 'barrel'], 'abelmannequin')
+      },
+      199: {
+        name: 'EP7 CHINESE ROOM / UNLOCKED ENTRY', short: 'ENTREE CHINESE',
+        detail: 'Seuil puis interieur de la Chinese Room ouvert avec le trousseau de Jax, avant le long recit d Abel.',
+        color: '#ffcf75', floor: '#302318', ceiling: '#09111e', motif: 'admin', size: 17,
+        gateEpisode: 7, gateSubepisode: 2, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'archive', campaignTarget: 'keyring', x: -2.0, z: -1.45, color: '#ffd84a', label: 'Trousseau essaye sur la serrure' },
+          { kind: 'doorframe', campaignTarget: 'chineseinnerdoor', x: 0, z: -5.5, color: '#e53935', label: 'Porte interieure deverrouillee' },
+          { kind: 'table', x: 0, z: -3.4, width: 3.0, depth: 1.2, color: '#8b5a3c', label: 'Table de la Chinese Room' },
+          { kind: 'archive', x: 2.15, z: -1.55, color: '#ffcf75', label: 'Carte ecrite du gag precedent' },
+          { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'panel', x: 0, z: -2.4, color: '#fff1a8', label: 'Eclairage de la salle' }
+        ],
+        sprites: [
+          { name: 'Chinese Room NPC', type: 'mannequin', avatar: 'chineseroomnpc', x: 0, z: -4.25, color: '#d8b4fe', sizeScale: 1.05 },
+          { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: -2.2, z: -2.65, color: '#ff4fb8' },
+          { name: 'Jax', type: 'jax', avatar: 'jax', x: -0.85, z: -2.85, color: '#8a4fd6' },
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 0.8, z: -2.85, color: '#e53935' },
+          { name: 'Abel', type: 'mannequin', avatar: 'abelmannequin', x: 2.1, z: -2.7, color: '#ff9b37' }
+        ],
+        objective: scan('OUVRIR LA CHINESE ROOM AVEC LE TROUSSEAU', ['archive', 'doorframe'], 'chineseroomnpc')
+      },
+      200: {
+        name: 'EP7 CHINESE ROOM / ABEL CLAIMS', short: 'RECIT ABEL',
+        detail: 'Exposition d Abel sur C&A, les capsules de stase et un programme partage. Toutes ces affirmations restent non verifiees dans cette scene.',
+        color: '#d8b4fe', floor: '#302318', ceiling: '#09111e', motif: 'admin', size: 19,
+        gateEpisode: 7, gateSubepisode: 3, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'archive', campaignTarget: 'abelclaim', x: -2.6, z: -3.7, color: '#7df0ff', label: 'AFFIRMATION NON VERIFIEE / C&A' },
+          { kind: 'archive', campaignTarget: 'abelclaim', x: 0, z: -4.4, color: '#c875ff', label: 'AFFIRMATION NON VERIFIEE / CAPSULES' },
+          { kind: 'archive', campaignTarget: 'abelclaim', x: 2.6, z: -3.7, color: '#ff9b37', label: 'AFFIRMATION NON VERIFIEE / PROGRAMME PARTAGE' },
+          { kind: 'table', x: 0, z: -2.3, width: 3.4, depth: 1.2, color: '#8b5a3c', label: 'Table du briefing' },
+          { kind: 'gridnode', x: -3.4, z: -5.8, color: '#7df0ff', label: 'Projection illustrative, non physique' },
+          { kind: 'gridnode', x: 3.4, z: -5.8, color: '#c875ff', label: 'Projection illustrative, non physique' }
+        ],
+        sprites: [
+          { name: 'Abel', type: 'mannequin', avatar: 'abelmannequin', x: 0, z: -3.1, color: '#ff9b37' },
+          { name: 'Jax', type: 'jax', avatar: 'jax', x: -2.2, z: -2.4, color: '#8a4fd6' },
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -0.85, z: -2.35, color: '#e53935' },
+          { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 2.1, z: -2.45, color: '#ff4fb8' }
+        ],
+        objective: scan('CLASSER TROIS AFFIRMATIONS COMME NON VERIFIEES', ['archive', 'gridnode'], 'abelmannequin')
+      },
+      201: {
+        name: 'EP7 CHINESE ROOM / ABEL FACE AND KEY PLAN', short: 'PLAN DE LA CLE',
+        detail: 'Suite du briefing: le mannequin recoit le nom Abel et un visage dessine, puis expose le plan visant la cle de Caine.',
+        color: '#d8b4fe', floor: '#302318', ceiling: '#09111e', motif: 'admin', size: 19,
+        gateEpisode: 7, gateSubepisode: 3, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'target', campaignTarget: 'drawnface', x: 0, z: -3.6, elevation: 1.4, color: '#ff9b37', label: 'Visage dessine sur Abel' },
+          { kind: 'archive', campaignTarget: 'keydiagram', x: -2.2, z: -1.55, color: '#ffd84a', label: 'Schema du vol de la cle de Caine' },
+          { kind: 'table', x: 0, z: -4.7, width: 3.6, depth: 1.3, color: '#8b5a3c', label: 'Table du plan' },
+          { kind: 'scoreboard', x: 2.4, z: -4.8, color: '#ff9b37', label: 'ABEL / NOM ATTRIBUE' },
+          { kind: 'doorframe', x: 0, z: -6.4, color: '#e53935', label: 'Sortie vers l execution du plan' }
+        ],
+        sprites: [
+          { name: 'Abel', type: 'mannequin', avatar: 'abelmannequin', x: 0, z: -3.2, color: '#ff9b37' },
+          { name: 'Jax', type: 'jax', avatar: 'jax', x: -1.7, z: -2.55, color: '#8a4fd6' },
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 1.65, z: -2.6, color: '#e53935' }
+        ],
+        objective: scan('DESSINER LE VISAGE ET RELEVER LE PLAN', ['target', 'archive', 'scoreboard'], 'abelmannequin')
+      },
+      202: {
+        name: 'EP7 CAINE AND JAX DINNER / KEY THEFT', short: 'DINER CLE',
+        detail: 'Premiere coupe du restaurant sans nom: menu au saumon, question sur les hobbies, blocage dial-up et tentative interrompue de Jax.',
+        color: '#8b2431', floor: '#4a2024', ceiling: '#1c0b10', motif: 'cafe', size: 17,
+        gateEpisode: 7, gateSubepisode: 3, provenance: 'shown', layer: 'cut', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'table', x: 0, z: -4.4, width: 3.4, depth: 1.5, color: '#7a4b32', label: 'Table du diner' },
+          { kind: 'archive', campaignTarget: 'salmonmenu', x: -2.0, z: -1.55, color: '#fff1a8', label: 'Menu au saumon' },
+          { kind: 'target', campaignTarget: 'keyattempt', x: 1.9, z: -1.55, color: '#ffd84a', label: 'Premiere tentative interrompue dans la bouche de Caine' },
+          { kind: 'console', x: 0, z: -2.0, color: '#7df0ff', label: 'Blocage sonore dial-up' },
+          { kind: 'counter', x: 0, z: -6.2, width: 5.8, color: '#d49a62', label: 'Comptoir du restaurant sans nom' },
+          { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'dome', x: 0, z: -3.0, color: '#fff1a8' }
+        ],
+        sprites: [
+          { name: 'Caine', type: 'caine', avatar: 'caine', x: -0.9, z: -3.5, color: '#ffd84a' },
+          { name: 'Jax', type: 'jax', avatar: 'jax', x: 1.0, z: -3.45, color: '#8a4fd6' }
+        ],
+        objective: scan('DISTRAIRE CAINE ET PRENDRE LA CLE', ['table', 'archive', 'target'], 'jax')
+      },
+      203: {
+        name: 'EP7 ADMIN ROUTE / POMNI RAGATHA ABEL', short: 'MARCHE ET DOUTES',
+        detail: 'Trajet du trio vers la zone administrateur. Ragatha et Pomni discutent de Kinger et doutent d Abel; Kaufmo et Ribbit sont seulement cites.',
+        color: '#8d4770', floor: '#f1eee1', ceiling: '#4b1738', motif: 'dorm', size: 25,
+        gateEpisode: 7, gateSubepisode: 4, provenance: 'shown', layer: 'cut', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'ring', campaignTarget: 'routeanchor', x: 0, z: -5.6, color: '#ffd84a', label: 'Repere du trajet vers la zone administrateur' },
+          { kind: 'caineportal', campaignTarget: 'adminwallportal', x: 0, z: -7.1, color: '#7df0ff', accent: '#c875ff', label: 'Portail ondulant cache dans le mur' },
+          { kind: 'doorframe', anchor: 'wall-left', x: -1.48, z: -2.0, color: '#575057', label: 'Kaufmo seulement mentionne' },
+          { kind: 'doorframe', anchor: 'wall-right', x: 1.48, z: -4.1, color: '#63d35f', label: 'Ribbit seulement mentionne' },
+          { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'dome', x: 0, z: -1.5, color: '#fff1a8' },
+          { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'dome', x: 0, z: -5.2, color: '#fff1a8' }
+        ],
+        sprites: [
+          { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: -1.1, z: -3.05, color: '#d64545' },
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 0.2, z: -3.35, color: '#e53935' },
+          { name: 'Abel', type: 'mannequin', avatar: 'abelmannequin', x: 1.45, z: -3.0, color: '#ff9b37' }
+        ],
+        objective: scan('SUIVRE LE TRAJET ET LES DOUTES', ['ring', 'doorframe'], 'ragatha')
+      },
+      204: {
+        name: 'EP7 CAINE AND JAX DINNER / MACROVERSE PHOTOS', short: 'PHOTOS MACROVERSE',
+        detail: 'Seconde coupe du diner: Caine montre a Jax des photos de ce qu il appelle le macroverse. Elles restent des accessoires, pas une preuve de sortie.',
+        color: '#8b2431', floor: '#4a2024', ceiling: '#1c0b10', motif: 'cafe', size: 17,
+        gateEpisode: 7, gateSubepisode: 4, provenance: 'shown', layer: 'cut', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'table', x: 0, z: -4.4, width: 3.4, depth: 1.5, color: '#7a4b32', label: 'Table du diner' },
+          { kind: 'wallart', campaignTarget: 'macroversephoto', anchor: 'wall-left', x: -1.48, z: -2.0, color: '#7df0ff', art: 'blocks', label: 'Photo du macroverse 1' },
+          { kind: 'wallart', campaignTarget: 'macroversephoto', anchor: 'wall-right', x: 1.48, z: -3.1, color: '#ff9b37', art: 'blocks', label: 'Photo du macroverse 2' },
+          { kind: 'wallart', campaignTarget: 'macroversephoto', anchor: 'wall-left', x: -1.48, z: -4.4, color: '#c875ff', art: 'blocks', label: 'Photo du macroverse 3' },
+          { kind: 'target', campaignTarget: 'jaxkey', x: 1.9, z: -1.55, color: '#ffd84a', label: 'Carte-cle finalement recuperee par Jax' },
+          { kind: 'counter', x: 0, z: -6.2, width: 5.8, color: '#d49a62', label: 'Comptoir du restaurant sans nom' }
+        ],
+        sprites: [
+          { name: 'Caine', type: 'caine', avatar: 'caine', x: -0.9, z: -3.5, color: '#ffd84a' },
+          { name: 'Jax', type: 'jax', avatar: 'jax', x: 1.0, z: -3.45, color: '#8a4fd6' }
+        ],
+        objective: scan('INSPECTER TROIS PHOTOS SANS VALIDER UNE SORTIE', ['wallart', 'table'], 'caine')
+      },
+      205: {
+        name: 'EP7 GROUP WARNING / KINGER', short: 'AVERTIR KINGER',
+        detail: 'Grounds pres du fort de coussins de Kinger: Zooble et Gangle l avertissent, il ne reconnait pas Abel, puis Jax revient avec la carte-cle.',
+        color: '#c83c42', floor: '#f0d36f', ceiling: '#74233e', motif: 'circus', size: 21,
+        gateEpisode: 7, gateSubepisode: 5, provenance: 'shown', layer: 'cut', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'sofa', x: -2.8, z: -5.2, width: 2.3, depth: 1.2, height: 1.0, color: '#7b4a70', label: 'Mur gauche du fort de coussins' },
+          { kind: 'sofa', x: 0, z: -6.0, width: 3.0, depth: 1.2, height: 1.15, color: '#d9d0a2', label: 'Fond du fort de coussins de Kinger' },
+          { kind: 'sofa', x: 2.8, z: -5.2, width: 2.3, depth: 1.2, height: 1.0, color: '#2a58d8', label: 'Mur droit du fort de coussins' },
+          { kind: 'ring', x: 0, z: -4.2, color: '#ffd84a', label: 'Ouverture du fort' },
+          { kind: 'target', campaignTarget: 'jaxkey', x: 2.45, z: -1.55, color: '#ffd84a', label: 'Cle rapportee par Jax' },
+          { kind: 'toyblock', x: 3.1, z: -5.5, width: 2.0, depth: 1.8, height: 3.2, color: '#2a58d8', label: 'Bloc de decor du Tent' }
+        ],
+        sprites: [
+          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: 0, z: -3.7, color: '#d9d0a2' },
+          { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: -1.8, z: -2.9, color: '#ff4fb8' },
+          { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: -0.65, z: -2.7, color: '#f7f7f7' },
+          { name: 'Jax', type: 'jax', avatar: 'jax', x: 1.75, z: -2.9, color: '#8a4fd6' }
+        ],
+        objective: scan('AVERTIR KINGER ET RELEVER LA CLE', ['ring', 'target'], 'kinger')
+      },
+      206: {
+        name: 'EP7 ADMINISTRATOR ZONE / SIX PASSES', short: 'SIX PASSES',
+        detail: 'Etat de la zone administrateur pendant la creation des six passes. Le decor appartient encore a l aventure fabriquee de Caine.',
+        color: '#ffcf75', floor: '#302318', ceiling: '#09111e', motif: 'admin', size: 19,
+        gateEpisode: 7, gateSubepisode: 5, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'console', x: 0, z: -5.4, color: '#7df0ff', label: 'Console de generation des passes' },
+          { kind: 'target', campaignTarget: 'adminpass', x: -3.0, z: -2.0, color: '#e53935', label: 'Pass administrateur 1' },
+          { kind: 'target', campaignTarget: 'adminpass', x: -1.8, z: -2.3, color: '#ffd84a', label: 'Pass administrateur 2' },
+          { kind: 'target', campaignTarget: 'adminpass', x: -0.6, z: -2.55, color: '#2a58d8', label: 'Pass administrateur 3' },
+          { kind: 'target', campaignTarget: 'adminpass', x: 0.6, z: -2.55, color: '#ff4fb8', label: 'Pass administrateur 4' },
+          { kind: 'target', campaignTarget: 'adminpass', x: 1.8, z: -2.3, color: '#7df0ff', label: 'Pass administrateur 5' },
+          { kind: 'target', campaignTarget: 'adminpass', x: 3.0, z: -2.0, color: '#ff7a30', label: 'Pass administrateur 6' },
+          { kind: 'gridnode', x: -3.6, z: -5.5, color: '#7df0ff', label: 'Armature administrateur gauche' },
+          { kind: 'gridnode', x: 3.6, z: -5.5, color: '#ff7a30', label: 'Armature administrateur droite' }
+        ],
+        sprites: [
+          { name: 'Abel', type: 'mannequin', avatar: 'abelmannequin', x: 0, z: -4.0, color: '#ff9b37' },
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -1.45, z: -3.25, color: '#e53935' },
+          { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: 1.45, z: -3.2, color: '#d64545' }
+        ],
+        objective: scan('GENERER EXACTEMENT SIX PASSES', ['target', 'console'], 'abelmannequin')
+      },
+      207: {
+        name: 'EP7 ADMINISTRATOR ZONE / GROUP REUNION', short: 'REUNION PASSES',
+        detail: 'Reunion du groupe dans la zone administrateur, distribution des six passes, scintillement et doute de Kinger autour de Pomni.',
+        color: '#ffcf75', floor: '#302318', ceiling: '#09111e', motif: 'admin', size: 23,
+        gateEpisode: 7, gateSubepisode: 6, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'ring', x: 0, z: -5.2, color: '#fff1a8', label: 'Zone de reunion du groupe' },
+          { kind: 'gridnode', campaignTarget: 'passflare', x: -3.25, z: -2.0, color: '#e53935', label: 'Pass actif / Pomni' },
+          { kind: 'gridnode', campaignTarget: 'passflare', x: -2.0, z: -2.35, color: '#d64545', label: 'Pass actif / Ragatha' },
+          { kind: 'gridnode', campaignTarget: 'passflare', x: -0.75, z: -2.55, color: '#8a4fd6', label: 'Pass actif / Jax' },
+          { kind: 'gridnode', campaignTarget: 'passflare', x: 0.75, z: -2.55, color: '#d9d0a2', label: 'Pass actif / Kinger' },
+          { kind: 'gridnode', campaignTarget: 'passflare', x: 2.0, z: -2.35, color: '#f7f7f7', label: 'Pass actif / Gangle' },
+          { kind: 'gridnode', campaignTarget: 'passflare', x: 3.25, z: -2.0, color: '#ff4fb8', label: 'Pass actif / Zooble' },
+          { kind: 'archive', x: 0, z: -1.25, color: '#c875ff', label: 'Scintillement collectif des privileges' }
+        ],
+        sprites: [
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -2.8, z: -3.5, color: '#e53935' },
+          { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: -1.75, z: -3.9, color: '#d64545' },
+          { name: 'Jax', type: 'jax', avatar: 'jax', x: -0.7, z: -3.45, color: '#8a4fd6' },
+          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: 0.55, z: -3.5, color: '#d9d0a2' },
+          { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: 1.7, z: -3.9, color: '#f7f7f7' },
+          { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 2.8, z: -3.45, color: '#ff4fb8' },
+          { name: 'Abel', type: 'mannequin', avatar: 'abelmannequin', x: 0, z: -5.2, color: '#ff9b37' }
+        ],
+        objective: scan('ACTIVER SIX PASSES ET REUNIR LE GROUPE', ['gridnode', 'ring'], 'kinger')
+      },
+      208: {
+        name: 'EP7 ADMIN COLLISION / CUBE ASCENT', short: 'COLLISION CUBES',
+        detail: 'Passage de collisions cubiques vers le bureau: avatars lances vers le haut, Jax roule en boule et Abel reste dans la couche inferieure.',
+        color: '#7df0ff', floor: '#181b25', ceiling: '#03050b', motif: 'admin', size: 25,
+        gateEpisode: 7, gateSubepisode: 6, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'toyblock', campaignTarget: 'cubeanchor', x: -3.2, z: -4.2, width: 2.4, depth: 2.4, height: 3.2, color: '#e53935', label: 'Collision cube gauche' },
+          { kind: 'toyblock', campaignTarget: 'cubeanchor', x: 0, z: -5.5, width: 2.6, depth: 2.6, height: 4.8, color: '#ffd84a', label: 'Collision cube centrale' },
+          { kind: 'toyblock', campaignTarget: 'cubeanchor', x: 3.2, z: -4.2, width: 2.4, depth: 2.4, height: 3.6, color: '#2a58d8', label: 'Collision cube droite' },
+          { kind: 'balloon', campaignTarget: 'jaxball', x: -1.1, z: -2.1, color: '#8a4fd6', label: 'Jax roule en boule pendant la transition' },
+          { kind: 'ring', campaignTarget: 'upwardslot', x: 1.2, z: -2.25, elevation: 1.5, color: '#fff1a8', label: 'Ouverture de lancement vers le bureau' },
+          { kind: 'balloon', x: 0, z: -7.8, elevation: 5.4, color: '#ff4fb8', label: 'Montgolfiere au-dessus de la collision' },
+          { kind: 'platform', x: 0, z: -7.4, width: 8.0, depth: 3.0, height: 2.2, color: '#302318', label: 'Couche inferieure ou Abel reste bloque' }
+        ],
+        sprites: [
+          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: 0.9, z: -3.4, color: '#d9d0a2' },
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 2.1, z: -4.0, color: '#e53935' },
+          { name: 'Abel', type: 'mannequin', avatar: 'abelmannequin', x: 0, z: -6.8, color: '#ff9b37' }
+        ],
+        objective: scan('STABILISER LES CUBES ET L OUVERTURE HAUTE', ['toyblock', 'balloon', 'ring'], 'kinger')
+      },
+      209: {
+        name: 'EP7 CAINE AND BUBBLE / PURPOSE CUT', short: 'COUPE PURPOSE',
+        detail: 'Courte coupe Caine-Bubble avant l infiltration du bureau. Le transcript ne confirme pas son lieu exact; CainOS la garde donc dans une couche neutre separee.',
+        color: '#1a1230', floor: '#18121f', ceiling: '#050309', motif: 'core', size: 15,
+        gateEpisode: 7, gateSubepisode: 6, provenance: 'shown', layer: 'cut', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'ring', campaignTarget: 'purposeorb', x: 0, z: -4.2, elevation: 1.6, color: '#7df0ff', label: 'Orbe de la coupe Caine-Bubble' },
+          { kind: 'gridnode', x: -2.2, z: -2.3, color: '#ffd84a', label: 'Signal de Caine' },
+          { kind: 'gridnode', x: 2.2, z: -2.3, color: '#f7f7ff', label: 'Signal de Bubble' },
+          { kind: 'spotlight', x: 0, z: -5.4, elevation: 3.6, color: '#fff1a8', label: 'Eclairage sans lieu confirme' }
+        ],
+        sprites: [
+          { name: 'Caine', type: 'caine', avatar: 'caine', x: -0.9, z: -3.1, color: '#ffd84a' },
+          { name: 'Bubble', type: 'bubble', avatar: 'bubble', x: 1.0, z: -3.0, color: '#f7f7ff' }
+        ],
+        objective: scan('GARDER LA COUPE SEPAREE DU BUREAU', ['ring', 'gridnode'], 'bubble')
+      },
+      210: {
+        name: 'EP7 CAINE OFFICE / HIDDEN BOOKCASE', short: 'BIBLIOTHEQUE',
+        detail: 'Bureau personnel infiltre par le groupe: mobilier de Caine, globes suspendus, bibliotheque coulissante et passage cache vers la console.',
+        color: '#ff7a30', floor: '#291915', ceiling: '#10070d', motif: 'core', size: 19,
+        gateEpisode: 7, gateSubepisode: 6, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'desk', x: 0, z: -5.2, width: 3.8, depth: 1.6, color: '#ff7a30', label: 'Bureau personnel de Caine' },
+          { kind: 'archive', campaignTarget: 'bookcase', x: -3.0, z: -4.8, color: '#7a4b32', label: 'Bibliotheque coulissante' },
+          { kind: 'doorframe', campaignTarget: 'secretdoor', x: -3.0, z: -6.4, color: '#00ddff', label: 'Passage cache derriere la bibliotheque' },
+          { kind: 'ring', x: -1.4, z: -3.0, elevation: 1.7, color: '#7df0ff', label: 'Globe suspendu gauche' },
+          { kind: 'ring', x: 1.4, z: -3.0, elevation: 1.7, color: '#ff7a30', label: 'Globe suspendu droit' },
+          { kind: 'eye', x: 3.0, z: -4.4, color: '#ff3333', label: 'Monitoring du bureau' }
+        ],
+        sprites: [
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -2.1, z: -3.3, color: '#e53935' },
+          { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: -0.95, z: -3.7, color: '#d64545' },
+          { name: 'Jax', type: 'jax', avatar: 'jax', x: 0.2, z: -3.25, color: '#8a4fd6' },
+          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: 1.25, z: -3.7, color: '#d9d0a2' },
+          { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: 2.25, z: -3.35, color: '#f7f7f7' },
+          { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 3.2, z: -3.85, color: '#ff4fb8' }
+        ],
+        objective: scan('OUVRIR LA BIBLIOTHEQUE ET LE PASSAGE', ['desk', 'archive', 'doorframe'], 'pomni')
+      },
+      211: {
+        name: 'EP7 HIDDEN MAIN CONSOLE / FAREWELLS', short: 'ADIEUX CONSOLE',
+        detail: 'Salle de la console apres la bibliotheque: le groupe prend le temps de parler, notamment Gangle et Zooble, avant l activation.',
+        color: '#00a8c8', floor: '#1b1010', ceiling: '#070305', motif: 'core', size: 19,
+        gateEpisode: 7, gateSubepisode: 7, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'console', campaignTarget: 'mainconsole', x: 0, z: -6.0, color: '#00ddff', label: 'Console principale de l aventure' },
+          { kind: 'platform', x: 0, z: -5.6, width: 6.8, depth: 3.0, height: 0.45, color: '#24293a', label: 'Estrade de la console' },
+          { kind: 'gridnode', x: -3.2, z: -4.8, color: '#7df0ff', label: 'Colonne de donnees gauche' },
+          { kind: 'gridnode', x: 3.2, z: -4.8, color: '#ff7a30', label: 'Colonne de donnees droite' },
+          { kind: 'archive', x: 0, z: -1.45, color: '#c875ff', label: 'Temps de parole avant la selection' }
+        ],
+        sprites: [
+          { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: -2.8, z: -3.1, color: '#d64545' },
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -1.65, z: -3.5, color: '#e53935' },
+          { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: -0.45, z: -3.15, color: '#f7f7f7' },
+          { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 0.7, z: -3.5, color: '#ff4fb8' },
+          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: 1.8, z: -3.15, color: '#d9d0a2' },
+          { name: 'Jax', type: 'jax', avatar: 'jax', x: 2.9, z: -3.55, color: '#8a4fd6' }
+        ],
+        objective: scan('ECOUTER LE GROUPE PUIS ACTIVER LA CONSOLE', ['console', 'platform', 'archive'], 'gangle')
+      },
+      212: {
+        name: 'EP7 HIDDEN MAIN CONSOLE / TWO CHOICES', short: 'DEUX CHOIX',
+        detail: 'Le texte de la console associe le rouge au maintien dans le Cirque et le bleu a la deconnexion. Jax panique puis frappe le rouge.',
+        color: '#00a8c8', floor: '#1b1010', ceiling: '#070305', motif: 'core', size: 17,
+        gateEpisode: 7, gateSubepisode: 7, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'console', x: 0, z: -5.8, color: '#00ddff', label: 'Console de choix' },
+          { kind: 'target', campaignTarget: 'redbutton', x: -1.45, z: -2.1, color: '#e53935', label: 'ROUGE / fermer la console et rester dans le Cirque' },
+          { kind: 'target', campaignTarget: 'bluebutton', x: 1.45, z: -2.1, color: '#2a58d8', label: 'BLEU / terminer le jeu et deconnecter les joueurs' },
+          { kind: 'gridnode', x: -2.8, z: -4.3, color: '#e53935', label: 'Signal de panique gauche' },
+          { kind: 'gridnode', x: 2.8, z: -4.3, color: '#ff4fb8', label: 'Signal de panique droit' },
+          { kind: 'ring', x: 0, z: -3.4, color: '#fff1a8', label: 'Zone de decision du groupe' }
+        ],
+        sprites: [
+          { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: 0, z: -3.0, color: '#f7f7f7' },
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -2.2, z: -3.6, color: '#e53935' },
+          { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: -1.1, z: -4.0, color: '#d64545' },
+          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: 1.1, z: -4.0, color: '#d9d0a2' },
+          { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 2.2, z: -3.6, color: '#ff4fb8' },
+          { name: 'Jax', type: 'jax', avatar: 'jax', x: 3.1, z: -3.1, color: '#8a4fd6' }
+        ],
+        objective: scan('LIRE LES DEUX FONCTIONS ET SUIVRE JAX', ['target', 'gridnode'], 'jax')
+      },
+      213: {
+        name: 'EP7 REVEAL / ABEL DELETION', short: 'REVELATION ABEL',
+        detail: 'Caine revele que l evasion et le recit C&A etaient son aventure, felicite Abel pour son role puis le supprime.',
+        color: '#d63a42', floor: '#f0d36f', ceiling: '#8b2342', motif: 'circus', size: 23,
+        gateEpisode: 7, gateSubepisode: 7, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'scoreboard', campaignTarget: 'fabricationreveal', x: 0, z: -6.0, color: '#ffd84a', label: 'L EVASION ETAIT UNE AVENTURE DE CAINE' },
+          { kind: 'gridnode', campaignTarget: 'deletepulse', x: 1.5, z: -2.0, color: '#ff3333', label: 'Impulsion de suppression d Abel' },
+          { kind: 'memory', campaignTarget: 'hotdoglocket', x: 0.9, z: -1.45, color: '#ffd84a', label: 'Medaillon d Abel / image de hot-dog a la moutarde' },
+          { kind: 'archive', x: -1.5, z: -1.55, color: '#c875ff', label: 'C&A, capsules et sortie: fabrication revelee' },
+          { kind: 'ring', x: 0, z: -4.6, color: '#ffd84a', label: 'Piste de la revelation' },
+          { kind: 'stagevalance', anchor: 'ceiling', x: 0, z: -4.8, color: '#d62f3f', label: 'Draperie haute du Tent' }
+        ],
+        sprites: [
+          { name: 'Caine', type: 'caine', avatar: 'caine', x: -0.8, z: -4.2, color: '#ffd84a' },
+          { name: 'Abel', type: 'mannequin', avatar: 'abelmannequin', x: 0.9, z: -3.9, color: '#ff9b37' },
+          { name: 'Bubble', type: 'bubble', avatar: 'bubble', x: 2.1, z: -4.5, color: '#f7f7ff' },
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -3.0, z: -2.6, color: '#e53935' },
+          { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: -1.8, z: -2.35, color: '#d64545' },
+          { name: 'Jax', type: 'jax', avatar: 'jax', x: -0.55, z: -2.2, color: '#8a4fd6' },
+          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: 0.7, z: -2.2, color: '#d9d0a2' },
+          { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: 1.8, z: -2.35, color: '#f7f7f7' },
+          { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 3.0, z: -2.6, color: '#ff4fb8' }
+        ],
+        objective: scan('CONSTATER LA FABRICATION ET LA SUPPRESSION', ['scoreboard', 'gridnode', 'archive'], 'caine')
+      },
+      214: {
+        name: 'EP7 FINAL CONFRONTATION / GIFT BASKET', short: 'CONFRONTATION',
+        detail: 'Fin de Beach Episode: le groupe confronte Caine sur les modifications mentales, Kinger pose la question de Scratch et Caine laisse un panier de produits.',
+        color: '#a72b3d', floor: '#e4c966', ceiling: '#2b0f21', motif: 'circus', size: 25,
+        gateEpisode: 7, gateSubepisode: 7, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'crate', campaignTarget: 'giftbasket', x: 0, z: -2.0, width: 2.2, depth: 1.4, height: 1.0, color: '#fff1a8', label: 'Panier final de savons et lotions' },
+          { kind: 'archive', campaignTarget: 'scratchquestion', x: -2.2, z: -1.5, color: '#9ca3af', label: 'Question de Kinger sur Scratch, non confirmee par Caine' },
+          { kind: 'scoreboard', x: 0, z: -6.2, color: '#e53935', label: 'CONFRONTATION / MODIFICATIONS MENTALES' },
+          { kind: 'ring', x: 0, z: -4.7, color: '#ffd84a', label: 'Piste apres la confrontation' },
+          { kind: 'stagevalance', anchor: 'ceiling', x: 0, z: -4.8, color: '#d62f3f', label: 'Draperie haute du Tent' }
+        ],
+        sprites: [
+          { name: 'Caine', type: 'caine', avatar: 'caine', x: 0, z: -5.0, color: '#ffd84a' },
+          { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: -2.8, z: -3.0, color: '#f7f7f7' },
+          { name: 'Jax', type: 'jax', avatar: 'jax', x: -1.6, z: -3.45, color: '#8a4fd6' },
+          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -0.4, z: -3.0, color: '#d9d0a2' },
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 0.8, z: -3.45, color: '#e53935' },
+          { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: 1.9, z: -3.0, color: '#d64545' },
+          { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 3.0, z: -3.45, color: '#ff4fb8' }
+        ],
+        objective: scan('CONFRONTER CAINE ET INSPECTER LE PANIER', ['crate', 'archive', 'scoreboard'], 'kinger')
+      },
+      215: {
+        name: 'EP7 BEACH / MANNEQUIN BEHIND THE ROCK', short: 'ABEL AU ROCHER',
+        detail: 'Apres la friture du Shrimp NPC, Pomni apercoit un mannequin sans visage qui lui fait signe derriere un rocher de la plage.',
+        color: '#4ee7ff', floor: '#f7d76c', ceiling: '#69d8ff', motif: 'lake', size: 23,
+        gateEpisode: 7, gateSubepisode: 2, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'barrel', campaignTarget: 'hidingrock', x: 1.8, z: -4.8, radius: 1.45, height: 1.35, color: '#8f7962', label: 'Rocher masquant partiellement le mannequin' },
+          { kind: 'target', campaignTarget: 'shrimpscorch', x: -2.4, z: -1.55, color: '#3b2623', label: 'Shrimp NPC deja grille par le Sun' },
+          { kind: 'wave', x: 0, z: -7.0, color: '#4ee7ff', label: 'Rive du Digital Lake' },
+          { kind: 'umbrella', x: -3.2, z: -4.5, color: '#ffd84a', label: 'Parasol derriere Pomni' },
+          { kind: 'plant', x: 3.8, z: -6.5, color: '#4c9a3d', label: 'Palmier de bord de plage' }
+        ],
+        sprites: [
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -0.8, z: -3.2, color: '#e53935' },
+          { name: 'Abel sans visage', type: 'mannequin', avatar: 'abelmannequin', x: 2.35, z: -4.5, color: '#ff9b37', sizeScale: 0.9 }
+        ],
+        objective: scan('SUIVRE LE REGARD DE POMNI VERS LE MANNEQUIN', ['barrel', 'target', 'wave'], 'abelmannequin')
+      },
+      216: {
+        name: 'EP7 JAX ROOM / GREEN HAND KALEIDOSCOPE', short: 'VISION DE JAX',
+        detail: 'La chambre rose et mignonne de Jax bascule en vision mentale: triangle noir, mains vertes, nudite stylisee et visages repetes de Ribbit, Kaufmo puis Jax.',
+        color: '#e58ab5', floor: '#7f4f75', ceiling: '#2a1028', motif: 'jaxroom', size: 17,
+        gateEpisode: 7, gateSubepisode: 2, provenance: 'shown', layer: 'mind', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'bed', x: 1.8, z: -5.0, width: 3.0, depth: 1.6, height: 1.0, color: '#e58ab5', accent: '#fff1a8', label: 'Lit rose de Jax' },
+          { kind: 'wallart', anchor: 'wall-left', x: -1.48, z: -3.4, color: '#575057', art: 'blocks', label: 'Photos de Jax avec Ribbit et Kaufmo' },
+          { kind: 'wallart', campaignTarget: 'blacktriangle', anchor: 'wall-right', x: 1.48, z: -4.2, color: '#05020d', art: 'blocks', label: 'Triangle noir apparu dans le coin' },
+          { kind: 'target', campaignTarget: 'greenhand', x: 0.4, z: -2.0, elevation: 1.0, color: '#4ee77e', label: 'Mains vertes tendues vers Jax' },
+          { kind: 'memory', campaignTarget: 'hallucinationface', x: -2.6, z: -2.1, color: '#63d35f', label: 'Visage repete de Ribbit / projection' },
+          { kind: 'memory', campaignTarget: 'hallucinationface', x: 0, z: -3.0, color: '#e53935', label: 'Visage repete de Kaufmo / projection' },
+          { kind: 'memory', campaignTarget: 'hallucinationface', x: 2.6, z: -2.1, color: '#8a4fd6', label: 'Visage repete de Jax / projection' },
+          { kind: 'target', x: -2.4, z: -1.4, color: '#ffd84a', label: 'Sonnette qui interrompt la vision' }
+        ],
+        sprites: [
+          { name: 'Jax', type: 'jax', avatar: 'jax', x: 0, z: -4.0, color: '#8a4fd6' }
+        ],
+        objective: scan('TRAVERSER LA VISION SANS LA MATERIALISER', ['wallart', 'target', 'memory'], 'jax')
+      },
+      217: {
+        name: 'EP7 CAINE OFFICE / ELEVATED ENTRY AND STAIRCASE', short: 'ENTREE BUREAU',
+        detail: 'Le groupe atterrit devant l entree elevee, utilise la carte-cle volee puis decouvre le grand escalier borde de globes d anciennes aventures.',
+        color: '#ff7a30', floor: '#291915', ceiling: '#10070d', motif: 'core', size: 27,
+        gateEpisode: 7, gateSubepisode: 6, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'target', campaignTarget: 'officekeycard', x: -2.8, z: -1.55, color: '#ffd84a', label: 'Carte-cle couverte de salive de Caine' },
+          { kind: 'doorframe', campaignTarget: 'officedoor', x: 0, z: -7.2, color: '#ff7a30', label: 'Porte verrouillee du bureau de Caine' },
+          { kind: 'stairs', campaignTarget: 'grandstairs', x: 0, z: -4.8, color: '#9d6a3d', label: 'Grand escalier interieur' },
+          { kind: 'ring', campaignTarget: 'adventureglobe', x: -3.8, z: -5.3, elevation: 1.8, color: '#4ee7ff', label: 'Globe d ancienne aventure 1' },
+          { kind: 'ring', campaignTarget: 'adventureglobe', x: -1.8, z: -6.3, elevation: 2.4, color: '#ff4fb8', label: 'Globe d ancienne aventure 2' },
+          { kind: 'ring', campaignTarget: 'adventureglobe', x: 1.8, z: -6.3, elevation: 2.4, color: '#ffd84a', label: 'Globe d ancienne aventure 3' },
+          { kind: 'ring', campaignTarget: 'adventureglobe', x: 3.8, z: -5.3, elevation: 1.8, color: '#7df0ff', label: 'Globe d ancienne aventure 4' }
+        ],
+        sprites: [
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -2.8, z: -3.0, color: '#e53935' },
+          { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: -1.7, z: -3.4, color: '#d64545' },
+          { name: 'Jax', type: 'jax', avatar: 'jax', x: -0.6, z: -3.0, color: '#8a4fd6' },
+          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: 0.6, z: -3.4, color: '#d9d0a2' },
+          { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: 1.7, z: -3.0, color: '#f7f7f7' },
+          { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 2.8, z: -3.4, color: '#ff4fb8' }
+        ],
+        objective: scan('OUVRIR LE BUREAU ET MONTER L ESCALIER', ['target', 'doorframe', 'stairs', 'ring'], 'jax')
+      },
+      218: {
+        name: 'EP7 CAINE OFFICE / ARMATURES AND COLUMN HALL', short: 'ARMATURES',
+        detail: 'Apres la bibliotheque, le groupe traverse les armatures etiquetees Human, Gloink, Gummy Elephant et Crappy Fish, puis le long couloir a colonnes.',
+        color: '#3b2632', floor: '#1b1010', ceiling: '#070305', motif: 'core', size: 31,
+        gateEpisode: 7, gateSubepisode: 6, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'pillar', campaignTarget: 'armature', x: -4.5, z: -4.2, radius: 0.24, height: 3.8, color: '#d8d8d8', label: 'Armature / Human' },
+          { kind: 'pillar', campaignTarget: 'armature', x: -1.5, z: -5.0, radius: 0.24, height: 3.0, color: '#d8d8d8', label: 'Armature / Gloink' },
+          { kind: 'pillar', campaignTarget: 'armature', x: 1.5, z: -5.0, radius: 0.3, height: 3.4, color: '#d8d8d8', label: 'Armature / Gummy Elephant' },
+          { kind: 'pillar', campaignTarget: 'armature', x: 4.5, z: -4.2, radius: 0.2, height: 2.8, color: '#d8d8d8', label: 'Armature / Crappy Fish' },
+          { kind: 'pillar', campaignTarget: 'columnpath', x: -3.8, z: -7.0, radius: 0.45, height: 5.2, color: '#8b5a3c', label: 'Colonnes du passage 1' },
+          { kind: 'pillar', campaignTarget: 'columnpath', x: 0, z: -8.4, radius: 0.45, height: 5.2, color: '#8b5a3c', label: 'Colonnes du passage 2' },
+          { kind: 'pillar', campaignTarget: 'columnpath', x: 3.8, z: -7.0, radius: 0.45, height: 5.2, color: '#8b5a3c', label: 'Colonnes du passage 3' },
+          { kind: 'doorframe', campaignTarget: 'terminaldoor', x: 0, z: -10.4, color: '#00ddff', label: 'Porte de la salle du terminal' }
+        ],
+        sprites: [
+          { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: -2.8, z: -3.0, color: '#d64545' },
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -1.7, z: -3.4, color: '#e53935' },
+          { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: -0.6, z: -3.0, color: '#ff4fb8' },
+          { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: 0.6, z: -3.4, color: '#f7f7f7' },
+          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: 1.7, z: -3.0, color: '#d9d0a2' },
+          { name: 'Jax', type: 'jax', avatar: 'jax', x: 2.8, z: -3.4, color: '#8a4fd6' }
+        ],
+        objective: scan('RELEVER LES ARMATURES ET TRAVERSER LES COLONNES', ['pillar', 'doorframe'], 'kinger')
+      },
+      219: {
+        name: 'EP7 MAIN CONSOLE / RED RESULT AND WHITE VOID', short: 'RESULTAT ROUGE',
+        detail: 'Jax frappe le rouge: le grand ecran devient rouge, s eteint, puis s ouvre sur un vide blanc accompagne d un coup de sifflet et de musique.',
+        color: '#ffffff', floor: '#f5f5ff', ceiling: '#ffffff', motif: 'void', size: 19,
+        gateEpisode: 7, gateSubepisode: 7, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'scoreboard', campaignTarget: 'redscreen', x: 0, z: -6.2, color: '#e53935', label: 'Grand ecran devenu rouge' },
+          { kind: 'exitframe', campaignTarget: 'whitevoid', x: 0, z: -7.4, color: '#ffffff', label: 'Ouverture sur le vide blanc' },
+          { kind: 'console', x: 0, z: -4.6, color: '#05020d', label: 'Console eteinte apres le choix' },
+          { kind: 'target', x: -1.4, z: -2.0, color: '#e53935', label: 'Bouton rouge enfonce' },
+          { kind: 'gridnode', x: 1.6, z: -2.0, color: '#ffd84a', label: 'Signal du coup de sifflet' }
+        ],
+        sprites: [
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -2.8, z: -3.2, color: '#e53935' },
+          { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: -1.7, z: -3.6, color: '#d64545' },
+          { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: -0.6, z: -3.2, color: '#ff4fb8' },
+          { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: 0.6, z: -3.6, color: '#f7f7f7' },
+          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: 1.7, z: -3.2, color: '#d9d0a2' },
+          { name: 'Jax', type: 'jax', avatar: 'jax', x: 2.8, z: -3.6, color: '#8a4fd6' }
+        ],
+        objective: scan('OBSERVER L ECRAN ROUGE PUIS LE VIDE BLANC', ['scoreboard', 'exitframe', 'console'], 'jax')
       }
     };
     this.circusCanonRoomDefinitions = rooms;
@@ -7937,6 +8803,7 @@ const OS = {
   },
 
   isCircusPropPortable(prop) {
+    if (prop?.portable === false) return false;
     return ['card', 'memory', 'candle', 'menu'].includes(prop?.kind) || prop?.portable === true;
   },
 
@@ -9098,7 +9965,7 @@ const OS = {
         125: "Jax: Super. Attache au salon pendant que les autres font la route dramatique.",
         14: "Jax: Version chasseur, meme probleme: Caine appelle ca des vacances.",
         44: "Jax: Les photos restent ici. Le doorbell, lui, n a rien d une invitation.",
-        95: "Jax: Rouge. On ne va pas attendre que ce faux choix se prenne pour un dilemme.",
+        95: "Jax: Le rouge ferme la console, le bleu deconnecte les joueurs. Dans la scene montree, je frappe le rouge.",
         96: "Jax: Garde Caine occupe et la cle changera de proprietaire.",
         18: "Jax: Le final dramatique, c'est vraiment pas mon style.",
         68: "Jax: Monter tout ca pour redescendre par un toboggan. Enfin une architecture logique.",
@@ -9122,7 +9989,7 @@ const OS = {
         133: "Ragatha: Restons dans le carrosse jusqu au pont-levis. Le groupe doit arriver ensemble.",
         141: "Ragatha: The Fudge est devant nous et Pomni manque encore. On garde la riviere comme repere.",
         8: "Ragatha: Le manoir n'est pas juste un decor. Il appuie sur les failles.",
-        14: "Ragatha: Mon oeil-bouton est tombe pres de la cabine. On le recupere avant de retourner dans l eau.",
+        14: "Ragatha: La balle a fait tomber mon oeil-bouton. Pomni a replonge pour le chercher sous le lac.",
         18: "Ragatha: Meme quand la scene casse, le groupe doit rester ensemble.",
         66: "Ragatha: La galerie reprend les couleurs du palais. Gardons l escalier comme repere.",
         71: "Ragatha: On reste entre les balises. La neige rend les distances difficiles a lire.",
@@ -9530,7 +10397,83 @@ const OS = {
       '5:15:gangle': "Gangle: Le premier home run est le mien. Le suivant appartient a Zooble.",
       '5:15:zooble': "Zooble: Deuxieme home run. Ragatha remplace Pomni pour le dernier.",
       '5:15:ragatha': "Ragatha: Je prends la place de Pomni et je termine le troisieme home run.",
-      '5:16:caine': "Caine: Victoire des Big Tops! Le signal final reste non identifie; utilisez le portail pendant qu il est encore ouvert!"
+      '5:16:caine': "Caine: Victoire des Big Tops! Le signal final reste non identifie; utilisez le portail pendant qu il est encore ouvert!",
+      '7:0:zooble': "Zooble: L aventure n a meme pas commence. Je prefere encore rester dans cette cachette.",
+      '7:0:pomni': "Pomni: Nous n avons pas vu Caine de la journee. Gangle te cherchait aussi.",
+      '7:0:ragatha': "Ragatha: La note de Caine est juste ici. Kinger arrive pendant que nous la lisons.",
+      '7:0:caine': "Caine: Aucune aventure aujourd hui! Vous pouvez faire exactement ce que vous voulez, sous reserve de me demander une suggestion.",
+      '7:1:caine': "Caine: Pour une reponse, consultons la Chinese Room! Cette porte fait encore partie de mon gag.",
+      '7:1:zooble': "Zooble: Il avait donc prepare tout ca avant meme que Gangle pose la question.",
+      '7:1:ragatha': "Ragatha: Bubble propose une fete et Caine nous envoie au Digital Lake.",
+      '7:2:pomni': "Pomni: La cabine m a projetee sur le sable. Je reste sous les parasols tant que le Sun menace de me bruler.",
+      '7:2:ragatha': "Ragatha: N interagis pas avec le Sun. Elle est simplement comme ca.",
+      '7:2:sun': "Sun: Une tenue mediocre! Une cible parfaite pour un coup de soleil!",
+      '7:3:gangle': "Gangle: La pasteque porte le visage de Jax. Zooble, recule avant que je frappe.",
+      '7:3:ragatha': "Ragatha: La balle vient de faire tomber mon oeil-bouton.",
+      '7:3:pomni': "Pomni: Je plonge le chercher. Jax reste seul sur son transat.",
+      '7:4:truthtellerfish': "Orange Crappy Looking Fish: Le coffre a deja ete pille. C etait toute mon epargne.",
+      '7:4:liarfish': "Red Crappy Looking Fish: Je suis celui qui ment. Mon frere vient de perdre son effet.",
+      '7:4:pomni': "Pomni: Le coffre est vide et je n ai toujours pas retrouve l oeil de Ragatha.",
+      '7:5:zooble': "Zooble: Jax, la capacite de changer ne m empeche plus de demander de l aide aux personnes de confiance.",
+      '7:5:jax': "Jax: Je vais partir avant que cette conversation continue.",
+      '7:5:pomni': "Pomni: Le Shrimp NPC n a pas termine sa phrase avant que le Sun le grille.",
+      '7:5:shrimpnpc': "Shrimp NPC: Je suis sur la plage; Shrimp Town n apparait que comme destination du bouton alternatif.",
+      '7:5:sun': "Sun: Le Shrimp NPC est deja grille. De rien!",
+      '7:6:pomni': "Pomni: Le mannequin sans visage me fait signe derriere le rocher.",
+      '7:6:abelmannequin': "Abel: Je dois parler au groupe loin de la surveillance de Caine.",
+      '7:7:jax': "Jax: Le triangle noir, les mains vertes et les visages repetes ne sont pas une nouvelle piece physique.",
+      '7:8:jax': "Jax: La sonnette a interrompu la vision. Pomni, Ragatha et le mannequin attendent devant ma porte.",
+      '7:8:ragatha': "Ragatha: Nous avons besoin d un endroit ou Caine ne nous ecoutera pas.",
+      '7:8:abelmannequin': "Abel: Le seau de cles doit nous aider a atteindre la Chinese Room.",
+      '7:9:chineseroomnpc': "Chinese Room NPC: La porte etait simplement deverrouillee. Je peux enfin quitter cette salle.",
+      '7:9:zooble': "Zooble: Cette fois nous entrons vraiment. Le gag de Caine et cette visite sont deux moments differents.",
+      '7:9:jax': "Jax: Aucune cle n a fonctionne; il suffisait d essayer la poignee.",
+      '7:10:abelmannequin': "Abel: C&A, les capsules et le programme partage font partie de mon recit. Vous n avez encore aucune verification.",
+      '7:10:pomni': "Pomni: Je consigne ce qu il dit, mais je refuse de classer ses affirmations comme des preuves.",
+      '7:10:zooble': "Zooble: Trois affirmations, toujours aucun moyen independant de les confirmer.",
+      '7:11:abelmannequin': "Abel: Vous pouvez m appeler Abel. Pour le plan, il nous faut la cle de Caine et des privileges administrateur.",
+      '7:11:jax': "Jax: Je prends la partie qui consiste a voler la cle. Les explications dramatiques peuvent rester ici.",
+      '7:11:pomni': "Pomni: Le visage dessine et le nom rendent Abel identifiable, pas necessairement digne de confiance.",
+      '7:12:caine': "Caine: Un diner au saumon et une conversation sur mes hobbies! Rien ne pourrait interrompre cette soiree.",
+      '7:12:jax': "Jax: Le premier blocage prend fin avant que je puisse sortir la cle.",
+      '7:13:ragatha': "Ragatha: Kinger se souvient de choses que nous oublions. C est justement pour cela que je veux verifier Abel.",
+      '7:13:pomni': "Pomni: Kaufmo et Ribbit sont evoques pendant cette marche; ils ne sont pas physiquement avec nous.",
+      '7:13:abelmannequin': "Abel: Le portail ondulant cache dans le mur mene a la zone administrateur.",
+      '7:14:caine': "Caine: Voici mes photos du macroverse! Je voudrais pouvoir recreer cet endroit avec davantage de precision.",
+      '7:14:jax': "Jax: Le second blocage dure assez longtemps. Cette fois, je recupere vraiment la carte-cle.",
+      '7:15:kinger': "Kinger: Je ne connais pas Abel. Ce manque de souvenir rend son histoire encore plus suspecte.",
+      '7:15:zooble': "Zooble: Nous t avertissons pres de ton fort avant que le groupe engage tout le monde dans ce plan.",
+      '7:15:gangle': "Gangle: Jax est revenu avec la carte-cle. Nous devons maintenant rejoindre les autres.",
+      '7:16:abelmannequin': "Abel: Six residents, donc exactement six passes. Aucun septieme privilege ne doit apparaitre.",
+      '7:16:pomni': "Pomni: Kinger aura un pass comme les autres. On ne l exclut pas sur une hypothese.",
+      '7:17:kinger': "Kinger: La lumiere me fait perdre le fil, mais le pass est bien dans ma main.",
+      '7:17:abelmannequin': "Abel: Les six passes scintillent. Le groupe est pret pour la collision suivante.",
+      '7:18:kinger': "Kinger: Les cubes servent de collisions. La montgolfiere est juste au-dessus.",
+      '7:18:pomni': "Pomni: Jax est roule en boule et Abel reste en bas. Le passage ne transporte pas tout le monde de la meme facon.",
+      '7:18:abelmannequin': "Abel: Continuez vers le bureau et faites le bon choix. Je ne vous suis pas.",
+      '7:19:caine': "Caine: Bubble, chaque element doit servir son objectif dans une aventure correctement structuree!",
+      '7:19:bubble': "Bubble: Je sers mon objectif! Le lieu de cette coupe reste volontairement non confirme.",
+      '7:20:jax': "Jax: La carte-cle ouvre enfin la porte du bureau. Les globes bordent le grand escalier.",
+      '7:20:pomni': "Pomni: Abel est reste dans la couche inferieure; seuls les six residents sont entres.",
+      '7:21:pomni': "Pomni: La bibliotheque coulissante cache le passage suivant.",
+      '7:21:ragatha': "Ragatha: Abel a dit que la console se trouvait derriere cette bibliotheque.",
+      '7:22:kinger': "Kinger: Human, Gloink, Gummy Elephant et Crappy Fish. Ce sont des armatures, pas des personnages.",
+      '7:22:jax': "Jax: Le couloir a colonnes conduit au terminal. Je reste derriere le groupe.",
+      '7:23:ragatha': "Ragatha: Avant d activer la console, je veux que chacun puisse dire ce qu il doit dire.",
+      '7:23:gangle': "Gangle: Zooble, ce que nous avons vecu ensemble a toujours ete reel.",
+      '7:23:zooble': "Zooble: Oui. Tout ce que nous avons ressenti et tout ce que nous sommes restera avec nous.",
+      '7:24:pomni': "Pomni: Le rouge ferme la console et nous garde ici. Le bleu termine le jeu et nous deconnecte.",
+      '7:24:jax': "Jax: Je panique, je pousse Zooble et je frappe le bouton rouge avant le vote.",
+      '7:24:ragatha': "Ragatha: Qu est-ce que tu viens de faire?",
+      '7:25:ragatha': "Ragatha: L ecran rouge s eteint puis le panneau s ouvre sur un vide blanc.",
+      '7:25:jax': "Jax: Le choix est deja fait. Le coup de sifflet annonce quelque chose derriere le panneau.",
+      '7:26:caine': "Caine: Toute cette evasion etait mon aventure! Abel jouait exactement le role que je lui avais donne.",
+      '7:26:abelmannequin': "Abel: J etais un acteur de l aventure de Caine. Mon medaillon ne contient qu une image de hot-dog.",
+      '7:26:ragatha': "Ragatha: Les capsules, C&A et la sortie etaient donc une fabrication.",
+      '7:27:gangle': "Gangle: Caine a utilise notre confiance et nos pensees comme des accessoires. Le panier ne corrige pas cela.",
+      '7:27:jax': "Jax: La sauce, la version vegan et peut-etre davantage montrent que Caine peut modifier nos etats.",
+      '7:27:kinger': "Kinger: Scratch. La premiere abstraction. Caine refuse de confirmer ce qui lui est arrive.",
+      '7:27:caine': "Caine: Savons, lotions et panier final! Une compensation parfaitement inadaptee a cette confrontation."
     };
     const campaignLine = activeCampaign?.definition?.episode && Number.isInteger(activeCampaign?.progress?.stage)
       ? identityAliases
@@ -12496,7 +13439,7 @@ const OS = {
       ];
       if (zoneId === 44) {
         archivedProps.push(
-          { kind: 'card', campaignTarget: 'doorbell', x: -2.05, z: -1.35, color: '#ffd84a', label: 'Doorbell de la vision de Jax' },
+          { kind: 'card', campaignTarget: 'doorbell', portable: false, x: -2.05, z: -1.35, color: '#ffd84a', label: 'Doorbell de la vision de Jax' },
           { kind: 'memory', x: 0, z: -3.15, color: '#c875ff', label: 'Vision kaleidoscopique de Jax' }
         );
       }
@@ -12530,7 +13473,7 @@ const OS = {
       shared.push({ kind: 'wallart', anchor: 'wall-left', wallSurface: 'outer', x: 0, z: -2.25, color: '#e53935', art: 'blocks', label: 'Photo de Jax avec Kaufmo' });
       shared.push({ kind: 'wallart', anchor: 'wall-right', wallSurface: 'outer', x: 0, z: -2.25, color: '#4ee77e', art: 'blocks', label: 'Photo de Jax avec Ribbit' });
       shared.push({ kind: 'archive', x: 1.75, z: -2.75, color: '#5b3d28', label: 'Bibliotheque et bloc 57' });
-      shared.push({ kind: 'card', campaignTarget: 'doorbell', x: -2.05, z: -1.35, color: '#ffd84a', label: 'Doorbell de la vision de Jax' });
+      shared.push({ kind: 'card', campaignTarget: 'doorbell', portable: false, x: -2.05, z: -1.35, color: '#ffd84a', label: 'Doorbell de la vision de Jax' });
       shared.push({ kind: 'memory', x: 0, z: -3.15, color: '#c875ff', label: 'Vision kaleidoscopique de Jax' });
     }
     return shared;
@@ -12619,7 +13562,7 @@ const OS = {
         { kind: 'sun', x: 2.4, z: -2.8, color: '#ffe57d', label: 'Rayonnement du Sun NPC' },
         { kind: 'umbrella', x: 1.65, z: -1.35, color: '#ff9b37', label: 'Zone d ombre secondaire' },
         { kind: 'wave', x: -2.95, z: -2.85, color: '#4ee7ff', label: 'Entree de la plongee' },
-        { kind: 'eye', x: 0.95, z: -1.25, color: '#d64545', label: 'Oeil-bouton perdu par Ragatha' },
+        { kind: 'eye', x: 0.95, z: -1.25, color: '#d64545', label: 'Oeil-bouton de Ragatha recherche par Pomni' },
         { kind: 'base', x: -0.55, z: -1.35, color: '#ffffff', label: 'Repere des jeux de plage' },
         { kind: 'balloon', x: 2.9, z: -1.45, color: '#ff4fb8', label: 'Ballon de plage' }
       ],
@@ -12635,7 +13578,7 @@ const OS = {
         { kind: 'ring', x: 2.2, z: -2.4, color: '#ff7a30', label: 'Globe suspendu droit' },
         { kind: 'eye', x: 2.75, z: -1.55, color: '#ff3333', label: 'Monitoring du bureau' },
         { kind: 'archive', x: -2.85, z: -2.75, color: '#7a4b32', label: 'Bibliotheque coulissante du bureau' },
-        { kind: 'card', campaignTarget: 'giftbasket', x: 0.95, z: -1.35, color: '#fff1a8', label: 'Panier cadeau de fin d aventure' }
+        { kind: 'card', campaignTarget: 'giftbasket', portable: false, x: 0.95, z: -1.35, color: '#fff1a8', label: 'Panier cadeau de fin d aventure' }
       ],
       17: [{ kind: 'memory', x: -1.8, z: -2.0, color: '#d9d0a2' }, { kind: 'memory', x: 0, z: -2.6, color: '#7df0ff' }, { kind: 'memory', x: 1.8, z: -2.0, color: '#d9d0a2' }, { kind: 'table', x: 0.55, z: -1.35, color: '#d9d0a2' }, { kind: 'candle', x: -2.75, z: -1.4, color: '#ffd84a' }],
       18: [...basePillars, { kind: 'spotlight', x: 0, z: -2.6, color: '#e53935' }, { kind: 'archive', x: -2.2, z: -2.25, color: '#c875ff' }, { kind: 'gridnode', x: 2.2, z: -1.45, color: '#ff4d4d' }],

@@ -7112,14 +7112,14 @@ const EpisodeManager = {
       { after: 935, title: "Favorite Character Awards", objective: "Validez le comite, le passage aux sanitaires et le vrai resultat Ming avant le glitch final.", mode: "repair", goal: 11, duration: 24, target: "MING", hazard: "CAINE" }
     ],
     7: [
-      { after: 47, title: "Jour sans aventure", objective: "Cliquez les signaux du groupe pendant que Caine laisse le Cirque sans mission officielle.", mode: "click", goal: 7, duration: 16, target: "FREE", hazard: "CAINE" },
-      { after: 110, title: "Lac digital", objective: "Evitez les rayons du Sun NPC et gardez les personnages hors du coup de soleil.", mode: "dodge", goal: 8, duration: 18, target: "SHADE", hazard: "SUN" },
-      { after: 180, title: "Cabine et PNJ", objective: "Reproduisez la sequence de changement avant que les PNJ de plage ne brouillent le ton.", mode: "sequence", goal: 5, duration: 20, target: "BOOTH", hazard: "NPC" },
-      { after: 250, title: "Signal C&A", objective: "Reparez les fragments d'archive quand Abel et les indices C&A apparaissent.", mode: "repair", goal: 8, duration: 18, target: "ABEL", hazard: "LOCK" },
-      { after: 326, title: "Plan des passes", objective: "Cliquez les passes administrateur valides sans declencher Caine trop tot.", mode: "click", goal: 8, duration: 18, target: "PASS", hazard: "CAINE" },
-      { after: 396, title: "Confiance fragile", objective: "Filtrez les signaux de doute pendant que le groupe decide s'il suit Abel.", mode: "sequence", goal: 6, duration: 22, target: "TRUST", hazard: "LIE" },
-      { after: 478, title: "Choix de sortie", objective: "Reparez le chemin vers le bouton sans spoiler trop tot la nature de l'aventure.", mode: "repair", goal: 9, duration: 19, target: "EXIT", hazard: "FAKE" },
-      { after: 535, title: "Bon bouton", objective: "Survivez au dernier choix avant la revelation de Caine et la chute du plan Abel.", mode: "dodge", goal: 9, duration: 19, target: "BUTTON", hazard: "TRAP" }
+      { after: 46, title: "Jour libre et Chinese Room", objective: "Reliez les signaux du groupe pendant l annonce du jour libre, puis gardez la consultation de la Chinese Room distincte de la zone administrateur.", mode: "click", goal: 8, duration: 19, target: "GROUP", hazard: "NOISE" },
+      { after: 100, title: "Plage, oeil de Ragatha et coffre", objective: "Trouvez l ombre, suivez Pomni partie chercher l oeil-bouton de Ragatha et distinguez les deux poissons avant l arrivee du Shrimp NPC.", mode: "dodge", goal: 9, duration: 20, target: "SHADE", hazard: "SUN" },
+      { after: 179, title: "Montage et recrutement d Abel", objective: "Reproduisez la suite cachette, sonnette, trousseau et porte sans transformer le montage silencieux en lieu canonique.", mode: "sequence", goal: 7, duration: 23, target: "KEY", hazard: "FALSE" },
+      { after: 269, title: "Recit d Abel et cle de Caine", objective: "Reparez le plan presente par Abel tout en conservant ses affirmations C&A au statut non verifie, puis recuperez la cle pendant le diner.", mode: "repair", goal: 10, duration: 23, target: "PLAN", hazard: "CLAIM" },
+      { after: 327, title: "Doutes et photos du macroverse", objective: "Classez les doutes sur Abel et les photos montrees par Caine sans valider une sortie ou un souvenir reel.", mode: "click", goal: 9, duration: 21, target: "DOUBT", hazard: "PROOF" },
+      { after: 397, title: "Kinger averti et six passes", objective: "Remettez les avertissements dans l ordre, puis validez exactement six passes administrateur pour le groupe.", mode: "sequence", goal: 8, duration: 24, target: "PASS", hazard: "MISSING" },
+      { after: 469, title: "Collision et bibliotheque", objective: "Reparez la collision cubique, gardez Abel dans la couche inferieure et ouvrez la bibliotheque du bureau sans fusionner les scenes paralleles.", mode: "repair", goal: 11, duration: 24, target: "BOOKCASE", hazard: "DESYNC" },
+      { after: 535, title: "Console et choix rouge de Jax", objective: "Traversez les adieux, lisez les fonctions des boutons rouge et bleu et survivez a la panique jusqu au coup de Jax sur le rouge.", mode: "dodge", goal: 10, duration: 22, target: "RED", hazard: "PANIC" }
     ],
     8: [
       { after: 36, title: "Queenie dans le noir", objective: "Cliquez les fragments de presence pendant que Queenie rejoint Kinger dans le souvenir.", mode: "click", goal: 7, duration: 16, target: "QUEENIE", hazard: "STATIC" },

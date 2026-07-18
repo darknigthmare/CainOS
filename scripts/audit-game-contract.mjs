@@ -505,7 +505,7 @@ for (const [zone, kinds] of [[70, ['building', 'wave']], [71, ['stairs', 'candle
 }
 const canonRoomDefinitions = OS.getCircusCanonRoomDefinitions();
 const fpsZoneMax = OS.getCircusFpsZoneMax();
-const minimumFpsZoneMax = 191;
+const minimumFpsZoneMax = 219;
 if (!Number.isInteger(fpsZoneMax) || fpsZoneMax < minimumFpsZoneMax) {
   failures.push(`FPS: borne de zones ${fpsZoneMax}/${minimumFpsZoneMax} minimum`);
 }
@@ -1003,6 +1003,135 @@ if (!episodeSixReturnPortal || episodeSixReturnPortal.kind !== 'caineportal' || 
 if (!OS.getCircusZoneProps(180).some(prop => getCampaignTarget(prop) === 'aquariumwindow')
   || OS.getCircusZoneSprites(180).some(sprite => (sprite.avatar || sprite.type) === 'aquaticabstraction')) {
   failures.push('EP6 FPS 180: Loser Corner confondu avec l aquarium de Remember');
+}
+const episodeSevenCampaign = OS.getCircusFpsCampaignDefinition(7);
+const episodeSevenExpectedZones = [
+  192, 193, 194, 197, 195, 196, 215, 216, 198, 199, 200, 201, 202, 203,
+  204, 205, 206, 207, 208, 209, 217, 210, 218, 211, 212, 219, 213, 214
+];
+const episodeSevenActualZones = (episodeSevenCampaign?.stages || []).map(stage => stage.zone);
+if (episodeSevenCampaign?.version !== 2) failures.push('EP7 FPS: version de campagne 2 absente');
+if (episodeSevenCampaign?.stages?.length !== episodeSevenExpectedZones.length) {
+  failures.push(`EP7 FPS: ${episodeSevenCampaign?.stages?.length ?? 0}/${episodeSevenExpectedZones.length} actes montres attendus`);
+}
+if (JSON.stringify(episodeSevenActualZones) !== JSON.stringify(episodeSevenExpectedZones)) {
+  failures.push(`EP7 FPS: chronologie de zones incorrecte (${episodeSevenActualZones.join(', ')})`);
+}
+for (const zone of episodeSevenExpectedZones) {
+  const room = canonRoomDefinitions[zone];
+  if (!room) {
+    failures.push(`EP7 FPS ${zone}: etat temporel absent`);
+  } else if (!room.nonPhysical || (room.exits || []).length
+    || !['time-state', 'cut', 'mind'].includes(room.layer)) {
+    failures.push(`EP7 FPS ${zone}: coupe temporelle reliee au graphe physique`);
+  }
+}
+const episodeSevenTargetContract = new Map([
+  [192, { hidinglid: 1 }],
+  [193, { chinesedoor: 1, writtenreply: 1 }],
+  [194, { changingbooth: 1, shade: 1 }],
+  [197, { watermelonjax: 1, jaxlounge: 1, ragathaeye: 1 }],
+  [195, { emptychest: 1, missingeye: 1 }],
+  [196, { shrimpsizzle: 1 }],
+  [215, { hidingrock: 1, shrimpscorch: 1 }],
+  [216, { blacktriangle: 1, greenhand: 1, hallucinationface: 3 }],
+  [198, { doorbell: 1, abelblank: 1, keybucket: 1 }],
+  [199, { keyring: 1, chineseinnerdoor: 1 }],
+  [200, { abelclaim: 3 }],
+  [201, { drawnface: 1, keydiagram: 1 }],
+  [202, { salmonmenu: 1, keyattempt: 1 }],
+  [203, { routeanchor: 1, adminwallportal: 1 }],
+  [204, { macroversephoto: 3, jaxkey: 1 }],
+  [205, { jaxkey: 1 }],
+  [206, { adminpass: 6 }],
+  [207, { passflare: 6 }],
+  [208, { cubeanchor: 3, jaxball: 1, upwardslot: 1 }],
+  [209, { purposeorb: 1 }],
+  [217, { officekeycard: 1, officedoor: 1, grandstairs: 1, adventureglobe: 4 }],
+  [210, { bookcase: 1, secretdoor: 1 }],
+  [218, { armature: 4, columnpath: 3, terminaldoor: 1 }],
+  [211, { mainconsole: 1 }],
+  [212, { redbutton: 1, bluebutton: 1 }],
+  [219, { redscreen: 1, whitevoid: 1 }],
+  [213, { fabricationreveal: 1, deletepulse: 1, hotdoglocket: 1 }],
+  [214, { giftbasket: 1, scratchquestion: 1 }]
+]);
+for (const [zone, targets] of episodeSevenTargetContract) {
+  const props = OS.getCircusZoneProps(zone);
+  for (const [target, expectedCount] of Object.entries(targets)) {
+    const count = getTargetCount(props, target);
+    if (count !== expectedCount) failures.push(`EP7 FPS ${zone}: ${target} ${count}/${expectedCount}`);
+  }
+}
+const episodeSevenRosterContract = new Map([
+  [192, ['caine', 'gangle', 'kinger', 'pomni', 'ragatha', 'zooble']],
+  [193, ['bubble', 'caine', 'gangle', 'kinger', 'pomni', 'ragatha', 'zooble']],
+  [194, ['beachgangle', 'kinger', 'pomni', 'ragatha', 'sun', 'zooble']],
+  [197, ['beachgangle', 'jax', 'kinger', 'pomni', 'ragatha', 'zooble']],
+  [195, ['liarfish', 'pomni', 'truthtellerfish']],
+  [196, ['jax', 'pomni', 'shrimpnpc', 'sun', 'zooble']],
+  [215, ['abelmannequin', 'pomni']],
+  [216, ['jax']],
+  [198, ['abelmannequin', 'jax', 'pomni', 'ragatha']],
+  [199, ['abelmannequin', 'chineseroomnpc', 'jax', 'pomni', 'zooble']],
+  [200, ['abelmannequin', 'jax', 'pomni', 'zooble']],
+  [201, ['abelmannequin', 'jax', 'pomni']],
+  [202, ['caine', 'jax']],
+  [203, ['abelmannequin', 'pomni', 'ragatha']],
+  [204, ['caine', 'jax']],
+  [205, ['gangle', 'jax', 'kinger', 'zooble']],
+  [206, ['abelmannequin', 'pomni', 'ragatha']],
+  [207, ['abelmannequin', 'gangle', 'jax', 'kinger', 'pomni', 'ragatha', 'zooble']],
+  [208, ['abelmannequin', 'kinger', 'pomni']],
+  [209, ['bubble', 'caine']],
+  [217, ['gangle', 'jax', 'kinger', 'pomni', 'ragatha', 'zooble']],
+  [210, ['gangle', 'jax', 'kinger', 'pomni', 'ragatha', 'zooble']],
+  [218, ['gangle', 'jax', 'kinger', 'pomni', 'ragatha', 'zooble']],
+  [211, ['gangle', 'jax', 'kinger', 'pomni', 'ragatha', 'zooble']],
+  [212, ['gangle', 'jax', 'kinger', 'pomni', 'ragatha', 'zooble']],
+  [219, ['gangle', 'jax', 'kinger', 'pomni', 'ragatha', 'zooble']],
+  [213, ['abelmannequin', 'bubble', 'caine', 'gangle', 'jax', 'kinger', 'pomni', 'ragatha', 'zooble']],
+  [214, ['caine', 'gangle', 'jax', 'kinger', 'pomni', 'ragatha', 'zooble']]
+]);
+for (const [zone, expected] of episodeSevenRosterContract) {
+  const actual = OS.getCircusZoneSprites(zone).map(sprite => sprite.avatar || sprite.type).sort();
+  if (JSON.stringify(actual) !== JSON.stringify([...expected].sort())) {
+    failures.push(`EP7 FPS ${zone}: roster incorrect (${actual.join(', ')})`);
+  }
+}
+const ragathaEye = OS.getCircusZoneProps(197).find(prop => getCampaignTarget(prop) === 'ragathaeye');
+if (!/Ragatha/i.test(ragathaEye?.label || '') || /Zooble/i.test(ragathaEye?.label || '')) {
+  failures.push('EP7 FPS 197: oeil-bouton attribue au mauvais personnage');
+}
+for (const zone of episodeSevenExpectedZones.slice(0, episodeSevenExpectedZones.indexOf(213))) {
+  if (OS.getCircusZoneProps(zone).some(prop => getCampaignTarget(prop) === 'fabricationreveal')) {
+    failures.push(`EP7 FPS ${zone}: revelation de l aventure de Caine declenchee trop tot`);
+  }
+}
+const redChoice = OS.getCircusZoneProps(212).find(prop => getCampaignTarget(prop) === 'redbutton');
+const blueChoice = OS.getCircusZoneProps(212).find(prop => getCampaignTarget(prop) === 'bluebutton');
+if (redChoice?.color !== '#e53935' || blueChoice?.color !== '#2a58d8'
+  || !/rester/i.test(redChoice?.label || '') || !/deconnecter/i.test(blueChoice?.label || '')) {
+  failures.push('EP7 FPS 212: fonctions ou couleurs des boutons rouge et bleu incorrectes');
+}
+const choiceStage = episodeSevenCampaign?.stages?.find(stage => stage.zone === 212);
+if (!choiceStage?.requirements?.some(item => item.action === 'use' && item.target === 'redbutton')
+  || choiceStage.requirements.some(item => item.action === 'use' && item.target === 'bluebutton')) {
+  failures.push('EP7 FPS 212: la campagne ne reproduit pas le choix rouge de Jax');
+}
+const finalScratchProp = OS.getCircusZoneProps(214).find(prop => getCampaignTarget(prop) === 'scratchquestion');
+if (!/question/i.test(finalScratchProp?.label || '')
+  || OS.getCircusZoneSprites(214).some(sprite => (sprite.avatar || sprite.type) === 'scratch')) {
+  failures.push('EP7 FPS 214: Scratch doit rester une question de Kinger, pas un PNJ restaure');
+}
+if (OS.getCircusZoneProps(214).some(prop => getCampaignTarget(prop) === 'returnportal')) {
+  failures.push('EP7 FPS 214: portail de retour invente dans l espace final');
+}
+for (const [zone, target] of [[44, 'doorbell'], [94, 'adminpass'], [96, 'jaxkey'], [16, 'giftbasket']]) {
+  const fixedProps = OS.getCircusZoneProps(zone).filter(prop => getCampaignTarget(prop) === target);
+  if (!fixedProps.length || fixedProps.some(prop => OS.isCircusPropPortable(prop))) {
+    failures.push(`EP7 FPS ${zone}: accessoire fixe ${target} encore ramassable`);
+  }
 }
 const legacyCandyStoryActors = new Set(['gummigoo', 'max', 'chad', 'loolilalu', 'fudge', 'pomni']);
 if (OS.getCircusZoneSprites(6).some(sprite => legacyCandyStoryActors.has(sprite.avatar || sprite.type))) {

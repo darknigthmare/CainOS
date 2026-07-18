@@ -37,6 +37,12 @@ const expectedEpisodeSixCheckpointAfters = [124, 246, 440, 487, 624, 689, 863, 9
 if (JSON.stringify(episodeSixCheckpointAfters) !== JSON.stringify(expectedEpisodeSixCheckpointAfters)) {
   failures.push(`Checkpoints EP6 incorrects: ${episodeSixCheckpointAfters.join(', ') || 'introuvables'}`);
 }
+const episodeSevenCheckpointBlock = checkpointSection.match(/\n\s*7:\s*\[([\s\S]*?)\n\s*\],\s*\n\s*8:\s*\[/)?.[1] || '';
+const episodeSevenCheckpointAfters = [...episodeSevenCheckpointBlock.matchAll(/after:\s*(\d+)/g)].map(match => Number(match[1]));
+const expectedEpisodeSevenCheckpointAfters = [46, 100, 179, 269, 327, 397, 469, 535];
+if (JSON.stringify(episodeSevenCheckpointAfters) !== JSON.stringify(expectedEpisodeSevenCheckpointAfters)) {
+  failures.push(`Checkpoints EP7 incorrects: ${episodeSevenCheckpointAfters.join(', ') || 'introuvables'}`);
+}
 
 [
   'SPUDSY_BURGER_CUSTOMER',
@@ -334,7 +340,7 @@ if (duplicateIds.length) failures.push(`ID HTML DUPLIQUES: ${duplicateIds.join('
 if (!/campaigns\.length\s*!==\s*9/.test(app)) failures.push('Audit 9 campagnes absent');
 const zoneMaxMatch = app.match(/getCircusFpsZoneMax\(\)\s*\{\s*return\s+(\d+)\s*;/);
 const fpsZoneMax = zoneMaxMatch ? Number(zoneMaxMatch[1]) : Number.NaN;
-const minimumFpsZoneMax = 191;
+const minimumFpsZoneMax = 219;
 if (!Number.isInteger(fpsZoneMax) || fpsZoneMax < minimumFpsZoneMax) {
   failures.push(`Borne FPS ${Number.isFinite(fpsZoneMax) ? fpsZoneMax : 'introuvable'}/${minimumFpsZoneMax} minimum`);
 }
@@ -459,6 +465,44 @@ for (const marker of [
 }
 if (!/6:\s*\{\s*title:\s*'They All Get Guns',\s*version:\s*2,\s*steps:\s*\[/.test(app)) {
   failures.push('Campagne FPS EP6 versionnee absente');
+}
+for (const marker of [
+  "name: 'EP7 TENT / ZOOBLE HIDING AND FREE DAY'",
+  "name: 'EP7 CHINESE ROOM CONSULTATION / EXTERIOR'",
+  "name: 'EP7 DIGITAL LAKE / CHANGING BOOTH'",
+  "name: 'EP7 DIGITAL LAKE / SUNKEN CHEST'",
+  "name: 'EP7 BEACH / JAX ZOOBLE AND SHRIMP'",
+  "name: 'EP7 BEACH / ACTIVITY MONTAGE AND EYE LOSS'",
+  "name: 'EP7 BEACH / MANNEQUIN BEHIND THE ROCK'",
+  "name: 'EP7 JAX ROOM / GREEN HAND KALEIDOSCOPE'",
+  "name: 'EP7 JAX ROOM / DOORBELL AND ABEL'",
+  "name: 'EP7 CHINESE ROOM / ABEL CLAIMS'",
+  "name: 'EP7 CAINE AND JAX DINNER / KEY THEFT'",
+  "name: 'EP7 ADMINISTRATOR ZONE / SIX PASSES'",
+  "name: 'EP7 ADMIN COLLISION / CUBE ASCENT'",
+  "name: 'EP7 CAINE OFFICE / ELEVATED ENTRY AND STAIRCASE'",
+  "name: 'EP7 CAINE OFFICE / HIDDEN BOOKCASE'",
+  "name: 'EP7 CAINE OFFICE / ARMATURES AND COLUMN HALL'",
+  "name: 'EP7 HIDDEN MAIN CONSOLE / TWO CHOICES'",
+  "name: 'EP7 MAIN CONSOLE / RED RESULT AND WHITE VOID'",
+  "name: 'EP7 REVEAL / ABEL DELETION'",
+  "name: 'EP7 FINAL CONFRONTATION / GIFT BASKET'",
+  "campaignTarget: 'ragathaeye'",
+  "campaignTarget: 'redbutton'",
+  "campaignTarget: 'bluebutton'",
+  "campaignTarget: 'abelclaim'",
+  "campaignTarget: 'macroversephoto'",
+  "campaignTarget: 'passflare'",
+  "campaignTarget: 'fabricationreveal'",
+  "if (prop?.portable === false) return false"
+]) {
+  if (!app.includes(marker)) failures.push(`Passe FPS EP7 absente: ${marker}`);
+}
+if (!/7:\s*\{\s*title:\s*'Beach Episode',\s*version:\s*2,\s*steps:\s*\[/.test(app)) {
+  failures.push('Campagne FPS EP7 versionnee absente');
+}
+if (app.includes("campaignTarget: 'choicebutton'")) {
+  failures.push('EP7 FPS: anciens choix sans couleur encore codes');
 }
 if (!/36:\s*\{\s*name:\s*\"SPUDSY'S BATHROOM \/ MENTIONED\"[\s\S]*?nonPhysical:\s*true/.test(app)) {
   failures.push('Sanitaires Spudsy encore materialises malgre leur simple mention');
