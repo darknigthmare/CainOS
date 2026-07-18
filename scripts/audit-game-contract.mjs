@@ -505,12 +505,12 @@ for (const [zone, kinds] of [[70, ['building', 'wave']], [71, ['stairs', 'candle
 }
 const canonRoomDefinitions = OS.getCircusCanonRoomDefinitions();
 const fpsZoneMax = OS.getCircusFpsZoneMax();
-const minimumFpsZoneMax = 219;
+const minimumFpsZoneMax = 244;
 if (!Number.isInteger(fpsZoneMax) || fpsZoneMax < minimumFpsZoneMax) {
   failures.push(`FPS: borne de zones ${fpsZoneMax}/${minimumFpsZoneMax} minimum`);
 }
 const canonRoomEntries = Object.entries(canonRoomDefinitions);
-const minimumCanonRoomCount = 109;
+const minimumCanonRoomCount = 134;
 if (canonRoomEntries.length < minimumCanonRoomCount) {
   failures.push(`FPS: ${canonRoomEntries.length}/${minimumCanonRoomCount} pieces canoniques ou balisees minimum`);
 }
@@ -1132,6 +1132,128 @@ for (const [zone, target] of [[44, 'doorbell'], [94, 'adminpass'], [96, 'jaxkey'
   if (!fixedProps.length || fixedProps.some(prop => OS.isCircusPropPortable(prop))) {
     failures.push(`EP7 FPS ${zone}: accessoire fixe ${target} encore ramassable`);
   }
+}
+const episodeEightCampaign = OS.getCircusFpsCampaignDefinition(8);
+const episodeEightExpectedZones = [
+  220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233,
+  234, 235, 236, 237, 238, 239, 240, 111, 112, 124, 241, 242, 118, 114,
+  115, 116, 117, 243, 244, 119
+];
+const episodeEightActualZones = (episodeEightCampaign?.stages || []).map(stage => stage.zone);
+if (episodeEightCampaign?.version !== 2) failures.push('EP8 FPS: version de campagne 2 absente');
+if (episodeEightCampaign?.stages?.length !== episodeEightExpectedZones.length) {
+  failures.push(`EP8 FPS: ${episodeEightCampaign?.stages?.length ?? 0}/${episodeEightExpectedZones.length} actes montres attendus`);
+}
+if (JSON.stringify(episodeEightActualZones) !== JSON.stringify(episodeEightExpectedZones)) {
+  failures.push(`EP8 FPS: chronologie de zones incorrecte (${episodeEightActualZones.join(', ')})`);
+}
+for (let zone = 220; zone <= 244; zone += 1) {
+  const room = canonRoomDefinitions[zone];
+  if (!room) {
+    failures.push(`EP8 FPS ${zone}: couche temporelle absente`);
+  } else if (!room.nonPhysical || (room.exits || []).length
+    || !['projection', 'memory', 'time-state', 'cut'].includes(room.layer)) {
+    failures.push(`EP8 FPS ${zone}: couche temporelle reliee au graphe physique`);
+  }
+}
+const episodeEightTargetContract = new Map([
+  [220, { trainingimage: 6 }],
+  [221, { redbluefusion: 1, firsttent: 1 }],
+  [222, { memberstation: 3 }],
+  [223, { reunionmemory: 1 }],
+  [224, { queeniefracture: 1, cellardrop: 1 }],
+  [225, { arrivalportal: 1 }],
+  [226, { redchoiceecho: 1 }],
+  [227, { groupcircle: 1 }],
+  [228, { faultvoice: 3 }],
+  [229, { godpulse: 1, redblueeye: 2 }],
+  [230, { adventurebrief: 1 }],
+  [231, { showpiano: 1, mouthseal: 3 }],
+  [232, { coerciongag: 6 }],
+  [233, { adventureportal: 3, brainextractor: 1 }],
+  [234, { shreddedtrace: 1, rapidcounter: 1 }],
+  [235, { cafestool: 6, stabbedreturn: 1 }],
+  [236, { kingersbucket: 1, darkcanopy: 1 }],
+  [237, { caorigin: 1, scratcharchive: 1 }],
+  [238, { plansigil: 1, exitdiagram: 1 }],
+  [239, { conjuredexit: 1 }],
+  [240, { dentalfloss: 1, redcar: 1 }],
+  [111, { bowlingrifle: 1, bowlingpin: 3 }],
+  [112, { humantree: 1, humanglob: 1 }],
+  [124, { portablepc: 1, calogo: 1 }],
+  [241, { tangledgroup: 1, absencecheck: 1 }],
+  [242, { multiarmpulse: 1, wallpin: 5 }],
+  [118, { crocodile: 1 }],
+  [114, { centipedetable: 1, mothersilhouette: 1 }],
+  [115, { paintedmasks: 1, memorytruck: 1 }],
+  [116, { blackmirror: 2, zooblepartpile: 1 }],
+  [117, { laughingshadow: 1, skinpeel: 1 }],
+  [243, { authlayer: 10, wackylockout: 1 }],
+  [244, { deletekey: 1, cainepopup: 1, bubblepopup: 1, purgepulse: 1 }],
+  [119, { voidhole: 3 }]
+]);
+for (const [zone, targets] of episodeEightTargetContract) {
+  const props = OS.getCircusZoneProps(zone);
+  for (const [target, expectedCount] of Object.entries(targets)) {
+    const count = getTargetCount(props, target);
+    if (count !== expectedCount) failures.push(`EP8 FPS ${zone}: ${target} ${count}/${expectedCount}`);
+  }
+}
+const episodeEightRosterContract = new Map([
+  [222, ['bizco', 'kinger', 'queenie', 'rattie', 'scratch', 'spike', 'wormo']],
+  [225, ['caine', 'kinger', 'ragatha']],
+  [228, ['bubble', 'caine']],
+  [230, ['caine', 'gangle', 'jax', 'kinger', 'pomni', 'ragatha', 'zooble']],
+  [235, ['gangle', 'jax', 'kinger', 'pomni', 'ragatha', 'zooble']],
+  [240, ['caine', 'jax']],
+  [241, ['bubble', 'caine', 'gangle', 'jax', 'pomni', 'ragatha', 'zooble']],
+  [242, ['caine', 'gangle', 'jax', 'pomni', 'ragatha', 'zooble']],
+  [243, ['kinger']],
+  [244, ['caine', 'kinger']],
+  [119, ['gangle', 'jax', 'kinger', 'pomni', 'ragatha', 'zooble']]
+]);
+for (const [zone, expected] of episodeEightRosterContract) {
+  const actual = OS.getCircusZoneSprites(zone).map(sprite => sprite.avatar || sprite.type).sort();
+  if (JSON.stringify(actual) !== JSON.stringify([...expected].sort())) {
+    failures.push(`EP8 FPS ${zone}: roster incorrect (${actual.join(', ')})`);
+  }
+}
+if (OS.getCircusZoneSprites(220).length || OS.getCircusZoneSprites(221).length) {
+  failures.push('EP8 FPS: la genese abstraite ne doit pas contenir de PNJ physiques');
+}
+if (OS.getCircusZoneSprites(225).some(sprite => (sprite.avatar || sprite.type) === 'pomni')) {
+  failures.push('EP8 FPS 225: Pomni apparait avant son arrivee dans le Cirque');
+}
+const jaxTormentSprites = OS.getCircusZoneSprites(117);
+if (!jaxTormentSprites.some(sprite => sprite.avatar === 'peeledjax')
+  || jaxTormentSprites.some(sprite => sprite.avatar === 'jax')) {
+  failures.push('EP8 FPS 117: etat temporaire peeled Jax absent ou remplace par Jax normal');
+}
+const deadTentProps = OS.getCircusZoneProps(119);
+const deadTentRoster = new Set(OS.getCircusZoneSprites(119).map(sprite => sprite.avatar || sprite.type));
+if (deadTentProps.some(prop => prop.kind === 'crate' || getCampaignTarget(prop) === 'stableform')
+  || deadTentRoster.has('caine') || deadTentRoster.has('bubble')) {
+  failures.push('EP8 FPS 119: etat final contamine par la reparation de Remember ou par Caine/Bubble');
+}
+if (JSON.stringify(canonRoomDefinitions[119]?.floorPalette) !== JSON.stringify(['#29292d', '#434349', '#050507'])
+  || JSON.stringify(canonRoomDefinitions[119]?.horizonPalette) !== JSON.stringify(['#4f4f55', '#161619'])) {
+  failures.push('EP8 FPS 119: palette monochrome du chapiteau mort absente');
+}
+const deadTentShell = deadTentProps.find(prop => prop.kind === 'tent');
+if (!deadTentShell || deadTentShell.color !== '#65656b' || deadTentShell.accent !== '#8d8d93'
+  || deadTentShell.doorColor !== '#4b4b50' || deadTentShell.flagColor !== '#6c6c72'
+  || deadTentShell.roofColorA !== '#56565c' || deadTentShell.roofColorB !== '#7a7a80') {
+  failures.push('EP8 FPS 119: coque du chapiteau mort encore coloree');
+}
+if (!Array.isArray(canonRoomDefinitions[121]?.floorPalette)
+  || !Array.isArray(canonRoomDefinitions[121]?.horizonPalette)) {
+  failures.push('EP9 FPS 121: palette monochrome du chapiteau detruit absente');
+}
+if (!OS.getCircusZoneProps(239).some(prop => getCampaignTarget(prop) === 'conjuredexit' && prop.kind === 'pilotexitdoor')) {
+  failures.push('EP8 FPS 239: porte EXIT du Pilote non reutilisee');
+}
+if (OS.getCircusZoneSprites(233).some(sprite => !sprite.silent && (sprite.avatar || sprite.type) !== 'caine')) {
+  failures.push('EP8 FPS 233: figurants du montage transformes en interlocuteurs actifs');
 }
 const legacyCandyStoryActors = new Set(['gummigoo', 'max', 'chad', 'loolilalu', 'fudge', 'pomni']);
 if (OS.getCircusZoneSprites(6).some(sprite => legacyCandyStoryActors.has(sprite.avatar || sprite.type))) {

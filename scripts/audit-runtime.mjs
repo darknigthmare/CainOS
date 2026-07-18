@@ -43,6 +43,12 @@ const expectedEpisodeSevenCheckpointAfters = [46, 100, 179, 269, 327, 397, 469, 
 if (JSON.stringify(episodeSevenCheckpointAfters) !== JSON.stringify(expectedEpisodeSevenCheckpointAfters)) {
   failures.push(`Checkpoints EP7 incorrects: ${episodeSevenCheckpointAfters.join(', ') || 'introuvables'}`);
 }
+const episodeEightCheckpointBlock = checkpointSection.match(/\n\s*8:\s*\[([\s\S]*?)\n\s*\],\s*\n\s*9:\s*\[/)?.[1] || '';
+const episodeEightCheckpointAfters = [...episodeEightCheckpointBlock.matchAll(/after:\s*(\d+)/g)].map(match => Number(match[1]));
+const expectedEpisodeEightCheckpointAfters = [65, 111, 195, 268, 349, 429, 584, 662];
+if (JSON.stringify(episodeEightCheckpointAfters) !== JSON.stringify(expectedEpisodeEightCheckpointAfters)) {
+  failures.push(`Checkpoints EP8 incorrects: ${episodeEightCheckpointAfters.join(', ') || 'introuvables'}`);
+}
 
 [
   'SPUDSY_BURGER_CUSTOMER',
@@ -188,8 +194,8 @@ if (JSON.stringify(episodeSevenCheckpointAfters) !== JSON.stringify(expectedEpis
   "name: 'RESTORED TENT / JAX PILLOW FORT'",
   'getCircusDormHallDoorProps',
   'getCircusNpcAnnexDoorProps',
-  "kind: 'lorebillboard', avatar: 'paintedmasks'",
-  "kind: 'lorebillboard', avatar: 'zoobleparts'",
+  "campaignTarget: 'paintedmasks', avatar: 'paintedmasks'",
+  "campaignTarget: 'zooblepartpile', avatar: 'zoobleparts'",
   "kind: 'lorebillboard', avatar: 'abigailbrooks'",
   "kind: 'lorebillboard', avatar: 'leeroymateo'",
   "kind: 'lorebillboard', avatar: 'jaxfather'",
@@ -340,7 +346,7 @@ if (duplicateIds.length) failures.push(`ID HTML DUPLIQUES: ${duplicateIds.join('
 if (!/campaigns\.length\s*!==\s*9/.test(app)) failures.push('Audit 9 campagnes absent');
 const zoneMaxMatch = app.match(/getCircusFpsZoneMax\(\)\s*\{\s*return\s+(\d+)\s*;/);
 const fpsZoneMax = zoneMaxMatch ? Number(zoneMaxMatch[1]) : Number.NaN;
-const minimumFpsZoneMax = 219;
+const minimumFpsZoneMax = 244;
 if (!Number.isInteger(fpsZoneMax) || fpsZoneMax < minimumFpsZoneMax) {
   failures.push(`Borne FPS ${Number.isFinite(fpsZoneMax) ? fpsZoneMax : 'introuvable'}/${minimumFpsZoneMax} minimum`);
 }
@@ -501,6 +507,9 @@ for (const marker of [
 if (!/7:\s*\{\s*title:\s*'Beach Episode',\s*version:\s*2,\s*steps:\s*\[/.test(app)) {
   failures.push('Campagne FPS EP7 versionnee absente');
 }
+if (!/8:\s*\{\s*title:\s*'hjsakldfhl',\s*version:\s*2,\s*steps:\s*\[/.test(app)) {
+  failures.push('Campagne FPS EP8 versionnee absente');
+}
 if (app.includes("campaignTarget: 'choicebutton'")) {
   failures.push('EP7 FPS: anciens choix sans couleur encore codes');
 }
@@ -512,6 +521,19 @@ for (const marker of ['RAGATHA TORMENT', 'GANGLE TORMENT', 'ZOOBLE TORMENT', 'JA
   if (!app.includes(marker)) failures.push(`Sous-espace EP8 absent: ${marker}`);
 }
 if (!app.includes("name: 'DEAD TENT / CAINE DELETED'")) failures.push('Etat mort du chapiteau absent');
+for (const marker of [
+  "name: 'EP8 GENESIS / RED CORE TRAINING'",
+  "name: 'EP8 OLD TENT / FIRST MEMBERS'",
+  "name: 'EP8 CAINE OFFICE / FAULT VOICES'",
+  "name: \"EP8 CROW'S NEST CAFE / SANDWICH IMPACT\"",
+  "name: 'EP8 MONSTROUS CAINE / WALL PIN'",
+  "name: 'EP8 KINGER FORT / TEN AUTH LAYERS'",
+  "campaignTarget: 'authlayer'",
+  "campaignTarget: 'deletekey'",
+  "campaignTarget: 'voidhole'"
+]) {
+  if (!app.includes(marker)) failures.push(`Passe FPS EP8 absente: ${marker}`);
+}
 if (!/CainOS_SAVE_V1/.test(app)) failures.push('Schema de sauvegarde absent');
 if (app.includes('CHARGEMENT DU NOYAU D\'ADMINISTRATION CHARLES')) failures.push('Boot Charles presente comme canon');
 if (app.includes("8: { title: 'REMEMBER'")) failures.push('Ancien titre FPS EP8 encore present');

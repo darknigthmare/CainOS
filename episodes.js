@@ -7122,14 +7122,14 @@ const EpisodeManager = {
       { after: 535, title: "Console et choix rouge de Jax", objective: "Traversez les adieux, lisez les fonctions des boutons rouge et bleu et survivez a la panique jusqu au coup de Jax sur le rouge.", mode: "dodge", goal: 10, duration: 22, target: "RED", hazard: "PANIC" }
     ],
     8: [
-      { after: 36, title: "Queenie dans le noir", objective: "Cliquez les fragments de presence pendant que Queenie rejoint Kinger dans le souvenir.", mode: "click", goal: 7, duration: 16, target: "QUEENIE", hazard: "STATIC" },
-      { after: 102, title: "Piece d'echecs", objective: "Reproduisez la sequence calme pour garder Kinger lucide pendant que le passe refait surface.", mode: "sequence", goal: 5, duration: 20, target: "KINGER", hazard: "PANIC" },
-      { after: 180, title: "Briefing de Caine", objective: "Reparez les dalles de scene pendant que Caine impose la nouvelle aventure.", mode: "repair", goal: 8, duration: 18, target: "STAGE", hazard: "RULE" },
-      { after: 260, title: "Pression du groupe", objective: "Evitez les signaux contradictoires pendant que les residents remettent Caine en question.", mode: "dodge", goal: 8, duration: 18, target: "GROUP", hazard: "NOISE" },
-      { after: 345, title: "C&A en surface", objective: "Cliquez les indices d'archive sans forcer les donnees encore verrouillees.", mode: "click", goal: 8, duration: 18, target: "C&A", hazard: "LOCK" },
-      { after: 450, title: "Console impossible", objective: "Reproduisez les commandes de Kinger pour faire remonter le code de Caine.", mode: "sequence", goal: 6, duration: 22, target: "CODE", hazard: "ERROR" },
-      { after: 560, title: "Caine refuse", objective: "Reparez les fragments du dialogue avant que Caine ne perde le controle du cadre.", mode: "repair", goal: 9, duration: 19, target: "CAINE", hazard: "GLITCH" },
-      { after: 662, title: "Avant le crash", objective: "Survivez au projecteur rouge et rassemblez les derniers fragments de Queenie avant la crise finale.", mode: "dodge", goal: 9, duration: 19, target: "MEMORY", hazard: "SCAN" }
+      { after: 65, title: "Genese, Kinger et Queenie", objective: "Reconstituez le point rouge, le point bleu et la rencontre de Queenie sans transformer le souvenir en retour physique.", mode: "click", goal: 9, duration: 20, target: "QUEENIE", hazard: "STATIC" },
+      { after: 111, title: "Arrivee de Ragatha", objective: "Remettez l arrivee de Ragatha dans l ordre et gardez la scene dans le passe du Cirque.", mode: "sequence", goal: 6, duration: 22, target: "RAGATHA", hazard: "PANIC" },
+      { after: 195, title: "Vivre ensemble", objective: "Reparez les liens du groupe apres le choix rouge sans valider une fausse sortie ni effacer leurs desaccords.", mode: "repair", goal: 9, duration: 20, target: "GROUP", hazard: "DENIAL" },
+      { after: 268, title: "Fracture de Caine", objective: "Evitez les accusations anonymes pendant que Caine passe du doute au delire de toute-puissance.", mode: "dodge", goal: 9, duration: 20, target: "CAINE", hazard: "VOICE" },
+      { after: 349, title: "The One Who's Running the Show", objective: "Synchronisez la chanson coercitive, ses changements de decor et les atteintes imposees au groupe.", mode: "sequence", goal: 8, duration: 24, target: "SHOW", hazard: "GLITCH" },
+      { after: 429, title: "Crow's Nest et seau de Kinger", objective: "Reparez le refuge du cafe, suivez le retour de Pomni et placez le seau avant la revelation C&A.", mode: "repair", goal: 10, duration: 22, target: "BUCKET", hazard: "IMPACT" },
+      { after: 584, title: "C&A, fausse sortie et diversions", objective: "Classez les revelations de Kinger, retrouvez l ordinateur et suivez les diversions sans confondre Caine avec un humain.", mode: "click", goal: 11, duration: 24, target: "C&A", hazard: "LOCK" },
+      { after: 662, title: "Confrontation avec Caine", objective: "Survivez a la confrontation collective et gardez Kinger hors du regard de Caine jusqu a la crise finale.", mode: "dodge", goal: 10, duration: 22, target: "GROUP", hazard: "CAINE" }
     ],
     9: [
       { after: 120, title: "Brain scans", objective: "Cliquez les fragments de verite pendant que Kinger explique les fichiers cerveau.", mode: "click", goal: 8, duration: 17, target: "SCAN", hazard: "DENIAL" },
