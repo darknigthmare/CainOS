@@ -31,6 +31,12 @@ const expectedEpisodeFiveCheckpointAfters = [75, 99, 160, 195, 301, 478, 600, 70
 if (JSON.stringify(episodeFiveCheckpointAfters) !== JSON.stringify(expectedEpisodeFiveCheckpointAfters)) {
   failures.push(`Checkpoints EP5 incorrects: ${episodeFiveCheckpointAfters.join(', ') || 'introuvables'}`);
 }
+const episodeSixCheckpointBlock = checkpointSection.match(/\n\s*6:\s*\[([\s\S]*?)\n\s*\],\s*\n\s*7:\s*\[/)?.[1] || '';
+const episodeSixCheckpointAfters = [...episodeSixCheckpointBlock.matchAll(/after:\s*(\d+)/g)].map(match => Number(match[1]));
+const expectedEpisodeSixCheckpointAfters = [124, 246, 440, 487, 624, 689, 863, 935];
+if (JSON.stringify(episodeSixCheckpointAfters) !== JSON.stringify(expectedEpisodeSixCheckpointAfters)) {
+  failures.push(`Checkpoints EP6 incorrects: ${episodeSixCheckpointAfters.join(', ') || 'introuvables'}`);
+}
 
 [
   'SPUDSY_BURGER_CUSTOMER',
@@ -328,7 +334,7 @@ if (duplicateIds.length) failures.push(`ID HTML DUPLIQUES: ${duplicateIds.join('
 if (!/campaigns\.length\s*!==\s*9/.test(app)) failures.push('Audit 9 campagnes absent');
 const zoneMaxMatch = app.match(/getCircusFpsZoneMax\(\)\s*\{\s*return\s+(\d+)\s*;/);
 const fpsZoneMax = zoneMaxMatch ? Number(zoneMaxMatch[1]) : Number.NaN;
-const minimumFpsZoneMax = 170;
+const minimumFpsZoneMax = 191;
 if (!Number.isInteger(fpsZoneMax) || fpsZoneMax < minimumFpsZoneMax) {
   failures.push(`Borne FPS ${Number.isFinite(fpsZoneMax) ? fpsZoneMax : 'introuvable'}/${minimumFpsZoneMax} minimum`);
 }
@@ -428,6 +434,31 @@ for (const marker of [
 }
 if (!/4:\s*\{\s*title:\s*'Fast Food Masquerade',\s*version:\s*2,\s*steps:\s*\[/.test(app)) {
   failures.push('Campagne FPS EP4 versionnee absente');
+}
+for (const marker of [
+  "name: 'EP6 MAIN TENT / AWARDS TEASE'",
+  "name: 'EP6 PRIVATE TRUST BOX'",
+  "name: 'EP6 TEAM FORMATION / FIVE MINUTES'",
+  "name: 'EP6 TEAM PEW PEW / BUTTERFLY HEAL'",
+  "name: 'EP6 RESIDENT HALL / BAD GUYS TALK'",
+  "name: 'EP6 TEAM UNMASKED / SNIPER BALCONY'",
+  "name: 'EP6 MAIN TENT / FIRST CROSSFIRE'",
+  "name: 'EP6 LOSER CORNER / AQUARIUM TALK'",
+  "name: 'EP6 COLORED PIPE CHASE'",
+  "name: 'EP6 ZOOBLE BOX / FOUR-ARM SIEGE'",
+  "name: 'EP6 FINAL BALCONY SHOOTOUT'",
+  "name: 'EP6 POMNI JAX CONFRONTATION'",
+  "name: 'EP6 FAVORITE CHARACTER AWARDS / MING WIN'",
+  "campaignTarget: 'butterflyheal'",
+  "campaignTarget: 'flagderringer'",
+  "campaignTarget: 'tommygun'",
+  "campaignTarget: 'favoriteaward'",
+  "this.advanceCircusCampaign('use', prop.campaignTarget || prop.kind, 1, interactionId)"
+]) {
+  if (!app.includes(marker)) failures.push(`Passe FPS EP6 absente: ${marker}`);
+}
+if (!/6:\s*\{\s*title:\s*'They All Get Guns',\s*version:\s*2,\s*steps:\s*\[/.test(app)) {
+  failures.push('Campagne FPS EP6 versionnee absente');
 }
 if (!/36:\s*\{\s*name:\s*\"SPUDSY'S BATHROOM \/ MENTIONED\"[\s\S]*?nonPhysical:\s*true/.test(app)) {
   failures.push('Sanitaires Spudsy encore materialises malgre leur simple mention');

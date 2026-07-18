@@ -2493,7 +2493,28 @@ const OS = {
       167: { x: center.x, z: center.z + 3.0, a: -Math.PI / 2, revision: 1 },
       168: { x: center.x, z: center.z + 2.6, a: -Math.PI / 2, revision: 1 },
       169: { x: center.x, z: center.z + 2.6, a: -Math.PI / 2, revision: 1 },
-      170: { x: center.x, z: center.z + 2.4, a: -Math.PI / 2, revision: 1 }
+      170: { x: center.x, z: center.z + 2.4, a: -Math.PI / 2, revision: 1 },
+      171: { x: center.x, z: center.z + 2.5, a: -Math.PI / 2, revision: 1 },
+      172: { x: center.x, z: center.z + 1.8, a: -Math.PI / 2, revision: 1 },
+      173: { x: center.x, z: center.z + 2.6, a: -Math.PI / 2, revision: 1 },
+      174: { x: center.x, z: center.z + 2.2, a: -Math.PI / 2, revision: 1 },
+      175: { x: center.x, z: center.z + 2.4, a: -Math.PI / 2, revision: 1 },
+      176: { x: center.x, z: center.z + 2.5, a: -Math.PI / 2, revision: 1 },
+      177: { x: center.x, z: center.z + 2.7, a: -Math.PI / 2, revision: 1 },
+      178: { x: center.x, z: center.z + 2.0, a: -Math.PI / 2, revision: 1 },
+      179: { x: center.x, z: center.z + 2.0, a: -Math.PI / 2, revision: 1 },
+      180: { x: center.x, z: center.z + 2.1, a: -Math.PI / 2, revision: 1 },
+      181: { x: center.x, z: center.z + 2.7, a: -Math.PI / 2, revision: 1 },
+      182: { x: center.x, z: center.z + 2.2, a: -Math.PI / 2, revision: 1 },
+      183: { x: center.x, z: center.z + 2.6, a: -Math.PI / 2, revision: 1 },
+      184: { x: center.x, z: center.z + 2.0, a: -Math.PI / 2, revision: 1 },
+      185: { x: center.x, z: center.z + 2.7, a: -Math.PI / 2, revision: 1 },
+      186: { x: center.x, z: center.z + 2.2, a: -Math.PI / 2, revision: 1 },
+      187: { x: center.x, z: center.z + 2.4, a: -Math.PI / 2, revision: 1 },
+      188: { x: center.x, z: center.z + 2.2, a: -Math.PI / 2, revision: 1 },
+      189: { x: center.x, z: center.z + 2.8, a: -Math.PI / 2, revision: 1 },
+      190: { x: center.x, z: center.z + 1.7, a: -Math.PI / 2, revision: 1 },
+      191: { x: center.x, z: center.z + 2.8, a: -Math.PI / 2, revision: 1 }
     };
     return authored[zoneId] || null;
   },
@@ -3298,54 +3319,224 @@ const OS = {
           ]
         }
       ] },
-      6: { title: 'They All Get Guns', steps: [
+      6: { title: 'They All Get Guns', version: 2, steps: [
         {
           title: 'Zooble cache dans l alcove', zone: 122, route: [122],
           action: 'talk', target: 'zooble',
-          guide: 'Trouvez Zooble dans l alcove bleue, inspectez le pot et revenez vers le briefing sans forcer sa participation.',
-          requirements: [{ action: 'look', target: 'plantpot', zone: 122, count: 1 }]
+          guide: 'Trouvez Zooble dans l alcove bleue derriere le pot suspendu, puis laissez Jax prevenir Caine sans transformer la cachette en chambre.',
+          requirements: [
+            { action: 'look', target: 'plantpot', zone: 122, count: 1 },
+            { action: 'talk', target: 'jax', zone: 122, count: 1 }
+          ]
         },
         {
-          title: 'Briefing de l aventure armee', zone: 2, route: [2], entryMode: 'cainecut',
+          title: 'Annonce, Ming et exercices rejetes', zone: 171, route: [171], entryMode: 'timeshift',
           action: 'talk', target: 'caine',
-          guide: 'Ecoutez les regles, relevez les trois vies et gardez les armes comme accessoires non letaux de l aventure.',
-          requirements: [{ action: 'look', target: 'gunbrief', zone: 2, count: 1 }]
+          guide: 'Rejoignez la piste, relevez l annonce des Favorite Character Awards, identifiez Ming et les exercices proposes avant que Caine ne fabrique la salle privee.',
+          requirements: [
+            { action: 'look', target: 'awardtease', zone: 171, count: 1 },
+            { action: 'talk', target: 'ming', zone: 171, count: 1 },
+            { action: 'look', target: 'exerciseboard', zone: 171, count: 1 }
+          ]
         },
         {
-          title: 'Exercice prive de confiance', zone: 90, route: [90], entryMode: 'cainecut',
-          action: 'use', target: 'table',
-          guide: 'Terminez l exercice de confiance et confirmez les trois coeurs avant l epreuve publique.',
-          requirements: [{ action: 'look', target: 'heart', zone: 90, count: 3, distinct: true }]
+          title: 'Salle privee et arme chargee', zone: 172, route: [172], entryMode: 'cainecut',
+          action: 'use', target: 'loadedgun',
+          guide: 'Inspectez la piece insonorisee et suivez les deux roles de l exercice sans tirer; les trois coeurs ne sont annonces qu apres son abandon.',
+          requirements: [
+            { action: 'look', target: 'privacywall', zone: 172, count: 2, distinct: true },
+            { action: 'talk', target: 'caine', zone: 172, count: 1 }
+          ]
         },
         {
-          title: 'Bataille dans le chapiteau', zone: 13, route: [13], entryMode: 'cainecut',
-          action: 'use', target: 'target', count: 3,
-          guide: 'Traversez la bataille d equipe dans le decor du Tent, preserveez les vies et suivez les tensions de Jax.',
-          requirements: [{ action: 'talk', target: 'jax', zone: 13, count: 1 }, { action: 'survive', target: 'battle', zone: 13, count: 4 }]
+          title: 'Formation des trois equipes', zone: 173, route: [173], entryMode: 'timeshift',
+          action: 'look', target: 'teamcard', count: 3, distinct: true,
+          guide: 'Validez Team Pew Pew, Team Unmasked et Team Bad Guys, puis lancez le compte a rebours de cinq minutes avec trois vies par joueur sauf le coeur deja perdu de Ragatha.',
+          requirements: [
+            { action: 'use', target: 'countdown', zone: 173, count: 1 },
+            { action: 'look', target: 'ragathalife', zone: 173, count: 1 },
+            { action: 'talk', target: 'gangle', zone: 173, count: 1 }
+          ]
         },
         {
-          title: 'Piece sombre', zone: 123, route: [123], entryMode: 'cainecut',
-          action: 'use', target: 'spotlight',
-          guide: 'Stabilisez la seule source de lumiere et traversez la piece sombre sans transformer les ombres en nouveaux personnages.',
-          requirements: [{ action: 'survive', target: 'darkroom', zone: 123, count: 3 }]
+          title: 'Team Pew Pew et le papillon', zone: 174, route: [174], entryMode: 'timeshift',
+          action: 'use', target: 'butterflyheal',
+          guide: 'Suivez Kinger et Ragatha dans les premiers couverts, restaurez le coeur manquant avec le papillon improvise et gardez cette regle distincte des annonces de Caine.',
+          requirements: [
+            { action: 'look', target: 'missingheart', zone: 174, count: 1 },
+            { action: 'talk', target: 'kinger', zone: 174, count: 1 },
+            { action: 'talk', target: 'ragatha', zone: 174, count: 1 }
+          ]
         },
         {
-          title: 'Pipe run et Loser Corner', zone: 30, route: [123, 29, 28, 30],
+          title: 'Bad Guys dans le couloir residentiel', zone: 175, route: [175], entryMode: 'timeshift',
+          action: 'use', target: 'shotcan',
+          guide: 'Traversez le couloir residentiel avec Jax et Pomni, testez le tir sur la boite puis ecoutez leur discussion sur les archetypes avant l apparition de Pomni the Evil.',
+          requirements: [
+            { action: 'look', target: 'hallcover', zone: 175, count: 3, distinct: true },
+            { action: 'talk', target: 'jax', zone: 175, count: 1 },
+            { action: 'talk', target: 'pomni', zone: 175, count: 1 }
+          ]
+        },
+        {
+          title: 'Perchoir de Team Unmasked', zone: 176, route: [176], entryMode: 'timeshift',
+          action: 'use', target: 'sniperposition',
+          guide: 'Montez sur le balcon de blocs avec Zooble et Gangle, stabilisez le fusil de precision et conservez la rambarde comme couvert physique.',
+          requirements: [
+            { action: 'look', target: 'balconyrail', zone: 176, count: 2, distinct: true },
+            { action: 'talk', target: 'zooble', zone: 176, count: 1 },
+            { action: 'talk', target: 'gangle', zone: 176, count: 1 }
+          ]
+        },
+        {
+          title: 'Premier feu croise et Derringer', zone: 177, route: [177], entryMode: 'timeshift',
+          action: 'use', target: 'flagderringer',
+          guide: 'Traversez les blocs, relevez la fausse arme BOOM de Ragatha et suivez la perte de ses vies sans attribuer de blessure permanente.',
+          requirements: [
+            { action: 'survive', target: 'crossfire', zone: 177, count: 4 },
+            { action: 'look', target: 'ragathahearts', zone: 177, count: 1 },
+            { action: 'talk', target: 'jax', zone: 177, count: 1 }
+          ]
+        },
+        {
+          title: 'Unmasked derriere les couverts', zone: 178, route: [178], entryMode: 'timeshift',
+          action: 'look', target: 'ak74',
+          guide: 'Retrouvez l AK-74, confiez le masque de comedie a Zooble et laissez leur echange sur le choix de s aimer rester un moment calme.',
+          requirements: [
+            { action: 'use', target: 'maskkeeper', zone: 178, count: 1 },
+            { action: 'talk', target: 'zooble', zone: 178, count: 1 },
+            { action: 'talk', target: 'gangle', zone: 178, count: 1 }
+          ]
+        },
+        {
+          title: 'Piece sombre et ricochet de Kinger', zone: 179, route: [179], entryMode: 'timeshift',
+          action: 'use', target: 'lighter',
+          guide: 'Eclairez la piece au briquet, rechargez le barillet et observez le ricochet de Kinger qui provoque sa propre elimination.',
+          requirements: [
+            { action: 'use', target: 'ricochet', zone: 179, count: 3, distinct: true },
+            { action: 'survive', target: 'darkcrossfire', zone: 179, count: 3 },
+            { action: 'talk', target: 'kinger', zone: 179, count: 1 }
+          ]
+        },
+        {
+          title: 'Ragatha et Kinger au Loser Corner', zone: 180, route: [180], entryMode: 'timeshift',
           action: 'look', target: 'aquariumwindow',
-          guide: 'Suivez les tubes jusqu au Loser Corner et observez l aquarium comme un decor du chapiteau, pas comme la zone de Remember.',
-          requirements: [{ action: 'use', target: 'ring', zone: 29, count: 2, distinct: true }]
+          guide: 'Restez devant le grand aquarium, relevez le tournage de Bubble et ecoutez Kinger aider Ragatha sans transformer ce coin en aquarium de Remember.',
+          requirements: [
+            { action: 'use', target: 'bubblecamera', zone: 180, count: 1 },
+            { action: 'talk', target: 'ragatha', zone: 180, count: 1 },
+            { action: 'talk', target: 'kinger', zone: 180, count: 1 }
+          ]
         },
         {
-          title: 'Zooble Box et flashbang', zone: 48, route: [30, 28, 20, 48],
-          action: 'use', target: 'flashbang',
-          guide: 'Rejoignez la chambre de Zooble, inspectez sa boite de pieces et terminez l action du flashbang.',
-          requirements: [{ action: 'look', target: 'zooblebox', zone: 48, count: 1 }]
+          title: 'Poursuite dans les tubes', zone: 181, route: [181], entryMode: 'timeshift',
+          action: 'use', target: 'tommygun',
+          guide: 'Suivez Team Unmasked dans les conduits colores, franchissez trois anneaux et lancez la riposte au Tommy gun.',
+          requirements: [
+            { action: 'use', target: 'piperoute', zone: 181, count: 3, distinct: true },
+            { action: 'survive', target: 'pipechase', zone: 181, count: 4 },
+            { action: 'talk', target: 'gangle', zone: 181, count: 1 }
+          ]
         },
         {
-          title: 'Awards puis rencontre aux sanitaires', zone: 92, route: [48, 20, 28, 29, 38, 91, 92],
-          action: 'talk', target: 'disappearingguy',
-          guide: 'Assistez d abord aux Favorite Character Awards, puis suivez Jax jusque dans les sanitaires du theatre.',
-          requirements: [{ action: 'use', target: 'scoreboard', zone: 38, count: 1 }, { action: 'talk', target: 'caine', zone: 38, count: 1 }]
+          title: 'Tir de Pomni et masque brise', zone: 182, route: [182], entryMode: 'timeshift',
+          action: 'use', target: 'snipershot',
+          guide: 'Retrouvez la cartouche de precision sans fusil, suivez le tir de Pomni puis relevez le masque de comedie brise et le sourire satisfait de Gangle.',
+          requirements: [
+            { action: 'look', target: 'brokencomedymask', zone: 182, count: 1 },
+            { action: 'look', target: 'collapsedpipe', zone: 182, count: 1 },
+            { action: 'talk', target: 'gangle', zone: 182, count: 1 }
+          ]
+        },
+        {
+          title: 'Portes des anciens membres', zone: 183, route: [183], entryMode: 'timeshift',
+          action: 'look', target: 'archiveplate', count: 3, distinct: true,
+          guide: 'Suivez Jax et Pomni dans le couloir ou les portes Mannequin, Kaufmo et Ribbit sont visibles, puis atteignez la porte verrouillee de Zooble.',
+          requirements: [
+            { action: 'use', target: 'zooblelock', zone: 183, count: 1 },
+            { action: 'talk', target: 'jax', zone: 183, count: 1 }
+          ]
+        },
+        {
+          title: 'Siege de la Zooble Box', zone: 184, route: [184], entryMode: 'timeshift',
+          action: 'use', target: 'zoobleweapon', count: 4, distinct: true,
+          guide: 'Inspectez les quatre bras armes de Zooble, la cle de Jax et la sequence Daisy Bell avant de declencher le flashbang.',
+          requirements: [
+            { action: 'look', target: 'daisykey', zone: 184, count: 1 },
+            { action: 'use', target: 'flashbang', zone: 184, count: 1 },
+            { action: 'talk', target: 'zooble', zone: 184, count: 1 }
+          ]
+        },
+        {
+          title: 'Duel final sur le balcon', zone: 185, route: [185], entryMode: 'timeshift',
+          action: 'look', target: 'discardedweapon', count: 4, distinct: true,
+          guide: 'Reconstituez le balcon, faites tomber les quatre armes de Zooble puis utilisez la derniere cartouche de precision avant son elimination.',
+          requirements: [
+            { action: 'use', target: 'finalsniper', zone: 185, count: 1 },
+            { action: 'talk', target: 'pomni', zone: 185, count: 1 },
+            { action: 'talk', target: 'jax', zone: 185, count: 1 }
+          ]
+        },
+        {
+          title: 'Deux gagnants et une trahison refusee', zone: 186, route: [186], entryMode: 'timeshift',
+          action: 'look', target: 'twowinners',
+          guide: 'Laissez Pomni celebrer leur victoire puis suivez le refus de Jax de rester une equipe sans forcer le joueur a tirer.',
+          requirements: [
+            { action: 'use', target: 'betrayalprompt', zone: 186, count: 1 },
+            { action: 'talk', target: 'pomni', zone: 186, count: 1 },
+            { action: 'talk', target: 'jax', zone: 186, count: 1 }
+          ]
+        },
+        {
+          title: 'Confrontation Pomni et Jax', zone: 187, route: [187], entryMode: 'timeshift',
+          action: 'survive', target: 'duofight', count: 5,
+          guide: 'Traversez la dispute et la bagarre sans inventer de reconciliation; relevez la reference aux funerailles de Kaufmo puis la demande finale de Jax.',
+          requirements: [
+            { action: 'look', target: 'funeralmemory', zone: 187, count: 1 },
+            { action: 'talk', target: 'pomni', zone: 187, count: 1 },
+            { action: 'talk', target: 'jax', zone: 187, count: 1 }
+          ]
+        },
+        {
+          title: 'Hall du theatre et accord differe', zone: 188, route: [188], entryMode: 'timeshift',
+          action: 'talk', target: 'pomni',
+          guide: 'Suivez le retour au theatre, laissez Pomni et Ragatha reporter leur conversation apres le show puis ouvrez les portes de l auditorium.',
+          requirements: [
+            { action: 'talk', target: 'ragatha', zone: 188, count: 1 },
+            { action: 'use', target: 'auditoriumdoor', zone: 188, count: 1 },
+            { action: 'look', target: 'awardposter', zone: 188, count: 1 }
+          ]
+        },
+        {
+          title: 'Ouverture des Favorite Character Awards', zone: 189, route: [189], entryMode: 'timeshift',
+          action: 'talk', target: 'caine',
+          guide: 'Validez la scene rouge, le titre dore, le comite et les mentions honorables avant que Jax ne quitte la salle.',
+          requirements: [
+            { action: 'talk', target: 'committeemember', zone: 189, count: 1 },
+            { action: 'look', target: 'awardtitle', zone: 189, count: 1 },
+            { action: 'use', target: 'honorablementions', zone: 189, count: 1 }
+          ]
+        },
+        {
+          title: 'Jax aux sanitaires', zone: 190, route: [190], entryMode: 'timeshift',
+          action: 'look', target: 'bathroommirror',
+          guide: 'Suivez Jax dans les sanitaires, relevez le battement et le sifflement auditif puis laissez Disappearing Guy interrompu avant son premier mot.',
+          requirements: [
+            { action: 'use', target: 'toiletstall', zone: 190, count: 1 },
+            { action: 'talk', target: 'jax', zone: 190, count: 1 },
+            { action: 'talk', target: 'disappearingguy', zone: 190, count: 1 }
+          ]
+        },
+        {
+          title: 'Ming gagne et Caine glitche', zone: 191, route: [191], entryMode: 'timeshift',
+          action: 'use', target: 'favoriteaward',
+          guide: 'Attribuez le prix a Ming, ecoutez sa correction puis constatez le feedback glitche de Caine avant d ouvrir le portail de retour.',
+          requirements: [
+            { action: 'talk', target: 'ming', zone: 191, count: 1 },
+            { action: 'look', target: 'cainevote', zone: 191, count: 1 },
+            { action: 'look', target: 'finalglitch', zone: 191, count: 1 },
+            { action: 'use', target: 'returnportal', zone: 191, count: 1 }
+          ]
         }
       ] },
       7: { title: 'Beach Episode', steps: [
@@ -4010,6 +4201,94 @@ const OS = {
       170: [
         { id: 'untitled-final-score', speaker: 'Caine', text: 'Victoire des Big Tops! Retour au Tent!', avatar: 'caine', duration: 5000 },
         { id: 'untitled-unknown-chaos', speaker: 'CainOS', channel: 'system', text: 'SIGNAL NON IDENTIFIE: aucun nom ni profil ne peut etre attribue a la forme du chaos final.', duration: 5200, danger: true }
+      ],
+      122: [
+        { id: 'guns-zooble-hiding', speaker: 'Zooble', text: 'Je ne suis pas dans ma chambre. Caine vient justement y verifier ce que je fais.', avatar: 'zooble', duration: 5200 },
+        { id: 'guns-jax-found-zooble', speaker: 'Jax', text: 'Trouve. Je vais prevenir Caine avant que ce pot devienne une vraie cachette.', avatar: 'jax', duration: 5000 }
+      ],
+      171: [
+        { id: 'guns-awards-tease', speaker: 'Caine', text: 'Les Favorite Character Awards arrivent. Il nous faut une aventure courte qui montre vos forces au comite!', avatar: 'caine', duration: 5600 },
+        { id: 'guns-ming-introduction', speaker: 'Ming', text: 'Je suis Ming. J ai ete cree uniquement pour rendre ce jeu de mots possible.', avatar: 'ming', duration: 5200 }
+      ],
+      172: [
+        { id: 'guns-private-room-rule', speaker: 'Caine', text: 'Dans cette piece, personne dehors ne peut vous voir ni vous entendre. Le second role doit faire confiance au premier.', avatar: 'caine', duration: 6200 },
+        { id: 'guns-private-room-status', speaker: 'CainOS', channel: 'system', text: 'SALLE PRIVEE: isolation de scene active. Les trois vies ne font pas encore partie de cette premiere regle.', duration: 5200 }
+      ],
+      173: [
+        { id: 'guns-team-countdown', speaker: 'Caine', text: 'Trois vies chacun, deux par equipe et cinq minutes avant le free-for-all!', avatar: 'caine', duration: 5600 },
+        { id: 'guns-gangle-team-choice', speaker: 'Gangle', text: 'Je choisis Zooble. Cette fois, je ne reste pas automatiquement avec Jax.', avatar: 'gangle', duration: 5200 }
+      ],
+      174: [
+        { id: 'guns-butterfly-heal', speaker: 'Kinger', text: 'C est un papillon. Il restaure la vie de Ragatha parce que je viens de decider que c est sa fonction.', avatar: 'kinger', duration: 5600 },
+        { id: 'guns-ragatha-heart', speaker: 'Ragatha', text: 'Ce coeur manquait deja avant que nous commencions a chercher les armes.', avatar: 'ragatha', duration: 5200 }
+      ],
+      175: [
+        { id: 'guns-jax-archetypes', speaker: 'Jax', text: 'Dans ce monde, tout le monde finit par tomber dans son archetype. Moi, je choisis le mien.', avatar: 'jax', duration: 5600 },
+        { id: 'guns-pomni-evil', speaker: 'Pomni', text: 'Alors, pour aujourd hui seulement, je vais essayer d etre Pomni the Evil.', avatar: 'pomni', duration: 5200 }
+      ],
+      176: [
+        { id: 'guns-zooble-sniper', speaker: 'Zooble', text: 'Le perchoir donne sur la piste. Reste derriere la rambarde pendant que je couvre l angle.', avatar: 'zooble', duration: 5200 },
+        { id: 'guns-gangle-balcony', speaker: 'Gangle', text: 'Je reste en hauteur tant que les tirs passent sous le balcon.', avatar: 'gangle', duration: 4800 }
+      ],
+      177: [
+        { id: 'guns-ragatha-decoy', speaker: 'Ragatha', text: 'Ce Derringer ne tire qu un drapeau BOOM. J ai besoin d un vrai couvert.', avatar: 'ragatha', duration: 5200, danger: true },
+        { id: 'guns-jax-crossfire', speaker: 'Jax', text: 'Je prends Ragatha. Pomni poursuit Kinger.', avatar: 'jax', duration: 4800, danger: true }
+      ],
+      178: [
+        { id: 'guns-zooble-self-choice', speaker: 'Zooble', text: 'Tu dois choisir de t aimer, meme quand ce choix ne parait pas naturel.', avatar: 'zooble', duration: 5600 },
+        { id: 'guns-gangle-mask-safe', speaker: 'Gangle', text: 'Garde mon masque de comedie. Je veux qu il survive au moins jusqu au Tommy gun.', avatar: 'gangle', duration: 5200 }
+      ],
+      179: [
+        { id: 'guns-kinger-ricochet', speaker: 'Kinger', text: 'Preparez-vous pour mon ricochet super move!', avatar: 'kinger', duration: 5000, danger: true },
+        { id: 'guns-dark-room-rule', speaker: 'CainOS', channel: 'system', text: 'PIECE SOMBRE: le briquet revele la sortie. Le ricochet elimine Kinger lui-meme.', duration: 5200 }
+      ],
+      180: [
+        { id: 'guns-kinger-space', speaker: 'Kinger', text: 'Donner de l espace a quelqu un ne signifie pas l abandonner. Il faut aussi te proteger.', avatar: 'kinger', duration: 6000 },
+        { id: 'guns-ragatha-loser-corner', speaker: 'Ragatha', text: 'Je veux aider tout le monde, mais je finis par croire que chacun me deteste.', avatar: 'ragatha', duration: 5600 }
+      ],
+      181: [
+        { id: 'guns-gangle-tommy', speaker: 'Gangle', text: 'Le Tommy gun est enfin la. Maintenant, il faut tenir ce conduit!', avatar: 'gangle', duration: 5000, danger: true },
+        { id: 'guns-pipe-route', speaker: 'Zooble', text: 'Le prochain tube est long. On court avant qu ils nous rattrapent.', avatar: 'zooble', duration: 5000 }
+      ],
+      182: [
+        { id: 'guns-gangle-eliminated', speaker: 'Gangle', text: 'Mon masque est brise, mais j ai pu utiliser le Tommy gun avant de sortir.', avatar: 'gangle', duration: 5400 },
+        { id: 'guns-pipe-collapse', speaker: 'CainOS', channel: 'system', text: 'CONDUIT EFFONDRE: le tir de precision de Pomni valide l elimination de Gangle.', duration: 5000, danger: true }
+      ],
+      183: [
+        { id: 'guns-jax-old-doors', speaker: 'Jax', text: 'Mannequin, Kaufmo, Ribbit... La porte de Zooble est plus loin et j en ai la cle.', avatar: 'jax', duration: 5600 },
+        { id: 'guns-old-door-status', speaker: 'CainOS', channel: 'system', text: 'PLAQUES VISIBLES: ces anciens membres ne redeviennent pas des residents actifs.', duration: 5200 }
+      ],
+      184: [
+        { id: 'guns-zooble-four-arms', speaker: 'Zooble', text: 'Quatre bras, quatre armes. Cette fois, entrer avec une cle ne suffira pas.', avatar: 'zooble', duration: 5400, danger: true },
+        { id: 'guns-daisy-flashbang', speaker: 'Pomni', text: 'Daisy Bell couvre le bruit juste avant le flashbang.', avatar: 'pomni', duration: 5000 }
+      ],
+      185: [
+        { id: 'guns-pomni-disarm', speaker: 'Pomni', text: 'Je retire les armes une par une. Jax garde le dernier angle.', avatar: 'pomni', duration: 5200, danger: true },
+        { id: 'guns-zooble-last-heart', speaker: 'Zooble', text: 'Bon. C est la fin de cette manche. On se retrouve au Loser Corner.', avatar: 'zooble', duration: 5200 }
+      ],
+      186: [
+        { id: 'guns-pomni-two-winners', speaker: 'Pomni', text: 'Nous avons gagne ensemble. Nous pouvons simplement rester deux gagnants.', avatar: 'pomni', duration: 5400 },
+        { id: 'guns-jax-betrayal', speaker: 'Jax', text: 'Nous ne sommes pas une equipe. Si tu veux gagner seule, tire.', avatar: 'jax', duration: 5200 }
+      ],
+      187: [
+        { id: 'guns-pomni-funeral', speaker: 'Pomni', text: 'Tu refuses les funerailles parce que montrer une emotion te fait peur.', avatar: 'pomni', duration: 5600 },
+        { id: 'guns-jax-stop-looking', speaker: 'Jax', text: 'Il n y a rien de plus a trouver. Alors arrete de chercher.', avatar: 'jax', duration: 5600 }
+      ],
+      188: [
+        { id: 'guns-pomni-ragatha-later', speaker: 'Pomni', text: 'Nous parlerons apres le show.', avatar: 'pomni', duration: 4600 },
+        { id: 'guns-ragatha-later', speaker: 'Ragatha', text: 'D accord. Apres la ceremonie.', avatar: 'ragatha', duration: 4600 }
+      ],
+      189: [
+        { id: 'guns-awards-opening', speaker: 'Caine', text: 'Bienvenue aux Favorite Character Awards! Merci au comite, puis place aux mentions honorables!', avatar: 'caine', duration: 6000 },
+        { id: 'guns-committee-reply', speaker: 'Committee Member', text: 'Le comite a examine les candidats et valide les resultats.', avatar: 'committeemember', duration: 5000 }
+      ],
+      190: [
+        { id: 'guns-jax-bathroom', speaker: 'Jax', text: 'Le show continue dehors. Ici, le miroir et ce sifflement sont deja assez bruyants.', avatar: 'jax', duration: 5400 },
+        { id: 'guns-disappearing-guy-bathroom', speaker: 'Disappearing Guy', text: 'So--', avatar: 'disappearingguy', duration: 2600 }
+      ],
+      191: [
+        { id: 'guns-ming-wins', speaker: 'Ming', text: 'Tu n aurais pas du supposer que le prix etait pour toi. Maintenant, nous avons tous les deux l air ridicules.', avatar: 'ming', duration: 6200 },
+        { id: 'guns-caine-final-glitch', speaker: 'CainOS', channel: 'system', text: 'FEEDBACK GLITCHE: Caine consulte combien de votes lui etaient destines. Aucun autre gagnant ne remplace Ming.', duration: 5600, danger: true }
       ]
     };
     return events[zoneId] || [];
@@ -4353,7 +4632,7 @@ const OS = {
   },
 
   getCircusFpsZoneMax() {
-    return 170;
+    return 191;
   },
 
   getCircusCanonRoomDefinitions() {
@@ -6478,6 +6757,483 @@ const OS = {
           { name: 'Baseball Gangle', type: 'gangle', avatar: 'baseballgangle', aliases: ['gangle'], x: 2.6, z: -3.6, color: '#d84747' }
         ],
         objective: scan('VALIDER LE SCORE PUIS LE PORTAIL', ['scoreboard', 'target', 'caineportal'], 'caine')
+      },
+      171: {
+        name: 'EP6 MAIN TENT / AWARDS TEASE', short: 'ANNONCE EP6',
+        detail: 'Etat du chapiteau apres la decouverte de Zooble: Caine annonce les awards, propose plusieurs exercices et cree Ming pour illustrer un jeu de mots.',
+        color: '#d63a42', floor: '#f0d36f', ceiling: '#8b2342', motif: 'circus', size: 25,
+        gateEpisode: 6, gateSubepisode: 0, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'ring', x: 0, z: -4.2, color: '#ffd84a', label: 'Piste centrale du briefing' },
+          { kind: 'scoreboard', campaignTarget: 'awardtease', x: 0, z: -6.4, color: '#ffd84a', label: 'Favorite Character Awards / annonce' },
+          { kind: 'archive', campaignTarget: 'exerciseboard', x: -2.2, z: -1.35, color: '#7df0ff', label: '400 Meter Vertical Skedaddle et exercices rejetes' },
+          { kind: 'card', x: 2.2, z: -1.35, color: '#f7f7f7', label: 'Ming cree pour le jeu de mots de Caine' },
+          { kind: 'toyblock', x: -3.6, z: -4.8, width: 1.6, depth: 1.6, height: 2.8, color: '#6fcf3d', label: 'Bloc geant vert' },
+          { kind: 'toyblock', x: 3.45, z: -5.0, width: 1.8, depth: 1.8, height: 3.6, color: '#2a58d8', label: 'Bloc geant bleu' },
+          { kind: 'pillar', x: -4.3, z: -6.1, height: 5.2, color: '#b71f35', label: 'Colonne rouge de la piste' },
+          { kind: 'pillar', x: 4.3, z: -6.1, height: 5.2, color: '#b71f35', label: 'Colonne rouge de la piste' },
+          { kind: 'stagevalance', anchor: 'ceiling', x: 0, z: -4.6, color: '#d62f3f', label: 'Draperie haute du Tent' }
+        ],
+        sprites: [
+          { name: 'Caine', type: 'caine', avatar: 'caine', x: 0, z: -3.4, color: '#ffd84a' },
+          { name: 'Bubble', type: 'bubble', avatar: 'bubble', x: 1.35, z: -3.15, color: '#f7f7ff' },
+          { name: 'Ming', type: 'mannequin', avatar: 'ming', x: -1.4, z: -3.15, color: '#c8c8c8' },
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -3.0, z: -2.1, color: '#e53935' },
+          { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: -1.8, z: -2.4, color: '#d64545' },
+          { name: 'Jax', type: 'jax', avatar: 'jax', x: -0.65, z: -2.0, color: '#8a4fd6' },
+          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: 0.75, z: -2.05, color: '#d9d0a2' },
+          { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: 1.9, z: -2.4, color: '#f7f7f7' },
+          { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 3.1, z: -2.05, color: '#ff4fb8' }
+        ],
+        objective: scan('RELEVER L ANNONCE ET MING', ['scoreboard', 'archive'], 'caine')
+      },
+      172: {
+        name: 'EP6 PRIVATE TRUST BOX', short: 'SALLE PRIVEE',
+        detail: 'Boite insonorisee creee sur la piste pour l exercice de confiance. Caine presente une arme chargee avant que Jax fasse deriver le jeu.',
+        color: '#d9d2bd', floor: '#ece7d8', ceiling: '#b8af98', motif: 'guns', size: 15,
+        gateEpisode: 6, gateSubepisode: 0, provenance: 'shown', layer: 'cut', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'partition', campaignTarget: 'privacywall', x: -2.7, z: -3.5, width: 0.25, depth: 5.2, height: 4.6, color: '#f0ead8', label: 'Paroi insonorisee gauche' },
+          { kind: 'partition', campaignTarget: 'privacywall', x: 2.7, z: -3.5, width: 0.25, depth: 5.2, height: 4.6, color: '#f0ead8', label: 'Paroi insonorisee droite' },
+          { kind: 'partition', x: 0, z: -6.0, width: 5.6, depth: 0.25, height: 4.6, color: '#ded6c2', label: 'Fond ferme de la salle privee' },
+          { kind: 'doorframe', x: 0, z: -2.0, color: '#ffd84a', label: 'Entree visible depuis la piste' },
+          { kind: 'target', campaignTarget: 'loadedgun', x: 0, z: -3.25, color: '#56505f', label: 'Arme chargee de l exercice' },
+          { kind: 'card', x: -1.2, z: -1.35, color: '#f6d743', label: 'Role A / vider les munitions' },
+          { kind: 'card', x: 1.2, z: -1.35, color: '#e53935', label: 'Role B / faire confiance' },
+          { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'panel', x: 0, z: -2.2, color: '#ffffff', label: 'Eclairage blanc isole' }
+        ],
+        sprites: [
+          { name: 'Caine', type: 'caine', avatar: 'caine', x: 0, z: -4.6, color: '#ffd84a' },
+          { name: 'Jax', type: 'jax', avatar: 'jax', x: -1.1, z: -2.45, color: '#8a4fd6' },
+          { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 1.2, z: -2.55, color: '#ff4fb8' }
+        ],
+        objective: scan('VERIFIER LA PIECE ET L ARME', ['partition', 'target'], 'caine')
+      },
+      173: {
+        name: 'EP6 TEAM FORMATION / FIVE MINUTES', short: 'EQUIPES',
+        detail: 'Retour sur la piste: Caine impose trois binomes, trois vies et cinq minutes de preparation avant de disperser les armes dans le chapiteau.',
+        color: '#d63a42', floor: '#f0d36f', ceiling: '#8b2342', motif: 'circus', size: 25,
+        gateEpisode: 6, gateSubepisode: 1, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'scoreboard', campaignTarget: 'teamcard', x: -2.8, z: -5.3, color: '#ffd84a', label: 'TEAM PEW PEW / Ragatha + Kinger' },
+          { kind: 'scoreboard', campaignTarget: 'teamcard', x: 0, z: -5.8, color: '#f7f7f7', label: 'TEAM UNMASKED / Gangle + Zooble' },
+          { kind: 'scoreboard', campaignTarget: 'teamcard', x: 2.8, z: -5.3, color: '#8a4fd6', label: 'TEAM BAD GUYS / Jax + Pomni' },
+          { kind: 'console', campaignTarget: 'countdown', x: 0, z: -2.0, color: '#e53935', label: 'Compte a rebours de cinq minutes' },
+          { kind: 'heart', x: -3.35, z: -3.1, color: '#e53935', label: 'Trois vies Team Pew Pew' },
+          { kind: 'heart', x: 0, z: -3.5, color: '#e53935', label: 'Trois vies Team Unmasked' },
+          { kind: 'heart', x: 3.35, z: -3.1, color: '#e53935', label: 'Trois vies Team Bad Guys' },
+          { kind: 'heart', campaignTarget: 'ragathalife', x: -2.25, z: -1.35, color: '#6b2833', label: 'Coeur de Ragatha deja perdu pendant le compte' },
+          { kind: 'ring', x: 0, z: -4.1, color: '#ffd84a', label: 'Piste de formation des equipes' }
+        ],
+        sprites: [
+          { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: -3.3, z: -2.1, color: '#d64545' },
+          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -2.05, z: -2.55, color: '#d9d0a2' },
+          { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: -0.65, z: -2.15, color: '#f7f7f7' },
+          { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 0.65, z: -2.45, color: '#ff4fb8' },
+          { name: 'Jax', type: 'jax', avatar: 'jax', x: 2.0, z: -2.15, color: '#8a4fd6' },
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 3.25, z: -2.5, color: '#e53935' },
+          { name: 'Caine', type: 'caine', avatar: 'caine', x: 0, z: -4.5, color: '#ffd84a' }
+        ],
+        objective: scan('VALIDER TROIS EQUIPES ET LE COMPTE', ['scoreboard', 'console', 'heart'], 'gangle')
+      },
+      174: {
+        name: 'EP6 TEAM PEW PEW / BUTTERFLY HEAL', short: 'PAPILLON',
+        detail: 'Premier secteur de recherche de Team Pew Pew. Kinger improvise un papillon orange capable de restaurer le coeur manquant de Ragatha.',
+        color: '#f2b544', floor: '#161616', ceiling: '#c83c42', motif: 'guns', size: 23,
+        gateEpisode: 6, gateSubepisode: 2, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'toyblock', x: -3.2, z: -4.6, width: 2.2, depth: 2.2, height: 3.8, color: '#2a58d8', label: 'Couvert bleu de la piste' },
+          { kind: 'toyblock', x: 3.0, z: -5.0, width: 2.4, depth: 2.0, height: 4.8, color: '#e96f28', label: 'Tour de blocs orange' },
+          { kind: 'heart', campaignTarget: 'missingheart', x: -1.3, z: -1.3, color: '#5b2531', label: 'Emplacement du coeur manquant' },
+          { kind: 'ring', campaignTarget: 'butterflyheal', x: 0, z: -2.35, elevation: 1.05, color: '#ff9b37', label: 'Papillon de soin invente par Kinger' },
+          { kind: 'heart', x: 1.35, z: -1.35, color: '#e53935', label: 'Coeur restaure de Ragatha' },
+          { kind: 'pillar', x: -4.4, z: -6.3, height: 5.2, color: '#b71f35', label: 'Colonne de la piste' },
+          { kind: 'fence', x: 0, z: -6.6, width: 6.8, color: '#ffd84a', label: 'Balustrade du niveau superieur' }
+        ],
+        sprites: [
+          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -0.85, z: -2.8, color: '#d9d0a2' },
+          { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: 0.95, z: -2.75, color: '#d64545' }
+        ],
+        objective: scan('RESTAURER LE COEUR AVEC LE PAPILLON', ['heart', 'ring'], 'kinger')
+      },
+      175: {
+        name: 'EP6 RESIDENT HALL / BAD GUYS TALK', short: 'BAD GUYS',
+        detail: 'Section du couloir residentiel parcourue par Jax et Pomni. Les portes, le damier et les blocs restent physiques pendant leur discussion sur les archetypes.',
+        color: '#4f69bd', floor: '#f1eee1', ceiling: '#822b64', motif: 'dorm', size: 27,
+        gateEpisode: 6, gateSubepisode: 2, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'doorframe', campaignTarget: 'hallcover', anchor: 'wall-left', x: -1.48, z: -1.3, color: '#d64545', label: 'Porte residentielle gauche' },
+          { kind: 'doorframe', campaignTarget: 'hallcover', anchor: 'wall-right', x: 1.48, z: -3.0, color: '#ffd84a', label: 'Porte residentielle droite' },
+          { kind: 'toyblock', campaignTarget: 'hallcover', x: 0, z: -5.2, width: 2.4, depth: 2.0, height: 4.8, color: '#2a58d8', label: 'Grand bloc bleu du couloir' },
+          { kind: 'barrel', campaignTarget: 'shotcan', x: -0.65, z: -2.0, color: '#b8b8bd', label: 'Boite visee par Pomni' },
+          { kind: 'target', x: 0.85, z: -1.65, color: '#56505f', label: 'Revolver de Team Bad Guys' },
+          { kind: 'wallart', anchor: 'wall-left', x: -1.48, z: -4.6, color: '#e53935', art: 'blocks', label: 'Portrait residentiel' },
+          { kind: 'wallart', anchor: 'wall-right', x: 1.48, z: -5.1, color: '#8a4fd6', art: 'blocks', label: 'Portrait residentiel' },
+          { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'dome', x: 0, z: -1.0, color: '#fff1a8' },
+          { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'dome', x: 0, z: -5.2, color: '#fff1a8' }
+        ],
+        sprites: [
+          { name: 'Jax', type: 'jax', avatar: 'jax', x: -0.9, z: -2.65, color: '#8a4fd6' },
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 0.95, z: -2.85, color: '#e53935' }
+        ],
+        objective: scan('SUIVRE LA DISCUSSION DES BAD GUYS', ['doorframe', 'toyblock', 'barrel'], 'jax')
+      },
+      176: {
+        name: 'EP6 TEAM UNMASKED / SNIPER BALCONY', short: 'PERCHOIR',
+        detail: 'Balcon eleve forme par les blocs geants du Tent. Zooble utilise un fusil de precision pendant que Gangle reste derriere la rambarde.',
+        color: '#d63a42', floor: '#f0d36f', ceiling: '#8b2342', motif: 'guns', size: 25,
+        gateEpisode: 6, gateSubepisode: 2, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'platform', x: 0, z: -4.0, width: 7.8, depth: 3.4, height: 2.2, color: '#e96f28', label: 'Balcon de blocs eleve' },
+          { kind: 'fence', campaignTarget: 'balconyrail', x: -2.6, z: -3.1, width: 2.2, color: '#ffd84a', label: 'Rambarde gauche du perchoir' },
+          { kind: 'fence', campaignTarget: 'balconyrail', x: 2.6, z: -3.1, width: 2.2, color: '#ffd84a', label: 'Rambarde droite du perchoir' },
+          { kind: 'target', campaignTarget: 'sniperposition', x: 0, z: -3.0, elevation: 2.25, color: '#56505f', label: 'Desert Tech HTI de Zooble' },
+          { kind: 'toyblock', x: -3.9, z: -5.6, width: 1.8, depth: 1.8, height: 4.2, color: '#6fcf3d', label: 'Bloc vert porteur' },
+          { kind: 'toyblock', x: 3.9, z: -5.6, width: 1.8, depth: 1.8, height: 5.0, color: '#2a58d8', label: 'Bloc bleu porteur' },
+          { kind: 'spotlight', x: 0, z: -6.5, elevation: 4.8, color: '#fff1a8', label: 'Projecteur haut du Tent' }
+        ],
+        sprites: [
+          { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: -0.85, z: -3.2, elevation: 2.2, color: '#ff4fb8' },
+          { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: 0.95, z: -3.45, elevation: 2.2, color: '#f7f7f7' }
+        ],
+        objective: scan('INSTALLER LE PERCHOIR DE TIR', ['platform', 'fence', 'target'], 'zooble')
+      },
+      177: {
+        name: 'EP6 MAIN TENT / FIRST CROSSFIRE', short: 'FEU CROISE',
+        detail: 'Premiere bataille ouverte entre les trois equipes, au milieu des blocs, colonnes et niveaux du chapiteau. Ragatha utilise un Derringer a drapeau BOOM.',
+        color: '#d63a42', floor: '#f0d36f', ceiling: '#8b2342', motif: 'guns', size: 29,
+        gateEpisode: 6, gateSubepisode: 2, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'toyblock', x: -4.2, z: -5.4, width: 2.2, depth: 2.4, height: 4.5, color: '#6fcf3d', label: 'Couvert vert gauche' },
+          { kind: 'toyblock', x: 0, z: -6.8, width: 2.5, depth: 2.5, height: 5.7, color: '#e96f28', label: 'Tour orange centrale' },
+          { kind: 'toyblock', x: 4.2, z: -5.4, width: 2.2, depth: 2.4, height: 4.8, color: '#2a58d8', label: 'Couvert bleu droit' },
+          { kind: 'target', campaignTarget: 'flagderringer', x: -1.9, z: -2.2, color: '#56505f', label: 'Remington Model 95 / drapeau BOOM' },
+          { kind: 'scoreboard', campaignTarget: 'ragathahearts', x: -3.1, z: -6.7, color: '#d64545', label: 'Ragatha: vies perdues pendant le duel' },
+          { kind: 'target', x: 1.8, z: -2.1, color: '#8a4fd6', label: 'BFR puis Rhino de Jax' },
+          { kind: 'heart', x: 0, z: -1.25, color: '#e53935', label: 'Vies virtuelles de la manche' },
+          { kind: 'fence', x: 0, z: -8.0, width: 9.0, color: '#ffd84a', label: 'Coursive superieure' }
+        ],
+        sprites: [
+          { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: -2.7, z: -3.2, color: '#d64545' },
+          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -1.25, z: -4.0, color: '#d9d0a2' },
+          { name: 'Jax', type: 'jax', avatar: 'jax', x: 1.4, z: -3.2, color: '#8a4fd6' },
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 2.8, z: -3.9, color: '#e53935' },
+          { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: -0.9, z: -6.1, elevation: 2.2, color: '#ff4fb8' },
+          { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: 0.9, z: -6.2, elevation: 2.2, color: '#f7f7f7' }
+        ],
+        objective: scan('TRAVERSER LE FEU CROISE', ['toyblock', 'target', 'scoreboard'], 'jax')
+      },
+      178: {
+        name: 'EP6 UNMASKED COVER / SELF CHOICE', short: 'COUVERT UNMASKED',
+        detail: 'Renfoncement calme derriere les blocs. Zooble propose un AK-74, garde le masque de comedie et parle a Gangle du choix intentionnel de s aimer.',
+        color: '#3e5fa7', floor: '#151515', ceiling: '#752850', motif: 'memory', size: 19,
+        gateEpisode: 6, gateSubepisode: 3, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'toyblock', x: -3.0, z: -4.3, width: 2.5, depth: 2.2, height: 4.2, color: '#2a58d8', label: 'Bloc bleu de couverture' },
+          { kind: 'toyblock', x: 3.0, z: -4.5, width: 2.4, depth: 2.2, height: 3.5, color: '#6fcf3d', label: 'Bloc vert de couverture' },
+          { kind: 'target', campaignTarget: 'ak74', x: -1.2, z: -1.4, color: '#56505f', label: 'AK-74 trouve par Zooble' },
+          { kind: 'card', campaignTarget: 'maskkeeper', x: 1.15, z: -1.4, color: '#f7f7f7', label: 'Masque de comedie confie a Zooble' },
+          { kind: 'memory', x: 0, z: -3.15, color: '#ff4fb8', label: 'Choix intentionnel de s aimer' },
+          { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'spot', x: 0, z: -2.0, color: '#fff1a8' }
+        ],
+        sprites: [
+          { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: -0.85, z: -2.5, color: '#ff4fb8' },
+          { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: 0.9, z: -2.7, color: '#f7f7f7' }
+        ],
+        objective: scan('CONSERVER L ARME ET LE MASQUE', ['target', 'card', 'memory'], 'zooble')
+      },
+      179: {
+        name: 'EP6 DARK ROOM / RICOCHET', short: 'RICOCHET',
+        detail: 'Piece sans eclairage ou Jax, Pomni et Kinger se retrouvent. Le briquet revele la sortie et le ricochet de Kinger provoque sa propre elimination.',
+        color: '#151119', floor: '#070609', ceiling: '#010102', motif: 'memory', size: 21,
+        gateEpisode: 6, gateSubepisode: 4, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'candle', campaignTarget: 'lighter', x: -1.1, z: -1.5, color: '#ff9b37', label: 'Briquet allume dans la piece noire' },
+          { kind: 'card', x: 1.05, z: -1.4, color: '#c4a45f', label: 'Munitions remises dans le barillet' },
+          { kind: 'target', campaignTarget: 'ricochet', x: -2.6, z: -4.8, color: '#ffd84a', label: 'Point de ricochet gauche' },
+          { kind: 'target', campaignTarget: 'ricochet', x: 0, z: -5.7, color: '#ffd84a', label: 'Point de ricochet central' },
+          { kind: 'target', campaignTarget: 'ricochet', x: 2.6, z: -4.8, color: '#ffd84a', label: 'Point de ricochet droit' },
+          { kind: 'spotlight', x: 0, z: -6.5, color: '#fff1a8', label: 'Lumiere retrouvee a la sortie' },
+          { kind: 'partition', x: -3.8, z: -4.0, width: 0.2, depth: 5.5, height: 4.5, color: '#0c0a0e', label: 'Paroi noire gauche' },
+          { kind: 'partition', x: 3.8, z: -4.0, width: 0.2, depth: 5.5, height: 4.5, color: '#0c0a0e', label: 'Paroi noire droite' }
+        ],
+        sprites: [
+          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: 0, z: -4.4, color: '#d9d0a2' },
+          { name: 'Jax', type: 'jax', avatar: 'jax', x: -1.2, z: -2.4, color: '#8a4fd6' },
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 1.25, z: -2.55, color: '#e53935' }
+        ],
+        objective: scan('ECLAIRER ET SUIVRE LE RICOCHET', ['candle', 'target', 'spotlight'], 'kinger')
+      },
+      180: {
+        name: 'EP6 LOSER CORNER / AQUARIUM TALK', short: 'LOSER CORNER EP6',
+        detail: 'Espace sombre des elimines devant un grand aquarium. Ragatha et Kinger portent les accessoires de chat mori pendant que Bubble filme leur conversation.',
+        color: '#392448', floor: '#2a1835', ceiling: '#12091d', motif: 'loser', size: 21,
+        gateEpisode: 6, gateSubepisode: 4, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'window', campaignTarget: 'aquariumwindow', x: 0, z: -6.0, width: 7.2, height: 3.2, color: '#63d9ff', label: 'Grand aquarium du Loser Corner' },
+          { kind: 'sofa', x: 0, z: -3.2, width: 4.2, depth: 1.3, height: 1.1, color: '#5d3b67', label: 'Banquette des elimines' },
+          { kind: 'card', x: -1.4, z: -1.35, color: '#4a313f', label: 'Oreilles et queue de chat mori / Ragatha' },
+          { kind: 'card', x: 1.4, z: -1.35, color: '#4a313f', label: 'Oreilles et queue de chat mori / Kinger' },
+          { kind: 'console', campaignTarget: 'bubblecamera', x: 2.8, z: -2.2, color: '#f7f7ff', label: 'Camera tenue par Bubble' },
+          { kind: 'wave', x: -2.3, z: -5.2, color: '#2a8fb0', label: 'Reflet aquatique gauche' },
+          { kind: 'wave', x: 2.3, z: -5.2, color: '#2a8fb0', label: 'Reflet aquatique droit' },
+          { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'spot', x: 0, z: -2.0, color: '#7df0ff' }
+        ],
+        sprites: [
+          { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: -0.9, z: -3.0, color: '#d64545', costume: 'mori-cat' },
+          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: 0.9, z: -3.1, color: '#d9d0a2', costume: 'mori-cat' },
+          { name: 'Bubble', type: 'bubble', avatar: 'bubble', x: 2.7, z: -2.7, color: '#f7f7ff' }
+        ],
+        objective: scan('ECOUTER DEVANT L AQUARIUM', ['window', 'sofa', 'console'], 'kinger')
+      },
+      181: {
+        name: 'EP6 COLORED PIPE CHASE', short: 'TUBES',
+        detail: 'Longue poursuite dans les conduits du chapiteau. Gangle obtient enfin le Tommy gun pendant que les deux equipes epuisent leurs munitions.',
+        color: '#e7b839', floor: '#d86f28', ceiling: '#24112f', motif: 'tubes', size: 29,
+        gateEpisode: 6, gateSubepisode: 5, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'ring', campaignTarget: 'piperoute', x: -3.2, z: -4.0, color: '#e53935', label: 'Conduit rouge gauche' },
+          { kind: 'ring', campaignTarget: 'piperoute', x: 0, z: -6.0, color: '#2a58d8', label: 'Conduit bleu central' },
+          { kind: 'ring', campaignTarget: 'piperoute', x: 3.2, z: -4.3, color: '#f6d743', label: 'Conduit jaune droit' },
+          { kind: 'target', campaignTarget: 'tommygun', x: 0, z: -2.0, color: '#56505f', label: 'Colt 1921A Thompson de Gangle' },
+          { kind: 'partition', x: -4.6, z: -5.8, width: 0.35, depth: 8.0, height: 5.4, color: '#d62f3f', label: 'Paroi courbe du tunnel gauche' },
+          { kind: 'partition', x: 4.6, z: -5.8, width: 0.35, depth: 8.0, height: 5.4, color: '#2a58d8', label: 'Paroi courbe du tunnel droit' },
+          { kind: 'scoreboard', x: 0, z: -7.8, color: '#f7f7f7', label: 'Munitions presque epuisees' }
+        ],
+        sprites: [
+          { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: -1.7, z: -3.1, color: '#ff4fb8' },
+          { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: -0.35, z: -2.7, color: '#f7f7f7' },
+          { name: 'Jax', type: 'jax', avatar: 'jax', x: 1.1, z: -4.0, color: '#8a4fd6' },
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 2.35, z: -3.5, color: '#e53935' }
+        ],
+        objective: scan('SUIVRE TROIS CONDUITS ET LE TOMMY GUN', ['ring', 'target'], 'gangle')
+      },
+      182: {
+        name: 'EP6 PIPE COLLAPSE / GANGLE ELIMINATION', short: 'MASQUE BRISE',
+        detail: 'Fin de la poursuite: le conduit s effondre, Pomni utilise une cartouche de precision et Gangle est eliminee avec son masque de comedie brise.',
+        color: '#753241', floor: '#d86f28', ceiling: '#140814', motif: 'tubes', size: 21,
+        gateEpisode: 6, gateSubepisode: 5, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'ring', campaignTarget: 'collapsedpipe', x: -2.2, z: -4.4, color: '#e53935', label: 'Conduit rouge effondre' },
+          { kind: 'ring', x: 2.2, z: -5.0, color: '#2a58d8', label: 'Conduit bleu fracture' },
+          { kind: 'target', campaignTarget: 'snipershot', x: 0.9, z: -1.4, color: '#c4a45f', label: 'Derniere cartouche de precision de Pomni' },
+          { kind: 'memory', campaignTarget: 'brokencomedymask', x: -0.9, z: -1.35, color: '#f7f7f7', label: 'Masque de comedie brise' },
+          { kind: 'heart', x: 0, z: -2.7, color: '#6b2833', label: 'Dernier coeur de Gangle perdu' },
+          { kind: 'gridnode', x: -2.8, z: -2.0, color: '#f6d743', label: 'Debris du conduit gauche' },
+          { kind: 'gridnode', x: 2.8, z: -2.0, color: '#f6d743', label: 'Debris du conduit droit' }
+        ],
+        sprites: [
+          { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: -0.8, z: -3.0, color: '#f7f7f7' },
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 1.25, z: -3.5, color: '#e53935' },
+          { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: -2.15, z: -4.2, color: '#ff4fb8' }
+        ],
+        objective: scan('RELEVER LE TIR ET LE MASQUE BRISE', ['ring', 'target', 'memory'], 'gangle')
+      },
+      183: {
+        name: 'EP6 OLD MEMBER DOOR HALL', short: 'PORTES ANCIENNES',
+        detail: 'Couloir residentiel traverse pendant la poursuite de Zooble. Les plaques Mannequin, Kaufmo et Ribbit sont visibles avant la porte de Zooble.',
+        color: '#985268', floor: '#f1eee1', ceiling: '#4b1738', motif: 'dorm', size: 29,
+        gateEpisode: 6, gateSubepisode: 5, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'doorframe', campaignTarget: 'archiveplate', anchor: 'wall-left', x: -1.48, z: -2.0, color: '#ff9b37', label: 'MANNEQUIN' },
+          { kind: 'doorframe', campaignTarget: 'archiveplate', anchor: 'wall-right', x: 1.48, z: -4.0, color: '#575057', label: 'KAUFMO / porte barree' },
+          { kind: 'doorframe', campaignTarget: 'archiveplate', anchor: 'wall-left', x: -1.48, z: -6.0, color: '#63d35f', label: 'RIBBIT / porte barree' },
+          { kind: 'doorframe', campaignTarget: 'zooblelock', anchor: 'wall-right', x: 1.48, z: -8.0, color: '#ff4fb8', label: 'ZOOBLE / verrou active' },
+          { kind: 'card', x: 0, z: -1.35, color: '#ffd84a', label: 'Trousseau de cles de Jax' },
+          { kind: 'wallart', anchor: 'wall-left', x: -1.48, z: -3.1, color: '#e53935', art: 'blocks', label: 'Portrait de resident' },
+          { kind: 'wallart', anchor: 'wall-right', x: 1.48, z: -6.7, color: '#2a58d8', art: 'blocks', label: 'Portrait de resident' },
+          { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'dome', x: 0, z: -1.0, color: '#fff1a8' },
+          { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'dome', x: 0, z: -5.0, color: '#fff1a8' },
+          { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'dome', x: 0, z: -8.5, color: '#fff1a8' }
+        ],
+        sprites: [
+          { name: 'Jax', type: 'jax', avatar: 'jax', x: -0.85, z: -2.8, color: '#8a4fd6' },
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 0.9, z: -3.15, color: '#e53935' }
+        ],
+        objective: scan('IDENTIFIER LES TROIS PLAQUES ET ZOOBLE', ['doorframe', 'card'], 'jax')
+      },
+      184: {
+        name: 'EP6 ZOOBLE BOX / FOUR-ARM SIEGE', short: 'ZOOBLE BOX EP6',
+        detail: 'Chambre de Zooble pendant le siege. Zooble assemble quatre bras armes, Jax utilise sa cle et Pomni chante Daisy Bell avant le flashbang.',
+        color: '#ff4fb8', floor: '#27152d', ceiling: '#160a1b', motif: 'zoobleroom', size: 21,
+        gateEpisode: 6, gateSubepisode: 5, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'bed', x: 0, z: -5.2, width: 3.4, depth: 1.5, height: 1.2, color: '#633b75', accent: '#ff4fb8', label: 'Lit de la Zooble Box' },
+          { kind: 'crate', x: -2.7, z: -3.5, color: '#8a4fd6', label: 'Boite de pieces modulaires' },
+          { kind: 'window', x: 2.75, z: -4.0, color: '#050505', label: 'Miroir noir de Zooble' },
+          { kind: 'target', campaignTarget: 'zoobleweapon', x: -2.2, z: -1.35, color: '#56505f', label: 'AK-74 / bras superieur gauche' },
+          { kind: 'target', campaignTarget: 'zoobleweapon', x: -0.75, z: -1.2, color: '#56505f', label: 'Thompson / bras inferieur gauche' },
+          { kind: 'target', campaignTarget: 'zoobleweapon', x: 0.75, z: -1.2, color: '#56505f', label: 'Uzi / bras inferieur droit' },
+          { kind: 'target', campaignTarget: 'zoobleweapon', x: 2.2, z: -1.35, color: '#56505f', label: 'M16A1 / bras superieur droit' },
+          { kind: 'card', campaignTarget: 'daisykey', x: -1.1, z: -2.35, color: '#ffd84a', label: 'Cle de Jax et sequence Daisy Bell' },
+          { kind: 'gridnode', campaignTarget: 'flashbang', x: 1.15, z: -2.4, color: '#ffffff', label: 'Flashbang declenche par Zooble' },
+          { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'panel', x: 0, z: -2.0, color: '#ff9fcd' }
+        ],
+        sprites: [
+          { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 0, z: -3.6, color: '#ff4fb8' },
+          { name: 'Jax', type: 'jax', avatar: 'jax', x: -2.1, z: -2.4, color: '#8a4fd6' },
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 2.0, z: -2.55, color: '#e53935' }
+        ],
+        objective: scan('RELEVER QUATRE ARMES ET LE FLASH', ['target', 'card', 'gridnode'], 'zooble')
+      },
+      185: {
+        name: 'EP6 FINAL BALCONY SHOOTOUT', short: 'BALCON FINAL',
+        detail: 'Balcon superieur du Tent pendant le duel final. Pomni retire les armes de Zooble une a une et Jax porte le dernier tir.',
+        color: '#d63a42', floor: '#f0d36f', ceiling: '#8b2342', motif: 'guns', size: 27,
+        gateEpisode: 6, gateSubepisode: 6, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'platform', x: 0, z: -5.0, width: 9.2, depth: 4.2, height: 2.6, color: '#e96f28', label: 'Balcon final du Tent' },
+          { kind: 'fence', x: 0, z: -3.5, width: 8.0, color: '#ffd84a', label: 'Rambarde continue du balcon' },
+          { kind: 'target', campaignTarget: 'discardedweapon', x: -3.0, z: -1.4, color: '#56505f', label: 'AK-74 ejecte' },
+          { kind: 'target', campaignTarget: 'discardedweapon', x: -1.0, z: -1.2, color: '#56505f', label: 'Thompson ejecte' },
+          { kind: 'target', campaignTarget: 'discardedweapon', x: 1.0, z: -1.2, color: '#56505f', label: 'Uzi ejecte' },
+          { kind: 'target', campaignTarget: 'discardedweapon', x: 3.0, z: -1.4, color: '#56505f', label: 'M16A1 ejecte' },
+          { kind: 'target', campaignTarget: 'finalsniper', x: 0, z: -2.2, color: '#c4a45f', label: 'Derniere cartouche de precision' },
+          { kind: 'heart', x: 0, z: -6.0, elevation: 2.8, color: '#6b2833', label: 'Dernier coeur de Zooble' },
+          { kind: 'spotlight', x: -3.6, z: -7.0, elevation: 5.0, color: '#fff1a8' },
+          { kind: 'spotlight', x: 3.6, z: -7.0, elevation: 5.0, color: '#fff1a8' }
+        ],
+        sprites: [
+          { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 0, z: -5.2, elevation: 2.6, color: '#ff4fb8' },
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -1.2, z: -3.4, elevation: 2.6, color: '#e53935' },
+          { name: 'Jax', type: 'jax', avatar: 'jax', x: 1.25, z: -3.35, elevation: 2.6, color: '#8a4fd6' }
+        ],
+        objective: scan('DESARMER ZOOBLE PUIS TERMINER LA MANCHE', ['platform', 'target', 'heart'], 'pomni')
+      },
+      186: {
+        name: 'EP6 TWO WINNERS / BETRAYAL PROMPT', short: 'DEUX GAGNANTS',
+        detail: 'Retour au sol apres l elimination de Zooble. Pomni celebre leur equipe, puis Jax lui demande de le trahir alors qu elle souhaite rester co-gagnante.',
+        color: '#c83c42', floor: '#f0d36f', ceiling: '#74233e', motif: 'circus', size: 21,
+        gateEpisode: 6, gateSubepisode: 6, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'scoreboard', campaignTarget: 'twowinners', x: 0, z: -5.5, color: '#ffd84a', label: 'TEAM BAD GUYS / DEUX GAGNANTS' },
+          { kind: 'target', campaignTarget: 'betrayalprompt', x: 0, z: -2.2, color: '#56505f', label: 'Arme tendue pour une trahison refusee' },
+          { kind: 'heart', x: -1.3, z: -1.25, color: '#e53935', label: 'Coeur de Pomni encore actif' },
+          { kind: 'heart', x: 1.3, z: -1.25, color: '#8a4fd6', label: 'Coeur de Jax encore actif' },
+          { kind: 'toyblock', x: -3.2, z: -4.2, width: 2.0, depth: 2.0, height: 3.4, color: '#2a58d8', label: 'Bloc bleu apres la bataille' },
+          { kind: 'toyblock', x: 3.2, z: -4.2, width: 2.0, depth: 2.0, height: 3.4, color: '#e96f28', label: 'Bloc orange apres la bataille' }
+        ],
+        sprites: [
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -0.9, z: -2.9, color: '#e53935' },
+          { name: 'Jax', type: 'jax', avatar: 'jax', x: 0.95, z: -2.8, color: '#8a4fd6' }
+        ],
+        objective: scan('CONSTATER LES DEUX GAGNANTS', ['scoreboard', 'target', 'heart'], 'pomni')
+      },
+      187: {
+        name: 'EP6 POMNI JAX CONFRONTATION', short: 'CONFRONTATION',
+        detail: 'Longue confrontation au milieu du Tent. Pomni evoque les funerailles de Kaufmo, Jax refuse toute vulnerabilite et la dispute devient une bagarre.',
+        color: '#7b2940', floor: '#e4c966', ceiling: '#2b0f21', motif: 'circus', size: 23,
+        gateEpisode: 6, gateSubepisode: 6, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'memory', campaignTarget: 'funeralmemory', x: -1.35, z: -1.4, color: '#575057', label: 'Reference aux funerailles de Kaufmo' },
+          { kind: 'target', x: 1.35, z: -1.4, color: '#56505f', label: 'Arme non utilisee pendant la bagarre' },
+          { kind: 'ring', x: 0, z: -4.4, color: '#ffd84a', label: 'Espace de la confrontation' },
+          { kind: 'toyblock', x: -3.3, z: -5.4, width: 2.0, depth: 2.0, height: 4.2, color: '#6fcf3d', label: 'Bloc de fond gauche' },
+          { kind: 'toyblock', x: 3.3, z: -5.4, width: 2.0, depth: 2.0, height: 4.2, color: '#2a58d8', label: 'Bloc de fond droit' },
+          { kind: 'gridnode', x: -0.8, z: -2.2, color: '#e53935', label: 'Impact de la bagarre' },
+          { kind: 'gridnode', x: 0.8, z: -2.4, color: '#8a4fd6', label: 'Second impact de la bagarre' }
+        ],
+        sprites: [
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -0.8, z: -3.0, color: '#e53935' },
+          { name: 'Jax', type: 'jax', avatar: 'jax', x: 0.85, z: -3.1, color: '#8a4fd6' }
+        ],
+        objective: scan('SUIVRE LE CONFLIT SANS REECRIRE SA FIN', ['memory', 'target', 'gridnode'], 'jax')
+      },
+      188: {
+        name: 'EP6 THEATER HALL / DELAYED TALK', short: 'HALL AVANT SHOW',
+        detail: 'Hall rouge du theatre avant les awards. Pomni et Ragatha se croisent, essaient de parler en meme temps et reportent leur conversation apres le show.',
+        color: '#7e1d31', floor: '#3a1721', ceiling: '#160712', motif: 'awards', size: 21,
+        gateEpisode: 6, gateSubepisode: 7, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'doorframe', campaignTarget: 'auditoriumdoor', x: 0, z: -5.5, color: '#ffd84a', label: 'Doubles portes de l auditorium' },
+          { kind: 'wallart', campaignTarget: 'awardposter', anchor: 'wall-left', x: -1.48, z: -2.0, color: '#ffd84a', art: 'blocks', label: 'Affiche Favorite Character Awards' },
+          { kind: 'wallart', anchor: 'wall-right', x: 1.48, z: -3.2, color: '#e53935', art: 'blocks', label: 'Affiche des categories' },
+          { kind: 'pillar', x: -3.2, z: -5.8, height: 4.8, color: '#8d2035', label: 'Colonne du foyer gauche' },
+          { kind: 'pillar', x: 3.2, z: -5.8, height: 4.8, color: '#8d2035', label: 'Colonne du foyer droite' },
+          { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'chandelier', x: 0, z: -2.0, color: '#fff1a8' }
+        ],
+        sprites: [
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -0.85, z: -2.7, color: '#e53935' },
+          { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: 0.9, z: -2.75, color: '#d64545' },
+          { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: -2.4, z: -4.0, color: '#f7f7f7', silent: true, silentText: 'Gangle rejoint le public; aucune replique distincte ne lui est attribuee dans ce plan.' },
+          { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 2.35, z: -4.0, color: '#ff4fb8', silent: true, silentText: 'Zooble avance vers l auditorium parmi les discussions de fond.' }
+        ],
+        objective: scan('OUVRIR L AUDITORIUM APRES L ACCORD', ['doorframe', 'wallart'], 'ragatha')
+      },
+      189: {
+        name: 'EP6 FAVORITE CHARACTER AWARDS / OPENING', short: 'AWARDS OUVERTURE',
+        detail: 'Scene rouge et or des Favorite Character Awards. Caine remercie le comite, lance les sous-categories et les mentions honorables devant le public.',
+        color: '#8b172b', floor: '#4c111f', ceiling: '#17060f', motif: 'awards', size: 27,
+        gateEpisode: 6, gateSubepisode: 7, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'stagecurtain', x: 0, z: -6.4, color: '#a8172a', variant: 'back', label: 'Grand rideau rouge des awards' },
+          { kind: 'scoreboard', campaignTarget: 'awardtitle', x: 0, z: -5.2, elevation: 2.4, color: '#ffd84a', label: 'THE FAVORITE CHARACTER AWARDS' },
+          { kind: 'pillar', x: -4.0, z: -6.0, height: 5.0, color: '#8d2035', label: 'Colonne et vase gauche' },
+          { kind: 'pillar', x: 4.0, z: -6.0, height: 5.0, color: '#8d2035', label: 'Colonne et vase droit' },
+          { kind: 'plant', x: -4.0, z: -5.8, elevation: 4.6, color: '#274a2b', label: 'Plante du decor gauche' },
+          { kind: 'plant', x: 4.0, z: -5.8, elevation: 4.6, color: '#274a2b', label: 'Plante du decor droit' },
+          { kind: 'archive', campaignTarget: 'honorablementions', x: 0, z: -2.1, color: '#ffd84a', label: 'Mentions honorables et sous-categories' },
+          { kind: 'card', x: -2.1, z: -1.35, color: '#f7f7f7', label: 'Bulletins du comite' },
+          { kind: 'spotlight', x: -2.5, z: -4.0, color: '#fff1a8' },
+          { kind: 'spotlight', x: 2.5, z: -4.0, color: '#fff1a8' }
+        ],
+        sprites: [
+          { name: 'Caine', type: 'caine', avatar: 'caine', x: 0, z: -4.1, color: '#ffd84a' },
+          { name: 'Bubble', type: 'bubble', avatar: 'bubble', x: 1.45, z: -4.35, color: '#f7f7ff' },
+          { name: 'Committee Member', type: 'mannequin', avatar: 'committeemember', x: -1.5, z: -3.7, color: '#f4f4f0' },
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -3.0, z: -2.4, color: '#e53935' },
+          { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: -1.7, z: -2.1, color: '#d64545' },
+          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: 1.75, z: -2.15, color: '#d9d0a2' },
+          { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 3.0, z: -2.4, color: '#ff4fb8' }
+        ],
+        objective: scan('VALIDER LE COMITE ET LES CATEGORIES', ['stagecurtain', 'scoreboard', 'archive'], 'caine')
+      },
+      190: {
+        name: 'EP6 THEATER BATHROOM / JAX', short: 'WC JAX',
+        detail: 'Sanitaires du theatre pendant les awards. Jax s isole devant le miroir, subit un battement et un sifflement, puis croise Disappearing Guy.',
+        color: '#c8cec8', floor: '#dadbd6', ceiling: '#f5f5ef', motif: 'bathroom', size: 15,
+        gateEpisode: 6, gateSubepisode: 7, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'window', campaignTarget: 'bathroommirror', x: 0, z: -4.8, width: 4.2, height: 2.4, color: '#e8f5f4', label: 'Grand miroir des sanitaires' },
+          { kind: 'barrel', campaignTarget: 'toiletstall', x: -2.2, z: -3.0, color: '#ffffff', label: 'Cabine sanitaire gauche' },
+          { kind: 'barrel', x: 2.2, z: -3.0, color: '#ffffff', label: 'Cabine sanitaire droite' },
+          { kind: 'counter', x: 0, z: -2.2, width: 3.6, depth: 0.8, height: 0.9, color: '#f7f7f7', label: 'Lavabos sous le miroir' },
+          { kind: 'gridnode', x: -1.1, z: -1.25, color: '#8a4fd6', label: 'Battement sourd de Jax' },
+          { kind: 'gridnode', x: 1.1, z: -1.25, color: '#7df0ff', label: 'Sifflement aigu temporaire' },
+          { kind: 'doorframe', x: 0, z: -1.0, color: '#7e1d31', label: 'Retour vers le hall du theatre' },
+          { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'fluorescent', x: 0, z: -1.5, color: '#ffffff' }
+        ],
+        sprites: [
+          { name: 'Jax', type: 'jax', avatar: 'jax', x: -0.85, z: -2.8, color: '#8a4fd6' },
+          { name: 'Disappearing Guy', type: 'mannequin', avatar: 'disappearingguy', x: 1.05, z: -3.0, color: '#c34232' }
+        ],
+        objective: scan('SUIVRE JAX SANS AJOUTER DE CONFESSION', ['window', 'barrel', 'gridnode'], 'jax')
+      },
+      191: {
+        name: 'EP6 FAVORITE CHARACTER AWARDS / MING WIN', short: 'MING GAGNE',
+        detail: 'Final des awards: Zooble gagne Biggest Sailor Mouth, Ming recoit Favorite Character, puis Caine consulte ses votes et glitche.',
+        color: '#8b172b', floor: '#4c111f', ceiling: '#17060f', motif: 'awards', size: 27,
+        gateEpisode: 6, gateSubepisode: 7, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'stagecurtain', x: 0, z: -6.4, color: '#a8172a', variant: 'back', label: 'Rideau rouge du verdict' },
+          { kind: 'scoreboard', campaignTarget: 'favoriteaward', x: 0, z: -5.2, elevation: 2.4, color: '#ffd84a', label: 'FAVORITE CHARACTER: MING' },
+          { kind: 'scoreboard', x: -2.5, z: -3.8, color: '#ff4fb8', label: 'BIGGEST SAILOR MOUTH: ZOOBLE' },
+          { kind: 'card', campaignTarget: 'cainevote', x: 1.35, z: -1.35, color: '#f7f7f7', label: 'Bulletins consultes par Caine' },
+          { kind: 'gridnode', campaignTarget: 'finalglitch', x: -1.35, z: -1.35, color: '#e53935', label: 'Feedback glitche final de Caine' },
+          { kind: 'archive', x: 0, z: -2.05, color: '#c8c8c8', label: 'Trophee remis a Ming' },
+          { kind: 'caineportal', campaignTarget: 'returnportal', x: 3.2, z: -3.2, color: '#7df0ff', accent: '#ffd84a', target: 28, label: 'Portail de retour au Tent' },
+          { kind: 'pillar', x: -4.0, z: -6.0, height: 5.0, color: '#8d2035', label: 'Colonne du decor gauche' },
+          { kind: 'pillar', x: 4.0, z: -6.0, height: 5.0, color: '#8d2035', label: 'Colonne du decor droit' },
+          { kind: 'spotlight', x: 0, z: -4.0, color: '#fff1a8', label: 'Projecteur du gagnant' }
+        ],
+        sprites: [
+          { name: 'Ming', type: 'mannequin', avatar: 'ming', x: 0, z: -3.65, color: '#c8c8c8' },
+          { name: 'Caine', type: 'caine', avatar: 'caine', x: -1.35, z: -4.0, color: '#ffd84a' },
+          { name: 'Bubble', type: 'bubble', avatar: 'bubble', x: 1.45, z: -4.15, color: '#f7f7ff' },
+          { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: -2.8, z: -2.3, color: '#ff4fb8' },
+          { name: 'Committee Member', type: 'mannequin', avatar: 'committeemember', x: 2.75, z: -2.35, color: '#f4f4f0' }
+        ],
+        objective: scan('ATTRIBUER LE PRIX A MING ET RELEVER LE GLITCH', ['scoreboard', 'card', 'gridnode', 'caineportal'], 'ming')
       }
     };
     this.circusCanonRoomDefinitions = rooms;
@@ -7814,6 +8570,11 @@ const OS = {
       SoundManager.playError();
       return;
     }
+    const interactionId = this.getCircusPropPersistentId(prop)
+      || `${state.currentZoneId}:${prop.campaignTarget || prop.kind}:${prop.target}`;
+    this.advanceCircusCampaign('use', prop.campaignTarget || prop.kind, 1, interactionId);
+    this.advanceCircusZoneChallenge('use', prop.kind);
+    this.advanceCircusActivity('use', prop.campaignTarget || prop.kind);
     const fromZoneId = state.currentZoneId;
     if (prop.kind === 'caineportal') {
       this.beginCircusPortalTransition(prop.target, fromZoneId);
@@ -15168,8 +15929,7 @@ const OS = {
     sprites.forEach(sprite => {
       const p = sprite.projected;
       const size = Math.max(3, 70 * p.scale * (sprite.sizeScale || 1));
-      const elevationOffset = (h * (sprite.elevation || 0) * 0.34) / Math.max(0.28, p.depth);
-      const baseY = (p.y || h * 0.58) - elevationOffset - (sprite.bob || 0) * size;
+      const baseY = (p.y || h * 0.58) - (sprite.bob || 0) * size;
       const avatar = sprite.avatar || sprite.type;
       const drawH = size * (avatar === 'gloinkqueenscale' ? 1.35 : avatar === 'pomni' ? 1.08 : 1);
       const halfWidth = size * (avatar === 'gloinkqueenscale' ? 0.9 : avatar === 'pomni' ? 0.72 : 0.64);

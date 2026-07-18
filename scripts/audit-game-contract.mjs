@@ -39,6 +39,9 @@ vm.runInContext(`${source}\n;globalThis.__CainOS = OS;`, context, { filename: 'a
 const OS = context.__CainOS;
 const failures = [];
 const virtual = new Set(['visit', 'survive', 'give']);
+if (source.includes('const elevationOffset = (h * (sprite.elevation || 0)')) {
+  failures.push('RENDU FPS: elevation des imposteurs appliquee deux fois');
+}
 const officialTitles = {
   1: 'Pilot',
   2: 'Candy Carrier Chaos!',
@@ -502,12 +505,12 @@ for (const [zone, kinds] of [[70, ['building', 'wave']], [71, ['stairs', 'candle
 }
 const canonRoomDefinitions = OS.getCircusCanonRoomDefinitions();
 const fpsZoneMax = OS.getCircusFpsZoneMax();
-const minimumFpsZoneMax = 170;
+const minimumFpsZoneMax = 191;
 if (!Number.isInteger(fpsZoneMax) || fpsZoneMax < minimumFpsZoneMax) {
   failures.push(`FPS: borne de zones ${fpsZoneMax}/${minimumFpsZoneMax} minimum`);
 }
 const canonRoomEntries = Object.entries(canonRoomDefinitions);
-const minimumCanonRoomCount = 88;
+const minimumCanonRoomCount = 109;
 if (canonRoomEntries.length < minimumCanonRoomCount) {
   failures.push(`FPS: ${canonRoomEntries.length}/${minimumCanonRoomCount} pieces canoniques ou balisees minimum`);
 }
@@ -911,6 +914,95 @@ const returnPortal = finalStateProps.find(prop => getCampaignTarget(prop) === 'r
 if (!returnPortal || returnPortal.kind !== 'caineportal' || returnPortal.target !== 28
   || getTargetCount(finalStateProps, 'unknownsignal') !== 1) {
   failures.push('EP5 FPS 170: victoire, signal inconnu ou portail final incorrect');
+}
+const episodeSixCampaign = OS.getCircusFpsCampaignDefinition(6);
+const episodeSixExpectedZones = [122, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191];
+const episodeSixActualZones = (episodeSixCampaign?.stages || []).map(stage => stage.zone);
+if (episodeSixCampaign?.version !== 2) failures.push('EP6 FPS: version de campagne 2 absente');
+if (episodeSixCampaign?.stages?.length !== episodeSixExpectedZones.length) {
+  failures.push(`EP6 FPS: ${episodeSixCampaign?.stages?.length ?? 0}/${episodeSixExpectedZones.length} actes montres attendus`);
+}
+if (JSON.stringify(episodeSixActualZones) !== JSON.stringify(episodeSixExpectedZones)) {
+  failures.push(`EP6 FPS: chronologie de zones incorrecte (${episodeSixActualZones.join(', ')})`);
+}
+for (let zone = 171; zone <= 191; zone += 1) {
+  const room = canonRoomDefinitions[zone];
+  if (!room) {
+    failures.push(`EP6 FPS ${zone}: etat temporel absent`);
+  } else if (!room.nonPhysical || (room.exits || []).length || room.layer !== 'time-state' && room.layer !== 'cut') {
+    failures.push(`EP6 FPS ${zone}: coupe temporelle reliee au graphe physique`);
+  }
+}
+const episodeSixTargetContract = new Map([
+  [171, { awardtease: 1, exerciseboard: 1 }],
+  [172, { privacywall: 2, loadedgun: 1 }],
+  [173, { teamcard: 3, countdown: 1, ragathalife: 1 }],
+  [174, { butterflyheal: 1, missingheart: 1 }],
+  [175, { hallcover: 3, shotcan: 1 }],
+  [176, { balconyrail: 2, sniperposition: 1 }],
+  [177, { flagderringer: 1, ragathahearts: 1 }],
+  [178, { ak74: 1, maskkeeper: 1 }],
+  [179, { ricochet: 3, lighter: 1 }],
+  [180, { aquariumwindow: 1, bubblecamera: 1 }],
+  [181, { piperoute: 3, tommygun: 1 }],
+  [182, { snipershot: 1, brokencomedymask: 1, collapsedpipe: 1 }],
+  [183, { archiveplate: 3, zooblelock: 1 }],
+  [184, { zoobleweapon: 4, flashbang: 1, daisykey: 1 }],
+  [185, { discardedweapon: 4, finalsniper: 1 }],
+  [186, { twowinners: 1, betrayalprompt: 1 }],
+  [187, { funeralmemory: 1 }],
+  [188, { auditoriumdoor: 1, awardposter: 1 }],
+  [189, { awardtitle: 1, honorablementions: 1 }],
+  [190, { bathroommirror: 1, toiletstall: 1 }],
+  [191, { favoriteaward: 1, cainevote: 1, finalglitch: 1, returnportal: 1 }]
+]);
+for (const [zone, targets] of episodeSixTargetContract) {
+  const props = OS.getCircusZoneProps(zone);
+  for (const [target, expectedCount] of Object.entries(targets)) {
+    const count = getTargetCount(props, target);
+    if (count !== expectedCount) failures.push(`EP6 FPS ${zone}: ${target} ${count}/${expectedCount}`);
+  }
+}
+const episodeSixRosterContract = new Map([
+  [172, ['caine', 'jax', 'zooble']],
+  [174, ['kinger', 'ragatha']],
+  [176, ['gangle', 'zooble']],
+  [178, ['gangle', 'zooble']],
+  [179, ['jax', 'kinger', 'pomni']],
+  [180, ['bubble', 'kinger', 'ragatha']],
+  [181, ['gangle', 'jax', 'pomni', 'zooble']],
+  [184, ['jax', 'pomni', 'zooble']],
+  [186, ['jax', 'pomni']],
+  [187, ['jax', 'pomni']],
+  [190, ['disappearingguy', 'jax']],
+  [191, ['bubble', 'caine', 'committeemember', 'ming', 'zooble']]
+]);
+for (const [zone, expected] of episodeSixRosterContract) {
+  const actual = OS.getCircusZoneSprites(zone).map(sprite => sprite.avatar || sprite.type).sort();
+  if (JSON.stringify(actual) !== JSON.stringify([...expected].sort())) {
+    failures.push(`EP6 FPS ${zone}: roster incorrect (${actual.join(', ')})`);
+  }
+}
+const teamFormationRoster = new Set(OS.getCircusZoneSprites(173).map(sprite => sprite.avatar || sprite.type));
+for (const avatar of ['caine', 'pomni', 'ragatha', 'jax', 'kinger', 'gangle', 'zooble']) {
+  if (!teamFormationRoster.has(avatar)) failures.push(`EP6 FPS 173: ${avatar} absent de la formation des equipes`);
+}
+if (teamFormationRoster.has('bubble') || teamFormationRoster.size !== 7) {
+  failures.push('EP6 FPS 173: distribution de formation des equipes incorrecte');
+}
+const zoobleSiegeWeapons = OS.getCircusZoneProps(184)
+  .filter(prop => getCampaignTarget(prop) === 'zoobleweapon')
+  .map(prop => prop.label);
+for (const weapon of ['AK-74', 'Thompson', 'Uzi', 'M16A1']) {
+  if (!zoobleSiegeWeapons.some(label => label.includes(weapon))) failures.push(`EP6 FPS 184: arme de Zooble absente (${weapon})`);
+}
+const episodeSixReturnPortal = OS.getCircusZoneProps(191).find(prop => getCampaignTarget(prop) === 'returnportal');
+if (!episodeSixReturnPortal || episodeSixReturnPortal.kind !== 'caineportal' || episodeSixReturnPortal.target !== 28) {
+  failures.push('EP6 FPS 191: portail final vers le Tent incorrect');
+}
+if (!OS.getCircusZoneProps(180).some(prop => getCampaignTarget(prop) === 'aquariumwindow')
+  || OS.getCircusZoneSprites(180).some(sprite => (sprite.avatar || sprite.type) === 'aquaticabstraction')) {
+  failures.push('EP6 FPS 180: Loser Corner confondu avec l aquarium de Remember');
 }
 const legacyCandyStoryActors = new Set(['gummigoo', 'max', 'chad', 'loolilalu', 'fudge', 'pomni']);
 if (OS.getCircusZoneSprites(6).some(sprite => legacyCandyStoryActors.has(sprite.avatar || sprite.type))) {
