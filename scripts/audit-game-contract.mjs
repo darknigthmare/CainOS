@@ -454,14 +454,22 @@ if (OS.getWackyProfileStatus('blueai') !== 'PNJ / DECOR') failures.push('BLUE AI
 if (OS.getWackyProvenanceKind('blueai') !== 'canon-visual') failures.push('BLUE AI: provenance non canonique');
 const blueGate = OS.getWackyProfileGate('blueai');
 if (blueGate?.episode !== 9 || blueGate?.subepisode !== 6) failures.push('BLUE AI: mauvais verrou de progression');
-const blueSprite = OS.getCircusZoneSprites(108).find(entry => entry.avatar === 'blueai');
+const blueSprite = OS.getCircusZoneSprites(264).find(entry => entry.avatar === 'blueai');
 if (
   blueSprite?.name !== 'Blue AI'
-  || blueSprite?.loreGate?.episode !== 9
-  || blueSprite?.campaignGate?.episode !== 9
-  || blueSprite?.campaignGate?.minStage !== 12
+  || blueSprite?.silent !== true
+  || blueSprite?.campaignGate
 ) {
-  failures.push('BLUE AI: signal FPS mal classe');
+  failures.push('BLUE AI: liberation EP9 zone 264 absente, sonore ou liee a un campaignGate');
+}
+const legacyBlueRoom = OS.getCircusCanonRoomDefinitions()[108];
+const legacyBlueSprite = OS.getCircusZoneSprites(108).find(entry => entry.avatar === 'blueai');
+if (
+  legacyBlueRoom?.provenance !== 'projection'
+  || legacyBlueRoom?.nonPhysical !== true
+  || legacyBlueSprite?.silent !== true
+) {
+  failures.push('BLUE AI: projection legacy silencieuse de la zone 108 invalide');
 }
 if (OS.getWackyCastData().fly) failures.push('MOUCHE MILDENHALL: ne doit pas avoir de profil Wacky Watch');
 
@@ -505,7 +513,7 @@ for (const [zone, kinds] of [[70, ['building', 'wave']], [71, ['stairs', 'candle
 }
 const canonRoomDefinitions = OS.getCircusCanonRoomDefinitions();
 const fpsZoneMax = OS.getCircusFpsZoneMax();
-const minimumFpsZoneMax = 244;
+const minimumFpsZoneMax = 275;
 if (!Number.isInteger(fpsZoneMax) || fpsZoneMax < minimumFpsZoneMax) {
   failures.push(`FPS: borne de zones ${fpsZoneMax}/${minimumFpsZoneMax} minimum`);
 }
@@ -638,6 +646,157 @@ if (!therapyRoom?.nonPhysical || (therapyRoom?.exits || []).length) {
 }
 const getCampaignTarget = entry => entry?.campaignTarget || entry?.kind;
 const getTargetCount = (entries, target) => entries.filter(entry => getCampaignTarget(entry) === target).length;
+const episodeNineCampaign = OS.getCircusFpsCampaignDefinition(9);
+const episodeNineWorld = OS.getCircusAdventureWorlds().find(world => world.episode === 9);
+const episodeNineExpectedZones = [
+  245, 246, 247, 248, 249, 250, 74, 101, 102, 103, 104, 251, 252,
+  253, 254, 255, 23, 256, 257, 106, 258, 259, 260, 261, 262, 263,
+  264, 265, 266, 267, 268, 269, 270, 271, 75, 272, 273, 274, 275
+];
+const episodeNineStages = Array.isArray(episodeNineCampaign?.stages) ? episodeNineCampaign.stages : [];
+const episodeNineZones = episodeNineStages.map(stage => stage.zone);
+if (episodeNineWorld?.target !== 245) {
+  failures.push(`EP9 FPS: portail d entree ${episodeNineWorld?.target ?? 'absent'}/245`);
+}
+if (episodeNineCampaign?.version !== 2) failures.push('EP9 FPS: version de campagne 2 absente');
+if (episodeNineStages.length !== 39) {
+  failures.push(`EP9 FPS: ${episodeNineStages.length}/39 actes attendus`);
+}
+if (JSON.stringify(episodeNineZones) !== JSON.stringify(episodeNineExpectedZones)) {
+  failures.push(`EP9 FPS: sequence de zones incorrecte (${episodeNineZones.join(', ')})`);
+}
+const episodeNineTranscriptAfter = episodeNineStages.map(stage => Number(stage.transcriptAfter));
+if (episodeNineTranscriptAfter[0] !== 16) {
+  failures.push(`EP9 FPS: premiere borne transcript ${episodeNineTranscriptAfter[0] ?? 'absente'}/16`);
+}
+if (episodeNineTranscriptAfter.at(-1) !== 935) {
+  failures.push(`EP9 FPS: derniere borne transcript ${episodeNineTranscriptAfter.at(-1) ?? 'absente'}/935`);
+}
+if (episodeNineTranscriptAfter.some(after => !Number.isFinite(after) || after <= 0)) {
+  failures.push('EP9 FPS: une borne transcript est absente, nulle ou invalide');
+}
+for (let index = 1; index < episodeNineTranscriptAfter.length; index += 1) {
+  if (episodeNineTranscriptAfter[index] < episodeNineTranscriptAfter[index - 1]) {
+    failures.push(`EP9 FPS: borne transcript decroissante a l acte ${index + 1}`);
+  }
+}
+for (let zone = 245; zone <= 275; zone += 1) {
+  const room = canonRoomDefinitions[zone];
+  if (!room) {
+    failures.push(`EP9 FPS: piece ${zone} absente`);
+  } else if (!Array.isArray(room.props) || !room.props.length || !OS.getCircusZoneProps(zone).length) {
+    failures.push(`EP9 FPS: piece ${zone} sans decor`);
+  }
+}
+const episodeNineOpeningRoster = new Set(OS.getCircusZoneSprites(245).map(sprite => sprite.avatar || sprite.type));
+if (episodeNineOpeningRoster.has('caine') || episodeNineOpeningRoster.has('bubble')) {
+  failures.push('EP9 FPS 245: Caine ou Bubble apparait dans l ouverture alteree');
+}
+for (const zone of [249, 250]) {
+  const abstractedJax = OS.getCircusZoneSprites(zone)
+    .find(sprite => (sprite.avatar || sprite.type) === 'abstractedjax');
+  if (!abstractedJax || abstractedJax.silent !== true) {
+    failures.push(`EP9 FPS ${zone}: Jax abstrait absent ou verbal`);
+  }
+}
+if (getTargetCount(OS.getCircusZoneProps(250), 'huntlight') !== 6) {
+  failures.push('EP9 FPS 250: six lampes de chasse attendues');
+}
+const ribbitBedroomProps = OS.getCircusZoneProps(254);
+if (!ribbitBedroomProps.some(prop => prop.kind === 'bed')
+  || ribbitBedroomProps.filter(prop => prop.kind === 'plant').length < 2
+  || getTargetCount(ribbitBedroomProps, 'starprojector') !== 1
+  || ribbitBedroomProps.filter(prop => prop.kind === 'toyblock').length !== 2) {
+  failures.push('EP9 FPS 254: chambre de Ribbit incomplete');
+}
+const inertBubble = OS.getCircusZoneSprites(260)
+  .find(sprite => (sprite.avatar || sprite.type) === 'bubble');
+if (!inertBubble || inertBubble.silent !== true
+  || getTargetCount(OS.getCircusZoneProps(260), 'inertbubble') !== 1) {
+  failures.push('EP9 FPS 260: Bubble doit rester silencieuse et liee a inertbubble');
+}
+const humanCounterpartAvatars = new Set([
+  'abigailbrooks', 'suzieackerman', 'zoeyraghavan',
+  'rileyverselis', 'grantbest', 'leeroymateo'
+]);
+const externalLivesProps = OS.getCircusZoneProps(267);
+const externalLivesSprites = OS.getCircusZoneSprites(267);
+if (getTargetCount(externalLivesProps, 'lifeprofile') !== 6) {
+  failures.push('EP9 FPS 267: six profils de vies exterieures attendus');
+}
+if (externalLivesSprites.some(sprite => (
+  sprite.type === 'human' || humanCounterpartAvatars.has(sprite.avatar || sprite.type)
+))) {
+  failures.push('EP9 FPS 267: un humain est materialise comme sprite dans le Circus');
+}
+const aquariumExpectedRoster = [
+  'abstractedjax', 'abstractedribbit', 'abstractedkaufmo', 'abstractedqueeniedark'
+].sort();
+const aquariumSprites = OS.getCircusZoneSprites(269);
+const aquariumAbstractions = aquariumSprites.filter(sprite => sprite.type === 'abstract');
+const aquariumActualRoster = aquariumAbstractions.map(sprite => sprite.avatar || sprite.type).sort();
+if (JSON.stringify(aquariumActualRoster) !== JSON.stringify(aquariumExpectedRoster)) {
+  failures.push(`EP9 FPS 269: roster incorrect (${aquariumActualRoster.join(', ')})`);
+}
+if (aquariumAbstractions.some(sprite => sprite.silent !== true || sprite.threatActive !== false)) {
+  failures.push('EP9 FPS 269: les quatre abstractions doivent etre silencieuses et non hostiles');
+}
+const aquariumObservers = new Set(
+  aquariumSprites.filter(sprite => sprite.type !== 'abstract').map(sprite => sprite.avatar || sprite.type)
+);
+if (JSON.stringify([...aquariumObservers].sort()) !== JSON.stringify(['kinger', 'pomni'])) {
+  failures.push(`EP9 FPS 269: observateurs incorrects (${[...aquariumObservers].sort().join(', ')})`);
+}
+const finalDinnerSprites = OS.getCircusZoneSprites(273);
+const finalDinnerRoster = finalDinnerSprites.map(sprite => sprite.avatar || sprite.type).sort();
+const finalDinnerExpectedRoster = ['caine', 'gangle', 'kinger', 'pomni', 'ragatha', 'zooble'];
+if (JSON.stringify(finalDinnerRoster) !== JSON.stringify(finalDinnerExpectedRoster)) {
+  failures.push(`EP9 FPS 273: convives incorrects (${finalDinnerRoster.join(', ')})`);
+}
+if (getTargetCount(OS.getCircusZoneProps(273), 'dinnerplace') !== 6) {
+  failures.push('EP9 FPS 273: six places de diner attendues');
+}
+const realWorldRoom = canonRoomDefinitions[275];
+const realWorldSprites = OS.getCircusZoneSprites(275);
+if (realWorldRoom?.provenance !== 'projection'
+  || realWorldRoom?.nonPhysical !== true
+  || realWorldRoom?.layer !== 'real-world') {
+  failures.push('EP9 FPS 275: arret de bus non classe comme projection non physique du monde reel');
+}
+if (realWorldSprites.length !== 6
+  || realWorldSprites.some(sprite => sprite.type !== 'human' || sprite.silent !== true)) {
+  failures.push('EP9 FPS 275: six humains silencieux exactement attendus');
+}
+const episodeNineNonPhysicalLayers = new Set([
+  'projection', 'projector', 'memory', 'mind', 'network', 'void', 'real-world'
+]);
+const episodeNineBaseNonPhysicalMarkers = new Map([
+  [23, [
+    "23: { name: 'SNOWY SUMMIT / MEMORY'",
+    "23: { exits: [], motif: 'snow', size: 17, nonPhysical: true, layer: 'memory' }"
+  ]],
+  [74, [
+    "74: { name: 'JAX PSYCHE / FIVE-DOOR FOYER'",
+    "74: { exits: [], motif: 'memory', size: 17, nonPhysical: true, layer: 'mind' }"
+  ]]
+]);
+for (const zone of new Set(episodeNineExpectedZones)) {
+  const room = canonRoomDefinitions[zone];
+  const stage = episodeNineStages.find(candidate => candidate.zone === zone);
+  const mustBeNonPhysical = room?.provenance === 'projection'
+    || episodeNineNonPhysicalLayers.has(room?.layer)
+    || episodeNineNonPhysicalLayers.has(stage?.entryMode);
+  const baseRoomIsNonPhysical = (episodeNineBaseNonPhysicalMarkers.get(zone) || [])
+    .every(marker => source.includes(marker));
+  if (mustBeNonPhysical && room?.nonPhysical !== true && !baseRoomIsNonPhysical) {
+    failures.push(`EP9 FPS ${zone}: couche ${room?.layer || stage?.entryMode} non balisee nonPhysical`);
+  }
+}
+for (const legacyZone of [105, 107, 108, 109, 121]) {
+  if (episodeNineZones.includes(legacyZone)) {
+    failures.push(`EP9 FPS: zone legacy ${legacyZone} encore presente dans la campagne v2`);
+  }
+}
 const trophyRoomProps = OS.getCircusZoneProps(88);
 const trophyRoomTapeTargets = trophyRoomProps
   .map(getCampaignTarget)

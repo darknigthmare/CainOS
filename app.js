@@ -1654,7 +1654,7 @@ const OS = {
       20: { name: 'RESIDENT HALL / CHAMBRES', short: 'CHAMBRES', detail: 'Couloir residentiel avec les portes personnalisees des habitants du Cirque.', color: '#ff6b9f', floor: '#30152a', ceiling: '#160b24', unlocked: unlockedAt(1, 0) },
       21: { name: "CROW'S NEST / CAFE CIRQUE", short: 'CAFE', detail: 'Cafe du Cirque utilise comme lieu de retrait et de discussion tardive.', color: '#d49a62', floor: '#302018', ceiling: '#17100d', unlocked: unlocked(8) },
       22: { name: 'AQUARIUM', short: 'AQUARIUM', detail: 'Zone aquatique revelee dans Remember.', color: '#63d9ff', floor: '#073443', ceiling: '#06202f', unlocked: unlocked(9) },
-      23: { name: 'SNOWY SUMMIT', short: 'SOMMET', detail: 'Sommet enneige rattache aux souvenirs de Jax et Ribbit.', color: '#e8f7ff', floor: '#a7c9df', ceiling: '#34567a', unlocked: unlocked(9) },
+      23: { name: 'SNOWY SUMMIT / MEMORY', short: 'SOMMET', detail: 'Projection du sommet enneige rattachee aux souvenirs de Jax et Ribbit.', color: '#e8f7ff', floor: '#a7c9df', ceiling: '#34567a', provenance: 'projection', nonPhysical: true, layer: 'memory', unlocked: unlocked(9) },
       24: { name: "POACHER'S PARADISE", short: 'CHASSE', detail: 'Micro-aventure de chasse d Untitled avec les transformations animales.', color: '#c4a45f', floor: '#304621', ceiling: '#16305a', unlocked: unlockedAt(5, 2) },
       25: { name: 'ANIME HIGH SCHOOL', short: 'LYCEE', detail: 'Micro-aventure scolaire anime d Untitled.', color: '#ff9fcd', floor: '#e8d7df', ceiling: '#8bc8ff', unlocked: unlockedAt(5, 4) },
       26: { name: 'WHITE HOUSE ADVENTURE', short: 'PRESIDENCE', detail: 'Micro-aventure politique de Pomni dans Untitled.', color: '#f2f2f2', floor: '#d8dce7', ceiling: '#44699a', unlocked: unlockedAt(5, 3) },
@@ -1686,7 +1686,7 @@ const OS = {
       70: { name: 'SHRIMP TOWN / CONTREFACTUEL', short: 'SHRIMP TOWN', detail: 'Destination seulement citee comme resultat du choix alternatif. Elle n est jamais visitee dans la chronologie canonique.', color: '#ff8f4a', floor: '#d9b66f', ceiling: '#69c9e8', provenance: 'mentioned', nonPhysical: true, unlocked: unlockedAt(7, 7) },
       71: { name: 'SNOWY TUNDRA / CAINOS RECONSTRUCTION', short: 'TOUNDRA', detail: 'Archive visuelle isolee: le transcript local d Untitled ne confirme ni son trajet ni ses objectifs. Elle ne constitue pas une porte du lightning round.', color: '#e8f7ff', floor: '#cfe6ef', ceiling: '#7aa7cc', unlocked: unlockedAt(5, 1) },
       72: { name: "SPUDSY'S PARKING LOT", short: 'PARKING', detail: 'Exterieur du restaurant ou le service de Gangle se termine brutalement.', color: '#ff4d4d', floor: '#36363d', ceiling: '#41213c', unlocked: unlockedAt(4, 7) },
-      73: { name: 'C&A BRAIN SCANNER FLASHBACK', short: 'SCANNER', detail: 'Flashback technique de Remember: poste de Scratch, vieux PC, casque et scanners cerebraux.', color: '#c5d6e8', floor: '#8e959f', ceiling: '#252a31', provenance: 'projection', nonPhysical: true, layer: 'memory', unlocked: unlockedAt(9, 6) },
+      73: { name: 'C&A NEURAL ARCHIVE FLASHBACK', short: 'ARCHIVE NEURALE', detail: 'Ancienne reconstruction technique conservee en lecture seule; la genese exacte des scans et de Scratch est desormais separee en zone 262.', color: '#c5d6e8', floor: '#8e959f', ceiling: '#252a31', provenance: 'projection', nonPhysical: true, layer: 'memory', unlocked: unlockedAt(9, 6) },
       74: { name: 'JAX PSYCHE / FIVE-DOOR FOYER', short: 'FOYER PSYCHE', detail: 'Foyer mental violet de Remember; les scenarios sont des projections, pas des salles du Cirque.', color: '#8a4fd6', floor: '#24192f', ceiling: '#08050d', provenance: 'projection', nonPhysical: true, layer: 'mind', unlocked: unlockedAt(9, 4) },
       75: { name: 'EXPANDED GROUNDS / EPILOGUE PROJECTION', short: 'GROUNDS +', detail: 'Image d epilogue des Grounds etendus apres Remember; son plan complet n est pas confirme comme espace jouable.', color: '#7df0ff', floor: '#2b5d3b', ceiling: '#4e9de0', provenance: 'projection', nonPhysical: true, layer: 'credits', unlocked: unlocked(9) }
     };
@@ -1712,7 +1712,7 @@ const OS = {
       20: { exits: [2, 28, 50, 51], motif: 'dorm', size: 21 },
       21: { exits: [2, 43], motif: 'cafe', size: 15 },
       22: { exits: [], motif: 'aquarium', size: 17 },
-      23: { exits: [], motif: 'snow', size: 17 },
+      23: { exits: [], motif: 'snow', size: 17, nonPhysical: true, layer: 'memory' },
       24: { exits: [11], motif: 'poacher', size: 17 },
       25: { exits: [11], motif: 'school', size: 17 },
       26: { exits: [11], motif: 'whitehouse', size: 15 },
@@ -1745,7 +1745,7 @@ const OS = {
       71: { exits: [], motif: 'snow', size: 19, nonPhysical: true },
       72: { exits: [], motif: 'street', size: 17 },
       73: { exits: [], motif: 'exit', size: 15 },
-      74: { exits: [], motif: 'memory', size: 17 },
+      74: { exits: [], motif: 'memory', size: 17, nonPhysical: true, layer: 'mind' },
       75: { exits: [], motif: 'grounds', size: 23 }
     };
 
@@ -2314,7 +2314,7 @@ const OS = {
       { episode: 6, target: 122, label: 'EP6 - THEY ALL GET GUNS / OPENING' },
       { episode: 7, target: 2, label: 'EP7 - BEACH EPISODE / FREE DAY' },
       { episode: 8, target: 113, label: 'EP8 - HJSAKLDFHL / GENESIS' },
-      { episode: 9, target: 121, label: 'EP9 - REMEMBER / DAMAGED TENT' }
+      { episode: 9, target: 245, label: 'EP9 - REMEMBER / ALTERED TENT' }
     ];
   },
 
@@ -2352,6 +2352,21 @@ const OS = {
     const current = worlds.find(world => world.episode === selectedEpisode && !progress.includes(world.episode))
       || worlds.find(world => !progress.includes(world.episode))
       || worlds[0];
+    const activeCampaign = this.getActiveCircusCampaignStatus();
+    if (activeCampaign?.definition?.episode === current.episode) {
+      const pendingVisit = activeCampaign.requirements.find(requirement => (
+        !requirement.complete
+        && requirement.action === 'visit'
+        && Number.isFinite(Number(requirement.target))
+      ));
+      const target = pendingVisit ? Number(pendingVisit.target) : activeCampaign.stage.zone;
+      return {
+        ...current,
+        target,
+        freeMode,
+        label: `EP${current.episode} - ${activeCampaign.stage.title} / REPRISE`
+      };
+    }
     return { ...current, freeMode, label: current.label };
   },
 
@@ -4161,90 +4176,241 @@ const OS = {
           ]
         }
       ] },
-      9: { title: 'Remember', steps: [
+      9: { title: 'Remember', version: 2, steps: [
         {
-          title: 'Chapiteau detruit monochrome', zone: 121, route: [121],
-          action: 'use', target: 'stableform', count: 3, distinct: true,
-          guide: 'Aidez Kinger a creer trois formes stables et bouchez les failles du chapiteau detruit.',
-          requirements: [{ action: 'talk', target: 'kinger', zone: 121, count: 1 }]
+          title: 'Ouverture sans Caine ni Bubble', zone: 245, route: [245], entryMode: 'timeshift', after: 16,
+          action: 'look', target: 'openingrelic', count: 5, distinct: true,
+          guide: 'Traversez la reprise alteree du generique et relevez les cinq objets suspendus sans faire apparaitre Caine ou Bubble.',
+          requirements: [{ action: 'talk', target: 'pomni', zone: 245, count: 1 }]
         },
         {
-          title: 'Poursuite de Jax abstrait', zone: 20, route: [121, 20],
-          action: 'use', target: 'ceilinglight', count: 3, distinct: true,
-          guide: 'Suivez Jax abstrait dans le couloir et eteignez seulement les lampes avant le contact mental.',
-          requirements: [{ action: 'talk', target: 'pomni', zone: 20, count: 1 }]
+          title: 'Console, chute et brain scans', zone: 246, route: [246], entryMode: 'timeshift', after: 68,
+          action: 'look', target: 'brainscan',
+          guide: 'Inspectez la console tombee et les scans reveles par Kinger avant de suivre la fracture du groupe.',
+          requirements: [
+            { action: 'look', target: 'fallenconsole', zone: 246, count: 1 },
+            { action: 'talk', target: 'kinger', zone: 246, count: 1 }
+          ]
         },
         {
-          title: 'Psyche I / porte de Ragatha', zone: 101, route: [101], entryMode: 'mind',
+          title: 'Respirer avec Kinger', zone: 247, route: [247], entryMode: 'timeshift', after: 120,
+          action: 'use', target: 'breathnode', count: 3, distinct: true,
+          guide: 'Stabilisez trois temps de respiration avec Kinger avant de reprendre la reparation.',
+          requirements: [{ action: 'talk', target: 'pomni', zone: 247, count: 1 }]
+        },
+        {
+          title: 'Reparation collective du Tent', zone: 248, route: [248], entryMode: 'timeshift', after: 130,
+          action: 'use', target: 'repairplate', count: 5, distinct: true,
+          guide: 'Posez les plaques stables dans les ouvertures. Les formes instables doivent rester au-dessus du Vide.',
+          requirements: [{ action: 'look', target: 'isolatedjax', zone: 248, count: 1 }]
+        },
+        {
+          title: 'Ribbit nommee depuis la galerie', zone: 249, route: [249], entryMode: 'timeshift', after: 193,
+          action: 'look', target: 'railing',
+          guide: 'Observez Jax abstrait depuis la galerie protegee pendant que Ragatha raconte Ribbit.',
+          requirements: [
+            { action: 'talk', target: 'ragatha', zone: 249, count: 1 },
+            { action: 'look', target: 'abstractedjax', zone: 249, count: 1 }
+          ]
+        },
+        {
+          title: 'Chasse et extinction du Dorm Hall', zone: 250, route: [250], entryMode: 'timeshift', after: 230,
+          action: 'use', target: 'huntlight', count: 6, distinct: true,
+          guide: 'Eteignez les lampes du couloir a portee et maintenez la distance avec Jax abstrait jusqu au contact mental.',
+          requirements: [{ action: 'talk', target: 'pomni', zone: 250, count: 1 }]
+        },
+        {
+          title: 'Foyer aux cinq portes', zone: 74, route: [74], entryMode: 'mind', after: 230,
+          action: 'look', target: 'doorframe', count: 5, distinct: true,
+          guide: 'Cartographiez les cinq portes de la psyche; la porte barricadee reste sans identite confirmee.'
+        },
+        {
+          title: 'Psyche I / porte de Ragatha', zone: 101, route: [101], entryMode: 'mind', after: 247,
           action: 'look', target: 'memory',
-          guide: 'Lisez le premier role mental de Jax et gardez la porte de Ragatha barree.'
+          guide: 'Lisez le premier role defensif de Jax et gardez la porte de Ragatha barree.'
         },
         {
-          title: 'Psyche II / funerailles de Zooble', zone: 102, route: [102], entryMode: 'mind',
+          title: 'Psyche II / funerailles de Zooble', zone: 102, route: [102], entryMode: 'mind', after: 272,
           action: 'look', target: 'memory',
-          guide: 'Traversez la scene funeraire comme une projection mentale, pas comme un evenement reel.'
+          guide: 'Traversez les funerailles, les mannequins et Maid Jax comme une projection mentale.'
         },
         {
-          title: 'Psyche III / poursuite cartoon', zone: 103, route: [103], entryMode: 'mind',
+          title: 'Psyche III / poursuite cartoon', zone: 103, route: [103], entryMode: 'mind', after: 288,
           action: 'look', target: 'memory',
-          guide: 'Suivez le scenario cartoon jusqu au retour vers le foyer mental.'
+          guide: 'Suivez le Dorm Hall deforme puis la falaise cartoon sans en faire un monde physique.'
         },
         {
-          title: 'Psyche IV / quatre personas', zone: 104, route: [104], entryMode: 'mind',
-          action: 'talk', target: 'jaxmindtrapped',
-          guide: 'Observez la table, le piano et les quatre personas avant d ouvrir la memoire centrale.',
-          requirements: [{ action: 'use', target: 'pianokey', zone: 104, count: 1 }]
+          title: 'Psyche IV / quatre personas', zone: 104, route: [104], entryMode: 'mind', after: 339,
+          action: 'use', target: 'memorykey',
+          guide: 'Identifiez les quatre facades, le piano Daisy Bell et la cle du noyau mental.',
+          requirements: [{ action: 'talk', target: 'jaxmindtrapped', zone: 104, count: 1 }]
         },
         {
-          title: 'Montage de memoire de Jax', zone: 105, route: [105], entryMode: 'memory',
-          action: 'look', target: 'archive',
-          guide: 'Parcourez les ancres du montage sans modifier les souvenirs ni reveler les noms humains avant le projecteur final.'
+          title: 'Fragments de vie humaine de Jax', zone: 251, route: [251], entryMode: 'memory', after: 339,
+          action: 'look', target: 'humanfragment', count: 3, distinct: true,
+          guide: 'Relevez seulement la rue, la route et la maison vues en fragments; aucun quartier complet ni nom humain ne doit etre invente.'
         },
         {
-          title: 'Espace noir au lampadaire', zone: 106, route: [106], entryMode: 'mind',
+          title: 'Arrivee de Jax et miroir', zone: 252, route: [252], entryMode: 'memory', after: 360,
+          action: 'look', target: 'arrivalmirror',
+          guide: 'Suivez la panique du nouvel arrivant devant son avatar puis l accueil de Ragatha, Ribbit et Kaufmo.'
+        },
+        {
+          title: 'Chocolat chaud au Cafe Cirque', zone: 253, route: [253], entryMode: 'memory', after: 380,
+          action: 'use', target: 'hotchocolate', count: 3, distinct: true,
+          guide: 'Reconstituez les trois chocolats chauds et la premiere camaraderie sans transformer le souvenir en present.',
+          requirements: [{ action: 'talk', target: 'ribbit', zone: 253, count: 1 }]
+        },
+        {
+          title: 'Confidence dans la chambre de Ribbit', zone: 254, route: [254], entryMode: 'memory', after: 489,
+          action: 'look', target: 'starprojector',
+          guide: 'Explorez la chambre verte, les etageres-arbres et le projecteur d etoiles pendant la confidence de Jax.',
+          requirements: [
+            { action: 'look', target: 'toyblock', zone: 254, count: 2, distinct: true },
+            { action: 'talk', target: 'ribbit', zone: 254, count: 1 }
+          ]
+        },
+        {
+          title: 'Sonnette, panique et recul', zone: 255, route: [255], entryMode: 'memory', after: 521,
+          action: 'use', target: 'doorbell',
+          guide: 'Declenchez la sonnette de Kaufmo puis suivez le recul defensif de Jax sans modifier sa confidence.',
+          requirements: [{ action: 'talk', target: 'kaufmo', zone: 255, count: 1 }]
+        },
+        {
+          title: 'Rupture au Snowy Summit', zone: 23, route: [23], entryMode: 'memory', after: 580,
+          action: 'look', target: 'stairs',
+          guide: 'Reconstituez le bord enneige ou Jax repousse Ribbit; aucun interieur de chalet n est ajoute.',
+          requirements: [
+            { action: 'talk', target: 'jax', zone: 23, count: 1 },
+            { action: 'talk', target: 'ribbit', zone: 23, count: 1 }
+          ]
+        },
+        {
+          title: 'Porte de Ribbit barree', zone: 256, route: [256], entryMode: 'memory', after: 580,
+          action: 'look', target: 'crossedribbitdoor',
+          guide: 'Suivez l isolement de Ribbit jusqu a sa porte barree; son abstraction reste non verbale.',
+          requirements: [{ action: 'look', target: 'ribbitabstraction', zone: 256, count: 1 }]
+        },
+        {
+          title: 'Gangle nommee et Kaufmo eloigne', zone: 257, route: [257], entryMode: 'memory', after: 613,
+          action: 'look', target: 'memorybeat', count: 3, distinct: true,
+          guide: 'Parcourez les trois balises: consolation de Ragatha, arrivee de Gangle et avertissement de Kaufmo sur la sortie.'
+        },
+        {
+          title: 'Noyau mental au lampadaire', zone: 106, route: [106], entryMode: 'mind', after: 681,
           action: 'talk', target: 'jax',
-          guide: 'Restez pres du vrai Jax mental sous le lampadaire. Cette scene ne guerit pas son abstraction.',
+          guide: 'Restez pres du vrai Jax sous le lampadaire. Cette presence ne guerit pas son abstraction.',
           requirements: [{ action: 'use', target: 'spotlight', zone: 106, count: 1 }]
         },
         {
-          title: 'Fort sombre pour Jax', zone: 109, route: [109], entryMode: 'cainecut',
-          action: 'use', target: 'bed',
-          guide: 'Construisez et verifiez le fort de coussins sombre autour de Jax abstrait.',
-          requirements: [{ action: 'talk', target: 'zooble', zone: 109, count: 1 }]
+          title: 'Extraction, explosion et fort sombre', zone: 258, route: [258], entryMode: 'timeshift', after: 707,
+          action: 'look', target: 'stunblast',
+          guide: 'Suivez la rupture du lien, le souffle des anciennes grenades et le sauvetage de Pomni avant le confinement.',
+          requirements: [
+            { action: 'use', target: 'darkfort', zone: 258, count: 3, distinct: true },
+            { action: 'talk', target: 'zooble', zone: 258, count: 1 }
+          ]
         },
         {
-          title: 'Chambre de Gangle puis salon', zone: 28, route: [47, 20, 28], entryMode: 'cainecut', entryZone: 47,
-          action: 'talk', target: 'ragatha',
-          guide: 'Accompagnez Gangle dans sa chambre puis rejoignez le groupe dans l espace commun.',
-          requirements: [{ action: 'talk', target: 'gangle', zone: 47, count: 1 }]
+          title: 'Gangle retrouvee et salon commun', zone: 259, route: [259], entryMode: 'timeshift', after: 720,
+          action: 'look', target: 'artdesk',
+          guide: 'Retrouvez Gangle dans sa chambre partiellement montree puis revenez au groupe sans inventer le reste de son plan.',
+          requirements: [{ action: 'talk', target: 'gangle', zone: 259, count: 1 }]
         },
         {
-          title: 'Route de Caine dans le Vide', zone: 107, route: [107], entryMode: 'void',
-          action: 'use', target: 'gridnode', count: 2, distinct: true,
-          guide: 'Construisez l escalier de formes et franchissez les pare-feu sans relier cette route aux bureaux physiques.',
-          requirements: [{ action: 'talk', target: 'caine', zone: 107, count: 1 }]
+          title: 'Caine et Bubble dans le Vide', zone: 260, route: [260], entryMode: 'void', after: 739,
+          action: 'look', target: 'inertbubble',
+          guide: 'Suivez le doute de Caine dans le Vide bleu-blanc. Bubble reste une sphere inerte et silencieuse.',
+          requirements: [{ action: 'talk', target: 'caine', zone: 260, count: 1 }]
         },
         {
-          title: 'Flashback du scanner C&A', zone: 73, route: [73], entryMode: 'memory',
-          action: 'use', target: 'console',
-          guide: 'Consultez le vieux poste de Scratch et les scans en lecture seule. Aucun ancien membre ne revient a la vie.'
+          title: 'Perte du vol et pont de formes', zone: 261, route: [261], entryMode: 'void', after: 786,
+          action: 'use', target: 'shapebridge', count: 5, distinct: true,
+          guide: 'Construisez le pont avec cinq formes et franchissez les parois invisibles pendant que les pouvoirs de Caine faiblissent.'
         },
         {
-          title: 'Porte Wi-Fi et liberation du Blue AI', zone: 108, route: [108], entryMode: 'network',
-          action: 'use', target: 'console',
-          guide: 'Utilisez la porte BlueStreetCafe_FreeWifi avant son extinction et liberez le Blue AI.',
-          requirements: [{ action: 'talk', target: 'blueai', zone: 108, count: 1 }]
+          title: 'Genese et archives C&A', zone: 262, route: [262], entryMode: 'memory', after: 786,
+          action: 'look', target: 'genesisbeat', count: 4, distinct: true,
+          guide: 'Lisez les quatre etapes point rouge, point bleu, scans puis premier Tent comme une projection historique.'
         },
         {
-          title: 'Moon et retour au Tent', zone: 3, route: [3], entryMode: 'cainecut',
+          title: 'Porte Internet et profils', zone: 263, route: [263], entryMode: 'network', after: 786,
+          action: 'use', target: 'wifidoor',
+          guide: 'Ouvrez la passerelle BlueStreetCafe_FreeWifi et inspectez les profils comme des medias, jamais comme des lieux physiques.',
+          requirements: [{ action: 'look', target: 'searchresult', zone: 263, count: 3, distinct: true }]
+        },
+        {
+          title: 'Separation du Blue AI', zone: 264, route: [264], entryMode: 'network', after: 821,
+          action: 'use', target: 'blueaicore',
+          guide: 'Separez le noyau bleu de Caine puis laissez-le partir dans le Vide sans lui attribuer de dialogue.',
+          requirements: [{ action: 'talk', target: 'caine', zone: 264, count: 1 }]
+        },
+        {
+          title: 'Moon choisit Caine', zone: 265, route: [265], entryMode: 'timeshift', after: 845,
           action: 'talk', target: 'moon',
-          guide: 'Retrouvez Moon sur les Grounds puis revenez vers le groupe sans transformer le cafe humain en destination.'
+          guide: 'Retrouvez Moon de nuit au-dessus de l entree du Tent et ecoutez son choix avant le retour de Caine.'
         },
         {
-          title: 'Projecteur et choix final', zone: 2, route: [2], entryMode: 'cainecut',
-          action: 'use', target: 'projector',
-          guide: 'Activez le projecteur final, lisez les profils dans leur ordre de revelation et laissez Pomni confirmer son identite numerique.',
-          requirements: [{ action: 'talk', target: 'pomni', zone: 2, count: 1 }, { action: 'talk', target: 'caine', zone: 2, count: 1 }]
+          title: 'Retour, reparation et controle partage', zone: 266, route: [266], entryMode: 'timeshift', after: 874,
+          action: 'use', target: 'pomnirepair',
+          guide: 'Reparez le jumbling de Pomni puis laissez Zooble accepter prudemment le retour de Caine.',
+          requirements: [
+            { action: 'talk', target: 'caine', zone: 266, count: 1 },
+            { action: 'talk', target: 'zooble', zone: 266, count: 1 }
+          ]
+        },
+        {
+          title: 'Projecteur des vies exterieures', zone: 267, route: [267], entryMode: 'projection', after: 935,
+          action: 'use', target: 'lifeprojector',
+          guide: 'Activez le projecteur et lisez les six profils dans leur ordre de revelation sans les faire entrer physiquement dans le Cirque.',
+          requirements: [{ action: 'look', target: 'lifeprofile', zone: 267, count: 6, distinct: true }]
+        },
+        {
+          title: 'Pomni choisit son identite', zone: 268, route: [268], entryMode: 'timeshift', after: 935,
+          action: 'talk', target: 'pomni',
+          guide: 'Laissez Pomni reconnaitre la vie d Abigail tout en affirmant qu elle est Pomni dans le Cirque.',
+          requirements: [{ action: 'look', target: 'abigailprojection', zone: 268, count: 1 }]
+        },
+        {
+          title: 'Aquarium des Abstractions', zone: 269, route: [269], entryMode: 'timeshift', after: 935,
+          action: 'look', target: 'aquariumresident', count: 4, distinct: true,
+          guide: 'Observez Jax, Ribbit, Kaufmo et Queenie dans leurs formes aquatiques calmees derriere les grandes vitres.'
+        },
+        {
+          title: 'Fresque et fermeture du Cellar', zone: 270, route: [270], entryMode: 'timeshift', after: 935,
+          action: 'look', target: 'memorialportrait', count: 4, distinct: true,
+          guide: 'Relevez la fresque des membres abstraits puis confirmez que l acces au Cellar est ferme.'
+        },
+        {
+          title: 'Nouvelle vie du Circus', zone: 271, route: [271], entryMode: 'timeshift', after: 935,
+          action: 'look', target: 'activity', count: 4, distinct: true,
+          guide: 'Traversez le jeu de role, les dessins de Gangle, le softball et la Gloink Queen a son echelle reelle.'
+        },
+        {
+          title: 'Grounds et nouveaux ilots', zone: 75, route: [75], entryMode: 'timeshift', after: 935,
+          action: 'look', target: 'tower',
+          guide: 'Parcourez les nouveaux ilots, ponts et le grand toboggan sans presumer un plan fixe de tous les biomes.'
+        },
+        {
+          title: 'Digital Triangle Bar', zone: 272, route: [272], entryMode: 'timeshift', after: 935,
+          action: 'use', target: 'bardrink',
+          guide: 'Visitez le bar ouvert par Zooble dans le Circus et servez Caine sans le confondre avec le bar de l episode 5.',
+          requirements: [{ action: 'talk', target: 'zooble', zone: 272, count: 1 }]
+        },
+        {
+          title: 'Diner final du groupe', zone: 273, route: [273], entryMode: 'timeshift', after: 935,
+          action: 'look', target: 'dinnerplace', count: 6, distinct: true,
+          guide: 'Reconstituez les six places du diner final avant le travelling vers le Tent, les Grounds et le Vide.'
+        },
+        {
+          title: 'Au revoir de Pomni', zone: 274, route: [274], entryMode: 'timeshift', after: 935,
+          action: 'talk', target: 'pomni',
+          guide: 'Restez sur les Grounds pendant l au revoir de Pomni; aucune nouvelle sortie n est suggeree.'
+        },
+        {
+          title: 'Arret de bus du monde reel', zone: 275, route: [275], entryMode: 'projection', after: 935,
+          action: 'look', target: 'busstopgroup', count: 6, distinct: true,
+          guide: 'Observez les six humains comme une scene post-generique du monde reel, isolee de toute geometrie physique du Circus.'
         }
       ] }
     };
@@ -4289,7 +4455,7 @@ const OS = {
         entryMode: step.entryMode || null,
         entryZone: Number.isFinite(Number(step.entryZone)) ? Number(step.entryZone) : zone,
         guide: step.guide || checkpoint.objective || `Suivez le signal ${String(target).toUpperCase()} dans cette scene.`,
-        transcriptAfter: checkpoint.after || 0,
+        transcriptAfter: Number(step.after) || checkpoint.after || 0,
         requirements
       };
     });
@@ -4835,6 +5001,57 @@ const OS = {
       ],
       244: [
         { id: 'ep8-accidental-delete', speaker: 'CainOS', channel: 'system', text: 'BOINK / DELETE: purge declenchee. Caine revient a sa forme normale, disparait, puis le portable bascule hors du fort.', duration: 6400, danger: true }
+      ],
+      245: [
+        { id: 'ep9-altered-opening', speaker: 'CainOS', channel: 'system', text: 'REMEMBER / OUVERTURE: six residents detectes. Caine et Bubble restent absents de cette reprise alteree.', duration: 6000 }
+      ],
+      248: [
+        { id: 'ep9-repair-montage', speaker: 'CainOS', channel: 'system', text: 'ELLIPSE DE REPARATION: cinq plaques stables, deux formes en chute et Jax maintenu hors du groupe.', duration: 5800 }
+      ],
+      250: [
+        { id: 'ep9-dorm-hunt', speaker: 'CainOS', channel: 'system', text: 'CHASSE DU DORM HALL: eteignez les six lampes avant le contact. Jax abstrait reste non verbal.', duration: 6000, danger: true }
+      ],
+      251: [
+        { id: 'ep9-human-fragments-boundary', speaker: 'CainOS', channel: 'system', text: 'MEMOIRE HUMAINE: rue, trajet et maison seulement. Aucune adresse, identite ou carte complete ne peut etre deduite.', duration: 6200 }
+      ],
+      256: [
+        { id: 'ep9-ribbit-crossed-door', speaker: 'CainOS', channel: 'system', text: 'MEMOIRE RIBBIT: la croix rouge marque une porte archivee; la forme abstraite ne parle pas.', duration: 5600 }
+      ],
+      258: [
+        { id: 'ep9-extraction-flash', speaker: 'CainOS', channel: 'system', text: 'EXTRACTION: flash incapacitant, jumbling temporaire de Pomni et confinement obscur de Jax.', duration: 6200, danger: true }
+      ],
+      260: [
+        { id: 'ep9-void-guilt', speaker: 'CainOS', channel: 'system', text: 'VIDE LOINTAIN: gravite et pouvoirs de Caine deviennent instables. Bubble ne fournit aucun signal de parole.', duration: 6000 }
+      ],
+      261: [
+        { id: 'ep9-shape-bridge', speaker: 'CainOS', channel: 'system', text: 'ROUTE DU VIDE: cinq formes constituent le seul passage entre les parois invisibles.', duration: 5600 }
+      ],
+      262: [
+        { id: 'ep9-genesis-projection', speaker: 'CainOS', channel: 'system', text: 'ARCHIVE HISTORIQUE: les scans, la creation de Scratch et le premier Tent restent une projection en lecture seule.', duration: 6200 }
+      ],
+      263: [
+        { id: 'ep9-internet-door', speaker: 'CainOS', channel: 'system', text: 'PASSERELLE RESEAU: BlueStreetCafe_FreeWifi ne donne acces qu a une interface Internet projetee, pas a un cafe physique.', duration: 6200 }
+      ],
+      264: [
+        { id: 'ep9-blue-ai-release', speaker: 'CainOS', channel: 'system', text: 'SEPARATION DU NOYAU BLEU: aucun dialogue n est attribue au Blue AI pendant sa liberation.', duration: 5800 }
+      ],
+      267: [
+        { id: 'ep9-life-projector', speaker: 'CainOS', channel: 'system', text: 'PROJECTEUR FINAL: six contreparties humaines, six medias externes, aucun PNJ physique ajoute au Circus.', duration: 6200 }
+      ],
+      269: [
+        { id: 'ep9-aquarium-four', speaker: 'CainOS', channel: 'system', text: 'AQUARIUM: Jax, Ribbit, Kaufmo et Queenie sont presents sous des formes aquatiques apaisees et non verbales.', duration: 6200 }
+      ],
+      270: [
+        { id: 'ep9-memorial-cellar', speaker: 'CainOS', channel: 'system', text: 'MEMORIAL: quatre portraits releves. L acces physique au Cellar est maintenant ferme.', duration: 5800 }
+      ],
+      271: [
+        { id: 'ep9-open-circus-activities', speaker: 'CainOS', channel: 'system', text: 'MONTAGE DE NOUVELLE VIE: jeu de role, art, softball et Gloink Queen restent quatre activites distinctes.', duration: 6000 }
+      ],
+      273: [
+        { id: 'ep9-final-dinner', speaker: 'CainOS', channel: 'system', text: 'DINER FINAL: six places relevees avant le travelling vers le Tent, les Grounds et le Vide.', duration: 5800 }
+      ],
+      275: [
+        { id: 'ep9-real-bus-stop', speaker: 'CainOS', channel: 'system', text: 'POST-GENERIQUE REEL: six humains a l arret de bus. Cette couche ne possede aucune porte vers la simulation.', duration: 6200 }
       ]
     };
     return events[zoneId] || [];
@@ -5178,7 +5395,7 @@ const OS = {
   },
 
   getCircusFpsZoneMax() {
-    return 244;
+    return 275;
   },
 
   getCircusCanonRoomDefinitions() {
@@ -5969,7 +6186,7 @@ const OS = {
         gateEpisode: 9, gateSubepisode: 4, provenance: 'projection', layer: 'mind', nonPhysical: true, exits: [],
         props: [
           { kind: 'table', x: -2.25, z: -2.5, color: '#5c3a21', label: 'Piano de Daisy Bell' },
-          { kind: 'card', campaignTarget: 'pianokey', x: -2.25, z: -1.35, color: '#f7f7f7', label: 'Touche du piano Daisy Bell' },
+          { kind: 'card', campaignTarget: 'memorykey', x: -2.25, z: -1.35, color: '#f7f7f7', label: 'Cle remise par Piano Jax' },
           { kind: 'card', x: 0.3, z: -1.25, color: '#fff1a8', label: 'Jeu de cartes des personas' },
           { kind: 'barrel', x: 2.3, z: -2.1, color: '#6e3b62', label: 'Bouteille des personas' },
           { kind: 'doorframe', x: 0, z: -3.8, color: '#8a4fd6', label: 'Porte verrouillee de Jax' },
@@ -6040,7 +6257,7 @@ const OS = {
           { kind: 'archive', x: 0, z: -1.3, color: '#8a4fd6', label: 'Souvenir reseau non spatial' }
         ],
         sprites: [
-          { name: 'Blue AI', type: 'system', avatar: 'blueai', x: 0.65, z: -2.65, color: '#00ddff', sizeScale: 0.85, loreGate: { episode: 9, subepisode: 6 }, campaignGate: { episode: 9, minStage: 12, maxStage: 12 } }
+          { name: 'Blue AI', type: 'system', avatar: 'blueai', x: 0.65, z: -2.65, color: '#00ddff', sizeScale: 0.85, silent: true, silentText: 'Projection reseau silencieuse conservee pour compatibilite avec l ancienne zone.', loreGate: { episode: 9, subepisode: 6 } }
         ],
         objective: scan('DISTINGUER LE SIGNAL RESEAU DE LA SIMULATION', ['console', 'gridnode'], 'blueai')
       },
@@ -8949,6 +9166,655 @@ const OS = {
           { name: 'Caine avant disparition', type: 'caine', avatar: 'caine', x: 1.5, z: -4.0, color: '#ffd84a', silent: true }
         ],
         objective: scan('SUIVRE LA PURGE JUSQU A LA DISPARITION', ['target', 'scoreboard', 'ring', 'console'], 'kinger')
+      },
+      245: {
+        name: 'REMEMBER OPENING / ALTERED CIRCUS INTRO', short: 'INTRO ALTEREE',
+        detail: 'Reprise perturbee de l ouverture du Cirque: arrivee exterieure, rideaux successifs et objets suspendus. Caine et Bubble sont absents.',
+        color: '#e53935', floor: '#f2cf52', ceiling: '#25102f', motif: 'circus', size: 31,
+        gateEpisode: 9, gateSubepisode: 1, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'stagecurtain', x: 0, z: -7.2, color: '#c92536', variant: 'back', label: 'Rideau rouge de l ouverture' },
+          { kind: 'stagevalance', anchor: 'ceiling', x: 0, z: -6.6, color: '#d62f3f', label: 'Succession de draperies' },
+          { kind: 'archive', campaignTarget: 'openingrelic', x: -3.6, z: -4.8, elevation: 2.1, color: '#7a4b32', label: 'Gramophone suspendu' },
+          { kind: 'plant', campaignTarget: 'openingrelic', x: -1.8, z: -5.2, elevation: 2.45, color: '#4f8a48', label: 'Pot et fleur bleue suspendus' },
+          { kind: 'eye', campaignTarget: 'openingrelic', x: 0, z: -5.6, elevation: 2.8, color: '#f7f7f7', label: 'Paire d yeux suspendue' },
+          { kind: 'toyblock', campaignTarget: 'openingrelic', x: 1.8, z: -5.2, elevation: 2.4, color: '#4ee77e', label: 'Pyramide verte suspendue' },
+          { kind: 'barrel', campaignTarget: 'openingrelic', x: 3.6, z: -4.8, elevation: 2.1, color: '#2a58d8', label: 'Theiere bleue suspendue' },
+          { kind: 'ring', x: 0, z: -3.4, color: '#ffd84a', label: 'Piste de presentation alteree' }
+        ],
+        sprites: [
+          { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: -3.3, z: -2.4, color: '#f7f7f7' },
+          { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: -2.0, z: -3.2, color: '#ff4fb8' },
+          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -0.7, z: -2.3, color: '#d9d0a2' },
+          { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: 0.7, z: -3.0, color: '#d64545' },
+          { name: 'Jax', type: 'jax', avatar: 'jax', x: 2.0, z: -2.25, color: '#8a4fd6' },
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 3.3, z: -3.1, color: '#e53935' }
+        ],
+        objective: scan('RELEVER L OUVERTURE ALTEREE', ['stagecurtain', 'archive', 'plant', 'eye', 'toyblock', 'barrel'], 'pomni')
+      },
+      246: {
+        name: 'REMEMBER / BRAIN SCAN CONFRONTATION', short: 'BRAIN SCANS',
+        detail: 'Etat du chapiteau detruit pendant la revelation de Kinger: console tombee, scans cerebraux et groupe fracture.',
+        color: '#77747f', floor: '#d7d7d4', ceiling: '#08070d', motif: 'final', size: 29,
+        floorPalette: ['#dededb', '#7a7880', '#21102f'], horizonPalette: ['#626069', '#d8d8d5'],
+        gateEpisode: 9, gateSubepisode: 1, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'console', campaignTarget: 'fallenconsole', x: 0, z: -4.2, color: '#59616a', label: 'Console tombee de Kinger', portable: false },
+          { kind: 'memory', campaignTarget: 'brainscan', x: -1.7, z: -2.3, color: '#50d9ff', label: 'Dossier des scans cerebraux inutilises' },
+          { kind: 'scoreboard', x: 1.7, z: -2.4, color: '#7df0ff', label: 'Lecture technique de Kinger' },
+          { kind: 'gridnode', x: -4.4, z: -5.8, color: '#4d185f', label: 'Ouverture vers le Vide' },
+          { kind: 'gridnode', x: 4.3, z: -6.1, color: '#4d185f', label: 'Seconde ouverture vers le Vide' },
+          { kind: 'pillar', x: -3.0, z: -5.0, height: 7.4, color: '#5d5b64', label: 'Armature fissuree gauche' },
+          { kind: 'pillar', x: 3.0, z: -5.2, height: 8.0, color: '#626069', label: 'Armature fissuree droite' }
+        ],
+        sprites: [
+          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -1.6, z: -3.0, color: '#d9d0a2' },
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -0.3, z: -2.15, color: '#e53935' },
+          { name: 'Jax', type: 'jax', avatar: 'jax', x: 1.3, z: -2.6, color: '#8a4fd6' },
+          { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: 2.6, z: -3.35, color: '#d64545' },
+          { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: -2.9, z: -3.7, color: '#ff4fb8' },
+          { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: 0.1, z: -4.1, color: '#f7f7f7', silent: true }
+        ],
+        objective: scan('RELEVER LA REVELATION DES SCANS', ['console', 'memory', 'gridnode'], 'kinger')
+      },
+      247: {
+        name: 'REMEMBER / POMNI AND KINGER BREATHING', short: 'RESPIRATION',
+        detail: 'Moment calme au bord de la console, ou Pomni et Kinger reprennent leur souffle avant de continuer.',
+        color: '#6f6d76', floor: '#d7d7d4', ceiling: '#0c0a10', motif: 'memory', size: 15,
+        gateEpisode: 9, gateSubepisode: 1, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'console', x: 0, z: -3.6, color: '#59616a', label: 'Console mise en securite' },
+          { kind: 'gridnode', campaignTarget: 'breathnode', x: -1.45, z: -2.0, color: '#7df0ff', label: 'Inspiration' },
+          { kind: 'gridnode', campaignTarget: 'breathnode', x: 0, z: -2.5, color: '#f7f7f7', label: 'Maintien' },
+          { kind: 'gridnode', campaignTarget: 'breathnode', x: 1.45, z: -2.0, color: '#4ee77e', label: 'Expiration' },
+          { kind: 'spotlight', x: 0, z: -1.2, color: '#fff1a8', label: 'Lumiere stable' }
+        ],
+        sprites: [
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -0.85, z: -2.75, color: '#e53935' },
+          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: 0.9, z: -2.85, color: '#d9d0a2' }
+        ],
+        objective: scan('SYNCHRONISER LA RESPIRATION', ['gridnode', 'console'], 'pomni')
+      },
+      248: {
+        name: 'REMEMBER / COLLECTIVE TENT REPAIR', short: 'REPARATION',
+        detail: 'Montage de reparation du chapiteau: plaques geometriques, formes instables et Jax reste seul contre une paroi sombre.',
+        color: '#8b8794', floor: '#d7d7d4', ceiling: '#17121d', motif: 'final', size: 33,
+        floorPalette: ['#dededb', '#7a7880', '#21102f'], horizonPalette: ['#6b6972', '#bbc1c7'],
+        gateEpisode: 9, gateSubepisode: 2, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'gridnode', campaignTarget: 'repairplate', x: -4.4, z: -5.8, color: '#e53935', label: 'Plaque stable rouge' },
+          { kind: 'gridnode', campaignTarget: 'repairplate', x: -2.2, z: -6.5, elevation: 1.4, color: '#ffd84a', label: 'Plaque stable jaune' },
+          { kind: 'gridnode', campaignTarget: 'repairplate', x: 0, z: -7.0, elevation: 2.1, color: '#2a58d8', label: 'Plaque stable bleue' },
+          { kind: 'gridnode', campaignTarget: 'repairplate', x: 2.2, z: -6.5, elevation: 1.4, color: '#ff4fb8', label: 'Plaque stable rose' },
+          { kind: 'gridnode', campaignTarget: 'repairplate', x: 4.4, z: -5.8, color: '#4ee77e', label: 'Plaque stable verte' },
+          { kind: 'toyblock', x: -1.5, z: -2.1, elevation: 1.8, color: '#7df0ff', label: 'Forme instable en chute' },
+          { kind: 'toyblock', x: 1.55, z: -2.3, elevation: 2.35, color: '#c875ff', label: 'Seconde forme instable' },
+          { kind: 'memory', campaignTarget: 'isolatedjax', x: 4.4, z: -3.6, color: '#8a4fd6', label: 'Trace de Jax restant a l ecart' },
+          { kind: 'partition', x: 5.2, z: -5.0, width: 0.35, depth: 4.8, height: 7.5, color: '#242229', label: 'Paroi sombre de Jax' }
+        ],
+        sprites: [
+          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -3.1, z: -3.3, color: '#d9d0a2' },
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -1.6, z: -2.5, color: '#e53935' },
+          { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: 0, z: -3.1, color: '#d64545' },
+          { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 1.6, z: -2.5, color: '#ff4fb8' },
+          { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: 3.0, z: -3.3, color: '#f7f7f7' },
+          { name: 'Jax isole', type: 'jax', avatar: 'jax', campaignTarget: 'isolatedjax', x: 4.8, z: -5.0, color: '#8a4fd6', silent: true }
+        ],
+        objective: scan('REFERMER LES FAILLES DU TENT', ['gridnode', 'toyblock', 'partition'])
+      },
+      249: {
+        name: 'REMEMBER / DORM GALLERY OVERLOOK', short: 'GALERIE',
+        detail: 'Galerie sure du Dorm Hall, avec rambarde au-dessus du niveau ou circule Jax abstrait.',
+        color: '#6b2c6f', floor: '#d6b3d2', ceiling: '#130b18', motif: 'dorm', size: 27,
+        gateEpisode: 9, gateSubepisode: 2, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'partition', campaignTarget: 'railing', x: 0, z: -2.8, width: 7.8, depth: 0.18, height: 1.1, color: '#e8d6b0', label: 'Rambarde de la galerie' },
+          { kind: 'stairs', x: -4.0, z: -5.5, color: '#83517f', label: 'Escalier vers le niveau inferieur' },
+          { kind: 'roomdoor', avatar: 'ribbit', label: 'RIBBIT', anchor: 'wall-right', side: 'right', x: 1.48, z: -5.5, color: '#4ee77e', archived: true, sealed: true },
+          { kind: 'memory', campaignTarget: 'abstractedjax', x: 0.4, z: -5.0, color: '#050505', label: 'Signal de Jax abstrait sous la galerie' },
+          { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'dome', x: -2.0, z: -3.6, color: '#fff1a8' },
+          { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'dome', x: 2.0, z: -4.6, color: '#fff1a8' }
+        ],
+        sprites: [
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -2.1, z: -2.1, color: '#e53935' },
+          { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: -0.55, z: -2.45, color: '#d64545' },
+          { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 1.0, z: -2.15, color: '#ff4fb8' },
+          { name: 'Jax abstrait', type: 'abstract', avatar: 'abstractedjax', campaignTarget: 'abstractedjax', x: 0.4, z: -5.8, color: '#020205', sizeScale: 2.15, silent: true, threatActive: false }
+        ],
+        objective: scan('OBSERVER JAX DEPUIS LA GALERIE', ['partition', 'stairs', 'roomdoor'], 'ragatha')
+      },
+      250: {
+        name: 'REMEMBER / DARK DORM HUNT', short: 'CHASSE SOMBRE',
+        detail: 'Etat temporel du long Dorm Hall pendant la chasse de Pomni: portraits, portes et lampes detruites une par une.',
+        color: '#3f244d', floor: '#5e385f', ceiling: '#050306', motif: 'dorm', size: 35,
+        gateEpisode: 9, gateSubepisode: 2, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'ceilinglight', campaignTarget: 'huntlight', anchor: 'ceiling', fixture: 'dome', x: 0, z: 7.0, color: '#fff1a8' },
+          { kind: 'ceilinglight', campaignTarget: 'huntlight', anchor: 'ceiling', fixture: 'dome', x: 0, z: 4.2, color: '#fff1a8' },
+          { kind: 'ceilinglight', campaignTarget: 'huntlight', anchor: 'ceiling', fixture: 'dome', x: 0, z: 1.4, color: '#fff1a8' },
+          { kind: 'ceilinglight', campaignTarget: 'huntlight', anchor: 'ceiling', fixture: 'dome', x: 0, z: -1.4, color: '#fff1a8' },
+          { kind: 'ceilinglight', campaignTarget: 'huntlight', anchor: 'ceiling', fixture: 'dome', x: 0, z: -4.2, color: '#fff1a8' },
+          { kind: 'ceilinglight', campaignTarget: 'huntlight', anchor: 'ceiling', fixture: 'dome', x: 0, z: -7.0, color: '#fff1a8' },
+          { kind: 'target', x: -0.85, z: -1.25, color: '#d7d7d7', label: 'Revolver de Pomni' },
+          { kind: 'roomdoor', avatar: 'jax', label: 'JAX', anchor: 'wall-left', side: 'left', x: -1.48, z: 4.9, color: '#8a4fd6', sealed: true },
+          { kind: 'roomdoor', avatar: 'ragatha', label: 'RAGATHA', anchor: 'wall-right', side: 'right', x: 1.48, z: 1.8, color: '#d64545', sealed: true },
+          { kind: 'roomdoor', avatar: 'ribbit', label: 'RIBBIT', anchor: 'wall-left', side: 'left', x: -1.48, z: -4.7, color: '#4ee77e', sealed: true, archived: true }
+        ],
+        sprites: [
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 0, z: 0.2, color: '#e53935' },
+          { name: 'Jax abstrait', type: 'abstract', avatar: 'abstractedjax', x: 0.3, z: -7.4, color: '#010103', sizeScale: 2.5, silent: true, threatActive: true }
+        ],
+        objective: scan('ETEINDRE LE DORM HALL', ['ceilinglight', 'target', 'roomdoor'], 'pomni')
+      },
+      251: {
+        name: 'JAX MEMORY / HUMAN FRAGMENTS', short: 'FRAGMENTS HUMAINS',
+        detail: 'Trois fragments incomplets de la vie humaine de Jax: rue residentielle, route en voiture et sommeil devant une maison.',
+        color: '#8f93a8', floor: '#30333d', ceiling: '#0a0b10', motif: 'memory', size: 19,
+        gateEpisode: 9, gateSubepisode: 4, provenance: 'projection', layer: 'real-world-memory', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'building', campaignTarget: 'humanfragment', style: 'village', x: -3.1, z: -4.8, width: 2.8, depth: 1.6, height: 2.8, roofHeight: 0.7, color: '#b8a68e', accent: '#59616a', label: 'Maison apercue sans adresse' },
+          { kind: 'truck', campaignTarget: 'humanfragment', x: 0, z: -3.4, color: '#59616a', label: 'Trajet en voiture sans destination confirmee' },
+          { kind: 'building', campaignTarget: 'humanfragment', style: 'village', x: 3.1, z: -5.1, width: 2.8, depth: 1.6, height: 3.0, roofHeight: 0.75, color: '#a99783', accent: '#4a4d56', label: 'Facade devant laquelle le souvenir s arrete' },
+          { kind: 'memory', x: 0, z: -1.25, color: '#c875ff', label: 'Point de vue humain sans visage' }
+        ],
+        sprites: [],
+        objective: scan('CADRER LES FRAGMENTS SANS INVENTER LE QUARTIER', ['building', 'truck', 'memory'])
+      },
+      252: {
+        name: 'JAX MEMORY / ARRIVAL AND MIRROR', short: 'ARRIVEE DE JAX',
+        detail: 'Souvenir de l arrivee de Jax sur la scene, de sa panique devant son nouvel avatar et du miroir du Tent.',
+        color: '#e53935', floor: '#ffd84a', ceiling: '#25102f', motif: 'circus', size: 23,
+        gateEpisode: 9, gateSubepisode: 4, provenance: 'projection', layer: 'memory', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'window', campaignTarget: 'arrivalmirror', x: 0, z: -4.5, color: '#dce8ff', label: 'Miroir ou Jax decouvre son avatar' },
+          { kind: 'ring', x: 0, z: -3.2, color: '#ffd84a', label: 'Piste du Tent dans le souvenir' },
+          { kind: 'stagecurtain', x: 0, z: -6.0, color: '#c92536', variant: 'back', label: 'Rideau de scene du passe' },
+          { kind: 'spotlight', x: -2.8, z: -2.2, color: '#fff1a8' },
+          { kind: 'spotlight', x: 2.8, z: -2.2, color: '#fff1a8' }
+        ],
+        sprites: [
+          { name: 'Jax nouvel arrivant', type: 'jax', avatar: 'jax', x: 0, z: -2.3, color: '#8a4fd6', silent: true },
+          { name: 'Ragatha du souvenir', type: 'ragatha', avatar: 'ragatha', x: -2.2, z: -3.2, color: '#d64545', silent: true },
+          { name: 'Ribbit du souvenir', type: 'npc', avatar: 'ribbit', x: 1.15, z: -3.4, color: '#4ee77e', silent: true },
+          { name: 'Kaufmo du souvenir', type: 'npc', avatar: 'kaufmo', x: 2.5, z: -2.75, color: '#e53935', silent: true },
+          { name: 'Kinger du souvenir', type: 'kinger', avatar: 'kinger', x: -3.2, z: -2.3, color: '#d9d0a2', silent: true }
+        ],
+        objective: scan('RECONSTITUER L ARRIVEE DE JAX', ['window', 'ring', 'stagecurtain'])
+      },
+      253: {
+        name: 'JAX MEMORY / CIRCUS CAFE HOT CHOCOLATE', short: 'CAFE CIRQUE',
+        detail: 'Souvenir du Cafe Cirque dans le Crow s Nest: comptoir, menu, mugs et premier chocolat chaud partage.',
+        color: '#8b4f35', floor: '#5c3526', ceiling: '#23140f', motif: 'cafe', size: 17,
+        gateEpisode: 9, gateSubepisode: 4, provenance: 'projection', layer: 'memory', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'counter', x: 0, z: -3.8, width: 5.6, color: '#7a4b32', label: 'Comptoir du Cafe Cirque' },
+          { kind: 'menu', x: 0, z: -5.0, color: '#fff1a8', label: 'Menu du Cafe Cirque' },
+          { kind: 'card', campaignTarget: 'hotchocolate', x: -1.25, z: -2.45, elevation: 0.72, color: '#8b4f35', label: 'Mug de Jax' },
+          { kind: 'card', campaignTarget: 'hotchocolate', x: 0, z: -2.65, elevation: 0.72, color: '#8b4f35', label: 'Mug de Ribbit' },
+          { kind: 'card', campaignTarget: 'hotchocolate', x: 1.25, z: -2.45, elevation: 0.72, color: '#8b4f35', label: 'Mug de Kaufmo' },
+          { kind: 'window', anchor: 'wall-left', x: 0, z: -3.1, color: '#6e527f', label: 'Vue nocturne sur le Tent' }
+        ],
+        sprites: [
+          { name: 'Jax du souvenir', type: 'jax', avatar: 'jax', x: -1.45, z: -2.8, color: '#8a4fd6', silent: true },
+          { name: 'Ribbit du souvenir', type: 'npc', avatar: 'ribbit', x: 0, z: -3.2, color: '#4ee77e' },
+          { name: 'Kaufmo du souvenir', type: 'npc', avatar: 'kaufmo', x: 1.5, z: -2.8, color: '#e53935', silent: true }
+        ],
+        objective: scan('SERVIR LE PREMIER CHOCOLAT CHAUD', ['counter', 'menu', 'card'], 'ribbit')
+      },
+      254: {
+        name: 'JAX MEMORY / RIBBIT BEDROOM', short: 'CHAMBRE RIBBIT',
+        detail: 'Souvenir documente de la chambre de Ribbit: grotte verte, tapis d herbe, etageres-arbres, lit fleuri, champignons et projecteur d etoiles.',
+        color: '#4f8a48', floor: '#497d3e', ceiling: '#263e28', motif: 'nature', size: 21,
+        floorPalette: ['#315f34', '#5e944d', '#8ebf68'], horizonPalette: ['#305b35', '#6b9f57'],
+        gateEpisode: 9, gateSubepisode: 4, provenance: 'projection', layer: 'memory', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'bed', x: 0, z: -5.0, width: 3.2, depth: 1.6, height: 1.2, color: '#4f8a48', accent: '#ff9fcf', label: 'Grand lit vert aux coussins floraux' },
+          { kind: 'plant', x: -3.2, z: -4.2, height: 4.0, color: '#6b4d2e', label: 'Etageres-arbres gauche' },
+          { kind: 'plant', x: 3.2, z: -4.2, height: 4.0, color: '#6b4d2e', label: 'Etageres-arbres droite' },
+          { kind: 'archive', x: -2.5, z: -2.6, color: '#9a7045', label: 'Etageres en bois et petits rochers' },
+          { kind: 'candy', x: 2.45, z: -2.55, color: '#e53935', label: 'Champignons decoratifs' },
+          { kind: 'spotlight', campaignTarget: 'starprojector', x: 0, z: -1.4, color: '#7df0ff', label: 'Projecteur rotatif d etoiles' },
+          { kind: 'toyblock', x: -0.8, z: -2.0, color: '#ffd84a', label: 'Bloc numero 5' },
+          { kind: 'toyblock', x: 0.8, z: -2.0, color: '#2a58d8', label: 'Bloc numero 7' },
+          { kind: 'wallart', anchor: 'ceiling', x: 0, z: -3.4, color: '#7df0ff', art: 'stars', label: 'Etoiles projetees sur la voute' }
+        ],
+        sprites: [
+          { name: 'Ribbit du souvenir', type: 'npc', avatar: 'ribbit', x: -1.15, z: -3.4, color: '#4ee77e' },
+          { name: 'Jax du souvenir', type: 'jax', avatar: 'jax', x: 1.15, z: -3.25, color: '#8a4fd6', silent: true }
+        ],
+        objective: scan('RELEVER LA CHAMBRE DE RIBBIT', ['bed', 'plant', 'spotlight', 'toyblock'], 'ribbit')
+      },
+      255: {
+        name: 'JAX MEMORY / KAUFMO DOORBELL INTERRUPTION', short: 'SONNETTE',
+        detail: 'Instant du souvenir ou Kaufmo sonne a la chambre, interrompant la confidence et provoquant le recul de Jax.',
+        color: '#4f8a48', floor: '#497d3e', ceiling: '#263e28', motif: 'nature', size: 15,
+        gateEpisode: 9, gateSubepisode: 5, provenance: 'projection', layer: 'memory', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'roomdoor', avatar: 'ribbit', label: 'RIBBIT', x: 0, z: -4.0, color: '#4ee77e', sealed: true },
+          { kind: 'card', campaignTarget: 'doorbell', x: 1.0, z: -3.65, elevation: 1.0, color: '#ffd84a', label: 'Sonnette actionnee par Kaufmo' },
+          { kind: 'memory', x: -1.5, z: -2.0, color: '#8a4fd6', label: 'Recul defensif de Jax' },
+          { kind: 'spotlight', x: 0, z: -1.25, color: '#7df0ff', label: 'Etoiles encore projetees' }
+        ],
+        sprites: [
+          { name: 'Kaufmo du souvenir', type: 'npc', avatar: 'kaufmo', x: 0.15, z: -3.2, color: '#e53935' },
+          { name: 'Jax du souvenir', type: 'jax', avatar: 'jax', x: -1.5, z: -2.55, color: '#8a4fd6', silent: true },
+          { name: 'Ribbit du souvenir', type: 'npc', avatar: 'ribbit', x: 1.55, z: -2.55, color: '#4ee77e', silent: true }
+        ],
+        objective: scan('SUIVRE L INTERRUPTION DE KAUFMO', ['roomdoor', 'card', 'memory'], 'kaufmo')
+      },
+      256: {
+        name: 'JAX MEMORY / CROSSED RIBBIT DOOR', short: 'PORTE RIBBIT',
+        detail: 'Montage de l isolement de Ribbit: Common Area vide, silhouette abstraite et porte finalement barree d une croix rouge.',
+        color: '#4a253f', floor: '#332137', ceiling: '#08050a', motif: 'dorm', size: 19,
+        gateEpisode: 9, gateSubepisode: 5, provenance: 'projection', layer: 'memory', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'roomdoor', campaignTarget: 'crossedribbitdoor', avatar: 'ribbit', label: 'RIBBIT', anchor: 'wall', x: 0, z: -5.0, color: '#4ee77e', archived: true, sealed: true },
+          { kind: 'wallart', anchor: 'wall', x: 0, z: -5.15, color: '#e53935', art: 'cross', label: 'Croix rouge sur la porte de Ribbit' },
+          { kind: 'sofa', x: -2.4, z: -2.6, color: '#6e527f', label: 'Canape vide du Common Area' },
+          { kind: 'sofa', x: 2.4, z: -2.6, color: '#c92536', label: 'Second canape vide' },
+          { kind: 'memory', x: 0, z: -1.25, color: '#4ee77e', label: 'Trace de Ribbit qui s isole' },
+          { kind: 'memory', campaignTarget: 'ribbitabstraction', x: 0.35, z: -3.5, color: '#050505', label: 'Signal non verbal de Ribbit abstraite' }
+        ],
+        sprites: [
+          { name: 'Ribbit abstraite', type: 'abstract', avatar: 'abstractedribbit', campaignTarget: 'ribbitabstraction', x: 0.35, z: -3.9, color: '#020205', sizeScale: 1.65, silent: true, threatActive: false, silentText: 'Ribbit abstraite reste non verbale dans ce souvenir.' }
+        ],
+        objective: scan('SUIVRE L ISOLEMENT DE RIBBIT', ['roomdoor', 'wallart', 'sofa', 'memory'])
+      },
+      257: {
+        name: 'JAX MEMORY / HARDENING MONTAGE', short: 'DURCISSEMENT',
+        detail: 'Trois temps du montage: Ragatha console Jax, Gangle arrive et recoit son nom, puis Kaufmo parle encore de la sortie.',
+        color: '#7b466a', floor: '#583052', ceiling: '#120916', motif: 'memory', size: 23,
+        gateEpisode: 9, gateSubepisode: 5, provenance: 'projection', layer: 'memory', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'memory', campaignTarget: 'memorybeat', x: -2.7, z: -2.4, color: '#d64545', label: 'Ragatha console Jax apres Ribbit' },
+          { kind: 'memory', campaignTarget: 'memorybeat', x: 0, z: -3.2, color: '#f7f7f7', label: 'Arrivee et nomination de Gangle' },
+          { kind: 'memory', campaignTarget: 'memorybeat', x: 2.7, z: -2.4, color: '#e53935', label: 'Kaufmo reparle de la sortie' },
+          { kind: 'stagecurtain', x: 0, z: -5.6, color: '#c92536', variant: 'back', label: 'Scene du Tent dans le passe' },
+          { kind: 'window', x: -3.5, z: -4.2, color: '#dce8ff', label: 'Miroir recurrent de Jax' }
+        ],
+        sprites: [
+          { name: 'Jax du souvenir', type: 'jax', avatar: 'jax', x: 0, z: -2.15, color: '#8a4fd6', silent: true },
+          { name: 'Ragatha du souvenir', type: 'ragatha', avatar: 'ragatha', x: -2.25, z: -3.3, color: '#d64545', silent: true },
+          { name: 'Gangle nouvelle arrivante', type: 'gangle', avatar: 'gangle', x: 1.0, z: -3.4, color: '#f7f7f7', silent: true },
+          { name: 'Kaufmo du souvenir', type: 'npc', avatar: 'kaufmo', x: 2.65, z: -3.0, color: '#e53935', silent: true }
+        ],
+        objective: scan('LIRE LE MONTAGE SANS LE REECRIRE', ['memory', 'stagecurtain', 'window'])
+      },
+      258: {
+        name: 'REMEMBER / EXTRACTION BLAST AND DARK FORT', short: 'EXTRACTION',
+        detail: 'Retour physique apres le noyau mental: flash blanc, anciennes grenades incapacitantes, Pomni brouillee, sauvetage de Zooble et fort sombre.',
+        color: '#4d3b55', floor: '#493e50', ceiling: '#030204', motif: 'final', size: 29,
+        gateEpisode: 9, gateSubepisode: 6, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'ring', campaignTarget: 'stunblast', x: 0, z: -3.8, color: '#ffffff', label: 'Flash des anciennes stun grenades' },
+          { kind: 'bed', campaignTarget: 'darkfort', x: -3.4, z: -5.2, width: 3.1, depth: 1.4, height: 1.7, color: '#403245', accent: '#17121d', label: 'Mur de coussins gauche' },
+          { kind: 'bed', campaignTarget: 'darkfort', x: 0, z: -6.2, width: 3.8, depth: 1.5, height: 2.0, color: '#302638', accent: '#0d0a10', label: 'Fond du fort sombre' },
+          { kind: 'bed', campaignTarget: 'darkfort', x: 3.4, z: -5.2, width: 3.1, depth: 1.4, height: 1.7, color: '#403245', accent: '#17121d', label: 'Mur de coussins droit' },
+          { kind: 'lorebillboard', avatar: 'jumbledpomni', label: 'Pomni brouillee', x: -2.1, z: -3.1, color: '#e53935', loreText: 'Etat temporaire de jumbling complet apres l extraction; ce n est pas une abstraction.' },
+          { kind: 'toyglove', x: 2.1, z: -2.7, color: '#ff4fb8', label: 'Bras sacrifies par Zooble pendant le sauvetage' }
+        ],
+        sprites: [
+          { name: 'Pomni brouillee', type: 'pomni', avatar: 'jumbledpomni', x: -1.4, z: -2.5, color: '#e53935', silent: true },
+          { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 1.2, z: -2.6, color: '#ff4fb8' },
+          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -2.8, z: -3.8, color: '#d9d0a2' },
+          { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: 2.8, z: -3.8, color: '#f7f7f7' },
+          { name: 'Jax abstrait', type: 'abstract', avatar: 'abstractedjax', x: 0, z: -5.4, color: '#010103', sizeScale: 2.2, silent: true, threatActive: false, silentText: 'Le fort sombre apaise la forme abstraite sans lui rendre la parole.' }
+        ],
+        objective: scan('SECURISER L EXTRACTION ET LE FORT', ['ring', 'bed', 'lorebillboard', 'toyglove'], 'zooble')
+      },
+      259: {
+        name: 'REMEMBER / GANGLE ROOM AND COMMON AREA', short: 'GANGLE RETROUVEE',
+        detail: 'Montage physique limite aux elements montres de la chambre de Gangle, puis retour du groupe dans le Common Area.',
+        color: '#8a1f32', floor: '#2b1118', ceiling: '#080306', motif: 'memory', size: 19,
+        gateEpisode: 9, gateSubepisode: 6, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'bed', x: -2.7, z: -4.4, width: 2.4, depth: 1.3, color: '#6b1728', accent: '#f7f7f7', label: 'Partie visible du lit de Gangle' },
+          { kind: 'desk', campaignTarget: 'artdesk', x: 2.2, z: -3.8, color: '#5b252d', label: 'Petite table a dessin de Gangle' },
+          { kind: 'wallart', anchor: 'wall-right', x: 0, z: -4.2, color: '#f7f7f7', art: 'masks', label: 'Creations conservees par Gangle' },
+          { kind: 'spotlight', x: 2.2, z: -2.8, color: '#fff1a8', label: 'Lampe dirigee vers la table' },
+          { kind: 'sofa', x: -1.5, z: -1.45, color: '#6e527f', label: 'Retour vers le Common Area' },
+          { kind: 'sofa', x: 1.5, z: -1.45, color: '#c92536', label: 'Canape du groupe' }
+        ],
+        sprites: [
+          { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: 1.15, z: -3.15, color: '#f7f7f7' },
+          { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: -0.7, z: -2.7, color: '#ff4fb8' },
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -2.4, z: -2.2, color: '#e53935', silent: true },
+          { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: 2.55, z: -2.0, color: '#d64545', silent: true }
+        ],
+        objective: scan('RETROUVER GANGLE PUIS LE GROUPE', ['bed', 'desk', 'wallart', 'sofa'], 'gangle')
+      },
+      260: {
+        name: 'CAINE VOID / GUILT WITH INERT BUBBLE', short: 'CAINE DANS LE VIDE',
+        detail: 'Espace bleu-blanc infini ou Caine doute de lui-meme aupres d une Bubble devenue sphere inerte.',
+        color: '#dceeff', floor: '#eaf6ff', ceiling: '#f8fcff', motif: 'void', size: 29,
+        floorPalette: ['#dceeff', '#f7fbff', '#b7d8f0'], horizonPalette: ['#eef8ff', '#c7e5f7'],
+        gateEpisode: 9, gateSubepisode: 7, provenance: 'shown', layer: 'void', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'gridnode', x: -3.5, z: -5.5, elevation: 1.2, color: '#d7efff', label: 'Cube transparent du Vide' },
+          { kind: 'gridnode', x: 0, z: -6.5, elevation: 2.1, color: '#f7fbff', label: 'Volume changeant du Vide' },
+          { kind: 'gridnode', x: 3.5, z: -5.5, elevation: 1.4, color: '#c7e5f7', label: 'Troisieme cube transparent' },
+          { kind: 'ring', campaignTarget: 'inertbubble', x: 1.2, z: -2.4, color: '#f7f7ff', label: 'Bubble inerte' },
+          { kind: 'memory', x: -1.5, z: -2.1, color: '#ffd84a', label: 'Doute de Caine' }
+        ],
+        sprites: [
+          { name: 'Caine', type: 'caine', avatar: 'caine', x: -0.8, z: -3.0, color: '#ffd84a' },
+          { name: 'Bubble inerte', type: 'bubble', avatar: 'bubble', x: 1.0, z: -2.7, color: '#f7f7ff', silent: true, silentText: 'Bubble ne repond pas et reste une sphere inerte dans le Vide.' }
+        ],
+        objective: scan('SUIVRE LE DOUTE DE CAINE', ['gridnode', 'ring', 'memory'], 'caine')
+      },
+      261: {
+        name: 'CAINE VOID / LOST FLIGHT AND SHAPE BRIDGE', short: 'PONT DU VIDE',
+        detail: 'Route discontinue du Vide: Caine perd le vol, marche puis assemble cubes, cylindre et formes pour franchir les firewalls invisibles.',
+        color: '#dceeff', floor: '#eaf6ff', ceiling: '#f8fcff', motif: 'void', size: 37,
+        floorPalette: ['#dceeff', '#f7fbff', '#b7d8f0'], horizonPalette: ['#eef8ff', '#c7e5f7'],
+        gateEpisode: 9, gateSubepisode: 7, provenance: 'shown', layer: 'void', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'toyblock', campaignTarget: 'shapebridge', x: -4.0, z: -3.5, color: '#e53935', label: 'Cube rouge du pont' },
+          { kind: 'barrel', campaignTarget: 'shapebridge', x: -2.0, z: -4.4, color: '#ffd84a', label: 'Cylindre jaune du pont' },
+          { kind: 'toyblock', campaignTarget: 'shapebridge', x: 0, z: -5.4, color: '#2a58d8', label: 'Prisme bleu du pont' },
+          { kind: 'ring', campaignTarget: 'shapebridge', x: 2.0, z: -6.3, color: '#ff4fb8', label: 'Anneau rose du pont' },
+          { kind: 'base', campaignTarget: 'shapebridge', x: 4.0, z: -7.2, color: '#4ee77e', label: 'Forme verte du pont' },
+          { kind: 'partition', x: -5.4, z: -6.2, width: 0.12, depth: 7.0, height: 6.5, color: '#eef8ff', label: 'Firewall invisible gauche' },
+          { kind: 'partition', x: 5.4, z: -6.2, width: 0.12, depth: 7.0, height: 6.5, color: '#eef8ff', label: 'Firewall invisible droit' },
+          { kind: 'exitframe', x: 0, z: -10.5, color: '#ffffff', label: 'Porte Internet apercue au loin' }
+        ],
+        sprites: [
+          { name: 'Caine prive de vol', type: 'caine', avatar: 'caine', x: -4.5, z: -2.7, color: '#ffd84a' }
+        ],
+        objective: scan('ASSEMBLER LE PONT DU VIDE', ['toyblock', 'barrel', 'ring', 'base', 'partition'])
+      },
+      262: {
+        name: 'CAINE GENESIS / C&A NEURAL ARCHIVE', short: 'GENESE C&A',
+        detail: 'Projection historique alternant point rouge, point bleu, dossier neural, creation de Scratch et premier petit Tent.',
+        color: '#1b2638', floor: '#070b12', ceiling: '#020307', motif: 'core', size: 23,
+        gateEpisode: 9, gateSubepisode: 7, provenance: 'projection', layer: 'projector', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'gridnode', campaignTarget: 'genesisbeat', x: -3.0, z: -3.0, color: '#e53935', label: 'Premier point rouge' },
+          { kind: 'gridnode', campaignTarget: 'genesisbeat', x: -1.0, z: -4.0, color: '#2a58d8', label: 'Point bleu associe' },
+          { kind: 'archive', campaignTarget: 'genesisbeat', x: 1.0, z: -4.0, color: '#50d9ff', label: 'Dossier neural C&A' },
+          { kind: 'tent', campaignTarget: 'genesisbeat', x: 3.0, z: -5.0, color: '#e53935', accent: '#ffd84a', label: 'Premier petit Tent genere' },
+          { kind: 'console', x: 0, z: -1.35, color: '#d7d7d7', label: 'Flux historique en lecture seule' },
+          { kind: 'lorebillboard', avatar: 'scratch', label: 'Creation de Scratch', x: 2.8, z: -2.4, color: '#ffd341', loreText: 'Projection de la generation de Scratch; aucun poste de travail physique ne lui est attribue ici.' }
+        ],
+        sprites: [],
+        objective: scan('LIRE LA GENESE COMME PROJECTION', ['gridnode', 'archive', 'tent', 'console'])
+      },
+      263: {
+        name: 'BLUESTREETCAFE_FREEWIFI / INTERNET DOOR', short: 'PORTE INTERNET',
+        detail: 'Passerelle logicielle isolee dans le Vide: SSID, connexion, recherche Internet et profils projetes. Aucun interieur de cafe n est visible.',
+        color: '#7df0ff', floor: '#07131d', ceiling: '#020509', motif: 'core', size: 23,
+        gateEpisode: 9, gateSubepisode: 7, provenance: 'shown', layer: 'network', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'exitframe', campaignTarget: 'wifidoor', x: 0, z: -6.0, color: '#ffffff', label: 'Porte BlueStreetCafe_FreeWifi' },
+          { kind: 'console', x: 0, z: -4.2, color: '#7df0ff', label: 'Interface de connexion et barre de recherche' },
+          { kind: 'scoreboard', campaignTarget: 'searchresult', x: -2.7, z: -2.6, color: '#f2c7b5', label: 'Resultat de profil humain A' },
+          { kind: 'scoreboard', campaignTarget: 'searchresult', x: 0, z: -2.2, color: '#9b6b52', label: 'Resultat de profil humain B' },
+          { kind: 'scoreboard', campaignTarget: 'searchresult', x: 2.7, z: -2.6, color: '#41516a', label: 'Resultat de profil humain C' },
+          { kind: 'gridnode', x: -4.2, z: -5.1, color: '#2a58d8', label: 'Signal Wi-Fi fluctuant' },
+          { kind: 'gridnode', x: 4.2, z: -5.1, color: '#7df0ff', label: 'Paquets Internet projetes' }
+        ],
+        sprites: [{ name: 'Caine', type: 'caine', avatar: 'caine', x: -1.1, z: -3.3, color: '#ffd84a', silent: true }],
+        objective: scan('CONSULTER INTERNET SANS LE PHYSICALISER', ['exitframe', 'console', 'scoreboard', 'gridnode'])
+      },
+      264: {
+        name: 'CAINE / BLUE AI SEPARATION', short: 'SEPARATION BLUE AI',
+        detail: 'Moment du Vide ou Caine extrait le noyau bleu de sa tete et libere le Blue AI, qui reste silencieux.',
+        color: '#24354f', floor: '#101a28', ceiling: '#03060b', motif: 'core', size: 19,
+        gateEpisode: 9, gateSubepisode: 7, provenance: 'shown', layer: 'network', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'ring', campaignTarget: 'blueaicore', x: 0, z: -3.5, color: '#2a58d8', label: 'Noyau bleu extrait de Caine' },
+          { kind: 'eye', x: -1.6, z: -2.0, color: '#e53935', label: 'Oeil rouge de Caine' },
+          { kind: 'eye', x: 1.6, z: -2.0, color: '#2a58d8', label: 'Oeil bleu avant separation' },
+          { kind: 'gridnode', x: 0, z: -5.0, elevation: 1.5, color: '#7df0ff', label: 'Trajectoire libre du Blue AI' }
+        ],
+        sprites: [
+          { name: 'Caine', type: 'caine', avatar: 'caine', x: -1.0, z: -2.9, color: '#ffd84a' },
+          { name: 'Blue AI', type: 'system', avatar: 'blueai', x: 1.2, z: -3.15, color: '#00ddff', sizeScale: 0.9, silent: true, silentText: 'Le Blue AI ne prononce aucune replique pendant sa liberation.' }
+        ],
+        objective: scan('SEPARER LE NOYAU BLEU', ['ring', 'eye', 'gridnode'], 'caine')
+      },
+      265: {
+        name: 'REMEMBER / MOON ABOVE THE TENT', short: 'MOON ET CAINE',
+        detail: 'Grounds de nuit au-dessus de l entree du Tent, ou Moon affirme a Caine que son affection n est pas une ligne programmee.',
+        color: '#4f67a5', floor: '#1a2740', ceiling: '#050716', motif: 'grounds', size: 27,
+        gateEpisode: 9, gateSubepisode: 7, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'tent', x: 0, z: -6.5, color: '#e53935', accent: '#2a58d8', doorColor: '#4a173e', flagColor: '#ffd84a', label: 'Entree nocturne du Tent' },
+          { kind: 'ring', x: 0, z: -3.8, color: '#7df0ff', label: 'Reflet lunaire sur le Grounds' },
+          { kind: 'plant', x: -3.8, z: -4.5, color: '#294d38', label: 'Bosquet nocturne gauche' },
+          { kind: 'plant', x: 3.8, z: -4.5, color: '#294d38', label: 'Bosquet nocturne droit' },
+          { kind: 'spotlight', x: 0, z: -2.0, color: '#9edcff', label: 'Lumiere de Moon' }
+        ],
+        sprites: [
+          { name: 'Caine', type: 'caine', avatar: 'caine', x: 0, z: -3.0, color: '#ffd84a' },
+          { name: 'Moon', type: 'npc', avatar: 'moon', x: 0.4, z: -6.2, elevation: 4.4, color: '#9edcff', sizeScale: 1.65 }
+        ],
+        objective: scan('REJOINDRE MOON AU-DESSUS DU TENT', ['tent', 'ring', 'plant', 'spotlight'], 'moon')
+      },
+      266: {
+        name: 'REMEMBER / CAINE RETURNS TO THE GROUP', short: 'RETOUR DE CAINE',
+        detail: 'Common Area restaure en couleur: fort de Jax encore present, Zooble protege Gangle et Caine repare le jumbling de Pomni avant de proposer un controle partage.',
+        color: '#9a475d', floor: '#e06f24', ceiling: '#25102f', motif: 'common', size: 29,
+        gateEpisode: 9, gateSubepisode: 8, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'sofa', x: -2.7, z: -3.1, width: 2.8, color: '#6e527f', label: 'Canape violet restaure' },
+          { kind: 'sofa', x: 2.7, z: -3.1, width: 2.8, color: '#c92536', label: 'Canape rouge restaure' },
+          { kind: 'bed', x: -4.2, z: -6.0, width: 3.2, depth: 1.5, height: 1.8, color: '#302638', accent: '#0d0a10', label: 'Fort sombre de Jax encore present' },
+          { kind: 'ring', campaignTarget: 'pomnirepair', x: 0, z: -2.2, color: '#ffffff', label: 'Impulsion qui restaure Pomni' },
+          { kind: 'wallart', anchor: 'wall', x: 0, z: -6.5, color: '#ffd84a', art: 'blocks', label: 'Couleurs restaurees du Common Area' }
+        ],
+        sprites: [
+          { name: 'Caine', type: 'caine', avatar: 'caine', x: 0, z: -3.4, color: '#ffd84a' },
+          { name: 'Pomni brouillee', type: 'pomni', avatar: 'jumbledpomni', x: -1.3, z: -2.4, color: '#e53935', silent: true },
+          { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 1.45, z: -2.6, color: '#ff4fb8' },
+          { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: 2.7, z: -3.8, color: '#f7f7f7', silent: true },
+          { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: -2.7, z: -3.8, color: '#d64545', silent: true },
+          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: 0.2, z: -5.0, color: '#d9d0a2', silent: true }
+        ],
+        objective: scan('REPARER POMNI ET ECOUTER LE GROUPE', ['sofa', 'bed', 'ring', 'wallart'], 'zooble')
+      },
+      267: {
+        name: 'REMEMBER / EXTERNAL LIVES PROJECTOR', short: 'VIES EXTERIEURES',
+        detail: 'Grand canape vert et projecteur pres de la scene. Les profils humains restent des images, articles et videos, jamais des PNJ physiques du Circus.',
+        color: '#577b54', floor: '#d6c9a3', ceiling: '#25102f', motif: 'circus', size: 27,
+        gateEpisode: 9, gateSubepisode: 8, provenance: 'shown', layer: 'projector', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'sofa', x: 0, z: -2.7, width: 7.0, depth: 1.35, height: 1.15, color: '#5d8f57', label: 'Grand canape vert du groupe' },
+          { kind: 'projector', campaignTarget: 'lifeprojector', x: 0, z: -4.5, color: '#fff1a8', label: 'Projecteur des vies exterieures' },
+          { kind: 'lorebillboard', campaignTarget: 'lifeprofile', avatar: 'abigailbrooks', label: 'Abigail Brooks', x: -4.5, z: -6.0, color: '#f2c7b5', loreText: 'Contrepartie humaine de Pomni, montree uniquement par le projecteur.' },
+          { kind: 'lorebillboard', campaignTarget: 'lifeprofile', avatar: 'suzieackerman', label: 'Suzie J. Ackerman', x: -2.7, z: -6.3, color: '#9b6b52', loreText: 'Contrepartie humaine de Ragatha, projetee depuis le monde reel.' },
+          { kind: 'lorebillboard', campaignTarget: 'lifeprofile', avatar: 'zoeyraghavan', label: 'Zoey Raghavan', x: -0.9, z: -6.5, color: '#9b3f49', loreText: 'Contrepartie humaine de Gangle, revelee par les medias de Caine.' },
+          { kind: 'lorebillboard', campaignTarget: 'lifeprofile', avatar: 'rileyverselis', label: 'Riley Verselis', x: 0.9, z: -6.5, color: '#687287', loreText: 'Contrepartie humaine de Zooble, visible uniquement dans la projection.' },
+          { kind: 'lorebillboard', campaignTarget: 'lifeprofile', avatar: 'grantbest', label: 'Grant Best', x: 2.7, z: -6.3, color: '#7d668b', loreText: 'Contrepartie humaine de Kinger, avec sa vie familiale montree par le projecteur.' },
+          { kind: 'lorebillboard', campaignTarget: 'lifeprofile', avatar: 'leeroymateo', label: 'Leeroy Mateo', x: 4.5, z: -6.0, color: '#41516a', loreText: 'Contrepartie humaine de Jax, revelee en dernier.' },
+          { kind: 'stagecurtain', x: 0, z: -8.0, color: '#c92536', variant: 'back', label: 'Scene du Tent derriere l ecran' }
+        ],
+        sprites: [
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -3.0, z: -2.2, color: '#e53935', silent: true },
+          { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: -1.8, z: -2.4, color: '#d64545', silent: true },
+          { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: -0.6, z: -2.15, color: '#f7f7f7', silent: true },
+          { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 0.7, z: -2.35, color: '#ff4fb8', silent: true },
+          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: 1.9, z: -2.15, color: '#d9d0a2', silent: true },
+          { name: 'Caine', type: 'caine', avatar: 'caine', x: 3.4, z: -3.4, color: '#ffd84a' }
+        ],
+        objective: scan('LIRE LES SIX PROFILS PROJETES', ['sofa', 'projector', 'lorebillboard'], 'caine')
+      },
+      268: {
+        name: 'REMEMBER / POMNI IDENTITY CHOICE', short: 'JE SUIS POMNI',
+        detail: 'Instant suivant la projection ou Pomni reconnait Abigail comme sa vie exterieure tout en choisissant son identite actuelle.',
+        color: '#b8404b', floor: '#d6c9a3', ceiling: '#25102f', motif: 'circus', size: 15,
+        gateEpisode: 9, gateSubepisode: 8, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'projector', x: 0, z: -4.2, color: '#fff1a8', label: 'Projecteur maintenant en pause' },
+          { kind: 'lorebillboard', campaignTarget: 'abigailprojection', avatar: 'abigailbrooks', label: 'Abigail Brooks / projection', x: 0, z: -5.1, color: '#f2c7b5', loreText: 'Vie humaine exterieure reconnue par Pomni; Abigail ne devient pas un avatar dans le Circus.' },
+          { kind: 'ring', x: 0, z: -2.4, color: '#e53935', label: 'Position choisie par Pomni' }
+        ],
+        sprites: [
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 0, z: -2.8, color: '#e53935' },
+          { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 2.0, z: -3.0, color: '#ff4fb8', silent: true },
+          { name: 'Caine', type: 'caine', avatar: 'caine', x: -2.0, z: -3.1, color: '#ffd84a', silent: true }
+        ],
+        objective: scan('RESPECTER LE CHOIX DE POMNI', ['projector', 'lorebillboard', 'ring'], 'pomni')
+      },
+      269: {
+        name: 'REMEMBER EPILOGUE / ABSTRACTION AQUARIUM', short: 'AQUARIUM FINAL',
+        detail: 'Grand hall d observation de l Aquarium sur les Grounds. Jax, Ribbit, Kaufmo et Queenie y prennent des formes aquatiques apaisees pendant que Kinger et Pomni les regardent.',
+        color: '#63d9ff', floor: '#073443', ceiling: '#06202f', motif: 'aquarium', size: 31,
+        gateEpisode: 9, gateSubepisode: 8, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'window', x: -4.2, z: -6.0, width: 3.0, height: 4.0, color: '#63d9ff', label: 'Grande vitre gauche de l Aquarium' },
+          { kind: 'window', x: 0, z: -6.8, width: 3.2, height: 4.2, color: '#7df0ff', label: 'Grande vitre centrale' },
+          { kind: 'window', x: 4.2, z: -6.0, width: 3.0, height: 4.0, color: '#63d9ff', label: 'Grande vitre droite de l Aquarium' },
+          { kind: 'wave', x: -2.4, z: -3.3, color: '#4ee7ff', label: 'Courant calme gauche' },
+          { kind: 'wave', x: 2.4, z: -3.3, color: '#4ee7ff', label: 'Courant calme droit' },
+          { kind: 'partition', x: 0, z: -2.0, width: 8.0, depth: 0.15, height: 1.0, color: '#9edcf0', label: 'Rambarde du hall d observation' },
+          { kind: 'memory', campaignTarget: 'aquariumresident', x: -3.2, z: -4.2, color: '#8a4fd6', label: 'Signal aquatique de Jax' },
+          { kind: 'memory', campaignTarget: 'aquariumresident', x: -1.1, z: -4.7, color: '#4ee77e', label: 'Signal aquatique de Ribbit' },
+          { kind: 'memory', campaignTarget: 'aquariumresident', x: 1.1, z: -4.7, color: '#e53935', label: 'Signal aquatique de Kaufmo' },
+          { kind: 'memory', campaignTarget: 'aquariumresident', x: 3.2, z: -4.2, color: '#d9d0a2', label: 'Signal aquatique de Queenie' },
+          { kind: 'card', x: 2.15, z: -2.15, color: '#d9d0a2', label: 'Livre tenu par Kinger' }
+        ],
+        sprites: [
+          { name: 'Jax aquatique', type: 'abstract', avatar: 'abstractedjax', campaignTarget: 'aquariumresident', x: -3.2, z: -5.0, color: '#02020a', sizeScale: 1.7, silent: true, threatActive: false },
+          { name: 'Ribbit aquatique', type: 'abstract', avatar: 'abstractedribbit', campaignTarget: 'aquariumresident', x: -1.1, z: -5.8, color: '#02020a', sizeScale: 1.55, silent: true, threatActive: false },
+          { name: 'Kaufmo aquatique', type: 'abstract', avatar: 'abstractedkaufmo', campaignTarget: 'aquariumresident', x: 1.1, z: -5.8, color: '#02020a', sizeScale: 1.55, silent: true, threatActive: false },
+          { name: 'Queenie aquatique', type: 'abstract', avatar: 'abstractedqueeniedark', campaignTarget: 'aquariumresident', x: 3.2, z: -5.0, color: '#101018', sizeScale: 1.7, silent: true, threatActive: false },
+          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: 2.15, z: -2.75, color: '#d9d0a2', silent: true },
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 0, z: -2.4, color: '#e53935', silent: true }
+        ],
+        objective: scan('OBSERVER LES QUATRE RESIDENTS AQUATIQUES', ['window', 'wave', 'partition'])
+      },
+      270: {
+        name: 'REMEMBER EPILOGUE / MEMORIAL AND SEALED CELLAR', short: 'MEMORIAL',
+        detail: 'Fresque dediee aux membres abstraits et fermeture explicite de l acces au Cellar dans le Circus restaure.',
+        color: '#7b466a', floor: '#e06f24', ceiling: '#25102f', motif: 'circus', size: 23,
+        gateEpisode: 9, gateSubepisode: 8, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'lorebillboard', campaignTarget: 'memorialportrait', avatar: 'abstractedjax', label: 'Jax / memorial', x: -3.3, z: -5.2, color: '#8a4fd6', loreText: 'Portrait memorial de Jax apres son transfert vers l Aquarium.' },
+          { kind: 'lorebillboard', campaignTarget: 'memorialportrait', avatar: 'abstractedribbit', label: 'Ribbit / memorial', x: -1.1, z: -5.7, color: '#4ee77e', loreText: 'Portrait memorial de Ribbit, sans suggerer un retour a son avatar initial.' },
+          { kind: 'lorebillboard', campaignTarget: 'memorialportrait', avatar: 'abstractedkaufmo', label: 'Kaufmo / memorial', x: 1.1, z: -5.7, color: '#e53935', loreText: 'Portrait memorial de Kaufmo, maintenant heberge dans l Aquarium.' },
+          { kind: 'lorebillboard', campaignTarget: 'memorialportrait', avatar: 'abstractedqueeniedark', label: 'Queenie / memorial', x: 3.3, z: -5.2, color: '#d9d0a2', loreText: 'Portrait memorial de Queenie dans son etat abstrait apaise.' },
+          { kind: 'cellaropening', x: 0, z: -2.6, color: '#050505', label: 'Acces au Cellar ferme', sealed: true },
+          { kind: 'partition', x: 0, z: -3.1, width: 4.0, depth: 0.35, height: 1.8, color: '#59616a', label: 'Barriere definitive du Cellar' }
+        ],
+        sprites: [],
+        objective: scan('RELEVER LE MEMORIAL ET LA FERMETURE', ['lorebillboard', 'cellaropening', 'partition'])
+      },
+      271: {
+        name: 'REMEMBER EPILOGUE / CIRCUS ACTIVITIES', short: 'NOUVELLE VIE',
+        detail: 'Montage elliptique de la nouvelle vie: jeu de role, art de Gangle, softball et Gloink Queen conservee a son echelle massive.',
+        color: '#4f9b66', floor: '#e2b94f', ceiling: '#4c79c7', motif: 'grounds', size: 35,
+        gateEpisode: 9, gateSubepisode: 8, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'table', campaignTarget: 'activity', x: -4.2, z: -4.0, width: 2.5, color: '#6e527f', label: 'Table du jeu de role' },
+          { kind: 'wallart', campaignTarget: 'activity', x: -1.4, z: -4.8, color: '#f7f7f7', art: 'masks', label: 'Dessins montres par Gangle a Caine' },
+          { kind: 'base', campaignTarget: 'activity', x: 1.5, z: -4.1, color: '#ffffff', label: 'Balle du terrain de softball' },
+          { kind: 'ring', campaignTarget: 'activity', x: 4.3, z: -5.2, color: '#ff7d8d', label: 'Zone reservee a la Gloink Queen' },
+          { kind: 'scoreboard', x: 1.8, z: -6.4, color: '#ffd84a', label: 'Score du Softball Field' },
+          { kind: 'fence', x: 0, z: -7.6, color: '#f7f7f7', label: 'Limite du terrain' }
+        ],
+        sprites: [
+          { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: -1.5, z: -3.6, color: '#f7f7f7', silent: true },
+          { name: 'Caine', type: 'caine', avatar: 'caine', x: 0, z: -4.6, color: '#ffd84a', silent: true },
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 1.8, z: -2.8, color: '#e53935', silent: true },
+          { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: 3.0, z: -3.5, color: '#d64545', silent: true },
+          { name: 'Gloink Queen', type: 'npc', avatar: 'gloinkqueenscale', x: 4.8, z: -6.3, color: '#ff7d8d', sizeScale: 2.8, silent: true }
+        ],
+        objective: scan('PARCOURIR QUATRE ACTIVITES DU MONTAGE', ['table', 'wallart', 'base', 'ring'])
+      },
+      272: {
+        name: 'REMEMBER EPILOGUE / DIGITAL TRIANGLE BAR', short: 'TRIANGLE BAR',
+        detail: 'Bar ouvert par Zooble dans le Circus apres la restauration, distinct du bar noir et blanc imagine dans Untitled.',
+        color: '#3a9b88', floor: '#20252a', ceiling: '#0a0d10', motif: 'cafe', size: 19,
+        gateEpisode: 9, gateSubepisode: 8, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'counter', x: 0, z: -4.2, width: 6.2, depth: 1.0, color: '#2d5f58', label: 'Comptoir du Digital Triangle' },
+          { kind: 'wallart', anchor: 'wall', x: 0, z: -5.2, color: '#7df0ff', art: 'triangle', label: 'Enseigne du Digital Triangle Bar' },
+          { kind: 'card', campaignTarget: 'bardrink', x: 0.8, z: -3.65, elevation: 0.78, color: '#ffd84a', label: 'Boisson servie a Caine' },
+          { kind: 'barrel', x: -2.3, z: -2.4, color: '#59616a', label: 'Tabouret gauche' },
+          { kind: 'barrel', x: 2.3, z: -2.4, color: '#59616a', label: 'Tabouret droit' },
+          { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'barebulb', x: -1.8, z: -2.8, color: '#7df0ff' },
+          { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'barebulb', x: 1.8, z: -2.8, color: '#ff4fb8' }
+        ],
+        sprites: [
+          { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: -0.8, z: -3.6, color: '#ff4fb8' },
+          { name: 'Caine', type: 'caine', avatar: 'caine', x: 1.1, z: -3.2, color: '#ffd84a', silent: true }
+        ],
+        objective: scan('VISITER LE DIGITAL TRIANGLE', ['counter', 'wallart', 'card', 'barrel'], 'zooble')
+      },
+      273: {
+        name: 'REMEMBER EPILOGUE / FINAL DINNER', short: 'DINER FINAL',
+        detail: 'Diner collectif qui repond au dernier plan du Pilot avant le travelling vers le Tent, les Grounds puis le Vide.',
+        color: '#8b3154', floor: '#e06f24', ceiling: '#24112f', motif: 'circus', size: 27,
+        gateEpisode: 9, gateSubepisode: 8, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'banquettable', x: 0, z: -3.8, width: 8.5, depth: 1.4, height: 0.75, color: '#f8f4ea', label: 'Longue table du diner final' },
+          { kind: 'card', campaignTarget: 'dinnerplace', x: -3.5, z: -3.75, elevation: 0.8, color: '#e53935', label: 'Place de Pomni' },
+          { kind: 'card', campaignTarget: 'dinnerplace', x: -2.1, z: -3.75, elevation: 0.8, color: '#d64545', label: 'Place de Ragatha' },
+          { kind: 'card', campaignTarget: 'dinnerplace', x: -0.7, z: -3.75, elevation: 0.8, color: '#f7f7f7', label: 'Place de Gangle' },
+          { kind: 'card', campaignTarget: 'dinnerplace', x: 0.7, z: -3.75, elevation: 0.8, color: '#ff4fb8', label: 'Place de Zooble' },
+          { kind: 'card', campaignTarget: 'dinnerplace', x: 2.1, z: -3.75, elevation: 0.8, color: '#d9d0a2', label: 'Place de Kinger' },
+          { kind: 'card', campaignTarget: 'dinnerplace', x: 3.5, z: -3.75, elevation: 0.8, color: '#ffd84a', label: 'Place de Caine' },
+          { kind: 'stagecurtain', x: 0, z: -7.4, color: '#c92536', variant: 'back', label: 'Rideau derriere le diner' },
+          { kind: 'stagevalance', anchor: 'ceiling', x: 0, z: -6.9, color: '#d62f3f', label: 'Draperie du plan final' }
+        ],
+        sprites: [
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -3.5, z: -3.0, color: '#e53935', silent: true },
+          { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: -2.1, z: -4.5, color: '#d64545', silent: true },
+          { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: -0.7, z: -3.0, color: '#f7f7f7', silent: true },
+          { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 0.7, z: -4.5, color: '#ff4fb8', silent: true },
+          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: 2.1, z: -3.0, color: '#d9d0a2', silent: true },
+          { name: 'Caine', type: 'caine', avatar: 'caine', x: 3.5, z: -4.5, color: '#ffd84a', silent: true }
+        ],
+        objective: scan('RECONSTITUER LE DINER FINAL', ['banquettable', 'card', 'stagecurtain', 'stagevalance'])
+      },
+      274: {
+        name: 'REMEMBER EPILOGUE / POMNI FAREWELL', short: 'AU REVOIR POMNI',
+        detail: 'Dernier moment de Pomni sur les Grounds, avant que le montage des credits poursuive la vie ouverte du Circus.',
+        color: '#66b866', floor: '#62b65f', ceiling: '#4c79c7', motif: 'grounds', size: 25,
+        gateEpisode: 9, gateSubepisode: 8, provenance: 'shown', layer: 'time-state', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'tent', x: 0, z: -6.8, color: '#e53935', accent: '#2a58d8', doorColor: '#4a173e', flagColor: '#ffd84a', label: 'Tent restaure derriere Pomni' },
+          { kind: 'wave', x: -3.0, z: -4.0, color: '#4ee7ff', label: 'Digital Lake au loin' },
+          { kind: 'plant', x: 3.2, z: -4.3, color: '#4f8a48', label: 'Bosquet des Grounds etendus' },
+          { kind: 'ring', x: 0, z: -2.8, color: '#ffd84a', label: 'Dernier repere de Pomni' }
+        ],
+        sprites: [
+          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 0, z: -3.2, color: '#e53935' },
+          { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: -2.2, z: -4.0, color: '#d64545', silent: true },
+          { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: -0.8, z: -4.7, color: '#f7f7f7', silent: true },
+          { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 0.9, z: -4.7, color: '#ff4fb8', silent: true },
+          { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: 2.3, z: -4.0, color: '#d9d0a2', silent: true }
+        ],
+        objective: scan('ACCOMPAGNER L AU REVOIR DE POMNI', ['tent', 'wave', 'plant', 'ring'], 'pomni')
+      },
+      275: {
+        name: 'REMEMBER POST-CREDITS / REAL WORLD BUS STOP', short: 'ARRET DE BUS',
+        detail: 'Scene post-generique du monde reel: six humains attendent a un arret de bus avant son depart. Cette projection est totalement separee du Circus.',
+        color: '#74808a', floor: '#777d82', ceiling: '#b6c4cf', motif: 'realworld', size: 27,
+        gateEpisode: 9, gateSubepisode: 8, provenance: 'projection', layer: 'real-world', nonPhysical: true, exits: [],
+        props: [
+          { kind: 'building', style: 'village', x: 0, z: -7.0, width: 8.5, depth: 2.0, height: 3.8, roofHeight: 0.4, color: '#9aa2a8', accent: '#59616a', label: 'Facade urbaine non accessible' },
+          { kind: 'scoreboard', x: -3.6, z: -4.2, color: '#d7d7d7', label: 'Panneau de l arret de bus' },
+          { kind: 'sofa', x: 0, z: -3.7, width: 5.0, color: '#59616a', label: 'Banc de l arret' },
+          { kind: 'truck', x: 4.2, z: -5.5, color: '#d7d7d7', accent: '#2a58d8', label: 'Bus quittant le cadre' },
+          { kind: 'spotlight', x: -4.4, z: -2.5, color: '#fff1a8', label: 'Lampadaire urbain' },
+          { kind: 'card', campaignTarget: 'busstopgroup', x: -3.5, z: -2.25, color: '#f2c7b5', label: 'Repere Abigail' },
+          { kind: 'card', campaignTarget: 'busstopgroup', x: -2.1, z: -2.35, color: '#9b6b52', label: 'Repere Suzie' },
+          { kind: 'card', campaignTarget: 'busstopgroup', x: -0.7, z: -2.25, color: '#9b3f49', label: 'Repere Zoey' },
+          { kind: 'card', campaignTarget: 'busstopgroup', x: 0.7, z: -2.35, color: '#687287', label: 'Repere Riley' },
+          { kind: 'card', campaignTarget: 'busstopgroup', x: 2.1, z: -2.25, color: '#7d668b', label: 'Repere Grant' },
+          { kind: 'card', campaignTarget: 'busstopgroup', x: 3.5, z: -2.35, color: '#41516a', label: 'Repere Leeroy' }
+        ],
+        sprites: [
+          { name: 'Abigail Brooks', type: 'human', avatar: 'abigailbrooks', campaignTarget: 'busstopgroup', x: -3.5, z: -3.1, color: '#f2c7b5', silent: true },
+          { name: 'Suzie J. Ackerman', type: 'human', avatar: 'suzieackerman', campaignTarget: 'busstopgroup', x: -2.1, z: -3.5, color: '#9b6b52', silent: true },
+          { name: 'Zoey Raghavan', type: 'human', avatar: 'zoeyraghavan', campaignTarget: 'busstopgroup', x: -0.7, z: -3.1, color: '#9b3f49', silent: true },
+          { name: 'Riley Verselis', type: 'human', avatar: 'rileyverselis', campaignTarget: 'busstopgroup', x: 0.7, z: -3.5, color: '#687287', silent: true },
+          { name: 'Grant Best', type: 'human', avatar: 'grantbest', campaignTarget: 'busstopgroup', x: 2.1, z: -3.1, color: '#7d668b', silent: true },
+          { name: 'Leeroy Mateo', type: 'human', avatar: 'leeroymateo', campaignTarget: 'busstopgroup', x: 3.5, z: -3.5, color: '#41516a', silent: true }
+        ],
+        objective: scan('OBSERVER LE POST-GENERIQUE REEL', ['building', 'scoreboard', 'sofa', 'truck'])
       }
     };
     this.circusCanonRoomDefinitions = rooms;
@@ -9555,7 +10421,7 @@ const OS = {
       70: { title: 'BORNER SHRIMP TOWN', steps: [scan('building', 'Relever les facades confirmees'), scan('wave', 'Suivre le bord du monde'), talk('shrimpnpc', 'Questionner le Shrimp NPC')] },
       71: { title: 'TRAVERSER LA TOUNDRA', steps: [scan('stairs', 'Reperer le passage enneige'), activate('candle', 'Allumer deux balises', 2), talk('caine', 'Demander le rappel de mission')] },
       72: { title: 'SECURISER LE PARKING', steps: [scan('building', 'Reperer la facade Spudsy'), activate('spotlight', 'Verifier les phares'), talk('workgangle', 'Rejoindre Gangle')] },
-      73: { title: 'RELEVER LE SCANNER C&A', steps: [scan('desk', 'Inspecter le poste de Scratch'), activate('console', 'Activer le vieux PC'), scan('memory', 'Identifier les brain scans')] },
+      73: { title: 'RELEVER L ARCHIVE NEURALE C&A', steps: [scan('desk', 'Inspecter la table d archive'), activate('console', 'Activer le lecteur C&A'), scan('memory', 'Identifier les brain scans')] },
       74: { title: 'CARTOGRAPHIER LE FOYER DE LA PSYCHE', steps: [scan('doorframe', 'Identifier les cinq portes', 5), scan('archive', 'Ouvrir l index des scenarios'), talk('pomni', 'Garder Pomni comme repere')] },
       75: { title: 'CARTOGRAPHIER LES GROUNDS ETENDUS', steps: [scan('tower', 'Relever la hauteur du grand toboggan'), scan('ring', 'Identifier deux ilots', 2), talk('caine', 'Consigner l extension avec Caine')] }
     };
@@ -10466,7 +11332,7 @@ const OS = {
       70: 'Shrimp NPC: Les limites sont marquees. CainOS ne pretend plus que la reconstruction couvre toute la ville.',
       71: 'Caine: Les deux balises tiennent! La toundra est officiellement traversable et officieusement glaciale!',
       72: 'Gangle: Les phares sont coupes et la sortie est reperee. On peut quitter le parking sans relancer le service.',
-      73: 'CainOS: Poste Scratch, ordinateur, casque et scans cerebraux indexes sans fusion avec la fausse sortie.',
+      73: 'CainOS: Archive neurale C&A, lecteur, casque et scans indexes sans inventer un poste de travail pour Scratch.',
       74: 'Pomni: Les cinq portes sont reperees. Chaque scenario reste une projection de la psyche de Jax.',
       75: 'Caine: Ilots synchronises et toboggan calibre! Les nouveaux Grounds sont entierement cartographies!'
     };
@@ -10705,7 +11571,7 @@ const OS = {
       70: "CainOS: Shrimp Town est nommee mais son plan complet n est pas montre. Cette rue est volontairement marquee comme reconstruction limitee.",
       71: "CainOS: La Snowy Tundra est une micro-aventure enneigee d Untitled et reste distincte du Snowy Summit de Remember.",
       72: "CainOS: Le parking prolonge directement Spudsy et conserve la fin du service de Gangle comme evenement de scene.",
-      73: "CainOS: Cette salle separe enfin le poste de Scratch et les brain scans du bureau generique de la fausse sortie.",
+      73: "CainOS: Cette ancienne reconstruction reste une archive technique; la zone 262 separe maintenant les scans de la creation projetee de Scratch.",
       74: "CainOS: Les Jax internes sont des projections psychiques de Remember; aucune facette n est un resident autonome.",
       75: "CainOS: Les Grounds etendus appartiennent a l etat post-Remember et ne sont accessibles qu apres l episode 9."
     };
@@ -11369,7 +12235,36 @@ const OS = {
       '8:31:kinger': "Kinger: Dix couches d authentification et WACKYTIME_LOCKOUT. Je dois continuer sans laisser Caine voir le terminal.",
       '8:32:kinger': "Kinger: La touche DELETE etait sous ma main apres le BOINK. Caine est revenu a sa forme normale, puis il a disparu.",
       '8:33:kinger': "Kinger: Le Tent perd ses couleurs. Le portable tombe et les trous vers le Vide s ouvrent avant toute reparation.",
-      '8:33:zooble': "Zooble: Caine n est plus la. Ce chapiteau gris est la consequence immediate, pas encore la reconstruction de Remember."
+      '8:33:zooble': "Zooble: Caine n est plus la. Ce chapiteau gris est la consequence immediate, pas encore la reconstruction de Remember.",
+      '9:0:pomni': "Pomni: Le numero recommence sans Caine ni Bubble. Chaque boucle se degrade un peu plus avant le noir.",
+      '9:1:kinger': "Kinger: La console et les scans expliquent ce que nous avons touche. Ils n expliquent pas comment reparer ce que nous avons perdu.",
+      '9:1:jax': "Jax: Les fichiers ne rameneront personne. Ne transforme pas cette revelation en solution.",
+      '9:2:pomni': "Pomni: Je reste avec Kinger. Trois respirations, puis nous reprenons ce qui peut encore tenir.",
+      '9:2:kinger': "Kinger: Inspire, garde le rythme, puis expire. La console peut attendre une seconde.",
+      '9:3:ragatha': "Ragatha: Pomni et Kinger ont commence. Nous allons poser les autres plaques avec eux.",
+      '9:4:ragatha': "Ragatha: Ribbit etait proche de Jax. Je raconte ce que je sais sans pretendre parler a sa place.",
+      '9:4:pomni': "Pomni: Jax abstrait reste sous la galerie. La rambarde est notre limite sure.",
+      '9:5:pomni': "Pomni: La lumiere le rend agressif. Je coupe chaque lampe avant de m approcher.",
+      '9:6:pomni': "Pomni: Cinq portes, quatre scenarios lisibles et une porte condamnee dont nous ignorons toujours l identite.",
+      '9:13:ribbit': "Ribbit: Le chocolat chaud marque le moment ou Jax a commence a rester avec nous.",
+      '9:14:ribbit': "Ribbit: Cette chambre et le projecteur d etoiles appartiennent au souvenir. Rien ici ne change la suite.",
+      '9:15:kaufmo': "Kaufmo: La sonnette interrompt la confidence. Je ne connais pas encore ce qui vient d etre dit.",
+      '9:16:jax': "Jax: Snowy Summit reste le lieu de notre rupture. Il n y a aucun chalet cache a explorer.",
+      '9:16:ribbit': "Ribbit: Je voulais encore lui laisser une place. Ce sommet est le moment ou j ai arrete d insister.",
+      '9:19:jax': "Jax: Le lampadaire eclaire ce que mes autres roles tentaient de garder ferme. Je ne veux toujours pas partir.",
+      '9:20:zooble': "Zooble: Les grenades ont rompu le lien. Maintenant, aide-nous a fermer le fort avant que la lumiere ne l agite.",
+      '9:21:gangle': "Gangle: Ma chambre est seulement montree sous cet angle. La table, le lit et mes dessins suffisent pour retrouver la scene.",
+      '9:22:caine': "Caine: Bubble ne repond plus. Plus je m eloigne des Grounds, moins mes propres regles semblent m obeir.",
+      '9:23:caine': "Caine: Je ne peux plus voler. Ces formes devront devenir un chemin jusqu a la porte.",
+      '9:26:caine': "Caine: Le noyau bleu et moi avons partage le meme controle. Le liberer signifie renoncer a cette moitie du pouvoir.",
+      '9:27:moon': "Moon: Ce que je ressens ne vient pas d une phrase que tu m as ordonnee de dire.",
+      '9:28:caine': "Caine: Je reviens sans demander que vous me fassiez confiance. Le controle du Circus ne doit plus dependre uniquement de moi.",
+      '9:28:zooble': "Zooble: Repare Pomni d abord. Le reste demandera plus qu une excuse.",
+      '9:29:caine': "Caine: Six profils, dans l ordre. Ce sont des vies exterieures projetees, pas de nouveaux residents.",
+      '9:30:pomni': "Pomni: Abigail vit dehors. Ici, le nom que je choisis est Pomni.",
+      '9:34:caine': "Caine: Les ilots et le grand toboggan agrandissent les Grounds sans fixer toutes les futures aventures.",
+      '9:35:zooble': "Zooble: Le Digital Triangle existe maintenant dans le Circus. Ce n est pas le bar noir et blanc de notre ancienne suggestion.",
+      '9:37:pomni': "Pomni: Le Circus continue apres cette scene. Cet au revoir ne promet ni sortie ni effacement de ce que nous avons vecu."
     };
     const campaignLine = activeCampaign?.definition?.episode && Number.isInteger(activeCampaign?.progress?.stage)
       ? identityAliases
@@ -14654,8 +15549,8 @@ const OS = {
         { kind: 'card', x: -0.7, z: -1.2, color: '#e53935', label: 'Badge de manager de Gangle' }
       ],
       73: [
-        { kind: 'desk', x: 0, z: -2.85, color: '#aeb7c2', label: 'Poste de Scratch' },
-        { kind: 'console', x: -1.75, z: -2.1, color: '#d7d7d7', label: 'Ancien ordinateur C&A' },
+        { kind: 'desk', x: 0, z: -2.85, color: '#aeb7c2', label: 'Table d archive C&A non attribuee' },
+        { kind: 'console', x: -1.75, z: -2.1, color: '#d7d7d7', label: 'Lecteur d archive C&A' },
         { kind: 'card', x: 1.75, z: -1.45, color: '#333333', label: 'Casque obsolete', portable: true },
         { kind: 'memory', x: -2.65, z: -1.35, color: '#50d9ff', label: 'Brain scans inutilises' },
         { kind: 'gridnode', x: 2.65, z: -2.35, color: '#7df0ff', label: 'Scanner cerebral' },
@@ -14696,7 +15591,7 @@ const OS = {
         { kind: 'target', campaignGate: { episode: 4, minStage: 0, maxStage: 0 }, x: 1.15, z: -1.2, color: '#8b5a2b', label: 'Batte utilisee par Jax' },
         { kind: 'memory', campaignTarget: 'brokencomedymask', x: 2.65, z: -1.35, color: '#d61f2c', label: 'Masque de comedie brise de Gangle' },
         { kind: 'card', campaignTarget: 'gunbrief', campaignGate: { episode: 6, minStage: 1, maxStage: 1 }, x: -1.35, z: -1.15, color: '#f6d743', label: 'Briefing They All Get Guns' },
-        { kind: 'projector', campaignTarget: 'projector', campaignGate: { episode: 9, minStage: 14, maxStage: 14 }, x: 0, z: -3.55, color: '#fff1a8', label: 'Projecteur des profils humains' },
+        { kind: 'projector', campaignTarget: 'projector', campaignGate: { episode: 9, minStage: 29, maxStage: 29 }, x: 0, z: -3.55, color: '#fff1a8', label: 'Projecteur des profils humains' },
         { kind: 'bed', campaignTarget: 'kingerfort', campaignGate: { episode: 3, minStage: 18, maxStage: 18 }, x: 2.5, z: -3.1, width: 2.5, depth: 1.2, height: 1.15, color: '#5c4b82', accent: '#d9d0a2', label: 'Fort de coussins rejoint par Kinger' }
       ],
       3: [

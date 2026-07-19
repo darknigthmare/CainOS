@@ -20,6 +20,60 @@ const failures = [];
 const requireMarker = (source, marker, label = marker) => {
   if (!source.includes(marker)) failures.push(`ABSENT: ${label}`);
 };
+const sliceBalanced = (source, startIndex, openChar = '{', closeChar = '}') => {
+  if (startIndex < 0) return '';
+  const openIndex = source.indexOf(openChar, startIndex);
+  if (openIndex < 0) return '';
+
+  let depth = 0;
+  let quote = '';
+  let escaped = false;
+  let lineComment = false;
+  let blockComment = false;
+  for (let index = openIndex; index < source.length; index++) {
+    const char = source[index];
+    const next = source[index + 1];
+
+    if (lineComment) {
+      if (char === '\n') lineComment = false;
+      continue;
+    }
+    if (blockComment) {
+      if (char === '*' && next === '/') {
+        blockComment = false;
+        index++;
+      }
+      continue;
+    }
+    if (quote) {
+      if (escaped) {
+        escaped = false;
+      } else if (char === '\\') {
+        escaped = true;
+      } else if (char === quote) {
+        quote = '';
+      }
+      continue;
+    }
+    if (char === '/' && next === '/') {
+      lineComment = true;
+      index++;
+      continue;
+    }
+    if (char === '/' && next === '*') {
+      blockComment = true;
+      index++;
+      continue;
+    }
+    if (char === '"' || char === "'" || char === '`') {
+      quote = char;
+      continue;
+    }
+    if (char === openChar) depth++;
+    if (char === closeChar && --depth === 0) return source.slice(openIndex, index + 1);
+  }
+  return '';
+};
 
 for (let episode = 1; episode <= 9; episode++) {
   requireMarker(episodes, `${episode}: [`, `checkpoints EP${episode}`);
@@ -48,6 +102,41 @@ const episodeEightCheckpointAfters = [...episodeEightCheckpointBlock.matchAll(/a
 const expectedEpisodeEightCheckpointAfters = [65, 111, 195, 268, 349, 429, 584, 662];
 if (JSON.stringify(episodeEightCheckpointAfters) !== JSON.stringify(expectedEpisodeEightCheckpointAfters)) {
   failures.push(`Checkpoints EP8 incorrects: ${episodeEightCheckpointAfters.join(', ') || 'introuvables'}`);
+}
+const episodeNineCheckpointStart = checkpointSection.search(/\n\s*9:\s*\[/);
+const episodeNineCheckpointBlock = sliceBalanced(checkpointSection, episodeNineCheckpointStart, '[', ']');
+const episodeNineCheckpointAfters = [...episodeNineCheckpointBlock.matchAll(/after:\s*(\d+)/g)].map(match => Number(match[1]));
+const expectedEpisodeNineCheckpointAfters = [130, 230, 339, 489, 613, 720, 845, 935];
+if (JSON.stringify(episodeNineCheckpointAfters) !== JSON.stringify(expectedEpisodeNineCheckpointAfters)) {
+  failures.push(`Checkpoints EP9 Remember v2 incorrects: ${episodeNineCheckpointAfters.join(', ') || 'introuvables'}`);
+}
+const episodeNineCheckpointTitles = [...episodeNineCheckpointBlock.matchAll(/title:\s*["']([^"']+)["']/g)].map(match => match[1]);
+const expectedEpisodeNineCheckpointTitles = [
+  'Brain scans et tenir ensemble',
+  'Ribbit nommee et entree dans la psyche',
+  'Scenarios defensifs de Jax',
+  'Snowy Summit et confidence a Ribbit',
+  'Rupture avec Ribbit et isolement',
+  'Rester avec Jax et le contenir',
+  'Caine, Blue AI et Moon',
+  'Projecteur des vies exterieures'
+];
+if (JSON.stringify(episodeNineCheckpointTitles) !== JSON.stringify(expectedEpisodeNineCheckpointTitles)) {
+  failures.push(`Titres checkpoints EP9 Remember v2 incorrects: ${episodeNineCheckpointTitles.join(' | ') || 'introuvables'}`);
+}
+const retiredEpisodeNineCheckpointTitles = [
+  'Brain scans',
+  'Console de Kinger',
+  'Ribbit',
+  'Caine affaibli',
+  'Jax fissure',
+  'Souvenirs humains',
+  'Marques dehors',
+  'Avant Abby'
+];
+const staleEpisodeNineCheckpointTitles = episodeNineCheckpointTitles.filter(title => retiredEpisodeNineCheckpointTitles.includes(title));
+if (staleEpisodeNineCheckpointTitles.length) {
+  failures.push(`Anciens checkpoints EP9 encore actifs: ${staleEpisodeNineCheckpointTitles.join(', ')}`);
 }
 
 [
@@ -346,10 +435,36 @@ if (duplicateIds.length) failures.push(`ID HTML DUPLIQUES: ${duplicateIds.join('
 if (!/campaigns\.length\s*!==\s*9/.test(app)) failures.push('Audit 9 campagnes absent');
 const zoneMaxMatch = app.match(/getCircusFpsZoneMax\(\)\s*\{\s*return\s+(\d+)\s*;/);
 const fpsZoneMax = zoneMaxMatch ? Number(zoneMaxMatch[1]) : Number.NaN;
-const minimumFpsZoneMax = 244;
-if (!Number.isInteger(fpsZoneMax) || fpsZoneMax < minimumFpsZoneMax) {
-  failures.push(`Borne FPS ${Number.isFinite(fpsZoneMax) ? fpsZoneMax : 'introuvable'}/${minimumFpsZoneMax} minimum`);
+const expectedFpsZoneMax = 275;
+if (!Number.isInteger(fpsZoneMax) || fpsZoneMax !== expectedFpsZoneMax) {
+  failures.push(`Borne FPS ${Number.isFinite(fpsZoneMax) ? fpsZoneMax : 'introuvable'}/${expectedFpsZoneMax} attendue`);
 }
+const rememberCampaignStart = app.search(/\n\s*9:\s*\{\s*title:\s*['"]Remember['"]/);
+const rememberCampaignBlock = sliceBalanced(app, rememberCampaignStart);
+if (!rememberCampaignBlock) {
+  failures.push('Bloc campagne FPS EP9 Remember v2 introuvable');
+} else {
+  if (!/\bversion:\s*2\b/.test(rememberCampaignBlock)) failures.push('Campagne FPS EP9 Remember non versionnee v2');
+  for (const title of [
+    'Ouverture sans Caine ni Bubble',
+    'Confidence dans la chambre de Ribbit',
+    'Projecteur des vies exterieures',
+    'Aquarium des Abstractions',
+    'Arret de bus du monde reel'
+  ]) {
+    if (!rememberCampaignBlock.includes(`title: '${title}'`) && !rememberCampaignBlock.includes(`title: "${title}"`)) {
+      failures.push(`Acte cle EP9 Remember v2 absent: ${title}`);
+    }
+  }
+}
+if (!/transcriptAfter:\s*Number\(step\.after\)\s*\|\|\s*checkpoint\.after\s*\|\|\s*0/.test(app)) {
+  failures.push('Progression transcript EP9 non pilotee par step.after');
+}
+const canonRoomsMethodStart = app.indexOf('getCircusCanonRoomDefinitions()');
+const canonRoomsStart = app.indexOf('const rooms = {', canonRoomsMethodStart);
+const canonRoomsBlock = sliceBalanced(app, canonRoomsStart);
+if (!/\b245:\s*\{/.test(canonRoomsBlock)) failures.push('Zone FPS EP9 initiale 245 absente des definitions canoniques');
+if (!/\b275:\s*\{/.test(canonRoomsBlock)) failures.push('Zone FPS EP9 finale 275 absente des definitions canoniques');
 if (!/exits:\s*room\.nonPhysical\s*\?\s*\[\]\s*:\s*\[\.\.\.new Set\(room\.exits \|\| \[\]\)\]/.test(app)
   || !/Object\.entries\(canonRooms\)\.forEach\(\(\[zoneId, room\]\) => \{[\s\S]*?if \(room\.nonPhysical\) return;[\s\S]*?\(room\.exits \|\| \[\]\)\.forEach/.test(app)) {
   failures.push('Isolation des pieces non physiques dans le graphe FPS absente');
@@ -552,4 +667,4 @@ if (failures.length) {
   process.exit(1);
 }
 
-console.log(`AUDIT CAINOS: OK | ${ids.length} ids uniques | 9 campagnes a actes variables | borne FPS ${fpsZoneMax} | journal, profils, atelier et controles presents`);
+console.log(`AUDIT CAINOS: OK | ${ids.length} ids uniques | 9 campagnes a actes variables | Remember v2 | borne FPS ${fpsZoneMax} | journal, profils, atelier et controles presents`);

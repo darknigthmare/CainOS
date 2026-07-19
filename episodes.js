@@ -7132,14 +7132,14 @@ const EpisodeManager = {
       { after: 662, title: "Confrontation avec Caine", objective: "Survivez a la confrontation collective et gardez Kinger hors du regard de Caine jusqu a la crise finale.", mode: "dodge", goal: 10, duration: 22, target: "GROUP", hazard: "CAINE" }
     ],
     9: [
-      { after: 120, title: "Brain scans", objective: "Cliquez les fragments de verite pendant que Kinger explique les fichiers cerveau.", mode: "click", goal: 8, duration: 17, target: "SCAN", hazard: "DENIAL" },
-      { after: 240, title: "Console de Kinger", objective: "Reproduisez la sequence de respiration et de console pour garder Kinger stable.", mode: "sequence", goal: 6, duration: 22, target: "CALM", hazard: "PANIC" },
-      { after: 360, title: "Ribbit", objective: "Evitez les signaux du reve et gardez la piste de Ribbit lisible.", mode: "dodge", goal: 8, duration: 18, target: "RIBBIT", hazard: "DREAM" },
-      { after: 480, title: "Caine affaibli", objective: "Reparez les tuiles du monde pendant que l'autorite de Caine devient instable.", mode: "repair", goal: 9, duration: 19, target: "CAINE", hazard: "GLITCH" },
-      { after: 600, title: "Jax fissure", objective: "Cliquez les repliques vraies sans valider les provocations de Jax.", mode: "click", goal: 8, duration: 18, target: "JAX", hazard: "MASK" },
-      { after: 720, title: "Souvenirs humains", objective: "Filtrez les noms et trajectoires humaines sans ouvrir les infos avant leur revelation.", mode: "sequence", goal: 6, duration: 22, target: "LIFE", hazard: "SPOILER" },
-      { after: 840, title: "Marques dehors", objective: "Reparez la carte des vies exterieures pendant que Pomni lit ce qui reste des originaux.", mode: "repair", goal: 9, duration: 19, target: "WORLD", hazard: "DOUBT" },
-      { after: 935, title: "Avant Abby", objective: "Survivez aux derniers fragments avant que Zooble et Caine posent la vraie question du final.", mode: "dodge", goal: 9, duration: 19, target: "ABBY", hazard: "STATIC" }
+      { after: 130, title: "Brain scans et tenir ensemble", objective: "Isolez les preuves des brain scans, puis rassemblez les fragments stables pendant que le groupe tente de tenir ensemble.", mode: "click", goal: 9, duration: 22, target: "SCAN", hazard: "DENIAL" },
+      { after: 230, title: "Ribbit nommee et entree dans la psyche", objective: "Remettez le recit de Ragatha sur Ribbit dans l ordre, puis ouvrez le seuil psychique sans confondre souvenir et present.", mode: "sequence", goal: 7, duration: 24, target: "RIBBIT", hazard: "FALSE" },
+      { after: 339, title: "Scenarios defensifs de Jax", objective: "Evitez les leurres des faux scenarios et atteignez la porte verrouillee derriere les personas defensifs de Jax.", mode: "dodge", goal: 10, duration: 23, target: "DOOR", hazard: "PERSONA" },
+      { after: 489, title: "Snowy Summit et confidence a Ribbit", objective: "Reparez les fragments de Snowy Summit et de la chambre de Ribbit sans alterer la confidence livree par Jax.", mode: "repair", goal: 10, duration: 25, target: "MEMORY", hazard: "DISTORT" },
+      { after: 613, title: "Rupture avec Ribbit et isolement", objective: "Retrouvez les moments ou Jax repousse Ribbit et s isole, sans selectionner ses mensonges defensifs.", mode: "click", goal: 9, duration: 22, target: "TRUTH", hazard: "MASK" },
+      { after: 720, title: "Rester avec Jax et le contenir", objective: "Synchronisez l approche de Pomni, l extraction et le confinement obscur qui apaise Jax abstrait.", mode: "sequence", goal: 8, duration: 24, target: "CALM", hazard: "LIGHT" },
+      { after: 845, title: "Caine, Blue AI et Moon", objective: "Traversez le Void, les defenses du reseau et la separation du Blue AI jusqu a la rencontre de Caine avec Moon.", mode: "dodge", goal: 10, duration: 23, target: "MOON", hazard: "FIREWALL" },
+      { after: 935, title: "Projecteur des vies exterieures", objective: "Reconstituez les six profils du projecteur sans ouvrir une identite avant son apparition dans le recit.", mode: "repair", goal: 10, duration: 25, target: "PROFILE", hazard: "SPOILER" }
     ]
   },
 
@@ -9031,14 +9031,14 @@ class StoryMicroGame {
       "Console impossible": ["office", "Travaillez la console impossible et rejetez les commandes invalides.", "CLIC/SOURIS: GERER LA CONSOLE", "CONSOLE", "INVALIDE"],
       "Caine refuse": ["office", "Gardez les preuves pendant que Caine refuse l'information.", "CLIC/SOURIS: TENIR LES PREUVES", "PREUVE", "REFUS"],
       "Avant le crash": ["memory", "Stabilisez les derniers souvenirs avant le crash.", "SOURIS: STABILISER AVANT CRASH", "STABLE", "CRASH"],
-      "Brain scans": ["office", "Collectez les bons brain scans sans accepter les fichiers corrompus.", "CLIC/SOURIS: TRIER LES SCANS", "SCAN", "CORRUPT"],
-      "Console de Kinger": ["office", "Aidez Kinger a garder la console lisible pendant la crise.", "CLIC/SOURIS: GUIDER KINGER", "KINGER", "ERREUR"],
-      "Ribbit": ["memory", "Protegez le signal Ribbit et ignorez les echos qui brouillent la memoire.", "SOURIS: PROTEGER RIBBIT", "RIBBIT", "ECHO"],
-      "Caine affaibli": ["circus", "Gardez la scene debout pendant que Caine perd en stabilite.", "SOURIS: STABILISER CAINE", "CAINE", "FAIL"],
-      "Jax fissure": ["memory", "Rassemblez les morceaux de Jax sans toucher les fissures de rupture.", "SOURIS: RECADRER JAX", "JAX", "FISSURE"],
-      "Souvenirs humains": ["memory", "Recuperez les souvenirs humains dans l'ordre sans les melanger au cirque.", "SOURIS: TRIER LES HUMAINS", "HUMAIN", "CIRQUE"],
-      "Marques dehors": ["memory", "Gardez les marques du dehors lisibles avant qu'elles ne disparaissent.", "SOURIS: GARDER LES MARQUES", "MARQUE", "EFFACE"],
-      "Avant Abby": ["memory", "Stabilisez le dernier flux avant l'arrivee d'Abby.", "SOURIS: PREPARER ABBY", "ABBY", "VOID"]
+      "Brain scans et tenir ensemble": ["office", "Isolez les scans confirmes puis maintenez les fragments stables du groupe.", "CLIC/SOURIS: TRIER ET STABILISER", "SCAN", "DENIAL"],
+      "Ribbit nommee et entree dans la psyche": ["memory", "Gardez le fil du recit de Ragatha jusqu au seuil mental de Jax.", "CLIC: ORDONNER LE RECIT", "RIBBIT", "FALSE"],
+      "Scenarios defensifs de Jax": ["memory", "Traversez les facades mentales sans valider leurs faux evenements.", "SOURIS: EVITER LES PERSONAS", "DOOR", "PERSONA"],
+      "Snowy Summit et confidence a Ribbit": ["memory", "Reparez le sommet et la chambre verte sans modifier la confidence de Jax.", "CLIC/SOURIS: REPARER LE SOUVENIR", "MEMORY", "DISTORT"],
+      "Rupture avec Ribbit et isolement": ["memory", "Selectionnez les faits du recul de Jax sans renforcer ses mensonges defensifs.", "CLIC: GARDER LES FAITS", "TRUTH", "MASK"],
+      "Rester avec Jax et le contenir": ["memory", "Synchronisez la presence de Pomni, l extraction puis l obscurite du fort.", "CLIC: SUIVRE LE CONFINEMENT", "CALM", "LIGHT"],
+      "Caine, Blue AI et Moon": ["office", "Franchissez le Vide et le reseau jusqu a la separation silencieuse du noyau bleu.", "SOURIS: TRAVERSER LES FIREWALLS", "MOON", "FIREWALL"],
+      "Projecteur des vies exterieures": ["memory", "Reconstituez les six profils humains dans leur ordre de revelation.", "CLIC/SOURIS: CLASSER LES PROFILS", "PROFILE", "SPOILER"]
     };
     const entry = specData[this.config.title];
     if (!entry) return null;
