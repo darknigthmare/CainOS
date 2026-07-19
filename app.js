@@ -2087,6 +2087,9 @@ const OS = {
       canonM: 'assets/images/cainos-pixel-cast-sheet-canon-npc-pack-m.png',
       canonN: 'assets/images/cainos-pixel-cast-sheet-canon-npc-pack-n.png',
       canonO: 'assets/images/cainos-pixel-cast-sheet-canon-npc-pack-o.png',
+      canonP: 'assets/images/cainos-pixel-cast-sheet-canon-npc-pack-p.png',
+      canonQ: 'assets/images/cainos-pixel-cast-sheet-canon-npc-pack-q.png',
+      canonR: 'assets/images/cainos-pixel-cast-sheet-canon-npc-pack-r.png',
       pomnianimation: 'assets/images/cainos-pomni-animation-sheet.png',
       jaxanimation: 'assets/images/cainos-jax-animation-sheet.png',
       ragathaanimation: 'assets/images/cainos-ragatha-animation-sheet.png',
@@ -2096,6 +2099,7 @@ const OS = {
       caineanimation: 'assets/images/cainos-caine-animation-sheet.png'
     };
     this.circusAvatarSheets = {};
+    this.circusAvatarSources = sources;
     this.circusAvatarFrameCache = {};
     this.circusAvatarCoreReady = false;
     const coreKeys = new Set([
@@ -2103,23 +2107,15 @@ const OS = {
       'kingeranimation', 'gangleanimation', 'zoobleanimation', 'caineanimation'
     ]);
     const coreEntries = Object.entries(sources).filter(([key]) => coreKeys.has(key));
-    const deferredEntries = Object.entries(sources).filter(([key]) => !coreKeys.has(key));
     const loading = document.getElementById('circus-fps-loading');
     const loadingLabel = document.getElementById('circus-fps-loading-label');
     const loadingFill = document.getElementById('circus-fps-loading-fill');
     const canvas = document.getElementById('circus-doom-canvas');
     let coreFinished = 0;
-    let deferredStarted = false;
 
     if (loading) loading.hidden = false;
     if (loadingFill) loadingFill.style.width = '0%';
     if (canvas) canvas.setAttribute('aria-busy', 'true');
-
-    const startDeferredLoads = () => {
-      if (deferredStarted) return;
-      deferredStarted = true;
-      deferredEntries.forEach(entry => loadImage(entry, false));
-    };
 
     const finishCoreLoad = () => {
       coreFinished += 1;
@@ -2133,8 +2129,6 @@ const OS = {
       setTimeout(() => {
         if (loading) loading.hidden = true;
       }, 220);
-      if ('requestIdleCallback' in window) window.requestIdleCallback(startDeferredLoads, { timeout: 900 });
-      else setTimeout(startDeferredLoads, 120);
     };
 
     const loadImage = ([key, src], isCore) => {
@@ -2154,6 +2148,22 @@ const OS = {
     };
 
     coreEntries.forEach(entry => loadImage(entry, true));
+  },
+
+  ensureCircusAvatarSheet(sheet) {
+    if (!sheet || this.circusAvatarSheets?.[sheet]) return this.circusAvatarSheets?.[sheet] || null;
+    const src = this.circusAvatarSources?.[sheet];
+    if (!src) return null;
+    const img = new Image();
+    const refresh = () => {
+      this.circusAvatarFrameCache = {};
+      this.drawCircusDoom?.();
+    };
+    img.onload = refresh;
+    img.onerror = refresh;
+    img.src = src;
+    this.circusAvatarSheets[sheet] = img;
+    return img;
   },
 
   getCircusAvatarSheetSpec(avatar) {
@@ -2260,6 +2270,18 @@ const OS = {
       { sheet: 'canonO', cols: 6, rows: 1, map: {
         abstractedribbit: [0, 0], destinybest: [1, 0], whatifragatha: [2, 0],
         whatifgangle: [3, 0], jumbledragatha: [4, 0], jumbledpomni: [5, 0]
+      }},
+      { sheet: 'canonP', cols: 4, rows: 1, map: {
+        angelhead: [0, 0], possessedpomni: [1, 0],
+        monstrouscaine: [2, 0], flamingozooble: [3, 0]
+      }},
+      { sheet: 'canonQ', cols: 4, rows: 1, map: {
+        mouthlesspomni: [0, 0], mouthlessjax: [1, 0],
+        mouthlesszooble: [2, 0], inertbubble: [3, 0]
+      }},
+      { sheet: 'canonR', cols: 4, rows: 1, map: {
+        groundedcaine: [0, 0], healingbutterfly: [1, 0],
+        plasticganglemask: [2, 0], charredshrimp: [3, 0]
       }}
     ];
     for (const table of tables) {
@@ -2282,7 +2304,8 @@ const OS = {
       caine: 'caineanimation'
     };
     const sheet = animationSheets[avatar];
-    if (!sheet) return null;
+    const staticSpec = this.getCircusAvatarSheetSpec(avatar);
+    if (!sheet && !staticSpec) return null;
     const state = this.circusDoom;
     const speaking = state?.interactionChannel === 'dialogue'
       && state?.interactionSpeaker === sprite.name
@@ -2301,7 +2324,58 @@ const OS = {
     }[animation];
     const speed = animation === 'walk' ? 5.5 : animation === 'talk' ? 4.5 : 2.2;
     const frameIndex = frames[Math.floor(performance.now() / 1000 * speed) % frames.length];
-    return { sheet, cols: 4, rows: 2, frameIndex, animation };
+    return {
+      sheet: sheet || staticSpec.sheet,
+      cols: sheet ? 4 : staticSpec.cols,
+      rows: sheet ? 2 : staticSpec.rows,
+      frameIndex,
+      animation,
+      customSheet: !!sheet,
+      procedural: !sheet,
+      profile: this.getCircusAvatarAnimationProfile(avatar)
+    };
+  },
+
+  getCircusAvatarAnimationProfile(avatar) {
+    const floating = new Set([
+      'bubble', 'sun', 'moon', 'ghostly', 'angel', 'mildenhallsouls',
+      'floatingworm', 'cookiebutterfly', 'laughingshadows', 'ragathamothershadow',
+      'horrorghost', 'blueai', 'creditsfish', 'truthtellerfish', 'liarfish',
+      'inertbubble', 'healingbutterfly', 'angelhead'
+    ]);
+    const elastic = new Set([
+      'ganglecomedy', 'gangletragedy', 'ganglekawaii', 'maidgangle', 'beachgangle',
+      'japanesegangle', 'rhinogangle', 'workgangle', 'baseballgangle',
+      'darkduogangle', 'gummyworm', 'coiledcentipedes', 'giantcentipede',
+      'cellarabstraction', 'aquaticabstraction', 'abstractedkaufmo',
+      'abstractedribbit', 'abstractedjax', 'abstractedqueeniedark', 'abstractedqueenie'
+    ]);
+    const geometric = new Set([
+      'gloinkstar', 'gloinkcube', 'gloinkpyramid', 'gloinkcrescent', 'gloinkpin',
+      'gloinkround', 'zoobleparts', 'themachine', 'drfootball', 'orbsman',
+      'evilorbsman', 'additionalvoices', 'mannequin', 'abel', 'abelmannequin',
+      'abelfullbody', 'ming', 'redmannequin', 'orangemannequin',
+      'yellowmannequin', 'magentamannequin', 'stupidburgermannequin',
+      'cerealmannequin', 'peekingmannequin'
+    ]);
+    const giant = new Set([
+      'gloinkqueen', 'gloinkqueenscale', 'fudge', 'rivalbaseballpinkgiant',
+      'barrelmonkey', 'gummyelephant', 'fourthcrocodile', 'horrormonster',
+      'monstrouscaine'
+    ]);
+    const glitch = new Set([
+      'ribbit', 'scratch', 'wormo', 'bizco', 'rattie', 'spike', 'pinkcyclops',
+      'yellowclown', 'oyster', 'bulbcreature', 'horrorpomnivoid',
+      'horrorpomnispiral', 'horrorpomniskull', 'peeledjax', 'jaxmindviolent',
+      'jaxmindcomic', 'jaxmindtrapped', 'jumbledragatha', 'jumbledpomni',
+      'stabbedragdolls', 'unusedbrainscans', 'possessedpomni', 'charredshrimp'
+    ]);
+    if (floating.has(avatar)) return 'floating';
+    if (elastic.has(avatar)) return 'elastic';
+    if (geometric.has(avatar)) return 'geometric';
+    if (giant.has(avatar)) return 'giant';
+    if (glitch.has(avatar)) return 'glitch';
+    return 'humanoid';
   },
 
   getCircusAdventureWorlds() {
@@ -4661,11 +4735,36 @@ const OS = {
     this.recordCircusMissionJournal(event.channel === 'system' || event.speaker === 'CainOS' ? 'system' : 'event', event.speaker, event.text);
   },
 
+  getCircusCompactHudY(state, layer = 'objective') {
+    let y = 142;
+    if (layer === 'threat') return y;
+    if (state?.threatAlert) y += 30;
+    if (layer === 'campaign') return y;
+    if (this.getActiveCircusCampaignStatus()) y += 50;
+    if (layer === 'custom') return y;
+    if (state?.customAdventure?.active && !state.customAdventure.complete) y += 52;
+    return y;
+  },
+
+  getCircusDesktopHudY(state, width, layer = 'objective') {
+    let y = 68;
+    if (layer === 'threat') return y;
+    if (state?.threatAlert) y += 30;
+    if (width >= 820) return y;
+    if (layer === 'campaign') return y;
+    if (this.getActiveCircusCampaignStatus()) y += 50;
+    if (layer === 'custom') return y;
+    if (state?.customAdventure?.active && !state.customAdventure.complete) y += 52;
+    return y;
+  },
+
   drawCircusCampaignHud(ctx, w, h, state) {
     const status = this.getActiveCircusCampaignStatus();
     if (!status || !state.hudVisible) return;
     const done = status.requirements.filter(item => item.complete).length;
-    const y = w < 480 ? 148 : 48;
+    const y = w < 480
+      ? this.getCircusCompactHudY(state, 'campaign')
+      : this.getCircusDesktopHudY(state, w, 'campaign');
     ctx.save();
     ctx.fillStyle = 'rgba(5,2,13,0.84)';
     ctx.strokeStyle = '#ffd84a';
@@ -4810,7 +4909,7 @@ const OS = {
       ],
       150: [
         { id: 'kinger-eye-stairs', speaker: 'Kinger', text: "Let me try something. There's actually a staircase down there.", avatar: 'kinger', duration: 5600 },
-        { id: 'pomni-possession', speaker: 'Possessed Pomni', text: 'Freedom.', avatar: 'horrorpomnivoid', duration: 4200, danger: true }
+        { id: 'pomni-possession', speaker: 'Possessed Pomni', text: 'Freedom.', avatar: 'possessedpomni', duration: 4200, danger: true }
       ],
       151: [
         { id: 'dark-rest-memory', speaker: 'Kinger', text: 'Good memories can do a lot. Hold onto them.', avatar: 'kinger', duration: 5600 }
@@ -5103,7 +5202,7 @@ const OS = {
   getCircusDynamicEventSprites(zoneId) {
     const event = this.circusDoom?.activeDynamicEvent;
     if (!event || (!event.avatar && !event.avatars?.length)) return [];
-    const colors = { caine: '#ffd84a', bubble: '#f7f7ff', gloinkstar: '#7348ff', moon: '#9edcff', abstractedkaufmo: '#050505', abstractedjax: '#050505', abstractedribbit: '#050505', abstractedqueeniedark: '#101018', abstractedqueenie: '#050505', cellarabstraction: '#030303', aquaticabstraction: '#02020a', ragatha: '#d64545', pomni: '#e53935', gummigoo: '#d8a23a', kinger: '#d9d0a2', workgangle: '#f7f7f7', sun: '#ffd33d', zooble: '#ff4fb8', ghostly: '#7dffd8', baronmildenhall: '#7b8dff', horrorpomnivoid: '#ff8a24' };
+    const colors = { caine: '#ffd84a', groundedcaine: '#ffd84a', monstrouscaine: '#ffd84a', bubble: '#f7f7ff', inertbubble: '#c8b9de', gloinkstar: '#7348ff', moon: '#9edcff', abstractedkaufmo: '#050505', abstractedjax: '#050505', abstractedribbit: '#050505', abstractedqueeniedark: '#101018', abstractedqueenie: '#050505', cellarabstraction: '#030303', aquaticabstraction: '#02020a', ragatha: '#d64545', pomni: '#e53935', possessedpomni: '#ff8a24', mouthlesspomni: '#e53935', mouthlessjax: '#8a4fd6', mouthlesszooble: '#ff4fb8', gummigoo: '#d8a23a', kinger: '#d9d0a2', workgangle: '#f7f7f7', sun: '#ffd33d', zooble: '#ff4fb8', flamingozooble: '#ff4fb8', ghostly: '#7dffd8', baronmildenhall: '#7b8dff', angelhead: '#e5d7d7', healingbutterfly: '#ff9b37', plasticganglemask: '#f7f7f7', charredshrimp: '#3b2623', horrorpomnivoid: '#ff8a24' };
     const avatars = event.avatars?.length ? event.avatars : [event.avatar];
     return avatars.map((avatar, index) => ({
       name: avatar.charAt(0).toUpperCase() + avatar.slice(1),
@@ -5478,7 +5577,7 @@ const OS = {
         sprites: [
           { name: 'Hunter Jax', type: 'jax', avatar: 'hunterjax', aliases: ['jax'], x: -1.65, z: -2.25, color: '#8a4fd6' },
           { name: 'Rhino Gangle', type: 'gangle', avatar: 'rhinogangle', aliases: ['gangle'], x: 0.35, z: -3.0, color: '#e8e1d6' },
-          { name: 'Flamingo Zooble', type: 'zooble', avatar: 'zooble', aliases: ['flamingozooble'], x: 2.0, z: -2.65, color: '#ff4fb8' }
+          { name: 'Flamingo Zooble', type: 'zooble', avatar: 'flamingozooble', aliases: ['zooble'], x: 2.0, z: -2.65, color: '#ff4fb8' }
         ],
         objective: scan('RELEVER CINQ PROIES SANS INVENTER LEUR IDENTITE', ['target', 'card'], 'hunterjax')
       },
@@ -5644,7 +5743,7 @@ const OS = {
           { kind: 'barrel', x: 2.15, z: -2.75, color: '#5d3924', label: 'Barils de la cave' },
           { kind: 'archive', campaignTarget: 'tape03', x: -1.35, z: -1.35, color: '#7df0ff', label: 'Enregistrement Mildenhall 03' },
           { kind: 'card', campaignTarget: 'shotgun', portable: true, x: 0.2, z: -1.55, color: '#9b7a4f', label: 'Fusil du Baron - deux cartouches' },
-          { kind: 'lorebillboard', campaignTarget: 'mountedhead', avatar: 'angel', x: 1.75, z: -3.65, color: '#e5d7d7', sizeScale: 1.15, label: 'Tete montee qui repond', loreText: 'Le trophee parle brièvement avant les deux manifestations.' },
+          { kind: 'lorebillboard', campaignTarget: 'mountedhead', avatar: 'angelhead', x: 1.75, z: -3.65, color: '#e5d7d7', sizeScale: 1.15, label: 'Tete montee qui repond', loreText: 'Le trophee parle brievement avant les deux manifestations.' },
           { kind: 'target', campaignTarget: 'angelmanifestation', x: -1.65, z: -3.4, color: '#f7f7f7', label: 'Premiere manifestation de l Angel' },
           { kind: 'target', campaignTarget: 'angelmanifestation', x: 1.55, z: -4.35, color: '#f7f7f7', label: 'Seconde manifestation de l Angel' },
           { kind: 'archive', campaignTarget: 'tapefinal', x: 0, z: -2.65, color: '#ffcf75', label: 'Derniere bande du Baron' },
@@ -5875,7 +5974,7 @@ const OS = {
         gateEpisode: 3, gateSubepisode: 3, provenance: 'shown', exits: [87, 149],
         props: [
           { kind: 'counter', x: 0, z: -3.35, color: '#5b3228', label: 'Cheminee de la salle des trophees' },
-          { kind: 'lorebillboard', campaignTarget: 'angelhead', avatar: 'angel', label: 'Tete de l Angel', x: 0, z: -4.0, color: '#e5d7d7', sizeScale: 1.35, loreText: 'La tete reagit au bruit et declenche la poursuite; elle ne parle pas.' },
+          { kind: 'lorebillboard', campaignTarget: 'angelhead', avatar: 'angelhead', label: 'Tete de l Angel', x: 0, z: -4.0, color: '#e5d7d7', sizeScale: 1.35, loreText: 'La tete reagit au bruit et declenche la poursuite; elle ne parle pas.' },
           { kind: 'wallart', anchor: 'wall-left', x: -1.48, z: -1.4, color: '#d64545', art: 'spiral', label: 'Trophees deformes gauche' },
           { kind: 'wallart', anchor: 'wall-right', x: 1.48, z: -1.4, color: '#8a4fd6', art: 'blocks', label: 'Trophees deformes droite' },
           { kind: 'archive', campaignTarget: 'tape01', x: -2.35, z: -1.25, color: '#7df0ff', label: 'Enregistrement Mildenhall 01' },
@@ -5884,7 +5983,7 @@ const OS = {
         sprites: [
           { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -0.9, z: -2.15, color: '#e53935' },
           { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: 0.9, z: -2.2, color: '#d9d0a2' },
-          { name: 'Angel', type: 'npc', avatar: 'angel', x: 0, z: -4.25, color: '#e5d7d7', sizeScale: 1.15, silent: true, threatActive: true, silentText: 'L Angel reagit au bruit sans produire de parole intelligible.' }
+          { name: 'Tete de l Angel', type: 'npc', avatar: 'angelhead', x: 0, z: -4.25, color: '#e5d7d7', sizeScale: 1.15, silent: true, threatActive: true, silentText: 'La tete de l Angel reagit au bruit sans produire de parole intelligible.' }
         ],
         objective: scan('RELEVER LES TROPHEES DU MANOIR', ['lorebillboard', 'archive'], 'kinger')
       },
@@ -6683,7 +6782,7 @@ const OS = {
           { kind: 'crate', x: -2.0, z: -2.2, color: '#8b5a3c', label: 'Caisse de livraison' },
           { kind: 'barrel', x: 2.0, z: -2.25, color: '#56505f', label: 'Poubelle de service' },
           { kind: 'card', campaignTarget: 'trashbag', x: 1.25, z: -1.25, color: '#25262a', label: 'Sac poubelle porte par Pomni' },
-          { kind: 'memory', campaignTarget: 'removedmask', x: -1.25, z: -1.25, color: '#f7f7f7', label: 'Masque plastique retire par Gangle' },
+          { kind: 'lorebillboard', campaignTarget: 'removedmask', avatar: 'plasticganglemask', x: -1.25, z: -1.25, color: '#f7f7f7', sizeScale: 0.62, label: 'Masque plastique retire par Gangle', loreText: 'Masque plastique rigide donne par Zooble et retire par Gangle a l arriere du restaurant.' },
           { kind: 'ceilinglight', anchor: 'ceiling', fixture: 'fluorescent', x: 0, z: -1.0, color: '#dce8ff' }
         ],
         sprites: [
@@ -7070,7 +7169,7 @@ const OS = {
         ],
         sprites: [
           { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -1.0, z: -2.55, color: '#d9d0a2', campaignGate: { episode: 3, minStage: 12, maxStage: 13 } },
-          { name: 'Pomni possedee', type: 'pomni', avatar: 'horrorpomnivoid', x: 0.95, z: -3.0, color: '#ff8a24', campaignGate: { episode: 3, minStage: 12, maxStage: 12 } },
+          { name: 'Pomni possedee', type: 'pomni', avatar: 'possessedpomni', x: 0.95, z: -3.0, color: '#ff8a24', campaignGate: { episode: 3, minStage: 12, maxStage: 12 } },
           { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 0.95, z: -2.8, color: '#e53935', campaignGate: { episode: 3, minStage: 13, maxStage: 13 } },
           { name: 'Mildenhall Souls', type: 'ghost', avatar: 'mildenhallsouls', x: 0, z: -5.4, color: '#77f5da', sizeScale: 0.82, campaignGate: { episode: 3, minStage: 12, maxStage: 12 } }
         ],
@@ -7292,7 +7391,7 @@ const OS = {
           { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: -1.3, z: -2.45, color: '#ff4fb8' },
           { name: 'Hunter Jax', type: 'jax', avatar: 'hunterjax', aliases: ['jax'], x: 1.2, z: -2.4, color: '#8a4fd6' },
           { name: 'Rhino Gangle', type: 'gangle', avatar: 'rhinogangle', aliases: ['gangle'], x: -2.55, z: -3.1, color: '#e8e1d6' },
-          { name: 'Flamingo Zooble', type: 'zooble', avatar: 'zooble', aliases: ['flamingozooble'], x: 2.55, z: -3.1, color: '#ff4fb8', silent: true }
+          { name: 'Flamingo Zooble', type: 'zooble', avatar: 'flamingozooble', aliases: ['zooble'], x: 2.55, z: -3.1, color: '#ff4fb8', silent: true }
         ],
         objective: scan('VALIDER LA SORTIE ET LA REGLE VEGAN', ['console', 'card'], 'zooble')
       },
@@ -7622,7 +7721,7 @@ const OS = {
           { kind: 'toyblock', x: -3.2, z: -4.6, width: 2.2, depth: 2.2, height: 3.8, color: '#2a58d8', label: 'Couvert bleu de la piste' },
           { kind: 'toyblock', x: 3.0, z: -5.0, width: 2.4, depth: 2.0, height: 4.8, color: '#e96f28', label: 'Tour de blocs orange' },
           { kind: 'heart', campaignTarget: 'missingheart', x: -1.3, z: -1.3, color: '#5b2531', label: 'Emplacement du coeur manquant' },
-          { kind: 'ring', campaignTarget: 'butterflyheal', x: 0, z: -2.35, elevation: 1.05, color: '#ff9b37', label: 'Papillon de soin invente par Kinger' },
+          { kind: 'lorebillboard', campaignTarget: 'butterflyheal', avatar: 'healingbutterfly', x: 0, z: -2.35, elevation: 1.05, color: '#ff9b37', sizeScale: 0.62, label: 'Papillon de soin invente par Kinger', loreText: 'Petite creature orange improvisee par Kinger pour restaurer un coeur.' },
           { kind: 'heart', x: 1.35, z: -1.35, color: '#e53935', label: 'Coeur restaure de Ragatha' },
           { kind: 'pillar', x: -4.4, z: -6.3, height: 5.2, color: '#b71f35', label: 'Colonne de la piste' },
           { kind: 'fence', x: 0, z: -6.6, width: 6.8, color: '#ffd84a', label: 'Balustrade du niveau superieur' }
@@ -7631,7 +7730,7 @@ const OS = {
           { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: -0.85, z: -2.8, color: '#d9d0a2' },
           { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: 0.95, z: -2.75, color: '#d64545' }
         ],
-        objective: scan('RESTAURER LE COEUR AVEC LE PAPILLON', ['heart', 'ring'], 'kinger')
+        objective: scan('RESTAURER LE COEUR AVEC LE PAPILLON', ['heart', 'lorebillboard'], 'kinger')
       },
       175: {
         name: 'EP6 RESIDENT HALL / BAD GUYS TALK', short: 'BAD GUYS',
@@ -8110,7 +8209,7 @@ const OS = {
           { kind: 'umbrella', x: -3.0, z: -5.0, color: '#ff9b37', label: 'Parasol de la conversation' },
           { kind: 'wave', x: 0, z: -7.0, color: '#4ee7ff', label: 'Rive derriere le groupe' },
           { kind: 'barrel', x: -2.2, z: -2.0, radius: 0.55, height: 0.7, color: '#4ee7ff', label: 'Seau d eau renverse par Zooble' },
-          { kind: 'target', campaignTarget: 'shrimpsizzle', x: 2.4, z: -2.2, color: '#3b2623', label: 'Trace carbonisee du Shrimp NPC' },
+          { kind: 'lorebillboard', campaignTarget: 'shrimpsizzle', avatar: 'charredshrimp', x: 2.4, z: -2.2, color: '#3b2623', sizeScale: 0.72, label: 'Trace carbonisee du Shrimp NPC', loreText: 'Remnant silencieux laisse apres l eclair thermique du Sun.' },
           { kind: 'table', x: 2.5, z: -4.5, width: 1.8, depth: 1.0, color: '#8b5a3c', label: 'Table basse de plage' },
           { kind: 'balloon', x: -1.4, z: -1.5, color: '#ff4fb8', label: 'Ballon abandonne' }
         ],
@@ -8118,10 +8217,9 @@ const OS = {
           { name: 'Jax', type: 'jax', avatar: 'jax', x: -0.95, z: -3.0, color: '#8a4fd6' },
           { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 0.75, z: -3.15, color: '#ff4fb8' },
           { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 1.7, z: -3.65, color: '#e53935' },
-          { name: 'Shrimp NPC', type: 'npc', avatar: 'shrimpnpc', x: 2.7, z: -3.25, color: '#ff9a9a', sizeScale: 0.72 },
           { name: 'Sun', type: 'npc', avatar: 'sun', x: 3.6, z: -6.2, elevation: 4.2, color: '#ffd84a', sizeScale: 1.0, routine: 'hover' }
         ],
-        objective: scan('SUIVRE LA DISCUSSION ET LA FRITURE DU SHRIMP', ['umbrella', 'barrel', 'target'], 'zooble')
+        objective: scan('SUIVRE LA DISCUSSION ET LA FRITURE DU SHRIMP', ['umbrella', 'barrel', 'lorebillboard'], 'zooble')
       },
       197: {
         name: 'EP7 BEACH / ACTIVITY MONTAGE AND EYE LOSS', short: 'JEUX DE PLAGE',
@@ -8863,12 +8961,12 @@ const OS = {
         ],
         sprites: [
           { name: 'Caine', type: 'caine', avatar: 'caine', x: 0, z: -3.6, color: '#ffd84a', elevation: 1.0 },
-          { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -3.0, z: -2.6, color: '#e53935' },
+          { name: 'Pomni sans bouche', type: 'pomni', avatar: 'mouthlesspomni', aliases: ['pomni'], x: -3.0, z: -2.6, color: '#e53935' },
           { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: -1.8, z: -3.2, color: '#d64545' },
-          { name: 'Jax', type: 'jax', avatar: 'jax', x: -0.6, z: -2.5, color: '#8a4fd6' },
+          { name: 'Jax sans bouche', type: 'jax', avatar: 'mouthlessjax', aliases: ['jax'], x: -0.6, z: -2.5, color: '#8a4fd6' },
           { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: 0.65, z: -3.2, color: '#f7f7f7' },
           { name: 'Kinger', type: 'kinger', avatar: 'kinger', x: 1.85, z: -2.5, color: '#d9d0a2' },
-          { name: 'Zooble', type: 'zooble', avatar: 'zooble', x: 3.0, z: -3.2, color: '#ff4fb8' }
+          { name: 'Zooble sans bouche', type: 'zooble', avatar: 'mouthlesszooble', aliases: ['zooble'], x: 3.0, z: -3.2, color: '#ff4fb8' }
         ],
         objective: scan('DECLENCHER LE PIANO ET RELEVER LES EFFETS', ['platform', 'memory', 'stagecurtain'], 'caine')
       },
@@ -9112,7 +9210,7 @@ const OS = {
           { kind: 'partition', x: 5.6, z: -6.6, width: 0.4, depth: 5.0, height: 8.5, color: '#7a1421', label: 'Paroi de contrainte droite' }
         ],
         sprites: [
-          { name: 'Caine monstrueux', type: 'caine', avatar: 'caine', x: 0, z: -6.2, color: '#ffd84a', sizeScale: 2.7, elevation: 1.8 },
+          { name: 'Caine monstrueux', type: 'caine', avatar: 'monstrouscaine', aliases: ['caine'], x: 0, z: -6.2, color: '#ffd84a', sizeScale: 2.7, elevation: 1.8 },
           { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: -4.0, z: -3.8, color: '#e53935', elevation: 1.25 },
           { name: 'Ragatha', type: 'ragatha', avatar: 'ragatha', x: -2.0, z: -4.8, color: '#d64545', elevation: 1.75 },
           { name: 'Gangle', type: 'gangle', avatar: 'gangle', x: 0, z: -5.3, color: '#f7f7f7', elevation: 2.15 },
@@ -9498,7 +9596,7 @@ const OS = {
         ],
         sprites: [
           { name: 'Caine', type: 'caine', avatar: 'caine', x: -0.8, z: -3.0, color: '#ffd84a' },
-          { name: 'Bubble inerte', type: 'bubble', avatar: 'bubble', x: 1.0, z: -2.7, color: '#f7f7ff', silent: true, silentText: 'Bubble ne repond pas et reste une sphere inerte dans le Vide.' }
+          { name: 'Bubble inerte', type: 'bubble', avatar: 'inertbubble', aliases: ['bubble'], x: 1.0, z: -2.7, color: '#f7f7ff', silent: true, silentText: 'Bubble ne repond pas et reste une sphere inerte dans le Vide.' }
         ],
         objective: scan('SUIVRE LE DOUTE DE CAINE', ['gridnode', 'ring', 'memory'], 'caine')
       },
@@ -9519,7 +9617,7 @@ const OS = {
           { kind: 'exitframe', x: 0, z: -10.5, color: '#ffffff', label: 'Porte Internet apercue au loin' }
         ],
         sprites: [
-          { name: 'Caine prive de vol', type: 'caine', avatar: 'caine', x: -4.5, z: -2.7, color: '#ffd84a' }
+          { name: 'Caine prive de vol', type: 'caine', avatar: 'groundedcaine', aliases: ['caine'], x: -4.5, z: -2.7, color: '#ffd84a', routine: 'walk' }
         ],
         objective: scan('ASSEMBLER LE PONT DU VIDE', ['toyblock', 'barrel', 'ring', 'base', 'partition'])
       },
@@ -12325,13 +12423,21 @@ const OS = {
     const key = sprite.avatar || sprite.type || "";
     const map = {
       pomni: "POMNI",
+      possessedpomni: "POSSESSED_POMNI",
+      mouthlesspomni: "POMNI",
       caine: "CAINE",
+      groundedcaine: "CAINE",
+      monstrouscaine: "CAINE",
       bubble: "BUBBLE",
+      inertbubble: "BUBBLE",
       ragatha: "RAGATHA",
       jax: "JAX",
+      mouthlessjax: "JAX",
       kinger: "KINGER",
       gangle: "GANGLE",
       zooble: "ZOOBLE",
+      flamingozooble: "ZOOBLE",
+      mouthlesszooble: "ZOOBLE",
       kaufmo: "KAUFMO",
       abstractedkaufmo: "ABSTRACTED_KAUFMO",
       cellarabstraction: "CELLAR_ABSTRACTION",
@@ -12345,6 +12451,10 @@ const OS = {
       marthamildenhall: "MARTHA_MILDENHALL",
       ghostly: "GHOSTLY",
       angel: "MOUNTED_CREATURE_HEAD",
+      angelhead: "MOUNTED_CREATURE_HEAD",
+      healingbutterfly: "HEALING_BUTTERFLY",
+      plasticganglemask: "GANGLE_PLASTIC_MASK",
+      charredshrimp: "CHARRED_SHRIMP",
       horrorghost: "GHOSTLY",
       horrormonster: "BARON_MILDENHALL",
       horrorpomnivoid: "POSSESSED_POMNI",
@@ -12983,7 +13093,9 @@ const OS = {
 
   drawCircusThreatHud(ctx, w, h, state) {
     if (!state?.threatAlert) return;
-    const y = w < 480 ? 106 : 50;
+    const y = w < 480
+      ? this.getCircusCompactHudY(state, 'threat')
+      : this.getCircusDesktopHudY(state, w, 'threat');
     ctx.save();
     ctx.fillStyle = 'rgba(45,0,0,0.82)';
     ctx.strokeStyle = '#ff4d4d';
@@ -14821,7 +14933,9 @@ const OS = {
     if (!status) return;
     const width = w < 480 ? w - 28 : Math.min(310, w * 0.42);
     const x = (w - width) / 2;
-    const y = w < 480 ? 106 : 10;
+    const y = w < 480
+      ? this.getCircusCompactHudY(state, 'objective')
+      : this.getCircusDesktopHudY(state, w, 'objective');
     const color = status.complete ? '#9cff6d' : '#fff1a8';
     const ratio = status.total ? status.done / status.total : 0;
     const next = status.complete ? 'MISSION LOCALE TERMINEE'
@@ -14852,7 +14966,9 @@ const OS = {
     const compact = w < 480;
     const cell = compact ? 3 : 4;
     const ox = 12;
-    const oy = compact ? 198 : 46;
+    const oy = compact
+      ? Math.max(194, Math.min(h - 168, this.getCircusCompactHudY(state, 'objective') + 44))
+      : Math.max(124, Math.min(h - 168, this.getCircusDesktopHudY(state, w, 'objective') + 46));
     ctx.save();
     ctx.fillStyle = 'rgba(5,2,13,0.62)';
     ctx.fillRect(ox - 4, oy - 4, room.size * cell + 8, room.size * cell + 8);
@@ -15870,8 +15986,43 @@ const OS = {
     return extras[zoneId] || [];
   },
 
+  getCircusPropRenderManifest() {
+    return {
+      geometry: new Set([
+        'ring', 'base', 'platform', 'stairs', 'table', 'banquettable', 'counter',
+        'desk', 'bed', 'partition', 'sofa', 'pillar', 'crate', 'barrel', 'tent',
+        'building', 'tower', 'lighthouse', 'truck', 'wagon', 'bridge', 'carousel',
+        'caveslide', 'escalator', 'gloinknest', 'bathtub', 'toilet', 'sink',
+        'toyglove', 'fence', 'projector', 'coffin', 'foldingchair', 'floorlamp',
+        'watercooler', 'plant', 'teapot', 'umbrella', 'crt', 'console', 'gridnode',
+        'spotlight'
+      ]),
+      mounted: new Set([
+        'stagecurtain', 'stagevalance', 'pilotexitdoor', 'graffiti', 'cellaropening',
+        'caineportal', 'roomdoor', 'wallart', 'ceilinglight', 'doorframe',
+        'exitframe', 'window', 'menu', 'scoreboard', 'archive', 'card',
+        'lorebillboard'
+      ]),
+      effect: new Set([
+        'caveglow', 'wave', 'sun', 'eye', 'memory', 'balloon', 'heart'
+      ]),
+      object: new Set([
+        'toyblock', 'wackywatch', 'feastplatter', 'zooblepart', 'candy', 'target',
+        'candle'
+      ])
+    };
+  },
+
+  getCircusPropRenderClass(kind) {
+    const manifest = this.getCircusPropRenderManifest();
+    for (const [renderClass, kinds] of Object.entries(manifest)) {
+      if (kinds.has(kind)) return renderClass;
+    }
+    return null;
+  },
+
   getCircusWorldGeometryKinds() {
-    return new Set(['ring', 'base', 'platform', 'stairs', 'table', 'banquettable', 'counter', 'desk', 'bed', 'partition', 'sofa', 'pillar', 'crate', 'barrel', 'tent', 'building', 'tower', 'lighthouse']);
+    return this.getCircusPropRenderManifest().geometry;
   },
 
   projectCircusPropGroundVertex(prop, offsetX, offsetZ, state, w, h, height = 0) {
@@ -15958,7 +16109,69 @@ const OS = {
         depth: prop.depth || 2.7,
         wallHeight: prop.wallHeight || 1.75,
         roofHeight: prop.roofHeight || 4.4
-      }
+      },
+      truck: {
+        width: prop.width || 1.85,
+        depth: prop.depth || 3.45,
+        height: prop.height || 1.35,
+        solid: true
+      },
+      wagon: {
+        width: prop.width || 1.55,
+        depth: prop.depth || 2.75,
+        height: prop.height || 1.15,
+        solid: true
+      },
+      bridge: {
+        width: prop.width || 2.1,
+        depth: prop.depth || 4.6,
+        height: prop.height || 0.28,
+        solid: true
+      },
+      carousel: {
+        radius: prop.radius || 1.55,
+        height: prop.height || 2.45,
+        segments: 18
+      },
+      caveslide: {
+        width: prop.width || 1.35,
+        depth: prop.depth || 3.4,
+        height: prop.height || 1.85,
+        solid: true
+      },
+      escalator: {
+        width: prop.width || 1.65,
+        depth: prop.depth || 3.6,
+        height: prop.height || 1.95,
+        solid: true
+      },
+      gloinknest: {
+        radius: prop.radius || 1.45,
+        height: prop.height || 0.72,
+        segments: 18
+      },
+      bathtub: { width: 1.75, depth: 0.82, height: 0.68, solid: true },
+      toilet: { width: 0.62, depth: 0.72, height: 0.82, solid: true },
+      sink: { width: 0.82, depth: 0.52, height: 0.8, solid: true },
+      toyglove: { width: 1.08, depth: 0.92, height: 1.05, solid: true },
+      fence: {
+        width: prop.width || 2.8,
+        depth: prop.depth || 0.16,
+        height: prop.height || 1.15,
+        solid: true
+      },
+      projector: { width: 0.86, depth: 1.05, height: 0.62, solid: true },
+      coffin: { width: 0.82, depth: 1.92, height: 0.48, solid: true },
+      foldingchair: { width: 0.58, depth: 0.62, height: 0.88, solid: true },
+      floorlamp: { radius: 0.24, height: 1.68, segments: 10 },
+      watercooler: { width: 0.56, depth: 0.52, height: 1.38, solid: true },
+      plant: { radius: 0.34, height: 1.18, segments: 10 },
+      teapot: { radius: 0.42, height: 0.58, segments: 10 },
+      umbrella: { radius: 0.9, height: 1.95, segments: 14 },
+      crt: { width: 0.88, depth: 0.62, height: 0.84, solid: true },
+      console: { width: 1.18, depth: 0.62, height: 0.96, solid: true },
+      gridnode: { width: 0.76, depth: 0.76, height: 0.76, solid: true },
+      spotlight: { radius: 0.28, height: 1.52, segments: 10 }
     }[prop.kind] || null;
   },
 
@@ -15980,6 +16193,134 @@ const OS = {
       ctx.stroke();
     }
     return true;
+  },
+
+  drawCircusBoxVolume(ctx, prop, state, w, h, options = {}) {
+    const width = options.width || 1;
+    const depth = options.depth || 1;
+    const bottomHeight = options.bottomHeight || 0;
+    const topHeight = options.topHeight ?? options.height ?? 1;
+    const offsetX = options.offsetX || 0;
+    const offsetZ = options.offsetZ || 0;
+    const halfW = width / 2;
+    const halfD = depth / 2;
+    const corners = [
+      [-halfW + offsetX, -halfD + offsetZ],
+      [halfW + offsetX, -halfD + offsetZ],
+      [halfW + offsetX, halfD + offsetZ],
+      [-halfW + offsetX, halfD + offsetZ]
+    ];
+    const bottom = corners.map(([x, z]) => this.projectCircusPropGroundVertex(
+      prop, x, z, state, w, h, bottomHeight
+    ));
+    const top = corners.map(([x, z]) => this.projectCircusPropGroundVertex(
+      prop, x, z, state, w, h, topHeight
+    ));
+    if (!bottom.every(Boolean) || !top.every(Boolean)) return false;
+    const color = options.color || prop.color || '#fff1a8';
+    const stroke = options.stroke || '#211d28';
+    const faces = bottom.map((point, index) => {
+      const next = (index + 1) % bottom.length;
+      return {
+        depth: (point.depth + bottom[next].depth) / 2,
+        points: [point, bottom[next], top[next], top[index]],
+        index
+      };
+    }).sort((a, b) => b.depth - a.depth);
+    faces.forEach(face => this.drawCircusGroundPolygon(
+      ctx,
+      face.points,
+      this.shadeHex(color, face.index % 2 === 0 ? 0.64 : 0.76),
+      stroke,
+      1
+    ));
+    this.drawCircusGroundPolygon(
+      ctx,
+      top,
+      this.shadeHex(options.topColor || color, 1.06),
+      options.topStroke || `${stroke}aa`,
+      1
+    );
+    return { bottom, top };
+  },
+
+  drawCircusCylinderVolume(ctx, prop, state, w, h, options = {}) {
+    const radius = options.radius || 0.35;
+    const topRadius = options.topRadius ?? radius;
+    const bottomHeight = options.bottomHeight || 0;
+    const height = options.height || 1;
+    const segments = Math.max(8, options.segments || 12);
+    const offsetX = options.offsetX || 0;
+    const offsetZ = options.offsetZ || 0;
+    const bottom = [];
+    const top = [];
+    for (let index = 0; index < segments; index++) {
+      const angle = (index / segments) * Math.PI * 2;
+      bottom.push(this.projectCircusPropGroundVertex(
+        prop,
+        offsetX + Math.cos(angle) * radius,
+        offsetZ + Math.sin(angle) * radius,
+        state, w, h, bottomHeight
+      ));
+      top.push(this.projectCircusPropGroundVertex(
+        prop,
+        offsetX + Math.cos(angle) * topRadius,
+        offsetZ + Math.sin(angle) * topRadius,
+        state, w, h, bottomHeight + height
+      ));
+    }
+    if (!bottom.every(Boolean) || !top.every(Boolean)) return false;
+    const color = options.color || prop.color || '#fff1a8';
+    const stroke = options.stroke || '#211d28';
+    const faces = bottom.map((point, index) => {
+      const next = (index + 1) % bottom.length;
+      return {
+        depth: (point.depth + bottom[next].depth) / 2,
+        points: [point, bottom[next], top[next], top[index]],
+        index
+      };
+    }).sort((a, b) => b.depth - a.depth);
+    faces.forEach(face => this.drawCircusGroundPolygon(
+      ctx,
+      face.points,
+      this.shadeHex(color, face.index % 2 === 0 ? 0.62 : 0.76),
+      stroke,
+      1
+    ));
+    this.drawCircusGroundPolygon(
+      ctx,
+      top,
+      this.shadeHex(options.topColor || color, 1.06),
+      options.topStroke || `${stroke}aa`,
+      1
+    );
+    return { bottom, top };
+  },
+
+  drawCircusRampVolume(ctx, prop, state, w, h, options = {}) {
+    const halfW = (options.width || 1.4) / 2;
+    const halfD = (options.depth || 3.2) / 2;
+    const low = options.lowHeight || 0.08;
+    const high = options.highHeight || 1.8;
+    const bottom = [
+      this.projectCircusPropGroundVertex(prop, -halfW, -halfD, state, w, h),
+      this.projectCircusPropGroundVertex(prop, halfW, -halfD, state, w, h),
+      this.projectCircusPropGroundVertex(prop, halfW, halfD, state, w, h),
+      this.projectCircusPropGroundVertex(prop, -halfW, halfD, state, w, h)
+    ];
+    const top = [
+      this.projectCircusPropGroundVertex(prop, -halfW, -halfD, state, w, h, low),
+      this.projectCircusPropGroundVertex(prop, halfW, -halfD, state, w, h, low),
+      this.projectCircusPropGroundVertex(prop, halfW, halfD, state, w, h, high),
+      this.projectCircusPropGroundVertex(prop, -halfW, halfD, state, w, h, high)
+    ];
+    if (!bottom.every(Boolean) || !top.every(Boolean)) return false;
+    const color = options.color || prop.color || '#7df0ff';
+    this.drawCircusGroundPolygon(ctx, [bottom[0], bottom[1], top[1], top[0]], this.shadeHex(color, 0.52), '#211d28', 1);
+    this.drawCircusGroundPolygon(ctx, [bottom[1], bottom[2], top[2], top[1]], this.shadeHex(color, 0.64), '#211d28', 1);
+    this.drawCircusGroundPolygon(ctx, [bottom[2], bottom[3], top[3], top[2]], this.shadeHex(color, 0.58), '#211d28', 1);
+    this.drawCircusGroundPolygon(ctx, top, this.shadeHex(options.topColor || color, 1.02), '#fff1a866', 1);
+    return { bottom, top };
   },
 
   drawCircusBuildingGeometry(ctx, prop, state, w, h, color, light) {
@@ -16139,6 +16480,291 @@ const OS = {
           this.projectCircusPropGroundVertex(prop, -0.48, 0, state, w, h)
         ];
         this.drawCircusGroundPolygon(ctx, diamond, '#f7f3dd', color, 2);
+      } else if (prop.kind === 'truck' || prop.kind === 'wagon') {
+        const dimensions = this.getCircusWorldPropDimensions(prop, state);
+        const isTruck = prop.kind === 'truck';
+        const bodyColor = prop.color || (isTruck ? '#d63135' : '#8a4fd6');
+        const accent = prop.accent || (isTruck ? '#f7d943' : '#fff1a8');
+        this.drawCircusBoxVolume(ctx, prop, state, w, h, {
+          width: dimensions.width,
+          depth: dimensions.depth,
+          bottomHeight: 0.28,
+          topHeight: dimensions.height * 0.76,
+          color: bodyColor
+        });
+        this.drawCircusBoxVolume(ctx, prop, state, w, h, {
+          width: dimensions.width * (isTruck ? 0.82 : 0.92),
+          depth: dimensions.depth * (isTruck ? 0.34 : 0.58),
+          bottomHeight: dimensions.height * 0.68,
+          topHeight: dimensions.height,
+          offsetZ: -dimensions.depth * (isTruck ? 0.29 : 0.12),
+          color: accent,
+          topColor: isTruck ? '#7df0ff' : accent
+        });
+        const wheelZ = dimensions.depth * 0.28;
+        const wheelX = dimensions.width * 0.48;
+        [[-wheelX, -wheelZ], [wheelX, -wheelZ], [-wheelX, wheelZ], [wheelX, wheelZ]].forEach(([offsetX, offsetZ]) => {
+          const wheel = this.projectCircusPropGroundVertex(prop, offsetX, offsetZ, state, w, h, 0.28);
+          if (!wheel) return;
+          const radius = Math.max(2, (h * 0.11) / Math.max(0.35, wheel.depth));
+          ctx.fillStyle = '#18141b';
+          ctx.strokeStyle = accent;
+          ctx.lineWidth = 1;
+          ctx.beginPath();
+          ctx.ellipse(wheel.x, wheel.y, radius, radius * 0.78, 0, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.stroke();
+        });
+      } else if (prop.kind === 'bridge') {
+        const dimensions = this.getCircusWorldPropDimensions(prop, state);
+        this.drawCircusBoxVolume(ctx, prop, state, w, h, {
+          width: dimensions.width,
+          depth: dimensions.depth,
+          topHeight: dimensions.height,
+          color: prop.color || '#8f6b3e',
+          topColor: prop.accent || '#c69354'
+        });
+        const railColor = prop.accent || '#fff1a8';
+        [-1, 1].forEach(side => {
+          const railX = side * (dimensions.width / 2 - 0.08);
+          this.drawCircusBoxVolume(ctx, prop, state, w, h, {
+            width: 0.1,
+            depth: dimensions.depth,
+            bottomHeight: dimensions.height,
+            topHeight: dimensions.height + 0.72,
+            offsetX: railX,
+            color: railColor
+          });
+        });
+      } else if (prop.kind === 'carousel') {
+        const dimensions = this.getCircusWorldPropDimensions(prop, state);
+        const accent = prop.accent || '#ffd84a';
+        const base = this.drawCircusCylinderVolume(ctx, prop, state, w, h, {
+          radius: dimensions.radius,
+          height: 0.2,
+          segments: dimensions.segments,
+          color: prop.color || '#d63135',
+          topColor: '#f7e5a2'
+        });
+        this.drawCircusCylinderVolume(ctx, prop, state, w, h, {
+          radius: 0.12,
+          height: dimensions.height,
+          segments: 10,
+          color: accent,
+          topColor: accent
+        });
+        const canopy = [];
+        for (let index = 0; index < dimensions.segments; index++) {
+          const angle = (index / dimensions.segments) * Math.PI * 2;
+          canopy.push(this.projectCircusPropGroundVertex(
+            prop,
+            Math.cos(angle) * dimensions.radius * 1.05,
+            Math.sin(angle) * dimensions.radius * 1.05,
+            state, w, h, dimensions.height * 0.76
+          ));
+        }
+        const apex = this.projectCircusPropGroundVertex(prop, 0, 0, state, w, h, dimensions.height);
+        if (base && canopy.every(Boolean) && apex) {
+          canopy.forEach((point, index) => {
+            const next = (index + 1) % canopy.length;
+            this.drawCircusGroundPolygon(
+              ctx,
+              [point, canopy[next], apex],
+              index % 2 === 0 ? (prop.color || '#d63135') : accent,
+              '#fff1a877',
+              1
+            );
+          });
+          for (let index = 0; index < 6; index++) {
+            const angle = (index / 6) * Math.PI * 2;
+            this.drawCircusCylinderVolume(ctx, prop, state, w, h, {
+              radius: 0.035,
+              height: dimensions.height * 0.55,
+              bottomHeight: 0.2,
+              offsetX: Math.cos(angle) * dimensions.radius * 0.68,
+              offsetZ: Math.sin(angle) * dimensions.radius * 0.68,
+              segments: 8,
+              color: index % 2 ? '#2a58d8' : '#d63135'
+            });
+          }
+        }
+      } else if (prop.kind === 'caveslide' || prop.kind === 'escalator') {
+        const dimensions = this.getCircusWorldPropDimensions(prop, state);
+        const isEscalator = prop.kind === 'escalator';
+        const ramp = this.drawCircusRampVolume(ctx, prop, state, w, h, {
+          width: dimensions.width,
+          depth: dimensions.depth,
+          highHeight: dimensions.height,
+          color: prop.color || (isEscalator ? '#6f7782' : '#8a4fd6'),
+          topColor: prop.accent || (isEscalator ? '#b8c0ca' : '#c875ff')
+        });
+        if (ramp && isEscalator) {
+          for (let step = 1; step < 9; step++) {
+            const t = step / 9;
+            const z = -dimensions.depth / 2 + dimensions.depth * t;
+            const stepHeight = 0.08 + dimensions.height * t;
+            const left = this.projectCircusPropGroundVertex(prop, -dimensions.width * 0.48, z, state, w, h, stepHeight);
+            const right = this.projectCircusPropGroundVertex(prop, dimensions.width * 0.48, z, state, w, h, stepHeight);
+            if (!left || !right) continue;
+            ctx.strokeStyle = '#31343a';
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(left.x, left.y);
+            ctx.lineTo(right.x, right.y);
+            ctx.stroke();
+          }
+        }
+      } else if (prop.kind === 'gloinknest') {
+        const dimensions = this.getCircusWorldPropDimensions(prop, state);
+        this.drawCircusCylinderVolume(ctx, prop, state, w, h, {
+          radius: dimensions.radius,
+          topRadius: dimensions.radius * 0.84,
+          height: dimensions.height,
+          segments: dimensions.segments,
+          color: prop.color || '#9b446c',
+          topColor: '#3a152a'
+        });
+        for (let index = 0; index < 7; index++) {
+          const angle = (index / 7) * Math.PI * 2;
+          this.drawCircusCylinderVolume(ctx, prop, state, w, h, {
+            radius: 0.1,
+            topRadius: 0.035,
+            height: dimensions.height * 0.9,
+            bottomHeight: dimensions.height * 0.48,
+            offsetX: Math.cos(angle) * dimensions.radius * 0.82,
+            offsetZ: Math.sin(angle) * dimensions.radius * 0.82,
+            segments: 8,
+            color: index % 2 ? '#f7d943' : '#d63135'
+          });
+        }
+      } else if (['floorlamp', 'plant', 'teapot', 'umbrella', 'spotlight'].includes(prop.kind)) {
+        const dimensions = this.getCircusWorldPropDimensions(prop, state);
+        const accent = prop.accent || '#fff1a8';
+        if (prop.kind === 'plant') {
+          this.drawCircusCylinderVolume(ctx, prop, state, w, h, {
+            radius: dimensions.radius,
+            topRadius: dimensions.radius * 0.82,
+            height: dimensions.height * 0.35,
+            segments: dimensions.segments,
+            color: prop.color || '#8f5b35'
+          });
+          for (let leaf = 0; leaf < 6; leaf++) {
+            const angle = (leaf / 6) * Math.PI * 2;
+            const root = this.projectCircusPropGroundVertex(prop, 0, 0, state, w, h, dimensions.height * 0.3);
+            const tip = this.projectCircusPropGroundVertex(
+              prop,
+              Math.cos(angle) * dimensions.radius * 1.15,
+              Math.sin(angle) * dimensions.radius * 1.15,
+              state, w, h, dimensions.height
+            );
+            if (!root || !tip) continue;
+            ctx.strokeStyle = leaf % 2 ? '#54a64d' : '#2f7d45';
+            ctx.lineWidth = Math.max(2, 5 / Math.max(0.45, root.depth));
+            ctx.beginPath();
+            ctx.moveTo(root.x, root.y);
+            ctx.lineTo(tip.x, tip.y);
+            ctx.stroke();
+          }
+        } else {
+          this.drawCircusCylinderVolume(ctx, prop, state, w, h, {
+            radius: prop.kind === 'teapot' ? dimensions.radius : dimensions.radius * 0.82,
+            topRadius: prop.kind === 'teapot' ? dimensions.radius * 0.72 : dimensions.radius * 0.45,
+            height: prop.kind === 'teapot' ? dimensions.height : dimensions.height * 0.12,
+            segments: dimensions.segments,
+            color: prop.color || '#61666e'
+          });
+          if (prop.kind !== 'teapot') {
+            this.drawCircusCylinderVolume(ctx, prop, state, w, h, {
+              radius: 0.045,
+              height: dimensions.height * 0.8,
+              bottomHeight: dimensions.height * 0.1,
+              segments: 8,
+              color: '#6c665f'
+            });
+          }
+          if (prop.kind === 'umbrella') {
+            const canopy = [];
+            for (let index = 0; index < dimensions.segments; index++) {
+              const angle = (index / dimensions.segments) * Math.PI * 2;
+              canopy.push(this.projectCircusPropGroundVertex(
+                prop,
+                Math.cos(angle) * dimensions.radius,
+                Math.sin(angle) * dimensions.radius,
+                state, w, h, dimensions.height * 0.78
+              ));
+            }
+            const apex = this.projectCircusPropGroundVertex(prop, 0, 0, state, w, h, dimensions.height);
+            if (canopy.every(Boolean) && apex) {
+              canopy.forEach((point, index) => {
+                const next = (index + 1) % canopy.length;
+                this.drawCircusGroundPolygon(
+                  ctx,
+                  [point, canopy[next], apex],
+                  index % 2 ? accent : (prop.color || '#d63135'),
+                  '#211d28',
+                  1
+                );
+              });
+            }
+          } else if (prop.kind === 'floorlamp' || prop.kind === 'spotlight') {
+            const lamp = this.projectCircusPropGroundVertex(prop, 0, 0, state, w, h, dimensions.height);
+            if (lamp) {
+              const lampRadius = Math.max(3, (h * 0.13) / Math.max(0.35, lamp.depth));
+              ctx.fillStyle = prop.kind === 'spotlight' ? '#fff6bf' : accent;
+              ctx.strokeStyle = '#5e5140';
+              ctx.beginPath();
+              ctx.ellipse(lamp.x, lamp.y, lampRadius, lampRadius * 0.62, 0, 0, Math.PI * 2);
+              ctx.fill();
+              ctx.stroke();
+            }
+          }
+        }
+      } else if ([
+        'bathtub', 'toilet', 'sink', 'toyglove', 'fence', 'projector', 'coffin',
+        'foldingchair', 'watercooler', 'crt', 'console', 'gridnode'
+      ].includes(prop.kind)) {
+        const dimensions = this.getCircusWorldPropDimensions(prop, state);
+        const body = this.drawCircusBoxVolume(ctx, prop, state, w, h, {
+          width: dimensions.width,
+          depth: dimensions.depth,
+          topHeight: dimensions.height,
+          color: prop.color || '#d8d8df',
+          topColor: prop.accent || prop.color || '#eeeeef'
+        });
+        if (body && ['projector', 'crt', 'console', 'gridnode'].includes(prop.kind)) {
+          const face = this.projectCircusPropGroundVertex(
+            prop,
+            0,
+            -dimensions.depth / 2 - 0.012,
+            state, w, h, dimensions.height * 0.62
+          );
+          if (face) {
+            const screenW = Math.max(4, (h * dimensions.width * 0.2) / Math.max(0.35, face.depth));
+            const screenH = Math.max(3, screenW * 0.52);
+            ctx.fillStyle = prop.kind === 'projector' ? '#f7f4d7' : '#101b24';
+            ctx.strokeStyle = prop.accent || '#7df0ff';
+            ctx.lineWidth = 1;
+            ctx.fillRect(face.x - screenW / 2, face.y - screenH / 2, screenW, screenH);
+            ctx.strokeRect(face.x - screenW / 2, face.y - screenH / 2, screenW, screenH);
+            if (prop.kind === 'projector') {
+              ctx.fillStyle = '#7df0ff';
+              ctx.beginPath();
+              ctx.arc(face.x, face.y, Math.max(2, screenH * 0.34), 0, Math.PI * 2);
+              ctx.fill();
+            }
+          }
+        }
+        if (body && prop.kind === 'watercooler') {
+          this.drawCircusCylinderVolume(ctx, prop, state, w, h, {
+            radius: dimensions.width * 0.28,
+            topRadius: dimensions.width * 0.22,
+            height: dimensions.height * 0.36,
+            bottomHeight: dimensions.height,
+            segments: 10,
+            color: '#82d9ef',
+            topColor: '#d9fbff'
+          });
+        }
       } else if (prop.kind === 'pillar' || prop.kind === 'barrel') {
         const dimensions = this.getCircusWorldPropDimensions(prop, state);
         const bottom = [];
@@ -17051,7 +17677,9 @@ const OS = {
       }
     } else if (prop.kind === 'lorebillboard') {
       const spec = this.getCircusAvatarSheetSpec(prop.avatar);
-      const img = spec ? this.circusAvatarSheets?.[spec.sheet] : null;
+      const img = spec
+        ? (this.circusAvatarSheets?.[spec.sheet] || this.ensureCircusAvatarSheet(spec.sheet))
+        : null;
       const frame = spec && img?.complete && img.naturalWidth ? this.getCircusTransparentAvatarFrame(img, spec) : null;
       if (frame) {
         const height = 118 * s * (prop.sizeScale || 1);
@@ -17113,7 +17741,9 @@ const OS = {
       ctx.lineWidth = Math.max(1, 3 * s);
       ctx.stroke();
       const spec = this.getCircusAvatarSheetSpec(prop.avatar);
-      const img = spec ? this.circusAvatarSheets?.[spec.sheet] : null;
+      const img = spec
+        ? (this.circusAvatarSheets?.[spec.sheet] || this.ensureCircusAvatarSheet(spec.sheet))
+        : null;
       const frame = spec && img?.complete && img.naturalWidth ? this.getCircusTransparentAvatarFrame(img, spec) : null;
       if (frame) {
         ctx.save();
@@ -17825,6 +18455,30 @@ const OS = {
       ctx.closePath();
       ctx.fill();
       ctx.stroke();
+    } else if (prop.kind === 'heart') {
+      const pulse = 1 + Math.sin(performance.now() / 170) * 0.08;
+      ctx.save();
+      ctx.translate(0, -42 * s);
+      ctx.scale(pulse, pulse);
+      ctx.shadowColor = prop.color || '#e53935';
+      ctx.shadowBlur = Math.max(3, 14 * s);
+      ctx.fillStyle = prop.color || '#e53935';
+      ctx.strokeStyle = '#5a111b';
+      ctx.lineWidth = Math.max(1, 2 * s);
+      ctx.beginPath();
+      ctx.moveTo(0, 22 * s);
+      ctx.bezierCurveTo(-32 * s, 2 * s, -31 * s, -26 * s, -13 * s, -28 * s);
+      ctx.bezierCurveTo(-3 * s, -29 * s, 0, -18 * s, 0, -13 * s);
+      ctx.bezierCurveTo(0, -18 * s, 3 * s, -29 * s, 13 * s, -28 * s);
+      ctx.bezierCurveTo(31 * s, -26 * s, 32 * s, 2 * s, 0, 22 * s);
+      ctx.closePath();
+      ctx.fill();
+      ctx.stroke();
+      ctx.fillStyle = 'rgba(255,255,255,0.48)';
+      ctx.beginPath();
+      ctx.ellipse(-9 * s, -15 * s, 5 * s, 8 * s, -0.5, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.restore();
     } else if (prop.kind === 'balloon') {
       // Bunch of colorful balloons tied to a string
       const t = performance.now() / 500;
@@ -17867,6 +18521,18 @@ const OS = {
         ctx.stroke();
       });
       ctx.restore();
+    } else {
+      ctx.fillStyle = `${prop.color || '#7df0ff'}88`;
+      ctx.strokeStyle = prop.color || '#7df0ff';
+      ctx.lineWidth = Math.max(1, 2 * s);
+      ctx.fillRect(-28 * s, -56 * s, 56 * s, 56 * s);
+      ctx.strokeRect(-28 * s, -56 * s, 56 * s, 56 * s);
+      ctx.beginPath();
+      ctx.moveTo(-22 * s, -48 * s);
+      ctx.lineTo(22 * s, -8 * s);
+      ctx.moveTo(22 * s, -48 * s);
+      ctx.lineTo(-22 * s, -8 * s);
+      ctx.stroke();
     }
     if (p.distance <= 2.2) {
       ctx.globalAlpha = 0.86;
@@ -18154,7 +18820,7 @@ const OS = {
       24: [
         { name: 'Hunter Jax', type: 'jax', avatar: 'hunterjax', x: -1.6, z: -2.15, color: '#8a4fd6' },
         { name: 'Rhino Gangle', type: 'gangle', avatar: 'rhinogangle', x: 0.35, z: -2.65, color: '#e8e1d6' },
-        { name: 'Flamingo Zooble', type: 'zooble', avatar: 'zooble', x: 1.35, z: -2.7, color: '#ff4fb8' },
+        { name: 'Flamingo Zooble', type: 'zooble', avatar: 'flamingozooble', x: 1.35, z: -2.7, color: '#ff4fb8' },
         { name: 'Pomni', type: 'pomni', avatar: 'pomni', x: 2.45, z: -1.65, color: '#e53935' }
       ],
       25: [
@@ -18434,6 +19100,18 @@ const OS = {
       const deletionRoster = new Set(['caine', 'pomni', 'gummigoo']);
       staticSprites = staticSprites.filter(sprite => deletionRoster.has(sprite.avatar || sprite.type));
     }
+    if (campaign?.definition?.episode === 1 && campaign.progress.stage === 6 && Number(zoneId) === 2) {
+      staticSprites = staticSprites.map(sprite => {
+        if ((sprite.avatar || sprite.type) !== 'ragatha') return sprite;
+        return {
+          ...sprite,
+          name: 'Ragatha brouillee',
+          avatar: 'jumbledragatha',
+          aliases: [...new Set([...(sprite.aliases || []), 'ragatha'])],
+          routine: 'tremble'
+        };
+      });
+    }
     const scheduled = this.getCircusScheduledNpcPlacements(state)
       .filter(sprite => sprite.zone === zoneId && !staticSprites.some(existing => (existing.avatar || existing.type) === sprite.avatar));
     const dynamicSprites = this.getCircusDynamicEventSprites(zoneId)
@@ -18478,12 +19156,12 @@ const OS = {
   getCircusSpriteRoutine(sprite, zoneId) {
     const avatar = sprite.avatar || sprite.type || "";
     if (avatar.startsWith("gloink") || avatar === "barrelmonkey") return "swarm";
-    if (["bubble", "horrorghost", "marthamildenhall", "ghostly", "angel", "moon", "sun", "blueai", "cookiebutterfly", "mildenhallsouls", "truthtellerfish", "liarfish"].includes(avatar)) return "hover";
-    if (['abstractedkaufmo', 'abstractedjax', 'abstractedribbit', 'abstractedqueeniedark', 'abstractedqueenie', 'cellarabstraction', 'aquaticabstraction'].includes(avatar) || avatar.startsWith("shadow") || ["ragathamothershadow", "laughingshadows"].includes(avatar)) return "tremble";
+    if (["bubble", "inertbubble", "horrorghost", "marthamildenhall", "ghostly", "angel", "angelhead", "moon", "sun", "blueai", "cookiebutterfly", "healingbutterfly", "mildenhallsouls", "truthtellerfish", "liarfish"].includes(avatar)) return "hover";
+    if (['abstractedkaufmo', 'abstractedjax', 'abstractedribbit', 'abstractedqueeniedark', 'abstractedqueenie', 'cellarabstraction', 'aquaticabstraction', 'possessedpomni', 'monstrouscaine'].includes(avatar) || avatar.startsWith("shadow") || ["ragathamothershadow", "laughingshadows"].includes(avatar)) return "tremble";
     if (["gummigoo", "max", "chad", "workgangle", "spudsypomni", "spudsyjax", "spudsyragatha", "spudsyzooble", "themachine", "additionalvoices", "ming", "spudsycustomer", "gummyelephant", "candyguardcyan", "candyguardblue", "candyguardpurple", "redmannequin", "orangemannequin", "yellowmannequin", "magentamannequin"].includes(avatar)) return "patrol";
     if (["albertspudsy", "stupidburgermannequin", "cerealmannequin"].includes(avatar)) return "idle";
     if (["giantcentipede", "drfootball"].includes(avatar)) return "tremble";
-    if (["jax", "hunterjax", "baseballjax", "eviljax", "gummyworm", "jeffery", "fourthcrocodile"].includes(avatar)) return "pace";
+    if (["jax", "hunterjax", "baseballjax", "eviljax", "flamingozooble", "gummyworm", "jeffery", "fourthcrocodile"].includes(avatar)) return "pace";
     if ([12, 14].includes(zoneId)) return "pace";
     return "idle";
   },
@@ -18773,14 +19451,23 @@ const OS = {
 
   drawCircusWackyAvatar(ctx, avatar, x, baseY, size, label, color, routine = 'idle', sprite = {}) {
     const animationSpec = this.getCircusAvatarAnimationSpec(avatar, sprite);
-    const animationImage = animationSpec ? this.circusAvatarSheets?.[animationSpec.sheet] : null;
-    const animatedFrame = animationSpec && animationImage?.complete && animationImage.naturalWidth
+    const animationImage = animationSpec?.customSheet
+      ? (this.circusAvatarSheets?.[animationSpec.sheet] || this.ensureCircusAvatarSheet(animationSpec.sheet))
+      : null;
+    const animatedFrame = animationSpec?.customSheet && animationImage?.complete && animationImage.naturalWidth
       ? this.getCircusAnimationFrame(animationImage, animationSpec)
       : null;
     const spec = this.getCircusAvatarSheetSpec(avatar);
-    const img = spec ? this.circusAvatarSheets?.[spec.sheet] : null;
+    const img = spec
+      ? (this.circusAvatarSheets?.[spec.sheet] || this.ensureCircusAvatarSheet(spec.sheet))
+      : null;
     if (!animatedFrame && (!spec || !img || !img.complete || !img.naturalWidth || !img.naturalHeight)) return false;
-    const frame = animatedFrame || this.getCircusTransparentAvatarFrame(img, spec);
+    const staticFrame = animatedFrame ? null : this.getCircusTransparentAvatarFrame(img, spec);
+    const frame = animatedFrame || (
+      animationSpec?.procedural
+        ? this.getCircusProceduralAnimationFrame(staticFrame, avatar, animationSpec)
+        : staticFrame
+    );
     if (!frame) return false;
     const drawH = size * (avatar === 'gloinkqueenscale' ? 1.35 : avatar === 'pomni' ? 1.08 : 1);
     const drawW = drawH * (frame.width / frame.height);
@@ -18859,6 +19546,162 @@ const OS = {
     return true;
   },
 
+  getCircusProceduralAnimationFrame(baseFrame, avatar, animationSpec) {
+    if (!baseFrame?.canvas || !animationSpec) return baseFrame;
+    this.circusAvatarFrameCache = this.circusAvatarFrameCache || {};
+    const cacheKey = [
+      avatar,
+      'procedural',
+      animationSpec.profile,
+      animationSpec.animation,
+      animationSpec.frameIndex,
+      `${baseFrame.width}x${baseFrame.height}`
+    ].join(':');
+    if (this.circusAvatarFrameCache[cacheKey]) return this.circusAvatarFrameCache[cacheKey];
+
+    const source = baseFrame.canvas;
+    const sourceW = baseFrame.width;
+    const sourceH = baseFrame.height;
+    const padX = Math.max(4, Math.ceil(sourceW * 0.09));
+    const padY = Math.max(4, Math.ceil(sourceH * 0.08));
+    const canvas = document.createElement('canvas');
+    canvas.width = sourceW + padX * 2;
+    canvas.height = sourceH + padY * 2;
+    const frameCtx = canvas.getContext('2d');
+    if (!frameCtx) return baseFrame;
+    frameCtx.imageSmoothingEnabled = false;
+
+    const phase = animationSpec.frameIndex % 2 === 0 ? -1 : 1;
+    const animation = animationSpec.animation;
+    const profile = animationSpec.profile;
+    const centerX = padX + sourceW / 2;
+    const centerY = padY + sourceH / 2;
+    const drawWhole = ({
+      offsetX = 0,
+      offsetY = 0,
+      scaleX = 1,
+      scaleY = 1,
+      rotate = 0,
+      alpha = 1
+    } = {}) => {
+      frameCtx.save();
+      frameCtx.globalAlpha = alpha;
+      frameCtx.translate(centerX + offsetX, centerY + offsetY);
+      frameCtx.rotate(rotate);
+      frameCtx.scale(scaleX, scaleY);
+      frameCtx.drawImage(source, -sourceW / 2, -sourceH / 2);
+      frameCtx.restore();
+    };
+
+    if (animation === 'hurt' || profile === 'glitch') {
+      const glitchOffset = Math.max(1, Math.round(sourceW * 0.018)) * phase;
+      frameCtx.save();
+      frameCtx.globalAlpha = 0.32;
+      frameCtx.globalCompositeOperation = 'screen';
+      frameCtx.filter = 'sepia(1) saturate(8) hue-rotate(300deg)';
+      drawWhole({ offsetX: glitchOffset * 2, rotate: phase * 0.012 });
+      frameCtx.filter = 'sepia(1) saturate(8) hue-rotate(120deg)';
+      drawWhole({ offsetX: -glitchOffset * 2, rotate: -phase * 0.01 });
+      frameCtx.restore();
+      const bandCount = 7;
+      for (let band = 0; band < bandCount; band++) {
+        const sourceY = Math.floor((band / bandCount) * sourceH);
+        const sourceY2 = Math.floor(((band + 1) / bandCount) * sourceH);
+        const bandH = Math.max(1, sourceY2 - sourceY);
+        const offset = (band % 3 - 1) * glitchOffset;
+        frameCtx.drawImage(
+          source,
+          0, sourceY, sourceW, bandH,
+          padX + offset, padY + sourceY, sourceW, bandH
+        );
+      }
+    } else if (profile === 'elastic') {
+      const bandCount = 8;
+      const amplitude = animation === 'talk' ? 0.026 : animation === 'walk' ? 0.042 : 0.018;
+      for (let band = 0; band < bandCount; band++) {
+        const sourceY = Math.floor((band / bandCount) * sourceH);
+        const sourceY2 = Math.floor(((band + 1) / bandCount) * sourceH);
+        const bandH = Math.max(1, sourceY2 - sourceY);
+        const wave = Math.sin(band * 0.9 + phase * 1.7) * sourceW * amplitude;
+        frameCtx.drawImage(
+          source,
+          0, sourceY, sourceW, bandH,
+          padX + wave, padY + sourceY, sourceW, bandH
+        );
+      }
+    } else if (profile === 'floating') {
+      const lift = phase * Math.max(1, sourceH * (animation === 'talk' ? 0.018 : 0.028));
+      const pulse = animation === 'talk' ? 1 + phase * 0.025 : 1 + phase * 0.012;
+      drawWhole({ offsetY: lift, scaleX: pulse, scaleY: 2 - pulse, rotate: phase * 0.008 });
+    } else if (profile === 'geometric') {
+      const rotate = phase * (animation === 'walk' ? 0.045 : 0.018);
+      const squash = animation === 'talk' ? phase * 0.025 : 0;
+      drawWhole({
+        offsetY: phase * sourceH * 0.012,
+        scaleX: 1 + squash,
+        scaleY: 1 - squash,
+        rotate
+      });
+    } else if (profile === 'giant') {
+      const breathe = phase * (animation === 'talk' ? 0.02 : 0.009);
+      drawWhole({
+        offsetY: -Math.abs(phase) * sourceH * 0.006,
+        scaleX: 1 + breathe,
+        scaleY: 1 - breathe * 0.45
+      });
+    } else {
+      const splitY = Math.floor(sourceH * 0.7);
+      const topOffset = animation === 'talk' ? phase * sourceW * 0.012 : 0;
+      const topScaleY = animation === 'talk' ? 1 + phase * 0.018 : 1;
+      frameCtx.save();
+      frameCtx.translate(padX + sourceW / 2 + topOffset, padY + splitY);
+      frameCtx.scale(1, topScaleY);
+      frameCtx.drawImage(
+        source,
+        0, 0, sourceW, splitY,
+        -sourceW / 2, -splitY, sourceW, splitY
+      );
+      frameCtx.restore();
+
+      const lowerH = sourceH - splitY;
+      const step = animation === 'walk' ? Math.max(1, Math.round(sourceH * 0.025)) * phase : 0;
+      const halfW = Math.floor(sourceW / 2);
+      frameCtx.drawImage(
+        source,
+        0, splitY, halfW, lowerH,
+        padX - step, padY + splitY + Math.max(0, step), halfW, lowerH
+      );
+      frameCtx.drawImage(
+        source,
+        halfW, splitY, sourceW - halfW, lowerH,
+        padX + halfW + step, padY + splitY + Math.max(0, -step), sourceW - halfW, lowerH
+      );
+    }
+
+    if (animation === 'interact') {
+      frameCtx.save();
+      frameCtx.globalCompositeOperation = 'destination-over';
+      frameCtx.strokeStyle = 'rgba(255,241,168,0.68)';
+      frameCtx.lineWidth = Math.max(2, Math.round(sourceW * 0.018));
+      frameCtx.beginPath();
+      frameCtx.ellipse(
+        centerX,
+        padY + sourceH * 0.52,
+        sourceW * 0.47,
+        sourceH * 0.49,
+        0,
+        0,
+        Math.PI * 2
+      );
+      frameCtx.stroke();
+      frameCtx.restore();
+    }
+
+    const frame = { canvas, width: canvas.width, height: canvas.height };
+    this.circusAvatarFrameCache[cacheKey] = frame;
+    return frame;
+  },
+
   getCircusAnimationFrame(img, spec) {
     this.circusAvatarFrameCache = this.circusAvatarFrameCache || {};
     const frameW = Math.floor(img.naturalWidth / spec.cols);
@@ -18907,7 +19750,7 @@ const OS = {
     this.circusAvatarFrameCache = this.circusAvatarFrameCache || {};
     const frameW = Math.floor(img.naturalWidth / spec.cols);
     const frameH = Math.floor(img.naturalHeight / spec.rows);
-    const cacheKey = `${spec.sheet}:${spec.col}:${spec.row}:${img.naturalWidth}x${img.naturalHeight}`;
+    const cacheKey = `${spec.sheet}:${spec.col}:${spec.row}:${img.naturalWidth}x${img.naturalHeight}:matte-v2`;
     if (this.circusAvatarFrameCache[cacheKey]) return this.circusAvatarFrameCache[cacheKey];
 
     const canvas = document.createElement('canvas');
@@ -18922,18 +19765,34 @@ const OS = {
     const { data } = imageData;
     const seen = new Uint8Array(frameW * frameH);
     const stack = [];
-    const isEdgeBlack = pixelIndex => (
-      data[pixelIndex + 3] > 0 &&
-      data[pixelIndex] <= 18 &&
-      data[pixelIndex + 1] <= 18 &&
-      data[pixelIndex + 2] <= 18
-    );
+    const cornerCoordinates = [[0, 0], [frameW - 1, 0], [0, frameH - 1], [frameW - 1, frameH - 1]];
+    const cornerPalette = cornerCoordinates
+      .map(([px, py]) => {
+        const index = (py * frameW + px) * 4;
+        return [data[index], data[index + 1], data[index + 2], data[index + 3]];
+      })
+      .filter(([, , , alpha]) => alpha >= 12);
+    const isBackgroundPixel = pixelIndex => {
+      const alpha = data[pixelIndex + 3];
+      if (alpha < 12) return true;
+      const red = data[pixelIndex];
+      const green = data[pixelIndex + 1];
+      const blue = data[pixelIndex + 2];
+      if (red <= 24 && green <= 24 && blue <= 24) return true;
+      const max = Math.max(red, green, blue);
+      const min = Math.min(red, green, blue);
+      if (min >= 202 && max - min <= 38) return true;
+      return cornerPalette.some(([cornerR, cornerG, cornerB]) => {
+        const distance = Math.hypot(red - cornerR, green - cornerG, blue - cornerB);
+        return distance <= 58;
+      });
+    };
     const push = (px, py) => {
       if (px < 0 || py < 0 || px >= frameW || py >= frameH) return;
       const index = py * frameW + px;
       if (seen[index]) return;
       const dataIndex = index * 4;
-      if (!isEdgeBlack(dataIndex)) return;
+      if (!isBackgroundPixel(dataIndex)) return;
       seen[index] = 1;
       stack.push([px, py]);
     };
@@ -18958,7 +19817,34 @@ const OS = {
     }
 
     frameCtx.putImageData(imageData, 0, 0);
-    const frame = { canvas, width: frameW, height: frameH };
+    let minX = frameW;
+    let minY = frameH;
+    let maxX = -1;
+    let maxY = -1;
+    for (let py = 0; py < frameH; py++) {
+      for (let px = 0; px < frameW; px++) {
+        const alpha = data[(py * frameW + px) * 4 + 3];
+        if (alpha < 12) continue;
+        minX = Math.min(minX, px);
+        minY = Math.min(minY, py);
+        maxX = Math.max(maxX, px);
+        maxY = Math.max(maxY, py);
+      }
+    }
+    if (maxX < minX || maxY < minY) return null;
+    const safePad = Math.max(2, Math.round(Math.min(frameW, frameH) * 0.018));
+    minX = Math.max(0, minX - safePad);
+    minY = Math.max(0, minY - safePad);
+    maxX = Math.min(frameW - 1, maxX + safePad);
+    maxY = Math.min(frameH - 1, maxY + safePad);
+    const cropped = document.createElement('canvas');
+    cropped.width = maxX - minX + 1;
+    cropped.height = maxY - minY + 1;
+    const croppedCtx = cropped.getContext('2d');
+    if (!croppedCtx) return null;
+    croppedCtx.imageSmoothingEnabled = false;
+    croppedCtx.drawImage(canvas, minX, minY, cropped.width, cropped.height, 0, 0, cropped.width, cropped.height);
+    const frame = { canvas: cropped, width: cropped.width, height: cropped.height };
     this.circusAvatarFrameCache[cacheKey] = frame;
     return frame;
   },
@@ -19960,6 +20846,9 @@ const OS = {
       hunterjax: 'jax', eviljax: 'jax', jaxgirl: 'jax', peeledjax: 'jax',
       jaxmindviolent: 'jax', jaxmindcomic: 'jax', jaxmindtrapped: 'jax',
       evilpomni: 'pomni', horrorpomnivoid: 'pomni', horrorpomnispiral: 'pomni', horrorpomniskull: 'pomni',
+      possessedpomni: 'pomni', mouthlesspomni: 'pomni',
+      mouthlessjax: 'jax', flamingozooble: 'zooble', mouthlesszooble: 'zooble',
+      groundedcaine: 'caine', monstrouscaine: 'caine', inertbubble: 'bubble',
       evilragatha: 'ragatha', evilkinger: 'kinger', evilzooble: 'zooble'
     };
     key = aliases[key] || key;
@@ -20529,7 +21418,9 @@ const OS = {
     const adventure = state?.customAdventure;
     if (!adventure?.active || adventure.complete || !state.hudVisible) return;
     const objective = this.getCainOSCustomObjectiveDefinition(adventure.objective);
-    const y = w < 480 ? 148 : 48;
+    const y = w < 480
+      ? this.getCircusCompactHudY(state, 'custom')
+      : this.getCircusDesktopHudY(state, w, 'custom');
     ctx.save();
     ctx.fillStyle = 'rgba(5,2,13,0.86)';
     ctx.strokeStyle = '#ff4fb8';
@@ -21759,6 +22650,66 @@ const OS = {
         "Anne et Sam Best sont les deux filles de Grant et Destiny.",
         "La presentation finale les montre ensemble, sans associer explicitement chaque prenom a un visage.",
         "CainOS les conserve donc dans une fiche duo et ne leur invente aucune biographie individuelle."
+      ]},
+      angelhead: { name: "Mounted Angel Head", age: "Artefact canon - Ep. 3", stress: "NON APPLICABLE", avatar: "angelhead", signal: "AH", color: "#e5d7d7", facts: [
+        "Tete montee de la creature angelique conservee dans le manoir Mildenhall.",
+        "Cette fiche represente un element fixe du decor, pas une creature active.",
+        "Son apparition est limitee aux scenes du manoir."
+      ]},
+      possessedpomni: { name: "Pomni possessed", age: "Etat canon - Ep. 3", stress: "CRITIQUE", avatar: "possessedpomni", signal: "P!", color: "#ff8a24", facts: [
+        "Etat temporaire de Pomni pendant la sequence surnaturelle du manoir.",
+        "Il ne s agit ni d une abstraction ni d un nouveau resident.",
+        "CainOS rattache toujours ce signal au profil de Pomni."
+      ]},
+      monstrouscaine: { name: "Caine multi-arm", age: "Etat canon - Ep. 8", stress: "INSTABLE", avatar: "monstrouscaine", signal: "C!", color: "#ffd84a", facts: [
+        "Forme geante et multi-bras adoptee par Caine pendant la sequence de tourment.",
+        "La transformation reste une manifestation temporaire de Caine.",
+        "Elle ne constitue pas une intelligence artificielle separee."
+      ]},
+      flamingozooble: { name: "Flamingo Zooble", age: "Variante canon - Ep. 5", stress: "75%", avatar: "flamingozooble", signal: "ZF", color: "#ff4fb8", facts: [
+        "Assemblage de Zooble adopte pendant Untitled.",
+        "Sa silhouette de flamant conserve le principe modulaire de Zooble.",
+        "Cette apparence est rattachee a Zooble et a son contexte episodique."
+      ]},
+      mouthlesspomni: { name: "Pomni sans bouche", age: "Etat canon - Ep. 8", stress: "CRITIQUE", avatar: "mouthlesspomni", signal: "P0", color: "#e53935", facts: [
+        "Etat visuel temporaire de Pomni privee de bouche pendant hjsakldfhl.",
+        "CainOS le classe comme alteration corporelle de simulation.",
+        "Le profil reste celui de Pomni."
+      ]},
+      mouthlessjax: { name: "Jax sans bouche", age: "Etat canon - Ep. 8", stress: "ELEVE", avatar: "mouthlessjax", signal: "J0", color: "#8a4fd6", facts: [
+        "Etat visuel temporaire de Jax prive de bouche pendant hjsakldfhl.",
+        "Cette alteration ne cree pas un second Jax.",
+        "Le profil reste rattache au resident Jax."
+      ]},
+      mouthlesszooble: { name: "Zooble sans bouche", age: "Etat canon - Ep. 8", stress: "ELEVE", avatar: "mouthlesszooble", signal: "Z0", color: "#ff4fb8", facts: [
+        "Etat visuel temporaire de Zooble prive de bouche pendant hjsakldfhl.",
+        "Les pieces modulaires restent celles de Zooble.",
+        "CainOS conserve cette forme comme variante episodique."
+      ]},
+      inertbubble: { name: "Bubble inerte", age: "Etat canon - Ep. 9", stress: "HORS LIGNE", avatar: "inertbubble", signal: "B0", color: "#c8b9de", facts: [
+        "Etat inerte de Bubble visible pendant Remember.",
+        "Cette fiche ne suppose aucune identite humaine ou conscience distincte.",
+        "Le signal reste rattache a Bubble."
+      ]},
+      groundedcaine: { name: "Caine prive de pouvoir", age: "Etat canon - Ep. 9", stress: "CRITIQUE", avatar: "groundedcaine", signal: "C0", color: "#ffd84a", facts: [
+        "Etat affaibli et au sol de Caine pendant Remember.",
+        "CainOS le classe comme perte temporaire de controle, pas comme nouvel administrateur.",
+        "Le profil reste celui de Caine."
+      ]},
+      healingbutterfly: { name: "Healing Butterfly", age: "PNJ canon - Ep. 6", stress: "NON APPLICABLE", avatar: "healingbutterfly", signal: "HB", color: "#ff9b37", facts: [
+        "Papillon utilise comme element de soin dans They All Get Guns.",
+        "Il s agit d une creature de simulation et non d un resident humain.",
+        "Son apparence est limitee au contexte de l aventure."
+      ]},
+      plasticganglemask: { name: "Plastic Gangle Mask", age: "Artefact canon - Ep. 4", stress: "NON APPLICABLE", avatar: "plasticganglemask", signal: "GM", color: "#f7f7f7", facts: [
+        "Masque plastique associe a Gangle dans Fast Food Masquerade.",
+        "CainOS le classe comme objet de scene distinct du visage actif de Gangle.",
+        "Le masque ne constitue pas un personnage."
+      ]},
+      charredshrimp: { name: "Charred Shrimp Trace", age: "VFX canon - Ep. 7", stress: "NON APPLICABLE", avatar: "charredshrimp", signal: "XS", color: "#3b2623", facts: [
+        "Trace carbonisee du Shrimp NPC dans Beach Episode.",
+        "Cette forme remplace la crevette vivante au moment correspondant.",
+        "CainOS la classe comme consequence visuelle, pas comme PNJ actif."
       ]}
     };
 
@@ -21791,15 +22742,16 @@ const OS = {
       ],
       3: [
         "pomni", "jax", "ragatha", "kinger", "gangle", "zooble", "caine", "bubble",
-        "baronmildenhall", "marthamildenhall", "ghostly", "angel", "mildenhallsouls", "abstractedqueeniedark"
+        "baronmildenhall", "marthamildenhall", "ghostly", "angel", "angelhead", "possessedpomni",
+        "mildenhallsouls", "abstractedqueeniedark"
       ],
       4: [
         "gangle", "workgangle", "ganglekawaii", "ganglecomedy", "gangletragedy", "pomni", "jax", "ragatha", "kinger", "zooble", "caine", "bubble",
         "spudsypomni", "spudsyjax", "spudsyragatha", "spudsyzooble",
-        "stupidburgermannequin", "cerealmannequin", "albertspudsy"
+        "stupidburgermannequin", "cerealmannequin", "albertspudsy", "plasticganglemask"
       ],
       5: [
-        "caine", "bubble", "pomni", "jax", "ragatha", "kinger", "gangle", "zooble",
+        "caine", "bubble", "pomni", "jax", "ragatha", "kinger", "gangle", "zooble", "flamingozooble",
         "hunterjax", "rhinogangle", "japanesejax", "japaneseragatha", "japanesepomni", "japanesekinger", "japanesegangle", "japanesezooble",
         "baseballjax", "baseballzooble", "baseballgangle", "baseballragatha", "baseballpomni", "baseballkinger", "maidjax",
         "rivalbaseballzooble", "rivalbaseballpomni", "rivalbaseballpinkgiant", "rivalbaseballragatha", "rivalbaseballjax", "rivalbaseballkinger",
@@ -21808,21 +22760,22 @@ const OS = {
       ],
       6: [
         "jax", "pomni", "ragatha", "kinger", "gangle", "zooble", "caine", "bubble",
-        "ming", "disappearingguy", "committeemember"
+        "ming", "disappearingguy", "committeemember", "healingbutterfly"
       ],
       7: [
         "gangle", "beachgangle", "pomni", "jax", "ragatha", "kinger", "zooble", "caine", "bubble",
         "abel", "abelmannequin", "abelfullbody", "truthtellerfish", "liarfish", "shrimpnpc", "chineseroomnpc",
-        "gummyelephant"
+        "gummyelephant", "charredshrimp"
       ],
       8: [
         "kinger", "queenie", "caine", "bubble", "pomni", "ragatha", "jax", "gangle", "zooble", "scratch",
         "abstractedqueeniedark", "abstractedqueenie", "peeledjax",
+        "mouthlesspomni", "mouthlessjax", "mouthlesszooble", "monstrouscaine",
         "barrelmonkey", "blueai", "fourthcrocodile", "ragathamothershadow", "paintedmasks", "zoobleparts", "laughingshadows",
         "stabbedragdolls", "coiledcentipedes"
       ],
       9: [
-        "pomni", "caine", "bubble", "jax", "ragatha", "kinger", "gangle", "zooble", "moon", "ribbit", "queenie", "scratch",
+        "pomni", "caine", "groundedcaine", "bubble", "inertbubble", "jax", "ragatha", "kinger", "gangle", "zooble", "moon", "ribbit", "queenie", "scratch",
         "abstractedjax", "abstractedribbit", "abstractedqueeniedark", "abstractedqueenie", "jaxmindviolent", "jaxmindcomic", "jaxmindtrapped",
         "whatifragatha", "whatifgangle", "jumbledpomni",
         "wormo", "bizco", "rattie", "spike", "pinkcyclops", "yellowclown", "oyster", "bulbcreature", "maidjax", "blueai",
@@ -21850,6 +22803,18 @@ const OS = {
       abstractedkaufmo: { episode: 1, subepisode: 5 },
       jumbledragatha: { episode: 1, subepisode: 5 },
       cellarabstraction: { episode: 1, subepisode: 5 },
+      angelhead: { episode: 3, subepisode: 3 },
+      possessedpomni: { episode: 3, subepisode: 5 },
+      plasticganglemask: { episode: 4, subepisode: 6 },
+      flamingozooble: { episode: 5, subepisode: 1 },
+      healingbutterfly: { episode: 6, subepisode: 2 },
+      charredshrimp: { episode: 7, subepisode: 1 },
+      mouthlesspomni: { episode: 8, subepisode: 5 },
+      mouthlessjax: { episode: 8, subepisode: 5 },
+      mouthlesszooble: { episode: 8, subepisode: 5 },
+      monstrouscaine: { episode: 8, subepisode: 7 },
+      inertbubble: { episode: 9, subepisode: 7 },
+      groundedcaine: { episode: 9, subepisode: 7 },
       additionalvoices: { episode: 2, subepisode: 1 },
       peekingmannequin: { episode: 2, subepisode: 1 },
       abstractedqueeniedark: { episode: 3, subepisode: 7 },
@@ -22012,13 +22977,14 @@ const OS = {
     if (humanArchiveIds.has(id)) return "FAMILLE HUMAINE / ARCHIVE";
     if (realWorldHumanIds.has(id)) return "HUMAIN DU MONDE REEL";
     if (['jaxmindviolent', 'jaxmindcomic', 'jaxmindtrapped', 'whatifragatha', 'whatifgangle'].includes(id)) return "PROJECTION MENTALE";
-    if (['jumbledragatha', 'jumbledpomni'].includes(id)) return "VFX / ETAT TEMPORAIRE";
+    if (['jumbledragatha', 'jumbledpomni', 'charredshrimp'].includes(id)) return "VFX / ETAT TEMPORAIRE";
     if (['cellarabstraction', 'aquaticabstraction'].includes(id)) return "PHENOMENE / ABSTRACTION";
-    if (['stabbedragdolls', 'coiledcentipedes', 'unusedbrainscans'].includes(id)) return "ARTEFACT / DECOR";
+    if (['stabbedragdolls', 'coiledcentipedes', 'unusedbrainscans', 'angelhead', 'plasticganglemask'].includes(id)) return "ARTEFACT / DECOR";
     if (['bonepastor', 'themachine'].includes(id)) return "PRODUCTION / HORS TIMELINE";
     if (id === 'spudsycustomer') return "RECONSTRUCTION CAINOS";
+    if (this.isCanonicalEpisodeVariant(id)) return "VARIANTE";
     if (variantSignals.some(token => id.includes(token))) return "VARIANTE";
-    if (id.startsWith("gloink") || ['gummigoo', 'max', 'chad', 'loolilalu', 'fudge', 'orbsman', 'ming', 'mannequin', 'peekingmannequin', 'additionalvoices', 'sun', 'moon', 'abel', 'abelmannequin', 'abelfullbody', 'baronmildenhall', 'marthamildenhall', 'ghostly', 'angel', 'disappearingguy', 'committeemember', 'truthtellerfish', 'liarfish', 'shrimpnpc', 'chineseroomnpc', 'blueai', 'cookiebutterfly', 'gummyelephant', 'giantcentipede', 'drfootball', 'stupidburgermannequin', 'cerealmannequin', 'candyguardcyan', 'candyguardblue', 'candyguardpurple', 'redmannequin', 'orangemannequin', 'yellowmannequin', 'magentamannequin', 'gummyworm', 'barrelmonkey', 'jeffery', 'mildenhallsouls', 'albertspudsy', 'fourthcrocodile', 'ragathamothershadow', 'paintedmasks', 'zoobleparts', 'laughingshadows', 'floatingworm', 'creditsfish'].includes(id)) return "PNJ / DECOR";
+    if (id.startsWith("gloink") || ['gummigoo', 'max', 'chad', 'loolilalu', 'fudge', 'orbsman', 'ming', 'mannequin', 'peekingmannequin', 'additionalvoices', 'sun', 'moon', 'abel', 'abelmannequin', 'abelfullbody', 'baronmildenhall', 'marthamildenhall', 'ghostly', 'angel', 'healingbutterfly', 'disappearingguy', 'committeemember', 'truthtellerfish', 'liarfish', 'shrimpnpc', 'chineseroomnpc', 'blueai', 'cookiebutterfly', 'gummyelephant', 'giantcentipede', 'drfootball', 'stupidburgermannequin', 'cerealmannequin', 'candyguardcyan', 'candyguardblue', 'candyguardpurple', 'redmannequin', 'orangemannequin', 'yellowmannequin', 'magentamannequin', 'gummyworm', 'barrelmonkey', 'jeffery', 'mildenhallsouls', 'albertspudsy', 'fourthcrocodile', 'ragathamothershadow', 'paintedmasks', 'zoobleparts', 'laughingshadows', 'floatingworm', 'creditsfish'].includes(id)) return "PNJ / DECOR";
     return "ACTIF";
   },
 
@@ -22054,6 +23020,8 @@ const OS = {
     return new Set([
       'workgangle', 'beachgangle', 'hunterjax', 'rhinogangle', 'maidjax',
       'peeledjax', 'spudsypomni', 'spudsyjax', 'spudsyragatha', 'spudsyzooble',
+      'possessedpomni', 'flamingozooble', 'mouthlesspomni', 'mouthlessjax',
+      'mouthlesszooble', 'monstrouscaine', 'inertbubble', 'groundedcaine',
       'japanesejax', 'japaneseragatha', 'japanesepomni', 'japanesekinger', 'japanesegangle', 'japanesezooble',
       'baseballjax', 'baseballzooble', 'baseballgangle', 'baseballragatha', 'baseballpomni', 'baseballkinger',
       'rivalbaseballzooble', 'rivalbaseballpomni', 'rivalbaseballpinkgiant', 'rivalbaseballragatha', 'rivalbaseballjax', 'rivalbaseballkinger'
@@ -22115,7 +23083,10 @@ const OS = {
       'rileyverselis', 'grantbest', 'destinybest', 'leeroymateo', 'jaxfather', 'jaxmother',
       'abigailfriendone', 'abigailfriendtwo', 'bestchildren',
       'jaxmindviolent', 'jaxmindcomic', 'jaxmindtrapped', 'whatifragatha', 'whatifgangle',
-      'jumbledragatha', 'jumbledpomni'
+      'jumbledragatha', 'jumbledpomni', 'angelhead', 'possessedpomni',
+      'monstrouscaine', 'flamingozooble', 'mouthlesspomni', 'mouthlessjax',
+      'mouthlesszooble', 'inertbubble', 'groundedcaine', 'healingbutterfly',
+      'plasticganglemask', 'charredshrimp'
     ]);
     if (canonProfiles.has(id) || id.startsWith('gloink')) return 'canon-visual';
     return 'reconstruction';
@@ -22131,7 +23102,17 @@ const OS = {
       return ['Variante fan reservee aux aventures originales. Elle ne modifie pas la chronologie canonique.'];
     }
     if (this.isCanonicalEpisodeVariant(id)) {
-      return [`Apparence rattachee a une scene de l episode qui la debloque. Les mesures et biographies ajoutees par CainOS ne sont pas canoniques.`];
+      const episodeVariantFacts = {
+        possessedpomni: ['Etat temporaire de Pomni pendant la sequence surnaturelle du manoir. Il ne s agit ni d une abstraction ni d un nouveau personnage.'],
+        flamingozooble: ['Assemblage de Zooble en forme de flamant pendant Untitled. Cette silhouette reste une configuration du meme resident modulaire.'],
+        mouthlesspomni: ['Alteration corporelle temporaire de Pomni dans hjsakldfhl: sa bouche est absente pendant cette scene.'],
+        mouthlessjax: ['Alteration corporelle temporaire de Jax dans hjsakldfhl: sa bouche est absente pendant cette scene.'],
+        mouthlesszooble: ['Alteration corporelle temporaire de Zooble dans hjsakldfhl: sa bouche est absente pendant cette scene.'],
+        monstrouscaine: ['Manifestation geante et multi-bras de Caine pendant la sequence de tourment de hjsakldfhl.'],
+        inertbubble: ['Etat inerte de Bubble visible pendant Remember. CainOS ne le traite pas comme une nouvelle entite.'],
+        groundedcaine: ['Etat affaibli de Caine pendant Remember. Cette apparence reste rattachee au meme administrateur.']
+      };
+      return episodeVariantFacts[id] || [`Apparence rattachee a une scene de l episode qui la debloque. Les mesures et biographies ajoutees par CainOS ne sont pas canoniques.`];
     }
 
     const confirmed = {
@@ -22250,17 +23231,18 @@ const OS = {
 
   getWackyVariantGroups() {
     return {
-      pomni: ['pomni', 'jumbledpomni', 'spudsypomni', 'maidpomni', 'japanesepomni', 'baseballpomni', 'rivalbaseballpomni', 'shadowpomni', 'evilpomni', 'horrorpomnivoid', 'horrorpomnispiral', 'horrorpomniskull'],
-      jax: ['jax', 'peeledjax', 'spudsyjax', 'maidjax', 'jaxgirl', 'japanesejax', 'baseballjax', 'rivalbaseballjax', 'hunterjax', 'jaxmindviolent', 'jaxmindcomic', 'jaxmindtrapped', 'abstractedjax', 'darkduojax', 'shadowjax', 'eviljax'],
+      pomni: ['pomni', 'jumbledpomni', 'possessedpomni', 'mouthlesspomni', 'spudsypomni', 'maidpomni', 'japanesepomni', 'baseballpomni', 'rivalbaseballpomni', 'shadowpomni', 'evilpomni', 'horrorpomnivoid', 'horrorpomnispiral', 'horrorpomniskull'],
+      jax: ['jax', 'peeledjax', 'mouthlessjax', 'spudsyjax', 'maidjax', 'jaxgirl', 'japanesejax', 'baseballjax', 'rivalbaseballjax', 'hunterjax', 'jaxmindviolent', 'jaxmindcomic', 'jaxmindtrapped', 'abstractedjax', 'darkduojax', 'shadowjax', 'eviljax'],
       ragatha: ['ragatha', 'jumbledragatha', 'whatifragatha', 'spudsyragatha', 'maidragatha', 'japaneseragatha', 'baseballragatha', 'rivalbaseballragatha', 'shadowragatha', 'evilragatha'],
       kinger: ['kinger', 'japanesekinger', 'baseballkinger', 'rivalbaseballkinger', 'shadowkinger', 'evilkinger'],
       gangle: ['gangle', 'whatifgangle', 'ganglekawaii', 'ganglecomedy', 'gangletragedy', 'maidgangle', 'beachgangle', 'japanesegangle', 'rhinogangle', 'workgangle', 'baseballgangle', 'darkduogangle', 'shadowgangle'],
-      zooble: ['zooble', 'spudsyzooble', 'japanesezooble', 'baseballzooble', 'rivalbaseballzooble', 'shadowzooble', 'evilzooble'],
+      zooble: ['zooble', 'flamingozooble', 'mouthlesszooble', 'spudsyzooble', 'japanesezooble', 'baseballzooble', 'rivalbaseballzooble', 'shadowzooble', 'evilzooble'],
       gummigoo: ['gummigoo', 'japanesegummigoo'],
       kaufmo: ['kaufmo', 'abstractedkaufmo'],
       ribbit: ['ribbit', 'abstractedribbit'],
       queenie: ['queenie', 'abstractedqueeniedark', 'abstractedqueenie'],
-      caine: ['caine', 'shadowcaine'],
+      caine: ['caine', 'groundedcaine', 'monstrouscaine', 'shadowcaine'],
+      bubble: ['bubble', 'inertbubble'],
       abel: ['abel', 'abelmannequin', 'abelfullbody'],
       gloinkqueen: ['gloinkqueen', 'gloinkqueenscale', 'gloinkstar', 'gloinkcube', 'gloinkpyramid', 'gloinkcrescent', 'gloinkpin', 'gloinkround']
     };
@@ -22706,6 +23688,33 @@ const OS = {
     if (canonOSheetMap[avatar]) {
       const [col, row] = canonOSheetMap[avatar];
       return `<span class="pixel-sheet-avatar-canon-o avatar-co-c${col}-r${row}" style="--avatar-size:${size}px" aria-hidden="true"></span>`;
+    }
+
+    const canonPSheetMap = {
+      angelhead: [0, 0], possessedpomni: [1, 0],
+      monstrouscaine: [2, 0], flamingozooble: [3, 0]
+    };
+    if (canonPSheetMap[avatar]) {
+      const [col, row] = canonPSheetMap[avatar];
+      return `<span class="pixel-sheet-avatar-canon-p avatar-cp-c${col}-r${row}" style="--avatar-size:${size}px" aria-hidden="true"></span>`;
+    }
+
+    const canonQSheetMap = {
+      mouthlesspomni: [0, 0], mouthlessjax: [1, 0],
+      mouthlesszooble: [2, 0], inertbubble: [3, 0]
+    };
+    if (canonQSheetMap[avatar]) {
+      const [col, row] = canonQSheetMap[avatar];
+      return `<span class="pixel-sheet-avatar-canon-q avatar-cq-c${col}-r${row}" style="--avatar-size:${size}px" aria-hidden="true"></span>`;
+    }
+
+    const canonRSheetMap = {
+      groundedcaine: [0, 0], healingbutterfly: [1, 0],
+      plasticganglemask: [2, 0], charredshrimp: [3, 0]
+    };
+    if (canonRSheetMap[avatar]) {
+      const [col, row] = canonRSheetMap[avatar];
+      return `<span class="pixel-sheet-avatar-canon-r avatar-cr-c${col}-r${row}" style="--avatar-size:${size}px" aria-hidden="true"></span>`;
     }
 
     const px = (x, y, w, h, fill) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${fill}"/>`;

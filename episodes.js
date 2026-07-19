@@ -712,6 +712,9 @@ const EpisodeManager = {
     UNIDENTIFIED: { color: "#9aa39a", label: "Unidentified", info: "Dialogue non attribue conserve comme trace d'archive.", unlockAt: { episode: 5 } },
     SUN_NPC: { color: "#ffd33d", label: "Sun", info: "PNJ celeste jaune a couronne orange, grands yeux orange a cils et large sourire. Caine utilise sa chaleur contre les PNJ du lac digital.", unlockAt: { episode: 1, subepisode: 0 } },
     COOKIE_BUTTERFLY: { color: "#ff9e8e", label: "Cookie Butterfly", info: "Petit PNJ decoratif a motif biscuit de Candy Canyon, classe comme creature/figurant de simulation.", unlockAt: { episode: 2, subepisode: 1 } },
+    HEALING_BUTTERFLY: { color: "#ff9b37", label: "Healing Butterfly", info: "Papillon de soin de They All Get Guns. Il reste une creature de simulation liee a cette aventure.", unlockAt: { episode: 6, subepisode: 2 } },
+    GANGLE_PLASTIC_MASK: { color: "#f7f7f7", label: "Plastic Gangle Mask", info: "Masque plastique associe a Gangle dans Fast Food Masquerade. CainOS le classe comme objet de scene et non comme personnage.", unlockAt: { episode: 4, subepisode: 6 } },
+    CHARRED_SHRIMP: { color: "#3b2623", label: "Charred Shrimp Trace", info: "Trace carbonisee du Shrimp NPC dans Beach Episode. Elle remplace le PNJ vivant au moment correspondant.", unlockAt: { episode: 7, subepisode: 1 } },
     GUMMY_ELEPHANT: { color: "#ff85b7", label: "Gummy Elephant", info: "Creature gummy rose et jaune qui tire le carrosse dans Candy Canyon.", unlockAt: { episode: 2, subepisode: 1 } },
     GIANT_CENTIPEDE: { color: "#c89436", label: "Giant Centipede", info: "Grand insecte segmente dans le public du match de softball, affiche a echelle superieure aux figurants standards.", unlockAt: { episode: 5, subepisode: 6 } },
     BLUE_AI: { color: "#00ddff", label: "Blue AI", lockedLabel: "Signal IA verrouille", info: "IA canonique developpee par C&A pour remplacer Caine. Caine l absorbe avant que Remember ne montre leur separation.", lockedInfo: "Signal IA tardif. Continuez Remember pour eviter de reveler sa relation avec Caine.", unlockAt: { episode: 9, subepisode: 6 } },
@@ -8321,7 +8324,7 @@ const EpisodeManager = {
       LOO: "loolilalu",
       PRINCESS_LOO: "loolilalu",
       MOUNTED_CREATURE_HEAD: "angel",
-      POSSESSED_POMNI: "horrorpomnivoid"
+      POSSESSED_POMNI: "possessedpomni"
     };
     let avatarId = preferred[key] || null;
     const os = window.OS;

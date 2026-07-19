@@ -710,7 +710,7 @@ if (!ribbitBedroomProps.some(prop => prop.kind === 'bed')
   failures.push('EP9 FPS 254: chambre de Ribbit incomplete');
 }
 const inertBubble = OS.getCircusZoneSprites(260)
-  .find(sprite => (sprite.avatar || sprite.type) === 'bubble');
+  .find(sprite => (sprite.avatar || sprite.type) === 'inertbubble');
 if (!inertBubble || inertBubble.silent !== true
   || getTargetCount(OS.getCircusZoneProps(260), 'inertbubble') !== 1) {
   failures.push('EP9 FPS 260: Bubble doit rester silencieuse et liee a inertbubble');
@@ -1228,7 +1228,7 @@ const episodeSevenRosterContract = new Map([
   [194, ['beachgangle', 'kinger', 'pomni', 'ragatha', 'sun', 'zooble']],
   [197, ['beachgangle', 'jax', 'kinger', 'pomni', 'ragatha', 'zooble']],
   [195, ['liarfish', 'pomni', 'truthtellerfish']],
-  [196, ['jax', 'pomni', 'shrimpnpc', 'sun', 'zooble']],
+  [196, ['jax', 'pomni', 'sun', 'zooble']],
   [215, ['abelmannequin', 'pomni']],
   [216, ['jax']],
   [198, ['abelmannequin', 'jax', 'pomni', 'ragatha']],
@@ -1366,7 +1366,7 @@ const episodeEightRosterContract = new Map([
   [235, ['gangle', 'jax', 'kinger', 'pomni', 'ragatha', 'zooble']],
   [240, ['caine', 'jax']],
   [241, ['bubble', 'caine', 'gangle', 'jax', 'pomni', 'ragatha', 'zooble']],
-  [242, ['caine', 'gangle', 'jax', 'pomni', 'ragatha', 'zooble']],
+  [242, ['gangle', 'jax', 'monstrouscaine', 'pomni', 'ragatha', 'zooble']],
   [243, ['kinger']],
   [244, ['caine', 'kinger']],
   [119, ['gangle', 'jax', 'kinger', 'pomni', 'ragatha', 'zooble']]
@@ -1689,6 +1689,83 @@ const pinkMannequin = OS.getCircusZoneSprites(6).find(entry => entry.avatar === 
 if (!pinkMannequin?.silent || pinkMannequin?.loreGate?.episode !== 2) failures.push('EP2: Pink Mannequin absent ou non silencieux');
 if (OS.getWackyProfileStatus('spudsycustomer') !== 'RECONSTRUCTION CAINOS') failures.push('SPUDSY: faux client non classe comme reconstruction');
 
+const allVisualAvatars = new Set(
+  Object.values(OS.getWackyCastData())
+    .map(character => character.avatar)
+    .filter(Boolean)
+);
+const allRenderedPropKinds = new Set();
+for (let zone = 0; zone <= OS.getCircusFpsZoneMax(); zone += 1) {
+  for (const sprite of OS.getCircusZoneSprites(zone)) {
+    const avatar = sprite.avatar || sprite.type;
+    if (avatar) allVisualAvatars.add(avatar);
+  }
+  for (const prop of OS.getCircusZoneProps(zone)) {
+    if (prop.avatar) allVisualAvatars.add(prop.avatar);
+    if (prop.kind) allRenderedPropKinds.add(prop.kind);
+  }
+}
+
+const avatarSourcePaths = new Map(
+  [...source.matchAll(/^\s+([A-Za-z][A-Za-z0-9]*):\s*'([^']+\.png)'[,]?$/gm)]
+    .map(match => [match[1], match[2]])
+);
+for (const avatar of [...allVisualAvatars].sort()) {
+  const staticSpec = OS.getCircusAvatarSheetSpec(avatar);
+  if (!staticSpec) {
+    failures.push(`SPRITE: ${avatar} sans cellule de planche`);
+    continue;
+  }
+  const animationSpec = OS.getCircusAvatarAnimationSpec(avatar, { name: avatar, routine: 'walk' });
+  if (!animationSpec || (!animationSpec.customSheet && !animationSpec.procedural)) {
+    failures.push(`ANIMATION: ${avatar} sans animation dediee ni procedurale`);
+  }
+  const sourcePath = avatarSourcePaths.get(staticSpec.sheet);
+  if (!sourcePath) {
+    failures.push(`SPRITE: source de planche ${staticSpec.sheet} introuvable pour ${avatar}`);
+  } else if (!fs.existsSync(new URL(`../${sourcePath}`, import.meta.url))) {
+    failures.push(`SPRITE: fichier ${sourcePath} absent pour ${avatar}`);
+  }
+}
+
+for (const kind of [...allRenderedPropKinds].sort()) {
+  if (!OS.getCircusPropRenderClass(kind)) {
+    failures.push(`PROP 3D: ${kind} sans classe de rendu`);
+  }
+}
+
+const canonStateCoverage = {
+  angelhead: ['canonP', 3],
+  possessedpomni: ['canonP', 3],
+  monstrouscaine: ['canonP', 8],
+  flamingozooble: ['canonP', 5],
+  mouthlesspomni: ['canonQ', 8],
+  mouthlessjax: ['canonQ', 8],
+  mouthlesszooble: ['canonQ', 8],
+  inertbubble: ['canonQ', 9],
+  groundedcaine: ['canonR', 9],
+  healingbutterfly: ['canonR', 6],
+  plasticganglemask: ['canonR', 4],
+  charredshrimp: ['canonR', 7]
+};
+for (const [avatar, [sheet, episode]] of Object.entries(canonStateCoverage)) {
+  if (OS.getCircusAvatarSheetSpec(avatar)?.sheet !== sheet) failures.push(`PACK P-R: ${avatar} absent de ${sheet}`);
+  if (!(OS.getEpisodeCastKeys(episode) || []).includes(avatar)) failures.push(`PACK P-R: ${avatar} absent de l episode ${episode}`);
+  if (OS.getWackyProvenanceKind(avatar) !== 'canon-visual') failures.push(`PACK P-R: provenance ${avatar} incorrecte`);
+  if (!OS.getPixelAvatarSvg(avatar, 46).includes(`pixel-sheet-avatar-canon-${sheet.slice(-1).toLowerCase()}`)) {
+    failures.push(`PACK P-R: portrait Wacky Watch absent pour ${avatar}`);
+  }
+}
+for (const path of [
+  'assets/images/cainos-pixel-cast-sheet-canon-npc-pack-p.png',
+  'assets/images/cainos-pixel-cast-sheet-canon-npc-pack-q.png',
+  'assets/images/cainos-pixel-cast-sheet-canon-npc-pack-r.png'
+]) {
+  if (!fs.existsSync(new URL(`../${path}`, import.meta.url))) failures.push(`PACK P-R: fichier ${path} absent`);
+}
+if (OS.getCircusPropRenderClass('heart') !== 'effect') failures.push('PROP 3D: heart sans rendu VFX');
+if (OS.getCircusPropRenderClass('projector') !== 'geometry') failures.push('PROP 3D: projector sans volume');
+
 const minimumStageCount = campaignEpisodes.length * minimumStagesPerEpisode;
 if (stageCount < minimumStageCount) failures.push(`${stageCount}/${minimumStageCount} actes minimum`);
 if (failures.length) {
@@ -1697,4 +1774,4 @@ if (failures.length) {
   process.exit(1);
 }
 
-console.log(`CONTRAT GAMEPLAY: OK | ${stageCount} actes | toutes les campagnes pointent vers des PNJ et objets presents`);
+console.log(`CONTRAT GAMEPLAY: OK | ${stageCount} actes | ${allVisualAvatars.size} avatars animes | ${allRenderedPropKinds.size} types de props rendus`);
