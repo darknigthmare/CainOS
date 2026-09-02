@@ -3273,7 +3273,12 @@ body.reduce-motion .circus-dos-overlay.rendering .circus-title-letter {
 }
 
 #watch-profile-avatar .avatar-cp-c2-r0 {
-  transform: scale(1.55);
+  --avatar-ratio: 1;
+  width: 72px;
+  height: 72px;
+  background-size: 400% 200%;
+  background-position: 66.667% 50%;
+  transform: none;
 }
 
 .cast-pixel-icon .pixel-sheet-avatar-gloink-queen-scale {
@@ -5263,5 +5268,149 @@ body:not([data-fps-interaction-channel="none"]) .circus-dos-overlay.doom .circus
 @media (min-width: 521px) and (max-width: 900px) {
   .circus-world-selector {
     top: 260px;
+  }
+}
+
+@media (max-width: 520px) {
+  #win-wacky-watch .watch-window-body {
+    min-width: 0;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  #win-wacky-watch .watch-menu {
+    width: 100%;
+    flex: 0 0 auto;
+    flex-direction: row;
+    gap: 3px;
+    padding: 4px;
+    border-right: 0;
+    border-bottom: 2px solid #111;
+    box-sizing: border-box;
+  }
+
+  #win-wacky-watch .watch-menu-btn {
+    min-width: 0;
+    flex: 1;
+    padding: 5px 3px;
+    font-size: 7px;
+    text-align: center;
+    overflow-wrap: anywhere;
+  }
+
+  #win-wacky-watch .watch-content-pane,
+  #win-wacky-watch .watch-tab {
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+  }
+
+  #win-wacky-watch #watch-tab-cast.active {
+    display: grid;
+    grid-template-rows: minmax(126px, 0.8fr) minmax(0, 1.2fr);
+  }
+
+  #win-wacky-watch .cast-browser {
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    gap: 3px;
+    padding: 4px;
+    box-sizing: border-box;
+  }
+
+  #win-wacky-watch .watch-search-input {
+    min-height: 24px;
+    padding: 3px 5px;
+  }
+
+  #win-wacky-watch .watch-filter-row {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 2px;
+  }
+
+  #win-wacky-watch .watch-filter-btn {
+    min-width: 0;
+    min-height: 19px;
+    padding: 2px 1px;
+    font-size: 6px;
+  }
+
+  #win-wacky-watch .cast-selector {
+    min-height: 42px;
+    border-right: 0;
+    border-bottom: 1px solid #333;
+  }
+
+  #win-wacky-watch .cast-item {
+    min-height: 28px;
+    padding: 4px 6px;
+    font-size: 8px;
+  }
+
+  #win-wacky-watch .cast-profile-panel {
+    min-width: 0;
+    min-height: 0;
+    padding: 7px;
+    gap: 7px;
+  }
+
+  #win-wacky-watch .profile-header {
+    min-width: 0;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+
+  #win-wacky-watch .profile-avatar {
+    width: 76px;
+    height: 76px;
+    flex: 0 0 auto;
+  }
+
+  #win-wacky-watch .profile-avatar.profile-avatar-wide {
+    width: min(170px, 100%);
+    height: 76px;
+  }
+
+  #win-wacky-watch .profile-avatar.profile-avatar-tall {
+    width: 70px;
+    height: 76px;
+  }
+
+  #win-wacky-watch .profile-meta {
+    min-width: 0;
+    flex: 1;
+  }
+
+  #win-wacky-watch .profile-meta h3 {
+    font-size: 13px;
+    overflow-wrap: anywhere;
+  }
+
+  #win-wacky-watch .profile-meta p,
+  #win-wacky-watch .fact-text,
+  #win-wacky-watch .watch-variant-empty {
+    font-size: 8px;
+  }
+
+  #win-wacky-watch .profile-fact-box,
+  #win-wacky-watch .profile-variant-box {
+    padding: 6px;
+  }
+
+  #win-wacky-watch .watch-variant-list {
+    gap: 3px;
+  }
+
+  #win-wacky-watch .watch-variant-btn {
+    min-height: 23px;
+    padding: 3px 5px;
+    font-size: 7px;
+  }
+
+  #win-wacky-watch #watch-tab-radar,
+  #win-wacky-watch #watch-tab-journal {
+    box-sizing: border-box;
   }
 }

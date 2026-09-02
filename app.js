@@ -20574,8 +20574,16 @@ const OS = {
         win.style.top = '0';
         return;
       }
-      if (win.offsetWidth > maxWidth) win.style.width = `${maxWidth}px`;
-      if (win.offsetHeight > maxHeight) win.style.height = `${maxHeight}px`;
+      if (!win.dataset.cainosPreferredWidth) {
+        win.dataset.cainosPreferredWidth = String(win.offsetWidth || parseFloat(win.style.width) || maxWidth);
+      }
+      if (!win.dataset.cainosPreferredHeight) {
+        win.dataset.cainosPreferredHeight = String(win.offsetHeight || parseFloat(win.style.height) || maxHeight);
+      }
+      const preferredWidth = Math.max(1, Number(win.dataset.cainosPreferredWidth) || maxWidth);
+      const preferredHeight = Math.max(1, Number(win.dataset.cainosPreferredHeight) || maxHeight);
+      win.style.width = `${Math.min(preferredWidth, maxWidth)}px`;
+      win.style.height = `${Math.min(preferredHeight, maxHeight)}px`;
       const left = Math.max(0, Math.min(parseFloat(win.style.left) || 0, maxWidth - win.offsetWidth));
       const top = Math.max(0, Math.min(parseFloat(win.style.top) || 0, maxHeight - win.offsetHeight));
       win.style.left = `${left}px`;
@@ -23848,6 +23856,8 @@ const OS = {
     container.className = frameClass;
     container.innerHTML = this.getPixelAvatarSvg(char.avatar, avatarSize);
     this.renderWackyVariants(profileId);
+    const profilePanel = document.getElementById('watch-cast-profile');
+    if (profilePanel) profilePanel.scrollTop = 0;
     return;
     let svg = "";
     if (char.avatar === 'pomni') {
