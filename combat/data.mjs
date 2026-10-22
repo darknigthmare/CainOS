@@ -6,7 +6,7 @@ import { SPRITE_CATALOG } from './sprite-catalog.mjs';
  * below is a fan-game adaptation, not a claim about canonical fighting powers.
  * Frames use the original CQC 60 Hz simulation and its 10000-health scale.
  */
-export const GAME = Object.freeze({ id: 'digital-circus-encore', name: 'Digital Circus — Encore', subtitle: 'Le Grand Duel', version: '0.1.0', contentDate: '2026-10-21' });
+export const GAME = Object.freeze({ id: 'digital-circus-encore', name: 'Digital Circus — Encore', subtitle: 'Le Grand Duel', version: '0.2.0', contentDate: '2026-10-22' });
 export const SOURCES = Object.freeze([
   { id: 'cainos', title: 'CainOS — base de travail et atlas existants', url: 'https://github.com/darknigthmare/CainOS/tree/4926834a2f063028903d6431e77f0bece859e671', kind: 'Dépôt utilisateur', scope: 'Inventaire du projet. Les mentions canon dans ses archives demandent une vérification indépendante.' },
   { id: 'cqc', title: 'CQC — version de référence P39', url: 'https://github.com/darknigthmare/shadow-codec-ops/tree/42279c1c884769873e66bbda0b6fe849bcd2f1a2/public/cqc', kind: 'Dépôt utilisateur', scope: 'Architecture intégrée/autonome, moteur de combat et IA portés depuis les fichiers réels.' },
@@ -229,11 +229,127 @@ export const STAGES = [
   stage('backstage', 'Le couloir des portes', 'Les portes des résidents servent de fond de scène.', { sky: '#171326', back: '#462b4e', accent: '#efc694', floor: '#4a3549', grid: '#876779' }, 'ep1'),
 ];
 
-const bases = FIGHTERS.map(f => f.id).filter(id => id !== 'abstractedkaufmo').sort((a, b) => b.length - a.length);
+// A matching substring is not an identity: Jax's parents, rival NPCs, body
+// parts and mental projections remain archives. Only reviewed appearances of
+// the same fighter may reuse a kit. This is a gameplay classification of the
+// project's existing art, not an endorsement of its historical canon labels.
+export const COSTUME_BASE_FIGHTERS = Object.freeze({
+  ganglekawaii: 'gangle',
+  ganglecomedy: 'gangle',
+  gangletragedy: 'gangle',
+  darkduojax: 'jax',
+  darkduogangle: 'gangle',
+  maidjax: 'jax',
+  maidragatha: 'ragatha',
+  maidpomni: 'pomni',
+  maidgangle: 'gangle',
+  jaxgirl: 'jax',
+  beachgangle: 'gangle',
+  japanesegangle: 'gangle',
+  rhinogangle: 'gangle',
+  workgangle: 'gangle',
+  japanesejax: 'jax',
+  japaneseragatha: 'ragatha',
+  japanesepomni: 'pomni',
+  japanesekinger: 'kinger',
+  japanesezooble: 'zooble',
+  japanesegummigoo: 'gummigoo',
+  baseballjax: 'jax',
+  baseballzooble: 'zooble',
+  baseballgangle: 'gangle',
+  baseballragatha: 'ragatha',
+  baseballpomni: 'pomni',
+  baseballkinger: 'kinger',
+  shadowpomni: 'pomni',
+  shadowjax: 'jax',
+  shadowragatha: 'ragatha',
+  shadowkinger: 'kinger',
+  shadowgangle: 'gangle',
+  shadowzooble: 'zooble',
+  shadowcaine: 'caine',
+  horrorpomnivoid: 'pomni',
+  horrorpomnispiral: 'pomni',
+  horrorpomniskull: 'pomni',
+  hunterjax: 'jax',
+  gloinkqueenscale: 'gloinkqueen',
+  peeledjax: 'jax',
+  spudsypomni: 'pomni',
+  spudsyjax: 'jax',
+  spudsyragatha: 'ragatha',
+  spudsyzooble: 'zooble',
+  possessedpomni: 'pomni',
+  monstrouscaine: 'caine',
+  flamingozooble: 'zooble',
+  mouthlesspomni: 'pomni',
+  mouthlessjax: 'jax',
+  mouthlesszooble: 'zooble',
+  inertbubble: 'bubble',
+  groundedcaine: 'caine',
+});
+
+// Every remaining current atlas entry is reviewed explicitly. Future entries
+// fail closed as "unreviewed" until an intentional identity decision is made.
+const archiveOnlyGroups = [
+  {
+    kind: 'resident',
+    ids: ['queenie', 'kaufmo', 'ribbit', 'scratch', 'wormo', 'bizco', 'rattie', 'spike', 'pinkcyclops', 'yellowclown', 'oyster', 'bulbcreature'],
+    reason: 'Résident archivé sans kit propre. La forme non abstraite de Kaufmo ne remplace pas son boss abstrait.',
+  },
+  {
+    kind: 'separate-character',
+    ids: ['evilpomni', 'eviljax', 'evilragatha', 'evilkinger', 'evilzooble', 'evilorbsman', 'rivalbaseballzooble', 'rivalbaseballpomni', 'rivalbaseballpinkgiant', 'rivalbaseballragatha', 'rivalbaseballjax', 'rivalbaseballkinger'],
+    reason: 'Double ou rival décrit comme PNJ distinct dans le projet. Le nom partagé ne suffit pas à en faire un costume.',
+  },
+  {
+    kind: 'separate-character',
+    ids: ['mannequin', 'abel', 'max', 'chad', 'orbsman', 'gloinkstar', 'gloinkcube', 'gloinkpyramid', 'gloinkcrescent', 'gloinkpin', 'gloinkround', 'abelmannequin', 'abelfullbody', 'additionalvoices', 'ming', 'marthamildenhall', 'ghostly', 'angel', 'disappearingguy', 'committeemember', 'shrimpnpc', 'chineseroomnpc', 'blueai', 'cookiebutterfly', 'gummyelephant', 'giantcentipede', 'spudsycustomer', 'candyguardcyan', 'candyguardblue', 'candyguardpurple', 'gummyworm', 'barrelmonkey', 'jeffery', 'redmannequin', 'orangemannequin', 'yellowmannequin', 'magentamannequin', 'mildenhallsouls', 'truthtellerfish', 'liarfish', 'stupidburgermannequin', 'cerealmannequin', 'sun', 'moon', 'floatingworm', 'creditsfish', 'peekingmannequin', 'healingbutterfly'],
+    reason: 'Personnage, figurant ou créature distincte sans kit de combat livré. Aucun rattachement automatique à un combattant.',
+  },
+  {
+    kind: 'other-person',
+    ids: ['abigailbrooks', 'suzieackerman', 'zoeyraghavan', 'rileyverselis', 'grantbest', 'leeroymateo', 'jaxfather', 'jaxmother', 'abigailfriendone', 'abigailfriendtwo', 'bestchildren', 'destinybest'],
+    reason: 'Personne humaine ou famille citée dans les archives. Une parenté ou contrepartie ne constitue pas une tenue jouable.',
+  },
+  {
+    kind: 'projection',
+    ids: ['ragathamothershadow', 'laughingshadows', 'fourthcrocodile', 'jaxmindviolent', 'jaxmindcomic', 'jaxmindtrapped', 'whatifragatha', 'whatifgangle'],
+    reason: 'Entité de tourment ou projection mentale. Conservée comme référence narrative, sans emprunter le kit du personnage évoqué.',
+  },
+  {
+    kind: 'prop',
+    ids: ['drfootball', 'albertspudsy', 'paintedmasks', 'zoobleparts', 'stabbedragdolls', 'coiledcentipedes', 'unusedbrainscans', 'angelhead', 'plasticganglemask'],
+    reason: 'Accessoire, fragments, décor ou visuel de marque. Ce sprite ne représente pas un combattant complet.',
+  },
+  {
+    kind: 'effect',
+    ids: ['jumbledragatha', 'jumbledpomni', 'charredshrimp'],
+    reason: 'Effet visuel ou trace ponctuelle. Ne remplace pas la silhouette du combattant pendant un match.',
+  },
+  {
+    kind: 'abstraction',
+    ids: ['cellarabstraction', 'aquaticabstraction', 'abstractedjax', 'abstractedqueeniedark', 'abstractedqueenie', 'abstractedribbit'],
+    reason: 'Forme abstraite distincte sans kit ni corps de collision adaptés. Aucun recyclage du kit de sa forme d’origine.',
+  },
+  {
+    kind: 'unassigned-art',
+    ids: ['horrorghost', 'horrormonster', 'themachine', 'bonepastor'],
+    reason: 'Création ou archive de production sans identité jouable validée. Reste consultable avant attribution d’un rôle.',
+  },
+];
+export const ARCHIVE_ONLY_ENTRIES = Object.freeze(Object.fromEntries(archiveOnlyGroups.flatMap(({ ids, ...classification }) => ids.map(id => [id, Object.freeze({ ...classification })]))));
+const fighterIds = new Set(FIGHTERS.map(f => f.id));
+
+export function classifyArchiveEntry(id) {
+  if (fighterIds.has(id)) return { category: 'fighter', baseFighterId: id, playable: true, archiveKind: null, classificationReason: 'Combattant jouable avec son propre kit de dix techniques.' };
+  if (Object.hasOwn(COSTUME_BASE_FIGHTERS, id)) return { category: 'variant', baseFighterId: COSTUME_BASE_FIGHTERS[id], playable: false, archiveKind: null, classificationReason: 'Tenue ou état visuel du même combattant, approuvé explicitement pour réutiliser son kit sans changement de règles. Le libellé de lore reste à vérifier.' };
+  const entry = Object.hasOwn(ARCHIVE_ONLY_ENTRIES, id) ? ARCHIVE_ONLY_ENTRIES[id] : null;
+  return { category: 'archive', baseFighterId: null, playable: false, archiveKind: entry?.kind || 'unreviewed', classificationReason: entry?.reason || 'Entrée non revue : aucun kit attribué avant validation explicite de son identité et de sa silhouette.' };
+}
+
 export const ROSTER_ARCHIVE = SPRITE_CATALOG.map(entry => {
-  const baseFighterId = FIGHTERS.some(f => f.id === entry.id) ? entry.id : bases.find(id => entry.id.includes(id)) || null;
+  const classification = classifyArchiveEntry(entry.id);
   const sprite = entry.id === 'gloinkqueenscale' ? { ...entry.sprite, component: 'largest', nativeFacing: -1 } : entry.sprite;
-  return { ...entry, sprite, baseFighterId, fighterId: baseFighterId, playable: FIGHTERS.some(f => f.id === entry.id) };
+  return { ...entry, sprite, ...classification, fighterId: classification.baseFighterId };
 });
 export const ARCHIVE = ROSTER_ARCHIVE;
 export const VARIANTS = ROSTER_ARCHIVE.filter(entry => entry.baseFighterId && entry.id !== entry.baseFighterId);
@@ -241,6 +357,8 @@ export const MODES = [
   { id: 'versus', name: 'Versus CPU', description: 'Un duel libre contre l’ordinateur.' },
   { id: 'local', name: 'Duel local', description: 'Deux joueurs sur le même appareil.' },
   { id: 'arcade', name: 'Arcade', description: 'Six matchs jusqu’au dernier numéro.' },
+  { id: 'story', name: 'Histoires', description: 'Quatorze routes originales, quatre rencontres et une fin par combattant.' },
+  { id: 'tournament', name: 'Tournoi à huit', description: 'Trois tours dans un tableau déterministe à huit participants.' },
   { id: 'boss', name: 'Boss rush', description: 'Affronter les colosses et l’abstraction.' },
   { id: 'survival', name: 'Survie', description: 'Dix adversaires avec la vie conservée.' },
   { id: 'training', name: 'Entraînement', description: 'Dummy, hitboxes et remise à zéro.' },

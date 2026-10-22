@@ -11,7 +11,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import http from 'node:http';
 import { pathToFileURL } from 'node:url';
-import { FIGHTERS } from '../combat/data.mjs';
+import { FIGHTERS, STAGES } from '../combat/data.mjs';
 
 let playwright;
 try { playwright = await import('playwright'); }
@@ -24,7 +24,17 @@ const output = path.resolve('audit-combat');
 const SAVE_KEY = 'cainos.circus-combat.profile.v1';
 const REPLAY_KEY = 'cainos.circus-combat.replay.v1';
 await fs.mkdir(output, { recursive: true });
-const browser = await playwright.chromium.launch({ headless: true, executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH || undefined, args: ['--no-sandbox', '--disable-dev-shm-usage', '--single-process', '--no-zygote'] });
+const browserOptions = { headless: true, executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH || undefined, args: ['--no-sandbox', '--disable-dev-shm-usage', '--single-process', '--no-zygote'] };
+const browser = await playwright.chromium.launch(browserOptions);
+const auxiliaryBrowsers = [];
+async function isolatedContext(options) {
+  // Lightweight single-process Chromium builds can terminate the whole process
+  // when a second service-worker-enabled context navigates. Isolate those QA
+  // origins in independent browser processes rather than altering the app.
+  const isolatedBrowser = await playwright.chromium.launch(browserOptions);
+  auxiliaryBrowsers.push(isolatedBrowser);
+  return isolatedBrowser.newContext(options);
+}
 const context = await browser.newContext({ viewport: { width: 1280, height: 900 } });
 const page = await context.newPage();
 const checks = [], errors = [];
@@ -56,6 +66,7 @@ async function start(mode, fighter = 'jax') {
   await page.locator(`[data-fighter="${fighter}"]`).click();
   await page.locator('#select-difficulty').selectOption('easy');
   await page.locator('[data-action="start"]').click();
+  if(await page.locator('[data-action="start-new"]').count())await page.locator('[data-action="start-new"]').click();
   await page.waitForFunction(() => window.Encore.ready, null, { polling: 50 });
   // Explicitly advance through the introduction, preserving every simulation frame.
   await advance(1800);
@@ -104,7 +115,7 @@ async function importJSON(id, value, name) {
 }
 
 async function checkVolatileProfile() {
-  const volatileContext = await browser.newContext({ viewport: { width: 1280, height: 900 }, acceptDownloads: true });
+  const volatileContext = await isolatedContext({ viewport: { width: 1280, height: 900 }, acceptDownloads: true });
   // A browser-storage fault fixture, not a gameplay hook: the application must
   // maintain its own in-memory profile after persistence is denied.
   await volatileContext.addInitScript(() => {
@@ -185,17 +196,19 @@ try {
   checked('UI replay reproduces the full terminal snapshot without changing profile');
   await home();
 
-  for (const [mode, total, opponent1, opponent2] of [
-    ['arcade', 6, 'pomni', 'ragatha'],
-    ['boss', 4, 'gloinkqueen', 'fudge'],
-    ['survival', 10, 'pomni', 'zooble'],
+  for (const [mode, total] of [
+    ['arcade', 6],
+    ['boss', 4],
+    ['survival', 10],
   ]) {
     await start(mode);
+    const run = (await profile()).program;
+    const [opponent1, opponent2] = run.opponents;
     assert.match(await page.locator('.fight-caption').textContent(), new RegExp(`1/${total}`));
     assert.equal((await snapshot()).fighters[1].id, opponent1);
     const before = await profile();
     const won = await winWithKeyboard(mode);
-    const expectedHealth = mode === 'survival' ? Math.min(10000, Math.max(1, won.fighters[0].hp + 1200)) : 10000;
+    const expectedHealth = mode === 'survival' ? Math.min(10000, Math.max(1, Math.round(won.fighters[0].hp) + 1200)) : 10000;
     assert.equal((await profile()).stats.matches, before.stats.matches + 1);
     assert.ok(await page.locator('#modal [data-action="next-fight"]').isVisible());
     await page.locator('[data-action="next-fight"]').click();
@@ -205,7 +218,7 @@ try {
     assert.equal(second.fighters[1].id, opponent2);
     assert.equal(second.fighters[0].hp, expectedHealth, `${mode}: next encounter health`);
     assert.equal(second.fighters[1].hp, 10000);
-    assert.match(await page.locator('.fight-caption').textContent(), /Candy Canyon/);
+    assert.ok((await page.locator('.fight-caption').textContent()).includes(STAGES.find(s=>s.id===run.stages[1]).name));
     if (mode === 'survival') assert.equal((await profile()).stats.bestSurvival, 1);
     checked(`${mode}: earned first win opens encounter 2/${total}`, `${opponent1} → ${opponent2}, player HP ${won.fighters[0].hp} → ${expectedHealth}`);
     await home();
@@ -260,8 +273,8 @@ try {
   });
   await new Promise(resolve => standaloneServer.listen(0, '127.0.0.1', resolve));
   const standaloneURL = `http://127.0.0.1:${standaloneServer.address().port}`;
-  const isolatedContext = await browser.newContext({ viewport: { width: 1100, height: 800 } });
-  const isolated = await isolatedContext.newPage();
+  const standaloneContext = await isolatedContext({ viewport: { width: 1100, height: 800 } });
+  const isolated = await standaloneContext.newPage();
   const standaloneRequests = [];
   isolated.on('pageerror', error => errors.push(`standalone: ${error.message}`));
   isolated.on('response', response => { standaloneRequests.push(response.url()); if (response.status() >= 400) errors.push(`standalone HTTP ${response.status()} ${response.url()}`); });
@@ -278,8 +291,7 @@ try {
   assert.ok(standaloneRequests.every(url => url.startsWith(standaloneURL)));
   await isolated.screenshot({ path: path.join(output, 'standalone-built-fight.png'), fullPage: true });
   checked('Built standalone plays on a second origin without the OS runtime', `${standaloneRequests.length} local resources`);
-  // Close both contexts together via browser.close below. Some lightweight
-  // Chromium builds use one process and cannot dispose a second context alone.
+  // Each origin owns a browser process; close those processes in finally.
   await checkVolatileProfile();
   }
 
@@ -292,5 +304,5 @@ try {
   throw error;
 } finally {
   if (standaloneServer) await new Promise(resolve => standaloneServer.close(resolve));
-  await browser.close();
+  await Promise.allSettled([browser, ...auxiliaryBrowsers].map(instance => instance.close()));
 }

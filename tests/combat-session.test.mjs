@@ -1,7 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { CombatEngine, FIXED_DT } from '../combat/engine.mjs';
-import { FIGHTERS, STAGES } from '../combat/data.mjs';
+import { FIGHTERS, STAGES, VARIANTS } from '../combat/data.mjs';
+import { createProgram, recordProgramResult } from '../combat/progression.mjs';
 import { InputController } from '../combat/input.mjs';
 import {
   GAME_VERSION, SAVE_KEY, SLOT_ORDER, MAX_PACKED_INPUT, DEFAULT_SETTINGS,
@@ -407,3 +408,36 @@ test('standard gamepads provide separate player inputs and one action edge per p
   pads[0].buttons[9].pressed = true; controls.poll([], true);
   assert.equal(pauses(), 2);
 }));
+
+test('version one profiles migrate with safe bindings, quiet music and no invented progress', () => {
+  const legacy = { format:'circus-encore-profile',version:1,settings:{layout:'qwerty'},stats:{wins:3,matches:4},challenges:['combo'],medals:['arcade'] };
+  const migrated = validateProfile(legacy);
+  assert.equal(migrated.stats.wins,3);
+  assert.equal(migrated.settings.music,false);
+  assert.deepEqual(migrated.stories,[]);
+  assert.equal(migrated.program,null);
+  assert.deepEqual(migrated.settings.bindings[0].light,['KeyJ']);
+  assert.equal(cleanSettings({musicVolume:99}).musicVolume,1);
+});
+
+test('profile exports preserve canonical progress, costumes and individually earned endings', () => {
+  const profile=emptyProfile();
+  const variant=VARIANTS.find(v=>v.fighterId==='jax');
+  profile.program=recordProgramResult(createProgram('story','jax',FIGHTERS,STAGES,{seed:91,variantId:variant.id}),{won:true,health:8000});
+  profile.stories=['jax','jax','unreleased'];profile.medals=['story','tournament','fake'];
+  const clean=validateProfile(JSON.parse(JSON.stringify(profile)));
+  assert.deepEqual(clean.program,profile.program);
+  assert.deepEqual(clean.stories,['jax']);assert.deepEqual(clean.medals,['story','tournament']);
+  const corrupt=structuredClone(profile);corrupt.program.index=3;
+  assert.throws(()=>validateProfile(corrupt),/reprise/);
+});
+
+test('replays retain known costumes and reject unrelated variants while keeping 0.1 compatibility', () => {
+  const replay=replayFixture();
+  const variant=VARIANTS.find(v=>v.fighterId==='pomni');
+  replay.config.variants=[variant.id,''];
+  assert.deepEqual(validated(replay).config.variants,[variant.id,'']);
+  assert.deepEqual(validated(replayFixture({version:'0.1.0'})).config.variants,['','']);
+  replay.config.variants=['jaxfather',''];assert.throws(()=>validated(replay),/apparence/);
+  replay.config.variants=['',variant.id];assert.throws(()=>validated(replay),/apparence/);
+});

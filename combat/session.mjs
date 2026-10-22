@@ -1,11 +1,14 @@
 /** Shared, versioned local profile and replay format for the OS and standalone. */
+import { cleanBindings, DEFAULT_BINDINGS } from './bindings.mjs';
+import { FIGHTERS, STAGES, VARIANTS } from './data.mjs';
+import { validateProgram } from './progression.mjs';
 export const SAVE_KEY = 'cainos.circus-combat.profile.v1';
 export const REPLAY_KEY = 'cainos.circus-combat.replay.v1';
-export const GAME_VERSION = '0.1.0';
+export const GAME_VERSION = '0.2.0';
 export const SLOT_ORDER = ['light', 'heavy', 'low', 'throw', 'special', 'specialDown', 'specialForward', 'specialBack', 'super', 'utility'];
 const FLAGS = ['left', 'right', 'down', 'guard', 'jump', 'dash', 'tech'];
 export const MAX_PACKED_INPUT = (SLOT_ORDER.length << FLAGS.length) | ((1 << FLAGS.length) - 1);
-export const DEFAULT_SETTINGS = Object.freeze({ layout: 'azerty', difficulty: 'normal', seconds: 90, rounds: 2, volume: .25, sound: true, reducedMotion: false, hitboxes: false, touch: 'auto' });
+export const DEFAULT_SETTINGS = Object.freeze({ layout: 'azerty', difficulty: 'normal', seconds: 90, rounds: 2, volume: .25, sound: true, music: false, musicVolume: .2, reducedMotion: false, hitboxes: false, touch: 'auto', bindings: DEFAULT_BINDINGS });
 const integer = (v, lo, hi, fallback = lo) => Number.isInteger(v) && v >= lo && v <= hi ? v : fallback;
 const choice = (v, allowed, fallback) => allowed.includes(v) ? v : fallback;
 export function cleanSettings(value = {}) {
@@ -16,20 +19,27 @@ export function cleanSettings(value = {}) {
     seconds: choice(s.seconds, [60, 90, 120], 90), rounds: choice(s.rounds, [1, 2, 3], 2),
     volume: typeof s.volume === 'number' && Number.isFinite(s.volume) ? Math.max(0, Math.min(1, s.volume)) : .25,
     sound: s.sound !== false, reducedMotion: s.reducedMotion === true, hitboxes: s.hitboxes === true,
-    touch: choice(s.touch, ['auto', 'on', 'off'], 'auto')
+    music: s.music === true,
+    musicVolume: typeof s.musicVolume === 'number' && Number.isFinite(s.musicVolume) ? Math.max(0, Math.min(1, s.musicVolume)) : .2,
+    touch: choice(s.touch, ['auto', 'on', 'off'], 'auto'), bindings: cleanBindings(s.bindings)
   };
 }
 export function emptyProfile() {
-  return { format: 'circus-encore-profile', version: 1, settings: { ...DEFAULT_SETTINGS }, stats: { matches: 0, wins: 0, losses: 0, bestSurvival: 0, damage: 0 }, challenges: [], medals: [], history: [] };
+  return { format: 'circus-encore-profile', version: 1, settings: cleanSettings(DEFAULT_SETTINGS), stats: { matches: 0, wins: 0, losses: 0, bestSurvival: 0, damage: 0 }, challenges: [], medals: [], stories: [], program: null, history: [] };
 }
 export function validateProfile(value) {
   if (!value || value.format !== 'circus-encore-profile' || value.version !== 1) throw new Error('Ce fichier n’est pas une sauvegarde Encore version 1.');
   const profile = emptyProfile();
   profile.settings = cleanSettings(value.settings);
   for (const key of Object.keys(profile.stats)) profile.stats[key] = integer(value.stats?.[key], 0, 1e9);
-  const allowed = { challenges: CHALLENGES.map(c => c.id), medals: ['arcade', 'boss', 'survival'] };
+  const allowed = { challenges: CHALLENGES.map(c => c.id), medals: ['arcade', 'boss', 'survival', 'story', 'tournament'] };
   for (const key of ['challenges', 'medals']) profile[key] = [...new Set((Array.isArray(value[key]) ? value[key] : []).filter(v => allowed[key].includes(v)))];
   profile.stats.bestSurvival = Math.min(10, profile.stats.bestSurvival);
+  profile.stories = [...new Set((Array.isArray(value.stories) ? value.stories : []).filter(id => FIGHTERS.some(f => f.id === id)))];
+  if (value.program != null) {
+    profile.program = validateProgram(value.program, FIGHTERS, STAGES, VARIANTS);
+    if (profile.program.status !== 'active') profile.program = null;
+  }
   profile.history = (Array.isArray(value.history) ? value.history : []).filter(v => v && typeof v.fighter === 'string' && typeof v.opponent === 'string').slice(0, 12).map(v => ({ fighter: v.fighter.slice(0, 60), opponent: v.opponent.slice(0, 60), mode: String(v.mode || '').slice(0, 30), won: v.won === true, at: String(v.at || '').slice(0, 30) }));
   return profile;
 }
@@ -61,7 +71,8 @@ export function appendReplayFrame(runs, inputs) {
   else runs.push([1, a, b]);
 }
 export function validateReplay(value, fighterIds, stageIds) {
-  if (!value || value.format !== 'circus-encore-replay' || value.version !== GAME_VERSION) throw new Error('Replay incompatible avec cette version du jeu.');
+  // 0.2 adds presentation and programs; the deterministic combat rules are unchanged.
+  if (!value || value.format !== 'circus-encore-replay' || !['0.1.0', GAME_VERSION].includes(value.version)) throw new Error('Replay incompatible avec cette version du jeu.');
   const c = value.config;
   if (!c || !Array.isArray(c.fighters) || c.fighters.length !== 2 || !c.fighters.every(id => fighterIds.includes(id)) || !stageIds.includes(c.stage)) throw new Error('Combattant ou arène introuvable dans le replay.');
   if (!Number.isInteger(c.seed) || c.seed < 0 || c.seed > 4294967295 || !Number.isInteger(c.roundsToWin) || c.roundsToWin < 1 || c.roundsToWin > 3 || ![60,90,120].includes(c.roundTime) || !['easy','normal','hard'].includes(c.difficulty)) throw new Error('Règles de replay invalides.');
@@ -74,7 +85,9 @@ export function validateReplay(value, fighterIds, stageIds) {
   if (!total || total > 72000) throw new Error('Le replay doit durer entre 1 image et 20 minutes.');
   if (c.initialHealth !== undefined && (!Array.isArray(c.initialHealth) || c.initialHealth.length !== 2 || !c.initialHealth.every(v => Number.isInteger(v) && v > 0 && v <= 10000))) throw new Error('La santé initiale du replay est invalide.');
   const initialHealth = c.initialHealth ? [...c.initialHealth] : [10000, 10000];
-  return { format: value.format, version: GAME_VERSION, config: { fighters: [...c.fighters], stage: c.stage, seed: c.seed, roundsToWin: c.roundsToWin, roundTime: c.roundTime, difficulty: c.difficulty, cpu: [...c.cpu], initialHealth }, runs: value.runs.map(r => [...r]), frames: total };
+  const variants = c.variants === undefined ? ['', ''] : c.variants;
+  if (!Array.isArray(variants) || variants.length !== 2 || !variants.every((id, i) => id === '' || VARIANTS.some(v => v.id === id && v.fighterId === c.fighters[i]))) throw new Error('Une apparence du replay ne correspond pas à son combattant.');
+  return { format: value.format, version: GAME_VERSION, config: { fighters: [...c.fighters], variants: [...variants], stage: c.stage, seed: c.seed, roundsToWin: c.roundsToWin, roundTime: c.roundTime, difficulty: c.difficulty, cpu: [...c.cpu], initialHealth }, runs: value.runs.map(r => [...r]), frames: total };
 }
 export function* replayInputs(replay) {
   for (const [count, a, b] of replay.runs) for (let frame = 0; frame < count; frame++) yield [unpackInput(a), unpackInput(b)];
@@ -86,7 +99,9 @@ export const MODES = [
   { id: 'boss', name: 'Les anomalies', eyebrow: '04 / BOSS RUSH', icon: '◉', description: 'Affronte les géants, l’Abstraction et le maître du jeu.', label: 'Boss rush' },
   { id: 'survival', name: 'Encore. Encore.', eyebrow: '05 / SURVIE', icon: '∞', description: 'Dix adversaires. Ta santé se transmet entre les duels.', label: '10 vagues' },
   { id: 'training', name: 'Les répétitions', eyebrow: '06 / ENTRAÎNEMENT', icon: '⌘', description: 'Étudie les techniques, la garde et les ouvertures.', label: 'Laboratoire' },
-  { id: 'challenge', name: 'Les défis de Caine', eyebrow: '07 / OBJECTIFS', icon: '◇', description: 'Six exercices de précision et de maîtrise du combat.', label: '6 défis' }
+  { id: 'challenge', name: 'Les défis de Caine', eyebrow: '07 / OBJECTIFS', icon: '◇', description: 'Six exercices de précision et de maîtrise du combat.', label: '6 défis' },
+  { id: 'story', name: 'Derrière le rideau', eyebrow: '08 / HISTOIRES', icon: '❧', description: 'Quatorze histoires originales. Quatre rencontres pour chaque artiste.', label: '14 parcours' },
+  { id: 'tournament', name: 'La coupe du cirque', eyebrow: '09 / TOURNOI', icon: '♜', description: 'Huit participants, un tableau et trois victoires pour soulever la coupe.', label: 'Élimination directe' }
 ];
 export const CHALLENGES = [
   { id: 'first-impact', name: 'Entrée en scène', text: 'Infliger 2 000 dégâts en 60 secondes.', goal: 2000, metric: 'damage', dummy: 'idle' },
