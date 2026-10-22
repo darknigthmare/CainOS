@@ -15,6 +15,7 @@ const output = path.resolve('audit-combat');
 await fs.mkdir(output, { recursive:true });
 const browser = await playwright.chromium.launch({ headless:true, executablePath:process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH || undefined, args:['--no-sandbox','--disable-dev-shm-usage','--single-process','--no-zygote'] });
 const errors=[], checks=[];
+let mobileBrowser;
 const context = await browser.newContext({ viewport:{width:1440,height:1000} });
 const page = await context.newPage();
 page.on('pageerror', error => errors.push(error.message));
@@ -23,9 +24,9 @@ const checked = (name,detail='') => { checks.push({name,detail,pass:true});conso
 try {
   await page.goto(`${base}/combat/`,{waitUntil:'networkidle'});
   await page.waitForFunction(()=>window.Encore?.screen==='home');
-  assert.equal(await page.locator('.mode-card[data-mode]').count(),7);
+  assert.equal(await page.locator('.mode-card[data-mode]').count(),9);
   await page.screenshot({path:path.join(output,'desktop-home.png'),fullPage:true});
-  checked('Seven modes and standalone home render');
+  checked('Nine modes and standalone home render');
   await page.getByRole('button',{name:'Combattants',exact:true}).click();
   assert.equal(await page.locator('.move-table tbody tr').count(),10);
   await page.locator('[data-codex="gummigoo"]').click();
@@ -119,11 +120,12 @@ try {
   assert.ok(await frame.getByRole('button',{name:'Reprendre',exact:true}).isVisible());
   checked('CainOS desktop launches the shared game and minimizing pauses it');
   await page.screenshot({path:path.join(output,'cainos-integrated.png'),fullPage:true});
-  const mobile=await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true});
+  await browser.close();
+  mobileBrowser=await playwright.chromium.launch({ headless:true, executablePath:process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH || undefined, args:['--no-sandbox','--disable-dev-shm-usage','--single-process','--no-zygote'] });
+  const mobile=await mobileBrowser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true});
   const phone=await mobile.newPage();phone.on('pageerror',e=>errors.push(`mobile: ${e.message}`));
   await phone.goto(`${base}/combat/`,{waitUntil:'networkidle'});
   assert.ok(await phone.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
-  await phone.screenshot({path:path.join(output,'mobile-home.png'),fullPage:true});
   await phone.locator('.mode-card[data-mode="training"]').click();await phone.locator('[data-action="start"]').click();await phone.waitForFunction(()=>window.Encore.ready);
   assert.ok(await phone.locator('.touch-controls').isVisible());
   // Use real touch events; synthetic pointer ids cannot obtain capture in Chromium.
@@ -131,6 +133,11 @@ try {
   assert.ok(await phone.evaluate(()=>window.Encore.snapshot.fighters[0].stats.starts)>0);
   assert.ok(await phone.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
   await phone.screenshot({path:path.join(output,'mobile-fight.png'),fullPage:true});
+  // This Chromium build resets touch emulation after a full-page screenshot.
+  // Capture only after the real touch journey; no touch fixture alters the game.
+  await phone.locator('[data-action="pause"]').click();
+  await phone.locator('dialog [data-action="home"]').click();
+  await phone.screenshot({path:path.join(output,'mobile-home.png'),fullPage:true});
   checked('390px mobile layout and touch attack work without horizontal overflow');
   assert.deepEqual(errors,[]);
   await fs.writeFile(path.join(output,'browser-report.json'),JSON.stringify({base,checks,errors},null,2));
@@ -139,4 +146,4 @@ try {
   await page.screenshot({path:path.join(output,'failure.png'),fullPage:true}).catch(()=>{});
   await fs.writeFile(path.join(output,'browser-report.json'),JSON.stringify({base,checks,errors,failure:error.message},null,2));
   throw error;
-} finally{await browser.close();}
+} finally{await mobileBrowser?.close();await browser.close();}

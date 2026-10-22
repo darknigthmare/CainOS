@@ -7,8 +7,8 @@
     "dev": "vite",
     "build": "node scripts/build-static.js",
     "build:combat": "node scripts/build-combat.mjs",
-    "test:combat": "node tests/combat-engine.test.mjs && node tests/combat-session.test.mjs",
-    "qa:combat": "node --check combat/app.mjs && node --check combat/input.mjs && node --check combat/render.mjs && npm run test:combat && npm run build:combat",
+    "test:combat": "node --test tests/combat-*.test.mjs",
+    "qa:combat": "node scripts/build-combat-offline.mjs && node --check combat/app.mjs && node --check combat/input.mjs && node --check combat/render.mjs && node --check combat/offline.mjs && npm run test:combat && npm run build:combat",
     "preview": "vite preview",
     "audit": "node scripts/audit-runtime.mjs",
     "qa": "node --check app.js && node --check episodes.js && node scripts/audit-runtime.mjs && node scripts/audit-game-contract.mjs && npm run qa:combat && node scripts/build-static.js"

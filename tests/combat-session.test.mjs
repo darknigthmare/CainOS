@@ -1,10 +1,11 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { CombatEngine, FIXED_DT } from '../combat/engine.mjs';
-import { FIGHTERS, STAGES } from '../combat/data.mjs';
+import { FIGHTERS, STAGES, VARIANTS } from '../combat/data.mjs';
+import { createProgram, recordProgramResult } from '../combat/progression.mjs';
 import { InputController } from '../combat/input.mjs';
 import {
-  GAME_VERSION, SAVE_KEY, SLOT_ORDER, MAX_PACKED_INPUT, DEFAULT_SETTINGS,
+  GAME_VERSION, REPLAY_VERSIONS, SAVE_KEY, SLOT_ORDER, MAX_PACKED_INPUT, DEFAULT_SETTINGS,
   emptyProfile, cleanSettings, validateProfile, readProfile, saveProfile,
   packInput, unpackInput, appendReplayFrame, validateReplay, replayInputs,
   CHALLENGES, makeRun, createMatchStats, collectMatchStats, challengeProgress,
@@ -25,6 +26,29 @@ const engineFor = config => new CombatEngine({
   ...config, fighters: config.fighters.map(id => FIGHTERS.find(f => f.id === id)),
   stage: STAGES.find(s => s.id === config.stage),
 });
+// Migration fixtures describe existing saved records; their rewards are test
+// data, not a claim that those matches were earned through the browser.
+function populatedProfileFixture() {
+  const profile = emptyProfile();
+  Object.assign(profile.settings, { layout: 'qwerty', difficulty: 'hard', seconds: 120, rounds: 3, sound: false, music: true, musicVolume: .35, reducedMotion: true, touch: 'on' });
+  profile.settings.bindings[0].light = ['KeyC'];
+  profile.settings.bindings[1].heavy = ['KeyH', 'Numpad2'];
+  profile.stats = { matches: 27, wins: 18, losses: 9, bestSurvival: 7, damage: 157003 };
+  profile.challenges = ['combo', 'throw', 'super'];
+  profile.medals = ['arcade', 'story', 'tournament'];
+  profile.stories = ['jax', 'pomni'];
+  profile.history = [
+    { fighter: 'jax', opponent: 'caine', mode: 'story', won: true, at: '2026-10-22T12:00:00.000Z' },
+    { fighter: 'pomni', opponent: 'gangle', mode: 'survival', won: false, at: '2026-10-22T11:00:00.000Z' },
+  ];
+  const variant = VARIANTS.find(item => item.fighterId === 'jax');
+  profile.program = recordProgramResult(createProgram('story', 'jax', FIGHTERS, STAGES, { seed: 91, variantId: variant.id }), { won: true, health: 7200 });
+  return profile;
+}
+function profileStorageFixture(value) {
+  const records = new Map([[SAVE_KEY, JSON.stringify(value)]]);
+  return { getItem: key => records.get(key), setItem: (key, raw) => records.set(key, raw) };
+}
 
 test('all native input flags and all ten techniques survive packing without aliasing', () => {
   const encoded = new Set();
@@ -86,6 +110,22 @@ test('replay import validates version, roster, rules and carried survival health
   assert.equal(valid.config.fighters[0], 'pomni', 'validation takes an independent copy');
 });
 
+test('replay validation and repeated JSON export preserve each supported rules version', () => {
+  assert.deepEqual(REPLAY_VERSIONS, ['0.1.0', '0.2.0', '0.3.0', '0.4.0']);
+  for (const version of REPLAY_VERSIONS) {
+    const original = replayFixture({ version, runs: [[90, 0, 0], [1, packInput({ slot: 'specialBack' }), 0], [45, 0, 0]] });
+    const imported = validated(original);
+    const reimported = validated(JSON.parse(JSON.stringify(imported)));
+    assert.equal(imported.version, version, 'an older recording must not be upgraded to current move rules');
+    assert.deepEqual(reimported, imported);
+    assert.deepEqual([...replayInputs(reimported)], [...replayInputs(original)]);
+    assert.equal(original.frames, undefined, 'validation must not mutate the input file');
+  }
+  for (const version of [null, 3, '0.0.0', '0.5.0', '0.3.1']) {
+    assert.throws(() => validated(replayFixture({ version })), /incompatible/);
+  }
+});
+
 test('profile import keeps recognized progress and sanitizes settings without sharing defaults', () => {
   const profile = emptyProfile();
   profile.settings = { volume: Infinity, seconds: 0, rounds: 99, difficulty: 'broken', layout: 'unknown', touch: 'on', sound: false };
@@ -123,6 +163,95 @@ test('storage corruption or denied local storage does not prevent a fresh playab
   const denied = { getItem() { throw Error('denied'); }, setItem() { throw Error('denied'); } };
   assert.deepEqual(readProfile(denied), emptyProfile());
   assert.equal(saveProfile(denied, profile), false);
+});
+
+test('local recovery drops only a malformed checkpoint and preserves the full saved profile', () => {
+  const original = populatedProfileFixture();
+  const expected = { ...original, program: null };
+  const corruptPrograms = [
+    false, 'damaged', [], {},
+    { ...original.program, health: 0 },
+    { ...original.program, index: 99 },
+    { ...original.program, status: 'unknown' },
+    { ...original.program, results: [{ won: true, health: '7200' }] },
+  ];
+  for (const program of corruptPrograms) {
+    const fixture = { ...original, program };
+    const recovered = readProfile(profileStorageFixture(fixture));
+    assert.deepEqual(recovered, expected, `only program may be lost: ${JSON.stringify(program)}`);
+    assert.deepEqual(validateProfile(fixture, { strictProgram: false }), expected);
+    assert.deepEqual(recovered.settings.bindings[0].light, ['KeyC']);
+    assert.deepEqual(recovered.settings.bindings[1].heavy, ['KeyH', 'Numpad2']);
+  }
+  assert.equal(original.program.index, 1, 'recovery does not mutate the source record');
+});
+
+test('old programme versions, changed routes and retired costumes do not erase local achievements or bindings', () => {
+  const original = populatedProfileFixture();
+  const expected = { ...original, program: null };
+  const incompatible = [
+    ['old programme version', program => { program.version = 0; }],
+    ['older route with a still-known opponent', program => { program.opponents[1] = 'ragatha'; }],
+    ['older route with a still-known stage', program => { program.stages[1] = 'bigtop'; }],
+    ['retired costume', program => { program.variantId = 'jaxfather'; }],
+    ['costume no longer belonging to this fighter', program => { program.variantId = VARIANTS.find(item => item.fighterId === 'pomni').id; }],
+  ];
+  for (const [label, change] of incompatible) {
+    const fixture = structuredClone(original);
+    change(fixture.program);
+    assert.throws(() => validateProfile(fixture), label);
+    assert.deepEqual(readProfile(profileStorageFixture(fixture)), expected, label);
+  }
+});
+
+test('a recovered local profile can be saved and reloaded without losing previous progress or settings', () => {
+  const original = populatedProfileFixture();
+  original.program.index = 99;
+  const storage = profileStorageFixture(original), raw = storage.getItem(SAVE_KEY);
+  const recovered = readProfile(storage);
+  const expected = { ...original, settings: { ...original.settings, sound: true }, program: null };
+  assert.equal(storage.getItem(SAVE_KEY), raw, 'reading alone does not rewrite the stored record');
+  recovered.settings.sound = true; // A routine preference change triggers the next save.
+  assert.equal(saveProfile(storage, recovered), true);
+  assert.deepEqual(JSON.parse(storage.getItem(SAVE_KEY)), expected);
+  assert.deepEqual(readProfile(storage), expected);
+  assert.deepEqual(validateProfile(JSON.parse(storage.getItem(SAVE_KEY))), expected, 'the repaired record passes strict import too');
+});
+
+test('profile imports and direct saves remain strict unless programme recovery is explicitly requested', () => {
+  const original = populatedProfileFixture(), storage = profileStorageFixture(original);
+  const before = storage.getItem(SAVE_KEY);
+  for (const change of [
+    program => { program.index = 99; },
+    program => { program.variantId = 'jaxfather'; },
+    program => { program.version = 0; },
+  ]) {
+    const corrupt = structuredClone(original);
+    change(corrupt.program);
+    assert.throws(() => validateProfile(corrupt));
+    for (const options of [{}, { strictProgram: true }, { strictProgram: 0 }, { strictProgram: null }]) {
+      assert.throws(() => validateProfile(corrupt, options), 'only the explicit boolean false permits recovery');
+    }
+    assert.throws(() => validateProfile({ ...corrupt, strictProgram: false }), 'an imported file cannot opt itself into recovery');
+    assert.throws(() => saveProfile(storage, corrupt));
+    assert.equal(storage.getItem(SAVE_KEY), before, 'an invalid direct save cannot overwrite the last valid profile');
+    assert.deepEqual(readProfile(storage), original);
+  }
+});
+
+test('tolerant local reading preserves valid checkpoints and never accepts another profile format or version', () => {
+  const original = populatedProfileFixture();
+  assert.deepEqual(readProfile(profileStorageFixture(original)), original);
+  const recovered = validateProfile(original, { strictProgram: false });
+  assert.deepEqual(recovered, original);
+  recovered.program.opponents[0] = 'missing';
+  recovered.settings.bindings[0].light[0] = 'KeyT';
+  assert.notEqual(original.program.opponents[0], 'missing');
+  assert.deepEqual(original.settings.bindings[0].light, ['KeyC']);
+  for (const invalid of [null, {}, { ...original, format: 'unrelated' }, { ...original, version: 2 }]) {
+    assert.throws(() => validateProfile(invalid, { strictProgram: false }), /version 1/);
+    assert.deepEqual(readProfile(profileStorageFixture(invalid)), emptyProfile());
+  }
 });
 
 test('every selectable fighter receives complete arcade, boss and survival routes', () => {
@@ -407,3 +536,36 @@ test('standard gamepads provide separate player inputs and one action edge per p
   pads[0].buttons[9].pressed = true; controls.poll([], true);
   assert.equal(pauses(), 2);
 }));
+
+test('version one profiles migrate with safe bindings, quiet music and no invented progress', () => {
+  const legacy = { format:'circus-encore-profile',version:1,settings:{layout:'qwerty'},stats:{wins:3,matches:4},challenges:['combo'],medals:['arcade'] };
+  const migrated = validateProfile(legacy);
+  assert.equal(migrated.stats.wins,3);
+  assert.equal(migrated.settings.music,false);
+  assert.deepEqual(migrated.stories,[]);
+  assert.equal(migrated.program,null);
+  assert.deepEqual(migrated.settings.bindings[0].light,['KeyJ']);
+  assert.equal(cleanSettings({musicVolume:99}).musicVolume,1);
+});
+
+test('profile exports preserve canonical progress, costumes and individually earned endings', () => {
+  const profile=emptyProfile();
+  const variant=VARIANTS.find(v=>v.fighterId==='jax');
+  profile.program=recordProgramResult(createProgram('story','jax',FIGHTERS,STAGES,{seed:91,variantId:variant.id}),{won:true,health:8000});
+  profile.stories=['jax','jax','unreleased'];profile.medals=['story','tournament','fake'];
+  const clean=validateProfile(JSON.parse(JSON.stringify(profile)));
+  assert.deepEqual(clean.program,profile.program);
+  assert.deepEqual(clean.stories,['jax']);assert.deepEqual(clean.medals,['story','tournament']);
+  const corrupt=structuredClone(profile);corrupt.program.index=3;
+  assert.throws(()=>validateProfile(corrupt),/reprise/);
+});
+
+test('replays retain known costumes and reject unrelated variants while keeping 0.1 compatibility', () => {
+  const replay=replayFixture();
+  const variant=VARIANTS.find(v=>v.fighterId==='pomni');
+  replay.config.variants=[variant.id,''];
+  assert.deepEqual(validated(replay).config.variants,[variant.id,'']);
+  assert.deepEqual(validated(replayFixture({version:'0.1.0'})).config.variants,['','']);
+  replay.config.variants=['jaxfather',''];assert.throws(()=>validated(replay),/apparence/);
+  replay.config.variants=['',variant.id];assert.throws(()=>validated(replay),/apparence/);
+});

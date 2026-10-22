@@ -1,7 +1,9 @@
 const fs = require('fs');
 const path = require('path');
+const { execFileSync } = require('child_process');
 
 const root = process.cwd();
+execFileSync(process.execPath, [path.join(root, 'scripts/build-combat-offline.mjs')], { stdio: 'inherit' });
 const dist = path.join(root, 'dist');
 const files = ['index.html', 'index.css', 'app.js', 'episodes.js', 'cloud-account.js', 'favicon.png'];
 
