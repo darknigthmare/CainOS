@@ -45,6 +45,7 @@ const E = 'combat/engine.mjs', U = 'combat/app.mjs', S = 'combat/session.mjs', I
   ['INT-09','Intégration','Application mobile native','Prévu','P3','','Produire et tester les paquets natifs.'],
   ['INT-10','Intégration','Déploiement public séparé','Prévu','P2','','Publier le standalone sur une URL dédiée.','La PR contient les sources et le build séparé.'],
   ['INT-11','Intégration','Préparation et jeu hors ligne','Implémenté','P1','combat/offline.mjs / combat/sw.js',`Télécharger ${ART_FILES.length} planches (${ART_BYTES.toLocaleString('fr-FR')} octets) à la demande, afficher la progression puis recharger le jeu sans réseau.`,'La première préparation requiert le réseau et assez de stockage. Le service worker reste limité au jeu. Une mise à jour du code préserve un pack d’illustrations inchangé.'],
+  ['INT-12','Intégration','Reprise après échec de première installation','À vérifier','P0','combat/offline.mjs / combat/app.mjs','Afficher un échec explicite si la première installation du service worker échoue, libérer les attentes et permettre une nouvelle tentative depuis les réglages.','Le jeu en ligne reste accessible. La réussite hors ligne exige une installation et une préparation effectivement terminées.'],
   ['CQC-01','Moteur','Port du moteur CQC réel','Implémenté','P0',E,'La provenance identifie le commit et les modules copiés.'],
   ['CQC-02','Moteur','Simulation à pas fixe 60 Hz','Implémenté','P0',E,'Résultats identiques à 30, 60 et 120 Hz de rendu.'],
   ['CQC-03','Moteur','Dix emplacements de techniques','Implémenté','P0','combat/data.mjs','Chaque combattant possède les dix actions CQC.'],
@@ -110,6 +111,7 @@ const E = 'combat/engine.mjs', U = 'combat/app.mjs', S = 'combat/session.mjs', I
   ['PRO-07','Progression','Déblocages et économie','Prévu','P2','','Définir des conditions de déblocage lisibles et sans perte de contenu.'],
   ['PRO-08','Progression','Personnalisation de profils','Prévu','P3','','Noms, emblèmes et préférences par joueur.'],
   ['PRO-09','Progression','Reprise des programmes en cours','Implémenté','P0','combat/progression.mjs / combat/session.mjs','Arcade, boss, survie, histoire et tournoi reprennent la rencontre courante avec la même graine, les mêmes règles et la santé de départ enregistrée.','Le point de reprise est le début du duel, sans restauration d’une frame de simulation intermédiaire.'],
+  ['PRO-10','Progression','Récupération du profil après checkpoint invalide','À vérifier','P0','combat/session.mjs / combat/app.mjs','Au chargement local, abandonner uniquement le programme actif invalide et conserver les réglages, statistiques, défis, médailles, fins narratives et historique encore valides.','La prochaine sauvegarde conserve le profil normalisé. L’import manuel reste strict et refuse le fichier invalide sans remplacer le profil courant.'],
   ['PRD-01','Production','Excel relié aux données du jeu','Implémenté','P0','scripts/build-combat-workbook.mjs','Régénérer les onglets depuis les définitions et conserver les preuves.'],
   ['PRD-02','Production','Inventaire reproductible des sprites','Implémenté','P0','scripts/build-combat-catalog.mjs','Extraction de toutes les entrées sans exécuter CainOS.'],
   ['PRD-03','Production','Tests déterministes du moteur','Implémenté','P0','tests/combat-engine.test.mjs','Les cas automatisés doivent tous passer dans le commit publié.'],
@@ -213,6 +215,7 @@ const suiteInfo = {
   bindings: ['BIND', 'Commandes personnalisables', 'Liaisons indépendantes, conflits rejetés et entrées cohérentes après remappage'],
   progression: ['PROG', 'Programmes et reprise', 'Routes, tournoi déterministe et points de reprise validés'],
   audio: ['AUD', 'Audio synthétique', 'Thèmes et effets définis ; cycle de vie du son vérifié'],
+  offline: ['OFFLINE', 'Installation web', 'Échecs explicites, nouvelle tentative, délais bornés et ressources libérées'],
   pwa: ['PWA', 'Distribution hors ligne', 'Cache, portée et reprise hors ligne vérifiés'],
 };
 const discoveredSuites = (await fs.readdir(path.join(root, 'tests'))).filter(name => /^combat-.*\.test\.mjs$/.test(name) && !['combat-engine.test.mjs', 'combat-session.test.mjs'].includes(name)).sort().map(name => {
@@ -245,8 +248,10 @@ const reviewCases = [
   ['story','Parcours','Jouer une route narrative jusqu’à sa conclusion','P0','Les quatre rencontres suivent leurs arènes, dialogues et adversaires ; la fin correspond au combattant choisi.'],
   ['tournament','Parcours','Terminer un tournoi et vérifier son tableau','P0','Huit participants, quatre quarts, deux demies et une finale ; les résultats joués et simulés sont distingués.'],
   ['program-resume','Persistance','Recharger puis reprendre un programme actif','P0','Le même combat recommence au point de reprise documenté, avec sa graine, son adversaire et sa santé de départ.'],
+  ['profile-recovery','Persistance','Récupérer un profil local dont le programme est invalide','P0','Seul le checkpoint invalide est abandonné ; les autres données valides survivent aux réglages, au rechargement et aux événements inter-onglets. L’import manuel demeure strict.'],
   ['bindings','Commandes','Remapper les deux joueurs et refuser un conflit','P0','Une touche personnalisée fonctionne en combat ; les doublons sont refusés ; les réglages survivent au rechargement.'],
   ['offline','Distribution','Recharger le standalone sans réseau après préparation','P0','Après mise en cache réussie, le menu et un combat chargé restent disponibles hors ligne sans l’environnement CainOS.'],
+  ['offline-install-recovery','Distribution','Échouer puis relancer la première installation hors ligne','P0','Un téléchargement essentiel en erreur produit un état explicite ; Réessayer démarre une nouvelle installation après retour du réseau, sans attente ni écouteur abandonné.'],
   ['audio','Présentation','Vérifier thèmes, mixage et pause sonore','P1','Chaque arène possède son thème ; la musique suit le réglage, se suspend pendant la pause et n’empile pas de boucles à la reprise.'],
   ['training','Parcours','Tester chaque dummy d’entraînement','P1','Comportement, réglage et reset réels.'],
   ['challenges','Parcours','Terminer les six défis','P1','Chaque métrique déclenche uniquement son objectif.'],
@@ -273,6 +278,10 @@ for (const q of evidence.additionalCases || []) {
   qa.push([`QA-${q.id}`, q.area || 'Navigateur automatisé', q.name, q.status, q.priority || 'P1', q.method || 'Parcours navigateur automatisé', q.proof || '', q.expected || '', '']);
 }
 if (new Set(qa.map(row => row[0])).size !== qa.length) throw new Error('Duplicate QA evidence IDs');
+const verifiedNodeCount = nodeSuites.reduce((sum,suite)=>sum+(evidence[`${suite.key}Passed`]?evidence[`${suite.key}Count`]||0:0),0);
+const verifiedBrowserCount = (evidence.additionalCases || []).filter(check => check.status === 'Réussi').length;
+if (evidence.nodeTestCount !== undefined && evidence.nodeTestCount !== verifiedNodeCount) throw new Error(`QA Node total does not match its suites: ${evidence.nodeTestCount} / ${verifiedNodeCount}`);
+if (evidence.browserCheckCount !== undefined && evidence.browserCheckCount !== verifiedBrowserCount) throw new Error(`QA browser total does not match its cases: ${evidence.browserCheckCount} / ${verifiedBrowserCount}`);
 
 const workbook = Workbook.create();
 const sheets = Object.fromEntries(['Synthèse','Fonctionnalités','Combattants','Techniques','Arènes','Atlas','Production','Scénarios','QA','Références'].map(name => [name,workbook.worksheets.add(name)]));
@@ -369,8 +378,7 @@ summary.getRange('B11').formulas=[[`=COUNTIFS('Atlas'!C6:C${atlas.length+5},"Var
 summary.getRange('C7:F11').values=[['Partiel','À vérifier','Combattants',''],['Partiel','À vérifier','Techniques',''],['Partiel','À vérifier','Arènes',''],['Existant','n.a.','Atlas',''],['Existant','n.a.','Atlas','']];
 summary.getRange('H6:H10').values=[['Priorités de finition'],['Animations de combat dédiées'],['Équilibrage des 14 kits'],['Validation des costumes et du lore'],['Essais tactiles et manettes réels']];
 summary.getRange('H6').format.font={bold:true,color:colors.purple};
-const verifiedNodeCount = nodeSuites.reduce((sum,suite)=>sum+(evidence[`${suite.key}Passed`]?evidence[`${suite.key}Count`]||0:0),0);
-summary.getRange('H12:H16').values=[['Preuves disponibles'],[`${verifiedNodeCount} tests Node dans ${nodeSuites.filter(suite=>evidence[`${suite.key}Passed`]).length} suites exécutées`],[`${(evidence.additionalCases||[]).filter(q=>q.status==='Réussi').length} contrôles navigateur réussis`],['Le total QA inclut les objectifs de revue.'],['Leurs assertions peuvent se recouper.']];
+summary.getRange('H12:H16').values=[['Preuves disponibles'],[`${verifiedNodeCount} tests Node dans ${nodeSuites.filter(suite=>evidence[`${suite.key}Passed`]).length} suites exécutées`],[`${verifiedBrowserCount} contrôles navigateur réussis`],['Le total QA inclut les objectifs de revue.'],['Leurs assertions peuvent se recouper.']];
 summary.getRange('H12').format.font={bold:true,color:colors.purple};
 summary.getRange('H18').values=[['Contenu de cette version']];summary.getRange('H18').format.font={bold:true,color:colors.purple};
 summary.getRange('H19').formulas=[[`=COUNTIFS('Scénarios'!B6:B${scenarioRows.length+5},"Route individuelle")&" routes originales"`]];
@@ -425,6 +433,17 @@ for(const name of Object.keys(sheets).filter(name=>!renderSheets.length||renderS
   await fs.writeFile(path.join(previewDir,`${name.normalize('NFD').replace(/[\u0300-\u036f]/g,'')}.png`),new Uint8Array(await preview.arrayBuffer()));
   const detailRange=name==='QA'?`A${Math.max(5,qa.length-4)}:D${qa.length+5}`:name==='Techniques'?'I5:R15':name==='Combattants'?'N5:U11':name==='Atlas'?'P125:S134':name==='Scénarios'?'A15:H19':name==='Arènes'?'M5:N12':name==='Production'?`A${production.length-7}:I${production.length-4}`:null;
   if(detailRange){const detail=await workbook.render({sheetName:name,range:detailRange,scale:1,format:'png'});await fs.writeFile(path.join(previewDir,`${name.normalize('NFD').replace(/[\u0300-\u036f]/g,'')}-details.png`),new Uint8Array(await detail.arrayBuffer()));}
+  if(name==='Fonctionnalités')for(const [id,label] of [['INT-12','installation'],['PRO-10','profil']]){
+    const row=features.findIndex(feature=>feature[0]===id)+6;
+    const detail=await workbook.render({sheetName:name,range:`A${row}:H${row}`,scale:1,format:'png'});
+    await fs.writeFile(path.join(previewDir,`Fonctionnalites-${label}.png`),new Uint8Array(await detail.arrayBuffer()));
+  }
+  if(name==='QA')for(const [prefix,label] of [['QA-REC-','installation'],['QA-RPRO-','profil']]){
+    const indices=qa.map((row,index)=>row[0].startsWith(prefix)?index+6:null).filter(row=>row!==null);
+    if(!indices.length)continue;
+    const detail=await workbook.render({sheetName:name,range:`A${indices[0]}:G${indices.at(-1)}`,scale:1,format:'png'});
+    await fs.writeFile(path.join(previewDir,`QA-${label}.png`),new Uint8Array(await detail.arrayBuffer()));
+  }
 }
 const file=await SpreadsheetFile.exportXlsx(workbook);
 await file.save(path.join(out,'DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx'));

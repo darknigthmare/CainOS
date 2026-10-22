@@ -48,7 +48,7 @@ function refreshStoredProfile() {
   try {
     const raw = storage.getItem(SAVE_KEY);
     if (!raw) return;
-    const latest = validateProfile(JSON.parse(raw));
+    const latest = validateProfile(JSON.parse(raw), { strictProgram: false });
     latest.settings = profile.settings;
     profile = latest;
   } catch { /* The current session remains playable and exportable. */ }
@@ -181,7 +181,7 @@ function renderSettings() {
     <section class="settings-block offline-block"><h2>Emporter le spectacle</h2>
       <p class="small-note">Télécharge toutes les illustrations pour jouer sans connexion. Ouvre ensuite le raccourci installé ou cette page du jeu directement. Ton navigateur peut libérer ce téléchargement si son stockage manque.</p>
       <p id="offline-status" role="status"></p><progress id="offline-progress" max="1" value="0" aria-label="Illustrations disponibles hors ligne"></progress>
-      <div class="modal-actions"><button class="primary" data-action="offline-prepare">Télécharger le spectacle</button><button class="secondary" data-action="offline-install" hidden>Installer le jeu</button><button class="secondary" data-action="offline-update" hidden>Appliquer la mise à jour</button><button class="text-button" data-action="offline-clear">Libérer les illustrations</button></div>
+      <div class="modal-actions"><button class="secondary" data-action="offline-retry" hidden>Réessayer le mode hors ligne</button><button class="primary" data-action="offline-prepare">Télécharger le spectacle</button><button class="secondary" data-action="offline-install" hidden>Installer le jeu</button><button class="secondary" data-action="offline-update" hidden>Appliquer la mise à jour</button><button class="text-button" data-action="offline-clear">Libérer les illustrations</button></div>
       <p id="offline-error" class="small-note" role="status"></p>
     </section>
   </div>
@@ -194,8 +194,10 @@ function renderSettings() {
 function updateOfflinePanel() {
   if (screen !== 'settings' || !$('#offline-status')) return;
   const state = offline.getState();
-  $('#offline-status').textContent = !state.supported ? 'Le hors ligne nécessite HTTPS ou localhost et un navigateur compatible.' : !state.ready ? 'Préparation du mode hors ligne…' : state.complete ? 'Spectacle prêt hors ligne · ' + state.cached + ' illustrations.' : (state.busy ? 'Téléchargement : ' : 'Illustrations disponibles : ') + state.cached + '/' + state.total + ' · ' + Math.ceil(state.bytes/1048576) + ' Mo pour le pack complet.';
+  $('#offline-status').textContent = !state.supported ? 'Le hors ligne nécessite HTTPS ou localhost et un navigateur compatible.' : !state.ready ? (state.initError ? 'Le mode hors ligne est indisponible. Tu peux réessayer.' : 'Préparation du mode hors ligne…') : state.complete ? 'Spectacle prêt hors ligne · ' + state.cached + ' illustrations.' : (state.busy ? 'Téléchargement : ' : 'Illustrations disponibles : ') + state.cached + '/' + state.total + ' · ' + Math.ceil(state.bytes/1048576) + ' Mo pour le pack complet.';
   $('#offline-progress').max = state.total || 1; $('#offline-progress').value = state.cached;
+  $('[data-action="offline-retry"]').hidden = !state.supported || state.ready || !state.initError;
+  $('[data-action="offline-retry"]').disabled = state.busy;
   $('[data-action="offline-prepare"]').disabled = !state.ready || state.busy;
   $('[data-action="offline-clear"]').disabled = !state.ready || state.busy;
   $('[data-action="offline-install"]').hidden = !state.installable || embedded;
@@ -489,6 +491,7 @@ async function handleClick(event){
       case 'bracket':showBracket();break;
       case 'result-screen':renderMatchResult();break;
       case 'reset-bindings':profile.settings=cleanSettings({...profile.settings,bindings:DEFAULT_BINDINGS});persist();renderSettings();toast('Touches par défaut rétablies.');break;
+      case 'offline-retry':await offline.init();if(offline.getState().ready)toast('Le mode hors ligne est prêt.');break;
       case 'offline-prepare':await offline.prepare();toast('Le spectacle est prêt pour une visite hors ligne.');break;
       case 'offline-clear':await offline.clearAssets();toast('Illustrations libérées. Le profil est conservé.');break;
       case 'offline-install':await offline.install();break;

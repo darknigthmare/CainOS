@@ -3,7 +3,9 @@
   "enginePassed": true,
   "sessionPassed": true,
   "featureStatuses": {
-    "PRD-04": "Implémenté"
+    "PRD-04": "Implémenté",
+    "INT-12": "Implémenté",
+    "PRO-10": "Implémenté"
   },
   "cases": {
     "boot": {
@@ -39,22 +41,22 @@
     "local": {
       "status": "Réussi",
       "method": "node tests/combat-progression-browser.mjs · Chromium headless",
-      "proof": "Duel local réellement terminé en 2 282 frames, résultat sauvegardé et replay de 611 séquences d’entrées. Les commandes de J2 sont indépendantes."
+      "proof": "Duel local réellement terminé en 2 282 frames, résultat sauvegardé et replay de 611 séquences d’entrées. Les commandes de J2 sont indépendantes."
     },
     "arcade": {
       "status": "À vérifier",
       "method": "node tests/combat-progression-browser.mjs · Chromium headless",
-      "proof": "Première victoire réelle contre Kaufmo abstrait puis passage à Gangle, acte 2/6. La longueur et la reprise sont couvertes par contrat ; le parcours complet et sa médaille ne sont pas revendiqués dans le navigateur."
+      "proof": "Première victoire réelle contre Bubble, puis passage à Pomni, acte 2/6. La longueur et la reprise sont couvertes par contrat ; le parcours intégral et sa médaille ne sont pas revendiqués dans le navigateur."
     },
     "boss": {
       "status": "À vérifier",
       "method": "node tests/combat-progression-browser.mjs · Chromium headless",
-      "proof": "Première victoire réelle contre Gloink Queen puis passage à The Fudge, acte 2/4. Le parcours intégral et sa médaille restent à jouer dans le navigateur."
+      "proof": "Première victoire réelle contre Gloink Queen, puis passage à The Fudge, acte 2/4. La longueur et la reprise sont couvertes par contrat ; le parcours intégral et sa médaille ne sont pas revendiqués dans le navigateur."
     },
     "survival": {
       "status": "Réussi",
       "method": "node tests/combat-progression-browser.mjs · Chromium headless",
-      "proof": "Victoire réelle contre le Baron : 6 921 PV deviennent 8 121 au duel contre Loolilalu. Le bonus de 1 200 PV est appliqué ; le plafond de 10 000 et les dix vagues sont couverts par contrats Node."
+      "proof": "Victoire réelle contre Pomni : 8 656 PV deviennent 9 856 au duel contre Kaufmo — abstraction. Le bonus de 1 200 PV est appliqué ; le plafond de 10 000 et les dix vagues sont couverts par contrats Node."
     },
     "training": {
       "status": "À vérifier",
@@ -98,8 +100,8 @@
     },
     "regression": {
       "status": "Réussi",
-      "method": "npm run qa · audit-combat/qa-0.2.0.log + six TAP individuels",
-      "proof": "22 octobre 2026 : audits CainOS et deux builds réussis ; 122 cas Node réussis dans six suites (121 à la QA globale, puis 16/16 commandes après correction ciblée du focus). Pack : 42 planches originales, 47 345 031 octets."
+      "method": "npm run qa + sept TAP canoniques audit-combat/combat-*.test.tap",
+      "proof": "22 octobre 2026 : audits CainOS et deux builds réexécutés avec succès après correction ; 141 cas Node réussis dans sept suites. Pack hors ligne : 42 planches originales, 47 345 031 octets."
     },
     "tracker-proof": {
       "status": "Réussi",
@@ -135,6 +137,16 @@
       "status": "Réussi",
       "method": "node tests/combat-offline-browser.mjs / tests/combat-audio.test.mjs",
       "proof": "Contexte WebAudio réel ouvert après geste, musique active avec bruitages coupés, voix bornées. Pause : simulation figée et voix libérées ; reprise du thème d’arène. Les douze arrangements et le cycle de vie sont aussi vérifiés par contexte/horloge simulés. Écoute sur matériel physique non effectuée."
+    },
+    "profile-recovery": {
+      "status": "Réussi",
+      "method": "tests/combat-session.test.mjs / tests/combat-profile-recovery-browser.mjs",
+      "proof": "Chargement local d’une fixture de migration dont seul le checkpoint est invalide : programme abandonné et autres données valides conservées. Conservation après changement de réglage et rechargement, vrai événement storage depuis un second onglet et import UI invalide refusé sans remplacement du profil. Le défi Spécialiste est réellement accompli au clavier pendant le contrôle de rafraîchissement ; les autres récompenses sont des données de migration."
+    },
+    "offline-install-recovery": {
+      "status": "Réussi",
+      "method": "tests/combat-offline.test.mjs / tests/combat-recovery-browser.mjs",
+      "proof": "Une première installation volontairement interrompue affiche une erreur et une commande Réessayer. Après rétablissement des ressources, une nouvelle tentative aboutit depuis l’interface. Les délais, appels concurrents et libérations d’écouteurs sont vérifiés par les contrats Node ; les mises à jour conservent le worker actif."
     }
   },
   "additionalCases": [
@@ -145,7 +157,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · 11/11 contrôles, 0 erreur JS/HTTP",
+      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP",
       "expected": "Nine modes and standalone home render"
     },
     {
@@ -155,7 +167,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · 11/11 contrôles, 0 erreur JS/HTTP",
+      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP",
       "expected": "Codex changes fighter and shows ten authored moves"
     },
     {
@@ -165,7 +177,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · 11/11 contrôles, 0 erreur JS/HTTP",
+      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP",
       "expected": "Archive search filters real records"
     },
     {
@@ -175,7 +187,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · 11/11 contrôles, 0 erreur JS/HTTP",
+      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP",
       "expected": "Settings persist across reload"
     },
     {
@@ -185,7 +197,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · 11/11 contrôles, 0 erreur JS/HTTP",
+      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP",
       "expected": "Training loads and responds to keyboard movement/attack"
     },
     {
@@ -195,7 +207,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · 11/11 contrôles, 0 erreur JS/HTTP",
+      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP",
       "expected": "Pause stops simulation and resume restarts"
     },
     {
@@ -205,7 +217,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · 11/11 contrôles, 0 erreur JS/HTTP",
+      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP",
       "expected": "Move list pauses and resumes the current encounter"
     },
     {
@@ -215,7 +227,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · 11/11 contrôles, 0 erreur JS/HTTP",
+      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP",
       "expected": "Player 2 has independent local controls"
     },
     {
@@ -225,7 +237,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · 11/11 contrôles, 0 erreur JS/HTTP",
+      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP",
       "expected": "Challenge completion persists an earned result"
     },
     {
@@ -235,7 +247,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · 11/11 contrôles, 0 erreur JS/HTTP",
+      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP",
       "expected": "CainOS desktop launches the shared game and minimizing pauses it"
     },
     {
@@ -245,7 +257,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · 11/11 contrôles, 0 erreur JS/HTTP",
+      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP",
       "expected": "390px mobile layout and touch attack work without horizontal overflow"
     },
     {
@@ -255,7 +267,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-progression-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · 10/10 contrôles, 0 erreur JS/HTTP · 2282 simulation frames, 611 input runs",
+      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 10/10 contrôles, 0 erreur JS/HTTP · 2282 simulation frames, 611 input runs",
       "expected": "A real local match saves its result and replay"
     },
     {
@@ -265,7 +277,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-progression-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · 10/10 contrôles, 0 erreur JS/HTTP",
+      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 10/10 contrôles, 0 erreur JS/HTTP",
       "expected": "UI replay reproduces the full terminal snapshot without changing profile"
     },
     {
@@ -275,7 +287,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-progression-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · 10/10 contrôles, 0 erreur JS/HTTP · abstractedkaufmo → gangle, player HP 8189 → 10000",
+      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 10/10 contrôles, 0 erreur JS/HTTP · bubble → pomni, player HP 8688 → 10000",
       "expected": "arcade: earned first win opens encounter 2/6"
     },
     {
@@ -285,7 +297,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-progression-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · 10/10 contrôles, 0 erreur JS/HTTP · gloinkqueen → fudge, player HP 6864 → 10000",
+      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 10/10 contrôles, 0 erreur JS/HTTP · gloinkqueen → fudge, player HP 10000 → 10000",
       "expected": "boss: earned first win opens encounter 2/4"
     },
     {
@@ -295,7 +307,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-progression-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · 10/10 contrôles, 0 erreur JS/HTTP · baronmildenhall → loolilalu, player HP 6921 → 8121",
+      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 10/10 contrôles, 0 erreur JS/HTTP · pomni → abstractedkaufmo, player HP 8656 → 9856",
       "expected": "survival: earned first win opens encounter 2/10"
     },
     {
@@ -305,7 +317,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-progression-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · 10/10 contrôles, 0 erreur JS/HTTP",
+      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 10/10 contrôles, 0 erreur JS/HTTP",
       "expected": "Earned progression and settings survive a page reload"
     },
     {
@@ -315,7 +327,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-progression-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · 10/10 contrôles, 0 erreur JS/HTTP",
+      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 10/10 contrôles, 0 erreur JS/HTTP",
       "expected": "Malformed profile, JSON and packed replay inputs are rejected without data loss"
     },
     {
@@ -325,8 +337,8 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-progression-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · 10/10 contrôles, 0 erreur JS/HTTP · Not a claim that all final medals were earned through UI",
-      "expected": "Contrat de longueur des parcours. Les parcours classiques ne sont pas revendiqués comme terminés intégralement dans le navigateur."
+      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 10/10 contrôles, 0 erreur JS/HTTP · Not a claim that all final medals were earned through UI",
+      "expected": "Contrat de longueur des parcours uniquement. Les médailles finales n’ont pas été jouées dans le navigateur."
     },
     {
       "id": "PRG-09",
@@ -335,7 +347,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-progression-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · 10/10 contrôles, 0 erreur JS/HTTP · 26 local resources",
+      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 10/10 contrôles, 0 erreur JS/HTTP · 26 local resources",
       "expected": "Built standalone plays on a second origin without the OS runtime"
     },
     {
@@ -345,7 +357,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-progression-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · 10/10 contrôles, 0 erreur JS/HTTP · Specialist → Super via real controls; sound and both rewards survive setItem failure; Escape preserves the result actions twice",
+      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 10/10 contrôles, 0 erreur JS/HTTP · Specialist → Super via real controls; sound and both rewards survive setItem failure; Escape preserves the result actions twice",
       "expected": "Denied storage retains two rewards for export; terminal dialogs survive Escape"
     },
     {
@@ -355,7 +367,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-encore-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · 8/8 contrôles, 0 erreur JS/HTTP, 9 duels joués · Jax’s first duel is genuinely won; the second scene and its original starting health survive reload",
+      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 8/8 contrôles, 0 erreur JS/HTTP · Jax’s first duel is genuinely won; the second scene and its original starting health survive reload",
       "expected": "Story victory checkpoint reloads into chapter 2 without a duplicate reward"
     },
     {
@@ -365,7 +377,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-encore-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · 8/8 contrôles, 0 erreur JS/HTTP, 9 duels joués · Gangle → Zooble → Ragatha → Caine; profile records four wins, one completed route and no remaining checkpoint",
+      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 8/8 contrôles, 0 erreur JS/HTTP · Gangle → Zooble → Ragatha → Caine; profile records four wins, one completed route and no remaining checkpoint",
       "expected": "Four genuine Jax story wins show all authored scenes, unique ending and earned story medal"
     },
     {
@@ -375,7 +387,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-encore-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · 8/8 contrôles, 0 erreur JS/HTTP, 9 duels joués · Fixture has zero player results; three quarter-finals are explicitly identified as CPU simulations",
+      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 8/8 contrôles, 0 erreur JS/HTTP · Fixture has zero player results; three quarter-finals are explicitly identified as CPU simulations",
       "expected": "Seeded tournament import displays eight artists and seven real bracket slots"
     },
     {
@@ -385,7 +397,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-encore-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · 8/8 contrôles, 0 erreur JS/HTTP, 9 duels joués · Same participants, CPU outcomes, next rival and rules; profile match count remains unchanged by reload",
+      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 8/8 contrôles, 0 erreur JS/HTTP · Same participants, CPU outcomes, next rival and rules; profile match count remains unchanged by reload",
       "expected": "Tournament bracket and semifinal resume after a real quarter-final win"
     },
     {
@@ -395,7 +407,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-encore-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · 8/8 contrôles, 0 erreur JS/HTTP, 9 duels joués · Seven resolved matches: three played by the keyboard user and four explicitly simulated CPU matches",
+      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 8/8 contrôles, 0 erreur JS/HTTP · Seven resolved matches: three played by the keyboard user and four explicitly simulated CPU matches",
       "expected": "Three genuine tournament wins earn the cup and the tournament medal"
     },
     {
@@ -405,7 +417,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-encore-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · 8/8 contrôles, 0 erreur JS/HTTP, 9 duels joués · The real CPU wins; remaining results are simulated and retry resets index/results while preserving the recorded loss",
+      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 8/8 contrôles, 0 erreur JS/HTTP · The real CPU wins; remaining results are simulated and retry resets index/results while preserving the recorded loss",
       "expected": "Tournament loss eliminates without a medal; replay starts a fresh bracket attempt"
     },
     {
@@ -415,7 +427,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-encore-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · 8/8 contrôles, 0 erreur JS/HTTP, 9 duels joués · The second chapter restarts with unchanged seed/rival/full health; the first victory and the later loss are each counted once",
+      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 8/8 contrôles, 0 erreur JS/HTTP · The second chapter restarts with unchanged seed/rival/full health; the first victory and the later loss are each counted once",
       "expected": "Story defeat and retry retain the genuinely earned previous chapter, including after reload"
     },
     {
@@ -425,7 +437,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-encore-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · 8/8 contrôles, 0 erreur JS/HTTP, 9 duels joués · Cancel leaves the story checkpoint intact; start-new replaces only the active route",
+      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 8/8 contrôles, 0 erreur JS/HTTP · Cancel leaves the story checkpoint intact; start-new replaces only the active route",
       "expected": "Replacing a saved programme requires the visible UI choice and preserves the existing record"
     },
     {
@@ -435,7 +447,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-offline-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · 11/11 contrôles, 0 erreur JS/HTTP · J1 light = F; labels follow AZERTY/QWERTY",
+      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP · J1 light = F; labels follow AZERTY/QWERTY",
       "expected": "Custom keys reject conflicts and reserved shortcuts, allow alternatives, and persist"
     },
     {
@@ -445,7 +457,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-offline-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · 11/11 contrôles, 0 erreur JS/HTTP · Effects off; music on; bounded voices",
+      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP · Effects off; music on; bounded voices",
       "expected": "Original procedural music starts from a gesture with an independent mute"
     },
     {
@@ -455,7 +467,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-offline-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · 11/11 contrôles, 0 erreur JS/HTTP",
+      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP",
       "expected": "Remapped attack reaches the engine and move list while the old key stays inactive"
     },
     {
@@ -465,7 +477,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-offline-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · 11/11 contrôles, 0 erreur JS/HTTP",
+      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP",
       "expected": "Live combo label clears after recovery while the best result combo remains"
     },
     {
@@ -475,7 +487,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-offline-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · 11/11 contrôles, 0 erreur JS/HTTP",
+      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP",
       "expected": "Pause stops simulation and releases audio voices; resume restores the stage theme"
     },
     {
@@ -485,7 +497,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-offline-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · 11/11 contrôles, 0 erreur JS/HTTP · 47,345,031 bytes; explicit UI action and completion state",
+      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP · 47,345,031 bytes; explicit UI action and completion state",
       "expected": "The standalone downloads all 42 original sprite sheets"
     },
     {
@@ -495,7 +507,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-offline-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · 11/11 contrôles, 0 erreur JS/HTTP · Network disabled; profile preserved; real keyboard movement",
+      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP · Network disabled; profile preserved; real keyboard movement",
       "expected": "A cold page reload and a different fighter/stage remain playable offline"
     },
     {
@@ -505,7 +517,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-offline-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · 11/11 contrôles, 0 erreur JS/HTTP · No automatic reload; all 42 images and the profile survive activation",
+      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP · No automatic reload; all 42 images and the profile survive activation",
       "expected": "A waiting service worker updates only through the UI and preserves the unchanged art pack"
     },
     {
@@ -515,7 +527,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-offline-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · 11/11 contrôles, 0 erreur JS/HTTP",
+      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP",
       "expected": "The offline worker is limited to /combat/ and leaves other application documents uncontrolled"
     },
     {
@@ -525,7 +537,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-offline-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · 11/11 contrôles, 0 erreur JS/HTTP",
+      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP",
       "expected": "Clearing downloaded illustrations preserves custom keys and all profile data"
     },
     {
@@ -535,8 +547,88 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-offline-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · 11/11 contrôles, 0 erreur JS/HTTP",
+      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP",
       "expected": "The expanded settings and key mapper fit a 390-pixel viewport"
+    },
+    {
+      "id": "REC-01",
+      "area": "Installation web",
+      "name": "A failed first offline-cache installation exits preparation and exposes an enabled retry",
+      "status": "Réussi",
+      "priority": "P0",
+      "method": "node tests/combat-recovery-browser.mjs · Chromium headless",
+      "proof": "22 octobre 2026 · 3/3 contrôles, 0 erreur JS non attendue · Real HTTP 503 during cache.addAll; online settings remain usable",
+      "expected": "A failed first offline-cache installation exits preparation and exposes an enabled retry"
+    },
+    {
+      "id": "REC-02",
+      "area": "Installation web",
+      "name": "The retry button registers a working service worker without reloading or losing the profile",
+      "status": "Réussi",
+      "priority": "P0",
+      "method": "node tests/combat-recovery-browser.mjs · Chromium headless",
+      "proof": "22 octobre 2026 · 3/3 contrôles, 0 erreur JS non attendue · Same page and profile; active /combat/ worker; initialization errors cleared",
+      "expected": "The retry button registers a working service worker without reloading or losing the profile"
+    },
+    {
+      "id": "REC-03",
+      "area": "Installation web",
+      "name": "The recovered installation downloads the full pack and survives an offline cold reload",
+      "status": "Réussi",
+      "priority": "P0",
+      "method": "node tests/combat-recovery-browser.mjs · Chromium headless",
+      "proof": "22 octobre 2026 · 3/3 contrôles, 0 erreur JS non attendue · 42 illustrations; 47,345,031 bytes; profile preserved",
+      "expected": "The recovered installation downloads the full pack and survives an offline cold reload"
+    },
+    {
+      "id": "RPRO-01",
+      "area": "Récupération du profil",
+      "name": "Startup drops only the corrupt checkpoint",
+      "status": "Réussi",
+      "priority": "P0",
+      "method": "node tests/combat-profile-recovery-browser.mjs · Chromium headless",
+      "proof": "22 octobre 2026 · 5/5 contrôles, 0 erreur JS non attendue · A migration fixture retains all statistics, challenges, medals, endings, history, preferences and both custom keyboard maps.",
+      "expected": "Startup drops only the corrupt checkpoint"
+    },
+    {
+      "id": "RPRO-02",
+      "area": "Récupération du profil",
+      "name": "A routine preference save and reload preserve the recovered profile",
+      "status": "Réussi",
+      "priority": "P0",
+      "method": "node tests/combat-profile-recovery-browser.mjs · Chromium headless",
+      "proof": "22 octobre 2026 · 5/5 contrôles, 0 erreur JS non attendue · Sound is enabled through the settings UI; the repaired save has program:null and every prior achievement/binding remains.",
+      "expected": "A routine preference save and reload preserve the recovered profile"
+    },
+    {
+      "id": "RPRO-03",
+      "area": "Récupération du profil",
+      "name": "A real cross-tab storage event preserves progress despite an obsolete costume",
+      "status": "Réussi",
+      "priority": "P0",
+      "method": "node tests/combat-profile-recovery-browser.mjs · Chromium headless",
+      "proof": "22 octobre 2026 · 5/5 contrôles, 0 erreur JS non attendue · The incoming fixture replaces stats, history, achievements and the J1 binding; only its invalid checkpoint is discarded.",
+      "expected": "A real cross-tab storage event preserves progress despite an obsolete costume"
+    },
+    {
+      "id": "RPRO-04",
+      "area": "Récupération du profil",
+      "name": "Reward refresh repairs the incompatible disk checkpoint without erasing the record",
+      "status": "Réussi",
+      "priority": "P0",
+      "method": "node tests/combat-profile-recovery-browser.mjs · Chromium headless",
+      "proof": "22 octobre 2026 · 5/5 contrôles, 0 erreur JS non attendue · Specialist is actually completed with four keyboard techniques; only that new reward is added to the migration fixture, and reload preserves it.",
+      "expected": "Reward refresh repairs the incompatible disk checkpoint without erasing the record"
+    },
+    {
+      "id": "RPRO-05",
+      "area": "Récupération du profil",
+      "name": "Manual file import remains strict and preserves the existing profile",
+      "status": "Réussi",
+      "priority": "P0",
+      "method": "node tests/combat-profile-recovery-browser.mjs · Chromium headless",
+      "proof": "22 octobre 2026 · 5/5 contrôles, 0 erreur JS non attendue · An invalid costume is rejected with an error before the replacement prompt; neither the in-memory profile nor its stored copy changes.",
+      "expected": "Manual file import remains strict and preserves the existing profile"
     }
   ],
   "engineCount": 40,
@@ -583,8 +675,8 @@
     "Bubble projectiles originate inside its authored small body and hit a standing opponent"
   ],
   "engineSourceSha256": "5fb1260ef501eadf1e55bd879d70ee872ca10ea60f78a5b807fda35f112d0485",
-  "engineProof": "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
-  "sessionCount": 26,
+  "engineProof": "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-engine.test.tap)",
+  "sessionCount": 31,
   "sessionTestNames": [
     "all native input flags and all ten techniques survive packing without aliasing",
     "replay runs compress held inputs, split long runs and reproduce the exact frame sequence",
@@ -592,6 +684,11 @@
     "replay import validates version, roster, rules and carried survival health",
     "profile import keeps recognized progress and sanitizes settings without sharing defaults",
     "storage corruption or denied local storage does not prevent a fresh playable profile",
+    "local recovery drops only a malformed checkpoint and preserves the full saved profile",
+    "old programme versions, changed routes and retired costumes do not erase local achievements or bindings",
+    "a recovered local profile can be saved and reloaded without losing previous progress or settings",
+    "profile imports and direct saves remain strict unless programme recovery is explicitly requested",
+    "tolerant local reading preserves valid checkpoints and never accepts another profile format or version",
     "every selectable fighter receives complete arcade, boss and survival routes",
     "challenge first-impact can be completed from normal spawns within 60 seconds",
     "challenge guard can be completed from normal spawns within 60 seconds",
@@ -613,8 +710,8 @@
     "profile exports preserve canonical progress, costumes and individually earned endings",
     "replays retain known costumes and reject unrelated variants while keeping 0.1 compatibility"
   ],
-  "sessionSourceSha256": "0e4e2a177794fe3da6c1842080ee8ed1446a0094e6fee91ec459157a8ba0924f",
-  "sessionProof": "node --test-reporter=tap tests/combat-session.test.mjs — 26/26 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+  "sessionSourceSha256": "40d111e9f967b430777ec853048e368593542f3d2689f02a0177a65bf16b3d54",
+  "sessionProof": "node --test-reporter=tap tests/combat-session.test.mjs — 31/31 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-session.test.tap)",
   "browserReports": {
     "ui": {
       "base": "http://127.0.0.1:4178",
@@ -692,17 +789,17 @@
         },
         {
           "name": "arcade: earned first win opens encounter 2/6",
-          "detail": "abstractedkaufmo → gangle, player HP 8189 → 10000",
+          "detail": "bubble → pomni, player HP 8688 → 10000",
           "pass": true
         },
         {
           "name": "boss: earned first win opens encounter 2/4",
-          "detail": "gloinkqueen → fudge, player HP 6864 → 10000",
+          "detail": "gloinkqueen → fudge, player HP 10000 → 10000",
           "pass": true
         },
         {
           "name": "survival: earned first win opens encounter 2/10",
-          "detail": "baronmildenhall → loolilalu, player HP 6921 → 8121",
+          "detail": "pomni → abstractedkaufmo, player HP 8656 → 9856",
           "pass": true
         },
         {
@@ -781,72 +878,72 @@
         {
           "label": "story-jax-1",
           "won": true,
-          "frames": 1951,
+          "frames": 2001,
           "fighters": [
             "jax",
             "gangle"
           ],
-          "health": 8774
+          "health": 8643
         },
         {
           "label": "story-jax-2",
           "won": true,
-          "frames": 1615,
+          "frames": 1552,
           "fighters": [
             "jax",
             "zooble"
           ],
-          "health": 7041
+          "health": 7000
         },
         {
           "label": "story-jax-3",
           "won": true,
-          "frames": 1701,
+          "frames": 2142,
           "fighters": [
             "jax",
             "ragatha"
           ],
-          "health": 6665
+          "health": 6962
         },
         {
           "label": "story-jax-4",
           "won": true,
-          "frames": 1648,
+          "frames": 1831,
           "fighters": [
             "jax",
             "caine"
           ],
-          "health": 8268
+          "health": 8409
         },
         {
           "label": "tournament-round-1",
           "won": true,
-          "frames": 1962,
+          "frames": 1755,
           "fighters": [
             "jax",
             "gangle"
           ],
-          "health": 7730
+          "health": 8680
         },
         {
           "label": "tournament-round-2",
           "won": true,
-          "frames": 1695,
+          "frames": 1768,
           "fighters": [
             "jax",
             "caine"
           ],
-          "health": 7729
+          "health": 7652
         },
         {
           "label": "tournament-round-3",
           "won": true,
-          "frames": 1954,
+          "frames": 1897,
           "fighters": [
             "jax",
             "fudge"
           ],
-          "health": 9402
+          "health": 8805
         },
         {
           "label": "tournament-elimination",
@@ -861,7 +958,7 @@
         {
           "label": "story-chapter-2-loss",
           "won": false,
-          "frames": 1646,
+          "frames": 1792,
           "fighters": [
             "jax",
             "zooble"
@@ -872,7 +969,7 @@
       "errors": []
     },
     "offline": {
-      "base": "http://127.0.0.1:45637",
+      "base": "http://127.0.0.1:34007",
       "checks": [
         {
           "name": "Custom keys reject conflicts and reserved shortcuts, allow alternatives, and persist",
@@ -931,6 +1028,215 @@
         }
       ],
       "errors": []
+    },
+    "recovery": {
+      "base": "http://127.0.0.1:37953",
+      "checks": [
+        {
+          "name": "A failed first offline-cache installation exits preparation and exposes an enabled retry",
+          "detail": "Real HTTP 503 during cache.addAll; online settings remain usable",
+          "pass": true
+        },
+        {
+          "name": "The retry button registers a working service worker without reloading or losing the profile",
+          "detail": "Same page and profile; active /combat/ worker; initialization errors cleared",
+          "pass": true
+        },
+        {
+          "name": "The recovered installation downloads the full pack and survives an offline cold reload",
+          "detail": "42 illustrations; 47,345,031 bytes; profile preserved",
+          "pass": true
+        }
+      ],
+      "errors": [],
+      "fixture": {
+        "failedCoreRequests": 1
+      }
+    },
+    "profileRecovery": {
+      "base": "http://127.0.0.1:4178",
+      "fixturePolicy": "Existing statistics/rewards are explicit migration fixtures; only the specialist exercise was played during this test.",
+      "checks": [
+        {
+          "name": "Startup drops only the corrupt checkpoint",
+          "detail": "A migration fixture retains all statistics, challenges, medals, endings, history, preferences and both custom keyboard maps.",
+          "pass": true
+        },
+        {
+          "name": "A routine preference save and reload preserve the recovered profile",
+          "detail": "Sound is enabled through the settings UI; the repaired save has program:null and every prior achievement/binding remains.",
+          "pass": true
+        },
+        {
+          "name": "A real cross-tab storage event preserves progress despite an obsolete costume",
+          "detail": "The incoming fixture replaces stats, history, achievements and the J1 binding; only its invalid checkpoint is discarded.",
+          "pass": true
+        },
+        {
+          "name": "Reward refresh repairs the incompatible disk checkpoint without erasing the record",
+          "detail": "Specialist is actually completed with four keyboard techniques; only that new reward is added to the migration fixture, and reload preserves it.",
+          "pass": true
+        },
+        {
+          "name": "Manual file import remains strict and preserves the existing profile",
+          "detail": "An invalid costume is rejected with an error before the replacement prompt; neither the in-memory profile nor its stored copy changes.",
+          "pass": true
+        }
+      ],
+      "errors": [],
+      "finalProfile": {
+        "format": "circus-encore-profile",
+        "version": 1,
+        "settings": {
+          "layout": "qwerty",
+          "difficulty": "normal",
+          "seconds": 120,
+          "rounds": 2,
+          "volume": 0.25,
+          "sound": true,
+          "reducedMotion": true,
+          "hitboxes": false,
+          "music": false,
+          "musicVolume": 0.2,
+          "touch": "auto",
+          "bindings": [
+            {
+              "left": [
+                "KeyA"
+              ],
+              "right": [
+                "KeyD"
+              ],
+              "down": [
+                "KeyS"
+              ],
+              "jump": [
+                "KeyW",
+                "Space"
+              ],
+              "guard": [
+                "ShiftLeft"
+              ],
+              "dash": [
+                "KeyE"
+              ],
+              "light": [
+                "KeyT"
+              ],
+              "heavy": [
+                "KeyK"
+              ],
+              "throw": [
+                "KeyU"
+              ],
+              "special": [
+                "KeyI"
+              ],
+              "super": [
+                "KeyO"
+              ],
+              "utility": [
+                "KeyL"
+              ]
+            },
+            {
+              "left": [
+                "ArrowLeft"
+              ],
+              "right": [
+                "ArrowRight"
+              ],
+              "down": [
+                "ArrowDown"
+              ],
+              "jump": [
+                "ArrowUp"
+              ],
+              "guard": [
+                "ShiftRight",
+                "Numpad0"
+              ],
+              "dash": [
+                "ControlRight",
+                "NumpadDecimal"
+              ],
+              "light": [
+                "KeyB",
+                "Numpad1"
+              ],
+              "heavy": [
+                "KeyH",
+                "Numpad2"
+              ],
+              "throw": [
+                "KeyV",
+                "Numpad4"
+              ],
+              "special": [
+                "KeyM",
+                "Numpad5"
+              ],
+              "super": [
+                "Comma",
+                "Numpad6"
+              ],
+              "utility": [
+                "Period",
+                "Numpad3"
+              ]
+            }
+          ]
+        },
+        "stats": {
+          "matches": 32,
+          "wins": 22,
+          "losses": 10,
+          "bestSurvival": 8,
+          "damage": 182500
+        },
+        "challenges": [
+          "combo",
+          "throw",
+          "super",
+          "guard",
+          "specialist"
+        ],
+        "medals": [
+          "arcade",
+          "story",
+          "tournament",
+          "boss"
+        ],
+        "stories": [
+          "jax",
+          "pomni",
+          "ragatha"
+        ],
+        "program": null,
+        "history": [
+          {
+            "fighter": "ragatha",
+            "opponent": "zooble",
+            "mode": "story",
+            "won": true,
+            "at": "2026-10-22T13:00:00.000Z"
+          },
+          {
+            "fighter": "jax",
+            "opponent": "caine",
+            "mode": "story",
+            "won": true,
+            "at": "2026-10-22T12:00:00.000Z"
+          },
+          {
+            "fighter": "pomni",
+            "opponent": "gangle",
+            "mode": "survival",
+            "won": false,
+            "at": "2026-10-22T11:00:00.000Z"
+          }
+        ]
+      }
     }
   },
   "renderer": {
@@ -959,8 +1265,8 @@
     "scope": "Préchargement des silhouettes et rendu des 12 arènes conservés depuis la validation 0.1.0 ; pas de nouvelle validation artistique complète des costumes."
   },
   "coverageLimits": [
-    "Les 40 contrôles navigateur correspondent à quatre suites complètes exécutées le 22 octobre 2026 : 11 UI, 10 progression classique, 8 histoires/tournoi et 11 hors ligne/commandes/audio. Les objectifs de revue de l’Excel peuvent regrouper ces mêmes assertions.",
-    "Les 122 tests Node sont distincts de ces contrôles et couvrent six suites. Audio et Gamepad utilisent aussi des contextes/horloges simulés ; ils ne constituent pas une écoute ni un test de périphériques physiques.",
+    "Les 48 contrôles navigateur correspondent à six suites complètes exécutées sur le code final après correction : 11 UI, 10 progression classique, 8 histoires/tournoi, 11 hors ligne/commandes/audio, 3 reprise d’installation et 5 récupération de profil. Les objectifs de revue peuvent regrouper les mêmes assertions.",
+    "Les 141 tests Node sont distincts des contrôles navigateur et couvrent 7 suites. Audio, Gamepad et cycle de vie du service worker utilisent aussi des contextes ou horloges simulés ; ils ne constituent pas des essais matériels physiques.",
     "La route de Jax est terminée avec quatre victoires réellement jouées, et le tournoi avec trois victoires réelles ; élimination, défaite et reprises ont aussi été jouées. Les treize autres routes sont vérifiées par contrats Node sans partie intégrale dans le navigateur.",
     "Arcade, Boss et Survie sont joués jusqu’au passage de la première à la deuxième rencontre. Les longueurs 6 / 4 / 10 sont vérifiées par contrats ; leurs médailles finales ne sont pas revendiquées dans le navigateur.",
     "Les tests sur téléphones et manettes physiques, l’écoute du mixage, l’installation native, la finition des 51 variantes, le lore étendu et l’équilibrage compétitif restent à vérifier ou à produire.",
@@ -970,7 +1276,7 @@
   "nodeReports": {
     "engine": {
       "file": "audit-combat/combat-engine.test.tap",
-      "sha256": "c9335fb24dfb8f76ddb817201bfae3662bb576e6af6541b4e0c061e1b84ac351",
+      "sha256": "8c92757f64083967f551991d0554469799bb411e2b96a6a81b68d312d359073a",
       "tests": 40,
       "passed": 40,
       "failed": 0,
@@ -978,15 +1284,15 @@
     },
     "session": {
       "file": "audit-combat/combat-session.test.tap",
-      "sha256": "58d08b82538d1f8b978a03d35b30d8e96ad4e5887a420e7b90d2e3dd2099c146",
-      "tests": 26,
-      "passed": 26,
+      "sha256": "c2616c976c987dc478f2f9f60da37fd264da234b928eccd8ea4f77635af9ea2f",
+      "tests": 31,
+      "passed": 31,
       "failed": 0,
       "skipped": 0
     },
     "catalog": {
       "file": "audit-combat/combat-catalog.test.tap",
-      "sha256": "971126545f58caccc10f909d8fbd4a93fba6fda595f6675ae2438d7a08d3ff96",
+      "sha256": "2e6fcffc5135a61f8366f221cefdda036ae46079e537ea687732a52237805768",
       "tests": 7,
       "passed": 7,
       "failed": 0,
@@ -994,7 +1300,7 @@
     },
     "bindings": {
       "file": "audit-combat/combat-bindings.test.tap",
-      "sha256": "bb63db04867211114f75832bcd851d5399de089f17c3de062b7d0f1ae5b75fde",
+      "sha256": "c3e3c678fd8c4d9340f6898853d53a106b388b5b6e6255eed529255e6d0444ae",
       "tests": 16,
       "passed": 16,
       "failed": 0,
@@ -1002,7 +1308,7 @@
     },
     "progression": {
       "file": "audit-combat/combat-progression.test.tap",
-      "sha256": "e2e1946b31e2ab56162915e202d7f98e2b9981a7757e1d3b844a1b7c0bfda7e7",
+      "sha256": "77cbbca009ebf7025fc2ced254bb90a8802c079b2e5e1471e99db6a794245adc",
       "tests": 19,
       "passed": 19,
       "failed": 0,
@@ -1010,7 +1316,15 @@
     },
     "audio": {
       "file": "audit-combat/combat-audio.test.tap",
-      "sha256": "36f627fe2120321c36ffbe2948a87343362794c1845201acda2a4f5c561efc79",
+      "sha256": "0653b5435f8e84b01c9d7c87553d9db7d4db61876f0e3a9304a39bc1fcf71f73",
+      "tests": 14,
+      "passed": 14,
+      "failed": 0,
+      "skipped": 0
+    },
+    "offline": {
+      "file": "audit-combat/combat-offline.test.tap",
+      "sha256": "b68fafdbd42c542243bad805b378506b875cc6ab4922505ef5aa10c4619319f1",
       "tests": 14,
       "passed": 14,
       "failed": 0,
@@ -1029,7 +1343,7 @@
     "every classified appearance still points at a bounded source atlas cell"
   ],
   "catalogSourceSha256": "1198d4169e4629d826ec221f21191ca75681a4e88089d237e609e842a263d80c",
-  "catalogProof": "node --test-reporter=tap tests/combat-catalog.test.mjs — 7/7 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+  "catalogProof": "node --test-reporter=tap tests/combat-catalog.test.mjs — 7/7 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-catalog.test.tap)",
   "bindingsPassed": true,
   "bindingsCount": 16,
   "bindingsTestNames": [
@@ -1051,7 +1365,7 @@
     "denied Gamepad access leaves keyboard play available"
   ],
   "bindingsSourceSha256": "21f8c5c92cb80728ebfe25588fdb2d8289fec6f8983dbe9abcbf694d2df91708",
-  "bindingsProof": "node --test-reporter=tap tests/combat-bindings.test.mjs — 16/16 cas réussis, 0 échec, 0 ignoré (22 octobre 2026, après correction du focus manette)",
+  "bindingsProof": "node --test-reporter=tap tests/combat-bindings.test.mjs — 16/16 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-bindings.test.tap)",
   "progressionPassed": true,
   "progressionCount": 19,
   "progressionTestNames": [
@@ -1076,7 +1390,7 @@
     "missing, inaccessible, oversized or corrupt storage fails safely without resuming bad state"
   ],
   "progressionSourceSha256": "cbd27b27316563868585d25a5e1e7613ef4b0a15f42a63b2032efeb334a3f7f8",
-  "progressionProof": "node --test-reporter=tap tests/combat-progression.test.mjs — 19/19 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+  "progressionProof": "node --test-reporter=tap tests/combat-progression.test.mjs — 19/19 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-progression.test.tap)",
   "audioPassed": true,
   "audioCount": 14,
   "audioTestNames": [
@@ -1096,7 +1410,7 @@
     "legacy WebKit contexts and missing settings keep safe defaults"
   ],
   "audioSourceSha256": "94c7200d6b9f9970578a60b8ddadc9d90994f9c3c56dbd308cc1da24c0116ca7",
-  "audioProof": "node --test-reporter=tap tests/combat-audio.test.mjs — 14/14 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+  "audioProof": "node --test-reporter=tap tests/combat-audio.test.mjs — 14/14 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-audio.test.tap)",
   "browserReportDigests": {
     "ui": {
       "file": "audit-combat/browser-report.json",
@@ -1105,20 +1419,59 @@
     },
     "progression": {
       "file": "audit-combat/progression-browser-report.json",
-      "sha256": "158684aa9d5a24410cf21d64ff2fa0578db184f68ec0979ed28a124e16eb8176",
+      "sha256": "3cd50b9b66cda6a7b97e8b299f51687c0285409cf62bdee267d457f63b0a2a7d",
       "testSourceSha256": "2024357b9fd071694ec8e4224d43e40b8cf7732502e6e1ef1f7b2dff20c8cc5f"
     },
     "encore": {
       "file": "audit-combat/encore-browser-report.json",
-      "sha256": "bc6883c516174cc8443cbc1e62548b7fcc582e83691f70c6c6605073cac63035",
+      "sha256": "ba0f43728fe1c0f963ef0c36f413b9affc02a19c7e95b056cd2474634adc82d8",
       "testSourceSha256": "3a2f45a3d73c864be0e4da8705fa544011484bbc1600d0c9af356d7168dedc03"
     },
     "offline": {
       "file": "audit-combat/offline-browser-report.json",
-      "sha256": "d2cbf6a9f4b8e063efcca8f092234b1670262901bd9d46d9395f28a3650a8d99",
+      "sha256": "6f590800e430e2d4ef6e18963ab1188b707ec85ec79ca9878675504ede985782",
       "testSourceSha256": "d1740a7cbed0140db4ff883e18895c6a0f3e337131e761e7147b1ba7a86fe5dd"
+    },
+    "recovery": {
+      "file": "audit-combat/recovery-browser-report.json",
+      "sha256": "56c7dc5b976a77e678a50227c4e1b6573732522d1cffe6c180fa884843f585a1",
+      "testSourceSha256": "efbce0402d3e37d367fb61792bcf68b760ac89c7c295ee3c282138cb2537b5bd"
+    },
+    "profileRecovery": {
+      "file": "audit-combat/profile-recovery-browser-report.json",
+      "sha256": "c81b15b5470059006c538dc9b0bbc9fdb0529da1f26cf00b5439c340a09071b6",
+      "testSourceSha256": "d6ba225ae115114758d83f08d1cc2c697f164430e94b14905f146d55cd358111"
     }
   },
-  "browserCheckCount": 40,
-  "nodeTestCount": 122
+  "browserCheckCount": 48,
+  "nodeTestCount": 141,
+  "offlinePassed": true,
+  "offlineCount": 14,
+  "offlineTestNames": [
+    "unsupported or insecure contexts do not start offline initialization",
+    "concurrent init calls share one attempt and use the active worker directly",
+    "a first installation becomes ready only after its worker is activated",
+    "an abandoned first installation reports a retryable error and removes its listeners",
+    "a registration with a redundant worker already present fails without waiting",
+    "an initially empty registration waits for updatefound and can activate normally",
+    "both synchronous registration denial and promise rejection can be retried",
+    "a stalled installation times out and a late activation cannot change the failed state",
+    "a late register result after timeout cannot overwrite a successful retry",
+    "the initialization deadline also closes a silent status message channel",
+    "status failures close ports and clear busy before an explicit retry",
+    "a failed replacement worker leaves the existing active worker ready",
+    "future updates are observed once and are never activated automatically",
+    "init during an art download does not clear its busy state or launch another registration"
+  ],
+  "offlineSourceSha256": "f070eb711be11562ef492ba17c8cc7b9cb00f7087784410e23acb62917559476",
+  "offlineProof": "node --test-reporter=tap tests/combat-offline.test.mjs — 14/14 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-offline.test.tap)",
+  "reviewRecovery": {
+    "baselineCommit": "d8c5c7b35fc24d2899753fd8dffb52844fd049dc",
+    "scope": "Correction du chargement local avec checkpoint invalide ; première installation du service worker en erreur, attente bornée et nouvelle tentative explicite.",
+    "browserReports": [
+      "audit-combat/recovery-browser-report.json",
+      "audit-combat/profile-recovery-browser-report.json"
+    ],
+    "fixtureLimit": "Les statistiques et récompenses initiales sont des données explicites de migration. Seul le défi Spécialiste est réellement gagné pendant cette régression de profil."
+  }
 }

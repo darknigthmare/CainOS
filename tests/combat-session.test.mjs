@@ -26,6 +26,29 @@ const engineFor = config => new CombatEngine({
   ...config, fighters: config.fighters.map(id => FIGHTERS.find(f => f.id === id)),
   stage: STAGES.find(s => s.id === config.stage),
 });
+// Migration fixtures describe existing saved records; their rewards are test
+// data, not a claim that those matches were earned through the browser.
+function populatedProfileFixture() {
+  const profile = emptyProfile();
+  Object.assign(profile.settings, { layout: 'qwerty', difficulty: 'hard', seconds: 120, rounds: 3, sound: false, music: true, musicVolume: .35, reducedMotion: true, touch: 'on' });
+  profile.settings.bindings[0].light = ['KeyC'];
+  profile.settings.bindings[1].heavy = ['KeyH', 'Numpad2'];
+  profile.stats = { matches: 27, wins: 18, losses: 9, bestSurvival: 7, damage: 157003 };
+  profile.challenges = ['combo', 'throw', 'super'];
+  profile.medals = ['arcade', 'story', 'tournament'];
+  profile.stories = ['jax', 'pomni'];
+  profile.history = [
+    { fighter: 'jax', opponent: 'caine', mode: 'story', won: true, at: '2026-10-22T12:00:00.000Z' },
+    { fighter: 'pomni', opponent: 'gangle', mode: 'survival', won: false, at: '2026-10-22T11:00:00.000Z' },
+  ];
+  const variant = VARIANTS.find(item => item.fighterId === 'jax');
+  profile.program = recordProgramResult(createProgram('story', 'jax', FIGHTERS, STAGES, { seed: 91, variantId: variant.id }), { won: true, health: 7200 });
+  return profile;
+}
+function profileStorageFixture(value) {
+  const records = new Map([[SAVE_KEY, JSON.stringify(value)]]);
+  return { getItem: key => records.get(key), setItem: (key, raw) => records.set(key, raw) };
+}
 
 test('all native input flags and all ten techniques survive packing without aliasing', () => {
   const encoded = new Set();
@@ -124,6 +147,95 @@ test('storage corruption or denied local storage does not prevent a fresh playab
   const denied = { getItem() { throw Error('denied'); }, setItem() { throw Error('denied'); } };
   assert.deepEqual(readProfile(denied), emptyProfile());
   assert.equal(saveProfile(denied, profile), false);
+});
+
+test('local recovery drops only a malformed checkpoint and preserves the full saved profile', () => {
+  const original = populatedProfileFixture();
+  const expected = { ...original, program: null };
+  const corruptPrograms = [
+    false, 'damaged', [], {},
+    { ...original.program, health: 0 },
+    { ...original.program, index: 99 },
+    { ...original.program, status: 'unknown' },
+    { ...original.program, results: [{ won: true, health: '7200' }] },
+  ];
+  for (const program of corruptPrograms) {
+    const fixture = { ...original, program };
+    const recovered = readProfile(profileStorageFixture(fixture));
+    assert.deepEqual(recovered, expected, `only program may be lost: ${JSON.stringify(program)}`);
+    assert.deepEqual(validateProfile(fixture, { strictProgram: false }), expected);
+    assert.deepEqual(recovered.settings.bindings[0].light, ['KeyC']);
+    assert.deepEqual(recovered.settings.bindings[1].heavy, ['KeyH', 'Numpad2']);
+  }
+  assert.equal(original.program.index, 1, 'recovery does not mutate the source record');
+});
+
+test('old programme versions, changed routes and retired costumes do not erase local achievements or bindings', () => {
+  const original = populatedProfileFixture();
+  const expected = { ...original, program: null };
+  const incompatible = [
+    ['old programme version', program => { program.version = 0; }],
+    ['older route with a still-known opponent', program => { program.opponents[1] = 'ragatha'; }],
+    ['older route with a still-known stage', program => { program.stages[1] = 'bigtop'; }],
+    ['retired costume', program => { program.variantId = 'jaxfather'; }],
+    ['costume no longer belonging to this fighter', program => { program.variantId = VARIANTS.find(item => item.fighterId === 'pomni').id; }],
+  ];
+  for (const [label, change] of incompatible) {
+    const fixture = structuredClone(original);
+    change(fixture.program);
+    assert.throws(() => validateProfile(fixture), label);
+    assert.deepEqual(readProfile(profileStorageFixture(fixture)), expected, label);
+  }
+});
+
+test('a recovered local profile can be saved and reloaded without losing previous progress or settings', () => {
+  const original = populatedProfileFixture();
+  original.program.index = 99;
+  const storage = profileStorageFixture(original), raw = storage.getItem(SAVE_KEY);
+  const recovered = readProfile(storage);
+  const expected = { ...original, settings: { ...original.settings, sound: true }, program: null };
+  assert.equal(storage.getItem(SAVE_KEY), raw, 'reading alone does not rewrite the stored record');
+  recovered.settings.sound = true; // A routine preference change triggers the next save.
+  assert.equal(saveProfile(storage, recovered), true);
+  assert.deepEqual(JSON.parse(storage.getItem(SAVE_KEY)), expected);
+  assert.deepEqual(readProfile(storage), expected);
+  assert.deepEqual(validateProfile(JSON.parse(storage.getItem(SAVE_KEY))), expected, 'the repaired record passes strict import too');
+});
+
+test('profile imports and direct saves remain strict unless programme recovery is explicitly requested', () => {
+  const original = populatedProfileFixture(), storage = profileStorageFixture(original);
+  const before = storage.getItem(SAVE_KEY);
+  for (const change of [
+    program => { program.index = 99; },
+    program => { program.variantId = 'jaxfather'; },
+    program => { program.version = 0; },
+  ]) {
+    const corrupt = structuredClone(original);
+    change(corrupt.program);
+    assert.throws(() => validateProfile(corrupt));
+    for (const options of [{}, { strictProgram: true }, { strictProgram: 0 }, { strictProgram: null }]) {
+      assert.throws(() => validateProfile(corrupt, options), 'only the explicit boolean false permits recovery');
+    }
+    assert.throws(() => validateProfile({ ...corrupt, strictProgram: false }), 'an imported file cannot opt itself into recovery');
+    assert.throws(() => saveProfile(storage, corrupt));
+    assert.equal(storage.getItem(SAVE_KEY), before, 'an invalid direct save cannot overwrite the last valid profile');
+    assert.deepEqual(readProfile(storage), original);
+  }
+});
+
+test('tolerant local reading preserves valid checkpoints and never accepts another profile format or version', () => {
+  const original = populatedProfileFixture();
+  assert.deepEqual(readProfile(profileStorageFixture(original)), original);
+  const recovered = validateProfile(original, { strictProgram: false });
+  assert.deepEqual(recovered, original);
+  recovered.program.opponents[0] = 'missing';
+  recovered.settings.bindings[0].light[0] = 'KeyT';
+  assert.notEqual(original.program.opponents[0], 'missing');
+  assert.deepEqual(original.settings.bindings[0].light, ['KeyC']);
+  for (const invalid of [null, {}, { ...original, format: 'unrelated' }, { ...original, version: 2 }]) {
+    assert.throws(() => validateProfile(invalid, { strictProgram: false }), /version 1/);
+    assert.deepEqual(readProfile(profileStorageFixture(invalid)), emptyProfile());
+  }
 });
 
 test('every selectable fighter receives complete arcade, boss and survival routes', () => {

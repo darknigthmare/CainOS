@@ -15,13 +15,13 @@
     "soundEffects": 16,
     "offlineImages": 42,
     "offlineBytes": 47345031,
-    "features": 86,
+    "features": 88,
     "production": 389,
     "scenarios": 85,
-    "qa": 193
+    "qa": 222
   },
   "qaSummary": {
-    "Réussi": 179,
+    "Réussi": 208,
     "Échec": 0,
     "Non exécuté": 5,
     "À vérifier": 9
@@ -146,6 +146,17 @@
       "combat/offline.mjs / combat/sw.js",
       "Télécharger 42 planches (47 345 031 octets) à la demande, afficher la progression puis recharger le jeu sans réseau.",
       "La première préparation requiert le réseau et assez de stockage. Le service worker reste limité au jeu. Une mise à jour du code préserve un pack d’illustrations inchangé.",
+      ""
+    ],
+    [
+      "INT-12",
+      "Intégration",
+      "Reprise après échec de première installation",
+      "Implémenté",
+      "P0",
+      "combat/offline.mjs / combat/app.mjs",
+      "Afficher un échec explicite si la première installation du service worker échoue, libérer les attentes et permettre une nouvelle tentative depuis les réglages.",
+      "Le jeu en ligne reste accessible. La réussite hors ligne exige une installation et une préparation effectivement terminées.",
       ""
     ],
     [
@@ -861,6 +872,17 @@
       "combat/progression.mjs / combat/session.mjs",
       "Arcade, boss, survie, histoire et tournoi reprennent la rencontre courante avec la même graine, les mêmes règles et la santé de départ enregistrée.",
       "Le point de reprise est le début du duel, sans restauration d’une frame de simulation intermédiaire.",
+      ""
+    ],
+    [
+      "PRO-10",
+      "Progression",
+      "Récupération du profil après checkpoint invalide",
+      "Implémenté",
+      "P0",
+      "combat/session.mjs / combat/app.mjs",
+      "Au chargement local, abandonner uniquement le programme actif invalide et conserver les réglages, statistiques, défis, médailles, fins narratives et historique encore valides.",
+      "La prochaine sauvegarde conserve le profil normalisé. L’import manuel reste strict et refuse le fichier invalide sans remplacer le profil courant.",
       ""
     ],
     [
@@ -14031,7 +14053,7 @@
       "Réussi",
       "P0",
       "node tests/combat-engine.test.mjs",
-      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-engine.test.tap)",
       "Vérification déterministe de mécanique",
       ""
     ],
@@ -14042,7 +14064,7 @@
       "Réussi",
       "P0",
       "node tests/combat-engine.test.mjs",
-      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-engine.test.tap)",
       "Vérification déterministe de mécanique",
       ""
     ],
@@ -14053,7 +14075,7 @@
       "Réussi",
       "P0",
       "node tests/combat-engine.test.mjs",
-      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-engine.test.tap)",
       "Vérification déterministe de mécanique",
       ""
     ],
@@ -14064,7 +14086,7 @@
       "Réussi",
       "P0",
       "node tests/combat-engine.test.mjs",
-      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-engine.test.tap)",
       "Vérification déterministe de mécanique",
       ""
     ],
@@ -14075,7 +14097,7 @@
       "Réussi",
       "P0",
       "node tests/combat-engine.test.mjs",
-      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-engine.test.tap)",
       "Vérification déterministe de mécanique",
       ""
     ],
@@ -14086,7 +14108,7 @@
       "Réussi",
       "P0",
       "node tests/combat-engine.test.mjs",
-      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-engine.test.tap)",
       "Vérification déterministe de mécanique",
       ""
     ],
@@ -14097,7 +14119,7 @@
       "Réussi",
       "P0",
       "node tests/combat-engine.test.mjs",
-      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-engine.test.tap)",
       "Vérification déterministe de mécanique",
       ""
     ],
@@ -14108,7 +14130,7 @@
       "Réussi",
       "P0",
       "node tests/combat-engine.test.mjs",
-      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-engine.test.tap)",
       "Vérification déterministe de mécanique",
       ""
     ],
@@ -14119,7 +14141,7 @@
       "Réussi",
       "P0",
       "node tests/combat-engine.test.mjs",
-      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-engine.test.tap)",
       "Vérification déterministe de mécanique",
       ""
     ],
@@ -14130,7 +14152,7 @@
       "Réussi",
       "P0",
       "node tests/combat-engine.test.mjs",
-      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-engine.test.tap)",
       "Vérification déterministe de mécanique",
       ""
     ],
@@ -14141,7 +14163,7 @@
       "Réussi",
       "P0",
       "node tests/combat-engine.test.mjs",
-      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-engine.test.tap)",
       "Vérification déterministe de mécanique",
       ""
     ],
@@ -14152,7 +14174,7 @@
       "Réussi",
       "P0",
       "node tests/combat-engine.test.mjs",
-      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-engine.test.tap)",
       "Vérification déterministe de mécanique",
       ""
     ],
@@ -14163,7 +14185,7 @@
       "Réussi",
       "P0",
       "node tests/combat-engine.test.mjs",
-      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-engine.test.tap)",
       "Vérification déterministe de mécanique",
       ""
     ],
@@ -14174,7 +14196,7 @@
       "Réussi",
       "P0",
       "node tests/combat-engine.test.mjs",
-      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-engine.test.tap)",
       "Vérification déterministe de mécanique",
       ""
     ],
@@ -14185,7 +14207,7 @@
       "Réussi",
       "P0",
       "node tests/combat-engine.test.mjs",
-      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-engine.test.tap)",
       "Vérification déterministe de mécanique",
       ""
     ],
@@ -14196,7 +14218,7 @@
       "Réussi",
       "P0",
       "node tests/combat-engine.test.mjs",
-      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-engine.test.tap)",
       "Vérification déterministe de mécanique",
       ""
     ],
@@ -14207,7 +14229,7 @@
       "Réussi",
       "P0",
       "node tests/combat-engine.test.mjs",
-      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-engine.test.tap)",
       "Vérification déterministe de mécanique",
       ""
     ],
@@ -14218,7 +14240,7 @@
       "Réussi",
       "P0",
       "node tests/combat-engine.test.mjs",
-      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-engine.test.tap)",
       "Vérification déterministe de mécanique",
       ""
     ],
@@ -14229,7 +14251,7 @@
       "Réussi",
       "P0",
       "node tests/combat-engine.test.mjs",
-      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-engine.test.tap)",
       "Vérification déterministe de mécanique",
       ""
     ],
@@ -14240,7 +14262,7 @@
       "Réussi",
       "P0",
       "node tests/combat-engine.test.mjs",
-      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-engine.test.tap)",
       "Vérification déterministe de mécanique",
       ""
     ],
@@ -14251,7 +14273,7 @@
       "Réussi",
       "P0",
       "node tests/combat-engine.test.mjs",
-      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-engine.test.tap)",
       "Vérification déterministe de mécanique",
       ""
     ],
@@ -14262,7 +14284,7 @@
       "Réussi",
       "P0",
       "node tests/combat-engine.test.mjs",
-      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-engine.test.tap)",
       "Vérification déterministe de mécanique",
       ""
     ],
@@ -14273,7 +14295,7 @@
       "Réussi",
       "P0",
       "node tests/combat-engine.test.mjs",
-      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-engine.test.tap)",
       "Vérification déterministe de mécanique",
       ""
     ],
@@ -14284,7 +14306,7 @@
       "Réussi",
       "P0",
       "node tests/combat-engine.test.mjs",
-      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-engine.test.tap)",
       "Vérification déterministe de mécanique",
       ""
     ],
@@ -14295,7 +14317,7 @@
       "Réussi",
       "P0",
       "node tests/combat-engine.test.mjs",
-      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-engine.test.tap)",
       "Vérification déterministe de mécanique",
       ""
     ],
@@ -14306,7 +14328,7 @@
       "Réussi",
       "P0",
       "node tests/combat-engine.test.mjs",
-      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-engine.test.tap)",
       "Vérification déterministe de mécanique",
       ""
     ],
@@ -14317,7 +14339,7 @@
       "Réussi",
       "P0",
       "node tests/combat-engine.test.mjs",
-      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-engine.test.tap)",
       "Vérification déterministe de mécanique",
       ""
     ],
@@ -14328,7 +14350,7 @@
       "Réussi",
       "P0",
       "node tests/combat-engine.test.mjs",
-      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-engine.test.tap)",
       "Vérification déterministe de mécanique",
       ""
     ],
@@ -14339,7 +14361,7 @@
       "Réussi",
       "P0",
       "node tests/combat-engine.test.mjs",
-      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-engine.test.tap)",
       "Vérification déterministe de mécanique",
       ""
     ],
@@ -14350,7 +14372,7 @@
       "Réussi",
       "P0",
       "node tests/combat-engine.test.mjs",
-      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-engine.test.tap)",
       "Vérification déterministe de mécanique",
       ""
     ],
@@ -14361,7 +14383,7 @@
       "Réussi",
       "P0",
       "node tests/combat-engine.test.mjs",
-      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-engine.test.tap)",
       "Vérification déterministe de mécanique",
       ""
     ],
@@ -14372,7 +14394,7 @@
       "Réussi",
       "P0",
       "node tests/combat-engine.test.mjs",
-      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-engine.test.tap)",
       "Vérification déterministe de mécanique",
       ""
     ],
@@ -14383,7 +14405,7 @@
       "Réussi",
       "P0",
       "node tests/combat-engine.test.mjs",
-      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-engine.test.tap)",
       "Vérification déterministe de mécanique",
       ""
     ],
@@ -14394,7 +14416,7 @@
       "Réussi",
       "P0",
       "node tests/combat-engine.test.mjs",
-      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-engine.test.tap)",
       "Vérification déterministe de mécanique",
       ""
     ],
@@ -14405,7 +14427,7 @@
       "Réussi",
       "P0",
       "node tests/combat-engine.test.mjs",
-      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-engine.test.tap)",
       "Vérification déterministe de mécanique",
       ""
     ],
@@ -14416,7 +14438,7 @@
       "Réussi",
       "P0",
       "node tests/combat-engine.test.mjs",
-      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-engine.test.tap)",
       "Vérification déterministe de mécanique",
       ""
     ],
@@ -14427,7 +14449,7 @@
       "Réussi",
       "P0",
       "node tests/combat-engine.test.mjs",
-      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-engine.test.tap)",
       "Vérification déterministe de mécanique",
       ""
     ],
@@ -14438,7 +14460,7 @@
       "Réussi",
       "P0",
       "node tests/combat-engine.test.mjs",
-      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-engine.test.tap)",
       "Vérification déterministe de mécanique",
       ""
     ],
@@ -14449,7 +14471,7 @@
       "Réussi",
       "P0",
       "node tests/combat-engine.test.mjs",
-      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-engine.test.tap)",
       "Vérification déterministe de mécanique",
       ""
     ],
@@ -14460,7 +14482,7 @@
       "Réussi",
       "P0",
       "node tests/combat-engine.test.mjs",
-      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-engine.test.tap)",
       "Vérification déterministe de mécanique",
       ""
     ],
@@ -14471,7 +14493,7 @@
       "Réussi",
       "P0",
       "node tests/combat-session.test.mjs",
-      "node --test-reporter=tap tests/combat-session.test.mjs — 26/26 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-session.test.mjs — 31/31 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-session.test.tap)",
       "Vérification de parcours, entrées ou persistance",
       ""
     ],
@@ -14482,7 +14504,7 @@
       "Réussi",
       "P0",
       "node tests/combat-session.test.mjs",
-      "node --test-reporter=tap tests/combat-session.test.mjs — 26/26 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-session.test.mjs — 31/31 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-session.test.tap)",
       "Vérification de parcours, entrées ou persistance",
       ""
     ],
@@ -14493,7 +14515,7 @@
       "Réussi",
       "P0",
       "node tests/combat-session.test.mjs",
-      "node --test-reporter=tap tests/combat-session.test.mjs — 26/26 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-session.test.mjs — 31/31 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-session.test.tap)",
       "Vérification de parcours, entrées ou persistance",
       ""
     ],
@@ -14504,7 +14526,7 @@
       "Réussi",
       "P0",
       "node tests/combat-session.test.mjs",
-      "node --test-reporter=tap tests/combat-session.test.mjs — 26/26 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-session.test.mjs — 31/31 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-session.test.tap)",
       "Vérification de parcours, entrées ou persistance",
       ""
     ],
@@ -14515,7 +14537,7 @@
       "Réussi",
       "P0",
       "node tests/combat-session.test.mjs",
-      "node --test-reporter=tap tests/combat-session.test.mjs — 26/26 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-session.test.mjs — 31/31 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-session.test.tap)",
       "Vérification de parcours, entrées ou persistance",
       ""
     ],
@@ -14526,227 +14548,282 @@
       "Réussi",
       "P0",
       "node tests/combat-session.test.mjs",
-      "node --test-reporter=tap tests/combat-session.test.mjs — 26/26 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-session.test.mjs — 31/31 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-session.test.tap)",
       "Vérification de parcours, entrées ou persistance",
       ""
     ],
     [
       "QA-SES-07",
       "Session automatisée",
-      "every selectable fighter receives complete arcade, boss and survival routes",
+      "local recovery drops only a malformed checkpoint and preserves the full saved profile",
       "Réussi",
       "P0",
       "node tests/combat-session.test.mjs",
-      "node --test-reporter=tap tests/combat-session.test.mjs — 26/26 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-session.test.mjs — 31/31 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-session.test.tap)",
       "Vérification de parcours, entrées ou persistance",
       ""
     ],
     [
       "QA-SES-08",
       "Session automatisée",
-      "challenge first-impact can be completed from normal spawns within 60 seconds",
+      "old programme versions, changed routes and retired costumes do not erase local achievements or bindings",
       "Réussi",
       "P0",
       "node tests/combat-session.test.mjs",
-      "node --test-reporter=tap tests/combat-session.test.mjs — 26/26 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-session.test.mjs — 31/31 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-session.test.tap)",
       "Vérification de parcours, entrées ou persistance",
       ""
     ],
     [
       "QA-SES-09",
       "Session automatisée",
-      "challenge guard can be completed from normal spawns within 60 seconds",
+      "a recovered local profile can be saved and reloaded without losing previous progress or settings",
       "Réussi",
       "P0",
       "node tests/combat-session.test.mjs",
-      "node --test-reporter=tap tests/combat-session.test.mjs — 26/26 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-session.test.mjs — 31/31 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-session.test.tap)",
       "Vérification de parcours, entrées ou persistance",
       ""
     ],
     [
       "QA-SES-10",
       "Session automatisée",
-      "challenge combo can be completed from normal spawns within 60 seconds",
+      "profile imports and direct saves remain strict unless programme recovery is explicitly requested",
       "Réussi",
       "P0",
       "node tests/combat-session.test.mjs",
-      "node --test-reporter=tap tests/combat-session.test.mjs — 26/26 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-session.test.mjs — 31/31 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-session.test.tap)",
       "Vérification de parcours, entrées ou persistance",
       ""
     ],
     [
       "QA-SES-11",
       "Session automatisée",
-      "challenge throw can be completed from normal spawns within 60 seconds",
+      "tolerant local reading preserves valid checkpoints and never accepts another profile format or version",
       "Réussi",
       "P0",
       "node tests/combat-session.test.mjs",
-      "node --test-reporter=tap tests/combat-session.test.mjs — 26/26 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-session.test.mjs — 31/31 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-session.test.tap)",
       "Vérification de parcours, entrées ou persistance",
       ""
     ],
     [
       "QA-SES-12",
       "Session automatisée",
-      "challenge specialist can be completed from normal spawns within 60 seconds",
+      "every selectable fighter receives complete arcade, boss and survival routes",
       "Réussi",
       "P0",
       "node tests/combat-session.test.mjs",
-      "node --test-reporter=tap tests/combat-session.test.mjs — 26/26 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-session.test.mjs — 31/31 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-session.test.tap)",
       "Vérification de parcours, entrées ou persistance",
       ""
     ],
     [
       "QA-SES-13",
       "Session automatisée",
-      "challenge super can be completed from normal spawns within 60 seconds",
+      "challenge first-impact can be completed from normal spawns within 60 seconds",
       "Réussi",
       "P0",
       "node tests/combat-session.test.mjs",
-      "node --test-reporter=tap tests/combat-session.test.mjs — 26/26 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-session.test.mjs — 31/31 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-session.test.tap)",
       "Vérification de parcours, entrées ou persistance",
       ""
     ],
     [
       "QA-SES-14",
       "Session automatisée",
-      "actual blocked, throw and multi-projectile super events credit the correct player and technique",
+      "challenge guard can be completed from normal spawns within 60 seconds",
       "Réussi",
       "P0",
       "node tests/combat-session.test.mjs",
-      "node --test-reporter=tap tests/combat-session.test.mjs — 26/26 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-session.test.mjs — 31/31 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-session.test.tap)",
       "Vérification de parcours, entrées ou persistance",
       ""
     ],
     [
       "QA-SES-15",
       "Session automatisée",
-      "a complete multi-round human-versus-CPU recording replays identical state and results",
+      "challenge combo can be completed from normal spawns within 60 seconds",
       "Réussi",
       "P0",
       "node tests/combat-session.test.mjs",
-      "node --test-reporter=tap tests/combat-session.test.mjs — 26/26 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-session.test.mjs — 31/31 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-session.test.tap)",
       "Vérification de parcours, entrées ou persistance",
       ""
     ],
     [
       "QA-SES-16",
       "Session automatisée",
-      "native edge pulses remain deterministic when a pause separates adjacent recorded throw-tech inputs",
+      "challenge throw can be completed from normal spawns within 60 seconds",
       "Réussi",
       "P0",
       "node tests/combat-session.test.mjs",
-      "node --test-reporter=tap tests/combat-session.test.mjs — 26/26 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-session.test.mjs — 31/31 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-session.test.tap)",
       "Vérification de parcours, entrées ou persistance",
       ""
     ],
     [
       "QA-SES-17",
       "Session automatisée",
-      "a keyboard attack pressed and released between polls starts exactly once in the combat engine",
+      "challenge specialist can be completed from normal spawns within 60 seconds",
       "Réussi",
       "P0",
       "node tests/combat-session.test.mjs",
-      "node --test-reporter=tap tests/combat-session.test.mjs — 26/26 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-session.test.mjs — 31/31 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-session.test.tap)",
       "Vérification de parcours, entrées ou persistance",
       ""
     ],
     [
       "QA-SES-18",
       "Session automatisée",
-      "keyboard direction plus special follows facing and a held action is not retriggered",
+      "challenge super can be completed from normal spawns within 60 seconds",
       "Réussi",
       "P0",
       "node tests/combat-session.test.mjs",
-      "node --test-reporter=tap tests/combat-session.test.mjs — 26/26 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-session.test.mjs — 31/31 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-session.test.tap)",
       "Vérification de parcours, entrées ou persistance",
       ""
     ],
     [
       "QA-SES-19",
       "Session automatisée",
-      "two local keyboard maps remain independent and form fields do not trigger attacks",
+      "actual blocked, throw and multi-projectile super events credit the correct player and technique",
       "Réussi",
       "P0",
       "node tests/combat-session.test.mjs",
-      "node --test-reporter=tap tests/combat-session.test.mjs — 26/26 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-session.test.mjs — 31/31 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-session.test.tap)",
       "Vérification de parcours, entrées ou persistance",
       ""
     ],
     [
       "QA-SES-20",
       "Session automatisée",
-      "quick touch attacks retain directional specials and the dedicated throw-tech button",
+      "a complete multi-round human-versus-CPU recording replays identical state and results",
       "Réussi",
       "P0",
       "node tests/combat-session.test.mjs",
-      "node --test-reporter=tap tests/combat-session.test.mjs — 26/26 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-session.test.mjs — 31/31 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-session.test.tap)",
       "Vérification de parcours, entrées ou persistance",
       ""
     ],
     [
       "QA-SES-21",
       "Session automatisée",
-      "multitouch releases only the matching pointer and inactive controls cannot queue an attack",
+      "native edge pulses remain deterministic when a pause separates adjacent recorded throw-tech inputs",
       "Réussi",
       "P0",
       "node tests/combat-session.test.mjs",
-      "node --test-reporter=tap tests/combat-session.test.mjs — 26/26 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-session.test.mjs — 31/31 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-session.test.tap)",
       "Vérification de parcours, entrées ou persistance",
       ""
     ],
     [
       "QA-SES-22",
       "Session automatisée",
-      "blur and tab hiding release movement and queued attacks without affecting key bindings",
+      "a keyboard attack pressed and released between polls starts exactly once in the combat engine",
       "Réussi",
       "P0",
       "node tests/combat-session.test.mjs",
-      "node --test-reporter=tap tests/combat-session.test.mjs — 26/26 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-session.test.mjs — 31/31 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-session.test.tap)",
       "Vérification de parcours, entrées ou persistance",
       ""
     ],
     [
       "QA-SES-23",
       "Session automatisée",
-      "standard gamepads provide separate player inputs and one action edge per physical press",
+      "keyboard direction plus special follows facing and a held action is not retriggered",
       "Réussi",
       "P0",
       "node tests/combat-session.test.mjs",
-      "node --test-reporter=tap tests/combat-session.test.mjs — 26/26 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-session.test.mjs — 31/31 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-session.test.tap)",
       "Vérification de parcours, entrées ou persistance",
       ""
     ],
     [
       "QA-SES-24",
       "Session automatisée",
-      "version one profiles migrate with safe bindings, quiet music and no invented progress",
+      "two local keyboard maps remain independent and form fields do not trigger attacks",
       "Réussi",
       "P0",
       "node tests/combat-session.test.mjs",
-      "node --test-reporter=tap tests/combat-session.test.mjs — 26/26 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-session.test.mjs — 31/31 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-session.test.tap)",
       "Vérification de parcours, entrées ou persistance",
       ""
     ],
     [
       "QA-SES-25",
       "Session automatisée",
-      "profile exports preserve canonical progress, costumes and individually earned endings",
+      "quick touch attacks retain directional specials and the dedicated throw-tech button",
       "Réussi",
       "P0",
       "node tests/combat-session.test.mjs",
-      "node --test-reporter=tap tests/combat-session.test.mjs — 26/26 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-session.test.mjs — 31/31 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-session.test.tap)",
       "Vérification de parcours, entrées ou persistance",
       ""
     ],
     [
       "QA-SES-26",
       "Session automatisée",
+      "multitouch releases only the matching pointer and inactive controls cannot queue an attack",
+      "Réussi",
+      "P0",
+      "node tests/combat-session.test.mjs",
+      "node --test-reporter=tap tests/combat-session.test.mjs — 31/31 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-session.test.tap)",
+      "Vérification de parcours, entrées ou persistance",
+      ""
+    ],
+    [
+      "QA-SES-27",
+      "Session automatisée",
+      "blur and tab hiding release movement and queued attacks without affecting key bindings",
+      "Réussi",
+      "P0",
+      "node tests/combat-session.test.mjs",
+      "node --test-reporter=tap tests/combat-session.test.mjs — 31/31 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-session.test.tap)",
+      "Vérification de parcours, entrées ou persistance",
+      ""
+    ],
+    [
+      "QA-SES-28",
+      "Session automatisée",
+      "standard gamepads provide separate player inputs and one action edge per physical press",
+      "Réussi",
+      "P0",
+      "node tests/combat-session.test.mjs",
+      "node --test-reporter=tap tests/combat-session.test.mjs — 31/31 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-session.test.tap)",
+      "Vérification de parcours, entrées ou persistance",
+      ""
+    ],
+    [
+      "QA-SES-29",
+      "Session automatisée",
+      "version one profiles migrate with safe bindings, quiet music and no invented progress",
+      "Réussi",
+      "P0",
+      "node tests/combat-session.test.mjs",
+      "node --test-reporter=tap tests/combat-session.test.mjs — 31/31 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-session.test.tap)",
+      "Vérification de parcours, entrées ou persistance",
+      ""
+    ],
+    [
+      "QA-SES-30",
+      "Session automatisée",
+      "profile exports preserve canonical progress, costumes and individually earned endings",
+      "Réussi",
+      "P0",
+      "node tests/combat-session.test.mjs",
+      "node --test-reporter=tap tests/combat-session.test.mjs — 31/31 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-session.test.tap)",
+      "Vérification de parcours, entrées ou persistance",
+      ""
+    ],
+    [
+      "QA-SES-31",
+      "Session automatisée",
       "replays retain known costumes and reject unrelated variants while keeping 0.1 compatibility",
       "Réussi",
       "P0",
       "node tests/combat-session.test.mjs",
-      "node --test-reporter=tap tests/combat-session.test.mjs — 26/26 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-session.test.mjs — 31/31 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-session.test.tap)",
       "Vérification de parcours, entrées ou persistance",
       ""
     ],
@@ -14757,7 +14834,7 @@
       "Réussi",
       "P0",
       "node tests/combat-audio.test.mjs",
-      "node --test-reporter=tap tests/combat-audio.test.mjs — 14/14 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-audio.test.mjs — 14/14 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-audio.test.tap)",
       "Thèmes et effets définis ; cycle de vie du son vérifié",
       ""
     ],
@@ -14768,7 +14845,7 @@
       "Réussi",
       "P0",
       "node tests/combat-audio.test.mjs",
-      "node --test-reporter=tap tests/combat-audio.test.mjs — 14/14 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-audio.test.mjs — 14/14 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-audio.test.tap)",
       "Thèmes et effets définis ; cycle de vie du son vérifié",
       ""
     ],
@@ -14779,7 +14856,7 @@
       "Réussi",
       "P0",
       "node tests/combat-audio.test.mjs",
-      "node --test-reporter=tap tests/combat-audio.test.mjs — 14/14 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-audio.test.mjs — 14/14 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-audio.test.tap)",
       "Thèmes et effets définis ; cycle de vie du son vérifié",
       ""
     ],
@@ -14790,7 +14867,7 @@
       "Réussi",
       "P0",
       "node tests/combat-audio.test.mjs",
-      "node --test-reporter=tap tests/combat-audio.test.mjs — 14/14 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-audio.test.mjs — 14/14 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-audio.test.tap)",
       "Thèmes et effets définis ; cycle de vie du son vérifié",
       ""
     ],
@@ -14801,7 +14878,7 @@
       "Réussi",
       "P0",
       "node tests/combat-audio.test.mjs",
-      "node --test-reporter=tap tests/combat-audio.test.mjs — 14/14 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-audio.test.mjs — 14/14 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-audio.test.tap)",
       "Thèmes et effets définis ; cycle de vie du son vérifié",
       ""
     ],
@@ -14812,7 +14889,7 @@
       "Réussi",
       "P0",
       "node tests/combat-audio.test.mjs",
-      "node --test-reporter=tap tests/combat-audio.test.mjs — 14/14 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-audio.test.mjs — 14/14 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-audio.test.tap)",
       "Thèmes et effets définis ; cycle de vie du son vérifié",
       ""
     ],
@@ -14823,7 +14900,7 @@
       "Réussi",
       "P0",
       "node tests/combat-audio.test.mjs",
-      "node --test-reporter=tap tests/combat-audio.test.mjs — 14/14 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-audio.test.mjs — 14/14 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-audio.test.tap)",
       "Thèmes et effets définis ; cycle de vie du son vérifié",
       ""
     ],
@@ -14834,7 +14911,7 @@
       "Réussi",
       "P0",
       "node tests/combat-audio.test.mjs",
-      "node --test-reporter=tap tests/combat-audio.test.mjs — 14/14 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-audio.test.mjs — 14/14 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-audio.test.tap)",
       "Thèmes et effets définis ; cycle de vie du son vérifié",
       ""
     ],
@@ -14845,7 +14922,7 @@
       "Réussi",
       "P0",
       "node tests/combat-audio.test.mjs",
-      "node --test-reporter=tap tests/combat-audio.test.mjs — 14/14 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-audio.test.mjs — 14/14 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-audio.test.tap)",
       "Thèmes et effets définis ; cycle de vie du son vérifié",
       ""
     ],
@@ -14856,7 +14933,7 @@
       "Réussi",
       "P0",
       "node tests/combat-audio.test.mjs",
-      "node --test-reporter=tap tests/combat-audio.test.mjs — 14/14 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-audio.test.mjs — 14/14 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-audio.test.tap)",
       "Thèmes et effets définis ; cycle de vie du son vérifié",
       ""
     ],
@@ -14867,7 +14944,7 @@
       "Réussi",
       "P0",
       "node tests/combat-audio.test.mjs",
-      "node --test-reporter=tap tests/combat-audio.test.mjs — 14/14 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-audio.test.mjs — 14/14 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-audio.test.tap)",
       "Thèmes et effets définis ; cycle de vie du son vérifié",
       ""
     ],
@@ -14878,7 +14955,7 @@
       "Réussi",
       "P0",
       "node tests/combat-audio.test.mjs",
-      "node --test-reporter=tap tests/combat-audio.test.mjs — 14/14 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-audio.test.mjs — 14/14 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-audio.test.tap)",
       "Thèmes et effets définis ; cycle de vie du son vérifié",
       ""
     ],
@@ -14889,7 +14966,7 @@
       "Réussi",
       "P0",
       "node tests/combat-audio.test.mjs",
-      "node --test-reporter=tap tests/combat-audio.test.mjs — 14/14 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-audio.test.mjs — 14/14 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-audio.test.tap)",
       "Thèmes et effets définis ; cycle de vie du son vérifié",
       ""
     ],
@@ -14900,7 +14977,7 @@
       "Réussi",
       "P0",
       "node tests/combat-audio.test.mjs",
-      "node --test-reporter=tap tests/combat-audio.test.mjs — 14/14 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-audio.test.mjs — 14/14 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-audio.test.tap)",
       "Thèmes et effets définis ; cycle de vie du son vérifié",
       ""
     ],
@@ -14911,7 +14988,7 @@
       "Réussi",
       "P0",
       "node tests/combat-bindings.test.mjs",
-      "node --test-reporter=tap tests/combat-bindings.test.mjs — 16/16 cas réussis, 0 échec, 0 ignoré (22 octobre 2026, après correction du focus manette)",
+      "node --test-reporter=tap tests/combat-bindings.test.mjs — 16/16 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-bindings.test.tap)",
       "Liaisons indépendantes, conflits rejetés et entrées cohérentes après remappage",
       ""
     ],
@@ -14922,7 +14999,7 @@
       "Réussi",
       "P0",
       "node tests/combat-bindings.test.mjs",
-      "node --test-reporter=tap tests/combat-bindings.test.mjs — 16/16 cas réussis, 0 échec, 0 ignoré (22 octobre 2026, après correction du focus manette)",
+      "node --test-reporter=tap tests/combat-bindings.test.mjs — 16/16 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-bindings.test.tap)",
       "Liaisons indépendantes, conflits rejetés et entrées cohérentes après remappage",
       ""
     ],
@@ -14933,7 +15010,7 @@
       "Réussi",
       "P0",
       "node tests/combat-bindings.test.mjs",
-      "node --test-reporter=tap tests/combat-bindings.test.mjs — 16/16 cas réussis, 0 échec, 0 ignoré (22 octobre 2026, après correction du focus manette)",
+      "node --test-reporter=tap tests/combat-bindings.test.mjs — 16/16 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-bindings.test.tap)",
       "Liaisons indépendantes, conflits rejetés et entrées cohérentes après remappage",
       ""
     ],
@@ -14944,7 +15021,7 @@
       "Réussi",
       "P0",
       "node tests/combat-bindings.test.mjs",
-      "node --test-reporter=tap tests/combat-bindings.test.mjs — 16/16 cas réussis, 0 échec, 0 ignoré (22 octobre 2026, après correction du focus manette)",
+      "node --test-reporter=tap tests/combat-bindings.test.mjs — 16/16 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-bindings.test.tap)",
       "Liaisons indépendantes, conflits rejetés et entrées cohérentes après remappage",
       ""
     ],
@@ -14955,7 +15032,7 @@
       "Réussi",
       "P0",
       "node tests/combat-bindings.test.mjs",
-      "node --test-reporter=tap tests/combat-bindings.test.mjs — 16/16 cas réussis, 0 échec, 0 ignoré (22 octobre 2026, après correction du focus manette)",
+      "node --test-reporter=tap tests/combat-bindings.test.mjs — 16/16 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-bindings.test.tap)",
       "Liaisons indépendantes, conflits rejetés et entrées cohérentes après remappage",
       ""
     ],
@@ -14966,7 +15043,7 @@
       "Réussi",
       "P0",
       "node tests/combat-bindings.test.mjs",
-      "node --test-reporter=tap tests/combat-bindings.test.mjs — 16/16 cas réussis, 0 échec, 0 ignoré (22 octobre 2026, après correction du focus manette)",
+      "node --test-reporter=tap tests/combat-bindings.test.mjs — 16/16 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-bindings.test.tap)",
       "Liaisons indépendantes, conflits rejetés et entrées cohérentes après remappage",
       ""
     ],
@@ -14977,7 +15054,7 @@
       "Réussi",
       "P0",
       "node tests/combat-bindings.test.mjs",
-      "node --test-reporter=tap tests/combat-bindings.test.mjs — 16/16 cas réussis, 0 échec, 0 ignoré (22 octobre 2026, après correction du focus manette)",
+      "node --test-reporter=tap tests/combat-bindings.test.mjs — 16/16 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-bindings.test.tap)",
       "Liaisons indépendantes, conflits rejetés et entrées cohérentes après remappage",
       ""
     ],
@@ -14988,7 +15065,7 @@
       "Réussi",
       "P0",
       "node tests/combat-bindings.test.mjs",
-      "node --test-reporter=tap tests/combat-bindings.test.mjs — 16/16 cas réussis, 0 échec, 0 ignoré (22 octobre 2026, après correction du focus manette)",
+      "node --test-reporter=tap tests/combat-bindings.test.mjs — 16/16 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-bindings.test.tap)",
       "Liaisons indépendantes, conflits rejetés et entrées cohérentes après remappage",
       ""
     ],
@@ -14999,7 +15076,7 @@
       "Réussi",
       "P0",
       "node tests/combat-bindings.test.mjs",
-      "node --test-reporter=tap tests/combat-bindings.test.mjs — 16/16 cas réussis, 0 échec, 0 ignoré (22 octobre 2026, après correction du focus manette)",
+      "node --test-reporter=tap tests/combat-bindings.test.mjs — 16/16 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-bindings.test.tap)",
       "Liaisons indépendantes, conflits rejetés et entrées cohérentes après remappage",
       ""
     ],
@@ -15010,7 +15087,7 @@
       "Réussi",
       "P0",
       "node tests/combat-bindings.test.mjs",
-      "node --test-reporter=tap tests/combat-bindings.test.mjs — 16/16 cas réussis, 0 échec, 0 ignoré (22 octobre 2026, après correction du focus manette)",
+      "node --test-reporter=tap tests/combat-bindings.test.mjs — 16/16 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-bindings.test.tap)",
       "Liaisons indépendantes, conflits rejetés et entrées cohérentes après remappage",
       ""
     ],
@@ -15021,7 +15098,7 @@
       "Réussi",
       "P0",
       "node tests/combat-bindings.test.mjs",
-      "node --test-reporter=tap tests/combat-bindings.test.mjs — 16/16 cas réussis, 0 échec, 0 ignoré (22 octobre 2026, après correction du focus manette)",
+      "node --test-reporter=tap tests/combat-bindings.test.mjs — 16/16 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-bindings.test.tap)",
       "Liaisons indépendantes, conflits rejetés et entrées cohérentes après remappage",
       ""
     ],
@@ -15032,7 +15109,7 @@
       "Réussi",
       "P0",
       "node tests/combat-bindings.test.mjs",
-      "node --test-reporter=tap tests/combat-bindings.test.mjs — 16/16 cas réussis, 0 échec, 0 ignoré (22 octobre 2026, après correction du focus manette)",
+      "node --test-reporter=tap tests/combat-bindings.test.mjs — 16/16 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-bindings.test.tap)",
       "Liaisons indépendantes, conflits rejetés et entrées cohérentes après remappage",
       ""
     ],
@@ -15043,7 +15120,7 @@
       "Réussi",
       "P0",
       "node tests/combat-bindings.test.mjs",
-      "node --test-reporter=tap tests/combat-bindings.test.mjs — 16/16 cas réussis, 0 échec, 0 ignoré (22 octobre 2026, après correction du focus manette)",
+      "node --test-reporter=tap tests/combat-bindings.test.mjs — 16/16 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-bindings.test.tap)",
       "Liaisons indépendantes, conflits rejetés et entrées cohérentes après remappage",
       ""
     ],
@@ -15054,7 +15131,7 @@
       "Réussi",
       "P0",
       "node tests/combat-bindings.test.mjs",
-      "node --test-reporter=tap tests/combat-bindings.test.mjs — 16/16 cas réussis, 0 échec, 0 ignoré (22 octobre 2026, après correction du focus manette)",
+      "node --test-reporter=tap tests/combat-bindings.test.mjs — 16/16 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-bindings.test.tap)",
       "Liaisons indépendantes, conflits rejetés et entrées cohérentes après remappage",
       ""
     ],
@@ -15065,7 +15142,7 @@
       "Réussi",
       "P0",
       "node tests/combat-bindings.test.mjs",
-      "node --test-reporter=tap tests/combat-bindings.test.mjs — 16/16 cas réussis, 0 échec, 0 ignoré (22 octobre 2026, après correction du focus manette)",
+      "node --test-reporter=tap tests/combat-bindings.test.mjs — 16/16 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-bindings.test.tap)",
       "Liaisons indépendantes, conflits rejetés et entrées cohérentes après remappage",
       ""
     ],
@@ -15076,7 +15153,7 @@
       "Réussi",
       "P0",
       "node tests/combat-bindings.test.mjs",
-      "node --test-reporter=tap tests/combat-bindings.test.mjs — 16/16 cas réussis, 0 échec, 0 ignoré (22 octobre 2026, après correction du focus manette)",
+      "node --test-reporter=tap tests/combat-bindings.test.mjs — 16/16 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-bindings.test.tap)",
       "Liaisons indépendantes, conflits rejetés et entrées cohérentes après remappage",
       ""
     ],
@@ -15087,7 +15164,7 @@
       "Réussi",
       "P0",
       "node tests/combat-catalog.test.mjs",
-      "node --test-reporter=tap tests/combat-catalog.test.mjs — 7/7 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-catalog.test.mjs — 7/7 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-catalog.test.tap)",
       "179 archives préservées ; identités, costumes et exclusions explicitement validés",
       ""
     ],
@@ -15098,7 +15175,7 @@
       "Réussi",
       "P0",
       "node tests/combat-catalog.test.mjs",
-      "node --test-reporter=tap tests/combat-catalog.test.mjs — 7/7 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-catalog.test.mjs — 7/7 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-catalog.test.tap)",
       "179 archives préservées ; identités, costumes et exclusions explicitement validés",
       ""
     ],
@@ -15109,7 +15186,7 @@
       "Réussi",
       "P0",
       "node tests/combat-catalog.test.mjs",
-      "node --test-reporter=tap tests/combat-catalog.test.mjs — 7/7 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-catalog.test.mjs — 7/7 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-catalog.test.tap)",
       "179 archives préservées ; identités, costumes et exclusions explicitement validés",
       ""
     ],
@@ -15120,7 +15197,7 @@
       "Réussi",
       "P0",
       "node tests/combat-catalog.test.mjs",
-      "node --test-reporter=tap tests/combat-catalog.test.mjs — 7/7 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-catalog.test.mjs — 7/7 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-catalog.test.tap)",
       "179 archives préservées ; identités, costumes et exclusions explicitement validés",
       ""
     ],
@@ -15131,7 +15208,7 @@
       "Réussi",
       "P0",
       "node tests/combat-catalog.test.mjs",
-      "node --test-reporter=tap tests/combat-catalog.test.mjs — 7/7 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-catalog.test.mjs — 7/7 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-catalog.test.tap)",
       "179 archives préservées ; identités, costumes et exclusions explicitement validés",
       ""
     ],
@@ -15142,7 +15219,7 @@
       "Réussi",
       "P0",
       "node tests/combat-catalog.test.mjs",
-      "node --test-reporter=tap tests/combat-catalog.test.mjs — 7/7 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-catalog.test.mjs — 7/7 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-catalog.test.tap)",
       "179 archives préservées ; identités, costumes et exclusions explicitement validés",
       ""
     ],
@@ -15153,8 +15230,162 @@
       "Réussi",
       "P0",
       "node tests/combat-catalog.test.mjs",
-      "node --test-reporter=tap tests/combat-catalog.test.mjs — 7/7 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-catalog.test.mjs — 7/7 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-catalog.test.tap)",
       "179 archives préservées ; identités, costumes et exclusions explicitement validés",
+      ""
+    ],
+    [
+      "QA-OFFLINE-01",
+      "Installation web",
+      "unsupported or insecure contexts do not start offline initialization",
+      "Réussi",
+      "P0",
+      "node tests/combat-offline.test.mjs",
+      "node --test-reporter=tap tests/combat-offline.test.mjs — 14/14 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-offline.test.tap)",
+      "Échecs explicites, nouvelle tentative, délais bornés et ressources libérées",
+      ""
+    ],
+    [
+      "QA-OFFLINE-02",
+      "Installation web",
+      "concurrent init calls share one attempt and use the active worker directly",
+      "Réussi",
+      "P0",
+      "node tests/combat-offline.test.mjs",
+      "node --test-reporter=tap tests/combat-offline.test.mjs — 14/14 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-offline.test.tap)",
+      "Échecs explicites, nouvelle tentative, délais bornés et ressources libérées",
+      ""
+    ],
+    [
+      "QA-OFFLINE-03",
+      "Installation web",
+      "a first installation becomes ready only after its worker is activated",
+      "Réussi",
+      "P0",
+      "node tests/combat-offline.test.mjs",
+      "node --test-reporter=tap tests/combat-offline.test.mjs — 14/14 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-offline.test.tap)",
+      "Échecs explicites, nouvelle tentative, délais bornés et ressources libérées",
+      ""
+    ],
+    [
+      "QA-OFFLINE-04",
+      "Installation web",
+      "an abandoned first installation reports a retryable error and removes its listeners",
+      "Réussi",
+      "P0",
+      "node tests/combat-offline.test.mjs",
+      "node --test-reporter=tap tests/combat-offline.test.mjs — 14/14 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-offline.test.tap)",
+      "Échecs explicites, nouvelle tentative, délais bornés et ressources libérées",
+      ""
+    ],
+    [
+      "QA-OFFLINE-05",
+      "Installation web",
+      "a registration with a redundant worker already present fails without waiting",
+      "Réussi",
+      "P0",
+      "node tests/combat-offline.test.mjs",
+      "node --test-reporter=tap tests/combat-offline.test.mjs — 14/14 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-offline.test.tap)",
+      "Échecs explicites, nouvelle tentative, délais bornés et ressources libérées",
+      ""
+    ],
+    [
+      "QA-OFFLINE-06",
+      "Installation web",
+      "an initially empty registration waits for updatefound and can activate normally",
+      "Réussi",
+      "P0",
+      "node tests/combat-offline.test.mjs",
+      "node --test-reporter=tap tests/combat-offline.test.mjs — 14/14 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-offline.test.tap)",
+      "Échecs explicites, nouvelle tentative, délais bornés et ressources libérées",
+      ""
+    ],
+    [
+      "QA-OFFLINE-07",
+      "Installation web",
+      "both synchronous registration denial and promise rejection can be retried",
+      "Réussi",
+      "P0",
+      "node tests/combat-offline.test.mjs",
+      "node --test-reporter=tap tests/combat-offline.test.mjs — 14/14 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-offline.test.tap)",
+      "Échecs explicites, nouvelle tentative, délais bornés et ressources libérées",
+      ""
+    ],
+    [
+      "QA-OFFLINE-08",
+      "Installation web",
+      "a stalled installation times out and a late activation cannot change the failed state",
+      "Réussi",
+      "P0",
+      "node tests/combat-offline.test.mjs",
+      "node --test-reporter=tap tests/combat-offline.test.mjs — 14/14 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-offline.test.tap)",
+      "Échecs explicites, nouvelle tentative, délais bornés et ressources libérées",
+      ""
+    ],
+    [
+      "QA-OFFLINE-09",
+      "Installation web",
+      "a late register result after timeout cannot overwrite a successful retry",
+      "Réussi",
+      "P0",
+      "node tests/combat-offline.test.mjs",
+      "node --test-reporter=tap tests/combat-offline.test.mjs — 14/14 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-offline.test.tap)",
+      "Échecs explicites, nouvelle tentative, délais bornés et ressources libérées",
+      ""
+    ],
+    [
+      "QA-OFFLINE-10",
+      "Installation web",
+      "the initialization deadline also closes a silent status message channel",
+      "Réussi",
+      "P0",
+      "node tests/combat-offline.test.mjs",
+      "node --test-reporter=tap tests/combat-offline.test.mjs — 14/14 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-offline.test.tap)",
+      "Échecs explicites, nouvelle tentative, délais bornés et ressources libérées",
+      ""
+    ],
+    [
+      "QA-OFFLINE-11",
+      "Installation web",
+      "status failures close ports and clear busy before an explicit retry",
+      "Réussi",
+      "P0",
+      "node tests/combat-offline.test.mjs",
+      "node --test-reporter=tap tests/combat-offline.test.mjs — 14/14 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-offline.test.tap)",
+      "Échecs explicites, nouvelle tentative, délais bornés et ressources libérées",
+      ""
+    ],
+    [
+      "QA-OFFLINE-12",
+      "Installation web",
+      "a failed replacement worker leaves the existing active worker ready",
+      "Réussi",
+      "P0",
+      "node tests/combat-offline.test.mjs",
+      "node --test-reporter=tap tests/combat-offline.test.mjs — 14/14 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-offline.test.tap)",
+      "Échecs explicites, nouvelle tentative, délais bornés et ressources libérées",
+      ""
+    ],
+    [
+      "QA-OFFLINE-13",
+      "Installation web",
+      "future updates are observed once and are never activated automatically",
+      "Réussi",
+      "P0",
+      "node tests/combat-offline.test.mjs",
+      "node --test-reporter=tap tests/combat-offline.test.mjs — 14/14 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-offline.test.tap)",
+      "Échecs explicites, nouvelle tentative, délais bornés et ressources libérées",
+      ""
+    ],
+    [
+      "QA-OFFLINE-14",
+      "Installation web",
+      "init during an art download does not clear its busy state or launch another registration",
+      "Réussi",
+      "P0",
+      "node tests/combat-offline.test.mjs",
+      "node --test-reporter=tap tests/combat-offline.test.mjs — 14/14 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-offline.test.tap)",
+      "Échecs explicites, nouvelle tentative, délais bornés et ressources libérées",
       ""
     ],
     [
@@ -15164,7 +15395,7 @@
       "Réussi",
       "P0",
       "node tests/combat-progression.test.mjs",
-      "node --test-reporter=tap tests/combat-progression.test.mjs — 19/19 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-progression.test.mjs — 19/19 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-progression.test.tap)",
       "Routes, tournoi déterministe et points de reprise validés",
       ""
     ],
@@ -15175,7 +15406,7 @@
       "Réussi",
       "P0",
       "node tests/combat-progression.test.mjs",
-      "node --test-reporter=tap tests/combat-progression.test.mjs — 19/19 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-progression.test.mjs — 19/19 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-progression.test.tap)",
       "Routes, tournoi déterministe et points de reprise validés",
       ""
     ],
@@ -15186,7 +15417,7 @@
       "Réussi",
       "P0",
       "node tests/combat-progression.test.mjs",
-      "node --test-reporter=tap tests/combat-progression.test.mjs — 19/19 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-progression.test.mjs — 19/19 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-progression.test.tap)",
       "Routes, tournoi déterministe et points de reprise validés",
       ""
     ],
@@ -15197,7 +15428,7 @@
       "Réussi",
       "P0",
       "node tests/combat-progression.test.mjs",
-      "node --test-reporter=tap tests/combat-progression.test.mjs — 19/19 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-progression.test.mjs — 19/19 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-progression.test.tap)",
       "Routes, tournoi déterministe et points de reprise validés",
       ""
     ],
@@ -15208,7 +15439,7 @@
       "Réussi",
       "P0",
       "node tests/combat-progression.test.mjs",
-      "node --test-reporter=tap tests/combat-progression.test.mjs — 19/19 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-progression.test.mjs — 19/19 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-progression.test.tap)",
       "Routes, tournoi déterministe et points de reprise validés",
       ""
     ],
@@ -15219,7 +15450,7 @@
       "Réussi",
       "P0",
       "node tests/combat-progression.test.mjs",
-      "node --test-reporter=tap tests/combat-progression.test.mjs — 19/19 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-progression.test.mjs — 19/19 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-progression.test.tap)",
       "Routes, tournoi déterministe et points de reprise validés",
       ""
     ],
@@ -15230,7 +15461,7 @@
       "Réussi",
       "P0",
       "node tests/combat-progression.test.mjs",
-      "node --test-reporter=tap tests/combat-progression.test.mjs — 19/19 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-progression.test.mjs — 19/19 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-progression.test.tap)",
       "Routes, tournoi déterministe et points de reprise validés",
       ""
     ],
@@ -15241,7 +15472,7 @@
       "Réussi",
       "P0",
       "node tests/combat-progression.test.mjs",
-      "node --test-reporter=tap tests/combat-progression.test.mjs — 19/19 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-progression.test.mjs — 19/19 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-progression.test.tap)",
       "Routes, tournoi déterministe et points de reprise validés",
       ""
     ],
@@ -15252,7 +15483,7 @@
       "Réussi",
       "P0",
       "node tests/combat-progression.test.mjs",
-      "node --test-reporter=tap tests/combat-progression.test.mjs — 19/19 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-progression.test.mjs — 19/19 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-progression.test.tap)",
       "Routes, tournoi déterministe et points de reprise validés",
       ""
     ],
@@ -15263,7 +15494,7 @@
       "Réussi",
       "P0",
       "node tests/combat-progression.test.mjs",
-      "node --test-reporter=tap tests/combat-progression.test.mjs — 19/19 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-progression.test.mjs — 19/19 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-progression.test.tap)",
       "Routes, tournoi déterministe et points de reprise validés",
       ""
     ],
@@ -15274,7 +15505,7 @@
       "Réussi",
       "P0",
       "node tests/combat-progression.test.mjs",
-      "node --test-reporter=tap tests/combat-progression.test.mjs — 19/19 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-progression.test.mjs — 19/19 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-progression.test.tap)",
       "Routes, tournoi déterministe et points de reprise validés",
       ""
     ],
@@ -15285,7 +15516,7 @@
       "Réussi",
       "P0",
       "node tests/combat-progression.test.mjs",
-      "node --test-reporter=tap tests/combat-progression.test.mjs — 19/19 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-progression.test.mjs — 19/19 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-progression.test.tap)",
       "Routes, tournoi déterministe et points de reprise validés",
       ""
     ],
@@ -15296,7 +15527,7 @@
       "Réussi",
       "P0",
       "node tests/combat-progression.test.mjs",
-      "node --test-reporter=tap tests/combat-progression.test.mjs — 19/19 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-progression.test.mjs — 19/19 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-progression.test.tap)",
       "Routes, tournoi déterministe et points de reprise validés",
       ""
     ],
@@ -15307,7 +15538,7 @@
       "Réussi",
       "P0",
       "node tests/combat-progression.test.mjs",
-      "node --test-reporter=tap tests/combat-progression.test.mjs — 19/19 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-progression.test.mjs — 19/19 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-progression.test.tap)",
       "Routes, tournoi déterministe et points de reprise validés",
       ""
     ],
@@ -15318,7 +15549,7 @@
       "Réussi",
       "P0",
       "node tests/combat-progression.test.mjs",
-      "node --test-reporter=tap tests/combat-progression.test.mjs — 19/19 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-progression.test.mjs — 19/19 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-progression.test.tap)",
       "Routes, tournoi déterministe et points de reprise validés",
       ""
     ],
@@ -15329,7 +15560,7 @@
       "Réussi",
       "P0",
       "node tests/combat-progression.test.mjs",
-      "node --test-reporter=tap tests/combat-progression.test.mjs — 19/19 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-progression.test.mjs — 19/19 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-progression.test.tap)",
       "Routes, tournoi déterministe et points de reprise validés",
       ""
     ],
@@ -15340,7 +15571,7 @@
       "Réussi",
       "P0",
       "node tests/combat-progression.test.mjs",
-      "node --test-reporter=tap tests/combat-progression.test.mjs — 19/19 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-progression.test.mjs — 19/19 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-progression.test.tap)",
       "Routes, tournoi déterministe et points de reprise validés",
       ""
     ],
@@ -15351,7 +15582,7 @@
       "Réussi",
       "P0",
       "node tests/combat-progression.test.mjs",
-      "node --test-reporter=tap tests/combat-progression.test.mjs — 19/19 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-progression.test.mjs — 19/19 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-progression.test.tap)",
       "Routes, tournoi déterministe et points de reprise validés",
       ""
     ],
@@ -15362,7 +15593,7 @@
       "Réussi",
       "P0",
       "node tests/combat-progression.test.mjs",
-      "node --test-reporter=tap tests/combat-progression.test.mjs — 19/19 cas réussis, 0 échec, 0 ignoré (22 octobre 2026)",
+      "node --test-reporter=tap tests/combat-progression.test.mjs — 19/19 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-progression.test.tap)",
       "Routes, tournoi déterministe et points de reprise validés",
       ""
     ],
@@ -15450,7 +15681,7 @@
       "Réussi",
       "P0",
       "node tests/combat-progression-browser.mjs · Chromium headless",
-      "Duel local réellement terminé en 2 282 frames, résultat sauvegardé et replay de 611 séquences d’entrées. Les commandes de J2 sont indépendantes.",
+      "Duel local réellement terminé en 2 282 frames, résultat sauvegardé et replay de 611 séquences d’entrées. Les commandes de J2 sont indépendantes.",
       "Deux joueurs et résultat sans conflit d’entrées.",
       ""
     ],
@@ -15461,7 +15692,7 @@
       "À vérifier",
       "P1",
       "node tests/combat-progression-browser.mjs · Chromium headless",
-      "Première victoire réelle contre Kaufmo abstrait puis passage à Gangle, acte 2/6. La longueur et la reprise sont couvertes par contrat ; le parcours complet et sa médaille ne sont pas revendiqués dans le navigateur.",
+      "Première victoire réelle contre Bubble, puis passage à Pomni, acte 2/6. La longueur et la reprise sont couvertes par contrat ; le parcours intégral et sa médaille ne sont pas revendiqués dans le navigateur.",
       "Progression et fin de parcours fonctionnelles.",
       ""
     ],
@@ -15472,7 +15703,7 @@
       "À vérifier",
       "P1",
       "node tests/combat-progression-browser.mjs · Chromium headless",
-      "Première victoire réelle contre Gloink Queen puis passage à The Fudge, acte 2/4. Le parcours intégral et sa médaille restent à jouer dans le navigateur.",
+      "Première victoire réelle contre Gloink Queen, puis passage à The Fudge, acte 2/4. La longueur et la reprise sont couvertes par contrat ; le parcours intégral et sa médaille ne sont pas revendiqués dans le navigateur.",
       "Tous les adversaires prévus apparaissent.",
       ""
     ],
@@ -15483,7 +15714,7 @@
       "Réussi",
       "P0",
       "node tests/combat-progression-browser.mjs · Chromium headless",
-      "Victoire réelle contre le Baron : 6 921 PV deviennent 8 121 au duel contre Loolilalu. Le bonus de 1 200 PV est appliqué ; le plafond de 10 000 et les dix vagues sont couverts par contrats Node.",
+      "Victoire réelle contre Pomni : 8 656 PV deviennent 9 856 au duel contre Kaufmo — abstraction. Le bonus de 1 200 PV est appliqué ; le plafond de 10 000 et les dix vagues sont couverts par contrats Node.",
       "Le prochain match conserve les PV restants + 1 200 de récupération, sans dépasser 10 000.",
       ""
     ],
@@ -15521,6 +15752,17 @@
       ""
     ],
     [
+      "QA-profile-recovery",
+      "Persistance",
+      "Récupérer un profil local dont le programme est invalide",
+      "Réussi",
+      "P0",
+      "tests/combat-session.test.mjs / tests/combat-profile-recovery-browser.mjs",
+      "Chargement local d’une fixture de migration dont seul le checkpoint est invalide : programme abandonné et autres données valides conservées. Conservation après changement de réglage et rechargement, vrai événement storage depuis un second onglet et import UI invalide refusé sans remplacement du profil. Le défi Spécialiste est réellement accompli au clavier pendant le contrôle de rafraîchissement ; les autres récompenses sont des données de migration.",
+      "Seul le checkpoint invalide est abandonné ; les autres données valides survivent aux réglages, au rechargement et aux événements inter-onglets. L’import manuel demeure strict.",
+      ""
+    ],
+    [
       "QA-bindings",
       "Commandes",
       "Remapper les deux joueurs et refuser un conflit",
@@ -15540,6 +15782,17 @@
       "node tests/combat-offline-browser.mjs · serveur HTTP du build autonome + réseau Chromium désactivé",
       "Les 42 planches (47 345 031 octets) sont téléchargées par action explicite. Rechargement à froid sans réseau, changement de combattant/arène et déplacement clavier réussis. Mise à jour via l’UI conserve le pack inchangé et le profil ; portée limitée à /combat/ ; suppression des illustrations préserve les données.",
       "Après mise en cache réussie, le menu et un combat chargé restent disponibles hors ligne sans l’environnement CainOS.",
+      ""
+    ],
+    [
+      "QA-offline-install-recovery",
+      "Distribution",
+      "Échouer puis relancer la première installation hors ligne",
+      "Réussi",
+      "P0",
+      "tests/combat-offline.test.mjs / tests/combat-recovery-browser.mjs",
+      "Une première installation volontairement interrompue affiche une erreur et une commande Réessayer. Après rétablissement des ressources, une nouvelle tentative aboutit depuis l’interface. Les délais, appels concurrents et libérations d’écouteurs sont vérifiés par les contrats Node ; les mises à jour conservent le worker actif.",
+      "Un téléchargement essentiel en erreur produit un état explicite ; Réessayer démarre une nouvelle installation après retour du réseau, sans attente ni écouteur abandonné.",
       ""
     ],
     [
@@ -15691,8 +15944,8 @@
       "Exécuter les audits CainOS existants",
       "Réussi",
       "P0",
-      "npm run qa · audit-combat/qa-0.2.0.log + six TAP individuels",
-      "22 octobre 2026 : audits CainOS et deux builds réussis ; 122 cas Node réussis dans six suites (121 à la QA globale, puis 16/16 commandes après correction ciblée du focus). Pack : 42 planches originales, 47 345 031 octets.",
+      "npm run qa + sept TAP canoniques audit-combat/combat-*.test.tap",
+      "22 octobre 2026 : audits CainOS et deux builds réexécutés avec succès après correction ; 141 cas Node réussis dans sept suites. Pack hors ligne : 42 planches originales, 47 345 031 octets.",
       "Aucune régression des contrats existants.",
       ""
     ],
@@ -15714,7 +15967,7 @@
       "Réussi",
       "P0",
       "node tests/combat-browser.mjs · Chromium headless",
-      "22 octobre 2026 · 11/11 contrôles, 0 erreur JS/HTTP",
+      "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP",
       "Nine modes and standalone home render",
       ""
     ],
@@ -15725,7 +15978,7 @@
       "Réussi",
       "P0",
       "node tests/combat-browser.mjs · Chromium headless",
-      "22 octobre 2026 · 11/11 contrôles, 0 erreur JS/HTTP",
+      "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP",
       "Codex changes fighter and shows ten authored moves",
       ""
     ],
@@ -15736,7 +15989,7 @@
       "Réussi",
       "P0",
       "node tests/combat-browser.mjs · Chromium headless",
-      "22 octobre 2026 · 11/11 contrôles, 0 erreur JS/HTTP",
+      "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP",
       "Archive search filters real records",
       ""
     ],
@@ -15747,7 +16000,7 @@
       "Réussi",
       "P0",
       "node tests/combat-browser.mjs · Chromium headless",
-      "22 octobre 2026 · 11/11 contrôles, 0 erreur JS/HTTP",
+      "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP",
       "Settings persist across reload",
       ""
     ],
@@ -15758,7 +16011,7 @@
       "Réussi",
       "P0",
       "node tests/combat-browser.mjs · Chromium headless",
-      "22 octobre 2026 · 11/11 contrôles, 0 erreur JS/HTTP",
+      "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP",
       "Training loads and responds to keyboard movement/attack",
       ""
     ],
@@ -15769,7 +16022,7 @@
       "Réussi",
       "P0",
       "node tests/combat-browser.mjs · Chromium headless",
-      "22 octobre 2026 · 11/11 contrôles, 0 erreur JS/HTTP",
+      "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP",
       "Pause stops simulation and resume restarts",
       ""
     ],
@@ -15780,7 +16033,7 @@
       "Réussi",
       "P0",
       "node tests/combat-browser.mjs · Chromium headless",
-      "22 octobre 2026 · 11/11 contrôles, 0 erreur JS/HTTP",
+      "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP",
       "Move list pauses and resumes the current encounter",
       ""
     ],
@@ -15791,7 +16044,7 @@
       "Réussi",
       "P0",
       "node tests/combat-browser.mjs · Chromium headless",
-      "22 octobre 2026 · 11/11 contrôles, 0 erreur JS/HTTP",
+      "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP",
       "Player 2 has independent local controls",
       ""
     ],
@@ -15802,7 +16055,7 @@
       "Réussi",
       "P0",
       "node tests/combat-browser.mjs · Chromium headless",
-      "22 octobre 2026 · 11/11 contrôles, 0 erreur JS/HTTP",
+      "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP",
       "Challenge completion persists an earned result",
       ""
     ],
@@ -15813,7 +16066,7 @@
       "Réussi",
       "P0",
       "node tests/combat-browser.mjs · Chromium headless",
-      "22 octobre 2026 · 11/11 contrôles, 0 erreur JS/HTTP",
+      "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP",
       "CainOS desktop launches the shared game and minimizing pauses it",
       ""
     ],
@@ -15824,7 +16077,7 @@
       "Réussi",
       "P0",
       "node tests/combat-browser.mjs · Chromium headless",
-      "22 octobre 2026 · 11/11 contrôles, 0 erreur JS/HTTP",
+      "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP",
       "390px mobile layout and touch attack work without horizontal overflow",
       ""
     ],
@@ -15835,7 +16088,7 @@
       "Réussi",
       "P0",
       "node tests/combat-progression-browser.mjs · Chromium headless",
-      "22 octobre 2026 · 10/10 contrôles, 0 erreur JS/HTTP · 2282 simulation frames, 611 input runs",
+      "22 octobre 2026 · suite complète réexécutée après correction · 10/10 contrôles, 0 erreur JS/HTTP · 2282 simulation frames, 611 input runs",
       "A real local match saves its result and replay",
       ""
     ],
@@ -15846,7 +16099,7 @@
       "Réussi",
       "P0",
       "node tests/combat-progression-browser.mjs · Chromium headless",
-      "22 octobre 2026 · 10/10 contrôles, 0 erreur JS/HTTP",
+      "22 octobre 2026 · suite complète réexécutée après correction · 10/10 contrôles, 0 erreur JS/HTTP",
       "UI replay reproduces the full terminal snapshot without changing profile",
       ""
     ],
@@ -15857,7 +16110,7 @@
       "Réussi",
       "P0",
       "node tests/combat-progression-browser.mjs · Chromium headless",
-      "22 octobre 2026 · 10/10 contrôles, 0 erreur JS/HTTP · abstractedkaufmo → gangle, player HP 8189 → 10000",
+      "22 octobre 2026 · suite complète réexécutée après correction · 10/10 contrôles, 0 erreur JS/HTTP · bubble → pomni, player HP 8688 → 10000",
       "arcade: earned first win opens encounter 2/6",
       ""
     ],
@@ -15868,7 +16121,7 @@
       "Réussi",
       "P0",
       "node tests/combat-progression-browser.mjs · Chromium headless",
-      "22 octobre 2026 · 10/10 contrôles, 0 erreur JS/HTTP · gloinkqueen → fudge, player HP 6864 → 10000",
+      "22 octobre 2026 · suite complète réexécutée après correction · 10/10 contrôles, 0 erreur JS/HTTP · gloinkqueen → fudge, player HP 10000 → 10000",
       "boss: earned first win opens encounter 2/4",
       ""
     ],
@@ -15879,7 +16132,7 @@
       "Réussi",
       "P0",
       "node tests/combat-progression-browser.mjs · Chromium headless",
-      "22 octobre 2026 · 10/10 contrôles, 0 erreur JS/HTTP · baronmildenhall → loolilalu, player HP 6921 → 8121",
+      "22 octobre 2026 · suite complète réexécutée après correction · 10/10 contrôles, 0 erreur JS/HTTP · pomni → abstractedkaufmo, player HP 8656 → 9856",
       "survival: earned first win opens encounter 2/10",
       ""
     ],
@@ -15890,7 +16143,7 @@
       "Réussi",
       "P0",
       "node tests/combat-progression-browser.mjs · Chromium headless",
-      "22 octobre 2026 · 10/10 contrôles, 0 erreur JS/HTTP",
+      "22 octobre 2026 · suite complète réexécutée après correction · 10/10 contrôles, 0 erreur JS/HTTP",
       "Earned progression and settings survive a page reload",
       ""
     ],
@@ -15901,7 +16154,7 @@
       "Réussi",
       "P0",
       "node tests/combat-progression-browser.mjs · Chromium headless",
-      "22 octobre 2026 · 10/10 contrôles, 0 erreur JS/HTTP",
+      "22 octobre 2026 · suite complète réexécutée après correction · 10/10 contrôles, 0 erreur JS/HTTP",
       "Malformed profile, JSON and packed replay inputs are rejected without data loss",
       ""
     ],
@@ -15912,8 +16165,8 @@
       "Réussi",
       "P0",
       "node tests/combat-progression-browser.mjs · Chromium headless",
-      "22 octobre 2026 · 10/10 contrôles, 0 erreur JS/HTTP · Not a claim that all final medals were earned through UI",
-      "Contrat de longueur des parcours. Les parcours classiques ne sont pas revendiqués comme terminés intégralement dans le navigateur.",
+      "22 octobre 2026 · suite complète réexécutée après correction · 10/10 contrôles, 0 erreur JS/HTTP · Not a claim that all final medals were earned through UI",
+      "Contrat de longueur des parcours uniquement. Les médailles finales n’ont pas été jouées dans le navigateur.",
       ""
     ],
     [
@@ -15923,7 +16176,7 @@
       "Réussi",
       "P0",
       "node tests/combat-progression-browser.mjs · Chromium headless",
-      "22 octobre 2026 · 10/10 contrôles, 0 erreur JS/HTTP · 26 local resources",
+      "22 octobre 2026 · suite complète réexécutée après correction · 10/10 contrôles, 0 erreur JS/HTTP · 26 local resources",
       "Built standalone plays on a second origin without the OS runtime",
       ""
     ],
@@ -15934,7 +16187,7 @@
       "Réussi",
       "P0",
       "node tests/combat-progression-browser.mjs · Chromium headless",
-      "22 octobre 2026 · 10/10 contrôles, 0 erreur JS/HTTP · Specialist → Super via real controls; sound and both rewards survive setItem failure; Escape preserves the result actions twice",
+      "22 octobre 2026 · suite complète réexécutée après correction · 10/10 contrôles, 0 erreur JS/HTTP · Specialist → Super via real controls; sound and both rewards survive setItem failure; Escape preserves the result actions twice",
       "Denied storage retains two rewards for export; terminal dialogs survive Escape",
       ""
     ],
@@ -15945,7 +16198,7 @@
       "Réussi",
       "P0",
       "node tests/combat-encore-browser.mjs · Chromium headless",
-      "22 octobre 2026 · 8/8 contrôles, 0 erreur JS/HTTP, 9 duels joués · Jax’s first duel is genuinely won; the second scene and its original starting health survive reload",
+      "22 octobre 2026 · suite complète réexécutée après correction · 8/8 contrôles, 0 erreur JS/HTTP · Jax’s first duel is genuinely won; the second scene and its original starting health survive reload",
       "Story victory checkpoint reloads into chapter 2 without a duplicate reward",
       ""
     ],
@@ -15956,7 +16209,7 @@
       "Réussi",
       "P0",
       "node tests/combat-encore-browser.mjs · Chromium headless",
-      "22 octobre 2026 · 8/8 contrôles, 0 erreur JS/HTTP, 9 duels joués · Gangle → Zooble → Ragatha → Caine; profile records four wins, one completed route and no remaining checkpoint",
+      "22 octobre 2026 · suite complète réexécutée après correction · 8/8 contrôles, 0 erreur JS/HTTP · Gangle → Zooble → Ragatha → Caine; profile records four wins, one completed route and no remaining checkpoint",
       "Four genuine Jax story wins show all authored scenes, unique ending and earned story medal",
       ""
     ],
@@ -15967,7 +16220,7 @@
       "Réussi",
       "P0",
       "node tests/combat-encore-browser.mjs · Chromium headless",
-      "22 octobre 2026 · 8/8 contrôles, 0 erreur JS/HTTP, 9 duels joués · Fixture has zero player results; three quarter-finals are explicitly identified as CPU simulations",
+      "22 octobre 2026 · suite complète réexécutée après correction · 8/8 contrôles, 0 erreur JS/HTTP · Fixture has zero player results; three quarter-finals are explicitly identified as CPU simulations",
       "Seeded tournament import displays eight artists and seven real bracket slots",
       ""
     ],
@@ -15978,7 +16231,7 @@
       "Réussi",
       "P0",
       "node tests/combat-encore-browser.mjs · Chromium headless",
-      "22 octobre 2026 · 8/8 contrôles, 0 erreur JS/HTTP, 9 duels joués · Same participants, CPU outcomes, next rival and rules; profile match count remains unchanged by reload",
+      "22 octobre 2026 · suite complète réexécutée après correction · 8/8 contrôles, 0 erreur JS/HTTP · Same participants, CPU outcomes, next rival and rules; profile match count remains unchanged by reload",
       "Tournament bracket and semifinal resume after a real quarter-final win",
       ""
     ],
@@ -15989,7 +16242,7 @@
       "Réussi",
       "P0",
       "node tests/combat-encore-browser.mjs · Chromium headless",
-      "22 octobre 2026 · 8/8 contrôles, 0 erreur JS/HTTP, 9 duels joués · Seven resolved matches: three played by the keyboard user and four explicitly simulated CPU matches",
+      "22 octobre 2026 · suite complète réexécutée après correction · 8/8 contrôles, 0 erreur JS/HTTP · Seven resolved matches: three played by the keyboard user and four explicitly simulated CPU matches",
       "Three genuine tournament wins earn the cup and the tournament medal",
       ""
     ],
@@ -16000,7 +16253,7 @@
       "Réussi",
       "P0",
       "node tests/combat-encore-browser.mjs · Chromium headless",
-      "22 octobre 2026 · 8/8 contrôles, 0 erreur JS/HTTP, 9 duels joués · The real CPU wins; remaining results are simulated and retry resets index/results while preserving the recorded loss",
+      "22 octobre 2026 · suite complète réexécutée après correction · 8/8 contrôles, 0 erreur JS/HTTP · The real CPU wins; remaining results are simulated and retry resets index/results while preserving the recorded loss",
       "Tournament loss eliminates without a medal; replay starts a fresh bracket attempt",
       ""
     ],
@@ -16011,7 +16264,7 @@
       "Réussi",
       "P0",
       "node tests/combat-encore-browser.mjs · Chromium headless",
-      "22 octobre 2026 · 8/8 contrôles, 0 erreur JS/HTTP, 9 duels joués · The second chapter restarts with unchanged seed/rival/full health; the first victory and the later loss are each counted once",
+      "22 octobre 2026 · suite complète réexécutée après correction · 8/8 contrôles, 0 erreur JS/HTTP · The second chapter restarts with unchanged seed/rival/full health; the first victory and the later loss are each counted once",
       "Story defeat and retry retain the genuinely earned previous chapter, including after reload",
       ""
     ],
@@ -16022,7 +16275,7 @@
       "Réussi",
       "P0",
       "node tests/combat-encore-browser.mjs · Chromium headless",
-      "22 octobre 2026 · 8/8 contrôles, 0 erreur JS/HTTP, 9 duels joués · Cancel leaves the story checkpoint intact; start-new replaces only the active route",
+      "22 octobre 2026 · suite complète réexécutée après correction · 8/8 contrôles, 0 erreur JS/HTTP · Cancel leaves the story checkpoint intact; start-new replaces only the active route",
       "Replacing a saved programme requires the visible UI choice and preserves the existing record",
       ""
     ],
@@ -16033,7 +16286,7 @@
       "Réussi",
       "P0",
       "node tests/combat-offline-browser.mjs · Chromium headless",
-      "22 octobre 2026 · 11/11 contrôles, 0 erreur JS/HTTP · J1 light = F; labels follow AZERTY/QWERTY",
+      "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP · J1 light = F; labels follow AZERTY/QWERTY",
       "Custom keys reject conflicts and reserved shortcuts, allow alternatives, and persist",
       ""
     ],
@@ -16044,7 +16297,7 @@
       "Réussi",
       "P0",
       "node tests/combat-offline-browser.mjs · Chromium headless",
-      "22 octobre 2026 · 11/11 contrôles, 0 erreur JS/HTTP · Effects off; music on; bounded voices",
+      "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP · Effects off; music on; bounded voices",
       "Original procedural music starts from a gesture with an independent mute",
       ""
     ],
@@ -16055,7 +16308,7 @@
       "Réussi",
       "P0",
       "node tests/combat-offline-browser.mjs · Chromium headless",
-      "22 octobre 2026 · 11/11 contrôles, 0 erreur JS/HTTP",
+      "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP",
       "Remapped attack reaches the engine and move list while the old key stays inactive",
       ""
     ],
@@ -16066,7 +16319,7 @@
       "Réussi",
       "P0",
       "node tests/combat-offline-browser.mjs · Chromium headless",
-      "22 octobre 2026 · 11/11 contrôles, 0 erreur JS/HTTP",
+      "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP",
       "Live combo label clears after recovery while the best result combo remains",
       ""
     ],
@@ -16077,7 +16330,7 @@
       "Réussi",
       "P0",
       "node tests/combat-offline-browser.mjs · Chromium headless",
-      "22 octobre 2026 · 11/11 contrôles, 0 erreur JS/HTTP",
+      "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP",
       "Pause stops simulation and releases audio voices; resume restores the stage theme",
       ""
     ],
@@ -16088,7 +16341,7 @@
       "Réussi",
       "P0",
       "node tests/combat-offline-browser.mjs · Chromium headless",
-      "22 octobre 2026 · 11/11 contrôles, 0 erreur JS/HTTP · 47,345,031 bytes; explicit UI action and completion state",
+      "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP · 47,345,031 bytes; explicit UI action and completion state",
       "The standalone downloads all 42 original sprite sheets",
       ""
     ],
@@ -16099,7 +16352,7 @@
       "Réussi",
       "P0",
       "node tests/combat-offline-browser.mjs · Chromium headless",
-      "22 octobre 2026 · 11/11 contrôles, 0 erreur JS/HTTP · Network disabled; profile preserved; real keyboard movement",
+      "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP · Network disabled; profile preserved; real keyboard movement",
       "A cold page reload and a different fighter/stage remain playable offline",
       ""
     ],
@@ -16110,7 +16363,7 @@
       "Réussi",
       "P0",
       "node tests/combat-offline-browser.mjs · Chromium headless",
-      "22 octobre 2026 · 11/11 contrôles, 0 erreur JS/HTTP · No automatic reload; all 42 images and the profile survive activation",
+      "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP · No automatic reload; all 42 images and the profile survive activation",
       "A waiting service worker updates only through the UI and preserves the unchanged art pack",
       ""
     ],
@@ -16121,7 +16374,7 @@
       "Réussi",
       "P0",
       "node tests/combat-offline-browser.mjs · Chromium headless",
-      "22 octobre 2026 · 11/11 contrôles, 0 erreur JS/HTTP",
+      "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP",
       "The offline worker is limited to /combat/ and leaves other application documents uncontrolled",
       ""
     ],
@@ -16132,7 +16385,7 @@
       "Réussi",
       "P0",
       "node tests/combat-offline-browser.mjs · Chromium headless",
-      "22 octobre 2026 · 11/11 contrôles, 0 erreur JS/HTTP",
+      "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP",
       "Clearing downloaded illustrations preserves custom keys and all profile data",
       ""
     ],
@@ -16143,8 +16396,96 @@
       "Réussi",
       "P0",
       "node tests/combat-offline-browser.mjs · Chromium headless",
-      "22 octobre 2026 · 11/11 contrôles, 0 erreur JS/HTTP",
+      "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP",
       "The expanded settings and key mapper fit a 390-pixel viewport",
+      ""
+    ],
+    [
+      "QA-REC-01",
+      "Installation web",
+      "A failed first offline-cache installation exits preparation and exposes an enabled retry",
+      "Réussi",
+      "P0",
+      "node tests/combat-recovery-browser.mjs · Chromium headless",
+      "22 octobre 2026 · 3/3 contrôles, 0 erreur JS non attendue · Real HTTP 503 during cache.addAll; online settings remain usable",
+      "A failed first offline-cache installation exits preparation and exposes an enabled retry",
+      ""
+    ],
+    [
+      "QA-REC-02",
+      "Installation web",
+      "The retry button registers a working service worker without reloading or losing the profile",
+      "Réussi",
+      "P0",
+      "node tests/combat-recovery-browser.mjs · Chromium headless",
+      "22 octobre 2026 · 3/3 contrôles, 0 erreur JS non attendue · Same page and profile; active /combat/ worker; initialization errors cleared",
+      "The retry button registers a working service worker without reloading or losing the profile",
+      ""
+    ],
+    [
+      "QA-REC-03",
+      "Installation web",
+      "The recovered installation downloads the full pack and survives an offline cold reload",
+      "Réussi",
+      "P0",
+      "node tests/combat-recovery-browser.mjs · Chromium headless",
+      "22 octobre 2026 · 3/3 contrôles, 0 erreur JS non attendue · 42 illustrations; 47,345,031 bytes; profile preserved",
+      "The recovered installation downloads the full pack and survives an offline cold reload",
+      ""
+    ],
+    [
+      "QA-RPRO-01",
+      "Récupération du profil",
+      "Startup drops only the corrupt checkpoint",
+      "Réussi",
+      "P0",
+      "node tests/combat-profile-recovery-browser.mjs · Chromium headless",
+      "22 octobre 2026 · 5/5 contrôles, 0 erreur JS non attendue · A migration fixture retains all statistics, challenges, medals, endings, history, preferences and both custom keyboard maps.",
+      "Startup drops only the corrupt checkpoint",
+      ""
+    ],
+    [
+      "QA-RPRO-02",
+      "Récupération du profil",
+      "A routine preference save and reload preserve the recovered profile",
+      "Réussi",
+      "P0",
+      "node tests/combat-profile-recovery-browser.mjs · Chromium headless",
+      "22 octobre 2026 · 5/5 contrôles, 0 erreur JS non attendue · Sound is enabled through the settings UI; the repaired save has program:null and every prior achievement/binding remains.",
+      "A routine preference save and reload preserve the recovered profile",
+      ""
+    ],
+    [
+      "QA-RPRO-03",
+      "Récupération du profil",
+      "A real cross-tab storage event preserves progress despite an obsolete costume",
+      "Réussi",
+      "P0",
+      "node tests/combat-profile-recovery-browser.mjs · Chromium headless",
+      "22 octobre 2026 · 5/5 contrôles, 0 erreur JS non attendue · The incoming fixture replaces stats, history, achievements and the J1 binding; only its invalid checkpoint is discarded.",
+      "A real cross-tab storage event preserves progress despite an obsolete costume",
+      ""
+    ],
+    [
+      "QA-RPRO-04",
+      "Récupération du profil",
+      "Reward refresh repairs the incompatible disk checkpoint without erasing the record",
+      "Réussi",
+      "P0",
+      "node tests/combat-profile-recovery-browser.mjs · Chromium headless",
+      "22 octobre 2026 · 5/5 contrôles, 0 erreur JS non attendue · Specialist is actually completed with four keyboard techniques; only that new reward is added to the migration fixture, and reload preserves it.",
+      "Reward refresh repairs the incompatible disk checkpoint without erasing the record",
+      ""
+    ],
+    [
+      "QA-RPRO-05",
+      "Récupération du profil",
+      "Manual file import remains strict and preserves the existing profile",
+      "Réussi",
+      "P0",
+      "node tests/combat-profile-recovery-browser.mjs · Chromium headless",
+      "22 octobre 2026 · 5/5 contrôles, 0 erreur JS non attendue · An invalid costume is rejected with an error before the replacement prompt; neither the in-memory profile nor its stored copy changes.",
+      "Manual file import remains strict and preserves the existing profile",
       ""
     ]
   ],

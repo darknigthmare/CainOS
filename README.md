@@ -65,6 +65,12 @@ when supported by the browser. Use the installed shortcut or the direct
 
 Updates are offered explicitly in settings. A code-only update preserves the
 unchanged illustration pack; changed artwork requires preparing the new pack.
+A failed or timed-out first offline installation displays an error and a retry
+action. Initialization waits at most twenty seconds and keeps an existing active
+worker usable while an update installs. Reading local storage discards only an
+incompatible checkpoint, preserving the rest of the profile; explicit imports
+remain strict.
+
 Clearing illustrations leaves the profile and custom controls intact. The worker
 controls only the combat path: the rest of CainOS and the standalone root redirect
 are outside its offline cache. See [offline.mjs](combat/offline.mjs),
@@ -100,14 +106,18 @@ npm run qa
 
 This runs the existing CainOS audits, combat behavioral tests, syntax checks,
 offline-manifest generation and both static builds. The recorded Node result for
-0.2.0 is **122 passing tests** across engine, session, catalog, bindings,
-progression and audio.
+0.2.0 is **141 passing tests** across engine, session, catalog, bindings,
+progression, audio and offline initialization.
 
 The new story/tournament browser suite has **8 passing checks and 9 played duels**.
 The new controls/audio/offline suite has **11 passing checks**, including a cold
 offline reload and preservation of the art pack across a code update. The
 progression/replay/standalone suite has **10 passing checks**, and the
-UI/integration suite has **11 passing checks**. The four final reports total
-**40 passing browser checks**, with no recorded JavaScript errors.
+UI/integration suite has **11 passing checks**. The profile-recovery suite adds
+**5 passing checks**, including changes from another tab and a challenge completed
+with an incompatible stored checkpoint. Offline installation recovery adds
+**3 passing checks** after a real HTTP 503, followed by a successful retry and
+offline reload. The six final reports total **48 passing browser checks**, with
+no recorded JavaScript errors.
 See the [combat documentation](docs/DIGITAL_CIRCUS_ENCORE.md) and
 [QA evidence](docs/combat-qa-evidence.json) for exact scope, requirements and limits.

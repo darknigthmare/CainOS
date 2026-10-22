@@ -1,5 +1,5 @@
 {
-  "createdAt": "2026-10-22T06:31:48.582Z",
+  "createdAt": "2026-10-22T10:37:05.939Z",
   "counts": {
     "fighters": 14,
     "moves": 140,
@@ -14,13 +14,13 @@
     "soundEffects": 16,
     "offlineImages": 42,
     "offlineBytes": 47345031,
-    "features": 86,
+    "features": 88,
     "production": 389,
     "scenarios": 85,
-    "qa": 193
+    "qa": 222
   },
   "qaSummary": {
-    "Réussi": 179,
+    "Réussi": 208,
     "Échec": 0,
     "Non exécuté": 5,
     "À vérifier": 9
@@ -43,16 +43,12 @@
   "renderedSheets": [
     "Synthèse",
     "Fonctionnalités",
-    "Arènes",
-    "Atlas",
-    "Production",
-    "Scénarios",
     "QA",
     "Références"
   ],
   "qaEvidencePresent": true,
   "sourceDigests": {
-    "combat/app.mjs": "04f3cfee87831011ffd230885b5a3cfc7c3dbb32e8d41b8a498076c207ada2d4",
+    "combat/app.mjs": "132b3a4ab597e8983ca80469c50cc6646ac4f64e448438e5a433977acb1dec41",
     "combat/audio.mjs": "fbce0e74431c354a01e7ebc46b75084b6c81c233c1ed3807bcac6b97d8e1329b",
     "combat/bindings.mjs": "8352b4a92afb27a85220b21feb5b7f53b34a2c4eabfedff2f400259329988969",
     "combat/data.mjs": "a01f1d1aee3f06a7097c976596459b3b0d8b1d6b93c9b5c0ae962fb96a972011",
@@ -61,11 +57,11 @@
     "combat/index.html": "a460399b3a66c087201680263277a0bcdb58d1488db7b74e84c9ec59a1b56c8c",
     "combat/input.mjs": "bd6e648180730a662fdb60ce91d93cb8b60d9ef88f01922059dd46808ad8170b",
     "combat/manifest.webmanifest": "3a7f78eb5c4cc3f7c90784a8bcba425dc91fdc1e1c401fc26b3a81f12d4534aa",
-    "combat/offline-manifest.mjs": "95fa0b2cb4c772a34fb7cf05b0a31e96ad16016b2e81db3af197035261f5aefd",
-    "combat/offline.mjs": "959c877f7cea87bdb6a35285e7e921733168350dd2508803eab2b07236e6adcd",
+    "combat/offline-manifest.mjs": "2e54d7c19b01cac66c8d9acbc6fc670ecb213a2535941280d132bf753f36e80f",
+    "combat/offline.mjs": "704b87db56c26365c770c46df33a0ebfa6c2639d1b97df8183794dfb8417e4c9",
     "combat/progression.mjs": "a5a3d697b034146464d0c315a2a5dc5891557caf1a58ad1d8dd8551a5f585f15",
     "combat/render.mjs": "e808ec624d313d6143d199adf796bd431829d74ff910e38303b9d7082f6d5ec7",
-    "combat/session.mjs": "dcaf59410da06351707ddf51fb5f5a6510c0bbdf895cadb4c8484a394e61dec7",
+    "combat/session.mjs": "a259f2dd9ef2e97576cd2521f7144c7f1817ed0ba30e2ec1feac11a07162b6aa",
     "combat/sprite-catalog.mjs": "41ad2ff416eef0d9426dd8ec17218a35b0c6a016a6dbf73e8e96a1f86d1a2172",
     "combat/stories.mjs": "08c8dc0270d4aa2bfc2f79e8a4180aa4ed9dc0dfb03361e199a2c07507e17ea7",
     "combat/style.css": "b0236a02624a270a623826534b171e4a8eef111eaa05c310b37b203ad0142ca1",
@@ -77,11 +73,14 @@
     "tests/combat-encore-browser.mjs": "3a2f45a3d73c864be0e4da8705fa544011484bbc1600d0c9af356d7168dedc03",
     "tests/combat-engine.test.mjs": "5fb1260ef501eadf1e55bd879d70ee872ca10ea60f78a5b807fda35f112d0485",
     "tests/combat-offline-browser.mjs": "d1740a7cbed0140db4ff883e18895c6a0f3e337131e761e7147b1ba7a86fe5dd",
+    "tests/combat-offline.test.mjs": "f070eb711be11562ef492ba17c8cc7b9cb00f7087784410e23acb62917559476",
+    "tests/combat-profile-recovery-browser.mjs": "d6ba225ae115114758d83f08d1cc2c697f164430e94b14905f146d55cd358111",
     "tests/combat-progression-browser.mjs": "2024357b9fd071694ec8e4224d43e40b8cf7732502e6e1ef1f7b2dff20c8cc5f",
     "tests/combat-progression.test.mjs": "cbd27b27316563868585d25a5e1e7613ef4b0a15f42a63b2032efeb334a3f7f8",
-    "tests/combat-session.test.mjs": "0e4e2a177794fe3da6c1842080ee8ed1446a0094e6fee91ec459157a8ba0924f",
-    "docs/combat-qa-evidence.json": "fb7ddd9611a9ac3e3f5296244244dad049377ca7538b088b2691fc8b1155b59b",
-    "scripts/build-combat-workbook.mjs": "ee893a97f8c9dc3220c169830af739544a9a2b551a094b58298dff8c2ac0cd88"
+    "tests/combat-recovery-browser.mjs": "efbce0402d3e37d367fb61792bcf68b760ac89c7c295ee3c282138cb2537b5bd",
+    "tests/combat-session.test.mjs": "40d111e9f967b430777ec853048e368593542f3d2689f02a0177a65bf16b3d54",
+    "docs/combat-qa-evidence.json": "fb7388b834708903b69053e0fc5caeb2ec971ad7f0faee223207b04085deab0f",
+    "scripts/build-combat-workbook.mjs": "fd75f1724ae02c46fd3c8848f57417b0088cea1e8cf0dde92ebdccc7b35266ba"
   },
   "xlsxPackage": {
     "sheets": 10,
@@ -99,11 +98,11 @@
       "51"
     ],
     "qaCache": [
-      "179",
+      "208",
       "0",
       "5",
       "9",
-      "193"
+      "222"
     ],
     "releaseCache": [
       "14 routes originales",
@@ -112,18 +111,24 @@
       "16 motifs sonores synthétiques"
     ],
     "tableRanges": {
-      "EncoreFonctionnalites": "A5:I91",
+      "EncoreFonctionnalites": "A5:I93",
       "EncoreCombattants": "A5:U19",
       "EncoreTechniques": "A5:R145",
       "EncoreArenes": "A5:O17",
       "EncoreAtlas": "A5:T184",
       "EncoreProduction": "A5:J394",
       "EncoreScenarios": "A5:K90",
-      "EncoreQA": "A5:I198",
+      "EncoreQA": "A5:I227",
       "EncoreReferences": "A5:E17"
     },
-    "bytes": 131272,
-    "sha256": "46b7f8af2588bb397b2730c49e71805b7a18805aa2cd7712df178aabceb15cb5"
+    "bytes": 134860,
+    "sha256": "b296ed338a54b5a98dddc6ae275f3998c415038c2502c042b63529c2570ccd4c"
   },
-  "visualReview": "Synthèse, Fonctionnalités, Arènes, Atlas, Production, Scénarios, QA et Références rendus ; synthèse, textes narratifs, classifications, descriptions musicales et preuves QA vérifiés visuellement."
+  "visualReview": "Synthèse, Fonctionnalités, QA et Références rendus après les corrections. Les deux nouvelles fonctions, leurs critères, les huit contrôles navigateur ciblés et les compteurs ont été vérifiés visuellement. Les autres feuilles conservent le contenu et la mise en forme précédemment validés.",
+  "qaExecutionCounts": {
+    "node": 141,
+    "browser": 48,
+    "nodeSuites": 7,
+    "browserSuites": 6
+  }
 }

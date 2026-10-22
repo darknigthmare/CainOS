@@ -27,7 +27,12 @@ export function cleanSettings(value = {}) {
 export function emptyProfile() {
   return { format: 'circus-encore-profile', version: 1, settings: cleanSettings(DEFAULT_SETTINGS), stats: { matches: 0, wins: 0, losses: 0, bestSurvival: 0, damage: 0 }, challenges: [], medals: [], stories: [], program: null, history: [] };
 }
-export function validateProfile(value) {
+/**
+ * Imports and saves validate every checkpoint strictly. Reading an existing
+ * local profile may explicitly discard an obsolete/corrupt programme while
+ * preserving the player's otherwise valid progress and settings.
+ */
+export function validateProfile(value, { strictProgram = true } = {}) {
   if (!value || value.format !== 'circus-encore-profile' || value.version !== 1) throw new Error('Ce fichier n’est pas une sauvegarde Encore version 1.');
   const profile = emptyProfile();
   profile.settings = cleanSettings(value.settings);
@@ -37,14 +42,19 @@ export function validateProfile(value) {
   profile.stats.bestSurvival = Math.min(10, profile.stats.bestSurvival);
   profile.stories = [...new Set((Array.isArray(value.stories) ? value.stories : []).filter(id => FIGHTERS.some(f => f.id === id)))];
   if (value.program != null) {
-    profile.program = validateProgram(value.program, FIGHTERS, STAGES, VARIANTS);
-    if (profile.program.status !== 'active') profile.program = null;
+    try {
+      profile.program = validateProgram(value.program, FIGHTERS, STAGES, VARIANTS);
+      if (profile.program.status !== 'active') profile.program = null;
+    } catch (error) {
+      if (strictProgram !== false) throw error;
+      profile.program = null;
+    }
   }
   profile.history = (Array.isArray(value.history) ? value.history : []).filter(v => v && typeof v.fighter === 'string' && typeof v.opponent === 'string').slice(0, 12).map(v => ({ fighter: v.fighter.slice(0, 60), opponent: v.opponent.slice(0, 60), mode: String(v.mode || '').slice(0, 30), won: v.won === true, at: String(v.at || '').slice(0, 30) }));
   return profile;
 }
 export function readProfile(storage) {
-  try { const raw = storage.getItem(SAVE_KEY); return raw ? validateProfile(JSON.parse(raw)) : emptyProfile(); }
+  try { const raw = storage.getItem(SAVE_KEY); return raw ? validateProfile(JSON.parse(raw), { strictProgram: false }) : emptyProfile(); }
   catch { return emptyProfile(); }
 }
 export function saveProfile(storage, profile) {

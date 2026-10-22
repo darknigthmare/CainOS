@@ -77,6 +77,12 @@ données reconnues et reçoivent les nouvelles valeurs par défaut. Les replays
 sélectionne les apparences originales. La lecture n’ajoute aucun résultat au
 palmarès. Le JSON exporte aussi les touches et le checkpoint ; un stockage refusé
 conserve les résultats de la session en mémoire pour permettre leur export.
+À la lecture locale, un checkpoint corrompu ou devenu incompatible est écarté
+sans perdre le reste du profil. L’import explicite reste strict et refuse ce
+checkpoint avant toute modification des données. La première installation hors
+ligne signale désormais ses échecs et propose une nouvelle tentative dans les
+réglages ; son attente est bornée à vingt secondes et un worker déjà actif reste
+utilisable pendant une mise à jour.
 Contrats : [`combat/session.mjs`](https://github.com/darknigthmare/CainOS/blob/feat/encore-0-2-story-offline/combat/session.mjs).
 
 Le port conserve les correctifs de garde après blockstun, annulation refusée,
@@ -92,10 +98,10 @@ feuilles : Synthèse, Fonctionnalités, Combattants, Techniques, Arènes, Atlas,
 Production, Scénarios, QA et Références. Les inventaires, 56 chapitres, thèmes,
 effets et preuves de test proviennent des fichiers réels. Les éléments livrés,
 partiels, prévus et restant à vérifier ont des statuts distincts et des critères
-de réception. Le classeur reste filtrable et éditable : **86 fonctionnalités, 389 tâches de
-production, 85 scénarios et 193 lignes QA**, avec 34 formules et neuf tableaux.
-Les lignes QA comptent 179 réussites, neuf points à vérifier et cinq non exécutés ;
-elles recoupent les tests ci-dessous et ne constituent pas 193 tests indépendants.
+de réception. Le classeur reste filtrable et éditable : **88 fonctionnalités, 389 tâches de
+production, 85 scénarios et 222 lignes QA**, avec 34 formules et neuf tableaux.
+Les lignes QA comptent 208 réussites, neuf points à vérifier et cinq non exécutés ;
+elles recoupent les tests ci-dessous et ne constituent pas 222 tests indépendants.
 
 La provenance du moteur, les commandes et l’architecture sont détaillées dans
 [`DIGITAL_CIRCUS_ENCORE.md`](https://github.com/darknigthmare/CainOS/blob/feat/encore-0-2-story-offline/docs/DIGITAL_CIRCUS_ENCORE.md). Références de départ :
@@ -106,9 +112,10 @@ cette PR **53d56cf30484708af7c171babd3a05aa684d9a8a** ; CQC
 
 ## Validation consignée
 
-- **122 tests Node réussis** : 40 moteur, 26 session, 7 catalogue, 16 commandes,
-  19 progression et 14 audio. Les tests couvrent notamment les 140 techniques,
-  les six défis, les 14 routes, les tableaux déterministes et les imports invalides.
+- **141 tests Node réussis** : 40 moteur, 31 session, 7 catalogue, 16 commandes,
+  19 progression, 14 audio et 14 initialisation hors ligne. Les tests couvrent
+  notamment les 140 techniques, les six défis, les 14 routes, les tableaux
+  déterministes, la récupération du profil et les erreurs d’installation.
 - **8/8 contrôles histoires/tournoi**, avec **9 duels réellement joués** via
   `tests/combat-encore-browser.mjs` : histoire de Jax achevée, tournoi remporté,
   élimination, reprise et revanche. Aucune erreur consignée dans ce rapport.
@@ -124,14 +131,22 @@ cette PR **53d56cf30484708af7c171babd3a05aa684d9a8a** ; CQC
 - **11/11 contrôles interface/intégration**, via `tests/combat-browser.mjs` :
   menus, codex/archives, sauvegarde des réglages, clavier J1/J2, pause, défi,
   calibration et lancement dans CainOS, commandes tactiles à 390 px.
-- **Total final : 40 contrôles navigateur réussis** sur les quatre suites,
+- **5/5 contrôles de récupération du profil**, via
+  `tests/combat-profile-recovery-browser.mjs` : démarrage avec checkpoint invalide,
+  persistance, événement entre deux onglets, défi Spécialiste réellement accompli
+  et import invalide refusé sans perte des données existantes.
+- **3/3 contrôles de reprise de l’installation hors ligne**, via
+  `tests/combat-recovery-browser.mjs` : échec HTTP 503 réel du cache initial,
+  nouvelle tentative depuis les réglages sans rechargement ni perte du profil,
+  pack complet puis rechargement sans réseau.
+- **Total final : 48 contrôles navigateur réussis** sur les six suites,
   sans erreur JavaScript consignée dans leurs rapports finaux.
 - Le contrôle du classeur et les rapports consolidés sont suivis dans
   [`combat-qa-evidence.json`](https://github.com/darknigthmare/CainOS/blob/feat/encore-0-2-story-offline/docs/combat-qa-evidence.json) et
   [`combat-workbook-verification.json`](https://github.com/darknigthmare/CainOS/blob/feat/encore-0-2-story-offline/docs/combat-workbook-verification.json).
 
 `npm run qa` regroupe les audits CainOS, vérifications de syntaxe, tests Node,
-manifest hors ligne et builds. Les quatre suites navigateur sont exécutées
+manifest hors ligne et builds. Les six suites navigateur sont exécutées
 séparément ; leurs prérequis et commandes figurent dans la documentation.
 
 ## Limites suivies dans le classeur

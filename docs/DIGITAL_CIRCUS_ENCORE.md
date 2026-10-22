@@ -211,6 +211,11 @@ attendre la confirmation **42/42 illustrations**. Le pack correspond exactement 
 Le premier téléchargement exige une connexion et le stockage nécessaire. Les
 fichiers déjà reçus sont réutilisés lors d’une nouvelle tentative.
 
+Si la première installation échoue ou dépasse vingt secondes, les réglages
+affichent l’erreur et proposent **Réessayer le mode hors ligne**. Le jeu en ligne
+reste utilisable. Une installation de remplacement n’interrompt pas le worker
+déjà actif ; les appels simultanés partagent la même tentative.
+
 Le bouton **Installer le jeu** apparaît quand le navigateur fournit une invitation
 d’installation. Une visite ultérieure peut partir du raccourci installé ou de
 `combat/index.html?standalone=1`. Le service worker contrôle uniquement le chemin
@@ -251,8 +256,11 @@ avec 1 200 PV de récupération, plafonnés à 10 000.
 Le format de profil reste en **version 1**. Les profils antérieurs reçoivent les
 nouvelles valeurs par défaut — touches initiales, musique coupée, aucune histoire
 inventée et aucun programme ajouté — en conservant leurs données reconnues.
-Le validateur reconstruit les programmes depuis leurs résultats et refuse les
-points de reprise incohérents.
+Le validateur reconstruit les programmes depuis leurs résultats. À la lecture
+du stockage local, un point de reprise incohérent ou devenu incompatible est
+écarté seul : statistiques, médailles, défis, histoires, historique et touches
+restent conservés. Les imports explicites et les nouvelles sauvegardes gardent
+une validation stricte des programmes.
 
 Un replay contient le couple de combattants, les costumes, l’arène, la graine,
 les règles, la santé initiale et les commandes compressées par séquences identiques.
@@ -348,18 +356,19 @@ Les cas couvrent les 140 techniques, tous les combattants, les collisions, les
 coûts, les combos, les transitions de manches, le déterminisme, les sauvegardes et
 les défis. Les résultats détaillés sont consignés dans le suivi QA et les rapports.
 
-La validation Node consignée pour 0.2.0 compte **122 tests réussis** :
+La validation Node consignée pour 0.2.0 compte **141 tests réussis** :
 
 | Suite | Cas réussis | Périmètre |
 | --- | ---: | --- |
 | [`combat-engine.test.mjs`](../tests/combat-engine.test.mjs) | 40 | Simulation, techniques, collisions, ressources, manches et déterminisme |
-| [`combat-session.test.mjs`](../tests/combat-session.test.mjs) | 26 | Profils, migration, replays, défis et entrées de combat |
+| [`combat-session.test.mjs`](../tests/combat-session.test.mjs) | 31 | Profils, migration, replays, défis, entrées de combat et récupération d’un checkpoint incompatible |
 | [`combat-catalog.test.mjs`](../tests/combat-catalog.test.mjs) | 7 | Classification des 179 apparences et des 51 costumes |
 | [`combat-bindings.test.mjs`](../tests/combat-bindings.test.mjs) | 16 | Remappage, conflits, pressions brèves, navigation et déconnexion manette |
 | [`combat-progression.test.mjs`](../tests/combat-progression.test.mjs) | 19 | 14 routes, tournoi, checkpoints, santé, reprises et imports incohérents |
 | [`combat-audio.test.mjs`](../tests/combat-audio.test.mjs) | 14 | Opt-in, volumes, contexte simulé, voix bornées, interruptions et destruction |
+| [`combat-offline.test.mjs`](../tests/combat-offline.test.mjs) | 14 | Échecs et délai d’installation, reprise, appels simultanés, worker actif et nettoyage des ressources |
 
-Les quatre suites navigateur finales totalisent **40 contrôles réussis** :
+Les six suites navigateur finales totalisent **48 contrôles réussis** :
 
 | Script | Résultat consigné pour 0.2.0 |
 | --- | --- |
@@ -367,12 +376,14 @@ Les quatre suites navigateur finales totalisent **40 contrôles réussis** :
 | [`combat-offline-browser.mjs`](../tests/combat-offline-browser.mjs) | **11/11 vérifications** : remappage réel, WebAudio, combo courant, pause, pack 42/42, recharge sans réseau, mise à jour conservant le pack, portée du worker, libération du cache et réglages à 390 px |
 | [`combat-browser.mjs`](../tests/combat-browser.mjs) | **11/11 vérifications** : navigation, codex/archives, réglages, clavier J1/J2, pause, défi, calibration et lancement dans CainOS, commandes tactiles à 390 px |
 | [`combat-progression-browser.mjs`](../tests/combat-progression-browser.mjs) | **10/10 vérifications** : match et replay, transitions arcade/boss/survie, profils, imports refusés, stockage indisponible et distribution autonome |
+| [`combat-profile-recovery-browser.mjs`](../tests/combat-profile-recovery-browser.mjs) | **5/5 vérifications** : checkpoint incompatible au démarrage et entre deux onglets, persistance des réglages et du profil, défi Spécialiste réellement accompli, import invalide refusé |
+| [`combat-recovery-browser.mjs`](../tests/combat-recovery-browser.mjs) | **3/3 vérifications** : erreur HTTP 503 pendant la première installation, nouvelle tentative dans l’interface, profil conservé et rechargement sans réseau après téléchargement du pack |
 
-Les quatre rapports finaux ne contiennent aucune erreur JavaScript consignée.
+Les six rapports finaux ne contiennent aucune erreur JavaScript consignée.
 Le contrôle WebAudio vérifie son fonctionnement dans Chromium sans constituer une
 écoute humaine. Les assertions, rapports et limites sont réunis dans
 [`combat-qa-evidence.json`](combat-qa-evidence.json) ; les rapports navigateur bruts
-sont écrits sous `audit-combat/`. Ces 40 contrôles ne signifient pas que les
+sont écrits sous `audit-combat/`. Ces 48 contrôles ne signifient pas que les
 14 histoires ont toutes été parcourues jusqu’à leur fin dans un navigateur :
 les 14 routes sont couvertes par les tests de progression, tandis que le parcours
 complet joué dans cette suite est celui de Jax.
@@ -392,14 +403,16 @@ toujours à la racine du dépôt :
 COMBAT_TEST_URL=http://127.0.0.1:4178 node tests/combat-browser.mjs
 COMBAT_TEST_URL=http://127.0.0.1:4178 node tests/combat-progression-browser.mjs
 COMBAT_TEST_URL=http://127.0.0.1:4178 node tests/combat-encore-browser.mjs
+COMBAT_TEST_URL=http://127.0.0.1:4178 node tests/combat-profile-recovery-browser.mjs
 node tests/combat-offline-browser.mjs
+node tests/combat-recovery-browser.mjs
 ```
 
 `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH` permet de choisir un exécutable Chromium
 existant. Les scripts n’injectent pas de commandes privées dans le moteur ; ils
 utilisent l’interface publique, les commandes et une vue de lecture de l’état.
-La suite hors ligne sert elle-même le dossier `dist-combat/`, produit auparavant
-par `npm run build:combat`, et pilote la disponibilité du réseau ainsi que le
+Les deux suites hors ligne servent elles-mêmes le dossier `dist-combat/`, produit
+auparavant par `npm run build:combat`, et pilotent la disponibilité du réseau ainsi que le
 cycle du service worker.
 
 Les sept planches animées du projet servent aux poses de repos, de marche,
