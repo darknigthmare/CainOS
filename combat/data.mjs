@@ -1,4 +1,5 @@
 import { SPRITE_CATALOG } from './sprite-catalog.mjs';
+import { FIDELITY_SOURCES, getFighterFidelity, getMoveFidelity, getStageFidelity } from './fidelity.mjs';
 
 /**
  * Digital Circus — Encore content.
@@ -6,15 +7,11 @@ import { SPRITE_CATALOG } from './sprite-catalog.mjs';
  * below is a fan-game adaptation, not a claim about canonical fighting powers.
  * Frames use the original CQC 60 Hz simulation and its 10000-health scale.
  */
-export const GAME = Object.freeze({ id: 'digital-circus-encore', name: 'Digital Circus — Encore', subtitle: 'Le Grand Duel', version: '0.2.0', contentDate: '2026-10-22' });
+export const GAME = Object.freeze({ id: 'digital-circus-encore', name: 'Digital Circus — Encore', subtitle: 'Le Grand Duel', version: '0.3.0', contentDate: '2026-10-22' });
 export const SOURCES = Object.freeze([
   { id: 'cainos', title: 'CainOS — base de travail et atlas existants', url: 'https://github.com/darknigthmare/CainOS/tree/4926834a2f063028903d6431e77f0bece859e671', kind: 'Dépôt utilisateur', scope: 'Inventaire du projet. Les mentions canon dans ses archives demandent une vérification indépendante.' },
   { id: 'cqc', title: 'CQC — version de référence P39', url: 'https://github.com/darknigthmare/shadow-codec-ops/tree/42279c1c884769873e66bbda0b6fe849bcd2f1a2/public/cqc', kind: 'Dépôt utilisateur', scope: 'Architecture intégrée/autonome, moteur de combat et IA portés depuis les fichiers réels.' },
-  { id: 'glitch', title: 'GLITCH — The Amazing Digital Circus', url: 'https://www.glitchprod.com/digital-circus', kind: 'Source primaire', scope: 'Présentation officielle de la série et de Pomni. Ne documente pas les coups du jeu.' },
-  { id: 'ep1', title: 'GLITCH — Pilot', url: 'https://www.youtube.com/watch?v=HwAPLk_sQ3w', kind: 'Épisode officiel', scope: 'Référence visuelle du cirque, des résidents, de Caine, Bubble, Kaufmo et des Gloinks.' },
-  { id: 'ep2', title: 'GLITCH — Candy Carrier Chaos!', url: 'https://www.youtube.com/watch?v=4ofJpOEXrZs', kind: 'Épisode officiel', scope: 'Référence des personnages et lieux de Candy Canyon. Adaptation combat originale.' },
-  { id: 'ep3', title: 'GLITCH — The Mystery Of Mildenhall Manor', url: 'https://www.youtube.com/watch?v=bKjfw77cxeQ', kind: 'Épisode officiel', scope: 'Référence du manoir et de ses personnages. Portées et dégâts créés pour le jeu.' },
-  { id: 'ep4', title: 'GLITCH — Fast Food Masquerade', url: 'https://www.youtube.com/watch?v=Q9KWcWKo2T8', kind: 'Épisode officiel', scope: 'Référence Spudsy et apparence de travail de Gangle.' },
+  ...FIDELITY_SOURCES,
   { id: 'adaptation', title: 'Encore — règles de combat', url: 'combat/data.mjs', kind: 'Création pour le jeu', scope: 'Tous les coups, jauges, statistiques, stages jouables et défis sont des règles de fan-game.' },
 ]);
 
@@ -37,8 +34,9 @@ const spriteOf = id => SPRITE_CATALOG.find(item => item.id === id)?.sprite;
 const coreAnimated = new Set(['pomni', 'jax', 'ragatha', 'gangle', 'zooble', 'kinger', 'caine']);
 function fighter(id, name, title, role, color, sourceId, kit, config = {}) {
   const { power = 1, speed = 1, reach = 1, width = 78, height = 230, ...extra } = config;
+  kit = Object.fromEntries(Object.entries(kit).map(([slot, definition]) => [slot, { ...definition, fidelity: getMoveFidelity(id, slot) }]));
   const combat = { key: id, resource: { kind: 'energy', label: 'STABILITÉ', max: 100, regen: 0.15 }, passive: {}, links: [['light', 'heavy'], ['low', 'special'], ['heavy', 'specialForward']], simulationBody: { width, height, crouchHeight: Math.round(height * 0.53) }, moves: kit };
-  return { id, uid: id, name, title, role, color, power, speed, reach, stats: { health: 10000, power, speed, jump: 12.6, defense: 1 }, combat, moves: kit, sprite: spriteOf(id), animation: coreAnimated.has(id) ? { src: `../assets/images/cainos-${id}-animation-sheet.png`, cols: 4, rows: 2, frames: { idle: [0, 1], walk: [2, 3], talk: [4, 5], attack: [6], hurt: [7] } } : null, visual: { width, height, profile: role === 'Colosse' ? 'giant' : id === 'bubble' ? 'floating' : 'humanoid' }, loreSource: sourceId, provenance: 'Apparence issue de CainOS. Techniques adaptées pour le jeu.', ...extra };
+  return { id, uid: id, name, title, role, color, power, speed, reach, stats: { health: 10000, power, speed, jump: 12.6, defense: 1 }, combat, moves: kit, sprite: spriteOf(id), animation: coreAnimated.has(id) ? { src: `../assets/images/cainos-${id}-animation-sheet.png`, cols: 4, rows: 2, frames: { idle: [0, 1], walk: [2, 3], talk: [4, 5], attack: [6], hurt: [7] } } : null, visual: { width, height, profile: role === 'Colosse' ? 'giant' : id === 'bubble' ? 'floating' : 'humanoid' }, loreSource: sourceId, provenance: 'Apparence issue de CainOS. Techniques adaptées pour le jeu.', fidelity: getFighterFidelity(id), ...extra };
 }
 
 export const FIGHTERS = [
@@ -50,7 +48,7 @@ export const FIGHTERS = [
     special: move('special', 'Balle de jonglerie', 'Un projectile léger à mi-hauteur.', { damage: 430, speed: 17, life: 48, cost: 16, tag: 'confetti' }),
     specialDown: move('specialDown', 'Détour sous le rideau', 'Une esquive basse en recul, sans dégâts.', { kind: 'mobility', damage: 0, startup: 4, active: 12, recovery: 17, cost: 18, travel: -6, lowProfile: true }),
     specialForward: move('specialForward', 'Course vers EXIT', 'Une avancée offensive courte.', { damage: 580, travel: 8, active: 7, cost: 22 }),
-    specialBack: move('specialBack', 'Mauvaise porte', 'Un pas de côté numérique en retrait.', { kind: 'mobility', damage: 0, startup: 5, active: 1, recovery: 24, blink: -150, cost: 25 }),
+    specialBack: move('specialBack', 'Mauvaise porte', 'Une esquive physique en retrait, sans dégâts.', { kind: 'mobility', damage: 0, startup: 5, active: 15, recovery: 10, travel: -10, cost: 25 }),
     super: move('super', 'Encore une fausse sortie', 'Une traversée du ring suivie d’un impact.', { damage: 1650, travel: 9, reach: 180, meter: 75 }),
     utility: move('utility', 'Reprendre son souffle', 'Récupère de la stabilité pendant une ouverture.', { restore: 34 }),
   }, { speed: 1.12, power: 0.94, height: 200 }),
@@ -194,7 +192,7 @@ export const FIGHTERS = [
     special: move('special', 'Éclat de corruption', 'Un fragment numérique marque sa cible.', { damage: 480, status: 'marked', duration: 120, speed: 15, cost: 24, tag: 'glitch' }),
     specialDown: move('specialDown', 'Trace d’erreur', 'Une zone piège laisse une brève perturbation.', { damage: 420, status: 'shock', arm: 26, duration: 210, cost: 27, maxTraps: 1, tag: 'glitch' }),
     specialForward: move('specialForward', 'Ruée abstraite', 'Une charge rapide, très punissable si évitée.', { travel: 8, startup: 14, active: 10, recovery: 39, damage: 760, reach: 165, cost: 28, tag: 'glitch' }),
-    specialBack: move('specialBack', 'Repli instable', 'Un recul brutal sans dégâts.', { kind: 'mobility', damage: 0, blink: -135, startup: 8, active: 1, recovery: 27, cost: 28 }),
+    specialBack: move('specialBack', 'Repli instable', 'Un recul physique continu, sans dégâts.', { kind: 'mobility', damage: 0, startup: 8, active: 15, recovery: 13, travel: -9, cost: 28 }),
     super: move('super', 'Débordement du cellier', 'Un impact large à longue préparation.', { startup: 30, damage: 2000, reach: 245, launch: -11, tag: 'glitch', meter: 85 }),
     utility: move('utility', 'Réinitialisation partielle', 'Récupère de la stabilité de simulation.', { restore: 34, startup: 25, recovery: 38 }),
   }, { speed: 1.02, power: 1.06, reach: 1.07, width: 135, height: 265, boss: true, archive: true }),
@@ -213,14 +211,14 @@ export const FIGHTERS = [
 ];
 
 export const MOVES = FIGHTERS.flatMap(f => MOVE_SLOTS.map(slot => ({ id: `${f.id}.${slot}`, fighterId: f.id, fighterName: f.name, ...f.moves[slot] })));
-const stage = (id, name, description, palette, sourceId, extra = {}) => ({ id, name, description, theme: id, palette, colors: palette, sourceId, width: 1280, floor: 568, bounds: { left: 65, right: 1215 }, provenance: 'Décor de combat adapté', ...extra });
+const stage = (id, name, description, palette, sourceId, extra = {}) => ({ id, name, description, theme: id, palette, colors: palette, sourceId, width: 1280, floor: 568, bounds: { left: 65, right: 1215 }, provenance: 'Décor de combat adapté', fidelity: getStageFidelity(id), ...extra });
 export const STAGES = [
-  stage('bigtop', 'La grande piste', 'Le chapiteau et ses rideaux colorés.', { sky: '#151127', back: '#462238', accent: '#ffcd76', floor: '#392344', grid: '#805568' }, 'ep1'),
+  stage('bigtop', 'La grande piste', 'Le salon coloré du cirque, ses canapés et sa porte arrondie.', { sky: '#2588bd', back: '#53bad5', accent: '#ffb526', floor: '#ff9c43', grid: '#ffe7a0' }, 'ep1'),
   stage('candy', 'Candy Canyon', 'Un canyon de confiseries et la route du convoi.', { sky: '#211a39', back: '#7e446f', accent: '#ffc3dc', floor: '#754857', grid: '#b4778e' }, 'ep2'),
   stage('manor', 'Mildenhall Manor', 'La grande salle sous les portraits et les bougies.', { sky: '#101b27', back: '#273b42', accent: '#b7d9b8', floor: '#303637', grid: '#64787c' }, 'ep3'),
   stage('spudsy', 'Spudsy’s', 'Un duel devant le comptoir après le service.', { sky: '#251b27', back: '#6d3344', accent: '#ffd85d', floor: '#5a4554', grid: '#bd7584' }, 'ep4'),
-  stage('cellar', 'Le cellier', 'Les portes d’archives sous le chapiteau.', { sky: '#0e0d1c', back: '#211b38', accent: '#be8be9', floor: '#242134', grid: '#535073' }, 'ep1'),
-  stage('void', 'Le Vide', 'Une piste de simulation face à l’espace vide.', { sky: '#060a17', back: '#0e1630', accent: '#71d9e8', floor: '#192943', grid: '#365571' }, 'ep1'),
+  stage('cellar', 'Le cellier', 'Des yeux multicolores dans l’obscurité, autour d’une lumière centrale.', { sky: '#08090c', back: '#142d39', accent: '#a7ffff', floor: '#08090c', grid: '#acb3c1' }, 'ep1'),
+  stage('void', 'Le Vide', 'Un espace blanc et irisé, adapté en piste de duel.', { sky: '#c6c9f6', back: '#e7eaff', accent: '#ffffff', floor: '#f7f6ff', grid: '#daddff' }, 'ep1'),
   stage('lake', 'Le lac numérique', 'Une rive construite à partir des décors déjà présents dans CainOS.', { sky: '#152c46', back: '#245b74', accent: '#a5e9ff', floor: '#3e5d62', grid: '#699596' }, 'cainos', { sourceStatus: 'Décor CainOS à vérifier contre une source primaire' }),
   stage('training', 'Salle de calibration', 'Une grille claire pour mesurer portée et timing.', { sky: '#101621', back: '#1a2938', accent: '#a7ffdf', floor: '#223443', grid: '#416176' }, 'adaptation'),
   stage('gloink', 'Le nid des Gloinks', 'Des formes géométriques s’amassent autour du ring.', { sky: '#191229', back: '#3e2953', accent: '#ffc98b', floor: '#3d2a4f', grid: '#815585' }, 'ep1'),
@@ -367,3 +365,21 @@ export const MODES = [
 
 export function getFighter(id) { return FIGHTERS.find(f => f.id === id) || FIGHTERS[0]; }
 export function getStage(id) { return STAGES.find(s => s.id === id) || STAGES[0]; }
+
+// Replay rules are selected from the recording's version, not the current UI.
+// These two definitions are the exact 0.1.0/0.2.0 rules, including their original
+// recovery windows. No legacy object shares its replaced move with the new kit.
+const legacyRetreats = Object.freeze({
+  pomni: move('specialBack', 'Mauvaise porte', 'Un pas de côté numérique en retrait.', { kind: 'mobility', damage: 0, startup: 5, active: 1, recovery: 24, blink: -150, cost: 25 }),
+  abstractedkaufmo: move('specialBack', 'Repli instable', 'Un recul brutal sans dégâts.', { kind: 'mobility', damage: 0, blink: -135, startup: 8, active: 1, recovery: 27, cost: 28 }),
+});
+const legacyFighters = new Map();
+export function getReplayFighter(id, version) {
+  const current = getFighter(id);
+  if (!['0.1.0', '0.2.0'].includes(version) || !Object.hasOwn(legacyRetreats, current.id)) return current;
+  if (!legacyFighters.has(current.id)) {
+    const moves = { ...current.moves, specialBack: { ...legacyRetreats[current.id] } };
+    legacyFighters.set(current.id, { ...current, moves, combat: { ...current.combat, moves } });
+  }
+  return legacyFighters.get(current.id);
+}

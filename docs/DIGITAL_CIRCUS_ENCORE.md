@@ -1,12 +1,14 @@
 # Digital Circus — Encore · Le Grand Duel
 
-Version jouable : **0.2.0** — 22 octobre 2026.
+Version jouable : **0.3.0** — 22 octobre 2026.
 
 Encore partage son moteur entre l’application CainOS et le jeu autonome. Cette
 version comprend **14 combattants, 140 techniques, 12 arènes, 9 modes, 51 costumes
-et 179 entrées d’archive**. Elle ajoute les histoires individuelles, le tournoi,
+et 179 entrées d’archive**. Elle conserve les histoires individuelles, le tournoi,
 la reprise des cinq programmes, les touches personnalisables, la musique et le
-téléchargement hors ligne. Les catalogues effectifs sont définis dans
+téléchargement hors ligne. La passe 0.3.0 corrige le détourage, trois décors,
+les objets de combat et les reculs de Pomni/Kaufmo, puis expose les références
+visuelles dans le codex, la sélection des arènes et le classeur. Les catalogues effectifs sont définis dans
 [`combat/data.mjs`](../combat/data.mjs), les modes affichés dans
 [`combat/session.mjs`](../combat/session.mjs).
 
@@ -57,7 +59,7 @@ des tâches distinctes dans l’Excel.
 
 | Artiste | Fonction de combat | Exemple de mécanique adaptée |
 | --- | --- | --- |
-| Pomni | Esquive et mobilité | Glissade, recul numérique, ruée vers une fausse sortie |
+| Pomni | Esquive et mobilité | Glissade, recul physique, course offensive |
 | Jax | Pièges et provocation | Clef qui revient, piège au sol, provocation |
 | Ragatha | Résistance | Parade de contact, armure temporaire, soin récupérable |
 | Gangle | Portée | Rubans, ralentissement, protection contre un projectile |
@@ -265,9 +267,12 @@ une validation stricte des programmes.
 Un replay contient le couple de combattants, les costumes, l’arène, la graine,
 les règles, la santé initiale et les commandes compressées par séquences identiques.
 L’IA reste déterministe. La lecture reproduit une simulation à 60 Hz et n’ajoute
-aucun résultat au palmarès. Les replays **0.1.0 et 0.2.0** sont acceptés ; un ancien
+aucun résultat au palmarès. Les replays **0.1.0, 0.2.0 et 0.3.0** sont acceptés ; un ancien
 replay sans costumes utilise les apparences originales. Une variante doit
-correspondre au combattant indiqué. La capacité est bornée à 72 000 images, soit
+correspondre au combattant indiqué. La version originale reste dans le fichier
+validé et exporté. `getReplayFighter` sélectionne les anciens reculs instantanés
+de Pomni/Kaufmo pour les versions 0.1.0 et 0.2.0 ; les nouveaux combats et les
+replays 0.3.0 emploient leurs reculs continus. Les autres règles restent identiques. La capacité est bornée à 72 000 images, soit
 20 minutes de simulation ; les pauses ne sont pas enregistrées. Les contrats
 d’import et de migration figurent dans
 [`combat/session.mjs`](../combat/session.mjs) et
@@ -281,7 +286,7 @@ combats n’est pas livrée.
 
 La base historique du port initial 0.1.0 est le commit CainOS
 [`4926834a2f063028903d6431e77f0bece859e671`](https://github.com/darknigthmare/CainOS/commit/4926834a2f063028903d6431e77f0bece859e671)
-de `main`. La version 0.2.0 poursuit la
+de `main`. Les versions 0.2.0 et 0.3.0 poursuivent la
 [PR #1](https://github.com/darknigthmare/CainOS/pull/1), fusionnée au commit
 [`53d56cf30484708af7c171babd3a05aa684d9a8a`](https://github.com/darknigthmare/CainOS/commit/53d56cf30484708af7c171babd3a05aa684d9a8a),
 qui constitue la base de la nouvelle branche `feat/encore-0-2-story-offline`.
@@ -308,19 +313,61 @@ la fenêtre de déchope, le dash arrière, la comparaison de pourcentages de san
 la limite de temps et la portée effectivement bornée des projectiles.
 
 Les noms et apparences proviennent de CainOS et des références GLITCH listées dans
-`combat/data.mjs`. Les techniques et les rencontres sont des adaptations de jeu.
+`combat/data.mjs` et dans le registre `combat/fidelity.mjs`. Les techniques et
+les rencontres sont des adaptations de jeu.
 Les archives tardives ou spéculatives de CainOS restent signalées comme éléments du
 projet à vérifier. L’Excel les inventorie sans convertir automatiquement leurs
 anciens libellés en faits canoniques.
+
+## Fidélité visuelle et passe 0.3.0
+
+Le registre [`combat/fidelity.mjs`](../combat/fidelity.mjs) rattache **166 fiches**
+aux mêmes sources pour le jeu et le classeur : 14 personnages, 140 techniques et
+12 arènes. Chaque fiche décrit les éléments effectivement observés, leur
+adaptation au combat, le statut de revue et les comparaisons encore nécessaires.
+Les liens vers les épisodes officiels servent de références ; leur présence ne
+signifie pas qu’un costume ou un geste a été contrôlé image par image.
+
+Les images consultées viennent de la [galerie officielle GLITCH](https://www.glitchprod.com/digital-circus).
+Les fichiers de référence sont liés dans le registre. Leurs images ne sont pas
+ajoutées au pack d’illustrations : les décors restent des dessins Canvas du jeu.
+
+| Correction | Comportement livré | Portée du contrôle |
+| --- | --- | --- |
+| Kaufmo abstrait | Le détourage conserve son corps noir et les détails internes au lieu de les traiter comme du fond | Intégrité technique du sprite existant ; comparaison canonique détaillée encore ouverte |
+| Grande piste | Palette, damier et éléments de cirque rapprochés des visuels officiels consultés | Disposition du ring adaptée, géographie complète non reconstruite |
+| Cellier | Obscurité, yeux multicolores et lumière centrale | Aucun couloir de cellules à barreaux déduit du visuel |
+| Vide | Espace clair et irisé distinct du couloir EXIT et de l’espace sous la carte | Sol horizontal conventionnel nécessaire au combat |
+| Projectiles et pièges | Formes propres aux objets nommés : clef, rubans, bouton, pièces, bonbons et bulles | Présentation de mécaniques originales ; aucun pouvoir ajouté au canon |
+| Pomni et Kaufmo | Recul réparti sur 15 images actives, respectivement −10 et −9 pixels/image | Déplacement de jeu ; aucune téléportation attribuée dans les règles 0.3.0 |
+
+Les deux reculs conservent leur distance nominale totale et la durée complète du
+coup : **150 pixels / 30 images pour Pomni**, **135 pixels / 36 images pour Kaufmo**.
+La durée d’activité change la trajectoire dans le temps ; les replays antérieurs
+sélectionnent donc explicitement leurs anciens kits. Les autres chiffres des kits
+sont comparés à l’empreinte des règles publiées en 0.2.0.
+
+Le codex donne accès aux repères de chaque personnage et à l’adaptation de chaque
+technique. La sélection affiche le rendu du décor choisi ; en Histoire, cet aperçu
+suit le premier chapitre de l’artiste. Les sources sont des liens externes
+facultatifs, sans dépendance réseau pour jouer.
+
+Le lac reste sans source primaire précise et la salle de calibration est une
+création originale. Le couloir des résidents, les poses de combat dédiées,
+l’accroupissement, les proportions finales et la revue des 51 costumes restent
+suivis comme travail artistique à terminer. Les contrôles de pixels, de données
+et de navigation ne constituent pas une certification de fidélité canonique 1:1.
 
 ## Architecture des fichiers
 
 | Fichier | Responsabilité |
 | --- | --- |
 | `combat/engine.mjs` | Simulation indépendante du navigateur et enveloppe fixe |
-| `combat/data.mjs` | Combattants, kits, arènes, sources et variantes |
+| `combat/data.mjs` | Combattants, kits actuels/hérités, arènes et variantes |
+| `combat/fidelity.mjs` | Registre partagé des sources, observations, adaptations et périmètres à revoir |
 | `combat/sprite-catalog.mjs` | Inventaire des atlas dérivé des tables CainOS |
 | `combat/render.mjs` | Rendu Canvas, extraction/cadrage en cache, effets, décors |
+| `combat/render-presentation.mjs` | Détourage conservateur et identité visuelle des projectiles/pièges |
 | `combat/input.mjs` | Clavier, tactile, manette et impulsions de commandes |
 | `combat/bindings.mjs` | Mappings J1/J2, conflits, libellés et nettoyage des imports |
 | `combat/session.mjs` | Profils, migrations, replays, défis et compteurs testables |
@@ -347,6 +394,14 @@ les 56 chapitres, les thèmes/effets et les preuves de tests réellement disponi
 Les statuts « Implémenté », « Partiel », « Prévu » et « À vérifier » distinguent
 fonctionnement, finition et validation. Les notes utilisateur, filtres, formules
 et critères de réception permettent de poursuivre le suivi après cette PR.
+Les feuilles Combattants, Techniques et Arènes ajoutent les sources, traits
+observés, adaptation, statut et périmètre de revue, sans déplacer les colonnes
+de statut utilisées par les formules existantes. Les deux arènes sans source
+canonique sont identifiées explicitement. Le suivi contient **90 fonctionnalités,
+389 tâches de production, 85 scénarios et 267 lignes QA**. Parmi ces lignes,
+252 portent une preuve de réussite, dix restent à vérifier et cinq ne sont pas
+exécutées. Les objectifs de revue peuvent recouper les cas automatisés ; le total
+de lignes ne désigne pas autant de tests indépendants.
 
 ## Vérifications et limites pratiques
 
@@ -356,21 +411,23 @@ Les cas couvrent les 140 techniques, tous les combattants, les collisions, les
 coûts, les combos, les transitions de manches, le déterminisme, les sauvegardes et
 les défis. Les résultats détaillés sont consignés dans le suivi QA et les rapports.
 
-La validation Node consignée pour 0.2.0 compte **141 tests réussis** :
+La validation Node consignée pour 0.3.0 compte **166 tests réussis** :
 
 | Suite | Cas réussis | Périmètre |
 | --- | ---: | --- |
 | [`combat-engine.test.mjs`](../tests/combat-engine.test.mjs) | 40 | Simulation, techniques, collisions, ressources, manches et déterminisme |
-| [`combat-session.test.mjs`](../tests/combat-session.test.mjs) | 31 | Profils, migration, replays, défis, entrées de combat et récupération d’un checkpoint incompatible |
+| [`combat-session.test.mjs`](../tests/combat-session.test.mjs) | 32 | Profils, migration, replays versionnés, défis, entrées de combat et récupération d’un checkpoint incompatible |
 | [`combat-catalog.test.mjs`](../tests/combat-catalog.test.mjs) | 7 | Classification des 179 apparences et des 51 costumes |
 | [`combat-bindings.test.mjs`](../tests/combat-bindings.test.mjs) | 16 | Remappage, conflits, pressions brèves, navigation et déconnexion manette |
 | [`combat-progression.test.mjs`](../tests/combat-progression.test.mjs) | 19 | 14 routes, tournoi, checkpoints, santé, reprises et imports incohérents |
 | [`combat-audio.test.mjs`](../tests/combat-audio.test.mjs) | 14 | Opt-in, volumes, contexte simulé, voix bornées, interruptions et destruction |
 | [`combat-offline.test.mjs`](../tests/combat-offline.test.mjs) | 14 | Échecs et délai d’installation, reprise, appels simultanés, worker actif et nettoyage des ressources |
+| [`combat-fidelity.test.mjs`](../tests/combat-fidelity.test.mjs) | 12 | Registre de sources, règles héritées exactes, trajectoires des reculs et bords du ring |
+| [`combat-render.test.mjs`](../tests/combat-render.test.mjs) | 12 | Détourage conservateur, transparence native, objets distincts et identité après réflexion |
 
-Les six suites navigateur finales totalisent **48 contrôles réussis** :
+Les huit suites navigateur finales totalisent **64 contrôles réussis** :
 
-| Script | Résultat consigné pour 0.2.0 |
+| Script | Résultat consigné pour 0.3.0 |
 | --- | --- |
 | [`combat-encore-browser.mjs`](../tests/combat-encore-browser.mjs) | **8/8 vérifications**, **9 duels réellement joués** : histoire de Jax complète, reprise, tournoi gagné/perdu, défaite/revanche et remplacement du checkpoint |
 | [`combat-offline-browser.mjs`](../tests/combat-offline-browser.mjs) | **11/11 vérifications** : remappage réel, WebAudio, combo courant, pause, pack 42/42, recharge sans réseau, mise à jour conservant le pack, portée du worker, libération du cache et réglages à 390 px |
@@ -378,12 +435,14 @@ Les six suites navigateur finales totalisent **48 contrôles réussis** :
 | [`combat-progression-browser.mjs`](../tests/combat-progression-browser.mjs) | **10/10 vérifications** : match et replay, transitions arcade/boss/survie, profils, imports refusés, stockage indisponible et distribution autonome |
 | [`combat-profile-recovery-browser.mjs`](../tests/combat-profile-recovery-browser.mjs) | **5/5 vérifications** : checkpoint incompatible au démarrage et entre deux onglets, persistance des réglages et du profil, défi Spécialiste réellement accompli, import invalide refusé |
 | [`combat-recovery-browser.mjs`](../tests/combat-recovery-browser.mjs) | **3/3 vérifications** : erreur HTTP 503 pendant la première installation, nouvelle tentative dans l’interface, profil conservé et rechargement sans réseau après téléchargement du pack |
+| [`combat-fidelity-browser.mjs`](../tests/combat-fidelity-browser.mjs) | **9/9 vérifications** : sources des 166 fiches, clavier, 12 aperçus, premières scènes des 14 histoires, replays hérités/actuels, répétition/export et vues à 390 px |
+| [`combat-render-browser.mjs`](../tests/combat-render-browser.mjs) | **7/7 vérifications** : détourage de Kaufmo, couleurs des 14 premières poses idle, alpha des 7 poses animées, 12 décors, 20 projectiles/10 pièges, états masqués et mouvement réduit |
 
-Les six rapports finaux ne contiennent aucune erreur JavaScript consignée.
+Les huit rapports finaux ne contiennent aucune erreur JavaScript consignée.
 Le contrôle WebAudio vérifie son fonctionnement dans Chromium sans constituer une
 écoute humaine. Les assertions, rapports et limites sont réunis dans
 [`combat-qa-evidence.json`](combat-qa-evidence.json) ; les rapports navigateur bruts
-sont écrits sous `audit-combat/`. Ces 48 contrôles ne signifient pas que les
+sont écrits sous `audit-combat/`. Ces 64 contrôles ne signifient pas que les
 14 histoires ont toutes été parcourues jusqu’à leur fin dans un navigateur :
 les 14 routes sont couvertes par les tests de progression, tandis que le parcours
 complet joué dans cette suite est celui de Jax.
@@ -406,6 +465,8 @@ COMBAT_TEST_URL=http://127.0.0.1:4178 node tests/combat-encore-browser.mjs
 COMBAT_TEST_URL=http://127.0.0.1:4178 node tests/combat-profile-recovery-browser.mjs
 node tests/combat-offline-browser.mjs
 node tests/combat-recovery-browser.mjs
+COMBAT_TEST_URL=http://127.0.0.1:4178 node tests/combat-fidelity-browser.mjs
+node tests/combat-render-browser.mjs
 ```
 
 `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH` permet de choisir un exécutable Chromium

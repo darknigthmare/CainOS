@@ -4,7 +4,8 @@ import { FIGHTERS, STAGES, VARIANTS } from './data.mjs';
 import { validateProgram } from './progression.mjs';
 export const SAVE_KEY = 'cainos.circus-combat.profile.v1';
 export const REPLAY_KEY = 'cainos.circus-combat.replay.v1';
-export const GAME_VERSION = '0.2.0';
+export const GAME_VERSION = '0.3.0';
+export const REPLAY_VERSIONS = Object.freeze(['0.1.0', '0.2.0', GAME_VERSION]);
 export const SLOT_ORDER = ['light', 'heavy', 'low', 'throw', 'special', 'specialDown', 'specialForward', 'specialBack', 'super', 'utility'];
 const FLAGS = ['left', 'right', 'down', 'guard', 'jump', 'dash', 'tech'];
 export const MAX_PACKED_INPUT = (SLOT_ORDER.length << FLAGS.length) | ((1 << FLAGS.length) - 1);
@@ -81,8 +82,9 @@ export function appendReplayFrame(runs, inputs) {
   else runs.push([1, a, b]);
 }
 export function validateReplay(value, fighterIds, stageIds) {
-  // 0.2 adds presentation and programs; the deterministic combat rules are unchanged.
-  if (!value || value.format !== 'circus-encore-replay' || !['0.1.0', GAME_VERSION].includes(value.version)) throw new Error('Replay incompatible avec cette version du jeu.');
+  // The recorded version selects its original fighter kits at playback. Never
+  // relabel an older recording: 0.3 changes Pomni and Kaufmo's retreat motion.
+  if (!value || value.format !== 'circus-encore-replay' || !REPLAY_VERSIONS.includes(value.version)) throw new Error('Replay incompatible avec cette version du jeu.');
   const c = value.config;
   if (!c || !Array.isArray(c.fighters) || c.fighters.length !== 2 || !c.fighters.every(id => fighterIds.includes(id)) || !stageIds.includes(c.stage)) throw new Error('Combattant ou arène introuvable dans le replay.');
   if (!Number.isInteger(c.seed) || c.seed < 0 || c.seed > 4294967295 || !Number.isInteger(c.roundsToWin) || c.roundsToWin < 1 || c.roundsToWin > 3 || ![60,90,120].includes(c.roundTime) || !['easy','normal','hard'].includes(c.difficulty)) throw new Error('Règles de replay invalides.');
@@ -97,7 +99,7 @@ export function validateReplay(value, fighterIds, stageIds) {
   const initialHealth = c.initialHealth ? [...c.initialHealth] : [10000, 10000];
   const variants = c.variants === undefined ? ['', ''] : c.variants;
   if (!Array.isArray(variants) || variants.length !== 2 || !variants.every((id, i) => id === '' || VARIANTS.some(v => v.id === id && v.fighterId === c.fighters[i]))) throw new Error('Une apparence du replay ne correspond pas à son combattant.');
-  return { format: value.format, version: GAME_VERSION, config: { fighters: [...c.fighters], variants: [...variants], stage: c.stage, seed: c.seed, roundsToWin: c.roundsToWin, roundTime: c.roundTime, difficulty: c.difficulty, cpu: [...c.cpu], initialHealth }, runs: value.runs.map(r => [...r]), frames: total };
+  return { format: value.format, version: value.version, config: { fighters: [...c.fighters], variants: [...variants], stage: c.stage, seed: c.seed, roundsToWin: c.roundsToWin, roundTime: c.roundTime, difficulty: c.difficulty, cpu: [...c.cpu], initialHealth }, runs: value.runs.map(r => [...r]), frames: total };
 }
 export function* replayInputs(replay) {
   for (const [count, a, b] of replay.runs) for (let frame = 0; frame < count; frame++) yield [unpackInput(a), unpackInput(b)];

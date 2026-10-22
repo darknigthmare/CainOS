@@ -5,7 +5,9 @@
   "featureStatuses": {
     "PRD-04": "Implémenté",
     "INT-12": "Implémenté",
-    "PRO-10": "Implémenté"
+    "PRO-10": "Implémenté",
+    "PRD-11": "Implémenté",
+    "PRE-15": "Implémenté"
   },
   "cases": {
     "boot": {
@@ -16,7 +18,7 @@
     "standalone": {
       "status": "Réussi",
       "method": "node tests/combat-progression-browser.mjs / tests/combat-offline-browser.mjs",
-      "proof": "Le build isolé charge 26 ressources locales sans /app.js CainOS. Préparation complète de 42 planches, puis rechargement hors ligne et combat sur une autre arène également réussis."
+      "proof": "Le build isolé charge 28 ressources locales sans /app.js CainOS. Préparation complète de 42 planches, puis rechargement hors ligne et combat sur une autre arène également réussis."
     },
     "pause-window": {
       "status": "À vérifier",
@@ -35,8 +37,8 @@
     },
     "stages": {
       "status": "Réussi",
-      "method": "Préchargement du renderer et 12 captures Canvas",
-      "proof": "Douze thèmes rendus. Préchargement des 14 combattants sans erreur ; les décors restent des compositions procédurales."
+      "method": "tests/combat-fidelity-browser.mjs / tests/combat-render-browser.mjs",
+      "proof": "Les douze sélections rendent chacune un aperçu opaque de 1 280 × 720 pixels avec une empreinte distincte ; nom, sélection active et références restent synchronisés. La première arène suit aussi chacun des quatorze parcours d’histoire. Le contrôle du rendu fonctionnel est séparé de la comparaison artistique aux plans officiels."
     },
     "local": {
       "status": "Réussi",
@@ -46,7 +48,7 @@
     "arcade": {
       "status": "À vérifier",
       "method": "node tests/combat-progression-browser.mjs · Chromium headless",
-      "proof": "Première victoire réelle contre Bubble, puis passage à Pomni, acte 2/6. La longueur et la reprise sont couvertes par contrat ; le parcours intégral et sa médaille ne sont pas revendiqués dans le navigateur."
+      "proof": "Première victoire réelle contre Pomni, puis passage à Kaufmo — abstraction, acte 2/6. La longueur et la reprise sont couvertes par contrat ; le parcours intégral et sa médaille ne sont pas revendiqués dans le navigateur."
     },
     "boss": {
       "status": "À vérifier",
@@ -56,7 +58,7 @@
     "survival": {
       "status": "Réussi",
       "method": "node tests/combat-progression-browser.mjs · Chromium headless",
-      "proof": "Victoire réelle contre Pomni : 8 656 PV deviennent 9 856 au duel contre Kaufmo — abstraction. Le bonus de 1 200 PV est appliqué ; le plafond de 10 000 et les dix vagues sont couverts par contrats Node."
+      "proof": "Victoire réelle contre Pomni : 8 251 PV deviennent 9 451 au duel contre Kaufmo — abstraction. Le bonus de 1 200 PV est appliqué ; le plafond de 10 000 et les dix vagues sont couverts par contrats Node."
     },
     "training": {
       "status": "À vérifier",
@@ -75,8 +77,8 @@
     },
     "replay": {
       "status": "Réussi",
-      "method": "node tests/combat-progression-browser.mjs · Chromium headless",
-      "proof": "Le replay reproduit exactement tout le snapshot final du duel réel sans modifier les statistiques ni l’historique. La régression de profil version 1 et les apparences valides sont couvertes par Node."
+      "method": "tests/combat-session.test.mjs / tests/combat-progression-browser.mjs / tests/combat-fidelity-browser.mjs",
+      "proof": "Le replay du duel réellement terminé reproduit exactement tout le snapshot final sans modifier le profil. Six fichiers de compatibilité courts vérifient Pomni et Kaufmo abstrait en 0.1.0, 0.2.0 et 0.3.0 : versions anciennes conservées, recul continu de 0.3.0 distinct, répétition et export 0.2.0 inchangés. Ces six fichiers sont des fixtures de compatibilité et n’attribuent aucune victoire."
     },
     "bad-save": {
       "status": "Réussi",
@@ -100,8 +102,8 @@
     },
     "regression": {
       "status": "Réussi",
-      "method": "npm run qa + sept TAP canoniques audit-combat/combat-*.test.tap",
-      "proof": "22 octobre 2026 : audits CainOS et deux builds réexécutés avec succès après correction ; 141 cas Node réussis dans sept suites. Pack hors ligne : 42 planches originales, 47 345 031 octets."
+      "method": "npm run qa · audit-combat/qa-0.3.0.log + 9 TAP canoniques audit-combat/combat-*.test.tap",
+      "proof": "22 octobre 2026 : audits CainOS et deux builds réexécutés avec succès sur la version 0.3.0 ; 166 cas Node réussis dans 9 suites. Pack hors ligne : 42 planches originales, 47 345 031 octets."
     },
     "tracker-proof": {
       "status": "Réussi",
@@ -147,6 +149,26 @@
       "status": "Réussi",
       "method": "tests/combat-offline.test.mjs / tests/combat-recovery-browser.mjs",
       "proof": "Une première installation volontairement interrompue affiche une erreur et une commande Réessayer. Après rétablissement des ressources, une nouvelle tentative aboutit depuis l’interface. Les délais, appels concurrents et libérations d’écouteurs sont vérifiés par les contrats Node ; les mises à jour conservent le worker actif."
+    },
+    "fidelity-sources": {
+      "status": "Réussi",
+      "method": "combat/fidelity.mjs / tests/combat-fidelity.test.mjs",
+      "proof": "166 fiches partagées par le jeu et le classeur : 14 combattants, 140 techniques et 12 arènes. 164 fiches citent au moins une des 17 références primaires. Le lac reste à sourcer ; le terrain d’entraînement est une création originale. Chaque fiche conserve ses repères observés, son adaptation de combat et la portée de revue. Un lien d’épisode sans image consultée ne reçoit aucun repère visuel inventé."
+    },
+    "fidelity-ui": {
+      "status": "Réussi",
+      "method": "tests/combat-fidelity-browser.mjs · Chromium headless",
+      "proof": "Les 14 fiches de combattants et 140 techniques exposent le registre commun. Les panneaux s’ouvrent au clavier et leurs liens correspondent aux sources déclarées. Les 12 aperçus d’arène rendent des images distinctes et suivent aussi la première arène des 14 histoires. Sélection tactile et codex vérifiés à 390 × 844 sans débordement horizontal du document. Ces contrôles vérifient l’interface et les données ; ils ne certifient pas l’art canonique."
+    },
+    "fidelity-render": {
+      "status": "Réussi",
+      "method": "tests/combat-render.test.mjs / tests/combat-render-browser.mjs · Canvas natif et fixtures de pixels",
+      "proof": "Le détourage conserve la silhouette sombre de Kaufmo : 27 746 → 62 595 pixels opaques dans la première cellule idle. Les premières cellules idle des 14 personnages gardent leurs valeurs RVB, et l’alpha des premières cellules idle des sept animations natives est inchangé. Gangle reste à 31 329 pixels opaques. Les 20 définitions de projectile et 10 pièges sont visibles, avec 14 motifs spéciaux distincts ; les objets morts ou retardés sont masqués et le rendu ne modifie pas la simulation. Les contrôles portent sur ces fixtures, pas sur toutes les poses et tous les costumes."
+    },
+    "fidelity-canon": {
+      "status": "À vérifier",
+      "method": "Comparaison visuelle des captures de jeu avec glitch-cast, glitch-cellar et glitch-void · URL dans Références",
+      "proof": "Trois vues ont été effectivement comparées aux images GLITCH : murs cyan, frise dorée, portes rouge/verte et sol chaud du chapiteau ; obscurité, yeux multicolores et lumière centrale du cellier ; espace blanc/lilas irisé du Vide. Les six captures de décor avant/après, le détourage avant/après, les objets après et la barrière de Kinger ont été ouverts pour revue. Le ring et la perspective restent des adaptations. Le couloir des résidents, les autres plans, les poses dédiées, les costumes et les proportions canoniques complètes restent à vérifier ; aucune fidélité globale 1:1 n’est validée."
     }
   },
   "additionalCases": [
@@ -157,7 +179,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 11/11 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/browser-report.json",
       "expected": "Nine modes and standalone home render"
     },
     {
@@ -167,7 +189,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 11/11 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/browser-report.json",
       "expected": "Codex changes fighter and shows ten authored moves"
     },
     {
@@ -177,7 +199,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 11/11 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/browser-report.json",
       "expected": "Archive search filters real records"
     },
     {
@@ -187,7 +209,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 11/11 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/browser-report.json",
       "expected": "Settings persist across reload"
     },
     {
@@ -197,7 +219,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 11/11 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/browser-report.json",
       "expected": "Training loads and responds to keyboard movement/attack"
     },
     {
@@ -207,7 +229,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 11/11 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/browser-report.json",
       "expected": "Pause stops simulation and resume restarts"
     },
     {
@@ -217,7 +239,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 11/11 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/browser-report.json",
       "expected": "Move list pauses and resumes the current encounter"
     },
     {
@@ -227,7 +249,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 11/11 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/browser-report.json",
       "expected": "Player 2 has independent local controls"
     },
     {
@@ -237,7 +259,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 11/11 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/browser-report.json",
       "expected": "Challenge completion persists an earned result"
     },
     {
@@ -247,7 +269,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 11/11 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/browser-report.json",
       "expected": "CainOS desktop launches the shared game and minimizing pauses it"
     },
     {
@@ -257,7 +279,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 11/11 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/browser-report.json",
       "expected": "390px mobile layout and touch attack work without horizontal overflow"
     },
     {
@@ -267,7 +289,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-progression-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 10/10 contrôles, 0 erreur JS/HTTP · 2282 simulation frames, 611 input runs",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 10/10 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/progression-browser-report.json · 2282 simulation frames, 611 input runs",
       "expected": "A real local match saves its result and replay"
     },
     {
@@ -277,7 +299,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-progression-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 10/10 contrôles, 0 erreur JS/HTTP",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 10/10 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/progression-browser-report.json",
       "expected": "UI replay reproduces the full terminal snapshot without changing profile"
     },
     {
@@ -287,7 +309,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-progression-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 10/10 contrôles, 0 erreur JS/HTTP · bubble → pomni, player HP 8688 → 10000",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 10/10 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/progression-browser-report.json · pomni → abstractedkaufmo, player HP 8167 → 10000",
       "expected": "arcade: earned first win opens encounter 2/6"
     },
     {
@@ -297,7 +319,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-progression-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 10/10 contrôles, 0 erreur JS/HTTP · gloinkqueen → fudge, player HP 10000 → 10000",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 10/10 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/progression-browser-report.json · gloinkqueen → fudge, player HP 9552 → 10000",
       "expected": "boss: earned first win opens encounter 2/4"
     },
     {
@@ -307,7 +329,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-progression-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 10/10 contrôles, 0 erreur JS/HTTP · pomni → abstractedkaufmo, player HP 8656 → 9856",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 10/10 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/progression-browser-report.json · pomni → abstractedkaufmo, player HP 8251 → 9451",
       "expected": "survival: earned first win opens encounter 2/10"
     },
     {
@@ -317,7 +339,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-progression-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 10/10 contrôles, 0 erreur JS/HTTP",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 10/10 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/progression-browser-report.json",
       "expected": "Earned progression and settings survive a page reload"
     },
     {
@@ -327,7 +349,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-progression-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 10/10 contrôles, 0 erreur JS/HTTP",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 10/10 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/progression-browser-report.json",
       "expected": "Malformed profile, JSON and packed replay inputs are rejected without data loss"
     },
     {
@@ -337,7 +359,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-progression-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 10/10 contrôles, 0 erreur JS/HTTP · Not a claim that all final medals were earned through UI",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 10/10 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/progression-browser-report.json · Not a claim that all final medals were earned through UI",
       "expected": "Contrat de longueur des parcours uniquement. Les médailles finales n’ont pas été jouées dans le navigateur."
     },
     {
@@ -347,7 +369,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-progression-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 10/10 contrôles, 0 erreur JS/HTTP · 26 local resources",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 10/10 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/progression-browser-report.json · 28 local resources",
       "expected": "Built standalone plays on a second origin without the OS runtime"
     },
     {
@@ -357,7 +379,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-progression-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 10/10 contrôles, 0 erreur JS/HTTP · Specialist → Super via real controls; sound and both rewards survive setItem failure; Escape preserves the result actions twice",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 10/10 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/progression-browser-report.json · Specialist → Super via real controls; sound and both rewards survive setItem failure; Escape preserves the result actions twice",
       "expected": "Denied storage retains two rewards for export; terminal dialogs survive Escape"
     },
     {
@@ -367,7 +389,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-encore-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 8/8 contrôles, 0 erreur JS/HTTP · Jax’s first duel is genuinely won; the second scene and its original starting health survive reload",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 8/8 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/encore-browser-report.json · Jax’s first duel is genuinely won; the second scene and its original starting health survive reload",
       "expected": "Story victory checkpoint reloads into chapter 2 without a duplicate reward"
     },
     {
@@ -377,7 +399,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-encore-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 8/8 contrôles, 0 erreur JS/HTTP · Gangle → Zooble → Ragatha → Caine; profile records four wins, one completed route and no remaining checkpoint",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 8/8 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/encore-browser-report.json · Gangle → Zooble → Ragatha → Caine; profile records four wins, one completed route and no remaining checkpoint",
       "expected": "Four genuine Jax story wins show all authored scenes, unique ending and earned story medal"
     },
     {
@@ -387,7 +409,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-encore-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 8/8 contrôles, 0 erreur JS/HTTP · Fixture has zero player results; three quarter-finals are explicitly identified as CPU simulations",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 8/8 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/encore-browser-report.json · Fixture has zero player results; three quarter-finals are explicitly identified as CPU simulations",
       "expected": "Seeded tournament import displays eight artists and seven real bracket slots"
     },
     {
@@ -397,7 +419,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-encore-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 8/8 contrôles, 0 erreur JS/HTTP · Same participants, CPU outcomes, next rival and rules; profile match count remains unchanged by reload",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 8/8 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/encore-browser-report.json · Same participants, CPU outcomes, next rival and rules; profile match count remains unchanged by reload",
       "expected": "Tournament bracket and semifinal resume after a real quarter-final win"
     },
     {
@@ -407,7 +429,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-encore-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 8/8 contrôles, 0 erreur JS/HTTP · Seven resolved matches: three played by the keyboard user and four explicitly simulated CPU matches",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 8/8 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/encore-browser-report.json · Seven resolved matches: three played by the keyboard user and four explicitly simulated CPU matches",
       "expected": "Three genuine tournament wins earn the cup and the tournament medal"
     },
     {
@@ -417,7 +439,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-encore-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 8/8 contrôles, 0 erreur JS/HTTP · The real CPU wins; remaining results are simulated and retry resets index/results while preserving the recorded loss",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 8/8 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/encore-browser-report.json · The real CPU wins; remaining results are simulated and retry resets index/results while preserving the recorded loss",
       "expected": "Tournament loss eliminates without a medal; replay starts a fresh bracket attempt"
     },
     {
@@ -427,7 +449,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-encore-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 8/8 contrôles, 0 erreur JS/HTTP · The second chapter restarts with unchanged seed/rival/full health; the first victory and the later loss are each counted once",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 8/8 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/encore-browser-report.json · The second chapter restarts with unchanged seed/rival/full health; the first victory and the later loss are each counted once",
       "expected": "Story defeat and retry retain the genuinely earned previous chapter, including after reload"
     },
     {
@@ -437,7 +459,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-encore-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 8/8 contrôles, 0 erreur JS/HTTP · Cancel leaves the story checkpoint intact; start-new replaces only the active route",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 8/8 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/encore-browser-report.json · Cancel leaves the story checkpoint intact; start-new replaces only the active route",
       "expected": "Replacing a saved programme requires the visible UI choice and preserves the existing record"
     },
     {
@@ -447,7 +469,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-offline-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP · J1 light = F; labels follow AZERTY/QWERTY",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 11/11 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/offline-browser-report.json · J1 light = F; labels follow AZERTY/QWERTY",
       "expected": "Custom keys reject conflicts and reserved shortcuts, allow alternatives, and persist"
     },
     {
@@ -457,7 +479,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-offline-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP · Effects off; music on; bounded voices",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 11/11 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/offline-browser-report.json · Effects off; music on; bounded voices",
       "expected": "Original procedural music starts from a gesture with an independent mute"
     },
     {
@@ -467,7 +489,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-offline-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 11/11 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/offline-browser-report.json",
       "expected": "Remapped attack reaches the engine and move list while the old key stays inactive"
     },
     {
@@ -477,7 +499,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-offline-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 11/11 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/offline-browser-report.json",
       "expected": "Live combo label clears after recovery while the best result combo remains"
     },
     {
@@ -487,7 +509,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-offline-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 11/11 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/offline-browser-report.json",
       "expected": "Pause stops simulation and releases audio voices; resume restores the stage theme"
     },
     {
@@ -497,7 +519,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-offline-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP · 47,345,031 bytes; explicit UI action and completion state",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 11/11 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/offline-browser-report.json · 47,345,031 bytes; explicit UI action and completion state",
       "expected": "The standalone downloads all 42 original sprite sheets"
     },
     {
@@ -507,7 +529,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-offline-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP · Network disabled; profile preserved; real keyboard movement",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 11/11 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/offline-browser-report.json · Network disabled; profile preserved; real keyboard movement",
       "expected": "A cold page reload and a different fighter/stage remain playable offline"
     },
     {
@@ -517,7 +539,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-offline-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP · No automatic reload; all 42 images and the profile survive activation",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 11/11 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/offline-browser-report.json · No automatic reload; all 42 images and the profile survive activation",
       "expected": "A waiting service worker updates only through the UI and preserves the unchanged art pack"
     },
     {
@@ -527,7 +549,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-offline-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 11/11 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/offline-browser-report.json",
       "expected": "The offline worker is limited to /combat/ and leaves other application documents uncontrolled"
     },
     {
@@ -537,7 +559,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-offline-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 11/11 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/offline-browser-report.json",
       "expected": "Clearing downloaded illustrations preserves custom keys and all profile data"
     },
     {
@@ -547,7 +569,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-offline-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · suite complète réexécutée après correction · 11/11 contrôles, 0 erreur JS/HTTP",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 11/11 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/offline-browser-report.json",
       "expected": "The expanded settings and key mapper fit a 390-pixel viewport"
     },
     {
@@ -557,7 +579,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-recovery-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · 3/3 contrôles, 0 erreur JS non attendue · Real HTTP 503 during cache.addAll; online settings remain usable",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 3/3 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/recovery-browser-report.json · Real HTTP 503 during cache.addAll; online settings remain usable",
       "expected": "A failed first offline-cache installation exits preparation and exposes an enabled retry"
     },
     {
@@ -567,7 +589,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-recovery-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · 3/3 contrôles, 0 erreur JS non attendue · Same page and profile; active /combat/ worker; initialization errors cleared",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 3/3 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/recovery-browser-report.json · Same page and profile; active /combat/ worker; initialization errors cleared",
       "expected": "The retry button registers a working service worker without reloading or losing the profile"
     },
     {
@@ -577,7 +599,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-recovery-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · 3/3 contrôles, 0 erreur JS non attendue · 42 illustrations; 47,345,031 bytes; profile preserved",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 3/3 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/recovery-browser-report.json · 42 illustrations; 47,345,031 bytes; profile preserved",
       "expected": "The recovered installation downloads the full pack and survives an offline cold reload"
     },
     {
@@ -587,7 +609,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-profile-recovery-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · 5/5 contrôles, 0 erreur JS non attendue · A migration fixture retains all statistics, challenges, medals, endings, history, preferences and both custom keyboard maps.",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 5/5 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/profile-recovery-browser-report.json · A migration fixture retains all statistics, challenges, medals, endings, history, preferences and both custom keyboard maps.",
       "expected": "Startup drops only the corrupt checkpoint"
     },
     {
@@ -597,7 +619,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-profile-recovery-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · 5/5 contrôles, 0 erreur JS non attendue · Sound is enabled through the settings UI; the repaired save has program:null and every prior achievement/binding remains.",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 5/5 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/profile-recovery-browser-report.json · Sound is enabled through the settings UI; the repaired save has program:null and every prior achievement/binding remains.",
       "expected": "A routine preference save and reload preserve the recovered profile"
     },
     {
@@ -607,7 +629,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-profile-recovery-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · 5/5 contrôles, 0 erreur JS non attendue · The incoming fixture replaces stats, history, achievements and the J1 binding; only its invalid checkpoint is discarded.",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 5/5 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/profile-recovery-browser-report.json · The incoming fixture replaces stats, history, achievements and the J1 binding; only its invalid checkpoint is discarded.",
       "expected": "A real cross-tab storage event preserves progress despite an obsolete costume"
     },
     {
@@ -617,7 +639,7 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-profile-recovery-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · 5/5 contrôles, 0 erreur JS non attendue · Specialist is actually completed with four keyboard techniques; only that new reward is added to the migration fixture, and reload preserves it.",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 5/5 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/profile-recovery-browser-report.json · Specialist is actually completed with four keyboard techniques; only that new reward is added to the migration fixture, and reload preserves it.",
       "expected": "Reward refresh repairs the incompatible disk checkpoint without erasing the record"
     },
     {
@@ -627,8 +649,168 @@
       "status": "Réussi",
       "priority": "P0",
       "method": "node tests/combat-profile-recovery-browser.mjs · Chromium headless",
-      "proof": "22 octobre 2026 · 5/5 contrôles, 0 erreur JS non attendue · An invalid costume is rejected with an error before the replacement prompt; neither the in-memory profile nor its stored copy changes.",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 5/5 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/profile-recovery-browser-report.json · An invalid costume is rejected with an error before the replacement prompt; neither the in-memory profile nor its stored copy changes.",
       "expected": "Manual file import remains strict and preserves the existing profile"
+    },
+    {
+      "id": "FIDUI-01",
+      "area": "Références et replays",
+      "name": "All 14 fighters and 140 techniques expose their shared source notes",
+      "status": "Réussi",
+      "priority": "P0",
+      "method": "node tests/combat-fidelity-browser.mjs · Chromium headless",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 9/9 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/fidelity-browser-report.json · Every displayed reference resolves to the central register; adaptation text remains separate from the observed traits.",
+      "expected": "All 14 fighters and 140 techniques expose their shared source notes"
+    },
+    {
+      "id": "FIDUI-02",
+      "area": "Références et replays",
+      "name": "Fighter and technique references are keyboard accessible",
+      "status": "Réussi",
+      "priority": "P0",
+      "method": "node tests/combat-fidelity-browser.mjs · Chromium headless",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 9/9 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/fidelity-browser-report.json · Native disclosure controls open with Enter and expose readable links without leaving the game.",
+      "expected": "Fighter and technique references are keyboard accessible"
+    },
+    {
+      "id": "FIDUI-03",
+      "area": "Références et replays",
+      "name": "All 12 arena choices preview their actual distinct render",
+      "status": "Réussi",
+      "priority": "P0",
+      "method": "node tests/combat-fidelity-browser.mjs · Chromium headless",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 9/9 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/fidelity-browser-report.json · The selected label, pressed state, source disclosure and 1280 × 720 scene change together.",
+      "expected": "All 12 arena choices preview their actual distinct render"
+    },
+    {
+      "id": "FIDUI-04",
+      "area": "Références et replays",
+      "name": "Story selection previews the first chapter of all 14 routes",
+      "status": "Réussi",
+      "priority": "P0",
+      "method": "node tests/combat-fidelity-browser.mjs · Chromium headless",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 9/9 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/fidelity-browser-report.json · The preview follows the chosen artist and chapter rather than a previously chosen free-duel arena.",
+      "expected": "Story selection previews the first chapter of all 14 routes"
+    },
+    {
+      "id": "FIDUI-05",
+      "area": "Références et replays",
+      "name": "Versioned retreat replay: pomni",
+      "status": "Réussi",
+      "priority": "P0",
+      "method": "node tests/combat-fidelity-browser.mjs · Chromium headless",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 9/9 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/fidelity-browser-report.json · Imports for 0.1.0, 0.2.0 and 0.3.0 reproduce the expected complete deterministic frame state; no progression is awarded.",
+      "expected": "Versioned retreat replay: pomni"
+    },
+    {
+      "id": "FIDUI-06",
+      "area": "Références et replays",
+      "name": "Versioned retreat replay: abstractedkaufmo",
+      "status": "Réussi",
+      "priority": "P0",
+      "method": "node tests/combat-fidelity-browser.mjs · Chromium headless",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 9/9 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/fidelity-browser-report.json · Imports for 0.1.0, 0.2.0 and 0.3.0 reproduce the expected complete deterministic frame state; no progression is awarded.",
+      "expected": "Versioned retreat replay: abstractedkaufmo"
+    },
+    {
+      "id": "FIDUI-07",
+      "area": "Références et replays",
+      "name": "Repeating an imported legacy replay preserves its original kit",
+      "status": "Réussi",
+      "priority": "P0",
+      "method": "node tests/combat-fidelity-browser.mjs · Chromium headless",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 9/9 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/fidelity-browser-report.json · The Revoir action produces the same full frame snapshot for the 0.2.0 Pomni recording.",
+      "expected": "Repeating an imported legacy replay preserves its original kit"
+    },
+    {
+      "id": "FIDUI-08",
+      "area": "Références et replays",
+      "name": "Exporting a stored legacy replay keeps version 0.2.0",
+      "status": "Réussi",
+      "priority": "P0",
+      "method": "node tests/combat-fidelity-browser.mjs · Chromium headless",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 9/9 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/fidelity-browser-report.json · The downloaded JSON preserves its original inputs, costume and rules version instead of silently upgrading it.",
+      "expected": "Exporting a stored legacy replay keeps version 0.2.0"
+    },
+    {
+      "id": "FIDUI-09",
+      "area": "Références et replays",
+      "name": "Source notes and arena previews remain usable at 390 px",
+      "status": "Réussi",
+      "priority": "P0",
+      "method": "node tests/combat-fidelity-browser.mjs · Chromium headless",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 9/9 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/fidelity-browser-report.json · Touch opens the stage notes, the preview fits the viewport and the codex has no document-level horizontal overflow.",
+      "expected": "Source notes and arena previews remain usable at 390 px"
+    },
+    {
+      "id": "FIDREN-01",
+      "area": "Rendu des silhouettes",
+      "name": "Kaufmo dark silhouette restored without recolouring",
+      "status": "Réussi",
+      "priority": "P0",
+      "method": "node tests/combat-render-browser.mjs · Chromium headless",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 7/7 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/render-fidelity-browser-report.json · abstractedkaufmo : 27 746 → 62 595 pixels opaques ; 0 pixel RVB modifié. Mesure sur la première cellule idle uniquement.",
+      "expected": "Kaufmo dark silhouette restored without recolouring"
+    },
+    {
+      "id": "FIDREN-02",
+      "area": "Rendu des silhouettes",
+      "name": "14 first idle frames preserve their palette; seven native idle alphas are unchanged",
+      "status": "Réussi",
+      "priority": "P0",
+      "method": "node tests/combat-render-browser.mjs · Chromium headless",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 7/7 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/render-fidelity-browser-report.json · 14 premières cellules idle : 0 pixel RVB modifié. 7 animations natives contrôlées sur leur première cellule ; aucune modification de leur alpha natif.",
+      "expected": "14 first idle frames preserve their palette; seven native idle alphas are unchanged"
+    },
+    {
+      "id": "FIDREN-03",
+      "area": "Rendu des silhouettes",
+      "name": "12 stage canvases render; the three reviewed palettes match observed light and colour",
+      "status": "Réussi",
+      "priority": "P0",
+      "method": "node tests/combat-render-browser.mjs · Chromium headless",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 7/7 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/render-fidelity-browser-report.json · bigtop : luminance moyenne 153,86/255 ; cellar : luminance moyenne 12,67/255 ; void : luminance moyenne 229,91/255",
+      "expected": "12 stage canvases render; the three reviewed palettes match observed light and colour"
+    },
+    {
+      "id": "FIDREN-04",
+      "area": "Rendu des silhouettes",
+      "name": "All projectile and ground objects visible, 14 distinct special motifs, unchanged input state",
+      "status": "Réussi",
+      "priority": "P0",
+      "method": "node tests/combat-render-browser.mjs · Chromium headless",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 7/7 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/render-fidelity-browser-report.json · 20 définitions de projectile, 10 pièges et 14 motifs spéciaux distincts contrôlés ; état de simulation inchangé.",
+      "expected": "All projectile and ground objects visible, 14 distinct special motifs, unchanged input state"
+    },
+    {
+      "id": "FIDREN-05",
+      "area": "Rendu des silhouettes",
+      "name": "Dead/delayed objects hidden and armed traps remain visibly stronger",
+      "status": "Réussi",
+      "priority": "P0",
+      "method": "node tests/combat-render-browser.mjs · Chromium headless",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 7/7 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/render-fidelity-browser-report.json",
+      "expected": "Dead/delayed objects hidden and armed traps remain visibly stronger"
+    },
+    {
+      "id": "FIDREN-06",
+      "area": "Rendu des silhouettes",
+      "name": "Reduced motion freezes presentation while the ordinary key animation remains active",
+      "status": "Réussi",
+      "priority": "P0",
+      "method": "node tests/combat-render-browser.mjs · Chromium headless",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 7/7 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/render-fidelity-browser-report.json",
+      "expected": "Reduced motion freezes presentation while the ordinary key animation remains active"
+    },
+    {
+      "id": "FIDREN-07",
+      "area": "Rendu des silhouettes",
+      "name": "No browser errors or missing local resources",
+      "status": "Réussi",
+      "priority": "P0",
+      "method": "node tests/combat-render-browser.mjs · Chromium headless",
+      "proof": "22 octobre 2026 · suite complète sur la version 0.3.0 · 7/7 contrôles, 0 erreur JS/HTTP non attendue · audit-combat/render-fidelity-browser-report.json",
+      "expected": "No browser errors or missing local resources"
     }
   ],
   "engineCount": 40,
@@ -676,12 +858,13 @@
   ],
   "engineSourceSha256": "5fb1260ef501eadf1e55bd879d70ee872ca10ea60f78a5b807fda35f112d0485",
   "engineProof": "node --test-reporter=tap tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-engine.test.tap)",
-  "sessionCount": 31,
+  "sessionCount": 32,
   "sessionTestNames": [
     "all native input flags and all ten techniques survive packing without aliasing",
     "replay runs compress held inputs, split long runs and reproduce the exact frame sequence",
     "replay import rejects corrupt technique bits, oversized durations and malformed frames",
     "replay import validates version, roster, rules and carried survival health",
+    "replay validation and repeated JSON export preserve each supported rules version",
     "profile import keeps recognized progress and sanitizes settings without sharing defaults",
     "storage corruption or denied local storage does not prevent a fresh playable profile",
     "local recovery drops only a malformed checkpoint and preserves the full saved profile",
@@ -710,11 +893,11 @@
     "profile exports preserve canonical progress, costumes and individually earned endings",
     "replays retain known costumes and reject unrelated variants while keeping 0.1 compatibility"
   ],
-  "sessionSourceSha256": "40d111e9f967b430777ec853048e368593542f3d2689f02a0177a65bf16b3d54",
-  "sessionProof": "node --test-reporter=tap tests/combat-session.test.mjs — 31/31 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-session.test.tap)",
+  "sessionSourceSha256": "626fb50bc6108531839dfef1a0a1a249b4499f4253f3cd0b60164bfb11e548d7",
+  "sessionProof": "node --test-reporter=tap tests/combat-session.test.mjs — 32/32 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-session.test.tap)",
   "browserReports": {
     "ui": {
-      "base": "http://127.0.0.1:4178",
+      "base": "http://127.0.0.1:4181",
       "checks": [
         {
           "name": "Nine modes and standalone home render",
@@ -775,7 +958,7 @@
       "errors": []
     },
     "progression": {
-      "base": "http://127.0.0.1:4178",
+      "base": "http://127.0.0.1:4181",
       "checks": [
         {
           "name": "A real local match saves its result and replay",
@@ -789,17 +972,17 @@
         },
         {
           "name": "arcade: earned first win opens encounter 2/6",
-          "detail": "bubble → pomni, player HP 8688 → 10000",
+          "detail": "pomni → abstractedkaufmo, player HP 8167 → 10000",
           "pass": true
         },
         {
           "name": "boss: earned first win opens encounter 2/4",
-          "detail": "gloinkqueen → fudge, player HP 10000 → 10000",
+          "detail": "gloinkqueen → fudge, player HP 9552 → 10000",
           "pass": true
         },
         {
           "name": "survival: earned first win opens encounter 2/10",
-          "detail": "pomni → abstractedkaufmo, player HP 8656 → 9856",
+          "detail": "pomni → abstractedkaufmo, player HP 8251 → 9451",
           "pass": true
         },
         {
@@ -819,7 +1002,7 @@
         },
         {
           "name": "Built standalone plays on a second origin without the OS runtime",
-          "detail": "26 local resources",
+          "detail": "28 local resources",
           "pass": true
         },
         {
@@ -831,7 +1014,7 @@
       "errors": []
     },
     "encore": {
-      "base": "http://127.0.0.1:4178",
+      "base": "http://127.0.0.1:4181",
       "checks": [
         {
           "name": "Story victory checkpoint reloads into chapter 2 without a duplicate reward",
@@ -878,72 +1061,72 @@
         {
           "label": "story-jax-1",
           "won": true,
-          "frames": 2001,
+          "frames": 1643,
           "fighters": [
             "jax",
             "gangle"
           ],
-          "health": 8643
+          "health": 8867
         },
         {
           "label": "story-jax-2",
           "won": true,
-          "frames": 1552,
+          "frames": 1851,
           "fighters": [
             "jax",
             "zooble"
           ],
-          "health": 7000
+          "health": 7236
         },
         {
           "label": "story-jax-3",
           "won": true,
-          "frames": 2142,
+          "frames": 1429,
           "fighters": [
             "jax",
             "ragatha"
           ],
-          "health": 6962
+          "health": 8024
         },
         {
           "label": "story-jax-4",
           "won": true,
-          "frames": 1831,
+          "frames": 1932,
           "fighters": [
             "jax",
             "caine"
           ],
-          "health": 8409
+          "health": 9287
         },
         {
           "label": "tournament-round-1",
           "won": true,
-          "frames": 1755,
+          "frames": 1573,
           "fighters": [
             "jax",
             "gangle"
           ],
-          "health": 8680
+          "health": 8382
         },
         {
           "label": "tournament-round-2",
           "won": true,
-          "frames": 1768,
+          "frames": 1929,
           "fighters": [
             "jax",
             "caine"
           ],
-          "health": 7652
+          "health": 8122
         },
         {
           "label": "tournament-round-3",
           "won": true,
-          "frames": 1897,
+          "frames": 2071,
           "fighters": [
             "jax",
             "fudge"
           ],
-          "health": 8805
+          "health": 10000
         },
         {
           "label": "tournament-elimination",
@@ -958,7 +1141,7 @@
         {
           "label": "story-chapter-2-loss",
           "won": false,
-          "frames": 1792,
+          "frames": 2070,
           "fighters": [
             "jax",
             "zooble"
@@ -969,7 +1152,7 @@
       "errors": []
     },
     "offline": {
-      "base": "http://127.0.0.1:34007",
+      "base": "http://127.0.0.1:39825",
       "checks": [
         {
           "name": "Custom keys reject conflicts and reserved shortcuts, allow alternatives, and persist",
@@ -1030,7 +1213,7 @@
       "errors": []
     },
     "recovery": {
-      "base": "http://127.0.0.1:37953",
+      "base": "http://127.0.0.1:38213",
       "checks": [
         {
           "name": "A failed first offline-cache installation exits preparation and exposes an enabled retry",
@@ -1054,7 +1237,7 @@
       }
     },
     "profileRecovery": {
-      "base": "http://127.0.0.1:4178",
+      "base": "http://127.0.0.1:4181",
       "fixturePolicy": "Existing statistics/rewards are explicit migration fixtures; only the specialist exercise was played during this test.",
       "checks": [
         {
@@ -1237,14 +1420,2087 @@
           }
         ]
       }
+    },
+    "fidelity": {
+      "version": "0.3.0",
+      "base": "http://127.0.0.1:4181",
+      "fixturePolicy": "Short compatibility fixtures; no earned wins or canonical art certification.",
+      "checks": [
+        {
+          "name": "All 14 fighters and 140 techniques expose their shared source notes",
+          "detail": "Every displayed reference resolves to the central register; adaptation text remains separate from the observed traits.",
+          "pass": true
+        },
+        {
+          "name": "Fighter and technique references are keyboard accessible",
+          "detail": "Native disclosure controls open with Enter and expose readable links without leaving the game.",
+          "pass": true
+        },
+        {
+          "name": "All 12 arena choices preview their actual distinct render",
+          "detail": "The selected label, pressed state, source disclosure and 1280 × 720 scene change together.",
+          "pass": true
+        },
+        {
+          "name": "Story selection previews the first chapter of all 14 routes",
+          "detail": "The preview follows the chosen artist and chapter rather than a previously chosen free-duel arena.",
+          "pass": true
+        },
+        {
+          "name": "Versioned retreat replay: pomni",
+          "detail": "Imports for 0.1.0, 0.2.0 and 0.3.0 reproduce the expected complete deterministic frame state; no progression is awarded.",
+          "pass": true
+        },
+        {
+          "name": "Versioned retreat replay: abstractedkaufmo",
+          "detail": "Imports for 0.1.0, 0.2.0 and 0.3.0 reproduce the expected complete deterministic frame state; no progression is awarded.",
+          "pass": true
+        },
+        {
+          "name": "Repeating an imported legacy replay preserves its original kit",
+          "detail": "The Revoir action produces the same full frame snapshot for the 0.2.0 Pomni recording.",
+          "pass": true
+        },
+        {
+          "name": "Exporting a stored legacy replay keeps version 0.2.0",
+          "detail": "The downloaded JSON preserves its original inputs, costume and rules version instead of silently upgrading it.",
+          "pass": true
+        },
+        {
+          "name": "Source notes and arena previews remain usable at 390 px",
+          "detail": "Touch opens the stage notes, the preview fits the viewport and the codex has no document-level horizontal overflow.",
+          "pass": true
+        }
+      ],
+      "errors": [],
+      "stagePreviews": [
+        {
+          "id": "bigtop",
+          "sha256": "6c49ee4ed8c75439125490c6a8dcb0c16bc2f766a7055efb348dea4c5ff664a9"
+        },
+        {
+          "id": "candy",
+          "sha256": "3bacc1bb84a9244feebc5b2cd82b9086e18e70e78c205ff6cefb09e1363283ab"
+        },
+        {
+          "id": "manor",
+          "sha256": "fa65627f9002771c77c118c49539eca4da06e5297c5c1dcbd000970d7de32e72"
+        },
+        {
+          "id": "spudsy",
+          "sha256": "e16849d9ee36af64a683380fd8eccd85bbb0daf46817cb1ff98ff905f59fbf8a"
+        },
+        {
+          "id": "cellar",
+          "sha256": "6e91092be7c6c0b22ed7ed464641b426bdb045360eacd091c0132c22d278c302"
+        },
+        {
+          "id": "void",
+          "sha256": "1c8a5a2778baab76e866d6e121f92bdacfda0370eae823c2e364721bbd210eb6"
+        },
+        {
+          "id": "lake",
+          "sha256": "f3701e3df202f3ab5a46f63ebb91e39de9283a219085dd0c31f2f112dd9abba9"
+        },
+        {
+          "id": "training",
+          "sha256": "b2788f530ad40e79faf61d136a2e9876d32cafce0ddbc62ddeacf9e0c65fad85"
+        },
+        {
+          "id": "gloink",
+          "sha256": "38cb576848022898ca46a71dec274948ecc695e50fa4d36a4655b75dfbd9292f"
+        },
+        {
+          "id": "kingdom",
+          "sha256": "49e4611d77749a00e2101b013e82991db279015f7721c986983723a8eb86f53e"
+        },
+        {
+          "id": "grounds",
+          "sha256": "ff7898342010a7d4cfe90d3fd16d44287ff4387818ef2a1f40293093985444f8"
+        },
+        {
+          "id": "backstage",
+          "sha256": "024e9ef9543dec328ec81abebc08277b15eb89e6e96b0727df355e856c427830"
+        }
+      ],
+      "replayResults": [
+        {
+          "fighter": "pomni",
+          "version": "0.1.0",
+          "frames": 122,
+          "x": 230,
+          "snapshotSHA256": "c4483f7499804b5ea60b8bc91f1bf02b026794bff9db25322724ecb10d9293f8"
+        },
+        {
+          "fighter": "pomni",
+          "version": "0.2.0",
+          "frames": 122,
+          "x": 230,
+          "snapshotSHA256": "c4483f7499804b5ea60b8bc91f1bf02b026794bff9db25322724ecb10d9293f8"
+        },
+        {
+          "fighter": "pomni",
+          "version": "0.3.0",
+          "frames": 122,
+          "x": 320,
+          "snapshotSHA256": "925b92668d4b7da514479d4fa455fd5a5fd7ac1b574c9de500154fd1c9224a84"
+        },
+        {
+          "fighter": "abstractedkaufmo",
+          "version": "0.1.0",
+          "frames": 122,
+          "x": 245,
+          "snapshotSHA256": "d1abe2fef845bedf20aea956548d9c2a4f2dd38d9f40d6661d80867e7e6a0d8f"
+        },
+        {
+          "fighter": "abstractedkaufmo",
+          "version": "0.2.0",
+          "frames": 122,
+          "x": 245,
+          "snapshotSHA256": "d1abe2fef845bedf20aea956548d9c2a4f2dd38d9f40d6661d80867e7e6a0d8f"
+        },
+        {
+          "fighter": "abstractedkaufmo",
+          "version": "0.3.0",
+          "frames": 122,
+          "x": 353,
+          "snapshotSHA256": "bdfc229edf17e90090cef69992149b9ca3a759c5e715c874b9dd3e645fd75ce0"
+        }
+      ]
+    },
+    "renderFidelity": {
+      "createdAt": "2026-10-22T11:12:24.973Z",
+      "fixture": "Native Canvas render fixtures; no victory, progression or canonical pixel-perfect claim.",
+      "baseline": "e71b08cda23b3348f099d096da07812b103bf99c",
+      "comparedRenderers": [
+        "published 0.2.0 render.mjs",
+        "working-tree render.mjs"
+      ],
+      "catalog": "Same current data.mjs for both captures; no simulation rules changed by the fixture.",
+      "sources": [
+        {
+          "stage": "bigtop",
+          "url": "https://static.wixstatic.com/media/84ed6a_e3bac825d5c140a4a665ba898b3ff51b~mv2.png",
+          "observation": "Cyan walls, gold valance, red/green rounded door, coloured sofas, warm checker floor."
+        },
+        {
+          "stage": "cellar",
+          "url": "https://static.wixstatic.com/media/84ed6a_de54a5d816fe4ba0966cc96385ab8f8b~mv2.jpg",
+          "observation": "Near-black space, multicoloured eyes and one central light shaft."
+        },
+        {
+          "stage": "void",
+          "url": "https://static.wixstatic.com/media/84ed6a_9f2c0f92fcc340fea405c155a304e362~mv2.png",
+          "observation": "Luminous white/lilac rectilinear iridescence, without EXIT doors or stairs."
+        }
+      ],
+      "checks": [
+        {
+          "name": "Kaufmo dark silhouette restored without recolouring",
+          "detail": {
+            "before": {
+              "id": "abstractedkaufmo",
+              "opaque": 27746,
+              "dark": 13698,
+              "rgbChanges": 0,
+              "nativeAlphaChanges": 0,
+              "bounds": {
+                "x": 1,
+                "y": 137,
+                "width": 301,
+                "height": 405
+              }
+            },
+            "after": {
+              "id": "abstractedkaufmo",
+              "opaque": 62595,
+              "dark": 48255,
+              "rgbChanges": 0,
+              "nativeAlphaChanges": 0,
+              "bounds": {
+                "x": 0,
+                "y": 134,
+                "width": 304,
+                "height": 411
+              }
+            }
+          },
+          "pass": true
+        },
+        {
+          "name": "14 first idle frames preserve their palette; seven native idle alphas are unchanged",
+          "detail": [
+            {
+              "id": "pomni",
+              "opaque": 45004,
+              "dark": 7941,
+              "rgbChanges": 0,
+              "nativeAlphaChanges": 0,
+              "bounds": {
+                "x": 128,
+                "y": 66,
+                "width": 233,
+                "height": 319
+              }
+            },
+            {
+              "id": "jax",
+              "opaque": 29426,
+              "dark": 7239,
+              "rgbChanges": 0,
+              "nativeAlphaChanges": 0,
+              "bounds": {
+                "x": 147,
+                "y": 39,
+                "width": 129,
+                "height": 379
+              }
+            },
+            {
+              "id": "ragatha",
+              "opaque": 40167,
+              "dark": 4708,
+              "rgbChanges": 0,
+              "nativeAlphaChanges": 0,
+              "bounds": {
+                "x": 151,
+                "y": 98,
+                "width": 193,
+                "height": 331
+              }
+            },
+            {
+              "id": "gangle",
+              "opaque": 31329,
+              "dark": 8308,
+              "rgbChanges": 0,
+              "nativeAlphaChanges": 0,
+              "bounds": {
+                "x": 115,
+                "y": 118,
+                "width": 178,
+                "height": 310
+              }
+            },
+            {
+              "id": "zooble",
+              "opaque": 38548,
+              "dark": 6108,
+              "rgbChanges": 0,
+              "nativeAlphaChanges": 0,
+              "bounds": {
+                "x": 117,
+                "y": 94,
+                "width": 212,
+                "height": 359
+              }
+            },
+            {
+              "id": "kinger",
+              "opaque": 35992,
+              "dark": 4899,
+              "rgbChanges": 0,
+              "nativeAlphaChanges": 0,
+              "bounds": {
+                "x": 126,
+                "y": 67,
+                "width": 150,
+                "height": 355
+              }
+            },
+            {
+              "id": "caine",
+              "opaque": 35470,
+              "dark": 12451,
+              "rgbChanges": 0,
+              "nativeAlphaChanges": 0,
+              "bounds": {
+                "x": 156,
+                "y": 83,
+                "width": 182,
+                "height": 349
+              }
+            },
+            {
+              "id": "bubble",
+              "opaque": 25346,
+              "dark": 553,
+              "rgbChanges": 0,
+              "nativeAlphaChanges": 0,
+              "bounds": {
+                "x": 59,
+                "y": 153,
+                "width": 180,
+                "height": 180
+              }
+            },
+            {
+              "id": "gummigoo",
+              "opaque": 26671,
+              "dark": 2854,
+              "rgbChanges": 0,
+              "nativeAlphaChanges": 0,
+              "bounds": {
+                "x": 0,
+                "y": 55,
+                "width": 168,
+                "height": 259
+              }
+            },
+            {
+              "id": "loolilalu",
+              "opaque": 28593,
+              "dark": 1482,
+              "rgbChanges": 0,
+              "nativeAlphaChanges": 0,
+              "bounds": {
+                "x": 0,
+                "y": 29,
+                "width": 148,
+                "height": 288
+              }
+            },
+            {
+              "id": "gloinkqueen",
+              "opaque": 1401071,
+              "dark": 591805,
+              "rgbChanges": 0,
+              "nativeAlphaChanges": 0,
+              "bounds": {
+                "x": 10,
+                "y": 27,
+                "width": 1997,
+                "height": 742
+              }
+            },
+            {
+              "id": "fudge",
+              "opaque": 27597,
+              "dark": 1718,
+              "rgbChanges": 0,
+              "nativeAlphaChanges": 0,
+              "bounds": {
+                "x": 53,
+                "y": 52,
+                "width": 203,
+                "height": 214
+              }
+            },
+            {
+              "id": "abstractedkaufmo",
+              "opaque": 62595,
+              "dark": 48255,
+              "rgbChanges": 0,
+              "nativeAlphaChanges": 0,
+              "bounds": {
+                "x": 0,
+                "y": 134,
+                "width": 304,
+                "height": 411
+              }
+            },
+            {
+              "id": "baronmildenhall",
+              "opaque": 137865,
+              "dark": 14339,
+              "rgbChanges": 0,
+              "nativeAlphaChanges": 0,
+              "bounds": {
+                "x": 18,
+                "y": 73,
+                "width": 416,
+                "height": 699
+              }
+            }
+          ],
+          "pass": true
+        },
+        {
+          "name": "12 stage canvases render; the three reviewed palettes match observed light and colour",
+          "detail": {
+            "bigtop": {
+              "id": "bigtop",
+              "meanLuminance": 153.8553378034233,
+              "centre": [
+                130,
+                223,
+                32,
+                255
+              ],
+              "wall": [
+                57,
+                154,
+                194,
+                255
+              ],
+              "redDoor": [
+                232,
+                43,
+                41,
+                255
+              ],
+              "greenDoor": [
+                130,
+                223,
+                32,
+                255
+              ]
+            },
+            "cellar": {
+              "id": "cellar",
+              "meanLuminance": 12.67254691211764,
+              "centre": [
+                45,
+                46,
+                54,
+                255
+              ],
+              "wall": [
+                7,
+                8,
+                11,
+                255
+              ],
+              "redDoor": [
+                42,
+                43,
+                50,
+                255
+              ],
+              "greenDoor": [
+                45,
+                46,
+                54,
+                255
+              ]
+            },
+            "voidStage": {
+              "id": "void",
+              "meanLuminance": 229.91206869326538,
+              "centre": [
+                252,
+                252,
+                254,
+                255
+              ],
+              "wall": [
+                218,
+                220,
+                246,
+                255
+              ],
+              "redDoor": [
+                249,
+                249,
+                254,
+                255
+              ],
+              "greenDoor": [
+                251,
+                251,
+                254,
+                255
+              ]
+            }
+          },
+          "pass": true
+        },
+        {
+          "name": "All projectile and ground objects visible, 14 distinct special motifs, unchanged input state",
+          "detail": {
+            "projectiles": 20,
+            "traps": 10,
+            "specialMotifs": 14
+          },
+          "pass": true
+        },
+        {
+          "name": "Dead/delayed objects hidden and armed traps remain visibly stronger",
+          "pass": true
+        },
+        {
+          "name": "Reduced motion freezes presentation while the ordinary key animation remains active",
+          "pass": true
+        },
+        {
+          "name": "No browser errors or missing local resources",
+          "pass": true
+        }
+      ],
+      "screenshots": [
+        "render-fidelity-stage-bigtop-before.png",
+        "render-fidelity-stage-cellar-before.png",
+        "render-fidelity-stage-void-before.png",
+        "render-fidelity-alpha-before.png",
+        "render-fidelity-projectiles-before.png",
+        "render-fidelity-traps-before.png",
+        "render-fidelity-stage-bigtop-after.png",
+        "render-fidelity-stage-cellar-after.png",
+        "render-fidelity-stage-void-after.png",
+        "render-fidelity-alpha-after.png",
+        "render-fidelity-projectiles-after.png",
+        "render-fidelity-traps-after.png",
+        "render-fidelity-kinger-barrier-after.png",
+        "render-fidelity-overview.png"
+      ],
+      "measurements": {
+        "before": {
+          "sprites": [
+            {
+              "id": "pomni",
+              "opaque": 45004,
+              "dark": 7941,
+              "rgbChanges": 0,
+              "nativeAlphaChanges": 0,
+              "bounds": {
+                "x": 128,
+                "y": 66,
+                "width": 233,
+                "height": 319
+              }
+            },
+            {
+              "id": "jax",
+              "opaque": 29426,
+              "dark": 7239,
+              "rgbChanges": 0,
+              "nativeAlphaChanges": 0,
+              "bounds": {
+                "x": 147,
+                "y": 39,
+                "width": 129,
+                "height": 379
+              }
+            },
+            {
+              "id": "ragatha",
+              "opaque": 40167,
+              "dark": 4708,
+              "rgbChanges": 0,
+              "nativeAlphaChanges": 0,
+              "bounds": {
+                "x": 151,
+                "y": 98,
+                "width": 193,
+                "height": 331
+              }
+            },
+            {
+              "id": "gangle",
+              "opaque": 31329,
+              "dark": 8308,
+              "rgbChanges": 0,
+              "nativeAlphaChanges": 0,
+              "bounds": {
+                "x": 115,
+                "y": 118,
+                "width": 178,
+                "height": 310
+              }
+            },
+            {
+              "id": "zooble",
+              "opaque": 38548,
+              "dark": 6108,
+              "rgbChanges": 0,
+              "nativeAlphaChanges": 0,
+              "bounds": {
+                "x": 117,
+                "y": 94,
+                "width": 212,
+                "height": 359
+              }
+            },
+            {
+              "id": "kinger",
+              "opaque": 35992,
+              "dark": 4899,
+              "rgbChanges": 0,
+              "nativeAlphaChanges": 0,
+              "bounds": {
+                "x": 126,
+                "y": 67,
+                "width": 150,
+                "height": 355
+              }
+            },
+            {
+              "id": "caine",
+              "opaque": 35470,
+              "dark": 12451,
+              "rgbChanges": 0,
+              "nativeAlphaChanges": 0,
+              "bounds": {
+                "x": 156,
+                "y": 83,
+                "width": 182,
+                "height": 349
+              }
+            },
+            {
+              "id": "bubble",
+              "opaque": 25061,
+              "dark": 425,
+              "rgbChanges": 0,
+              "nativeAlphaChanges": 0,
+              "bounds": {
+                "x": 59,
+                "y": 154,
+                "width": 180,
+                "height": 178
+              }
+            },
+            {
+              "id": "gummigoo",
+              "opaque": 21106,
+              "dark": 126,
+              "rgbChanges": 0,
+              "nativeAlphaChanges": 0,
+              "bounds": {
+                "x": 0,
+                "y": 55,
+                "width": 255,
+                "height": 258
+              }
+            },
+            {
+              "id": "loolilalu",
+              "opaque": 27845,
+              "dark": 1160,
+              "rgbChanges": 0,
+              "nativeAlphaChanges": 0,
+              "bounds": {
+                "x": 0,
+                "y": 29,
+                "width": 147,
+                "height": 288
+              }
+            },
+            {
+              "id": "gloinkqueen",
+              "opaque": 776266,
+              "dark": 37249,
+              "rgbChanges": 0,
+              "nativeAlphaChanges": 0,
+              "bounds": {
+                "x": 39,
+                "y": 64,
+                "width": 1937,
+                "height": 676
+              }
+            },
+            {
+              "id": "fudge",
+              "opaque": 20143,
+              "dark": 586,
+              "rgbChanges": 0,
+              "nativeAlphaChanges": 0,
+              "bounds": {
+                "x": 53,
+                "y": 52,
+                "width": 191,
+                "height": 213
+              }
+            },
+            {
+              "id": "abstractedkaufmo",
+              "opaque": 27746,
+              "dark": 13698,
+              "rgbChanges": 0,
+              "nativeAlphaChanges": 0,
+              "bounds": {
+                "x": 1,
+                "y": 137,
+                "width": 301,
+                "height": 405
+              }
+            },
+            {
+              "id": "baronmildenhall",
+              "opaque": 108730,
+              "dark": 3473,
+              "rgbChanges": 0,
+              "nativeAlphaChanges": 0,
+              "bounds": {
+                "x": 20,
+                "y": 75,
+                "width": 411,
+                "height": 696
+              }
+            }
+          ],
+          "stages": [
+            {
+              "id": "bigtop",
+              "meanLuminance": 52.44054121597107,
+              "centre": [
+                69,
+                48,
+                82,
+                255
+              ],
+              "wall": [
+                104,
+                51,
+                90,
+                255
+              ],
+              "redDoor": [
+                157,
+                57,
+                99,
+                255
+              ],
+              "greenDoor": [
+                126,
+                53,
+                93,
+                255
+              ]
+            },
+            {
+              "id": "candy",
+              "meanLuminance": 89.020623105582,
+              "centre": [
+                159,
+                106,
+                138,
+                255
+              ],
+              "wall": [
+                124,
+                83,
+                114,
+                255
+              ],
+              "redDoor": [
+                159,
+                106,
+                139,
+                255
+              ],
+              "greenDoor": [
+                159,
+                106,
+                139,
+                255
+              ]
+            },
+            {
+              "id": "manor",
+              "meanLuminance": 37.69114447723706,
+              "centre": [
+                134,
+                112,
+                123,
+                255
+              ],
+              "wall": [
+                105,
+                90,
+                100,
+                255
+              ],
+              "redDoor": [
+                40,
+                34,
+                61,
+                255
+              ],
+              "greenDoor": [
+                40,
+                34,
+                61,
+                255
+              ]
+            },
+            {
+              "id": "spudsy",
+              "meanLuminance": 71.49162001770225,
+              "centre": [
+                179,
+                154,
+                124,
+                255
+              ],
+              "wall": [
+                156,
+                134,
+                108,
+                255
+              ],
+              "redDoor": [
+                179,
+                154,
+                124,
+                255
+              ],
+              "greenDoor": [
+                165,
+                137,
+                115,
+                255
+              ]
+            },
+            {
+              "id": "cellar",
+              "meanLuminance": 29.39418334316416,
+              "centre": [
+                19,
+                20,
+                43,
+                255
+              ],
+              "wall": [
+                31,
+                35,
+                51,
+                255
+              ],
+              "redDoor": [
+                18,
+                20,
+                43,
+                255
+              ],
+              "greenDoor": [
+                19,
+                20,
+                44,
+                255
+              ]
+            },
+            {
+              "id": "void",
+              "meanLuminance": 205.70752049731914,
+              "centre": [
+                228,
+                215,
+                237,
+                255
+              ],
+              "wall": [
+                217,
+                205,
+                226,
+                255
+              ],
+              "redDoor": [
+                190,
+                170,
+                209,
+                255
+              ],
+              "greenDoor": [
+                228,
+                215,
+                237,
+                255
+              ]
+            },
+            {
+              "id": "lake",
+              "meanLuminance": 104.76948425810419,
+              "centre": [
+                105,
+                119,
+                128,
+                255
+              ],
+              "wall": [
+                139,
+                131,
+                141,
+                255
+              ],
+              "redDoor": [
+                105,
+                119,
+                128,
+                255
+              ],
+              "greenDoor": [
+                104,
+                117,
+                126,
+                255
+              ]
+            },
+            {
+              "id": "training",
+              "meanLuminance": 29.24125573673502,
+              "centre": [
+                103,
+                101,
+                140,
+                255
+              ],
+              "wall": [
+                24,
+                25,
+                48,
+                255
+              ],
+              "redDoor": [
+                72,
+                71,
+                106,
+                255
+              ],
+              "greenDoor": [
+                72,
+                71,
+                106,
+                255
+              ]
+            },
+            {
+              "id": "gloink",
+              "meanLuminance": 40.805654139303115,
+              "centre": [
+                35,
+                25,
+                50,
+                255
+              ],
+              "wall": [
+                54,
+                38,
+                67,
+                255
+              ],
+              "redDoor": [
+                34,
+                25,
+                49,
+                255
+              ],
+              "greenDoor": [
+                35,
+                25,
+                49,
+                255
+              ]
+            },
+            {
+              "id": "kingdom",
+              "meanLuminance": 103.33736527338415,
+              "centre": [
+                207,
+                155,
+                183,
+                255
+              ],
+              "wall": [
+                147,
+                100,
+                130,
+                255
+              ],
+              "redDoor": [
+                239,
+                193,
+                189,
+                255
+              ],
+              "greenDoor": [
+                215,
+                166,
+                178,
+                255
+              ]
+            },
+            {
+              "id": "grounds",
+              "meanLuminance": 99.4456584593841,
+              "centre": [
+                224,
+                186,
+                173,
+                255
+              ],
+              "wall": [
+                133,
+                117,
+                139,
+                255
+              ],
+              "redDoor": [
+                224,
+                186,
+                173,
+                255
+              ],
+              "greenDoor": [
+                224,
+                186,
+                173,
+                255
+              ]
+            },
+            {
+              "id": "backstage",
+              "meanLuminance": 46.98128155759338,
+              "centre": [
+                97,
+                96,
+                115,
+                255
+              ],
+              "wall": [
+                39,
+                31,
+                48,
+                255
+              ],
+              "redDoor": [
+                97,
+                96,
+                115,
+                255
+              ],
+              "greenDoor": [
+                97,
+                96,
+                115,
+                255
+              ]
+            }
+          ],
+          "objects": {
+            "projectileHashes": [
+              {
+                "id": "pomni",
+                "slot": "special",
+                "hash": 2382790188,
+                "alpha": 52243
+              },
+              {
+                "id": "jax",
+                "slot": "special",
+                "hash": 46559478,
+                "alpha": 52243
+              },
+              {
+                "id": "jax",
+                "slot": "super",
+                "hash": 1485407325,
+                "alpha": 135081
+              },
+              {
+                "id": "ragatha",
+                "slot": "special",
+                "hash": 3267689092,
+                "alpha": 52243
+              },
+              {
+                "id": "gangle",
+                "slot": "special",
+                "hash": 3566077224,
+                "alpha": 52243
+              },
+              {
+                "id": "zooble",
+                "slot": "special",
+                "hash": 3744127830,
+                "alpha": 52243
+              },
+              {
+                "id": "kinger",
+                "slot": "special",
+                "hash": 2298876725,
+                "alpha": 64312
+              },
+              {
+                "id": "caine",
+                "slot": "special",
+                "hash": 2735961877,
+                "alpha": 52243
+              },
+              {
+                "id": "caine",
+                "slot": "super",
+                "hash": 2735961877,
+                "alpha": 52243
+              },
+              {
+                "id": "bubble",
+                "slot": "special",
+                "hash": 3699073903,
+                "alpha": 52243
+              },
+              {
+                "id": "bubble",
+                "slot": "super",
+                "hash": 1485407325,
+                "alpha": 135081
+              },
+              {
+                "id": "gummigoo",
+                "slot": "special",
+                "hash": 295981701,
+                "alpha": 66744
+              },
+              {
+                "id": "loolilalu",
+                "slot": "special",
+                "hash": 295981701,
+                "alpha": 66744
+              },
+              {
+                "id": "loolilalu",
+                "slot": "super",
+                "hash": 295981701,
+                "alpha": 66744
+              },
+              {
+                "id": "gloinkqueen",
+                "slot": "special",
+                "hash": 4168586412,
+                "alpha": 52243
+              },
+              {
+                "id": "fudge",
+                "slot": "special",
+                "hash": 3042850638,
+                "alpha": 52243
+              },
+              {
+                "id": "fudge",
+                "slot": "super",
+                "hash": 3042850638,
+                "alpha": 52243
+              },
+              {
+                "id": "abstractedkaufmo",
+                "slot": "special",
+                "hash": 2091700097,
+                "alpha": 64312
+              },
+              {
+                "id": "baronmildenhall",
+                "slot": "special",
+                "hash": 2629254784,
+                "alpha": 52243
+              },
+              {
+                "id": "baronmildenhall",
+                "slot": "super",
+                "hash": 2629254784,
+                "alpha": 52243
+              }
+            ],
+            "trapHashes": [
+              {
+                "id": "jax",
+                "slot": "specialDown",
+                "hash": 464949668,
+                "alpha": 94757
+              },
+              {
+                "id": "gangle",
+                "slot": "specialDown",
+                "hash": 923752473,
+                "alpha": 94757
+              },
+              {
+                "id": "zooble",
+                "slot": "specialDown",
+                "hash": 4032388520,
+                "alpha": 94757
+              },
+              {
+                "id": "caine",
+                "slot": "specialDown",
+                "hash": 453709328,
+                "alpha": 94757
+              },
+              {
+                "id": "gummigoo",
+                "slot": "specialDown",
+                "hash": 2489349395,
+                "alpha": 94757
+              },
+              {
+                "id": "loolilalu",
+                "slot": "specialDown",
+                "hash": 2489349395,
+                "alpha": 94757
+              },
+              {
+                "id": "gloinkqueen",
+                "slot": "specialDown",
+                "hash": 3406611534,
+                "alpha": 94757
+              },
+              {
+                "id": "fudge",
+                "slot": "specialDown",
+                "hash": 2765952102,
+                "alpha": 94757
+              },
+              {
+                "id": "abstractedkaufmo",
+                "slot": "specialDown",
+                "hash": 2270378376,
+                "alpha": 94757
+              },
+              {
+                "id": "baronmildenhall",
+                "slot": "specialDown",
+                "hash": 2384171121,
+                "alpha": 94757
+              }
+            ],
+            "deterministicAndUnchanged": true,
+            "deadProjectile": 0,
+            "delayedProjectile": 0,
+            "deadTrap": 0,
+            "armedTrap": 94757,
+            "unarmedTrap": 45911,
+            "keyRotates": true
+          }
+        },
+        "after": {
+          "sprites": [
+            {
+              "id": "pomni",
+              "opaque": 45004,
+              "dark": 7941,
+              "rgbChanges": 0,
+              "nativeAlphaChanges": 0,
+              "bounds": {
+                "x": 128,
+                "y": 66,
+                "width": 233,
+                "height": 319
+              }
+            },
+            {
+              "id": "jax",
+              "opaque": 29426,
+              "dark": 7239,
+              "rgbChanges": 0,
+              "nativeAlphaChanges": 0,
+              "bounds": {
+                "x": 147,
+                "y": 39,
+                "width": 129,
+                "height": 379
+              }
+            },
+            {
+              "id": "ragatha",
+              "opaque": 40167,
+              "dark": 4708,
+              "rgbChanges": 0,
+              "nativeAlphaChanges": 0,
+              "bounds": {
+                "x": 151,
+                "y": 98,
+                "width": 193,
+                "height": 331
+              }
+            },
+            {
+              "id": "gangle",
+              "opaque": 31329,
+              "dark": 8308,
+              "rgbChanges": 0,
+              "nativeAlphaChanges": 0,
+              "bounds": {
+                "x": 115,
+                "y": 118,
+                "width": 178,
+                "height": 310
+              }
+            },
+            {
+              "id": "zooble",
+              "opaque": 38548,
+              "dark": 6108,
+              "rgbChanges": 0,
+              "nativeAlphaChanges": 0,
+              "bounds": {
+                "x": 117,
+                "y": 94,
+                "width": 212,
+                "height": 359
+              }
+            },
+            {
+              "id": "kinger",
+              "opaque": 35992,
+              "dark": 4899,
+              "rgbChanges": 0,
+              "nativeAlphaChanges": 0,
+              "bounds": {
+                "x": 126,
+                "y": 67,
+                "width": 150,
+                "height": 355
+              }
+            },
+            {
+              "id": "caine",
+              "opaque": 35470,
+              "dark": 12451,
+              "rgbChanges": 0,
+              "nativeAlphaChanges": 0,
+              "bounds": {
+                "x": 156,
+                "y": 83,
+                "width": 182,
+                "height": 349
+              }
+            },
+            {
+              "id": "bubble",
+              "opaque": 25346,
+              "dark": 553,
+              "rgbChanges": 0,
+              "nativeAlphaChanges": 0,
+              "bounds": {
+                "x": 59,
+                "y": 153,
+                "width": 180,
+                "height": 180
+              }
+            },
+            {
+              "id": "gummigoo",
+              "opaque": 26671,
+              "dark": 2854,
+              "rgbChanges": 0,
+              "nativeAlphaChanges": 0,
+              "bounds": {
+                "x": 0,
+                "y": 55,
+                "width": 168,
+                "height": 259
+              }
+            },
+            {
+              "id": "loolilalu",
+              "opaque": 28593,
+              "dark": 1482,
+              "rgbChanges": 0,
+              "nativeAlphaChanges": 0,
+              "bounds": {
+                "x": 0,
+                "y": 29,
+                "width": 148,
+                "height": 288
+              }
+            },
+            {
+              "id": "gloinkqueen",
+              "opaque": 1401071,
+              "dark": 591805,
+              "rgbChanges": 0,
+              "nativeAlphaChanges": 0,
+              "bounds": {
+                "x": 10,
+                "y": 27,
+                "width": 1997,
+                "height": 742
+              }
+            },
+            {
+              "id": "fudge",
+              "opaque": 27597,
+              "dark": 1718,
+              "rgbChanges": 0,
+              "nativeAlphaChanges": 0,
+              "bounds": {
+                "x": 53,
+                "y": 52,
+                "width": 203,
+                "height": 214
+              }
+            },
+            {
+              "id": "abstractedkaufmo",
+              "opaque": 62595,
+              "dark": 48255,
+              "rgbChanges": 0,
+              "nativeAlphaChanges": 0,
+              "bounds": {
+                "x": 0,
+                "y": 134,
+                "width": 304,
+                "height": 411
+              }
+            },
+            {
+              "id": "baronmildenhall",
+              "opaque": 137865,
+              "dark": 14339,
+              "rgbChanges": 0,
+              "nativeAlphaChanges": 0,
+              "bounds": {
+                "x": 18,
+                "y": 73,
+                "width": 416,
+                "height": 699
+              }
+            }
+          ],
+          "stages": [
+            {
+              "id": "bigtop",
+              "meanLuminance": 153.8553378034233,
+              "centre": [
+                130,
+                223,
+                32,
+                255
+              ],
+              "wall": [
+                57,
+                154,
+                194,
+                255
+              ],
+              "redDoor": [
+                232,
+                43,
+                41,
+                255
+              ],
+              "greenDoor": [
+                130,
+                223,
+                32,
+                255
+              ]
+            },
+            {
+              "id": "candy",
+              "meanLuminance": 89.020623105582,
+              "centre": [
+                159,
+                106,
+                138,
+                255
+              ],
+              "wall": [
+                124,
+                83,
+                114,
+                255
+              ],
+              "redDoor": [
+                159,
+                106,
+                139,
+                255
+              ],
+              "greenDoor": [
+                159,
+                106,
+                139,
+                255
+              ]
+            },
+            {
+              "id": "manor",
+              "meanLuminance": 37.69114447723706,
+              "centre": [
+                134,
+                112,
+                123,
+                255
+              ],
+              "wall": [
+                105,
+                90,
+                100,
+                255
+              ],
+              "redDoor": [
+                40,
+                34,
+                61,
+                255
+              ],
+              "greenDoor": [
+                40,
+                34,
+                61,
+                255
+              ]
+            },
+            {
+              "id": "spudsy",
+              "meanLuminance": 71.49162001770225,
+              "centre": [
+                179,
+                154,
+                124,
+                255
+              ],
+              "wall": [
+                156,
+                134,
+                108,
+                255
+              ],
+              "redDoor": [
+                179,
+                154,
+                124,
+                255
+              ],
+              "greenDoor": [
+                165,
+                137,
+                115,
+                255
+              ]
+            },
+            {
+              "id": "cellar",
+              "meanLuminance": 12.67254691211764,
+              "centre": [
+                45,
+                46,
+                54,
+                255
+              ],
+              "wall": [
+                7,
+                8,
+                11,
+                255
+              ],
+              "redDoor": [
+                42,
+                43,
+                50,
+                255
+              ],
+              "greenDoor": [
+                45,
+                46,
+                54,
+                255
+              ]
+            },
+            {
+              "id": "void",
+              "meanLuminance": 229.91206869326538,
+              "centre": [
+                252,
+                252,
+                254,
+                255
+              ],
+              "wall": [
+                218,
+                220,
+                246,
+                255
+              ],
+              "redDoor": [
+                249,
+                249,
+                254,
+                255
+              ],
+              "greenDoor": [
+                251,
+                251,
+                254,
+                255
+              ]
+            },
+            {
+              "id": "lake",
+              "meanLuminance": 104.76948425810419,
+              "centre": [
+                105,
+                119,
+                128,
+                255
+              ],
+              "wall": [
+                139,
+                131,
+                141,
+                255
+              ],
+              "redDoor": [
+                105,
+                119,
+                128,
+                255
+              ],
+              "greenDoor": [
+                104,
+                117,
+                126,
+                255
+              ]
+            },
+            {
+              "id": "training",
+              "meanLuminance": 29.24125573673502,
+              "centre": [
+                103,
+                101,
+                140,
+                255
+              ],
+              "wall": [
+                24,
+                25,
+                48,
+                255
+              ],
+              "redDoor": [
+                72,
+                71,
+                106,
+                255
+              ],
+              "greenDoor": [
+                72,
+                71,
+                106,
+                255
+              ]
+            },
+            {
+              "id": "gloink",
+              "meanLuminance": 40.805654139303115,
+              "centre": [
+                35,
+                25,
+                50,
+                255
+              ],
+              "wall": [
+                54,
+                38,
+                67,
+                255
+              ],
+              "redDoor": [
+                34,
+                25,
+                49,
+                255
+              ],
+              "greenDoor": [
+                35,
+                25,
+                49,
+                255
+              ]
+            },
+            {
+              "id": "kingdom",
+              "meanLuminance": 103.33736527338415,
+              "centre": [
+                207,
+                155,
+                183,
+                255
+              ],
+              "wall": [
+                147,
+                100,
+                130,
+                255
+              ],
+              "redDoor": [
+                239,
+                193,
+                189,
+                255
+              ],
+              "greenDoor": [
+                215,
+                166,
+                178,
+                255
+              ]
+            },
+            {
+              "id": "grounds",
+              "meanLuminance": 99.4456584593841,
+              "centre": [
+                224,
+                186,
+                173,
+                255
+              ],
+              "wall": [
+                133,
+                117,
+                139,
+                255
+              ],
+              "redDoor": [
+                224,
+                186,
+                173,
+                255
+              ],
+              "greenDoor": [
+                224,
+                186,
+                173,
+                255
+              ]
+            },
+            {
+              "id": "backstage",
+              "meanLuminance": 46.98128155759338,
+              "centre": [
+                97,
+                96,
+                115,
+                255
+              ],
+              "wall": [
+                39,
+                31,
+                48,
+                255
+              ],
+              "redDoor": [
+                97,
+                96,
+                115,
+                255
+              ],
+              "greenDoor": [
+                97,
+                96,
+                115,
+                255
+              ]
+            }
+          ],
+          "objects": {
+            "projectileHashes": [
+              {
+                "id": "pomni",
+                "slot": "special",
+                "hash": 3315449800,
+                "alpha": 92081
+              },
+              {
+                "id": "jax",
+                "slot": "special",
+                "hash": 3025257268,
+                "alpha": 54017
+              },
+              {
+                "id": "jax",
+                "slot": "super",
+                "hash": 890675475,
+                "alpha": 128375
+              },
+              {
+                "id": "ragatha",
+                "slot": "special",
+                "hash": 2226298647,
+                "alpha": 92081
+              },
+              {
+                "id": "gangle",
+                "slot": "special",
+                "hash": 2700882253,
+                "alpha": 105978
+              },
+              {
+                "id": "zooble",
+                "slot": "special",
+                "hash": 3917949225,
+                "alpha": 95880
+              },
+              {
+                "id": "kinger",
+                "slot": "special",
+                "hash": 152191904,
+                "alpha": 29446
+              },
+              {
+                "id": "caine",
+                "slot": "special",
+                "hash": 1536186080,
+                "alpha": 52630
+              },
+              {
+                "id": "caine",
+                "slot": "super",
+                "hash": 1536186080,
+                "alpha": 52630
+              },
+              {
+                "id": "bubble",
+                "slot": "special",
+                "hash": 3066275726,
+                "alpha": 57748
+              },
+              {
+                "id": "bubble",
+                "slot": "super",
+                "hash": 498737513,
+                "alpha": 91868
+              },
+              {
+                "id": "gummigoo",
+                "slot": "special",
+                "hash": 2340204607,
+                "alpha": 103607
+              },
+              {
+                "id": "loolilalu",
+                "slot": "special",
+                "hash": 4024471552,
+                "alpha": 91397
+              },
+              {
+                "id": "loolilalu",
+                "slot": "super",
+                "hash": 4024471552,
+                "alpha": 91397
+              },
+              {
+                "id": "gloinkqueen",
+                "slot": "special",
+                "hash": 1690338951,
+                "alpha": 113199
+              },
+              {
+                "id": "fudge",
+                "slot": "special",
+                "hash": 2284504717,
+                "alpha": 95220
+              },
+              {
+                "id": "fudge",
+                "slot": "super",
+                "hash": 1847239515,
+                "alpha": 152091
+              },
+              {
+                "id": "abstractedkaufmo",
+                "slot": "special",
+                "hash": 3089878456,
+                "alpha": 92130
+              },
+              {
+                "id": "baronmildenhall",
+                "slot": "special",
+                "hash": 2383529617,
+                "alpha": 34468
+              },
+              {
+                "id": "baronmildenhall",
+                "slot": "super",
+                "hash": 2383529617,
+                "alpha": 34468
+              }
+            ],
+            "trapHashes": [
+              {
+                "id": "jax",
+                "slot": "specialDown",
+                "hash": 2548366327,
+                "alpha": 134435
+              },
+              {
+                "id": "gangle",
+                "slot": "specialDown",
+                "hash": 4188178264,
+                "alpha": 122552
+              },
+              {
+                "id": "zooble",
+                "slot": "specialDown",
+                "hash": 231268697,
+                "alpha": 102428
+              },
+              {
+                "id": "caine",
+                "slot": "specialDown",
+                "hash": 3254976744,
+                "alpha": 94243
+              },
+              {
+                "id": "gummigoo",
+                "slot": "specialDown",
+                "hash": 1788092215,
+                "alpha": 156369
+              },
+              {
+                "id": "loolilalu",
+                "slot": "specialDown",
+                "hash": 954745207,
+                "alpha": 143774
+              },
+              {
+                "id": "gloinkqueen",
+                "slot": "specialDown",
+                "hash": 2220306740,
+                "alpha": 183764
+              },
+              {
+                "id": "fudge",
+                "slot": "specialDown",
+                "hash": 2409387457,
+                "alpha": 156369
+              },
+              {
+                "id": "abstractedkaufmo",
+                "slot": "specialDown",
+                "hash": 1175856051,
+                "alpha": 101494
+              },
+              {
+                "id": "baronmildenhall",
+                "slot": "specialDown",
+                "hash": 1000033566,
+                "alpha": 157487
+              }
+            ],
+            "deterministicAndUnchanged": true,
+            "deadProjectile": 0,
+            "delayedProjectile": 0,
+            "deadTrap": 0,
+            "armedTrap": 122552,
+            "unarmedTrap": 55073,
+            "keyRotates": true
+          }
+        }
+      },
+      "errors": [],
+      "limitations": [
+        "The residents hallway is unchanged: a precise primary frame is still required.",
+        "Existing pixel artwork, reused interaction poses and crouch squash remain; no 1:1 art/animation certification.",
+        "Object motifs illustrate existing fan-game moves, not newly asserted canonical fighting powers.",
+        "Opaque black artwork exactly matching its opaque black matte cannot be distinguished without a new source asset."
+      ],
+      "sourceHashes": {
+        "combat/render.mjs": "4859269a4c19aff5cbe2e3b6bb4a28714ac697d49cf6b45fa2e78c97d3c8cf99",
+        "combat/render-presentation.mjs": "3a56700e53d9085b99cb7169e101dbe634d2cb95707718d468972f1bb36d9579",
+        "combat/data.mjs": "45a0d61c702b8fdd6ff55715b14b8adfc83f676ba966ce79141c0409defa67b3",
+        "tests/combat-render-browser.mjs": "1bdfc661578c37e1f0741559a25f960dfbb3d8a8e90704025b387042b6f37312"
+      },
+      "pass": true
     }
   },
   "renderer": {
-    "preload": {
-      "ok": true,
-      "errors": []
+    "asOf": "2026-10-22",
+    "scope": "Comparaison limitée de trois décors à trois images GLITCH et contrôle technique des premières cellules idle. Les 12 décors sont rendus ; aucune validation artistique globale des personnages, animations ou costumes.",
+    "baseline": "e71b08cda23b3348f099d096da07812b103bf99c",
+    "comparedRenderers": [
+      "published 0.2.0 render.mjs",
+      "working-tree render.mjs"
+    ],
+    "catalogPolicy": "Same current data.mjs for both captures; no simulation rules changed by the fixture.",
+    "fixturePolicy": "Native Canvas render fixtures; no victory, progression or canonical pixel-perfect claim.",
+    "nodeTests": 12,
+    "browserChecks": 7,
+    "spritesChecked": {
+      "firstIdleFrames": 14,
+      "nativeIdleAlphas": 7,
+      "rgbChanges": 0
     },
-    "fighters": 14,
+    "selectedMeasurements": [
+      {
+        "id": "abstractedkaufmo",
+        "before": {
+          "id": "abstractedkaufmo",
+          "opaque": 27746,
+          "dark": 13698,
+          "rgbChanges": 0,
+          "nativeAlphaChanges": 0,
+          "bounds": {
+            "x": 1,
+            "y": 137,
+            "width": 301,
+            "height": 405
+          }
+        },
+        "after": {
+          "id": "abstractedkaufmo",
+          "opaque": 62595,
+          "dark": 48255,
+          "rgbChanges": 0,
+          "nativeAlphaChanges": 0,
+          "bounds": {
+            "x": 0,
+            "y": 134,
+            "width": 304,
+            "height": 411
+          }
+        }
+      },
+      {
+        "id": "gangle",
+        "before": {
+          "id": "gangle",
+          "opaque": 31329,
+          "dark": 8308,
+          "rgbChanges": 0,
+          "nativeAlphaChanges": 0,
+          "bounds": {
+            "x": 115,
+            "y": 118,
+            "width": 178,
+            "height": 310
+          }
+        },
+        "after": {
+          "id": "gangle",
+          "opaque": 31329,
+          "dark": 8308,
+          "rgbChanges": 0,
+          "nativeAlphaChanges": 0,
+          "bounds": {
+            "x": 115,
+            "y": 118,
+            "width": 178,
+            "height": 310
+          }
+        }
+      },
+      {
+        "id": "bubble",
+        "before": {
+          "id": "bubble",
+          "opaque": 25061,
+          "dark": 425,
+          "rgbChanges": 0,
+          "nativeAlphaChanges": 0,
+          "bounds": {
+            "x": 59,
+            "y": 154,
+            "width": 180,
+            "height": 178
+          }
+        },
+        "after": {
+          "id": "bubble",
+          "opaque": 25346,
+          "dark": 553,
+          "rgbChanges": 0,
+          "nativeAlphaChanges": 0,
+          "bounds": {
+            "x": 59,
+            "y": 153,
+            "width": 180,
+            "height": 180
+          }
+        }
+      }
+    ],
     "stages": [
       "bigtop",
       "candy",
@@ -1259,74 +3515,156 @@
       "grounds",
       "backstage"
     ],
-    "frame": true,
-    "errors": [],
-    "asOf": "2026-10-21",
-    "scope": "Préchargement des silhouettes et rendu des 12 arènes conservés depuis la validation 0.1.0 ; pas de nouvelle validation artistique complète des costumes."
+    "objectCounts": {
+      "projectiles": 20,
+      "traps": 10,
+      "specialMotifs": 14
+    },
+    "canonicalViewComparisons": [
+      {
+        "sourceId": "glitch-cast",
+        "stage": "bigtop",
+        "url": "https://static.wixstatic.com/media/84ed6a_e3bac825d5c140a4a665ba898b3ff51b~mv2.png",
+        "observation": "Cyan walls, gold valance, red/green rounded door, coloured sofas, warm checker floor."
+      },
+      {
+        "sourceId": "glitch-cellar",
+        "stage": "cellar",
+        "url": "https://static.wixstatic.com/media/84ed6a_de54a5d816fe4ba0966cc96385ab8f8b~mv2.jpg",
+        "observation": "Near-black space, multicoloured eyes and one central light shaft."
+      },
+      {
+        "sourceId": "glitch-void",
+        "stage": "void",
+        "url": "https://static.wixstatic.com/media/84ed6a_9f2c0f92fcc340fea405c155a304e362~mv2.png",
+        "observation": "Luminous white/lilac rectilinear iridescence, without EXIT doors or stairs."
+      }
+    ],
+    "screenshotsGenerated": [
+      "render-fidelity-stage-bigtop-before.png",
+      "render-fidelity-stage-cellar-before.png",
+      "render-fidelity-stage-void-before.png",
+      "render-fidelity-alpha-before.png",
+      "render-fidelity-projectiles-before.png",
+      "render-fidelity-traps-before.png",
+      "render-fidelity-stage-bigtop-after.png",
+      "render-fidelity-stage-cellar-after.png",
+      "render-fidelity-stage-void-after.png",
+      "render-fidelity-alpha-after.png",
+      "render-fidelity-projectiles-after.png",
+      "render-fidelity-traps-after.png",
+      "render-fidelity-kinger-barrier-after.png",
+      "render-fidelity-overview.png"
+    ],
+    "screenshotsVisuallyReviewed": [
+      "render-fidelity-stage-bigtop-before.png",
+      "render-fidelity-stage-cellar-before.png",
+      "render-fidelity-stage-void-before.png",
+      "render-fidelity-alpha-before.png",
+      "render-fidelity-stage-bigtop-after.png",
+      "render-fidelity-stage-cellar-after.png",
+      "render-fidelity-stage-void-after.png",
+      "render-fidelity-alpha-after.png",
+      "render-fidelity-projectiles-after.png",
+      "render-fidelity-traps-after.png",
+      "render-fidelity-kinger-barrier-after.png",
+      "render-fidelity-overview.png"
+    ],
+    "limitations": [
+      "The residents hallway is unchanged: a precise primary frame is still required.",
+      "Existing pixel artwork, reused interaction poses and crouch squash remain; no 1:1 art/animation certification.",
+      "Object motifs illustrate existing fan-game moves, not newly asserted canonical fighting powers.",
+      "Opaque black artwork exactly matching its opaque black matte cannot be distinguished without a new source asset."
+    ],
+    "globalVisualCertification": false,
+    "createdAt": "2026-10-22T11:12:24.973Z",
+    "sourceHashes": {
+      "combat/render.mjs": "4859269a4c19aff5cbe2e3b6bb4a28714ac697d49cf6b45fa2e78c97d3c8cf99",
+      "combat/render-presentation.mjs": "3a56700e53d9085b99cb7169e101dbe634d2cb95707718d468972f1bb36d9579",
+      "combat/data.mjs": "45a0d61c702b8fdd6ff55715b14b8adfc83f676ba966ce79141c0409defa67b3",
+      "tests/combat-render-browser.mjs": "1bdfc661578c37e1f0741559a25f960dfbb3d8a8e90704025b387042b6f37312"
+    }
   },
   "coverageLimits": [
-    "Les 48 contrôles navigateur correspondent à six suites complètes exécutées sur le code final après correction : 11 UI, 10 progression classique, 8 histoires/tournoi, 11 hors ligne/commandes/audio, 3 reprise d’installation et 5 récupération de profil. Les objectifs de revue peuvent regrouper les mêmes assertions.",
-    "Les 141 tests Node sont distincts des contrôles navigateur et couvrent 7 suites. Audio, Gamepad et cycle de vie du service worker utilisent aussi des contextes ou horloges simulés ; ils ne constituent pas des essais matériels physiques.",
+    "Les 64 contrôles navigateur correspondent à 8 suites complètes exécutées sur la version 0.3.0 après le gel des sources : 11 interface réelle, 10 progression réelle, 8 histoires et tournoi, 11 hors ligne et réglages, 3 installation web, 5 récupération du profil, 9 références et replays, 7 rendu des silhouettes. Les objectifs de revue peuvent regrouper les mêmes assertions.",
+    "Les 166 tests Node sont distincts des contrôles navigateur et couvrent 9 suites. Audio, Gamepad, détourage et cycle de vie du service worker utilisent aussi des contextes, pixels ou horloges simulés ; ils ne constituent pas des essais matériels physiques.",
     "La route de Jax est terminée avec quatre victoires réellement jouées, et le tournoi avec trois victoires réelles ; élimination, défaite et reprises ont aussi été jouées. Les treize autres routes sont vérifiées par contrats Node sans partie intégrale dans le navigateur.",
     "Arcade, Boss et Survie sont joués jusqu’au passage de la première à la deuxième rencontre. Les longueurs 6 / 4 / 10 sont vérifiées par contrats ; leurs médailles finales ne sont pas revendiquées dans le navigateur.",
     "Les tests sur téléphones et manettes physiques, l’écoute du mixage, l’installation native, la finition des 51 variantes, le lore étendu et l’équilibrage compétitif restent à vérifier ou à produire.",
-    "Les deux builds sont générés. Le standalone compilé est servi sur une origine isolée et testé hors ligne ; CainOS est exercé depuis le répertoire source. Le service du dossier dist OS et l’aller-retour UI du même fichier exporté restent des revues distinctes."
+    "Les deux builds sont générés. Le standalone compilé est servi sur une origine isolée et testé hors ligne ; CainOS est exercé depuis le répertoire source. Le service du dossier dist OS et l’aller-retour UI du même fichier exporté restent des revues distinctes.",
+    "Fidélité 0.3.0 : 166 fiches documentées, 164 avec référence primaire. Les 140 techniques restent des adaptations de combat. Les comparaisons graphiques sont limitées aux vues et références précisément consignées dans la revue du rendu ; aucune équivalence globale 1:1 ni validation automatique des 166 fiches n’est revendiquée."
   ],
-  "gameVersion": "0.2.0",
+  "gameVersion": "0.3.0",
   "nodeReports": {
-    "engine": {
-      "file": "audit-combat/combat-engine.test.tap",
-      "sha256": "8c92757f64083967f551991d0554469799bb411e2b96a6a81b68d312d359073a",
-      "tests": 40,
-      "passed": 40,
-      "failed": 0,
-      "skipped": 0
-    },
-    "session": {
-      "file": "audit-combat/combat-session.test.tap",
-      "sha256": "c2616c976c987dc478f2f9f60da37fd264da234b928eccd8ea4f77635af9ea2f",
-      "tests": 31,
-      "passed": 31,
-      "failed": 0,
-      "skipped": 0
-    },
-    "catalog": {
-      "file": "audit-combat/combat-catalog.test.tap",
-      "sha256": "2e6fcffc5135a61f8366f221cefdda036ae46079e537ea687732a52237805768",
-      "tests": 7,
-      "passed": 7,
+    "audio": {
+      "file": "audit-combat/combat-audio.test.tap",
+      "sha256": "06edb29ee7c30cdda61be9ef4e16a96bec24c92879db6545dc12022bc0546e4c",
+      "tests": 14,
+      "passed": 14,
       "failed": 0,
       "skipped": 0
     },
     "bindings": {
       "file": "audit-combat/combat-bindings.test.tap",
-      "sha256": "c3e3c678fd8c4d9340f6898853d53a106b388b5b6e6255eed529255e6d0444ae",
+      "sha256": "3576c61af38217c72a846b17f198d40e4d1eb6715c4379b60c358d9f7edb30d9",
       "tests": 16,
       "passed": 16,
       "failed": 0,
       "skipped": 0
     },
-    "progression": {
-      "file": "audit-combat/combat-progression.test.tap",
-      "sha256": "77cbbca009ebf7025fc2ced254bb90a8802c079b2e5e1471e99db6a794245adc",
-      "tests": 19,
-      "passed": 19,
+    "catalog": {
+      "file": "audit-combat/combat-catalog.test.tap",
+      "sha256": "529ee0c1e027e6b14d54128cc669a534e79a3f03b36b19d7ae569106db320828",
+      "tests": 7,
+      "passed": 7,
       "failed": 0,
       "skipped": 0
     },
-    "audio": {
-      "file": "audit-combat/combat-audio.test.tap",
-      "sha256": "0653b5435f8e84b01c9d7c87553d9db7d4db61876f0e3a9304a39bc1fcf71f73",
-      "tests": 14,
-      "passed": 14,
+    "engine": {
+      "file": "audit-combat/combat-engine.test.tap",
+      "sha256": "dd6e3ada6fcc7b81542d98ffc33c3b4869b7a43e918f02cdbe41f5b2b096a741",
+      "tests": 40,
+      "passed": 40,
+      "failed": 0,
+      "skipped": 0
+    },
+    "fidelity": {
+      "file": "audit-combat/combat-fidelity.test.tap",
+      "sha256": "2bef82baf18de331e3611cbc256fc5cb7d913b03b2126746bcff5d5135a0fa1f",
+      "tests": 12,
+      "passed": 12,
       "failed": 0,
       "skipped": 0
     },
     "offline": {
       "file": "audit-combat/combat-offline.test.tap",
-      "sha256": "b68fafdbd42c542243bad805b378506b875cc6ab4922505ef5aa10c4619319f1",
+      "sha256": "641a94a477ec45c6b8cf5a0b886d803e5e5d2653b954b60fe1bfb23f9e7ee6f1",
       "tests": 14,
       "passed": 14,
+      "failed": 0,
+      "skipped": 0
+    },
+    "progression": {
+      "file": "audit-combat/combat-progression.test.tap",
+      "sha256": "3fa028a0d7863567877f37c078af863e2b7f5f458a1678312a4511a545c3a478",
+      "tests": 19,
+      "passed": 19,
+      "failed": 0,
+      "skipped": 0
+    },
+    "render": {
+      "file": "audit-combat/combat-render.test.tap",
+      "sha256": "7718ccaea67a4866f8a0123119c0e21bdafc1973652456cb0703c37f260f5dc4",
+      "tests": 12,
+      "passed": 12,
+      "failed": 0,
+      "skipped": 0
+    },
+    "session": {
+      "file": "audit-combat/combat-session.test.tap",
+      "sha256": "175421600c5709f45d383276df9ca7a10b4485f64ab65ec90cebbcbd96cebb16",
+      "tests": 32,
+      "passed": 32,
       "failed": 0,
       "skipped": 0
     }
@@ -1414,37 +3752,55 @@
   "browserReportDigests": {
     "ui": {
       "file": "audit-combat/browser-report.json",
-      "sha256": "caf9e83bf066ae05f2e44b0bd9b2cdf7883edc732581bc4df6501cf46aaa3bc6",
+      "sha256": "90730e8b4ee34c402b899be748cd8eb25513d18d8c8adde68eab100896b52aca",
+      "testFile": "tests/combat-browser.mjs",
       "testSourceSha256": "25c5085416211aa2f9639097f1de57bc0dcb4443bd57e336f8242fe76cc8ff6e"
     },
     "progression": {
       "file": "audit-combat/progression-browser-report.json",
-      "sha256": "3cd50b9b66cda6a7b97e8b299f51687c0285409cf62bdee267d457f63b0a2a7d",
+      "sha256": "0c4b9616c8e090fcf556e5f9a178dabcf10a1c5423e3884c71c999b53b95dd3f",
+      "testFile": "tests/combat-progression-browser.mjs",
       "testSourceSha256": "2024357b9fd071694ec8e4224d43e40b8cf7732502e6e1ef1f7b2dff20c8cc5f"
     },
     "encore": {
       "file": "audit-combat/encore-browser-report.json",
-      "sha256": "ba0f43728fe1c0f963ef0c36f413b9affc02a19c7e95b056cd2474634adc82d8",
+      "sha256": "5a52dd4175ed3f012f37bed4c81756addb477b7b3b9ce6194d37d72105a89150",
+      "testFile": "tests/combat-encore-browser.mjs",
       "testSourceSha256": "3a2f45a3d73c864be0e4da8705fa544011484bbc1600d0c9af356d7168dedc03"
     },
     "offline": {
       "file": "audit-combat/offline-browser-report.json",
-      "sha256": "6f590800e430e2d4ef6e18963ab1188b707ec85ec79ca9878675504ede985782",
-      "testSourceSha256": "d1740a7cbed0140db4ff883e18895c6a0f3e337131e761e7147b1ba7a86fe5dd"
+      "sha256": "76fd7ec3d1836c547fdd63a5521b2e6c2b917b6f492dc1b9c8ba5aeabe2000dc",
+      "testFile": "tests/combat-offline-browser.mjs",
+      "testSourceSha256": "a2c736e0cbf7c3f1179b08667ffa2baedb6211d11a9547cfc36dfab7af021f3a"
     },
     "recovery": {
       "file": "audit-combat/recovery-browser-report.json",
-      "sha256": "56c7dc5b976a77e678a50227c4e1b6573732522d1cffe6c180fa884843f585a1",
+      "sha256": "a3094d8ee7203dff6dab6226b2a7b08dbc7ea19e98c7e443e11b310590ba0714",
+      "testFile": "tests/combat-recovery-browser.mjs",
       "testSourceSha256": "efbce0402d3e37d367fb61792bcf68b760ac89c7c295ee3c282138cb2537b5bd"
     },
     "profileRecovery": {
       "file": "audit-combat/profile-recovery-browser-report.json",
-      "sha256": "c81b15b5470059006c538dc9b0bbc9fdb0529da1f26cf00b5439c340a09071b6",
+      "sha256": "47598fe308da6b0304976921b809b1a219567c77db7bebcb310ff4d7d51a9c4b",
+      "testFile": "tests/combat-profile-recovery-browser.mjs",
       "testSourceSha256": "d6ba225ae115114758d83f08d1cc2c697f164430e94b14905f146d55cd358111"
+    },
+    "fidelity": {
+      "file": "audit-combat/fidelity-browser-report.json",
+      "sha256": "cef42fad21df928054abc6bb7b5dcbf2e9e92840de8c6459dafc0835c19ac596",
+      "testFile": "tests/combat-fidelity-browser.mjs",
+      "testSourceSha256": "ba5121fb723a20e41aacaff92fe7b07d48784d6bc7f1e81b187abcaa83a5fe9b"
+    },
+    "renderFidelity": {
+      "file": "audit-combat/render-fidelity-browser-report.json",
+      "sha256": "f0158c03d679fb951c150bbaa71c2c9f6ee85694a040be7ded6fd0398ee8ae5a",
+      "testFile": "tests/combat-render-browser.mjs",
+      "testSourceSha256": "1bdfc661578c37e1f0741559a25f960dfbb3d8a8e90704025b387042b6f37312"
     }
   },
-  "browserCheckCount": 48,
-  "nodeTestCount": 141,
+  "browserCheckCount": 64,
+  "nodeTestCount": 166,
   "offlinePassed": true,
   "offlineCount": 14,
   "offlineTestNames": [
@@ -1473,5 +3829,260 @@
       "audit-combat/profile-recovery-browser-report.json"
     ],
     "fixtureLimit": "Les statistiques et récompenses initiales sont des données explicites de migration. Seul le défi Spécialiste est réellement gagné pendant cette régression de profil."
+  },
+  "fidelityPassed": true,
+  "fidelityCount": 12,
+  "fidelityTestNames": [
+    "all playable fighters, techniques and stages expose the shared review records",
+    "review records keep source scope, observations and invented combat separate",
+    "the nine episode references retain later costumes without claiming to have reviewed them",
+    "the Void, cellar and resident corridor cannot borrow an unrelated visual as proof",
+    "unknown IDs fail closed and shared review data cannot be mutated by a consumer",
+    "every old combat rule and body remains exact for 0.1.0 and 0.2.0 replays",
+    "pomni: the new retreat moves continuously during fifteen active frames",
+    "pomni: both old replay versions retain the original instantaneous displacement",
+    "pomni: a physical retreat respects ring bounds and the facing direction",
+    "abstractedkaufmo: the new retreat moves continuously during fifteen active frames",
+    "abstractedkaufmo: both old replay versions retain the original instantaneous displacement",
+    "abstractedkaufmo: a physical retreat respects ring bounds and the facing direction"
+  ],
+  "fidelitySourceSha256": "cdfb5767bef6865ece8342f0bd10df65b422ed65898dc94e60eb7f8f65e5a754",
+  "fidelityProof": "node --test-reporter=tap tests/combat-fidelity.test.mjs — 12/12 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-fidelity.test.tap)",
+  "renderPassed": true,
+  "renderCount": 12,
+  "renderTestNames": [
+    "black atlas matte preserves a connected dark body and bright eyes (Kaufmo regression)",
+    "white atlas matte preserves black outlines and enclosed white mask detail",
+    "an enclosed matte-colour region is never mistaken for the connected background",
+    "native transparency is authoritative, including semitransparent highlights",
+    "ambiguous opaque corners fail safely without deleting artwork",
+    "matte removal changes alpha only and tolerates modest opaque-atlas edge noise",
+    "invalid image buffers are rejected before mutation",
+    "all fourteen existing fighter kits have a specific projectile presentation",
+    "a reflected key keeps its original object despite a new owner and cloned move data",
+    "similar tags retain distinct named objects instead of sharing a square or ball",
+    "named ground objects remain distinct and are independent of projectile styles",
+    "unknown future move names use a neutral fallback rather than an unrelated fighter object"
+  ],
+  "renderSourceSha256": "12782fc6f79383dce449336c6fb88564fc26f0e735622040f3e616df2b99b1cb",
+  "renderProof": "node --test-reporter=tap tests/combat-render.test.mjs — 12/12 cas réussis, 0 échec, 0 ignoré (22 octobre 2026 ; rapport audit-combat/combat-render.test.tap)",
+  "reviewFidelity": {
+    "baselineCommit": "e71b08cda23b3348f099d096da07812b103bf99c",
+    "gameVersion": "0.3.0",
+    "sourceRegister": "combat/fidelity.mjs",
+    "sourceSha256": "91ba3527b8e6b2600da18abe23162188ee0360bdd8b7268cfcc07fbd279c455f",
+    "sources": 17,
+    "documented": 166,
+    "withPrimaryReference": 164,
+    "withoutPrimaryReference": [
+      {
+        "id": "lake",
+        "status": "Source primaire à identifier"
+      },
+      {
+        "id": "training",
+        "status": "Création originale"
+      }
+    ],
+    "globalVisualCertification": false,
+    "browserReports": [
+      "audit-combat/fidelity-browser-report.json",
+      "audit-combat/render-fidelity-browser-report.json"
+    ],
+    "comparison": {
+      "asOf": "2026-10-22",
+      "scope": "Comparaison limitée de trois décors à trois images GLITCH et contrôle technique des premières cellules idle. Les 12 décors sont rendus ; aucune validation artistique globale des personnages, animations ou costumes.",
+      "baseline": "e71b08cda23b3348f099d096da07812b103bf99c",
+      "comparedRenderers": [
+        "published 0.2.0 render.mjs",
+        "working-tree render.mjs"
+      ],
+      "catalogPolicy": "Same current data.mjs for both captures; no simulation rules changed by the fixture.",
+      "fixturePolicy": "Native Canvas render fixtures; no victory, progression or canonical pixel-perfect claim.",
+      "nodeTests": 12,
+      "browserChecks": 7,
+      "spritesChecked": {
+        "firstIdleFrames": 14,
+        "nativeIdleAlphas": 7,
+        "rgbChanges": 0
+      },
+      "selectedMeasurements": [
+        {
+          "id": "abstractedkaufmo",
+          "before": {
+            "id": "abstractedkaufmo",
+            "opaque": 27746,
+            "dark": 13698,
+            "rgbChanges": 0,
+            "nativeAlphaChanges": 0,
+            "bounds": {
+              "x": 1,
+              "y": 137,
+              "width": 301,
+              "height": 405
+            }
+          },
+          "after": {
+            "id": "abstractedkaufmo",
+            "opaque": 62595,
+            "dark": 48255,
+            "rgbChanges": 0,
+            "nativeAlphaChanges": 0,
+            "bounds": {
+              "x": 0,
+              "y": 134,
+              "width": 304,
+              "height": 411
+            }
+          }
+        },
+        {
+          "id": "gangle",
+          "before": {
+            "id": "gangle",
+            "opaque": 31329,
+            "dark": 8308,
+            "rgbChanges": 0,
+            "nativeAlphaChanges": 0,
+            "bounds": {
+              "x": 115,
+              "y": 118,
+              "width": 178,
+              "height": 310
+            }
+          },
+          "after": {
+            "id": "gangle",
+            "opaque": 31329,
+            "dark": 8308,
+            "rgbChanges": 0,
+            "nativeAlphaChanges": 0,
+            "bounds": {
+              "x": 115,
+              "y": 118,
+              "width": 178,
+              "height": 310
+            }
+          }
+        },
+        {
+          "id": "bubble",
+          "before": {
+            "id": "bubble",
+            "opaque": 25061,
+            "dark": 425,
+            "rgbChanges": 0,
+            "nativeAlphaChanges": 0,
+            "bounds": {
+              "x": 59,
+              "y": 154,
+              "width": 180,
+              "height": 178
+            }
+          },
+          "after": {
+            "id": "bubble",
+            "opaque": 25346,
+            "dark": 553,
+            "rgbChanges": 0,
+            "nativeAlphaChanges": 0,
+            "bounds": {
+              "x": 59,
+              "y": 153,
+              "width": 180,
+              "height": 180
+            }
+          }
+        }
+      ],
+      "stages": [
+        "bigtop",
+        "candy",
+        "manor",
+        "spudsy",
+        "cellar",
+        "void",
+        "lake",
+        "training",
+        "gloink",
+        "kingdom",
+        "grounds",
+        "backstage"
+      ],
+      "objectCounts": {
+        "projectiles": 20,
+        "traps": 10,
+        "specialMotifs": 14
+      },
+      "canonicalViewComparisons": [
+        {
+          "sourceId": "glitch-cast",
+          "stage": "bigtop",
+          "url": "https://static.wixstatic.com/media/84ed6a_e3bac825d5c140a4a665ba898b3ff51b~mv2.png",
+          "observation": "Cyan walls, gold valance, red/green rounded door, coloured sofas, warm checker floor."
+        },
+        {
+          "sourceId": "glitch-cellar",
+          "stage": "cellar",
+          "url": "https://static.wixstatic.com/media/84ed6a_de54a5d816fe4ba0966cc96385ab8f8b~mv2.jpg",
+          "observation": "Near-black space, multicoloured eyes and one central light shaft."
+        },
+        {
+          "sourceId": "glitch-void",
+          "stage": "void",
+          "url": "https://static.wixstatic.com/media/84ed6a_9f2c0f92fcc340fea405c155a304e362~mv2.png",
+          "observation": "Luminous white/lilac rectilinear iridescence, without EXIT doors or stairs."
+        }
+      ],
+      "screenshotsGenerated": [
+        "render-fidelity-stage-bigtop-before.png",
+        "render-fidelity-stage-cellar-before.png",
+        "render-fidelity-stage-void-before.png",
+        "render-fidelity-alpha-before.png",
+        "render-fidelity-projectiles-before.png",
+        "render-fidelity-traps-before.png",
+        "render-fidelity-stage-bigtop-after.png",
+        "render-fidelity-stage-cellar-after.png",
+        "render-fidelity-stage-void-after.png",
+        "render-fidelity-alpha-after.png",
+        "render-fidelity-projectiles-after.png",
+        "render-fidelity-traps-after.png",
+        "render-fidelity-kinger-barrier-after.png",
+        "render-fidelity-overview.png"
+      ],
+      "screenshotsVisuallyReviewed": [
+        "render-fidelity-stage-bigtop-before.png",
+        "render-fidelity-stage-cellar-before.png",
+        "render-fidelity-stage-void-before.png",
+        "render-fidelity-alpha-before.png",
+        "render-fidelity-stage-bigtop-after.png",
+        "render-fidelity-stage-cellar-after.png",
+        "render-fidelity-stage-void-after.png",
+        "render-fidelity-alpha-after.png",
+        "render-fidelity-projectiles-after.png",
+        "render-fidelity-traps-after.png",
+        "render-fidelity-kinger-barrier-after.png",
+        "render-fidelity-overview.png"
+      ],
+      "limitations": [
+        "The residents hallway is unchanged: a precise primary frame is still required.",
+        "Existing pixel artwork, reused interaction poses and crouch squash remain; no 1:1 art/animation certification.",
+        "Object motifs illustrate existing fan-game moves, not newly asserted canonical fighting powers.",
+        "Opaque black artwork exactly matching its opaque black matte cannot be distinguished without a new source asset."
+      ],
+      "globalVisualCertification": false,
+      "createdAt": "2026-10-22T11:12:24.973Z",
+      "sourceHashes": {
+        "combat/render.mjs": "4859269a4c19aff5cbe2e3b6bb4a28714ac697d49cf6b45fa2e78c97d3c8cf99",
+        "combat/render-presentation.mjs": "3a56700e53d9085b99cb7169e101dbe634d2cb95707718d468972f1bb36d9579",
+        "combat/data.mjs": "45a0d61c702b8fdd6ff55715b14b8adfc83f676ba966ce79141c0409defa67b3",
+        "tests/combat-render-browser.mjs": "1bdfc661578c37e1f0741559a25f960dfbb3d8a8e90704025b387042b6f37312"
+      }
+    },
+    "qaLog": {
+      "file": "audit-combat/qa-0.3.0.log",
+      "sha256": "a6245fe3516ee3419604a7c52281d5035496c3e81b4442ea8b04ba8c2dd022e5"
+    },
+    "fixtureLimit": "Six imports de replays courts servent uniquement à comparer les règles 0.1.0, 0.2.0 et 0.3.0 pour Pomni et Kaufmo abstrait. Ils ne sont pas présentés comme des victoires obtenues en jouant."
   }
 }

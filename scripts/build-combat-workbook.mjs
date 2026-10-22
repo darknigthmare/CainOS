@@ -26,6 +26,24 @@ const { MODES, CHALLENGES } = await import(pathToFileURL(path.join(root, 'combat
 const { STORY_ROUTES, STORY_NOTICE } = await import(pathToFileURL(path.join(root, 'combat/stories.mjs')));
 const { AUDIO_THEMES, AUDIO_EFFECT_IDS, AUDIO_EFFECT_ALIASES } = await import(pathToFileURL(path.join(root, 'combat/audio.mjs')));
 const { ART_FILES, ART_BYTES } = await import(pathToFileURL(path.join(root, 'combat/offline-manifest.mjs')));
+const { FIDELITY_SOURCES } = await import(pathToFileURL(path.join(root, 'combat/fidelity.mjs')));
+const fidelitySources = new Map([...SOURCES, ...FIDELITY_SOURCES].map(source => [source.id, source]));
+const fidelityHeaders = ['Références de fidélité', 'Repères observés', 'Adaptation du combat', 'État de la revue', 'Périmètre de revue'];
+const fidelityWidths = [95, 88, 95, 28, 95];
+function fidelityCells(record, id) {
+  if (!record || !Array.isArray(record.sourceIds) || !Array.isArray(record.observedTraits)) throw new Error(`Missing fidelity record: ${id}`);
+  if (record.sourceIds.some(sourceId => typeof sourceId !== 'string' || !sourceId.trim()) || new Set(record.sourceIds).size !== record.sourceIds.length) throw new Error(`Invalid fidelity source IDs: ${id}`);
+  if (record.observedTraits.some(trait => typeof trait !== 'string' || !trait.trim())) throw new Error(`Invalid observed fidelity traits: ${id}`);
+  if (!record.sourceIds.length && record.observedTraits.length) throw new Error(`Observed fidelity traits require a primary source: ${id}`);
+  for (const field of ['combatAdaptation', 'reviewStatus', 'reviewScope']) if (typeof record[field] !== 'string' || !record[field].trim()) throw new Error(`Missing fidelity ${field}: ${id}`);
+  const references = record.sourceIds.map(sourceId => {
+    const source = fidelitySources.get(sourceId);
+    if (!source?.url || !/^https:\/\//.test(source.url)) throw new Error(`Missing fidelity reference URL: ${id} / ${sourceId}`);
+    return `${sourceId} : ${source.url}`;
+  });
+  const referenceText = references.join('\n') || (record.reviewStatus === 'Création originale' ? 'Sans référence canonique : création originale' : 'Aucune source primaire rattachée');
+  return [referenceText, record.observedTraits.join('\n') || 'Aucun repère visuel consigné dans cette revue.', record.combatAdaptation, record.reviewStatus, record.reviewScope];
+}
 const contentDateLabel = new Intl.DateTimeFormat('fr-FR', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${GAME.contentDate}T00:00:00Z`));
 const statuses = ['Implémenté', 'Partiel', 'Prévu', 'À vérifier', 'Hors périmètre'];
 const qaStatuses = ['Réussi', 'Échec', 'Non exécuté', 'À vérifier'];
@@ -89,24 +107,25 @@ const E = 'combat/engine.mjs', U = 'combat/app.mjs', S = 'combat/session.mjs', I
   ['CTL-07','Commandes','Pause et reprise explicites','Implémenté','P0',U,'Le temps et le combat sont figés pendant la pause.'],
   ['CTL-08','Commandes','Navigation intégrale au clavier','Partiel','P1','combat/index.html','Parcourir et activer toutes les vues et options sans souris.','Audit d’accessibilité complet requis.'],
   ['PRE-01','Présentation','Sélection de 14 combattants','Implémenté','P0','combat/data.mjs','Chaque combattant a une silhouette et un kit distincts.'],
-  ['PRE-02','Présentation','Douze arènes thématiques','Implémenté','P0',R,'Chaque arène a une composition visuelle identifiable.'],
+  ['PRE-02','Présentation','Douze arènes thématiques','Implémenté','P0',R,'Chaque arène a une composition visuelle identifiable et un aperçu synchronisé avec la sélection.','Les douze aperçus sont distincts. La comparaison aux visuels officiels est limitée aux trois vues du chapiteau, du cellier et du Vide consignées dans QA.'],
   ['PRE-03','Présentation','Variantes visuelles existantes','Implémenté','P1','combat/data.mjs',`Choisir les ${VARIANTS.length} apparences approuvées sans changer les mécaniques.`,'Liste explicite par identité. Parents, PNJ rivaux, accessoires, VFX et projections restent dans les archives.'],
   ['PRE-04','Présentation','Catalogue de 179 apparences','Implémenté','P1','combat/sprite-catalog.mjs','Chaque atlas CainOS est listé et localisable.'],
-  ['PRE-05','Présentation','Sprites de combat dédiés','Partiel','P1',R,'Chaque action possède des images cohérentes avec ses frames.','Sept planches existantes. Pose d’interaction réutilisée pour attaquer.'],
-  ['PRE-06','Présentation','Décors finalisés par artiste','Partiel','P2',R,'Valider les décors et chaque couche de parallaxe.','Les arènes actuelles sont dessinées procéduralement.'],
-  ['PRE-07','Présentation','Effets de contact et projectiles','Implémenté','P1',R,'Lire impacts, gardes, parades et projectiles pendant le combat.'],
+  ['PRE-05','Présentation','Sprites de combat dédiés','Partiel','P1',R,'Chaque action possède des images cohérentes avec ses frames.','Sept planches existantes. Le détourage sombre est corrigé ; les contrôles de palette portent sur les premières cellules idle. Pose d’interaction réutilisée pour attaquer et accroupissement encore déformé.'],
+  ['PRE-06','Présentation','Décors finalisés par artiste','Partiel','P2',R,'Valider les décors et chaque couche de parallaxe.','Les arènes restent des recompositions procédurales. Trois vues sont comparées aux images GLITCH ; le couloir des résidents et la finition complète restent à revoir.'],
+  ['PRE-07','Présentation','Effets de contact et projectiles','Implémenté','P1','combat/render.mjs / combat/render-presentation.mjs',`Lire impacts, gardes, parades et objets du kit : ${MOVES.filter(move=>move.kind==='projectile').length} définitions de projectile et ${MOVES.filter(move=>move.kind==='trap').length} pièges.`,'Les motifs identifient les accessoires du fan-game, y compris après réflexion. Ils ne certifient aucune capacité de combat canonique.'],
   ['PRE-08','Présentation','Bruitages de combat','Partiel','P1','combat/audio.mjs',`${AUDIO_EFFECT_IDS.length} motifs synthétiques livrés ; finaliser les effets encore partagés et vérifier le mixage sur plusieurs appareils.`,'Les impacts léger/lourd et certains événements utilisent le même motif. Aucune voix officielle importée.'],
   ['PRE-09','Présentation','Musique originale par arène','Implémenté','P2','combat/audio.mjs',`${Object.keys(AUDIO_THEMES).length} thèmes procéduraux originaux, un par arène, avec mélodie, basse, rythme et tempo propres. Réglages musique et bruitages séparés.`,'Musique optionnelle, silencieuse par défaut. Le menu adapte le thème du chapiteau. Validation du mixage matériel encore requise.'],
   ['PRE-10','Présentation','Voix et dialogues de combat','Prévu','P2','','Banque de voix autorisée et dialogues originaux cohérents.'],
   ['PRE-11','Présentation','Réduction des mouvements','Implémenté','P1',R,'Le réglage limite les effets non essentiels.'],
   ['PRE-12','Présentation','Palette et lecture daltonisme','Prévu','P2','','Les signaux critiques sont distincts sans dépendre seulement des couleurs.'],
   ['PRE-13','Présentation','Données de techniques dans le jeu','Implémenté','P1',U,'Afficher coût, portée, timing et effet des techniques.'],
-  ['PRE-14','Présentation','Échelle et collisions cohérentes','Implémenté','P0',E,'Les colosses et Bubble ont des corps de collision propres.'],
+  ['PRE-14','Présentation','Échelle et collisions cohérentes','Implémenté','P0',E,'Les colosses et Bubble ont des corps de collision propres.','Les dimensions de simulation restent distinctes des proportions visuelles à comparer aux références.'],
+  ['PRE-15','Présentation','Références consultables dans les fiches du jeu','À vérifier','P1','combat/app.mjs / combat/fidelity.mjs','Consulter les sources, repères et limites d’adaptation dans le codex des combattants et l’aperçu d’arène.','L’interface indique le périmètre de revue ; un lien officiel ne constitue pas à lui seul une validation de l’image rendue.'],
   ['PRO-01','Progression','Profil local versionné','Implémenté','P0',S,'Les paramètres et statistiques persistent localement.'],
   ['PRO-02','Progression','Import et export de sauvegarde','Implémenté','P0',S,'Refuser les formats invalides et restaurer les données valides.'],
   ['PRO-03','Progression','Historique de matchs','Implémenté','P1',S,'Garder un historique borné des derniers résultats.'],
   ['PRO-04','Progression','Défis et médailles','Implémenté','P1',S,'Sauvegarder les défis réellement accomplis.'],
-  ['PRO-05','Progression','Replays déterministes locaux','Implémenté','P1',S,'Relire les entrées avec la même graine et la même version.'],
+  ['PRO-05','Progression','Replays déterministes locaux','Implémenté','P1',S,'Relire les entrées avec la même graine et les règles de leur version.','Les replays 0.1.0, 0.2.0 et 0.3.0 sont distingués ; les détails de compatibilité sont vérifiés dans QA.'],
   ['PRO-06','Progression','Synchronisation cloud des combats','Prévu','P2','','Conflits et synchronisation de profils gérés.','Le compte cloud CainOS existant ne suffit pas à établir cette fonctionnalité.'],
   ['PRO-07','Progression','Déblocages et économie','Prévu','P2','','Définir des conditions de déblocage lisibles et sans perte de contenu.'],
   ['PRO-08','Progression','Personnalisation de profils','Prévu','P3','','Noms, emblèmes et préférences par joueur.'],
@@ -122,6 +141,7 @@ const E = 'combat/engine.mjs', U = 'combat/app.mjs', S = 'combat/session.mjs', I
   ['PRD-08','Production','Tests multi-manettes matériels','À vérifier','P1','','Tester deux manettes et leur déconnexion.'],
   ['PRD-09','Production','Parité de tous les modules CQC','Partiel','P2',E,'Comparer explicitement chaque module du CQC de référence.','Le moteur et la structure sont repris. Toutes les extensions MGS ne sont pas portées.'],
   ['PRD-10','Production','Classement explicite de toutes les apparences','Implémenté','P0','combat/data.mjs / tests/combat-catalog.test.mjs',`Réconcilier ${FIGHTERS.length} combattants, ${VARIANTS.length} variantes compatibles et ${ROSTER_ARCHIVE.length-FIGHTERS.length-VARIANTS.length} archives sans kit, soit ${ROSTER_ARCHIVE.length} entrées conservées.`,'Tout nouvel identifiant reste sans kit tant que sa classification n’a pas été revue.'],
+  ['PRD-11','Production','Références et adaptations de chaque fiche','À vérifier','P0','combat/fidelity.mjs / combat/data.mjs',`Documenter les ${FIGHTERS.length} combattants, ${MOVES.length} techniques et ${STAGES.length} arènes : références disponibles, repères observés, adaptations du duel et sources manquantes ou créations originales.`,'L’existence d’une référence et la réussite d’un test fonctionnel ne certifient pas une fidélité graphique globale. Le périmètre de revue est conservé par fiche.'],
 ].forEach(row => feature(...row));
 if (evidence.featureStatuses) for (const row of features) if (statuses.includes(evidence.featureStatuses[row[0]])) row[3] = evidence.featureStatuses[row[0]];
 
@@ -146,10 +166,13 @@ function moveDetails(m) {
 }
 const moveRows = MOVES.map(m => [m.id, m.fighterName, SLOT_LABELS[m.slot], m.name, m.kind, m.startup, m.active, m.recovery, m.damage || 0, m.reach || 0, m.cost || 0, m.meter || 0, moveDetails(m), evidence.enginePassed ? 'Implémenté' : 'À vérifier', 'À vérifier', 'adaptation', m.description, '']);
 const stages = STAGES.map(s => [s.id, s.name, 'Implémenté', 'Partiel', s.theme, s.width, s.floor, s.bounds.left, s.bounds.right, 'Aucune collision de décor', 'Prévu', s.sourceId, `${s.description}\nMusique : ${AUDIO_THEMES[s.id]?.title || 'À produire'} · ${AUDIO_THEMES[s.id]?.bpm || '—'} BPM.`, s.sourceStatus || 'Décor adapté pour le duel', '']);
+for (const [index, row] of roster.entries()) row.splice(-1, 0, ...fidelityCells(FIGHTERS[index].fidelity, FIGHTERS[index].id));
+for (const [index, row] of moveRows.entries()) row.splice(-1, 0, ...fidelityCells(MOVES[index].fidelity, MOVES[index].id));
+for (const [index, row] of stages.entries()) row.splice(-1, 0, ...fidelityCells(STAGES[index].fidelity, STAGES[index].id));
 const variantIds = new Set(VARIANTS.map(v => v.id));
 const atlas = ROSTER_ARCHIVE.map(a => {
   const variant=variantIds.has(a.id), priority=['max','chad','queenie','kaufmo','ghostly','angel','marthamildenhall','orbsman'].includes(a.id)?'P1':'P2';
-  const nextAction = a.playable ? 'Finaliser poses et équilibrage.' : variant ? 'Vérifier source, recadrage et poses de cette apparence.' : 'Valider le rôle narratif ou décoratif avant toute nouvelle intégration.';
+  const nextAction = a.playable ? 'Finaliser poses et équilibrage. Consulter les repères et limites de la fiche Combattants.' : variant ? 'Vérifier source, recadrage et poses de cette apparence. La référence du personnage parent ne valide pas automatiquement ce costume.' : 'Valider le rôle narratif ou décoratif avant toute nouvelle intégration.';
   return [a.id, a.name, a.playable ? 'Combattant jouable' : variant ? 'Variante visuelle' : 'Archive consultable', a.baseFighterId || '', a.playable || variant ? 'Implémenté' : 'Partiel', 'À vérifier', a.sprite.sheet, a.sprite.src.replace('../',''), a.sprite.cols, a.sprite.rows, a.sprite.col, a.sprite.row, a.sourceAge, a.provenance, a.source, a.playable?'10 techniques':variant?'Kit du personnage parent':'Aucun kit', a.playable||variant?'Animation dédiée à produire':'Aucune animation de combat attribuée', `${a.classificationReason} ${nextAction}`, a.playable?'P1':priority, ''];
 });
 
@@ -164,7 +187,7 @@ for (const f of FIGHTERS) for (const [id,name,accept] of poses) {
   production.push([`ART-${f.id}-${id}`, 'Personnage', f.name, name, available ? 'Implémenté' : partial ? 'Partiel' : 'Prévu', id === 'voice' ? 'P2' : ['light','heavy','low','throw','super'].includes(id) ? 'P1' : 'P2', available ? f.animation.src.replace('../','') : id !== 'voice' ? 'combat/render.mjs' : '', available ? 'Planche existante réutilisée' : id === 'voice' ? 'À créer' : 'Transformation du sprite ou pose réutilisée', accept, '']);
 }
 for (const s of STAGES) for (const [kind,label,accept] of [
-  ['background','Fond et profondeur','Valider composition, couleurs et fidélité du lieu.'],['floor','Sol jouable','Aligner les pieds, ombres et ligne de combat.'],['foreground','Premier plan','Ajouter des détails sans masquer les attaques.'],['ambience','Ambiance sonore','Boucle originale sans coupure audible.'],['music','Musique de l’arène','Composition originale avec boucle et mixage.']
+  ['background','Fond et profondeur','Comparer composition et couleurs aux références de la fiche Arènes, puis consigner les vues réellement revues.'],['floor','Sol jouable','Aligner les pieds, ombres et ligne de combat.'],['foreground','Premier plan','Ajouter des détails sans masquer les attaques.'],['ambience','Ambiance sonore','Boucle originale sans coupure audible.'],['music','Musique de l’arène','Composition originale avec boucle et mixage.']
 ]) {
   const music = kind === 'music' ? AUDIO_THEMES[s.id] : null;
   production.push([`ART-${s.id}-${kind}`, 'Arène', s.name, label, music ? 'Implémenté' : kind === 'ambience' ? 'Prévu' : 'Partiel', 'P2', music ? 'combat/audio.mjs' : kind === 'ambience' ? '' : R, music ? `${music.title} · ${music.bpm} BPM · ${music.provenance}` : kind === 'ambience' ? 'Ambiance dédiée à produire' : 'Dessin procédural livré', music ? 'Boucle procédurale avec mélodie, basse et rythme ; pause et volume séparé. Mixage à écouter sur appareils réels.' : accept, '']);
@@ -215,6 +238,9 @@ const suiteInfo = {
   bindings: ['BIND', 'Commandes personnalisables', 'Liaisons indépendantes, conflits rejetés et entrées cohérentes après remappage'],
   progression: ['PROG', 'Programmes et reprise', 'Routes, tournoi déterministe et points de reprise validés'],
   audio: ['AUD', 'Audio synthétique', 'Thèmes et effets définis ; cycle de vie du son vérifié'],
+  fidelity: ['FID', 'Références de fidélité', 'Sources, repères observés et adaptations distingués pour chaque fiche'],
+  render: ['RENDER', 'Détourage et objets du kit', 'Transparence et couleurs préservées ; identité visuelle des objets vérifiée dans le périmètre du test'],
+  replay: ['REPLAY', 'Compatibilité des replays', 'Version et règles de lecture vérifiées sans altérer le profil'],
   offline: ['OFFLINE', 'Installation web', 'Échecs explicites, nouvelle tentative, délais bornés et ressources libérées'],
   pwa: ['PWA', 'Distribution hors ligne', 'Cache, portée et reprise hors ligne vérifiés'],
 };
@@ -267,6 +293,10 @@ const reviewCases = [
   ['build','Distribution','Servir les deux builds générés','P0','Aucune ressource requise absente.'],
   ['regression','Régression','Exécuter les audits CainOS existants','P0','Aucune régression des contrats existants.'],
   ['tracker-proof','Production du suivi','Refuser une preuve corrompue avant génération','P0','JSON invalide, type invalide et erreurs de lecture sont rejetés ; le fichier Excel existant est préservé.'],
+  ['fidelity-sources','Références','Relier chaque fiche à ses sources et adaptations','P0','Les combattants, techniques et arènes exposent leurs références disponibles, repères observés et portée de revue. Une source manquante ou une création originale reste explicite. Les mécaniques du duel sont identifiées comme adaptations.'],
+  ['fidelity-ui','Présentation','Consulter les sources depuis les fiches du jeu','P1','Le codex et l’aperçu d’arène présentent les repères, adaptations et URL correspondant à la sélection, sans débordement des vues vérifiées.'],
+  ['fidelity-render','Présentation','Vérifier le détourage et les objets après correction','P0','Les captures et assertions précisent les cellules idle, les palettes, la transparence et les objets effectivement vérifiés. La revue ne s’étend pas automatiquement aux autres poses ou costumes.'],
+  ['fidelity-canon','Présentation','Comparer le rendu aux plans officiels cités','P1','Chaque validation précise le plan source, le personnage ou le lieu et la pose comparée. Une capture du jeu seule ne certifie pas la fidélité à la série.'],
 ];
 for (const [id,area,name,priority,expected] of reviewCases) {
   const q = evidence.cases?.[id];
@@ -321,17 +351,18 @@ function makeTable(name,title,subtitle,headers,rows,{widths=[],statusCols=[],qaC
   return sheet;
 }
 makeTable('Fonctionnalités','Fonctionnalités et écarts CQC','Statut modifiable. Les preuves désignent le code livré, sans remplacer les essais de l’onglet QA.', ['ID','Domaine','Fonction','Statut','Priorité','Preuve dans le dépôt','Critère de validation','Limite ou contexte','Notes utilisateur'],features,{widths:[14,18,44,18,12,42,84,80,40],statusCols:[4],inputCols:[9]});
-makeTable('Combattants','Combattants jouables','Les techniques sont des adaptations de jeu. La finition graphique reste distincte du fonctionnement du moteur.', ['ID','Nom','Style','Jouable','Gameplay','Graphismes','Test moteur','État global','Techniques','PV','Puissance','Vitesse','Portée','Sprite','Animation source','Référence','Contexte','Corps de collision','Simulation et ressource','Chaînes après impact','Notes utilisateur'],roster,{widths:[24,28,20,12,18,18,24,18,14,12,12,12,12,65,31,16,46,46,80,90,40],statusCols:[5,6,8],numericCols:[9,10,11,12,13],inputCols:[21]});
+makeTable('Combattants','Combattants jouables','Les fiches séparent les repères officiels, leur adaptation en duel et la portée de la revue visuelle.', ['ID','Nom','Style','Jouable','Gameplay','Graphismes','Test moteur','État global','Techniques','PV','Puissance','Vitesse','Portée','Sprite','Animation source','Référence','Contexte','Corps de collision','Simulation et ressource','Chaînes après impact',...fidelityHeaders,'Notes utilisateur'],roster,{widths:[24,28,20,12,18,18,24,18,14,12,12,12,12,65,31,16,46,46,80,90,...fidelityWidths,40],statusCols:[5,6,8],numericCols:[9,10,11,12,13],inputCols:[26]});
 sheets['Combattants'].getRange(`K6:M${roster.length+5}`).setNumberFormat('0.00');
-makeTable('Techniques','Techniques et données de combat','60 Hz. Dégâts et portées de base avant coefficients du personnage. La portée de mêlée part du centre du corps.', ['ID','Combattant','Emplacement','Technique','Mécanique','Début (frames)','Actif (frames)','Retour (frames)','Dégâts base','Portée (px)','Stabilité','Jauge finale','Paramètres actifs','Mécanique livrée','Équilibrage','Référence','Utilisation','Notes utilisateur'],moveRows,{widths:[37,27,22,31,18,15,15,16,15,15,13,14,95,20,18,16,80,40],statusCols:[14,15],numericCols:[6,7,8,9,10,11,12],inputCols:[18]});
-makeTable('Arènes','Arènes de combat','Douze décors procéduraux avec thèmes musicaux originaux. Dangers et art final restent à produire.', ['ID','Arène','Jouable','Art final','Thème','Largeur (px)','Sol Y (px)','Borne gauche','Borne droite','Collisions du décor','Dangers','Référence','Description et musique','Provenance','Notes utilisateur'],stages,{widths:[17,29,18,18,18,17,17,17,17,32,18,16,83,70,40],statusCols:[3,4,11],numericCols:[6,7,8,9],inputCols:[15]});
+makeTable('Techniques','Techniques et données de combat','60 Hz. Dégâts et portées adaptés au duel. Les références ne certifient pas les statistiques ou pouvoirs attribués par le jeu.', ['ID','Combattant','Emplacement','Technique','Mécanique','Début (frames)','Actif (frames)','Retour (frames)','Dégâts base','Portée (px)','Stabilité','Jauge finale','Paramètres actifs','Mécanique livrée','Équilibrage','Référence','Utilisation',...fidelityHeaders,'Notes utilisateur'],moveRows,{widths:[37,27,22,31,18,15,15,16,15,15,13,14,95,20,18,16,80,...fidelityWidths,40],statusCols:[14,15],numericCols:[6,7,8,9,10,11,12],inputCols:[23]});
+makeTable('Arènes','Arènes de combat','Les repères officiels et les adaptations du terrain jouable sont distincts de la validation artistique finale.', ['ID','Arène','Jouable','Art final','Thème','Largeur (px)','Sol Y (px)','Borne gauche','Borne droite','Collisions du décor','Dangers','Référence','Description et musique','Provenance',...fidelityHeaders,'Notes utilisateur'],stages,{widths:[17,29,18,18,18,17,17,17,17,32,18,16,83,70,...fidelityWidths,40],statusCols:[3,4,11],numericCols:[6,7,8,9],inputCols:[20]});
 makeTable('Atlas','Inventaire des apparences CainOS','Chaque entrée de l’atlas est conservée. Le champ source historique est reproduit sans certifier ses affirmations de lore.', ['ID atlas','Nom du projet','Usage combat','Combattant parent','Intégration','Validation canon','Planche','Fichier','Colonnes','Lignes','Colonne (0)','Ligne (0)','Libellé historique CainOS','Provenance','Source','Kit de combat','Animations dédiées','Prochaine action','Priorité','Notes utilisateur'],atlas,{widths:[30,39,26,25,18,20,24,70,13,13,15,15,55,95,95,29,36,95,13,40],statusCols:[5,6],numericCols:[9,10,11,12],inputCols:[20]});
 makeTable('Production','Production graphique, sonore et narrative','Une pose réutilisée compte comme partielle. Les nouveaux assets possèdent chacun un critère de finition.', ['ID','Domaine','Personnage ou lieu','Élément','Statut','Priorité','Fichier actuel','État des ressources','Critère de finition','Notes utilisateur'],production,{widths:[40,18,31,29,18,12,70,46,94,40],statusCols:[5],inputCols:[10]});
 makeTable('Scénarios','Défis, histoires et tournoi',`${Object.keys(STORY_ROUTES).length} routes · ${Object.values(STORY_ROUTES).reduce((sum,r)=>sum+r.chapters.length,0)} chapitres. ${STORY_NOTICE}.`, ['ID','Type','Nom','Objectif et texte livré','Mesure','Cible','Adversaire','Statut','Priorité','Preuve ou source','Notes utilisateur'],scenarioRows,{widths:[31,31,43,97,19,13,36,18,12,46,40],statusCols:[8],numericCols:[6],inputCols:[11]});
 makeTable('QA','Validation du jeu','Un résultat réussi exige une exécution consignée. Les essais matériels restent identifiés séparément.', ['ID','Domaine','Cas de contrôle','Résultat','Priorité','Méthode','Preuve d’exécution','Résultat attendu','Notes utilisateur'],qa,{widths:[27,22,110,20,12,68,95,100,40],qaCols:[4],inputCols:[9]});
 
 const refs=sheets['Références'];
-const trackerSources=[...SOURCES,
+const trackerSources=[...fidelitySources.values(),
+  {id:'fidelity',title:'Encore — repères officiels et adaptations',kind:'Registre de fidélité',url:'combat/fidelity.mjs',scope:'Sources officielles, repères observés et adaptations du duel pour chaque combattant, technique et arène. La portée de revue reste explicite ; aucune équivalence graphique globale n’est déduite des tests fonctionnels.'},
   {id:'stories',title:'Encore — routes narratives originales',kind:'Création pour le jeu',url:'combat/stories.mjs',scope:STORY_NOTICE},
   {id:'music',title:'Encore — thèmes et effets originaux',kind:'Création pour le jeu',url:'combat/audio.mjs',scope:`${Object.keys(AUDIO_THEMES).length} thèmes synthétiques par arène et ${AUDIO_EFFECT_IDS.length} motifs sonores. Aucun enregistrement ni musique de la série.`},
   {id:'offline',title:'Encore — inventaire du téléchargement hors ligne',kind:'Manifest généré du build',url:'combat/offline-manifest.mjs / scripts/build-combat-offline.mjs',scope:`${ART_FILES.length} planches, ${ART_BYTES.toLocaleString('fr-FR')} octets. La préparation explicite du pack est séparée de la sauvegarde des profils.`},
@@ -347,8 +378,8 @@ refs.getRange(`A${refStart}:E${refStart+10}`).values=[
   ['Prévu','Élément détaillé mais pas livré dans cette PR.','','',''],
   ['À vérifier','Il manque une validation ou une preuve suffisante.','','',''],
   ['Hors périmètre','Élément explicitement exclu du périmètre de cette version.','','',''],
-  ['Lore','Les techniques et jauges sont adaptées pour le jeu. Les textes historiques du projet ne font pas autorité.','','',''],
-  ['Actualiser','Régénérer après les changements de combat/data.mjs et des preuves QA.','','',''],
+  ['Lore','Les fiches distinguent repères observés, adaptation du duel et portée de revue. Une référence du personnage parent ne valide pas ses costumes.','','',''],
+  ['Actualiser','Régénérer après les changements du registre combat/fidelity.mjs, des données et des preuves QA.','','',''],
   ['Notes utilisateur','Les colonnes jaunes servent aux décisions manuelles. Les reporter avant de régénérer le fichier.','','',''],
   ['Progression','La synthèse compte les lignes par statut. Aucun taux global ne mélange techniques, sprites et fonctionnalités.','','',''],
   ['Limites QA','Les tests automatiques ne constituent pas une validation artistique ni une session sur appareil physique.','','',''],
@@ -385,6 +416,8 @@ summary.getRange('H19').formulas=[[`=COUNTIFS('Scénarios'!B6:B${scenarioRows.le
 summary.getRange('H20').formulas=[[`=COUNTIFS('Scénarios'!B6:B${scenarioRows.length+5},"Chapitre jouable")&" rencontres scénarisées"`]];
 summary.getRange('H21').formulas=[[`=COUNTIFS('Production'!B6:B${production.length+5},"Arène",'Production'!D6:D${production.length+5},"Musique de l’arène")&" thèmes musicaux d’arènes"`]];
 summary.getRange('H22').formulas=[[`=COUNTIFS('Production'!B6:B${production.length+5},"Motif sonore")&" motifs sonores synthétiques"`]];
+summary.getRange('H24:H28').values=[['Fidélité aux références'],[`${FIGHTERS.length + MOVES.length + STAGES.length} fiches documentées`],['Repères et adaptations distingués'],['Portée de revue dans chaque fiche'],['Fidélité globale restant à valider']];
+summary.getRange('H24').format.font={bold:true,color:colors.purple};
 summary.getRange('A14:F14').values=[['Suivi par domaine','Implémenté','Partiel','Prévu','À vérifier','Total']];
 const metrics=[['Fonctionnalités','Fonctionnalités',4,features.length],['Production d’assets','Production',5,production.length],['Scénarios et parcours','Scénarios',8,scenarioRows.length],['Intégration des apparences','Atlas',5,atlas.length]];
 metrics.forEach(([label,name,col,count],i)=>{
@@ -431,14 +464,20 @@ for(const name of Object.keys(sheets).filter(name=>!renderSheets.length||renderS
   const range=name==='Synthèse'?'A1:H31':name==='Références'?'A1:C12':name==='Techniques'?'A1:H12':name==='QA'?'A1:D12':name==='Production'?'A1:F12':name==='Atlas'?'A1:F12':'A1:F12';
   const preview=await workbook.render({sheetName:name,range,scale:1,format:'png'});
   await fs.writeFile(path.join(previewDir,`${name.normalize('NFD').replace(/[\u0300-\u036f]/g,'')}.png`),new Uint8Array(await preview.arrayBuffer()));
-  const detailRange=name==='QA'?`A${Math.max(5,qa.length-4)}:D${qa.length+5}`:name==='Techniques'?'I5:R15':name==='Combattants'?'N5:U11':name==='Atlas'?'P125:S134':name==='Scénarios'?'A15:H19':name==='Arènes'?'M5:N12':name==='Production'?`A${production.length-7}:I${production.length-4}`:null;
+  const detailRange=name==='QA'?`A${Math.max(5,qa.length-4)}:D${qa.length+5}`:name==='Techniques'?'I5:Q15':name==='Combattants'?'N5:T11':name==='Atlas'?'P125:S134':name==='Scénarios'?'A15:H19':name==='Arènes'?'M5:N12':name==='Production'?`A${production.length-7}:I${production.length-4}`:name==='Références'?'D5:E10':null;
   if(detailRange){const detail=await workbook.render({sheetName:name,range:detailRange,scale:1,format:'png'});await fs.writeFile(path.join(previewDir,`${name.normalize('NFD').replace(/[\u0300-\u036f]/g,'')}-details.png`),new Uint8Array(await detail.arrayBuffer()));}
-  if(name==='Fonctionnalités')for(const [id,label] of [['INT-12','installation'],['PRO-10','profil']]){
+  const fidelityRange={Combattants:'U5:W9',Techniques:'R5:T9',Arènes:'O5:Q9'}[name];
+  const reviewRange={Combattants:'X5:Y9',Techniques:'U5:V9',Arènes:'R5:S9'}[name];
+  for(const [range,label] of [[fidelityRange,'fidelite'],[reviewRange,'revue']])if(range){
+    const detail=await workbook.render({sheetName:name,range,scale:1,format:'png'});
+    await fs.writeFile(path.join(previewDir,`${name.normalize('NFD').replace(/[\u0300-\u036f]/g,'')}-${label}.png`),new Uint8Array(await detail.arrayBuffer()));
+  }
+  if(name==='Fonctionnalités')for(const [id,label] of [['INT-12','installation'],['PRO-10','profil'],['PRD-11','fidelite'],['PRE-15','sources-ui']]){
     const row=features.findIndex(feature=>feature[0]===id)+6;
     const detail=await workbook.render({sheetName:name,range:`A${row}:H${row}`,scale:1,format:'png'});
     await fs.writeFile(path.join(previewDir,`Fonctionnalites-${label}.png`),new Uint8Array(await detail.arrayBuffer()));
   }
-  if(name==='QA')for(const [prefix,label] of [['QA-REC-','installation'],['QA-RPRO-','profil']]){
+  if(name==='QA')for(const [prefix,label] of [['QA-REC-','installation'],['QA-RPRO-','profil'],['QA-FIDUI-','fidelite-ui'],['QA-FIDREN-','fidelite-rendu']]){
     const indices=qa.map((row,index)=>row[0].startsWith(prefix)?index+6:null).filter(row=>row!==null);
     if(!indices.length)continue;
     const detail=await workbook.render({sheetName:name,range:`A${indices[0]}:G${indices.at(-1)}`,scale:1,format:'png'});
@@ -456,5 +495,7 @@ const testSources=(await fs.readdir(path.join(root,'tests'))).filter(name=>/^com
 for(const name of [...combatSources,...testSources,'docs/combat-qa-evidence.json','scripts/build-combat-workbook.mjs']){
   try{sourceDigests[name]=createHash('sha256').update(await fs.readFile(path.join(root,name))).digest('hex');}catch(error){if(error.code!=='ENOENT')throw error;}
 }
-await fs.writeFile(path.join(out,'combat-workbook-verification.json'),JSON.stringify({createdAt:new Date().toISOString(),counts:data.counts,qaSummary,verifiedSummary:actualCounts,verifiedReleaseSummary:expectedRelease,formulaErrors:0,statusMutationRecalculated:true,renderedSheets:renderSheets.length?renderSheets:Object.keys(sheets),qaEvidencePresent:!!Object.keys(evidence).length,sourceDigests},null,2)+'\n');
+const fidelityRecords=[...FIGHTERS.map(({id,fidelity})=>({kind:'fighter',id,fidelity})),...MOVES.map(({id,fidelity})=>({kind:'move',id,fidelity})),...STAGES.map(({id,fidelity})=>({kind:'stage',id,fidelity}))];
+const fidelityCoverage={fighters:roster.length,moves:moveRows.length,stages:stages.length,documented:fidelityRecords.length,withPrimaryReference:fidelityRecords.filter(item=>item.fidelity.sourceIds.length).length,withoutPrimaryReference:fidelityRecords.filter(item=>!item.fidelity.sourceIds.length).map(item=>({kind:item.kind,id:item.id,reviewStatus:item.fidelity.reviewStatus})),sourceIds:FIDELITY_SOURCES.map(source=>source.id),globalVisualCertification:false};
+await fs.writeFile(path.join(out,'combat-workbook-verification.json'),JSON.stringify({createdAt:new Date().toISOString(),counts:data.counts,qaSummary,verifiedSummary:actualCounts,verifiedReleaseSummary:expectedRelease,fidelityCoverage,formulaErrors:0,statusMutationRecalculated:true,renderedSheets:renderSheets.length?renderSheets:Object.keys(sheets),qaEvidencePresent:!!Object.keys(evidence).length,sourceDigests},null,2)+'\n');
 console.log(JSON.stringify({file:path.join(out,'DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx'),counts:data.counts,previews:previewDir},null,2));

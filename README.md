@@ -6,7 +6,7 @@ CainOS is a retro C&A mainframe-style interactive web app inspired by The Amazin
 
 CainOS now includes **Circus Combat — Encore**, a shared combat application and
 standalone game adapted from the real CQC engine of `shadow-codec-ops`.
-The playable game version is **0.2.0**.
+The playable game version is **0.3.0**.
 
 - In CainOS: complete the existing first-use calibration, then launch **Circus
   Combat** from the desktop or Start menu.
@@ -22,6 +22,22 @@ The current release contains **14 fighters, 140 authored techniques, 12 arenas,
 Fighters, costumes and the 114 remaining archive records have separate identities
 in [combat/data.mjs](combat/data.mjs). Combat capabilities and stories are original
 fan-game adaptations.
+
+### Visual fidelity and traceable references
+
+The 0.3.0 pass preserves abstracted Kaufmo’s dark body when removing atlas
+backgrounds, and redraws the big top, cellar and Void from the official GLITCH
+stills actually reviewed. Named projectiles and traps receive distinct readable
+shapes. The selector previews each arena, including the first chapter’s actual
+stage in story mode.
+
+[combat/fidelity.mjs](combat/fidelity.mjs) is the shared source register for the
+codex and the workbook: **14 fighter, 140 technique and 12 arena records**. Each
+entry separates observed visual traits, original combat adaptations and the
+remaining review scope. Sources can be opened from optional disclosures in the
+codex and arena selector. Existing illustrations, dedicated fight poses, the
+residents’ corridor and all 51 costumes still need further visual comparison;
+this pass does not certify a complete 1:1 reproduction of the series.
 
 ### Programmes and saved progress
 
@@ -48,8 +64,10 @@ independent volumes. Music is off by default and WebAudio waits for a user gestu
 Sources: [bindings.mjs](combat/bindings.mjs), [input.mjs](combat/input.mjs) and
 [audio.mjs](combat/audio.mjs).
 
-Existing version-one profiles migrate with safe defaults. Replays from **0.1.0 and
-0.2.0** remain accepted, and playback adds no results to the profile. JSON export
+Existing version-one profiles migrate with safe defaults. Replays from **0.1.0,
+0.2.0 and 0.3.0** remain accepted, and playback adds no results to the profile.
+Older recordings keep their original fighter rules and version when exported;
+0.3.0 gives Pomni and abstracted Kaufmo continuous physical retreats. JSON export
 includes custom controls and the programme checkpoint. CainOS and the standalone
 share profiles on the same origin; another origin requires export/import.
 See [combat/session.mjs](combat/session.mjs).
@@ -106,18 +124,22 @@ npm run qa
 
 This runs the existing CainOS audits, combat behavioral tests, syntax checks,
 offline-manifest generation and both static builds. The recorded Node result for
-0.2.0 is **141 passing tests** across engine, session, catalog, bindings,
-progression, audio and offline initialization.
+0.3.0 is **166 passing tests** across nine suites: engine, session, catalog,
+bindings, progression, audio, offline initialization, fidelity and rendering.
+The new suites verify the source register, unchanged legacy combat rules,
+continuous retreats, conservative matte removal and object presentation.
 
-The new story/tournament browser suite has **8 passing checks and 9 played duels**.
-The new controls/audio/offline suite has **11 passing checks**, including a cold
+The story/tournament browser suite has **8 passing checks and 9 played duels**.
+The controls/audio/offline suite has **11 passing checks**, including a cold
 offline reload and preservation of the art pack across a code update. The
 progression/replay/standalone suite has **10 passing checks**, and the
 UI/integration suite has **11 passing checks**. The profile-recovery suite adds
 **5 passing checks**, including changes from another tab and a challenge completed
 with an incompatible stored checkpoint. Offline installation recovery adds
 **3 passing checks** after a real HTTP 503, followed by a successful retry and
-offline reload. The six final reports total **48 passing browser checks**, with
-no recorded JavaScript errors.
+offline reload. The fidelity UI/replay suite adds **9 passing checks**; the rendering suite adds
+**7 passing checks**, including atlas pixels and all projectile/trap definitions.
+The eight final reports total **64 passing browser checks**, with no recorded
+JavaScript errors. These checks do not certify full canonical 1:1 visual fidelity.
 See the [combat documentation](docs/DIGITAL_CIRCUS_ENCORE.md) and
 [QA evidence](docs/combat-qa-evidence.json) for exact scope, requirements and limits.

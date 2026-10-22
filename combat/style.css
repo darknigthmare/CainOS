@@ -19,3 +19,26 @@ body.reduced-motion *,body.reduced-motion *:before,body.reduced-motion *:after{a
 @media(min-width:1200px){.modes-grid{grid-template-columns:repeat(5,minmax(0,1fr))}.mode-card{min-height:210px}.mode-card h3{font-size:16px}}
 @media(max-width:760px){.binding-players{grid-template-columns:1fr}.checkpoint-card{flex-direction:column;align-items:stretch;gap:15px}.checkpoint-card>button{width:100%}}
 @media(max-width:540px){.tournament-bracket{grid-template-columns:1fr;gap:10px}.binding-row{grid-template-columns:minmax(85px,1fr) minmax(70px,1fr) minmax(70px,1fr);font-size:10px}.binding-row button{font-size:10px;min-height:44px}.binding-block .section-heading{align-items:start;flex-direction:column}.checkpoint-card{padding:18px}.checkpoint-card h2{font-size:22px}.keys-grid{grid-template-columns:1fr}.offline-block .modal-actions{flex-direction:column}.story-dialogue p,.story-intro,.story-ending p{font-size:13px}}
+
+/* Source notes stay optional; the scene itself is visible before starting. */
+.stage-preview{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:24px;align-items:center;margin:0 0 24px;padding:18px;background:var(--panel);border:1px solid var(--line);border-radius:6px}
+.stage-preview canvas{width:100%;height:auto;aspect-ratio:16/9;display:block;border-radius:4px}
+.stage-preview h3{font-size:25px;margin:10px 0}
+.stage-preview p{font-size:12px;line-height:1.7;color:var(--muted)}
+.codex-layout>section{min-width:0}
+.fidelity-details{border:1px solid var(--line);border-radius:5px;margin:12px 0 20px;background:#20192b;font-size:12px;line-height:1.7}
+.fidelity-details summary{cursor:pointer;padding:12px 14px;color:var(--gold);font-weight:600}
+.fidelity-details summary:focus-visible{outline:2px solid var(--gold);outline-offset:2px;border-radius:3px}
+.fidelity-copy{padding:0 14px 12px;overflow-wrap:anywhere;color:var(--muted)}
+.fidelity-copy ul{padding-left:20px;margin:8px 0}
+.fidelity-copy p{font-size:inherit;margin:10px 0;line-height:1.7}
+.fidelity-copy strong{color:var(--paper)}
+.fidelity-scope{font-size:11px!important}
+.fidelity-sources{list-style:none;padding-left:0!important;border-top:1px solid var(--line);padding-top:6px}
+.fidelity-sources a{display:inline-block;padding:4px 0;color:var(--mint);text-decoration:underline;text-underline-offset:3px}
+.move-fidelity{border:0;background:transparent;margin:8px 0 0;font-size:11px;max-width:520px}
+.move-fidelity summary{padding:3px 0;font-size:10px}
+.move-fidelity .fidelity-copy{padding:4px 0 0}
+.stage-fidelity{margin-bottom:0}
+@media(max-width:760px){.stage-preview{grid-template-columns:1fr;gap:16px}.stage-preview h3{font-size:22px}}
+@media(max-width:540px){.stage-preview{padding:12px}.fidelity-details{font-size:11px}.fidelity-details summary{padding:10px 12px}.move-fidelity summary{padding:3px 0}.move-fidelity{min-width:160px}.fidelity-copy{padding:0 12px 10px}}

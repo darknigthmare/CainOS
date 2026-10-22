@@ -1,5 +1,5 @@
 {
-  "createdAt": "2026-10-22T10:37:05.939Z",
+  "createdAt": "2026-10-22T11:15:17.524Z",
   "counts": {
     "fighters": 14,
     "moves": 140,
@@ -14,16 +14,16 @@
     "soundEffects": 16,
     "offlineImages": 42,
     "offlineBytes": 47345031,
-    "features": 88,
+    "features": 90,
     "production": 389,
     "scenarios": 85,
-    "qa": 222
+    "qa": 267
   },
   "qaSummary": {
-    "Réussi": 208,
+    "Réussi": 252,
     "Échec": 0,
     "Non exécuté": 5,
-    "À vérifier": 9
+    "À vérifier": 10
   },
   "verifiedSummary": [
     14,
@@ -38,33 +38,80 @@
     "12 thèmes musicaux d’arènes",
     "16 motifs sonores synthétiques"
   ],
+  "fidelityCoverage": {
+    "fighters": 14,
+    "moves": 140,
+    "stages": 12,
+    "documented": 166,
+    "withPrimaryReference": 164,
+    "withoutPrimaryReference": [
+      {
+        "kind": "stage",
+        "id": "lake",
+        "reviewStatus": "Source primaire à identifier"
+      },
+      {
+        "kind": "stage",
+        "id": "training",
+        "reviewStatus": "Création originale"
+      }
+    ],
+    "sourceIds": [
+      "glitch",
+      "ep1",
+      "ep2",
+      "ep3",
+      "ep4",
+      "ep5",
+      "ep6",
+      "ep7",
+      "ep8",
+      "ep9",
+      "glitch-cast",
+      "glitch-cellar",
+      "glitch-void",
+      "glitch-candy-court",
+      "glitch-circus-props",
+      "glitch-undermap",
+      "glitch-false-exit"
+    ],
+    "globalVisualCertification": false
+  },
   "formulaErrors": 0,
   "statusMutationRecalculated": true,
   "renderedSheets": [
     "Synthèse",
     "Fonctionnalités",
+    "Combattants",
+    "Techniques",
+    "Arènes",
+    "Atlas",
+    "Production",
+    "Scénarios",
     "QA",
     "Références"
   ],
   "qaEvidencePresent": true,
   "sourceDigests": {
-    "combat/app.mjs": "132b3a4ab597e8983ca80469c50cc6646ac4f64e448438e5a433977acb1dec41",
+    "combat/app.mjs": "f84f9c5e869fddef896be1c3413cb06a6e0fde74cfc9e5b23b20abc7dd43430a",
     "combat/audio.mjs": "fbce0e74431c354a01e7ebc46b75084b6c81c233c1ed3807bcac6b97d8e1329b",
     "combat/bindings.mjs": "8352b4a92afb27a85220b21feb5b7f53b34a2c4eabfedff2f400259329988969",
-    "combat/data.mjs": "a01f1d1aee3f06a7097c976596459b3b0d8b1d6b93c9b5c0ae962fb96a972011",
+    "combat/data.mjs": "45a0d61c702b8fdd6ff55715b14b8adfc83f676ba966ce79141c0409defa67b3",
     "combat/engine.mjs": "cc22edd35abeff874a2bf27ff64dd669f30484e70bb3bfba4ea868dd9c8ebc1a",
+    "combat/fidelity.mjs": "91ba3527b8e6b2600da18abe23162188ee0360bdd8b7268cfcc07fbd279c455f",
     "combat/icon.svg": "9306b192eaaa246307b0d0d13262ca21f0a913ad123eb1bc1c1adf94890ec19b",
     "combat/index.html": "a460399b3a66c087201680263277a0bcdb58d1488db7b74e84c9ec59a1b56c8c",
     "combat/input.mjs": "bd6e648180730a662fdb60ce91d93cb8b60d9ef88f01922059dd46808ad8170b",
     "combat/manifest.webmanifest": "3a7f78eb5c4cc3f7c90784a8bcba425dc91fdc1e1c401fc26b3a81f12d4534aa",
-    "combat/offline-manifest.mjs": "2e54d7c19b01cac66c8d9acbc6fc670ecb213a2535941280d132bf753f36e80f",
+    "combat/offline-manifest.mjs": "f2925cda6af6fcd2b891a1d28ecb16fead476c4bef8413656b774475c8383d4d",
     "combat/offline.mjs": "704b87db56c26365c770c46df33a0ebfa6c2639d1b97df8183794dfb8417e4c9",
     "combat/progression.mjs": "a5a3d697b034146464d0c315a2a5dc5891557caf1a58ad1d8dd8551a5f585f15",
-    "combat/render.mjs": "e808ec624d313d6143d199adf796bd431829d74ff910e38303b9d7082f6d5ec7",
-    "combat/session.mjs": "a259f2dd9ef2e97576cd2521f7144c7f1817ed0ba30e2ec1feac11a07162b6aa",
+    "combat/render-presentation.mjs": "3a56700e53d9085b99cb7169e101dbe634d2cb95707718d468972f1bb36d9579",
+    "combat/render.mjs": "4859269a4c19aff5cbe2e3b6bb4a28714ac697d49cf6b45fa2e78c97d3c8cf99",
+    "combat/session.mjs": "2bd7d7de04a9fd0b07d9f02e0e110cfdf8aaa7cf6e133d863dda1cdda1fb8322",
     "combat/sprite-catalog.mjs": "41ad2ff416eef0d9426dd8ec17218a35b0c6a016a6dbf73e8e96a1f86d1a2172",
     "combat/stories.mjs": "08c8dc0270d4aa2bfc2f79e8a4180aa4ed9dc0dfb03361e199a2c07507e17ea7",
-    "combat/style.css": "b0236a02624a270a623826534b171e4a8eef111eaa05c310b37b203ad0142ca1",
+    "combat/style.css": "f89e105e79afbbc9350c374240c38cda89cc5c525362e80a93a18f0cb9ffd86f",
     "combat/sw.js": "0893718df1437a22b716a27ca5fafb7e9fc18ed1fbd47f64eb43062e1199eeab",
     "tests/combat-audio.test.mjs": "94c7200d6b9f9970578a60b8ddadc9d90994f9c3c56dbd308cc1da24c0116ca7",
     "tests/combat-bindings.test.mjs": "21f8c5c92cb80728ebfe25588fdb2d8289fec6f8983dbe9abcbf694d2df91708",
@@ -72,63 +119,18 @@
     "tests/combat-catalog.test.mjs": "1198d4169e4629d826ec221f21191ca75681a4e88089d237e609e842a263d80c",
     "tests/combat-encore-browser.mjs": "3a2f45a3d73c864be0e4da8705fa544011484bbc1600d0c9af356d7168dedc03",
     "tests/combat-engine.test.mjs": "5fb1260ef501eadf1e55bd879d70ee872ca10ea60f78a5b807fda35f112d0485",
-    "tests/combat-offline-browser.mjs": "d1740a7cbed0140db4ff883e18895c6a0f3e337131e761e7147b1ba7a86fe5dd",
+    "tests/combat-fidelity-browser.mjs": "ba5121fb723a20e41aacaff92fe7b07d48784d6bc7f1e81b187abcaa83a5fe9b",
+    "tests/combat-fidelity.test.mjs": "cdfb5767bef6865ece8342f0bd10df65b422ed65898dc94e60eb7f8f65e5a754",
+    "tests/combat-offline-browser.mjs": "a2c736e0cbf7c3f1179b08667ffa2baedb6211d11a9547cfc36dfab7af021f3a",
     "tests/combat-offline.test.mjs": "f070eb711be11562ef492ba17c8cc7b9cb00f7087784410e23acb62917559476",
     "tests/combat-profile-recovery-browser.mjs": "d6ba225ae115114758d83f08d1cc2c697f164430e94b14905f146d55cd358111",
     "tests/combat-progression-browser.mjs": "2024357b9fd071694ec8e4224d43e40b8cf7732502e6e1ef1f7b2dff20c8cc5f",
     "tests/combat-progression.test.mjs": "cbd27b27316563868585d25a5e1e7613ef4b0a15f42a63b2032efeb334a3f7f8",
     "tests/combat-recovery-browser.mjs": "efbce0402d3e37d367fb61792bcf68b760ac89c7c295ee3c282138cb2537b5bd",
-    "tests/combat-session.test.mjs": "40d111e9f967b430777ec853048e368593542f3d2689f02a0177a65bf16b3d54",
-    "docs/combat-qa-evidence.json": "fb7388b834708903b69053e0fc5caeb2ec971ad7f0faee223207b04085deab0f",
-    "scripts/build-combat-workbook.mjs": "fd75f1724ae02c46fd3c8848f57417b0088cea1e8cf0dde92ebdccc7b35266ba"
-  },
-  "xlsxPackage": {
-    "sheets": 10,
-    "tables": 9,
-    "formulas": 34,
-    "validationRanges": 14,
-    "frozenSheets": 9,
-    "frozenPane": "C6 (2 columns / 5 rows)",
-    "errorCells": 0,
-    "summaryCache": [
-      "14",
-      "140",
-      "12",
-      "179",
-      "51"
-    ],
-    "qaCache": [
-      "208",
-      "0",
-      "5",
-      "9",
-      "222"
-    ],
-    "releaseCache": [
-      "14 routes originales",
-      "56 rencontres scénarisées",
-      "12 thèmes musicaux d’arènes",
-      "16 motifs sonores synthétiques"
-    ],
-    "tableRanges": {
-      "EncoreFonctionnalites": "A5:I93",
-      "EncoreCombattants": "A5:U19",
-      "EncoreTechniques": "A5:R145",
-      "EncoreArenes": "A5:O17",
-      "EncoreAtlas": "A5:T184",
-      "EncoreProduction": "A5:J394",
-      "EncoreScenarios": "A5:K90",
-      "EncoreQA": "A5:I227",
-      "EncoreReferences": "A5:E17"
-    },
-    "bytes": 134860,
-    "sha256": "b296ed338a54b5a98dddc6ae275f3998c415038c2502c042b63529c2570ccd4c"
-  },
-  "visualReview": "Synthèse, Fonctionnalités, QA et Références rendus après les corrections. Les deux nouvelles fonctions, leurs critères, les huit contrôles navigateur ciblés et les compteurs ont été vérifiés visuellement. Les autres feuilles conservent le contenu et la mise en forme précédemment validés.",
-  "qaExecutionCounts": {
-    "node": 141,
-    "browser": 48,
-    "nodeSuites": 7,
-    "browserSuites": 6
+    "tests/combat-render-browser.mjs": "1bdfc661578c37e1f0741559a25f960dfbb3d8a8e90704025b387042b6f37312",
+    "tests/combat-render.test.mjs": "12782fc6f79383dce449336c6fb88564fc26f0e735622040f3e616df2b99b1cb",
+    "tests/combat-session.test.mjs": "626fb50bc6108531839dfef1a0a1a249b4499f4253f3cd0b60164bfb11e548d7",
+    "docs/combat-qa-evidence.json": "acefe4656000b6219e44e5acce5fde3a76a1ce6330953c10c751843f727d7db2",
+    "scripts/build-combat-workbook.mjs": "301e525b86b2a8e7238888606855dc8320e8106ec7e5934874eb0dfa86024019"
   }
 }

@@ -1,4 +1,4 @@
-# Digital Circus — Encore 0.2.0
+# Digital Circus — Encore 0.3.0
 
 Suite de la [PR #1](https://github.com/darknigthmare/CainOS/pull/1), fusionnée le
 22 octobre 2026. Cette proposition part de `main` au commit
@@ -10,11 +10,45 @@ CainOS intègre désormais **Digital Circus — Encore / Le Grand Duel**, adapt�
 CQC du projet Metal Gear et jouable dans le bureau comme en standalone. Cette PR
 complète cette première version avec les points de reprise, les histoires
 individuelles, le tournoi, les commandes personnalisables, la musique originale
-et une distribution web installable avec pack hors ligne. Le catalogue corrige
+et une distribution web installable avec pack hors ligne. La passe 0.3.0 corrige
+la présentation des personnages, décors et accessoires, documente les références
+et préserve les règles des anciens replays. Le catalogue corrige
 aussi la sélection des costumes et le HUD suit le combo en cours.
 L’OS, le standalone et le classeur utilisent les mêmes définitions de contenu.
 
-## Contenu de la version 0.2.0
+## Passe de fidélité 0.3.0
+
+- **Détourage de Kaufmo corrigé.** La suppression du fond de l’atlas ne traverse
+  plus son corps noir ni ses détails internes. Les illustrations originales
+  restent intactes ; les cellules à transparence native conservent leur alpha.
+- **Trois décors repris à partir de visuels GLITCH consultés.** Grande piste
+  cyan/or avec canapés, porte arrondie et damier chaud ; cellier noir, yeux
+  multicolores et lumière centrale ; Vide blanc irisé, sans le confondre avec
+  le couloir EXIT ou l’espace sous la carte. Leur perspective reste adaptée au
+  duel horizontal.
+- **Objets de combat reconnaissables.** Clef, bouton, masque, pièces modulaires,
+  rubans, confiseries, bulles et coussins ont des formes propres. Un projectile
+  réfléchi garde son motif d’origine. Les effets ne modifient pas les collisions.
+- **Reculs physiques pour Pomni et Kaufmo.** Quinze images actives de déplacement,
+  respectivement 150 et 135 pixels nominaux, avec les mêmes durées totales de
+  30 et 36 images. Les replays 0.1.0/0.2.0 sélectionnent leurs kits hérités exacts,
+  et leur version reste conservée lors de l’export.
+- **Registre commun de 166 fiches.** [`combat/fidelity.mjs`](https://github.com/darknigthmare/CainOS/blob/feat/encore-0-2-story-offline/combat/fidelity.mjs)
+  relie 14 combattants, 140 techniques et 12 arènes aux repères observés,
+  adaptations et comparaisons restant à faire. Deux décors sans source canonique
+  précise sont identifiés explicitement. Le codex et l’Excel lisent ce registre.
+- **Aperçus et sources dans l’interface.** La sélection montre le décor réel
+  avant le duel. Le mode Histoire suit la première scène de chacun des 14
+  parcours. Les références de personnage, de coup et de décor s’ouvrent à la
+  demande au clavier ou au tactile.
+
+Cette passe rapproche la présentation des références effectivement consultées.
+Elle ne certifie pas une reproduction canonique complète : poses de combat,
+accroupissement, proportions, couloir des résidents et 51 costumes restent à
+comparer ou à finaliser. Les techniques et histoires sont des adaptations de
+fan-game, identifiées comme telles dans chaque fiche.
+
+## Contenu conservé depuis la version 0.2.0
 
 - **Intégration CainOS et standalone conservée.** Icône **Circus Combat**, entrée du
   menu Démarrer, fenêtre chargée à la demande et pause lorsque le jeu est masqué.
@@ -73,9 +107,11 @@ CacheStorage laisse la réponse réseau disponible. Sources :
 
 Le profil local reste au format version 1. Les anciens profils conservent leurs
 données reconnues et reçoivent les nouvelles valeurs par défaut. Les replays
-**0.1.0 et 0.2.0** restent acceptés ; l’absence de costumes dans un ancien replay
+**0.1.0, 0.2.0 et 0.3.0** restent acceptés ; l’absence de costumes dans un ancien replay
 sélectionne les apparences originales. La lecture n’ajoute aucun résultat au
-palmarès. Le JSON exporte aussi les touches et le checkpoint ; un stockage refusé
+palmarès. Les anciens reculs de Pomni/Kaufmo sont conservés pour les replays
+0.1.0/0.2.0 ; les nouvelles règles ne sont pas appliquées à ces enregistrements.
+Le JSON exporte aussi les touches et le checkpoint ; un stockage refusé
 conserve les résultats de la session en mémoire pour permettre leur export.
 À la lecture locale, un checkpoint corrompu ou devenu incompatible est écarté
 sans perdre le reste du profil. L’import explicite reste strict et refuse ce
@@ -96,12 +132,14 @@ conservant le meilleur combo dans les résultats.
 [`DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx`](https://github.com/darknigthmare/CainOS/blob/feat/encore-0-2-story-offline/docs/DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx) couvre dix
 feuilles : Synthèse, Fonctionnalités, Combattants, Techniques, Arènes, Atlas,
 Production, Scénarios, QA et Références. Les inventaires, 56 chapitres, thèmes,
-effets et preuves de test proviennent des fichiers réels. Les éléments livrés,
+effets et preuves de test proviennent des fichiers réels. Les fiches Combattants,
+Techniques et Arènes ajoutent cinq champs de fidélité partagés avec le codex :
+sources, observations, adaptation, statut et portée de revue. Les éléments livrés,
 partiels, prévus et restant à vérifier ont des statuts distincts et des critères
-de réception. Le classeur reste filtrable et éditable : **88 fonctionnalités, 389 tâches de
-production, 85 scénarios et 222 lignes QA**, avec 34 formules et neuf tableaux.
-Les lignes QA comptent 208 réussites, neuf points à vérifier et cinq non exécutés ;
-elles recoupent les tests ci-dessous et ne constituent pas 222 tests indépendants.
+de réception. Le classeur reste filtrable et éditable : **90 fonctionnalités, 389 tâches de
+production, 85 scénarios et 267 lignes QA**, avec 34 formules et neuf tableaux.
+Les lignes QA comptent 252 réussites, dix points à vérifier et cinq non exécutés ;
+elles recoupent les tests ci-dessous et ne constituent pas 267 tests indépendants.
 
 La provenance du moteur, les commandes et l’architecture sont détaillées dans
 [`DIGITAL_CIRCUS_ENCORE.md`](https://github.com/darknigthmare/CainOS/blob/feat/encore-0-2-story-offline/docs/DIGITAL_CIRCUS_ENCORE.md). Références de départ :
@@ -112,8 +150,8 @@ cette PR **53d56cf30484708af7c171babd3a05aa684d9a8a** ; CQC
 
 ## Validation consignée
 
-- **141 tests Node réussis** : 40 moteur, 31 session, 7 catalogue, 16 commandes,
-  19 progression, 14 audio et 14 initialisation hors ligne. Les tests couvrent
+- **166 tests Node réussis** : 40 moteur, 32 session, 7 catalogue, 16 commandes,
+  19 progression, 14 audio, 14 initialisation hors ligne, 12 fidélité et 12 rendu. Les tests couvrent
   notamment les 140 techniques, les six défis, les 14 routes, les tableaux
   déterministes, la récupération du profil et les erreurs d’installation.
 - **8/8 contrôles histoires/tournoi**, avec **9 duels réellement joués** via
@@ -139,21 +177,29 @@ cette PR **53d56cf30484708af7c171babd3a05aa684d9a8a** ; CQC
   `tests/combat-recovery-browser.mjs` : échec HTTP 503 réel du cache initial,
   nouvelle tentative depuis les réglages sans rechargement ni perte du profil,
   pack complet puis rechargement sans réseau.
-- **Total final : 48 contrôles navigateur réussis** sur les six suites,
+- **9/9 contrôles sources/interface/replays**, via `tests/combat-fidelity-browser.mjs` :
+  166 fiches, 12 aperçus, premières scènes des 14 histoires, versions de replay
+  0.1/0.2/0.3, répétition, export et vues à 390 px.
+- **7/7 contrôles de rendu**, via `tests/combat-render-browser.mjs` : détourage de
+  Kaufmo, 14 premières poses idle, 12 décors, 20 projectiles/10 pièges, identité
+  des objets, visibilité et mouvement réduit. Les sources et captures sont
+  empreintées ; les mesures techniques restent distinctes de la revue artistique.
+- **Total final : 64 contrôles navigateur réussis** sur les huit suites,
   sans erreur JavaScript consignée dans leurs rapports finaux.
 - Le contrôle du classeur et les rapports consolidés sont suivis dans
   [`combat-qa-evidence.json`](https://github.com/darknigthmare/CainOS/blob/feat/encore-0-2-story-offline/docs/combat-qa-evidence.json) et
   [`combat-workbook-verification.json`](https://github.com/darknigthmare/CainOS/blob/feat/encore-0-2-story-offline/docs/combat-workbook-verification.json).
 
 `npm run qa` regroupe les audits CainOS, vérifications de syntaxe, tests Node,
-manifest hors ligne et builds. Les six suites navigateur sont exécutées
+manifest hors ligne et builds. Les huit suites navigateur sont exécutées
 séparément ; leurs prérequis et commandes figurent dans la documentation.
 
 ## Limites suivies dans le classeur
 
 Les histoires sont des créations de fan-game. Les planches et poses CainOS servent
 encore aux animations, avec des transformations procédurales ; animations de
-combat dédiées, portraits finaux, ambiances/voix, effets encore partagés et mixage
+combat dédiées, accroupissement, proportions finales, couloir des résidents,
+portraits finaux, ambiances/voix, certains effets encore partagés et mixage
 matériel demandent de la finition. Les 12 thèmes synthétiques sont livrés.
 
 Réseau/rollback, tag/assists, coopération, campagnes par épisode, finishers
@@ -163,7 +209,11 @@ ses extensions Metal Gear. Les contrôles Chromium/WebAudio ne certifient pas un
 écoute humaine, deux manettes physiques, les téléphones réels, l’accessibilité
 complète ou la revue visuelle exhaustive des 51 costumes.
 
-## Aperçus de la version 0.2.0
+## Aperçus de la version 0.3.0
+
+![Aperçu de la grande piste et références du décor](https://raw.githubusercontent.com/darknigthmare/CainOS/feat/encore-0-2-story-offline/docs/images/encore-fidelity-stage.png)
+
+![Détourage et décors corrigés](https://raw.githubusercontent.com/darknigthmare/CainOS/feat/encore-0-2-story-offline/docs/images/encore-fidelity-render.png)
 
 ![Accueil Encore : neuf modes](https://raw.githubusercontent.com/darknigthmare/CainOS/feat/encore-0-2-story-offline/docs/images/encore-home.png)
 

@@ -5,7 +5,7 @@ import { FIGHTERS, STAGES, VARIANTS } from '../combat/data.mjs';
 import { createProgram, recordProgramResult } from '../combat/progression.mjs';
 import { InputController } from '../combat/input.mjs';
 import {
-  GAME_VERSION, SAVE_KEY, SLOT_ORDER, MAX_PACKED_INPUT, DEFAULT_SETTINGS,
+  GAME_VERSION, REPLAY_VERSIONS, SAVE_KEY, SLOT_ORDER, MAX_PACKED_INPUT, DEFAULT_SETTINGS,
   emptyProfile, cleanSettings, validateProfile, readProfile, saveProfile,
   packInput, unpackInput, appendReplayFrame, validateReplay, replayInputs,
   CHALLENGES, makeRun, createMatchStats, collectMatchStats, challengeProgress,
@@ -108,6 +108,22 @@ test('replay import validates version, roster, rules and carried survival health
   assert.deepEqual(valid.config.initialHealth, [4075, 10000]);
   original.config.fighters[0] = 'caine';
   assert.equal(valid.config.fighters[0], 'pomni', 'validation takes an independent copy');
+});
+
+test('replay validation and repeated JSON export preserve each supported rules version', () => {
+  assert.deepEqual(REPLAY_VERSIONS, ['0.1.0', '0.2.0', '0.3.0']);
+  for (const version of REPLAY_VERSIONS) {
+    const original = replayFixture({ version, runs: [[90, 0, 0], [1, packInput({ slot: 'specialBack' }), 0], [45, 0, 0]] });
+    const imported = validated(original);
+    const reimported = validated(JSON.parse(JSON.stringify(imported)));
+    assert.equal(imported.version, version, 'an older recording must not be upgraded to current move rules');
+    assert.deepEqual(reimported, imported);
+    assert.deepEqual([...replayInputs(reimported)], [...replayInputs(original)]);
+    assert.equal(original.frames, undefined, 'validation must not mutate the input file');
+  }
+  for (const version of [null, 3, '0.0.0', '0.4.0', '0.3.1']) {
+    assert.throws(() => validated(replayFixture({ version })), /incompatible/);
+  }
 });
 
 test('profile import keeps recognized progress and sanitizes settings without sharing defaults', () => {

@@ -8,6 +8,7 @@ import path from 'node:path';
 import http from 'node:http';
 import { pathToFileURL } from 'node:url';
 import { FIGHTERS } from '../combat/data.mjs';
+import { GAME_VERSION } from '../combat/session.mjs';
 let playwright;
 try { playwright=await import('playwright'); }
 catch(error){if(!process.env.CODEX_PRIMARY_RUNTIME_NODE_MODULES)throw error;playwright=await import(pathToFileURL(path.join(process.env.CODEX_PRIMARY_RUNTIME_NODE_MODULES,'playwright/index.mjs')).href);}
@@ -39,9 +40,12 @@ const settings=()=>page.locator('.masthead [data-nav="settings"]').click();
 const home=()=>page.locator('.masthead [data-nav="home"]').first().click();
 const bind=(player,action,slot=0)=>page.locator('[data-bind-player="'+player+'"][data-bind-action="'+action+'"][data-bind-slot="'+slot+'"]');
 try{
+  // Install before the page creates its timers, then pause at a future fixed
+  // instant. Using Date() immediately after install can race the running clock.
+  await page.clock.install({time:new Date('2026-10-22T12:00:00Z')});
   await page.goto(base+'/combat/index.html?standalone=1',{waitUntil:'networkidle'});
   await page.waitForFunction(()=>window.Encore?.offline.ready);
-  assert.equal(await page.evaluate(()=>window.Encore.version),'0.2.0');
+  assert.equal(await page.evaluate(()=>window.Encore.version),GAME_VERSION);
   await settings();
   await bind(0,'light').click();await page.keyboard.press('KeyB');
   assert.match(await page.locator('#binding-error').textContent(),/joueur 2/);
@@ -68,7 +72,7 @@ try{
   const music=await page.evaluate(()=>window.Encore.audio);
   assert.equal(music.theme,'menu');assert.ok(music.activeVoices<=24);
   checked('Original procedural music starts from a gesture with an independent mute','Effects off; music on; bounded voices');
-  await page.clock.install();await page.clock.pauseAt(new Date());
+  await page.clock.pauseAt(new Date('2026-10-22T12:10:00Z'));
   await home();
   await page.locator('[data-mode="training"]').click();
   await page.locator('[data-fighter="jax"]').click();
