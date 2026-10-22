@@ -36,12 +36,12 @@ const report = {
   checks: [], screenshots: [], measurements: {}, errors: [],
   limitations: [
     'The residents hallway is unchanged: a precise primary frame is still required.',
-    'Existing pixel artwork, reused interaction poses and crouch squash remain; no 1:1 art/animation certification.',
+    'Dedicated fight, crouch and outcome artwork remains partial; see render-poses-browser-report.json for current rigid presentation and source registrations. No 1:1 art certification.',
     'Object motifs illustrate existing fan-game moves, not newly asserted canonical fighting powers.',
     'Opaque black artwork exactly matching its opaque black matte cannot be distinguished without a new source asset.',
   ],
 };
-report.sourceHashes = Object.fromEntries(await Promise.all(['combat/render.mjs', 'combat/render-presentation.mjs', 'combat/data.mjs', 'tests/combat-render-browser.mjs'].map(async file => [file, createHash('sha256').update(await fs.readFile(file)).digest('hex')])));
+report.sourceHashes = Object.fromEntries(await Promise.all(['combat/render.mjs', 'combat/render-presentation.mjs', 'combat/render-poses.mjs', 'combat/data.mjs', 'combat/costume-fidelity.mjs', 'tests/combat-render-browser.mjs'].map(async file => [file, createHash('sha256').update(await fs.readFile(file)).digest('hex')])));
 const checked = (name, detail) => { report.checks.push({ name, detail, pass: true }); console.log(`PASS ${name}`); };
 
 try {

@@ -1,5 +1,6 @@
 import { SPRITE_CATALOG } from './sprite-catalog.mjs';
 import { FIDELITY_SOURCES, getFighterFidelity, getMoveFidelity, getStageFidelity } from './fidelity.mjs';
+import { COSTUME_SPRITE_OVERRIDES, getCostumeFidelity } from './costume-fidelity.mjs';
 
 /**
  * Digital Circus — Encore content.
@@ -7,7 +8,7 @@ import { FIDELITY_SOURCES, getFighterFidelity, getMoveFidelity, getStageFidelity
  * below is a fan-game adaptation, not a claim about canonical fighting powers.
  * Frames use the original CQC 60 Hz simulation and its 10000-health scale.
  */
-export const GAME = Object.freeze({ id: 'digital-circus-encore', name: 'Digital Circus — Encore', subtitle: 'Le Grand Duel', version: '0.3.0', contentDate: '2026-10-22' });
+export const GAME = Object.freeze({ id: 'digital-circus-encore', name: 'Digital Circus — Encore', subtitle: 'Le Grand Duel', version: '0.4.0', contentDate: '2026-10-22' });
 export const SOURCES = Object.freeze([
   { id: 'cainos', title: 'CainOS — base de travail et atlas existants', url: 'https://github.com/darknigthmare/CainOS/tree/4926834a2f063028903d6431e77f0bece859e671', kind: 'Dépôt utilisateur', scope: 'Inventaire du projet. Les mentions canon dans ses archives demandent une vérification indépendante.' },
   { id: 'cqc', title: 'CQC — version de référence P39', url: 'https://github.com/darknigthmare/shadow-codec-ops/tree/42279c1c884769873e66bbda0b6fe849bcd2f1a2/public/cqc', kind: 'Dépôt utilisateur', scope: 'Architecture intégrée/autonome, moteur de combat et IA portés depuis les fichiers réels.' },
@@ -346,8 +347,9 @@ export function classifyArchiveEntry(id) {
 
 export const ROSTER_ARCHIVE = SPRITE_CATALOG.map(entry => {
   const classification = classifyArchiveEntry(entry.id);
-  const sprite = entry.id === 'gloinkqueenscale' ? { ...entry.sprite, component: 'largest', nativeFacing: -1 } : entry.sprite;
-  return { ...entry, sprite, ...classification, fighterId: classification.baseFighterId };
+  const override = Object.hasOwn(COSTUME_SPRITE_OVERRIDES, entry.id) ? COSTUME_SPRITE_OVERRIDES[entry.id] : null;
+  const sprite = entry.id === 'gloinkqueenscale' ? { ...entry.sprite, component: 'largest', nativeFacing: -1 } : override ? { ...entry.sprite, ...override } : entry.sprite;
+  return { ...entry, sprite, ...classification, fighterId: classification.baseFighterId, ...(classification.category === 'variant' ? { fidelity: getCostumeFidelity(entry.id) } : {}) };
 });
 export const ARCHIVE = ROSTER_ARCHIVE;
 export const VARIANTS = ROSTER_ARCHIVE.filter(entry => entry.baseFighterId && entry.id !== entry.baseFighterId);

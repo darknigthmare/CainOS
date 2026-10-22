@@ -6,7 +6,7 @@ CainOS is a retro C&A mainframe-style interactive web app inspired by The Amazin
 
 CainOS now includes **Circus Combat — Encore**, a shared combat application and
 standalone game adapted from the real CQC engine of `shadow-codec-ops`.
-The playable game version is **0.3.0**.
+The playable game version is **0.4.0**.
 
 - In CainOS: complete the existing first-use calibration, then launch **Circus
   Combat** from the desktop or Start menu.
@@ -25,19 +25,33 @@ fan-game adaptations.
 
 ### Visual fidelity and traceable references
 
-The 0.3.0 pass preserves abstracted Kaufmo’s dark body when removing atlas
-backgrounds, and redraws the big top, cellar and Void from the official GLITCH
-stills actually reviewed. Named projectiles and traps receive distinct readable
-shapes. The selector previews each arena, including the first chapter’s actual
-stage in story mode.
+The 0.4.0 pass registers the existing animation cells against a stable body root
+and ground contact, preserves portrait aspect ratios, and gives each of the
+**51 costumes its own visual review**. Seventeen explicit source rectangles repair
+cells that cut an artist or included part of a neighbour. The original PNGs remain
+unchanged; presentation corrections are shared by CainOS and the standalone.
+A bounded palette correction restores red ribbons on Gangle's tragedy costume
+while preserving its mask, tears and alpha. Three ambiguous Shadow cells keep
+their full source image so matte removal no longer punches holes through the dark
+body; their opaque textured backgrounds remain documented.
 
-[combat/fidelity.mjs](combat/fidelity.mjs) is the shared source register for the
-codex and the workbook: **14 fighter, 140 technique and 12 arena records**. Each
-entry separates observed visual traits, original combat adaptations and the
-remaining review scope. Sources can be opened from optional disclosures in the
-codex and arena selector. Existing illustrations, dedicated fight poses, the
-residents’ corridor and all 51 costumes still need further visual comparison;
-this pass does not certify a complete 1:1 reproduction of the series.
+The selector now shows each player's chosen costume. **Voir la tenue** opens a
+wardrobe comparison at the actual combat scale, with compatible appearances,
+individual reference notes and an **Essayer en entraînement** action. Browsing
+and trying a costume does not award progression or replace a saved programme.
+
+[combat/fidelity.mjs](combat/fidelity.mjs) and
+[combat/costume-fidelity.mjs](combat/costume-fidelity.mjs) provide **217 records**:
+14 fighters, 140 techniques, 12 arenas and 51 costumes. A costume's atlas review
+is separate from its comparison to an official source. The notes record observed
+traits, framing, transparency, proportions, actual discrepancies and remaining
+work. Episode titles alone never count as visual approval.
+
+The earlier 0.3.0 corrections remain: Kaufmo's dark body survives matte removal,
+the big top/cellar/Void follow reviewed GLITCH stills, named combat objects have
+distinct shapes, and arena previews follow the chosen scene. Dedicated authored
+combat poses, final costume artwork and the residents' corridor still require
+further production; the project does not claim complete canonical 1:1 fidelity.
 
 ### Programmes and saved progress
 
@@ -65,9 +79,9 @@ Sources: [bindings.mjs](combat/bindings.mjs), [input.mjs](combat/input.mjs) and
 [audio.mjs](combat/audio.mjs).
 
 Existing version-one profiles migrate with safe defaults. Replays from **0.1.0,
-0.2.0 and 0.3.0** remain accepted, and playback adds no results to the profile.
+0.2.0, 0.3.0 and 0.4.0** remain accepted, and playback adds no results to the profile.
 Older recordings keep their original fighter rules and version when exported;
-0.3.0 gives Pomni and abstracted Kaufmo continuous physical retreats. JSON export
+The continuous retreats introduced in 0.3.0 are unchanged in 0.4.0. JSON export
 includes custom controls and the programme checkpoint. CainOS and the standalone
 share profiles on the same origin; another origin requires export/import.
 See [combat/session.mjs](combat/session.mjs).
@@ -97,8 +111,9 @@ are outside its offline cache. See [offline.mjs](combat/offline.mjs),
 The tracker separates delivered features from remaining production work: dedicated
 combat animation, final art and sound mixing, competitive balancing, networking,
 tag/assists, cooperation, episode campaigns, combat cloud sync and native packages.
-Real-device, accessibility and full costume art reviews remain distinct from the
-automated browser checks.
+Real-device and accessibility reviews remain distinct from automated checks. All
+51 costume atlas cells have been inspected; canonical comparisons and art repairs
+remain open where their individual records identify discrepancies.
 
 ## Development
 
@@ -124,10 +139,11 @@ npm run qa
 
 This runs the existing CainOS audits, combat behavioral tests, syntax checks,
 offline-manifest generation and both static builds. The recorded Node result for
-0.3.0 is **166 passing tests** across nine suites: engine, session, catalog,
-bindings, progression, audio, offline initialization, fidelity and rendering.
-The new suites verify the source register, unchanged legacy combat rules,
-continuous retreats, conservative matte removal and object presentation.
+0.4.0 is **193 passing tests** across eleven suites: engine, session, catalog,
+bindings, progression, audio, offline initialization, fidelity, rendering,
+costume matte/palette handling and pose presentation. They verify the shared
+source register, unchanged combat rules, continuous retreats, conservative matte
+removal, the 56 animation cells and posture geometry.
 
 The story/tournament browser suite has **8 passing checks and 9 played duels**.
 The controls/audio/offline suite has **11 passing checks**, including a cold
@@ -139,7 +155,10 @@ with an incompatible stored checkpoint. Offline installation recovery adds
 **3 passing checks** after a real HTTP 503, followed by a successful retry and
 offline reload. The fidelity UI/replay suite adds **9 passing checks**; the rendering suite adds
 **7 passing checks**, including atlas pixels and all projectile/trap definitions.
-The eight final reports total **64 passing browser checks**, with no recorded
+The wardrobe suite adds **8 passing checks** covering all 51 costumes, keyboard,
+touch and training without profile changes. The pose suite adds **10 passing
+checks** covering registration, rigid low stances and distinct combat states.
+The ten final reports total **82 passing browser checks**, with no recorded
 JavaScript errors. These checks do not certify full canonical 1:1 visual fidelity.
 See the [combat documentation](docs/DIGITAL_CIRCUS_ENCORE.md) and
 [QA evidence](docs/combat-qa-evidence.json) for exact scope, requirements and limits.

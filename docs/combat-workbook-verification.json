@@ -1,5 +1,5 @@
 {
-  "createdAt": "2026-10-22T11:15:17.524Z",
+  "createdAt": "2026-10-22T12:20:01.620Z",
   "counts": {
     "fighters": 14,
     "moves": 140,
@@ -17,12 +17,12 @@
     "features": 90,
     "production": 389,
     "scenarios": 85,
-    "qa": 267
+    "qa": 312
   },
   "qaSummary": {
-    "Réussi": 252,
+    "Réussi": 298,
     "Échec": 0,
-    "Non exécuté": 5,
+    "Non exécuté": 4,
     "À vérifier": 10
   },
   "verifiedSummary": [
@@ -42,8 +42,9 @@
     "fighters": 14,
     "moves": 140,
     "stages": 12,
-    "documented": 166,
-    "withPrimaryReference": 164,
+    "costumes": 51,
+    "documented": 217,
+    "withPrimaryReference": 198,
     "withoutPrimaryReference": [
       {
         "kind": "stage",
@@ -54,8 +55,104 @@
         "kind": "stage",
         "id": "training",
         "reviewStatus": "Création originale"
+      },
+      {
+        "kind": "costume",
+        "id": "ganglekawaii",
+        "reviewStatus": "Référence de costume à identifier"
+      },
+      {
+        "kind": "costume",
+        "id": "darkduojax",
+        "reviewStatus": "Référence de costume à identifier"
+      },
+      {
+        "kind": "costume",
+        "id": "darkduogangle",
+        "reviewStatus": "Référence de costume à identifier"
+      },
+      {
+        "kind": "costume",
+        "id": "maidragatha",
+        "reviewStatus": "Référence de costume à identifier"
+      },
+      {
+        "kind": "costume",
+        "id": "maidpomni",
+        "reviewStatus": "Référence de costume à identifier"
+      },
+      {
+        "kind": "costume",
+        "id": "maidgangle",
+        "reviewStatus": "Référence de costume à identifier"
+      },
+      {
+        "kind": "costume",
+        "id": "jaxgirl",
+        "reviewStatus": "Référence de costume à identifier"
+      },
+      {
+        "kind": "costume",
+        "id": "shadowpomni",
+        "reviewStatus": "Référence de costume à identifier"
+      },
+      {
+        "kind": "costume",
+        "id": "shadowjax",
+        "reviewStatus": "Référence de costume à identifier"
+      },
+      {
+        "kind": "costume",
+        "id": "shadowragatha",
+        "reviewStatus": "Référence de costume à identifier"
+      },
+      {
+        "kind": "costume",
+        "id": "shadowkinger",
+        "reviewStatus": "Référence de costume à identifier"
+      },
+      {
+        "kind": "costume",
+        "id": "shadowgangle",
+        "reviewStatus": "Référence de costume à identifier"
+      },
+      {
+        "kind": "costume",
+        "id": "shadowzooble",
+        "reviewStatus": "Référence de costume à identifier"
+      },
+      {
+        "kind": "costume",
+        "id": "shadowcaine",
+        "reviewStatus": "Référence de costume à identifier"
+      },
+      {
+        "kind": "costume",
+        "id": "horrorpomnivoid",
+        "reviewStatus": "Référence de costume à identifier"
+      },
+      {
+        "kind": "costume",
+        "id": "horrorpomnispiral",
+        "reviewStatus": "Référence de costume à identifier"
+      },
+      {
+        "kind": "costume",
+        "id": "horrorpomniskull",
+        "reviewStatus": "Référence de costume à identifier"
       }
     ],
+    "costumeReviews": {
+      "documented": 51,
+      "technicalStatuses": {
+        "Revue technique effectuée": 37,
+        "Revue technique effectuée — limites consignées": 14
+      },
+      "withRecordedIssues": 14,
+      "withPrimaryReferences": 34,
+      "withObservedPrimaryTraits": 7,
+      "canonicalSourceRequiredForCertification": true
+    },
     "sourceIds": [
       "glitch",
       "ep1",
@@ -73,7 +170,14 @@
       "glitch-candy-court",
       "glitch-circus-props",
       "glitch-undermap",
-      "glitch-false-exit"
+      "glitch-false-exit",
+      "temmer-interview",
+      "store-gangle-masks",
+      "store-gangle-figure",
+      "store-maid-jax",
+      "store-spudsy-gangle",
+      "store-costume-group",
+      "store-spudsy-ragatha"
     ],
     "globalVisualCertification": false
   },
@@ -93,44 +197,58 @@
   ],
   "qaEvidencePresent": true,
   "sourceDigests": {
-    "combat/app.mjs": "f84f9c5e869fddef896be1c3413cb06a6e0fde74cfc9e5b23b20abc7dd43430a",
+    "combat/app.mjs": "91da9de00babaac7c72eb0dea51bb4cd0b5bc1f4a5375969d337c9fe1f3d61f8",
     "combat/audio.mjs": "fbce0e74431c354a01e7ebc46b75084b6c81c233c1ed3807bcac6b97d8e1329b",
     "combat/bindings.mjs": "8352b4a92afb27a85220b21feb5b7f53b34a2c4eabfedff2f400259329988969",
-    "combat/data.mjs": "45a0d61c702b8fdd6ff55715b14b8adfc83f676ba966ce79141c0409defa67b3",
+    "combat/costume-fidelity.mjs": "9e6a02f0fb5dcb684d05b92986833bcf79b6962961e1fcd17f68a0769cbe61b5",
+    "combat/data.mjs": "889392a6a46c9de66e62c8e711dcc4f245aa8ee5a8dca7340be3053570c8e33b",
     "combat/engine.mjs": "cc22edd35abeff874a2bf27ff64dd669f30484e70bb3bfba4ea868dd9c8ebc1a",
-    "combat/fidelity.mjs": "91ba3527b8e6b2600da18abe23162188ee0360bdd8b7268cfcc07fbd279c455f",
+    "combat/fidelity.mjs": "4949a63ed5a0cb9b1372a67e2519a3b34836f309e077944cfa1cb033491736bf",
     "combat/icon.svg": "9306b192eaaa246307b0d0d13262ca21f0a913ad123eb1bc1c1adf94890ec19b",
     "combat/index.html": "a460399b3a66c087201680263277a0bcdb58d1488db7b74e84c9ec59a1b56c8c",
     "combat/input.mjs": "bd6e648180730a662fdb60ce91d93cb8b60d9ef88f01922059dd46808ad8170b",
     "combat/manifest.webmanifest": "3a7f78eb5c4cc3f7c90784a8bcba425dc91fdc1e1c401fc26b3a81f12d4534aa",
-    "combat/offline-manifest.mjs": "f2925cda6af6fcd2b891a1d28ecb16fead476c4bef8413656b774475c8383d4d",
+    "combat/offline-manifest.mjs": "7e0e27876cdc8f0f1ccb23398a800c3df2091605477e1550d24990dfe1e950e2",
     "combat/offline.mjs": "704b87db56c26365c770c46df33a0ebfa6c2639d1b97df8183794dfb8417e4c9",
     "combat/progression.mjs": "a5a3d697b034146464d0c315a2a5dc5891557caf1a58ad1d8dd8551a5f585f15",
-    "combat/render-presentation.mjs": "3a56700e53d9085b99cb7169e101dbe634d2cb95707718d468972f1bb36d9579",
-    "combat/render.mjs": "4859269a4c19aff5cbe2e3b6bb4a28714ac697d49cf6b45fa2e78c97d3c8cf99",
-    "combat/session.mjs": "2bd7d7de04a9fd0b07d9f02e0e110cfdf8aaa7cf6e133d863dda1cdda1fb8322",
+    "combat/render-poses.mjs": "f0189e749d5901ca8310065e8188c82048b923517519dee42603050d00311be8",
+    "combat/render-presentation.mjs": "370469edb54fe87cfa4f649984cf8c6dfb77419b018dbb1d8fedc432b9fe607e",
+    "combat/render.mjs": "c214b96774f7baa11427c286b8cffd3ef8be2a354a02c6ba65d4768389d4cda7",
+    "combat/session.mjs": "256aff1b2997da80d6a74f158a02908e503b859ea07644dfc604909cabd9c82c",
     "combat/sprite-catalog.mjs": "41ad2ff416eef0d9426dd8ec17218a35b0c6a016a6dbf73e8e96a1f86d1a2172",
     "combat/stories.mjs": "08c8dc0270d4aa2bfc2f79e8a4180aa4ed9dc0dfb03361e199a2c07507e17ea7",
-    "combat/style.css": "f89e105e79afbbc9350c374240c38cda89cc5c525362e80a93a18f0cb9ffd86f",
+    "combat/style.css": "57202ac6f5c3827e621ee61e617efde7848e160288f9e03e3f22b8f89ad317d2",
     "combat/sw.js": "0893718df1437a22b716a27ca5fafb7e9fc18ed1fbd47f64eb43062e1199eeab",
     "tests/combat-audio.test.mjs": "94c7200d6b9f9970578a60b8ddadc9d90994f9c3c56dbd308cc1da24c0116ca7",
     "tests/combat-bindings.test.mjs": "21f8c5c92cb80728ebfe25588fdb2d8289fec6f8983dbe9abcbf694d2df91708",
     "tests/combat-browser.mjs": "25c5085416211aa2f9639097f1de57bc0dcb4443bd57e336f8242fe76cc8ff6e",
-    "tests/combat-catalog.test.mjs": "1198d4169e4629d826ec221f21191ca75681a4e88089d237e609e842a263d80c",
+    "tests/combat-catalog.test.mjs": "a197db036d4e7faa1ea0d312f117ecd35f0a43ab9eaea428ee815f8d44ffc3c0",
+    "tests/combat-costume-browser.mjs": "35a8fc69bd59d90ca55719c6063e76a0cfc5268beb7e4df7850aff616b5c81b6",
     "tests/combat-encore-browser.mjs": "3a2f45a3d73c864be0e4da8705fa544011484bbc1600d0c9af356d7168dedc03",
     "tests/combat-engine.test.mjs": "5fb1260ef501eadf1e55bd879d70ee872ca10ea60f78a5b807fda35f112d0485",
-    "tests/combat-fidelity-browser.mjs": "ba5121fb723a20e41aacaff92fe7b07d48784d6bc7f1e81b187abcaa83a5fe9b",
-    "tests/combat-fidelity.test.mjs": "cdfb5767bef6865ece8342f0bd10df65b422ed65898dc94e60eb7f8f65e5a754",
+    "tests/combat-fidelity-browser.mjs": "de0d5efb9c6775a7f9ac1d69592315b73929d0a1c5079d6aaf515d5f7ad0b8fb",
+    "tests/combat-fidelity.test.mjs": "777f7e9f789b7494160616bfb8edddf72209705a43d9176f2a1f9fc165f14fb5",
     "tests/combat-offline-browser.mjs": "a2c736e0cbf7c3f1179b08667ffa2baedb6211d11a9547cfc36dfab7af021f3a",
     "tests/combat-offline.test.mjs": "f070eb711be11562ef492ba17c8cc7b9cb00f7087784410e23acb62917559476",
     "tests/combat-profile-recovery-browser.mjs": "d6ba225ae115114758d83f08d1cc2c697f164430e94b14905f146d55cd358111",
     "tests/combat-progression-browser.mjs": "2024357b9fd071694ec8e4224d43e40b8cf7732502e6e1ef1f7b2dff20c8cc5f",
     "tests/combat-progression.test.mjs": "cbd27b27316563868585d25a5e1e7613ef4b0a15f42a63b2032efeb334a3f7f8",
     "tests/combat-recovery-browser.mjs": "efbce0402d3e37d367fb61792bcf68b760ac89c7c295ee3c282138cb2537b5bd",
-    "tests/combat-render-browser.mjs": "1bdfc661578c37e1f0741559a25f960dfbb3d8a8e90704025b387042b6f37312",
+    "tests/combat-render-browser.mjs": "35d46718382ef7a949e68ba0b22fd513eb440507520c59470b7256125f068085",
+    "tests/combat-render-matte.test.mjs": "28f7b0791b9bae5ca55fedf8d84a9a3700e8555533c39b7471abe92ca7a16a4e",
+    "tests/combat-render-poses-browser.mjs": "2adc6557d8fc66bdba602ad5cccee9fdf3d3d570d6a5a7a96ed5007628fca397",
+    "tests/combat-render-poses.test.mjs": "688f4554ef4ebd54cbcc28beb43a624fa59a747c4eed351ab9ee83920179a9a8",
     "tests/combat-render.test.mjs": "12782fc6f79383dce449336c6fb88564fc26f0e735622040f3e616df2b99b1cb",
-    "tests/combat-session.test.mjs": "626fb50bc6108531839dfef1a0a1a249b4499f4253f3cd0b60164bfb11e548d7",
-    "docs/combat-qa-evidence.json": "acefe4656000b6219e44e5acce5fde3a76a1ce6330953c10c751843f727d7db2",
-    "scripts/build-combat-workbook.mjs": "301e525b86b2a8e7238888606855dc8320e8106ec7e5934874eb0dfa86024019"
+    "tests/combat-session.test.mjs": "0b3566b48117a1fc25ae8a9a180652ec10e3ce26057d090149972399b266042d",
+    "docs/combat-qa-evidence.json": "f47f36278f29eac84514040ac8e8419a3ead63de7f9eb7d8461f897118afd2b7",
+    "scripts/build-combat-workbook.mjs": "eb74468a59600c9f000d6b02dd0fb008f14d31f5a958804ff147829e9c56fd22",
+    "docs/combat-costume-review.json": "bdc92fb854e3370aa9f38f802fc5bc648292483b31912c4241cbcc2c24178f05",
+    "docs/images/gangle-palette-0.4.0.png": "bced55b513c57190ea787a3e42f243046f25aeba6517bc4c88c66a959ecfb795",
+    "docs/images/shadow-preservation-0.4.0.png": "11bb5b80810400bbab6d1e35599605d119003f4001178205bce39a864c0661c4",
+    "docs/images/costumes-0.4.0-page-1.png": "c36d412ef4adb34fe0b8a177be3863866727f5b91cb9df0d073f70268077500c",
+    "docs/images/costumes-0.4.0-page-2.png": "f0e8655c95edf46df73ab490b8e6529e25ad2bc57619e8580a50008c06e6c5a7",
+    "docs/images/costumes-0.4.0-page-3.png": "646bd96935480e9ea8f3014c16a9572f9c6ab9e6591fff48370d9c88a638560b",
+    "docs/images/costumes-0.4.0-page-4.png": "88369b5badf9be203dbb758173bf5efd4ab3d2f9115ac566452f7054bffe400f",
+    "docs/images/costumes-0.4.0-page-5.png": "e67cc5d7b7950fb2e718b911e0f670101bc34f72631c22296ef7c9ad780dda5f"
   }
 }

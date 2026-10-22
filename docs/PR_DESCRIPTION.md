@@ -1,4 +1,4 @@
-# Digital Circus — Encore 0.3.0
+# Digital Circus — Encore 0.4.0
 
 Suite de la [PR #1](https://github.com/darknigthmare/CainOS/pull/1), fusionnée le
 22 octobre 2026. Cette proposition part de `main` au commit
@@ -6,17 +6,54 @@ Suite de la [PR #1](https://github.com/darknigthmare/CainOS/pull/1), fusionnée 
 
 ## Pourquoi
 
-CainOS intègre désormais **Digital Circus — Encore / Le Grand Duel**, adapté du
-CQC du projet Metal Gear et jouable dans le bureau comme en standalone. Cette PR
-complète cette première version avec les points de reprise, les histoires
-individuelles, le tournoi, les commandes personnalisables, la musique originale
-et une distribution web installable avec pack hors ligne. La passe 0.3.0 corrige
-la présentation des personnages, décors et accessoires, documente les références
-et préserve les règles des anciens replays. Le catalogue corrige
-aussi la sélection des costumes et le HUD suit le combo en cours.
-L’OS, le standalone et le classeur utilisent les mêmes définitions de contenu.
+CainOS intègre **Digital Circus — Encore / Le Grand Duel**, adapté du CQC du
+projet Metal Gear, jouable dans le bureau et en standalone. Cette PR complète
+le port avec les histoires, le tournoi, la reprise, les commandes personnalisées,
+la musique et le mode hors ligne. La passe **0.4.0** corrige le placement des
+poses et les cellules de costumes, ajoute la garde-robe et documente séparément
+la revue technique des images et leur comparaison aux références officielles.
+L'OS, le standalone et l'Excel utilisent les mêmes définitions.
 
-## Passe de fidélité 0.3.0
+## Nouvelle passe de fidélité 0.4.0
+
+- **51 costumes examinés individuellement.** Chaque fiche décrit les traits
+  visibles dans l'atlas, l'identité, le cadrage, la transparence, les proportions,
+  les défauts et la capture de revue. Sept comparaisons ciblées aux sources
+  primaires restent distinctes de cet examen technique exhaustif.
+- **17 découpes corrigées.** Des rectangles explicites remplacent les cellules
+  qui coupaient un membre ou embarquaient le personnage voisin. Les PNG et les
+  identifiants historiques sont conservés.
+- **Couleur et intégrité corrigées de façon ciblée.** Gangle tragédie retrouve
+  des rubans rouges : 11 227 pixels corrigés, sans changement des zones protégées
+  du masque, des larmes, de la main, de l'alpha ou du cadre. Trois cellules Shadow
+  conservent leur source entière, avec zéro différence RGBA, pour protéger le
+  corps noir ; leur fond opaque reste explicitement à finaliser.
+- **Sélection fidèle à la tenue choisie.** Les portraits de J1/J2 se mettent à
+  jour immédiatement et gardent leur rapport largeur/hauteur. La garde-robe
+  compare l'original et le costume au rendu réel, puis permet de les essayer en
+  entraînement avec les mêmes techniques.
+- **56 images d'animation recalées.** Les sept planches ont une origine du corps
+  et un contact au sol par cellule. Le portail de Caine ne déplace plus le centre
+  du personnage et le ruban de Gangle débordant de sa case reste entier.
+- **Présentation des poses sans écrasement global.** La garde basse de Pomni,
+  Jax et Zooble articule prudemment les jambes des dessins existants en gardant
+  visage, haut du torse et chaussures intacts. Les franges transparentes se
+  chevauchent aux hanches ; l’image composée entière n’est pas identique pixel
+  par pixel à la pose debout. Les autres morphologies et costumes
+  conservent leur illustration jusqu'à la production de poses dédiées.
+- **217 fiches partagées.** Le registre regroupe 14 combattants, 140 techniques,
+  12 arènes et les 51 costumes. Atlas expose les examens individuels dans l'Excel ;
+  les notes correspondantes s'ouvrent depuis la garde-robe.
+- **Compatibilité préservée.** Les 140 techniques gardent les règles de 0.3.0,
+  le profil reste en version 1 et les replays 0.1/0.2/0.3/0.4 restent acceptés.
+  Les costumes conservent leurs 51 identifiants.
+
+Les écarts réellement observés sont conservés dans les fiches : détails de
+Maid Jax, masques et tenues de Gangle, uniforme de Ragatha, fonds texturés de
+certaines illustrations et peau grise dans la planche animée de Jax. Une fiche
+inspectée ou un test réussi ne certifie pas une reproduction canonique complète.
+
+## Corrections conservées depuis 0.3.0
 
 - **Détourage de Kaufmo corrigé.** La suppression du fond de l’atlas ne traverse
   plus son corps noir ni ses détails internes. Les illustrations originales
@@ -42,11 +79,9 @@ L’OS, le standalone et le classeur utilisent les mêmes définitions de conten
   parcours. Les références de personnage, de coup et de décor s’ouvrent à la
   demande au clavier ou au tactile.
 
-Cette passe rapproche la présentation des références effectivement consultées.
-Elle ne certifie pas une reproduction canonique complète : poses de combat,
-accroupissement, proportions, couloir des résidents et 51 costumes restent à
-comparer ou à finaliser. Les techniques et histoires sont des adaptations de
-fan-game, identifiées comme telles dans chaque fiche.
+Les techniques et histoires restent des adaptations de fan-game, identifiées
+comme telles. Les dessins de combat dédiés, le couloir des résidents et les
+écarts artistiques consignés dans les fiches restent à produire ou corriger.
 
 ## Contenu conservé depuis la version 0.2.0
 
@@ -107,7 +142,7 @@ CacheStorage laisse la réponse réseau disponible. Sources :
 
 Le profil local reste au format version 1. Les anciens profils conservent leurs
 données reconnues et reçoivent les nouvelles valeurs par défaut. Les replays
-**0.1.0, 0.2.0 et 0.3.0** restent acceptés ; l’absence de costumes dans un ancien replay
+**0.1.0, 0.2.0, 0.3.0 et 0.4.0** restent acceptés ; l’absence de costumes dans un ancien replay
 sélectionne les apparences originales. La lecture n’ajoute aucun résultat au
 palmarès. Les anciens reculs de Pomni/Kaufmo sont conservés pour les replays
 0.1.0/0.2.0 ; les nouvelles règles ne sont pas appliquées à ces enregistrements.
@@ -134,12 +169,14 @@ feuilles : Synthèse, Fonctionnalités, Combattants, Techniques, Arènes, Atlas,
 Production, Scénarios, QA et Références. Les inventaires, 56 chapitres, thèmes,
 effets et preuves de test proviennent des fichiers réels. Les fiches Combattants,
 Techniques et Arènes ajoutent cinq champs de fidélité partagés avec le codex :
-sources, observations, adaptation, statut et portée de revue. Les éléments livrés,
+sources, observations, adaptation, statut et portée de revue. Atlas ajoute les
+51 examens individuels avec huit champs techniques et cinq champs de référence,
+sans déplacer les colonnes A:S ; les notes utilisateur sont en colonne AG. Les éléments livrés,
 partiels, prévus et restant à vérifier ont des statuts distincts et des critères
 de réception. Le classeur reste filtrable et éditable : **90 fonctionnalités, 389 tâches de
-production, 85 scénarios et 267 lignes QA**, avec 34 formules et neuf tableaux.
-Les lignes QA comptent 252 réussites, dix points à vérifier et cinq non exécutés ;
-elles recoupent les tests ci-dessous et ne constituent pas 267 tests indépendants.
+production, 85 scénarios et 312 lignes QA**, avec 34 formules et neuf tableaux.
+Les lignes QA comptent 298 réussites, dix points à vérifier et quatre non exécutés ;
+elles recoupent les tests ci-dessous et ne constituent pas 312 tests indépendants.
 
 La provenance du moteur, les commandes et l’architecture sont détaillées dans
 [`DIGITAL_CIRCUS_ENCORE.md`](https://github.com/darknigthmare/CainOS/blob/feat/encore-0-2-story-offline/docs/DIGITAL_CIRCUS_ENCORE.md). Références de départ :
@@ -150,8 +187,9 @@ cette PR **53d56cf30484708af7c171babd3a05aa684d9a8a** ; CQC
 
 ## Validation consignée
 
-- **166 tests Node réussis** : 40 moteur, 32 session, 7 catalogue, 16 commandes,
-  19 progression, 14 audio, 14 initialisation hors ligne, 12 fidélité et 12 rendu. Les tests couvrent
+- **193 tests Node réussis** dans onze suites : 40 moteur, 32 session, 9 catalogue,
+  16 commandes, 19 progression, 14 audio, 14 initialisation hors ligne,
+  15 fidélité, 12 rendu, 5 détourage/palette et 17 poses. Les tests couvrent
   notamment les 140 techniques, les six défis, les 14 routes, les tableaux
   déterministes, la récupération du profil et les erreurs d’installation.
 - **8/8 contrôles histoires/tournoi**, avec **9 duels réellement joués** via
@@ -179,26 +217,32 @@ cette PR **53d56cf30484708af7c171babd3a05aa684d9a8a** ; CQC
   pack complet puis rechargement sans réseau.
 - **9/9 contrôles sources/interface/replays**, via `tests/combat-fidelity-browser.mjs` :
   166 fiches, 12 aperçus, premières scènes des 14 histoires, versions de replay
-  0.1/0.2/0.3, répétition, export et vues à 390 px.
+  0.1/0.2/0.3/0.4, répétition, export et vues à 390 px.
 - **7/7 contrôles de rendu**, via `tests/combat-render-browser.mjs` : détourage de
   Kaufmo, 14 premières poses idle, 12 décors, 20 projectiles/10 pièges, identité
   des objets, visibilité et mouvement réduit. Les sources et captures sont
   empreintées ; les mesures techniques restent distinctes de la revue artistique.
-- **Total final : 64 contrôles navigateur réussis** sur les huit suites,
+- **8/8 contrôles garde-robe**, via `tests/combat-costume-browser.mjs` : les 51
+  portraits et fiches propres, J1/J2 indépendants, changements rapides, clavier,
+  essai en entraînement sans modifier le profil et tactile à 390 px.
+- **10/10 contrôles poses**, via `tests/combat-render-poses-browser.mjs` : les 56
+  cellules, 14 bases × 12 états, les 51 tenues sans rig, trois postures basses,
+  clés de cache séparées et aucune mutation des données de simulation.
+- **Total final : 82 contrôles navigateur réussis** sur les dix suites,
   sans erreur JavaScript consignée dans leurs rapports finaux.
 - Le contrôle du classeur et les rapports consolidés sont suivis dans
   [`combat-qa-evidence.json`](https://github.com/darknigthmare/CainOS/blob/feat/encore-0-2-story-offline/docs/combat-qa-evidence.json) et
   [`combat-workbook-verification.json`](https://github.com/darknigthmare/CainOS/blob/feat/encore-0-2-story-offline/docs/combat-workbook-verification.json).
 
 `npm run qa` regroupe les audits CainOS, vérifications de syntaxe, tests Node,
-manifest hors ligne et builds. Les huit suites navigateur sont exécutées
+manifest hors ligne et builds. Les dix suites navigateur sont exécutées
 séparément ; leurs prérequis et commandes figurent dans la documentation.
 
 ## Limites suivies dans le classeur
 
 Les histoires sont des créations de fan-game. Les planches et poses CainOS servent
 encore aux animations, avec des transformations procédurales ; animations de
-combat dédiées, accroupissement, proportions finales, couloir des résidents,
+combat dessinées spécifiquement, proportions finales, couloir des résidents,
 portraits finaux, ambiances/voix, certains effets encore partagés et mixage
 matériel demandent de la finition. Les 12 thèmes synthétiques sont livrés.
 
@@ -207,9 +251,19 @@ cinématiques, cloud de combat, économie, paquets natifs et équilibrage compé
 complet restent prévus. La reprise du noyau CQC ne porte pas automatiquement toutes
 ses extensions Metal Gear. Les contrôles Chromium/WebAudio ne certifient pas une
 écoute humaine, deux manettes physiques, les téléphones réels, l’accessibilité
-complète ou la revue visuelle exhaustive des 51 costumes.
+complète ou une conformité canonique intégrale des 51 costumes. Leur revue
+technique est réalisée ; les comparaisons officielles restent limitées aux
+références effectivement consultées.
 
-## Aperçus de la version 0.3.0
+## Aperçus de la version 0.4.0
+
+![Poses recalées et posture basse sans écrasement global](https://raw.githubusercontent.com/darknigthmare/CainOS/feat/encore-0-2-story-offline/docs/images/encore-poses-crouch.png)
+
+![Sélection de la tenue pour chaque joueur](https://raw.githubusercontent.com/darknigthmare/CainOS/feat/encore-0-2-story-offline/docs/images/encore-costume-selection.png)
+
+![Garde-robe, comparaison et références individuelles](https://raw.githubusercontent.com/darknigthmare/CainOS/feat/encore-0-2-story-offline/docs/images/encore-costume-wardrobe.png)
+
+## Aperçus des fonctions conservées
 
 ![Aperçu de la grande piste et références du décor](https://raw.githubusercontent.com/darknigthmare/CainOS/feat/encore-0-2-story-offline/docs/images/encore-fidelity-stage.png)
 

@@ -9,6 +9,10 @@ import { FIGHTERS } from './data.mjs';
  */
 export function removeAtlasMatte(data, width, height, options = {}) {
   if (!Number.isInteger(width) || !Number.isInteger(height) || width < 1 || height < 1 || data.length !== width * height * 4) throw new Error('Invalid atlas cell');
+  // Some reviewed Shadow cells use indistinguishable black pixels for their
+  // background and bodies. Preserve their complete source, including its
+  // opaque texture, rather than guessing a contour and deleting the body.
+  if (options.mode === 'preserve-source') return 0;
   const corners = [0, width - 1, (height - 1) * width, width * height - 1]
     .map(i => [data[i * 4], data[i * 4 + 1], data[i * 4 + 2], data[i * 4 + 3]]);
   if (corners.some(c => c[3] < 12)) return 0;
@@ -37,6 +41,46 @@ export function removeAtlasMatte(data, width, height, options = {}) {
     push(x + 1, y); push(x - 1, y); push(x, y + 1); push(x, y - 1);
   }
   return removed;
+}
+
+/**
+ * A deliberately local correction for the reviewed Gangle tragedy crop.
+ * The official Gangle references keep the ribbons red. Only blue-violet pixels
+ * in the ribbon area are recoloured; the mask, tears, hand and alpha are
+ * untouched. The region is coupled to sourceRect(450,340,245,285), so a future
+ * different crop fails closed instead of applying a global colour filter.
+ */
+export function applySpritePalette(data, width, height, paletteSwap) {
+  if (paletteSwap !== 'gangle-red-ribbons') return 0;
+  if (!Number.isInteger(width) || !Number.isInteger(height) || data.length !== width * height * 4) throw new Error('Invalid palette frame');
+  if (width !== 245 || height !== 285) return 0;
+  let changed = 0;
+  for (let y = 0; y < height; y++) {
+    for (let x = 0; x < width; x++) {
+      // The lower mask has a rounded outline, not a rectangular torso-width
+      // exclusion. This reviewed envelope includes its tears and dark edge;
+      // the separate pale hand on the cheek has its own protected rectangle.
+      // The explicit geometry belongs only to the absolute crop above.
+      const onMask = ((x - 147) / 62) ** 2 + ((y - 75) / 65) ** 2 <= 1;
+      const onCheekHand = x >= 175 && x <= 212 && y <= 146;
+      if (y < 97 || onMask || onCheekHand) continue;
+      const p = (y * width + x) * 4;
+      if (data[p + 3] < 12) continue;
+      const r = data[p], g = data[p + 1], b = data[p + 2];
+      if (b < r + 9 || b < g + 4) continue;
+      const min = Math.min(r, g, b), max = Math.max(r, g, b), chroma = max - min;
+      if (chroma / max < 0.12) continue; // pale neutral highlights are not ribbon colour
+      const hue = (r - g) / chroma * 60 + 240;
+      if (hue < 215 || hue > 260) continue;
+      // Keep the original light/dark values and texture, shifting its chroma
+      // from blue-violet to red. No alpha, contrast or unrelated pixel changes.
+      data[p] = max;
+      data[p + 1] = min;
+      data[p + 2] = min;
+      changed++;
+    }
+  }
+  return changed;
 }
 
 const projectileShapes = Object.freeze({

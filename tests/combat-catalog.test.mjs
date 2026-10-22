@@ -1,6 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 import { SPRITE_CATALOG } from '../combat/sprite-catalog.mjs';
+import { COSTUME_SPRITE_OVERRIDES, getCostumeFidelity } from '../combat/costume-fidelity.mjs';
 import {
   FIGHTERS, ROSTER_ARCHIVE, VARIANTS, COSTUME_BASE_FIGHTERS,
   ARCHIVE_ONLY_ENTRIES, classifyArchiveEntry,
@@ -115,4 +118,41 @@ test('every classified appearance still points at a bounded source atlas cell', 
     assert.ok(Number.isInteger(row) && row >= 0 && row < rows, entry.id);
     assert.match(src, /^\.\.\/assets\//, entry.id);
   }
+});
+
+test('the 51 stable costume IDs and fighter bindings remain exact for existing profiles and replays', () => {
+  // Independently derived from the published 171f422 data.mjs (Encore 0.3.0).
+  const digest = createHash('sha256').update(JSON.stringify(VARIANTS.map(v => [v.id, v.baseFighterId]))).digest('hex');
+  assert.equal(digest, 'b738cfcfce663d6ce2d8c636b1c8fe1ab495e54d775ecc54ea14c2886c0f470d');
+  for (const variant of VARIANTS) assert.equal(variant.fidelity, getCostumeFidelity(variant.id));
+  for (const entry of ROSTER_ARCHIVE.filter(e => e.category !== 'variant')) assert.equal(entry.fidelity, undefined, 'costume reviews are not inherited by unrelated archive entries');
+});
+
+test('all seventeen corrected costume rectangles fit their actual PNG and preserve source grid metadata', () => {
+  const crops = Object.entries(COSTUME_SPRITE_OVERRIDES).filter(([, override]) => override.sourceRect);
+  assert.equal(crops.length, 17);
+  const sizes = new Map();
+  for (const [id, override] of crops) {
+    const entry = byId.get(id);
+    assert.equal(entry.category, 'variant', id);
+    assert.equal(entry.sprite.sourceRect, override.sourceRect, id);
+    if (!sizes.has(entry.sprite.src)) {
+      const png = readFileSync(new URL(entry.sprite.src, new URL('../combat/data.mjs', import.meta.url)));
+      assert.equal(png.subarray(1, 4).toString(), 'PNG');
+      sizes.set(entry.sprite.src, [png.readUInt32BE(16), png.readUInt32BE(20)]);
+    }
+    const [width, height] = sizes.get(entry.sprite.src);
+    const r = entry.sprite.sourceRect;
+    for (const value of Object.values(r)) assert.ok(Number.isInteger(value), id);
+    assert.ok(r.x >= 0 && r.y >= 0 && r.width > 0 && r.height > 0, id);
+    assert.ok(r.x + r.width <= width && r.y + r.height <= height, id);
+    const source = SPRITE_CATALOG.find(e => e.id === id);
+    for (const key of ['src', 'sheet', 'cols', 'rows', 'col', 'row']) assert.equal(entry.sprite[key], source.sprite[key], `${id}:${key}`);
+  }
+  assert.ok(byId.get('ganglecomedy').sprite.sourceRect.y + byId.get('ganglecomedy').sprite.sourceRect.height <= 640, 'Ragatha starts below this crop');
+  assert.ok(byId.get('gangletragedy').sprite.sourceRect.y + byId.get('gangletragedy').sprite.sourceRect.height < 632, 'Kinger’s cross is outside this crop');
+  assert.deepEqual(VARIANTS.filter(v => v.sprite.paletteSwap).map(v => v.id), ['gangletragedy']);
+  assert.deepEqual(VARIANTS.filter(v => v.sprite.matteMode).map(v => [v.id, v.sprite.matteMode]), [
+    ['shadowpomni', 'preserve-source'], ['shadowragatha', 'preserve-source'], ['shadowcaine', 'preserve-source'],
+  ], 'only the three reviewed ambiguous Shadow cells bypass removal');
 });

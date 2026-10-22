@@ -73,17 +73,20 @@ function setScreen(next) {
   if (changed && next !== 'fight') queueMicrotask(() => main.focus({ preventScroll: true }));
   syncAudio();
 }
-function showDialog(content) { $('#modal-content').innerHTML = content; if (!modal.open) modal.showModal(); else modal.querySelector('button:not(:disabled)')?.focus(); syncAudio(); }
-function closeDialog() { bindingCapture = null; modal.close(); }
+function showDialog(content) { modal.classList.remove('wardrobe-dialog'); $('#modal-content').innerHTML = content; if (!modal.open) modal.showModal(); else modal.querySelector('button:not(:disabled)')?.focus(); syncAudio(); }
+function closeDialog() { bindingCapture = null; modal.classList.remove('wardrobe-dialog'); modal.close(); }
 function title(eyebrow, heading, description='') { return `<div class="page-title"><span class="ticket-label">${escapeHTML(eyebrow)}</span><h1>${escapeHTML(heading)}</h1>${description ? `<p>${escapeHTML(description)}</p>` : ''}</div>`; }
+async function paintPortrait(canvas) {
+  const item = ARCHIVE.find(f => f.id === canvas.dataset.portrait) || getFighter(canvas.dataset.portrait);
+  // Full combat definitions provide the animated original appearance.
+  const fighter = FIGHTERS.find(f => f.id === item.id) || item;
+  try {
+    if (!await drawPortrait(canvas, fighter)) throw new Error('Portrait indisponible');
+  } catch { canvas.setAttribute('aria-label', `${fighter.name} — illustration indisponible`); }
+}
 function portraits() {
   const nodes = main.querySelectorAll('canvas[data-portrait]');
-  const load = canvas => {
-    const item = ARCHIVE.find(f => f.id === canvas.dataset.portrait) || getFighter(canvas.dataset.portrait);
-    // Full combat definitions provide the high quality animated idle portrait.
-    const fighter = FIGHTERS.find(f => f.id === item.id) || item;
-    drawPortrait(canvas, fighter).catch(() => { canvas.setAttribute('aria-label', `${fighter.name} — illustration indisponible`); });
-  };
+  const load = canvas => { void paintPortrait(canvas); };
   if ('IntersectionObserver' in window) {
     currentObserver = new IntersectionObserver(entries => entries.forEach(entry => { if (entry.isIntersecting) { load(entry.target); currentObserver.unobserve(entry.target); } }), { rootMargin:'160px' });
     nodes.forEach(node => currentObserver.observe(node));
@@ -115,7 +118,7 @@ function renderSelect() {
   main.innerHTML = `${title(mode.eyebrow,selection.mode==='challenge'?challenge.name:'Qui entre en scène ?',selection.mode==='challenge'?challenge.text:mode.description)}
     <div class="pick-header"><h2>Les artistes</h2><div class="pick-side"><button data-side="0" class="${selection.side===0?'active':''}">JOUEUR 1</button>${single?'':`<button data-side="1" class="${selection.side===1?'active':''}">${selection.mode==='local'?'JOUEUR 2':'ADVERSAIRE'}</button>`}</div></div>
     <div class="roster">${FIGHTERS.map(f=>`<button class="fighter-card ${selection.fighters[0]===f.id?'selected':''} ${!single&&selection.fighters[1]===f.id?'rival':''}" data-fighter="${f.id}" aria-label="Choisir ${escapeHTML(f.name)}" aria-pressed="${selection.fighters[selection.side]===f.id}">${portraitMarkup(f.id)}<strong>${escapeHTML(f.name)}</strong><small>${escapeHTML(f.role)}</small>${selection.fighters[0]===f.id?'<span class="fighter-chip">J1</span>':!single&&selection.fighters[1]===f.id?'<span class="fighter-chip p2">J2</span>':''}</button>`).join('')}</div>
-    <div class="selection-summary"><div><h3>${escapeHTML(selected[0].name)}</h3><p>${escapeHTML(selected[0].title)}<br>${escapeHTML(selected[0].role)} · 10 techniques</p></div><div>VS</div><div><h3>${single?selection.mode==='arcade'?'Les six actes':selection.mode==='boss'?'Les anomalies':selection.mode==='survival'?'Dix vagues':selection.mode==='story'?'Quatre chapitres':selection.mode==='tournament'?'La coupe du cirque':'Le mannequin':escapeHTML(selected[1].name)}</h3><p>${single?'Une succession de défis préparée par Caine.':escapeHTML(selected[1].title)}</p></div></div>
+    <div class="selection-summary">${selectionArtist(0)}<div class="selection-vs" aria-hidden="true">VS</div>${single?`<div class="selection-program"><h3>${selection.mode==='arcade'?'Les six actes':selection.mode==='boss'?'Les anomalies':selection.mode==='survival'?'Dix vagues':selection.mode==='story'?'Quatre chapitres':selection.mode==='tournament'?'La coupe du cirque':'Le mannequin'}</h3><p>Une succession de défis préparée par Caine.</p></div>`:selectionArtist(1)}</div>
     <div class="selection-controls"><label class="field"><span>APPARENCE JOUEUR 1</span><select id="variant-0">${variantOptions(0)}</select></label>${single?'':`<label class="field"><span>APPARENCE ${selection.mode==='local'?'JOUEUR 2':'ADVERSAIRE'}</span><select id="variant-1">${variantOptions(1)}</select></label>`}<label class="field"><span>DIFFICULTÉ CPU</span><select id="select-difficulty">${[['easy','Détente'],['normal','Équilibrée'],['hard','Exigeante']].map(([id,name])=>`<option value="${id}" ${profile.settings.difficulty===id?'selected':''}>${name}</option>`).join('')}</select></label><button class="primary" data-action="start">LEVER LE RIDEAU ↗</button></div>
     <div class="section-heading"><h2>Le décor</h2><span>${selection.mode==='story'?'LES SCÈNES SUIVENT L’HISTOIRE':PROGRAM_MODES.includes(selection.mode)?'DÉCOR DU PREMIER DUEL':'ARÈNES SANS DANGER ALÉATOIRE'}</span></div><div class="stages">${STAGES.map((stage,i)=>`<button class="stage-card ${previewStage.id===stage.id?'selected':''}" data-stage="${stage.id}" ${selection.mode==='story'?'disabled':''} aria-pressed="${previewStage.id===stage.id}" style="--stage-color:${stage.palette.accent}"><b>${escapeHTML(stage.name)}</b><span>SCÈNE ${String(i+1).padStart(2,'0')}</span></button>`).join('')}</div><section class="stage-preview" aria-labelledby="stage-preview-title"><canvas id="stage-preview" role="img" aria-label="Aperçu : ${escapeHTML(previewStage.name)}" data-stage-preview="${previewStage.id}"></canvas><div><span class="eyebrow">${selection.mode==='story'?'PREMIER CHAPITRE':'PROCHAINE SCÈNE'}</span><h3 id="stage-preview-title">${escapeHTML(previewStage.name)}</h3><p>${escapeHTML(previewStage.description)}</p>${fidelityDetails(previewStage.fidelity,'Repères du décor','stage-fidelity')}</div></section><p class="small-note">Les apparences proviennent des archives de CainOS. Les capacités et leurs valeurs sont des adaptations pour le combat. Les anciens membres et formes abstraites sont des adversaires simulés dans ce mode libre.</p>`;
   new CombatRenderer($('#stage-preview')).render(null,{stage:previewStage,reducedMotion:true});
@@ -124,14 +127,51 @@ function renderSelect() {
 function variantOptions(side) {
   return `<option value="">Apparence originale</option>` + VARIANTS.filter(v=>v.fighterId===selection.fighters[side]).map(v=>`<option value="${v.id}" ${selection.variants[side]===v.id?'selected':''}>${escapeHTML(v.name)} · archive</option>`).join('');
 }
+function selectionArtist(side) {
+  const fighter = getFighter(selection.fighters[side]);
+  const appearance = VARIANTS.find(v=>v.id===selection.variants[side] && v.fighterId===fighter.id) || fighter;
+  return `<div class="selected-artist" data-selection-artist="${side}" data-appearance-id="${appearance.id}">${portraitMarkup(appearance.id,'selected-portrait',240,280)}<div><span class="eyebrow">${side===0?'JOUEUR 1':selection.mode==='local'?'JOUEUR 2':'ADVERSAIRE'}</span><h3>${escapeHTML(fighter.name)}</h3><p class="selected-costume">${escapeHTML(appearance===fighter?'Apparence originale':appearance.name)}</p><p>${escapeHTML(fighter.role)} · 10 techniques</p><button class="text-button" data-appearance="${appearance.id}" aria-label="Comparer l’apparence de ${escapeHTML(fighter.name)}">Voir la tenue ↗</button></div></div>`;
+}
+function refreshSelectionArtist(side) {
+  const current = main.querySelector(`[data-selection-artist="${side}"]`);
+  if (!current) return;
+  const previousCanvas = current.querySelector('canvas');
+  if (previousCanvas) currentObserver?.unobserve(previousCanvas);
+  current.outerHTML = selectionArtist(side);
+  const target = main.querySelector(`[data-selection-artist="${side}"] canvas`);
+  if (target) void paintPortrait(target);
+}
 function costume(fighter, id) {
   const variant = VARIANTS.find(v=>v.id===id && v.fighterId===fighter.id);
-  return variant ? { ...fighter, sprite:variant.sprite, animation:null, costume:id } : fighter;
+  return variant ? { ...fighter, sprite:variant.sprite, animation:variant.animation || null, visual:{...fighter.visual,...variant.visual}, costume:id } : fighter;
+}
+async function showAppearance(id, restoreSelect=false) {
+  const variant = VARIANTS.find(v=>v.id===id);
+  const fighter = variant ? getFighter(variant.fighterId) : FIGHTERS.find(f=>f.id===id);
+  if (!fighter) return;
+  const appearance = variant || fighter;
+  const choices = [fighter,...VARIANTS.filter(v=>v.fighterId===fighter.id)];
+  showDialog(`<span class="ticket-label">LA GARDE-ROBE</span><h2 id="modal-title">Les apparences de ${escapeHTML(fighter.name)}</h2><label class="field wardrobe-field"><span>APPARENCE À COMPARER</span><select id="wardrobe-variant">${choices.map(item=>`<option value="${item.id}" ${item.id===appearance.id?'selected':''}>${escapeHTML(item===fighter?'Apparence originale':item.name)}</option>`).join('')}</select></label><div class="wardrobe-labels"><span>Apparence originale</span><span>${escapeHTML(variant?.name || 'Apparence originale')}</span></div><canvas id="wardrobe-preview" data-appearance-id="${appearance.id}" role="img" aria-label="Comparaison à la même échelle : ${escapeHTML(fighter.name)} et ${escapeHTML(variant?.name || 'son apparence originale')}"></canvas><p id="wardrobe-load" class="small-note" role="status">Préparation des illustrations…</p><p class="small-note">Les deux apparences sont montrées à l’échelle utilisée dans l’arène. Changer de tenue conserve les mêmes techniques.</p>${fidelityDetails(appearance.fidelity,'Repères de cette apparence','costume-fidelity')}${costumeReviewDetails(appearance.fidelity?.assetReview)}<div class="modal-actions"><button class="primary" data-try-appearance="${appearance.id}">Essayer en entraînement</button><button class="secondary" data-action="close-modal">Fermer</button></div>`);
+  modal.classList.add('wardrobe-dialog');
+  if (restoreSelect) $('#wardrobe-variant')?.focus({preventScroll:true});
+  const target = $('#wardrobe-preview'), message = $('#wardrobe-load');
+  const fighters = [fighter,costume(fighter,variant?.id || '')], stage = getStage('training');
+  const renderer = new CombatRenderer(target);
+  const preview = new CombatEngine({fighters,stage,mode:'training',cpu:[false,false],difficulty:'normal',seed:0,roundTime:90,roundsToWin:1});
+  const loaded = await renderer.preload(fighters,[stage]);
+  if (!target.isConnected) return;
+  renderer.render(preview.state,{stage,reducedMotion:true});
+  message.textContent = loaded.errors.length ? 'Une illustration est indisponible. Vérifie la connexion ou le pack d’illustrations, puis recharge le jeu.' : '';
 }
 function fidelityDetails(record, label, className='') {
   if (!record) return '';
   const references = getFidelitySources(record.sourceIds);
   return `<details class="fidelity-details ${className}"><summary>${escapeHTML(label)}</summary><div class="fidelity-copy">${record.observedTraits?.length ? `<ul>${record.observedTraits.map(trait=>`<li>${escapeHTML(trait)}</li>`).join('')}</ul>` : ''}<p><strong>Dans Encore.</strong> ${escapeHTML(record.combatAdaptation)}</p><p class="fidelity-scope">${escapeHTML(record.reviewScope)}</p>${references.length ? `<ul class="fidelity-sources" aria-label="Sources de référence">${references.map(source=>`<li><a href="${escapeHTML(source.url)}" target="_blank" rel="noopener noreferrer">${escapeHTML(source.title)} <span aria-hidden="true">↗</span></a></li>`).join('')}</ul>` : ''}</div></details>`;
+}
+function costumeReviewDetails(review) {
+  if (!review) return '';
+  const fields = [['Identité',review.identityEvidence],['Cadrage',review.framing],['Fond et détourage',review.transparency],['Proportions',review.proportions]];
+  return `<details class="fidelity-details costume-review"><summary>État de cette illustration</summary><div class="fidelity-copy"><p>${escapeHTML(review.status)}</p><ul>${review.visibleTraits.map(trait=>`<li>${escapeHTML(trait)}</li>`).join('')}</ul>${fields.map(([label,value])=>`<p><strong>${label}.</strong> ${escapeHTML(value)}</p>`).join('')}${review.issues.length ? `<p><strong>Éléments à améliorer.</strong></p><ul>${review.issues.map(issue=>`<li>${escapeHTML(issue)}</li>`).join('')}</ul>` : ''}</div></details>`;
 }
 function moveTable(fighter) {
   return `<div class="scroll-table"><table class="move-table"><thead><tr><th>COMMANDE J1</th><th>TECHNIQUE / EFFET</th><th>DÉBUT · ACTIVE · FIN</th><th>DÉGÂTS</th></tr></thead><tbody>${MOVE_SLOTS.map(slot=>{const m=fighter.moves[slot];return `<tr><td><kbd>${escapeHTML(moveLabel(slot))}</kbd><small>${SLOT_LABELS[slot]}</small></td><td><strong>${escapeHTML(m.name)}</strong><small>${escapeHTML(m.description)}${m.cost?` · Stabilité : ${m.cost}`:''}${m.meter?` · Finale : ${m.meter}%`:''}</small>${fidelityDetails(m.fidelity,'Inspiration et adaptation','move-fidelity')}</td><td>${m.startup} · ${m.active} · ${m.recovery}<small>images à 60 Hz</small></td><td>${number(m.damage)}</td></tr>`;}).join('')}</tbody></table></div>`;
@@ -145,7 +185,7 @@ function renderArchives() {
   setScreen('archives');
   const matching = ARCHIVE.filter(item=>(`${item.name} ${item.id}`.toLocaleLowerCase('fr').includes(archiveQuery.toLocaleLowerCase('fr'))) && (archiveFilter==='all'||archiveFilter==='playable'&&FIGHTERS.some(f=>f.id===item.id)||archiveFilter==='variant'&&VARIANTS.some(v=>v.id===item.id)||archiveFilter==='archive'&&!FIGHTERS.some(f=>f.id===item.id)&&!VARIANTS.some(v=>v.id===item.id)));
   const pages=Math.max(1,Math.ceil(matching.length/24)); archivePage=Math.min(archivePage,pages-1);
-  main.innerHTML=`${title('LA MÉMOIRE DU CIRQUE','Les archives de CainOS',`${ARCHIVE.length} apparences inventoriées, dont ${FIGHTERS.length} combattants et ${VARIANTS.length} variantes d’apparence. Les fiches d’archive ne deviennent pas automatiquement des combattants.`)}<div class="toolbar"><input type="search" id="archive-search" value="${escapeHTML(archiveQuery)}" placeholder="Chercher un personnage ou une variante…" aria-label="Rechercher dans les archives"><select id="archive-filter" aria-label="Filtrer les archives">${[['all','Toutes les apparences'],['playable','Combattants jouables'],['variant','Costumes de combattants'],['archive','Archives à adapter']].map(([id,name])=>`<option value="${id}" ${archiveFilter===id?'selected':''}>${name}</option>`).join('')}</select><span class="small-note">${matching.length} résultats</span></div><div class="archive-grid">${matching.slice(archivePage*24,archivePage*24+24).map(item=>`<article class="archive-card">${portraitMarkup(item.id)}<h3>${escapeHTML(item.name)}</h3><p>${escapeHTML(item.provenance)}</p><span class="badge ${FIGHTERS.some(f=>f.id===item.id)?'success':''}">${FIGHTERS.some(f=>f.id===item.id)?'COMBATTANT':VARIANTS.some(v=>v.id===item.id)?'APPARENCE':'ARCHIVE'}</span></article>`).join('')||'<p class="empty-state">Aucune apparition ne correspond à cette recherche.</p>'}</div><div class="toolbar"><button class="secondary" data-page="-1" ${archivePage===0?'disabled':''}>← Précédent</button><span class="small-note">Page ${archivePage+1} / ${pages}</span><button class="secondary" data-page="1" ${archivePage===pages-1?'disabled':''}>Suivant →</button></div>`;
+  main.innerHTML=`${title('LA MÉMOIRE DU CIRQUE','Les archives de CainOS',`${ARCHIVE.length} apparences inventoriées, dont ${FIGHTERS.length} combattants et ${VARIANTS.length} variantes d’apparence. Les fiches d’archive ne deviennent pas automatiquement des combattants.`)}<div class="toolbar"><input type="search" id="archive-search" value="${escapeHTML(archiveQuery)}" placeholder="Chercher un personnage ou une variante…" aria-label="Rechercher dans les archives"><select id="archive-filter" aria-label="Filtrer les archives">${[['all','Toutes les apparences'],['playable','Combattants jouables'],['variant','Costumes de combattants'],['archive','Archives à adapter']].map(([id,name])=>`<option value="${id}" ${archiveFilter===id?'selected':''}>${name}</option>`).join('')}</select><span class="small-note">${matching.length} résultats</span></div><div class="archive-grid">${matching.slice(archivePage*24,archivePage*24+24).map(item=>`<article class="archive-card" data-archive-id="${item.id}">${portraitMarkup(item.id)}<h3>${escapeHTML(item.name)}</h3><p>${escapeHTML(item.provenance)}</p><span class="badge ${FIGHTERS.some(f=>f.id===item.id)?'success':''}">${FIGHTERS.some(f=>f.id===item.id)?'COMBATTANT':VARIANTS.some(v=>v.id===item.id)?'APPARENCE':'ARCHIVE'}</span>${item.baseFighterId?`<button class="text-button archive-appearance" data-appearance="${item.id}" aria-label="Voir ${escapeHTML(item.name)} dans la garde-robe">Voir la tenue ↗</button>`:''}</article>`).join('')||'<p class="empty-state">Aucune apparition ne correspond à cette recherche.</p>'}</div><div class="toolbar"><button class="secondary" data-page="-1" ${archivePage===0?'disabled':''}>← Précédent</button><span class="small-note">Page ${archivePage+1} / ${pages}</span><button class="secondary" data-page="1" ${archivePage===pages-1?'disabled':''}>Suivant →</button></div>`;
   portraits();
 }
 function renderSettings() {
@@ -363,7 +403,8 @@ function loop(now) {
     }
   }
   if(!active)return;
-  active.renderer.render(active.engine.state,{stage:active.stage,hitboxes:active.showHitboxes,reducedMotion:profile.settings.reducedMotion});updateHUD();
+  const presentationFrame=active.engine.state.frame+(active.engine.state.phase==='roundOver'?Math.floor(active.roundDelay*60):0);
+  active.renderer.render(active.engine.state,{stage:active.stage,hitboxes:active.showHitboxes,reducedMotion:profile.settings.reducedMotion,presentationFrame});updateHUD();
 }
 function storeReplay() {
   if(!active.recordFrames||active.recordFrames>=72000)return false;
@@ -491,6 +532,14 @@ async function handleClick(event){
     if(button.dataset.codex){codexId=button.dataset.codex;renderCodex();return;}
     if(button.dataset.practice){selection.fighters[0]=button.dataset.practice;selection.variants[0]='';chooseMode('training');return;}
     if(button.dataset.page){archivePage+=Number(button.dataset.page);renderArchives();return;}
+    if(button.dataset.appearance){await showAppearance(button.dataset.appearance);return;}
+    if(button.dataset.tryAppearance){
+      const variant=VARIANTS.find(v=>v.id===button.dataset.tryAppearance);
+      const fighter=variant?getFighter(variant.fighterId):FIGHTERS.find(f=>f.id===button.dataset.tryAppearance);
+      if(!fighter)return;
+      selection.fighters[0]=fighter.id;selection.variants[0]=variant?.id||'';selection.mode='training';selection.side=0;
+      closeDialog();await startMatch({mode:'training'});return;
+    }
     switch(button.dataset.action){
       case 'start':await requestStart();break;
       case 'start-new':await startMatch();break;
@@ -551,7 +600,8 @@ document.addEventListener('keydown',event=>{
 document.addEventListener('change',event=>{
   const target=event.target;
   if(target.dataset.setting){const key=target.dataset.setting;const value=target.type==='checkbox'?target.checked:['seconds','rounds','volume','musicVolume'].includes(key)?Number(target.value):target.value;profile.settings=cleanSettings({...profile.settings,[key]:value});persist();applySettings();if(key==='layout'){renderSettings();$('[data-setting="layout"]').focus();}return;}
-  if(target.id.startsWith('variant-'))selection.variants[Number(target.id.at(-1))]=target.value;
+  if(target.id.startsWith('variant-')){const side=Number(target.id.at(-1));selection.variants[side]=target.value;refreshSelectionArtist(side);}
+  if(target.id==='wardrobe-variant'){void showAppearance(target.value,true).catch(()=>toast('Cette apparence ne peut pas être affichée.'));return;}
   if(target.id==='select-difficulty'){profile.settings.difficulty=target.value;persist();}
   if(target.id==='archive-filter'){archiveFilter=target.value;archivePage=0;renderArchives();}
   if(target.id.startsWith('training-')&&active){active.engine.setTraining({dummy:$('#training-dummy').value,freeMeter:$('#training-meter').checked,autoheal:$('#training-heal').checked});active.showHitboxes=$('#training-boxes').checked;}

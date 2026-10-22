@@ -60,7 +60,7 @@ async function importReplay(raw) {
 
 try {
   await page.goto(`${base}/combat/`, { waitUntil: 'networkidle' });
-  await page.waitForFunction(() => window.Encore?.version === '0.3.0');
+  await page.waitForFunction(version => window.Encore?.version === version, GAME_VERSION);
   await page.locator('[data-nav="codex"]').click();
   for (const fighter of FIGHTERS) {
     await page.locator(`[data-codex="${fighter.id}"]`).click();
@@ -144,14 +144,15 @@ try {
     const rows = replayResults.filter(row => row.fighter === fighter);
     assert.equal(rows[0].snapshotSHA256, rows[1].snapshotSHA256, '0.1 and 0.2 retain identical old rules');
     assert.notEqual(rows[1].x, rows[2].x, '0.3 must actually use the continuous retreat at the same input frame');
-    checked(`Versioned retreat replay: ${fighter}`, 'Imports for 0.1.0, 0.2.0 and 0.3.0 reproduce the expected complete deterministic frame state; no progression is awarded.');
+    assert.equal(rows[2].snapshotSHA256, rows[3].snapshotSHA256, '0.4 presentation changes preserve the complete 0.3 simulation state');
+    checked(`Versioned retreat replay: ${fighter}`, `Imports for ${REPLAY_VERSIONS.join(', ')} reproduce the expected complete deterministic frame state; no progression is awarded.`);
   }
   checked('Repeating an imported legacy replay preserves its original kit', 'The Revoir action produces the same full frame snapshot for the 0.2.0 Pomni recording.');
 
   const legacy = replayFixture('pomni', '0.2.0');
   await page.evaluate(({ key, raw }) => localStorage.setItem(key, raw), { key: REPLAY_KEY, raw: JSON.stringify(legacy) });
   await page.locator('[data-nav="settings"]').click();
-  assert.match(await page.locator('main').textContent(), /0\.1\.0, 0\.2\.0, 0\.3\.0/);
+  assert.ok((await page.locator('main').textContent()).includes(REPLAY_VERSIONS.join(', ')));
   const downloadPromise = page.waitForEvent('download');
   await page.locator('[data-action="export-replay"]').click();
   const download = await downloadPromise;

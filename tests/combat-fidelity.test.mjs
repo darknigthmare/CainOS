@@ -7,6 +7,7 @@ import {
   FIDELITY_SOURCES, FIGHTER_FIDELITY, MOVE_FIDELITY, STAGE_FIDELITY,
   getFighterFidelity, getMoveFidelity, getStageFidelity, getFidelitySources,
 } from '../combat/fidelity.mjs';
+import { COSTUME_FIDELITY, getCostumeFidelity } from '../combat/costume-fidelity.mjs';
 
 test('all playable fighters, techniques and stages expose the shared review records', () => {
   assert.deepEqual(Object.keys(FIGHTER_FIDELITY).sort(), FIGHTERS.map(f => f.id).sort());
@@ -28,7 +29,7 @@ test('review records keep source scope, observations and invented combat separat
   for (const source of FIDELITY_SOURCES) {
     const url = new URL(source.url);
     assert.equal(url.protocol, 'https:');
-    assert.ok(['www.glitchprod.com', 'static.wixstatic.com', 'www.youtube.com'].includes(url.hostname));
+    assert.ok(['www.glitchprod.com', 'static.wixstatic.com', 'www.youtube.com', 'glitchproductions.store', 'www.comicsbeat.com'].includes(url.hostname));
     assert.ok(source.title && source.kind && source.scope);
     assert.ok(SOURCES.includes(source));
   }
@@ -61,7 +62,11 @@ test('the nine episode references retain later costumes without claiming to have
     assert.match(source.url, /^https:\/\/www\.youtube\.com\/watch\?v=[\w-]{11}$/);
   }
   assert.equal(VARIANTS.length, 51);
-  for (const variant of VARIANTS) assert.equal(variant.fidelity, undefined, 'a base appearance review must not certify all its costumes');
+  for (const variant of VARIANTS) {
+    assert.equal(variant.fidelity, getCostumeFidelity(variant.id));
+    assert.notEqual(variant.fidelity, getFighterFidelity(variant.baseFighterId), 'a base appearance review must not certify its costumes');
+    assert.ok(!/^Validé|^Certifié|^Conforme/.test(variant.fidelity.reviewStatus));
+  }
   for (const id of ['baseballpomni', 'shadowcaine', 'maidjax', 'workgangle']) assert.ok(VARIANTS.some(v => v.id === id));
 });
 
@@ -82,12 +87,55 @@ test('unknown IDs fail closed and shared review data cannot be mutated by a cons
     assert.equal(getStageFidelity(id), null);
     assert.equal(getMoveFidelity(id, 'specialBack'), null);
     assert.equal(getMoveFidelity('pomni', id), null);
+    assert.equal(getCostumeFidelity(id), null);
     assert.deepEqual(getFidelitySources([id]), []);
   }
   assert.deepEqual(getFidelitySources(null), []);
   assert.equal(getFidelitySources(['ep1', 'ep1']).length, 1);
   assert.throws(() => FIGHTER_FIDELITY.pomni.observedTraits.push('unverified claim'), TypeError);
   assert.throws(() => MOVE_FIDELITY['pomni.specialBack'].sourceIds.push('unknown'), TypeError);
+  assert.throws(() => COSTUME_FIDELITY.maidjax.assetReview.visibleTraits.push('unverified claim'), TypeError);
+  assert.throws(() => COSTUME_FIDELITY.workgangle.assetReview.issues.push('mutation'), TypeError);
+});
+
+test('all 51 costumes have an individual technical review independent of canonical evidence', () => {
+  assert.deepEqual(Object.keys(COSTUME_FIDELITY).sort(), VARIANTS.map(v => v.id).sort());
+  for (const [id, item] of Object.entries(COSTUME_FIDELITY)) {
+    assert.ok(Array.isArray(item.sourceIds) && Array.isArray(item.observedTraits), id);
+    assert.equal(getFidelitySources(item.sourceIds).length, item.sourceIds.length, id);
+    assert.ok(item.combatAdaptation.includes('mêmes dix techniques'), id);
+    assert.ok(item.reviewStatus && item.reviewScope.length > 30, id);
+    const review = item.assetReview;
+    assert.ok(review.status.startsWith('Revue technique effectuée'), id);
+    assert.ok(review.visibleTraits.length >= 2 && review.visibleTraits.every(t => t.length > 15), id);
+    for (const field of ['identityEvidence', 'framing', 'transparency', 'proportions']) assert.ok(review[field].length > 35, `${id}:${field}`);
+    assert.ok(Array.isArray(review.issues), id);
+    assert.match(review.captureId, new RegExp(`^costumes-0\\.4\\.0-page-[1-5]#${id}$`));
+    if (item.observedTraits.length) {
+      assert.ok(item.sourceIds.length > 0, `${id}: no unsupported canonical observations`);
+      assert.equal(item.reviewStatus, 'Comparaison partielle — écarts ou limites');
+    } else assert.ok(['Épisode à revoir', 'Référence de costume à identifier'].includes(item.reviewStatus));
+  }
+  assert.equal(Object.values(COSTUME_FIDELITY).filter(v => v.observedTraits.length).length, 7);
+  assert.match(COSTUME_FIDELITY.gangletragedy.reviewScope, /fissure/);
+  assert.match(COSTUME_FIDELITY.maidjax.reviewScope, /cœur violet/);
+  assert.match(COSTUME_FIDELITY.workgangle.reviewScope, /cravate noire/);
+  assert.match(COSTUME_FIDELITY.gloinkqueenscale.assetReview.issues.join(' '), /True Scale/);
+  assert.match(COSTUME_FIDELITY.groundedcaine.assetReview.identityEvidence, /ne démontre pas une perte de pouvoirs/);
+  assert.deepEqual(COSTUME_FIDELITY.inertbubble.observedTraits, []);
+});
+
+test('consulted references identify their exact scope rather than certifying poses or merchandise proportions', () => {
+  const [interview] = getFidelitySources(['temmer-interview']);
+  assert.equal(interview.kind, 'Entretien primaire');
+  assert.match(interview.scope, /ne certifient aucune pose ni aucun costume/);
+  for (const id of ['store-maid-jax', 'store-gangle-masks', 'store-gangle-figure', 'store-spudsy-gangle', 'store-costume-group', 'store-spudsy-ragatha']) {
+    const [source] = getFidelitySources([id]);
+    assert.equal(source.kind, 'Produit dérivé officiel');
+    assert.match(source.url, /\/cdn\/shop\/files\//);
+    assert.match(source.scope, /ne mesure pas les proportions/);
+  }
+  assert.match(FIGHTER_FIDELITY.jax.reviewScope, /peau grise/);
 });
 
 // Computed from the published e71b08c rules, not from getReplayFighter.
@@ -115,6 +163,20 @@ test('every old combat rule and body remains exact for 0.1.0 and 0.2.0 replays',
   assert.equal(rulesDigest(FIGHTERS, true), UNCHANGED_RULES_SHA256, 'only the two retreat definitions may change in this pass');
   for (const fighter of FIGHTERS) assert.equal(getReplayFighter(fighter.id, '0.3.0'), fighter);
   assert.notEqual(getReplayFighter('pomni', '0.2.0').moves.specialBack, getFighter('pomni').moves.specialBack);
+});
+
+test('all fourteen kits and 140 techniques stay mechanically identical between published 0.3.0 and 0.4.0', () => {
+  // Independently derived from git show 171f422:combat/data.mjs. Only presentation
+  // fields (visual, sprite, animation, fidelity) are omitted; all authored combat,
+  // body, resource, passive, move, power/speed/reach and health fields are included.
+  const mechanics = FIGHTERS.map(f => ({ id: f.id, power: f.power, speed: f.speed, reach: f.reach, stats: f.stats, combat: f.combat }));
+  const digest = createHash('sha256').update(JSON.stringify(canonical(mechanics))).digest('hex');
+  assert.equal(digest, '8c074267273275cb52fa8da66c62dacf258f12d578949dc9f9423b4b62f4e608');
+  for (const fighter of FIGHTERS) {
+    assert.equal(getReplayFighter(fighter.id, '0.3.0'), fighter);
+    assert.equal(getReplayFighter(fighter.id, '0.4.0'), fighter);
+    assert.equal(Object.keys(fighter.combat.moves).length, 10);
+  }
 });
 
 function retreatTrace(id, version, options = {}) {

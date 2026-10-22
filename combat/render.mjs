@@ -1,11 +1,13 @@
 import { getHurtbox, getHitbox } from './engine.mjs';
-import { removeAtlasMatte, projectilePresentation, trapPresentation } from './render-presentation.mjs';
+import { removeAtlasMatte, applySpritePalette, projectilePresentation, trapPresentation } from './render-presentation.mjs';
+import { spriteSourceRegion, actorPose, frameGeometry, crouchParts, POSE_REGISTRATION_VERSION } from './render-poses.mjs';
 
 /**
  * Digital Circus combat presentation. Existing CainOS atlases are read without
  * changing their files. Static border removal keys only the actual edge matte;
  * the seven existing animation sheets use alpha bounds only. Their
- * interaction pose is reused for attacks until dedicated fight art is authored.
+ * inspected cells and rigid cutout poses provide game-state presentation until
+ * dedicated fight art is authored. Character transforms use one uniform scale.
  */
 export const LOGICAL_WIDTH = 1280;
 export const LOGICAL_HEIGHT = 720;
@@ -46,7 +48,7 @@ function canvas(width, height) {
 }
 
 function frameKey(spec, index, animated) {
-  return [spec.src, spec.cols, spec.rows, index, spec.component || 'all', spec.matteTolerance ?? 'auto', animated ? 'alpha' : 'matte-v3'].join('|');
+  return [spec.src, spec.cols, spec.rows, index, JSON.stringify(spec.sourceRect || null), spec.component || 'all', spec.matteMode || 'edge', spec.matteTolerance ?? 'auto', spec.paletteSwap || 'original', animated ? `alpha:${POSE_REGISTRATION_VERSION}` : 'matte-v3'].join('|');
 }
 
 function cleanCellEdges(data, width, height, onlyLargest) {
@@ -86,21 +88,18 @@ function cleanCellEdges(data, width, height, onlyLargest) {
 function extractFrame(img, spec, index = 0, animated = false) {
   const key = frameKey(spec, index, animated);
   if (frames.has(key)) return frames.get(key);
-  const columns = Math.max(1, spec.cols || 1);
-  const rows = Math.max(1, spec.rows || 1);
-  const width = Math.floor(img.naturalWidth / columns);
-  const height = Math.floor(img.naturalHeight / rows);
-  const col = animated ? index % columns : spec.col || 0;
-  const row = animated ? Math.floor(index / columns) : spec.row || 0;
+  const region = spriteSourceRegion(spec, index, animated, img.naturalWidth, img.naturalHeight);
+  const { width, height } = region;
   const source = canvas(width, height);
   const ctx = source.getContext('2d', { willReadFrequently: true });
   ctx.imageSmoothingEnabled = false;
-  ctx.drawImage(img, col * width, row * height, width, height, 0, 0, width, height);
+  ctx.drawImage(img, region.x, region.y, width, height, 0, 0, width, height);
   const pixels = ctx.getImageData(0, 0, width, height);
   const data = pixels.data;
   if (!animated) {
-    removeAtlasMatte(data, width, height, { tolerance: spec.matteTolerance });
-    cleanCellEdges(data, width, height, spec.component === 'largest');
+    removeAtlasMatte(data, width, height, { mode: spec.matteMode, tolerance: spec.matteTolerance });
+    if (spec.matteMode !== 'preserve-source') cleanCellEdges(data, width, height, spec.component === 'largest');
+    applySpritePalette(data, width, height, spec.paletteSwap);
     ctx.putImageData(pixels, 0, 0);
   }
   let x0 = width, y0 = height, x1 = -1, y1 = -1;
@@ -109,13 +108,17 @@ function extractFrame(img, spec, index = 0, animated = false) {
     x0 = Math.min(x0, x); y0 = Math.min(y0, y); x1 = Math.max(x1, x); y1 = Math.max(y1, y);
   }
   if (x1 < x0 || y1 < y0) { frames.set(key, null); return null; }
-  const bounds = { x: x0, y: y0, width: x1 - x0 + 1, height: y1 - y0 + 1 };
+  const bounds = { x: x0 + region.offsetX, y: y0 + region.offsetY, width: x1 - x0 + 1, height: y1 - y0 + 1 };
   const pad = animated ? 12 : Math.max(2, Math.round(Math.min(width, height) * 0.018));
   x0 = Math.max(0, x0 - pad); y0 = Math.max(0, y0 - pad);
   x1 = Math.min(width - 1, x1 + pad); y1 = Math.min(height - 1, y1 + pad);
   const cropped = canvas(x1 - x0 + 1, y1 - y0 + 1);
   cropped.getContext('2d').drawImage(source, x0, y0, cropped.width, cropped.height, 0, 0, cropped.width, cropped.height);
-  const frame = { canvas: cropped, width: cropped.width, height: cropped.height, x: x0, y: y0, bounds, sourceWidth: width, sourceHeight: height, animated };
+  const floorContour = [];
+  for (let x = 0; x < width; x++) {
+    for (let y = height - 1; y >= 0; y--) if (data[(y * width + x) * 4 + 3] >= 12) { floorContour.push([x + region.offsetX, y + 1 + region.offsetY]); break; }
+  }
+  const frame = { canvas: cropped, width: cropped.width, height: cropped.height, x: x0 + region.offsetX, y: y0 + region.offsetY, bounds, sourceWidth: width, sourceHeight: height, animated, index, registration: region.registration, floorContour };
   frames.set(key, frame);
   return frame;
 }
@@ -127,7 +130,7 @@ function visualRecord(fighter, variant) {
   return { ...fighter, ...picked, animation: picked.animation || null };
 }
 
-export function getFrame(fighter, action = 'idle', tick = 0, variant = null) {
+export function getFrame(fighter, action = 'idle', tick = 0, variant = null, explicitFrame = null) {
   const f = visualRecord(fighter, variant);
   if (!f) return null;
   const animation = f.animation && !failures.has(sourceURL(f.animation.src)) ? f.animation : null;
@@ -139,7 +142,7 @@ export function getFrame(fighter, action = 'idle', tick = 0, variant = null) {
   if (!sequence) sequence = animation?.frames?.[action === 'guard' || action === 'jump' || action === 'crouch' ? 'idle' : 'attack'];
   if (!sequence?.length) sequence = animation?.frames?.idle || [0];
   const delay = action === 'walk' ? 8 : action === 'talk' ? 10 : 24;
-  const index = sequence[Math.floor(Math.max(0, tick) / delay) % sequence.length];
+  const index = animation && Number.isInteger(explicitFrame) && explicitFrame >= 0 && explicitFrame < (spec.cols || 1) * (spec.rows || 1) ? explicitFrame : sequence[Math.floor(Math.max(0, tick) / delay) % sequence.length];
   const staticIndex = (spec.row || 0) * (spec.cols || 1) + (spec.col || 0);
   return extractFrame(img, spec, animation ? index : staticIndex, !!animation);
 }
@@ -175,6 +178,28 @@ function path(ctx, points, fill, stroke = null, lineWidth = 1) {
   ctx.closePath();
   if (fill) { ctx.fillStyle = fill; ctx.fill(); }
   if (stroke) { ctx.strokeStyle = stroke; ctx.lineWidth = lineWidth; ctx.stroke(); }
+}
+
+function drawPoseArtwork(ctx, frame, articulated) {
+  if (!articulated) { ctx.drawImage(frame.canvas, frame.x, frame.y); return; }
+  const polygon = points => {
+    ctx.moveTo(...points[0]);
+    for (const point of points.slice(1)) ctx.lineTo(...point);
+    ctx.closePath();
+  };
+  for (const part of articulated.parts) {
+    ctx.save();
+    const m = part.matrix;
+    ctx.transform(m.a, m.b, m.c, m.d, m.e, m.f);
+    if (part.holes) {
+      ctx.beginPath(); ctx.rect(frame.x, frame.y, frame.width, frame.height);
+      for (const hole of part.holes) polygon(hole);
+      ctx.clip('evenodd');
+    } else if (part.mask) { ctx.beginPath(); polygon(part.mask); ctx.clip(); }
+    ctx.beginPath(); ctx.rect(frame.x, part.fromY, frame.width, part.toY - part.fromY); ctx.clip();
+    ctx.drawImage(frame.canvas, frame.x, frame.y);
+    ctx.restore();
+  }
 }
 function ellipse(ctx, x, y, rx, ry, fill, stroke = null, width = 1) {
   ctx.beginPath(); ctx.ellipse(x, y, rx, ry, 0, 0, TAU);
@@ -692,7 +717,8 @@ export class CombatRenderer {
     const actors = state.a && state.b ? [state.a, state.b] : state.fighters || [];
     for (const object of state.traps || []) this.drawTrap(object, actors, tick, options.reducedMotion);
     const order = [...actors].sort((a, b) => (a.y || FLOOR) - (b.y || FLOOR));
-    for (const actor of order) this.drawActor(actor, tick, options.reducedMotion);
+    const presentation = { frame: tick, presentationFrame: options.presentationFrame ?? tick, phase: state.phase, winner: state.winner, roundWinner: state.roundWinner };
+    for (const actor of order) this.drawActor(actor, tick, options.reducedMotion, presentation);
     for (const projectile of state.projectiles || []) this.drawProjectile(projectile, actors, tick, options.reducedMotion);
     for (const effect of state.fx || []) this.drawEffect(effect, actors, options.reducedMotion);
     if (options.hitboxes) for (const actor of actors) {
@@ -703,11 +729,11 @@ export class CombatRenderer {
     ctx.restore(); this.lastState = state;
   }
 
-  drawActor(actor, tick, reducedMotion) {
+  drawActor(actor, tick, reducedMotion, presentation = {}) {
     const ctx = this.ctx, f = actor.f || actor.def;
     if (!f) return;
-    const action = actor.hit > 0 ? 'hurt' : actor.attack ? 'attack' : actor.state === 'walk' ? 'walk' : 'idle';
-    const frame = getFrame(f, action, reducedMotion ? 0 : tick);
+    const pose = actorPose(actor, { frame: tick, ...presentation, reducedMotion });
+    const frame = getFrame(f, pose.action, reducedMotion ? 0 : tick, null, pose.frame);
     const idle = getFrame(f, 'idle', 0);
     const height = f.visual?.height || f.combat?.simulationBody?.height || 230;
     const face = actor.face ?? actor.facing ?? 1;
@@ -719,36 +745,28 @@ export class CombatRenderer {
       ctx.save(); ctx.globalAlpha = 0.5; ellipse(ctx, x, y - height / 2, 28, height / 2, f.color || '#aaa0c3');
       label(ctx, f.name?.slice(0, 1) || '?', x, y - height * 0.5, 30, '#ffffff'); ctx.restore(); return;
     }
-    const baseScale = height / Math.max(1, idle.bounds.height);
-    const originX = idle.bounds.x + idle.bounds.width / 2;
-    const originY = idle.bounds.y + idle.bounds.height;
-    const dx = (frame.x - originX) * baseScale, dy = (frame.y - originY) * baseScale;
-    const dw = frame.width * baseScale, dh = frame.height * baseScale;
-    const moving = actor.state === 'walk';
-    const walk = reducedMotion ? 0 : Math.sin(tick * 0.32 + actor.slot * 2);
-    const crouch = actor.crouch ? 0.58 : 1;
-    const attack = actor.attack, active = attack && attack.t >= attack.def.startup && attack.t < attack.def.startup + attack.def.active;
-    const windup = attack && attack.t < attack.def.startup;
-    let lean = actor.hit ? -0.13 * face : windup ? -0.055 * face : active ? 0.07 * face : moving ? walk * 0.018 : 0;
-    if (reducedMotion) lean = 0;
-    const bob = reducedMotion ? 0 : moving ? -Math.abs(walk) * 2.5 : Math.sin(tick * 0.045 + actor.slot) * 0.8;
+    const articulated = pose.low ? crouchParts(f, frame) : null;
+    const geometry = frameGeometry(f, frame, idle, articulated ? { ...pose, lean: 0 } : pose, face);
+    const shownHeight = height - (articulated?.drop || 0) * geometry.scale;
+    const attack = actor.attack, active = pose.state === 'attack-active';
+    const windup = pose.state === 'attack-windup';
     if (actor.buffs?.power || actor.buffs?.armor) glow(ctx, x, y - height * 0.52, height * 0.72, f.color || '#bd9cd6', 0.18);
     if (windup && attack.def.meter >= 30) {
       ctx.save(); ctx.globalAlpha = 0.22; ellipse(ctx, x, y - height * 0.52, height * 0.56, height * 0.56, null, f.color || '#c1a8eb', 4); ctx.restore();
     }
-    ctx.save(); ctx.translate(x + (active ? face * 7 : 0), y + bob); ctx.rotate(lean);
-    ctx.scale(face * (f.sprite?.nativeFacing || 1), crouch);
-    if (actor.buffs?.cloak) ctx.globalAlpha = 0.42;
+    ctx.save(); ctx.translate(x, y - geometry.support); ctx.rotate(geometry.angle);
+    ctx.scale(geometry.flip * geometry.scale, geometry.scale);
+    ctx.translate(-geometry.anchor.x, -geometry.anchor.y);
+    ctx.globalAlpha = pose.alpha * (actor.buffs?.cloak ? 0.42 : 1);
     ctx.imageSmoothingEnabled = false;
-    ctx.shadowColor = '#080514a8'; ctx.shadowBlur = 8; ctx.shadowOffsetY = 5;
-    ctx.drawImage(frame.canvas, Math.round(dx), Math.round(dy), Math.round(dw), Math.round(dh));
-    ctx.shadowBlur = 0; ctx.shadowOffsetY = 0;
+    drawPoseArtwork(ctx, frame, articulated);
     if (actor.flash > 0 && !reducedMotion) {
       // A subtle outline avoids overwriting the original sprite's palette.
-      ctx.globalAlpha = Math.min(0.25, actor.flash / 28); ctx.strokeStyle = '#f2dfbf'; ctx.lineWidth = 3;
-      ctx.strokeRect(dx + 4, dy + 4, dw - 8, dh - 8);
+      ctx.globalAlpha = Math.min(0.25, actor.flash / 28); ctx.strokeStyle = '#f2dfbf'; ctx.lineWidth = 3 / geometry.scale;
+      ctx.strokeRect(frame.bounds.x, frame.bounds.y, frame.bounds.width, frame.bounds.height);
     }
     ctx.restore();
+    if (pose.state === 'victory') ellipse(ctx, x, y + 4, Math.max(30, (f.visual?.width || 80) * 0.65), 12, null, '#f1cc7e9c', 2);
     if (actor.buffs?.barrier && f.id === 'kinger') {
       // Fort de coussins is the existing two-hit barrier. Pillows illustrate
       // that move without altering either the actor's sprite or hurtbox.
@@ -759,9 +777,17 @@ export class CombatRenderer {
       pillow(ctx, x + 42, y - 57, 50, 29, 0.42, '#bcabce');
       ctx.restore();
     }
-    if (actor.block || actor.state === 'guard') {
+    if (pose.low) {
+      // A static, downward stance cue keeps low-profile states readable for
+      // unrigged costumes and morphologies. It does not depict a new limb pose
+      // or claim that the visible sprite matches the simulation's hurtbox.
+      const cueX = x + face * Math.max(49, (f.visual?.width || 80) * 0.6);
+      line(ctx, [[cueX - 7, y - 31], [cueX, y - 24], [cueX + 7, y - 31]], '#c9e9f4d9', 2);
+      line(ctx, [[cueX - 7, y - 23], [cueX, y - 16], [cueX + 7, y - 23]], '#c9e9f4d9', 2);
+    }
+    if (pose.state === 'guard' || pose.state === 'crouch' && actor.block) {
       ctx.save(); ctx.strokeStyle = '#b4dbefaa'; ctx.lineWidth = 4;
-      ctx.beginPath(); ctx.ellipse(x + face * 22, y - height * 0.48 * crouch, 49, height * 0.5 * crouch, 0, face > 0 ? -1.22 : 1.92, face > 0 ? 1.22 : 4.36); ctx.stroke(); ctx.restore();
+      ctx.beginPath(); ctx.ellipse(x + face * 22, y - shownHeight * 0.48, 49, shownHeight * 0.5, 0, face > 0 ? -1.22 : 1.92, face > 0 ? 1.22 : 4.36); ctx.stroke(); ctx.restore();
     }
     if (active && attack.def.kind === 'melee') {
       const reach = clamp(attack.def.reach || 90, 40, 240), low = attack.def.level === 'low';

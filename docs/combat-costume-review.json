@@ -1,0 +1,2489 @@
+{
+  "version": "0.4.0",
+  "capturedAt": "2026-10-22T12:07:34.795Z",
+  "comparisonBaseline": "171f422686e350cf665a7a755b1c77aa4322811f",
+  "screenshots": [
+    "costumes-0.4.0-page-1.png",
+    "costumes-0.4.0-page-2.png",
+    "costumes-0.4.0-page-3.png",
+    "costumes-0.4.0-page-4.png",
+    "costumes-0.4.0-page-5.png",
+    "gangle-palette-0.4.0.png",
+    "shadow-preservation-0.4.0.png"
+  ],
+  "paletteEvidence": {
+    "id": "gangletragedy",
+    "changedPixels": 11227,
+    "protectedChangedPixels": 0,
+    "alphaChangedPixels": 0,
+    "geometryUnchanged": true,
+    "screenshot": "gangle-palette-0.4.0.png"
+  },
+  "shadowEvidence": {
+    "entries": [
+      {
+        "id": "shadowpomni",
+        "mode": "preserve-source",
+        "sourceCell": [
+          306,
+          734
+        ],
+        "differentBytes": 0,
+        "alphaChangedPixels": 0,
+        "previouslyRemovedOpaquePixels": 138155
+      },
+      {
+        "id": "shadowragatha",
+        "mode": "preserve-source",
+        "sourceCell": [
+          306,
+          734
+        ],
+        "differentBytes": 0,
+        "alphaChangedPixels": 0,
+        "previouslyRemovedOpaquePixels": 123736
+      },
+      {
+        "id": "shadowcaine",
+        "mode": "preserve-source",
+        "sourceCell": [
+          306,
+          734
+        ],
+        "differentBytes": 0,
+        "alphaChangedPixels": 0,
+        "previouslyRemovedOpaquePixels": 129482
+      }
+    ],
+    "screenshot": "shadow-preservation-0.4.0.png",
+    "scope": "Equality of every source-cell RGBA byte; no inferred body-only mask. Previously removed opaque pixels include background and body."
+  },
+  "sourceHashes": {
+    "assets/images/cainos-pixel-cast-sheet-variants.png": "073910220488953b61fc9970febb143b4380e90d72f751a075050a4ee6b9a599",
+    "assets/images/cainos-pixel-cast-sheet-requested-variants.png": "5043f9498705d4611f40a4c8d64724703907f7170c6c9b100a4c1e4aa3aa07ec",
+    "assets/images/cainos-pixel-cast-sheet-extra-variants.png": "e89ba95cfbdd1c497a25c0cc226d5086ebcbaf1fdc7a22bd98390ed3cdb2cd14",
+    "assets/images/cainos-pixel-cast-sheet-japanese-pack.png": "d2e6637699dd1a7bddcc9c0f42d7073a6619201b26c25e2aa0b8e9e1ed776c6a",
+    "assets/images/cainos-pixel-cast-sheet-baseball-pack.png": "abfc68810df4dc0ec0410f8164622282dafb830b85310185c082156f4107db58",
+    "assets/images/cainos-pixel-cast-sheet-shadow-pack.png": "dbaccf37ebb9b6d20b98f9c30dd0c034583d8bc7e8e5ebb352bb130c5bf803a8",
+    "assets/images/cainos-pixel-cast-sheet-horror-pack.png": "a083cd9736ba44ede699e88af40c5212dc3ecd1ea496af02d61d2f0c7649a47c",
+    "assets/images/cainos-pixel-cast-sheet-hunter-pack.png": "534251dd9e45bbb9e6402982be08f6db2204adbe346f7727cec3681babb31d98",
+    "assets/images/cainos-pixel-cast-sheet-gloink-queen-scale.png": "5d5a38f6266155063fe7bad5a3731a16f5b75e7259aad7dc601254cc1ee01e19",
+    "assets/images/cainos-pixel-cast-sheet-canon-npc-pack-m.png": "154f4c423d536f3f2499b34c47e36d1cc1e4123dc24dafda236f9373ed634d02",
+    "assets/images/cainos-pixel-cast-sheet-canon-npc-pack-n.png": "6be16d7b8423e4cafa21a86ceeb8221a2cf6c946895cb70e9b73391ffed7447d",
+    "assets/images/cainos-pixel-cast-sheet-canon-npc-pack-p.png": "a8d16cf1960dd6d495ac67f84a8d415eb23b053f0cb36bc0c8a669749c7275e8",
+    "assets/images/cainos-pixel-cast-sheet-canon-npc-pack-q.png": "28de56a7967d293e9fc8fe5bda3a7acc2f525ff40189ac4cc96fb16a973d742e",
+    "assets/images/cainos-pixel-cast-sheet-canon-npc-pack-r.png": "79337f3302e0fe10e5b24edc93194f4afccd7f6f926afbfc48b777cbcee1f13e",
+    "combat/data.mjs": "889392a6a46c9de66e62c8e711dcc4f245aa8ee5a8dca7340be3053570c8e33b",
+    "combat/costume-fidelity.mjs": "9e6a02f0fb5dcb684d05b92986833bcf79b6962961e1fcd17f68a0769cbe61b5",
+    "combat/fidelity.mjs": "4949a63ed5a0cb9b1372a67e2519a3b34836f309e077944cfa1cb033491736bf",
+    "combat/render.mjs": "c214b96774f7baa11427c286b8cffd3ef8be2a354a02c6ba65d4768389d4cda7",
+    "combat/render-presentation.mjs": "370469edb54fe87cfa4f649984cf8c6dfb77419b018dbb1d8fedc432b9fe607e",
+    "combat/render-poses.mjs": "f0189e749d5901ca8310065e8188c82048b923517519dee42603050d00311be8"
+  },
+  "entries": [
+    {
+      "id": "ganglekawaii",
+      "name": "Kawaii Gangle",
+      "baseFighterId": "gangle",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-variants.png",
+        "sheet": "variants",
+        "cols": 4,
+        "rows": 3,
+        "col": 3,
+        "row": 0
+      },
+      "imageSize": [
+        1536,
+        1024
+      ],
+      "sourceCell": [
+        384,
+        341
+      ],
+      "bounds": {
+        "x": 10,
+        "y": 30,
+        "width": 271,
+        "height": 302
+      },
+      "frame": [
+        283,
+        314
+      ],
+      "opaquePixels": 48204,
+      "translucentPixels": 0,
+      "touchesCell": {
+        "left": false,
+        "top": false,
+        "right": false,
+        "bottom": false
+      },
+      "body": {
+        "width": 65,
+        "height": 220,
+        "crouchHeight": 117
+      },
+      "displayedWidthAtBodyHeight": 197.42
+    },
+    {
+      "id": "ganglecomedy",
+      "name": "Gangle Comedy Mask",
+      "baseFighterId": "gangle",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-variants.png",
+        "sheet": "variants",
+        "cols": 4,
+        "rows": 3,
+        "col": 0,
+        "row": 1,
+        "sourceRect": {
+          "x": 100,
+          "y": 340,
+          "width": 270,
+          "height": 290
+        }
+      },
+      "imageSize": [
+        1536,
+        1024
+      ],
+      "sourceCell": [
+        270,
+        290
+      ],
+      "bounds": {
+        "x": 18,
+        "y": 18,
+        "width": 242,
+        "height": 258
+      },
+      "frame": [
+        252,
+        268
+      ],
+      "opaquePixels": 29742,
+      "translucentPixels": 0,
+      "touchesCell": {
+        "left": false,
+        "top": false,
+        "right": false,
+        "bottom": false
+      },
+      "body": {
+        "width": 65,
+        "height": 220,
+        "crouchHeight": 117
+      },
+      "displayedWidthAtBodyHeight": 206.36
+    },
+    {
+      "id": "gangletragedy",
+      "name": "Gangle Tragedy Mask",
+      "baseFighterId": "gangle",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-variants.png",
+        "sheet": "variants",
+        "cols": 4,
+        "rows": 3,
+        "col": 1,
+        "row": 1,
+        "sourceRect": {
+          "x": 450,
+          "y": 340,
+          "width": 245,
+          "height": 285
+        },
+        "paletteSwap": "gangle-red-ribbons"
+      },
+      "imageSize": [
+        1536,
+        1024
+      ],
+      "sourceCell": [
+        245,
+        285
+      ],
+      "bounds": {
+        "x": 11,
+        "y": 18,
+        "width": 214,
+        "height": 262
+      },
+      "frame": [
+        222,
+        270
+      ],
+      "opaquePixels": 30448,
+      "translucentPixels": 0,
+      "touchesCell": {
+        "left": false,
+        "top": false,
+        "right": false,
+        "bottom": false
+      },
+      "body": {
+        "width": 65,
+        "height": 220,
+        "crouchHeight": 117
+      },
+      "displayedWidthAtBodyHeight": 179.69
+    },
+    {
+      "id": "darkduojax",
+      "name": "Dark Duo Jax",
+      "baseFighterId": "jax",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-requested-variants.png",
+        "sheet": "requested",
+        "cols": 5,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "sourceRect": {
+          "x": 115,
+          "y": 25,
+          "width": 310,
+          "height": 730
+        }
+      },
+      "imageSize": [
+        1983,
+        793
+      ],
+      "sourceCell": [
+        310,
+        730
+      ],
+      "bounds": {
+        "x": 16,
+        "y": 30,
+        "width": 276,
+        "height": 680
+      },
+      "frame": [
+        288,
+        692
+      ],
+      "opaquePixels": 96620,
+      "translucentPixels": 0,
+      "touchesCell": {
+        "left": false,
+        "top": false,
+        "right": false,
+        "bottom": false
+      },
+      "body": {
+        "width": 78,
+        "height": 260,
+        "crouchHeight": 138
+      },
+      "displayedWidthAtBodyHeight": 105.53
+    },
+    {
+      "id": "darkduogangle",
+      "name": "Dark Duo Gangle",
+      "baseFighterId": "gangle",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-requested-variants.png",
+        "sheet": "requested",
+        "cols": 5,
+        "rows": 1,
+        "col": 1,
+        "row": 0,
+        "sourceRect": {
+          "x": 430,
+          "y": 145,
+          "width": 400,
+          "height": 610
+        }
+      },
+      "imageSize": [
+        1983,
+        793
+      ],
+      "sourceCell": [
+        400,
+        610
+      ],
+      "bounds": {
+        "x": 12,
+        "y": 27,
+        "width": 369,
+        "height": 559
+      },
+      "frame": [
+        383,
+        573
+      ],
+      "opaquePixels": 88429,
+      "translucentPixels": 0,
+      "touchesCell": {
+        "left": false,
+        "top": false,
+        "right": false,
+        "bottom": false
+      },
+      "body": {
+        "width": 65,
+        "height": 220,
+        "crouchHeight": 117
+      },
+      "displayedWidthAtBodyHeight": 145.22
+    },
+    {
+      "id": "maidjax",
+      "name": "Maid Jax",
+      "baseFighterId": "jax",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-requested-variants.png",
+        "sheet": "requested",
+        "cols": 5,
+        "rows": 1,
+        "col": 2,
+        "row": 0
+      },
+      "imageSize": [
+        1983,
+        793
+      ],
+      "sourceCell": [
+        396,
+        793
+      ],
+      "bounds": {
+        "x": 4,
+        "y": 35,
+        "width": 386,
+        "height": 699
+      },
+      "frame": [
+        396,
+        713
+      ],
+      "opaquePixels": 89786,
+      "translucentPixels": 0,
+      "touchesCell": {
+        "left": false,
+        "top": false,
+        "right": false,
+        "bottom": false
+      },
+      "body": {
+        "width": 78,
+        "height": 260,
+        "crouchHeight": 138
+      },
+      "displayedWidthAtBodyHeight": 143.58
+    },
+    {
+      "id": "maidragatha",
+      "name": "Maid Ragatha",
+      "baseFighterId": "ragatha",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-requested-variants.png",
+        "sheet": "requested",
+        "cols": 5,
+        "rows": 1,
+        "col": 3,
+        "row": 0,
+        "sourceRect": {
+          "x": 1165,
+          "y": 130,
+          "width": 375,
+          "height": 620
+        }
+      },
+      "imageSize": [
+        1983,
+        793
+      ],
+      "sourceCell": [
+        375,
+        620
+      ],
+      "bounds": {
+        "x": 15,
+        "y": 27,
+        "width": 341,
+        "height": 577
+      },
+      "frame": [
+        355,
+        591
+      ],
+      "opaquePixels": 116696,
+      "translucentPixels": 0,
+      "touchesCell": {
+        "left": false,
+        "top": false,
+        "right": false,
+        "bottom": false
+      },
+      "body": {
+        "width": 78,
+        "height": 235,
+        "crouchHeight": 125
+      },
+      "displayedWidthAtBodyHeight": 138.88
+    },
+    {
+      "id": "maidpomni",
+      "name": "Maid Pomni",
+      "baseFighterId": "pomni",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-requested-variants.png",
+        "sheet": "requested",
+        "cols": 5,
+        "rows": 1,
+        "col": 4,
+        "row": 0
+      },
+      "imageSize": [
+        1983,
+        793
+      ],
+      "sourceCell": [
+        396,
+        793
+      ],
+      "bounds": {
+        "x": 3,
+        "y": 297,
+        "width": 282,
+        "height": 434
+      },
+      "frame": [
+        292,
+        448
+      ],
+      "opaquePixels": 67479,
+      "translucentPixels": 0,
+      "touchesCell": {
+        "left": false,
+        "top": false,
+        "right": false,
+        "bottom": false
+      },
+      "body": {
+        "width": 78,
+        "height": 200,
+        "crouchHeight": 106
+      },
+      "displayedWidthAtBodyHeight": 129.95
+    },
+    {
+      "id": "maidgangle",
+      "name": "Maid Gangle",
+      "baseFighterId": "gangle",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-extra-variants.png",
+        "sheet": "extra",
+        "cols": 2,
+        "rows": 1,
+        "col": 0,
+        "row": 0
+      },
+      "imageSize": [
+        1536,
+        1024
+      ],
+      "sourceCell": [
+        768,
+        1024
+      ],
+      "bounds": {
+        "x": 274,
+        "y": 135,
+        "width": 456,
+        "height": 810
+      },
+      "frame": [
+        484,
+        838
+      ],
+      "opaquePixels": 183764,
+      "translucentPixels": 0,
+      "touchesCell": {
+        "left": false,
+        "top": false,
+        "right": false,
+        "bottom": false
+      },
+      "body": {
+        "width": 65,
+        "height": 220,
+        "crouchHeight": 117
+      },
+      "displayedWidthAtBodyHeight": 123.85
+    },
+    {
+      "id": "jaxgirl",
+      "name": "Jax Girl",
+      "baseFighterId": "jax",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-extra-variants.png",
+        "sheet": "extra",
+        "cols": 2,
+        "rows": 1,
+        "col": 1,
+        "row": 0
+      },
+      "imageSize": [
+        1536,
+        1024
+      ],
+      "sourceCell": [
+        768,
+        1024
+      ],
+      "bounds": {
+        "x": 92,
+        "y": 36,
+        "width": 360,
+        "height": 909
+      },
+      "frame": [
+        388,
+        937
+      ],
+      "opaquePixels": 191256,
+      "translucentPixels": 0,
+      "touchesCell": {
+        "left": false,
+        "top": false,
+        "right": false,
+        "bottom": false
+      },
+      "body": {
+        "width": 78,
+        "height": 260,
+        "crouchHeight": 138
+      },
+      "displayedWidthAtBodyHeight": 102.97
+    },
+    {
+      "id": "beachgangle",
+      "name": "Beach Gangle",
+      "baseFighterId": "gangle",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-japanese-pack.png",
+        "sheet": "japanese",
+        "cols": 5,
+        "rows": 2,
+        "col": 0,
+        "row": 0,
+        "sourceRect": {
+          "x": 40,
+          "y": 40,
+          "width": 320,
+          "height": 455
+        }
+      },
+      "imageSize": [
+        1536,
+        1024
+      ],
+      "sourceCell": [
+        320,
+        455
+      ],
+      "bounds": {
+        "x": 9,
+        "y": 15,
+        "width": 301,
+        "height": 424
+      },
+      "frame": [
+        313,
+        436
+      ],
+      "opaquePixels": 74543,
+      "translucentPixels": 0,
+      "touchesCell": {
+        "left": false,
+        "top": false,
+        "right": false,
+        "bottom": false
+      },
+      "body": {
+        "width": 65,
+        "height": 220,
+        "crouchHeight": 117
+      },
+      "displayedWidthAtBodyHeight": 156.18
+    },
+    {
+      "id": "japanesegangle",
+      "name": "Japanese Gangle",
+      "baseFighterId": "gangle",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-japanese-pack.png",
+        "sheet": "japanese",
+        "cols": 5,
+        "rows": 2,
+        "col": 1,
+        "row": 0,
+        "sourceRect": {
+          "x": 365,
+          "y": 70,
+          "width": 290,
+          "height": 425
+        }
+      },
+      "imageSize": [
+        1536,
+        1024
+      ],
+      "sourceCell": [
+        290,
+        425
+      ],
+      "bounds": {
+        "x": 13,
+        "y": 20,
+        "width": 264,
+        "height": 391
+      },
+      "frame": [
+        274,
+        401
+      ],
+      "opaquePixels": 57459,
+      "translucentPixels": 0,
+      "touchesCell": {
+        "left": false,
+        "top": false,
+        "right": false,
+        "bottom": false
+      },
+      "body": {
+        "width": 65,
+        "height": 220,
+        "crouchHeight": 117
+      },
+      "displayedWidthAtBodyHeight": 148.54
+    },
+    {
+      "id": "rhinogangle",
+      "name": "Rhino Gangle",
+      "baseFighterId": "gangle",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-japanese-pack.png",
+        "sheet": "japanese",
+        "cols": 5,
+        "rows": 2,
+        "col": 2,
+        "row": 0,
+        "sourceRect": {
+          "x": 665,
+          "y": 60,
+          "width": 255,
+          "height": 435
+        }
+      },
+      "imageSize": [
+        1536,
+        1024
+      ],
+      "sourceCell": [
+        255,
+        435
+      ],
+      "bounds": {
+        "x": 18,
+        "y": 20,
+        "width": 231,
+        "height": 400
+      },
+      "frame": [
+        241,
+        410
+      ],
+      "opaquePixels": 58848,
+      "translucentPixels": 0,
+      "touchesCell": {
+        "left": false,
+        "top": false,
+        "right": false,
+        "bottom": false
+      },
+      "body": {
+        "width": 65,
+        "height": 220,
+        "crouchHeight": 117
+      },
+      "displayedWidthAtBodyHeight": 127.05
+    },
+    {
+      "id": "workgangle",
+      "name": "Work Gangle",
+      "baseFighterId": "gangle",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-japanese-pack.png",
+        "sheet": "japanese",
+        "cols": 5,
+        "rows": 2,
+        "col": 3,
+        "row": 0
+      },
+      "imageSize": [
+        1536,
+        1024
+      ],
+      "sourceCell": [
+        307,
+        512
+      ],
+      "bounds": {
+        "x": 65,
+        "y": 93,
+        "width": 188,
+        "height": 388
+      },
+      "frame": [
+        200,
+        400
+      ],
+      "opaquePixels": 44981,
+      "translucentPixels": 0,
+      "touchesCell": {
+        "left": false,
+        "top": false,
+        "right": false,
+        "bottom": false
+      },
+      "body": {
+        "width": 65,
+        "height": 220,
+        "crouchHeight": 117
+      },
+      "displayedWidthAtBodyHeight": 106.6
+    },
+    {
+      "id": "japanesejax",
+      "name": "Japanese Jax",
+      "baseFighterId": "jax",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-japanese-pack.png",
+        "sheet": "japanese",
+        "cols": 5,
+        "rows": 2,
+        "col": 4,
+        "row": 0
+      },
+      "imageSize": [
+        1536,
+        1024
+      ],
+      "sourceCell": [
+        307,
+        512
+      ],
+      "bounds": {
+        "x": 30,
+        "y": 33,
+        "width": 184,
+        "height": 451
+      },
+      "frame": [
+        196,
+        463
+      ],
+      "opaquePixels": 51417,
+      "translucentPixels": 0,
+      "touchesCell": {
+        "left": false,
+        "top": false,
+        "right": false,
+        "bottom": false
+      },
+      "body": {
+        "width": 78,
+        "height": 260,
+        "crouchHeight": 138
+      },
+      "displayedWidthAtBodyHeight": 106.08
+    },
+    {
+      "id": "japaneseragatha",
+      "name": "Japanese Ragatha",
+      "baseFighterId": "ragatha",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-japanese-pack.png",
+        "sheet": "japanese",
+        "cols": 5,
+        "rows": 2,
+        "col": 0,
+        "row": 1
+      },
+      "imageSize": [
+        1536,
+        1024
+      ],
+      "sourceCell": [
+        307,
+        512
+      ],
+      "bounds": {
+        "x": 67,
+        "y": 11,
+        "width": 225,
+        "height": 428
+      },
+      "frame": [
+        237,
+        440
+      ],
+      "opaquePixels": 57980,
+      "translucentPixels": 0,
+      "touchesCell": {
+        "left": false,
+        "top": false,
+        "right": false,
+        "bottom": false
+      },
+      "body": {
+        "width": 78,
+        "height": 235,
+        "crouchHeight": 125
+      },
+      "displayedWidthAtBodyHeight": 123.54
+    },
+    {
+      "id": "japanesepomni",
+      "name": "Japanese Pomni",
+      "baseFighterId": "pomni",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-japanese-pack.png",
+        "sheet": "japanese",
+        "cols": 5,
+        "rows": 2,
+        "col": 1,
+        "row": 1,
+        "sourceRect": {
+          "x": 355,
+          "y": 560,
+          "width": 275,
+          "height": 410
+        }
+      },
+      "imageSize": [
+        1536,
+        1024
+      ],
+      "sourceCell": [
+        275,
+        410
+      ],
+      "bounds": {
+        "x": 15,
+        "y": 19,
+        "width": 249,
+        "height": 373
+      },
+      "frame": [
+        259,
+        383
+      ],
+      "opaquePixels": 49671,
+      "translucentPixels": 0,
+      "touchesCell": {
+        "left": false,
+        "top": false,
+        "right": false,
+        "bottom": false
+      },
+      "body": {
+        "width": 78,
+        "height": 200,
+        "crouchHeight": 106
+      },
+      "displayedWidthAtBodyHeight": 133.51
+    },
+    {
+      "id": "japanesekinger",
+      "name": "Japanese Kinger",
+      "baseFighterId": "kinger",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-japanese-pack.png",
+        "sheet": "japanese",
+        "cols": 5,
+        "rows": 2,
+        "col": 2,
+        "row": 1,
+        "sourceRect": {
+          "x": 660,
+          "y": 495,
+          "width": 240,
+          "height": 475
+        }
+      },
+      "imageSize": [
+        1536,
+        1024
+      ],
+      "sourceCell": [
+        240,
+        475
+      ],
+      "bounds": {
+        "x": 16,
+        "y": 13,
+        "width": 209,
+        "height": 444
+      },
+      "frame": [
+        217,
+        452
+      ],
+      "opaquePixels": 50458,
+      "translucentPixels": 0,
+      "touchesCell": {
+        "left": false,
+        "top": false,
+        "right": false,
+        "bottom": false
+      },
+      "body": {
+        "width": 100,
+        "height": 265,
+        "crouchHeight": 140
+      },
+      "displayedWidthAtBodyHeight": 124.74
+    },
+    {
+      "id": "japanesezooble",
+      "name": "Japanese Zooble",
+      "baseFighterId": "zooble",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-japanese-pack.png",
+        "sheet": "japanese",
+        "cols": 5,
+        "rows": 2,
+        "col": 3,
+        "row": 1
+      },
+      "imageSize": [
+        1536,
+        1024
+      ],
+      "sourceCell": [
+        307,
+        512
+      ],
+      "bounds": {
+        "x": 1,
+        "y": 5,
+        "width": 301,
+        "height": 435
+      },
+      "frame": [
+        307,
+        446
+      ],
+      "opaquePixels": 61558,
+      "translucentPixels": 0,
+      "touchesCell": {
+        "left": false,
+        "top": false,
+        "right": false,
+        "bottom": false
+      },
+      "body": {
+        "width": 88,
+        "height": 240,
+        "crouchHeight": 127
+      },
+      "displayedWidthAtBodyHeight": 166.07
+    },
+    {
+      "id": "japanesegummigoo",
+      "name": "Japanese Gummigoo",
+      "baseFighterId": "gummigoo",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-japanese-pack.png",
+        "sheet": "japanese",
+        "cols": 5,
+        "rows": 2,
+        "col": 4,
+        "row": 1,
+        "sourceRect": {
+          "x": 1200,
+          "y": 525,
+          "width": 325,
+          "height": 445
+        }
+      },
+      "imageSize": [
+        1536,
+        1024
+      ],
+      "sourceCell": [
+        325,
+        445
+      ],
+      "bounds": {
+        "x": 18,
+        "y": 19,
+        "width": 286,
+        "height": 410
+      },
+      "frame": [
+        298,
+        422
+      ],
+      "opaquePixels": 68274,
+      "translucentPixels": 0,
+      "touchesCell": {
+        "left": false,
+        "top": false,
+        "right": false,
+        "bottom": false
+      },
+      "body": {
+        "width": 100,
+        "height": 220,
+        "crouchHeight": 117
+      },
+      "displayedWidthAtBodyHeight": 153.46
+    },
+    {
+      "id": "baseballjax",
+      "name": "Baseball Jax",
+      "baseFighterId": "jax",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-baseball-pack.png",
+        "sheet": "baseball",
+        "cols": 6,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "sourceRect": {
+          "x": 90,
+          "y": 25,
+          "width": 300,
+          "height": 645
+        }
+      },
+      "imageSize": [
+        2172,
+        724
+      ],
+      "sourceCell": [
+        300,
+        645
+      ],
+      "bounds": {
+        "x": 16,
+        "y": 16,
+        "width": 267,
+        "height": 611
+      },
+      "frame": [
+        277,
+        621
+      ],
+      "opaquePixels": 74723,
+      "translucentPixels": 0,
+      "touchesCell": {
+        "left": false,
+        "top": false,
+        "right": false,
+        "bottom": false
+      },
+      "body": {
+        "width": 78,
+        "height": 260,
+        "crouchHeight": 138
+      },
+      "displayedWidthAtBodyHeight": 113.62
+    },
+    {
+      "id": "baseballzooble",
+      "name": "Baseball Zooble",
+      "baseFighterId": "zooble",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-baseball-pack.png",
+        "sheet": "baseball",
+        "cols": 6,
+        "rows": 1,
+        "col": 1,
+        "row": 0,
+        "sourceRect": {
+          "x": 420,
+          "y": 80,
+          "width": 350,
+          "height": 590
+        }
+      },
+      "imageSize": [
+        2172,
+        724
+      ],
+      "sourceCell": [
+        350,
+        590
+      ],
+      "bounds": {
+        "x": 18,
+        "y": 16,
+        "width": 326,
+        "height": 551
+      },
+      "frame": [
+        338,
+        563
+      ],
+      "opaquePixels": 85010,
+      "translucentPixels": 0,
+      "touchesCell": {
+        "left": false,
+        "top": false,
+        "right": false,
+        "bottom": false
+      },
+      "body": {
+        "width": 88,
+        "height": 240,
+        "crouchHeight": 127
+      },
+      "displayedWidthAtBodyHeight": 142
+    },
+    {
+      "id": "baseballgangle",
+      "name": "Baseball Gangle",
+      "baseFighterId": "gangle",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-baseball-pack.png",
+        "sheet": "baseball",
+        "cols": 6,
+        "rows": 1,
+        "col": 2,
+        "row": 0,
+        "sourceRect": {
+          "x": 790,
+          "y": 130,
+          "width": 280,
+          "height": 535
+        }
+      },
+      "imageSize": [
+        2172,
+        724
+      ],
+      "sourceCell": [
+        280,
+        535
+      ],
+      "bounds": {
+        "x": 13,
+        "y": 21,
+        "width": 255,
+        "height": 492
+      },
+      "frame": [
+        265,
+        502
+      ],
+      "opaquePixels": 73068,
+      "translucentPixels": 0,
+      "touchesCell": {
+        "left": false,
+        "top": false,
+        "right": false,
+        "bottom": false
+      },
+      "body": {
+        "width": 65,
+        "height": 220,
+        "crouchHeight": 117
+      },
+      "displayedWidthAtBodyHeight": 114.02
+    },
+    {
+      "id": "baseballragatha",
+      "name": "Baseball Ragatha",
+      "baseFighterId": "ragatha",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-baseball-pack.png",
+        "sheet": "baseball",
+        "cols": 6,
+        "rows": 1,
+        "col": 3,
+        "row": 0
+      },
+      "imageSize": [
+        2172,
+        724
+      ],
+      "sourceCell": [
+        362,
+        724
+      ],
+      "bounds": {
+        "x": 50,
+        "y": 131,
+        "width": 271,
+        "height": 512
+      },
+      "frame": [
+        285,
+        526
+      ],
+      "opaquePixels": 86402,
+      "translucentPixels": 0,
+      "touchesCell": {
+        "left": false,
+        "top": false,
+        "right": false,
+        "bottom": false
+      },
+      "body": {
+        "width": 78,
+        "height": 235,
+        "crouchHeight": 125
+      },
+      "displayedWidthAtBodyHeight": 124.38
+    },
+    {
+      "id": "baseballpomni",
+      "name": "Baseball Pomni",
+      "baseFighterId": "pomni",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-baseball-pack.png",
+        "sheet": "baseball",
+        "cols": 6,
+        "rows": 1,
+        "col": 4,
+        "row": 0
+      },
+      "imageSize": [
+        2172,
+        724
+      ],
+      "sourceCell": [
+        362,
+        724
+      ],
+      "bounds": {
+        "x": 34,
+        "y": 242,
+        "width": 285,
+        "height": 401
+      },
+      "frame": [
+        299,
+        415
+      ],
+      "opaquePixels": 56663,
+      "translucentPixels": 0,
+      "touchesCell": {
+        "left": false,
+        "top": false,
+        "right": false,
+        "bottom": false
+      },
+      "body": {
+        "width": 78,
+        "height": 200,
+        "crouchHeight": 106
+      },
+      "displayedWidthAtBodyHeight": 142.14
+    },
+    {
+      "id": "baseballkinger",
+      "name": "Baseball Kinger",
+      "baseFighterId": "kinger",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-baseball-pack.png",
+        "sheet": "baseball",
+        "cols": 6,
+        "rows": 1,
+        "col": 5,
+        "row": 0
+      },
+      "imageSize": [
+        2172,
+        724
+      ],
+      "sourceCell": [
+        362,
+        724
+      ],
+      "bounds": {
+        "x": 21,
+        "y": 57,
+        "width": 229,
+        "height": 590
+      },
+      "frame": [
+        243,
+        604
+      ],
+      "opaquePixels": 79381,
+      "translucentPixels": 0,
+      "touchesCell": {
+        "left": false,
+        "top": false,
+        "right": false,
+        "bottom": false
+      },
+      "body": {
+        "width": 100,
+        "height": 265,
+        "crouchHeight": 140
+      },
+      "displayedWidthAtBodyHeight": 102.86
+    },
+    {
+      "id": "shadowpomni",
+      "name": "Shadow Pomni",
+      "baseFighterId": "pomni",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-shadow-pack.png",
+        "sheet": "shadow",
+        "cols": 7,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "matteMode": "preserve-source"
+      },
+      "imageSize": [
+        2143,
+        734
+      ],
+      "sourceCell": [
+        306,
+        734
+      ],
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 306,
+        "height": 734
+      },
+      "frame": [
+        306,
+        734
+      ],
+      "opaquePixels": 224604,
+      "translucentPixels": 0,
+      "touchesCell": {
+        "left": true,
+        "top": true,
+        "right": true,
+        "bottom": true
+      },
+      "body": {
+        "width": 78,
+        "height": 200,
+        "crouchHeight": 106
+      },
+      "displayedWidthAtBodyHeight": 83.38
+    },
+    {
+      "id": "shadowjax",
+      "name": "Shadow Jax",
+      "baseFighterId": "jax",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-shadow-pack.png",
+        "sheet": "shadow",
+        "cols": 7,
+        "rows": 1,
+        "col": 1,
+        "row": 0
+      },
+      "imageSize": [
+        2143,
+        734
+      ],
+      "sourceCell": [
+        306,
+        734
+      ],
+      "bounds": {
+        "x": 0,
+        "y": 25,
+        "width": 306,
+        "height": 676
+      },
+      "frame": [
+        306,
+        688
+      ],
+      "opaquePixels": 171563,
+      "translucentPixels": 0,
+      "touchesCell": {
+        "left": true,
+        "top": false,
+        "right": true,
+        "bottom": false
+      },
+      "body": {
+        "width": 78,
+        "height": 260,
+        "crouchHeight": 138
+      },
+      "displayedWidthAtBodyHeight": 117.69
+    },
+    {
+      "id": "shadowragatha",
+      "name": "Shadow Ragatha",
+      "baseFighterId": "ragatha",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-shadow-pack.png",
+        "sheet": "shadow",
+        "cols": 7,
+        "rows": 1,
+        "col": 2,
+        "row": 0,
+        "matteMode": "preserve-source"
+      },
+      "imageSize": [
+        2143,
+        734
+      ],
+      "sourceCell": [
+        306,
+        734
+      ],
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 306,
+        "height": 734
+      },
+      "frame": [
+        306,
+        734
+      ],
+      "opaquePixels": 224604,
+      "translucentPixels": 0,
+      "touchesCell": {
+        "left": true,
+        "top": true,
+        "right": true,
+        "bottom": true
+      },
+      "body": {
+        "width": 78,
+        "height": 235,
+        "crouchHeight": 125
+      },
+      "displayedWidthAtBodyHeight": 97.97
+    },
+    {
+      "id": "shadowkinger",
+      "name": "Shadow Kinger",
+      "baseFighterId": "kinger",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-shadow-pack.png",
+        "sheet": "shadow",
+        "cols": 7,
+        "rows": 1,
+        "col": 3,
+        "row": 0
+      },
+      "imageSize": [
+        2143,
+        734
+      ],
+      "sourceCell": [
+        306,
+        734
+      ],
+      "bounds": {
+        "x": 0,
+        "y": 83,
+        "width": 306,
+        "height": 613
+      },
+      "frame": [
+        306,
+        625
+      ],
+      "opaquePixels": 158188,
+      "translucentPixels": 0,
+      "touchesCell": {
+        "left": true,
+        "top": false,
+        "right": true,
+        "bottom": false
+      },
+      "body": {
+        "width": 100,
+        "height": 265,
+        "crouchHeight": 140
+      },
+      "displayedWidthAtBodyHeight": 132.28
+    },
+    {
+      "id": "shadowgangle",
+      "name": "Shadow Gangle",
+      "baseFighterId": "gangle",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-shadow-pack.png",
+        "sheet": "shadow",
+        "cols": 7,
+        "rows": 1,
+        "col": 4,
+        "row": 0
+      },
+      "imageSize": [
+        2143,
+        734
+      ],
+      "sourceCell": [
+        306,
+        734
+      ],
+      "bounds": {
+        "x": 0,
+        "y": 143,
+        "width": 306,
+        "height": 545
+      },
+      "frame": [
+        306,
+        557
+      ],
+      "opaquePixels": 145108,
+      "translucentPixels": 0,
+      "touchesCell": {
+        "left": true,
+        "top": false,
+        "right": true,
+        "bottom": false
+      },
+      "body": {
+        "width": 65,
+        "height": 220,
+        "crouchHeight": 117
+      },
+      "displayedWidthAtBodyHeight": 123.52
+    },
+    {
+      "id": "shadowzooble",
+      "name": "Shadow Zooble",
+      "baseFighterId": "zooble",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-shadow-pack.png",
+        "sheet": "shadow",
+        "cols": 7,
+        "rows": 1,
+        "col": 5,
+        "row": 0
+      },
+      "imageSize": [
+        2143,
+        734
+      ],
+      "sourceCell": [
+        306,
+        734
+      ],
+      "bounds": {
+        "x": 0,
+        "y": 110,
+        "width": 306,
+        "height": 578
+      },
+      "frame": [
+        306,
+        590
+      ],
+      "opaquePixels": 149995,
+      "translucentPixels": 0,
+      "touchesCell": {
+        "left": true,
+        "top": false,
+        "right": true,
+        "bottom": false
+      },
+      "body": {
+        "width": 88,
+        "height": 240,
+        "crouchHeight": 127
+      },
+      "displayedWidthAtBodyHeight": 127.06
+    },
+    {
+      "id": "shadowcaine",
+      "name": "Shadow Caine",
+      "baseFighterId": "caine",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-shadow-pack.png",
+        "sheet": "shadow",
+        "cols": 7,
+        "rows": 1,
+        "col": 6,
+        "row": 0,
+        "matteMode": "preserve-source"
+      },
+      "imageSize": [
+        2143,
+        734
+      ],
+      "sourceCell": [
+        306,
+        734
+      ],
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 306,
+        "height": 734
+      },
+      "frame": [
+        306,
+        734
+      ],
+      "opaquePixels": 224604,
+      "translucentPixels": 0,
+      "touchesCell": {
+        "left": true,
+        "top": true,
+        "right": true,
+        "bottom": true
+      },
+      "body": {
+        "width": 78,
+        "height": 245,
+        "crouchHeight": 130
+      },
+      "displayedWidthAtBodyHeight": 102.14
+    },
+    {
+      "id": "horrorpomnivoid",
+      "name": "Horror Pomni Void-Eyes",
+      "baseFighterId": "pomni",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-horror-pack.png",
+        "sheet": "horror",
+        "cols": 5,
+        "rows": 1,
+        "col": 2,
+        "row": 0
+      },
+      "imageSize": [
+        2172,
+        724
+      ],
+      "sourceCell": [
+        434,
+        724
+      ],
+      "bounds": {
+        "x": 1,
+        "y": 7,
+        "width": 428,
+        "height": 711
+      },
+      "frame": [
+        434,
+        724
+      ],
+      "opaquePixels": 224063,
+      "translucentPixels": 0,
+      "touchesCell": {
+        "left": false,
+        "top": false,
+        "right": false,
+        "bottom": false
+      },
+      "body": {
+        "width": 78,
+        "height": 200,
+        "crouchHeight": 106
+      },
+      "displayedWidthAtBodyHeight": 120.39
+    },
+    {
+      "id": "horrorpomnispiral",
+      "name": "Horror Pomni Spiral-Eyes",
+      "baseFighterId": "pomni",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-horror-pack.png",
+        "sheet": "horror",
+        "cols": 5,
+        "rows": 1,
+        "col": 3,
+        "row": 0
+      },
+      "imageSize": [
+        2172,
+        724
+      ],
+      "sourceCell": [
+        434,
+        724
+      ],
+      "bounds": {
+        "x": 0,
+        "y": 7,
+        "width": 428,
+        "height": 712
+      },
+      "frame": [
+        434,
+        724
+      ],
+      "opaquePixels": 252416,
+      "translucentPixels": 0,
+      "touchesCell": {
+        "left": true,
+        "top": false,
+        "right": false,
+        "bottom": false
+      },
+      "body": {
+        "width": 78,
+        "height": 200,
+        "crouchHeight": 106
+      },
+      "displayedWidthAtBodyHeight": 120.22
+    },
+    {
+      "id": "horrorpomniskull",
+      "name": "Horror Pomni Skull-Mask",
+      "baseFighterId": "pomni",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-horror-pack.png",
+        "sheet": "horror",
+        "cols": 5,
+        "rows": 1,
+        "col": 4,
+        "row": 0
+      },
+      "imageSize": [
+        2172,
+        724
+      ],
+      "sourceCell": [
+        434,
+        724
+      ],
+      "bounds": {
+        "x": 1,
+        "y": 7,
+        "width": 428,
+        "height": 711
+      },
+      "frame": [
+        434,
+        724
+      ],
+      "opaquePixels": 223914,
+      "translucentPixels": 0,
+      "touchesCell": {
+        "left": false,
+        "top": false,
+        "right": false,
+        "bottom": false
+      },
+      "body": {
+        "width": 78,
+        "height": 200,
+        "crouchHeight": 106
+      },
+      "displayedWidthAtBodyHeight": 120.39
+    },
+    {
+      "id": "hunterjax",
+      "name": "Hunter Jax",
+      "baseFighterId": "jax",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-hunter-pack.png",
+        "sheet": "hunter",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0
+      },
+      "imageSize": [
+        1024,
+        1536
+      ],
+      "sourceCell": [
+        1024,
+        1536
+      ],
+      "bounds": {
+        "x": 2,
+        "y": 2,
+        "width": 1020,
+        "height": 1531
+      },
+      "frame": [
+        1024,
+        1536
+      ],
+      "opaquePixels": 1445298,
+      "translucentPixels": 0,
+      "touchesCell": {
+        "left": false,
+        "top": false,
+        "right": false,
+        "bottom": false
+      },
+      "body": {
+        "width": 78,
+        "height": 260,
+        "crouchHeight": 138
+      },
+      "displayedWidthAtBodyHeight": 173.22
+    },
+    {
+      "id": "gloinkqueenscale",
+      "name": "Gloink Queen True Scale",
+      "baseFighterId": "gloinkqueen",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-gloink-queen-scale.png",
+        "sheet": "gloinkqueenscale",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "component": "largest",
+        "nativeFacing": -1
+      },
+      "imageSize": [
+        2017,
+        780
+      ],
+      "sourceCell": [
+        2017,
+        780
+      ],
+      "bounds": {
+        "x": 10,
+        "y": 27,
+        "width": 1997,
+        "height": 742
+      },
+      "frame": [
+        2017,
+        767
+      ],
+      "opaquePixels": 1401071,
+      "translucentPixels": 0,
+      "touchesCell": {
+        "left": false,
+        "top": false,
+        "right": false,
+        "bottom": false
+      },
+      "body": {
+        "width": 420,
+        "height": 150,
+        "crouchHeight": 80
+      },
+      "displayedWidthAtBodyHeight": 403.71
+    },
+    {
+      "id": "peeledjax",
+      "name": "Jax - Skin Peeled Off",
+      "baseFighterId": "jax",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-canon-npc-pack-m.png",
+        "sheet": "canonM",
+        "cols": 6,
+        "rows": 1,
+        "col": 3,
+        "row": 0
+      },
+      "imageSize": [
+        2172,
+        724
+      ],
+      "sourceCell": [
+        362,
+        724
+      ],
+      "bounds": {
+        "x": 80,
+        "y": 24,
+        "width": 212,
+        "height": 628
+      },
+      "frame": [
+        226,
+        642
+      ],
+      "opaquePixels": 49765,
+      "translucentPixels": 5421,
+      "touchesCell": {
+        "left": false,
+        "top": false,
+        "right": false,
+        "bottom": false
+      },
+      "body": {
+        "width": 78,
+        "height": 260,
+        "crouchHeight": 138
+      },
+      "displayedWidthAtBodyHeight": 87.77
+    },
+    {
+      "id": "spudsypomni",
+      "name": "Spudsy Pomni",
+      "baseFighterId": "pomni",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-canon-npc-pack-n.png",
+        "sheet": "canonN",
+        "cols": 6,
+        "rows": 1,
+        "col": 1,
+        "row": 0
+      },
+      "imageSize": [
+        2172,
+        724
+      ],
+      "sourceCell": [
+        362,
+        724
+      ],
+      "bounds": {
+        "x": 93,
+        "y": 204,
+        "width": 211,
+        "height": 427
+      },
+      "frame": [
+        225,
+        441
+      ],
+      "opaquePixels": 50105,
+      "translucentPixels": 2511,
+      "touchesCell": {
+        "left": false,
+        "top": false,
+        "right": false,
+        "bottom": false
+      },
+      "body": {
+        "width": 78,
+        "height": 200,
+        "crouchHeight": 106
+      },
+      "displayedWidthAtBodyHeight": 98.83
+    },
+    {
+      "id": "spudsyjax",
+      "name": "Spudsy Jax",
+      "baseFighterId": "jax",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-canon-npc-pack-n.png",
+        "sheet": "canonN",
+        "cols": 6,
+        "rows": 1,
+        "col": 2,
+        "row": 0
+      },
+      "imageSize": [
+        2172,
+        724
+      ],
+      "sourceCell": [
+        362,
+        724
+      ],
+      "bounds": {
+        "x": 66,
+        "y": 18,
+        "width": 200,
+        "height": 625
+      },
+      "frame": [
+        214,
+        639
+      ],
+      "opaquePixels": 55596,
+      "translucentPixels": 3258,
+      "touchesCell": {
+        "left": false,
+        "top": false,
+        "right": false,
+        "bottom": false
+      },
+      "body": {
+        "width": 78,
+        "height": 260,
+        "crouchHeight": 138
+      },
+      "displayedWidthAtBodyHeight": 83.2
+    },
+    {
+      "id": "spudsyragatha",
+      "name": "Spudsy Ragatha",
+      "baseFighterId": "ragatha",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-canon-npc-pack-n.png",
+        "sheet": "canonN",
+        "cols": 6,
+        "rows": 1,
+        "col": 3,
+        "row": 0
+      },
+      "imageSize": [
+        2172,
+        724
+      ],
+      "sourceCell": [
+        362,
+        724
+      ],
+      "bounds": {
+        "x": 42,
+        "y": 132,
+        "width": 214,
+        "height": 504
+      },
+      "frame": [
+        228,
+        518
+      ],
+      "opaquePixels": 58701,
+      "translucentPixels": 2782,
+      "touchesCell": {
+        "left": false,
+        "top": false,
+        "right": false,
+        "bottom": false
+      },
+      "body": {
+        "width": 78,
+        "height": 235,
+        "crouchHeight": 125
+      },
+      "displayedWidthAtBodyHeight": 99.78
+    },
+    {
+      "id": "spudsyzooble",
+      "name": "Spudsy Zooble",
+      "baseFighterId": "zooble",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-canon-npc-pack-n.png",
+        "sheet": "canonN",
+        "cols": 6,
+        "rows": 1,
+        "col": 4,
+        "row": 0,
+        "sourceRect": {
+          "x": 1430,
+          "y": 80,
+          "width": 315,
+          "height": 575
+        }
+      },
+      "imageSize": [
+        2172,
+        724
+      ],
+      "sourceCell": [
+        315,
+        575
+      ],
+      "bounds": {
+        "x": 12,
+        "y": 8,
+        "width": 280,
+        "height": 553
+      },
+      "frame": [
+        292,
+        565
+      ],
+      "opaquePixels": 52826,
+      "translucentPixels": 4424,
+      "touchesCell": {
+        "left": false,
+        "top": false,
+        "right": false,
+        "bottom": false
+      },
+      "body": {
+        "width": 88,
+        "height": 240,
+        "crouchHeight": 127
+      },
+      "displayedWidthAtBodyHeight": 121.52
+    },
+    {
+      "id": "possessedpomni",
+      "name": "Pomni possessed",
+      "baseFighterId": "pomni",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-canon-npc-pack-p.png",
+        "sheet": "canonP",
+        "cols": 4,
+        "rows": 1,
+        "col": 1,
+        "row": 0,
+        "sourceRect": {
+          "x": 405,
+          "y": 190,
+          "width": 325,
+          "height": 530
+        }
+      },
+      "imageSize": [
+        1774,
+        887
+      ],
+      "sourceCell": [
+        325,
+        530
+      ],
+      "bounds": {
+        "x": 17,
+        "y": 23,
+        "width": 290,
+        "height": 488
+      },
+      "frame": [
+        302,
+        500
+      ],
+      "opaquePixels": 80413,
+      "translucentPixels": 2584,
+      "touchesCell": {
+        "left": false,
+        "top": false,
+        "right": false,
+        "bottom": false
+      },
+      "body": {
+        "width": 78,
+        "height": 200,
+        "crouchHeight": 106
+      },
+      "displayedWidthAtBodyHeight": 118.85
+    },
+    {
+      "id": "monstrouscaine",
+      "name": "Caine multi-arm",
+      "baseFighterId": "caine",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-canon-npc-pack-p.png",
+        "sheet": "canonP",
+        "cols": 4,
+        "rows": 1,
+        "col": 2,
+        "row": 0,
+        "sourceRect": {
+          "x": 805,
+          "y": 125,
+          "width": 510,
+          "height": 600
+        }
+      },
+      "imageSize": [
+        1774,
+        887
+      ],
+      "sourceCell": [
+        510,
+        600
+      ],
+      "bounds": {
+        "x": 22,
+        "y": 26,
+        "width": 466,
+        "height": 553
+      },
+      "frame": [
+        484,
+        571
+      ],
+      "opaquePixels": 112598,
+      "translucentPixels": 5569,
+      "touchesCell": {
+        "left": false,
+        "top": false,
+        "right": false,
+        "bottom": false
+      },
+      "body": {
+        "width": 78,
+        "height": 245,
+        "crouchHeight": 130
+      },
+      "displayedWidthAtBodyHeight": 206.46
+    },
+    {
+      "id": "flamingozooble",
+      "name": "Flamingo Zooble",
+      "baseFighterId": "zooble",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-canon-npc-pack-p.png",
+        "sheet": "canonP",
+        "cols": 4,
+        "rows": 1,
+        "col": 3,
+        "row": 0
+      },
+      "imageSize": [
+        1774,
+        887
+      ],
+      "sourceCell": [
+        443,
+        887
+      ],
+      "bounds": {
+        "x": 75,
+        "y": 121,
+        "width": 273,
+        "height": 607
+      },
+      "frame": [
+        289,
+        623
+      ],
+      "opaquePixels": 49859,
+      "translucentPixels": 6012,
+      "touchesCell": {
+        "left": false,
+        "top": false,
+        "right": false,
+        "bottom": false
+      },
+      "body": {
+        "width": 88,
+        "height": 240,
+        "crouchHeight": 127
+      },
+      "displayedWidthAtBodyHeight": 107.94
+    },
+    {
+      "id": "mouthlesspomni",
+      "name": "Pomni sans bouche",
+      "baseFighterId": "pomni",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-canon-npc-pack-q.png",
+        "sheet": "canonQ",
+        "cols": 4,
+        "rows": 1,
+        "col": 0,
+        "row": 0
+      },
+      "imageSize": [
+        1774,
+        887
+      ],
+      "sourceCell": [
+        443,
+        887
+      ],
+      "bounds": {
+        "x": 86,
+        "y": 237,
+        "width": 339,
+        "height": 455
+      },
+      "frame": [
+        355,
+        471
+      ],
+      "opaquePixels": 92681,
+      "translucentPixels": 3982,
+      "touchesCell": {
+        "left": false,
+        "top": false,
+        "right": false,
+        "bottom": false
+      },
+      "body": {
+        "width": 78,
+        "height": 200,
+        "crouchHeight": 106
+      },
+      "displayedWidthAtBodyHeight": 149.01
+    },
+    {
+      "id": "mouthlessjax",
+      "name": "Jax sans bouche",
+      "baseFighterId": "jax",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-canon-npc-pack-q.png",
+        "sheet": "canonQ",
+        "cols": 4,
+        "rows": 1,
+        "col": 1,
+        "row": 0
+      },
+      "imageSize": [
+        1774,
+        887
+      ],
+      "sourceCell": [
+        443,
+        887
+      ],
+      "bounds": {
+        "x": 143,
+        "y": 129,
+        "width": 202,
+        "height": 563
+      },
+      "frame": [
+        218,
+        579
+      ],
+      "opaquePixels": 71127,
+      "translucentPixels": 3467,
+      "touchesCell": {
+        "left": false,
+        "top": false,
+        "right": false,
+        "bottom": false
+      },
+      "body": {
+        "width": 78,
+        "height": 260,
+        "crouchHeight": 138
+      },
+      "displayedWidthAtBodyHeight": 93.29
+    },
+    {
+      "id": "mouthlesszooble",
+      "name": "Zooble sans bouche",
+      "baseFighterId": "zooble",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-canon-npc-pack-q.png",
+        "sheet": "canonQ",
+        "cols": 4,
+        "rows": 1,
+        "col": 2,
+        "row": 0
+      },
+      "imageSize": [
+        1774,
+        887
+      ],
+      "sourceCell": [
+        443,
+        887
+      ],
+      "bounds": {
+        "x": 78,
+        "y": 152,
+        "width": 316,
+        "height": 536
+      },
+      "frame": [
+        332,
+        552
+      ],
+      "opaquePixels": 89146,
+      "translucentPixels": 7345,
+      "touchesCell": {
+        "left": false,
+        "top": false,
+        "right": false,
+        "bottom": false
+      },
+      "body": {
+        "width": 88,
+        "height": 240,
+        "crouchHeight": 127
+      },
+      "displayedWidthAtBodyHeight": 141.49
+    },
+    {
+      "id": "inertbubble",
+      "name": "Bubble inerte",
+      "baseFighterId": "bubble",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-canon-npc-pack-q.png",
+        "sheet": "canonQ",
+        "cols": 4,
+        "rows": 1,
+        "col": 3,
+        "row": 0
+      },
+      "imageSize": [
+        1774,
+        887
+      ],
+      "sourceCell": [
+        443,
+        887
+      ],
+      "bounds": {
+        "x": 73,
+        "y": 477,
+        "width": 247,
+        "height": 220
+      },
+      "frame": [
+        263,
+        236
+      ],
+      "opaquePixels": 44552,
+      "translucentPixels": 1914,
+      "touchesCell": {
+        "left": false,
+        "top": false,
+        "right": false,
+        "bottom": false
+      },
+      "body": {
+        "width": 105,
+        "height": 120,
+        "crouchHeight": 64
+      },
+      "displayedWidthAtBodyHeight": 134.73
+    },
+    {
+      "id": "groundedcaine",
+      "name": "Caine prive de pouvoir",
+      "baseFighterId": "caine",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-canon-npc-pack-r.png",
+        "sheet": "canonR",
+        "cols": 4,
+        "rows": 1,
+        "col": 0,
+        "row": 0
+      },
+      "imageSize": [
+        1774,
+        887
+      ],
+      "sourceCell": [
+        443,
+        887
+      ],
+      "bounds": {
+        "x": 108,
+        "y": 121,
+        "width": 323,
+        "height": 567
+      },
+      "frame": [
+        339,
+        583
+      ],
+      "opaquePixels": 99845,
+      "translucentPixels": 7147,
+      "touchesCell": {
+        "left": false,
+        "top": false,
+        "right": false,
+        "bottom": false
+      },
+      "body": {
+        "width": 78,
+        "height": 245,
+        "crouchHeight": 130
+      },
+      "displayedWidthAtBodyHeight": 139.57
+    }
+  ],
+  "errors": []
+}
