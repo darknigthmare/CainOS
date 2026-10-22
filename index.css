@@ -416,6 +416,15 @@ body {
   background-position: center;
 }
 
+.icon-combat {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M2 14 16 2 30 14v15H2Z" fill="%23942647" stroke="%23f5d675" stroke-width="2"/><path d="M7 14 16 2 25 14" fill="%23f5d675"/><path d="m11 27 5-11 5 11" fill="%23351c55"/><path d="M1 14h30" stroke="%23f5d675" stroke-width="2"/></svg>');
+}
+.combat-window-body { padding: 0; min-height: 0; flex: 1; overflow: hidden; display: flex; }
+.combat-window-body iframe { width: 100%; height: 100%; flex: 1; border: 0; background: #171122; }
+.combat-window-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 5px 10px; background: #21162f; color: #f1dba4; font: bold 11px monospace; }
+.combat-window-toolbar a { color: #fff0bc; padding: 3px; }
+.combat-window { min-width: 240px; }
+
 /* System SVG Icons coded in CSS using backgrounds */
 .icon-sim {
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect x="4" y="4" width="24" height="24" fill="%23777" stroke="%23000" stroke-width="2"/><rect x="8" y="8" width="16" height="12" fill="%23000" stroke="%233f3" stroke-width="1.5"/><circle cx="16" cy="24" r="2" fill="%23f33"/></svg>');

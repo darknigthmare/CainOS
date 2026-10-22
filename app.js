@@ -1125,6 +1125,7 @@ const OS = {
         if (!this.isBooted) this.runBootSequence();
       } else {
         this.clearCalibrationStartupTimers();
+        this.setCombatWindowActive(false);
         screen.style.opacity = '0';
         SoundManager.stopMainframeHum();
         SoundManager.stopTheme();
@@ -20063,6 +20064,21 @@ const OS = {
   },
 
   // Window Management
+  setCombatWindowActive(active) {
+    const frame = document.getElementById('circus-combat-frame');
+    if (!frame) return;
+    if (!frame.dataset.visibilityBound) {
+      frame.dataset.visibilityBound = 'true';
+      frame.addEventListener('load', () => {
+        frame.contentWindow?.postMessage({ type: 'cainos:combat:visibility', active: this.activeWindow === 'combat' && this.windows.combat?.style.display !== 'none' }, location.origin);
+      });
+    }
+    if (active && !frame.getAttribute('src')) frame.src = frame.dataset.src;
+    if (frame.getAttribute('src')) {
+      frame.contentWindow?.postMessage({ type: 'cainos:combat:visibility', active: !!active }, location.origin);
+    }
+  },
+
   openWindow(winId) {
     const win = this.windows[winId];
     if (win) {
@@ -20096,6 +20112,7 @@ const OS = {
     const win = this.windows[winId];
     if (win) {
       win.style.display = 'none';
+      if (winId === 'combat') this.setCombatWindowActive(false);
       if (winId === 'simulations') {
         SoundManager.stopTheme();
         if (EpisodeManager.activeGame) EpisodeManager.activeGame.stop();
@@ -20106,6 +20123,7 @@ const OS = {
   },
 
   closeAllWindows() {
+    this.setCombatWindowActive(false);
     Object.keys(this.windows).forEach(winId => {
       const win = this.windows[winId];
       if (win) {
@@ -20129,6 +20147,7 @@ const OS = {
     const win = this.windows[winId];
     if (win) {
       win.style.display = 'none';
+      if (winId === 'combat') this.setCombatWindowActive(false);
       if (winId === 'simulations') {
         SoundManager.stopTheme();
       }
@@ -20143,6 +20162,7 @@ const OS = {
       document.querySelectorAll('.window').forEach(w => w.classList.remove('active-window'));
       win.classList.add('active-window');
       this.activeWindow = winId;
+      this.setCombatWindowActive(winId === 'combat');
       if (winId === 'simulations') {
         SoundManager.startTheme();
       } else {
@@ -20189,6 +20209,7 @@ const OS = {
         if (winId === 'vitals') iconClass = "icon-vitals-sm";
         if (winId === 'terminal') iconClass = "icon-term-sm";
         if (winId === 'wacky-watch') iconClass = "icon-watch-sm";
+        if (winId === 'combat') iconClass = "icon-combat";
 
         tab.innerHTML = `<span class="icon-sm ${iconClass}"></span> ${title}`;
         tab.addEventListener('click', () => {

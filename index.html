@@ -40,6 +40,10 @@
                 <div class="icon-img icon-sim"></div>
                 <div class="icon-label" title="Simulation_Control.exe">Simulation Control</div>
               </div>
+              <div class="desktop-icon" data-window="combat">
+                <div class="icon-img icon-combat"></div>
+                <div class="icon-label" title="Digital Circus — Encore">Circus Combat</div>
+              </div>
               <div class="desktop-icon" data-window="wacky-watch">
                 <div class="icon-img icon-watch"></div>
                 <div class="icon-label" title="Wacky_Watch.app">Wacky Watch</div>
@@ -68,6 +72,23 @@
 
             <!-- Draggable Window Container -->
             <div id="windows-container">
+              <div id="win-combat" class="window combat-window" style="width: 100%; height: 100%; left: 0; top: 0; display: none;">
+                <div class="window-header">
+                  <span class="window-title">Digital Circus — Encore · Combat</span>
+                  <div class="window-controls">
+                    <button class="win-btn win-min" title="Réduire et mettre le combat en pause">_</button>
+                    <button class="win-btn win-max" title="Agrandir">[]</button>
+                    <button class="win-btn win-close" title="Fermer et mettre le combat en pause">X</button>
+                  </div>
+                </div>
+                <div class="combat-window-toolbar">
+                  <span>LE GRAND DUEL</span>
+                  <a href="combat/" target="_blank" rel="noopener">Ouvrir le jeu autonome ↗</a>
+                </div>
+                <div class="window-body combat-window-body">
+                  <iframe id="circus-combat-frame" title="Digital Circus — Encore, jeu de combat" data-src="combat/index.html?embedded=1" allow="gamepad; fullscreen" allowfullscreen></iframe>
+                </div>
+              </div>
               <!-- Window template: File Explorer -->
               <div id="win-files" class="window" style="width: 480px; height: 350px; left: 50px; top: 40px; display: none;">
                 <div class="window-header">
@@ -880,6 +901,9 @@
                 <span class="rotated-title">C&A OS 98</span>
               </div>
               <div class="start-menu-items">
+                <div class="start-menu-item" data-window="combat">
+                  <span class="icon-sm icon-combat"></span> Circus Combat — Encore
+                </div>
                 <div class="start-menu-item" data-window="simulations">
                   <span class="icon-sm icon-sim-sm"></span> Simulation Panel
                 </div>

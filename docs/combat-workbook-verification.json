@@ -1,0 +1,66 @@
+{
+  "createdAt": "2026-10-21T20:10:09.061Z",
+  "counts": {
+    "fighters": 14,
+    "moves": 140,
+    "stages": 12,
+    "atlas": 179,
+    "variants": 74,
+    "features": 83,
+    "production": 372,
+    "scenarios": 28,
+    "qa": 108
+  },
+  "qaSummary": {
+    "Réussi": 94,
+    "Échec": 0,
+    "Non exécuté": 5,
+    "À vérifier": 9
+  },
+  "verifiedSummary": [
+    14,
+    140,
+    12,
+    179,
+    74
+  ],
+  "formulaErrors": 0,
+  "statusMutationRecalculated": true,
+  "renderedSheets": [
+    "Synthèse",
+    "QA",
+    "Combattants",
+    "Techniques",
+    "Atlas"
+  ],
+  "qaEvidencePresent": true,
+  "sourceDigests": {
+    "combat/data.mjs": "6867b886a1fc1ccfb05241025af76025188d3e42810a5492f0c7f216279ebeeb",
+    "combat/sprite-catalog.mjs": "41ad2ff416eef0d9426dd8ec17218a35b0c6a016a6dbf73e8e96a1f86d1a2172",
+    "combat/session.mjs": "5a8e7029195d8c6cb6dfa59c7a5d30730057f591467ca35b1886498b709ad4d6",
+    "tests/combat-engine.test.mjs": "5fb1260ef501eadf1e55bd879d70ee872ca10ea60f78a5b807fda35f112d0485",
+    "tests/combat-session.test.mjs": "ef3e56ee13c9f1cb46a11d81e606d6504363a9e50d8ab760fa999c4a0b005609",
+    "docs/combat-qa-evidence.json": "986f13a3b1614b5ddb6d7ed5772f6b47aa7ae9f5dce674af4ff0b33857e32c0d",
+    "scripts/build-combat-workbook.mjs": "2c64a857242a967555c141d03e69f920bf80d628131fbd181a123fcca63fd128"
+  },
+  "xlsxPackage": {
+    "sheets": [
+      "Synthèse",
+      "Fonctionnalités",
+      "Combattants",
+      "Techniques",
+      "Arènes",
+      "Atlas",
+      "Production",
+      "Scénarios",
+      "QA",
+      "Références"
+    ],
+    "tables": 9,
+    "formulas": 30,
+    "dataValidationRanges": 14,
+    "frozenSheets": 9,
+    "errorCells": 0,
+    "cachedCountsMatch": true
+  }
+}

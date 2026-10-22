@@ -1,0 +1,142 @@
+/** End-to-end tests against a running static server. No test-only gameplay hooks. */
+import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import { pathToFileURL } from 'node:url';
+
+let playwright;
+try { playwright = await import('playwright'); }
+catch (error) {
+  if (!process.env.CODEX_PRIMARY_RUNTIME_NODE_MODULES) throw error;
+  playwright = await import(pathToFileURL(path.join(process.env.CODEX_PRIMARY_RUNTIME_NODE_MODULES, 'playwright/index.mjs')).href);
+}
+const base = process.env.COMBAT_TEST_URL || 'http://127.0.0.1:4178';
+const output = path.resolve('audit-combat');
+await fs.mkdir(output, { recursive:true });
+const browser = await playwright.chromium.launch({ headless:true, executablePath:process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH || undefined, args:['--no-sandbox','--disable-dev-shm-usage','--single-process','--no-zygote'] });
+const errors=[], checks=[];
+const context = await browser.newContext({ viewport:{width:1440,height:1000} });
+const page = await context.newPage();
+page.on('pageerror', error => errors.push(error.message));
+page.on('response', response => { if(response.status()>=400 && response.url().startsWith(base)) errors.push(`HTTP ${response.status()} ${response.url()}`); });
+const checked = (name,detail='') => { checks.push({name,detail,pass:true});console.log(`PASS ${name}${detail?` — ${detail}`:''}`); };
+try {
+  await page.goto(`${base}/combat/`,{waitUntil:'networkidle'});
+  await page.waitForFunction(()=>window.Encore?.screen==='home');
+  assert.equal(await page.locator('.mode-card[data-mode]').count(),7);
+  await page.screenshot({path:path.join(output,'desktop-home.png'),fullPage:true});
+  checked('Seven modes and standalone home render');
+  await page.getByRole('button',{name:'Combattants',exact:true}).click();
+  assert.equal(await page.locator('.move-table tbody tr').count(),10);
+  await page.locator('[data-codex="gummigoo"]').click();
+  assert.match(await page.locator('.codex-head h2').textContent(),/Gummigoo/);
+  checked('Codex changes fighter and shows ten authored moves');
+  await page.getByRole('button',{name:'Archives',exact:true}).click();
+  await page.locator('#archive-search').fill('jax');
+  await page.waitForTimeout(300);
+  assert.ok(await page.locator('.archive-card').count()>1);
+  assert.ok((await page.locator('.archive-card h3').allTextContents()).every(name=>/jax/i.test(name)));
+  checked('Archive search filters real records');
+  await page.getByRole('button',{name:'Réglages',exact:true}).click();
+  await page.locator('[data-setting="rounds"]').selectOption('1');
+  await page.locator('[data-setting="touch"]').selectOption('on');
+  await page.locator('[data-setting="sound"]').uncheck();
+  await page.reload({waitUntil:'networkidle'});
+  assert.equal(await page.evaluate(()=>window.Encore.profile.settings.rounds),1);
+  checked('Settings persist across reload');
+  await page.locator('.mode-card[data-mode="training"]').click();
+  assert.equal(await page.locator('.fighter-card').count(),14);
+  assert.equal(await page.locator('.stage-card').count(),12);
+  await page.locator('[data-stage="manor"]').click();
+  await page.screenshot({path:path.join(output,'desktop-select.png'),fullPage:true});
+  await page.locator('[data-action="start"]').click();
+  await page.waitForFunction(()=>window.Encore?.ready);
+  await page.waitForFunction(()=>window.Encore.snapshot?.phase==='fight');
+  assert.equal(await page.locator('.touch-controls').count(),1);
+  const before=await page.evaluate(()=>window.Encore.snapshot.fighters[0].x);
+  await page.keyboard.down('KeyD');await page.waitForTimeout(500);await page.keyboard.up('KeyD');
+  const after=await page.evaluate(()=>window.Encore.snapshot.fighters[0].x);
+  assert.ok(after>before+60,`Keyboard movement ${before}->${after}`);
+  await page.keyboard.press('KeyJ');await page.waitForTimeout(50);
+  assert.ok(await page.evaluate(()=>window.Encore.snapshot.fighters[0].stats.starts)>0);
+  checked('Training loads and responds to keyboard movement/attack');
+  await page.locator('#training-dummy').selectOption('block');
+  await page.locator('#training-boxes').check();
+  await page.waitForTimeout(300);
+  await page.screenshot({path:path.join(output,'desktop-fight.png'),fullPage:true});
+  await page.locator('[data-action="pause"]').click();
+  const paused=await page.evaluate(()=>window.Encore.snapshot.frame);
+  await page.waitForTimeout(300);
+  assert.equal(await page.evaluate(()=>window.Encore.snapshot.frame),paused);
+  await page.getByRole('button',{name:'Reprendre',exact:true}).click();
+  await page.waitForTimeout(100);
+  assert.ok(await page.evaluate(()=>window.Encore.snapshot.frame)>paused);
+  checked('Pause stops simulation and resume restarts');
+  await page.locator('main [data-action="movelist"]').click();
+  assert.equal(await page.locator('dialog .move-table tbody tr').count(),10);
+  assert.equal(await page.evaluate(()=>window.Encore.paused),true);
+  await page.getByRole('button',{name:'Reprendre',exact:true}).click();
+  checked('Move list pauses and resumes the current encounter');
+  await page.locator('[data-action="pause"]').click();await page.getByRole('button',{name:'Accueil',exact:true}).click();
+  await page.locator('.mode-card[data-mode="local"]').click();
+  await page.locator('[data-action="start"]').click();await page.waitForFunction(()=>window.Encore.ready&&window.Encore.snapshot.phase==='fight');
+  const secondBefore=await page.evaluate(()=>window.Encore.snapshot.fighters[1].x);
+  await page.keyboard.down('ArrowLeft');await page.waitForTimeout(250);await page.keyboard.up('ArrowLeft');
+  assert.ok(await page.evaluate(()=>window.Encore.snapshot.fighters[1].x)<secondBefore-25);
+  checked('Player 2 has independent local controls');
+  await page.locator('[data-action="pause"]').click();await page.getByRole('button',{name:'Accueil',exact:true}).click();
+  await page.locator('.mode-card[data-mode="challenge"]').click();assert.equal(await page.locator('[data-challenge]').count(),6);
+  await page.locator('[data-challenge="specialist"]').click();await page.locator('[data-action="start"]').click();await page.waitForFunction(()=>window.Encore.ready);
+  // Use explicit UI controls so the exercise is a complete user journey.
+  for(const key of ['KeyJ','KeyK','KeyI','KeyL']){await page.keyboard.press(key);await page.waitForTimeout(950);}
+  await page.waitForFunction(()=>window.Encore.profile.challenges.includes('specialist'),null,{timeout:5000});
+  checked('Challenge completion persists an earned result');
+  await page.getByRole('button',{name:'Accueil',exact:true}).click();
+  // Exercise the real OS boot and launcher rather than invoking OS methods.
+  await page.goto(`${base}/`,{waitUntil:'domcontentloaded'});
+  await page.locator('#boot-init-button').waitFor({state:'visible',timeout:15000});await page.locator('#boot-init-button').click();
+  // Preserve and complete CainOS's existing first-use calibration gate.
+  await page.locator('#btn-start-simulation').click();
+  await page.locator('#btn-story-skip').click();
+  await page.locator('#ep0-canvas').waitFor({state:'visible'});
+  await page.keyboard.press('Enter');await page.keyboard.press('Enter');await page.keyboard.press('Enter');
+  await page.waitForFunction(()=>!document.querySelector('#power-led').classList.contains('active'),null,{timeout:20000});
+  await page.locator('#power-button').click();
+  await page.locator('.desktop-icon[data-window="combat"]').waitFor({state:'visible',timeout:15000});
+  await page.locator('.desktop-icon[data-window="combat"]').dblclick();
+  const frame=page.frameLocator('#circus-combat-frame');
+  await frame.locator('.mode-card[data-mode="training"]').waitFor();
+  await frame.locator('.mode-card[data-mode="training"]').click();await frame.locator('[data-action="start"]').click();
+  const loadedFrame=page.frames().find(f=>f.url().includes('embedded=1'));
+  await loadedFrame.waitForFunction(()=>window.Encore.ready);
+  await page.locator('#win-combat .win-min').click();
+  const embeddedFrame=page.frames().find(f=>f.url().includes('embedded=1'));
+  assert.ok(embeddedFrame);
+  assert.equal(await embeddedFrame.evaluate(()=>window.Encore.paused),true);
+  const closedFrame=await embeddedFrame.evaluate(()=>window.Encore.snapshot.frame);await page.waitForTimeout(250);
+  assert.equal(await embeddedFrame.evaluate(()=>window.Encore.snapshot.frame),closedFrame);
+  await page.locator('.desktop-icon[data-window="combat"]').dblclick();
+  assert.ok(await frame.getByRole('button',{name:'Reprendre',exact:true}).isVisible());
+  checked('CainOS desktop launches the shared game and minimizing pauses it');
+  await page.screenshot({path:path.join(output,'cainos-integrated.png'),fullPage:true});
+  const mobile=await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true});
+  const phone=await mobile.newPage();phone.on('pageerror',e=>errors.push(`mobile: ${e.message}`));
+  await phone.goto(`${base}/combat/`,{waitUntil:'networkidle'});
+  assert.ok(await phone.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
+  await phone.screenshot({path:path.join(output,'mobile-home.png'),fullPage:true});
+  await phone.locator('.mode-card[data-mode="training"]').click();await phone.locator('[data-action="start"]').click();await phone.waitForFunction(()=>window.Encore.ready);
+  assert.ok(await phone.locator('.touch-controls').isVisible());
+  // Use real touch events; synthetic pointer ids cannot obtain capture in Chromium.
+  await phone.locator('[data-control="light"]').tap();await phone.waitForTimeout(100);
+  assert.ok(await phone.evaluate(()=>window.Encore.snapshot.fighters[0].stats.starts)>0);
+  assert.ok(await phone.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
+  await phone.screenshot({path:path.join(output,'mobile-fight.png'),fullPage:true});
+  checked('390px mobile layout and touch attack work without horizontal overflow');
+  assert.deepEqual(errors,[]);
+  await fs.writeFile(path.join(output,'browser-report.json'),JSON.stringify({base,checks,errors},null,2));
+  console.log(`Browser QA: ${checks.length} journeys passed; no runtime/HTTP errors.`);
+} catch(error){
+  await page.screenshot({path:path.join(output,'failure.png'),fullPage:true}).catch(()=>{});
+  await fs.writeFile(path.join(output,'browser-report.json'),JSON.stringify({base,checks,errors,failure:error.message},null,2));
+  throw error;
+} finally{await browser.close();}
