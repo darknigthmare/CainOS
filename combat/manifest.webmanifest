@@ -1,0 +1,12 @@
+{
+  "name": "Digital Circus — Encore",
+  "short_name": "Encore",
+  "description": "Le Grand Duel de CainOS",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#1c1427",
+  "theme_color": "#1c1427",
+  "lang": "fr",
+  "icons": [{ "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}

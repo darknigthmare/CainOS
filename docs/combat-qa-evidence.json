@@ -1,0 +1,544 @@
+{
+  "asOf": "2026-10-21",
+  "enginePassed": true,
+  "sessionPassed": true,
+  "featureStatuses": {
+    "PRD-04": "Implémenté"
+  },
+  "cases": {
+    "boot": {
+      "status": "Réussi",
+      "method": "node tests/combat-browser.mjs",
+      "proof": "Calibration existante jouée dans l’interface, démarrage du bureau, lancement du jeu par double-clic."
+    },
+    "standalone": {
+      "status": "Réussi",
+      "method": "node tests/combat-browser.mjs / node tests/combat-progression-browser.mjs",
+      "proof": "Accueil et entraînement démarrent. Le build isolé charge 21 ressources locales sans /app.js CainOS."
+    },
+    "pause-window": {
+      "status": "À vérifier",
+      "method": "node tests/combat-browser.mjs",
+      "proof": "Réduction : frame figée et pause confirmées. La fermeture par la croix reste à tester séparément."
+    },
+    "reopen": {
+      "status": "À vérifier",
+      "method": "node tests/combat-browser.mjs",
+      "proof": "Réouverture après réduction : bouton Reprendre présent. Contrôle prolongé des reprises et de la fermeture encore à mener."
+    },
+    "roster": {
+      "status": "À vérifier",
+      "method": "Tests de données, moteur, préchargement et sélection navigateur",
+      "proof": "14 combattants présents et préchargés ; 140 techniques activées. La sélection manuelle de chaque costume reste distincte."
+    },
+    "stages": {
+      "status": "Réussi",
+      "method": "Préchargement du renderer et 12 captures Canvas",
+      "proof": "Douze thèmes rendus. Préchargement des 14 combattants sans erreur ; les décors restent des compositions procédurales."
+    },
+    "local": {
+      "status": "Réussi",
+      "method": "node tests/combat-browser.mjs / node tests/combat-progression-browser.mjs",
+      "proof": "Commandes indépendantes de J2. Duel local terminé en 2 282 frames et enregistré avec 611 séquences d’entrées."
+    },
+    "arcade": {
+      "status": "À vérifier",
+      "method": "node tests/combat-progression-browser.mjs",
+      "proof": "Victoire réelle contre Pomni puis passage à Ragatha, acte 2/6. La longueur de 6 matchs est testée ; le parcours intégral et sa médaille n’ont pas été joués dans le navigateur."
+    },
+    "boss": {
+      "status": "À vérifier",
+      "method": "node tests/combat-progression-browser.mjs",
+      "proof": "Victoire réelle contre Gloink Queen puis The Fudge, acte 2/4. La fin de la route et sa médaille ne sont pas validées par une partie complète dans le navigateur."
+    },
+    "survival": {
+      "status": "Réussi",
+      "method": "node tests/combat-progression-browser.mjs",
+      "proof": "Après une victoire réelle : 8 374 PV deviennent 9 574 au duel suivant. Le bonus de 1 200 PV est appliqué sans remise à 10 000."
+    },
+    "training": {
+      "status": "À vérifier",
+      "method": "node tests/combat-browser.mjs / node tests/combat-engine.test.mjs",
+      "proof": "Clavier, attaque, garde du dummy et hitboxes utilisés dans le navigateur. Les six comportements sont couverts par le moteur ; leur parcours UI complet reste à vérifier."
+    },
+    "challenges": {
+      "status": "Réussi",
+      "method": "node tests/combat-session.test.mjs / tests/combat-browser.mjs",
+      "proof": "Les six défis sont accomplis depuis les positions initiales dans la simulation. Le défi Spécialiste est aussi gagné et sauvegardé dans le navigateur."
+    },
+    "save": {
+      "status": "À vérifier",
+      "method": "node tests/combat-progression-browser.mjs / node tests/combat-session.test.mjs",
+      "proof": "Progression et réglages survivent au rechargement. Avec stockage refusé, deux défis gagnés restent en mémoire et sont exportés en JSON. La réimportation valide confirmée par le bouton reste à vérifier."
+    },
+    "replay": {
+      "status": "Réussi",
+      "method": "node tests/combat-progression-browser.mjs",
+      "proof": "Le replay reproduit exactement tout le snapshot final et ne modifie ni statistiques ni historique."
+    },
+    "bad-save": {
+      "status": "Réussi",
+      "method": "node tests/combat-progression-browser.mjs",
+      "proof": "Profil au mauvais format, JSON malformé et replay contenant des bits invalides refusés sans perte du profil existant."
+    },
+    "mobile-layout": {
+      "status": "Réussi",
+      "method": "node tests/combat-browser.mjs",
+      "proof": "Vue 390 × 844 : accueil et combat sans débordement horizontal. Une attaque tactile réelle déclenche un mouvement. Émulation Chromium."
+    },
+    "motion": {
+      "status": "À vérifier",
+      "method": "Réglage sauvegardé et implémentation du renderer",
+      "proof": "Le réglage réduit les oscillations et tremblements dans le code. Comparaison visuelle complète encore à mener."
+    },
+    "build": {
+      "status": "À vérifier",
+      "method": "npm run qa / tests/combat-progression-browser.mjs",
+      "proof": "Deux builds générés. Le standalone est servi sur une origine distincte et jouable ; le build OS généré reste à servir séparément."
+    },
+    "regression": {
+      "status": "Réussi",
+      "method": "npm run qa",
+      "proof": "Commande terminée avec succès : 63 tests Node, audits CainOS de 248 identifiants, 211 actes, 179 avatars et 73 types d’accessoires ; deux builds incluant 42 images."
+    }
+  },
+  "additionalCases": [
+    {
+      "id": "UI-01",
+      "area": "Interface réelle",
+      "name": "Seven modes and standalone home render",
+      "status": "Réussi",
+      "priority": "P0",
+      "method": "node tests/combat-browser.mjs · Chromium headless",
+      "proof": "21 octobre 2026 · 11/11 contrôles · 0 erreur JS/HTTP",
+      "expected": "Seven modes and standalone home render"
+    },
+    {
+      "id": "UI-02",
+      "area": "Interface réelle",
+      "name": "Codex changes fighter and shows ten authored moves",
+      "status": "Réussi",
+      "priority": "P0",
+      "method": "node tests/combat-browser.mjs · Chromium headless",
+      "proof": "21 octobre 2026 · 11/11 contrôles · 0 erreur JS/HTTP",
+      "expected": "Codex changes fighter and shows ten authored moves"
+    },
+    {
+      "id": "UI-03",
+      "area": "Interface réelle",
+      "name": "Archive search filters real records",
+      "status": "Réussi",
+      "priority": "P0",
+      "method": "node tests/combat-browser.mjs · Chromium headless",
+      "proof": "21 octobre 2026 · 11/11 contrôles · 0 erreur JS/HTTP",
+      "expected": "Archive search filters real records"
+    },
+    {
+      "id": "UI-04",
+      "area": "Interface réelle",
+      "name": "Settings persist across reload",
+      "status": "Réussi",
+      "priority": "P0",
+      "method": "node tests/combat-browser.mjs · Chromium headless",
+      "proof": "21 octobre 2026 · 11/11 contrôles · 0 erreur JS/HTTP",
+      "expected": "Settings persist across reload"
+    },
+    {
+      "id": "UI-05",
+      "area": "Interface réelle",
+      "name": "Training loads and responds to keyboard movement/attack",
+      "status": "Réussi",
+      "priority": "P0",
+      "method": "node tests/combat-browser.mjs · Chromium headless",
+      "proof": "21 octobre 2026 · 11/11 contrôles · 0 erreur JS/HTTP",
+      "expected": "Training loads and responds to keyboard movement/attack"
+    },
+    {
+      "id": "UI-06",
+      "area": "Interface réelle",
+      "name": "Pause stops simulation and resume restarts",
+      "status": "Réussi",
+      "priority": "P0",
+      "method": "node tests/combat-browser.mjs · Chromium headless",
+      "proof": "21 octobre 2026 · 11/11 contrôles · 0 erreur JS/HTTP",
+      "expected": "Pause stops simulation and resume restarts"
+    },
+    {
+      "id": "UI-07",
+      "area": "Interface réelle",
+      "name": "Move list pauses and resumes the current encounter",
+      "status": "Réussi",
+      "priority": "P0",
+      "method": "node tests/combat-browser.mjs · Chromium headless",
+      "proof": "21 octobre 2026 · 11/11 contrôles · 0 erreur JS/HTTP",
+      "expected": "Move list pauses and resumes the current encounter"
+    },
+    {
+      "id": "UI-08",
+      "area": "Interface réelle",
+      "name": "Player 2 has independent local controls",
+      "status": "Réussi",
+      "priority": "P0",
+      "method": "node tests/combat-browser.mjs · Chromium headless",
+      "proof": "21 octobre 2026 · 11/11 contrôles · 0 erreur JS/HTTP",
+      "expected": "Player 2 has independent local controls"
+    },
+    {
+      "id": "UI-09",
+      "area": "Interface réelle",
+      "name": "Challenge completion persists an earned result",
+      "status": "Réussi",
+      "priority": "P0",
+      "method": "node tests/combat-browser.mjs · Chromium headless",
+      "proof": "21 octobre 2026 · 11/11 contrôles · 0 erreur JS/HTTP",
+      "expected": "Challenge completion persists an earned result"
+    },
+    {
+      "id": "UI-10",
+      "area": "Interface réelle",
+      "name": "CainOS desktop launches the shared game and minimizing pauses it",
+      "status": "Réussi",
+      "priority": "P0",
+      "method": "node tests/combat-browser.mjs · Chromium headless",
+      "proof": "21 octobre 2026 · 11/11 contrôles · 0 erreur JS/HTTP",
+      "expected": "CainOS desktop launches the shared game and minimizing pauses it"
+    },
+    {
+      "id": "UI-11",
+      "area": "Interface réelle",
+      "name": "390px mobile layout and touch attack work without horizontal overflow",
+      "status": "Réussi",
+      "priority": "P0",
+      "method": "node tests/combat-browser.mjs · Chromium headless",
+      "proof": "21 octobre 2026 · 11/11 contrôles · 0 erreur JS/HTTP",
+      "expected": "390px mobile layout and touch attack work without horizontal overflow"
+    },
+    {
+      "id": "PRG-01",
+      "area": "Progression réelle",
+      "name": "A real local match saves its result and replay",
+      "status": "Réussi",
+      "priority": "P0",
+      "method": "node tests/combat-progression-browser.mjs · Chromium headless",
+      "proof": "21 octobre 2026 · 9/9 contrôles · 0 erreur JS/HTTP · 2282 simulation frames, 611 input runs",
+      "expected": "A real local match saves its result and replay"
+    },
+    {
+      "id": "PRG-02",
+      "area": "Progression réelle",
+      "name": "UI replay reproduces the full terminal snapshot without changing profile",
+      "status": "Réussi",
+      "priority": "P0",
+      "method": "node tests/combat-progression-browser.mjs · Chromium headless",
+      "proof": "21 octobre 2026 · 9/9 contrôles · 0 erreur JS/HTTP",
+      "expected": "UI replay reproduces the full terminal snapshot without changing profile"
+    },
+    {
+      "id": "PRG-03",
+      "area": "Progression réelle",
+      "name": "arcade: earned first win opens encounter 2/6",
+      "status": "Réussi",
+      "priority": "P0",
+      "method": "node tests/combat-progression-browser.mjs · Chromium headless",
+      "proof": "21 octobre 2026 · 9/9 contrôles · 0 erreur JS/HTTP · pomni → ragatha, player HP 8336 → 10000",
+      "expected": "arcade: earned first win opens encounter 2/6"
+    },
+    {
+      "id": "PRG-04",
+      "area": "Progression réelle",
+      "name": "boss: earned first win opens encounter 2/4",
+      "status": "Réussi",
+      "priority": "P0",
+      "method": "node tests/combat-progression-browser.mjs · Chromium headless",
+      "proof": "21 octobre 2026 · 9/9 contrôles · 0 erreur JS/HTTP · gloinkqueen → fudge, player HP 9552 → 10000",
+      "expected": "boss: earned first win opens encounter 2/4"
+    },
+    {
+      "id": "PRG-05",
+      "area": "Progression réelle",
+      "name": "survival: earned first win opens encounter 2/10",
+      "status": "Réussi",
+      "priority": "P0",
+      "method": "node tests/combat-progression-browser.mjs · Chromium headless",
+      "proof": "21 octobre 2026 · 9/9 contrôles · 0 erreur JS/HTTP · pomni → zooble, player HP 8374 → 9574",
+      "expected": "survival: earned first win opens encounter 2/10"
+    },
+    {
+      "id": "PRG-06",
+      "area": "Progression réelle",
+      "name": "Earned progression and settings survive a page reload",
+      "status": "Réussi",
+      "priority": "P0",
+      "method": "node tests/combat-progression-browser.mjs · Chromium headless",
+      "proof": "21 octobre 2026 · 9/9 contrôles · 0 erreur JS/HTTP",
+      "expected": "Earned progression and settings survive a page reload"
+    },
+    {
+      "id": "PRG-07",
+      "area": "Progression réelle",
+      "name": "Malformed profile, JSON and packed replay inputs are rejected without data loss",
+      "status": "Réussi",
+      "priority": "P0",
+      "method": "node tests/combat-progression-browser.mjs · Chromium headless",
+      "proof": "21 octobre 2026 · 9/9 contrôles · 0 erreur JS/HTTP",
+      "expected": "Malformed profile, JSON and packed replay inputs are rejected without data loss"
+    },
+    {
+      "id": "PRG-08",
+      "area": "Progression réelle",
+      "name": "Pure scheduling contract: 6 Arcade, 4 Boss and 10 Survival encounters",
+      "status": "Réussi",
+      "priority": "P0",
+      "method": "node tests/combat-progression-browser.mjs · Chromium headless",
+      "proof": "21 octobre 2026 · 9/9 contrôles · 0 erreur JS/HTTP · Not a claim that all final medals were earned through UI",
+      "expected": "Contrat de longueur des parcours uniquement. Les médailles finales n’ont pas été jouées dans le navigateur."
+    },
+    {
+      "id": "PRG-09",
+      "area": "Progression réelle",
+      "name": "Built standalone plays on a second origin without the OS runtime",
+      "status": "Réussi",
+      "priority": "P0",
+      "method": "node tests/combat-progression-browser.mjs · Chromium headless",
+      "proof": "21 octobre 2026 · 9/9 contrôles · 0 erreur JS/HTTP · 21 local resources",
+      "expected": "Built standalone plays on a second origin without the OS runtime"
+    },
+    {
+      "id": "STO-01",
+      "area": "Régression ciblée",
+      "name": "Denied storage retains two rewards for export; terminal dialogs survive Escape",
+      "status": "Réussi",
+      "priority": "P0",
+      "method": "COMBAT_TEST_SCOPE=storage node tests/combat-progression-browser.mjs · Chromium headless",
+      "proof": "21 octobre 2026 · 1/1 contrôles · 0 erreur JS/HTTP · Specialist → Super via real controls; sound and both rewards survive setItem failure; Escape preserves the result actions twice",
+      "expected": "Denied storage retains two rewards for export; terminal dialogs survive Escape"
+    }
+  ],
+  "engineCount": 40,
+  "engineTestNames": [
+    "the imported CQC lineage and ten authored slots remain explicit",
+    "startup, active frames and recovery delay damage and prevent repeated contact damage",
+    "holding an attack does not repeatedly attack; releasing and pressing starts another",
+    "inputs shorter than one 60 Hz tick survive a 120 Hz render cycle",
+    "fixed-time simulation gives identical movement at 30, 60 and 120 rendering Hz",
+    "ordinary guard reduces damage, and held guard survives blockstun",
+    "low attacks bypass standing guard but are stopped by crouching guard",
+    "chip damage never KOs, and guard depletion exposes a real punish window",
+    "grabs beat guard and cannot chain into protected post-throw targets",
+    "throw-tech works in the inherited seven-frame window",
+    "holding throw-tech cannot renew the seven-frame protection window indefinitely",
+    "airborne opponents cannot be grabbed",
+    "an active melee parry counters a strike but does not confer permanent immunity",
+    "projectile parry reflects once, changes ownership and retains a bounded travel budget",
+    "fast projectiles use swept collision and cannot skip a small body",
+    "a declared projectile range limits travel even with long lifetime",
+    "crouching evades a high projectile at the correct vertical height",
+    "hit-confirm cancels require a real hit; whiffed attacks cannot cancel",
+    "simultaneous active strikes trade damage and double KO does not favor player one",
+    "resource and super costs are checked and denied actions do not consume meter",
+    "interrupted recovery does not grant free energy",
+    "traps have arming time and finite lifetime",
+    "pause freezes combat, timer and seed without queuing a phantom attack",
+    "round settings end a match only after the configured number of wins",
+    "timeout draws award nobody a win and no-time-limit mode stays active",
+    "training reset, health recovery and all dummy modes remain playable",
+    "seeded CPU selects attacks repeatedly and produces deterministic replays",
+    "a narrow arena still spawns separated, alive fighters inside its boundaries",
+    "retreat dash obeys the held direction instead of forcing forward motion",
+    "invalid elapsed time and an inactive tab cannot corrupt or fast-forward simulation",
+    "differently sized authored bodies drive actual collision geometry",
+    "draining events does not lose combat metrics and snapshots serialize",
+    "all 140 authored Digital Circus moves activate, spend bounded resources and leave finite state",
+    "every roster fighter can run the actual seeded CPU against another authored profile",
+    "unaffordable hit-confirm cancels do not erase the original recovery",
+    "timeout compares remaining health percentage across unequal maximum health",
+    "native jump velocity can be authored in pixels per frame without changing its height",
+    "every roster light and heavy lands at native body-push spacing against every body in both directions",
+    "all roster light and heavy attacks reach beyond their visible body front, including the elongated Queen",
+    "Bubble projectiles originate inside its authored small body and hit a standing opponent"
+  ],
+  "engineSourceSha256": "5fb1260ef501eadf1e55bd879d70ee872ca10ea60f78a5b807fda35f112d0485",
+  "engineProof": "node tests/combat-engine.test.mjs — 40/40 cas réussis, 0 échec (TAP du 21 octobre 2026)",
+  "sessionCount": 23,
+  "sessionTestNames": [
+    "all native input flags and all ten techniques survive packing without aliasing",
+    "replay runs compress held inputs, split long runs and reproduce the exact frame sequence",
+    "replay import rejects corrupt technique bits, oversized durations and malformed frames",
+    "replay import validates version, roster, rules and carried survival health",
+    "profile import keeps recognized progress and sanitizes settings without sharing defaults",
+    "storage corruption or denied local storage does not prevent a fresh playable profile",
+    "every selectable fighter receives complete arcade, boss and survival routes",
+    "challenge first-impact can be completed from normal spawns within 60 seconds",
+    "challenge guard can be completed from normal spawns within 60 seconds",
+    "challenge combo can be completed from normal spawns within 60 seconds",
+    "challenge throw can be completed from normal spawns within 60 seconds",
+    "challenge specialist can be completed from normal spawns within 60 seconds",
+    "challenge super can be completed from normal spawns within 60 seconds",
+    "actual blocked, throw and multi-projectile super events credit the correct player and technique",
+    "a complete multi-round human-versus-CPU recording replays identical state and results",
+    "native edge pulses remain deterministic when a pause separates adjacent recorded throw-tech inputs",
+    "a keyboard attack pressed and released between polls starts exactly once in the combat engine",
+    "keyboard direction plus special follows facing and a held action is not retriggered",
+    "two local keyboard maps remain independent and form fields do not trigger attacks",
+    "quick touch attacks retain directional specials and the dedicated throw-tech button",
+    "multitouch releases only the matching pointer and inactive controls cannot queue an attack",
+    "blur and tab hiding release movement and queued attacks without affecting key bindings",
+    "standard gamepads provide separate player inputs and one action edge per physical press"
+  ],
+  "sessionSourceSha256": "ef3e56ee13c9f1cb46a11d81e606d6504363a9e50d8ab760fa999c4a0b005609",
+  "sessionProof": "node tests/combat-session.test.mjs — 23/23 cas réussis, 0 échec (TAP du 21 octobre 2026)",
+  "browserReports": {
+    "ui": {
+      "base": "http://127.0.0.1:4178",
+      "checks": [
+        {
+          "name": "Seven modes and standalone home render",
+          "detail": "",
+          "pass": true
+        },
+        {
+          "name": "Codex changes fighter and shows ten authored moves",
+          "detail": "",
+          "pass": true
+        },
+        {
+          "name": "Archive search filters real records",
+          "detail": "",
+          "pass": true
+        },
+        {
+          "name": "Settings persist across reload",
+          "detail": "",
+          "pass": true
+        },
+        {
+          "name": "Training loads and responds to keyboard movement/attack",
+          "detail": "",
+          "pass": true
+        },
+        {
+          "name": "Pause stops simulation and resume restarts",
+          "detail": "",
+          "pass": true
+        },
+        {
+          "name": "Move list pauses and resumes the current encounter",
+          "detail": "",
+          "pass": true
+        },
+        {
+          "name": "Player 2 has independent local controls",
+          "detail": "",
+          "pass": true
+        },
+        {
+          "name": "Challenge completion persists an earned result",
+          "detail": "",
+          "pass": true
+        },
+        {
+          "name": "CainOS desktop launches the shared game and minimizing pauses it",
+          "detail": "",
+          "pass": true
+        },
+        {
+          "name": "390px mobile layout and touch attack work without horizontal overflow",
+          "detail": "",
+          "pass": true
+        }
+      ],
+      "errors": []
+    },
+    "progression": {
+      "base": "http://127.0.0.1:4178",
+      "checks": [
+        {
+          "name": "A real local match saves its result and replay",
+          "detail": "2282 simulation frames, 611 input runs",
+          "pass": true
+        },
+        {
+          "name": "UI replay reproduces the full terminal snapshot without changing profile",
+          "detail": "",
+          "pass": true
+        },
+        {
+          "name": "arcade: earned first win opens encounter 2/6",
+          "detail": "pomni → ragatha, player HP 8336 → 10000",
+          "pass": true
+        },
+        {
+          "name": "boss: earned first win opens encounter 2/4",
+          "detail": "gloinkqueen → fudge, player HP 9552 → 10000",
+          "pass": true
+        },
+        {
+          "name": "survival: earned first win opens encounter 2/10",
+          "detail": "pomni → zooble, player HP 8374 → 9574",
+          "pass": true
+        },
+        {
+          "name": "Earned progression and settings survive a page reload",
+          "detail": "",
+          "pass": true
+        },
+        {
+          "name": "Malformed profile, JSON and packed replay inputs are rejected without data loss",
+          "detail": "",
+          "pass": true
+        },
+        {
+          "name": "Pure scheduling contract: 6 Arcade, 4 Boss and 10 Survival encounters",
+          "detail": "Not a claim that all final medals were earned through UI",
+          "pass": true
+        },
+        {
+          "name": "Built standalone plays on a second origin without the OS runtime",
+          "detail": "21 local resources",
+          "pass": true
+        }
+      ],
+      "errors": []
+    },
+    "storage": {
+      "base": "http://127.0.0.1:4178",
+      "checks": [
+        {
+          "name": "Denied storage retains two rewards for export; terminal dialogs survive Escape",
+          "detail": "Specialist → Super via real controls; sound and both rewards survive setItem failure; Escape preserves the result actions twice",
+          "pass": true
+        }
+      ],
+      "errors": []
+    }
+  },
+  "renderer": {
+    "preload": {
+      "ok": true,
+      "errors": []
+    },
+    "fighters": 14,
+    "stages": [
+      "bigtop",
+      "candy",
+      "manor",
+      "spudsy",
+      "cellar",
+      "void",
+      "lake",
+      "training",
+      "gloink",
+      "kingdom",
+      "grounds",
+      "backstage"
+    ],
+    "frame": true,
+    "errors": []
+  },
+  "coverageLimits": [
+    "Les 21 vérifications navigateur sont 11 parcours généraux, 9 parcours de progression et 1 régression ciblée stockage/Échap. La suite étendue entière n’a pas été rejouée après ce dernier ajout.",
+    "Les 63 tests Node sont distincts des vérifications navigateur. Les objectifs de revue regroupent parfois plusieurs assertions déjà listées.",
+    "Les étapes 1 vers 2 sont jouées pour Arcade, Boss et Survie. Les longueurs 6 / 4 / 10 sont vérifiées par contrat ; aucune réussite intégrale dans le navigateur n’est revendiquée.",
+    "Les essais sur téléphones et manettes physiques, la finition de toutes les variantes, le lore étendu et l’équilibrage compétitif restent à vérifier."
+  ]
+}

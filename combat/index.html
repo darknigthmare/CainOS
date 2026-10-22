@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#1c1427">
+  <meta name="description" content="Digital Circus — Encore. Le jeu de combat de CainOS : versus, arcade, boss, survie et entraînement.">
+  <title>Digital Circus — Encore · Le Grand Duel</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Aller au contenu</a>
+  <header class="masthead">
+    <button class="brand" data-nav="home" aria-label="Digital Circus Encore, accueil"><span class="brand-mark" aria-hidden="true">✦</span><span>DIGITAL CIRCUS<span class="brand-sub">ENCORE / LE GRAND DUEL</span></span></button>
+    <nav aria-label="Navigation principale"><button data-nav="home" class="active">Jouer</button><button data-nav="codex">Combattants</button><button data-nav="archives">Archives</button><button data-nav="settings">Réglages</button></nav>
+    <span class="session-tag"><i></i> <span id="session-label">ENTRÉE LIBRE</span></span>
+  </header>
+  <main id="main" tabindex="-1"><div class="boot-card"><span class="ticket-label">LE RIDEAU VA SE LEVER</span><h1>Bienvenue dans Encore.</h1><p id="load-status" role="status">Préparation du spectacle…</p></div></main>
+  <footer class="site-footer"><span>CAINOS <b>×</b> DIGITAL CIRCUS</span><span>Simulation de combat de fans · techniques adaptées pour le jeu</span><a id="os-link" href="../index.html">Retour à CainOS ↗</a></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <dialog id="modal" aria-labelledby="modal-title"><div id="modal-content"></div></dialog>
+  <input id="import-profile" type="file" accept="application/json,.json" hidden>
+  <input id="import-replay" type="file" accept="application/json,.json" hidden>
+  <script type="module" src="app.mjs"></script>
+  <noscript>JavaScript est nécessaire pour jouer à Encore.</noscript>
+</body>
+</html>
