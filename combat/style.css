@@ -138,3 +138,26 @@ dialog.story-reader{width:min(96vw,1180px);padding:24px;max-height:94dvh;overflo
   .training-readouts{gap:8px}.training-readouts>div{padding:10px}.training-readouts p{font-size:9px}.training-recorder p{font-size:11px}.training-histories{gap:9px}.training-histories li{font-size:9px;padding:7px;gap:5px}
   .outcome-skip{font-size:9px;padding:9px 12px;min-height:34px;bottom:5%}
 }
+
+/* Finales use the current costume art and never start a duel. */
+.codex-head .secondary + .secondary { margin-top: .6rem; }
+.finisher-preview-dialog { width: min(1080px, calc(100vw - 2rem)); max-width: 1080px; padding: 0; overflow: auto; }
+.finisher-preview-dialog #modal-content { padding: clamp(1rem, 3vw, 2rem); }
+.finale-choices { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .6rem; margin: 1.2rem 0; }
+.finale-choices button { white-space: normal; text-align: left; min-height: 3.2rem; }
+.finale-choices button[aria-pressed="true"] { border-color: #d6b77a; background: #3a2a44; color: #fff2d4; }
+.finale-costume { display: flex; align-items: center; gap: 1rem; margin: 0 0 1rem; }
+.finale-costume select { flex: 1; min-width: 0; }
+#finale-preview { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background: #100c20; border: 1px solid #9b7e5f; border-radius: .7rem; }
+.finale-reader-copy { min-height: 5.4rem; margin: 1rem 0; }
+.finale-reader-copy h3 { margin: 0 0 .4rem; color: #ecd6a7; }
+.finale-reader-copy p { margin: 0; line-height: 1.55; color: #c7b8cb; }
+.arena-wrap.finishing .hud, .arena-wrap.finishing .fight-bottom { opacity: 0; pointer-events: none; }
+.arena-wrap.finishing .outcome-skip { top: auto; bottom: 15%; right: 1rem; left: auto; transform: none; }
+@media (max-width: 640px) {
+  .finisher-preview-dialog { width: calc(100vw - 1rem); max-height: calc(100dvh - 1rem); }
+  .finale-choices { grid-template-columns: 1fr; gap: .4rem; }
+  .finale-choices button { min-height: 2.7rem; padding: .65rem .8rem; }
+  .finale-reader-copy { min-height: 0; }
+  .arena-wrap.finishing .outcome-skip { bottom: .4rem; right: .4rem; padding: .5rem .7rem; font-size: .75rem; }
+}

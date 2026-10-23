@@ -1,20 +1,76 @@
 # Digital Circus — Encore · Le Grand Duel
 
-Version jouable : **0.6.0** — 23 octobre 2026.
+Version jouable : **0.7.0** — 23 octobre 2026.
 
 Encore partage son moteur entre l’application CainOS et le jeu autonome :
 **14 combattants, 140 techniques, 12 arènes, 9 modes, 51 costumes et 179 archives**.
-La version 0.6.0 remplace vingt apparences par cinq planches à alpha natif,
-reconstruit trois décors, ajoute **84 tableaux narratifs** aux quatorze histoires
-et compose leurs **56 briefings**. Le classeur publie désormais ses trois fichiers
-avec sauvegarde préalable et restauration contrôlée en cas d’erreur.
+La version 0.7.0 ajoute **42 finales de spectacle**, trois pour chacun des quatorze
+combattants, une galerie avec les **51 costumes**, douze ambiances sonores procédurales
+et deux signaux distincts pour les pièges et les KO. Les finales sont des compositions
+originales Encore utilisant les dessins existants, sans nouveaux sprites de combat dédiés.
 
-Les contenus et règles de combat livrés en 0.5.0 sont conservés : laboratoire
-image par image, enregistrement du mannequin, 70 séquences procédurales, douze
-ambiances et huit cellules transparentes de Jax. Les replays 0.6.0 utilisent les
-règles 0.5.0 ; les anciennes versions conservent leurs règles respectives.
-Le registre distingue les corrections vérifiées des comparaisons canoniques encore
-partielles. **La fidélité générale 1:1 n’est pas certifiée.**
+La version 0.6.0 avait corrigé vingt apparences, reconstruit trois décors et ajouté
+84 tableaux narratifs ainsi que 56 briefings. Ces ajouts restent présents.
+La simulation demeure celle de 0.5.0 : les replays 0.5, 0.6 et 0.7 utilisent exactement
+les mêmes règles, tandis que les versions 0.1 à 0.4 gardent leurs règles historiques.
+**La fidélité canonique générale 1:1 n’est pas certifiée.** Le suivi distingue les
+compositions jouables, les vérifications techniques et les comparaisons artistiques
+encore incomplètes.
+
+## Ajouts de la passe 0.7.0
+
+### Finales de spectacle
+
+Un KO qui termine effectivement la rencontre peut afficher la finale du vainqueur.
+Le dernier impact valide détermine sa famille : attaque ordinaire, technique spéciale
+ou super. La présentation dure trois, trois secondes et demie ou quatre secondes,
+sans nouvelle action à saisir. Une égalité, une limite de temps, une manche
+intermédiaire, l’entraînement, les défis et la lecture d’un replay n’en déclenchent pas.
+
+Le résultat, la progression et le replay sont enregistrés avant la présentation.
+Le bouton **Voir le résultat** permet de l’écourter. Le réglage **Finales après un KO**
+désactive cette présentation ; le mouvement réduit utilise une composition fixe.
+Le nombre de victoires, les dégâts, les récompenses et les règles restent inchangés.
+
+Dans le **Codex**, chaque combattant possède un accès à ses trois finales. La galerie
+permet de changer de scène et de tenue, de mettre en pause, de reprendre et de rejouer.
+Elle utilise une scène indépendante : elle ne joue aucun duel, ne donne aucune récompense
+et ne remplace pas le dernier replay. Échap ferme l’aperçu.
+
+Les motifs et les limites de référence sont détaillés dans
+[COMBAT_FINISHERS_0.7.0.md](COMBAT_FINISHERS_0.7.0.md).
+Les accessoires de scène sont dessinés de façon procédurale ; les personnages
+conservent leurs illustrations et leur alpha. Ce lot ne représente ni 42 attaques
+canoniques ni 42 animations de corps dessinées.
+
+### Ambiances sonores des douze arènes
+
+Chaque arène possède une couche d’ambiance synthétisée localement, indépendante de
+la musique. **Ambiances** et **Volume de l’ambiance** sont conservés dans le profil.
+Les pièges et les KO ont des signaux spécifiques. Aucun fichier vocal ou musical
+officiel n’est ajouté : ces sons sont des créations du jeu.
+
+La suspension du jeu et les changements de scène doivent libérer ou suspendre les
+voix concernées. La vérification audio contrôle le rendu WebAudio, les niveaux et
+le cycle de vie ; elle ne remplace pas une écoute artistique ni un mixage final.
+
+### Preuves et livraison
+
+La CI de cette passe produit les sorties réelles des tests Node, les rapports
+Chromium, deux planches de la galerie, le classeur et l’archive autonome.
+Le rapport **combat-qa-evidence-0.7.0.json** identifie le commit testé et les empreintes
+des sources. Le fichier **combat-qa-evidence.json** conserve la campagne historique
+0.6 ; ses contrôles artistiques non rejoués ne sont pas renommés en contrôles 0.7.
+
+Le classeur garde les notes par identifiant, les styles et les formules. Les finales
+et ambiances sont suivies séparément des dessins de combat dédiés et du mixage.
+La tâche générale des finishers reste partielle tant que ces éléments artistiques
+ne sont pas terminés.
+
+L’archive autonome contient le même runtime que CainOS, le classeur, les rapports
+et trois lanceurs locaux nécessitant Python 3. La CI vérifie Linux/Chromium et la
+syntaxe des lanceurs ; elle ne valide pas des paquets natifs Windows ou macOS.
+Téléphone physique, manettes physiques et matériel modeste restent à tester.
 
 ## Accès au jeu
 
@@ -42,9 +98,9 @@ les PNG historiques restent conservés dans le dépôt. Ce second dossier peut �
 indépendamment de CainOS. Les scripts
 [`build-combat.mjs`](../scripts/build-combat.mjs) et
 [`build-combat-offline.mjs`](../scripts/build-combat-offline.mjs) assemblent ces
-fichiers et régénèrent l’inventaire hors ligne. L’empreinte de cette livraison est
-**`OFFLINE_VERSION = 0.6.0-6dcd5c6ee620`** ; celle des illustrations est
-**`ART_VERSION = 4ca4a56c5bace07b`**.
+fichiers et régénèrent l’inventaire hors ligne. L’empreinte du code 0.7 est inscrite
+dans `OFFLINE_VERSION` du manifeste généré et dans les preuves de la livraison.
+Celle des illustrations conservées est **`ART_VERSION = 4ca4a56c5bace07b`**.
 
 Pour un essai local sans dépendance supplémentaire :
 
@@ -251,8 +307,7 @@ l’API.
 
 [`combat/audio.mjs`](../combat/audio.mjs) contient **12 thèmes procéduraux originaux**,
 un par arène, avec mélodie, basse, rythme et tempo propres. Le menu reprend un
-arrangement allégé du thème de la grande piste. Les **16 motifs d’effets** et leurs
-sept alias couvrent les impacts, blocages, parades, brisures, déplacements,
+arrangement allégé du thème de la grande piste. Les motifs d’effets couvrent les impacts, blocages, parades, brisures, déplacements,
 techniques, récupération, résultats et actions de menu. L’application choisit un
 effet prioritaire parmi les événements simultanés.
 
@@ -264,15 +319,17 @@ refuse l’audio, le combat reste utilisable.
 
 Ces sons sont synthétisés localement : aucune musique ni voix enregistrée de la
 série n’est importée. Certains événements partagent encore un motif, notamment les
-impacts léger/lourd et la saisie. Les voix, ambiances dédiées et essais de mixage
+impacts léger/lourd et la saisie. La version 0.7 ajoute douze ambiances procédurales,
+avec un volume indépendant initial de 35 %, ainsi que les signaux piège et KO.
+Les voix, les éventuels enregistrements d’ambiance et les essais de mixage
 sur appareils physiques restent suivis dans le classeur.
 
 ## Installation web et hors ligne
 
 Sous HTTPS ou localhost, ouvrir **Réglages → Télécharger le spectacle** puis
 attendre la confirmation **45/45 illustrations**. Le pack correspond exactement aux
-**54 085 802 octets** de [`combat/offline-manifest.mjs`](../combat/offline-manifest.mjs),
-pour la livraison **`0.6.0-6dcd5c6ee620`**.
+**54 085 802 octets** de [`combat/offline-manifest.mjs`](../combat/offline-manifest.mjs).
+Le numéro exact de la livraison figure dans `OFFLINE_VERSION` de ce manifeste.
 Le premier téléchargement exige une connexion et le stockage nécessaire. Les
 fichiers déjà reçus sont réutilisés lors d’une nouvelle tentative.
 
@@ -330,16 +387,16 @@ une validation stricte des programmes.
 Un replay contient le couple de combattants, les costumes, l’arène, la graine,
 les règles, la santé initiale et les commandes compressées par séquences identiques.
 L’IA reste déterministe. La lecture reproduit une simulation à 60 Hz et n’ajoute
-aucun résultat au palmarès. Les replays **0.1.0, 0.2.0, 0.3.0, 0.4.0, 0.5.0 et 0.6.0** sont acceptés ; un ancien
+aucun résultat au palmarès. Les replays **0.1.0, 0.2.0, 0.3.0, 0.4.0, 0.5.0, 0.6.0 et 0.7.0** sont acceptés ; un ancien
 replay sans costumes utilise les apparences originales. Une variante doit
 correspondre au combattant indiqué. La version originale reste dans le fichier
 validé et exporté. `getReplayFighter` sélectionne les anciens reculs instantanés
 de Pomni/Kaufmo pour les versions 0.1.0 et 0.2.0 ; les nouveaux combats et les
-replays 0.3.0 à 0.6.0 emploient leurs reculs continus. La fonction
+replays 0.3.0 à 0.7.0 emploient leurs reculs continus. La fonction
 `replayRulesVersion` choisit les règles de simulation : 0.1.0 à 0.5.0 conservent
-leur version, et **0.6.0 utilise 0.5.0**. Le numéro du fichier reste 0.6.0 à
-l’export. Les corrections de règles ne changent pas rétroactivement une ancienne
-simulation ; quatorze traces de 900 images vérifient aussi la parité 0.5/0.6. Les 140 techniques et les
+leur version, et **0.6.0 ainsi que 0.7.0 utilisent 0.5.0**. Le numéro original
+du fichier est conservé à l’export. Les corrections de règles ne changent pas rétroactivement une ancienne
+simulation ; quatorze traces de 900 images vérifient aussi la parité 0.5/0.6/0.7. Les 140 techniques et les
 51 identifiants de costumes sont conservés. La capacité est bornée à 72 000 images, soit
 20 minutes de simulation ; les pauses ne sont pas enregistrées. Les contrats
 d’import et de migration figurent dans
@@ -593,7 +650,7 @@ ne sont pas ajoutées au pack ; les décors restent dessinés par le jeu.
 | Cellier | Obscurité, yeux multicolores et lumière centrale | Aucun couloir à barreaux déduit de l'image |
 | Vide | Espace clair et irisé distinct du couloir EXIT et du dessous de la carte | Sol horizontal conventionnel nécessaire au combat |
 | Projectiles et pièges | Clef, rubans, bouton, pièces, bonbons et bulles reconnaissables | Présentation de mécaniques originales, sans pouvoir attribué au canon |
-| Pomni et Kaufmo | Recul réparti sur 15 images actives, respectivement −10 et −9 pixels/image | Reculs 0.3.0 conservés jusqu’en 0.6.0 ; anciens replays explicitement versionnés |
+| Pomni et Kaufmo | Recul réparti sur 15 images actives, respectivement −10 et −9 pixels/image | Reculs 0.3.0 conservés jusqu’en 0.7.0 ; anciens replays explicitement versionnés |
 
 Les deux reculs gardent leurs distances et durées nominales : **150 pixels /
 30 images pour Pomni**, **135 pixels / 36 images pour Kaufmo**. Les chiffres
@@ -630,7 +687,12 @@ techniques et les tests ne constituent pas une certification canonique 1:1.
 | `combat/progression.mjs` | Programmes, checkpoints, santé de survie et tableau du tournoi |
 | `combat/stories.mjs` | 14 routes originales, 56 chapitres et 84 tableaux de prologue/épilogue |
 | `combat/story-presentation.mjs` | Composition narrative, ordre des tableaux et validation |
-| `combat/audio.mjs` | 12 thèmes, 16 motifs, volumes séparés et cycle de vie WebAudio |
+| `combat/audio.mjs` | Thèmes, ambiances, effets, volumes séparés et cycle de vie WebAudio |
+| `combat/audio-ambiences.mjs` | Catalogue des 12 ambiances procédurales |
+| `combat/finisher-catalog.mjs` | 42 finales, trois tableaux chacune, références et limites |
+| `combat/finishers.mjs` | Sélection sur KO final et échantillonnage sans mutation de simulation |
+| `combat/render-finishers.mjs` | Composition des accessoires et des dessins existants |
+| `combat/finisher-gallery.mjs` | Aperçu indépendant, pause, reprise et mouvement réduit |
 | `combat/offline.mjs` | Préparation du pack, installation et mise à jour proposées dans l’interface |
 | `combat/sw.js` | Cache du jeu, cache d’illustrations versionné séparément et portée limitée |
 | `combat/manifest.webmanifest` | Identité, point d’entrée et icônes d’installation web |
@@ -640,6 +702,9 @@ techniques et les tests ne constituent pas une certification canonique 1:1.
 | `scripts/build-combat-catalog.mjs` | Extraction reproductible du catalogue CainOS |
 | `scripts/workbook-publication.mjs` | Publication avec sauvegardes, restauration et conservation des preuves en cas d’échec |
 | `scripts/build-combat-workbook.mjs` | Génération du classeur et de ses données à partir des définitions livrées |
+| `scripts/build-combat-workbook-delta.py` | Mise à jour 0.7 du classeur existant à partir des preuves CI |
+| `scripts/run-combat-ci.mjs` | Exécution et collecte des contrôles réellement rejoués |
+| `scripts/package-combat-release.mjs` | Archive autonome, contrôle des empreintes et documents de livraison |
 | `docs/DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx` | Classeur de production filtrable et éditable |
 
 ## Classeur de production
@@ -651,9 +716,11 @@ Il lit les catalogues réellement livrés, les 84 tableaux, les 56 briefings, le
 20 remplacements et les preuves de tests. Les statuts « Implémenté », « Partiel »,
 « Prévu » et « À vérifier » distinguent fonctionnement, finition et validation.
 
-Le suivi contient **101 fonctionnalités, 632 tâches de production, 85 scénarios et
+Le suivi historique 0.6 contenait **101 fonctionnalités, 632 tâches de production, 85 scénarios et
 452 lignes QA** : 260 cas Node, 154 contrôles navigateur et 38 objectifs de
-revue. Les statuts QA sont **447 « Réussi », 1 « À vérifier » et 4 « Non exécuté »**.
+revue. Ses statuts QA étaient **447 « Réussi », 1 « À vérifier » et 4 « Non exécuté »**.
+La passe 0.7 ajoute les nouvelles tâches et les preuves effectives de CI ; ses
+totaux sont consignés dans `combat-workbook-verification.json` et la Synthèse.
 Les objectifs peuvent recouper les tests ; les lignes ne représentent pas autant
 de tests indépendants. La comparaison canonique exhaustive reste ouverte. Les
 quatre essais non exécutés concernent un téléphone physique, deux manettes
@@ -676,7 +743,12 @@ Cette publication ne donne pas une lecture simultanément atomique de trois fich
 système. Les limites de métadonnées et la procédure de récupération sont décrites
 dans [COMBAT_WORKBOOK_PUBLICATION.md](COMBAT_WORKBOOK_PUBLICATION.md).
 
-## Vérifications et limites pratiques
+## Vérifications historiques 0.6 et limites pratiques
+
+Les tableaux de cette section décrivent la campagne 0.6, conservée comme historique.
+Les résultats de la passe 0.7 figurent dans `combat-qa-evidence-0.7.0.json`, avec
+le commit, les noms des cas exécutés et leurs empreintes. Les deux campagnes ne
+sont pas additionnées pour former un nombre de tests indépendants.
 
 La campagne initiale `npm run qa` a réussi : audits CainOS, contrats, vérifications de syntaxe,
 **260 tests Node dans 17 suites**, manifeste et deux builds. Chaque module de test
@@ -780,12 +852,12 @@ COMBAT_TEST_URL=http://127.0.0.1:4178 node tests/combat-roster-browser.mjs
 ### Travail restant
 
 Les dessins de combat dédiés, portraits finaux, revue canonique complète,
-ambiances et voix dédiées, mixage sur appareils et équilibrage compétitif restent
+enregistrements d’ambiance et voix dédiées, mixage sur appareils et équilibrage compétitif restent
 partiels ou prévus. Les 114 autres archives conservent leur statut sans kit livré.
 Le lac n’a pas de source primaire précise ; la calibration est originale ; le
 couloir attend une confirmation primaire malgré sa reconstruction.
 
 Le réseau/rollback, tag/assists, coopération, campagnes par épisode, finishers
-cinématiques, synchronisation cloud des combats, économie/déblocages et paquets
+cinématiques avec nouvelles animations dessinées, synchronisation cloud des combats, économie/déblocages et paquets
 natifs ne sont pas livrés. Reprendre le noyau CQC ne signifie pas reprendre toutes
 ses extensions. Le classeur conserve ces manquants et leurs critères de réception.

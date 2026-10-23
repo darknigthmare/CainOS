@@ -6,7 +6,7 @@ CainOS is a retro C&A mainframe-style interactive web app inspired by The Amazin
 
 CainOS includes **Circus Combat — Encore**, a shared combat application and
 standalone game adapted from the real CQC engine of `shadow-codec-ops`.
-The playable game version is **0.6.0**, documented on **23 October 2026**.
+The playable game version is **0.7.0**, documented on **23 October 2026**.
 
 - In CainOS: complete the existing first-use calibration, then launch **Circus Combat**.
 - Direct game: open **`/combat/`** on the same static server.
@@ -18,6 +18,25 @@ The release contains **14 fighters, 140 authored techniques, 12 arenas, 9 modes,
 51 selectable costumes and 179 searchable archive entries**. The remaining
 114 archive entries do not automatically receive a combat kit. The combat
 techniques and stories are original fan-game adaptations.
+
+### Stage endings and arena audio in 0.7.0
+
+- **42 theatrical endings**: three per fighter, selected after a real final KO.
+  They present the already saved result and can be skipped or disabled.
+- **Codex gallery**: preview all endings with the 51 costumes; pause, resume and
+  replay without altering a profile, match or saved replay.
+- **12 procedural arena ambience layers** with an independent volume and toggle,
+  plus distinct trap and KO cues. Music and ambience remain separate.
+- **Replay compatibility through 0.7**: releases 0.5, 0.6 and 0.7 share simulation
+  rules 0.5. Earlier replay rules remain supported.
+- **Reproducible CI evidence and delivery**: Node/Chromium verification, gallery
+  contact sheets, an updated tracker and a standalone ZIP from the verified runtime.
+
+These are original Encore compositions using existing character artwork. They do
+not establish canonical 1:1 fidelity, new drawn combat poses, official voices or a
+finished professional mix. See [the ending catalogue](docs/COMBAT_FINISHERS_0.7.0.md)
+and the versioned CI evidence for the exact scope. Historical 0.6 evidence remains
+separate from checks rerun on 0.7.
 
 ### Visual corrections in 0.6.0
 
@@ -79,8 +98,8 @@ resource/finale, automatic healing and hitboxes remain independent. Training
 awards no progression and does not replace a saved replay.
 
 Each fighter has five finite procedural presentations, for **70 sequences**.
-Results save immediately; the final presentation lasts 2.2 seconds and can be
-skipped. **Twelve stage-specific ambient layers** stay behind actors and above the
+Results save immediately; ordinary result presentations last 2.2 seconds. The
+new eligible KO endings last 3–4 seconds and can also be skipped. **Twelve stage-specific ambient layers** stay behind actors and above the
 floor. The system preference or game setting independently enables reduced motion.
 Jax keeps its transparent eight-cell 0.5 sheet; only Pomni and Zooble use the
 existing shallow cutout rigs. Dedicated authored combat animation remains open.
@@ -89,22 +108,23 @@ existing shallow cutout rigs. Dedicated authored combat animation remains open.
 
 Both players can remap keyboard keys with alternatives, conflict checks and
 AZERTY/QWERTY labels. Standard gamepads and multitouch controls are supported.
-Audio comprises **12 original procedural themes and 16 effect motifs**, with
-separate volumes. Music is off by default and WebAudio waits for a user gesture.
+Audio includes **12 original procedural themes and 12 arena ambience layers**,
+with separate volumes and distinct trap/KO cues. Music is off by default and
+WebAudio waits for a user gesture.
 
-Version-one profiles retain their format. Replays from **0.1.0 through 0.6.0** are
-accepted and retain their original version when exported. A **0.6.0 recording
-uses the 0.5.0 simulation rules**: this release changes presentation and content,
+Version-one profiles retain their format. Replays from **0.1.0 through 0.7.0** are
+accepted and retain their original version when exported. **0.6.0 and 0.7.0 recordings
+use the 0.5.0 simulation rules**: this release changes presentation and content,
 with no new balance rules. Older versions keep their original behavior. Tests
-retain all 56 frozen legacy CPU traces and verify fourteen 0.5/0.6 parity traces.
+retain all 56 frozen legacy CPU traces and verify fourteen 0.5/0.6/0.7 parity traces.
 Playback adds no profile result. On different origins, use JSON export/import to
 transfer the profile; CainOS and the standalone share storage on the same origin.
 
 ### Offline installation
 
 On HTTPS or localhost, choose **Réglages → Télécharger le spectacle** and wait for
-**45/45 illustrations**. The pack is **54,085,802 bytes**, with offline build
-**`0.6.0-6dcd5c6ee620`** and art version **`4ca4a56c5bace07b`**, recorded in
+**45/45 illustrations**. The pack is **54,085,802 bytes**, with art version
+**`4ca4a56c5bace07b`**. The exact 0.7 code build identity is generated in
 [offline-manifest.mjs](combat/offline-manifest.mjs). Use the installed shortcut or
 `/combat/index.html?standalone=1` for later offline visits.
 
@@ -131,6 +151,11 @@ CainOS audits, behavioral tests, syntax checks, manifest generation and both bui
 
 ## Verification and tracker
 
+The versioned [0.7 evidence](docs/combat-qa-evidence-0.7.0.json) records the tested
+commit, actual Node/Chromium results and runtime hashes. CI creates the standalone
+and tracker from that verified runtime. The following older totals describe the
+historical 0.6 campaign, not additional fresh 0.7 test results.
+
 The 0.6.0 evidence records **260 passing Node tests in 17 suites** and
 **154 passing Chromium checks in 18 suites**. All fourteen pre-existing
 browser suites were rerun on the new runtime, alongside costume refinements,
@@ -145,8 +170,8 @@ plus both rebuilt distributions. These are recorded separately from the full
 260/154 baseline campaign; the entire campaign was not rerun for this text-only
 change. The five image sheets and all other costume identity records are unchanged.
 
-The tracker contains **10 sheets, 9 tables, 101 features, 632 production tasks,
-85 scenarios and 452 QA rows**. QA includes the 260 Node cases,
+The historical 0.6 tracker contained **10 sheets, 9 tables, 101 features, 632 production tasks,
+85 scenarios and 452 QA rows**. Its QA section included the 260 Node cases,
 154 browser checks and 38 review objectives; overlapping objectives are not
 additional independent tests. Current statuses are **447 passed,
 1 awaiting verification and 4 not executed**. Canonical comparison and physical

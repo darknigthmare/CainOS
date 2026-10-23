@@ -8,6 +8,9 @@ import { createProgram, programEncounter, recordProgramResult, retryProgram } fr
 import { STORY_NOTICE, getStoryRoute, getStoryEnding } from './stories.mjs';
 import { createStoryPresentation, stepStoryPresentation, skipStoryPresentation, storyPresentationMarkup, paintStoryPresentation } from './story-presentation.mjs';
 import { CombatAudio } from './audio.mjs';
+import { FINISHER_CATALOG, FINISHER_NOTICE } from './finisher-catalog.mjs';
+import { selectMatchFinisher } from './finishers.mjs';
+import { FinisherGallery } from './finisher-gallery.mjs';
 import { TrainingLab } from './training.mjs';
 import { OfflineGame } from './offline.mjs';
 import { GAME_VERSION, REPLAY_VERSIONS, replayRulesVersion, SAVE_KEY, REPLAY_KEY, MODES, CHALLENGES, readProfile, saveProfile, validateProfile, cleanSettings, appendReplayFrame, validateReplay, replayInputs, createMatchStats, collectMatchStats, challengeProgress } from './session.mjs';
@@ -24,7 +27,7 @@ let profile = readProfile(storage);
 let profileDirty = false;
 let screen = 'home', active = null, selection = { mode:'versus', fighters:['pomni','jax'], side:0, stage:STAGES[0].id, variants:['',''], challenge:CHALLENGES[0].id };
 let codexId = 'pomni', archiveQuery = '', archivePage = 0, archiveFilter = 'all', previousTime = 0, accumulator = 0, toastTimer;
-let currentObserver, bindingCapture = null, osVisible = true, storyReader = null;
+let currentObserver, bindingCapture = null, osVisible = true, storyReader = null, finisherGallery = null;
 const PROGRAM_MODES = ['arcade', 'boss', 'survival', 'story', 'tournament'];
 const audio = new CombatAudio({ getSettings: () => profile.settings });
 const offline = new OfflineGame(() => updateOfflinePanel());
@@ -76,8 +79,8 @@ function setScreen(next) {
   if (changed && next !== 'fight') queueMicrotask(() => main.focus({ preventScroll: true }));
   syncAudio();
 }
-function showDialog(content, { story = false } = {}) { modal.classList.remove('wardrobe-dialog'); modal.classList.toggle('story-reader', story); if (!story) storyReader = null; $('#modal-content').innerHTML = content; if (!modal.open) modal.showModal(); else modal.querySelector('button:not(:disabled)')?.focus(); syncAudio(); }
-function closeDialog() { bindingCapture = null; storyReader = null; modal.classList.remove('wardrobe-dialog', 'story-reader'); modal.close(); }
+function showDialog(content, { story = false, finale = false } = {}) { finisherGallery?.dispose(); finisherGallery = null; modal.classList.toggle('finisher-preview-dialog', finale); modal.classList.remove('wardrobe-dialog'); modal.classList.toggle('story-reader', story); if (!story) storyReader = null; $('#modal-content').innerHTML = content; if (!modal.open) modal.showModal(); else modal.querySelector('button:not(:disabled)')?.focus(); syncAudio(); }
+function closeDialog() { finisherGallery?.dispose(); finisherGallery = null; modal.classList.remove('finisher-preview-dialog'); bindingCapture = null; storyReader = null; modal.classList.remove('wardrobe-dialog', 'story-reader'); modal.close(); }
 function title(eyebrow, heading, description='') { return `<div class="page-title"><span class="ticket-label">${escapeHTML(eyebrow)}</span><h1>${escapeHTML(heading)}</h1>${description ? `<p>${escapeHTML(description)}</p>` : ''}</div>`; }
 async function paintPortrait(canvas) {
   const item = ARCHIVE.find(f => f.id === canvas.dataset.portrait) || getFighter(canvas.dataset.portrait);
@@ -181,8 +184,41 @@ function moveTable(fighter) {
 }
 function renderCodex() {
   setScreen('codex'); const fighter=getFighter(codexId);
-  main.innerHTML=`${title('LE PROGRAMME','Les artistes et leurs techniques','Chaque combattant possède ses dix techniques, une ressource de stabilité et un grand final. Les dégâts ci-dessous précèdent les modificateurs de puissance, de combo et de garde.')}<div class="codex-layout"><aside class="codex-list" aria-label="Liste des combattants">${FIGHTERS.map(f=>`<button data-codex="${f.id}" class="${f.id===codexId?'active':''}">${portraitMarkup(f.id,'',100,120)}<span><strong>${escapeHTML(f.name)}</strong><small>${escapeHTML(f.role)}</small></span></button>`).join('')}</aside><section><div class="codex-head">${portraitMarkup(fighter.id)}<div><span class="eyebrow">${escapeHTML(fighter.role)}</span><h2>${escapeHTML(fighter.name)}</h2><p>${escapeHTML(fighter.title)}<br>Vie : 10 000 · Puissance ×${fighter.power} · Vitesse ×${fighter.speed}</p><button class="secondary" data-practice="${fighter.id}">Répéter avec ${escapeHTML(fighter.name)}</button></div></div>${fidelityDetails(fighter.fidelity,`Repères de ${fighter.name}`,'fighter-fidelity')}${moveTable(fighter)}<p class="small-note">Enchaînements sur touche confirmée : léger → fort ; bas → spécial ; fort → spécial avant. Les projectiles, boucliers, parades et déplacements varient selon l’artiste. Le labo permet de voir les zones de contact.</p><p class="small-note">Les techniques sont des créations pour le jeu. Leurs fiches indiquent les repères visuels et les références qui ont servi à leur adaptation.</p></section></div>`;
+  main.innerHTML=`${title('LE PROGRAMME','Les artistes et leurs techniques','Chaque combattant possède ses dix techniques, une ressource de stabilité et un grand final. Les dégâts ci-dessous précèdent les modificateurs de puissance, de combo et de garde.')}<div class="codex-layout"><aside class="codex-list" aria-label="Liste des combattants">${FIGHTERS.map(f=>`<button data-codex="${f.id}" class="${f.id===codexId?'active':''}">${portraitMarkup(f.id,'',100,120)}<span><strong>${escapeHTML(f.name)}</strong><small>${escapeHTML(f.role)}</small></span></button>`).join('')}</aside><section><div class="codex-head">${portraitMarkup(fighter.id)}<div><span class="eyebrow">${escapeHTML(fighter.role)}</span><h2>${escapeHTML(fighter.name)}</h2><p>${escapeHTML(fighter.title)}<br>Vie : 10 000 · Puissance ×${fighter.power} · Vitesse ×${fighter.speed}</p><button class="secondary" data-practice="${fighter.id}">Répéter avec ${escapeHTML(fighter.name)}</button><button class="secondary" data-finale-fighter="${fighter.id}">Les trois finales de spectacle</button></div></div>${fidelityDetails(fighter.fidelity,`Repères de ${fighter.name}`,'fighter-fidelity')}${moveTable(fighter)}<p class="small-note">Enchaînements sur touche confirmée : léger → fort ; bas → spécial ; fort → spécial avant. Les projectiles, boucliers, parades et déplacements varient selon l’artiste. Le labo permet de voir les zones de contact.</p><p class="small-note">Les techniques sont des créations pour le jeu. Leurs fiches indiquent les repères visuels et les références qui ont servi à leur adaptation.</p></section></div>`;
   portraits();
+}
+async function showFinisherGallery(fighterId, finisherId = '', variantId = '') {
+  const base = getFighter(fighterId);
+  const choices = FINISHER_CATALOG.filter(item => item.fighterId === base.id);
+  const definition = choices.find(item => item.id === finisherId) || choices[0];
+  if (!definition) throw new Error('Aucune finale pour cet artiste.');
+  const costumes = VARIANTS.filter(item => item.fighterId === base.id);
+  const selectedCostume = costumes.some(item => item.id === variantId) ? variantId : '';
+  const fighter = costume(base, selectedCostume);
+  const opponent = FIGHTERS.find(item => item.id !== base.id);
+  const stage = getStage(selection.stage);
+  showDialog('<span class="ticket-label">LES FINALES DE SPECTACLE</span><h2 id="modal-title">' + escapeHTML(base.name) + '</h2>' +
+    '<p class="small-note">' + escapeHTML(FINISHER_NOTICE) + '</p>' +
+    '<div class="finale-choices" aria-label="Choisir une finale">' + choices.map(item => '<button class="secondary" data-finale-id="' + item.id + '" data-finale-artist="' + base.id + '" aria-pressed="' + (item.id === definition.id) + '">' + escapeHTML(item.title) + '</button>').join('') + '</div>' +
+    '<label class="finale-costume">Tenue <select id="finale-costume"><option value="">Apparence originale</option>' + costumes.map(item => '<option value="' + item.id + '"' + (selectedCostume === item.id ? ' selected' : '') + '>' + escapeHTML(item.name) + '</option>').join('') + '</select></label>' +
+    '<canvas id="finale-preview" width="1280" height="720" role="img" aria-label="' + escapeHTML(definition.title + ' — aperçu sans combat ni récompense.') + '"></canvas>' +
+    '<div class="finale-reader-copy" aria-live="polite"><h3 id="finale-beat-title">Préparation de la scène…</h3><p id="finale-beat-copy"></p></div>' +
+    '<div class="modal-actions"><button class="primary" data-action="finale-toggle">Pause</button><button class="secondary" data-action="finale-replay">Rejouer la scène</button><button class="secondary" data-action="close-modal">Fermer</button></div>', { finale: true });
+  const view = new FinisherGallery({ canvas: $('#finale-preview'), fighters: [fighter, opponent], stage, definition,
+    onChange: value => {
+      if (finisherGallery !== view || !modal.open) return;
+      $('#finale-beat-title').textContent = value.beat?.title || definition.title;
+      $('#finale-beat-copy').textContent = value.beat?.description || '';
+      const button = $('[data-action="finale-toggle"]');
+      button.textContent = value.done ? 'Revoir la scène' : value.playing ? 'Pause' : 'Continuer';
+      button.setAttribute('aria-pressed', String(!value.playing));
+    } });
+  finisherGallery = view;
+  const result = await view.prepare();
+  if (finisherGallery !== view || !modal.open) return;
+  if (result?.errors?.length) toast('Certaines illustrations de cet aperçu sont indisponibles.');
+  view.tick(performance.now(), { reducedMotion: profile.settings.reducedMotion || reducedMotionPreference.matches });
+  $('[data-finale-id="' + definition.id + '"]')?.focus({ preventScroll: true });
 }
 function renderArchives() {
   setScreen('archives');
@@ -211,9 +247,12 @@ function renderSettings() {
       <label class="settings-row">Volume des effets <input type="range" min="0" max="1" step="0.05" value="${s.volume}" data-setting="volume" aria-label="Volume des effets"></label>
       <label class="settings-row">Musique des arènes ${check('music')}</label>
       <label class="settings-row">Volume de la musique <input type="range" min="0" max="1" step="0.05" value="${s.musicVolume}" data-setting="musicVolume" aria-label="Volume de la musique"></label>
+      <label class="settings-row">Ambiance des arènes ${check('ambience')}</label>
+      <label class="settings-row">Volume de l’ambiance <input type="range" min="0" max="1" step="0.05" value="${s.ambienceVolume}" data-setting="ambienceVolume" aria-label="Volume de l’ambiance"></label>
+      <label class="settings-row">Finales après un KO ${check('finishers')}</label>
       <label class="settings-row">Réduire les mouvements ${check('reducedMotion')}</label>
       <label class="settings-row">Afficher les zones de contact ${check('hitboxes')}</label>
-      <p class="small-note">Douze thèmes originaux sont synthétisés dans ton navigateur. La réduction des mouvements retire les tremblements et les oscillations décoratives.</p>
+      <p class="small-note">Douze thèmes et douze ambiances originales accompagnent les arènes, avec des volumes séparés. Les finales peuvent être passées immédiatement ; la réduction des mouvements en montre une composition fixe.</p>
       <button class="secondary" data-mode="training">Ouvrir les répétitions</button>
     </section>
     <section class="settings-block"><h2>Ton palmarès · joueur 1</h2>
@@ -340,7 +379,7 @@ async function startMatch(options={}) {
   const initialHealth = config?.initialHealth || encounter?.initialHealth || [10000,10000];
   engine.state.fighters.forEach((f,i)=>{f.life=initialHealth[i];});
   if (challenge) engine.setTraining({dummy:challenge.dummy,freeMeter:true,freeResource:true,autoheal:true});
-  active = {engine,fighters,stage,mode,run,pendingNext:null,challenge,replay:!!options.replay,replaySource:options.replay,replayIterator:options.replay?replayInputs(options.replay):null,replayFrame:0,replayTotal:options.replay?.frames,record:{format:'circus-encore-replay',version:GAME_VERSION,config:{fighters:fighterIds,variants,stage:stage.id,cpu:matchConfig.cpu,difficulty:matchConfig.difficulty,seed:matchConfig.seed,roundTime:matchConfig.roundTime,roundsToWin:matchConfig.roundsToWin,initialHealth},runs:[]},recordFrames:0,stats:createMatchStats(),elapsed:0,showHitboxes:profile.settings.hitboxes,finished:false,ready:false,storyPending:mode==='story'&&!options.replay,announcement:'',roundDelay:0,training:mode==='training'?new TrainingLab():null,presentationPhase:engine.state.phase,presentationElapsed:0,ambientElapsed:0,resultPresented:false};
+  active = {engine,fighters,stage,mode,run,pendingNext:null,challenge,replay:!!options.replay,replaySource:options.replay,replayIterator:options.replay?replayInputs(options.replay):null,replayFrame:0,replayTotal:options.replay?.frames,record:{format:'circus-encore-replay',version:GAME_VERSION,config:{fighters:fighterIds,variants,stage:stage.id,cpu:matchConfig.cpu,difficulty:matchConfig.difficulty,seed:matchConfig.seed,roundTime:matchConfig.roundTime,roundsToWin:matchConfig.roundsToWin,initialHealth},runs:[]},recordFrames:0,stats:createMatchStats(),elapsed:0,showHitboxes:profile.settings.hitboxes,finished:false,ready:false,storyPending:mode==='story'&&!options.replay,announcement:'',roundDelay:0,training:mode==='training'?new TrainingLab():null,presentationPhase:engine.state.phase,presentationElapsed:0,ambientElapsed:0,resultPresented:false,finisher:null};
   if (active.storyPending) engine.pause();
   renderFight(); const match = active;
   $('#announcement').innerHTML = '<strong>LE RIDEAU SE LÈVE</strong><span>Préparation des artistes…</span>';
@@ -426,6 +465,7 @@ function updateHUD() {
     announcement=`<strong>${draw?'ÉGALITÉ':escapeHTML(active.fighters[s.roundWinner].name).toUpperCase()}</strong><span>${draw?'ON REJOUE CET ACTE':'REMPORTE LA MANCHE'}</span>`;
   }
   if(s.phase==='matchOver'){const draw=!Number.isInteger(s.winner)||s.winner<0;announcement=`<strong>${draw?'ÉGALITÉ':escapeHTML(active.fighters[s.winner].name).toUpperCase()}</strong><span>${draw?'LE PUBLIC SALUE LES DEUX ARTISTES':'REMPORTE LE DUEL'}</span>`;}
+  if(active.finisher&&!active.resultPresented)announcement='';
   if(announcement!==active.announcement && active.ready){$('#announcement').innerHTML=announcement;active.announcement=announcement;}
   if(active.training)updateTrainingHUD();
   if(active.challenge){const value=challengeValue();$('#challenge-bar').value=value;$('#challenge-value').textContent=`${Math.min(value,active.challenge.goal)}/${active.challenge.goal}`;$('#challenge-time').textContent=`${Math.ceil(Math.max(0,60-active.elapsed/60))} s`;}
@@ -433,15 +473,17 @@ function updateHUD() {
 function challengeValue() {return challengeProgress(active.challenge,active.stats[0]);}
 function collectEvents(events) {
   const effect=collectMatchStats(active.stats,events,active.engine.state);
-  const cues = events.map(event => event.type === 'activate'
+  if(active.engine.state.phase==='matchOver')active.finisher=profile.settings.finishers?selectMatchFinisher(active.engine.state,events,{mode:active.mode,replay:active.replay}):null;
+  const cues = events.map(event => event.type==='roundEnd'&&active.engine.state.fighters.some(f=>f.life<=0)?'ko':event.type==='trapPlaced'||event.type==='trapTrigger'?'trap':event.type === 'activate'
     ? event.slot === 'super' ? 'super' : event.slot?.startsWith('special') ? 'special' : event.slot === 'utility' ? 'recover' : null
     : ['parry','reflect','throwTech','guardBreak','jump','dash','explosion','heal','barrier','recover','denied'].includes(event.type) ? event.type : null).filter(Boolean);
-  const priority = ['super','guardBreak','parry','reflect','throwTech','explosion'].find(cue => cues.includes(cue));
+  const priority = ['ko','super','guardBreak','parry','reflect','throwTech','explosion','trap'].find(cue => cues.includes(cue));
   const cue = priority || effect || cues[0];
   if (cue) sound(cue);
 }
 function loop(now) {
   requestAnimationFrame(loop);
+  finisherGallery?.tick(now,{visible:modal.open&&!document.hidden&&osVisible,reducedMotion:profile.settings.reducedMotion||reducedMotionPreference.matches});
   if (!active || screen !== 'fight' || modal.open || active.finished) controls.pollMenu(now, { disabled: !!bindingCapture || document.hidden || !osVisible });
   const dt=Math.min(.1,Math.max(0,(now-previousTime)/1000)); previousTime=now;
   if(!active||screen!=='fight'||!active.ready)return;
@@ -480,8 +522,8 @@ function loop(now) {
   if(phase!==active.presentationPhase){active.presentationPhase=phase;active.presentationElapsed=0;}
   else if(!modal.open&&!document.hidden&&osVisible&&(!active.engine.paused||active.finished&&phase==='matchOver'))active.presentationElapsed+=dt;
   if(!modal.open&&!document.hidden&&osVisible&&(!active.engine.paused||active.finished))active.ambientElapsed+=dt;
-  if(active.finished&&!active.replay&&phase==='matchOver'&&!active.resultPresented&&active.presentationElapsed>=2.2)renderMatchResult();
-  active.renderer.render(active.engine.state,{stage:active.stage,hitboxes:active.showHitboxes,reducedMotion:profile.settings.reducedMotion||reducedMotionPreference.matches,presentationFrame:Math.floor(active.presentationElapsed*60),ambientFrame:Math.floor(active.ambientElapsed*60)});updateHUD();
+  if(active.finished&&!active.replay&&phase==='matchOver'&&!active.resultPresented&&active.presentationElapsed>=(active.finisher&&!profile.settings.reducedMotion&&!reducedMotionPreference.matches?active.finisher.durationFrames/60:2.2))renderMatchResult();
+  active.renderer.render(active.engine.state,{stage:active.stage,finisher:active.finisher&&!active.resultPresented?active.finisher:null,hitboxes:active.showHitboxes,reducedMotion:profile.settings.reducedMotion||reducedMotionPreference.matches,presentationFrame:Math.floor(active.presentationElapsed*60),ambientFrame:Math.floor(active.ambientElapsed*60)});updateHUD();
 }
 function storeReplay() {
   if(!active.recordFrames||active.recordFrames>=72000)return false;
@@ -511,11 +553,13 @@ function finishMatch() {
   profile.history.unshift({fighter:active.fighters[0].id,opponent:active.fighters[1].id,mode:active.mode,won,at:new Date().toISOString()});
   profile.history = profile.history.slice(0,12); persist(); syncAudio(); sound(won?'win':'lose');
   active.presentationPhase='matchOver'; active.presentationElapsed=0;
-  const skip=document.createElement('button'); skip.className='primary outcome-skip'; skip.dataset.action='result-screen'; skip.textContent='Voir le résultat'; $('.arena-wrap').append(skip);
+  $('.arena-wrap').classList.toggle('finishing',!!active.finisher);
+  if(active.finisher)$('#arena').setAttribute('aria-label',active.finisher.title+' — finale de spectacle. Le résultat du duel est déjà enregistré.');
+  const skip=document.createElement('button'); skip.className='primary outcome-skip'; skip.dataset.action='result-screen'; skip.textContent='Voir le résultat'; $('.arena-wrap').append(skip); skip.focus({preventScroll:true});
 }
 function renderMatchResult() {
   if(!active?.finished)return;
-  active.resultPresented=true; $('.outcome-skip')?.remove();
+  active.resultPresented=true; $('.outcome-skip')?.remove(); $('.arena-wrap')?.classList.remove('finishing');
   const won = active.won, run = active.run, next = active.pendingNext;
   const continuing = next?.status === 'active', completed = next?.status === 'complete';
   if (completed && active.mode === 'story' && !active.storyEndingPresented) {
@@ -614,6 +658,8 @@ async function handleClick(event){
     if(button.dataset.side){selection.side=Number(button.dataset.side);renderSelect();return;}
     if(button.dataset.fighter){selection.fighters[selection.side]=button.dataset.fighter;selection.variants[selection.side]='';renderSelect();return;}
     if(button.dataset.stage){selection.stage=button.dataset.stage;renderSelect();return;}
+    if(button.dataset.finaleFighter){await showFinisherGallery(button.dataset.finaleFighter);return;}
+    if(button.dataset.finaleId){await showFinisherGallery(button.dataset.finaleArtist,button.dataset.finaleId,$('#finale-costume')?.value||'');return;}
     if(button.dataset.codex){codexId=button.dataset.codex;renderCodex();return;}
     if(button.dataset.practice){selection.fighters[0]=button.dataset.practice;selection.variants[0]='';chooseMode('training');return;}
     if(button.dataset.page){archivePage+=Number(button.dataset.page);renderArchives();return;}
@@ -626,6 +672,8 @@ async function handleClick(event){
       closeDialog();await startMatch({mode:'training'});return;
     }
     switch(button.dataset.action){
+      case 'finale-toggle':finisherGallery?.toggle();break;
+      case 'finale-replay':finisherGallery?.replay();break;
       case 'start':await requestStart();break;
       case 'start-new':await startMatch();break;
       case 'resume-program':if(profile.program)await startMatch({mode:profile.program.mode,run:profile.program});break;
@@ -698,8 +746,9 @@ document.addEventListener('keydown',event=>{
 },true);
 document.addEventListener('change',event=>{
   const target=event.target;
-  if(target.dataset.setting){const key=target.dataset.setting;const value=target.type==='checkbox'?target.checked:['seconds','rounds','volume','musicVolume'].includes(key)?Number(target.value):target.value;profile.settings=cleanSettings({...profile.settings,[key]:value});persist();applySettings();if(key==='layout'){renderSettings();$('[data-setting="layout"]').focus();}return;}
+  if(target.dataset.setting){const key=target.dataset.setting;const value=target.type==='checkbox'?target.checked:['seconds','rounds','volume','musicVolume','ambienceVolume'].includes(key)?Number(target.value):target.value;profile.settings=cleanSettings({...profile.settings,[key]:value});persist();applySettings();if(key==='layout'){renderSettings();$('[data-setting="layout"]').focus();}return;}
   if(target.id.startsWith('variant-')){const side=Number(target.id.at(-1));selection.variants[side]=target.value;refreshSelectionArtist(side);}
+  if(target.id==='finale-costume'&&finisherGallery){const entry=finisherGallery.entry;void showFinisherGallery(entry.fighterId,entry.id,target.value).catch(error=>toast(error.message));return;}
   if(target.id==='wardrobe-variant'){void showAppearance(target.value,true).catch(()=>toast('Cette apparence ne peut pas être affichée.'));return;}
   if(target.id==='select-difficulty'){profile.settings.difficulty=target.value;persist();}
   if(target.id==='archive-filter'){archiveFilter=target.value;archivePage=0;renderArchives();}
@@ -740,5 +789,5 @@ $('#import-replay').addEventListener('change',async event=>{
   try{if(file.size>2_000_000)throw new Error('Ce replay est trop volumineux.');const replay=validateReplay(JSON.parse(await file.text()),FIGHTERS.map(f=>f.id),STAGES.map(s=>s.id));await startMatch({mode:'versus',replay});}catch(error){toast(error.message);}
 });
 // A read-only view enables QA without injecting commands into game logic.
-window.Encore=Object.freeze({version:GAME_VERSION,get screen(){return screen;},get ready(){return active?.ready||false;},get paused(){return active?.engine.paused||false;},get snapshot(){return active?.engine.getSnapshot()||null;},get training(){return active?.training?.snapshot(active.engine.state.fighters)||null;},get presentation(){return active?{phase:active.presentationPhase,frames:Math.floor(active.presentationElapsed*60),resultPresented:active.resultPresented}:null;},get stats(){return active?JSON.parse(JSON.stringify(active.stats.map(s=>({...s,unique:[...s.unique]})))):null;},get profile(){return JSON.parse(JSON.stringify(profile));},get program(){return active?.run?JSON.parse(JSON.stringify(active.pendingNext||active.run)):null;},get offline(){return offline.getState();},get audio(){return audio.diagnostics;}});
+window.Encore=Object.freeze({version:GAME_VERSION,get screen(){return screen;},get ready(){return active?.ready||false;},get paused(){return active?.engine.paused||false;},get snapshot(){return active?.engine.getSnapshot()||null;},get training(){return active?.training?.snapshot(active.engine.state.fighters)||null;},get finales(){return finisherGallery?.snapshot||null;},get presentation(){return active?{finisherId:active.finisher?.id||null,finisherDuration:active.finisher?.durationFrames||0,phase:active.presentationPhase,frames:Math.floor(active.presentationElapsed*60),resultPresented:active.resultPresented}:null;},get stats(){return active?JSON.parse(JSON.stringify(active.stats.map(s=>({...s,unique:[...s.unique]})))):null;},get profile(){return JSON.parse(JSON.stringify(profile));},get program(){return active?.run?JSON.parse(JSON.stringify(active.pendingNext||active.run)):null;},get offline(){return offline.getState();},get audio(){return audio.diagnostics;}});
 applySettings();renderHome();requestAnimationFrame(loop);void offline.init();

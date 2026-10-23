@@ -641,12 +641,12 @@ function throwFixture(options = {}) {
   return engine;
 }
 
-test('presentation version 0.6 retains the 0.5 engine and rejects unknown rule mappings', () => {
+test('presentation version 0.7 retains the 0.5 engine and rejects unknown rule mappings', () => {
   assert.equal(ENGINE_RULES_VERSION, '0.5.0');
   assert.equal(GAME.version, GAME_VERSION);
-  assert.equal(GAME_VERSION, '0.6.0');
+  assert.equal(GAME_VERSION, '0.7.0');
   assert.equal(replayRulesVersion(GAME_VERSION), ENGINE_RULES_VERSION);
-  assert.deepEqual(REPLAY_VERSIONS.map(replayRulesVersion), [...ENGINE_RULES_VERSIONS, ENGINE_RULES_VERSION]);
+  assert.deepEqual(REPLAY_VERSIONS.map(replayRulesVersion), [...ENGINE_RULES_VERSIONS, ENGINE_RULES_VERSION, ENGINE_RULES_VERSION]);
   assert.equal(make().config.rulesVersion, ENGINE_RULES_VERSION);
   for (const version of ENGINE_RULES_VERSIONS) {
     const engine = make({ rulesVersion: version });
@@ -655,20 +655,20 @@ test('presentation version 0.6 retains the 0.5 engine and rejects unknown rule m
     assert.equal(engine.state.options.rulesVersion, version);
   }
   assert.throws(() => make({ rulesVersion: '0.6.0' }), /rules version/);
-  for (const unknown of ['0.7.0', '__proto__', null, undefined]) assert.throws(() => replayRulesVersion(unknown), /inconnue/);
+  for (const unknown of ['0.8.0', '__proto__', null, undefined]) assert.throws(() => replayRulesVersion(unknown), /inconnue/);
 });
 
-test('all fourteen 0.6 replay routes match 0.5 simulation for 900 seeded frames', () => {
+test('all fourteen 0.6 and 0.7 replay routes match 0.5 simulation for 900 seeded frames', () => {
   for (let index = 0; index < FIGHTERS.length; index++) {
     const fighterIds = [FIGHTERS[index].id, FIGHTERS[(index + 5) % FIGHTERS.length].id];
-    const engines = ['0.5.0', '0.6.0'].map(version => make({
+    const engines = ['0.5.0', '0.6.0', '0.7.0'].map(version => make({
       fighters: fighterIds.map(id => getReplayFighter(id, version)),
       stage: STAGES[index % STAGES.length], rulesVersion: replayRulesVersion(version),
       cpu: [true, true], difficulty: 'normal', seed: 0x6000 + index, roundsToWin: 3,
     }));
     for (let frame = 0; frame < 900; frame++) {
       engines.forEach(engine => engine.step(FIXED_DT, [neutral(), neutral()]));
-      assert.deepEqual(engines[0].getSnapshot(), engines[1].getSnapshot(), `${fighterIds[0]} frame ${frame}`);
+      for (const [version, engine] of [['0.6.0', engines[1]], ['0.7.0', engines[2]]]) assert.deepEqual(engines[0].getSnapshot(), engine.getSnapshot(), `${fighterIds[0]} ${version} frame ${frame}`);
     }
   }
 });

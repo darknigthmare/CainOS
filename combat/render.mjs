@@ -3,6 +3,7 @@ import { removeAtlasMatte, applySpritePalette, projectilePresentation, trapPrese
 import { spriteSourceRegion, actorPose, frameGeometry, crouchParts, POSE_REGISTRATION_VERSION } from './render-poses.mjs';
 import { drawStageMotion } from './render-stage-motion.mjs';
 import { drawStageScenery } from './render-stage-scenery.mjs';
+import { drawFinisherScene } from './render-finishers.mjs';
 
 /**
  * Digital Circus combat presentation. Existing CainOS atlases are read without
@@ -666,6 +667,13 @@ export class CombatRenderer {
     const tick = state?.frame || 0;
     drawStageMotion(ctx, options.stage || state?.stage, options.ambientFrame ?? tick, options.reducedMotion);
     if (!state) { ctx.restore(); return; }
+    if (options.finisher && state.phase === 'matchOver') {
+      drawFinisherScene(ctx, state, options.finisher, options.presentationFrame ?? 0, {
+        reducedMotion: options.reducedMotion,
+        drawActor: (actor, presentation) => this.drawActor(actor, tick, options.reducedMotion, presentation),
+      });
+      ctx.restore(); this.lastState = state; return;
+    }
     const actors = state.a && state.b ? [state.a, state.b] : state.fighters || [];
     for (const object of state.traps || []) this.drawTrap(object, actors, tick, options.reducedMotion);
     const order = [...actors].sort((a, b) => (a.y || FLOOR) - (b.y || FLOOR));

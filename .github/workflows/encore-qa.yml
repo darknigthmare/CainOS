@@ -3,6 +3,9 @@ on:
   pull_request:
     types: [opened, synchronize, reopened, ready_for_review]
     paths:
+      - "app.js"
+      - "episodes.js"
+      - "assets/**"
       - "combat/**"
       - "tests/combat-*"
       - "scripts/**"
@@ -32,6 +35,8 @@ jobs:
       - name: Contracts, Node tests and both builds
         run: |
           mkdir -p audit-combat/ci
+          python3 -m py_compile scripts/build-combat-workbook-delta.py
+          node --check scripts/build-combat-workbook.mjs
           set -o pipefail
           npm run qa 2>&1 | tee audit-combat/ci/qa.log
       - name: Install browser verification runtime
@@ -39,21 +44,8 @@ jobs:
           npm install --no-save --package-lock=false playwright@1.64.1
           npx playwright install --with-deps chromium
       - name: Browser verification
-        run: |
-          if test -f scripts/run-combat-ci.mjs; then
-            node scripts/run-combat-ci.mjs
-          else
-            python3 -m http.server 4178 --bind 127.0.0.1 > /tmp/encore-http.log 2>&1 &
-            SERVER_PID=$!
-            trap 'kill "$SERVER_PID" 2>/dev/null || true' EXIT
-            for attempt in $(seq 1 30); do
-              if curl --fail --silent http://127.0.0.1:4178/combat/ > /dev/null; then break; fi
-              sleep 1
-            done
-            node tests/combat-browser.mjs
-          fi
+        run: node scripts/run-combat-ci.mjs
       - name: Build reviewable delivery
-        if: ${{ hashFiles('scripts/package-combat-release.mjs') != '' }}
         run: node scripts/package-combat-release.mjs
       - name: Upload verification evidence
         if: always()
@@ -69,5 +61,82 @@ jobs:
         with:
           name: encore-standalone-${{ github.event.pull_request.head.sha }}
           path: release/
+          retention-days: 30
+          if-no-files-found: error
+
+      - name: Upload generated review files
+        if: ${{ success() && hashFiles('audit-combat/generated-files/**/*') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: encore-generated-${{ github.event.pull_request.head.sha }}
+          path: audit-combat/generated-files/
+          retention-days: 30
+          if-no-files-found: error
+
+  review-blobs:
+    needs: combat
+    if: ${{ github.event.pull_request.head.repo.full_name == github.repository && github.event.pull_request.head.ref == 'feat/encore-0-6-fidelity-completion' }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: write
+      actions: read
+    steps:
+      - name: Download generated review files
+        uses: actions/download-artifact@v4
+        with:
+          name: encore-generated-${{ github.event.pull_request.head.sha }}
+          path: generated-review
+      - name: Store unreferenced review blobs
+        env:
+          GH_REVIEW_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import base64
+          import hashlib
+          import json
+          import os
+          from pathlib import Path
+          import urllib.request
+
+          root = Path("generated-review").resolve()
+          allowed = [
+              "docs/DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx",
+              "docs/combat-tracker-data.json",
+              "docs/combat-workbook-verification.json",
+              "docs/combat-qa-evidence-0.7.0.json",
+              "combat/offline-manifest.mjs",
+              "docs/images/finishers-0.7.0-a.jpg",
+              "docs/images/finishers-0.7.0-b.jpg",
+          ]
+          endpoint = os.environ["GITHUB_API_URL"] + "/repos/" + os.environ["GITHUB_REPOSITORY"] + "/git/blobs"
+          manifest = []
+          for relative in allowed:
+              file = root / relative
+              if file.is_symlink() or not file.resolve().is_relative_to(root):
+                  raise RuntimeError("Invalid generated path: " + relative)
+              data = file.read_bytes()
+              if not data or len(data) > 32 * 1024 * 1024:
+                  raise RuntimeError("Invalid generated size: " + relative)
+              payload = json.dumps({"content": base64.b64encode(data).decode("ascii"), "encoding": "base64"}).encode()
+              request = urllib.request.Request(endpoint, data=payload, method="POST", headers={
+                  "Accept": "application/vnd.github+json",
+                  "Authorization": "Bearer " + os.environ["GH_REVIEW_TOKEN"],
+                  "Content-Type": "application/json",
+                  "X-GitHub-Api-Version": "2022-11-28",
+              })
+              with urllib.request.urlopen(request, timeout=90) as response:
+                  blob = json.load(response)
+              item = {"path": relative, "sha": blob["sha"], "sha256": hashlib.sha256(data).hexdigest(), "bytes": len(data)}
+              manifest.append(item)
+              print("ENCORE_BLOB " + json.dumps(item), flush=True)
+          Path("blob-manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
+          # This job never creates a tree, commit, tag, ref or release.
+          PY
+      - name: Upload reviewed blob identifiers
+        uses: actions/upload-artifact@v4
+        with:
+          name: encore-blob-identifiers-${{ github.event.pull_request.head.sha }}
+          path: blob-manifest.json
           retention-days: 30
           if-no-files-found: error

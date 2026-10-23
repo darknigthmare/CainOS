@@ -21,7 +21,7 @@ catch (error) {
   playwright = await import(pathToFileURL(path.join(process.env.CODEX_PRIMARY_RUNTIME_NODE_MODULES, 'playwright/index.mjs')).href);
 }
 const base = (process.env.COMBAT_TEST_URL || 'http://127.0.0.1:4178').replace(/\/$/, '');
-const output = path.resolve('audit-combat/roster-0.6.0');
+const output = path.resolve('audit-combat/roster-0.7.0');
 const reportPath = path.resolve('audit-combat/roster-browser-report.json');
 const sha = value => createHash('sha256').update(value).digest('hex');
 const sourceFiles = (await fs.readdir('combat')).filter(file => /\.(mjs|css|html)$/.test(file)).sort().map(file => `combat/${file}`);
@@ -127,7 +127,7 @@ async function completeWithKeyboard() {
 }
 
 try {
-  assert.equal(GAME_VERSION, '0.6.0'); assert.equal(FIGHTERS.length, 14);
+  assert.equal(GAME_VERSION, '0.7.0'); assert.equal(FIGHTERS.length, 14);
   browser = await playwright.chromium.launch({ headless: true, executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH || undefined, args: ['--no-sandbox', '--disable-dev-shm-usage', '--single-process', '--no-zygote'] });
   report.browserVersion = browser.version();
   const context = await browser.newContext({ viewport: { width: 1280, height: 900 }, acceptDownloads: true, serviceWorkers: 'block' });
@@ -166,11 +166,16 @@ try {
   assert.equal(settings.rounds, 1); assert.equal(settings.seconds, 60);
   assert.equal(settings.sound, false); assert.equal(settings.reducedMotion, true);
   await page.locator('[data-nav="home"]').first().click();
-  checked('Normal UI settings configure one round and 60 seconds', 'Fresh profile, no imported save or injected match configuration; sound off and reduced motion on through their settings.');
+  checked('Normal UI settings configure one round and 60 seconds', 'Fresh profile, no imported save or injected match configuration; sound off; reduced motion is enabled except for the first real KO finale, which is animated and skipped.');
 
   let lastReplay, lastResult;
   for (const [index, fighter] of FIGHTERS.entries()) {
     const opponent = FIGHTERS[(index + 1) % FIGHTERS.length], stage = STAGES[index % STAGES.length];
+    if(index<2){
+      await page.locator('[data-nav="settings"]').click();
+      await page.locator('[data-setting="reducedMotion"]').setChecked(index===1);
+      await page.locator('[data-nav="home"]').first().click();
+    }
     const before = await profile();
     currentMatch = { number: index + 1, fighter: fighter.id, name: fighter.name, opponent: opponent.id, stage: stage.id, mode: 'versus', keyboard: { keyDown: 0, keyUp: 0, presses: {} } };
     console.log(`START duel ${index + 1}/14: ${fighter.id} vs ${opponent.id} (${stage.id})`);
@@ -180,6 +185,9 @@ try {
     assert.equal(terminal.wins[terminal.winner], 1, 'one won round ends this match');
     assert.ok(terminal.fighters[0].stats.starts > 0, 'the selected player executed attacks');
     assert.ok(Object.values(currentMatch.keyboard.presses).reduce((a, b) => a + b, 0) > 0);
+    const presentation = await page.evaluate(() => window.Encore.presentation);
+    if(terminal.fighters[1-terminal.winner].hp===0)assert.ok(presentation.finisherId?.startsWith(terminal.fighters[terminal.winner].id+'.'),'a real KO selects the winning artist finale');
+    currentMatch.finisherId=presentation.finisherId;
     const earned = await profile(), won = terminal.winner === 0;
     assert.equal(earned.stats.matches, before.stats.matches + 1);
     assert.equal(earned.stats.wins, before.stats.wins + Number(won));
@@ -201,7 +209,17 @@ try {
     assert.equal(replay.config.stage, stage.id); assert.equal(replay.config.difficulty, 'easy');
     assert.equal(replay.config.roundsToWin, 1); assert.equal(replay.config.roundTime, 60);
     assert.ok(replay.runs.length > 1);
-    await advance(2300);
+    if(index===0){
+      assert.ok(presentation.finisherId,'the first real duel must reach a KO to verify skipping');
+      await advance(650);
+      assert.equal(await page.locator('#modal[open]').count(),0,'animated finale remains skippable before its duration');
+      assert.equal(await page.locator('.arena-wrap.finishing').count(),1);
+      await page.locator('#arena').screenshot({path:path.join(output,'actual-ko-finale.png')});
+      await page.locator('[data-action="result-screen"]').click();
+      assert.deepEqual(await stored(REPLAY_KEY),replay,'skipping does not rewrite the replay');
+      currentMatch.animatedFinaleSkipped=true;
+      checked('A real KO finale can be skipped without changing its earned result','First roster duel; animated presentation captured, then the normal result button is clicked.');
+    }else await advance(2300);
     assert.ok(await page.locator('#modal[open] .result-stats').isVisible());
     assert.deepEqual(await profile(), earned, 'presentation awards no second result');
     assert.deepEqual(await snapshot(), terminal, 'terminal simulation stays frozen');
@@ -214,7 +232,7 @@ try {
       history: { before: before.history.length, after: earned.history.length, newEntry: latest, insertionVerified: true, olderEntriesPreservedWithinLimit: true },
       matchesBefore: before.stats.matches, matchesAfter: earned.stats.matches,
       savedBeforeModal: true, terminalSnapshotStable: true, noDuplicateAward: true,
-      screenshot: { file: `audit-combat/roster-0.6.0/${screenshot}`, sha256: sha(await fs.readFile(path.join(output, screenshot))) }
+      screenshot: { file: `audit-combat/roster-0.7.0/${screenshot}`, sha256: sha(await fs.readFile(path.join(output, screenshot))) }
     });
     await page.reload({ waitUntil: 'networkidle' });
     await homeReady();
@@ -242,15 +260,15 @@ try {
   const downloadEvent = page.waitForEvent('download');
   await page.locator('[data-action="export-replay"]').click();
   const download = await downloadEvent;
-  const replayFile = path.join(output, 'last-earned-replay-0.6.0.json');
+  const replayFile = path.join(output, 'last-earned-replay-0.7.0.json');
   await download.saveAs(replayFile);
   const replayBytes = await fs.readFile(replayFile), exported = JSON.parse(replayBytes);
   const normalized = validateReplay(lastReplay, FIGHTERS.map(fighter => fighter.id), STAGES.map(stage => stage.id));
   assert.deepEqual(exported, normalized, 'UI export retains the earned recording, including normalized frame count');
-  assert.equal(exported.version, '0.6.0'); assert.equal(replayRulesVersion(exported.version), '0.5.0');
-  report.replayRoundTrip = { file: 'audit-combat/roster-0.6.0/last-earned-replay-0.6.0.json', bytes: replayBytes.length, sha256: sha(replayBytes), version: exported.version, rulesVersion: replayRulesVersion(exported.version), frames: exported.frames, exportedExactRecording: true };
-  checked('The last earned replay exports as version 0.6.0 with original rules 0.5.0', 'The downloaded JSON is compared with the complete validated recording saved by the fourteenth duel.');
-  await page.locator('#import-replay').setInputFiles({ name: 'last-earned-replay-0.6.0.json', mimeType: 'application/json', buffer: replayBytes });
+  assert.equal(exported.version, '0.7.0'); assert.equal(replayRulesVersion(exported.version), '0.5.0');
+  report.replayRoundTrip = { file: 'audit-combat/roster-0.7.0/last-earned-replay-0.7.0.json', bytes: replayBytes.length, sha256: sha(replayBytes), version: exported.version, rulesVersion: replayRulesVersion(exported.version), frames: exported.frames, exportedExactRecording: true };
+  checked('The last earned replay exports as version 0.7.0 with original rules 0.5.0', 'The downloaded JSON is compared with the complete validated recording saved by the fourteenth duel.');
+  await page.locator('#import-replay').setInputFiles({ name: 'last-earned-replay-0.7.0.json', mimeType: 'application/json', buffer: replayBytes });
   await page.waitForFunction(() => window.Encore.ready && window.Encore.screen === 'fight', null, { polling: 50 });
   for (let step = 0; step < 40 && !(await page.locator('#modal[open]').count()); step++) await advance(5000);
   assert.match(await page.locator('#modal-title').textContent(), /Fin du replay/);

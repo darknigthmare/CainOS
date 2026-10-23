@@ -5,13 +5,13 @@
  * --repo-root specifies this checkout. --output-dir defaults to docs.
  * --input-workbook defaults to the existing tracker in this checkout.
  * Notes utilisateur follow sheet + stable ID, including relative formulas.
- * Optional docs/combat-qa-evidence.json supplies actually executed QA results.
+ * Version 0.7 delegates to the Python stdlib delta publisher and requires current CI evidence.
+ * Historical 0.6 generation uses docs/combat-qa-evidence.json and the spreadsheet runtime.
  */
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
 import { pathToFileURL } from 'node:url';
-import { FileBlob, SpreadsheetFile } from '@oai/artifact-tool';
 
 const args = process.argv.slice(2);
 function flag(name, fallback) { const i = args.indexOf(name); return i >= 0 ? args[i + 1] : fallback; }
@@ -27,6 +27,20 @@ try { evidence = JSON.parse(await fs.readFile(evidenceFile, 'utf8')); }
 catch (error) { if (error.code !== 'ENOENT') throw error; }
 if (!evidence || typeof evidence !== 'object' || Array.isArray(evidence)) throw new Error('QA evidence must be a JSON object');
 const { GAME, FIGHTERS, MOVES, STAGES, ROSTER_ARCHIVE, VARIANTS, SOURCES, MOVE_SLOTS, SLOT_LABELS } = await import(pathToFileURL(path.join(root, 'combat/data.mjs')));
+if (GAME.version === '0.7.0') {
+  const { spawnSync } = await import('node:child_process');
+  const requestedEvidence = path.resolve(flag('--qa-evidence', path.join(root, 'audit-combat/ci/evidence-0.7.0.json')));
+  const result = spawnSync(process.env.PYTHON_EXECUTABLE || 'python3', [
+    path.join(root, 'scripts/build-combat-workbook-delta.py'),
+    '--repo-root', root,
+    '--evidence', requestedEvidence,
+    '--output-dir', out,
+    '--input-workbook', inputWorkbook,
+  ], { cwd: root, stdio: 'inherit' });
+  if (result.error) throw result.error;
+  process.exit(result.status ?? 1);
+}
+const { FileBlob, SpreadsheetFile } = await import('@oai/artifact-tool');
 if (evidence.gameVersion && evidence.gameVersion !== GAME.version) throw new Error(`QA evidence belongs to ${evidence.gameVersion}, not the current ${GAME.version}`);
 const { MODES, CHALLENGES, REPLAY_VERSIONS } = await import(pathToFileURL(path.join(root, 'combat/session.mjs')));
 const { STORY_ROUTES, STORY_NOTICE } = await import(pathToFileURL(path.join(root, 'combat/stories.mjs')));
