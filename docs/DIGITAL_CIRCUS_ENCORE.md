@@ -43,7 +43,7 @@ indépendamment de CainOS. Les scripts
 [`build-combat.mjs`](../scripts/build-combat.mjs) et
 [`build-combat-offline.mjs`](../scripts/build-combat-offline.mjs) assemblent ces
 fichiers et régénèrent l’inventaire hors ligne. L’empreinte de cette livraison est
-**`OFFLINE_VERSION = 0.5.0-8ce2171ba557`** ; celle des illustrations est
+**`OFFLINE_VERSION = 0.5.0-2d1c99a767c6`** ; celle des illustrations est
 **`ART_VERSION = 97f16f24d98d57c0`**.
 
 Pour un essai local sans dépendance supplémentaire :
@@ -254,7 +254,7 @@ sur appareils physiques restent suivis dans le classeur.
 Sous HTTPS ou localhost, ouvrir **Réglages → Télécharger le spectacle** puis
 attendre la confirmation **42/42 illustrations**. Le pack correspond exactement aux
 **48 370 710 octets** de [`combat/offline-manifest.mjs`](../combat/offline-manifest.mjs),
-pour la livraison **`0.5.0-8ce2171ba557`**.
+pour la livraison **`0.5.0-2d1c99a767c6`**.
 Le premier téléchargement exige une connexion et le stockage nécessaire. Les
 fichiers déjà reçus sont réutilisés lors d’une nouvelle tentative.
 
@@ -481,8 +481,10 @@ L’horloge de présentation est séparée du moteur. À la fin d’un match, le
 le replay et le prochain point de reprise sont enregistrés immédiatement ; la
 modale de résultat arrive après **2,2 secondes**. **Voir le résultat** permet de
 passer directement à cette modale. Ce choix n’attribue pas une seconde récompense.
-Le mouvement réduit affiche des poses fixes. Le masquage du jeu suspend aussi
-l’attente de présentation.
+Le mouvement réduit affiche des poses fixes dès que la préférence du système
+ou le réglage du jeu est activé. Un changement de préférence système prend effet
+pendant le jeu, sans modifier le choix sauvegardé dans le profil. Le masquage du
+jeu suspend aussi l’attente de présentation.
 [Voir les 70 présentations](images/encore-outcome-sequences.png).
 
 ### Ambiances des douze arènes
@@ -612,14 +614,23 @@ de statut utilisées par les formules existantes. Atlas ajoute les 51 examens
 individuels : huit champs techniques et cinq champs de référence, en conservant
 les colonnes A:S ; les notes utilisateur restent éditables en colonne AG. Les deux arènes sans source
 canonique sont identifiées explicitement. Le suivi contient **98 fonctionnalités,
-472 tâches de production, 85 scénarios et 387 lignes QA** : 235 cas Node,
-114 contrôles navigateur et 38 objectifs de revue. Les statuts sont **381 « Réussi »,
+472 tâches de production, 85 scénarios et 390 lignes QA** : 235 cas Node,
+117 contrôles navigateur et 38 objectifs de revue. Les statuts sont **384 « Réussi »,
 2 « À vérifier » et 4 « Non exécuté »**. Les deux revues ouvertes concernent la
 sélection et le duel individuel de chacun des quatorze combattants de base, ainsi
 que la comparaison canonique exhaustive. Les quatre essais non exécutés portent
 sur un téléphone physique, deux manettes, le parcours clavier exhaustif et un
 matériel modeste. Les objectifs de revue peuvent recouper les cas automatisés ;
 le total de lignes ne désigne pas autant de tests indépendants.
+
+L’export du classeur isole ses fichiers temporaires dans un répertoire unique.
+Le nettoyage couvre les trois sources temporaires et leurs copies de publication,
+sur succès comme sur échec, sans retirer les aperçus PNG voisins. Quatre essais
+ciblés sont consignés : succès, échec après écriture de l’export, échec de validation
+au réimport et copie de publication partiellement écrite. Les PNG et les fichiers
+témoins voisins sont conservés dans les quatre cas ; les trois livrables
+préexistants restent intacts dans les trois échecs injectés. Ces essais utilisent
+des copies temporaires privées.
 
 ## Vérifications et limites pratiques
 
@@ -630,7 +641,8 @@ coûts, les combos, les transitions de manches, le déterminisme, les sauvegarde
 les défis. Les résultats détaillés sont consignés dans le suivi QA et les rapports.
 
 La validation Node consignée pour 0.5.0 compte **235 tests réussis** dans quatorze
-suites. Chaque fichier a été exécuté directement avec Node ; les noms et comptes
+suites, relancées après les correctifs de revue et la régénération du manifeste
+`0.5.0-2d1c99a767c6`. Chaque fichier a été exécuté directement avec Node ; les noms et comptes
 proviennent du résultat réel de chaque cas, et non du seul nombre de fichiers
 annoncé par un lanceur. Les empreintes du runtime et des illustrations restent
 identiques entre le début et la fin de cette exécution.
@@ -652,9 +664,13 @@ identiques entre le début et la fin de cette exécution.
 | [`combat-training.test.mjs`](../tests/combat-training.test.mjs) | 14 | Limite 600 images, historique, phases, gel, vitesses, enregistrement relatif, lecture unique/bouclée et remise en place |
 | [`combat-render-sequences.test.mjs`](../tests/combat-render-sequences.test.mjs) | 11 | 70 séquences finies, égalités neutres, 12 ambiances, mouvement réduit, clipping et absence de mutation |
 
-Les treize suites navigateur finales totalisent **114 contrôles réussis** :
+Les **114 contrôles des treize suites navigateur complètes** ont réussi sur le
+commit de référence `12b5987`. Après le correctif de préférence système Canvas,
+**trois contrôles ciblés supplémentaires** ont réussi, portant le total consigné à
+**117 contrôles**. Les treize suites complètes n’ont pas été relancées après ce
+correctif. Leur périmètre de référence est le suivant :
 
-| Script | Résultat consigné pour 0.5.0 |
+| Script | Résultat de référence sur `12b5987` |
 | --- | --- |
 | [`combat-encore-browser.mjs`](../tests/combat-encore-browser.mjs) | **8/8 vérifications**, **9 duels réellement joués** : histoire de Jax complète, reprise, tournoi gagné/perdu, défaite/revanche et remplacement du checkpoint |
 | [`combat-offline-browser.mjs`](../tests/combat-offline-browser.mjs) | **11/11 vérifications** : remappage réel, WebAudio, combo courant, pause, pack 42/42, recharge sans réseau, mise à jour conservant le pack, portée du worker, libération du cache et réglages à 390 px |
@@ -670,7 +686,17 @@ Les treize suites navigateur finales totalisent **114 contrôles réussis** :
 | [`combat-render-sequences-browser.mjs`](../tests/combat-render-sequences-browser.mjs) | **8/8 vérifications** : 70 séquences visibles et finies, mouvement réduit, égalités neutres, 12 couches animées, pixels du sol inchangés et absence de mutation |
 | [`combat-render-jax-browser.mjs`](../tests/combat-render-jax-browser.mjs) | **9/9 vérifications** : source RGBA versionnée, huit cellules et racines, familles de palette, conservation des pixels opaques et de l’alpha, fonds blanc/cyan/sombre et dessin intact dans les deux directions |
 
-Les treize rapports finaux ne contiennent aucune erreur JavaScript consignée.
+La régression ciblée
+[`combat-reduced-motion-browser.mjs`](../tests/combat-reduced-motion-browser.mjs)
+vérifie **3/3 cas** dans un entraînement au repos : préférence système seule,
+bascule système en direct sans modifier le profil, puis réglage du jeu seul.
+Les empreintes des pixels du décor et du combattant restent stables en mouvement
+réduit pendant que la simulation avance ; elles changent lorsque les deux
+préférences sont désactivées. La préférence système est émulée dans Chromium.
+Ce contrôle ne rejoue pas chaque effet ou séquence de résultat du jeu.
+
+Les treize rapports de référence et le rapport ciblé ne contiennent aucune erreur
+JavaScript consignée.
 Dans la suite de progression, les vingt victoires CPU vérifient le délai de résultat
 de 2,2 secondes ; le duel local vérifie son passage direct. Les données du profil
 sont déjà présentes avant l’ouverture de la modale et ne sont attribuées qu’une
@@ -679,7 +705,7 @@ réimport et rechargement du même profil.
 Le contrôle WebAudio vérifie son fonctionnement dans Chromium sans constituer une
 écoute humaine. Les assertions, rapports et limites sont réunis dans
 [`combat-qa-evidence.json`](combat-qa-evidence.json) ; les rapports navigateur bruts
-sont écrits sous `audit-combat/`. Ces 114 contrôles ne signifient pas que les
+sont écrits sous `audit-combat/`. Ces 117 contrôles ne signifient pas que les
 14 histoires ont toutes été parcourues jusqu’à leur fin dans un navigateur :
 les 14 routes sont couvertes par les tests de progression, tandis que le parcours
 complet joué dans cette suite est celui de Jax.
@@ -709,6 +735,7 @@ COMBAT_TEST_URL=http://127.0.0.1:4178 node tests/combat-render-poses-browser.mjs
 COMBAT_TEST_URL=http://127.0.0.1:4178 node tests/combat-training-browser.mjs
 COMBAT_TEST_URL=http://127.0.0.1:4178 node tests/combat-render-sequences-browser.mjs
 COMBAT_TEST_URL=http://127.0.0.1:4178 node tests/combat-render-jax-browser.mjs
+COMBAT_TEST_URL=http://127.0.0.1:4178 node tests/combat-reduced-motion-browser.mjs
 ```
 
 `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH` permet de choisir un exécutable Chromium

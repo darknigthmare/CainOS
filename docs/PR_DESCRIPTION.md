@@ -48,6 +48,9 @@ et [tests du laboratoire](../tests/combat-training.test.mjs).
 - **70 séquences finies** : introduction, victoire/défaite de manche et
   victoire/défaite de match pour chacun des 14 combattants. Le mouvement réduit
   présente leur pose stable et les égalités gardent une présentation neutre.
+- La préférence système de mouvement réduit et le réglage du jeu se combinent
+  pour le Canvas. Les changements système sont pris en compte pendant le jeu,
+  sans modifier le choix sauvegardé dans le profil.
 - **12 ambiances visuelles animées**, placées derrière les combattants et limitées
   à la zone au-dessus du sol. Elles ne modifient pas la simulation.
 - Présentation de fin de match pendant **2,2 secondes**, avec **Voir le résultat**
@@ -91,7 +94,7 @@ participants. Le noyau CQC, les programmes arcade/boss/survie, les commandes
 personnalisées, les 12 thèmes procéduraux et les 16 motifs sonores restent partagés
 entre l’OS et le standalone.
 
-Le build hors ligne **`0.5.0-8ce2171ba557`** référence **42 images**, soit
+Le build hors ligne **`0.5.0-2d1c99a767c6`** référence **42 images**, soit
 **48 370 710 octets**. La nouvelle planche Jax remplace l’ancienne dans le pack.
 Les deux builds sont produits par les scripts existants. Le profil se partage sur
 une même origine ; une autre origine utilise l’export/import JSON. La reprise d’un
@@ -108,13 +111,21 @@ les rapports et les limites de couverture.
 
 | Vérification | Résultat |
 | --- | --- |
-| Node | **235 tests réussis**, 14 suites |
-| Navigateur Chromium | **114 contrôles réussis**, 13 suites ; aucune erreur JavaScript consignée dans les rapports finaux |
-| Suivi QA | **387 lignes : 381 réussies, 2 à vérifier, 4 non exécutées**, aucun échec |
+| Node après les correctifs de revue | **235 tests réussis**, 14 suites, manifeste `0.5.0-2d1c99a767c6` |
+| Navigateur Chromium de référence | **114 contrôles réussis**, 13 suites sur `12b5987` |
+| Régression ciblée après correction Canvas | **3 contrôles réussis** de la préférence système, de sa bascule en direct et du réglage du jeu |
+| Suivi QA | **390 lignes : 384 réussies, 2 à vérifier, 4 non exécutées**, aucun échec |
 
-Les 387 lignes regroupent les tests et 38 objectifs de revue ; elles ne représentent
-pas 387 tests indépendants. `npm run qa` a également validé les audits CainOS, la
-syntaxe, les tests et les deux assemblages.
+Les **117 contrôles navigateur consignés** réunissent les 114 contrôles de
+référence et les trois contrôles ciblés ; les treize suites complètes n’ont pas
+été relancées après le correctif Canvas. Aucun de ces rapports ne consigne
+d’erreur JavaScript. La régression ciblée émule la préférence système dans
+Chromium et observe un entraînement au repos, avec une simulation qui continue
+d’avancer ; elle ne rejoue pas tous les effets ou résultats du jeu.
+
+Les 390 lignes regroupent les tests et 38 objectifs de revue ; elles ne représentent
+pas 390 tests indépendants. `npm run qa` a également été relancé après les
+correctifs : audits CainOS, syntaxe, tests et deux assemblages validés.
 
 La [suite de progression](../tests/combat-progression-browser.mjs) termine
 **21 résultats joués** : un duel local, six matchs d’arcade, quatre de boss rush et
@@ -138,9 +149,17 @@ artistiques restantes sont identifiées ci-dessous.
 [DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx](DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx) conserve
 **10 onglets et 9 tableaux** : Synthèse, Fonctionnalités, Combattants, Techniques,
 Arènes, Atlas, Production, Scénarios, QA et Références. La génération 0.5.0 recense
-**98 fonctionnalités, 472 tâches de production, 85 scénarios et 387 lignes QA**.
+**98 fonctionnalités, 472 tâches de production, 85 scénarios et 390 lignes QA**.
 Les données proviennent des modules du jeu et des preuves d’exécution ; les notes
 utilisateur suivent leurs identifiants stables lors de la régénération.
+
+Le correctif d’export réserve un répertoire temporaire unique et nettoie ses
+trois sources ainsi que leurs copies de publication sur succès ou sur échec.
+Les quatre essais ciblés couvrent un succès et trois échecs injectés : export
+après écriture, validation au réimport et copie de publication partielle. Les PNG
+et fichiers témoins voisins sont conservés dans les quatre cas ; les trois
+livrables existants restent intacts dans les trois cas d’échec. Ces essais sont
+exécutés sur des copies privées et consignés dans la preuve QA.
 
 Les tâches de production distinguent **158 éléments implémentés, 286 partiels et
 28 prévus**. Les fiches documentent aussi les 217 entrées de fidélité et les
@@ -148,7 +167,7 @@ Les tâches de production distinguent **158 éléments implémentés, 286 partie
 d’achèvement artistique.
 
 **Classeur final réimporté et vérifié** : 10 onglets, 9 tableaux natifs et
-36 formules sans erreur ; les 63 empreintes des sources correspondent aux fichiers
+36 formules sans erreur ; les 64 empreintes des sources correspondent aux fichiers
 livrés. Les dix rendus finaux sont identiques aux vues inspectées. Les essais de
 régénération ont conservé dix notes sur huit feuilles et validé neuf refus
 d’entrées invalides. Le classeur initial ne contenait aucune note utilisateur et

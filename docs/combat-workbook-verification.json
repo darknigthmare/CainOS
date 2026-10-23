@@ -1,5 +1,5 @@
 {
-  "createdAt": "2026-10-23T07:11:51.215Z",
+  "createdAt": "2026-10-23T07:43:44.824Z",
   "counts": {
     "fighters": 14,
     "moves": 140,
@@ -17,12 +17,12 @@
     "features": 98,
     "production": 472,
     "scenarios": 85,
-    "qa": 387,
+    "qa": 390,
     "presentationSequences": 70,
     "animatedStages": 12
   },
   "qaSummary": {
-    "Réussi": 381,
+    "Réussi": 384,
     "Échec": 0,
     "Non exécuté": 4,
     "À vérifier": 2
@@ -271,7 +271,7 @@
       "sheet": "QA",
       "name": "EncoreQA",
       "style": "TableStyleLight1",
-      "rows": 387,
+      "rows": 390,
       "filter": true
     },
     {
@@ -283,7 +283,7 @@
     }
   ],
   "sourceDigests": {
-    "combat/app.mjs": "b0db820ece23d3881170d53bdf4a128df8d2ffadf0c5dc468e768c02da60254d",
+    "combat/app.mjs": "bc529ed691ea4e6d3c0d0e648a3d7dd587fbc27ab7fd677d65287e3f4d055909",
     "combat/audio.mjs": "fbce0e74431c354a01e7ebc46b75084b6c81c233c1ed3807bcac6b97d8e1329b",
     "combat/bindings.mjs": "8352b4a92afb27a85220b21feb5b7f53b34a2c4eabfedff2f400259329988969",
     "combat/costume-fidelity.mjs": "9e6a02f0fb5dcb684d05b92986833bcf79b6962961e1fcd17f68a0769cbe61b5",
@@ -294,7 +294,7 @@
     "combat/index.html": "a460399b3a66c087201680263277a0bcdb58d1488db7b74e84c9ec59a1b56c8c",
     "combat/input.mjs": "bd6e648180730a662fdb60ce91d93cb8b60d9ef88f01922059dd46808ad8170b",
     "combat/manifest.webmanifest": "3a7f78eb5c4cc3f7c90784a8bcba425dc91fdc1e1c401fc26b3a81f12d4534aa",
-    "combat/offline-manifest.mjs": "285f8adb5c9b0678e96cdce78ba65f17b2d1d31f4e668aec65239d90caadb4f1",
+    "combat/offline-manifest.mjs": "8565728600bf3f9bd4b30b153105cba33ac49a0f7b637b8f72d2e104d9ac5819",
     "combat/offline.mjs": "704b87db56c26365c770c46df33a0ebfa6c2639d1b97df8183794dfb8417e4c9",
     "combat/progression.mjs": "a5a3d697b034146464d0c315a2a5dc5891557caf1a58ad1d8dd8551a5f585f15",
     "combat/render-poses.mjs": "44a17b62cd7304f1a81b1454e4e8b902f8712d9b0a462f92b09626e8fe554268",
@@ -323,6 +323,7 @@
     "tests/combat-progression-browser.mjs": "a8470b99a0e5b8c1b631fca253340a46b87d37d4180bcb55c6b42ed86b1bd902",
     "tests/combat-progression.test.mjs": "cbd27b27316563868585d25a5e1e7613ef4b0a15f42a63b2032efeb334a3f7f8",
     "tests/combat-recovery-browser.mjs": "f232ed6a99c38031ab1bdb5dc59e691a3d1d71b7071b1a79e8e90b2cf0457f03",
+    "tests/combat-reduced-motion-browser.mjs": "c21e5509c519b3a604b60691901e41c0913a51bd0c98cb6ca7d7ea6332fef8e2",
     "tests/combat-render-browser.mjs": "35d46718382ef7a949e68ba0b22fd513eb440507520c59470b7256125f068085",
     "tests/combat-render-jax-browser.mjs": "2f82e8152c5857e4e079746d5e171cf9780e228c506cdd4f9546c0704a0351f8",
     "tests/combat-render-matte.test.mjs": "28f7b0791b9bae5ca55fedf8d84a9a3700e8555533c39b7471abe92ca7a16a4e",
@@ -335,8 +336,8 @@
     "tests/combat-session.test.mjs": "f322a6575b28861497431fdd581883dddbfbdfe06ff2453043821c1fdc86b2c3",
     "tests/combat-training-browser.mjs": "95a819987fb8ef813d0631bdc9c8f809974bdcccc743116a394cbcc0b3f68754",
     "tests/combat-training.test.mjs": "f1156033a8263fec59e56f097809889e447b64ab9530308f2b904c7513d37ede",
-    "docs/combat-qa-evidence.json": "56962101d3f1222a0a22cb4d004748064bdc16753112e48a28fdd17332b52dd3",
-    "scripts/build-combat-workbook.mjs": "23d678d46d891f439e4384eea0bdeb39c1c9a3b1b7ad3aa50f33a971ed08b39d",
+    "docs/combat-qa-evidence.json": "0a66426daf8f06158cc867b6f4129b7b355abb05d448d9af35cbae6105813852",
+    "scripts/build-combat-workbook.mjs": "d7459bbf43358d3b25761353b3f2da80f3019735eb38afc69b5f059ac6b80c82",
     "docs/combat-costume-review.json": "bdc92fb854e3370aa9f38f802fc5bc648292483b31912c4241cbcc2c24178f05",
     "docs/images/gangle-palette-0.4.0.png": "bced55b513c57190ea787a3e42f243046f25aeba6517bc4c88c66a959ecfb795",
     "docs/images/shadow-preservation-0.4.0.png": "11bb5b80810400bbab6d1e35599605d119003f4001178205bce39a864c0661c4",
@@ -347,13 +348,13 @@
     "docs/images/costumes-0.4.0-page-4.png": "88369b5badf9be203dbb758173bf5efd4ab3d2f9115ac566452f7054bffe400f",
     "docs/images/costumes-0.4.0-page-5.png": "e67cc5d7b7950fb2e718b911e0f670101bc34f72631c22296ef7c9ad780dda5f"
   },
-  "finalVerifiedAt": "2026-10-23T07:14:07.833009+00:00",
-  "workbookSHA256": "098ed2b621c77856cf9b354d5bd7eefbbbe68e3e0ed9cb160bcab8acc9a77634",
-  "workbookBytes": 204840,
+  "finalVerifiedAt": "2026-10-23T07:46:51.176655+00:00",
+  "workbookSHA256": "e40045727e7c299358f28f8dd54080f66f05b21f69e15770a1a1e4eefd284719",
+  "workbookBytes": 205912,
   "formulaCount": 36,
   "nativeStructure": {
     "workbook": "/workspace/scratch/6484ba92a7a2/CainOS/docs/DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx",
-    "sha256": "098ed2b621c77856cf9b354d5bd7eefbbbe68e3e0ed9cb160bcab8acc9a77634",
+    "sha256": "e40045727e7c299358f28f8dd54080f66f05b21f69e15770a1a1e4eefd284719",
     "sheets": 10,
     "nativeTables": 9,
     "tableNamesPreserved": true,
@@ -463,7 +464,8 @@
         "errors": 0,
         "validationRanges": [
           "D6:D317",
-          "D318:D392"
+          "D318:D392",
+          "D393:D395"
         ]
       },
       {
@@ -480,7 +482,7 @@
     "allChecksPassed": true
   },
   "notesRegression": {
-    "createdAt": "2026-10-23T07:10:41.274Z",
+    "createdAt": "2026-10-23T07:41:30.870Z",
     "notes": 10,
     "sheets": 8,
     "sortedInput": true,
@@ -594,134 +596,202 @@
       }
     ],
     "publication": {
-      "previewDirectory": "/tmp/cainos-encore-excel-20261023/regression-previews/encore-excel-fixture-output",
-      "outputDirectory": "/workspace/scratch/6484ba92a7a2/encore-excel-fixture-output",
-      "validatedBytesPreserved": true,
+      "previewDirectory": "/tmp/cainos-encore-excel-20261023/notes-cleanup-regression-lNy4iz/previews/success",
+      "outputDirectory": "/workspace/scratch/6484ba92a7a2/encore-excel-fixture-gA2B3v/success",
+      "publishedWorkbookReimported": true,
+      "temporaryFilesRemoved": true,
       "passed": true
     },
+    "cleanupRegression": {
+      "cases": [
+        {
+          "case": "success",
+          "passed": true,
+          "temporarySourcesRemoved": true,
+          "stagedFilesRemoved": true,
+          "pngPreviewsPreserved": true,
+          "unrelatedFilesPreserved": true
+        },
+        {
+          "case": "export-after-write",
+          "passed": true,
+          "preexistingOutputsPreserved": 3,
+          "temporarySourcesRemoved": true,
+          "stagedFilesRemoved": true,
+          "pngPreviewsPreserved": true,
+          "unrelatedFilesPreserved": true
+        },
+        {
+          "case": "export-validation",
+          "passed": true,
+          "preexistingOutputsPreserved": 3,
+          "temporarySourcesRemoved": true,
+          "stagedFilesRemoved": true,
+          "pngPreviewsPreserved": true,
+          "unrelatedFilesPreserved": true
+        },
+        {
+          "case": "partial-staged-copy",
+          "passed": true,
+          "preexistingOutputsPreserved": 3,
+          "temporarySourcesRemoved": true,
+          "stagedFilesRemoved": true,
+          "pngPreviewsPreserved": true,
+          "unrelatedFilesPreserved": true
+        }
+      ],
+      "faultInjectionScope": "Private temporary copies only; export-write, note round-trip validation and partial staged-copy failures.",
+      "logDirectory": "/tmp/cainos-encore-excel-20261023/notes-cleanup-regression-lNy4iz"
+    },
     "fixturesExcludedFromDeliverable": true,
-    "builderSHA256": "23d678d46d891f439e4384eea0bdeb39c1c9a3b1b7ad3aa50f33a971ed08b39d"
+    "builderSHA256": "d7459bbf43358d3b25761353b3f2da80f3019735eb38afc69b5f059ac6b80c82"
   },
   "visualReview": {
-    "reviewedAt": "2026-10-23T07:09:55.541630+00:00",
+    "reviewedAt": "2026-10-23T07:46:51.176655+00:00",
+    "baselineReviewedAt": "2026-10-23T07:09:55.541630+00:00",
     "sheets": 10,
-    "findings": "Headers, numbers, status colors and visible text are legible; no clipping observed in the rendered ranges.",
     "renders": [
       {
         "name": "Synthese",
-        "sha256": "24029c9f3773779208979e4a3cbf35a84ba54082579291cc9052f215e0e6f603"
+        "sha256": "2df0dac5ee6a0d1d28665dc9551e9d420f2e04b3d2b3105e35d5bba5ed92e4dc",
+        "inspection": "fresh visual review"
       },
       {
         "name": "Fonctionnalites",
-        "sha256": "41360ad255fdd03a760fc426c74c6b32c39bbd58d4bee306baf101efe09bde07"
+        "sha256": "41360ad255fdd03a760fc426c74c6b32c39bbd58d4bee306baf101efe09bde07",
+        "inspection": "identical to previously inspected render"
       },
       {
         "name": "Combattants",
-        "sha256": "99a1c32aadf464960e3130d2d05e65e8366e74898ac7de90a63c280dc48d38a8"
+        "sha256": "99a1c32aadf464960e3130d2d05e65e8366e74898ac7de90a63c280dc48d38a8",
+        "inspection": "identical to previously inspected render"
       },
       {
         "name": "Techniques",
-        "sha256": "b55e5635f2ccadf1e2be2d37a92721cdd1ea275ba0b101a8fe3be4cefa88e7db"
+        "sha256": "b55e5635f2ccadf1e2be2d37a92721cdd1ea275ba0b101a8fe3be4cefa88e7db",
+        "inspection": "identical to previously inspected render"
       },
       {
         "name": "Arenes",
-        "sha256": "179315ed75ec57c74c87f1a9256657ded4775d394d6d2f1258426b362e6fbaf0"
+        "sha256": "179315ed75ec57c74c87f1a9256657ded4775d394d6d2f1258426b362e6fbaf0",
+        "inspection": "identical to previously inspected render"
       },
       {
         "name": "Atlas",
-        "sha256": "6de563c480bd5eb575debbd9fbf63f3268d0419cc1d4f586e51512a73c99d9be"
+        "sha256": "6de563c480bd5eb575debbd9fbf63f3268d0419cc1d4f586e51512a73c99d9be",
+        "inspection": "identical to previously inspected render"
       },
       {
         "name": "Production",
-        "sha256": "13ccce8196d278819a341d4b145f586248bb058ee5e166009abe1f3a7d8f82a3"
+        "sha256": "13ccce8196d278819a341d4b145f586248bb058ee5e166009abe1f3a7d8f82a3",
+        "inspection": "identical to previously inspected render"
       },
       {
         "name": "Scenarios",
-        "sha256": "41267bc2adb558193653a2cd893015c980e41cfb7b74b7260f49533b208adc49"
+        "sha256": "41267bc2adb558193653a2cd893015c980e41cfb7b74b7260f49533b208adc49",
+        "inspection": "identical to previously inspected render"
       },
       {
         "name": "QA",
-        "sha256": "5469353a5f3d697268a4cc383943f09d9f349e2b0ee141d3c59c0372b245cd27"
+        "sha256": "5469353a5f3d697268a4cc383943f09d9f349e2b0ee141d3c59c0372b245cd27",
+        "inspection": "identical to previously inspected render"
       },
       {
         "name": "References",
-        "sha256": "d304136b5e8aeb99652d6050baf7797dbecbff5ffaaf2f494bae529128b144d3"
+        "sha256": "d304136b5e8aeb99652d6050baf7797dbecbff5ffaaf2f494bae529128b144d3",
+        "inspection": "identical to previously inspected render"
       }
     ],
-    "unchangedAfterFinalBuild": true,
-    "scope": "Summary and header/first-row previews for all 10 sheets; targeted previews of the 8 new features, example sequences, all 12 ambiences, Jax, and 25 new browser checks.",
+    "scope": "Summary and header/first-row previews for all 10 sheets; targeted previews of the 8 new features, example sequences, all 12 ambiences, Jax, 25 original 0.5 browser checks and 3 targeted motion-preference checks.",
+    "findings": "Headers, numbers, status colors and visible text are legible. No clipping observed in the reviewed ranges. Unchanged renders were matched byte-for-byte to their previously inspected images.",
     "details": [
       {
         "sheet": "Fonctionnalités",
         "range": "A96:H98",
         "image": "Fonctionnalites-laboratoire-05.png",
         "sha256": "c7f2313e1761a1c72c612889550d9c8177119d8ca8cca2b121fc68de68fbd56b",
-        "reviewed": true
+        "reviewed": true,
+        "inspection": "identical to previously inspected render"
       },
       {
         "sheet": "Fonctionnalités",
         "range": "A99:H100",
         "image": "Fonctionnalites-regles-sequences-05.png",
         "sha256": "b338604e9aa22cfa46607c603da0df0aa596bce754a1fb68baec4ce8795f77cd",
-        "reviewed": true
+        "reviewed": true,
+        "inspection": "identical to previously inspected render"
       },
       {
         "sheet": "Fonctionnalités",
         "range": "A101:H103",
         "image": "Fonctionnalites-ambiances-jax-notes-05.png",
         "sha256": "0d3529b6a518d633b37afa86b5ed5d190ebcf5d7375b3b8da94f6b4419d7d54b",
-        "reviewed": true
+        "reviewed": true,
+        "inspection": "identical to previously inspected render"
       },
       {
         "sheet": "Production",
         "range": "C395:I399",
         "image": "Production-sequences-05.png",
         "sha256": "d2d5e1b7bb57f89ea2e74dedccb479bb0c952f48721a9f46778d5a081a807cc5",
-        "reviewed": true
+        "reviewed": true,
+        "inspection": "identical to previously inspected render"
       },
       {
         "sheet": "Production",
         "range": "C465:I476",
         "image": "Production-ambiances-05.png",
         "sha256": "a559dcc4edacf7c5a39570cd74bced4cca9897412fa55fa9758e54d001d73d8c",
-        "reviewed": true
+        "reviewed": true,
+        "inspection": "identical to previously inspected render"
       },
       {
         "sheet": "Production",
         "range": "C477:I477",
         "image": "Production-jax-05.png",
         "sha256": "d6eb863a1c7daf85efde598fffc750ee437ad7b5aa20490ac93f75b99661cba2",
-        "reviewed": true
+        "reviewed": true,
+        "inspection": "identical to previously inspected render"
       },
       {
         "sheet": "QA",
         "range": "A368:G375",
         "image": "QA-laboratoire-05.png",
         "sha256": "51c83fdf779dc015b3e1f266f17ab47755520e6a45c9e00fdf4a4a01671991e8",
-        "reviewed": true
+        "reviewed": true,
+        "inspection": "identical to previously inspected render"
       },
       {
         "sheet": "QA",
         "range": "A376:G383",
         "image": "QA-sequences-05.png",
         "sha256": "b878db52b7134311271d7a7dcae153bdf7d2e4e41161294d2e5b48b8c7eb2af4",
-        "reviewed": true
+        "reviewed": true,
+        "inspection": "identical to previously inspected render"
       },
       {
         "sheet": "QA",
         "range": "A384:G392",
         "image": "QA-jax-05.png",
-        "sha256": "8fd1a6c234139903ae45f3a37119ce225fc20b3a9b5e0b8dc85877306a0a9f02",
-        "reviewed": true
+        "sha256": "614992e37b77c00df51e62b56c3d28bc4916e61ad1c36e426a6f8e34124164c1",
+        "reviewed": true,
+        "inspection": "fresh visual review"
+      },
+      {
+        "sheet": "QA",
+        "range": "A393:G395",
+        "image": "QA-mouvement-reduit-05.png",
+        "sha256": "b0b2c24d2ea76b04d075ff6ccfd2379fc69ff97e9de7c771e1af1ebcca737dd1",
+        "reviewed": true,
+        "inspection": "fresh visual review"
       }
-    ],
-    "detailsReviewedAt": "2026-10-23T07:14:07.833009+00:00"
+    ]
   },
   "fixtureNotesExcluded": true,
   "sourceDigestVerification": {
-    "files": 63,
+    "files": 64,
     "mismatches": 0,
-    "checkedAt": "2026-10-23T07:14:07.833009+00:00"
+    "checkedAt": "2026-10-23T07:46:51.176655+00:00"
   },
   "statusMutationRestoredInExport": {
     "featureCell": "Fonctionnalités!D6",
@@ -729,5 +799,22 @@
     "summaryCell": "Synthèse!B15",
     "summaryValue": 76,
     "passed": true
+  },
+  "finalExportCleanup": {
+    "temporarySourceDirectories": 0,
+    "stagedDestinationFiles": 0,
+    "pngPreviewsRetained": 52,
+    "passed": true
+  },
+  "browserEvidenceScope": {
+    "totalChecks": 117,
+    "documentedBaselineChecks": 114,
+    "postReviewTargetedChecks": 3,
+    "targetedIDs": [
+      "MOTIONUI-01",
+      "MOTIONUI-02",
+      "MOTIONUI-03"
+    ],
+    "description": "114 checks are retained from the documented baseline; 3 focused checks cover the motion-preference review correction. Execution snapshots are recorded in the QA evidence."
   }
 }
