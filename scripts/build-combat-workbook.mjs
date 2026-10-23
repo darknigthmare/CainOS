@@ -643,44 +643,54 @@ for(const name of ['docs/combat-costume-review.json',gangleReviewPath,shadowRevi
 const fidelityRecords=[...FIGHTERS.map(({id,fidelity})=>({kind:'fighter',id,fidelity})),...MOVES.map(({id,fidelity})=>({kind:'move',id,fidelity})),...STAGES.map(({id,fidelity})=>({kind:'stage',id,fidelity})),...VARIANTS.map(({id,fidelity})=>({kind:'costume',id,fidelity}))];
 const costumeReviewStatuses=Object.fromEntries([...new Set(VARIANTS.map(variant=>variant.fidelity.assetReview.status))].map(status=>[status,VARIANTS.filter(variant=>variant.fidelity.assetReview.status===status).length]));
 const fidelityCoverage={fighters:roster.length,moves:moveRows.length,stages:stages.length,costumes:VARIANTS.length,documented:fidelityRecords.length,withPrimaryReference:fidelityRecords.filter(item=>item.fidelity.sourceIds.length).length,withoutPrimaryReference:fidelityRecords.filter(item=>!item.fidelity.sourceIds.length).map(item=>({kind:item.kind,id:item.id,reviewStatus:item.fidelity.reviewStatus})),costumeReviews:{documented:VARIANTS.length,technicalStatuses:costumeReviewStatuses,withRecordedIssues:VARIANTS.filter(variant=>variant.fidelity.assetReview.issues.length).length,withPrimaryReferences:VARIANTS.filter(variant=>variant.fidelity.sourceIds.length).length,withObservedPrimaryTraits:VARIANTS.filter(variant=>variant.fidelity.observedTraits.length).length,canonicalSourceRequiredForCertification:true},sourceIds:FIDELITY_SOURCES.map(source=>source.id),globalVisualCertification:false};
-const pendingFile=path.join(previewDir,`tracker-${process.pid}.pending.xlsx`);
-const file=await SpreadsheetFile.exportXlsx(workbook);
-await file.save(pendingFile);
-const exported=await SpreadsheetFile.importXlsx(await FileBlob.load(pendingFile));
-const nativeTables=[];
-for(const name of sheetNames){
-  const sheet=exported.worksheets.getItem(name);
-  for(const table of sheet.tables.items)nativeTables.push({sheet:name,name:table.name,style:table.style,rows:table.getDataRows().length,filter:table.showFilterButton});
-  const notes=preservedNotes.get(name);
-  if(!notes?.size)continue;
-  const table=sheet.tables.items[0], headers=table.getHeaderRowRange().values[0], noteColumn=headers.indexOf('Notes utilisateur'), rows=table.getDataRows();
-  for(const [id,note]of notes){
-    const index=rows.findIndex(row=>String(row[0])===id);
-    if(index<0)throw new Error(`Note lost after export: ${name}/${id}`);
-    const cell=sheet.getRange(`${column(noteColumn+1)}${index+6}`);
-    if(note.formula){if(cell.formulasR1C1[0][0]!==note.formula)throw new Error(`Relative note formula changed after export: ${name}/${id}`);}
-    else if(cell.values[0][0]!==note.value)throw new Error(`Note value changed after export: ${name}/${id}`);
-  }
-}
-if(nativeTables.length!==9)throw new Error(`Native table count changed: ${nativeTables.length}`);
-const verification={createdAt:new Date().toISOString(),counts:data.counts,qaSummary,verifiedSummary:actualCounts,verifiedReleaseSummary:expectedRelease,fidelityCoverage,formulaErrors:0,statusMutationRecalculated:true,renderedSheets:renderSheets.length?renderSheets:Object.keys(sheets),qaEvidencePresent:!!Object.keys(evidence).length,notesPreservation:{...noteAudit,exportRoundTripPassed:true},nativeTables,sourceDigests};
-await fs.writeFile(path.join(previewDir,'combat-tracker-data.pending.json'),JSON.stringify(data,null,2)+'\n');
-await fs.writeFile(path.join(previewDir,'combat-workbook-verification.pending.json'),JSON.stringify(verification,null,2)+'\n');
-// Preview scratch space may live on another filesystem. Stage every validated
-// artifact beside its final destination before an atomic, same-device rename.
-const publication=[
-  [pendingFile,'DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx'],
-  [path.join(previewDir,'combat-tracker-data.pending.json'),'combat-tracker-data.json'],
-  [path.join(previewDir,'combat-workbook-verification.pending.json'),'combat-workbook-verification.json'],
-];
+// Own one unique directory for temporary exports and any exporter sidecars.
+// PNG previews stay outside it and are retained on both success and failure.
+let pendingDirectory;
 const staged=[];
 try{
+  pendingDirectory=await fs.mkdtemp(path.join(previewDir,'.tracker-'));
+  const pendingFile=path.join(pendingDirectory,'tracker.pending.xlsx');
+  const pendingData=path.join(pendingDirectory,'combat-tracker-data.pending.json');
+  const pendingVerification=path.join(pendingDirectory,'combat-workbook-verification.pending.json');
+  const file=await SpreadsheetFile.exportXlsx(workbook);
+  await file.save(pendingFile);
+  const exported=await SpreadsheetFile.importXlsx(await FileBlob.load(pendingFile));
+  const nativeTables=[];
+  for(const name of sheetNames){
+    const sheet=exported.worksheets.getItem(name);
+    for(const table of sheet.tables.items)nativeTables.push({sheet:name,name:table.name,style:table.style,rows:table.getDataRows().length,filter:table.showFilterButton});
+    const notes=preservedNotes.get(name);
+    if(!notes?.size)continue;
+    const table=sheet.tables.items[0], headers=table.getHeaderRowRange().values[0], noteColumn=headers.indexOf('Notes utilisateur'), rows=table.getDataRows();
+    for(const [id,note]of notes){
+      const index=rows.findIndex(row=>String(row[0])===id);
+      if(index<0)throw new Error(`Note lost after export: ${name}/${id}`);
+      const cell=sheet.getRange(`${column(noteColumn+1)}${index+6}`);
+      if(note.formula){if(cell.formulasR1C1[0][0]!==note.formula)throw new Error(`Relative note formula changed after export: ${name}/${id}`);}
+      else if(cell.values[0][0]!==note.value)throw new Error(`Note value changed after export: ${name}/${id}`);
+    }
+  }
+  if(nativeTables.length!==9)throw new Error(`Native table count changed: ${nativeTables.length}`);
+  const verification={createdAt:new Date().toISOString(),counts:data.counts,qaSummary,verifiedSummary:actualCounts,verifiedReleaseSummary:expectedRelease,fidelityCoverage,formulaErrors:0,statusMutationRecalculated:true,renderedSheets:renderSheets.length?renderSheets:Object.keys(sheets),qaEvidencePresent:!!Object.keys(evidence).length,notesPreservation:{...noteAudit,exportRoundTripPassed:true},nativeTables,sourceDigests};
+  await fs.writeFile(pendingData,JSON.stringify(data,null,2)+'\n');
+  await fs.writeFile(pendingVerification,JSON.stringify(verification,null,2)+'\n');
+  // Preview scratch space may live on another filesystem. Stage every validated
+  // artifact beside its final destination before an atomic, same-device rename.
+  const publication=[
+    [pendingFile,'DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx'],
+    [pendingData,'combat-tracker-data.json'],
+    [pendingVerification,'combat-workbook-verification.json'],
+  ];
   for(const [source,name]of publication){
-    const temporary=path.join(out,`.${name}.${process.pid}.${Date.now()}.pending`);
-    await fs.copyFile(source,temporary);staged.push([temporary,path.join(out,name)]);
+    const temporary=path.join(out,`.${name}.${path.basename(pendingDirectory)}.pending`);
+    staged.push([temporary,path.join(out,name)]);
+    await fs.copyFile(source,temporary);
   }
   for(const [temporary,destination]of staged)await fs.rename(temporary,destination);
 }finally{
-  for(const [temporary]of staged)await fs.rm(temporary,{force:true});
+  await Promise.all([
+    ...staged.map(([temporary])=>fs.rm(temporary,{force:true})),
+    ...(pendingDirectory?[fs.rm(pendingDirectory,{recursive:true,force:true})]:[]),
+  ]);
 }
 console.log(JSON.stringify({file:path.join(out,'DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx'),counts:data.counts,previews:previewDir},null,2));
