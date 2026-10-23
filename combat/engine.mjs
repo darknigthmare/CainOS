@@ -21,6 +21,8 @@ export const SOURCE = Object.freeze({
   engine: 'CQCCombat046 / 0.48',
 });
 export const FIXED_DT = 1 / 60;
+export const ENGINE_RULES_VERSION = '0.5.0';
+export const ENGINE_RULES_VERSIONS = Object.freeze(['0.1.0', '0.2.0', '0.3.0', '0.4.0', ENGINE_RULES_VERSION]);
 export const ARENA = Object.freeze({ width: 1280, height: 720, floor: 568, left: 65, right: 1215 });
 
 // A CQC slot is an authored move; only guard and directional movement are held.
@@ -55,6 +57,9 @@ const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
 const bounds=s=>s.options.bounds||{left:LEFT,right:RIGHT};
 const clampX=(s,x)=>clamp(x,bounds(s).left,bounds(s).right);
 const copy=x=>JSON.parse(JSON.stringify(x));
+// Replays keep their recorded rules. Only the current version receives changes
+// to trap height and CPU decisions, which otherwise alter seeded simulations.
+const currentRules=s=>s.options.rulesVersion===ENGINE_RULES_VERSION;
 const empty=()=>({left:false,right:false,down:false,guard:false,jump:false,dash:false,tech:false,slot:null});
 const slotName={special:'I',specialDown:'↓ + I',specialForward:'AVANT + I',specialBack:'ARRIÈRE + I',super:'O',utility:'L',light:'J',heavy:'K',low:'↓ + J',throw:'U'};
 function rand(s){let x=s.seed>>>0;x^=x<<13;x^=x>>>17;x^=x<<5;s.seed=x>>>0;return(s.seed>>>0)/4294967296;}
@@ -72,7 +77,7 @@ function create(a,b,options={}){const s={version:'0.45',a:makeActor(a,0),b:makeA
  timerStart:options.training?0:(options.seconds??99)*60,timer:options.training?0:(options.seconds??99)*60,
  rounds:options.rounds??2,round:1,phase:options.training||options.skipIntro?'fight':'intro',phaseT:options.training||options.skipIntro?0:100,
  finished:false,roundWinner:null,winner:null,projectiles:[],traps:[],fx:[],events:[],metrics:{},nextId:1,
- options:{training:false,dummy:'idle',autoheal:false,freeMeter:false,freeResource:false,...options},idleTraining:0};
+ options:{training:false,dummy:'idle',autoheal:false,freeMeter:false,freeResource:false,rulesVersion:ENGINE_RULES_VERSION,...options},idleTraining:0};
  s.b.ai=options.mode==='cpu';return s;}
 function actors(s){return[s.a,s.b];}
 function other(s,p){return p.slot===0?s.b:s.a;}
@@ -249,7 +254,7 @@ function projectileStep(s){for(const q of s.projectiles){if(q.dead)continue;if(q
 }
 function objectsStep(s){for(const tr of s.traps){if(tr.dead)continue;tr.age++;tr.life--;const a=actors(s)[tr.owner],d=other(s,a);
  if(tr.life<=0){tr.dead=true;continue;}if(tr.age<tr.arm)continue;
- if(!tr.def.remoteOnly&&(tr.def.tag==='wire'?overlap({x:tr.x-(tr.def.reach||150),y:FLOOR-155,w:2*(tr.def.reach||150),h:5},box(d)):Math.abs(tr.x-d.x)<(tr.def.reach||90)&&d.y>FLOOR-95)){const result=damage(s,a,d,{...tr.def,level:tr.def.tag==='wire'?'high':tr.def.tag==='snare'?'low':'mid'});if(result.hit){tr.dead=true;fx(s,tr.x,FLOOR-30,'blast',tr.def.tag);event(s,'trapTrigger',a);}}
+ if(!tr.def.remoteOnly&&(tr.def.tag==='wire'?overlap({x:tr.x-(tr.def.reach||150),y:FLOOR-155,w:2*(tr.def.reach||150),h:5},box(d)):Math.abs(tr.x-d.x)<(tr.def.reach||90)&&d.y>FLOOR-95)){const legacyLevel=tr.def.tag==='wire'?'high':tr.def.tag==='snare'?'low':'mid';const result=damage(s,a,d,{...tr.def,level:currentRules(s)?tr.def.level||legacyLevel:legacyLevel});if(result.hit){tr.dead=true;fx(s,tr.x,FLOOR-30,'blast',tr.def.tag);event(s,'trapTrigger',a);}}
  }s.traps=s.traps.filter(t=>!t.dead);}
 function destroyObjects(s,p,hb,m){for(const tr of s.traps)if(tr.owner!==p.slot&&!tr.dead&&overlap(hb,{x:tr.x-22,y:tr.y-60,w:44,h:60})){tr.hp-=Math.max(140,m.damage);if(tr.hp<=0){tr.dead=true;event(s,'trapDestroyed',p);fx(s,tr.x,tr.y-30,'hit',tr.def.tag);}}
  for(const q of s.projectiles)if(q.owner!==p.slot&&!q.dead&&q.delay<=0&&overlap(hb,{x:q.x-16,y:q.y-12,w:32,h:24})&& !['rail','laser'].includes(q.def.tag)){q.dead=true;event(s,'projectileDestroyed',p);fx(s,q.x,q.y,'ring','counter');}
@@ -273,7 +278,8 @@ function step(s,inputs=[empty(),empty()]){if(s.finished)return s;
  else if(s.timerStart>0&&s.timer<=0){const a=s.a.life/s.a.max,b=s.b.life/s.b.max;roundEnd(s,Math.abs(a-b)<1e-9?-1:a>b?0:1);}
  return s;
 }
-function cpu(s,p,o){const i=empty(),d=Math.abs(o.x-p.x),dir=o.x>p.x?1:-1;if(p.hit||p.blockstun)return i;
+function cpu(s,p,o){const i=empty(),d=Math.abs(o.x-p.x),dir=o.x>p.x?1:-1;if(p.hit)return i;
+ if(p.blockstun){if(currentRules(s)&&p.block){i.guard=true;i.down=!!p.crouch;}return i;}
  if(p.cpuGuard>0){p.cpuGuard--;i.guard=true;i.down=!!p.cpuLow;return i;}
  if(p.attack)return i;
  // Only reacts to visible committed startup, never future player inputs.
@@ -281,11 +287,11 @@ function cpu(s,p,o){const i=empty(),d=Math.abs(o.x-p.x),dir=o.x>p.x?1:-1;if(p.hi
  if(p.cpuWait>0){p.cpuWait--;if(d>230){i.left=dir<0;i.right=dir>0;}return i;}
  p.cpuWait=8+Math.floor(rand(s)*17);
  const r=p.f.combat.resource;if((r.kind==='ammo'&&p.r<2)||(['heat','cost'].includes(r.kind)&&p.r>75)||(!['heat','cost','ammo'].includes(r.kind)&&p.r<15)){if(d>170&&['reload','recover'].includes(p.f.combat.moves.utility.kind)){i.slot='utility';return i;}}
- const candidates=Object.values(p.f.combat.moves).filter(m=>m.slot!=='utility'&&costAllowed(p,m)&&p.meter>=m.meter&&!p.cooldowns[m.slot]).filter(m=>{
-  if(m.level==='throw')return d<85&&o.onGround&&!o.hit&&!o.throwProtect;
+ const candidates=Object.values(p.f.combat.moves).filter(m=>(m.slot!=='utility'||currentRules(s)&&m.kind==='heal')&&costAllowed(p,m)&&p.meter>=m.meter&&!p.cooldowns[m.slot]).filter(m=>{
+  if(m.level==='throw')return currentRules(s)?d<(m.reach||0)*clamp(p.f.reach||1,.85,1.25)+box(o).w/2&&p.onGround&&o.onGround&&!o.hit&&!o.blockstun&&!o.throwProtect:d<85&&o.onGround&&!o.hit&&!o.throwProtect;
   if(m.kind==='melee')return d<(m.reach||100)+(m.travel?100:15);
   if(m.kind==='parry')return d<190||s.projectiles.some(q=>q.owner!==p.slot&&Math.abs(q.x-p.x)<260);
-  if(m.kind==='heal')return p.gray>150&&d>240;
+  if(m.kind==='heal')return p.gray>150&&d>240&&(!currentRules(s)||p.onGround&&Math.min(m.heal||250,p.gray,p.max-p.life,(p.f.combat.passive.regenBudget||900)-p.regenUsed)>0);
   if(m.kind==='projectile')return d>150;
   if(m.kind==='observe')return d<=380&&!o.buffs.cloak;if(m.kind==='recallTrap')return s.traps.some(t=>t.owner===p.slot&&!t.dead&&Math.abs(t.x-p.x)<=m.reach);if(m.kind==='stationaryMine')return o.still>=(m.requiresStillFrames||60)&&o.onGround&&!o.buffs.cloak;if(m.kind==='detonate')return s.traps.some(t=>t.owner===p.slot&&t.age>=t.arm&&Math.abs(t.x-o.x)<130);
   if(m.kind==='buff')return !p.buffs[m.buff]&&d>210;
@@ -384,8 +390,11 @@ export class CombatEngine {
   constructor(options = {}) {
     const definitions = options.fighters || [{ id: 'pomni', name: 'Pomni' }, { id: 'jax', name: 'Jax' }];
     if (!Array.isArray(definitions) || definitions.length !== 2) throw new TypeError('Exactly two fighter definitions are required.');
+    const rulesVersion = options.rulesVersion ?? ENGINE_RULES_VERSION;
+    if (!ENGINE_RULES_VERSIONS.includes(rulesVersion)) throw new TypeError(`Unsupported combat rules version: ${rulesVersion}`);
     this.config = {
       ...options,
+      rulesVersion,
       fighters: definitions.map(normalizeFighter),
       seed: (Number(options.seed ?? 987654321) >>> 0) || 987654321,
       roundsToWin: Math.round(clampNumber(options.roundsToWin ?? options.rounds, 2, 1, 5)),
@@ -412,6 +421,7 @@ export class CombatEngine {
     const training = this.config.mode === 'training';
     this._native = CQCCombat.create(...this.config.fighters, {
       seed: this.config.seed, seconds: this.config.roundTime, rounds: this.config.roundsToWin,
+      rulesVersion: this.config.rulesVersion,
       training, skipIntro: !!this.config.skipIntro,
       dummy: this.config.trainingDummy || this.config.dummy || 'idle',
       autoheal: this.config.autoheal ?? training,
@@ -423,6 +433,7 @@ export class CombatEngine {
     this._native.a.ai = this.config.cpu[0];
     this._native.b.ai = this.config.cpu[1];
     this._paused = false;
+    this._lastInputs = [CQCCombat.empty(), CQCCombat.empty()];
     this._clearInputs();
     return this.state;
   }
@@ -451,6 +462,7 @@ export class CombatEngine {
   }
 
   get paused() { return this._paused; }
+  get lastInputs() { return this._lastInputs.map(input => ({ ...input })); }
   get state() {
     const s = this._native;
     return {
@@ -483,7 +495,7 @@ export class CombatEngine {
   setTraining(settings = {}) {
     if (!this._native.options.training) return false;
     const dummy = settings.dummy || settings.trainingDummy;
-    if (['idle', 'block', 'guard', 'jump', 'cpu', 'after', 'crouch'].includes(dummy)) this._native.options.dummy = dummy;
+    if (['idle', 'block', 'guard', 'jump', 'cpu', 'after', 'crouch', 'playback'].includes(dummy)) this._native.options.dummy = dummy;
     for (const key of ['autoheal', 'freeMeter', 'freeResource']) {
       if (typeof settings[key] === 'boolean') this._native.options[key] = settings[key];
     }
@@ -564,9 +576,10 @@ export class CombatEngine {
     if (s.finished || s.phase === 'roundEnd') return;
     const inputs = [this._playerInput(0), this._playerInput(1)];
     if (s.phase === 'fight') {
-      for (let i = 0; i < 2; i++) if (this.config.cpu[i]) inputs[i] = this._cpuInput(i);
-      if (s.options.training) inputs[1] = this._dummyInput();
+      for (let i = 0; i < 2; i++) if (this.config.cpu[i] && !(i === 1 && s.options.training && s.options.dummy === 'playback')) inputs[i] = this._cpuInput(i);
+      if (s.options.training && s.options.dummy !== 'playback') inputs[1] = this._dummyInput();
     }
+    this._lastInputs = inputs.map(input => ({ ...input }));
     CQCCombat.step(s, inputs);
     const bounds = s.options.bounds;
     for (const actor of [s.a, s.b]) actor.x = Math.max(bounds.left, Math.min(bounds.right, actor.x));
@@ -591,6 +604,17 @@ export class CombatEngine {
       this._accumulator = Math.max(0, this._accumulator - FIXED_DT);
       this._tick();
     }
+    return this.state;
+  }
+
+  /** Advance one deliberate frame in a frozen training session only. */
+  stepFrame(inputs = [{}, {}]) {
+    if (!this._paused || !this._native.options.training || this._native.finished) return this.state;
+    this._clearInputs();
+    this._sample(Array.isArray(inputs) ? inputs : [inputs, {}]);
+    this._tick();
+    // A queued edge or fractional render tick cannot leak into the next frame.
+    this._clearInputs();
     return this.state;
   }
 

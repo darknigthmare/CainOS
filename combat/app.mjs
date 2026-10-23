@@ -7,6 +7,7 @@ import { BINDING_ACTIONS, DEFAULT_BINDINGS, rebindAction, formatBinding, keyLabe
 import { createProgram, programEncounter, recordProgramResult, retryProgram } from './progression.mjs';
 import { STORY_NOTICE, getStoryRoute, getStoryScene, getStoryEnding } from './stories.mjs';
 import { CombatAudio } from './audio.mjs';
+import { TrainingLab } from './training.mjs';
 import { OfflineGame } from './offline.mjs';
 import { GAME_VERSION, REPLAY_VERSIONS, SAVE_KEY, REPLAY_KEY, MODES, CHALLENGES, readProfile, saveProfile, validateProfile, cleanSettings, appendReplayFrame, validateReplay, replayInputs, createMatchStats, collectMatchStats, challengeProgress } from './session.mjs';
 
@@ -264,9 +265,43 @@ function renderFight() {
   setScreen('fight');
   const f=active.fighters, mode=active.replay?'REPLAY LOCAL':MODES.find(m=>m.id===active.mode)?.name;
   const touch=profile.settings.touch==='on'||profile.settings.touch==='auto'&&matchMedia('(pointer:coarse)').matches;
-  main.innerHTML=`<div class="fight-toolbar"><span class="fight-caption">${escapeHTML(mode)} · ${escapeHTML(active.stage.name)}${active.run?` · ${active.run.index+1}/${active.run.opponents.length}`:''}</span><button class="secondary" data-action="pause">Ⅱ Pause</button><button class="secondary" data-action="movelist">Techniques</button><button class="secondary" data-action="controls">Commandes</button>${active.run?.mode==='tournament'?'<button class="secondary" data-action="bracket">Tableau</button>':''}<button class="secondary" data-action="fullscreen">⛶ Plein écran</button></div>${active.mode==='challenge'?`<div class="challenge-progress"><span>${escapeHTML(active.challenge.text)}</span><progress id="challenge-bar" max="${active.challenge.goal}" value="0"></progress><b id="challenge-value">0/${active.challenge.goal}</b><span id="challenge-time">60 s</span></div>`:''}<section class="arena-wrap" aria-label="Arène de combat"><canvas id="arena" width="1280" height="720" tabindex="0" aria-label="Combat. Les commandes sont disponibles au-dessus de l’arène."></canvas><div class="hud">${hudPlayer(f[0],0)}<div class="hud-timer"><span id="round-time">90</span><small id="round-label">MANCHE 1</small></div>${hudPlayer(f[1],1)}</div><div id="announcement" class="fight-announcement" aria-live="polite"></div><div class="fight-bottom"><span id="feedback-0" class="fight-feedback"></span><span id="feedback-1" class="fight-feedback second"></span></div></section>${active.mode==='training'?`<div class="training-panel"><label>Mannequin <select id="training-dummy"><option value="idle">Immobile</option><option value="block">Garde haute</option><option value="crouch">Garde basse</option><option value="jump">Sauts</option><option value="after">Garde après impact</option><option value="cpu">CPU</option></select></label><label><input type="checkbox" id="training-meter" checked> Finale libre</label><label><input type="checkbox" id="training-heal" checked> Soin automatique</label><label><input type="checkbox" id="training-boxes" ${active.showHitboxes?'checked':''}> Zones de contact</label><button class="secondary" data-action="reset-training">Replacer</button><span id="training-data" class="training-data">Approche le mannequin pour essayer les techniques.</span></div>`:''}<div class="control-strip"><span>${['left','right','jump','down','light','heavy','special','throw','super','utility'].map(action=>`<kbd>${escapeHTML(binding(action))}</kbd> ${escapeHTML(BINDING_ACTIONS.find(a=>a.id===action).label)}`).join(' · ')}</span><span><kbd>${escapeHTML(binding('guard'))}</kbd> Garde · <kbd>${escapeHTML(binding('dash'))}</kbd> Dash · <kbd>Échap</kbd> Pause</span></div>${touch?touchMarkup():''}`;
+  main.innerHTML=`<div class="fight-toolbar"><span class="fight-caption">${escapeHTML(mode)} · ${escapeHTML(active.stage.name)}${active.run?` · ${active.run.index+1}/${active.run.opponents.length}`:''}</span><button class="secondary" data-action="pause">Ⅱ Pause</button><button class="secondary" data-action="movelist">Techniques</button><button class="secondary" data-action="controls">Commandes</button>${active.run?.mode==='tournament'?'<button class="secondary" data-action="bracket">Tableau</button>':''}<button class="secondary" data-action="fullscreen">⛶ Plein écran</button></div>${active.mode==='challenge'?`<div class="challenge-progress"><span>${escapeHTML(active.challenge.text)}</span><progress id="challenge-bar" max="${active.challenge.goal}" value="0"></progress><b id="challenge-value">0/${active.challenge.goal}</b><span id="challenge-time">60 s</span></div>`:''}<section class="arena-wrap" aria-label="Arène de combat"><canvas id="arena" width="1280" height="720" tabindex="0" aria-label="Combat. Les commandes sont disponibles au-dessus de l’arène."></canvas><div class="hud">${hudPlayer(f[0],0)}<div class="hud-timer"><span id="round-time">90</span><small id="round-label">MANCHE 1</small></div>${hudPlayer(f[1],1)}</div><div id="announcement" class="fight-announcement" aria-live="polite"></div><div class="fight-bottom"><span id="feedback-0" class="fight-feedback"></span><span id="feedback-1" class="fight-feedback second"></span></div></section>${active.training?trainingMarkup():''}<div class="control-strip"><span>${['left','right','jump','down','light','heavy','special','throw','super','utility'].map(action=>`<kbd>${escapeHTML(binding(action))}</kbd> ${escapeHTML(BINDING_ACTIONS.find(a=>a.id===action).label)}`).join(' · ')}</span><span><kbd>${escapeHTML(binding('guard'))}</kbd> Garde · <kbd>${escapeHTML(binding('dash'))}</kbd> Dash · <kbd>Échap</kbd> Pause</span></div>${touch?touchMarkup():''}`;
   active.renderer=new CombatRenderer($('#arena')); controls.bindTouch(main);
   $('#arena').focus({preventScroll:true}); updateHUD();
+}
+function trainingMarkup() {
+  return `<section class="training-lab" aria-labelledby="training-title"><div class="training-heading"><div><span class="ticket-label">LE LABORATOIRE</span><h2 id="training-title">Répéter, image par image.</h2></div><span id="training-frame" class="small-note"></span></div><div class="training-panel"><label>Mannequin <select id="training-dummy"><option value="idle">Immobile</option><option value="block">Garde haute</option><option value="crouch">Garde basse</option><option value="jump">Sauts</option><option value="after">Garde après impact</option><option value="cpu">CPU</option><option value="playback" disabled>Séquence manuelle</option></select></label><label>Vitesse <select id="training-speed"><option value="1">×1</option><option value="0.5">×0,5</option><option value="0.25">×0,25</option></select></label><label><input type="checkbox" id="training-meter" checked> Finale libre</label><label><input type="checkbox" id="training-resource" checked> Ressource libre</label><label><input type="checkbox" id="training-heal" checked> Soin automatique</label><label><input type="checkbox" id="training-boxes" ${active.showHitboxes?'checked':''}> Zones de contact</label></div><div class="training-actions"><button class="secondary" data-action="training-freeze" aria-pressed="false">Figer</button><button class="secondary" data-action="training-step" disabled>+1 image</button><button class="secondary" data-action="reset-training">Replacer</button><button class="secondary" data-action="training-history">Effacer l’historique</button></div><div class="training-readouts">${[0,1].map(i=>`<div><strong>${i?'Mannequin':'Joueur 1'}</strong><p id="training-readout-${i}"></p></div>`).join('')}</div><p id="training-data" class="training-data"></p><div class="training-recorder"><div><h3>La séquence du mannequin</h3><p>Enregistre jusqu’à 10 secondes : les commandes J1 pilotent le mannequin, J1 reste neutre. Enregistrer ou lire replace les artistes. La lecture suit le côté vers lequel regarde le mannequin.</p></div><div class="training-actions"><button class="secondary" data-action="training-record">Enregistrer</button><button class="secondary" data-action="training-play" disabled>Lire</button><button class="secondary" data-action="training-stop" disabled>Arrêter</button><button class="secondary" data-action="training-clear" disabled>Effacer la séquence</button><label><input type="checkbox" id="training-loop"> En boucle</label></div><p id="training-tape-status" role="status"></p></div><div class="training-histories">${[0,1].map(i=>`<section><h3>Commandes ${i?'du mannequin':'J1'} <small>12 dernières entrées</small></h3><ol id="training-history-${i}"></ol></section>`).join('')}</div></section>`;
+}
+function sampleLiveInputs() {
+  const lab=active.training,actors=active.engine.state.fighters;
+  const inputs=controls.poll(lab?.mode==='recording'?[actors[1],actors[0]]:actors,active.mode==='local');
+  if(!lab||modal.open||active.engine.paused&&!lab.frozen)return inputs;
+  active.engine.setTraining({...lab.settings,dummy:lab.drivesDummy?'playback':lab.settings.dummy});
+  return lab.sample(inputs,actors);
+}
+function resetTraining() {
+  if(!active?.training)return;
+  const lab=active.training;
+  lab.reset();active.engine.reset();active.engine.setTraining(lab.settings);active.engine.pause(lab.frozen);
+  active.stats=createMatchStats();accumulator=0;controls.clear();updateHUD();syncAudio();
+}
+function updateTrainingHUD() {
+  if(!active?.training||!$('#training-frame'))return;
+  const view=active.training.snapshot(active.engine.state.fighters),lab=active.training;
+  $('#training-frame').textContent=`Image ${number(active.engine.state.frame)} · ${view.frozen?'figé':`vitesse ×${String(view.settings.speed).replace('.',',')}`}`;
+  const freeze=$('[data-action="training-freeze"]');freeze.textContent=view.frozen?'Reprendre le temps':'Figer';freeze.setAttribute('aria-pressed',String(view.frozen));
+  $('[data-action="training-step"]').disabled=!view.frozen;
+  $('#training-dummy').value=lab.drivesDummy?'playback':view.settings.dummy;
+  $('#training-speed').value=String(view.settings.speed);
+  $('[data-action="training-record"]').textContent=view.mode==='recording'?'Terminer l’enregistrement':'Enregistrer';
+  $('[data-action="training-play"]').disabled=!view.tapeFrames;
+  $('[data-action="training-stop"]').disabled=view.mode==='idle';
+  $('[data-action="training-clear"]').disabled=!view.tapeFrames;
+  const mode=view.mode==='recording'?'Enregistrement · commandes J1 → mannequin':view.mode==='playback'?`Lecture ${view.loop?'en boucle':'unique'}`:'Séquence prête';
+  $('#training-tape-status').textContent=`${view.tapeFrames?mode:'Aucune séquence'} · ${view.tapeFrames}/600 images (${(view.tapeFrames/60).toFixed(1).replace('.',',')} s)${view.mode==='playback'?` · image ${view.cursor}`:''}`;
+  view.readouts.forEach((readout,index)=>{$(`#training-readout-${index}`).textContent=`${readout.name} · ${readout.phase}${readout.total?` ${readout.elapsed}/${readout.total}`:''} · ${readout.remaining} image(s) restante(s)${readout.reaction?` · réaction ${readout.reaction}`:''}`;});
+  $('#training-data').textContent=`Dégâts ${number(active.stats[0].damage)} · Impacts ${active.stats[0].hits} · Gardes du mannequin ${active.stats[1].blocked}`;
+  view.history.forEach((rows,index)=>{const node=$(`#training-history-${index}`),html=rows.length?rows.map(row=>`<li><span>${escapeHTML(row.label)}</span><b>${row.frames} i</b></li>`).join(''):'<li><span>Aucune commande observée</span></li>';if(node.innerHTML!==html)node.innerHTML=html;});
 }
 function hudPlayer(f,index) { return `<div class="hud-player ${index?'second':''}"><div class="hud-name"><span>${escapeHTML(f.name)}</span><span>${index?active.mode==='local'?'J2':'CPU':'J1'}</span></div><div class="health-track"><div id="health-${index}" class="health-fill"></div></div><div class="guard-track"><div id="guard-${index}" class="guard-fill"></div></div><div class="meter-track"><div id="meter-${index}" class="meter-fill"></div></div><div class="hud-bars-meta"><span id="hp-${index}">10 000</span><span id="resource-${index}">STABILITÉ 100</span><span id="super-${index}">FINALE 0%</span></div><div class="round-pips" id="wins-${index}">○ ○</div></div>`; }
 function touchMarkup() {
@@ -298,12 +333,12 @@ async function startMatch(options={}) {
     profile.program = run; persist();
   }
   const challenge = mode==='challenge' ? CHALLENGES.find(c=>c.id===selection.challenge) : null;
-  const matchConfig = {fighters,stage,mode:mode==='training'||mode==='challenge'?'training':mode==='local'?'local':'versus',cpu:config?.cpu||[false,!['local','training','challenge'].includes(mode)],difficulty:config?.difficulty||run?.difficulty||profile.settings.difficulty,seed:config?.seed??encounter?.seed??crypto.getRandomValues(new Uint32Array(1))[0],roundTime:config?.roundTime||run?.roundTime||profile.settings.seconds,roundsToWin:config?.roundsToWin||(run?1:profile.settings.rounds)};
+  const matchConfig = {fighters,stage,rulesVersion:options.replay?.version||GAME_VERSION,mode:mode==='training'||mode==='challenge'?'training':mode==='local'?'local':'versus',cpu:config?.cpu||[false,!['local','training','challenge'].includes(mode)],difficulty:config?.difficulty||run?.difficulty||profile.settings.difficulty,seed:config?.seed??encounter?.seed??crypto.getRandomValues(new Uint32Array(1))[0],roundTime:config?.roundTime||run?.roundTime||profile.settings.seconds,roundsToWin:config?.roundsToWin||(run?1:profile.settings.rounds)};
   const engine = new CombatEngine(matchConfig);
   const initialHealth = config?.initialHealth || encounter?.initialHealth || [10000,10000];
   engine.state.fighters.forEach((f,i)=>{f.life=initialHealth[i];});
   if (challenge) engine.setTraining({dummy:challenge.dummy,freeMeter:true,freeResource:true,autoheal:true});
-  active = {engine,fighters,stage,mode,run,pendingNext:null,challenge,replay:!!options.replay,replaySource:options.replay,replayIterator:options.replay?replayInputs(options.replay):null,replayFrame:0,replayTotal:options.replay?.frames,record:{format:'circus-encore-replay',version:GAME_VERSION,config:{fighters:fighterIds,variants,stage:stage.id,cpu:matchConfig.cpu,difficulty:matchConfig.difficulty,seed:matchConfig.seed,roundTime:matchConfig.roundTime,roundsToWin:matchConfig.roundsToWin,initialHealth},runs:[]},recordFrames:0,stats:createMatchStats(),elapsed:0,showHitboxes:profile.settings.hitboxes,finished:false,ready:false,storyPending:mode==='story'&&!options.replay,announcement:'',roundDelay:0};
+  active = {engine,fighters,stage,mode,run,pendingNext:null,challenge,replay:!!options.replay,replaySource:options.replay,replayIterator:options.replay?replayInputs(options.replay):null,replayFrame:0,replayTotal:options.replay?.frames,record:{format:'circus-encore-replay',version:GAME_VERSION,config:{fighters:fighterIds,variants,stage:stage.id,cpu:matchConfig.cpu,difficulty:matchConfig.difficulty,seed:matchConfig.seed,roundTime:matchConfig.roundTime,roundsToWin:matchConfig.roundsToWin,initialHealth},runs:[]},recordFrames:0,stats:createMatchStats(),elapsed:0,showHitboxes:profile.settings.hitboxes,finished:false,ready:false,storyPending:mode==='story'&&!options.replay,announcement:'',roundDelay:0,training:mode==='training'?new TrainingLab():null,presentationPhase:engine.state.phase,presentationElapsed:0,ambientElapsed:0,resultPresented:false};
   if (active.storyPending) engine.pause();
   renderFight(); const match = active;
   $('#announcement').innerHTML = '<strong>LE RIDEAU SE LÈVE</strong><span>Préparation des artistes…</span>';
@@ -351,11 +386,9 @@ function updateHUD() {
     const draw=!Number.isInteger(s.roundWinner)||s.roundWinner<0;
     announcement=`<strong>${draw?'ÉGALITÉ':escapeHTML(active.fighters[s.roundWinner].name).toUpperCase()}</strong><span>${draw?'ON REJOUE CET ACTE':'REMPORTE LA MANCHE'}</span>`;
   }
+  if(s.phase==='matchOver'){const draw=!Number.isInteger(s.winner)||s.winner<0;announcement=`<strong>${draw?'ÉGALITÉ':escapeHTML(active.fighters[s.winner].name).toUpperCase()}</strong><span>${draw?'LE PUBLIC SALUE LES DEUX ARTISTES':'REMPORTE LE DUEL'}</span>`;}
   if(announcement!==active.announcement && active.ready){$('#announcement').innerHTML=announcement;active.announcement=announcement;}
-  if(active.mode==='training'){
-    const p=s.a,m=p.attack?.def;
-    $('#training-data').textContent=m?`${m.name} · ${p.attack.t}/${m.startup+m.active+m.recovery} images · dégâts cumulés ${number(active.stats[0].damage)}`:`Dégâts ${number(active.stats[0].damage)} · Impacts ${active.stats[0].hits} · Garde CPU ${active.stats[1].blocked}`;
-  }
+  if(active.training)updateTrainingHUD();
   if(active.challenge){const value=challengeValue();$('#challenge-bar').value=value;$('#challenge-value').textContent=`${Math.min(value,active.challenge.goal)}/${active.challenge.goal}`;$('#challenge-time').textContent=`${Math.ceil(Math.max(0,60-active.elapsed/60))} s`;}
 }
 function challengeValue() {return challengeProgress(active.challenge,active.stats[0]);}
@@ -378,7 +411,7 @@ function loop(now) {
       active.roundDelay+=dt;
       if(active.roundDelay>1.8){active.engine.nextRound();active.roundDelay=0;accumulator=0;controls.clear();}
     }else{
-      accumulator+=dt;
+      accumulator+=dt*(active.training?.settings.speed||1);
       while(accumulator>=FIXED_DT&&!active.finished&&!active.engine.paused&&!modal.open){
         accumulator-=FIXED_DT;
         let inputs;
@@ -388,10 +421,11 @@ function loop(now) {
           if(active.engine.paused||modal.open)break;
           const next=active.replayIterator.next();if(next.done){finishReplay();break;}inputs=next.value;active.replayFrame++;
         }
-        else inputs=controls.poll(active.engine.state.fighters,active.mode==='local');
+        else inputs=sampleLiveInputs();
         if(active.engine.paused||modal.open)break;
         if(!active.replay&&active.mode!=='training'&&active.mode!=='challenge'&&active.recordFrames<72000){appendReplayFrame(active.record.runs,inputs);active.recordFrames++;}
         active.engine.step(FIXED_DT,inputs); collectEvents(active.engine.drainEvents());
+        if(active.training)active.training.observe(active.engine.lastInputs||inputs);
         if(active.challenge&&active.engine.state.phase==='fight'){
           active.elapsed++;
           if(challengeValue()>=active.challenge.goal){finishChallenge(true);break;}
@@ -403,8 +437,12 @@ function loop(now) {
     }
   }
   if(!active)return;
-  const presentationFrame=active.engine.state.frame+(active.engine.state.phase==='roundOver'?Math.floor(active.roundDelay*60):0);
-  active.renderer.render(active.engine.state,{stage:active.stage,hitboxes:active.showHitboxes,reducedMotion:profile.settings.reducedMotion,presentationFrame});updateHUD();
+  const phase=active.engine.state.phase;
+  if(phase!==active.presentationPhase){active.presentationPhase=phase;active.presentationElapsed=0;}
+  else if(!modal.open&&!document.hidden&&osVisible&&(!active.engine.paused||active.finished&&phase==='matchOver'))active.presentationElapsed+=dt;
+  if(!modal.open&&!document.hidden&&osVisible&&(!active.engine.paused||active.finished))active.ambientElapsed+=dt;
+  if(active.finished&&!active.replay&&phase==='matchOver'&&!active.resultPresented&&active.presentationElapsed>=2.2)renderMatchResult();
+  active.renderer.render(active.engine.state,{stage:active.stage,hitboxes:active.showHitboxes,reducedMotion:profile.settings.reducedMotion,presentationFrame:Math.floor(active.presentationElapsed*60),ambientFrame:Math.floor(active.ambientElapsed*60)});updateHUD();
 }
 function storeReplay() {
   if(!active.recordFrames||active.recordFrames>=72000)return false;
@@ -433,12 +471,15 @@ function finishMatch() {
   }
   profile.history.unshift({fighter:active.fighters[0].id,opponent:active.fighters[1].id,mode:active.mode,won,at:new Date().toISOString()});
   profile.history = profile.history.slice(0,12); persist(); syncAudio(); sound(won?'win':'lose');
-  renderMatchResult();
+  active.presentationPhase='matchOver'; active.presentationElapsed=0;
+  const skip=document.createElement('button'); skip.className='primary outcome-skip'; skip.dataset.action='result-screen'; skip.textContent='Voir le résultat'; $('.arena-wrap').append(skip);
 }
 function renderMatchResult() {
+  if(!active?.finished)return;
+  active.resultPresented=true; $('.outcome-skip')?.remove();
   const won = active.won, run = active.run, next = active.pendingNext;
   const continuing = next?.status === 'active', completed = next?.status === 'complete';
-  const titleText = active.mode==='local' ? `${active.fighters[active.engine.state.winner].name} remporte le duel` : won ? 'Le public en redemande.' : 'Un autre numéro t’attend.';
+  const titleText = active.mode==='local' ? (active.engine.state.winner>=0?`${active.fighters[active.engine.state.winner].name} remporte le duel`:'Le duel se termine sur une égalité') : won ? 'Le public en redemande.' : 'Un autre numéro t’attend.';
   const ending = completed && active.mode==='story' ? `<section class="story-ending"><h3>Épilogue · ${escapeHTML(getStoryRoute(run.playerId).title)}</h3><p>${escapeHTML(getStoryEnding(run.playerId))}</p><span class="small-note">${escapeHTML(STORY_NOTICE)}</span></section>` : '';
   showDialog(`<span class="ticket-label">${won?'RAPPEL !':'FIN DE L’ACTE'}</span><h2 id="modal-title">${escapeHTML(titleText)}</h2>
     <p class="result-copy">${run?`${run.index+1}/${run.opponents.length} rencontres. `:''}${continuing?'La prochaine scène est prête et sauvegardée.':completed?'Le programme est terminé. Une médaille a été ajoutée au profil.':run&&['tournament','survival'].includes(active.mode)?'Ce parcours est terminé. Rejouer démarre une nouvelle tentative.':active.replaySaved?'Le duel a été enregistré dans les replays locaux.':'Le duel est terminé. Son replay n’a pas pu être conservé.'}${continuing&&active.mode==='survival'?` Santé au prochain duel : ${number(next.health)}.`:''}</p>
@@ -458,7 +499,7 @@ function pauseGame(reason=''){
   active.engine.pause();controls.clear();accumulator=0;
   showDialog(`<span class="ticket-label">ENTRACTE</span><h2 id="modal-title">Le spectacle attend.</h2><p class="result-copy">${escapeHTML(reason||'Prends ton temps. Le combat est en pause.')}</p><div class="modal-actions"><button class="primary" data-action="resume">Reprendre</button><button class="secondary" data-action="movelist">Techniques</button><button class="secondary" data-action="select-again">Changer d’affiche</button><button class="secondary" data-action="home">Accueil</button></div>`);
 }
-function resumeGame(){if(!active||active.finished)return;if(active.storyPending){showStoryScene();return;}closeDialog();active.engine.pause(false);accumulator=0;previousTime=performance.now();controls.clear();$('#arena')?.focus({preventScroll:true});syncAudio();}
+function resumeGame(){if(!active||active.finished)return;if(active.storyPending){showStoryScene();return;}closeDialog();active.engine.pause(active.training?.frozen||false);accumulator=0;previousTime=performance.now();controls.clear();$('#arena')?.focus({preventScroll:true});syncAudio();}
 function showMoveList(){
   if(active&&!active.finished)active.engine.pause();controls.clear();
   const fighter=active?.fighters[0]||getFighter(codexId);
@@ -563,7 +604,14 @@ async function handleClick(event){
       case 'challenges':closeDialog();active=null;renderChallenges();break;
       case 'rematch':{const run=active.pendingNext?.status==='eliminated'?retryProgram(active.pendingNext):null;await startMatch({mode:active.mode,run});break;}
       case 'next-fight':if(active.pendingNext?.status==='active')await startMatch({mode:active.mode,run:active.pendingNext});break;
-      case 'reset-training':active.engine.reset();active.engine.setTraining({dummy:$('#training-dummy').value,freeMeter:$('#training-meter').checked,autoheal:$('#training-heal').checked});active.stats=createMatchStats();controls.clear();break;
+      case 'reset-training':resetTraining();break;
+      case 'training-freeze':if(active?.training){active.training.setFrozen(!active.training.frozen);active.engine.pause(active.training.frozen);accumulator=0;controls.clear();updateTrainingHUD();syncAudio();}break;
+      case 'training-step':if(active?.training?.frozen&&!modal.open){const inputs=sampleLiveInputs();active.engine.stepFrame(inputs);collectEvents(active.engine.drainEvents());active.training.observe(active.engine.lastInputs||inputs);updateHUD();}break;
+      case 'training-history':if(active?.training){active.training.clearHistory();updateTrainingHUD();}break;
+      case 'training-record':if(active?.training){if(active.training.mode==='recording')active.training.stop();else{resetTraining();active.training.startRecording();}controls.clear();updateTrainingHUD();}break;
+      case 'training-play':if(active?.training?.tape.length){resetTraining();active.training.startPlayback($('#training-loop').checked);controls.clear();updateTrainingHUD();}break;
+      case 'training-stop':if(active?.training){active.training.stop();controls.clear();updateTrainingHUD();}break;
+      case 'training-clear':if(active?.training){active.training.clearTape();controls.clear();updateTrainingHUD();}break;
       case 'fullscreen':try{if(document.fullscreenElement)await document.exitFullscreen();else await main.requestFullscreen();}catch{toast('Le plein écran n’est pas disponible dans ce navigateur.');}break;
       case 'export-profile':download('Digital_Circus_Encore_Profil.json',profile);break;
       case 'import-profile':$('#import-profile').click();break;
@@ -604,7 +652,14 @@ document.addEventListener('change',event=>{
   if(target.id==='wardrobe-variant'){void showAppearance(target.value,true).catch(()=>toast('Cette apparence ne peut pas être affichée.'));return;}
   if(target.id==='select-difficulty'){profile.settings.difficulty=target.value;persist();}
   if(target.id==='archive-filter'){archiveFilter=target.value;archivePage=0;renderArchives();}
-  if(target.id.startsWith('training-')&&active){active.engine.setTraining({dummy:$('#training-dummy').value,freeMeter:$('#training-meter').checked,autoheal:$('#training-heal').checked});active.showHitboxes=$('#training-boxes').checked;}
+  if(target.id.startsWith('training-')&&active?.training){
+    const lab=active.training;
+    if(target.id==='training-dummy')lab.stop();
+    lab.setSettings({dummy:$('#training-dummy').value,speed:Number($('#training-speed').value),freeMeter:$('#training-meter').checked,freeResource:$('#training-resource').checked,autoheal:$('#training-heal').checked});
+    lab.loop=$('#training-loop').checked;
+    active.engine.setTraining({...lab.settings,dummy:lab.drivesDummy?'playback':lab.settings.dummy});
+    active.showHitboxes=$('#training-boxes').checked;accumulator=0;controls.clear();updateTrainingHUD();
+  }
 });
 let searchTimer;
 document.addEventListener('input',event=>{if(event.target.id==='archive-search'){archiveQuery=event.target.value;clearTimeout(searchTimer);searchTimer=setTimeout(()=>{archivePage=0;renderArchives();const input=$('#archive-search');input.focus();input.setSelectionRange(input.value.length,input.value.length);},200);}});
@@ -628,5 +683,5 @@ $('#import-replay').addEventListener('change',async event=>{
   try{if(file.size>2_000_000)throw new Error('Ce replay est trop volumineux.');const replay=validateReplay(JSON.parse(await file.text()),FIGHTERS.map(f=>f.id),STAGES.map(s=>s.id));await startMatch({mode:'versus',replay});}catch(error){toast(error.message);}
 });
 // A read-only view enables QA without injecting commands into game logic.
-window.Encore=Object.freeze({version:GAME_VERSION,get screen(){return screen;},get ready(){return active?.ready||false;},get paused(){return active?.engine.paused||false;},get snapshot(){return active?.engine.getSnapshot()||null;},get stats(){return active?JSON.parse(JSON.stringify(active.stats.map(s=>({...s,unique:[...s.unique]})))):null;},get profile(){return JSON.parse(JSON.stringify(profile));},get program(){return active?.run?JSON.parse(JSON.stringify(active.pendingNext||active.run)):null;},get offline(){return offline.getState();},get audio(){return audio.diagnostics;}});
+window.Encore=Object.freeze({version:GAME_VERSION,get screen(){return screen;},get ready(){return active?.ready||false;},get paused(){return active?.engine.paused||false;},get snapshot(){return active?.engine.getSnapshot()||null;},get training(){return active?.training?.snapshot(active.engine.state.fighters)||null;},get presentation(){return active?{phase:active.presentationPhase,frames:Math.floor(active.presentationElapsed*60),resultPresented:active.resultPresented}:null;},get stats(){return active?JSON.parse(JSON.stringify(active.stats.map(s=>({...s,unique:[...s.unique]})))):null;},get profile(){return JSON.parse(JSON.stringify(profile));},get program(){return active?.run?JSON.parse(JSON.stringify(active.pendingNext||active.run)):null;},get offline(){return offline.getState();},get audio(){return audio.diagnostics;}});
 applySettings();renderHome();requestAnimationFrame(loop);void offline.init();

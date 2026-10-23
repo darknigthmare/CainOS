@@ -1,6 +1,7 @@
 import { getHurtbox, getHitbox } from './engine.mjs';
 import { removeAtlasMatte, applySpritePalette, projectilePresentation, trapPresentation } from './render-presentation.mjs';
 import { spriteSourceRegion, actorPose, frameGeometry, crouchParts, POSE_REGISTRATION_VERSION } from './render-poses.mjs';
+import { drawStageMotion } from './render-stage-motion.mjs';
 
 /**
  * Digital Circus combat presentation. Existing CainOS atlases are read without
@@ -702,17 +703,8 @@ export class CombatRenderer {
     const ctx = this.ctx;
     ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.clearRect(0, 0, 1280, 720);
     ctx.drawImage(this.background(options.stage || state?.stage), 0, 0);
-    const tick = state?.frame || 0, time = options.reducedMotion ? 0 : tick / 60;
-    const theme = options.stage?.theme || state?.stage?.theme || 'bigtop';
-    if (!options.reducedMotion && !['void', 'cellar', 'bigtop', 'circus'].includes(theme)) {
-      ctx.save(); ctx.globalAlpha = theme === 'void' ? 0.25 : 0.4;
-      for (let i = 0; i < 22; i++) {
-        const x = (i * 149 + Math.sin(time * 0.17 + i) * 12 + 1280) % 1280;
-        const y = (i * 83 - time * (4 + i % 4) + 1000) % 500 + 45;
-        ellipse(ctx, x, y, 1 + i % 3 * 0.5, 1 + i % 3 * 0.5, theme === 'void' ? '#9b8bb0' : '#d6bbd9');
-      }
-      ctx.restore();
-    }
+    const tick = state?.frame || 0;
+    drawStageMotion(ctx, options.stage || state?.stage, options.ambientFrame ?? tick, options.reducedMotion);
     if (!state) { ctx.restore(); return; }
     const actors = state.a && state.b ? [state.a, state.b] : state.fighters || [];
     for (const object of state.traps || []) this.drawTrap(object, actors, tick, options.reducedMotion);
@@ -738,7 +730,7 @@ export class CombatRenderer {
     const height = f.visual?.height || f.combat?.simulationBody?.height || 230;
     const face = actor.face ?? actor.facing ?? 1;
     const y = Number.isFinite(actor.y) ? actor.y : FLOOR;
-    const x = actor.x;
+    const x = actor.x + (pose.xOffset || 0) * face;
     const groundDistance = Math.max(0, FLOOR - y);
     ellipse(ctx, x, FLOOR + 4, Math.max(23, (f.visual?.width || 80) * 0.5) * clamp(1 - groundDistance / 500, 0.4, 1), 10, '#03050b72');
     if (!frame || !idle) {
@@ -754,7 +746,7 @@ export class CombatRenderer {
     if (windup && attack.def.meter >= 30) {
       ctx.save(); ctx.globalAlpha = 0.22; ellipse(ctx, x, y - height * 0.52, height * 0.56, height * 0.56, null, f.color || '#c1a8eb', 4); ctx.restore();
     }
-    ctx.save(); ctx.translate(x, y - geometry.support); ctx.rotate(geometry.angle);
+    ctx.save(); ctx.translate(x, y - geometry.support - (pose.lift || 0)); ctx.rotate(geometry.angle);
     ctx.scale(geometry.flip * geometry.scale, geometry.scale);
     ctx.translate(-geometry.anchor.x, -geometry.anchor.y);
     ctx.globalAlpha = pose.alpha * (actor.buffs?.cloak ? 0.42 : 1);
