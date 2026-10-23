@@ -37,7 +37,7 @@
     "costumes": {
       "status": "Réussi",
       "method": "tests/combat-costume-browser.mjs / tests/combat-costume-refinements-browser.mjs",
-      "proof": "23 octobre 2026 · 0.6.0 · 51 garde-robes parcourues ; 20 nouvelles extractions à alpha natif vérifiées et essayées avec attaque réelle. Sept corps noirs intacts, reine isolée, Bubble translucide et six labels de comparaison partielle visibles."
+      "proof": "23 octobre 2026 · 0.6.0 · 51 garde-robes parcourues ; 20 nouvelles extractions à alpha natif vérifiées et essayées avec attaque réelle. Sept corps noirs intacts, reine isolée, Bubble translucide et six labels de comparaison partielle visibles.\nAprès revue PR4 : libellé de Work Gangle corrigé ; 26 cas Node, 5 contrôles de garde-robe et 11 contrôles hors ligne réussis sur 0.6.0-6dcd5c6ee620. Rapports complets et empreintes dans docs/combat-qa-evidence.json, postReviewDeltas[0]. La campagne initiale 260/154 n’a pas été entièrement rejouée après cette correction."
     },
     "stages": {
       "status": "Réussi",
@@ -27610,9 +27610,15 @@
       "moduleSHA256": "5c7c3951ae8e1bec61f25de95a6ea890042ba931c16c42de59a55ee1f06be12e",
       "tests": 11,
       "limits": "Not a simultaneous three-file atomic reader view; not guaranteed sudden-process/system-crash recovery. See docs/COMBAT_WORKBOOK_PUBLICATION.md."
+    },
+    "workGangleIdentity": {
+      "deltaId": "pr4-workgangle-identity",
+      "description": "Aligner identityEvidence sur le masque blanc souriant et denté déjà dessiné pour Work Gangle 0.6.0, en conservant la description historique et Gangle Tragedy.",
+      "fullRegressionRerun": false
     }
   },
   "coverageLimits": [
+    "Campagne initiale 0.6.0 : 260 tests Node et 154 contrôles navigateur, avec leurs empreintes historiques. Après correction du libellé Work Gangle : 26 cas Node, 5 contrôles de garde-robe et 11 contrôles hors ligne ciblés. La campagne complète n’a pas été rejouée ; postReviewDeltas conserve les rapports de ce complément.",
     "La fidélité canonique générale 1:1 reste à vérifier : photos de produits, résolutions limitées et compositions adaptées ne mesurent pas tous les modèles, angles ou épisodes.",
     "Les vingt remplacements gardent des contours et poses interprétés en pixel art. Les quatorze réparations techniques ne valident pas le statut canonique de variantes d’archive.",
     "Le couloir des résidents utilise deux copies attribuées au pilote sur des sites tiers ; une confirmation primaire reste attendue. Le lac manque de référence primaire et la calibration est originale.",
@@ -27632,5 +27638,873 @@
     "Réussi": 447,
     "À vérifier": 1,
     "Non exécuté": 4
-  }
+  },
+  "postReviewDeltas": [
+    {
+      "id": "pr4-workgangle-identity",
+      "createdAt": "2026-10-23T15:38:07.615171+00:00",
+      "baseline": {
+        "commit": "8f6baece28e8814b7059c7afa4718bfbe7dba778",
+        "tree": "46fbbcd37cb108b8103cdbde4a732b27c3529181",
+        "qaEvidenceSHA256": "9ec8fe21426220e573b97c3f0e7bab45562553aaf9495b8633bfc6ebeebd23b6",
+        "campaignCreatedAt": "2026-10-23T14:58:20.990405+00:00",
+        "nodeTests": 260,
+        "browserChecks": 154,
+        "qaRows": 452,
+        "scope": "Original complete 0.6.0 campaign before the identity-text correction. Its execution reports, timestamps and source hashes are retained unchanged."
+      },
+      "correction": {
+        "field": "COSTUME_FIDELITY.workgangle.assetReview.identityEvidence",
+        "before": "Masque triste et bras de ruban rouge restent visibles malgré le pantalon de travail.",
+        "after": "Le masque de théâtre blanc souriant et denté, l’étoile sur la joue et les bras en rubans rouges identifient Gangle sous l’uniforme de responsable.",
+        "moduleAndReportMatch": true,
+        "historicalDesignRowRetained": true,
+        "files": [
+          "combat/costume-fidelity.mjs",
+          "docs/combat-costume-review-0.6.0.json"
+        ],
+        "scope": "Text-only correction for the existing 0.6.0 Work Gangle illustration. No sprite, animation, combat rule, profile behavior or other costume identity changed."
+      },
+      "changedFiles": [
+        {
+          "path": "combat/costume-fidelity.mjs",
+          "beforeSHA256": "a546d3ecdfe40898a001b38c1a85b6ab794dbdfa3cfb8c2bce86ca695e56049d",
+          "afterSHA256": "a346156fc0f1107a72a2d6a8b331aeba3122f631a95941a2e9b0a6b9d36dd3d6"
+        },
+        {
+          "path": "combat/offline-manifest.mjs",
+          "beforeSHA256": "ff6587c88085316ff7d32d557ef27da6122135ca013412ba33de1736790b819c",
+          "afterSHA256": "49c575695902bab8c6a361f08c11c7617dd5a380417122a4af437b8f60c9fa17"
+        },
+        {
+          "path": "docs/combat-costume-review-0.6.0.json",
+          "beforeSHA256": "b121983c4dc75630b9fadf10810cc04d44552d1deaf6d3d37882c3d0356bf363",
+          "afterSHA256": "5a3ba329abefde03f042f75c0c876e5af71410a4f3236a31815d421ba940825f"
+        }
+      ],
+      "currentRuntimeSourceHashes": {
+        "combat/app.mjs": "4195636c3e4c6c47299598bd30bb018f2e9b16d7a853031fdd63c98fd628bb8f",
+        "combat/audio.mjs": "fbce0e74431c354a01e7ebc46b75084b6c81c233c1ed3807bcac6b97d8e1329b",
+        "combat/bindings.mjs": "8352b4a92afb27a85220b21feb5b7f53b34a2c4eabfedff2f400259329988969",
+        "combat/costume-fidelity.mjs": "a346156fc0f1107a72a2d6a8b331aeba3122f631a95941a2e9b0a6b9d36dd3d6",
+        "combat/costume-refinements.mjs": "117abb88f261c71c6e03dd43a344ef1babb0b34d9f8107ac3b5898f2d3682de3",
+        "combat/data.mjs": "914a168aedc5119a2a968a2205ce9d40758d8511f8faa4d672b5f54db899ecf7",
+        "combat/engine.mjs": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
+        "combat/fidelity.mjs": "2968ab0feace983b9c59e9da9e1c1b4c4817bff395a4af5053a8c96be0f61a1f",
+        "combat/icon-192.png": "f300df8f24a549311c8caf99dc7d0dab6e4efcbf37caf3f324f9f8bc4239e3db",
+        "combat/icon-512.png": "23113f2291e8e80c5f2a072db82f72d4eda134e183f771fde2e72b442cb80851",
+        "combat/icon.svg": "9306b192eaaa246307b0d0d13262ca21f0a913ad123eb1bc1c1adf94890ec19b",
+        "combat/index.html": "a460399b3a66c087201680263277a0bcdb58d1488db7b74e84c9ec59a1b56c8c",
+        "combat/input.mjs": "bd6e648180730a662fdb60ce91d93cb8b60d9ef88f01922059dd46808ad8170b",
+        "combat/manifest.webmanifest": "3a7f78eb5c4cc3f7c90784a8bcba425dc91fdc1e1c401fc26b3a81f12d4534aa",
+        "combat/offline-manifest.mjs": "49c575695902bab8c6a361f08c11c7617dd5a380417122a4af437b8f60c9fa17",
+        "combat/offline.mjs": "704b87db56c26365c770c46df33a0ebfa6c2639d1b97df8183794dfb8417e4c9",
+        "combat/progression.mjs": "a5a3d697b034146464d0c315a2a5dc5891557caf1a58ad1d8dd8551a5f585f15",
+        "combat/render-poses.mjs": "44a17b62cd7304f1a81b1454e4e8b902f8712d9b0a462f92b09626e8fe554268",
+        "combat/render-presentation.mjs": "370469edb54fe87cfa4f649984cf8c6dfb77419b018dbb1d8fedc432b9fe607e",
+        "combat/render-sequences.mjs": "1ce5fab94146618b77d46b7b16feb2af2b52eb912a992488fa5fd2e4e3b4b9af",
+        "combat/render-stage-motion.mjs": "e22d518a1245be13379a019159b4c8f24535e19a704508286d5b1ed38ced9b77",
+        "combat/render-stage-scenery.mjs": "52c298e861af7873b2f94ece106e0f708ebd5573d0f900f02c45c2cecd14c528",
+        "combat/render.mjs": "2f203a5e1b3500ac526a6e7e33cfefa9800a4584969f44a9e384a240e21cdc21",
+        "combat/session.mjs": "a7bb5d99b0a95747ce433662942fa51d96a94c53a75e5150338dffcd31375e36",
+        "combat/sprite-catalog.mjs": "41ad2ff416eef0d9426dd8ec17218a35b0c6a016a6dbf73e8e96a1f86d1a2172",
+        "combat/stories.mjs": "190053639de11b83a1f1279174fb948afe1db28a2ccb8f4a453c1be10aa72aac",
+        "combat/story-presentation.mjs": "90306f54215c2f4045ff191496d3f9ed871e6982fe1bff06757514834d0cc7c8",
+        "combat/style.css": "c56dcaf8e90e66ac9024a8f6d64f5973eafe7603557b1c3ff8368134bbea95ef",
+        "combat/sw.js": "0893718df1437a22b716a27ca5fafb7e9fc18ed1fbd47f64eb43062e1199eeab",
+        "combat/training.mjs": "b36aaaea76cdb3b6e20ef95c2f52ae2be04ecf5f4421cf16f80dca97f44cfece"
+      },
+      "currentRuntimeHashesVerifiedAt": "2026-10-23T15:38:07.615171+00:00",
+      "changedRuntimeFilesAgainstBaseline": [
+        "combat/costume-fidelity.mjs",
+        "combat/offline-manifest.mjs"
+      ],
+      "offlineVersion": "0.6.0-6dcd5c6ee620",
+      "artVersion": "4ca4a56c5bace07b",
+      "artFilesComparedToBaseline": 45,
+      "allArtFilesUnchanged": true,
+      "targetedCounts": {
+        "nodeCases": 26,
+        "wardrobeBrowserChecks": 5,
+        "offlineBrowserChecks": 11,
+        "countMeaning": "Execution counts for the targeted follow-up. Existing Node/offline cases were rerun; these counts are separate from the original 260/154 campaign and do not increase the 452 tracker rows."
+      },
+      "fullRegressionRerun": false,
+      "reports": {
+        "static-review.json": {
+          "file": "audit-combat/review-workgangle-0.6.0/static-review.json",
+          "sha256": "0f4d74e1bd04f7ae6222406ec7e4e55db6f288615d9fa333bef052c2aa0369b2",
+          "bytes": 18652,
+          "report": {
+            "schema": "encore-workgangle-static-review/1",
+            "createdAt": "2026-10-23T15:31:59.485Z",
+            "version": "0.6.0",
+            "pass": true,
+            "scope": "One targeted static review of the Work Gangle identity text; no added committed test and no browser/full-regression rerun.",
+            "commands": [
+              {
+                "command": "git show HEAD:combat/costume-fidelity.mjs > /tmp/cainos-workgangle-source-before.mjs",
+                "exitCode": 0
+              },
+              {
+                "command": "git show HEAD:docs/combat-costume-review-0.6.0.json > /tmp/cainos-workgangle-report-before.json",
+                "exitCode": 0
+              },
+              {
+                "command": "node --input-type=module -",
+                "method": "Import COSTUME_FIDELITY, COSTUME_SPRITE_OVERRIDES and getCostumeFidelity; compare to the exports captured before editing with node:assert/strict; parse and compare the durable JSON report; hash original HEAD bytes and current files with SHA-256.",
+                "exitCode": 0
+              },
+              {
+                "command": "git diff --check",
+                "exitCode": 0
+              }
+            ],
+            "method": [
+              "The pre-edit module exports were captured before mutation in /tmp/cainos-workgangle-identity-before.json; the pre-edit report also matches the unchanged HEAD blob.",
+              "Deep comparison permits exactly one exported-record change: workgangle.assetReview.identityEvidence.",
+              "Deep comparison of the durable JSON permits exactly the matching Work Gangle sentence and one historical-evidence note in limits.",
+              "All fifty other complete costume records and all sprite overrides are deep-equal; Gangle Tragedy and unknown/inherited-key null fallbacks are checked explicitly.",
+              "The historical Work Gangle designs row is byte-identical to its original row. The new description applies only while its 0.6 refinement is present.",
+              "The complete embedded browserEvidence object remains unchanged; its hashes describe the earlier run. The currently referenced browser-report file is hashed separately below."
+            ],
+            "sourceHashesBefore": {
+              "combat/costume-fidelity.mjs": "a546d3ecdfe40898a001b38c1a85b6ab794dbdfa3cfb8c2bce86ca695e56049d",
+              "docs/combat-costume-review-0.6.0.json": "b121983c4dc75630b9fadf10810cc04d44552d1deaf6d3d37882c3d0356bf363"
+            },
+            "sourceHashesAfter": {
+              "combat/costume-fidelity.mjs": "a346156fc0f1107a72a2d6a8b331aeba3122f631a95941a2e9b0a6b9d36dd3d6",
+              "docs/combat-costume-review-0.6.0.json": "5a3ba329abefde03f042f75c0c876e5af71410a4f3236a31815d421ba940825f"
+            },
+            "identityEvidence": {
+              "before": "Masque triste et bras de ruban rouge restent visibles malgré le pantalon de travail.",
+              "after": "Le masque de théâtre blanc souriant et denté, l’étoile sur la joue et les bras en rubans rouges identifient Gangle sous l’uniforme de responsable.",
+              "moduleAndReportMatch": true,
+              "historicalDesignRowRetained": true
+            },
+            "assertions": {
+              "importSucceeded": true,
+              "totalCostumeRecords": 51,
+              "unchangedOtherRecords": 50,
+              "onlyWorkIdentityChanged": true,
+              "gangleTragedyUnchanged": true,
+              "spriteOverridesUnchanged": true,
+              "unknownKeyFallbacksUnchanged": true,
+              "reportAndModuleConcordant": true,
+              "reportBrowserEvidenceUnchanged": true,
+              "unchangedIllustrations": 5
+            },
+            "unchangedRecords": [
+              {
+                "id": "ganglekawaii",
+                "beforeSHA256": "ca95ebd2c587c4aee82c6fa9d34af893ab6c625b2d0bdec7e4ee37b6a8f0ac72",
+                "afterSHA256": "ca95ebd2c587c4aee82c6fa9d34af893ab6c625b2d0bdec7e4ee37b6a8f0ac72",
+                "identityEvidenceUnchanged": true
+              },
+              {
+                "id": "ganglecomedy",
+                "beforeSHA256": "f662b85a693f93b3ec34258278a902d94c0c31cd93836f7edf7bbcf7b84e143d",
+                "afterSHA256": "f662b85a693f93b3ec34258278a902d94c0c31cd93836f7edf7bbcf7b84e143d",
+                "identityEvidenceUnchanged": true
+              },
+              {
+                "id": "gangletragedy",
+                "beforeSHA256": "21f20c8d5fc9fb2c753c9d4c05129fddf15e496fcb166c89d585327168a56c0f",
+                "afterSHA256": "21f20c8d5fc9fb2c753c9d4c05129fddf15e496fcb166c89d585327168a56c0f",
+                "identityEvidenceUnchanged": true
+              },
+              {
+                "id": "darkduojax",
+                "beforeSHA256": "e3b43e19d6fc155c871840b8ea1c47ad4e7c8e57e4f09849e28870f7183b3fd2",
+                "afterSHA256": "e3b43e19d6fc155c871840b8ea1c47ad4e7c8e57e4f09849e28870f7183b3fd2",
+                "identityEvidenceUnchanged": true
+              },
+              {
+                "id": "darkduogangle",
+                "beforeSHA256": "ac51e0c327c5f0375be93d6544a5a1cdc141e07772cb0995967504a4de039cef",
+                "afterSHA256": "ac51e0c327c5f0375be93d6544a5a1cdc141e07772cb0995967504a4de039cef",
+                "identityEvidenceUnchanged": true
+              },
+              {
+                "id": "maidjax",
+                "beforeSHA256": "521253b2a2c8310425bf5689de03f5dada23a61f9ff874de2b48d152825955bc",
+                "afterSHA256": "521253b2a2c8310425bf5689de03f5dada23a61f9ff874de2b48d152825955bc",
+                "identityEvidenceUnchanged": true
+              },
+              {
+                "id": "maidragatha",
+                "beforeSHA256": "94b23fc12c3b450106242d2ab3bfbd83b5a97c0949c39e3661017a241f69955b",
+                "afterSHA256": "94b23fc12c3b450106242d2ab3bfbd83b5a97c0949c39e3661017a241f69955b",
+                "identityEvidenceUnchanged": true
+              },
+              {
+                "id": "maidpomni",
+                "beforeSHA256": "ba0fd73c0698b012e89b287cbfe788d0b7498e60d5fca7b81a988d0f460f2ae6",
+                "afterSHA256": "ba0fd73c0698b012e89b287cbfe788d0b7498e60d5fca7b81a988d0f460f2ae6",
+                "identityEvidenceUnchanged": true
+              },
+              {
+                "id": "maidgangle",
+                "beforeSHA256": "10d19181f4fe25f59bd46e70a57ddab8e42523fc590d73591b296bada68320ef",
+                "afterSHA256": "10d19181f4fe25f59bd46e70a57ddab8e42523fc590d73591b296bada68320ef",
+                "identityEvidenceUnchanged": true
+              },
+              {
+                "id": "jaxgirl",
+                "beforeSHA256": "058bb5b7f44d449e38251c11b08056ea04d3a4aa15d77d6b46f3b43f96a3af22",
+                "afterSHA256": "058bb5b7f44d449e38251c11b08056ea04d3a4aa15d77d6b46f3b43f96a3af22",
+                "identityEvidenceUnchanged": true
+              },
+              {
+                "id": "beachgangle",
+                "beforeSHA256": "9154638ef563e03dac9425c50054fb6618526486afd888ba34e837f7f9e87ae4",
+                "afterSHA256": "9154638ef563e03dac9425c50054fb6618526486afd888ba34e837f7f9e87ae4",
+                "identityEvidenceUnchanged": true
+              },
+              {
+                "id": "japanesegangle",
+                "beforeSHA256": "fab1f9e82d5680d0b10592c30fa4cb4e06e5e49800016f581b97423644b01987",
+                "afterSHA256": "fab1f9e82d5680d0b10592c30fa4cb4e06e5e49800016f581b97423644b01987",
+                "identityEvidenceUnchanged": true
+              },
+              {
+                "id": "rhinogangle",
+                "beforeSHA256": "abe4d42e748b73a3118a46aa54cdca2832215ede80f89f31971ea700c5f3ef19",
+                "afterSHA256": "abe4d42e748b73a3118a46aa54cdca2832215ede80f89f31971ea700c5f3ef19",
+                "identityEvidenceUnchanged": true
+              },
+              {
+                "id": "japanesejax",
+                "beforeSHA256": "6b8fb6bc4c4d7acf8adb7a2b417f60d0ff5804ea86a639ebb32c1544a64f2ab3",
+                "afterSHA256": "6b8fb6bc4c4d7acf8adb7a2b417f60d0ff5804ea86a639ebb32c1544a64f2ab3",
+                "identityEvidenceUnchanged": true
+              },
+              {
+                "id": "japaneseragatha",
+                "beforeSHA256": "34267b2f3a2cfe52e280f22944722e1f22ecb80b3e4d3997847344be799658ac",
+                "afterSHA256": "34267b2f3a2cfe52e280f22944722e1f22ecb80b3e4d3997847344be799658ac",
+                "identityEvidenceUnchanged": true
+              },
+              {
+                "id": "japanesepomni",
+                "beforeSHA256": "bc98d5b9a70044215adf7ad41c24ac6a843279383cc0836c0b2ec112afc7adfa",
+                "afterSHA256": "bc98d5b9a70044215adf7ad41c24ac6a843279383cc0836c0b2ec112afc7adfa",
+                "identityEvidenceUnchanged": true
+              },
+              {
+                "id": "japanesekinger",
+                "beforeSHA256": "25a7aca5a7e50ed97b4d150002d119477726d531c60ef7c0619193bdb935f2f0",
+                "afterSHA256": "25a7aca5a7e50ed97b4d150002d119477726d531c60ef7c0619193bdb935f2f0",
+                "identityEvidenceUnchanged": true
+              },
+              {
+                "id": "japanesezooble",
+                "beforeSHA256": "bdc2eb3af0a5f6b574c6b77f0fb8b412e1ba8a875c2f497be26d4c78448bf3c1",
+                "afterSHA256": "bdc2eb3af0a5f6b574c6b77f0fb8b412e1ba8a875c2f497be26d4c78448bf3c1",
+                "identityEvidenceUnchanged": true
+              },
+              {
+                "id": "japanesegummigoo",
+                "beforeSHA256": "e3e9cfba5fc827b19c328426926883f9f4a746f4267e88808313387f43702d63",
+                "afterSHA256": "e3e9cfba5fc827b19c328426926883f9f4a746f4267e88808313387f43702d63",
+                "identityEvidenceUnchanged": true
+              },
+              {
+                "id": "baseballjax",
+                "beforeSHA256": "cb3fbe043007e79140be19ebb512658b8440da28d8c97422bc2f153690ff1c2c",
+                "afterSHA256": "cb3fbe043007e79140be19ebb512658b8440da28d8c97422bc2f153690ff1c2c",
+                "identityEvidenceUnchanged": true
+              },
+              {
+                "id": "baseballzooble",
+                "beforeSHA256": "1ece8020674983ea480743e78c3504a4f53bd142ea7fcfbde2354fa0e0b190da",
+                "afterSHA256": "1ece8020674983ea480743e78c3504a4f53bd142ea7fcfbde2354fa0e0b190da",
+                "identityEvidenceUnchanged": true
+              },
+              {
+                "id": "baseballgangle",
+                "beforeSHA256": "27061f2f7adb301d180439e0ee9fe1f6cda00dee3350f6fe79ca49c0723a56c2",
+                "afterSHA256": "27061f2f7adb301d180439e0ee9fe1f6cda00dee3350f6fe79ca49c0723a56c2",
+                "identityEvidenceUnchanged": true
+              },
+              {
+                "id": "baseballragatha",
+                "beforeSHA256": "da3f84df4534652706079700de3b594a05351cbf779498e198a58837f93bbdda",
+                "afterSHA256": "da3f84df4534652706079700de3b594a05351cbf779498e198a58837f93bbdda",
+                "identityEvidenceUnchanged": true
+              },
+              {
+                "id": "baseballpomni",
+                "beforeSHA256": "d76c8dcef525480b8941a9d91bc97b4249a3799da5854fc25ddb93e8db434048",
+                "afterSHA256": "d76c8dcef525480b8941a9d91bc97b4249a3799da5854fc25ddb93e8db434048",
+                "identityEvidenceUnchanged": true
+              },
+              {
+                "id": "baseballkinger",
+                "beforeSHA256": "9808704246de1ac31c2643ad983beb5dfea84b4f1ca3e28ec41e4b55186fca79",
+                "afterSHA256": "9808704246de1ac31c2643ad983beb5dfea84b4f1ca3e28ec41e4b55186fca79",
+                "identityEvidenceUnchanged": true
+              },
+              {
+                "id": "shadowpomni",
+                "beforeSHA256": "4884b6abc82ba0820c55c304f215ae03326a0407c5632d2d428dd42b917e7f7f",
+                "afterSHA256": "4884b6abc82ba0820c55c304f215ae03326a0407c5632d2d428dd42b917e7f7f",
+                "identityEvidenceUnchanged": true
+              },
+              {
+                "id": "shadowjax",
+                "beforeSHA256": "adc6e66c0663083ff2b42975bc5418be174ad3f244458c8fa197684bf26d4d80",
+                "afterSHA256": "adc6e66c0663083ff2b42975bc5418be174ad3f244458c8fa197684bf26d4d80",
+                "identityEvidenceUnchanged": true
+              },
+              {
+                "id": "shadowragatha",
+                "beforeSHA256": "81c8514a66fe75ee95ce0f1c0c33a2d49d3f029af2e72f9b8be2acb8b495509f",
+                "afterSHA256": "81c8514a66fe75ee95ce0f1c0c33a2d49d3f029af2e72f9b8be2acb8b495509f",
+                "identityEvidenceUnchanged": true
+              },
+              {
+                "id": "shadowkinger",
+                "beforeSHA256": "bbf1aef4e078574583d039c207adb95cc2517c9662b83138eead2912ef1e6404",
+                "afterSHA256": "bbf1aef4e078574583d039c207adb95cc2517c9662b83138eead2912ef1e6404",
+                "identityEvidenceUnchanged": true
+              },
+              {
+                "id": "shadowgangle",
+                "beforeSHA256": "5b0e6a421b684ef35380a8d97c906750bfda8458f843fca4d61a388fab235d0f",
+                "afterSHA256": "5b0e6a421b684ef35380a8d97c906750bfda8458f843fca4d61a388fab235d0f",
+                "identityEvidenceUnchanged": true
+              },
+              {
+                "id": "shadowzooble",
+                "beforeSHA256": "394deb5487197cabe2a3c3ced92782ca90115a73322a1e0406d1db7fd5e5f033",
+                "afterSHA256": "394deb5487197cabe2a3c3ced92782ca90115a73322a1e0406d1db7fd5e5f033",
+                "identityEvidenceUnchanged": true
+              },
+              {
+                "id": "shadowcaine",
+                "beforeSHA256": "d952df56cc9486497643617c3454aeb9dc404c4c7ed24296c6512fbe55365481",
+                "afterSHA256": "d952df56cc9486497643617c3454aeb9dc404c4c7ed24296c6512fbe55365481",
+                "identityEvidenceUnchanged": true
+              },
+              {
+                "id": "horrorpomnivoid",
+                "beforeSHA256": "24b57b27df1792d215a0c1560addc65408a7795bfcc3fe500ca16f0baf85b336",
+                "afterSHA256": "24b57b27df1792d215a0c1560addc65408a7795bfcc3fe500ca16f0baf85b336",
+                "identityEvidenceUnchanged": true
+              },
+              {
+                "id": "horrorpomnispiral",
+                "beforeSHA256": "3fd6b7243b6d4465205913ad2f4a28488e20e0d1394af43d768b0aaea8b234fa",
+                "afterSHA256": "3fd6b7243b6d4465205913ad2f4a28488e20e0d1394af43d768b0aaea8b234fa",
+                "identityEvidenceUnchanged": true
+              },
+              {
+                "id": "horrorpomniskull",
+                "beforeSHA256": "c6d00a155a4ba50c7f98003918afe1a827e336872483f7581bb806577164a7f1",
+                "afterSHA256": "c6d00a155a4ba50c7f98003918afe1a827e336872483f7581bb806577164a7f1",
+                "identityEvidenceUnchanged": true
+              },
+              {
+                "id": "hunterjax",
+                "beforeSHA256": "0b5911565ef0bee2993f442d9b1c86d2ffbd50f67a9b9c3f2063251c77c6ef54",
+                "afterSHA256": "0b5911565ef0bee2993f442d9b1c86d2ffbd50f67a9b9c3f2063251c77c6ef54",
+                "identityEvidenceUnchanged": true
+              },
+              {
+                "id": "gloinkqueenscale",
+                "beforeSHA256": "c29445ec4d26021401830583d39fe4e3ef440ad4a4d06e2ce33c15baeef8fe69",
+                "afterSHA256": "c29445ec4d26021401830583d39fe4e3ef440ad4a4d06e2ce33c15baeef8fe69",
+                "identityEvidenceUnchanged": true
+              },
+              {
+                "id": "peeledjax",
+                "beforeSHA256": "075e2092d78ffa2ac7624c8003cd2b90120f060d7f6574c53f2f3017941d1ece",
+                "afterSHA256": "075e2092d78ffa2ac7624c8003cd2b90120f060d7f6574c53f2f3017941d1ece",
+                "identityEvidenceUnchanged": true
+              },
+              {
+                "id": "spudsypomni",
+                "beforeSHA256": "ed99112b477f4283bd40485455e4e9fd64931f63c692d2e751ea8a52f785a733",
+                "afterSHA256": "ed99112b477f4283bd40485455e4e9fd64931f63c692d2e751ea8a52f785a733",
+                "identityEvidenceUnchanged": true
+              },
+              {
+                "id": "spudsyjax",
+                "beforeSHA256": "0e6348e1cd22bd5304f96de4eedcfb40e5038923c477a37d410dda90537d17d2",
+                "afterSHA256": "0e6348e1cd22bd5304f96de4eedcfb40e5038923c477a37d410dda90537d17d2",
+                "identityEvidenceUnchanged": true
+              },
+              {
+                "id": "spudsyragatha",
+                "beforeSHA256": "7fe5191cfd7813aa3396bf32ebeb758e984e70d35c26105e3f9d83ef80397735",
+                "afterSHA256": "7fe5191cfd7813aa3396bf32ebeb758e984e70d35c26105e3f9d83ef80397735",
+                "identityEvidenceUnchanged": true
+              },
+              {
+                "id": "spudsyzooble",
+                "beforeSHA256": "e59bb0b9c8aacd8791ea5bc721f279d884a92a8a0ff55a2f1ff5c6dda4a48ac2",
+                "afterSHA256": "e59bb0b9c8aacd8791ea5bc721f279d884a92a8a0ff55a2f1ff5c6dda4a48ac2",
+                "identityEvidenceUnchanged": true
+              },
+              {
+                "id": "possessedpomni",
+                "beforeSHA256": "94bc53e7e3eadef17d2d035a5d7a0a32066e1cf5ff2532a98c013bc995f69fd4",
+                "afterSHA256": "94bc53e7e3eadef17d2d035a5d7a0a32066e1cf5ff2532a98c013bc995f69fd4",
+                "identityEvidenceUnchanged": true
+              },
+              {
+                "id": "monstrouscaine",
+                "beforeSHA256": "cab5a2b7097178ce78c5326c84c3e808451ae64a68a6ab76ebe3c2933ace9887",
+                "afterSHA256": "cab5a2b7097178ce78c5326c84c3e808451ae64a68a6ab76ebe3c2933ace9887",
+                "identityEvidenceUnchanged": true
+              },
+              {
+                "id": "flamingozooble",
+                "beforeSHA256": "599c01fda9b796ca38c891909f29ec949917fc8ba6c11aa7e0c32efee64cdb10",
+                "afterSHA256": "599c01fda9b796ca38c891909f29ec949917fc8ba6c11aa7e0c32efee64cdb10",
+                "identityEvidenceUnchanged": true
+              },
+              {
+                "id": "mouthlesspomni",
+                "beforeSHA256": "dd5f2f4c160007df1fd8ddb89a45ed6f4927f3ca8e6f96646417cbb6512836d7",
+                "afterSHA256": "dd5f2f4c160007df1fd8ddb89a45ed6f4927f3ca8e6f96646417cbb6512836d7",
+                "identityEvidenceUnchanged": true
+              },
+              {
+                "id": "mouthlessjax",
+                "beforeSHA256": "e6a05e9fb6413177c924dafae9649c5bdcfff8fe8242e8df212ce2c015e3b340",
+                "afterSHA256": "e6a05e9fb6413177c924dafae9649c5bdcfff8fe8242e8df212ce2c015e3b340",
+                "identityEvidenceUnchanged": true
+              },
+              {
+                "id": "mouthlesszooble",
+                "beforeSHA256": "8f6fc4a019dd50639a913336fe931dd4c51af2c7d363509d8921dae7a9cfc7c6",
+                "afterSHA256": "8f6fc4a019dd50639a913336fe931dd4c51af2c7d363509d8921dae7a9cfc7c6",
+                "identityEvidenceUnchanged": true
+              },
+              {
+                "id": "inertbubble",
+                "beforeSHA256": "273b3dbb7a57f2bc978d56e45176215e725ba38f4770ce6a80a8fb74d2727d0d",
+                "afterSHA256": "273b3dbb7a57f2bc978d56e45176215e725ba38f4770ce6a80a8fb74d2727d0d",
+                "identityEvidenceUnchanged": true
+              },
+              {
+                "id": "groundedcaine",
+                "beforeSHA256": "5515d762e51b82a81bb974c3672248944e085e02f2d59b4bdcd2df30bb18514e",
+                "afterSHA256": "5515d762e51b82a81bb974c3672248944e085e02f2d59b4bdcd2df30bb18514e",
+                "identityEvidenceUnchanged": true
+              }
+            ],
+            "preservedTragedyIdentity": "Le masque de théâtre triste entier, les larmes et le corps de rubans rouges identifient Gangle ; l’ancien filtre de recoloration n’est plus utilisé.",
+            "fallbackIds": [
+              "missing-review-identity",
+              "__proto__",
+              "constructor",
+              "toString"
+            ],
+            "illustrations": [
+              {
+                "file": "assets/images/cainos-costumes-gangle-0.6.0.png",
+                "sha256": "67f7e969833d99c28c66908b8d71061ae0ad852e068964d7ea20622de71b8d1e",
+                "unchanged": true
+              },
+              {
+                "file": "assets/images/cainos-costumes-uniforms-0.6.0.png",
+                "sha256": "a26595eedb2c504cc2537c0bd0c72ec208ae8a0b6aaffda1aa5e6ac8c6909526",
+                "unchanged": true
+              },
+              {
+                "file": "assets/images/cainos-costumes-creatures-0.6.0.png",
+                "sha256": "396a7d650c4e040ed354d6de69f9413a0656da3e9ca65678085164912151a5c4",
+                "unchanged": true
+              },
+              {
+                "file": "assets/images/cainos-costumes-shadow-0.6.0.png",
+                "sha256": "2733e478e67f0ff53835fcb57947eac0d38ebae1f729b0745a2f6e87ac21ff1c",
+                "unchanged": true
+              },
+              {
+                "file": "assets/images/cainos-costumes-horror-0.6.0.png",
+                "sha256": "4e854bb4afc25e7f892ccdf5bc1d8ef3366b7c04079452e4323b1955fc5b7ac9",
+                "unchanged": true
+              }
+            ],
+            "historicalBrowserEvidence": {
+              "report": "audit-combat/costumes-0.6.0/report.json",
+              "reportSha256": "9df44179420e619f887862cefc22694217e81479acda4cc8cbac742d9f83c0dd",
+              "referencedBrowserReportSHA256": "9df44179420e619f887862cefc22694217e81479acda4cc8cbac742d9f83c0dd",
+              "referencedBrowserReportStillMatches": true,
+              "moduleSHA256": "a546d3ecdfe40898a001b38c1a85b6ab794dbdfa3cfb8c2bce86ca695e56049d",
+              "scope": "Historical browser execution, preserved without relabelling it as a rerun of the corrected module."
+            },
+            "limitations": [
+              "This static check does not create a new browser or Node-suite pass count. Root will run and record the separate browser delta.",
+              "The changed module requires rebuilding the code/offline distribution; the changed durable review also changes downstream report/workbook source digests. Existing audit hashes remain historical."
+            ],
+            "instrumentationNote": "An initial proof-recording attempt could not spawn git from Node in the sandbox (EPERM). Historical blobs were then read successfully with the direct shell git commands listed above. This did not modify production files or indicate a game failure."
+          }
+        },
+        "build-report.json": {
+          "file": "audit-combat/review-workgangle-0.6.0/build-report.json",
+          "sha256": "092e454492f0d6913993041c58096d830c36b22c78970c04674530146d4ee316",
+          "bytes": 6593,
+          "report": {
+            "startedAt": "2026-10-23T15:30:58.900199+00:00",
+            "commands": [
+              {
+                "command": "node scripts/build-combat.mjs",
+                "exitCode": 0
+              },
+              {
+                "command": "node scripts/build-static.js",
+                "exitCode": 0
+              }
+            ],
+            "runtimeSourceHashesBefore": {
+              "combat/app.mjs": "4195636c3e4c6c47299598bd30bb018f2e9b16d7a853031fdd63c98fd628bb8f",
+              "combat/audio.mjs": "fbce0e74431c354a01e7ebc46b75084b6c81c233c1ed3807bcac6b97d8e1329b",
+              "combat/bindings.mjs": "8352b4a92afb27a85220b21feb5b7f53b34a2c4eabfedff2f400259329988969",
+              "combat/costume-fidelity.mjs": "a346156fc0f1107a72a2d6a8b331aeba3122f631a95941a2e9b0a6b9d36dd3d6",
+              "combat/costume-refinements.mjs": "117abb88f261c71c6e03dd43a344ef1babb0b34d9f8107ac3b5898f2d3682de3",
+              "combat/data.mjs": "914a168aedc5119a2a968a2205ce9d40758d8511f8faa4d672b5f54db899ecf7",
+              "combat/engine.mjs": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
+              "combat/fidelity.mjs": "2968ab0feace983b9c59e9da9e1c1b4c4817bff395a4af5053a8c96be0f61a1f",
+              "combat/icon-192.png": "f300df8f24a549311c8caf99dc7d0dab6e4efcbf37caf3f324f9f8bc4239e3db",
+              "combat/icon-512.png": "23113f2291e8e80c5f2a072db82f72d4eda134e183f771fde2e72b442cb80851",
+              "combat/icon.svg": "9306b192eaaa246307b0d0d13262ca21f0a913ad123eb1bc1c1adf94890ec19b",
+              "combat/index.html": "a460399b3a66c087201680263277a0bcdb58d1488db7b74e84c9ec59a1b56c8c",
+              "combat/input.mjs": "bd6e648180730a662fdb60ce91d93cb8b60d9ef88f01922059dd46808ad8170b",
+              "combat/manifest.webmanifest": "3a7f78eb5c4cc3f7c90784a8bcba425dc91fdc1e1c401fc26b3a81f12d4534aa",
+              "combat/offline-manifest.mjs": "ff6587c88085316ff7d32d557ef27da6122135ca013412ba33de1736790b819c",
+              "combat/offline.mjs": "704b87db56c26365c770c46df33a0ebfa6c2639d1b97df8183794dfb8417e4c9",
+              "combat/progression.mjs": "a5a3d697b034146464d0c315a2a5dc5891557caf1a58ad1d8dd8551a5f585f15",
+              "combat/render-poses.mjs": "44a17b62cd7304f1a81b1454e4e8b902f8712d9b0a462f92b09626e8fe554268",
+              "combat/render-presentation.mjs": "370469edb54fe87cfa4f649984cf8c6dfb77419b018dbb1d8fedc432b9fe607e",
+              "combat/render-sequences.mjs": "1ce5fab94146618b77d46b7b16feb2af2b52eb912a992488fa5fd2e4e3b4b9af",
+              "combat/render-stage-motion.mjs": "e22d518a1245be13379a019159b4c8f24535e19a704508286d5b1ed38ced9b77",
+              "combat/render-stage-scenery.mjs": "52c298e861af7873b2f94ece106e0f708ebd5573d0f900f02c45c2cecd14c528",
+              "combat/render.mjs": "2f203a5e1b3500ac526a6e7e33cfefa9800a4584969f44a9e384a240e21cdc21",
+              "combat/session.mjs": "a7bb5d99b0a95747ce433662942fa51d96a94c53a75e5150338dffcd31375e36",
+              "combat/sprite-catalog.mjs": "41ad2ff416eef0d9426dd8ec17218a35b0c6a016a6dbf73e8e96a1f86d1a2172",
+              "combat/stories.mjs": "190053639de11b83a1f1279174fb948afe1db28a2ccb8f4a453c1be10aa72aac",
+              "combat/story-presentation.mjs": "90306f54215c2f4045ff191496d3f9ed871e6982fe1bff06757514834d0cc7c8",
+              "combat/style.css": "c56dcaf8e90e66ac9024a8f6d64f5973eafe7603557b1c3ff8368134bbea95ef",
+              "combat/sw.js": "0893718df1437a22b716a27ca5fafb7e9fc18ed1fbd47f64eb43062e1199eeab",
+              "combat/training.mjs": "b36aaaea76cdb3b6e20ef95c2f52ae2be04ecf5f4421cf16f80dca97f44cfece"
+            },
+            "runtimeSourceHashesAfter": {
+              "combat/app.mjs": "4195636c3e4c6c47299598bd30bb018f2e9b16d7a853031fdd63c98fd628bb8f",
+              "combat/audio.mjs": "fbce0e74431c354a01e7ebc46b75084b6c81c233c1ed3807bcac6b97d8e1329b",
+              "combat/bindings.mjs": "8352b4a92afb27a85220b21feb5b7f53b34a2c4eabfedff2f400259329988969",
+              "combat/costume-fidelity.mjs": "a346156fc0f1107a72a2d6a8b331aeba3122f631a95941a2e9b0a6b9d36dd3d6",
+              "combat/costume-refinements.mjs": "117abb88f261c71c6e03dd43a344ef1babb0b34d9f8107ac3b5898f2d3682de3",
+              "combat/data.mjs": "914a168aedc5119a2a968a2205ce9d40758d8511f8faa4d672b5f54db899ecf7",
+              "combat/engine.mjs": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
+              "combat/fidelity.mjs": "2968ab0feace983b9c59e9da9e1c1b4c4817bff395a4af5053a8c96be0f61a1f",
+              "combat/icon-192.png": "f300df8f24a549311c8caf99dc7d0dab6e4efcbf37caf3f324f9f8bc4239e3db",
+              "combat/icon-512.png": "23113f2291e8e80c5f2a072db82f72d4eda134e183f771fde2e72b442cb80851",
+              "combat/icon.svg": "9306b192eaaa246307b0d0d13262ca21f0a913ad123eb1bc1c1adf94890ec19b",
+              "combat/index.html": "a460399b3a66c087201680263277a0bcdb58d1488db7b74e84c9ec59a1b56c8c",
+              "combat/input.mjs": "bd6e648180730a662fdb60ce91d93cb8b60d9ef88f01922059dd46808ad8170b",
+              "combat/manifest.webmanifest": "3a7f78eb5c4cc3f7c90784a8bcba425dc91fdc1e1c401fc26b3a81f12d4534aa",
+              "combat/offline-manifest.mjs": "49c575695902bab8c6a361f08c11c7617dd5a380417122a4af437b8f60c9fa17",
+              "combat/offline.mjs": "704b87db56c26365c770c46df33a0ebfa6c2639d1b97df8183794dfb8417e4c9",
+              "combat/progression.mjs": "a5a3d697b034146464d0c315a2a5dc5891557caf1a58ad1d8dd8551a5f585f15",
+              "combat/render-poses.mjs": "44a17b62cd7304f1a81b1454e4e8b902f8712d9b0a462f92b09626e8fe554268",
+              "combat/render-presentation.mjs": "370469edb54fe87cfa4f649984cf8c6dfb77419b018dbb1d8fedc432b9fe607e",
+              "combat/render-sequences.mjs": "1ce5fab94146618b77d46b7b16feb2af2b52eb912a992488fa5fd2e4e3b4b9af",
+              "combat/render-stage-motion.mjs": "e22d518a1245be13379a019159b4c8f24535e19a704508286d5b1ed38ced9b77",
+              "combat/render-stage-scenery.mjs": "52c298e861af7873b2f94ece106e0f708ebd5573d0f900f02c45c2cecd14c528",
+              "combat/render.mjs": "2f203a5e1b3500ac526a6e7e33cfefa9800a4584969f44a9e384a240e21cdc21",
+              "combat/session.mjs": "a7bb5d99b0a95747ce433662942fa51d96a94c53a75e5150338dffcd31375e36",
+              "combat/sprite-catalog.mjs": "41ad2ff416eef0d9426dd8ec17218a35b0c6a016a6dbf73e8e96a1f86d1a2172",
+              "combat/stories.mjs": "190053639de11b83a1f1279174fb948afe1db28a2ccb8f4a453c1be10aa72aac",
+              "combat/story-presentation.mjs": "90306f54215c2f4045ff191496d3f9ed871e6982fe1bff06757514834d0cc7c8",
+              "combat/style.css": "c56dcaf8e90e66ac9024a8f6d64f5973eafe7603557b1c3ff8368134bbea95ef",
+              "combat/sw.js": "0893718df1437a22b716a27ca5fafb7e9fc18ed1fbd47f64eb43062e1199eeab",
+              "combat/training.mjs": "b36aaaea76cdb3b6e20ef95c2f52ae2be04ecf5f4421cf16f80dca97f44cfece"
+            },
+            "changedDuringBuild": [
+              "combat/offline-manifest.mjs"
+            ],
+            "changedAgainstBaseline": [
+              "combat/costume-fidelity.mjs",
+              "combat/offline-manifest.mjs"
+            ],
+            "offlineManifest": "export const OFFLINE_VERSION = \"0.6.0-6dcd5c6ee620\";",
+            "log": "audit-combat/review-workgangle-0.6.0/build.log",
+            "logSHA256": "8b23f6e5aaa8694f83392308fbd3f4067ec6c1bb6ba8dbca31a9a6af224487b9",
+            "completedAt": "2026-10-23T15:31:00.310949+00:00",
+            "ok": true
+          }
+        },
+        "node-report.json": {
+          "file": "audit-combat/review-workgangle-0.6.0/node-report.json",
+          "sha256": "724c98c9fdbb5542244a4aef9736f98c452910551fb2aca33e9b4ef212be1a60",
+          "bytes": 3966,
+          "report": {
+            "startedAt": "2026-10-23T15:32:50.485707+00:00",
+            "completedAt": "2026-10-23T15:32:51.021400+00:00",
+            "command": "node --test-reporter=tap <each of combat-catalog.test.mjs, combat-fidelity.test.mjs>",
+            "exitCode": 0,
+            "counts": {
+              "tests": 26,
+              "pass": 26,
+              "fail": 0,
+              "skipped": 0
+            },
+            "suites": [
+              {
+                "file": "tests/combat-catalog.test.mjs",
+                "exitCode": 0,
+                "counts": {
+                  "tests": 9,
+                  "pass": 9,
+                  "fail": 0,
+                  "skipped": 0
+                },
+                "testNames": [
+                  "classification preserves all 179 identities and provenance while applying only declared sprite replacements",
+                  "every current archive entry has exactly one reviewed classification with no stale declarations",
+                  "every playable identity retains its own kit including the distinct Kaufmo abstraction",
+                  "names shared with relatives, rivals, props and effects never grant a costume kit",
+                  "reviewed outfits and visual states reuse the same existing fighter without adding a kit",
+                  "future and prototype-like IDs fail closed even when they contain a fighter name",
+                  "every classified appearance still points at a bounded source atlas cell",
+                  "the 51 stable costume IDs and fighter bindings remain exact for existing profiles and replays",
+                  "all thirty-three costume rectangles fit their actual PNG and preserve undeclared source metadata"
+                ]
+              },
+              {
+                "file": "tests/combat-fidelity.test.mjs",
+                "exitCode": 0,
+                "counts": {
+                  "tests": 17,
+                  "pass": 17,
+                  "fail": 0,
+                  "skipped": 0
+                },
+                "testNames": [
+                  "all playable fighters, techniques and stages expose the shared review records",
+                  "review records keep source scope, observations and invented combat separate",
+                  "the nine episode references retain later costumes without claiming to have reviewed them",
+                  "the Void, cellar and resident corridor cannot borrow an unrelated visual as proof",
+                  "unknown IDs fail closed and shared review data cannot be mutated by a consumer",
+                  "all 51 costumes have an individual technical review independent of canonical evidence",
+                  "twenty presentation replacements keep their archive identity and do not invent canonical approval",
+                  "transparent repairs retain technical limits separately from observed canonical details",
+                  "consulted references identify their exact scope rather than certifying poses or merchandise proportions",
+                  "every old combat rule and body remains exact for 0.1.0 and 0.2.0 replays",
+                  "all fourteen kits and 140 techniques stay mechanically identical between published 0.3.0 and 0.4.0",
+                  "pomni: the new retreat moves continuously during fifteen active frames",
+                  "pomni: both old replay versions retain the original instantaneous displacement",
+                  "pomni: a physical retreat respects ring bounds and the facing direction",
+                  "abstractedkaufmo: the new retreat moves continuously during fifteen active frames",
+                  "abstractedkaufmo: both old replay versions retain the original instantaneous displacement",
+                  "abstractedkaufmo: a physical retreat respects ring bounds and the facing direction"
+                ]
+              }
+            ],
+            "log": "audit-combat/review-workgangle-0.6.0/node.log",
+            "logSHA256": "43da726d42bd904a7541809cc61ddd14836654ae87b4e008f24e94ffe233ddb5",
+            "sourceHashes": {
+              "tests/combat-catalog.test.mjs": "e2fd576559ce3cc9098440d62f351b855fd8127779a871edd71fc9efa793d6d0",
+              "tests/combat-fidelity.test.mjs": "d7a6303cfd96d93d7d066ac441d017d17e5cbf005c689ad2fe9d182015d56b1a",
+              "combat/costume-fidelity.mjs": "a346156fc0f1107a72a2d6a8b331aeba3122f631a95941a2e9b0a6b9d36dd3d6",
+              "combat/offline-manifest.mjs": "49c575695902bab8c6a361f08c11c7617dd5a380417122a4af437b8f60c9fa17"
+            },
+            "scope": "Two existing relevant Node suites rerun after a text-only correction; not all 260 cases rerun."
+          }
+        },
+        "wardrobe-report.json": {
+          "file": "audit-combat/review-workgangle-0.6.0/wardrobe-report.json",
+          "sha256": "61099ddd6fe627cd1e80e881000b1befa7d795d920e3b3a585539d2e25d707f7",
+          "bytes": 3443,
+          "report": {
+            "createdAt": "2026-10-23T15:32:53.280Z",
+            "scope": "Post-review verification of the Work Gangle identity description, its shipped UI and retained Tragedy description; not a full regression campaign.",
+            "offlineVersion": "0.6.0-6dcd5c6ee620",
+            "expectedIdentityEvidence": "Le masque de théâtre blanc souriant et denté, l’étoile sur la joue et les bras en rubans rouges identifient Gangle sous l’uniforme de responsable.",
+            "checks": [
+              {
+                "name": "The running wardrobe loaded the corrected distribution module",
+                "detail": {
+                  "responseStatus": 200,
+                  "moduleSHA256": "a346156fc0f1107a72a2d6a8b331aeba3122f631a95941a2e9b0a6b9d36dd3d6"
+                },
+                "pass": true
+              },
+              {
+                "name": "Work Gangle visibly describes the smiling toothed mask",
+                "detail": {
+                  "identityEvidence": "Le masque de théâtre blanc souriant et denté, l’étoile sur la joue et les bras en rubans rouges identifient Gangle sous l’uniforme de responsable.",
+                  "oldDescriptionAbsent": true
+                },
+                "pass": true
+              },
+              {
+                "name": "Gangle Tragedy retains its intact sad-mask identity description",
+                "detail": "Le masque de théâtre triste entier, les larmes et le corps de rubans rouges identifient Gangle ; l’ancien filtre de recoloration n’est plus utilisé.",
+                "pass": true
+              },
+              {
+                "name": "Work Gangle still enters training and accepts an actual keyboard attack",
+                "detail": {
+                  "fighterId": "gangle",
+                  "attackKey": "KeyJ"
+                },
+                "pass": true
+              },
+              {
+                "name": "The correction preserves the profile and produces no JavaScript or local resource errors",
+                "detail": {
+                  "profileUnchanged": true
+                },
+                "pass": true
+              }
+            ],
+            "errors": [],
+            "wardrobeText": "État de cette illustration\n\nRevue technique 0.6.0 effectuée\n\nMasque blanc au large sourire denté, yeux noirs à anneaux blancs, joue rose et petite étoile jaune.\nChemise gris bleu clair, cravate bleu pâle, badge beige, pantalon noir et bras constitués de rubans rouges.\n\nIdentité. Le masque de théâtre blanc souriant et denté, l’étoile sur la joue et les bras en rubans rouges identifient Gangle sous l’uniforme de responsable.\n\nCadrage. Rectangle individuel de la nouvelle planche 0.6.0, indépendant de sa grille indicative. Le personnage entier est contrôlé dans la garde-robe et en combat ; les apparences historiques restent archivées.\n\nFond et détourage. Alpha natif de la nouvelle image 0.6.0 conservé, y compris les ouvertures entre membres. Aucun détourage par couleur noire ou blanche et aucun fond quadrillé à retirer.\n\nProportions. Dessin : Masque large, torse vêtu et deux jambes de pantalon ; les bras restent des rubans sans mains humaines. Affichage : mise à l’échelle uniforme du cadre extrait ; le portrait et la pose de combat sont contrôlés séparément. Aucune proportion canonique mesurée.",
+            "ok": true,
+            "sourceHashes": {
+              "combat/costume-fidelity.mjs": "a346156fc0f1107a72a2d6a8b331aeba3122f631a95941a2e9b0a6b9d36dd3d6",
+              "combat/offline-manifest.mjs": "49c575695902bab8c6a361f08c11c7617dd5a380417122a4af437b8f60c9fa17",
+              "docs/combat-costume-review-0.6.0.json": "5a3ba329abefde03f042f75c0c876e5af71410a4f3236a31815d421ba940825f",
+              "audit-combat/review-workgangle-0.6.0/check-wardrobe.mjs": "076e22abd3d0c328e97aa5f1b0c261e8fc5c8cf9d24937ff5998b0cdd1743c44"
+            }
+          }
+        },
+        "offline-browser-report.json": {
+          "file": "audit-combat/review-workgangle-0.6.0/offline-browser-report.json",
+          "sha256": "f2942038c796d22db738767eba2ea107d7f52d0ce2c253241955ca7a2c97de3e",
+          "bytes": 1933,
+          "report": {
+            "base": "http://127.0.0.1:46521",
+            "checks": [
+              {
+                "name": "Custom keys reject conflicts and reserved shortcuts, allow alternatives, and persist",
+                "detail": "J1 light = F; labels follow AZERTY/QWERTY",
+                "pass": true
+              },
+              {
+                "name": "Original procedural music starts from a gesture with an independent mute",
+                "detail": "Effects off; music on; bounded voices",
+                "pass": true
+              },
+              {
+                "name": "Remapped attack reaches the engine and move list while the old key stays inactive",
+                "detail": "",
+                "pass": true
+              },
+              {
+                "name": "Live combo label clears after recovery while the best result combo remains",
+                "detail": "",
+                "pass": true
+              },
+              {
+                "name": "Pause stops simulation and releases audio voices; resume restores the stage theme",
+                "detail": "",
+                "pass": true
+              },
+              {
+                "name": "The standalone downloads all 45 sprite sheets",
+                "detail": "54,085,802 bytes; explicit UI action and completion state",
+                "pass": true
+              },
+              {
+                "name": "A cold page reload and a different fighter/stage remain playable offline",
+                "detail": "Network disabled; profile preserved; real keyboard movement",
+                "pass": true
+              },
+              {
+                "name": "A waiting service worker updates only through the UI and preserves the unchanged art pack",
+                "detail": "No automatic reload; all 45 images and the profile survive activation",
+                "pass": true
+              },
+              {
+                "name": "The offline worker is limited to /combat/ and leaves other application documents uncontrolled",
+                "detail": "",
+                "pass": true
+              },
+              {
+                "name": "Clearing downloaded illustrations preserves custom keys and all profile data",
+                "detail": "",
+                "pass": true
+              },
+              {
+                "name": "The expanded settings and key mapper fit a 390-pixel viewport",
+                "detail": "",
+                "pass": true
+              }
+            ],
+            "errors": []
+          }
+        },
+        "offline-execution.json": {
+          "file": "audit-combat/review-workgangle-0.6.0/offline-execution.json",
+          "sha256": "1308303b059df195fbad5c37621b05aa8a91b330e2ae5fdffe1c502318799b7d",
+          "bytes": 512,
+          "report": {
+            "startedAt": "2026-10-23T15:32:54.394961+00:00",
+            "completedAt": "2026-10-23T15:33:18.412195+00:00",
+            "command": "node tests/combat-offline-browser.mjs",
+            "exitCode": 0,
+            "checks": 11,
+            "passed": 11,
+            "errors": [],
+            "report": "audit-combat/review-workgangle-0.6.0/offline-browser-report.json",
+            "reportSHA256": "f2942038c796d22db738767eba2ea107d7f52d0ce2c253241955ca7a2c97de3e",
+            "logSHA256": "334d0b8fc8d2de8cd7054ac69e70f0aefe7b2f0ea17aa4742431750c5dbd87f7",
+            "historicalOutputsRestored": true
+          }
+        }
+      },
+      "collectorAttempts": [
+        {
+          "file": "audit-combat/review-workgangle-0.6.0/attempt-1.json",
+          "sha256": "3a7308e49eb59fc09601cc90656fed08940935afbb8e367f8773ccb2d8c17c67",
+          "report": {
+            "node": "The aggregate runner reported two file-level passes; the parser could not derive the 26 individual cases. Direct per-module TAP execution is required.",
+            "browser": "Neither targeted wardrobe nor offline browser started: executablePath was omitted and the default Playwright browser is absent. Retry uses the existing /tmp/chromium.",
+            "browserChecksExecuted": 0,
+            "discardedCopiedReport": "The initial collector copied the old offline report after launch failure. It is not evidence of a rerun; only a newly written report after successful execution will be counted."
+          },
+          "logs": [
+            {
+              "file": "audit-combat/review-workgangle-0.6.0/attempt-1-node-collector.log",
+              "bytes": 213,
+              "sha256": "d0b1bcc84990745489bef6ecfc7bd9d5f9c56d8e8ccaafed18068cebaef5921a"
+            },
+            {
+              "file": "audit-combat/review-workgangle-0.6.0/attempt-1-offline-launch.log",
+              "bytes": 1138,
+              "sha256": "8cf571e2fb6ef72cede421c461ce0cad9c43c841ac9d722bc2d7f61587f20954"
+            }
+          ],
+          "countedAsSuccessfulEvidence": false
+        }
+      ],
+      "historicalOfflineReportRestored": {
+        "file": "audit-combat/offline-browser-report.json",
+        "sha256": "350c4131f081d7c7475e8b4153d9af1a9eb9314653a237649c9005a07a37b32d",
+        "bytesVerified": true,
+        "embeddedReportUnchanged": true
+      },
+      "visualInspection": {
+        "file": "audit-combat/review-workgangle-0.6.0/workgangle-description.png",
+        "sha256": "3398158accb76ed88daf9b0945ac741898c240c0711d14f22ad489619b87bf8a",
+        "inspectedBy": "root",
+        "scope": "Root inspected the corrected wardrobe wording. This is a text/UI check, not a new canonical-art certification."
+      },
+      "limits": [
+        "The 260 Node and 154 browser checks were not all rerun after this correction.",
+        "The initial failed collectors are recorded separately and supply no new successful browser evidence.",
+        "Complete targeted JSON reports are embedded here because audit-combat is not committed. Raw local logs and screenshots are identified by their digests.",
+        "Canonical comparison remains partial; this correction aligns the description with the already shipped illustration."
+      ]
+    }
+  ],
+  "updatedAt": "2026-10-23T15:38:07.615171+00:00",
+  "executionScope": "Campagne initiale 0.6.0 : 260 tests Node et 154 contrôles navigateur, avec leurs empreintes historiques. Après correction du libellé Work Gangle : 26 cas Node, 5 contrôles de garde-robe et 11 contrôles hors ligne ciblés. La campagne complète n’a pas été rejouée ; postReviewDeltas conserve les rapports de ce complément."
 }

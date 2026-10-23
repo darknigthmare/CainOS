@@ -7011,7 +7011,7 @@
       "P2",
       "Revue technique 0.6.0 effectuée",
       "Masque blanc au large sourire denté, yeux noirs à anneaux blancs, joue rose et petite étoile jaune.\nChemise gris bleu clair, cravate bleu pâle, badge beige, pantalon noir et bras constitués de rubans rouges.",
-      "Masque triste et bras de ruban rouge restent visibles malgré le pantalon de travail.",
+      "Le masque de théâtre blanc souriant et denté, l’étoile sur la joue et les bras en rubans rouges identifient Gangle sous l’uniforme de responsable.",
       "Rectangle individuel de la nouvelle planche 0.6.0, indépendant de sa grille indicative. Le personnage entier est contrôlé dans la garde-robe et en combat ; les apparences historiques restent archivées.\nRectangle actif : x 527, y 145, largeur 528, hauteur 855 px source. Ce rectangle définit l’extraction ; les champs de grille ne sont pas utilisés.",
       "Alpha natif de la nouvelle image 0.6.0 conservé, y compris les ouvertures entre membres. Aucun détourage par couleur noire ou blanche et aucun fond quadrillé à retirer.",
       "Dessin : Masque large, torse vêtu et deux jambes de pantalon ; les bras restent des rubans sans mains humaines. Affichage : mise à l’échelle uniforme du cadre extrait ; le portrait et la pose de combat sont contrôlés séparément. Aucune proportion canonique mesurée.",
@@ -23191,7 +23191,7 @@
       "Réussi",
       "P1",
       "tests/combat-costume-browser.mjs / tests/combat-costume-refinements-browser.mjs",
-      "23 octobre 2026 · 0.6.0 · 51 garde-robes parcourues ; 20 nouvelles extractions à alpha natif vérifiées et essayées avec attaque réelle. Sept corps noirs intacts, reine isolée, Bubble translucide et six labels de comparaison partielle visibles.",
+      "23 octobre 2026 · 0.6.0 · 51 garde-robes parcourues ; 20 nouvelles extractions à alpha natif vérifiées et essayées avec attaque réelle. Sept corps noirs intacts, reine isolée, Bubble translucide et six labels de comparaison partielle visibles.\nAprès revue PR4 : libellé de Work Gangle corrigé ; 26 cas Node, 5 contrôles de garde-robe et 11 contrôles hors ligne réussis sur 0.6.0-6dcd5c6ee620. Rapports complets et empreintes dans docs/combat-qa-evidence.json, postReviewDeltas[0]. La campagne initiale 260/154 n’a pas été entièrement rejouée après cette correction.",
       "Chaque costume a une revue du sprite et une capture traçable ; cadrage, transparence, proportions et défauts sont consignés. Les aperçus J1/J2 et la garde-robe montrent la bonne apparence avec ses limites de revue.",
       ""
     ],

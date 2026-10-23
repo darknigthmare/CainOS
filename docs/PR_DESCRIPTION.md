@@ -18,8 +18,8 @@ Cette PR livre **Encore 0.6.0** depuis `main` au commit `4a56f6358000cd7ad0838e4
 | Contrôle | Résultat |
 | --- | --- |
 | `npm run qa` | Audits CainOS, contrats, syntaxe et deux builds réussis |
-| Node | **260/260**, 17 suites ; comptes et noms issus des sorties TAP |
-| Navigateur | **154/154**, 18 suites ; les 14 suites historiques sont toutes rejouées sur le runtime 0.6 figé |
+| Node | Campagne initiale **260/260**, 17 suites ; comptes et noms issus des sorties TAP |
+| Navigateur | Campagne initiale **154/154**, 18 suites ; les 14 suites historiques sont toutes rejouées sur le runtime 0.6 avant la correction de libellé décrite ci-dessous |
 | Roster complet | **14 vrais duels CPU**, 14 sauvegardes/rechargements exacts ; historique borné à 12 ; dernier replay exporté/importé et état terminal exact |
 | Costumes révisés | **20 garde-robes → entraînements → attaques clavier** ; marges, noir préservé, composantes et alpha partiel contrôlés |
 | Narration dédiée | **84 tableaux affichés/capturés**, 4 victoires réelles de Jax ; reprise, fin et relecture sans récompense doublée |
@@ -27,7 +27,9 @@ Cette PR livre **Encore 0.6.0** depuis `main` au commit `4a56f6358000cd7ad0838e4
 | Publication Excel | **11 tests filesystem** : huit combinaisons de présence, 24 pannes de renommage et échecs de copie/sauvegarde/rollback |
 | Notes Excel | **10 notes / 8 feuilles**, formules R1C1 et valeurs `=`, `0`, `false` ; **9 rejets** avant écrasement et **3 contrôles de nettoyage** |
 | Classeur final | **37 formules**, aucune erreur ; 92 empreintes concordantes ; onglets inspectés |
-| Hors ligne | **45 images / 54 085 802 octets**, manifeste `0.6.0-8745f15f4c42` ; installation, reprise et recharge sans réseau |
+| Hors ligne | **45 images / 54 085 802 octets**, manifeste `0.6.0-6dcd5c6ee620` ; installation, reprise et recharge sans réseau |
+
+Après la revue de cette PR, l’identité de **Work Gangle** a été corrigée dans la garde-robe et le rapport pour décrire son masque blanc souriant et denté. Les 50 autres fiches et les 5 planches sont identiques. Les deux builds ont été régénérés ; **26 cas Node existants**, **5 contrôles ciblés de garde-robe** et **11 contrôles hors ligne réexécutés** réussissent sur la correction. `postReviewDeltas` conserve ces preuves séparément de la campagne complète initiale, qui n’a pas été entièrement rejouée après ce changement de texte.
 
 Les 452 lignes du classeur comprennent 260 cas Node, 154 contrôles navigateur et 38 objectifs de revue : **447 réussies, 1 à vérifier, 4 non exécutées**. Ces objectifs peuvent recouper les cas automatisés ; ce total n’est pas un nombre de tests indépendants.
 

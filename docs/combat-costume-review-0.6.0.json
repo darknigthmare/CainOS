@@ -218,7 +218,7 @@
           "Masque blanc au large sourire denté, yeux noirs à anneaux blancs, joue rose et petite étoile jaune.",
           "Chemise gris bleu clair, cravate bleu pâle, badge beige, pantalon noir et bras constitués de rubans rouges."
         ],
-        "identityEvidence": "Masque triste et bras de ruban rouge restent visibles malgré le pantalon de travail.",
+        "identityEvidence": "Le masque de théâtre blanc souriant et denté, l’étoile sur la joue et les bras en rubans rouges identifient Gangle sous l’uniforme de responsable.",
         "framing": "Rectangle individuel de la nouvelle planche 0.6.0, indépendant de sa grille indicative. Le personnage entier est contrôlé dans la garde-robe et en combat ; les apparences historiques restent archivées.",
         "transparency": "Alpha natif de la nouvelle image 0.6.0 conservé, y compris les ouvertures entre membres. Aucun détourage par couleur noire ou blanche et aucun fond quadrillé à retirer.",
         "proportions": "Dessin : Masque large, torse vêtu et deux jambes de pantalon ; les bras restent des rubans sans mains humaines. Affichage : mise à l’échelle uniforme du cadre extrait ; le portrait et la pose de combat sont contrôlés séparément. Aucune proportion canonique mesurée.",
@@ -1996,6 +1996,7 @@
     "Generated pixel-art contours and poses differ from both the previous illustrations and official 3D/product imagery.",
     "Gloink Queen True Scale remains an inherited archive label, not a measured canonical size.",
     "These are whole-character illustrations with procedural combat transforms, not newly authored attack animation cells.",
-    "No physical phone or gamepad validation is implied by Chromium tests."
+    "No physical phone or gamepad validation is implied by Chromium tests.",
+    "Work Gangle's identityEvidence was corrected after the recorded browser run. browserEvidence.reportSha256 and browserEvidence.sourceHashes remain the historical hashes of that run; they do not certify a new browser execution of the corrected module."
   ]
 }

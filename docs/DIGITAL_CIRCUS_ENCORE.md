@@ -43,7 +43,7 @@ indépendamment de CainOS. Les scripts
 [`build-combat.mjs`](../scripts/build-combat.mjs) et
 [`build-combat-offline.mjs`](../scripts/build-combat-offline.mjs) assemblent ces
 fichiers et régénèrent l’inventaire hors ligne. L’empreinte de cette livraison est
-**`OFFLINE_VERSION = 0.6.0-8745f15f4c42`** ; celle des illustrations est
+**`OFFLINE_VERSION = 0.6.0-6dcd5c6ee620`** ; celle des illustrations est
 **`ART_VERSION = 4ca4a56c5bace07b`**.
 
 Pour un essai local sans dépendance supplémentaire :
@@ -272,7 +272,7 @@ sur appareils physiques restent suivis dans le classeur.
 Sous HTTPS ou localhost, ouvrir **Réglages → Télécharger le spectacle** puis
 attendre la confirmation **45/45 illustrations**. Le pack correspond exactement aux
 **54 085 802 octets** de [`combat/offline-manifest.mjs`](../combat/offline-manifest.mjs),
-pour la livraison **`0.6.0-8745f15f4c42`**.
+pour la livraison **`0.6.0-6dcd5c6ee620`**.
 Le premier téléchargement exige une connexion et le stockage nécessaire. Les
 fichiers déjà reçus sont réutilisés lors d’une nouvelle tentative.
 
@@ -678,7 +678,7 @@ dans [COMBAT_WORKBOOK_PUBLICATION.md](COMBAT_WORKBOOK_PUBLICATION.md).
 
 ## Vérifications et limites pratiques
 
-`npm run qa` a réussi : audits CainOS, contrats, vérifications de syntaxe,
+La campagne initiale `npm run qa` a réussi : audits CainOS, contrats, vérifications de syntaxe,
 **260 tests Node dans 17 suites**, manifeste et deux builds. Chaque module de test
 a ensuite été exécuté directement avec le reporter TAP ; les comptes et noms
 proviennent des sorties réelles. Les empreintes du runtime et des illustrations
@@ -730,6 +730,17 @@ roster. Les rapports, empreintes des tests et limites sont réunis dans
 | [`combat-stage-scenery-browser.mjs`](../tests/combat-stage-scenery-browser.mjs) | 9 | Trois décors, neuf fonds conservés, couches, clip et captures |
 | [`combat-story-presentation-browser.mjs`](../tests/combat-story-presentation-browser.mjs) | 11 | 84 tableaux, 4 victoires Jax, reprise, relecture et mobile |
 | [`combat-roster-browser.mjs`](../tests/combat-roster-browser.mjs) | 9 | 14 duels complets et rechargements, replay 0.6 exact |
+
+Après la revue de la PR #4, le descriptif d’identité de Work Gangle a été
+corrigé pour correspondre à son masque blanc souriant et denté. Le contrôle
+statique confirme que les cinquante autres fiches et les cinq planches ne changent
+pas. Sur le build corrigé, **26 cas Node existants**, **5 contrôles ciblés de
+garde-robe** et **11 contrôles hors ligne réexécutés** réussissent ; les deux
+distributions sont reconstruites avec le manifeste `0.6.0-6dcd5c6ee620`.
+Le champ `postReviewDeltas` de la preuve QA conserve ces résultats séparément de
+la campagne initiale 260/154, qui n’a pas été intégralement rejouée après ce
+changement de texte. Les 452 lignes du classeur ne sont pas gonflées par ces
+réexécutions.
 
 Les 84 tableaux sont effectivement affichés et capturés. Les quatorze routes
 sont couvertes par contrats ; la route narrative intégralement gagnée par les

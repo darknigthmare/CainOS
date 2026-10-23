@@ -1,5 +1,5 @@
 {
-  "createdAt": "2026-10-23T14:59:23.110Z",
+  "createdAt": "2026-10-23T15:40:47.837Z",
   "counts": {
     "fighters": 14,
     "moves": 140,
@@ -211,16 +211,7 @@
   "formulaErrors": 0,
   "statusMutationRecalculated": true,
   "renderedSheets": [
-    "Synthèse",
-    "Fonctionnalités",
-    "Combattants",
-    "Techniques",
-    "Arènes",
-    "Atlas",
-    "Production",
-    "Scénarios",
-    "QA",
-    "Références"
+    "Synthèse"
   ],
   "qaEvidencePresent": true,
   "notesPreservation": {
@@ -309,7 +300,7 @@
     "combat/app.mjs": "4195636c3e4c6c47299598bd30bb018f2e9b16d7a853031fdd63c98fd628bb8f",
     "combat/audio.mjs": "fbce0e74431c354a01e7ebc46b75084b6c81c233c1ed3807bcac6b97d8e1329b",
     "combat/bindings.mjs": "8352b4a92afb27a85220b21feb5b7f53b34a2c4eabfedff2f400259329988969",
-    "combat/costume-fidelity.mjs": "a546d3ecdfe40898a001b38c1a85b6ab794dbdfa3cfb8c2bce86ca695e56049d",
+    "combat/costume-fidelity.mjs": "a346156fc0f1107a72a2d6a8b331aeba3122f631a95941a2e9b0a6b9d36dd3d6",
     "combat/costume-refinements.mjs": "117abb88f261c71c6e03dd43a344ef1babb0b34d9f8107ac3b5898f2d3682de3",
     "combat/data.mjs": "914a168aedc5119a2a968a2205ce9d40758d8511f8faa4d672b5f54db899ecf7",
     "combat/engine.mjs": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
@@ -318,7 +309,7 @@
     "combat/index.html": "a460399b3a66c087201680263277a0bcdb58d1488db7b74e84c9ec59a1b56c8c",
     "combat/input.mjs": "bd6e648180730a662fdb60ce91d93cb8b60d9ef88f01922059dd46808ad8170b",
     "combat/manifest.webmanifest": "3a7f78eb5c4cc3f7c90784a8bcba425dc91fdc1e1c401fc26b3a81f12d4534aa",
-    "combat/offline-manifest.mjs": "ff6587c88085316ff7d32d557ef27da6122135ca013412ba33de1736790b819c",
+    "combat/offline-manifest.mjs": "49c575695902bab8c6a361f08c11c7617dd5a380417122a4af437b8f60c9fa17",
     "combat/offline.mjs": "704b87db56c26365c770c46df33a0ebfa6c2639d1b97df8183794dfb8417e4c9",
     "combat/progression.mjs": "a5a3d697b034146464d0c315a2a5dc5891557caf1a58ad1d8dd8551a5f585f15",
     "combat/render-poses.mjs": "44a17b62cd7304f1a81b1454e4e8b902f8712d9b0a462f92b09626e8fe554268",
@@ -369,12 +360,12 @@
     "tests/combat-training-browser.mjs": "95a819987fb8ef813d0631bdc9c8f809974bdcccc743116a394cbcc0b3f68754",
     "tests/combat-training.test.mjs": "f1156033a8263fec59e56f097809889e447b64ab9530308f2b904c7513d37ede",
     "tests/combat-workbook-publication.test.mjs": "b56f6c5f7c627d397a359b30c3fd3346a3adfaa8b3fc6620cb70aa1ca9b9ae0a",
-    "docs/combat-qa-evidence.json": "9ec8fe21426220e573b97c3f0e7bab45562553aaf9495b8633bfc6ebeebd23b6",
+    "docs/combat-qa-evidence.json": "6f0d486adf2b1394fb9ef452af10bce4cf85311e8932883ea293c2dc02adf338",
     "scripts/build-combat-workbook.mjs": "13e6272d80853b5625d43fd548b81991d79349e9a26723b2b9f65a9cab2dc944",
     "scripts/workbook-publication.mjs": "5c7c3951ae8e1bec61f25de95a6ea890042ba931c16c42de59a55ee1f06be12e",
     "docs/COMBAT_WORKBOOK_PUBLICATION.md": "624341c3d04a818d7d40ab3455a47a883f5d8cb10216cc827cbd4c2ad605088a",
     "docs/combat-costume-review.json": "bdc92fb854e3370aa9f38f802fc5bc648292483b31912c4241cbcc2c24178f05",
-    "docs/combat-costume-review-0.6.0.json": "b121983c4dc75630b9fadf10810cc04d44552d1deaf6d3d37882c3d0356bf363",
+    "docs/combat-costume-review-0.6.0.json": "5a3ba329abefde03f042f75c0c876e5af71410a4f3236a31815d421ba940825f",
     "docs/combat-stage-review-0.6.0.json": "a1aabe093ad56e96f41bb6e359dbf1d8f47b0290b4f162584c13b1c1b7d46f40",
     "docs/images/encore-stage-comparison-0.6.0.png": "93c98be090a66f6a4339f31203ec29c9274616e69b21527bdf30a482829623c6",
     "docs/images/encore-stages-0.6.0.png": "446e581ccdcbb37890ef9ed1794fb618399f3bd2c3400d7b32ebde08c9bde99d",
@@ -399,14 +390,15 @@
     "docs/images/costumes-0.4.0-page-4.png": "88369b5badf9be203dbb758173bf5efd4ab3d2f9115ac566452f7054bffe400f",
     "docs/images/costumes-0.4.0-page-5.png": "e67cc5d7b7950fb2e718b911e0f670101bc34f72631c22296ef7c9ad780dda5f"
   },
-  "finalVerifiedAt": "2026-10-23T15:03:21.747108+00:00",
-  "workbookSHA256": "ea4e030bfbe5e1205deef982575fb26cb5dfd1574dce9a8f2a3412f9a44b4770",
-  "workbookBytes": 242564,
-  "trackerDataSHA256": "141f74fed8aed673b487c415783176531ee8696feb42c06101f427d6965e5ac7",
+  "finalVerifiedAt": "2026-10-23T15:42:26.764948+00:00",
+  "workbookSHA256": "0d621a3905326266afa63078aeed20bdab3fa21ae70d6e4eb43647e044be3645",
+  "workbookBytes": 242876,
+  "trackerDataSHA256": "27769a6aa152a65f6f55f00fc9496efb31f73fb37979bd1248e6fa826d96aaca",
+  "trackerDataBytes": 1070688,
   "formulaCount": 37,
   "nativeStructure": {
     "workbook": "/workspace/scratch/6484ba92a7a2/CainOS/docs/DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx",
-    "sha256": "ea4e030bfbe5e1205deef982575fb26cb5dfd1574dce9a8f2a3412f9a44b4770",
+    "sha256": "0d621a3905326266afa63078aeed20bdab3fa21ae70d6e4eb43647e044be3645",
     "sheets": 10,
     "nativeTables": 9,
     "tableNamesPreserved": true,
@@ -722,10 +714,336 @@
     "builderSHA256": "13e6272d80853b5625d43fd548b81991d79349e9a26723b2b9f65a9cab2dc944"
   },
   "notesRegressionSHA256": "407daa792be445d28bed375e49ca86600dfff9622aa95ccd673b6b29efec0ffb",
+  "notesRegressionScope": "Régression d’origine conservée et empreintes revérifiées : le générateur et le module de publication sont inchangés. Aucune nouvelle exécution des fixtures Notes ou des tests de panne pendant ce delta de libellé. Le nouvel export réel a passé la comparaison des Notes et le réimport.",
+  "baselineVisualReview": {
+    "workbookSHA256": "ea4e030bfbe5e1205deef982575fb26cb5dfd1574dce9a8f2a3412f9a44b4770",
+    "verificationSHA256": "180aeae41714b8b987dca46a2a402a038ee1e73ab44154d4a90fac752b3239c9",
+    "commit": "8f6baece28e8814b7059c7afa4718bfbe7dba778",
+    "review": {
+      "reviewedAt": "2026-10-23T15:03:21.608104+00:00",
+      "sheets": 10,
+      "scope": "Dix vues principales et 24 sections ciblées ouvertes et inspectées. La revue porte sur ces plages, pas sur chaque cellule des grandes tables ; les contrôles natifs et les comparaisons de données couvrent leur structure complète.",
+      "renders": [
+        {
+          "image": "Synthese.png",
+          "sheet": "Synthèse",
+          "range": "A1:H31",
+          "sha256": "de4dcb1f483c4b1ae60756abe1ed3af1dc6cd91f0948f2c505c84ee707757749",
+          "reviewed": true,
+          "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
+        },
+        {
+          "image": "Fonctionnalites.png",
+          "sheet": "Fonctionnalités",
+          "range": "A1:F12",
+          "sha256": "41360ad255fdd03a760fc426c74c6b32c39bbd58d4bee306baf101efe09bde07",
+          "reviewed": true,
+          "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
+        },
+        {
+          "image": "Combattants.png",
+          "sheet": "Combattants",
+          "range": "A1:F12",
+          "sha256": "99a1c32aadf464960e3130d2d05e65e8366e74898ac7de90a63c280dc48d38a8",
+          "reviewed": true,
+          "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
+        },
+        {
+          "image": "Techniques.png",
+          "sheet": "Techniques",
+          "range": "A1:H12",
+          "sha256": "b55e5635f2ccadf1e2be2d37a92721cdd1ea275ba0b101a8fe3be4cefa88e7db",
+          "reviewed": true,
+          "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
+        },
+        {
+          "image": "Arenes.png",
+          "sheet": "Arènes",
+          "range": "A1:F12",
+          "sha256": "2b8797ce1e9297e875075979ff7fcd666c13aba0279091ee3f9f5e478589efe7",
+          "reviewed": true,
+          "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
+        },
+        {
+          "image": "Atlas.png",
+          "sheet": "Atlas",
+          "range": "A1:F12",
+          "sha256": "6de563c480bd5eb575debbd9fbf63f3268d0419cc1d4f586e51512a73c99d9be",
+          "reviewed": true,
+          "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
+        },
+        {
+          "image": "Production.png",
+          "sheet": "Production",
+          "range": "A1:F12",
+          "sha256": "13ccce8196d278819a341d4b145f586248bb058ee5e166009abe1f3a7d8f82a3",
+          "reviewed": true,
+          "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
+        },
+        {
+          "image": "Scenarios.png",
+          "sheet": "Scénarios",
+          "range": "A1:F12",
+          "sha256": "41267bc2adb558193653a2cd893015c980e41cfb7b74b7260f49533b208adc49",
+          "reviewed": true,
+          "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
+        },
+        {
+          "image": "QA.png",
+          "sheet": "QA",
+          "range": "A1:D12",
+          "sha256": "5469353a5f3d697268a4cc383943f09d9f349e2b0ee141d3c59c0372b245cd27",
+          "reviewed": true,
+          "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
+        },
+        {
+          "image": "References.png",
+          "sheet": "Références",
+          "range": "A1:C12",
+          "sha256": "c3c96ef0de8d2b31219fefdb71443ab0398c5aa13865db3cf464fec32c22e3e1",
+          "reviewed": true,
+          "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
+        }
+      ],
+      "details": [
+        {
+          "image": "Fonctionnalites-costumes-06.png",
+          "sheet": "Fonctionnalités",
+          "range": "A104:H104",
+          "sha256": "5c8edc670d19b35e99272a282ad99b18ce6ea98779b861917b3f07d8a8ff8444",
+          "reviewed": true,
+          "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
+        },
+        {
+          "image": "Fonctionnalites-tableaux-06.png",
+          "sheet": "Fonctionnalités",
+          "range": "A105:H105",
+          "sha256": "1506fdd1cc177f314071ef8ef5fcfaf7168034fc2a4dd7de957ba0e9ca0ad6ab",
+          "reviewed": true,
+          "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
+        },
+        {
+          "image": "Fonctionnalites-fins-06.png",
+          "sheet": "Fonctionnalités",
+          "range": "A106:H106",
+          "sha256": "1c768d2c1cb3030aa0be6092c643688b3d01aa9200ba09dc99b9eeb11f9a67db",
+          "reviewed": true,
+          "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
+        },
+        {
+          "image": "Fonctionnalites-publication.png",
+          "sheet": "Fonctionnalités",
+          "range": "A85:H85",
+          "sha256": "07cc7565deb87848e4bccd6f20bd06fa8d33e505a4afd7eed8e258885e59fa83",
+          "reviewed": true,
+          "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
+        },
+        {
+          "image": "Production-costumes-06.png",
+          "sheet": "Production",
+          "range": "D618:I618",
+          "sha256": "45ad9d3145321d3da8f6ea1b8decb18f3ae2df63f951e4e5bb90bf005a42d8b4",
+          "reviewed": true,
+          "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
+        },
+        {
+          "image": "Production-tableaux-06.png",
+          "sheet": "Production",
+          "range": "D382:I382",
+          "sha256": "9877bfa2ffb666fa34aef5315d69444dec3e1f44c18e894958deb8e7c7424667",
+          "reviewed": true,
+          "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
+        },
+        {
+          "image": "Production-briefings-06.png",
+          "sheet": "Production",
+          "range": "D388:I388",
+          "sha256": "fb584ed18f2ae69c13cfc9b367c17dca86cc4d6a5356a30c7b802c2e91f0364b",
+          "reviewed": true,
+          "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
+        },
+        {
+          "image": "Production-decors-06.png",
+          "sheet": "Production",
+          "range": "D341:I341",
+          "sha256": "855e9a16389cd84b49104422e37409c49a32a34281ecbce28176a1e7557d3cd5",
+          "reviewed": true,
+          "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
+        },
+        {
+          "image": "Scenarios-tableaux-06.png",
+          "sheet": "Scénarios",
+          "range": "C15:D15",
+          "sha256": "1ad78ac75da537131f7e3a8f9f864e2408090ec9cc2d1c4f049dc6f173fbecc1",
+          "reviewed": true,
+          "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
+        },
+        {
+          "image": "Arenes-backstage-06.png",
+          "sheet": "Arènes",
+          "range": "R17:S17",
+          "sha256": "c3e4ccd1b057881220fa9b60f6db4a0eaf3e5c88182fb68f255104d90eec361f",
+          "reviewed": true,
+          "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
+        },
+        {
+          "image": "Arenes-spudsy-06.png",
+          "sheet": "Arènes",
+          "range": "R9:S9",
+          "sha256": "db988ab85e56c9011f56c0ae6f771cf53d812906a6da15c28e2bbadae095bd10",
+          "reviewed": true,
+          "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
+        },
+        {
+          "image": "Arenes-kingdom-06.png",
+          "sheet": "Arènes",
+          "range": "R15:S15",
+          "sha256": "39c20551785208db675734046a335f824e6efb91c22b86b745cf7c5c7cd60a04",
+          "reviewed": true,
+          "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
+        },
+        {
+          "image": "Fonctionnalites-sols-06.png",
+          "sheet": "Fonctionnalités",
+          "range": "G65:H65",
+          "sha256": "4ff228cc7da161da8653f8ac9bb9063b12be5123971ed2fad0d5face6f94bbb2",
+          "reviewed": true,
+          "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
+        },
+        {
+          "image": "Production-ambiance-sol-06.png",
+          "sheet": "Production",
+          "range": "H616:I616",
+          "sha256": "73bc8f52ffd2744341617fc777eadfb740e5a53dde1f3f1066d280911bcc5947",
+          "reviewed": true,
+          "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
+        },
+        {
+          "image": "References-publication-06.png",
+          "sheet": "Références",
+          "range": "D41:E41",
+          "sha256": "f22583e362c596ae6285dcd09fddf65404e7b6f1d6856dab14009752499c6a34",
+          "reviewed": true,
+          "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
+        },
+        {
+          "image": "References-costumes-06.png",
+          "sheet": "Références",
+          "range": "D39:E39",
+          "sha256": "71ed8959ed5450d545d14f4e54c3510dc7fe9f55021e87583af54869ae86f1d8",
+          "reviewed": true,
+          "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
+        },
+        {
+          "image": "References-histoire-06.png",
+          "sheet": "Références",
+          "range": "D43:E43",
+          "sha256": "9f88ab77da0784376e0be29b72869a50353a3dedd815ad494fee214b3071d651",
+          "reviewed": true,
+          "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
+        },
+        {
+          "image": "References-decors-06.png",
+          "sheet": "Références",
+          "range": "D44:E44",
+          "sha256": "c36372eecb72b52a92b93720b3131bbf4ac6502b5c13d11df7333494d4fc78e9",
+          "reviewed": true,
+          "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
+        },
+        {
+          "image": "References-sols-06.png",
+          "sheet": "Références",
+          "range": "D60:E60",
+          "sha256": "493065bfb750628dfa29b1643d29270043e453c2e98c163fce161b52dedfc444",
+          "reviewed": true,
+          "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
+        },
+        {
+          "image": "QA-details.png",
+          "sheet": "QA",
+          "range": "A448:D457",
+          "sha256": "4c0d7be2de999553c8f3e1d7767dbfa9f1aeeab8e6e6e83b16e962bfc0eee111",
+          "reviewed": true,
+          "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
+        },
+        {
+          "image": "Atlas-costumes-cadre.png",
+          "sheet": "Atlas",
+          "range": "W35:Y37",
+          "sha256": "4a80a8f74f76756c9a81a486a3a36cb4a0e3b71347195ec0bdea06bbdf79fd89",
+          "reviewed": true,
+          "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
+        },
+        {
+          "image": "Atlas-costumes-limites.png",
+          "sheet": "Atlas",
+          "range": "Z35:AA37",
+          "sha256": "9db4db1e510977c0781b55cbb8f189ffed84376e83618046cfa9ea766049fe57",
+          "reviewed": true,
+          "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
+        },
+        {
+          "image": "Atlas-costumes-references.png",
+          "sheet": "Atlas",
+          "range": "AB35:AD37",
+          "sha256": "b19465ebbb9c9ad67d599b027d74d7481fb559d81f4cf5c4506b5cf8228e80f6",
+          "reviewed": true,
+          "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
+        },
+        {
+          "image": "Atlas-costumes-canon.png",
+          "sheet": "Atlas",
+          "range": "AE35:AF37",
+          "sha256": "f3ab542451eec2f2f98745d3178791f6c1a81027c911b15a5c197622c8bf057d",
+          "reviewed": true,
+          "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
+        }
+      ],
+      "findings": [
+        "Synthèse lisible : 101 fonctionnalités, 632 lignes de production, 85 scénarios et 452 QA ; nouvelles formules de contenu lisibles.",
+        "Titres, en-têtes, alternance des lignes et statuts visibles sans chevauchement dans les dix vues principales.",
+        "Sections costumes, tableaux, briefings et fins lisibles ; portée statique et limites canoniques explicites.",
+        "Trois revues de décors lisibles, avec la distinction entre dessin du sol modifié et géométrie de combat conservée.",
+        "Références des revues 0.6 et garanties/limites de publication visibles sans troncature observée.",
+        "Derniers contrôles QA des 14 duels et limites des nouveaux costumes correctement présentés."
+      ],
+      "renderedPNGCount": 61,
+      "additionalRendersNotIndividuallyInspected": [
+        "Arenes-details.png",
+        "Arenes-fidelite.png",
+        "Arenes-revue.png",
+        "Atlas-costumes-identite.png",
+        "Atlas-details.png",
+        "Combattants-details.png",
+        "Combattants-fidelite.png",
+        "Combattants-revue.png",
+        "Fonctionnalites-costumes-revue.png",
+        "Fonctionnalites-costumes-ui.png",
+        "Fonctionnalites-fidelite.png",
+        "Fonctionnalites-installation.png",
+        "Fonctionnalites-profil.png",
+        "Fonctionnalites-sources-ui.png",
+        "Production-details.png",
+        "Production-poses.png",
+        "QA-costumes-ui.png",
+        "QA-fidelite-rendu.png",
+        "QA-fidelite-ui.png",
+        "QA-installation.png",
+        "QA-poses-ui.png",
+        "QA-profil.png",
+        "References-details.png",
+        "Scenarios-details.png",
+        "Techniques-details.png",
+        "Techniques-fidelite.png",
+        "Techniques-revue.png"
+      ],
+      "unresolvedLayoutIssuesInInspectedRanges": []
+    }
+  },
   "visualReview": {
-    "reviewedAt": "2026-10-23T15:03:21.608104+00:00",
-    "sheets": 10,
-    "scope": "Dix vues principales et 24 sections ciblées ouvertes et inspectées. La revue porte sur ces plages, pas sur chaque cellule des grandes tables ; les contrôles natifs et les comparaisons de données couvrent leur structure complète.",
+    "reviewedAt": "2026-10-23T15:42:26.764948+00:00",
+    "sheets": 3,
+    "scope": "Revue ciblée post-PR4 : synthèse et deux plages contenant les seules valeurs modifiées. Les dix feuilles ne sont pas annoncées comme nouvellement inspectées ; leur structure et toutes leurs valeurs/formules sont comparées à la version de référence.",
     "renders": [
       {
         "image": "Synthese.png",
@@ -733,321 +1051,56 @@
         "range": "A1:H31",
         "sha256": "de4dcb1f483c4b1ae60756abe1ed3af1dc6cd91f0948f2c505c84ee707757749",
         "reviewed": true,
-        "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
+        "inspection": "Synthèse lisible, comptes et formules inchangés, limites de fidélité visibles."
       },
       {
-        "image": "Fonctionnalites.png",
-        "sheet": "Fonctionnalités",
-        "range": "A1:F12",
-        "sha256": "41360ad255fdd03a760fc426c74c6b32c39bbd58d4bee306baf101efe09bde07",
-        "reviewed": true,
-        "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
-      },
-      {
-        "image": "Combattants.png",
-        "sheet": "Combattants",
-        "range": "A1:F12",
-        "sha256": "99a1c32aadf464960e3130d2d05e65e8366e74898ac7de90a63c280dc48d38a8",
-        "reviewed": true,
-        "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
-      },
-      {
-        "image": "Techniques.png",
-        "sheet": "Techniques",
-        "range": "A1:H12",
-        "sha256": "b55e5635f2ccadf1e2be2d37a92721cdd1ea275ba0b101a8fe3be4cefa88e7db",
-        "reviewed": true,
-        "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
-      },
-      {
-        "image": "Arenes.png",
-        "sheet": "Arènes",
-        "range": "A1:F12",
-        "sha256": "2b8797ce1e9297e875075979ff7fcd666c13aba0279091ee3f9f5e478589efe7",
-        "reviewed": true,
-        "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
-      },
-      {
-        "image": "Atlas.png",
+        "image": "Atlas-workgangle-identity.png",
         "sheet": "Atlas",
-        "range": "A1:F12",
-        "sha256": "6de563c480bd5eb575debbd9fbf63f3268d0419cc1d4f586e51512a73c99d9be",
+        "range": "U54:V54",
+        "sha256": "5dece676b00e2dd06abe0ab5cf769f885047a3e9da85251414b780f335d6a378",
         "reviewed": true,
-        "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
+        "inspection": "Description et indice d’identité cohérents : masque blanc souriant et denté, étoile sur la joue et bras en rubans rouges. Texte complet visible."
       },
       {
-        "image": "Production.png",
-        "sheet": "Production",
-        "range": "A1:F12",
-        "sha256": "13ccce8196d278819a341d4b145f586248bb058ee5e166009abe1f3a7d8f82a3",
-        "reviewed": true,
-        "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
-      },
-      {
-        "image": "Scenarios.png",
-        "sheet": "Scénarios",
-        "range": "A1:F12",
-        "sha256": "41267bc2adb558193653a2cd893015c980e41cfb7b74b7260f49533b208adc49",
-        "reviewed": true,
-        "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
-      },
-      {
-        "image": "QA.png",
+        "image": "QA-workgangle-proof.png",
         "sheet": "QA",
-        "range": "A1:D12",
-        "sha256": "5469353a5f3d697268a4cc383943f09d9f349e2b0ee141d3c59c0372b245cd27",
+        "range": "F271:G271",
+        "sha256": "9c957e4a28ac5eb48edffb43b3c5deae42f223da2b8da894d52b41ee8a2ee3c0",
         "reviewed": true,
-        "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
-      },
-      {
-        "image": "References.png",
-        "sheet": "Références",
-        "range": "A1:C12",
-        "sha256": "c3c96ef0de8d2b31219fefdb71443ab0398c5aa13865db3cf464fec32c22e3e1",
-        "reviewed": true,
-        "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
+        "inspection": "Preuve initiale conservée ; complément 26 cas Node, 5 contrôles garde-robe et 11 hors ligne visible avec cache actuel et mention explicite de la campagne complète non rejouée. Texte complet visible."
       }
     ],
-    "details": [
-      {
-        "image": "Fonctionnalites-costumes-06.png",
-        "sheet": "Fonctionnalités",
-        "range": "A104:H104",
-        "sha256": "5c8edc670d19b35e99272a282ad99b18ce6ea98779b861917b3f07d8a8ff8444",
-        "reviewed": true,
-        "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
-      },
-      {
-        "image": "Fonctionnalites-tableaux-06.png",
-        "sheet": "Fonctionnalités",
-        "range": "A105:H105",
-        "sha256": "1506fdd1cc177f314071ef8ef5fcfaf7168034fc2a4dd7de957ba0e9ca0ad6ab",
-        "reviewed": true,
-        "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
-      },
-      {
-        "image": "Fonctionnalites-fins-06.png",
-        "sheet": "Fonctionnalités",
-        "range": "A106:H106",
-        "sha256": "1c768d2c1cb3030aa0be6092c643688b3d01aa9200ba09dc99b9eeb11f9a67db",
-        "reviewed": true,
-        "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
-      },
-      {
-        "image": "Fonctionnalites-publication.png",
-        "sheet": "Fonctionnalités",
-        "range": "A85:H85",
-        "sha256": "07cc7565deb87848e4bccd6f20bd06fa8d33e505a4afd7eed8e258885e59fa83",
-        "reviewed": true,
-        "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
-      },
-      {
-        "image": "Production-costumes-06.png",
-        "sheet": "Production",
-        "range": "D618:I618",
-        "sha256": "45ad9d3145321d3da8f6ea1b8decb18f3ae2df63f951e4e5bb90bf005a42d8b4",
-        "reviewed": true,
-        "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
-      },
-      {
-        "image": "Production-tableaux-06.png",
-        "sheet": "Production",
-        "range": "D382:I382",
-        "sha256": "9877bfa2ffb666fa34aef5315d69444dec3e1f44c18e894958deb8e7c7424667",
-        "reviewed": true,
-        "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
-      },
-      {
-        "image": "Production-briefings-06.png",
-        "sheet": "Production",
-        "range": "D388:I388",
-        "sha256": "fb584ed18f2ae69c13cfc9b367c17dca86cc4d6a5356a30c7b802c2e91f0364b",
-        "reviewed": true,
-        "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
-      },
-      {
-        "image": "Production-decors-06.png",
-        "sheet": "Production",
-        "range": "D341:I341",
-        "sha256": "855e9a16389cd84b49104422e37409c49a32a34281ecbce28176a1e7557d3cd5",
-        "reviewed": true,
-        "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
-      },
-      {
-        "image": "Scenarios-tableaux-06.png",
-        "sheet": "Scénarios",
-        "range": "C15:D15",
-        "sha256": "1ad78ac75da537131f7e3a8f9f864e2408090ec9cc2d1c4f049dc6f173fbecc1",
-        "reviewed": true,
-        "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
-      },
-      {
-        "image": "Arenes-backstage-06.png",
-        "sheet": "Arènes",
-        "range": "R17:S17",
-        "sha256": "c3e4ccd1b057881220fa9b60f6db4a0eaf3e5c88182fb68f255104d90eec361f",
-        "reviewed": true,
-        "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
-      },
-      {
-        "image": "Arenes-spudsy-06.png",
-        "sheet": "Arènes",
-        "range": "R9:S9",
-        "sha256": "db988ab85e56c9011f56c0ae6f771cf53d812906a6da15c28e2bbadae095bd10",
-        "reviewed": true,
-        "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
-      },
-      {
-        "image": "Arenes-kingdom-06.png",
-        "sheet": "Arènes",
-        "range": "R15:S15",
-        "sha256": "39c20551785208db675734046a335f824e6efb91c22b86b745cf7c5c7cd60a04",
-        "reviewed": true,
-        "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
-      },
-      {
-        "image": "Fonctionnalites-sols-06.png",
-        "sheet": "Fonctionnalités",
-        "range": "G65:H65",
-        "sha256": "4ff228cc7da161da8653f8ac9bb9063b12be5123971ed2fad0d5face6f94bbb2",
-        "reviewed": true,
-        "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
-      },
-      {
-        "image": "Production-ambiance-sol-06.png",
-        "sheet": "Production",
-        "range": "H616:I616",
-        "sha256": "73bc8f52ffd2744341617fc777eadfb740e5a53dde1f3f1066d280911bcc5947",
-        "reviewed": true,
-        "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
-      },
-      {
-        "image": "References-publication-06.png",
-        "sheet": "Références",
-        "range": "D41:E41",
-        "sha256": "f22583e362c596ae6285dcd09fddf65404e7b6f1d6856dab14009752499c6a34",
-        "reviewed": true,
-        "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
-      },
-      {
-        "image": "References-costumes-06.png",
-        "sheet": "Références",
-        "range": "D39:E39",
-        "sha256": "71ed8959ed5450d545d14f4e54c3510dc7fe9f55021e87583af54869ae86f1d8",
-        "reviewed": true,
-        "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
-      },
-      {
-        "image": "References-histoire-06.png",
-        "sheet": "Références",
-        "range": "D43:E43",
-        "sha256": "9f88ab77da0784376e0be29b72869a50353a3dedd815ad494fee214b3071d651",
-        "reviewed": true,
-        "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
-      },
-      {
-        "image": "References-decors-06.png",
-        "sheet": "Références",
-        "range": "D44:E44",
-        "sha256": "c36372eecb72b52a92b93720b3131bbf4ac6502b5c13d11df7333494d4fc78e9",
-        "reviewed": true,
-        "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
-      },
-      {
-        "image": "References-sols-06.png",
-        "sheet": "Références",
-        "range": "D60:E60",
-        "sha256": "493065bfb750628dfa29b1643d29270043e453c2e98c163fce161b52dedfc444",
-        "reviewed": true,
-        "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
-      },
-      {
-        "image": "QA-details.png",
-        "sheet": "QA",
-        "range": "A448:D457",
-        "sha256": "4c0d7be2de999553c8f3e1d7767dbfa9f1aeeab8e6e6e83b16e962bfc0eee111",
-        "reviewed": true,
-        "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
-      },
-      {
-        "image": "Atlas-costumes-cadre.png",
-        "sheet": "Atlas",
-        "range": "W35:Y37",
-        "sha256": "4a80a8f74f76756c9a81a486a3a36cb4a0e3b71347195ec0bdea06bbdf79fd89",
-        "reviewed": true,
-        "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
-      },
-      {
-        "image": "Atlas-costumes-limites.png",
-        "sheet": "Atlas",
-        "range": "Z35:AA37",
-        "sha256": "9db4db1e510977c0781b55cbb8f189ffed84376e83618046cfa9ea766049fe57",
-        "reviewed": true,
-        "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
-      },
-      {
-        "image": "Atlas-costumes-references.png",
-        "sheet": "Atlas",
-        "range": "AB35:AD37",
-        "sha256": "b19465ebbb9c9ad67d599b027d74d7481fb559d81f4cf5c4506b5cf8228e80f6",
-        "reviewed": true,
-        "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
-      },
-      {
-        "image": "Atlas-costumes-canon.png",
-        "sheet": "Atlas",
-        "range": "AE35:AF37",
-        "sha256": "f3ab542451eec2f2f98745d3178791f6c1a81027c911b15a5c197622c8bf057d",
-        "reviewed": true,
-        "inspection": "Rendu ouvert et inspecté visuellement pendant la génération finale 0.6.0."
-      }
-    ],
-    "findings": [
-      "Synthèse lisible : 101 fonctionnalités, 632 lignes de production, 85 scénarios et 452 QA ; nouvelles formules de contenu lisibles.",
-      "Titres, en-têtes, alternance des lignes et statuts visibles sans chevauchement dans les dix vues principales.",
-      "Sections costumes, tableaux, briefings et fins lisibles ; portée statique et limites canoniques explicites.",
-      "Trois revues de décors lisibles, avec la distinction entre dessin du sol modifié et géométrie de combat conservée.",
-      "Références des revues 0.6 et garanties/limites de publication visibles sans troncature observée.",
-      "Derniers contrôles QA des 14 duels et limites des nouveaux costumes correctement présentés."
-    ],
-    "renderedPNGCount": 61,
-    "additionalRendersNotIndividuallyInspected": [
-      "Arenes-details.png",
-      "Arenes-fidelite.png",
-      "Arenes-revue.png",
-      "Atlas-costumes-identite.png",
-      "Atlas-details.png",
-      "Combattants-details.png",
-      "Combattants-fidelite.png",
-      "Combattants-revue.png",
-      "Fonctionnalites-costumes-revue.png",
-      "Fonctionnalites-costumes-ui.png",
-      "Fonctionnalites-fidelite.png",
-      "Fonctionnalites-installation.png",
-      "Fonctionnalites-profil.png",
-      "Fonctionnalites-sources-ui.png",
-      "Production-details.png",
-      "Production-poses.png",
-      "QA-costumes-ui.png",
-      "QA-fidelite-rendu.png",
-      "QA-fidelite-ui.png",
-      "QA-installation.png",
-      "QA-poses-ui.png",
-      "QA-profil.png",
-      "References-details.png",
-      "Scenarios-details.png",
-      "Techniques-details.png",
-      "Techniques-fidelite.png",
-      "Techniques-revue.png"
-    ],
+    "renderedPNGCount": 3,
     "unresolvedLayoutIssuesInInspectedRanges": []
   },
   "fixtureNotesExcluded": true,
   "sourceDigestVerification": {
     "files": 92,
     "mismatches": 0,
-    "checkedAt": "2026-10-23T15:03:21.747108+00:00"
+    "checkedAt": "2026-10-23T15:42:26.764948+00:00"
   },
+  "sourceDigestDelta": [
+    {
+      "file": "combat/costume-fidelity.mjs",
+      "before": "a546d3ecdfe40898a001b38c1a85b6ab794dbdfa3cfb8c2bce86ca695e56049d",
+      "after": "a346156fc0f1107a72a2d6a8b331aeba3122f631a95941a2e9b0a6b9d36dd3d6"
+    },
+    {
+      "file": "combat/offline-manifest.mjs",
+      "before": "ff6587c88085316ff7d32d557ef27da6122135ca013412ba33de1736790b819c",
+      "after": "49c575695902bab8c6a361f08c11c7617dd5a380417122a4af437b8f60c9fa17"
+    },
+    {
+      "file": "docs/combat-qa-evidence.json",
+      "before": "9ec8fe21426220e573b97c3f0e7bab45562553aaf9495b8633bfc6ebeebd23b6",
+      "after": "6f0d486adf2b1394fb9ef452af10bce4cf85311e8932883ea293c2dc02adf338"
+    },
+    {
+      "file": "docs/combat-costume-review-0.6.0.json",
+      "before": "b121983c4dc75630b9fadf10810cc04d44552d1deaf6d3d37882c3d0356bf363",
+      "after": "5a3ba329abefde03f042f75c0c876e5af71410a4f3236a31815d421ba940825f"
+    }
+  ],
   "statusMutationRestoredInExport": {
     "featureCell": "Fonctionnalités!D6",
     "featureValue": "Implémenté",
@@ -1058,7 +1111,7 @@
   "finalExportCleanup": {
     "temporarySourceDirectories": 0,
     "retainedPublicationDirectoriesOrLocks": 0,
-    "pngPreviewsRetained": 61,
+    "pngPreviewsRetained": 3,
     "passed": true
   },
   "calculationVerification": {
@@ -1069,8 +1122,60 @@
     "nativeDesktopExcelOpened": false
   },
   "browserEvidenceScope": {
-    "totalChecks": 154,
+    "initialNodeCases": 260,
+    "initialBrowserChecks": 154,
+    "targetedNodeCases": 26,
+    "targetedWardrobeBrowserChecks": 5,
+    "targetedOfflineBrowserChecks": 11,
+    "fullRegressionRerun": false,
     "evidence": "docs/combat-qa-evidence.json",
-    "description": "Execution snapshots and runtime hashes are recorded in the QA evidence; spreadsheet validation does not substitute for those browser runs."
+    "description": "Campagne initiale 0.6.0 : 260 tests Node et 154 contrôles navigateur, avec leurs empreintes historiques. Après correction du libellé Work Gangle : 26 cas Node, 5 contrôles de garde-robe et 11 contrôles hors ligne ciblés. La campagne complète n’a pas été rejouée ; postReviewDeltas conserve les rapports de ce complément."
+  },
+  "postReviewDeltaVerification": {
+    "id": "pr4-workgangle-identity",
+    "baselineWorkbookSHA256": "ea4e030bfbe5e1205deef982575fb26cb5dfd1574dce9a8f2a3412f9a44b4770",
+    "qaEvidenceSHA256": "6f0d486adf2b1394fb9ef452af10bce4cf85311e8932883ea293c2dc02adf338",
+    "qaEvidenceBytes": 1385211,
+    "offlineVersion": "0.6.0-6dcd5c6ee620",
+    "artVersion": "4ca4a56c5bace07b",
+    "dataChanges": [
+      {
+        "table": "atlas",
+        "stableId": "workgangle",
+        "rowIndex": 48,
+        "columnIndex": 21,
+        "before": "Masque triste et bras de ruban rouge restent visibles malgré le pantalon de travail.",
+        "after": "Le masque de théâtre blanc souriant et denté, l’étoile sur la joue et les bras en rubans rouges identifient Gangle sous l’uniforme de responsable."
+      },
+      {
+        "table": "qa",
+        "stableId": "QA-costumes",
+        "rowIndex": 265,
+        "columnIndex": 6,
+        "before": "23 octobre 2026 · 0.6.0 · 51 garde-robes parcourues ; 20 nouvelles extractions à alpha natif vérifiées et essayées avec attaque réelle. Sept corps noirs intacts, reine isolée, Bubble translucide et six labels de comparaison partielle visibles.",
+        "after": "23 octobre 2026 · 0.6.0 · 51 garde-robes parcourues ; 20 nouvelles extractions à alpha natif vérifiées et essayées avec attaque réelle. Sept corps noirs intacts, reine isolée, Bubble translucide et six labels de comparaison partielle visibles.\nAprès revue PR4 : libellé de Work Gangle corrigé ; 26 cas Node, 5 contrôles de garde-robe et 11 contrôles hors ligne réussis sur 0.6.0-6dcd5c6ee620. Rapports complets et empreintes dans docs/combat-qa-evidence.json, postReviewDeltas[0]. La campagne initiale 260/154 n’a pas été entièrement rejouée après cette correction."
+      }
+    ],
+    "nativeCellChanges": [
+      {
+        "sheet": "Atlas",
+        "cell": "V54",
+        "before": "Masque triste et bras de ruban rouge restent visibles malgré le pantalon de travail.",
+        "after": "Le masque de théâtre blanc souriant et denté, l’étoile sur la joue et les bras en rubans rouges identifient Gangle sous l’uniforme de responsable."
+      },
+      {
+        "sheet": "QA",
+        "cell": "G271",
+        "before": "23 octobre 2026 · 0.6.0 · 51 garde-robes parcourues ; 20 nouvelles extractions à alpha natif vérifiées et essayées avec attaque réelle. Sept corps noirs intacts, reine isolée, Bubble translucide et six labels de comparaison partielle visibles.",
+        "after": "23 octobre 2026 · 0.6.0 · 51 garde-robes parcourues ; 20 nouvelles extractions à alpha natif vérifiées et essayées avec attaque réelle. Sept corps noirs intacts, reine isolée, Bubble translucide et six labels de comparaison partielle visibles.\nAprès revue PR4 : libellé de Work Gangle corrigé ; 26 cas Node, 5 contrôles de garde-robe et 11 contrôles hors ligne réussis sur 0.6.0-6dcd5c6ee620. Rapports complets et empreintes dans docs/combat-qa-evidence.json, postReviewDeltas[0]. La campagne initiale 260/154 n’a pas été entièrement rejouée après cette correction."
+      }
+    ],
+    "allOtherCellValuesAndFormulasUnchanged": true,
+    "all37FormulasAndTheirCachedValuesUnchanged": true,
+    "currentRuntimeHashesVerified": 30,
+    "unchangedArtImages": 45,
+    "fullRegressionRerun": false,
+    "notesFixturesRerun": false,
+    "checksPassed": true
   }
 }
