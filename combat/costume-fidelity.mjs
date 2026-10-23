@@ -202,7 +202,11 @@ export const COSTUME_FIDELITY = freeze(Object.fromEntries(designs.map(([id, base
     assetReview: {
       status: refinement ? issues.length ? 'Revue technique 0.6.0 effectuée — limites consignées' : 'Revue technique 0.6.0 effectuée' : issues.length ? 'Revue technique effectuée — limites consignées' : 'Revue technique effectuée',
       visibleTraits: refinement?.visibleTraits || visibleTraits.map(trait => refinement ? trait.replace(' sur un fond à damier vert sombre', '') : trait),
-      identityEvidence: id === 'gangletragedy' && refinement ? 'Le masque de théâtre triste entier, les larmes et le corps de rubans rouges identifient Gangle ; l’ancien filtre de recoloration n’est plus utilisé.' : identityEvidence,
+      identityEvidence: id === 'gangletragedy' && refinement
+        ? 'Le masque de théâtre triste entier, les larmes et le corps de rubans rouges identifient Gangle ; l’ancien filtre de recoloration n’est plus utilisé.'
+        : id === 'workgangle' && refinement
+          ? 'Le masque de théâtre blanc souriant et denté, l’étoile sur la joue et les bras en rubans rouges identifient Gangle sous l’uniforme de responsable.'
+          : identityEvidence,
       framing: refinement?.framing || cropNotes[id] || (textured.has(id) ? 'La grille source est encore utilisée. Des pixels de fond texturé participent aux limites de l’image ; la découpe ne vaut pas détourage du corps.' : 'Cellule source et extraction comparées côte à côte ; aucun membre coupé ni personnage voisin visible dans le cadre retenu.'),
       transparency: refinement?.transparency || (preserveSource.has(id)
         ? 'Mode explicite de préservation de la source : aucune couleur ni valeur alpha de la cellule n’est supprimée. Le fond texturé reste opaque pour éviter de perforer les parties noires indiscernables du corps.'
