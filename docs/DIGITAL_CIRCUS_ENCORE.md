@@ -1,15 +1,18 @@
 # Digital Circus — Encore · Le Grand Duel
 
-Version jouable : **0.4.0** — 22 octobre 2026.
+Version jouable : **0.5.0** — 23 octobre 2026.
 
 Encore partage son moteur entre l’application CainOS et le jeu autonome. Cette
 version comprend **14 combattants, 140 techniques, 12 arènes, 9 modes, 51 costumes
 et 179 entrées d’archive**. Elle conserve les histoires individuelles, le tournoi,
 la reprise des cinq programmes, les touches personnalisables, la musique et le
-téléchargement hors ligne. La passe 0.4.0 reprend le placement des poses, les
-proportions des portraits et les cellules de costumes ; elle ajoute la garde-robe
-et les 51 fiches individuelles de fidélité. Les corrections de détourage, de
-décors et de reculs livrées en 0.3.0 sont conservées. Les catalogues sont définis dans
+téléchargement hors ligne. La version 0.5.0 ajoute le laboratoire image par image,
+l’enregistrement du mannequin, **70 séquences de présentation**, **12 ambiances
+visuelles d’arène** et une nouvelle feuille transparente pour Jax. Elle corrige
+quatre comportements du moteur et de l’IA en conservant les règles des anciens
+replays. La garde-robe et les 51 fiches individuelles de fidélité livrées en 0.4.0,
+ainsi que les corrections de détourage, de décors et de reculs de 0.3.0, restent
+disponibles. Les catalogues sont définis dans
 [`combat/data.mjs`](../combat/data.mjs), les modes affichés dans
 [`combat/session.mjs`](../combat/session.mjs).
 
@@ -33,12 +36,15 @@ npm run build:combat
 ```
 
 `dist/` contient CainOS et son application de combat. `dist-combat/` contient le jeu
-autonome, son point d’entrée et les **42 planches originales**, soit
-**47 345 031 octets d’illustrations**. Ce second dossier peut être hébergé
+autonome, son point d’entrée et les **42 planches utilisées par le jeu**, soit
+**48 370 710 octets d’illustrations**. Jax 0.5.0 remplace sa feuille historique dans
+le pack, sans ajouter une quarante-troisième image. Ce second dossier peut être hébergé
 indépendamment de CainOS. Les scripts
 [`build-combat.mjs`](../scripts/build-combat.mjs) et
 [`build-combat-offline.mjs`](../scripts/build-combat-offline.mjs) assemblent ces
-fichiers et régénèrent l’inventaire hors ligne.
+fichiers et régénèrent l’inventaire hors ligne. L’empreinte de cette livraison est
+**`OFFLINE_VERSION = 0.5.0-8ce2171ba557`** ; celle des illustrations est
+**`ART_VERSION = 97f16f24d98d57c0`**.
 
 Pour un essai local sans dépendance supplémentaire :
 
@@ -107,7 +113,7 @@ contrôle figurent dans [`combat/data.mjs`](../combat/data.mjs) et
 | Le grand spectacle | Programme arcade de six rencontres ; dernier adversaire Caine |
 | Les anomalies | Quatre rencontres de boss : reine, Fudge, Kaufmo abstrait, Caine |
 | Encore. Encore. | Dix vagues ; santé conservée avec 1 200 points récupérés après une victoire |
-| Les répétitions | Mannequin immobile, garde haute/basse, saut, réaction après impact ou CPU ; soin, finale libre, hitboxes et remise en place |
+| Les répétitions | Six comportements de mannequin, gel et avance d’une image, trois vitesses, historique des commandes, lecture des phases, enregistrement/relecture de 600 images, jauges libres et remise en place |
 | Les défis de Caine | Six exercices mesurables de 60 secondes : dégâts, garde, combo, saisies, quatre techniques, finale |
 | Derrière le rideau | 14 histoires originales, chacune avec introduction, quatre rencontres écrites et conclusion ; 56 chapitres au total |
 | La coupe du cirque | Tableau à huit participants distincts ; quarts, demi-finales et finale, soit trois victoires du joueur pour remporter la coupe |
@@ -129,6 +135,43 @@ et portent explicitement cette mention. Une défaite élimine le joueur, sans
 attribuer la médaille. Le résultat permet de consulter le tableau résolu puis de
 recommencer une tentative. Les règles sont définies dans
 [`combat/progression.mjs`](../combat/progression.mjs).
+
+## Laboratoire d’entraînement
+
+Le laboratoire conserve les six mannequins : **immobile, garde haute, garde basse,
+sauts, garde après impact et CPU**. Les réglages **Finale libre**, **Ressource
+libre** et **Soin automatique** sont indépendants. Les zones de contact restent
+affichables pour distinguer la géométrie de simulation des illustrations.
+
+**Figer** suspend le temps ; **+1 image** exécute exactement un pas de simulation
+de 1/60 s puis reste figé. Une pression brève d’attaque est consommée une fois.
+Les vitesses **×1, ×0,5 et ×0,25** changent la fréquence des pas, sans changer les
+délais des techniques exprimés en images. Le répertoire et le retour de pause
+respectent le gel choisi.
+
+Chaque joueur dispose d’un relevé **préparation / activité / récupération**, du
+temps restant et de la réaction subie. Le laboratoire conserve les **douze
+dernières entrées groupées** par joueur, avec leur durée en images. Les dégâts,
+impacts et gardes du mannequin restent visibles ; l’historique peut être effacé
+indépendamment de la position des artistes.
+
+**Enregistrer** replace les artistes puis dirige le mannequin avec les commandes
+J1 ; le combattant J1 reste neutre. La séquence est limitée à **600 images**, soit
+**10 secondes de simulation** à vitesse normale. Gauche et droite sont conservées
+relativement au côté vers lequel regarde le mannequin. **Lire** replace les
+artistes et joue la séquence une fois ou **en boucle**, en conservant cette relation
+au facing. La lecture utilise temporairement un mannequin manuel, puis rend le
+comportement configuré à la fin ou à l’arrêt.
+
+**Replacer** conserve les réglages, la séquence enregistrée et le gel. Cette action
+efface les statistiques et l’historique de l’essai, arrête l’enregistrement ou la
+lecture et libère les commandes en attente. **Effacer la séquence** retire la bande
+de la session. Aucune bande n’est écrite dans le profil ou dans le dernier replay ;
+quitter l’entraînement ne donne ni victoire, ni médaille, ni progression.
+
+Les contrats sont définis dans [`combat/training.mjs`](../combat/training.mjs),
+[`combat-training.test.mjs`](../tests/combat-training.test.mjs) et
+[`combat-training-browser.mjs`](../tests/combat-training-browser.mjs).
 
 ## Commandes
 
@@ -210,7 +253,8 @@ sur appareils physiques restent suivis dans le classeur.
 
 Sous HTTPS ou localhost, ouvrir **Réglages → Télécharger le spectacle** puis
 attendre la confirmation **42/42 illustrations**. Le pack correspond exactement aux
-**47 345 031 octets** de [`combat/offline-manifest.mjs`](../combat/offline-manifest.mjs).
+**48 370 710 octets** de [`combat/offline-manifest.mjs`](../combat/offline-manifest.mjs),
+pour la livraison **`0.5.0-8ce2171ba557`**.
 Le premier téléchargement exige une connexion et le stockage nécessaire. Les
 fichiers déjà reçus sont réutilisés lors d’une nouvelle tentative.
 
@@ -268,13 +312,15 @@ une validation stricte des programmes.
 Un replay contient le couple de combattants, les costumes, l’arène, la graine,
 les règles, la santé initiale et les commandes compressées par séquences identiques.
 L’IA reste déterministe. La lecture reproduit une simulation à 60 Hz et n’ajoute
-aucun résultat au palmarès. Les replays **0.1.0, 0.2.0, 0.3.0 et 0.4.0** sont acceptés ; un ancien
+aucun résultat au palmarès. Les replays **0.1.0, 0.2.0, 0.3.0, 0.4.0 et 0.5.0** sont acceptés ; un ancien
 replay sans costumes utilise les apparences originales. Une variante doit
 correspondre au combattant indiqué. La version originale reste dans le fichier
 validé et exporté. `getReplayFighter` sélectionne les anciens reculs instantanés
 de Pomni/Kaufmo pour les versions 0.1.0 et 0.2.0 ; les nouveaux combats et les
-replays 0.3.0/0.4.0 emploient leurs reculs continus. La passe 0.4.0 ne change aucune
-valeur de simulation des 140 techniques ni les 51 identifiants de costumes. La capacité est bornée à 72 000 images, soit
+replays 0.3.0/0.4.0/0.5.0 emploient leurs reculs continus. L’option `rulesVersion`
+du moteur reprend également la version du fichier : les corrections 0.5.0 ne
+changent pas rétroactivement une ancienne simulation. Les 140 techniques et les
+51 identifiants de costumes sont conservés. La capacité est bornée à 72 000 images, soit
 20 minutes de simulation ; les pauses ne sont pas enregistrées. Les contrats
 d’import et de migration figurent dans
 [`combat/session.mjs`](../combat/session.mjs) et
@@ -284,6 +330,26 @@ Le partage entre l’OS et le standalone vaut sur une même origine. Sur un autr
 domaine, l’export/import JSON assure le transfert. La synchronisation cloud des
 combats n’est pas livrée.
 
+### Règles 0.5.0 et compatibilité des enregistrements
+
+Les nouveaux duels utilisent quatre corrections versionnées :
+
+- Les **dix pièges déclarés bas** respectent leur niveau : ils passent la garde
+  haute et sont arrêtés par la garde basse.
+- Le CPU conserve sa garde haute ou basse pendant le blockstun.
+- Le CPU de Ragatha choisit son soin en tenant compte de la vie récupérable,
+  des ressources, du budget de soin et du délai disponible.
+- Les saisies du CPU utilisent la portée réelle du coup et la largeur du rival,
+  ce qui permet notamment au colosse Gloink Queen de saisir à sa portée effective.
+
+Les versions 0.1.0 à 0.4.0 suivent leurs anciens chemins de règles. **56 traces CPU
+déterministes** — quatre versions × quatorze combattants, chacune sur 900 images —
+ont été capturées sur le moteur publié avant ces corrections. Les empreintes de
+toutes les images restent identiques après versionnement. Les tests vérifient
+séparément les nouvelles règles et la reproduction des anciennes ; cette
+compatibilité ne constitue pas un équilibrage compétitif complet.
+Voir [`combat-rules.test.mjs`](../tests/combat-rules.test.mjs).
+
 ## Provenance du moteur
 
 La base historique du port initial 0.1.0 est le commit CainOS
@@ -291,7 +357,12 @@ La base historique du port initial 0.1.0 est le commit CainOS
 de `main`. Les versions 0.2.0 à 0.4.0 poursuivent la
 [PR #1](https://github.com/darknigthmare/CainOS/pull/1), fusionnée au commit
 [`53d56cf30484708af7c171babd3a05aa684d9a8a`](https://github.com/darknigthmare/CainOS/commit/53d56cf30484708af7c171babd3a05aa684d9a8a),
-qui constitue la base de la nouvelle branche `feat/encore-0-2-story-offline`.
+qui constitue la base de la branche `feat/encore-0-2-story-offline`.
+La version 0.4.0 a ensuite été fusionnée par la
+[PR #2](https://github.com/darknigthmare/CainOS/pull/2), au commit
+[`f2253279c92b6e782006be7abeed9f2ea4d33453`](https://github.com/darknigthmare/CainOS/commit/f2253279c92b6e782006be7abeed9f2ea4d33453).
+La présente version part de cette base sur la branche
+`feat/encore-0-5-training-presentation`.
 
 La référence CQC est le commit
 [`42279c1c884769873e66bbda0b6fe849bcd2f1a2`](https://github.com/darknigthmare/shadow-codec-ops/tree/42279c1c884769873e66bbda0b6fe849bcd2f1a2/public/cqc)
@@ -321,7 +392,7 @@ Les archives tardives ou spéculatives de CainOS restent signalées comme élém
 projet à vérifier. L’Excel les inventorie sans convertir automatiquement leurs
 anciens libellés en faits canoniques.
 
-## Fidélité visuelle et passe 0.4.0
+## Fidélité visuelle et présentation 0.5.0
 
 Le registre [`combat/fidelity.mjs`](../combat/fidelity.mjs) et les fiches
 [`combat/costume-fidelity.mjs`](../combat/costume-fidelity.mjs) réunissent
@@ -347,8 +418,8 @@ la consultation et l'essai n'attribuent aucune victoire et préservent le profil
 ### Poses, appuis et états de combat
 
 Les **56 cellules des sept planches animées** ont chacune un repère du corps et
-un contact au sol. Le décalage de 47 pixels source entre les deux poses de repos
-de Jax ne provoque plus un saut horizontal du personnage. Les pieds de la seconde
+un contact au sol. Les deux poses de repos de Jax sont recalées sur leur racine,
+y compris dans sa nouvelle feuille 0.5.0. Les pieds de la seconde
 rangée et le ruban de Gangle qui déborde de sa cellule sont recalés ; le portail
 de Caine ne détermine plus le centre de son corps. Une seule échelle uniforme,
 calculée depuis la pose de repos, s'applique aux autres cellules.
@@ -359,15 +430,17 @@ réaction, victoire ou défaite. Caine ne présente plus le portail à chaque fr
 L'horloge de fin de manche anime uniquement la présentation des personnages,
 sans faire avancer les projectiles, les pièges, les effets ou la simulation.
 
-L'accroupissement ne comprime plus globalement le dessin. Les bases Pomni, Jax et
-Zooble utilisent une flexion modeste de pièces rigides : visage et torse sont
+L'accroupissement ne comprime plus globalement le dessin. Les bases **Pomni et
+Zooble** utilisent une flexion modeste de pièces rigides : visage et torse sont
 translatés, les jambes tournent à leurs articulations et les chaussures restent
 au sol. Les franges alpha se chevauchent au raccord des hanches ; cela ne constitue
 pas une nouvelle pose dessinée. Les autres morphologies et tous les costumes
-restent entiers, avec une légère inclinaison et un indicateur bas. Les changements
+restent entiers, avec une légère inclinaison et un indicateur bas. **Jax conserve
+son illustration entière** et ne reçoit plus l’ancien rig découpé. Les changements
 d'état restent lisibles quand le mouvement réduit fige les boucles décoratives.
 **Ces poses ne représentent pas les zones de collision pixel par pixel.** Le labo
-permet toujours d'afficher les zones effectives, dont les règles sont inchangées.
+permet toujours d'afficher les zones effectives ; les séquences de présentation
+n’en changent pas la géométrie.
 
 L'[entretien de Kevin Temmer](https://www.comicsbeat.com/interview-with-kevin-temmer-of-the-amazing-digital-circus/)
 décrit le travail d'animation propre aux personnages ; il ne fournit pas de
@@ -377,6 +450,54 @@ adaptations des illustrations déjà présentes dans CainOS.
 [Comparaison des postures](images/encore-poses-crouch.png) ·
 [Introduction, victoire et défaite](images/encore-poses-outcomes.png) ·
 [Phases d'attaque](images/encore-poses-attacks.png)
+
+### Jax : feuille transparente et palette
+
+[`cainos-jax-animation-sheet-0.5.0.png`](../assets/images/cainos-jax-animation-sheet-0.5.0.png)
+est une nouvelle illustration régénérée, en RGBA, **1536 × 1024 pixels**, répartie
+sur huit cellules. Elle reprend une peau violette, une salopette rose, des yeux
+et des gants jaunes ainsi que des dents jaunes quand elles sont visibles. Les
+huit racines sont mesurées sur cette source ; l’ancienne feuille n’est pas écrasée.
+
+La nouvelle source a été contrôlée sur fond blanc, cyan et sombre : ses cellules
+ne contiennent aucun fragment visible au bord, l’extraction préserve les couleurs
+opaques et l’alpha visible, et le rendu conserve une échelle uniforme. Les
+contours régénérés diffèrent de l’image historique. Ces huit cellules restent des
+illustrations de repos, marche, parole, pointage et réaction ; elles ne constituent
+pas un jeu de dessins de combat dédiés.
+[Voir la palette de Jax](images/encore-jax-palette.png).
+
+### Séquences d’entrée et de résultat
+
+[`combat/render-sequences.mjs`](../combat/render-sequences.mjs) définit **70
+séquences**, soit cinq par combattant : introduction, victoire de round, défaite
+de round, victoire finale et défaite finale. Chaque artiste a un rythme et des
+déplacements propres, appliqués rigidement aux illustrations disponibles. Les
+durées sont bornées ; la présentation finale couvre **132 images à 60 Hz**.
+Le passage à la phase de combat reste commandé par le moteur. Une fois leur durée atteinte,
+elles restent sur leur pose de fin. Une égalité conserve une pose neutre.
+
+L’horloge de présentation est séparée du moteur. À la fin d’un match, le profil,
+le replay et le prochain point de reprise sont enregistrés immédiatement ; la
+modale de résultat arrive après **2,2 secondes**. **Voir le résultat** permet de
+passer directement à cette modale. Ce choix n’attribue pas une seconde récompense.
+Le mouvement réduit affiche des poses fixes. Le masquage du jeu suspend aussi
+l’attente de présentation.
+[Voir les 70 présentations](images/encore-outcome-sequences.png).
+
+### Ambiances des douze arènes
+
+[`combat/render-stage-motion.mjs`](../combat/render-stage-motion.mjs) ajoute une
+couche propre à chaque décor : lueurs de piste, poussière de sucre, bougies,
+vapeur, présences du cellier, reflets du Vide, ondes du lac, balayage de calibration,
+formes des Gloinks, scintillements du palais, nuages et veilleuses du couloir.
+Les coordonnées sont déterministes et les effets restent derrière les acteurs,
+strictement au-dessus de **y = 568**. Les pixels de la piste sont identiques au
+fond statique. Le mode mouvement réduit fige ces douze couches.
+
+Ces ambiances visuelles sont des adaptations du jeu. Elles ne corrigent pas à
+elles seules les écarts de décor consignés dans le registre, notamment le couloir
+des résidents. [Voir les douze arènes](images/encore-stage-motion.png).
 
 ### Revue des 51 costumes
 
@@ -430,7 +551,7 @@ ne sont pas ajoutées au pack ; les décors restent dessinés par le jeu.
 | Cellier | Obscurité, yeux multicolores et lumière centrale | Aucun couloir à barreaux déduit de l'image |
 | Vide | Espace clair et irisé distinct du couloir EXIT et du dessous de la carte | Sol horizontal conventionnel nécessaire au combat |
 | Projectiles et pièges | Clef, rubans, bouton, pièces, bonbons et bulles reconnaissables | Présentation de mécaniques originales, sans pouvoir attribué au canon |
-| Pomni et Kaufmo | Recul réparti sur 15 images actives, respectivement −10 et −9 pixels/image | Règles 0.3.0 conservées en 0.4.0 ; anciens replays explicitement versionnés |
+| Pomni et Kaufmo | Recul réparti sur 15 images actives, respectivement −10 et −9 pixels/image | Reculs 0.3.0 conservés en 0.4.0/0.5.0 ; anciens replays explicitement versionnés |
 
 Les deux reculs gardent leurs distances et durées nominales : **150 pixels /
 30 images pour Pomni**, **135 pixels / 36 images pour Kaufmo**. Les chiffres
@@ -456,6 +577,9 @@ techniques et les tests ne constituent pas une certification canonique 1:1.
 | `combat/render.mjs` | Rendu Canvas, extraction/cadrage en cache, effets, décors |
 | `combat/render-presentation.mjs` | Détourage conservateur et identité visuelle des projectiles/pièges |
 | `combat/render-poses.mjs` | Origines des 56 cellules animées et présentation des états sans modifier les règles |
+| `combat/render-sequences.mjs` | 70 séquences procédurales finies et résultats neutres en cas d’égalité |
+| `combat/render-stage-motion.mjs` | 12 couches d’ambiance déterministes, limitées à l’arrière-plan au-dessus du sol |
+| `combat/training.mjs` | Vitesses, gel, historique, relevé de phases et bande manuelle de 600 images |
 | `combat/input.mjs` | Clavier, tactile, manette et impulsions de commandes |
 | `combat/bindings.mjs` | Mappings J1/J2, conflits, libellés et nettoyage des imports |
 | `combat/session.mjs` | Profils, migrations, replays, défis et compteurs testables |
@@ -474,8 +598,8 @@ techniques et les tests ne constituent pas une certification canonique 1:1.
 
 ## Classeur de production
 
-[`DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx`](DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx) possède dix
-feuilles : Synthèse, Fonctionnalités, Combattants, Techniques, Arènes, Atlas,
+[`DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx`](DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx) possède **dix
+feuilles et neuf tableaux filtrables** : Synthèse, Fonctionnalités, Combattants, Techniques, Arènes, Atlas,
 Production, Scénarios, QA et Références. Le générateur
 [`build-combat-workbook.mjs`](../scripts/build-combat-workbook.mjs) lit les catalogues,
 les 56 chapitres, les thèmes/effets et les preuves de tests réellement disponibles.
@@ -487,11 +611,15 @@ observés, adaptation, statut et périmètre de revue, sans déplacer les colonn
 de statut utilisées par les formules existantes. Atlas ajoute les 51 examens
 individuels : huit champs techniques et cinq champs de référence, en conservant
 les colonnes A:S ; les notes utilisateur restent éditables en colonne AG. Les deux arènes sans source
-canonique sont identifiées explicitement. Le suivi contient **90 fonctionnalités,
-389 tâches de production, 85 scénarios et 312 lignes QA**. Parmi ces lignes,
-298 portent une preuve de réussite, dix restent à vérifier et quatre ne sont pas
-exécutées. Les objectifs de revue peuvent recouper les cas automatisés ; le total
-de lignes ne désigne pas autant de tests indépendants.
+canonique sont identifiées explicitement. Le suivi contient **98 fonctionnalités,
+472 tâches de production, 85 scénarios et 387 lignes QA** : 235 cas Node,
+114 contrôles navigateur et 38 objectifs de revue. Les statuts sont **381 « Réussi »,
+2 « À vérifier » et 4 « Non exécuté »**. Les deux revues ouvertes concernent la
+sélection et le duel individuel de chacun des quatorze combattants de base, ainsi
+que la comparaison canonique exhaustive. Les quatre essais non exécutés portent
+sur un téléphone physique, deux manettes, le parcours clavier exhaustif et un
+matériel modeste. Les objectifs de revue peuvent recouper les cas automatisés ;
+le total de lignes ne désigne pas autant de tests indépendants.
 
 ## Vérifications et limites pratiques
 
@@ -501,7 +629,11 @@ Les cas couvrent les 140 techniques, tous les combattants, les collisions, les
 coûts, les combos, les transitions de manches, le déterminisme, les sauvegardes et
 les défis. Les résultats détaillés sont consignés dans le suivi QA et les rapports.
 
-La validation Node consignée pour 0.4.0 compte **193 tests réussis** dans onze suites :
+La validation Node consignée pour 0.5.0 compte **235 tests réussis** dans quatorze
+suites. Chaque fichier a été exécuté directement avec Node ; les noms et comptes
+proviennent du résultat réel de chaque cas, et non du seul nombre de fichiers
+annoncé par un lanceur. Les empreintes du runtime et des illustrations restent
+identiques entre le début et la fin de cette exécution.
 
 | Suite | Cas réussis | Périmètre |
 | --- | ---: | --- |
@@ -515,28 +647,39 @@ La validation Node consignée pour 0.4.0 compte **193 tests réussis** dans onze
 | [`combat-fidelity.test.mjs`](../tests/combat-fidelity.test.mjs) | 15 | Registre de 217 fiches, revues propres aux costumes, règles héritées exactes, trajectoires des reculs et bords du ring |
 | [`combat-render.test.mjs`](../tests/combat-render.test.mjs) | 12 | Détourage conservateur, transparence native, objets distincts et identité après réflexion |
 | [`combat-render-matte.test.mjs`](../tests/combat-render-matte.test.mjs) | 5 | Couleurs protégées de Gangle, silhouettes Shadow et modes de détourage séparés |
-| [`combat-render-poses.test.mjs`](../tests/combat-render-poses.test.mjs) | 17 | Recalage des 56 cellules, géométrie des postures basses, états de présentation et absence de mutation de la simulation |
+| [`combat-render-poses.test.mjs`](../tests/combat-render-poses.test.mjs) | 18 | Recalage des 56 cellules, deux postures basses articulées, Jax intact et absence de mutation de la simulation |
+| [`combat-rules.test.mjs`](../tests/combat-rules.test.mjs) | 16 | Quatre corrections 0.5.0, 56 traces CPU héritées, règles choisies par replay, avance d’une image et mannequin manuel |
+| [`combat-training.test.mjs`](../tests/combat-training.test.mjs) | 14 | Limite 600 images, historique, phases, gel, vitesses, enregistrement relatif, lecture unique/bouclée et remise en place |
+| [`combat-render-sequences.test.mjs`](../tests/combat-render-sequences.test.mjs) | 11 | 70 séquences finies, égalités neutres, 12 ambiances, mouvement réduit, clipping et absence de mutation |
 
-Les dix suites navigateur finales totalisent **82 contrôles réussis** :
+Les treize suites navigateur finales totalisent **114 contrôles réussis** :
 
-| Script | Résultat consigné pour 0.4.0 |
+| Script | Résultat consigné pour 0.5.0 |
 | --- | --- |
 | [`combat-encore-browser.mjs`](../tests/combat-encore-browser.mjs) | **8/8 vérifications**, **9 duels réellement joués** : histoire de Jax complète, reprise, tournoi gagné/perdu, défaite/revanche et remplacement du checkpoint |
 | [`combat-offline-browser.mjs`](../tests/combat-offline-browser.mjs) | **11/11 vérifications** : remappage réel, WebAudio, combo courant, pause, pack 42/42, recharge sans réseau, mise à jour conservant le pack, portée du worker, libération du cache et réglages à 390 px |
-| [`combat-browser.mjs`](../tests/combat-browser.mjs) | **11/11 vérifications** : navigation, codex/archives, réglages, clavier J1/J2, pause, défi, calibration et lancement dans CainOS, commandes tactiles à 390 px |
-| [`combat-progression-browser.mjs`](../tests/combat-progression-browser.mjs) | **10/10 vérifications** : match et replay, transitions arcade/boss/survie, profils, imports refusés, stockage indisponible et distribution autonome |
+| [`combat-browser.mjs`](../tests/combat-browser.mjs) | **12/12 vérifications** : navigation, codex/archives, réglages, clavier J1/J2, pause, défi, calibration et lancement dans le build CainOS, trois fermetures/réouvertures du même duel et tactile à 390 px |
+| [`combat-progression-browser.mjs`](../tests/combat-progression-browser.mjs) | **15/15 vérifications** : 21 résultats joués (local 1, arcade 6, boss 4, survie 10), replay exact, trois médailles, présentation différée/passage direct, sauvegarde immédiate et attribution unique, export/réimport du même profil, rechargement et distribution autonome |
 | [`combat-profile-recovery-browser.mjs`](../tests/combat-profile-recovery-browser.mjs) | **5/5 vérifications** : checkpoint incompatible au démarrage et entre deux onglets, persistance des réglages et du profil, défi Spécialiste réellement accompli, import invalide refusé |
 | [`combat-recovery-browser.mjs`](../tests/combat-recovery-browser.mjs) | **3/3 vérifications** : erreur HTTP 503 pendant la première installation, nouvelle tentative dans l’interface, profil conservé et rechargement sans réseau après téléchargement du pack |
-| [`combat-fidelity-browser.mjs`](../tests/combat-fidelity-browser.mjs) | **9/9 vérifications** : sources des 166 fiches, clavier, 12 aperçus, premières scènes des 14 histoires, replays hérités/actuels, répétition/export et vues à 390 px |
+| [`combat-fidelity-browser.mjs`](../tests/combat-fidelity-browser.mjs) | **10/10 vérifications** : sources des 166 fiches de base, clavier, 12 aperçus, premières scènes des 14 histoires, reculs hérités/actuels, piège bas 0.4.0/0.5.0, répétition/export et vues à 390 px |
 | [`combat-render-browser.mjs`](../tests/combat-render-browser.mjs) | **7/7 vérifications** : détourage de Kaufmo, couleurs des 14 premières poses idle, alpha des 7 poses animées, 12 décors, 20 projectiles/10 pièges, états masqués et mouvement réduit |
 | [`combat-costume-browser.mjs`](../tests/combat-costume-browser.mjs) | **8/8 vérifications** : 51 portraits et fiches propres, choix J1/J2 indépendants, changements rapides, clavier, entraînement sans modifier le profil et tactile à 390 px |
-| [`combat-render-poses-browser.mjs`](../tests/combat-render-poses-browser.mjs) | **10/10 vérifications** : 56 cellules, 14 bases × 12 états, 51 tenues sans rig, trois postures basses, caches séparés et simulation intacte |
+| [`combat-render-poses-browser.mjs`](../tests/combat-render-poses-browser.mjs) | **10/10 vérifications** : 56 cellules, 14 bases × 12 états, 51 tenues sans rig, deux postures basses, caches séparés et simulation intacte |
+| [`combat-training-browser.mjs`](../tests/combat-training-browser.mjs) | **8/8 vérifications** : gel/+1 image, répertoire/reset, trois vitesses, jauges indépendantes, enregistrement réel J2, lecture unique et deux boucles, limite 600, six mannequins et profil/replay inchangés à 390 px |
+| [`combat-render-sequences-browser.mjs`](../tests/combat-render-sequences-browser.mjs) | **8/8 vérifications** : 70 séquences visibles et finies, mouvement réduit, égalités neutres, 12 couches animées, pixels du sol inchangés et absence de mutation |
+| [`combat-render-jax-browser.mjs`](../tests/combat-render-jax-browser.mjs) | **9/9 vérifications** : source RGBA versionnée, huit cellules et racines, familles de palette, conservation des pixels opaques et de l’alpha, fonds blanc/cyan/sombre et dessin intact dans les deux directions |
 
-Les dix rapports finaux ne contiennent aucune erreur JavaScript consignée.
+Les treize rapports finaux ne contiennent aucune erreur JavaScript consignée.
+Dans la suite de progression, les vingt victoires CPU vérifient le délai de résultat
+de 2,2 secondes ; le duel local vérifie son passage direct. Les données du profil
+sont déjà présentes avant l’ouverture de la modale et ne sont attribuées qu’une
+fois. Les trois médailles arcade, boss et survie sont conservées après export,
+réimport et rechargement du même profil.
 Le contrôle WebAudio vérifie son fonctionnement dans Chromium sans constituer une
 écoute humaine. Les assertions, rapports et limites sont réunis dans
 [`combat-qa-evidence.json`](combat-qa-evidence.json) ; les rapports navigateur bruts
-sont écrits sous `audit-combat/`. Ces 82 contrôles ne signifient pas que les
+sont écrits sous `audit-combat/`. Ces 114 contrôles ne signifient pas que les
 14 histoires ont toutes été parcourues jusqu’à leur fin dans un navigateur :
 les 14 routes sont couvertes par les tests de progression, tandis que le parcours
 complet joué dans cette suite est celui de Jax.
@@ -563,11 +706,14 @@ COMBAT_TEST_URL=http://127.0.0.1:4178 node tests/combat-fidelity-browser.mjs
 COMBAT_TEST_URL=http://127.0.0.1:4178 node tests/combat-costume-browser.mjs
 COMBAT_TEST_URL=http://127.0.0.1:4178 node tests/combat-render-browser.mjs
 COMBAT_TEST_URL=http://127.0.0.1:4178 node tests/combat-render-poses-browser.mjs
+COMBAT_TEST_URL=http://127.0.0.1:4178 node tests/combat-training-browser.mjs
+COMBAT_TEST_URL=http://127.0.0.1:4178 node tests/combat-render-sequences-browser.mjs
+COMBAT_TEST_URL=http://127.0.0.1:4178 node tests/combat-render-jax-browser.mjs
 ```
 
 `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH` permet de choisir un exécutable Chromium
 existant. Les parcours de jeu passent par l’interface publique, les commandes et
-une vue de lecture de l’état. Les deux suites de rendu emploient également des
+une vue de lecture de l’état. Les suites de rendu emploient également des
 scènes Canvas de test et des acteurs synthétiques, sans modifier la simulation.
 Les deux suites hors ligne servent elles-mêmes le dossier `dist-combat/`, produit
 auparavant par `npm run build:combat`, et pilotent la disponibilité du réseau ainsi que le
@@ -576,7 +722,7 @@ cycle du service worker.
 Les sept planches animées du projet fournissent les dessins de repos, marche,
 parole, interaction et réaction réutilisés selon les états décrits plus haut.
 Les autres personnages et les costumes conservent des sprites entiers avec
-transformations procédurales rigides. Les animations de combat dédiées, portraits finaux, ambiances et voix,
+transformations procédurales rigides. Les animations de combat dédiées, portraits finaux, ambiances sonores et voix,
 motifs sonores encore partagés et réglage du mix restent suivis comme partiels ou
 prévus. Les 12 thèmes musicaux synthétiques sont livrés ; ils ne remplacent pas la
 validation artistique et matérielle de toute la bande sonore.

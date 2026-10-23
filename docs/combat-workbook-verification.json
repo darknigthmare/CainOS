@@ -1,5 +1,5 @@
 {
-  "createdAt": "2026-10-22T12:20:01.620Z",
+  "createdAt": "2026-10-23T07:11:51.215Z",
   "counts": {
     "fighters": 14,
     "moves": 140,
@@ -13,17 +13,19 @@
     "musicThemes": 12,
     "soundEffects": 16,
     "offlineImages": 42,
-    "offlineBytes": 47345031,
-    "features": 90,
-    "production": 389,
+    "offlineBytes": 48370710,
+    "features": 98,
+    "production": 472,
     "scenarios": 85,
-    "qa": 312
+    "qa": 387,
+    "presentationSequences": 70,
+    "animatedStages": 12
   },
   "qaSummary": {
-    "Réussi": 298,
+    "Réussi": 381,
     "Échec": 0,
     "Non exécuté": 4,
-    "À vérifier": 10
+    "À vérifier": 2
   },
   "verifiedSummary": [
     14,
@@ -36,7 +38,9 @@
     "14 routes originales",
     "56 rencontres scénarisées",
     "12 thèmes musicaux d’arènes",
-    "16 motifs sonores synthétiques"
+    "16 motifs sonores synthétiques",
+    "70 séquences de présentation",
+    "12 ambiances visuelles animées"
   ],
   "fidelityCoverage": {
     "fighters": 14,
@@ -196,59 +200,534 @@
     "Références"
   ],
   "qaEvidencePresent": true,
+  "notesPreservation": {
+    "source": "DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx",
+    "preserved": 0,
+    "formulas": 0,
+    "bySheet": {
+      "Fonctionnalités": 0,
+      "Combattants": 0,
+      "Techniques": 0,
+      "Arènes": 0,
+      "Atlas": 0,
+      "Production": 0,
+      "Scénarios": 0,
+      "QA": 0
+    },
+    "validatedBeforeWrite": true,
+    "exportRoundTripPassed": true
+  },
+  "nativeTables": [
+    {
+      "sheet": "Fonctionnalités",
+      "name": "EncoreFonctionnalites",
+      "style": "TableStyleLight1",
+      "rows": 98,
+      "filter": true
+    },
+    {
+      "sheet": "Combattants",
+      "name": "EncoreCombattants",
+      "style": "TableStyleLight1",
+      "rows": 14,
+      "filter": true
+    },
+    {
+      "sheet": "Techniques",
+      "name": "EncoreTechniques",
+      "style": "TableStyleLight1",
+      "rows": 140,
+      "filter": true
+    },
+    {
+      "sheet": "Arènes",
+      "name": "EncoreArenes",
+      "style": "TableStyleLight1",
+      "rows": 12,
+      "filter": true
+    },
+    {
+      "sheet": "Atlas",
+      "name": "EncoreAtlas",
+      "style": "TableStyleLight1",
+      "rows": 179,
+      "filter": true
+    },
+    {
+      "sheet": "Production",
+      "name": "EncoreProduction",
+      "style": "TableStyleLight1",
+      "rows": 472,
+      "filter": true
+    },
+    {
+      "sheet": "Scénarios",
+      "name": "EncoreScenarios",
+      "style": "TableStyleLight1",
+      "rows": 85,
+      "filter": true
+    },
+    {
+      "sheet": "QA",
+      "name": "EncoreQA",
+      "style": "TableStyleLight1",
+      "rows": 387,
+      "filter": true
+    },
+    {
+      "sheet": "Références",
+      "name": "EncoreReferences",
+      "style": "TableStyleLight1",
+      "rows": 47,
+      "filter": true
+    }
+  ],
   "sourceDigests": {
-    "combat/app.mjs": "91da9de00babaac7c72eb0dea51bb4cd0b5bc1f4a5375969d337c9fe1f3d61f8",
+    "combat/app.mjs": "b0db820ece23d3881170d53bdf4a128df8d2ffadf0c5dc468e768c02da60254d",
     "combat/audio.mjs": "fbce0e74431c354a01e7ebc46b75084b6c81c233c1ed3807bcac6b97d8e1329b",
     "combat/bindings.mjs": "8352b4a92afb27a85220b21feb5b7f53b34a2c4eabfedff2f400259329988969",
     "combat/costume-fidelity.mjs": "9e6a02f0fb5dcb684d05b92986833bcf79b6962961e1fcd17f68a0769cbe61b5",
-    "combat/data.mjs": "889392a6a46c9de66e62c8e711dcc4f245aa8ee5a8dca7340be3053570c8e33b",
-    "combat/engine.mjs": "cc22edd35abeff874a2bf27ff64dd669f30484e70bb3bfba4ea868dd9c8ebc1a",
-    "combat/fidelity.mjs": "4949a63ed5a0cb9b1372a67e2519a3b34836f309e077944cfa1cb033491736bf",
+    "combat/data.mjs": "16a2ebd37f06c8b8a30015b6565e070e337b08b28d8421bde7715d3b8ab78432",
+    "combat/engine.mjs": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
+    "combat/fidelity.mjs": "ec8e1ea468599c319bfd865d6ac385beb8d121da10dd64d05798920279be8ff3",
     "combat/icon.svg": "9306b192eaaa246307b0d0d13262ca21f0a913ad123eb1bc1c1adf94890ec19b",
     "combat/index.html": "a460399b3a66c087201680263277a0bcdb58d1488db7b74e84c9ec59a1b56c8c",
     "combat/input.mjs": "bd6e648180730a662fdb60ce91d93cb8b60d9ef88f01922059dd46808ad8170b",
     "combat/manifest.webmanifest": "3a7f78eb5c4cc3f7c90784a8bcba425dc91fdc1e1c401fc26b3a81f12d4534aa",
-    "combat/offline-manifest.mjs": "7e0e27876cdc8f0f1ccb23398a800c3df2091605477e1550d24990dfe1e950e2",
+    "combat/offline-manifest.mjs": "285f8adb5c9b0678e96cdce78ba65f17b2d1d31f4e668aec65239d90caadb4f1",
     "combat/offline.mjs": "704b87db56c26365c770c46df33a0ebfa6c2639d1b97df8183794dfb8417e4c9",
     "combat/progression.mjs": "a5a3d697b034146464d0c315a2a5dc5891557caf1a58ad1d8dd8551a5f585f15",
-    "combat/render-poses.mjs": "f0189e749d5901ca8310065e8188c82048b923517519dee42603050d00311be8",
+    "combat/render-poses.mjs": "44a17b62cd7304f1a81b1454e4e8b902f8712d9b0a462f92b09626e8fe554268",
     "combat/render-presentation.mjs": "370469edb54fe87cfa4f649984cf8c6dfb77419b018dbb1d8fedc432b9fe607e",
-    "combat/render.mjs": "c214b96774f7baa11427c286b8cffd3ef8be2a354a02c6ba65d4768389d4cda7",
-    "combat/session.mjs": "256aff1b2997da80d6a74f158a02908e503b859ea07644dfc604909cabd9c82c",
+    "combat/render-sequences.mjs": "1ce5fab94146618b77d46b7b16feb2af2b52eb912a992488fa5fd2e4e3b4b9af",
+    "combat/render-stage-motion.mjs": "9f2c050bd6fa65dce9b532821cf51c9febd9e834f0ceb9e44946a3d470e8ad30",
+    "combat/render.mjs": "6eed54fd6f2af59bb2207b36e06f2d0ae1e1ac554d6952ae7f39f3fc367dc7d2",
+    "combat/session.mjs": "9c2a7e2d662785a50bb8263dee8f10e8392cbeddf54dcd32b46c31aa2c1b89ec",
     "combat/sprite-catalog.mjs": "41ad2ff416eef0d9426dd8ec17218a35b0c6a016a6dbf73e8e96a1f86d1a2172",
     "combat/stories.mjs": "08c8dc0270d4aa2bfc2f79e8a4180aa4ed9dc0dfb03361e199a2c07507e17ea7",
-    "combat/style.css": "57202ac6f5c3827e621ee61e617efde7848e160288f9e03e3f22b8f89ad317d2",
+    "combat/style.css": "07e6585aba826b84cc06ea362d79d11c51f7339b0cc140d1a60e2fa1ed20c2d0",
     "combat/sw.js": "0893718df1437a22b716a27ca5fafb7e9fc18ed1fbd47f64eb43062e1199eeab",
+    "combat/training.mjs": "b36aaaea76cdb3b6e20ef95c2f52ae2be04ecf5f4421cf16f80dca97f44cfece",
     "tests/combat-audio.test.mjs": "94c7200d6b9f9970578a60b8ddadc9d90994f9c3c56dbd308cc1da24c0116ca7",
     "tests/combat-bindings.test.mjs": "21f8c5c92cb80728ebfe25588fdb2d8289fec6f8983dbe9abcbf694d2df91708",
-    "tests/combat-browser.mjs": "25c5085416211aa2f9639097f1de57bc0dcb4443bd57e336f8242fe76cc8ff6e",
+    "tests/combat-browser.mjs": "9e097294b92440b4c1ccc2007987f441a42a8a645c0619b16b21fcdbdde6ce57",
     "tests/combat-catalog.test.mjs": "a197db036d4e7faa1ea0d312f117ecd35f0a43ab9eaea428ee815f8d44ffc3c0",
     "tests/combat-costume-browser.mjs": "35a8fc69bd59d90ca55719c6063e76a0cfc5268beb7e4df7850aff616b5c81b6",
-    "tests/combat-encore-browser.mjs": "3a2f45a3d73c864be0e4da8705fa544011484bbc1600d0c9af356d7168dedc03",
+    "tests/combat-encore-browser.mjs": "9c9b2e85336032202c99e24322625f77c4847ecae99b599251e2ba4ceed93f86",
     "tests/combat-engine.test.mjs": "5fb1260ef501eadf1e55bd879d70ee872ca10ea60f78a5b807fda35f112d0485",
-    "tests/combat-fidelity-browser.mjs": "de0d5efb9c6775a7f9ac1d69592315b73929d0a1c5079d6aaf515d5f7ad0b8fb",
-    "tests/combat-fidelity.test.mjs": "777f7e9f789b7494160616bfb8edddf72209705a43d9176f2a1f9fc165f14fb5",
-    "tests/combat-offline-browser.mjs": "a2c736e0cbf7c3f1179b08667ffa2baedb6211d11a9547cfc36dfab7af021f3a",
+    "tests/combat-fidelity-browser.mjs": "f97e2610d6b50bd99dd65ae028329ecaa51ce48c24f08e48a760c18f5c00a6e5",
+    "tests/combat-fidelity.test.mjs": "acb14d43b70b93e4d70dbe08ce7753e8145dfdecee6cdf080c5c69b1097adb89",
+    "tests/combat-offline-browser.mjs": "3bb081b538a6d20d06a527c93f18bbda86855af544897de84f433b808b3c765b",
     "tests/combat-offline.test.mjs": "f070eb711be11562ef492ba17c8cc7b9cb00f7087784410e23acb62917559476",
-    "tests/combat-profile-recovery-browser.mjs": "d6ba225ae115114758d83f08d1cc2c697f164430e94b14905f146d55cd358111",
-    "tests/combat-progression-browser.mjs": "2024357b9fd071694ec8e4224d43e40b8cf7732502e6e1ef1f7b2dff20c8cc5f",
+    "tests/combat-profile-recovery-browser.mjs": "78aeb3805cd11363e9624909efc07cfe4e0f9f0c79001c9262ac9f41012332a9",
+    "tests/combat-progression-browser.mjs": "a8470b99a0e5b8c1b631fca253340a46b87d37d4180bcb55c6b42ed86b1bd902",
     "tests/combat-progression.test.mjs": "cbd27b27316563868585d25a5e1e7613ef4b0a15f42a63b2032efeb334a3f7f8",
-    "tests/combat-recovery-browser.mjs": "efbce0402d3e37d367fb61792bcf68b760ac89c7c295ee3c282138cb2537b5bd",
+    "tests/combat-recovery-browser.mjs": "f232ed6a99c38031ab1bdb5dc59e691a3d1d71b7071b1a79e8e90b2cf0457f03",
     "tests/combat-render-browser.mjs": "35d46718382ef7a949e68ba0b22fd513eb440507520c59470b7256125f068085",
+    "tests/combat-render-jax-browser.mjs": "2f82e8152c5857e4e079746d5e171cf9780e228c506cdd4f9546c0704a0351f8",
     "tests/combat-render-matte.test.mjs": "28f7b0791b9bae5ca55fedf8d84a9a3700e8555533c39b7471abe92ca7a16a4e",
-    "tests/combat-render-poses-browser.mjs": "2adc6557d8fc66bdba602ad5cccee9fdf3d3d570d6a5a7a96ed5007628fca397",
-    "tests/combat-render-poses.test.mjs": "688f4554ef4ebd54cbcc28beb43a624fa59a747c4eed351ab9ee83920179a9a8",
+    "tests/combat-render-poses-browser.mjs": "5e789f0d63d73ad4d253606537b9d0771557cf6d838d197ff006266bf3e23cb3",
+    "tests/combat-render-poses.test.mjs": "82a1f10e6acffa4ccff3ff01db5055bb158df93e9f990d9cdb338e9642f63971",
+    "tests/combat-render-sequences-browser.mjs": "683fa633943134f05758c14f9b663972d8cf5f89b5c303fdf9b2bb75c3696201",
+    "tests/combat-render-sequences.test.mjs": "573a1fbf5c3ed2fef968a7665e293f02b0f8580e561af9f5c08d43e55bff0d0a",
     "tests/combat-render.test.mjs": "12782fc6f79383dce449336c6fb88564fc26f0e735622040f3e616df2b99b1cb",
-    "tests/combat-session.test.mjs": "0b3566b48117a1fc25ae8a9a180652ec10e3ce26057d090149972399b266042d",
-    "docs/combat-qa-evidence.json": "f47f36278f29eac84514040ac8e8419a3ead63de7f9eb7d8461f897118afd2b7",
-    "scripts/build-combat-workbook.mjs": "eb74468a59600c9f000d6b02dd0fb008f14d31f5a958804ff147829e9c56fd22",
+    "tests/combat-rules.test.mjs": "131551c9a68999a92d64b616961588b03be74ac30213d478a486edd692a89101",
+    "tests/combat-session.test.mjs": "f322a6575b28861497431fdd581883dddbfbdfe06ff2453043821c1fdc86b2c3",
+    "tests/combat-training-browser.mjs": "95a819987fb8ef813d0631bdc9c8f809974bdcccc743116a394cbcc0b3f68754",
+    "tests/combat-training.test.mjs": "f1156033a8263fec59e56f097809889e447b64ab9530308f2b904c7513d37ede",
+    "docs/combat-qa-evidence.json": "56962101d3f1222a0a22cb4d004748064bdc16753112e48a28fdd17332b52dd3",
+    "scripts/build-combat-workbook.mjs": "23d678d46d891f439e4384eea0bdeb39c1c9a3b1b7ad3aa50f33a971ed08b39d",
     "docs/combat-costume-review.json": "bdc92fb854e3370aa9f38f802fc5bc648292483b31912c4241cbcc2c24178f05",
     "docs/images/gangle-palette-0.4.0.png": "bced55b513c57190ea787a3e42f243046f25aeba6517bc4c88c66a959ecfb795",
     "docs/images/shadow-preservation-0.4.0.png": "11bb5b80810400bbab6d1e35599605d119003f4001178205bce39a864c0661c4",
+    "assets/images/cainos-jax-animation-sheet-0.5.0.png": "7d40d013015ada908d34701173b5d071d559cc41432d295e4db549b624f996fb",
     "docs/images/costumes-0.4.0-page-1.png": "c36d412ef4adb34fe0b8a177be3863866727f5b91cb9df0d073f70268077500c",
     "docs/images/costumes-0.4.0-page-2.png": "f0e8655c95edf46df73ab490b8e6529e25ad2bc57619e8580a50008c06e6c5a7",
     "docs/images/costumes-0.4.0-page-3.png": "646bd96935480e9ea8f3014c16a9572f9c6ab9e6591fff48370d9c88a638560b",
     "docs/images/costumes-0.4.0-page-4.png": "88369b5badf9be203dbb758173bf5efd4ab3d2f9115ac566452f7054bffe400f",
     "docs/images/costumes-0.4.0-page-5.png": "e67cc5d7b7950fb2e718b911e0f670101bc34f72631c22296ef7c9ad780dda5f"
+  },
+  "finalVerifiedAt": "2026-10-23T07:14:07.833009+00:00",
+  "workbookSHA256": "098ed2b621c77856cf9b354d5bd7eefbbbe68e3e0ed9cb160bcab8acc9a77634",
+  "workbookBytes": 204840,
+  "formulaCount": 36,
+  "nativeStructure": {
+    "workbook": "/workspace/scratch/6484ba92a7a2/CainOS/docs/DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx",
+    "sha256": "098ed2b621c77856cf9b354d5bd7eefbbbe68e3e0ed9cb160bcab8acc9a77634",
+    "sheets": 10,
+    "nativeTables": 9,
+    "tableNamesPreserved": true,
+    "tableStylesPreserved": true,
+    "tableRangesMatchData": true,
+    "details": [
+      {
+        "sheet": "Synthèse",
+        "panesPreserved": true,
+        "columnWidthsPreserved": true,
+        "headersPreserved": false,
+        "formulaCount": 36,
+        "errors": 0,
+        "validationRanges": []
+      },
+      {
+        "sheet": "Fonctionnalités",
+        "panesPreserved": true,
+        "columnWidthsPreserved": true,
+        "headersPreserved": true,
+        "formulaCount": 0,
+        "errors": 0,
+        "validationRanges": [
+          "D6:D95",
+          "D96:D103"
+        ]
+      },
+      {
+        "sheet": "Combattants",
+        "panesPreserved": true,
+        "columnWidthsPreserved": true,
+        "headersPreserved": true,
+        "formulaCount": 0,
+        "errors": 0,
+        "validationRanges": [
+          "E6:E19",
+          "F6:F19",
+          "H6:H19"
+        ]
+      },
+      {
+        "sheet": "Techniques",
+        "panesPreserved": true,
+        "columnWidthsPreserved": true,
+        "headersPreserved": true,
+        "formulaCount": 0,
+        "errors": 0,
+        "validationRanges": [
+          "N6:N145",
+          "O6:O145"
+        ]
+      },
+      {
+        "sheet": "Arènes",
+        "panesPreserved": true,
+        "columnWidthsPreserved": true,
+        "headersPreserved": true,
+        "formulaCount": 0,
+        "errors": 0,
+        "validationRanges": [
+          "C6:C17",
+          "D6:D17",
+          "K6:K17"
+        ]
+      },
+      {
+        "sheet": "Atlas",
+        "panesPreserved": true,
+        "columnWidthsPreserved": true,
+        "headersPreserved": true,
+        "formulaCount": 0,
+        "errors": 0,
+        "validationRanges": [
+          "E6:E184",
+          "F6:F184"
+        ]
+      },
+      {
+        "sheet": "Production",
+        "panesPreserved": true,
+        "columnWidthsPreserved": true,
+        "headersPreserved": true,
+        "formulaCount": 0,
+        "errors": 0,
+        "validationRanges": [
+          "E6:E394",
+          "E395:E477"
+        ]
+      },
+      {
+        "sheet": "Scénarios",
+        "panesPreserved": true,
+        "columnWidthsPreserved": true,
+        "headersPreserved": true,
+        "formulaCount": 0,
+        "errors": 0,
+        "validationRanges": [
+          "H6:H90"
+        ]
+      },
+      {
+        "sheet": "QA",
+        "panesPreserved": true,
+        "columnWidthsPreserved": true,
+        "headersPreserved": true,
+        "formulaCount": 0,
+        "errors": 0,
+        "validationRanges": [
+          "D6:D317",
+          "D318:D392"
+        ]
+      },
+      {
+        "sheet": "Références",
+        "panesPreserved": true,
+        "columnWidthsPreserved": true,
+        "headersPreserved": true,
+        "formulaCount": 0,
+        "errors": 0,
+        "validationRanges": []
+      }
+    ],
+    "formulaErrors": 0,
+    "allChecksPassed": true
+  },
+  "notesRegression": {
+    "createdAt": "2026-10-23T07:10:41.274Z",
+    "notes": 10,
+    "sheets": 8,
+    "sortedInput": true,
+    "checks": [
+      {
+        "sheet": "Fonctionnalités",
+        "id": "INT-01",
+        "kind": "string",
+        "passed": true
+      },
+      {
+        "sheet": "Fonctionnalités",
+        "id": "INT-02",
+        "kind": "formula",
+        "passed": true
+      },
+      {
+        "sheet": "Fonctionnalités",
+        "id": "INT-03",
+        "kind": "string",
+        "passed": true
+      },
+      {
+        "sheet": "Combattants",
+        "id": "pomni",
+        "kind": "number",
+        "passed": true
+      },
+      {
+        "sheet": "Techniques",
+        "id": "pomni.light",
+        "kind": "boolean",
+        "passed": true
+      },
+      {
+        "sheet": "Arènes",
+        "id": "bigtop",
+        "kind": "string",
+        "passed": true
+      },
+      {
+        "sheet": "Atlas",
+        "id": "pomni",
+        "kind": "string",
+        "passed": true
+      },
+      {
+        "sheet": "Production",
+        "id": "ART-pomni-idle",
+        "kind": "formula",
+        "passed": true
+      },
+      {
+        "sheet": "Scénarios",
+        "id": "CH-first-impact",
+        "kind": "string",
+        "passed": true
+      },
+      {
+        "sheet": "QA",
+        "id": "QA-ENG-01",
+        "kind": "string",
+        "passed": true
+      }
+    ],
+    "rejections": [
+      {
+        "case": "duplicate",
+        "rejected": true,
+        "outputPreserved": true
+      },
+      {
+        "case": "orphan",
+        "rejected": true,
+        "outputPreserved": true
+      },
+      {
+        "case": "missing-id",
+        "rejected": true,
+        "outputPreserved": true
+      },
+      {
+        "case": "invalid-json",
+        "rejected": true,
+        "outputPreserved": true
+      },
+      {
+        "case": "invalid-type",
+        "rejected": true,
+        "outputPreserved": true
+      },
+      {
+        "case": "old-version",
+        "rejected": true,
+        "outputPreserved": true
+      },
+      {
+        "case": "missing-proof",
+        "rejected": true,
+        "outputPreserved": true
+      },
+      {
+        "case": "stale-source",
+        "rejected": true,
+        "outputPreserved": true
+      },
+      {
+        "case": "unreadable-evidence",
+        "rejected": true,
+        "outputPreserved": true
+      }
+    ],
+    "publication": {
+      "previewDirectory": "/tmp/cainos-encore-excel-20261023/regression-previews/encore-excel-fixture-output",
+      "outputDirectory": "/workspace/scratch/6484ba92a7a2/encore-excel-fixture-output",
+      "validatedBytesPreserved": true,
+      "passed": true
+    },
+    "fixturesExcludedFromDeliverable": true,
+    "builderSHA256": "23d678d46d891f439e4384eea0bdeb39c1c9a3b1b7ad3aa50f33a971ed08b39d"
+  },
+  "visualReview": {
+    "reviewedAt": "2026-10-23T07:09:55.541630+00:00",
+    "sheets": 10,
+    "findings": "Headers, numbers, status colors and visible text are legible; no clipping observed in the rendered ranges.",
+    "renders": [
+      {
+        "name": "Synthese",
+        "sha256": "24029c9f3773779208979e4a3cbf35a84ba54082579291cc9052f215e0e6f603"
+      },
+      {
+        "name": "Fonctionnalites",
+        "sha256": "41360ad255fdd03a760fc426c74c6b32c39bbd58d4bee306baf101efe09bde07"
+      },
+      {
+        "name": "Combattants",
+        "sha256": "99a1c32aadf464960e3130d2d05e65e8366e74898ac7de90a63c280dc48d38a8"
+      },
+      {
+        "name": "Techniques",
+        "sha256": "b55e5635f2ccadf1e2be2d37a92721cdd1ea275ba0b101a8fe3be4cefa88e7db"
+      },
+      {
+        "name": "Arenes",
+        "sha256": "179315ed75ec57c74c87f1a9256657ded4775d394d6d2f1258426b362e6fbaf0"
+      },
+      {
+        "name": "Atlas",
+        "sha256": "6de563c480bd5eb575debbd9fbf63f3268d0419cc1d4f586e51512a73c99d9be"
+      },
+      {
+        "name": "Production",
+        "sha256": "13ccce8196d278819a341d4b145f586248bb058ee5e166009abe1f3a7d8f82a3"
+      },
+      {
+        "name": "Scenarios",
+        "sha256": "41267bc2adb558193653a2cd893015c980e41cfb7b74b7260f49533b208adc49"
+      },
+      {
+        "name": "QA",
+        "sha256": "5469353a5f3d697268a4cc383943f09d9f349e2b0ee141d3c59c0372b245cd27"
+      },
+      {
+        "name": "References",
+        "sha256": "d304136b5e8aeb99652d6050baf7797dbecbff5ffaaf2f494bae529128b144d3"
+      }
+    ],
+    "unchangedAfterFinalBuild": true,
+    "scope": "Summary and header/first-row previews for all 10 sheets; targeted previews of the 8 new features, example sequences, all 12 ambiences, Jax, and 25 new browser checks.",
+    "details": [
+      {
+        "sheet": "Fonctionnalités",
+        "range": "A96:H98",
+        "image": "Fonctionnalites-laboratoire-05.png",
+        "sha256": "c7f2313e1761a1c72c612889550d9c8177119d8ca8cca2b121fc68de68fbd56b",
+        "reviewed": true
+      },
+      {
+        "sheet": "Fonctionnalités",
+        "range": "A99:H100",
+        "image": "Fonctionnalites-regles-sequences-05.png",
+        "sha256": "b338604e9aa22cfa46607c603da0df0aa596bce754a1fb68baec4ce8795f77cd",
+        "reviewed": true
+      },
+      {
+        "sheet": "Fonctionnalités",
+        "range": "A101:H103",
+        "image": "Fonctionnalites-ambiances-jax-notes-05.png",
+        "sha256": "0d3529b6a518d633b37afa86b5ed5d190ebcf5d7375b3b8da94f6b4419d7d54b",
+        "reviewed": true
+      },
+      {
+        "sheet": "Production",
+        "range": "C395:I399",
+        "image": "Production-sequences-05.png",
+        "sha256": "d2d5e1b7bb57f89ea2e74dedccb479bb0c952f48721a9f46778d5a081a807cc5",
+        "reviewed": true
+      },
+      {
+        "sheet": "Production",
+        "range": "C465:I476",
+        "image": "Production-ambiances-05.png",
+        "sha256": "a559dcc4edacf7c5a39570cd74bced4cca9897412fa55fa9758e54d001d73d8c",
+        "reviewed": true
+      },
+      {
+        "sheet": "Production",
+        "range": "C477:I477",
+        "image": "Production-jax-05.png",
+        "sha256": "d6eb863a1c7daf85efde598fffc750ee437ad7b5aa20490ac93f75b99661cba2",
+        "reviewed": true
+      },
+      {
+        "sheet": "QA",
+        "range": "A368:G375",
+        "image": "QA-laboratoire-05.png",
+        "sha256": "51c83fdf779dc015b3e1f266f17ab47755520e6a45c9e00fdf4a4a01671991e8",
+        "reviewed": true
+      },
+      {
+        "sheet": "QA",
+        "range": "A376:G383",
+        "image": "QA-sequences-05.png",
+        "sha256": "b878db52b7134311271d7a7dcae153bdf7d2e4e41161294d2e5b48b8c7eb2af4",
+        "reviewed": true
+      },
+      {
+        "sheet": "QA",
+        "range": "A384:G392",
+        "image": "QA-jax-05.png",
+        "sha256": "8fd1a6c234139903ae45f3a37119ce225fc20b3a9b5e0b8dc85877306a0a9f02",
+        "reviewed": true
+      }
+    ],
+    "detailsReviewedAt": "2026-10-23T07:14:07.833009+00:00"
+  },
+  "fixtureNotesExcluded": true,
+  "sourceDigestVerification": {
+    "files": 63,
+    "mismatches": 0,
+    "checkedAt": "2026-10-23T07:14:07.833009+00:00"
+  },
+  "statusMutationRestoredInExport": {
+    "featureCell": "Fonctionnalités!D6",
+    "featureValue": "Implémenté",
+    "summaryCell": "Synthèse!B15",
+    "summaryValue": 76,
+    "passed": true
   }
 }
