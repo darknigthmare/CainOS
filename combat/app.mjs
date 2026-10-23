@@ -16,6 +16,7 @@ const main = $('#main'), modal = $('#modal');
 const escapeHTML = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const number = value => Math.round(Number(value) || 0).toLocaleString('fr-FR');
 const embedded = new URLSearchParams(location.search).get('embedded') === '1' && window.parent !== window;
+const reducedMotionPreference = matchMedia('(prefers-reduced-motion: reduce)');
 let storage;
 try { storage = localStorage; } catch { storage = { getItem: () => null, setItem: () => { throw new Error('Stockage indisponible'); } }; }
 let profile = readProfile(storage);
@@ -442,7 +443,7 @@ function loop(now) {
   else if(!modal.open&&!document.hidden&&osVisible&&(!active.engine.paused||active.finished&&phase==='matchOver'))active.presentationElapsed+=dt;
   if(!modal.open&&!document.hidden&&osVisible&&(!active.engine.paused||active.finished))active.ambientElapsed+=dt;
   if(active.finished&&!active.replay&&phase==='matchOver'&&!active.resultPresented&&active.presentationElapsed>=2.2)renderMatchResult();
-  active.renderer.render(active.engine.state,{stage:active.stage,hitboxes:active.showHitboxes,reducedMotion:profile.settings.reducedMotion,presentationFrame:Math.floor(active.presentationElapsed*60),ambientFrame:Math.floor(active.ambientElapsed*60)});updateHUD();
+  active.renderer.render(active.engine.state,{stage:active.stage,hitboxes:active.showHitboxes,reducedMotion:profile.settings.reducedMotion||reducedMotionPreference.matches,presentationFrame:Math.floor(active.presentationElapsed*60),ambientFrame:Math.floor(active.ambientElapsed*60)});updateHUD();
 }
 function storeReplay() {
   if(!active.recordFrames||active.recordFrames>=72000)return false;
