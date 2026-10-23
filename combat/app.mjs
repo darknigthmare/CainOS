@@ -5,11 +5,12 @@ import { CombatRenderer, drawPortrait } from './render.mjs';
 import { InputController } from './input.mjs';
 import { BINDING_ACTIONS, DEFAULT_BINDINGS, rebindAction, formatBinding, keyLabel } from './bindings.mjs';
 import { createProgram, programEncounter, recordProgramResult, retryProgram } from './progression.mjs';
-import { STORY_NOTICE, getStoryRoute, getStoryScene, getStoryEnding } from './stories.mjs';
+import { STORY_NOTICE, getStoryRoute, getStoryEnding } from './stories.mjs';
+import { createStoryPresentation, stepStoryPresentation, skipStoryPresentation, storyPresentationMarkup, paintStoryPresentation } from './story-presentation.mjs';
 import { CombatAudio } from './audio.mjs';
 import { TrainingLab } from './training.mjs';
 import { OfflineGame } from './offline.mjs';
-import { GAME_VERSION, REPLAY_VERSIONS, SAVE_KEY, REPLAY_KEY, MODES, CHALLENGES, readProfile, saveProfile, validateProfile, cleanSettings, appendReplayFrame, validateReplay, replayInputs, createMatchStats, collectMatchStats, challengeProgress } from './session.mjs';
+import { GAME_VERSION, REPLAY_VERSIONS, replayRulesVersion, SAVE_KEY, REPLAY_KEY, MODES, CHALLENGES, readProfile, saveProfile, validateProfile, cleanSettings, appendReplayFrame, validateReplay, replayInputs, createMatchStats, collectMatchStats, challengeProgress } from './session.mjs';
 
 const $ = selector => document.querySelector(selector);
 const main = $('#main'), modal = $('#modal');
@@ -23,7 +24,7 @@ let profile = readProfile(storage);
 let profileDirty = false;
 let screen = 'home', active = null, selection = { mode:'versus', fighters:['pomni','jax'], side:0, stage:STAGES[0].id, variants:['',''], challenge:CHALLENGES[0].id };
 let codexId = 'pomni', archiveQuery = '', archivePage = 0, archiveFilter = 'all', previousTime = 0, accumulator = 0, toastTimer;
-let currentObserver, bindingCapture = null, osVisible = true;
+let currentObserver, bindingCapture = null, osVisible = true, storyReader = null;
 const PROGRAM_MODES = ['arcade', 'boss', 'survival', 'story', 'tournament'];
 const audio = new CombatAudio({ getSettings: () => profile.settings });
 const offline = new OfflineGame(() => updateOfflinePanel());
@@ -75,8 +76,8 @@ function setScreen(next) {
   if (changed && next !== 'fight') queueMicrotask(() => main.focus({ preventScroll: true }));
   syncAudio();
 }
-function showDialog(content) { modal.classList.remove('wardrobe-dialog'); $('#modal-content').innerHTML = content; if (!modal.open) modal.showModal(); else modal.querySelector('button:not(:disabled)')?.focus(); syncAudio(); }
-function closeDialog() { bindingCapture = null; modal.classList.remove('wardrobe-dialog'); modal.close(); }
+function showDialog(content, { story = false } = {}) { modal.classList.remove('wardrobe-dialog'); modal.classList.toggle('story-reader', story); if (!story) storyReader = null; $('#modal-content').innerHTML = content; if (!modal.open) modal.showModal(); else modal.querySelector('button:not(:disabled)')?.focus(); syncAudio(); }
+function closeDialog() { bindingCapture = null; storyReader = null; modal.classList.remove('wardrobe-dialog', 'story-reader'); modal.close(); }
 function title(eyebrow, heading, description='') { return `<div class="page-title"><span class="ticket-label">${escapeHTML(eyebrow)}</span><h1>${escapeHTML(heading)}</h1>${description ? `<p>${escapeHTML(description)}</p>` : ''}</div>`; }
 async function paintPortrait(canvas) {
   const item = ARCHIVE.find(f => f.id === canvas.dataset.portrait) || getFighter(canvas.dataset.portrait);
@@ -121,7 +122,7 @@ function renderSelect() {
     <div class="pick-header"><h2>Les artistes</h2><div class="pick-side"><button data-side="0" class="${selection.side===0?'active':''}">JOUEUR 1</button>${single?'':`<button data-side="1" class="${selection.side===1?'active':''}">${selection.mode==='local'?'JOUEUR 2':'ADVERSAIRE'}</button>`}</div></div>
     <div class="roster">${FIGHTERS.map(f=>`<button class="fighter-card ${selection.fighters[0]===f.id?'selected':''} ${!single&&selection.fighters[1]===f.id?'rival':''}" data-fighter="${f.id}" aria-label="Choisir ${escapeHTML(f.name)}" aria-pressed="${selection.fighters[selection.side]===f.id}">${portraitMarkup(f.id)}<strong>${escapeHTML(f.name)}</strong><small>${escapeHTML(f.role)}</small>${selection.fighters[0]===f.id?'<span class="fighter-chip">J1</span>':!single&&selection.fighters[1]===f.id?'<span class="fighter-chip p2">J2</span>':''}</button>`).join('')}</div>
     <div class="selection-summary">${selectionArtist(0)}<div class="selection-vs" aria-hidden="true">VS</div>${single?`<div class="selection-program"><h3>${selection.mode==='arcade'?'Les six actes':selection.mode==='boss'?'Les anomalies':selection.mode==='survival'?'Dix vagues':selection.mode==='story'?'Quatre chapitres':selection.mode==='tournament'?'La coupe du cirque':'Le mannequin'}</h3><p>Une succession de défis préparée par Caine.</p></div>`:selectionArtist(1)}</div>
-    <div class="selection-controls"><label class="field"><span>APPARENCE JOUEUR 1</span><select id="variant-0">${variantOptions(0)}</select></label>${single?'':`<label class="field"><span>APPARENCE ${selection.mode==='local'?'JOUEUR 2':'ADVERSAIRE'}</span><select id="variant-1">${variantOptions(1)}</select></label>`}<label class="field"><span>DIFFICULTÉ CPU</span><select id="select-difficulty">${[['easy','Détente'],['normal','Équilibrée'],['hard','Exigeante']].map(([id,name])=>`<option value="${id}" ${profile.settings.difficulty===id?'selected':''}>${name}</option>`).join('')}</select></label><button class="primary" data-action="start">LEVER LE RIDEAU ↗</button></div>
+    ${selection.mode==='story'?storyLibraryMarkup(selected[0].id):''}<div class="selection-controls"><label class="field"><span>APPARENCE JOUEUR 1</span><select id="variant-0">${variantOptions(0)}</select></label>${single?'':`<label class="field"><span>APPARENCE ${selection.mode==='local'?'JOUEUR 2':'ADVERSAIRE'}</span><select id="variant-1">${variantOptions(1)}</select></label>`}<label class="field"><span>DIFFICULTÉ CPU</span><select id="select-difficulty">${[['easy','Détente'],['normal','Équilibrée'],['hard','Exigeante']].map(([id,name])=>`<option value="${id}" ${profile.settings.difficulty===id?'selected':''}>${name}</option>`).join('')}</select></label><button class="primary" data-action="start">LEVER LE RIDEAU ↗</button></div>
     <div class="section-heading"><h2>Le décor</h2><span>${selection.mode==='story'?'LES SCÈNES SUIVENT L’HISTOIRE':PROGRAM_MODES.includes(selection.mode)?'DÉCOR DU PREMIER DUEL':'ARÈNES SANS DANGER ALÉATOIRE'}</span></div><div class="stages">${STAGES.map((stage,i)=>`<button class="stage-card ${previewStage.id===stage.id?'selected':''}" data-stage="${stage.id}" ${selection.mode==='story'?'disabled':''} aria-pressed="${previewStage.id===stage.id}" style="--stage-color:${stage.palette.accent}"><b>${escapeHTML(stage.name)}</b><span>SCÈNE ${String(i+1).padStart(2,'0')}</span></button>`).join('')}</div><section class="stage-preview" aria-labelledby="stage-preview-title"><canvas id="stage-preview" role="img" aria-label="Aperçu : ${escapeHTML(previewStage.name)}" data-stage-preview="${previewStage.id}"></canvas><div><span class="eyebrow">${selection.mode==='story'?'PREMIER CHAPITRE':'PROCHAINE SCÈNE'}</span><h3 id="stage-preview-title">${escapeHTML(previewStage.name)}</h3><p>${escapeHTML(previewStage.description)}</p>${fidelityDetails(previewStage.fidelity,'Repères du décor','stage-fidelity')}</div></section><p class="small-note">Les apparences proviennent des archives de CainOS. Les capacités et leurs valeurs sont des adaptations pour le combat. Les anciens membres et formes abstraites sont des adversaires simulés dans ce mode libre.</p>`;
   new CombatRenderer($('#stage-preview')).render(null,{stage:previewStage,reducedMotion:true});
   portraits();
@@ -168,7 +169,7 @@ async function showAppearance(id, restoreSelect=false) {
 function fidelityDetails(record, label, className='') {
   if (!record) return '';
   const references = getFidelitySources(record.sourceIds);
-  return `<details class="fidelity-details ${className}"><summary>${escapeHTML(label)}</summary><div class="fidelity-copy">${record.observedTraits?.length ? `<ul>${record.observedTraits.map(trait=>`<li>${escapeHTML(trait)}</li>`).join('')}</ul>` : ''}<p><strong>Dans Encore.</strong> ${escapeHTML(record.combatAdaptation)}</p><p class="fidelity-scope">${escapeHTML(record.reviewScope)}</p>${references.length ? `<ul class="fidelity-sources" aria-label="Sources de référence">${references.map(source=>`<li><a href="${escapeHTML(source.url)}" target="_blank" rel="noopener noreferrer">${escapeHTML(source.title)} <span aria-hidden="true">↗</span></a></li>`).join('')}</ul>` : ''}</div></details>`;
+  return `<details class="fidelity-details ${className}"><summary>${escapeHTML(label)}</summary><div class="fidelity-copy"><p class="small-note fidelity-review-status">${escapeHTML(record.reviewStatus || '')}</p>${record.observedTraits?.length ? `<ul>${record.observedTraits.map(trait=>`<li>${escapeHTML(trait)}</li>`).join('')}</ul>` : ''}<p><strong>Dans Encore.</strong> ${escapeHTML(record.combatAdaptation)}</p><p class="fidelity-scope">${escapeHTML(record.reviewScope)}</p>${references.length ? `<ul class="fidelity-sources" aria-label="Sources de référence">${references.map(source=>`<li><a href="${escapeHTML(source.url)}" target="_blank" rel="noopener noreferrer">${escapeHTML(source.title)} <span aria-hidden="true">↗</span></a></li>`).join('')}</ul>` : ''}</div></details>`;
 }
 function costumeReviewDetails(review) {
   if (!review) return '';
@@ -334,7 +335,7 @@ async function startMatch(options={}) {
     profile.program = run; persist();
   }
   const challenge = mode==='challenge' ? CHALLENGES.find(c=>c.id===selection.challenge) : null;
-  const matchConfig = {fighters,stage,rulesVersion:options.replay?.version||GAME_VERSION,mode:mode==='training'||mode==='challenge'?'training':mode==='local'?'local':'versus',cpu:config?.cpu||[false,!['local','training','challenge'].includes(mode)],difficulty:config?.difficulty||run?.difficulty||profile.settings.difficulty,seed:config?.seed??encounter?.seed??crypto.getRandomValues(new Uint32Array(1))[0],roundTime:config?.roundTime||run?.roundTime||profile.settings.seconds,roundsToWin:config?.roundsToWin||(run?1:profile.settings.rounds)};
+  const matchConfig = {fighters,stage,rulesVersion:replayRulesVersion(options.replay?.version||GAME_VERSION),mode:mode==='training'||mode==='challenge'?'training':mode==='local'?'local':'versus',cpu:config?.cpu||[false,!['local','training','challenge'].includes(mode)],difficulty:config?.difficulty||run?.difficulty||profile.settings.difficulty,seed:config?.seed??encounter?.seed??crypto.getRandomValues(new Uint32Array(1))[0],roundTime:config?.roundTime||run?.roundTime||profile.settings.seconds,roundsToWin:config?.roundsToWin||(run?1:profile.settings.rounds)};
   const engine = new CombatEngine(matchConfig);
   const initialHealth = config?.initialHealth || encounter?.initialHealth || [10000,10000];
   engine.state.fighters.forEach((f,i)=>{f.life=initialHealth[i];});
@@ -354,8 +355,45 @@ function showStoryScene() {
   const run = active?.run;
   if (!run || run.mode !== 'story' || active.finished) return;
   active.engine.pause(); controls.clear();
-  const route = getStoryRoute(run.playerId), scene = getStoryScene(run.playerId,run.index);
-  showDialog(`<span class="ticket-label">HISTOIRE · CHAPITRE ${run.index+1}/${route.chapters.length}</span><h2 id="modal-title">${escapeHTML(scene.title)}</h2>${run.index===0?`<p class="story-intro">${escapeHTML(route.intro)}</p>`:''}<p class="result-copy">${escapeHTML(scene.summary)}</p><div class="story-dialogue">${scene.dialogue.map(line=>`<blockquote><strong>${escapeHTML(line.speaker)}</strong><p>${escapeHTML(line.text)}</p></blockquote>`).join('')}</div><p class="small-note">${escapeHTML(STORY_NOTICE)}</p><div class="modal-actions"><button class="primary" data-action="story-start">ENTRER EN SCÈNE ↗</button><button class="secondary" data-action="home">Reprendre plus tard</button></div>`);
+  storyReader = { presentation:active.storyPresentation || createStoryPresentation(run.playerId,'chapter',run.index), origin:'match' };
+  renderStoryReader();
+}
+function storyLibraryMarkup(fighterId) {
+  const route = getStoryRoute(fighterId), completed = profile.stories.includes(fighterId);
+  return `<section class="story-library" aria-labelledby="story-library-title"><div><span class="eyebrow">UNE HISTOIRE EN QUATRE RENCONTRES</span><h2 id="story-library-title">${escapeHTML(route.title)}</h2><p>${escapeHTML(STORY_NOTICE)}. Prologue et épilogue en trois tableaux chacun.</p></div><div class="story-library-actions"><button class="secondary" data-action="story-preview">Lire le prologue</button><button class="secondary" data-action="story-ending-library" ${completed?'':'disabled'} aria-describedby="story-ending-access">Relire l’épilogue</button><small id="story-ending-access">${completed?'Épilogue débloqué · lecture libre sans résultat supplémentaire':'Termine les quatre rencontres pour débloquer l’épilogue.'}</small></div></section>`;
+}
+function openStoryReader(fighterId, kind, origin) {
+  const presentation = createStoryPresentation(fighterId,kind);
+  if (!presentation) return;
+  storyReader = { presentation, origin }; renderStoryReader();
+}
+function renderStoryReader() {
+  if (!storyReader) return;
+  const { presentation, origin } = storyReader;
+  if (origin === 'match' && active) active.storyPresentation = presentation;
+  const leaveLabel = origin === 'match' ? 'Reprendre plus tard' : origin === 'result' ? 'Retour au résultat' : 'Retour à l’affiche';
+  showDialog(storyPresentationMarkup(presentation,{leaveLabel}),{story:true});
+  modal.scrollTop = 0;
+  modal.querySelector('.story-actions .primary')?.focus({preventScroll:true});
+  void paintStoryPresentation(modal,presentation.panels[presentation.index]);
+}
+function moveStoryReader(delta) {
+  if (!storyReader) return;
+  storyReader.presentation = stepStoryPresentation(storyReader.presentation,delta); renderStoryReader();
+}
+function leaveStoryReader() {
+  if (!storyReader) return;
+  const { origin, presentation } = storyReader;
+  closeDialog();
+  if (origin === 'match') renderHome();
+  else if (origin === 'result') renderMatchResult();
+  else main.querySelector(`[data-action="${presentation.kind==='epilogue'?'story-ending-library':'story-preview'}"]`)?.focus({preventScroll:true});
+}
+function skipStoryReader() {
+  if (!storyReader) return;
+  const next = skipStoryPresentation(storyReader.presentation);
+  if (next) { storyReader.presentation=next; renderStoryReader(); }
+  else leaveStoryReader();
 }
 function bracketMarkup(run) {
   const name = id => id ? escapeHTML(getFighter(id).name) : 'À déterminer';
@@ -480,8 +518,12 @@ function renderMatchResult() {
   active.resultPresented=true; $('.outcome-skip')?.remove();
   const won = active.won, run = active.run, next = active.pendingNext;
   const continuing = next?.status === 'active', completed = next?.status === 'complete';
+  if (completed && active.mode === 'story' && !active.storyEndingPresented) {
+    active.storyEndingPresented = true;
+    openStoryReader(run.playerId,'epilogue','result'); return;
+  }
   const titleText = active.mode==='local' ? (active.engine.state.winner>=0?`${active.fighters[active.engine.state.winner].name} remporte le duel`:'Le duel se termine sur une égalité') : won ? 'Le public en redemande.' : 'Un autre numéro t’attend.';
-  const ending = completed && active.mode==='story' ? `<section class="story-ending"><h3>Épilogue · ${escapeHTML(getStoryRoute(run.playerId).title)}</h3><p>${escapeHTML(getStoryEnding(run.playerId))}</p><span class="small-note">${escapeHTML(STORY_NOTICE)}</span></section>` : '';
+  const ending = completed && active.mode==='story' ? `<section class="story-ending"><h3>Épilogue · ${escapeHTML(getStoryRoute(run.playerId).title)}</h3><p>${escapeHTML(getStoryEnding(run.playerId))}</p><span class="small-note">${escapeHTML(STORY_NOTICE)}</span><button class="secondary" data-action="story-ending-result">Relire les trois tableaux</button></section>` : '';
   showDialog(`<span class="ticket-label">${won?'RAPPEL !':'FIN DE L’ACTE'}</span><h2 id="modal-title">${escapeHTML(titleText)}</h2>
     <p class="result-copy">${run?`${run.index+1}/${run.opponents.length} rencontres. `:''}${continuing?'La prochaine scène est prête et sauvegardée.':completed?'Le programme est terminé. Une médaille a été ajoutée au profil.':run&&['tournament','survival'].includes(active.mode)?'Ce parcours est terminé. Rejouer démarre une nouvelle tentative.':active.replaySaved?'Le duel a été enregistré dans les replays locaux.':'Le duel est terminé. Son replay n’a pas pu être conservé.'}${continuing&&active.mode==='survival'?` Santé au prochain duel : ${number(next.health)}.`:''}</p>
     ${resultStats(active.stats[0])}${ending}
@@ -529,6 +571,7 @@ function captureBinding(button) {
 }
 function navigateMenu(action) {
   if(bindingCapture||document.hidden||!osVisible)return;
+  if(storyReader&&action==='back'){leaveStoryReader();return;}
   if(action==='back'){
     if(modal.open){if(active&&screen==='fight'){if(!active.finished)resumeGame();}else closeDialog();}
     else if(screen!=='home')navigate('home');
@@ -586,7 +629,14 @@ async function handleClick(event){
       case 'start':await requestStart();break;
       case 'start-new':await startMatch();break;
       case 'resume-program':if(profile.program)await startMatch({mode:profile.program.mode,run:profile.program});break;
-      case 'story-start':active.storyPending=false;resumeGame();break;
+      case 'story-start':if(active?.storyPending&&storyReader?.presentation.panels[storyReader.presentation.index].kind==='chapter'){active.storyPending=false;resumeGame();}break;
+      case 'story-next':moveStoryReader(1);break;
+      case 'story-prev':moveStoryReader(-1);break;
+      case 'story-skip':skipStoryReader();break;
+      case 'story-done':case 'story-leave':leaveStoryReader();break;
+      case 'story-preview':openStoryReader(selection.fighters[0],'prologue','library');break;
+      case 'story-ending-library':if(profile.stories.includes(selection.fighters[0]))openStoryReader(selection.fighters[0],'epilogue','library');break;
+      case 'story-ending-result':if(active?.mode==='story'&&active.pendingNext?.status==='complete')openStoryReader(active.run.playerId,'epilogue','result');break;
       case 'bracket':showBracket();break;
       case 'result-screen':renderMatchResult();break;
       case 'reset-bindings':profile.settings=cleanSettings({...profile.settings,bindings:DEFAULT_BINDINGS});persist();renderSettings();toast('Touches par défaut rétablies.');break;
@@ -666,10 +716,16 @@ let searchTimer;
 document.addEventListener('input',event=>{if(event.target.id==='archive-search'){archiveQuery=event.target.value;clearTimeout(searchTimer);searchTimer=setTimeout(()=>{archivePage=0;renderArchives();const input=$('#archive-search');input.focus();input.setSelectionRange(input.value.length,input.value.length);},200);}});
 modal.addEventListener('cancel',event=>{
   event.preventDefault();
+  if(storyReader){leaveStoryReader();return;}
   if(active&&screen==='fight'){
     // Results contain the only continuation controls for a campaign or replay.
     if(!active.finished)resumeGame();
   }else closeDialog();
+});
+modal.addEventListener('keydown',event=>{
+  if(!storyReader||event.altKey||event.ctrlKey||event.metaKey||event.shiftKey||!['ArrowLeft','ArrowRight'].includes(event.key))return;
+  if(event.target.closest('input,select,textarea,summary,a'))return;
+  event.preventDefault();moveStoryReader(event.key==='ArrowLeft'?-1:1);
 });
 window.addEventListener('blur',()=>{if(active&&screen==='fight'&&!active.finished&&!modal.open)pauseGame('La fenêtre a perdu le focus. Reprends lorsque tu es prêt.');});
 document.addEventListener('visibilitychange',()=>{if(document.hidden&&active&&!active.finished)pauseGame('Le jeu a été masqué. La rencontre est suspendue.');syncAudio();});

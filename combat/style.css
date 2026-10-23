@@ -102,6 +102,36 @@ canvas[data-portrait]{object-fit:contain}
 .training-histories li:last-child{border-bottom:0}.training-histories li span{overflow-wrap:anywhere}.training-histories b{white-space:nowrap;color:var(--gold);font-weight:400}
 .outcome-skip{position:absolute;bottom:6%;left:50%;transform:translateX(-50%);z-index:5;font-size:12px;min-height:42px}
 .skip-link:not(:focus){width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+
+/* Story tableaux reuse the existing scenery and character illustrations. */
+.story-library{display:flex;justify-content:space-between;align-items:center;gap:28px;padding:22px;margin:0 0 22px;border:1px solid #96764e;border-radius:6px;background:#302338}
+.story-library h2{font-size:24px;line-height:1.25;margin:9px 0}.story-library p{font-size:12px;line-height:1.7;color:var(--muted);margin:0;max-width:560px}
+.story-library-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px;max-width:430px}.story-library-actions button{font-size:10px;min-height:44px}.story-library-actions small{grid-column:1/-1;font-size:10px;line-height:1.6;color:var(--muted)}
+.story-library-actions button:disabled{opacity:.5;cursor:default}
+dialog.story-reader{width:min(96vw,1180px);padding:24px;max-height:94dvh;overflow:auto;background:#211927;border-color:#987b59;scroll-behavior:auto}
+.story-page{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);gap:22px 28px;min-width:0}
+.story-header{grid-column:1/-1;display:flex;justify-content:space-between;align-items:start;gap:18px;border-bottom:1px solid var(--line);padding-bottom:16px}
+.story-route-title{font-size:14px;line-height:1.4;color:var(--paper);margin:9px 0 0}.story-counter{font:10px/1.6 var(--mono);color:var(--gold);white-space:nowrap;margin:2px 0 0}
+.story-tableau{margin:0;min-width:0;align-self:start;position:sticky;top:0}.story-tableau figcaption{font:9px/1.6 var(--mono);color:var(--muted);padding-top:10px}
+.story-visual{position:relative;isolation:isolate;aspect-ratio:1/1;overflow:hidden;border:1px solid #806049;border-radius:4px;background:#15101c}
+.story-backdrop{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;filter:brightness(.72)}
+.story-cast{position:absolute;inset:4% 2% 5%;display:flex;align-items:end;justify-content:center;gap:0}
+.story-actor{display:block;flex:0 1 55%;min-width:0;width:55%;height:94%;object-fit:contain;filter:drop-shadow(0 10px 6px #0006)}
+.story-actor+.story-actor{margin-left:-8%}.story-location{position:absolute;left:14px;bottom:12px;max-width:calc(100% - 28px);padding:5px 9px;border:1px solid #b7935980;border-radius:2px;background:#17101de8;font:9px/1.6 var(--mono);color:#fae7bc;overflow-wrap:anywhere}
+.story-layout-solo .story-actor{flex-basis:90%;width:90%;height:100%}
+.story-layout-focus-left .story-actor-0,.story-layout-focus-right .story-actor-1{flex-basis:68%;width:68%;height:100%;z-index:1}
+.story-layout-focus-left .story-actor-1,.story-layout-focus-right .story-actor-0{flex-basis:43%;width:43%;height:67%;margin-bottom:10%}
+.story-layout-ensemble .story-actor{flex-basis:40%;width:40%;height:78%}.story-layout-ensemble .story-actor-1{height:100%;z-index:1}.story-layout-ensemble .story-actor+.story-actor{margin-left:-9%}
+.story-layout-wide .story-actor-0{flex-basis:88%;width:88%;height:100%}.story-layout-wide .story-actor-1{flex-basis:30%;width:30%;height:48%;z-index:1;margin-bottom:4%}
+.story-layout-archive .story-actor-0{height:83%;align-self:center;flex-basis:65%;width:65%;border:5px double #b49b70;background:#191520b3;padding:10px}.story-layout-archive .story-actor-1{height:58%;flex-basis:40%;width:40%;z-index:1}
+.story-copy{min-width:0}.story-copy h2{font-size:clamp(24px,2.4vw,33px);line-height:1.15;margin:0 0 16px;letter-spacing:-.7px}.story-copy .story-narration{font-size:14px;line-height:1.8;margin:0 0 18px;color:#d9cbd7}
+.story-copy .story-dialogue{gap:10px}.story-copy .story-dialogue blockquote{padding:12px 16px;background:#302237;border:0;border-left:2px solid #987b59;border-radius:0 4px 4px 0}.story-copy .story-dialogue p{font-size:14px;line-height:1.65}.story-copy .story-intro{font-size:12px;padding:12px;margin:0 0 16px}
+.story-silence{font:11px/1.7 var(--mono);color:var(--muted);padding:16px 0}.story-notice{font-size:10px;line-height:1.6;color:#c4b3bf;margin:18px 0 12px}
+.story-actions{display:grid;grid-template-columns:1fr 1.3fr;gap:8px}.story-actions button{font-size:11px;min-height:44px;padding:12px 10px;line-height:1.4}.story-actions button:disabled{opacity:.35;cursor:default}.story-actions .text-button{font-size:10px;text-align:left;color:#dac4cf}
+.story-keyboard{font:9px/1.7 var(--mono);color:var(--muted);margin:10px 0 0}.story-references{margin:16px 0 0;font-size:11px;background:#19121f}.story-art-status{font-size:11px;line-height:1.5;color:var(--gold)}
+.story-ending>button{margin-top:14px;display:block}
+@media(max-width:800px){.story-library{align-items:stretch;flex-direction:column;gap:16px}.story-library-actions{max-width:none}.story-page{grid-template-columns:minmax(0,1fr);gap:18px}.story-tableau{position:static}.story-visual{aspect-ratio:16/9}.story-header{gap:12px}.story-copy h2{font-size:28px}.story-copy .story-narration{font-size:13px}.story-cast{inset:2% 8% 4%}.story-actor{max-width:45%;height:100%}.story-layout-solo .story-actor{max-width:70%}.story-layout-archive .story-actor-0{max-width:50%;padding:4px}.story-layout-ensemble .story-actor{max-width:35%}.story-tableau figcaption{font-size:8px}}
+@media(max-width:540px){dialog.story-reader{padding:15px;width:96vw;max-height:95dvh}.story-page{gap:14px}.story-header{padding-bottom:12px}.story-header .ticket-label{font-size:8px;letter-spacing:1px}.story-route-title{font-size:12px}.story-counter{font-size:9px}.story-copy h2{font-size:25px}.story-copy .story-dialogue p{font-size:13px}.story-copy .story-dialogue blockquote{padding:11px 13px}.story-location{font-size:7px;padding:3px 6px;bottom:7px;left:8px}.story-keyboard{display:none}.story-actions button{font-size:10px}.story-library{padding:16px}.story-library h2{font-size:22px}.story-library-actions{grid-template-columns:1fr 1fr}.story-library-actions button{padding:10px 8px;font-size:9px}.story-visual{aspect-ratio:4/3}}
 @media(max-width:600px){
   .training-lab{padding:13px;margin-top:12px}.training-heading{align-items:start;gap:10px}.training-heading h2{font-size:17px;line-height:1.3}.training-heading .small-note{font-size:9px;max-width:100px;line-height:1.7}
   .training-lab .training-panel{gap:10px 13px}.training-lab label{font-size:10px}.training-actions button{font-size:10px;padding:10px 11px;min-height:42px}
