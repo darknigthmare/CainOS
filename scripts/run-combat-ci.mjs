@@ -43,7 +43,8 @@ const reportFile = path.join(output, 'evidence-' + GAME_VERSION + '.json');
 async function save() { await fs.writeFile(reportFile, JSON.stringify(report, null, 2) + '\n'); }
 async function run(file, extraEnv = {}, label = file) {
   const started = Date.now();
-  const child = spawn(process.execPath, [file], { cwd: root, env: { ...process.env, ...extraEnv }, stdio: ['ignore', 'pipe', 'pipe'] });
+  const args = file.endsWith('.test.mjs') ? ['--test', '--test-reporter=tap', file] : [file];
+  const child = spawn(process.execPath, args, { cwd: root, env: { ...process.env, ...extraEnv }, stdio: ['ignore', 'pipe', 'pipe'] });
   let transcript = '', timedOut = false;
   const append = chunk => { transcript += chunk; process.stdout.write(chunk); };
   child.stdout.on('data', append); child.stderr.on('data', append);
@@ -59,7 +60,7 @@ async function run(file, extraEnv = {}, label = file) {
 
 const nodeFiles = (await fs.readdir('tests')).filter(name => /^combat-.*\.test\.mjs$/.test(name)).sort();
 for (const name of nodeFiles) {
-  const result = await run('tests/' + name, { NODE_TEST_REPORTER: 'tap' });
+  const result = await run('tests/' + name);
   const testNames = [...result.transcript.matchAll(/^# Subtest: (.+)$/gm)].map(match => match[1]);
   const count = Number(result.transcript.match(/^# tests (\d+)$/m)?.[1] ?? testNames.length);
   const passedCount = Number(result.transcript.match(/^# pass (\d+)$/m)?.[1] ?? 0);
