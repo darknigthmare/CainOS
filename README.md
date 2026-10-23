@@ -40,7 +40,9 @@ round victory/defeat and match victory/defeat, for **70 sequences**. The result 
 saved immediately when a match ends; its presentation lasts 2.2 seconds and can
 be skipped with **Voir le résultat**. **Twelve stage-specific ambient layers** play
 behind the actors without changing the floor or simulation. Reduced motion shows
-static presentations. These motions reuse illustrations; dedicated combat
+static presentations when either the system preference or the game's setting is
+enabled. System changes take effect during play without altering the saved
+setting. These motions reuse illustrations; dedicated combat
 animation remains a separate production task. See
 [render-sequences.mjs](combat/render-sequences.mjs) and
 [render-stage-motion.mjs](combat/render-stage-motion.mjs).
@@ -127,7 +129,7 @@ On HTTPS or localhost, open **Réglages → Télécharger le spectacle** and wai
 all **42 sprite sheets** to be available. The illustration pack is
 **48,370,710 bytes**, as recorded in
 [combat/offline-manifest.mjs](combat/offline-manifest.mjs), with offline build
-**`0.5.0-8ce2171ba557`**. Jax's new illustration replaces its historical sheet in
+**`0.5.0-2d1c99a767c6`**. Jax's new illustration replaces its historical sheet in
 this pack, so the image count remains 42. Installation is offered
 when supported by the browser. Use the installed shortcut or the direct
 `/combat/index.html?standalone=1` address for an offline visit.
@@ -176,24 +178,36 @@ npm run qa
 
 This runs the existing CainOS audits, combat behavioral tests, syntax checks,
 offline-manifest generation and both static builds. The recorded Node result for
-0.5.0 is **235 passing tests across fourteen suites**, measured by executing every
-test file directly and reading its actual case names and counts. These include
+0.5.0 is **235 passing tests across fourteen suites**, rerun after the review fixes
+and manifest regeneration by executing every test file directly and reading its
+actual case names and counts. These include
 sixteen versioned-rule checks, fourteen training checks and eleven checks for the
 sequences and stage ambiences. Runtime and illustration hashes remained unchanged
 through that run.
 
-The thirteen browser reports total **114 passing checks**.
+The browser evidence totals **117 passing checks**: **114 checks in thirteen
+suites on reference commit `12b5987`**, followed by **three targeted checks** of the
+reduced-motion correction. The latter verify system preference alone, live system
+changes without altering the profile, and the game's setting alone. The thirteen
+complete browser suites were not rerun after this Canvas preference correction.
 The detailed table in the combat documentation separates played UI flows from
 Canvas fixtures, legacy replays, installation recovery and offline reloads. The
-new training laboratory has eight checks, the finite sequences and ambiences have
-eight, and Jax has nine. All 51 costumes remain covered by the wardrobe suite.
-These checks do not certify full canonical 1:1 visual fidelity or physical-device
-compatibility.
+training laboratory has eight checks, the finite sequences and ambiences have
+eight, and Jax has nine. All 51 costumes are covered by the reference wardrobe
+suite. These checks do not certify full canonical 1:1 visual fidelity or
+physical-device compatibility.
 
 The Excel tracker contains **10 sheets, 9 tables, 98 features, 472 production tasks,
-85 scenarios and 387 QA rows**: 235 Node cases, 114 browser checks and 38 review
-objectives. Its current statuses are **381 passed, 2 awaiting verification and
+85 scenarios and 390 QA rows**: 235 Node cases, 117 browser checks and 38 review
+objectives. Its current statuses are **384 passed, 2 awaiting verification and
 4 not executed**. QA rows include review and manual-device tasks as well as
 automated cases; they are not all independent automated tests.
+
+Workbook export now isolates temporary files in a unique directory and cleans
+its temporary sources and publication copies on success or failure. Four focused
+checks cover success and injected export, validation and partial-copy failures;
+they preserve the preview PNGs and unrelated files, and preserve the three
+existing deliverables in all three failure cases.
+
 See the [combat documentation](docs/DIGITAL_CIRCUS_ENCORE.md) and
 [QA evidence](docs/combat-qa-evidence.json) for exact scope, requirements and limits.
