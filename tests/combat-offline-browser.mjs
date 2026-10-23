@@ -3,7 +3,7 @@
  * the static test server; no application/engine mutation hooks are used.
  */
 import assert from 'node:assert/strict';
-import { ART_BYTES } from '../combat/offline-manifest.mjs';
+import { ART_BYTES, ART_FILES } from '../combat/offline-manifest.mjs';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import http from 'node:http';
@@ -123,10 +123,10 @@ try{
   await settings();
   await page.locator('[data-action="offline-prepare"]').click();
   await page.waitForFunction(()=>window.Encore.offline.complete&&!window.Encore.offline.busy,null,{timeout:60000});
-  assert.equal(await page.evaluate(()=>window.Encore.offline.cached),42);
+  assert.equal(await page.evaluate(()=>window.Encore.offline.cached),ART_FILES.length);
   const saved=await page.evaluate(()=>window.Encore.profile);
   await page.screenshot({path:path.join(output,'encore-settings.png'),fullPage:true});
-  checked('The standalone downloads all 42 original sprite sheets',`${ART_BYTES.toLocaleString('en-US')} bytes; explicit UI action and completion state`);
+  checked(`The standalone downloads all ${ART_FILES.length} sprite sheets`,`${ART_BYTES.toLocaleString('en-US')} bytes; explicit UI action and completion state`);
 
   await context.setOffline(true);
   await page.goto(base+'/combat/index.html?standalone=1',{waitUntil:'networkidle'});
@@ -157,7 +157,7 @@ try{
   assert.equal(await page.evaluate(()=>window.Encore.offline.update),false);
   assert.equal(await page.evaluate(()=>window.Encore.offline.complete),true);
   assert.deepEqual(await page.evaluate(()=>window.Encore.profile),saved);
-  checked('A waiting service worker updates only through the UI and preserves the unchanged art pack','No automatic reload; all 42 images and the profile survive activation');
+  checked('A waiting service worker updates only through the UI and preserves the unchanged art pack',`No automatic reload; all ${ART_FILES.length} images and the profile survive activation`);
 
   const scope=await page.evaluate(async()=>{const r=await navigator.serviceWorker.getRegistration();return new URL(r.scope).pathname;});
   assert.equal(scope,'/combat/');

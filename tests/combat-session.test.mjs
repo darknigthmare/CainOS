@@ -111,7 +111,7 @@ test('replay import validates version, roster, rules and carried survival health
 });
 
 test('replay validation and repeated JSON export preserve each supported rules version', () => {
-  assert.deepEqual(REPLAY_VERSIONS, ['0.1.0', '0.2.0', '0.3.0', '0.4.0', '0.5.0']);
+  assert.deepEqual(REPLAY_VERSIONS, ['0.1.0', '0.2.0', '0.3.0', '0.4.0', '0.5.0', '0.6.0']);
   for (const version of REPLAY_VERSIONS) {
     const original = replayFixture({ version, runs: [[90, 0, 0], [1, packInput({ slot: 'specialBack' }), 0], [45, 0, 0]] });
     const imported = validated(original);
@@ -121,7 +121,7 @@ test('replay validation and repeated JSON export preserve each supported rules v
     assert.deepEqual([...replayInputs(reimported)], [...replayInputs(original)]);
     assert.equal(original.frames, undefined, 'validation must not mutate the input file');
   }
-  for (const version of [null, 3, '0.0.0', '0.6.0', '0.3.1']) {
+  for (const version of [null, 3, '0.0.0', '0.7.0', '0.3.1']) {
     assert.throws(() => validated(replayFixture({ version })), /incompatible/);
   }
 });
