@@ -37,7 +37,7 @@ async function isolatedContext(options) {
 }
 const context = await browser.newContext({ viewport: { width: 1280, height: 900 } });
 const page = await context.newPage();
-const checks = [], errors = [];
+const checks = [], errors = [], playedMatches = [], presentations = [];
 let standaloneServer, evidencePage = page;
 const storageOnly = process.env.COMBAT_TEST_SCOPE === 'storage';
 const reportName = storageOnly ? 'storage-browser-report.json' : 'progression-browser-report.json';
@@ -74,36 +74,47 @@ async function start(mode, fighter = 'jax') {
 }
 
 async function winWithKeyboard(label) {
-  const initial = await snapshot();
-  for (let decision = 0; decision < 600; decision++) {
+  const initial = await snapshot(), before = await profile();
+  for (let decision = 0; decision < 1600; decision++) {
     const s = await snapshot();
     if (s.phase === 'matchOver') {
       await hold();
       assert.equal(s.winner, 0, `${label}: keyboard player lost (${s.fighters.map(p => p.hp)})`);
+      const earned = await profile();
+      assert.equal(earned.stats.matches, before.stats.matches + 1, 'result persisted before presentation');
+      assert.equal(await page.locator('#modal[open]').count(), 0);
+      assert.deepEqual(await page.evaluate(key => JSON.parse(localStorage.getItem(key)), SAVE_KEY), earned);
+      if (label === 'local') await page.getByRole('button', {name:'Voir le résultat', exact:true}).click();
+      else {
+        await advance(2000);
+        assert.equal(await page.locator('#modal[open]').count(), 0, 'result presentation lasts 2.2 seconds');
+        await advance(300);
+      }
+      assert.ok(await page.locator('#modal[open] .result-stats').isVisible());
+      assert.deepEqual(await profile(), earned, 'presentation never awards a second result');
+      assert.deepEqual(await snapshot(), s, 'presentation never advances the simulation');
+      presentations.push({label, skipped:label==='local', savedBeforeModal:true, noDuplicateResult:true});
+      playedMatches.push({label, fighter:s.fighters[0].id, opponent:s.fighters[1].id, frames:s.frame, health:s.fighters[0].hp, winner:s.winner});
       return s;
     }
-    if (s.phase !== 'fight') { await hold(); await advance(500); continue; }
+    if (s.phase !== 'fight') { await hold(); await advance(300); continue; }
     const [a, b] = s.fighters;
-    const toward = b.x > a.x ? 'KeyD' : 'KeyA';
-    const distance = Math.abs(a.x - b.x);
-    const player = FIGHTERS.find(f => f.id === a.id), opponent = FIGHTERS.find(f => f.id === b.id);
-    const jabDistance = player.moves.light.reach * player.reach + opponent.combat.simulationBody.width / 2 - 18;
-    if (a.attack || a.hit || a.blockstun || a.cool) {
-      // Confirmed light/heavy links use the same controls as a player.
-      if (a.attack?.confirmed && a.attack.slot === 'light') await page.keyboard.press('KeyK');
-      else if (a.attack?.confirmed && a.attack.slot === 'heavy' && a.resource > 25) {
-        await hold([toward]); await page.keyboard.press('KeyI');
-      }
-      await advance(100); continue;
+    const toward = b.x > a.x ? 'KeyD' : 'KeyA', distance = Math.abs(a.x-b.x);
+    const player = FIGHTERS.find(f=>f.id===a.id), opponent = FIGHTERS.find(f=>f.id===b.id);
+    const jabDistance = player.moves.light.reach*player.reach + opponent.combat.simulationBody.width/2 - 18;
+    const move = b.attack && opponent.moves[b.attack.slot];
+    const threat = move && b.attack.frame < move.startup+move.active && ['melee','projectile'].includes(move.kind);
+    const incoming = s.projectiles.some(q=>q.owner===1 && Math.abs(q.x-a.x)<320);
+    if (a.hit || a.blockstun || threat || incoming) {
+      await hold(['ShiftLeft','KeyS']);
+      if (move?.level==='throw') await page.keyboard.press('KeyU');
+      await advance(60); continue;
     }
-    if (distance > jabDistance) { await hold([toward]); await advance(120); continue; }
+    if (a.attack || a.cool) { await hold(['ShiftLeft','KeyS']); await advance(60); continue; }
+    if (distance > jabDistance) { await hold([toward]); await advance(80); continue; }
     await hold();
-    // A jab starts before the easy CPU's visible-startup reaction; mix a throw
-    // into guard and use the earned finale when enough meter is available.
-    if (a.meter >= 85 && a.resource >= 36) await page.keyboard.press('KeyO');
-    else if (b.block && !b.throwProtect && !b.hit) await page.keyboard.press('KeyU');
-    else await page.keyboard.press('KeyJ');
-    await advance(110);
+    await page.keyboard.press('KeyJ');
+    await advance(80);
   }
   throw new Error(`${label}: no match result within keyboard decision budget; initial=${JSON.stringify(initial)} current=${JSON.stringify(await snapshot())}`);
 }
@@ -196,39 +207,59 @@ try {
   checked('UI replay reproduces the full terminal snapshot without changing profile');
   await home();
 
-  for (const [mode, total] of [
-    ['arcade', 6],
-    ['boss', 4],
-    ['survival', 10],
-  ]) {
-    await start(mode);
+  for (const [mode, total] of [['arcade',6],['boss',4],['survival',10]]) {
+    await start(mode,'gloinkqueen');
     const run = (await profile()).program;
-    const [opponent1, opponent2] = run.opponents;
-    assert.match(await page.locator('.fight-caption').textContent(), new RegExp(`1/${total}`));
-    assert.equal((await snapshot()).fighters[1].id, opponent1);
-    const before = await profile();
-    const won = await winWithKeyboard(mode);
-    const expectedHealth = mode === 'survival' ? Math.min(10000, Math.max(1, Math.round(won.fighters[0].hp) + 1200)) : 10000;
-    assert.equal((await profile()).stats.matches, before.stats.matches + 1);
-    assert.ok(await page.locator('#modal [data-action="next-fight"]').isVisible());
-    await page.locator('[data-action="next-fight"]').click();
-    await page.waitForFunction(() => window.Encore.ready, null, { polling: 50 });
-    const second = await snapshot();
-    assert.match(await page.locator('.fight-caption').textContent(), new RegExp(`2/${total}`));
-    assert.equal(second.fighters[1].id, opponent2);
-    assert.equal(second.fighters[0].hp, expectedHealth, `${mode}: next encounter health`);
-    assert.equal(second.fighters[1].hp, 10000);
-    assert.ok((await page.locator('.fight-caption').textContent()).includes(STAGES.find(s=>s.id===run.stages[1]).name));
-    if (mode === 'survival') assert.equal((await profile()).stats.bestSurvival, 1);
-    checked(`${mode}: earned first win opens encounter 2/${total}`, `${opponent1} → ${opponent2}, player HP ${won.fighters[0].hp} → ${expectedHealth}`);
+    const [opponent1,opponent2] = run.opponents;
+    for (let encounter=0; encounter<total; encounter++) {
+      assert.match(await page.locator('.fight-caption').textContent(), new RegExp(`${encounter+1}/${total}`));
+      assert.equal((await snapshot()).fighters[1].id, run.opponents[encounter]);
+      const won = await winWithKeyboard(`${mode}-${encounter+1}`);
+      if (encounter === total-1) {
+        const completed = await profile();
+        assert.ok(completed.medals.includes(mode));
+        assert.equal(completed.program,null);
+        if(mode==='survival')assert.equal(completed.stats.bestSurvival,10);
+        break;
+      }
+      const expectedHealth=mode==='survival'?Math.min(10000,Math.max(1,Math.round(won.fighters[0].hp)+1200)):10000;
+      assert.ok(await page.locator('#modal [data-action="next-fight"]').isVisible());
+      await page.locator('[data-action="next-fight"]').click();
+      await page.waitForFunction(()=>window.Encore.ready,null,{polling:50});
+      const second=await snapshot();
+      assert.equal(second.fighters[0].hp,expectedHealth);
+      assert.equal(second.fighters[1].hp,10000);
+      if(encounter===0){
+        assert.equal(second.fighters[1].id,opponent2);
+        checked(`${mode}: earned first win opens encounter 2/${total}`,`${opponent1} → ${opponent2}, player HP ${won.fighters[0].hp} → ${expectedHealth}`);
+      }
+      await advance(1800);
+      assert.equal((await snapshot()).phase,'fight');
+    }
+    checked(`${mode}: all ${total} real victories earn the final medal`, 'Every encounter played with keyboard input, no engine or result injection.');
     await home();
   }
+  assert.equal((await profile()).stats.matches,21);
+  assert.deepEqual((await profile()).medals.sort(),['arcade','boss','survival']);
+  checked('Results persist before the 2.2-second presentation and are awarded once', `${presentations.length} results: one explicit skip and twenty timed presentations; terminal simulation snapshots stay frozen.`);
 
   const saved = await profile();
   assert.deepEqual(await page.evaluate(key => JSON.parse(localStorage.getItem(key)), SAVE_KEY), saved);
   await page.reload({ waitUntil: 'networkidle' });
   assert.deepEqual(await profile(), saved);
   checked('Earned progression and settings survive a page reload');
+  await page.locator('[data-nav="settings"]').click();
+  const profileDownloadPromise=page.waitForEvent('download');
+  await page.locator('[data-action="export-profile"]').click();
+  const profileDownload=await profileDownloadPromise;
+  const exportedProfile=JSON.parse(await fs.readFile(await profileDownload.path(),'utf8'));
+  assert.deepEqual(exportedProfile,saved);
+  await importJSON('import-profile',exportedProfile,'earned-profile.json');
+  await page.locator('#confirm-import').click();
+  assert.deepEqual(await profile(),saved);
+  await page.reload({waitUntil:'networkidle'});
+  assert.deepEqual(await profile(),saved);
+  checked('Earned profile export and confirmed import preserve all three medals', 'Downloaded JSON, actual file input, confirmation and page reload preserve the complete profile.');
   await page.locator('[data-nav="settings"]').click();
   await importJSON('import-profile', { format: 'unrelated-profile', version: 999, stats: { wins: 999999 } }, 'invalid-profile.json');
   assert.match(await page.locator('#toast').textContent(), /pas une sauvegarde/);
@@ -255,7 +286,7 @@ try {
   assert.deepEqual(schedules.map(run => run.opponents.length), [6, 4, 10]);
   assert.equal(schedules[0].opponents.at(-1), 'caine');
   assert.deepEqual(schedules[1].opponents, ['gloinkqueen', 'fudge', 'abstractedkaufmo', 'caine']);
-  checked('Pure scheduling contract: 6 Arcade, 4 Boss and 10 Survival encounters', 'Not a claim that all final medals were earned through UI');
+  checked('Pure scheduling contract: 6 Arcade, 4 Boss and 10 Survival encounters', 'The scheduling assertion is independent of the twenty real programme victories above');
 
   // Serve the built artifact from its own root and origin. This proves it loads
   // without CainOS app.js or the source repository's root asset paths.
@@ -296,11 +327,11 @@ try {
   }
 
   assert.deepEqual(errors, []);
-  await fs.writeFile(path.join(output, reportName), JSON.stringify({ base, checks, errors }, null, 2));
+  await fs.writeFile(path.join(output, reportName), JSON.stringify({ base, checks, errors, playedMatches, presentations }, null, 2));
   console.log(`Progression browser QA: ${checks.length} checks passed.`);
 } catch (error) {
   await evidencePage.screenshot({ path: path.join(output, storageOnly ? 'storage-failure.png' : 'progression-failure.png'), fullPage: true }).catch(() => {});
-  await fs.writeFile(path.join(output, reportName), JSON.stringify({ base, checks, errors, failure: error.message }, null, 2));
+  await fs.writeFile(path.join(output, reportName), JSON.stringify({ base, checks, errors, playedMatches, presentations, failure: error.message }, null, 2));
   throw error;
 } finally {
   if (standaloneServer) await new Promise(resolve => standaloneServer.close(resolve));

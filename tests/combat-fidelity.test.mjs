@@ -135,7 +135,8 @@ test('consulted references identify their exact scope rather than certifying pos
     assert.match(source.url, /\/cdn\/shop\/files\//);
     assert.match(source.scope, /ne mesure pas les proportions/);
   }
-  assert.match(FIGHTER_FIDELITY.jax.reviewScope, /peau grise/);
+  assert.match(FIGHTER_FIDELITY.jax.reviewScope, /peau violette/);
+  assert.match(FIGHTER_FIDELITY.jax.reviewScope, /Aucun dessin de combat dédié/);
 });
 
 // Computed from the published e71b08c rules, not from getReplayFighter.

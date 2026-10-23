@@ -28,8 +28,8 @@ const report = {
   comparisons: ['56 existing source cells', 'Seven base standing/low states', 'Seven base intro/victory/defeat states', 'Seven base attack phases and projectile presentation'],
   checks: [], screenshots: [], measurements: {}, errors: [],
   limitations: [
-    'The seven sheets contain idle, walk, speech, interaction and reaction drawings, not dedicated combat animations.',
-    'Only base Pomni, Jax and Zooble have shallow rigid cutout low stances. Costumes and other morphologies keep intact drawings with a stance cue.',
+    'The seven current sheets contain idle, walk, speech, interaction and reaction drawings, not dedicated combat animations. Jax uses the regenerated 0.5.0 transparent sheet.',
+    'Only base Pomni and Zooble have shallow rigid cutout low stances. Costumes and other morphologies keep intact drawings with a stance cue.',
     'Face/torso preservation is measured on the existing source artwork. No canonical height, palette or anatomy certification follows from that measurement.',
     'The low stance does not reproduce the simulation hurtbox. Dedicated guard, crouch, combat and outcome artwork remains partial.',
     'Rigid leg overlap changes a few transparent or semitransparent hip-edge pixels. Face/upper-torso RGBA and original opaque torso pixels are checked separately.',
@@ -37,7 +37,7 @@ const report = {
   ],
 };
 const checked = (name, detail) => { report.checks.push({ name, detail, pass: true }); console.log(`PASS ${name}`); };
-const files = ['combat/render.mjs', 'combat/render-poses.mjs', 'combat/render-presentation.mjs', 'combat/data.mjs', 'combat/costume-fidelity.mjs', 'tests/combat-render-poses-browser.mjs'];
+const files = ['combat/render.mjs', 'combat/render-poses.mjs', 'combat/render-presentation.mjs', 'combat/render-sequences.mjs', 'combat/render-stage-motion.mjs', 'assets/images/cainos-jax-animation-sheet-0.5.0.png', 'combat/data.mjs', 'combat/costume-fidelity.mjs', 'tests/combat-render-poses-browser.mjs'];
 report.sourceHashes = Object.fromEntries(await Promise.all(files.map(async file => [file, createHash('sha256').update(await fs.readFile(file)).digest('hex')])));
 
 try {
@@ -114,7 +114,7 @@ try {
         }
         if (phase === 'after') {
           canvas.width = 700; canvas.height = 650;
-          for (const id of ['pomni', 'jax', 'zooble']) {
+          for (const id of ['pomni', 'zooble']) {
             const f = FIGHTERS.find(f => f.id === id), frame = sourceFrame(f, 0), rig = poses.ANIMATION_REGISTRATION[id].crouchRig;
             const native = { ...f, visual: { ...f.visual, height: frame.bounds.height } };
             const a = actor(native, { x: frame.registration.anchor.x, y: frame.registration.anchor.y + 1 });
@@ -204,7 +204,7 @@ try {
 
       await page.evaluate(() => {
         const { core, context: ctx, panel, sourceFrame, poses, phase } = window.poseFixture;
-        panel(2010, 'Les 56 cellules existantes · ancrages et échelle', `${phase === 'before' ? '0.3 publiée' : '0.4 · racines mesurées'} — même échelle uniforme par personnage ; aucun nouveau dessin`, 1820);
+        panel(2010, 'Les 56 cellules existantes · ancrages et échelle', `${phase === 'before' ? '0.3 publiée' : '0.5 · racines mesurées'} — même échelle uniforme par personnage ; sources actuelles conservées pendant le rendu`, 1820);
         for (const [col, f] of core.entries()) {
           const idle = sourceFrame(f, 0), scale = Math.min(0.44, 185 / idle.bounds.height);
           for (let index = 0; index < 8; index++) {
@@ -222,14 +222,14 @@ try {
 
       await page.evaluate(() => {
         const { panel, core, cell, phase } = window.poseFixture;
-        panel(710, 'Debout / posture basse · mêmes dessins', `${phase === 'before' ? '0.3 · écrasement vertical global' : '0.4 · trois gardes basses rigides, autres dessins intacts'} — pas de pose dessinée dédiée ni de correspondance avec la hitbox`);
+        panel(710, 'Debout / posture basse · mêmes dessins', `${phase === 'before' ? '0.3 · écrasement vertical global' : '0.5 · deux gardes basses rigides, autres dessins intacts'} — pas de pose dessinée dédiée ni de correspondance avec la hitbox`);
         for (const [i, f] of core.entries()) { cell(f, i, 0, 'debout'); cell(f, i, 1, 'bas', { crouch: true, state: 'crouch' }); }
       });
       await shot('crouch');
 
       await page.evaluate(() => {
         const { panel, core, cell, phase } = window.poseFixture;
-        panel(1010, 'Introduction / victoire / défaite', `${phase === 'before' ? '0.3 · état ignoré par le rendu' : '0.4 · cellules de parole et réaction réutilisées'} — présentation du jeu, pas animations canoniques inédites`);
+        panel(1010, 'Introduction / victoire / défaite', `${phase === 'before' ? '0.3 · état ignoré par le rendu' : '0.5 · cellules de parole et réaction réutilisées'} — présentation du jeu, pas animations canoniques inédites`);
         for (const [i, f] of core.entries()) {
           cell(f, i, 0, 'intro', {}, { phase: 'intro', presentationFrame: 40 });
           cell(f, i, 1, 'victoire', {}, { phase: 'roundOver', roundWinner: 0, presentationFrame: 80 });
@@ -240,7 +240,7 @@ try {
 
       await page.evaluate(() => {
         const { panel, core, cell, phase } = window.poseFixture;
-        panel(1310, 'Attaques · préparation / contact / retour / projectile', `${phase === 'before' ? '0.3 · cellule interaction unique' : '0.4 · sélection de cellules selon la phase et le geste disponible'} — délais, dégâts et hitboxes inchangés`);
+        panel(1310, 'Attaques · préparation / contact / retour / projectile', `${phase === 'before' ? '0.3 · cellule interaction unique' : '0.5 · sélection de cellules selon la phase et le geste disponible'} — délais, dégâts et hitboxes inchangés`);
         for (const [i, f] of core.entries()) {
           const def = f.moves.heavy;
           for (const [j, t] of [def.startup - 1, def.startup, def.startup + def.active + def.recovery - 1].entries()) cell(f, i, j, ['prépare', 'contact', 'retour'][j], { attack: { name: 'heavy', def, t } });
@@ -282,16 +282,16 @@ try {
   for (const id of new Set(after.frames.map(f => f.id))) assert.equal(new Set(after.frames.filter(f => f.id === id).map(f => f.scale)).size, 1);
   const jaxBefore = before.frames.filter(f => f.id === 'jax' && f.index < 2);
   assert.ok(Math.abs(jaxBefore[1].rootOffsetX - jaxBefore[0].rootOffsetX) > 30);
-  checked('Le saut horizontal artificiel entre les deux idle de Jax est supprimé', { beforePixels: Math.abs(jaxBefore[1].rootOffsetX - jaxBefore[0].rootOffsetX), afterPixels: 0, nativeSourceDifference: 47 });
+  checked('Le saut horizontal artificiel entre les deux idle de Jax est supprimé', { beforePixels: Math.abs(jaxBefore[1].rootOffsetX - jaxBefore[0].rootOffsetX), afterPixels: 0, nativeSourceDifference: Math.abs(after.frames.find(f => f.id === 'jax' && f.index === 0).measuredRoot.x - after.frames.find(f => f.id === 'jax' && f.index === 1).measuredRoot.x) });
   const gangle = (data, index) => data.frames.find(f => f.id === 'gangle' && f.index === index).opaque;
   assert.ok(gangle(after, 2) < gangle(before, 2)); assert.ok(gangle(after, 3) > gangle(before, 3));
   checked('Le ruban traversant la grille appartient à Gangle walk3, sans fragment dans walk2', { walk2Before: gangle(before, 2), walk2After: gangle(after, 2), walk3Before: gangle(before, 3), walk3After: gangle(after, 3) });
-  assert.equal(after.faceTorsoPreservation.length, 3);
+  assert.equal(after.faceTorsoPreservation.length, 2);
   assert.ok(after.faceTorsoPreservation.every(item => item.protectedChanged === 0 && item.opaqueChanged === 0 && item.opaquePixelsCompared > 10000));
   checked('Visage et haut du torse préservés en RGBA ; aucun pixel opaque du torse modifié', { measurements: after.faceTorsoPreservation, scope: 'RGBA exact avant la bande des 16 px de jonction aux hanches. Les franges alpha de cette jonction peuvent se superposer aux jambes rigides ; elles sont comptées séparément.' });
   assert.equal(after.states.length, 14);
   assert.ok(after.states.every(f => f.deterministic && f.unchanged && f.hashes.idle !== f.hashes.crouch && f.hashes.idle !== f.hashes.guard));
-  assert.equal(after.states.filter(f => f.crouchArticulated).length, 3);
+  assert.equal(after.states.filter(f => f.crouchArticulated).length, 2);
   checked('14 bases × 12 états rendus sans mutation et avec lecture de posture en mouvement réduit', 'Les boucles de présentation sont figées ; bas et garde restent distincts de idle pour les quatorze morphologies.');
   assert.equal(after.costumes.length, 51);
   assert.ok(after.costumes.every(c => c.frame && !c.articulated && c.unchanged));

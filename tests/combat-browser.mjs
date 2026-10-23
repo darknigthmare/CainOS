@@ -119,6 +119,22 @@ try {
   await page.locator('.desktop-icon[data-window="combat"]').dblclick();
   assert.ok(await frame.getByRole('button',{name:'Reprendre',exact:true}).isVisible());
   checked('CainOS desktop launches the shared game and minimizing pauses it');
+  await frame.getByRole('button',{name:'Reprendre',exact:true}).click();
+  await embeddedFrame.waitForFunction(()=>window.Encore.snapshot.phase==='fight'&&!window.Encore.paused);
+  const embeddedProfile=await embeddedFrame.evaluate(()=>window.Encore.profile);
+  for(let cycle=0;cycle<3;cycle++){
+    await page.locator('#win-combat .win-close').click();
+    await embeddedFrame.waitForFunction(()=>window.Encore.paused);
+    const stopped=await embeddedFrame.evaluate(()=>window.Encore.snapshot.frame);
+    await page.waitForTimeout(180);
+    assert.equal(await embeddedFrame.evaluate(()=>window.Encore.snapshot.frame),stopped);
+    await page.locator('.desktop-icon[data-window="combat"]').dblclick();
+    assert.equal(await embeddedFrame.evaluate(()=>window.Encore.snapshot.frame),stopped);
+    assert.deepEqual(await embeddedFrame.evaluate(()=>window.Encore.profile),embeddedProfile);
+    await frame.getByRole('button',{name:'Reprendre',exact:true}).click();
+    await embeddedFrame.waitForFunction(frame=>window.Encore.snapshot.frame>frame,stopped);
+  }
+  checked('CainOS closes and reopens a live fight three times without duplicate loops','Each close freezes the exact simulation frame; reopening preserves the profile and requires explicit resume.');
   await page.screenshot({path:path.join(output,'cainos-integrated.png'),fullPage:true});
   await browser.close();
   mobileBrowser=await playwright.chromium.launch({ headless:true, executablePath:process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH || undefined, args:['--no-sandbox','--disable-dev-shm-usage','--single-process','--no-zygote'] });

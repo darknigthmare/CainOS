@@ -64,7 +64,7 @@ test('invalid absolute crop coordinates are rejected before Canvas can clip or s
 });
 
 test('shallow crouch articulation preserves both bone lengths, the ankle, and rigid transforms', () => {
-  for (const id of ['pomni', 'jax', 'zooble']) {
+  for (const id of ['pomni', 'zooble']) {
     const rig = ANIMATION_REGISTRATION[id].crouchRig;
     for (const leg of rig.legs) {
       const bent = bendLeg(leg, rig.drop);
@@ -80,7 +80,7 @@ test('shallow crouch articulation preserves both bone lengths, the ankle, and ri
 });
 
 test('zero articulation returns untouched joints and impossible folds fail safely', () => {
-  const leg = ANIMATION_REGISTRATION.jax.crouchRig.legs[0];
+  const leg = ANIMATION_REGISTRATION.pomni.crouchRig.legs[0];
   const rest = bendLeg(leg, 0);
   assert.deepEqual(rest.knee, leg.knee);
   assert.deepEqual(rest.upper, { a: 1, b: 0, c: 0, d: 1, e: 0, f: 0 });
@@ -89,7 +89,7 @@ test('zero articulation returns untouched joints and impossible folds fail safel
 });
 
 test('the face and torso are one translated piece, and the shoe band never transforms', () => {
-  for (const id of ['pomni', 'jax', 'zooble']) {
+  for (const id of ['pomni', 'zooble']) {
     const pose = crouchParts(fighter(id), sourceFrame(id));
     const body = pose.parts.find(p => p.name === 'body'), shoes = pose.parts.find(p => p.name === 'shoes');
     assert.deepEqual(body.matrix, { a: 1, b: 0, c: 0, d: 1, e: 0, f: ANIMATION_REGISTRATION[id].crouchRig.drop });
@@ -103,7 +103,7 @@ test('costumes, static sprites, other morphologies and non-idle drawings never i
   assert.equal(crouchParts(fighter('jax'), sourceFrame('pomni')), null);
   assert.equal(crouchParts(fighter('pomni'), { ...sourceFrame('pomni'), animated: false }), null);
   assert.equal(crouchParts(fighter('pomni'), sourceFrame('pomni', 1)), null);
-  for (const id of ['ragatha', 'gangle', 'kinger', 'caine']) assert.equal(crouchParts(fighter(id), sourceFrame(id)), null);
+  for (const id of ['jax', 'ragatha', 'gangle', 'kinger', 'caine']) assert.equal(crouchParts(fighter(id), sourceFrame(id)), null);
 });
 
 test('uniform scale is fixed by idle height; taller reaction and wider accessory frames keep it', () => {
@@ -178,4 +178,10 @@ test('presentation reads all fourteen fighter kits and every move without mutati
   }
   assert.equal(JSON.stringify(FIGHTERS), original);
   assert.equal(Object.keys(POSE_PRESENTATION).length, 7);
+});
+
+test('Jax keeps intact artwork for low stance and does not inherit the historical cutout rig', () => {
+  assert.equal(ANIMATION_REGISTRATION.jax.crouchRig, undefined);
+  assert.equal(crouchParts(fighter('jax'), sourceFrame('jax')), null);
+  assert.equal(actorPose(actor('jax', { crouch: true })).low, true);
 });

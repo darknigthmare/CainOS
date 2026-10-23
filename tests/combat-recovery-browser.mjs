@@ -2,6 +2,7 @@
  * Only the static server injects the failure; application state is read, never patched.
  */
 import assert from 'node:assert/strict';
+import { ART_BYTES } from '../combat/offline-manifest.mjs';
 import fs from 'node:fs/promises';
 import http from 'node:http';
 import path from 'node:path';
@@ -80,7 +81,7 @@ try {
   assert.equal(await page.evaluate(() => window.Encore.offline.cached), 42);
   assert.deepEqual(await page.evaluate(() => window.Encore.profile), profile);
   assert.equal(await page.evaluate(() => window.Encore.screen), 'home');
-  checked('The recovered installation downloads the full pack and survives an offline cold reload', '42 illustrations; 47,345,031 bytes; profile preserved');
+  checked('The recovered installation downloads the full pack and survives an offline cold reload', `42 illustrations; ${ART_BYTES.toLocaleString('en-US')} bytes; profile preserved`);
   assert.deepEqual(errors, []);
   await fs.writeFile(path.join(output, 'recovery-browser-report.json'), JSON.stringify(report(), null, 2));
   console.log('Recovery/browser QA: ' + checks.length + ' checks passed.');

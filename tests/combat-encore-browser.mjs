@@ -100,7 +100,7 @@ async function finishWithKeyboard(label) {
   for (let decision = 0; decision < 700; decision++) {
     const state = await snapshot();
     if (state.phase === 'matchOver') {
-      await hold(); await advance(20);
+      await hold(); await advance(2300);
       assert.equal(state.winner, 0, `${label}: keyboard player lost (${state.fighters.map(fighter => fighter.hp)})`);
       assert.ok(await page.locator('#modal[open] .result-stats').isVisible());
       playedDuels.push({ label, won: true, frames: state.frame, fighters: state.fighters.map(fighter => fighter.id), health: state.fighters[0].hp });
@@ -134,7 +134,7 @@ async function loseWithoutAttacking(label) {
   for (let step = 0; step < 30; step++) {
     const state = await snapshot();
     if (state.phase === 'matchOver') {
-      await advance(20);
+      await advance(2300);
       assert.equal(state.winner, 1, `${label}: the CPU must win the unattended duel`);
       assert.ok(await page.locator('#modal[open] .result-stats').isVisible());
       playedDuels.push({ label, won: false, frames: state.frame, fighters: state.fighters.map(fighter => fighter.id), health: state.fighters[0].hp });
