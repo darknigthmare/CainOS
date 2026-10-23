@@ -104,7 +104,7 @@ transfer the profile; CainOS and the standalone share storage on the same origin
 
 On HTTPS or localhost, choose **Réglages → Télécharger le spectacle** and wait for
 **45/45 illustrations**. The pack is **54,085,802 bytes**, with offline build
-**`0.6.0-8745f15f4c42`** and art version **`4ca4a56c5bace07b`**, recorded in
+**`0.6.0-6dcd5c6ee620`** and art version **`4ca4a56c5bace07b`**, recorded in
 [offline-manifest.mjs](combat/offline-manifest.mjs). Use the installed shortcut or
 `/combat/index.html?standalone=1` for later offline visits.
 
@@ -137,6 +137,13 @@ browser suites were rerun on the new runtime, alongside costume refinements,
 scenery, story presentation and complete roster duels. The evidence separates
 actual played UI flows from rendering fixtures and deterministic simulations.
 See [combat-qa-evidence.json](docs/combat-qa-evidence.json).
+
+After PR review, Work Gangle’s identity description was corrected to match its
+smiling, toothed mask. The final text correction was checked with **26 existing
+Node cases**, **5 focused wardrobe checks** and **11 repeated offline checks**,
+plus both rebuilt distributions. These are recorded separately from the full
+260/154 baseline campaign; the entire campaign was not rerun for this text-only
+change. The five image sheets and all other costume identity records are unchanged.
 
 The tracker contains **10 sheets, 9 tables, 101 features, 632 production tasks,
 85 scenarios and 452 QA rows**. QA includes the 260 Node cases,
