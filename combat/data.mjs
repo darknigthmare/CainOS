@@ -8,7 +8,7 @@ import { COSTUME_SPRITE_OVERRIDES, getCostumeFidelity } from './costume-fidelity
  * below is a fan-game adaptation, not a claim about canonical fighting powers.
  * Frames use the original CQC 60 Hz simulation and its 10000-health scale.
  */
-export const GAME = Object.freeze({ id: 'digital-circus-encore', name: 'Digital Circus — Encore', subtitle: 'Le Grand Duel', version: '0.4.0', contentDate: '2026-10-22' });
+export const GAME = Object.freeze({ id: 'digital-circus-encore', name: 'Digital Circus — Encore', subtitle: 'Le Grand Duel', version: '0.5.0', contentDate: '2026-10-22' });
 export const SOURCES = Object.freeze([
   { id: 'cainos', title: 'CainOS — base de travail et atlas existants', url: 'https://github.com/darknigthmare/CainOS/tree/4926834a2f063028903d6431e77f0bece859e671', kind: 'Dépôt utilisateur', scope: 'Inventaire du projet. Les mentions canon dans ses archives demandent une vérification indépendante.' },
   { id: 'cqc', title: 'CQC — version de référence P39', url: 'https://github.com/darknigthmare/shadow-codec-ops/tree/42279c1c884769873e66bbda0b6fe849bcd2f1a2/public/cqc', kind: 'Dépôt utilisateur', scope: 'Architecture intégrée/autonome, moteur de combat et IA portés depuis les fichiers réels.' },
@@ -64,7 +64,7 @@ export const FIGHTERS = [
     specialBack: move('specialBack', 'Tu y as cru', 'Une riposte sur attaque de mêlée.', { startup: 2, active: 10, damage: 520, cost: 18 }),
     super: move('super', 'La blague finale', 'Un projectile retardé explose près du rival.', { kind: 'projectile', reach: 720, speed: 12, life: 75, height: 165, fuse: 35, radius: 125, damage: 1750, tag: 'explosive' }),
     utility: move('utility', 'Air innocent', 'Récupère de la stabilité.', { startup: 20, restore: 32 }),
-  }, { speed: 1.08, reach: 1.08, height: 260, power: 0.95 }),
+  }, { speed: 1.08, reach: 1.08, height: 260, power: 0.95, animation: { src: '../assets/images/cainos-jax-animation-sheet-0.5.0.png', cols: 4, rows: 2, frames: { idle: [0, 1], walk: [2, 3], talk: [4, 5], attack: [6], hurt: [7] } } }),
   fighter('ragatha', 'Ragatha', 'Toujours recousue', 'Endurance', '#ef898c', 'ep1', {
     light: move('light', 'Main tendue', 'Une frappe courte et fiable.', { reach: 82, damage: 340 }),
     heavy: move('heavy', 'Coup de chiffon', 'Un impact ample avec le corps de poupée.', { startup: 16, damage: 740, reach: 132 }),

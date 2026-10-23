@@ -1,3 +1,5 @@
+import { sequencePose, outcomeEvent } from './render-sequences.mjs';
+
 /**
  * Presentation registrations measured from the seven existing CainOS atlases.
  * Coordinates describe these files, not canonical character proportions.
@@ -14,7 +16,7 @@ const profile = (id, size, anchors, extra = {}) => ({
   ...extra,
 });
 
-export const POSE_REGISTRATION_VERSION = 'encore-source-registration-1';
+export const POSE_REGISTRATION_VERSION = 'encore-source-registration-2';
 export const ANIMATION_REGISTRATION = freeze({
   pomni: profile('pomni', [1774, 887], [[252, 385], [222, 386], [207, 385], [190, 385], [241, 359], [222, 359], [190, 359], [187, 359]], {
     crouchRig: { frame: 0, cutY: 315, bodyBottom: 315, splitX: 252, drop: 16, legs: [
@@ -22,11 +24,9 @@ export const ANIMATION_REGISTRATION = freeze({
       { bend: 1, hip: [281, 315], knee: [281, 335], ankle: [283, 353], mask: [[251, 315], [334, 315], [334, 385], [251, 385]] },
     ] },
   }),
-  jax: profile('jax', [1536, 1024], [[212, 418], [165, 418], [164, 421], [131, 421], [204, 392], [179, 391], [157, 391], [165, 391]], {
-    crouchRig: { frame: 0, cutY: 302, bodyBottom: 330, splitX: 213, drop: 38, legs: [
-      { bend: -1, hip: [193, 302], knee: [184, 343], ankle: [177, 395], mask: [[159, 302], [213, 302], [213, 418], [145, 418], [145, 395], [159, 395]] },
-      { bend: 1, hip: [239, 302], knee: [241, 343], ankle: [244, 395], mask: [[213, 302], [254, 302], [254, 393], [278, 393], [278, 418], [213, 418]] },
-    ] },
+  jax: profile('jax', [1536, 1024], [[213, 418], [167, 418], [160, 421], [134, 421], [203, 392], [180, 393], [158, 392], [162, 393]], {
+    source: 'cainos-jax-animation-sheet-0.5.0.png',
+    provenance: 'Regenerated transparent eight-cell illustration; roots measured from the opaque foot support. Intact artwork, no inherited cutout rig.',
   }),
   ragatha: profile('ragatha', [1536, 1024], [[248, 429], [205, 429], [155, 429], [127, 429], [241, 362], [198, 362], [152, 362], [124, 361]]),
   gangle: profile('gangle', [1536, 1024], [[204, 428], [166, 428], [147, 428], [119, 426], [205, 336], [180, 336], [142, 342], [136, 342]], {
@@ -94,7 +94,7 @@ export function bendLeg(leg, drop) {
 }
 
 /**
- * Rigid cutout articulation, only for three inspected base idle drawings.
+ * Rigid cutout articulation, only for two inspected base idle drawings.
  * It is a shallow low stance, not a new authored crouch or a hitbox preview.
  * Faces and torsos are translated as one intact piece; limbs rotate at their
  * inspected joints without scaling, shoes remain fixed. Other morphologies
@@ -133,8 +133,8 @@ export const POSE_PRESENTATION = freeze({
 
 export const POSE_LIMITATIONS = freeze({
   registration: '56 inspected cells, fixed idle scale and per-cell roots; no claim about canonical height ratios.',
-  crouch: 'Three shallow rigid cutout poses (base Pomni, Jax, Zooble). Other drawings stay intact. No dedicated crouch art and no visual hurtbox equivalence.',
-  actions: 'Idle, walk, speech, interaction and reaction artwork is reused for combat states. There are no newly drawn combat, intro or outcome animations.',
+  crouch: 'Two shallow rigid cutout poses (base Pomni and Zooble). Jax and other drawings stay intact. No dedicated crouch art and no visual hurtbox equivalence.',
+  actions: 'Idle, walk, speech, interaction and reaction artwork is reused for combat states. Seventy finite procedural intro/outcome sequences animate existing artwork; dedicated combat drawings remain unavailable.',
   costumes: 'All costumes and unregistered static art use intact sprite presentation; base cutout rigs never transfer to them.',
 });
 
@@ -158,12 +158,14 @@ export function actorPose(actor, options = {}) {
   const tick = finiteTick(options.presentationFrame ?? options.frame);
   const reduced = !!options.reducedMotion;
   const result = { state: 'idle', action: 'idle', frame: reduced ? 0 : selectLoop([0, 1], tick, 24), lean: 0, low: false, phaseProgress: 0, alpha: 1 };
-  if (options.phase === 'intro') return { ...result, state: 'intro', action: 'talk', frame: profile?.intro ?? 0, lean: reduced ? 0 : Math.sin(tick * 0.025 + (actor.slot || 0)) * 0.012 };
+  const event = outcomeEvent(options.phase, actor.slot, options.winner, options.roundWinner);
+  const sequence = event && sequencePose(fighter.id, event, tick, { reducedMotion: reduced });
+  if (options.phase === 'intro') return { ...result, state: 'intro', action: 'talk', frame: profile?.intro ?? 0, ...sequence };
   if (['roundOver', 'matchOver', 'roundEnd'].includes(options.phase)) {
     const winner = options.phase === 'matchOver' ? options.winner : options.roundWinner;
-    if (!Number.isInteger(winner) || winner < 0) return { ...result, state: 'draw', frame: 0 };
+    if (!Number.isInteger(winner) || winner < 0 || winner > 1) return { ...result, state: 'draw', frame: 0 };
     const victory = winner === actor.slot;
-    return { ...result, state: victory ? 'victory' : 'defeat', action: victory ? 'talk' : 'hurt', frame: victory ? profile?.victory ?? 0 : profile?.defeat ?? 0, lean: victory ? 0.025 + (reduced ? 0 : Math.sin(tick * 0.035) * 0.01) : -0.08, alpha: victory ? 1 : 0.88 };
+    return { ...result, state: victory ? 'victory' : 'defeat', action: victory ? 'talk' : 'hurt', frame: victory ? profile?.victory ?? 0 : profile?.defeat ?? 0, lean: victory ? 0.025 : -0.08, alpha: victory ? 1 : 0.88, ...sequence };
   }
   if (actor.hit > 0 || actor.state === 'hit') return { ...result, state: 'hit', action: 'hurt', frame: profile?.defeat ?? 0, lean: -0.09 };
   if (actor.attack) {

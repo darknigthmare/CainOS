@@ -3,6 +3,7 @@
  * the static test server; no application/engine mutation hooks are used.
  */
 import assert from 'node:assert/strict';
+import { ART_BYTES } from '../combat/offline-manifest.mjs';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import http from 'node:http';
@@ -125,7 +126,7 @@ try{
   assert.equal(await page.evaluate(()=>window.Encore.offline.cached),42);
   const saved=await page.evaluate(()=>window.Encore.profile);
   await page.screenshot({path:path.join(output,'encore-settings.png'),fullPage:true});
-  checked('The standalone downloads all 42 original sprite sheets','47,345,031 bytes; explicit UI action and completion state');
+  checked('The standalone downloads all 42 original sprite sheets',`${ART_BYTES.toLocaleString('en-US')} bytes; explicit UI action and completion state`);
 
   await context.setOffline(true);
   await page.goto(base+'/combat/index.html?standalone=1',{waitUntil:'networkidle'});

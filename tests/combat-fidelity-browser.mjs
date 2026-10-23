@@ -48,7 +48,7 @@ const replayFixture = (fighter, version) => ({
 });
 function expectedReplaySnapshot(raw) {
   const replay = validateReplay(raw, FIGHTERS.map(f => f.id), STAGES.map(s => s.id));
-  const engine = new CombatEngine({ ...replay.config, fighters: replay.config.fighters.map(id => getReplayFighter(id, replay.version)), stage: STAGES.find(s => s.id === replay.config.stage), mode: 'versus' });
+  const engine = new CombatEngine({ ...replay.config, fighters: replay.config.fighters.map(id => getReplayFighter(id, replay.version)), stage: STAGES.find(s => s.id === replay.config.stage), mode: 'versus', rulesVersion: replay.version });
   for (const inputs of replayInputs(replay)) { engine.step(FIXED_DT, inputs); engine.drainEvents(); }
   return engine.getSnapshot();
 }
@@ -148,6 +148,20 @@ try {
     checked(`Versioned retreat replay: ${fighter}`, `Imports for ${REPLAY_VERSIONS.join(', ')} reproduce the expected complete deterministic frame state; no progression is awarded.`);
   }
   checked('Repeating an imported legacy replay preserves its original kit', 'The Revoir action produces the same full frame snapshot for the 0.2.0 Pomni recording.');
+
+  const trapResults=[];
+  for(const version of ['0.4.0','0.5.0']) {
+    const raw={format:'circus-encore-replay',version,config:{fighters:['jax','pomni'],variants:['',''],stage:'bigtop',cpu:[false,false],difficulty:'normal',seed:1,roundTime:60,roundsToWin:1,initialHealth:[10000,10000]},runs:[[112,0,0],[70,0,1],[1,768,8],[80,0,8]]};
+    const actual=await importReplay(raw);
+    assert.deepEqual(actual,expectedReplaySnapshot(raw));
+    assert.deepEqual(await page.evaluate(()=>window.Encore.profile),originalProfile);
+    trapResults.push({version,health:actual.fighters[1].hp,frames:actual.frame});
+    await page.locator('#modal [data-action="home"]').click();
+  }
+  assert.equal(trapResults[0].health,9932);
+  assert.equal(trapResults[1].health,9430);
+  replayResults.push(...trapResults);
+  checked('Versioned low trap preserves legacy blocking and applies 0.5 rules', 'Identical 263-frame input tape: standing guard leaves 9932 HP under 0.4 and 9430 HP under 0.5; full snapshot equality and no profile awards.');
 
   const legacy = replayFixture('pomni', '0.2.0');
   await page.evaluate(({ key, raw }) => localStorage.setItem(key, raw), { key: REPLAY_KEY, raw: JSON.stringify(legacy) });

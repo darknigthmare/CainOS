@@ -79,6 +79,7 @@ try {
   assert.deepEqual(await profile(), afterSetting);
   assert.deepEqual(await persisted(), afterSetting);
   await page.reload({ waitUntil: 'networkidle' });
+  await page.waitForFunction(() => window.Encore?.screen === 'home');
   assert.deepEqual(await profile(), afterSetting);
   assert.deepEqual(await persisted(), afterSetting);
   checked('A routine preference save and reload preserve the recovered profile', 'Sound is enabled through the settings UI; the repaired save has program:null and every prior achievement/binding remains.');
@@ -88,6 +89,7 @@ try {
   const other = await context.newPage();
   watch(other, 'other-tab');
   await other.goto(`${base}/combat/`, { waitUntil: 'networkidle' });
+  await other.waitForFunction(() => window.Encore?.screen === 'home');
   const incoming = structuredClone(afterSetting);
   incoming.stats = { matches: 32, wins: 22, losses: 10, bestSurvival: 8, damage: 182500 };
   incoming.challenges.push('guard');
@@ -123,6 +125,7 @@ try {
   assert.ok(await page.locator('#modal[open]').isVisible());
   await page.locator('#modal [data-action="home"]').click();
   await page.reload({ waitUntil: 'networkidle' });
+  await page.waitForFunction(() => window.Encore?.screen === 'home');
   assert.deepEqual(await profile(), afterReward);
   checked('Reward refresh repairs the incompatible disk checkpoint without erasing the record', 'Specialist is actually completed with four keyboard techniques; only that new reward is added to the migration fixture, and reload preserves it.');
 
