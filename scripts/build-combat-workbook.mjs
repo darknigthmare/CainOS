@@ -3,13 +3,15 @@
  * Run this file with the Codex primary Node runtime from a temporary directory
  * containing a node_modules symlink to CODEX_PRIMARY_RUNTIME_NODE_MODULES.
  * --repo-root specifies this checkout. --output-dir defaults to docs.
+ * --input-workbook defaults to the existing tracker in this checkout.
+ * Notes utilisateur follow sheet + stable ID, including relative formulas.
  * Optional docs/combat-qa-evidence.json supplies actually executed QA results.
  */
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
 import { pathToFileURL } from 'node:url';
-import { Workbook, SpreadsheetFile } from '@oai/artifact-tool';
+import { FileBlob, SpreadsheetFile } from '@oai/artifact-tool';
 
 const args = process.argv.slice(2);
 function flag(name, fallback) { const i = args.indexOf(name); return i >= 0 ? args[i + 1] : fallback; }
@@ -17,8 +19,10 @@ const root = path.resolve(flag('--repo-root', process.cwd()));
 const out = path.resolve(flag('--output-dir', path.join(root, 'docs')));
 const previewDir = path.resolve(flag('--preview-dir', path.join(out, 'combat-workbook-previews')));
 const renderSheets = flag('--render-sheets', '').split(',').filter(Boolean);
+const inputWorkbook = path.resolve(flag('--input-workbook', path.join(root, 'docs/DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx')));
+const evidenceFile = path.resolve(flag('--qa-evidence', path.join(root, 'docs/combat-qa-evidence.json')));
 let evidence = {};
-try { evidence = JSON.parse(await fs.readFile(path.join(root, 'docs/combat-qa-evidence.json'), 'utf8')); }
+try { evidence = JSON.parse(await fs.readFile(evidenceFile, 'utf8')); }
 catch (error) { if (error.code !== 'ENOENT') throw error; }
 if (!evidence || typeof evidence !== 'object' || Array.isArray(evidence)) throw new Error('QA evidence must be a JSON object');
 const { GAME, FIGHTERS, MOVES, STAGES, ROSTER_ARCHIVE, VARIANTS, SOURCES, MOVE_SLOTS, SLOT_LABELS } = await import(pathToFileURL(path.join(root, 'combat/data.mjs')));
@@ -29,6 +33,11 @@ const { AUDIO_THEMES, AUDIO_EFFECT_IDS, AUDIO_EFFECT_ALIASES } = await import(pa
 const { ART_FILES, ART_BYTES } = await import(pathToFileURL(path.join(root, 'combat/offline-manifest.mjs')));
 const { FIDELITY_SOURCES } = await import(pathToFileURL(path.join(root, 'combat/fidelity.mjs')));
 const { ANIMATION_REGISTRATION } = await import(pathToFileURL(path.join(root, 'combat/render-poses.mjs')));
+const { FIGHTER_SEQUENCES, SEQUENCE_EVENTS } = await import(pathToFileURL(path.join(root, 'combat/render-sequences.mjs')));
+const { STAGE_AMBIENCES } = await import(pathToFileURL(path.join(root, 'combat/render-stage-motion.mjs')));
+const { TRAINING_FRAME_LIMIT, TRAINING_HISTORY_LIMIT, TRAINING_SPEEDS } = await import(pathToFileURL(path.join(root, 'combat/training.mjs')));
+const gangleReviewPath = 'docs/images/gangle-palette-0.4.0.png';
+const shadowReviewPath = 'docs/images/shadow-preservation-0.4.0.png';
 const fidelitySources = new Map([...SOURCES, ...FIDELITY_SOURCES].map(source => [source.id, source]));
 const fidelityHeaders = ['Références de fidélité', 'Repères observés', 'Adaptation du combat', 'État de la revue', 'Périmètre de revue'];
 const fidelityWidths = [95, 88, 95, 28, 95];
@@ -157,6 +166,14 @@ const E = 'combat/engine.mjs', U = 'combat/app.mjs', S = 'combat/session.mjs', I
   ['PRD-09','Production','Parité de tous les modules CQC','Partiel','P2',E,'Comparer explicitement chaque module du CQC de référence.','Le moteur et la structure sont repris. Toutes les extensions MGS ne sont pas portées.'],
   ['PRD-10','Production','Classement explicite de toutes les apparences','Implémenté','P0','combat/data.mjs / tests/combat-catalog.test.mjs',`Réconcilier ${FIGHTERS.length} combattants, ${VARIANTS.length} variantes compatibles et ${ROSTER_ARCHIVE.length-FIGHTERS.length-VARIANTS.length} archives sans kit, soit ${ROSTER_ARCHIVE.length} entrées conservées.`,'Tout nouvel identifiant reste sans kit tant que sa classification n’a pas été revue.'],
   ['PRD-11','Production','Références et adaptations de chaque fiche','À vérifier','P0','combat/fidelity.mjs / combat/costume-fidelity.mjs / combat/data.mjs',`Documenter ${FIGHTERS.length} combattants, ${MOVES.length} techniques, ${STAGES.length} arènes et ${VARIANTS.length} costumes : références disponibles, repères observés, adaptations et sources manquantes ou créations originales.`,'Les observations sur nos sprites restent séparées des repères officiels. Le périmètre est conservé par fiche, sans certification graphique globale.'],
+  ['LAB-01','Entraînement','Gel, image par image et vitesse','Implémenté','P0','combat/training.mjs / combat/engine.mjs / combat/app.mjs',`Avancer exactement une frame depuis un entraînement figé ; vitesses ${TRAINING_SPEEDS.map(speed=>`×${speed}`).join(', ')} ; aucune commande en attente après remise à zéro.`,'La commande image par image reste réservée à l’entraînement en pause.'],
+  ['LAB-02','Entraînement','Historique et lecture du timing','Implémenté','P1','combat/training.mjs / combat/app.mjs',`Afficher préparation, actif, récupération et réaction ; conserver ${TRAINING_HISTORY_LIMIT} groupes d’entrées par joueur.`,'Les compteurs décrivent les frames de la simulation ; ils ne mesurent pas la latence matérielle.'],
+  ['LAB-03','Entraînement','Enregistrement et lecture du mannequin','Implémenté','P1','combat/training.mjs / combat/app.mjs',`Piloter J2 avec les commandes J1 pendant l’enregistrement ; limiter la bande à ${TRAINING_FRAME_LIMIT} frames ; relire une fois ou en boucle avec directions relatives.`,'Le reset conserve la bande et les réglages, puis efface les statistiques et les entrées en attente.'],
+  ['CQC-25','Moteur','Règles et décisions CPU versionnées','Implémenté','P0','combat/engine.mjs / combat/session.mjs / tests/combat-rules.test.mjs','Appliquer en 0.5 les pièges bas, la garde CPU continue, le soin utile de Ragatha et la portée réelle des saisies ; conserver les simulations des replays antérieurs.','Les 56 empreintes historiques de 900 frames ont été recapturées avant modification ; les contrôles exécutés sont détaillés dans QA.'],
+  ['PRE-16','Présentation','Introductions et issues par combattant','Implémenté','P1','combat/render-sequences.mjs / combat/render.mjs',`${FIGHTERS.length * SEQUENCE_EVENTS.length} séquences finies : introduction, victoire et défaite de manche, victoire et défaite de match. Une égalité reste neutre.`,'Mouvements procéduraux des illustrations existantes. Les sprites de combat et cinématiques dessinés restent partiels.'],
+  ['PRE-17','Présentation','Ambiances animées des arènes','Implémenté','P1','combat/render-stage-motion.mjs',`${STAGES.length} ambiances derrière les combattants, au-dessus du sol de simulation ; le réglage de mouvements réduits fige les effets.`,'Les décors restent des recompositions procédurales avec une revue canonique limitée.'],
+  ['PRE-18','Présentation','Palette et planche complète de Jax','Implémenté','P1','assets/images/cainos-jax-animation-sheet-0.5.0.png / combat/render-poses.mjs','Utiliser la planche transparente entière : corps violet, salopette rose, yeux, gants et dents jaunes ; mesurer les huit ancrages.','Image régénérée et contours différents de la source historique. Aucun découpage rigide hérité ni sprite de combat dédié revendiqué.'],
+  ['PRD-12','Production','Conservation des notes lors de la régénération','Implémenté','P0','scripts/build-combat-workbook.mjs','Rattacher les notes par feuille et ID stable, préserver valeurs et formules relatives, refuser les doublons et les notes orphelines avant écrasement.','Les fixtures de régression sont séparées du classeur livré.'],
 ].forEach(row => feature(...row));
 if (evidence.featureStatuses) for (const row of features) if (statuses.includes(evidence.featureStatuses[row[0]])) row[3] = evidence.featureStatuses[row[0]];
 
@@ -228,6 +245,17 @@ for (const f of FIGHTERS) {
   const route = STORY_ROUTES[f.id];
   production.push([`NAR-${f.id}`, 'Narration', f.name, 'Introduction, quatre scènes et fin', route ? 'Implémenté' : 'Prévu', 'P2', route ? 'combat/stories.mjs' : '', route ? `${route.title} · ${route.chapters.length} rencontres écrites` : 'À écrire', 'Route originale avec introduction, dialogues avant chaque rencontre et conclusion. Les événements ne sont pas présentés comme canoniques.', '']);
 }
+const sequenceLabels = {intro:'Introduction',roundVictory:'Victoire de manche',roundDefeat:'Défaite de manche',matchVictory:'Victoire de match',matchDefeat:'Défaite de match'};
+for (const fighter of FIGHTERS) for (const event of SEQUENCE_EVENTS) {
+  const sequence = FIGHTER_SEQUENCES[fighter.id]?.[event];
+  if (!sequence || !Number.isFinite(sequence.duration)) throw new Error(`Missing presentation sequence: ${fighter.id}/${event}`);
+  production.push([`SEQ-${fighter.id}-${event}`, 'Présentation individuelle', fighter.name, sequenceLabels[event], 'Implémenté', 'P1', 'combat/render-sequences.mjs / combat/render.mjs', `${sequence.duration} frames de présentation ; ${sequence.keys.length} poses clés ; cellule source ${sequence.frame}`, 'Séquence procédurale finie et stable après son terme. Réduction des mouvements statique ; résultat sauvegardé avant la présentation. Les dessins dédiés restent à produire.', '']);
+}
+for (const stage of STAGES) {
+  if (!STAGE_AMBIENCES[stage.id]) throw new Error(`Missing stage ambience: ${stage.id}`);
+  production.push([`ANIM-${stage.id}-ambience`, 'Animation d’arène', stage.name, 'Ambiance visuelle animée', 'Implémenté', 'P1', 'combat/render-stage-motion.mjs', STAGE_AMBIENCES[stage.id], 'Effets derrière les acteurs et strictement au-dessus du sol Y=568. Les collisions et les pixels du sol restent inchangés ; les mouvements réduits sont statiques.', '']);
+}
+production.push(['ART-jax-palette-05', 'Personnage', 'Jax', 'Planche transparente complète', 'Implémenté', 'P0', 'assets/images/cainos-jax-animation-sheet-0.5.0.png', 'Huit cellules régénérées ; corps violet, salopette rose et détails jaunes ; ancrages remesurés', 'Conserver la planche complète et sa transparence. Les contours ont été régénérés et aucune équivalence pixel à pixel ni animation de combat dédiée n’est revendiquée.', '']);
 
 const scenarioRows = CHALLENGES.map(c => [`CH-${c.id}`, 'Défi jouable', c.name, c.text, c.metric, c.goal, c.dummy, 'Implémenté', 'P1', S, '']);
 scenarioRows.push(...MODES.filter(m=>['arcade','boss','survival'].includes(m.id)).map(m => [`RUN-${m.id}`, 'Parcours jouable', m.name, m.description, m.id === 'survival' ? 'Vagues' : 'Matchs', m.id === 'arcade' ? 6 : m.id === 'boss' ? 4 : 10, 'CPU', 'Implémenté', 'P1', S, '']));
@@ -264,6 +292,9 @@ const suiteInfo = {
   replay: ['REPLAY', 'Compatibilité des replays', 'Version et règles de lecture vérifiées sans altérer le profil'],
   offline: ['OFFLINE', 'Installation web', 'Échecs explicites, nouvelle tentative, délais bornés et ressources libérées'],
   pwa: ['PWA', 'Distribution hors ligne', 'Cache, portée et reprise hors ligne vérifiés'],
+  rules: ['RULES', 'Règles versionnées', 'Corrections 0.5 et empreintes historiques des 56 duels préservées'],
+  training: ['TRAIN', 'Laboratoire d’entraînement', 'Lecture du timing, bande relative, limite, reset et ressources indépendantes'],
+  'render-sequences': ['SEQ', 'Présentation et ambiances', '70 séquences finies et 12 ambiances bornées, sans mutation de simulation'],
 };
 const discoveredSuites = (await fs.readdir(path.join(root, 'tests'))).filter(name => /^combat-.*\.test\.mjs$/.test(name) && !['combat-engine.test.mjs', 'combat-session.test.mjs'].includes(name)).sort().map(name => {
   const key = name.slice(7, -9), [prefix, area, expected] = suiteInfo[key] || [key.toUpperCase(), 'Contrat automatisé', 'Vérification automatique du module livré'];
@@ -314,6 +345,7 @@ const reviewCases = [
   ['build','Distribution','Servir les deux builds générés','P0','Aucune ressource requise absente.'],
   ['regression','Régression','Exécuter les audits CainOS existants','P0','Aucune régression des contrats existants.'],
   ['tracker-proof','Production du suivi','Refuser une preuve corrompue avant génération','P0','JSON invalide, type invalide et erreurs de lecture sont rejetés ; le fichier Excel existant est préservé.'],
+  ['tracker-notes','Production du suivi','Conserver les notes après tri et régénération','P0','Les notes suivent feuille et ID stable, y compris formules relatives, texte commençant par =, zéro et false. Doublons et notes orphelines bloquent la sauvegarde.'],
   ['fidelity-sources','Références','Relier chaque fiche à ses sources et adaptations','P0','Combattants, techniques, arènes et costumes exposent leurs références disponibles, repères et portée de revue. Les observations techniques de nos sprites sont séparées des repères officiels ; les sources manquantes et créations originales restent explicites.'],
   ['fidelity-ui','Présentation','Consulter les sources depuis les fiches du jeu','P1','Le codex, les costumes de la garde-robe et l’aperçu d’arène présentent leurs propres repères, adaptations et URL, sans débordement des vues vérifiées.'],
   ['fidelity-render','Présentation','Vérifier silhouettes, ancrages, états et objets','P0','Les captures et assertions précisent les personnages, costumes, cellules, états et objets effectivement vérifiés. Proportions, transparence et ancrage du rendu sont distingués des collisions et de la comparaison au canon.'],
@@ -334,9 +366,48 @@ const verifiedBrowserCount = (evidence.additionalCases || []).filter(check => ch
 if (evidence.nodeTestCount !== undefined && evidence.nodeTestCount !== verifiedNodeCount) throw new Error(`QA Node total does not match its suites: ${evidence.nodeTestCount} / ${verifiedNodeCount}`);
 if (evidence.browserCheckCount !== undefined && evidence.browserCheckCount !== verifiedBrowserCount) throw new Error(`QA browser total does not match its cases: ${evidence.browserCheckCount} / ${verifiedBrowserCount}`);
 
-const workbook = Workbook.create();
-const sheets = Object.fromEntries(['Synthèse','Fonctionnalités','Combattants','Techniques','Arènes','Atlas','Production','Scénarios','QA','Références'].map(name => [name,workbook.worksheets.add(name)]));
-for (const sheet of Object.values(sheets)) sheet.showGridLines = false;
+// Import the established workbook so its sheets, drawings, annotations and
+// unrelated formatting survive. Generated tables are refreshed in place.
+const workbook = await SpreadsheetFile.importXlsx(await FileBlob.load(inputWorkbook));
+const sheetNames = ['Synthèse','Fonctionnalités','Combattants','Techniques','Arènes','Atlas','Production','Scénarios','QA','Références'];
+const sheets = Object.fromEntries(sheetNames.map(name => [name,workbook.worksheets.getItem(name)]));
+const generatedData = { 'Fonctionnalités':features,'Combattants':roster,'Techniques':moveRows,'Arènes':stages,'Atlas':atlas,'Production':production,'Scénarios':scenarioRows,'QA':qa };
+const preservedNotes = new Map();
+const noteAudit = { source: path.basename(inputWorkbook), preserved: 0, formulas: 0, bySheet: {}, validatedBeforeWrite: true };
+const hasValue = value => value !== null && value !== undefined && value !== '';
+const literalValue = value => typeof value === 'string' && value.startsWith('=') ? `'${value}` : value;
+for (const [name, rows] of Object.entries(generatedData)) {
+  const sheet = sheets[name], table = sheet.tables.items[0];
+  if (!table || sheet.tables.items.length !== 1) throw new Error(`Expected one native table in ${name}`);
+  const headers = table.getHeaderRowRange().values[0];
+  const noteColumn = headers.indexOf('Notes utilisateur');
+  if (noteColumn < 0 || headers[0] !== (name === 'Atlas' ? 'ID atlas' : 'ID')) throw new Error(`Missing stable ID or user notes column in ${name}`);
+  const oldRows = table.getDataRows();
+  const noteFormulas = oldRows.length ? sheet.getRange(`${column(noteColumn+1)}6:${column(noteColumn+1)}${oldRows.length+5}`).formulasR1C1 : [];
+  const nextIds = new Set();
+  for (const row of rows) {
+    if (!hasValue(row[0]) || nextIds.has(String(row[0]))) throw new Error(`Duplicate or missing generated ID in ${name}: ${row[0]}`);
+    nextIds.add(String(row[0]));
+  }
+  const priorIds = new Set(), notes = new Map();
+  oldRows.forEach((row,index) => {
+    const id = row[0], value = row[noteColumn], formula = noteFormulas[index]?.[0];
+    if (!hasValue(id)) {
+      if (hasValue(value) || hasValue(formula)) throw new Error(`Orphan note without ID in ${name}, row ${index+6}`);
+      return;
+    }
+    const key = String(id);
+    if (priorIds.has(key)) throw new Error(`Duplicate source ID in ${name}: ${key}`);
+    priorIds.add(key);
+    if (!hasValue(value) && !hasValue(formula)) return;
+    if (!nextIds.has(key)) throw new Error(`Orphan note for removed ID in ${name}: ${key}`);
+    notes.set(key, { value, formula: hasValue(formula) ? formula : null });
+    noteAudit.preserved++;
+    if (hasValue(formula)) noteAudit.formulas++;
+  });
+  preservedNotes.set(name, notes);
+  noteAudit.bySheet[name] = notes.size;
+}
 const tables = [];
 function column(n) { let s=''; for(let x=n;x;x=Math.floor((x-1)/26))s=String.fromCharCode(65+(x-1)%26)+s; return s; }
 function statusRules(range) {
@@ -344,30 +415,40 @@ function statusRules(range) {
 }
 function makeTable(name,title,subtitle,headers,rows,{widths=[],statusCols=[],qaCols=[],numericCols=[],percentCols=[],inputCols=[]}={}) {
   const sheet=sheets[name], last=rows.length+5, end=column(headers.length);
-  sheet.getRange(`A1:${end}${last}`).format.font={name:'Arial',size:10,color:colors.ink};
-  sheet.getRange(`A1:${end}${last}`).format.verticalAlignment='center';
-  sheet.getRange(`A1:${end}${last}`).format.rowHeight=24;
-  sheet.getRange('A2').values=[[title]];sheet.getRange('A2').format.font={name:'Arial',size:16,bold:true,color:colors.purple};sheet.getRange('A2').format.rowHeight=31;
-  sheet.getRange('A3').values=[[subtitle]];sheet.getRange('A3').format.font={name:'Arial',size:10,italic:true,color:colors.gray};
-  sheet.getRange(`A4:${end}4`).format.borders={bottom:{style:'thin',color:colors.rule}};
-  sheet.getRange(`A5:${end}${last}`).values=[headers,...rows];
-  const table=sheet.tables.add(`A5:${end}${last}`,true,`Encore${name.normalize('NFD').replace(/[\u0300-\u036f]/g,'')}`);
-  table.style='TableStyleLight1';table.showFilterButton=true;
-  sheet.getRange(`A5:${end}5`).format={fill:colors.header,font:{name:'Arial',size:10,bold:true,color:'#FFFFFF'},rowHeight:34,wrapText:true,horizontalAlignment:'center',verticalAlignment:'center',borders:{insideVertical:{style:'thin',color:'#FFFFFF'}}};
-  sheet.getRange(`A6:${end}${last}`).format.wrapText=true;
+  const existing=sheet.tables.items[0];
+  if(!existing || JSON.stringify(existing.getHeaderRowRange().values[0])!==JSON.stringify(headers))throw new Error(`Table schema changed unexpectedly in ${name}`);
+  const oldLast=existing.getDataRows().length+5, tableName=existing.name, tableStyle=existing.style, showFilterButton=existing.showFilterButton;
+  const notes=preservedNotes.get(name)||new Map();
+  const noteColumn=headers.indexOf('Notes utilisateur');
+  for(const row of rows){const note=notes.get(String(row[0]));if(note)row[noteColumn]=note.value;}
+  sheet.getRange(`A6:${end}${Math.max(last,oldLast)}`).clear({applyTo:'contents'});
+  if(last>oldLast){
+    const added=sheet.getRange(`A${oldLast+1}:${end}${last}`);
+    added.format={font:{name:'Arial',size:10,color:colors.ink},verticalAlignment:'center',rowHeight:24,wrapText:true};
+  }
+  sheet.getRange('A2').values=[[title]];
+  sheet.getRange('A3').values=[[subtitle]];
+  existing.delete();
+  sheet.getRange(`A5:${end}${last}`).values=[headers,...rows.map(row=>row.map(literalValue))];
+  const table=sheet.tables.add(`A5:${end}${last}`,true,tableName);
+  table.style=tableStyle;table.showFilterButton=showFilterButton;
+  for(const [index,row]of rows.entries()){
+    const note=notes.get(String(row[0]));
+    if(note?.formula)sheet.getRange(`${column(noteColumn+1)}${index+6}`).formulasR1C1=[[note.formula]];
+  }
   rows.forEach((values,index)=>{
     const lines=Math.max(1,...values.map((value,c)=>String(value??'').split('\n').reduce((sum,line)=>sum+Math.max(1,Math.ceil(line.length/((widths[c]||22)*1.1))),0)));
     const row=sheet.getRange(`A${index+6}:${end}${index+6}`);
     row.format.rowHeight=Math.max(29,lines*13+6);
-    row.format.fill=index%2===0?colors.light:'#FFFFFF';
+    if(index+6>oldLast)row.format.fill=index%2===0?colors.light:'#FFFFFF';
   });
-  for(let c=1;c<=headers.length;c++)sheet.getRange(`${column(c)}5:${column(c)}${last}`).format.columnWidth=widths[c-1]||22;
   for(const c of numericCols){const range=sheet.getRange(`${column(c)}6:${column(c)}${last}`);range.setNumberFormat('#,##0');range.format.horizontalAlignment='right';}
   for(const c of percentCols)sheet.getRange(`${column(c)}6:${column(c)}${last}`).setNumberFormat('0.0%');
-  for(const c of statusCols){const range=sheet.getRange(`${column(c)}6:${column(c)}${last}`);range.dataValidation={rule:{type:'list',values:statuses}};statusRules(range);}
-  for(const c of qaCols){const range=sheet.getRange(`${column(c)}6:${column(c)}${last}`);range.dataValidation={rule:{type:'list',values:qaStatuses}};statusRules(range);}
-  for(const c of inputCols)sheet.getRange(`${column(c)}6:${column(c)}${last}`).format.fill=colors.amber;
-  sheet.freezePanes.freezeRows(5);sheet.freezePanes.freezeColumns(2);
+  if(last>oldLast){
+    for(const c of statusCols){const range=sheet.getRange(`${column(c)}${oldLast+1}:${column(c)}${last}`);range.dataValidation={rule:{type:'list',values:statuses}};statusRules(range);}
+    for(const c of qaCols){const range=sheet.getRange(`${column(c)}${oldLast+1}:${column(c)}${last}`);range.dataValidation={rule:{type:'list',values:qaStatuses}};statusRules(range);}
+    for(const c of inputCols)sheet.getRange(`${column(c)}${oldLast+1}:${column(c)}${last}`).format.fill=colors.amber;
+  }
   tables.push({name,rows:rows.length,last,headers});
   return sheet;
 }
@@ -386,16 +467,24 @@ const trackerSources=[...fidelitySources.values(),
   {id:'fidelity',title:'Encore — repères officiels et adaptations',kind:'Registre de fidélité',url:'combat/fidelity.mjs',scope:'Sources officielles, repères observés et adaptations du duel pour chaque combattant, technique et arène. La portée de revue reste explicite ; aucune équivalence graphique globale n’est déduite des tests fonctionnels.'},
   {id:'costume-reviews',title:'Encore — revue des costumes existants',kind:'Revue technique des sprites',url:'combat/costume-fidelity.mjs',scope:`${VARIANTS.length} revues individuelles : identité, repères visibles, cadrage, transparence, proportions, points à revoir et capture. Les observations de nos sprites restent distinctes de leurs références canoniques.`},
   {id:'costume-review-report',title:'Encore — mesures et preuves des costumes',kind:'Rapport de revue du projet',url:'docs/combat-costume-review.json',scope:'Relevés de cadrage, pixels et captures de la revue finale des 51 variantes ; les données techniques ne certifient pas leurs dessins canoniques.'},
-  {id:'pose-registration',title:'Encore — ancrages et poses composées',kind:'Présentation des sprites existants',url:'combat/render-poses.mjs',scope:`${Object.values(ANIMATION_REGISTRATION).reduce((count,item)=>count+item.anchors.length,0)} cellules source ancrées dans ${Object.keys(ANIMATION_REGISTRATION).length} planches. Trois poses basses composées de base ; les costumes et autres morphologies gardent leur dessin intact. Aucun nouveau sprite de combat dédié ni mesure de proportions canoniques.`},
+  {id:'pose-registration',title:'Encore — ancrages et poses composées',kind:'Présentation des sprites existants',url:'combat/render-poses.mjs',scope:`${Object.values(ANIMATION_REGISTRATION).reduce((count,item)=>count+item.anchors.length,0)} cellules source ancrées dans ${Object.keys(ANIMATION_REGISTRATION).length} planches. ${Object.values(ANIMATION_REGISTRATION).filter(item=>item.crouchRig).length} poses basses composées de base ; Jax, les costumes et les autres morphologies gardent leur dessin intact. Aucun nouveau sprite de combat dédié ni mesure de proportions canoniques.`},
   ...[...new Set(VARIANTS.map(variant=>variant.fidelity.assetReview.captureId.split('#')[0]))].map(id=>({id,title:`Costumes — planche de revue ${id.match(/page-(\d+)$/)?.[1] || id}`,kind:'Capture des sprites du projet',url:`docs/images/${id}.png`,scope:'Planche de contact livrée dans la PR. Le fragment après # dans Atlas identifie la variante correspondante ; cette capture documente nos sprites et ne constitue pas une référence canonique.'})),
-  {id:'gangle-palette-review',title:'Gangle — palette locale avant et après',kind:'Comparaison des sprites du projet',url:`docs/images/gangle-palette-${GAME.version}.png`,scope:'Correction ciblée des rubans. Les mesures du rapport distinguent la couleur modifiée, les régions protégées, l’alpha et la géométrie ; elles ne valident pas le dessin complet au regard du canon.'},
-  {id:'shadow-preservation-review',title:'Shadow — conservation de la source RGBA',kind:'Comparaison des sprites du projet',url:`docs/images/shadow-preservation-${GAME.version}.png`,scope:'Pomni, Ragatha et Caine : conservation explicite de la cellule source entière. Le fond opaque est inclus et reste une limite connue ; aucune séparation du corps ni correction canonique n’est déduite de cette égalité.'},
+  {id:'gangle-palette-review',title:'Gangle — palette locale avant et après',kind:'Comparaison des sprites du projet',url:gangleReviewPath,scope:'Capture conservée de la revue 0.4. Correction ciblée des rubans. Les mesures distinguent la couleur modifiée, les régions protégées, l’alpha et la géométrie ; elles ne valident pas le dessin complet au regard du canon.'},
+  {id:'shadow-preservation-review',title:'Shadow — conservation de la source RGBA',kind:'Comparaison des sprites du projet',url:shadowReviewPath,scope:'Capture conservée de la revue 0.4. Pomni, Ragatha et Caine : conservation de la cellule source entière. Le fond opaque est inclus et reste une limite connue ; aucune correction canonique n’est déduite de cette égalité.'},
+  {id:'training-lab',title:'Encore — laboratoire de timing et mannequin',kind:'Module du jeu',url:'combat/training.mjs / tests/combat-training.test.mjs',scope:`${TRAINING_HISTORY_LIMIT} groupes d’entrées par côté, bande de ${TRAINING_FRAME_LIMIT} frames, vitesses ${TRAINING_SPEEDS.join(', ')} ; lecture et remise à zéro indépendantes du profil.`},
+  {id:'versioned-rules',title:'Encore — règles de simulation versionnées',kind:'Module et empreintes historiques',url:'combat/engine.mjs / tests/combat-rules.test.mjs',scope:'Les règles 0.1 à 0.4 conservent les 56 traces de 900 frames capturées avant correction. Les nouvelles règles 0.5 couvrent pièges, garde CPU, soins et saisies.'},
+  {id:'individual-sequences',title:'Encore — introductions et issues individuelles',kind:'Animation procédurale',url:'combat/render-sequences.mjs',scope:`${FIGHTERS.length * SEQUENCE_EVENTS.length} séquences finies appliquées aux illustrations existantes. Les dessins de combat dédiés et les cinématiques originales restent à produire.`},
+  {id:'stage-ambiences',title:'Encore — ambiances visuelles des arènes',kind:'Animation procédurale',url:'combat/render-stage-motion.mjs',scope:`${STAGES.length} ambiances bornées derrière les combattants, sans changement des collisions ni des pixels du sol de simulation.`},
+  {id:'jax-palette-05',title:'Jax — nouvelle planche complète',kind:'Illustration régénérée',url:'assets/images/cainos-jax-animation-sheet-0.5.0.png',scope:'Corps violet, salopette rose et détails jaunes ; huit cellules transparentes utilisées entières avec racines remesurées. Les contours régénérés ne reproduisent pas la source historique pixel à pixel.'},
   {id:'stories',title:'Encore — routes narratives originales',kind:'Création pour le jeu',url:'combat/stories.mjs',scope:STORY_NOTICE},
   {id:'music',title:'Encore — thèmes et effets originaux',kind:'Création pour le jeu',url:'combat/audio.mjs',scope:`${Object.keys(AUDIO_THEMES).length} thèmes synthétiques par arène et ${AUDIO_EFFECT_IDS.length} motifs sonores. Aucun enregistrement ni musique de la série.`},
   {id:'offline',title:'Encore — inventaire du téléchargement hors ligne',kind:'Manifest généré du build',url:'combat/offline-manifest.mjs / scripts/build-combat-offline.mjs',scope:`${ART_FILES.length} planches, ${ART_BYTES.toLocaleString('fr-FR')} octets. La préparation explicite du pack est séparée de la sauvegarde des profils.`},
   {id:'classification',title:'Revue des identités et apparences',kind:'Contrat de données',url:'combat/data.mjs / tests/combat-catalog.test.mjs',scope:`${FIGHTERS.length} kits propres, ${VARIANTS.length} apparences autorisées, ${ROSTER_ARCHIVE.length-FIGHTERS.length-VARIANTS.length} autres archives conservées. Les liens ne sont jamais déduits du texte des identifiants.`},
 ];
 const referenceRows=trackerSources.map(s=>[s.id,s.title,s.kind,s.url,s.scope]);
+const oldReferenceLast=refs.tables.items[0].getDataRows().length+5;
+const oldReferenceUsed=refs.getUsedRange().values.length;
+if(oldReferenceUsed>oldReferenceLast)refs.getRange(`A${oldReferenceLast+1}:E${oldReferenceUsed}`).clear({applyTo:'contents'});
 makeTable('Références','Références et méthode',`Dates et état du contenu : ${contentDateLabel}. Les sources de fiction ne valident pas les statistiques du jeu.`, ['ID','Référence','Type','URL ou fichier','Périmètre'],referenceRows,{widths:[18,58,24,110,110]});
 const refStart=referenceRows.length+9;
 refs.getRange(`A${refStart}:E${refStart+10}`).values=[
@@ -407,7 +496,7 @@ refs.getRange(`A${refStart}:E${refStart+10}`).values=[
   ['Hors périmètre','Élément explicitement exclu du périmètre de cette version.','','',''],
   ['Lore','La revue technique d’un sprite ne valide pas sa fidélité canonique. Chaque costume possède ses propres références et limites.','','',''],
   ['Actualiser','Régénérer après les changements des registres combat/fidelity.mjs et combat/costume-fidelity.mjs, des données et des preuves QA.','','',''],
-  ['Notes utilisateur','Les colonnes jaunes servent aux décisions manuelles. Les reporter avant de régénérer le fichier.','','',''],
+  ['Notes utilisateur','Les colonnes jaunes sont conservées par feuille et ID stable, même après tri. Les formules relatives suivent la ligne ; les doublons et notes sans correspondance bloquent la régénération.','','',''],
   ['Progression','La synthèse compte les lignes par statut. Aucun taux global ne mélange techniques, sprites et fonctionnalités.','','',''],
   ['Limites QA','Les tests automatiques ne constituent pas une validation artistique ni une session sur appareil physique.','','',''],
 ];
@@ -443,8 +532,12 @@ summary.getRange('H19').formulas=[[`=COUNTIFS('Scénarios'!B6:B${scenarioRows.le
 summary.getRange('H20').formulas=[[`=COUNTIFS('Scénarios'!B6:B${scenarioRows.length+5},"Chapitre jouable")&" rencontres scénarisées"`]];
 summary.getRange('H21').formulas=[[`=COUNTIFS('Production'!B6:B${production.length+5},"Arène",'Production'!D6:D${production.length+5},"Musique de l’arène")&" thèmes musicaux d’arènes"`]];
 summary.getRange('H22').formulas=[[`=COUNTIFS('Production'!B6:B${production.length+5},"Motif sonore")&" motifs sonores synthétiques"`]];
-summary.getRange('H24:H28').values=[['Fidélité aux références'],[`${FIGHTERS.length + MOVES.length + STAGES.length + VARIANTS.length} fiches, dont ${VARIANTS.length} costumes`],['Revue technique et canon séparés'],['Portée de revue dans chaque fiche'],['Fidélité globale restant à valider']];
-summary.getRange('H24').format.font={bold:true,color:colors.purple};
+summary.getRange('H23').formulas=[[`=COUNTIFS('Production'!B6:B${production.length+5},"Présentation individuelle")&" séquences de présentation"`]];
+summary.getRange('H24').formulas=[[`=COUNTIFS('Production'!B6:B${production.length+5},"Animation d’arène")&" ambiances visuelles animées"`]];
+summary.getRange('H23:H24').format.font={name:'Arial',size:10,bold:false,color:colors.ink};
+summary.getRange('H25:H30').clear({applyTo:'contents'});
+summary.getRange('H26:H30').values=[['Fidélité aux références'],[`${FIGHTERS.length + MOVES.length + STAGES.length + VARIANTS.length} fiches, dont ${VARIANTS.length} costumes`],['Revue technique et canon séparés'],['Portée de revue dans chaque fiche'],['Fidélité globale restant à valider']];
+summary.getRange('H26').format.font={bold:true,color:colors.purple};
 summary.getRange('A14:F14').values=[['Suivi par domaine','Implémenté','Partiel','Prévu','À vérifier','Total']];
 const metrics=[['Fonctionnalités','Fonctionnalités',4,features.length],['Production d’assets','Production',5,production.length],['Scénarios et parcours','Scénarios',8,scenarioRows.length],['Intégration des apparences','Atlas',5,atlas.length]];
 metrics.forEach(([label,name,col,count],i)=>{
@@ -476,11 +569,21 @@ const expectedCounts=[FIGHTERS.length,MOVES.length,STAGES.length,ROSTER_ARCHIVE.
 const actualCounts=summary.getRange('B7:B11').values.flat();
 if(actualCounts.some((n,i)=>n!==expectedCounts[i]))throw new Error(`Summary mismatch: ${actualCounts} / ${expectedCounts}`);
 const storyCount=Object.keys(STORY_ROUTES).length, chapterCount=Object.values(STORY_ROUTES).reduce((sum,r)=>sum+r.chapters.length,0);
-const expectedRelease=[`${storyCount} routes originales`,`${chapterCount} rencontres scénarisées`,`${Object.keys(AUDIO_THEMES).length} thèmes musicaux d’arènes`,`${AUDIO_EFFECT_IDS.length} motifs sonores synthétiques`];
-const releaseSummary=summary.getRange('H19:H22').values.flat();
+const expectedRelease=[`${storyCount} routes originales`,`${chapterCount} rencontres scénarisées`,`${Object.keys(AUDIO_THEMES).length} thèmes musicaux d’arènes`,`${AUDIO_EFFECT_IDS.length} motifs sonores synthétiques`,`${FIGHTERS.length * SEQUENCE_EVENTS.length} séquences de présentation`,`${STAGES.length} ambiances visuelles animées`];
+const releaseSummary=summary.getRange('H19:H24').values.flat();
 if(releaseSummary.some((value,i)=>value!==expectedRelease[i]))throw new Error(`Story/audio summary mismatch: ${JSON.stringify(releaseSummary)} / ${JSON.stringify(expectedRelease)}`);
-const formulaErrors=summary.getRange('A1:H34').values.flat().filter(value=>typeof value==='string'&&/^#(REF!|DIV\/0!|VALUE!|NAME\?|N\/A|NUM!|NULL!|SPILL!|CALC!)/.test(value));
+const formulaErrors=[];
+for(const [name,sheet]of Object.entries(sheets)){
+  const used=sheet.getUsedRange(), values=used.values, formulas=used.formulas;
+  values.forEach((row,r)=>row.forEach((value,c)=>{if(formulas[r]?.[c]&&typeof value==='string'&&/^#(REF!|DIV\/0!|VALUE!|NAME\?|N\/A|NUM!|NULL!|SPILL!|CALC!)/.test(value))formulaErrors.push(`${name}!${column(c+1)}${r+1}: ${value}`);}));
+}
 if(formulaErrors.length)throw new Error(`Formula errors: ${formulaErrors.join(', ')}`);
+for(const [index,[,name,,]]of metrics.entries()){
+  const data=generatedData[name], statusColumn={Fonctionnalités:3,Production:4,Scénarios:7,Atlas:4}[name];
+  const expected=[...statuses.slice(0,4).map(status=>data.filter(row=>row[statusColumn]===status).length),data.length];
+  const actual=summary.getRange(`B${index+15}:F${index+15}`).values[0];
+  if(JSON.stringify(actual)!==JSON.stringify(expected))throw new Error(`Domain summary mismatch: ${name}`);
+}
 // A real input change must update the summary. Restore before final export.
 const oldFeature=sheets['Fonctionnalités'].getRange('D6').values[0][0];
 const oldCount=summary.getRange('B15').values[0][0];
@@ -522,20 +625,62 @@ for(const name of Object.keys(sheets).filter(name=>!renderSheets.length||renderS
     await fs.writeFile(path.join(previewDir,`QA-${label}.png`),new Uint8Array(await detail.arrayBuffer()));
   }
 }
-const file=await SpreadsheetFile.exportXlsx(workbook);
-await file.save(path.join(out,'DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx'));
+// Re-read note results after recalculation. The JSON companion retains typed
+// zero/false values; the workbook retains formulas rather than flattening them.
+for(const [name,rows]of Object.entries(generatedData)){
+  const notes=preservedNotes.get(name);
+  for(const [index,row]of rows.entries())if(notes.has(String(row[0])))row[row.length-1]=sheets[name].getRange(`${column(row.length)}${index+6}`).values[0][0];
+}
 const qaSummary=Object.fromEntries(qaStatuses.map(status=>[status,qa.filter(row=>row[3]===status).length]));
-const data={version:GAME.version,asOf:GAME.contentDate,counts:{fighters:FIGHTERS.length,moves:MOVES.length,stages:STAGES.length,modes:MODES.length,atlas:ROSTER_ARCHIVE.length,variants:VARIANTS.length,archiveOnly:ROSTER_ARCHIVE.length-FIGHTERS.length-VARIANTS.length,storyRoutes:storyCount,storyChapters:chapterCount,musicThemes:Object.keys(AUDIO_THEMES).length,soundEffects:AUDIO_EFFECT_IDS.length,offlineImages:ART_FILES.length,offlineBytes:ART_BYTES,features:features.length,production:production.length,scenarios:scenarioRows.length,qa:qa.length},qaSummary,features,roster,moves:moveRows,stages,atlas,production,scenarios:scenarioRows,qa,sources:trackerSources};
-await fs.writeFile(path.join(out,'combat-tracker-data.json'),JSON.stringify(data,null,2)+'\n');
+const data={version:GAME.version,asOf:GAME.contentDate,counts:{fighters:FIGHTERS.length,moves:MOVES.length,stages:STAGES.length,modes:MODES.length,atlas:ROSTER_ARCHIVE.length,variants:VARIANTS.length,archiveOnly:ROSTER_ARCHIVE.length-FIGHTERS.length-VARIANTS.length,storyRoutes:storyCount,storyChapters:chapterCount,musicThemes:Object.keys(AUDIO_THEMES).length,soundEffects:AUDIO_EFFECT_IDS.length,offlineImages:ART_FILES.length,offlineBytes:ART_BYTES,features:features.length,production:production.length,scenarios:scenarioRows.length,qa:qa.length,presentationSequences:FIGHTERS.length*SEQUENCE_EVENTS.length,animatedStages:STAGES.length},qaSummary,features,roster,moves:moveRows,stages,atlas,production,scenarios:scenarioRows,qa,sources:trackerSources};
 const sourceDigests={};
 const combatSources=(await fs.readdir(path.join(root,'combat'))).filter(name=>/\.(?:m?js|html|css|svg|webmanifest)$/.test(name)).sort().map(name=>`combat/${name}`);
 const testSources=(await fs.readdir(path.join(root,'tests'))).filter(name=>/^combat-.*\.mjs$/.test(name)).sort().map(name=>`tests/${name}`);
 for(const name of [...combatSources,...testSources,'docs/combat-qa-evidence.json','scripts/build-combat-workbook.mjs']){
   try{sourceDigests[name]=createHash('sha256').update(await fs.readFile(path.join(root,name))).digest('hex');}catch(error){if(error.code!=='ENOENT')throw error;}
 }
-for(const name of ['docs/combat-costume-review.json',`docs/images/gangle-palette-${GAME.version}.png`,`docs/images/shadow-preservation-${GAME.version}.png`,...new Set(VARIANTS.map(variant=>`docs/images/${variant.fidelity.assetReview.captureId.split('#')[0]}.png`))]) sourceDigests[name]=createHash('sha256').update(await fs.readFile(path.join(root,name))).digest('hex');
+for(const name of ['docs/combat-costume-review.json',gangleReviewPath,shadowReviewPath,'assets/images/cainos-jax-animation-sheet-0.5.0.png',...new Set(VARIANTS.map(variant=>`docs/images/${variant.fidelity.assetReview.captureId.split('#')[0]}.png`))]) sourceDigests[name]=createHash('sha256').update(await fs.readFile(path.join(root,name))).digest('hex');
 const fidelityRecords=[...FIGHTERS.map(({id,fidelity})=>({kind:'fighter',id,fidelity})),...MOVES.map(({id,fidelity})=>({kind:'move',id,fidelity})),...STAGES.map(({id,fidelity})=>({kind:'stage',id,fidelity})),...VARIANTS.map(({id,fidelity})=>({kind:'costume',id,fidelity}))];
 const costumeReviewStatuses=Object.fromEntries([...new Set(VARIANTS.map(variant=>variant.fidelity.assetReview.status))].map(status=>[status,VARIANTS.filter(variant=>variant.fidelity.assetReview.status===status).length]));
 const fidelityCoverage={fighters:roster.length,moves:moveRows.length,stages:stages.length,costumes:VARIANTS.length,documented:fidelityRecords.length,withPrimaryReference:fidelityRecords.filter(item=>item.fidelity.sourceIds.length).length,withoutPrimaryReference:fidelityRecords.filter(item=>!item.fidelity.sourceIds.length).map(item=>({kind:item.kind,id:item.id,reviewStatus:item.fidelity.reviewStatus})),costumeReviews:{documented:VARIANTS.length,technicalStatuses:costumeReviewStatuses,withRecordedIssues:VARIANTS.filter(variant=>variant.fidelity.assetReview.issues.length).length,withPrimaryReferences:VARIANTS.filter(variant=>variant.fidelity.sourceIds.length).length,withObservedPrimaryTraits:VARIANTS.filter(variant=>variant.fidelity.observedTraits.length).length,canonicalSourceRequiredForCertification:true},sourceIds:FIDELITY_SOURCES.map(source=>source.id),globalVisualCertification:false};
-await fs.writeFile(path.join(out,'combat-workbook-verification.json'),JSON.stringify({createdAt:new Date().toISOString(),counts:data.counts,qaSummary,verifiedSummary:actualCounts,verifiedReleaseSummary:expectedRelease,fidelityCoverage,formulaErrors:0,statusMutationRecalculated:true,renderedSheets:renderSheets.length?renderSheets:Object.keys(sheets),qaEvidencePresent:!!Object.keys(evidence).length,sourceDigests},null,2)+'\n');
+const pendingFile=path.join(previewDir,`tracker-${process.pid}.pending.xlsx`);
+const file=await SpreadsheetFile.exportXlsx(workbook);
+await file.save(pendingFile);
+const exported=await SpreadsheetFile.importXlsx(await FileBlob.load(pendingFile));
+const nativeTables=[];
+for(const name of sheetNames){
+  const sheet=exported.worksheets.getItem(name);
+  for(const table of sheet.tables.items)nativeTables.push({sheet:name,name:table.name,style:table.style,rows:table.getDataRows().length,filter:table.showFilterButton});
+  const notes=preservedNotes.get(name);
+  if(!notes?.size)continue;
+  const table=sheet.tables.items[0], headers=table.getHeaderRowRange().values[0], noteColumn=headers.indexOf('Notes utilisateur'), rows=table.getDataRows();
+  for(const [id,note]of notes){
+    const index=rows.findIndex(row=>String(row[0])===id);
+    if(index<0)throw new Error(`Note lost after export: ${name}/${id}`);
+    const cell=sheet.getRange(`${column(noteColumn+1)}${index+6}`);
+    if(note.formula){if(cell.formulasR1C1[0][0]!==note.formula)throw new Error(`Relative note formula changed after export: ${name}/${id}`);}
+    else if(cell.values[0][0]!==note.value)throw new Error(`Note value changed after export: ${name}/${id}`);
+  }
+}
+if(nativeTables.length!==9)throw new Error(`Native table count changed: ${nativeTables.length}`);
+const verification={createdAt:new Date().toISOString(),counts:data.counts,qaSummary,verifiedSummary:actualCounts,verifiedReleaseSummary:expectedRelease,fidelityCoverage,formulaErrors:0,statusMutationRecalculated:true,renderedSheets:renderSheets.length?renderSheets:Object.keys(sheets),qaEvidencePresent:!!Object.keys(evidence).length,notesPreservation:{...noteAudit,exportRoundTripPassed:true},nativeTables,sourceDigests};
+await fs.writeFile(path.join(previewDir,'combat-tracker-data.pending.json'),JSON.stringify(data,null,2)+'\n');
+await fs.writeFile(path.join(previewDir,'combat-workbook-verification.pending.json'),JSON.stringify(verification,null,2)+'\n');
+// Preview scratch space may live on another filesystem. Stage every validated
+// artifact beside its final destination before an atomic, same-device rename.
+const publication=[
+  [pendingFile,'DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx'],
+  [path.join(previewDir,'combat-tracker-data.pending.json'),'combat-tracker-data.json'],
+  [path.join(previewDir,'combat-workbook-verification.pending.json'),'combat-workbook-verification.json'],
+];
+const staged=[];
+try{
+  for(const [source,name]of publication){
+    const temporary=path.join(out,`.${name}.${process.pid}.${Date.now()}.pending`);
+    await fs.copyFile(source,temporary);staged.push([temporary,path.join(out,name)]);
+  }
+  for(const [temporary,destination]of staged)await fs.rename(temporary,destination);
+}finally{
+  for(const [temporary]of staged)await fs.rm(temporary,{force:true});
+}
 console.log(JSON.stringify({file:path.join(out,'DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx'),counts:data.counts,previews:previewDir},null,2));
