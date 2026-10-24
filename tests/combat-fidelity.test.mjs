@@ -161,6 +161,11 @@ test('transparent repairs retain technical limits separately from observed canon
   assert.match(COSTUME_FIDELITY.gloinkqueenscale.assetReview.issues.join(' '), /ne constitue toujours pas une mesure canonique/);
   assert.equal(VARIANTS.find(item => item.id === 'gloinkqueenscale').sprite.component, 'largest');
   assert.equal(VARIANTS.find(item => item.id === 'gloinkqueenscale').sprite.nativeFacing, -1);
+  const queen = getFighter('gloinkqueen');
+  assert.equal(queen.id, 'gloinkqueen');
+  assert.deepEqual(queen.sprite, VARIANTS.find(item => item.id === 'gloinkqueenscale').sprite, 'The original Queen also uses the isolated native-alpha artwork');
+  assert.deepEqual(queen.visual, { width: 420, height: 150, profile: 'giant' });
+  assert.deepEqual(queen.combat.simulationBody, { width: 420, height: 150, crouchHeight: 80 });
 });
 
 test('consulted references identify their exact scope rather than certifying poses or merchandise proportions', () => {

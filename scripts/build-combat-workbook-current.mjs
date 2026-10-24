@@ -91,6 +91,8 @@ for(const [name,key]of Object.entries(TRACKER_SHEETS)){
 // Three empty lines separate the reference table from its established legend.
 // Table row insertion is responsible for moving the legend if future additions need it.
 const references=sheets['Références'],refTable=references.tables.items[0],refRows=refTable.getDataRows();
+references.getRange('A3').values=[[`Dates et état du contenu : ${data.asOf}. Les sources de fiction ne valident pas les statistiques du jeu.`]];
+sheets.QA.getRange('A3').values=[['Historique conservé, objectifs de revue et cas CI07 de cette passe. Les essais matériels restent identifiés séparément.']];
 const sources=data.sources.map(s=>[s.id,s.title,s.kind,s.url,s.scope]);
 const sourceIds=new Set(refRows.map(row=>row[0]));
 const addedSources=sources.filter(row=>!sourceIds.has(row[0]));
@@ -153,7 +155,10 @@ for(const [name,key]of Object.entries(TRACKER_SHEETS)){
   for(const [id,note]of notes.get(name)){const i=rows.findIndex(row=>String(row[0])===id);assert(i>=0);if(note.formula)assert.equal(formulas[i].at(-1),note.formula);else assert.equal(rows[i].at(-1),note.value);}
   data[key]=normalized(rows);
 }
-const renders=[['Synthèse','A1:H34','summary'],['Fonctionnalités','A98:I108','features'],['Production',`A${before.Production.rows.length+6}:J${Math.min(data.production.length+5,before.Production.rows.length+9)}`,'finales'],['QA',`A${before.QA.rows.length+6}:I${before.QA.rows.length+9}`,'current-qa'],['Références','A63:E79','references']];
+const firstFinaleRow=data.production.findIndex(row=>row[1]==='Finition visuelle')+6;
+const currentQaIds=new Set(data.currentQa.rowIds),firstCurrentQaRow=data.qa.findIndex(row=>currentQaIds.has(row[0]))+6;
+assert(firstFinaleRow>=6&&firstCurrentQaRow>=6,'Missing current rows for preview');
+const renders=[['Synthèse','A1:H34','summary'],['Fonctionnalités','A98:I108','features'],['Production',`A${firstFinaleRow}:J${Math.min(data.production.length+5,firstFinaleRow+3)}`,'finales'],['QA',`A${firstCurrentQaRow}:I${Math.min(data.qa.length+5,firstCurrentQaRow+3)}`,'current-qa'],['Références','A63:E79','references']];
 for(const [name,range,label]of renders)await render(name,range,label);
 const sourceDigests={...evidence.runtimeSourceHashes};
 for(const report of [...evidence.nodeReports,...evidence.browserReports])sourceDigests[report.file]=report.sourceSha256;

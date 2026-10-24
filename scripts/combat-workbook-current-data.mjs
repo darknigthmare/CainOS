@@ -83,6 +83,11 @@ export async function prepareCurrentTracker({ root, priorData, evidence }) {
   updateFeature('PRO-05',{7:'Versions prises en charge : '+session.REPLAY_VERSIONS.join(', ')+'. Les règles de simulation restent versionnées.'});
   updateFeature('PRD-01',{5:'scripts/build-combat-workbook.mjs / scripts/build-combat-workbook-current.mjs / scripts/workbook-publication.mjs',6:'Importer le classeur, conserver ses notes par ID, recalculer et publier le classeur, les données, la vérification et les preuves ensemble.',7:'Sauvegardes avant remplacement, restauration sur échec intercepté. Les quatre fichiers ne sont pas simultanément atomiques. Récupération après arrêt brutal manuelle.'});
   updateFeature('PRD-04',{3:'Implémenté',5:'docs/combat-qa-evidence-0.7.0.json',7:'Rapports 0.7 et historique 0.6 séparés. Les anciennes captures ne sont pas considérées comme de nouveaux essais.'});
+  updateFeature('PRE-08',{3:'Partiel',5:'combat/audio.mjs / tests/combat-audio-cues.test.mjs',6:`${audio.AUDIO_EFFECT_IDS.length} motifs synthétiques, dont six impacts distincts : léger, lourd, bas, saisie, spécial et super.`,7:'Les impacts suivent les dégâts réels ; garde et KO restent prioritaires. Voix dédiées et mixage sur plusieurs appareils restent à produire ou vérifier.'});
+  const queen=FIGHTERS.find(fighter=>fighter.id==='gloinkqueen'),queenRow=data.roster.find(row=>row[0]==='gloinkqueen');
+  assert(queen&&queenRow,'Missing Gloink Queen fighter');
+  queenRow[13]=queen.sprite.src.replace(/^\.\.\//,'');
+  queenRow[16]=['Boss jouable avec statistiques de versus',queen.scaleNote].filter(Boolean).join('. ');
   upsert(data.features,['PRE-21','Présentation','Ambiances sonores propres aux arènes','Implémenté','P1','combat/audio-ambiences.mjs / combat/audio.mjs','Douze ambiances originales, volume indépendant, arrêt à la pause et changement propre d’arène.','Synthèse locale originale. Mixage sur appareils physiques à vérifier.','']);
   // Menu accessibility is tracked separately from physical controller validation.
   if (evidence.browserReports.some(r=>r.file==='tests/combat-accessibility-browser.mjs'&&r.passed)) {
@@ -108,6 +113,14 @@ export async function prepareCurrentTracker({ root, priorData, evidence }) {
     row[6]=`Historique ${version}. Ce cas ne constitue pas une nouvelle exécution de cette passe.\n${row[6]}`;
   }
   for(const row of freshQa)upsert(data.qa,row);
+  const accessibilityReport=evidence.browserReports.find(report=>report.file==='tests/combat-accessibility-browser.mjs'&&report.passed);
+  if(accessibilityReport){
+    const review=data.qa.find(row=>row[0]==='QA-focus');assert(review,'Missing keyboard review objective');
+    review[1]='Revue 0.7 · Accessibilité';review[3]='Réussi';
+    review[5]='tests/combat-accessibility-browser.mjs';
+    review[6]=`Objectif couvert par les ${accessibilityReport.checks.length} contrôles Chromium de cette passe. Voir les lignes CI07 et docs/combat-qa-evidence-0.7.0.json. Cette revue n’est pas un test indépendant supplémentaire.`;
+    review[7]='Parcours clavier, focus visible et conservé, commandes natives et menus à la manette virtuelle vérifiés. Lecteur d’écran et matériel physique non testés.';
+  }
   const extraSources=[
     {id:'finishers-07',title:'Encore — 42 présentations de KO',kind:'Création de fan-game',url:'combat/finisher-catalog.mjs',scope:finales.FINISHER_NOTICE},
     {id:'audio-ambiences-07',title:'Encore — douze ambiances sonores',kind:'Synthèse originale',url:'combat/audio-ambiences.mjs',scope:'Compositions originales. Aucune captation de la série ni validation du mixage sur matériel physique.'},

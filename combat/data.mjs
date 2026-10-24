@@ -172,7 +172,7 @@ export const FIGHTERS = [
     specialBack: move('specialBack', 'Carapace royale', 'Réduit les dégâts des deux prochains impacts.', { kind: 'buff', damage: 0, buff: 'armor', duration: 150, hits: 2, startup: 15, active: 1, recovery: 32, cost: 30 }),
     super: move('super', 'Tout devient Gloink', 'Un grand choc frontal très lent.', { startup: 34, active: 12, recovery: 50, damage: 2150, reach: 365, launch: -10, meter: 85 }),
     utility: move('utility', 'Réorganiser le nid', 'Restaure de la stabilité avec une longue récupération.', { restore: 40, startup: 28, recovery: 42 }),
-  }, { speed: 0.76, power: 1.12, reach: 1.12, width: 420, height: 150, boss: true, sprite: { ...spriteOf('gloinkqueenscale'), component: 'largest', nativeFacing: -1 }, scaleNote: 'Dimensions adaptées au duel. Planche allongée réutilisée, taille canonique non quantifiée. Les portées de mêlée partent du centre du corps et dépassent la bouche.' }),
+  }, { speed: 0.76, power: 1.12, reach: 1.12, width: 420, height: 150, boss: true, sprite: { ...spriteOf('gloinkqueenscale'), ...COSTUME_SPRITE_OVERRIDES.gloinkqueenscale, component: 'largest', nativeFacing: -1 }, scaleNote: 'Dimensions adaptées au duel. Planche allongée réutilisée, taille canonique non quantifiée. Les portées de mêlée partent du centre du corps et dépassent la bouche.' }),
   fighter('fudge', 'The Fudge', 'L’ombre du canyon', 'Colosse', '#bd877c', 'ep2', {
     light: move('light', 'Coulée courte', 'Un coup épais à proximité.', { startup: 10, reach: 115, damage: 390 }),
     heavy: move('heavy', 'Vague de fudge', 'Une frappe ample et lente.', { startup: 23, damage: 900, reach: 185, recovery: 34 }),
