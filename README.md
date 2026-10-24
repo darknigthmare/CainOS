@@ -6,7 +6,7 @@ CainOS is a retro C&A mainframe-style interactive web app inspired by The Amazin
 
 CainOS includes **Circus Combat — Encore**, a shared combat application and
 standalone game adapted from the real CQC engine of `shadow-codec-ops`.
-The playable game version is **0.7.0**, documented on **23 October 2026**.
+The playable game version is **0.7.0**, completed in this branch on **24 October 2026**.
 
 - In CainOS: complete the existing first-use calibration, then launch **Circus Combat**.
 - Direct game: open **`/combat/`** on the same static server.
@@ -27,6 +27,16 @@ techniques and stories are original fan-game adaptations.
   replay without altering a profile, match or saved replay.
 - **12 procedural arena ambience layers** with an independent volume and toggle,
   plus distinct trap and KO cues. Music and ambience remain separate.
+- **Six distinct contact sounds** for light, heavy, low, throw, special and super
+  hits. Blocking, parry and KO have priority over ordinary contact sounds.
+- **Keyboard menus**: arrow keys and Home/End move through card groups; Tab,
+  Enter and Space retain native controls. Rebuilt selections and dialogs preserve
+  focus. Gamepad menus can open the reference details without getting trapped in
+  search inputs; text entry uses the keyboard.
+- **Control and gallery repairs**: held-key repetition after pause cannot start
+  a ghost attack; player-two Ctrl-dash no longer suppresses either player's
+  attacks; Space works on the fight toolbar. Hidden gallery time is discarded,
+  and changing reduced motion refreshes even a stationary final frame.
 - **Replay compatibility through 0.7**: releases 0.5, 0.6 and 0.7 share simulation
   rules 0.5. Earlier replay rules remain supported.
 - **Reproducible CI evidence and delivery**: Node/Chromium verification, gallery
@@ -152,8 +162,10 @@ CainOS audits, behavioral tests, syntax checks, manifest generation and both bui
 ## Verification and tracker
 
 The versioned [0.7 evidence](docs/combat-qa-evidence-0.7.0.json) records the tested
-commit, actual Node/Chromium results and runtime hashes. CI creates the standalone
-and tracker from that verified runtime. The following older totals describe the
+commit, actual Node/Chromium results and runtime hashes. The tracker is authored
+and checked in the primary spreadsheet runtime. CI packages the standalone only
+when that reviewed tracker matches the current game and test hashes; it never
+rewrites the workbook. The following older totals describe the
 historical 0.6 campaign, not additional fresh 0.7 test results.
 
 The 0.6.0 evidence records **260 passing Node tests in 17 suites** and
@@ -189,5 +201,5 @@ read or a guaranteed sudden-crash recovery. See
 Remaining production includes dedicated combat drawings, full canonical art
 comparison, final sound mixing and voice work, competitive balance, networking,
 tag/assists, cooperation, episode campaigns, combat cloud sync and native packages.
-Physical-phone, two-physical-gamepad, exhaustive keyboard and low-end hardware
-checks remain separate from automated browser coverage.
+Physical-phone, two-physical-gamepad, screen-reader and low-end hardware
+checks remain separate from the automated keyboard and virtual-gamepad coverage.

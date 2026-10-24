@@ -114,6 +114,82 @@ test('custom local mappings stay independent and rebinding clears a held directi
   document.emit('keydown',{code:'KeyG'});assert.equal(controls.poll()[0].right,true);
 }));
 
+test('keyboard repeats preserve a held direction but cannot restart cleared movement or attacks',()=>withDOM(({controls,document,window,setEnabled})=>{
+  document.emit('keydown',{code:'KeyD'});
+  assert.equal(controls.poll()[0].right,true);
+  document.emit('keydown',{code:'KeyD',repeat:true});
+  assert.equal(controls.poll()[0].right,true,'Normal movement stays held without new edges.');
+
+  const engine=new CombatEngine({fighters:[FIGHTERS[0],FIGHTERS[1]],cpu:[false,false],skipIntro:true});
+  document.emit('keydown',{code:'KeyJ'});
+  engine.step(FIXED_DT,controls.poll(engine.state.fighters));
+  assert.equal(engine.state.a.stats.starts,1);
+  engine.pause();setEnabled(false);controls.clear();
+  document.emit('keydown',{code:'KeyJ',repeat:true});
+  document.emit('keydown',{code:'KeyD',repeat:true});
+  engine.pause(false);setEnabled(true);
+  const resumedX=engine.state.a.x;
+  for(let frame=0;frame<45;frame++){
+    document.emit('keydown',{code:'KeyJ',repeat:true});
+    document.emit('keydown',{code:'KeyD',repeat:true});
+    engine.step(FIXED_DT,controls.poll(engine.state.fighters));
+  }
+  assert.equal(engine.state.a.stats.starts,1,'Resuming while J remains held must not start another attack.');
+  assert.equal(engine.state.a.x,resumedX,'A held direction cleared at pause must stay neutral.');
+
+  document.emit('keyup',{code:'KeyJ'});document.emit('keyup',{code:'KeyD'});
+  document.emit('keydown',{code:'KeyJ'});
+  engine.step(FIXED_DT,controls.poll(engine.state.fighters));
+  assert.equal(engine.state.a.stats.starts,2,'A fresh press still attacks.');
+  document.emit('keydown',{code:'KeyD'});assert.equal(controls.poll()[0].right,true);
+  window.emit('blur');document.emit('keydown',{code:'KeyD',repeat:true});
+  assert.equal(controls.poll()[0].right,false,'Focus reset follows the same neutral rule.');
+}));
+
+test('player two can dash with Ctrl and attack without suppressing either player or browser shortcuts',()=>withDOM(({controls,document})=>{
+  const engine=new CombatEngine({fighters:[FIGHTERS[0],FIGHTERS[1]],cpu:[false,false],mode:'local',skipIntro:true});
+  document.emit('keydown',{code:'ControlRight',ctrlKey:true});
+  engine.step(FIXED_DT,controls.poll(engine.state.fighters,true));
+  assert.equal(engine.state.metrics.dash,1,'The default J2 Ctrl binding starts a dash.');
+  for(let frame=0;frame<15;frame++)engine.step(FIXED_DT,controls.poll(engine.state.fighters,true));
+  const j1=document.emit('keydown',{code:'KeyJ',ctrlKey:true});
+  const j2=document.emit('keydown',{code:'KeyB',ctrlKey:true});
+  engine.step(FIXED_DT,controls.poll(engine.state.fighters,true));
+  assert.equal(engine.state.a.attack?.name,'light','J1 can attack while J2 holds its dash key.');
+  assert.equal(engine.state.b.attack?.name,'light','J2 can attack after the dash without releasing Ctrl.');
+  assert.equal(j1.prevented,true);assert.equal(j2.prevented,true);
+
+  document.emit('keyup',{code:'ControlRight'});
+  const shortcut=document.emit('keydown',{code:'KeyL',ctrlKey:true});
+  assert.equal(shortcut.prevented,undefined,'An uncaptured Ctrl shortcut remains native.');
+  assert.equal(controls.poll([],true)[0].slot,null);
+  document.emit('keydown',{code:'ControlRight',ctrlKey:true});
+  const text=document.emit('keydown',{code:'KeyK',ctrlKey:true,target:{tagName:'INPUT'}});
+  assert.equal(text.prevented,undefined,'Text fields retain native shortcuts even with a game Ctrl held.');
+  assert.equal(controls.poll([],true)[0].slot,null);
+}));
+
+test('Space and Enter activate focused toolbar controls without queueing a jump',()=>withDOM(({controls,document,pauses,helps})=>{
+  const target=(tagName,touch=false)=>{
+    const element={tagName,hasAttribute:name=>touch&&name==='data-control'};
+    element.closest=()=>element;return element;
+  };
+  for(const tagName of ['BUTTON','A','SUMMARY'])for(const code of ['Space','Enter','NumpadEnter']){
+    const event=document.emit('keydown',{code,target:target(tagName)});
+    assert.equal(event.prevented,undefined,`${tagName} ${code} retains its native activation.`);
+    assert.equal(controls.poll()[0].jump,false);
+    document.emit('keyup',{code});
+  }
+  document.emit('keydown',{code:'Escape',target:target('BUTTON')});
+  document.emit('keydown',{code:'F1',target:target('BUTTON')});
+  assert.equal(pauses(),1);assert.equal(helps(),1,'Pause/help stay reachable from the toolbar.');
+  const touch=document.emit('keydown',{code:'Space',target:target('BUTTON',true)});
+  assert.equal(touch.prevented,true);assert.equal(controls.poll()[0].jump,true,'Touch combat controls retain gameplay bindings.');
+  document.emit('keyup',{code:'Space'});
+  document.emit('keydown',{code:'Space'});
+  assert.equal(controls.poll()[0].jump,true,'Space still jumps with the canvas focused.');
+}));
+
 test('editing and browser shortcuts do not queue custom attacks while pause/help remain available',()=>withDOM(({controls,document,setBindings,getBindings,pauses,helps})=>{
   setBindings(rebindAction(getBindings(),0,'light','KeyF').bindings);
   for(const event of [{target:{tagName:'INPUT'}},{target:{tagName:'DIV',isContentEditable:true}},{metaKey:true},{ctrlKey:true},{altKey:true}])document.emit('keydown',{code:'KeyF',...event});

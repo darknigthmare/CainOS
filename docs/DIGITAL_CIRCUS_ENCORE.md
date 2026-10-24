@@ -1,6 +1,6 @@
 # Digital Circus — Encore · Le Grand Duel
 
-Version jouable : **0.7.0** — 23 octobre 2026.
+Version jouable : **0.7.0** — finalisation du 24 octobre 2026.
 
 Encore partage son moteur entre l’application CainOS et le jeu autonome :
 **14 combattants, 140 techniques, 12 arènes, 9 modes, 51 costumes et 179 archives**.
@@ -18,6 +18,40 @@ compositions jouables, les vérifications techniques et les comparaisons artisti
 encore incomplètes.
 
 ## Ajouts de la passe 0.7.0
+
+### Menus, commandes et sons de contact
+
+Dans les groupes de modes, combattants, arènes, fiches et finales, les flèches
+déplacent le focus. **Début / Fin** rejoignent le premier ou le dernier choix.
+**Tab**, **Maj + Tab**, **Entrée** et **Espace** gardent leur fonctionnement natif.
+Changer un personnage, une scène, un filtre ou une tenue conserve le focus sur
+la commande correspondante. La fermeture d’une boîte de dialogue revient à son
+déclencheur quand il reste disponible. Les touches des listes déroulantes et des
+champs texte continuent d’agir dans ces champs.
+
+La manette peut ouvrir les détails des références et en parcourir les liens.
+Les champs de recherche sont réservés à la saisie clavier et exclus de son
+parcours pour éviter d’y bloquer le focus. La navigation active et les choix de
+joueur et de combattant disposent de libellés d’état accessibles.
+
+Trois défauts d’entrée sont corrigés : une touche maintenue à travers une pause
+ne redémarre plus une attaque par répétition automatique ; le dash sur **Ctrl
+droite** de J2 ne bloque plus les attaques des deux joueurs ; **Espace / Entrée**
+activent les boutons de la barre de combat sans déclencher un saut.
+
+Le catalogue sonore contient **24 motifs**, dont six contacts distincts : léger,
+fort, bas, saisie, spécial et super. La garde, les parades et le KO restent
+identifiables ; le son dépend des événements réellement résolus. La vérification
+des signaux numériques ne remplace pas un mixage et une écoute sur appareil.
+
+La galerie suspend son horloge dès que l’onglet ou sa fenêtre CainOS est masqué.
+Le retour n’ajoute plus de temps caché à la scène. Modifier la préférence de
+mouvement réduit recalcule le rendu même si la présentation est déjà arrêtée.
+
+Les nouvelles suites `combat-accessibility-browser.mjs` et
+`combat-input-browser.mjs` parcourent ces commandes par l’interface. Les
+manettes sont simulées et le format mobile est émulé dans Chromium ; ces essais
+ne constituent pas une vérification de lecteur d’écran ni de matériel physique.
 
 ### Finales de spectacle
 
@@ -57,7 +91,10 @@ le cycle de vie ; elle ne remplace pas une écoute artistique ni un mixage final
 ### Preuves et livraison
 
 La CI de cette passe produit les sorties réelles des tests Node, les rapports
-Chromium, deux planches de la galerie, le classeur et l’archive autonome.
+Chromium et deux planches de la galerie. Le classeur est mis à jour et vérifié
+avec le moteur tableur principal. La CI contrôle ensuite son empreinte, celles
+du jeu et des tests avant d’assembler l’archive autonome. Un classeur périmé
+bloque la production de l’archive et laisse un rapport « suivi à actualiser ».
 Le rapport **combat-qa-evidence-0.7.0.json** identifie le commit testé et les empreintes
 des sources. Le fichier **combat-qa-evidence.json** conserve la campagne historique
 0.6 ; ses contrôles artistiques non rejoués ne sont pas renommés en contrôles 0.7.
@@ -682,6 +719,7 @@ techniques et les tests ne constituent pas une certification canonique 1:1.
 | `combat/render-stage-motion.mjs` | 12 couches d’ambiance déterministes, limitées à l’arrière-plan au-dessus du sol |
 | `combat/training.mjs` | Vitesses, gel, historique, relevé de phases et bande manuelle de 600 images |
 | `combat/input.mjs` | Clavier, tactile, manette et impulsions de commandes |
+| `combat/menu-navigation.mjs` | Navigation des menus et restauration du focus |
 | `combat/bindings.mjs` | Mappings J1/J2, conflits, libellés et nettoyage des imports |
 | `combat/session.mjs` | Profils, migrations, replays, défis et compteurs testables |
 | `combat/progression.mjs` | Programmes, checkpoints, santé de survie et tableau du tournoi |
@@ -702,7 +740,9 @@ techniques et les tests ne constituent pas une certification canonique 1:1.
 | `scripts/build-combat-catalog.mjs` | Extraction reproductible du catalogue CainOS |
 | `scripts/workbook-publication.mjs` | Publication avec sauvegardes, restauration et conservation des preuves en cas d’échec |
 | `scripts/build-combat-workbook.mjs` | Génération du classeur et de ses données à partir des définitions livrées |
-| `scripts/build-combat-workbook-delta.py` | Mise à jour 0.7 du classeur existant à partir des preuves CI |
+| `scripts/build-combat-workbook-current.mjs` | Import, mise à jour, recalcul et vérification du classeur avec le moteur tableur principal |
+| `scripts/combat-workbook-current-data.mjs` | Données 0.7, identifiants stables et validation des preuves courantes |
+| `scripts/combat-ci-suites.mjs` | Liste commune des suites navigateur attendues |
 | `scripts/run-combat-ci.mjs` | Exécution et collecte des contrôles réellement rejoués |
 | `scripts/package-combat-release.mjs` | Archive autonome, contrôle des empreintes et documents de livraison |
 | `docs/DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx` | Classeur de production filtrable et éditable |
@@ -723,8 +763,10 @@ La passe 0.7 ajoute les nouvelles tâches et les preuves effectives de CI ; ses
 totaux sont consignés dans `combat-workbook-verification.json` et la Synthèse.
 Les objectifs peuvent recouper les tests ; les lignes ne représentent pas autant
 de tests indépendants. La comparaison canonique exhaustive reste ouverte. Les
-quatre essais non exécutés concernent un téléphone physique, deux manettes
-physiques, tous les menus au clavier et un matériel modeste.
+quatre essais historiques non exécutés concernaient un téléphone physique, deux
+manettes physiques, tous les menus au clavier et un matériel modeste. La passe
+0.7 ajoute une campagne clavier et manette simulée distincte ; les tests matériels
+et l’évaluation avec un lecteur d’écran restent à faire.
 
 Les notes sont restaurées par feuille et identifiant stable, même après tri.
 La régression contrôle dix notes sur huit onglets, dont deux formules R1C1,

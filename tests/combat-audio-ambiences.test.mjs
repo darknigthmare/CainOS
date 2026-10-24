@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { AUDIO_AMBIENCES, AUDIO_EFFECT_IDS, CombatAudio } from '../combat/audio.mjs';
+import { AUDIO_AMBIENCES, AUDIO_EFFECT_IDS, AUDIO_IMPACT_CUES, CombatAudio } from '../combat/audio.mjs';
 import { AMBIENCE_STAGE_IDS } from '../combat/audio-ambiences.mjs';
 import { STAGES } from '../combat/data.mjs';
 
@@ -272,6 +272,31 @@ test('trap and KO have distinct bounded signatures and KO rejects duplicate imme
   }
   assert.equal(new Set(signatures.map(value => JSON.stringify(value))).size, 3);
   assert.equal(audio.play('ko'), true); audio.destroy();
+}));
+
+test('six landed-impact sounds have different finite synthesis and share the existing effect volume', async () => withAudio({}, async ({ contexts, timers }) => {
+  const settings = { ambience: false, volume: .4 }, signatures = [];
+  const audio = new CombatAudio({ getSettings: () => settings }); await audio.unlock();
+  const context = contexts[0];
+  for (const cue of AUDIO_IMPACT_CUES) {
+    const before = context.nodes.length;
+    assert.equal(audio.play(cue), true, cue);
+    assert.equal(audio.play(cue), false, 'Repeated immediate ' + cue + ' must stay rate limited');
+    const sources = context.nodes.slice(before).filter(node => node.kind === 'oscillator');
+    assert.ok(sources.length >= 2 && sources.length <= 3);
+    assert.ok(sources.every(node => node.stopAt - node.startAt < .3));
+    signatures.push(sources.map(node => [node.type, node.frequency.events.map(event => [event.kind, event.value]), Math.round((node.stopAt - node.startAt) * 1e6)]));
+    assert.equal(buses(context)[1].gain.value, .4);
+    context.advance(1);
+    assert.equal(audio.diagnostics.activeVoices, 0);
+    assert.ok(sources.every(node => node.targets.size === 0 && node.onended === null));
+  }
+  assert.equal(new Set(signatures.map(value => JSON.stringify(value))).size, 6);
+  settings.sound = false;
+  for (const cue of AUDIO_IMPACT_CUES) assert.equal(audio.play(cue), false);
+  assert.equal(buses(context)[1].gain.value, 0);
+  assert.equal(timers.size, 0);
+  audio.destroy();
 }));
 
 test('destroy during a pending unlock cannot restart an atmosphere or retain a buffer', async () => withAudio({ holdResume: true }, async ({ contexts, finishResume, timers }) => {

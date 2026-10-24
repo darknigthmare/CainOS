@@ -10,6 +10,7 @@ import { createHash } from 'node:crypto';
 import { pathToFileURL } from 'node:url';
 import { GAME_VERSION } from '../combat/session.mjs';
 import { AMBIENCE_STAGE_IDS } from '../combat/audio-ambiences.mjs';
+import { AUDIO_IMPACT_CUES } from '../combat/audio.mjs';
 
 let playwright;
 try { playwright = await import('playwright'); }
@@ -74,7 +75,7 @@ try {
   await page.locator('[data-setting="ambience"]').check();
   await page.locator('[data-setting="sound"]').uncheck();
   await page.locator('[data-setting="music"]').uncheck();
-  await page.locator('[data-nav="home"]').click();
+  await page.getByRole('button', { name: 'Jouer', exact: true }).click();
   await page.waitForFunction(() => window.Encore.screen === 'home');
   await page.locator('[data-mode="training"]').click();
   await page.waitForFunction(() => window.Encore.screen === 'select');
@@ -113,7 +114,7 @@ try {
 
   // Real browser DSP, with an offline clock fixed at zero while scheduling the
   // first cycle. This instantiates the shipped CombatAudio rather than a copy.
-  const pcm = await page.evaluate(async ids => {
+  const pcm = await page.evaluate(async ({ ids, impactCues }) => {
     const { CombatAudio } = await import('./audio.mjs');
     const Original = window.AudioContext;
     const results = [];
@@ -165,9 +166,9 @@ try {
     const silent = [];
     for (const options of [{ stage: 'menu' }, { stage: 'lake', enabled: false }, { stage: 'lake', gain: 0 }]) silent.push(await sample(options));
     const effects = [];
-    for (const cue of ['trap', 'ko']) effects.push(await sample({ enabled: false, cue, seconds: 2 }));
+    for (const cue of ['trap', 'ko', ...impactCues]) effects.push(await sample({ enabled: false, cue, seconds: 2 }));
     return { results, silent, effects };
-  }, AMBIENCE_STAGE_IDS);
+  }, { ids: AMBIENCE_STAGE_IDS, impactCues: AUDIO_IMPACT_CUES });
   assert.equal(pcm.results.length, 12);
   assert.equal(new Set(pcm.results.map(item => item.sha256)).size, 12);
   report.pcm = pcm;
@@ -191,6 +192,10 @@ try {
     assert.ok(item.tailPeak < 1e-7);
   }
   checked('trap and KO synthesize two distinct finite PCM effects');
+  const impactPCM = pcm.effects.filter(item => AUDIO_IMPACT_CUES.includes(item.cue));
+  assert.equal(impactPCM.length, 6);
+  assert.equal(new Set(pcm.effects.map(item => item.sha256)).size, 8);
+  checked('light, heavy, low, throw, special and super contacts synthesize six distinct finite PCM effects', { effects: impactPCM.map(({ cue, sha256, peak, rms }) => ({ cue, sha256, peak, rms })) });
   assert.deepEqual(report.errors, []);
   checked('no JavaScript or missing-resource errors');
   report.pass = true;

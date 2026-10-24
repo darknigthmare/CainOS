@@ -143,6 +143,9 @@ dialog.story-reader{width:min(96vw,1180px);padding:24px;max-height:94dvh;overflo
 .codex-head .secondary + .secondary { margin-top: .6rem; }
 .finisher-preview-dialog { width: min(1080px, calc(100vw - 2rem)); max-width: 1080px; padding: 0; overflow: auto; }
 .finisher-preview-dialog #modal-content { padding: clamp(1rem, 3vw, 2rem); }
+.menu-keyboard-help { margin: 0; padding: 0 5% 18px; color: var(--muted); font-size: 11px; line-height: 1.8; }
+#arena:focus-visible { outline: 3px solid var(--mint); outline-offset: 3px; }
+@media (forced-colors: active) { button:focus-visible, a:focus-visible, select:focus-visible, input:focus-visible, summary:focus-visible, #arena:focus-visible { outline: 3px solid Highlight; } }
 .finale-choices { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .6rem; margin: 1.2rem 0; }
 .finale-choices button { white-space: normal; text-align: left; min-height: 3.2rem; }
 .finale-choices button[aria-pressed="true"] { border-color: #d6b77a; background: #3a2a44; color: #fff2d4; }

@@ -8,7 +8,7 @@ import { COSTUME_SPRITE_OVERRIDES, getCostumeFidelity } from './costume-fidelity
  * below is a fan-game adaptation, not a claim about canonical fighting powers.
  * Frames use the original CQC 60 Hz simulation and its 10000-health scale.
  */
-export const GAME = Object.freeze({ id: 'digital-circus-encore', name: 'Digital Circus — Encore', subtitle: 'Le Grand Duel', version: '0.7.0', contentDate: '2026-10-23' });
+export const GAME = Object.freeze({ id: 'digital-circus-encore', name: 'Digital Circus — Encore', subtitle: 'Le Grand Duel', version: '0.7.0', contentDate: '2026-10-24' });
 export const SOURCES = Object.freeze([
   { id: 'cainos', title: 'CainOS — base de travail et atlas existants', url: 'https://github.com/darknigthmare/CainOS/tree/4926834a2f063028903d6431e77f0bece859e671', kind: 'Dépôt utilisateur', scope: 'Inventaire du projet. Les mentions canon dans ses archives demandent une vérification indépendante.' },
   { id: 'cqc', title: 'CQC — version de référence P39', url: 'https://github.com/darknigthmare/shadow-codec-ops/tree/42279c1c884769873e66bbda0b6fe849bcd2f1a2/public/cqc', kind: 'Dépôt utilisateur', scope: 'Architecture intégrée/autonome, moteur de combat et IA portés depuis les fichiers réels.' },

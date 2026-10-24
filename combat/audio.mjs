@@ -25,6 +25,12 @@ export const AUDIO_THEMES = Object.freeze({
 // [frequency, end frequency, seconds, delay, waveform, amplitude].
 const EFFECTS = Object.freeze({
   damage: [[170, 55, .13, 0, 'triangle', .06]],
+  impactLight: [[310, 105, .075, 0, 'triangle', .040], [980, 410, .035, .008, 'sine', .018]],
+  impactHeavy: [[145, 38, .19, 0, 'triangle', .052], [78, 48, .14, .035, 'sine', .027]],
+  impactLow: [[220, 68, .11, 0, 'sawtooth', .028], [520, 170, .065, .018, 'triangle', .026]],
+  impactThrow: [[330, 135, .085, 0, 'triangle', .030], [110, 36, .21, .055, 'sine', .052]],
+  impactSpecial: [[760, 210, .15, 0, 'triangle', .038], [1180, 640, .11, .025, 'sine', .024]],
+  impactSuper: [[132, 32, .24, 0, 'triangle', .047], [660, 220, .16, .015, 'sine', .026], [980, 490, .12, .06, 'sine', .017]],
   block: [[390, 180, .065, 0, 'square', .032], [650, 260, .06, .025, 'sine', .032]],
   parry: [[650, 900, .12, 0, 'sine', .05], [1120, 1500, .13, .04, 'sine', .035]],
   guardBreak: [[190, 60, .18, 0, 'sawtooth', .04], [800, 160, .1, .03, 'triangle', .04]],
@@ -46,6 +52,48 @@ const EFFECTS = Object.freeze({
 const ALIASES = Object.freeze({ hit: 'damage', reflect: 'parry', throwTech: 'parry', barrier: 'block', heal: 'recover', utility: 'recover', roundEnd: 'win' });
 export const AUDIO_EFFECT_IDS = Object.freeze(Object.keys(EFFECTS));
 export const AUDIO_EFFECT_ALIASES = ALIASES;
+export const AUDIO_IMPACT_CUES = Object.freeze(['impactLight', 'impactHeavy', 'impactLow', 'impactThrow', 'impactSpecial', 'impactSuper']);
+const IMPACT_BY_SLOT = Object.freeze({
+  light: 'impactLight', air: 'impactLight', dash: 'impactLight',
+  heavy: 'impactHeavy', low: 'impactLow', throw: 'impactThrow',
+  special: 'impactSpecial', specialDown: 'impactSpecial', specialForward: 'impactSpecial', specialBack: 'impactSpecial',
+  super: 'impactSuper',
+});
+const EVENT_CUES = new Set(['parry', 'reflect', 'throwTech', 'guardBreak', 'jump', 'dash', 'explosion', 'heal', 'barrier', 'recover', 'denied']);
+
+/** One audible cue per simulation batch. Actual contacts differ from wind-ups;
+ * blocked contacts retain the guard cue, and critical outcomes stay foremost.
+ * This reads events without changing the engine, its clock or the replay.
+ */
+export function selectCombatCue(events, state = {}) {
+  if (!Array.isArray(events)) return null;
+  const cues = new Set();
+  let impact = null, impactAmount = -1, guarded = false;
+  const actors = Array.isArray(state?.fighters) ? state.fighters : [state?.a, state?.b];
+  for (const event of events) {
+    if (!event || typeof event !== 'object') continue;
+    if (event.type === 'roundEnd' && actors.some(actor => (Number.isFinite(actor?.life) ? actor.life : actor?.hp) === 0)) cues.add('ko');
+    if (event.type === 'trapPlaced' || event.type === 'trapTrigger') cues.add('trap');
+    if (EVENT_CUES.has(event.type)) cues.add(event.type);
+    if (event.type === 'activate') {
+      if (event.slot === 'super') cues.add('super');
+      else if (Object.hasOwn(IMPACT_BY_SLOT, event.slot) && IMPACT_BY_SLOT[event.slot] === 'impactSpecial') cues.add('special');
+      else if (event.slot === 'utility') cues.add('recover');
+    }
+    if (event.type === 'block') guarded = true;
+    if (event.type !== 'damage' || !Number.isFinite(event.amount) || event.amount <= 0 ||
+        ![0, 1].includes(event.actor) || ![0, 1].includes(event.target) || event.actor === event.target) continue;
+    if (event.blocked === true) { guarded = true; continue; }
+    if (event.blocked !== false || event.amount < impactAmount) continue;
+    impactAmount = event.amount;
+    impact = Object.hasOwn(IMPACT_BY_SLOT, event.slot) ? IMPACT_BY_SLOT[event.slot] : 'damage';
+  }
+  const critical = ['ko', 'guardBreak', 'parry', 'reflect', 'throwTech', 'explosion'].find(cue => cues.has(cue));
+  if (critical) return critical;
+  if (impact) return impact;
+  if (guarded) return 'block';
+  return ['super', 'trap', 'special', 'heal', 'barrier', 'recover', 'denied', 'jump', 'dash'].find(cue => cues.has(cue)) || null;
+}
 const MAX_VOICES = 24, MAX_GROUP_VOICES = 12, MAX_AMBIENCE_VOICES = 6, LOOKAHEAD = .12;
 const volume = (value, fallback) => typeof value === 'number' && Number.isFinite(value) ? Math.max(0, Math.min(1, value)) : fallback;
 const audioConstructor = () => globalThis.AudioContext || globalThis.webkitAudioContext;

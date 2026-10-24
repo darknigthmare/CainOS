@@ -7,7 +7,8 @@ import { BINDING_ACTIONS, DEFAULT_BINDINGS, rebindAction, formatBinding, keyLabe
 import { createProgram, programEncounter, recordProgramResult, retryProgram } from './progression.mjs';
 import { STORY_NOTICE, getStoryRoute, getStoryEnding } from './stories.mjs';
 import { createStoryPresentation, stepStoryPresentation, skipStoryPresentation, storyPresentationMarkup, paintStoryPresentation } from './story-presentation.mjs';
-import { CombatAudio } from './audio.mjs';
+import { CombatAudio, selectCombatCue } from './audio.mjs';
+import { menuItems, rememberFocus, restoreFocus, moveMenuFocus, navigateKeyboardGroup } from './menu-navigation.mjs';
 import { FINISHER_CATALOG, FINISHER_NOTICE } from './finisher-catalog.mjs';
 import { selectMatchFinisher } from './finishers.mjs';
 import { FinisherGallery } from './finisher-gallery.mjs';
@@ -27,7 +28,7 @@ let profile = readProfile(storage);
 let profileDirty = false;
 let screen = 'home', active = null, selection = { mode:'versus', fighters:['pomni','jax'], side:0, stage:STAGES[0].id, variants:['',''], challenge:CHALLENGES[0].id };
 let codexId = 'pomni', archiveQuery = '', archivePage = 0, archiveFilter = 'all', previousTime = 0, accumulator = 0, toastTimer;
-let currentObserver, bindingCapture = null, osVisible = true, storyReader = null, finisherGallery = null;
+let currentObserver, bindingCapture = null, osVisible = true, storyReader = null, finisherGallery = null, dialogReturnFocus = null;
 const PROGRAM_MODES = ['arcade', 'boss', 'survival', 'story', 'tournament'];
 const audio = new CombatAudio({ getSettings: () => profile.settings });
 const offline = new OfflineGame(() => updateOfflinePanel());
@@ -70,17 +71,52 @@ function syncAudio() {
   audio.setPaused(document.hidden || !osVisible || !!(active && screen === 'fight' && active.engine.paused && !active.finished));
 }
 function sound(kind) { audio.play(kind); }
+function prepareMenuGroups(scope) {
+  scope.querySelectorAll('.modes-grid,.roster,.stages,.pick-side,.codex-list,.finale-choices,.challenge-list').forEach(group => { group.dataset.menuGroup = ''; });
+  scope.querySelectorAll('[data-side]').forEach(button => button.setAttribute('aria-pressed', String(Number(button.dataset.side) === selection.side)));
+  scope.querySelectorAll('[data-codex]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.codex === codexId)));
+}
 function setScreen(next) {
   const changed = screen !== next;
+  const previousFocus = changed ? null : rememberFocus(main);
   screen = next; currentObserver?.disconnect();
   main.classList.toggle('combat-main', next === 'fight');
-  document.querySelectorAll('.masthead [data-nav]').forEach(b => b.classList.toggle('active', b.dataset.nav === next || b.dataset.nav === 'home' && ['select','fight','challenges'].includes(next)));
+  document.querySelectorAll('.masthead [data-nav]').forEach(button => {
+    const selected = button.dataset.nav === next || button.dataset.nav === 'home' && ['select','fight','challenges'].includes(next);
+    button.classList.toggle('active', selected);
+    if (selected) button.setAttribute('aria-current', 'page'); else button.removeAttribute('aria-current');
+  });
   if (next !== 'fight') main.scrollIntoView({ block:'start' });
-  if (changed && next !== 'fight') queueMicrotask(() => main.focus({ preventScroll: true }));
+  if (next !== 'fight') queueMicrotask(() => {
+    if (screen !== next) return;
+    prepareMenuGroups(main);
+    if (modal.open) return;
+    if (changed || previousFocus && !restoreFocus(previousFocus, main)) main.focus({ preventScroll: true });
+  });
   syncAudio();
 }
-function showDialog(content, { story = false, finale = false } = {}) { finisherGallery?.dispose(); finisherGallery = null; modal.classList.toggle('finisher-preview-dialog', finale); modal.classList.remove('wardrobe-dialog'); modal.classList.toggle('story-reader', story); if (!story) storyReader = null; $('#modal-content').innerHTML = content; if (!modal.open) modal.showModal(); else modal.querySelector('button:not(:disabled)')?.focus(); syncAudio(); }
-function closeDialog() { finisherGallery?.dispose(); finisherGallery = null; modal.classList.remove('finisher-preview-dialog'); bindingCapture = null; storyReader = null; modal.classList.remove('wardrobe-dialog', 'story-reader'); modal.close(); }
+function showDialog(content, { story = false, finale = false } = {}) {
+  const wasOpen = modal.open;
+  const previousFocus = wasOpen ? rememberFocus(modal) : null;
+  if (!wasOpen) dialogReturnFocus = rememberFocus(document);
+  finisherGallery?.dispose(); finisherGallery = null;
+  modal.classList.toggle('finisher-preview-dialog', finale);
+  modal.classList.remove('wardrobe-dialog'); modal.classList.toggle('story-reader', story);
+  if (!story) storyReader = null;
+  $('#modal-content').innerHTML = content;
+  prepareMenuGroups(modal);
+  if (!wasOpen) modal.showModal();
+  else if (!restoreFocus(previousFocus, modal)) menuItems(modal)[0]?.focus();
+  syncAudio();
+}
+function closeDialog() {
+  const wasOpen = modal.open;
+  finisherGallery?.dispose(); finisherGallery = null; modal.classList.remove('finisher-preview-dialog');
+  bindingCapture = null; storyReader = null; modal.classList.remove('wardrobe-dialog', 'story-reader');
+  modal.close();
+  if (wasOpen) restoreFocus(dialogReturnFocus, document);
+  dialogReturnFocus = null;
+}
 function title(eyebrow, heading, description='') { return `<div class="page-title"><span class="ticket-label">${escapeHTML(eyebrow)}</span><h1>${escapeHTML(heading)}</h1>${description ? `<p>${escapeHTML(description)}</p>` : ''}</div>`; }
 async function paintPortrait(canvas) {
   const item = ARCHIVE.find(f => f.id === canvas.dataset.portrait) || getFighter(canvas.dataset.portrait);
@@ -218,7 +254,6 @@ async function showFinisherGallery(fighterId, finisherId = '', variantId = '') {
   if (finisherGallery !== view || !modal.open) return;
   if (result?.errors?.length) toast('Certaines illustrations de cet aperçu sont indisponibles.');
   view.tick(performance.now(), { reducedMotion: profile.settings.reducedMotion || reducedMotionPreference.matches });
-  $('[data-finale-id="' + definition.id + '"]')?.focus({ preventScroll: true });
 }
 function renderArchives() {
   setScreen('archives');
@@ -472,13 +507,9 @@ function updateHUD() {
 }
 function challengeValue() {return challengeProgress(active.challenge,active.stats[0]);}
 function collectEvents(events) {
-  const effect=collectMatchStats(active.stats,events,active.engine.state);
+  collectMatchStats(active.stats,events,active.engine.state);
   if(active.engine.state.phase==='matchOver')active.finisher=profile.settings.finishers?selectMatchFinisher(active.engine.state,events,{mode:active.mode,replay:active.replay}):null;
-  const cues = events.map(event => event.type==='roundEnd'&&active.engine.state.fighters.some(f=>f.life<=0)?'ko':event.type==='trapPlaced'||event.type==='trapTrigger'?'trap':event.type === 'activate'
-    ? event.slot === 'super' ? 'super' : event.slot?.startsWith('special') ? 'special' : event.slot === 'utility' ? 'recover' : null
-    : ['parry','reflect','throwTech','guardBreak','jump','dash','explosion','heal','barrier','recover','denied'].includes(event.type) ? event.type : null).filter(Boolean);
-  const priority = ['ko','super','guardBreak','parry','reflect','throwTech','explosion','trap'].find(cue => cues.includes(cue));
-  const cue = priority || effect || cues[0];
+  const cue = selectCombatCue(events, active.engine.state);
   if (cue) sound(cue);
 }
 function loop(now) {
@@ -622,7 +653,8 @@ function navigateMenu(action) {
     return;
   }
   const scope=modal.open?modal:document;
-  const items=[...scope.querySelectorAll('button:not(:disabled),a[href],select,input[type=range],input[type=checkbox],input[type=radio]')].filter(el=>!el.hidden&&el.getClientRects().length&&getComputedStyle(el).visibility!=='hidden');
+  // A gamepad cannot enter text: skip editors so focus never gets stranded there.
+  const items = menuItems(scope, { gamepad: true });
   if(!items.length)return;
   const focused=document.activeElement, index=items.indexOf(focused);
   if(action==='select'){
@@ -636,15 +668,7 @@ function navigateMenu(action) {
     else return;
     focused.dispatchEvent(new Event('change',{bubbles:true}));return;
   }
-  if(index<0){items[0].focus();return;}
-  const origin=focused.getBoundingClientRect(), x=origin.x+origin.width/2, y=origin.y+origin.height/2;
-  const vertical=action==='up'||action==='down', sign=action==='up'||action==='left'?-1:1;
-  const candidates=items.filter(el=>el!==focused).map(el=>{
-    const r=el.getBoundingClientRect(), dx=r.x+r.width/2-x, dy=r.y+r.height/2-y;
-    const ahead=(vertical?dy:dx)*sign, side=Math.abs(vertical?dx:dy);
-    return {el,ahead,score:ahead+side*3};
-  }).filter(c=>c.ahead>3).sort((a,b)=>a.score-b.score);
-  (candidates[0]?.el||items[(index+(sign>0?1:-1)+items.length)%items.length]).focus();
+  moveMenuFocus(items, action);
 }
 async function handleClick(event){
   const button=event.target.closest('button');if(!button||button.disabled)return;
@@ -729,6 +753,11 @@ async function handleClick(event){
   }
 }
 document.addEventListener('click',handleClick);
+document.addEventListener('keydown', event => {
+  if (bindingCapture || document.hidden || !osVisible) return;
+  if (screen === 'fight' && !modal.open) return;
+  navigateKeyboardGroup(event);
+});
 document.addEventListener('keydown',event=>{
   void audio.unlock();
   if(!bindingCapture)return;
@@ -777,8 +806,8 @@ modal.addEventListener('keydown',event=>{
   event.preventDefault();moveStoryReader(event.key==='ArrowLeft'?-1:1);
 });
 window.addEventListener('blur',()=>{if(active&&screen==='fight'&&!active.finished&&!modal.open)pauseGame('La fenêtre a perdu le focus. Reprends lorsque tu es prêt.');});
-document.addEventListener('visibilitychange',()=>{if(document.hidden&&active&&!active.finished)pauseGame('Le jeu a été masqué. La rencontre est suspendue.');syncAudio();});
-window.addEventListener('message',event=>{if(!embedded||event.source!==window.parent||event.origin!==location.origin)return;if(event.data?.type==='cainos:combat:visibility'){osVisible=event.data.active!==false;if(!osVisible){controls.clear();if(active&&!active.finished)pauseGame('La fenêtre de combat a été masquée dans CainOS.');}syncAudio();}});
+document.addEventListener('visibilitychange',()=>{if(document.hidden){finisherGallery?.suspendClock();if(active&&!active.finished)pauseGame('Le jeu a été masqué. La rencontre est suspendue.');}syncAudio();});
+window.addEventListener('message',event=>{if(!embedded||event.source!==window.parent||event.origin!==location.origin)return;if(event.data?.type==='cainos:combat:visibility'){osVisible=event.data.active!==false;if(!osVisible){finisherGallery?.suspendClock();controls.clear();if(active&&!active.finished)pauseGame('La fenêtre de combat a été masquée dans CainOS.');}syncAudio();}});
 window.addEventListener('storage',event=>{if(event.key===SAVE_KEY&&!profileDirty){profile=readProfile(storage);applySettings();if(screen==='settings')renderSettings();else if(screen==='home')renderHome();}});
 $('#import-profile').addEventListener('change',async event=>{
   const file=event.target.files[0];event.target.value='';if(!file)return;

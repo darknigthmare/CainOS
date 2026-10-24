@@ -1,5 +1,6 @@
 /**
- * Package a verified Encore build; no repository write credential is used here.
+ * Package a verified Encore build and its reviewed workbook without rewriting
+ * either. --if-reviewed skips delivery while a source-first PR awaits its tracker.
  */
 import fs from 'node:fs/promises';
 import path from 'node:path';
@@ -15,13 +16,35 @@ assert.equal(evidence.pass,true,'Only a fully verified runtime may be packaged.'
 assert.equal(evidence.runtimeUnchangedDuringTests,true);
 const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
 for(const [file,expected] of Object.entries(evidence.runtimeSourceHashes)) assert.equal(sha(await fs.readFile(file)),expected,'Runtime changed: '+file);
-execFileSync('python3',['scripts/build-combat-workbook-delta.py','--repo-root',root,'--evidence',evidencePath],{stdio:'inherit'});
-const verification=JSON.parse(await fs.readFile('docs/combat-workbook-verification.json','utf8'));
-assert.equal(verification.gameVersion,GAME_VERSION,'Workbook and game version differ.');
+let verification;
+try {
+  verification=JSON.parse(await fs.readFile('docs/combat-workbook-verification.json','utf8'));
+  assert.equal(verification.gameVersion,GAME_VERSION,'The workbook still describes an earlier version.');
+  assert.equal(verification.workbookSHA256,sha(await fs.readFile('docs/DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx')),'Workbook changed after review.');
+  assert.equal(verification.trackerDataSHA256,sha(await fs.readFile('docs/combat-tracker-data.json')),'Tracker data changed after review.');
+  assert.equal(verification.sourceDigests['docs/combat-qa-evidence-0.7.0.json'],sha(await fs.readFile('docs/combat-qa-evidence-0.7.0.json')),'Workbook evidence changed after review.');
+  for(const [file,digest]of Object.entries(evidence.runtimeSourceHashes))assert.equal(verification.sourceDigests[file],digest,'Workbook tracks an older runtime: '+file);
+  for(const report of [...evidence.nodeReports,...evidence.browserReports]){
+    assert.equal(sha(await fs.readFile(report.file)),report.sourceSha256,'Current test source changed: '+report.file);
+    assert.equal(verification.sourceDigests[report.file],report.sourceSha256,'Workbook tracks older tests: '+report.file);
+  }
+  assert.deepEqual(verification.currentQa.totals,evidence.totals,'Reviewed test coverage differs from current collection.');
+} catch(error) {
+  if(!process.argv.includes('--if-reviewed'))throw error;
+  // A fresh CI checkout has no release directory. Remove only our own named
+  // outputs on local reruns so a previous archive cannot masquerade as this run.
+  for(const file of ['Digital_Circus_Encore_0.7.0.zip','DIGITAL_CIRCUS_COMBAT_TRACKER_0.7.0.xlsx','LIRE-MOI.txt','delivery-0.7.0.json','SHA256SUMS.txt'])await fs.rm(path.join(root,'release',file),{force:true});
+  const pending={gameVersion:GAME_VERSION,sourceCommit:evidence.sourceCommit,testsPassed:true,packaged:false,reason:error.message};
+  await fs.writeFile('audit-combat/ci/delivery-pending.json',JSON.stringify(pending,null,2)+'\n');
+  console.log('ENCORE_DELIVERY_PENDING '+JSON.stringify(pending));
+  process.exit(0);
+}
+await fs.rm('audit-combat/ci/delivery-pending.json',{force:true});
 execFileSync(process.execPath,['scripts/build-combat.mjs'],{stdio:'inherit'});
-const bundle=path.join(root,'dist-combat'),release=path.join(root,'release'),generated=path.join(root,'audit-combat/generated-files');
-await fs.mkdir(release,{recursive:true}); await fs.mkdir(generated,{recursive:true});
+const bundle=path.join(root,'dist-combat'),release=path.join(root,'release');
+await fs.mkdir(release,{recursive:true});
 await fs.cp(path.join(root,'docs'),path.join(bundle,'docs'),{recursive:true});
+await fs.copyFile(evidencePath,path.join(bundle,'docs/combat-delivery-evidence-0.7.0.json'));
 const launcher=[
   '#!/usr/bin/env python3',
   '"""Serve Encore over loopback HTTP; requires Python 3 and a modern browser."""',
@@ -66,7 +89,8 @@ const readme=[
   'Réglages : finales, ambiances et volume indépendant ; mouvement réduit pris en compte.',
   'Les règles de simulation restent 0.5 ; replays 0.1 à 0.7 compatibles.','',
   'Le fichier docs/DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx contient le suivi détaillé.',
-  'Les preuves sont dans docs/combat-qa-evidence-0.7.0.json.',
+  'Les preuves du classeur sont dans docs/combat-qa-evidence-0.7.0.json.',
+  'La vérification fraîche de cette archive est dans docs/combat-delivery-evidence-0.7.0.json.',
   'Les finales sont des adaptations Encore avec les dessins existants.',
   'La fidélité canonique générale 1:1 et les dessins de combat dédiés restent ouverts.','',
   'Validation : CI Linux, Node et Chromium. Les lanceurs Windows/macOS ne sont',
@@ -90,7 +114,7 @@ const copies=[
 ];
 const generatedFiles=[];
 for(const [source,target] of copies){
-  const data=await fs.readFile(source),destination=path.join(generated,target);await fs.mkdir(path.dirname(destination),{recursive:true});await fs.writeFile(destination,data);
+  const data=await fs.readFile(source);
   generatedFiles.push({path:target,bytes:data.length,sha256:sha(data)});
   if(target.startsWith('docs/images/')){const copy=path.join(bundle,target);await fs.mkdir(path.dirname(copy),{recursive:true});await fs.writeFile(copy,data);}
 }
@@ -123,7 +147,8 @@ for(const name of ['Digital_Circus_Encore_0.7.0.zip','DIGITAL_CIRCUS_COMBAT_TRAC
 }
 const delivery={
   schema:'encore-release/v1',gameVersion:GAME_VERSION,sourceCommit:evidence.sourceCommit,runUrl:evidence.runUrl,generatedAt:new Date().toISOString(),
-  files,generatedFiles,tests:evidence.totals,runtimeSourceHashes:evidence.runtimeSourceHashes,
+  files,reviewedFiles:generatedFiles,tests:evidence.totals,runtimeSourceHashes:evidence.runtimeSourceHashes,
+  workbookEvidence:{sourceCommit:verification.sourceCommit,sha256:verification.sourceDigests['docs/combat-qa-evidence-0.7.0.json']},
   packaging:{archiveIntegrity:true,standaloneRuntimeIdentical:true,pythonLauncherParsed:true,posixLauncherSyntax:true,nativeWindowsTested:false,nativeMacOSTested:false},
   limits:['Finales et audio procéduraux Encore ; fidélité canonique générale 1:1 non certifiée.','Téléphone et manettes physiques non testés dans cette CI.']
 };

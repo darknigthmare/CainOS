@@ -5,7 +5,8 @@
  * --repo-root specifies this checkout. --output-dir defaults to docs.
  * --input-workbook defaults to the existing tracker in this checkout.
  * Notes utilisateur follow sheet + stable ID, including relative formulas.
- * Version 0.7 delegates to the Python stdlib delta publisher and requires current CI evidence.
+ * Version 0.7 requires the primary spreadsheet runtime and current execution
+ * evidence. CI validates the reviewed workbook without rewriting it.
  * Historical 0.6 generation uses docs/combat-qa-evidence.json and the spreadsheet runtime.
  */
 import fs from 'node:fs/promises';
@@ -30,15 +31,23 @@ const { GAME, FIGHTERS, MOVES, STAGES, ROSTER_ARCHIVE, VARIANTS, SOURCES, MOVE_S
 if (GAME.version === '0.7.0') {
   const { spawnSync } = await import('node:child_process');
   const requestedEvidence = path.resolve(flag('--qa-evidence', path.join(root, 'audit-combat/ci/evidence-0.7.0.json')));
-  const result = spawnSync(process.env.PYTHON_EXECUTABLE || 'python3', [
-    path.join(root, 'scripts/build-combat-workbook-delta.py'),
-    '--repo-root', root,
-    '--evidence', requestedEvidence,
-    '--output-dir', out,
-    '--input-workbook', inputWorkbook,
-  ], { cwd: root, stdio: 'inherit' });
-  if (result.error) throw result.error;
-  process.exit(result.status ?? 1);
+  if (process.env.CODEX_PRIMARY_RUNTIME_NODE && process.env.CODEX_PRIMARY_RUNTIME_NODE_MODULES) {
+    const { tmpdir } = await import('node:os');
+    const temporary = await fs.mkdtemp(path.join(tmpdir(), 'encore-workbook-'));
+    try {
+      await fs.symlink(process.env.CODEX_PRIMARY_RUNTIME_NODE_MODULES, path.join(temporary, 'node_modules'), 'dir');
+      const script = path.join(temporary, 'build-combat-workbook-current.mjs');
+      await fs.copyFile(path.join(root, 'scripts/build-combat-workbook-current.mjs'), script);
+      const result = spawnSync(process.env.CODEX_PRIMARY_RUNTIME_NODE, [script,
+        '--repo-root', root, '--qa-evidence', requestedEvidence, '--output-dir', out,
+        '--input-workbook', inputWorkbook, '--preview-dir', previewDir,
+      ], { cwd: temporary, stdio: 'inherit' });
+      if (result.error) throw result.error;
+      process.exitCode = result.status ?? 1;
+    } finally { await fs.rm(temporary, {recursive:true, force:true}); }
+    process.exit(process.exitCode || 0);
+  }
+  throw new Error('Workbook authoring requires the primary spreadsheet runtime. CI packages a previously reviewed workbook and never rewrites it.');
 }
 const { FileBlob, SpreadsheetFile } = await import('@oai/artifact-tool');
 if (evidence.gameVersion && evidence.gameVersion !== GAME.version) throw new Error(`QA evidence belongs to ${evidence.gameVersion}, not the current ${GAME.version}`);
