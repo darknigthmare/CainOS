@@ -1,4 +1,5 @@
 /** Small stage-specific ambient layers, drawn behind actors above the floor. */
+import { SCENERY_ANCHORS } from './render-stage-scenery.mjs';
 export const AMBIENT_FLOOR = 568;
 export const STAGE_AMBIENCES = Object.freeze({
   bigtop: 'Lueurs de piste', candy: 'Poussière de sucre', manor: 'Bougies du manoir', spudsy: 'Vapeur du comptoir',
@@ -22,13 +23,13 @@ export function stageMotion(stage, frame = 0, reducedMotion = false) {
   } else if (id === 'candy') {
     for (let i = 0; i < 18; i++) shapes.push(circle((73 + i * 139 + t * (2 + i % 3)) % 1280, 85 + ((i * 47 + t * (4 + i % 4)) % 425), 1.4 + i % 2, 1.4 + i % 2, ['#ffe5bb', '#fbb5db', '#d7eaff'][i % 3], 0.38));
   } else if (id === 'manor') {
-    for (const [i, x] of [130, 307, 973, 1150].entries()) {
-      shapes.push(circle(x, 286, 9 + wave(4.2, i) * 2, 22 + wave(5.1, i) * 3, '#ffc779', 0.11));
-      shapes.push(circle(x + wave(3.7, i) * 2, 287, 2.7, 7 + wave(4.9, i) * 1.6, '#ffe4ab', 0.46));
+    for (const [i, [x, y]] of SCENERY_ANCHORS.manor.candles.entries()) {
+      shapes.push(circle(x, y, 9 + wave(4.2, i) * 2, 22 + wave(5.1, i) * 3, '#ffc779', 0.11));
+      shapes.push(circle(x + wave(3.7, i) * 2, y, 2.7, 7 + wave(4.9, i) * 1.6, '#ffe4ab', 0.46));
     }
   } else if (id === 'spudsy') {
-    for (let i = 0; i < 4; i++) {
-      const y = 332 - ((t * 14 + i * 22) % 85), x = 590 + i * 29;
+    for (const [i, [x, surface]] of SCENERY_ANCHORS.spudsy.steam.entries()) {
+      const y = surface - 18 - ((t * 14 + i * 22) % 65);
       shapes.push(stroke([[x, y + 16], [x + wave(1.1, i) * 7, y + 8], [x + wave(1.1, i + 0.7) * 10, y]], '#ffe5ca', 0.13, 3));
     }
   } else if (id === 'cellar') {
@@ -66,7 +67,7 @@ export function stageMotion(stage, frame = 0, reducedMotion = false) {
       shapes.push(circle(x, y, 54, 13, '#e3e9ed', 0.14), circle(x + 36, y + 5, 40, 9, '#e3e9ed', 0.12));
     }
   } else if (id === 'backstage') {
-    for (let i = 0; i < 5; i++) shapes.push(circle(110 + i * 265, 178, 13 + wave(0.5, i) * 2, 21 + wave(0.5, i) * 2, '#f4c795', 0.08 + (wave(0.5, i) + 1) * 0.04));
+    for (const [i, [x, y, radius]] of SCENERY_ANCHORS.backstage.lights.entries()) shapes.push(circle(x, y, radius * 1.5 + wave(0.5, i) * 2, radius + wave(0.5, i), '#ffe9b7', 0.07 + (wave(0.5, i) + 1) * 0.035));
   }
   return { id, frame: tick, shapes };
 }

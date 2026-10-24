@@ -98,7 +98,7 @@ test('settings, themes and effects never construct audio before explicit unlock'
   audio.setTheme('candy'); audio.setPaused(true); audio.setPaused(false); audio.play('win');
   assert.equal(contexts.length, 0); assert.equal(audio.diagnostics.contextState, 'uninitialized');
   assert.equal(await audio.unlock(), true); assert.equal(contexts.length, 1);
-  assert.equal(audio.diagnostics.musicEnabled, false); assert.equal(timers.size, 0);
+  assert.equal(audio.diagnostics.musicEnabled, false); assert.equal(audio.diagnostics.ambienceEnabled, true); assert.equal(timers.size, 1);
   assert.equal(audio.play('damage'), true);
   assert.equal(contexts[0].nodes.filter(node => node.kind === 'gain')[1].gain.value, .25);
   assert.ok(Object.isFrozen(audio.diagnostics));

@@ -1,0 +1,66 @@
+name: Encore QA
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+    paths:
+      - "app.js"
+      - "episodes.js"
+      - "index.html"
+      - "index.css"
+      - "assets/**"
+      - "combat/**"
+      - "tests/combat-*"
+      - "scripts/**"
+      - "docs/**"
+      - "package*.json"
+      - ".github/workflows/encore-qa.yml"
+permissions:
+  contents: read
+concurrency:
+  group: encore-qa-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+jobs:
+  combat:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+      - name: Install project dependencies
+        run: npm ci
+      - name: Contracts, Node tests and both builds
+        run: |
+          mkdir -p audit-combat/ci
+          node --check scripts/build-combat-workbook.mjs
+          set -o pipefail
+          npm run qa 2>&1 | tee audit-combat/ci/qa.log
+      - name: Install browser verification runtime
+        run: |
+          npm install --no-save --package-lock=false playwright@1.64.1
+          npx playwright install --with-deps chromium
+      - name: Browser verification
+        run: node scripts/run-combat-ci.mjs
+      - name: Build reviewable delivery
+        run: node scripts/package-combat-release.mjs --if-reviewed
+      - name: Upload verification evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: encore-evidence-${{ github.event.pull_request.head.sha }}
+          path: audit-combat/
+          retention-days: 14
+          if-no-files-found: error
+      - name: Upload standalone delivery
+        if: ${{ success() && hashFiles('release/*') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: encore-standalone-${{ github.event.pull_request.head.sha }}
+          path: release/
+          retention-days: 30
+          if-no-files-found: error

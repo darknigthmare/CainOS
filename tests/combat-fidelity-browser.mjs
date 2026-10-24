@@ -13,7 +13,7 @@ import { FIGHTERS, STAGES, VARIANTS, getReplayFighter } from '../combat/data.mjs
 import { FIDELITY_SOURCES } from '../combat/fidelity.mjs';
 import { getStoryRoute } from '../combat/stories.mjs';
 import { CombatEngine, FIXED_DT } from '../combat/engine.mjs';
-import { GAME_VERSION, REPLAY_VERSIONS, REPLAY_KEY, packInput, replayInputs, validateReplay } from '../combat/session.mjs';
+import { GAME_VERSION, REPLAY_VERSIONS, REPLAY_KEY, replayRulesVersion, packInput, replayInputs, validateReplay } from '../combat/session.mjs';
 
 let playwright;
 try { playwright = await import('playwright'); }
@@ -48,7 +48,7 @@ const replayFixture = (fighter, version) => ({
 });
 function expectedReplaySnapshot(raw) {
   const replay = validateReplay(raw, FIGHTERS.map(f => f.id), STAGES.map(s => s.id));
-  const engine = new CombatEngine({ ...replay.config, fighters: replay.config.fighters.map(id => getReplayFighter(id, replay.version)), stage: STAGES.find(s => s.id === replay.config.stage), mode: 'versus', rulesVersion: replay.version });
+  const engine = new CombatEngine({ ...replay.config, fighters: replay.config.fighters.map(id => getReplayFighter(id, replay.version)), stage: STAGES.find(s => s.id === replay.config.stage), mode: 'versus', rulesVersion: replayRulesVersion(replay.version) });
   for (const inputs of replayInputs(replay)) { engine.step(FIXED_DT, inputs); engine.drainEvents(); }
   return engine.getSnapshot();
 }

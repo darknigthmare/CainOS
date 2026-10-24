@@ -4,12 +4,22 @@ import { FIGHTERS, STAGES, VARIANTS } from './data.mjs';
 import { validateProgram } from './progression.mjs';
 export const SAVE_KEY = 'cainos.circus-combat.profile.v1';
 export const REPLAY_KEY = 'cainos.circus-combat.replay.v1';
-export const GAME_VERSION = '0.5.0';
-export const REPLAY_VERSIONS = Object.freeze(['0.1.0', '0.2.0', '0.3.0', '0.4.0', GAME_VERSION]);
+export const GAME_VERSION = '0.7.0';
+// Presentation/content releases need not change the deterministic simulation.
+// Never relabel a recording: retain its game version and select its rules here.
+export const REPLAY_RULES = Object.freeze({
+  '0.1.0': '0.1.0', '0.2.0': '0.2.0', '0.3.0': '0.3.0',
+  '0.4.0': '0.4.0', '0.5.0': '0.5.0', '0.6.0': '0.5.0', '0.7.0': '0.5.0',
+});
+export const REPLAY_VERSIONS = Object.freeze(Object.keys(REPLAY_RULES));
+export function replayRulesVersion(version) {
+  if (!Object.hasOwn(REPLAY_RULES, version)) throw new Error('Version de règles du replay inconnue.');
+  return REPLAY_RULES[version];
+}
 export const SLOT_ORDER = ['light', 'heavy', 'low', 'throw', 'special', 'specialDown', 'specialForward', 'specialBack', 'super', 'utility'];
 const FLAGS = ['left', 'right', 'down', 'guard', 'jump', 'dash', 'tech'];
 export const MAX_PACKED_INPUT = (SLOT_ORDER.length << FLAGS.length) | ((1 << FLAGS.length) - 1);
-export const DEFAULT_SETTINGS = Object.freeze({ layout: 'azerty', difficulty: 'normal', seconds: 90, rounds: 2, volume: .25, sound: true, music: false, musicVolume: .2, reducedMotion: false, hitboxes: false, touch: 'auto', bindings: DEFAULT_BINDINGS });
+export const DEFAULT_SETTINGS = Object.freeze({ layout: 'azerty', difficulty: 'normal', seconds: 90, rounds: 2, volume: .25, sound: true, music: false, musicVolume: .2, ambience: true, ambienceVolume: .35, finishers: true, reducedMotion: false, hitboxes: false, touch: 'auto', bindings: DEFAULT_BINDINGS });
 const integer = (v, lo, hi, fallback = lo) => Number.isInteger(v) && v >= lo && v <= hi ? v : fallback;
 const choice = (v, allowed, fallback) => allowed.includes(v) ? v : fallback;
 export function cleanSettings(value = {}) {
@@ -20,7 +30,8 @@ export function cleanSettings(value = {}) {
     seconds: choice(s.seconds, [60, 90, 120], 90), rounds: choice(s.rounds, [1, 2, 3], 2),
     volume: typeof s.volume === 'number' && Number.isFinite(s.volume) ? Math.max(0, Math.min(1, s.volume)) : .25,
     sound: s.sound !== false, reducedMotion: s.reducedMotion === true, hitboxes: s.hitboxes === true,
-    music: s.music === true,
+    music: s.music === true, ambience: s.ambience !== false, finishers: s.finishers !== false,
+    ambienceVolume: typeof s.ambienceVolume === 'number' && Number.isFinite(s.ambienceVolume) ? Math.max(0, Math.min(1, s.ambienceVolume)) : .35,
     musicVolume: typeof s.musicVolume === 'number' && Number.isFinite(s.musicVolume) ? Math.max(0, Math.min(1, s.musicVolume)) : .2,
     touch: choice(s.touch, ['auto', 'on', 'off'], 'auto'), bindings: cleanBindings(s.bindings)
   };

@@ -35,10 +35,10 @@ const report = {
   ],
   checks: [], screenshots: [], measurements: {}, errors: [],
   limitations: [
-    'The residents hallway is unchanged: a precise primary frame is still required.',
+    'The residents hallway was recomposed in 0.6 from explicitly labeled third-party pilot copies; direct primary-frame confirmation remains pending. See combat-stage-review-0.6.0.json.',
     'Dedicated fight, crouch and outcome artwork remains partial; see render-poses-browser-report.json for current rigid presentation and source registrations. No 1:1 art certification.',
     'Object motifs illustrate existing fan-game moves, not newly asserted canonical fighting powers.',
-    'Opaque black artwork exactly matching its opaque black matte cannot be distinguished without a new source asset.',
+    'Historical opaque black art cannot be separated reliably from matching matte colors. Twenty costume drawings now use new native-alpha assets; see costume-refinements.mjs.',
   ],
 };
 report.sourceHashes = Object.fromEntries(await Promise.all(['combat/render.mjs', 'combat/render-presentation.mjs', 'combat/render-poses.mjs', 'combat/data.mjs', 'combat/costume-fidelity.mjs', 'tests/combat-render-browser.mjs'].map(async file => [file, createHash('sha256').update(await fs.readFile(file)).digest('hex')])));

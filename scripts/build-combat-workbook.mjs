@@ -5,17 +5,19 @@
  * --repo-root specifies this checkout. --output-dir defaults to docs.
  * --input-workbook defaults to the existing tracker in this checkout.
  * Notes utilisateur follow sheet + stable ID, including relative formulas.
- * Optional docs/combat-qa-evidence.json supplies actually executed QA results.
+ * Version 0.7 requires the primary spreadsheet runtime and current execution
+ * evidence. CI validates the reviewed workbook without rewriting it.
+ * Historical 0.6 generation uses docs/combat-qa-evidence.json and the spreadsheet runtime.
  */
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
 import { pathToFileURL } from 'node:url';
-import { FileBlob, SpreadsheetFile } from '@oai/artifact-tool';
 
 const args = process.argv.slice(2);
 function flag(name, fallback) { const i = args.indexOf(name); return i >= 0 ? args[i + 1] : fallback; }
 const root = path.resolve(flag('--repo-root', process.cwd()));
+const { publishWorkbookArtifacts } = await import(pathToFileURL(path.join(root, 'scripts/workbook-publication.mjs')));
 const out = path.resolve(flag('--output-dir', path.join(root, 'docs')));
 const previewDir = path.resolve(flag('--preview-dir', path.join(out, 'combat-workbook-previews')));
 const renderSheets = flag('--render-sheets', '').split(',').filter(Boolean);
@@ -26,16 +28,49 @@ try { evidence = JSON.parse(await fs.readFile(evidenceFile, 'utf8')); }
 catch (error) { if (error.code !== 'ENOENT') throw error; }
 if (!evidence || typeof evidence !== 'object' || Array.isArray(evidence)) throw new Error('QA evidence must be a JSON object');
 const { GAME, FIGHTERS, MOVES, STAGES, ROSTER_ARCHIVE, VARIANTS, SOURCES, MOVE_SLOTS, SLOT_LABELS } = await import(pathToFileURL(path.join(root, 'combat/data.mjs')));
+if (GAME.version === '0.7.0') {
+  const { spawnSync } = await import('node:child_process');
+  const requestedEvidence = path.resolve(flag('--qa-evidence', path.join(root, 'audit-combat/ci/evidence-0.7.0.json')));
+  if (process.env.CODEX_PRIMARY_RUNTIME_NODE && process.env.CODEX_PRIMARY_RUNTIME_NODE_MODULES) {
+    const { tmpdir } = await import('node:os');
+    const temporary = await fs.mkdtemp(path.join(tmpdir(), 'encore-workbook-'));
+    try {
+      await fs.symlink(process.env.CODEX_PRIMARY_RUNTIME_NODE_MODULES, path.join(temporary, 'node_modules'), 'dir');
+      const script = path.join(temporary, 'build-combat-workbook-current.mjs');
+      await fs.copyFile(path.join(root, 'scripts/build-combat-workbook-current.mjs'), script);
+      const result = spawnSync(process.env.CODEX_PRIMARY_RUNTIME_NODE, [script,
+        '--repo-root', root, '--qa-evidence', requestedEvidence, '--output-dir', out,
+        '--input-workbook', inputWorkbook, '--preview-dir', previewDir,
+      ], { cwd: temporary, stdio: 'inherit' });
+      if (result.error) throw result.error;
+      process.exitCode = result.status ?? 1;
+    } finally { await fs.rm(temporary, {recursive:true, force:true}); }
+    process.exit(process.exitCode || 0);
+  }
+  throw new Error('Workbook authoring requires the primary spreadsheet runtime. CI packages a previously reviewed workbook and never rewrites it.');
+}
+const { FileBlob, SpreadsheetFile } = await import('@oai/artifact-tool');
 if (evidence.gameVersion && evidence.gameVersion !== GAME.version) throw new Error(`QA evidence belongs to ${evidence.gameVersion}, not the current ${GAME.version}`);
 const { MODES, CHALLENGES, REPLAY_VERSIONS } = await import(pathToFileURL(path.join(root, 'combat/session.mjs')));
 const { STORY_ROUTES, STORY_NOTICE } = await import(pathToFileURL(path.join(root, 'combat/stories.mjs')));
 const { AUDIO_THEMES, AUDIO_EFFECT_IDS, AUDIO_EFFECT_ALIASES } = await import(pathToFileURL(path.join(root, 'combat/audio.mjs')));
 const { ART_FILES, ART_BYTES } = await import(pathToFileURL(path.join(root, 'combat/offline-manifest.mjs')));
 const { FIDELITY_SOURCES } = await import(pathToFileURL(path.join(root, 'combat/fidelity.mjs')));
+const { COSTUME_REFINEMENTS } = await import(pathToFileURL(path.join(root, 'combat/costume-refinements.mjs')));
+const refinedCostumeEntries = Object.entries(COSTUME_REFINEMENTS);
+const refinedCostumeFiles = [...new Set(refinedCostumeEntries.map(([,record])=>record.sprite.src.replace(/^\.\.\//,'')))];
 const { ANIMATION_REGISTRATION } = await import(pathToFileURL(path.join(root, 'combat/render-poses.mjs')));
 const { FIGHTER_SEQUENCES, SEQUENCE_EVENTS } = await import(pathToFileURL(path.join(root, 'combat/render-sequences.mjs')));
 const { STAGE_AMBIENCES } = await import(pathToFileURL(path.join(root, 'combat/render-stage-motion.mjs')));
+const { REVIEWED_SCENERY_IDS } = await import(pathToFileURL(path.join(root, 'combat/render-stage-scenery.mjs')));
 const { TRAINING_FRAME_LIMIT, TRAINING_HISTORY_LIMIT, TRAINING_SPEEDS } = await import(pathToFileURL(path.join(root, 'combat/training.mjs')));
+const stageReviewPath = 'docs/combat-stage-review-0.6.0.json';
+const stageReview = JSON.parse(await fs.readFile(path.join(root,stageReviewPath),'utf8'));
+const storyReviewPath = 'docs/combat-story-review-0.6.0.json';
+const storyReview = JSON.parse(await fs.readFile(path.join(root,storyReviewPath),'utf8'));
+const storyReviewCaptures = storyReview.persistedCaptures.map(capture=>`docs/${capture.path}`);
+const storyPanelCount = Object.values(STORY_ROUTES).reduce((sum,route)=>sum+(route.prologue?.length||0)+(route.epilogue?.length||0),0);
+const storyBriefingCount = Object.values(STORY_ROUTES).reduce((sum,route)=>sum+route.chapters.length,0);
 const gangleReviewPath = 'docs/images/gangle-palette-0.4.0.png';
 const shadowReviewPath = 'docs/images/shadow-preservation-0.4.0.png';
 const fidelitySources = new Map([...SOURCES, ...FIDELITY_SOURCES].map(source => [source.id, source]));
@@ -65,7 +100,7 @@ function costumeCells(variant) {
   const capture = review.captureId.match(/^([a-zA-Z0-9._-]+)#([a-zA-Z0-9_-]+)$/);
   if (!capture || capture[2] !== variant.id) throw new Error(`Untraceable costume capture: ${variant.id}`);
   const crop = variant.sprite.sourceRect;
-  const framing = crop ? `${review.framing}\nRectangle actif : x ${crop.x}, y ${crop.y}, largeur ${crop.width}, hauteur ${crop.height} px source. Les coordonnées de grille restent historiques.` : review.framing;
+  const framing = crop ? `${review.framing}\nRectangle actif : x ${crop.x}, y ${crop.y}, largeur ${crop.width}, hauteur ${crop.height} px source. Ce rectangle définit l’extraction ; les champs de grille ne sont pas utilisés.` : review.framing;
   return [review.status, review.visibleTraits.join('\n'), review.identityEvidence, framing, review.transparency, review.proportions, review.issues.join('\n') || 'Aucun point supplémentaire consigné dans cette revue.', `${review.captureId}\nPlanche : docs/images/${capture[1]}.png`, ...fidelityCells(variant.fidelity, variant.id)];
 }
 const contentDateLabel = new Intl.DateTimeFormat('fr-FR', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${GAME.contentDate}T00:00:00Z`));
@@ -131,11 +166,11 @@ const E = 'combat/engine.mjs', U = 'combat/app.mjs', S = 'combat/session.mjs', I
   ['CTL-07','Commandes','Pause et reprise explicites','Implémenté','P0',U,'Le temps et le combat sont figés pendant la pause.'],
   ['CTL-08','Commandes','Navigation intégrale au clavier','Partiel','P1','combat/index.html','Parcourir et activer toutes les vues et options sans souris.','Audit d’accessibilité complet requis.'],
   ['PRE-01','Présentation','Sélection de 14 combattants','Implémenté','P0','combat/data.mjs','Chaque combattant a une silhouette et un kit distincts.'],
-  ['PRE-02','Présentation','Douze arènes thématiques','Implémenté','P0',R,'Chaque arène a une composition visuelle identifiable et un aperçu synchronisé avec la sélection.','Les douze aperçus sont distincts. La comparaison aux visuels officiels est limitée aux trois vues du chapiteau, du cellier et du Vide consignées dans QA.'],
+  ['PRE-02','Présentation','Douze arènes thématiques','Implémenté','P0',R,'Chaque arène a une composition visuelle identifiable et un aperçu synchronisé avec la sélection.','Aux vues du chapiteau, du cellier et du Vide s’ajoutent les comparaisons partielles de Spudsy et de la cour Candy avec des visuels officiels. Le couloir repose sur deux copies attribuées au pilote, à confirmer dans le flux officiel.'],
   ['PRE-03','Présentation','Variantes visuelles existantes','Implémenté','P1','combat/data.mjs / combat/app.mjs',`Choisir les ${VARIANTS.length} variantes sans changer les mécaniques ; prévisualiser les apparences de J1/J2 et comparer le costume à sa base dans la garde-robe.`,'La classification de l’identité, le contrôle du sprite et la comparaison au canon ont chacun une portée distincte. Les autres archives conservent leur statut sans kit.'],
   ['PRE-04','Présentation','Catalogue de 179 apparences','Implémenté','P1','combat/sprite-catalog.mjs','Chaque atlas CainOS est listé et localisable.'],
   ['PRE-05','Présentation','Sprites de combat dédiés','Partiel','P1','combat/render.mjs / combat/render-poses.mjs','Chaque action possède des images cohérentes avec ses frames, une silhouette lisible et un ancrage stable.','Les poses composées ou les transformations du rendu restent distinctes des sprites dédiés. Le détail des états et des cellules effectivement vérifiés figure dans QA ; les nouvelles poses dessinées restent à produire.'],
-  ['PRE-06','Présentation','Décors finalisés par artiste','Partiel','P2',R,'Valider les décors et chaque couche de parallaxe.','Les arènes restent des recompositions procédurales. Trois vues sont comparées aux images GLITCH ; le couloir des résidents et la finition complète restent à revoir.'],
+  ['PRE-06','Présentation','Décors finalisés par artiste','Partiel','P2','combat/render.mjs / combat/render-stage-scenery.mjs','Valider les décors et chaque couche de parallaxe.','Trois décors sont remaniés en Canvas : couloir des résidents, Spudsy et cour Candy. Leur sol est redessiné ; sa hauteur et la géométrie de combat restent identiques. Les compositions et proportions sont adaptées au duel ; les copies du couloir, la faible résolution de Spudsy et les parties masquées de la cour limitent la comparaison.'],
   ['PRE-07','Présentation','Effets de contact et projectiles','Implémenté','P1','combat/render.mjs / combat/render-presentation.mjs',`Lire impacts, gardes, parades et objets du kit : ${MOVES.filter(move=>move.kind==='projectile').length} définitions de projectile et ${MOVES.filter(move=>move.kind==='trap').length} pièges.`,'Les motifs identifient les accessoires du fan-game, y compris après réflexion. Ils ne certifient aucune capacité de combat canonique.'],
   ['PRE-08','Présentation','Bruitages de combat','Partiel','P1','combat/audio.mjs',`${AUDIO_EFFECT_IDS.length} motifs synthétiques livrés ; finaliser les effets encore partagés et vérifier le mixage sur plusieurs appareils.`,'Les impacts léger/lourd et certains événements utilisent le même motif. Aucune voix officielle importée.'],
   ['PRE-09','Présentation','Musique originale par arène','Implémenté','P2','combat/audio.mjs',`${Object.keys(AUDIO_THEMES).length} thèmes procéduraux originaux, un par arène, avec mélodie, basse, rythme et tempo propres. Réglages musique et bruitages séparés.`,'Musique optionnelle, silencieuse par défaut. Le menu adapte le thème du chapiteau. Validation du mixage matériel encore requise.'],
@@ -155,7 +190,7 @@ const E = 'combat/engine.mjs', U = 'combat/app.mjs', S = 'combat/session.mjs', I
   ['PRO-08','Progression','Personnalisation de profils','Prévu','P3','','Noms, emblèmes et préférences par joueur.'],
   ['PRO-09','Progression','Reprise des programmes en cours','Implémenté','P0','combat/progression.mjs / combat/session.mjs','Arcade, boss, survie, histoire et tournoi reprennent la rencontre courante avec la même graine, les mêmes règles et la santé de départ enregistrée.','Le point de reprise est le début du duel, sans restauration d’une frame de simulation intermédiaire.'],
   ['PRO-10','Progression','Récupération du profil après checkpoint invalide','À vérifier','P0','combat/session.mjs / combat/app.mjs','Au chargement local, abandonner uniquement le programme actif invalide et conserver les réglages, statistiques, défis, médailles, fins narratives et historique encore valides.','La prochaine sauvegarde conserve le profil normalisé. L’import manuel reste strict et refuse le fichier invalide sans remplacer le profil courant.'],
-  ['PRD-01','Production','Excel relié aux données du jeu','Implémenté','P0','scripts/build-combat-workbook.mjs','Régénérer les onglets depuis les définitions et conserver les preuves.'],
+  ['PRD-01','Production','Excel relié aux données du jeu','Implémenté','P0','scripts/build-combat-workbook.mjs / scripts/workbook-publication.mjs','Régénérer les onglets depuis les définitions et conserver les preuves. Sauvegarder les trois sorties avant leur remplacement et restaurer les contenus ou absences si une publication échoue.','Une restauration incomplète conserve toutes les sauvegardes et le verrou. Les trois noms ne changent pas simultanément ; la récupération après arrêt brutal reste manuelle.'],
   ['PRD-02','Production','Inventaire reproductible des sprites','Implémenté','P0','scripts/build-combat-catalog.mjs','Extraction de toutes les entrées sans exécuter CainOS.'],
   ['PRD-03','Production','Tests déterministes du moteur','Implémenté','P0','tests/combat-engine.test.mjs','Les cas automatisés doivent tous passer dans le commit publié.'],
   ['PRD-04','Production','Contrôles navigateur OS / autonome','À vérifier','P0','docs/combat-qa-evidence.json','Vérifier les parcours réels et consigner les résultats.'],
@@ -174,6 +209,9 @@ const E = 'combat/engine.mjs', U = 'combat/app.mjs', S = 'combat/session.mjs', I
   ['PRE-17','Présentation','Ambiances animées des arènes','Implémenté','P1','combat/render-stage-motion.mjs',`${STAGES.length} ambiances derrière les combattants, au-dessus du sol de simulation ; le réglage de mouvements réduits fige les effets.`,'Les décors restent des recompositions procédurales avec une revue canonique limitée.'],
   ['PRE-18','Présentation','Palette et planche complète de Jax','Implémenté','P1','assets/images/cainos-jax-animation-sheet-0.5.0.png / combat/render-poses.mjs','Utiliser la planche transparente entière : corps violet, salopette rose, yeux, gants et dents jaunes ; mesurer les huit ancrages.','Image régénérée et contours différents de la source historique. Aucun découpage rigide hérité ni sprite de combat dédié revendiqué.'],
   ['PRD-12','Production','Conservation des notes lors de la régénération','Implémenté','P0','scripts/build-combat-workbook.mjs','Rattacher les notes par feuille et ID stable, préserver valeurs et formules relatives, refuser les doublons et les notes orphelines avant écrasement.','Les fixtures de régression sont séparées du classeur livré.'],
+  ['PRE-19','Présentation','Nouveaux dessins transparents des costumes','Implémenté','P1','combat/costume-refinements.mjs / combat/costume-fidelity.mjs',`${refinedCostumeEntries.length} apparences remplacées par des dessins à alpha natif répartis sur ${refinedCostumeFiles.length} PNG. Consigner chaque correction de détail, de cadrage ou de transparence dans sa ligne de production.`,'Les comparaisons aux produits officiels restent partielles. Les costumes sans comparaison primaire et la mesure True Scale conservent leurs limites propres.'],
+  ['PRE-20','Présentation','Tableaux d’histoire et briefings illustrés','Implémenté','P1','combat/stories.mjs / combat/story-presentation.mjs / combat/app.mjs',`${storyPanelCount} tableaux de prologue et d’épilogue, puis ${storyBriefingCount} briefings avant les duels. Vérifier l’ordre, les dialogues, les personnages et le passage volontaire à la suite.`,'Compositions DOM statiques avec les décors et portraits existants. Les textes français sont originaux pour le fan-game ; aucun dessin narratif dédié, animation narrative ni doublage ajouté.'],
+  ['PRO-11','Progression','Relecture des fins débloquées','Implémenté','P1','combat/story-presentation.mjs / combat/app.mjs','Relire les trois tableaux d’une fin déjà débloquée, puis revenir à la galerie sans créer de nouvelle récompense ni modifier un programme actif.','Les conditions de déblocage, les statistiques et les récompenses du parcours restent celles de la progression existante.'],
 ].forEach(row => feature(...row));
 if (evidence.featureStatuses) for (const row of features) if (statuses.includes(evidence.featureStatuses[row[0]])) row[3] = evidence.featureStatuses[row[0]];
 
@@ -226,7 +264,10 @@ for (const s of STAGES) for (const [kind,label,accept] of [
   ['background','Fond et profondeur','Comparer composition et couleurs aux références de la fiche Arènes, puis consigner les vues réellement revues.'],['floor','Sol jouable','Aligner les pieds, ombres et ligne de combat.'],['foreground','Premier plan','Ajouter des détails sans masquer les attaques.'],['ambience','Ambiance sonore','Boucle originale sans coupure audible.'],['music','Musique de l’arène','Composition originale avec boucle et mixage.']
 ]) {
   const music = kind === 'music' ? AUDIO_THEMES[s.id] : null;
-  production.push([`ART-${s.id}-${kind}`, 'Arène', s.name, label, music ? 'Implémenté' : kind === 'ambience' ? 'Prévu' : 'Partiel', 'P2', music ? 'combat/audio.mjs' : kind === 'ambience' ? '' : R, music ? `${music.title} · ${music.bpm} BPM · ${music.provenance}` : kind === 'ambience' ? 'Ambiance dédiée à produire' : 'Dessin procédural livré', music ? 'Boucle procédurale avec mélodie, basse et rythme ; pause et volume séparé. Mixage à écouter sur appareils réels.' : accept, '']);
+  const rebuilt = kind === 'background' && REVIEWED_SCENERY_IDS.includes(s.id);
+  const observation = rebuilt ? stageReview.stageObservations[s.id] : null;
+  if(rebuilt&&!observation)throw new Error(`Missing scenery review: ${s.id}`);
+  production.push([`ART-${s.id}-${kind}`, 'Arène', s.name, label, music ? 'Implémenté' : kind === 'ambience' ? 'Prévu' : 'Partiel', 'P2', music ? 'combat/audio.mjs' : kind === 'ambience' ? '' : rebuilt ? 'combat/render-stage-scenery.mjs / combat/render.mjs' : R, music ? `${music.title} · ${music.bpm} BPM · ${music.provenance}` : kind === 'ambience' ? 'Ambiance dédiée à produire' : rebuilt ? `Refonte 0.6.0 : ${observation.combatAdaptation}` : 'Dessin procédural livré', music ? 'Boucle procédurale avec mélodie, basse et rythme ; pause et volume séparé. Mixage à écouter sur appareils réels.' : rebuilt ? `${observation.reviewStatus}. ${observation.reviewScope}` : accept, '']);
 }
 const soundTasks = {
   light: ['damage', true], heavy: ['damage', true], guard: ['block', false], break: ['guardBreak', false],
@@ -244,6 +285,14 @@ production.push(['MUSIC-menu', 'Audio', 'Menu', 'Arrangement du menu', 'Impléme
 for (const f of FIGHTERS) {
   const route = STORY_ROUTES[f.id];
   production.push([`NAR-${f.id}`, 'Narration', f.name, 'Introduction, quatre scènes et fin', route ? 'Implémenté' : 'Prévu', 'P2', route ? 'combat/stories.mjs' : '', route ? `${route.title} · ${route.chapters.length} rencontres écrites` : 'À écrire', 'Route originale avec introduction, dialogues avant chaque rencontre et conclusion. Les événements ne sont pas présentés comme canoniques.', '']);
+  for(const [phase,label]of [['prologue','Prologue'],['epilogue','Épilogue']]){
+    if(!Array.isArray(route?.[phase])||route[phase].length!==3)throw new Error(`Incomplete story presentation: ${f.id}/${phase}`);
+    for(const [index,panel]of route[phase].entries()){
+      if(panel.id!==`${f.id}-${phase}-${index+1}`)throw new Error(`Unstable story panel ID: ${panel.id}`);
+      production.push([`BOARD-${panel.id}`,'Tableau d’histoire',f.name,`${label} ${index+1} : ${panel.title}`,'Implémenté','P1','combat/stories.mjs / combat/story-presentation.mjs / combat/app.mjs',`Composition statique ${panel.composition} ; arène ${panel.stageId} ; portraits ${panel.cast.join(', ')} ; ${panel.dialogue.length} répliques`,`${panel.summary}\n${route.writingApproach} Décors et portraits existants, sans nouveau dessin dédié ni animation narrative. Récit original de fan-game.`,'']);
+    }
+  }
+  for(const [index,chapter]of route.chapters.entries())production.push([`BRIEF-${f.id}-chapter-${index+1}`,'Briefing illustré',f.name,`${index+1}. ${chapter.title}`,'Implémenté','P1','combat/stories.mjs / combat/story-presentation.mjs / combat/app.mjs',`Décor ${chapter.stageId}, portrait du joueur et de ${chapter.opponentId} ; ${chapter.dialogue.length} répliques`,`${chapter.summary}\nComposition DOM statique avant la rencontre existante. Passage volontaire au duel ; aucune modification des adversaires, de la progression ou des récompenses. Récit original de fan-game.`,'']);
 }
 const sequenceLabels = {intro:'Introduction',roundVictory:'Victoire de manche',roundDefeat:'Défaite de manche',matchVictory:'Victoire de match',matchDefeat:'Défaite de match'};
 for (const fighter of FIGHTERS) for (const event of SEQUENCE_EVENTS) {
@@ -253,9 +302,17 @@ for (const fighter of FIGHTERS) for (const event of SEQUENCE_EVENTS) {
 }
 for (const stage of STAGES) {
   if (!STAGE_AMBIENCES[stage.id]) throw new Error(`Missing stage ambience: ${stage.id}`);
-  production.push([`ANIM-${stage.id}-ambience`, 'Animation d’arène', stage.name, 'Ambiance visuelle animée', 'Implémenté', 'P1', 'combat/render-stage-motion.mjs', STAGE_AMBIENCES[stage.id], 'Effets derrière les acteurs et strictement au-dessus du sol Y=568. Les collisions et les pixels du sol restent inchangés ; les mouvements réduits sont statiques.', '']);
+  const alignment={backstage:'En 0.6.0, lueurs rattachées aux plafonniers du nouveau couloir.',spudsy:'En 0.6.0, vapeur rattachée à la surface de cuisson.',manor:'En 0.6.0, lueurs rattachées aux six chandelles déjà dessinées.'}[stage.id];
+  production.push([`ANIM-${stage.id}-ambience`, 'Animation d’arène', stage.name, 'Ambiance visuelle animée', 'Implémenté', 'P1', 'combat/render-stage-motion.mjs', `${STAGE_AMBIENCES[stage.id]}${alignment?` ${alignment}`:''}`, 'Effets derrière les acteurs et strictement au-dessus du sol Y=568. Géométrie de combat et hauteur du sol conservées. Les ambiances ne modifient pas les pixels du sol dessiné pour la version courante ; le dessin de trois sols a changé en 0.6.0. Les mouvements réduits et le bruit décoratif sont statiques.', '']);
 }
 production.push(['ART-jax-palette-05', 'Personnage', 'Jax', 'Planche transparente complète', 'Implémenté', 'P0', 'assets/images/cainos-jax-animation-sheet-0.5.0.png', 'Huit cellules régénérées ; corps violet, salopette rose et détails jaunes ; ancrages remesurés', 'Conserver la planche complète et sa transparence. Les contours ont été régénérés et aucune équivalence pixel à pixel ni animation de combat dédiée n’est revendiquée.', '']);
+for(const [id,refinement]of refinedCostumeEntries){
+  const variant=variantsById.get(id);
+  if(!variant || variant.sprite.src!==refinement.sprite.src)throw new Error(`Costume refinement is not integrated: ${id}`);
+  const review=variant.fidelity.assetReview;
+  const remaining=review.issues.length?`Limites restantes : ${review.issues.join(' ')}`:'Aucun autre point technique consigné dans cette revue.';
+  production.push([`COSTUME-${id}-alpha-06`,'Costume',variant.name,'Dessin transparent 0.6.0','Implémenté','P1',refinement.sprite.src.replace(/^\.\.\//,''),`Nouveau PNG à alpha natif. Points corrigés : ${refinement.resolvedIssues.join(' ')}`,`${review.status}. ${remaining}\n${variant.fidelity.reviewStatus}. ${variant.fidelity.reviewScope}`,'']);
+}
 
 const scenarioRows = CHALLENGES.map(c => [`CH-${c.id}`, 'Défi jouable', c.name, c.text, c.metric, c.goal, c.dummy, 'Implémenté', 'P1', S, '']);
 scenarioRows.push(...MODES.filter(m=>['arcade','boss','survival'].includes(m.id)).map(m => [`RUN-${m.id}`, 'Parcours jouable', m.name, m.description, m.id === 'survival' ? 'Vagues' : 'Matchs', m.id === 'arcade' ? 6 : m.id === 'boss' ? 4 : 10, 'CPU', 'Implémenté', 'P1', S, '']));
@@ -264,7 +321,7 @@ const stageName = id => STAGES.find(s => s.id === id)?.name || id;
 for (const f of FIGHTERS) {
   const route = STORY_ROUTES[f.id];
   if (!route || route.chapters.length !== 4) throw new Error(`Incomplete authored story route: ${f.id}`);
-  scenarioRows.push([`STORY-${f.id}`, 'Route individuelle', `${f.name} · ${route.title}`, `Introduction : ${route.intro}\nConclusion : ${route.ending}`, 'Rencontres', route.chapters.length, route.chapters.map(c => fighterName(c.opponentId)).join(' → '), 'Implémenté', 'P1', 'combat/stories.mjs / combat/progression.mjs', '']);
+  scenarioRows.push([`STORY-${f.id}`, 'Route individuelle', `${f.name} · ${route.title}`, `Introduction : ${route.intro}\nPrologue : ${route.prologue.map(panel=>panel.title).join(' ; ')}\nConclusion : ${route.ending}\nÉpilogue : ${route.epilogue.map(panel=>panel.title).join(' ; ')}\n${route.writingApproach} Relecture de la fin après déblocage, sans nouvelle récompense.`, 'Rencontres', route.chapters.length, route.chapters.map(c => fighterName(c.opponentId)).join(' → '), 'Implémenté', 'P1', 'combat/stories.mjs / combat/story-presentation.mjs / combat/progression.mjs', '']);
   for (const [i, chapter] of route.chapters.entries()) scenarioRows.push([
     `STORY-${f.id}-${i+1}`, 'Chapitre jouable', `${i+1}. ${chapter.title}`,
     `${chapter.summary}\nArène : ${stageName(chapter.stageId)}.\n${chapter.dialogue.map(line => `${line.speaker} : ${line.text}`).join('\n')}`,
@@ -287,7 +344,7 @@ const suiteInfo = {
   audio: ['AUD', 'Audio synthétique', 'Thèmes et effets définis ; cycle de vie du son vérifié'],
   fidelity: ['FID', 'Références de fidélité', 'Sources, repères observés et adaptations distingués pour chaque fiche'],
   render: ['RENDER', 'Détourage et objets du kit', 'Transparence et couleurs préservées ; identité visuelle des objets vérifiée dans le périmètre du test'],
-  'render-matte': ['MATTE', 'Palette et pixels des costumes', 'Correction locale des rubans de Gangle, protection des régions exclues et conservation RGBA explicite des trois cellules Shadow'],
+  'render-matte': ['MATTE', 'Palette et pixels des costumes', 'Contrats de palette et de détourage sur fixtures : pixels ciblés, régions protégées et conservation RGBA du mode preserve-source ; ces contrôles ne valident pas les nouveaux dessins 0.6.0'],
   'render-poses': ['POSE', 'Silhouettes, ancrages et états', 'Racines source, articulation rigide limitée et échelle uniforme ; la présentation ne modifie ni les règles ni les données de simulation'],
   replay: ['REPLAY', 'Compatibilité des replays', 'Version et règles de lecture vérifiées sans altérer le profil'],
   offline: ['OFFLINE', 'Installation web', 'Échecs explicites, nouvelle tentative, délais bornés et ressources libérées'],
@@ -295,6 +352,9 @@ const suiteInfo = {
   rules: ['RULES', 'Règles versionnées', 'Corrections 0.5 et empreintes historiques des 56 duels préservées'],
   training: ['TRAIN', 'Laboratoire d’entraînement', 'Lecture du timing, bande relative, limite, reset et ressources indépendantes'],
   'render-sequences': ['SEQ', 'Présentation et ambiances', '70 séquences finies et 12 ambiances bornées, sans mutation de simulation'],
+  'workbook-publication': ['PUB', 'Publication du classeur', 'Sauvegardes avant remplacement, restauration des contenus et absences après échec, sauvegardes conservées si la restauration échoue'],
+  'story-presentation': ['STORY', 'Présentation narrative', '84 tableaux et 56 briefings ordonnés ; relecture des fins débloquées sans modifier la progression'],
+  'stage-scenery': ['SCENERY', 'Composition des décors', 'Trois décors reconstruits, géométrie de combat et hauteur du sol conservées ; animation et réduction des mouvements cohérentes'],
 };
 const discoveredSuites = (await fs.readdir(path.join(root, 'tests'))).filter(name => /^combat-.*\.test\.mjs$/.test(name) && !['combat-engine.test.mjs', 'combat-session.test.mjs'].includes(name)).sort().map(name => {
   const key = name.slice(7, -9), [prefix, area, expected] = suiteInfo[key] || [key.toUpperCase(), 'Contrat automatisé', 'Vérification automatique du module livré'];
@@ -466,15 +526,22 @@ const refs=sheets['Références'];
 const trackerSources=[...fidelitySources.values(),
   {id:'fidelity',title:'Encore — repères officiels et adaptations',kind:'Registre de fidélité',url:'combat/fidelity.mjs',scope:'Sources officielles, repères observés et adaptations du duel pour chaque combattant, technique et arène. La portée de revue reste explicite ; aucune équivalence graphique globale n’est déduite des tests fonctionnels.'},
   {id:'costume-reviews',title:'Encore — revue des costumes existants',kind:'Revue technique des sprites',url:'combat/costume-fidelity.mjs',scope:`${VARIANTS.length} revues individuelles : identité, repères visibles, cadrage, transparence, proportions, points à revoir et capture. Les observations de nos sprites restent distinctes de leurs références canoniques.`},
-  {id:'costume-review-report',title:'Encore — mesures et preuves des costumes',kind:'Rapport de revue du projet',url:'docs/combat-costume-review.json',scope:'Relevés de cadrage, pixels et captures de la revue finale des 51 variantes ; les données techniques ne certifient pas leurs dessins canoniques.'},
+  {id:'costume-review-report',title:'Encore — revue historique des costumes 0.4.0',kind:'Rapport technique historique',url:'docs/combat-costume-review.json',scope:'Relevés de cadrage, pixels et captures des 51 variantes dans leur état 0.4.0. Les corrections 0.6.0 sont décrites par le registre costume-refinements, les fiches de fidélité et leur nouvelle capture ; ce rapport ancien ne les valide pas.'},
+  {id:'costume-review-report-06',title:'Encore — mesures des nouveaux costumes 0.6.0',kind:'Rapport technique des corrections',url:'docs/combat-costume-review-0.6.0.json',scope:`Mesures, provenance et limites des ${refinedCostumeEntries.length} apparences redessinées. Les contrôles de pixels et de transparence ne certifient ni les proportions canoniques ni les plans d’épisodes non comparés.`},
+  {id:'costume-refinements',title:'Encore — nouveaux dessins des costumes 0.6.0',kind:'Registre de corrections graphiques',url:'combat/costume-refinements.mjs',scope:`${refinedCostumeEntries.length} costumes et ${refinedCostumeFiles.length} nouvelles images à alpha natif. Chaque entrée conserve les problèmes résolus et la portée de sa comparaison ; aucune fidélité globale 1:1 n’est certifiée.`},
+  {id:'workbook-publication',title:'Encore — publication et récupération du classeur',kind:'Procédure de publication',url:'docs/COMBAT_WORKBOOK_PUBLICATION.md',scope:'Sauvegardes avant les remplacements, restauration des fichiers ou de leur absence, conservation de toutes les sauvegardes si la restauration échoue. Limites de visibilité simultanée et d’arrêt brutal explicites.'},
+  {id:'story-presentation',title:'Encore — tableaux et lecture des histoires',kind:'Présentation narrative du fan-game',url:'combat/stories.mjs / combat/story-presentation.mjs',scope:`${storyPanelCount} tableaux de prologue/épilogue et ${storyBriefingCount} briefings composés avec les décors et portraits existants. Dialogues français originaux, sans citation d’épisode, animation narrative ou doublage.`},
+  {id:'story-review-06',title:'Encore — revue du lecteur et des tableaux 0.6.0',kind:'Rapport technique de présentation narrative',url:storyReviewPath,scope:`${storyPanelCount} tableaux observés, ${storyBriefingCount} briefings, contrôles de lecture et quatre victoires réelles de Jax. Les quatre captures conservées sont référencées dans ce rapport ; la galerie des épilogues utilise un profil de collection importé et ne représente pas 14 routes gagnées. Aucune illustration dédiée, animation narrative ou voix nouvelle.`},
+  {id:'stage-review-06',title:'Encore — revue des décors 0.6.0',kind:'Rapport de comparaison limitée',url:stageReviewPath,scope:'Trois refontes Canvas : cour Candy d’après la galerie GLITCH, Spudsy d’après une vignette Netflix, couloir d’après deux copies attribuées au pilote. Aucun plan chargé directement depuis le flux officiel et aucune mesure canonique des proportions.'},
+  ...stageReview.captures.map((capture,index)=>({id:`stage-capture-06-${index+1}`,title:`Décors 0.6.0 — capture ${index+1}`,kind:'Capture des décors du projet',url:capture.path,scope:'Revue visuelle du rendu et des limites détaillées dans le rapport des décors. Cette capture du jeu ne constitue pas une source canonique.'})),
   {id:'pose-registration',title:'Encore — ancrages et poses composées',kind:'Présentation des sprites existants',url:'combat/render-poses.mjs',scope:`${Object.values(ANIMATION_REGISTRATION).reduce((count,item)=>count+item.anchors.length,0)} cellules source ancrées dans ${Object.keys(ANIMATION_REGISTRATION).length} planches. ${Object.values(ANIMATION_REGISTRATION).filter(item=>item.crouchRig).length} poses basses composées de base ; Jax, les costumes et les autres morphologies gardent leur dessin intact. Aucun nouveau sprite de combat dédié ni mesure de proportions canoniques.`},
   ...[...new Set(VARIANTS.map(variant=>variant.fidelity.assetReview.captureId.split('#')[0]))].map(id=>({id,title:`Costumes — planche de revue ${id.match(/page-(\d+)$/)?.[1] || id}`,kind:'Capture des sprites du projet',url:`docs/images/${id}.png`,scope:'Planche de contact livrée dans la PR. Le fragment après # dans Atlas identifie la variante correspondante ; cette capture documente nos sprites et ne constitue pas une référence canonique.'})),
   {id:'gangle-palette-review',title:'Gangle — palette locale avant et après',kind:'Comparaison des sprites du projet',url:gangleReviewPath,scope:'Capture conservée de la revue 0.4. Correction ciblée des rubans. Les mesures distinguent la couleur modifiée, les régions protégées, l’alpha et la géométrie ; elles ne valident pas le dessin complet au regard du canon.'},
-  {id:'shadow-preservation-review',title:'Shadow — conservation de la source RGBA',kind:'Comparaison des sprites du projet',url:shadowReviewPath,scope:'Capture conservée de la revue 0.4. Pomni, Ragatha et Caine : conservation de la cellule source entière. Le fond opaque est inclus et reste une limite connue ; aucune correction canonique n’est déduite de cette égalité.'},
+  {id:'shadow-preservation-review',title:'Shadow — conservation de la source RGBA',kind:'Comparaison des sprites du projet',url:shadowReviewPath,scope:'Capture historique de la revue 0.4. Pomni, Ragatha et Caine conservaient alors la cellule source entière, avec son fond opaque. Les nouveaux dessins 0.6 remplacent ce choix de présentation ; cette ancienne égalité RGBA ne valide pas leur fidélité canonique.'},
   {id:'training-lab',title:'Encore — laboratoire de timing et mannequin',kind:'Module du jeu',url:'combat/training.mjs / tests/combat-training.test.mjs',scope:`${TRAINING_HISTORY_LIMIT} groupes d’entrées par côté, bande de ${TRAINING_FRAME_LIMIT} frames, vitesses ${TRAINING_SPEEDS.join(', ')} ; lecture et remise à zéro indépendantes du profil.`},
   {id:'versioned-rules',title:'Encore — règles de simulation versionnées',kind:'Module et empreintes historiques',url:'combat/engine.mjs / tests/combat-rules.test.mjs',scope:'Les règles 0.1 à 0.4 conservent les 56 traces de 900 frames capturées avant correction. Les nouvelles règles 0.5 couvrent pièges, garde CPU, soins et saisies.'},
   {id:'individual-sequences',title:'Encore — introductions et issues individuelles',kind:'Animation procédurale',url:'combat/render-sequences.mjs',scope:`${FIGHTERS.length * SEQUENCE_EVENTS.length} séquences finies appliquées aux illustrations existantes. Les dessins de combat dédiés et les cinématiques originales restent à produire.`},
-  {id:'stage-ambiences',title:'Encore — ambiances visuelles des arènes',kind:'Animation procédurale',url:'combat/render-stage-motion.mjs',scope:`${STAGES.length} ambiances bornées derrière les combattants, sans changement des collisions ni des pixels du sol de simulation.`},
+  {id:'stage-ambiences',title:'Encore — ambiances visuelles des arènes',kind:'Animation procédurale',url:'combat/render-stage-motion.mjs',scope:`${STAGES.length} ambiances bornées derrière les combattants. Elles préservent les collisions et les pixels du sol de la version courante ; le dessin de trois sols a changé en 0.6.0, avec une hauteur de combat identique.`},
   {id:'jax-palette-05',title:'Jax — nouvelle planche complète',kind:'Illustration régénérée',url:'assets/images/cainos-jax-animation-sheet-0.5.0.png',scope:'Corps violet, salopette rose et détails jaunes ; huit cellules transparentes utilisées entières avec racines remesurées. Les contours régénérés ne reproduisent pas la source historique pixel à pixel.'},
   {id:'stories',title:'Encore — routes narratives originales',kind:'Création pour le jeu',url:'combat/stories.mjs',scope:STORY_NOTICE},
   {id:'music',title:'Encore — thèmes et effets originaux',kind:'Création pour le jeu',url:'combat/audio.mjs',scope:`${Object.keys(AUDIO_THEMES).length} thèmes synthétiques par arène et ${AUDIO_EFFECT_IDS.length} motifs sonores. Aucun enregistrement ni musique de la série.`},
@@ -528,14 +595,15 @@ summary.getRange('H6').format.font={bold:true,color:colors.purple};
 summary.getRange('H12:H16').values=[['Preuves disponibles'],[`${verifiedNodeCount} tests Node dans ${nodeSuites.filter(suite=>evidence[`${suite.key}Passed`]).length} suites exécutées`],[`${verifiedBrowserCount} contrôles navigateur réussis`],['Le total QA inclut les objectifs de revue.'],['Leurs assertions peuvent se recouper.']];
 summary.getRange('H12').format.font={bold:true,color:colors.purple};
 summary.getRange('H18').values=[['Contenu de cette version']];summary.getRange('H18').format.font={bold:true,color:colors.purple};
-summary.getRange('H19').formulas=[[`=COUNTIFS('Scénarios'!B6:B${scenarioRows.length+5},"Route individuelle")&" routes originales"`]];
-summary.getRange('H20').formulas=[[`=COUNTIFS('Scénarios'!B6:B${scenarioRows.length+5},"Chapitre jouable")&" rencontres scénarisées"`]];
+summary.getRange('H19').formulas=[[`=COUNTIFS('Scénarios'!B6:B${scenarioRows.length+5},"Route individuelle")&" routes et "&COUNTIFS('Production'!B6:B${production.length+5},"Tableau d’histoire")&" tableaux"`]];
+summary.getRange('H20').formulas=[[`=COUNTIFS('Production'!B6:B${production.length+5},"Briefing illustré")&" briefings de rencontre"`]];
 summary.getRange('H21').formulas=[[`=COUNTIFS('Production'!B6:B${production.length+5},"Arène",'Production'!D6:D${production.length+5},"Musique de l’arène")&" thèmes musicaux d’arènes"`]];
 summary.getRange('H22').formulas=[[`=COUNTIFS('Production'!B6:B${production.length+5},"Motif sonore")&" motifs sonores synthétiques"`]];
 summary.getRange('H23').formulas=[[`=COUNTIFS('Production'!B6:B${production.length+5},"Présentation individuelle")&" séquences de présentation"`]];
 summary.getRange('H24').formulas=[[`=COUNTIFS('Production'!B6:B${production.length+5},"Animation d’arène")&" ambiances visuelles animées"`]];
-summary.getRange('H23:H24').format.font={name:'Arial',size:10,bold:false,color:colors.ink};
+summary.getRange('H23:H25').format.font={name:'Arial',size:10,bold:false,color:colors.ink};
 summary.getRange('H25:H30').clear({applyTo:'contents'});
+summary.getRange('H25').formulas=[[`=COUNTIFS('Production'!B6:B${production.length+5},"Costume")&" costumes redessinés"`]];
 summary.getRange('H26:H30').values=[['Fidélité aux références'],[`${FIGHTERS.length + MOVES.length + STAGES.length + VARIANTS.length} fiches, dont ${VARIANTS.length} costumes`],['Revue technique et canon séparés'],['Portée de revue dans chaque fiche'],['Fidélité globale restant à valider']];
 summary.getRange('H26').format.font={bold:true,color:colors.purple};
 summary.getRange('A14:F14').values=[['Suivi par domaine','Implémenté','Partiel','Prévu','À vérifier','Total']];
@@ -569,9 +637,9 @@ const expectedCounts=[FIGHTERS.length,MOVES.length,STAGES.length,ROSTER_ARCHIVE.
 const actualCounts=summary.getRange('B7:B11').values.flat();
 if(actualCounts.some((n,i)=>n!==expectedCounts[i]))throw new Error(`Summary mismatch: ${actualCounts} / ${expectedCounts}`);
 const storyCount=Object.keys(STORY_ROUTES).length, chapterCount=Object.values(STORY_ROUTES).reduce((sum,r)=>sum+r.chapters.length,0);
-const expectedRelease=[`${storyCount} routes originales`,`${chapterCount} rencontres scénarisées`,`${Object.keys(AUDIO_THEMES).length} thèmes musicaux d’arènes`,`${AUDIO_EFFECT_IDS.length} motifs sonores synthétiques`,`${FIGHTERS.length * SEQUENCE_EVENTS.length} séquences de présentation`,`${STAGES.length} ambiances visuelles animées`];
-const releaseSummary=summary.getRange('H19:H24').values.flat();
-if(releaseSummary.some((value,i)=>value!==expectedRelease[i]))throw new Error(`Story/audio summary mismatch: ${JSON.stringify(releaseSummary)} / ${JSON.stringify(expectedRelease)}`);
+const expectedRelease=[`${storyCount} routes et ${storyPanelCount} tableaux`,`${storyBriefingCount} briefings de rencontre`,`${Object.keys(AUDIO_THEMES).length} thèmes musicaux d’arènes`,`${AUDIO_EFFECT_IDS.length} motifs sonores synthétiques`,`${FIGHTERS.length * SEQUENCE_EVENTS.length} séquences de présentation`,`${STAGES.length} ambiances visuelles animées`,`${refinedCostumeEntries.length} costumes redessinés`];
+const releaseSummary=summary.getRange('H19:H25').values.flat();
+if(JSON.stringify(releaseSummary)!==JSON.stringify(expectedRelease))throw new Error(`Release summary mismatch: ${JSON.stringify(releaseSummary)} / ${JSON.stringify(expectedRelease)}`);
 const formulaErrors=[];
 for(const [name,sheet]of Object.entries(sheets)){
   const used=sheet.getUsedRange(), values=used.values, formulas=used.formulas;
@@ -609,7 +677,7 @@ for(const name of Object.keys(sheets).filter(name=>!renderSheets.length||renderS
       await fs.writeFile(path.join(previewDir,`Atlas-${label}.png`),new Uint8Array(await detail.arrayBuffer()));
     }
   }
-  if(name==='Fonctionnalités')for(const [id,label] of [['INT-12','installation'],['PRO-10','profil'],['PRD-11','fidelite'],['PRE-15','sources-ui'],['PRE-03','costumes-ui'],['PRD-06','costumes-revue']]){
+  if(name==='Fonctionnalités')for(const [id,label] of [['INT-12','installation'],['PRO-10','profil'],['PRD-11','fidelite'],['PRE-15','sources-ui'],['PRE-03','costumes-ui'],['PRD-06','costumes-revue'],['PRE-19','costumes-06'],['PRE-20','tableaux-06'],['PRO-11','fins-06'],['PRD-01','publication']]){
     const row=features.findIndex(feature=>feature[0]===id)+6;
     const detail=await workbook.render({sheetName:name,range:`A${row}:H${row}`,scale:1,format:'png'});
     await fs.writeFile(path.join(previewDir,`Fonctionnalites-${label}.png`),new Uint8Array(await detail.arrayBuffer()));
@@ -617,6 +685,21 @@ for(const name of Object.keys(sheets).filter(name=>!renderSheets.length||renderS
   if(name==='Production'){
     const detail=await workbook.render({sheetName:name,range:'C6:I10',scale:1,format:'png'});
     await fs.writeFile(path.join(previewDir,'Production-poses.png'),new Uint8Array(await detail.arrayBuffer()));
+    for(const [id,label]of [['BOARD-pomni-prologue-1','tableaux-06'],['BRIEF-pomni-chapter-1','briefings-06'],['COSTUME-maidjax-alpha-06','costumes-06'],['ART-backstage-background','decors-06']]){
+      const row=production.findIndex(item=>item[0]===id)+6;
+      const detail=await workbook.render({sheetName:name,range:`D${row}:I${row}`,scale:1,format:'png'});
+      await fs.writeFile(path.join(previewDir,`Production-${label}.png`),new Uint8Array(await detail.arrayBuffer()));
+    }
+  }
+  if(name==='Arènes')for(const id of REVIEWED_SCENERY_IDS){
+    const row=stages.findIndex(item=>item[0]===id)+6;
+    const detail=await workbook.render({sheetName:name,range:`R${row}:S${row}`,scale:1,format:'png'});
+    await fs.writeFile(path.join(previewDir,`Arenes-${id}-06.png`),new Uint8Array(await detail.arrayBuffer()));
+  }
+  if(name==='Scénarios'){
+    const row=scenarioRows.findIndex(item=>item[0]==='STORY-pomni')+6;
+    const detail=await workbook.render({sheetName:name,range:`C${row}:D${row}`,scale:1,format:'png'});
+    await fs.writeFile(path.join(previewDir,'Scenarios-tableaux-06.png'),new Uint8Array(await detail.arrayBuffer()));
   }
   if(name==='QA')for(const [prefix,label] of [['QA-REC-','installation'],['QA-RPRO-','profil'],['QA-FIDUI-','fidelite-ui'],['QA-FIDREN-','fidelite-rendu'],['QA-COSTUME-','costumes-ui'],['QA-POSEUI-','poses-ui']]){
     const indices=qa.map((row,index)=>row[0].startsWith(prefix)?index+6:null).filter(row=>row!==null);
@@ -632,21 +715,22 @@ for(const [name,rows]of Object.entries(generatedData)){
   for(const [index,row]of rows.entries())if(notes.has(String(row[0])))row[row.length-1]=sheets[name].getRange(`${column(row.length)}${index+6}`).values[0][0];
 }
 const qaSummary=Object.fromEntries(qaStatuses.map(status=>[status,qa.filter(row=>row[3]===status).length]));
-const data={version:GAME.version,asOf:GAME.contentDate,counts:{fighters:FIGHTERS.length,moves:MOVES.length,stages:STAGES.length,modes:MODES.length,atlas:ROSTER_ARCHIVE.length,variants:VARIANTS.length,archiveOnly:ROSTER_ARCHIVE.length-FIGHTERS.length-VARIANTS.length,storyRoutes:storyCount,storyChapters:chapterCount,musicThemes:Object.keys(AUDIO_THEMES).length,soundEffects:AUDIO_EFFECT_IDS.length,offlineImages:ART_FILES.length,offlineBytes:ART_BYTES,features:features.length,production:production.length,scenarios:scenarioRows.length,qa:qa.length,presentationSequences:FIGHTERS.length*SEQUENCE_EVENTS.length,animatedStages:STAGES.length},qaSummary,features,roster,moves:moveRows,stages,atlas,production,scenarios:scenarioRows,qa,sources:trackerSources};
+const data={version:GAME.version,asOf:GAME.contentDate,counts:{fighters:FIGHTERS.length,moves:MOVES.length,stages:STAGES.length,modes:MODES.length,atlas:ROSTER_ARCHIVE.length,variants:VARIANTS.length,archiveOnly:ROSTER_ARCHIVE.length-FIGHTERS.length-VARIANTS.length,storyRoutes:storyCount,storyChapters:chapterCount,storyPanels:storyPanelCount,storyBriefings:storyBriefingCount,musicThemes:Object.keys(AUDIO_THEMES).length,soundEffects:AUDIO_EFFECT_IDS.length,offlineImages:ART_FILES.length,offlineBytes:ART_BYTES,features:features.length,production:production.length,scenarios:scenarioRows.length,qa:qa.length,presentationSequences:FIGHTERS.length*SEQUENCE_EVENTS.length,animatedStages:STAGES.length,rebuiltStages:REVIEWED_SCENERY_IDS.length,refinedCostumes:refinedCostumeEntries.length,costumeReplacementSheets:refinedCostumeFiles.length},qaSummary,features,roster,moves:moveRows,stages,atlas,production,scenarios:scenarioRows,qa,sources:trackerSources};
 const sourceDigests={};
 const combatSources=(await fs.readdir(path.join(root,'combat'))).filter(name=>/\.(?:m?js|html|css|svg|webmanifest)$/.test(name)).sort().map(name=>`combat/${name}`);
 const testSources=(await fs.readdir(path.join(root,'tests'))).filter(name=>/^combat-.*\.mjs$/.test(name)).sort().map(name=>`tests/${name}`);
-for(const name of [...combatSources,...testSources,'docs/combat-qa-evidence.json','scripts/build-combat-workbook.mjs']){
+for(const name of [...combatSources,...testSources,'docs/combat-qa-evidence.json','scripts/build-combat-workbook.mjs','scripts/workbook-publication.mjs']){
   try{sourceDigests[name]=createHash('sha256').update(await fs.readFile(path.join(root,name))).digest('hex');}catch(error){if(error.code!=='ENOENT')throw error;}
 }
-for(const name of ['docs/combat-costume-review.json',gangleReviewPath,shadowReviewPath,'assets/images/cainos-jax-animation-sheet-0.5.0.png',...new Set(VARIANTS.map(variant=>`docs/images/${variant.fidelity.assetReview.captureId.split('#')[0]}.png`))]) sourceDigests[name]=createHash('sha256').update(await fs.readFile(path.join(root,name))).digest('hex');
+for(const name of ['docs/COMBAT_WORKBOOK_PUBLICATION.md','docs/combat-costume-review.json','docs/combat-costume-review-0.6.0.json',stageReviewPath,...stageReview.captures.map(capture=>capture.path),storyReviewPath,...storyReviewCaptures,gangleReviewPath,shadowReviewPath,'assets/images/cainos-jax-animation-sheet-0.5.0.png',...refinedCostumeFiles,...new Set(VARIANTS.map(variant=>`docs/images/${variant.fidelity.assetReview.captureId.split('#')[0]}.png`))]) sourceDigests[name]=createHash('sha256').update(await fs.readFile(path.join(root,name))).digest('hex');
 const fidelityRecords=[...FIGHTERS.map(({id,fidelity})=>({kind:'fighter',id,fidelity})),...MOVES.map(({id,fidelity})=>({kind:'move',id,fidelity})),...STAGES.map(({id,fidelity})=>({kind:'stage',id,fidelity})),...VARIANTS.map(({id,fidelity})=>({kind:'costume',id,fidelity}))];
 const costumeReviewStatuses=Object.fromEntries([...new Set(VARIANTS.map(variant=>variant.fidelity.assetReview.status))].map(status=>[status,VARIANTS.filter(variant=>variant.fidelity.assetReview.status===status).length]));
-const fidelityCoverage={fighters:roster.length,moves:moveRows.length,stages:stages.length,costumes:VARIANTS.length,documented:fidelityRecords.length,withPrimaryReference:fidelityRecords.filter(item=>item.fidelity.sourceIds.length).length,withoutPrimaryReference:fidelityRecords.filter(item=>!item.fidelity.sourceIds.length).map(item=>({kind:item.kind,id:item.id,reviewStatus:item.fidelity.reviewStatus})),costumeReviews:{documented:VARIANTS.length,technicalStatuses:costumeReviewStatuses,withRecordedIssues:VARIANTS.filter(variant=>variant.fidelity.assetReview.issues.length).length,withPrimaryReferences:VARIANTS.filter(variant=>variant.fidelity.sourceIds.length).length,withObservedPrimaryTraits:VARIANTS.filter(variant=>variant.fidelity.observedTraits.length).length,canonicalSourceRequiredForCertification:true},sourceIds:FIDELITY_SOURCES.map(source=>source.id),globalVisualCertification:false};
+const hasPrimaryReference=record=>record.sourceIds.some(id=>fidelitySources.get(id)?.primary!==false);
+const fidelityCoverage={fighters:roster.length,moves:moveRows.length,stages:stages.length,costumes:VARIANTS.length,documented:fidelityRecords.length,withPrimaryReference:fidelityRecords.filter(item=>hasPrimaryReference(item.fidelity)).length,withoutPrimaryReference:fidelityRecords.filter(item=>!hasPrimaryReference(item.fidelity)).map(item=>({kind:item.kind,id:item.id,reviewStatus:item.fidelity.reviewStatus})),primaryReferenceMeaning:'Source primaire rattachée à la fiche ; aucun visionnage de frame ni certification graphique n’est déduit de ce lien.',costumeReviews:{documented:VARIANTS.length,technicalStatuses:costumeReviewStatuses,withRecordedIssues:VARIANTS.filter(variant=>variant.fidelity.assetReview.issues.length).length,withPrimaryReferences:VARIANTS.filter(variant=>hasPrimaryReference(variant.fidelity)).length,withObservedPrimaryTraits:VARIANTS.filter(variant=>variant.fidelity.observedTraits.length).length,refinedCostumes:refinedCostumeEntries.length,canonicalSourceRequiredForCertification:true},stageReviews:{rebuilt:REVIEWED_SCENERY_IDS,primaryImageSources:stageReview.sources.filter(source=>source.primary===true).length,secondaryImageCopies:stageReview.sources.filter(source=>source.primary===false).length,validatedOfficialVideoFrames:stageReview.sourceInspection.videoFramesValidated,globalVisualCertification:false},sourceIds:FIDELITY_SOURCES.map(source=>source.id),globalVisualCertification:false};
 // Own one unique directory for temporary exports and any exporter sidecars.
 // PNG previews stay outside it and are retained on both success and failure.
 let pendingDirectory;
-const staged=[];
+let buildFailure;
 try{
   pendingDirectory=await fs.mkdtemp(path.join(previewDir,'.tracker-'));
   const pendingFile=path.join(pendingDirectory,'tracker.pending.xlsx');
@@ -674,23 +758,17 @@ try{
   const verification={createdAt:new Date().toISOString(),counts:data.counts,qaSummary,verifiedSummary:actualCounts,verifiedReleaseSummary:expectedRelease,fidelityCoverage,formulaErrors:0,statusMutationRecalculated:true,renderedSheets:renderSheets.length?renderSheets:Object.keys(sheets),qaEvidencePresent:!!Object.keys(evidence).length,notesPreservation:{...noteAudit,exportRoundTripPassed:true},nativeTables,sourceDigests};
   await fs.writeFile(pendingData,JSON.stringify(data,null,2)+'\n');
   await fs.writeFile(pendingVerification,JSON.stringify(verification,null,2)+'\n');
-  // Preview scratch space may live on another filesystem. Stage every validated
-  // artifact beside its final destination before an atomic, same-device rename.
-  const publication=[
-    [pendingFile,'DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx'],
-    [pendingData,'combat-tracker-data.json'],
-    [pendingVerification,'combat-workbook-verification.json'],
-  ];
-  for(const [source,name]of publication){
-    const temporary=path.join(out,`.${name}.${path.basename(pendingDirectory)}.pending`);
-    staged.push([temporary,path.join(out,name)]);
-    await fs.copyFile(source,temporary);
-  }
-  for(const [temporary,destination]of staged)await fs.rename(temporary,destination);
+  await publishWorkbookArtifacts({outputDirectory:out,files:[
+    {source:pendingFile,name:'DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx'},
+    {source:pendingData,name:'combat-tracker-data.json'},
+    {source:pendingVerification,name:'combat-workbook-verification.json'},
+  ]});
+}catch(error){
+  buildFailure=error;throw error;
 }finally{
-  await Promise.all([
-    ...staged.map(([temporary])=>fs.rm(temporary,{force:true})),
-    ...(pendingDirectory?[fs.rm(pendingDirectory,{recursive:true,force:true})]:[]),
-  ]);
+  // Publication recovery files belong to the separate publisher. Never remove
+  // them here, especially when a rollback could not be completed.
+  if(pendingDirectory)try{await fs.rm(pendingDirectory,{recursive:true,force:true});}
+  catch(error){if(buildFailure)buildFailure.exportCleanupError=error;else throw error;}
 }
 console.log(JSON.stringify({file:path.join(out,'DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx'),counts:data.counts,previews:previewDir},null,2));

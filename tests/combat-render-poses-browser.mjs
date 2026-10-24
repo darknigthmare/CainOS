@@ -37,7 +37,7 @@ const report = {
   ],
 };
 const checked = (name, detail) => { report.checks.push({ name, detail, pass: true }); console.log(`PASS ${name}`); };
-const files = ['combat/render.mjs', 'combat/render-poses.mjs', 'combat/render-presentation.mjs', 'combat/render-sequences.mjs', 'combat/render-stage-motion.mjs', 'assets/images/cainos-jax-animation-sheet-0.5.0.png', 'combat/data.mjs', 'combat/costume-fidelity.mjs', 'tests/combat-render-poses-browser.mjs'];
+const files = ['combat/render.mjs', 'combat/render-poses.mjs', 'combat/render-presentation.mjs', 'combat/render-sequences.mjs', 'combat/render-stage-motion.mjs', 'assets/images/cainos-jax-animation-sheet-0.5.0.png', 'assets/images/cainos-pixel-cast-sheet-variants.png', 'combat/data.mjs', 'combat/sprite-catalog.mjs', 'combat/costume-fidelity.mjs', 'tests/combat-render-poses-browser.mjs'];
 report.sourceHashes = Object.fromEntries(await Promise.all(files.map(async file => [file, createHash('sha256').update(await fs.readFile(file)).digest('hex')])));
 
 try {
@@ -169,7 +169,20 @@ try {
             ctx.clearRect(0, 0, 1280, 720); renderer.drawActor(a, 0, true);
             result.costumes.push({ id: f.costume, frame: !!frame, articulated: !!poses.crouchParts(f, frame), unchanged: JSON.stringify(a) === before });
           }
-          const costume = costumes.find(f => f.costume === 'gangletragedy'), original = getFrame(costume);
+          // Keep the cache contract on the historical atlas that actually needs
+          // matte removal and a palette correction. Its 0.6 replacement already
+          // has native alpha and red ribbons, so those operations are no-ops.
+          const { SPRITE_CATALOG } = await import('/combat/sprite-catalog.mjs');
+          const historical = SPRITE_CATALOG.find(f => f.id === 'gangletragedy');
+          const costume = { ...costumes.find(f => f.costume === 'gangletragedy'), sprite: {
+            ...historical.sprite,
+            sourceRect: { x: 450, y: 340, width: 245, height: 285 },
+            paletteSwap: 'gangle-red-ribbons',
+          } };
+          const cacheReady = await renderer.preload([costume]);
+          if (!cacheReady.ok) throw new Error(JSON.stringify(cacheReady));
+          result.cacheFixture = { id: historical.id, source: costume.sprite.src, sourceRect: costume.sprite.sourceRect, paletteSwap: costume.sprite.paletteSwap, scope: 'Historical atlas fixture, not the current 0.6 costume artwork.' };
+          const original = getFrame(costume);
           const modified = patch => getFrame({ ...costume, sprite: { ...costume.sprite, ...patch } });
           const plain = modified({ paletteSwap: undefined }), preserved = modified({ matteMode: 'preserve-source' });
           const cropped = modified({ sourceRect: { ...costume.sprite.sourceRect, width: costume.sprite.sourceRect.width - 1 } });
@@ -297,7 +310,7 @@ try {
   assert.ok(after.costumes.every(c => c.frame && !c.articulated && c.unchanged));
   checked('Les 51 tenues passent par le dessin intact et ne reçoivent jamais un rig de base', 'Le rendu bas de toutes les tenues est exécuté ; cadres et palette sont couverts par la suite dédiée des tenues.');
   assert.ok(Object.values(after.cache).every(Boolean));
-  checked('Recadrage, matte, tolérance et palette possèdent des entrées de cache distinctes', after.cache);
+  checked('Recadrage, matte, tolérance et palette possèdent des entrées de cache distinctes', { fixture: after.cacheFixture, checks: after.cache });
   assert.ok(after.clock.unchanged);
   assert.deepEqual(after.clock.calls.map(c => [c.method, c.tick]), [['trap', 240], ['actor', 240], ['projectile', 240]]);
   assert.equal(after.clock.calls.find(c => c.method === 'actor').presentationFrame, 288);

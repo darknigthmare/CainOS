@@ -2,6 +2,8 @@ import { getHurtbox, getHitbox } from './engine.mjs';
 import { removeAtlasMatte, applySpritePalette, projectilePresentation, trapPresentation } from './render-presentation.mjs';
 import { spriteSourceRegion, actorPose, frameGeometry, crouchParts, POSE_REGISTRATION_VERSION } from './render-poses.mjs';
 import { drawStageMotion } from './render-stage-motion.mjs';
+import { drawStageScenery } from './render-stage-scenery.mjs';
+import { drawFinisherScene } from './render-finishers.mjs';
 
 /**
  * Digital Circus combat presentation. Existing CainOS atlases are read without
@@ -284,8 +286,18 @@ function commonFloor(ctx, stage, theme) {
     gradient(ctx, '#735851', '#241d2c', 720);
     for (let y = FLOOR; y < 720; y += 28) { rect(ctx, 0, y, 1280, 25, y % 56 ? '#725342' : '#79583f'); line(ctx, [[0, y], [1280, y]], '#c19a6a', 2); }
     for (let x = 40; x < 1280; x += 140) for (let y = FLOOR + 10; y < 720; y += 28) ellipse(ctx, x, y, 2, 2, '#241b28');
-  } else if (['candy', 'kingdom'].includes(theme)) floorTiles(ctx, '#9c5666', '#bc6e78', '#ffdeab');
-  else if (theme === 'spudsy') floorTiles(ctx, '#423135', '#69514e', '#dcca88');
+  } else if (theme === 'backstage') {
+    const carpet = ctx.createLinearGradient(0, FLOOR, 0, 720);
+    carpet.addColorStop(0, '#e34d49'); carpet.addColorStop(1, '#a72d3a');
+    rect(ctx, 0, FLOOR, 1280, 152, carpet);
+    // The corridor's carpet continues across the horizontal combat plane.
+    line(ctx, [[0, FLOOR + 2], [1280, FLOOR + 2]], '#f06e5b', 2);
+  } else if (theme === 'kingdom') {
+    rect(ctx, 0, FLOOR, 1280, 152, '#da6689');
+    for (const y of [600, 650]) line(ctx, [[0, y], [1280, y]], '#b9436c', 2);
+    for (let x = -560; x < 1880; x += 200) line(ctx, [[640 + (x - 640) * 0.6, FLOOR], [x, 720]], '#ed87a0', 2);
+  } else if (theme === 'candy') floorTiles(ctx, '#9c5666', '#bc6e78', '#ffdeab');
+  else if (theme === 'spudsy') floorTiles(ctx, '#b8a18b', '#cfbca0', '#f0debd');
   else floorTiles(ctx, stage.palette?.floor || '#21192f', theme === 'manor' ? '#362638' : '#302244', stage.palette?.accent || '#8b66ac');
   ctx.restore();
   if (['bigtop', 'circus', 'void', 'cellar'].includes(theme)) return;
@@ -374,30 +386,6 @@ function manor(ctx) {
   line(ctx, [[640, 0], [640, 110]], '#8f7885', 3); ellipse(ctx, 640, 120, 110, 20, null, '#8f7885', 6);
   for (const x of [550, 595, 640, 685, 730]) { line(ctx, [[x, 118], [x, 152]], '#8f7885', 3); ellipse(ctx, x, 159, 4, 7, '#edd8b6'); }
   rect(ctx, 0, 535, 1280, 33, '#34263b', '#715367', 3);
-}
-
-function spudsy(ctx) {
-  gradient(ctx, '#2b1f30', '#a16c63');
-  rect(ctx, 0, 160, 1280, 307, '#957565');
-  for (let y = 166; y < 470; y += 32) for (let x = 0; x < 1280; x += 40) rect(ctx, x, y, 38, 30, (x / 40 + y / 32) % 2 > 0.5 ? '#a58973' : '#b39a7c');
-  rect(ctx, 288, 120, 705, 163, '#47283a', '#d3a15f', 9);
-  label(ctx, "SPUDSY'S", 640, 169, 35, '#f7d38a');
-  for (let i = 0; i < 5; i++) {
-    const x = 338 + i * 126;
-    rect(ctx, x, 194, 100, 66, '#2b2634', '#725260', 2);
-    ellipse(ctx, x + 26, 222, 15, 9, '#d5a65c'); rect(ctx, x + 12, 223, 29, 6, '#775c4d');
-    line(ctx, [[x + 52, 211], [x + 85, 211]], '#b6a08a', 3); line(ctx, [[x + 52, 223], [x + 80, 223]], '#8c7a74', 3);
-  }
-  for (const x of [78, 1090]) {
-    rect(ctx, x, 290, 120, 240, '#554343', '#342d35', 5);
-    ellipse(ctx, x + 60, 357, 29, 29, '#778c90', '#bdb19a', 6); rect(ctx, x + 98, 417, 7, 36, '#bfb09a');
-  }
-  rect(ctx, 235, 430, 810, 116, '#703d41', '#291d2d', 4); rect(ctx, 222, 418, 836, 20, '#b5a18a', '#edcb9b', 3);
-  for (let x = 262; x < 1030; x += 64) rect(ctx, x, 452, 4, 82, '#a66c58');
-  rect(ctx, 355, 360, 70, 58, '#3a3540', '#b3a38d', 4); rect(ctx, 364, 369, 52, 24, '#9abbaf');
-  for (let x = 825; x < 925; x += 15) rect(ctx, x, 370 - x % 3 * 3, 8, 39, '#e8b962');
-  path(ctx, [[812, 388], [941, 388], [923, 417], [830, 417]], '#b8494b', '#e5bd7a', 3);
-  rect(ctx, 0, 540, 1280, 28, '#3e2c34');
 }
 
 function cellar(ctx) {
@@ -491,19 +479,6 @@ function gloink(ctx) {
   glow(ctx, 640, 460, 200, '#cb90da', 0.16);
 }
 
-function kingdom(ctx) {
-  gradient(ctx, '#745579', '#dba9b0');
-  for (const x of [170, 930]) {
-    rect(ctx, x, 260, 180, 308, '#a87395', '#754d76', 4);
-    path(ctx, [[x - 18, 267], [x + 90, 130], [x + 198, 267]], '#c292b3', '#f0c3bc', 5);
-    arch(ctx, x + 57, 320, 66, 130, '#64506e', '#e5b9ae', 5);
-  }
-  rect(ctx, 350, 328, 580, 240, '#be8aa7', '#815a82', 4);
-  for (let x = 365; x < 930; x += 65) rect(ctx, x, 301, 36, 39, '#cf9bb7', '#efc1bd', 3);
-  arch(ctx, 515, 370, 250, 198, '#674761', '#f3d2b4', 12);
-  for (let i = 0; i < 9; i++) ellipse(ctx, 110 + i * 135, 552, 65, 25, '#9c7589');
-}
-
 function grounds(ctx) {
   gradient(ctx, '#686994', '#cda6ab');
   ellipse(ctx, 1040, 159, 52, 52, '#ead4a9');
@@ -515,29 +490,15 @@ function grounds(ctx) {
   for (let x = 70; x < 1280; x += 180) { rect(ctx, x, 491, 13, 77, '#c3ad94'); line(ctx, [[x, 508], [x + 180, 508]], '#c9b69e', 4); }
 }
 
-function backstage(ctx) {
-  gradient(ctx, '#1c192b', '#413045');
-  for (let x = 0; x < 1280; x += 80) rect(ctx, x, 0, 8, FLOOR, '#462d43');
-  rect(ctx, 455, 182, 370, 325, '#302438', '#a88b72', 9);
-  rect(ctx, 481, 208, 318, 268, '#616073', '#d2ad84', 4);
-  for (let x = 470; x <= 810; x += 42) { ellipse(ctx, x, 193, 7, 7, '#efd5a3'); ellipse(ctx, x, 492, 7, 7, '#efd5a3'); }
-  for (const x of [468, 812]) for (let y = 236; y < 470; y += 46) ellipse(ctx, x, y, 7, 7, '#efd5a3');
-  rect(ctx, 410, 516, 460, 33, '#795264', '#bd957a', 4);
-  for (const [x, y, w, h] of [[70, 420, 180, 148], [245, 480, 120, 88], [1010, 398, 205, 170]]) {
-    rect(ctx, x, y, w, h, '#574452', '#ac8c71', 5); line(ctx, [[x + 10, y + 10], [x + w - 10, y + h - 10]], '#ac8c71', 4); line(ctx, [[x + w - 10, y + 10], [x + 10, y + h - 10]], '#ac8c71', 4);
-  }
-  for (const x of [165, 1120]) { line(ctx, [[x, 0], [x, 180]], '#8c758a', 3); ellipse(ctx, x, 199, 48, 19, null, '#b79a79', 7); }
-}
-
-const scenes = { bigtop: circus, circus, candy, manor, spudsy, cellar, void: voidStage, lake, training, gloink, kingdom, grounds, backstage };
+const scenes = { bigtop: circus, circus, candy, manor, cellar, void: voidStage, lake, training, gloink, grounds };
 
 function makeBackground(stage) {
   const result = canvas(1280, 720), ctx = result.getContext('2d');
   const theme = stage.theme || stage.id || 'bigtop';
-  (scenes[theme] || circus)(ctx, stage);
+  if (!drawStageScenery(ctx, stage)) (scenes[theme] || circus)(ctx, stage);
   commonFloor(ctx, stage, theme);
   const edge = ctx.createRadialGradient(640, 350, 260, 640, 350, 800);
-  edge.addColorStop(0, 'transparent'); edge.addColorStop(1, theme === 'void' ? '#a8a7eb15' : ['bigtop', 'circus'].includes(theme) ? '#194f7122' : '#05061280');
+  edge.addColorStop(0, 'transparent'); edge.addColorStop(1, theme === 'void' ? '#a8a7eb15' : ['bigtop', 'circus'].includes(theme) ? '#194f7122' : ['backstage', 'spudsy', 'kingdom'].includes(theme) ? '#42152a38' : '#05061280');
   rect(ctx, 0, 0, 1280, 720, edge);
   return result;
 }
@@ -706,6 +667,13 @@ export class CombatRenderer {
     const tick = state?.frame || 0;
     drawStageMotion(ctx, options.stage || state?.stage, options.ambientFrame ?? tick, options.reducedMotion);
     if (!state) { ctx.restore(); return; }
+    if (options.finisher && state.phase === 'matchOver') {
+      drawFinisherScene(ctx, state, options.finisher, options.presentationFrame ?? 0, {
+        reducedMotion: options.reducedMotion,
+        drawActor: (actor, presentation) => this.drawActor(actor, tick, options.reducedMotion, presentation),
+      });
+      ctx.restore(); this.lastState = state; return;
+    }
     const actors = state.a && state.b ? [state.a, state.b] : state.fighters || [];
     for (const object of state.traps || []) this.drawTrap(object, actors, tick, options.reducedMotion);
     const order = [...actors].sort((a, b) => (a.y || FLOOR) - (b.y || FLOOR));
