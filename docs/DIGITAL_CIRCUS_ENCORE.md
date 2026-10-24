@@ -48,6 +48,14 @@ La galerie suspend son horloge dès que l’onglet ou sa fenêtre CainOS est mas
 Le retour n’ajoute plus de temps caché à la scène. Modifier la préférence de
 mouvement réduit recalcule le rendu même si la présentation est déjà arrêtée.
 
+L’apparence originale de **Gloink Queen** réutilise désormais la planche RGBA
+isolée de sa variante corrigée en 0.6. Le rectangle opaque de l’ancienne source
+disparaît des portraits, du combat et de la galerie. L’identité, l’orientation,
+les dimensions visuelles et les collisions de **420 × 150** restent inchangées.
+L’image historique reste dans le dépôt ; le pack du jeu n’en a plus besoin et
+contient maintenant **44 planches / 52 167 739 octets**.
+[Voir la comparaison avant/après](COMBAT_GLOINK_QUEEN_0.7.0.md).
+
 Les nouvelles suites `combat-accessibility-browser.mjs` et
 `combat-input-browser.mjs` parcourent ces commandes par l’interface. Les
 manettes sont simulées et le format mobile est émulé dans Chromium ; ces essais
@@ -76,6 +84,10 @@ Les motifs et les limites de référence sont détaillés dans
 Les accessoires de scène sont dessinés de façon procédurale ; les personnages
 conservent leurs illustrations et leur alpha. Ce lot ne représente ni 42 attaques
 canoniques ni 42 animations de corps dessinées.
+
+Les captures des compositions finales sont réunies sur deux planches :
+[Pomni à Caine](images/finishers-0.7.0-a.jpg) et
+[Bubble à Baron Mildenhall](images/finishers-0.7.0-b.jpg).
 
 ### Ambiances sonores des douze arènes
 
@@ -129,15 +141,15 @@ npm run build:combat
 ```
 
 `dist/` contient CainOS et son application de combat. `dist-combat/` contient le jeu
-autonome, son point d’entrée et les **45 planches utilisées par le jeu**, soit
-**54 085 802 octets d’illustrations**. Le manifeste ne copie que les images utilisées ;
+autonome, son point d’entrée et les **44 planches utilisées par le jeu**, soit
+**52 167 739 octets d’illustrations**. Le manifeste ne copie que les images utilisées ;
 les PNG historiques restent conservés dans le dépôt. Ce second dossier peut être hébergé
 indépendamment de CainOS. Les scripts
 [`build-combat.mjs`](../scripts/build-combat.mjs) et
 [`build-combat-offline.mjs`](../scripts/build-combat-offline.mjs) assemblent ces
 fichiers et régénèrent l’inventaire hors ligne. L’empreinte du code 0.7 est inscrite
 dans `OFFLINE_VERSION` du manifeste généré et dans les preuves de la livraison.
-Celle des illustrations conservées est **`ART_VERSION = 4ca4a56c5bace07b`**.
+Celle des illustrations conservées est **`ART_VERSION = 05a3fc712a39e1d8`**.
 
 Pour un essai local sans dépendance supplémentaire :
 
@@ -355,17 +367,19 @@ horloge musicale et une limite de 24 voix bornent les ressources. Si le navigate
 refuse l’audio, le combat reste utilisable.
 
 Ces sons sont synthétisés localement : aucune musique ni voix enregistrée de la
-série n’est importée. Certains événements partagent encore un motif, notamment les
-impacts léger/lourd et la saisie. La version 0.7 ajoute douze ambiances procédurales,
-avec un volume indépendant initial de 35 %, ainsi que les signaux piège et KO.
+série n’est importée. Les **24 motifs d’effets** comprennent six sons de contact
+distincts : léger, lourd, bas, saisie, spécial et super. Ils sont déclenchés par
+un impact réel ; un coup bloqué ou une préparation de super conserve son propre
+signal. La version 0.7 ajoute aussi douze ambiances procédurales, avec un volume
+indépendant initial de 35 %, ainsi que les signaux piège et KO.
 Les voix, les éventuels enregistrements d’ambiance et les essais de mixage
 sur appareils physiques restent suivis dans le classeur.
 
 ## Installation web et hors ligne
 
 Sous HTTPS ou localhost, ouvrir **Réglages → Télécharger le spectacle** puis
-attendre la confirmation **45/45 illustrations**. Le pack correspond exactement aux
-**54 085 802 octets** de [`combat/offline-manifest.mjs`](../combat/offline-manifest.mjs).
+attendre la confirmation **44/44 illustrations**. Le pack correspond exactement aux
+**52 167 739 octets** de [`combat/offline-manifest.mjs`](../combat/offline-manifest.mjs).
 Le numéro exact de la livraison figure dans `OFFLINE_VERSION` de ce manifeste.
 Le premier téléchargement exige une connexion et le stockage nécessaire. Les
 fichiers déjà reçus sont réutilisés lors d’une nouvelle tentative.
@@ -588,14 +602,17 @@ pas un jeu de dessins de combat dédiés.
 séquences**, soit cinq par combattant : introduction, victoire de round, défaite
 de round, victoire finale et défaite finale. Chaque artiste a un rythme et des
 déplacements propres, appliqués rigidement aux illustrations disponibles. Les
-durées sont bornées ; la présentation finale couvre **132 images à 60 Hz**.
+durées sont bornées ; la présentation finale ordinaire couvre **132 images à 60 Hz**.
 Le passage à la phase de combat reste commandé par le moteur. Une fois leur durée atteinte,
 elles restent sur leur pose de fin. Une égalité conserve une pose neutre.
 
 L’horloge de présentation est séparée du moteur. À la fin d’un match, le profil,
 le replay et le prochain point de reprise sont enregistrés immédiatement ; la
-modale de résultat arrive après **2,2 secondes**. **Voir le résultat** permet de
-passer directement à cette modale. Ce choix n’attribue pas une seconde récompense.
+modale de résultat arrive après **2,2 secondes** pour la présentation ordinaire.
+Une finale de spectacle 0.7 éligible utilise sa durée propre : **3, 3,5 ou 4 secondes**.
+Le mouvement réduit conserve une composition fixe et le délai de **2,2 secondes**.
+**Voir le résultat** permet de passer directement à cette modale. Ce choix
+n’attribue pas une seconde récompense.
 Le mouvement réduit affiche des poses fixes dès que la préférence du système
 ou le réglage du jeu est activé. Un changement de préférence système prend effet
 pendant le jeu, sans modifier le choix sauvegardé dans le profil. Le masquage du
@@ -759,8 +776,13 @@ Il lit les catalogues réellement livrés, les 84 tableaux, les 56 briefings, le
 Le suivi historique 0.6 contenait **101 fonctionnalités, 632 tâches de production, 85 scénarios et
 452 lignes QA** : 260 cas Node, 154 contrôles navigateur et 38 objectifs de
 revue. Ses statuts QA étaient **447 « Réussi », 1 « À vérifier » et 4 « Non exécuté »**.
-La passe 0.7 ajoute les nouvelles tâches et les preuves effectives de CI ; ses
-totaux sont consignés dans `combat-workbook-verification.json` et la Synthèse.
+Le suivi 0.7 contient maintenant **102 fonctionnalités, 683 tâches de production,
+85 scénarios et 1 003 lignes QA**. Il distingue les **551 cas automatisés courants**
+(313 Node et 238 navigateur) des 452 lignes historiques ou objectifs de revue
+conservés. Les statuts QA cumulés sont **999 « Réussi », 0 « Échec »,
+3 « Non exécuté » et 1 « À vérifier »**. Les **39 formules** ont été recalculées
+et leurs résultats contrôlés. Ces comptes figurent dans
+`combat-workbook-verification.json` et la Synthèse.
 Les objectifs peuvent recouper les tests ; les lignes ne représentent pas autant
 de tests indépendants. La comparaison canonique exhaustive reste ouverte. Les
 quatre essais historiques non exécutés concernaient un téléphone physique, deux
@@ -769,21 +791,51 @@ manettes physiques, tous les menus au clavier et un matériel modeste. La passe
 et l’évaluation avec un lecteur d’écran restent à faire.
 
 Les notes sont restaurées par feuille et identifiant stable, même après tri.
-La régression contrôle dix notes sur huit onglets, dont deux formules R1C1,
-un texte commençant par `=`, zéro et `false`. Neuf entrées invalides sont refusées
-avant écrasement. Les fixtures ne sont pas ajoutées au classeur final.
+La régression 0.7 contrôle dix notes sur huit onglets, dont deux formules R1C1,
+un texte commençant par `=`, zéro et `false`, après tri de la feuille des
+fonctionnalités. Une hauteur utilisateur de 180 points est conservée. Les notes
+de cette fixture ne sont pas ajoutées au classeur final, qui n’en contenait pas.
+Les neuf rejets d’entrées invalides de la campagne 0.6 restent des preuves historiques.
 
-La publication prépare les trois sorties et sauvegarde tous les anciens contenus
+La publication prépare les quatre sorties courantes et sauvegarde tous les anciens contenus
 avant le premier remplacement. Une erreur interceptée restaure les octets
 précédents ou l’absence antérieure du fichier. Si cette restauration échoue, les
 sauvegardes, le journal et le verrou sont conservés pour la récupération ; une
 nouvelle génération est bloquée. Onze tests filesystem couvrent ces chemins,
-dont huit combinaisons de présence et vingt-quatre pannes de renommage.
+dont huit combinaisons de présence et vingt-quatre pannes de renommage sur une
+fixture de trois fichiers.
 
-Cette publication ne donne pas une lecture simultanément atomique de trois fichiers
+Cette publication ne donne pas une lecture simultanément atomique de plusieurs fichiers
 à un autre processus et ne garantit pas une restauration après arrêt brutal du
 système. Les limites de métadonnées et la procédure de récupération sont décrites
 dans [COMBAT_WORKBOOK_PUBLICATION.md](COMBAT_WORKBOOK_PUBLICATION.md).
+
+## Vérifications 0.7
+
+La campagne complète du 24 octobre 2026 porte sur le commit
+**`1073ce21525c771f598b56d7452eaeceb2ed9178`**. Elle se termine avec
+**313 tests Node réussis dans 22 suites** et **238 contrôles Chromium réussis
+dans 14 suites**. Les sources du jeu et de chaque test sont contrôlées avant
+et après exécution. Le collecteur utilise son propre serveur local et vérifie
+que celui-ci sert bien le code attendu.
+
+| Partie de la campagne | Résultat et portée |
+| --- | --- |
+| Contrats, syntaxe et distributions | `npm run qa` réussi, CainOS et standalone reconstruits |
+| Moteur, profils, audio, rendu et publication | 313 tests Node, 22 suites |
+| Finales et galerie | 100 contrôles, 42 finales et 51 costumes parcourus |
+| Audio | 22 contrôles des ambiances, effets, volumes et cycle de vie |
+| Navigation et accessibilité | 28 contrôles clavier, focus, commandes natives, manette simulée et format mobile émulé |
+| Commandes pendant le combat | Quatre parcours de régression : pause/répétition, Ctrl de J2 et activation native de la barre d’outils |
+| Roster | 14 duels complets, sauvegarde/rechargement après chacun et replay terminal exact ; 10 contrôles agrégés |
+| Progression | 20 victoires Arcade/Boss/Survie et un duel local, puis conservation des récompenses et import/export |
+| Présentation narrative | 84 tableaux affichés, parcours de Jax, reprise et relecture sans double récompense |
+| Hors ligne | 11 contrôles, téléchargement des 44 planches, rechargement sans réseau et mise à jour |
+
+Les détails navigateur de ce tableau sont **inclus dans les 238 contrôles**.
+Les essais ciblés de Gloink Queen et les réexécutions ne gonflent pas ce total.
+Les preuves complètes, les noms des cas et les empreintes se trouvent dans
+[`combat-qa-evidence-0.7.0.json`](combat-qa-evidence-0.7.0.json).
 
 ## Vérifications historiques 0.6 et limites pratiques
 

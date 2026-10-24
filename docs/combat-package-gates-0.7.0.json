@@ -1,0 +1,19 @@
+{
+  "pass": true,
+  "gameVersion": "0.7.0",
+  "tests": [
+    {
+      "name": "Earlier workbook version remains pending and removes its stale archive",
+      "pass": true,
+      "packaged": false,
+      "reason": "The workbook still describes an earlier version.\n\n'0.6.0' !== '0.7.0'\n"
+    },
+    {
+      "name": "Changed companion JSON is rejected by strict packaging",
+      "pass": true,
+      "exitCode": 1,
+      "reason": "Tracker data changed after review."
+    }
+  ],
+  "scope": "Isolated temporary checkout with unchanged runtime and test symlinks. Production documents were not edited."
+}

@@ -1,50 +1,61 @@
 ## Pourquoi
 
-La version 0.5 laissait vingt apparences avec des détails erronés, des fonds attachés ou des extractions imparfaites, trois architectures de décor trop génériques et des introductions/fins d’histoire peu composées. La publication du classeur pouvait aussi mélanger un nouvel Excel et d’anciens JSON si un renommage intermédiaire échouait.
+Cette PR poursuit Encore depuis `main` au commit `4a56f6358000cd7ad0838e45f5385ec516432514` et livre la version **0.7.0**, partagée entre l’application CainOS et le jeu autonome. Elle conserve les corrections visuelles et narratives 0.6, termine la livraison des finales et des ambiances 0.7, puis corrige les commandes, le focus et la traçabilité du suivi.
 
-Cette PR livre **Encore 0.6.0** depuis `main` au commit `4a56f6358000cd7ad0838e45f5385ec516432514`, après la fusion de la PR #3. Les modifications sont partagées entre CainOS et le standalone.
+La dernière version de la branche possédait déjà le catalogue des finales, mais sa vérification navigateur échouait sur un sélecteur de navigation ambigu ; l’Excel et l’archive correspondants n’étaient pas publiés. Le parcours clavier perdait aussi le focus lors de certains changements d’écran, et trois défauts d’entrée pouvaient perturber une rencontre locale.
 
-## Changements
+## Ce que change la PR
 
-- **20 costumes / 5 planches RGBA** : six corrections de détails d’après des photos de produits officiels GLITCH ; quatorze réparations techniques. Les corps noirs des sept Shadows restent intacts, la reine est isolée, les fonds et socles attachés sont retirés, Bubble devient réellement translucide. Les PNG historiques et les 179 identités d’archive sont conservés.
-- **3 décors reconstruits** : couloir des résidents, comptoir/cuisine Spudsy et cour du palais de sucre. Leurs sols visuels sont recomposés ; la ligne de combat `y=568` et les collisions sont inchangées. Les neuf autres fonds statiques restent identiques à 0.5. Les ambiances préservent les pixels des sols courants.
-- **84 tableaux narratifs** : trois panneaux de prologue et trois d’épilogue pour chacune des 14 routes, plus 56 briefings composés avec les décors et portraits existants. Navigation, passage et sortie, mobile, mouvement réduit et relecture des fins gagnées sans double récompense. Les quatre adversaires et checkpoints de chaque route sont conservés.
-- **Replays versionnés** : 0.1 à 0.6 acceptés ; les fichiers 0.6 utilisent explicitement les règles 0.5 et conservent leur version exportée. Aucun changement d’équilibrage dans cette livraison.
-- **Publication Excel avec restauration** : préparation des trois sorties et sauvegardes avant remplacement ; restauration des octets ou de l’absence antérieure sur erreur interceptée. Sauvegardes, journal et verrou conservés si la restauration échoue. Corrige le point restant de la PR #3 (`PRRT_kwDOTG4CcM6vhSuD`).
-- **Suivi mis à jour** : 10 onglets, 9 tableaux, 101 fonctionnalités, 632 tâches de production, 85 scénarios et 452 lignes QA. Notes utilisateur conservées par ID après tri.
+- **Finales et galerie** : 42 présentations de KO, trois par combattant, et consultation des 51 costumes. Le résultat est enregistré avant la présentation ; passage, désactivation et mouvement réduit sont pris en charge. Le temps passé dans un onglet ou une fenêtre CainOS masqués n’avance plus la galerie ; un changement de mouvement réduit rafraîchit aussi une image finale arrêtée.
+- **Audio** : 12 ambiances procédurales avec réglage indépendant, signaux de piège et de KO, et 24 motifs d’effets au total. Six sons distinguent les contacts léger, lourd, bas, saisie, spécial et super. Le choix suit les événements réellement résolus, avec priorité aux résultats critiques et à la garde.
+- **Navigation** : flèches et Début/Fin dans les groupes de choix, conservation du focus après sélection ou filtrage, retour au déclencheur après fermeture d’une boîte de dialogue, états accessibles pour les choix actifs. La manette peut ouvrir les références et parcourir leurs liens ; les champs de recherche ne piègent plus son parcours.
+- **Commandes en combat** : une répétition automatique après une pause ne relance plus une attaque ; le dash de J2 sur Ctrl droite ne bloque plus les attaques des deux joueurs ; Espace et Entrée activent la barre d’outils sans provoquer de saut.
+- **Gloink Queen** : l’apparence originale réutilise maintenant la planche transparente de sa variante corrigée. Le rectangle opaque disparaît des portraits, du combat et de la galerie. Les identifiants, les costumes et les collisions sont conservés ; l’ancienne image reste dans le dépôt.
+- **Suivi et livraison** : génération du classeur avec le moteur tableur principal, conservation des notes par identifiant après tri, preuves versionnées et archive autonome. La CI vérifie le classeur déjà revu ; elle ne le réécrit pas. Le code, les tests, l’Excel, ses données JSON et les preuves sont liés par SHA-256. Le collecteur démarre son propre serveur et contrôle les sources avant et après exécution.
+- **Contenu conservé depuis 0.6** : 20 costumes corrigés sur cinq planches RGBA, trois décors reconstruits, 84 tableaux narratifs et 56 briefings. Les 14 combattants, 140 techniques, 12 arènes, neuf modes, 51 costumes et 179 identités d’archive sont préservés.
 
-## Validation
+Les règles de simulation restent **0.5.0**. Les replays **0.1.0 à 0.7.0** conservent leur version d’origine et leur comportement ; cette livraison n’introduit pas de nouvelles règles d’équilibrage.
+
+## Validation de la version 0.7
+
+Les preuves de cette campagne portent sur le code de `1073ce21525c771f598b56d7452eaeceb2ed9178`. Les dernières modifications de livraison concernent le suivi et la documentation ; les empreintes du jeu et des tests doivent rester identiques.
 
 | Contrôle | Résultat |
 | --- | --- |
-| `npm run qa` | Audits CainOS, contrats, syntaxe et deux builds réussis |
-| Node | Campagne initiale **260/260**, 17 suites ; comptes et noms issus des sorties TAP |
-| Navigateur | Campagne initiale **154/154**, 18 suites ; les 14 suites historiques sont toutes rejouées sur le runtime 0.6 avant la correction de libellé décrite ci-dessous |
-| Roster complet | **14 vrais duels CPU**, 14 sauvegardes/rechargements exacts ; historique borné à 12 ; dernier replay exporté/importé et état terminal exact |
-| Costumes révisés | **20 garde-robes → entraînements → attaques clavier** ; marges, noir préservé, composantes et alpha partiel contrôlés |
-| Narration dédiée | **84 tableaux affichés/capturés**, 4 victoires réelles de Jax ; reprise, fin et relecture sans récompense doublée |
-| Régression programmes | 21 résultats de progression (local + Arcade 6 + Boss 4 + Survie 10) ; 9 duels histoire/tournoi supplémentaires, dont deux défaites/reprises |
-| Publication Excel | **11 tests filesystem** : huit combinaisons de présence, 24 pannes de renommage et échecs de copie/sauvegarde/rollback |
-| Notes Excel | **10 notes / 8 feuilles**, formules R1C1 et valeurs `=`, `0`, `false` ; **9 rejets** avant écrasement et **3 contrôles de nettoyage** |
-| Classeur final | **37 formules**, aucune erreur ; 92 empreintes concordantes ; onglets inspectés |
-| Hors ligne | **45 images / 54 085 802 octets**, manifeste `0.6.0-6dcd5c6ee620` ; installation, reprise et recharge sans réseau |
+| `npm run qa` | Audits CainOS, contrats, syntaxe et deux distributions construits avec succès |
+| Node | **313 tests réussis dans 22 suites** ; noms et comptes issus des sorties TAP |
+| Navigateur | **238 contrôles réussis dans 14 suites** ; code du jeu et sources de test inchangés pendant la campagne |
+| Finales / galerie | **100 contrôles** : 42 finales, 51 costumes, lecture/pause/reprise, arrêt final et conservation du profil |
+| Audio | **22 contrôles** : 12 ambiances distinctes, six contacts plus piège/KO distincts, réglages et cycle de vie WebAudio |
+| Clavier / manette simulée | **28 contrôles réussis**, navigation, focus, formulaires natifs, manette virtuelle et largeur mobile de 390 px |
+| Commandes de combat | **Quatre parcours réussis** avec les vraies entrées clavier ; profil et replay conservés |
+| Roster et programmes | **14 duels de roster**, 20 victoires Arcade/Boss/Survie, neuf duels histoire/tournoi et vérification des sauvegardes |
+| Classeur | **39 formules recalculées, aucune erreur**, 10 feuilles et 9 tableaux natifs conservés ; export et réimport vérifiés |
+| Notes et tri | Fixture séparée : **10 notes / 8 feuilles**, deux formules relatives, `0`, `false`, texte `=`, tri et hauteur utilisateur conservés |
+| Protection de la livraison | Un classeur périmé empêche l’archive et retire l’ancien ZIP ; un JSON compagnon altéré est rejeté par le mode strict |
+| Archive | Intégrité ZIP vérifiée, runtime du standalone identique aux sources testées, lanceurs Python/POSIX analysés |
+| Hors ligne | **44 images / 52 167 739 octets** ; manifeste `0.7.0-62e762f53b55` |
 
-Après la revue de cette PR, l’identité de **Work Gangle** a été corrigée dans la garde-robe et le rapport pour décrire son masque blanc souriant et denté. Les 50 autres fiches et les 5 planches sont identiques. Les deux builds ont été régénérés ; **26 cas Node existants**, **5 contrôles ciblés de garde-robe** et **11 contrôles hors ligne réexécutés** réussissent sur la correction. `postReviewDeltas` conserve ces preuves séparément de la campagne complète initiale, qui n’a pas été entièrement rejouée après ce changement de texte.
+Les suites navigateur distinguent les combats réellement joués par l’interface, les simulations de classement et les scènes de rendu. Les vérifications de galerie ne valent pas 42 nouveaux dessins corporels ni une validation canonique exhaustive. Trois compositions finales statiques ont aussi été inspectées visuellement : Jax super, Gangle super et Bubble impact, sans défaut majeur dans cet échantillon.
 
-Les 452 lignes du classeur comprennent 260 cas Node, 154 contrôles navigateur et 38 objectifs de revue : **447 réussies, 1 à vérifier, 4 non exécutées**. Ces objectifs peuvent recouper les cas automatisés ; ce total n’est pas un nombre de tests indépendants.
+Les preuves historiques 0.6 restent dans `combat-qa-evidence.json`. Elles ne sont pas additionnées aux résultats 0.7. Les objectifs de revue du classeur peuvent recouper les tests automatisés : le nombre de lignes QA n’est donc pas un nombre de tests indépendants.
 
-Les tests de cache historique ont été adaptés à leurs fixtures d’origine : la nouvelle Gangle possède déjà son alpha et ses rubans rouges. Les assertions de différence des pixels et de séparation du cache sont conservées. Les premières tentatives échouées des collecteurs restent archivées ; les rapports finaux sont tous réussis.
+Le suivi contient **102 fonctionnalités, 683 tâches de production, 85 scénarios et 1 003 lignes QA**. Ces dernières réunissent 551 cas automatisés de cette passe et 452 lignes historiques ou objectifs de revue conservés : **999 réussies, zéro échec, trois non exécutées et une à vérifier**. Le classeur réel ne contenait aucune note ; les notes de la fixture ne sont pas livrées. Les fonctions restent classées en **81 implémentées, six partielles, treize prévues et deux à vérifier**.
 
-## Documents et captures
+## Documents et utilisation
 
-Le guide, le classeur et les preuves sont dans `docs/` : `DIGITAL_CIRCUS_ENCORE.md`, `DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx`, `combat-qa-evidence.json`, `combat-tracker-data.json`, `combat-workbook-verification.json`, les trois revues visuelles 0.6 et `COMBAT_WORKBOOK_PUBLICATION.md`.
+Le guide est dans `docs/DIGITAL_CIRCUS_ENCORE.md`. Le suivi comprend `DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx`, `combat-tracker-data.json`, `combat-workbook-verification.json` et `combat-qa-evidence-0.7.0.json`. Le catalogue des finales et les planches de capture sont également dans `docs/`.
 
-Les captures de `docs/images/` comprennent les vingt costumes, l’avant/après des trois décors, les douze arènes, le couloir et la narration sur bureau/mobile. Les rapports conservent les sources, leurs empreintes et la portée des observations.
+Les contrôles séparés de notes et de refus de livraison sont conservés dans `docs/combat-workbook-notes-0.7.0.json` et `docs/combat-package-gates-0.7.0.json`. La comparaison de Gloink Queen est dans `docs/COMBAT_GLOINK_QUEEN_0.7.0.md`.
 
-## Limites
+La CI fournit les preuves et, lorsque le classeur correspond exactement au code vérifié, l’archive **Digital_Circus_Encore_0.7.0.zip**. Elle contient le jeu autonome, les documents et trois lanceurs locaux. Après extraction complète : `LANCER_ENCORE.cmd` sous Windows ou `sh LANCER_ENCORE.sh` sous macOS/Linux. **Python 3 et un navigateur moderne sont nécessaires.** Les lanceurs ne constituent pas des paquets natifs.
 
-La comparaison canonique générale **1:1 reste ouverte**. Les six corrections de détails de costumes s’appuient sur des produits officiels, sans certifier toutes les proportions ou scènes. Les quatorze autres réparations n’ajoutent pas de source canonique aux variantes d’archive. Le couloir utilise deux copies attribuées au pilote sur des sites tiers et attend une confirmation primaire. Spudsy repose sur une miniature officielle de résolution limitée. Le lac manque encore de référence primaire et la calibration est une création du jeu.
+## Travaux encore ouverts
 
-Les 84 tableaux sont des compositions de dessins existants, sans 84 nouvelles illustrations ni doublage. Jax est la route narrative entièrement jouée ; les treize autres routes sont couvertes par contrats et inspection des tableaux. Les dessins de combat dédiés, voix/mixage final, équilibrage compétitif, 114 archives sans kit, réseau/rollback, tag/assists, coopération, campagnes par épisode, finishers, cloud et paquets natifs restent suivis.
+- Dessins et animations de combat dédiés, comparaison canonique générale **1:1**, détails et proportions encore non vérifiés. Les finales réutilisent les illustrations existantes avec accessoires et mise en scène procéduraux.
+- Voix, finition sonore et mixage sur appareils physiques ; les sons actuels sont des créations d’Encore.
+- Équilibrage compétitif, 114 entrées d’archive sans kit de combat, réseau/rollback, tag/assists, coopération et campagnes par épisode.
+- Synchronisation cloud du profil de combat, économie/déblocages, personnalisation et paquets natifs.
+- Essais sur téléphone physique, deux manettes physiques, matériel modeste et lecteur d’écran. Les contrôles Chromium du clavier et des manettes simulées ne remplacent pas ces essais.
 
-Les quatre essais non exécutés concernent téléphone physique, deux manettes physiques, parcours clavier exhaustif et matériel modeste. Les tests Chromium ne les remplacent pas. La publication du classeur n’est pas une lecture atomique simultanée de trois fichiers ni une garantie de récupération après arrêt brutal ; ses limites et la récupération sont documentées.
+La publication du classeur restaure les anciens fichiers sur erreur interceptée, mais ne garantit ni une lecture simultanément atomique de tous les fichiers ni une récupération après arrêt brutal. Le protocole et ses limites sont détaillés dans `docs/COMBAT_WORKBOOK_PUBLICATION.md`.

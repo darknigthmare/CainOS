@@ -1,10 +1,19 @@
 # Publication du classeur de suivi
 
-Le générateur `scripts/build-combat-workbook.mjs` publie ensemble trois résultats validés :
+Le générateur `scripts/build-combat-workbook.mjs` publie ensemble quatre résultats validés pour Encore 0.7 :
 
 - `DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx` ;
 - `combat-tracker-data.json` ;
-- `combat-workbook-verification.json`.
+- `combat-workbook-verification.json` ;
+- `combat-qa-evidence-0.7.0.json`.
+
+Les trois premiers fichiers existaient en 0.6. Le quatrième conserve les preuves
+effectivement utilisées par cette édition du classeur. La publication 0.7 utilise
+`build-combat-workbook-current.mjs` et le moteur tableur principal pour importer
+le fichier existant, recalculer les formules, vérifier les notes et exporter.
+La CI vérifie le classeur publié puis assemble le jeu ; elle ne modifie pas ses
+cellules. Le fichier de vérification lie les octets XLSX, le JSON de suivi, les
+preuves, les sources du jeu et celles des tests par leurs empreintes SHA-256.
 
 `scripts/workbook-publication.mjs` assure leur restauration si un remplacement échoue pendant l’exécution. Il est indépendant du moteur de calcul Excel : ses tests peuvent provoquer des pannes de fichiers sans reconstruire un classeur.
 
@@ -15,10 +24,10 @@ Le générateur termine d’abord l’export XLSX, sa réimportation et la véri
 La publication suit ensuite cet ordre :
 
 1. Acquérir `.workbook-publication.lock` par création exclusive. Un second processus utilisant ce module ne peut pas publier dans le même dossier tant que ce verrou existe.
-2. Créer un dossier privé `.workbook-publication-*` dans le dossier de sortie. Copier les trois nouvelles sorties dans son sous-dossier `staged`. Ces copies placent les remplacements sur le même système de fichiers que leurs destinations.
-3. Examiner chacune des trois destinations. Un fichier régulier existant est copié dans `backups` ; une destination absente est enregistrée comme telle. Les liens symboliques et les répertoires sont refusés. Toutes les sauvegardes doivent réussir avant le premier remplacement.
+2. Créer un dossier privé `.workbook-publication-*` dans le dossier de sortie. Copier les nouvelles sorties dans son sous-dossier `staged`. Ces copies placent les remplacements sur le même système de fichiers que leurs destinations.
+3. Examiner chaque destination. Un fichier régulier existant est copié dans `backups` ; une destination absente est enregistrée comme telle. Les liens symboliques et les répertoires sont refusés. Toutes les sauvegardes doivent réussir avant le premier remplacement.
 4. Écrire `recovery.json`, avec les noms des fichiers, leur présence initiale, les chemins relatifs des sauvegardes et les modes et dates des fichiers existants.
-5. Remplacer successivement les trois destinations par `rename`. Les permissions d’un fichier existant sont conservées sur son remplaçant.
+5. Remplacer successivement les destinations par `rename`. Les permissions d’un fichier existant sont conservées sur son remplaçant.
 6. Après succès, supprimer uniquement le dossier privé de cette publication et son verrou. Le générateur nettoie séparément son propre dossier privé d’export. Les PNG et les fichiers voisins restent en place.
 
 Les noms de destination doivent être de simples noms de fichiers. Les doublons, y compris ceux qui ne diffèrent que par la casse, les chemins relatifs avec séparateurs et les noms réservés `.workbook-publication*` sont refusés avant toute écriture.
@@ -47,7 +56,7 @@ Une erreur de nettoyage secondaire est attachée à l’erreur principale ; elle
 
 ## Limites du système de fichiers
 
-Chaque renommage est atomique sur le système de fichiers de destination. Les trois noms ne changent pas simultanément : un lecteur qui ouvre plusieurs fichiers pendant la courte phase de remplacement peut observer des générations différentes. Les consommateurs doivent utiliser les sorties après la fin réussie du générateur, ou attendre la disparition du verrou.
+Chaque renommage est atomique sur le système de fichiers de destination. Les noms ne changent pas simultanément : un lecteur qui ouvre plusieurs fichiers pendant la courte phase de remplacement peut observer des générations différentes. Les consommateurs doivent utiliser les sorties après la fin réussie du générateur, ou attendre la disparition du verrou.
 
 Cette procédure réagit aux erreurs de fichiers interceptées par le processus. Elle ne garantit pas une transaction résistante à une coupure de courant, à l’arrêt brutal du processus ou à une panne du support ; elle n’utilise pas de protocole de synchronisation durable des répertoires et fichiers. Un arrêt brutal peut laisser un verrou et un dossier privé à examiner. Aucun verrou ancien n’est supprimé automatiquement.
 
@@ -56,7 +65,7 @@ La restauration porte sur les octets, la présence ou l’absence, le mode et le
 ## Récupération manuelle si nécessaire
 
 1. Arrêter les générateurs et vérifier qu’aucun processus ne publie encore dans le dossier concerné. Conserver le verrou et le dossier désigné par `recoveryDirectory` pendant toute la récupération.
-2. Lire son `recovery.json`. Vérifier le dossier de sortie, les trois noms attendus et la présence de chaque sauvegarde déclarée. Un journal `prepared` peut également être celui d’une exécution interrompue ; il décrit l’état antérieur aux remplacements.
+2. Lire son `recovery.json`. Vérifier le dossier de sortie, tous les noms attendus et la présence de chaque sauvegarde déclarée. Un journal `prepared` peut également être celui d’une exécution interrompue ; il décrit l’état antérieur aux remplacements.
 3. Pour chaque entrée dont `existed` vaut `true`, copier sa sauvegarde vers un nouveau fichier temporaire privé placé sur le système de fichiers de destination, lui appliquer les métadonnées enregistrées, puis le renommer vers le nom de sortie. Garder la sauvegarde intacte jusqu’à la vérification complète.
 4. Pour chaque entrée dont `existed` vaut `false`, retirer seulement le fichier de sortie nommé dans cette entrée. Ne supprimer aucun répertoire de façon récursive pour réaliser cette étape.
 5. Comparer les contenus restaurés à chaque sauvegarde et vérifier les absences enregistrées. En cas d’erreur, conserver toutes les sauvegardes et le verrou pour poursuivre la récupération.
@@ -73,3 +82,11 @@ node tests/combat-workbook-publication.test.mjs
 Les onze tests couvrent les huit combinaisons de présence initiale des trois résultats en cas de succès, puis les mêmes huit combinaisons après un échec du premier, du deuxième et du troisième remplacement. Ils vérifient aussi la copie partielle d’une nouvelle source, la sauvegarde partielle, l’existence de toutes les sauvegardes et du journal avant remplacement, l’échec d’une restauration, l’échec du rétablissement d’une absence, la conservation des sauvegardes et du verrou, le rejet des liens symboliques et la validation des noms. Les aperçus et des fichiers voisins témoins doivent rester identiques.
 
 La suite est également incluse par le motif `tests/combat-*.test.mjs` de `npm run test:combat`. La conservation des notes Excel est vérifiée séparément avec des classeurs de test, en incluant les formules relatives, un texte commençant par `=`, la valeur `0` et le booléen `false`. Ces notes de test ne sont jamais ajoutées au classeur livré.
+
+Pour la passe 0.7, le résultat de la fixture de dix notes sur huit feuilles est
+conservé dans [combat-workbook-notes-0.7.0.json](combat-workbook-notes-0.7.0.json).
+Elle vérifie aussi le tri d’un tableau et la conservation d’une hauteur utilisateur
+supérieure. Les deux contrôles de refus d’archive sont dans
+[combat-package-gates-0.7.0.json](combat-package-gates-0.7.0.json) : ancienne version
+du classeur et JSON compagnon modifié après revue. Ils utilisent une copie
+temporaire isolée et n’altèrent pas les documents de production.

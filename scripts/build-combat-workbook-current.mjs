@@ -57,6 +57,7 @@ const render=async(name,range,label)=>{const blob=await workbook.render({sheetNa
 await render('Synthèse','A1:H34','before-summary');
 
 const changed=[];
+let expandedExistingRows=0;
 const statusColumns={'Fonctionnalités':4,'Production':5,'QA':4};
 const colors={good:'#E4F1E9',warning:'#FCEED8',pending:'#EAE7F1',amber:'#FFF1C9',bad:'#FBE0E0'};
 const statusRules=range=>{
@@ -64,6 +65,7 @@ const statusRules=range=>{
 };
 for(const [name,key]of Object.entries(TRACKER_SHEETS)){
   const sheet=sheets[name],table=sheet.tables.items[0],source=before[name],rows=data[key],oldCount=source.rows.length,width=source.headers.length;
+  const widths=source.headers.map((_,c)=>sheet.getRange(`${column(c+1)}5`).format.columnWidth||22);
   // Existing rows retain their positions, including a user's sorting order.
   assert.deepEqual(rows.slice(0,oldCount).map(r=>r[0]),source.rows.map(r=>r[0]),'Existing row order changed: '+name);
   if(rows.length>oldCount){
@@ -81,10 +83,17 @@ for(const [name,key]of Object.entries(TRACKER_SHEETS)){
     if(statusColumn){const range=sheet.getRange(`${column(statusColumn)}${oldCount+6}:${column(statusColumn)}${rows.length+5}`);range.dataValidation={rule:{type:'list',values:name==='QA'?QA_STATUSES:['Implémenté','Partiel','Prévu','À vérifier','Hors périmètre']}};statusRules(range);}
   }
   for(let i=0;i<oldCount;i++){
+    let rowChanged=false;
     for(let c=0;c<width-1;c++)if((source.rows[i][c]??'')!==(rows[i][c]??'')){
       assert(!hasValue(source.formulas[i]?.[c]),`Refusing to overwrite a user formula in ${name}/${rows[i][0]}/${c+1}`);
       sheet.getRange(`${column(c+1)}${i+6}`).values=[[literal(rows[i][c])]];
       changed.push({sheet:name,id:rows[i][0],column:c+1});
+      rowChanged=true;
+    }
+    if(rowChanged){
+      const lines=Math.max(1,...rows[i].map((value,c)=>String(value??'').split('\n').reduce((sum,line)=>sum+Math.max(1,Math.ceil(line.length/(widths[c]*1.1))),0)));
+      const range=sheet.getRange(`A${i+6}:${column(width)}${i+6}`),height=Math.max(29,lines*13+6);
+      if(height>(range.format.rowHeight??29)){range.format.rowHeight=height;expandedExistingRows++;}
     }
   }
 }
@@ -186,6 +195,7 @@ try{
     formulas:{count:formulaCount,generalRecalculation:true,summaryValuesChecked:expected.size,desktopExcelOpened:false},
     notesPreservation:{preserved:[...notes.values()].reduce((n,m)=>n+m.size,0),formulas:[...notes.values()].reduce((n,m)=>n+[...m.values()].filter(x=>x.formula).length,0),identityPreserved:true,exportRoundTripPassed:true},
     statusMutationRecalculated:true,renderedSheets:renders.map(([name])=>name),modifiedCells:changed.length,
+    layout:{expandedExistingRows,largerUserRowHeightsPreserved:true},
     publication:'Four staged outputs with backups and rollback. Group replacement is not simultaneously atomic.',
     limitations:['No desktop Excel session or physical device validation.','Historical evidence stays separate from current executions.','Procedural finales and audio are implemented; dedicated drawings, canonical 1:1 review and physical sound mix remain open.']};
   await fs.writeFile(path.join(pending,'combat-tracker-data.json'),trackerDataBytes);

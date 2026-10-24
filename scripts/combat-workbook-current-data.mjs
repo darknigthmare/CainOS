@@ -121,6 +121,10 @@ export async function prepareCurrentTracker({ root, priorData, evidence }) {
     review[6]=`Objectif couvert par les ${accessibilityReport.checks.length} contrôles Chromium de cette passe. Voir les lignes CI07 et docs/combat-qa-evidence-0.7.0.json. Cette revue n’est pas un test indépendant supplémentaire.`;
     review[7]='Parcours clavier, focus visible et conservé, commandes natives et menus à la manette virtuelle vérifiés. Lecteur d’écran et matériel physique non testés.';
   }
+  const musicSource=data.sources.find(source=>source.id==='music');assert(musicSource,'Missing audio reference');
+  musicSource.scope=`${Object.keys(audio.AUDIO_THEMES).length} thèmes synthétiques (un par arène) et ${effects.size} motifs sonores. Aucun enregistrement ni musique de la série.`;
+  const offlineSource=data.sources.find(source=>source.id==='offline');assert(offlineSource,'Missing offline reference');
+  offlineSource.scope=`${offline.ART_FILES.length} images, ${new Intl.NumberFormat('fr-FR').format(offline.ART_BYTES)} octets. La préparation explicite du pack est séparée de la sauvegarde des profils.`;
   const extraSources=[
     {id:'finishers-07',title:'Encore — 42 présentations de KO',kind:'Création de fan-game',url:'combat/finisher-catalog.mjs',scope:finales.FINISHER_NOTICE},
     {id:'audio-ambiences-07',title:'Encore — douze ambiances sonores',kind:'Synthèse originale',url:'combat/audio-ambiences.mjs',scope:'Compositions originales. Aucune captation de la série ni validation du mixage sur matériel physique.'},

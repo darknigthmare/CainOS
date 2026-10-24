@@ -39,6 +39,9 @@ techniques and stories are original fan-game adaptations.
   and changing reduced motion refreshes even a stationary final frame.
 - **Replay compatibility through 0.7**: releases 0.5, 0.6 and 0.7 share simulation
   rules 0.5. Earlier replay rules remain supported.
+- **Gloink Queen's original appearance** now shares the existing isolated RGBA
+  artwork with her refined costume. The opaque rectangle is removed from combat,
+  portraits and the gallery; fighter identity and collision dimensions stay intact.
 - **Reproducible CI evidence and delivery**: Node/Chromium verification, gallery
   contact sheets, an updated tracker and a standalone ZIP from the verified runtime.
 
@@ -133,8 +136,8 @@ transfer the profile; CainOS and the standalone share storage on the same origin
 ### Offline installation
 
 On HTTPS or localhost, choose **Réglages → Télécharger le spectacle** and wait for
-**45/45 illustrations**. The pack is **54,085,802 bytes**, with art version
-**`4ca4a56c5bace07b`**. The exact 0.7 code build identity is generated in
+**44/44 illustrations**. The pack is **52,167,739 bytes**, with art version
+**`05a3fc712a39e1d8`**. The exact 0.7 code build identity is generated in
 [offline-manifest.mjs](combat/offline-manifest.mjs). Use the installed shortcut or
 `/combat/index.html?standalone=1` for later offline visits.
 
@@ -165,8 +168,25 @@ The versioned [0.7 evidence](docs/combat-qa-evidence-0.7.0.json) records the tes
 commit, actual Node/Chromium results and runtime hashes. The tracker is authored
 and checked in the primary spreadsheet runtime. CI packages the standalone only
 when that reviewed tracker matches the current game and test hashes; it never
-rewrites the workbook. The following older totals describe the
-historical 0.6 campaign, not additional fresh 0.7 test results.
+rewrites the workbook.
+
+The final 0.7 campaign passed **313 Node tests in 22 suites** and **238 Chromium
+checks in 14 suites**, on source commit
+`1073ce21525c771f598b56d7452eaeceb2ed9178`. Game and test files stayed unchanged
+during execution. Browser coverage includes 100 ending/gallery checks, 22 audio
+checks, 28 keyboard/accessibility checks, four input regressions and fourteen
+complete roster duels. These are parts of the 238-check total, not extra tests.
+
+The current tracker has **10 sheets, 9 native tables, 102 features, 683 production
+tasks, 85 scenarios and 1,003 QA rows**. Its 551 current automated cases remain
+separate from 452 retained historical/review rows. The combined QA statuses are
+999 passed, zero failed, three not executed and one awaiting verification.
+All **39 formulas** were recalculated and checked. A separate sorted workbook
+fixture preserved ten notes across eight sheets, including two relative formulas,
+zero, false, literal `=` text and a custom row height; fixture notes are not shipped.
+
+The following older totals describe the historical 0.6 campaign, not additional
+fresh 0.7 test results.
 
 The 0.6.0 evidence records **260 passing Node tests in 17 suites** and
 **154 passing Chromium checks in 18 suites**. All fourteen pre-existing
@@ -185,16 +205,16 @@ change. The five image sheets and all other costume identity records are unchang
 The historical 0.6 tracker contained **10 sheets, 9 tables, 101 features, 632 production tasks,
 85 scenarios and 452 QA rows**. Its QA section included the 260 Node cases,
 154 browser checks and 38 review objectives; overlapping objectives are not
-additional independent tests. Current statuses are **447 passed,
+additional independent tests. Its historical statuses were **447 passed,
 1 awaiting verification and 4 not executed**. Canonical comparison and physical
 device checks remain visible.
 
-Workbook publication prepares all three outputs and all prior-content backups
+Workbook publication prepares all four current outputs and all prior-content backups
 before replacement. On a caught publication error, it restores each old file or
 its prior absence. Failed restoration retains recovery files and a lock rather
 than deleting the backups. Eleven filesystem tests cover fault injection and
 rollback. Notes survive by sheet and ID after sorting, including formula notes,
-literal `=`, zero and false. Publication is not a simultaneous three-file atomic
+literal `=`, zero and false. Publication is not a simultaneous multi-file atomic
 read or a guaranteed sudden-crash recovery. See
 [COMBAT_WORKBOOK_PUBLICATION.md](docs/COMBAT_WORKBOOK_PUBLICATION.md).
 
