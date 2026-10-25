@@ -16,12 +16,23 @@ export class InputController {
     this.padSlots=[null,null]; this.lastPollMode='menu'; this.menuNeedsNeutral=false; this.menuDirection=null; this.menuNextAt=0;
     this.refreshBindings();
     document.addEventListener('keydown', e => {
-      if (editing(e.target) || e.metaKey || e.altKey || (e.ctrlKey && !['ControlLeft','ControlRight'].includes(e.code))) return;
+      if (editing(e.target) || e.metaKey || e.altKey) return;
       this.refreshBindings();
+      // Ctrl can itself be an authored gameplay key (J2's default dash). When
+      // its initial press was consumed by the game, other mapped keys remain
+      // usable for both players. Uncaptured Ctrl chords stay browser shortcuts.
+      const controlCodes = ['ControlLeft','ControlRight'];
+      if (e.ctrlKey && !controlCodes.includes(e.code) && !controlCodes.some(code => this.keys.has(code))) return;
       if (e.code === 'Escape' && !e.repeat && this.enabled()) { e.preventDefault(); this.onPause(); return; }
       if (e.code === 'F1' && !e.repeat && this.enabled()) { e.preventDefault(); this.onHelp(); return; }
+      const activationControl = e.target?.closest?.('button,a[href],summary');
+      if (['Space','Enter','NumpadEnter'].includes(e.code) && activationControl && !activationControl.hasAttribute('data-control')) return;
       if (!this.enabled() || !this.consumedKeys.has(e.code)) return;
       e.preventDefault();
+      // Held keys already live in `keys`. A repeat must never resurrect an
+      // input cleared by pause, focus loss or a binding change: only a fresh
+      // physical press can start another attack or movement after that reset.
+      if (e.repeat) return;
       if (!this.keys.has(e.code)) this.tapped.add(e.code);
       this.keys.add(e.code);
     });

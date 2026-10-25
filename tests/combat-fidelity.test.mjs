@@ -8,6 +8,7 @@ import {
   getFighterFidelity, getMoveFidelity, getStageFidelity, getFidelitySources,
 } from '../combat/fidelity.mjs';
 import { COSTUME_FIDELITY, getCostumeFidelity } from '../combat/costume-fidelity.mjs';
+import { COSTUME_REFINEMENTS, REFINED_COSTUME_IDS } from '../combat/costume-refinements.mjs';
 
 test('all playable fighters, techniques and stages expose the shared review records', () => {
   assert.deepEqual(Object.keys(FIGHTER_FIDELITY).sort(), FIGHTERS.map(f => f.id).sort());
@@ -29,7 +30,12 @@ test('review records keep source scope, observations and invented combat separat
   for (const source of FIDELITY_SOURCES) {
     const url = new URL(source.url);
     assert.equal(url.protocol, 'https:');
-    assert.ok(['www.glitchprod.com', 'static.wixstatic.com', 'www.youtube.com', 'glitchproductions.store', 'www.comicsbeat.com'].includes(url.hostname));
+    assert.ok(['www.glitchprod.com', 'static.wixstatic.com', 'www.youtube.com', 'glitchproductions.store', 'www.comicsbeat.com', 'occ-0-3012-114.1.nflxso.net', 'static.wikia.nocookie.net', 'pbs.twimg.com'].includes(url.hostname));
+    if (['static.wikia.nocookie.net', 'pbs.twimg.com'].includes(url.hostname)) {
+      assert.equal(source.kind, 'Copie sur un hébergement tiers');
+      assert.match(source.scope, /tiers|republiée/);
+      assert.match(source.scope, /pas vérifiée directement|sans mesure ni comparaison directe/);
+    }
     assert.ok(source.title && source.kind && source.scope);
     assert.ok(SOURCES.includes(source));
   }
@@ -76,7 +82,10 @@ test('the Void, cellar and resident corridor cannot borrow an unrelated visual a
   assert.ok(!STAGE_FIDELITY.void.sourceIds.includes('glitch-false-exit'));
   assert.ok(STAGE_FIDELITY.cellar.sourceIds.includes('glitch-cellar'));
   assert.ok(!STAGE_FIDELITY.backstage.sourceIds.includes('glitch-false-exit'));
-  assert.deepEqual(STAGE_FIDELITY.backstage.observedTraits, []);
+  assert.equal(STAGE_FIDELITY.backstage.observedTraits.length, 3);
+  assert.match(STAGE_FIDELITY.backstage.reviewStatus, /copies du pilote à confirmer/);
+  assert.match(STAGE_FIDELITY.backstage.reviewScope, /Aucune frame directe ni aucun horodatage canonique/);
+  assert.equal(getFidelitySources(STAGE_FIDELITY.backstage.sourceIds).filter(source => source.kind === 'Copie sur un hébergement tiers').length, 2);
   assert.match(STAGES.find(s => s.id === 'cellar').description, /yeux multicolores/);
   assert.match(STAGES.find(s => s.id === 'void').description, /blanc et irisé/);
 });
@@ -106,23 +115,57 @@ test('all 51 costumes have an individual technical review independent of canonic
     assert.ok(item.combatAdaptation.includes('mêmes dix techniques'), id);
     assert.ok(item.reviewStatus && item.reviewScope.length > 30, id);
     const review = item.assetReview;
-    assert.ok(review.status.startsWith('Revue technique effectuée'), id);
+    assert.match(review.status, /^Revue technique (?:0\.6\.0 )?effectuée/, id);
     assert.ok(review.visibleTraits.length >= 2 && review.visibleTraits.every(t => t.length > 15), id);
     for (const field of ['identityEvidence', 'framing', 'transparency', 'proportions']) assert.ok(review[field].length > 35, `${id}:${field}`);
     assert.ok(Array.isArray(review.issues), id);
-    assert.match(review.captureId, new RegExp(`^costumes-0\\.4\\.0-page-[1-5]#${id}$`));
+    assert.match(review.captureId, new RegExp(`^costumes-(?:0\\.4\\.0-page-[1-5]|0\\.6\\.0)#${id}$`));
     if (item.observedTraits.length) {
       assert.ok(item.sourceIds.length > 0, `${id}: no unsupported canonical observations`);
-      assert.equal(item.reviewStatus, 'Comparaison partielle — écarts ou limites');
+      assert.ok(item.reviewStatus.startsWith('Comparaison partielle —'), id);
     } else assert.ok(['Épisode à revoir', 'Référence de costume à identifier'].includes(item.reviewStatus));
   }
   assert.equal(Object.values(COSTUME_FIDELITY).filter(v => v.observedTraits.length).length, 7);
-  assert.match(COSTUME_FIDELITY.gangletragedy.reviewScope, /fissure/);
+  assert.match(COSTUME_FIDELITY.gangletragedy.reviewScope, /masque triste entier/);
   assert.match(COSTUME_FIDELITY.maidjax.reviewScope, /cœur violet/);
-  assert.match(COSTUME_FIDELITY.workgangle.reviewScope, /cravate noire/);
+  assert.match(COSTUME_FIDELITY.workgangle.reviewScope, /cravate pâle/);
   assert.match(COSTUME_FIDELITY.gloinkqueenscale.assetReview.issues.join(' '), /True Scale/);
   assert.match(COSTUME_FIDELITY.groundedcaine.assetReview.identityEvidence, /ne démontre pas une perte de pouvoirs/);
   assert.deepEqual(COSTUME_FIDELITY.inertbubble.observedTraits, []);
+});
+
+test('twenty presentation replacements keep their archive identity and do not invent canonical approval', () => {
+  assert.equal(REFINED_COSTUME_IDS.length, 20);
+  for (const id of REFINED_COSTUME_IDS) {
+    const variant = VARIANTS.find(item => item.id === id);
+    const refinement = COSTUME_REFINEMENTS[id];
+    assert.ok(variant && variant.baseFighterId && variant.category === 'variant', id);
+    assert.deepEqual(variant.sprite, { ...variant.sprite, ...refinement.sprite }, id);
+    assert.equal(variant.sprite.matteMode, 'native-alpha');
+    assert.ok(variant.fidelity.assetReview.resolvedIssues.length, id);
+    assert.equal(variant.fidelity.assetReview.captureId, `costumes-0.6.0#${id}`);
+    assert.ok(!/certifi[ée]e? conforme|fidélité totale|100\s*%|1:1/.test(variant.fidelity.reviewStatus));
+    assert.equal(variant.sprite.paletteSwap, undefined, id);
+  }
+  assert.throws(() => COSTUME_REFINEMENTS.maidjax.sprite.sourceRect.width = 1, TypeError);
+});
+
+test('transparent repairs retain technical limits separately from observed canonical details', () => {
+  const canonCompared = REFINED_COSTUME_IDS.filter(id => COSTUME_FIDELITY[id].observedTraits.length);
+  assert.equal(canonCompared.length, 6);
+  for (const id of REFINED_COSTUME_IDS.filter(id => !canonCompared.includes(id))) {
+    assert.deepEqual(COSTUME_FIDELITY[id].observedTraits, [], id);
+    assert.ok(!COSTUME_FIDELITY[id].reviewStatus.startsWith('Comparaison partielle'), id);
+  }
+  assert.match(COSTUME_FIDELITY.inertbubble.assetReview.transparency, /Alpha natif partiel/);
+  assert.match(COSTUME_FIDELITY.gloinkqueenscale.assetReview.issues.join(' '), /ne constitue toujours pas une mesure canonique/);
+  assert.equal(VARIANTS.find(item => item.id === 'gloinkqueenscale').sprite.component, 'largest');
+  assert.equal(VARIANTS.find(item => item.id === 'gloinkqueenscale').sprite.nativeFacing, -1);
+  const queen = getFighter('gloinkqueen');
+  assert.equal(queen.id, 'gloinkqueen');
+  assert.deepEqual(queen.sprite, VARIANTS.find(item => item.id === 'gloinkqueenscale').sprite, 'The original Queen also uses the isolated native-alpha artwork');
+  assert.deepEqual(queen.visual, { width: 420, height: 150, profile: 'giant' });
+  assert.deepEqual(queen.combat.simulationBody, { width: 420, height: 150, crouchHeight: 80 });
 });
 
 test('consulted references identify their exact scope rather than certifying poses or merchandise proportions', () => {

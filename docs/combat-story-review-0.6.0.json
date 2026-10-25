@@ -1,0 +1,3631 @@
+{
+  "schema": "encore-story-review",
+  "version": "0.6.0",
+  "createdAt": "2026-10-23T14:46:08.210Z",
+  "status": "Contrôles techniques réussis ; scènes originales de fan-game, fidélité canonique intégrale non certifiée",
+  "notice": "Scénarios originaux pour Encore · adaptation de fan-game",
+  "referenceScope": "Références officielles de personnages et de lieux. Les scènes et les répliques ci-dessous sont des créations pour Encore ; elles ne transcrivent pas les épisodes.",
+  "scope": {
+    "routes": 14,
+    "prologueTableaux": 42,
+    "epilogueTableaux": 42,
+    "newStoryTableaux": 84,
+    "preservedChapterBriefings": 56,
+    "totalReadingTableaux": 140,
+    "chaptersPerRoute": 4,
+    "newBitmapIllustrations": 0,
+    "composition": "Panneaux DOM statiques assemblant les décors de CombatRenderer et les portraits des atlases existants avec drawPortrait. Chaque route dispose de six compositions distinctes."
+  },
+  "sourceFiles": [
+    "combat/stories.mjs",
+    "combat/story-presentation.mjs",
+    "combat/app.mjs",
+    "combat/style.css"
+  ],
+  "safeguards": [
+    "Les adversaires, les décors de combat, les quatre résultats requis, les points de reprise et les récompenses sont conservés.",
+    "Les paroles attribuées aux personnages sont écrites pour Encore et ne sont pas des citations d’épisodes.",
+    "Le Baron reste une silhouette d’archive muette et distincte de Martha ; aucune voix ou conclusion canonique nouvelle ne lui est attribuée.",
+    "La forme abstraite de Kaufmo reste une construction d’archive non verbale, sans guérison, retour ou révélation.",
+    "La présence de Gummigoo dans cette route est explicitement une simulation de fan-game."
+  ],
+  "references": {
+    "series": {
+      "title": "GLITCH · Présentation officielle de The Amazing Digital Circus",
+      "url": "https://www.glitchprod.com/digital-circus"
+    },
+    "pilot": {
+      "title": "GLITCH · Épisode pilote",
+      "url": "https://www.youtube.com/watch?v=HwAPLk_sQ3w"
+    },
+    "candy": {
+      "title": "GLITCH · Épisode 2 — Candy Carrier Chaos!",
+      "url": "https://www.youtube.com/watch?v=4ofJpOEXrZs"
+    },
+    "manor": {
+      "title": "GLITCH · Épisode 3 — The Mystery of Mildenhall Manor",
+      "url": "https://www.youtube.com/watch?v=bKjfw77cxeQ"
+    },
+    "spudsy": {
+      "title": "GLITCH · Épisode 4 — Fast Food Masquerade",
+      "url": "https://www.youtube.com/watch?v=Q9KWcWKo2T8"
+    },
+    "jax": {
+      "title": "GLITCH Store · Jax",
+      "url": "https://glitchproductions.store/products/jax-plush"
+    },
+    "gangle": {
+      "title": "GLITCH Store · Gangle",
+      "url": "https://glitchproductions.store/products/gangle-plush"
+    },
+    "zooble": {
+      "title": "GLITCH Store · Zooble",
+      "url": "https://glitchproductions.store/products/zooble-plush"
+    },
+    "kinger": {
+      "title": "GLITCH Store · Kinger",
+      "url": "https://glitchproductions.store/products/kinger-pillow-plush"
+    },
+    "gummigoo": {
+      "title": "GLITCH Store · Gummigoo",
+      "url": "https://glitchproductions.store/products/gummigoo-plush"
+    },
+    "gloinks": {
+      "title": "GLITCH Store · Gloink Queen",
+      "url": "https://glitchproductions.store/es/products/gloink-queen-plush"
+    }
+  },
+  "routes": [
+    {
+      "id": "pomni",
+      "title": "Une sortie à sa mesure",
+      "writingApproach": "Questions brèves et méfiance devant les promesses de sortie ; le choix final reste modeste. La scène avec Gummigoo est une simulation.",
+      "referenceIds": [
+        "series",
+        "pilot",
+        "candy"
+      ],
+      "prologue": [
+        "pomni-prologue-1",
+        "pomni-prologue-2",
+        "pomni-prologue-3"
+      ],
+      "chapters": [
+        {
+          "id": "pomni-chapter-1",
+          "title": "Le premier pas",
+          "opponent": "ragatha",
+          "stage": "bigtop"
+        },
+        {
+          "id": "pomni-chapter-2",
+          "title": "La clef de Jax",
+          "opponent": "jax",
+          "stage": "backstage"
+        },
+        {
+          "id": "pomni-chapter-3",
+          "title": "Le détour sucré",
+          "opponent": "gummigoo",
+          "stage": "candy"
+        },
+        {
+          "id": "pomni-chapter-4",
+          "title": "La porte du prix",
+          "opponent": "caine",
+          "stage": "training"
+        }
+      ],
+      "epilogue": [
+        "pomni-epilogue-1",
+        "pomni-epilogue-2",
+        "pomni-epilogue-3"
+      ]
+    },
+    {
+      "id": "jax",
+      "title": "Le gag de trop",
+      "writingApproach": "Moquerie sèche et mauvaise foi ; cette farce ne constitue pas une rédemption ni une explication de son passé.",
+      "referenceIds": [
+        "pilot",
+        "spudsy",
+        "jax"
+      ],
+      "prologue": [
+        "jax-prologue-1",
+        "jax-prologue-2",
+        "jax-prologue-3"
+      ],
+      "chapters": [
+        {
+          "id": "jax-chapter-1",
+          "title": "Le masque rend les coups",
+          "opponent": "gangle",
+          "stage": "spudsy"
+        },
+        {
+          "id": "jax-chapter-2",
+          "title": "Pièces rapportées",
+          "opponent": "zooble",
+          "stage": "grounds"
+        },
+        {
+          "id": "jax-chapter-3",
+          "title": "La plaisanterie tombe à plat",
+          "opponent": "ragatha",
+          "stage": "backstage"
+        },
+        {
+          "id": "jax-chapter-4",
+          "title": "Qui annonce le final ?",
+          "opponent": "caine",
+          "stage": "bigtop"
+        }
+      ],
+      "epilogue": [
+        "jax-epilogue-1",
+        "jax-epilogue-2",
+        "jax-epilogue-3"
+      ]
+    },
+    {
+      "id": "ragatha",
+      "title": "Le fil du spectacle",
+      "writingApproach": "Politesse rassurante, effort pour tenir le groupe et fatigue exprimée sans lui prêter un rôle de thérapeute.",
+      "referenceIds": [
+        "series",
+        "pilot"
+      ],
+      "prologue": [
+        "ragatha-prologue-1",
+        "ragatha-prologue-2",
+        "ragatha-prologue-3"
+      ],
+      "chapters": [
+        {
+          "id": "ragatha-chapter-1",
+          "title": "Une répétition ensemble",
+          "opponent": "pomni",
+          "stage": "bigtop"
+        },
+        {
+          "id": "ragatha-chapter-2",
+          "title": "L’accessoire manquant",
+          "opponent": "bubble",
+          "stage": "lake"
+        },
+        {
+          "id": "ragatha-chapter-3",
+          "title": "Les petites mains",
+          "opponent": "gloinkqueen",
+          "stage": "gloink"
+        },
+        {
+          "id": "ragatha-chapter-4",
+          "title": "Le droit de souffler",
+          "opponent": "zooble",
+          "stage": "grounds"
+        }
+      ],
+      "epilogue": [
+        "ragatha-epilogue-1",
+        "ragatha-epilogue-2",
+        "ragatha-epilogue-3"
+      ]
+    },
+    {
+      "id": "gangle",
+      "title": "Derrière le masque",
+      "writingApproach": "Sensibilité du masque et hésitation dans la parole, puis décisions concrètes sur son dessin ; le sourire ne résout pas ses émotions.",
+      "referenceIds": [
+        "pilot",
+        "spudsy",
+        "gangle"
+      ],
+      "prologue": [
+        "gangle-prologue-1",
+        "gangle-prologue-2",
+        "gangle-prologue-3"
+      ],
+      "chapters": [
+        {
+          "id": "gangle-chapter-1",
+          "title": "Le cadre du dessin",
+          "opponent": "ragatha",
+          "stage": "backstage"
+        },
+        {
+          "id": "gangle-chapter-2",
+          "title": "Un rôle sans étiquette",
+          "opponent": "zooble",
+          "stage": "training"
+        },
+        {
+          "id": "gangle-chapter-3",
+          "title": "Le critique au premier rang",
+          "opponent": "jax",
+          "stage": "spudsy"
+        },
+        {
+          "id": "gangle-chapter-4",
+          "title": "Le carnet ouvert",
+          "opponent": "caine",
+          "stage": "bigtop"
+        }
+      ],
+      "epilogue": [
+        "gangle-epilogue-1",
+        "gangle-epilogue-2",
+        "gangle-epilogue-3"
+      ]
+    },
+    {
+      "id": "zooble",
+      "title": "À prendre ou à laisser",
+      "writingApproach": "Réponses directes et choix de ses propres pièces ; aucune identité ni solution définitive n’est imposée par le récit.",
+      "referenceIds": [
+        "pilot",
+        "manor",
+        "zooble"
+      ],
+      "prologue": [
+        "zooble-prologue-1",
+        "zooble-prologue-2",
+        "zooble-prologue-3"
+      ],
+      "chapters": [
+        {
+          "id": "zooble-chapter-1",
+          "title": "Essai de stabilité",
+          "opponent": "bubble",
+          "stage": "lake"
+        },
+        {
+          "id": "zooble-chapter-2",
+          "title": "Une forme pour chaque problème",
+          "opponent": "kinger",
+          "stage": "grounds"
+        },
+        {
+          "id": "zooble-chapter-3",
+          "title": "Le costume obligatoire",
+          "opponent": "jax",
+          "stage": "spudsy"
+        },
+        {
+          "id": "zooble-chapter-4",
+          "title": "Le choix reste ouvert",
+          "opponent": "caine",
+          "stage": "training"
+        }
+      ],
+      "epilogue": [
+        "zooble-epilogue-1",
+        "zooble-epilogue-2",
+        "zooble-epilogue-3"
+      ]
+    },
+    {
+      "id": "kinger",
+      "title": "La ronde des petites lumières",
+      "writingApproach": "Distractions et instants de calme ; la sollicitude n’est pas une révélation nouvelle sur sa mémoire ou son passé.",
+      "referenceIds": [
+        "pilot",
+        "manor",
+        "kinger"
+      ],
+      "prologue": [
+        "kinger-prologue-1",
+        "kinger-prologue-2",
+        "kinger-prologue-3"
+      ],
+      "chapters": [
+        {
+          "id": "kinger-chapter-1",
+          "title": "Une lampe pour commencer",
+          "opponent": "pomni",
+          "stage": "cellar"
+        },
+        {
+          "id": "kinger-chapter-2",
+          "title": "Le couloir qui grince",
+          "opponent": "baronmildenhall",
+          "stage": "manor"
+        },
+        {
+          "id": "kinger-chapter-3",
+          "title": "La boîte aux rubans",
+          "opponent": "gangle",
+          "stage": "backstage"
+        },
+        {
+          "id": "kinger-chapter-4",
+          "title": "La dernière veilleuse",
+          "opponent": "caine",
+          "stage": "bigtop"
+        }
+      ],
+      "epilogue": [
+        "kinger-epilogue-1",
+        "kinger-epilogue-2",
+        "kinger-epilogue-3"
+      ]
+    },
+    {
+      "id": "caine",
+      "title": "L’imprévu au programme",
+      "writingApproach": "Grandiloquence de présentateur et réponses littérales ; l’écoute imparfaite ne prouve pas une conscience humaine ni une intention cachée.",
+      "referenceIds": [
+        "series",
+        "pilot",
+        "manor"
+      ],
+      "prologue": [
+        "caine-prologue-1",
+        "caine-prologue-2",
+        "caine-prologue-3"
+      ],
+      "chapters": [
+        {
+          "id": "caine-chapter-1",
+          "title": "Sans accessoire supplémentaire",
+          "opponent": "bubble",
+          "stage": "lake"
+        },
+        {
+          "id": "caine-chapter-2",
+          "title": "La règle change",
+          "opponent": "zooble",
+          "stage": "training"
+        },
+        {
+          "id": "caine-chapter-3",
+          "title": "Un rire sans piège",
+          "opponent": "jax",
+          "stage": "grounds"
+        },
+        {
+          "id": "caine-chapter-4",
+          "title": "La question après le salut",
+          "opponent": "pomni",
+          "stage": "bigtop"
+        }
+      ],
+      "epilogue": [
+        "caine-epilogue-1",
+        "caine-epilogue-2",
+        "caine-epilogue-3"
+      ]
+    },
+    {
+      "id": "bubble",
+      "title": "Service impeccable",
+      "writingApproach": "Raisonnements absurdes et interprétation littérale des tâches ; aucune explication supplémentaire de sa nature.",
+      "referenceIds": [
+        "pilot",
+        "candy"
+      ],
+      "prologue": [
+        "bubble-prologue-1",
+        "bubble-prologue-2",
+        "bubble-prologue-3"
+      ],
+      "chapters": [
+        {
+          "id": "bubble-chapter-1",
+          "title": "Un lac bien rangé",
+          "opponent": "zooble",
+          "stage": "lake"
+        },
+        {
+          "id": "bubble-chapter-2",
+          "title": "La bonne nappe",
+          "opponent": "loolilalu",
+          "stage": "kingdom"
+        },
+        {
+          "id": "bubble-chapter-3",
+          "title": "Un client très gourmand",
+          "opponent": "fudge",
+          "stage": "candy"
+        },
+        {
+          "id": "bubble-chapter-4",
+          "title": "Le contrôle du maître de piste",
+          "opponent": "caine",
+          "stage": "bigtop"
+        }
+      ],
+      "epilogue": [
+        "bubble-epilogue-1",
+        "bubble-epilogue-2",
+        "bubble-epilogue-3"
+      ]
+    },
+    {
+      "id": "gummigoo",
+      "title": "Une route à partager",
+      "writingApproach": "Franchise pratique et solidarité du convoi. Le personnage jouable et ces scènes sont des simulations d’Encore, sans retour canonique annoncé.",
+      "referenceIds": [
+        "candy",
+        "gummigoo"
+      ],
+      "prologue": [
+        "gummigoo-prologue-1",
+        "gummigoo-prologue-2",
+        "gummigoo-prologue-3"
+      ],
+      "chapters": [
+        {
+          "id": "gummigoo-chapter-1",
+          "title": "Le poste du palais",
+          "opponent": "loolilalu",
+          "stage": "kingdom"
+        },
+        {
+          "id": "gummigoo-chapter-2",
+          "title": "La piste encombrée",
+          "opponent": "fudge",
+          "stage": "candy"
+        },
+        {
+          "id": "gummigoo-chapter-3",
+          "title": "Le relais",
+          "opponent": "pomni",
+          "stage": "grounds"
+        },
+        {
+          "id": "gummigoo-chapter-4",
+          "title": "La destination choisie",
+          "opponent": "caine",
+          "stage": "training"
+        }
+      ],
+      "epilogue": [
+        "gummigoo-epilogue-1",
+        "gummigoo-epilogue-2",
+        "gummigoo-epilogue-3"
+      ]
+    },
+    {
+      "id": "loolilalu",
+      "title": "La fête des quatre passages",
+      "writingApproach": "Courtoisie royale et consignes fermes. Cette réception inventée ne modifie pas l’histoire du royaume dans la série.",
+      "referenceIds": [
+        "candy"
+      ],
+      "prologue": [
+        "loolilalu-prologue-1",
+        "loolilalu-prologue-2",
+        "loolilalu-prologue-3"
+      ],
+      "chapters": [
+        {
+          "id": "loolilalu-chapter-1",
+          "title": "Le cortège",
+          "opponent": "gummigoo",
+          "stage": "kingdom"
+        },
+        {
+          "id": "loolilalu-chapter-2",
+          "title": "La grande faim",
+          "opponent": "fudge",
+          "stage": "candy"
+        },
+        {
+          "id": "loolilalu-chapter-3",
+          "title": "Des décorations itinérantes",
+          "opponent": "gloinkqueen",
+          "stage": "gloink"
+        },
+        {
+          "id": "loolilalu-chapter-4",
+          "title": "L’invité qui improvise",
+          "opponent": "jax",
+          "stage": "bigtop"
+        }
+      ],
+      "epilogue": [
+        "loolilalu-epilogue-1",
+        "loolilalu-epilogue-2",
+        "loolilalu-epilogue-3"
+      ]
+    },
+    {
+      "id": "gloinkqueen",
+      "title": "Le trésor du nid",
+      "writingApproach": "Possession proclamée et priorité donnée au nid ; un échange ponctuel de fan-game ne transforme pas la reine en gardienne du cirque.",
+      "referenceIds": [
+        "pilot",
+        "gloinks"
+      ],
+      "prologue": [
+        "gloinkqueen-prologue-1",
+        "gloinkqueen-prologue-2",
+        "gloinkqueen-prologue-3"
+      ],
+      "chapters": [
+        {
+          "id": "gloinkqueen-chapter-1",
+          "title": "Un objet qui bouge",
+          "opponent": "bubble",
+          "stage": "gloink"
+        },
+        {
+          "id": "gloinkqueen-chapter-2",
+          "title": "Le ruban de la piste",
+          "opponent": "ragatha",
+          "stage": "grounds"
+        },
+        {
+          "id": "gloinkqueen-chapter-3",
+          "title": "La pièce qui se défend",
+          "opponent": "zooble",
+          "stage": "training"
+        },
+        {
+          "id": "gloinkqueen-chapter-4",
+          "title": "Un trésor à transporter",
+          "opponent": "caine",
+          "stage": "bigtop"
+        }
+      ],
+      "epilogue": [
+        "gloinkqueen-epilogue-1",
+        "gloinkqueen-epilogue-2",
+        "gloinkqueen-epilogue-3"
+      ]
+    },
+    {
+      "id": "fudge",
+      "title": "Une place au banquet",
+      "writingApproach": "Appétit démesuré, menace désinvolte et négociation intéressée ; le banquet est une aventure originale et ne le rend pas inoffensif.",
+      "referenceIds": [
+        "candy"
+      ],
+      "prologue": [
+        "fudge-prologue-1",
+        "fudge-prologue-2",
+        "fudge-prologue-3"
+      ],
+      "chapters": [
+        {
+          "id": "fudge-chapter-1",
+          "title": "Le chariot léger",
+          "opponent": "gummigoo",
+          "stage": "candy"
+        },
+        {
+          "id": "fudge-chapter-2",
+          "title": "La nappe royale",
+          "opponent": "loolilalu",
+          "stage": "kingdom"
+        },
+        {
+          "id": "fudge-chapter-3",
+          "title": "La vaisselle disparue",
+          "opponent": "bubble",
+          "stage": "lake"
+        },
+        {
+          "id": "fudge-chapter-4",
+          "title": "Le dessert du final",
+          "opponent": "caine",
+          "stage": "bigtop"
+        }
+      ],
+      "epilogue": [
+        "fudge-epilogue-1",
+        "fudge-epilogue-2",
+        "fudge-epilogue-3"
+      ]
+    },
+    {
+      "id": "abstractedkaufmo",
+      "title": "L’écho sous le rideau",
+      "writingApproach": "Construction d’archive non verbale. Aucun accès aux pensées de Kaufmo, aucune guérison, aucun retour et aucune révélation sur son destin.",
+      "referenceIds": [
+        "pilot"
+      ],
+      "prologue": [
+        "abstractedkaufmo-prologue-1",
+        "abstractedkaufmo-prologue-2",
+        "abstractedkaufmo-prologue-3"
+      ],
+      "chapters": [
+        {
+          "id": "abstractedkaufmo-chapter-1",
+          "title": "La répétition interrompue",
+          "opponent": "ragatha",
+          "stage": "backstage"
+        },
+        {
+          "id": "abstractedkaufmo-chapter-2",
+          "title": "Des repères dans le noir",
+          "opponent": "kinger",
+          "stage": "cellar"
+        },
+        {
+          "id": "abstractedkaufmo-chapter-3",
+          "title": "Un ruban pour la sortie",
+          "opponent": "pomni",
+          "stage": "void"
+        },
+        {
+          "id": "abstractedkaufmo-chapter-4",
+          "title": "La fermeture du tableau",
+          "opponent": "caine",
+          "stage": "training"
+        }
+      ],
+      "epilogue": [
+        "abstractedkaufmo-epilogue-1",
+        "abstractedkaufmo-epilogue-2",
+        "abstractedkaufmo-epilogue-3"
+      ]
+    },
+    {
+      "id": "baronmildenhall",
+      "title": "Le dernier invité du manoir",
+      "writingApproach": "Silhouette d’archive du Baron, distincte de Martha. Aucune nouvelle réplique, imitation de voix, mémoire révélée ou résurrection ne lui est attribuée.",
+      "referenceIds": [
+        "manor"
+      ],
+      "prologue": [
+        "baronmildenhall-prologue-1",
+        "baronmildenhall-prologue-2",
+        "baronmildenhall-prologue-3"
+      ],
+      "chapters": [
+        {
+          "id": "baronmildenhall-chapter-1",
+          "title": "Une lumière de travers",
+          "opponent": "kinger",
+          "stage": "manor"
+        },
+        {
+          "id": "baronmildenhall-chapter-2",
+          "title": "Le pas hésitant",
+          "opponent": "pomni",
+          "stage": "cellar"
+        },
+        {
+          "id": "baronmildenhall-chapter-3",
+          "title": "Le visiteur bruyant",
+          "opponent": "jax",
+          "stage": "backstage"
+        },
+        {
+          "id": "baronmildenhall-chapter-4",
+          "title": "Le propriétaire du décor",
+          "opponent": "caine",
+          "stage": "bigtop"
+        }
+      ],
+      "epilogue": [
+        "baronmildenhall-epilogue-1",
+        "baronmildenhall-epilogue-2",
+        "baronmildenhall-epilogue-3"
+      ]
+    }
+  ],
+  "browserVerification": {
+    "command": "PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/tmp/chromium COMBAT_TEST_URL=http://127.0.0.1:4178 node tests/combat-story-presentation-browser.mjs",
+    "exitCode": 0,
+    "startedAt": "2026-10-23T14:35:35.388Z",
+    "completedAt": "2026-10-23T14:37:38.781Z",
+    "passedChecks": 11,
+    "failedChecks": 0,
+    "errors": [],
+    "checks": [
+      {
+        "name": "Fourteen prologues expose 42 authored tableaux with loaded scenery and portraits",
+        "detail": "The public selection reader traverses every scene and returns focus to its launch button without changing the profile.",
+        "pass": true
+      },
+      {
+        "name": "Unfinished routes keep their ending reader locked",
+        "detail": "A fresh profile cannot open the ending gallery; reading a prologue does not unlock it.",
+        "pass": true
+      },
+      {
+        "name": "Fourteen epilogues expose 42 authored tableaux without new rewards",
+        "detail": "An explicit gallery fixture is imported through the profile UI; its zero match count stays unchanged throughout all 14 ending readings.",
+        "pass": true
+      },
+      {
+        "name": "Actual scene pixels distinguish every route and each route’s six tableaux",
+        "detail": "84 saved viewport captures; 14 unique openings, 14 unique ending openings, six visually different compositions within every route.",
+        "pass": true
+      },
+      {
+        "name": "Keyboard navigation, bounded back, Enter and Escape preserve focus",
+        "detail": "A silent Baron tableau advances and reverses with the arrows; Escape returns to the exact selection reader button.",
+        "pass": true
+      },
+      {
+        "name": "Mobile controls remain reachable without horizontal overflow or automatic motion",
+        "detail": "390×844 viewport, all reader buttons at least 44×44 CSS pixels; identical real scene pixels across 1.7 s with OS reduce and app setting off.",
+        "pass": true
+      },
+      {
+        "name": "Initial prologue stays paused and can be left, reloaded and skipped without losing the checkpoint",
+        "detail": "An explicitly unplayed seed fixture has zero results before and after; Skip opens the chapter briefing and never starts combat by itself.",
+        "pass": true
+      },
+      {
+        "name": "A genuinely earned first victory resumes directly at chapter 2",
+        "detail": "Jax beats Gangle through keyboard input; reload preserves one match, one win, the authored second encounter and no repeated prologue.",
+        "pass": true
+      },
+      {
+        "name": "Four real wins unlock the ending only after one persisted route reward",
+        "detail": "Gangle → Zooble → Ragatha → Caine; four matches and wins, one story medal, one unlocked Jax ending, no remaining checkpoint.",
+        "pass": true
+      },
+      {
+        "name": "Ending back, Escape, full replay, reload and library skip never duplicate an award",
+        "detail": "The actually earned profile remains byte-for-byte equivalent throughout every ending return path.",
+        "pass": true
+      },
+      {
+        "name": "Story presentation completes without JavaScript or missing-asset errors",
+        "detail": "All 84 gallery panels and the four earned matches use the normal app and original asset pipeline.",
+        "pass": true
+      }
+    ],
+    "playedDuels": [
+      {
+        "chapter": 1,
+        "opponent": "gangle",
+        "stage": "spudsy",
+        "won": true,
+        "frames": 1898,
+        "health": 8056
+      },
+      {
+        "chapter": 2,
+        "opponent": "zooble",
+        "stage": "grounds",
+        "won": true,
+        "frames": 1721,
+        "health": 6101
+      },
+      {
+        "chapter": 3,
+        "opponent": "ragatha",
+        "stage": "backstage",
+        "won": true,
+        "frames": 1378,
+        "health": 7897
+      },
+      {
+        "chapter": 4,
+        "opponent": "caine",
+        "stage": "bigtop",
+        "won": true,
+        "frames": 1373,
+        "health": 7161
+      }
+    ],
+    "sourceHashesBefore": {
+      "combat/app.mjs": "4195636c3e4c6c47299598bd30bb018f2e9b16d7a853031fdd63c98fd628bb8f",
+      "combat/style.css": "c56dcaf8e90e66ac9024a8f6d64f5973eafe7603557b1c3ff8368134bbea95ef",
+      "combat/stories.mjs": "190053639de11b83a1f1279174fb948afe1db28a2ccb8f4a453c1be10aa72aac",
+      "combat/story-presentation.mjs": "90306f54215c2f4045ff191496d3f9ed871e6982fe1bff06757514834d0cc7c8",
+      "combat/data.mjs": "914a168aedc5119a2a968a2205ce9d40758d8511f8faa4d672b5f54db899ecf7",
+      "combat/sprite-catalog.mjs": "41ad2ff416eef0d9426dd8ec17218a35b0c6a016a6dbf73e8e96a1f86d1a2172",
+      "combat/render.mjs": "2f203a5e1b3500ac526a6e7e33cfefa9800a4584969f44a9e384a240e21cdc21",
+      "combat/render-poses.mjs": "44a17b62cd7304f1a81b1454e4e8b902f8712d9b0a462f92b09626e8fe554268",
+      "combat/render-presentation.mjs": "370469edb54fe87cfa4f649984cf8c6dfb77419b018dbb1d8fedc432b9fe607e",
+      "combat/render-sequences.mjs": "1ce5fab94146618b77d46b7b16feb2af2b52eb912a992488fa5fd2e4e3b4b9af",
+      "combat/render-stage-motion.mjs": "e22d518a1245be13379a019159b4c8f24535e19a704508286d5b1ed38ced9b77",
+      "combat/render-stage-scenery.mjs": "52c298e861af7873b2f94ece106e0f708ebd5573d0f900f02c45c2cecd14c528",
+      "combat/session.mjs": "a7bb5d99b0a95747ce433662942fa51d96a94c53a75e5150338dffcd31375e36",
+      "combat/engine.mjs": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
+      "combat/input.mjs": "bd6e648180730a662fdb60ce91d93cb8b60d9ef88f01922059dd46808ad8170b",
+      "combat/bindings.mjs": "8352b4a92afb27a85220b21feb5b7f53b34a2c4eabfedff2f400259329988969",
+      "combat/progression.mjs": "a5a3d697b034146464d0c315a2a5dc5891557caf1a58ad1d8dd8551a5f585f15",
+      "tests/combat-story-presentation-browser.mjs": "70712d42b9a42f0c6ad5ff3b9666eab73ce9cf839a8b6e5ad5ab6e95164ef88a",
+      "assets/images/cainos-pixel-cast-sheet.png": "51bf903494f917c4a71f0aefc1701d4bf83d0424639ece40018ee5781ab93454",
+      "assets/images/cainos-pomni-animation-sheet.png": "00aebacbe4d9632191ef850473871b9ec6dff6f2c3114faac89a044631dc5d5e",
+      "assets/images/cainos-jax-animation-sheet-0.5.0.png": "7d40d013015ada908d34701173b5d071d559cc41432d295e4db549b624f996fb",
+      "assets/images/cainos-ragatha-animation-sheet.png": "742a8179287cfa651c94cff8eddba8d978854144a06baea121bd2dec3f3eda1f",
+      "assets/images/cainos-gangle-animation-sheet.png": "a4ebfeb8563cedae27dc96616bc691f11cb28fb392b96ab9a161aea75f63c40d",
+      "assets/images/cainos-zooble-animation-sheet.png": "1f95a2b99e24d478aa71a220eeea11b10b9657fd6433646b7ed8e77458bfec1b",
+      "assets/images/cainos-kinger-animation-sheet.png": "f7779d06ec6d44df7a26676578460d45a0960aed8abd86eb936339ad7e7ddb94",
+      "assets/images/cainos-caine-animation-sheet.png": "aa48f5453a4bc9280900df8e726f337d144da9321c45fbd5795de0f311cff5c5",
+      "assets/images/cainos-pixel-cast-sheet-gloink-queen-scale.png": "5d5a38f6266155063fe7bad5a3731a16f5b75e7259aad7dc601254cc1ee01e19",
+      "assets/images/cainos-pixel-cast-sheet-canon-npc-pack-k.png": "77ac3cf00b21f0f0a1347568a8435be6e679652899f2d5e88972ac32b0ff4697",
+      "assets/images/cainos-pixel-cast-sheet-canon-npc-pack-a.png": "dad5bdfe868f74c0e6ac9c7487ea3a24e7551ee9efcf002e6744fd1eba9825f7"
+    },
+    "sourceHashesAfter": {
+      "combat/app.mjs": "4195636c3e4c6c47299598bd30bb018f2e9b16d7a853031fdd63c98fd628bb8f",
+      "combat/style.css": "c56dcaf8e90e66ac9024a8f6d64f5973eafe7603557b1c3ff8368134bbea95ef",
+      "combat/stories.mjs": "190053639de11b83a1f1279174fb948afe1db28a2ccb8f4a453c1be10aa72aac",
+      "combat/story-presentation.mjs": "90306f54215c2f4045ff191496d3f9ed871e6982fe1bff06757514834d0cc7c8",
+      "combat/data.mjs": "914a168aedc5119a2a968a2205ce9d40758d8511f8faa4d672b5f54db899ecf7",
+      "combat/sprite-catalog.mjs": "41ad2ff416eef0d9426dd8ec17218a35b0c6a016a6dbf73e8e96a1f86d1a2172",
+      "combat/render.mjs": "2f203a5e1b3500ac526a6e7e33cfefa9800a4584969f44a9e384a240e21cdc21",
+      "combat/render-poses.mjs": "44a17b62cd7304f1a81b1454e4e8b902f8712d9b0a462f92b09626e8fe554268",
+      "combat/render-presentation.mjs": "370469edb54fe87cfa4f649984cf8c6dfb77419b018dbb1d8fedc432b9fe607e",
+      "combat/render-sequences.mjs": "1ce5fab94146618b77d46b7b16feb2af2b52eb912a992488fa5fd2e4e3b4b9af",
+      "combat/render-stage-motion.mjs": "e22d518a1245be13379a019159b4c8f24535e19a704508286d5b1ed38ced9b77",
+      "combat/render-stage-scenery.mjs": "52c298e861af7873b2f94ece106e0f708ebd5573d0f900f02c45c2cecd14c528",
+      "combat/session.mjs": "a7bb5d99b0a95747ce433662942fa51d96a94c53a75e5150338dffcd31375e36",
+      "combat/engine.mjs": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
+      "combat/input.mjs": "bd6e648180730a662fdb60ce91d93cb8b60d9ef88f01922059dd46808ad8170b",
+      "combat/bindings.mjs": "8352b4a92afb27a85220b21feb5b7f53b34a2c4eabfedff2f400259329988969",
+      "combat/progression.mjs": "a5a3d697b034146464d0c315a2a5dc5891557caf1a58ad1d8dd8551a5f585f15",
+      "tests/combat-story-presentation-browser.mjs": "70712d42b9a42f0c6ad5ff3b9666eab73ce9cf839a8b6e5ad5ab6e95164ef88a",
+      "assets/images/cainos-pixel-cast-sheet.png": "51bf903494f917c4a71f0aefc1701d4bf83d0424639ece40018ee5781ab93454",
+      "assets/images/cainos-pomni-animation-sheet.png": "00aebacbe4d9632191ef850473871b9ec6dff6f2c3114faac89a044631dc5d5e",
+      "assets/images/cainos-jax-animation-sheet-0.5.0.png": "7d40d013015ada908d34701173b5d071d559cc41432d295e4db549b624f996fb",
+      "assets/images/cainos-ragatha-animation-sheet.png": "742a8179287cfa651c94cff8eddba8d978854144a06baea121bd2dec3f3eda1f",
+      "assets/images/cainos-gangle-animation-sheet.png": "a4ebfeb8563cedae27dc96616bc691f11cb28fb392b96ab9a161aea75f63c40d",
+      "assets/images/cainos-zooble-animation-sheet.png": "1f95a2b99e24d478aa71a220eeea11b10b9657fd6433646b7ed8e77458bfec1b",
+      "assets/images/cainos-kinger-animation-sheet.png": "f7779d06ec6d44df7a26676578460d45a0960aed8abd86eb936339ad7e7ddb94",
+      "assets/images/cainos-caine-animation-sheet.png": "aa48f5453a4bc9280900df8e726f337d144da9321c45fbd5795de0f311cff5c5",
+      "assets/images/cainos-pixel-cast-sheet-gloink-queen-scale.png": "5d5a38f6266155063fe7bad5a3731a16f5b75e7259aad7dc601254cc1ee01e19",
+      "assets/images/cainos-pixel-cast-sheet-canon-npc-pack-k.png": "77ac3cf00b21f0f0a1347568a8435be6e679652899f2d5e88972ac32b0ff4697",
+      "assets/images/cainos-pixel-cast-sheet-canon-npc-pack-a.png": "dad5bdfe868f74c0e6ac9c7487ea3a24e7551ee9efcf002e6744fd1eba9825f7"
+    },
+    "changedSources": [],
+    "rawReport": "audit-combat/story-presentation-browser-report.json",
+    "rawReportSHA256": "3e21adbaf39f8f7bbea25f9ed2f698c339a116bc60753c7b45d575117b097037",
+    "galleryFixture": {
+      "purpose": "ending presentation only",
+      "completedRoutes": 14,
+      "earnedMatches": 0,
+      "importMethod": "public file input and confirmation"
+    },
+    "earnedFixture": {
+      "purpose": "deterministic unplayed start",
+      "seed": 20261023,
+      "results": 0,
+      "importMethod": "public file input and confirmation"
+    },
+    "finalEarnedProfile": {
+      "format": "circus-encore-profile",
+      "version": 1,
+      "settings": {
+        "layout": "azerty",
+        "difficulty": "easy",
+        "seconds": 120,
+        "rounds": 1,
+        "volume": 0.25,
+        "sound": false,
+        "reducedMotion": true,
+        "hitboxes": false,
+        "music": false,
+        "musicVolume": 0.2,
+        "touch": "auto",
+        "bindings": [
+          {
+            "left": [
+              "KeyA"
+            ],
+            "right": [
+              "KeyD"
+            ],
+            "down": [
+              "KeyS"
+            ],
+            "jump": [
+              "KeyW",
+              "Space"
+            ],
+            "guard": [
+              "ShiftLeft"
+            ],
+            "dash": [
+              "KeyE"
+            ],
+            "light": [
+              "KeyJ"
+            ],
+            "heavy": [
+              "KeyK"
+            ],
+            "throw": [
+              "KeyU"
+            ],
+            "special": [
+              "KeyI"
+            ],
+            "super": [
+              "KeyO"
+            ],
+            "utility": [
+              "KeyL"
+            ]
+          },
+          {
+            "left": [
+              "ArrowLeft"
+            ],
+            "right": [
+              "ArrowRight"
+            ],
+            "down": [
+              "ArrowDown"
+            ],
+            "jump": [
+              "ArrowUp"
+            ],
+            "guard": [
+              "ShiftRight",
+              "Numpad0"
+            ],
+            "dash": [
+              "ControlRight",
+              "NumpadDecimal"
+            ],
+            "light": [
+              "KeyB",
+              "Numpad1"
+            ],
+            "heavy": [
+              "KeyN",
+              "Numpad2"
+            ],
+            "throw": [
+              "KeyV",
+              "Numpad4"
+            ],
+            "special": [
+              "KeyM",
+              "Numpad5"
+            ],
+            "super": [
+              "Comma",
+              "Numpad6"
+            ],
+            "utility": [
+              "Period",
+              "Numpad3"
+            ]
+          }
+        ]
+      },
+      "stats": {
+        "matches": 4,
+        "wins": 4,
+        "losses": 0,
+        "bestSurvival": 0,
+        "damage": 40000
+      },
+      "challenges": [],
+      "medals": [
+        "story"
+      ],
+      "stories": [
+        "jax"
+      ],
+      "program": null,
+      "history": [
+        {
+          "fighter": "jax",
+          "opponent": "caine",
+          "mode": "story",
+          "won": true,
+          "at": "2026-10-23T12:02:57.098Z"
+        },
+        {
+          "fighter": "jax",
+          "opponent": "ragatha",
+          "mode": "story",
+          "won": true,
+          "at": "2026-10-23T12:02:31.882Z"
+        },
+        {
+          "fighter": "jax",
+          "opponent": "zooble",
+          "mode": "story",
+          "won": true,
+          "at": "2026-10-23T12:02:06.570Z"
+        },
+        {
+          "fighter": "jax",
+          "opponent": "gangle",
+          "mode": "story",
+          "won": true,
+          "at": "2026-10-23T12:01:35.546Z"
+        }
+      ]
+    }
+  },
+  "nodeVerification": [
+    {
+      "command": "node tests/combat-story-presentation.test.mjs",
+      "exitCode": 0,
+      "passed": 7,
+      "failed": 0,
+      "testSHA256": "7e90472d99d836ac0369a6236c635baf16db5748ddf183fb20566724acebada6",
+      "log": "audit-combat/story-presentation-node.log",
+      "logSHA256": "3b0dd45af9d62992162c300ee9054714590bb63219212455f4c4cacc08b9a814"
+    },
+    {
+      "command": "node tests/combat-progression.test.mjs",
+      "exitCode": 0,
+      "passed": 19,
+      "failed": 0,
+      "testSHA256": "cbd27b27316563868585d25a5e1e7613ef4b0a15f42a63b2032efeb334a3f7f8",
+      "log": "audit-combat/story-progression-node.log",
+      "logSHA256": "4dd25aaaf6edf296250799724bc9aa61acaf1820512405eb05975319dcf69aaf"
+    }
+  ],
+  "tableaux": [
+    {
+      "fighterId": "pomni",
+      "kind": "prologue",
+      "index": 1,
+      "title": "Le mot sur l’affiche",
+      "stage": "bigtop",
+      "cast": [
+        "pomni",
+        "caine"
+      ],
+      "composition": "focus-left",
+      "sha256": "ef4222c38e392b9b5c2e71cccb07e4ce97af57452a8049d1609868f18a3b2725",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 66907
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 44590
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/pomni-prologue-1.png"
+    },
+    {
+      "fighterId": "pomni",
+      "kind": "prologue",
+      "index": 2,
+      "title": "La promesse à vérifier",
+      "stage": "backstage",
+      "cast": [
+        "pomni",
+        "ragatha"
+      ],
+      "composition": "duet",
+      "sha256": "650902be460467c2248310f9a83db5d590fc28b1d33cb15069d7c98adfd7e250",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 66907
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 55804
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/pomni-prologue-2.png"
+    },
+    {
+      "fighterId": "pomni",
+      "kind": "prologue",
+      "index": 3,
+      "title": "Une condition avant le rideau",
+      "stage": "training",
+      "cast": [
+        "caine",
+        "pomni"
+      ],
+      "composition": "focus-right",
+      "sha256": "623288d46822318a6554ac39db5c0bc1a64e8ebd2cacf99cd393ac47bf5d3322",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 44590
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 66907
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/pomni-prologue-3.png"
+    },
+    {
+      "fighterId": "jax",
+      "kind": "prologue",
+      "index": 1,
+      "title": "Le programme corrigé",
+      "stage": "backstage",
+      "cast": [
+        "jax"
+      ],
+      "composition": "solo",
+      "sha256": "0bc9b741e6ecc42b97dfad3b543bb86012be2cdc5fad765fcf54064eba805c04",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 33794
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/jax-prologue-1.png"
+    },
+    {
+      "fighterId": "jax",
+      "kind": "prologue",
+      "index": 2,
+      "title": "Un nom en trop",
+      "stage": "bigtop",
+      "cast": [
+        "caine",
+        "jax"
+      ],
+      "composition": "focus-right",
+      "sha256": "6f3b1c49077d20d71434cf549afa89df045ee202a5b855b1095f0636ca87b1b6",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 44590
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 33794
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/jax-prologue-2.png"
+    },
+    {
+      "fighterId": "jax",
+      "kind": "prologue",
+      "index": 3,
+      "title": "La première objection",
+      "stage": "spudsy",
+      "cast": [
+        "jax",
+        "gangle"
+      ],
+      "composition": "duet",
+      "sha256": "0577bd17d2f79e9b9085939387555a86a3ec7ac373cd3b6e6a62c9a82b11bd94",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 33794
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 49112
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/jax-prologue-3.png"
+    },
+    {
+      "fighterId": "ragatha",
+      "kind": "prologue",
+      "index": 1,
+      "title": "Le décor penche",
+      "stage": "bigtop",
+      "cast": [
+        "ragatha",
+        "pomni"
+      ],
+      "composition": "focus-left",
+      "sha256": "e7a4ed111a36627e9e509ef54ea845a35d4cb5c3a5032722ca61ab7d712d933d",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 55804
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 66907
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/ragatha-prologue-1.png"
+    },
+    {
+      "fighterId": "ragatha",
+      "kind": "prologue",
+      "index": 2,
+      "title": "La liste s’allonge",
+      "stage": "lake",
+      "cast": [
+        "ragatha",
+        "bubble"
+      ],
+      "composition": "duet",
+      "sha256": "8b3299e51db29e64b4eb41b87fce7bdbc2999f1e930981419794669fcea2af3a",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 55804
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 85106
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/ragatha-prologue-2.png"
+    },
+    {
+      "fighterId": "ragatha",
+      "kind": "prologue",
+      "index": 3,
+      "title": "Une demande avant de partir",
+      "stage": "grounds",
+      "cast": [
+        "zooble",
+        "ragatha"
+      ],
+      "composition": "focus-right",
+      "sha256": "a3d4ad6e1f2a09a1ea4a801b4b45af568dd54165ff5c4ed360588933ef24ebd5",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 45905
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 55804
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/ragatha-prologue-3.png"
+    },
+    {
+      "fighterId": "gangle",
+      "kind": "prologue",
+      "index": 1,
+      "title": "Le carnet sous les affiches",
+      "stage": "backstage",
+      "cast": [
+        "gangle"
+      ],
+      "composition": "solo",
+      "sha256": "965c4500cade597c6069014ddfdcae3de7288783e2c399344b5b2590f5f63b1f",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 49112
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/gangle-prologue-1.png"
+    },
+    {
+      "fighterId": "gangle",
+      "kind": "prologue",
+      "index": 2,
+      "title": "Le premier regard",
+      "stage": "training",
+      "cast": [
+        "gangle",
+        "ragatha"
+      ],
+      "composition": "duet",
+      "sha256": "e52f33850c30a0a3d9c6e8aae8d5d1a6b37d24abc1fc7919a61f3d725eb9254d",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 49112
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 55804
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/gangle-prologue-2.png"
+    },
+    {
+      "fighterId": "gangle",
+      "kind": "prologue",
+      "index": 3,
+      "title": "Le tour de parole",
+      "stage": "spudsy",
+      "cast": [
+        "gangle",
+        "jax"
+      ],
+      "composition": "focus-left",
+      "sha256": "11e99e0545814185553c0647b79a2cc9043bab59869da60a84452f58a158c9d1",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 49112
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 33794
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/gangle-prologue-3.png"
+    },
+    {
+      "fighterId": "zooble",
+      "kind": "prologue",
+      "index": 1,
+      "title": "Une étiquette de trop",
+      "stage": "training",
+      "cast": [
+        "caine",
+        "zooble"
+      ],
+      "composition": "focus-right",
+      "sha256": "184985e26a0eb079f40250d97b492d9f9af64aded03c37927d21a4393021d9af",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 44590
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 45905
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/zooble-prologue-1.png"
+    },
+    {
+      "fighterId": "zooble",
+      "kind": "prologue",
+      "index": 2,
+      "title": "Les pièces sur la table",
+      "stage": "backstage",
+      "cast": [
+        "zooble"
+      ],
+      "composition": "solo",
+      "sha256": "d09546c347b94fb368694c05fd76f8afa4f83613ad7208b5e5e1b5351e2c95ec",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 45905
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/zooble-prologue-2.png"
+    },
+    {
+      "fighterId": "zooble",
+      "kind": "prologue",
+      "index": 3,
+      "title": "Le test appartient à qui ?",
+      "stage": "lake",
+      "cast": [
+        "zooble",
+        "bubble"
+      ],
+      "composition": "duet",
+      "sha256": "c98058eb81eaec5d26c0f43413516ccfc56a81a7f6819982688178c75993054d",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 45905
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 85106
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/zooble-prologue-3.png"
+    },
+    {
+      "fighterId": "kinger",
+      "kind": "prologue",
+      "index": 1,
+      "title": "Une lampe sur la liste",
+      "stage": "cellar",
+      "cast": [
+        "kinger",
+        "pomni"
+      ],
+      "composition": "duet",
+      "sha256": "9db3f0115aabfe6c31cd616a1dfb304149275dc43c2c25b6873fa50f557587ee",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 43878
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 66907
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/kinger-prologue-1.png"
+    },
+    {
+      "fighterId": "kinger",
+      "kind": "prologue",
+      "index": 2,
+      "title": "Le cadre silencieux",
+      "stage": "manor",
+      "cast": [
+        "baronmildenhall",
+        "kinger"
+      ],
+      "composition": "archive",
+      "sha256": "230d25f46463f6a8efad9757ee2e7dc25d5cfd5b606a453acb93b96b64235e1f",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 47255
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 43878
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/kinger-prologue-2.png"
+    },
+    {
+      "fighterId": "kinger",
+      "kind": "prologue",
+      "index": 3,
+      "title": "Les repères qu’on partage",
+      "stage": "backstage",
+      "cast": [
+        "kinger",
+        "gangle"
+      ],
+      "composition": "focus-left",
+      "sha256": "2bf633527fbdcb0ae4fbb97922c55e2cbcab287f1a1c38b130300dee46ccbfcc",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 43878
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 49112
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/kinger-prologue-3.png"
+    },
+    {
+      "fighterId": "caine",
+      "kind": "prologue",
+      "index": 1,
+      "title": "Le spectacle sans défaut",
+      "stage": "bigtop",
+      "cast": [
+        "caine",
+        "bubble"
+      ],
+      "composition": "focus-left",
+      "sha256": "0ad18d27e9d9c36499922c6228da5516edc29f7b7e1c202a6ff6cbf644fa6243",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 44590
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 85106
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/caine-prologue-1.png"
+    },
+    {
+      "fighterId": "caine",
+      "kind": "prologue",
+      "index": 2,
+      "title": "Une règle chacun",
+      "stage": "training",
+      "cast": [
+        "caine",
+        "zooble"
+      ],
+      "composition": "duet",
+      "sha256": "7beafbadf5966111d458afb3d0eda1917fff7a72e17c1b2918a64acbd89709c2",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 44590
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 45905
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/caine-prologue-2.png"
+    },
+    {
+      "fighterId": "caine",
+      "kind": "prologue",
+      "index": 3,
+      "title": "Le silence au programme",
+      "stage": "grounds",
+      "cast": [
+        "pomni",
+        "caine"
+      ],
+      "composition": "focus-right",
+      "sha256": "3c9e6eda3eea2a385401919291c05d238ca29b225b0ec947573cda981bc23e2e",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 66907
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 44590
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/caine-prologue-3.png"
+    },
+    {
+      "fighterId": "bubble",
+      "kind": "prologue",
+      "index": 1,
+      "title": "Tout doit disparaître",
+      "stage": "lake",
+      "cast": [
+        "bubble",
+        "caine"
+      ],
+      "composition": "focus-left",
+      "sha256": "b379584a657f20624a9a225e06915e29bc2a7c8103d2f32d326628cb2da997bf",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 85106
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 44590
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/bubble-prologue-1.png"
+    },
+    {
+      "fighterId": "bubble",
+      "kind": "prologue",
+      "index": 2,
+      "title": "Le sol est libre",
+      "stage": "grounds",
+      "cast": [
+        "bubble",
+        "zooble"
+      ],
+      "composition": "duet",
+      "sha256": "c6fbc52c1bb7c0d2564e6eed2e7553861a6a33aada8e822f8c0f677829146758",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 85106
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 45905
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/bubble-prologue-2.png"
+    },
+    {
+      "fighterId": "bubble",
+      "kind": "prologue",
+      "index": 3,
+      "title": "Le contrôle commence",
+      "stage": "kingdom",
+      "cast": [
+        "loolilalu",
+        "bubble"
+      ],
+      "composition": "focus-right",
+      "sha256": "5348d65440a1092f394eb65f61ec68b8eea7c79bc7dfd844fd439c55c41cbe08",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 56538
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 85106
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/bubble-prologue-3.png"
+    },
+    {
+      "fighterId": "gummigoo",
+      "kind": "prologue",
+      "index": 1,
+      "title": "La carte du convoi",
+      "stage": "candy",
+      "cast": [
+        "gummigoo"
+      ],
+      "composition": "solo",
+      "sha256": "07bd413348212776d83daa78ad5258dccd0733b5fd96faf766be735c4044bbb8",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 64610
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/gummigoo-prologue-1.png"
+    },
+    {
+      "fighterId": "gummigoo",
+      "kind": "prologue",
+      "index": 2,
+      "title": "La cargaison et les gens",
+      "stage": "kingdom",
+      "cast": [
+        "gummigoo",
+        "loolilalu"
+      ],
+      "composition": "duet",
+      "sha256": "dd470a0da912593e0b45a5ee7700efb43ed2f53e5400c47ba55ff4078d55bfd3",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 64610
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 56538
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/gummigoo-prologue-2.png"
+    },
+    {
+      "fighterId": "gummigoo",
+      "kind": "prologue",
+      "index": 3,
+      "title": "Une place à côté",
+      "stage": "grounds",
+      "cast": [
+        "pomni",
+        "gummigoo"
+      ],
+      "composition": "focus-right",
+      "sha256": "633881401eb20182cc487a87f9f2b49f05f4994e180b227015be07c0f818de5f",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 66907
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 64610
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/gummigoo-prologue-3.png"
+    },
+    {
+      "fighterId": "loolilalu",
+      "kind": "prologue",
+      "index": 1,
+      "title": "La réception empêchée",
+      "stage": "kingdom",
+      "cast": [
+        "loolilalu"
+      ],
+      "composition": "solo",
+      "sha256": "aa7f00a7f2cc64351315440406e7d306c6eb37acf6c263f56b3e06a97670da9f",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 56538
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/loolilalu-prologue-1.png"
+    },
+    {
+      "fighterId": "loolilalu",
+      "kind": "prologue",
+      "index": 2,
+      "title": "Le cortège attend",
+      "stage": "candy",
+      "cast": [
+        "loolilalu",
+        "gummigoo"
+      ],
+      "composition": "duet",
+      "sha256": "fc81412419a8ba73e95fd800f33b7abf2a973b96c8c658a235b704a92d501952",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 56538
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 64610
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/loolilalu-prologue-2.png"
+    },
+    {
+      "fighterId": "loolilalu",
+      "kind": "prologue",
+      "index": 3,
+      "title": "L’invitation a des limites",
+      "stage": "gloink",
+      "cast": [
+        "loolilalu",
+        "gloinkqueen"
+      ],
+      "composition": "focus-left",
+      "sha256": "b6089a2ed36f8ba04ec45e5637779c469bd82567bee27f3c3ed4d92a25ae21f6",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 56538
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 41522
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/loolilalu-prologue-3.png"
+    },
+    {
+      "fighterId": "gloinkqueen",
+      "kind": "prologue",
+      "index": 1,
+      "title": "Le prix sent le trésor",
+      "stage": "gloink",
+      "cast": [
+        "gloinkqueen",
+        "bubble"
+      ],
+      "composition": "wide",
+      "sha256": "9f9e729dfa28e2696e35537958437c00e594ba03099dd7d223c61c53d1745d15",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 41522
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 85106
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/gloinkqueen-prologue-1.png"
+    },
+    {
+      "fighterId": "gloinkqueen",
+      "kind": "prologue",
+      "index": 2,
+      "title": "Ce qui tient le décor",
+      "stage": "grounds",
+      "cast": [
+        "ragatha",
+        "gloinkqueen"
+      ],
+      "composition": "focus-right",
+      "sha256": "83125c062d335b504b0f2f3e566849971dbd2c2daaf131c2d49f4d6fb41d2fa4",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 55804
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 41522
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/gloinkqueen-prologue-2.png"
+    },
+    {
+      "fighterId": "gloinkqueen",
+      "kind": "prologue",
+      "index": 3,
+      "title": "Le refus qui parle",
+      "stage": "training",
+      "cast": [
+        "gloinkqueen",
+        "zooble"
+      ],
+      "composition": "duet",
+      "sha256": "8dbadcbba84bc3775d29e9a8ae0fe196354ab8a879327d0aea8075ba0771bff4",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 41522
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 45905
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/gloinkqueen-prologue-3.png"
+    },
+    {
+      "fighterId": "fudge",
+      "kind": "prologue",
+      "index": 1,
+      "title": "L’odeur avant l’invitation",
+      "stage": "candy",
+      "cast": [
+        "fudge",
+        "gummigoo"
+      ],
+      "composition": "wide",
+      "sha256": "5abfbffb4eb6d8bb4f4a86c5bc1476bb0b44f72708d4ebc0213503c4598cc081",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 77332
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 64610
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/fudge-prologue-1.png"
+    },
+    {
+      "fighterId": "fudge",
+      "kind": "prologue",
+      "index": 2,
+      "title": "La place réservée",
+      "stage": "kingdom",
+      "cast": [
+        "loolilalu",
+        "fudge"
+      ],
+      "composition": "focus-right",
+      "sha256": "9da5c653aebee045915522312fb4d313b3fd55a12bd123c376e14d85c64ec715",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 56538
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 77332
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/fudge-prologue-2.png"
+    },
+    {
+      "fighterId": "fudge",
+      "kind": "prologue",
+      "index": 3,
+      "title": "Quatre étapes avant de manger",
+      "stage": "lake",
+      "cast": [
+        "fudge",
+        "bubble"
+      ],
+      "composition": "duet",
+      "sha256": "4a9a5ffff4407510b605c4bfe6891c72d895a3fcefa8561a14b8afa81cb33cdd",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 77332
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 85106
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/fudge-prologue-3.png"
+    },
+    {
+      "fighterId": "abstractedkaufmo",
+      "kind": "prologue",
+      "index": 1,
+      "title": "Le tableau d’archive",
+      "stage": "void",
+      "cast": [
+        "abstractedkaufmo"
+      ],
+      "composition": "archive",
+      "sha256": "e97f14e98206d14f76c596fa054f3fe3a380f7ddff6a361fffd41c226b3bc682",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 60086
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/abstractedkaufmo-prologue-1.png"
+    },
+    {
+      "fighterId": "abstractedkaufmo",
+      "kind": "prologue",
+      "index": 2,
+      "title": "La distance gardée",
+      "stage": "backstage",
+      "cast": [
+        "abstractedkaufmo",
+        "ragatha"
+      ],
+      "composition": "focus-right",
+      "sha256": "be5a20238a0edc5fd9032a5314dc22c1fd50d007ffa88a7087ed04442cb5f9ab",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 60086
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 55804
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/abstractedkaufmo-prologue-2.png"
+    },
+    {
+      "fighterId": "abstractedkaufmo",
+      "kind": "prologue",
+      "index": 3,
+      "title": "Une lumière pour revenir",
+      "stage": "cellar",
+      "cast": [
+        "kinger",
+        "pomni",
+        "abstractedkaufmo"
+      ],
+      "composition": "ensemble",
+      "sha256": "47d46361d63e7089a7dd2d5e1c0cff4c9e1a553e8e5cc48e50af7c32b26f03d4",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 43878
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 66907
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 60086
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/abstractedkaufmo-prologue-3.png"
+    },
+    {
+      "fighterId": "baronmildenhall",
+      "kind": "prologue",
+      "index": 1,
+      "title": "Un cadre, pas une voix",
+      "stage": "manor",
+      "cast": [
+        "baronmildenhall"
+      ],
+      "composition": "archive",
+      "sha256": "51f80ac90ac514183b090b7abf98ce6af1e3eda6cdb561eca698d3d438255a06",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 47255
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/baronmildenhall-prologue-1.png"
+    },
+    {
+      "fighterId": "baronmildenhall",
+      "kind": "prologue",
+      "index": 2,
+      "title": "La visite inventée",
+      "stage": "cellar",
+      "cast": [
+        "kinger",
+        "pomni"
+      ],
+      "composition": "duet",
+      "sha256": "9db3f0115aabfe6c31cd616a1dfb304149275dc43c2c25b6873fa50f557587ee",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 43878
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 66907
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/baronmildenhall-prologue-2.png"
+    },
+    {
+      "fighterId": "baronmildenhall",
+      "kind": "prologue",
+      "index": 3,
+      "title": "Le dernier panneau",
+      "stage": "bigtop",
+      "cast": [
+        "caine",
+        "baronmildenhall"
+      ],
+      "composition": "focus-right",
+      "sha256": "58be7e6b820d6fb995a3c2a7b8ecf1c60df961b08f5f2a4d4500c728ce1048b7",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 44590
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 47255
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/baronmildenhall-prologue-3.png"
+    },
+    {
+      "fighterId": "pomni",
+      "kind": "epilogue",
+      "index": 1,
+      "title": "La poignée ne ment pas",
+      "stage": "training",
+      "cast": [
+        "pomni",
+        "caine"
+      ],
+      "composition": "duet",
+      "sha256": "d667a33ac0f71df6227753ca7490c3e95df3b0124e398250a1998214c8004e76",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 66907
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 44590
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/pomni-epilogue-1.png"
+    },
+    {
+      "fighterId": "pomni",
+      "kind": "epilogue",
+      "index": 2,
+      "title": "Une invitation choisie",
+      "stage": "backstage",
+      "cast": [
+        "pomni",
+        "ragatha",
+        "gangle"
+      ],
+      "composition": "ensemble",
+      "sha256": "8696a48a6e20f996dcf60bad7a857047e57754654af28343dfa0e03a3b04b7b0",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 66907
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 55804
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 49112
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/pomni-epilogue-2.png"
+    },
+    {
+      "fighterId": "pomni",
+      "kind": "epilogue",
+      "index": 3,
+      "title": "Le rideau de l’intérieur",
+      "stage": "backstage",
+      "cast": [
+        "pomni"
+      ],
+      "composition": "solo",
+      "sha256": "1559efc51ca3ea4e93b76cc11ded4bb8618b54e4e121ac57c98060e7c544122a",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 66907
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/pomni-epilogue-3.png"
+    },
+    {
+      "fighterId": "jax",
+      "kind": "epilogue",
+      "index": 1,
+      "title": "La cible du dernier gag",
+      "stage": "bigtop",
+      "cast": [
+        "jax",
+        "caine"
+      ],
+      "composition": "focus-left",
+      "sha256": "fce778e0ed4632353149a20406df332146e81c1d7e34f54504d8ad6b6e328931",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 33794
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 44590
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/jax-epilogue-1.png"
+    },
+    {
+      "fighterId": "jax",
+      "kind": "epilogue",
+      "index": 2,
+      "title": "Un rire qui le précède",
+      "stage": "spudsy",
+      "cast": [
+        "gangle",
+        "jax"
+      ],
+      "composition": "duet",
+      "sha256": "8382df611ef209d6ba978161f7d3d4c57d9d9d05a378bb3526186c9503e6ec53",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 49112
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 33794
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/jax-epilogue-2.png"
+    },
+    {
+      "fighterId": "jax",
+      "kind": "epilogue",
+      "index": 3,
+      "title": "La facture du programme",
+      "stage": "grounds",
+      "cast": [
+        "jax"
+      ],
+      "composition": "solo",
+      "sha256": "643ccb6beab60a1d09afa055c325ecbae11245a1f87296eab4969b87e11d4971",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 33794
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/jax-epilogue-3.png"
+    },
+    {
+      "fighterId": "ragatha",
+      "kind": "epilogue",
+      "index": 1,
+      "title": "Les mains se retirent",
+      "stage": "bigtop",
+      "cast": [
+        "ragatha",
+        "pomni",
+        "zooble"
+      ],
+      "composition": "ensemble",
+      "sha256": "834e87b1684c8cd6330d39a38d5b265c3b0fa21611355fd2b453bd346d5ccd70",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 55804
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 66907
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 45905
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/ragatha-epilogue-1.png"
+    },
+    {
+      "fighterId": "ragatha",
+      "kind": "epilogue",
+      "index": 2,
+      "title": "Le siège gardé",
+      "stage": "grounds",
+      "cast": [
+        "ragatha",
+        "gangle"
+      ],
+      "composition": "duet",
+      "sha256": "b3d2c358b7ebdf1903fb9acbd36f6a691335686ff96e9e5055b727cc2c381746",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 55804
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 49112
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/ragatha-epilogue-2.png"
+    },
+    {
+      "fighterId": "ragatha",
+      "kind": "epilogue",
+      "index": 3,
+      "title": "Un numéro dans le public",
+      "stage": "backstage",
+      "cast": [
+        "caine",
+        "ragatha"
+      ],
+      "composition": "focus-right",
+      "sha256": "a53df2fecef8e59380549705fa37019c019db84a903741a6d4bb4092c77566fa",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 44590
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 55804
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/ragatha-epilogue-3.png"
+    },
+    {
+      "fighterId": "gangle",
+      "kind": "epilogue",
+      "index": 1,
+      "title": "La dernière ligne",
+      "stage": "bigtop",
+      "cast": [
+        "gangle"
+      ],
+      "composition": "solo",
+      "sha256": "84e83f666d9ed7b5021369f471bd3b3e9ae77edf6040a366d915b364b96f65f3",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 49112
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/gangle-epilogue-1.png"
+    },
+    {
+      "fighterId": "gangle",
+      "kind": "epilogue",
+      "index": 2,
+      "title": "Les corrections visibles",
+      "stage": "backstage",
+      "cast": [
+        "gangle",
+        "zooble"
+      ],
+      "composition": "duet",
+      "sha256": "14e252ce8ee27c5bd7270e1a8ccb8d255631b605212051ff53a76a7c0476a375",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 49112
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 45905
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/gangle-epilogue-2.png"
+    },
+    {
+      "fighterId": "gangle",
+      "kind": "epilogue",
+      "index": 3,
+      "title": "Après son salut",
+      "stage": "grounds",
+      "cast": [
+        "gangle",
+        "ragatha",
+        "pomni"
+      ],
+      "composition": "ensemble",
+      "sha256": "fcde6b307f06a56211f65d24e1161cbfb18f20f04ffdd28dc03bf40e37fd2623",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 49112
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 55804
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 66907
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/gangle-epilogue-3.png"
+    },
+    {
+      "fighterId": "zooble",
+      "kind": "epilogue",
+      "index": 1,
+      "title": "La case définitive",
+      "stage": "training",
+      "cast": [
+        "zooble",
+        "caine"
+      ],
+      "composition": "duet",
+      "sha256": "cb201ad15fcbe50d06d1ef46139add3f9b5c290aeecef1ec01c90fa8fdfc3235",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 45905
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 44590
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/zooble-epilogue-1.png"
+    },
+    {
+      "fighterId": "zooble",
+      "kind": "epilogue",
+      "index": 2,
+      "title": "Un rangement, pas une vitrine",
+      "stage": "backstage",
+      "cast": [
+        "zooble",
+        "ragatha"
+      ],
+      "composition": "focus-left",
+      "sha256": "01a06948d56365cb084557c2aa858813e7704d2f3deaaee21e1910677b228d45",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 45905
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 55804
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/zooble-epilogue-2.png"
+    },
+    {
+      "fighterId": "zooble",
+      "kind": "epilogue",
+      "index": 3,
+      "title": "La place reste libre",
+      "stage": "grounds",
+      "cast": [
+        "zooble"
+      ],
+      "composition": "solo",
+      "sha256": "8927e536db07532bd238f78f20fc3ad20fd059b9d603dd551b6259374c9f37cd",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 45905
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/zooble-epilogue-3.png"
+    },
+    {
+      "fighterId": "kinger",
+      "kind": "epilogue",
+      "index": 1,
+      "title": "Une à la fois",
+      "stage": "bigtop",
+      "cast": [
+        "caine",
+        "kinger"
+      ],
+      "composition": "focus-right",
+      "sha256": "a8c7bdefd79b4bedfbd219d9a7bf59e1370660a17b12ac21839ac85e2fa9174e",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 44590
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 43878
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/kinger-epilogue-1.png"
+    },
+    {
+      "fighterId": "kinger",
+      "kind": "epilogue",
+      "index": 2,
+      "title": "Un coin pour se poser",
+      "stage": "cellar",
+      "cast": [
+        "kinger",
+        "pomni"
+      ],
+      "composition": "focus-left",
+      "sha256": "b61dafc005f2b7c149e413cdaecfa1b4d0ed491dc4236e9bc58400bedebc35c8",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 43878
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 66907
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/kinger-epilogue-2.png"
+    },
+    {
+      "fighterId": "kinger",
+      "kind": "epilogue",
+      "index": 3,
+      "title": "Le prochain petit repère",
+      "stage": "grounds",
+      "cast": [
+        "kinger"
+      ],
+      "composition": "solo",
+      "sha256": "6d92f0cdaba2af8d559676a3d61e4bd8b8e4f91171aed1010ef6b445438b8cd9",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 43878
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/kinger-epilogue-3.png"
+    },
+    {
+      "fighterId": "caine",
+      "kind": "epilogue",
+      "index": 1,
+      "title": "Un compte rendu raturé",
+      "stage": "bigtop",
+      "cast": [
+        "caine"
+      ],
+      "composition": "solo",
+      "sha256": "ea827350c3c620f9e64fe3d10b68e0baf3fa5ac3dd099b9d46704ee885603611",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 44590
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/caine-epilogue-1.png"
+    },
+    {
+      "fighterId": "caine",
+      "kind": "epilogue",
+      "index": 2,
+      "title": "La réponse reste entière",
+      "stage": "training",
+      "cast": [
+        "caine",
+        "pomni"
+      ],
+      "composition": "duet",
+      "sha256": "5deb9a4fceaf836afe8f554f88c1472a733bcba445fa401ba5da50c9b85971d4",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 44590
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 66907
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/caine-epilogue-2.png"
+    },
+    {
+      "fighterId": "caine",
+      "kind": "epilogue",
+      "index": 3,
+      "title": "La feuille de demain",
+      "stage": "lake",
+      "cast": [
+        "caine",
+        "bubble"
+      ],
+      "composition": "duet",
+      "sha256": "8b0fdc6bacd7a910a503b2cd1e8d67efd56db391f56cb6583454f6865a43496d",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 44590
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 85106
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/caine-epilogue-3.png"
+    },
+    {
+      "fighterId": "bubble",
+      "kind": "epilogue",
+      "index": 1,
+      "title": "Le détail au milieu",
+      "stage": "bigtop",
+      "cast": [
+        "bubble",
+        "caine"
+      ],
+      "composition": "duet",
+      "sha256": "ecee3a9d4682dc92c5debf629ab6c8a6054fba59736ae617b8b6e785fe1c5ef6",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 85106
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 44590
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/bubble-epilogue-1.png"
+    },
+    {
+      "fighterId": "bubble",
+      "kind": "epilogue",
+      "index": 2,
+      "title": "Une seule ligne",
+      "stage": "lake",
+      "cast": [
+        "bubble"
+      ],
+      "composition": "solo",
+      "sha256": "36f1fc5e05a6861f92ef372f7aafe4d151479a6229dfd1bf5738d3c0d2b2c34d",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 85106
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/bubble-epilogue-2.png"
+    },
+    {
+      "fighterId": "bubble",
+      "kind": "epilogue",
+      "index": 3,
+      "title": "La question supplémentaire",
+      "stage": "kingdom",
+      "cast": [
+        "bubble",
+        "loolilalu"
+      ],
+      "composition": "duet",
+      "sha256": "e6233fa0cfe511b4168e5b2b3b95b175c11c413f9dada600eef35699df106545",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 85106
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 56538
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/bubble-epilogue-3.png"
+    },
+    {
+      "fighterId": "gummigoo",
+      "kind": "epilogue",
+      "index": 1,
+      "title": "L’arrivée sans retour",
+      "stage": "training",
+      "cast": [
+        "gummigoo",
+        "caine"
+      ],
+      "composition": "duet",
+      "sha256": "eaffb381269fb8d5134184930adfe9461fa009eb4ef2daa941c7aed5a7f22be6",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 64610
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 44590
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/gummigoo-epilogue-1.png"
+    },
+    {
+      "fighterId": "gummigoo",
+      "kind": "epilogue",
+      "index": 2,
+      "title": "Le compte est bon",
+      "stage": "kingdom",
+      "cast": [
+        "gummigoo",
+        "loolilalu",
+        "pomni"
+      ],
+      "composition": "ensemble",
+      "sha256": "1036d007686fcee56b5962183475cd0c4f9d00480cbe2bf992528da74b78f265",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 64610
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 56538
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 66907
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/gummigoo-epilogue-2.png"
+    },
+    {
+      "fighterId": "gummigoo",
+      "kind": "epilogue",
+      "index": 3,
+      "title": "La ligne du retour",
+      "stage": "candy",
+      "cast": [
+        "gummigoo",
+        "pomni"
+      ],
+      "composition": "focus-left",
+      "sha256": "abde46581cd4c1020d10dac2ebb95c7a3f53334ac270314f3320e30ba11a4499",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 64610
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 66907
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/gummigoo-epilogue-3.png"
+    },
+    {
+      "fighterId": "loolilalu",
+      "kind": "epilogue",
+      "index": 1,
+      "title": "L’ouverture tient son heure",
+      "stage": "bigtop",
+      "cast": [
+        "loolilalu",
+        "jax"
+      ],
+      "composition": "duet",
+      "sha256": "0a0e9c770e557c9dcc49027545afed6f2900a04480f410774ee1efd032288566",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 56538
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 33794
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/loolilalu-epilogue-1.png"
+    },
+    {
+      "fighterId": "loolilalu",
+      "kind": "epilogue",
+      "index": 2,
+      "title": "Une chaise de plus",
+      "stage": "kingdom",
+      "cast": [
+        "loolilalu",
+        "gummigoo",
+        "bubble"
+      ],
+      "composition": "ensemble",
+      "sha256": "a7fb9d59fa3ecf05752ed58a86b5d620fb2ab0af1a3d5e10d2d1ba432a8696ab",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 56538
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 64610
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 85106
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/loolilalu-epilogue-2.png"
+    },
+    {
+      "fighterId": "loolilalu",
+      "kind": "epilogue",
+      "index": 3,
+      "title": "Le passage reste ouvert",
+      "stage": "grounds",
+      "cast": [
+        "loolilalu"
+      ],
+      "composition": "solo",
+      "sha256": "e7b5e901cfbb04b63eaf86af433f812bd3108746f4c2b2486a6fa879587a101d",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 56538
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/loolilalu-epilogue-3.png"
+    },
+    {
+      "fighterId": "gloinkqueen",
+      "kind": "epilogue",
+      "index": 1,
+      "title": "Le coffre détachable",
+      "stage": "bigtop",
+      "cast": [
+        "gloinkqueen",
+        "caine"
+      ],
+      "composition": "focus-left",
+      "sha256": "ac34bcd32effae71adde5d62504451b25b5b4cfebe492a128be037911de9e17d",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 41522
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 44590
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/gloinkqueen-epilogue-1.png"
+    },
+    {
+      "fighterId": "gloinkqueen",
+      "kind": "epilogue",
+      "index": 2,
+      "title": "Une collection choisie",
+      "stage": "gloink",
+      "cast": [
+        "gloinkqueen"
+      ],
+      "composition": "solo",
+      "sha256": "815f7f739c79310b367edc19ee3fc17df14b9917eb505ed59c2c0dc39e5a7b7d",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 41522
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/gloinkqueen-epilogue-2.png"
+    },
+    {
+      "fighterId": "gloinkqueen",
+      "kind": "epilogue",
+      "index": 3,
+      "title": "Un accord pour cette fois",
+      "stage": "grounds",
+      "cast": [
+        "gloinkqueen",
+        "ragatha"
+      ],
+      "composition": "duet",
+      "sha256": "85feca2a92643842e9c46649f8067ac27921c352d53514924cdf9edbdff64334",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 41522
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 55804
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/gloinkqueen-epilogue-3.png"
+    },
+    {
+      "fighterId": "fudge",
+      "kind": "epilogue",
+      "index": 1,
+      "title": "Le couvert à son échelle",
+      "stage": "kingdom",
+      "cast": [
+        "fudge",
+        "loolilalu"
+      ],
+      "composition": "wide",
+      "sha256": "6f82e787c87f34e552ecaa875846202b56a9ceb46dd983c87fc8270508557fb3",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 77332
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 56538
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/fudge-epilogue-1.png"
+    },
+    {
+      "fighterId": "fudge",
+      "kind": "epilogue",
+      "index": 2,
+      "title": "Le service passe encore",
+      "stage": "lake",
+      "cast": [
+        "fudge",
+        "bubble"
+      ],
+      "composition": "focus-left",
+      "sha256": "c5b7b0b835423eaffb2d922b89fd2b377847b452263d662e2c709732db07edd0",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 77332
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 85106
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/fudge-epilogue-2.png"
+    },
+    {
+      "fighterId": "fudge",
+      "kind": "epilogue",
+      "index": 3,
+      "title": "Un dessert qui reste là",
+      "stage": "candy",
+      "cast": [
+        "fudge"
+      ],
+      "composition": "solo",
+      "sha256": "bda362c6234ef8aa1f7b073bf2b33e6201acb0435ef2a3e16ed3a4b85136e554",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 77332
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/fudge-epilogue-3.png"
+    },
+    {
+      "fighterId": "abstractedkaufmo",
+      "kind": "epilogue",
+      "index": 1,
+      "title": "La fermeture de la simulation",
+      "stage": "training",
+      "cast": [
+        "abstractedkaufmo",
+        "caine"
+      ],
+      "composition": "archive",
+      "sha256": "fa6cbb2847762ef62cc09f1784285e05bd48dc5dabc0a92eec044a72d1fc2541",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 60086
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 44590
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/abstractedkaufmo-epilogue-1.png"
+    },
+    {
+      "fighterId": "abstractedkaufmo",
+      "kind": "epilogue",
+      "index": 2,
+      "title": "Le passage libéré",
+      "stage": "cellar",
+      "cast": [
+        "pomni",
+        "kinger"
+      ],
+      "composition": "duet",
+      "sha256": "0f0469c38224e64494bcc6621e302ec20df228941a0eed64126c29b0abc34186",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 66907
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 43878
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/abstractedkaufmo-epilogue-2.png"
+    },
+    {
+      "fighterId": "abstractedkaufmo",
+      "kind": "epilogue",
+      "index": 3,
+      "title": "Ce qui n’est pas une réponse",
+      "stage": "backstage",
+      "cast": [
+        "ragatha",
+        "gangle"
+      ],
+      "composition": "focus-left",
+      "sha256": "1f87fbdcb296d2a963b6e6ada52e802e656dd3df6af49cc625462e6aa465d9b3",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 55804
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 49112
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/abstractedkaufmo-epilogue-3.png"
+    },
+    {
+      "fighterId": "baronmildenhall",
+      "kind": "epilogue",
+      "index": 1,
+      "title": "La projection s’arrête",
+      "stage": "manor",
+      "cast": [
+        "baronmildenhall"
+      ],
+      "composition": "solo",
+      "sha256": "4f58a1964cd88a33a45dfb09c37552ee5bf6145edca953d3a3cc63daac8e5766",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 47255
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/baronmildenhall-epilogue-1.png"
+    },
+    {
+      "fighterId": "baronmildenhall",
+      "kind": "epilogue",
+      "index": 2,
+      "title": "Les repères des visiteurs",
+      "stage": "cellar",
+      "cast": [
+        "kinger",
+        "pomni",
+        "jax"
+      ],
+      "composition": "ensemble",
+      "sha256": "008623e3b5e1df75e5833e1eebb2e6a60ef08637c8570a7d47be834b536c8431",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 43878
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 66907
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 33794
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/baronmildenhall-epilogue-2.png"
+    },
+    {
+      "fighterId": "baronmildenhall",
+      "kind": "epilogue",
+      "index": 3,
+      "title": "Une sortie de visite",
+      "stage": "grounds",
+      "cast": [
+        "pomni",
+        "caine"
+      ],
+      "composition": "duet",
+      "sha256": "393fec481a1f87c5c1c2c67b79ef5c24ca69312d9357d654da381eee5f1bd00f",
+      "pixels": [
+        {
+          "width": 1280,
+          "height": 720,
+          "visible": 921600
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 66907
+        },
+        {
+          "width": 400,
+          "height": 460,
+          "visible": 44590
+        }
+      ],
+      "rawScreenshot": "audit-combat/story-presentation/baronmildenhall-epilogue-3.png"
+    }
+  ],
+  "persistedCaptures": [
+    {
+      "path": "images/encore-story-desktop-0.6.0.png",
+      "description": "Lecteur de prologue sur ordinateur",
+      "bytes": 313148,
+      "sha256": "472245cf336fb37b4608b412016fd59098a8cda0124eae0003b3786dabfad80f"
+    },
+    {
+      "path": "images/encore-story-mobile-0.6.0.png",
+      "description": "Illustration et dialogue sur un écran de 390 pixels",
+      "bytes": 99041,
+      "sha256": "e6b076aa9570ce181d54d3d875abcecad36d5705da54419cf75962fc9939a383"
+    },
+    {
+      "path": "images/encore-story-mobile-controls-0.6.0.png",
+      "description": "Commandes et références accessibles par défilement sur mobile",
+      "bytes": 92172,
+      "sha256": "7dcba4f22801d95c390173497cecec7f6c026a8fee814306b433fd02d9614a3f"
+    },
+    {
+      "path": "images/encore-story-14-routes-0.6.0.png",
+      "description": "28 ouvertures observées : un prologue et un épilogue pour chacune des 14 routes",
+      "bytes": 1644973,
+      "sha256": "b72af5d68b5daea5a47ac61395d6e9e013ba417a706c12f50905765943a4810a"
+    }
+  ],
+  "limitations": [
+    "84 tableaux signifie84 scènes de lecture composées ; il ne s’agit pas de84 illustrations inédites ni de84 animations dessinées.",
+    "Les tableaux restent statiques et ne comportent aucun doublage. Les sources officielles sont des repères de personnages et de lieux, pas une transcription primaire vérifiée ligne par ligne.",
+    "La galerie des 14 épilogues utilise un profil de collection explicitement importé par l’interface. Seules les quatre victoires de Jax du rapport constituent une progression réellement gagnée pendant ce test.",
+    "Les commandes clavier, les retours, les reprises, la non-duplication des récompenses et un écran 390 × 844 sont contrôlés dans Chromium. Aucun téléphone physique, lecteur d’écran réel ni voix de personnage n’est certifié.",
+    "Les 84 captures brutes sont enregistrées dans le dossier local audit-combat ; les quatre images listées dans persistedCaptures sont celles conservées avec cette revue. Les empreintes de toutes les captures sont consignées dans tableaux."
+  ]
+}

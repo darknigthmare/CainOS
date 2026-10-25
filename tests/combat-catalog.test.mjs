@@ -4,6 +4,7 @@ import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { SPRITE_CATALOG } from '../combat/sprite-catalog.mjs';
 import { COSTUME_SPRITE_OVERRIDES, getCostumeFidelity } from '../combat/costume-fidelity.mjs';
+import { REFINED_COSTUME_IDS } from '../combat/costume-refinements.mjs';
 import {
   FIGHTERS, ROSTER_ARCHIVE, VARIANTS, COSTUME_BASE_FIGHTERS,
   ARCHIVE_ONLY_ENTRIES, classifyArchiveEntry,
@@ -12,7 +13,7 @@ import {
 const byId = new Map(ROSTER_ARCHIVE.map(entry => [entry.id, entry]));
 const fighters = new Set(FIGHTERS.map(fighter => fighter.id));
 
-test('classification preserves all 179 source records and their historical provenance', () => {
+test('classification preserves all 179 identities and provenance while applying only declared sprite replacements', () => {
   assert.equal(SPRITE_CATALOG.length, 179);
   assert.equal(byId.size, SPRITE_CATALOG.length);
   assert.deepEqual(ROSTER_ARCHIVE.map(entry => entry.id), SPRITE_CATALOG.map(entry => entry.id));
@@ -21,7 +22,8 @@ test('classification preserves all 179 source records and their historical prove
     for (const [key, value] of Object.entries(source)) {
       if (key !== 'sprite') assert.deepEqual(classified[key], value, `${source.id}: preserve ${key}`);
     }
-    for (const [key, value] of Object.entries(source.sprite)) assert.deepEqual(classified.sprite[key], value, `${source.id}: preserve sprite ${key}`);
+    const override = COSTUME_SPRITE_OVERRIDES[source.id] || {};
+    for (const [key, value] of Object.entries(source.sprite)) assert.deepEqual(classified.sprite[key], Object.hasOwn(override, key) ? override[key] : value, `${source.id}: preserve or explicitly replace sprite ${key}`);
   }
 });
 
@@ -128,9 +130,9 @@ test('the 51 stable costume IDs and fighter bindings remain exact for existing p
   for (const entry of ROSTER_ARCHIVE.filter(e => e.category !== 'variant')) assert.equal(entry.fidelity, undefined, 'costume reviews are not inherited by unrelated archive entries');
 });
 
-test('all seventeen corrected costume rectangles fit their actual PNG and preserve source grid metadata', () => {
+test('all thirty-three costume rectangles fit their actual PNG and preserve undeclared source metadata', () => {
   const crops = Object.entries(COSTUME_SPRITE_OVERRIDES).filter(([, override]) => override.sourceRect);
-  assert.equal(crops.length, 17);
+  assert.equal(crops.length, 33);
   const sizes = new Map();
   for (const [id, override] of crops) {
     const entry = byId.get(id);
@@ -147,12 +149,15 @@ test('all seventeen corrected costume rectangles fit their actual PNG and preser
     assert.ok(r.x >= 0 && r.y >= 0 && r.width > 0 && r.height > 0, id);
     assert.ok(r.x + r.width <= width && r.y + r.height <= height, id);
     const source = SPRITE_CATALOG.find(e => e.id === id);
-    for (const key of ['src', 'sheet', 'cols', 'rows', 'col', 'row']) assert.equal(entry.sprite[key], source.sprite[key], `${id}:${key}`);
+    for (const key of ['src', 'sheet', 'cols', 'rows', 'col', 'row']) assert.equal(entry.sprite[key], Object.hasOwn(override, key) ? override[key] : source.sprite[key], `${id}:${key}`);
+    if (REFINED_COSTUME_IDS.includes(id)) {
+      assert.notEqual(entry.sprite.src, source.sprite.src, `${id}: preserve the historical PNG separately`);
+      assert.ok(readFileSync(new URL(source.sprite.src, new URL('../combat/data.mjs', import.meta.url))).length > 0);
+    }
   }
-  assert.ok(byId.get('ganglecomedy').sprite.sourceRect.y + byId.get('ganglecomedy').sprite.sourceRect.height <= 640, 'Ragatha starts below this crop');
-  assert.ok(byId.get('gangletragedy').sprite.sourceRect.y + byId.get('gangletragedy').sprite.sourceRect.height < 632, 'Kinger’s cross is outside this crop');
-  assert.deepEqual(VARIANTS.filter(v => v.sprite.paletteSwap).map(v => v.id), ['gangletragedy']);
-  assert.deepEqual(VARIANTS.filter(v => v.sprite.matteMode).map(v => [v.id, v.sprite.matteMode]), [
-    ['shadowpomni', 'preserve-source'], ['shadowragatha', 'preserve-source'], ['shadowcaine', 'preserve-source'],
-  ], 'only the three reviewed ambiguous Shadow cells bypass removal');
+  assert.deepEqual(VARIANTS.filter(v => v.sprite.paletteSwap).map(v => v.id), [], 'the red replacement no longer needs a palette filter');
+  assert.deepEqual(VARIANTS.filter(v => v.sprite.matteMode === 'native-alpha').map(v => v.id).sort(), [...REFINED_COSTUME_IDS].sort());
+  assert.equal(VARIANTS.filter(v => v.sprite.matteMode === 'preserve-source').length, 0, 'new Shadow alpha replaces the opaque preservation fallback');
+  const historical = SPRITE_CATALOG.find(entry => entry.id === 'gangletragedy').sprite;
+  assert.deepEqual([historical.cols, historical.rows, historical.col, historical.row], [4, 3, 1, 1], 'source archive grid remains available without rewriting the original atlas');
 });

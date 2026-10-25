@@ -1,0 +1,2002 @@
+{
+  "schemaVersion": 1,
+  "version": "0.6.0",
+  "reviewedAt": "2026-10-23T14:32:28.769Z",
+  "scope": "20 replacement appearances: six partial comparisons to inspected official product images and fourteen technical repairs. 51 selectable costumes and 179 archive identities remain unchanged.",
+  "generation": {
+    "route": "Built-in image_gen editing tool",
+    "transparentBackground": true,
+    "method": "Five new RGBA sheets generated using inspected project images and targeted visual instructions. Original PNGs remain unmodified. Individual source rectangles and, where needed, the largest connected component are selected by the shared renderer.",
+    "constraints": [
+      "Keep the complete silhouette and clear outer margins.",
+      "Use real native alpha rather than a painted checkerboard or black background.",
+      "Preserve opaque dark bodies and translucent Bubble material independently.",
+      "Do not infer new episode appearances or certify canonical proportions from merchandise."
+    ],
+    "brief": "docs/COMBAT_ART_BRIEF_0.6.0.md"
+  },
+  "assets": [
+    {
+      "file": "assets/images/cainos-costumes-uniforms-0.6.0.png",
+      "generatedSource": "exec-f37a0c3b-6890-428f-bf62-d2993014b03c.png",
+      "bytes": 1911699,
+      "sha256": "a26595eedb2c504cc2537c0bd0c72ec208ae8a0b6aaffda1aa5e6ac8c6909526",
+      "width": 1536,
+      "height": 1024,
+      "nativeAlpha": true,
+      "transparentPixels": 886283
+    },
+    {
+      "file": "assets/images/cainos-costumes-gangle-0.6.0.png",
+      "generatedSource": "exec-748cf988-df25-4da8-b146-6e0c22488ced.png",
+      "bytes": 1734467,
+      "sha256": "67f7e969833d99c28c66908b8d71061ae0ad852e068964d7ea20622de71b8d1e",
+      "width": 1536,
+      "height": 1024,
+      "nativeAlpha": true,
+      "transparentPixels": 961078
+    },
+    {
+      "file": "assets/images/cainos-costumes-shadow-0.6.0.png",
+      "generatedSource": "exec-4f24e820-94d6-4e30-8c10-25bf87add860.png",
+      "bytes": 1701642,
+      "sha256": "2733e478e67f0ff53835fcb57947eac0d38ebae1f729b0745a2f6e87ac21ff1c",
+      "width": 1536,
+      "height": 1024,
+      "nativeAlpha": true,
+      "transparentPixels": 1074317
+    },
+    {
+      "file": "assets/images/cainos-costumes-horror-0.6.0.png",
+      "generatedSource": "exec-184030b4-deb8-42f1-b651-4d51eb50a5e6.png",
+      "bytes": 1736556,
+      "sha256": "4e854bb4afc25e7f892ccdf5bc1d8ef3366b7c04079452e4323b1955fc5b7ac9",
+      "width": 1536,
+      "height": 1024,
+      "nativeAlpha": true,
+      "transparentPixels": 1172807
+    },
+    {
+      "file": "assets/images/cainos-costumes-creatures-0.6.0.png",
+      "generatedSource": "exec-ed70aeb7-35ab-42c5-a0cb-f3fa851d004e.png",
+      "bytes": 2057350,
+      "sha256": "396a7d650c4e040ed354d6de69f9413a0656da3e9ca65678085164912151a5c4",
+      "width": 1536,
+      "height": 1024,
+      "nativeAlpha": true,
+      "transparentPixels": 912818
+    }
+  ],
+  "officialReferences": [
+    {
+      "file": "maid-jax-official.png",
+      "url": "https://glitchproductions.store/cdn/shop/files/Animatez_MaidJax_Box_1.png?v=1763022885&width=1600",
+      "bytes": 2034251,
+      "sha256": "03def647793d0b487d42e0c5b51ee8820dffb9a47d45c298ca170901be5ed88a",
+      "tier": "Primary official GLITCH store image",
+      "scope": "Inspected product photograph, not a measured reconstruction of the episode model"
+    },
+    {
+      "file": "work-gangle-official.png",
+      "url": "https://glitchproductions.store/cdn/shop/files/spudsy-gangle-plush-2.png?v=1762501000&width=1600",
+      "bytes": 285788,
+      "sha256": "2ae5f25d0b1a6de351a7541d32cb1a07a6550882624e77cce0ee06de2cf6cfeb",
+      "tier": "Primary official GLITCH store image",
+      "scope": "Inspected product photograph, not a measured reconstruction of the episode model"
+    },
+    {
+      "file": "costume-group-official.png",
+      "url": "https://glitchproductions.store/cdn/shop/files/78.png?v=1762387272&width=1600",
+      "bytes": 3054887,
+      "sha256": "ab40f6dfa1ef63708673f802bc0a1608b8108d447983cbb0c429193c63558c11",
+      "tier": "Primary official GLITCH store image",
+      "scope": "Inspected product photograph, not a measured reconstruction of the episode model"
+    },
+    {
+      "file": "spudsy-ragatha-official.png",
+      "url": "https://glitchproductions.store/cdn/shop/files/85.png?v=1762387272&width=1600",
+      "bytes": 2605712,
+      "sha256": "5ae4a47f4ce246f355bd1ac23cf06f73e474b0d37b96d7b2f7a6cdc6b6bacf3c",
+      "tier": "Primary official GLITCH store image",
+      "scope": "Inspected product photograph, not a measured reconstruction of the episode model"
+    },
+    {
+      "file": "gangle-official.png",
+      "url": "https://glitchproductions.store/cdn/shop/files/gangle-animatez-1.png?v=1762247039&width=1600",
+      "bytes": 83508,
+      "sha256": "b38fc2468ce71eef203b80004485272302bd4cd3bf75569d1ca8f49beece2a84",
+      "tier": "Primary official GLITCH store image",
+      "scope": "Inspected product photograph, not a measured reconstruction of the episode model"
+    },
+    {
+      "file": "gangle-masks-official.png",
+      "url": "https://glitchproductions.store/cdn/shop/files/Gangle-Plush_05.png?v=1762243060&width=1600",
+      "bytes": 1191396,
+      "sha256": "dd0a2b9dc3ebbe6ef7adf49b7e1a726a61b81237baf667c56da95127bcee08eb",
+      "tier": "Primary official GLITCH store image",
+      "scope": "Inspected product photograph, not a measured reconstruction of the episode model"
+    }
+  ],
+  "records": [
+    {
+      "id": "maidjax",
+      "name": "Maid Jax",
+      "fighterId": "jax",
+      "sprite": {
+        "src": "../assets/images/cainos-costumes-uniforms-0.6.0.png",
+        "sheet": "uniforms-0.6.0",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "sourceRect": {
+          "x": 40,
+          "y": 15,
+          "width": 477,
+          "height": 985
+        },
+        "matteMode": "native-alpha"
+      },
+      "resolvedIssues": [
+        "Cœur violet manquant.",
+        "Jambes violettes et jarretières à la place des bas blancs."
+      ],
+      "remainingIssues": [],
+      "assetReview": {
+        "status": "Revue technique 0.6.0 effectuée",
+        "visibleTraits": [
+          "Lapin violet aux longues oreilles, yeux et dents jaunes, coiffe et gants blancs.",
+          "Robe noire à cœur violet, tablier blanc à volants, bas blancs et chaussures noires à nœuds noirs."
+        ],
+        "identityEvidence": "Le visage, les oreilles et les membres violets maintiennent l’identité de Jax.",
+        "framing": "Rectangle individuel de la nouvelle planche 0.6.0, indépendant de sa grille indicative. Le personnage entier est contrôlé dans la garde-robe et en combat ; les apparences historiques restent archivées.",
+        "transparency": "Alpha natif de la nouvelle image 0.6.0 conservé, y compris les ouvertures entre membres. Aucun détourage par couleur noire ou blanche et aucun fond quadrillé à retirer.",
+        "proportions": "Dessin : Silhouette de lapin élancée, robe courte et longues jambes couvertes de bas ; proportions adaptées au sprite du jeu. Affichage : mise à l’échelle uniforme du cadre extrait ; le portrait et la pose de combat sont contrôlés séparément. Aucune proportion canonique mesurée.",
+        "issues": [],
+        "resolvedIssues": [
+          "Cœur violet manquant.",
+          "Jambes violettes et jarretières à la place des bas blancs."
+        ],
+        "captureId": "costumes-0.6.0#maidjax"
+      },
+      "referenceStatus": "Comparaison partielle — détails corrigés en 0.6.0",
+      "referenceScope": "Les détails visibles sur Maid Jax Animatez sont repris dans le nouveau dessin : cœur violet, coiffe, tablier, bas blancs et nœuds noirs. La pose et les proportions restent une adaptation en pixel art ; aucun plan des épisodes 5 ou 9 ni modèle 3D mesuré n’est certifié.",
+      "inspectedReferenceFiles": [
+        "maid-jax-official.png"
+      ],
+      "comparisonKind": "Partial visual comparison to official product photography",
+      "measurements": {
+        "id": "maidjax",
+        "width": 456,
+        "height": 966,
+        "bounds": {
+          "x": 30,
+          "y": 18,
+          "width": 441,
+          "height": 948
+        },
+        "visible": 214722,
+        "clear": 225774,
+        "partial": 10090,
+        "darkSolid": 34395,
+        "edge": 0,
+        "portraitSHA256": "730b52ca3774c4e91281de6b7007b3cc7c96621ded7db47f3ea6321a6ec4f768"
+      },
+      "actualUiFlow": {
+        "id": "maidjax",
+        "fighterId": "jax",
+        "acceptedAttack": true
+      }
+    },
+    {
+      "id": "workgangle",
+      "name": "Work Gangle",
+      "fighterId": "gangle",
+      "sprite": {
+        "src": "../assets/images/cainos-costumes-uniforms-0.6.0.png",
+        "sheet": "uniforms-0.6.0",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "sourceRect": {
+          "x": 527,
+          "y": 145,
+          "width": 528,
+          "height": 855
+        },
+        "matteMode": "native-alpha"
+      },
+      "resolvedIssues": [
+        "Chemise saturée et cravate noire.",
+        "Absence de l’étoile et du masque souriant de responsable dans la référence choisie."
+      ],
+      "remainingIssues": [],
+      "assetReview": {
+        "status": "Revue technique 0.6.0 effectuée",
+        "visibleTraits": [
+          "Masque blanc au large sourire denté, yeux noirs à anneaux blancs, joue rose et petite étoile jaune.",
+          "Chemise gris bleu clair, cravate bleu pâle, badge beige, pantalon noir et bras constitués de rubans rouges."
+        ],
+        "identityEvidence": "Le masque de théâtre blanc souriant et denté, l’étoile sur la joue et les bras en rubans rouges identifient Gangle sous l’uniforme de responsable.",
+        "framing": "Rectangle individuel de la nouvelle planche 0.6.0, indépendant de sa grille indicative. Le personnage entier est contrôlé dans la garde-robe et en combat ; les apparences historiques restent archivées.",
+        "transparency": "Alpha natif de la nouvelle image 0.6.0 conservé, y compris les ouvertures entre membres. Aucun détourage par couleur noire ou blanche et aucun fond quadrillé à retirer.",
+        "proportions": "Dessin : Masque large, torse vêtu et deux jambes de pantalon ; les bras restent des rubans sans mains humaines. Affichage : mise à l’échelle uniforme du cadre extrait ; le portrait et la pose de combat sont contrôlés séparément. Aucune proportion canonique mesurée.",
+        "issues": [],
+        "resolvedIssues": [
+          "Chemise saturée et cravate noire.",
+          "Absence de l’étoile et du masque souriant de responsable dans la référence choisie."
+        ],
+        "captureId": "costumes-0.6.0#workgangle"
+      },
+      "referenceStatus": "Comparaison partielle — détails corrigés en 0.6.0",
+      "referenceScope": "Le nouvel état de responsable reprend la chemise claire, la cravate pâle, le badge et le masque denté avec étoile de la photo officielle Spudsy Gangle. Le produit présente plusieurs visages ; cette variante ne remplace pas la diversité des états de Gangle dans l’épisode 4. La pose debout est une adaptation du jeu.",
+      "inspectedReferenceFiles": [
+        "work-gangle-official.png"
+      ],
+      "comparisonKind": "Partial visual comparison to official product photography",
+      "measurements": {
+        "id": "workgangle",
+        "width": 520,
+        "height": 828,
+        "bounds": {
+          "x": 14,
+          "y": 29,
+          "width": 500,
+          "height": 808
+        },
+        "visible": 179776,
+        "clear": 250784,
+        "partial": 8927,
+        "darkSolid": 41770,
+        "edge": 0,
+        "portraitSHA256": "9a20d1a2af1fd6cf29ca2fb1148875e5ee818c55be8e4fd786ec4be422a539e6"
+      },
+      "actualUiFlow": {
+        "id": "workgangle",
+        "fighterId": "gangle",
+        "acceptedAttack": true
+      }
+    },
+    {
+      "id": "spudsyragatha",
+      "name": "Spudsy Ragatha",
+      "fighterId": "ragatha",
+      "sprite": {
+        "src": "../assets/images/cainos-costumes-uniforms-0.6.0.png",
+        "sheet": "uniforms-0.6.0",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "sourceRect": {
+          "x": 1050,
+          "y": 115,
+          "width": 465,
+          "height": 885
+        },
+        "matteMode": "native-alpha"
+      },
+      "resolvedIssues": [
+        "Nœud bleu, chemise bleu pétrole et badge jaune différents de la référence consultée."
+      ],
+      "remainingIssues": [],
+      "assetReview": {
+        "status": "Revue technique 0.6.0 effectuée",
+        "visibleTraits": [
+          "Cheveux rouges en laine, œil en bouton bleu, paupière violette et visière sombre.",
+          "Uniforme et tablier gris foncé, badge clair, pantalon sombre et chaussures noires."
+        ],
+        "identityEvidence": "La coiffure et le bouton de l’œil identifient Ragatha dans cette tenue de travail.",
+        "framing": "Rectangle individuel de la nouvelle planche 0.6.0, indépendant de sa grille indicative. Le personnage entier est contrôlé dans la garde-robe et en combat ; les apparences historiques restent archivées.",
+        "transparency": "Alpha natif de la nouvelle image 0.6.0 conservé, y compris les ouvertures entre membres. Aucun détourage par couleur noire ou blanche et aucun fond quadrillé à retirer.",
+        "proportions": "Dessin : Poupée debout à cheveux de laine épais ; le tablier et la visière suivent la référence de produit, les proportions restent celles du jeu. Affichage : mise à l’échelle uniforme du cadre extrait ; le portrait et la pose de combat sont contrôlés séparément. Aucune proportion canonique mesurée.",
+        "issues": [],
+        "resolvedIssues": [
+          "Nœud bleu, chemise bleu pétrole et badge jaune différents de la référence consultée."
+        ],
+        "captureId": "costumes-0.6.0#spudsyragatha"
+      },
+      "referenceStatus": "Comparaison partielle — détails corrigés en 0.6.0",
+      "referenceScope": "Visière, uniforme gris foncé et badge clair corrigés d’après Spudsy Ragatha Animiniz. L’œil en bouton bleu et la paupière violette sont repris. La pose, la silhouette élancée et le visage restent une interprétation en pixel art ; la scène exacte de l’épisode 4 n’est pas validée par la figurine.",
+      "inspectedReferenceFiles": [
+        "spudsy-ragatha-official.png"
+      ],
+      "comparisonKind": "Partial visual comparison to official product photography",
+      "measurements": {
+        "id": "spudsyragatha",
+        "width": 417,
+        "height": 852,
+        "bounds": {
+          "x": 22,
+          "y": 31,
+          "width": 401,
+          "height": 836
+        },
+        "visible": 195349,
+        "clear": 159935,
+        "partial": 6598,
+        "darkSolid": 27301,
+        "edge": 0,
+        "portraitSHA256": "f5466068ee6fb6191852a6fd46eb46104384978c9cb2d72b8ec3b58795fa9004"
+      },
+      "actualUiFlow": {
+        "id": "spudsyragatha",
+        "fighterId": "ragatha",
+        "acceptedAttack": true
+      }
+    },
+    {
+      "id": "ganglecomedy",
+      "name": "Gangle Comedy Mask",
+      "fighterId": "gangle",
+      "sprite": {
+        "src": "../assets/images/cainos-costumes-gangle-0.6.0.png",
+        "sheet": "gangle-0.6.0",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "sourceRect": {
+          "x": 15,
+          "y": 140,
+          "width": 580,
+          "height": 815
+        },
+        "matteMode": "native-alpha"
+      },
+      "resolvedIssues": [
+        "Mains humaines blanches ajoutées aux rubans."
+      ],
+      "remainingIssues": [],
+      "assetReview": {
+        "status": "Revue technique 0.6.0 effectuée",
+        "visibleTraits": [
+          "Masque blanc entier, yeux noirs arqués et large bouche souriante.",
+          "Torse en spirale et membres de rubans rouges ; les bras se terminent par des boucles rouges, sans gants blancs."
+        ],
+        "identityEvidence": "Le masque de théâtre souriant et les rubans rouges identifient la variante de Gangle dans l’atlas.",
+        "framing": "Rectangle individuel de la nouvelle planche 0.6.0, indépendant de sa grille indicative. Le personnage entier est contrôlé dans la garde-robe et en combat ; les apparences historiques restent archivées.",
+        "transparency": "Alpha natif de la nouvelle image 0.6.0 conservé, y compris les ouvertures entre membres. Aucun détourage par couleur noire ou blanche et aucun fond quadrillé à retirer.",
+        "proportions": "Dessin : Grand masque au-dessus d’une spirale rouge ; bras courbés et deux extrémités de ruban à la base. Affichage : mise à l’échelle uniforme du cadre extrait ; le portrait et la pose de combat sont contrôlés séparément. Aucune proportion canonique mesurée.",
+        "issues": [],
+        "resolvedIssues": [
+          "Mains humaines blanches ajoutées aux rubans."
+        ],
+        "captureId": "costumes-0.6.0#ganglecomedy"
+      },
+      "referenceStatus": "Comparaison partielle — détails corrigés en 0.6.0",
+      "referenceScope": "Le nouveau dessin reprend le masque comique blanc et les rubans rouges de la référence officielle. Les mains humaines blanches ont été remplacées par des extrémités de ruban. Le masque entier et la pose sont une adaptation de l’état comique, sans certification des proportions de la série.",
+      "inspectedReferenceFiles": [
+        "gangle-official.png",
+        "gangle-masks-official.png"
+      ],
+      "comparisonKind": "Partial visual comparison to official product photography",
+      "measurements": {
+        "id": "ganglecomedy",
+        "width": 572,
+        "height": 777,
+        "bounds": {
+          "x": 18,
+          "y": 32,
+          "width": 553,
+          "height": 757
+        },
+        "visible": 191559,
+        "clear": 252885,
+        "partial": 9207,
+        "darkSolid": 43382,
+        "edge": 0,
+        "portraitSHA256": "9bb2bb6e1e51e50c496e51f62a1effe48ad86e88e79acc1b196e6ef7550d8bcd"
+      },
+      "actualUiFlow": {
+        "id": "ganglecomedy",
+        "fighterId": "gangle",
+        "acceptedAttack": true
+      }
+    },
+    {
+      "id": "gangletragedy",
+      "name": "Gangle Tragedy Mask",
+      "fighterId": "gangle",
+      "sprite": {
+        "src": "../assets/images/cainos-costumes-gangle-0.6.0.png",
+        "sheet": "gangle-0.6.0",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "sourceRect": {
+          "x": 602,
+          "y": 198,
+          "width": 410,
+          "height": 757
+        },
+        "matteMode": "native-alpha"
+      },
+      "resolvedIssues": [
+        "Fissure ajoutée au masque triste.",
+        "Rubans bleu violet corrigés auparavant par recoloration locale.",
+        "Mains humaines blanches et débris emportés avec le personnage."
+      ],
+      "remainingIssues": [],
+      "assetReview": {
+        "status": "Revue technique 0.6.0 effectuée",
+        "visibleTraits": [
+          "Masque triste blanc entier et non fissuré, yeux noirs tombants, deux larmes turquoise et bouche triste.",
+          "Corps et membres en rubans rouges, bras recourbés vers le visage ; aucun gant ni débris au sol attaché."
+        ],
+        "identityEvidence": "Le masque de théâtre triste entier, les larmes et le corps de rubans rouges identifient Gangle ; l’ancien filtre de recoloration n’est plus utilisé.",
+        "framing": "Rectangle individuel de la nouvelle planche 0.6.0, indépendant de sa grille indicative. Le personnage entier est contrôlé dans la garde-robe et en combat ; les apparences historiques restent archivées.",
+        "transparency": "Alpha natif de la nouvelle image 0.6.0 conservé, y compris les ouvertures entre membres. Aucun détourage par couleur noire ou blanche et aucun fond quadrillé à retirer.",
+        "proportions": "Dessin : Masque incliné et posture affaissée sur une spirale rouge ; les extrémités de ruban forment la base. Affichage : mise à l’échelle uniforme du cadre extrait ; le portrait et la pose de combat sont contrôlés séparément. Aucune proportion canonique mesurée.",
+        "issues": [],
+        "resolvedIssues": [
+          "Fissure ajoutée au masque triste.",
+          "Rubans bleu violet corrigés auparavant par recoloration locale.",
+          "Mains humaines blanches et débris emportés avec le personnage."
+        ],
+        "captureId": "costumes-0.6.0#gangletragedy"
+      },
+      "referenceStatus": "Comparaison partielle — détails corrigés en 0.6.0",
+      "referenceScope": "La figurine officielle distingue le masque triste entier des fragments du masque comique. Le nouveau masque triste est intact, ses membres sont rouges et sans mains humaines. Les fragments au sol ne sont pas incorporés au personnage mobile. La pose et les proportions restent une adaptation en pixel art.",
+      "inspectedReferenceFiles": [
+        "gangle-official.png",
+        "gangle-masks-official.png"
+      ],
+      "comparisonKind": "Partial visual comparison to official product photography",
+      "measurements": {
+        "id": "gangletragedy",
+        "width": 386,
+        "height": 721,
+        "bounds": {
+          "x": 16,
+          "y": 21,
+          "width": 372,
+          "height": 707
+        },
+        "visible": 159826,
+        "clear": 118480,
+        "partial": 5564,
+        "darkSolid": 34569,
+        "edge": 0,
+        "portraitSHA256": "e81267ca748d048fa639ac8986b81a85f48dadd2f16b12e58eed35e7dc65f6af"
+      },
+      "actualUiFlow": {
+        "id": "gangletragedy",
+        "fighterId": "gangle",
+        "acceptedAttack": true
+      }
+    },
+    {
+      "id": "japanesegangle",
+      "name": "Japanese Gangle",
+      "fighterId": "gangle",
+      "sprite": {
+        "src": "../assets/images/cainos-costumes-gangle-0.6.0.png",
+        "sheet": "gangle-0.6.0",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "sourceRect": {
+          "x": 1065,
+          "y": 180,
+          "width": 455,
+          "height": 780
+        },
+        "matteMode": "native-alpha"
+      },
+      "resolvedIssues": [
+        "Yeux étoilés dorés, fleur et pétales absents de la référence Anime Gangle.",
+        "Sac sombre manquant."
+      ],
+      "remainingIssues": [],
+      "assetReview": {
+        "status": "Revue technique 0.6.0 effectuée",
+        "visibleTraits": [
+          "Masque blanc aux grandes formes noires des yeux, joues roses et petite bouche souriante.",
+          "Col marin et jupe bleus, nœud rouge, membres de rubans rouges et sac sombre à nœud rouge ; aucune fleur ni étoile dorée dans les yeux."
+        ],
+        "identityEvidence": "Le masque et les rubans rouges motivent le rattachement à Gangle dans cette tenue scolaire.",
+        "framing": "Rectangle individuel de la nouvelle planche 0.6.0, indépendant de sa grille indicative. Le personnage entier est contrôlé dans la garde-robe et en combat ; les apparences historiques restent archivées.",
+        "transparency": "Alpha natif de la nouvelle image 0.6.0 conservé, y compris les ouvertures entre membres. Aucun détourage par couleur noire ou blanche et aucun fond quadrillé à retirer.",
+        "proportions": "Dessin : Grand masque, blouse et jupe au milieu du corps, deux extrémités de ruban et sac latéral. Affichage : mise à l’échelle uniforme du cadre extrait ; le portrait et la pose de combat sont contrôlés séparément. Aucune proportion canonique mesurée.",
+        "issues": [],
+        "resolvedIssues": [
+          "Yeux étoilés dorés, fleur et pétales absents de la référence Anime Gangle.",
+          "Sac sombre manquant."
+        ],
+        "captureId": "costumes-0.6.0#japanesegangle"
+      },
+      "referenceStatus": "Comparaison partielle — détails corrigés en 0.6.0",
+      "referenceScope": "Le nouveau dessin suit les motifs de la figurine Anime Gangle : yeux noirs, uniforme marin bleu et blanc, nœud rouge, rubans et sac sombre. Fleur, pétales et étoiles dorées ont été retirés. La comparaison porte sur le produit officiel ; aucun plan de l’épisode 5 ni proportion de modèle n’est certifié.",
+      "inspectedReferenceFiles": [
+        "costume-group-official.png"
+      ],
+      "comparisonKind": "Partial visual comparison to official product photography",
+      "measurements": {
+        "id": "japanesegangle",
+        "width": 430,
+        "height": 742,
+        "bounds": {
+          "x": 27,
+          "y": 25,
+          "width": 414,
+          "height": 726
+        },
+        "visible": 192601,
+        "clear": 126459,
+        "partial": 5742,
+        "darkSolid": 48447,
+        "edge": 0,
+        "portraitSHA256": "91a510940a7b7e9007431c94451b0aec40ed6c241ae5acd0af4d6fd915b659e2"
+      },
+      "actualUiFlow": {
+        "id": "japanesegangle",
+        "fighterId": "gangle",
+        "acceptedAttack": true
+      }
+    },
+    {
+      "id": "shadowpomni",
+      "name": "Shadow Pomni",
+      "fighterId": "pomni",
+      "sprite": {
+        "src": "../assets/images/cainos-costumes-shadow-0.6.0.png",
+        "sheet": "shadow-0.6.0",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "sourceRect": {
+          "x": 75,
+          "y": 125,
+          "width": 308,
+          "height": 417
+        },
+        "matteMode": "native-alpha"
+      },
+      "resolvedIssues": [
+        "Rectangle à damier conservé pour éviter de perforer le corps noir."
+      ],
+      "remainingIssues": [],
+      "assetReview": {
+        "status": "Revue technique 0.6.0 effectuée",
+        "visibleTraits": [
+          "Bonnet de bouffon sombre, iris en spirale lumineux et sourire denté.",
+          "Corps noir, griffes et contour vert."
+        ],
+        "identityEvidence": "Bonnet et proportions générales de bouffon rappellent Pomni ; griffes et sourire monstrueux sont une réinterprétation.",
+        "framing": "Rectangle individuel de la nouvelle planche 0.6.0, indépendant de sa grille indicative. Le personnage entier est contrôlé dans la garde-robe et en combat ; les apparences historiques restent archivées.",
+        "transparency": "Alpha natif de la nouvelle image 0.6.0 conservé, y compris les ouvertures entre membres. Aucun détourage par couleur noire ou blanche et aucun fond quadrillé à retirer.",
+        "proportions": "Dessin : Pose penchée avec longues griffes et grands souliers recourbés. Affichage : mise à l’échelle uniforme du cadre extrait ; le portrait et la pose de combat sont contrôlés séparément. Aucune proportion canonique mesurée.",
+        "issues": [],
+        "resolvedIssues": [
+          "Rectangle à damier conservé pour éviter de perforer le corps noir."
+        ],
+        "captureId": "costumes-0.6.0#shadowpomni"
+      },
+      "referenceStatus": "Référence de costume à identifier",
+      "referenceScope": "Revue du sprite du projet uniquement. Aucune image primaire de cette tenue n’a été comparée ; les noms et les rattachements de jeu ne prouvent pas une apparition dans la série.",
+      "inspectedReferenceFiles": [],
+      "comparisonKind": "Technical repair of existing project art; canonical status unchanged",
+      "measurements": {
+        "id": "shadowpomni",
+        "width": 287,
+        "height": 395,
+        "bounds": {
+          "x": 23,
+          "y": 21,
+          "width": 275,
+          "height": 383
+        },
+        "visible": 52701,
+        "clear": 60664,
+        "partial": 4401,
+        "darkSolid": 37810,
+        "edge": 0,
+        "portraitSHA256": "d7633192fd7dd0b5dcee985f67d66c40425a40d64de4e518f6aab38b4f0c26b3"
+      },
+      "actualUiFlow": {
+        "id": "shadowpomni",
+        "fighterId": "pomni",
+        "acceptedAttack": true
+      }
+    },
+    {
+      "id": "shadowjax",
+      "name": "Shadow Jax",
+      "fighterId": "jax",
+      "sprite": {
+        "src": "../assets/images/cainos-costumes-shadow-0.6.0.png",
+        "sheet": "shadow-0.6.0",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "sourceRect": {
+          "x": 444,
+          "y": 0,
+          "width": 270,
+          "height": 540
+        },
+        "matteMode": "native-alpha"
+      },
+      "resolvedIssues": [
+        "Damier, halos voisins et extrémité traversée par la grille."
+      ],
+      "remainingIssues": [],
+      "assetReview": {
+        "status": "Revue technique 0.6.0 effectuée",
+        "visibleTraits": [
+          "Lapin noir aux très longues oreilles, yeux et sourire jaunes.",
+          "Contour vert, doigts étirés et traces rouges de vêtement."
+        ],
+        "identityEvidence": "Oreilles de lapin et visage souriant permettent le rattachement à Jax malgré la palette noire.",
+        "framing": "Rectangle individuel de la nouvelle planche 0.6.0, indépendant de sa grille indicative. Le personnage entier est contrôlé dans la garde-robe et en combat ; les apparences historiques restent archivées.",
+        "transparency": "Alpha natif de la nouvelle image 0.6.0 conservé, y compris les ouvertures entre membres. Aucun détourage par couleur noire ou blanche et aucun fond quadrillé à retirer.",
+        "proportions": "Dessin : Silhouette très haute et maigre, mains allongées et buste incliné. Affichage : mise à l’échelle uniforme du cadre extrait ; le portrait et la pose de combat sont contrôlés séparément. Aucune proportion canonique mesurée.",
+        "issues": [],
+        "resolvedIssues": [
+          "Damier, halos voisins et extrémité traversée par la grille."
+        ],
+        "captureId": "costumes-0.6.0#shadowjax"
+      },
+      "referenceStatus": "Référence de costume à identifier",
+      "referenceScope": "Revue du sprite du projet uniquement. Aucune image primaire de cette tenue n’a été comparée ; les noms et les rattachements de jeu ne prouvent pas une apparition dans la série.",
+      "inspectedReferenceFiles": [],
+      "comparisonKind": "Technical repair of existing project art; canonical status unchanged",
+      "measurements": {
+        "id": "shadowjax",
+        "width": 214,
+        "height": 526,
+        "bounds": {
+          "x": 31,
+          "y": 10,
+          "width": 204,
+          "height": 516
+        },
+        "visible": 46903,
+        "clear": 65661,
+        "partial": 4849,
+        "darkSolid": 33228,
+        "edge": 0,
+        "portraitSHA256": "894a22b96a09766b8911ec63fcc77b7c3ace48bc687363d8bb37e07354521aeb"
+      },
+      "actualUiFlow": {
+        "id": "shadowjax",
+        "fighterId": "jax",
+        "acceptedAttack": true
+      }
+    },
+    {
+      "id": "shadowragatha",
+      "name": "Shadow Ragatha",
+      "fighterId": "ragatha",
+      "sprite": {
+        "src": "../assets/images/cainos-costumes-shadow-0.6.0.png",
+        "sheet": "shadow-0.6.0",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "sourceRect": {
+          "x": 803,
+          "y": 70,
+          "width": 315,
+          "height": 470
+        },
+        "matteMode": "native-alpha"
+      },
+      "resolvedIssues": [
+        "Rectangle à damier et halos voisins conservés avec le corps noir."
+      ],
+      "remainingIssues": [],
+      "assetReview": {
+        "status": "Revue technique 0.6.0 effectuée",
+        "visibleTraits": [
+          "Coiffure de mèches rigides, bouton rouge à un œil et robe à pièces.",
+          "Silhouette noire avec contour vert et mains étirées."
+        ],
+        "identityEvidence": "Cheveux, bouton et robe de poupée motivent le rattachement à Ragatha.",
+        "framing": "Rectangle individuel de la nouvelle planche 0.6.0, indépendant de sa grille indicative. Le personnage entier est contrôlé dans la garde-robe et en combat ; les apparences historiques restent archivées.",
+        "transparency": "Alpha natif de la nouvelle image 0.6.0 conservé, y compris les ouvertures entre membres. Aucun détourage par couleur noire ou blanche et aucun fond quadrillé à retirer.",
+        "proportions": "Dessin : Robe large et courte, pieds séparés et bras étendus de manière asymétrique. Affichage : mise à l’échelle uniforme du cadre extrait ; le portrait et la pose de combat sont contrôlés séparément. Aucune proportion canonique mesurée.",
+        "issues": [],
+        "resolvedIssues": [
+          "Rectangle à damier et halos voisins conservés avec le corps noir."
+        ],
+        "captureId": "costumes-0.6.0#shadowragatha"
+      },
+      "referenceStatus": "Référence de costume à identifier",
+      "referenceScope": "Revue du sprite du projet uniquement. Aucune image primaire de cette tenue n’a été comparée ; les noms et les rattachements de jeu ne prouvent pas une apparition dans la série.",
+      "inspectedReferenceFiles": [],
+      "comparisonKind": "Technical repair of existing project art; canonical status unchanged",
+      "measurements": {
+        "id": "shadowragatha",
+        "width": 271,
+        "height": 444,
+        "bounds": {
+          "x": 25,
+          "y": 23,
+          "width": 259,
+          "height": 432
+        },
+        "visible": 64799,
+        "clear": 55525,
+        "partial": 4177,
+        "darkSolid": 48293,
+        "edge": 0,
+        "portraitSHA256": "3dbf8b764058ce034ceed6bdce53f3ee6dfdbb57ee780d0671c37f868b0239a6"
+      },
+      "actualUiFlow": {
+        "id": "shadowragatha",
+        "fighterId": "ragatha",
+        "acceptedAttack": true
+      }
+    },
+    {
+      "id": "shadowkinger",
+      "name": "Shadow Kinger",
+      "fighterId": "kinger",
+      "sprite": {
+        "src": "../assets/images/cainos-costumes-shadow-0.6.0.png",
+        "sheet": "shadow-0.6.0",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "sourceRect": {
+          "x": 1190,
+          "y": 22,
+          "width": 275,
+          "height": 523
+        },
+        "matteMode": "native-alpha"
+      },
+      "resolvedIssues": [
+        "Damier et halos voisins inclus dans le calcul de hauteur."
+      ],
+      "remainingIssues": [],
+      "assetReview": {
+        "status": "Revue technique 0.6.0 effectuée",
+        "visibleTraits": [
+          "Croix de roi, grands yeux bleus et longue tête sombre.",
+          "Manteau noir ondulant, deux mains étirées et contour vert."
+        ],
+        "identityEvidence": "La croix et la tête de pièce d’échecs motivent le rattachement à Kinger.",
+        "framing": "Rectangle individuel de la nouvelle planche 0.6.0, indépendant de sa grille indicative. Le personnage entier est contrôlé dans la garde-robe et en combat ; les apparences historiques restent archivées.",
+        "transparency": "Alpha natif de la nouvelle image 0.6.0 conservé, y compris les ouvertures entre membres. Aucun détourage par couleur noire ou blanche et aucun fond quadrillé à retirer.",
+        "proportions": "Dessin : Silhouette verticale au socle élargi ; les bras sont placés sur un côté du corps. Affichage : mise à l’échelle uniforme du cadre extrait ; le portrait et la pose de combat sont contrôlés séparément. Aucune proportion canonique mesurée.",
+        "issues": [],
+        "resolvedIssues": [
+          "Damier et halos voisins inclus dans le calcul de hauteur."
+        ],
+        "captureId": "costumes-0.6.0#shadowkinger"
+      },
+      "referenceStatus": "Référence de costume à identifier",
+      "referenceScope": "Revue du sprite du projet uniquement. Aucune image primaire de cette tenue n’a été comparée ; les noms et les rattachements de jeu ne prouvent pas une apparition dans la série.",
+      "inspectedReferenceFiles": [],
+      "comparisonKind": "Technical repair of existing project art; canonical status unchanged",
+      "measurements": {
+        "id": "shadowkinger",
+        "width": 223,
+        "height": 499,
+        "bounds": {
+          "x": 33,
+          "y": 25,
+          "width": 213,
+          "height": 489
+        },
+        "visible": 47402,
+        "clear": 63875,
+        "partial": 3235,
+        "darkSolid": 36168,
+        "edge": 0,
+        "portraitSHA256": "8e9343c8988708f4dc9d62cd1da48029ea39215bec1cd40d7d6ca28fff5bce4a"
+      },
+      "actualUiFlow": {
+        "id": "shadowkinger",
+        "fighterId": "kinger",
+        "acceptedAttack": true
+      }
+    },
+    {
+      "id": "shadowgangle",
+      "name": "Shadow Gangle",
+      "fighterId": "gangle",
+      "sprite": {
+        "src": "../assets/images/cainos-costumes-shadow-0.6.0.png",
+        "sheet": "shadow-0.6.0",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "sourceRect": {
+          "x": 65,
+          "y": 565,
+          "width": 302,
+          "height": 459
+        },
+        "matteMode": "native-alpha"
+      },
+      "resolvedIssues": [
+        "Damier entre les rubans et dessin traversé par le bord gauche de la cellule."
+      ],
+      "remainingIssues": [],
+      "assetReview": {
+        "status": "Revue technique 0.6.0 effectuée",
+        "visibleTraits": [
+          "Masque noir triste aux yeux et à la bouche jaunes.",
+          "Corps en spirales de ruban noir et rouge, mains en crochet et contour vert."
+        ],
+        "identityEvidence": "Masque triste et structure de ruban restent reconnaissables comme variante de Gangle.",
+        "framing": "Rectangle individuel de la nouvelle planche 0.6.0, indépendant de sa grille indicative. Le personnage entier est contrôlé dans la garde-robe et en combat ; les apparences historiques restent archivées.",
+        "transparency": "Alpha natif de la nouvelle image 0.6.0 conservé, y compris les ouvertures entre membres. Aucun détourage par couleur noire ou blanche et aucun fond quadrillé à retirer.",
+        "proportions": "Dessin : Tête large au-dessus d’un enroulement vertical de rubans, sans jambes séparées. Affichage : mise à l’échelle uniforme du cadre extrait ; le portrait et la pose de combat sont contrôlés séparément. Aucune proportion canonique mesurée.",
+        "issues": [],
+        "resolvedIssues": [
+          "Damier entre les rubans et dessin traversé par le bord gauche de la cellule."
+        ],
+        "captureId": "costumes-0.6.0#shadowgangle"
+      },
+      "referenceStatus": "Référence de costume à identifier",
+      "referenceScope": "Revue du sprite du projet uniquement. Aucune image primaire de cette tenue n’a été comparée ; les noms et les rattachements de jeu ne prouvent pas une apparition dans la série.",
+      "inspectedReferenceFiles": [],
+      "comparisonKind": "Technical repair of existing project art; canonical status unchanged",
+      "measurements": {
+        "id": "shadowgangle",
+        "width": 263,
+        "height": 422,
+        "bounds": {
+          "x": 24,
+          "y": 34,
+          "width": 253,
+          "height": 412
+        },
+        "visible": 49702,
+        "clear": 61284,
+        "partial": 5771,
+        "darkSolid": 31258,
+        "edge": 0,
+        "portraitSHA256": "24852e6d68f2316daae1c3d73b4ec8320bec6b17f673f92d18561f4ca92cfe6d"
+      },
+      "actualUiFlow": {
+        "id": "shadowgangle",
+        "fighterId": "gangle",
+        "acceptedAttack": true
+      }
+    },
+    {
+      "id": "shadowzooble",
+      "name": "Shadow Zooble",
+      "fighterId": "zooble",
+      "sprite": {
+        "src": "../assets/images/cainos-costumes-shadow-0.6.0.png",
+        "sheet": "shadow-0.6.0",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "sourceRect": {
+          "x": 433,
+          "y": 536,
+          "width": 300,
+          "height": 488
+        },
+        "matteMode": "native-alpha"
+      },
+      "resolvedIssues": [
+        "Damier et halos voisins dans la silhouette extraite."
+      ],
+      "remainingIssues": [],
+      "assetReview": {
+        "status": "Revue technique 0.6.0 effectuée",
+        "visibleTraits": [
+          "Tête triangulaire noire, yeux dépareillés et antennes asymétriques.",
+          "Membres géométriques noirs à contour vert, mains en pinces et segments de tailles différentes."
+        ],
+        "identityEvidence": "Tête triangulaire et assemblage modulaire motivent le rattachement à Zooble.",
+        "framing": "Rectangle individuel de la nouvelle planche 0.6.0, indépendant de sa grille indicative. Le personnage entier est contrôlé dans la garde-robe et en combat ; les apparences historiques restent archivées.",
+        "transparency": "Alpha natif de la nouvelle image 0.6.0 conservé, y compris les ouvertures entre membres. Aucun détourage par couleur noire ou blanche et aucun fond quadrillé à retirer.",
+        "proportions": "Dessin : Silhouette asymétrique large, grands segments séparés et jambes longues. Affichage : mise à l’échelle uniforme du cadre extrait ; le portrait et la pose de combat sont contrôlés séparément. Aucune proportion canonique mesurée.",
+        "issues": [],
+        "resolvedIssues": [
+          "Damier et halos voisins dans la silhouette extraite."
+        ],
+        "captureId": "costumes-0.6.0#shadowzooble"
+      },
+      "referenceStatus": "Référence de costume à identifier",
+      "referenceScope": "Revue du sprite du projet uniquement. Aucune image primaire de cette tenue n’a été comparée ; les noms et les rattachements de jeu ne prouvent pas une apparition dans la série.",
+      "inspectedReferenceFiles": [],
+      "comparisonKind": "Technical repair of existing project art; canonical status unchanged",
+      "measurements": {
+        "id": "shadowzooble",
+        "width": 257,
+        "height": 466,
+        "bounds": {
+          "x": 26,
+          "y": 18,
+          "width": 247,
+          "height": 456
+        },
+        "visible": 48200,
+        "clear": 71562,
+        "partial": 5396,
+        "darkSolid": 32712,
+        "edge": 0,
+        "portraitSHA256": "2f8809f2616b5dd12033fe664f3eff91990ff2313cb5c2bf1116e789e8baf310"
+      },
+      "actualUiFlow": {
+        "id": "shadowzooble",
+        "fighterId": "zooble",
+        "acceptedAttack": true
+      }
+    },
+    {
+      "id": "shadowcaine",
+      "name": "Shadow Caine",
+      "fighterId": "caine",
+      "sprite": {
+        "src": "../assets/images/cainos-costumes-shadow-0.6.0.png",
+        "sheet": "shadow-0.6.0",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "sourceRect": {
+          "x": 810,
+          "y": 535,
+          "width": 335,
+          "height": 489
+        },
+        "matteMode": "native-alpha"
+      },
+      "resolvedIssues": [
+        "Rectangle à damier conservé pour protéger les volutes noires."
+      ],
+      "remainingIssues": [],
+      "assetReview": {
+        "status": "Revue technique 0.6.0 effectuée",
+        "visibleTraits": [
+          "Chapeau haut-de-forme, mâchoires dentées et yeux flottants lumineux.",
+          "Vêtement noir, nœud rouge, mains en griffes et bas du corps en volutes."
+        ],
+        "identityEvidence": "Le haut-de-forme et les mâchoires identifient Caine ; le corps en volutes est une réinterprétation du dessin.",
+        "framing": "Rectangle individuel de la nouvelle planche 0.6.0, indépendant de sa grille indicative. Le personnage entier est contrôlé dans la garde-robe et en combat ; les apparences historiques restent archivées.",
+        "transparency": "Alpha natif de la nouvelle image 0.6.0 conservé, y compris les ouvertures entre membres. Aucun détourage par couleur noire ou blanche et aucun fond quadrillé à retirer.",
+        "proportions": "Dessin : Corps sans jambes dessinées, terminé en pans recourbés ; mains écartées. Affichage : mise à l’échelle uniforme du cadre extrait ; le portrait et la pose de combat sont contrôlés séparément. Aucune proportion canonique mesurée.",
+        "issues": [],
+        "resolvedIssues": [
+          "Rectangle à damier conservé pour protéger les volutes noires."
+        ],
+        "captureId": "costumes-0.6.0#shadowcaine"
+      },
+      "referenceStatus": "Référence de costume à identifier",
+      "referenceScope": "Revue du sprite du projet uniquement. Aucune image primaire de cette tenue n’a été comparée ; les noms et les rattachements de jeu ne prouvent pas une apparition dans la série.",
+      "inspectedReferenceFiles": [],
+      "comparisonKind": "Technical repair of existing project art; canonical status unchanged",
+      "measurements": {
+        "id": "shadowcaine",
+        "width": 293,
+        "height": 485,
+        "bounds": {
+          "x": 30,
+          "y": 5,
+          "width": 281,
+          "height": 474
+        },
+        "visible": 54417,
+        "clear": 87688,
+        "partial": 4439,
+        "darkSolid": 37695,
+        "edge": 0,
+        "portraitSHA256": "0e31ac5ccbf2fa46d00d8c482ef823d23dd0c854606b98cc85c10aaccdb0f753"
+      },
+      "actualUiFlow": {
+        "id": "shadowcaine",
+        "fighterId": "caine",
+        "acceptedAttack": true
+      }
+    },
+    {
+      "id": "horrorpomnivoid",
+      "name": "Horror Pomni Void-Eyes",
+      "fighterId": "pomni",
+      "sprite": {
+        "src": "../assets/images/cainos-costumes-horror-0.6.0.png",
+        "sheet": "horror-0.6.0",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "sourceRect": {
+          "x": 300,
+          "y": 5,
+          "width": 370,
+          "height": 477
+        },
+        "matteMode": "native-alpha"
+      },
+      "resolvedIssues": [
+        "Rectangle sombre et lignes du fond réduisant la taille apparente."
+      ],
+      "remainingIssues": [],
+      "assetReview": {
+        "status": "Revue technique 0.6.0 effectuée",
+        "visibleTraits": [
+          "Bonnet et combinaison de bouffon rouges et bleus.",
+          "Orbites noires, coulures sombres et deux globes oculaires portés dans les mains."
+        ],
+        "identityEvidence": "Bonnet et combinaison rattachent cette variation d’horreur à Pomni.",
+        "framing": "Rectangle individuel de la nouvelle planche 0.6.0, indépendant de sa grille indicative. Le personnage entier est contrôlé dans la garde-robe et en combat ; les apparences historiques restent archivées.",
+        "transparency": "Alpha natif de la nouvelle image 0.6.0 conservé, y compris les ouvertures entre membres. Aucun détourage par couleur noire ou blanche et aucun fond quadrillé à retirer.",
+        "proportions": "Dessin : Grande tête au-dessus d’un torse court ; les deux objets sphériques élargissent les bras. Affichage : mise à l’échelle uniforme du cadre extrait ; le portrait et la pose de combat sont contrôlés séparément. Aucune proportion canonique mesurée.",
+        "issues": [],
+        "resolvedIssues": [
+          "Rectangle sombre et lignes du fond réduisant la taille apparente."
+        ],
+        "captureId": "costumes-0.6.0#horrorpomnivoid"
+      },
+      "referenceStatus": "Référence de costume à identifier",
+      "referenceScope": "Revue du sprite du projet uniquement. Aucune image primaire de cette tenue n’a été comparée ; les noms et les rattachements de jeu ne prouvent pas une apparition dans la série.",
+      "inspectedReferenceFiles": [],
+      "comparisonKind": "Technical repair of existing project art; canonical status unchanged",
+      "measurements": {
+        "id": "horrorpomnivoid",
+        "width": 326,
+        "height": 462,
+        "bounds": {
+          "x": 21,
+          "y": 17,
+          "width": 312,
+          "height": 448
+        },
+        "visible": 80536,
+        "clear": 70076,
+        "partial": 3847,
+        "darkSolid": 17856,
+        "edge": 0,
+        "portraitSHA256": "368d926dca3dde04679c14e1b2c40b1704c95e64b21e09a1bc73eb70a1d2dc29"
+      },
+      "actualUiFlow": {
+        "id": "horrorpomnivoid",
+        "fighterId": "pomni",
+        "acceptedAttack": true
+      }
+    },
+    {
+      "id": "horrorpomnispiral",
+      "name": "Horror Pomni Spiral-Eyes",
+      "fighterId": "pomni",
+      "sprite": {
+        "src": "../assets/images/cainos-costumes-horror-0.6.0.png",
+        "sheet": "horror-0.6.0",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "sourceRect": {
+          "x": 880,
+          "y": 0,
+          "width": 380,
+          "height": 480
+        },
+        "matteMode": "native-alpha",
+        "component": "largest"
+      },
+      "resolvedIssues": [
+        "Rectangle sombre, lignes du fond et trace d’une cellule voisine."
+      ],
+      "remainingIssues": [],
+      "assetReview": {
+        "status": "Revue technique 0.6.0 effectuée",
+        "visibleTraits": [
+          "Bonnet et combinaison de bouffon rouges et bleus.",
+          "Yeux orange en spirale, sourire denté, mains tendues et contour lumineux vert."
+        ],
+        "identityEvidence": "L’habit de bouffon est maintenu ; yeux et sourire constituent une variation d’horreur.",
+        "framing": "Rectangle individuel de la nouvelle planche 0.6.0, indépendant de sa grille indicative. Le personnage entier est contrôlé dans la garde-robe et en combat ; les apparences historiques restent archivées.",
+        "transparency": "Alpha natif de la nouvelle image 0.6.0 conservé, y compris les ouvertures entre membres. Aucun détourage par couleur noire ou blanche et aucun fond quadrillé à retirer.",
+        "proportions": "Dessin : Pose penchée avec bras tendus, grandes chaussures et tête large. Affichage : mise à l’échelle uniforme du cadre extrait ; le portrait et la pose de combat sont contrôlés séparément. Aucune proportion canonique mesurée.",
+        "issues": [],
+        "resolvedIssues": [
+          "Rectangle sombre, lignes du fond et trace d’une cellule voisine."
+        ],
+        "captureId": "costumes-0.6.0#horrorpomnispiral"
+      },
+      "referenceStatus": "Référence de costume à identifier",
+      "referenceScope": "Revue du sprite du projet uniquement. Aucune image primaire de cette tenue n’a été comparée ; les noms et les rattachements de jeu ne prouvent pas une apparition dans la série.",
+      "inspectedReferenceFiles": [],
+      "comparisonKind": "Technical repair of existing project art; canonical status unchanged",
+      "measurements": {
+        "id": "horrorpomnispiral",
+        "width": 336,
+        "height": 468,
+        "bounds": {
+          "x": 25,
+          "y": 14,
+          "width": 322,
+          "height": 454
+        },
+        "visible": 78704,
+        "clear": 78544,
+        "partial": 4333,
+        "darkSolid": 15842,
+        "edge": 0,
+        "portraitSHA256": "e79c19ac1313b5f6ab414e51fb0c341101b56c0e05472b872c3049aba7346cb6"
+      },
+      "actualUiFlow": {
+        "id": "horrorpomnispiral",
+        "fighterId": "pomni",
+        "acceptedAttack": true
+      }
+    },
+    {
+      "id": "horrorpomniskull",
+      "name": "Horror Pomni Skull-Mask",
+      "fighterId": "pomni",
+      "sprite": {
+        "src": "../assets/images/cainos-costumes-horror-0.6.0.png",
+        "sheet": "horror-0.6.0",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "sourceRect": {
+          "x": 300,
+          "y": 505,
+          "width": 380,
+          "height": 500
+        },
+        "matteMode": "native-alpha"
+      },
+      "resolvedIssues": [
+        "Rectangle sombre et lignes du fond réduisant la taille apparente."
+      ],
+      "remainingIssues": [],
+      "assetReview": {
+        "status": "Revue technique 0.6.0 effectuée",
+        "visibleTraits": [
+          "Bonnet et combinaison de bouffon rouges et bleus.",
+          "Visage de crâne jaune, orbites sombres, bouche dentée et mains serrées devant le torse."
+        ],
+        "identityEvidence": "L’habit de bouffon motive le rattachement à Pomni ; le visage de crâne n’est pas un état canonique établi par cette revue.",
+        "framing": "Rectangle individuel de la nouvelle planche 0.6.0, indépendant de sa grille indicative. Le personnage entier est contrôlé dans la garde-robe et en combat ; les apparences historiques restent archivées.",
+        "transparency": "Alpha natif de la nouvelle image 0.6.0 conservé, y compris les ouvertures entre membres. Aucun détourage par couleur noire ou blanche et aucun fond quadrillé à retirer.",
+        "proportions": "Dessin : Tête large, torse court et jambes droites ; les mains restent devant le corps. Affichage : mise à l’échelle uniforme du cadre extrait ; le portrait et la pose de combat sont contrôlés séparément. Aucune proportion canonique mesurée.",
+        "issues": [],
+        "resolvedIssues": [
+          "Rectangle sombre et lignes du fond réduisant la taille apparente."
+        ],
+        "captureId": "costumes-0.6.0#horrorpomniskull"
+      },
+      "referenceStatus": "Référence de costume à identifier",
+      "referenceScope": "Revue du sprite du projet uniquement. Aucune image primaire de cette tenue n’a été comparée ; les noms et les rattachements de jeu ne prouvent pas une apparition dans la série.",
+      "inspectedReferenceFiles": [],
+      "comparisonKind": "Technical repair of existing project art; canonical status unchanged",
+      "measurements": {
+        "id": "horrorpomniskull",
+        "width": 331,
+        "height": 489,
+        "bounds": {
+          "x": 30,
+          "y": 11,
+          "width": 317,
+          "height": 475
+        },
+        "visible": 80547,
+        "clear": 81312,
+        "partial": 3881,
+        "darkSolid": 18336,
+        "edge": 0,
+        "portraitSHA256": "3ef42f607b54900face224cca98e9b1408d69a5c7316c685dec10bd85f2d2011"
+      },
+      "actualUiFlow": {
+        "id": "horrorpomniskull",
+        "fighterId": "pomni",
+        "acceptedAttack": true
+      }
+    },
+    {
+      "id": "hunterjax",
+      "name": "Hunter Jax",
+      "fighterId": "jax",
+      "sprite": {
+        "src": "../assets/images/cainos-costumes-horror-0.6.0.png",
+        "sheet": "horror-0.6.0",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "sourceRect": {
+          "x": 900,
+          "y": 455,
+          "width": 405,
+          "height": 563
+        },
+        "matteMode": "native-alpha",
+        "component": "largest"
+      },
+      "resolvedIssues": [
+        "Fond quadrillé lié à la silhouette."
+      ],
+      "remainingIssues": [],
+      "assetReview": {
+        "status": "Revue technique 0.6.0 effectuée",
+        "visibleTraits": [
+          "Lapin violet aux yeux jaunes, chapeau de safari et fusil vertical.",
+          "Chemise et short beiges, gilet vert, ceintures et bottes brunes ; une jambe repliée."
+        ],
+        "identityEvidence": "Les oreilles et le visage violets identifient Jax dans ce dessin de chasseur.",
+        "framing": "Rectangle individuel de la nouvelle planche 0.6.0, indépendant de sa grille indicative. Le personnage entier est contrôlé dans la garde-robe et en combat ; les apparences historiques restent archivées.",
+        "transparency": "Alpha natif de la nouvelle image 0.6.0 conservé, y compris les ouvertures entre membres. Aucun détourage par couleur noire ou blanche et aucun fond quadrillé à retirer.",
+        "proportions": "Dessin : Pose basse avec jambe repliée, longues oreilles et fusil dépassant le coude. Affichage : mise à l’échelle uniforme du cadre extrait ; le portrait et la pose de combat sont contrôlés séparément. Aucune proportion canonique mesurée.",
+        "issues": [],
+        "resolvedIssues": [
+          "Fond quadrillé lié à la silhouette."
+        ],
+        "captureId": "costumes-0.6.0#hunterjax"
+      },
+      "referenceStatus": "Épisode à revoir",
+      "referenceScope": "L’épisode indiqué par les archives est une cible de comparaison. Aucun plan de cette tenue n’a été vérifié dans cette revue ; son nom, sa disponibilité et sa fiche technique ne prouvent pas son apparence canonique.",
+      "inspectedReferenceFiles": [],
+      "comparisonKind": "Technical repair of existing project art; canonical status unchanged",
+      "measurements": {
+        "id": "hunterjax",
+        "width": 368,
+        "height": 552,
+        "bounds": {
+          "x": 26,
+          "y": 12,
+          "width": 354,
+          "height": 538
+        },
+        "visible": 99881,
+        "clear": 103255,
+        "partial": 6809,
+        "darkSolid": 11762,
+        "edge": 0,
+        "portraitSHA256": "45402491065aa99303e877f62388b75d0fff46e59e8cc4e11a4e0f9045b80553"
+      },
+      "actualUiFlow": {
+        "id": "hunterjax",
+        "fighterId": "jax",
+        "acceptedAttack": true
+      }
+    },
+    {
+      "id": "rhinogangle",
+      "name": "Rhino Gangle",
+      "fighterId": "gangle",
+      "sprite": {
+        "src": "../assets/images/cainos-costumes-creatures-0.6.0.png",
+        "sheet": "creatures-0.6.0",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "sourceRect": {
+          "x": 290,
+          "y": 495,
+          "width": 380,
+          "height": 518
+        },
+        "matteMode": "native-alpha"
+      },
+      "resolvedIssues": [
+        "Socle de pierres et d’herbe entraîné pendant les déplacements."
+      ],
+      "remainingIssues": [],
+      "assetReview": {
+        "status": "Revue technique 0.6.0 effectuée",
+        "visibleTraits": [
+          "Tête de rhinocéros gris clair, corne, chapeau de safari et gilet beige.",
+          "Corps et membres en rubans rouges, sans socle, pierre ni herbe attachés."
+        ],
+        "identityEvidence": "Le corps en rubans rattache ce dessin à Gangle ; la tête de rhinocéros ne prouve pas à elle seule une transformation de la série.",
+        "framing": "Rectangle individuel de la nouvelle planche 0.6.0, indépendant de sa grille indicative. Le personnage entier est contrôlé dans la garde-robe et en combat ; les apparences historiques restent archivées.",
+        "transparency": "Alpha natif de la nouvelle image 0.6.0 conservé, y compris les ouvertures entre membres. Aucun détourage par couleur noire ou blanche et aucun fond quadrillé à retirer.",
+        "proportions": "Dessin : Tête de rhinocéros large sur une spirale étroite et libre de rubans rouges. Affichage : mise à l’échelle uniforme du cadre extrait ; le portrait et la pose de combat sont contrôlés séparément. Aucune proportion canonique mesurée.",
+        "issues": [],
+        "resolvedIssues": [
+          "Socle de pierres et d’herbe entraîné pendant les déplacements."
+        ],
+        "captureId": "costumes-0.6.0#rhinogangle"
+      },
+      "referenceStatus": "Épisode à revoir",
+      "referenceScope": "L’épisode indiqué par les archives est une cible de comparaison. Aucun plan de cette tenue n’a été vérifié dans cette revue ; son nom, sa disponibilité et sa fiche technique ne prouvent pas son apparence canonique.",
+      "inspectedReferenceFiles": [],
+      "comparisonKind": "Technical repair of existing project art; canonical status unchanged",
+      "measurements": {
+        "id": "rhinogangle",
+        "width": 355,
+        "height": 509,
+        "bounds": {
+          "x": 19,
+          "y": 11,
+          "width": 341,
+          "height": 495
+        },
+        "visible": 92445,
+        "clear": 88250,
+        "partial": 5891,
+        "darkSolid": 9657,
+        "edge": 0,
+        "portraitSHA256": "f93ce9bb2e638ae99188916cebc5c286ffa135ecdf4df3346c2fc9abc55178cb"
+      },
+      "actualUiFlow": {
+        "id": "rhinogangle",
+        "fighterId": "gangle",
+        "acceptedAttack": true
+      }
+    },
+    {
+      "id": "gloinkqueenscale",
+      "name": "Gloink Queen True Scale",
+      "fighterId": "gloinkqueen",
+      "sprite": {
+        "src": "../assets/images/cainos-costumes-creatures-0.6.0.png",
+        "sheet": "creatures-0.6.0",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "sourceRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1536,
+          "height": 565
+        },
+        "matteMode": "native-alpha",
+        "component": "largest",
+        "nativeFacing": -1
+      },
+      "resolvedIssues": [
+        "Fond quadrillé reliant la reine aux petits Gloinks.",
+        "Petits Gloinks attachés à la même extraction."
+      ],
+      "remainingIssues": [
+        "Le libellé historique True Scale ne constitue toujours pas une mesure canonique de la taille."
+      ],
+      "assetReview": {
+        "status": "Revue technique 0.6.0 effectuée — limites consignées",
+        "visibleTraits": [
+          "Long corps rose à taches jaunes, nombreux yeux et grande bouche dentée à bord bleu.",
+          "La reine est isolée ; aucun petit Gloink ni quadrillage n’accompagne le dessin."
+        ],
+        "identityEvidence": "La créature principale est la même identité de reine ; les petits Gloinks sont des éléments séparés de la planche.",
+        "framing": "Cadre supérieur de la planche 0.6.0 et sélection explicite de la grande composante : elle conserve la reine entière et exclut la petite portion de la tête de rhinocéros située dans le rectangle voisin.",
+        "transparency": "Alpha natif de la nouvelle image 0.6.0 conservé, y compris les ouvertures entre membres. Aucun détourage par couleur noire ou blanche et aucun fond quadrillé à retirer.",
+        "proportions": "Dessin : Silhouette très allongée horizontalement ; le nom historique True Scale ne repose sur aucune mesure canonique. Affichage : mise à l’échelle uniforme du cadre extrait ; le portrait et la pose de combat sont contrôlés séparément. Aucune proportion canonique mesurée.",
+        "issues": [
+          "Le libellé historique True Scale ne constitue toujours pas une mesure canonique de la taille."
+        ],
+        "resolvedIssues": [
+          "Fond quadrillé reliant la reine aux petits Gloinks.",
+          "Petits Gloinks attachés à la même extraction."
+        ],
+        "captureId": "costumes-0.6.0#gloinkqueenscale"
+      },
+      "referenceStatus": "Épisode à revoir",
+      "referenceScope": "L’épisode indiqué par les archives est une cible de comparaison. Aucun plan de cette tenue n’a été vérifié dans cette revue ; son nom, sa disponibilité et sa fiche technique ne prouvent pas son apparence canonique.",
+      "inspectedReferenceFiles": [],
+      "comparisonKind": "Technical repair of existing project art; canonical status unchanged",
+      "measurements": {
+        "id": "gloinkqueenscale",
+        "width": 1512,
+        "height": 549,
+        "bounds": {
+          "x": 34,
+          "y": 26,
+          "width": 1495,
+          "height": 529
+        },
+        "visible": 459916,
+        "clear": 370172,
+        "partial": 7737,
+        "darkSolid": 26334,
+        "edge": 0,
+        "portraitSHA256": "25674e4cd9c83bdc3bf4f01c7c86638cbc603095bae7efe804f8a28ae2970255"
+      },
+      "actualUiFlow": {
+        "id": "gloinkqueenscale",
+        "fighterId": "gloinkqueen",
+        "acceptedAttack": true
+      }
+    },
+    {
+      "id": "inertbubble",
+      "name": "Bubble inerte",
+      "fighterId": "bubble",
+      "sprite": {
+        "src": "../assets/images/cainos-costumes-creatures-0.6.0.png",
+        "sheet": "creatures-0.6.0",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "sourceRect": {
+          "x": 918,
+          "y": 665,
+          "width": 325,
+          "height": 297
+        },
+        "matteMode": "native-alpha"
+      },
+      "resolvedIssues": [
+        "Remplissage violet opaque et ombre au sol inclus dans l’ancien dessin."
+      ],
+      "remainingIssues": [],
+      "assetReview": {
+        "status": "Revue technique 0.6.0 effectuée",
+        "visibleTraits": [
+          "Bulle ronde à contour lavande, deux traits noirs pour les yeux et reflets blancs.",
+          "Centre réellement translucide en alpha natif, sans ombre au sol attachée."
+        ],
+        "identityEvidence": "La forme de bulle est reconnaissable ; le nom inerte est une attribution narrative non prouvée par l’image seule.",
+        "framing": "Rectangle individuel de la nouvelle planche 0.6.0, indépendant de sa grille indicative. Le personnage entier est contrôlé dans la garde-robe et en combat ; les apparences historiques restent archivées.",
+        "transparency": "Alpha natif partiel au centre de la bulle ; le décor reste visible à travers sa matière. Les yeux et les reflets sont davantage opaques. Aucun filtre d’opacité uniforme n’est appliqué au personnage.",
+        "proportions": "Dessin : Sphère presque ronde, sans socle ni ombre externe dans la silhouette. Affichage : mise à l’échelle uniforme du cadre extrait ; le portrait et la pose de combat sont contrôlés séparément. Aucune proportion canonique mesurée.",
+        "issues": [],
+        "resolvedIssues": [
+          "Remplissage violet opaque et ombre au sol inclus dans l’ancien dessin."
+        ],
+        "captureId": "costumes-0.6.0#inertbubble"
+      },
+      "referenceStatus": "Épisode à revoir",
+      "referenceScope": "L’épisode indiqué par les archives est une cible de comparaison. Aucun plan de cette tenue n’a été vérifié dans cette revue ; son nom, sa disponibilité et sa fiche technique ne prouvent pas son apparence canonique.",
+      "inspectedReferenceFiles": [],
+      "comparisonKind": "Technical repair of existing project art; canonical status unchanged",
+      "measurements": {
+        "id": "inertbubble",
+        "width": 278,
+        "height": 262,
+        "bounds": {
+          "x": 27,
+          "y": 20,
+          "width": 268,
+          "height": 252
+        },
+        "visible": 53277,
+        "clear": 19559,
+        "partial": 41475,
+        "darkSolid": 763,
+        "edge": 0,
+        "portraitSHA256": "50c96397f695627da514f9a0f0038fbacd57a988b0ccea2f1d446b41d91368f1"
+      },
+      "actualUiFlow": {
+        "id": "inertbubble",
+        "fighterId": "bubble",
+        "acceptedAttack": true
+      }
+    }
+  ],
+  "browserEvidence": {
+    "script": "tests/combat-costume-refinements-browser.mjs",
+    "report": "audit-combat/costumes-0.6.0/report.json",
+    "reportSha256": "9df44179420e619f887862cefc22694217e81479acda4cc8cbac742d9f83c0dd",
+    "version": "0.6.0",
+    "checkedAt": "2026-10-23T14:32:28.769Z",
+    "base": "http://127.0.0.1:4178",
+    "scope": "Twenty wardrobe-to-training flows with an accepted keyboard attack, not twenty completed duel results.",
+    "checks": [
+      {
+        "name": "All 20 replacement sprites have real transparent margins and complete extraction bounds",
+        "detail": "Native-alpha portraits loaded through the shipped renderer; no visible pixel touches any extracted outer edge.",
+        "pass": true
+      },
+      {
+        "name": "All seven Shadow bodies retain solid black pixels without opaque atlas rectangles",
+        "detail": "Every extracted Shadow figure has substantial opaque black body area and clear surrounding alpha.",
+        "pass": true
+      },
+      {
+        "name": "Queen and adjacent horror cells isolate the complete intended component",
+        "detail": "Queen preserves its 529px body while excluding the neighboring rhinoceros fragment; both close horror cells keep their complete bodies.",
+        "pass": true
+      },
+      {
+        "name": "Bubble uses partial native alpha while retaining readable dark eyes",
+        "detail": "Most visible sphere pixels are translucent; eyes remain opaque enough to survive light and dark stages.",
+        "pass": true
+      },
+      {
+        "name": "Six primary-reference costumes expose the corrected detail review in their real wardrobe",
+        "detail": "All six keep their partial comparison label, source links and limits; captured previews use the new art.",
+        "pass": true
+      },
+      {
+        "name": "All 20 refined costumes launch actual training and accept a real keyboard attack",
+        "detail": "Wardrobe → Try appearance → fight was executed for every replacement; browsing/training does not award progress or change the profile.",
+        "pass": true
+      },
+      {
+        "name": "Refined costume preview fits the 390px wardrobe and preserves selection after Escape",
+        "detail": "Viewport layout and keyboard closure checked; no claim about a physical phone.",
+        "pass": true
+      },
+      {
+        "name": "Refined costume flows produce no browser or local asset errors",
+        "detail": "All five generated PNG sheets and the new module loaded successfully.",
+        "pass": true
+      }
+    ],
+    "errors": [],
+    "records": [
+      {
+        "id": "maidjax",
+        "width": 456,
+        "height": 966,
+        "bounds": {
+          "x": 30,
+          "y": 18,
+          "width": 441,
+          "height": 948
+        },
+        "visible": 214722,
+        "clear": 225774,
+        "partial": 10090,
+        "darkSolid": 34395,
+        "edge": 0,
+        "portraitSHA256": "730b52ca3774c4e91281de6b7007b3cc7c96621ded7db47f3ea6321a6ec4f768"
+      },
+      {
+        "id": "workgangle",
+        "width": 520,
+        "height": 828,
+        "bounds": {
+          "x": 14,
+          "y": 29,
+          "width": 500,
+          "height": 808
+        },
+        "visible": 179776,
+        "clear": 250784,
+        "partial": 8927,
+        "darkSolid": 41770,
+        "edge": 0,
+        "portraitSHA256": "9a20d1a2af1fd6cf29ca2fb1148875e5ee818c55be8e4fd786ec4be422a539e6"
+      },
+      {
+        "id": "spudsyragatha",
+        "width": 417,
+        "height": 852,
+        "bounds": {
+          "x": 22,
+          "y": 31,
+          "width": 401,
+          "height": 836
+        },
+        "visible": 195349,
+        "clear": 159935,
+        "partial": 6598,
+        "darkSolid": 27301,
+        "edge": 0,
+        "portraitSHA256": "f5466068ee6fb6191852a6fd46eb46104384978c9cb2d72b8ec3b58795fa9004"
+      },
+      {
+        "id": "ganglecomedy",
+        "width": 572,
+        "height": 777,
+        "bounds": {
+          "x": 18,
+          "y": 32,
+          "width": 553,
+          "height": 757
+        },
+        "visible": 191559,
+        "clear": 252885,
+        "partial": 9207,
+        "darkSolid": 43382,
+        "edge": 0,
+        "portraitSHA256": "9bb2bb6e1e51e50c496e51f62a1effe48ad86e88e79acc1b196e6ef7550d8bcd"
+      },
+      {
+        "id": "gangletragedy",
+        "width": 386,
+        "height": 721,
+        "bounds": {
+          "x": 16,
+          "y": 21,
+          "width": 372,
+          "height": 707
+        },
+        "visible": 159826,
+        "clear": 118480,
+        "partial": 5564,
+        "darkSolid": 34569,
+        "edge": 0,
+        "portraitSHA256": "e81267ca748d048fa639ac8986b81a85f48dadd2f16b12e58eed35e7dc65f6af"
+      },
+      {
+        "id": "japanesegangle",
+        "width": 430,
+        "height": 742,
+        "bounds": {
+          "x": 27,
+          "y": 25,
+          "width": 414,
+          "height": 726
+        },
+        "visible": 192601,
+        "clear": 126459,
+        "partial": 5742,
+        "darkSolid": 48447,
+        "edge": 0,
+        "portraitSHA256": "91a510940a7b7e9007431c94451b0aec40ed6c241ae5acd0af4d6fd915b659e2"
+      },
+      {
+        "id": "shadowpomni",
+        "width": 287,
+        "height": 395,
+        "bounds": {
+          "x": 23,
+          "y": 21,
+          "width": 275,
+          "height": 383
+        },
+        "visible": 52701,
+        "clear": 60664,
+        "partial": 4401,
+        "darkSolid": 37810,
+        "edge": 0,
+        "portraitSHA256": "d7633192fd7dd0b5dcee985f67d66c40425a40d64de4e518f6aab38b4f0c26b3"
+      },
+      {
+        "id": "shadowjax",
+        "width": 214,
+        "height": 526,
+        "bounds": {
+          "x": 31,
+          "y": 10,
+          "width": 204,
+          "height": 516
+        },
+        "visible": 46903,
+        "clear": 65661,
+        "partial": 4849,
+        "darkSolid": 33228,
+        "edge": 0,
+        "portraitSHA256": "894a22b96a09766b8911ec63fcc77b7c3ace48bc687363d8bb37e07354521aeb"
+      },
+      {
+        "id": "shadowragatha",
+        "width": 271,
+        "height": 444,
+        "bounds": {
+          "x": 25,
+          "y": 23,
+          "width": 259,
+          "height": 432
+        },
+        "visible": 64799,
+        "clear": 55525,
+        "partial": 4177,
+        "darkSolid": 48293,
+        "edge": 0,
+        "portraitSHA256": "3dbf8b764058ce034ceed6bdce53f3ee6dfdbb57ee780d0671c37f868b0239a6"
+      },
+      {
+        "id": "shadowkinger",
+        "width": 223,
+        "height": 499,
+        "bounds": {
+          "x": 33,
+          "y": 25,
+          "width": 213,
+          "height": 489
+        },
+        "visible": 47402,
+        "clear": 63875,
+        "partial": 3235,
+        "darkSolid": 36168,
+        "edge": 0,
+        "portraitSHA256": "8e9343c8988708f4dc9d62cd1da48029ea39215bec1cd40d7d6ca28fff5bce4a"
+      },
+      {
+        "id": "shadowgangle",
+        "width": 263,
+        "height": 422,
+        "bounds": {
+          "x": 24,
+          "y": 34,
+          "width": 253,
+          "height": 412
+        },
+        "visible": 49702,
+        "clear": 61284,
+        "partial": 5771,
+        "darkSolid": 31258,
+        "edge": 0,
+        "portraitSHA256": "24852e6d68f2316daae1c3d73b4ec8320bec6b17f673f92d18561f4ca92cfe6d"
+      },
+      {
+        "id": "shadowzooble",
+        "width": 257,
+        "height": 466,
+        "bounds": {
+          "x": 26,
+          "y": 18,
+          "width": 247,
+          "height": 456
+        },
+        "visible": 48200,
+        "clear": 71562,
+        "partial": 5396,
+        "darkSolid": 32712,
+        "edge": 0,
+        "portraitSHA256": "2f8809f2616b5dd12033fe664f3eff91990ff2313cb5c2bf1116e789e8baf310"
+      },
+      {
+        "id": "shadowcaine",
+        "width": 293,
+        "height": 485,
+        "bounds": {
+          "x": 30,
+          "y": 5,
+          "width": 281,
+          "height": 474
+        },
+        "visible": 54417,
+        "clear": 87688,
+        "partial": 4439,
+        "darkSolid": 37695,
+        "edge": 0,
+        "portraitSHA256": "0e31ac5ccbf2fa46d00d8c482ef823d23dd0c854606b98cc85c10aaccdb0f753"
+      },
+      {
+        "id": "horrorpomnivoid",
+        "width": 326,
+        "height": 462,
+        "bounds": {
+          "x": 21,
+          "y": 17,
+          "width": 312,
+          "height": 448
+        },
+        "visible": 80536,
+        "clear": 70076,
+        "partial": 3847,
+        "darkSolid": 17856,
+        "edge": 0,
+        "portraitSHA256": "368d926dca3dde04679c14e1b2c40b1704c95e64b21e09a1bc73eb70a1d2dc29"
+      },
+      {
+        "id": "horrorpomnispiral",
+        "width": 336,
+        "height": 468,
+        "bounds": {
+          "x": 25,
+          "y": 14,
+          "width": 322,
+          "height": 454
+        },
+        "visible": 78704,
+        "clear": 78544,
+        "partial": 4333,
+        "darkSolid": 15842,
+        "edge": 0,
+        "portraitSHA256": "e79c19ac1313b5f6ab414e51fb0c341101b56c0e05472b872c3049aba7346cb6"
+      },
+      {
+        "id": "horrorpomniskull",
+        "width": 331,
+        "height": 489,
+        "bounds": {
+          "x": 30,
+          "y": 11,
+          "width": 317,
+          "height": 475
+        },
+        "visible": 80547,
+        "clear": 81312,
+        "partial": 3881,
+        "darkSolid": 18336,
+        "edge": 0,
+        "portraitSHA256": "3ef42f607b54900face224cca98e9b1408d69a5c7316c685dec10bd85f2d2011"
+      },
+      {
+        "id": "hunterjax",
+        "width": 368,
+        "height": 552,
+        "bounds": {
+          "x": 26,
+          "y": 12,
+          "width": 354,
+          "height": 538
+        },
+        "visible": 99881,
+        "clear": 103255,
+        "partial": 6809,
+        "darkSolid": 11762,
+        "edge": 0,
+        "portraitSHA256": "45402491065aa99303e877f62388b75d0fff46e59e8cc4e11a4e0f9045b80553"
+      },
+      {
+        "id": "rhinogangle",
+        "width": 355,
+        "height": 509,
+        "bounds": {
+          "x": 19,
+          "y": 11,
+          "width": 341,
+          "height": 495
+        },
+        "visible": 92445,
+        "clear": 88250,
+        "partial": 5891,
+        "darkSolid": 9657,
+        "edge": 0,
+        "portraitSHA256": "f93ce9bb2e638ae99188916cebc5c286ffa135ecdf4df3346c2fc9abc55178cb"
+      },
+      {
+        "id": "gloinkqueenscale",
+        "width": 1512,
+        "height": 549,
+        "bounds": {
+          "x": 34,
+          "y": 26,
+          "width": 1495,
+          "height": 529
+        },
+        "visible": 459916,
+        "clear": 370172,
+        "partial": 7737,
+        "darkSolid": 26334,
+        "edge": 0,
+        "portraitSHA256": "25674e4cd9c83bdc3bf4f01c7c86638cbc603095bae7efe804f8a28ae2970255"
+      },
+      {
+        "id": "inertbubble",
+        "width": 278,
+        "height": 262,
+        "bounds": {
+          "x": 27,
+          "y": 20,
+          "width": 268,
+          "height": 252
+        },
+        "visible": 53277,
+        "clear": 19559,
+        "partial": 41475,
+        "darkSolid": 763,
+        "edge": 0,
+        "portraitSHA256": "50c96397f695627da514f9a0f0038fbacd57a988b0ccea2f1d446b41d91368f1"
+      }
+    ],
+    "matches": [
+      {
+        "id": "maidjax",
+        "fighterId": "jax",
+        "acceptedAttack": true
+      },
+      {
+        "id": "workgangle",
+        "fighterId": "gangle",
+        "acceptedAttack": true
+      },
+      {
+        "id": "spudsyragatha",
+        "fighterId": "ragatha",
+        "acceptedAttack": true
+      },
+      {
+        "id": "ganglecomedy",
+        "fighterId": "gangle",
+        "acceptedAttack": true
+      },
+      {
+        "id": "gangletragedy",
+        "fighterId": "gangle",
+        "acceptedAttack": true
+      },
+      {
+        "id": "japanesegangle",
+        "fighterId": "gangle",
+        "acceptedAttack": true
+      },
+      {
+        "id": "shadowpomni",
+        "fighterId": "pomni",
+        "acceptedAttack": true
+      },
+      {
+        "id": "shadowjax",
+        "fighterId": "jax",
+        "acceptedAttack": true
+      },
+      {
+        "id": "shadowragatha",
+        "fighterId": "ragatha",
+        "acceptedAttack": true
+      },
+      {
+        "id": "shadowkinger",
+        "fighterId": "kinger",
+        "acceptedAttack": true
+      },
+      {
+        "id": "shadowgangle",
+        "fighterId": "gangle",
+        "acceptedAttack": true
+      },
+      {
+        "id": "shadowzooble",
+        "fighterId": "zooble",
+        "acceptedAttack": true
+      },
+      {
+        "id": "shadowcaine",
+        "fighterId": "caine",
+        "acceptedAttack": true
+      },
+      {
+        "id": "horrorpomnivoid",
+        "fighterId": "pomni",
+        "acceptedAttack": true
+      },
+      {
+        "id": "horrorpomnispiral",
+        "fighterId": "pomni",
+        "acceptedAttack": true
+      },
+      {
+        "id": "horrorpomniskull",
+        "fighterId": "pomni",
+        "acceptedAttack": true
+      },
+      {
+        "id": "hunterjax",
+        "fighterId": "jax",
+        "acceptedAttack": true
+      },
+      {
+        "id": "rhinogangle",
+        "fighterId": "gangle",
+        "acceptedAttack": true
+      },
+      {
+        "id": "gloinkqueenscale",
+        "fighterId": "gloinkqueen",
+        "acceptedAttack": true
+      },
+      {
+        "id": "inertbubble",
+        "fighterId": "bubble",
+        "acceptedAttack": true
+      }
+    ],
+    "sourceHashes": {
+      "combat/data.mjs": "914a168aedc5119a2a968a2205ce9d40758d8511f8faa4d672b5f54db899ecf7",
+      "combat/costume-fidelity.mjs": "a546d3ecdfe40898a001b38c1a85b6ab794dbdfa3cfb8c2bce86ca695e56049d",
+      "combat/costume-refinements.mjs": "117abb88f261c71c6e03dd43a344ef1babb0b34d9f8107ac3b5898f2d3682de3",
+      "combat/render.mjs": "2f203a5e1b3500ac526a6e7e33cfefa9800a4584969f44a9e384a240e21cdc21",
+      "combat/render-presentation.mjs": "370469edb54fe87cfa4f649984cf8c6dfb77419b018dbb1d8fedc432b9fe607e",
+      "combat/render-poses.mjs": "44a17b62cd7304f1a81b1454e4e8b902f8712d9b0a462f92b09626e8fe554268",
+      "combat/app.mjs": "4195636c3e4c6c47299598bd30bb018f2e9b16d7a853031fdd63c98fd628bb8f",
+      "combat/session.mjs": "a7bb5d99b0a95747ce433662942fa51d96a94c53a75e5150338dffcd31375e36",
+      "tests/combat-costume-refinements-browser.mjs": "a4c45bb21411e8a17c91fd8c756a94c6d98491bfd2b4b1c481130f417f9f4333",
+      "assets/images/cainos-costumes-gangle-0.6.0.png": "67f7e969833d99c28c66908b8d71061ae0ad852e068964d7ea20622de71b8d1e",
+      "assets/images/cainos-costumes-uniforms-0.6.0.png": "a26595eedb2c504cc2537c0bd0c72ec208ae8a0b6aaffda1aa5e6ac8c6909526",
+      "assets/images/cainos-costumes-creatures-0.6.0.png": "396a7d650c4e040ed354d6de69f9413a0656da3e9ca65678085164912151a5c4",
+      "assets/images/cainos-costumes-shadow-0.6.0.png": "2733e478e67f0ff53835fcb57947eac0d38ebae1f729b0745a2f6e87ac21ff1c",
+      "assets/images/cainos-costumes-horror-0.6.0.png": "4e854bb4afc25e7f892ccdf5bc1d8ef3366b7c04079452e4323b1955fc5b7ac9"
+    }
+  },
+  "contactSheet": {
+    "file": "docs/images/costumes-0.6.0.png",
+    "sha256": "efc9910e7c2efba48dc7100a732bf8dbf3e973f0023ce687f93c03593ac3dac2",
+    "method": "Screenshot montage of the twenty actual renderer extracts; checkerboard is the review page background only."
+  },
+  "limits": [
+    "Canonical 1:1 fidelity remains unverified. Six primary comparisons cover visible costume details, not every angle, expression, proportion or episode.",
+    "Fourteen technical repairs do not create new canonical source evidence for Shadow, Horror, Hunter or other archive variants.",
+    "Generated pixel-art contours and poses differ from both the previous illustrations and official 3D/product imagery.",
+    "Gloink Queen True Scale remains an inherited archive label, not a measured canonical size.",
+    "These are whole-character illustrations with procedural combat transforms, not newly authored attack animation cells.",
+    "No physical phone or gamepad validation is implied by Chromium tests.",
+    "Work Gangle's identityEvidence was corrected after the recorded browser run. browserEvidence.reportSha256 and browserEvidence.sourceHashes remain the historical hashes of that run; they do not certify a new browser execution of the corrected module."
+  ]
+}

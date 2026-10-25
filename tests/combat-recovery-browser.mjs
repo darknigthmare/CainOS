@@ -2,7 +2,7 @@
  * Only the static server injects the failure; application state is read, never patched.
  */
 import assert from 'node:assert/strict';
-import { ART_BYTES } from '../combat/offline-manifest.mjs';
+import { ART_BYTES, ART_FILES } from '../combat/offline-manifest.mjs';
 import fs from 'node:fs/promises';
 import http from 'node:http';
 import path from 'node:path';
@@ -73,15 +73,15 @@ try {
 
   await page.locator('[data-action="offline-prepare"]').click();
   await page.waitForFunction(() => window.Encore.offline.complete && !window.Encore.offline.busy, null, { timeout: 60000 });
-  assert.equal(await page.evaluate(() => window.Encore.offline.cached), 42);
+  assert.equal(await page.evaluate(() => window.Encore.offline.cached), ART_FILES.length);
   await context.setOffline(true);
   await page.reload({ waitUntil: 'networkidle' });
   await page.waitForFunction(() => window.Encore?.offline.ready);
   assert.equal(await page.evaluate(() => window.Encore.offline.complete), true);
-  assert.equal(await page.evaluate(() => window.Encore.offline.cached), 42);
+  assert.equal(await page.evaluate(() => window.Encore.offline.cached), ART_FILES.length);
   assert.deepEqual(await page.evaluate(() => window.Encore.profile), profile);
   assert.equal(await page.evaluate(() => window.Encore.screen), 'home');
-  checked('The recovered installation downloads the full pack and survives an offline cold reload', `42 illustrations; ${ART_BYTES.toLocaleString('en-US')} bytes; profile preserved`);
+  checked('The recovered installation downloads the full pack and survives an offline cold reload', `${ART_FILES.length} illustrations; ${ART_BYTES.toLocaleString('en-US')} bytes; profile preserved`);
   assert.deepEqual(errors, []);
   await fs.writeFile(path.join(output, 'recovery-browser-report.json'), JSON.stringify(report(), null, 2));
   console.log('Recovery/browser QA: ' + checks.length + ' checks passed.');

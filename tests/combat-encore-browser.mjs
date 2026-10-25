@@ -52,6 +52,7 @@ async function hold(keys = []) {
 async function home() {
   await hold();
   if (await page.locator('#modal[open]').count()) {
+    if (await page.locator('#modal .story-page').count()) { await page.locator('[data-action="story-leave"]').click(); return; }
     if (await page.locator('#modal [data-action="result-screen"]').count()) await page.locator('#modal [data-action="result-screen"]').click();
     await page.locator('#modal [data-action="home"]').click();
   } else if (await page.evaluate(() => window.Encore.screen === 'fight')) {
@@ -75,6 +76,11 @@ async function start(mode, fighter = 'jax') {
 }
 async function storyScene(index, fighter = 'jax') {
   const route = getStoryRoute(fighter), scene = getStoryScene(fighter, index);
+  if (index === 0) for (const panel of route.prologue) {
+    assert.equal(await page.locator('#modal-title').textContent(), panel.title);
+    assert.equal(await page.evaluate(() => window.Encore.paused), true);
+    await page.locator('[data-action="story-next"]').click();
+  }
   assert.equal(await page.locator('#modal-title').textContent(), scene.title);
   assert.equal(await page.locator('.story-dialogue blockquote').count(), 2);
   assert.deepEqual(await page.locator('.story-dialogue blockquote strong').allTextContents(), scene.dialogue.map(line => line.speaker));
@@ -102,6 +108,15 @@ async function finishWithKeyboard(label) {
     if (state.phase === 'matchOver') {
       await hold(); await advance(2300);
       assert.equal(state.winner, 0, `${label}: keyboard player lost (${state.fighters.map(fighter => fighter.hp)})`);
+      if (label === 'story-jax-4') {
+        const earned = await profile();
+        assert.deepEqual(earned.stories, ['jax']);
+        for (const [index, panel] of getStoryRoute('jax').epilogue.entries()) {
+          assert.equal(await page.locator('#modal-title').textContent(), panel.title);
+          await page.locator(`[data-action="${index === 2 ? 'story-done' : 'story-next'}"]`).click();
+        }
+        assert.deepEqual(await profile(), earned, 'reading the ending never awards the last victory twice');
+      }
       assert.ok(await page.locator('#modal[open] .result-stats').isVisible());
       playedDuels.push({ label, won: true, frames: state.frame, fighters: state.fighters.map(fighter => fighter.id), health: state.fighters[0].hp });
       return state;

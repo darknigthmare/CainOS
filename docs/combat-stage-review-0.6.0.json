@@ -1,0 +1,376 @@
+{
+  "version": "0.6.0",
+  "reviewedAt": "2026-10-23T14:32:24.907027+00:00",
+  "contentDate": "2026-10-23",
+  "purpose": "Revue limitée des décors et de leurs garanties Canvas ; aucune certification visuelle globale 1:1.",
+  "globalVisualCertification": false,
+  "canonicalMeasuredGeometry": false,
+  "summary": {
+    "arenas": 12,
+    "rebuiltStaticSceneries": 3,
+    "unchangedStaticSceneries": 9,
+    "ambientAlignmentsCorrected": 3,
+    "animatedArenas": 12,
+    "newRuntimeBitmapAssets": 0,
+    "floorY": 568,
+    "newNodeCases": 4,
+    "browserChecks": 9,
+    "existingSequenceNodeCasesRerun": 11
+  },
+  "sourceInspection": {
+    "officialEpisodePagesVerified": [
+      "https://www.youtube.com/watch?v=HwAPLk_sQ3w",
+      "https://www.youtube.com/watch?v=4ofJpOEXrZs",
+      "https://www.youtube.com/watch?v=bKjfw77cxeQ",
+      "https://www.youtube.com/watch?v=Q9KWcWKo2T8"
+    ],
+    "videoFramesValidated": 0,
+    "videoAccessLimitation": "Pages publiques et métadonnées GLITCH accessibles, mais lecteur noir avec chargement persistant et CDN de vignettes retournant Site Unavailable. Aucun contournement, aucune connexion ou certification de frame.",
+    "rejectedAsHallwayEvidence": [
+      "Couloir gris de la fausse sortie EXIT dans la galerie GLITCH.",
+      "Miniatures Acrylicz de chambres du GLITCH Store : produit stylisé, ne montre pas la circulation du couloir.",
+      "Images de reconstitutions Blender et fanarts."
+    ]
+  },
+  "sources": [
+    {
+      "id": "glitch-candy-court",
+      "title": "GLITCH — le groupe à la cour de Candy Canyon",
+      "url": "https://static.wixstatic.com/media/84ed6a_bd08976f81644a659cbc9a8e112fb5dc~mv2.png",
+      "pageUrl": "https://www.glitchprod.com/digital-circus",
+      "kind": "Visuel officiel",
+      "primary": true,
+      "visuallyInspected": true,
+      "scope": "Image de la galerie GLITCH. Architecture visible derrière les personnages ; petits détails et proportions non mesurés.",
+      "evidenceBytes": 5714973,
+      "evidenceSHA256": "104212ea6f161a781ac6fe2090158bcc6d69d1bfac5e0fc42f494942b8f79d8a",
+      "imageDimensions": [
+        3840,
+        2160
+      ],
+      "imageMimeType": "image/png"
+    },
+    {
+      "id": "netflix-spudsy-counter",
+      "title": "Netflix — Spudsy, vignette de Fast Food Masquerade",
+      "url": "https://occ-0-3012-114.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABY7TJYmplbg8lnHqbjKLMs9jVNbYeIHivWTdEufLA0d-90FfapefydK8i59MTeahWLBWGxlNMM4radrd0MARwM-FxSHl7ekrwgfjyuQ1bbOZIBhn7QqT5PHh.jpg?r=b1e",
+      "pageUrl": "https://qr.netflix.com/gb/title/81936142",
+      "kind": "Visuel du distributeur officiel",
+      "primary": true,
+      "visuallyInspected": true,
+      "scope": "Vignette de 300 × 169 pixels publiée par Netflix pour l’épisode 4. Le comptoir, la cuisine, les couleurs et le logo S sont observables ; les textes des offres et les dimensions ne sont pas validés.",
+      "evidenceBytes": 20556,
+      "evidenceSHA256": "09d7efa80e5c9325c661e8d0ba2d90edd9be374c2e4168ece0aa33022bb8a3f9",
+      "imageDimensions": [
+        300,
+        169
+      ],
+      "imageMimeType": "image/jpeg"
+    },
+    {
+      "id": "pilot-residents-copy-near",
+      "title": "Copie attribuée au pilote — portes des résidents",
+      "url": "https://static.wikia.nocookie.net/tadc/images/f/fa/Kaufmo_Pilot_1.png/revision/latest/scale-to-width-down/1200?cb=20231014163019",
+      "pageUrl": "https://tadc.fandom.com/wiki/List_of_Minor_Characters",
+      "kind": "Copie sur un hébergement tiers",
+      "primary": false,
+      "visuallyInspected": true,
+      "scope": "Image attribuée au pilote, inspectée sur un hébergement tiers. La vidéo officielle a été identifiée, mais aucun frame du flux n’a chargé ; l’authenticité de cette copie n’est pas vérifiée directement. Ne pas compter comme visuel primaire consulté.",
+      "evidenceBytes": 64142,
+      "evidenceSHA256": "4d797786a32ad70be55be285be95b34112e48bb39267f36f27b9cb2d93ac570e",
+      "imageDimensions": [
+        1200,
+        675
+      ],
+      "imageMimeType": "image/webp"
+    },
+    {
+      "id": "pilot-residents-copy-wide",
+      "title": "Copie attribuée au pilote — vue longue du couloir",
+      "url": "https://pbs.twimg.com/media/F8W0oVkWoAAmW9v.jpg",
+      "pageUrl": "https://x.com/crying_anabell/status/1712973849438904616",
+      "kind": "Copie sur un hébergement tiers",
+      "primary": false,
+      "visuallyInspected": true,
+      "scope": "Vue attribuée au pilote et republiée sur X. Repères concordants avec l’autre copie, sans mesure ni comparaison directe au flux officiel. Les modifications de portes, cadres et perspective restent une recomposition partielle.",
+      "evidenceBytes": 109779,
+      "evidenceSHA256": "fa441e0b1464f0b8cbe8d604033af3c0b4475a41328320d92bda2f341e46fe26",
+      "imageDimensions": [
+        1200,
+        676
+      ],
+      "imageMimeType": "image/jpeg"
+    }
+  ],
+  "stageObservations": {
+    "backstage": {
+      "sourceIds": [
+        "ep1",
+        "pilot-residents-copy-near",
+        "pilot-residents-copy-wide"
+      ],
+      "observedTraits": [
+        "Dans les copies attribuées au pilote : long couloir à murs rose, rouge et orange, grands panneaux verticaux, tapis rouge et plinthes claires.",
+        "Portes en bois plus basses que les murs, boutons dorés et médaillons de visages ; Kaufmo apparaît sur le plan proche.",
+        "Cadres de bois clair contenant des images abstraites, arche rouge au fond, pots de plantes et cubes colorés sur le plan large."
+      ],
+      "combatAdaptation": "La loge générique avec miroir à ampoules et caisses est remplacée par une recomposition du couloir. Six portes et médaillons dessinés en Canvas, tableaux abstraits, trois plafonniers, profondeur centrale et tapis rouge conservent une ligne de combat horizontale à y568. Ordre des chambres, portraits simplifiés, nombre de cadres, perspective et dimensions sont des choix du jeu.",
+      "reviewStatus": "Comparaison partielle — copies du pilote à confirmer",
+      "reviewScope": "Les deux copies ont été inspectées, mais le flux de l’épisode officiel n’a fourni aucun plan visible dans cet environnement. Aucune frame directe ni aucun horodatage canonique n’est déclaré validé. Aucun panneau EXIT, couloir de bureaux ou fausse sortie n’est substitué aux chambres. La référence au produit dérivé de chambres a été écartée comme preuve du couloir."
+    },
+    "spudsy": {
+      "sourceIds": [
+        "ep4",
+        "netflix-spudsy-counter"
+      ],
+      "observedTraits": [
+        "Façade supérieure bordeaux, grands panneaux de menu jaunes et cuisine ouverte claire/inox derrière le service.",
+        "Comptoir clair avec devant rouge à bandes horizontales dorées.",
+        "Logo circulaire clair à centre rouge portant un S, postes de caisse sombres et équipements de cuisine visibles."
+      ],
+      "combatAdaptation": "Recomposition frontale : comptoir blanc/rouge continu, passe de cuisine, hotte, gril, paniers de cuisson, distributeur et caisse. Les cinq panneaux et les mots français lisibles décrivent des catégories du jeu ; ils ne transcrivent pas les offres de la série. La vapeur décorative est rattachée à la surface de cuisson, au-dessus du sol fixe.",
+      "reviewStatus": "Référence visuelle consultée — comparaison partielle",
+      "reviewScope": "Comparaison avec la vignette officielle du distributeur Netflix de l’épisode 4. Faible résolution 300 × 169 : couleurs et grandes masses observées, texte fin et mesures non certifiés. Le placement exact des équipements, le nombre de menus et le plan du restaurant complet restent à revoir dans la vidéo."
+    },
+    "kingdom": {
+      "sourceIds": [
+        "ep2",
+        "glitch-candy-court"
+      ],
+      "observedTraits": [
+        "Architecture de confiserie rouge/rose dans la cour, ouvertures cintrées en retrait et large passage ornementé.",
+        "Volutes de glaçage clair autour du passage, décors arrondis et larges piliers au premier plan.",
+        "Petites ouvertures en arcade dans les façades plus éloignées et sol rose visible."
+      ],
+      "combatAdaptation": "La façade générique à deux tours pointues devient une cour recomposée : piliers de premier plan, arcades latérales, ouvertures en retrait, portail large et volutes de glaçage. Les marches de fond restent au-dessus de y568 et ne modifient pas la piste. La symétrie, les proportions, les ornements secondaires et les joints du sol sont des choix lisibles pour le duel.",
+      "reviewStatus": "Référence visuelle consultée — comparaison partielle",
+      "reviewScope": "Comparaison du palais avec le visuel officiel GLITCH déjà identifié, cette fois inspecté pour l’architecture. Le cadrage et les personnages masquent une partie de la cour : aucune mesure, géographie complète ou reproduction exhaustive n’est revendiquée. Cette image ne valide pas la route du canyon, qui reste une autre arène."
+    }
+  },
+  "stageCoverage": [
+    {
+      "id": "bigtop",
+      "name": "La grande piste",
+      "decision": "preserved",
+      "reviewStatus": "Référence visuelle consultée, périmètre antérieur conservé",
+      "scope": "Mur cyan, couronnement doré, porte rouge/verte, canapés et damier conservés pixel pour pixel."
+    },
+    {
+      "id": "candy",
+      "name": "Candy Canyon",
+      "decision": "preserved",
+      "reviewStatus": "Épisode à revoir",
+      "scope": "Route du canyon non validée par l’image de la cour. Décor antérieur conservé ; aucune amélioration canonique nouvelle revendiquée."
+    },
+    {
+      "id": "manor",
+      "name": "Mildenhall Manor",
+      "decision": "ambient-alignment-only",
+      "reviewStatus": "Épisode à revoir",
+      "scope": "Architecture antérieure conservée. Seules les lueurs sont rattachées aux six chandelles effectivement dessinées ; cette correction ne valide pas la pièce de l’épisode."
+    },
+    {
+      "id": "spudsy",
+      "name": "Spudsy’s",
+      "decision": "rebuilt",
+      "reviewStatus": "Référence visuelle consultée — comparaison partielle",
+      "scope": "Comparaison avec la vignette officielle du distributeur Netflix de l’épisode 4. Faible résolution 300 × 169 : couleurs et grandes masses observées, texte fin et mesures non certifiés. Le placement exact des équipements, le nombre de menus et le plan du restaurant complet restent à revoir dans la vidéo."
+    },
+    {
+      "id": "cellar",
+      "name": "Le cellier",
+      "decision": "preserved",
+      "reviewStatus": "Référence visuelle consultée, périmètre antérieur conservé",
+      "scope": "Obscurité, yeux multicolores et lumière centrale conservés pixel pour pixel ; aucune porte ajoutée."
+    },
+    {
+      "id": "void",
+      "name": "Le Vide",
+      "decision": "preserved",
+      "reviewStatus": "Référence visuelle consultée, périmètre antérieur conservé",
+      "scope": "Espace blanc irisé conservé pixel pour pixel ; aucune porte EXIT, aucun escalier ni quadrillage sous la carte."
+    },
+    {
+      "id": "lake",
+      "name": "Le lac numérique",
+      "decision": "preserved",
+      "reviewStatus": "Sans référence primaire identifiée",
+      "scope": "Adaptation antérieure conservée, aucune scène canonique nouvelle déclarée."
+    },
+    {
+      "id": "training",
+      "name": "Salle de calibration",
+      "decision": "preserved",
+      "reviewStatus": "Décor original du jeu",
+      "scope": "Décor utilitaire original conservé pixel pour pixel ; aucune attribution à un épisode."
+    },
+    {
+      "id": "gloink",
+      "name": "Le nid des Gloinks",
+      "decision": "preserved",
+      "reviewStatus": "Épisode à revoir",
+      "scope": "Plan du nid et proportions restent à comparer au pilote. Aucun nouveau détail canonique revendiqué."
+    },
+    {
+      "id": "kingdom",
+      "name": "Le palais de sucre",
+      "decision": "rebuilt",
+      "reviewStatus": "Référence visuelle consultée — comparaison partielle",
+      "scope": "Comparaison du palais avec le visuel officiel GLITCH déjà identifié, cette fois inspecté pour l’architecture. Le cadrage et les personnages masquent une partie de la cour : aucune mesure, géographie complète ou reproduction exhaustive n’est revendiquée. Cette image ne valide pas la route du canyon, qui reste une autre arène."
+    },
+    {
+      "id": "grounds",
+      "name": "Les terrains du cirque",
+      "decision": "preserved",
+      "reviewStatus": "Épisode à revoir",
+      "scope": "Plan extérieur primaire dédié non obtenu. Dessin antérieur conservé ; couleurs, aire et accessoires restent à confronter à une scène officielle."
+    },
+    {
+      "id": "backstage",
+      "name": "Le couloir des portes",
+      "decision": "rebuilt",
+      "reviewStatus": "Comparaison partielle — copies du pilote à confirmer",
+      "scope": "Les deux copies ont été inspectées, mais le flux de l’épisode officiel n’a fourni aucun plan visible dans cet environnement. Aucune frame directe ni aucun horodatage canonique n’est déclaré validé. Aucun panneau EXIT, couloir de bureaux ou fausse sortie n’est substitué aux chambres. La référence au produit dérivé de chambres a été écartée comme preuve du couloir."
+    }
+  ],
+  "reviewMethod": "Inspection des images téléchargées sans transformation artistique, comparaison visuelle du rendu natif Canvas, contrôles automatisés sur le fond complet et les couches ; aucun asset bitmap généré ni retouché.",
+  "captures": [
+    {
+      "path": "docs/images/encore-stage-comparison-0.6.0.png",
+      "source": "audit-combat/stages-0.6.0/encore-stage-comparison-0.6.0.png",
+      "sha256": "93c98be090a66f6a4339f31203ec29c9274616e69b21527bdf30a482829623c6",
+      "bytes": 602966,
+      "dimensions": [
+        1280,
+        1240
+      ],
+      "visuallyInspected": true
+    },
+    {
+      "path": "docs/images/encore-stages-0.6.0.png",
+      "source": "audit-combat/stages-0.6.0/encore-stages-0.6.0.png",
+      "sha256": "446e581ccdcbb37890ef9ed1794fb618399f3bd2c3400d7b32ebde08c9bde99d",
+      "bytes": 761450,
+      "dimensions": [
+        1344,
+        1196
+      ],
+      "visuallyInspected": true
+    },
+    {
+      "path": "docs/images/encore-residents-hallway-0.6.0.png",
+      "source": "audit-combat/stages-0.6.0/backstage-actors.png",
+      "sha256": "e02ccfb5b8c31b6bea0e8b534286a352e62b350f7a5ee8beab64c77949bb14ef",
+      "bytes": 507155,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "visuallyInspected": true
+    }
+  ],
+  "validation": {
+    "browserReport": "audit-combat/stages-0.6.0/stage-scenery-browser-report.json",
+    "browserReportSHA256": "313fc5b31fe825d30234ff5bd16d2b3a5323147a79ccf62045435b07579ea1b8",
+    "browserLog": "audit-combat/stage-scenery-browser.log",
+    "browserLogSHA256": "da641eabb8d3d9f3be73a44e378fe0551f9302ce91776264df02ad04a295d91b",
+    "nodeLog": "audit-combat/stage-scenery-node.log",
+    "nodeLogSHA256": "71bbb5c54d63c23f421698ab1126c2e800ed23e467fae769cd93c7071ee363a5",
+    "sequenceNodeLog": "audit-combat/stage-sequences-regression-node.log",
+    "sequenceNodeLogSHA256": "b14b9aa6ce2f5d36c8542c1bf55b7b0d7a0ab56ce418742efe72ed16f639162c",
+    "browserPass": 9,
+    "nodePass": 4,
+    "sequenceNodePass": 11,
+    "sourceHashesAtBrowserRun": {
+      "combat/render.mjs": "2f203a5e1b3500ac526a6e7e33cfefa9800a4584969f44a9e384a240e21cdc21",
+      "combat/render-stage-scenery.mjs": "52c298e861af7873b2f94ece106e0f708ebd5573d0f900f02c45c2cecd14c528",
+      "combat/render-stage-motion.mjs": "e22d518a1245be13379a019159b4c8f24535e19a704508286d5b1ed38ced9b77",
+      "combat/render-poses.mjs": "44a17b62cd7304f1a81b1454e4e8b902f8712d9b0a462f92b09626e8fe554268",
+      "combat/render-sequences.mjs": "1ce5fab94146618b77d46b7b16feb2af2b52eb912a992488fa5fd2e4e3b4b9af",
+      "combat/data.mjs": "914a168aedc5119a2a968a2205ce9d40758d8511f8faa4d672b5f54db899ecf7",
+      "combat/engine.mjs": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
+      "tests/combat-stage-scenery-browser.mjs": "ed48cbc890facd877dc1a70ec2fce671368ba5b6ea7b20865251644e5d8ea5e7"
+    },
+    "sourceHashesUnchangedDuringBrowserRun": true,
+    "physicsMatchesBaseline": true,
+    "baseline": "4a56f63",
+    "baselineRendererSHA256": "6eed54fd6f2af59bb2207b36e06f2d0ae1e1ac554d6952ae7f39f3fc367dc7d2"
+  },
+  "patchForRoot": {
+    "addFidelitySources": [
+      {
+        "id": "netflix-spudsy-counter",
+        "title": "Netflix — Spudsy, vignette de Fast Food Masquerade",
+        "url": "https://occ-0-3012-114.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABY7TJYmplbg8lnHqbjKLMs9jVNbYeIHivWTdEufLA0d-90FfapefydK8i59MTeahWLBWGxlNMM4radrd0MARwM-FxSHl7ekrwgfjyuQ1bbOZIBhn7QqT5PHh.jpg?r=b1e",
+        "kind": "Visuel du distributeur officiel",
+        "scope": "Vignette de 300 × 169 pixels publiée par Netflix pour l’épisode 4. Le comptoir, la cuisine, les couleurs et le logo S sont observables ; les textes des offres et les dimensions ne sont pas validés."
+      },
+      {
+        "id": "pilot-residents-copy-near",
+        "title": "Copie attribuée au pilote — portes des résidents",
+        "url": "https://static.wikia.nocookie.net/tadc/images/f/fa/Kaufmo_Pilot_1.png/revision/latest/scale-to-width-down/1200?cb=20231014163019",
+        "kind": "Copie sur un hébergement tiers",
+        "scope": "Image attribuée au pilote, inspectée sur un hébergement tiers. La vidéo officielle a été identifiée, mais aucun frame du flux n’a chargé ; l’authenticité de cette copie n’est pas vérifiée directement. Ne pas compter comme visuel primaire consulté."
+      },
+      {
+        "id": "pilot-residents-copy-wide",
+        "title": "Copie attribuée au pilote — vue longue du couloir",
+        "url": "https://pbs.twimg.com/media/F8W0oVkWoAAmW9v.jpg",
+        "kind": "Copie sur un hébergement tiers",
+        "scope": "Vue attribuée au pilote et republiée sur X. Repères concordants avec l’autre copie, sans mesure ni comparaison directe au flux officiel. Les modifications de portes, cadres et perspective restent une recomposition partielle."
+      }
+    ],
+    "replaceStageFidelity": {
+      "backstage": {
+        "sourceIds": [
+          "ep1",
+          "pilot-residents-copy-near",
+          "pilot-residents-copy-wide"
+        ],
+        "observedTraits": [
+          "Dans les copies attribuées au pilote : long couloir à murs rose, rouge et orange, grands panneaux verticaux, tapis rouge et plinthes claires.",
+          "Portes en bois plus basses que les murs, boutons dorés et médaillons de visages ; Kaufmo apparaît sur le plan proche.",
+          "Cadres de bois clair contenant des images abstraites, arche rouge au fond, pots de plantes et cubes colorés sur le plan large."
+        ],
+        "combatAdaptation": "La loge générique avec miroir à ampoules et caisses est remplacée par une recomposition du couloir. Six portes et médaillons dessinés en Canvas, tableaux abstraits, trois plafonniers, profondeur centrale et tapis rouge conservent une ligne de combat horizontale à y568. Ordre des chambres, portraits simplifiés, nombre de cadres, perspective et dimensions sont des choix du jeu.",
+        "reviewStatus": "Comparaison partielle — copies du pilote à confirmer",
+        "reviewScope": "Les deux copies ont été inspectées, mais le flux de l’épisode officiel n’a fourni aucun plan visible dans cet environnement. Aucune frame directe ni aucun horodatage canonique n’est déclaré validé. Aucun panneau EXIT, couloir de bureaux ou fausse sortie n’est substitué aux chambres. La référence au produit dérivé de chambres a été écartée comme preuve du couloir."
+      },
+      "spudsy": {
+        "sourceIds": [
+          "ep4",
+          "netflix-spudsy-counter"
+        ],
+        "observedTraits": [
+          "Façade supérieure bordeaux, grands panneaux de menu jaunes et cuisine ouverte claire/inox derrière le service.",
+          "Comptoir clair avec devant rouge à bandes horizontales dorées.",
+          "Logo circulaire clair à centre rouge portant un S, postes de caisse sombres et équipements de cuisine visibles."
+        ],
+        "combatAdaptation": "Recomposition frontale : comptoir blanc/rouge continu, passe de cuisine, hotte, gril, paniers de cuisson, distributeur et caisse. Les cinq panneaux et les mots français lisibles décrivent des catégories du jeu ; ils ne transcrivent pas les offres de la série. La vapeur décorative est rattachée à la surface de cuisson, au-dessus du sol fixe.",
+        "reviewStatus": "Référence visuelle consultée — comparaison partielle",
+        "reviewScope": "Comparaison avec la vignette officielle du distributeur Netflix de l’épisode 4. Faible résolution 300 × 169 : couleurs et grandes masses observées, texte fin et mesures non certifiés. Le placement exact des équipements, le nombre de menus et le plan du restaurant complet restent à revoir dans la vidéo."
+      },
+      "kingdom": {
+        "sourceIds": [
+          "ep2",
+          "glitch-candy-court"
+        ],
+        "observedTraits": [
+          "Architecture de confiserie rouge/rose dans la cour, ouvertures cintrées en retrait et large passage ornementé.",
+          "Volutes de glaçage clair autour du passage, décors arrondis et larges piliers au premier plan.",
+          "Petites ouvertures en arcade dans les façades plus éloignées et sol rose visible."
+        ],
+        "combatAdaptation": "La façade générique à deux tours pointues devient une cour recomposée : piliers de premier plan, arcades latérales, ouvertures en retrait, portail large et volutes de glaçage. Les marches de fond restent au-dessus de y568 et ne modifient pas la piste. La symétrie, les proportions, les ornements secondaires et les joints du sol sont des choix lisibles pour le duel.",
+        "reviewStatus": "Référence visuelle consultée — comparaison partielle",
+        "reviewScope": "Comparaison du palais avec le visuel officiel GLITCH déjà identifié, cette fois inspecté pour l’architecture. Le cadrage et les personnages masquent une partie de la cour : aucune mesure, géographie complète ou reproduction exhaustive n’est revendiquée. Cette image ne valide pas la route du canyon, qui reste une autre arène."
+      }
+    }
+  },
+  "remainingWork": [
+    "Comparer directement le couloir aux plans du pilote, confirmer la place des portes, portraits et tableaux.",
+    "Inspecter une salle précise du manoir et sa géométrie avec une frame primaire dédiée.",
+    "Comparer la route du canyon, le nid des Gloinks et les terrains extérieurs à des plans primaires dédiés.",
+    "Identifier une référence primaire pour le lac ou conserver explicitement son statut d’adaptation.",
+    "Toute reproduction exhaustive demanderait de nombreux plans, les proportions et les transitions ; ces trois décors restent des recompositions pour le duel."
+  ]
+}

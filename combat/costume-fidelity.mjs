@@ -3,6 +3,8 @@
  * observedTraits is reserved for the primary reference actually consulted.
  * Neither a completed technical review nor an episode label certifies a costume.
  */
+import { COSTUME_REFINEMENTS, REFINED_COSTUME_SPRITES } from './costume-refinements.mjs';
+
 const freeze = value => {
   if (value && typeof value === 'object' && !Object.isFrozen(value)) {
     Object.values(value).forEach(freeze);
@@ -36,6 +38,7 @@ export const COSTUME_SPRITE_OVERRIDES = freeze({
   shadowpomni: { matteMode: 'preserve-source' },
   shadowragatha: { matteMode: 'preserve-source' },
   shadowcaine: { matteMode: 'preserve-source' },
+  ...REFINED_COSTUME_SPRITES,
 });
 
 const names = { pomni: 'Pomni', jax: 'Jax', ragatha: 'Ragatha', gangle: 'Gangle', zooble: 'Zooble', kinger: 'Kinger', caine: 'Caine', bubble: 'Bubble', gummigoo: 'Gummigoo', gloinkqueen: 'la reine des Gloinks' };
@@ -183,33 +186,39 @@ const specificIssues = {
 };
 
 export const COSTUME_FIDELITY = freeze(Object.fromEntries(designs.map(([id, baseFighterId, visibleTraits, identityEvidence, shape], index) => {
+  const refinement = COSTUME_REFINEMENTS[id];
   const comparison = comparisons[id];
   const sourceIds = comparison?.sourceIds || episodeTargets[id] || [];
-  const issues = specificIssues[id] || [];
-  const reviewScope = comparison?.reviewScope || (sourceIds.length
+  const issues = refinement?.issues || specificIssues[id] || [];
+  const reviewScope = refinement?.reviewScope || comparison?.reviewScope || (sourceIds.length
     ? 'L’épisode indiqué par les archives est une cible de comparaison. Aucun plan de cette tenue n’a été vérifié dans cette revue ; son nom, sa disponibilité et sa fiche technique ne prouvent pas son apparence canonique.'
     : 'Revue du sprite du projet uniquement. Aucune image primaire de cette tenue n’a été comparée ; les noms et les rattachements de jeu ne prouvent pas une apparition dans la série.');
   return [id, {
     sourceIds,
     observedTraits: comparison?.observedTraits || [],
     combatAdaptation: `Variante visuelle de ${names[baseFighterId]} : mêmes dix techniques, ressources et corps de collision que le combattant de base. Les accessoires, les masques et les membres supplémentaires du dessin n’ajoutent aucune règle ni aucun pouvoir.`,
-    reviewStatus: comparison ? 'Comparaison partielle — écarts ou limites' : sourceIds.length ? 'Épisode à revoir' : 'Référence de costume à identifier',
+    reviewStatus: comparison ? refinement ? 'Comparaison partielle — détails corrigés en 0.6.0' : 'Comparaison partielle — écarts ou limites' : sourceIds.length ? 'Épisode à revoir' : 'Référence de costume à identifier',
     reviewScope,
     assetReview: {
-      status: issues.length ? 'Revue technique effectuée — limites consignées' : 'Revue technique effectuée',
-      visibleTraits,
-      identityEvidence,
-      framing: cropNotes[id] || (textured.has(id) ? 'La grille source est encore utilisée. Des pixels de fond texturé participent aux limites de l’image ; la découpe ne vaut pas détourage du corps.' : 'Cellule source et extraction comparées côte à côte ; aucun membre coupé ni personnage voisin visible dans le cadre retenu.'),
-      transparency: preserveSource.has(id)
+      status: refinement ? issues.length ? 'Revue technique 0.6.0 effectuée — limites consignées' : 'Revue technique 0.6.0 effectuée' : issues.length ? 'Revue technique effectuée — limites consignées' : 'Revue technique effectuée',
+      visibleTraits: refinement?.visibleTraits || visibleTraits.map(trait => refinement ? trait.replace(' sur un fond à damier vert sombre', '') : trait),
+      identityEvidence: id === 'gangletragedy' && refinement
+        ? 'Le masque de théâtre triste entier, les larmes et le corps de rubans rouges identifient Gangle ; l’ancien filtre de recoloration n’est plus utilisé.'
+        : id === 'workgangle' && refinement
+          ? 'Le masque de théâtre blanc souriant et denté, l’étoile sur la joue et les bras en rubans rouges identifient Gangle sous l’uniforme de responsable.'
+          : identityEvidence,
+      framing: refinement?.framing || cropNotes[id] || (textured.has(id) ? 'La grille source est encore utilisée. Des pixels de fond texturé participent aux limites de l’image ; la découpe ne vaut pas détourage du corps.' : 'Cellule source et extraction comparées côte à côte ; aucun membre coupé ni personnage voisin visible dans le cadre retenu.'),
+      transparency: refinement?.transparency || (preserveSource.has(id)
         ? 'Mode explicite de préservation de la source : aucune couleur ni valeur alpha de la cellule n’est supprimée. Le fond texturé reste opaque pour éviter de perforer les parties noires indiscernables du corps.'
         : nativeAlpha.has(id)
         ? 'Alpha natif du PNG conservé. Les zones opaques à l’intérieur du dessin ne sont pas rendues transparentes par une clef de couleur.'
         : textured.has(id)
           ? 'Fond opaque texturé : un retrait exact ne peut pas être déduit du seul noir. Les motifs et halos restants sont consignés ; les détails noirs du corps doivent être préservés.'
-          : 'Fond noir uni retiré depuis les bords ; aucun trou majeur supplémentaire constaté sur la planche de comparaison.',
-      proportions: `Dessin : ${shape} Affichage : mise à l’échelle uniforme du cadre extrait ; le portrait et la pose de combat sont contrôlés séparément. Aucune proportion canonique mesurée.`,
+          : 'Fond noir uni retiré depuis les bords ; aucun trou majeur supplémentaire constaté sur la planche de comparaison.'),
+      proportions: `Dessin : ${refinement?.shape || shape} Affichage : mise à l’échelle uniforme du cadre extrait ; le portrait et la pose de combat sont contrôlés séparément. Aucune proportion canonique mesurée.`,
       issues,
-      captureId: `costumes-0.4.0-page-${Math.floor(index / 12) + 1}#${id}`,
+      resolvedIssues: refinement?.resolvedIssues || [],
+      captureId: refinement ? `costumes-0.6.0#${id}` : `costumes-0.4.0-page-${Math.floor(index / 12) + 1}#${id}`,
     },
   }];
 })));

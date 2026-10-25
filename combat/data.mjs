@@ -8,7 +8,7 @@ import { COSTUME_SPRITE_OVERRIDES, getCostumeFidelity } from './costume-fidelity
  * below is a fan-game adaptation, not a claim about canonical fighting powers.
  * Frames use the original CQC 60 Hz simulation and its 10000-health scale.
  */
-export const GAME = Object.freeze({ id: 'digital-circus-encore', name: 'Digital Circus — Encore', subtitle: 'Le Grand Duel', version: '0.5.0', contentDate: '2026-10-22' });
+export const GAME = Object.freeze({ id: 'digital-circus-encore', name: 'Digital Circus — Encore', subtitle: 'Le Grand Duel', version: '0.7.0', contentDate: '2026-10-24' });
 export const SOURCES = Object.freeze([
   { id: 'cainos', title: 'CainOS — base de travail et atlas existants', url: 'https://github.com/darknigthmare/CainOS/tree/4926834a2f063028903d6431e77f0bece859e671', kind: 'Dépôt utilisateur', scope: 'Inventaire du projet. Les mentions canon dans ses archives demandent une vérification indépendante.' },
   { id: 'cqc', title: 'CQC — version de référence P39', url: 'https://github.com/darknigthmare/shadow-codec-ops/tree/42279c1c884769873e66bbda0b6fe849bcd2f1a2/public/cqc', kind: 'Dépôt utilisateur', scope: 'Architecture intégrée/autonome, moteur de combat et IA portés depuis les fichiers réels.' },
@@ -172,7 +172,7 @@ export const FIGHTERS = [
     specialBack: move('specialBack', 'Carapace royale', 'Réduit les dégâts des deux prochains impacts.', { kind: 'buff', damage: 0, buff: 'armor', duration: 150, hits: 2, startup: 15, active: 1, recovery: 32, cost: 30 }),
     super: move('super', 'Tout devient Gloink', 'Un grand choc frontal très lent.', { startup: 34, active: 12, recovery: 50, damage: 2150, reach: 365, launch: -10, meter: 85 }),
     utility: move('utility', 'Réorganiser le nid', 'Restaure de la stabilité avec une longue récupération.', { restore: 40, startup: 28, recovery: 42 }),
-  }, { speed: 0.76, power: 1.12, reach: 1.12, width: 420, height: 150, boss: true, sprite: { ...spriteOf('gloinkqueenscale'), component: 'largest', nativeFacing: -1 }, scaleNote: 'Dimensions adaptées au duel. Planche allongée réutilisée, taille canonique non quantifiée. Les portées de mêlée partent du centre du corps et dépassent la bouche.' }),
+  }, { speed: 0.76, power: 1.12, reach: 1.12, width: 420, height: 150, boss: true, sprite: { ...spriteOf('gloinkqueenscale'), ...COSTUME_SPRITE_OVERRIDES.gloinkqueenscale, component: 'largest', nativeFacing: -1 }, scaleNote: 'Dimensions adaptées au duel. Planche allongée réutilisée, taille canonique non quantifiée. Les portées de mêlée partent du centre du corps et dépassent la bouche.' }),
   fighter('fudge', 'The Fudge', 'L’ombre du canyon', 'Colosse', '#bd877c', 'ep2', {
     light: move('light', 'Coulée courte', 'Un coup épais à proximité.', { startup: 10, reach: 115, damage: 390 }),
     heavy: move('heavy', 'Vague de fudge', 'Une frappe ample et lente.', { startup: 23, damage: 900, reach: 185, recovery: 34 }),
@@ -348,7 +348,7 @@ export function classifyArchiveEntry(id) {
 export const ROSTER_ARCHIVE = SPRITE_CATALOG.map(entry => {
   const classification = classifyArchiveEntry(entry.id);
   const override = Object.hasOwn(COSTUME_SPRITE_OVERRIDES, entry.id) ? COSTUME_SPRITE_OVERRIDES[entry.id] : null;
-  const sprite = entry.id === 'gloinkqueenscale' ? { ...entry.sprite, component: 'largest', nativeFacing: -1 } : override ? { ...entry.sprite, ...override } : entry.sprite;
+  const sprite = { ...entry.sprite, ...override, ...(entry.id === 'gloinkqueenscale' ? { component: 'largest', nativeFacing: -1 } : {}) };
   return { ...entry, sprite, ...classification, fighterId: classification.baseFighterId, ...(classification.category === 'variant' ? { fidelity: getCostumeFidelity(entry.id) } : {}) };
 });
 export const ARCHIVE = ROSTER_ARCHIVE;
