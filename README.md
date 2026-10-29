@@ -193,29 +193,56 @@ and Pillow are not part of the browser game.
 
 ## Verification and tracker
 
-The versioned [0.7 evidence](docs/combat-qa-evidence-0.7.0.json) records the tested
-commit, actual Node/Chromium results and runtime hashes. The tracker is authored
+The [current gamedev campaign](docs/combat-qa-evidence-gamedev-2026-10-29.json)
+records the tested commit, actual Node/Chromium results and runtime hashes. The tracker is authored
 and checked in the primary spreadsheet runtime. CI packages the standalone only
 when that reviewed tracker matches the current game and test hashes; it never
 rewrites the workbook.
 
-The final 0.7 campaign passed **313 Node tests in 22 suites** and **238 Chromium
+### Current gamedev campaign — 29 October 2026
+
+The current campaign passed **340 Node tests in 25 suites** and
+**240 Chromium checks in 14 suites**, on source commit
+`6a80d1e5b25e74aa1b6012ff6b37e83cf25dd492`. Its 11 input unit cases and six browser input
+checks are included in those totals. Runtime and test source hashes stayed unchanged.
+The evidence retains the initial missing-build failure and the successful 15-check
+progression rerun in `retryHistory`; each final case is counted once.
+
+The technical asset audit passed for **44 PNGs, 235 unique source regions,
+56 animation cells and 77 native-alpha references**, with zero violations.
+The selected-guide audit verified **35 original files and 40 local links**.
+
+The current tracker contains **10 sheets, 9 native tables,
+105 features, 686 production tasks, 85 scenarios and 1,587 QA rows**.
+Those rows preserve 1,003 historical/review entries, record the
+580 current full-campaign cases and add 4 targeted checks. The targeted checks
+partly overlap the full campaign; QA row counts are not independent test totals.
+All **39 formulas** were recalculated and checked with zero formula errors.
+Native tables, existing row identities, notes and layout were preserved through export
+and reimport. See the [workbook verification](docs/combat-workbook-verification.json).
+
+### Historical 0.7 campaign
+
+The original [0.7 campaign](docs/combat-qa-evidence-0.7.0.json) passed
+**313 Node tests in 22 suites** and **238 Chromium
 checks in 14 suites**, on source commit
 `1073ce21525c771f598b56d7452eaeceb2ed9178`. Game and test files stayed unchanged
 during execution. Browser coverage includes 100 ending/gallery checks, 22 audio
 checks, 28 keyboard/accessibility checks, four input regressions and fourteen
 complete roster duels. These are parts of the 238-check total, not extra tests.
 
-The current tracker has **10 sheets, 9 native tables, 102 features, 683 production
-tasks, 85 scenarios and 1,003 QA rows**. Its 551 current automated cases remain
-separate from 452 retained historical/review rows. The combined QA statuses are
+The tracker accompanying that campaign contained **10 sheets, 9 native tables,
+102 features, 683 production tasks, 85 scenarios and 1,003 QA rows**. Its 551
+automated cases were separate from 452 retained historical/review rows. The
+combined QA statuses were
 999 passed, zero failed, three not executed and one awaiting verification.
 All **39 formulas** were recalculated and checked. A separate sorted workbook
 fixture preserved ten notes across eight sheets, including two relative formulas,
 zero, false, literal `=` text and a custom row height; fixture notes are not shipped.
 
-The following older totals describe the historical 0.6 campaign, not additional
-fresh 0.7 test results.
+### Historical 0.6 campaign
+
+The following totals describe the earlier 0.6 campaign.
 
 The 0.6.0 evidence records **260 passing Node tests in 17 suites** and
 **154 passing Chromium checks in 18 suites**. All fourteen pre-existing
