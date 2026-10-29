@@ -13,6 +13,7 @@ import { FINISHER_CATALOG, FINISHER_NOTICE } from './finisher-catalog.mjs';
 import { selectMatchFinisher } from './finishers.mjs';
 import { FinisherGallery } from './finisher-gallery.mjs';
 import { TrainingLab } from './training.mjs';
+import { fighterReadout, fighterMarkers } from './readability.mjs';
 import { OfflineGame } from './offline.mjs';
 import { GAME_VERSION, REPLAY_VERSIONS, replayRulesVersion, SAVE_KEY, REPLAY_KEY, MODES, CHALLENGES, readProfileState, saveProfile, validateProfile, cleanSettings, appendReplayFrame, validateReplay, replayInputs, createMatchStats, collectMatchStats, challengeProgress } from './session.mjs';
 
@@ -29,7 +30,7 @@ let profile = initialProfile.profile;
 let profileRecovered = initialProfile.source === 'backup' ? 'backup' : null;
 let profileDirty = false;
 let screen = 'home', active = null, selection = { mode:'versus', fighters:['pomni','jax'], side:0, stage:STAGES[0].id, variants:['',''], challenge:CHALLENGES[0].id };
-let codexId = 'pomni', archiveQuery = '', archivePage = 0, archiveFilter = 'all', previousTime = 0, accumulator = 0, toastTimer;
+let codexId = 'pomni', archiveQuery = '', archivePage = 0, archiveFilter = 'all', previousTime = 0, accumulator = 0, toastTimer, searchTimer;
 let currentObserver, bindingCapture = null, osVisible = true, storyReader = null, finisherGallery = null, dialogReturnFocus = null;
 const PROGRAM_MODES = ['arcade', 'boss', 'survival', 'story', 'tournament'];
 const audio = new CombatAudio({ getSettings: () => profile.settings });
@@ -81,7 +82,9 @@ function refreshStoredProfile() {
 }
 function applySettings() {
   document.body.classList.toggle('reduced-motion', profile.settings.reducedMotion);
+  document.body.classList.toggle('enhanced-readability', profile.settings.enhancedReadability);
   if (active) active.showHitboxes = profile.settings.hitboxes;
+  fitReadabilityStage();
   syncAudio();
 }
 function syncAudio() {
@@ -96,6 +99,7 @@ function prepareMenuGroups(scope) {
   scope.querySelectorAll('[data-codex]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.codex === codexId)));
 }
 function setScreen(next) {
+  if (next !== 'archives') { clearTimeout(searchTimer); searchTimer = null; }
   const changed = screen !== next;
   const previousFocus = changed ? null : rememberFocus(main);
   screen = next; currentObserver?.disconnect();
@@ -305,6 +309,8 @@ function renderSettings() {
       <label class="settings-row">Volume de l’ambiance <input type="range" min="0" max="1" step="0.05" value="${s.ambienceVolume}" data-setting="ambienceVolume" aria-label="Volume de l’ambiance"></label>
       <label class="settings-row">Finales après un KO ${check('finishers')}</label>
       <label class="settings-row">Réduire les mouvements ${check('reducedMotion')}</label>
+      <label class="settings-row">Repères renforcés <input type="checkbox" data-setting="enhancedReadability" aria-describedby="readability-help" ${s.enhancedReadability?'checked':''}></label>
+      <p class="small-note" id="readability-help">Distingue les joueurs par un cercle J1 et un losange J2, même avec la même tenue. Affiche des jauges contrastées, leurs valeurs et les alertes de vie et de finale en texte. Le tableau reste au-dessus de l’arène.</p>
       <label class="settings-row">Afficher les zones de contact ${check('hitboxes')}</label>
       <p class="small-note">Douze thèmes et douze ambiances originales accompagnent les arènes, avec des volumes séparés. Les finales peuvent être passées immédiatement ; la réduction des mouvements en montre une composition fixe.</p>
       <button class="secondary" data-mode="training">Ouvrir les répétitions</button>
@@ -338,7 +344,7 @@ function renderSettings() {
 function updateOfflinePanel() {
   if (screen !== 'settings' || !$('#offline-status')) return;
   const state = offline.getState();
-  $('#offline-status').textContent = !state.supported ? 'Le hors ligne nécessite HTTPS ou localhost et un navigateur compatible.' : !state.ready ? (state.initError ? 'Le mode hors ligne est indisponible. Tu peux réessayer.' : 'Préparation du mode hors ligne…') : state.complete ? 'Spectacle prêt hors ligne · ' + state.cached + ' illustrations.' : (state.busy ? 'Téléchargement : ' : 'Illustrations disponibles : ') + state.cached + '/' + state.total + ' · ' + Math.ceil(state.bytes/1048576) + ' Mo pour le pack complet.';
+  $('#offline-status').textContent = !state.supported ? 'Le hors ligne nécessite HTTPS ou localhost et un navigateur compatible.' : !state.ready ? (state.initError ? 'Le mode hors ligne est indisponible. Tu peux réessayer.' : 'Préparation du mode hors ligne…') : state.applyingUpdate ? 'Application de la mise à jour…' : state.complete ? 'Spectacle prêt hors ligne · ' + state.cached + ' illustrations.' : (state.busy ? 'Téléchargement : ' : 'Illustrations disponibles : ') + state.cached + '/' + state.total + ' · ' + Math.ceil(state.bytes/1048576) + ' Mo pour le pack complet.';
   $('#offline-progress').max = state.total || 1; $('#offline-progress').value = state.cached;
   $('[data-action="offline-retry"]').hidden = !state.supported || state.ready || !state.initError;
   $('[data-action="offline-retry"]').disabled = state.busy;
@@ -360,9 +366,10 @@ function renderFight() {
   setScreen('fight');
   const f=active.fighters, mode=active.replay?'REPLAY LOCAL':MODES.find(m=>m.id===active.mode)?.name;
   const touch=profile.settings.touch==='on'||profile.settings.touch==='auto'&&matchMedia('(pointer:coarse)').matches;
-  main.innerHTML=`<div class="fight-toolbar"><span class="fight-caption">${escapeHTML(mode)} · ${escapeHTML(active.stage.name)}${active.run?` · ${active.run.index+1}/${active.run.opponents.length}`:''}</span><button class="secondary" data-action="pause">Ⅱ Pause</button><button class="secondary" data-action="movelist">Techniques</button><button class="secondary" data-action="controls">Commandes</button>${active.run?.mode==='tournament'?'<button class="secondary" data-action="bracket">Tableau</button>':''}<button class="secondary" data-action="fullscreen">⛶ Plein écran</button></div>${active.mode==='challenge'?`<div class="challenge-progress"><span>${escapeHTML(active.challenge.text)}</span><progress id="challenge-bar" max="${active.challenge.goal}" value="0"></progress><b id="challenge-value">0/${active.challenge.goal}</b><span id="challenge-time">60 s</span></div>`:''}<section class="arena-wrap" aria-label="Arène de combat"><canvas id="arena" width="1280" height="720" tabindex="0" aria-label="Combat. Les commandes sont disponibles au-dessus de l’arène."></canvas><div class="hud">${hudPlayer(f[0],0)}<div class="hud-timer"><span id="round-time">90</span><small id="round-label">MANCHE 1</small></div>${hudPlayer(f[1],1)}</div><div id="announcement" class="fight-announcement" aria-live="polite"></div><div class="fight-bottom"><span id="feedback-0" class="fight-feedback"></span><span id="feedback-1" class="fight-feedback second"></span></div></section>${active.training?trainingMarkup():''}<div class="control-strip"><span>${['left','right','jump','down','light','heavy','special','throw','super','utility'].map(action=>`<kbd>${escapeHTML(binding(action))}</kbd> ${escapeHTML(BINDING_ACTIONS.find(a=>a.id===action).label)}`).join(' · ')}</span><span><kbd>${escapeHTML(binding('guard'))}</kbd> Garde · <kbd>${escapeHTML(binding('dash'))}</kbd> Dash · <kbd>Échap</kbd> Pause</span></div>${touch?touchMarkup():''}`;
+  main.innerHTML=`<div class="fight-toolbar"><span class="fight-caption">${escapeHTML(mode)} · ${escapeHTML(active.stage.name)}${active.run?` · ${active.run.index+1}/${active.run.opponents.length}`:''}</span><button class="secondary" data-action="pause">Ⅱ Pause</button><button class="secondary" data-action="movelist">Techniques</button><button class="secondary" data-action="controls">Commandes</button>${active.run?.mode==='tournament'?'<button class="secondary" data-action="bracket">Tableau</button>':''}<button class="secondary" data-action="fullscreen">⛶ Plein écran</button></div>${active.mode==='challenge'?`<div class="challenge-progress"><span>${escapeHTML(active.challenge.text)}</span><progress id="challenge-bar" max="${active.challenge.goal}" value="0"></progress><b id="challenge-value">0/${active.challenge.goal}</b><span id="challenge-time">60 s</span></div>`:''}<section class="arena-wrap" aria-label="Arène de combat"><div class="arena-stage"><canvas id="arena" width="1280" height="720" tabindex="0" aria-label="Combat. Les commandes sont disponibles au-dessus de l’arène."></canvas><div class="fighter-markers" aria-hidden="true">${[0,1].map(index=>`<span class="fighter-marker player-${index}" id="fighter-marker-${index}"><i class="identity-shape" aria-hidden="true"></i>J${index+1}</span>`).join('')}</div><div id="announcement" class="fight-announcement" aria-live="polite"></div><div class="fight-bottom"><span id="feedback-0" class="fight-feedback"></span><span id="feedback-1" class="fight-feedback second"></span></div></div><div class="hud">${hudPlayer(f[0],0)}<div class="hud-timer"><span id="round-time">90</span><small id="round-label">MANCHE 1</small></div>${hudPlayer(f[1],1)}</div></section>${active.training?trainingMarkup():''}<div class="control-strip"><span>${['left','right','jump','down','light','heavy','special','throw','super','utility'].map(action=>`<kbd>${escapeHTML(binding(action))}</kbd> ${escapeHTML(BINDING_ACTIONS.find(a=>a.id===action).label)}`).join(' · ')}</span><span><kbd>${escapeHTML(binding('guard'))}</kbd> Garde · <kbd>${escapeHTML(binding('dash'))}</kbd> Dash · <kbd>Échap</kbd> Pause</span></div>${touch?touchMarkup():''}`;
   active.renderer=new CombatRenderer($('#arena')); controls.bindTouch(main);
-  $('#arena').focus({preventScroll:true}); updateHUD();
+  $('#arena').focus({preventScroll:true}); updateHUD(); fitReadabilityStage();
+  if (profile.settings.enhancedReadability) main.scrollIntoView({ block: 'start' });
 }
 function trainingMarkup() {
   return `<section class="training-lab" aria-labelledby="training-title"><div class="training-heading"><div><span class="ticket-label">LE LABORATOIRE</span><h2 id="training-title">Répéter, image par image.</h2></div><span id="training-frame" class="small-note"></span></div><div class="training-panel"><label>Mannequin <select id="training-dummy"><option value="idle">Immobile</option><option value="block">Garde haute</option><option value="crouch">Garde basse</option><option value="jump">Sauts</option><option value="after">Garde après impact</option><option value="cpu">CPU</option><option value="playback" disabled>Séquence manuelle</option></select></label><label>Vitesse <select id="training-speed"><option value="1">×1</option><option value="0.5">×0,5</option><option value="0.25">×0,25</option></select></label><label><input type="checkbox" id="training-meter" checked> Finale libre</label><label><input type="checkbox" id="training-resource" checked> Ressource libre</label><label><input type="checkbox" id="training-heal" checked> Soin automatique</label><label><input type="checkbox" id="training-boxes" ${active.showHitboxes?'checked':''}> Zones de contact</label></div><div class="training-actions"><button class="secondary" data-action="training-freeze" aria-pressed="false">Figer</button><button class="secondary" data-action="training-step" disabled>+1 image</button><button class="secondary" data-action="reset-training">Replacer</button><button class="secondary" data-action="training-history">Effacer l’historique</button></div><div class="training-readouts">${[0,1].map(i=>`<div><strong>${i?'Mannequin':'Joueur 1'}</strong><p id="training-readout-${i}"></p></div>`).join('')}</div><p id="training-data" class="training-data"></p><div class="training-recorder"><div><h3>La séquence du mannequin</h3><p>Enregistre jusqu’à 10 secondes : les commandes J1 pilotent le mannequin, J1 reste neutre. Enregistrer ou lire replace les artistes. La lecture suit le côté vers lequel regarde le mannequin.</p></div><div class="training-actions"><button class="secondary" data-action="training-record">Enregistrer</button><button class="secondary" data-action="training-play" disabled>Lire</button><button class="secondary" data-action="training-stop" disabled>Arrêter</button><button class="secondary" data-action="training-clear" disabled>Effacer la séquence</button><label><input type="checkbox" id="training-loop"> En boucle</label></div><p id="training-tape-status" role="status"></p></div><div class="training-histories">${[0,1].map(i=>`<section><h3>Commandes ${i?'du mannequin':'J1'} <small>12 dernières entrées</small></h3><ol id="training-history-${i}"></ol></section>`).join('')}</div></section>`;
@@ -398,7 +405,28 @@ function updateTrainingHUD() {
   $('#training-data').textContent=`Dégâts ${number(active.stats[0].damage)} · Impacts ${active.stats[0].hits} · Gardes du mannequin ${active.stats[1].blocked}`;
   view.history.forEach((rows,index)=>{const node=$(`#training-history-${index}`),html=rows.length?rows.map(row=>`<li><span>${escapeHTML(row.label)}</span><b>${row.frames} i</b></li>`).join(''):'<li><span>Aucune commande observée</span></li>';if(node.innerHTML!==html)node.innerHTML=html;});
 }
-function hudPlayer(f,index) { return `<div class="hud-player ${index?'second':''}"><div class="hud-name"><span>${escapeHTML(f.name)}</span><span>${index?active.mode==='local'?'J2':'CPU':'J1'}</span></div><div class="health-track"><div id="health-${index}" class="health-fill"></div></div><div class="guard-track"><div id="guard-${index}" class="guard-fill"></div></div><div class="meter-track"><div id="meter-${index}" class="meter-fill"></div></div><div class="hud-bars-meta"><span id="hp-${index}">10 000</span><span id="resource-${index}">STABILITÉ 100</span><span id="super-${index}">FINALE 0%</span></div><div class="round-pips" id="wins-${index}">○ ○</div></div>`; }
+function fitReadabilityStage() {
+  const stage = main.querySelector('.arena-stage');
+  if (!stage) return;
+  if (!profile.settings.enhancedReadability || innerWidth < 700) { stage.style.removeProperty('max-width'); return; }
+  // Desktop keeps the full scene and the larger HUD in one viewport. The HUD
+  // remains full-width; only the 16:9 scene shrinks, so labels stay readable.
+  const aboveStage = stage.getBoundingClientRect().top - main.getBoundingClientRect().top;
+  const availableHeight = Math.max(120, innerHeight - aboveStage - 12);
+  const maximum = `${Math.floor(availableHeight * 16 / 9)}px`;
+  if (stage.style.maxWidth !== maximum) stage.style.maxWidth = maximum;
+}
+window.addEventListener('resize', fitReadabilityStage);
+document.addEventListener('fullscreenchange', fitReadabilityStage);
+const readabilityObserver = new ResizeObserver(fitReadabilityStage);
+readabilityObserver.observe(main);
+
+function hudPlayer(f,index) {
+  const label = index ? active.mode === 'local' ? 'J2' : ['training','challenge'].includes(active.mode) ? 'J2 · MANNEQUIN' : 'J2 · CPU' : 'J1';
+  const maximum = f.stats?.health || 10000;
+  const gauge = (kind, label, maximum) => `<div class="gauge-label readability-only"><span>${label}</span><b id="${kind}-value-${index}"></b></div><div class="${kind === 'health' ? 'health' : kind === 'guard' ? 'guard' : 'meter'}-track" id="${kind}-track-${index}" role="meter" aria-label="${label.toLowerCase()} joueur ${index+1}" aria-valuemin="0" aria-valuemax="${maximum}" aria-valuenow="${kind==='health'?maximum:kind==='guard'?100:0}"><div id="${kind === 'finale' ? 'meter' : kind}-${index}" class="${kind === 'finale' ? 'meter' : kind}-fill"></div></div>`;
+  return `<div class="hud-player player-${index} ${index?'second':''}"><div class="hud-name"><span>${escapeHTML(f.name)}</span><span class="hud-player-id"><i class="identity-shape readability-only" aria-hidden="true"></i><span>${label}</span></span></div>${gauge('health','VIE',maximum)}${gauge('guard','GARDE',100)}${gauge('finale','FINALE',100)}<div class="hud-bars-meta"><span id="hp-${index}">${number(maximum)}</span><span id="resource-${index}">STABILITÉ 100</span><span id="super-${index}">FINALE 0%</span></div><p class="readability-status readability-only" id="readability-status-${index}"></p><div class="round-pips" id="wins-${index}">○ ○</div></div>`;
+}
 function touchMarkup() {
   const button=(action,label,style='')=>`<button data-control="${action}" class="${style}" aria-label="${escapeHTML(action)}">${label}</button>`;
   return `<div class="touch-controls" aria-label="Commandes tactiles joueur 1"><div class="touch-move"><span></span>${button('jump','↑')}<span></span>${button('left','←')}${button('down','↓')}${button('right','→')}${button('guard','Garde','guard')}${button('dash','Dash')}<span></span></div><div class="touch-buttons">${button('light','Léger')}${button('heavy','Fort')}${button('special','Spéc.','accent')}${button('throw','Saisie')}${button('low','Bas')}${button('utility','Repos')}${button('super','Finale','accent')}${button('tech','Déchope')}</div></div><div class="touch-extra">${button('specialDown','Spécial ↓')}${button('specialForward','Spécial avant')}${button('specialBack','Spécial arrière')}</div>`;
@@ -503,13 +531,23 @@ function updateHUD() {
   if(!active || screen!=='fight')return;
   const s=active.engine.state;
   s.fighters.forEach((p,i)=>{
-    $(`#health-${i}`).style.width=`${Math.max(0,p.life/p.max*100)}%`;
-    $(`#guard-${i}`).style.width=`${p.guard}%`; $(`#meter-${i}`).style.width=`${p.meter}%`;
+    const cue = fighterReadout(p);
+    $(`#health-${i}`).style.width=`${cue.life/cue.maximum*100}%`;
+    $(`#guard-${i}`).style.width=`${cue.guard}%`; $(`#meter-${i}`).style.width=`${cue.meter}%`;
+    for (const [kind, value, text] of [['health',cue.life,`${number(cue.life)} / ${number(cue.maximum)}`],['guard',cue.guard,`${Math.round(cue.guard)} %`],['finale',cue.meter,`${Math.floor(cue.meter)} / ${cue.requiredMeter}`]]) {
+      const track = $(`#${kind}-track-${i}`), readout = $(`#${kind}-value-${i}`);
+      if (track.getAttribute('aria-valuenow') !== String(Math.round(value))) track.setAttribute('aria-valuenow', String(Math.round(value)));
+      if (readout.textContent !== text) { readout.textContent = text; track.setAttribute('aria-valuetext', text); }
+    }
+    $(`#health-track-${i}`).classList.toggle('critical', cue.critical);
+    $(`#finale-track-${i}`).classList.toggle('ready', cue.ready);
+    const status = $(`#readability-status-${i}`); if (status.textContent !== cue.status) status.textContent = cue.status;
     $(`#hp-${i}`).textContent=number(p.life); $(`#resource-${i}`).textContent=`STAB. ${Math.round(p.r)}`; $(`#super-${i}`).textContent=`FINALE ${Math.round(p.meter)}%`;
     $(`#wins-${i}`).textContent=Array.from({length:s.roundsToWin},(_,n)=>n<s.wins[i]?'●':'○').join(' ');
     const combo = s.fighters[1-i].comboHits || 0;
     $(`#feedback-${i}`).textContent = p.feedbackT>0 ? p.feedback : combo>=2 ? `${combo} IMPACTS` : '';
   });
+  if (profile.settings.enhancedReadability) fighterMarkers(s.fighters).forEach((marker, index) => { const node=$(`#fighter-marker-${index}`); node.style.left=`${marker.x/1280*100}%`; node.style.top=`${marker.y/720*100}%`; });
   $('#round-time').textContent=Number.isFinite(s.timer)?String(Math.max(0,Math.ceil(s.timer))).padStart(2,'0'):'∞';
   $('#round-label').textContent=active.replay?'REPLAY':`MANCHE ${s.round}`;
   let announcement='';
@@ -605,7 +643,7 @@ function finishMatch() {
   active.presentationPhase='matchOver'; active.presentationElapsed=0;
   $('.arena-wrap').classList.toggle('finishing',!!active.finisher);
   if(active.finisher)$('#arena').setAttribute('aria-label',active.finisher.title+' — finale de spectacle. Le résultat du duel est déjà enregistré.');
-  const skip=document.createElement('button'); skip.className='primary outcome-skip'; skip.dataset.action='result-screen'; skip.textContent='Voir le résultat'; $('.arena-wrap').append(skip); skip.focus({preventScroll:true});
+  const skip=document.createElement('button'); skip.className='primary outcome-skip'; skip.dataset.action='result-screen'; skip.textContent='Voir le résultat'; $('.arena-stage').append(skip); skip.focus({preventScroll:true});
 }
 function renderMatchResult() {
   if(!active?.finished)return;
@@ -812,8 +850,24 @@ document.addEventListener('change',event=>{
     active.showHitboxes=$('#training-boxes').checked;accumulator=0;controls.clear();updateTrainingHUD();
   }
 });
-let searchTimer;
-document.addEventListener('input',event=>{if(event.target.id==='archive-search'){archiveQuery=event.target.value;clearTimeout(searchTimer);searchTimer=setTimeout(()=>{archivePage=0;renderArchives();const input=$('#archive-search');input.focus();input.setSelectionRange(input.value.length,input.value.length);},200);}});
+document.addEventListener('input', event => {
+  if (event.target.id !== 'archive-search') return;
+  const input = event.target;
+  archiveQuery = input.value; clearTimeout(searchTimer);
+  searchTimer = setTimeout(() => {
+    searchTimer = null;
+    // A pending search belongs to its screen and current editor. Navigation,
+    // filters or another render must not bring back an abandoned archive view.
+    if (screen !== 'archives' || !input.isConnected) return;
+    const focused = document.activeElement === input;
+    const selection = [input.selectionStart, input.selectionEnd, input.selectionDirection];
+    archivePage = 0; renderArchives();
+    if (focused) {
+      const replacement = $('#archive-search');
+      replacement.focus({ preventScroll: true }); replacement.setSelectionRange(...selection);
+    }
+  }, 200);
+});
 modal.addEventListener('cancel',event=>{
   event.preventDefault();
   if(storyReader){leaveStoryReader();return;}

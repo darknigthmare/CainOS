@@ -20,7 +20,7 @@ export function replayRulesVersion(version) {
 export const SLOT_ORDER = ['light', 'heavy', 'low', 'throw', 'special', 'specialDown', 'specialForward', 'specialBack', 'super', 'utility'];
 const FLAGS = ['left', 'right', 'down', 'guard', 'jump', 'dash', 'tech'];
 export const MAX_PACKED_INPUT = (SLOT_ORDER.length << FLAGS.length) | ((1 << FLAGS.length) - 1);
-export const DEFAULT_SETTINGS = Object.freeze({ layout: 'azerty', difficulty: 'normal', seconds: 90, rounds: 2, volume: .25, sound: true, music: false, musicVolume: .2, ambience: true, ambienceVolume: .35, finishers: true, reducedMotion: false, hitboxes: false, touch: 'auto', bindings: DEFAULT_BINDINGS });
+export const DEFAULT_SETTINGS = Object.freeze({ layout: 'azerty', difficulty: 'normal', seconds: 90, rounds: 2, volume: .25, sound: true, music: false, musicVolume: .2, ambience: true, ambienceVolume: .35, finishers: true, reducedMotion: false, enhancedReadability: false, hitboxes: false, touch: 'auto', bindings: DEFAULT_BINDINGS });
 const integer = (v, lo, hi, fallback = lo) => Number.isInteger(v) && v >= lo && v <= hi ? v : fallback;
 const choice = (v, allowed, fallback) => allowed.includes(v) ? v : fallback;
 export function cleanSettings(value = {}) {
@@ -30,7 +30,7 @@ export function cleanSettings(value = {}) {
     difficulty: choice(s.difficulty, ['easy', 'normal', 'hard'], 'normal'),
     seconds: choice(s.seconds, [60, 90, 120], 90), rounds: choice(s.rounds, [1, 2, 3], 2),
     volume: typeof s.volume === 'number' && Number.isFinite(s.volume) ? Math.max(0, Math.min(1, s.volume)) : .25,
-    sound: s.sound !== false, reducedMotion: s.reducedMotion === true, hitboxes: s.hitboxes === true,
+    sound: s.sound !== false, reducedMotion: s.reducedMotion === true, enhancedReadability: s.enhancedReadability === true, hitboxes: s.hitboxes === true,
     music: s.music === true, ambience: s.ambience !== false, finishers: s.finishers !== false,
     ambienceVolume: typeof s.ambienceVolume === 'number' && Number.isFinite(s.ambienceVolume) ? Math.max(0, Math.min(1, s.ambienceVolume)) : .35,
     musicVolume: typeof s.musicVolume === 'number' && Number.isFinite(s.musicVolume) ? Math.max(0, Math.min(1, s.musicVolume)) : .2,

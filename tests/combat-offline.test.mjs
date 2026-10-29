@@ -4,7 +4,7 @@ import { OfflineGame } from '../combat/offline.mjs';
 
 // A controllable browser boundary exercises actual init/request cleanup and races.
 async function withBrowser(options, run) {
-  const names = ['navigator', 'window', 'MessageChannel', 'setTimeout', 'clearTimeout'];
+  const names = ['navigator', 'window', 'MessageChannel', 'setTimeout', 'clearTimeout', 'location'];
   const originals = new Map(names.map(name => [name, Object.getOwnPropertyDescriptor(globalThis, name)]));
   class Events {
     listeners = new Map();
@@ -33,6 +33,7 @@ async function withBrowser(options, run) {
   }
   const service = new Events();
   service.registration = new Registration(new Worker()); service.calls = [];
+  service.controller = service.registration.active; service.reloads = 0;
   service.register = (url, registrationOptions) => {
     service.calls.push({ url, options: registrationOptions });
     return service.registerImpl ? service.registerImpl() : Promise.resolve(service.registration);
@@ -41,6 +42,7 @@ async function withBrowser(options, run) {
   const window = new Events(); window.isSecureContext = !options.insecure;
   const values = {
     navigator: options.unsupported ? {} : { serviceWorker: service }, window,
+    location: { reload() { service.reloads++; } },
     MessageChannel: Channel,
     setTimeout: (handler, delay) => { const id = ++nextTimer; timers.set(id, { handler, due: clock + delay }); return id; },
     clearTimeout: id => timers.delete(id),
@@ -205,4 +207,99 @@ test('init during an art download does not clear its busy state or launch anothe
   assert.equal(game.getState().busy, true); assert.equal(service.calls.length, 1);
   finishDownload(); await download;
   assert.equal(game.getState().complete, true); assert.equal(game.getState().busy, false); released();
+}));
+
+
+test('a rejected activation removes its reload listener and can be explicitly retried', async () => {
+  for (const synchronous of [true, false]) await withBrowser({}, async ({ service, Worker, flush, released }) => {
+    const game = new OfflineGame(); await game.init();
+    const worker = new Worker('installed'); service.registration.waiting = worker;
+    worker.respond = port => { if (synchronous) throw new Error('Worker lost'); port.postMessage({ ok: false, error: 'Activation refused' }); };
+    await assert.rejects(game.applyUpdate(), synchronous ? /Worker lost/ : /Activation refused/);
+    assert.equal(service.count('controllerchange'), 0);
+    assert.equal(game.getState().busy, false); assert.equal(game.getState().applyingUpdate, false);
+    assert.match(game.getState().error, synchronous ? /Worker lost/ : /Activation refused/);
+    service.emit('controllerchange'); assert.equal(service.reloads, 0); released();
+    worker.respond = port => port.postMessage({ ok: true, result: { activated: true } });
+    const retry = game.applyUpdate(); await flush();
+    assert.equal(game.getState().error, ''); assert.equal(game.getState().applyingUpdate, true);
+    service.controller = worker; service.emit('controllerchange'); await retry;
+    assert.equal(service.reloads, 1); assert.equal(service.count('controllerchange'), 0);
+    assert.equal(game.getState().busy, false); assert.equal(game.getState().applyingUpdate, false); released();
+  });
+});
+
+test('a silent activation or missing controller handover times out without arming a late reload', async () => {
+  for (const acknowledged of [false, true]) await withBrowser({}, async ({ service, Worker, flush, tick, released }) => {
+    const game = new OfflineGame(); await game.init();
+    const worker = new Worker('installed'); service.registration.waiting = worker;
+    worker.respond = port => { if (acknowledged) port.postMessage({ ok: true, result: { activated: true } }); };
+    const attempt = game.applyUpdate(), rejection = assert.rejects(attempt, /trop de temps/);
+    await flush(); await tick(20000); await rejection;
+    assert.equal(game.getState().busy, false); assert.equal(game.getState().applyingUpdate, false);
+    assert.match(game.getState().error, /trop de temps/);
+    assert.equal(service.count('controllerchange'), 0); released();
+    service.controller = worker; service.emit('controllerchange'); await flush();
+    assert.equal(service.reloads, 0);
+  });
+});
+
+test('concurrent activation requests share one operation and only the requested controller reloads once', async () => withBrowser({}, async ({ service, Worker, flush, released }) => {
+  const game = new OfflineGame(); await game.init();
+  const worker = new Worker('installed'); service.registration.waiting = worker;
+  let delayedReply;
+  worker.respond = port => { delayedReply = () => port.postMessage({ ok: true, result: { activated: true } }); };
+  const first = game.applyUpdate(), second = game.applyUpdate();
+  assert.equal(first, second); assert.equal(game.getState().busy, true); assert.equal(game.getState().applyingUpdate, true);
+  await flush(); assert.deepEqual(worker.messages, ['ACTIVATE']); assert.equal(service.count('controllerchange'), 1);
+  service.controller = new Worker(); service.emit('controllerchange'); await flush();
+  assert.equal(service.reloads, 0); assert.equal(game.getState().busy, true);
+  // Browser controller handover is authoritative even before the message reply.
+  service.controller = worker; service.emit('controllerchange'); await first;
+  assert.equal(service.reloads, 1); assert.equal(service.count('controllerchange'), 0); released();
+  delayedReply(); service.emit('controllerchange'); await flush();
+  assert.equal(service.reloads, 1); assert.equal(game.getState().busy, false); released();
+}));
+
+test('an update without a waiting worker or during pack preparation starts no activation', async () => withBrowser({}, async ({ service, Worker, status, flush, released }) => {
+  const game = new OfflineGame(); await game.init(); await game.applyUpdate();
+  assert.equal(service.count('controllerchange'), 0); assert.equal(game.getState().applyingUpdate, false); released();
+  let finishDownload;
+  service.registration.active.respond = port => { finishDownload = () => port.postMessage({ ok: true, result: status }); };
+  const download = game.prepare(); await flush();
+  const worker = new Worker('installed'); service.registration.waiting = worker;
+  await game.applyUpdate();
+  assert.deepEqual(worker.messages, []); assert.equal(service.count('controllerchange'), 0);
+  assert.equal(game.getState().busy, true); assert.equal(game.getState().applyingUpdate, false);
+  finishDownload(); await download; released();
+}));
+
+test('an incomplete preparation invalidates an evicted complete pack and retry restores its actual status', async () => withBrowser({}, async ({ service, status, flush, released }) => {
+  service.registration.active.respond = port => port.postMessage({ ok: true, result: { ...status, cached: 42, complete: true } });
+  const game = new OfflineGame(); await game.init(); assert.equal(game.getState().complete, true);
+  service.registration.active.respond = port => {
+    port.postMessage({ progress: true, cached: 3, total: 42 });
+    port.postMessage({ ok: false, error: 'Art request failed' });
+  };
+  await assert.rejects(game.prepare(), /Art request failed/);
+  assert.equal(game.getState().cached, 3); assert.equal(game.getState().complete, false);
+  assert.equal(game.getState().busy, false); assert.equal(game.getState().error, 'Art request failed'); released();
+  let finishDownload;
+  service.registration.active.respond = port => {
+    port.postMessage({ progress: true, cached: 4, total: 42 });
+    finishDownload = () => { port.postMessage({ progress: true, cached: 42, total: 42 }); port.postMessage({ ok: true, result: { ...status, cached: 42, complete: true } }); };
+  };
+  const retry = game.prepare(); await flush();
+  assert.equal(game.getState().error, ''); assert.equal(game.getState().cached, 4); assert.equal(game.getState().complete, false);
+  finishDownload(); await retry;
+  assert.equal(game.getState().cached, 42); assert.equal(game.getState().complete, true); assert.equal(game.getState().busy, false); released();
+}));
+
+test('a preparation failure before fresh progress cannot claim the old pack is still complete', async () => withBrowser({}, async ({ service, status, released }) => {
+  service.registration.active.respond = port => port.postMessage({ ok: true, result: { ...status, cached: 42, complete: true } });
+  const game = new OfflineGame(); await game.init();
+  service.registration.active.respond = () => { throw new Error('Worker unavailable'); };
+  await assert.rejects(game.prepare(), /Worker unavailable/);
+  assert.equal(game.getState().complete, false); assert.equal(game.getState().busy, false);
+  assert.equal(game.getState().error, 'Worker unavailable'); released();
 }));

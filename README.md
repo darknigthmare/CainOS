@@ -192,6 +192,26 @@ cue distinct from selection. Both retain the existing mute, pause, voice limits
 and cleanup behavior. Physical-device mixing and dedicated voices remain open.
 Profile format v1 and replay rules are unchanged.
 
+## Reinforced cues, archive editing and offline repairs — 29 October 2026
+
+**Settings → Repères renforcés** adds an optional presentation for the shared game.
+Circle J1 and diamond J2 labels follow the fighters, including mirror matches and
+side changes. Named, patterned health, guard and finale gauges show values in a
+separate opaque panel above the arena. Low life, fragile guard and finale readiness
+also have text labels. The setting is off by default and stays in version-one
+profiles; simulation and replay rules are unchanged.
+
+This is a first focused accessibility slice. It does not certify a global palette,
+every color-vision deficiency or screen-reader playability. PRE-12 remains partial
+in the tracker, with physical-device and user validation still open.
+
+Archive filtering now preserves the selection inside the search field and respects
+navigation away from that screen. Its delayed refresh cannot reopen an abandoned
+archive view. Offline preparation invalidates an old completion claim while it
+rechecks the pack; a failed repair after cache eviction stays visibly incomplete.
+Explicit updates have a bounded handover, one pending operation and listener cleanup
+on failure, so an abandoned activation cannot trigger a later reload.
+
 ## Development and build
 
 ```bash

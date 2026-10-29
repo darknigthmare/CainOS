@@ -157,6 +157,33 @@ audio couvrent ces comportements. La campagne complète et le classeur indiquent
 les résultats réellement exécutés ; une sortie PCM automatique ne remplace pas
 une écoute sur un appareil physique.
 
+## Repères renforcés et corrections de navigation — 29 octobre 2026
+
+Dans **Réglages → Confort du spectacle**, active **Repères renforcés** pour
+compléter les couleurs par des formes et des textes. Le cercle J1 et le losange
+J2 suivent les personnages lorsqu’ils changent de côté, y compris lorsque les
+joueurs choisissent le même artiste et la même tenue.
+
+Le tableau de combat se place au-dessus de l’arène sur un fond opaque. Les jauges
+**Vie**, **Garde** et **Finale** ont des motifs et des valeurs distincts. Les messages
+**VIE CRITIQUE**, **GARDE FRAGILE** et **FINALE PRÊTE** complètent les signaux visuels ;
+la disponibilité de la finale tient compte du coût de sa technique, de sa ressource
+et de son délai de récupération. Les repères s’effacent pendant les scènes de KO.
+
+Ce réglage est désactivé par défaut et reste dans les profils v1, y compris après
+export et import. Il change la présentation, sans modifier les règles de combat
+ou de replay. La tâche PRE-12 du suivi reste partielle : la palette globale, les
+autres indicateurs et les essais avec des utilisateurs concernés restent ouverts.
+
+La recherche des Archives conserve désormais le curseur et la sélection dans le
+champ. Quitter l’écran annule le filtrage différé ; un rafraîchissement ne peut plus
+ramener le joueur aux Archives après son retour à l’accueil.
+
+Le mode hors ligne corrige aussi deux reprises après échec : un pack évincé puis
+partiellement retéléchargé reste annoncé incomplet, et une activation refusée ou
+expirée retire son écouteur de rechargement. Le bouton de mise à jour indique
+l’application en cours et permet une nouvelle tentative après un échec.
+
 ## Accès au jeu
 
 L’icône **Circus Combat** et l’entrée correspondante du menu Démarrer ouvrent

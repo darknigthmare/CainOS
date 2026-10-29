@@ -14,6 +14,7 @@ export const BROWSER_SUITES = Object.freeze([
   ['tests/combat-reduced-motion-browser.mjs', 'audit-combat/reduced-motion-browser-report.json'],
   ['tests/combat-offline-browser.mjs', 'audit-combat/offline-browser-report.json'],
   ['tests/combat-accessibility-browser.mjs', 'audit-combat/accessibility-browser-report.json'],
+  ['tests/combat-readability-browser.mjs', 'audit-combat/readability-browser-report.json'],
   ['tests/combat-input-browser.mjs', 'audit-combat/input-browser-report.json'],
 ].map(row => Object.freeze(row)));
 

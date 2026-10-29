@@ -3,7 +3,7 @@
  * the static test server; no application/engine mutation hooks are used.
  */
 import assert from 'node:assert/strict';
-import { ART_BYTES, ART_FILES } from '../combat/offline-manifest.mjs';
+import { ART_BYTES, ART_FILES, ART_VERSION } from '../combat/offline-manifest.mjs';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import http from 'node:http';
@@ -16,10 +16,12 @@ catch(error){if(!process.env.CODEX_PRIMARY_RUNTIME_NODE_MODULES)throw error;play
 const output=path.resolve('audit-combat'), root=path.resolve('dist-combat');
 await fs.mkdir(output,{recursive:true});
 let update=0;
+const unavailableArt=new Set();
 const mime={'.mjs':'text/javascript','.js':'text/javascript','.html':'text/html','.css':'text/css','.svg':'image/svg+xml','.png':'image/png','.webmanifest':'application/manifest+json'};
 const server=http.createServer(async(req,res)=>{
   try{
     const pathname=decodeURIComponent(new URL(req.url,'http://localhost').pathname);
+    if(unavailableArt.has(pathname)){res.writeHead(503);res.end('Temporary art download failure');return;}
     const file=path.resolve(root,'.'+(pathname.endsWith('/')?pathname+'index.html':pathname));
     if(!file.startsWith(root+path.sep)){res.writeHead(403);res.end();return;}
     let content=await fs.readFile(file);
@@ -127,6 +129,30 @@ try{
   const saved=await page.evaluate(()=>window.Encore.profile);
   await page.screenshot({path:path.join(output,'encore-settings.png'),fullPage:true});
   checked(`The standalone downloads all ${ART_FILES.length} sprite sheets`,`${ART_BYTES.toLocaleString('en-US')} bytes; explicit UI action and completion state`);
+
+  // Simulate browser eviction after the UI observed a complete pack. Only real
+  // CacheStorage entries and the server fixture change; application state does not.
+  const evicted=ART_FILES.slice(-2).map(file=>new URL(file,base+'/combat/').href);
+  await page.evaluate(async({name,urls})=>{
+    const cache=await caches.open(name);
+    for(const url of urls)if(!await cache.delete(url))throw new Error('Expected cached artwork before eviction');
+  },{name:'cainos-encore-art-'+ART_VERSION,urls:evicted});
+  unavailableArt.add(new URL(evicted[0]).pathname);
+  await page.locator('[data-action="offline-prepare"]').click();
+  await page.waitForFunction(()=>!window.Encore.offline.busy&&!!window.Encore.offline.error);
+  const incomplete=await page.evaluate(()=>window.Encore.offline);
+  assert.equal(incomplete.complete,false);assert.ok(incomplete.cached<ART_FILES.length);
+  assert.doesNotMatch(await page.locator('#offline-status').textContent(),/prêt hors ligne/);
+  assert.match(await page.locator('#offline-error').textContent(),/illustration/);
+  assert.deepEqual(await page.evaluate(()=>window.Encore.profile),saved);
+  checked('An evicted art pack followed by a failed download is never announced as ready offline',`${incomplete.cached}/${ART_FILES.length}; real CacheStorage eviction and HTTP 503; profile preserved`);
+  unavailableArt.clear();
+  await page.locator('[data-action="offline-prepare"]').click();
+  await page.waitForFunction(()=>window.Encore.offline.complete&&!window.Encore.offline.busy,null,{timeout:60000});
+  assert.equal(await page.evaluate(()=>window.Encore.offline.cached),ART_FILES.length);
+  assert.equal(await page.locator('#offline-error').textContent(),'');
+  assert.deepEqual(await page.evaluate(()=>window.Encore.profile),saved);
+  checked('Retrying the incomplete pack downloads its missing artwork and restores the ready state');
 
   await context.setOffline(true);
   await page.goto(base+'/combat/index.html?standalone=1',{waitUntil:'networkidle'});
