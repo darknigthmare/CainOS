@@ -20,7 +20,7 @@ const base = process.env.COMBAT_TEST_URL || 'http://127.0.0.1:4178';
 const output = path.resolve('audit-combat');
 await fs.mkdir(output, { recursive: true });
 const report = { suite: 'profile-backup', base, generatedAt: new Date().toISOString(), checks: [], errors: [], pass: false,
-  fixturePolicy: 'Statistics, awards and the saved survival encounter are explicit import fixtures. No wins are claimed from this suite.',
+  fixturePolicy: 'Statistics, initial awards and the saved survival encounter are explicit import fixtures. The specialist exercise is played once via keyboard; no duel wins are claimed.',
   limitations: ['Storage faults are deliberately injected in Chromium.', 'Physical devices and long-term browser storage retention are not exercised.'] };
 const checked = (name, detail) => { report.checks.push({ name, detail, pass: true }); console.log('PASS ' + name); };
 const browser = await playwright.chromium.launch({ headless: true,
@@ -83,6 +83,38 @@ try {
     window.__profileStorageEvents = [];
     addEventListener('storage', event => { if (event.key === main) window.__profileStorageEvents.push(event.newValue); });
   }, SAVE_KEY);
+  const older = structuredClone(fixture);
+  older.stats.matches--; older.stats.wins--; older.challenges = ['combo'];
+  await other.evaluate(({ main, backup, raw }) => { localStorage.setItem(backup, raw); localStorage.setItem(main, '{older backup available'); }, { main: SAVE_KEY, backup: SAVE_BACKUP_KEY, raw: JSON.stringify(older) });
+  await page.bringToFront();
+  await page.waitForFunction(() => window.__profileStorageEvents.includes('{older backup available'));
+  assert.deepEqual(await profile(), fixture, 'an old fallback must not roll back a valid live session');
+  assert.equal(await page.locator('[data-profile-recovery]').getAttribute('data-recovery-source'), 'memory');
+  assert.match(await page.locator('[data-profile-recovery]').textContent(), /session reste en mémoire/);
+  assert.deepEqual(await exportRecovery(), fixture);
+  assert.equal((await records())[1], JSON.stringify(older), 'reading keeps even the older backup untouched');
+  await page.locator('[data-action="save-recovered-profile"]').click();
+  await page.waitForFunction(() => !document.querySelector('[data-profile-recovery]'));
+  assert.deepEqual((await records()).map(JSON.parse), [fixture, fixture]);
+  checked('a stale backup cannot roll back the live profile after a real cross-tab corruption event');
+
+  // A same-tab disk fault emits no storage event to this page. Completing a real
+  // exercise specifically exercises refreshStoredProfile before earning its reward.
+  await page.evaluate(({ main, backup, raw }) => { localStorage.setItem(backup, raw); localStorage.setItem(main, '{reward refresh corruption'); }, { main: SAVE_KEY, backup: SAVE_BACKUP_KEY, raw: JSON.stringify(older) });
+  await page.getByRole('button', { name: 'Jouer', exact: true }).click();
+  await page.locator('.mode-card[data-mode="challenge"]').click();
+  await page.locator('[data-challenge="specialist"]').click();
+  await page.locator('[data-action="start"]').click();
+  await page.waitForFunction(() => window.Encore.ready && window.Encore.snapshot.phase === 'fight');
+  for (const key of ['KeyC', 'KeyK', 'KeyI', 'KeyL']) { await page.keyboard.press(key); await page.waitForTimeout(1000); }
+  await page.waitForFunction(() => window.Encore.profile.challenges.includes('specialist'));
+  fixture.challenges.push('specialist');
+  assert.deepEqual(await profile(), fixture, 'reward refresh must preserve all newer stats and awards');
+  assert.deepEqual((await records()).map(JSON.parse), [fixture, fixture]);
+  [saved[0], saved[1]] = await records();
+  await page.locator('#modal [data-action="home"]').click();
+  checked('a played challenge adds its reward without refreshing the live profile from an older backup');
+
   await other.evaluate(([main, backup]) => { localStorage.setItem(backup, '{damaged backup'); localStorage.setItem(main, '{damaged primary'); }, [SAVE_KEY, SAVE_BACKUP_KEY]);
   await page.bringToFront();
   await page.waitForFunction(() => window.__profileStorageEvents.includes('{damaged primary'));
@@ -95,6 +127,7 @@ try {
   assert.deepEqual(await profile(), fixture);
   const corrupted = await records(); assert.deepEqual(corrupted, ['{truncated primary', saved[1]]);
   await load(); assert.deepEqual(await profile(), fixture);
+  assert.equal(await page.locator('[data-profile-recovery]').getAttribute('data-recovery-source'), 'backup');
   assert.equal(await page.locator('[data-action="resume-program"]').count(), 1);
   assert.ok(await page.locator('[data-profile-recovery]').isVisible());
   assert.deepEqual(await records(), corrupted, 'reading the fallback must not silently repair the primary');

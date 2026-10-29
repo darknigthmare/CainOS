@@ -153,14 +153,14 @@ async function updateWorkbook() {
   updateExisting('features', 'PRO-01', { 3: saveState,
     5: 'combat/session.mjs / tests/combat-session-backup.test.mjs / tests/combat-profile-backup-browser.mjs',
     6: 'Conserver le profil v1 local. Après écriture primaire réussie, conserver aussi une copie validée de secours. Un primaire valide reste prioritaire.',
-    7: 'La lecture ne réécrit aucune clé. Une écriture primaire refusée préserve le secours. Un secours refusé peut rester plus ancien. Un événement de stockage invalide ou inaccessible conserve le profil en mémoire.' });
+    7: 'La lecture ne réécrit aucune clé. Une écriture primaire refusée préserve le secours, qui peut rester plus ancien. En session, les états secours, invalide ou indisponible conservent le profil en mémoire.' });
   updateExisting('features', 'PRO-10', { 3: saveState,
     5: 'combat/session.mjs / combat/app.mjs / tests/combat-profile-backup-browser.mjs / tests/combat-profile-recovery-browser.mjs',
-    6: 'Récupérer une copie de secours valide si le primaire est corrompu et informer le joueur. Un checkpoint invalide retire uniquement le programme actif.',
-    7: 'Une clé primaire absente ne ressuscite pas le secours. Une chaîne vide ou tronquée reste récupérable. Export et restauration sont proposés explicitement. Import manuel strict, schéma v1 et règles de replay conservés.' });
+    6: 'Au chargement, récupérer un secours valide si le primaire est corrompu. En session, préserver le profil mémoire plutôt que charger un secours ancien. Un checkpoint invalide retire seulement le programme actif.',
+    7: 'Distinguer profil récupéré au chargement et profil conservé en session. Clé absente : suppression respectée. Chaîne vide ou tronquée : récupération possible au chargement. Export et conservation explicites. Import strict, schéma v1 et règles de replay conservés.' });
   upsert(data.production, ['GDF26-PROFILE-BACKUP', 'Sauvegarde', 'Profil local', 'Secours validé et récupération explicite', saveState, 'P0',
     'combat/session.mjs / combat/app.mjs / tests/combat-session-backup.test.mjs / tests/combat-profile-backup-browser.mjs',
-    'Primaire valide prioritaire. Lecture sans écriture. Après succès primaire, copie du même profil validé dans le secours. Les imports invalides ne remplacent aucune clé.',
+    'Au chargement, primaire valide prioritaire puis secours compatible. Lecture sans écriture. En session, un secours ancien ne remplace pas le profil mémoire. Après succès primaire, copie du même JSON validé dans le secours. Imports invalides refusés.',
     'Clé primaire absente : ignorer le secours orphelin et le retirer avant une nouvelle sauvegarde. Stockage refusé et checkpoint invalide restent des états distincts. Le secours peut être plus ancien si sa propre écriture échoue.', '']);
 
   // Validate complete source-bound coverage with the existing preparation API.

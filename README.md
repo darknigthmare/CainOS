@@ -181,7 +181,9 @@ backup, after the primary write. A present but unreadable primary can recover
 from that valid copy without rewriting storage during load. A persistent notice
 on Home and Settings offers export or explicit repair; it explains that the copy
 may be older. A deleted primary stays deleted, and corrupted cross-tab data cannot
-erase an already valid in-memory profile. Rejected storage writes retain export
+erase an already valid in-memory profile or replace it with an older backup.
+A separate notice identifies a retained live session; reward refresh also keeps
+its newer progress. Rejected storage writes retain export
 access and never claim a successful repair.
 
 There are now **26 original sound motifs**. Escaping a throw has a dedicated cue,

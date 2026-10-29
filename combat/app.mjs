@@ -26,7 +26,7 @@ let storage;
 try { storage = localStorage; } catch { storage = { getItem: () => null, setItem: () => { throw new Error('Stockage indisponible'); } }; }
 const initialProfile = readProfileState(storage);
 let profile = initialProfile.profile;
-let profileRecovered = initialProfile.source === 'backup';
+let profileRecovered = initialProfile.source === 'backup' ? 'backup' : null;
 let profileDirty = false;
 let screen = 'home', active = null, selection = { mode:'versus', fighters:['pomni','jax'], side:0, stage:STAGES[0].id, variants:['',''], challenge:CHALLENGES[0].id };
 let codexId = 'pomni', archiveQuery = '', archivePage = 0, archiveFilter = 'all', previousTime = 0, accumulator = 0, toastTimer;
@@ -50,13 +50,17 @@ function toast(message) {
 }
 function profileRecoveryMarkup() {
   if (!profileRecovered) return '';
-  return `<aside class="profile-recovery" data-profile-recovery aria-labelledby="profile-recovery-title"><div><span class="ticket-label">TON PROFIL A ÉTÉ RÉCUPÉRÉ</span><h2 id="profile-recovery-title">Une copie de secours est disponible.</h2><p role="status">La sauvegarde principale est illisible. Cette copie valide peut être plus ancienne : vérifie ton palmarès et ton parcours avant de la conserver.</p></div><div class="modal-actions"><button class="primary" data-action="save-recovered-profile">Conserver ce profil</button><button class="secondary" data-action="export-profile">Exporter une copie</button></div></aside>`;
+  const fromBackup = profileRecovered === 'backup';
+  const label = fromBackup ? 'TON PROFIL A ÉTÉ RÉCUPÉRÉ' : 'TA SESSION EST CONSERVÉE';
+  const heading = fromBackup ? 'Une copie de secours est disponible.' : 'Ton profil reste disponible.';
+  const message = fromBackup ? 'La sauvegarde principale est illisible. Cette copie valide peut être plus ancienne : vérifie ton palmarès et ton parcours avant de la conserver.' : 'La sauvegarde locale est illisible ou inaccessible. Le profil de cette session reste en mémoire. Exporte-le ou conserve-le pour protéger ta progression.';
+  return `<aside class="profile-recovery" data-profile-recovery data-recovery-source="${profileRecovered}" aria-labelledby="profile-recovery-title"><div><span class="ticket-label">${label}</span><h2 id="profile-recovery-title">${heading}</h2><p role="status">${message}</p></div><div class="modal-actions"><button class="primary" data-action="save-recovered-profile">Conserver ce profil</button><button class="secondary" data-action="export-profile">Exporter une copie</button></div></aside>`;
 }
 function persist() {
   profileDirty = !saveProfile(storage, profile);
   if (profileDirty) toast('Stockage local indisponible. Exporte ta sauvegarde pour la conserver.');
   else {
-    profileRecovered = false;
+    profileRecovered = null;
     document.querySelectorAll('[data-profile-recovery]').forEach(element => element.remove());
   }
   return !profileDirty;
@@ -65,10 +69,15 @@ function refreshStoredProfile() {
   // Keep unsaved results in memory when storage is denied, full or inaccessible.
   if (profileDirty) return;
   const latest = readProfileState(storage);
-  if (!['primary', 'backup'].includes(latest.source)) return;
+  // Only the primary is newer authoritative storage. A fallback can be older
+  // than this live session when its last duplication was refused by quota.
+  if (latest.source !== 'primary') {
+    if (['backup', 'invalid', 'unavailable'].includes(latest.source)) profileRecovered ||= 'memory';
+    return;
+  }
   latest.profile.settings = profile.settings;
   profile = latest.profile;
-  profileRecovered = latest.source === 'backup';
+  profileRecovered = null;
 }
 function applySettings() {
   document.body.classList.toggle('reduced-motion', profile.settings.reducedMotion);
@@ -724,7 +733,7 @@ async function handleClick(event){
       case 'bracket':showBracket();break;
       case 'result-screen':renderMatchResult();break;
       case 'reset-bindings':{profile.settings=cleanSettings({...profile.settings,bindings:DEFAULT_BINDINGS});const saved=persist();renderSettings();if(saved){confirmAction();toast('Touches par défaut rétablies.');}break;}
-      case 'save-recovered-profile':if(profileRecovered&&persist()){main.focus({preventScroll:true});confirmAction();toast('Le profil récupéré est enregistré.');}break;
+      case 'save-recovered-profile':if(profileRecovered){const source=profileRecovered;if(persist()){main.focus({preventScroll:true});confirmAction();toast(source==='backup'?'Le profil récupéré est enregistré.':'Le profil de cette session est enregistré.');}}break;
       case 'offline-retry':await offline.init();if(offline.getState().ready)toast('Le mode hors ligne est prêt.');break;
       case 'offline-prepare':await offline.prepare();toast('Le spectacle est prêt pour une visite hors ligne.');break;
       case 'offline-clear':await offline.clearAssets();toast('Illustrations libérées. Le profil est conservé.');break;
@@ -821,7 +830,19 @@ modal.addEventListener('keydown',event=>{
 window.addEventListener('blur',()=>{if(active&&screen==='fight'&&!active.finished&&!modal.open)pauseGame('La fenêtre a perdu le focus. Reprends lorsque tu es prêt.');});
 document.addEventListener('visibilitychange',()=>{if(document.hidden){finisherGallery?.suspendClock();if(active&&!active.finished)pauseGame('Le jeu a été masqué. La rencontre est suspendue.');}syncAudio();});
 window.addEventListener('message',event=>{if(!embedded||event.source!==window.parent||event.origin!==location.origin)return;if(event.data?.type==='cainos:combat:visibility'){osVisible=event.data.active!==false;if(!osVisible){finisherGallery?.suspendClock();controls.clear();if(active&&!active.finished)pauseGame('La fenêtre de combat a été masquée dans CainOS.');}syncAudio();}});
-window.addEventListener('storage',event=>{if(event.key===SAVE_KEY&&!profileDirty){const latest=readProfileState(storage);if(['invalid','unavailable'].includes(latest.source))return;profile=latest.profile;profileRecovered=latest.source==='backup';applySettings();if(screen==='settings')renderSettings();else if(screen==='home')renderHome();}});
+window.addEventListener('storage', event => {
+  if (event.key !== SAVE_KEY || profileDirty) return;
+  const latest = readProfileState(storage);
+  if (['primary', 'empty'].includes(latest.source)) {
+    profile = latest.profile; profileRecovered = null;
+  } else {
+    // Keep the valid live profile, including when the available backup lags it.
+    // A missing primary remains an explicit deletion handled above.
+    profileRecovered ||= 'memory';
+  }
+  applySettings();
+  if (screen === 'settings') renderSettings(); else if (screen === 'home') renderHome();
+});
 $('#import-profile').addEventListener('change',async event=>{
   const file=event.target.files[0];event.target.value='';if(!file)return;
   try{if(file.size>2_000_000)throw new Error('Ce fichier de profil est trop volumineux.');const imported=validateProfile(JSON.parse(await file.text()));showDialog('<span class="ticket-label">PROFIL IMPORTÉ</span><h2 id="modal-title">Remplacer ce profil local ?</h2><p class="result-copy">Les réglages et le palmarès de ce navigateur seront remplacés par ceux du fichier choisi.</p><div class="modal-actions"><button class="primary" id="confirm-import">Importer ce profil</button><button class="secondary" data-action="close-modal">Annuler</button></div>');$('#confirm-import').addEventListener('click',()=>{profile=imported;const saved=persist();applySettings();closeDialog();renderSettings();if(saved){confirmAction();toast('Profil importé.');}},{once:true});}catch(error){toast(error.message);}

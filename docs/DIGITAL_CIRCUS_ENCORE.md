@@ -144,8 +144,11 @@ réussie répare le profil principal et retire cette notice.
 La copie peut être plus ancienne si sa dernière mise à jour a été refusée. Une
 copie de secours n’est pas restaurée quand le profil principal a été supprimé.
 Un refus d’écriture du profil principal garde le secours intact et permet
-l’export des données en mémoire. Si un autre onglet rend les deux copies
-illisibles, la session déjà ouverte conserve son profil valide en mémoire.
+l’export des données en mémoire. Si un autre onglet rend le primaire illisible, la session déjà ouverte
+conserve son profil valide en mémoire, même si un secours plus ancien existe.
+Une notice distincte signale cette conservation en mémoire ; la lecture d’un
+secours au démarrage reste une récupération. Le rafraîchissement avant une
+nouvelle récompense ne remplace pas non plus la session par un ancien secours.
 Le format reste en version 1 ; les règles de simulation et de replay sont
 inchangées. Pour une copie indépendante du navigateur, utiliser l’export JSON.
 
