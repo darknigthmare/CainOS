@@ -8,12 +8,14 @@ const editing = target => !!target && (/^(INPUT|SELECT|TEXTAREA)$/.test(target.t
 // The menu owns select/slider/checkbox changes. Text editors retain their native
 // focus and shortcuts; key-capture dialogs use the explicit disabled flag.
 const menuEditing = target => !!target && (target.isContentEditable || target.tagName === 'TEXTAREA' || target.tagName === 'INPUT' && !['range','checkbox','radio'].includes(target.type));
+// Use the same gameplay thresholds for returning a suspended pad to neutral.
+const padActive = pad => !!pad && (pad.buttons?.some(button => button.pressed) || Math.abs(pad.axes?.[0] ?? 0) > .35 || Math.abs(pad.axes?.[1] ?? 0) > .45);
 export class InputController {
   constructor({ enabled, onPause=()=>{}, onHelp=()=>{}, getBindings=()=>undefined, onNavigate=()=>{} }) {
     this.enabled = enabled; this.onPause = onPause; this.onHelp = onHelp; this.getBindings=getBindings; this.onNavigate=onNavigate;
-    this.keys = new Set(); this.tapped = new Set(); this.touch = new Map(); this.touchTaps = new Set(); this.padPrevious = [[], []];
+    this.keys = new Set(); this.tapped = new Set(); this.touch = new Map(); this.touchTaps = new Map(); this.padPrevious = [[], []];
     this.bindingSource=Symbol('initial'); this.bindings=cleanBindings(); this.consumedKeys=new Set();
-    this.padSlots=[null,null]; this.lastPollMode='menu'; this.menuNeedsNeutral=false; this.menuDirection=null; this.menuNextAt=0;
+    this.padSlots=[null,null]; this.padNeedsNeutral=[false,false]; this.lastPollMode='menu'; this.menuNeedsNeutral=false; this.menuDirection=null; this.menuNextAt=0;
     this.refreshBindings();
     document.addEventListener('keydown', e => {
       if (editing(e.target) || e.metaKey || e.altKey) return;
@@ -52,22 +54,38 @@ export class InputController {
   gamepads() {
     let snapshot=[]; try { snapshot=[...(navigator.getGamepads?.() || [])]; } catch { /* Gamepad permission is optional. */ }
     const connected=new Map(snapshot.map((pad,index)=>[pad?.index??index,pad]).filter(([,pad])=>pad && pad.connected!==false));
-    for(let index=0;index<2;index++) if(this.padSlots[index]!==null&&!connected.has(this.padSlots[index])) { this.padSlots[index]=null; this.padPrevious[index]=[]; }
+    for(let index=0;index<2;index++) if(this.padSlots[index]!==null&&!connected.has(this.padSlots[index])) { this.padSlots[index]=null; this.padPrevious[index]=[]; this.padNeedsNeutral[index]=false; }
     for(const key of connected.keys()) if(!this.padSlots.includes(key)){const free=this.padSlots.indexOf(null);if(free>=0)this.padSlots[free]=key;}
     return this.padSlots.map(key=>connected.get(key));
   }
   rememberPads(pads) { this.padPrevious=pads.map(pad=>pad?.buttons?.map(button=>!!button.pressed)||[]); }
-  clear() { this.keys.clear(); this.tapped.clear(); this.touch.clear(); this.touchTaps.clear(); document.querySelectorAll('[data-control].pressed').forEach(el => el.classList.remove('pressed')); }
+  clear() {
+    this.keys.clear(); this.tapped.clear(); this.touch.clear(); this.touchTaps.clear();
+    document.querySelectorAll('[data-control].pressed').forEach(el => el.classList.remove('pressed'));
+    // A stick or button held across pause/focus loss must be released before it
+    // drives combat again. Menu navigation still reads the raw pads separately.
+    const pads=this.gamepads();
+    this.padNeedsNeutral=pads.map(padActive); this.rememberPads(pads);
+  }
   bindTouch(container) {
     container.querySelectorAll('[data-control]').forEach(button => {
       const action = button.dataset.control;
       button.addEventListener('pointerdown', e => {
         if (!this.enabled()) return;
         e.preventDefault(); button.setPointerCapture(e.pointerId); button.classList.add('pressed');
-        this.touch.set(e.pointerId, action); this.touchTaps.add(action);
+        this.touch.set(e.pointerId, action); this.touchTaps.set(e.pointerId, action);
       });
-      const release = e => { this.touch.delete(e.pointerId); if (![...this.touch.values()].includes(action)) button.classList.remove('pressed'); };
-      button.addEventListener('pointerup', release); button.addEventListener('pointercancel', release); button.addEventListener('lostpointercapture', release);
+      const release = (e, cancelled=false) => {
+        // Normal pointerup keeps its short tap until the next tick. Capture is
+        // then lost automatically; only an interrupted, still-held contact is
+        // cancelled. Tracking taps by pointer preserves another valid finger.
+        if(cancelled && this.touch.has(e.pointerId))this.touchTaps.delete(e.pointerId);
+        this.touch.delete(e.pointerId);
+        if (![...this.touch.values()].includes(action)) button.classList.remove('pressed');
+      };
+      button.addEventListener('pointerup', e => release(e));
+      button.addEventListener('pointercancel', e => release(e,true));
+      button.addEventListener('lostpointercapture', e => release(e,true));
       button.addEventListener('contextmenu', e => e.preventDefault());
     });
   }
@@ -76,10 +94,21 @@ export class InputController {
     const pads = this.gamepads();
     if(!this.enabled()){this.clear();this.rememberPads(pads);return [{},{}];}
     this.lastPollMode='combat';
+    // Pause belongs to the whole encounter, even when both players press Start
+    // on the same tick. Consume it before producing either player's commands.
+    if(pads.some((pad,index)=>pad?.buttons?.[9]?.pressed&&!this.padPrevious[index]?.[9])) {
+      this.clear(); this.rememberPads(pads); this.onPause(); return [{},{}];
+    }
+    const touchTaps=new Set(this.touchTaps.values());
     const result = [0,1].map(index => {
-      const map = this.bindings[index], pad = pads[index];
+      const map = this.bindings[index];
+      let pad = pads[index];
+      if(this.padNeedsNeutral[index]) {
+        if(!padActive(pad))this.padNeedsNeutral[index]=false;
+        pad=undefined;
+      }
       const held = key => map[key]?.some(code => this.keys.has(code)) || (index === 0 && [...this.touch.values()].includes(key));
-      const tap = key => map[key]?.some(code => this.tapped.has(code)) || (index === 0 && this.touchTaps.has(key));
+      const tap = key => map[key]?.some(code => this.tapped.has(code)) || (index === 0 && touchTaps.has(key));
       const btn = n => !!pad?.buttons?.[n]?.pressed;
       const pressed = n => btn(n) && !this.padPrevious[index]?.[n];
       const input = {left:!!held('left') || (pad?.axes?.[0] ?? 0)<-.35 || btn(14),right:!!held('right') || (pad?.axes?.[0] ?? 0)>.35 || btn(15),down:!!held('down') || (pad?.axes?.[1] ?? 0)>.45 || btn(13),guard:!!held('guard')||btn(4)||btn(6),jump:!!tap('jump')||pressed(0)||pressed(12),dash:!!tap('dash')||pressed(7),tech:false,slot:null};
@@ -92,10 +121,9 @@ export class InputController {
       }
       // Generic touch light/special follow the same directional resolution as
       // keyboard/gamepad. Only explicit alternate-technique buttons override it.
-      if (index === 0) for (const key of ['low', 'specialDown', 'specialForward', 'specialBack']) if (this.touchTaps.has(key)) input.slot = key;
+      if (index === 0) for (const key of ['low', 'specialDown', 'specialForward', 'specialBack']) if (touchTaps.has(key)) input.slot = key;
       input.tech = input.slot === 'throw' || !!tap('tech');
-      if (pressed(9)) this.onPause();
-      this.padPrevious[index] = pad?.buttons?.map(b => !!b.pressed) || [];
+      this.padPrevious[index] = pads[index]?.buttons?.map(b => !!b.pressed) || [];
       return index === 1 && !local ? {} : input;
     });
     this.tapped.clear(); this.touchTaps.clear();

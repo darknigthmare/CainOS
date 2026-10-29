@@ -148,10 +148,36 @@ controls. The worker covers the combat path, not the CainOS desktop or the
 standalone root redirect. Static builds require HTTP; opening files directly with
 `file://` is unsupported. Native application packages remain separate work.
 
+## Guided development and input reliability — 29 October 2026
+
+[AGENTS.md](AGENTS.md) and the [gamedev workflow](docs/GAMEDEV_WORKFLOW.md)
+map nine selected cross-engine guides to Encore's existing Canvas/ESM runtime.
+The upstream router, guides, references and original notices are pinned in
+[the provenance manifest](docs/gamedev/manifest.json). They are development
+references for this repository; the game keeps its shared runtime and replay rules.
+
+This pass fixes interrupted input: cancelled touch contacts discard their pending
+attack without cancelling another finger, two simultaneous controller Start presses
+request one pause, and a controller held across an interruption must return to
+neutral before driving combat again. Keyboard controls and the other controller
+remain available. Normal short taps are preserved.
+
+`npm run qa:gamedev` verifies the reference snapshot and audits the actual image
+files against the sprite catalog, frame regions, native transparency and animation
+registrations. The asset audit is technical evidence; canonical comparison,
+silhouette review and dedicated combat drawings remain separate production work.
+
+The [current validation record](docs/gamedev-validation-2026-10-29.json),
+[asset report](docs/combat-asset-audit-gamedev-2026-10-29.json) and
+[fresh combat campaign](docs/combat-qa-evidence-gamedev-2026-10-29.json) describe
+this pass. The original 0.7 evidence remains a historical record. The reviewed
+workbook identifies the exact evidence used for delivery.
+
 ## Development and build
 
 ```bash
-npm install
+python3 -m pip install -r scripts/requirements-gamedev.txt
+npm ci
 npm run dev
 npm run build
 npm run build:combat
@@ -161,6 +187,9 @@ npm run qa
 The default build includes CainOS, the combat app and the existing cloud-account
 runtime. The separate combat build needs no OS runtime. `npm run qa` runs the
 CainOS audits, behavioral tests, syntax checks, manifest generation and both builds.
+It also runs the selected-guide and asset audits. These development checks use
+Python 3.12 and Pillow as pinned in `scripts/requirements-gamedev.txt`; Python
+and Pillow are not part of the browser game.
 
 ## Verification and tracker
 

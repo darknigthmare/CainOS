@@ -11,7 +11,10 @@
     "qa:combat": "node scripts/build-combat-offline.mjs && node --check combat/app.mjs && node --check combat/input.mjs && node --check combat/render.mjs && node --check combat/offline.mjs && npm run test:combat && npm run build:combat",
     "preview": "vite preview",
     "audit": "node scripts/audit-runtime.mjs",
-    "qa": "node --check app.js && node --check episodes.js && node scripts/audit-runtime.mjs && node scripts/audit-game-contract.mjs && npm run qa:combat && node scripts/build-static.js"
+    "audit:gamedev-guides": "node scripts/audit-gamedev-guides.mjs",
+    "audit:combat-assets": "node scripts/audit-combat-assets.mjs",
+    "qa:gamedev": "npm run audit:gamedev-guides && npm run audit:combat-assets",
+    "qa": "node --check app.js && node --check episodes.js && node scripts/audit-runtime.mjs && node scripts/audit-game-contract.mjs && npm run qa:gamedev && npm run qa:combat && node scripts/build-static.js"
   },
   "devDependencies": {
     "vite": "^5.0.0"

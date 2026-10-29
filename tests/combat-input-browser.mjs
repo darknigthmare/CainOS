@@ -1,4 +1,4 @@
-/** Keyboard regressions through the shipped UI; Encore diagnostics are read-only. */
+/** Device regressions through the shipped UI; Encore diagnostics are read-only. */
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import path from 'node:path';
@@ -19,6 +19,15 @@ const browser = await playwright.chromium.launch({
   args: ['--no-sandbox', '--disable-dev-shm-usage', '--single-process', '--no-zygote'],
 });
 const context = await browser.newContext({ viewport: { width: 1440, height: 1000 } });
+// Browser Gamepad API shim only. These checks do not claim physical controllers.
+await context.addInitScript(() => {
+  const devices = [0, 1].map(index => ({ index, connected: false, axes: [0, 0], pressed: [] }));
+  Object.defineProperty(window, '__inputPads', { value: devices });
+  Object.defineProperty(navigator, 'getGamepads', { configurable: true, value: () => devices.map(device => device.connected ? {
+    id: `Encore QA standard pad ${device.index + 1}`, index: device.index, connected: true, mapping: 'standard', axes: [...device.axes],
+    buttons: Array.from({ length: 17 }, (_, index) => ({ pressed: device.pressed.includes(index), touched: device.pressed.includes(index), value: Number(device.pressed.includes(index)) })),
+  } : null) });
+});
 const page = await context.newPage();
 const checks = [], errors = [];
 page.on('pageerror', error => errors.push(error.message));
@@ -131,7 +140,64 @@ try {
     starts: afterAttacks.fighters.map(fighter => fighter.stats.starts),
   });
   await page.screenshot({ path: path.join(output, 'input-local-controls.png'), fullPage: true });
+  await advance(450);
+
+  await page.evaluate(() => { window.__inputPads.forEach(device => { device.connected = true; }); });
+  await advance(34);
+  const beforePadPause = await snapshot();
+  await page.evaluate(() => {
+    window.__inputPads[0].axes = [.8, 0];
+    window.__inputPads.forEach(device => { device.pressed = [2, 9]; });
+  });
+  await advance(34);
+  assert.equal(await page.evaluate(() => window.Encore.paused), true);
+  assert.deepEqual((await snapshot()).fighters.map(f => f.stats.starts), beforePadPause.fighters.map(f => f.stats.starts));
+  const padPauseFrame = (await snapshot()).frame;
+  await advance(300);
+  assert.equal((await snapshot()).frame, padPauseFrame);
+  assert.equal(await page.locator('#modal').evaluate(element => element.open), true, 'Held Start cannot immediately select Resume.');
+  await page.evaluate(() => { window.__inputPads.forEach(device => { device.pressed = [2]; }); });
+  await page.locator('#modal [data-action="resume"]').click(); await canvas();
+  const padResume = await snapshot();
+  await advance(250);
+  assert.deepEqual((await snapshot()).fighters.map(f => ({ x: f.x, starts: f.stats.starts })), padResume.fighters.map(f => ({ x: f.x, starts: f.stats.starts })));
+  await page.evaluate(() => { window.__inputPads.forEach(device => { device.pressed = []; device.axes = [0, 0]; }); });
+  await advance(34);
+  await page.evaluate(() => { window.__inputPads[0].pressed = [2]; }); await advance(34);
+  assert.equal((await snapshot()).fighters[0].stats.starts, padResume.fighters[0].stats.starts + 1);
+  assert.equal((await snapshot()).fighters[1].stats.starts, padResume.fighters[1].stats.starts);
+  await page.evaluate(() => { window.__inputPads.forEach(device => { device.connected = false; }); });
+  checked('Two virtual controllers pause together and held controls remain neutral after Resume', {
+    devices: 'two virtual standard Gamepad API devices', startsDuringPause: beforePadPause.fighters.map(f => f.stats.starts),
+    freshPressStarts: (await snapshot()).fighters[0].stats.starts,
+  });
+
   await home();
+  await page.locator('nav [data-nav="settings"]').click();
+  await page.locator('[data-setting="touch"]').selectOption('on');
+  await page.locator('nav [data-nav="home"]').click();
+  await start('training');
+  const touchBefore = await snapshot();
+  const light = page.locator('[data-control="light"]');
+  const box = await light.boundingBox(); assert.ok(box);
+  await page.mouse.move(box.x + box.width / 2, box.y + box.height / 2);
+  await page.mouse.down();
+  // Dispatch only the cancellation signal; pointerdown and capture are native.
+  // Real browser/OS cancellation is covered by the same handler, but requires
+  // separate physical-device checks to claim phone coverage.
+  await light.dispatchEvent('pointercancel', { pointerId: 1, pointerType: 'mouse', bubbles: true });
+  await page.mouse.up(); await advance(50);
+  assert.equal((await snapshot()).fighters[0].stats.starts, touchBefore.fighters[0].stats.starts);
+  assert.equal(await light.evaluate(button => button.classList.contains('pressed')), false);
+  await light.click(); await advance(50);
+  assert.equal((await snapshot()).fighters[0].stats.starts, touchBefore.fighters[0].stats.starts + 1, 'A complete pointer click still attacks once.');
+  checked('A cancelled native pointer press cannot become an attack, while a complete tap remains usable', {
+    interruption: 'synthetic pointercancel on a native captured mouse press', cancelledAttacks: 0, freshTapAttacks: 1,
+  });
+  await home();
+  await page.locator('nav [data-nav="settings"]').click();
+  await page.locator('[data-setting="touch"]').selectOption(baseline.profile.settings.touch);
+  await page.locator('nav [data-nav="home"]').click();
   assert.deepEqual(await saved(), baseline);
   checked('Input regression journeys leave profile and replay unchanged', { profileUnchanged: true, replayUnchanged: true });
   assert.deepEqual(errors, []);
@@ -140,6 +206,7 @@ try {
   errors.push(error.stack || String(error));
   throw error;
 } finally {
-  await fs.writeFile(path.join(output, 'input-browser-report.json'), JSON.stringify({ version: GAME_VERSION, generatedAt: new Date().toISOString(), checks, errors }, null, 2));
+  await fs.writeFile(path.join(output, 'input-browser-report.json'), JSON.stringify({ schema: 'encore-input-browser/v1', version: GAME_VERSION, browser: browser.version(), generatedAt: new Date().toISOString(), checks, errors,
+    limits: ['Virtual standard gamepads, not physical controllers.', 'Synthetic pointercancel on a native mouse press, not a physical phone interruption.'] }, null, 2));
   await browser.close();
 }
