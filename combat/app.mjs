@@ -14,7 +14,7 @@ import { selectMatchFinisher } from './finishers.mjs';
 import { FinisherGallery } from './finisher-gallery.mjs';
 import { TrainingLab } from './training.mjs';
 import { OfflineGame } from './offline.mjs';
-import { GAME_VERSION, REPLAY_VERSIONS, replayRulesVersion, SAVE_KEY, REPLAY_KEY, MODES, CHALLENGES, readProfile, saveProfile, validateProfile, cleanSettings, appendReplayFrame, validateReplay, replayInputs, createMatchStats, collectMatchStats, challengeProgress } from './session.mjs';
+import { GAME_VERSION, REPLAY_VERSIONS, replayRulesVersion, SAVE_KEY, REPLAY_KEY, MODES, CHALLENGES, readProfileState, saveProfile, validateProfile, cleanSettings, appendReplayFrame, validateReplay, replayInputs, createMatchStats, collectMatchStats, challengeProgress } from './session.mjs';
 
 const $ = selector => document.querySelector(selector);
 const main = $('#main'), modal = $('#modal');
@@ -24,7 +24,9 @@ const embedded = new URLSearchParams(location.search).get('embedded') === '1' &&
 const reducedMotionPreference = matchMedia('(prefers-reduced-motion: reduce)');
 let storage;
 try { storage = localStorage; } catch { storage = { getItem: () => null, setItem: () => { throw new Error('Stockage indisponible'); } }; }
-let profile = readProfile(storage);
+const initialProfile = readProfileState(storage);
+let profile = initialProfile.profile;
+let profileRecovered = initialProfile.source === 'backup';
 let profileDirty = false;
 let screen = 'home', active = null, selection = { mode:'versus', fighters:['pomni','jax'], side:0, stage:STAGES[0].id, variants:['',''], challenge:CHALLENGES[0].id };
 let codexId = 'pomni', archiveQuery = '', archivePage = 0, archiveFilter = 'all', previousTime = 0, accumulator = 0, toastTimer;
@@ -46,20 +48,27 @@ function toast(message) {
   const element = $('#toast'); element.textContent = message; element.hidden = false;
   clearTimeout(toastTimer); toastTimer = setTimeout(() => { element.hidden = true; }, 5000);
 }
+function profileRecoveryMarkup() {
+  if (!profileRecovered) return '';
+  return `<aside class="profile-recovery" data-profile-recovery aria-labelledby="profile-recovery-title"><div><span class="ticket-label">TON PROFIL A ÉTÉ RÉCUPÉRÉ</span><h2 id="profile-recovery-title">Une copie de secours est disponible.</h2><p role="status">La sauvegarde principale est illisible. Cette copie valide peut être plus ancienne : vérifie ton palmarès et ton parcours avant de la conserver.</p></div><div class="modal-actions"><button class="primary" data-action="save-recovered-profile">Conserver ce profil</button><button class="secondary" data-action="export-profile">Exporter une copie</button></div></aside>`;
+}
 function persist() {
   profileDirty = !saveProfile(storage, profile);
   if (profileDirty) toast('Stockage local indisponible. Exporte ta sauvegarde pour la conserver.');
+  else {
+    profileRecovered = false;
+    document.querySelectorAll('[data-profile-recovery]').forEach(element => element.remove());
+  }
+  return !profileDirty;
 }
 function refreshStoredProfile() {
   // Keep unsaved results in memory when storage is denied, full or inaccessible.
   if (profileDirty) return;
-  try {
-    const raw = storage.getItem(SAVE_KEY);
-    if (!raw) return;
-    const latest = validateProfile(JSON.parse(raw), { strictProgram: false });
-    latest.settings = profile.settings;
-    profile = latest;
-  } catch { /* The current session remains playable and exportable. */ }
+  const latest = readProfileState(storage);
+  if (!['primary', 'backup'].includes(latest.source)) return;
+  latest.profile.settings = profile.settings;
+  profile = latest.profile;
+  profileRecovered = latest.source === 'backup';
 }
 function applySettings() {
   document.body.classList.toggle('reduced-motion', profile.settings.reducedMotion);
@@ -71,6 +80,7 @@ function syncAudio() {
   audio.setPaused(document.hidden || !osVisible || !!(active && screen === 'fight' && active.engine.paused && !active.finished));
 }
 function sound(kind) { audio.play(kind); }
+function confirmAction() { void audio.unlock().then(() => sound('confirm')); }
 function prepareMenuGroups(scope) {
   scope.querySelectorAll('.modes-grid,.roster,.stages,.pick-side,.codex-list,.finale-choices,.challenge-list').forEach(group => { group.dataset.menuGroup = ''; });
   scope.querySelectorAll('[data-side]').forEach(button => button.setAttribute('aria-pressed', String(Number(button.dataset.side) === selection.side)));
@@ -138,7 +148,7 @@ function portraitMarkup(id, className='', width=200, height=230) { return `<canv
 
 function renderHome() {
   active = null; controls.clear(); setScreen('home');
-  main.innerHTML = `<section class="hero"><div class="hero-copy"><span class="ticket-label">CAINOS PRÉSENTE · ENTRÉE LIBRE</span><h1>LE SPECTACLE<em>RECOMMENCE.</em></h1><p>Les mêmes visages. De nouvelles rivalités.<br>Entre dans l’arène et invente ton prochain grand numéro.</p><div class="hero-bottom"><button class="primary" data-mode="versus">ENTRER EN SCÈNE &nbsp; ↗</button><div class="hero-stats"><span><b>${FIGHTERS.length}</b>ARTISTES</span><span><b>${STAGES.length}</b>ARÈNES</span><span><b>${MODES.length}</b>MODES</span></div></div></div><div class="hero-poster" aria-label="Pomni contre Jax"><span class="poster-title">THE AMAZING DIGITAL CIRCUS</span><span class="poster-star a" aria-hidden="true">✧</span><span class="poster-star b" aria-hidden="true">✦</span>${portraitMarkup('pomni','poster-art first',300,350)}${portraitMarkup('jax','poster-art second',300,350)}<span class="poster-vs">VS</span><span class="poster-badge">LE GRAND DUEL</span></div></section>
+  main.innerHTML = `${profileRecoveryMarkup()}<section class="hero"><div class="hero-copy"><span class="ticket-label">CAINOS PRÉSENTE · ENTRÉE LIBRE</span><h1>LE SPECTACLE<em>RECOMMENCE.</em></h1><p>Les mêmes visages. De nouvelles rivalités.<br>Entre dans l’arène et invente ton prochain grand numéro.</p><div class="hero-bottom"><button class="primary" data-mode="versus">ENTRER EN SCÈNE &nbsp; ↗</button><div class="hero-stats"><span><b>${FIGHTERS.length}</b>ARTISTES</span><span><b>${STAGES.length}</b>ARÈNES</span><span><b>${MODES.length}</b>MODES</span></div></div></div><div class="hero-poster" aria-label="Pomni contre Jax"><span class="poster-title">THE AMAZING DIGITAL CIRCUS</span><span class="poster-star a" aria-hidden="true">✧</span><span class="poster-star b" aria-hidden="true">✦</span>${portraitMarkup('pomni','poster-art first',300,350)}${portraitMarkup('jax','poster-art second',300,350)}<span class="poster-vs">VS</span><span class="poster-badge">LE GRAND DUEL</span></div></section>
     ${checkpointBanner()}<section aria-labelledby="modes-title"><div class="section-heading"><h2 id="modes-title">Choisis ton numéro</h2><span>LE RIDEAU NE TOMBE JAMAIS</span></div><div class="modes-grid">${MODES.map(m=>`<button class="mode-card" data-mode="${m.id}"><span class="eyebrow">${m.eyebrow}</span><span class="mode-icon" aria-hidden="true">${m.icon}</span><h3>${m.name}</h3><p>${m.description}</p><span class="card-label">${m.label}</span><span class="mode-arrow" aria-hidden="true">↗</span></button>`).join('')}<div class="mode-card replay-card"><span class="eyebrow">LES ARCHIVES DU SPECTACLE</span><span class="mode-icon" aria-hidden="true">▷</span><h3>Revoir la dernière scène</h3><p>Ton dernier duel enregistré, image par image.</p><div class="replay-actions"><button data-action="last-replay">Revoir</button><button data-action="import-replay">Importer</button><button data-action="export-replay">Exporter</button></div></div></div></section>`;
   portraits();
 }
@@ -266,7 +276,7 @@ function renderSettings() {
   setScreen('settings'); const s=profile.settings;
   const select=(key,values)=>`<select data-setting="${key}">${values.map(([v,label])=>`<option value="${v}" ${String(s[key])===String(v)?'selected':''}>${label}</option>`).join('')}</select>`;
   const check=key=>`<input type="checkbox" data-setting="${key}" ${s[key]?'checked':''}>`;
-  main.innerHTML=`${title('EN COULISSES','Les règles de ton spectacle','Le profil conserve tes réglages, tes résultats et le prochain duel de ton parcours. CainOS et la version autonome partagent ce profil sur le même site.')}
+  main.innerHTML=`${profileRecoveryMarkup()}${title('EN COULISSES','Les règles de ton spectacle','Le profil conserve tes réglages, tes résultats et le prochain duel de ton parcours. CainOS et la version autonome partagent ce profil sur le même site.')}
   <div class="settings-grid">
     <section class="settings-block"><h2>Combat et commandes</h2>
       <label class="settings-row">Disposition clavier ${select('layout',[['azerty','AZERTY'],['qwerty','QWERTY']])}</label>
@@ -298,7 +308,7 @@ function renderSettings() {
       ${profile.stories.length?`<p class="small-note">Histoires : ${profile.stories.map(id=>escapeHTML(getFighter(id).name)).join(', ')}.</p>`:''}
     </section>
     <section class="settings-block"><h2>Profil et replays</h2>
-      <p class="small-note">Exporte ton profil pour transférer tes touches, ton palmarès et ton parcours en cours. Le duel interrompu recommence à son entrée ; les rencontres déjà gagnées restent acquises.</p>
+      <p class="small-note">Exporte ton profil pour transférer tes touches, ton palmarès et ton parcours en cours. Le duel interrompu recommence à son entrée ; les rencontres déjà gagnées restent acquises. Une copie de secours locale est conservée quand le stockage le permet ; elle peut être plus ancienne. L’export reste utile pour garder une copie indépendante.</p>
       <div class="modal-actions"><button class="secondary" data-action="export-profile">Exporter le profil</button><button class="secondary" data-action="import-profile">Importer un profil</button></div>
       <div class="modal-actions"><button class="secondary" data-action="export-replay">Exporter le dernier duel</button><button class="secondary" data-action="import-replay">Lire un replay</button></div>
       <p class="small-note">Les replays conservent les commandes, la graine et les costumes. Versions compatibles : ${REPLAY_VERSIONS.join(', ')}. Chaque enregistrement conserve ses règles de déplacement.</p>
@@ -617,7 +627,7 @@ function pauseGame(reason=''){
   active.engine.pause();controls.clear();accumulator=0;
   showDialog(`<span class="ticket-label">ENTRACTE</span><h2 id="modal-title">Le spectacle attend.</h2><p class="result-copy">${escapeHTML(reason||'Prends ton temps. Le combat est en pause.')}</p><div class="modal-actions"><button class="primary" data-action="resume">Reprendre</button><button class="secondary" data-action="movelist">Techniques</button><button class="secondary" data-action="select-again">Changer d’affiche</button><button class="secondary" data-action="home">Accueil</button></div>`);
 }
-function resumeGame(){if(!active||active.finished)return;if(active.storyPending){showStoryScene();return;}closeDialog();active.engine.pause(active.training?.frozen||false);accumulator=0;previousTime=performance.now();controls.clear();$('#arena')?.focus({preventScroll:true});syncAudio();}
+function resumeGame(){if(!active||active.finished)return;if(active.storyPending){showStoryScene();return;}closeDialog();active.engine.pause(active.training?.frozen||false);accumulator=0;previousTime=performance.now();controls.clear();$('#arena')?.focus({preventScroll:true});syncAudio();confirmAction();}
 function showMoveList(){
   if(active&&!active.finished)active.engine.pause();controls.clear();
   const fighter=active?.fighters[0]||getFighter(codexId);
@@ -672,7 +682,9 @@ function navigateMenu(action) {
 }
 async function handleClick(event){
   const button=event.target.closest('button');if(!button||button.disabled)return;
-  void audio.unlock().then(() => sound(button.dataset.action==='home'||button.dataset.action==='close-modal'?'back':'select'));
+  const unlock = audio.unlock();
+  const confirmsAfterSuccess = ['reset-bindings','save-recovered-profile','resume','story-start'].includes(button.dataset.action) || button.id === 'confirm-import';
+  if (!confirmsAfterSuccess) void unlock.then(() => sound(button.dataset.action==='home'||button.dataset.action==='close-modal'?'back':'select'));
   try{
     if(button.dataset.bindAction){captureBinding(button);return;}
     if(button.dataset.nav){navigate(button.dataset.nav);return;}
@@ -711,7 +723,8 @@ async function handleClick(event){
       case 'story-ending-result':if(active?.mode==='story'&&active.pendingNext?.status==='complete')openStoryReader(active.run.playerId,'epilogue','result');break;
       case 'bracket':showBracket();break;
       case 'result-screen':renderMatchResult();break;
-      case 'reset-bindings':profile.settings=cleanSettings({...profile.settings,bindings:DEFAULT_BINDINGS});persist();renderSettings();toast('Touches par défaut rétablies.');break;
+      case 'reset-bindings':{profile.settings=cleanSettings({...profile.settings,bindings:DEFAULT_BINDINGS});const saved=persist();renderSettings();if(saved){confirmAction();toast('Touches par défaut rétablies.');}break;}
+      case 'save-recovered-profile':if(profileRecovered&&persist()){main.focus({preventScroll:true});confirmAction();toast('Le profil récupéré est enregistré.');}break;
       case 'offline-retry':await offline.init();if(offline.getState().ready)toast('Le mode hors ligne est prêt.');break;
       case 'offline-prepare':await offline.prepare();toast('Le spectacle est prêt pour une visite hors ligne.');break;
       case 'offline-clear':await offline.clearAssets();toast('Illustrations libérées. Le profil est conservé.');break;
@@ -769,9 +782,9 @@ document.addEventListener('keydown',event=>{
   const value=event.code==='Backspace'&&slot===1?null:event.code;
   const result=rebindAction(profile.settings.bindings,player,action,value,slot);
   if(!result.ok){$('#binding-error').textContent=result.error;return;}
-  profile.settings=cleanSettings({...profile.settings,bindings:result.bindings});persist();controls.clear();closeDialog();renderSettings();
+  profile.settings=cleanSettings({...profile.settings,bindings:result.bindings});const saved=persist();controls.clear();closeDialog();renderSettings();
   main.querySelector(`[data-bind-player="${player}"][data-bind-action="${action}"][data-bind-slot="${slot}"]`)?.focus();
-  toast('Commande enregistrée.');
+  if(saved){confirmAction();toast('Commande enregistrée.');}
 },true);
 document.addEventListener('change',event=>{
   const target=event.target;
@@ -808,10 +821,10 @@ modal.addEventListener('keydown',event=>{
 window.addEventListener('blur',()=>{if(active&&screen==='fight'&&!active.finished&&!modal.open)pauseGame('La fenêtre a perdu le focus. Reprends lorsque tu es prêt.');});
 document.addEventListener('visibilitychange',()=>{if(document.hidden){finisherGallery?.suspendClock();if(active&&!active.finished)pauseGame('Le jeu a été masqué. La rencontre est suspendue.');}syncAudio();});
 window.addEventListener('message',event=>{if(!embedded||event.source!==window.parent||event.origin!==location.origin)return;if(event.data?.type==='cainos:combat:visibility'){osVisible=event.data.active!==false;if(!osVisible){finisherGallery?.suspendClock();controls.clear();if(active&&!active.finished)pauseGame('La fenêtre de combat a été masquée dans CainOS.');}syncAudio();}});
-window.addEventListener('storage',event=>{if(event.key===SAVE_KEY&&!profileDirty){profile=readProfile(storage);applySettings();if(screen==='settings')renderSettings();else if(screen==='home')renderHome();}});
+window.addEventListener('storage',event=>{if(event.key===SAVE_KEY&&!profileDirty){const latest=readProfileState(storage);if(['invalid','unavailable'].includes(latest.source))return;profile=latest.profile;profileRecovered=latest.source==='backup';applySettings();if(screen==='settings')renderSettings();else if(screen==='home')renderHome();}});
 $('#import-profile').addEventListener('change',async event=>{
   const file=event.target.files[0];event.target.value='';if(!file)return;
-  try{if(file.size>2_000_000)throw new Error('Ce fichier de profil est trop volumineux.');const imported=validateProfile(JSON.parse(await file.text()));showDialog('<span class="ticket-label">PROFIL IMPORTÉ</span><h2 id="modal-title">Remplacer ce profil local ?</h2><p class="result-copy">Les réglages et le palmarès de ce navigateur seront remplacés par ceux du fichier choisi.</p><div class="modal-actions"><button class="primary" id="confirm-import">Importer ce profil</button><button class="secondary" data-action="close-modal">Annuler</button></div>');$('#confirm-import').addEventListener('click',()=>{profile=imported;persist();applySettings();closeDialog();renderSettings();toast('Profil importé.');},{once:true});}catch(error){toast(error.message);}
+  try{if(file.size>2_000_000)throw new Error('Ce fichier de profil est trop volumineux.');const imported=validateProfile(JSON.parse(await file.text()));showDialog('<span class="ticket-label">PROFIL IMPORTÉ</span><h2 id="modal-title">Remplacer ce profil local ?</h2><p class="result-copy">Les réglages et le palmarès de ce navigateur seront remplacés par ceux du fichier choisi.</p><div class="modal-actions"><button class="primary" id="confirm-import">Importer ce profil</button><button class="secondary" data-action="close-modal">Annuler</button></div>');$('#confirm-import').addEventListener('click',()=>{profile=imported;const saved=persist();applySettings();closeDialog();renderSettings();if(saved){confirmAction();toast('Profil importé.');}},{once:true});}catch(error){toast(error.message);}
 });
 $('#import-replay').addEventListener('change',async event=>{
   const file=event.target.files[0];event.target.value='';if(!file)return;

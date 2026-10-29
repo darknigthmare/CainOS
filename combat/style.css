@@ -164,3 +164,7 @@ dialog.story-reader{width:min(96vw,1180px);padding:24px;max-height:94dvh;overflo
   .finale-reader-copy { min-height: 0; }
   .arena-wrap.finishing .outcome-skip { bottom: .4rem; right: .4rem; padding: .5rem .7rem; font-size: .75rem; }
 }
+
+/* Recovery stays visible until the player can save or export the valid copy. */
+.profile-recovery{display:flex;align-items:center;gap:24px;flex-wrap:wrap;margin:0 0 28px;padding:22px;border:1px solid var(--gold);border-left:4px solid var(--gold);border-radius:6px;background:var(--panel)}
+.profile-recovery>div:first-child{flex:1 1 340px;min-width:0}.profile-recovery h2{font-size:21px;margin:10px 0}.profile-recovery p{font-size:13px;line-height:1.7;color:var(--muted);max-width:740px;margin:0}.profile-recovery .modal-actions{flex:1 1 250px;margin:0;align-self:center}.profile-recovery button{min-width:130px}

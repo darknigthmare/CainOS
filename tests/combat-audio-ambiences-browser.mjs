@@ -54,6 +54,16 @@ try {
 
   await page.locator('[data-nav="settings"]').click();
   await page.waitForFunction(() => window.Encore.screen === 'settings');
+  await page.waitForFunction(() => window.Encore.audio.effectCounts.select > 0);
+  const navigationAudio = await page.evaluate(() => window.Encore.audio);
+  assert.equal(navigationAudio.effectCounts.confirm, 0);
+  checked('menu navigation retains the selection cue without claiming confirmation', navigationAudio);
+  await page.locator('[data-action="reset-bindings"]').click();
+  await page.waitForFunction(before => window.Encore.audio.effectCounts.confirm > before, navigationAudio.effectCounts.confirm);
+  const resetAudio = await page.evaluate(() => window.Encore.audio);
+  assert.equal(resetAudio.effectCounts.confirm, navigationAudio.effectCounts.confirm + 1);
+  assert.equal(resetAudio.effectCounts.select, navigationAudio.effectCounts.select);
+  checked('resetting controls confirms the saved action once without a selection duplicate', resetAudio);
   const ambience = page.locator('[data-setting="ambience"]');
   const volume = page.locator('[data-setting="ambienceVolume"]');
   assert.equal(await ambience.isChecked(), true); assert.equal(await volume.inputValue(), '0.35');
@@ -112,6 +122,28 @@ try {
   assert.deepEqual(progressAfter, progressBefore);
   checked('returning home silences the atmosphere without awarding a training result');
 
+  // Keep the independent ambience test above fully muted, then verify the
+  // confirmation feedback through the audible public pause/resume controls.
+  await page.locator('[data-nav="settings"]').click();
+  await page.locator('[data-setting="sound"]').check();
+  await page.getByRole('button', { name: 'Jouer', exact: true }).click();
+  await page.locator('[data-mode="training"]').click();
+  await page.locator('[data-action="start"]').click();
+  await page.waitForFunction(() => window.Encore?.screen === 'fight' && window.Encore.ready);
+  await page.locator('[data-action="pause"]').click();
+  await page.waitForFunction(() => window.Encore.paused && !window.Encore.audio.schedulerRunning);
+  const beforeResume = await page.evaluate(() => window.Encore.audio);
+  await page.locator('[data-action="resume"]').click();
+  await page.waitForFunction(before => !window.Encore.paused && window.Encore.audio.effectCounts.confirm > before, beforeResume.effectCounts.confirm);
+  const afterResume = await page.evaluate(() => window.Encore.audio);
+  assert.equal(afterResume.effectCounts.confirm, beforeResume.effectCounts.confirm + 1);
+  assert.equal(afterResume.effectCounts.select, beforeResume.effectCounts.select);
+  assert.equal(afterResume.lastEffect, 'confirm');
+  await page.locator('[data-action="pause"]').click();
+  await page.locator('[data-action="home"]').click();
+  assert.deepEqual(await page.evaluate(() => { const { settings, ...progress } = window.Encore.profile; return progress; }), progressBefore);
+  checked('resuming a live training match confirms once and does not grant progression', { before: beforeResume, after: afterResume });
+
   // Real browser DSP, with an offline clock fixed at zero while scheduling the
   // first cycle. This instantiates the shipped CombatAudio rather than a copy.
   const pcm = await page.evaluate(async ({ ids, impactCues }) => {
@@ -166,7 +198,7 @@ try {
     const silent = [];
     for (const options of [{ stage: 'menu' }, { stage: 'lake', enabled: false }, { stage: 'lake', gain: 0 }]) silent.push(await sample(options));
     const effects = [];
-    for (const cue of ['trap', 'ko', ...impactCues]) effects.push(await sample({ enabled: false, cue, seconds: 2 }));
+    for (const cue of ['trap', 'ko', ...impactCues, 'parry', 'throwTech', 'select', 'confirm']) effects.push(await sample({ enabled: false, cue, seconds: 2 }));
     return { results, silent, effects };
   }, { ids: AMBIENCE_STAGE_IDS, impactCues: AUDIO_IMPACT_CUES });
   assert.equal(pcm.results.length, 12);
@@ -194,8 +226,14 @@ try {
   checked('trap and KO synthesize two distinct finite PCM effects');
   const impactPCM = pcm.effects.filter(item => AUDIO_IMPACT_CUES.includes(item.cue));
   assert.equal(impactPCM.length, 6);
-  assert.equal(new Set(pcm.effects.map(item => item.sha256)).size, 8);
+  assert.equal(new Set(pcm.effects.map(item => item.sha256)).size, 12);
   checked('light, heavy, low, throw, special and super contacts synthesize six distinct finite PCM effects', { effects: impactPCM.map(({ cue, sha256, peak, rms }) => ({ cue, sha256, peak, rms })) });
+  for (const [cue, comparison] of [['throwTech', 'parry'], ['confirm', 'select']]) {
+    const effect = pcm.effects.find(item => item.cue === cue), other = pcm.effects.find(item => item.cue === comparison);
+    assert.notEqual(effect.sha256, other.sha256);
+    assert.ok(effect.nonzero > 100 && effect.tailPeak < 1e-7);
+    checked('native PCM distinguishes ' + cue + ' from ' + comparison + ' with a finite tail', { effect, comparison: other });
+  }
   assert.deepEqual(report.errors, []);
   checked('no JavaScript or missing-resource errors');
   report.pass = true;

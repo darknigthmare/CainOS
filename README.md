@@ -173,6 +173,23 @@ The [current validation record](docs/gamedev-validation-2026-10-29.json),
 this pass. The original 0.7 evidence remains a historical record. The reviewed
 workbook identifies the exact evidence used for delivery.
 
+## Profile recovery and distinct confirmations — 29 October 2026
+
+The next guided pass applies `save-systems` and `audio-design` to the shared game.
+The first successful profile save and later saves attempt to keep a complete
+backup, after the primary write. A present but unreadable primary can recover
+from that valid copy without rewriting storage during load. A persistent notice
+on Home and Settings offers export or explicit repair; it explains that the copy
+may be older. A deleted primary stays deleted, and corrupted cross-tab data cannot
+erase an already valid in-memory profile. Rejected storage writes retain export
+access and never claim a successful repair.
+
+There are now **26 original sound motifs**. Escaping a throw has a dedicated cue,
+and accepted settings/import/recovery actions and resuming play use a confirmation
+cue distinct from selection. Both retain the existing mute, pause, voice limits
+and cleanup behavior. Physical-device mixing and dedicated voices remain open.
+Profile format v1 and replay rules are unchanged.
+
 ## Development and build
 
 ```bash

@@ -33,6 +33,8 @@ const EFFECTS = Object.freeze({
   impactSuper: [[132, 32, .24, 0, 'triangle', .047], [660, 220, .16, .015, 'sine', .026], [980, 490, .12, .06, 'sine', .017]],
   block: [[390, 180, .065, 0, 'square', .032], [650, 260, .06, .025, 'sine', .032]],
   parry: [[650, 900, .12, 0, 'sine', .05], [1120, 1500, .13, .04, 'sine', .035]],
+  // A short low release and upward chirp distinguish escaping a grab from a parry.
+  throwTech: [[260, 90, .09, 0, 'triangle', .038], [840, 1260, .10, .045, 'sine', .031]],
   guardBreak: [[190, 60, .18, 0, 'sawtooth', .04], [800, 160, .1, .03, 'triangle', .04]],
   jump: [[260, 520, .12, 0, 'sine', .035]],
   dash: [[180, 700, .09, 0, 'sawtooth', .026]],
@@ -42,6 +44,8 @@ const EFFECTS = Object.freeze({
   win: [[523, 523, .18, 0, 'sine', .05], [659, 659, .18, .1, 'sine', .05], [784, 784, .2, .2, 'sine', .05], [1047, 1047, .35, .34, 'sine', .045]],
   lose: [[440, 440, .18, 0, 'triangle', .045], [349, 349, .2, .14, 'triangle', .04], [262, 220, .3, .3, 'triangle', .04]],
   select: [[660, 880, .06, 0, 'sine', .035]],
+  // A resolved fifth marks an accepted choice; selection keeps its brief glide.
+  confirm: [[523.25, 523.25, .10, 0, 'sine', .032], [783.99, 783.99, .13, .055, 'sine', .028]],
   back: [[440, 330, .07, 0, 'sine', .035]],
   denied: [[120, 90, .12, 0, 'triangle', .04]],
   trap: [[310, 120, .08, 0, 'triangle', .038], [1450, 600, .055, .045, 'sine', .022]],
@@ -49,7 +53,7 @@ const EFFECTS = Object.freeze({
   recover: [[500, 750, .14, 0, 'sine', .04], [750, 1000, .17, .08, 'sine', .03]],
   explosion: [[100, 28, .23, 0, 'sawtooth', .045], [170, 45, .15, .02, 'triangle', .045]],
 });
-const ALIASES = Object.freeze({ hit: 'damage', reflect: 'parry', throwTech: 'parry', barrier: 'block', heal: 'recover', utility: 'recover', roundEnd: 'win' });
+const ALIASES = Object.freeze({ hit: 'damage', reflect: 'parry', barrier: 'block', heal: 'recover', utility: 'recover', roundEnd: 'win' });
 export const AUDIO_EFFECT_IDS = Object.freeze(Object.keys(EFFECTS));
 export const AUDIO_EFFECT_ALIASES = ALIASES;
 export const AUDIO_IMPACT_CUES = Object.freeze(['impactLight', 'impactHeavy', 'impactLow', 'impactThrow', 'impactSpecial', 'impactSuper']);
@@ -116,6 +120,7 @@ export class CombatAudio {
   #theme = 'menu'; #timer = null; #nextAt = null; #step = 0; #scheduledSteps = 0;
   #ambienceAt = null; #scheduledAmbiences = 0; #noiseBuffer = null;
   #voices = new Set(); #lastEffects = new Map(); #stateListener = null; #error = null;
+  #lastEffect = null; #effectCounts = Object.fromEntries(AUDIO_EFFECT_IDS.map(id => [id, 0]));
   constructor({ getSettings = () => ({}) } = {}) {
     this.#getSettings = typeof getSettings === 'function' ? getSettings : () => ({});
   }
@@ -133,7 +138,8 @@ export class CombatAudio {
       ambienceVoices: [...this.#voices].filter(voice => voice.group === 'ambience').length,
       scheduledAmbiences: this.#scheduledAmbiences, noiseBuffers: this.#noiseBuffer ? 1 : 0,
       paused: this.#paused, activeVoices: this.#voices.size, scheduledSteps: this.#scheduledSteps,
-      schedulerRunning: this.#timer !== null, destroyed: this.#destroyed, error: this.#error });
+      schedulerRunning: this.#timer !== null, destroyed: this.#destroyed, error: this.#error,
+      lastEffect: this.#lastEffect, effectCounts: Object.freeze({ ...this.#effectCounts }) });
   }
   /** Only this method constructs or resumes an AudioContext. */
   unlock() {
@@ -201,7 +207,9 @@ export class CombatAudio {
     for (const [from, to, duration, delay, waveform, level] of EFFECTS[effect]) {
       played = this.#voice('sfx', now + delay, duration, from, to, waveform, level) || played;
     }
-    if (played) this.#lastEffects.set(effect, now);
+    if (played) {
+      this.#lastEffects.set(effect, now); this.#lastEffect = effect; this.#effectCounts[effect]++;
+    }
     return played;
   }
   #setVolume(group, value, now) {

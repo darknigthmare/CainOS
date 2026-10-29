@@ -5,6 +5,7 @@ export const BROWSER_SUITES = Object.freeze([
   ['tests/combat-audio-ambiences-browser.mjs', 'audit-combat/audio-ambiences-0.7.0/browser-report.json'],
   ['tests/combat-training-browser.mjs', 'audit-combat/training-browser-report.json'],
   ['tests/combat-profile-recovery-browser.mjs', 'audit-combat/profile-recovery-browser-report.json'],
+  ['tests/combat-profile-backup-browser.mjs', 'audit-combat/profile-backup-browser-report.json'],
   ['tests/combat-encore-browser.mjs', 'audit-combat/encore-browser-report.json'],
   ['tests/combat-progression-browser.mjs', 'audit-combat/progression-browser-report.json'],
   ['tests/combat-progression-browser.mjs', 'audit-combat/storage-browser-report.json', { COMBAT_TEST_SCOPE: 'storage' }, 'storage'],

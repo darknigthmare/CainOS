@@ -67,3 +67,22 @@ test('real engine contacts preserve simulation snapshots while selecting their a
     assert.equal(heard, cue, slot);
   }
 });
+
+
+test('a real throw escape selects its dedicated cue without changing damage or replay state', () => {
+  const engine = new CombatEngine({ fighters: FIGHTERS.slice(0, 2), stage: STAGES[0], mode: 'local', cpu: [false, false], skipIntro: true, roundsToWin: 1, seed: 7452 });
+  engine.state.a.x = 500; engine.state.b.x = 560;
+  engine.drainEvents(); let heard = null;
+  for (let frame = 0; frame < 10; frame++) {
+    engine.step(FIXED_DT, frame === 0 ? [{ slot: 'throw' }, { tech: true }] : [{}, {}]);
+    const events = engine.drainEvents();
+    if (!events.some(event => event.type === 'throwTech')) continue;
+    const before = engine.getSnapshot();
+    heard = selectCombatCue(events, engine.state);
+    assert.deepEqual(engine.getSnapshot(), before);
+  }
+  assert.equal(heard, 'throwTech');
+  assert.ok(AUDIO_EFFECT_IDS.includes(heard), 'The selected escape must have its own available motif');
+  assert.equal(engine.state.metrics.throwTech, 1);
+  assert.equal(engine.state.a.hp, 10000); assert.equal(engine.state.b.hp, 10000);
+});

@@ -5,7 +5,7 @@ import { FIGHTERS, STAGES, VARIANTS } from '../combat/data.mjs';
 import { createProgram, recordProgramResult } from '../combat/progression.mjs';
 import { InputController } from '../combat/input.mjs';
 import {
-  GAME_VERSION, REPLAY_VERSIONS, SAVE_KEY, SLOT_ORDER, MAX_PACKED_INPUT, DEFAULT_SETTINGS,
+  GAME_VERSION, REPLAY_VERSIONS, SAVE_KEY, SAVE_BACKUP_KEY, SLOT_ORDER, MAX_PACKED_INPUT, DEFAULT_SETTINGS,
   emptyProfile, cleanSettings, validateProfile, readProfile, saveProfile,
   packInput, unpackInput, appendReplayFrame, validateReplay, replayInputs,
   CHALLENGES, makeRun, createMatchStats, collectMatchStats, challengeProgress,
@@ -159,6 +159,8 @@ test('storage corruption or denied local storage does not prevent a fresh playab
   assert.equal(saveProfile(storage, profile), true);
   assert.deepEqual(readProfile(storage), profile);
   values.set(SAVE_KEY, '{invalid');
+  assert.deepEqual(readProfile(storage), profile, 'the last successful save provides a fallback');
+  values.delete(SAVE_BACKUP_KEY);
   assert.deepEqual(readProfile(storage), emptyProfile());
   const denied = { getItem() { throw Error('denied'); }, setItem() { throw Error('denied'); } };
   assert.deepEqual(readProfile(denied), emptyProfile());
