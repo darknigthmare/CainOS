@@ -1,0 +1,364 @@
+{
+  "schema": "encore-workbook-readability-review/v1",
+  "date": "2026-10-29",
+  "createdAt": "2026-10-29T18:48:45.056665+00:00",
+  "sourceCommit": "243e87b21b1e9eb8711e2012faf837f5850dae9a",
+  "runUrl": "https://github.com/darknigthmare/CainOS/actions/runs/40928776174",
+  "passed": true,
+  "generation": {
+    "exitCode": 0,
+    "generator": {
+      "path": "scripts/update-combat-workbook-readability.mjs",
+      "bytes": 38102,
+      "sha256": "6c259127a8c4381b4ef4c16a655cc02d00fdaeeca11cfe022eacc907eb40ec6b"
+    },
+    "published": true
+  },
+  "baseline": {
+    "gameVersion": "0.7.0",
+    "workbookSHA256": "e5c586336eb9ce82d9f9189f649926768174752b008e63de9a8b8165f2dfbf33",
+    "trackerDataSHA256": "f4ff027439920ec2054b1a14de508b39804b8648019eb7aa48857e12d5177a41"
+  },
+  "final": {
+    "workbook": {
+      "path": "docs/DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx",
+      "bytes": 421533,
+      "sha256": "96a41ed96e669d8ccbf6c088148894607e019a2d7e54bad7ae38745aeb9f1971"
+    },
+    "trackerData": {
+      "path": "docs/combat-tracker-data.json",
+      "bytes": 2388133,
+      "sha256": "d1e7fd3f2ce62d0f5637f8d8840e08fe9aca26e98d27d411e826c26e4cd43b85"
+    },
+    "workbookVerification": {
+      "path": "docs/combat-workbook-verification.json",
+      "bytes": 102670,
+      "sha256": "7a91212396d1174fdf5fc6be8becfab6d9909ece0dcc70ad44ad9a6f1981d92b"
+    },
+    "fullCampaign": {
+      "path": "docs/combat-qa-evidence-readability-2026-10-29.json",
+      "bytes": 715312,
+      "sha256": "852e256ba636781a49a8b29f7c9a5a8aef1f389f5ab2251192196f8450c8e3f5"
+    },
+    "targetedEvidence": {
+      "path": "docs/readability-validation-2026-10-29.json",
+      "bytes": 96078,
+      "sha256": "e5e9cb1c6a79936ba82709ff2599ff6a304f619388614925ff9a55620fc974c1"
+    }
+  },
+  "counts": {
+    "fighters": 14,
+    "moves": 140,
+    "stages": 12,
+    "modes": 9,
+    "atlas": 179,
+    "variants": 51,
+    "archiveOnly": 114,
+    "storyRoutes": 14,
+    "storyChapters": 56,
+    "storyPanels": 84,
+    "storyBriefings": 56,
+    "musicThemes": 12,
+    "soundEffects": 26,
+    "offlineImages": 44,
+    "offlineBytes": 52167739,
+    "features": 105,
+    "production": 693,
+    "scenarios": 85,
+    "qa": 2240,
+    "presentationSequences": 70,
+    "animatedStages": 12,
+    "rebuiltStages": 3,
+    "refinedCostumes": 20,
+    "costumeReplacementSheets": 5,
+    "finishers": 42,
+    "audioAmbiences": 12
+  },
+  "qaSummary": {
+    "Réussi": 2236,
+    "Échec": 0,
+    "Non exécuté": 3,
+    "À vérifier": 1
+  },
+  "currentQa": {
+    "campaign": "readability-2026-10-29",
+    "sourceCommit": "243e87b21b1e9eb8711e2012faf837f5850dae9a",
+    "runUrl": "https://github.com/darknigthmare/CainOS/actions/runs/40928776174",
+    "totals": {
+      "nodeSuites": 27,
+      "nodeTests": 370,
+      "nodePassed": 370,
+      "browserSuites": 16,
+      "browserChecks": 275,
+      "browserPassed": 275
+    }
+  },
+  "preservation": {
+    "schema": "encore-xlsx-preservation/v1",
+    "createdAt": "2026-10-29T18:46:16.376692+00:00",
+    "sourceCommit": "243e87b21b1e9eb8711e2012faf837f5850dae9a",
+    "baselineSha256": "e5c586336eb9ce82d9f9189f649926768174752b008e63de9a8b8165f2dfbf33",
+    "currentSha256": "96a41ed96e669d8ccbf6c088148894607e019a2d7e54bad7ae38745aeb9f1971",
+    "existingCellsCompared": 39742,
+    "changedCellsIncludingSummary": 652,
+    "allowedDataChanges": 625,
+    "styleChanges": [],
+    "unexpectedChanges": [],
+    "formulasInspected": 39,
+    "protectedQaRowsUnchanged": 1591,
+    "sheetFeatures": [
+      {
+        "sheet": "Synthèse",
+        "viewsColumnsMergesPreserved": true,
+        "existingValidationRanges": 0,
+        "existingConditionalFormatRanges": 1
+      },
+      {
+        "sheet": "Fonctionnalités",
+        "viewsColumnsMergesPreserved": true,
+        "existingValidationRanges": 5,
+        "existingConditionalFormatRanges": 5
+      },
+      {
+        "sheet": "Combattants",
+        "viewsColumnsMergesPreserved": true,
+        "existingValidationRanges": 3,
+        "existingConditionalFormatRanges": 3
+      },
+      {
+        "sheet": "Techniques",
+        "viewsColumnsMergesPreserved": true,
+        "existingValidationRanges": 2,
+        "existingConditionalFormatRanges": 2
+      },
+      {
+        "sheet": "Arènes",
+        "viewsColumnsMergesPreserved": true,
+        "existingValidationRanges": 3,
+        "existingConditionalFormatRanges": 3
+      },
+      {
+        "sheet": "Atlas",
+        "viewsColumnsMergesPreserved": true,
+        "existingValidationRanges": 2,
+        "existingConditionalFormatRanges": 2
+      },
+      {
+        "sheet": "Production",
+        "viewsColumnsMergesPreserved": true,
+        "existingValidationRanges": 6,
+        "existingConditionalFormatRanges": 6
+      },
+      {
+        "sheet": "Scénarios",
+        "viewsColumnsMergesPreserved": true,
+        "existingValidationRanges": 1,
+        "existingConditionalFormatRanges": 1
+      },
+      {
+        "sheet": "QA",
+        "viewsColumnsMergesPreserved": true,
+        "existingValidationRanges": 7,
+        "existingConditionalFormatRanges": 7
+      },
+      {
+        "sheet": "Références",
+        "viewsColumnsMergesPreserved": true,
+        "existingValidationRanges": 0,
+        "existingConditionalFormatRanges": 0
+      }
+    ],
+    "passed": true
+  },
+  "expectedChanges": {
+    "dataCells": 625,
+    "existingCaseEvidenceCells": 615,
+    "featureCells": 10,
+    "existingCellsChangedIncludingSummaryAndLabels": 652,
+    "newQaRows": 34,
+    "newCaseIds": 30,
+    "newTargetedObjectives": 4,
+    "newProductionRows": 4,
+    "newReferenceRows": 1,
+    "protectedQaRowsUnchanged": 1591,
+    "existingStylesChanged": 0,
+    "unexpectedValueOrFormulaChanges": 0,
+    "notesPreserved": {
+      "preserved": 0,
+      "formulas": 0,
+      "identityPreserved": true,
+      "exportRoundTripPassed": true
+    },
+    "tableCount": 9,
+    "sheetCount": 10
+  },
+  "recalculation": {
+    "count": 39,
+    "generalRecalculation": true,
+    "summaryValuesChecked": 39,
+    "desktopExcelOpened": false,
+    "formulaErrors": 0,
+    "statusMutationRecalculated": true,
+    "exportRoundTripPassed": true
+  },
+  "visualReview": {
+    "reviewed": true,
+    "before": "audit-combat/workbook-gamedev-followup-20261029/summary.png",
+    "views": [
+      {
+        "path": "audit-combat/workbook-readability-20261029/summary.png",
+        "bytes": 202243,
+        "sha256": "8365965f0db0eda82a0b470e16dffd5928233ea579caebcafd97285170aa4325"
+      },
+      {
+        "path": "audit-combat/workbook-readability-20261029/readability-feature.png",
+        "bytes": 43573,
+        "sha256": "883068d4453bd4b1adb7fb646fdf29980bf5c601e8d7ec32a4ef6d2364102442"
+      },
+      {
+        "path": "audit-combat/workbook-readability-20261029/navigation-feature.png",
+        "bytes": 48228,
+        "sha256": "553ac1554ad16dee8c9551e1d83b2007a4543441d049380793fba9978c5cd8c6"
+      },
+      {
+        "path": "audit-combat/workbook-readability-20261029/offline-feature.png",
+        "bytes": 39227,
+        "sha256": "2c4eee407bcd0a35bc368420073a960472ee95c4ecf09f78cf35b93fa970c978"
+      },
+      {
+        "path": "audit-combat/workbook-readability-20261029/new-production.png",
+        "bytes": 153764,
+        "sha256": "e57f29ff0301ddcc8930d73761c31a219866694cd850087fa996efc9e377d11c"
+      },
+      {
+        "path": "audit-combat/workbook-readability-20261029/current-qa.png",
+        "bytes": 188734,
+        "sha256": "7342b6985857a88fcf6e22c4a6f1662a3b05ae9c72a899da06149040aa647f44"
+      },
+      {
+        "path": "audit-combat/workbook-readability-20261029/targeted-qa.png",
+        "bytes": 233967,
+        "sha256": "507994a58ff16a5871641dfca1738e40c07b16549fc373991e78af381325443d"
+      },
+      {
+        "path": "audit-combat/workbook-readability-20261029/references.png",
+        "bytes": 173949,
+        "sha256": "6f14d7611e63b868292654de9104a9d244e516376081b4f850f22066875c4672"
+      },
+      {
+        "path": "audit-combat/workbook-readability-20261029/new-cases.png",
+        "bytes": 170211,
+        "sha256": "4ece473fac7ef81fd3190ea01a1ea138046a369802cb4f479e97bc87b6edba62"
+      }
+    ],
+    "observations": [
+      "Established layout, columns and user-note cells retained.",
+      "Summary reports 645 current cases separately from 1591 historical rows and four overlapping targeted objectives.",
+      "PRE-12 remains Partiel; global palette and user studies remain open.",
+      "Changed ranges have no clipped values, error markers or new overlapping elements in the reviewed renders."
+    ]
+  },
+  "idempotence": {
+    "exitCode": 0,
+    "published": false,
+    "isolatedOutput": "/dev/shm/encore-next-99d1239274f1/readability-workbook-review/idempotence",
+    "modifiedCells": 0,
+    "addedRows": {
+      "Fonctionnalités": 0,
+      "Combattants": 0,
+      "Techniques": 0,
+      "Arènes": 0,
+      "Atlas": 0,
+      "Production": 0,
+      "Scénarios": 0,
+      "QA": 0
+    },
+    "trackerDataByteIdentical": true,
+    "xlsxSemanticComparison": {
+      "passed": true,
+      "cellsCompared": 40093,
+      "valuesFormulasAndResolvedStylesIdentical": true,
+      "nativeTablePartsIdentical": 9,
+      "sheetViewsColumnsMergesValidationsAndConditionalFormatsIdentical": [
+        "Synthèse",
+        "Fonctionnalités",
+        "Combattants",
+        "Techniques",
+        "Arènes",
+        "Atlas",
+        "Production",
+        "Scénarios",
+        "QA",
+        "Références"
+      ],
+      "rawXmlPartsDifferent": [
+        "xl/workbook.xml",
+        "xl/styles.xml",
+        "xl/worksheets/sheet2.xml",
+        "xl/worksheets/sheet3.xml",
+        "xl/worksheets/sheet4.xml",
+        "xl/worksheets/sheet5.xml",
+        "xl/worksheets/sheet6.xml",
+        "xl/worksheets/sheet7.xml",
+        "xl/worksheets/sheet8.xml",
+        "xl/worksheets/sheet9.xml",
+        "xl/worksheets/sheet10.xml",
+        "_rels/.rels",
+        "xl/_rels/workbook.xml.rels",
+        "xl/worksheets/_rels/sheet10.xml.rels",
+        "xl/worksheets/_rels/sheet2.xml.rels",
+        "xl/worksheets/_rels/sheet3.xml.rels",
+        "xl/worksheets/_rels/sheet4.xml.rels",
+        "xl/worksheets/_rels/sheet5.xml.rels",
+        "xl/worksheets/_rels/sheet6.xml.rels",
+        "xl/worksheets/_rels/sheet7.xml.rels",
+        "xl/worksheets/_rels/sheet8.xml.rels",
+        "xl/worksheets/_rels/sheet9.xml.rels"
+      ],
+      "rawXmlByteIdentityClaimed": false,
+      "unexpectedCellDifferences": []
+    },
+    "formulaErrors": 0,
+    "formulaCount": 39,
+    "exportRoundTripPassed": true
+  },
+  "executedProofs": {
+    "generation-state.json": {
+      "path": "/dev/shm/encore-next-99d1239274f1/readability-workbook-review/generation-state.json",
+      "bytes": 742,
+      "sha256": "aa38d28916eca1d5470989656a6a1abebe652dde6c5ed274a3c9c02082d968ee"
+    },
+    "generation.log": {
+      "path": "/dev/shm/encore-next-99d1239274f1/readability-workbook-review/generation.log",
+      "bytes": 2053,
+      "sha256": "63a25144a95db885c3fb1f7a5f7201c9cbf0cd8daf78d8b647996f4e0017330b"
+    },
+    "idempotence-state.json": {
+      "path": "/dev/shm/encore-next-99d1239274f1/readability-workbook-review/idempotence-state.json",
+      "bytes": 758,
+      "sha256": "8b3544210c33544efb13d4f66895c68da563ffa641f9b2d6d4509b18278b7f07"
+    },
+    "idempotence.log": {
+      "path": "/dev/shm/encore-next-99d1239274f1/readability-workbook-review/idempotence.log",
+      "bytes": 2073,
+      "sha256": "57207e02aebc2109674571f967ae7befdabd7b134ea68929aaa528a73b03ade1"
+    },
+    "preservation.json": {
+      "path": "/dev/shm/encore-next-99d1239274f1/readability-workbook-review/preservation.json",
+      "bytes": 2233,
+      "sha256": "c24e81b6136bbed5465960289674c699cd525c0ca372aaaddb3b3396cd0811a4"
+    },
+    "idempotence-comparison.json": {
+      "path": "/dev/shm/encore-next-99d1239274f1/readability-workbook-review/idempotence-comparison.json",
+      "bytes": 1260,
+      "sha256": "e8b893e8d7c7971fd11087526115f618ab36d25ab7123dc5c26f224933939f22"
+    }
+  },
+  "limits": [
+    "No desktop Excel session was performed.",
+    "Internal rendered review does not replace physical-device or user accessibility testing.",
+    "Targeted objectives overlap the current campaign and are not extra independent tests.",
+    "QA history remains part of the workbook total; current executions are separately identified.",
+    "Idempotence verifies workbook values, formulas, resolved styles and native table metadata; raw XLSX serialization is not byte-identical."
+  ]
+}

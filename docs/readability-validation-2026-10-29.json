@@ -1,0 +1,2163 @@
+{
+  "schema": "encore-readability-validation/v1",
+  "date": "2026-10-29",
+  "generatedAt": "2026-10-29T18:42:11.098449+00:00",
+  "baseCommit": "eab53bc0942fe0b23e3e2c5d191a187127a4e3d9",
+  "sourceCommit": "243e87b21b1e9eb8711e2012faf837f5850dae9a",
+  "sourceHashes": {
+    "combat/app.mjs": "453a316dc43bd0ddb0da4e0409f231db911623bc651e039695ff2e98d74e08ef",
+    "combat/audio-ambiences.mjs": "a9215db919126923cc412bfd0f1febf7c92aea89f95defeeecea2cea31c8b086",
+    "combat/audio.mjs": "7c2a4dd52f2d19a1cef5165bec222ce8d16850cce9da2ffef90c5e33e40133b1",
+    "combat/bindings.mjs": "8352b4a92afb27a85220b21feb5b7f53b34a2c4eabfedff2f400259329988969",
+    "combat/costume-fidelity.mjs": "a346156fc0f1107a72a2d6a8b331aeba3122f631a95941a2e9b0a6b9d36dd3d6",
+    "combat/costume-refinements.mjs": "117abb88f261c71c6e03dd43a344ef1babb0b34d9f8107ac3b5898f2d3682de3",
+    "combat/data.mjs": "3fa8fd8d3eb71c0336c3df0f31b43723841e8cbedf2554e516c8332c92fa3a9f",
+    "combat/engine.mjs": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
+    "combat/fidelity.mjs": "2968ab0feace983b9c59e9da9e1c1b4c4817bff395a4af5053a8c96be0f61a1f",
+    "combat/finisher-catalog.mjs": "43b36230680673ba44d75f370fa0b7ab77be0a90f1c08d282be830b1969750f7",
+    "combat/finisher-gallery.mjs": "df89b9a91fc20af8f47743cfe34475743a17ea6d6310ab71f73e27464c9c6944",
+    "combat/finishers.mjs": "ac52ef944daa984d77d64838554d0e135d9a710fde2c6e1bb452e7ac31502636",
+    "combat/icon-192.png": "f300df8f24a549311c8caf99dc7d0dab6e4efcbf37caf3f324f9f8bc4239e3db",
+    "combat/icon-512.png": "23113f2291e8e80c5f2a072db82f72d4eda134e183f771fde2e72b442cb80851",
+    "combat/icon.svg": "9306b192eaaa246307b0d0d13262ca21f0a913ad123eb1bc1c1adf94890ec19b",
+    "combat/index.html": "9df0816414b14ae8a52d18e4230170329570733f170e6564001bfa0162d4d921",
+    "combat/input.mjs": "8968e7b7fb90e684bedc37130213fe4bd4d6af09e169bede58f0bb63e347104a",
+    "combat/manifest.webmanifest": "3a7f78eb5c4cc3f7c90784a8bcba425dc91fdc1e1c401fc26b3a81f12d4534aa",
+    "combat/menu-navigation.mjs": "01a70de0683eb8237ca93bc9da0f79a360b963cd44064460fa22c0c84fcd2614",
+    "combat/offline-manifest.mjs": "b187d9064665d5289d3c199663fc4a315bdab450124c31bb89ed59f3e4052aef",
+    "combat/offline.mjs": "b8ec3869ea1fd4f56d5cda1c8b54cb1ba26572c5fbac8c5451e8f3d795925241",
+    "combat/progression.mjs": "a5a3d697b034146464d0c315a2a5dc5891557caf1a58ad1d8dd8551a5f585f15",
+    "combat/readability.mjs": "ab4bfca1918f0bb3d9b375fb3e4ce3f41c95867289494b34de368a2f2f1da078",
+    "combat/render-finishers.mjs": "918dc6b0700ea86e174b1450b2dc207cc5a7b4656314cc6e6c617bfca5ac8d7d",
+    "combat/render-poses.mjs": "44a17b62cd7304f1a81b1454e4e8b902f8712d9b0a462f92b09626e8fe554268",
+    "combat/render-presentation.mjs": "370469edb54fe87cfa4f649984cf8c6dfb77419b018dbb1d8fedc432b9fe607e",
+    "combat/render-sequences.mjs": "1ce5fab94146618b77d46b7b16feb2af2b52eb912a992488fa5fd2e4e3b4b9af",
+    "combat/render-stage-motion.mjs": "e22d518a1245be13379a019159b4c8f24535e19a704508286d5b1ed38ced9b77",
+    "combat/render-stage-scenery.mjs": "52c298e861af7873b2f94ece106e0f708ebd5573d0f900f02c45c2cecd14c528",
+    "combat/render.mjs": "b3d71717a00934e3fd25441a6ce57f01c03bf1466fc5ba707e1b16f8999c237b",
+    "combat/session.mjs": "ea8fe4336dc7dd9a6289dad824974e9f9cd83c4df422b0907098e962154ee168",
+    "combat/sprite-catalog.mjs": "41ad2ff416eef0d9426dd8ec17218a35b0c6a016a6dbf73e8e96a1f86d1a2172",
+    "combat/stories.mjs": "190053639de11b83a1f1279174fb948afe1db28a2ccb8f4a453c1be10aa72aac",
+    "combat/story-presentation.mjs": "90306f54215c2f4045ff191496d3f9ed871e6982fe1bff06757514834d0cc7c8",
+    "combat/style.css": "3f1c2ad3597887ceff0ca60f28ad188327f74739ec2f9f2922b91d4fcf8f7f78",
+    "combat/sw.js": "0893718df1437a22b716a27ca5fafb7e9fc18ed1fbd47f64eb43062e1199eeab",
+    "combat/training.mjs": "b36aaaea76cdb3b6e20ef95c2f52ae2be04ecf5f4421cf16f80dca97f44cfece",
+    "tests/combat-readability.test.mjs": "a116db3666b0843aa1c2f6f128b9ff18cd55b1ca16de63dd111129aedc92d4de",
+    "tests/combat-readability-browser.mjs": "b60e8b96dec07f7fe5cc84dbf0af5e15cc938bf5d1c9cfba54d1ea5a79d66cff",
+    "tests/combat-offline.test.mjs": "2d6e8d8e8b32e3cb555ab72e7f8018a34375a411c6ab6c3cceb6bf51a10cfeda",
+    "tests/combat-offline-browser.mjs": "bba931121ca31a02380cef331c9d49d606b62efea07b68253e4595c1e35cc3c0",
+    "tests/combat-accessibility-browser.mjs": "7c28a797c1304bb31931c61e6377c453e9b6d73e6d03c2e1e65ddafcfbc69ccb",
+    "scripts/combat-ci-suites.mjs": "e9d75918410a0de03ab1afb7e7209d0fb1b5eb1594045823540f4c925922559a",
+    "scripts/package-combat-release.mjs": "9ba34567465e3addccc5fa1378eb93edf35f40b4264ab29743fb8d308ecbd873",
+    "scripts/update-combat-workbook-readability.mjs": "6c259127a8c4381b4ef4c16a655cc02d00fdaeeca11cfe022eacc907eb40ec6b"
+  },
+  "checks": [
+    {
+      "id": "readability",
+      "name": "Repères renforcés, jauges et profils compatibles",
+      "status": "passed",
+      "command": "node scripts/run-combat-ci.mjs",
+      "evidence": "tests/combat-readability.test.mjs : 8 cas ciblés dans 8 cas réussis ; audit-combat/ci/tests_combat-readability.test.mjs.log (SHA-256 52deb09636124155adfc950cbb85bf6d99685da620adb904ebc6dc7c20130e74)\ntests/combat-readability-browser.mjs : 10 cas ciblés dans 14 cas réussis ; audit-combat/ci/tests_combat-readability-browser.mjs.log (SHA-256 05bdad00fb6616c210a1e4848f15a363b1d4057e57d102e23259b3862826e5d2)",
+      "expected": "18 cas ciblés réussis, inclus dans la campagne complète actuelle.",
+      "limitations": "Option de présentation avec formes, textes et valeurs, vérifiée dans les résolutions et situations consignées. Aucun essai utilisateur avec déficience de perception des couleurs.",
+      "count": 18,
+      "reports": [
+        {
+          "file": "tests/combat-readability.test.mjs",
+          "count": 8,
+          "sourceSha256": "a116db3666b0843aa1c2f6f128b9ff18cd55b1ca16de63dd111129aedc92d4de",
+          "log": "audit-combat/ci/tests_combat-readability.test.mjs.log",
+          "logSHA256": "52deb09636124155adfc950cbb85bf6d99685da620adb904ebc6dc7c20130e74",
+          "selectedCases": [
+            "reinforced cues are opt-in and old version-one profiles retain their progress",
+            "the cue setting survives save and profile import without changing progress or bindings",
+            "critical-life text uses the actual quarter-health boundary without rounding or false KO",
+            "all fourteen finale thresholds follow the authored kit rather than a fixed 100 percent",
+            "a full finale gauge still names a missing resource or cooldown instead of claiming readiness",
+            "readouts describe guard fragility without inventing a guard-break event and never mutate actors",
+            "circle J1 and diamond J2 follow their slots across a mirror-match crossover",
+            "nearby and high-jumping badges remain bounded on separate rows"
+          ]
+        },
+        {
+          "file": "tests/combat-readability-browser.mjs",
+          "count": 14,
+          "sourceSha256": "b60e8b96dec07f7fe5cc84dbf0af5e15cc938bf5d1c9cfba54d1ea5a79d66cff",
+          "log": "audit-combat/ci/tests_combat-readability-browser.mjs.log",
+          "logSHA256": "05bdad00fb6616c210a1e4848f15a363b1d4057e57d102e23259b3862826e5d2",
+          "reportFile": "audit-combat/readability-browser-report.json",
+          "reportSHA256": "474b120c607599cfc654dafd4ad46a59fd347c37ee9f7b19881f51813b2e953c",
+          "selectedCases": [
+            "keyboard activation persists reinforced cues across a reload in profile v1",
+            "a mirror duel uses stable player labels, distinct shapes and six named gauges",
+            "fullscreen preserves the stage ratio and permits access to larger cue content",
+            "player shapes and labels follow a real keyboard move and jump in a mirror duel",
+            "real keyboard damage produces text and a patterned critical-life indicator",
+            "actor markers are hidden during the actual KO finale composition",
+            "a played finale consumes its authored 75-point threshold and clears the ready text without a training award",
+            "both player labels retain at least 4.5 to 1 contrast against their opaque marker background",
+            "390 px keeps cue text and the full unstretched stage visible; an internal grayscale view is captured",
+            "disabling reinforced cues restores the compact HUD and keeps its canvas within the stage"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "archive-focus",
+      "name": "Recherche Archives et navigation conservées",
+      "status": "passed",
+      "command": "node scripts/run-combat-ci.mjs",
+      "evidence": "tests/combat-readability-browser.mjs : 4 cas ciblés dans 14 cas réussis ; audit-combat/ci/tests_combat-readability-browser.mjs.log (SHA-256 05bdad00fb6616c210a1e4848f15a363b1d4057e57d102e23259b3862826e5d2)",
+      "expected": "4 cas ciblés réussis, inclus dans la campagne complète actuelle.",
+      "limitations": "Navigation et sélection de texte vérifiées avec les événements publics du navigateur. Tab est une protection de comportement existant, pas un défaut initial revendiqué.",
+      "count": 4,
+      "reports": [
+        {
+          "file": "tests/combat-readability-browser.mjs",
+          "count": 14,
+          "sourceSha256": "b60e8b96dec07f7fe5cc84dbf0af5e15cc938bf5d1c9cfba54d1ea5a79d66cff",
+          "log": "audit-combat/ci/tests_combat-readability-browser.mjs.log",
+          "logSHA256": "05bdad00fb6616c210a1e4848f15a363b1d4057e57d102e23259b3862826e5d2",
+          "reportFile": "audit-combat/readability-browser-report.json",
+          "reportSHA256": "474b120c607599cfc654dafd4ad46a59fd347c37ee9f7b19881f51813b2e953c",
+          "selectedCases": [
+            "a pending archive search cannot reopen its screen after navigation",
+            "archive filtering preserves a middle selection and its direction",
+            "archive filtering preserves focus already moved to the native filter",
+            "an immediate filter change supersedes the pending search render"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "offline-update",
+      "name": "Activation hors ligne bornée et rechargement nettoyé",
+      "status": "passed",
+      "command": "node scripts/run-combat-ci.mjs",
+      "evidence": "tests/combat-offline.test.mjs : 5 cas ciblés dans 20 cas réussis ; audit-combat/ci/tests_combat-offline.test.mjs.log (SHA-256 50bbeb4ffc9502a54f7d74c349a2a949bc825598ead4eb5a589312d81cfc93af)",
+      "expected": "5 cas ciblés réussis, inclus dans la campagne complète actuelle.",
+      "limitations": "Les refus, délais et événements de contrôleur sont simulés à la frontière navigateur dans les cas Node ; le succès réel de mise à jour est aussi couvert par la suite navigateur complète.",
+      "count": 5,
+      "reports": [
+        {
+          "file": "tests/combat-offline.test.mjs",
+          "count": 20,
+          "sourceSha256": "2d6e8d8e8b32e3cb555ab72e7f8018a34375a411c6ab6c3cceb6bf51a10cfeda",
+          "log": "audit-combat/ci/tests_combat-offline.test.mjs.log",
+          "logSHA256": "50bbeb4ffc9502a54f7d74c349a2a949bc825598ead4eb5a589312d81cfc93af",
+          "selectedCases": [
+            "a stalled installation times out and a late activation cannot change the failed state",
+            "a rejected activation removes its reload listener and can be explicitly retried",
+            "a silent activation or missing controller handover times out without arming a late reload",
+            "concurrent activation requests share one operation and only the requested controller reloads once",
+            "an update without a waiting worker or during pack preparation starts no activation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "offline-cache",
+      "name": "Pack évincé, erreur réseau et nouvelle tentative",
+      "status": "passed",
+      "command": "node scripts/run-combat-ci.mjs",
+      "evidence": "tests/combat-offline.test.mjs : 2 cas ciblés dans 20 cas réussis ; audit-combat/ci/tests_combat-offline.test.mjs.log (SHA-256 50bbeb4ffc9502a54f7d74c349a2a949bc825598ead4eb5a589312d81cfc93af)\ntests/combat-offline-browser.mjs : 2 cas ciblés dans 13 cas réussis ; audit-combat/ci/tests_combat-offline-browser.mjs.log (SHA-256 9822a5e2752751f8af11d11ddfe0139be0d3263e565f4b2bd887e66907ed70fb)",
+      "expected": "4 cas ciblés réussis, inclus dans la campagne complète actuelle.",
+      "limitations": "Éviction réelle de CacheStorage et HTTP503 dans le serveur de test. Les compteurs42 des fixtures Node ne décrivent pas le pack livré de44 illustrations.",
+      "count": 4,
+      "reports": [
+        {
+          "file": "tests/combat-offline.test.mjs",
+          "count": 20,
+          "sourceSha256": "2d6e8d8e8b32e3cb555ab72e7f8018a34375a411c6ab6c3cceb6bf51a10cfeda",
+          "log": "audit-combat/ci/tests_combat-offline.test.mjs.log",
+          "logSHA256": "50bbeb4ffc9502a54f7d74c349a2a949bc825598ead4eb5a589312d81cfc93af",
+          "selectedCases": [
+            "an incomplete preparation invalidates an evicted complete pack and retry restores its actual status",
+            "a preparation failure before fresh progress cannot claim the old pack is still complete"
+          ]
+        },
+        {
+          "file": "tests/combat-offline-browser.mjs",
+          "count": 13,
+          "sourceSha256": "bba931121ca31a02380cef331c9d49d606b62efea07b68253e4595c1e35cc3c0",
+          "log": "audit-combat/ci/tests_combat-offline-browser.mjs.log",
+          "logSHA256": "9822a5e2752751f8af11d11ddfe0139be0d3263e565f4b2bd887e66907ed70fb",
+          "reportFile": "audit-combat/offline-browser-report.json",
+          "reportSHA256": "fdd650f733e8ec294c37b1ae3090193274296e9b8c62459e5a30ba759b090e9e",
+          "selectedCases": [
+            "An evicted art pack followed by a failed download is never announced as ready offline",
+            "Retrying the incomplete pack downloads its missing artwork and restores the ready state"
+          ]
+        }
+      ]
+    }
+  ],
+  "currentCampaign": {
+    "sourceCommit": "243e87b21b1e9eb8711e2012faf837f5850dae9a",
+    "runUrl": "https://github.com/darknigthmare/CainOS/actions/runs/40928776174",
+    "completedAt": "2026-10-29T18:37:06.531Z",
+    "totals": {
+      "nodeSuites": 27,
+      "nodeTests": 370,
+      "nodePassed": 370,
+      "browserSuites": 16,
+      "browserChecks": 275,
+      "browserPassed": 275
+    },
+    "evidence": "docs/combat-qa-evidence-readability-2026-10-29.json"
+  },
+  "beforeAfter": {
+    "archivesBefore": {
+      "base": "eab53bc0942fe0b23e3e2c5d191a187127a4e3d9",
+      "at": "2026-10-29T17:13:26.193Z",
+      "browser": "156.0.8078.73",
+      "checks": [
+        {
+          "name": "pending query navigation",
+          "before": "home",
+          "after": "archives"
+        },
+        {
+          "name": "pending query Tab",
+          "before": "archive-filter",
+          "after": "archive-filter"
+        },
+        {
+          "name": "pending query caret",
+          "before": 1,
+          "after": 5
+        }
+      ]
+    },
+    "offline": {
+      "baseCommit": "eab53bc0942fe0b23e3e2c5d191a187127a4e3d9",
+      "sourceHashes": {
+        "combat/offline.mjs": "b8ec3869ea1fd4f56d5cda1c8b54cb1ba26572c5fbac8c5451e8f3d795925241",
+        "tests/combat-offline.test.mjs": "2d6e8d8e8b32e3cb555ab72e7f8018a34375a411c6ab6c3cceb6bf51a10cfeda",
+        "tests/combat-offline-browser.mjs": "bba931121ca31a02380cef331c9d49d606b62efea07b68253e4595c1e35cc3c0"
+      },
+      "nodeSuite": {
+        "command": "node --test tests/combat-offline.test.mjs",
+        "tests": 20,
+        "passed": 20,
+        "exitCode": 0,
+        "log": "audit-combat/offline-local-20261029/node-after.log"
+      },
+      "originalReproduction": {
+        "command": "node --test ../offline-review-repro.mjs",
+        "before": {
+          "tests": 2,
+          "passed": 0,
+          "exitCode": 1,
+          "log": "audit-combat/offline-local-20261029/node-before.log"
+        },
+        "after": {
+          "tests": 2,
+          "passed": 2,
+          "exitCode": 0,
+          "log": "audit-combat/offline-local-20261029/original-repro-after.log"
+        }
+      },
+      "browserBefore": {
+        "command": "node tests/combat-offline-browser.mjs",
+        "completedChecks": 6,
+        "exitCode": 1,
+        "failedAssertion": "complete true, expected false after cache eviction and HTTP 503",
+        "log": "audit-combat/offline-local-20261029/browser-before.log",
+        "report": "audit-combat/offline-local-20261029/browser-before-report.json",
+        "screenshot": "audit-combat/offline-local-20261029/browser-before-failure.png",
+        "failedAssertions": 1
+      },
+      "browserAfter": {
+        "command": "node tests/combat-offline-browser.mjs",
+        "checks": 13,
+        "passed": 13,
+        "exitCode": 0,
+        "report": "audit-combat/offline-local-20261029/browser-after-report.json",
+        "log": "audit-combat/offline-local-20261029/browser-after.log",
+        "browserExecutable": "/tmp/moustique-chrome-headless/chrome-headless-shell-linux64/chrome-headless-shell",
+        "conditions": "Standalone build matches runtime; real CacheStorage eviction plus HTTP 503, successful retry, offline cold reload and worker activation via UI."
+      },
+      "guide": "docs/gamedev/upstream/skills/disciplines/save-systems/SKILL.md",
+      "scope": [
+        "Explicit, bounded offline update with cleanup and coalesced requests",
+        "Honest completion status after artwork cache eviction and failed preparation"
+      ],
+      "beforeSourceHashes": {
+        "combat/offline.mjs": "704b87db56c26365c770c46df33a0ebfa6c2639d1b97df8183794dfb8417e4c9",
+        "tests/combat-offline.test.mjs": "f070eb711be11562ef492ba17c8cc7b9cb00f7087784410e23acb62917559476",
+        "tests/combat-offline-browser.mjs": "cec2cb1f8faa7712511e00fe97e38c2fc7ef59a1f59b2ed3823acefd215226fc"
+      },
+      "artifactHashes": {
+        "node-before.log": "47f7b7cc7c3f2c99ebbfe9536cb7138aff080305f19ee0598953a1817f15816e",
+        "node-after.log": "77e2af8ded96d5b767f852cf874e8698e9c5d21b914955b7309d34f6aeb85992",
+        "original-repro-after.log": "95460d7243507c439e0aa1ff00a8cdda3ffc9ee8a8598bfdec5dfd6d441610b0",
+        "browser-before.log": "46d262112a08e102fd9ed875c5edeb02a57c941d4f74911b75819c48f175d68b",
+        "browser-before-report.json": "acab43eef4c0e5ee530eef54edfac907c42372d0a9b0deff8b184140cf2d84d9",
+        "browser-before-failure.png": "38bcfb18af71a7759920323690294ac49ceec84bcff1f5376c5dfab5963ef655",
+        "browser-after.log": "9822a5e2752751f8af11d11ddfe0139be0d3263e565f4b2bd887e66907ed70fb",
+        "browser-after-report.json": "806fd43cd187b11a668f9975c8f5f36659b477810d69d46213768d7d265a3590"
+      },
+      "scopeNotes": [
+        "The 2 original reproductions overlap the final Node suite; they are not added to the independent-test total.",
+        "Node uses a controllable browser-boundary fixture with 42 artificial files; actual browser coverage uses the 44-image manifest.",
+        "No physical-device test or native Windows/macOS launch is claimed."
+      ],
+      "combinedBuildSourceHashes": {
+        "combat/app.mjs": "453a316dc43bd0ddb0da4e0409f231db911623bc651e039695ff2e98d74e08ef",
+        "combat/session.mjs": "ea8fe4336dc7dd9a6289dad824974e9f9cd83c4df422b0907098e962154ee168",
+        "combat/offline.mjs": "b8ec3869ea1fd4f56d5cda1c8b54cb1ba26572c5fbac8c5451e8f3d795925241",
+        "combat/offline-manifest.mjs": "b187d9064665d5289d3c199663fc4a315bdab450124c31bb89ed59f3e4052aef"
+      },
+      "completedAt": "2026-10-29T17:26:55.079202+00:00",
+      "readabilityReview": {
+        "type": "independent-read-only",
+        "result": "No concrete defect found in native actor resource/cooldown mapping or version-one profile compatibility; viewport changes are owned by interaction agent.",
+        "files": [
+          "combat/readability.mjs",
+          "combat/app.mjs",
+          "combat/engine.mjs",
+          "combat/session.mjs",
+          "combat/data.mjs"
+        ]
+      },
+      "reproductionScript": {
+        "path": "audit-combat/offline-local-20261029/original-repro.mjs",
+        "bytes": 5627,
+        "sha256": "ce7b1b78700e939274de49745f7e547625513344c314d33420fdd948c986d223"
+      }
+    }
+  },
+  "localValidation": {
+    "scope": "Targeted local passes on the same committed source hashes; their cases overlap the full current campaign and are not added to its totals.",
+    "ui": {
+      "schema": "encore-readability-validation/v1",
+      "generatedAt": "2026-10-29T17:25:54.826196+00:00",
+      "baseCommit": "eab53bc0942fe0b23e3e2c5d191a187127a4e3d9",
+      "sourceHashes": {
+        "combat/app.mjs": "453a316dc43bd0ddb0da4e0409f231db911623bc651e039695ff2e98d74e08ef",
+        "combat/session.mjs": "ea8fe4336dc7dd9a6289dad824974e9f9cd83c4df422b0907098e962154ee168",
+        "combat/style.css": "3f1c2ad3597887ceff0ca60f28ad188327f74739ec2f9f2922b91d4fcf8f7f78",
+        "combat/readability.mjs": "ab4bfca1918f0bb3d9b375fb3e4ce3f41c95867289494b34de368a2f2f1da078",
+        "tests/combat-readability.test.mjs": "a116db3666b0843aa1c2f6f128b9ff18cd55b1ca16de63dd111129aedc92d4de",
+        "tests/combat-readability-browser.mjs": "b60e8b96dec07f7fe5cc84dbf0af5e15cc938bf5d1c9cfba54d1ea5a79d66cff"
+      },
+      "runtimeScope": [
+        "Optional reinforced cues; profile v1 setting defaults false",
+        "Circle J1 and diamond J2 follow actors, including identical costumes",
+        "Named and patterned life/guard/finale gauges, life-critical and actual kit threshold/resource/cooldown text",
+        "HUD outside scene; desktop scene fitted to remaining viewport height; 390 px preserves full width",
+        "Pending archive searches cannot reopen abandoned screen; caret selection and moved focus survive redraw",
+        "Offline applyingUpdate wording and disabled state supplied by offline module"
+      ],
+      "before": {
+        "archive": {
+          "path": "audit-combat/readability-local-20261029/archive-debounce-before.json",
+          "bytes": 446,
+          "sha256": "5a914b1a3cd611760ed483c7826321cf1b1ec62bb2479bb91224aa50234ac356"
+        },
+        "observedDefects": [
+          "A pending query changes home back to archives after 250 ms",
+          "A caret moved to character 1 is moved to character 5 after redraw"
+        ],
+        "notClaimed": [
+          "Tab focus was already restored to archive-filter and is protected by a passing regression"
+        ]
+      },
+      "final": {
+        "node": {
+          "command": "node --test tests/combat-readability.test.mjs",
+          "tests": 8,
+          "passed": 8,
+          "exitCode": 0,
+          "log": {
+            "path": "audit-combat/readability-local-20261029/node-final.log",
+            "bytes": 919,
+            "sha256": "e9643c98fe18e69c2c3976c479bd251d85ba754f380f88805a6b3e2d6f0be4e6"
+          }
+        },
+        "browser": {
+          "command": "COMBAT_TEST_URL=http://127.0.0.1:4191 node tests/combat-readability-browser.mjs",
+          "checks": 14,
+          "passed": 14,
+          "exitCode": 0,
+          "report": {
+            "path": "audit-combat/readability-local-20261029/browser-final-report.json",
+            "bytes": 11487,
+            "sha256": "aa165604cead20d82ec596d4b9cd92c1fcd35ee17df09dcbc5684ff35dafe1c9"
+          },
+          "browserVersion": "156.0.8078.73"
+        }
+      },
+      "attemptHistory": [
+        {
+          "attempt": 1,
+          "checksPassed": 6,
+          "exitCode": 1,
+          "classification": "new-test-assumption",
+          "explanation": "The new test asserted fullscreenElement before the real asynchronous fullscreen request settled. Added an explicit observable wait; fullscreen had actually applied.",
+          "report": {
+            "path": "audit-combat/readability-local-20261029/attempt-1-report.json",
+            "bytes": 4368,
+            "sha256": "30dad29ecb23cc2ea858012dbacd9a3aab92dd6de55ce47e460c2072c7d54a04"
+          }
+        },
+        {
+          "attempt": 2,
+          "checksPassed": 7,
+          "exitCode": 1,
+          "classification": "new-test-assumption",
+          "explanation": "The new test assumed an ordinary jump would cross the opponent, and initiated it at a fixed distance. Runtime unchanged; the test was moved closer.",
+          "report": {
+            "path": "audit-combat/readability-local-20261029/attempt-2-report.json",
+            "bytes": 6290,
+            "sha256": "32d2725a0d3dfc77ac1164e1f215bd41be87e2eb975d64f4e2e4eb1fcf09f833"
+          }
+        },
+        {
+          "attempt": 3,
+          "checksPassed": 7,
+          "exitCode": 1,
+          "classification": "new-test-assumption",
+          "explanation": "The closer setup still cannot cross with the current jump and separation rules. A Node investigation found a 104.04 px jump height versus the existing 110 px separation criterion. The browser test now verifies real movement and a jump, while a pure presentation test covers already-crossed coordinates; no combat rule changed.",
+          "report": {
+            "path": "audit-combat/readability-local-20261029/attempt-3-report.json",
+            "bytes": 10628,
+            "sha256": "f75a015479fca3726fd1cea6f71fdaac6fcbef9dde4341fad7895c3d5ff97b55"
+          }
+        }
+      ],
+      "visualReview": {
+        "reviewed": true,
+        "desktopViewport": [
+          1440,
+          1000
+        ],
+        "mobileViewport": [
+          390,
+          844
+        ],
+        "captures": [
+          {
+            "path": "audit-combat/readability-local-20261029/critical-life-desktop.png",
+            "bytes": 330070,
+            "sha256": "b53e527df5f726e9f7c2769876c30e1afe5c6d76bf284683eb8c32374a74c9d8"
+          },
+          {
+            "path": "audit-combat/readability-local-20261029/default-desktop.png",
+            "bytes": 401987,
+            "sha256": "806527d9fd05f886caba656b3cce939e953e00a22af41ac8d28d0207072dba25"
+          },
+          {
+            "path": "audit-combat/readability-local-20261029/fullscreen-viewport.png",
+            "bytes": 356711,
+            "sha256": "0a4e34e5ddb64ee33a5fd2c274771612452cbfe62e3650a7780f5313c57602b7"
+          },
+          {
+            "path": "audit-combat/readability-local-20261029/mirror-390px-grayscale.png",
+            "bytes": 44589,
+            "sha256": "a671c31bb3403300767d48b9339198842b1b2c78320da43bd6cabcfd53b64e09"
+          },
+          {
+            "path": "audit-combat/readability-local-20261029/mirror-390px.png",
+            "bytes": 67578,
+            "sha256": "01d0841e908bb9de198855f02da2c500db47d068b50927e6805799d993e8efad"
+          },
+          {
+            "path": "audit-combat/readability-local-20261029/mirror-desktop-viewport.png",
+            "bytes": 392638,
+            "sha256": "65b82e8db6c721ad57b6490b78a54880cd9dfa14d1af311f7486b83a4fcdadd4"
+          },
+          {
+            "path": "audit-combat/readability-local-20261029/mirror-desktop.png",
+            "bytes": 349626,
+            "sha256": "ef450ac0faa37a9edff26c106fa318c7d26aab9f1fbac4f1d46fc2b406b633be"
+          }
+        ],
+        "observations": [
+          "Opaque HUD above scene; complete stage fits desktop and fullscreen viewport",
+          "Circle/diamond and J1/J2 remain distinct in grayscale view",
+          "Mobile gauge values, alert text and unmasked stage remain readable without horizontal overflow",
+          "Default compact HUD remains inside original arena"
+        ],
+        "markerContrast": [
+          11.261023259656891,
+          14.128171917800932
+        ]
+      },
+      "limits": [
+        "No physical phone or controller.",
+        "Grayscale inspection is an internal visual aid, not a simulation of every color-vision deficiency or a user study.",
+        "No claim of global palette accessibility or screen-reader playability."
+      ],
+      "changesNotMade": [
+        "No art assets, engine, replay rules or attack data changed",
+        "No palette-specific color-vision simulation or user-study certification"
+      ],
+      "guides": [
+        "docs/gamedev/upstream/skills/disciplines/game-ui-ux/SKILL.md",
+        "docs/gamedev/upstream/skills/disciplines/input-systems/SKILL.md"
+      ],
+      "primaryReference": "https://learn.microsoft.com/en-us/xbox/accessibility/xbox-accessibility-guidelines/103"
+    },
+    "executedUiReports": {
+      "final": {
+        "schema": "encore-readability-browser/v1",
+        "version": "0.7.0",
+        "generatedAt": "2026-10-29T17:24:22.627Z",
+        "base": "http://127.0.0.1:4191",
+        "checks": [
+          {
+            "name": "a pending archive search cannot reopen its screen after navigation",
+            "detail": null,
+            "pass": true
+          },
+          {
+            "name": "archive filtering preserves a middle selection and its direction",
+            "detail": null,
+            "pass": true
+          },
+          {
+            "name": "archive filtering preserves focus already moved to the native filter",
+            "detail": null,
+            "pass": true
+          },
+          {
+            "name": "an immediate filter change supersedes the pending search render",
+            "detail": null,
+            "pass": true
+          },
+          {
+            "name": "keyboard activation persists reinforced cues across a reload in profile v1",
+            "detail": null,
+            "pass": true
+          },
+          {
+            "name": "a mirror duel uses stable player labels, distinct shapes and six named gauges",
+            "detail": {
+              "identities": [
+                {
+                  "radius": "50%",
+                  "transform": "none"
+                },
+                {
+                  "radius": "0px",
+                  "transform": "matrix(0.707107, 0.707107, -0.707107, 0.707107, 0, 0)"
+                }
+              ]
+            },
+            "pass": true
+          },
+          {
+            "name": "fullscreen preserves the stage ratio and permits access to larger cue content",
+            "detail": {
+              "overflow": "auto",
+              "height": 1000,
+              "total": 1049
+            },
+            "pass": true
+          },
+          {
+            "name": "player shapes and labels follow a real keyboard move and jump in a mirror duel",
+            "detail": {
+              "positions": [
+                {
+                  "x": 808.7359999999998,
+                  "y": 465.40000000000003
+                },
+                {
+                  "x": 900,
+                  "y": 568
+                }
+              ],
+              "markerX": [
+                63.1825,
+                70.3125
+              ]
+            },
+            "pass": true
+          },
+          {
+            "name": "real keyboard damage produces text and a patterned critical-life indicator",
+            "detail": null,
+            "pass": true
+          },
+          {
+            "name": "actor markers are hidden during the actual KO finale composition",
+            "detail": null,
+            "pass": true
+          },
+          {
+            "name": "a played finale consumes its authored 75-point threshold and clears the ready text without a training award",
+            "detail": null,
+            "pass": true
+          },
+          {
+            "name": "both player labels retain at least 4.5 to 1 contrast against their opaque marker background",
+            "detail": [
+              11.261023259656891,
+              14.128171917800932
+            ],
+            "pass": true
+          },
+          {
+            "name": "390 px keeps cue text and the full unstretched stage visible; an internal grayscale view is captured",
+            "detail": {
+              "viewport": 390,
+              "viewportHeight": 844,
+              "scroll": 390,
+              "canvas": {
+                "x": 8.796875,
+                "y": 30.578125,
+                "width": 372.40625,
+                "height": 209.46875,
+                "right": 381.203125,
+                "bottom": 240.046875
+              },
+              "stage": {
+                "x": 8.796875,
+                "y": 30.578125,
+                "width": 372.40625,
+                "height": 209.46875,
+                "right": 381.203125,
+                "bottom": 240.046875
+              },
+              "hud": {
+                "x": 8.796875,
+                "y": -219,
+                "width": 372.40625,
+                "height": 249.578125,
+                "right": 381.203125,
+                "bottom": 30.578125
+              },
+              "text": [
+                {
+                  "text": "J1",
+                  "width": 30,
+                  "scroll": 30,
+                  "font": "10px"
+                },
+                {
+                  "text": "VIE10 000 / 10 000",
+                  "width": 150,
+                  "scroll": 150,
+                  "font": "11px"
+                },
+                {
+                  "text": "GARDE100 %",
+                  "width": 150,
+                  "scroll": 150,
+                  "font": "11px"
+                },
+                {
+                  "text": "FINALE25 / 75",
+                  "width": 150,
+                  "scroll": 150,
+                  "font": "11px"
+                },
+                {
+                  "text": "",
+                  "width": 150,
+                  "scroll": 150,
+                  "font": "11px"
+                },
+                {
+                  "text": "J2 · MANNEQUIN",
+                  "width": 101,
+                  "scroll": 101,
+                  "font": "10px"
+                },
+                {
+                  "text": "VIE10 000 / 10 000",
+                  "width": 150,
+                  "scroll": 150,
+                  "font": "11px"
+                },
+                {
+                  "text": "GARDE100 %",
+                  "width": 150,
+                  "scroll": 150,
+                  "font": "11px"
+                },
+                {
+                  "text": "FINALE100 / 75",
+                  "width": 150,
+                  "scroll": 150,
+                  "font": "11px"
+                },
+                {
+                  "text": "FINALE PRÊTE",
+                  "width": 150,
+                  "scroll": 150,
+                  "font": "11px"
+                }
+              ]
+            },
+            "pass": true
+          },
+          {
+            "name": "disabling reinforced cues restores the compact HUD and keeps its canvas within the stage",
+            "detail": null,
+            "pass": true
+          }
+        ],
+        "errors": [],
+        "pass": true,
+        "sourceHashes": {
+          "combat/app.mjs": "453a316dc43bd0ddb0da4e0409f231db911623bc651e039695ff2e98d74e08ef",
+          "combat/session.mjs": "ea8fe4336dc7dd9a6289dad824974e9f9cd83c4df422b0907098e962154ee168",
+          "combat/readability.mjs": "ab4bfca1918f0bb3d9b375fb3e4ce3f41c95867289494b34de368a2f2f1da078",
+          "combat/style.css": "3f1c2ad3597887ceff0ca60f28ad188327f74739ec2f9f2922b91d4fcf8f7f78",
+          "tests/combat-readability.test.mjs": "a116db3666b0843aa1c2f6f128b9ff18cd55b1ca16de63dd111129aedc92d4de",
+          "tests/combat-readability-browser.mjs": "b60e8b96dec07f7fe5cc84dbf0af5e15cc938bf5d1c9cfba54d1ea5a79d66cff"
+        },
+        "scope": "Real keyboard and pointer UI in desktop / 390 px Chromium; controlled browser clock for debounce and combat timing. A real local mirror duel supplies the low-life and KO states.",
+        "limitations": [
+          "No physical phone or controller.",
+          "Grayscale inspection is an internal visual aid, not a simulation of every color-vision deficiency or a user study.",
+          "No claim of global palette accessibility or screen-reader playability."
+        ],
+        "browser": "156.0.8078.73",
+        "desktopLayout": {
+          "viewport": 1440,
+          "viewportHeight": 1000,
+          "scroll": 1440,
+          "canvas": {
+            "x": 106,
+            "y": 296.875,
+            "width": 1228,
+            "height": 690.75,
+            "right": 1334,
+            "bottom": 987.625
+          },
+          "stage": {
+            "x": 106,
+            "y": 296.875,
+            "width": 1228,
+            "height": 690.75,
+            "right": 1334,
+            "bottom": 987.625
+          },
+          "hud": {
+            "x": 29.796875,
+            "y": 61,
+            "width": 1380.40625,
+            "height": 235.875,
+            "right": 1410.203125,
+            "bottom": 296.875
+          },
+          "text": [
+            {
+              "text": "J1",
+              "width": 32,
+              "scroll": 32,
+              "font": "12px"
+            },
+            {
+              "text": "VIE10 000 / 10 000",
+              "width": 626,
+              "scroll": 626,
+              "font": "12px"
+            },
+            {
+              "text": "GARDE100 %",
+              "width": 626,
+              "scroll": 626,
+              "font": "12px"
+            },
+            {
+              "text": "FINALE0 / 75",
+              "width": 626,
+              "scroll": 626,
+              "font": "12px"
+            },
+            {
+              "text": "",
+              "width": 626,
+              "scroll": 626,
+              "font": "11px"
+            },
+            {
+              "text": "J2",
+              "width": 31,
+              "scroll": 31,
+              "font": "12px"
+            },
+            {
+              "text": "VIE10 000 / 10 000",
+              "width": 626,
+              "scroll": 626,
+              "font": "12px"
+            },
+            {
+              "text": "GARDE100 %",
+              "width": 626,
+              "scroll": 626,
+              "font": "12px"
+            },
+            {
+              "text": "FINALE0 / 75",
+              "width": 626,
+              "scroll": 626,
+              "font": "12px"
+            },
+            {
+              "text": "",
+              "width": 626,
+              "scroll": 626,
+              "font": "11px"
+            }
+          ]
+        },
+        "fullscreenLayout": {
+          "viewport": 1440,
+          "viewportHeight": 1000,
+          "scroll": 1440,
+          "canvas": {
+            "x": 106,
+            "y": 296.875,
+            "width": 1228,
+            "height": 690.75,
+            "right": 1334,
+            "bottom": 987.625
+          },
+          "stage": {
+            "x": 106,
+            "y": 296.875,
+            "width": 1228,
+            "height": 690.75,
+            "right": 1334,
+            "bottom": 987.625
+          },
+          "hud": {
+            "x": 29.796875,
+            "y": 61,
+            "width": 1380.40625,
+            "height": 235.875,
+            "right": 1410.203125,
+            "bottom": 296.875
+          },
+          "text": [
+            {
+              "text": "J1",
+              "width": 32,
+              "scroll": 32,
+              "font": "12px"
+            },
+            {
+              "text": "VIE10 000 / 10 000",
+              "width": 626,
+              "scroll": 626,
+              "font": "12px"
+            },
+            {
+              "text": "GARDE100 %",
+              "width": 626,
+              "scroll": 626,
+              "font": "12px"
+            },
+            {
+              "text": "FINALE0 / 75",
+              "width": 626,
+              "scroll": 626,
+              "font": "12px"
+            },
+            {
+              "text": "",
+              "width": 626,
+              "scroll": 626,
+              "font": "11px"
+            },
+            {
+              "text": "J2",
+              "width": 31,
+              "scroll": 31,
+              "font": "12px"
+            },
+            {
+              "text": "VIE10 000 / 10 000",
+              "width": 626,
+              "scroll": 626,
+              "font": "12px"
+            },
+            {
+              "text": "GARDE100 %",
+              "width": 626,
+              "scroll": 626,
+              "font": "12px"
+            },
+            {
+              "text": "FINALE0 / 75",
+              "width": 626,
+              "scroll": 626,
+              "font": "12px"
+            },
+            {
+              "text": "",
+              "width": 626,
+              "scroll": 626,
+              "font": "11px"
+            }
+          ]
+        },
+        "markerContrast": [
+          11.261023259656891,
+          14.128171917800932
+        ],
+        "mobileLayout": {
+          "viewport": 390,
+          "viewportHeight": 844,
+          "scroll": 390,
+          "canvas": {
+            "x": 8.796875,
+            "y": 30.578125,
+            "width": 372.40625,
+            "height": 209.46875,
+            "right": 381.203125,
+            "bottom": 240.046875
+          },
+          "stage": {
+            "x": 8.796875,
+            "y": 30.578125,
+            "width": 372.40625,
+            "height": 209.46875,
+            "right": 381.203125,
+            "bottom": 240.046875
+          },
+          "hud": {
+            "x": 8.796875,
+            "y": -219,
+            "width": 372.40625,
+            "height": 249.578125,
+            "right": 381.203125,
+            "bottom": 30.578125
+          },
+          "text": [
+            {
+              "text": "J1",
+              "width": 30,
+              "scroll": 30,
+              "font": "10px"
+            },
+            {
+              "text": "VIE10 000 / 10 000",
+              "width": 150,
+              "scroll": 150,
+              "font": "11px"
+            },
+            {
+              "text": "GARDE100 %",
+              "width": 150,
+              "scroll": 150,
+              "font": "11px"
+            },
+            {
+              "text": "FINALE25 / 75",
+              "width": 150,
+              "scroll": 150,
+              "font": "11px"
+            },
+            {
+              "text": "",
+              "width": 150,
+              "scroll": 150,
+              "font": "11px"
+            },
+            {
+              "text": "J2 · MANNEQUIN",
+              "width": 101,
+              "scroll": 101,
+              "font": "10px"
+            },
+            {
+              "text": "VIE10 000 / 10 000",
+              "width": 150,
+              "scroll": 150,
+              "font": "11px"
+            },
+            {
+              "text": "GARDE100 %",
+              "width": 150,
+              "scroll": 150,
+              "font": "11px"
+            },
+            {
+              "text": "FINALE100 / 75",
+              "width": 150,
+              "scroll": 150,
+              "font": "11px"
+            },
+            {
+              "text": "FINALE PRÊTE",
+              "width": 150,
+              "scroll": 150,
+              "font": "11px"
+            }
+          ]
+        }
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "report": {
+            "schema": "encore-readability-browser/v1",
+            "version": "0.7.0",
+            "generatedAt": "2026-10-29T17:19:32.557Z",
+            "base": "http://127.0.0.1:4191",
+            "checks": [
+              {
+                "name": "a pending archive search cannot reopen its screen after navigation",
+                "detail": null,
+                "pass": true
+              },
+              {
+                "name": "archive filtering preserves a middle selection and its direction",
+                "detail": null,
+                "pass": true
+              },
+              {
+                "name": "archive filtering preserves focus already moved to the native filter",
+                "detail": null,
+                "pass": true
+              },
+              {
+                "name": "an immediate filter change supersedes the pending search render",
+                "detail": null,
+                "pass": true
+              },
+              {
+                "name": "keyboard activation persists reinforced cues across a reload in profile v1",
+                "detail": null,
+                "pass": true
+              },
+              {
+                "name": "a mirror duel uses stable player labels, distinct shapes and six named gauges",
+                "detail": {
+                  "identities": [
+                    {
+                      "radius": "50%",
+                      "transform": "none"
+                    },
+                    {
+                      "radius": "0px",
+                      "transform": "matrix(0.707107, 0.707107, -0.707107, 0.707107, 0, 0)"
+                    }
+                  ]
+                },
+                "pass": true
+              }
+            ],
+            "errors": [
+              "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ undefined\n- 'main'\n\n    at file:///dev/shm/encore-next-99d1239274f1/CainOS/tests/combat-readability-browser.mjs:117:10"
+            ],
+            "pass": false,
+            "sourceHashes": {
+              "combat/app.mjs": "1c79332bd8201a11947fffdf6dc8d1e771572cda3886c9daacc054df14b3477c",
+              "combat/session.mjs": "ea8fe4336dc7dd9a6289dad824974e9f9cd83c4df422b0907098e962154ee168",
+              "combat/readability.mjs": "183b312a7c81606cc26c457251381f384c69ebe9951c0a4ff9d5c642083d3c99",
+              "combat/style.css": "e06f670374134e9a668143ac3d32c91dd27327f759878355fe19cdf73f1cb715",
+              "tests/combat-readability.test.mjs": "d56d2abfd31d4557ff614880a94a9a363adf6ecce531b80cb5854b84b5d4f15a",
+              "tests/combat-readability-browser.mjs": "99fdf20eb8704448f03e6f4c0cbc9e921e9a01deda98d834ffbd1f8971502a83"
+            },
+            "scope": "Real keyboard and pointer UI in desktop / 390 px Chromium; controlled browser clock for debounce and combat timing. A real local mirror duel supplies the low-life and KO states.",
+            "limitations": [
+              "No physical phone or controller.",
+              "Grayscale inspection is an internal visual aid, not a simulation of every color-vision deficiency or a user study.",
+              "No claim of global palette accessibility or screen-reader playability."
+            ],
+            "browser": "156.0.8078.73",
+            "desktopLayout": {
+              "viewport": 1440,
+              "scroll": 1440,
+              "canvas": {
+                "x": 29.796875,
+                "y": 296.875,
+                "width": 1380.40625,
+                "height": 776.46875,
+                "right": 1410.203125,
+                "bottom": 1073.34375
+              },
+              "stage": {
+                "x": 29.796875,
+                "y": 296.875,
+                "width": 1380.40625,
+                "height": 776.46875,
+                "right": 1410.203125,
+                "bottom": 1073.34375
+              },
+              "hud": {
+                "x": 29.796875,
+                "y": 61,
+                "width": 1380.40625,
+                "height": 235.875,
+                "right": 1410.203125,
+                "bottom": 296.875
+              },
+              "text": [
+                {
+                  "text": "J1",
+                  "width": 32,
+                  "scroll": 32,
+                  "font": "12px"
+                },
+                {
+                  "text": "VIE10 000 / 10 000",
+                  "width": 626,
+                  "scroll": 626,
+                  "font": "12px"
+                },
+                {
+                  "text": "GARDE100 %",
+                  "width": 626,
+                  "scroll": 626,
+                  "font": "12px"
+                },
+                {
+                  "text": "FINALE0 / 75",
+                  "width": 626,
+                  "scroll": 626,
+                  "font": "12px"
+                },
+                {
+                  "text": "",
+                  "width": 626,
+                  "scroll": 626,
+                  "font": "11px"
+                },
+                {
+                  "text": "J2",
+                  "width": 31,
+                  "scroll": 31,
+                  "font": "12px"
+                },
+                {
+                  "text": "VIE10 000 / 10 000",
+                  "width": 626,
+                  "scroll": 626,
+                  "font": "12px"
+                },
+                {
+                  "text": "GARDE100 %",
+                  "width": 626,
+                  "scroll": 626,
+                  "font": "12px"
+                },
+                {
+                  "text": "FINALE0 / 75",
+                  "width": 626,
+                  "scroll": 626,
+                  "font": "12px"
+                },
+                {
+                  "text": "",
+                  "width": 626,
+                  "scroll": 626,
+                  "font": "11px"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "attempt": 2,
+          "report": {
+            "schema": "encore-readability-browser/v1",
+            "version": "0.7.0",
+            "generatedAt": "2026-10-29T17:20:15.007Z",
+            "base": "http://127.0.0.1:4191",
+            "checks": [
+              {
+                "name": "a pending archive search cannot reopen its screen after navigation",
+                "detail": null,
+                "pass": true
+              },
+              {
+                "name": "archive filtering preserves a middle selection and its direction",
+                "detail": null,
+                "pass": true
+              },
+              {
+                "name": "archive filtering preserves focus already moved to the native filter",
+                "detail": null,
+                "pass": true
+              },
+              {
+                "name": "an immediate filter change supersedes the pending search render",
+                "detail": null,
+                "pass": true
+              },
+              {
+                "name": "keyboard activation persists reinforced cues across a reload in profile v1",
+                "detail": null,
+                "pass": true
+              },
+              {
+                "name": "a mirror duel uses stable player labels, distinct shapes and six named gauges",
+                "detail": {
+                  "identities": [
+                    {
+                      "radius": "50%",
+                      "transform": "none"
+                    },
+                    {
+                      "radius": "0px",
+                      "transform": "matrix(0.707107, 0.707107, -0.707107, 0.707107, 0, 0)"
+                    }
+                  ]
+                },
+                "pass": true
+              },
+              {
+                "name": "fullscreen preserves the stage ratio and permits access to larger cue content",
+                "detail": {
+                  "overflow": "auto",
+                  "height": 1000,
+                  "total": 1134
+                },
+                "pass": true
+              }
+            ],
+            "errors": [
+              "AssertionError [ERR_ASSERTION]: a keyboard jump crosses the mirror opponent\n    at file:///dev/shm/encore-next-99d1239274f1/CainOS/tests/combat-readability-browser.mjs:133:10"
+            ],
+            "pass": false,
+            "sourceHashes": {
+              "combat/app.mjs": "1c79332bd8201a11947fffdf6dc8d1e771572cda3886c9daacc054df14b3477c",
+              "combat/session.mjs": "ea8fe4336dc7dd9a6289dad824974e9f9cd83c4df422b0907098e962154ee168",
+              "combat/readability.mjs": "183b312a7c81606cc26c457251381f384c69ebe9951c0a4ff9d5c642083d3c99",
+              "combat/style.css": "e06f670374134e9a668143ac3d32c91dd27327f759878355fe19cdf73f1cb715",
+              "tests/combat-readability.test.mjs": "d56d2abfd31d4557ff614880a94a9a363adf6ecce531b80cb5854b84b5d4f15a",
+              "tests/combat-readability-browser.mjs": "bbc1a1a51f65f9ec45e66d8e74fab0528621807938481a447538579c68d91dbd"
+            },
+            "scope": "Real keyboard and pointer UI in desktop / 390 px Chromium; controlled browser clock for debounce and combat timing. A real local mirror duel supplies the low-life and KO states.",
+            "limitations": [
+              "No physical phone or controller.",
+              "Grayscale inspection is an internal visual aid, not a simulation of every color-vision deficiency or a user study.",
+              "No claim of global palette accessibility or screen-reader playability."
+            ],
+            "browser": "156.0.8078.73",
+            "desktopLayout": {
+              "viewport": 1440,
+              "scroll": 1440,
+              "canvas": {
+                "x": 29.796875,
+                "y": 296.875,
+                "width": 1380.40625,
+                "height": 776.46875,
+                "right": 1410.203125,
+                "bottom": 1073.34375
+              },
+              "stage": {
+                "x": 29.796875,
+                "y": 296.875,
+                "width": 1380.40625,
+                "height": 776.46875,
+                "right": 1410.203125,
+                "bottom": 1073.34375
+              },
+              "hud": {
+                "x": 29.796875,
+                "y": 61,
+                "width": 1380.40625,
+                "height": 235.875,
+                "right": 1410.203125,
+                "bottom": 296.875
+              },
+              "text": [
+                {
+                  "text": "J1",
+                  "width": 32,
+                  "scroll": 32,
+                  "font": "12px"
+                },
+                {
+                  "text": "VIE10 000 / 10 000",
+                  "width": 626,
+                  "scroll": 626,
+                  "font": "12px"
+                },
+                {
+                  "text": "GARDE100 %",
+                  "width": 626,
+                  "scroll": 626,
+                  "font": "12px"
+                },
+                {
+                  "text": "FINALE0 / 75",
+                  "width": 626,
+                  "scroll": 626,
+                  "font": "12px"
+                },
+                {
+                  "text": "",
+                  "width": 626,
+                  "scroll": 626,
+                  "font": "11px"
+                },
+                {
+                  "text": "J2",
+                  "width": 31,
+                  "scroll": 31,
+                  "font": "12px"
+                },
+                {
+                  "text": "VIE10 000 / 10 000",
+                  "width": 626,
+                  "scroll": 626,
+                  "font": "12px"
+                },
+                {
+                  "text": "GARDE100 %",
+                  "width": 626,
+                  "scroll": 626,
+                  "font": "12px"
+                },
+                {
+                  "text": "FINALE0 / 75",
+                  "width": 626,
+                  "scroll": 626,
+                  "font": "12px"
+                },
+                {
+                  "text": "",
+                  "width": 626,
+                  "scroll": 626,
+                  "font": "11px"
+                }
+              ]
+            },
+            "fullscreenLayout": {
+              "viewport": 1440,
+              "scroll": 1440,
+              "canvas": {
+                "x": 29.796875,
+                "y": 296.875,
+                "width": 1380.40625,
+                "height": 776.46875,
+                "right": 1410.203125,
+                "bottom": 1073.34375
+              },
+              "stage": {
+                "x": 29.796875,
+                "y": 296.875,
+                "width": 1380.40625,
+                "height": 776.46875,
+                "right": 1410.203125,
+                "bottom": 1073.34375
+              },
+              "hud": {
+                "x": 29.796875,
+                "y": 61,
+                "width": 1380.40625,
+                "height": 235.875,
+                "right": 1410.203125,
+                "bottom": 296.875
+              },
+              "text": [
+                {
+                  "text": "J1",
+                  "width": 32,
+                  "scroll": 32,
+                  "font": "12px"
+                },
+                {
+                  "text": "VIE10 000 / 10 000",
+                  "width": 626,
+                  "scroll": 626,
+                  "font": "12px"
+                },
+                {
+                  "text": "GARDE100 %",
+                  "width": 626,
+                  "scroll": 626,
+                  "font": "12px"
+                },
+                {
+                  "text": "FINALE0 / 75",
+                  "width": 626,
+                  "scroll": 626,
+                  "font": "12px"
+                },
+                {
+                  "text": "",
+                  "width": 626,
+                  "scroll": 626,
+                  "font": "11px"
+                },
+                {
+                  "text": "J2",
+                  "width": 31,
+                  "scroll": 31,
+                  "font": "12px"
+                },
+                {
+                  "text": "VIE10 000 / 10 000",
+                  "width": 626,
+                  "scroll": 626,
+                  "font": "12px"
+                },
+                {
+                  "text": "GARDE100 %",
+                  "width": 626,
+                  "scroll": 626,
+                  "font": "12px"
+                },
+                {
+                  "text": "FINALE0 / 75",
+                  "width": 626,
+                  "scroll": 626,
+                  "font": "12px"
+                },
+                {
+                  "text": "",
+                  "width": 626,
+                  "scroll": 626,
+                  "font": "11px"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "attempt": 3,
+          "report": {
+            "schema": "encore-readability-browser/v1",
+            "version": "0.7.0",
+            "generatedAt": "2026-10-29T17:21:33.585Z",
+            "base": "http://127.0.0.1:4191",
+            "checks": [
+              {
+                "name": "a pending archive search cannot reopen its screen after navigation",
+                "detail": null,
+                "pass": true
+              },
+              {
+                "name": "archive filtering preserves a middle selection and its direction",
+                "detail": null,
+                "pass": true
+              },
+              {
+                "name": "archive filtering preserves focus already moved to the native filter",
+                "detail": null,
+                "pass": true
+              },
+              {
+                "name": "an immediate filter change supersedes the pending search render",
+                "detail": null,
+                "pass": true
+              },
+              {
+                "name": "keyboard activation persists reinforced cues across a reload in profile v1",
+                "detail": null,
+                "pass": true
+              },
+              {
+                "name": "a mirror duel uses stable player labels, distinct shapes and six named gauges",
+                "detail": {
+                  "identities": [
+                    {
+                      "radius": "50%",
+                      "transform": "none"
+                    },
+                    {
+                      "radius": "0px",
+                      "transform": "matrix(0.707107, 0.707107, -0.707107, 0.707107, 0, 0)"
+                    }
+                  ]
+                },
+                "pass": true
+              },
+              {
+                "name": "fullscreen preserves the stage ratio and permits access to larger cue content",
+                "detail": {
+                  "overflow": "auto",
+                  "height": 1000,
+                  "total": 1134
+                },
+                "pass": true
+              }
+            ],
+            "errors": [
+              "AssertionError [ERR_ASSERTION]: a keyboard jump crosses the mirror opponent\n    at file:///dev/shm/encore-next-99d1239274f1/CainOS/tests/combat-readability-browser.mjs:135:10"
+            ],
+            "pass": false,
+            "sourceHashes": {
+              "combat/app.mjs": "1c79332bd8201a11947fffdf6dc8d1e771572cda3886c9daacc054df14b3477c",
+              "combat/session.mjs": "ea8fe4336dc7dd9a6289dad824974e9f9cd83c4df422b0907098e962154ee168",
+              "combat/readability.mjs": "ab4bfca1918f0bb3d9b375fb3e4ce3f41c95867289494b34de368a2f2f1da078",
+              "combat/style.css": "e06f670374134e9a668143ac3d32c91dd27327f759878355fe19cdf73f1cb715",
+              "tests/combat-readability.test.mjs": "a116db3666b0843aa1c2f6f128b9ff18cd55b1ca16de63dd111129aedc92d4de",
+              "tests/combat-readability-browser.mjs": "6f98c8d46c702cf19e768fe713e16377c48aa018060073d3ec353d60ab76ec9e"
+            },
+            "scope": "Real keyboard and pointer UI in desktop / 390 px Chromium; controlled browser clock for debounce and combat timing. A real local mirror duel supplies the low-life and KO states.",
+            "limitations": [
+              "No physical phone or controller.",
+              "Grayscale inspection is an internal visual aid, not a simulation of every color-vision deficiency or a user study.",
+              "No claim of global palette accessibility or screen-reader playability."
+            ],
+            "browser": "156.0.8078.73",
+            "desktopLayout": {
+              "viewport": 1440,
+              "scroll": 1440,
+              "canvas": {
+                "x": 29.796875,
+                "y": 296.875,
+                "width": 1380.40625,
+                "height": 776.46875,
+                "right": 1410.203125,
+                "bottom": 1073.34375
+              },
+              "stage": {
+                "x": 29.796875,
+                "y": 296.875,
+                "width": 1380.40625,
+                "height": 776.46875,
+                "right": 1410.203125,
+                "bottom": 1073.34375
+              },
+              "hud": {
+                "x": 29.796875,
+                "y": 61,
+                "width": 1380.40625,
+                "height": 235.875,
+                "right": 1410.203125,
+                "bottom": 296.875
+              },
+              "text": [
+                {
+                  "text": "J1",
+                  "width": 32,
+                  "scroll": 32,
+                  "font": "12px"
+                },
+                {
+                  "text": "VIE10 000 / 10 000",
+                  "width": 626,
+                  "scroll": 626,
+                  "font": "12px"
+                },
+                {
+                  "text": "GARDE100 %",
+                  "width": 626,
+                  "scroll": 626,
+                  "font": "12px"
+                },
+                {
+                  "text": "FINALE0 / 75",
+                  "width": 626,
+                  "scroll": 626,
+                  "font": "12px"
+                },
+                {
+                  "text": "",
+                  "width": 626,
+                  "scroll": 626,
+                  "font": "11px"
+                },
+                {
+                  "text": "J2",
+                  "width": 31,
+                  "scroll": 31,
+                  "font": "12px"
+                },
+                {
+                  "text": "VIE10 000 / 10 000",
+                  "width": 626,
+                  "scroll": 626,
+                  "font": "12px"
+                },
+                {
+                  "text": "GARDE100 %",
+                  "width": 626,
+                  "scroll": 626,
+                  "font": "12px"
+                },
+                {
+                  "text": "FINALE0 / 75",
+                  "width": 626,
+                  "scroll": 626,
+                  "font": "12px"
+                },
+                {
+                  "text": "",
+                  "width": 626,
+                  "scroll": 626,
+                  "font": "11px"
+                }
+              ]
+            },
+            "fullscreenLayout": {
+              "viewport": 1440,
+              "scroll": 1440,
+              "canvas": {
+                "x": 29.796875,
+                "y": 296.875,
+                "width": 1380.40625,
+                "height": 776.46875,
+                "right": 1410.203125,
+                "bottom": 1073.34375
+              },
+              "stage": {
+                "x": 29.796875,
+                "y": 296.875,
+                "width": 1380.40625,
+                "height": 776.46875,
+                "right": 1410.203125,
+                "bottom": 1073.34375
+              },
+              "hud": {
+                "x": 29.796875,
+                "y": 61,
+                "width": 1380.40625,
+                "height": 235.875,
+                "right": 1410.203125,
+                "bottom": 296.875
+              },
+              "text": [
+                {
+                  "text": "J1",
+                  "width": 32,
+                  "scroll": 32,
+                  "font": "12px"
+                },
+                {
+                  "text": "VIE10 000 / 10 000",
+                  "width": 626,
+                  "scroll": 626,
+                  "font": "12px"
+                },
+                {
+                  "text": "GARDE100 %",
+                  "width": 626,
+                  "scroll": 626,
+                  "font": "12px"
+                },
+                {
+                  "text": "FINALE0 / 75",
+                  "width": 626,
+                  "scroll": 626,
+                  "font": "12px"
+                },
+                {
+                  "text": "",
+                  "width": 626,
+                  "scroll": 626,
+                  "font": "11px"
+                },
+                {
+                  "text": "J2",
+                  "width": 31,
+                  "scroll": 31,
+                  "font": "12px"
+                },
+                {
+                  "text": "VIE10 000 / 10 000",
+                  "width": 626,
+                  "scroll": 626,
+                  "font": "12px"
+                },
+                {
+                  "text": "GARDE100 %",
+                  "width": 626,
+                  "scroll": 626,
+                  "font": "12px"
+                },
+                {
+                  "text": "FINALE0 / 75",
+                  "width": 626,
+                  "scroll": 626,
+                  "font": "12px"
+                },
+                {
+                  "text": "",
+                  "width": 626,
+                  "scroll": 626,
+                  "font": "11px"
+                }
+              ]
+            },
+            "beforeCrossover": {
+              "version": 1,
+              "source": "42279c1c884769873e66bbda0b6fe849bcd2f1a2",
+              "seed": 4236424998,
+              "frame": 204,
+              "phase": "fight",
+              "round": 1,
+              "timerFrames": 5296,
+              "wins": [
+                0,
+                0
+              ],
+              "winner": null,
+              "roundWinner": null,
+              "fighters": [
+                {
+                  "id": "pomni",
+                  "x": 828.4479999999998,
+                  "y": 568,
+                  "vx": 4.928000000000001,
+                  "vy": 0,
+                  "face": 1,
+                  "hp": 10000,
+                  "maxHp": 10000,
+                  "gray": 0,
+                  "guard": 100,
+                  "meter": 0,
+                  "resource": 100,
+                  "state": "walk",
+                  "onGround": true,
+                  "block": false,
+                  "crouch": false,
+                  "hit": 0,
+                  "blockstun": 0,
+                  "cool": 0,
+                  "attack": null,
+                  "buffs": {},
+                  "statuses": {},
+                  "cooldowns": {},
+                  "combo": 0,
+                  "comboStun": 0,
+                  "throwProtect": 0,
+                  "stats": {
+                    "attempts": 0,
+                    "starts": 0,
+                    "activations": 0,
+                    "hits": 0,
+                    "damage": 0,
+                    "parries": 0,
+                    "blocked": 0,
+                    "healed": 0,
+                    "denied": 0
+                  },
+                  "cpuWait": 0,
+                  "cpuGuard": 0
+                },
+                {
+                  "id": "pomni",
+                  "x": 900,
+                  "y": 568,
+                  "vx": 0,
+                  "vy": 0,
+                  "face": -1,
+                  "hp": 10000,
+                  "maxHp": 10000,
+                  "gray": 0,
+                  "guard": 100,
+                  "meter": 0,
+                  "resource": 100,
+                  "state": "idle",
+                  "onGround": true,
+                  "block": false,
+                  "crouch": false,
+                  "hit": 0,
+                  "blockstun": 0,
+                  "cool": 0,
+                  "attack": null,
+                  "buffs": {},
+                  "statuses": {},
+                  "cooldowns": {},
+                  "combo": 0,
+                  "comboStun": 0,
+                  "throwProtect": 0,
+                  "stats": {
+                    "attempts": 0,
+                    "starts": 0,
+                    "activations": 0,
+                    "hits": 0,
+                    "damage": 0,
+                    "parries": 0,
+                    "blocked": 0,
+                    "healed": 0,
+                    "denied": 0
+                  },
+                  "cpuWait": 0,
+                  "cpuGuard": 0
+                }
+              ],
+              "projectiles": [],
+              "traps": [],
+              "metrics": {}
+            },
+            "afterCrossover": {
+              "version": 1,
+              "source": "42279c1c884769873e66bbda0b6fe849bcd2f1a2",
+              "seed": 4236424998,
+              "frame": 269,
+              "phase": "fight",
+              "round": 1,
+              "timerFrames": 5231,
+              "wins": [
+                0,
+                0
+              ],
+              "winner": null,
+              "roundWinner": null,
+              "fighters": [
+                {
+                  "id": "pomni",
+                  "x": 1000.9839999999992,
+                  "y": 568,
+                  "vx": 4.928000000000001,
+                  "vy": 0,
+                  "face": 1,
+                  "hp": 10000,
+                  "maxHp": 10000,
+                  "gray": 0,
+                  "guard": 100,
+                  "meter": 0,
+                  "resource": 100,
+                  "state": "walk",
+                  "onGround": true,
+                  "block": false,
+                  "crouch": false,
+                  "hit": 0,
+                  "blockstun": 0,
+                  "cool": 0,
+                  "attack": null,
+                  "buffs": {},
+                  "statuses": {},
+                  "cooldowns": {},
+                  "combo": 0,
+                  "comboStun": 0,
+                  "throwProtect": 0,
+                  "stats": {
+                    "attempts": 0,
+                    "starts": 0,
+                    "activations": 0,
+                    "hits": 0,
+                    "damage": 0,
+                    "parries": 0,
+                    "blocked": 0,
+                    "healed": 0,
+                    "denied": 0
+                  },
+                  "cpuWait": 0,
+                  "cpuGuard": 0
+                },
+                {
+                  "id": "pomni",
+                  "x": 1047.7839999999992,
+                  "y": 568,
+                  "vx": 0,
+                  "vy": 0,
+                  "face": -1,
+                  "hp": 10000,
+                  "maxHp": 10000,
+                  "gray": 0,
+                  "guard": 100,
+                  "meter": 0,
+                  "resource": 100,
+                  "state": "idle",
+                  "onGround": true,
+                  "block": false,
+                  "crouch": false,
+                  "hit": 0,
+                  "blockstun": 0,
+                  "cool": 0,
+                  "attack": null,
+                  "buffs": {},
+                  "statuses": {},
+                  "cooldowns": {},
+                  "combo": 0,
+                  "comboStun": 0,
+                  "throwProtect": 0,
+                  "stats": {
+                    "attempts": 0,
+                    "starts": 0,
+                    "activations": 0,
+                    "hits": 0,
+                    "damage": 0,
+                    "parries": 0,
+                    "blocked": 0,
+                    "healed": 0,
+                    "denied": 0
+                  },
+                  "cpuWait": 0,
+                  "cpuGuard": 0
+                }
+              ],
+              "projectiles": [],
+              "traps": [],
+              "metrics": {
+                "jump": 1
+              }
+            }
+          }
+        }
+      ],
+      "nodeLog": "✔ reinforced cues are opt-in and old version-one profiles retain their progress (2.751542ms)\n✔ the cue setting survives save and profile import without changing progress or bindings (0.791911ms)\n✔ critical-life text uses the actual quarter-health boundary without rounding or false KO (2.204593ms)\n✔ all fourteen finale thresholds follow the authored kit rather than a fixed 100 percent (9.183154ms)\n✔ a full finale gauge still names a missing resource or cooldown instead of claiming readiness (0.623235ms)\n✔ readouts describe guard fragility without inventing a guard-break event and never mutate actors (0.681413ms)\n✔ circle J1 and diamond J2 follow their slots across a mirror-match crossover (1.616411ms)\n✔ nearby and high-jumping badges remain bounded on separate rows (1.135581ms)\nℹ tests 8\nℹ suites 0\nℹ pass 8\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 112.526875\n"
+    },
+    "executedOfflineReports": {
+      "browserBefore": {
+        "base": "http://127.0.0.1:33855",
+        "checks": [
+          {
+            "name": "Custom keys reject conflicts and reserved shortcuts, allow alternatives, and persist",
+            "detail": "J1 light = F; labels follow AZERTY/QWERTY",
+            "pass": true
+          },
+          {
+            "name": "Original procedural music starts from a gesture with an independent mute",
+            "detail": "Effects off; music on; bounded voices",
+            "pass": true
+          },
+          {
+            "name": "Remapped attack reaches the engine and move list while the old key stays inactive",
+            "detail": "",
+            "pass": true
+          },
+          {
+            "name": "Live combo label clears after recovery while the best result combo remains",
+            "detail": "",
+            "pass": true
+          },
+          {
+            "name": "Pause stops simulation and releases audio voices; resume restores the stage theme",
+            "detail": "",
+            "pass": true
+          },
+          {
+            "name": "The standalone downloads all 44 sprite sheets",
+            "detail": "52,167,739 bytes; explicit UI action and completion state",
+            "pass": true
+          }
+        ],
+        "errors": [],
+        "failure": "Expected values to be strictly equal:\n\ntrue !== false\n"
+      },
+      "browserAfter": {
+        "base": "http://127.0.0.1:36729",
+        "checks": [
+          {
+            "name": "Custom keys reject conflicts and reserved shortcuts, allow alternatives, and persist",
+            "detail": "J1 light = F; labels follow AZERTY/QWERTY",
+            "pass": true
+          },
+          {
+            "name": "Original procedural music starts from a gesture with an independent mute",
+            "detail": "Effects off; music on; bounded voices",
+            "pass": true
+          },
+          {
+            "name": "Remapped attack reaches the engine and move list while the old key stays inactive",
+            "detail": "",
+            "pass": true
+          },
+          {
+            "name": "Live combo label clears after recovery while the best result combo remains",
+            "detail": "",
+            "pass": true
+          },
+          {
+            "name": "Pause stops simulation and releases audio voices; resume restores the stage theme",
+            "detail": "",
+            "pass": true
+          },
+          {
+            "name": "The standalone downloads all 44 sprite sheets",
+            "detail": "52,167,739 bytes; explicit UI action and completion state",
+            "pass": true
+          },
+          {
+            "name": "An evicted art pack followed by a failed download is never announced as ready offline",
+            "detail": "43/44; real CacheStorage eviction and HTTP 503; profile preserved",
+            "pass": true
+          },
+          {
+            "name": "Retrying the incomplete pack downloads its missing artwork and restores the ready state",
+            "detail": "",
+            "pass": true
+          },
+          {
+            "name": "A cold page reload and a different fighter/stage remain playable offline",
+            "detail": "Network disabled; profile preserved; real keyboard movement",
+            "pass": true
+          },
+          {
+            "name": "A waiting service worker updates only through the UI and preserves the unchanged art pack",
+            "detail": "No automatic reload; all 44 images and the profile survive activation",
+            "pass": true
+          },
+          {
+            "name": "The offline worker is limited to /combat/ and leaves other application documents uncontrolled",
+            "detail": "",
+            "pass": true
+          },
+          {
+            "name": "Clearing downloaded illustrations preserves custom keys and all profile data",
+            "detail": "",
+            "pass": true
+          },
+          {
+            "name": "The expanded settings and key mapper fit a 390-pixel viewport",
+            "detail": "",
+            "pass": true
+          }
+        ],
+        "errors": []
+      },
+      "nodeLog": "✔ unsupported or insecure contexts do not start offline initialization (2.331415ms)\n✔ concurrent init calls share one attempt and use the active worker directly (2.099866ms)\n✔ a first installation becomes ready only after its worker is activated (1.111146ms)\n✔ an abandoned first installation reports a retryable error and removes its listeners (2.239946ms)\n✔ a registration with a redundant worker already present fails without waiting (0.398121ms)\n✔ an initially empty registration waits for updatefound and can activate normally (0.620425ms)\n✔ both synchronous registration denial and promise rejection can be retried (0.699144ms)\n✔ a stalled installation times out and a late activation cannot change the failed state (0.767897ms)\n✔ a late register result after timeout cannot overwrite a successful retry (1.033859ms)\n✔ the initialization deadline also closes a silent status message channel (1.319419ms)\n✔ status failures close ports and clear busy before an explicit retry (0.772364ms)\n✔ a failed replacement worker leaves the existing active worker ready (0.374234ms)\n✔ future updates are observed once and are never activated automatically (0.561517ms)\n✔ init during an art download does not clear its busy state or launch another registration (0.382366ms)\n✔ a rejected activation removes its reload listener and can be explicitly retried (1.882397ms)\n✔ a silent activation or missing controller handover times out without arming a late reload (1.263104ms)\n✔ concurrent activation requests share one operation and only the requested controller reloads once (0.580255ms)\n✔ an update without a waiting worker or during pack preparation starts no activation (0.426233ms)\n✔ an incomplete preparation invalidates an evicted complete pack and retry restores its actual status (0.487625ms)\n✔ a preparation failure before fresh progress cannot claim the old pack is still complete (0.302566ms)\nℹ tests 20\nℹ suites 0\nℹ pass 20\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 99.450299\n",
+      "originalReproductionBeforeLog": "{\"case\":\"failed_update\",\"listeners\":1,\"reloads\":1,\"state\":{\"supported\":true,\"ready\":true,\"busy\":false,\"cached\":0,\"total\":42,\"bytes\":47345031,\"complete\":false,\"update\":false,\"installable\":false,\"error\":\"\",\"initError\":\"\"}}\n{\"case\":\"failed_reprepare\",\"state\":{\"supported\":true,\"ready\":true,\"busy\":false,\"cached\":3,\"total\":42,\"bytes\":47345031,\"complete\":true,\"update\":false,\"installable\":false,\"error\":\"Art request failed\",\"initError\":\"\"}}\n✖ failed update removes the reload listener and a later controller event leaves play untouched (4.654056ms)\n✖ failed reprepare after eviction cannot continue to claim a complete art pack (1.119658ms)\nℹ tests 2\nℹ suites 0\nℹ pass 0\nℹ fail 2\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 67.646964\n\n✖ failing tests:\n\ntest at ../dev/shm/encore-next-99d1239274f1/offline-review-repro.mjs:68:1\n✖ failed update removes the reload listener and a later controller event leaves play untouched (4.654056ms)\n  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n  \n  1 !== 0\n  \n      at file:///dev/shm/encore-next-99d1239274f1/offline-review-repro.mjs:78:12\n      at async withBrowser (file:///dev/shm/encore-next-99d1239274f1/offline-review-repro.mjs:63:9)\n      at async Test.run (node:internal/test_runner/test:1409:7)\n      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {\n    generatedMessage: true,\n    code: 'ERR_ASSERTION',\n    actual: 1,\n    expected: 0,\n    operator: 'strictEqual',\n    diff: 'simple'\n  }\n\ntest at ../dev/shm/encore-next-99d1239274f1/offline-review-repro.mjs:82:1\n✖ failed reprepare after eviction cannot continue to claim a complete art pack (1.119658ms)\n  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n  \n  true !== false\n  \n      at file:///dev/shm/encore-next-99d1239274f1/offline-review-repro.mjs:91:10\n      at async withBrowser (file:///dev/shm/encore-next-99d1239274f1/offline-review-repro.mjs:63:9)\n      at async Test.run (node:internal/test_runner/test:1409:7)\n      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {\n    generatedMessage: true,\n    code: 'ERR_ASSERTION',\n    actual: true,\n    expected: false,\n    operator: 'strictEqual',\n    diff: 'simple'\n  }\n",
+      "originalReproductionAfterLog": "{\"case\":\"failed_update\",\"listeners\":0,\"reloads\":0,\"state\":{\"supported\":true,\"ready\":true,\"busy\":false,\"cached\":0,\"total\":42,\"bytes\":47345031,\"complete\":false,\"update\":false,\"applyingUpdate\":false,\"installable\":false,\"error\":\"Activation refused\",\"initError\":\"\"}}\n{\"case\":\"failed_reprepare\",\"state\":{\"supported\":true,\"ready\":true,\"busy\":false,\"cached\":3,\"total\":42,\"bytes\":47345031,\"complete\":false,\"update\":false,\"applyingUpdate\":false,\"installable\":false,\"error\":\"Art request failed\",\"initError\":\"\"}}\n✔ failed update removes the reload listener and a later controller event leaves play untouched (4.516138ms)\n✔ failed reprepare after eviction cannot continue to claim a complete art pack (1.266139ms)\nℹ tests 2\nℹ suites 0\nℹ pass 2\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 67.929724\n",
+      "reproductionScript": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { OfflineGame } from 'file:///dev/shm/encore-next-99d1239274f1/CainOS/combat/offline.mjs';\n\n// A controllable browser boundary exercises actual init/request cleanup and races.\nasync function withBrowser(options, run) {\n  const names = ['navigator', 'window', 'MessageChannel', 'setTimeout', 'clearTimeout'];\n  const originals = new Map(names.map(name => [name, Object.getOwnPropertyDescriptor(globalThis, name)]));\n  class Events {\n    listeners = new Map();\n    addEventListener(type, handler) { if (!this.listeners.has(type)) this.listeners.set(type, new Set()); this.listeners.get(type).add(handler); }\n    removeEventListener(type, handler) { this.listeners.get(type)?.delete(handler); }\n    emit(type) { for (const handler of [...(this.listeners.get(type) || [])]) if (this.listeners.get(type).has(handler)) handler(); }\n    count(type) { return this.listeners.get(type)?.size || 0; }\n  }\n  const status = { cached: 0, total: 42, bytes: 47345031, complete: false };\n  class Worker extends Events {\n    constructor(state = 'activated') { super(); this.state = state; this.messages = []; this.respond = port => port.postMessage({ ok: true, result: status }); }\n    change(state) { this.state = state; this.emit('statechange'); }\n    postMessage(message, [port]) { this.messages.push(message.type); this.respond(port, message); }\n  }\n  class Registration extends Events {\n    constructor(active = null, installing = null) { super(); this.active = active; this.installing = installing; this.waiting = null; }\n  }\n  const channels = [], timers = new Map(); let nextTimer = 0, clock = 0;\n  class Channel {\n    constructor() {\n      const makePort = () => ({ closed: false, onmessage: null, close() { this.closed = true; } });\n      this.port1 = makePort(); this.port2 = makePort();\n      this.port2.postMessage = data => queueMicrotask(() => { if (!this.port1.closed) this.port1.onmessage?.({ data }); });\n      channels.push(this);\n    }\n  }\n  const service = new Events();\n  service.registration = new Registration(new Worker()); service.calls = [];\n  service.register = (url, registrationOptions) => {\n    service.calls.push({ url, options: registrationOptions });\n    return service.registerImpl ? service.registerImpl() : Promise.resolve(service.registration);\n  };\n  Object.defineProperty(service, 'ready', { get() { throw new Error('Global ready must not be awaited'); } });\n  const window = new Events(); window.isSecureContext = !options.insecure;\n  const values = {\n    navigator: options.unsupported ? {} : { serviceWorker: service }, window,\n    MessageChannel: Channel,\n    setTimeout: (handler, delay) => { const id = ++nextTimer; timers.set(id, { handler, due: clock + delay }); return id; },\n    clearTimeout: id => timers.delete(id),\n  };\n  for (const [name, value] of Object.entries(values)) Object.defineProperty(globalThis, name, { configurable: true, writable: true, value });\n  const flush = async () => { for (let i = 0; i < 20; i++) await Promise.resolve(); };\n  const tick = async milliseconds => {\n    const target = clock + milliseconds;\n    for (;;) {\n      const next = [...timers].filter(([, timer]) => timer.due <= target).sort((a, b) => a[1].due - b[1].due)[0];\n      if (!next) break;\n      clock = next[1].due; timers.delete(next[0]); next[1].handler(); await flush();\n    }\n    clock = target; await flush();\n  };\n  const released = () => {\n    assert.equal(timers.size, 0, 'all operation timers are cleared');\n    assert.ok(channels.every(channel => channel.port1.closed && channel.port2.closed), 'all message ports are closed');\n  };\n  try { await run({ service, Worker, Registration, channels, timers, status, flush, tick, released }); }\n  finally { for (const [name, descriptor] of originals) { if (descriptor) Object.defineProperty(globalThis, name, descriptor); else delete globalThis[name]; } }\n}\n\n\ntest('failed update removes the reload listener and a later controller event leaves play untouched', async () => withBrowser({}, async ({ service, Worker, released }) => {\n  const previous=Object.getOwnPropertyDescriptor(globalThis,'location');let reloads=0;\n  Object.defineProperty(globalThis,'location',{configurable:true,value:{reload(){reloads++;}}});\n  try {\n    const game=new OfflineGame();await game.init();\n    const worker=new Worker('installed');service.registration.waiting=worker;\n    worker.respond=port=>port.postMessage({ok:false,error:'Activation refused'});\n    await assert.rejects(game.applyUpdate(),/Activation refused/);\n    const listeners=service.count('controllerchange');service.emit('controllerchange');\n    console.log(JSON.stringify({case:'failed_update',listeners,reloads,state:game.getState()}));\n    assert.equal(listeners,0);assert.equal(reloads,0);released();\n  } finally {if(previous)Object.defineProperty(globalThis,'location',previous);else delete globalThis.location;}\n}));\n\ntest('failed reprepare after eviction cannot continue to claim a complete art pack', async () => withBrowser({}, async ({ service, status, released }) => {\n  service.registration.active.respond=port=>port.postMessage({ok:true,result:{...status,cached:42,complete:true}});\n  const game=new OfflineGame();await game.init();\n  service.registration.active.respond=port=>{\n    port.postMessage({progress:true,cached:3,total:42});\n    port.postMessage({ok:false,error:'Art request failed'});\n  };\n  await assert.rejects(game.prepare(),/Art request failed/);\n  console.log(JSON.stringify({case:'failed_reprepare',state:game.getState()}));\n  assert.equal(game.getState().complete,false);released();\n}));\n"
+    },
+    "verifiedArtifacts": [
+      {
+        "path": "audit-combat/readability-local-20261029/validation.json",
+        "bytes": 7231,
+        "sha256": "dced9887cfad7500df27e96b60f08cd55c31133c5349b2c7aac142f1d554dfe3"
+      },
+      {
+        "path": "audit-combat/offline-local-20261029/validation.json",
+        "bytes": 4825,
+        "sha256": "03be4739f3e9a49eaeb504718daa430544c31ad4a1c7c27c458c2111d55bdcc9"
+      },
+      {
+        "path": "audit-combat/readability-local-20261029/archive-debounce-before.json",
+        "bytes": 446,
+        "sha256": "5a914b1a3cd611760ed483c7826321cf1b1ec62bb2479bb91224aa50234ac356"
+      },
+      {
+        "path": "audit-combat/readability-local-20261029/node-final.log",
+        "bytes": 919,
+        "sha256": "e9643c98fe18e69c2c3976c479bd251d85ba754f380f88805a6b3e2d6f0be4e6"
+      },
+      {
+        "path": "audit-combat/readability-local-20261029/browser-final-report.json",
+        "bytes": 11487,
+        "sha256": "aa165604cead20d82ec596d4b9cd92c1fcd35ee17df09dcbc5684ff35dafe1c9"
+      },
+      {
+        "path": "audit-combat/readability-local-20261029/attempt-1-report.json",
+        "bytes": 4368,
+        "sha256": "30dad29ecb23cc2ea858012dbacd9a3aab92dd6de55ce47e460c2072c7d54a04"
+      },
+      {
+        "path": "audit-combat/readability-local-20261029/attempt-2-report.json",
+        "bytes": 6290,
+        "sha256": "32d2725a0d3dfc77ac1164e1f215bd41be87e2eb975d64f4e2e4eb1fcf09f833"
+      },
+      {
+        "path": "audit-combat/readability-local-20261029/attempt-3-report.json",
+        "bytes": 10628,
+        "sha256": "f75a015479fca3726fd1cea6f71fdaac6fcbef9dde4341fad7895c3d5ff97b55"
+      },
+      {
+        "path": "audit-combat/readability-local-20261029/critical-life-desktop.png",
+        "bytes": 330070,
+        "sha256": "b53e527df5f726e9f7c2769876c30e1afe5c6d76bf284683eb8c32374a74c9d8"
+      },
+      {
+        "path": "audit-combat/readability-local-20261029/default-desktop.png",
+        "bytes": 401987,
+        "sha256": "806527d9fd05f886caba656b3cce939e953e00a22af41ac8d28d0207072dba25"
+      },
+      {
+        "path": "audit-combat/readability-local-20261029/fullscreen-viewport.png",
+        "bytes": 356711,
+        "sha256": "0a4e34e5ddb64ee33a5fd2c274771612452cbfe62e3650a7780f5313c57602b7"
+      },
+      {
+        "path": "audit-combat/readability-local-20261029/mirror-390px-grayscale.png",
+        "bytes": 44589,
+        "sha256": "a671c31bb3403300767d48b9339198842b1b2c78320da43bd6cabcfd53b64e09"
+      },
+      {
+        "path": "audit-combat/readability-local-20261029/mirror-390px.png",
+        "bytes": 67578,
+        "sha256": "01d0841e908bb9de198855f02da2c500db47d068b50927e6805799d993e8efad"
+      },
+      {
+        "path": "audit-combat/readability-local-20261029/mirror-desktop-viewport.png",
+        "bytes": 392638,
+        "sha256": "65b82e8db6c721ad57b6490b78a54880cd9dfa14d1af311f7486b83a4fcdadd4"
+      },
+      {
+        "path": "audit-combat/readability-local-20261029/mirror-desktop.png",
+        "bytes": 349626,
+        "sha256": "ef450ac0faa37a9edff26c106fa318c7d26aab9f1fbac4f1d46fc2b406b633be"
+      },
+      {
+        "path": "audit-combat/offline-local-20261029/original-repro.mjs",
+        "bytes": 5627,
+        "sha256": "ce7b1b78700e939274de49745f7e547625513344c314d33420fdd948c986d223"
+      },
+      {
+        "path": "audit-combat/offline-local-20261029/node-before.log",
+        "bytes": 2256,
+        "sha256": "47f7b7cc7c3f2c99ebbfe9536cb7138aff080305f19ee0598953a1817f15816e"
+      },
+      {
+        "path": "audit-combat/offline-local-20261029/node-after.log",
+        "bytes": 2051,
+        "sha256": "77e2af8ded96d5b767f852cf874e8698e9c5d21b914955b7309d34f6aeb85992"
+      },
+      {
+        "path": "audit-combat/offline-local-20261029/original-repro-after.log",
+        "bytes": 819,
+        "sha256": "95460d7243507c439e0aa1ff00a8cdda3ffc9ee8a8598bfdec5dfd6d441610b0"
+      },
+      {
+        "path": "audit-combat/offline-local-20261029/browser-before.log",
+        "bytes": 1020,
+        "sha256": "46d262112a08e102fd9ed875c5edeb02a57c941d4f74911b75819c48f175d68b"
+      },
+      {
+        "path": "audit-combat/offline-local-20261029/browser-before-report.json",
+        "bytes": 1138,
+        "sha256": "acab43eef4c0e5ee530eef54edfac907c42372d0a9b0deff8b184140cf2d84d9"
+      },
+      {
+        "path": "audit-combat/offline-local-20261029/browser-before-failure.png",
+        "bytes": 373412,
+        "sha256": "38bcfb18af71a7759920323690294ac49ceec84bcff1f5376c5dfab5963ef655"
+      },
+      {
+        "path": "audit-combat/offline-local-20261029/browser-after.log",
+        "bytes": 1457,
+        "sha256": "9822a5e2752751f8af11d11ddfe0139be0d3263e565f4b2bd887e66907ed70fb"
+      },
+      {
+        "path": "audit-combat/offline-local-20261029/browser-after-report.json",
+        "bytes": 2310,
+        "sha256": "806fd43cd187b11a668f9975c8f5f36659b477810d69d46213768d7d265a3590"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://learn.microsoft.com/en-us/xbox/accessibility/xbox-accessibility-guidelines/103",
+      "consulted": "2026-10-29",
+      "scope": "Formes et libellés complètent la couleur ; les simulations visuelles ne remplacent pas les essais utilisateurs."
+    }
+  ],
+  "limitations": [
+    "PRE-12 reste Partiel : cette passe traite les joueurs et jauges, pas une palette globale ou toutes les perceptions des couleurs.",
+    "Tests Chromium automatisés ; téléphones, manettes et technologies d’assistance physiques non testés.",
+    "Aucun dessin, contenu de combat, équilibrage ou règle de replay modifié."
+  ],
+  "ciArtifact": {
+    "artifactId": 12922698873,
+    "runUrl": "https://github.com/darknigthmare/CainOS/actions/runs/40928776174",
+    "artifactBytes": 184798913,
+    "artifactSHA256": "1573c1860cdfe1251fdbcd3bdf1db4d08299895c66f90bf5aca7343be511c097",
+    "verified": true
+  },
+  "additionalCompleteLocalCampaign": {
+    "sourceCommit": "243e87b21b1e9eb8711e2012faf837f5850dae9a",
+    "completedAt": "2026-10-29T18:35:19.434Z",
+    "totals": {
+      "nodeSuites": 27,
+      "nodeTests": 370,
+      "nodePassed": 370,
+      "browserSuites": 16,
+      "browserChecks": 275,
+      "browserPassed": 275
+    },
+    "pass": true,
+    "runtimeUnchangedDuringTests": true,
+    "evidence": "audit-combat/local-readability-complete/ci/evidence-0.7.0.json",
+    "sha256": "1dc2198aa1c4227424daed1d635b844768306f2bbcce26360962fd605dff6ad6",
+    "counting": "Independent confirmation, not added to the canonical CI totals."
+  }
+}

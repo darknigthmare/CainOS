@@ -232,19 +232,56 @@ and Pillow are not part of the browser game.
 
 ## Verification and tracker
 
-The [current gamedev campaign](docs/combat-qa-evidence-gamedev-followup-2026-10-29.json)
+The [current guided-development campaign](docs/combat-qa-evidence-readability-2026-10-29.json)
 records the tested commit, actual Node/Chromium results and runtime hashes. The tracker is authored
 and checked in the primary spreadsheet runtime. CI packages the standalone only
 when that reviewed tracker matches the current game and test hashes; it never
 rewrites the workbook.
 
-### Current audio and profile campaign — 29 October 2026
+### Current readability and offline campaign — 29 October 2026
+
+The complete [GitHub Actions campaign](https://github.com/darknigthmare/CainOS/actions/runs/40928776174)
+passed **370 Node tests in 27 suites** and **275 Chromium checks in 16 suites**
+on source commit `243e87b21b1e9eb8711e2012faf837f5850dae9a`. All 37 runtime
+files and all test sources stayed unchanged. This single complete campaign supplies
+the **645 current cases**. A separate full local run passed the same 370/275 cases
+on identical sources; it is retained as independent confirmation, not added to
+the current totals.
+
+The [targeted proof](docs/readability-validation-2026-10-29.json) records optional
+player cues, archive focus/navigation, bounded offline activation and honest cache
+completion. It includes before/after reproductions, the scoped visual review and
+the three intermediate UI test attempts. Its groups overlap the complete campaign.
+
+The current tracker contains **105 features, 693 production tasks, 85 scenarios
+and 2,240 QA rows**. It keeps **1,591 protected rows unchanged**, reuses the IDs of
+615 existing cases, adds 30 new cases and four overlapping targeted objectives.
+QA statuses are 2,236 passed, zero failed, three not executed and one awaiting
+verification. Production has 398 implemented, 281 partial and 14 planned tasks.
+PRE-12 remains partial: player and gauge cues do not certify the global palette
+or replace validation with affected users and physical devices.
+
+All **39 formulas** were recalculated and checked through export/reimport, with
+**10 sheets and 9 native tables** retained. The independent comparison covers
+39,742 original cells: 625 expected data updates, with no unplanned value/formula
+changes or original style changes. A second isolated generation adds no rows,
+changes no tracked cells and preserves the tracking JSON byte for byte. Its XLSX
+has identical values, formulas, resolved styles and table metadata; binary identity
+of reserialized XLSX files is not claimed.
+
+See the [delivery review](docs/COMBAT_READABILITY_2026-10-29.md),
+[workbook verification](docs/combat-workbook-verification.json) and
+[independent preservation review](docs/combat-workbook-readability-review-2026-10-29.json).
+The previous complete campaigns below remain historical records.
+
+### Historical audio and profile campaign — 29 October 2026
 
 The complete [GitHub Actions campaign](https://github.com/darknigthmare/CainOS/actions/runs/40898388692)
 passed **356 Node tests in 26 suites** and **259 Chromium checks in 15 suites**
 on source commit `d1160465a6c980733df20a207b22a4c7a49e1240`.
-The runtime and test hashes match the reviewed local checkout. This single complete
-campaign supplies every current case; local and remote results are not combined.
+The runtime and test hashes matched the checkout reviewed for that delivery.
+This single complete campaign supplied its case rows; local and remote results
+were not combined.
 
 The [targeted validation](docs/gamedev-followup-validation-2026-10-29.json)
 records 40 audio unit cases, 27 audio browser checks, 63 profile/progression unit
@@ -259,11 +296,11 @@ are preserved in `retryHistory`, outside the final totals. Their exact cause
 is not established. An earlier intermediate-code attempt was also stopped
 after reproducing the stale-backup rollback, which is fixed in the tested commit.
 
-The current tracker contains **105 features, 689 production tasks, 85 scenarios
-and 2,206 QA rows**. It retains all 1,587 earlier QA rows and adds the 615 current
-campaign cases plus four overlapping targeted checks. Its statuses remain explicit:
+The tracker accompanying that campaign contained **105 features, 689 production tasks, 85 scenarios
+and 2,206 QA rows**. It retained all 1,587 earlier QA rows and added the 615 cases
+from that campaign plus four overlapping targeted checks. Its recorded statuses were:
 2,202 passed, three not executed and one awaiting verification; the QA row count
-is not an independent-test total. Production has 394 implemented, 281 partial
+is not an independent-test total. Production had 394 implemented, 281 partial
 and 14 planned tasks. The audio feature remains partial while physical mixing
 and voice work are still open.
 
@@ -271,8 +308,8 @@ All **39 formulas** were recalculated and checked without errors. Export and
 reimport preserve **10 sheets, 9 native tables**, existing styles, row identities
 and notes. Longer entries receive documented row-height adjustments.
 See the [follow-up workbook review](docs/COMBAT_GAMEDEV_FOLLOWUP_2026-10-29.md)
-and [workbook verification](docs/combat-workbook-verification.json) for the
-reviewed tracking data, preserved history and remaining manual work.
+for that delivery’s reviewed tracking data, preserved history and remaining
+manual work.
 
 ### Historical gamedev input campaign — 29 October 2026
 
