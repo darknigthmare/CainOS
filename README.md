@@ -167,15 +167,15 @@ files against the sprite catalog, frame regions, native transparency and animati
 registrations. The asset audit is technical evidence; canonical comparison,
 silhouette review and dedicated combat drawings remain separate production work.
 
-The [current validation record](docs/gamedev-validation-2026-10-29.json),
+The [initial input validation record](docs/gamedev-validation-2026-10-29.json),
 [asset report](docs/combat-asset-audit-gamedev-2026-10-29.json) and
-[fresh combat campaign](docs/combat-qa-evidence-gamedev-2026-10-29.json) describe
+[initial gamedev campaign](docs/combat-qa-evidence-gamedev-2026-10-29.json) describe
 this pass. The original 0.7 evidence remains a historical record. The reviewed
 workbook identifies the exact evidence used for delivery.
 
 ## Profile recovery and distinct confirmations — 29 October 2026
 
-The next guided pass applies `save-systems` and `audio-design` to the shared game.
+This guided follow-up applies `save-systems` and `audio-design` to the shared game.
 The first successful profile save and later saves attempt to keep a complete
 backup, after the primary write. A present but unreadable primary can recover
 from that valid copy without rewriting storage during load. A persistent notice
@@ -212,15 +212,51 @@ and Pillow are not part of the browser game.
 
 ## Verification and tracker
 
-The [current gamedev campaign](docs/combat-qa-evidence-gamedev-2026-10-29.json)
+The [current gamedev campaign](docs/combat-qa-evidence-gamedev-followup-2026-10-29.json)
 records the tested commit, actual Node/Chromium results and runtime hashes. The tracker is authored
 and checked in the primary spreadsheet runtime. CI packages the standalone only
 when that reviewed tracker matches the current game and test hashes; it never
 rewrites the workbook.
 
-### Current gamedev campaign — 29 October 2026
+### Current audio and profile campaign — 29 October 2026
 
-The current campaign passed **340 Node tests in 25 suites** and
+The complete [GitHub Actions campaign](https://github.com/darknigthmare/CainOS/actions/runs/40898388692)
+passed **356 Node tests in 26 suites** and **259 Chromium checks in 15 suites**
+on source commit `d1160465a6c980733df20a207b22a4c7a49e1240`.
+The runtime and test hashes match the reviewed local checkout. This single complete
+campaign supplies every current case; local and remote results are not combined.
+
+The [targeted validation](docs/gamedev-followup-validation-2026-10-29.json)
+records 40 audio unit cases, 27 audio browser checks, 63 profile/progression unit
+cases and 19 recovery browser checks. These groups are included in the 356/259
+totals. They cover distinct finite sound motifs, unsuccessful writes, explicit
+deletion, startup recovery, preserved live progress, export and both game entries.
+
+An independent local attempt encountered three timeouts (CainOS iframe, gallery
+navigation and the progression process) and was stopped after the complete Actions
+run succeeded on identical source and test hashes. Its partial report and failures
+are preserved in `retryHistory`, outside the final totals. Their exact cause
+is not established. An earlier intermediate-code attempt was also stopped
+after reproducing the stale-backup rollback, which is fixed in the tested commit.
+
+The current tracker contains **105 features, 689 production tasks, 85 scenarios
+and 2,206 QA rows**. It retains all 1,587 earlier QA rows and adds the 615 current
+campaign cases plus four overlapping targeted checks. Its statuses remain explicit:
+2,202 passed, three not executed and one awaiting verification; the QA row count
+is not an independent-test total. Production has 394 implemented, 281 partial
+and 14 planned tasks. The audio feature remains partial while physical mixing
+and voice work are still open.
+
+All **39 formulas** were recalculated and checked without errors. Export and
+reimport preserve **10 sheets, 9 native tables**, existing styles, row identities
+and notes. Longer entries receive documented row-height adjustments.
+See the [follow-up workbook review](docs/COMBAT_GAMEDEV_FOLLOWUP_2026-10-29.md)
+and [workbook verification](docs/combat-workbook-verification.json) for the
+reviewed tracking data, preserved history and remaining manual work.
+
+### Historical gamedev input campaign — 29 October 2026
+
+The initial gamedev campaign passed **340 Node tests in 25 suites** and
 **240 Chromium checks in 14 suites**, on source commit
 `6a80d1e5b25e74aa1b6012ff6b37e83cf25dd492`. Its 11 input unit cases and six browser input
 checks are included in those totals. Runtime and test source hashes stayed unchanged.
@@ -231,10 +267,10 @@ The technical asset audit passed for **44 PNGs, 235 unique source regions,
 56 animation cells and 77 native-alpha references**, with zero violations.
 The selected-guide audit verified **35 original files and 40 local links**.
 
-The current tracker contains **10 sheets, 9 native tables,
+The tracker for that input campaign contained **10 sheets, 9 native tables,
 105 features, 686 production tasks, 85 scenarios and 1,587 QA rows**.
 Those rows preserve 1,003 historical/review entries, record the
-580 current full-campaign cases and add 4 targeted checks. The targeted checks
+580 cases from that full campaign and add 4 targeted checks. The targeted checks
 partly overlap the full campaign; QA row counts are not independent test totals.
 All **39 formulas** were recalculated and checked with zero formula errors.
 Native tables, existing row identities, notes and layout were preserved through export

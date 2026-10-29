@@ -1,0 +1,890 @@
+{
+  "schema": "encore-gamedev-followup-validation/v1",
+  "date": "2026-10-29",
+  "generatedAt": "2026-10-29T15:40:39.223Z",
+  "baseCommit": "f9f5356207317d2b0a861dd9142d023e2ee306f0",
+  "sourceCommit": "d1160465a6c980733df20a207b22a4c7a49e1240",
+  "sourceHashes": {
+    "combat/app.mjs": "2701f9f53f092517ba891007320b583aaef5ec08516aa687f53b3e465f8d77ad",
+    "combat/audio-ambiences.mjs": "a9215db919126923cc412bfd0f1febf7c92aea89f95defeeecea2cea31c8b086",
+    "combat/audio.mjs": "7c2a4dd52f2d19a1cef5165bec222ce8d16850cce9da2ffef90c5e33e40133b1",
+    "combat/bindings.mjs": "8352b4a92afb27a85220b21feb5b7f53b34a2c4eabfedff2f400259329988969",
+    "combat/costume-fidelity.mjs": "a346156fc0f1107a72a2d6a8b331aeba3122f631a95941a2e9b0a6b9d36dd3d6",
+    "combat/costume-refinements.mjs": "117abb88f261c71c6e03dd43a344ef1babb0b34d9f8107ac3b5898f2d3682de3",
+    "combat/data.mjs": "3fa8fd8d3eb71c0336c3df0f31b43723841e8cbedf2554e516c8332c92fa3a9f",
+    "combat/engine.mjs": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
+    "combat/fidelity.mjs": "2968ab0feace983b9c59e9da9e1c1b4c4817bff395a4af5053a8c96be0f61a1f",
+    "combat/finisher-catalog.mjs": "43b36230680673ba44d75f370fa0b7ab77be0a90f1c08d282be830b1969750f7",
+    "combat/finisher-gallery.mjs": "df89b9a91fc20af8f47743cfe34475743a17ea6d6310ab71f73e27464c9c6944",
+    "combat/finishers.mjs": "ac52ef944daa984d77d64838554d0e135d9a710fde2c6e1bb452e7ac31502636",
+    "combat/icon-192.png": "f300df8f24a549311c8caf99dc7d0dab6e4efcbf37caf3f324f9f8bc4239e3db",
+    "combat/icon-512.png": "23113f2291e8e80c5f2a072db82f72d4eda134e183f771fde2e72b442cb80851",
+    "combat/icon.svg": "9306b192eaaa246307b0d0d13262ca21f0a913ad123eb1bc1c1adf94890ec19b",
+    "combat/index.html": "9df0816414b14ae8a52d18e4230170329570733f170e6564001bfa0162d4d921",
+    "combat/input.mjs": "8968e7b7fb90e684bedc37130213fe4bd4d6af09e169bede58f0bb63e347104a",
+    "combat/manifest.webmanifest": "3a7f78eb5c4cc3f7c90784a8bcba425dc91fdc1e1c401fc26b3a81f12d4534aa",
+    "combat/menu-navigation.mjs": "01a70de0683eb8237ca93bc9da0f79a360b963cd44064460fa22c0c84fcd2614",
+    "combat/offline-manifest.mjs": "bdeb5de0dfc29f1507a42dcaa59d8d4a3d2d81f3fdc6954079271d9ce92dfecf",
+    "combat/offline.mjs": "704b87db56c26365c770c46df33a0ebfa6c2639d1b97df8183794dfb8417e4c9",
+    "combat/progression.mjs": "a5a3d697b034146464d0c315a2a5dc5891557caf1a58ad1d8dd8551a5f585f15",
+    "combat/render-finishers.mjs": "918dc6b0700ea86e174b1450b2dc207cc5a7b4656314cc6e6c617bfca5ac8d7d",
+    "combat/render-poses.mjs": "44a17b62cd7304f1a81b1454e4e8b902f8712d9b0a462f92b09626e8fe554268",
+    "combat/render-presentation.mjs": "370469edb54fe87cfa4f649984cf8c6dfb77419b018dbb1d8fedc432b9fe607e",
+    "combat/render-sequences.mjs": "1ce5fab94146618b77d46b7b16feb2af2b52eb912a992488fa5fd2e4e3b4b9af",
+    "combat/render-stage-motion.mjs": "e22d518a1245be13379a019159b4c8f24535e19a704508286d5b1ed38ced9b77",
+    "combat/render-stage-scenery.mjs": "52c298e861af7873b2f94ece106e0f708ebd5573d0f900f02c45c2cecd14c528",
+    "combat/render.mjs": "b3d71717a00934e3fd25441a6ce57f01c03bf1466fc5ba707e1b16f8999c237b",
+    "combat/session.mjs": "85aa628ddd0d5631ae48e9e36873bc9f3e4ffe24e6cfa971d251358656ccf73a",
+    "combat/sprite-catalog.mjs": "41ad2ff416eef0d9426dd8ec17218a35b0c6a016a6dbf73e8e96a1f86d1a2172",
+    "combat/stories.mjs": "190053639de11b83a1f1279174fb948afe1db28a2ccb8f4a453c1be10aa72aac",
+    "combat/story-presentation.mjs": "90306f54215c2f4045ff191496d3f9ed871e6982fe1bff06757514834d0cc7c8",
+    "combat/style.css": "175e4f23b04c34123d05007409b3b185eae1c2f430393e8ae6d23b801f310e68",
+    "combat/sw.js": "0893718df1437a22b716a27ca5fafb7e9fc18ed1fbd47f64eb43062e1199eeab",
+    "combat/training.mjs": "b36aaaea76cdb3b6e20ef95c2f52ae2be04ecf5f4421cf16f80dca97f44cfece",
+    "tests/combat-audio.test.mjs": "bdd4999efc89d3ba7237e6d7f7eefacfb0212fa7434a0f21e43203a0063db291",
+    "tests/combat-audio-ambiences.test.mjs": "c89074c1bfa1ef2636d0c7db15f0aca769c6904d9e3580d9448bead3793d464a",
+    "tests/combat-audio-cues.test.mjs": "1b240cc155982c773be0863a3e9c54ee76ed0df607e0940a6687a9711e5f5929",
+    "tests/combat-audio-ambiences-browser.mjs": "444b09bdb04896ff99ffd064241a80c28f901174ebe13a61b26d82418ab1068e",
+    "tests/combat-session-backup.test.mjs": "ceea8de2ea6e0bd02e8feb945a6d6aa1e1c48567d0838bda351eb308b6f5f96a",
+    "tests/combat-session.test.mjs": "4c32d25ac554845abbe01bde7426b2d20416eb8580c7b5b760b041d807fe9592",
+    "tests/combat-progression.test.mjs": "cbd27b27316563868585d25a5e1e7613ef4b0a15f42a63b2032efeb334a3f7f8",
+    "tests/combat-profile-backup-browser.mjs": "6e93bc5a622b3b572759b89bed39f97727597bda50e6333b7733bc30d1f02b5f",
+    "tests/combat-profile-recovery-browser.mjs": "78aeb3805cd11363e9624909efc07cfe4e0f9f0c79001c9262ac9f41012332a9",
+    "scripts/update-combat-workbook-gamedev-followup.mjs": "267bb9d008ca00b8c6105e7cb398050308df0a2583d7dec3967eedfce3edca53",
+    "scripts/combat-ci-suites.mjs": "1f0552b832195e8e274edd4cfdfc7fb89d4e3cbf10a018625c4ddbf408e68a48",
+    "scripts/combat-release-evidence.mjs": "f5fedbd9b6aae5fe399753451fd7f0951acac886371052ffe98daf0fde62e229",
+    "scripts/package-combat-release.mjs": "8aa591e8282629724b28f1adf52948945e97156eddb60dd241e19fb610d4b067",
+    "docs/gamedev/manifest.json": "1a651ea1752dd4ba9e41f4f2defc3a53e174cd8149dffd6d6a1cb6efa53e172d",
+    "docs/DIGITAL_CIRCUS_ENCORE.md": "9974968c180e852b1d5bc94dfe62a1dd744a51a3cef23f7d6f1f46a859a6866a"
+  },
+  "checks": [
+    {
+      "id": "audio-node",
+      "name": "Motifs sonores distincts et cycle de vie",
+      "status": "passed",
+      "command": "node scripts/run-combat-ci.mjs",
+      "evidence": "tests/combat-audio.test.mjs : 14/14 ; audit-combat/ci/tests_combat-audio.test.mjs.log (SHA-256 99091ecd14d979723f97c19e518071ee0b7befb6c7f02f2276cf5e7d6e41991e)\ntests/combat-audio-ambiences.test.mjs : 20/20 ; audit-combat/ci/tests_combat-audio-ambiences.test.mjs.log (SHA-256 00bdae85e202ef53f16c03fa5fc1849a85bf8979f1021e97cf7a3cc7722f614b)\ntests/combat-audio-cues.test.mjs : 6/6 ; audit-combat/ci/tests_combat-audio-cues.test.mjs.log (SHA-256 09d462c6aa26ba8f4009992c3ba1bac0ad996a3e0418b97fa34b7d44e23c11d8)",
+      "expected": "40/40 tests Node réussis dans 3 suite(s), inclus dans la campagne complète.",
+      "limitations": "Cas automatisés ; données de progression initiales explicites de test.",
+      "reports": [
+        {
+          "file": "tests/combat-audio.test.mjs",
+          "count": 14,
+          "sourceSha256": "bdd4999efc89d3ba7237e6d7f7eefacfb0212fa7434a0f21e43203a0063db291",
+          "log": "audit-combat/ci/tests_combat-audio.test.mjs.log",
+          "logSHA256": "99091ecd14d979723f97c19e518071ee0b7befb6c7f02f2276cf5e7d6e41991e"
+        },
+        {
+          "file": "tests/combat-audio-ambiences.test.mjs",
+          "count": 20,
+          "sourceSha256": "c89074c1bfa1ef2636d0c7db15f0aca769c6904d9e3580d9448bead3793d464a",
+          "log": "audit-combat/ci/tests_combat-audio-ambiences.test.mjs.log",
+          "logSHA256": "00bdae85e202ef53f16c03fa5fc1849a85bf8979f1021e97cf7a3cc7722f614b"
+        },
+        {
+          "file": "tests/combat-audio-cues.test.mjs",
+          "count": 6,
+          "sourceSha256": "1b240cc155982c773be0863a3e9c54ee76ed0df607e0940a6687a9711e5f5929",
+          "log": "audit-combat/ci/tests_combat-audio-cues.test.mjs.log",
+          "logSHA256": "09d462c6aa26ba8f4009992c3ba1bac0ad996a3e0418b97fa34b7d44e23c11d8"
+        }
+      ],
+      "count": 40
+    },
+    {
+      "id": "audio-browser",
+      "name": "Validation audio publique et PCM natif",
+      "status": "passed",
+      "command": "node scripts/run-combat-ci.mjs",
+      "evidence": "tests/combat-audio-ambiences-browser.mjs : 27/27 ; audit-combat/ci/tests_combat-audio-ambiences-browser.mjs.log (SHA-256 b23a13270b834d5e4ddf6200aec16127fced9a3923bc9a40e851e0be64bf237a)",
+      "expected": "27/27 contrôles Chromium réussis dans 1 suite(s), inclus dans la campagne complète.",
+      "limitations": "Chromium automatisé, stockage et périphériques simulés ; aucune écoute ou manipulation matérielle physique.",
+      "reports": [
+        {
+          "file": "tests/combat-audio-ambiences-browser.mjs",
+          "count": 27,
+          "sourceSha256": "444b09bdb04896ff99ffd064241a80c28f901174ebe13a61b26d82418ab1068e",
+          "log": "audit-combat/ci/tests_combat-audio-ambiences-browser.mjs.log",
+          "logSHA256": "b23a13270b834d5e4ddf6200aec16127fced9a3923bc9a40e851e0be64bf237a",
+          "reportFile": "audit-combat/audio-ambiences-0.7.0/browser-report.json",
+          "reportSHA256": "127faf3f25c0b009231d4fbbc3ebb1e066cdd5ef3b204272356274e4e51776d4"
+        }
+      ],
+      "count": 27
+    },
+    {
+      "id": "save-node",
+      "name": "Copies de secours, quotas et compatibilité du profil",
+      "status": "passed",
+      "command": "node scripts/run-combat-ci.mjs",
+      "evidence": "tests/combat-session-backup.test.mjs : 11/11 ; audit-combat/ci/tests_combat-session-backup.test.mjs.log (SHA-256 012d2be4cb39d265c35b13238e50221afad427e2bb4257c4a09c9a8bb5578c8c)\ntests/combat-session.test.mjs : 33/33 ; audit-combat/ci/tests_combat-session.test.mjs.log (SHA-256 182b6b722f6047ebe651356966c0cace4f4dccbc572ff000613c25cc35ef2ea2)\ntests/combat-progression.test.mjs : 19/19 ; audit-combat/ci/tests_combat-progression.test.mjs.log (SHA-256 5daa0a42d2c849465bb20dc3520e0abd89e2b62851e013b2a687998116966c0c)",
+      "expected": "63/63 tests Node réussis dans 3 suite(s), inclus dans la campagne complète.",
+      "limitations": "Cas automatisés ; données de progression initiales explicites de test.",
+      "reports": [
+        {
+          "file": "tests/combat-session-backup.test.mjs",
+          "count": 11,
+          "sourceSha256": "ceea8de2ea6e0bd02e8feb945a6d6aa1e1c48567d0838bda351eb308b6f5f96a",
+          "log": "audit-combat/ci/tests_combat-session-backup.test.mjs.log",
+          "logSHA256": "012d2be4cb39d265c35b13238e50221afad427e2bb4257c4a09c9a8bb5578c8c"
+        },
+        {
+          "file": "tests/combat-session.test.mjs",
+          "count": 33,
+          "sourceSha256": "4c32d25ac554845abbe01bde7426b2d20416eb8580c7b5b760b041d807fe9592",
+          "log": "audit-combat/ci/tests_combat-session.test.mjs.log",
+          "logSHA256": "182b6b722f6047ebe651356966c0cace4f4dccbc572ff000613c25cc35ef2ea2"
+        },
+        {
+          "file": "tests/combat-progression.test.mjs",
+          "count": 19,
+          "sourceSha256": "cbd27b27316563868585d25a5e1e7613ef4b0a15f42a63b2032efeb334a3f7f8",
+          "log": "audit-combat/ci/tests_combat-progression.test.mjs.log",
+          "logSHA256": "5daa0a42d2c849465bb20dc3520e0abd89e2b62851e013b2a687998116966c0c"
+        }
+      ],
+      "count": 63
+    },
+    {
+      "id": "save-browser",
+      "name": "Récupération, session conservée, export, récompense et deux distributions",
+      "status": "passed",
+      "command": "node scripts/run-combat-ci.mjs",
+      "evidence": "tests/combat-profile-backup-browser.mjs : 14/14 ; audit-combat/ci/tests_combat-profile-backup-browser.mjs.log (SHA-256 43ece3a9a1407bb6f5dac4858b24b93a059e0e619d09352cd2ec459ac26368b7)\ntests/combat-profile-recovery-browser.mjs : 5/5 ; audit-combat/ci/tests_combat-profile-recovery-browser.mjs.log (SHA-256 c7fb0d5866ae4f88b93b31fd38c099cae8da3a3f721575f0d70888839f3d4051)",
+      "expected": "19/19 contrôles Chromium réussis dans 2 suite(s), inclus dans la campagne complète.",
+      "limitations": "Chromium automatisé, stockage et périphériques simulés ; aucune écoute ou manipulation matérielle physique.",
+      "reports": [
+        {
+          "file": "tests/combat-profile-backup-browser.mjs",
+          "count": 14,
+          "sourceSha256": "6e93bc5a622b3b572759b89bed39f97727597bda50e6333b7733bc30d1f02b5f",
+          "log": "audit-combat/ci/tests_combat-profile-backup-browser.mjs.log",
+          "logSHA256": "43ece3a9a1407bb6f5dac4858b24b93a059e0e619d09352cd2ec459ac26368b7",
+          "reportFile": "audit-combat/profile-backup-browser-report.json",
+          "reportSHA256": "b2a1666f1de0dd1494df50d9c33131e2699bc292cf5a236aaded5fe000b92f53"
+        },
+        {
+          "file": "tests/combat-profile-recovery-browser.mjs",
+          "count": 5,
+          "sourceSha256": "78aeb3805cd11363e9624909efc07cfe4e0f9f0c79001c9262ac9f41012332a9",
+          "log": "audit-combat/ci/tests_combat-profile-recovery-browser.mjs.log",
+          "logSHA256": "c7fb0d5866ae4f88b93b31fd38c099cae8da3a3f721575f0d70888839f3d4051",
+          "reportFile": "audit-combat/profile-recovery-browser-report.json",
+          "reportSHA256": "ede05f55c6a66218f9992e0c5eba58e484456a319d924820a52dab5f1a21c878"
+        }
+      ],
+      "count": 19
+    }
+  ],
+  "scope": "Application des guides audio-design et save-systems : deux motifs distincts, copie de secours et maintien de la progression en mémoire.",
+  "currentCampaign": {
+    "evidence": "docs/combat-qa-evidence-gamedev-followup-2026-10-29.json",
+    "totals": {
+      "nodeSuites": 26,
+      "nodeTests": 356,
+      "nodePassed": 356,
+      "browserSuites": 15,
+      "browserChecks": 259,
+      "browserPassed": 259
+    },
+    "collection": "Campagne GitHub Actions complète unique du commit final : 356 tests Node et 259 contrôles Chromium. Ses empreintes de sources et de tests correspondent à la copie locale. La tentative locale du même commit a été interrompue après trois délais d’attente ; elle est conservée dans retryHistory et ne contribue pas aux totaux. La tentative intermédiaire cf76473, arrêtée avant correction du secours obsolète, est également exclue.",
+    "runUrl": "https://github.com/darknigthmare/CainOS/actions/runs/40898388692",
+    "provenance": {
+      "strategy": "Single complete GitHub Actions campaign; no local/remote case aggregation.",
+      "runUrl": "https://github.com/darknigthmare/CainOS/actions/runs/40898388692",
+      "runId": 40898388692,
+      "jobId": 123533896777,
+      "artifactId": 12910072172,
+      "artifactSHA256": "f65749118e089474fbfb6350b92dec8c0021fd59c9506a978d1d00f9ab68fcb4",
+      "originalEvidence": "audit-combat/actions-d116/ci/evidence-0.7.0.json",
+      "originalEvidenceSHA256": "b26cde2d86e983fb8d7f4be2bc6d7dbc9ffcfde3756013771553279ebdfedb37",
+      "sourceAndTestHashesMatchedLocalCheckout": true,
+      "adoptedAt": "2026-10-29T15:40:04.404204+00:00"
+    },
+    "localAttemptHistory": [
+      {
+        "kind": "independent-local-attempt-interrupted",
+        "sourceCommit": "d1160465a6c980733df20a207b22a4c7a49e1240",
+        "generatedAt": "2026-10-29T15:07:51.527Z",
+        "stoppedAt": "2026-10-29T15:40:04.404204+00:00",
+        "evidence": "audit-combat/local-d116-interrupted/evidence-0.7.0.json",
+        "evidenceSHA256": "ef5c29c27ae9715abcb1173e486eec32b6fc08e5287bf21848b38450cd6a25d8",
+        "log": "audit-combat/local-d116-interrupted/ci-followup.log",
+        "logSHA256": "b5e66ee60970577c59b5140e800cce9dcbc3501ae67d099bd7d43203c1d1b563",
+        "nodeSuitesCompleted": 26,
+        "browserSuitesCompleted": 9,
+        "failedSuites": [
+          {
+            "file": "tests/combat-browser.mjs",
+            "label": "tests/combat-browser.mjs",
+            "exitCode": 1,
+            "timedOut": false,
+            "completedChecks": 9,
+            "failure": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#circus-combat-frame').contentFrame().locator('[data-action=\"start\"]')\u001b[22m\n\u001b[2m    - locator resolved to <button class=\"primary\" data-action=\"start\">LEVER LE RIDEAU ↗</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n",
+            "sourceSha256": "9e097294b92440b4c1ccc2007987f441a42a8a645c0619b16b21fcdbdde6ce57",
+            "log": "audit-combat/local-d116-interrupted/ci/tests_combat-browser.mjs.log",
+            "logSHA256": "d6877f19d6ac68c5dda59f2bd19d87b241929a0f49f336210173cf1dc2ea23f5"
+          },
+          {
+            "file": "tests/combat-finishers-browser.mjs",
+            "label": "tests/combat-finishers-browser.mjs",
+            "exitCode": 1,
+            "timedOut": false,
+            "completedChecks": 0,
+            "failure": "page.goto: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:38305/combat/\", waiting until \"networkidle\"\u001b[22m\n",
+            "sourceSha256": "c6736ec9762477ffe1429356530fb7691c888df69d0ea545bc45bfd570357489",
+            "log": "audit-combat/local-d116-interrupted/ci/tests_combat-finishers-browser.mjs.log",
+            "logSHA256": "b49d777bc1da1abe41a571630cb78b25373089dac7e0ec9d6987dc4925130872"
+          },
+          {
+            "file": "tests/combat-progression-browser.mjs",
+            "label": "tests/combat-progression-browser.mjs",
+            "exitCode": 1,
+            "timedOut": true,
+            "completedChecks": 0,
+            "failure": "Missing or invalid report: ENOENT: no such file or directory, open 'audit-combat/progression-browser-report.json'",
+            "sourceSha256": "a8470b99a0e5b8c1b631fca253340a46b87d37d4180bcb55c6b42ed86b1bd902",
+            "log": "audit-combat/local-d116-interrupted/ci/tests_combat-progression-browser.mjs.log",
+            "logSHA256": "fdb32eefbbaaa01befe6dd693139382c80a6504d3008311d088b33d22a4b5e84"
+          }
+        ],
+        "reason": "Local attempt interrupted after the independent full GitHub Actions run passed all 356 Node tests and 259 browser checks on identical source/test hashes. Three local timeouts are retained; their exact infrastructure cause is not established. No partial or failed local cases enter final totals."
+      }
+    ]
+  },
+  "beforeAfter": {
+    "audio": {
+      "command": [
+        "node",
+        "--test",
+        "tests/combat-audio-ambiences.test.mjs",
+        "tests/combat-audio-cues.test.mjs"
+      ],
+      "exitCode": 1,
+      "head": "f9f5356207317d2b0a861dd9142d023e2ee306f0",
+      "sourceHashes": {
+        "combat/audio.mjs": "f1f4a5c6070704e9d107a1b16093b226a3f2385e816d136e22e9ef8502489524",
+        "tests/combat-audio-ambiences.test.mjs": "f906969e411771532b83e7093e61d30b407965272981c8b41679ed14bcd526c3",
+        "tests/combat-audio-cues.test.mjs": "1b240cc155982c773be0863a3e9c54ee76ed0df607e0940a6687a9711e5f5929"
+      },
+      "nodeVersion": "v24.22.1",
+      "totals": {
+        "tests": 25,
+        "pass": 21,
+        "fail": 4
+      },
+      "logSHA256": "986782dcfb1749a95379aa2cd5e55e82c2eb636c75da6d23ea98633186b83f01",
+      "interpretation": "Quatre premières nouvelles régressions exécutées avant correction ; le cinquième nouveau test de diagnostics a été ajouté ensuite et appartient à la campagne finale."
+    },
+    "backup": {
+      "scope": "Complete profile fallback on corrupt primary storage; version-one profile schema and replay rules unchanged.",
+      "baseCommit": "f9f5356207317d2b0a861dd9142d023e2ee306f0",
+      "baselinePolicy": "The same new backup suite ran in an isolated module copy against session.mjs from baseCommit. Other modules use the shared source; no live files were reverted.",
+      "tests": {
+        "before": {
+          "command": [
+            "node",
+            "--test",
+            "--test-reporter=tap",
+            "tests/combat-session-backup.test.mjs"
+          ],
+          "exitCode": 1,
+          "tests": 11,
+          "suites": 0,
+          "pass": 2,
+          "fail": 9,
+          "cancelled": 0,
+          "skipped": 0,
+          "log": "audit-combat/profile-backup-before.tap",
+          "sha256": "fecc2a33d1393b98033f907756f533bba30a9f2de67b8dc2d28e638de9d30bf3"
+        },
+        "after": {
+          "command": [
+            "node",
+            "--test",
+            "--test-reporter=tap",
+            "tests/combat-session-backup.test.mjs",
+            "tests/combat-session.test.mjs",
+            "tests/combat-progression.test.mjs"
+          ],
+          "exitCode": 0,
+          "tests": 63,
+          "suites": 0,
+          "pass": 63,
+          "fail": 0,
+          "cancelled": 0,
+          "skipped": 0,
+          "log": "audit-combat/profile-backup-after.tap",
+          "sha256": "c2a8aadfbd13976d24c5a2325013ff2610342310f5f65a4db9333db3d7bd3171"
+        }
+      },
+      "sourceHashes": {
+        "combat/session.mjs": "85aa628ddd0d5631ae48e9e36873bc9f3e4ffe24e6cfa971d251358656ccf73a",
+        "tests/combat-session.test.mjs": "4c32d25ac554845abbe01bde7426b2d20416eb8580c7b5b760b041d807fe9592",
+        "tests/combat-session-backup.test.mjs": "ceea8de2ea6e0bd02e8feb945a6d6aa1e1c48567d0838bda351eb308b6f5f96a"
+      },
+      "limitations": [
+        "Existing rewards are migration fixtures, not newly earned matches.",
+        "Backup copies are best effort and can remain older when quota refuses the duplicate.",
+        "Only null/undefined marks an absent primary; an empty stored string is recoverable corruption. Reads do not rewrite either record.",
+        "Cross-tab and entry-path browser checks are owned by the parent integration task."
+      ],
+      "beforeTotals": {
+        "tests": 11,
+        "pass": 2,
+        "fail": 9
+      },
+      "afterTotals": {
+        "tests": 63,
+        "pass": 63,
+        "fail": 0
+      },
+      "beforeLogSHA256": "fecc2a33d1393b98033f907756f533bba30a9f2de67b8dc2d28e638de9d30bf3",
+      "afterLogSHA256": "c2a8aadfbd13976d24c5a2325013ff2610342310f5f65a4db9333db3d7bd3171",
+      "interpretation": "Les neuf échecs des onze nouveaux critères avant correction ne représentent pas neuf défauts indépendants."
+    },
+    "staleLiveProfile": {
+      "before": {
+        "fixturePolicy": "Explicit already-saved profiles, not gameplay-earned progress. Separate browser context does not touch another test session.",
+        "browser": "156.0.8078.73",
+        "startedAt": "2026-10-29T15:03:05.660Z",
+        "sourceHashes": {
+          "combat/app.mjs": "e14b9e1afc3bedb0ba11530e05b05a4b3f2995631a5517eb3adf17c5eb0ecd27",
+          "combat/session.mjs": "85aa628ddd0d5631ae48e9e36873bc9f3e4ffe24e6cfa971d251358656ccf73a"
+        },
+        "before": {
+          "format": "circus-encore-profile",
+          "version": 1,
+          "settings": {
+            "layout": "azerty",
+            "difficulty": "normal",
+            "seconds": 90,
+            "rounds": 2,
+            "volume": 0.25,
+            "sound": true,
+            "reducedMotion": false,
+            "hitboxes": false,
+            "music": false,
+            "ambience": true,
+            "finishers": true,
+            "ambienceVolume": 0.35,
+            "musicVolume": 0.2,
+            "touch": "auto",
+            "bindings": [
+              {
+                "left": [
+                  "KeyA"
+                ],
+                "right": [
+                  "KeyD"
+                ],
+                "down": [
+                  "KeyS"
+                ],
+                "jump": [
+                  "KeyW",
+                  "Space"
+                ],
+                "guard": [
+                  "ShiftLeft"
+                ],
+                "dash": [
+                  "KeyE"
+                ],
+                "light": [
+                  "KeyJ"
+                ],
+                "heavy": [
+                  "KeyK"
+                ],
+                "throw": [
+                  "KeyU"
+                ],
+                "special": [
+                  "KeyI"
+                ],
+                "super": [
+                  "KeyO"
+                ],
+                "utility": [
+                  "KeyL"
+                ]
+              },
+              {
+                "left": [
+                  "ArrowLeft"
+                ],
+                "right": [
+                  "ArrowRight"
+                ],
+                "down": [
+                  "ArrowDown"
+                ],
+                "jump": [
+                  "ArrowUp"
+                ],
+                "guard": [
+                  "ShiftRight",
+                  "Numpad0"
+                ],
+                "dash": [
+                  "ControlRight",
+                  "NumpadDecimal"
+                ],
+                "light": [
+                  "KeyB",
+                  "Numpad1"
+                ],
+                "heavy": [
+                  "KeyN",
+                  "Numpad2"
+                ],
+                "throw": [
+                  "KeyV",
+                  "Numpad4"
+                ],
+                "special": [
+                  "KeyM",
+                  "Numpad5"
+                ],
+                "super": [
+                  "Comma",
+                  "Numpad6"
+                ],
+                "utility": [
+                  "Period",
+                  "Numpad3"
+                ]
+              }
+            ]
+          },
+          "stats": {
+            "matches": 18,
+            "wins": 11,
+            "losses": 7,
+            "bestSurvival": 4,
+            "damage": 45003
+          },
+          "challenges": [
+            "combo",
+            "super"
+          ],
+          "medals": [],
+          "stories": [],
+          "program": null,
+          "history": []
+        },
+        "after": {
+          "format": "circus-encore-profile",
+          "version": 1,
+          "settings": {
+            "layout": "azerty",
+            "difficulty": "normal",
+            "seconds": 90,
+            "rounds": 2,
+            "volume": 0.25,
+            "sound": true,
+            "reducedMotion": false,
+            "hitboxes": false,
+            "music": false,
+            "ambience": true,
+            "finishers": true,
+            "ambienceVolume": 0.35,
+            "musicVolume": 0.2,
+            "touch": "auto",
+            "bindings": [
+              {
+                "left": [
+                  "KeyA"
+                ],
+                "right": [
+                  "KeyD"
+                ],
+                "down": [
+                  "KeyS"
+                ],
+                "jump": [
+                  "KeyW",
+                  "Space"
+                ],
+                "guard": [
+                  "ShiftLeft"
+                ],
+                "dash": [
+                  "KeyE"
+                ],
+                "light": [
+                  "KeyJ"
+                ],
+                "heavy": [
+                  "KeyK"
+                ],
+                "throw": [
+                  "KeyU"
+                ],
+                "special": [
+                  "KeyI"
+                ],
+                "super": [
+                  "KeyO"
+                ],
+                "utility": [
+                  "KeyL"
+                ]
+              },
+              {
+                "left": [
+                  "ArrowLeft"
+                ],
+                "right": [
+                  "ArrowRight"
+                ],
+                "down": [
+                  "ArrowDown"
+                ],
+                "jump": [
+                  "ArrowUp"
+                ],
+                "guard": [
+                  "ShiftRight",
+                  "Numpad0"
+                ],
+                "dash": [
+                  "ControlRight",
+                  "NumpadDecimal"
+                ],
+                "light": [
+                  "KeyB",
+                  "Numpad1"
+                ],
+                "heavy": [
+                  "KeyN",
+                  "Numpad2"
+                ],
+                "throw": [
+                  "KeyV",
+                  "Numpad4"
+                ],
+                "special": [
+                  "KeyM",
+                  "Numpad5"
+                ],
+                "super": [
+                  "Comma",
+                  "Numpad6"
+                ],
+                "utility": [
+                  "Period",
+                  "Numpad3"
+                ]
+              }
+            ]
+          },
+          "stats": {
+            "matches": 17,
+            "wins": 10,
+            "losses": 7,
+            "bestSurvival": 4,
+            "damage": 45003
+          },
+          "challenges": [
+            "combo"
+          ],
+          "medals": [],
+          "stories": [],
+          "program": null,
+          "history": []
+        },
+        "observedStorageEvents": [
+          "{damaged primary after a refused backup update"
+        ],
+        "notice": "TON PROFIL A ÉTÉ RÉCUPÉRÉUne copie de secours est disponible.La sauvegarde principale est illisible. Cette copie valide peut être plus ancienne : vérifie ton palmarès et ton parcours avant de la conserver.Conserver ce profilExporter une copie",
+        "rawRecords": [
+          "{damaged primary after a refused backup update",
+          "{\"format\":\"circus-encore-profile\",\"version\":1,\"settings\":{\"layout\":\"azerty\",\"difficulty\":\"normal\",\"seconds\":90,\"rounds\":2,\"volume\":0.25,\"sound\":true,\"reducedMotion\":false,\"hitboxes\":false,\"music\":false,\"ambience\":true,\"finishers\":true,\"ambienceVolume\":0.35,\"musicVolume\":0.2,\"touch\":\"auto\",\"bindings\":[{\"left\":[\"KeyA\"],\"right\":[\"KeyD\"],\"down\":[\"KeyS\"],\"jump\":[\"KeyW\",\"Space\"],\"guard\":[\"ShiftLeft\"],\"dash\":[\"KeyE\"],\"light\":[\"KeyJ\"],\"heavy\":[\"KeyK\"],\"throw\":[\"KeyU\"],\"special\":[\"KeyI\"],\"super\":[\"KeyO\"],\"utility\":[\"KeyL\"]},{\"left\":[\"ArrowLeft\"],\"right\":[\"ArrowRight\"],\"down\":[\"ArrowDown\"],\"jump\":[\"ArrowUp\"],\"guard\":[\"ShiftRight\",\"Numpad0\"],\"dash\":[\"ControlRight\",\"NumpadDecimal\"],\"light\":[\"KeyB\",\"Numpad1\"],\"heavy\":[\"KeyN\",\"Numpad2\"],\"throw\":[\"KeyV\",\"Numpad4\"],\"special\":[\"KeyM\",\"Numpad5\"],\"super\":[\"Comma\",\"Numpad6\"],\"utility\":[\"Period\",\"Numpad3\"]}]},\"stats\":{\"matches\":17,\"wins\":10,\"losses\":7,\"bestSurvival\":4,\"damage\":45003},\"challenges\":[\"combo\"],\"medals\":[],\"stories\":[],\"program\":null,\"history\":[]}"
+        ],
+        "reproduced": true,
+        "finishedAt": "2026-10-29T15:03:08.390Z"
+      },
+      "after": {
+        "fixturePolicy": "Explicit already-saved profiles, not gameplay-earned progress. Same reproduction as profile-stale-memory-repro.json; a separate browser context does not touch another test session.",
+        "browser": "156.0.8078.73",
+        "startedAt": "2026-10-29T15:05:46.800Z",
+        "sourceHashes": {
+          "combat/app.mjs": "2701f9f53f092517ba891007320b583aaef5ec08516aa687f53b3e465f8d77ad",
+          "combat/session.mjs": "85aa628ddd0d5631ae48e9e36873bc9f3e4ffe24e6cfa971d251358656ccf73a"
+        },
+        "pass": true,
+        "before": {
+          "format": "circus-encore-profile",
+          "version": 1,
+          "settings": {
+            "layout": "azerty",
+            "difficulty": "normal",
+            "seconds": 90,
+            "rounds": 2,
+            "volume": 0.25,
+            "sound": true,
+            "reducedMotion": false,
+            "hitboxes": false,
+            "music": false,
+            "ambience": true,
+            "finishers": true,
+            "ambienceVolume": 0.35,
+            "musicVolume": 0.2,
+            "touch": "auto",
+            "bindings": [
+              {
+                "left": [
+                  "KeyA"
+                ],
+                "right": [
+                  "KeyD"
+                ],
+                "down": [
+                  "KeyS"
+                ],
+                "jump": [
+                  "KeyW",
+                  "Space"
+                ],
+                "guard": [
+                  "ShiftLeft"
+                ],
+                "dash": [
+                  "KeyE"
+                ],
+                "light": [
+                  "KeyJ"
+                ],
+                "heavy": [
+                  "KeyK"
+                ],
+                "throw": [
+                  "KeyU"
+                ],
+                "special": [
+                  "KeyI"
+                ],
+                "super": [
+                  "KeyO"
+                ],
+                "utility": [
+                  "KeyL"
+                ]
+              },
+              {
+                "left": [
+                  "ArrowLeft"
+                ],
+                "right": [
+                  "ArrowRight"
+                ],
+                "down": [
+                  "ArrowDown"
+                ],
+                "jump": [
+                  "ArrowUp"
+                ],
+                "guard": [
+                  "ShiftRight",
+                  "Numpad0"
+                ],
+                "dash": [
+                  "ControlRight",
+                  "NumpadDecimal"
+                ],
+                "light": [
+                  "KeyB",
+                  "Numpad1"
+                ],
+                "heavy": [
+                  "KeyN",
+                  "Numpad2"
+                ],
+                "throw": [
+                  "KeyV",
+                  "Numpad4"
+                ],
+                "special": [
+                  "KeyM",
+                  "Numpad5"
+                ],
+                "super": [
+                  "Comma",
+                  "Numpad6"
+                ],
+                "utility": [
+                  "Period",
+                  "Numpad3"
+                ]
+              }
+            ]
+          },
+          "stats": {
+            "matches": 18,
+            "wins": 11,
+            "losses": 7,
+            "bestSurvival": 4,
+            "damage": 45003
+          },
+          "challenges": [
+            "combo",
+            "super"
+          ],
+          "medals": [],
+          "stories": [],
+          "program": null,
+          "history": []
+        },
+        "after": {
+          "format": "circus-encore-profile",
+          "version": 1,
+          "settings": {
+            "layout": "azerty",
+            "difficulty": "normal",
+            "seconds": 90,
+            "rounds": 2,
+            "volume": 0.25,
+            "sound": true,
+            "reducedMotion": false,
+            "hitboxes": false,
+            "music": false,
+            "ambience": true,
+            "finishers": true,
+            "ambienceVolume": 0.35,
+            "musicVolume": 0.2,
+            "touch": "auto",
+            "bindings": [
+              {
+                "left": [
+                  "KeyA"
+                ],
+                "right": [
+                  "KeyD"
+                ],
+                "down": [
+                  "KeyS"
+                ],
+                "jump": [
+                  "KeyW",
+                  "Space"
+                ],
+                "guard": [
+                  "ShiftLeft"
+                ],
+                "dash": [
+                  "KeyE"
+                ],
+                "light": [
+                  "KeyJ"
+                ],
+                "heavy": [
+                  "KeyK"
+                ],
+                "throw": [
+                  "KeyU"
+                ],
+                "special": [
+                  "KeyI"
+                ],
+                "super": [
+                  "KeyO"
+                ],
+                "utility": [
+                  "KeyL"
+                ]
+              },
+              {
+                "left": [
+                  "ArrowLeft"
+                ],
+                "right": [
+                  "ArrowRight"
+                ],
+                "down": [
+                  "ArrowDown"
+                ],
+                "jump": [
+                  "ArrowUp"
+                ],
+                "guard": [
+                  "ShiftRight",
+                  "Numpad0"
+                ],
+                "dash": [
+                  "ControlRight",
+                  "NumpadDecimal"
+                ],
+                "light": [
+                  "KeyB",
+                  "Numpad1"
+                ],
+                "heavy": [
+                  "KeyN",
+                  "Numpad2"
+                ],
+                "throw": [
+                  "KeyV",
+                  "Numpad4"
+                ],
+                "special": [
+                  "KeyM",
+                  "Numpad5"
+                ],
+                "super": [
+                  "Comma",
+                  "Numpad6"
+                ],
+                "utility": [
+                  "Period",
+                  "Numpad3"
+                ]
+              }
+            ]
+          },
+          "stats": {
+            "matches": 18,
+            "wins": 11,
+            "losses": 7,
+            "bestSurvival": 4,
+            "damage": 45003
+          },
+          "challenges": [
+            "combo",
+            "super"
+          ],
+          "medals": [],
+          "stories": [],
+          "program": null,
+          "history": []
+        },
+        "observedStorageEvents": [
+          "{damaged primary after a refused backup update"
+        ],
+        "notice": "TA SESSION EST CONSERVÉETon profil reste disponible.La sauvegarde locale est illisible ou inaccessible. Le profil de cette session reste en mémoire. Exporte-le ou conserve-le pour protéger ta progression.Conserver ce profilExporter une copie",
+        "noticeSource": "memory",
+        "rawRecords": [
+          "{damaged primary after a refused backup update",
+          "{\"format\":\"circus-encore-profile\",\"version\":1,\"settings\":{\"layout\":\"azerty\",\"difficulty\":\"normal\",\"seconds\":90,\"rounds\":2,\"volume\":0.25,\"sound\":true,\"reducedMotion\":false,\"hitboxes\":false,\"music\":false,\"ambience\":true,\"finishers\":true,\"ambienceVolume\":0.35,\"musicVolume\":0.2,\"touch\":\"auto\",\"bindings\":[{\"left\":[\"KeyA\"],\"right\":[\"KeyD\"],\"down\":[\"KeyS\"],\"jump\":[\"KeyW\",\"Space\"],\"guard\":[\"ShiftLeft\"],\"dash\":[\"KeyE\"],\"light\":[\"KeyJ\"],\"heavy\":[\"KeyK\"],\"throw\":[\"KeyU\"],\"special\":[\"KeyI\"],\"super\":[\"KeyO\"],\"utility\":[\"KeyL\"]},{\"left\":[\"ArrowLeft\"],\"right\":[\"ArrowRight\"],\"down\":[\"ArrowDown\"],\"jump\":[\"ArrowUp\"],\"guard\":[\"ShiftRight\",\"Numpad0\"],\"dash\":[\"ControlRight\",\"NumpadDecimal\"],\"light\":[\"KeyB\",\"Numpad1\"],\"heavy\":[\"KeyN\",\"Numpad2\"],\"throw\":[\"KeyV\",\"Numpad4\"],\"special\":[\"KeyM\",\"Numpad5\"],\"super\":[\"Comma\",\"Numpad6\"],\"utility\":[\"Period\",\"Numpad3\"]}]},\"stats\":{\"matches\":17,\"wins\":10,\"losses\":7,\"bestSurvival\":4,\"damage\":45003},\"challenges\":[\"combo\"],\"medals\":[],\"stories\":[],\"program\":null,\"history\":[]}"
+        ],
+        "finishedAt": "2026-10-29T15:05:49.853Z"
+      },
+      "interpretation": "Un secours plus ancien ne remplace plus une session valide ; les données de départ sont des fixtures."
+    }
+  },
+  "acceptance": {
+    "fullCampaignPassed": true,
+    "assetFilesUnchanged": true,
+    "gameVersion": "0.7.0",
+    "profileFormatVersion": 1,
+    "simulationRulesVersion": "0.5.0",
+    "qaLogSHA256": "3534542dd452dcb637c4a3fd24dd8f8fa8c542a4a4ab81363f3dcf9733800c72"
+  },
+  "limitations": [
+    "Les quatre contrôles ciblés recoupent la campagne complète et ne s’ajoutent pas à son total de tests indépendants.",
+    "La copie de secours est tentée après le primaire ; un quota peut la laisser plus ancienne. La suppression explicite du primaire ne restaure pas l’ancien profil.",
+    "Les statistiques et récompenses initiales des scénarios de migration sont des fixtures. Les défis explicitement décrits sont joués au clavier.",
+    "Aucun nouveau dessin, voix canonique ou certification de fidélité 1:1 ; mixage et essais sur appareils physiques restent ouverts."
+  ]
+}
