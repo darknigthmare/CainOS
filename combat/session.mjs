@@ -3,6 +3,7 @@ import { cleanBindings, DEFAULT_BINDINGS } from './bindings.mjs';
 import { FIGHTERS, STAGES, VARIANTS } from './data.mjs';
 import { validateProgram } from './progression.mjs';
 export const SAVE_KEY = 'cainos.circus-combat.profile.v1';
+export const SAVE_BACKUP_KEY = `${SAVE_KEY}.backup`;
 export const REPLAY_KEY = 'cainos.circus-combat.replay.v1';
 export const GAME_VERSION = '0.7.0';
 // Presentation/content releases need not change the deterministic simulation.
@@ -19,7 +20,7 @@ export function replayRulesVersion(version) {
 export const SLOT_ORDER = ['light', 'heavy', 'low', 'throw', 'special', 'specialDown', 'specialForward', 'specialBack', 'super', 'utility'];
 const FLAGS = ['left', 'right', 'down', 'guard', 'jump', 'dash', 'tech'];
 export const MAX_PACKED_INPUT = (SLOT_ORDER.length << FLAGS.length) | ((1 << FLAGS.length) - 1);
-export const DEFAULT_SETTINGS = Object.freeze({ layout: 'azerty', difficulty: 'normal', seconds: 90, rounds: 2, volume: .25, sound: true, music: false, musicVolume: .2, ambience: true, ambienceVolume: .35, finishers: true, reducedMotion: false, hitboxes: false, touch: 'auto', bindings: DEFAULT_BINDINGS });
+export const DEFAULT_SETTINGS = Object.freeze({ layout: 'azerty', difficulty: 'normal', seconds: 90, rounds: 2, volume: .25, sound: true, music: false, musicVolume: .2, ambience: true, ambienceVolume: .35, finishers: true, reducedMotion: false, enhancedReadability: false, hitboxes: false, touch: 'auto', bindings: DEFAULT_BINDINGS });
 const integer = (v, lo, hi, fallback = lo) => Number.isInteger(v) && v >= lo && v <= hi ? v : fallback;
 const choice = (v, allowed, fallback) => allowed.includes(v) ? v : fallback;
 export function cleanSettings(value = {}) {
@@ -29,7 +30,7 @@ export function cleanSettings(value = {}) {
     difficulty: choice(s.difficulty, ['easy', 'normal', 'hard'], 'normal'),
     seconds: choice(s.seconds, [60, 90, 120], 90), rounds: choice(s.rounds, [1, 2, 3], 2),
     volume: typeof s.volume === 'number' && Number.isFinite(s.volume) ? Math.max(0, Math.min(1, s.volume)) : .25,
-    sound: s.sound !== false, reducedMotion: s.reducedMotion === true, hitboxes: s.hitboxes === true,
+    sound: s.sound !== false, reducedMotion: s.reducedMotion === true, enhancedReadability: s.enhancedReadability === true, hitboxes: s.hitboxes === true,
     music: s.music === true, ambience: s.ambience !== false, finishers: s.finishers !== false,
     ambienceVolume: typeof s.ambienceVolume === 'number' && Number.isFinite(s.ambienceVolume) ? Math.max(0, Math.min(1, s.ambienceVolume)) : .35,
     musicVolume: typeof s.musicVolume === 'number' && Number.isFinite(s.musicVolume) ? Math.max(0, Math.min(1, s.musicVolume)) : .2,
@@ -65,14 +66,43 @@ export function validateProfile(value, { strictProgram = true } = {}) {
   profile.history = (Array.isArray(value.history) ? value.history : []).filter(v => v && typeof v.fighter === 'string' && typeof v.opponent === 'string').slice(0, 12).map(v => ({ fighter: v.fighter.slice(0, 60), opponent: v.opponent.slice(0, 60), mode: String(v.mode || '').slice(0, 30), won: v.won === true, at: String(v.at || '').slice(0, 30) }));
   return profile;
 }
+/**
+ * Read without changing either record. A usable primary always wins. An absent
+ * primary means no saved profile, even if a previous backup remains: deleting
+ * the public profile key must not silently resurrect a player's old progress.
+ */
+export function readProfileState(storage) {
+  let raw;
+  try { raw = storage.getItem(SAVE_KEY); }
+  catch { return { profile: emptyProfile(), source: 'unavailable' }; }
+  if (raw == null) return { profile: emptyProfile(), source: 'empty' };
+  try { return { profile: validateProfile(JSON.parse(raw), { strictProgram: false }), source: 'primary' }; }
+  catch { /* Only an unreadable, present primary permits fallback. */ }
+  try { raw = storage.getItem(SAVE_BACKUP_KEY); }
+  catch { return { profile: emptyProfile(), source: 'unavailable' }; }
+  if (raw) {
+    try { return { profile: validateProfile(JSON.parse(raw), { strictProgram: false }), source: 'backup' }; }
+    catch { /* Neither copy is a supported profile. Keep the stored bytes. */ }
+  }
+  return { profile: emptyProfile(), source: 'invalid' };
+}
 export function readProfile(storage) {
-  try { const raw = storage.getItem(SAVE_KEY); return raw ? validateProfile(JSON.parse(raw), { strictProgram: false }) : emptyProfile(); }
-  catch { return emptyProfile(); }
+  return readProfileState(storage).profile;
 }
 export function saveProfile(storage, profile) {
-  const valid = validateProfile(profile);
-  try { storage.setItem(SAVE_KEY, JSON.stringify(valid)); return true; }
-  catch { return false; }
+  // Strict validation precedes every write, including backup maintenance.
+  const raw = JSON.stringify(validateProfile(profile));
+  try {
+    // Starting again after deletion must retire any orphaned backup first.
+    // Otherwise a refused backup update could later revive that old profile.
+    if (storage.getItem(SAVE_KEY) == null && storage.getItem(SAVE_BACKUP_KEY) != null) storage.removeItem(SAVE_BACKUP_KEY);
+    storage.setItem(SAVE_KEY, raw);
+  } catch { return false; }
+  // localStorage replaces each key atomically, not the pair. Commit the primary
+  // before duplicating it so a first backup cannot consume its remaining quota.
+  // A refused backup write keeps the older fallback and the successful primary.
+  try { storage.setItem(SAVE_BACKUP_KEY, raw); } catch { /* Best-effort fallback. */ }
+  return true;
 }
 export function packInput(input = {}) {
   let flags = 0;

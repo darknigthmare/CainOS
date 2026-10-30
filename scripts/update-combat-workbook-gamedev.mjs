@@ -1,0 +1,374 @@
+/**
+ * Apply the 2026-10-29 gamedev pass to the established workbook in place.
+ * Run with the managed primary runtime; dependencies are resolved through a
+ * temporary symlink, without adding packages or node_modules to this checkout.
+ *
+ * node scripts/update-combat-workbook-gamedev.mjs --publish
+ *   --ci-evidence audit-combat/ci/evidence-0.7.0.json
+ *   --gamedev-evidence docs/gamedev-validation-2026-10-29.json
+ *
+ * Exports are verified in outputs/gamedev-20261029 before optional publication
+ * to docs. Historical evidence files and existing QA rows are never replaced.
+ */
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import os from 'node:os';
+import assert from 'node:assert/strict';
+import { spawnSync } from 'node:child_process';
+import { fileURLToPath, pathToFileURL } from 'node:url';
+
+const args = process.argv.slice(2);
+const flag = (name, fallback) => {
+  const index = args.indexOf(name);
+  if (index < 0) return fallback;
+  assert(args[index + 1] && !args[index + 1].startsWith('--'), 'Missing value for ' + name);
+  return args[index + 1];
+};
+const root = path.resolve(flag('--repo-root', process.cwd()));
+if (!args.includes('--primary-worker')) {
+  const node = process.env.CODEX_PRIMARY_RUNTIME_NODE;
+  const modules = process.env.CODEX_PRIMARY_RUNTIME_NODE_MODULES;
+  assert(node && modules, 'The primary spreadsheet runtime is required; no dependency installation is performed.');
+  const temporary = await fs.mkdtemp(path.join(os.tmpdir(), 'encore-gamedev-workbook-'));
+  try {
+    await fs.symlink(modules, path.join(temporary, 'node_modules'), 'dir');
+    const executable = path.join(temporary, 'update-combat-workbook-gamedev.mjs');
+    await fs.copyFile(fileURLToPath(import.meta.url), executable);
+    const child = spawnSync(node, [executable, ...args, '--repo-root', root, '--primary-worker'], { cwd: root, stdio: 'inherit' });
+    if (child.error) throw child.error;
+    process.exitCode = child.status ?? 1;
+  } finally {
+    await fs.rm(temporary, { recursive: true, force: true });
+  }
+} else {
+  try { await updateWorkbook(); }
+  catch (error) { console.error('ENCORE_GAMEDEV_WORKBOOK_FAILED ' + error.message); process.exitCode = 1; }
+}
+
+async function updateWorkbook() {
+  const { FileBlob, SpreadsheetFile } = await import('@oai/artifact-tool');
+  const { TRACKER_SHEETS, QA_STATUSES, sha256, prepareCurrentTracker } = await import(pathToFileURL(path.join(root, 'scripts/combat-workbook-current-data.mjs')));
+  const { publishWorkbookArtifacts } = await import(pathToFileURL(path.join(root, 'scripts/workbook-publication.mjs')));
+  const outputDir = path.resolve(flag('--output-dir', path.join(root, '..', 'outputs', 'gamedev-20261029')));
+  const previewDir = path.resolve(flag('--preview-dir', path.join(root, 'audit-combat', 'workbook-gamedev-20261029')));
+  const input = path.resolve(flag('--input-workbook', path.join(root, 'docs/DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx')));
+  const dataFile = path.resolve(flag('--input-data', path.join(root, 'docs/combat-tracker-data.json')));
+  const ciFile = path.resolve(flag('--ci-evidence', path.join(root, 'audit-combat/ci/evidence-0.7.0.json')));
+  const passFile = path.resolve(flag('--gamedev-evidence', path.join(root, 'docs/gamedev-validation-2026-10-29.json')));
+  const ciPublished = 'docs/combat-qa-evidence-gamedev-2026-10-29.json';
+  const passPublished = 'docs/gamedev-validation-2026-10-29.json';
+  assert(path.join(outputDir, 'DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx') !== input, 'Export to a separate staging directory before publication');
+  assert(!(args.includes('--skip-previews') && args.includes('--publish')), 'Preview skipping is reserved for isolated repeat verification');
+  const json = async file => JSON.parse(await fs.readFile(file, 'utf8'));
+  const baselineData = await json(dataFile), evidence = await json(ciFile), pass = await json(passFile);
+  const manifest = await json(path.join(root, 'docs/gamedev/manifest.json'));
+  const fileDigest = async relative => {
+    const target = path.resolve(root, relative);
+    assert(target.startsWith(root + path.sep), 'Source path escapes checkout');
+    return sha256(await fs.readFile(target));
+  };
+  assert.equal(pass.schema, 'encore-gamedev-validation/v1');
+  assert.equal(pass.date, '2026-10-29');
+  assert(/^[a-f0-9]{40}$/.test(pass.baseCommit), 'The historical base must be a full commit SHA');
+  assert.equal(pass.sourceCommit, evidence.sourceCommit, 'Targeted and full evidence identify different tested commits');
+  assert(Array.isArray(pass.checks) && pass.checks.length > 0, 'Targeted checks are required');
+  assert.equal(new Set(pass.checks.map(check => check.id)).size, pass.checks.length, 'Duplicate targeted check ID');
+  for (const check of pass.checks) {
+    assert(/^[a-z0-9-]+$/.test(check.id), 'Invalid targeted check ID');
+    assert(['passed', 'failed', 'not-run'].includes(check.status), 'Unknown targeted check status');
+    for (const key of ['name', 'command', 'evidence']) assert(typeof check[key] === 'string' && check[key], 'Missing check ' + key);
+  }
+  for (const id of ['guides', 'assets', 'input-node', 'input-browser']) assert(pass.checks.some(check => check.id === id), 'Missing targeted check: ' + id);
+  assert(pass.sourceHashes && Object.keys(pass.sourceHashes).length, 'Targeted source hashes are required');
+  for (const [file, digest] of Object.entries(pass.sourceHashes)) assert.equal(await fileDigest(file), digest, 'Targeted source drift: ' + file);
+  const historicalEvidenceFiles = ['docs/combat-qa-evidence.json', 'docs/combat-qa-evidence-0.7.0.json'];
+  const historicalEvidenceHashes = Object.fromEntries(await Promise.all(historicalEvidenceFiles.map(async file => [file, await fileDigest(file)])));
+
+  const workbook = await SpreadsheetFile.importXlsx(await FileBlob.load(input));
+  const names = ['Synthèse', ...Object.keys(TRACKER_SHEETS), 'Références'];
+  const sheets = Object.fromEntries(names.map(name => [name, workbook.worksheets.getItem(name)]));
+  const column = n => { let s = ''; while (n) { n--; s = String.fromCharCode(65 + n % 26) + s; n = Math.floor(n / 26); } return s; };
+  const hasValue = value => value !== null && value !== undefined && value !== '';
+  const literal = value => typeof value === 'string' && value.startsWith('=') ? "'" + value : value;
+  const normalized = rows => rows.map(row => row.map(value => value ?? ''));
+  const before = {}, notes = new Map(), data = structuredClone(baselineData);
+  for (const [name, key] of Object.entries(TRACKER_SHEETS)) {
+    const sheet = sheets[name], table = sheet.tables.items[0];
+    assert.equal(sheet.tables.items.length, 1, 'Expected one native table: ' + name);
+    const headers = table.getHeaderRowRange().values[0], rows = table.getDataRows();
+    assert.equal(headers.at(-1), 'Notes utilisateur');
+    const ids = rows.map(row => String(row[0]));
+    assert(ids.every(Boolean)); assert.equal(new Set(ids).size, ids.length, 'Duplicate workbook ID: ' + name);
+    assert.deepEqual([...ids].sort(), baselineData[key].map(row => String(row[0])).sort(), 'Workbook/data identity mismatch: ' + name);
+    const formulas = sheet.getRange(`A6:${column(headers.length)}${rows.length + 5}`).formulasR1C1;
+    before[name] = { headers, rows: structuredClone(rows), formulas,
+      heights: rows.map((_, index) => sheet.getRange(`A${index + 6}`).format.rowHeight) };
+    notes.set(name, new Map(rows.flatMap((row, index) => {
+      const formula = formulas[index]?.at(-1), value = row.at(-1);
+      return hasValue(formula) || hasValue(value) ? [[String(row[0]), { value, formula: hasValue(formula) ? formula : null }]] : [];
+    })));
+    data[key] = normalized(rows);
+  }
+  const references = sheets['Références'], refTable = references.tables.items[0], refBefore = refTable.getDataRows();
+  assert.deepEqual(refBefore.map(row => row[0]).sort(), baselineData.sources.map(source => source.id).sort(), 'Reference identity mismatch');
+  assert.equal(new Set(refBefore.map(row => row[0])).size, refBefore.length);
+  data.sources = refBefore.map(([id, title, kind, url, scope]) => ({ id, title, kind, url, scope }));
+  const nativeBefore = names.flatMap(name => sheets[name].tables.items.map(table => ({ sheet: name, name: table.name, style: table.style, filter: table.showFilterButton })));
+  assert.equal(nativeBefore.length, 9, 'Established native tables must be retained');
+  const summary = sheets['Synthèse'];
+  const summaryFormulaPositions = summary.getUsedRange().formulas.flatMap((row, r) => row.flatMap((value, c) => hasValue(value) ? [`${column(c + 1)}${r + 1}`] : []));
+
+  // The existing preparation function validates the complete CI coverage and
+  // hashes. Only its fresh QA rows are used; historical data stays untouched.
+  const checked = await prepareCurrentTracker({ root, priorData: data, evidence });
+  const totals = checked.totals, freshIds = new Set(checked.data.currentQa.rowIds);
+  const freshQa = checked.data.qa.filter(row => freshIds.has(row[0])).map(row => {
+    const result = [...row]; result[0] = result[0].replace(/^CI07-/, 'GD26-');
+    result[1] = result[1].replace('CI 0.7', 'Gamedev 2026-10-29');
+    return result;
+  });
+  assert.equal(freshQa.length, totals.nodeTests + totals.browserChecks);
+  const upsert = (rows, replacement) => {
+    const index = rows.findIndex(row => row[0] === replacement[0]);
+    if (index < 0) rows.push(replacement);
+    else { replacement[replacement.length - 1] = rows[index].at(-1); rows[index] = replacement; }
+  };
+  const passed = id => pass.checks.find(check => check.id === id).status === 'passed';
+  const state = ids => ids.every(passed) ? 'Implémenté' : 'À vérifier';
+  upsert(data.features, ['PRD-GD-01', 'Production', 'Guides gamedev versionnés et parcours de travail', state(['guides']), 'P1',
+    'AGENTS.md / docs/GAMEDEV_WORKFLOW.md / docs/gamedev/manifest.json',
+    'Routeur et neuf guides sélectionnés ; sources, licence, empreintes et critères de validation conservés dans le dépôt.',
+    'Sélection adaptée au moteur Canvas/ESM. Les documents guident les tâches ; chaque modification conserve ses preuves propres.', '']);
+  upsert(data.features, ['PRD-GD-02', 'Production', 'Audit technique reproductible des ressources', state(['assets']), 'P1',
+    'scripts/audit-combat-assets.mjs / docs/combat-asset-audit-gamedev-2026-10-29.json',
+    'Contrôler les fichiers référencés, dimensions et transparence selon le rapport ; enregistrer les anomalies et la portée de chaque contrôle.',
+    'Audit technique seulement. Les dessins dédiés, proportions et comparaisons visuelles canoniques conservent leurs tâches de revue.', '']);
+  upsert(data.features, ['PRD-GD-03', 'Production', 'Preuves et suivi de la passe gamedev', 'Implémenté', 'P1',
+    'scripts/update-combat-workbook-gamedev.mjs / ' + passPublished + ' / ' + ciPublished,
+    'Ajouter la campagne GD26, recalculer les synthèses et vérifier le classeur après export ; conserver les identifiants et notes antérieurs.',
+    'Les lignes anciennes restent datées de leur campagne. Les contrôles ciblés et les suites complètes sont distingués dans les données.', '']);
+  const inputFeature = data.features.find(row => row[0] === 'CTL-06');
+  assert(inputFeature, 'Missing CTL-06');
+  inputFeature[3] = state(['input-node', 'input-browser']);
+  inputFeature[5] = 'combat/input.mjs / tests/combat-input.test.mjs / tests/combat-input-browser.mjs';
+  inputFeature[6] = 'Annuler un contact actif sans attaque différée ; conserver un tap relâché normalement. Deux Start simultanés donnent une pause. Après pause/blur, chaque manette maintenue doit revenir au neutre.';
+  inputFeature[7] = 'Clavier et autre manette neutre restent disponibles. Gamepad API simulée et annulation de contact synthétique dans Chromium ; téléphones et manettes physiques non testés.';
+  upsert(data.production, ['GD26-GUIDES', 'Méthode de développement', 'Projet', 'Guides locaux et provenance', state(['guides']), 'P1',
+    'AGENTS.md / docs/GAMEDEV_WORKFLOW.md / docs/gamedev/manifest.json',
+    `Source ${manifest.upstreamRepository}\nRévision ${manifest.upstreamCommit}\nRouteur et neuf guides génériques sélectionnés.`,
+    'Choisir le guide selon la tâche, écrire un critère observable, exécuter les vérifications utiles et conserver les preuves.', '']);
+  upsert(data.production, ['GD26-ASSETS', 'Qualité des ressources', 'Projet', 'Audit automatisé des images et références', state(['assets']), 'P1',
+    'scripts/audit-combat-assets.mjs / docs/combat-asset-audit-gamedev-2026-10-29.json',
+    'Rapport technique des ressources utilisées par le jeu ; anomalies et avertissements documentés par fichier.',
+    'Conserver les revues artistiques séparées : cet audit ne valide pas les proportions, la fidélité à la série ni les dessins restant à produire.', '']);
+  upsert(data.production, ['GD26-INPUT', 'Commandes', 'Projet', 'Annulations et pause avec plusieurs périphériques', state(['input-node', 'input-browser']), 'P0',
+    'combat/input.mjs / tests/combat-input.test.mjs / tests/combat-input-browser.mjs',
+    'Annulation de contact, perte de capture, pause simultanée et retour au neutre d’une manette. Conservation du tap normal et indépendance des périphériques.',
+    'Les preuves ciblées couvrent 11 nouveaux cas Node et 6 parcours Chromium. Valider séparément deux manettes et un téléphone physiques.', '']);
+  const qaStatus = { passed: 'Réussi', failed: 'Échec', 'not-run': 'Non exécuté' };
+  const targetedQa = pass.checks.map(check => ['GD26-C-' + check.id, 'Gamedev 2026-10-29 · Contrôle ciblé', check.name, qaStatus[check.status], 'P1', check.command,
+    `${pass.date}\n${check.evidence}\nDétail : ${passPublished}`,
+    check.expected || `Réussir les assertions du contrôle cité. ${check.limitations || 'Portée limitée aux fichiers et à l’environnement du rapport.'}`, '']);
+  for (const row of [...freshQa, ...targetedQa]) upsert(data.qa, row);
+  if (data.currentQa && data.currentQa.evidence !== ciPublished) {
+    data.qaCampaigns ??= [];
+    if (!data.qaCampaigns.some(campaign => campaign.evidence === data.currentQa.evidence)) data.qaCampaigns.push(structuredClone(data.currentQa));
+  }
+  data.currentQa = { gameVersion: data.version, campaign: 'gamedev-2026-10-29', sourceCommit: evidence.sourceCommit,
+    runUrl: evidence.runUrl, totals, rowIds: freshQa.map(row => row[0]).sort(), evidence: ciPublished };
+  data.gamedevPass = { date: pass.date, baseCommit: pass.baseCommit, sourceCommit: pass.sourceCommit, evidence: passPublished, upstreamCommit: manifest.upstreamCommit,
+    targetedRowIds: targetedQa.map(row => row[0]), targetedChecks: targetedQa.length, currentCiEvidence: ciPublished };
+  const activeIds = new Set([...data.currentQa.rowIds, ...data.gamedevPass.targetedRowIds]);
+  data.historicalQaRows = data.qa.filter(row => !activeIds.has(row[0])).length;
+  data.contentAsOf ??= data.asOf; data.asOf = pass.date;
+  Object.assign(data.counts, { features: data.features.length, production: data.production.length, qa: data.qa.length });
+  data.qaSummary = Object.fromEntries(QA_STATUSES.map(status => [status, data.qa.filter(row => row[3] === status).length]));
+  data.qaSummaryScope = 'Historique conservé, objectifs de revue, campagne complète GD26 et contrôles ciblés de la passe gamedev. Ces lignes ne représentent pas toutes des tests indépendants de la version courante.';
+  const extraSources = [
+    { id: 'gamedev-guides-20261029', title: 'Guides de développement retenus', kind: 'Guides techniques · Apache-2.0', url: `${manifest.upstreamRepository}/tree/${manifest.upstreamCommit}`,
+      scope: 'Routeur et neuf guides génériques. Copies et provenance : docs/gamedev/manifest.json. Application locale : docs/GAMEDEV_WORKFLOW.md.' },
+    { id: 'gamedev-evidence-20261029', title: 'Preuves de la passe gamedev', kind: 'Exécutions automatiques datées', url: ciPublished,
+      scope: `Campagne complète et hashes des sources. Contrôles ciblés : ${passPublished}. Historique 0.7 conservé dans son fichier initial.` },
+  ];
+  const sourceMap = new Map(data.sources.map(source => [source.id, source]));
+  for (const source of extraSources) sourceMap.set(source.id, source);
+  data.sources = [...sourceMap.values()];
+  for (const key of Object.values(TRACKER_SHEETS)) assert.equal(new Set(data[key].map(row => row[0])).size, data[key].length, 'Duplicate data IDs: ' + key);
+
+  await fs.mkdir(outputDir, { recursive: true }); await fs.mkdir(previewDir, { recursive: true });
+  const render = async (name, range, label) => {
+    if (args.includes('--skip-previews')) return;
+    const blob = await workbook.render({ sheetName: name, range, scale: 1, format: 'png' });
+    await fs.writeFile(path.join(previewDir, label + '.png'), new Uint8Array(await blob.arrayBuffer()));
+  };
+  await render('Synthèse', 'A1:H34', 'before-summary');
+  const changes = [], addedRows = {};
+  const statusColumns = { 'Fonctionnalités': 4, 'Production': 5, 'QA': 4 };
+  const applyStatusRules = range => {
+    for (const [text, fill, color] of [['Implémenté', '#E4F1E9', '#23513D'], ['Partiel', '#FCEED8', '#79501D'], ['Prévu', '#EAE7F1', '#56496D'], ['À vérifier', '#FFF1C9', '#805B00'], ['Réussi', '#E4F1E9', '#23513D'], ['Échec', '#FBE0E0', '#A12A2A'], ['Non exécuté', '#EAE7F1', '#56496D']]) range.conditionalFormats.add('containsText', { text, format: { fill, font: { color } } });
+  };
+  for (const [name, key] of Object.entries(TRACKER_SHEETS)) {
+    const sheet = sheets[name], table = sheet.tables.items[0], source = before[name], rows = data[key], width = source.headers.length, count = source.rows.length;
+    assert.deepEqual(rows.slice(0, count).map(row => row[0]), source.rows.map(row => row[0]), 'Existing order changed: ' + name);
+    addedRows[name] = rows.length - count;
+    if (rows.length > count) {
+      table.rows.add(null, rows.slice(count).map(row => row.map(literal)));
+      for (let index = count; index < rows.length; index++) {
+        const rowNumber = index + 6, range = sheet.getRange(`A${rowNumber}:${column(width)}${rowNumber}`);
+        range.copyFrom(sheet.getRange(`A6:${column(width)}6`), 'all'); range.values = [rows[index].map(literal)];
+        range.format.fill = index % 2 === 0 ? '#F4F0F8' : '#FFFFFF';
+        range.format.rowHeight = name === 'QA' ? 126 : name === 'Production' ? 168 : 120;
+        sheet.getRange(`${column(width)}${rowNumber}`).format.fill = '#FFF1C9';
+      }
+      if (statusColumns[name]) {
+        const c = column(statusColumns[name]), range = sheet.getRange(`${c}${count + 6}:${c}${rows.length + 5}`);
+        range.dataValidation = { rule: { type: 'list', values: name === 'QA' ? QA_STATUSES : ['Implémenté', 'Partiel', 'Prévu', 'À vérifier', 'Hors périmètre'] } };
+        applyStatusRules(range);
+      }
+    }
+    for (let index = 0; index < count; index++) for (let c = 0; c < width - 1; c++) if ((source.rows[index][c] ?? '') !== (rows[index][c] ?? '')) {
+      assert(!hasValue(source.formulas[index]?.[c]), `Refusing to replace a user formula: ${name}/${rows[index][0]}/${c + 1}`);
+      assert(rows[index][0] === 'CTL-06' || rows[index][0].startsWith('GD26-') || rows[index][0].startsWith('PRD-GD-'), 'Unrelated existing row changed');
+      sheet.getRange(`${column(c + 1)}${index + 6}`).values = [[literal(rows[index][c])]];
+      changes.push({ sheet: name, id: rows[index][0], column: c + 1 });
+    }
+  }
+  const inputRow = data.features.findIndex(row => row[0] === 'CTL-06') + 6;
+  const inputRange = sheets['Fonctionnalités'].getRange(`A${inputRow}:I${inputRow}`);
+  inputRange.format.rowHeight = Math.max(inputRange.format.rowHeight || 0, 120);
+
+  // The established legend starts immediately below this table. Make explicit
+  // room by copying its rows from bottom to top, including all cell formatting.
+  const addedSources = data.sources.filter(source => !refBefore.some(row => row[0] === source.id));
+  const legendStart = refBefore.length + 6, legendEnd = references.getUsedRange().values.length;
+  const legendValues = references.getRange(`A${legendStart}:E${legendEnd}`).values;
+  const legendFormulas = references.getRange(`A${legendStart}:E${legendEnd}`).formulasR1C1;
+  assert.equal(legendValues[0][0], 'Lecture du suivi', 'Unexpected reference footer layout');
+  if (addedSources.length) {
+    const shift = addedSources.length;
+    for (let row = legendEnd; row >= legendStart; row--) {
+      const source = references.getRange(`A${row}:E${row}`), destination = references.getRange(`A${row + shift}:E${row + shift}`), height = source.format.rowHeight;
+      destination.copyFrom(source, 'all'); destination.format.rowHeight = height;
+    }
+    references.getRange(`A${legendStart}:E${legendStart + shift - 1}`).values = Array.from({ length: shift }, () => Array(5).fill(null));
+    refTable.rows.add(null, addedSources.map(source => [source.id, source.title, source.kind, source.url, source.scope]));
+    for (let index = 0; index < shift; index++) {
+      const row = legendStart + index, source = addedSources[index], range = references.getRange(`A${row}:E${row}`);
+      range.copyFrom(references.getRange('A6:E6'), 'all');
+      range.values = [[source.id, source.title, source.kind, source.url, source.scope]]; range.format.rowHeight = 88;
+    }
+  }
+  const finalLegendStart = legendStart + addedSources.length, finalLegendEnd = legendEnd + addedSources.length;
+  assert.deepEqual(references.getRange(`A${finalLegendStart}:E${finalLegendEnd}`).values, legendValues, 'Reference legend changed');
+  assert.deepEqual(references.getRange(`A${finalLegendStart}:E${finalLegendEnd}`).formulasR1C1, legendFormulas, 'Reference legend formulas changed');
+  references.getRange('A3').values = [[`Dates et état du suivi : ${data.asOf}. Les sources de fiction ne valident pas les statistiques du jeu.`]];
+  sheets.QA.getRange('A3').values = [['Historique conservé. GD26-N/B : nouvelle campagne complète ; GD26-C : contrôles ciblés. Les essais matériels restent séparés.']];
+  const set = (cell, value) => { summary.getRange(cell).values = [[value]]; };
+  set('H2', `Version ${data.version} · ${data.asOf}`);
+  set('H13', `${totals.nodeTests} tests Node · ${totals.nodeSuites} suites`);
+  set('H14', `${totals.browserChecks} contrôles Chromium · gamedev`);
+  set('H15', `${data.historicalQaRows} lignes historiques / revues`);
+  set('H16', `GD26 : campagne + ${targetedQa.length} contrôles ciblés.`);
+  set('A22', 'Historique et passe gamedev');
+  const expected = new Map();
+  const formula = (cell, expression, value) => { summary.getRange(cell).formulas = [['=' + expression]]; expected.set(cell, value); };
+  for (const [cell, key, sheet] of [['B7', 'fighters', 'Combattants'], ['B8', 'moves', 'Techniques'], ['B9', 'stages', 'Arènes'], ['B10', 'atlas', 'Atlas']]) formula(cell, `COUNTA('${sheet}'!A6:A${data[TRACKER_SHEETS[sheet]].length + 5})`, data.counts[key]);
+  formula('B11', `COUNTIFS('Atlas'!C6:C${data.atlas.length + 5},"Variante visuelle")`, data.counts.variants);
+  const statuses = ['Implémenté', 'Partiel', 'Prévu', 'À vérifier'];
+  for (const [r, sheet, key, col] of [[15, 'Fonctionnalités', 'features', 4], [16, 'Production', 'production', 5], [17, 'Scénarios', 'scenarios', 8], [18, 'Atlas', 'atlas', 5]]) {
+    const end = data[key].length + 5, c = column(col);
+    for (let i = 0; i < statuses.length; i++) formula(`${column(i + 2)}${r}`, `COUNTIFS('${sheet}'!${c}$6:${c}$${end},${column(i + 2)}$14)`, data[key].filter(row => row[col - 1] === statuses[i]).length);
+    formula(`F${r}`, `COUNTA('${sheet}'!A6:A${end})`, data[key].length);
+  }
+  for (let i = 0; i < QA_STATUSES.length; i++) formula(`${column(i + 2)}22`, `COUNTIFS('QA'!D6:D${data.qa.length + 5},${column(i + 2)}21)`, data.qaSummary[QA_STATUSES[i]]);
+  formula('F22', `COUNTA('QA'!A6:A${data.qa.length + 5})`, data.qa.length);
+  const end = data.production.length + 5, pb = `'Production'!B6:B${end}`, pd = `'Production'!D6:D${end}`, pe = `'Production'!E6:E${end}`;
+  const count = domain => data.production.filter(row => row[1] === domain).length;
+  formula('H19', `COUNTIFS('Scénarios'!B6:B${data.scenarios.length + 5},"Route individuelle")&" routes et "&COUNTIFS(${pb},"Tableau d’histoire")&" tableaux"`, `${data.scenarios.filter(row => row[1] === 'Route individuelle').length} routes et ${count('Tableau d’histoire')} tableaux`);
+  formula('H20', `COUNTIFS(${pb},"Briefing illustré")&" briefings de rencontre"`, `${count('Briefing illustré')} briefings de rencontre`);
+  formula('H21', `COUNTIFS(${pb},"Arène",${pd},"Musique de l’arène")&" thèmes musicaux d’arènes"`, `${data.production.filter(row => row[1] === 'Arène' && row[3] === 'Musique de l’arène').length} thèmes musicaux d’arènes`);
+  for (const [cell, domain, suffix] of [['H22', 'Motif sonore', ' motifs sonores synthétiques'], ['H23', 'Présentation individuelle', ' séquences de présentation'], ['H24', 'Animation d’arène', ' ambiances visuelles animées'], ['H25', 'Costume', ' costumes redessinés'], ['H31', 'Finition visuelle', ' présentations de KO']]) formula(cell, `COUNTIFS(${pb},"${domain}")&"${suffix}"`, count(domain) + suffix);
+  formula('H32', `COUNTIFS(${pb},"Arène",${pd},"Ambiance sonore",${pe},"Implémenté")&" ambiances sonores originales"`, `${data.counts.audioAmbiences} ambiances sonores originales`);
+  assert.deepEqual([...expected.keys()].sort(), [...summaryFormulaPositions].sort(), 'Unexpected summary formula layout');
+  workbook.recalculate();
+  for (const [cell, value] of expected) assert.equal(summary.getRange(cell).values[0][0], value, 'Calculated summary mismatch: ' + cell);
+  const statusCell = sheets['Fonctionnalités'].getRange('D6'), oldStatus = statusCell.values[0][0], oldTotal = summary.getRange('B15').values[0][0];
+  statusCell.values = [[oldStatus === 'Implémenté' ? 'Prévu' : 'Implémenté']]; workbook.recalculate();
+  assert.equal(summary.getRange('B15').values[0][0], oldTotal + (oldStatus === 'Implémenté' ? -1 : 1));
+  statusCell.values = [[oldStatus]]; workbook.recalculate(); assert.equal(summary.getRange('B15').values[0][0], oldTotal);
+  const errorPattern = /^#(?:REF!|DIV\/0!|VALUE!|NAME\?|N\/A|NUM!|NULL!|SPILL!|CALC!)/;
+  let formulaCount = 0;
+  for (const name of names) {
+    const range = sheets[name].getUsedRange(), formulas = range.formulas, values = range.values;
+    for (let r = 0; r < formulas.length; r++) for (let c = 0; c < formulas[r].length; c++) if (hasValue(formulas[r][c])) {
+      formulaCount++; assert(!errorPattern.test(String(values[r]?.[c] ?? '')), `Formula error: ${name}/${r + 1}/${c + 1}`);
+    }
+  }
+  console.log((await workbook.inspect({ kind: 'table', range: 'Synthèse!A13:H22', include: 'values,formulas', tableMaxRows: 10, tableMaxCols: 8, maxChars: 4500 })).ndjson);
+  console.log((await workbook.inspect({ kind: 'match', searchTerm: '#REF!|#DIV/0!|#VALUE!|#NAME\\?|#N/A|#NUM!|#NULL!|#SPILL!|#CALC!', options: { useRegex: true, maxResults: 50 }, summary: 'Formula error scan' })).ndjson);
+  // Formula notes can legitimately recalculate when a tracked total changes.
+  // Keep their formulas, and record their newly calculated values in JSON.
+  for (const [name, key] of Object.entries(TRACKER_SHEETS)) {
+    const rows = sheets[name].tables.items[0].getDataRows();
+    for (let r = 0; r < rows.length; r++) for (let c = 0; c < rows[r].length; c++) if (!hasValue(before[name].formulas[r]?.[c])) {
+      assert.equal(rows[r][c] ?? '', data[key][r][c] ?? '', 'Unexpected cell value: ' + name + '/' + (r + 6) + '/' + (c + 1));
+    }
+    data[key] = normalized(rows);
+  }
+  const verifyRows = (book, roundTrip) => {
+    for (const [name, key] of Object.entries(TRACKER_SHEETS)) {
+      const sheet = book.worksheets.getItem(name), rows = sheet.tables.items[0].getDataRows(), source = before[name];
+      assert.deepEqual(normalized(rows), data[key], (roundTrip ? 'Round-trip' : 'Workbook') + ' data differs: ' + name);
+      const formulas = sheet.getRange(`A6:${column(source.headers.length)}${rows.length + 5}`).formulasR1C1;
+      for (let r = 0; r < source.rows.length; r++) for (let c = 0; c < source.headers.length; c++) if (hasValue(source.formulas[r]?.[c])) assert.equal(formulas[r]?.[c], source.formulas[r][c], 'Existing formula changed');
+      for (const [id, note] of notes.get(name)) {
+        const index = rows.findIndex(row => String(row[0]) === id); assert(index >= 0);
+        if (note.formula) assert.equal(formulas[index].at(-1), note.formula, 'Note formula changed');
+        else assert.equal(rows[index].at(-1), note.value, 'Note value changed');
+      }
+      for (let r = 0; r < source.rows.length; r++) if (typeof source.heights[r] === 'number') assert(sheet.getRange(`A${r + 6}`).format.rowHeight >= source.heights[r], 'Existing row height reduced');
+    }
+    const ref = book.worksheets.getItem('Références');
+    assert.deepEqual(normalized(ref.tables.items[0].getDataRows()), data.sources.map(source => [source.id, source.title, source.kind, source.url, source.scope]));
+    assert.deepEqual(ref.getRange(`A${finalLegendStart}:E${finalLegendEnd}`).values, legendValues, 'Reference legend changed after export');
+  };
+  verifyRows(workbook, false);
+  const firstQa = data.qa.findIndex(row => row[0].startsWith('GD26-')) + 6;
+  const firstTarget = data.qa.findIndex(row => row[0].startsWith('GD26-C-')) + 6;
+  const firstFeature = data.features.findIndex(row => row[0] === 'PRD-GD-01') + 6;
+  const firstProduction = data.production.findIndex(row => row[0] === 'GD26-GUIDES') + 6;
+  const renders = [['Synthèse', 'A1:H34', 'summary'], ['Fonctionnalités', `A${firstFeature}:I${firstFeature + 2}`, 'features'], ['Fonctionnalités', `A${inputRow}:I${inputRow}`, 'input'], ['Production', `A${firstProduction}:J${firstProduction + 2}`, 'production'], ['QA', `A${firstQa}:I${firstQa + 2}`, 'current-qa'], ['QA', `A${firstTarget}:I${Math.min(firstTarget + 3, data.qa.length + 5)}`, 'targeted-qa'], ['Références', `A${refBefore.length + 4}:E${finalLegendEnd}`, 'references']];
+  for (const [name, range, label] of renders) await render(name, range, label);
+  const xlsx = path.join(outputDir, 'DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx');
+  await (await SpreadsheetFile.exportXlsx(workbook)).save(xlsx);
+  const reopened = await SpreadsheetFile.importXlsx(await FileBlob.load(xlsx));
+  verifyRows(reopened, true);
+  const nativeTables = names.flatMap(name => reopened.worksheets.getItem(name).tables.items.map(table => ({ sheet: name, name: table.name, style: table.style, filter: table.showFilterButton, rows: table.getDataRows().length })));
+  assert.deepEqual(nativeTables.map(({ rows, ...rest }) => rest), nativeBefore, 'Native table metadata changed');
+  for (const [cell, value] of expected) assert.equal(reopened.worksheets.getItem('Synthèse').getRange(cell).values[0][0], value, 'Round-trip summary mismatch: ' + cell);
+  for (const [file, digest] of Object.entries(historicalEvidenceHashes)) assert.equal(await fileDigest(file), digest, 'Historical proof changed');
+  const sourceDigests = { ...evidence.runtimeSourceHashes, ...pass.sourceHashes, ...historicalEvidenceHashes };
+  for (const report of [...evidence.nodeReports, ...evidence.browserReports]) sourceDigests[report.file] = report.sourceSha256;
+  for (const file of ['scripts/update-combat-workbook-gamedev.mjs', 'scripts/combat-workbook-current-data.mjs', 'scripts/workbook-publication.mjs', 'scripts/combat-ci-suites.mjs', 'scripts/combat-release-evidence.mjs', 'scripts/package-combat-release.mjs', 'docs/gamedev/manifest.json', passPublished]) sourceDigests[file] = await fileDigest(file);
+  for (const source of checked.offline.ART_FILES) { const file = path.relative(root, path.resolve(root, 'combat', source)); sourceDigests[file] = await fileDigest(file); }
+  const evidenceBytes = await fs.readFile(ciFile); sourceDigests[ciPublished] = sha256(evidenceBytes);
+  const dataBytes = JSON.stringify(data, null, 2) + '\n';
+  const verification = { schema: 'encore-workbook-artifact/v1', gameVersion: data.version, createdAt: new Date().toISOString(), sourceCommit: evidence.sourceCommit,
+    counts: data.counts, qaSummary: data.qaSummary, qaSummaryScope: data.qaSummaryScope, currentQa: data.currentQa, historicalQaRows: data.historicalQaRows, gamedevPass: data.gamedevPass,
+    baseline: { gameVersion: baselineData.version, workbookSHA256: sha256(await fs.readFile(input)), trackerDataSHA256: sha256(await fs.readFile(dataFile)) },
+    workbookSHA256: sha256(await fs.readFile(xlsx)), trackerDataSHA256: sha256(dataBytes), nativeTables, sourceDigests, formulaErrors: 0,
+    formulas: { count: formulaCount, generalRecalculation: true, summaryValuesChecked: expected.size, desktopExcelOpened: false },
+    notesPreservation: { preserved: [...notes.values()].reduce((n, map) => n + map.size, 0), formulas: [...notes.values()].reduce((n, map) => n + [...map.values()].filter(note => note.formula).length, 0), identityPreserved: true, exportRoundTripPassed: true },
+    statusMutationRecalculated: true, renderedSheets: args.includes('--skip-previews') ? [] : [...new Set(renders.map(([name]) => name))], modifiedCells: changes.length, changes, addedRows,
+    layout: { existingRowsRetained: true, largerUserRowHeightsPreserved: true, referenceLegendPreserved: true, referenceLegendShift: addedSources.length },
+    historicalEvidenceUnchanged: historicalEvidenceHashes,
+    publication: 'Four staged outputs with backups and rollback. The historical evidence files are excluded. Group replacement is not simultaneously atomic.',
+    limitations: ['No desktop Excel session or physical device validation.', 'Historical evidence stays separate from the GD26 executions.', 'The asset audit is technical; artistic and canonical visual reviews retain their existing status.'] };
+  const outputNames = ['DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx', 'combat-tracker-data.json', 'combat-workbook-verification.json', path.basename(ciPublished)];
+  await fs.writeFile(path.join(outputDir, outputNames[1]), dataBytes);
+  await fs.writeFile(path.join(outputDir, outputNames[2]), JSON.stringify(verification, null, 2) + '\n');
+  await fs.writeFile(path.join(outputDir, outputNames[3]), evidenceBytes);
+  if (args.includes('--publish')) await publishWorkbookArtifacts({ outputDirectory: path.join(root, 'docs'), files: outputNames.map(name => ({ name, source: path.join(outputDir, name) })) });
+  console.log('ENCORE_GAMEDEV_WORKBOOK ' + JSON.stringify({ outputDir, published: args.includes('--publish'), counts: data.counts, currentQA: totals,
+    historicalQaRows: data.historicalQaRows, targetedChecks: targetedQa.length, nativeTables: nativeTables.length, formulaCount, notesPreserved: verification.notesPreservation.preserved, addedRows, modifiedCells: changes.length }));
+}

@@ -148,10 +148,75 @@ controls. The worker covers the combat path, not the CainOS desktop or the
 standalone root redirect. Static builds require HTTP; opening files directly with
 `file://` is unsupported. Native application packages remain separate work.
 
+## Guided development and input reliability — 29 October 2026
+
+[AGENTS.md](AGENTS.md) and the [gamedev workflow](docs/GAMEDEV_WORKFLOW.md)
+map nine selected cross-engine guides to Encore's existing Canvas/ESM runtime.
+The upstream router, guides, references and original notices are pinned in
+[the provenance manifest](docs/gamedev/manifest.json). They are development
+references for this repository; the game keeps its shared runtime and replay rules.
+
+This pass fixes interrupted input: cancelled touch contacts discard their pending
+attack without cancelling another finger, two simultaneous controller Start presses
+request one pause, and a controller held across an interruption must return to
+neutral before driving combat again. Keyboard controls and the other controller
+remain available. Normal short taps are preserved.
+
+`npm run qa:gamedev` verifies the reference snapshot and audits the actual image
+files against the sprite catalog, frame regions, native transparency and animation
+registrations. The asset audit is technical evidence; canonical comparison,
+silhouette review and dedicated combat drawings remain separate production work.
+
+The [initial input validation record](docs/gamedev-validation-2026-10-29.json),
+[asset report](docs/combat-asset-audit-gamedev-2026-10-29.json) and
+[initial gamedev campaign](docs/combat-qa-evidence-gamedev-2026-10-29.json) describe
+this pass. The original 0.7 evidence remains a historical record. The reviewed
+workbook identifies the exact evidence used for delivery.
+
+## Profile recovery and distinct confirmations — 29 October 2026
+
+This guided follow-up applies `save-systems` and `audio-design` to the shared game.
+The first successful profile save and later saves attempt to keep a complete
+backup, after the primary write. A present but unreadable primary can recover
+from that valid copy without rewriting storage during load. A persistent notice
+on Home and Settings offers export or explicit repair; it explains that the copy
+may be older. A deleted primary stays deleted, and corrupted cross-tab data cannot
+erase an already valid in-memory profile or replace it with an older backup.
+A separate notice identifies a retained live session; reward refresh also keeps
+its newer progress. Rejected storage writes retain export
+access and never claim a successful repair.
+
+There are now **26 original sound motifs**. Escaping a throw has a dedicated cue,
+and accepted settings/import/recovery actions and resuming play use a confirmation
+cue distinct from selection. Both retain the existing mute, pause, voice limits
+and cleanup behavior. Physical-device mixing and dedicated voices remain open.
+Profile format v1 and replay rules are unchanged.
+
+## Reinforced cues, archive editing and offline repairs — 29 October 2026
+
+**Settings → Repères renforcés** adds an optional presentation for the shared game.
+Circle J1 and diamond J2 labels follow the fighters, including mirror matches and
+side changes. Named, patterned health, guard and finale gauges show values in a
+separate opaque panel above the arena. Low life, fragile guard and finale readiness
+also have text labels. The setting is off by default and stays in version-one
+profiles; simulation and replay rules are unchanged.
+
+This is a first focused accessibility slice. It does not certify a global palette,
+every color-vision deficiency or screen-reader playability. PRE-12 remains partial
+in the tracker, with physical-device and user validation still open.
+
+Archive filtering now preserves the selection inside the search field and respects
+navigation away from that screen. Its delayed refresh cannot reopen an abandoned
+archive view. Offline preparation invalidates an old completion claim while it
+rechecks the pack; a failed repair after cache eviction stays visibly incomplete.
+Explicit updates have a bounded handover, one pending operation and listener cleanup
+on failure, so an abandoned activation cannot trigger a later reload.
+
 ## Development and build
 
 ```bash
-npm install
+python3 -m pip install -r scripts/requirements-gamedev.txt
+npm ci
 npm run dev
 npm run build
 npm run build:combat
@@ -161,32 +226,135 @@ npm run qa
 The default build includes CainOS, the combat app and the existing cloud-account
 runtime. The separate combat build needs no OS runtime. `npm run qa` runs the
 CainOS audits, behavioral tests, syntax checks, manifest generation and both builds.
+It also runs the selected-guide and asset audits. These development checks use
+Python 3.12 and Pillow as pinned in `scripts/requirements-gamedev.txt`; Python
+and Pillow are not part of the browser game.
 
 ## Verification and tracker
 
-The versioned [0.7 evidence](docs/combat-qa-evidence-0.7.0.json) records the tested
-commit, actual Node/Chromium results and runtime hashes. The tracker is authored
+The [current guided-development campaign](docs/combat-qa-evidence-readability-2026-10-29.json)
+records the tested commit, actual Node/Chromium results and runtime hashes. The tracker is authored
 and checked in the primary spreadsheet runtime. CI packages the standalone only
 when that reviewed tracker matches the current game and test hashes; it never
 rewrites the workbook.
 
-The final 0.7 campaign passed **313 Node tests in 22 suites** and **238 Chromium
+### Current readability and offline campaign — 29 October 2026
+
+The complete [GitHub Actions campaign](https://github.com/darknigthmare/CainOS/actions/runs/40928776174)
+passed **370 Node tests in 27 suites** and **275 Chromium checks in 16 suites**
+on source commit `243e87b21b1e9eb8711e2012faf837f5850dae9a`. All 37 runtime
+files and all test sources stayed unchanged. This single complete campaign supplies
+the **645 current cases**. A separate full local run passed the same 370/275 cases
+on identical sources; it is retained as independent confirmation, not added to
+the current totals.
+
+The [targeted proof](docs/readability-validation-2026-10-29.json) records optional
+player cues, archive focus/navigation, bounded offline activation and honest cache
+completion. It includes before/after reproductions, the scoped visual review and
+the three intermediate UI test attempts. Its groups overlap the complete campaign.
+
+The current tracker contains **105 features, 693 production tasks, 85 scenarios
+and 2,240 QA rows**. It keeps **1,591 protected rows unchanged**, reuses the IDs of
+615 existing cases, adds 30 new cases and four overlapping targeted objectives.
+QA statuses are 2,236 passed, zero failed, three not executed and one awaiting
+verification. Production has 398 implemented, 281 partial and 14 planned tasks.
+PRE-12 remains partial: player and gauge cues do not certify the global palette
+or replace validation with affected users and physical devices.
+
+All **39 formulas** were recalculated and checked through export/reimport, with
+**10 sheets and 9 native tables** retained. The independent comparison covers
+39,742 original cells: 625 expected data updates, with no unplanned value/formula
+changes or original style changes. A second isolated generation adds no rows,
+changes no tracked cells and preserves the tracking JSON byte for byte. Its XLSX
+has identical values, formulas, resolved styles and table metadata; binary identity
+of reserialized XLSX files is not claimed.
+
+See the [delivery review](docs/COMBAT_READABILITY_2026-10-29.md),
+[workbook verification](docs/combat-workbook-verification.json) and
+[independent preservation review](docs/combat-workbook-readability-review-2026-10-29.json).
+The previous complete campaigns below remain historical records.
+
+### Historical audio and profile campaign — 29 October 2026
+
+The complete [GitHub Actions campaign](https://github.com/darknigthmare/CainOS/actions/runs/40898388692)
+passed **356 Node tests in 26 suites** and **259 Chromium checks in 15 suites**
+on source commit `d1160465a6c980733df20a207b22a4c7a49e1240`.
+The runtime and test hashes matched the checkout reviewed for that delivery.
+This single complete campaign supplied its case rows; local and remote results
+were not combined.
+
+The [targeted validation](docs/gamedev-followup-validation-2026-10-29.json)
+records 40 audio unit cases, 27 audio browser checks, 63 profile/progression unit
+cases and 19 recovery browser checks. These groups are included in the 356/259
+totals. They cover distinct finite sound motifs, unsuccessful writes, explicit
+deletion, startup recovery, preserved live progress, export and both game entries.
+
+An independent local attempt encountered three timeouts (CainOS iframe, gallery
+navigation and the progression process) and was stopped after the complete Actions
+run succeeded on identical source and test hashes. Its partial report and failures
+are preserved in `retryHistory`, outside the final totals. Their exact cause
+is not established. An earlier intermediate-code attempt was also stopped
+after reproducing the stale-backup rollback, which is fixed in the tested commit.
+
+The tracker accompanying that campaign contained **105 features, 689 production tasks, 85 scenarios
+and 2,206 QA rows**. It retained all 1,587 earlier QA rows and added the 615 cases
+from that campaign plus four overlapping targeted checks. Its recorded statuses were:
+2,202 passed, three not executed and one awaiting verification; the QA row count
+is not an independent-test total. Production had 394 implemented, 281 partial
+and 14 planned tasks. The audio feature remains partial while physical mixing
+and voice work are still open.
+
+All **39 formulas** were recalculated and checked without errors. Export and
+reimport preserve **10 sheets, 9 native tables**, existing styles, row identities
+and notes. Longer entries receive documented row-height adjustments.
+See the [follow-up workbook review](docs/COMBAT_GAMEDEV_FOLLOWUP_2026-10-29.md)
+for that delivery’s reviewed tracking data, preserved history and remaining
+manual work.
+
+### Historical gamedev input campaign — 29 October 2026
+
+The initial gamedev campaign passed **340 Node tests in 25 suites** and
+**240 Chromium checks in 14 suites**, on source commit
+`6a80d1e5b25e74aa1b6012ff6b37e83cf25dd492`. Its 11 input unit cases and six browser input
+checks are included in those totals. Runtime and test source hashes stayed unchanged.
+The evidence retains the initial missing-build failure and the successful 15-check
+progression rerun in `retryHistory`; each final case is counted once.
+
+The technical asset audit passed for **44 PNGs, 235 unique source regions,
+56 animation cells and 77 native-alpha references**, with zero violations.
+The selected-guide audit verified **35 original files and 40 local links**.
+
+The tracker for that input campaign contained **10 sheets, 9 native tables,
+105 features, 686 production tasks, 85 scenarios and 1,587 QA rows**.
+Those rows preserve 1,003 historical/review entries, record the
+580 cases from that full campaign and add 4 targeted checks. The targeted checks
+partly overlap the full campaign; QA row counts are not independent test totals.
+All **39 formulas** were recalculated and checked with zero formula errors.
+Native tables, existing row identities, notes and layout were preserved through export
+and reimport. See the [workbook verification](docs/combat-workbook-verification.json).
+
+### Historical 0.7 campaign
+
+The original [0.7 campaign](docs/combat-qa-evidence-0.7.0.json) passed
+**313 Node tests in 22 suites** and **238 Chromium
 checks in 14 suites**, on source commit
 `1073ce21525c771f598b56d7452eaeceb2ed9178`. Game and test files stayed unchanged
 during execution. Browser coverage includes 100 ending/gallery checks, 22 audio
 checks, 28 keyboard/accessibility checks, four input regressions and fourteen
 complete roster duels. These are parts of the 238-check total, not extra tests.
 
-The current tracker has **10 sheets, 9 native tables, 102 features, 683 production
-tasks, 85 scenarios and 1,003 QA rows**. Its 551 current automated cases remain
-separate from 452 retained historical/review rows. The combined QA statuses are
+The tracker accompanying that campaign contained **10 sheets, 9 native tables,
+102 features, 683 production tasks, 85 scenarios and 1,003 QA rows**. Its 551
+automated cases were separate from 452 retained historical/review rows. The
+combined QA statuses were
 999 passed, zero failed, three not executed and one awaiting verification.
 All **39 formulas** were recalculated and checked. A separate sorted workbook
 fixture preserved ten notes across eight sheets, including two relative formulas,
 zero, false, literal `=` text and a custom row height; fixture notes are not shipped.
 
-The following older totals describe the historical 0.6 campaign, not additional
-fresh 0.7 test results.
+### Historical 0.6 campaign
+
+The following totals describe the earlier 0.6 campaign.
 
 The 0.6.0 evidence records **260 passing Node tests in 17 suites** and
 **154 passing Chromium checks in 18 suites**. All fourteen pre-existing

@@ -1,5 +1,6 @@
 /** Optional offline support. Failure never blocks an online match or a profile export. */
 const INIT_TIMEOUT_MS = 20000;
+const UPDATE_TIMEOUT_MS = 20000;
 const installError = () => new Error('L’installation hors ligne a échoué. Vérifie la connexion et l’espace disponible, puis réessaie.');
 
 // Registration cannot be cancelled, but a late result must not revive a failed attempt.
@@ -22,8 +23,9 @@ export class OfflineGame {
     this.registration = null;
     this.installPrompt = null;
     this.initializing = null;
+    this.updating = null;
     this.stopWatching = null;
-    this.state = { supported: 'serviceWorker' in navigator && window.isSecureContext, ready: false, busy: false, cached: 0, total: 0, bytes: 0, complete: false, update: false, installable: false, error: '', initError: '' };
+    this.state = { supported: 'serviceWorker' in navigator && window.isSecureContext, ready: false, busy: false, cached: 0, total: 0, bytes: 0, complete: false, update: false, applyingUpdate: false, installable: false, error: '', initError: '' };
     window.addEventListener('beforeinstallprompt', event => {
       event.preventDefault(); this.installPrompt = event; this.update({ installable: true });
     });
@@ -135,9 +137,9 @@ export class OfflineGame {
   }
   async prepare() {
     if (this.state.busy) return;
-    this.update({ busy: true, error: '' });
+    this.update({ busy: true, error: '', complete: false });
     try {
-      const result = await this.request('PREPARE', progress => this.update({ cached: progress.cached, total: progress.total }));
+      const result = await this.request('PREPARE', progress => this.update({ cached: progress.cached, total: progress.total, complete: progress.cached === progress.total }));
       this.update(result);
       return result;
     } catch (error) { this.update({ error: error.message }); throw error; }
@@ -147,10 +149,40 @@ export class OfflineGame {
     const result = await this.request('CLEAR_ART');
     this.update({ ...result, error: '' });
   }
-  async applyUpdate() {
-    if (!this.registration?.waiting) return;
-    navigator.serviceWorker.addEventListener('controllerchange', () => location.reload(), { once: true });
-    await this.request('ACTIVATE', null, this.registration.waiting);
+  applyUpdate() {
+    if (this.updating) return this.updating;
+    const worker = this.registration?.waiting;
+    if (!worker || this.state.busy) return Promise.resolve();
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(new Error('La mise à jour prend trop de temps. Réessaie depuis les réglages.')), UPDATE_TIMEOUT_MS);
+    let stopWaiting = () => {};
+    this.updating = Promise.resolve().then(async () => {
+      try {
+        await new Promise((resolve, reject) => {
+          // Activation may change the controller before its message reply arrives.
+          // Only the worker explicitly requested by this action can reload the game.
+          const changed = () => { if (navigator.serviceWorker.controller === worker) resolve(); };
+          const abort = () => reject(controller.signal.reason);
+          navigator.serviceWorker.addEventListener('controllerchange', changed);
+          controller.signal.addEventListener('abort', abort, { once: true });
+          stopWaiting = () => {
+            navigator.serviceWorker.removeEventListener('controllerchange', changed);
+            controller.signal.removeEventListener('abort', abort);
+          };
+          this.request('ACTIVATE', null, worker, controller.signal).catch(reject);
+          changed();
+        });
+        location.reload();
+      } catch (error) {
+        this.update({ error: error?.message || 'La mise à jour a échoué. Réessaie depuis les réglages.' });
+        throw error;
+      } finally {
+        clearTimeout(timer); stopWaiting(); controller.abort();
+        this.updating = null; this.update({ busy: false, applyingUpdate: false });
+      }
+    });
+    this.update({ busy: true, applyingUpdate: true, error: '' });
+    return this.updating;
   }
   async install() {
     if (!this.installPrompt) return false;

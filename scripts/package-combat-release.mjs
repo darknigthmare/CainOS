@@ -8,6 +8,7 @@ import assert from 'node:assert/strict';
 import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { GAME_VERSION } from '../combat/session.mjs';
+import { assertReviewedTestCoverage } from './combat-release-evidence.mjs';
 const root=process.cwd(), evidencePath=path.join(root,'audit-combat/ci/evidence-0.7.0.json');
 const evidence=JSON.parse(await fs.readFile(evidencePath,'utf8'));
 assert.equal(GAME_VERSION,'0.7.0');
@@ -16,13 +17,21 @@ assert.equal(evidence.pass,true,'Only a fully verified runtime may be packaged.'
 assert.equal(evidence.runtimeUnchangedDuringTests,true);
 const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
 for(const [file,expected] of Object.entries(evidence.runtimeSourceHashes)) assert.equal(sha(await fs.readFile(file)),expected,'Runtime changed: '+file);
-let verification;
+let verification, workbookEvidencePath;
 try {
   verification=JSON.parse(await fs.readFile('docs/combat-workbook-verification.json','utf8'));
   assert.equal(verification.gameVersion,GAME_VERSION,'The workbook still describes an earlier version.');
   assert.equal(verification.workbookSHA256,sha(await fs.readFile('docs/DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx')),'Workbook changed after review.');
   assert.equal(verification.trackerDataSHA256,sha(await fs.readFile('docs/combat-tracker-data.json')),'Tracker data changed after review.');
-  assert.equal(verification.sourceDigests['docs/combat-qa-evidence-0.7.0.json'],sha(await fs.readFile('docs/combat-qa-evidence-0.7.0.json')),'Workbook evidence changed after review.');
+  workbookEvidencePath=verification.currentQa?.evidence;
+  assert.ok(typeof workbookEvidencePath==='string' && /^docs\/combat-qa-evidence(?:-[a-zA-Z0-9.-]+)?\.json$/.test(workbookEvidencePath),'The reviewed workbook must identify its versioned evidence file.');
+  const reviewedEvidenceBytes=await fs.readFile(workbookEvidencePath);
+  assert.equal(verification.sourceDigests[workbookEvidencePath],sha(reviewedEvidenceBytes),'Workbook evidence changed after review.');
+  const reviewedEvidence=JSON.parse(reviewedEvidenceBytes);
+  assert.equal(reviewedEvidence.pass,true,'The reviewed evidence must describe a passing campaign.');
+  assert.deepEqual(reviewedEvidence.runtimeSourceHashes,evidence.runtimeSourceHashes,'Reviewed evidence describes another runtime.');
+  assert.deepEqual(reviewedEvidence.totals,evidence.totals,'Reviewed evidence coverage differs from current collection.');
+  assertReviewedTestCoverage(reviewedEvidence,evidence);
   for(const [file,digest]of Object.entries(evidence.runtimeSourceHashes))assert.equal(verification.sourceDigests[file],digest,'Workbook tracks an older runtime: '+file);
   for(const report of [...evidence.nodeReports,...evidence.browserReports]){
     assert.equal(sha(await fs.readFile(report.file)),report.sourceSha256,'Current test source changed: '+report.file);
@@ -87,9 +96,17 @@ const readme=[
   '0.7.0 ajoute 42 finales de spectacle et 12 ambiances sonores procédurales.',
   'Dans le Codex, ouvrir les finales puis choisir un tableau ou une tenue.',
   'Réglages : finales, ambiances et volume indépendant ; mouvement réduit pris en compte.',
-  'Les règles de simulation restent 0.5 ; replays 0.1 à 0.7 compatibles.','',
+  'Les règles de simulation restent 0.5 ; replays 0.1 à 0.7 compatibles.',
+  'Fiabilité du 29 octobre : commandes interrompues corrigées, 26 motifs sonores,',
+  'déchope et validation distinctes, récupération locale du profil si une copie',
+  'de secours valide existe. Une copie récupérée peut être plus ancienne.',
+  'La notice propose de vérifier, exporter ou conserver ce profil.',
+  'Cette livraison ajoute Réglages → Repères renforcés : formes et libellés',
+  'pour distinguer les joueurs et lire les jauges sans dépendre des couleurs.',
+  'Les échecs de préparation ou de mise à jour hors ligne restent réessayables',
+  'et un téléchargement incomplet ne se présente plus comme prêt.','',
   'Le fichier docs/DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx contient le suivi détaillé.',
-  'Les preuves du classeur sont dans docs/combat-qa-evidence-0.7.0.json.',
+  'Les preuves du classeur sont dans '+workbookEvidencePath+'.',
   'La vérification fraîche de cette archive est dans docs/combat-delivery-evidence-0.7.0.json.',
   'Les finales sont des adaptations Encore avec les dessins existants.',
   'La fidélité canonique générale 1:1 et les dessins de combat dédiés restent ouverts.','',
@@ -107,7 +124,9 @@ const copies=[
   ['docs/DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx','docs/DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx'],
   ['docs/combat-tracker-data.json','docs/combat-tracker-data.json'],
   ['docs/combat-workbook-verification.json','docs/combat-workbook-verification.json'],
-  ['docs/combat-qa-evidence-0.7.0.json','docs/combat-qa-evidence-0.7.0.json'],
+  [workbookEvidencePath,workbookEvidencePath],
+  ['docs/readability-validation-2026-10-29.json','docs/readability-validation-2026-10-29.json'],
+  ['docs/COMBAT_READABILITY_2026-10-29.md','docs/COMBAT_READABILITY_2026-10-29.md'],
   ['combat/offline-manifest.mjs','combat/offline-manifest.mjs'],
   ['audit-combat/finishers-0.7.0/contact-sheet-1.jpg','docs/images/finishers-0.7.0-a.jpg'],
   ['audit-combat/finishers-0.7.0/contact-sheet-2.jpg','docs/images/finishers-0.7.0-b.jpg']
@@ -148,7 +167,7 @@ for(const name of ['Digital_Circus_Encore_0.7.0.zip','DIGITAL_CIRCUS_COMBAT_TRAC
 const delivery={
   schema:'encore-release/v1',gameVersion:GAME_VERSION,sourceCommit:evidence.sourceCommit,runUrl:evidence.runUrl,generatedAt:new Date().toISOString(),
   files,reviewedFiles:generatedFiles,tests:evidence.totals,runtimeSourceHashes:evidence.runtimeSourceHashes,
-  workbookEvidence:{sourceCommit:verification.sourceCommit,sha256:verification.sourceDigests['docs/combat-qa-evidence-0.7.0.json']},
+  workbookEvidence:{path:workbookEvidencePath,sourceCommit:verification.sourceCommit,sha256:verification.sourceDigests[workbookEvidencePath]},
   packaging:{archiveIntegrity:true,standaloneRuntimeIdentical:true,pythonLauncherParsed:true,posixLauncherSyntax:true,nativeWindowsTested:false,nativeMacOSTested:false},
   limits:['Finales et audio procéduraux Encore ; fidélité canonique générale 1:1 non certifiée.','Téléphone et manettes physiques non testés dans cette CI.']
 };

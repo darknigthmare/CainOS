@@ -13,8 +13,9 @@ import { FINISHER_CATALOG, FINISHER_NOTICE } from './finisher-catalog.mjs';
 import { selectMatchFinisher } from './finishers.mjs';
 import { FinisherGallery } from './finisher-gallery.mjs';
 import { TrainingLab } from './training.mjs';
+import { fighterReadout, fighterMarkers } from './readability.mjs';
 import { OfflineGame } from './offline.mjs';
-import { GAME_VERSION, REPLAY_VERSIONS, replayRulesVersion, SAVE_KEY, REPLAY_KEY, MODES, CHALLENGES, readProfile, saveProfile, validateProfile, cleanSettings, appendReplayFrame, validateReplay, replayInputs, createMatchStats, collectMatchStats, challengeProgress } from './session.mjs';
+import { GAME_VERSION, REPLAY_VERSIONS, replayRulesVersion, SAVE_KEY, REPLAY_KEY, MODES, CHALLENGES, readProfileState, saveProfile, validateProfile, cleanSettings, appendReplayFrame, validateReplay, replayInputs, createMatchStats, collectMatchStats, challengeProgress } from './session.mjs';
 
 const $ = selector => document.querySelector(selector);
 const main = $('#main'), modal = $('#modal');
@@ -24,10 +25,12 @@ const embedded = new URLSearchParams(location.search).get('embedded') === '1' &&
 const reducedMotionPreference = matchMedia('(prefers-reduced-motion: reduce)');
 let storage;
 try { storage = localStorage; } catch { storage = { getItem: () => null, setItem: () => { throw new Error('Stockage indisponible'); } }; }
-let profile = readProfile(storage);
+const initialProfile = readProfileState(storage);
+let profile = initialProfile.profile;
+let profileRecovered = initialProfile.source === 'backup' ? 'backup' : null;
 let profileDirty = false;
 let screen = 'home', active = null, selection = { mode:'versus', fighters:['pomni','jax'], side:0, stage:STAGES[0].id, variants:['',''], challenge:CHALLENGES[0].id };
-let codexId = 'pomni', archiveQuery = '', archivePage = 0, archiveFilter = 'all', previousTime = 0, accumulator = 0, toastTimer;
+let codexId = 'pomni', archiveQuery = '', archivePage = 0, archiveFilter = 'all', previousTime = 0, accumulator = 0, toastTimer, searchTimer;
 let currentObserver, bindingCapture = null, osVisible = true, storyReader = null, finisherGallery = null, dialogReturnFocus = null;
 const PROGRAM_MODES = ['arcade', 'boss', 'survival', 'story', 'tournament'];
 const audio = new CombatAudio({ getSettings: () => profile.settings });
@@ -46,24 +49,42 @@ function toast(message) {
   const element = $('#toast'); element.textContent = message; element.hidden = false;
   clearTimeout(toastTimer); toastTimer = setTimeout(() => { element.hidden = true; }, 5000);
 }
+function profileRecoveryMarkup() {
+  if (!profileRecovered) return '';
+  const fromBackup = profileRecovered === 'backup';
+  const label = fromBackup ? 'TON PROFIL A ÉTÉ RÉCUPÉRÉ' : 'TA SESSION EST CONSERVÉE';
+  const heading = fromBackup ? 'Une copie de secours est disponible.' : 'Ton profil reste disponible.';
+  const message = fromBackup ? 'La sauvegarde principale est illisible. Cette copie valide peut être plus ancienne : vérifie ton palmarès et ton parcours avant de la conserver.' : 'La sauvegarde locale est illisible ou inaccessible. Le profil de cette session reste en mémoire. Exporte-le ou conserve-le pour protéger ta progression.';
+  return `<aside class="profile-recovery" data-profile-recovery data-recovery-source="${profileRecovered}" aria-labelledby="profile-recovery-title"><div><span class="ticket-label">${label}</span><h2 id="profile-recovery-title">${heading}</h2><p role="status">${message}</p></div><div class="modal-actions"><button class="primary" data-action="save-recovered-profile">Conserver ce profil</button><button class="secondary" data-action="export-profile">Exporter une copie</button></div></aside>`;
+}
 function persist() {
   profileDirty = !saveProfile(storage, profile);
   if (profileDirty) toast('Stockage local indisponible. Exporte ta sauvegarde pour la conserver.');
+  else {
+    profileRecovered = null;
+    document.querySelectorAll('[data-profile-recovery]').forEach(element => element.remove());
+  }
+  return !profileDirty;
 }
 function refreshStoredProfile() {
   // Keep unsaved results in memory when storage is denied, full or inaccessible.
   if (profileDirty) return;
-  try {
-    const raw = storage.getItem(SAVE_KEY);
-    if (!raw) return;
-    const latest = validateProfile(JSON.parse(raw), { strictProgram: false });
-    latest.settings = profile.settings;
-    profile = latest;
-  } catch { /* The current session remains playable and exportable. */ }
+  const latest = readProfileState(storage);
+  // Only the primary is newer authoritative storage. A fallback can be older
+  // than this live session when its last duplication was refused by quota.
+  if (latest.source !== 'primary') {
+    if (['backup', 'invalid', 'unavailable'].includes(latest.source)) profileRecovered ||= 'memory';
+    return;
+  }
+  latest.profile.settings = profile.settings;
+  profile = latest.profile;
+  profileRecovered = null;
 }
 function applySettings() {
   document.body.classList.toggle('reduced-motion', profile.settings.reducedMotion);
+  document.body.classList.toggle('enhanced-readability', profile.settings.enhancedReadability);
   if (active) active.showHitboxes = profile.settings.hitboxes;
+  fitReadabilityStage();
   syncAudio();
 }
 function syncAudio() {
@@ -71,12 +92,14 @@ function syncAudio() {
   audio.setPaused(document.hidden || !osVisible || !!(active && screen === 'fight' && active.engine.paused && !active.finished));
 }
 function sound(kind) { audio.play(kind); }
+function confirmAction() { void audio.unlock().then(() => sound('confirm')); }
 function prepareMenuGroups(scope) {
   scope.querySelectorAll('.modes-grid,.roster,.stages,.pick-side,.codex-list,.finale-choices,.challenge-list').forEach(group => { group.dataset.menuGroup = ''; });
   scope.querySelectorAll('[data-side]').forEach(button => button.setAttribute('aria-pressed', String(Number(button.dataset.side) === selection.side)));
   scope.querySelectorAll('[data-codex]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.codex === codexId)));
 }
 function setScreen(next) {
+  if (next !== 'archives') { clearTimeout(searchTimer); searchTimer = null; }
   const changed = screen !== next;
   const previousFocus = changed ? null : rememberFocus(main);
   screen = next; currentObserver?.disconnect();
@@ -138,7 +161,7 @@ function portraitMarkup(id, className='', width=200, height=230) { return `<canv
 
 function renderHome() {
   active = null; controls.clear(); setScreen('home');
-  main.innerHTML = `<section class="hero"><div class="hero-copy"><span class="ticket-label">CAINOS PRÉSENTE · ENTRÉE LIBRE</span><h1>LE SPECTACLE<em>RECOMMENCE.</em></h1><p>Les mêmes visages. De nouvelles rivalités.<br>Entre dans l’arène et invente ton prochain grand numéro.</p><div class="hero-bottom"><button class="primary" data-mode="versus">ENTRER EN SCÈNE &nbsp; ↗</button><div class="hero-stats"><span><b>${FIGHTERS.length}</b>ARTISTES</span><span><b>${STAGES.length}</b>ARÈNES</span><span><b>${MODES.length}</b>MODES</span></div></div></div><div class="hero-poster" aria-label="Pomni contre Jax"><span class="poster-title">THE AMAZING DIGITAL CIRCUS</span><span class="poster-star a" aria-hidden="true">✧</span><span class="poster-star b" aria-hidden="true">✦</span>${portraitMarkup('pomni','poster-art first',300,350)}${portraitMarkup('jax','poster-art second',300,350)}<span class="poster-vs">VS</span><span class="poster-badge">LE GRAND DUEL</span></div></section>
+  main.innerHTML = `${profileRecoveryMarkup()}<section class="hero"><div class="hero-copy"><span class="ticket-label">CAINOS PRÉSENTE · ENTRÉE LIBRE</span><h1>LE SPECTACLE<em>RECOMMENCE.</em></h1><p>Les mêmes visages. De nouvelles rivalités.<br>Entre dans l’arène et invente ton prochain grand numéro.</p><div class="hero-bottom"><button class="primary" data-mode="versus">ENTRER EN SCÈNE &nbsp; ↗</button><div class="hero-stats"><span><b>${FIGHTERS.length}</b>ARTISTES</span><span><b>${STAGES.length}</b>ARÈNES</span><span><b>${MODES.length}</b>MODES</span></div></div></div><div class="hero-poster" aria-label="Pomni contre Jax"><span class="poster-title">THE AMAZING DIGITAL CIRCUS</span><span class="poster-star a" aria-hidden="true">✧</span><span class="poster-star b" aria-hidden="true">✦</span>${portraitMarkup('pomni','poster-art first',300,350)}${portraitMarkup('jax','poster-art second',300,350)}<span class="poster-vs">VS</span><span class="poster-badge">LE GRAND DUEL</span></div></section>
     ${checkpointBanner()}<section aria-labelledby="modes-title"><div class="section-heading"><h2 id="modes-title">Choisis ton numéro</h2><span>LE RIDEAU NE TOMBE JAMAIS</span></div><div class="modes-grid">${MODES.map(m=>`<button class="mode-card" data-mode="${m.id}"><span class="eyebrow">${m.eyebrow}</span><span class="mode-icon" aria-hidden="true">${m.icon}</span><h3>${m.name}</h3><p>${m.description}</p><span class="card-label">${m.label}</span><span class="mode-arrow" aria-hidden="true">↗</span></button>`).join('')}<div class="mode-card replay-card"><span class="eyebrow">LES ARCHIVES DU SPECTACLE</span><span class="mode-icon" aria-hidden="true">▷</span><h3>Revoir la dernière scène</h3><p>Ton dernier duel enregistré, image par image.</p><div class="replay-actions"><button data-action="last-replay">Revoir</button><button data-action="import-replay">Importer</button><button data-action="export-replay">Exporter</button></div></div></div></section>`;
   portraits();
 }
@@ -266,7 +289,7 @@ function renderSettings() {
   setScreen('settings'); const s=profile.settings;
   const select=(key,values)=>`<select data-setting="${key}">${values.map(([v,label])=>`<option value="${v}" ${String(s[key])===String(v)?'selected':''}>${label}</option>`).join('')}</select>`;
   const check=key=>`<input type="checkbox" data-setting="${key}" ${s[key]?'checked':''}>`;
-  main.innerHTML=`${title('EN COULISSES','Les règles de ton spectacle','Le profil conserve tes réglages, tes résultats et le prochain duel de ton parcours. CainOS et la version autonome partagent ce profil sur le même site.')}
+  main.innerHTML=`${profileRecoveryMarkup()}${title('EN COULISSES','Les règles de ton spectacle','Le profil conserve tes réglages, tes résultats et le prochain duel de ton parcours. CainOS et la version autonome partagent ce profil sur le même site.')}
   <div class="settings-grid">
     <section class="settings-block"><h2>Combat et commandes</h2>
       <label class="settings-row">Disposition clavier ${select('layout',[['azerty','AZERTY'],['qwerty','QWERTY']])}</label>
@@ -286,6 +309,8 @@ function renderSettings() {
       <label class="settings-row">Volume de l’ambiance <input type="range" min="0" max="1" step="0.05" value="${s.ambienceVolume}" data-setting="ambienceVolume" aria-label="Volume de l’ambiance"></label>
       <label class="settings-row">Finales après un KO ${check('finishers')}</label>
       <label class="settings-row">Réduire les mouvements ${check('reducedMotion')}</label>
+      <label class="settings-row">Repères renforcés <input type="checkbox" data-setting="enhancedReadability" aria-describedby="readability-help" ${s.enhancedReadability?'checked':''}></label>
+      <p class="small-note" id="readability-help">Distingue les joueurs par un cercle J1 et un losange J2, même avec la même tenue. Affiche des jauges contrastées, leurs valeurs et les alertes de vie et de finale en texte. Le tableau reste au-dessus de l’arène.</p>
       <label class="settings-row">Afficher les zones de contact ${check('hitboxes')}</label>
       <p class="small-note">Douze thèmes et douze ambiances originales accompagnent les arènes, avec des volumes séparés. Les finales peuvent être passées immédiatement ; la réduction des mouvements en montre une composition fixe.</p>
       <button class="secondary" data-mode="training">Ouvrir les répétitions</button>
@@ -298,7 +323,7 @@ function renderSettings() {
       ${profile.stories.length?`<p class="small-note">Histoires : ${profile.stories.map(id=>escapeHTML(getFighter(id).name)).join(', ')}.</p>`:''}
     </section>
     <section class="settings-block"><h2>Profil et replays</h2>
-      <p class="small-note">Exporte ton profil pour transférer tes touches, ton palmarès et ton parcours en cours. Le duel interrompu recommence à son entrée ; les rencontres déjà gagnées restent acquises.</p>
+      <p class="small-note">Exporte ton profil pour transférer tes touches, ton palmarès et ton parcours en cours. Le duel interrompu recommence à son entrée ; les rencontres déjà gagnées restent acquises. Une copie de secours locale est conservée quand le stockage le permet ; elle peut être plus ancienne. L’export reste utile pour garder une copie indépendante.</p>
       <div class="modal-actions"><button class="secondary" data-action="export-profile">Exporter le profil</button><button class="secondary" data-action="import-profile">Importer un profil</button></div>
       <div class="modal-actions"><button class="secondary" data-action="export-replay">Exporter le dernier duel</button><button class="secondary" data-action="import-replay">Lire un replay</button></div>
       <p class="small-note">Les replays conservent les commandes, la graine et les costumes. Versions compatibles : ${REPLAY_VERSIONS.join(', ')}. Chaque enregistrement conserve ses règles de déplacement.</p>
@@ -319,7 +344,7 @@ function renderSettings() {
 function updateOfflinePanel() {
   if (screen !== 'settings' || !$('#offline-status')) return;
   const state = offline.getState();
-  $('#offline-status').textContent = !state.supported ? 'Le hors ligne nécessite HTTPS ou localhost et un navigateur compatible.' : !state.ready ? (state.initError ? 'Le mode hors ligne est indisponible. Tu peux réessayer.' : 'Préparation du mode hors ligne…') : state.complete ? 'Spectacle prêt hors ligne · ' + state.cached + ' illustrations.' : (state.busy ? 'Téléchargement : ' : 'Illustrations disponibles : ') + state.cached + '/' + state.total + ' · ' + Math.ceil(state.bytes/1048576) + ' Mo pour le pack complet.';
+  $('#offline-status').textContent = !state.supported ? 'Le hors ligne nécessite HTTPS ou localhost et un navigateur compatible.' : !state.ready ? (state.initError ? 'Le mode hors ligne est indisponible. Tu peux réessayer.' : 'Préparation du mode hors ligne…') : state.applyingUpdate ? 'Application de la mise à jour…' : state.complete ? 'Spectacle prêt hors ligne · ' + state.cached + ' illustrations.' : (state.busy ? 'Téléchargement : ' : 'Illustrations disponibles : ') + state.cached + '/' + state.total + ' · ' + Math.ceil(state.bytes/1048576) + ' Mo pour le pack complet.';
   $('#offline-progress').max = state.total || 1; $('#offline-progress').value = state.cached;
   $('[data-action="offline-retry"]').hidden = !state.supported || state.ready || !state.initError;
   $('[data-action="offline-retry"]').disabled = state.busy;
@@ -341,9 +366,10 @@ function renderFight() {
   setScreen('fight');
   const f=active.fighters, mode=active.replay?'REPLAY LOCAL':MODES.find(m=>m.id===active.mode)?.name;
   const touch=profile.settings.touch==='on'||profile.settings.touch==='auto'&&matchMedia('(pointer:coarse)').matches;
-  main.innerHTML=`<div class="fight-toolbar"><span class="fight-caption">${escapeHTML(mode)} · ${escapeHTML(active.stage.name)}${active.run?` · ${active.run.index+1}/${active.run.opponents.length}`:''}</span><button class="secondary" data-action="pause">Ⅱ Pause</button><button class="secondary" data-action="movelist">Techniques</button><button class="secondary" data-action="controls">Commandes</button>${active.run?.mode==='tournament'?'<button class="secondary" data-action="bracket">Tableau</button>':''}<button class="secondary" data-action="fullscreen">⛶ Plein écran</button></div>${active.mode==='challenge'?`<div class="challenge-progress"><span>${escapeHTML(active.challenge.text)}</span><progress id="challenge-bar" max="${active.challenge.goal}" value="0"></progress><b id="challenge-value">0/${active.challenge.goal}</b><span id="challenge-time">60 s</span></div>`:''}<section class="arena-wrap" aria-label="Arène de combat"><canvas id="arena" width="1280" height="720" tabindex="0" aria-label="Combat. Les commandes sont disponibles au-dessus de l’arène."></canvas><div class="hud">${hudPlayer(f[0],0)}<div class="hud-timer"><span id="round-time">90</span><small id="round-label">MANCHE 1</small></div>${hudPlayer(f[1],1)}</div><div id="announcement" class="fight-announcement" aria-live="polite"></div><div class="fight-bottom"><span id="feedback-0" class="fight-feedback"></span><span id="feedback-1" class="fight-feedback second"></span></div></section>${active.training?trainingMarkup():''}<div class="control-strip"><span>${['left','right','jump','down','light','heavy','special','throw','super','utility'].map(action=>`<kbd>${escapeHTML(binding(action))}</kbd> ${escapeHTML(BINDING_ACTIONS.find(a=>a.id===action).label)}`).join(' · ')}</span><span><kbd>${escapeHTML(binding('guard'))}</kbd> Garde · <kbd>${escapeHTML(binding('dash'))}</kbd> Dash · <kbd>Échap</kbd> Pause</span></div>${touch?touchMarkup():''}`;
+  main.innerHTML=`<div class="fight-toolbar"><span class="fight-caption">${escapeHTML(mode)} · ${escapeHTML(active.stage.name)}${active.run?` · ${active.run.index+1}/${active.run.opponents.length}`:''}</span><button class="secondary" data-action="pause">Ⅱ Pause</button><button class="secondary" data-action="movelist">Techniques</button><button class="secondary" data-action="controls">Commandes</button>${active.run?.mode==='tournament'?'<button class="secondary" data-action="bracket">Tableau</button>':''}<button class="secondary" data-action="fullscreen">⛶ Plein écran</button></div>${active.mode==='challenge'?`<div class="challenge-progress"><span>${escapeHTML(active.challenge.text)}</span><progress id="challenge-bar" max="${active.challenge.goal}" value="0"></progress><b id="challenge-value">0/${active.challenge.goal}</b><span id="challenge-time">60 s</span></div>`:''}<section class="arena-wrap" aria-label="Arène de combat"><div class="arena-stage"><canvas id="arena" width="1280" height="720" tabindex="0" aria-label="Combat. Les commandes sont disponibles au-dessus de l’arène."></canvas><div class="fighter-markers" aria-hidden="true">${[0,1].map(index=>`<span class="fighter-marker player-${index}" id="fighter-marker-${index}"><i class="identity-shape" aria-hidden="true"></i>J${index+1}</span>`).join('')}</div><div id="announcement" class="fight-announcement" aria-live="polite"></div><div class="fight-bottom"><span id="feedback-0" class="fight-feedback"></span><span id="feedback-1" class="fight-feedback second"></span></div></div><div class="hud">${hudPlayer(f[0],0)}<div class="hud-timer"><span id="round-time">90</span><small id="round-label">MANCHE 1</small></div>${hudPlayer(f[1],1)}</div></section>${active.training?trainingMarkup():''}<div class="control-strip"><span>${['left','right','jump','down','light','heavy','special','throw','super','utility'].map(action=>`<kbd>${escapeHTML(binding(action))}</kbd> ${escapeHTML(BINDING_ACTIONS.find(a=>a.id===action).label)}`).join(' · ')}</span><span><kbd>${escapeHTML(binding('guard'))}</kbd> Garde · <kbd>${escapeHTML(binding('dash'))}</kbd> Dash · <kbd>Échap</kbd> Pause</span></div>${touch?touchMarkup():''}`;
   active.renderer=new CombatRenderer($('#arena')); controls.bindTouch(main);
-  $('#arena').focus({preventScroll:true}); updateHUD();
+  $('#arena').focus({preventScroll:true}); updateHUD(); fitReadabilityStage();
+  if (profile.settings.enhancedReadability) main.scrollIntoView({ block: 'start' });
 }
 function trainingMarkup() {
   return `<section class="training-lab" aria-labelledby="training-title"><div class="training-heading"><div><span class="ticket-label">LE LABORATOIRE</span><h2 id="training-title">Répéter, image par image.</h2></div><span id="training-frame" class="small-note"></span></div><div class="training-panel"><label>Mannequin <select id="training-dummy"><option value="idle">Immobile</option><option value="block">Garde haute</option><option value="crouch">Garde basse</option><option value="jump">Sauts</option><option value="after">Garde après impact</option><option value="cpu">CPU</option><option value="playback" disabled>Séquence manuelle</option></select></label><label>Vitesse <select id="training-speed"><option value="1">×1</option><option value="0.5">×0,5</option><option value="0.25">×0,25</option></select></label><label><input type="checkbox" id="training-meter" checked> Finale libre</label><label><input type="checkbox" id="training-resource" checked> Ressource libre</label><label><input type="checkbox" id="training-heal" checked> Soin automatique</label><label><input type="checkbox" id="training-boxes" ${active.showHitboxes?'checked':''}> Zones de contact</label></div><div class="training-actions"><button class="secondary" data-action="training-freeze" aria-pressed="false">Figer</button><button class="secondary" data-action="training-step" disabled>+1 image</button><button class="secondary" data-action="reset-training">Replacer</button><button class="secondary" data-action="training-history">Effacer l’historique</button></div><div class="training-readouts">${[0,1].map(i=>`<div><strong>${i?'Mannequin':'Joueur 1'}</strong><p id="training-readout-${i}"></p></div>`).join('')}</div><p id="training-data" class="training-data"></p><div class="training-recorder"><div><h3>La séquence du mannequin</h3><p>Enregistre jusqu’à 10 secondes : les commandes J1 pilotent le mannequin, J1 reste neutre. Enregistrer ou lire replace les artistes. La lecture suit le côté vers lequel regarde le mannequin.</p></div><div class="training-actions"><button class="secondary" data-action="training-record">Enregistrer</button><button class="secondary" data-action="training-play" disabled>Lire</button><button class="secondary" data-action="training-stop" disabled>Arrêter</button><button class="secondary" data-action="training-clear" disabled>Effacer la séquence</button><label><input type="checkbox" id="training-loop"> En boucle</label></div><p id="training-tape-status" role="status"></p></div><div class="training-histories">${[0,1].map(i=>`<section><h3>Commandes ${i?'du mannequin':'J1'} <small>12 dernières entrées</small></h3><ol id="training-history-${i}"></ol></section>`).join('')}</div></section>`;
@@ -379,7 +405,28 @@ function updateTrainingHUD() {
   $('#training-data').textContent=`Dégâts ${number(active.stats[0].damage)} · Impacts ${active.stats[0].hits} · Gardes du mannequin ${active.stats[1].blocked}`;
   view.history.forEach((rows,index)=>{const node=$(`#training-history-${index}`),html=rows.length?rows.map(row=>`<li><span>${escapeHTML(row.label)}</span><b>${row.frames} i</b></li>`).join(''):'<li><span>Aucune commande observée</span></li>';if(node.innerHTML!==html)node.innerHTML=html;});
 }
-function hudPlayer(f,index) { return `<div class="hud-player ${index?'second':''}"><div class="hud-name"><span>${escapeHTML(f.name)}</span><span>${index?active.mode==='local'?'J2':'CPU':'J1'}</span></div><div class="health-track"><div id="health-${index}" class="health-fill"></div></div><div class="guard-track"><div id="guard-${index}" class="guard-fill"></div></div><div class="meter-track"><div id="meter-${index}" class="meter-fill"></div></div><div class="hud-bars-meta"><span id="hp-${index}">10 000</span><span id="resource-${index}">STABILITÉ 100</span><span id="super-${index}">FINALE 0%</span></div><div class="round-pips" id="wins-${index}">○ ○</div></div>`; }
+function fitReadabilityStage() {
+  const stage = main.querySelector('.arena-stage');
+  if (!stage) return;
+  if (!profile.settings.enhancedReadability || innerWidth < 700) { stage.style.removeProperty('max-width'); return; }
+  // Desktop keeps the full scene and the larger HUD in one viewport. The HUD
+  // remains full-width; only the 16:9 scene shrinks, so labels stay readable.
+  const aboveStage = stage.getBoundingClientRect().top - main.getBoundingClientRect().top;
+  const availableHeight = Math.max(120, innerHeight - aboveStage - 12);
+  const maximum = `${Math.floor(availableHeight * 16 / 9)}px`;
+  if (stage.style.maxWidth !== maximum) stage.style.maxWidth = maximum;
+}
+window.addEventListener('resize', fitReadabilityStage);
+document.addEventListener('fullscreenchange', fitReadabilityStage);
+const readabilityObserver = new ResizeObserver(fitReadabilityStage);
+readabilityObserver.observe(main);
+
+function hudPlayer(f,index) {
+  const label = index ? active.mode === 'local' ? 'J2' : ['training','challenge'].includes(active.mode) ? 'J2 · MANNEQUIN' : 'J2 · CPU' : 'J1';
+  const maximum = f.stats?.health || 10000;
+  const gauge = (kind, label, maximum) => `<div class="gauge-label readability-only"><span>${label}</span><b id="${kind}-value-${index}"></b></div><div class="${kind === 'health' ? 'health' : kind === 'guard' ? 'guard' : 'meter'}-track" id="${kind}-track-${index}" role="meter" aria-label="${label.toLowerCase()} joueur ${index+1}" aria-valuemin="0" aria-valuemax="${maximum}" aria-valuenow="${kind==='health'?maximum:kind==='guard'?100:0}"><div id="${kind === 'finale' ? 'meter' : kind}-${index}" class="${kind === 'finale' ? 'meter' : kind}-fill"></div></div>`;
+  return `<div class="hud-player player-${index} ${index?'second':''}"><div class="hud-name"><span>${escapeHTML(f.name)}</span><span class="hud-player-id"><i class="identity-shape readability-only" aria-hidden="true"></i><span>${label}</span></span></div>${gauge('health','VIE',maximum)}${gauge('guard','GARDE',100)}${gauge('finale','FINALE',100)}<div class="hud-bars-meta"><span id="hp-${index}">${number(maximum)}</span><span id="resource-${index}">STABILITÉ 100</span><span id="super-${index}">FINALE 0%</span></div><p class="readability-status readability-only" id="readability-status-${index}"></p><div class="round-pips" id="wins-${index}">○ ○</div></div>`;
+}
 function touchMarkup() {
   const button=(action,label,style='')=>`<button data-control="${action}" class="${style}" aria-label="${escapeHTML(action)}">${label}</button>`;
   return `<div class="touch-controls" aria-label="Commandes tactiles joueur 1"><div class="touch-move"><span></span>${button('jump','↑')}<span></span>${button('left','←')}${button('down','↓')}${button('right','→')}${button('guard','Garde','guard')}${button('dash','Dash')}<span></span></div><div class="touch-buttons">${button('light','Léger')}${button('heavy','Fort')}${button('special','Spéc.','accent')}${button('throw','Saisie')}${button('low','Bas')}${button('utility','Repos')}${button('super','Finale','accent')}${button('tech','Déchope')}</div></div><div class="touch-extra">${button('specialDown','Spécial ↓')}${button('specialForward','Spécial avant')}${button('specialBack','Spécial arrière')}</div>`;
@@ -484,13 +531,23 @@ function updateHUD() {
   if(!active || screen!=='fight')return;
   const s=active.engine.state;
   s.fighters.forEach((p,i)=>{
-    $(`#health-${i}`).style.width=`${Math.max(0,p.life/p.max*100)}%`;
-    $(`#guard-${i}`).style.width=`${p.guard}%`; $(`#meter-${i}`).style.width=`${p.meter}%`;
+    const cue = fighterReadout(p);
+    $(`#health-${i}`).style.width=`${cue.life/cue.maximum*100}%`;
+    $(`#guard-${i}`).style.width=`${cue.guard}%`; $(`#meter-${i}`).style.width=`${cue.meter}%`;
+    for (const [kind, value, text] of [['health',cue.life,`${number(cue.life)} / ${number(cue.maximum)}`],['guard',cue.guard,`${Math.round(cue.guard)} %`],['finale',cue.meter,`${Math.floor(cue.meter)} / ${cue.requiredMeter}`]]) {
+      const track = $(`#${kind}-track-${i}`), readout = $(`#${kind}-value-${i}`);
+      if (track.getAttribute('aria-valuenow') !== String(Math.round(value))) track.setAttribute('aria-valuenow', String(Math.round(value)));
+      if (readout.textContent !== text) { readout.textContent = text; track.setAttribute('aria-valuetext', text); }
+    }
+    $(`#health-track-${i}`).classList.toggle('critical', cue.critical);
+    $(`#finale-track-${i}`).classList.toggle('ready', cue.ready);
+    const status = $(`#readability-status-${i}`); if (status.textContent !== cue.status) status.textContent = cue.status;
     $(`#hp-${i}`).textContent=number(p.life); $(`#resource-${i}`).textContent=`STAB. ${Math.round(p.r)}`; $(`#super-${i}`).textContent=`FINALE ${Math.round(p.meter)}%`;
     $(`#wins-${i}`).textContent=Array.from({length:s.roundsToWin},(_,n)=>n<s.wins[i]?'●':'○').join(' ');
     const combo = s.fighters[1-i].comboHits || 0;
     $(`#feedback-${i}`).textContent = p.feedbackT>0 ? p.feedback : combo>=2 ? `${combo} IMPACTS` : '';
   });
+  if (profile.settings.enhancedReadability) fighterMarkers(s.fighters).forEach((marker, index) => { const node=$(`#fighter-marker-${index}`); node.style.left=`${marker.x/1280*100}%`; node.style.top=`${marker.y/720*100}%`; });
   $('#round-time').textContent=Number.isFinite(s.timer)?String(Math.max(0,Math.ceil(s.timer))).padStart(2,'0'):'∞';
   $('#round-label').textContent=active.replay?'REPLAY':`MANCHE ${s.round}`;
   let announcement='';
@@ -586,7 +643,7 @@ function finishMatch() {
   active.presentationPhase='matchOver'; active.presentationElapsed=0;
   $('.arena-wrap').classList.toggle('finishing',!!active.finisher);
   if(active.finisher)$('#arena').setAttribute('aria-label',active.finisher.title+' — finale de spectacle. Le résultat du duel est déjà enregistré.');
-  const skip=document.createElement('button'); skip.className='primary outcome-skip'; skip.dataset.action='result-screen'; skip.textContent='Voir le résultat'; $('.arena-wrap').append(skip); skip.focus({preventScroll:true});
+  const skip=document.createElement('button'); skip.className='primary outcome-skip'; skip.dataset.action='result-screen'; skip.textContent='Voir le résultat'; $('.arena-stage').append(skip); skip.focus({preventScroll:true});
 }
 function renderMatchResult() {
   if(!active?.finished)return;
@@ -617,7 +674,7 @@ function pauseGame(reason=''){
   active.engine.pause();controls.clear();accumulator=0;
   showDialog(`<span class="ticket-label">ENTRACTE</span><h2 id="modal-title">Le spectacle attend.</h2><p class="result-copy">${escapeHTML(reason||'Prends ton temps. Le combat est en pause.')}</p><div class="modal-actions"><button class="primary" data-action="resume">Reprendre</button><button class="secondary" data-action="movelist">Techniques</button><button class="secondary" data-action="select-again">Changer d’affiche</button><button class="secondary" data-action="home">Accueil</button></div>`);
 }
-function resumeGame(){if(!active||active.finished)return;if(active.storyPending){showStoryScene();return;}closeDialog();active.engine.pause(active.training?.frozen||false);accumulator=0;previousTime=performance.now();controls.clear();$('#arena')?.focus({preventScroll:true});syncAudio();}
+function resumeGame(){if(!active||active.finished)return;if(active.storyPending){showStoryScene();return;}closeDialog();active.engine.pause(active.training?.frozen||false);accumulator=0;previousTime=performance.now();controls.clear();$('#arena')?.focus({preventScroll:true});syncAudio();confirmAction();}
 function showMoveList(){
   if(active&&!active.finished)active.engine.pause();controls.clear();
   const fighter=active?.fighters[0]||getFighter(codexId);
@@ -672,7 +729,9 @@ function navigateMenu(action) {
 }
 async function handleClick(event){
   const button=event.target.closest('button');if(!button||button.disabled)return;
-  void audio.unlock().then(() => sound(button.dataset.action==='home'||button.dataset.action==='close-modal'?'back':'select'));
+  const unlock = audio.unlock();
+  const confirmsAfterSuccess = ['reset-bindings','save-recovered-profile','resume','story-start'].includes(button.dataset.action) || button.id === 'confirm-import';
+  if (!confirmsAfterSuccess) void unlock.then(() => sound(button.dataset.action==='home'||button.dataset.action==='close-modal'?'back':'select'));
   try{
     if(button.dataset.bindAction){captureBinding(button);return;}
     if(button.dataset.nav){navigate(button.dataset.nav);return;}
@@ -711,7 +770,8 @@ async function handleClick(event){
       case 'story-ending-result':if(active?.mode==='story'&&active.pendingNext?.status==='complete')openStoryReader(active.run.playerId,'epilogue','result');break;
       case 'bracket':showBracket();break;
       case 'result-screen':renderMatchResult();break;
-      case 'reset-bindings':profile.settings=cleanSettings({...profile.settings,bindings:DEFAULT_BINDINGS});persist();renderSettings();toast('Touches par défaut rétablies.');break;
+      case 'reset-bindings':{profile.settings=cleanSettings({...profile.settings,bindings:DEFAULT_BINDINGS});const saved=persist();renderSettings();if(saved){confirmAction();toast('Touches par défaut rétablies.');}break;}
+      case 'save-recovered-profile':if(profileRecovered){const source=profileRecovered;if(persist()){main.focus({preventScroll:true});confirmAction();toast(source==='backup'?'Le profil récupéré est enregistré.':'Le profil de cette session est enregistré.');}}break;
       case 'offline-retry':await offline.init();if(offline.getState().ready)toast('Le mode hors ligne est prêt.');break;
       case 'offline-prepare':await offline.prepare();toast('Le spectacle est prêt pour une visite hors ligne.');break;
       case 'offline-clear':await offline.clearAssets();toast('Illustrations libérées. Le profil est conservé.');break;
@@ -769,9 +829,9 @@ document.addEventListener('keydown',event=>{
   const value=event.code==='Backspace'&&slot===1?null:event.code;
   const result=rebindAction(profile.settings.bindings,player,action,value,slot);
   if(!result.ok){$('#binding-error').textContent=result.error;return;}
-  profile.settings=cleanSettings({...profile.settings,bindings:result.bindings});persist();controls.clear();closeDialog();renderSettings();
+  profile.settings=cleanSettings({...profile.settings,bindings:result.bindings});const saved=persist();controls.clear();closeDialog();renderSettings();
   main.querySelector(`[data-bind-player="${player}"][data-bind-action="${action}"][data-bind-slot="${slot}"]`)?.focus();
-  toast('Commande enregistrée.');
+  if(saved){confirmAction();toast('Commande enregistrée.');}
 },true);
 document.addEventListener('change',event=>{
   const target=event.target;
@@ -790,8 +850,24 @@ document.addEventListener('change',event=>{
     active.showHitboxes=$('#training-boxes').checked;accumulator=0;controls.clear();updateTrainingHUD();
   }
 });
-let searchTimer;
-document.addEventListener('input',event=>{if(event.target.id==='archive-search'){archiveQuery=event.target.value;clearTimeout(searchTimer);searchTimer=setTimeout(()=>{archivePage=0;renderArchives();const input=$('#archive-search');input.focus();input.setSelectionRange(input.value.length,input.value.length);},200);}});
+document.addEventListener('input', event => {
+  if (event.target.id !== 'archive-search') return;
+  const input = event.target;
+  archiveQuery = input.value; clearTimeout(searchTimer);
+  searchTimer = setTimeout(() => {
+    searchTimer = null;
+    // A pending search belongs to its screen and current editor. Navigation,
+    // filters or another render must not bring back an abandoned archive view.
+    if (screen !== 'archives' || !input.isConnected) return;
+    const focused = document.activeElement === input;
+    const selection = [input.selectionStart, input.selectionEnd, input.selectionDirection];
+    archivePage = 0; renderArchives();
+    if (focused) {
+      const replacement = $('#archive-search');
+      replacement.focus({ preventScroll: true }); replacement.setSelectionRange(...selection);
+    }
+  }, 200);
+});
 modal.addEventListener('cancel',event=>{
   event.preventDefault();
   if(storyReader){leaveStoryReader();return;}
@@ -808,10 +884,22 @@ modal.addEventListener('keydown',event=>{
 window.addEventListener('blur',()=>{if(active&&screen==='fight'&&!active.finished&&!modal.open)pauseGame('La fenêtre a perdu le focus. Reprends lorsque tu es prêt.');});
 document.addEventListener('visibilitychange',()=>{if(document.hidden){finisherGallery?.suspendClock();if(active&&!active.finished)pauseGame('Le jeu a été masqué. La rencontre est suspendue.');}syncAudio();});
 window.addEventListener('message',event=>{if(!embedded||event.source!==window.parent||event.origin!==location.origin)return;if(event.data?.type==='cainos:combat:visibility'){osVisible=event.data.active!==false;if(!osVisible){finisherGallery?.suspendClock();controls.clear();if(active&&!active.finished)pauseGame('La fenêtre de combat a été masquée dans CainOS.');}syncAudio();}});
-window.addEventListener('storage',event=>{if(event.key===SAVE_KEY&&!profileDirty){profile=readProfile(storage);applySettings();if(screen==='settings')renderSettings();else if(screen==='home')renderHome();}});
+window.addEventListener('storage', event => {
+  if (event.key !== SAVE_KEY || profileDirty) return;
+  const latest = readProfileState(storage);
+  if (['primary', 'empty'].includes(latest.source)) {
+    profile = latest.profile; profileRecovered = null;
+  } else {
+    // Keep the valid live profile, including when the available backup lags it.
+    // A missing primary remains an explicit deletion handled above.
+    profileRecovered ||= 'memory';
+  }
+  applySettings();
+  if (screen === 'settings') renderSettings(); else if (screen === 'home') renderHome();
+});
 $('#import-profile').addEventListener('change',async event=>{
   const file=event.target.files[0];event.target.value='';if(!file)return;
-  try{if(file.size>2_000_000)throw new Error('Ce fichier de profil est trop volumineux.');const imported=validateProfile(JSON.parse(await file.text()));showDialog('<span class="ticket-label">PROFIL IMPORTÉ</span><h2 id="modal-title">Remplacer ce profil local ?</h2><p class="result-copy">Les réglages et le palmarès de ce navigateur seront remplacés par ceux du fichier choisi.</p><div class="modal-actions"><button class="primary" id="confirm-import">Importer ce profil</button><button class="secondary" data-action="close-modal">Annuler</button></div>');$('#confirm-import').addEventListener('click',()=>{profile=imported;persist();applySettings();closeDialog();renderSettings();toast('Profil importé.');},{once:true});}catch(error){toast(error.message);}
+  try{if(file.size>2_000_000)throw new Error('Ce fichier de profil est trop volumineux.');const imported=validateProfile(JSON.parse(await file.text()));showDialog('<span class="ticket-label">PROFIL IMPORTÉ</span><h2 id="modal-title">Remplacer ce profil local ?</h2><p class="result-copy">Les réglages et le palmarès de ce navigateur seront remplacés par ceux du fichier choisi.</p><div class="modal-actions"><button class="primary" id="confirm-import">Importer ce profil</button><button class="secondary" data-action="close-modal">Annuler</button></div>');$('#confirm-import').addEventListener('click',()=>{profile=imported;const saved=persist();applySettings();closeDialog();renderSettings();if(saved){confirmAction();toast('Profil importé.');}},{once:true});}catch(error){toast(error.message);}
 });
 $('#import-replay').addEventListener('change',async event=>{
   const file=event.target.files[0];event.target.value='';if(!file)return;

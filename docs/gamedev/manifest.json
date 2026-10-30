@@ -1,0 +1,370 @@
+{
+  "schema": "cainos-gamedev-snapshot/v1",
+  "upstreamRepository": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills",
+  "upstreamCommit": "19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9",
+  "upstreamCommittedAt": "2026-10-28T03:10:14Z",
+  "retrievedOn": "2026-10-29",
+  "scope": "Selected development reference documents for this Git repository; not a personal ChatGPT skill installation.",
+  "license": "Apache-2.0",
+  "licensePath": "docs/gamedev/upstream/LICENSE",
+  "noticePath": "docs/gamedev/upstream/NOTICE",
+  "selection": [
+    {
+      "name": "router",
+      "path": "docs/gamedev/upstream/router/SKILL.md"
+    },
+    {
+      "name": "audio-design",
+      "path": "docs/gamedev/upstream/skills/disciplines/audio-design/SKILL.md"
+    },
+    {
+      "name": "create-game-assets",
+      "path": "docs/gamedev/upstream/skills/disciplines/create-game-assets/SKILL.md"
+    },
+    {
+      "name": "game-ai",
+      "path": "docs/gamedev/upstream/skills/disciplines/game-ai/SKILL.md"
+    },
+    {
+      "name": "game-feel",
+      "path": "docs/gamedev/upstream/skills/disciplines/game-feel/SKILL.md"
+    },
+    {
+      "name": "game-ui-ux",
+      "path": "docs/gamedev/upstream/skills/disciplines/game-ui-ux/SKILL.md"
+    },
+    {
+      "name": "input-systems",
+      "path": "docs/gamedev/upstream/skills/disciplines/input-systems/SKILL.md"
+    },
+    {
+      "name": "performance-optimization",
+      "path": "docs/gamedev/upstream/skills/disciplines/performance-optimization/SKILL.md"
+    },
+    {
+      "name": "physics-tuning",
+      "path": "docs/gamedev/upstream/skills/disciplines/physics-tuning/SKILL.md"
+    },
+    {
+      "name": "save-systems",
+      "path": "docs/gamedev/upstream/skills/disciplines/save-systems/SKILL.md"
+    }
+  ],
+  "files": [
+    {
+      "path": "docs/gamedev/upstream/LICENSE",
+      "upstreamPath": "LICENSE",
+      "sourceUrl": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9/LICENSE",
+      "gitBlobSha1": "c7fc0c6d59cb8129a0e30fe13f5a6118f3933c44",
+      "bytes": 11395,
+      "mode": "100644",
+      "modified": false
+    },
+    {
+      "path": "docs/gamedev/upstream/NOTICE",
+      "upstreamPath": "NOTICE",
+      "sourceUrl": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9/NOTICE",
+      "gitBlobSha1": "d4204881c3f79f39151a53a6aae476b188a8c51f",
+      "bytes": 883,
+      "mode": "100644",
+      "modified": false
+    },
+    {
+      "path": "docs/gamedev/upstream/router/SKILL.md",
+      "upstreamPath": "router/SKILL.md",
+      "sourceUrl": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9/router/SKILL.md",
+      "gitBlobSha1": "f19eacd9d68dbe8d4c1289032b5957db30ecc41e",
+      "bytes": 18693,
+      "mode": "100644",
+      "modified": false
+    },
+    {
+      "path": "docs/gamedev/upstream/router/agents/openai.yaml",
+      "upstreamPath": "router/agents/openai.yaml",
+      "sourceUrl": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9/router/agents/openai.yaml",
+      "gitBlobSha1": "2bc50b9472334813cb0bc0fca5cec3c5862abbc2",
+      "bytes": 221,
+      "mode": "100644",
+      "modified": false
+    },
+    {
+      "path": "docs/gamedev/upstream/router/references/custom-engines.md",
+      "upstreamPath": "router/references/custom-engines.md",
+      "sourceUrl": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9/router/references/custom-engines.md",
+      "gitBlobSha1": "82185991fab8df0bc5ea51fe7dc1007479948d0a",
+      "bytes": 3808,
+      "mode": "100644",
+      "modified": false
+    },
+    {
+      "path": "docs/gamedev/upstream/router/references/engine-detection.md",
+      "upstreamPath": "router/references/engine-detection.md",
+      "sourceUrl": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9/router/references/engine-detection.md",
+      "gitBlobSha1": "d132b4e7447dfe363fd66ff3b0131324cf4c999a",
+      "bytes": 7038,
+      "mode": "100644",
+      "modified": false
+    },
+    {
+      "path": "docs/gamedev/upstream/router/references/routing-table.md",
+      "upstreamPath": "router/references/routing-table.md",
+      "sourceUrl": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9/router/references/routing-table.md",
+      "gitBlobSha1": "d0de791a4f081ed75384a73a3c1834e6b0d83f6d",
+      "bytes": 14814,
+      "mode": "100644",
+      "modified": false
+    },
+    {
+      "path": "docs/gamedev/upstream/skills/disciplines/audio-design/SKILL.md",
+      "upstreamPath": "skills/disciplines/audio-design/SKILL.md",
+      "sourceUrl": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9/skills/disciplines/audio-design/SKILL.md",
+      "gitBlobSha1": "37996996f5d9fe438a43d39bfe58004dc0b1e6d8",
+      "bytes": 9562,
+      "mode": "100644",
+      "modified": false
+    },
+    {
+      "path": "docs/gamedev/upstream/skills/disciplines/audio-design/references/adaptive-music.md",
+      "upstreamPath": "skills/disciplines/audio-design/references/adaptive-music.md",
+      "sourceUrl": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9/skills/disciplines/audio-design/references/adaptive-music.md",
+      "gitBlobSha1": "ddc194b7d25e196bc8605eaa9d17a83c219a918a",
+      "bytes": 5109,
+      "mode": "100644",
+      "modified": false
+    },
+    {
+      "path": "docs/gamedev/upstream/skills/disciplines/create-game-assets/SKILL.md",
+      "upstreamPath": "skills/disciplines/create-game-assets/SKILL.md",
+      "sourceUrl": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9/skills/disciplines/create-game-assets/SKILL.md",
+      "gitBlobSha1": "e2e6ecad398e46b0a8b4f910ec75b82885505f8b",
+      "bytes": 8152,
+      "mode": "100644",
+      "modified": false
+    },
+    {
+      "path": "docs/gamedev/upstream/skills/disciplines/create-game-assets/agents/openai.yaml",
+      "upstreamPath": "skills/disciplines/create-game-assets/agents/openai.yaml",
+      "sourceUrl": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9/skills/disciplines/create-game-assets/agents/openai.yaml",
+      "gitBlobSha1": "cba4fa772706ab7d0dac58426d47dc22d969926e",
+      "bytes": 231,
+      "mode": "100644",
+      "modified": false
+    },
+    {
+      "path": "docs/gamedev/upstream/skills/disciplines/create-game-assets/assets/art-direction-brief.md",
+      "upstreamPath": "skills/disciplines/create-game-assets/assets/art-direction-brief.md",
+      "sourceUrl": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9/skills/disciplines/create-game-assets/assets/art-direction-brief.md",
+      "gitBlobSha1": "faf39aea6196fcc9e97c6ea249da57f1149cd8eb",
+      "bytes": 858,
+      "mode": "100644",
+      "modified": false
+    },
+    {
+      "path": "docs/gamedev/upstream/skills/disciplines/create-game-assets/assets/asset-manifest.json",
+      "upstreamPath": "skills/disciplines/create-game-assets/assets/asset-manifest.json",
+      "sourceUrl": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9/skills/disciplines/create-game-assets/assets/asset-manifest.json",
+      "gitBlobSha1": "548ee4867df3f4a9d49a5134e18b0759d046fd7c",
+      "bytes": 969,
+      "mode": "100644",
+      "modified": false
+    },
+    {
+      "path": "docs/gamedev/upstream/skills/disciplines/create-game-assets/references/art-direction.md",
+      "upstreamPath": "skills/disciplines/create-game-assets/references/art-direction.md",
+      "sourceUrl": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9/skills/disciplines/create-game-assets/references/art-direction.md",
+      "gitBlobSha1": "3cc0543a7f5d58805ff03d133a3881a66e67b21b",
+      "bytes": 3876,
+      "mode": "100644",
+      "modified": false
+    },
+    {
+      "path": "docs/gamedev/upstream/skills/disciplines/create-game-assets/references/provenance.md",
+      "upstreamPath": "skills/disciplines/create-game-assets/references/provenance.md",
+      "sourceUrl": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9/skills/disciplines/create-game-assets/references/provenance.md",
+      "gitBlobSha1": "a62a0d2a1fe7e14ab57a6487b332ca5f190f8770",
+      "bytes": 2605,
+      "mode": "100644",
+      "modified": false
+    },
+    {
+      "path": "docs/gamedev/upstream/skills/disciplines/create-game-assets/references/raster-pipeline.md",
+      "upstreamPath": "skills/disciplines/create-game-assets/references/raster-pipeline.md",
+      "sourceUrl": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9/skills/disciplines/create-game-assets/references/raster-pipeline.md",
+      "gitBlobSha1": "d4baad060963b877e56ca809260bbdaecdbe87db",
+      "bytes": 4236,
+      "mode": "100644",
+      "modified": false
+    },
+    {
+      "path": "docs/gamedev/upstream/skills/disciplines/create-game-assets/references/three-d-pipeline.md",
+      "upstreamPath": "skills/disciplines/create-game-assets/references/three-d-pipeline.md",
+      "sourceUrl": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9/skills/disciplines/create-game-assets/references/three-d-pipeline.md",
+      "gitBlobSha1": "2ea07a3a9b5395aa58542c15bd1b623fe4a4c1d1",
+      "bytes": 3163,
+      "mode": "100644",
+      "modified": false
+    },
+    {
+      "path": "docs/gamedev/upstream/skills/disciplines/create-game-assets/scripts/asset_report.py",
+      "upstreamPath": "skills/disciplines/create-game-assets/scripts/asset_report.py",
+      "sourceUrl": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9/skills/disciplines/create-game-assets/scripts/asset_report.py",
+      "gitBlobSha1": "627f42d4bed8191ea9763308a72eb76d38e0ccf9",
+      "bytes": 5392,
+      "mode": "100755",
+      "modified": false
+    },
+    {
+      "path": "docs/gamedev/upstream/skills/disciplines/create-game-assets/scripts/build_preview_sheet.py",
+      "upstreamPath": "skills/disciplines/create-game-assets/scripts/build_preview_sheet.py",
+      "sourceUrl": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9/skills/disciplines/create-game-assets/scripts/build_preview_sheet.py",
+      "gitBlobSha1": "87a656c9dd69791a2aad0a3fd689abbbee670753",
+      "bytes": 3353,
+      "mode": "100755",
+      "modified": false
+    },
+    {
+      "path": "docs/gamedev/upstream/skills/disciplines/create-game-assets/scripts/requirements.txt",
+      "upstreamPath": "skills/disciplines/create-game-assets/scripts/requirements.txt",
+      "sourceUrl": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9/skills/disciplines/create-game-assets/scripts/requirements.txt",
+      "gitBlobSha1": "7b8376b4b2b25afe71534d694f72004cb66ca220",
+      "bytes": 15,
+      "mode": "100644",
+      "modified": false
+    },
+    {
+      "path": "docs/gamedev/upstream/skills/disciplines/game-ai/SKILL.md",
+      "upstreamPath": "skills/disciplines/game-ai/SKILL.md",
+      "sourceUrl": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9/skills/disciplines/game-ai/SKILL.md",
+      "gitBlobSha1": "6b90b505ef635cb7f0917de3416670ad1d404790",
+      "bytes": 8315,
+      "mode": "100644",
+      "modified": false
+    },
+    {
+      "path": "docs/gamedev/upstream/skills/disciplines/game-ai/references/behavior-trees.md",
+      "upstreamPath": "skills/disciplines/game-ai/references/behavior-trees.md",
+      "sourceUrl": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9/skills/disciplines/game-ai/references/behavior-trees.md",
+      "gitBlobSha1": "c60be39bf94a625bfbfb1b59a0c5d98c61ce77b0",
+      "bytes": 5644,
+      "mode": "100644",
+      "modified": false
+    },
+    {
+      "path": "docs/gamedev/upstream/skills/disciplines/game-ai/references/pathfinding.md",
+      "upstreamPath": "skills/disciplines/game-ai/references/pathfinding.md",
+      "sourceUrl": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9/skills/disciplines/game-ai/references/pathfinding.md",
+      "gitBlobSha1": "59a71e4ce3c71adde9b34267dd875b2ee19935eb",
+      "bytes": 6179,
+      "mode": "100644",
+      "modified": false
+    },
+    {
+      "path": "docs/gamedev/upstream/skills/disciplines/game-feel/SKILL.md",
+      "upstreamPath": "skills/disciplines/game-feel/SKILL.md",
+      "sourceUrl": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9/skills/disciplines/game-feel/SKILL.md",
+      "gitBlobSha1": "3dafb5b3f2d9a56f9e9eb8c3bae1805800de6fda",
+      "bytes": 9520,
+      "mode": "100644",
+      "modified": false
+    },
+    {
+      "path": "docs/gamedev/upstream/skills/disciplines/game-feel/references/feedback-recipes.md",
+      "upstreamPath": "skills/disciplines/game-feel/references/feedback-recipes.md",
+      "sourceUrl": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9/skills/disciplines/game-feel/references/feedback-recipes.md",
+      "gitBlobSha1": "232ccd418320ae6b6c0e43dd96be53f6d2d1070b",
+      "bytes": 6158,
+      "mode": "100644",
+      "modified": false
+    },
+    {
+      "path": "docs/gamedev/upstream/skills/disciplines/game-ui-ux/SKILL.md",
+      "upstreamPath": "skills/disciplines/game-ui-ux/SKILL.md",
+      "sourceUrl": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9/skills/disciplines/game-ui-ux/SKILL.md",
+      "gitBlobSha1": "c7088f7d340dd3d68848f7d0d9a954577fde86b3",
+      "bytes": 10090,
+      "mode": "100644",
+      "modified": false
+    },
+    {
+      "path": "docs/gamedev/upstream/skills/disciplines/game-ui-ux/references/layout-and-flow.md",
+      "upstreamPath": "skills/disciplines/game-ui-ux/references/layout-and-flow.md",
+      "sourceUrl": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9/skills/disciplines/game-ui-ux/references/layout-and-flow.md",
+      "gitBlobSha1": "57b7938bf260ba10e2eff602b1cdcbafc2d2dd1c",
+      "bytes": 7637,
+      "mode": "100644",
+      "modified": false
+    },
+    {
+      "path": "docs/gamedev/upstream/skills/disciplines/input-systems/SKILL.md",
+      "upstreamPath": "skills/disciplines/input-systems/SKILL.md",
+      "sourceUrl": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9/skills/disciplines/input-systems/SKILL.md",
+      "gitBlobSha1": "d20f5a0bdfb5f6c41822dcd138cba305e2ab0d64",
+      "bytes": 10913,
+      "mode": "100644",
+      "modified": false
+    },
+    {
+      "path": "docs/gamedev/upstream/skills/disciplines/input-systems/references/buffering-and-accessibility.md",
+      "upstreamPath": "skills/disciplines/input-systems/references/buffering-and-accessibility.md",
+      "sourceUrl": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9/skills/disciplines/input-systems/references/buffering-and-accessibility.md",
+      "gitBlobSha1": "1c3be799a1fc494e64d9936f490341a9c3d1a6c0",
+      "bytes": 5201,
+      "mode": "100644",
+      "modified": false
+    },
+    {
+      "path": "docs/gamedev/upstream/skills/disciplines/performance-optimization/SKILL.md",
+      "upstreamPath": "skills/disciplines/performance-optimization/SKILL.md",
+      "sourceUrl": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9/skills/disciplines/performance-optimization/SKILL.md",
+      "gitBlobSha1": "e6878a4552be445b54988bd2fb93619d561f38f3",
+      "bytes": 10285,
+      "mode": "100644",
+      "modified": false
+    },
+    {
+      "path": "docs/gamedev/upstream/skills/disciplines/performance-optimization/references/profiling-and-budgets.md",
+      "upstreamPath": "skills/disciplines/performance-optimization/references/profiling-and-budgets.md",
+      "sourceUrl": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9/skills/disciplines/performance-optimization/references/profiling-and-budgets.md",
+      "gitBlobSha1": "3b0592a1527b1e38ee73ac60015679ae99fe7e12",
+      "bytes": 7344,
+      "mode": "100644",
+      "modified": false
+    },
+    {
+      "path": "docs/gamedev/upstream/skills/disciplines/physics-tuning/SKILL.md",
+      "upstreamPath": "skills/disciplines/physics-tuning/SKILL.md",
+      "sourceUrl": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9/skills/disciplines/physics-tuning/SKILL.md",
+      "gitBlobSha1": "4f22e28ebd21d74a40b52951a41f57c73a46d964",
+      "bytes": 8708,
+      "mode": "100644",
+      "modified": false
+    },
+    {
+      "path": "docs/gamedev/upstream/skills/disciplines/physics-tuning/references/timestep-and-ccd.md",
+      "upstreamPath": "skills/disciplines/physics-tuning/references/timestep-and-ccd.md",
+      "sourceUrl": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9/skills/disciplines/physics-tuning/references/timestep-and-ccd.md",
+      "gitBlobSha1": "b689f435934d72394eb12d59b74a0a9e5a1f28bb",
+      "bytes": 5854,
+      "mode": "100644",
+      "modified": false
+    },
+    {
+      "path": "docs/gamedev/upstream/skills/disciplines/save-systems/SKILL.md",
+      "upstreamPath": "skills/disciplines/save-systems/SKILL.md",
+      "sourceUrl": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9/skills/disciplines/save-systems/SKILL.md",
+      "gitBlobSha1": "dbfa017473dd69f28217a620bb1fb73621913d36",
+      "bytes": 9241,
+      "mode": "100644",
+      "modified": false
+    },
+    {
+      "path": "docs/gamedev/upstream/skills/disciplines/save-systems/references/versioning-and-migration.md",
+      "upstreamPath": "skills/disciplines/save-systems/references/versioning-and-migration.md",
+      "sourceUrl": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9/skills/disciplines/save-systems/references/versioning-and-migration.md",
+      "gitBlobSha1": "c1d3bd4e45a5af73d6e16a04d7e4f0f8db9507bf",
+      "bytes": 6312,
+      "mode": "100644",
+      "modified": false
+    }
+  ]
+}

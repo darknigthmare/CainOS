@@ -13,6 +13,7 @@ on:
       - "scripts/**"
       - "docs/**"
       - "package*.json"
+      - "AGENTS.md"
       - ".github/workflows/encore-qa.yml"
 permissions:
   contents: read
@@ -34,6 +35,11 @@ jobs:
           cache: npm
       - name: Install project dependencies
         run: npm ci
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install asset verification runtime
+        run: python3 -m pip install -r scripts/requirements-gamedev.txt
       - name: Contracts, Node tests and both builds
         run: |
           mkdir -p audit-combat/ci

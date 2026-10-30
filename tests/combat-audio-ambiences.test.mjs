@@ -306,3 +306,103 @@ test('destroy during a pending unlock cannot restart an atmosphere or retain a b
   assert.equal(contexts[0].closeCalls, 1); assert.equal(audio.diagnostics.noiseBuffers, 0);
   assert.ok(contexts[0].nodes.every(node => node.targets.size === 0));
 }));
+
+
+// Measure the scheduled sound, including the envelope, rather than relying on
+// effect names: two names that synthesize the same cue must fail this check.
+const effectSignature = (context, nodes, at) => nodes.filter(node => node.kind === 'oscillator').map(source => {
+  const gain = [...source.targets][0];
+  const events = values => values.map(({ kind, value, time }) => [kind, value, Math.round((time - at) * 1e6)]);
+  return [source.type, Math.round((source.startAt - at) * 1e6), Math.round((source.stopAt - at) * 1e6), events(source.frequency.events), events(gain.gain.events)];
+});
+
+test('throw escape has a finite distinct sound and does not share the parry cooldown', async () => withAudio({}, async ({ contexts, timers }) => {
+  const audio = new CombatAudio({ getSettings: () => ({ ambience: false }) });
+  await audio.unlock(); const context = contexts[0];
+  let before = context.nodes.length, at = context.currentTime;
+  assert.equal(audio.play('parry'), true);
+  const parry = effectSignature(context, context.nodes.slice(before), at);
+  context.advance(1); before = context.nodes.length; at = context.currentTime;
+  assert.equal(audio.play('throwTech'), true);
+  const escape = effectSignature(context, context.nodes.slice(before), at);
+  assert.notDeepEqual(escape, parry, 'Escaping a throw must sound different from a parry');
+  assert.equal(audio.play('parry'), true, 'A throw escape must not consume the parry cooldown');
+  assert.equal(audio.play('throwTech'), false, 'An immediate repeated escape remains rate limited');
+  assert.equal(audio.play('reflect'), false, 'Reflect keeps the existing parry alias');
+  const sources = liveSources(context);
+  assert.ok(sources.length <= 6 && sources.every(node => node.stopAt - at <= .3));
+  assert.equal(timers.size, 0);
+  context.advance(1); assert.equal(audio.diagnostics.activeVoices, 0);
+  assert.ok(sources.every(node => node.targets.size === 0 && node.onended === null));
+  audio.destroy();
+}));
+
+test('confirmation has a finite distinct sound and does not share the selection cooldown', async () => withAudio({}, async ({ contexts, timers }) => {
+  const settings = { ambience: false, volume: .4 };
+  const audio = new CombatAudio({ getSettings: () => settings });
+  await audio.unlock(); const context = contexts[0], at = context.currentTime;
+  let before = context.nodes.length;
+  assert.equal(audio.play('select'), true);
+  const select = effectSignature(context, context.nodes.slice(before), at);
+  before = context.nodes.length;
+  assert.equal(audio.play('confirm'), true, 'Confirming immediately after selecting must be audible');
+  const confirm = effectSignature(context, context.nodes.slice(before), at);
+  assert.notDeepEqual(confirm, select, 'Confirming a choice must sound different from selecting it');
+  assert.equal(audio.play('confirm'), false);
+  assert.equal(audio.play('select'), false);
+  const sources = liveSources(context);
+  assert.ok(sources.length <= 4 && sources.every(node => node.stopAt - at <= .3));
+  assert.equal(buses(context)[1].gain.value, .4); assert.equal(timers.size, 0);
+  context.advance(1); assert.equal(audio.diagnostics.activeVoices, 0);
+  assert.ok(sources.every(node => node.targets.size === 0 && node.onended === null));
+  audio.destroy();
+}));
+
+test('throw escape and confirmation respect unlock, pause, mute and destruction', async () => withAudio({}, async ({ contexts }) => {
+  const settings = { ambience: false, volume: .4 };
+  const audio = new CombatAudio({ getSettings: () => settings });
+  const cues = ['throwTech', 'confirm'];
+  for (const cue of cues) assert.equal(audio.play(cue), false);
+  assert.equal(contexts.length, 0);
+  await audio.unlock(); const context = contexts[0];
+  audio.setPaused(true);
+  for (const cue of cues) assert.equal(audio.play(cue), false);
+  audio.setPaused(false);
+  for (const cue of cues) assert.equal(audio.play(cue), true);
+  audio.setPaused(true); assert.equal(audio.diagnostics.activeVoices, 0);
+  context.advance(1); audio.setPaused(false); settings.volume = 0;
+  for (const cue of cues) assert.equal(audio.play(cue), false);
+  settings.volume = .4;
+  for (const cue of cues) assert.equal(audio.play(cue), true);
+  settings.sound = false; audio.setTheme('menu');
+  assert.equal(audio.diagnostics.activeVoices, 0);
+  for (const cue of cues) assert.equal(audio.play(cue), false);
+  audio.destroy(); settings.sound = true;
+  for (const cue of cues) assert.equal(audio.play(cue), false);
+  assert.ok(context.nodes.every(node => node.targets.size === 0));
+}));
+
+
+test('effect diagnostics count only accepted motifs and expose immutable bounded snapshots', async () => withAudio({}, async ({ contexts }) => {
+  const audio = new CombatAudio({ getSettings: () => ({ ambience: false }) });
+  assert.equal(audio.diagnostics.lastEffect, null);
+  assert.deepEqual(Object.keys(audio.diagnostics.effectCounts), AUDIO_EFFECT_IDS);
+  assert.ok(Object.values(audio.diagnostics.effectCounts).every(count => count === 0));
+  assert.equal(audio.play('confirm'), false);
+  await audio.unlock();
+  assert.equal(audio.play('confirm'), true); assert.equal(audio.play('confirm'), false);
+  assert.equal(audio.play('__proto__'), false);
+  const snapshot = audio.diagnostics;
+  assert.equal(snapshot.lastEffect, 'confirm'); assert.equal(snapshot.effectCounts.confirm, 1);
+  assert.ok(Object.isFrozen(snapshot.effectCounts));
+  assert.throws(() => { snapshot.effectCounts.confirm = 99; }, TypeError);
+  assert.equal(audio.play('reflect'), true);
+  assert.equal(audio.diagnostics.lastEffect, 'parry'); assert.equal(audio.diagnostics.effectCounts.parry, 1);
+  assert.equal(snapshot.lastEffect, 'confirm'); assert.equal(snapshot.effectCounts.parry, 0);
+  audio.setPaused(true); assert.equal(audio.play('throwTech'), false);
+  assert.equal(audio.diagnostics.effectCounts.throwTech, 0);
+  assert.equal(Object.values(audio.diagnostics.effectCounts).reduce((sum, value) => sum + value, 0), 2);
+  contexts[0].advance(1); audio.setPaused(false); assert.equal(audio.play('confirm'), true);
+  assert.equal(audio.diagnostics.effectCounts.confirm, 2); assert.equal(snapshot.effectCounts.confirm, 1);
+  audio.destroy();
+}));

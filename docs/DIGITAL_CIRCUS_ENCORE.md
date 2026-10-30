@@ -39,7 +39,7 @@ ne redémarre plus une attaque par répétition automatique ; le dash sur **Ctrl
 droite** de J2 ne bloque plus les attaques des deux joueurs ; **Espace / Entrée**
 activent les boutons de la barre de combat sans déclencher un saut.
 
-Le catalogue sonore contient **24 motifs**, dont six contacts distincts : léger,
+Le catalogue sonore contient **26 motifs**, dont six contacts distincts : léger,
 fort, bas, saisie, spécial et super. La garde, les parades et le KO restent
 identifiables ; le son dépend des événements réellement résolus. La vérification
 des signaux numériques ne remplace pas un mixage et une écoute sur appareil.
@@ -120,6 +120,69 @@ L’archive autonome contient le même runtime que CainOS, le classeur, les rapp
 et trois lanceurs locaux nécessitant Python 3. La CI vérifie Linux/Chromium et la
 syntaxe des lanceurs ; elle ne valide pas des paquets natifs Windows ou macOS.
 Téléphone physique, manettes physiques et matériel modeste restent à tester.
+
+## Fiabilité et repères sonores — suite du 29 octobre 2026
+
+Les guides `audio-design` et `save-systems` sont appliqués au runtime commun.
+La déchope possède désormais son propre motif `throwTech`, distinct de la parade.
+Le motif `confirm` distingue une validation acceptée du bref son de sélection :
+réaffectation ou réinitialisation des touches sauvegardée, import confirmé,
+conservation d’un profil récupéré et reprise du combat. Un refus de stockage ou
+un import rejeté/annulé ne déclenche pas une confirmation de réussite.
+Ces motifs sont des compositions originales ; le mixage sur plusieurs appareils
+et les voix restent à produire ou vérifier.
+
+Après une sauvegarde principale réussie, le jeu conserve aussi une copie locale
+sous `cainos.circus-combat.profile.v1.backup`, lorsque le stockage le permet.
+Si le profil principal présent est illisible, une copie de secours valide peut
+rétablir les réglages, le palmarès, les récompenses et le parcours. Le jeu affiche
+alors une notice persistante sur l’accueil et dans les réglages : le joueur peut
+exporter cette copie ou la conserver explicitement. La lecture seule ne réécrit
+aucun enregistrement. Une sauvegarde courante ou une conservation explicite
+réussie répare le profil principal et retire cette notice.
+
+La copie peut être plus ancienne si sa dernière mise à jour a été refusée. Une
+copie de secours n’est pas restaurée quand le profil principal a été supprimé.
+Un refus d’écriture du profil principal garde le secours intact et permet
+l’export des données en mémoire. Si un autre onglet rend le primaire illisible, la session déjà ouverte
+conserve son profil valide en mémoire, même si un secours plus ancien existe.
+Une notice distincte signale cette conservation en mémoire ; la lecture d’un
+secours au démarrage reste une récupération. Le rafraîchissement avant une
+nouvelle récompense ne remplace pas non plus la session par un ancien secours.
+Le format reste en version 1 ; les règles de simulation et de replay sont
+inchangées. Pour une copie indépendante du navigateur, utiliser l’export JSON.
+
+Les suites `combat-session-backup`, `combat-profile-backup-browser` et les suites
+audio couvrent ces comportements. La campagne complète et le classeur indiquent
+les résultats réellement exécutés ; une sortie PCM automatique ne remplace pas
+une écoute sur un appareil physique.
+
+## Repères renforcés et corrections de navigation — 29 octobre 2026
+
+Dans **Réglages → Confort du spectacle**, active **Repères renforcés** pour
+compléter les couleurs par des formes et des textes. Le cercle J1 et le losange
+J2 suivent les personnages lorsqu’ils changent de côté, y compris lorsque les
+joueurs choisissent le même artiste et la même tenue.
+
+Le tableau de combat se place au-dessus de l’arène sur un fond opaque. Les jauges
+**Vie**, **Garde** et **Finale** ont des motifs et des valeurs distincts. Les messages
+**VIE CRITIQUE**, **GARDE FRAGILE** et **FINALE PRÊTE** complètent les signaux visuels ;
+la disponibilité de la finale tient compte du coût de sa technique, de sa ressource
+et de son délai de récupération. Les repères s’effacent pendant les scènes de KO.
+
+Ce réglage est désactivé par défaut et reste dans les profils v1, y compris après
+export et import. Il change la présentation, sans modifier les règles de combat
+ou de replay. La tâche PRE-12 du suivi reste partielle : la palette globale, les
+autres indicateurs et les essais avec des utilisateurs concernés restent ouverts.
+
+La recherche des Archives conserve désormais le curseur et la sélection dans le
+champ. Quitter l’écran annule le filtrage différé ; un rafraîchissement ne peut plus
+ramener le joueur aux Archives après son retour à l’accueil.
+
+Le mode hors ligne corrige aussi deux reprises après échec : un pack évincé puis
+partiellement retéléchargé reste annoncé incomplet, et une activation refusée ou
+expirée retire son écouteur de rechargement. Le bouton de mise à jour indique
+l’application en cours et permet une nouvelle tentative après un échec.
 
 ## Accès au jeu
 
@@ -367,7 +430,7 @@ horloge musicale et une limite de 24 voix bornent les ressources. Si le navigate
 refuse l’audio, le combat reste utilisable.
 
 Ces sons sont synthétisés localement : aucune musique ni voix enregistrée de la
-série n’est importée. Les **24 motifs d’effets** comprennent six sons de contact
+série n’est importée. Les **26 motifs d’effets** comprennent six sons de contact
 distincts : léger, lourd, bas, saisie, spécial et super. Ils sont déclenchés par
 un impact réel ; un coup bloqué ou une préparation de super conserve son propre
 signal. La version 0.7 ajoute aussi douze ambiances procédurales, avec un volume
