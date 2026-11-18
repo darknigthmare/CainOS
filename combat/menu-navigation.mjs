@@ -3,8 +3,10 @@ const selectable = 'button:not(:disabled),a[href],select:not(:disabled),input:no
 const focusAttributes = ['data-bind-player','data-bind-action','data-bind-slot','data-finale-id','data-finale-fighter','data-finale-artist','data-appearance','data-try-appearance','data-visit','data-play-visit','data-fighter','data-side','data-stage','data-codex','data-page','data-action','data-setting','data-mode','data-challenge','data-nav'];
 
 export function menuItems(scope, { gamepad = false } = {}) {
+  // Closed details can report layout rectangles for descendants that reject focus.
+  // The summary remains a navigation target so players can open the section.
   return [...scope.querySelectorAll(selectable)].filter(element =>
-    !element.hidden && !element.closest('[inert]') && element.tabIndex >= 0 &&
+    !element.hidden && !element.closest('[inert], details:not([open]) > :not(summary)') && element.tabIndex >= 0 &&
     (!gamepad || element.tagName !== 'INPUT' || ['range','checkbox','radio'].includes(element.type)) &&
     element.getClientRects().length && getComputedStyle(element).visibility !== 'hidden');
 }

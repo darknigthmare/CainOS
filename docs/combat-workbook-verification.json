@@ -22,7 +22,7 @@
     "stageLayers": 27,
     "escalePanels": 18
   },
-  "offlineVersion": "0.7.0-45cf4b89c4c2",
+  "offlineVersion": "0.7.0-219e33c7c546",
   "artVersion": "75ea5695bde8f8f1",
   "counts": {
     "fighters": 14,
@@ -794,7 +794,7 @@
   "note": "L’exécution QA datée qui figure dans le classeur reste historique. L’inventaire des ressources correspond au manifeste indiqué.",
   "releaseValidation": {
     "assetSource": "3e6da5133e1a48e235d251f0f49e3ba0d61a3bab",
-    "offlineVersion": "0.7.0-45cf4b89c4c2",
+    "offlineVersion": "0.7.0-219e33c7c546",
     "artVersion": "75ea5695bde8f8f1",
     "node": {
       "passed": 379,
@@ -836,12 +836,12 @@
       "dist-combat": {
         "files": 4735,
         "bytes": 1932744663,
-        "manifestSha256": "8c75a3661bdd12e4e31c6cbace8a4e3ce1fd49af399515e6139b412a4fd53be3"
+        "manifestSha256": "5739affb2b052cb1f11c47b8cd23874c3f76d74233a1a1869c952c2baca53239"
       },
       "dist": {
         "files": 4735,
         "bytes": 1932744663,
-        "manifestSha256": "8c75a3661bdd12e4e31c6cbace8a4e3ce1fd49af399515e6139b412a4fd53be3"
+        "manifestSha256": "5739affb2b052cb1f11c47b8cd23874c3f76d74233a1a1869c952c2baca53239"
       }
     },
     "exercised": {
@@ -908,6 +908,29 @@
       ]
     },
     "uniqueOriginalFusionSprites": 1260,
-    "completeCrossoverCostumes": 378
+    "completeCrossoverCostumes": 378,
+    "accessibility": {
+      "suite": "tests/combat-accessibility-browser.mjs",
+      "checksPassed": 28,
+      "errors": [],
+      "keyboard": {
+        "Tab": 778,
+        "ShiftTab": 6,
+        "activations": 73
+      },
+      "desktopViewport": [
+        1440,
+        1000
+      ],
+      "mobileViewport": [
+        390,
+        844
+      ],
+      "sourcesInPomniBaseWardrobe": 3,
+      "sourceHashes": {
+        "combat/menu-navigation.mjs": "8075ad1dab1e7df77b028dbdf64b1369276e653d13b1a4dd0e40cd72a45009bd",
+        "tests/combat-accessibility-browser.mjs": "1485ba0eeda481b1c893325e3f2240a1b66e6986d2b38aa8aeeb9da79d2fa0e2"
+      }
+    }
   }
 }

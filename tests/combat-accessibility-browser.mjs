@@ -102,20 +102,35 @@ function watch(p, label) {
   p.on('response', response => { if (response.url().startsWith(base) && response.status() >= 400) report.errors.push(label + 'HTTP ' + response.status() + ' ' + response.url()); });
 }
 async function pad(button) {
-  await page.evaluate(button => { window.__accessibilityPad.connected = true; window.__accessibilityPad.pressed = [button]; }, button);
-  await page.waitForTimeout(100);
-  await page.evaluate(() => { window.__accessibilityPad.pressed = []; });
-  await page.waitForTimeout(100);
+  // The game reads its device on animation frames. Keep each edge until sampled.
+  for (const pressed of [[button], []]) {
+    const before = await page.evaluate(buttons => {
+      const device = window.__accessibilityPad;
+      device.connected = true;
+      device.pressed = buttons;
+      return device.reads;
+    }, pressed);
+    await page.waitForFunction(reads => window.__accessibilityPad.reads > reads, before);
+  }
 }
 
 try {
-  browser = await playwright.chromium.launch({ headless: true, executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH || undefined, args: ['--no-sandbox', '--disable-dev-shm-usage'] });
+  const launchOptions = { headless: true, executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH || undefined, args: ['--no-sandbox', '--disable-dev-shm-usage'] };
+  browser = await playwright.chromium.launch(launchOptions);
   report.browser = browser.version();
   const context = await browser.newContext({ viewport: { width: 1440, height: 1000 }, reducedMotion: 'no-preference' });
   await context.addInitScript(() => {
-    const device = { connected: false, pressed: [] };
+    const device = { connected: false, pressed: [], reads: 0 };
     Object.defineProperty(window, '__accessibilityPad', { value: device });
-    Object.defineProperty(navigator, 'getGamepads', { configurable: true, value: () => device.connected ? [{ id: 'Encore QA standard gamepad', index: 0, connected: true, mapping: 'standard', axes: [0, 0], buttons: Array.from({ length: 17 }, (_, index) => ({ pressed: device.pressed.includes(index), touched: device.pressed.includes(index), value: Number(device.pressed.includes(index)) })) }] : [] });
+    Object.defineProperty(navigator, 'getGamepads', { configurable: true, value: () => {
+      device.reads++;
+      if (!device.connected) return [];
+      const buttons = Array.from({ length: 17 }, (_, index) => {
+        const pressed = device.pressed.includes(index);
+        return { pressed, touched: pressed, value: Number(pressed) };
+      });
+      return [{ id: 'Encore QA standard gamepad', index: 0, connected: true, mapping: 'standard', axes: [0, 0], buttons }];
+    } });
   });
   page = await context.newPage(); watch(page, 'desktop: ');
   await page.goto(base + '/combat/', { waitUntil: 'networkidle' });
@@ -296,12 +311,12 @@ try {
   // the sourced base artwork before asserting that reference links are exposed.
   await pad(14); await expectFocus(page, '#wardrobe-variant');
   assert.equal(await page.locator('#wardrobe-variant').inputValue(), 'pomni');
-  for (let attempt = 0; attempt < 10 && !await matchesFocus(page, '#modal summary'); attempt++) await pad(13);
-  await expectFocus(page, '#modal summary');
-  const wasOpen = await page.evaluate(() => document.activeElement.closest('details').open);
+  const sourceSummary = '#modal .costume-fidelity > summary';
+  for (let attempt = 0; attempt < 10 && !await matchesFocus(page, sourceSummary); attempt++) await pad(13);
+  await expectFocus(page, sourceSummary);
+  assert.equal(await page.locator('#modal .costume-fidelity').evaluate(details => details.open), false);
   await pad(0);
-  assert.equal(await page.evaluate(() => document.activeElement.closest('details').open), !wasOpen);
-  assert.ok(await page.locator('#modal details[open] .fidelity-sources a').count() > 0);
+  await page.locator('#modal .costume-fidelity[open] .fidelity-sources a[href]').first().waitFor({ state: 'visible' });
   await pad(1); assert.equal(await page.locator('#modal').isVisible(), false); await expectFocus(page, wardrobeOpener);
   checked('virtual gamepad reaches a source summary, opens its references with A and closes the wardrobe with B');
   await page.evaluate(() => { window.__accessibilityPad.connected = false; window.__accessibilityPad.pressed = []; });
@@ -313,6 +328,9 @@ try {
   checked('desktop navigation and previews preserve all progression and replay data; temporary remapping, layout and volume changes are restored');
   await page.screenshot({ path: path.join(output, 'desktop-keyboard-selection.png'), fullPage: true });
 
+  // Release the desktop previews before starting the independent mobile journey.
+  await browser.close();
+  browser = await playwright.chromium.launch(launchOptions);
   phoneContext = await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true, reducedMotion: 'reduce' });
   const phone = await phoneContext.newPage(); watch(phone, '390px: ');
   await phone.goto(base + '/combat/', { waitUntil: 'networkidle' }); await phone.waitForFunction(() => window.Encore?.screen === 'home');
