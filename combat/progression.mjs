@@ -1,5 +1,6 @@
 import { FIGHTERS, STAGES, VARIANTS } from './data.mjs';
 import { getStoryRoute } from './stories.mjs';
+import { getTournamentRival } from './tournament-lore.mjs';
 
 /**
  * JSON checkpoints for Encore's multi-encounter programmes. A checkpoint is
@@ -93,10 +94,17 @@ function propagateTournament(tournament) {
 }
 
 function simulateRound(run, roundIndex) {
+  // The authored rival is seeded in the other half of the bracket and keeps
+  // that promise until the final. Simulated CPU matches stay labelled as such;
+  // only the rival's own non-player encounters are decided by the scenario.
+  const rivalId = run.mode === 'tournament' ? getTournamentRival(run.playerId) : null;
   for (const match of run.tournament.rounds[roundIndex].matches) {
     if (!match.a || !match.b || match.winner || match.a === run.playerId || match.b === run.playerId) continue;
-    const random = randomFrom(hashSeed(run.seed, `${match.id}:${match.a}:${match.b}`));
-    match.winner = random() < .5 ? match.a : match.b;
+    if (rivalId && (match.a === rivalId || match.b === rivalId)) match.winner = rivalId;
+    else {
+      const random = randomFrom(hashSeed(run.seed, `${match.id}:${match.a}:${match.b}`));
+      match.winner = random() < .5 ? match.a : match.b;
+    }
     match.method = 'simulated';
   }
   propagateTournament(run.tournament);
@@ -158,7 +166,20 @@ export function createProgram(mode, playerId, roster = FIGHTERS, stages = STAGES
     run.initialStage = run.stages[0];
   } else if (mode === 'tournament') {
     if (fighterIds.length < 8) fail('Le tournoi demande huit artistes distincts.');
-    const participants = shuffled([playerId, ...others.slice(0, 7)], seed, 'bracket');
+    const rivalId = getTournamentRival(playerId);
+    // The rival is always drawn: seven opponents, with the rival taking one slot.
+    const chosen = others.filter(id => id !== rivalId).slice(0, rivalId ? 6 : 7);
+    if (rivalId) chosen.push(rivalId);
+    const participants = shuffled([playerId, ...chosen], seed, 'bracket');
+    if (rivalId && participants.includes(rivalId)) {
+      // Keep the drawn player slot, move only the rival to the opposite half.
+      const playerSlot = participants.indexOf(playerId), rivalSlot = participants.indexOf(rivalId);
+      const opposite = playerSlot < 4 ? [4, 5, 6, 7] : [0, 1, 2, 3];
+      if (!opposite.includes(rivalSlot)) {
+        const target = opposite[hashSeed(seed, 'rival') % opposite.length];
+        [participants[rivalSlot], participants[target]] = [participants[target], participants[rivalSlot]];
+      }
+    }
     run.tournament = blankTournament(participants);
     run.opponents = [null, null, null];
     simulateRound(run, 0);

@@ -1,5 +1,7 @@
 import { FINISHER_CATALOG } from './finisher-catalog.mjs';
+import { FRIENDSHIP_CATALOG } from './friendship-catalog.mjs';
 export { FINISHER_NOTICE } from './finisher-catalog.mjs';
+export { FRIENDSHIP_NOTICE } from './friendship-catalog.mjs';
 
 /** Presentation-only endings: no engine steps, RNG or progression writes. */
 const MATCH_MODES = new Set(['versus', 'local', 'arcade', 'boss', 'survival', 'story', 'tournament']);
@@ -21,8 +23,9 @@ function familyForSlot(slot) {
 function healthOf(actor) {
   return Number.isFinite(actor?.life) ? actor.life : Number.isFinite(actor?.hp) ? actor.hp : NaN;
 }
+const friendships = new Map(FRIENDSHIP_CATALOG.map(definition => [definition.fighterId, definition]));
 /** The last winning damage on the actual final KO frame is authoritative. */
-export function selectMatchFinisher(state, events, options = {}) {
+function decisiveOutcome(state, events, options) {
   const mode = options?.mode ?? 'versus';
   if (!MATCH_MODES.has(mode) || options?.replay || state?.phase !== 'matchOver') return null;
   const winnerIndex = state.winner;
@@ -43,11 +46,24 @@ export function selectMatchFinisher(state, events, options = {}) {
     }
   }
   if (!decisive) return null;
-  const trigger = familyForSlot(decisive.slot);
-  const fighterId = winner.f?.id ?? winner.def?.id ?? winner.id;
-  const definition = catalogue.get(fighterId)?.get(trigger);
+  return { winnerIndex, loserIndex, fighterId: winner.f?.id ?? winner.def?.id ?? winner.id, decisive };
+}
+export function selectMatchFinisher(state, events, options = {}) {
+  const outcome = decisiveOutcome(state, events, options);
+  if (!outcome) return null;
+  const trigger = familyForSlot(outcome.decisive.slot);
+  const definition = catalogue.get(outcome.fighterId)?.get(trigger);
   if (!definition) return null;
-  return Object.freeze({ ...definition, winnerIndex, loserIndex, trigger, matchFrame: state.frame });
+  return Object.freeze({ ...definition, winnerIndex: outcome.winnerIndex, loserIndex: outcome.loserIndex, trigger, matchFrame: state.frame });
+}
+/** An explicit preference replaces the violence with a staged friendship. */
+export function selectMatchFriendship(state, events, options = {}) {
+  if (options?.presentation !== 'friendship') return null;
+  const outcome = decisiveOutcome(state, events, options);
+  if (!outcome) return null;
+  const definition = friendships.get(outcome.fighterId);
+  if (!definition) return null;
+  return Object.freeze({ ...definition, winnerIndex: outcome.winnerIndex, loserIndex: outcome.loserIndex, trigger: 'friendship', matchFrame: state.frame });
 }
 /** A separate presentation clock; reduced motion uses the final composition. */
 export function sampleFinisherPresentation(entry, presentationFrame = 0, options = {}) {

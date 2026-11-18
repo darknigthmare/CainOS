@@ -30,9 +30,9 @@ test('classification preserves all 179 identities and provenance while applying 
 test('every current archive entry has exactly one reviewed classification with no stale declarations', () => {
   const variants = new Set(Object.keys(COSTUME_BASE_FIGHTERS));
   const archives = new Set(Object.keys(ARCHIVE_ONLY_ENTRIES));
-  assert.equal(fighters.size, 14);
+  assert.equal(fighters.size, FIGHTERS.length);
   assert.equal(variants.size, 51);
-  assert.equal(archives.size, 114);
+  assert.equal(archives.size, SPRITE_CATALOG.length - fighters.size - variants.size);
   const declarations = [...fighters, ...variants, ...archives];
   assert.equal(new Set(declarations).size, declarations.length, 'classification declarations must be disjoint');
   assert.deepEqual(new Set(declarations), new Set(byId.keys()), 'new content needs an explicit review, without removing archives');
@@ -53,7 +53,8 @@ test('every playable identity retains its own kit including the distinct Kaufmo 
     assert.equal(entry.baseFighterId, fighter.id);
     assert.equal(entry.playable, true);
   }
-  assert.equal(byId.get('kaufmo').baseFighterId, null, 'pre-abstraction archive is not the boss kit');
+  assert.equal(byId.get('kaufmo').baseFighterId, 'kaufmo', 'pre-abstraction Kaufmo owns a separate kit');
+  assert.notEqual(byId.get('kaufmo').baseFighterId, byId.get('abstractedkaufmo').baseFighterId, 'pre-abstraction Kaufmo is not the boss kit');
   assert.equal(byId.get('abstractedjax').baseFighterId, null, 'new morphology needs its own combat definition');
 });
 

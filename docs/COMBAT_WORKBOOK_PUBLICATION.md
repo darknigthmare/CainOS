@@ -90,3 +90,24 @@ supérieure. Les deux contrôles de refus d’archive sont dans
 [combat-package-gates-0.7.0.json](combat-package-gates-0.7.0.json) : ancienne version
 du classeur et JSON compagnon modifié après revue. Ils utilisent une copie
 temporaire isolée et n’altèrent pas les documents de production.
+
+## Extension PNJ du 17 novembre 2026
+
+Le runtime tableur principal (`@oai/artifact-tool`) n’était pas disponible dans
+l’environnement de cette extension. Le classeur a donc été étendu de façon ciblée
+avec `openpyxl`, sur une copie de sauvegarde préalable :
+
+- 40 lignes dans **Combattants**, 400 dans **Techniques**, 240 dans **Scénarios**
+  (40 routes, 160 chapitres, 40 tournois) et 1 560 dans **Production** ;
+- une feuille **Extension PNJ** de 40 lignes synthétisant kit, histoire, rival,
+  finales et fidélité ;
+- six constats dans **QA** et l’extension des plages des formules de Synthèse.
+
+Les notes utilisateur existantes ne sont pas modifiées. Les formules étendues
+n’ont pas été recalculées par le moteur officiel : Excel les recalcule à
+l’ouverture. Le générateur officiel reste requis pour une publication certifiée,
+un recalcul contrôlé et l’égalité stricte entre classeur et JSON. La
+[vérification](combat-workbook-verification.json) et la
+[preuve QA](combat-qa-evidence-expansion-0.7.0.json) déclarent explicitement
+cette limite, ainsi que l’absence des suites Chromium complètes et des
+comparaisons canoniques 1:1 des 40 nouveaux sprites.

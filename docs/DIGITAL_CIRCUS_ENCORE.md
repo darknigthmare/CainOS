@@ -3,7 +3,9 @@
 Version jouable : **0.7.0** — finalisation du 24 octobre 2026.
 
 Encore partage son moteur entre l’application CainOS et le jeu autonome :
-**14 combattants, 140 techniques, 12 arènes, 9 modes, 51 costumes et 179 archives**.
+**54 combattants, 540 techniques, 12 arènes, 9 modes, 51 costumes et 179 archives**.
+L’extension PNJ promue porte le roster à 54 combattants et **162 finales de spectacle** ;
+les chiffres 0.7 ci-dessous décrivent les quatorze combattants d’origine.
 La version 0.7.0 ajoute **42 finales de spectacle**, trois pour chacun des quatorze
 combattants, une galerie avec les **51 costumes**, douze ambiances sonores procédurales
 et deux signaux distincts pour les pièges et les KO. Les finales sont des compositions
@@ -15,7 +17,25 @@ La simulation demeure celle de 0.5.0 : les replays 0.5, 0.6 et 0.7 utilisent exa
 les mêmes règles, tandis que les versions 0.1 à 0.4 gardent leurs règles historiques.
 **La fidélité canonique générale 1:1 n’est pas certifiée.** Le suivi distingue les
 compositions jouables, les vérifications techniques et les comparaisons artistiques
-encore incomplètes.
+encore incomplètes. Les **40 PNJ promus** possèdent chacun une revue de sprite
+(planche, cellule, dimensions, traits visibles, cadrage, identité) consignée dans
+[la revue d’extension](combat-expansion-sprite-review-0.7.0.json) et sur la
+[planche de contrôle](images/expansion-sprites-review-0.7.0.png). Aucun visuel
+officiel consulté ne les montre : les quarante fiches restent « Épisode à revoir »,
+et la revue relève 16 cadrages contenant un débris de cellule voisine ainsi que
+neuf attributions d’épisode contradictoires avec la route générée.
+
+Chaque artiste des 54 dispose désormais de la même couverture de présentation,
+vérifiée par [`tests/combat-roster-completeness.test.mjs`](../tests/combat-roster-completeness.test.mjs) :
+une **scène dédiée** (`home-<id>`, proposée à côté des douze arènes de série
+partagées), trois **finales de spectacle**, un **numéro d’amitié** qui remplace la
+finale quand l’option est active, un **rival** placé dans l’un des quatre
+chapitres de sa route, et une **liste de tableaux d’intro et de fin**
+(trois tableaux de prologue et trois d’épilogue). Les scènes dédiées reprennent
+le décor revu de l’épisode d’origine et n’en changent que l’accent : ce sont des
+adaptations de fan-game, sans plan de plateau canonique mesuré. Ces ajouts sont
+uniquement du contenu et de la présentation ; la simulation et les règles de
+replay 0.5.0 restent inchangées.
 
 ## Ajouts de la passe 0.7.0
 
@@ -251,7 +271,7 @@ des tâches distinctes dans l’Excel.
 
 Chaque combattant possède les dix emplacements CQC : léger, fort, bas, saisie,
 spécial neutre, spécial bas, spécial avant, spécial arrière, finale et utilitaire.
-Les 140 techniques sont décrites dans le codex et dans le classeur avec leurs
+Les 540 techniques sont décrites dans le codex et dans le classeur avec leurs
 frames de démarrage, d’activité et de récupération, leurs dégâts, leurs portées,
 leurs coûts et leur effet.
 
@@ -266,8 +286,8 @@ modifier son kit. Leur attribution repose sur une liste explicite par identité 
 un parent, un rival, un accessoire, un effet ou une projection ne reçoit pas un kit
 simplement parce que son identifiant contient le nom d’un artiste.
 
-Les **179 entrées d’archive** restent consultables et filtrables : 14 combattants,
-51 variantes et 114 autres archives sans kit livré. Leur présence conserve la
+Les **179 entrées d’archive** restent consultables et filtrables : 54 combattants,
+51 variantes et 74 autres archives sans kit livré. Leur présence conserve la
 mémoire du projet sans attester leur statut canonique. Les règles et leurs cas de
 contrôle figurent dans [`combat/data.mjs`](../combat/data.mjs) et
 [`tests/combat-catalog.test.mjs`](../tests/combat-catalog.test.mjs).
@@ -283,8 +303,8 @@ contrôle figurent dans [`combat/data.mjs`](../combat/data.mjs) et
 | Encore. Encore. | Dix vagues ; santé conservée avec 1 200 points récupérés après une victoire |
 | Les répétitions | Six comportements de mannequin, gel et avance d’une image, trois vitesses, historique des commandes, lecture des phases, enregistrement/relecture de 600 images, jauges libres et remise en place |
 | Les défis de Caine | Six exercices mesurables de 60 secondes : dégâts, garde, combo, saisies, quatre techniques, finale |
-| Derrière le rideau | 14 histoires originales, chacune avec trois tableaux de prologue, quatre rencontres et trois tableaux de fin ; 84 tableaux et 56 briefings au total |
-| La coupe du cirque | Tableau à huit participants distincts ; quarts, demi-finales et finale, soit trois victoires du joueur pour remporter la coupe |
+| Derrière le rideau | 54 histoires (14 authored + 40 PNJ promus), chacune avec trois tableaux de prologue, quatre rencontres et trois tableaux de fin ; 324 tableaux et 216 briefings au total, plus une feuille de route (intro, quatre adversaires, rival, épilogue), une scène dédiée, trois finales et un numéro d’amitié par artiste |
+| La coupe du cirque | Tableau à huit participants distincts ; quarts, demi-finales et finale, soit trois victoires du joueur. Le rival attitré de l’artiste est placé dans l’autre moitié et l’attend en finale ; intro et couronnement propres à chaque artiste |
 
 Les duels libres respectent les réglages de manches gagnantes et de durée. Les
 rencontres des cinq programmes — arcade, boss, survie, histoire et tournoi — sont
@@ -292,10 +312,13 @@ en une manche gagnante et possèdent un point de reprise. Les victoires, défis,
 médailles et fins d’histoire réellement obtenus sont enregistrés dans le profil.
 
 Les histoires de [`combat/stories.mjs`](../combat/stories.mjs) associent à chaque
-artiste ses adversaires, ses décors, ses dialogues d’avant-combat et sa conclusion.
-Ces scénarios originaux de fan-game n’affirment pas raconter des événements
-canoniques. Les campagnes qui adapteraient chaque épisode de la série restent
-dans le plan de production.
+artiste ses adversaires, ses décors, ses dialogues d’avant-combat, son **rival**
+et sa conclusion. Le rival est toujours l’un des quatre chapitres existants ;
+[`getStoryBrief`](../combat/stories.mjs) expose l’intro, le nombre d’adversaires
+à battre, le chapitre du rival et l’épilogue verrouillé ou débloqué. Ces scénarios
+originaux de fan-game n’affirment pas raconter des événements canoniques. Les
+campagnes qui adapteraient chaque épisode de la série restent dans le plan de
+production.
 
 ### Lire et revoir les histoires
 
@@ -309,7 +332,11 @@ qu’après son déblocage ; sa relecture ne redonne ni médaille ni victoire.
 Ces tableaux utilisent les décors et portraits existants. Ce sont des compositions
 narratives originales, sans nouvelle image raster narrative ni doublage. Les
 quatre adversaires, règles, récompenses et checkpoints de chaque route sont
-conservés. Kaufmo n’est pas guéri et ne reçoit pas une voix inventée ; la route
+conservés. Le bouton **La feuille de route** présente les quatre chapitres, leur
+adversaire, leur arène, le marqueur ◆ du rival et l’état de l’épilogue. Les
+87 illustrations proposées pour ces tableaux et pour le tournoi sont décrites dans
+[le brief d’illustrations](COMBAT_TOURNOI_HISTOIRES_ILLUSTRATIONS.md) ; elles ne
+sont pas encore dessinées. Kaufmo n’est pas guéri et ne reçoit pas une voix inventée ; la route
 de Gummigoo se présente comme une simulation, sans affirmer son retour canonique.
 Voir [`story-presentation.mjs`](../combat/story-presentation.mjs),
 [la revue narrative](combat-story-review-0.6.0.json) et
@@ -317,10 +344,16 @@ Voir [`story-presentation.mjs`](../combat/story-presentation.mjs),
 
 Le tournoi affiche ses **sept emplacements de rencontre**. Le joueur dispute ses
 trois tours ; les matchs entre CPU sont simulés à partir de la graine du tableau
-et portent explicitement cette mention. Une défaite élimine le joueur, sans
-attribuer la médaille. Le résultat permet de consulter le tableau résolu puis de
-recommencer une tentative. Les règles sont définies dans
-[`combat/progression.mjs`](../combat/progression.mjs).
+et portent explicitement cette mention. Chaque artiste possède un rival authored
+qui prend toujours place dans la moitié opposée du tableau ; ses rencontres CPU
+sont décidées par le scénario et restent étiquetées comme simulations, afin que
+la finale oppose le joueur à son rival. Une défaite élimine le joueur, sans
+attribuer la médaille, et offre la coupe au rival. Une intro (Caine, le rival,
+l’artiste) précède le premier duel ; une victoire affiche le couronnement propre
+à l’artiste et le prix obtenu, toujours un rôle dans le spectacle. Le résultat
+permet de consulter le tableau résolu puis de recommencer une tentative. Les
+règles sont définies dans [`combat/progression.mjs`](../combat/progression.mjs) et
+les textes dans [`combat/tournament-lore.mjs`](../combat/tournament-lore.mjs).
 
 ## Laboratoire d’entraînement
 
@@ -588,7 +621,7 @@ anciens libellés en faits canoniques.
 
 Le registre [`combat/fidelity.mjs`](../combat/fidelity.mjs) et les fiches
 [`combat/costume-fidelity.mjs`](../combat/costume-fidelity.mjs) réunissent
-**217 entrées** : 14 personnages, 140 techniques, 12 arènes et 51 costumes.
+**657 entrées** : 54 personnages, 540 techniques, 12 arènes et 51 costumes.
 Le jeu et le classeur lisent les mêmes sources, observations, adaptations et
 périmètres de revue. Un lien d'épisode ou un ancien nom d'archive ne valide pas
 une apparence à lui seul.
@@ -774,7 +807,7 @@ Les deux reculs gardent leurs distances et durées nominales : **150 pixels /
 actuels des kits sont comparés à l'empreinte publiée en 0.3.0 ; les kits hérités
 restent comparés à la version 0.2.0.
 
-Les aperçus de décor suivent aussi le premier chapitre des 14 histoires. Les
+Les aperçus de décor suivent aussi le premier chapitre des 54 histoires. Les
 liens de référence sont facultatifs, sans dépendance réseau pour jouer.
 Le lac reste sans source primaire précise ; la salle de calibration est une
 création originale. La confirmation primaire du couloir des résidents, les animations de combat
@@ -807,7 +840,7 @@ techniques et les tests ne constituent pas une certification canonique 1:1.
 | `combat/story-presentation.mjs` | Composition narrative, ordre des tableaux et validation |
 | `combat/audio.mjs` | Thèmes, ambiances, effets, volumes séparés et cycle de vie WebAudio |
 | `combat/audio-ambiences.mjs` | Catalogue des 12 ambiances procédurales |
-| `combat/finisher-catalog.mjs` | 42 finales, trois tableaux chacune, références et limites |
+| `combat/finisher-catalog.mjs` | 162 finales, trois tableaux chacune, références et limites |
 | `combat/finishers.mjs` | Sélection sur KO final et échantillonnage sans mutation de simulation |
 | `combat/render-finishers.mjs` | Composition des accessoires et des dessins existants |
 | `combat/finisher-gallery.mjs` | Aperçu indépendant, pause, reprise et mouvement réduit |
@@ -830,17 +863,23 @@ techniques et les tests ne constituent pas une certification canonique 1:1.
 ## Classeur de production
 
 [`DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx`](DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx) comporte
-**dix feuilles et neuf tableaux filtrables** : Synthèse, Fonctionnalités,
-Combattants, Techniques, Arènes, Atlas, Production, Scénarios, QA et Références.
-Il lit les catalogues réellement livrés, les 84 tableaux, les 56 briefings, les
-20 remplacements et les preuves de tests. Les statuts « Implémenté », « Partiel »,
+désormais **onze feuilles et dix tableaux filtrables** : Synthèse, Fonctionnalités,
+Combattants, Techniques, Arènes, Atlas, Production, Scénarios, Extension PNJ, QA
+et Références. Il lit les catalogues réellement livrés, les 324 tableaux, les 216
+briefings, les 20 remplacements et les preuves de tests. Les statuts « Implémenté », « Partiel »,
 « Prévu » et « À vérifier » distinguent fonctionnement, finition et validation.
 
 Le suivi historique 0.6 contenait **101 fonctionnalités, 632 tâches de production, 85 scénarios et
 452 lignes QA** : 260 cas Node, 154 contrôles navigateur et 38 objectifs de
 revue. Ses statuts QA étaient **447 « Réussi », 1 « À vérifier » et 4 « Non exécuté »**.
-Le suivi 0.7 contient maintenant **102 fonctionnalités, 683 tâches de production,
-85 scénarios et 1 003 lignes QA**. Il distingue les **551 cas automatisés courants**
+Le suivi 0.7 contenait **102 fonctionnalités, 683 tâches de production,
+85 scénarios et 1 003 lignes QA**. L’extension PNJ du 17 novembre 2026 porte le
+classeur à **105 fonctionnalités, 2 253 tâches de production, 325 scénarios et
+2 246 lignes QA**, avec 40 fiches de combattants et 400 techniques
+supplémentaires. Les formules de synthèse ont été étendues aux nouvelles lignes
+mais n’ont pas été recalculées par le runtime tableur principal, absent de
+l’environnement de mise à jour ; voir
+[la preuve d’extension](combat-qa-evidence-expansion-0.7.0.json). Il distingue les **551 cas automatisés courants**
 (313 Node et 238 navigateur) des 452 lignes historiques ou objectifs de revue
 conservés. Les statuts QA cumulés sont **999 « Réussi », 0 « Échec »,
 3 « Non exécuté » et 1 « À vérifier »**. Les **39 formules** ont été recalculées
@@ -919,9 +958,9 @@ sont restées identiques pendant cette exécution.
 | [`combat-bindings.test.mjs`](../tests/combat-bindings.test.mjs) | 16 | Remappage, conflits, pressions brèves et attribution manette |
 | [`combat-catalog.test.mjs`](../tests/combat-catalog.test.mjs) | 9 | 179 identités, 51 tenues, 33 découpes et 20 remplacements |
 | [`combat-engine.test.mjs`](../tests/combat-engine.test.mjs) | 40 | Simulation, techniques, ressources, collisions et déterminisme |
-| [`combat-fidelity.test.mjs`](../tests/combat-fidelity.test.mjs) | 17 | 217 fiches, sources qualifiées, vingt corrections et reculs |
+| [`combat-fidelity.test.mjs`](../tests/combat-fidelity.test.mjs) | 17 | 657 fiches, sources qualifiées, vingt corrections et reculs |
 | [`combat-offline.test.mjs`](../tests/combat-offline.test.mjs) | 14 | Échecs, délai, nouvelle tentative et worker existant |
-| [`combat-progression.test.mjs`](../tests/combat-progression.test.mjs) | 19 | 14 routes, tournoi, santé et checkpoints |
+| [`combat-progression.test.mjs`](../tests/combat-progression.test.mjs) | 21 | 14 routes, feuille de route, rival de tournoi, santé et checkpoints |
 | [`combat-render-matte.test.mjs`](../tests/combat-render-matte.test.mjs) | 5 | Contrats historiques de palette et détourage ; fixtures explicites |
 | [`combat-render-poses.test.mjs`](../tests/combat-render-poses.test.mjs) | 18 | 56 cellules, ancrages, deux rigs bas et simulation inchangée |
 | [`combat-render-sequences.test.mjs`](../tests/combat-render-sequences.test.mjs) | 11 | 70 séquences, 12 ambiances et mouvement réduit |

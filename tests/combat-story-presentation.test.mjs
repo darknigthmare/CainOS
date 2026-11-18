@@ -23,8 +23,8 @@ test('fourteen routes contain eighty-four authored prologue and epilogue tableau
       assert.ok(panel.dialogue.every(line => typeof line.speaker === 'string' && line.text.length > 10));
     }
   }
-  assert.equal(ids.length, 84);
-  for (const values of [ids, titles, summaries]) assert.equal(new Set(values).size, 84);
+  assert.equal(ids.length, fighterIds.length * 6);
+  for (const values of [ids, titles, summaries]) assert.equal(new Set(values).size, fighterIds.length * 6);
 });
 
 test('each route opens and closes with distinct stage and cast compositions', () => {
@@ -35,7 +35,7 @@ test('each route opens and closes with distinct stage and cast compositions', ()
     assert.notEqual(signature(route.prologue[0]), signature(route.epilogue[0]), id);
     assert.equal(new Set([...route.prologue, ...route.epilogue].map(signature)).size, 6, `${id}: six separately composed tableaux`);
   }
-  assert.equal(new Set(intros).size, 14); assert.equal(new Set(endings).size, 14);
+  assert.equal(new Set(intros).size, fighterIds.length); assert.equal(new Set(endings).size, fighterIds.length);
 });
 
 test('narrative references are official, scoped, immutable and do not give Baron or Kaufmo new dialogue', () => {
@@ -117,7 +117,9 @@ test('the existing fourteen encounter schedules and four-win checkpoints remain 
   };
   for (const id of fighterIds) {
     let run = createProgram('story', id, FIGHTERS, STAGES, { seed:20261023 });
-    assert.equal(run.opponents.map((opponent, index) => `${opponent}:${run.stages[index]}`).join(','), schedules[id]);
+    const expected = schedules[id];
+    if (expected) assert.equal(run.opponents.map((opponent, index) => `${opponent}:${run.stages[index]}`).join(','), expected);
+    else { assert.equal(run.opponents.length, 4); assert.equal(new Set(run.opponents).size, 4); }
     for (let chapter = 0; chapter < 4; chapter++) {
       const before = JSON.stringify(run);
       const reading = createStoryPresentation(id, 'chapter', chapter);
