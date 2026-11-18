@@ -88,10 +88,11 @@ test('the production tracker counts individual published poses and preserves not
   assert.equal(data.crossoverArt.costumeDrawings, 10);
 });
 
-test('each published crossover sprite has a complete WebP container', () => {
+test('all ten views of every crossover costume have complete WebP containers', () => {
   const filenames = new Set(ART_FILES);
+  const states = ['selection', 'stance', 'attack', 'victory', 'intro', 'walk', 'jump', 'crouch', 'hit', 'defeat'];
   for (const costume of CROSSOVER_COSTUMES) {
-    for (const state of ['selection', 'stance']) {
+    for (const state of states) {
       assert.ok(filenames.has(costume.sprite.crossoverDirectory + '/' + state + '.webp'), costume.id + '/' + state);
     }
   }

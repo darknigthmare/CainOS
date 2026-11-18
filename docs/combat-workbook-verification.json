@@ -2,8 +2,8 @@
   "schema": "encore-crossover-tracker/v1",
   "mode": "production",
   "artDate": "2026-11-18",
-  "baseCommit": "31d02cdff4a38a7dfda652679889d9c222f2dd4c",
-  "verifiedArtPaths": 2884,
+  "baseCommit": "3e6da5133e1a48e235d251f0f49e3ba0d61a3bab",
+  "verifiedArtPaths": 3780,
   "artFamilies": {
     "selection": 65,
     "stance": 65,
@@ -11,19 +11,19 @@
     "finales": 42,
     "stages": 63,
     "poses": 518,
-    "crossovers": 2884,
+    "crossovers": 3780,
     "escales": 18
   },
   "crossoverArt": {
     "collections": 9,
     "outfits": 378,
-    "costumeDrawings": 2884,
+    "costumeDrawings": 3780,
     "heavyAttacks": 14,
     "stageLayers": 27,
     "escalePanels": 18
   },
-  "offlineVersion": "0.7.0-dd2745eefcb6",
-  "artVersion": "7e2c223a8f1c51b1",
+  "offlineVersion": "0.7.0-45cf4b89c4c2",
+  "artVersion": "75ea5695bde8f8f1",
   "counts": {
     "fighters": 14,
     "moves": 140,
@@ -38,8 +38,8 @@
     "storyBriefings": 56,
     "musicThemes": 21,
     "soundEffects": 26,
-    "offlineImages": 3839,
-    "offlineBytes": 1571400669,
+    "offlineImages": 4735,
+    "offlineBytes": 1932744663,
     "features": 106,
     "production": 1125,
     "scenarios": 94,
@@ -723,14 +723,17 @@
   },
   "historicalQaRows": 1591,
   "priorVerification": {
-    "schema": "encore-crossover-tracker/v1"
+    "schema": "encore-crossover-tracker/v1",
+    "sourceCommit": "31d02cdff4a38a7dfda652679889d9c222f2dd4c",
+    "artVersion": "7e2c223a8f1c51b1",
+    "createdAt": "2026-11-18"
   },
   "baseline": {
-    "workbookSHA256": "f7cd5e7fd9737c07e011efa37bf8d09ff16fad35127733e5508dd8bf59e8cfa5",
-    "trackerDataSHA256": "ceafbe3ed440d84710e01e7292216303aef7218428073a5c1b87ae6f1bf720c2"
+    "workbookSHA256": "de4d3e0862e3c644d9f83ddab17a53c7382cae821f9154f55df6c1fb93ad2a60",
+    "trackerDataSHA256": "27e99b44473daf0407b4d5e436f86b734645e37c455c7fe48ef4c294977ba693"
   },
-  "workbookSHA256": "de4d3e0862e3c644d9f83ddab17a53c7382cae821f9154f55df6c1fb93ad2a60",
-  "trackerDataSHA256": "27e99b44473daf0407b4d5e436f86b734645e37c455c7fe48ef4c294977ba693",
+  "workbookSHA256": "b8e00c73ae22a9b16caa2519b565f877d914f04e8affbcf8ab38344fc6d6abaf",
+  "trackerDataSHA256": "e1df47a17fc2eefb2e2bb7b48d52bff537dc729050eb1902cc12b171ad7bbd73",
   "nativeTables": {
     "Fonctionnalités": [
       "EncoreFonctionnalites",
@@ -775,7 +778,7 @@
   },
   "notesAndRowIdsPreserved": true,
   "qaRowsPreserved": 2240,
-  "changedDataCells": 3,
+  "changedDataCells": 339,
   "formulasVerified": 39,
   "addedRows": {
     "Fonctionnalités": 0,
@@ -783,10 +786,128 @@
     "Techniques": 0,
     "Arènes": 0,
     "Atlas": 0,
-    "Production": 7,
+    "Production": 0,
     "Scénarios": 0,
     "QA": 0
   },
   "addedSources": 0,
-  "note": "L’exécution QA datée qui figure dans le classeur reste historique. L’inventaire des ressources correspond au manifeste indiqué."
+  "note": "L’exécution QA datée qui figure dans le classeur reste historique. L’inventaire des ressources correspond au manifeste indiqué.",
+  "releaseValidation": {
+    "assetSource": "3e6da5133e1a48e235d251f0f49e3ba0d61a3bab",
+    "offlineVersion": "0.7.0-45cf4b89c4c2",
+    "artVersion": "75ea5695bde8f8f1",
+    "node": {
+      "passed": 379,
+      "failed": 0
+    },
+    "canvas": {
+      "legacy": {
+        "appearances": 252,
+        "textures": 2520,
+        "orientations": 4536,
+        "heavyOrientations": 504
+      },
+      "fusions": {
+        "appearances": 126,
+        "textures": 1260,
+        "orientations": 2268,
+        "heavyOrientations": 252
+      },
+      "total": {
+        "appearances": 378,
+        "textures": 3780,
+        "orientations": 6804,
+        "heavyOrientations": 756
+      },
+      "worlds": [
+        "gameoverse",
+        "gaslightdistrict",
+        "knightsofguinevere",
+        "lackadaisy",
+        "metarunner",
+        "murderdrones",
+        "smg4",
+        "sunsetparadise",
+        "ultrajumpmania"
+      ],
+      "errors": []
+    },
+    "standaloneAndEmbedded": {
+      "dist-combat": {
+        "files": 4735,
+        "bytes": 1932744663,
+        "manifestSha256": "8c75a3661bdd12e4e31c6cbace8a4e3ce1fd49af399515e6139b412a4fd53be3"
+      },
+      "dist": {
+        "files": 4735,
+        "bytes": 1932744663,
+        "manifestSha256": "8c75a3661bdd12e4e31c6cbace8a4e3ce1fd49af399515e6139b412a4fd53be3"
+      }
+    },
+    "exercised": {
+      "standaloneDuel": {
+        "type": "standalone",
+        "actual": {
+          "/assets/encore/crossovers/murderdrones/pomni/fusion/stance.webp": 1,
+          "/assets/encore/crossovers/murderdrones/jax/fusion/stance.webp": -1,
+          "/assets/encore/crossovers/murderdrones/pomni/fusion/intro.webp": 1,
+          "/assets/encore/crossovers/murderdrones/jax/fusion/intro.webp": -1,
+          "/assets/encore/crossovers/murderdrones/pomni/fusion/attack.webp": 1,
+          "/assets/encore/crossovers/murderdrones/jax/fusion/attack.webp": -1
+        },
+        "errors": []
+      },
+      "embeddedReplay": {
+        "type": "cainos",
+        "actual": {
+          "/assets/encore/crossovers/murderdrones/pomni/fusion/stance.webp": 1,
+          "/assets/encore/crossovers/murderdrones/jax/fusion/stance.webp": -1,
+          "/assets/encore/crossovers/murderdrones/pomni/fusion/intro.webp": 1,
+          "/assets/encore/crossovers/murderdrones/jax/fusion/intro.webp": -1
+        },
+        "errors": []
+      },
+      "wardrobeAndInputs": [
+        {
+          "pass": true,
+          "name": "Les filtres des deux joueurs, leurs portraits et leurs gardes ouvrent un duel local",
+          "detail": {
+            "appearances": 2
+          }
+        },
+        {
+          "pass": true,
+          "name": "Les coups lourds joués au clavier dessinent les deux attaques costumées pendant leur phase active",
+          "detail": [
+            {
+              "frame": 15,
+              "facing": 1,
+              "drawnFacing": 1
+            },
+            {
+              "frame": 14,
+              "facing": -1,
+              "drawnFacing": -1
+            }
+          ]
+        },
+        {
+          "pass": true,
+          "name": "Le vestiaire affiche la fusion de Pomni et réinitialise le filtre pour les tenues du cirque",
+          "detail": {
+            "appearance": "glitch-murderdrones-pomni-fusion"
+          }
+        },
+        {
+          "pass": true,
+          "name": "La garde-robe compare le résident et permet de l’essayer en entraînement",
+          "detail": {
+            "appearance": "glitch-smg4-pomni-resident"
+          }
+        }
+      ]
+    },
+    "uniqueOriginalFusionSprites": 1260,
+    "completeCrossoverCostumes": 378
+  }
 }

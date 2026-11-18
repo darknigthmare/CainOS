@@ -2,7 +2,7 @@
 
 Chaque combattant du cirque peut rendre hommage à un personnage de l’œuvre, incarner un habitant de son univers ou adopter une fusion originale. Pour cette troisième apparence, la silhouette et les traits du combattant sont redessinés dans le langage visuel de la série. Le joueur garde les attaques, les statistiques et le scénario de son combattant. Les créations d’Encore sont des adaptations de fan. [Catalogue du studio](https://www.glitchprod.com/our-shows)
 
-Les neuf univers comptent 252 tenues « Hommage » ou « Résident », auxquelles s’ajoutent 126 fusions originales dans 9 univers. Le jeu charge les dessins individuels présents pour la sélection, la garde, l’attaque, la victoire, l’entrée, la marche, le saut, la position accroupie, l’impact reçu et la défaite. 13 fusions disposent déjà des dix dessins. Chaque autre fusion conserve sa propre garde pour les actions encore à illustrer. Les coups légers et lourds utilisent le dessin d’attaque de la tenue quand il est disponible, pendant la phase active et le début de la récupération. Les quatorze combattants d’origine disposent chacun d’un dessin propre à leur coup lourd.
+Les neuf univers comptent 252 tenues « Hommage » ou « Résident », auxquelles s’ajoutent 126 fusions originales dans 9 univers. Chacune de ces tenues dispose de dix dessins individuels pour la sélection, la garde, l’attaque, la victoire, l’entrée, la marche, le saut, la position accroupie, l’impact reçu et la défaite. Les coups légers et lourds utilisent le dessin d’attaque de la tenue quand il est disponible, pendant la phase active et le début de la récupération. Les quatorze combattants d’origine disposent chacun d’un dessin propre à leur coup lourd.
 
 Sur l’accueil du mode Combat, **Escales GLITCH** ouvre le choix des neuf destinations. Sélectionnez une escale pour lire son introduction, puis remportez le duel pour afficher sa fin. Chaque étape possède une arène à trois profondeurs et un tableau d’introduction et de fin. L’arène comporte un fond et deux plans transparents. Les poses, l’habillage et les escales sont imaginés pour le jeu. [Fichiers des costumes](../assets/encore/crossovers/) · [Illustrations du parcours](../assets/encore/escales/)
 
@@ -74,7 +74,7 @@ Chaque lien de tenue ouvre les WebP individuels de cette apparence. Les combatta
 
 ### Meta Runner
 
-[Comparer les 28 tenues sur la planche de sélection](images/crossover-metarunner-vestiaire.webp)
+[Comparer les 28 hommages et résidents](images/crossover-metarunner-vestiaire.webp) · [Voir les 14 fusions en sélection et en garde](images/fusions-metarunner.webp)
 
 | Combattant | Tenue hommage | Rôle dans l’univers | Fusion originale |
 | --- | --- | --- | --- |
@@ -95,7 +95,7 @@ Chaque lien de tenue ouvre les WebP individuels de cette apparence. Les combatta
 
 ### Sunset Paradise
 
-[Comparer les 28 tenues sur la planche de sélection](images/crossover-sunsetparadise-vestiaire.webp)
+[Comparer les 28 hommages et résidents](images/crossover-sunsetparadise-vestiaire.webp) · [Voir les 14 fusions en sélection et en garde](images/fusions-sunsetparadise.webp)
 
 | Combattant | Tenue hommage | Rôle dans l’univers | Fusion originale |
 | --- | --- | --- | --- |
@@ -118,7 +118,7 @@ Chaque lien de tenue ouvre les WebP individuels de cette apparence. Les combatta
 
 Dans la sélection du joueur ou de son adversaire, choisissez **Murder Drones** puis **Fusion originale**. Ces corps de drones reconçus pour Copper 9 reprennent des traits propres à chaque combattant du cirque.
 
-[Comparer les 28 tenues sur la planche de sélection](images/crossover-murderdrones-vestiaire.webp)
+[Comparer les 28 hommages et résidents](images/crossover-murderdrones-vestiaire.webp) · [Voir les 14 fusions en sélection et en garde](images/fusions-murderdrones.webp)
 
 | Combattant | Tenue hommage | Rôle dans l’univers | Fusion originale |
 | --- | --- | --- | --- |
@@ -139,7 +139,7 @@ Dans la sélection du joueur ou de son adversaire, choisissez **Murder Drones** 
 
 ### The Gaslight District
 
-[Comparer les 28 tenues sur la planche de sélection](images/crossover-gaslightdistrict-vestiaire.webp)
+[Comparer les 28 hommages et résidents](images/crossover-gaslightdistrict-vestiaire.webp) · [Voir les 14 fusions en sélection et en garde](images/fusions-gaslightdistrict.webp)
 
 | Combattant | Tenue hommage | Rôle dans l’univers | Fusion originale |
 | --- | --- | --- | --- |
@@ -160,7 +160,7 @@ Dans la sélection du joueur ou de son adversaire, choisissez **Murder Drones** 
 
 ### Knights of Guinevere
 
-[Comparer les 28 tenues sur la planche de sélection](images/crossover-knightsofguinevere-vestiaire.webp)
+[Comparer les 28 hommages et résidents](images/crossover-knightsofguinevere-vestiaire.webp) · [Voir les 14 fusions en sélection et en garde](images/fusions-knightsofguinevere.webp)
 
 | Combattant | Tenue hommage | Rôle dans l’univers | Fusion originale |
 | --- | --- | --- | --- |
@@ -181,7 +181,7 @@ Dans la sélection du joueur ou de son adversaire, choisissez **Murder Drones** 
 
 ### Gameoverse
 
-[Comparer les 28 tenues sur la planche de sélection](images/crossover-gameoverse-vestiaire.webp)
+[Comparer les 28 hommages et résidents](images/crossover-gameoverse-vestiaire.webp) · [Voir les 14 fusions en sélection et en garde](images/fusions-gameoverse.webp)
 
 | Combattant | Tenue hommage | Rôle dans l’univers | Fusion originale |
 | --- | --- | --- | --- |
@@ -202,7 +202,7 @@ Dans la sélection du joueur ou de son adversaire, choisissez **Murder Drones** 
 
 ### Lackadaisy
 
-[Comparer les 28 tenues sur la planche de sélection](images/crossover-lackadaisy-vestiaire.webp)
+[Comparer les 28 hommages et résidents](images/crossover-lackadaisy-vestiaire.webp) · [Voir les 14 fusions en sélection et en garde](images/fusions-lackadaisy.webp)
 
 | Combattant | Tenue hommage | Rôle dans l’univers | Fusion originale |
 | --- | --- | --- | --- |
@@ -223,7 +223,7 @@ Dans la sélection du joueur ou de son adversaire, choisissez **Murder Drones** 
 
 ### SMG4
 
-[Comparer les 28 tenues sur la planche de sélection](images/crossover-smg4-vestiaire.webp)
+[Comparer les 28 hommages et résidents](images/crossover-smg4-vestiaire.webp) · [Voir les 14 fusions en sélection et en garde](images/fusions-smg4.webp)
 
 | Combattant | Tenue hommage | Rôle dans l’univers | Fusion originale |
 | --- | --- | --- | --- |
@@ -244,7 +244,7 @@ Dans la sélection du joueur ou de son adversaire, choisissez **Murder Drones** 
 
 ### Ultra Jump Mania!
 
-[Comparer les 28 tenues sur la planche de sélection](images/crossover-ultrajumpmania-vestiaire.webp)
+[Comparer les 28 hommages et résidents](images/crossover-ultrajumpmania-vestiaire.webp) · [Voir les 14 fusions en sélection et en garde](images/fusions-ultrajumpmania.webp)
 
 | Combattant | Tenue hommage | Rôle dans l’univers | Fusion originale |
 | --- | --- | --- | --- |

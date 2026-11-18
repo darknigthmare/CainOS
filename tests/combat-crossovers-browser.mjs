@@ -55,7 +55,9 @@ try {
   await page.goto(base + '/combat/', {waitUntil:'networkidle'});
   assert.equal(fetched.size, 0);
   await page.locator('.mode-card[data-mode="local"]').click();
-  const pairs = [['pomni', 'murderdrones', 'resident'], ['jax', 'metarunner', 'hommage']];
+  const pairs = fusionsOnly
+    ? [['pomni', 'murderdrones', 'fusion'], ['jax', 'murderdrones', 'fusion']]
+    : [['pomni', 'murderdrones', 'resident'], ['jax', 'metarunner', 'hommage']];
   for (const [side, [owner, series, style]] of pairs.entries()) {
     const picker = page.locator(`[data-costume-picker="variant-${side}"]`);
     await picker.locator('summary').click();
@@ -166,11 +168,9 @@ try {
       }
       const renderer = window.crossoverAuditRenderer;
       const keys = ['selection', 'stance', ...ACTION_ART];
-      const fusion = entry.crossover.style === 'fusion';
       const published = ART_FILES.filter(path => path.startsWith(directory + '/')).map(path => path.slice(directory.length + 1)).sort();
       if (JSON.stringify(files) !== JSON.stringify(published)) throw new Error('Le manifeste diffère des fichiers de ' + entry.id);
-      const required = fusion ? ['selection', 'stance'] : keys;
-      for (const key of required) {
+      for (const key of keys) {
         if (!ART_FILES.includes(directory + '/' + key + '.webp')) throw new Error('Vue absente du manifeste : ' + entry.id + '/' + key);
       }
       const exists = key => ART_FILES.includes(directory + '/' + key + '.webp');
@@ -210,8 +210,7 @@ try {
     textures += counts.textures; orientations += counts.orientations; heavyOrientations += counts.heavyOrientations;
   }
   console.log('Série vérifiée : ' + currentSeries + ' · ' + textures + ' textures au total');
-  const fusions = costumes.filter(item => item.crossover.style === 'fusion').length;
-  assert.ok(textures >= fusions * 2 + (costumes.length - fusions) * 10);
+  assert.ok(textures >= costumes.length * 10);
   assert.equal(orientations, costumes.length * 18);
   assert.equal(heavyOrientations, costumes.length * 2);
   pass('Chaque silhouette publiée conserve sa tenue et son orientation en combat', { appearances: costumes.length, textures, orientations, heavyOrientations });
