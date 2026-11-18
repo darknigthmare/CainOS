@@ -40,7 +40,8 @@ try {
       const { CombatRenderer } = await import('/combat/render.mjs');
       const { STAGES, FIGHTERS } = await import('/combat/data.mjs');
       const canvas = document.querySelector('canvas'), renderer = new CombatRenderer(canvas), ctx = canvas.getContext('2d', { willReadFrequently: true });
-      const ready = await renderer.preload([FIGHTERS.find(f => f.id === 'pomni'), FIGHTERS.find(f => f.id === 'jax')], STAGES);
+      // This historical fixture compares the procedural fallback against 0.5.0.
+      const ready = await renderer.preload([FIGHTERS.find(f => f.id === 'pomni'), FIGHTERS.find(f => f.id === 'jax')]);
       if (!ready.ok) throw new Error(JSON.stringify(ready));
       const pixels = (y = 0, h = 720) => ctx.getImageData(0, y, 1280, h).data;
       const hash = values => { let h = 2166136261; for (const value of values) h = Math.imul(h ^ value, 16777619); return h >>> 0; };

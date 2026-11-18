@@ -2,6 +2,8 @@
 
 Les 14 combattants disposent de **65 vues de sélection, 65 gardes et 140 illustrations de campagne**. Les 51 tenues de la garde-robe ajoutent 102 images au premier lot de 168. [Galerie des 51 tenues](#les-51-tenues-de-la-garde-robe)
 
+Le lot suivant complète les 65 apparences avec 504 poses, les 12 arènes avec 36 plans de parallaxe et les 42 finales avec un décor dédié par scène. [Galerie des poses, arènes et finales](COMBAT_DECORS_ET_POSES.md)
+
 ## Apparences originales et campagnes
 
 Le premier lot du 18 novembre 2026 comprend les 14 portraits et les 14 gardes des apparences originales, ainsi que les 140 tableaux des campagnes. Chaque lien ouvre une image WebP. Les numéros suivent l’ordre de lecture.
@@ -87,11 +89,11 @@ Dix combattants proposent des tenues supplémentaires. Loolilalu, The Fudge, Kau
 
 ## Rendu en jeu
 
-Le roster montre les apparences originales. Choisir une tenue dans le sélecteur affiche son portrait dans la fiche du joueur ou de l’adversaire. En duel, la garde illustrée s’affiche au repos et en défense debout. Le moteur oriente le dessin vers l’adversaire. Les déplacements, attaques, réactions et cinématiques de fin de duel utilisent leurs poses animées.
+Le roster montre les apparences originales. Choisir une tenue dans le sélecteur affiche son portrait dans la fiche du joueur ou de l’adversaire. En duel, la garde illustrée s’affiche au repos et en défense debout. Le moteur oriente le dessin vers l’adversaire. Les poses d’action couvrent l’entrée en duel, la marche, le saut, la position accroupie, l’attaque légère, la réaction à un coup et les poses de victoire et de défaite. Certaines actions des sept combattants d’origine puisent dans leurs atlas animés. Les attaques lourdes et les techniques spéciales conservent leurs animations de combat. [Galerie des poses et des décors](COMBAT_DECORS_ET_POSES.md)
 
 Le lecteur associe chaque image à l’identifiant de son tableau. Certains plans rapprochés sur un objet ou un lieu intègrent les réactions illustrées des personnages qui prennent part à la scène. Les 14 campagnes comptent 42 tableaux de prologue, 56 présentations de chapitre et 42 tableaux d’épilogue. CainOS et la version autonome partagent ce lecteur, le moteur de combat et le pack disponible dans les réglages hors ligne. [Scénarios](../combat/stories.mjs) · [Inventaire de distribution](../combat/offline-manifest.mjs)
 
-## Distribution des deux lots
+## Distribution historique des deux premiers lots
 
 Les 102 nouveaux WebP totalisent 35 729 494 octets. La distribution autonome contient les 65 portraits, les 65 gardes et les 140 scènes, ainsi que les 44 autres images utilisées par le jeu. Le manifeste des 314 images porte l’empreinte `d59c2155e11a23d4` et la version hors ligne est `0.7.0-90382d724709`. [Manifeste de la distribution](../combat/offline-manifest.mjs)
 

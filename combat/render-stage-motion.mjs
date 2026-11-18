@@ -12,13 +12,22 @@ const circle = (x, y, rx, ry, color, alpha = 1) => ({ kind: 'ellipse', x, y, rx,
 const stroke = (points, color, alpha = 1, width = 1) => ({ kind: 'line', points, color, alpha, width });
 
 /** Deterministic coordinates only: no RNG, wall clock or actor mutation. */
-export function stageMotion(stage, frame = 0, reducedMotion = false) {
+export function stageMotion(stage, frame = 0, reducedMotion = false, painted = false) {
   let id = typeof stage === 'string' ? stage : stage?.theme || stage?.id || 'bigtop';
   if (id === 'circus') id = 'bigtop';
   if (!Object.hasOwn(STAGE_AMBIENCES, id)) return { id, frame: 0, shapes: [] };
   const tick = reducedMotion ? 0 : normalFrame(frame), t = tick / 60, shapes = [];
   const wave = (rate, phase = 0) => Math.sin(t * rate + phase);
-  if (id === 'bigtop') {
+  if (painted && ['manor', 'spudsy', 'backstage'].includes(id)) {
+    // The vector candles, counter and wall lamps have their own coordinates.
+    // Give the painted architecture unanchored dust or heat motes instead.
+    const color = { manor: '#ffe2bb', spudsy: '#fff0cd', backstage: '#ffdcb2' }[id];
+    for (let i = 0; i < 13; i++) {
+      const x = 44 + i * 95 + wave(0.43, i * 1.7) * 5;
+      const y = 470 - (i * 39 + t * (3 + i % 3)) % 310;
+      shapes.push(circle(x, y, 1 + i % 2, 1.4, color, 0.18));
+    }
+  } else if (id === 'bigtop') {
     for (let i = 0; i < 7; i++) shapes.push(circle(145 + i * 165, 122 + wave(0.35, i) * 5, 8 + wave(0.8, i) * 1.5, 5, '#fff3b3', 0.15 + (wave(0.7, i) + 1) * 0.07));
   } else if (id === 'candy') {
     for (let i = 0; i < 18; i++) shapes.push(circle((73 + i * 139 + t * (2 + i % 3)) % 1280, 85 + ((i * 47 + t * (4 + i % 4)) % 425), 1.4 + i % 2, 1.4 + i % 2, ['#ffe5bb', '#fbb5db', '#d7eaff'][i % 3], 0.38));
@@ -72,8 +81,8 @@ export function stageMotion(stage, frame = 0, reducedMotion = false) {
   return { id, frame: tick, shapes };
 }
 
-export function drawStageMotion(ctx, stage, frame = 0, reducedMotion = false) {
-  const motion = stageMotion(stage, frame, reducedMotion);
+export function drawStageMotion(ctx, stage, frame = 0, reducedMotion = false, painted = false) {
+  const motion = stageMotion(stage, frame, reducedMotion, painted);
   ctx.save(); ctx.beginPath(); ctx.rect(0, 0, 1280, AMBIENT_FLOOR); ctx.clip();
   for (const shape of motion.shapes) {
     ctx.globalAlpha = shape.alpha; ctx.beginPath();

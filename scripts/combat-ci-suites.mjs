@@ -1,6 +1,8 @@
 /** The browser coverage required by Encore's collector and workbook publisher. */
 export const BROWSER_SUITES = Object.freeze([
   ['tests/combat-browser.mjs', 'audit-combat/browser-report.json'],
+  ['tests/combat-action-art-browser.mjs', 'audit-combat/action-art/browser-report.json'],
+  ['tests/combat-stage-art-browser.mjs', 'audit-combat/stage-art/browser-report.json'],
   ['tests/combat-finishers-browser.mjs', 'audit-combat/finishers-0.7.0/browser-report.json'],
   ['tests/combat-audio-ambiences-browser.mjs', 'audit-combat/audio-ambiences-0.7.0/browser-report.json'],
   ['tests/combat-training-browser.mjs', 'audit-combat/training-browser-report.json'],

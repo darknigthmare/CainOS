@@ -1,9 +1,11 @@
 import { ART_FILES } from './offline-manifest.mjs';
 
 const published = new Set(ART_FILES);
-const frames = { selection: new Map(), stance: new Map() };
-const limits = { selection: { edge: 384, count: 16 }, stance: { edge: 640, count: 4 } };
+const frames = { selection: new Map(), stance: new Map(), poses: new Map() };
+const limits = { selection: { edge: 384, count: 16 }, stance: { edge: 640, count: 4 }, poses: { edge: 640, count: 24 } };
 const pending = new Map();
+const poseRetryAt = new Map();
+export const ACTION_ART = Object.freeze(['intro', 'attack', 'hit', 'walk', 'jump', 'crouch', 'victory', 'defeat']);
 // Two decoding slots shared by the lazily visible portraits and the current duel.
 const decoders = [Promise.resolve(), Promise.resolve()];
 let nextDecoder = 0;
@@ -31,25 +33,32 @@ async function readFrame(path, kind) {
   finally { image.removeAttribute('src'); }
 }
 
-export function loadFighterIllustration(kind, fighter) {
+export function loadFighterIllustration(kind, fighter, pose) {
   // Archive entries use the appearance ID directly. Match actors keep the
   // fighter's simulation ID and carry their chosen appearance in costume.
   const appearanceId = fighter?.costume || fighter?.id;
-  if (!appearanceId) return null;
-  const cache = frames[kind];
-  if (cache.has(appearanceId)) {
-    const frame = cache.get(appearanceId);
-    cache.delete(appearanceId);
-    cache.set(appearanceId, frame);
+  if (!appearanceId || typeof Image === 'undefined') return null;
+  const cache = frames[kind], key = kind === 'poses' ? appearanceId + '/' + pose : appearanceId;
+  if (cache.has(key)) {
+    const frame = cache.get(key);
+    cache.delete(key);
+    cache.set(key, frame);
     return frame;
   }
-  const path = `../assets/encore/${kind}/${appearanceId}.webp`;
+  const path = `../assets/encore/${kind}/${key}.webp`;
   if (!published.has(path)) return null;
+  if (kind === 'poses' && poseRetryAt.has(key)) {
+    if (performance.now() < poseRetryAt.get(key)) return null;
+    poseRetryAt.delete(key);
+  }
   if (!pending.has(path)) {
     const task = decoders[nextDecoder].then(() => readFrame(path, kind)).then(frame => {
       if (frame) {
         if (cache.size >= limits[kind].count) cache.delete(cache.keys().next().value);
-        cache.set(appearanceId, frame);
+        cache.set(key, frame);
+      } else if (kind === 'poses') {
+        // drawActor can ask again every video frame while offline.
+        poseRetryAt.set(key, performance.now() + 5000);
       }
       return frame;
     }).finally(() => pending.delete(path));
@@ -59,6 +68,20 @@ export function loadFighterIllustration(kind, fighter) {
     nextDecoder = (nextDecoder + 1) % decoders.length;
   }
   return pending.get(path);
+}
+
+/** Queue only the current pair, two drawings at a time, after the duel can start. */
+export async function warmCombatPoses(fighters, isCurrent) {
+  for (const pose of ACTION_ART) {
+    if (!isCurrent()) return;
+    await Promise.all(fighters.map(fighter => loadFighterIllustration('poses', fighter, pose)));
+  }
+}
+
+export function actionIllustration(fighter, pose) {
+  if (!pose) return null;
+  const result = loadFighterIllustration('poses', fighter, pose);
+  return result?.canvas ? result : null;
 }
 
 export function standingIllustration(fighter) {

@@ -2,6 +2,7 @@ import { FIGHTERS, STAGES, VARIANTS, ARCHIVE, MOVE_SLOTS, SLOT_LABELS, getFighte
 import { getFidelitySources } from './fidelity.mjs';
 import { CombatEngine, FIXED_DT } from './engine.mjs';
 import { CombatRenderer, drawPortrait } from './render.mjs';
+import { warmCombatPoses } from './illustrations.mjs';
 import { InputController } from './input.mjs';
 import { BINDING_ACTIONS, DEFAULT_BINDINGS, rebindAction, formatBinding, keyLabel } from './bindings.mjs';
 import { createProgram, programEncounter, recordProgramResult, retryProgram } from './progression.mjs';
@@ -11,6 +12,7 @@ import { CombatAudio, selectCombatCue } from './audio.mjs';
 import { menuItems, rememberFocus, restoreFocus, moveMenuFocus, navigateKeyboardGroup } from './menu-navigation.mjs';
 import { FINISHER_CATALOG, FINISHER_NOTICE } from './finisher-catalog.mjs';
 import { selectMatchFinisher } from './finishers.mjs';
+import { loadFinisherBackdrop } from './render-finishers.mjs';
 import { FinisherGallery } from './finisher-gallery.mjs';
 import { TrainingLab } from './training.mjs';
 import { fighterReadout, fighterMarkers } from './readability.mjs';
@@ -186,7 +188,7 @@ function renderSelect() {
     <div class="selection-summary">${selectionArtist(0)}<div class="selection-vs" aria-hidden="true">VS</div>${single?`<div class="selection-program"><h3>${selection.mode==='arcade'?'Les six actes':selection.mode==='boss'?'Les anomalies':selection.mode==='survival'?'Dix vagues':selection.mode==='story'?'Quatre chapitres':selection.mode==='tournament'?'La coupe du cirque':'Le mannequin'}</h3><p>Une succession de défis préparée par Caine.</p></div>`:selectionArtist(1)}</div>
     ${selection.mode==='story'?storyLibraryMarkup(selected[0].id):''}<div class="selection-controls"><label class="field"><span>APPARENCE JOUEUR 1</span><select id="variant-0">${variantOptions(0)}</select></label>${single?'':`<label class="field"><span>APPARENCE ${selection.mode==='local'?'JOUEUR 2':'ADVERSAIRE'}</span><select id="variant-1">${variantOptions(1)}</select></label>`}<label class="field"><span>DIFFICULTÉ CPU</span><select id="select-difficulty">${[['easy','Détente'],['normal','Équilibrée'],['hard','Exigeante']].map(([id,name])=>`<option value="${id}" ${profile.settings.difficulty===id?'selected':''}>${name}</option>`).join('')}</select></label><button class="primary" data-action="start">LEVER LE RIDEAU ↗</button></div>
     <div class="section-heading"><h2>Le décor</h2><span>${selection.mode==='story'?'LES SCÈNES SUIVENT L’HISTOIRE':PROGRAM_MODES.includes(selection.mode)?'DÉCOR DU PREMIER DUEL':'ARÈNES SANS DANGER ALÉATOIRE'}</span></div><div class="stages">${STAGES.map((stage,i)=>`<button class="stage-card ${previewStage.id===stage.id?'selected':''}" data-stage="${stage.id}" ${selection.mode==='story'?'disabled':''} aria-pressed="${previewStage.id===stage.id}" style="--stage-color:${stage.palette.accent}"><b>${escapeHTML(stage.name)}</b><span>SCÈNE ${String(i+1).padStart(2,'0')}</span></button>`).join('')}</div><section class="stage-preview" aria-labelledby="stage-preview-title"><canvas id="stage-preview" role="img" aria-label="Aperçu : ${escapeHTML(previewStage.name)}" data-stage-preview="${previewStage.id}"></canvas><div><span class="eyebrow">${selection.mode==='story'?'PREMIER CHAPITRE':'PROCHAINE SCÈNE'}</span><h3 id="stage-preview-title">${escapeHTML(previewStage.name)}</h3><p>${escapeHTML(previewStage.description)}</p>${fidelityDetails(previewStage.fidelity,'Repères du décor','stage-fidelity')}</div></section><p class="small-note">Les apparences proviennent des archives de CainOS. Les capacités et leurs valeurs sont des adaptations pour le combat. Les anciens membres et formes abstraites sont des adversaires simulés dans ce mode libre.</p>`;
-  new CombatRenderer($('#stage-preview')).render(null,{stage:previewStage,reducedMotion:true});
+  new CombatRenderer($('#stage-preview')).previewStage(previewStage);
   portraits();
 }
 function variantOptions(side) {
@@ -467,6 +469,7 @@ async function startMatch(options={}) {
   $('#announcement').innerHTML = '<strong>LE RIDEAU SE LÈVE</strong><span>Préparation des artistes…</span>';
   const load = await active.renderer.preload(fighters,[stage]);
   if (active !== match) return;
+  void warmCombatPoses(fighters, () => active === match);
   active.ready = true; active.announcement = null; accumulator = 0; previousTime = performance.now();
   if (load?.errors?.length) toast('Certaines illustrations sont indisponibles. Le combat reste accessible avec un repère visuel.');
   if (active.storyPending) showStoryScene();
@@ -611,7 +614,7 @@ function loop(now) {
   else if(!modal.open&&!document.hidden&&osVisible&&(!active.engine.paused||active.finished&&phase==='matchOver'))active.presentationElapsed+=dt;
   if(!modal.open&&!document.hidden&&osVisible&&(!active.engine.paused||active.finished))active.ambientElapsed+=dt;
   if(active.finished&&!active.replay&&phase==='matchOver'&&!active.resultPresented&&active.presentationElapsed>=(active.finisher&&!profile.settings.reducedMotion&&!reducedMotionPreference.matches?active.finisher.durationFrames/60:2.2))renderMatchResult();
-  active.renderer.render(active.engine.state,{stage:active.stage,finisher:active.finisher&&!active.resultPresented?active.finisher:null,hitboxes:active.showHitboxes,reducedMotion:profile.settings.reducedMotion||reducedMotionPreference.matches,presentationFrame:Math.floor(active.presentationElapsed*60),ambientFrame:Math.floor(active.ambientElapsed*60)});updateHUD();
+  active.renderer.render(active.engine.state,{stage:active.stage,finisher:active.finisher&&!active.resultPresented?active.finisher:null,finisherBackdrop:active.finisherBackdrop,hitboxes:active.showHitboxes,reducedMotion:profile.settings.reducedMotion||reducedMotionPreference.matches,presentationFrame:Math.floor(active.presentationElapsed*60),ambientFrame:Math.floor(active.ambientElapsed*60)});updateHUD();
 }
 function storeReplay() {
   if(!active.recordFrames||active.recordFrames>=72000)return false;
@@ -642,7 +645,12 @@ function finishMatch() {
   profile.history = profile.history.slice(0,12); persist(); syncAudio(); sound(won?'win':'lose');
   active.presentationPhase='matchOver'; active.presentationElapsed=0;
   $('.arena-wrap').classList.toggle('finishing',!!active.finisher);
-  if(active.finisher)$('#arena').setAttribute('aria-label',active.finisher.title+' — finale de spectacle. Le résultat du duel est déjà enregistré.');
+  if (active.finisher) {
+    const match = active;
+    $('#arena').setAttribute('aria-label', match.finisher.title+' — finale de spectacle. Le résultat du duel est déjà enregistré.');
+    // The result and skip button remain available while the illustrated set loads.
+    void loadFinisherBackdrop(match.finisher).then(backdrop => { if (active === match && !match.resultPresented) match.finisherBackdrop = backdrop; });
+  }
   const skip=document.createElement('button'); skip.className='primary outcome-skip'; skip.dataset.action='result-screen'; skip.textContent='Voir le résultat'; $('.arena-stage').append(skip); skip.focus({preventScroll:true});
 }
 function renderMatchResult() {

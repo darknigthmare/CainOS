@@ -32,7 +32,7 @@ const performers = {
 
 export const SEQUENCE_EVENTS = freeze(['intro', 'roundVictory', 'roundDefeat', 'matchVictory', 'matchDefeat']);
 export const SEQUENCE_DURATIONS = freeze({ intro: 96, roundVictory: 90, roundDefeat: 90, matchVictory: 132, matchDefeat: 132 });
-export const SEQUENCE_PROVENANCE = 'Finite procedural motion of existing artwork; dedicated authored intro, combat and outcome drawings remain to be produced.';
+export const SEQUENCE_PROVENANCE = 'Finite procedural motion of the appearance-specific intro or outcome drawing, with archive art as a fallback.';
 
 const key = (at, xOffset, lift, lean, alpha = 1) => ({ at, xOffset, lift, lean, alpha });
 function makeSequence(id, p, event) {

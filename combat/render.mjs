@@ -1,17 +1,18 @@
 import { getHurtbox, getHitbox } from './engine.mjs';
 import { removeAtlasMatte, applySpritePalette, projectilePresentation, trapPresentation } from './render-presentation.mjs';
-import { spriteSourceRegion, actorPose, frameGeometry, crouchParts, POSE_REGISTRATION_VERSION } from './render-poses.mjs';
-import { loadFighterIllustration, standingIllustration } from './illustrations.mjs';
+import { spriteSourceRegion, actorPose, frameGeometry, crouchParts, illustratedAction, POSE_REGISTRATION_VERSION } from './render-poses.mjs';
+import { actionIllustration, loadFighterIllustration, standingIllustration } from './illustrations.mjs';
 import { drawStageMotion } from './render-stage-motion.mjs';
 import { drawStageScenery } from './render-stage-scenery.mjs';
+import { stageCamera, drawStagePlanes, loadStagePlanes } from './stage-parallax.mjs';
 import { drawFinisherScene } from './render-finishers.mjs';
 
 /**
  * Digital Circus combat presentation. Existing CainOS atlases are read without
  * changing their files. Static border removal keys only the actual edge matte;
  * the seven existing animation sheets use alpha bounds only. Their
- * inspected cells and rigid cutout poses provide game-state presentation until
- * dedicated fight art is authored. Character transforms use one uniform scale.
+ * inspected cells and rigid cutout poses complement the dedicated action
+ * drawings. Character transforms use one uniform scale.
  */
 export const LOGICAL_WIDTH = 1280;
 export const LOGICAL_HEIGHT = 720;
@@ -643,20 +644,38 @@ export class CombatRenderer {
     if (!this.ctx) throw new Error('Canvas 2D indisponible.');
     this.ctx.imageSmoothingEnabled = false;
     this.backgrounds = new Map();
+    this.stageArt = new Map();
     this.lastState = null;
   }
 
   async preload(fighters, stages = []) {
-    const results = await Promise.allSettled((fighters || []).map(fighter => Promise.all([prepareFighter(fighter), loadFighterIllustration('stance', fighter)])));
-    for (const stage of stages) this.background(stage);
+    const fighterLoads = (fighters || []).map(fighter => Promise.all([prepareFighter(fighter), loadFighterIllustration('stance', fighter)]));
+    const stageLoads = stages.map(async stage => {
+      const paintings = await loadStagePlanes(stage);
+      if (paintings) this.stageArt.set(stage.theme || stage.id, paintings);
+      else this.background(stage);
+    });
+    const results = await Promise.allSettled([...fighterLoads, ...stageLoads]);
     return { ok: failures.size === 0 && results.every(r => r.status === 'fulfilled'), errors: [...failures.entries()].map(([src, error]) => ({ src, error })) };
   }
 
   background(stage) {
     const value = stage || { id: 'bigtop' };
+    const paintings = this.stageArt.get(value.theme || value.id);
+    if (paintings) return paintings.still;
     const key = `${value.id || value.theme}:${JSON.stringify(value.palette || {})}`;
     if (!this.backgrounds.has(key)) this.backgrounds.set(key, makeBackground(value));
     return this.backgrounds.get(key);
+  }
+
+  async previewStage(stage) {
+    const options = { stage, reducedMotion: true };
+    this.render(null, options);
+    const paintings = await loadStagePlanes(stage, () => this.canvas.isConnected);
+    if (paintings && this.canvas.isConnected) {
+      this.stageArt.set(stage.theme || stage.id, paintings);
+      this.render(null, options);
+    }
   }
 
   getFrame(fighter, action, tick, variant) { return getFrame(fighter, action, tick, variant); }
@@ -666,18 +685,26 @@ export class CombatRenderer {
   render(state, options = {}) {
     const ctx = this.ctx;
     ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.clearRect(0, 0, 1280, 720);
-    ctx.drawImage(this.background(options.stage || state?.stage), 0, 0);
+    const stage = options.stage || state?.stage;
+    const actors = state?.a && state?.b ? [state.a, state.b] : state?.fighters || [];
     const tick = state?.frame || 0;
-    drawStageMotion(ctx, options.stage || state?.stage, options.ambientFrame ?? tick, options.reducedMotion);
+    const finisher = state?.phase === 'matchOver' && options.finisher;
+    if (!finisher || !options.finisherBackdrop) {
+      const paintings = this.stageArt.get(stage?.theme || stage?.id);
+      const camera = paintings && stageCamera(actors, options.reducedMotion);
+      if (camera) drawStagePlanes(ctx, paintings.layers, camera);
+      else ctx.drawImage(this.background(stage), 0, 0);
+      drawStageMotion(ctx, stage, options.ambientFrame ?? tick, options.reducedMotion, !!paintings);
+    }
     if (!state) { ctx.restore(); return; }
-    if (options.finisher && state.phase === 'matchOver') {
+    if (finisher) {
       drawFinisherScene(ctx, state, options.finisher, options.presentationFrame ?? 0, {
+        backdrop: options.finisherBackdrop,
         reducedMotion: options.reducedMotion,
         drawActor: (actor, presentation) => this.drawActor(actor, tick, options.reducedMotion, presentation),
       });
       ctx.restore(); this.lastState = state; return;
     }
-    const actors = state.a && state.b ? [state.a, state.b] : state.fighters || [];
     for (const object of state.traps || []) this.drawTrap(object, actors, tick, options.reducedMotion);
     const order = [...actors].sort((a, b) => (a.y || FLOOR) - (b.y || FLOOR));
     const presentation = { frame: tick, presentationFrame: options.presentationFrame ?? tick, phase: state.phase, winner: state.winner, roundWinner: state.roundWinner };
@@ -697,11 +724,19 @@ export class CombatRenderer {
     if (!f) return;
     const pose = actorPose(actor, { frame: tick, ...presentation, reducedMotion });
     const stance = (pose.state === 'idle' || pose.state === 'guard') && standingIllustration(f);
+    const action = illustratedAction(pose, actor.attack);
+    const actionArt = actionIllustration(f, action);
+    const artwork = stance || actionArt;
     // Shift weight around the foot support of the single standing drawing.
     // Use simulation frames so pausing a match also holds its pose.
     if (stance && !reducedMotion) pose.lean += 0.014 * Math.sin(tick * TAU / 112);
-    const frame = stance || getFrame(f, pose.action, reducedMotion ? 0 : tick, null, pose.frame);
-    const idle = stance || getFrame(f, 'idle', 0);
+    if (actionArt && action === 'walk' && !reducedMotion) {
+      const step = Math.sin(tick * TAU / 24);
+      pose.lean += 0.018 * step;
+      pose.lift = Math.abs(step) * 2;
+    }
+    const frame = artwork || getFrame(f, pose.action, reducedMotion ? 0 : tick, null, pose.frame);
+    const idle = artwork || getFrame(f, 'idle', 0);
     const height = f.visual?.height || f.combat?.simulationBody?.height || 230;
     const face = actor.face ?? actor.facing ?? 1;
     const y = Number.isFinite(actor.y) ? actor.y : FLOOR;
@@ -712,9 +747,12 @@ export class CombatRenderer {
       ctx.save(); ctx.globalAlpha = 0.5; ellipse(ctx, x, y - height / 2, 28, height / 2, f.color || '#aaa0c3');
       label(ctx, f.name?.slice(0, 1) || '?', x, y - height * 0.5, 30, '#ffffff'); ctx.restore(); return;
     }
-    const articulated = pose.low ? crouchParts(f, frame) : null;
-    const geometry = frameGeometry(f, frame, idle, articulated ? { ...pose, lean: 0 } : pose, face);
-    const shownHeight = height - (articulated?.drop || 0) * geometry.scale;
+    const articulated = !artwork && pose.low ? crouchParts(f, frame) : null;
+    // Each authored file is tightly framed. Give compressed poses their reduced
+    // stage height instead of growing a kneeling performer back to standing size.
+    const heightRatio = actionArt && (action === 'crouch' || action === 'defeat') ? 0.74 : 1;
+    const geometry = frameGeometry(f, frame, idle, articulated ? { ...pose, lean: 0 } : pose, face, heightRatio);
+    const shownHeight = height * heightRatio - (articulated?.drop || 0) * geometry.scale;
     const attack = actor.attack, active = pose.state === 'attack-active';
     const windup = pose.state === 'attack-windup';
     if (actor.buffs?.power || actor.buffs?.armor) glow(ctx, x, y - height * 0.52, height * 0.72, f.color || '#bd9cd6', 0.18);
@@ -725,7 +763,7 @@ export class CombatRenderer {
     ctx.scale(geometry.flip * geometry.scale, geometry.scale);
     ctx.translate(-geometry.anchor.x, -geometry.anchor.y);
     ctx.globalAlpha = pose.alpha * (actor.buffs?.cloak ? 0.42 : 1);
-    ctx.imageSmoothingEnabled = !!stance;
+    ctx.imageSmoothingEnabled = !!artwork;
     drawPoseArtwork(ctx, frame, articulated);
     if (actor.flash > 0 && !reducedMotion) {
       // A subtle outline avoids overwriting the original sprite's palette.

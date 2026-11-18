@@ -89,8 +89,9 @@ export async function paintStoryPresentation(root, item, fighterId) {
   }
   let unavailable = false;
   try {
-    new CombatRenderer(backdrop).render(null, { stage:getStage(item.stageId), reducedMotion:true });
+    const stageReady = new CombatRenderer(backdrop).previewStage(getStage(item.stageId));
     const results = await Promise.all([...visual.querySelectorAll('[data-story-actor]')].map(canvas => drawPortrait(canvas, fighter(canvas.dataset.storyActor), { glow:false })));
+    await stageReady;
     unavailable = results.some(result => !result);
   } catch { unavailable = true; }
   if (!visual.isConnected) return;

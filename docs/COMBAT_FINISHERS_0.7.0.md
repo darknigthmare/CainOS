@@ -4,7 +4,7 @@
 
 Le catalogue couvre les quatorze combattants jouables avec trois finales chacun : `impact`, `special` et `super`. Ces quarante-deux scènes sont des adaptations pour Encore. Elles ne constituent pas des scènes officielles de The Amazing Digital Circus et ne valident pas une fidélité canonique 1:1.
 
-Le rendu utilise les illustrations et les poses de victoire déjà disponibles. Chaque combattant possède un motif graphique, décliné en trois compositions. Le déroulé révèle les éléments de décor, les met en lumière puis ajoute un éclairage final au sol. Il ne comprend pas de nouveaux dessins de mouvements corporels, de nouvelles poses d’attaque ni une séquence d’animation originale reproduite image par image.
+Les 42 présentations utilisent chacune un décor illustré en 3840 × 2160. Le moteur place les deux artistes devant le décor avec la tenue du duel, la pose de victoire ou de défaite et les éclairages successifs. La composition procédurale reste disponible pendant le chargement ou si un dessin manque. [Les 42 décors, par artiste et par variante](COMBAT_DECORS_ET_POSES.md#finales-de-spectacle)
 
 Les textes des trois tableaux décrivent cette mise en scène effectivement dessinée. Les réserves `adaptation` et `remainingArtWork` restent attachées à chaque définition.
 
@@ -101,7 +101,7 @@ Le témoignage de production aide à établir des critères pour de futures anim
 
 `tests/combat-finishers-browser.mjs` constitue la suite dédiée à la galerie. Sa réussite doit être établie par l’exécution et son rapport, pas par la seule présence du script.
 
-La suite parcourt les quarante-deux finales animées. Pour chacune, elle contrôle les trois tableaux, la pause exacte, l’arrêt à la durée prévue et les textes issus du catalogue. Elle capture le Canvas au début, au milieu et à la fin : cent vingt-six PNG lorsque le parcours complet réussit. Une empreinte de la zone centrale, hors bandeaux de titre, sert à vérifier que les trois compositions finales d’un combattant diffèrent graphiquement.
+La suite parcourt les quarante-deux finales animées. Pour chacune, elle contrôle les trois tableaux, la pause exacte, l’arrêt à la durée prévue et les textes issus du catalogue. Elle capture le Canvas au début, au milieu et à la fin : cent vingt-six PNG lorsque le parcours complet réussit. Une empreinte de la zone centrale, hors bandeaux de titre, sert à vérifier que les trois compositions finales d’un combattant diffèrent graphiquement. Pour chaque finale, la suite compare aussi une bande du Canvas au WebP attendu, réduit à la résolution du jeu avec le même éclairage.
 
 Elle parcourt aussi les cinquante et un costumes, chacun sur la finale impact en mouvement réduit. Ce parcours produit cinquante et un aperçus ; il ne couvre pas toutes les combinaisons costume × famille de finale. Il vérifie les options proposées, le costume sélectionné, le chargement de la scène et l’état final stable.
 
@@ -119,7 +119,7 @@ Les sorties attendues sont :
 - `audit-combat/finishers-0.7.0/mobile-reduced-390.png` : aperçu du parcours mobile émulé ;
 - les PNG individuels des trois tableaux et des costumes.
 
-Les planches retenues pour la documentation sont copiées vers `docs/images/finishers-0.7.0-a.jpg` et `docs/images/finishers-0.7.0-b.jpg` après la réussite du parcours. Une empreinte différente prouve une différence de pixels ; la vérification de fidélité visuelle demande encore une lecture des images et une comparaison aux références.
+Les deux planches de la galerie présentent les combattants dans les trois décors de leur finale. [Pomni à Caine](images/finishers-0.7.0-a.jpg) · [Bubble au Baron Mildenhall](images/finishers-0.7.0-b.jpg). Une empreinte différente prouve une différence de pixels ; la vérification de fidélité visuelle demande encore une lecture des images et une comparaison aux références.
 
 ## Travail restant pour une fidélité 1:1
 

@@ -59,7 +59,8 @@ try {
         const { CombatRenderer, getFrame } = await import('/combat/render.mjs');
         const { FIGHTERS, STAGES } = await import('/combat/data.mjs');
         const canvas = document.getElementById('fixture'), renderer = new CombatRenderer(canvas);
-        const ready = await renderer.preload(FIGHTERS, STAGES);
+        // The historical palette pins below belong to the procedural fallback.
+        const ready = await renderer.preload(FIGHTERS);
         if (!ready.ok) throw new Error(JSON.stringify(ready));
         window.renderFixture = { renderer, getFrame, FIGHTERS, STAGES, canvas };
       });

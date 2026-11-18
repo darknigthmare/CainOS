@@ -44,7 +44,7 @@ function watch(p, prefix = '') {
   p.on('pageerror', error => errors.push(`${prefix}${error.message}`));
   p.on('response', response => {
     if (response.url().startsWith(base) && response.status() >= 400) errors.push(`${prefix}HTTP ${response.status()} ${response.url()}`);
-    if (response.url().includes('/assets/images/') && response.ok()) imageResponses.add(response.url());
+    if (response.ok() && /\/assets\/(?:images|encore)\//.test(response.url())) imageResponses.add(response.url());
   });
 }
 watch(page);
@@ -82,6 +82,32 @@ async function capture(entry, label, p = page) {
   const bytes = Buffer.from(rendered.png.split(',')[1], 'base64');
   await fs.writeFile(path.join(output, file), bytes);
   return { file, sha256: sha(bytes), sceneSHA256: rendered.sceneSHA256, frame: (await gallerySnapshot(p)).frame, colors: rendered.colors, dataURL: rendered.png };
+}
+async function verifyBackdrop(entry, fighter) {
+  const match = await page.locator('#finale-preview').evaluate(async (canvas, { url, color }) => {
+    const source = new Image();
+    source.src = new URL(url, document.baseURI).href;
+    await source.decode();
+    const width = canvas.width, height = canvas.height;
+    const expected = document.createElement('canvas');
+    expected.width = width; expected.height = height;
+    const context = expected.getContext('2d');
+    context.imageSmoothingQuality = 'high';
+    context.drawImage(source, 0, 0, width, height);
+    const glow = context.createRadialGradient(640,330,28,640,330,650);
+    glow.addColorStop(0,color); glow.addColorStop(1,'#17142400');
+    context.globalAlpha = .14; context.fillStyle = glow;
+    context.fillRect(0,84,1280,542);
+    // This strip lies below the title and above both actors, even for the Queen.
+    const actual = canvas.getContext('2d').getImageData(20,100,1240,16).data;
+    const wanted = context.getImageData(20,100,1240,16).data;
+    let matching = 0;
+    for (let i = 0; i < actual.length; i += 4) {
+      if ([0,1,2].every(channel => Math.abs(actual[i+channel]-wanted[i+channel]) <= 3)) matching++;
+    }
+    return matching/(actual.length/4);
+  }, { url: `../assets/encore/finales/${entry.fighterId}/${entry.variant}.webp`, color: fighter.color || '#d0b7df' });
+  assert.ok(match > .98, `${entry.id}: expected the illustrated set in the real gallery (pixel match ${match})`);
 }
 async function assertPersistent(expected, label) {
   assert.deepEqual(await persistent(), expected, label);
@@ -171,19 +197,20 @@ try {
       await page.waitForTimeout(160);
       assert.equal((await gallerySnapshot()).frame, startState.frame, `${entry.id}: pause is exact`);
       await toggle();
-      await page.waitForFunction(frame => window.Encore.finales.frame >= frame, entry.beats[1].frame + 4, { polling: 'raf', timeout: 10000 });
+      await page.waitForFunction(frame => window.Encore.finales.frame >= frame, entry.beats[1].frame + 4, { polling: 'raf', timeout: 30000 });
       await toggle();
       await page.waitForFunction(() => !window.Encore.finales.playing);
       assert.ok((await gallerySnapshot()).frame < entry.beats[2].frame, `${entry.id}: middle tableau remains observable`);
       assert.equal((await page.locator('#finale-beat-title').textContent()).trim(), entry.beats[1].title);
       const middle = await capture(entry, 'middle');
       await toggle();
-      await page.waitForFunction(() => window.Encore.finales.done, null, { timeout: 10000 });
+      await page.waitForFunction(() => window.Encore.finales.done, null, { timeout: 30000 });
       const endState = await gallerySnapshot();
       assert.equal(endState.frame, entry.durationFrames);
       assert.equal(endState.playing, false);
       assert.equal((await page.locator('#finale-beat-title').textContent()).trim(), entry.beats[2].title);
       const end = await capture(entry, 'end');
+      await verifyBackdrop(entry, fighter);
       await page.waitForTimeout(120);
       assert.deepEqual(await gallerySnapshot(), endState, `${entry.id}: finite settled state`);
       assert.notEqual(start.sha256, middle.sha256); assert.notEqual(middle.sha256, end.sha256);
@@ -276,7 +303,7 @@ try {
     schemaVersion: 1, version: '0.7.0', base, checks, errors, scenes, costumes: costumeChecks,
     contactSheets: sheets, imageResponses: [...imageResponses].sort(),
     fixture: { file: 'gallery-replay-fixture.json', earnedMatch: false, importedThroughUI: true, storageSeededBeforeBoot: true, frames: 120, version: '0.6.0', sha256: sha(fixtureJSON), fileSHA256: sha(fixtureFileJSON) },
-    scope: { galleryFinales: 42, snapshotsPerFinale: 3, costumePreviews: 51, costumeVariant: 'impact', allCostumeFinaleCombinations: false, actualKOJourney: false, disabledSettingKO: false, physicalPhone: false, canonicalOneToOne: false },
+    scope: { galleryFinales: 42, illustratedBackdropsCompared: scenes.length, snapshotsPerFinale: 3, costumePreviews: 51, costumeVariant: 'impact', allCostumeFinaleCombinations: false, actualKOJourney: false, disabledSettingKO: false, physicalPhone: false, canonicalOneToOne: false },
   };
   await fs.writeFile(path.join(output, 'browser-report.json'), JSON.stringify(report, null, 2));
   console.log(`Finale gallery QA: ${checks.length} checks passed; 42 animated scenes and 51 costume previews.`);

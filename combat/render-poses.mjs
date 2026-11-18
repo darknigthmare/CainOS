@@ -124,8 +124,8 @@ export function crouchParts(fighter, frame, amount = 1) {
 export const POSE_PRESENTATION = freeze({
   pomni: { intro: 4, victory: 5, defeat: 7, melee: [2, 3], projectile: 6, support: 4, interaction: 'pointing' },
   jax: { intro: 4, victory: 5, defeat: 7, melee: [2, 3], projectile: 6, support: 4, interaction: 'pointing' },
-  ragatha: { intro: 4, victory: 5, defeat: 7, melee: [4, 6], projectile: 6, support: 4, interaction: 'reaching with an open hand' },
-  gangle: { intro: 4, victory: 5, defeat: 7, melee: [2, 6], projectile: 6, support: 4, interaction: 'raised ribbon; reaction cell has a cracked mask' },
+  ragatha: { intro: 4, victory: 5, defeat: 7, melee: [6, 6], projectile: 6, support: 4, interaction: 'reaching with an open hand' },
+  gangle: { intro: 4, victory: 5, defeat: 7, melee: [6, 6], projectile: 6, support: 4, interaction: 'raised ribbon; reaction cell has a cracked mask' },
   zooble: { intro: 4, victory: 5, defeat: 7, melee: [2, 3], projectile: 6, support: 4, interaction: 'holding a detached module' },
   kinger: { intro: 4, victory: 5, defeat: 7, melee: [2, 3], projectile: 5, support: 6, interaction: 'hand at chin' },
   caine: { intro: 4, victory: 5, defeat: 7, melee: [2, 3], projectile: 5, support: 4, interaction: 'portal accessory' },
@@ -133,8 +133,8 @@ export const POSE_PRESENTATION = freeze({
 
 export const POSE_LIMITATIONS = freeze({
   registration: '56 inspected cells, fixed idle scale and per-cell roots; no claim about canonical height ratios.',
-  crouch: 'Two shallow rigid cutout poses (base Pomni and Zooble). Jax and other drawings stay intact. No dedicated crouch art and no visual hurtbox equivalence.',
-  actions: 'Idle, walk, speech, interaction and reaction artwork is reused for combat states. Seventy finite procedural intro/outcome sequences animate existing artwork; The original atlases continue to supply actions outside dedicated standing poses.',
+  crouch: 'Dedicated crouching art when published. Base Pomni and Zooble have shallow cutout fallback poses. Presentation does not define the simulation hurtbox.',
+  actions: 'Dedicated introduction, outcome and combat artwork is selected by appearance and action. Recorded poses and existing atlases supply the other actions. Intro and outcome motion uses a separate presentation clock.',
   costumes: 'All costumes and unregistered static art use intact sprite presentation; base cutout rigs never transfer to them.',
 });
 
@@ -185,10 +185,21 @@ export function actorPose(actor, options = {}) {
   return result;
 }
 
+/** Drawings describe one move. A punch must not stand in for a spell, throw or tail sweep. */
+export function illustratedAction(pose, attack) {
+  if (pose.state.startsWith('attack-')) {
+    if ((attack?.name || attack?.def?.slot) !== 'light') return null;
+    if (pose.state === 'attack-active' || (pose.state === 'attack-recovery' && pose.phaseProgress < 0.4)) return 'attack';
+    return null;
+  }
+  if (['intro', 'victory', 'defeat', 'walk', 'jump', 'crouch', 'hit'].includes(pose.state)) return pose.state;
+  return null;
+}
+
 /** Uniform scale plus rigid transform; lowest source support stays on actor.y. */
-export function frameGeometry(fighter, frame, idle, pose, facing = 1) {
+export function frameGeometry(fighter, frame, idle, pose, facing = 1, heightRatio = 1) {
   const height = fighter.visual?.height || fighter.combat?.simulationBody?.height || 230;
-  const scale = height / Math.max(1, idle.bounds.height);
+  const scale = height * heightRatio / Math.max(1, idle.bounds.height);
   const anchor = frame.registration?.anchor || { x: frame.bounds.x + frame.bounds.width / 2, y: frame.bounds.y + frame.bounds.height };
   const flip = (facing < 0 ? -1 : 1) * (frame.nativeFacing ?? fighter.sprite?.nativeFacing ?? 1);
   // Large static bosses get a smaller rigid tilt, with no shape compression.
