@@ -6,6 +6,11 @@ import { CROSSOVER_VISITS } from '../combat/crossover-visits.mjs';
 
 const states = ['selection','stance','attack','victory','intro','walk','jump','crouch','hit','defeat'];
 
+const stateLabels = {
+  selection: 'sélection', stance: 'garde', attack: 'attaque', victory: 'victoire', intro: 'entrée', walk: 'marche',
+  jump: 'saut', crouch: 'accroupi', hit: 'impact', defeat: 'défaite', heavy: 'coup fort',
+};
+
 /** Track gallery entries only when their real files are present in the published manifest. */
 export function updateCrossoverTracker(data, offline, { FIGHTERS, VARIANTS, COSTUMES = VARIANTS, STAGES }) {
   const art = new Set(offline.ART_FILES.map(path => path.replace(/^\.\.\//, '')));
@@ -19,16 +24,23 @@ export function updateCrossoverTracker(data, offline, { FIGHTERS, VARIANTS, COST
     if (previous) previous.splice(1, previous.length - 2, ...row.slice(1,-1));
     else { table.push(row); map.set(row[0], row); }
   };
-  let outfits = 0, heavies = 0, layers = 0, panels = 0;
+  let outfits = 0, costumeDrawings = 0, heavies = 0, layers = 0, panels = 0;
   const collections = new Set();
   for (const costume of COSTUMES.filter(item => item.crossover)) {
     const directory = costume.sprite.crossoverDirectory.replace(/^\.\.\//, '');
-    if (!states.every(key => art.has(directory+'/'+key+'.webp'))) continue;
+    const fusion = costume.crossover.style === 'fusion';
+    const published = [...states, 'heavy'].filter(key => art.has(directory+'/'+key+'.webp'));
+    if (!published.includes('selection') || !published.includes('stance')) continue;
+    const missing = states.filter(key => !published.includes(key));
+    costumeDrawings += published.length;
     publishRow(data.production,productions,[
       'COST-'+costume.id,'Costume crossover',original.get(costume.fighterId).name,costume.name,
-      'Implémenté','P1',directory+'/',
-      'Dix WebP individuels. Sélection, garde, attaque utilisée pour les coups légers et lourds, victoire, introduction, marche, saut, position accroupie, impact et défaite.',
-      'Les éléments du costume suivent son univers. Les techniques et statistiques sont celles de son combattant. Références dans docs/COMBAT_CROSSOVERS_GLITCH.md.','',
+      missing.length ? 'Partiel' : 'Implémenté','P1',directory+'/',
+      (fusion ? 'Corps reconçu pour cet univers. ' : '') +
+        published.length + ' dessins individuels. ' + published.map(key => stateLabels[key]).join(', ') + '.',
+      missing.length
+        ? 'À illustrer en priorité : ' + missing.map(key => stateLabels[key]).join(', ') + '. Le moteur conserve la garde de cette apparence.'
+        : 'Les techniques et les statistiques sont celles du combattant. Références dans docs/COMBAT_CROSSOVERS_GLITCH.md.', '',
     ]);
     collections.add(costume.crossover.series); outfits++;
   }
@@ -104,8 +116,8 @@ export function updateCrossoverTracker(data, offline, { FIGHTERS, VARIANTS, COST
   data.counts.scenarios=data.scenarios.length;
   data.counts.archiveVariants=VARIANTS.length; data.counts.variants=VARIANTS.length+outfits;
   data.counts.production=data.production.length;
-  data.crossoverArt={collections:collections.size,outfits,costumeDrawings:outfits*states.length,heavyAttacks:heavies,stageLayers:layers,escalePanels:panels};
-  data.illustratedAssets.crossovers=outfits*states.length;
+  data.crossoverArt={collections:collections.size,outfits,costumeDrawings,heavyAttacks:heavies,stageLayers:layers,escalePanels:panels};
+  data.illustratedAssets.crossovers=costumeDrawings;
   data.illustratedAssets.escales=panels;
   data.counts.musicThemes=Object.keys(AUDIO_THEMES).length;
   data.counts.audioAmbiences=Object.keys(AUDIO_AMBIENCES).length;
@@ -133,6 +145,6 @@ export function updateCrossoverTracker(data, offline, { FIGHTERS, VARIANTS, COST
   if(feature && outfits){
     feature[5]='combat/data.mjs · combat/crossovers.mjs · combat/app.mjs';
     feature[6]=data.counts.variants+' tenues équipables, dont '+outfits+' crossovers en '+collections.size+' collections. Le joueur et le rival peuvent utiliser des apparences différentes.';
-    feature[7]='Les fiches de production identifient les hommages et les rôles d’habitants. Les 51 tenues historiques conservent leurs fiches d’archive.';
+    feature[7]='Les fiches de production identifient les hommages, les rôles d’habitants et les fusions originales. Les 51 tenues historiques conservent leurs fiches d’archive.';
   }
 }

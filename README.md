@@ -6,18 +6,16 @@ CainOS is a retro C&A mainframe-style interactive web app inspired by The Amazin
 
 CainOS includes **Circus Combat — Encore**, a shared combat application and
 standalone game adapted from the real CQC engine of `shadow-codec-ops`.
-The playable game version is **0.7.0**, completed in this branch on **24 October 2026**.
+The playable game version is **0.7.0**. The GLITCH crossover artwork and wardrobe were updated on **18 November 2026**.
 
 - In CainOS: complete the existing first-use calibration, then launch **Circus Combat**.
 - Direct game: open **`/combat/`** on the same static server.
 - Independent distribution: run **`npm run build:combat`**, then serve **`dist-combat/`**.
 - Production tracker: **[DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx](docs/DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx)**.
 - Controls, architecture, references and remaining work: **[Digital Circus — Encore](docs/DIGITAL_CIRCUS_ENCORE.md)**.
+- To equip a crossover, open the fighter or opponent’s wardrobe and select **Filtrer les tenues**. Choose the series and **Fusion originale** to see the character’s redesigned body. [Compare the fusion portraits and combat stances](docs/COMBAT_GALERIE_FUSIONS.md) or [browse the GLITCH wardrobe and arena gallery](docs/COMBAT_CROSSOVERS_GLITCH.md).
 
-The release contains **14 fighters, 140 authored techniques, 12 arenas, 9 modes,
-51 selectable costumes and 179 searchable archive entries**. The remaining
-114 archive entries do not automatically receive a combat kit. The combat
-techniques and stories are original fan-game adaptations.
+The game includes **14 fighters, 140 authored techniques, 21 arenas, 422 selectable costumes and 179 searchable archive entries**. Its nine standard modes are joined by nine illustrated crossover visits under **Escales GLITCH**. The wardrobe contains 51 archive costumes, 252 tributes and residents, and 119 original fusions. The combat techniques and stories are original fan-game adaptations.
 
 ### Stage endings and arena audio in 0.7.0
 

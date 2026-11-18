@@ -1,45 +1,57 @@
 {
-  "schema": "encore-illustrated-tracker/v1",
+  "schema": "encore-crossover-tracker/v1",
   "mode": "production",
   "artDate": "2026-11-18",
-  "baseCommit": "3df10f3215c72fe3f7c76eaad8f26b13f15c9e4e",
-  "verifiedArtPaths": 582,
+  "baseCommit": "ec5e27b7687973f53c13cddf3e35ec6181c21a14",
+  "verifiedArtPaths": 2870,
   "artFamilies": {
     "selection": 65,
     "stance": 65,
     "campaign": 140,
     "finales": 42,
-    "stages": 36,
-    "poses": 504
+    "stages": 63,
+    "poses": 518,
+    "crossovers": 2870,
+    "escales": 18
   },
-  "offlineVersion": "0.7.0-0bd3d868a4ad",
+  "crossoverArt": {
+    "collections": 9,
+    "outfits": 371,
+    "costumeDrawings": 2870,
+    "heavyAttacks": 14,
+    "stageLayers": 27,
+    "escalePanels": 18
+  },
+  "offlineVersion": "0.7.0-d6d3edf144e2",
+  "artVersion": "79d89260a900ef01",
   "counts": {
     "fighters": 14,
     "moves": 140,
-    "stages": 12,
+    "stages": 21,
     "modes": 9,
     "atlas": 179,
-    "variants": 51,
+    "variants": 422,
     "archiveOnly": 114,
     "storyRoutes": 14,
     "storyChapters": 56,
     "storyPanels": 84,
     "storyBriefings": 56,
-    "musicThemes": 12,
+    "musicThemes": 21,
     "soundEffects": 26,
-    "offlineImages": 896,
-    "offlineBytes": 369920251,
-    "features": 105,
-    "production": 693,
-    "scenarios": 85,
+    "offlineImages": 3825,
+    "offlineBytes": 1563811757,
+    "features": 106,
+    "production": 1118,
+    "scenarios": 94,
     "qa": 2240,
     "presentationSequences": 70,
-    "animatedStages": 12,
+    "animatedStages": 21,
     "rebuiltStages": 3,
     "refinedCostumes": 20,
     "costumeReplacementSheets": 5,
     "finishers": 42,
-    "audioAmbiences": 12
+    "audioAmbiences": 21,
+    "archiveVariants": 51
   },
   "qaSummary": {
     "Réussi": 2236,
@@ -711,20 +723,18 @@
   },
   "historicalQaRows": 1591,
   "priorVerification": {
-    "schema": "encore-workbook-artifact/v1",
-    "sourceCommit": "243e87b21b1e9eb8711e2012faf837f5850dae9a",
-    "createdAt": "2026-10-29T18:44:22.362Z"
+    "schema": "encore-illustrated-tracker/v1"
   },
   "baseline": {
-    "workbookSHA256": "96a41ed96e669d8ccbf6c088148894607e019a2d7e54bad7ae38745aeb9f1971",
-    "trackerDataSHA256": "d1e7fd3f2ce62d0f5637f8d8840e08fe9aca26e98d27d411e826c26e4cd43b85"
+    "workbookSHA256": "afbcb59a5c36de85cb3447e31d1897cc19ffb081e51eb1eb099aaaee40d60774",
+    "trackerDataSHA256": "6183ed926a19d619dda2edcc2e68ace1be653c5797ee04a0cd95f861a9bee8cc"
   },
-  "workbookSHA256": "afbcb59a5c36de85cb3447e31d1897cc19ffb081e51eb1eb099aaaee40d60774",
-  "trackerDataSHA256": "6183ed926a19d619dda2edcc2e68ace1be653c5797ee04a0cd95f861a9bee8cc",
+  "workbookSHA256": "f7cd5e7fd9737c07e011efa37bf8d09ff16fad35127733e5508dd8bf59e8cfa5",
+  "trackerDataSHA256": "ceafbe3ed440d84710e01e7292216303aef7218428073a5c1b87ae6f1bf720c2",
   "nativeTables": {
     "Fonctionnalités": [
       "EncoreFonctionnalites",
-      105,
+      106,
       9
     ],
     "Combattants": [
@@ -739,7 +749,7 @@
     ],
     "Arènes": [
       "EncoreArenes",
-      12,
+      21,
       20
     ],
     "Atlas": [
@@ -749,12 +759,12 @@
     ],
     "Production": [
       "EncoreProduction",
-      693,
+      1118,
       10
     ],
     "Scénarios": [
       "EncoreScenarios",
-      85,
+      94,
       11
     ],
     "QA": [
@@ -765,10 +775,18 @@
   },
   "notesAndRowIdsPreserved": true,
   "qaRowsPreserved": 2240,
-  "changedDataCells": 704,
-  "note": "L’exécution QA datée qui figure dans le classeur reste historique. L’inventaire des ressources correspond au manifeste indiqué.",
-  "formulaCellsPreserved": 39,
-  "validationTables": 9,
-  "formulaErrorCells": 0,
-  "artVersion": "2c1b5e28cad4b543"
+  "changedDataCells": 66,
+  "formulasVerified": 39,
+  "addedRows": {
+    "Fonctionnalités": 1,
+    "Combattants": 0,
+    "Techniques": 0,
+    "Arènes": 9,
+    "Atlas": 0,
+    "Production": 425,
+    "Scénarios": 9,
+    "QA": 0
+  },
+  "addedSources": 9,
+  "note": "L’exécution QA datée qui figure dans le classeur reste historique. L’inventaire des ressources correspond au manifeste indiqué."
 }

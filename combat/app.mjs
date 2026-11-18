@@ -1,5 +1,5 @@
 import { CROSSOVER_VISITS, visitCostumes, visitIllustration } from './crossover-visits.mjs';
-import { CROSSOVER_SERIES, CROSSOVER_STYLES, matchesCostumeFilter } from './crossovers.mjs';
+import { CROSSOVER_SERIES, CROSSOVER_STYLES, crossoverStylesFor, matchesCostumeFilter } from './crossovers.mjs';
 import { FIGHTERS, STAGES, COSTUMES, VARIANTS, ARCHIVE, MOVE_SLOTS, SLOT_LABELS, equipCostume as costume, getFighter, getReplayFighter, getStage } from './data.mjs';
 import { getFidelitySources } from './fidelity.mjs';
 import { CombatEngine, FIXED_DT } from './engine.mjs';
@@ -221,6 +221,11 @@ function costumeOptions(fighter, selected, original, filter) {
   return retained + visible.map(option).join('');
 }
 
+function interpretationOptions(filter) {
+  const names = [['', 'Toutes les interprétations'], ...crossoverStylesFor(filter.series, filter.fighter).map(key => [key, CROSSOVER_STYLES[key]])];
+  return names.map(([value, name]) => `<option value="${value}" ${filter.style === value ? 'selected' : ''}>${escapeHTML(name)}</option>`).join('');
+}
+
 function costumePicker(fighter, id, label, selected, original = '') {
   const saved = costumeFilters.get(id);
   const filter = saved?.fighter === fighter.id ? saved : { fighter: fighter.id, series: '', style: '' };
@@ -230,7 +235,7 @@ function costumePicker(fighter, id, label, selected, original = '') {
     <label class="field"><span>${escapeHTML(label)}</span><select id="${id}">${costumeOptions(fighter, selected, original, filter)}</select></label>
     <details class="costume-filters" ${filter.series || filter.style ? 'open' : ''}><summary>Filtrer les tenues</summary>
     <label class="field"><span>Univers</span><select data-costume-filter="series">${option('','Tous les univers',filter.series)}${option('circus','The Amazing Digital Circus',filter.series)}${CROSSOVER_SERIES.map(item => option(item.id,item.name,filter.series)).join('')}</select></label>
-    <label class="field"><span>Interprétation</span><select data-costume-filter="style" ${filter.series === 'circus' ? 'disabled' : ''}>${option('','Toutes les interprétations',filter.style)}${Object.entries(CROSSOVER_STYLES).map(([key,name]) => option(key,name,filter.style)).join('')}</select></label></details></div>`;
+    <label class="field"><span>Interprétation</span><select data-costume-filter="style" ${filter.series === 'circus' ? 'disabled' : ''}>${interpretationOptions(filter)}</select></label></details></div>`;
 }
 
 function selectionArtist(side) {
@@ -890,7 +895,10 @@ document.addEventListener('change',event=>{
     filter[target.dataset.costumeFilter] = target.value;
     const style = picker.querySelector('[data-costume-filter="style"]');
     style.disabled = filter.series === 'circus';
-    if (style.disabled) { filter.style = ''; style.value = ''; }
+    if (target.dataset.costumeFilter === 'series') {
+      if (!crossoverStylesFor(filter.series, filter.fighter).includes(filter.style)) filter.style = '';
+      style.innerHTML = interpretationOptions(filter);
+    }
     select.innerHTML = costumeOptions(getFighter(picker.dataset.owner), select.value, picker.dataset.original, filter);
     return;
   }
