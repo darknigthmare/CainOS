@@ -29,6 +29,7 @@ export const CROSSOVER_FUSIONS = {
     "loolilalu": "Reine des combos",
     "gloinkqueen": "Matrice de tournoi",
     "fudge": "Bloc de mémoire vive",
+    "abstractedkaufmo": "Défaut de rendu",
     "baronmildenhall": "Fantôme du classement"
   },
   "sunsetparadise": {
@@ -68,6 +69,8 @@ export const CROSSOVER_FUSIONS = {
     "jax": "Lièvre à ressort",
     "ragatha": "Poupée de l’atelier",
     "gangle": "Tragédienne mécanique",
+    "zooble": "Manège de rebut",
+    "kinger": "Roi de parade",
     "caine": "Régisseur à mâchoires",
     "bubble": "Perle du manège",
     "gummigoo": "Dragon de la piste",
@@ -121,10 +124,14 @@ export const CROSSOVER_FUSIONS = {
     "gummigoo": "Caïman cascadeur",
     "loolilalu": "Princesse du générique",
     "gloinkqueen": "Train de Gloinks",
-    "fudge": "Pavé de gag"
+    "fudge": "Pavé de gag",
+    "abstractedkaufmo": "Bogue du plateau",
+    "baronmildenhall": "Baron des trucages"
   },
   "ultrajumpmania": {
     "pomni": "Bouffonne des rebonds",
+    "jax": "Lièvre des palmes",
+    "ragatha": "Poupée de lianes",
     "gangle": "Masque de l’île",
     "zooble": "Totem en pièces",
     "kinger": "Roi du tremplin",

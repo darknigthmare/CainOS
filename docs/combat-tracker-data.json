@@ -7,7 +7,7 @@
     "stages": 21,
     "modes": 9,
     "atlas": 179,
-    "variants": 422,
+    "variants": 429,
     "archiveOnly": 114,
     "storyRoutes": 14,
     "storyChapters": 56,
@@ -15,10 +15,10 @@
     "storyBriefings": 56,
     "musicThemes": 21,
     "soundEffects": 26,
-    "offlineImages": 3825,
-    "offlineBytes": 1563811757,
+    "offlineImages": 3839,
+    "offlineBytes": 1571400669,
     "features": 106,
-    "production": 1118,
+    "production": 1125,
     "scenarios": 94,
     "qa": 2240,
     "presentationSequences": 70,
@@ -639,7 +639,7 @@
       "P0",
       "assets/encore/selection/ · combat/app.mjs",
       "Chaque combattant a une silhouette et un kit distincts.",
-      "436 portraits de sélection et 436 gardes, apparences originales et tenues comprises.",
+      "443 portraits de sélection et 443 gardes, apparences originales et tenues comprises.",
       ""
     ],
     [
@@ -660,7 +660,7 @@
       "Implémenté",
       "P1",
       "combat/data.mjs · combat/crossovers.mjs · combat/app.mjs",
-      "422 tenues équipables, dont 371 crossovers en 9 collections. Le joueur et le rival peuvent utiliser des apparences différentes.",
+      "429 tenues équipables, dont 378 crossovers en 9 collections. Le joueur et le rival peuvent utiliser des apparences différentes.",
       "Les fiches de production identifient les hommages, les rôles d’habitants et les fusions originales. Les 51 tenues historiques conservent leurs fiches d’archive.",
       ""
     ],
@@ -1023,7 +1023,7 @@
       "Implémenté",
       "P0",
       "combat/fidelity.mjs / combat/costume-fidelity.mjs / combat/data.mjs",
-      "Documenter 14 combattants, 140 techniques, 21 arènes, 51 tenues historiques et 371 tenues crossover avec leurs repères et sources.",
+      "Documenter 14 combattants, 140 techniques, 21 arènes, 51 tenues historiques et 378 tenues crossover avec leurs repères et sources.",
       "Les observations sur nos sprites restent séparées des repères officiels. Le périmètre est conservé par fiche, sans certification graphique globale.",
       ""
     ],
@@ -25246,6 +25246,90 @@
       "assets/encore/escales/ultrajumpmania/ending.webp",
       "La noix se fend au sommet de l’île. Une jeune pousse se déplie dans la lumière. Pomni dépose une clochette près de la racine et Gummigoo repart sur son radeau.",
       "Pomni · Gummigoo",
+      ""
+    ],
+    [
+      "COST-glitch-metarunner-abstractedkaufmo-fusion",
+      "Costume crossover",
+      "Kaufmo — abstraction",
+      "Meta Runner · Défaut de rendu",
+      "Partiel",
+      "P1",
+      "assets/encore/crossovers/metarunner/abstractedkaufmo/fusion/",
+      "Corps reconçu pour cet univers. 2 dessins individuels. sélection, garde.",
+      "À illustrer en priorité : attaque, victoire, entrée, marche, saut, accroupi, impact, défaite. Le moteur conserve la garde de cette apparence.",
+      ""
+    ],
+    [
+      "COST-glitch-knightsofguinevere-zooble-fusion",
+      "Costume crossover",
+      "Zooble",
+      "Knights of Guinevere · Manège de rebut",
+      "Partiel",
+      "P1",
+      "assets/encore/crossovers/knightsofguinevere/zooble/fusion/",
+      "Corps reconçu pour cet univers. 2 dessins individuels. sélection, garde.",
+      "À illustrer en priorité : attaque, victoire, entrée, marche, saut, accroupi, impact, défaite. Le moteur conserve la garde de cette apparence.",
+      ""
+    ],
+    [
+      "COST-glitch-knightsofguinevere-kinger-fusion",
+      "Costume crossover",
+      "Kinger",
+      "Knights of Guinevere · Roi de parade",
+      "Partiel",
+      "P1",
+      "assets/encore/crossovers/knightsofguinevere/kinger/fusion/",
+      "Corps reconçu pour cet univers. 2 dessins individuels. sélection, garde.",
+      "À illustrer en priorité : attaque, victoire, entrée, marche, saut, accroupi, impact, défaite. Le moteur conserve la garde de cette apparence.",
+      ""
+    ],
+    [
+      "COST-glitch-smg4-abstractedkaufmo-fusion",
+      "Costume crossover",
+      "Kaufmo — abstraction",
+      "SMG4 · Bogue du plateau",
+      "Partiel",
+      "P1",
+      "assets/encore/crossovers/smg4/abstractedkaufmo/fusion/",
+      "Corps reconçu pour cet univers. 2 dessins individuels. sélection, garde.",
+      "À illustrer en priorité : attaque, victoire, entrée, marche, saut, accroupi, impact, défaite. Le moteur conserve la garde de cette apparence.",
+      ""
+    ],
+    [
+      "COST-glitch-smg4-baronmildenhall-fusion",
+      "Costume crossover",
+      "Baron Mildenhall",
+      "SMG4 · Baron des trucages",
+      "Partiel",
+      "P1",
+      "assets/encore/crossovers/smg4/baronmildenhall/fusion/",
+      "Corps reconçu pour cet univers. 2 dessins individuels. sélection, garde.",
+      "À illustrer en priorité : attaque, victoire, entrée, marche, saut, accroupi, impact, défaite. Le moteur conserve la garde de cette apparence.",
+      ""
+    ],
+    [
+      "COST-glitch-ultrajumpmania-jax-fusion",
+      "Costume crossover",
+      "Jax",
+      "Ultra Jump Mania! · Lièvre des palmes",
+      "Partiel",
+      "P1",
+      "assets/encore/crossovers/ultrajumpmania/jax/fusion/",
+      "Corps reconçu pour cet univers. 2 dessins individuels. sélection, garde.",
+      "À illustrer en priorité : attaque, victoire, entrée, marche, saut, accroupi, impact, défaite. Le moteur conserve la garde de cette apparence.",
+      ""
+    ],
+    [
+      "COST-glitch-ultrajumpmania-ragatha-fusion",
+      "Costume crossover",
+      "Ragatha",
+      "Ultra Jump Mania! · Poupée de lianes",
+      "Partiel",
+      "P1",
+      "assets/encore/crossovers/ultrajumpmania/ragatha/fusion/",
+      "Corps reconçu pour cet univers. 2 dessins individuels. sélection, garde.",
+      "À illustrer en priorité : attaque, victoire, entrée, marche, saut, accroupi, impact, défaite. Le moteur conserve la garde de cette apparence.",
       ""
     ]
   ],
@@ -51527,7 +51611,7 @@
       "title": "Encore — inventaire du téléchargement hors ligne",
       "kind": "Manifest généré du build",
       "url": "combat/offline-manifest.mjs / scripts/build-combat-offline.mjs",
-      "scope": "3825 images dans le pack hors ligne, 1563811757 octets."
+      "scope": "3839 images dans le pack hors ligne, 1571400669 octets."
     },
     {
       "id": "classification",
@@ -54165,14 +54249,14 @@
     "finales": 42,
     "stages": 63,
     "poses": 518,
-    "crossovers": 2870,
+    "crossovers": 2884,
     "escales": 18
   },
   "illustratedArtDate": "2026-11-18",
   "crossoverArt": {
     "collections": 9,
-    "outfits": 371,
-    "costumeDrawings": 2870,
+    "outfits": 378,
+    "costumeDrawings": 2884,
     "heavyAttacks": 14,
     "stageLayers": 27,
     "escalePanels": 18

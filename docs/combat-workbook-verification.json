@@ -2,8 +2,8 @@
   "schema": "encore-crossover-tracker/v1",
   "mode": "production",
   "artDate": "2026-11-18",
-  "baseCommit": "ec5e27b7687973f53c13cddf3e35ec6181c21a14",
-  "verifiedArtPaths": 2870,
+  "baseCommit": "31d02cdff4a38a7dfda652679889d9c222f2dd4c",
+  "verifiedArtPaths": 2884,
   "artFamilies": {
     "selection": 65,
     "stance": 65,
@@ -11,26 +11,26 @@
     "finales": 42,
     "stages": 63,
     "poses": 518,
-    "crossovers": 2870,
+    "crossovers": 2884,
     "escales": 18
   },
   "crossoverArt": {
     "collections": 9,
-    "outfits": 371,
-    "costumeDrawings": 2870,
+    "outfits": 378,
+    "costumeDrawings": 2884,
     "heavyAttacks": 14,
     "stageLayers": 27,
     "escalePanels": 18
   },
-  "offlineVersion": "0.7.0-d6d3edf144e2",
-  "artVersion": "79d89260a900ef01",
+  "offlineVersion": "0.7.0-dd2745eefcb6",
+  "artVersion": "7e2c223a8f1c51b1",
   "counts": {
     "fighters": 14,
     "moves": 140,
     "stages": 21,
     "modes": 9,
     "atlas": 179,
-    "variants": 422,
+    "variants": 429,
     "archiveOnly": 114,
     "storyRoutes": 14,
     "storyChapters": 56,
@@ -38,10 +38,10 @@
     "storyBriefings": 56,
     "musicThemes": 21,
     "soundEffects": 26,
-    "offlineImages": 3825,
-    "offlineBytes": 1563811757,
+    "offlineImages": 3839,
+    "offlineBytes": 1571400669,
     "features": 106,
-    "production": 1118,
+    "production": 1125,
     "scenarios": 94,
     "qa": 2240,
     "presentationSequences": 70,
@@ -723,14 +723,14 @@
   },
   "historicalQaRows": 1591,
   "priorVerification": {
-    "schema": "encore-illustrated-tracker/v1"
+    "schema": "encore-crossover-tracker/v1"
   },
   "baseline": {
-    "workbookSHA256": "afbcb59a5c36de85cb3447e31d1897cc19ffb081e51eb1eb099aaaee40d60774",
-    "trackerDataSHA256": "6183ed926a19d619dda2edcc2e68ace1be653c5797ee04a0cd95f861a9bee8cc"
+    "workbookSHA256": "f7cd5e7fd9737c07e011efa37bf8d09ff16fad35127733e5508dd8bf59e8cfa5",
+    "trackerDataSHA256": "ceafbe3ed440d84710e01e7292216303aef7218428073a5c1b87ae6f1bf720c2"
   },
-  "workbookSHA256": "f7cd5e7fd9737c07e011efa37bf8d09ff16fad35127733e5508dd8bf59e8cfa5",
-  "trackerDataSHA256": "ceafbe3ed440d84710e01e7292216303aef7218428073a5c1b87ae6f1bf720c2",
+  "workbookSHA256": "de4d3e0862e3c644d9f83ddab17a53c7382cae821f9154f55df6c1fb93ad2a60",
+  "trackerDataSHA256": "27e99b44473daf0407b4d5e436f86b734645e37c455c7fe48ef4c294977ba693",
   "nativeTables": {
     "Fonctionnalités": [
       "EncoreFonctionnalites",
@@ -759,7 +759,7 @@
     ],
     "Production": [
       "EncoreProduction",
-      1118,
+      1125,
       10
     ],
     "Scénarios": [
@@ -775,18 +775,18 @@
   },
   "notesAndRowIdsPreserved": true,
   "qaRowsPreserved": 2240,
-  "changedDataCells": 66,
+  "changedDataCells": 3,
   "formulasVerified": 39,
   "addedRows": {
-    "Fonctionnalités": 1,
+    "Fonctionnalités": 0,
     "Combattants": 0,
     "Techniques": 0,
-    "Arènes": 9,
+    "Arènes": 0,
     "Atlas": 0,
-    "Production": 425,
-    "Scénarios": 9,
+    "Production": 7,
+    "Scénarios": 0,
     "QA": 0
   },
-  "addedSources": 9,
+  "addedSources": 0,
   "note": "L’exécution QA datée qui figure dans le classeur reste historique. L’inventaire des ressources correspond au manifeste indiqué."
 }

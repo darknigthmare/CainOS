@@ -1,5 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { closeSync, fstatSync, openSync, readSync } from 'node:fs';
+import { ART_FILES } from '../combat/offline-manifest.mjs';
 import { COSTUMES, CROSSOVER_COSTUMES, FIGHTERS, STAGES, VARIANTS, equipCostume } from '../combat/data.mjs';
 import { CROSSOVER_FUSIONS } from '../combat/crossover-fusions.mjs';
 import { CROSSOVER_SERIES, crossoverStylesFor, matchesCostumeFilter } from '../combat/crossovers.mjs';
@@ -7,17 +9,22 @@ import { updateCrossoverTracker } from '../scripts/combat-crossover-tracker.mjs'
 import { createProgram, validateProgram } from '../combat/progression.mjs';
 import { GAME_VERSION, emptyProfile, validateProfile, validateReplay } from '../combat/session.mjs';
 
-test('every fighter has both legacy styles in nine series and an original Copper 9 fusion', () => {
+test('every fighter has three distinct bodies in each of the nine crossover series', () => {
   assert.equal(CROSSOVER_SERIES.length, 9);
   const fusions = Object.values(CROSSOVER_FUSIONS).reduce((sum, roster) => sum + Object.keys(roster).length, 0);
-  assert.equal(Object.keys(CROSSOVER_FUSIONS.murderdrones).length, FIGHTERS.length);
+  assert.equal(fusions, CROSSOVER_SERIES.length * FIGHTERS.length);
+  for (const series of CROSSOVER_SERIES) {
+    const roster = CROSSOVER_FUSIONS[series.id];
+    assert.deepEqual(Object.keys(roster).sort(), FIGHTERS.map(fighter => fighter.id).sort());
+    assert.equal(new Set(Object.values(roster)).size, FIGHTERS.length);
+  }
   assert.equal(new Set(COSTUMES.map(item => item.id)).size, 303 + fusions);
   assert.equal(VARIANTS.length, 51);
   assert.equal(CROSSOVER_COSTUMES.length, 252 + fusions);
   for (const fighter of FIGHTERS) {
     for (const { id } of CROSSOVER_SERIES) {
       const choices = CROSSOVER_COSTUMES.filter(item => item.fighterId === fighter.id && matchesCostumeFilter(item, id));
-      assert.deepEqual(choices.map(item => item.crossover.style).sort(), (CROSSOVER_FUSIONS[id]?.[fighter.id] ? ['fusion', 'hommage', 'resident'] : ['hommage', 'resident']));
+      assert.deepEqual(choices.map(item => item.crossover.style).sort(), ['fusion', 'hommage', 'resident']);
       for (const item of choices) {
         assert.ok(item.name && !item.name.includes('undefined'));
         assert.ok(matchesCostumeFilter(item, id, item.crossover.style));
@@ -79,4 +86,25 @@ test('the production tracker counts individual published poses and preserves not
   assert.equal(row[4], 'Implémenté');
   assert.equal(row.at(-1), 'Repère de relecture');
   assert.equal(data.crossoverArt.costumeDrawings, 10);
+});
+
+test('each published crossover sprite has a complete WebP container', () => {
+  const filenames = new Set(ART_FILES);
+  for (const costume of CROSSOVER_COSTUMES) {
+    for (const state of ['selection', 'stance']) {
+      assert.ok(filenames.has(costume.sprite.crossoverDirectory + '/' + state + '.webp'), costume.id + '/' + state);
+    }
+  }
+  const header = Buffer.alloc(12);
+  for (const filename of ART_FILES.filter(name => name.includes('/crossovers/'))) {
+    const fd = openSync(new URL('../combat/' + filename, import.meta.url), 'r');
+    try {
+      assert.equal(readSync(fd, header, 0, header.length, 0), header.length, filename);
+      assert.equal(header.toString('ascii', 0, 4), 'RIFF', filename);
+      assert.equal(header.toString('ascii', 8, 12), 'WEBP', filename);
+      assert.equal(header.readUInt32LE(4) + 8, fstatSync(fd).size, filename);
+    } finally {
+      closeSync(fd);
+    }
+  }
 });
