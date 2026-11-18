@@ -1,3 +1,5 @@
+import { CROSSOVER_STAGES } from '../combat/crossover-stages.mjs';
+import { getStage } from '../combat/data.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { drawStageScenery, REVIEWED_SCENERY_IDS, SCENERY_ANCHORS, SCENERY_FLOOR } from '../combat/render-stage-scenery.mjs';
@@ -90,4 +92,18 @@ test('all three planes retain overscan and move by different distances behind th
   }
   assert.deepEqual(draws[1].map(([, x], i) => x - draws[0][i][1]), [6, 17, 31]);
   assert.deepEqual(draws[2].map(([, x], i) => x - draws[0][i][1]), [-6, -17, -31]);
+});
+
+test('each crossover world has a credited playable arena and retains the common fight geometry', () => {
+  const queued = CROSSOVER_STAGES.map(stage => stage.series);
+  assert.equal(new Set(queued).size, 9);
+  for (const entry of CROSSOVER_STAGES) {
+    const stage = getStage(entry.id);
+    assert.equal(stage.series, entry.series);
+    assert.equal(stage.floor, 568);
+    assert.equal(stage.width, 1280);
+    assert.deepEqual(stage.bounds, { left: 65, right: 1215 });
+    assert.ok(stage.fidelity.sourceIds.includes(entry.sourceId));
+    assert.match(entry.source, /^https:\/\//);
+  }
 });

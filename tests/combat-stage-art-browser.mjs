@@ -104,14 +104,15 @@ try {
     await fs.writeFile(path.join(output, stage.id + '.webp'), Buffer.from(exportURL.split(',')[1], 'base64'));
     report.stages.push(measured);
   }
-  check('All twelve arenas pan six, seventeen and thirty-one pixels at the camera stop and stay fixed with reduced motion');
-  check('All twelve real selector previews display the three published planes, including the recovered arena');
-  await page.locator('[data-stage="manor"]').click();
+  check('All playable arenas pan six, seventeen and thirty-one pixels at the camera stop and stay fixed with reduced motion');
+  check('All playable selector previews display the three published planes, including the recovered arena');
+  await page.locator('[data-stage="showgrounds"]').click();
   await page.locator('[data-action="start"]').click();
   await page.waitForFunction(() => window.Encore?.ready && window.Encore.snapshot?.phase === 'fight');
-  await page.locator('#arena').screenshot({ path: path.join(output, 'manor-duel.png') });
+  assert.ok((await page.locator('.fight-caption').textContent()).includes(STAGES.find(stage => stage.id === 'showgrounds').name));
+  await page.locator('#arena').screenshot({ path: path.join(output, 'showgrounds-duel.png') });
   assert.deepEqual(report.errors, []);
-  check('A playable duel opens with the selected painted stage');
+  check('A playable duel opens in the selected SMG4 Showgrounds');
 } catch (error) {
   report.failure = String(error.stack || error);
   process.exitCode = 1;

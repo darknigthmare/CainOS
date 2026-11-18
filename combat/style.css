@@ -218,3 +218,19 @@ dialog.story-reader{width:min(96vw,1180px);padding:24px;max-height:94dvh;overflo
 
 .arena-wrap.finishing .fighter-markers{display:none}
 main.combat-main:fullscreen{overflow:auto;max-width:none;background:var(--ink)}
+.costume-picker{min-width:0;max-width:100%}
+.costume-picker select{width:100%;max-width:100%}
+.costume-filters{margin-top:.35rem;color:var(--muted);font-size:.84rem}
+.costume-filters summary{cursor:pointer}
+.costume-filters .field{margin-top:.55rem}
+.wardrobe-dialog .costume-picker{margin-bottom:1rem}
+
+.visits-layout{display:grid;grid-template-columns:minmax(165px,1fr) minmax(0,3fr);gap:clamp(16px,3vw,38px);align-items:start}
+.visits-menu{display:grid;gap:7px}.visits-menu button{text-align:left;line-height:1.35;white-space:normal}
+.visits-menu [aria-pressed=true]{color:var(--ink,#15121a);background:var(--gold,#f5d498)}
+.visit-card{overflow:hidden;border:1px solid #705d59;border-radius:9px;background:#191923}
+.visit-art{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;background:#151521}
+.visit-copy{padding:clamp(14px,2.2vw,28px)}.visit-copy h2,.visit-result h3{margin:.45em 0}
+.visit-copy p,.visit-result p{max-width:68ch;line-height:1.6}.visit-copy button{margin-top:8px}
+.visit-result{margin:16px 0}.visit-result .visit-art{border-radius:5px}
+@media(max-width:650px){.visits-layout{grid-template-columns:1fr}.visits-menu{grid-template-columns:repeat(2,minmax(0,1fr))}.visits-menu button{font-size:12px;padding:10px}}

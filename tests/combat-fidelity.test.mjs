@@ -30,7 +30,7 @@ test('review records keep source scope, observations and invented combat separat
   for (const source of FIDELITY_SOURCES) {
     const url = new URL(source.url);
     assert.equal(url.protocol, 'https:');
-    assert.ok(['www.glitchprod.com', 'static.wixstatic.com', 'www.youtube.com', 'glitchproductions.store', 'www.comicsbeat.com', 'occ-0-3012-114.1.nflxso.net', 'static.wikia.nocookie.net', 'pbs.twimg.com'].includes(url.hostname));
+    assert.ok(['www.glitchprod.com', 'static.wixstatic.com', 'steamcommunity.com', 'www.youtube.com', 'glitchproductions.store', 'www.comicsbeat.com', 'occ-0-3012-114.1.nflxso.net', 'static.wikia.nocookie.net', 'pbs.twimg.com'].includes(url.hostname));
     if (['static.wikia.nocookie.net', 'pbs.twimg.com'].includes(url.hostname)) {
       assert.equal(source.kind, 'Copie sur un hébergement tiers');
       assert.match(source.scope, /tiers|republiée/);

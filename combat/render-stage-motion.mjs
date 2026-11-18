@@ -1,7 +1,9 @@
 /** Small stage-specific ambient layers, drawn behind actors above the floor. */
+import { CROSSOVER_STAGES } from './crossover-stages.mjs';
 import { SCENERY_ANCHORS } from './render-stage-scenery.mjs';
 export const AMBIENT_FLOOR = 568;
 export const STAGE_AMBIENCES = Object.freeze({
+  ...Object.fromEntries(CROSSOVER_STAGES.map(stage => [stage.id, stage.ambience])),
   bigtop: 'Lueurs de piste', candy: 'Poussière de sucre', manor: 'Bougies du manoir', spudsy: 'Vapeur du comptoir',
   cellar: 'Présences du cellier', void: 'Reflets irisés', lake: 'Ondes du lac', training: 'Balayage de calibration',
   gloink: 'Formes du nid', kingdom: 'Scintillements de sucre', grounds: 'Nuages des terrains', backstage: 'Veilleuses du couloir',
@@ -11,6 +13,15 @@ const normalFrame = value => Number.isFinite(value) ? Math.max(0, value) : 0;
 const circle = (x, y, rx, ry, color, alpha = 1) => ({ kind: 'ellipse', x, y, rx, ry, color, alpha });
 const stroke = (points, color, alpha = 1, width = 1) => ({ kind: 'line', points, color, alpha, width });
 
+// Falling snow, warm room dust, airborne leaves and data lights all stay
+// behind the actors. Offset, size and drift are local to each environment.
+const crossoverParticles = {
+  coppernine: [19, 18, 9, 2.1, 1.7, '#e3efff'], silicacity: [7, -8, 2, 1.2, 3.5, '#e5bfff'],
+  portaurora: [11, -5, 15, 2.8, 1.0, '#efffff'], gaslightwharf: [9, -4, 5, 3.0, 1.7, '#dddfb2'],
+  parkplanet: [10, 6, 12, 2.4, 1.3, '#fff2c2'], gameoverse: [14, -13, 3, 1.9, 1.9, '#94eeff'],
+  littledaisy: [8, 3, 2, 1.2, 1.8, '#ffcc95'], showgrounds: [10, -3, 7, 1.7, 1.7, '#ffd493'],
+  simpleflipisland: [12, 4, 16, 2.6, 1.2, '#e4ffba'],
+};
 /** Deterministic coordinates only: no RNG, wall clock or actor mutation. */
 export function stageMotion(stage, frame = 0, reducedMotion = false, painted = false) {
   let id = typeof stage === 'string' ? stage : stage?.theme || stage?.id || 'bigtop';
@@ -18,7 +29,14 @@ export function stageMotion(stage, frame = 0, reducedMotion = false, painted = f
   if (!Object.hasOwn(STAGE_AMBIENCES, id)) return { id, frame: 0, shapes: [] };
   const tick = reducedMotion ? 0 : normalFrame(frame), t = tick / 60, shapes = [];
   const wave = (rate, phase = 0) => Math.sin(t * rate + phase);
-  if (painted && ['manor', 'spudsy', 'backstage'].includes(id)) {
+  if (Object.hasOwn(crossoverParticles, id)) {
+    const [count, rise, drift, rx, ry, color] = crossoverParticles[id];
+    for (let i = 0; i < count; i++) {
+      const y = 100 + ((i * 73 + t * rise) % 398 + 398) % 398;
+      const x = 35 + i * 1210 / count + wave(.46, i * 1.9) * drift;
+      shapes.push(circle(x, y, rx, ry, color, .14 + .04 * wave(.6, i)));
+    }
+  } else if (painted && ['manor', 'spudsy', 'backstage'].includes(id)) {
     // The vector candles, counter and wall lamps have their own coordinates.
     // Give the painted architecture unanchored dust or heat motes instead.
     const color = { manor: '#ffe2bb', spudsy: '#fff0cd', backstage: '#ffdcb2' }[id];

@@ -1,3 +1,5 @@
+import { CROSSOVER_STAGES } from './crossover-stages.mjs';
+import { createCrossoverCostumes } from './crossovers.mjs';
 import { SPRITE_CATALOG } from './sprite-catalog.mjs';
 import { FIDELITY_SOURCES, getFighterFidelity, getMoveFidelity, getStageFidelity } from './fidelity.mjs';
 import { COSTUME_SPRITE_OVERRIDES, getCostumeFidelity } from './costume-fidelity.mjs';
@@ -226,6 +228,8 @@ export const STAGES = [
   stage('kingdom', 'Le palais de sucre', 'Des arches de confiserie dans Candy Canyon.', { sky: '#29213d', back: '#74496a', accent: '#ffe7b3', floor: '#684760', grid: '#ab7e9b' }, 'ep2'),
   stage('grounds', 'Les terrains du cirque', 'La pelouse numérique au pied du chapiteau.', { sky: '#173149', back: '#386278', accent: '#ffe29c', floor: '#31584e', grid: '#6c9172' }, 'ep1'),
   stage('backstage', 'Le couloir des portes', 'Les portes des résidents servent de fond de scène.', { sky: '#171326', back: '#462b4e', accent: '#efc694', floor: '#4a3549', grid: '#876779' }, 'ep1'),
+  ...CROSSOVER_STAGES.map(({ id, series, name, description, palette, sourceId }) =>
+    stage(id, name, description, palette, sourceId, { series, provenance: 'Arène crossover adaptée pour Encore' })),
 ];
 
 // A matching substring is not an identity: Jax's parents, rival NPCs, body
@@ -353,6 +357,16 @@ export const ROSTER_ARCHIVE = SPRITE_CATALOG.map(entry => {
 });
 export const ARCHIVE = ROSTER_ARCHIVE;
 export const VARIANTS = ROSTER_ARCHIVE.filter(entry => entry.baseFighterId && entry.id !== entry.baseFighterId);
+export const CROSSOVER_COSTUMES = createCrossoverCostumes(FIGHTERS);
+export const COSTUMES = [...VARIANTS, ...CROSSOVER_COSTUMES];
+
+export function equipCostume(fighter, id) {
+  const variant = COSTUMES.find(item => item.id === id && item.fighterId === fighter.id);
+  if (!variant) return fighter;
+  return { ...fighter, sprite: variant.sprite, animation: variant.animation || null,
+    visual: { ...fighter.visual, ...variant.visual }, costume: variant.id };
+}
+
 export const MODES = [
   { id: 'versus', name: 'Versus CPU', description: 'Un duel libre contre l’ordinateur.' },
   { id: 'local', name: 'Duel local', description: 'Deux joueurs sur le même appareil.' },

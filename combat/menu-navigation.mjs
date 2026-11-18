@@ -1,6 +1,6 @@
 /** DOM navigation shared by keyboard menus, gamepad menus and dialog refreshes. */
 const selectable = 'button:not(:disabled),a[href],select:not(:disabled),input:not(:disabled):not([type=hidden]),summary';
-const focusAttributes = ['data-bind-player','data-bind-action','data-bind-slot','data-finale-id','data-finale-fighter','data-finale-artist','data-appearance','data-try-appearance','data-fighter','data-side','data-stage','data-codex','data-page','data-action','data-setting','data-mode','data-challenge','data-nav'];
+const focusAttributes = ['data-bind-player','data-bind-action','data-bind-slot','data-finale-id','data-finale-fighter','data-finale-artist','data-appearance','data-try-appearance','data-visit','data-play-visit','data-fighter','data-side','data-stage','data-codex','data-page','data-action','data-setting','data-mode','data-challenge','data-nav'];
 
 export function menuItems(scope, { gamepad = false } = {}) {
   return [...scope.querySelectorAll(selectable)].filter(element =>

@@ -1,4 +1,4 @@
-import { FIGHTERS, STAGES, VARIANTS } from './data.mjs';
+import { FIGHTERS, STAGES, COSTUMES } from './data.mjs';
 import { getStoryRoute } from './stories.mjs';
 
 /**
@@ -134,7 +134,7 @@ export function createProgram(mode, playerId, roster = FIGHTERS, stages = STAGES
   if (!plain(options) || !PROGRAM_MODES.includes(mode)) fail('Programme de combat inconnu.');
   const fighterIds = catalogIds(roster, 'des artistes'), stageIds = catalogIds(stages, 'des arènes');
   if (fighterIds.length < 2 || !fighterIds.includes(playerId)) fail('Artiste du programme introuvable.');
-  const { seed = 1, difficulty = 'normal', roundTime = 90, variantId = '', stage = stageIds[0], variants = VARIANTS } = options;
+  const { seed = 1, difficulty = 'normal', roundTime = 90, variantId = '', stage = stageIds[0], variants = COSTUMES } = options;
   if (!integer(seed, 0, MAX_UINT) || !['easy', 'normal', 'hard'].includes(difficulty)
       || ![60, 90, 120].includes(roundTime)) fail('Règles du programme invalides.');
   if (!stageIds.includes(stage)) fail('Arène du programme introuvable.');
@@ -236,7 +236,7 @@ function applyResult(run, result) {
  * Record one actual player duel without mutating the current result screen.
  * Live fractional HP is rounded once; saved/imported HP must already be integer.
  */
-export function recordProgramResult(run, result, roster = FIGHTERS, stages = STAGES, variants = VARIANTS) {
+export function recordProgramResult(run, result, roster = FIGHTERS, stages = STAGES, variants = COSTUMES) {
   return applyResult(validateProgram(run, roster, stages, variants), normalizeResult(result));
 }
 
@@ -254,7 +254,7 @@ function agreesWith(value, expected) {
  * Opponents, stage order, round/index, starting HP and all seven bracket matches
  * must agree with that reconstruction. No arbitrary imported objects are copied.
  */
-export function validateProgram(value, roster = FIGHTERS, stages = STAGES, variants = VARIANTS) {
+export function validateProgram(value, roster = FIGHTERS, stages = STAGES, variants = COSTUMES) {
   if (!plain(value) || value.format !== PROGRAM_FORMAT || value.version !== PROGRAM_VERSION) {
     fail('Ce fichier n’est pas un programme Encore version 1.');
   }
@@ -279,7 +279,7 @@ export function validateProgram(value, roster = FIGHTERS, stages = STAGES, varia
  * Survival and tournament losses end that attempt: retry starts a fresh attempt
  * with the same seeded draw and full health, never restores a defeated bracket.
  */
-export function retryProgram(value, roster = FIGHTERS, stages = STAGES, variants = VARIANTS) {
+export function retryProgram(value, roster = FIGHTERS, stages = STAGES, variants = COSTUMES) {
   const run = validateProgram(value, roster, stages, variants);
   if (run.status === 'active') return run;
   if (run.status !== 'eliminated') fail('Ce programme est déjà remporté.');
@@ -293,7 +293,7 @@ export function retryProgram(value, roster = FIGHTERS, stages = STAGES, variants
   return retried;
 }
 
-export function readProgram(storage, roster = FIGHTERS, stages = STAGES, variants = VARIANTS) {
+export function readProgram(storage, roster = FIGHTERS, stages = STAGES, variants = COSTUMES) {
   try {
     const raw = storage.getItem(PROGRAM_KEY);
     if (!raw || typeof raw !== 'string' || raw.length > 65536) return null;
@@ -301,7 +301,7 @@ export function readProgram(storage, roster = FIGHTERS, stages = STAGES, variant
   } catch { return null; }
 }
 
-export function saveProgram(storage, run, roster = FIGHTERS, stages = STAGES, variants = VARIANTS) {
+export function saveProgram(storage, run, roster = FIGHTERS, stages = STAGES, variants = COSTUMES) {
   const valid = run === null ? null : validateProgram(run, roster, stages, variants);
   try {
     if (valid === null) storage.removeItem(PROGRAM_KEY);

@@ -51,7 +51,9 @@ async function run(file, extraEnv = {}, label = file) {
   let transcript = '', timedOut = false;
   const append = chunk => { transcript += chunk; process.stdout.write(chunk); };
   child.stdout.on('data', append); child.stderr.on('data', append);
-  const timer = setTimeout(() => { timedOut = true; child.kill('SIGTERM'); setTimeout(() => child.kill('SIGKILL'), 3000).unref(); }, 420000);
+  // The costume audit decodes 2,520 UHD files and renders both orientations.
+  const timeoutMinutes = file === 'tests/combat-crossovers-browser.mjs' ? 32 : 7;
+  const timer = setTimeout(() => { timedOut = true; child.kill('SIGTERM'); setTimeout(() => child.kill('SIGKILL'), 3000).unref(); }, timeoutMinutes * 60_000);
   let exitCode;
   try { exitCode = await new Promise((resolve, reject) => { child.on('error', reject); child.on('close', code => resolve(code ?? 1)); }); }
   finally { clearTimeout(timer); }

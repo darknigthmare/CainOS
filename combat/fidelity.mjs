@@ -1,3 +1,4 @@
+import { CROSSOVER_STAGES, CROSSOVER_STAGE_SOURCES } from './crossover-stages.mjs';
 /**
  * Shared provenance for the codex and the planning workbook.
  * A source identifies what to compare; it does not certify an atlas, a costume,
@@ -16,6 +17,7 @@ const episode = (id, title, video, scope) => ({ id, title: `GLITCH — ${title}`
 const still = (id, title, file, scope) => ({ id, title: `GLITCH — ${title}`, url: `https://static.wixstatic.com/media/${file}`, kind: 'Visuel officiel', scope: `${scope} Image publiée sur https://www.glitchprod.com/digital-circus et consultée pour cette revue.` });
 const merchandise = (id, title, file, page, scope) => ({ id, title: `GLITCH Store — ${title}`, url: `https://glitchproductions.store/cdn/shop/files/${file}`, kind: 'Produit dérivé officiel', scope: `${scope} Photographie consultée sur https://glitchproductions.store/products/${page}. Ce produit stylisé ne mesure pas les proportions ni les poses de la série.` });
 export const FIDELITY_SOURCES = freeze([
+  ...CROSSOVER_STAGE_SOURCES,
   { id: 'glitch', title: 'GLITCH — The Amazing Digital Circus', url: 'https://www.glitchprod.com/digital-circus', kind: 'Source primaire', scope: 'Présentation officielle et galerie de la série. La page ne documente ni les règles de combat ni les dimensions du jeu.' },
   episode('ep1', 'Pilot', 'HwAPLk_sQ3w', 'Référence du cirque, de ses résidents, de Caine, Bubble, Kaufmo et des Gloinks. Les plans non décrits dans les visuels consultés restent à revoir.'),
   episode('ep2', 'Candy Carrier Chaos!', '4ofJpOEXrZs', 'Référence de Candy Canyon et de ses personnages. Les attaques du fan-game ne sont pas attestées par ce lien.'),
@@ -245,6 +247,11 @@ export const MOVE_FIDELITY = freeze(Object.fromEntries(Object.entries(moveAdapta
 }))));
 
 export const STAGE_FIDELITY = freeze({
+  ...Object.fromEntries(CROSSOVER_STAGES.map(({ id, sourceId, observed, description }) => [
+    id, record(id === 'showgrounds' ? [sourceId, 'smg4-showgrounds-map'] : [sourceId], [observed],
+      description + ' Les trois plans et le sol horizontal sont composés pour le duel.',
+      'Adaptation crossover documentée', 'La composition en parallaxe, les accessoires et leurs proportions sont interprétés pour Encore.'),
+  ])),
   bigtop: appearance(['ep1', 'glitch-cast', 'glitch-circus-props'], ['Rideaux rouges et accessoires de jeu de grande taille, dont dés et cubes.', 'Damier au sol, murs colorés et portes arrondies dans les vues consultées.'], 'Piste horizontale, limites du ring et perspective simplifiée créées pour le duel.', 'Palette et objets comparés à deux visuels officiels ; disposition complète du chapiteau non reconstruite.'),
   candy: pending(['ep2'], 'La route du convoi et le canyon deviennent une piste horizontale de combat.', 'Épisode 2 identifié ; relief, route, confiseries et lumière à comparer sur des plans du canyon. Le visuel de la cour ne valide pas ce paysage.'),
   manor: pending(['ep3'], 'Salle du manoir reconstruite en décor de duel sans parcours d’exploration.', 'Épisode 3 identifié ; architecture, portraits et bougies à contrôler sur les plans de la salle choisie.'),

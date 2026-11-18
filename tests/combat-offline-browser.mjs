@@ -10,6 +10,9 @@ import http from 'node:http';
 import { pathToFileURL } from 'node:url';
 import { FIGHTERS } from '../combat/data.mjs';
 import { GAME_VERSION } from '../combat/session.mjs';
+// Four service-worker requests run concurrently. Allow the full pack to scale
+// while retaining the existing minimum for smaller fixture distributions.
+const packTimeout = Math.max(60_000, ART_FILES.length * 70);
 let playwright;
 try { playwright=await import('playwright'); }
 catch(error){if(!process.env.CODEX_PRIMARY_RUNTIME_NODE_MODULES)throw error;playwright=await import(pathToFileURL(path.join(process.env.CODEX_PRIMARY_RUNTIME_NODE_MODULES,'playwright/index.mjs')).href);}
@@ -32,8 +35,11 @@ const server=http.createServer(async(req,res)=>{
 });
 await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
 const base='http://127.0.0.1:'+server.address().port;
-const browser=await playwright.chromium.launch({headless:true,executablePath:process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH||undefined,args:['--no-sandbox','--disable-dev-shm-usage','--single-process','--no-zygote']});
-const context=await browser.newContext({viewport:{width:1280,height:900}});
+// An installed offline game uses a disk-backed profile. Chromium's temporary
+// in-memory CacheStorage can reject writes around 500 MiB even when its storage
+// estimate reports more space than the complete art pack needs.
+const userData=await fs.mkdtemp(path.join(output,'offline-profile-'));
+const context=await playwright.chromium.launchPersistentContext(userData,{headless:true,executablePath:process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH||undefined,args:['--no-sandbox','--disable-dev-shm-usage','--single-process','--no-zygote'],viewport:{width:1280,height:900}});
 const page=await context.newPage(),checks=[],errors=[];
 page.on('pageerror',error=>errors.push(error.message));
 const checked=(name,detail='')=>{checks.push({name,detail,pass:true});console.log('PASS '+name+' '+detail);};
@@ -124,7 +130,8 @@ try{
   await page.clock.resume();
   await settings();
   await page.locator('[data-action="offline-prepare"]').click();
-  await page.waitForFunction(()=>window.Encore.offline.complete&&!window.Encore.offline.busy,null,{timeout:60000});
+  await page.waitForFunction(()=>!window.Encore.offline.busy&&(window.Encore.offline.complete||window.Encore.offline.error),null,{timeout:packTimeout});
+  assert.equal(await page.evaluate(()=>window.Encore.offline.error),'','The initial download should complete in a clean on-disk profile.');
   assert.equal(await page.evaluate(()=>window.Encore.offline.cached),ART_FILES.length);
   const saved=await page.evaluate(()=>window.Encore.profile);
   await page.screenshot({path:path.join(output,'encore-settings.png'),fullPage:true});
@@ -148,7 +155,7 @@ try{
   checked('An evicted art pack followed by a failed download is never announced as ready offline',`${incomplete.cached}/${ART_FILES.length}; real CacheStorage eviction and HTTP 503; profile preserved`);
   unavailableArt.clear();
   await page.locator('[data-action="offline-prepare"]').click();
-  await page.waitForFunction(()=>window.Encore.offline.complete&&!window.Encore.offline.busy,null,{timeout:60000});
+  await page.waitForFunction(()=>window.Encore.offline.complete&&!window.Encore.offline.busy,null,{timeout:packTimeout});
   assert.equal(await page.evaluate(()=>window.Encore.offline.cached),ART_FILES.length);
   assert.equal(await page.locator('#offline-error').textContent(),'');
   assert.deepEqual(await page.evaluate(()=>window.Encore.profile),saved);
@@ -214,4 +221,4 @@ try{
   await page.screenshot({path:path.join(output,'offline-browser-failure.png'),fullPage:true}).catch(()=>{});
   await fs.writeFile(path.join(output,'offline-browser-report.json'),JSON.stringify({base,checks,errors,failure:error.message},null,2));
   throw error;
-}finally{await browser.close();server.close();}
+}finally{try{await context.close();}finally{server.close();await fs.rm(userData,{recursive:true,force:true});}}

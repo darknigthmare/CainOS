@@ -29,7 +29,9 @@ test('dedicated action drawings follow the resolved state, final outcome and exa
   assert.equal(action(move('light', light.startup)), 'attack');
   assert.equal(action(move('light', light.startup + light.active)), 'attack');
   assert.equal(action(move('light', light.startup + light.active + light.recovery)), null);
-  for (const other of ['heavy', 'low', 'throw', 'special', 'super']) {
+  assert.equal(action(move('heavy', fighter.f.moves.heavy.startup)), 'heavy');
+  assert.equal(action(move('heavy', 0)), null);
+  for (const other of ['low', 'throw', 'special', 'super']) {
     assert.equal(action(move(other, fighter.f.moves[other].startup)), null);
   }
   for (const id of ['ragatha', 'gangle']) {

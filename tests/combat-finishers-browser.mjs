@@ -9,7 +9,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
 import { pathToFileURL } from 'node:url';
-import { FIGHTERS, STAGES, VARIANTS } from '../combat/data.mjs';
+import { COSTUMES, FIGHTERS, STAGES, VARIANTS } from '../combat/data.mjs';
 import { FINISHER_CATALOG, FINISHER_VARIANTS } from '../combat/finisher-catalog.mjs';
 import { REPLAY_KEY, SAVE_KEY, validateReplay } from '../combat/session.mjs';
 
@@ -247,7 +247,7 @@ try {
     const variants = VARIANTS.filter(item => item.fighterId === fighter.id);
     await openArtist(fighter.id);
     const offered = await page.locator('#finale-costume option').evaluateAll(options => options.map(option => option.value).filter(Boolean));
-    assert.deepEqual(offered.sort(), variants.map(item => item.id).sort());
+    assert.deepEqual(offered.sort(), COSTUMES.filter(item => item.fighterId === fighter.id).map(item => item.id).sort());
     for (const variant of variants) {
       await page.locator('#finale-costume').selectOption(variant.id);
       await waitReady(`${fighter.id}.impact`);

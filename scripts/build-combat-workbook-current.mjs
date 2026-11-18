@@ -97,8 +97,7 @@ for(const [name,key]of Object.entries(TRACKER_SHEETS)){
     }
   }
 }
-// Three empty lines separate the reference table from its established legend.
-// Table row insertion is responsible for moving the legend if future additions need it.
+// Keep the established legend and its formatting as the list of sources grows.
 const references=sheets['Références'],refTable=references.tables.items[0],refRows=refTable.getDataRows();
 references.getRange('A3').values=[[`Dates et état du contenu : ${data.asOf}. Les sources de fiction ne valident pas les statistiques du jeu.`]];
 sheets.QA.getRange('A3').values=[['Historique conservé, objectifs de revue et cas CI07 de cette passe. Les essais matériels restent identifiés séparément.']];
@@ -106,7 +105,8 @@ const sources=data.sources.map(s=>[s.id,s.title,s.kind,s.url,s.scope]);
 const sourceIds=new Set(refRows.map(row=>row[0]));
 const addedSources=sources.filter(row=>!sourceIds.has(row[0]));
 if(addedSources.length){
-  refTable.rows.add(null,addedSources);
+  const { appendWorkbookReferences } = await import(pathToFileURL(path.join(root,'scripts/combat-workbook-reference-rows.mjs')));
+  appendWorkbookReferences(references,refTable,addedSources);
   for(let i=0;i<addedSources.length;i++){
     const row=refRows.length+6+i,range=references.getRange(`A${row}:E${row}`);
     range.copyFrom(references.getRange('A6:E6'),'all');range.values=[addedSources[i]];range.format.rowHeight=76;
@@ -126,7 +126,7 @@ set('A22','Historique et essais 0.7');
 const expected=new Map();
 const formula=(cell,expression,value)=>{summary.getRange(cell).formulas=[['='+expression]];expected.set(cell,value);};
 for(const [cell,key,sheet]of [['B7','fighters','Combattants'],['B8','moves','Techniques'],['B9','stages','Arènes'],['B10','atlas','Atlas']])formula(cell,`COUNTA('${sheet}'!A6:A${data[TRACKER_SHEETS[sheet]].length+5})`,data.counts[key]);
-formula('B11',`COUNTIFS('Atlas'!C6:C${data.atlas.length+5},"Variante visuelle")`,data.counts.variants);
+formula('B11',`COUNTIFS('Atlas'!C6:C${data.atlas.length+5},"Variante visuelle")+COUNTIFS('Production'!B6:B${data.production.length+5},"Costume crossover")`,data.counts.variants);
 const statuses=['Implémenté','Partiel','Prévu','À vérifier'];
 for(const [r,sheet,key,col]of [[15,'Fonctionnalités','features',4],[16,'Production','production',5],[17,'Scénarios','scenarios',8],[18,'Atlas','atlas',5]]){
   const end=data[key].length+5,c=column(col);

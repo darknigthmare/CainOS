@@ -74,8 +74,8 @@ async function withAudio(options, callback) {
 
 test('every playable stage has a distinct frozen original arrangement', () => {
   assert.deepEqual(Object.keys(AUDIO_THEMES).sort(), STAGES.map(stage => stage.id).sort());
-  assert.equal(Object.keys(AUDIO_THEMES).length, 12);
-  assert.equal(new Set(Object.values(AUDIO_THEMES).map(theme => JSON.stringify(theme.melody))).size, 12);
+  assert.equal(Object.keys(AUDIO_THEMES).length, STAGES.length);
+  assert.equal(new Set(Object.values(AUDIO_THEMES).map(theme => JSON.stringify(theme.melody))).size, STAGES.length);
   for (const arrangement of Object.values(AUDIO_THEMES)) {
     assert.ok(arrangement.title.length > 5); assert.ok(arrangement.bpm >= 60 && arrangement.bpm <= 180);
     assert.match(arrangement.provenance, /originale/);
@@ -127,7 +127,7 @@ test('a denied resume can be retried only through another unlock gesture', async
   audio.destroy();
 }));
 
-test('twelve themes and the light menu arrangement share a single bounded scheduler', async () => withAudio({}, async ({ contexts, timers, tick }) => {
+test('stage themes and the light menu arrangement share a single bounded scheduler', async () => withAudio({}, async ({ contexts, timers, tick }) => {
   const settings = { music: true }, audio = new CombatAudio({ getSettings: () => settings });
   await audio.unlock(); const context = contexts[0];
   assert.equal(timers.size, 1); assert.ok(audio.diagnostics.playing);

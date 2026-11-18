@@ -57,5 +57,32 @@ export const AUDIO_AMBIENCES = freeze({
   backstage: ambience('backstage', 'Bois du couloir', 'Une porte travaille doucement, suivie de deux petits craquements.', 10.1, [
     tone(178, 98, .42, 0, 'triangle', .011), tone(260, 130, .09, 2.5, 'triangle', .012), air(480, 280, 1.3, 4.6, 'lowpass', .014), tone(330, 220, .07, 6.4, 'triangle', .008),
   ]),
+  coppernine: ambience('coppernine', 'Vent de la colonie', 'Le vent passe entre les poutrelles glacées.', 9.4, [
+    air(990, 310, 2.8, 0, 'bandpass', .018, .5), tone(144, 105, .5, 4.2, 'triangle', .011),
+  ]),
+  silicacity: ambience('silicacity', 'Transformateurs du toit', 'Un bourdonnement bas et de petits signaux électroniques.', 7.3, [
+    tone(95, 98, 2, 0, 'sine', .012), tone(890, 1050, .13, 3.4, 'sine', .009),
+  ]),
+  portaurora: ambience('portaurora', 'Promenade en bord de mer', 'Une vague douce et un clapot au pied des quais.', 8.5, [
+    air(480, 1100, 1.8, 0, 'bandpass', .02, .55), air(1050, 390, 1.5, 3.3, 'bandpass', .015, .5),
+  ]),
+  gaslightwharf: ambience('gaslightwharf', 'Pontons dans la brume', 'Un cordage tendu grince au-dessus du clapotis.', 10.6, [
+    tone(175, 95, .45, 0, 'triangle', .014), air(550, 220, 2.4, 4.1, 'lowpass', .019),
+  ]),
+  parkplanet: ambience('parkplanet', 'Air des jardins', 'Un souffle dans les feuilles accompagne un carillon lointain.', 9.3, [
+    air(910, 1440, 2.2, 0, 'bandpass', .013, .5), tone(845, 838, .65, 3.7, 'sine', .009),
+  ]),
+  gameoverse: ambience('gameoverse', 'Balise orbitale', 'Les oscillateurs du quai orbital alternent deux signes brefs.', 7.1, [
+    tone(265, 380, .22, 0, 'triangle', .013), tone(660, 486, .31, 1.7, 'sine', .010),
+  ]),
+  littledaisy: ambience('littledaisy', 'Résonance du club', 'Un parquet ancien travaille dans la salle voûtée.', 9.8, [
+    tone(116, 60, .42, 0, 'triangle', .012), air(265, 160, 1.8, 3.1, 'lowpass', .014),
+  ]),
+  showgrounds: ambience('showgrounds', 'Roue des Showgrounds', 'Un axe métallique tourne lentement au loin.', 8.1, [
+    tone(185, 147, .48, 0, 'triangle', .011), tone(172, 129, .34, 3.3, 'sine', .009),
+  ]),
+  simpleflipisland: ambience('simpleflipisland', 'Feuilles de cocotier', 'Les palmes bruissent au-dessus de la plage.', 7.8, [
+    air(1160, 610, 1.4, 0, 'bandpass', .017, .5), air(745, 1120, 1.2, 2.9, 'bandpass', .014, .5),
+  ]),
 });
 export const AMBIENCE_STAGE_IDS = Object.freeze(Object.keys(AUDIO_AMBIENCES));

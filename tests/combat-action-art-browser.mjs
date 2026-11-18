@@ -20,6 +20,7 @@ const appearances = [
   ...FIGHTERS.map(fighter => {
     const keys = fighter.animation ? ['intro', 'victory', 'defeat', 'jump', 'crouch'] : [...ACTION_ART];
     if (fighter.animation && !['ragatha', 'gangle'].includes(fighter.id)) keys.push('attack');
+    keys.push('heavy');
     return { id: fighter.id, owner: fighter.id, keys };
   }),
   ...VARIANTS.map(variant => ({ id: variant.id, owner: variant.fighterId, keys: ACTION_ART })),
@@ -109,7 +110,10 @@ try {
           let phase = 'fight';
           if (key === 'intro') phase = 'intro';
           if (key === 'victory' || key === 'defeat') phase = 'matchOver';
-          if (key === 'attack') actor.attack = { name: 'light', def: f.moves.light, t: f.moves.light.startup };
+          if (key === 'attack' || key === 'heavy') {
+            const slot = key === 'heavy' ? 'heavy' : 'light';
+            actor.attack = { name: slot, def: f.moves[slot], t: f.moves[slot].startup };
+          }
           sampled.length = 0;
           renderer.drawActor(actor, 0, true, { phase, winner: key === 'defeat' ? 1 : 0 });
           const emitted = sampled.find(item => item.source === expected.canvas);

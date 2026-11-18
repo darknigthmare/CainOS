@@ -4,7 +4,7 @@ const published = new Set(ART_FILES);
 const frames = { selection: new Map(), stance: new Map(), poses: new Map() };
 const limits = { selection: { edge: 384, count: 16 }, stance: { edge: 640, count: 4 }, poses: { edge: 640, count: 24 } };
 const pending = new Map();
-const poseRetryAt = new Map();
+const retryAt = new Map();
 export const ACTION_ART = Object.freeze(['intro', 'attack', 'hit', 'walk', 'jump', 'crouch', 'victory', 'defeat']);
 // Two decoding slots shared by the lazily visible portraits and the current duel.
 const decoders = [Promise.resolve(), Promise.resolve()];
@@ -45,20 +45,23 @@ export function loadFighterIllustration(kind, fighter, pose) {
     cache.set(key, frame);
     return frame;
   }
-  const path = `../assets/encore/${kind}/${key}.webp`;
+  const directory = fighter.sprite?.crossoverDirectory;
+  const path = directory
+    ? `${directory}/${kind === 'poses' ? pose : kind}.webp`
+    : `../assets/encore/${kind}/${key}.webp`;
   if (!published.has(path)) return null;
-  if (kind === 'poses' && poseRetryAt.has(key)) {
-    if (performance.now() < poseRetryAt.get(key)) return null;
-    poseRetryAt.delete(key);
+  if (retryAt.has(path)) {
+    if (performance.now() < retryAt.get(path)) return null;
+    retryAt.delete(path);
   }
   if (!pending.has(path)) {
     const task = decoders[nextDecoder].then(() => readFrame(path, kind)).then(frame => {
       if (frame) {
         if (cache.size >= limits[kind].count) cache.delete(cache.keys().next().value);
         cache.set(key, frame);
-      } else if (kind === 'poses') {
+      } else if (kind === 'poses' || directory) {
         // drawActor can ask again every video frame while offline.
-        poseRetryAt.set(key, performance.now() + 5000);
+        retryAt.set(path, performance.now() + 5000);
       }
       return frame;
     }).finally(() => pending.delete(path));
@@ -72,7 +75,7 @@ export function loadFighterIllustration(kind, fighter, pose) {
 
 /** Queue only the current pair, two drawings at a time, after the duel can start. */
 export async function warmCombatPoses(fighters, isCurrent) {
-  for (const pose of ACTION_ART) {
+  for (const pose of [...ACTION_ART, 'heavy']) {
     if (!isCurrent()) return;
     await Promise.all(fighters.map(fighter => loadFighterIllustration('poses', fighter, pose)));
   }
@@ -80,7 +83,11 @@ export async function warmCombatPoses(fighters, isCurrent) {
 
 export function actionIllustration(fighter, pose) {
   if (!pose) return null;
-  const result = loadFighterIllustration('poses', fighter, pose);
+  const directory = fighter?.sprite?.crossoverDirectory;
+  // The crossover attack drawing serves both normal strikes unless the costume
+  // has its own heavy. Historical atlases retain their original move selection.
+  const key = pose === 'heavy' && directory && !published.has(directory + '/heavy.webp') ? 'attack' : pose;
+  const result = loadFighterIllustration('poses', fighter, key);
   return result?.canvas ? result : null;
 }
 
