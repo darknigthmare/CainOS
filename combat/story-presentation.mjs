@@ -1,10 +1,12 @@
 import { FIGHTERS, getStage } from './data.mjs';
+import { campaignIllustration } from './illustrations.mjs';
 import { CombatRenderer, drawPortrait } from './render.mjs';
 import { STORY_NOTICE, STORY_REFERENCE_NOTICE, STORY_REFERENCES, getStoryRoute } from './stories.mjs';
 
 /** The reader is presentation only: it owns no profile, match or award state. */
 const escapeHTML = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[char]));
 const fighter = id => FIGHTERS.find(item => item.id === id);
+let pendingPanelImage = null;
 const layouts = new Set(['solo', 'duet', 'focus-left', 'focus-right', 'ensemble', 'wide', 'archive']);
 
 export function createStoryPresentation(fighterId, kind = 'prologue', chapterIndex = 0) {
@@ -54,13 +56,40 @@ export function storyPresentationMarkup(reader, { leaveLabel = 'Retour à l’af
   </article>`;
 }
 
-/** Compose existing scenery and atlas portraits; no new bitmap art or ticker. */
-export async function paintStoryPresentation(root, item) {
+/** Each panel may have an illustration; the live stage and cast remain its fallback. */
+export async function paintStoryPresentation(root, item, fighterId) {
   const visual = root?.querySelector('.story-visual');
   if (!visual) return;
+  // A reader can skip ahead while a large panel is still downloading.
+  pendingPanelImage?.removeAttribute('src');
+  pendingPanelImage = null;
+  const backdrop = visual.querySelector('.story-backdrop');
+  const illustration = campaignIllustration(fighterId, item.id);
+  if (illustration) {
+    const image = new Image();
+    pendingPanelImage = image;
+    image.src = illustration;
+    try {
+      await image.decode();
+      if (!visual.isConnected) return;
+      // Keep every subject in frame, including on a narrow reader.
+      backdrop.height = Math.round(backdrop.width * image.naturalHeight / image.naturalWidth);
+      backdrop.getContext('2d').drawImage(image, 0, 0, backdrop.width, backdrop.height);
+      visual.style.aspectRatio = `${backdrop.width} / ${backdrop.height}`;
+      visual.classList.add('story-illustrated');
+      visual.querySelector('.story-cast').remove();
+      visual.setAttribute('aria-busy', 'false');
+      return;
+    } catch {
+      if (!visual.isConnected) return;
+    } finally {
+      image.removeAttribute('src');
+      if (pendingPanelImage === image) pendingPanelImage = null;
+    }
+  }
   let unavailable = false;
   try {
-    new CombatRenderer(visual.querySelector('.story-backdrop')).render(null, { stage:getStage(item.stageId), reducedMotion:true });
+    new CombatRenderer(backdrop).render(null, { stage:getStage(item.stageId), reducedMotion:true });
     const results = await Promise.all([...visual.querySelectorAll('[data-story-actor]')].map(canvas => drawPortrait(canvas, fighter(canvas.dataset.storyActor), { glow:false })));
     unavailable = results.some(result => !result);
   } catch { unavailable = true; }

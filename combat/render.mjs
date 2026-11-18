@@ -1,6 +1,7 @@
 import { getHurtbox, getHitbox } from './engine.mjs';
 import { removeAtlasMatte, applySpritePalette, projectilePresentation, trapPresentation } from './render-presentation.mjs';
 import { spriteSourceRegion, actorPose, frameGeometry, crouchParts, POSE_REGISTRATION_VERSION } from './render-poses.mjs';
+import { loadFighterIllustration, standingIllustration } from './illustrations.mjs';
 import { drawStageMotion } from './render-stage-motion.mjs';
 import { drawStageScenery } from './render-stage-scenery.mjs';
 import { drawFinisherScene } from './render-finishers.mjs';
@@ -158,15 +159,17 @@ async function prepareFighter(f) {
 
 export async function drawPortrait(target, fighter, options = {}) {
   const f = visualRecord(fighter, options.variant);
-  await prepareFighter(f);
+  const illustration = options.selection && await loadFighterIllustration('selection', f);
+  if (!illustration) await prepareFighter(f);
   const ctx = target.getContext('2d');
   if (!ctx) return false;
   const w = target.width, h = target.height;
   ctx.clearRect(0, 0, w, h);
-  const frame = getFrame(f, options.action || 'idle', options.frame || 0);
+  const frame = illustration || getFrame(f, options.action || 'idle', options.frame || 0);
   if (!frame) return false;
   ctx.save();
-  ctx.imageSmoothingEnabled = false;
+  ctx.imageSmoothingEnabled = !!illustration;
+  ctx.imageSmoothingQuality = 'high';
   const scale = Math.min(w * 0.87 / frame.width, h * 0.91 / frame.height);
   const dw = frame.width * scale, dh = frame.height * scale;
   if (options.glow !== false) { ctx.shadowColor = f.color || '#a897ef'; ctx.shadowBlur = Math.min(18, w * 0.07); }
@@ -644,7 +647,7 @@ export class CombatRenderer {
   }
 
   async preload(fighters, stages = []) {
-    const results = await Promise.allSettled((fighters || []).map(prepareFighter));
+    const results = await Promise.allSettled((fighters || []).map(fighter => Promise.all([prepareFighter(fighter), loadFighterIllustration('stance', fighter)])));
     for (const stage of stages) this.background(stage);
     return { ok: failures.size === 0 && results.every(r => r.status === 'fulfilled'), errors: [...failures.entries()].map(([src, error]) => ({ src, error })) };
   }
@@ -693,8 +696,9 @@ export class CombatRenderer {
     const ctx = this.ctx, f = actor.f || actor.def;
     if (!f) return;
     const pose = actorPose(actor, { frame: tick, ...presentation, reducedMotion });
-    const frame = getFrame(f, pose.action, reducedMotion ? 0 : tick, null, pose.frame);
-    const idle = getFrame(f, 'idle', 0);
+    const stance = (pose.state === 'idle' || pose.state === 'guard') && standingIllustration(f);
+    const frame = stance || getFrame(f, pose.action, reducedMotion ? 0 : tick, null, pose.frame);
+    const idle = stance || getFrame(f, 'idle', 0);
     const height = f.visual?.height || f.combat?.simulationBody?.height || 230;
     const face = actor.face ?? actor.facing ?? 1;
     const y = Number.isFinite(actor.y) ? actor.y : FLOOR;
@@ -718,7 +722,7 @@ export class CombatRenderer {
     ctx.scale(geometry.flip * geometry.scale, geometry.scale);
     ctx.translate(-geometry.anchor.x, -geometry.anchor.y);
     ctx.globalAlpha = pose.alpha * (actor.buffs?.cloak ? 0.42 : 1);
-    ctx.imageSmoothingEnabled = false;
+    ctx.imageSmoothingEnabled = !!stance;
     drawPoseArtwork(ctx, frame, articulated);
     if (actor.flash > 0 && !reducedMotion) {
       // A subtle outline avoids overwriting the original sprite's palette.

@@ -115,6 +115,7 @@ dialog.story-reader{width:min(96vw,1180px);padding:24px;max-height:94dvh;overflo
 .story-tableau{margin:0;min-width:0;align-self:start;position:sticky;top:0}.story-tableau figcaption{font:9px/1.6 var(--mono);color:var(--muted);padding-top:10px}
 .story-visual{position:relative;isolation:isolate;aspect-ratio:1/1;overflow:hidden;border:1px solid #806049;border-radius:4px;background:#15101c}
 .story-backdrop{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;filter:brightness(.72)}
+.story-illustrated .story-backdrop{filter:none;object-fit:contain}
 .story-cast{position:absolute;inset:4% 2% 5%;display:flex;align-items:end;justify-content:center;gap:0}
 .story-actor{display:block;flex:0 1 55%;min-width:0;width:55%;height:94%;object-fit:contain;filter:drop-shadow(0 10px 6px #0006)}
 .story-actor+.story-actor{margin-left:-8%}.story-location{position:absolute;left:14px;bottom:12px;max-width:calc(100% - 28px);padding:5px 9px;border:1px solid #b7935980;border-radius:2px;background:#17101de8;font:9px/1.6 var(--mono);color:#fae7bc;overflow-wrap:anywhere}

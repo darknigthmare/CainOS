@@ -106,6 +106,16 @@ test('costumes, static sprites, other morphologies and non-idle drawings never i
   for (const id of ['jax', 'ragatha', 'gangle', 'kinger', 'caine']) assert.equal(crouchParts(fighter(id), sourceFrame(id)), null);
 });
 
+test('right-facing standing art overrides the Queen’s left-facing atlas on either side', () => {
+  const queen = fighter('gloinkqueen');
+  const atlas = { bounds: { x: 0, y: 0, width: 300, height: 100 } };
+  const stance = { ...atlas, nativeFacing: 1 };
+  for (const facing of [-1, 1]) {
+    assert.equal(frameGeometry(queen, atlas, atlas, {}, facing).flip, -facing);
+    assert.equal(frameGeometry(queen, stance, stance, {}, facing).flip, facing);
+  }
+});
+
 test('uniform scale is fixed by idle height; taller reaction and wider accessory frames keep it', () => {
   const f = fighter('caine'), idle = sourceFrame('caine'), portal = sourceFrame('caine', 6);
   portal.bounds = { x: 10, y: 30, width: 360, height: 470 };

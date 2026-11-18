@@ -134,7 +134,7 @@ export const POSE_PRESENTATION = freeze({
 export const POSE_LIMITATIONS = freeze({
   registration: '56 inspected cells, fixed idle scale and per-cell roots; no claim about canonical height ratios.',
   crouch: 'Two shallow rigid cutout poses (base Pomni and Zooble). Jax and other drawings stay intact. No dedicated crouch art and no visual hurtbox equivalence.',
-  actions: 'Idle, walk, speech, interaction and reaction artwork is reused for combat states. Seventy finite procedural intro/outcome sequences animate existing artwork; dedicated combat drawings remain unavailable.',
+  actions: 'Idle, walk, speech, interaction and reaction artwork is reused for combat states. Seventy finite procedural intro/outcome sequences animate existing artwork; The original atlases continue to supply actions outside dedicated standing poses.',
   costumes: 'All costumes and unregistered static art use intact sprite presentation; base cutout rigs never transfer to them.',
 });
 
@@ -190,7 +190,7 @@ export function frameGeometry(fighter, frame, idle, pose, facing = 1) {
   const height = fighter.visual?.height || fighter.combat?.simulationBody?.height || 230;
   const scale = height / Math.max(1, idle.bounds.height);
   const anchor = frame.registration?.anchor || { x: frame.bounds.x + frame.bounds.width / 2, y: frame.bounds.y + frame.bounds.height };
-  const flip = (facing < 0 ? -1 : 1) * (fighter.sprite?.nativeFacing || 1);
+  const flip = (facing < 0 ? -1 : 1) * (frame.nativeFacing ?? fighter.sprite?.nativeFacing ?? 1);
   // Large static bosses get a smaller rigid tilt, with no shape compression.
   const angle = (pose?.lean || 0) * (facing < 0 ? -1 : 1) * (fighter.visual?.width > 180 ? 0.4 : 1);
   const sine = Math.sin(angle), cosine = Math.cos(angle);

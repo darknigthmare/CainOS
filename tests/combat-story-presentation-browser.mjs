@@ -10,6 +10,7 @@ import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { createHash } from 'node:crypto';
 import { FIGHTERS, STAGES } from '../combat/data.mjs';
+import { ART_FILES } from '../combat/offline-manifest.mjs';
 import { STORY_NOTICE, getStoryRoute } from '../combat/stories.mjs';
 import { createProgram, programEncounter } from '../combat/progression.mjs';
 import { GAME_VERSION, SAVE_KEY, emptyProfile } from '../combat/session.mjs';
@@ -24,7 +25,8 @@ const base = process.env.COMBAT_TEST_URL || 'http://127.0.0.1:4178';
 const output = path.resolve('audit-combat/story-presentation');
 await fs.mkdir(output, { recursive:true });
 const hash = bytes => createHash('sha256').update(bytes).digest('hex');
-const sources = [...new Set(['combat/app.mjs','combat/style.css','combat/stories.mjs','combat/story-presentation.mjs','combat/data.mjs','combat/sprite-catalog.mjs','combat/render.mjs','combat/render-poses.mjs','combat/render-presentation.mjs','combat/render-sequences.mjs','combat/render-stage-motion.mjs','combat/render-stage-scenery.mjs','combat/session.mjs','combat/engine.mjs','combat/input.mjs','combat/bindings.mjs','combat/progression.mjs','tests/combat-story-presentation-browser.mjs',...FIGHTERS.flatMap(fighter=>[fighter.sprite?.src,fighter.animation?.src]).filter(Boolean).map(source=>source.replace(/^\.\.\//,''))])];
+const panelFiles = ART_FILES.filter(source => source.startsWith('../assets/encore/campaign/')).map(source => source.slice(3));
+const sources = [...new Set([...panelFiles,'combat/illustrations.mjs','combat/offline-manifest.mjs','combat/app.mjs','combat/style.css','combat/stories.mjs','combat/story-presentation.mjs','combat/data.mjs','combat/sprite-catalog.mjs','combat/render.mjs','combat/render-poses.mjs','combat/render-presentation.mjs','combat/render-sequences.mjs','combat/render-stage-motion.mjs','combat/render-stage-scenery.mjs','combat/session.mjs','combat/engine.mjs','combat/input.mjs','combat/bindings.mjs','combat/progression.mjs','tests/combat-story-presentation-browser.mjs',...FIGHTERS.flatMap(fighter=>[fighter.sprite?.src,fighter.animation?.src]).filter(Boolean).map(source=>source.replace(/^\.\.\//,''))])];
 const sourceHashes = async () => Object.fromEntries(await Promise.all(sources.map(async file => [file, hash(await fs.readFile(file))])));
 const report = {
   version:GAME_VERSION, startedAt:new Date().toISOString(), testUrl:`${base}/combat/`,
@@ -83,6 +85,9 @@ try {
     assert.deepEqual(await page.locator('.story-dialogue p').allTextContents(),expected.dialogue.map(line=>line.text));
     await artReady();
     assert.equal(await page.locator('.story-art-status').count(),0,'all original illustrations load');
+    const publishedImage = ART_FILES.includes(`../assets/encore/campaign/${fighterId}/${expected.id}.webp`);
+    assert.equal(await page.locator('.story-visual.story-illustrated').count(), Number(publishedImage), 'published panels use their dedicated image');
+    assert.equal(await page.locator('.story-actor').count(), publishedImage ? 0 : expected.cast.length);
     const pixels = await page.locator('.story-visual canvas').evaluateAll(canvases=>canvases.map(canvas=>{
       const data=canvas.getContext('2d').getImageData(0,0,canvas.width,canvas.height).data;
       let visible=0;for(let i=3;i<data.length;i+=4)if(data[i]>20)visible++;
