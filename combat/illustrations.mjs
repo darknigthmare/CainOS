@@ -32,21 +32,24 @@ async function readFrame(path, kind) {
 }
 
 export function loadFighterIllustration(kind, fighter) {
-  if (!fighter || fighter.costume) return null;
+  // Archive entries use the appearance ID directly. Match actors keep the
+  // fighter's simulation ID and carry their chosen appearance in costume.
+  const appearanceId = fighter?.costume || fighter?.id;
+  if (!appearanceId) return null;
   const cache = frames[kind];
-  if (cache.has(fighter.id)) {
-    const frame = cache.get(fighter.id);
-    cache.delete(fighter.id);
-    cache.set(fighter.id, frame);
+  if (cache.has(appearanceId)) {
+    const frame = cache.get(appearanceId);
+    cache.delete(appearanceId);
+    cache.set(appearanceId, frame);
     return frame;
   }
-  const path = `../assets/encore/${kind}/${fighter.id}.webp`;
+  const path = `../assets/encore/${kind}/${appearanceId}.webp`;
   if (!published.has(path)) return null;
   if (!pending.has(path)) {
     const task = decoders[nextDecoder].then(() => readFrame(path, kind)).then(frame => {
       if (frame) {
         if (cache.size >= limits[kind].count) cache.delete(cache.keys().next().value);
-        cache.set(fighter.id, frame);
+        cache.set(appearanceId, frame);
       }
       return frame;
     }).finally(() => pending.delete(path));
@@ -59,5 +62,5 @@ export function loadFighterIllustration(kind, fighter) {
 }
 
 export function standingIllustration(fighter) {
-  return fighter.costume ? null : frames.stance.get(fighter.id);
+  return frames.stance.get(fighter.costume || fighter.id);
 }

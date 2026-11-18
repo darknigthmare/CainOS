@@ -1,8 +1,12 @@
 # Digital Circus — Encore · Illustrations du mode Combat
 
-Le roster compte 14 combattants. Le lot du 18 novembre 2026 comprend **14 vues de sélection, 14 gardes de profil et 140 illustrations de campagne**. Chaque lien ouvre un fichier WebP individuel. Les numéros suivent l’ordre du lecteur de campagne.
+Les 14 combattants disposent de **65 vues de sélection, 65 gardes et 140 illustrations de campagne**. Les 51 tenues de la garde-robe ajoutent 102 images au premier lot de 168. [Galerie des 51 tenues](#les-51-tenues-de-la-garde-robe)
 
-Aperçus du roster complet. [Vues de sélection](images/encore-selection.webp) · [Gardes de combat](images/encore-stance.webp) · [Pomni contre Jax en jeu](images/encore-duel.webp) · [Prologue de Pomni dans le lecteur](images/encore-campagne.webp)
+## Apparences originales et campagnes
+
+Le premier lot du 18 novembre 2026 comprend les 14 portraits et les 14 gardes des apparences originales, ainsi que les 140 tableaux des campagnes. Chaque lien ouvre une image WebP. Les numéros suivent l’ordre de lecture.
+
+Les 14 apparences originales en images. [Vues de sélection](images/encore-selection.webp) · [Gardes de combat](images/encore-stance.webp) · [Pomni contre Jax en jeu](images/encore-duel.webp) · [Prologue de Pomni dans le lecteur](images/encore-campagne.webp)
 
 | Combattant | Campagne | Sélection | Garde | Prologue | Chapitres | Épilogue |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -21,22 +25,88 @@ Aperçus du roster complet. [Vues de sélection](images/encore-selection.webp) �
 | **Kaufmo — abstraction** | L’écho sous le rideau | [Sélection](../assets/encore/selection/abstractedkaufmo.webp) | [Garde](../assets/encore/stance/abstractedkaufmo.webp) | [1](../assets/encore/campaign/abstractedkaufmo/abstractedkaufmo-prologue-1.webp) · [2](../assets/encore/campaign/abstractedkaufmo/abstractedkaufmo-prologue-2.webp) · [3](../assets/encore/campaign/abstractedkaufmo/abstractedkaufmo-prologue-3.webp) | [1](../assets/encore/campaign/abstractedkaufmo/abstractedkaufmo-chapter-1.webp) · [2](../assets/encore/campaign/abstractedkaufmo/abstractedkaufmo-chapter-2.webp) · [3](../assets/encore/campaign/abstractedkaufmo/abstractedkaufmo-chapter-3.webp) · [4](../assets/encore/campaign/abstractedkaufmo/abstractedkaufmo-chapter-4.webp) | [1](../assets/encore/campaign/abstractedkaufmo/abstractedkaufmo-epilogue-1.webp) · [2](../assets/encore/campaign/abstractedkaufmo/abstractedkaufmo-epilogue-2.webp) · [3](../assets/encore/campaign/abstractedkaufmo/abstractedkaufmo-epilogue-3.webp) |
 | **Baron Mildenhall** | Le dernier invité du manoir | [Sélection](../assets/encore/selection/baronmildenhall.webp) | [Garde](../assets/encore/stance/baronmildenhall.webp) | [1](../assets/encore/campaign/baronmildenhall/baronmildenhall-prologue-1.webp) · [2](../assets/encore/campaign/baronmildenhall/baronmildenhall-prologue-2.webp) · [3](../assets/encore/campaign/baronmildenhall/baronmildenhall-prologue-3.webp) | [1](../assets/encore/campaign/baronmildenhall/baronmildenhall-chapter-1.webp) · [2](../assets/encore/campaign/baronmildenhall/baronmildenhall-chapter-2.webp) · [3](../assets/encore/campaign/baronmildenhall/baronmildenhall-chapter-3.webp) · [4](../assets/encore/campaign/baronmildenhall/baronmildenhall-chapter-4.webp) | [1](../assets/encore/campaign/baronmildenhall/baronmildenhall-epilogue-1.webp) · [2](../assets/encore/campaign/baronmildenhall/baronmildenhall-epilogue-2.webp) · [3](../assets/encore/campaign/baronmildenhall/baronmildenhall-epilogue-3.webp) |
 
+## Les 51 tenues de la garde-robe
+
+Dix combattants proposent des tenues supplémentaires. Loolilalu, The Fudge, Kaufmo — abstraction et Baron Mildenhall disposent chacun d’une seule apparence dans cette version. Le tableau reprend les noms du sélecteur. Chaque tenue possède un portrait de sélection et une garde. En mode Histoire, elle accompagne le personnage pendant ses duels. Le prologue, les quatre chapitres et l’épilogue sont communs à toutes les tenues du même personnage.
+
+[Planche des 51 portraits](images/encore-costumes-selection.webp) · [Planche des 51 gardes](images/encore-costumes-gardes.webp) · [Jax Baseball contre Pomni Spudsy en jeu](images/encore-costumes-duel.webp)
+
+| Combattant | Tenue dans le sélecteur | Vue de sélection | Position de garde |
+| --- | --- | --- | --- |
+| Pomni | Maid Pomni | [Sélection](../assets/encore/selection/maidpomni.webp) | [Garde](../assets/encore/stance/maidpomni.webp) |
+| Pomni | Japanese Pomni | [Sélection](../assets/encore/selection/japanesepomni.webp) | [Garde](../assets/encore/stance/japanesepomni.webp) |
+| Pomni | Baseball Pomni | [Sélection](../assets/encore/selection/baseballpomni.webp) | [Garde](../assets/encore/stance/baseballpomni.webp) |
+| Pomni | Shadow Pomni | [Sélection](../assets/encore/selection/shadowpomni.webp) | [Garde](../assets/encore/stance/shadowpomni.webp) |
+| Pomni | Horror Pomni Void-Eyes | [Sélection](../assets/encore/selection/horrorpomnivoid.webp) | [Garde](../assets/encore/stance/horrorpomnivoid.webp) |
+| Pomni | Horror Pomni Spiral-Eyes | [Sélection](../assets/encore/selection/horrorpomnispiral.webp) | [Garde](../assets/encore/stance/horrorpomnispiral.webp) |
+| Pomni | Horror Pomni Skull-Mask | [Sélection](../assets/encore/selection/horrorpomniskull.webp) | [Garde](../assets/encore/stance/horrorpomniskull.webp) |
+| Pomni | Spudsy Pomni | [Sélection](../assets/encore/selection/spudsypomni.webp) | [Garde](../assets/encore/stance/spudsypomni.webp) |
+| Pomni | Pomni possessed | [Sélection](../assets/encore/selection/possessedpomni.webp) | [Garde](../assets/encore/stance/possessedpomni.webp) |
+| Pomni | Pomni sans bouche | [Sélection](../assets/encore/selection/mouthlesspomni.webp) | [Garde](../assets/encore/stance/mouthlesspomni.webp) |
+| Jax | Dark Duo Jax | [Sélection](../assets/encore/selection/darkduojax.webp) | [Garde](../assets/encore/stance/darkduojax.webp) |
+| Jax | Maid Jax | [Sélection](../assets/encore/selection/maidjax.webp) | [Garde](../assets/encore/stance/maidjax.webp) |
+| Jax | Jax Girl | [Sélection](../assets/encore/selection/jaxgirl.webp) | [Garde](../assets/encore/stance/jaxgirl.webp) |
+| Jax | Japanese Jax | [Sélection](../assets/encore/selection/japanesejax.webp) | [Garde](../assets/encore/stance/japanesejax.webp) |
+| Jax | Baseball Jax | [Sélection](../assets/encore/selection/baseballjax.webp) | [Garde](../assets/encore/stance/baseballjax.webp) |
+| Jax | Shadow Jax | [Sélection](../assets/encore/selection/shadowjax.webp) | [Garde](../assets/encore/stance/shadowjax.webp) |
+| Jax | Hunter Jax | [Sélection](../assets/encore/selection/hunterjax.webp) | [Garde](../assets/encore/stance/hunterjax.webp) |
+| Jax | Jax - Skin Peeled Off | [Sélection](../assets/encore/selection/peeledjax.webp) | [Garde](../assets/encore/stance/peeledjax.webp) |
+| Jax | Spudsy Jax | [Sélection](../assets/encore/selection/spudsyjax.webp) | [Garde](../assets/encore/stance/spudsyjax.webp) |
+| Jax | Jax sans bouche | [Sélection](../assets/encore/selection/mouthlessjax.webp) | [Garde](../assets/encore/stance/mouthlessjax.webp) |
+| Ragatha | Maid Ragatha | [Sélection](../assets/encore/selection/maidragatha.webp) | [Garde](../assets/encore/stance/maidragatha.webp) |
+| Ragatha | Japanese Ragatha | [Sélection](../assets/encore/selection/japaneseragatha.webp) | [Garde](../assets/encore/stance/japaneseragatha.webp) |
+| Ragatha | Baseball Ragatha | [Sélection](../assets/encore/selection/baseballragatha.webp) | [Garde](../assets/encore/stance/baseballragatha.webp) |
+| Ragatha | Shadow Ragatha | [Sélection](../assets/encore/selection/shadowragatha.webp) | [Garde](../assets/encore/stance/shadowragatha.webp) |
+| Ragatha | Spudsy Ragatha | [Sélection](../assets/encore/selection/spudsyragatha.webp) | [Garde](../assets/encore/stance/spudsyragatha.webp) |
+| Gangle | Kawaii Gangle | [Sélection](../assets/encore/selection/ganglekawaii.webp) | [Garde](../assets/encore/stance/ganglekawaii.webp) |
+| Gangle | Gangle Comedy Mask | [Sélection](../assets/encore/selection/ganglecomedy.webp) | [Garde](../assets/encore/stance/ganglecomedy.webp) |
+| Gangle | Gangle Tragedy Mask | [Sélection](../assets/encore/selection/gangletragedy.webp) | [Garde](../assets/encore/stance/gangletragedy.webp) |
+| Gangle | Dark Duo Gangle | [Sélection](../assets/encore/selection/darkduogangle.webp) | [Garde](../assets/encore/stance/darkduogangle.webp) |
+| Gangle | Maid Gangle | [Sélection](../assets/encore/selection/maidgangle.webp) | [Garde](../assets/encore/stance/maidgangle.webp) |
+| Gangle | Beach Gangle | [Sélection](../assets/encore/selection/beachgangle.webp) | [Garde](../assets/encore/stance/beachgangle.webp) |
+| Gangle | Japanese Gangle | [Sélection](../assets/encore/selection/japanesegangle.webp) | [Garde](../assets/encore/stance/japanesegangle.webp) |
+| Gangle | Rhino Gangle | [Sélection](../assets/encore/selection/rhinogangle.webp) | [Garde](../assets/encore/stance/rhinogangle.webp) |
+| Gangle | Work Gangle | [Sélection](../assets/encore/selection/workgangle.webp) | [Garde](../assets/encore/stance/workgangle.webp) |
+| Gangle | Baseball Gangle | [Sélection](../assets/encore/selection/baseballgangle.webp) | [Garde](../assets/encore/stance/baseballgangle.webp) |
+| Gangle | Shadow Gangle | [Sélection](../assets/encore/selection/shadowgangle.webp) | [Garde](../assets/encore/stance/shadowgangle.webp) |
+| Zooble | Japanese Zooble | [Sélection](../assets/encore/selection/japanesezooble.webp) | [Garde](../assets/encore/stance/japanesezooble.webp) |
+| Zooble | Baseball Zooble | [Sélection](../assets/encore/selection/baseballzooble.webp) | [Garde](../assets/encore/stance/baseballzooble.webp) |
+| Zooble | Shadow Zooble | [Sélection](../assets/encore/selection/shadowzooble.webp) | [Garde](../assets/encore/stance/shadowzooble.webp) |
+| Zooble | Spudsy Zooble | [Sélection](../assets/encore/selection/spudsyzooble.webp) | [Garde](../assets/encore/stance/spudsyzooble.webp) |
+| Zooble | Flamingo Zooble | [Sélection](../assets/encore/selection/flamingozooble.webp) | [Garde](../assets/encore/stance/flamingozooble.webp) |
+| Zooble | Zooble sans bouche | [Sélection](../assets/encore/selection/mouthlesszooble.webp) | [Garde](../assets/encore/stance/mouthlesszooble.webp) |
+| Kinger | Japanese Kinger | [Sélection](../assets/encore/selection/japanesekinger.webp) | [Garde](../assets/encore/stance/japanesekinger.webp) |
+| Kinger | Baseball Kinger | [Sélection](../assets/encore/selection/baseballkinger.webp) | [Garde](../assets/encore/stance/baseballkinger.webp) |
+| Kinger | Shadow Kinger | [Sélection](../assets/encore/selection/shadowkinger.webp) | [Garde](../assets/encore/stance/shadowkinger.webp) |
+| Caine | Shadow Caine | [Sélection](../assets/encore/selection/shadowcaine.webp) | [Garde](../assets/encore/stance/shadowcaine.webp) |
+| Caine | Caine multi-arm | [Sélection](../assets/encore/selection/monstrouscaine.webp) | [Garde](../assets/encore/stance/monstrouscaine.webp) |
+| Caine | Caine prive de pouvoir | [Sélection](../assets/encore/selection/groundedcaine.webp) | [Garde](../assets/encore/stance/groundedcaine.webp) |
+| Bubble | Bubble inerte | [Sélection](../assets/encore/selection/inertbubble.webp) | [Garde](../assets/encore/stance/inertbubble.webp) |
+| Gummigoo | Japanese Gummigoo | [Sélection](../assets/encore/selection/japanesegummigoo.webp) | [Garde](../assets/encore/stance/japanesegummigoo.webp) |
+| Gloink Queen | Gloink Queen True Scale | [Sélection](../assets/encore/selection/gloinkqueenscale.webp) | [Garde](../assets/encore/stance/gloinkqueenscale.webp) |
+
 ## Rendu en jeu
 
-Les vues de sélection apparaissent dans le roster. La garde de profil accompagne l’attente et la défense debout dans la tenue principale. Le moteur retourne le dessin pour le second côté. Les déplacements, attaques, réactions, cinématiques de fin de duel et variantes de costumes continuent à utiliser leurs poses existantes.
+Le roster montre les apparences originales. Choisir une tenue dans le sélecteur affiche son portrait dans la fiche du joueur ou de l’adversaire. En duel, la garde illustrée s’affiche au repos et en défense debout. Le moteur oriente le dessin vers l’adversaire. Les déplacements, attaques, réactions et cinématiques de fin de duel utilisent leurs poses animées.
 
-Le lecteur associe chaque image à l’identifiant de son tableau. Certains plans rapprochés sur un objet ou un lieu intègrent les réactions illustrées des personnages qui prennent part à la scène. Ce lot illustre 42 tableaux de prologue, 56 présentations de chapitre et 42 tableaux d’épilogue. CainOS et la version autonome partagent ce lecteur, le moteur de combat et le pack disponible dans les réglages hors ligne. [Scénarios](../combat/stories.mjs) · [Inventaire de distribution](../combat/offline-manifest.mjs)
+Le lecteur associe chaque image à l’identifiant de son tableau. Certains plans rapprochés sur un objet ou un lieu intègrent les réactions illustrées des personnages qui prennent part à la scène. Les 14 campagnes comptent 42 tableaux de prologue, 56 présentations de chapitre et 42 tableaux d’épilogue. CainOS et la version autonome partagent ce lecteur, le moteur de combat et le pack disponible dans les réglages hors ligne. [Scénarios](../combat/stories.mjs) · [Inventaire de distribution](../combat/offline-manifest.mjs)
+
+## Distribution des deux lots
+
+Les 102 nouveaux WebP totalisent 35 729 494 octets. La distribution autonome contient les 65 portraits, les 65 gardes et les 140 scènes, ainsi que les 44 autres images utilisées par le jeu. Le manifeste des 314 images porte l’empreinte `d59c2155e11a23d4` et la version hors ligne est `0.7.0-90382d724709`. [Manifeste de la distribution](../combat/offline-manifest.mjs)
 
 ## Format et références
 
-Les scènes sont livrées en 3840 × 2160. Les sprites détourés conservent leur transparence et leurs proportions, avec 2160 pixels sur le grand côté pour treize combattants et 3840 pixels de largeur pour la Gloink Queen. Les fichiers de livraison sont redimensionnés à partir des dessins générés. Le combat utilise son canevas logique de 1280 × 720 et charge ses textures à l’échelle d’affichage. Les portraits sont chargés lorsqu’ils deviennent visibles. Le lecteur de campagne décode le tableau courant.
+Les scènes de campagne sont livrées en 3840 × 2160. Les sprites des 14 apparences originales conservent leur transparence et leurs proportions, avec 2160 pixels sur le grand côté pour treize combattants et 3840 pixels de largeur pour la Gloink Queen. Les 51 tenues équipables suivent le même format. Parmi les 102 images des tenues, 100 mesurent 2160 pixels sur le grand côté. La variante Gloink Queen True Scale mesure 3840 × 1356 en sélection et 3840 × 1318 en garde. Les fichiers de livraison sont redimensionnés à partir des dessins générés. Le combat utilise son canevas logique de 1280 × 720 et charge ses textures à l’échelle d’affichage. Les portraits sont chargés lorsqu’ils deviennent visibles. Le lecteur de campagne décode le tableau courant.
 
-Les personnages reprennent les références visuelles du projet. Les gardes et les mises en scène sont des créations de fan-game, écrites pour les routes d’Encore. Le registre détaille les silhouettes observées, les sources et les comparaisons encore ouvertes, notamment pour les personnages documentés uniquement par les archives du jeu. La correspondance canonique 1:1 reste à valider individuellement. [Registre de fidélité](../combat/fidelity.mjs)
+Les personnages reprennent les références visuelles du projet. Les gardes et les mises en scène sont des créations de fan-game, écrites pour les routes d’Encore. Le registre détaille les silhouettes observées, les sources et les comparaisons encore ouvertes, notamment pour les personnages documentés uniquement par les archives du jeu. La correspondance canonique 1:1 reste à valider individuellement. Les costumes prennent pour référence les cellules détourées du jeu. Leurs fiches décrivent les masques, les couleurs, les accessoires et les proportions observés dans les atlas de CainOS. [Registre des personnages](../combat/fidelity.mjs) · [Fiches des tenues](../combat/costume-fidelity.mjs)
 
-## Vérification de la livraison
+Dans les deux vues de Flamingo Zooble et de Zooble sans bouche, le bras orange et le bras violet se terminent chacun par une pince ouverte. Flamingo Zooble a de longues jambes terminées par des doigts d’oiseau roses. Chez Zooble sans bouche, les pieds asymétriques sont rose et violet. Bubble inerte garde sa silhouette sphérique translucide et ses deux yeux en traits noirs. [Atlas de Flamingo Zooble](../assets/images/cainos-pixel-cast-sheet-canon-npc-pack-p.png) · [Atlas de Zooble sans bouche](../assets/images/cainos-pixel-cast-sheet-canon-npc-pack-q.png) · [Atlas de Bubble inerte](../assets/images/cainos-costumes-creatures-0.6.0.png)
 
-Les 168 nouveaux WebP représentent 70,9 Mio. La version de la distribution hors ligne est `0.7.0-6a1813a892a7`. Son pack de 212 images, anciennes et nouvelles, porte l’empreinte `1f94e5685d894cdb`.
+## Vérifications du premier lot de 168 images
 
-Sur la distribution autonome, Chromium a affiché 14 portraits dans les cartes du roster, rendu les 14 gardes et affiché les 140 tableaux depuis leurs identifiants de campagne. Les contrôles ont vérifié l’affichage des fichiers, la correspondance des panneaux et le chargement du duel. Le détail des fenêtres d’attaque et des collisions reste régi par la simulation. [Rendu du combat](../combat/render.mjs) · [Lecteur des tableaux](../combat/story-presentation.mjs)
+Pour ce premier lot, les 168 WebP représentent 70,9 Mio. La version de la distribution hors ligne est `0.7.0-6a1813a892a7`. Son pack de 212 images, anciennes et nouvelles, porte l’empreinte `1f94e5685d894cdb`.
+
+Sur la distribution autonome de ce lot, Chromium a affiché 14 portraits dans les cartes du roster, rendu les 14 gardes et affiché les 140 tableaux depuis leurs identifiants de campagne. Les contrôles ont vérifié l’affichage des fichiers, la correspondance des panneaux et le chargement du duel. Le détail des fenêtres d’attaque et des collisions reste régi par la simulation. [Rendu du combat](../combat/render.mjs) · [Lecteur des tableaux](../combat/story-presentation.mjs)
 
 En entraînement, le contrôle Chromium relève trois images distinctes du personnage au repos en 600 ms avec les mouvements activés. Lorsque la réduction des mouvements est activée dans le système ou dans le jeu, ses pixels restent identiques pendant que le combat avance. Les 371 tests Node et les 13 contrôles du mode hors ligne passent sur cette version. [Test du mouvement réduit](../tests/combat-reduced-motion-browser.mjs) · [Test du mode hors ligne](../tests/combat-offline-browser.mjs)

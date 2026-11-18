@@ -143,7 +143,7 @@ function closeDialog() {
 function title(eyebrow, heading, description='') { return `<div class="page-title"><span class="ticket-label">${escapeHTML(eyebrow)}</span><h1>${escapeHTML(heading)}</h1>${description ? `<p>${escapeHTML(description)}</p>` : ''}</div>`; }
 async function paintPortrait(canvas) {
   const item = ARCHIVE.find(f => f.id === canvas.dataset.portrait) || getFighter(canvas.dataset.portrait);
-  // Costume archive entries retain their own atlas appearance.
+  // Keep the selected costume's identity when loading its portrait.
   const fighter = FIGHTERS.find(f => f.id === item.id) || item;
   try {
     if (!await drawPortrait(canvas, fighter, { selection: screen === 'select' || screen === 'home' })) throw new Error('Portrait indisponible');
