@@ -697,6 +697,9 @@ export class CombatRenderer {
     if (!f) return;
     const pose = actorPose(actor, { frame: tick, ...presentation, reducedMotion });
     const stance = (pose.state === 'idle' || pose.state === 'guard') && standingIllustration(f);
+    // Shift weight around the foot support of the single standing drawing.
+    // Use simulation frames so pausing a match also holds its pose.
+    if (stance && !reducedMotion) pose.lean += 0.014 * Math.sin(tick * TAU / 112);
     const frame = stance || getFrame(f, pose.action, reducedMotion ? 0 : tick, null, pose.frame);
     const idle = stance || getFrame(f, 'idle', 0);
     const height = f.visual?.height || f.combat?.simulationBody?.height || 230;

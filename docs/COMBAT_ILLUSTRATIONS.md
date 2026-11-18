@@ -35,6 +35,8 @@ Les personnages reprennent les références visuelles du projet. Les gardes et l
 
 ## Vérification de la livraison
 
-Les 168 nouveaux WebP représentent 70,9 Mio. La version de la distribution hors ligne est `0.7.0-024f25099e52`. Son pack de 212 images, anciennes et nouvelles, porte l’empreinte `1f94e5685d894cdb`.
+Les 168 nouveaux WebP représentent 70,9 Mio. La version de la distribution hors ligne est `0.7.0-6a1813a892a7`. Son pack de 212 images, anciennes et nouvelles, porte l’empreinte `1f94e5685d894cdb`.
 
 Sur la distribution autonome, Chromium a affiché 14 portraits dans les cartes du roster, rendu les 14 gardes et affiché les 140 tableaux depuis leurs identifiants de campagne. Les contrôles ont vérifié l’affichage des fichiers, la correspondance des panneaux et le chargement du duel. Le détail des fenêtres d’attaque et des collisions reste régi par la simulation. [Rendu du combat](../combat/render.mjs) · [Lecteur des tableaux](../combat/story-presentation.mjs)
+
+En entraînement, le contrôle Chromium relève trois images distinctes du personnage au repos en 600 ms avec les mouvements activés. Lorsque la réduction des mouvements est activée dans le système ou dans le jeu, ses pixels restent identiques pendant que le combat avance. Les 371 tests Node et les 13 contrôles du mode hors ligne passent sur cette version. [Test du mouvement réduit](../tests/combat-reduced-motion-browser.mjs) · [Test du mode hors ligne](../tests/combat-offline-browser.mjs)
