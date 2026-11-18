@@ -12,6 +12,14 @@ const PLANES = [
   { file: 'mid', travel: 17 },
   { file: 'near', travel: 31 },
 ];
+// Coordinates use the same neutral 1280 × 720 floor as the combat renderer.
+const PROPS = {
+  coppernine: ['colony-heater', 182, 563, 117], silicacity: ['uplink-repeater', 236, 555, 152],
+  portaurora: ['lifebuoy-station', 1050, 517, 133], gaslightwharf: ['wharf-lamp', 1072, 545, 221],
+  parkplanet: ['garden-turnstile', 226, 558, 106], gameoverse: ['orbital-checkpoint', 170, 554, 154],
+  littledaisy: ['jazz-microphone', 234, 545, 164], showgrounds: ['ticket-dispenser', 226, 558, 131],
+  simpleflipisland: ['bamboo-checkpoint', 1072, 567, 148], grounds: ['cotton-candy-cart', 215, 555, 150],
+};
 const published = new Set(ART_FILES);
 const recent = new Map();
 const pending = new Map();
@@ -40,28 +48,59 @@ export function drawStagePlanes(ctx, layers, camera) {
   }
 }
 
-async function decodeStage(paths, subscribers) {
-  const layers = [];
-  // Decode one UHD file at a time and retain only its logical-resolution canvas.
-  for (const path of paths) {
-    // Selection rebuilds its canvas on navigation. Discard abandoned previews
-    // before decoding another UHD layer, while a duel subscriber stays active.
-    if (![...subscribers].some(needed => !needed || needed())) return null;
-    const image = new Image();
+function illustrationPath(stem) {
+  return [stem + '.webp', stem + '.png'].find(path => published.has(path));
+}
+
+function sceneLayers(id) {
+  const directory = '../assets/encore/stages/' + id + '/';
+  const planes = PLANES.map(({ file }) => ({ path: illustrationPath(directory + file) }));
+  if (planes.every(layer => layer.path)) return planes;
+  if (id !== 'falseexit' || !planes[0].path) return null;
+  const props = '../assets/encore/props/falseexit/';
+  planes[1] = { path: illustrationPath(props + 'filing-cabinet'), anchor: [1050, 548, 230] };
+  planes[2] = { path: illustrationPath(props + 'terminal-desk'), anchor: [143, 618, 257] };
+  return planes.every(layer => layer.path) ? planes : null;
+}
+
+async function paintLayer(canvas, path, anchor) {
+  const image = new Image();
+  try {
     image.src = new URL(path, import.meta.url).href;
-    try {
-      await image.decode();
-      const layer = surface(PAINT_WIDTH, PAINT_HEIGHT);
-      const ctx = layer.getContext('2d');
-      ctx.imageSmoothingQuality = 'high';
-      ctx.drawImage(image, 0, 0, layer.width, layer.height);
-      layers.push(layer);
-    } catch { return null; }
-    finally { image.removeAttribute('src'); }
+    await image.decode();
+    const ctx = canvas.getContext('2d');
+    ctx.imageSmoothingQuality = 'high';
+    if (anchor) {
+      const [x, base, height] = anchor;
+      const width = height * image.naturalWidth / image.naturalHeight;
+      ctx.drawImage(image, Math.round(x + BLEED - width / 2), base - TOP - height, width, height);
+    } else {
+      ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+    }
+    return true;
+  } catch { return false; }
+  finally { image.removeAttribute('src'); }
+}
+
+async function decodeStage(id, entries, subscribers) {
+  const needed = () => [...subscribers].some(check => !check || check());
+  const layers = [];
+  for (const { path, anchor } of entries) {
+    if (!needed()) return null;
+    const layer = surface(PAINT_WIDTH, PAINT_HEIGHT);
+    if (!await paintLayer(layer, path, anchor)) return null;
+    layers.push(layer);
+  }
+  if (!needed()) return null;
+  let complete = true;
+  if (Object.hasOwn(PROPS, id)) {
+    const [file, ...anchor] = PROPS[id];
+    const path = illustrationPath('../assets/encore/props/' + id + '/' + file);
+    if (path) complete = await paintLayer(layers[2], path, anchor);
   }
   const still = surface(WIDTH, HEIGHT);
   drawStagePlanes(still.getContext('2d'), layers, 0);
-  return { layers, still };
+  return { layers, still, complete };
 }
 
 export function loadStagePlanes(stage, needed) {
@@ -73,16 +112,16 @@ export function loadStagePlanes(stage, needed) {
     recent.set(id, set);
     return set;
   }
-  const paths = PLANES.map(({ file }) => `../assets/encore/stages/${id}/${file}.webp`);
-  if (!paths.every(path => published.has(path))) return null;
+  const entries = sceneLayers(id);
+  if (!entries) return null;
   const waiting = pending.get(id);
   if (waiting) {
     waiting.subscribers.add(needed);
     return waiting.task;
   }
   const subscribers = new Set([needed]);
-  const task = decodeQueue.then(() => decodeStage(paths, subscribers)).then(set => {
-    if (set) {
+  const task = decodeQueue.then(() => decodeStage(id, entries, subscribers)).then(set => {
+    if (set?.complete) {
       if (recent.size >= 2) recent.delete(recent.keys().next().value);
       recent.set(id, set);
     }

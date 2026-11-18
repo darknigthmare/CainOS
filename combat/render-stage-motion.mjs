@@ -4,6 +4,7 @@ import { SCENERY_ANCHORS } from './render-stage-scenery.mjs';
 export const AMBIENT_FLOOR = 568;
 export const STAGE_AMBIENCES = Object.freeze({
   ...Object.fromEntries(CROSSOVER_STAGES.map(stage => [stage.id, stage.ambience])),
+  falseexit: 'Poussière sous les tubes fluorescents',
   bigtop: 'Lueurs de piste', candy: 'Poussière de sucre', manor: 'Bougies du manoir', spudsy: 'Vapeur du comptoir',
   cellar: 'Présences du cellier', void: 'Reflets irisés', lake: 'Ondes du lac', training: 'Balayage de calibration',
   gloink: 'Formes du nid', kingdom: 'Scintillements de sucre', grounds: 'Nuages des terrains', backstage: 'Veilleuses du couloir',
@@ -92,6 +93,12 @@ export function stageMotion(stage, frame = 0, reducedMotion = false, painted = f
     for (let i = 0; i < 4; i++) {
       const x = ((i * 350 + t * 2.5) % 1480) - 100, y = 100 + i % 2 * 50;
       shapes.push(circle(x, y, 54, 13, '#e3e9ed', 0.14), circle(x + 36, y + 5, 40, 9, '#e3e9ed', 0.12));
+    }
+  } else if (id === 'falseexit') {
+    for (let i = 0; i < 7; i++) {
+      const x = 145 + i * 157 + wave(.33, i * 2.1) * 9;
+      const y = 115 + (55 * i + 3.5 * t) % 344;
+      shapes.push(circle(x, y, 1.3, 1.1, '#d5e2d1', .2 + .07 * wave(.62, i)));
     }
   } else if (id === 'backstage') {
     for (const [i, [x, y, radius]] of SCENERY_ANCHORS.backstage.lights.entries()) shapes.push(circle(x, y, radius * 1.5 + wave(0.5, i) * 2, radius + wave(0.5, i), '#ffe9b7', 0.07 + (wave(0.5, i) + 1) * 0.035));

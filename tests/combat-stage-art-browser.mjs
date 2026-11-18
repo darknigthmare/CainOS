@@ -45,6 +45,21 @@ try {
   check('A missing near layer keeps the complete procedural arena visible in the selector');
   await page.unroute(near);
 
+  const cart = '**/assets/encore/props/grounds/cotton-candy-cart.*';
+  const readCart = () => page.evaluate(async () => {
+    const { loadStagePlanes } = await import('/combat/stage-parallax.mjs');
+    const art = await loadStagePlanes({ id: 'grounds' });
+    return { complete: art.complete, image: art.still.toDataURL() };
+  });
+  await page.route(cart, route => route.abort('failed'));
+  const absent = await readCart();
+  assert.equal(absent.complete, false);
+  await page.unroute(cart);
+  const present = await readCart();
+  assert.equal(present.complete, true);
+  assert.notEqual(present.image, absent.image);
+  check('A failed grounds prop leaves the stage playable and reappears on a later visit');
+
   // A second visit to the failed arena must recover the real decor too.
   const stages = [...STAGES.filter(s => s.id !== 'spudsy'), STAGES.find(s => s.id === 'spudsy')];
   for (const stage of stages) {

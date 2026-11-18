@@ -54,6 +54,9 @@ export const AUDIO_AMBIENCES = freeze({
   grounds: ambience('grounds', 'Brise des terrains', 'Une brise de pelouse numérique et un léger bruit de toile.', 8.9, [
     air(520, 860, 2.3, 0, 'lowpass', .021), air(1400, 760, 1.1, 3.2, 'bandpass', .012, .4), tone(240, 175, .20, 5.8, 'triangle', .007),
   ]),
+  falseexit: ambience('falseexit', 'Ventilation des bureaux', 'Un ronflement de ballast et le souffle intermittent de la ventilation.', 9.4, [
+    tone(100, 101, 1.6, 0, 'sine', .012), air(440, 320, 2.3, 2, 'lowpass', .016), tone(150, 149, .6, 6.7, 'sine', .009),
+  ]),
   backstage: ambience('backstage', 'Bois du couloir', 'Une porte travaille doucement, suivie de deux petits craquements.', 10.1, [
     tone(178, 98, .42, 0, 'triangle', .011), tone(260, 130, .09, 2.5, 'triangle', .012), air(480, 280, 1.3, 4.6, 'lowpass', .014), tone(330, 220, .07, 6.4, 'triangle', .008),
   ]),

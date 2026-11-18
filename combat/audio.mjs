@@ -19,6 +19,7 @@ export const AUDIO_THEMES = Object.freeze({
   gloink: theme('gloink', 'Géométrie en cavale', 136, 53, [0, 2, 3, 6, 7, 9, 10], [0, 3, 1, 4, null, 2, 5, 3, 6, null, 4, 2, 0, 1, null, 3], [0, 2, 4, 1], 'square', .04),
   kingdom: theme('kingdom', 'Couronne de sucre', 108, 65, major, [0, 4, 2, null, 5, 3, 1, null, 6, 4, 5, 2, null, 3, 1, 0], [0, 4, 5, 3], 'triangle', .08),
   grounds: theme('grounds', 'Tour de piste', 118, 57, [0, 2, 4, 5, 7, 9, 10], [0, 1, 3, 4, null, 2, 1, 5, 4, null, 3, 6, 2, 1, null, 0], [0, 3, 1, 4], 'triangle', .1),
+  falseexit: theme('falseexit', 'Retour au même étage', 84, 55, minor, [0, null, 0, 1, null, 4, 3, null, 0, 1, null, 5, 4, null, 1, null], [0, 3, 1, 4], 'sine', .04),
   backstage: theme('backstage', 'La porte suivante', 104, 59, minor, [0, 2, null, 1, 4, null, 3, 5, 2, 0, null, 4, 6, 3, null, 1], [0, 3, 5, 4], 'sine', .05),
   coppernine: theme('coppernine', 'Givre magnétique', 90, 50, minor, [0, null, 4, null, 1, 3, null, 6, 5, null, 1, 3, null, 4, 2, null], [0, 4, 1, 5], 'triangle'),
   silicacity: theme('silicacity', 'Néons sur les toits', 128, 59, minor, [0, 2, 5, null, 4, 2, 1, 5, 6, 3, null, 1, 0, 4, null, 2], [0, 5, 3, 6], 'square', .06),

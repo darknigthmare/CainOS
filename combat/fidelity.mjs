@@ -247,6 +247,10 @@ export const MOVE_FIDELITY = freeze(Object.fromEntries(Object.entries(moveAdapta
 }))));
 
 export const STAGE_FIDELITY = freeze({
+  falseexit: record(['ep1', 'glitch-false-exit'],
+    ['Une porte rouge identifiée par le mot EXIT se détache des parois grises du couloir.'],
+    'La piste est élargie pour accueillir deux combattants. Le mobilier, les plafonniers et les distances entre les plans sont recomposés pour Encore.',
+    'Référence visuelle consultée', 'Le visuel officiel renseigne la porte et la palette du couloir. La géométrie du duel est une adaptation.'),
   ...Object.fromEntries(CROSSOVER_STAGES.map(({ id, sourceId, observed, description }) => [
     id, record(id === 'showgrounds' ? [sourceId, 'smg4-showgrounds-map'] : [sourceId], [observed],
       description + ' Les trois plans et le sol horizontal sont composés pour le duel.',

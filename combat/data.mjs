@@ -230,6 +230,7 @@ export const STAGES = [
   stage('backstage', 'Le couloir des portes', 'Les portes des résidents servent de fond de scène.', { sky: '#171326', back: '#462b4e', accent: '#efc694', floor: '#4a3549', grid: '#876779' }, 'ep1'),
   ...CROSSOVER_STAGES.map(({ id, series, name, description, palette, sourceId }) =>
     stage(id, name, description, palette, sourceId, { series, provenance: 'Arène crossover adaptée pour Encore' })),
+  stage('falseexit', 'La fausse sortie', 'Une porte rouge au fond des bureaux gris du pilote.', { sky: '#434844', back: '#727a71', accent: '#d44d4c', floor: '#574c4c', grid: '#665954' }, 'ep1'),
 ];
 
 // A matching substring is not an identity: Jax's parents, rival NPCs, body
