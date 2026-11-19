@@ -1,3 +1,5 @@
+import { FIGHTERS } from './data.mjs';
+
 /**
  * Original Encore stage finales after a resolved match. The descriptions match
  * the 42 illustrated sets and their procedural fallback in render-finishers.mjs.
@@ -195,6 +197,23 @@ const rows=[
     ['La lumière se retire','Deux bougies et un trait au sol relient les ornements du tableau.'],
     ['Un dernier arrêt','Les portraits se stabilisent autour du Baron et du rival déjà vaincu.']]],
 ];
+// Every promoted PNJ receives three presentation-only finales on a shared
+// geometric stage motif. No winner, loser or fighter illustration is replaced.
+for (const fighter of FIGHTERS) {
+  if (performers[fighter.id]) continue;
+  performers[fighter.id] = {
+    motif: 'geometry', sourceIds: ['ep1'],
+    adaptation: `Les formes géométriques sont des accessoires de scène pour ${fighter.name}. Elles ne modifient ni son apparence ni les règles du duel.`
+  };
+  const variants = [['impact', 'Le rappel'], ['special', 'Le dernier accessoire'], ['super', 'La grande révérence']];
+  for (const [variant, label] of variants) {
+    rows.push([fighter.id, variant, `${fighter.name} · ${label}`, [
+      [`Entrée de ${fighter.name}`, `Des formes géométriques se dévoilent derrière ${fighter.name} et le rival déjà vaincu.`],
+      ['La scène se compose', `Les accessoires restent séparés et laissent ${fighter.name} entièrement visible.`],
+      ['Le rideau tombe', `Le décor se stabilise autour de la pose de résultat existante de ${fighter.name}.`]
+    ]]);
+  }
+}
 export const FINISHER_CATALOG=deepFreeze(rows.map(([fighterId,variant,title,panels])=>({
   id: fighterId+'.'+variant,fighterId,variant,title,durationFrames:durations[variant],
   beats:panels.map(([title,description],index)=>({frame:index*durations[variant]/3,title,description})),

@@ -11,11 +11,17 @@ export const CROSSOVER_STYLES = Object.freeze({
 });
 
 export function crossoverStylesFor(series, fighterId) {
-  if (series && !CROSSOVER_DESIGNS[series]) return [];
+  const designs = series ? [CROSSOVER_DESIGNS[series]].filter(Boolean) : Object.values(CROSSOVER_DESIGNS);
+  const styles = [];
+  // Only expose a body when that artist has a design. Promoting an archive NPC
+  // must not manufacture costume IDs pointing to drawings that do not exist.
+  if (designs.some(design => design.hommage && design.residents[fighterId])) styles.push('hommage');
+  if (designs.some(design => design.residents[fighterId])) styles.push('resident');
   const hasFusion = series
     ? Boolean(CROSSOVER_FUSIONS[series]?.[fighterId])
     : Object.values(CROSSOVER_FUSIONS).some(roster => roster[fighterId]);
-  return hasFusion ? Object.keys(CROSSOVER_STYLES) : ['hommage', 'resident'];
+  if (hasFusion) styles.push('fusion');
+  return styles;
 }
 
 export function createCrossoverCostumes(fighters) {

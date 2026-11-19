@@ -10,9 +10,45 @@ export const ACTION_ART = Object.freeze(['intro', 'attack', 'hit', 'walk', 'jump
 const decoders = [Promise.resolve(), Promise.resolve()];
 let nextDecoder = 0;
 
+// Preserve the existing WebP choice while also accepting native-alpha PNGs.
+// The offline manifest is authoritative: never request an unpublished path.
+function illustrationPath(stem) {
+  return [stem + '.webp', stem + '.png'].find(path => published.has(path)) || null;
+}
+
+// A single archive card can document several people. Keep their individual
+// drawings separate, without inventing a name-to-portrait attribution.
+const archiveGroups = Object.freeze({
+  bestchildren: Object.freeze([
+    Object.freeze({ id: 'bestchildren-a', label: 'Enfant Best A' }),
+    Object.freeze({ id: 'bestchildren-b', label: 'Enfant Best B' }),
+  ]),
+  mildenhallsouls: Object.freeze([
+    Object.freeze({ id: 'mildenhallsouls', label: 'Âme de Mildenhall A' }),
+    Object.freeze({ id: 'mildenhallsouls-b', label: 'Âme de Mildenhall B' }),
+    Object.freeze({ id: 'mildenhallsouls-c', label: 'Âme de Mildenhall C' }),
+  ]),
+  laughingshadows: Object.freeze([
+    Object.freeze({ id: 'laughingshadows', label: 'Ombre rieuse A' }),
+    Object.freeze({ id: 'laughingshadows-b', label: 'Ombre rieuse B' }),
+    Object.freeze({ id: 'laughingshadows-c', label: 'Ombre rieuse C' }),
+  ]),
+});
+
+export function archiveSelectionParts(archiveId) {
+  const members = archiveGroups[archiveId];
+  if (!members) return [];
+  const parts = members.map(member => {
+    const path = illustrationPath(`../assets/encore/selection/${member.id}`);
+    return path ? { ...member, src: new URL(path, import.meta.url).href } : null;
+  });
+  // Retain the original atlas when a group has not been fully published yet.
+  return parts.every(Boolean) ? parts : [];
+}
+
 export function campaignIllustration(fighterId, panelId) {
-  const path = `../assets/encore/campaign/${fighterId}/${panelId}.webp`;
-  return published.has(path) ? new URL(path, import.meta.url).href : null;
+  const path = illustrationPath(`../assets/encore/campaign/${fighterId}/${panelId}`);
+  return path ? new URL(path, import.meta.url).href : null;
 }
 
 async function readFrame(path, kind) {
@@ -27,8 +63,18 @@ async function readFrame(path, kind) {
     const ctx = canvas.getContext('2d');
     ctx.imageSmoothingQuality = 'high';
     ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
-    const bounds = { x: 0, y: 0, width: canvas.width, height: canvas.height };
-    return { canvas, ...bounds, bounds, nativeFacing: 1 };
+    // Generated cutouts keep transparent safety margins. Register the visible
+    // silhouette so those margins do not shrink the fighter or lift its feet.
+    const pixels = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+    let left = canvas.width, top = canvas.height, right = -1, bottom = -1;
+    for (let y = 0; y < canvas.height; y++) for (let x = 0; x < canvas.width; x++) {
+      if (pixels[(y * canvas.width + x) * 4 + 3] < 12) continue;
+      left = Math.min(left, x); top = Math.min(top, y);
+      right = Math.max(right, x); bottom = Math.max(bottom, y);
+    }
+    if (right < left || bottom < top) return null;
+    const bounds = { x: left, y: top, width: right - left + 1, height: bottom - top + 1 };
+    return { canvas, x: 0, y: 0, width: canvas.width, height: canvas.height, bounds, nativeFacing: 1 };
   } catch { return null; }
   finally { image.removeAttribute('src'); }
 }
@@ -46,10 +92,10 @@ export function loadFighterIllustration(kind, fighter, pose) {
     return frame;
   }
   const directory = fighter.sprite?.crossoverDirectory;
-  const path = directory
-    ? `${directory}/${kind === 'poses' ? pose : kind}.webp`
-    : `../assets/encore/${kind}/${key}.webp`;
-  if (!published.has(path)) return null;
+  const path = illustrationPath(directory
+    ? `${directory}/${kind === 'poses' ? pose : kind}`
+    : `../assets/encore/${kind}/${key}`);
+  if (!path) return null;
   if (retryAt.has(path)) {
     if (performance.now() < retryAt.get(path)) return null;
     retryAt.delete(path);
@@ -86,7 +132,7 @@ export function actionIllustration(fighter, pose) {
   const directory = fighter?.sprite?.crossoverDirectory;
   // The crossover attack drawing serves both normal strikes unless the costume
   // has its own heavy. Historical atlases retain their original move selection.
-  const key = pose === 'heavy' && directory && !published.has(directory + '/heavy.webp') ? 'attack' : pose;
+  const key = pose === 'heavy' && directory && !illustrationPath(directory + '/heavy') ? 'attack' : pose;
   const result = loadFighterIllustration('poses', fighter, key);
   return result?.canvas ? result : null;
 }

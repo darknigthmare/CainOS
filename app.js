@@ -2168,6 +2168,9 @@ const OS = {
   },
 
   getCircusAvatarSheetSpec(avatar) {
+    // Abel's old base-atlas concept depicts a different identity. Use the
+    // existing articulated mannequin without changing the saved character ID.
+    if (avatar === 'abel') avatar = 'abelfullbody';
     const tables = [
       { sheet: 'base', cols: 6, rows: 3, map: {
         pomni: [0, 0], caine: [1, 0], bubble: [2, 0], jax: [3, 0], ragatha: [4, 0], kinger: [5, 0],
@@ -23460,6 +23463,7 @@ const OS = {
   },
 
   getPixelAvatarSvg(avatar, size = 46) {
+    if (avatar === 'abel') avatar = 'abelfullbody';
     const sheetMap = {
       pomni: [0, 0], caine: [1, 0], bubble: [2, 0], jax: [3, 0], ragatha: [4, 0], kinger: [5, 0],
       gangle: [0, 1], zooble: [1, 1], queenie: [2, 1], kaufmo: [3, 1], gummigoo: [4, 1], loolilalu: [5, 1],

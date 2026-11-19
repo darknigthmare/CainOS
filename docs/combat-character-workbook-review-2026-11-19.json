@@ -1,0 +1,5432 @@
+{
+  "schema": "encore-character-workbook-review/v1",
+  "createdAt": "2026-11-19T21:55:05.544Z",
+  "inputWorkbookSHA256": "5c63335a7506563bb4954ee344d1d6be1a88c4433a0366c6fceb41b1396c1fbf",
+  "inputDataSHA256": "e6d42d61da26345f175fe11ee42fa946ec07044f3a3eabb84dac2097abe0fc66",
+  "workbookSHA256": "74753dadc25049d4d967aea3b7df11a7f30f240b27270d1156824c49fdafcadc",
+  "trackerDataSHA256": "b6bec25d2e57e29952a2ba8e44624b697e0e10c5bd3126a5f59b1916f3d18d8a",
+  "coverageSHA256": "42c6985acfef78adca8c5264794cee987185e797e9599d4d5c31a358069c9edd",
+  "counts": {
+    "fighters": 54,
+    "moves": 540,
+    "stages": 22,
+    "modes": 9,
+    "atlas": 179,
+    "variants": 429,
+    "archiveOnly": 74,
+    "storyRoutes": 54,
+    "storyChapters": 216,
+    "storyPanels": 324,
+    "storyBriefings": 216,
+    "musicThemes": 22,
+    "soundEffects": 26,
+    "offlineImages": 5331,
+    "offlineBytes": 2538831567,
+    "features": 106,
+    "production": 3092,
+    "scenarios": 348,
+    "qa": 2255,
+    "presentationSequences": 270,
+    "animatedStages": 22,
+    "rebuiltStages": 3,
+    "refinedCostumes": 20,
+    "costumeReplacementSheets": 5,
+    "finishers": 162,
+    "audioAmbiences": 22,
+    "archiveVariants": 51,
+    "dedicatedStages": 54,
+    "friendships": 54
+  },
+  "characterCoverage": {
+    "archiveAppearances": 179,
+    "fighters": 54,
+    "archiveVariants": 51,
+    "researchEntities": 62,
+    "seriesFormCandidates": 168,
+    "unmappedFormCandidates": 39,
+    "namedCharacterArtFiles": 1234,
+    "publishedCharacterArtFiles": 1234,
+    "selectionImageFiles": 184,
+    "completeGalleryEntries": 179,
+    "drawingsBySlot": {
+      "selection": 179,
+      "stance": 105,
+      "intro": 105,
+      "attack": 105,
+      "heavy": 105,
+      "hit": 105,
+      "walk": 105,
+      "jump": 105,
+      "crouch": 105,
+      "victory": 105,
+      "defeat": 105
+    },
+    "completeFighterStaticSets": 54,
+    "completeVariantStaticSets": 51,
+    "missingFighterDrawingSlots": 0,
+    "missingVariantDrawingSlots": 0,
+    "missingSelectionSubjects": 0,
+    "tierCounts": {
+      "primary": 8,
+      "secondary": 32,
+      "tertiary": 38,
+      "variant": 51,
+      "unverified": 31,
+      "object_or_effect": 19
+    }
+  },
+  "formulas": {
+    "count": 42,
+    "recalculated": true,
+    "errors": 0,
+    "statusChangeRecalculated": true,
+    "exportRoundTripPassed": true
+  },
+  "nativeTables": 10,
+  "sheets": 11,
+  "originalIdsAndOrderPreserved": true,
+  "userNotesAndFormulasPreserved": true,
+  "unrelatedSheetValuesPreserved": true,
+  "modifiedCells": [
+    {
+      "sheet": "Combattants",
+      "id": "pomni",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "jax",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "ragatha",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "gangle",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "zooble",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "kinger",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "caine",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "bubble",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "gummigoo",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "loolilalu",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "gloinkqueen",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "fudge",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "abstractedkaufmo",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "baronmildenhall",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "queenie",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "kaufmo",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "ribbit",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "scratch",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "wormo",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "bizco",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "rattie",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "spike",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "pinkcyclops",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "yellowclown",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "oyster",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "bulbcreature",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "abel",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "max",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "chad",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "orbsman",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "ming",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "marthamildenhall",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "ghostly",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "angel",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "disappearingguy",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "committeemember",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "shrimpnpc",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "chineseroomnpc",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "blueai",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "cookiebutterfly",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "gummyelephant",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "giantcentipede",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "spudsycustomer",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "candyguardcyan",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "candyguardblue",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "candyguardpurple",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "gummyworm",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "barrelmonkey",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "jeffery",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "mildenhallsouls",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "redmannequin",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "orangemannequin",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "yellowmannequin",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "magentamannequin",
+      "column": 15
+    },
+    {
+      "sheet": "Atlas",
+      "id": "pomni",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "caine",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "bubble",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "jax",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "ragatha",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "kinger",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "gangle",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "zooble",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "queenie",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "kaufmo",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "gummigoo",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "loolilalu",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "fudge",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "gloinkqueen",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "mannequin",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "abel",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "ribbit",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "scratch",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "wormo",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "bizco",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "rattie",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "spike",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "pinkcyclops",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "yellowclown",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "oyster",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "bulbcreature",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "max",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "chad",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "orbsman",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "ganglekawaii",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "ganglecomedy",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "gangletragedy",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "evilpomni",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "eviljax",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "evilragatha",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "evilkinger",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "evilzooble",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "evilorbsman",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "darkduojax",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "darkduogangle",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "maidjax",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "maidragatha",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "maidpomni",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "maidgangle",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "jaxgirl",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "beachgangle",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "japanesegangle",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "rhinogangle",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "workgangle",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "japanesejax",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "japaneseragatha",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "japanesepomni",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "japanesekinger",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "japanesezooble",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "japanesegummigoo",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "baseballjax",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "baseballzooble",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "baseballgangle",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "baseballragatha",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "baseballpomni",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "baseballkinger",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "rivalbaseballzooble",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "rivalbaseballpomni",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "rivalbaseballpinkgiant",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "rivalbaseballragatha",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "rivalbaseballjax",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "rivalbaseballkinger",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "shadowpomni",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "shadowjax",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "shadowragatha",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "shadowkinger",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "shadowgangle",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "shadowzooble",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "shadowcaine",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "horrorghost",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "horrormonster",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "horrorpomnivoid",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "horrorpomnispiral",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "horrorpomniskull",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "hunterjax",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "gloinkstar",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "gloinkcube",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "gloinkpyramid",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "gloinkcrescent",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "gloinkpin",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "gloinkround",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "abelmannequin",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "abelfullbody",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "additionalvoices",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "themachine",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "ming",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "gloinkqueenscale",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "baronmildenhall",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "marthamildenhall",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "ghostly",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "angel",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "disappearingguy",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "committeemember",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "shrimpnpc",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "chineseroomnpc",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "blueai",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "cookiebutterfly",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "gummyelephant",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "giantcentipede",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "drfootball",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "spudsycustomer",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "candyguardcyan",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "candyguardblue",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "candyguardpurple",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "gummyworm",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "barrelmonkey",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "jeffery",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "redmannequin",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "orangemannequin",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "yellowmannequin",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "magentamannequin",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "mildenhallsouls",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "albertspudsy",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "truthtellerfish",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "liarfish",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "stupidburgermannequin",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "cerealmannequin",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "bonepastor",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "ragathamothershadow",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "paintedmasks",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "zoobleparts",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "laughingshadows",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "abigailbrooks",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "suzieackerman",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "zoeyraghavan",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "rileyverselis",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "grantbest",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "leeroymateo",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "jaxfather",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "jaxmother",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "abigailfriendone",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "abigailfriendtwo",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "bestchildren",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "sun",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "moon",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "abstractedkaufmo",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "cellarabstraction",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "aquaticabstraction",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "fourthcrocodile",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "floatingworm",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "creditsfish",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "stabbedragdolls",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "coiledcentipedes",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "unusedbrainscans",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "abstractedjax",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "abstractedqueeniedark",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "abstractedqueenie",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "peeledjax",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "jaxmindviolent",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "jaxmindcomic",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "jaxmindtrapped",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "spudsypomni",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "spudsyjax",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "spudsyragatha",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "spudsyzooble",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "peekingmannequin",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "abstractedribbit",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "destinybest",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "whatifragatha",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "whatifgangle",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "jumbledragatha",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "jumbledpomni",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "angelhead",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "possessedpomni",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "monstrouscaine",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "flamingozooble",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "mouthlesspomni",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "mouthlessjax",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "mouthlesszooble",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "inertbubble",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "groundedcaine",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "healingbutterfly",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "plasticganglemask",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "charredshrimp",
+      "column": 17
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pomni-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pomni-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pomni-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pomni-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pomni-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pomni-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pomni-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pomni-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pomni-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pomni-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pomni-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-jax-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-jax-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-jax-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-jax-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-jax-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-jax-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-jax-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-jax-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-jax-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-jax-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-jax-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ragatha-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ragatha-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ragatha-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ragatha-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ragatha-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ragatha-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ragatha-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ragatha-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ragatha-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ragatha-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ragatha-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ragatha-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gangle-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gangle-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gangle-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gangle-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gangle-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gangle-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gangle-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gangle-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gangle-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gangle-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gangle-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gangle-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-zooble-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-zooble-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-zooble-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-zooble-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-zooble-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-zooble-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-zooble-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-zooble-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-zooble-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-zooble-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-zooble-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kinger-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kinger-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kinger-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kinger-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kinger-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kinger-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kinger-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kinger-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kinger-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kinger-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kinger-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-caine-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-caine-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-caine-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-caine-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-caine-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-caine-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-caine-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-caine-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-caine-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-caine-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-caine-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bubble-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bubble-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bubble-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bubble-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bubble-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bubble-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bubble-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bubble-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bubble-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummigoo-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummigoo-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummigoo-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummigoo-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummigoo-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummigoo-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummigoo-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummigoo-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummigoo-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-loolilalu-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-loolilalu-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-loolilalu-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-loolilalu-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-loolilalu-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-loolilalu-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-loolilalu-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-loolilalu-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-loolilalu-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gloinkqueen-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gloinkqueen-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gloinkqueen-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gloinkqueen-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gloinkqueen-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gloinkqueen-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gloinkqueen-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gloinkqueen-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gloinkqueen-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-fudge-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-fudge-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-fudge-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-fudge-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-fudge-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-fudge-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-fudge-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-fudge-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-fudge-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-abstractedkaufmo-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-abstractedkaufmo-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-abstractedkaufmo-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-abstractedkaufmo-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-abstractedkaufmo-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-abstractedkaufmo-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-abstractedkaufmo-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-abstractedkaufmo-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-abstractedkaufmo-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-baronmildenhall-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-baronmildenhall-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-baronmildenhall-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-baronmildenhall-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-baronmildenhall-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-baronmildenhall-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-baronmildenhall-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-baronmildenhall-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-baronmildenhall-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-queenie-idle",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-queenie-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-queenie-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-queenie-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-queenie-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-queenie-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-queenie-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-queenie-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-queenie-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-queenie-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-queenie-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-queenie-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-queenie-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-queenie-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-queenie-guard",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-queenie-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-queenie-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-queenie-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kaufmo-idle",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kaufmo-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kaufmo-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kaufmo-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kaufmo-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kaufmo-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kaufmo-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kaufmo-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kaufmo-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kaufmo-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kaufmo-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kaufmo-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kaufmo-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kaufmo-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kaufmo-guard",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kaufmo-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kaufmo-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kaufmo-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ribbit-idle",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ribbit-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ribbit-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ribbit-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ribbit-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ribbit-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ribbit-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ribbit-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ribbit-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ribbit-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ribbit-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ribbit-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ribbit-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ribbit-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ribbit-guard",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ribbit-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ribbit-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ribbit-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-scratch-idle",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-scratch-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-scratch-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-scratch-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-scratch-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-scratch-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-scratch-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-scratch-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-scratch-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-scratch-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-scratch-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-scratch-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-scratch-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-scratch-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-scratch-guard",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-scratch-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-scratch-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-scratch-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-wormo-idle",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-wormo-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-wormo-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-wormo-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-wormo-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-wormo-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-wormo-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-wormo-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-wormo-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-wormo-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-wormo-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-wormo-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-wormo-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-wormo-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-wormo-guard",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-wormo-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-wormo-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-wormo-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bizco-idle",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bizco-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bizco-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bizco-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bizco-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bizco-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bizco-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bizco-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bizco-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bizco-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bizco-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bizco-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bizco-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bizco-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bizco-guard",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bizco-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bizco-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bizco-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-rattie-idle",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-rattie-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-rattie-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-rattie-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-rattie-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-rattie-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-rattie-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-rattie-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-rattie-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-rattie-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-rattie-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-rattie-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-rattie-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-rattie-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-rattie-guard",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-rattie-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-rattie-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-rattie-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spike-idle",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spike-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spike-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spike-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spike-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spike-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spike-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spike-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spike-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spike-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spike-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spike-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spike-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spike-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spike-guard",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spike-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spike-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spike-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pinkcyclops-idle",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pinkcyclops-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pinkcyclops-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pinkcyclops-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pinkcyclops-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pinkcyclops-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pinkcyclops-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pinkcyclops-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pinkcyclops-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pinkcyclops-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pinkcyclops-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pinkcyclops-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pinkcyclops-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pinkcyclops-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pinkcyclops-guard",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pinkcyclops-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pinkcyclops-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pinkcyclops-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowclown-idle",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowclown-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowclown-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowclown-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowclown-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowclown-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowclown-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowclown-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowclown-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowclown-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowclown-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowclown-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowclown-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowclown-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowclown-guard",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowclown-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowclown-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowclown-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-oyster-idle",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-oyster-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-oyster-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-oyster-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-oyster-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-oyster-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-oyster-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-oyster-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-oyster-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-oyster-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-oyster-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-oyster-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-oyster-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-oyster-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-oyster-guard",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-oyster-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-oyster-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-oyster-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bulbcreature-idle",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bulbcreature-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bulbcreature-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bulbcreature-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bulbcreature-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bulbcreature-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bulbcreature-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bulbcreature-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bulbcreature-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bulbcreature-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bulbcreature-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bulbcreature-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bulbcreature-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bulbcreature-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bulbcreature-guard",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bulbcreature-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bulbcreature-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bulbcreature-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-abel-idle",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-abel-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-abel-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-abel-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-abel-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-abel-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-abel-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-abel-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-abel-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-abel-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-abel-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-abel-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-abel-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-abel-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-abel-guard",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-abel-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-abel-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-abel-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-max-idle",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-max-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-max-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-max-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-max-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-max-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-max-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-max-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-max-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-max-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-max-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-max-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-max-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-max-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-max-guard",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-max-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-max-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-max-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chad-idle",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chad-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chad-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chad-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chad-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chad-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chad-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chad-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chad-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chad-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chad-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chad-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chad-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chad-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chad-guard",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chad-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chad-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chad-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orbsman-idle",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orbsman-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orbsman-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orbsman-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orbsman-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orbsman-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orbsman-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orbsman-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orbsman-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orbsman-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orbsman-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orbsman-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orbsman-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orbsman-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orbsman-guard",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orbsman-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orbsman-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orbsman-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ming-idle",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ming-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ming-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ming-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ming-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ming-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ming-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ming-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ming-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ming-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ming-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ming-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ming-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ming-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ming-guard",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ming-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ming-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ming-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-marthamildenhall-idle",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-marthamildenhall-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-marthamildenhall-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-marthamildenhall-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-marthamildenhall-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-marthamildenhall-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-marthamildenhall-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-marthamildenhall-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-marthamildenhall-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-marthamildenhall-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-marthamildenhall-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-marthamildenhall-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-marthamildenhall-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-marthamildenhall-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-marthamildenhall-guard",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-marthamildenhall-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-marthamildenhall-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-marthamildenhall-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ghostly-idle",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ghostly-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ghostly-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ghostly-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ghostly-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ghostly-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ghostly-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ghostly-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ghostly-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ghostly-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ghostly-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ghostly-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ghostly-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ghostly-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ghostly-guard",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ghostly-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ghostly-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ghostly-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-angel-idle",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-angel-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-angel-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-angel-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-angel-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-angel-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-angel-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-angel-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-angel-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-angel-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-angel-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-angel-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-angel-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-angel-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-angel-guard",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-angel-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-angel-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-angel-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-disappearingguy-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-disappearingguy-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-disappearingguy-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-disappearingguy-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-disappearingguy-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-disappearingguy-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-disappearingguy-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-disappearingguy-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-disappearingguy-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-disappearingguy-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-disappearingguy-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-disappearingguy-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-disappearingguy-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-disappearingguy-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-disappearingguy-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-disappearingguy-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-committeemember-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-committeemember-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-committeemember-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-committeemember-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-committeemember-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-committeemember-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-committeemember-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-committeemember-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-committeemember-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-committeemember-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-committeemember-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-committeemember-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-committeemember-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-committeemember-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-committeemember-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-committeemember-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-shrimpnpc-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-shrimpnpc-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-shrimpnpc-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-shrimpnpc-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-shrimpnpc-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-shrimpnpc-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-shrimpnpc-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-shrimpnpc-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-shrimpnpc-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-shrimpnpc-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-shrimpnpc-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-shrimpnpc-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-shrimpnpc-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-shrimpnpc-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-shrimpnpc-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-shrimpnpc-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chineseroomnpc-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chineseroomnpc-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chineseroomnpc-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chineseroomnpc-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chineseroomnpc-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chineseroomnpc-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chineseroomnpc-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chineseroomnpc-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chineseroomnpc-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chineseroomnpc-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chineseroomnpc-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chineseroomnpc-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chineseroomnpc-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chineseroomnpc-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chineseroomnpc-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chineseroomnpc-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-blueai-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-blueai-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-blueai-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-blueai-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-blueai-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-blueai-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-blueai-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-blueai-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-blueai-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-blueai-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-blueai-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-blueai-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-blueai-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-blueai-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-blueai-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-blueai-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-cookiebutterfly-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-cookiebutterfly-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-cookiebutterfly-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-cookiebutterfly-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-cookiebutterfly-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-cookiebutterfly-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-cookiebutterfly-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-cookiebutterfly-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-cookiebutterfly-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-cookiebutterfly-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-cookiebutterfly-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-cookiebutterfly-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-cookiebutterfly-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-cookiebutterfly-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-cookiebutterfly-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-cookiebutterfly-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyelephant-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyelephant-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyelephant-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyelephant-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyelephant-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyelephant-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyelephant-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyelephant-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyelephant-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyelephant-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyelephant-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyelephant-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyelephant-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyelephant-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyelephant-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyelephant-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-giantcentipede-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-giantcentipede-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-giantcentipede-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-giantcentipede-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-giantcentipede-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-giantcentipede-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-giantcentipede-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-giantcentipede-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-giantcentipede-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-giantcentipede-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-giantcentipede-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-giantcentipede-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-giantcentipede-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-giantcentipede-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-giantcentipede-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-giantcentipede-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spudsycustomer-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spudsycustomer-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spudsycustomer-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spudsycustomer-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spudsycustomer-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spudsycustomer-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spudsycustomer-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spudsycustomer-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spudsycustomer-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spudsycustomer-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spudsycustomer-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spudsycustomer-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spudsycustomer-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spudsycustomer-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spudsycustomer-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spudsycustomer-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardcyan-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardcyan-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardcyan-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardcyan-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardcyan-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardcyan-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardcyan-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardcyan-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardcyan-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardcyan-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardcyan-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardcyan-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardcyan-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardcyan-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardcyan-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardcyan-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardblue-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardblue-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardblue-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardblue-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardblue-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardblue-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardblue-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardblue-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardblue-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardblue-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardblue-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardblue-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardblue-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardblue-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardblue-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardblue-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardpurple-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardpurple-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardpurple-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardpurple-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardpurple-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardpurple-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardpurple-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardpurple-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardpurple-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardpurple-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardpurple-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardpurple-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardpurple-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardpurple-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardpurple-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardpurple-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyworm-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyworm-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyworm-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyworm-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyworm-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyworm-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyworm-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyworm-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyworm-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyworm-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyworm-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyworm-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyworm-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyworm-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyworm-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyworm-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-barrelmonkey-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-barrelmonkey-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-barrelmonkey-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-barrelmonkey-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-barrelmonkey-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-barrelmonkey-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-barrelmonkey-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-barrelmonkey-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-barrelmonkey-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-barrelmonkey-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-barrelmonkey-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-barrelmonkey-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-barrelmonkey-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-barrelmonkey-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-barrelmonkey-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-barrelmonkey-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-jeffery-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-jeffery-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-jeffery-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-jeffery-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-jeffery-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-jeffery-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-jeffery-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-jeffery-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-jeffery-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-jeffery-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-jeffery-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-jeffery-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-jeffery-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-jeffery-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-jeffery-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-jeffery-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-mildenhallsouls-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-mildenhallsouls-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-mildenhallsouls-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-mildenhallsouls-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-mildenhallsouls-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-mildenhallsouls-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-mildenhallsouls-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-mildenhallsouls-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-mildenhallsouls-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-mildenhallsouls-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-mildenhallsouls-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-mildenhallsouls-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-mildenhallsouls-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-mildenhallsouls-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-mildenhallsouls-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-mildenhallsouls-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-redmannequin-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-redmannequin-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-redmannequin-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-redmannequin-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-redmannequin-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-redmannequin-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-redmannequin-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-redmannequin-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-redmannequin-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-redmannequin-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-redmannequin-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-redmannequin-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-redmannequin-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-redmannequin-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-redmannequin-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-redmannequin-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orangemannequin-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orangemannequin-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orangemannequin-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orangemannequin-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orangemannequin-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orangemannequin-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orangemannequin-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orangemannequin-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orangemannequin-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orangemannequin-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orangemannequin-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orangemannequin-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orangemannequin-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orangemannequin-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orangemannequin-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orangemannequin-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowmannequin-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowmannequin-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowmannequin-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowmannequin-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowmannequin-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowmannequin-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowmannequin-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowmannequin-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowmannequin-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowmannequin-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowmannequin-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowmannequin-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowmannequin-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowmannequin-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowmannequin-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowmannequin-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-magentamannequin-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-magentamannequin-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-magentamannequin-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-magentamannequin-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-magentamannequin-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-magentamannequin-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-magentamannequin-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-magentamannequin-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-magentamannequin-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-magentamannequin-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-magentamannequin-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-magentamannequin-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-magentamannequin-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-magentamannequin-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-magentamannequin-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-magentamannequin-victory",
+      "column": 8
+    }
+  ],
+  "renderedViews": [
+    {
+      "sheet": "Synthèse",
+      "range": "A1:H35"
+    },
+    {
+      "sheet": "Combattants",
+      "range": "A18:O21"
+    },
+    {
+      "sheet": "Atlas",
+      "range": "A6:S8"
+    },
+    {
+      "sheet": "Production",
+      "range": "A2751:J2754"
+    },
+    {
+      "sheet": "Production",
+      "range": "A2930:J2933"
+    },
+    {
+      "sheet": "QA",
+      "range": "A2255:I2257"
+    },
+    {
+      "sheet": "QA",
+      "range": "A2258:I2260"
+    }
+  ],
+  "releaseReviewed": false,
+  "fullCiExecuted": false,
+  "canonicalVisualApproval": false,
+  "limitations": [
+    "Workbook and file inventory rebuilt; dated Node/Canvas execution evidence imported after checking its hashes, not rerun by this generator.",
+    "Canonical image comparison and animation cycles remain separate production tasks.",
+    "No desktop Excel or physical-device session is claimed."
+  ],
+  "gameVersion": "0.7.0",
+  "runtimeManifest": {
+    "offlineVersion": "0.7.0-9d40b0881496",
+    "artVersion": "0e03085d0a637d14",
+    "artFiles": 5331,
+    "artBytes": 2538831567,
+    "sha256": "6bc34c00690e60393965bb51b069cc6c6ce46b94565bacd0f5d4f9e7cf9820a9"
+  },
+  "generatorSHA256": "b2492d24816b0d727780d2923c623e84aa9f3783338a3e0c94e59568611b16c7",
+  "completionEvidence": {
+    "file": "docs/combat-character-verification-2026-11-19.json",
+    "inputs": {
+      "docs/combat-character-verification-2026-11-19.json": "7629b55d5bb8f6ef013ceb5f072b6ec22cfb2024723a6dcf4cd6eaeb9f4b81ef",
+      "docs/images/character-completion-2026-11-19/character-canvas-review.json": "f16568f11b6a59888b41011eeac4757293c77222fd47ef9b3ea6823183aed9ff",
+      "docs/images/character-scenes-2026-11-19/canvas-review.json": "e966dbee4028a9000d0c3d3bb6d4e56033af6780c24147f04ea3fe077a095291",
+      "docs/combat-character-art-inventory-2026-11-19.json": "52b0f2cbcf056a472f5a4226365d2ae46c440cc7b14eb6e2f123d71122fb91b2",
+      "docs/combat-character-qa-2026-11-19.log": "f95f7cf07ac90a70afad20ca7aec5d4efa25118458e474e6c83d31f06e0f4336"
+    },
+    "hashesVerifiedAgainstCurrentFiles": true,
+    "qaRowIds": [
+      "CHARCOV26-inventory",
+      "CHARCOV26-canvas",
+      "CHARCOV26-scenes",
+      "CHARCOV26-node",
+      "CHARCOV26-browser"
+    ]
+  }
+}

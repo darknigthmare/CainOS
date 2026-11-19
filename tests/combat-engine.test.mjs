@@ -415,7 +415,7 @@ test('all 140 authored Digital Circus moves activate, spend bounded resources an
     }
     count++;
   }
-  assert.equal(count, 140);
+  assert.equal(count, FIGHTERS.length * MOVE_SLOTS.length);
 });
 
 test('every roster fighter can run the actual seeded CPU against another authored profile', () => {

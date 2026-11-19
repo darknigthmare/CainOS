@@ -1,0 +1,219 @@
+{
+  "schema": "encore-extension-evidence/v1",
+  "gameVersion": "0.7.0",
+  "createdAt": "2026-11-17T15:15:47.933Z",
+  "sourceCommit": "f209b21ff212c8e99232ab2b060895eced60dd02",
+  "worktreeDirty": true,
+  "scope": "Extension du roster de 14 à 54 combattants : 40 PNJ à sprite complet, 400 techniques générées, 120 finales, 40 routes, rival et tournoi.",
+  "executions": [
+    {
+      "id": "node-combat",
+      "command": "npm run test:combat",
+      "exitCode": 0,
+      "executedAt": "2026-11-17T15:15:47.933Z",
+      "tests": 372,
+      "passed": 372,
+      "failed": 0,
+      "files": 27,
+      "output": "ℹ suites 0\nℹ pass 372\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 22298.732787"
+    },
+    {
+      "id": "qa",
+      "command": "npm run qa",
+      "exitCode": 0,
+      "executedAt": "2026-11-17T15:15:47.933Z",
+      "output": "copied app.js -> dist/app.js\ncopied episodes.js -> dist/episodes.js\ncopied cloud-account.js -> dist/cloud-account.js\ncopied favicon.png -> dist/favicon.png\ncopied assets -> dist/assets\ncopied combat -> dist/combat"
+    },
+    {
+      "id": "browser-roster",
+      "tool": "Cloud Chromium",
+      "url": "/combat/",
+      "exitCode": 0,
+      "executedAt": "2026-11-17T15:15:47.933Z",
+      "checks": [
+        {
+          "name": "Neuf modes et 54 cartes de roster",
+          "pass": true
+        },
+        {
+          "name": "Queenie sélectionnée et route « Le souvenir du chapiteau » chargée",
+          "pass": true
+        },
+        {
+          "name": "Rival Kinger marqué au chapitre 3 de la feuille de route",
+          "pass": true
+        },
+        {
+          "name": "Aucune erreur d’import ou d’exécution du module combat",
+          "pass": true
+        }
+      ],
+      "note": "Le manifeste PWA renvoie 403 via le proxy de prévisualisation ; ce n’est pas une erreur du jeu."
+    },
+    {
+      "id": "sprite-review",
+      "tool": "Pillow 12.3.0 + inspection visuelle",
+      "command": "python3 (extraction des 40 cellules) puis lecture des 7 visuels officiels téléchargés",
+      "exitCode": 0,
+      "executedAt": "2026-11-17T16:14:28.600Z",
+      "checks": [
+        {
+          "name": "40 cellules extraites aux coordonnées de sprite-catalog.mjs et étiquetées",
+          "pass": true
+        },
+        {
+          "name": "Planche de contrôle docs/images/expansion-sprites-review-0.7.0.png inspectée",
+          "pass": true
+        },
+        {
+          "name": "Sept visuels officiels inspectés (groupe, Candy Canyon, carte, accessoires, Vide, cellier, comptoir Spudsy)",
+          "pass": true
+        },
+        {
+          "name": "Aucun plan primaire consulté ne montre un des 40 PNJ",
+          "pass": true
+        },
+        {
+          "name": "Fiches de fidélité mises à jour avec revue de sprite et contradiction d’épisode",
+          "pass": true
+        }
+      ],
+      "note": "Revue technique du dessin livré : elle documente l’identité, le cadrage et les débris de cellules voisines sans certifier un modèle canonique."
+    },
+    {
+      "id": "node-combat-sprite-review",
+      "command": "npm run test:combat",
+      "exitCode": 0,
+      "executedAt": "2026-11-17T16:18:24.065Z",
+      "tests": 374,
+      "passed": 374,
+      "failed": 0,
+      "files": 27,
+      "output": "ℹ tests 374\nℹ pass 374\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 22700.292437"
+    },
+    {
+      "id": "node-combat-roster-completeness",
+      "command": "node --test tests/combat-roster-completeness.test.mjs",
+      "exitCode": 0,
+      "executedAt": "2026-11-17T18:07:20.649Z",
+      "tests": 5,
+      "passed": 5,
+      "failed": 0,
+      "files": 1,
+      "output": "dedicated stages, friendships, rivals and story illustration lists checked for all 54 fighters"
+    },
+    {
+      "id": "node-combat-full-after-completeness",
+      "command": "npm run test:combat",
+      "exitCode": 0,
+      "executedAt": "2026-11-17T18:07:20.649Z",
+      "tests": 379,
+      "passed": 379,
+      "failed": 0,
+      "files": 28,
+      "output": "pass 379 / fail 0"
+    }
+  ],
+  "notExecuted": [
+    "node scripts/run-combat-ci.mjs : Playwright/Chromium absent et les suites navigateur du dépôt ciblent encore 14 combattants.",
+    "Générateur officiel du classeur (@oai/artifact-tool) : runtime tableur primaire absent.",
+    "Comparaison canonique 1:1 des 40 nouveaux sprites : aucun plan primaire consulté ne montre ces PNJ, la revue reste donc technique."
+  ],
+  "counts": {
+    "fighters": 54,
+    "moves": 540,
+    "stages": 12,
+    "modes": 9,
+    "atlas": 179,
+    "variants": 51,
+    "archiveOnly": 74,
+    "storyRoutes": 54,
+    "storyChapters": 216,
+    "storyPanels": 324,
+    "storyBriefings": 216,
+    "musicThemes": 12,
+    "soundEffects": 26,
+    "offlineImages": 44,
+    "offlineBytes": 52167739,
+    "features": 105,
+    "production": 2253,
+    "scenarios": 325,
+    "qa": 2246,
+    "presentationSequences": 270,
+    "animatedStages": 12,
+    "rebuiltStages": 3,
+    "refinedCostumes": 20,
+    "costumeReplacementSheets": 5,
+    "finishers": 162,
+    "audioAmbiences": 12,
+    "expansionSpriteReviews": 40,
+    "expansionSpriteConfirmed": 0,
+    "expansionSpriteIssues": 35,
+    "expansionSpriteFramingIssues": 16,
+    "expansionSpriteEpisodeConflicts": 9,
+    "dedicatedStages": 54,
+    "friendships": 54,
+    "rosterCompletenessTests": 5
+  },
+  "qaSummary": {
+    "Réussi": 2239,
+    "Échec": 0,
+    "Non exécuté": 4,
+    "À vérifier": 2
+  },
+  "artifacts": {
+    "docs/DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx": "066bf6e9c329f49205d311003bb09f2e56601752b0683bbd1f7b6daf42c30c4a",
+    "docs/combat-tracker-data.json": "ff821b70e64187b36c2ab426b1ae813b0a09c12ded8fd69214675bfbe961c67c",
+    "combat/roster-expansion.mjs": "b091c15b8dca205b6bac61659ef6b213dc6178f292cfac08112d899d578a6405",
+    "combat/data.mjs": "bbce4b1f4d809e6c0498bb0cb5ce123b8b75d66b41642b21ba6ab3eb9e256032",
+    "combat/fidelity.mjs": "6be3fb386abb52da756ebccf7a6ad1903c5617385d53aff199f17661844c0e17",
+    "combat/stories.mjs": "4a25469e10845c527f6d0a96921ce9298b4a2f4ec96560c38436dbc24565456e",
+    "combat/tournament-lore.mjs": "ecf40bf6f2949eb09dcd03c93044ef6a41b11d302fd1bea90e7f1a22fd9db63f",
+    "combat/finisher-catalog.mjs": "e577f39affa7db76a020596af0598a971af4be37608126158019057ce7aa7ee0",
+    "combat/render-sequences.mjs": "3e89b9f067514caa70000d6853e703fcb75de4f4aed6a368eb807d6ee77acd75",
+    "combat/render-presentation.mjs": "fac2ed0d184aa83796d8af841080c0672d055c3aa8c7e0df5988a56a4f68768d",
+    "combat/offline-manifest.mjs": "baa9e3381d6deb085d30fb428f0f6eaa3b322ebf1c6991c0886fce9d9d3e3e87",
+    "tests/combat-fidelity.test.mjs": "d3277670e5b71e184c5bc2973d301d655d5a86f776eaf4de1431f1957c757c3c",
+    "docs/combat-expansion-sprite-review-0.7.0.json": "a729d3099eb72b46c9ec9b32a6148d4cf5752013462eec56249a48fad3f4c5d1",
+    "docs/images/expansion-sprites-review-0.7.0.png": "8d5aee92bf2f1f5d1a18909b0ac35e04ec5fd75d7996ee8da613c12e43ffd36c"
+  },
+  "limitations": [
+    "Les 40 PNJ utilisent des kits et des textes générés depuis des modèles de rôle ; les 14 combattants d’origine restent authored.",
+    "Le classeur a été étendu avec openpyxl : les formules de synthèse sont étendues mais n’ont pas été recalculées par le runtime tableur officiel.",
+    "Les 40 fiches de fidélité restent « Épisode à revoir » : la revue de sprite des 17 novembre 2026 décrit chaque cellule d’atlas, mais aucun plan primaire consulté ne montre ces PNJ.",
+    "Aucune illustration raster supplémentaire n’a été produite.",
+    "Seize cellules conservent un débris de cellule voisine et neuf attributions d’épisode contredisent la route générée ; ces points sont documentés, pas corrigés.",
+    "Les numéros d’amitié sont des compositions procédurales d’accessoires existants ; aucun dessin dédié ni plan primaire d’une scène d’amitié n’a été produit.",
+    "Les scènes dédiées réutilisent le décor revu de l’épisode d’origine (accent modifié, géométrie inchangée) ; aucun plan de plateau canonique n’est mesuré."
+  ],
+  "workbookValidation": {
+    "openedWithOpenpyxl": true,
+    "zipIntegrity": "ok",
+    "tables": {
+      "Combattants": "A5:Z59",
+      "Techniques": "A5:W545",
+      "Scénarios": "A5:K330",
+      "Production": "A5:J2258",
+      "QA": "A5:I2251",
+      "Extension PNJ": "A1:P41"
+    },
+    "rows": {
+      "roster": 54,
+      "moves": 540,
+      "scenarios": 325,
+      "production": 2253,
+      "qa": 2246
+    },
+    "notesPreserved": {
+      "roster": 14,
+      "moves": 140,
+      "scenarios": 85,
+      "production": 693,
+      "qa": 2240,
+      "features": 105
+    },
+    "existingRowsUnchanged": true,
+    "formulasExtended": true,
+    "formulasRecalculated": false
+  }
+}

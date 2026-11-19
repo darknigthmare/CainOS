@@ -9,7 +9,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
 import { pathToFileURL } from 'node:url';
-import { FIGHTERS, STAGES } from '../combat/data.mjs';
+import { FIGHTERS, STAGES, ALL_STAGES } from '../combat/data.mjs';
 import { GAME_VERSION, SAVE_KEY, REPLAY_KEY } from '../combat/session.mjs';
 
 let playwright;
@@ -168,7 +168,7 @@ try {
   await activate(page, '[data-side="0"]'); await expectFocus(page, '[data-side="0"]');
   checked('changing the player side keeps focus on its regenerated pressed button');
 
-  await group(page, '.roster', 14, 'Fourteen fighter cards');
+  await group(page, '.roster', FIGHTERS.length, 'Fighter cards');
   for (const fighter of FIGHTERS) {
     const selector = `[data-fighter="${fighter.id}"]`;
     await activate(page, selector);
@@ -176,16 +176,16 @@ try {
     assert.equal(await page.locator(selector).getAttribute('aria-pressed'), 'true');
     assert.equal(await page.locator('[data-selection-artist="0"] h3').textContent(), fighter.name);
   }
-  checked('all fourteen fighter choices keep focus and update the selected artist', { fighters: FIGHTERS.map(item => item.id) });
+  checked('all fighter choices keep focus and update the selected artist', { fighters: FIGHTERS.map(item => item.id) });
   await activate(page, '[data-fighter="pomni"]');
-  await group(page, '.stages', STAGES.length, 'Arena cards');
-  for (const stage of STAGES) {
+  await group(page, '.stages', ALL_STAGES.length, 'Arena cards');
+  for (const stage of ALL_STAGES) {
     const selector = `[data-stage="${stage.id}"]`; await activate(page, selector);
     await expectFocus(page, selector);
     assert.equal(await page.locator(selector).getAttribute('aria-pressed'), 'true');
     assert.equal(await page.locator('#stage-preview').getAttribute('data-stage-preview'), stage.id);
   }
-  checked('all stage choices retain focus and synchronize the preview', { stages: STAGES.map(item => item.id) });
+  checked('all stage choices retain focus and synchronize the preview', { stages: ALL_STAGES.map(item => item.id) });
 
   const wardrobeOpener = '[data-selection-artist="0"] [data-appearance]';
   await activate(page, wardrobeOpener);
@@ -204,14 +204,14 @@ try {
   checked('wardrobe ArrowDown can change three consecutive appearances without losing select focus; Escape restores its opener');
 
   await nav(page, 'codex');
-  await group(page, '.codex-list', 14, 'Fourteen codex artists');
+  await group(page, '.codex-list', FIGHTERS.length, 'Codex artists');
   for (const fighter of FIGHTERS) {
     const selector = `[data-codex="${fighter.id}"]`; await activate(page, selector);
     await expectFocus(page, selector);
     assert.equal(await page.locator(selector).getAttribute('aria-pressed'), 'true');
     assert.equal(await page.locator('.codex-head h2').textContent(), fighter.name);
   }
-  checked('all fourteen codex selections keep focus and expose their pressed state');
+  checked('all codex selections keep focus and expose their pressed state');
   await activate(page, '[data-codex="pomni"]');
   const finaleOpener = '[data-finale-fighter="pomni"]';
   await activate(page, finaleOpener);
@@ -239,7 +239,7 @@ try {
   await tabTo(page, '#archive-filter');
   await page.keyboard.press('ArrowDown'); await expectFocus(page, '#archive-filter');
   assert.equal(await page.locator('#archive-filter').inputValue(), 'playable');
-  assert.equal(await page.locator('[data-archive-id]').count(), 14);
+  assert.equal(await page.locator('[data-archive-id]').count(), Math.min(24, FIGHTERS.length));
   await page.keyboard.press('Home'); await expectFocus(page, '#archive-filter');
   assert.equal(await page.locator('#archive-filter').inputValue(), 'all');
   await activate(page, '[data-page="1"]'); await expectFocus(page, '[data-page="1"]');
@@ -338,11 +338,11 @@ try {
   await group(phone, 'nav[data-menu-group]', 4, '390px main navigation');
   await activate(phone, '.mode-card[data-mode="versus"]', 'Space');
   await phone.waitForFunction(() => window.Encore.screen === 'select');
-  await group(phone, '.roster', 14, '390px fighter grid');
+  await group(phone, '.roster', FIGHTERS.length, '390px fighter grid');
   await phone.keyboard.press('End'); await phone.keyboard.press('Enter');
   await expectFocus(phone, `[data-fighter="${FIGHTERS.at(-1).id}"]`);
   await phone.keyboard.press('Home'); await phone.keyboard.press('Enter'); await expectFocus(phone, '[data-fighter="pomni"]');
-  await group(phone, '.stages', STAGES.length, '390px stage grid');
+  await group(phone, '.stages', ALL_STAGES.length, '390px stage grid');
   await phone.keyboard.press('End'); await phone.keyboard.press('Enter'); await expectFocus(phone, `[data-stage="${STAGES.at(-1).id}"]`);
   await noOverflow(phone, '390px selection');
   await activate(phone, wardrobeOpener); await phone.locator('#modal[open]').waitFor();

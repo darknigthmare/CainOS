@@ -14,6 +14,7 @@ const stateLabels = {
 /** Track gallery entries only when their real files are present in the published manifest. */
 export function updateCrossoverTracker(data, offline, { FIGHTERS, VARIANTS, COSTUMES = VARIANTS, STAGES }) {
   const art = new Set(offline.ART_FILES.map(path => path.replace(/^\.\.\//, '')));
+  const imagePath = stem => [stem + '.webp', stem + '.png'].find(path => art.has(path));
   const productions = new Map(data.production.map(row => [row[0], row]));
   const stages = new Map(data.stages.map(row => [row[0], row]));
   const scenarios = new Map(data.scenarios.map(row => [row[0], row]));
@@ -29,7 +30,7 @@ export function updateCrossoverTracker(data, offline, { FIGHTERS, VARIANTS, COST
   for (const costume of COSTUMES.filter(item => item.crossover)) {
     const directory = costume.sprite.crossoverDirectory.replace(/^\.\.\//, '');
     const fusion = costume.crossover.style === 'fusion';
-    const published = [...states, 'heavy'].filter(key => art.has(directory+'/'+key+'.webp'));
+    const published = [...states, 'heavy'].filter(key => imagePath(directory+'/'+key));
     if (!published.includes('selection') || !published.includes('stance')) continue;
     const missing = states.filter(key => !published.includes(key));
     costumeDrawings += published.length;
@@ -45,7 +46,7 @@ export function updateCrossoverTracker(data, offline, { FIGHTERS, VARIANTS, COST
     collections.add(costume.crossover.series); outfits++;
   }
   for (const fighter of FIGHTERS) {
-    const path = 'assets/encore/poses/'+fighter.id+'/heavy.webp';
+    const path = imagePath('assets/encore/poses/'+fighter.id+'/heavy');
     if (!art.has(path)) continue;
     const row = productions.get('ART-'+fighter.id+'-heavy');
     if (row) {
@@ -57,7 +58,7 @@ export function updateCrossoverTracker(data, offline, { FIGHTERS, VARIANTS, COST
     const stage=STAGES.find(item=>item.id===guest.id);
     if(!stage)continue;
     const dir='assets/encore/stages/'+stage.id+'/';
-    if (!['far','mid','near'].every(key=>art.has(dir+key+'.webp'))) continue;
+    if (!['far','mid','near'].every(key=>imagePath(dir+key))) continue;
     const source=CROSSOVER_STAGE_SOURCES.find(item=>item.id===stage.sourceId);
     if(source && !sources.has(source.id)){data.sources.push(source);sources.set(source.id,source);}
     const f=stage.fidelity;
@@ -93,14 +94,14 @@ export function updateCrossoverTracker(data, offline, { FIGHTERS, VARIANTS, COST
     const [player,rival]=visit.fighters.map(id=>original.get(id).name);
     const dir='assets/encore/escales/'+visit.world+'/';
     for(const [id,title] of [['intro','Introduction'],['ending','Fin']]){
-      const file=dir+id+'.webp';
+      const file=imagePath(dir+id);
       if(!art.has(file))continue;
       publishRow(data.production,productions,[
         'ESCALE-'+visit.world+'-'+id,'Escales GLITCH',stage.name,title+' · '+visit.title,'Implémenté','P1',file,
         visit[id],player+' · '+rival,'',
       ]);panels++;
     }
-    if(art.has(dir+'intro.webp') && art.has(dir+'ending.webp'))publishRow(data.scenarios,scenarios,[
+    if(imagePath(dir+'intro') && imagePath(dir+'ending'))publishRow(data.scenarios,scenarios,[
       'VISIT-'+visit.world,'Escale crossover',visit.title,visit.intro+'\n\n'+visit.ending,'Victoire',1,rival,
       'Implémenté','P1','combat/crossover-visits.mjs · '+dir,'',
     ]);

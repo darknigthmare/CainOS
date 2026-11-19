@@ -1,936 +1,5432 @@
 {
-  "schema": "encore-crossover-tracker/v1",
-  "mode": "production",
-  "artDate": "2026-11-18",
-  "baseCommit": "3e6da5133e1a48e235d251f0f49e3ba0d61a3bab",
-  "verifiedArtPaths": 3780,
-  "artFamilies": {
-    "selection": 65,
-    "stance": 65,
-    "campaign": 140,
-    "finales": 42,
-    "stages": 63,
-    "poses": 518,
-    "crossovers": 3780,
-    "escales": 18
-  },
-  "crossoverArt": {
-    "collections": 9,
-    "outfits": 378,
-    "costumeDrawings": 3780,
-    "heavyAttacks": 14,
-    "stageLayers": 27,
-    "escalePanels": 18
-  },
-  "offlineVersion": "0.7.0-219e33c7c546",
-  "artVersion": "75ea5695bde8f8f1",
+  "schema": "encore-character-workbook-review/v1",
+  "createdAt": "2026-11-19T21:55:05.544Z",
+  "inputWorkbookSHA256": "5c63335a7506563bb4954ee344d1d6be1a88c4433a0366c6fceb41b1396c1fbf",
+  "inputDataSHA256": "e6d42d61da26345f175fe11ee42fa946ec07044f3a3eabb84dac2097abe0fc66",
+  "workbookSHA256": "74753dadc25049d4d967aea3b7df11a7f30f240b27270d1156824c49fdafcadc",
+  "trackerDataSHA256": "b6bec25d2e57e29952a2ba8e44624b697e0e10c5bd3126a5f59b1916f3d18d8a",
+  "coverageSHA256": "42c6985acfef78adca8c5264794cee987185e797e9599d4d5c31a358069c9edd",
   "counts": {
-    "fighters": 14,
-    "moves": 140,
-    "stages": 21,
+    "fighters": 54,
+    "moves": 540,
+    "stages": 22,
     "modes": 9,
     "atlas": 179,
     "variants": 429,
-    "archiveOnly": 114,
-    "storyRoutes": 14,
-    "storyChapters": 56,
-    "storyPanels": 84,
-    "storyBriefings": 56,
-    "musicThemes": 21,
+    "archiveOnly": 74,
+    "storyRoutes": 54,
+    "storyChapters": 216,
+    "storyPanels": 324,
+    "storyBriefings": 216,
+    "musicThemes": 22,
     "soundEffects": 26,
-    "offlineImages": 4735,
-    "offlineBytes": 1932744663,
+    "offlineImages": 5331,
+    "offlineBytes": 2538831567,
     "features": 106,
-    "production": 1125,
-    "scenarios": 94,
-    "qa": 2240,
-    "presentationSequences": 70,
-    "animatedStages": 21,
+    "production": 3092,
+    "scenarios": 348,
+    "qa": 2255,
+    "presentationSequences": 270,
+    "animatedStages": 22,
     "rebuiltStages": 3,
     "refinedCostumes": 20,
     "costumeReplacementSheets": 5,
-    "finishers": 42,
-    "audioAmbiences": 21,
-    "archiveVariants": 51
+    "finishers": 162,
+    "audioAmbiences": 22,
+    "archiveVariants": 51,
+    "dedicatedStages": 54,
+    "friendships": 54
   },
-  "qaSummary": {
-    "Réussi": 2236,
-    "Échec": 0,
-    "Non exécuté": 3,
-    "À vérifier": 1
-  },
-  "currentQa": {
-    "gameVersion": "0.7.0",
-    "campaign": "readability-2026-10-29",
-    "sourceCommit": "243e87b21b1e9eb8711e2012faf837f5850dae9a",
-    "runUrl": "https://github.com/darknigthmare/CainOS/actions/runs/40928776174",
-    "totals": {
-      "nodeSuites": 27,
-      "nodeTests": 370,
-      "nodePassed": 370,
-      "browserSuites": 16,
-      "browserChecks": 275,
-      "browserPassed": 275
+  "characterCoverage": {
+    "archiveAppearances": 179,
+    "fighters": 54,
+    "archiveVariants": 51,
+    "researchEntities": 62,
+    "seriesFormCandidates": 168,
+    "unmappedFormCandidates": 39,
+    "namedCharacterArtFiles": 1234,
+    "publishedCharacterArtFiles": 1234,
+    "selectionImageFiles": 184,
+    "completeGalleryEntries": 179,
+    "drawingsBySlot": {
+      "selection": 179,
+      "stance": 105,
+      "intro": 105,
+      "attack": 105,
+      "heavy": 105,
+      "hit": 105,
+      "walk": 105,
+      "jump": 105,
+      "crouch": 105,
+      "victory": 105,
+      "defeat": 105
     },
-    "rowIds": [
-      "GDF26-B-009721d875fe81d2",
-      "GDF26-B-0106dca055246f00",
-      "GDF26-B-018d56b930f0a6d7",
-      "GDF26-B-01c4a3180cf59e9b",
-      "GDF26-B-0293ae76d4c82b9b",
-      "GDF26-B-03960d2eca3cec7e",
-      "GDF26-B-040eff2f85b35e3a",
-      "GDF26-B-05705b62ef11ed39",
-      "GDF26-B-05bb2947f671e8a0",
-      "GDF26-B-05fe5ac2ce41ab88",
-      "GDF26-B-0602bcbbb0310d10",
-      "GDF26-B-06e7a76239f5f389",
-      "GDF26-B-073cfa4a3f12f276",
-      "GDF26-B-076b4f7ec9b7dff1",
-      "GDF26-B-078dd2299df6a6cf",
-      "GDF26-B-08f67aa4c6b7846e",
-      "GDF26-B-0a47cce4be748d5e",
-      "GDF26-B-0a6a31f10ebbedab",
-      "GDF26-B-0ac880ec013903ed",
-      "GDF26-B-0bcb445c027e22cd",
-      "GDF26-B-0bfb1ada63779da1",
-      "GDF26-B-0e688a2697c48462",
-      "GDF26-B-1009c33c4af8e981",
-      "GDF26-B-11b5a7bd09a7ae29",
-      "GDF26-B-126b0ab14247eb6f",
-      "GDF26-B-12d7e1766f56819f",
-      "GDF26-B-12f5bd9e4e368169",
-      "GDF26-B-139484daa10e48a9",
-      "GDF26-B-165859f3ad317e4b",
-      "GDF26-B-17f3cb104c1c5d4b",
-      "GDF26-B-1970af41323bc4d1",
-      "GDF26-B-1ca2dc1606c4c451",
-      "GDF26-B-1d8be4ed209a9cb2",
-      "GDF26-B-1f5ec2a0c5466c44",
-      "GDF26-B-209da0b736d4df49",
-      "GDF26-B-20d29821905ad35c",
-      "GDF26-B-212a3319a165c68d",
-      "GDF26-B-21fbf229ce0f1831",
-      "GDF26-B-22382a3b6093830d",
-      "GDF26-B-227c4b1409c1c2e5",
-      "GDF26-B-22981d311833b57e",
-      "GDF26-B-229c9215bb98a515",
-      "GDF26-B-22b0fe552e2cb910",
-      "GDF26-B-24536b3f92c6aa3e",
-      "GDF26-B-249baade5eaa245d",
-      "GDF26-B-259c2eec5f314a48",
-      "GDF26-B-268c9459453512a6",
-      "GDF26-B-269ffaf7c5662d1d",
-      "GDF26-B-299c48b58d450daa",
-      "GDF26-B-2a37178bc06f9331",
-      "GDF26-B-2b7796f595b4ce92",
-      "GDF26-B-2c2c8a642c36dad5",
-      "GDF26-B-2d8feb86f7259dc0",
-      "GDF26-B-2f8cf90a3adc7400",
-      "GDF26-B-335f9a609e3b6576",
-      "GDF26-B-341a58d51a8e2c8d",
-      "GDF26-B-34b8474701b2864a",
-      "GDF26-B-3560f37a2cf142bc",
-      "GDF26-B-365ad030384f5c8b",
-      "GDF26-B-37436abdd816a065",
-      "GDF26-B-37a7daa09c433c37",
-      "GDF26-B-385d552ca552589a",
-      "GDF26-B-386562e843f8abf8",
-      "GDF26-B-386e9e96dff3538e",
-      "GDF26-B-3acb4add72a24d30",
-      "GDF26-B-3c2e5e64963b90e1",
-      "GDF26-B-3d4f8aa74817161f",
-      "GDF26-B-3d6c70299b35dea7",
-      "GDF26-B-40106363990e4959",
-      "GDF26-B-401365c3bca4d521",
-      "GDF26-B-40427b78da6e0854",
-      "GDF26-B-410c771da08462dd",
-      "GDF26-B-415d03cd91762b09",
-      "GDF26-B-41b4f0620e21fe69",
-      "GDF26-B-44aaf6ecec4aea1e",
-      "GDF26-B-45c448e3a4109444",
-      "GDF26-B-46b00a5a1d58317e",
-      "GDF26-B-4854859ccdaf5ab0",
-      "GDF26-B-487b95348e0ed269",
-      "GDF26-B-491241295f8a662b",
-      "GDF26-B-4a492f27673c0e6c",
-      "GDF26-B-4bd86584a06eda28",
-      "GDF26-B-4c6c1eedad3a2ece",
-      "GDF26-B-4c75e07cf8ad1ff6",
-      "GDF26-B-4dca49b97173145f",
-      "GDF26-B-4e3e80073b1bd6f5",
-      "GDF26-B-51bc82d2e61dedac",
-      "GDF26-B-5375b4f99d73c9dd",
-      "GDF26-B-5484736efbc5c08d",
-      "GDF26-B-551778394dbef93c",
-      "GDF26-B-55213f442b7c6cf1",
-      "GDF26-B-55315687d2ef4125",
-      "GDF26-B-554e7ade1ae46e39",
-      "GDF26-B-55b771cdd45f6b7c",
-      "GDF26-B-55cabb9e7db67e5e",
-      "GDF26-B-561dbafc0886f86f",
-      "GDF26-B-5868bd7f3e30fb17",
-      "GDF26-B-597120bd403b3f28",
-      "GDF26-B-5c8c6c52e771a470",
-      "GDF26-B-5c90683e40675ce9",
-      "GDF26-B-5c9480aa06893462",
-      "GDF26-B-5d3d44983ae8030d",
-      "GDF26-B-5d9e19b2f93ae516",
-      "GDF26-B-5e462d500c680b41",
-      "GDF26-B-5f3cc54db594c06f",
-      "GDF26-B-5f4f044f73c596ef",
-      "GDF26-B-5f75ffc1cf32a7f0",
-      "GDF26-B-602343386272e556",
-      "GDF26-B-62bd04afda4649fd",
-      "GDF26-B-63dda511aceddb7c",
-      "GDF26-B-6453a271ef3a0ac8",
-      "GDF26-B-651d982d21d7c70a",
-      "GDF26-B-6601fd5d7c235d81",
-      "GDF26-B-6617e2f322e9e027",
-      "GDF26-B-671556516aa0427f",
-      "GDF26-B-681cfd492cfe51c4",
-      "GDF26-B-6826d08f28a61054",
-      "GDF26-B-689637f82d232755",
-      "GDF26-B-68a77520bf0ed560",
-      "GDF26-B-691fc0908cae1812",
-      "GDF26-B-697c9182f345dc41",
-      "GDF26-B-6995ceae24107203",
-      "GDF26-B-6b60b58f3013fecc",
-      "GDF26-B-6b8726fb5ba4ad3c",
-      "GDF26-B-6bd31de284a16337",
-      "GDF26-B-6ca622d7a2923b4d",
-      "GDF26-B-6f46f76ab4d70f3f",
-      "GDF26-B-709cb996c8517460",
-      "GDF26-B-72d82e62a63ec3bc",
-      "GDF26-B-7363d3eaaceacd6f",
-      "GDF26-B-73a496c8c6b52ddf",
-      "GDF26-B-73e918aec22fa35a",
-      "GDF26-B-7404b549bb58fcdf",
-      "GDF26-B-74ef43ff54910714",
-      "GDF26-B-761390cec67beafb",
-      "GDF26-B-766d6fbe00a208d8",
-      "GDF26-B-7762b6d67b5e464e",
-      "GDF26-B-78176e4208636c82",
-      "GDF26-B-782d9b179e2369ac",
-      "GDF26-B-7848feb08fa7950d",
-      "GDF26-B-785601c82191bbc5",
-      "GDF26-B-7951aa268ca23a8b",
-      "GDF26-B-79aa407154b2f4cb",
-      "GDF26-B-7a63202b0ec039ea",
-      "GDF26-B-7b9636c2c759cc59",
-      "GDF26-B-7d00b0c9b9964ec6",
-      "GDF26-B-7e92d696cc9f607f",
-      "GDF26-B-7f76da3b158c1cea",
-      "GDF26-B-7fa660cae406bfac",
-      "GDF26-B-830445c67d483e0d",
-      "GDF26-B-8430e2e9a2b509f2",
-      "GDF26-B-84459bf0e94db230",
-      "GDF26-B-8634b97b7ce7a777",
-      "GDF26-B-872b55a56b27fbbe",
-      "GDF26-B-8887a2030ddaf4f7",
-      "GDF26-B-8a412d18e9c27b57",
-      "GDF26-B-8a8c6736c53bbef7",
-      "GDF26-B-8ad009c95b51db98",
-      "GDF26-B-8febe39ba90f6525",
-      "GDF26-B-9281e762aba5c34b",
-      "GDF26-B-92c8f0ad8a1f56aa",
-      "GDF26-B-959473f8ac7b0248",
-      "GDF26-B-95e1551970160f00",
-      "GDF26-B-965af4d049573cc4",
-      "GDF26-B-9686970db6b22d7d",
-      "GDF26-B-9697a6675d291cce",
-      "GDF26-B-9738664f2fbe15cb",
-      "GDF26-B-99a3352c1fbd5143",
-      "GDF26-B-9b516ea6a394ca03",
-      "GDF26-B-9b830af84037c8b7",
-      "GDF26-B-9e5f4c72b13be3c9",
-      "GDF26-B-9e9336dbed87273a",
-      "GDF26-B-9ee3bc9aba4576d5",
-      "GDF26-B-a04f7b892bf9c474",
-      "GDF26-B-a16500611ede108c",
-      "GDF26-B-a2a42e9e964ce3b1",
-      "GDF26-B-a2ceccea3db9c4ac",
-      "GDF26-B-a2e3036133baf9bb",
-      "GDF26-B-a30993a63577d2b1",
-      "GDF26-B-a31e7cae90987181",
-      "GDF26-B-a3390512feb50a1e",
-      "GDF26-B-a43d8405be53abbc",
-      "GDF26-B-a4799d736ba97cb1",
-      "GDF26-B-a4b982506b4110b5",
-      "GDF26-B-a4bce22ef8fdb17e",
-      "GDF26-B-a795403860a4080f",
-      "GDF26-B-a853a6052b776f7a",
-      "GDF26-B-a86bd5fd1fe33d18",
-      "GDF26-B-a95177e82cc20ec0",
-      "GDF26-B-abb129d122318d5b",
-      "GDF26-B-abc41f1ee731e04b",
-      "GDF26-B-ac2624d9f8d0f0b9",
-      "GDF26-B-ae5398851846bad3",
-      "GDF26-B-b0857d59d99b209b",
-      "GDF26-B-b0d0305c508a07fc",
-      "GDF26-B-b19561375e08708e",
-      "GDF26-B-b289ffbf0fc22f46",
-      "GDF26-B-b29d2ee212409852",
-      "GDF26-B-b36d8daa6b9b687f",
-      "GDF26-B-b6228586a37de243",
-      "GDF26-B-b68f40a5e2de9987",
-      "GDF26-B-b6dd4d1146cb8c34",
-      "GDF26-B-b7bd94609b7cffe6",
-      "GDF26-B-b7f4cbc991fc3f91",
-      "GDF26-B-bab77334993b2424",
-      "GDF26-B-bad023c8b29a9f20",
-      "GDF26-B-bdbe2f9b1b8a7c8b",
-      "GDF26-B-bdfaca7e5553a3d7",
-      "GDF26-B-be4682580a953f22",
-      "GDF26-B-c0074b80c06130f7",
-      "GDF26-B-c0c3b8d700c3afae",
-      "GDF26-B-c10daab222fe60ce",
-      "GDF26-B-c1fcf5d0962efa86",
-      "GDF26-B-c284485588253a4b",
-      "GDF26-B-c3d875cbfa69175e",
-      "GDF26-B-c56e6712e6980cb6",
-      "GDF26-B-c5a0fbd1b8824130",
-      "GDF26-B-c72a018a2d74040a",
-      "GDF26-B-ca6694ae7f23a0da",
-      "GDF26-B-cba9b67e7fea6355",
-      "GDF26-B-cc246535084a6e4c",
-      "GDF26-B-cca42057a7d528a7",
-      "GDF26-B-cd4d6e47876b355e",
-      "GDF26-B-cd7ae1a4562aeb29",
-      "GDF26-B-ce2547a1878fd47f",
-      "GDF26-B-ce5794ae6cb1862d",
-      "GDF26-B-cea3719074f37fb5",
-      "GDF26-B-cebe206551bbcfd6",
-      "GDF26-B-cefe9eb924df3798",
-      "GDF26-B-d15d6448fd9bb7f5",
-      "GDF26-B-d2c0aebf4f5af2c8",
-      "GDF26-B-d48ab1f3eb486f3d",
-      "GDF26-B-d4bd98716bd84271",
-      "GDF26-B-d503e9bd9f6628a6",
-      "GDF26-B-d55f47e6fc50cddf",
-      "GDF26-B-d5e1d30255668240",
-      "GDF26-B-d61f1eb3197201aa",
-      "GDF26-B-d737d916fbbc32c9",
-      "GDF26-B-d8e1afa4bc028bd5",
-      "GDF26-B-d939c22e8c811b81",
-      "GDF26-B-db25d970cbb21eaf",
-      "GDF26-B-dbd03e5587c69125",
-      "GDF26-B-dcdc159b0aeb22a3",
-      "GDF26-B-dec303dedd4dc22e",
-      "GDF26-B-e04c301749754a36",
-      "GDF26-B-e0eb8d3074614368",
-      "GDF26-B-e238c311b0d08d07",
-      "GDF26-B-e4d10be0cc46428f",
-      "GDF26-B-e51f2010e87de5cc",
-      "GDF26-B-e5aa55b34b82d0b7",
-      "GDF26-B-e5d06c92f2f94dea",
-      "GDF26-B-e6edd95b1923a811",
-      "GDF26-B-e72e51f40e87994b",
-      "GDF26-B-e79fb4826960045b",
-      "GDF26-B-e891759510e0cfb2",
-      "GDF26-B-ea29f731b5d4c9ce",
-      "GDF26-B-eacbbd6534f669a3",
-      "GDF26-B-eb2d9f910457339b",
-      "GDF26-B-eb74dc9b69170486",
-      "GDF26-B-ecf21c7eaf63376b",
-      "GDF26-B-f0b3e0b3923f7b24",
-      "GDF26-B-f19e3a092ddea2b5",
-      "GDF26-B-f4574c11ead420d5",
-      "GDF26-B-f4da2cdf9e9cb478",
-      "GDF26-B-f5b901ea5c662f9c",
-      "GDF26-B-f5e1e280581eb12f",
-      "GDF26-B-f6df8fc4e769763d",
-      "GDF26-B-f9045df225493aa9",
-      "GDF26-B-f9bdd6bd8127e377",
-      "GDF26-B-fa2f09d51b17a0b0",
-      "GDF26-B-fc3ba4966e882db7",
-      "GDF26-B-fe0fcd638da66b9b",
-      "GDF26-B-fe4227358c0b5cdc",
-      "GDF26-B-fe6c302a7a4400bb",
-      "GDF26-B-fede0f53eaefdc4d",
-      "GDF26-N-009d9809f8567f31",
-      "GDF26-N-0128e3a17e037d39",
-      "GDF26-N-01ee92307f32a399",
-      "GDF26-N-029a21ca61036d4a",
-      "GDF26-N-02fef1588c62daff",
-      "GDF26-N-03f13a05aebbfb5b",
-      "GDF26-N-04c95a1740f9604e",
-      "GDF26-N-058f64d392324e5c",
-      "GDF26-N-062f77340087e106",
-      "GDF26-N-08464d3712b826b6",
-      "GDF26-N-086dffd42df1821e",
-      "GDF26-N-08a7d0f34ced2603",
-      "GDF26-N-09ee229bb8770d1d",
-      "GDF26-N-0a386f2c0ec61b1c",
-      "GDF26-N-0a4da299cbfd7d1e",
-      "GDF26-N-0a4ef9561691f850",
-      "GDF26-N-0b0fd60fe8f6751f",
-      "GDF26-N-0cb14a4b295a7cd9",
-      "GDF26-N-0d16ec9989f4e304",
-      "GDF26-N-0f8dfcab0cc9eae2",
-      "GDF26-N-0fa0301c1fedaca1",
-      "GDF26-N-102746afd7aeb749",
-      "GDF26-N-1055963f4164e5e4",
-      "GDF26-N-10e7599ec4ebed67",
-      "GDF26-N-11467926ce7a5bb1",
-      "GDF26-N-11a44a0183d9dac5",
-      "GDF26-N-12200bcaf3cb3058",
-      "GDF26-N-1275a07f119f0b29",
-      "GDF26-N-12e9b678008fe7d9",
-      "GDF26-N-138ee20d316b8384",
-      "GDF26-N-13be49b20f722f2c",
-      "GDF26-N-147937fcc166e9c9",
-      "GDF26-N-14ccb5671f931d9c",
-      "GDF26-N-1506f0a2ea8f7899",
-      "GDF26-N-16bc3acbeace520c",
-      "GDF26-N-17351fc69c6c65ac",
-      "GDF26-N-177e23262739bd1a",
-      "GDF26-N-18b693a5e8dcf94b",
-      "GDF26-N-18cf3702640aad28",
-      "GDF26-N-193ca02eae6c8b26",
-      "GDF26-N-19d30a57f72fb5de",
-      "GDF26-N-19e0e316615e6e2b",
-      "GDF26-N-19fbd4f661e4668c",
-      "GDF26-N-1a048b77f984b058",
-      "GDF26-N-1b97666fd4743000",
-      "GDF26-N-1c05c3a101717bbd",
-      "GDF26-N-1c3928eab8226c37",
-      "GDF26-N-1c4ead49cc286f12",
-      "GDF26-N-1ced9d3475c3e855",
-      "GDF26-N-1d285ead5a4f5eb3",
-      "GDF26-N-1d4351bcfd3292c0",
-      "GDF26-N-1d77d451d582497f",
-      "GDF26-N-1e61aebb5f9433db",
-      "GDF26-N-1f578b7adaabe569",
-      "GDF26-N-1fdebdf055127e95",
-      "GDF26-N-228162540ff2d044",
-      "GDF26-N-24a594375c18b1ca",
-      "GDF26-N-24d171d1b8722335",
-      "GDF26-N-258ed5674278f1a6",
-      "GDF26-N-26c91b8b57082d37",
-      "GDF26-N-272c31ccbf27608c",
-      "GDF26-N-279e76061cbca8a8",
-      "GDF26-N-27e31a36feac479e",
-      "GDF26-N-280b01dad94b5cf1",
-      "GDF26-N-29640f6a69f08d17",
-      "GDF26-N-2a6844f6a05cf55f",
-      "GDF26-N-2b71f2e9c90e59c9",
-      "GDF26-N-2bb6817ad76c4528",
-      "GDF26-N-2c2676f9fb226d5b",
-      "GDF26-N-2ce37cf4e620467a",
-      "GDF26-N-2d1e5197fd6f42ff",
-      "GDF26-N-2d852ef235c47d92",
-      "GDF26-N-2dcd0dc4a9ec2abd",
-      "GDF26-N-2e9d7b17737d607a",
-      "GDF26-N-2ea39838648efa44",
-      "GDF26-N-2eb6e4b498b53bed",
-      "GDF26-N-2f8e406310ada173",
-      "GDF26-N-307a47dc50327670",
-      "GDF26-N-3089452d85afea7a",
-      "GDF26-N-30b47b479e056429",
-      "GDF26-N-30f248c9e0e3f2a3",
-      "GDF26-N-323cd2c7a682a7c6",
-      "GDF26-N-3266a9645102b7b5",
-      "GDF26-N-340f824f4b5d5aed",
-      "GDF26-N-35585f9e051dd44f",
-      "GDF26-N-35ee8d12cee274db",
-      "GDF26-N-3668eaec5c3c35c4",
-      "GDF26-N-36e63a6141c03d6a",
-      "GDF26-N-387300c16f603ef8",
-      "GDF26-N-38d44bdc3dd6779d",
-      "GDF26-N-39653a688a76d637",
-      "GDF26-N-3adc278eea8d8ff0",
-      "GDF26-N-3be30d67c291979c",
-      "GDF26-N-3bea121486c933d8",
-      "GDF26-N-3d8f719313d3be1f",
-      "GDF26-N-3db6d5e07df95c3a",
-      "GDF26-N-3de7b2c341cc1e2d",
-      "GDF26-N-3e71024b3da225a1",
-      "GDF26-N-3ec48ed7142e3af9",
-      "GDF26-N-3ed6e36e4e636b58",
-      "GDF26-N-3efa6bdcbf4c771d",
-      "GDF26-N-3f86ba9dcc2b6f42",
-      "GDF26-N-40bc72602157ed50",
-      "GDF26-N-417e446fc08a8ec2",
-      "GDF26-N-425cdb611181767b",
-      "GDF26-N-42cd0b6ed55eeb1f",
-      "GDF26-N-42da717eea72e69a",
-      "GDF26-N-4443e92b9561d897",
-      "GDF26-N-4469a95ba60b4e08",
-      "GDF26-N-452c7da49cdc85ae",
-      "GDF26-N-4576cb553b511e98",
-      "GDF26-N-4627df4e60b4277b",
-      "GDF26-N-46b6259333ba261a",
-      "GDF26-N-471af79f0c7af5ce",
-      "GDF26-N-478e28e2f732f0a5",
-      "GDF26-N-489aa6f586a26256",
-      "GDF26-N-4a81295013f61897",
-      "GDF26-N-4aaffd6ac3f04ffb",
-      "GDF26-N-4ca2781bdc7de62c",
-      "GDF26-N-4d1c344f1ac7ee04",
-      "GDF26-N-4d30e708f0bfa3fa",
-      "GDF26-N-4d3e46196c6f65c8",
-      "GDF26-N-4dd747d567bcf2d8",
-      "GDF26-N-4df1d86ed0d9ac0f",
-      "GDF26-N-4eb547005f93979e",
-      "GDF26-N-4fc284019136207e",
-      "GDF26-N-50224f8f04f1d3f1",
-      "GDF26-N-5168015b72672940",
-      "GDF26-N-51796f278606a342",
-      "GDF26-N-51fa5039717e837b",
-      "GDF26-N-51fab46934c665a7",
-      "GDF26-N-537f883cfbae6cd8",
-      "GDF26-N-53e06335f80e23da",
-      "GDF26-N-53fd61e2908b0bd1",
-      "GDF26-N-551b007b5fa0472a",
-      "GDF26-N-5522a6dd9e8cf7bb",
-      "GDF26-N-553a914fa19b9b99",
-      "GDF26-N-556cfd778b663132",
-      "GDF26-N-557c97be7c61a4bb",
-      "GDF26-N-567d803accb69d97",
-      "GDF26-N-573dad9a0844cb66",
-      "GDF26-N-57b6ac1d6a1c0fd9",
-      "GDF26-N-5a16d9f0533c013d",
-      "GDF26-N-5b1993c4ba48a7ff",
-      "GDF26-N-5b328291932d4322",
-      "GDF26-N-5bdd221aa0772e3a",
-      "GDF26-N-5be3b640472422e9",
-      "GDF26-N-5d087318182108b4",
-      "GDF26-N-5d0e1a2640c77fb3",
-      "GDF26-N-5d81c6d2725913d3",
-      "GDF26-N-5f135585013d4281",
-      "GDF26-N-5f218e1357760e0a",
-      "GDF26-N-5f7b55ec51008474",
-      "GDF26-N-61365ded372bcab8",
-      "GDF26-N-6199533e16256ef0",
-      "GDF26-N-619e70d743a6398e",
-      "GDF26-N-6216875e358c9da4",
-      "GDF26-N-6221707d11332e2a",
-      "GDF26-N-635c44d7be64d8c2",
-      "GDF26-N-63b24d2bdf3ec088",
-      "GDF26-N-641532a995488f27",
-      "GDF26-N-648ffeff12278378",
-      "GDF26-N-64b9b42b2c762c75",
-      "GDF26-N-653744aa0a8f1534",
-      "GDF26-N-657327f1d24963a2",
-      "GDF26-N-659f1a0f4cf9a440",
-      "GDF26-N-659fe4872f2290c8",
-      "GDF26-N-65a5f800076198c3",
-      "GDF26-N-65f32048bd74b05d",
-      "GDF26-N-665caa32957a94d5",
-      "GDF26-N-66c0ef288f6acdb6",
-      "GDF26-N-67d8917c1f7483d5",
-      "GDF26-N-6a783038530a6eda",
-      "GDF26-N-6e46cce9bd8acbe0",
-      "GDF26-N-6ed2655e4f2de7d4",
-      "GDF26-N-702e290ff9ab2b00",
-      "GDF26-N-744ed5d6391c441d",
-      "GDF26-N-74e85adf46660225",
-      "GDF26-N-751c13f137d1af86",
-      "GDF26-N-7563b2984905e3bd",
-      "GDF26-N-75b7a270566d9696",
-      "GDF26-N-7603d4325b01165b",
-      "GDF26-N-7637e7cf0ad1120b",
-      "GDF26-N-768772399c87d658",
-      "GDF26-N-774f60a2708b8e35",
-      "GDF26-N-77646649d8180301",
-      "GDF26-N-777a3a736d9488db",
-      "GDF26-N-787640483519ca0f",
-      "GDF26-N-7966d0fb9544562e",
-      "GDF26-N-7a530fdb493f5d8d",
-      "GDF26-N-7b8b94cef17a7f93",
-      "GDF26-N-7c3395b2d6906224",
-      "GDF26-N-7ce9196edfbffa32",
-      "GDF26-N-7d12e2713af8f6b2",
-      "GDF26-N-7e8c171496c80cf5",
-      "GDF26-N-7f01c68aa9f991d8",
-      "GDF26-N-7f8f9ea46afb325e",
-      "GDF26-N-7f9d0998292dfabf",
-      "GDF26-N-80f8ea20180a589a",
-      "GDF26-N-813244affe562a43",
-      "GDF26-N-82b8b023c821fb35",
-      "GDF26-N-82f7235feb82efff",
-      "GDF26-N-835e44e585827269",
-      "GDF26-N-837ac5b86bdee0fe",
-      "GDF26-N-8405b320cd4889b7",
-      "GDF26-N-8462a588e3a4df24",
-      "GDF26-N-86eb466bce801464",
-      "GDF26-N-8769e3d25ef9adb0",
-      "GDF26-N-8835d6216e365ee7",
-      "GDF26-N-8903f53a295d20b6",
-      "GDF26-N-89ad799eeff1a40f",
-      "GDF26-N-8b411b0c96aca5f6",
-      "GDF26-N-8c12c03ff99fc7e6",
-      "GDF26-N-8ddb627567d43d12",
-      "GDF26-N-8e5ba5a216f1fbb3",
-      "GDF26-N-8e7216b9cf55f771",
-      "GDF26-N-8f020fc168b032fd",
-      "GDF26-N-8f068256f174253d",
-      "GDF26-N-8f45e10823366f9b",
-      "GDF26-N-8ff0d10ece5ec9aa",
-      "GDF26-N-9087366fb8d99064",
-      "GDF26-N-92b4aac3bc88ab5f",
-      "GDF26-N-930c799b02613da6",
-      "GDF26-N-934f4a0f4a048bd1",
-      "GDF26-N-936a552f6df6ca50",
-      "GDF26-N-93f35a1c0049af88",
-      "GDF26-N-948fdded8a5334ce",
-      "GDF26-N-9530a7024bcdd0be",
-      "GDF26-N-953e138a6dbe97ff",
-      "GDF26-N-95f9c0459c4e4472",
-      "GDF26-N-974818489839c7d9",
-      "GDF26-N-9844696555a3c6c4",
-      "GDF26-N-997dd0781ef4acb7",
-      "GDF26-N-998832d7b2f37c22",
-      "GDF26-N-99abb5fe4be7d109",
-      "GDF26-N-99cbb864771a8ca9",
-      "GDF26-N-9b577bf66bcec913",
-      "GDF26-N-9d2a9f88ba7b1632",
-      "GDF26-N-9ed6890db8b36d3f",
-      "GDF26-N-9ee2243014a957b5",
-      "GDF26-N-9f096047d733405d",
-      "GDF26-N-9fa4821e86e4488e",
-      "GDF26-N-a03dd3a383fdd7b7",
-      "GDF26-N-a08d7948c8a40050",
-      "GDF26-N-a0c52fea687a6fb6",
-      "GDF26-N-a0d7fe71f8331164",
-      "GDF26-N-a12a0882c27ee0cd",
-      "GDF26-N-a1c651f03b602e8d",
-      "GDF26-N-a2641c0a9dcc60ce",
-      "GDF26-N-a32be2c151ca7636",
-      "GDF26-N-a415f718902a30e3",
-      "GDF26-N-a461d52c3d80e622",
-      "GDF26-N-a552425344c19c0a",
-      "GDF26-N-a5f8aefb85fb6007",
-      "GDF26-N-a611637e7834927e",
-      "GDF26-N-a7728d2e7d801d23",
-      "GDF26-N-a78a5efbed16c4ff",
-      "GDF26-N-a916c0602d3b4c27",
-      "GDF26-N-a923ba4f99ddce3f",
-      "GDF26-N-a95e45b49f6c4126",
-      "GDF26-N-aabc1ddbe58d2291",
-      "GDF26-N-abc8a2e033c1b230",
-      "GDF26-N-ac58c8c447848d58",
-      "GDF26-N-ad1e6563a500ba53",
-      "GDF26-N-ad2c847d9e7821b2",
-      "GDF26-N-ada5b2812f0c2638",
-      "GDF26-N-af57a61bd095151b",
-      "GDF26-N-afc2a1251a1b93ea",
-      "GDF26-N-afc2df8d2b1db39d",
-      "GDF26-N-b022eab7359d2a6e",
-      "GDF26-N-b09ffcc7bd4200e8",
-      "GDF26-N-b16de00140349687",
-      "GDF26-N-b1f5430e6cbe6bda",
-      "GDF26-N-b2987b82a8cddd34",
-      "GDF26-N-b3427e90f8a2d2c7",
-      "GDF26-N-b3724a2a7b952c9c",
-      "GDF26-N-b380d85f931ed3f6",
-      "GDF26-N-b3fe13dced151a8e",
-      "GDF26-N-b5f8199d67f8b36b",
-      "GDF26-N-b72f41c188b44f0f",
-      "GDF26-N-b8f27ecd786ff9c5",
-      "GDF26-N-b92266485b42029a",
-      "GDF26-N-b94a5b7c360ae1ff",
-      "GDF26-N-b9a66e2ac2b19dfc",
-      "GDF26-N-ba052e52929c6eb8",
-      "GDF26-N-bc14f67ee66c33aa",
-      "GDF26-N-bc24e659c8ba487a",
-      "GDF26-N-bcdb4bfd250b457f",
-      "GDF26-N-bd3f9d7cad7da9b8",
-      "GDF26-N-bd86d45e88a14387",
-      "GDF26-N-bf68674b7b857cc9",
-      "GDF26-N-c14ad6c26598a0dc",
-      "GDF26-N-c1eca98298a381cd",
-      "GDF26-N-c2a755c3d5c7fdaf",
-      "GDF26-N-c2d6cab3b2104165",
-      "GDF26-N-c54d2ed97f9d0fe9",
-      "GDF26-N-c644f7993d24780a",
-      "GDF26-N-c6a458873ac61faf",
-      "GDF26-N-c8258a8ce66bbee4",
-      "GDF26-N-c9187b888730becc",
-      "GDF26-N-cad95e9ab1a246f0",
-      "GDF26-N-cc0be469c7fe7bfc",
-      "GDF26-N-cc0f053aa5894064",
-      "GDF26-N-ce1b59dbde08461f",
-      "GDF26-N-cfeff01eb3c256b8",
-      "GDF26-N-d20f94358dabd72d",
-      "GDF26-N-d3fc1461f49871d5",
-      "GDF26-N-d4bd8946bc405122",
-      "GDF26-N-d4d0e63a0cc878bb",
-      "GDF26-N-d5b51ba9e334dd48",
-      "GDF26-N-d5c9d506b33b3738",
-      "GDF26-N-d644bd00d4379aec",
-      "GDF26-N-d7c493823ec76792",
-      "GDF26-N-d89620e70e48be22",
-      "GDF26-N-da6805261251d4d2",
-      "GDF26-N-dad2f718f1395f16",
-      "GDF26-N-dd53a6b2eb27dd20",
-      "GDF26-N-de3c531a18f7e9fe",
-      "GDF26-N-df27ea4a79d12f2c",
-      "GDF26-N-e01d571ab3fa8989",
-      "GDF26-N-e0256d89c4b3ee2e",
-      "GDF26-N-e148c9daf57e4f3b",
-      "GDF26-N-e15acc444915094d",
-      "GDF26-N-e1af68cd036b6a2f",
-      "GDF26-N-e2b4f3091630dec1",
-      "GDF26-N-e2d64580fdaba1b6",
-      "GDF26-N-e4519cf774de2ff7",
-      "GDF26-N-e4aee390b8deb112",
-      "GDF26-N-e5a0ebd95eecd709",
-      "GDF26-N-e6941044ae30dd58",
-      "GDF26-N-e6a89a7d42fc0d96",
-      "GDF26-N-e6aa4e19b6a86002",
-      "GDF26-N-e816066d843d33a8",
-      "GDF26-N-e81da3ab18923a46",
-      "GDF26-N-e89f2087da4a634f",
-      "GDF26-N-e91b488c2a0ad1c0",
-      "GDF26-N-e9262742a1207772",
-      "GDF26-N-e9f88da22ce82009",
-      "GDF26-N-eaa43324952000cf",
-      "GDF26-N-eb9bfd08e5930645",
-      "GDF26-N-ebc6b89ed75f6b76",
-      "GDF26-N-ec4def8be7783af7",
-      "GDF26-N-ece492036b7e1c07",
-      "GDF26-N-ed067b906aae6530",
-      "GDF26-N-ed46c1b0a72aacde",
-      "GDF26-N-eecbf32b6f6193f9",
-      "GDF26-N-ef334bc134340110",
-      "GDF26-N-ef3f7247600c2eb4",
-      "GDF26-N-f0ed2a3bee771742",
-      "GDF26-N-f123245fa4f3e7f9",
-      "GDF26-N-f206c082fe5699ed",
-      "GDF26-N-f2c54c38fd46f7ca",
-      "GDF26-N-f35cf0dc1e9cd50e",
-      "GDF26-N-f38248c2a7968057",
-      "GDF26-N-f391278a7091e4d4",
-      "GDF26-N-f44d18ddf408bdce",
-      "GDF26-N-f45a61546ec64e0e",
-      "GDF26-N-f609a0d2256eae82",
-      "GDF26-N-f88591ba437690e3",
-      "GDF26-N-f8ac0f3016c199e0",
-      "GDF26-N-f92e70456389fa1f",
-      "GDF26-N-fadf86a659c36d6d",
-      "GDF26-N-fc3f7b0280d6102a",
-      "GDF26-N-fc7fbfa4408e0df6",
-      "GDF26-N-fcac02db4ed7c34e",
-      "GDF26-N-fd601c099bac1d07",
-      "GDF26-N-fe087daddf409b70",
-      "GDF26-N-fe107d18236a7a98",
-      "GDF26-N-feefce5f83efbd60",
-      "GDF26-N-ff86adbefadc6db6"
-    ],
-    "evidence": "docs/combat-qa-evidence-readability-2026-10-29.json"
-  },
-  "historicalQaRows": 1591,
-  "priorVerification": {
-    "schema": "encore-crossover-tracker/v1",
-    "sourceCommit": "31d02cdff4a38a7dfda652679889d9c222f2dd4c",
-    "artVersion": "7e2c223a8f1c51b1",
-    "createdAt": "2026-11-18"
-  },
-  "baseline": {
-    "workbookSHA256": "de4d3e0862e3c644d9f83ddab17a53c7382cae821f9154f55df6c1fb93ad2a60",
-    "trackerDataSHA256": "27e99b44473daf0407b4d5e436f86b734645e37c455c7fe48ef4c294977ba693"
-  },
-  "workbookSHA256": "b8e00c73ae22a9b16caa2519b565f877d914f04e8affbcf8ab38344fc6d6abaf",
-  "trackerDataSHA256": "e1df47a17fc2eefb2e2bb7b48d52bff537dc729050eb1902cc12b171ad7bbd73",
-  "nativeTables": {
-    "Fonctionnalités": [
-      "EncoreFonctionnalites",
-      106,
-      9
-    ],
-    "Combattants": [
-      "EncoreCombattants",
-      14,
-      26
-    ],
-    "Techniques": [
-      "EncoreTechniques",
-      140,
-      23
-    ],
-    "Arènes": [
-      "EncoreArenes",
-      21,
-      20
-    ],
-    "Atlas": [
-      "EncoreAtlas",
-      179,
-      33
-    ],
-    "Production": [
-      "EncoreProduction",
-      1125,
-      10
-    ],
-    "Scénarios": [
-      "EncoreScenarios",
-      94,
-      11
-    ],
-    "QA": [
-      "EncoreQA",
-      2240,
-      9
-    ]
-  },
-  "notesAndRowIdsPreserved": true,
-  "qaRowsPreserved": 2240,
-  "changedDataCells": 339,
-  "formulasVerified": 39,
-  "addedRows": {
-    "Fonctionnalités": 0,
-    "Combattants": 0,
-    "Techniques": 0,
-    "Arènes": 0,
-    "Atlas": 0,
-    "Production": 0,
-    "Scénarios": 0,
-    "QA": 0
-  },
-  "addedSources": 0,
-  "note": "L’exécution QA datée qui figure dans le classeur reste historique. L’inventaire des ressources correspond au manifeste indiqué.",
-  "releaseValidation": {
-    "assetSource": "3e6da5133e1a48e235d251f0f49e3ba0d61a3bab",
-    "offlineVersion": "0.7.0-219e33c7c546",
-    "artVersion": "75ea5695bde8f8f1",
-    "node": {
-      "passed": 379,
-      "failed": 0
-    },
-    "canvas": {
-      "legacy": {
-        "appearances": 252,
-        "textures": 2520,
-        "orientations": 4536,
-        "heavyOrientations": 504
-      },
-      "fusions": {
-        "appearances": 126,
-        "textures": 1260,
-        "orientations": 2268,
-        "heavyOrientations": 252
-      },
-      "total": {
-        "appearances": 378,
-        "textures": 3780,
-        "orientations": 6804,
-        "heavyOrientations": 756
-      },
-      "worlds": [
-        "gameoverse",
-        "gaslightdistrict",
-        "knightsofguinevere",
-        "lackadaisy",
-        "metarunner",
-        "murderdrones",
-        "smg4",
-        "sunsetparadise",
-        "ultrajumpmania"
-      ],
-      "errors": []
-    },
-    "standaloneAndEmbedded": {
-      "dist-combat": {
-        "files": 4735,
-        "bytes": 1932744663,
-        "manifestSha256": "5739affb2b052cb1f11c47b8cd23874c3f76d74233a1a1869c952c2baca53239"
-      },
-      "dist": {
-        "files": 4735,
-        "bytes": 1932744663,
-        "manifestSha256": "5739affb2b052cb1f11c47b8cd23874c3f76d74233a1a1869c952c2baca53239"
-      }
-    },
-    "exercised": {
-      "standaloneDuel": {
-        "type": "standalone",
-        "actual": {
-          "/assets/encore/crossovers/murderdrones/pomni/fusion/stance.webp": 1,
-          "/assets/encore/crossovers/murderdrones/jax/fusion/stance.webp": -1,
-          "/assets/encore/crossovers/murderdrones/pomni/fusion/intro.webp": 1,
-          "/assets/encore/crossovers/murderdrones/jax/fusion/intro.webp": -1,
-          "/assets/encore/crossovers/murderdrones/pomni/fusion/attack.webp": 1,
-          "/assets/encore/crossovers/murderdrones/jax/fusion/attack.webp": -1
-        },
-        "errors": []
-      },
-      "embeddedReplay": {
-        "type": "cainos",
-        "actual": {
-          "/assets/encore/crossovers/murderdrones/pomni/fusion/stance.webp": 1,
-          "/assets/encore/crossovers/murderdrones/jax/fusion/stance.webp": -1,
-          "/assets/encore/crossovers/murderdrones/pomni/fusion/intro.webp": 1,
-          "/assets/encore/crossovers/murderdrones/jax/fusion/intro.webp": -1
-        },
-        "errors": []
-      },
-      "wardrobeAndInputs": [
-        {
-          "pass": true,
-          "name": "Les filtres des deux joueurs, leurs portraits et leurs gardes ouvrent un duel local",
-          "detail": {
-            "appearances": 2
-          }
-        },
-        {
-          "pass": true,
-          "name": "Les coups lourds joués au clavier dessinent les deux attaques costumées pendant leur phase active",
-          "detail": [
-            {
-              "frame": 15,
-              "facing": 1,
-              "drawnFacing": 1
-            },
-            {
-              "frame": 14,
-              "facing": -1,
-              "drawnFacing": -1
-            }
-          ]
-        },
-        {
-          "pass": true,
-          "name": "Le vestiaire affiche la fusion de Pomni et réinitialise le filtre pour les tenues du cirque",
-          "detail": {
-            "appearance": "glitch-murderdrones-pomni-fusion"
-          }
-        },
-        {
-          "pass": true,
-          "name": "La garde-robe compare le résident et permet de l’essayer en entraînement",
-          "detail": {
-            "appearance": "glitch-smg4-pomni-resident"
-          }
-        }
-      ]
-    },
-    "uniqueOriginalFusionSprites": 1260,
-    "completeCrossoverCostumes": 378,
-    "accessibility": {
-      "suite": "tests/combat-accessibility-browser.mjs",
-      "checksPassed": 28,
-      "errors": [],
-      "keyboard": {
-        "Tab": 778,
-        "ShiftTab": 6,
-        "activations": 73
-      },
-      "desktopViewport": [
-        1440,
-        1000
-      ],
-      "mobileViewport": [
-        390,
-        844
-      ],
-      "sourcesInPomniBaseWardrobe": 3,
-      "sourceHashes": {
-        "combat/menu-navigation.mjs": "8075ad1dab1e7df77b028dbdf64b1369276e653d13b1a4dd0e40cd72a45009bd",
-        "tests/combat-accessibility-browser.mjs": "1485ba0eeda481b1c893325e3f2240a1b66e6986d2b38aa8aeeb9da79d2fa0e2"
-      }
+    "completeFighterStaticSets": 54,
+    "completeVariantStaticSets": 51,
+    "missingFighterDrawingSlots": 0,
+    "missingVariantDrawingSlots": 0,
+    "missingSelectionSubjects": 0,
+    "tierCounts": {
+      "primary": 8,
+      "secondary": 32,
+      "tertiary": 38,
+      "variant": 51,
+      "unverified": 31,
+      "object_or_effect": 19
     }
+  },
+  "formulas": {
+    "count": 42,
+    "recalculated": true,
+    "errors": 0,
+    "statusChangeRecalculated": true,
+    "exportRoundTripPassed": true
+  },
+  "nativeTables": 10,
+  "sheets": 11,
+  "originalIdsAndOrderPreserved": true,
+  "userNotesAndFormulasPreserved": true,
+  "unrelatedSheetValuesPreserved": true,
+  "modifiedCells": [
+    {
+      "sheet": "Combattants",
+      "id": "pomni",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "jax",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "ragatha",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "gangle",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "zooble",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "kinger",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "caine",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "bubble",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "gummigoo",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "loolilalu",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "gloinkqueen",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "fudge",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "abstractedkaufmo",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "baronmildenhall",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "queenie",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "kaufmo",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "ribbit",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "scratch",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "wormo",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "bizco",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "rattie",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "spike",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "pinkcyclops",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "yellowclown",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "oyster",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "bulbcreature",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "abel",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "max",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "chad",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "orbsman",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "ming",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "marthamildenhall",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "ghostly",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "angel",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "disappearingguy",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "committeemember",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "shrimpnpc",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "chineseroomnpc",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "blueai",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "cookiebutterfly",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "gummyelephant",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "giantcentipede",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "spudsycustomer",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "candyguardcyan",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "candyguardblue",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "candyguardpurple",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "gummyworm",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "barrelmonkey",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "jeffery",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "mildenhallsouls",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "redmannequin",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "orangemannequin",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "yellowmannequin",
+      "column": 15
+    },
+    {
+      "sheet": "Combattants",
+      "id": "magentamannequin",
+      "column": 15
+    },
+    {
+      "sheet": "Atlas",
+      "id": "pomni",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "caine",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "bubble",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "jax",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "ragatha",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "kinger",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "gangle",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "zooble",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "queenie",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "kaufmo",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "gummigoo",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "loolilalu",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "fudge",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "gloinkqueen",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "mannequin",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "abel",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "ribbit",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "scratch",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "wormo",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "bizco",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "rattie",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "spike",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "pinkcyclops",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "yellowclown",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "oyster",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "bulbcreature",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "max",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "chad",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "orbsman",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "ganglekawaii",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "ganglecomedy",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "gangletragedy",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "evilpomni",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "eviljax",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "evilragatha",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "evilkinger",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "evilzooble",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "evilorbsman",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "darkduojax",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "darkduogangle",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "maidjax",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "maidragatha",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "maidpomni",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "maidgangle",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "jaxgirl",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "beachgangle",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "japanesegangle",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "rhinogangle",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "workgangle",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "japanesejax",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "japaneseragatha",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "japanesepomni",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "japanesekinger",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "japanesezooble",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "japanesegummigoo",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "baseballjax",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "baseballzooble",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "baseballgangle",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "baseballragatha",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "baseballpomni",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "baseballkinger",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "rivalbaseballzooble",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "rivalbaseballpomni",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "rivalbaseballpinkgiant",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "rivalbaseballragatha",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "rivalbaseballjax",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "rivalbaseballkinger",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "shadowpomni",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "shadowjax",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "shadowragatha",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "shadowkinger",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "shadowgangle",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "shadowzooble",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "shadowcaine",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "horrorghost",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "horrormonster",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "horrorpomnivoid",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "horrorpomnispiral",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "horrorpomniskull",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "hunterjax",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "gloinkstar",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "gloinkcube",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "gloinkpyramid",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "gloinkcrescent",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "gloinkpin",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "gloinkround",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "abelmannequin",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "abelfullbody",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "additionalvoices",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "themachine",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "ming",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "gloinkqueenscale",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "baronmildenhall",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "marthamildenhall",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "ghostly",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "angel",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "disappearingguy",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "committeemember",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "shrimpnpc",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "chineseroomnpc",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "blueai",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "cookiebutterfly",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "gummyelephant",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "giantcentipede",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "drfootball",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "spudsycustomer",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "candyguardcyan",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "candyguardblue",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "candyguardpurple",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "gummyworm",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "barrelmonkey",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "jeffery",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "redmannequin",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "orangemannequin",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "yellowmannequin",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "magentamannequin",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "mildenhallsouls",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "albertspudsy",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "truthtellerfish",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "liarfish",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "stupidburgermannequin",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "cerealmannequin",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "bonepastor",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "ragathamothershadow",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "paintedmasks",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "zoobleparts",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "laughingshadows",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "abigailbrooks",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "suzieackerman",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "zoeyraghavan",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "rileyverselis",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "grantbest",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "leeroymateo",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "jaxfather",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "jaxmother",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "abigailfriendone",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "abigailfriendtwo",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "bestchildren",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "sun",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "moon",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "abstractedkaufmo",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "cellarabstraction",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "aquaticabstraction",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "fourthcrocodile",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "floatingworm",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "creditsfish",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "stabbedragdolls",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "coiledcentipedes",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "unusedbrainscans",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "abstractedjax",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "abstractedqueeniedark",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "abstractedqueenie",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "peeledjax",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "jaxmindviolent",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "jaxmindcomic",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "jaxmindtrapped",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "spudsypomni",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "spudsyjax",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "spudsyragatha",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "spudsyzooble",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "peekingmannequin",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "abstractedribbit",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "destinybest",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "whatifragatha",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "whatifgangle",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "jumbledragatha",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "jumbledpomni",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "angelhead",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "possessedpomni",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "monstrouscaine",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "flamingozooble",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "mouthlesspomni",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "mouthlessjax",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "mouthlesszooble",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "inertbubble",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "groundedcaine",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "healingbutterfly",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "plasticganglemask",
+      "column": 17
+    },
+    {
+      "sheet": "Atlas",
+      "id": "charredshrimp",
+      "column": 17
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pomni-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pomni-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pomni-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pomni-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pomni-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pomni-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pomni-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pomni-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pomni-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pomni-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pomni-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-jax-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-jax-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-jax-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-jax-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-jax-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-jax-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-jax-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-jax-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-jax-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-jax-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-jax-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ragatha-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ragatha-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ragatha-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ragatha-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ragatha-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ragatha-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ragatha-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ragatha-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ragatha-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ragatha-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ragatha-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ragatha-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gangle-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gangle-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gangle-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gangle-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gangle-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gangle-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gangle-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gangle-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gangle-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gangle-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gangle-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gangle-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-zooble-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-zooble-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-zooble-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-zooble-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-zooble-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-zooble-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-zooble-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-zooble-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-zooble-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-zooble-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-zooble-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kinger-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kinger-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kinger-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kinger-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kinger-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kinger-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kinger-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kinger-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kinger-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kinger-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kinger-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-caine-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-caine-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-caine-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-caine-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-caine-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-caine-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-caine-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-caine-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-caine-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-caine-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-caine-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bubble-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bubble-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bubble-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bubble-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bubble-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bubble-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bubble-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bubble-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bubble-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummigoo-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummigoo-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummigoo-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummigoo-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummigoo-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummigoo-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummigoo-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummigoo-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummigoo-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-loolilalu-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-loolilalu-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-loolilalu-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-loolilalu-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-loolilalu-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-loolilalu-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-loolilalu-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-loolilalu-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-loolilalu-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gloinkqueen-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gloinkqueen-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gloinkqueen-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gloinkqueen-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gloinkqueen-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gloinkqueen-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gloinkqueen-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gloinkqueen-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gloinkqueen-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-fudge-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-fudge-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-fudge-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-fudge-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-fudge-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-fudge-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-fudge-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-fudge-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-fudge-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-abstractedkaufmo-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-abstractedkaufmo-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-abstractedkaufmo-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-abstractedkaufmo-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-abstractedkaufmo-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-abstractedkaufmo-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-abstractedkaufmo-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-abstractedkaufmo-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-abstractedkaufmo-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-baronmildenhall-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-baronmildenhall-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-baronmildenhall-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-baronmildenhall-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-baronmildenhall-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-baronmildenhall-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-baronmildenhall-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-baronmildenhall-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-baronmildenhall-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-queenie-idle",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-queenie-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-queenie-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-queenie-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-queenie-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-queenie-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-queenie-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-queenie-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-queenie-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-queenie-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-queenie-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-queenie-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-queenie-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-queenie-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-queenie-guard",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-queenie-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-queenie-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-queenie-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kaufmo-idle",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kaufmo-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kaufmo-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kaufmo-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kaufmo-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kaufmo-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kaufmo-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kaufmo-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kaufmo-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kaufmo-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kaufmo-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kaufmo-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kaufmo-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kaufmo-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kaufmo-guard",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kaufmo-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kaufmo-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-kaufmo-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ribbit-idle",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ribbit-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ribbit-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ribbit-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ribbit-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ribbit-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ribbit-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ribbit-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ribbit-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ribbit-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ribbit-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ribbit-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ribbit-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ribbit-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ribbit-guard",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ribbit-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ribbit-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ribbit-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-scratch-idle",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-scratch-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-scratch-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-scratch-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-scratch-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-scratch-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-scratch-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-scratch-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-scratch-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-scratch-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-scratch-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-scratch-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-scratch-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-scratch-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-scratch-guard",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-scratch-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-scratch-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-scratch-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-wormo-idle",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-wormo-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-wormo-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-wormo-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-wormo-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-wormo-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-wormo-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-wormo-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-wormo-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-wormo-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-wormo-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-wormo-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-wormo-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-wormo-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-wormo-guard",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-wormo-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-wormo-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-wormo-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bizco-idle",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bizco-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bizco-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bizco-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bizco-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bizco-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bizco-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bizco-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bizco-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bizco-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bizco-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bizco-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bizco-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bizco-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bizco-guard",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bizco-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bizco-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bizco-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-rattie-idle",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-rattie-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-rattie-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-rattie-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-rattie-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-rattie-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-rattie-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-rattie-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-rattie-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-rattie-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-rattie-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-rattie-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-rattie-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-rattie-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-rattie-guard",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-rattie-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-rattie-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-rattie-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spike-idle",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spike-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spike-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spike-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spike-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spike-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spike-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spike-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spike-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spike-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spike-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spike-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spike-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spike-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spike-guard",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spike-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spike-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spike-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pinkcyclops-idle",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pinkcyclops-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pinkcyclops-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pinkcyclops-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pinkcyclops-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pinkcyclops-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pinkcyclops-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pinkcyclops-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pinkcyclops-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pinkcyclops-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pinkcyclops-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pinkcyclops-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pinkcyclops-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pinkcyclops-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pinkcyclops-guard",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pinkcyclops-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pinkcyclops-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-pinkcyclops-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowclown-idle",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowclown-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowclown-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowclown-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowclown-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowclown-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowclown-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowclown-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowclown-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowclown-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowclown-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowclown-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowclown-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowclown-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowclown-guard",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowclown-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowclown-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowclown-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-oyster-idle",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-oyster-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-oyster-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-oyster-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-oyster-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-oyster-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-oyster-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-oyster-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-oyster-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-oyster-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-oyster-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-oyster-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-oyster-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-oyster-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-oyster-guard",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-oyster-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-oyster-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-oyster-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bulbcreature-idle",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bulbcreature-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bulbcreature-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bulbcreature-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bulbcreature-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bulbcreature-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bulbcreature-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bulbcreature-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bulbcreature-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bulbcreature-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bulbcreature-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bulbcreature-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bulbcreature-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bulbcreature-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bulbcreature-guard",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bulbcreature-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bulbcreature-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-bulbcreature-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-abel-idle",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-abel-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-abel-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-abel-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-abel-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-abel-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-abel-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-abel-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-abel-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-abel-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-abel-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-abel-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-abel-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-abel-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-abel-guard",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-abel-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-abel-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-abel-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-max-idle",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-max-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-max-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-max-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-max-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-max-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-max-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-max-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-max-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-max-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-max-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-max-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-max-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-max-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-max-guard",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-max-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-max-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-max-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chad-idle",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chad-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chad-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chad-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chad-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chad-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chad-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chad-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chad-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chad-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chad-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chad-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chad-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chad-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chad-guard",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chad-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chad-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chad-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orbsman-idle",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orbsman-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orbsman-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orbsman-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orbsman-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orbsman-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orbsman-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orbsman-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orbsman-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orbsman-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orbsman-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orbsman-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orbsman-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orbsman-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orbsman-guard",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orbsman-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orbsman-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orbsman-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ming-idle",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ming-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ming-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ming-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ming-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ming-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ming-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ming-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ming-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ming-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ming-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ming-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ming-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ming-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ming-guard",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ming-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ming-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ming-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-marthamildenhall-idle",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-marthamildenhall-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-marthamildenhall-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-marthamildenhall-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-marthamildenhall-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-marthamildenhall-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-marthamildenhall-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-marthamildenhall-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-marthamildenhall-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-marthamildenhall-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-marthamildenhall-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-marthamildenhall-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-marthamildenhall-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-marthamildenhall-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-marthamildenhall-guard",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-marthamildenhall-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-marthamildenhall-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-marthamildenhall-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ghostly-idle",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ghostly-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ghostly-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ghostly-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ghostly-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ghostly-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ghostly-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ghostly-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ghostly-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ghostly-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ghostly-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ghostly-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ghostly-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ghostly-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ghostly-guard",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ghostly-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ghostly-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-ghostly-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-angel-idle",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-angel-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-angel-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-angel-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-angel-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-angel-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-angel-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-angel-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-angel-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-angel-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-angel-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-angel-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-angel-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-angel-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-angel-guard",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-angel-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-angel-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-angel-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-disappearingguy-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-disappearingguy-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-disappearingguy-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-disappearingguy-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-disappearingguy-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-disappearingguy-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-disappearingguy-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-disappearingguy-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-disappearingguy-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-disappearingguy-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-disappearingguy-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-disappearingguy-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-disappearingguy-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-disappearingguy-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-disappearingguy-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-disappearingguy-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-committeemember-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-committeemember-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-committeemember-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-committeemember-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-committeemember-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-committeemember-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-committeemember-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-committeemember-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-committeemember-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-committeemember-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-committeemember-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-committeemember-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-committeemember-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-committeemember-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-committeemember-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-committeemember-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-shrimpnpc-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-shrimpnpc-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-shrimpnpc-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-shrimpnpc-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-shrimpnpc-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-shrimpnpc-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-shrimpnpc-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-shrimpnpc-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-shrimpnpc-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-shrimpnpc-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-shrimpnpc-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-shrimpnpc-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-shrimpnpc-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-shrimpnpc-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-shrimpnpc-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-shrimpnpc-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chineseroomnpc-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chineseroomnpc-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chineseroomnpc-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chineseroomnpc-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chineseroomnpc-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chineseroomnpc-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chineseroomnpc-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chineseroomnpc-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chineseroomnpc-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chineseroomnpc-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chineseroomnpc-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chineseroomnpc-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chineseroomnpc-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chineseroomnpc-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chineseroomnpc-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-chineseroomnpc-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-blueai-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-blueai-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-blueai-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-blueai-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-blueai-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-blueai-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-blueai-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-blueai-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-blueai-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-blueai-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-blueai-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-blueai-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-blueai-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-blueai-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-blueai-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-blueai-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-cookiebutterfly-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-cookiebutterfly-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-cookiebutterfly-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-cookiebutterfly-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-cookiebutterfly-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-cookiebutterfly-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-cookiebutterfly-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-cookiebutterfly-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-cookiebutterfly-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-cookiebutterfly-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-cookiebutterfly-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-cookiebutterfly-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-cookiebutterfly-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-cookiebutterfly-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-cookiebutterfly-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-cookiebutterfly-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyelephant-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyelephant-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyelephant-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyelephant-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyelephant-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyelephant-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyelephant-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyelephant-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyelephant-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyelephant-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyelephant-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyelephant-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyelephant-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyelephant-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyelephant-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyelephant-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-giantcentipede-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-giantcentipede-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-giantcentipede-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-giantcentipede-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-giantcentipede-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-giantcentipede-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-giantcentipede-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-giantcentipede-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-giantcentipede-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-giantcentipede-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-giantcentipede-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-giantcentipede-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-giantcentipede-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-giantcentipede-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-giantcentipede-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-giantcentipede-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spudsycustomer-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spudsycustomer-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spudsycustomer-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spudsycustomer-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spudsycustomer-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spudsycustomer-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spudsycustomer-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spudsycustomer-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spudsycustomer-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spudsycustomer-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spudsycustomer-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spudsycustomer-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spudsycustomer-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spudsycustomer-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spudsycustomer-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-spudsycustomer-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardcyan-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardcyan-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardcyan-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardcyan-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardcyan-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardcyan-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardcyan-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardcyan-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardcyan-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardcyan-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardcyan-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardcyan-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardcyan-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardcyan-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardcyan-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardcyan-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardblue-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardblue-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardblue-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardblue-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardblue-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardblue-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardblue-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardblue-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardblue-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardblue-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardblue-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardblue-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardblue-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardblue-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardblue-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardblue-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardpurple-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardpurple-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardpurple-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardpurple-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardpurple-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardpurple-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardpurple-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardpurple-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardpurple-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardpurple-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardpurple-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardpurple-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardpurple-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardpurple-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardpurple-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-candyguardpurple-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyworm-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyworm-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyworm-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyworm-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyworm-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyworm-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyworm-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyworm-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyworm-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyworm-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyworm-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyworm-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyworm-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyworm-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyworm-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-gummyworm-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-barrelmonkey-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-barrelmonkey-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-barrelmonkey-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-barrelmonkey-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-barrelmonkey-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-barrelmonkey-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-barrelmonkey-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-barrelmonkey-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-barrelmonkey-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-barrelmonkey-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-barrelmonkey-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-barrelmonkey-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-barrelmonkey-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-barrelmonkey-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-barrelmonkey-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-barrelmonkey-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-jeffery-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-jeffery-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-jeffery-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-jeffery-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-jeffery-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-jeffery-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-jeffery-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-jeffery-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-jeffery-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-jeffery-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-jeffery-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-jeffery-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-jeffery-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-jeffery-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-jeffery-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-jeffery-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-mildenhallsouls-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-mildenhallsouls-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-mildenhallsouls-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-mildenhallsouls-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-mildenhallsouls-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-mildenhallsouls-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-mildenhallsouls-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-mildenhallsouls-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-mildenhallsouls-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-mildenhallsouls-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-mildenhallsouls-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-mildenhallsouls-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-mildenhallsouls-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-mildenhallsouls-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-mildenhallsouls-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-mildenhallsouls-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-redmannequin-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-redmannequin-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-redmannequin-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-redmannequin-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-redmannequin-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-redmannequin-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-redmannequin-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-redmannequin-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-redmannequin-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-redmannequin-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-redmannequin-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-redmannequin-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-redmannequin-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-redmannequin-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-redmannequin-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-redmannequin-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orangemannequin-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orangemannequin-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orangemannequin-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orangemannequin-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orangemannequin-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orangemannequin-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orangemannequin-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orangemannequin-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orangemannequin-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orangemannequin-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orangemannequin-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orangemannequin-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orangemannequin-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orangemannequin-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orangemannequin-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-orangemannequin-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowmannequin-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowmannequin-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowmannequin-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowmannequin-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowmannequin-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowmannequin-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowmannequin-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowmannequin-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowmannequin-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowmannequin-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowmannequin-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowmannequin-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowmannequin-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowmannequin-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowmannequin-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-yellowmannequin-victory",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-magentamannequin-idle",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-magentamannequin-walk",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-magentamannequin-walk",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-magentamannequin-jump",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-magentamannequin-jump",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-magentamannequin-crouch",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-magentamannequin-crouch",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-magentamannequin-light",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-magentamannequin-light",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-magentamannequin-heavy",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-magentamannequin-heavy",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-magentamannequin-hurt",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-magentamannequin-hurt",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-magentamannequin-guard",
+      "column": 8
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-magentamannequin-victory",
+      "column": 7
+    },
+    {
+      "sheet": "Production",
+      "id": "ART-magentamannequin-victory",
+      "column": 8
+    }
+  ],
+  "renderedViews": [
+    {
+      "sheet": "Synthèse",
+      "range": "A1:H35"
+    },
+    {
+      "sheet": "Combattants",
+      "range": "A18:O21"
+    },
+    {
+      "sheet": "Atlas",
+      "range": "A6:S8"
+    },
+    {
+      "sheet": "Production",
+      "range": "A2751:J2754"
+    },
+    {
+      "sheet": "Production",
+      "range": "A2930:J2933"
+    },
+    {
+      "sheet": "QA",
+      "range": "A2255:I2257"
+    },
+    {
+      "sheet": "QA",
+      "range": "A2258:I2260"
+    }
+  ],
+  "releaseReviewed": false,
+  "fullCiExecuted": false,
+  "canonicalVisualApproval": false,
+  "limitations": [
+    "Workbook and file inventory rebuilt; dated Node/Canvas execution evidence imported after checking its hashes, not rerun by this generator.",
+    "Canonical image comparison and animation cycles remain separate production tasks.",
+    "No desktop Excel or physical-device session is claimed."
+  ],
+  "gameVersion": "0.7.0",
+  "runtimeManifest": {
+    "offlineVersion": "0.7.0-9d40b0881496",
+    "artVersion": "0e03085d0a637d14",
+    "artFiles": 5331,
+    "artBytes": 2538831567,
+    "sha256": "6bc34c00690e60393965bb51b069cc6c6ce46b94565bacd0f5d4f9e7cf9820a9"
+  },
+  "generatorSHA256": "b2492d24816b0d727780d2923c623e84aa9f3783338a3e0c94e59568611b16c7",
+  "completionEvidence": {
+    "file": "docs/combat-character-verification-2026-11-19.json",
+    "inputs": {
+      "docs/combat-character-verification-2026-11-19.json": "7629b55d5bb8f6ef013ceb5f072b6ec22cfb2024723a6dcf4cd6eaeb9f4b81ef",
+      "docs/images/character-completion-2026-11-19/character-canvas-review.json": "f16568f11b6a59888b41011eeac4757293c77222fd47ef9b3ea6823183aed9ff",
+      "docs/images/character-scenes-2026-11-19/canvas-review.json": "e966dbee4028a9000d0c3d3bb6d4e56033af6780c24147f04ea3fe077a095291",
+      "docs/combat-character-art-inventory-2026-11-19.json": "52b0f2cbcf056a472f5a4226365d2ae46c440cc7b14eb6e2f123d71122fb91b2",
+      "docs/combat-character-qa-2026-11-19.log": "f95f7cf07ac90a70afad20ca7aec5d4efa25118458e474e6c83d31f06e0f4336"
+    },
+    "hashesVerifiedAgainstCurrentFiles": true,
+    "qaRowIds": [
+      "CHARCOV26-inventory",
+      "CHARCOV26-canvas",
+      "CHARCOV26-scenes",
+      "CHARCOV26-node",
+      "CHARCOV26-browser"
+    ]
   }
 }

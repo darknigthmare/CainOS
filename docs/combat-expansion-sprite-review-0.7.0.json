@@ -1,0 +1,1514 @@
+{
+  "schema": "encore-expansion-sprite-review/v1",
+  "gameVersion": "0.7.0",
+  "createdAt": "2026-11-17T16:12:24.897Z",
+  "scope": "Comparaison des 40 sprites PNJ promus en 0.7.0 aux plans primaires disponibles, puis mise à jour de leurs fiches de fidélité.",
+  "method": {
+    "extraction": "Chaque cellule a été extraite aux coordonnées de combat/sprite-catalog.mjs (planche, colonnes, lignes, colonne, ligne) avec Pillow 12.3.0, puis détourée de son fond pour être inspectée seule.",
+    "contactSheet": "docs/images/expansion-sprites-review-0.7.0.png (40 cellules étiquetées avec leurs dimensions extraites).",
+    "primaryVisuals": "Sept visuels ont été téléchargés depuis leurs URL officielles et inspectés : portrait de groupe GLITCH, cour de Candy Canyon, plan sous la carte, accessoires du chapiteau, Vide irisé, cellier aux yeux, vignette Spudsy de Netflix. Deux autres visuels officiels de la galerie ne montraient que Pomni.",
+    "limits": "Aucun plan primaire consulté ne montre l’un des 40 PNJ : les observations portent donc sur le sprite du projet, jamais sur un trait canonique. Aucune frame de vidéo n’a été extraite (yt-dlp et ffmpeg indisponibles dans cet environnement)."
+  },
+  "references": [
+    {
+      "id": "glitch-cast",
+      "title": "GLITCH — portrait du groupe au cirque",
+      "url": "https://static.wixstatic.com/media/84ed6a_e3bac825d5c140a4a665ba898b3ff51b~mv2.png",
+      "kind": "Visuel officiel",
+      "scope": "Repères de costume, de visage et de silhouette pour Pomni, Jax, Ragatha, Gangle, Zooble, Kinger et Caine. Image publiée sur https://www.glitchprod.com/digital-circus et consultée pour cette revue."
+    },
+    {
+      "id": "glitch-candy-court",
+      "title": "GLITCH — le groupe à la cour de Candy Canyon",
+      "url": "https://static.wixstatic.com/media/84ed6a_bd08976f81644a659cbc9a8e112fb5dc~mv2.png",
+      "kind": "Visuel officiel",
+      "scope": "Jax au premier plan, Loolilalu et le palais de confiserie à l’arrière-plan. Les petits accessoires sont trop éloignés pour une validation détaillée. Image publiée sur https://www.glitchprod.com/digital-circus et consultée pour cette revue."
+    },
+    {
+      "id": "glitch-undermap",
+      "title": "GLITCH — Pomni et Gummigoo sous la carte",
+      "url": "https://static.wixstatic.com/media/84ed6a_0558e3b65a3146b5b04b7828da5b4d0e~mv2.png",
+      "kind": "Visuel officiel",
+      "scope": "Gummigoo vert et jaune translucide avec son chapeau, dans un environnement quadrillé bleu. Cet espace ne sert pas de référence au Vide blanc du pilote. Image publiée sur https://www.glitchprod.com/digital-circus et consultée pour cette revue."
+    },
+    {
+      "id": "glitch-circus-props",
+      "title": "GLITCH — Pomni parmi les accessoires du cirque",
+      "url": "https://static.wixstatic.com/media/84ed6a_e7edb891769b4d1d9d06939d1d4db6a7~mv2.png",
+      "kind": "Visuel officiel",
+      "scope": "Dés, cubes, rideau rouge et sol à damier. Repères de décor, sans mesure de l’espace jouable. Image publiée sur https://www.glitchprod.com/digital-circus et consultée pour cette revue."
+    },
+    {
+      "id": "glitch-void",
+      "title": "GLITCH — Pomni dans le Vide irisé",
+      "url": "https://static.wixstatic.com/media/84ed6a_9f2c0f92fcc340fea405c155a304e362~mv2.png",
+      "kind": "Visuel officiel",
+      "scope": "Espace blanc aux reflets pâles et bandes chromatiques. Cette référence ne montre ni escalier ni panneau EXIT. Image publiée sur https://www.glitchprod.com/digital-circus et consultée pour cette revue."
+    },
+    {
+      "id": "glitch-cellar",
+      "title": "GLITCH — le cellier et ses yeux dans l’obscurité",
+      "url": "https://static.wixstatic.com/media/84ed6a_de54a5d816fe4ba0966cc96385ab8f8b~mv2.jpg",
+      "kind": "Visuel officiel",
+      "scope": "Obscurité presque noire, yeux multicolores et lumière centrale. Aucun couloir de portes dans ce plan. Image publiée sur https://www.glitchprod.com/digital-circus et consultée pour cette revue."
+    },
+    {
+      "id": "netflix-spudsy-counter",
+      "title": "Netflix — Spudsy, vignette de Fast Food Masquerade",
+      "url": "https://occ-0-3012-114.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABY7TJYmplbg8lnHqbjKLMs9jVNbYeIHivWTdEufLA0d-90FfapefydK8i59MTeahWLBWGxlNMM4radrd0MARwM-FxSHl7ekrwgfjyuQ1bbOZIBhn7QqT5PHh.jpg?r=b1e",
+      "kind": "Visuel du distributeur officiel",
+      "scope": "Vignette de 300 × 169 pixels publiée par Netflix pour l’épisode 4. Le comptoir, la cuisine, les couleurs et le logo S sont observables ; les textes des offres et les dimensions ne sont pas validés."
+    }
+  ],
+  "summary": {
+    "spritesReviewed": 40,
+    "confirmedAgainstPrimaryVisual": 0,
+    "stillOpen": 40,
+    "spritesWithRecordedIssues": 29,
+    "recordedIssues": 35,
+    "framingIssues": 16,
+    "episodeAttributionConflicts": 9
+  },
+  "sprites": [
+    {
+      "id": "queenie",
+      "name": "Queenie",
+      "title": "Le souvenir du chapiteau",
+      "routeEpisode": "ep1",
+      "archiveLabel": "Archive",
+      "atlasSheet": "cainos-pixel-cast-sheet.png",
+      "atlasCell": "rangée 2, colonne 3",
+      "extractedSize": "256 × 342 px",
+      "assetReview": {
+        "status": "Revue technique 0.7.0 effectuée",
+        "captureId": "expansion-sprites-0.7.0#queenie",
+        "sheet": "cainos-pixel-cast-sheet.png",
+        "cell": "rangée 2, colonne 3",
+        "extractedSize": "256 × 342 px",
+        "visibleTraits": [
+          "Reine âgée au visage pâle et aux paupières tombantes, couronne dorée à pointes.",
+          "Robe lie-de-vin à col et revers de fourrure blanche, mains jointes devant le buste."
+        ],
+        "framing": "Cadre extrait sans fragment d’une cellule voisine ; les pieds et la couronne sont entièrement contenus.",
+        "transparency": "Planche RVB au fond noir presque opaque : le fond et le damier clair sont retirés par le détourage du rendu, aucun alpha natif n’est disponible.",
+        "proportions": "Cadre extrait 256 × 342 px pour un corps de simulation 76 × 215 px ; l’échelle du duel est une décision de jeu, pas une mesure de l’épisode.",
+        "identityEvidence": "La couronne et la robe de cérémonie donnent une figure royale de cirque ; ni le nom Queenie ni son rôle ne sont documentés par une source consultée.",
+        "issues": []
+      },
+      "fidelity": {
+        "reviewStatus": "Épisode à revoir",
+        "sourceIds": [
+          "ep1"
+        ],
+        "observedTraits": [],
+        "reviewScope": "Le catalogue d’archive étiquette ce sprite « Archive » sans épisode, alors que la route de Queenie cite le pilote. Aucun visuel officiel consulté ne montre Queenie : la revue reste technique et porte sur la cellule d’atlas cainos-pixel-cast-sheet.png (rangée 2, colonne 3, 256 × 342 px). Les proportions, les gestes et le costume canoniques restent à confronter à un plan primaire de l’épisode cité ; aucune capacité de combat canonique n’est déclarée."
+      }
+    },
+    {
+      "id": "kaufmo",
+      "name": "Kaufmo",
+      "title": "Le clown d’avant",
+      "routeEpisode": "ep1",
+      "archiveLabel": "Archive - avant abstraction",
+      "atlasSheet": "cainos-pixel-cast-sheet.png",
+      "atlasCell": "rangée 2, colonne 4",
+      "extractedSize": "256 × 342 px",
+      "assetReview": {
+        "status": "Revue technique 0.7.0 effectuée",
+        "captureId": "expansion-sprites-0.7.0#kaufmo",
+        "sheet": "cainos-pixel-cast-sheet.png",
+        "cell": "rangée 2, colonne 4",
+        "extractedSize": "256 × 342 px",
+        "visibleTraits": [
+          "Clown au visage blanc, nez rouge, bouche bleue et collerette à volants bleue.",
+          "Combinaison jaune à boutons rouges, chapeau pointu à pompon, gants blancs et chaussures rouges."
+        ],
+        "framing": "Cadre extrait sans fragment d’une cellule voisine ; la pointe du chapeau reste dans la cellule.",
+        "transparency": "Planche RVB au fond noir presque opaque : le fond et le damier clair sont retirés par le détourage du rendu, aucun alpha natif n’est disponible.",
+        "proportions": "Cadre extrait 256 × 342 px pour un corps de simulation 84 × 235 px ; l’échelle du duel est une décision de jeu, pas une mesure de l’épisode.",
+        "identityEvidence": "La tenue de clown rend l’identité de Kaufmo lisible, mais le sprite ne montre pas l’état abstrait que l’archive distingue pour ce personnage.",
+        "issues": [
+          "Le costume du sprite est jaune et bleu ; sa correspondance avec la tenue du pilote n’est pas vérifiée."
+        ]
+      },
+      "fidelity": {
+        "reviewStatus": "Épisode à revoir",
+        "sourceIds": [
+          "ep1"
+        ],
+        "observedTraits": [],
+        "reviewScope": "Kaufmo apparaît dans le pilote, mais aucun plan officiel consulté ne le montre entier et de face. Aucun visuel officiel consulté ne montre Kaufmo : la revue reste technique et porte sur la cellule d’atlas cainos-pixel-cast-sheet.png (rangée 2, colonne 4, 256 × 342 px). Les proportions, les gestes et le costume canoniques restent à confronter à un plan primaire de l’épisode cité ; aucune capacité de combat canonique n’est déclarée."
+      }
+    },
+    {
+      "id": "ribbit",
+      "name": "Ribbit",
+      "title": "La grenouille du groupe",
+      "routeEpisode": "ep1",
+      "archiveLabel": "Archive pre-abstraction / abstrait ensuite",
+      "atlasSheet": "cainos-pixel-cast-sheet-abstracted.png",
+      "atlasCell": "rangée 1, colonne 1",
+      "extractedSize": "307 × 512 px",
+      "assetReview": {
+        "status": "Revue technique 0.7.0 effectuée",
+        "captureId": "expansion-sprites-0.7.0#ribbit",
+        "sheet": "cainos-pixel-cast-sheet-abstracted.png",
+        "cell": "rangée 1, colonne 1",
+        "extractedSize": "307 × 512 px",
+        "visibleTraits": [
+          "Grenouille verte debout, grands yeux blancs sur le dessus de la tête et nœud papillon rose.",
+          "Ventre crème, membres longs et mains à trois doigts."
+        ],
+        "framing": "Cadre occupant toute la cellule ; aucun fragment voisin n’est visible.",
+        "transparency": "Planche RVB au fond noir : le détourage du rendu retire le fond, aucun alpha natif n’est disponible.",
+        "proportions": "Cadre extrait 307 × 512 px pour un corps de simulation 74 × 190 px ; l’échelle du duel est une décision de jeu, pas une mesure de l’épisode.",
+        "identityEvidence": "Silhouette de grenouille anthropomorphe cohérente avec le nom Ribbit ; l’archive ne nomme aucun épisode.",
+        "issues": []
+      },
+      "fidelity": {
+        "reviewStatus": "Épisode à revoir",
+        "sourceIds": [
+          "ep1"
+        ],
+        "observedTraits": [],
+        "reviewScope": "Aucun visuel officiel consulté ne montre cette grenouille ; l’archive la classe « pré-abstraction / abstrait ensuite » sans source datée. Aucun visuel officiel consulté ne montre Ribbit : la revue reste technique et porte sur la cellule d’atlas cainos-pixel-cast-sheet-abstracted.png (rangée 1, colonne 1, 307 × 512 px). Les proportions, les gestes et le costume canoniques restent à confronter à un plan primaire de l’épisode cité ; aucune capacité de combat canonique n’est déclarée."
+      }
+    },
+    {
+      "id": "scratch",
+      "name": "Scratch",
+      "title": "Le chat rayé",
+      "routeEpisode": "ep1",
+      "archiveLabel": "Archive pre-abstraction / abstrait ensuite",
+      "atlasSheet": "cainos-pixel-cast-sheet-abstracted.png",
+      "atlasCell": "rangée 1, colonne 2",
+      "extractedSize": "307 × 512 px",
+      "assetReview": {
+        "status": "Revue technique 0.7.0 effectuée",
+        "captureId": "expansion-sprites-0.7.0#scratch",
+        "sheet": "cainos-pixel-cast-sheet-abstracted.png",
+        "cell": "rangée 1, colonne 2",
+        "extractedSize": "307 × 512 px",
+        "visibleTraits": [
+          "Chien jaune mâtiné de brun, longues oreilles tombantes, museau brun et truffe noire.",
+          "Pull rouge, gants blancs et chaussures brunes ; aucune rayure sur le pelage."
+        ],
+        "framing": "Cadre occupant toute la cellule ; aucun fragment voisin n’est visible.",
+        "transparency": "Planche RVB au fond noir : le détourage du rendu retire le fond, aucun alpha natif n’est disponible.",
+        "proportions": "Cadre extrait 307 × 512 px pour un corps de simulation 78 × 205 px ; l’échelle du duel est une décision de jeu, pas une mesure de l’épisode.",
+        "identityEvidence": "Le dessin est un chien anthropomorphe de dessin animé ; il ne correspond pas au chat rayé annoncé par la route générée de Scratch.",
+        "issues": [
+          "Contradiction d’identité : la fiche de route parle d’un chat rayé alors que le sprite est un chien.",
+          "Le nom Scratch n’est rattaché à aucun personnage attesté dans une source consultée."
+        ]
+      },
+      "fidelity": {
+        "reviewStatus": "Épisode à revoir",
+        "sourceIds": [
+          "ep1"
+        ],
+        "observedTraits": [],
+        "reviewScope": "Aucun plan primaire ne documente Scratch ; le titre de la route devra être corrigé ou justifié avant toute promotion narrative. Aucun visuel officiel consulté ne montre Scratch : la revue reste technique et porte sur la cellule d’atlas cainos-pixel-cast-sheet-abstracted.png (rangée 1, colonne 2, 307 × 512 px). Les proportions, les gestes et le costume canoniques restent à confronter à un plan primaire de l’épisode cité ; aucune capacité de combat canonique n’est déclarée."
+      }
+    },
+    {
+      "id": "wormo",
+      "name": "Wormo",
+      "title": "Le ver du chapiteau",
+      "routeEpisode": "ep1",
+      "archiveLabel": "Archive pre-abstraction / abstrait ensuite",
+      "atlasSheet": "cainos-pixel-cast-sheet-abstracted.png",
+      "atlasCell": "rangée 1, colonne 3",
+      "extractedSize": "308 × 512 px",
+      "assetReview": {
+        "status": "Revue technique 0.7.0 effectuée",
+        "captureId": "expansion-sprites-0.7.0#wormo",
+        "sheet": "cainos-pixel-cast-sheet-abstracted.png",
+        "cell": "rangée 1, colonne 3",
+        "extractedSize": "308 × 512 px",
+        "visibleTraits": [
+          "Ver vertical segmenté, alternance de segments orange et verts et deux grands yeux bleus.",
+          "Joues en spirale rose et fine antenne recourbée au sommet."
+        ],
+        "framing": "Un fragment blanc d’une cellule voisine reste collé au bord droit du cadre extrait.",
+        "transparency": "Planche RVB au fond noir : le détourage du rendu retire le fond, aucun alpha natif n’est disponible.",
+        "proportions": "Cadre extrait 308 × 512 px pour un corps de simulation 88 × 210 px ; l’échelle du duel est une décision de jeu, pas une mesure de l’épisode.",
+        "identityEvidence": "Le ver anthropomorphe est cohérent avec le nom Wormo ; l’archive ne cite ni épisode ni source.",
+        "issues": [
+          "Le cadre contient un débris blanc de la cellule voisine à droite.",
+          "Le sprite est suspendu à un crochet peint, qui fera partie de la silhouette de combat."
+        ]
+      },
+      "fidelity": {
+        "reviewStatus": "Épisode à revoir",
+        "sourceIds": [
+          "ep1"
+        ],
+        "observedTraits": [],
+        "reviewScope": "Aucun visuel officiel consulté ne montre Wormo ; son échelle et sa pose de duel restent à comparer à un plan primaire. Aucun visuel officiel consulté ne montre Wormo : la revue reste technique et porte sur la cellule d’atlas cainos-pixel-cast-sheet-abstracted.png (rangée 1, colonne 3, 308 × 512 px). Les proportions, les gestes et le costume canoniques restent à confronter à un plan primaire de l’épisode cité ; aucune capacité de combat canonique n’est déclarée."
+      }
+    },
+    {
+      "id": "bizco",
+      "name": "Bizco",
+      "title": "Le biscuit vivant",
+      "routeEpisode": "ep1",
+      "archiveLabel": "Archive pre-abstraction / abstrait ensuite",
+      "atlasSheet": "cainos-pixel-cast-sheet-abstracted.png",
+      "atlasCell": "rangée 1, colonne 4",
+      "extractedSize": "307 × 512 px",
+      "assetReview": {
+        "status": "Revue technique 0.7.0 effectuée",
+        "captureId": "expansion-sprites-0.7.0#bizco",
+        "sheet": "cainos-pixel-cast-sheet-abstracted.png",
+        "cell": "rangée 1, colonne 4",
+        "extractedSize": "307 × 512 px",
+        "visibleTraits": [
+          "Bouffon au visage rond blanc, joues rouges et chapeau à grelots violet et rouge.",
+          "Combinaison violette à pois, gants blancs et chaussures rouges."
+        ],
+        "framing": "Un fragment rayé rouge et blanc d’une cellule voisine apparaît en bas à droite du cadre extrait.",
+        "transparency": "Planche RVB au fond noir : le détourage du rendu retire le fond, aucun alpha natif n’est disponible.",
+        "proportions": "Cadre extrait 307 × 512 px pour un corps de simulation 80 × 195 px ; l’échelle du duel est une décision de jeu, pas une mesure de l’épisode.",
+        "identityEvidence": "Le costume de bouffon explique le nom Bizco, mais aucune source consultée ne rattache ce dessin à un résident nommé de la série.",
+        "issues": [
+          "Un fragment rayé de la cellule voisine reste dans le cadre en bas à droite."
+        ]
+      },
+      "fidelity": {
+        "reviewStatus": "Épisode à revoir",
+        "sourceIds": [
+          "ep1"
+        ],
+        "observedTraits": [],
+        "reviewScope": "Aucun plan primaire ne documente Bizco ; la revue reste limitée au sprite et à son détourage. Aucun visuel officiel consulté ne montre Bizco : la revue reste technique et porte sur la cellule d’atlas cainos-pixel-cast-sheet-abstracted.png (rangée 1, colonne 4, 307 × 512 px). Les proportions, les gestes et le costume canoniques restent à confronter à un plan primaire de l’épisode cité ; aucune capacité de combat canonique n’est déclarée."
+      }
+    },
+    {
+      "id": "rattie",
+      "name": "Rattie",
+      "title": "La rate du cirque",
+      "routeEpisode": "ep1",
+      "archiveLabel": "Archive pre-abstraction / abstrait ensuite",
+      "atlasSheet": "cainos-pixel-cast-sheet-abstracted.png",
+      "atlasCell": "rangée 1, colonne 5",
+      "extractedSize": "307 × 512 px",
+      "assetReview": {
+        "status": "Revue technique 0.7.0 effectuée",
+        "captureId": "expansion-sprites-0.7.0#rattie",
+        "sheet": "cainos-pixel-cast-sheet-abstracted.png",
+        "cell": "rangée 1, colonne 5",
+        "extractedSize": "307 × 512 px",
+        "visibleTraits": [
+          "Rousse anthropomorphe gris-brun, oreilles rondes à intérieur bleu et mèche rouge.",
+          "Fleur rose sur le torse, dents visibles et longue queue spiralée."
+        ],
+        "framing": "Cadre occupant toute la cellule ; un petit point blanc traîne au pied droit.",
+        "transparency": "Planche RVB au fond noir : le détourage du rendu retire le fond, aucun alpha natif n’est disponible.",
+        "proportions": "Cadre extrait 307 × 512 px pour un corps de simulation 70 × 185 px ; l’échelle du duel est une décision de jeu, pas une mesure de l’épisode.",
+        "identityEvidence": "La rousse anthropomorphe correspond au nom Rattie ; la mèche rouge et la fleur sont des détails du dessin, non des traits attestés.",
+        "issues": []
+      },
+      "fidelity": {
+        "reviewStatus": "Épisode à revoir",
+        "sourceIds": [
+          "ep1"
+        ],
+        "observedTraits": [],
+        "reviewScope": "Aucun visuel officiel consulté ne montre Rattie ; aucune source ne précise son gabarit canonique. Aucun visuel officiel consulté ne montre Rattie : la revue reste technique et porte sur la cellule d’atlas cainos-pixel-cast-sheet-abstracted.png (rangée 1, colonne 5, 307 × 512 px). Les proportions, les gestes et le costume canoniques restent à confronter à un plan primaire de l’épisode cité ; aucune capacité de combat canonique n’est déclarée."
+      }
+    },
+    {
+      "id": "spike",
+      "name": "Spike",
+      "title": "Le petit piquant",
+      "routeEpisode": "ep1",
+      "archiveLabel": "Archive pre-abstraction / abstrait ensuite",
+      "atlasSheet": "cainos-pixel-cast-sheet-abstracted.png",
+      "atlasCell": "rangée 2, colonne 1",
+      "extractedSize": "307 × 512 px",
+      "assetReview": {
+        "status": "Revue technique 0.7.0 effectuée",
+        "captureId": "expansion-sprites-0.7.0#spike",
+        "sheet": "cainos-pixel-cast-sheet-abstracted.png",
+        "cell": "rangée 2, colonne 1",
+        "extractedSize": "307 × 512 px",
+        "visibleTraits": [
+          "Dinosaure violet à crêtes orange, taches multicolores et ventre crème.",
+          "Chapeau de fête jaune, griffes bleues et longue queue."
+        ],
+        "framing": "Cadre occupant toute la cellule ; aucun fragment voisin n’est visible.",
+        "transparency": "Planche RVB au fond noir : le détourage du rendu retire le fond, aucun alpha natif n’est disponible.",
+        "proportions": "Cadre extrait 307 × 512 px pour un corps de simulation 76 × 200 px ; l’échelle du duel est une décision de jeu, pas une mesure de l’épisode.",
+        "identityEvidence": "Le sprite est un dinosaure de fête ; il ne montre ni piquant dominant ni lecture de hérisson, alors que la fiche le nomme « Le petit piquant ».",
+        "issues": [
+          "Le titre « Le petit piquant » ne décrit pas la crête du dinosaure."
+        ]
+      },
+      "fidelity": {
+        "reviewStatus": "Épisode à revoir",
+        "sourceIds": [
+          "ep1"
+        ],
+        "observedTraits": [],
+        "reviewScope": "Aucun plan primaire ne documente Spike ; l’identité de dinosaure n’est attestée que par l’atlas. Aucun visuel officiel consulté ne montre Spike : la revue reste technique et porte sur la cellule d’atlas cainos-pixel-cast-sheet-abstracted.png (rangée 2, colonne 1, 307 × 512 px). Les proportions, les gestes et le costume canoniques restent à confronter à un plan primaire de l’épisode cité ; aucune capacité de combat canonique n’est déclarée."
+      }
+    },
+    {
+      "id": "pinkcyclops",
+      "name": "Pink Furry Cyclops",
+      "title": "Le spectateur velu",
+      "routeEpisode": "ep1",
+      "archiveLabel": "Archive pre-abstraction / abstrait ensuite",
+      "atlasSheet": "cainos-pixel-cast-sheet-abstracted.png",
+      "atlasCell": "rangée 2, colonne 2",
+      "extractedSize": "307 × 512 px",
+      "assetReview": {
+        "status": "Revue technique 0.7.0 effectuée",
+        "captureId": "expansion-sprites-0.7.0#pinkcyclops",
+        "sheet": "cainos-pixel-cast-sheet-abstracted.png",
+        "cell": "rangée 2, colonne 2",
+        "extractedSize": "307 × 512 px",
+        "visibleTraits": [
+          "Monstre rose à fourrure longue, un seul œil bleu et deux petits pieds.",
+          "Petite queue et bras courts terminés par des mains à trois doigts."
+        ],
+        "framing": "Un fragment bleu-violet d’une cellule voisine reste collé au bord gauche du cadre extrait.",
+        "transparency": "Planche RVB au fond noir : le détourage du rendu retire le fond, aucun alpha natif n’est disponible.",
+        "proportions": "Cadre extrait 307 × 512 px pour un corps de simulation 120 × 260 px ; l’échelle du duel est une décision de jeu, pas une mesure de l’épisode.",
+        "identityEvidence": "Le cyclope rose velu correspond exactement au nom descriptif de l’archive Pink Furry Cyclops.",
+        "issues": [
+          "Un fragment bleu-violet de la cellule voisine reste dans le cadre à gauche."
+        ]
+      },
+      "fidelity": {
+        "reviewStatus": "Épisode à revoir",
+        "sourceIds": [
+          "ep1"
+        ],
+        "observedTraits": [],
+        "reviewScope": "Aucun visuel officiel consulté ne montre ce cyclope ; son échelle de colosse est une règle du jeu. Aucun visuel officiel consulté ne montre Pink Furry Cyclops : la revue reste technique et porte sur la cellule d’atlas cainos-pixel-cast-sheet-abstracted.png (rangée 2, colonne 2, 307 × 512 px). Les proportions, les gestes et le costume canoniques restent à confronter à un plan primaire de l’épisode cité ; aucune capacité de combat canonique n’est déclarée."
+      }
+    },
+    {
+      "id": "yellowclown",
+      "name": "Frowning Yellow Clown",
+      "title": "Le clown qui boude",
+      "routeEpisode": "ep1",
+      "archiveLabel": "Archive pre-abstraction / abstrait ensuite",
+      "atlasSheet": "cainos-pixel-cast-sheet-abstracted.png",
+      "atlasCell": "rangée 2, colonne 3",
+      "extractedSize": "308 × 512 px",
+      "assetReview": {
+        "status": "Revue technique 0.7.0 effectuée",
+        "captureId": "expansion-sprites-0.7.0#yellowclown",
+        "sheet": "cainos-pixel-cast-sheet-abstracted.png",
+        "cell": "rangée 2, colonne 3",
+        "extractedSize": "308 × 512 px",
+        "visibleTraits": [
+          "Clown jaune au visage triste, larmes bleues, nez rouge et collerette bleue à volants.",
+          "Deux antennes à pompons, corps jaune à boutons rouges et pieds orange."
+        ],
+        "framing": "Cadre occupant toute la cellule ; aucun fragment voisin n’est visible.",
+        "transparency": "Planche RVB au fond noir : le détourage du rendu retire le fond, aucun alpha natif n’est disponible.",
+        "proportions": "Cadre extrait 308 × 512 px pour un corps de simulation 82 × 220 px ; l’échelle du duel est une décision de jeu, pas une mesure de l’épisode.",
+        "identityEvidence": "Le clown jaune qui boude correspond au nom descriptif Frowning Yellow Clown de l’archive.",
+        "issues": []
+      },
+      "fidelity": {
+        "reviewStatus": "Épisode à revoir",
+        "sourceIds": [
+          "ep1"
+        ],
+        "observedTraits": [],
+        "reviewScope": "Aucun plan primaire ne documente ce clown ; la tristesse du visage est observée dans le dessin, pas dans la série. Aucun visuel officiel consulté ne montre Frowning Yellow Clown : la revue reste technique et porte sur la cellule d’atlas cainos-pixel-cast-sheet-abstracted.png (rangée 2, colonne 3, 308 × 512 px). Les proportions, les gestes et le costume canoniques restent à confronter à un plan primaire de l’épisode cité ; aucune capacité de combat canonique n’est déclarée."
+      }
+    },
+    {
+      "id": "oyster",
+      "name": "The Oyster",
+      "title": "La perle du décor",
+      "routeEpisode": "ep1",
+      "archiveLabel": "Archive pre-abstraction / abstrait ensuite",
+      "atlasSheet": "cainos-pixel-cast-sheet-abstracted.png",
+      "atlasCell": "rangée 2, colonne 4",
+      "extractedSize": "307 × 512 px",
+      "assetReview": {
+        "status": "Revue technique 0.7.0 effectuée",
+        "captureId": "expansion-sprites-0.7.0#oyster",
+        "sheet": "cainos-pixel-cast-sheet-abstracted.png",
+        "cell": "rangée 2, colonne 4",
+        "extractedSize": "307 × 512 px",
+        "visibleTraits": [
+          "Coquille bleu-gris à bord ondulé, ouverte sur une grande perle blanche.",
+          "La perle porte deux yeux noirs et un bec ; deux petits pieds violets dépassent."
+        ],
+        "framing": "Cadre occupant toute la cellule ; aucun fragment voisin n’est visible.",
+        "transparency": "Planche RVB au fond noir : le détourage du rendu retire le fond, aucun alpha natif n’est disponible.",
+        "proportions": "Cadre extrait 307 × 512 px pour un corps de simulation 90 × 205 px ; l’échelle du duel est une décision de jeu, pas une mesure de l’épisode.",
+        "identityEvidence": "L’huître à perle vivante correspond au nom The Oyster ; l’archive ne cite aucun épisode.",
+        "issues": []
+      },
+      "fidelity": {
+        "reviewStatus": "Épisode à revoir",
+        "sourceIds": [
+          "ep1"
+        ],
+        "observedTraits": [],
+        "reviewScope": "Aucun visuel officiel consulté ne montre cette huître ; sa coquille n’est pas comparée à un plan primaire. Aucun visuel officiel consulté ne montre The Oyster : la revue reste technique et porte sur la cellule d’atlas cainos-pixel-cast-sheet-abstracted.png (rangée 2, colonne 4, 307 × 512 px). Les proportions, les gestes et le costume canoniques restent à confronter à un plan primaire de l’épisode cité ; aucune capacité de combat canonique n’est déclarée."
+      }
+    },
+    {
+      "id": "bulbcreature",
+      "name": "Light Green Bulb Creature",
+      "title": "La lanterne du cirque",
+      "routeEpisode": "ep1",
+      "archiveLabel": "Archive pre-abstraction / abstrait ensuite",
+      "atlasSheet": "cainos-pixel-cast-sheet-abstracted.png",
+      "atlasCell": "rangée 2, colonne 5",
+      "extractedSize": "307 × 512 px",
+      "assetReview": {
+        "status": "Revue technique 0.7.0 effectuée",
+        "captureId": "expansion-sprites-0.7.0#bulbcreature",
+        "sheet": "cainos-pixel-cast-sheet-abstracted.png",
+        "cell": "rangée 2, colonne 5",
+        "extractedSize": "307 × 512 px",
+        "visibleTraits": [
+          "Créature verte en forme d’ampoule, grands yeux violets et nœud papillon rose.",
+          "Petit corps rouge et blanc, chaussures roses."
+        ],
+        "framing": "Un mince fragment coloré d’une cellule voisine touche le bord droit du cadre extrait.",
+        "transparency": "Planche RVB au fond noir : le détourage du rendu retire le fond, aucun alpha natif n’est disponible.",
+        "proportions": "Cadre extrait 307 × 512 px pour un corps de simulation 76 × 200 px ; l’échelle du duel est une décision de jeu, pas une mesure de l’épisode.",
+        "identityEvidence": "La créature en ampoule verte correspond au nom Light Green Bulb Creature de l’archive.",
+        "issues": [
+          "Un mince fragment de la cellule voisine reste dans le cadre à droite."
+        ]
+      },
+      "fidelity": {
+        "reviewStatus": "Épisode à revoir",
+        "sourceIds": [
+          "ep1"
+        ],
+        "observedTraits": [],
+        "reviewScope": "Aucun plan primaire ne documente cette créature ; son rôle de lanterne est une invention de fan-game. Aucun visuel officiel consulté ne montre Light Green Bulb Creature : la revue reste technique et porte sur la cellule d’atlas cainos-pixel-cast-sheet-abstracted.png (rangée 2, colonne 5, 307 × 512 px). Les proportions, les gestes et le costume canoniques restent à confronter à un plan primaire de l’épisode cité ; aucune capacité de combat canonique n’est déclarée."
+      }
+    },
+    {
+      "id": "abel",
+      "name": "Abel",
+      "title": "La silhouette du programme",
+      "routeEpisode": "ep1",
+      "archiveLabel": "PNJ supprime - Ep. 7",
+      "atlasSheet": "cainos-pixel-cast-sheet.png",
+      "atlasCell": "rangée 3, colonne 4",
+      "extractedSize": "256 × 341 px",
+      "assetReview": {
+        "status": "Revue technique 0.7.0 effectuée",
+        "captureId": "expansion-sprites-0.7.0#abel",
+        "sheet": "cainos-pixel-cast-sheet.png",
+        "cell": "rangée 3, colonne 4",
+        "extractedSize": "256 × 341 px",
+        "visibleTraits": [
+          "Enfant blond auréolé, robe blanche à liseré doré et ceinture dorée.",
+          "Bottes blanches et une main levée en geste d’accueil."
+        ],
+        "framing": "Un fragment orange d’une cellule voisine apparaît au bord droit du cadre extrait.",
+        "transparency": "Planche RVB au fond noir presque opaque : le fond et le damier clair sont retirés par le détourage du rendu, aucun alpha natif n’est disponible.",
+        "proportions": "Cadre extrait 256 × 341 px pour un corps de simulation 82 × 225 px ; l’échelle du duel est une décision de jeu, pas une mesure de l’épisode.",
+        "identityEvidence": "L’archive nomme Abel et le date de l’épisode 7, mais le sprite est un angelot ; aucune source consultée ne confirme cette identité.",
+        "issues": [
+          "Le fragment orange du voisin reste dans le cadre à droite.",
+          "L’attribution à l’épisode 7 ne vient que du catalogue d’archive."
+        ]
+      },
+      "fidelity": {
+        "reviewStatus": "Épisode à revoir",
+        "sourceIds": [
+          "ep1",
+          "ep7"
+        ],
+        "observedTraits": [],
+        "reviewScope": "La route d’Abel cite le pilote alors que l’archive le date de l’épisode 7 ; cette contradiction reste ouverte. Aucun visuel officiel consulté ne montre Abel : la revue reste technique et porte sur la cellule d’atlas cainos-pixel-cast-sheet.png (rangée 3, colonne 4, 256 × 341 px). Les proportions, les gestes et le costume canoniques restent à confronter à un plan primaire de l’épisode cité ; aucune capacité de combat canonique n’est déclarée."
+      }
+    },
+    {
+      "id": "max",
+      "name": "Max",
+      "title": "Le caïman de tête",
+      "routeEpisode": "ep2",
+      "archiveLabel": "NPC",
+      "atlasSheet": "cainos-pixel-cast-sheet-variants.png",
+      "atlasCell": "rangée 1, colonne 1",
+      "extractedSize": "384 × 341 px",
+      "assetReview": {
+        "status": "Revue technique 0.7.0 effectuée",
+        "captureId": "expansion-sprites-0.7.0#max",
+        "sheet": "cainos-pixel-cast-sheet-variants.png",
+        "cell": "rangée 1, colonne 1",
+        "extractedSize": "384 × 341 px",
+        "visibleTraits": [
+          "Crocodile de confiserie vert, chapeau de cowboy brun à fleur rose et bandana rouge.",
+          "Ceinture à boucle, crêtes dorsales, longue queue et sucette rose tenue à la main."
+        ],
+        "framing": "Cadre occupant toute la cellule ; aucun fragment voisin n’est visible.",
+        "transparency": "Planche RVB au fond noir : le détourage du rendu retire le fond, aucun alpha natif n’est disponible.",
+        "proportions": "Cadre extrait 384 × 341 px pour un corps de simulation 96 × 240 px ; l’échelle du duel est une décision de jeu, pas une mesure de l’épisode.",
+        "identityEvidence": "Le crocodile vert en tenue de cowboy appartient à la famille visuelle de Gummigoo et de son convoi ; aucun plan ne permet de certifier Max nommément.",
+        "issues": []
+      },
+      "fidelity": {
+        "reviewStatus": "Épisode à revoir",
+        "sourceIds": [
+          "ep2"
+        ],
+        "observedTraits": [],
+        "reviewScope": "Le plan officiel de Candy Canyon consulté ne montre aucun membre du convoi : la parenté avec Gummigoo reste une lecture du dessin. Aucun visuel officiel consulté ne montre Max : la revue reste technique et porte sur la cellule d’atlas cainos-pixel-cast-sheet-variants.png (rangée 1, colonne 1, 384 × 341 px). Les proportions, les gestes et le costume canoniques restent à confronter à un plan primaire de l’épisode cité ; aucune capacité de combat canonique n’est déclarée."
+      }
+    },
+    {
+      "id": "chad",
+      "name": "Chad",
+      "title": "Le caïman costaud",
+      "routeEpisode": "ep2",
+      "archiveLabel": "NPC",
+      "atlasSheet": "cainos-pixel-cast-sheet-variants.png",
+      "atlasCell": "rangée 1, colonne 2",
+      "extractedSize": "384 × 341 px",
+      "assetReview": {
+        "status": "Revue technique 0.7.0 effectuée",
+        "captureId": "expansion-sprites-0.7.0#chad",
+        "sheet": "cainos-pixel-cast-sheet-variants.png",
+        "cell": "rangée 1, colonne 2",
+        "extractedSize": "384 × 341 px",
+        "visibleTraits": [
+          "Crocodile vert plus large, chapeau sombre, bandana violet et pantalon écossais brun-rouge.",
+          "Sucette tenue devant le torse, crêtes et queue visibles."
+        ],
+        "framing": "Cadre occupant toute la cellule ; aucun fragment voisin n’est visible.",
+        "transparency": "Planche RVB au fond noir : le détourage du rendu retire le fond, aucun alpha natif n’est disponible.",
+        "proportions": "Cadre extrait 384 × 341 px pour un corps de simulation 110 × 255 px ; l’échelle du duel est une décision de jeu, pas une mesure de l’épisode.",
+        "identityEvidence": "La silhouette trapue de crocodile de confiserie évoque le convoi de Gummigoo ; le nom Chad ne vient que du catalogue.",
+        "issues": [
+          "Le gabarit de colosse est une décision de jeu, non une mesure de l’épisode."
+        ]
+      },
+      "fidelity": {
+        "reviewStatus": "Épisode à revoir",
+        "sourceIds": [
+          "ep2"
+        ],
+        "observedTraits": [],
+        "reviewScope": "Aucun plan primaire consulté ne montre Chad ; sa parenté avec Gummigoo n’est pas démontrée. Aucun visuel officiel consulté ne montre Chad : la revue reste technique et porte sur la cellule d’atlas cainos-pixel-cast-sheet-variants.png (rangée 1, colonne 2, 384 × 341 px). Les proportions, les gestes et le costume canoniques restent à confronter à un plan primaire de l’épisode cité ; aucune capacité de combat canonique n’est déclarée."
+      }
+    },
+    {
+      "id": "orbsman",
+      "name": "Orbsman",
+      "title": "Le guide du manoir",
+      "routeEpisode": "ep3",
+      "archiveLabel": "NPC",
+      "atlasSheet": "cainos-pixel-cast-sheet-variants.png",
+      "atlasCell": "rangée 1, colonne 3",
+      "extractedSize": "384 × 341 px",
+      "assetReview": {
+        "status": "Revue technique 0.7.0 effectuée",
+        "captureId": "expansion-sprites-0.7.0#orbsman",
+        "sheet": "cainos-pixel-cast-sheet-variants.png",
+        "cell": "rangée 1, colonne 3",
+        "extractedSize": "384 × 341 px",
+        "visibleTraits": [
+          "Personnage de foire assemblé en sphères colorées, tête verte et haut-de-forme violet.",
+          "Gants blancs, chaussures rouges et nœud papillon rouge."
+        ],
+        "framing": "Cadre occupant toute la cellule ; aucun fragment voisin n’est visible.",
+        "transparency": "Planche RVB au fond noir : le détourage du rendu retire le fond, aucun alpha natif n’est disponible.",
+        "proportions": "Cadre extrait 384 × 341 px pour un corps de simulation 80 × 215 px ; l’échelle du duel est une décision de jeu, pas une mesure de l’épisode.",
+        "identityEvidence": "La figure sphérique correspond au nom Orbsman de l’archive ; aucun épisode n’est nommé par une source consultée.",
+        "issues": []
+      },
+      "fidelity": {
+        "reviewStatus": "Épisode à revoir",
+        "sourceIds": [
+          "ep3"
+        ],
+        "observedTraits": [],
+        "reviewScope": "Orbsman est daté de l’épisode 3 par la fiche, mais aucun plan du manoir consulté ne montre ce personnage. Aucun visuel officiel consulté ne montre Orbsman : la revue reste technique et porte sur la cellule d’atlas cainos-pixel-cast-sheet-variants.png (rangée 1, colonne 3, 384 × 341 px). Les proportions, les gestes et le costume canoniques restent à confronter à un plan primaire de l’épisode cité ; aucune capacité de combat canonique n’est déclarée."
+      }
+    },
+    {
+      "id": "ming",
+      "name": "Ming",
+      "title": "L’invitée du programme",
+      "routeEpisode": "ep1",
+      "archiveLabel": "NPC",
+      "atlasSheet": "cainos-pixel-cast-sheet-ming.png",
+      "atlasCell": "planche dédiée, figure unique",
+      "extractedSize": "1024 × 1536 px",
+      "assetReview": {
+        "status": "Revue technique 0.7.0 effectuée",
+        "captureId": "expansion-sprites-0.7.0#ming",
+        "sheet": "cainos-pixel-cast-sheet-ming.png",
+        "cell": "planche dédiée, figure unique",
+        "extractedSize": "1024 × 1536 px",
+        "visibleTraits": [
+          "Androïde gris articulé, visière verte et grands yeux ronds, membres à rotules.",
+          "Debout sur une ellipse verte lumineuse incluse dans le dessin."
+        ],
+        "framing": "La planche dédiée ne contient qu’une figure et son halo ; aucun voisin.",
+        "transparency": "Planche RVB dédiée au fond noir : le détourage du rendu retire le fond, le halo vert est peint dans le dessin.",
+        "proportions": "Cadre extrait 1024 × 1536 px pour un corps de simulation 72 × 195 px ; l’échelle du duel est une décision de jeu, pas une mesure de l’épisode.",
+        "identityEvidence": "Figure de mannequin-machine ; ni le nom Ming ni l’épisode 1 de la fiche ne sont étayés par une source consultée.",
+        "issues": [
+          "L’ellipse lumineuse est peinte dans le dessin et sera détourée comme partie du sprite."
+        ]
+      },
+      "fidelity": {
+        "reviewStatus": "Épisode à revoir",
+        "sourceIds": [
+          "ep1"
+        ],
+        "observedTraits": [],
+        "reviewScope": "Aucun plan primaire ne documente Ming ; son apparence d’androïde reste une donnée d’archive. Aucun visuel officiel consulté ne montre Ming : la revue reste technique et porte sur la cellule d’atlas cainos-pixel-cast-sheet-ming.png (planche dédiée, figure unique, 1024 × 1536 px). Les proportions, les gestes et le costume canoniques restent à confronter à un plan primaire de l’épisode cité ; aucune capacité de combat canonique n’est déclarée."
+      }
+    },
+    {
+      "id": "marthamildenhall",
+      "name": "Martha Mildenhall",
+      "title": "La voix du manoir",
+      "routeEpisode": "ep3",
+      "archiveLabel": "PNJ - Ep. 3",
+      "atlasSheet": "cainos-pixel-cast-sheet-canon-npc-pack-a.png",
+      "atlasCell": "rangée 1, colonne 2",
+      "extractedSize": "443 × 887 px",
+      "assetReview": {
+        "status": "Revue technique 0.7.0 effectuée",
+        "captureId": "expansion-sprites-0.7.0#marthamildenhall",
+        "sheet": "cainos-pixel-cast-sheet-canon-npc-pack-a.png",
+        "cell": "rangée 1, colonne 2",
+        "extractedSize": "443 × 887 px",
+        "visibleTraits": [
+          "Femme translucide verte, large capeline et robe longue à plis.",
+          "Tient une petite tasse à deux mains ; les traits du visage sont effacés par la transparence."
+        ],
+        "framing": "Cadre occupant toute la cellule ; aucun fragment voisin n’est visible.",
+        "transparency": "Planche RVB au fond noir : le détourage du rendu retire le fond, aucun alpha natif n’est disponible.",
+        "proportions": "Cadre extrait 443 × 887 px pour un corps de simulation 80 × 225 px ; l’échelle du duel est une décision de jeu, pas une mesure de l’épisode.",
+        "identityEvidence": "La silhouette spectrale féminine est cohérente avec le manoir de l’épisode 3 et le nom Martha Mildenhall, sans plan primaire consulté.",
+        "issues": [
+          "Le sprite est entièrement translucide ; son opacité de rendu n’est pas comparée à la série."
+        ]
+      },
+      "fidelity": {
+        "reviewStatus": "Épisode à revoir",
+        "sourceIds": [
+          "ep3"
+        ],
+        "observedTraits": [],
+        "reviewScope": "Aucun visuel officiel consulté ne montre Martha Mildenhall ; le manoir n’est documenté que par le lien d’épisode. Aucun visuel officiel consulté ne montre Martha Mildenhall : la revue reste technique et porte sur la cellule d’atlas cainos-pixel-cast-sheet-canon-npc-pack-a.png (rangée 1, colonne 2, 443 × 887 px). Les proportions, les gestes et le costume canoniques restent à confronter à un plan primaire de l’épisode cité ; aucune capacité de combat canonique n’est déclarée."
+      }
+    },
+    {
+      "id": "ghostly",
+      "name": "Ghostly",
+      "title": "Le spectre de passage",
+      "routeEpisode": "ep3",
+      "archiveLabel": "PNJ - Ep. 3",
+      "atlasSheet": "cainos-pixel-cast-sheet-canon-npc-pack-a.png",
+      "atlasCell": "rangée 1, colonne 3",
+      "extractedSize": "443 × 887 px",
+      "assetReview": {
+        "status": "Revue technique 0.7.0 effectuée",
+        "captureId": "expansion-sprites-0.7.0#ghostly",
+        "sheet": "cainos-pixel-cast-sheet-canon-npc-pack-a.png",
+        "cell": "rangée 1, colonne 3",
+        "extractedSize": "443 × 887 px",
+        "visibleTraits": [
+          "Petit fantôme vert d’eau aux grands yeux blancs et à la bouche ouverte.",
+          "Corps en goutte terminé par une queue ondulante."
+        ],
+        "framing": "Une griffe blanche d’une cellule voisine reste collée au bord droit du cadre extrait.",
+        "transparency": "Planche RVB au fond noir : le détourage du rendu retire le fond, aucun alpha natif n’est disponible.",
+        "proportions": "Cadre extrait 443 × 887 px pour un corps de simulation 74 × 210 px ; l’échelle du duel est une décision de jeu, pas une mesure de l’épisode.",
+        "identityEvidence": "Le fantôme goutte correspond au nom Ghostly de l’archive ; aucune source consultée ne lui attribue un rôle dans le manoir.",
+        "issues": [
+          "Une griffe blanche du voisin reste dans le cadre à droite."
+        ]
+      },
+      "fidelity": {
+        "reviewStatus": "Épisode à revoir",
+        "sourceIds": [
+          "ep3"
+        ],
+        "observedTraits": [],
+        "reviewScope": "Aucun plan primaire ne documente Ghostly ; son apparence complète reste non comparée. Aucun visuel officiel consulté ne montre Ghostly : la revue reste technique et porte sur la cellule d’atlas cainos-pixel-cast-sheet-canon-npc-pack-a.png (rangée 1, colonne 3, 443 × 887 px). Les proportions, les gestes et le costume canoniques restent à confronter à un plan primaire de l’épisode cité ; aucune capacité de combat canonique n’est déclarée."
+      }
+    },
+    {
+      "id": "angel",
+      "name": "Angel",
+      "title": "L’ange du manoir",
+      "routeEpisode": "ep3",
+      "archiveLabel": "PNJ - Ep. 3",
+      "atlasSheet": "cainos-pixel-cast-sheet-canon-npc-pack-a.png",
+      "atlasCell": "rangée 1, colonne 4",
+      "extractedSize": "444 × 887 px",
+      "assetReview": {
+        "status": "Revue technique 0.7.0 effectuée",
+        "captureId": "expansion-sprites-0.7.0#angel",
+        "sheet": "cainos-pixel-cast-sheet-canon-npc-pack-a.png",
+        "cell": "rangée 1, colonne 4",
+        "extractedSize": "444 × 887 px",
+        "visibleTraits": [
+          "Silhouette décharnée gris pâle, crâne étroit aux orbites sombres.",
+          "Très longs bras à doigts crochus et deux grandes ailes nervurées déployées."
+        ],
+        "framing": "Cadre occupant toute la cellule ; les ailes touchent les bords sans inclure de voisin.",
+        "transparency": "Planche RVB au fond noir : le détourage du rendu retire le fond, aucun alpha natif n’est disponible.",
+        "proportions": "Cadre extrait 444 × 887 px pour un corps de simulation 78 × 220 px ; l’échelle du duel est une décision de jeu, pas une mesure de l’épisode.",
+        "identityEvidence": "L’archive nomme Angel une figure d’ange décharnée ; le sprite est plus proche d’un spectre du manoir que de l’angelot Abel.",
+        "issues": [
+          "Deux fiches voisines, Abel et Angel, proposent des anges très différents sans source primaire."
+        ]
+      },
+      "fidelity": {
+        "reviewStatus": "Épisode à revoir",
+        "sourceIds": [
+          "ep3"
+        ],
+        "observedTraits": [],
+        "reviewScope": "Aucun plan primaire ne documente Angel ; l’identité angélique n’est attestée que par le nom du catalogue. Aucun visuel officiel consulté ne montre Angel : la revue reste technique et porte sur la cellule d’atlas cainos-pixel-cast-sheet-canon-npc-pack-a.png (rangée 1, colonne 4, 444 × 887 px). Les proportions, les gestes et le costume canoniques restent à confronter à un plan primaire de l’épisode cité ; aucune capacité de combat canonique n’est déclarée."
+      }
+    },
+    {
+      "id": "disappearingguy",
+      "name": "Disappearing Guy",
+      "title": "Le figurant qui s’efface",
+      "routeEpisode": "ep1",
+      "archiveLabel": "PNJ - Ep. 5/6",
+      "atlasSheet": "cainos-pixel-cast-sheet-canon-npc-pack-b.png",
+      "atlasCell": "rangée 1, colonne 1",
+      "extractedSize": "355 × 887 px",
+      "assetReview": {
+        "status": "Revue technique 0.7.0 effectuée",
+        "captureId": "expansion-sprites-0.7.0#disappearingguy",
+        "sheet": "cainos-pixel-cast-sheet-canon-npc-pack-b.png",
+        "cell": "rangée 1, colonne 1",
+        "extractedSize": "355 × 887 px",
+        "visibleTraits": [
+          "Silhouette rouge articulée, chapeau à large bord et visage sans traits.",
+          "Membres à rotules, gants et bottes de la même teinte rouge."
+        ],
+        "framing": "Cadre occupant toute la cellule ; aucun fragment voisin n’est visible.",
+        "transparency": "Planche RVB au fond noir : le détourage du rendu retire le fond, aucun alpha natif n’est disponible.",
+        "proportions": "Cadre extrait 355 × 887 px pour un corps de simulation 76 × 205 px ; l’échelle du duel est une décision de jeu, pas une mesure de l’épisode.",
+        "identityEvidence": "La figure encapuchonnée rouge ne montre aucun effet de disparition ; son nom vient uniquement du catalogue.",
+        "issues": [
+          "Le nom Disappearing Guy n’est soutenu par aucun élément visible du dessin."
+        ]
+      },
+      "fidelity": {
+        "reviewStatus": "Épisode à revoir",
+        "sourceIds": [
+          "ep1",
+          "ep5",
+          "ep6"
+        ],
+        "observedTraits": [],
+        "reviewScope": "L’archive date ce sprite des épisodes 5 et 6 alors que la route actuelle cite le pilote ; aucune des deux attributions n’est vérifiée. Aucun visuel officiel consulté ne montre Disappearing Guy : la revue reste technique et porte sur la cellule d’atlas cainos-pixel-cast-sheet-canon-npc-pack-b.png (rangée 1, colonne 1, 355 × 887 px). Les proportions, les gestes et le costume canoniques restent à confronter à un plan primaire de l’épisode cité ; aucune capacité de combat canonique n’est déclarée."
+      }
+    },
+    {
+      "id": "committeemember",
+      "name": "Committee Member",
+      "title": "Le comité du cirque",
+      "routeEpisode": "ep1",
+      "archiveLabel": "PNJ - Ep. 6",
+      "atlasSheet": "cainos-pixel-cast-sheet-canon-npc-pack-b.png",
+      "atlasCell": "rangée 1, colonne 2",
+      "extractedSize": "355 × 887 px",
+      "assetReview": {
+        "status": "Revue technique 0.7.0 effectuée",
+        "captureId": "expansion-sprites-0.7.0#committeemember",
+        "sheet": "cainos-pixel-cast-sheet-canon-npc-pack-b.png",
+        "cell": "rangée 1, colonne 2",
+        "extractedSize": "355 × 887 px",
+        "visibleTraits": [
+          "Mannequin gris argenté, visage lisse sans traits et articulations visibles.",
+          "Tient un badge rond bleu à ruban devant le torse."
+        ],
+        "framing": "Un fragment orange d’une cellule voisine reste collé au bord droit du cadre extrait.",
+        "transparency": "Planche RVB au fond noir : le détourage du rendu retire le fond, aucun alpha natif n’est disponible.",
+        "proportions": "Cadre extrait 355 × 887 px pour un corps de simulation 84 × 220 px ; l’échelle du duel est une décision de jeu, pas une mesure de l’épisode.",
+        "identityEvidence": "Le mannequin à badge évoque un membre de comité ; aucun plan consulté ne documente ce personnage.",
+        "issues": [
+          "Le fragment orange du voisin reste dans le cadre à droite."
+        ]
+      },
+      "fidelity": {
+        "reviewStatus": "Épisode à revoir",
+        "sourceIds": [
+          "ep1",
+          "ep6"
+        ],
+        "observedTraits": [],
+        "reviewScope": "L’archive date ce sprite de l’épisode 6 alors que la route cite le pilote ; la contradiction reste ouverte. Aucun visuel officiel consulté ne montre Committee Member : la revue reste technique et porte sur la cellule d’atlas cainos-pixel-cast-sheet-canon-npc-pack-b.png (rangée 1, colonne 2, 355 × 887 px). Les proportions, les gestes et le costume canoniques restent à confronter à un plan primaire de l’épisode cité ; aucune capacité de combat canonique n’est déclarée."
+      }
+    },
+    {
+      "id": "shrimpnpc",
+      "name": "Shrimp NPC",
+      "title": "La crevette de service",
+      "routeEpisode": "ep2",
+      "archiveLabel": "PNJ - Ep. 7",
+      "atlasSheet": "cainos-pixel-cast-sheet-canon-npc-pack-b.png",
+      "atlasCell": "rangée 1, colonne 5",
+      "extractedSize": "355 × 887 px",
+      "assetReview": {
+        "status": "Revue technique 0.7.0 effectuée",
+        "captureId": "expansion-sprites-0.7.0#shrimpnpc",
+        "sheet": "cainos-pixel-cast-sheet-canon-npc-pack-b.png",
+        "cell": "rangée 1, colonne 5",
+        "extractedSize": "355 × 887 px",
+        "visibleTraits": [
+          "Crevette orange recourbée, longues antennes et gros œil noir.",
+          "Nombreuses pattes, segments dorsaux et éventail caudal."
+        ],
+        "framing": "Cadre occupant toute la cellule ; aucun fragment voisin n’est visible.",
+        "transparency": "Planche RVB au fond noir : le détourage du rendu retire le fond, aucun alpha natif n’est disponible.",
+        "proportions": "Cadre extrait 355 × 887 px pour un corps de simulation 68 × 180 px ; l’échelle du duel est une décision de jeu, pas une mesure de l’épisode.",
+        "identityEvidence": "La crevette correspond au nom descriptif Shrimp NPC ; l’archive la date de l’épisode 7.",
+        "issues": []
+      },
+      "fidelity": {
+        "reviewStatus": "Épisode à revoir",
+        "sourceIds": [
+          "ep2",
+          "ep7"
+        ],
+        "observedTraits": [],
+        "reviewScope": "La route cite l’épisode 2 alors que l’archive date ce sprite de l’épisode 7 ; la crevette n’apparaît dans aucun visuel consulté. Aucun visuel officiel consulté ne montre Shrimp NPC : la revue reste technique et porte sur la cellule d’atlas cainos-pixel-cast-sheet-canon-npc-pack-b.png (rangée 1, colonne 5, 355 × 887 px). Les proportions, les gestes et le costume canoniques restent à confronter à un plan primaire de l’épisode cité ; aucune capacité de combat canonique n’est déclarée."
+      }
+    },
+    {
+      "id": "chineseroomnpc",
+      "name": "Chinese Room NPC",
+      "title": "La chambre des règles",
+      "routeEpisode": "ep1",
+      "archiveLabel": "PNJ - Ep. 7",
+      "atlasSheet": "cainos-pixel-cast-sheet-canon-npc-pack-c.png",
+      "atlasCell": "planche entière, scène unique",
+      "extractedSize": "1254 × 1254 px",
+      "assetReview": {
+        "status": "Revue technique 0.7.0 effectuée",
+        "captureId": "expansion-sprites-0.7.0#chineseroomnpc",
+        "sheet": "cainos-pixel-cast-sheet-canon-npc-pack-c.png",
+        "cell": "planche entière, scène unique",
+        "extractedSize": "1254 × 1254 px",
+        "visibleTraits": [
+          "Bureau de bois verni, fauteuil sombre et grand livre ouvert au titre « ARTIFICIAL CHINESE DICTIONARY ».",
+          "Lampe sphérique, dossier noir et paravent à cartes colorées derrière la scène."
+        ],
+        "framing": "Le cadre extrait est la scène entière : aucun détourage de personnage n’est possible dans cette cellule.",
+        "transparency": "Planche RVB contenant un décor complet sur fond noir ; le détourage ne peut pas isoler une silhouette de combattant.",
+        "proportions": "Cadre extrait 1254 × 1254 px pour un corps de simulation 82 × 215 px ; l’échelle du duel est une décision de jeu, pas une mesure de l’épisode.",
+        "identityEvidence": "La cellule ne contient pas un combattant mais un décor de bureau ; le nom Chinese Room NPC désigne une expérience de pensée et non un personnage attesté.",
+        "issues": [
+          "Le sprite jouable est un diorama complet : sa silhouette de combat ne correspond à aucun personnage.",
+          "Le livre affiche un titre anglais lisible qui restera minuscule à l’échelle du duel."
+        ]
+      },
+      "fidelity": {
+        "reviewStatus": "Épisode à revoir",
+        "sourceIds": [
+          "ep1"
+        ],
+        "observedTraits": [],
+        "reviewScope": "Aucun plan primaire ne documente cette scène ; l’archive la date de l’épisode 7 alors que la route cite le pilote. Aucun visuel officiel consulté ne montre Chinese Room NPC : la revue reste technique et porte sur la cellule d’atlas cainos-pixel-cast-sheet-canon-npc-pack-c.png (planche entière, scène unique, 1254 × 1254 px). Les proportions, les gestes et le costume canoniques restent à confronter à un plan primaire de l’épisode cité ; aucune capacité de combat canonique n’est déclarée."
+      }
+    },
+    {
+      "id": "blueai",
+      "name": "Blue AI",
+      "title": "L’assistant bleu",
+      "routeEpisode": "ep1",
+      "archiveLabel": "IA canonique - Ep. 9",
+      "atlasSheet": "cainos-pixel-cast-sheet-canon-npc-pack-d.png",
+      "atlasCell": "rangée 1, colonne 1",
+      "extractedSize": "322 × 330 px",
+      "assetReview": {
+        "status": "Revue technique 0.7.0 effectuée",
+        "captureId": "expansion-sprites-0.7.0#blueai",
+        "sheet": "cainos-pixel-cast-sheet-canon-npc-pack-d.png",
+        "cell": "rangée 1, colonne 1",
+        "extractedSize": "322 × 330 px",
+        "visibleTraits": [
+          "Anneau holographique cyan composé de cercles concentriques et de crochets lumineux.",
+          "Cœur blanc surexposé au centre et socle circulaire bleu."
+        ],
+        "framing": "Cadre resserré autour de l’anneau lumineux ; les coins du damier sont exclus.",
+        "transparency": "Planche RVB au damier clair peint : le damier est retiré par le détourage du rendu, aucun alpha natif n’est disponible.",
+        "proportions": "Cadre extrait 322 × 330 px pour un corps de simulation 78 × 210 px ; l’échelle du duel est une décision de jeu, pas une mesure de l’épisode.",
+        "identityEvidence": "L’anneau lumineux suggère une interface plutôt qu’un résident ; le nom Blue AI et l’épisode 9 viennent du catalogue.",
+        "issues": [
+          "Le cœur blanc saturé ne laisse lire aucun détail interne."
+        ]
+      },
+      "fidelity": {
+        "reviewStatus": "Épisode à revoir",
+        "sourceIds": [
+          "ep1",
+          "ep9"
+        ],
+        "observedTraits": [],
+        "reviewScope": "L’archive date ce sprite de l’épisode 9 alors que la route cite le pilote ; aucune source consultée ne montre cette interface. Aucun visuel officiel consulté ne montre Blue AI : la revue reste technique et porte sur la cellule d’atlas cainos-pixel-cast-sheet-canon-npc-pack-d.png (rangée 1, colonne 1, 322 × 330 px). Les proportions, les gestes et le costume canoniques restent à confronter à un plan primaire de l’épisode cité ; aucune capacité de combat canonique n’est déclarée."
+      }
+    },
+    {
+      "id": "cookiebutterfly",
+      "name": "Cookie Butterfly",
+      "title": "Le papillon de sucre",
+      "routeEpisode": "ep2",
+      "archiveLabel": "PNJ",
+      "atlasSheet": "cainos-pixel-cast-sheet-canon-npc-pack-d.png",
+      "atlasCell": "rangée 1, colonne 2",
+      "extractedSize": "325 × 345 px",
+      "assetReview": {
+        "status": "Revue technique 0.7.0 effectuée",
+        "captureId": "expansion-sprites-0.7.0#cookiebutterfly",
+        "sheet": "cainos-pixel-cast-sheet-canon-npc-pack-d.png",
+        "cell": "rangée 1, colonne 2",
+        "extractedSize": "325 × 345 px",
+        "visibleTraits": [
+          "Papillon orange aux ailes décorées de motifs clairs en croissant.",
+          "Corps brun fin et antennes recourbées."
+        ],
+        "framing": "Cadre resserré sur les ailes ; le damier clair est exclu.",
+        "transparency": "Planche RVB au damier clair peint : le damier est retiré par le détourage du rendu, aucun alpha natif n’est disponible.",
+        "proportions": "Cadre extrait 325 × 345 px pour un corps de simulation 66 × 175 px ; l’échelle du duel est une décision de jeu, pas une mesure de l’épisode.",
+        "identityEvidence": "Le papillon biscuité correspond au nom Cookie Butterfly ; aucune source consultée ne le rattache à Candy Canyon.",
+        "issues": []
+      },
+      "fidelity": {
+        "reviewStatus": "Épisode à revoir",
+        "sourceIds": [
+          "ep2"
+        ],
+        "observedTraits": [],
+        "reviewScope": "Aucun plan primaire ne documente ce papillon ; son appartenance à l’épisode 2 n’est pas démontrée. Aucun visuel officiel consulté ne montre Cookie Butterfly : la revue reste technique et porte sur la cellule d’atlas cainos-pixel-cast-sheet-canon-npc-pack-d.png (rangée 1, colonne 2, 325 × 345 px). Les proportions, les gestes et le costume canoniques restent à confronter à un plan primaire de l’épisode cité ; aucune capacité de combat canonique n’est déclarée."
+      }
+    },
+    {
+      "id": "gummyelephant",
+      "name": "Gummy Elephant",
+      "title": "Le pachyderme gommeux",
+      "routeEpisode": "ep2",
+      "archiveLabel": "PNJ",
+      "atlasSheet": "cainos-pixel-cast-sheet-canon-npc-pack-d.png",
+      "atlasCell": "rangée 1, colonne 3",
+      "extractedSize": "362 × 363 px",
+      "assetReview": {
+        "status": "Revue technique 0.7.0 effectuée",
+        "captureId": "expansion-sprites-0.7.0#gummyelephant",
+        "sheet": "cainos-pixel-cast-sheet-canon-npc-pack-d.png",
+        "cell": "rangée 1, colonne 3",
+        "extractedSize": "362 × 363 px",
+        "visibleTraits": [
+          "Éléphant translucide rose et jaune, longue trompe courbée et petit œil sombre.",
+          "Quatre pattes arrondies et corps brillant de matière gommeuse."
+        ],
+        "framing": "Un fragment d’une cellule voisine touche le bord gauche du cadre extrait.",
+        "transparency": "Planche RVB au damier clair peint : le damier est retiré par le détourage du rendu, aucun alpha natif n’est disponible.",
+        "proportions": "Cadre extrait 362 × 363 px pour un corps de simulation 120 × 260 px ; l’échelle du duel est une décision de jeu, pas une mesure de l’épisode.",
+        "identityEvidence": "L’éléphant de gomme correspond au nom Gummy Elephant ; sa translucidité est peinte, pas native.",
+        "issues": [
+          "Un fragment de la cellule voisine reste dans le cadre à gauche."
+        ]
+      },
+      "fidelity": {
+        "reviewStatus": "Épisode à revoir",
+        "sourceIds": [
+          "ep2"
+        ],
+        "observedTraits": [],
+        "reviewScope": "Aucun plan primaire ne documente cet éléphant ; son gabarit de colosse est une règle du duel. Aucun visuel officiel consulté ne montre Gummy Elephant : la revue reste technique et porte sur la cellule d’atlas cainos-pixel-cast-sheet-canon-npc-pack-d.png (rangée 1, colonne 3, 362 × 363 px). Les proportions, les gestes et le costume canoniques restent à confronter à un plan primaire de l’épisode cité ; aucune capacité de combat canonique n’est déclarée."
+      }
+    },
+    {
+      "id": "giantcentipede",
+      "name": "Giant Centipede",
+      "title": "Le mille-pattes du canyon",
+      "routeEpisode": "ep2",
+      "archiveLabel": "PNJ",
+      "atlasSheet": "cainos-pixel-cast-sheet-canon-npc-pack-d.png",
+      "atlasCell": "rangée 1, colonne 4",
+      "extractedSize": "362 × 592 px",
+      "assetReview": {
+        "status": "Revue technique 0.7.0 effectuée",
+        "captureId": "expansion-sprites-0.7.0#giantcentipede",
+        "sheet": "cainos-pixel-cast-sheet-canon-npc-pack-d.png",
+        "cell": "rangée 1, colonne 4",
+        "extractedSize": "362 × 592 px",
+        "visibleTraits": [
+          "Mille-pattes brun clair à tête rouge sombre et longues antennes.",
+          "Nombreux segments et pattes latérales, corps arqué."
+        ],
+        "framing": "Cadre resserré sur le mille-pattes ; le damier clair est exclu.",
+        "transparency": "Planche RVB au damier clair peint : le damier est retiré par le détourage du rendu, aucun alpha natif n’est disponible.",
+        "proportions": "Cadre extrait 362 × 592 px pour un corps de simulation 95 × 225 px ; l’échelle du duel est une décision de jeu, pas une mesure de l’épisode.",
+        "identityEvidence": "Le mille-pattes correspond au nom Giant Centipede ; l’échelle « géante » reste une donnée du duel.",
+        "issues": []
+      },
+      "fidelity": {
+        "reviewStatus": "Épisode à revoir",
+        "sourceIds": [
+          "ep2"
+        ],
+        "observedTraits": [],
+        "reviewScope": "Aucun plan primaire consulté ne montre ce mille-pattes dans le canyon. Aucun visuel officiel consulté ne montre Giant Centipede : la revue reste technique et porte sur la cellule d’atlas cainos-pixel-cast-sheet-canon-npc-pack-d.png (rangée 1, colonne 4, 362 × 592 px). Les proportions, les gestes et le costume canoniques restent à confronter à un plan primaire de l’épisode cité ; aucune capacité de combat canonique n’est déclarée."
+      }
+    },
+    {
+      "id": "spudsycustomer",
+      "name": "Spudsy Customer",
+      "title": "Le client affamé",
+      "routeEpisode": "ep4",
+      "archiveLabel": "PNJ reconstruit",
+      "atlasSheet": "cainos-pixel-cast-sheet-canon-npc-pack-d.png",
+      "atlasCell": "rangée 1, colonne 6",
+      "extractedSize": "310 × 523 px",
+      "assetReview": {
+        "status": "Revue technique 0.7.0 effectuée",
+        "captureId": "expansion-sprites-0.7.0#spudsycustomer",
+        "sheet": "cainos-pixel-cast-sheet-canon-npc-pack-d.png",
+        "cell": "rangée 1, colonne 6",
+        "extractedSize": "310 × 523 px",
+        "visibleTraits": [
+          "Client humain aux cheveux bruns en bataille et aux yeux inquiets.",
+          "Casquette rouge et jaune marquée SPUDSY, chemise jaune à badge du même nom."
+        ],
+        "framing": "Cadre resserré sur le personnage ; le damier clair est exclu.",
+        "transparency": "Planche RVB au damier clair peint : le damier est retiré par le détourage du rendu, aucun alpha natif n’est disponible.",
+        "proportions": "Cadre extrait 310 × 523 px pour un corps de simulation 82 × 215 px ; l’échelle du duel est une décision de jeu, pas une mesure de l’épisode.",
+        "identityEvidence": "Le sprite reprend l’uniforme Spudsy de l’épisode 4 ; le visage et la coiffure ne sont attestés par aucun plan consulté.",
+        "issues": [
+          "Le personnage est une reconstruction : la vignette officielle du comptoir ne montre aucun client."
+        ]
+      },
+      "fidelity": {
+        "reviewStatus": "Épisode à revoir",
+        "sourceIds": [
+          "ep4"
+        ],
+        "observedTraits": [],
+        "reviewScope": "Le comptoir Spudsy de Netflix ne montre aucun client ; le costume et le visage restent à comparer à une frame de l’épisode 4. Aucun visuel officiel consulté ne montre Spudsy Customer : la revue reste technique et porte sur la cellule d’atlas cainos-pixel-cast-sheet-canon-npc-pack-d.png (rangée 1, colonne 6, 310 × 523 px). Les proportions, les gestes et le costume canoniques restent à confronter à un plan primaire de l’épisode cité ; aucune capacité de combat canonique n’est déclarée."
+      }
+    },
+    {
+      "id": "candyguardcyan",
+      "name": "Candy Guard Cyan",
+      "title": "La garde cyan",
+      "routeEpisode": "ep2",
+      "archiveLabel": "PNJ silencieux - Ep. 2",
+      "atlasSheet": "cainos-pixel-cast-sheet-canon-npc-pack-e.png",
+      "atlasCell": "rangée 1, colonne 1",
+      "extractedSize": "216 × 513 px",
+      "assetReview": {
+        "status": "Revue technique 0.7.0 effectuée",
+        "captureId": "expansion-sprites-0.7.0#candyguardcyan",
+        "sheet": "cainos-pixel-cast-sheet-canon-npc-pack-e.png",
+        "cell": "rangée 1, colonne 1",
+        "extractedSize": "216 × 513 px",
+        "visibleTraits": [
+          "Mannequin articulé entièrement cyan, visage lisse sans traits et membres à rotules.",
+          "Aucun motif de confiserie, aucun insigne ni armure visibles."
+        ],
+        "framing": "Un fin trait cyan traîne sous le pied gauche dans le cadre extrait.",
+        "transparency": "Planche RGBA à alpha natif ; le fond est déjà transparent et aucun détourage de fond n’est requis.",
+        "proportions": "Cadre extrait 216 × 513 px pour un corps de simulation 84 × 225 px ; l’échelle du duel est une décision de jeu, pas une mesure de l’épisode.",
+        "identityEvidence": "La couleur et le nom « garde » viennent de la fiche ; le sprite ne porte ni lance, ni casque, ni emblème de garde.",
+        "issues": [
+          "Un trait cyan isolé reste sous le pied gauche.",
+          "Nom de garde sans accessoire distinctif ; les trois gardes ne diffèrent que par la couleur."
+        ]
+      },
+      "fidelity": {
+        "reviewStatus": "Épisode à revoir",
+        "sourceIds": [
+          "ep2"
+        ],
+        "observedTraits": [],
+        "reviewScope": "Le plan officiel de Candy Canyon consulté montre des habitants flous à l’arrière-plan, sans garde identifiable. Aucun visuel officiel consulté ne montre Candy Guard Cyan : la revue reste technique et porte sur la cellule d’atlas cainos-pixel-cast-sheet-canon-npc-pack-e.png (rangée 1, colonne 1, 216 × 513 px). Les proportions, les gestes et le costume canoniques restent à confronter à un plan primaire de l’épisode cité ; aucune capacité de combat canonique n’est déclarée."
+      }
+    },
+    {
+      "id": "candyguardblue",
+      "name": "Candy Guard Blue",
+      "title": "La garde bleue",
+      "routeEpisode": "ep2",
+      "archiveLabel": "PNJ silencieux - Ep. 2",
+      "atlasSheet": "cainos-pixel-cast-sheet-canon-npc-pack-e.png",
+      "atlasCell": "rangée 1, colonne 2",
+      "extractedSize": "295 × 510 px",
+      "assetReview": {
+        "status": "Revue technique 0.7.0 effectuée",
+        "captureId": "expansion-sprites-0.7.0#candyguardblue",
+        "sheet": "cainos-pixel-cast-sheet-canon-npc-pack-e.png",
+        "cell": "rangée 1, colonne 2",
+        "extractedSize": "295 × 510 px",
+        "visibleTraits": [
+          "Mannequin articulé entièrement bleu, visage lisse et membres à rotules.",
+          "Aucun motif de confiserie ni accessoire de garde visible."
+        ],
+        "framing": "Un trait bleu isolé apparaît à gauche du corps dans le cadre extrait.",
+        "transparency": "Planche RGBA à alpha natif ; le fond est déjà transparent et aucun détourage de fond n’est requis.",
+        "proportions": "Cadre extrait 295 × 510 px pour un corps de simulation 84 × 225 px ; l’échelle du duel est une décision de jeu, pas une mesure de l’épisode.",
+        "identityEvidence": "Même figure que la garde cyan, déclinée en bleu ; aucune source consultée ne nomme cette garde.",
+        "issues": [
+          "Un trait bleu isolé reste à gauche du corps."
+        ]
+      },
+      "fidelity": {
+        "reviewStatus": "Épisode à revoir",
+        "sourceIds": [
+          "ep2"
+        ],
+        "observedTraits": [],
+        "reviewScope": "Aucun plan primaire ne montre cette garde ; le plan de cour consulté ne permet pas de distinguer les gardes. Aucun visuel officiel consulté ne montre Candy Guard Blue : la revue reste technique et porte sur la cellule d’atlas cainos-pixel-cast-sheet-canon-npc-pack-e.png (rangée 1, colonne 2, 295 × 510 px). Les proportions, les gestes et le costume canoniques restent à confronter à un plan primaire de l’épisode cité ; aucune capacité de combat canonique n’est déclarée."
+      }
+    },
+    {
+      "id": "candyguardpurple",
+      "name": "Candy Guard Violet",
+      "title": "La garde violette",
+      "routeEpisode": "ep2",
+      "archiveLabel": "PNJ silencieux - Ep. 2",
+      "atlasSheet": "cainos-pixel-cast-sheet-canon-npc-pack-e.png",
+      "atlasCell": "rangée 1, colonne 3",
+      "extractedSize": "294 × 510 px",
+      "assetReview": {
+        "status": "Revue technique 0.7.0 effectuée",
+        "captureId": "expansion-sprites-0.7.0#candyguardpurple",
+        "sheet": "cainos-pixel-cast-sheet-canon-npc-pack-e.png",
+        "cell": "rangée 1, colonne 3",
+        "extractedSize": "294 × 510 px",
+        "visibleTraits": [
+          "Mannequin articulé entièrement violet, visage lisse et membres à rotules.",
+          "Aucun motif de confiserie ni accessoire de garde visible."
+        ],
+        "framing": "Un trait violet isolé apparaît à gauche du corps dans le cadre extrait.",
+        "transparency": "Planche RGBA à alpha natif ; le fond est déjà transparent et aucun détourage de fond n’est requis.",
+        "proportions": "Cadre extrait 294 × 510 px pour un corps de simulation 84 × 225 px ; l’échelle du duel est une décision de jeu, pas une mesure de l’épisode.",
+        "identityEvidence": "Même figure que les deux autres gardes, déclinée en violet ; aucune source consultée ne nomme cette garde.",
+        "issues": [
+          "Un trait violet isolé reste à gauche du corps."
+        ]
+      },
+      "fidelity": {
+        "reviewStatus": "Épisode à revoir",
+        "sourceIds": [
+          "ep2"
+        ],
+        "observedTraits": [],
+        "reviewScope": "Aucun plan primaire ne montre cette garde ; son rôle de contrôle est une règle du jeu. Aucun visuel officiel consulté ne montre Candy Guard Violet : la revue reste technique et porte sur la cellule d’atlas cainos-pixel-cast-sheet-canon-npc-pack-e.png (rangée 1, colonne 3, 294 × 510 px). Les proportions, les gestes et le costume canoniques restent à confronter à un plan primaire de l’épisode cité ; aucune capacité de combat canonique n’est déclarée."
+      }
+    },
+    {
+      "id": "gummyworm",
+      "name": "Gummy Worm",
+      "title": "Le ver gommeux",
+      "routeEpisode": "ep2",
+      "archiveLabel": "PNJ decoratif - Ep. 2",
+      "atlasSheet": "cainos-pixel-cast-sheet-canon-npc-pack-e.png",
+      "atlasCell": "rangée 1, colonne 4",
+      "extractedSize": "229 × 314 px",
+      "assetReview": {
+        "status": "Revue technique 0.7.0 effectuée",
+        "captureId": "expansion-sprites-0.7.0#gummyworm",
+        "sheet": "cainos-pixel-cast-sheet-canon-npc-pack-e.png",
+        "cell": "rangée 1, colonne 4",
+        "extractedSize": "229 × 314 px",
+        "visibleTraits": [
+          "Ver rose segmenté, petits yeux noirs et bouche à peine visible au sommet.",
+          "Corps en S et anneaux plus sombres."
+        ],
+        "framing": "Deux fragments détachés du ver flottent à droite et en bas à droite du cadre extrait.",
+        "transparency": "Planche RGBA à alpha natif ; le fond est déjà transparent et aucun détourage de fond n’est requis.",
+        "proportions": "Cadre extrait 229 × 314 px pour un corps de simulation 72 × 190 px ; l’échelle du duel est une décision de jeu, pas une mesure de l’épisode.",
+        "identityEvidence": "Le ver gommeux correspond au nom Gummy Worm ; sa matière translucide n’est pas rendue dans le sprite.",
+        "issues": [
+          "Deux fragments détachés restent dans le cadre à droite."
+        ]
+      },
+      "fidelity": {
+        "reviewStatus": "Épisode à revoir",
+        "sourceIds": [
+          "ep2"
+        ],
+        "observedTraits": [],
+        "reviewScope": "Aucun plan primaire ne documente ce ver ; le plan de cour consulté ne le montre pas. Aucun visuel officiel consulté ne montre Gummy Worm : la revue reste technique et porte sur la cellule d’atlas cainos-pixel-cast-sheet-canon-npc-pack-e.png (rangée 1, colonne 4, 229 × 314 px). Les proportions, les gestes et le costume canoniques restent à confronter à un plan primaire de l’épisode cité ; aucune capacité de combat canonique n’est déclarée."
+      }
+    },
+    {
+      "id": "barrelmonkey",
+      "name": "Barrel Monkey",
+      "title": "Le singe du tonneau",
+      "routeEpisode": "ep1",
+      "archiveLabel": "PNJ jouet - Ep. 1",
+      "atlasSheet": "cainos-pixel-cast-sheet-canon-npc-pack-e.png",
+      "atlasCell": "rangée 1, colonne 5",
+      "extractedSize": "296 × 391 px",
+      "assetReview": {
+        "status": "Revue technique 0.7.0 effectuée",
+        "captureId": "expansion-sprites-0.7.0#barrelmonkey",
+        "sheet": "cainos-pixel-cast-sheet-canon-npc-pack-e.png",
+        "cell": "rangée 1, colonne 5",
+        "extractedSize": "296 × 391 px",
+        "visibleTraits": [
+          "Singe rouge aux longs bras et à la queue recourbée en point d’interrogation.",
+          "Anneau sombre autour de la taille et gants blancs."
+        ],
+        "framing": "Un fragment blanc d’une cellule voisine reste au bord supérieur droit du cadre extrait.",
+        "transparency": "Planche RGBA à alpha natif ; le fond est déjà transparent et aucun détourage de fond n’est requis.",
+        "proportions": "Cadre extrait 296 × 391 px pour un corps de simulation 78 × 205 px ; l’échelle du duel est une décision de jeu, pas une mesure de l’épisode.",
+        "identityEvidence": "Le singe correspond au nom Barrel Monkey, mais aucun tonneau n’est visible dans le dessin.",
+        "issues": [
+          "Un fragment blanc du voisin reste dans le cadre en haut à droite.",
+          "Aucun tonneau n’est représenté malgré le nom du personnage."
+        ]
+      },
+      "fidelity": {
+        "reviewStatus": "Épisode à revoir",
+        "sourceIds": [
+          "ep1"
+        ],
+        "observedTraits": [],
+        "reviewScope": "Aucun plan primaire ne documente ce singe ; le tonneau annoncé par son nom reste à retrouver. Aucun visuel officiel consulté ne montre Barrel Monkey : la revue reste technique et porte sur la cellule d’atlas cainos-pixel-cast-sheet-canon-npc-pack-e.png (rangée 1, colonne 5, 296 × 391 px). Les proportions, les gestes et le costume canoniques restent à confronter à un plan primaire de l’épisode cité ; aucune capacité de combat canonique n’est déclarée."
+      }
+    },
+    {
+      "id": "jeffery",
+      "name": "Jeffery",
+      "title": "Le résident discret",
+      "routeEpisode": "ep1",
+      "archiveLabel": "Extension de Caine",
+      "atlasSheet": "cainos-pixel-cast-sheet-canon-npc-pack-e.png",
+      "atlasCell": "rangée 1, colonne 6",
+      "extractedSize": "260 × 503 px",
+      "assetReview": {
+        "status": "Revue technique 0.7.0 effectuée",
+        "captureId": "expansion-sprites-0.7.0#jeffery",
+        "sheet": "cainos-pixel-cast-sheet-canon-npc-pack-e.png",
+        "cell": "rangée 1, colonne 6",
+        "extractedSize": "260 × 503 px",
+        "visibleTraits": [
+          "Tête pâle pointue à un œil, surmontée d’un haut-de-forme noir.",
+          "Veste rouge et jaune à rayures, gants blancs et chaussures noires."
+        ],
+        "framing": "Cadre occupant toute la cellule ; aucun fragment voisin n’est visible.",
+        "transparency": "Planche RGBA à alpha natif ; le fond est déjà transparent et aucun détourage de fond n’est requis.",
+        "proportions": "Cadre extrait 260 × 503 px pour un corps de simulation 80 × 215 px ; l’échelle du duel est une décision de jeu, pas une mesure de l’épisode.",
+        "identityEvidence": "Créature en queue-de-pie ; l’archive la décrit comme une extension de Caine, ce que le sprite ne démontre pas.",
+        "issues": [
+          "L’identité « extension de Caine » ne repose sur aucun élément visible du dessin."
+        ]
+      },
+      "fidelity": {
+        "reviewStatus": "Épisode à revoir",
+        "sourceIds": [
+          "ep1"
+        ],
+        "observedTraits": [],
+        "reviewScope": "Aucun plan primaire ne documente Jeffery ; sa parenté avec Caine reste une hypothèse d’archive. Aucun visuel officiel consulté ne montre Jeffery : la revue reste technique et porte sur la cellule d’atlas cainos-pixel-cast-sheet-canon-npc-pack-e.png (rangée 1, colonne 6, 260 × 503 px). Les proportions, les gestes et le costume canoniques restent à confronter à un plan primaire de l’épisode cité ; aucune capacité de combat canonique n’est déclarée."
+      }
+    },
+    {
+      "id": "mildenhallsouls",
+      "name": "Mildenhall Souls",
+      "title": "Les âmes du manoir",
+      "routeEpisode": "ep3",
+      "archiveLabel": "Entite spectrale - Ep. 3",
+      "atlasSheet": "cainos-pixel-cast-sheet-canon-npc-pack-f.png",
+      "atlasCell": "rangée 1, colonne 5",
+      "extractedSize": "362 × 442 px",
+      "assetReview": {
+        "status": "Revue technique 0.7.0 effectuée",
+        "captureId": "expansion-sprites-0.7.0#mildenhallsouls",
+        "sheet": "cainos-pixel-cast-sheet-canon-npc-pack-f.png",
+        "cell": "rangée 1, colonne 5",
+        "extractedSize": "362 × 442 px",
+        "visibleTraits": [
+          "Spectre vert d’eau translucide, deux yeux lumineux et corps en pointe.",
+          "Une corne blanche appartenant à une autre entité occupe le bord droit du cadre."
+        ],
+        "framing": "Le cadre extrait contient un second élément blanc à droite, séparé du spectre.",
+        "transparency": "Planche RGBA à alpha natif ; le fond est déjà transparent et aucun détourage de fond n’est requis.",
+        "proportions": "Cadre extrait 362 × 442 px pour un corps de simulation 82 × 220 px ; l’échelle du duel est une décision de jeu, pas une mesure de l’épisode.",
+        "identityEvidence": "Le spectre correspond au nom Mildenhall Souls ; la corne blanche n’appartient pas à cette entité.",
+        "issues": [
+          "Le sprite assemble deux entités distinctes dans une même cellule."
+        ]
+      },
+      "fidelity": {
+        "reviewStatus": "Épisode à revoir",
+        "sourceIds": [
+          "ep3"
+        ],
+        "observedTraits": [],
+        "reviewScope": "Aucun plan primaire ne documente les âmes du manoir ; leur apparence reste non comparée. Aucun visuel officiel consulté ne montre Mildenhall Souls : la revue reste technique et porte sur la cellule d’atlas cainos-pixel-cast-sheet-canon-npc-pack-f.png (rangée 1, colonne 5, 362 × 442 px). Les proportions, les gestes et le costume canoniques restent à confronter à un plan primaire de l’épisode cité ; aucune capacité de combat canonique n’est déclarée."
+      }
+    },
+    {
+      "id": "redmannequin",
+      "name": "Red Mannequin",
+      "title": "Le mannequin rouge",
+      "routeEpisode": "ep1",
+      "archiveLabel": "PNJ silencieux - Ep. 2",
+      "atlasSheet": "cainos-pixel-cast-sheet-canon-npc-pack-f.png",
+      "atlasCell": "rangée 1, colonne 1",
+      "extractedSize": "175 × 577 px",
+      "assetReview": {
+        "status": "Revue technique 0.7.0 effectuée",
+        "captureId": "expansion-sprites-0.7.0#redmannequin",
+        "sheet": "cainos-pixel-cast-sheet-canon-npc-pack-f.png",
+        "cell": "rangée 1, colonne 1",
+        "extractedSize": "175 × 577 px",
+        "visibleTraits": [
+          "Mannequin d’artiste rouge, articulations sombres et visage sans traits.",
+          "Aucun vêtement ni accessoire."
+        ],
+        "framing": "Cadre resserré sur la seule figure ; aucun fragment voisin n’est visible.",
+        "transparency": "Planche RGBA à alpha natif ; le fond est déjà transparent et aucun détourage de fond n’est requis.",
+        "proportions": "Cadre extrait 175 × 577 px pour un corps de simulation 86 × 230 px ; l’échelle du duel est une décision de jeu, pas une mesure de l’épisode.",
+        "identityEvidence": "Mannequin d’atelier monochrome ; la couleur et le nom viennent du catalogue, aucune garde-robe ni épisode n’est attesté.",
+        "issues": []
+      },
+      "fidelity": {
+        "reviewStatus": "Épisode à revoir",
+        "sourceIds": [
+          "ep1",
+          "ep2"
+        ],
+        "observedTraits": [],
+        "reviewScope": "L’archive date les mannequins de l’épisode 2 alors que la route cite le pilote ; aucune des deux attributions n’est vérifiée. Aucun visuel officiel consulté ne montre Red Mannequin : la revue reste technique et porte sur la cellule d’atlas cainos-pixel-cast-sheet-canon-npc-pack-f.png (rangée 1, colonne 1, 175 × 577 px). Les proportions, les gestes et le costume canoniques restent à confronter à un plan primaire de l’épisode cité ; aucune capacité de combat canonique n’est déclarée."
+      }
+    },
+    {
+      "id": "orangemannequin",
+      "name": "Orange Mannequin",
+      "title": "Le mannequin orange",
+      "routeEpisode": "ep1",
+      "archiveLabel": "PNJ silencieux - Ep. 2",
+      "atlasSheet": "cainos-pixel-cast-sheet-canon-npc-pack-f.png",
+      "atlasCell": "rangée 1, colonne 2",
+      "extractedSize": "330 × 577 px",
+      "assetReview": {
+        "status": "Revue technique 0.7.0 effectuée",
+        "captureId": "expansion-sprites-0.7.0#orangemannequin",
+        "sheet": "cainos-pixel-cast-sheet-canon-npc-pack-f.png",
+        "cell": "rangée 1, colonne 2",
+        "extractedSize": "330 × 577 px",
+        "visibleTraits": [
+          "Mannequin orange à rotules sombres et tête ovale sans visage.",
+          "Aucun vêtement ni accessoire."
+        ],
+        "framing": "Une fine tige orange détachée apparaît à droite du cadre extrait.",
+        "transparency": "Planche RGBA à alpha natif ; le fond est déjà transparent et aucun détourage de fond n’est requis.",
+        "proportions": "Cadre extrait 330 × 577 px pour un corps de simulation 86 × 230 px ; l’échelle du duel est une décision de jeu, pas une mesure de l’épisode.",
+        "identityEvidence": "Même mannequin d’atelier que le rouge, décliné en orange ; aucune source consultée ne nomme cette variante.",
+        "issues": [
+          "Une tige orange détachée reste dans le cadre à droite."
+        ]
+      },
+      "fidelity": {
+        "reviewStatus": "Épisode à revoir",
+        "sourceIds": [
+          "ep1",
+          "ep2"
+        ],
+        "observedTraits": [],
+        "reviewScope": "Même contradiction d’épisode que les autres mannequins ; aucun plan primaire consulté ne les montre. Aucun visuel officiel consulté ne montre Orange Mannequin : la revue reste technique et porte sur la cellule d’atlas cainos-pixel-cast-sheet-canon-npc-pack-f.png (rangée 1, colonne 2, 330 × 577 px). Les proportions, les gestes et le costume canoniques restent à confronter à un plan primaire de l’épisode cité ; aucune capacité de combat canonique n’est déclarée."
+      }
+    },
+    {
+      "id": "yellowmannequin",
+      "name": "Yellow Mannequin",
+      "title": "Le mannequin jaune",
+      "routeEpisode": "ep1",
+      "archiveLabel": "PNJ silencieux - Ep. 2",
+      "atlasSheet": "cainos-pixel-cast-sheet-canon-npc-pack-f.png",
+      "atlasCell": "rangée 1, colonne 3",
+      "extractedSize": "362 × 578 px",
+      "assetReview": {
+        "status": "Revue technique 0.7.0 effectuée",
+        "captureId": "expansion-sprites-0.7.0#yellowmannequin",
+        "sheet": "cainos-pixel-cast-sheet-canon-npc-pack-f.png",
+        "cell": "rangée 1, colonne 3",
+        "extractedSize": "362 × 578 px",
+        "visibleTraits": [
+          "Mannequin jaune articulé, tête ovale et mains à peine marquées.",
+          "Aucun vêtement ni accessoire."
+        ],
+        "framing": "Un segment jaune détaché flotte à droite du cadre extrait.",
+        "transparency": "Planche RGBA à alpha natif ; le fond est déjà transparent et aucun détourage de fond n’est requis.",
+        "proportions": "Cadre extrait 362 × 578 px pour un corps de simulation 86 × 230 px ; l’échelle du duel est une décision de jeu, pas une mesure de l’épisode.",
+        "identityEvidence": "Même mannequin d’atelier que le rouge, décliné en jaune ; aucune source consultée ne nomme cette variante.",
+        "issues": [
+          "Un segment jaune détaché reste dans le cadre à droite."
+        ]
+      },
+      "fidelity": {
+        "reviewStatus": "Épisode à revoir",
+        "sourceIds": [
+          "ep1",
+          "ep2"
+        ],
+        "observedTraits": [],
+        "reviewScope": "Même contradiction d’épisode que les autres mannequins ; aucun plan primaire consulté ne les montre. Aucun visuel officiel consulté ne montre Yellow Mannequin : la revue reste technique et porte sur la cellule d’atlas cainos-pixel-cast-sheet-canon-npc-pack-f.png (rangée 1, colonne 3, 362 × 578 px). Les proportions, les gestes et le costume canoniques restent à confronter à un plan primaire de l’épisode cité ; aucune capacité de combat canonique n’est déclarée."
+      }
+    },
+    {
+      "id": "magentamannequin",
+      "name": "Magenta Mannequin",
+      "title": "Le mannequin magenta",
+      "routeEpisode": "ep1",
+      "archiveLabel": "PNJ silencieux - Ep. 2",
+      "atlasSheet": "cainos-pixel-cast-sheet-canon-npc-pack-f.png",
+      "atlasCell": "rangée 1, colonne 4",
+      "extractedSize": "362 × 577 px",
+      "assetReview": {
+        "status": "Revue technique 0.7.0 effectuée",
+        "captureId": "expansion-sprites-0.7.0#magentamannequin",
+        "sheet": "cainos-pixel-cast-sheet-canon-npc-pack-f.png",
+        "cell": "rangée 1, colonne 4",
+        "extractedSize": "362 × 577 px",
+        "visibleTraits": [
+          "Mannequin magenta articulé et tête ovale sans traits.",
+          "Aucun vêtement ni accessoire."
+        ],
+        "framing": "Un fragment gris de l’entité voisine reste au bord droit du cadre extrait.",
+        "transparency": "Planche RGBA à alpha natif ; le fond est déjà transparent et aucun détourage de fond n’est requis.",
+        "proportions": "Cadre extrait 362 × 577 px pour un corps de simulation 86 × 230 px ; l’échelle du duel est une décision de jeu, pas une mesure de l’épisode.",
+        "identityEvidence": "Même mannequin d’atelier que le rouge, décliné en magenta ; aucune source consultée ne nomme cette variante.",
+        "issues": [
+          "Un fragment gris du voisin reste dans le cadre à droite."
+        ]
+      },
+      "fidelity": {
+        "reviewStatus": "Épisode à revoir",
+        "sourceIds": [
+          "ep1",
+          "ep2"
+        ],
+        "observedTraits": [],
+        "reviewScope": "Même contradiction d’épisode que les autres mannequins ; aucun plan primaire consulté ne les montre. Aucun visuel officiel consulté ne montre Magenta Mannequin : la revue reste technique et porte sur la cellule d’atlas cainos-pixel-cast-sheet-canon-npc-pack-f.png (rangée 1, colonne 4, 362 × 577 px). Les proportions, les gestes et le costume canoniques restent à confronter à un plan primaire de l’épisode cité ; aucune capacité de combat canonique n’est déclarée."
+      }
+    }
+  ],
+  "limitations": [
+    "Les 40 fiches restent « Épisode à revoir » : aucune comparaison 1:1 des proportions ou des costumes avec un plan de la série n’a été possible.",
+    "Les attributions d’épisode des archives (5/6, 6, 7, 9, 2) contredisent parfois la route générée (pilote, Candy Canyon) ; les deux références sont conservées dans la fiche plutôt que tranchées.",
+    "Les observations de sprite décrivent le dessin CainOS du projet et ne certifient ni un modèle officiel, ni une animation de combat dédiée.",
+    "Les débris de cellules voisines signalés ne sont pas corrigés ici : la revue documente l’état livré sans modifier les rectangles d’extraction."
+  ]
+}

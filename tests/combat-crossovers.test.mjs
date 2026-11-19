@@ -9,19 +9,23 @@ import { updateCrossoverTracker } from '../scripts/combat-crossover-tracker.mjs'
 import { createProgram, validateProgram } from '../combat/progression.mjs';
 import { GAME_VERSION, emptyProfile, validateProfile, validateReplay } from '../combat/session.mjs';
 
-test('every fighter has three distinct bodies in each of the nine crossover series', () => {
+test('the fourteen illustrated fighters retain three bodies per crossover without inventing NPC costumes', () => {
+  const illustrated = FIGHTERS.filter(fighter => CROSSOVER_SERIES.every(series => CROSSOVER_FUSIONS[series.id]?.[fighter.id]));
+  const pending = FIGHTERS.filter(fighter => !illustrated.includes(fighter));
+  assert.equal(illustrated.length, 14);
+  assert.equal(pending.length, 40);
   assert.equal(CROSSOVER_SERIES.length, 9);
   const fusions = Object.values(CROSSOVER_FUSIONS).reduce((sum, roster) => sum + Object.keys(roster).length, 0);
-  assert.equal(fusions, CROSSOVER_SERIES.length * FIGHTERS.length);
+  assert.equal(fusions, CROSSOVER_SERIES.length * illustrated.length);
   for (const series of CROSSOVER_SERIES) {
     const roster = CROSSOVER_FUSIONS[series.id];
-    assert.deepEqual(Object.keys(roster).sort(), FIGHTERS.map(fighter => fighter.id).sort());
-    assert.equal(new Set(Object.values(roster)).size, FIGHTERS.length);
+    assert.deepEqual(Object.keys(roster).sort(), illustrated.map(fighter => fighter.id).sort());
+    assert.equal(new Set(Object.values(roster)).size, illustrated.length);
   }
   assert.equal(new Set(COSTUMES.map(item => item.id)).size, 303 + fusions);
   assert.equal(VARIANTS.length, 51);
   assert.equal(CROSSOVER_COSTUMES.length, 252 + fusions);
-  for (const fighter of FIGHTERS) {
+  for (const fighter of illustrated) {
     for (const { id } of CROSSOVER_SERIES) {
       const choices = CROSSOVER_COSTUMES.filter(item => item.fighterId === fighter.id && matchesCostumeFilter(item, id));
       assert.deepEqual(choices.map(item => item.crossover.style).sort(), ['fusion', 'hommage', 'resident']);
@@ -42,7 +46,12 @@ test('every fighter has three distinct bodies in each of the nine crossover seri
   assert.equal(COSTUMES.filter(item => matchesCostumeFilter(item, '', 'fusion')).length, fusions);
   assert.ok(crossoverStylesFor('', 'pomni').includes('fusion'));
   assert.deepEqual(crossoverStylesFor('circus', 'pomni'), []);
-  assert.deepEqual(crossoverStylesFor('murderdrones', 'unknown-fighter'), ['hommage', 'resident']);
+  assert.deepEqual(crossoverStylesFor('murderdrones', 'unknown-fighter'), []);
+  for (const fighter of pending) {
+    assert.equal(CROSSOVER_COSTUMES.some(costume => costume.fighterId === fighter.id), false, fighter.id);
+    assert.deepEqual(crossoverStylesFor('', fighter.id), [], fighter.id);
+    for (const series of CROSSOVER_SERIES) assert.deepEqual(crossoverStylesFor(series.id, fighter.id), [], fighter.id);
+  }
 });
 
 test('replays, profiles and campaign checkpoints retain the crossover only for its owner', () => {
@@ -97,7 +106,7 @@ test('all ten views of every crossover costume have complete WebP containers', (
     }
   }
   const header = Buffer.alloc(12);
-  for (const filename of ART_FILES.filter(name => name.includes('/crossovers/'))) {
+  for (const filename of ART_FILES.filter(name => name.includes('/crossovers/') && name.endsWith('.webp'))) {
     const fd = openSync(new URL('../combat/' + filename, import.meta.url), 'r');
     try {
       assert.equal(readSync(fd, header, 0, header.length, 0), header.length, filename);

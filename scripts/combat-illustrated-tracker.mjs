@@ -1,6 +1,7 @@
 /** Refresh existing production rows from the images that ship with this build. */
 export function updateIllustratedTracker(data, { ART_FILES, ART_BYTES }) {
   const files = new Set(ART_FILES.map(name => name.replace(/^\.\.\//, '')));
+  const imagePath = stem => [stem + '.webp', stem + '.png'].find(file => files.has(file));
   const art = 'assets/encore/';
   const production = new Map(data.production.map(row => [row[0], row]));
   const features = new Map(data.features.map(row => [row[0], row]));
@@ -13,7 +14,7 @@ export function updateIllustratedTracker(data, { ART_FILES, ART_BYTES }) {
     counts[family]++;
     if (family === 'poses') {
       if (!poses.has(id)) poses.set(id, []);
-      poses.get(id).push(pose.replace(/\.webp$/, ''));
+      poses.get(id).push(pose.replace(/\.(?:webp|png)$/i, ''));
     }
   }
   if (!counts.poses && !counts.stages && !counts.finales) return;
@@ -22,6 +23,7 @@ export function updateIllustratedTracker(data, { ART_FILES, ART_BYTES }) {
     if (row) Object.assign(row, cells);
   };
   const assetRow = (id, file, detail, status) => {
+    file = imagePath(file.replace(/\.(?:webp|png)$/i, ''));
     if (!files.has(file)) return;
     update(production, id, { 6: file, 7: detail, ...(status ? { 4: status } : {}) });
   };
@@ -36,7 +38,7 @@ export function updateIllustratedTracker(data, { ART_FILES, ART_BYTES }) {
     assetRow('ART-'+id+'-light', directory+'attack.webp', 'Pose d’attaque légère en phase active et au début de la récupération. Les autres techniques suivent leur propre présentation.');
     for (const phase of ['intro','roundVictory','matchVictory','roundDefeat','matchDefeat']) {
       const pose = phase === 'intro' ? phase : phase.endsWith('Victory') ? 'victory' : 'defeat';
-      const file = directory+pose+'.webp';
+      const file = imagePath(directory+pose);
       if (files.has(file)) update(production, 'SEQ-'+id+'-'+phase, { 6: file+' · combat/render-sequences.mjs' });
     }
   }
@@ -45,17 +47,17 @@ export function updateIllustratedTracker(data, { ART_FILES, ART_BYTES }) {
   }
   for (const stage of data.stages) {
     const id = stage[0], dir = art+'stages/'+id+'/';
-    if (!['far','mid','near'].every(plane => files.has(dir+plane+'.webp'))) continue;
+    if (!['far','mid','near'].every(plane => imagePath(dir+plane))) continue;
     stage[3] = 'Implémenté';
     stage[13] = 'Trois plans illustrés pour le duel · '+dir;
-    assetRow('ART-'+id+'-background', dir+'far.webp', 'Fond et plan médian séparés. '+dir+'mid.webp', 'Implémenté');
+    assetRow('ART-'+id+'-background', dir+'far.webp', 'Fond et plan médian séparés. '+imagePath(dir+'mid'), 'Implémenté');
     assetRow('ART-'+id+'-foreground', dir+'near.webp', 'Premier plan détouré et défilement différentiel.', 'Implémenté');
     update(production, 'ANIM-'+id+'-ambience', { 6: dir+' · combat/stage-parallax.mjs · combat/render-stage-motion.mjs' });
   }
   for (const row of data.production) {
     const finale = /^FIN-(\w+)\.(impact|special|super)$/.exec(row[0]);
     if (finale) {
-      const file = art+'finales/'+finale[1]+'/'+finale[2]+'.webp';
+      const file = imagePath(art+'finales/'+finale[1]+'/'+finale[2]);
       if (files.has(file)) {
         row[6] = file+' · combat/render-finishers.mjs';
         row[8] = row[8].split(/\n(?:Travail artistique restant|Décor de finale illustré)/)[0]
@@ -64,7 +66,7 @@ export function updateIllustratedTracker(data, { ART_FILES, ART_BYTES }) {
     }
     const panel = /^(?:BOARD|BRIEF)-((\w+)-(?:prologue|epilogue|chapter)-\d+)$/.exec(row[0]);
     if (panel) {
-      const file = art+'campaign/'+panel[2]+'/'+panel[1]+'.webp';
+      const file = imagePath(art+'campaign/'+panel[2]+'/'+panel[1]);
       if (files.has(file)) row[6] = file+' · combat/story-presentation.mjs';
     }
   }

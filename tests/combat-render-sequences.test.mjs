@@ -14,7 +14,7 @@ test('all fourteen fighters have five individually timed immutable presentation 
     assert.ok(Object.isFrozen(s.keys)); assert.equal(s.keys[0].at, 0); assert.equal(s.keys.at(-1).at, s.duration);
     motions.add(JSON.stringify(s.keys));
   }
-  assert.equal(new Set(ids).size, 70); assert.equal(motions.size, 70);
+  assert.equal(new Set(ids).size, FIGHTERS.length * SEQUENCE_EVENTS.length); assert.equal(motions.size, FIGHTERS.length * SEQUENCE_EVENTS.length);
 });
 
 test('every sequence is finite, continuous at its keyframes and settles exactly', () => {

@@ -17,13 +17,8 @@ await fs.mkdir(output, { recursive: true });
 const base = process.env.COMBAT_TEST_URL || 'http://127.0.0.1:4173';
 const checks = [], failures = [];
 const appearances = [
-  ...FIGHTERS.map(fighter => {
-    const keys = fighter.animation ? ['intro', 'victory', 'defeat', 'jump', 'crouch'] : [...ACTION_ART];
-    if (fighter.animation && !['ragatha', 'gangle'].includes(fighter.id)) keys.push('attack');
-    keys.push('heavy');
-    return { id: fighter.id, owner: fighter.id, keys };
-  }),
-  ...VARIANTS.map(variant => ({ id: variant.id, owner: variant.fighterId, keys: ACTION_ART })),
+  ...FIGHTERS.map(fighter => ({ id: fighter.id, owner: fighter.id, keys: [...ACTION_ART, 'heavy'] })),
+  ...VARIANTS.map(variant => ({ id: variant.id, owner: variant.fighterId, keys: [...ACTION_ART, 'heavy'] })),
 ];
 const checked = (name, detail) => { checks.push({ name, detail, pass: true }); console.log('PASS ' + name); };
 const browser = await playwright.chromium.launch({ headless: true, executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH || undefined, args: ['--no-sandbox', '--disable-dev-shm-usage'] });
@@ -78,6 +73,7 @@ try {
       const { getFighter, VARIANTS } = await import('/combat/data.mjs');
       const { CombatRenderer } = await import('/combat/render.mjs');
       const { loadFighterIllustration } = await import('/combat/illustrations.mjs');
+      const { ART_FILES } = await import('/combat/offline-manifest.mjs');
       const baseFighter = getFighter(owner);
       const variant = VARIANTS.find(item => item.id === id);
       const f = variant ? { ...baseFighter, costume: id, sprite: variant.sprite, visual: { ...baseFighter.visual, ...variant.visual }, animation: variant.animation || null } : baseFighter;
@@ -92,7 +88,10 @@ try {
         const expected = await loadFighterIllustration('poses', f, key);
         if (!expected) throw new Error('Missing ' + id + '/' + key);
         const image = new Image();
-        image.src = '/assets/encore/poses/' + id + '/' + key + '.webp';
+        const stem = '../assets/encore/poses/' + id + '/' + key;
+        const published = [stem + '.webp', stem + '.png'].find(file => ART_FILES.includes(file));
+        if (!published) throw new Error('Unpublished action: ' + id + '/' + key);
+        image.src = published.replace(/^\.\./, '');
         await image.decode();
         const ref = document.createElement('canvas');
         ref.width = expected.width; ref.height = expected.height;
@@ -122,7 +121,7 @@ try {
           const height = f.visual?.height || f.combat?.simulationBody?.height || 230;
           const worldHeight = height * (key === 'crouch' || key === 'defeat' ? 0.74 : 1);
           if (Math.abs(Math.hypot(a, b) - Math.hypot(c, d)) > 0.0001 ||
-              Math.abs(Math.hypot(c, d) * expected.height - worldHeight) > 0.01) {
+              Math.abs(Math.hypot(c, d) * expected.bounds.height - worldHeight) > 0.01) {
             throw new Error('Distorted drawing or incorrect pose height: ' + id + '/' + key);
           }
         }

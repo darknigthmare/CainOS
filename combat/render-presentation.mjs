@@ -1,4 +1,5 @@
 import { FIGHTERS } from './data.mjs';
+import { EXPANSION_IDS } from './roster-expansion.mjs';
 
 /** Presentation only: these choices never change the simulation or move data. */
 
@@ -98,6 +99,7 @@ const projectileShapes = Object.freeze({
   fudge: { special: 'fudge', super: 'fudge' },
   abstractedkaufmo: { special: 'corruption' },
   baronmildenhall: { special: 'spectral-shot', super: 'spectral-shot' },
+  ...Object.fromEntries(EXPANSION_IDS.map(id => [id, { special: 'pellet', super: 'pellet' }])),
 });
 const trapShapes = Object.freeze({
   jax: 'trick-box', gangle: 'ribbon-knot', zooble: 'module', caine: 'stage-mark',

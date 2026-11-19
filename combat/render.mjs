@@ -176,10 +176,12 @@ export async function drawPortrait(target, fighter, options = {}) {
   ctx.save();
   ctx.imageSmoothingEnabled = !!illustration;
   ctx.imageSmoothingQuality = 'high';
-  const scale = Math.min(w * 0.87 / frame.width, h * 0.91 / frame.height);
-  const dw = frame.width * scale, dh = frame.height * scale;
+  const area = illustration ? frame.bounds : { x: 0, y: 0, width: frame.width, height: frame.height };
+  const scale = Math.min(w * 0.87 / area.width, h * 0.91 / area.height);
+  const dw = area.width * scale, dh = area.height * scale;
   if (options.glow !== false) { ctx.shadowColor = f.color || '#a897ef'; ctx.shadowBlur = Math.min(18, w * 0.07); }
-  ctx.drawImage(frame.canvas, Math.round((w - dw) / 2), Math.round(h - dh - h * 0.035), Math.round(dw), Math.round(dh));
+  ctx.drawImage(frame.canvas, area.x, area.y, area.width, area.height,
+    Math.round((w - dw) / 2), Math.round(h - dh - h * 0.035), Math.round(dw), Math.round(dh));
   ctx.restore();
   return true;
 }

@@ -1,5 +1,5 @@
 /**
- * Public UI story reader: 84 real rendered tableaux, keyboard/mobile controls,
+ * Public UI story reader: every roster route, keyboard/mobile controls,
  * four genuinely played story wins and checkpoint/award persistence.
  * The gallery's completed-route fixture is explicitly imported through the UI;
  * it is never counted as an earned victory. No production hooks or state writes.
@@ -33,7 +33,7 @@ const report = {
   command:'PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/tmp/chromium COMBAT_TEST_URL=http://127.0.0.1:4178 node tests/combat-story-presentation-browser.mjs',
   checks:[], errors:[], tableaux:[], playedDuels:[], measurements:{}, sourceHashesBefore:await sourceHashes(),
   limitations:[
-    'The 14 ending galleries use a clearly identified completed-route fixture imported through the public profile UI; only the four separately played Jax wins count as earned results.',
+    `The ${FIGHTERS.length} ending galleries use a clearly identified completed-route fixture imported through the public profile UI; only the four separately played Jax wins count as earned results.`,
     'Chromium desktop/mobile viewports and media preferences are emulated; no physical phone, screen reader or hardware controller is exercised.',
     'All dialogue is original fan-game writing. These checks verify presentation and progression, not full canonical fidelity or episode transcription.'
   ]
@@ -85,7 +85,7 @@ try {
     assert.deepEqual(await page.locator('.story-dialogue p').allTextContents(),expected.dialogue.map(line=>line.text));
     await artReady();
     assert.equal(await page.locator('.story-art-status').count(),0,'all original illustrations load');
-    const publishedImage = ART_FILES.includes(`../assets/encore/campaign/${fighterId}/${expected.id}.webp`);
+    const publishedImage = ['webp', 'png'].some(ext => ART_FILES.includes(`../assets/encore/campaign/${fighterId}/${expected.id}.${ext}`));
     assert.equal(await page.locator('.story-visual.story-illustrated').count(), Number(publishedImage), 'published panels use their dedicated image');
     assert.equal(await page.locator('.story-actor').count(), publishedImage ? 0 : expected.cast.length);
     const pixels = await page.locator('.story-visual canvas').evaluateAll(canvases=>canvases.map(canvas=>{
@@ -113,12 +113,12 @@ try {
     assert.equal(await page.evaluate(()=>document.activeElement?.dataset.action),'story-preview');
   }
   assert.deepEqual(await profile(),newProfile);
-  checked('Fourteen prologues expose 42 authored tableaux with loaded scenery and portraits','The public selection reader traverses every scene and returns focus to its launch button without changing the profile.');
+  checked(`${FIGHTERS.length} prologues expose ${FIGHTERS.length * 3} tableaux with loaded scenery and portraits`,'The public selection reader traverses every scene and returns focus to its launch button without changing the profile.');
   checked('Unfinished routes keep their ending reader locked','A fresh profile cannot open the ending gallery; reading a prologue does not unlock it.');
 
   const galleryFixture=emptyProfile();galleryFixture.stories=FIGHTERS.map(fighter=>fighter.id);galleryFixture.settings.sound=false;
   await importProfile(galleryFixture,'story-gallery-completed-routes-fixture.json');
-  report.galleryFixture={purpose:'ending presentation only',completedRoutes:14,earnedMatches:0,importMethod:'public file input and confirmation'};
+  report.galleryFixture={purpose:'ending presentation only',completedRoutes:FIGHTERS.length,earnedMatches:0,importMethod:'public file input and confirmation'};
   await page.locator('.mode-card[data-mode="story"]').click();
   for(const fighter of FIGHTERS){
     await page.locator(`[data-fighter="${fighter.id}"]`).click();
@@ -130,14 +130,14 @@ try {
     assert.equal(await page.evaluate(()=>document.activeElement?.dataset.action),'story-ending-library');
   }
   assert.deepEqual(await profile(),galleryFixture);
-  checked('Fourteen epilogues expose 42 authored tableaux without new rewards','An explicit gallery fixture is imported through the profile UI; its zero match count stays unchanged throughout all 14 ending readings.');
+  checked(`${FIGHTERS.length} epilogues expose ${FIGHTERS.length * 3} tableaux without new rewards`,'An explicit gallery fixture is imported through the profile UI; its zero match count stays unchanged throughout every ending reading.');
   const openings=report.tableaux.filter(panel=>panel.kind==='prologue'&&panel.index===1),closings=report.tableaux.filter(panel=>panel.kind==='epilogue'&&panel.index===1);
-  assert.equal(new Set(openings.map(panel=>panel.sha256)).size,14);assert.equal(new Set(closings.map(panel=>panel.sha256)).size,14);
+  assert.equal(new Set(openings.map(panel=>panel.sha256)).size,FIGHTERS.length);assert.equal(new Set(closings.map(panel=>panel.sha256)).size,FIGHTERS.length);
   for(const fighter of FIGHTERS){
     assert.notEqual(openings.find(panel=>panel.fighterId===fighter.id).sha256,closings.find(panel=>panel.fighterId===fighter.id).sha256);
     assert.equal(new Set(report.tableaux.filter(panel=>panel.fighterId===fighter.id).map(panel=>panel.sha256)).size,6);
   }
-  checked('Actual scene pixels distinguish every route and each route’s six tableaux','84 saved viewport captures; 14 unique openings, 14 unique ending openings, six visually different compositions within every route.');
+  checked('Actual scene pixels distinguish every route and each route’s six tableaux',`${FIGHTERS.length * 6} saved viewport captures; ${FIGHTERS.length} unique openings and ending openings, six visually different compositions within every route.`);
 
   await page.locator('[data-fighter="baronmildenhall"]').click();await page.locator('[data-action="story-preview"]').click();await artReady();
   const firstTitle=await page.locator('#modal-title').textContent();
@@ -244,7 +244,7 @@ try {
   report.measurements.finalStoredProfile=await page.evaluate(key=>JSON.parse(localStorage.getItem(key)),SAVE_KEY);
   assert.deepEqual(report.measurements.finalStoredProfile,finalEarned);
   checked('Ending back, Escape, full replay, reload and library skip never duplicate an award','The actually earned profile remains byte-for-byte equivalent throughout every ending return path.');
-  assert.deepEqual(report.errors,[]);checked('Story presentation completes without JavaScript or missing-asset errors','All 84 gallery panels and the four earned matches use the normal app and original asset pipeline.');
+  assert.deepEqual(report.errors,[]);checked('Story presentation completes without JavaScript or missing-asset errors',`All ${FIGHTERS.length * 6} gallery panels and the four earned matches use the normal app and original asset pipeline.`);
 } catch(error) {
   report.error={message:error.message,stack:error.stack};process.exitCode=1;console.error(error);
 } finally {
