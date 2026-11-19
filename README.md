@@ -14,10 +14,11 @@ The playable game version is **0.7.0**, completed in this branch on **24 October
 - Production tracker: **[DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx](docs/DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx)**.
 - Controls, architecture, references and remaining work: **[Digital Circus — Encore](docs/DIGITAL_CIRCUS_ENCORE.md)**.
 
-The release contains **14 fighters, 140 authored techniques, 12 arenas, 9 modes,
-51 selectable costumes and 179 searchable archive entries**. The remaining
-114 archive entries do not automatically receive a combat kit. The combat
-techniques and stories are original fan-game adaptations.
+The current roster contains **54 fighters, 540 techniques, 12 arenas, 9 modes,
+51 selectable costumes and 179 searchable archive entries**. Fourteen fighters
+have fully authored kits; the 40 promoted PNJ are described in the extension
+section below. The remaining 74 archive entries do not receive a combat kit. The
+combat techniques and stories are original fan-game adaptations.
 
 ### Stage endings and arena audio in 0.7.0
 
@@ -78,22 +79,86 @@ horizontal fighting arena. Their floor artwork also follows the new composition;
 collisions are unchanged. The other nine static backgrounds remain identical. See the [stage review](docs/combat-stage-review-0.6.0.json) and
 [before/after sheet](docs/images/encore-stage-comparison-0.6.0.png).
 
-The shared fidelity registers contain **217 records**: 14 fighters, 140 techniques,
+The shared fidelity registers contain **657 records**: 54 fighters, 540 techniques,
 12 arenas and 51 costumes. They separate technical checks, observed reference
 traits, original adaptations and remaining discrepancies. **This release does not
 claim complete canonical or pixel-exact 1:1 fidelity.**
 
+### Rival, coupe et feuille de route — extension de contenu
+
+**La coupe du cirque** garde son tableau à huit participants et ses trois duels
+joués, mais chaque artiste a désormais un **rival attitré**, tiré de sa propre
+route narrative. Le rival est placé dans l’autre moitié du tableau : ses
+rencontres CPU sont résolues par le scénario, restent étiquetées comme simulations
+et il attend en finale. Une défaite du joueur offre la coupe au rival. Une intro
+authored (Caine, le rival, l’artiste) précède le premier duel et un couronnement
+propre à l’artiste conclut la victoire. Le prix est toujours un rôle dans le
+spectacle — jamais une sortie du cirque.
+
+Les quatorze histoires exposent maintenant leur **feuille de route** : intro,
+nombre d’adversaires à battre (quatre), chapitre du rival, épilogue verrouillé ou
+débloqué. Le bouton **La feuille de route** affiche les quatre chapitres avec leur
+adversaire, leur arène et le marqueur ◆ du rival. Aucun nouveau chapitre ni combat
+n’est ajouté : ces données sont dérivées des routes existantes.
+
+Les **87 illustrations** de cette extension sont décrites, pas produites : trois
+images génériques de coupe, quatorze entrées, quatorze face-à-face de rival,
+quatorze couronnements et quarante-deux tableaux d’histoire. Voir le
+[brief d’illustrations](docs/COMBAT_TOURNOI_HISTOIRES_ILLUSTRATIONS.md). Les règles
+de simulation, les replays, les profils et la version du jeu restent inchangés.
+
 ### Stories and saved programmes
 
-Fourteen original routes retain their four encounters each, with **56 pre-fight
-scenes**. Each now also has a three-panel prologue and a three-panel epilogue:
-**84 new narrative tableaux**. The reader composes existing stage art and portraits
-with authored text. Previous, continue, skip and leave controls work with keyboard
-navigation and gamepad-back; mobile and reduced-motion presentation are supported.
-Endings can be reread after earning them without granting the reward again.
-These are scene compositions, not 84 new raster illustrations or voiced cinematics.
-See [stories.mjs](combat/stories.mjs), [story-presentation.mjs](combat/story-presentation.mjs)
-and the [story review](docs/combat-story-review-0.6.0.json).
+The fourteen original routes retain their four encounters each. Together with
+the 40 promoted PNJ, the game now exposes **54 routes, 216 pre-fight scenes**
+and **324 prologue/epilogue tableaux**. The reader composes existing stage art
+and portraits with authored text. Previous, continue, skip and leave controls
+work with keyboard navigation and gamepad-back; mobile and reduced-motion
+presentation are supported. Endings can be reread after earning them without
+granting the reward again. These are scene compositions, not new raster
+illustrations or voiced cinematics. See [stories.mjs](combat/stories.mjs),
+[story-presentation.mjs](combat/story-presentation.mjs) and the
+[story review](docs/combat-story-review-0.6.0.json).
+
+### Extension PNJ — 40 combattants d’archive
+
+Forty archive NPCs with a full-body sprite now own ten techniques, three stage
+finales, a four-chapter route, a rival and a tournament entrance/ending:
+Queenie, Kaufmo d’avant, Ribbit, Scratch, Wormo, Bizco, Rattie, Spike,
+Pink Furry Cyclops, Frowning Yellow Clown, The Oyster, Light Green Bulb Creature,
+Abel, Max, Chad, Orbsman, Ming, Martha Mildenhall, Ghostly, Angel,
+Disappearing Guy, Committee Member, Shrimp NPC, Chinese Room NPC, Blue AI,
+Cookie Butterfly, Gummy Elephant, Giant Centipede, Spudsy Customer, the three
+Candy Guards, Gummy Worm, Barrel Monkey, Jeffery, Mildenhall Souls and the four
+coloured Mannequins. Their kits are role-based templates adapted for Encore;
+their routes and tournament text are generated from one reviewed record per
+character. They are original fan-game adaptations, not canonical powers. The
+roster now exposes **162 stage finales** (42 authored, 120 generated for the
+promoted PNJ) and **657 fidelity records**. The remaining 74 archive identities
+(props, effects, abstractions, humans and unreviewed duplicates) stay
+non-playable. See [roster-expansion.mjs](combat/roster-expansion.mjs).
+
+### Presentation coverage across the 54-fighter roster
+
+All 54 fighters now share the same presentation guarantees, checked by
+[tests/combat-roster-completeness.test.mjs](tests/combat-roster-completeness.test.mjs):
+
+- **Dedicated stages**: every artist owns one `home-<id>` arrangement built on
+the reviewed scenery of its source episode, offered next to the twelve shared
+series arenas in free modes. The accent changes; the geometry and collision
+bounds do not, and no measured canonical set plan is claimed.
+- **Shared series arenas** remain common and non-dedicated for the whole roster.
+- **Stage finales**: three per fighter (162), chosen from the decisive hit.
+- **Friendships**: one `numéro d’amitié` per fighter (54), presented instead of
+the finale when the new setting is enabled. The decor is put away and nobody is
+left on the floor.
+- **Rivals**: each rival is one of its route's four authored chapters, never an
+extra opponent, and every one of the 54 resolves to another artist.
+- **Story illustrations**: four chapters, three prologue tableaux and three
+epilogue tableaux per route, with references and a writing note.
+
+These additions are data and presentation only; the 0.5.0 simulation and replay
+rules are unchanged.
 
 The nine modes are CPU versus, local versus, six-match arcade, four-match boss
 rush, ten-wave survival, training, six challenges, individual stories and an
@@ -253,21 +318,33 @@ player cues, archive focus/navigation, bounded offline activation and honest cac
 completion. It includes before/after reproductions, the scoped visual review and
 the three intermediate UI test attempts. Its groups overlap the complete campaign.
 
-The current tracker contains **105 features, 693 production tasks, 85 scenarios
-and 2,240 QA rows**. It keeps **1,591 protected rows unchanged**, reuses the IDs of
-615 existing cases, adds 30 new cases and four overlapping targeted objectives.
-QA statuses are 2,236 passed, zero failed, three not executed and one awaiting
-verification. Production has 398 implemented, 281 partial and 14 planned tasks.
-PRE-12 remains partial: player and gauge cues do not certify the global palette
-or replace validation with affected users and physical devices.
-
-All **39 formulas** were recalculated and checked through export/reimport, with
-**10 sheets and 9 native tables** retained. The independent comparison covers
+The tracker was extended on **17 November 2026** for the 40 promoted PNJ. It now
+contains **105 features, 2,253 production tasks, 325 scenarios and 2,246 QA rows**,
+with **11 sheets and 10 native tables**. The extension adds 40 fighter rows, 400
+techniques, 240 scenario rows, 1,560 production rows and six QA findings; the
+summary formulas point to the new ranges but were not recalculated because the
+primary spreadsheet runtime is unavailable here. Excel recalculates them on open.
+The previous 0.7 workbook remains the last certified recalculation: **39 formulas**
+checked through export/reimport, with **10 sheets and 9 native tables** retained. The independent comparison covers
 39,742 original cells: 625 expected data updates, with no unplanned value/formula
 changes or original style changes. A second isolated generation adds no rows,
 changes no tracked cells and preserves the tracking JSON byte for byte. Its XLSX
 has identical values, formulas, resolved styles and table metadata; binary identity
 of reserialized XLSX files is not claimed.
+
+The [extension QA evidence](docs/combat-qa-evidence-expansion-0.7.0.json) records
+the 372/372 Node run, `npm run qa`, the browser roster check and the checks that
+were not executed. The 40 new fidelity records remain marked « Épisode à revoir »
+until their proportions are compared with primary shots.
+
+Each of those 40 records now carries its own atlas review: sheet, grid cell,
+extracted size, visible traits, framing defects and identity notes, collected in the
+[sprite review](docs/combat-expansion-sprite-review-0.7.0.json) and checked against
+the [contact sheet](docs/images/expansion-sprites-review-0.7.0.png). The seven
+official stills consulted show none of these background NPCs, so no record was
+upgraded; the review instead records 35 concrete issues, including 16 cells that
+keep a neighbour's fragment and 9 episode attributions that contradict the generated
+route. No sprite was modified.
 
 See the [delivery review](docs/COMBAT_READABILITY_2026-10-29.md),
 [workbook verification](docs/combat-workbook-verification.json) and

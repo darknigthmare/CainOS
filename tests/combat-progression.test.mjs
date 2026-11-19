@@ -2,7 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { FIGHTERS, STAGES, VARIANTS } from '../combat/data.mjs';
 import { CombatEngine, FIXED_DT } from '../combat/engine.mjs';
-import { STORY_NOTICE, STORY_ROUTES, getStoryRoute, getStoryScene, getStoryEnding } from '../combat/stories.mjs';
+import { STORY_NOTICE, STORY_ROUTES, getStoryRoute, getStoryScene, getStoryEnding, getStoryBrief, getStoryRival } from '../combat/stories.mjs';
+import { getTournamentRival } from '../combat/tournament-lore.mjs';
 import {
   PROGRAM_KEY, PROGRAM_MODES, SURVIVAL_RECOVERY,
   createProgram, programEncounter, recordProgramResult, validateProgram,
@@ -43,10 +44,10 @@ test('the complete roster has fourteen individually authored four-scene routes w
     }
     assert.equal(getStoryEnding(fighter.id), route.ending);
   }
-  assert.equal(intros.size, 14);
-  assert.equal(endings.size, 14);
-  assert.equal(summaries.size, 56);
-  assert.equal(exchanges.size, 56);
+  assert.equal(intros.size, FIGHTERS.length);
+  assert.equal(endings.size, FIGHTERS.length);
+  assert.equal(summaries.size, FIGHTERS.length * 4);
+  assert.equal(exchanges.size, FIGHTERS.length * 4);
 });
 
 test('story helpers reject absent/prototype IDs and protect shared authored text', () => {
@@ -194,6 +195,47 @@ test('a tournament requires three real victories and propagates winners through 
   }
   assert.equal(programEncounter(run), null);
   assert.throws(() => win(run), /terminé/);
+});
+
+test('story briefs expose the intro, four opponents, the authored rival and the ending', () => {
+  for (const fighter of FIGHTERS) {
+    const brief = getStoryBrief(fighter.id), route = getStoryRoute(fighter.id);
+    assert.equal(brief.opponentCount, 4);
+    assert.equal(brief.intro, route.intro);
+    assert.equal(brief.ending, route.ending);
+    assert.equal(brief.chapters.length, 4);
+    assert.ok(brief.rival && brief.rival.id !== fighter.id, fighter.id);
+    assert.equal(brief.chapters[brief.rival.index].opponentId, brief.rival.id);
+    assert.equal(brief.rival.scene, brief.chapters[brief.rival.index]);
+    assert.ok(brief.chapters.some(chapter => chapter.opponentId === brief.rival.id));
+  }
+  for (const id of ['missing', '__proto__', 'constructor', null]) {
+    assert.equal(getStoryBrief(id), null);
+    assert.equal(getStoryRival(id), null);
+  }
+});
+
+test('each tournament seeds the authored rival in the opposite half and reaches the final', () => {
+  for (const fighter of FIGHTERS) {
+    const rivalId = getTournamentRival(fighter.id);
+    assert.ok(rivalId && rivalId !== fighter.id, fighter.id);
+    for (const seed of [0, 1, 7, 20261022, 4294967295]) {
+      const initial = make('tournament', fighter.id, { seed });
+      const participants = initial.tournament.participants;
+      assert.notEqual(participants.indexOf(fighter.id) < 4, participants.indexOf(rivalId) < 4, `${fighter.id}/${seed}: rival half`);
+      let run = initial;
+      const beaten = [];
+      for (let round = 0; round < 3; round++) {
+        beaten.push(programEncounter(run).opponentId);
+        run = win(run);
+      }
+      assert.equal(beaten.at(-1), rivalId, `${fighter.id}/${seed}: final rival`);
+      assert.equal(run.tournament.champion, fighter.id);
+      assert.deepEqual(validateProgram(clone(run)), run);
+      assert.equal(lose(initial).tournament.champion, rivalId, `${fighter.id}/${seed}: rival takes the cup`);
+    }
+  }
+  assert.equal(getTournamentRival('missing'), null);
 });
 
 test('a loss in any tournament round eliminates the player and labels every remaining CPU result as simulated', () => {

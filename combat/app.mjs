@@ -1,16 +1,17 @@
-import { FIGHTERS, STAGES, VARIANTS, ARCHIVE, MOVE_SLOTS, SLOT_LABELS, getFighter, getReplayFighter, getStage } from './data.mjs';
+import { FIGHTERS, STAGES, ALL_STAGES, VARIANTS, ARCHIVE, MOVE_SLOTS, SLOT_LABELS, getFighter, getReplayFighter, getStage, getDedicatedStage } from './data.mjs';
 import { getFidelitySources } from './fidelity.mjs';
 import { CombatEngine, FIXED_DT } from './engine.mjs';
 import { CombatRenderer, drawPortrait } from './render.mjs';
 import { InputController } from './input.mjs';
 import { BINDING_ACTIONS, DEFAULT_BINDINGS, rebindAction, formatBinding, keyLabel } from './bindings.mjs';
 import { createProgram, programEncounter, recordProgramResult, retryProgram } from './progression.mjs';
-import { STORY_NOTICE, getStoryRoute, getStoryEnding } from './stories.mjs';
+import { STORY_NOTICE, getStoryRoute, getStoryEnding, getStoryBrief, getStoryRival } from './stories.mjs';
 import { createStoryPresentation, stepStoryPresentation, skipStoryPresentation, storyPresentationMarkup, paintStoryPresentation } from './story-presentation.mjs';
+import { TOURNAMENT_NOTICE, getTournamentLore, getTournamentRival } from './tournament-lore.mjs';
 import { CombatAudio, selectCombatCue } from './audio.mjs';
 import { menuItems, rememberFocus, restoreFocus, moveMenuFocus, navigateKeyboardGroup } from './menu-navigation.mjs';
 import { FINISHER_CATALOG, FINISHER_NOTICE } from './finisher-catalog.mjs';
-import { selectMatchFinisher } from './finishers.mjs';
+import { selectMatchFinisher, selectMatchFriendship } from './finishers.mjs';
 import { FinisherGallery } from './finisher-gallery.mjs';
 import { TrainingLab } from './training.mjs';
 import { fighterReadout, fighterMarkers } from './readability.mjs';
@@ -88,7 +89,7 @@ function applySettings() {
   syncAudio();
 }
 function syncAudio() {
-  audio.setTheme(active && screen === 'fight' ? active.stage.id : 'menu');
+  audio.setTheme(active && screen === 'fight' ? (active.stage.theme || active.stage.id) : 'menu');
   audio.setPaused(document.hidden || !osVisible || !!(active && screen === 'fight' && active.engine.paused && !active.finished));
 }
 function sound(kind) { audio.play(kind); }
@@ -180,12 +181,13 @@ function renderSelect() {
   const single = [...PROGRAM_MODES,'challenge'].includes(selection.mode);
   const challenge = CHALLENGES.find(c=>c.id===selection.challenge);
   const previewStage = getStage(selection.mode==='story' ? getStoryRoute(selected[0].id)?.chapters[0]?.stageId : selection.stage);
+  const homeStages = [...new Set(selection.fighters)].map(getDedicatedStage).filter(Boolean);
   main.innerHTML = `${title(mode.eyebrow,selection.mode==='challenge'?challenge.name:'Qui entre en scène ?',selection.mode==='challenge'?challenge.text:mode.description)}
     <div class="pick-header"><h2>Les artistes</h2><div class="pick-side"><button data-side="0" class="${selection.side===0?'active':''}">JOUEUR 1</button>${single?'':`<button data-side="1" class="${selection.side===1?'active':''}">${selection.mode==='local'?'JOUEUR 2':'ADVERSAIRE'}</button>`}</div></div>
     <div class="roster">${FIGHTERS.map(f=>`<button class="fighter-card ${selection.fighters[0]===f.id?'selected':''} ${!single&&selection.fighters[1]===f.id?'rival':''}" data-fighter="${f.id}" aria-label="Choisir ${escapeHTML(f.name)}" aria-pressed="${selection.fighters[selection.side]===f.id}">${portraitMarkup(f.id)}<strong>${escapeHTML(f.name)}</strong><small>${escapeHTML(f.role)}</small>${selection.fighters[0]===f.id?'<span class="fighter-chip">J1</span>':!single&&selection.fighters[1]===f.id?'<span class="fighter-chip p2">J2</span>':''}</button>`).join('')}</div>
     <div class="selection-summary">${selectionArtist(0)}<div class="selection-vs" aria-hidden="true">VS</div>${single?`<div class="selection-program"><h3>${selection.mode==='arcade'?'Les six actes':selection.mode==='boss'?'Les anomalies':selection.mode==='survival'?'Dix vagues':selection.mode==='story'?'Quatre chapitres':selection.mode==='tournament'?'La coupe du cirque':'Le mannequin'}</h3><p>Une succession de défis préparée par Caine.</p></div>`:selectionArtist(1)}</div>
     ${selection.mode==='story'?storyLibraryMarkup(selected[0].id):''}<div class="selection-controls"><label class="field"><span>APPARENCE JOUEUR 1</span><select id="variant-0">${variantOptions(0)}</select></label>${single?'':`<label class="field"><span>APPARENCE ${selection.mode==='local'?'JOUEUR 2':'ADVERSAIRE'}</span><select id="variant-1">${variantOptions(1)}</select></label>`}<label class="field"><span>DIFFICULTÉ CPU</span><select id="select-difficulty">${[['easy','Détente'],['normal','Équilibrée'],['hard','Exigeante']].map(([id,name])=>`<option value="${id}" ${profile.settings.difficulty===id?'selected':''}>${name}</option>`).join('')}</select></label><button class="primary" data-action="start">LEVER LE RIDEAU ↗</button></div>
-    <div class="section-heading"><h2>Le décor</h2><span>${selection.mode==='story'?'LES SCÈNES SUIVENT L’HISTOIRE':PROGRAM_MODES.includes(selection.mode)?'DÉCOR DU PREMIER DUEL':'ARÈNES SANS DANGER ALÉATOIRE'}</span></div><div class="stages">${STAGES.map((stage,i)=>`<button class="stage-card ${previewStage.id===stage.id?'selected':''}" data-stage="${stage.id}" ${selection.mode==='story'?'disabled':''} aria-pressed="${previewStage.id===stage.id}" style="--stage-color:${stage.palette.accent}"><b>${escapeHTML(stage.name)}</b><span>SCÈNE ${String(i+1).padStart(2,'0')}</span></button>`).join('')}</div><section class="stage-preview" aria-labelledby="stage-preview-title"><canvas id="stage-preview" role="img" aria-label="Aperçu : ${escapeHTML(previewStage.name)}" data-stage-preview="${previewStage.id}"></canvas><div><span class="eyebrow">${selection.mode==='story'?'PREMIER CHAPITRE':'PROCHAINE SCÈNE'}</span><h3 id="stage-preview-title">${escapeHTML(previewStage.name)}</h3><p>${escapeHTML(previewStage.description)}</p>${fidelityDetails(previewStage.fidelity,'Repères du décor','stage-fidelity')}</div></section><p class="small-note">Les apparences proviennent des archives de CainOS. Les capacités et leurs valeurs sont des adaptations pour le combat. Les anciens membres et formes abstraites sont des adversaires simulés dans ce mode libre.</p>`;
+    <div class="section-heading"><h2>Le décor</h2><span>${selection.mode==='story'?'LES SCÈNES SUIVENT L’HISTOIRE':PROGRAM_MODES.includes(selection.mode)?'DÉCOR DU PREMIER DUEL':'ARÈNES SANS DANGER ALÉATOIRE'}</span></div><div class="stages">${STAGES.map((stage,i)=>`<button class="stage-card ${previewStage.id===stage.id?'selected':''}" data-stage="${stage.id}" ${selection.mode==='story'?'disabled':''} aria-pressed="${previewStage.id===stage.id}" style="--stage-color:${stage.palette.accent}"><b>${escapeHTML(stage.name)}</b><span>SCÈNE ${String(i+1).padStart(2,'0')}</span></button>`).join('')}${homeStages.map(stage=>`<button class="stage-card ${previewStage.id===stage.id?'selected':''}" data-stage="${stage.id}" ${selection.mode==='story'?'disabled':''} aria-pressed="${previewStage.id===stage.id}" style="--stage-color:${stage.palette.accent}"><b>${escapeHTML(stage.name)}</b><span>SCÈNE DÉDIÉE · ${escapeHTML(getFighter(stage.dedicatedTo).name)}</span></button>`).join('')}</div><section class="stage-preview" aria-labelledby="stage-preview-title"><canvas id="stage-preview" role="img" aria-label="Aperçu : ${escapeHTML(previewStage.name)}" data-stage-preview="${previewStage.id}"></canvas><div><span class="eyebrow">${selection.mode==='story'?'PREMIER CHAPITRE':'PROCHAINE SCÈNE'}</span><h3 id="stage-preview-title">${escapeHTML(previewStage.name)}</h3><p>${escapeHTML(previewStage.description)}</p>${fidelityDetails(previewStage.fidelity,'Repères du décor','stage-fidelity')}</div></section><p class="small-note">Les apparences proviennent des archives de CainOS. Les capacités et leurs valeurs sont des adaptations pour le combat. Les anciens membres et formes abstraites sont des adversaires simulés dans ce mode libre.</p>`;
   new CombatRenderer($('#stage-preview')).render(null,{stage:previewStage,reducedMotion:true});
   portraits();
 }
@@ -308,11 +310,12 @@ function renderSettings() {
       <label class="settings-row">Ambiance des arènes ${check('ambience')}</label>
       <label class="settings-row">Volume de l’ambiance <input type="range" min="0" max="1" step="0.05" value="${s.ambienceVolume}" data-setting="ambienceVolume" aria-label="Volume de l’ambiance"></label>
       <label class="settings-row">Finales après un KO ${check('finishers')}</label>
+      <label class="settings-row">Numéros d’amitié après un KO ${check('friendships')}</label>
       <label class="settings-row">Réduire les mouvements ${check('reducedMotion')}</label>
       <label class="settings-row">Repères renforcés <input type="checkbox" data-setting="enhancedReadability" aria-describedby="readability-help" ${s.enhancedReadability?'checked':''}></label>
       <p class="small-note" id="readability-help">Distingue les joueurs par un cercle J1 et un losange J2, même avec la même tenue. Affiche des jauges contrastées, leurs valeurs et les alertes de vie et de finale en texte. Le tableau reste au-dessus de l’arène.</p>
       <label class="settings-row">Afficher les zones de contact ${check('hitboxes')}</label>
-      <p class="small-note">Douze thèmes et douze ambiances originales accompagnent les arènes, avec des volumes séparés. Les finales peuvent être passées immédiatement ; la réduction des mouvements en montre une composition fixe.</p>
+      <p class="small-note">Douze thèmes et douze ambiances originales accompagnent les arènes, avec des volumes séparés. Chaque artiste possède en plus une scène dédiée, visible dans le choix du décor. Les finales peuvent être passées immédiatement ; les numéros d’amitié remplacent la finale quand l’option est active ; la réduction des mouvements montre une composition fixe.</p>
       <button class="secondary" data-mode="training">Ouvrir les répétitions</button>
     </section>
     <section class="settings-block"><h2>Ton palmarès · joueur 1</h2>
@@ -461,8 +464,8 @@ async function startMatch(options={}) {
   const initialHealth = config?.initialHealth || encounter?.initialHealth || [10000,10000];
   engine.state.fighters.forEach((f,i)=>{f.life=initialHealth[i];});
   if (challenge) engine.setTraining({dummy:challenge.dummy,freeMeter:true,freeResource:true,autoheal:true});
-  active = {engine,fighters,stage,mode,run,pendingNext:null,challenge,replay:!!options.replay,replaySource:options.replay,replayIterator:options.replay?replayInputs(options.replay):null,replayFrame:0,replayTotal:options.replay?.frames,record:{format:'circus-encore-replay',version:GAME_VERSION,config:{fighters:fighterIds,variants,stage:stage.id,cpu:matchConfig.cpu,difficulty:matchConfig.difficulty,seed:matchConfig.seed,roundTime:matchConfig.roundTime,roundsToWin:matchConfig.roundsToWin,initialHealth},runs:[]},recordFrames:0,stats:createMatchStats(),elapsed:0,showHitboxes:profile.settings.hitboxes,finished:false,ready:false,storyPending:mode==='story'&&!options.replay,announcement:'',roundDelay:0,training:mode==='training'?new TrainingLab():null,presentationPhase:engine.state.phase,presentationElapsed:0,ambientElapsed:0,resultPresented:false,finisher:null};
-  if (active.storyPending) engine.pause();
+  active = {engine,fighters,stage,mode,run,pendingNext:null,challenge,replay:!!options.replay,replaySource:options.replay,replayIterator:options.replay?replayInputs(options.replay):null,replayFrame:0,replayTotal:options.replay?.frames,record:{format:'circus-encore-replay',version:GAME_VERSION,config:{fighters:fighterIds,variants,stage:stage.id,cpu:matchConfig.cpu,difficulty:matchConfig.difficulty,seed:matchConfig.seed,roundTime:matchConfig.roundTime,roundsToWin:matchConfig.roundsToWin,initialHealth},runs:[]},recordFrames:0,stats:createMatchStats(),elapsed:0,showHitboxes:profile.settings.hitboxes,finished:false,ready:false,storyPending:mode==='story'&&!options.replay,tournamentPending:mode==='tournament'&&!!run&&run.index===0&&run.results.length===0&&!options.replay,announcement:'',roundDelay:0,training:mode==='training'?new TrainingLab():null,presentationPhase:engine.state.phase,presentationElapsed:0,ambientElapsed:0,resultPresented:false,finisher:null};
+  if (active.storyPending||active.tournamentPending) engine.pause();
   renderFight(); const match = active;
   $('#announcement').innerHTML = '<strong>LE RIDEAU SE LÈVE</strong><span>Préparation des artistes…</span>';
   const load = await active.renderer.preload(fighters,[stage]);
@@ -470,6 +473,7 @@ async function startMatch(options={}) {
   active.ready = true; active.announcement = null; accumulator = 0; previousTime = performance.now();
   if (load?.errors?.length) toast('Certaines illustrations sont indisponibles. Le combat reste accessible avec un repère visuel.');
   if (active.storyPending) showStoryScene();
+  else if (active.tournamentPending) showTournamentIntro();
   sound('start'); syncAudio();
 }
 function showStoryScene() {
@@ -481,7 +485,8 @@ function showStoryScene() {
 }
 function storyLibraryMarkup(fighterId) {
   const route = getStoryRoute(fighterId), completed = profile.stories.includes(fighterId);
-  return `<section class="story-library" aria-labelledby="story-library-title"><div><span class="eyebrow">UNE HISTOIRE EN QUATRE RENCONTRES</span><h2 id="story-library-title">${escapeHTML(route.title)}</h2><p>${escapeHTML(STORY_NOTICE)}. Prologue et épilogue en trois tableaux chacun.</p></div><div class="story-library-actions"><button class="secondary" data-action="story-preview">Lire le prologue</button><button class="secondary" data-action="story-ending-library" ${completed?'':'disabled'} aria-describedby="story-ending-access">Relire l’épilogue</button><small id="story-ending-access">${completed?'Épilogue débloqué · lecture libre sans résultat supplémentaire':'Termine les quatre rencontres pour débloquer l’épilogue.'}</small></div></section>`;
+  const rival = getStoryRival(fighterId);
+  return `<section class="story-library" aria-labelledby="story-library-title"><div><span class="eyebrow">UNE HISTOIRE EN QUATRE RENCONTRES</span><h2 id="story-library-title">${escapeHTML(route.title)}</h2><p>${escapeHTML(route.intro)}</p><p class="small-note">${escapeHTML(STORY_NOTICE)}. ${route.chapters.length} adversaires à battre · Rival : <strong>${escapeHTML(rival?.name || '—')}</strong>${rival?` (chapitre ${rival.index+1})`:''}. Prologue et épilogue en trois tableaux chacun.</p></div><div class="story-library-actions"><button class="secondary" data-action="story-brief">La feuille de route</button><button class="secondary" data-action="story-preview">Lire le prologue</button><button class="secondary" data-action="story-ending-library" ${completed?'':'disabled'} aria-describedby="story-ending-access">Relire l’épilogue</button><small id="story-ending-access">${completed?'Épilogue débloqué · lecture libre sans résultat supplémentaire':'Termine les quatre rencontres pour débloquer l’épilogue.'}</small></div></section>`;
 }
 function openStoryReader(fighterId, kind, origin) {
   const presentation = createStoryPresentation(fighterId,kind);
@@ -517,14 +522,35 @@ function skipStoryReader() {
   else leaveStoryReader();
 }
 function bracketMarkup(run) {
-  const name = id => id ? escapeHTML(getFighter(id).name) : 'À déterminer';
-  return `<div class="tournament-bracket">${run.tournament.rounds.map(round=>`<section><h3>${escapeHTML(round.label)}</h3>${round.matches.map(match=>`<article class="bracket-match ${match.a===run.playerId||match.b===run.playerId?'player-match':''}"><span class="${match.winner===match.a?'winner':''}">${name(match.a)}${match.a===run.playerId?' · TOI':''}</span><span class="${match.winner===match.b?'winner':''}">${name(match.b)}${match.b===run.playerId?' · TOI':''}</span><small>${match.method==='simulated'?'Résultat CPU simulé':match.method==='played'?'Duel joué':'Rencontre à venir'}</small></article>`).join('')}</section>`).join('')}</div>${run.tournament.champion?`<p class="bracket-champion">✦ ${name(run.tournament.champion)} remporte la coupe.</p>`:''}`;
+  const rivalId = getTournamentRival(run.playerId);
+  const name = id => id ? `${escapeHTML(getFighter(id).name)}${id===rivalId?' <b class="rival-mark">◆</b>':''}` : 'À déterminer';
+  return `<div class="tournament-bracket">${run.tournament.rounds.map(round=>`<section><h3>${escapeHTML(round.label)}</h3>${round.matches.map(match=>`<article class="bracket-match ${match.a===run.playerId||match.b===run.playerId?'player-match':''} ${match.a===rivalId||match.b===rivalId?'rival-match':''}"><span class="${match.winner===match.a?'winner':''}">${name(match.a)}${match.a===run.playerId?' · TOI':''}</span><span class="${match.winner===match.b?'winner':''}">${name(match.b)}${match.b===run.playerId?' · TOI':''}</span><small>${match.method==='simulated'?'Résultat CPU simulé':match.method==='played'?'Duel joué':'Rencontre à venir'}</small></article>`).join('')}</section>`).join('')}</div>${run.tournament.champion?`<p class="bracket-champion">✦ ${name(run.tournament.champion)} remporte la coupe.</p>`:''}`;
+}
+function showTournamentIntro() {
+  const run = active?.run;
+  if (!run || run.mode !== 'tournament' || run.index !== 0 || run.results.length) return;
+  const lore = getTournamentLore(run.playerId);
+  if (!lore) return;
+  active.engine.pause(); controls.clear();
+  showDialog(`<span class="ticket-label">LA COUPE DU CIRQUE</span><h2 id="modal-title">${escapeHTML(lore.intro.title)}</h2><p class="story-intro">${escapeHTML(lore.intro.summary)}</p><div class="story-dialogue">${lore.intro.dialogue.map(line=>`<blockquote><strong>${escapeHTML(line.speaker)}</strong><p>${escapeHTML(line.text)}</p></blockquote>`).join('')}</div><p class="small-note">${lore.wins} duels joués · ${escapeHTML(getFighter(lore.rivalId).name)} attend dans l’autre moitié du tableau · ${escapeHTML(TOURNAMENT_NOTICE)}</p><div class="modal-actions"><button class="primary" data-action="resume">ENTRER EN SCÈNE</button><button class="secondary" data-action="bracket">Voir le tableau</button></div>`);
+}
+function tournamentEndingMarkup(playerId) {
+  const lore = getTournamentLore(playerId);
+  if (!lore) return '';
+  return `<section class="story-ending tournament-ending"><h3>La coupe du cirque · ${escapeHTML(lore.endingTitle)}</h3><p>${escapeHTML(lore.ending)}</p><p class="small-note"><strong>Prix du spectacle.</strong> ${escapeHTML(lore.prize)}</p></section>`;
+}
+function showStoryBrief() {
+  const fighter = getFighter(selection.fighters[0]);
+  const brief = getStoryBrief(fighter.id);
+  if (!brief) return;
+  const unlocked = profile.stories.includes(fighter.id), rival = brief.rival;
+  showDialog(`<span class="ticket-label">FEUILLE DE ROUTE · ${escapeHTML(STORY_NOTICE)}</span><h2 id="modal-title">${escapeHTML(brief.title)}</h2><p class="story-intro">${escapeHTML(brief.intro)}</p><div class="story-brief-stats"><div><b>${brief.opponentCount}</b>ADVERSAIRES À BATTRE</div><div><b>${escapeHTML(rival?.name || '—')}</b>RIVAL · ${rival?`CHAPITRE ${rival.index+1}`:'—'}</div><div><b>${unlocked?'✦':'◇'}</b>ÉPILOGUE ${unlocked?'DÉBLOQUÉ':'À DÉBLOQUER'}</div></div><div class="story-roadmap">${brief.chapters.map((chapter,index)=>`<article class="${index===rival?.index?'rival-chapter':''}"><span>CHAPITRE ${index+1}</span><h3>${escapeHTML(chapter.title)}</h3><p>${escapeHTML(getFighter(chapter.opponentId).name)} · ${escapeHTML(getStage(chapter.stageId).name)}</p>${index===rival?.index?'<b class="rival-tag">◆ RIVAL</b>':''}</article>`).join('')}</div><section class="story-ending ${unlocked?'':'locked-ending'}"><h3>Épilogue</h3><p>${unlocked?escapeHTML(brief.ending):'Termine les quatre rencontres pour débloquer et relire l’épilogue.'}</p></section><div class="modal-actions">${unlocked?'<button class="primary" data-action="story-ending-library">Relire l’épilogue</button>':''}<button class="secondary" data-action="close-modal">Fermer</button></div>`);
 }
 function showBracket() {
   if (!active?.run?.tournament) return;
   if (!active.finished) { active.engine.pause(); controls.clear(); }
   const run = active.pendingNext || active.run;
-  showDialog(`<span class="ticket-label">LA COUPE DU CIRQUE</span><h2 id="modal-title">Le tableau du tournoi</h2><p class="small-note">Tes rencontres se jouent dans l’arène. Les autres résultats sont simulés à partir du tirage du tournoi.</p>${bracketMarkup(run)}<div class="modal-actions"><button class="primary" data-action="${active.finished?'result-screen':'resume'}">${active.finished?'Revenir au résultat':'Reprendre le duel'}</button></div>`);
+  showDialog(`<span class="ticket-label">LA COUPE DU CIRQUE</span><h2 id="modal-title">Le tableau du tournoi</h2><p class="small-note">Tes rencontres se jouent dans l’arène. Les autres résultats sont simulés à partir du tirage du tournoi. Ton rival ◆ est placé dans l’autre moitié du tableau : la coupe passe par lui.</p>${bracketMarkup(run)}<div class="modal-actions"><button class="primary" data-action="${active.finished?'result-screen':'resume'}">${active.finished?'Revenir au résultat':'Reprendre le duel'}</button></div>`);
 }
 
 function updateHUD() {
@@ -565,7 +591,7 @@ function updateHUD() {
 function challengeValue() {return challengeProgress(active.challenge,active.stats[0]);}
 function collectEvents(events) {
   collectMatchStats(active.stats,events,active.engine.state);
-  if(active.engine.state.phase==='matchOver')active.finisher=profile.settings.finishers?selectMatchFinisher(active.engine.state,events,{mode:active.mode,replay:active.replay}):null;
+  if(active.engine.state.phase==='matchOver')active.finisher=profile.settings.finishers?(profile.settings.friendships?selectMatchFriendship(active.engine.state,events,{mode:active.mode,replay:active.replay,presentation:'friendship'}):selectMatchFinisher(active.engine.state,events,{mode:active.mode,replay:active.replay})):null;
   const cue = selectCombatCue(events, active.engine.state);
   if (cue) sound(cue);
 }
@@ -642,7 +668,7 @@ function finishMatch() {
   profile.history = profile.history.slice(0,12); persist(); syncAudio(); sound(won?'win':'lose');
   active.presentationPhase='matchOver'; active.presentationElapsed=0;
   $('.arena-wrap').classList.toggle('finishing',!!active.finisher);
-  if(active.finisher)$('#arena').setAttribute('aria-label',active.finisher.title+' — finale de spectacle. Le résultat du duel est déjà enregistré.');
+  if(active.finisher)$('#arena').setAttribute('aria-label',active.finisher.title+(active.finisher.presentation==='friendship'?' — numéro d’amitié.':' — finale de spectacle.')+' Le résultat du duel est déjà enregistré.');
   const skip=document.createElement('button'); skip.className='primary outcome-skip'; skip.dataset.action='result-screen'; skip.textContent='Voir le résultat'; $('.arena-stage').append(skip); skip.focus({preventScroll:true});
 }
 function renderMatchResult() {
@@ -655,7 +681,7 @@ function renderMatchResult() {
     openStoryReader(run.playerId,'epilogue','result'); return;
   }
   const titleText = active.mode==='local' ? (active.engine.state.winner>=0?`${active.fighters[active.engine.state.winner].name} remporte le duel`:'Le duel se termine sur une égalité') : won ? 'Le public en redemande.' : 'Un autre numéro t’attend.';
-  const ending = completed && active.mode==='story' ? `<section class="story-ending"><h3>Épilogue · ${escapeHTML(getStoryRoute(run.playerId).title)}</h3><p>${escapeHTML(getStoryEnding(run.playerId))}</p><span class="small-note">${escapeHTML(STORY_NOTICE)}</span><button class="secondary" data-action="story-ending-result">Relire les trois tableaux</button></section>` : '';
+  const ending = completed && active.mode==='story' ? `<section class="story-ending"><h3>Épilogue · ${escapeHTML(getStoryRoute(run.playerId).title)}</h3><p>${escapeHTML(getStoryEnding(run.playerId))}</p><span class="small-note">${escapeHTML(STORY_NOTICE)}</span><button class="secondary" data-action="story-ending-result">Relire les trois tableaux</button></section>` : completed && active.mode==='tournament' ? tournamentEndingMarkup(run.playerId) : '';
   showDialog(`<span class="ticket-label">${won?'RAPPEL !':'FIN DE L’ACTE'}</span><h2 id="modal-title">${escapeHTML(titleText)}</h2>
     <p class="result-copy">${run?`${run.index+1}/${run.opponents.length} rencontres. `:''}${continuing?'La prochaine scène est prête et sauvegardée.':completed?'Le programme est terminé. Une médaille a été ajoutée au profil.':run&&['tournament','survival'].includes(active.mode)?'Ce parcours est terminé. Rejouer démarre une nouvelle tentative.':active.replaySaved?'Le duel a été enregistré dans les replays locaux.':'Le duel est terminé. Son replay n’a pas pu être conservé.'}${continuing&&active.mode==='survival'?` Santé au prochain duel : ${number(next.health)}.`:''}</p>
     ${resultStats(active.stats[0])}${ending}
@@ -686,7 +712,7 @@ function showControls(){
 }
 
 function download(name,value){const url=URL.createObjectURL(new Blob([JSON.stringify(value,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),10000);}
-function readSavedReplay(){const raw=storage.getItem(REPLAY_KEY);if(!raw)throw new Error('Termine un duel pour disposer d’un replay.');return validateReplay(JSON.parse(raw),FIGHTERS.map(f=>f.id),STAGES.map(s=>s.id));}
+function readSavedReplay(){const raw=storage.getItem(REPLAY_KEY);if(!raw)throw new Error('Termine un duel pour disposer d’un replay.');return validateReplay(JSON.parse(raw),FIGHTERS.map(f=>f.id),ALL_STAGES.map(s=>s.id));}
 async function replayLast(){try{const replay=readSavedReplay();await startMatch({mode:'versus',replay});}catch(error){toast(error.message);}}
 function navigate(next){
   if(active&&!active.finished&&screen==='fight'){
@@ -766,6 +792,7 @@ async function handleClick(event){
       case 'story-skip':skipStoryReader();break;
       case 'story-done':case 'story-leave':leaveStoryReader();break;
       case 'story-preview':openStoryReader(selection.fighters[0],'prologue','library');break;
+      case 'story-brief':showStoryBrief();break;
       case 'story-ending-library':if(profile.stories.includes(selection.fighters[0]))openStoryReader(selection.fighters[0],'epilogue','library');break;
       case 'story-ending-result':if(active?.mode==='story'&&active.pendingNext?.status==='complete')openStoryReader(active.run.playerId,'epilogue','result');break;
       case 'bracket':showBracket();break;
@@ -903,7 +930,7 @@ $('#import-profile').addEventListener('change',async event=>{
 });
 $('#import-replay').addEventListener('change',async event=>{
   const file=event.target.files[0];event.target.value='';if(!file)return;
-  try{if(file.size>2_000_000)throw new Error('Ce replay est trop volumineux.');const replay=validateReplay(JSON.parse(await file.text()),FIGHTERS.map(f=>f.id),STAGES.map(s=>s.id));await startMatch({mode:'versus',replay});}catch(error){toast(error.message);}
+  try{if(file.size>2_000_000)throw new Error('Ce replay est trop volumineux.');const replay=validateReplay(JSON.parse(await file.text()),FIGHTERS.map(f=>f.id),ALL_STAGES.map(s=>s.id));await startMatch({mode:'versus',replay});}catch(error){toast(error.message);}
 });
 // A read-only view enables QA without injecting commands into game logic.
 window.Encore=Object.freeze({version:GAME_VERSION,get screen(){return screen;},get ready(){return active?.ready||false;},get paused(){return active?.engine.paused||false;},get snapshot(){return active?.engine.getSnapshot()||null;},get training(){return active?.training?.snapshot(active.engine.state.fighters)||null;},get finales(){return finisherGallery?.snapshot||null;},get presentation(){return active?{finisherId:active.finisher?.id||null,finisherDuration:active.finisher?.durationFrames||0,phase:active.presentationPhase,frames:Math.floor(active.presentationElapsed*60),resultPresented:active.resultPresented}:null;},get stats(){return active?JSON.parse(JSON.stringify(active.stats.map(s=>({...s,unique:[...s.unique]})))):null;},get profile(){return JSON.parse(JSON.stringify(profile));},get program(){return active?.run?JSON.parse(JSON.stringify(active.pendingNext||active.run)):null;},get offline(){return offline.getState();},get audio(){return audio.diagnostics;}});

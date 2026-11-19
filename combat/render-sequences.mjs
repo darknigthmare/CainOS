@@ -1,3 +1,5 @@
+import { EXPANSION_DEFS } from './roster-expansion.mjs';
+
 /**
  * Authored timing for procedural presentations of existing illustrations.
  * These sequences never author combat poses, move an actor, or change rules.
@@ -29,6 +31,14 @@ const performers = {
   baronmildenhall: { title: 'Salut spectral', x: 6, lift: 11, lean: 0.03, beat: 0.44, cells: [0, 0, 0] },
   fudge: { title: 'Vague de chocolat', x: 8, lift: 4, lean: -0.03, beat: 0.29, cells: [0, 0, 0] },
 };
+EXPANSION_DEFS.forEach((def, index) => {
+  performers[def.id] = {
+    title: `Entrée de ${def.name}`,
+    x: 5 + index * 0.11, lift: 4 + index * 0.09,
+    lean: (index % 2 ? -1 : 1) * (0.02 + index * 0.0006),
+    beat: 0.24 + index * 0.0007, cells: [0, 0, 0]
+  };
+});
 
 export const SEQUENCE_EVENTS = freeze(['intro', 'roundVictory', 'roundDefeat', 'matchVictory', 'matchDefeat']);
 export const SEQUENCE_DURATIONS = freeze({ intro: 96, roundVictory: 90, roundDefeat: 90, matchVictory: 132, matchDefeat: 132 });
