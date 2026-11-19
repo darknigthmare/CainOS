@@ -1,0 +1,422 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-19",
+  "method": "image_gen.imagegen",
+  "policy": "Native generated PNG bytes copied unchanged; no resizing, cropping, recompression, recoloring, alpha editing or synthetic pose transforms. One whole-character image per slot.",
+  "fidelity": "Official GLITCH Sand Castle Kinger merchandise controls head, intact castle body and accessories. All movements are original fan-game adaptations through tilt and head movement, with no invented arms, hands, feet or legs. No episode-frame or frame-by-frame animation certification claimed.",
+  "expectedAppearances": [
+    "sandcastlekinger"
+  ],
+  "expectedSlots": [
+    "selection",
+    "stance",
+    "intro",
+    "walk",
+    "jump",
+    "crouch",
+    "attack",
+    "heavy",
+    "hit",
+    "victory",
+    "defeat"
+  ],
+  "entries": [
+    {
+      "id": "sandcastlekinger-selection",
+      "appearanceId": "sandcastlekinger",
+      "slot": "selection",
+      "file": "assets/encore/selection/sandcastlekinger.png",
+      "sourceGenerationId": "exec-e1c7f075-eaa7-49cf-8ef2-d233f5c37773",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/digital-circus-animiniz-beach-vacation-series",
+        "https://glitchproductions.store/cdn/shop/files/Beach_Series_Render_03.png?v=1765572441&width=1600"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/research/beach-series-03.png",
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/kinger.webp"
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: one individual full-body character selection illustration for Digital Circus Encore. Create ONE Sand Castle Kinger. Input image 1 is the official GLITCH Sand Castle Kinger design and controls the entire anatomical silhouette, yellow castle body, gold chess head, blue irises and precise accessories. Input image 2 is existing game Kinger and controls ONLY crisp black contours and polished 2D cel-shaded illustration style. Do NOT borrow its purple cloak, detached hands, or tall humanoid proportions. Draw all of the official castle, intact. Identity locks: Kinger has a warm sand-gold elongated chess-king head with a gold cross at the top. Exactly two large protruding white eyeballs with BLUE irises and black pupils: larger/higher eye on screen LEFT and smaller/lower eye on screen RIGHT. No mouth. Head emerges from one intact pale yellow sandcastle BODY. Broad front cylindrical tower with crenellated top, arched golden recessed doorway, periwinkle scallop shell above the arch, pastel pink/cyan/periwinkle pebble ornaments. Short left turret with small pointed sand roof, taller right turret with tiny cyan pole and pink flag. One pink starfish on lower-left edge of the castle's attached shallow irregular sand footing; one short cyan toy shovel leaning at lower-right, with small colored pebbles along footing. The shallow sand footing is the bottom of this body's silhouette, not a separate floor or scene. Preserve all towers, ornament positions, head proportions and castle structure. No hands, arms, feet, legs, human torso, cloak, robe, crown replacement or new anatomy. Shovel remains a small attached accessory, never a limb or weapon. Pose: neutral upright selection pose, slight three-quarter view facing screen right, curious wide eyes. Camera sees entire gold cross, all three castle towers, the whole sand footing and shovel. Single subject centered in generous true transparent RGBA margins. Solid clean opaque cartoon interior and clean edges, no scenery, ground plane, ground shadow, halo, glow, sky, text, logo, label, display stand, second view, duplicate figure or sprite sheet. The sandcastle is the character body, not scenery around a normal Kinger. Flat polished 2D game artwork, not 3D toy render or photograph.",
+      "sha256": "14bea0188d6b6e3f10ca919c9497bf058327f10e7bfcd7c2a2573144cca05e42",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        1160,
+        1355
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        190,
+        15,
+        948,
+        1340
+      ],
+      "bytes": 998101,
+      "visualReview": "Complete pale-yellow sandcastle body with front arch, periwinkle shell, pastel pebbles, pink star and cyan shovel; warm-gold chess head, cross and two unequal blue-irised eyes. No humanoid limbs or clothing."
+    },
+    {
+      "id": "sandcastlekinger-stance",
+      "appearanceId": "sandcastlekinger",
+      "slot": "stance",
+      "file": "assets/encore/stance/sandcastlekinger.png",
+      "sourceGenerationId": "exec-5ea3f765-2c7e-447f-b2da-3ee5e1b05141",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/digital-circus-animiniz-beach-vacation-series",
+        "https://glitchproductions.store/cdn/shop/files/Beach_Series_Render_03.png?v=1765572441&width=1600"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-e1c7f075-eaa7-49cf-8ef2-d233f5c37773.png",
+        "/workspace/scratch/5f5114b49696/research/beach-series-03.png"
+      ],
+      "prompt": "Use case: identity-preserve. Asset type: one individual full-body stance sprite for Digital Circus Encore. Image 1 is the approved Sand Castle Kinger 2D sprite and controls exact character identity, palette, drawing style and proportions. Image 2 is the official GLITCH anatomical reference. Change ONLY pose: Ready defensive stance: keep the castle upright with a slight five-degree forward lean toward screen right; lower the unchanged gold chess head a little behind the front battlement, pupils focused toward screen right. All three towers and accessories remain rigidly intact. A guarded expression without eyebrows or a mouth. Invariants: Kinger has a warm sand-gold elongated chess-king head with a gold cross at the top. Exactly two large protruding white eyeballs with BLUE irises and black pupils: larger/higher eye on screen LEFT and smaller/lower eye on screen RIGHT. No mouth. Head emerges from one intact pale yellow sandcastle BODY. Broad front cylindrical tower with crenellated top, arched golden recessed doorway, periwinkle scallop shell above the arch, pastel pink/cyan/periwinkle pebble ornaments. Short left turret with small pointed sand roof, taller right turret with tiny cyan pole and pink flag. One pink starfish on lower-left edge of the castle's attached shallow irregular sand footing; one short cyan toy shovel leaning at lower-right, with small colored pebbles along footing. The shallow sand footing is the bottom of this body's silhouette, not a separate floor or scene. Preserve all towers, ornament positions, head proportions and castle structure. No hands, arms, feet, legs, human torso, cloak, robe, crown replacement or new anatomy. Shovel remains a small attached accessory, never a limb or weapon. Preserve all castle geometry; never stretch or squash walls, invent limbs, remove towers, separate ornaments or turn the castle into clothing on a humanoid. Express movement through rigid tilt and head placement only. Single whole character, facing generally screen right, all of gold cross, eyes, castle, entire footing, starfish, flag and shovel within generous margins. Actual transparent RGBA, opaque interior and clean inked cel-shaded edges. No ground, shadow, halo, scenery, text, labels, duplicates, motion trails or sprite sheet.",
+      "sha256": "99df9caf8346423ee9938097392a49c84ba929c8c7fed4166232fe03bcaa6225",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        1160,
+        1355
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        156,
+        144,
+        986,
+        1305
+      ],
+      "bytes": 952404,
+      "visualReview": "Guard pose lowers head behind upper battlements and focuses blue pupils right; all three towers and accessories remain complete, no limbs."
+    },
+    {
+      "id": "sandcastlekinger-intro",
+      "appearanceId": "sandcastlekinger",
+      "slot": "intro",
+      "file": "assets/encore/poses/sandcastlekinger/intro.png",
+      "sourceGenerationId": "exec-7feb7f13-e22e-444e-8ea3-ac3539e19182",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/digital-circus-animiniz-beach-vacation-series",
+        "https://glitchproductions.store/cdn/shop/files/Beach_Series_Render_03.png?v=1765572441&width=1600"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-e1c7f075-eaa7-49cf-8ef2-d233f5c37773.png",
+        "/workspace/scratch/5f5114b49696/research/beach-series-03.png"
+      ],
+      "prompt": "Use case: identity-preserve. Asset type: one individual full-body intro sprite for Digital Circus Encore. Image 1 is the approved Sand Castle Kinger 2D sprite and controls exact character identity, palette, drawing style and proportions. Image 2 is the official GLITCH anatomical reference. Change ONLY pose: Curious entrance greeting: castle remains upright; tilt the rigid gold chess head gently toward screen left, with eyes looking toward the viewer, as if peeking with curiosity. The cross and both eyes fully visible. No waving hands; no hands exist in this appearance. Invariants: Kinger has a warm sand-gold elongated chess-king head with a gold cross at the top. Exactly two large protruding white eyeballs with BLUE irises and black pupils: larger/higher eye on screen LEFT and smaller/lower eye on screen RIGHT. No mouth. Head emerges from one intact pale yellow sandcastle BODY. Broad front cylindrical tower with crenellated top, arched golden recessed doorway, periwinkle scallop shell above the arch, pastel pink/cyan/periwinkle pebble ornaments. Short left turret with small pointed sand roof, taller right turret with tiny cyan pole and pink flag. One pink starfish on lower-left edge of the castle's attached shallow irregular sand footing; one short cyan toy shovel leaning at lower-right, with small colored pebbles along footing. The shallow sand footing is the bottom of this body's silhouette, not a separate floor or scene. Preserve all towers, ornament positions, head proportions and castle structure. No hands, arms, feet, legs, human torso, cloak, robe, crown replacement or new anatomy. Shovel remains a small attached accessory, never a limb or weapon. Preserve all castle geometry; never stretch or squash walls, invent limbs, remove towers, separate ornaments or turn the castle into clothing on a humanoid. Express movement through rigid tilt and head placement only. Single whole character, facing generally screen right, all of gold cross, eyes, castle, entire footing, starfish, flag and shovel within generous margins. Actual transparent RGBA, opaque interior and clean inked cel-shaded edges. No ground, shadow, halo, scenery, text, labels, duplicates, motion trails or sprite sheet.",
+      "sha256": "ebe679f2d11da73e693d7cadb6af2fd56d2e74d167469236fb32abee36fbe951",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        1160,
+        1355
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        190,
+        10,
+        949,
+        1339
+      ],
+      "bytes": 1048484,
+      "visualReview": "Curious head tilt toward screen left, eyes toward viewer; upright castle, entire footing and ornaments intact."
+    },
+    {
+      "id": "sandcastlekinger-walk",
+      "appearanceId": "sandcastlekinger",
+      "slot": "walk",
+      "file": "assets/encore/poses/sandcastlekinger/walk.png",
+      "sourceGenerationId": "exec-c66fb17b-0d04-4367-9ec4-e932065bfa32",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/digital-circus-animiniz-beach-vacation-series",
+        "https://glitchproductions.store/cdn/shop/files/Beach_Series_Render_03.png?v=1765572441&width=1600"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-e1c7f075-eaa7-49cf-8ef2-d233f5c37773.png",
+        "/workspace/scratch/5f5114b49696/research/beach-series-03.png"
+      ],
+      "prompt": "Use case: identity-preserve. Asset type: one individual full-body walk sprite for Digital Circus Encore. Image 1 is the approved Sand Castle Kinger 2D sprite and controls exact character identity, palette, drawing style and proportions. Image 2 is the official GLITCH anatomical reference. Change ONLY pose: Legless waddling locomotion frame: tip the ENTIRE intact castle body and its attached sand footing modestly toward screen right, about twelve degrees, as if rocking forward to move. Gold head counters the tilt slightly and pupils look to screen right. No legs, feet, moving towers or detached pieces. Do not draw the baseline horizontal; whole body rocks together. Invariants: Kinger has a warm sand-gold elongated chess-king head with a gold cross at the top. Exactly two large protruding white eyeballs with BLUE irises and black pupils: larger/higher eye on screen LEFT and smaller/lower eye on screen RIGHT. No mouth. Head emerges from one intact pale yellow sandcastle BODY. Broad front cylindrical tower with crenellated top, arched golden recessed doorway, periwinkle scallop shell above the arch, pastel pink/cyan/periwinkle pebble ornaments. Short left turret with small pointed sand roof, taller right turret with tiny cyan pole and pink flag. One pink starfish on lower-left edge of the castle's attached shallow irregular sand footing; one short cyan toy shovel leaning at lower-right, with small colored pebbles along footing. The shallow sand footing is the bottom of this body's silhouette, not a separate floor or scene. Preserve all towers, ornament positions, head proportions and castle structure. No hands, arms, feet, legs, human torso, cloak, robe, crown replacement or new anatomy. Shovel remains a small attached accessory, never a limb or weapon. Preserve all castle geometry; never stretch or squash walls, invent limbs, remove towers, separate ornaments or turn the castle into clothing on a humanoid. Express movement through rigid tilt and head placement only. Single whole character, facing generally screen right, all of gold cross, eyes, castle, entire footing, starfish, flag and shovel within generous margins. Actual transparent RGBA, opaque interior and clean inked cel-shaded edges. No ground, shadow, halo, scenery, text, labels, duplicates, motion trails or sprite sheet.",
+      "sha256": "5c183bda0ca379f03b40dedaccbc8f80833d19b03fba0ca925b9002e4ce42ab7",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        1160,
+        1355
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        158,
+        22,
+        1016,
+        1316
+      ],
+      "bytes": 978636,
+      "visualReview": "Whole castle rocks toward screen right with diagonal footing; head counters slightly, unlike eye heights retained. No legs or detached pieces."
+    },
+    {
+      "id": "sandcastlekinger-jump",
+      "appearanceId": "sandcastlekinger",
+      "slot": "jump",
+      "file": "assets/encore/poses/sandcastlekinger/jump.png",
+      "sourceGenerationId": "exec-fda200e8-2045-40d1-8909-15de3894bb70",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/digital-circus-animiniz-beach-vacation-series",
+        "https://glitchproductions.store/cdn/shop/files/Beach_Series_Render_03.png?v=1765572441&width=1600"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-e1c7f075-eaa7-49cf-8ef2-d233f5c37773.png",
+        "/workspace/scratch/5f5114b49696/research/beach-series-03.png"
+      ],
+      "prompt": "Use case: identity-preserve. Asset type: one individual full-body jump sprite for Digital Circus Encore. Image 1 is the approved Sand Castle Kinger 2D sprite and controls exact character identity, palette, drawing style and proportions. Image 2 is the official GLITCH anatomical reference. Change ONLY pose: A midair hop by the WHOLE intact castle body: lift the complete castle and sand footing as one solid silhouette, with a slight backward tilt toward screen left; gold chess head rises slightly and blue pupils look upward. Show a little more of the base edge to suggest being airborne, but add no underside anatomy, limbs, effects or scenery. All towers and attached shovel remain intact. Invariants: Kinger has a warm sand-gold elongated chess-king head with a gold cross at the top. Exactly two large protruding white eyeballs with BLUE irises and black pupils: larger/higher eye on screen LEFT and smaller/lower eye on screen RIGHT. No mouth. Head emerges from one intact pale yellow sandcastle BODY. Broad front cylindrical tower with crenellated top, arched golden recessed doorway, periwinkle scallop shell above the arch, pastel pink/cyan/periwinkle pebble ornaments. Short left turret with small pointed sand roof, taller right turret with tiny cyan pole and pink flag. One pink starfish on lower-left edge of the castle's attached shallow irregular sand footing; one short cyan toy shovel leaning at lower-right, with small colored pebbles along footing. The shallow sand footing is the bottom of this body's silhouette, not a separate floor or scene. Preserve all towers, ornament positions, head proportions and castle structure. No hands, arms, feet, legs, human torso, cloak, robe, crown replacement or new anatomy. Shovel remains a small attached accessory, never a limb or weapon. Preserve all castle geometry; never stretch or squash walls, invent limbs, remove towers, separate ornaments or turn the castle into clothing on a humanoid. Express movement through rigid tilt and head placement only. Single whole character, facing generally screen right, all of gold cross, eyes, castle, entire footing, starfish, flag and shovel within generous margins. Actual transparent RGBA, opaque interior and clean inked cel-shaded edges. No ground, shadow, halo, scenery, text, labels, duplicates, motion trails or sprite sheet.",
+      "sha256": "891a556e97bcd5124dfdf2122dd825626b931cb2eacd96e51cf18e7f2b311563",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        1160,
+        1355
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        197,
+        31,
+        965,
+        1238
+      ],
+      "bytes": 909236,
+      "visualReview": "Whole intact castle inclines back in airborne pose with raised pupils; footing, flag, shovel, star and towers remain attached."
+    },
+    {
+      "id": "sandcastlekinger-crouch",
+      "appearanceId": "sandcastlekinger",
+      "slot": "crouch",
+      "file": "assets/encore/poses/sandcastlekinger/crouch.png",
+      "sourceGenerationId": "exec-d959b41c-314f-41b2-9b64-142f663cc4fc",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/digital-circus-animiniz-beach-vacation-series",
+        "https://glitchproductions.store/cdn/shop/files/Beach_Series_Render_03.png?v=1765572441&width=1600"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-e1c7f075-eaa7-49cf-8ef2-d233f5c37773.png",
+        "/workspace/scratch/5f5114b49696/research/beach-series-03.png"
+      ],
+      "prompt": "Use case: identity-preserve. Asset type: one individual full-body crouch sprite for Digital Circus Encore. Image 1 is approved Sand Castle Kinger 2D identity; image 2 is the official GLITCH anatomical reference. Change ONLY pose: Low defensive duck: castle body stays complete and upright, while the SAME RIGID gold chess head lowers behind the front battlement so BOTH blue-irised eyes peek over the crenellations; gold cross and full face are still visible. Do not shorten or squash head geometry: the lower stem is merely occluded by the front castle wall. Eyes focused right. No body collapse, knee bends or limbs. Invariants: Kinger has a warm sand-gold elongated chess-king head with a gold cross at the top. Exactly two large protruding white eyeballs with BLUE irises and black pupils: larger/higher eye on screen LEFT and smaller/lower eye on screen RIGHT. No mouth. Head emerges from one intact pale yellow sandcastle BODY. Broad front cylindrical tower with crenellated top, arched golden recessed doorway, periwinkle scallop shell above the arch, pastel pink/cyan/periwinkle pebble ornaments. Short left turret with small pointed sand roof, taller right turret with tiny cyan pole and pink flag. One pink starfish on lower-left edge of the castle's attached shallow irregular sand footing; one short cyan toy shovel leaning at lower-right, with small colored pebbles along footing. The shallow sand footing is the bottom of this body's silhouette, not a separate floor or scene. Preserve all towers, ornament positions, head proportions and castle structure. No hands, arms, feet, legs, human torso, cloak, robe, crown replacement or new anatomy. Shovel remains a small attached accessory, never a limb or weapon. Keep castle walls rigid and complete, maintain exact head identity, asymmetric eye sizes and blue irises. Movement is through tilt/head placement only, no stretching, shrinking parts, humanoid anatomy, robe, hands or feet. One complete character with generous transparent margins around cross, all towers, full footing, starfish, flag and shovel. Actual transparent RGBA, opaque character interior, crisp ink and cel shading. No scenery, floor, shadow, halo, text, labels, duplicate, motion trail or sprite sheet.",
+      "sha256": "07854970a57e716bbed0cb9b1887a479096400de3b13b0d02d39983b26ec436c",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        1160,
+        1355
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        188,
+        198,
+        948,
+        1337
+      ],
+      "bytes": 911148,
+      "visualReview": "Head lowers behind front crenellations with both blue eyes peeking above wall; full cross and all towers/accessories remain visible. No shortening of castle."
+    },
+    {
+      "id": "sandcastlekinger-heavy",
+      "appearanceId": "sandcastlekinger",
+      "slot": "heavy",
+      "file": "assets/encore/poses/sandcastlekinger/heavy.png",
+      "sourceGenerationId": "exec-26c2842b-3d47-406d-b5b3-b4bf8d610ea4",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/digital-circus-animiniz-beach-vacation-series",
+        "https://glitchproductions.store/cdn/shop/files/Beach_Series_Render_03.png?v=1765572441&width=1600"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-e1c7f075-eaa7-49cf-8ef2-d233f5c37773.png",
+        "/workspace/scratch/5f5114b49696/research/beach-series-03.png"
+      ],
+      "prompt": "Use case: identity-preserve. Asset type: one individual full-body heavy sprite for Digital Circus Encore. Image 1 is approved Sand Castle Kinger 2D identity; image 2 is the official GLITCH anatomical reference. Change ONLY pose: Strong whole-body castle ram toward screen right: lean the ENTIRE intact castle, its footing and all towers together diagonally right by about twenty-five degrees, as one rigid complete body. Gold chess head aligns forward with the leaning castle; both blue eyes focus right. Preserve every crenellation, the flag, front arch, shell, star, pebbles and attached shovel. No fragments, sand spray or invented limb. Invariants: Kinger has a warm sand-gold elongated chess-king head with a gold cross at the top. Exactly two large protruding white eyeballs with BLUE irises and black pupils: larger/higher eye on screen LEFT and smaller/lower eye on screen RIGHT. No mouth. Head emerges from one intact pale yellow sandcastle BODY. Broad front cylindrical tower with crenellated top, arched golden recessed doorway, periwinkle scallop shell above the arch, pastel pink/cyan/periwinkle pebble ornaments. Short left turret with small pointed sand roof, taller right turret with tiny cyan pole and pink flag. One pink starfish on lower-left edge of the castle's attached shallow irregular sand footing; one short cyan toy shovel leaning at lower-right, with small colored pebbles along footing. The shallow sand footing is the bottom of this body's silhouette, not a separate floor or scene. Preserve all towers, ornament positions, head proportions and castle structure. No hands, arms, feet, legs, human torso, cloak, robe, crown replacement or new anatomy. Shovel remains a small attached accessory, never a limb or weapon. Keep castle walls rigid and complete, maintain exact head identity, asymmetric eye sizes and blue irises. Movement is through tilt/head placement only, no stretching, shrinking parts, humanoid anatomy, robe, hands or feet. One complete character with generous transparent margins around cross, all towers, full footing, starfish, flag and shovel. Actual transparent RGBA, opaque character interior, crisp ink and cel shading. No scenery, floor, shadow, halo, text, labels, duplicate, motion trail or sprite sheet.",
+      "sha256": "5eaff4c6a8f93bd105f180a3d8202a0114eca1c87be7ec0c87870cb8435360dc",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        1160,
+        1355
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        74,
+        43,
+        1119,
+        1333
+      ],
+      "bytes": 1058544,
+      "visualReview": "Whole-castle ram inclines rigid body forward; all towers, right flag, star, shell and shovel retained with no invented limbs."
+    },
+    {
+      "id": "sandcastlekinger-hit",
+      "appearanceId": "sandcastlekinger",
+      "slot": "hit",
+      "file": "assets/encore/poses/sandcastlekinger/hit.png",
+      "sourceGenerationId": "exec-80f34519-5aaf-480c-9a59-f0ed7b57fccd",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/digital-circus-animiniz-beach-vacation-series",
+        "https://glitchproductions.store/cdn/shop/files/Beach_Series_Render_03.png?v=1765572441&width=1600"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-e1c7f075-eaa7-49cf-8ef2-d233f5c37773.png",
+        "/workspace/scratch/5f5114b49696/research/beach-series-03.png"
+      ],
+      "prompt": "Use case: identity-preserve. Asset type: one individual full-body hit sprite for Digital Circus Encore. Image 1 is approved Sand Castle Kinger 2D identity; image 2 is the official GLITCH anatomical reference. Change ONLY pose: Startled non-graphic recoil: whole intact castle rocks slightly back toward screen left; the unchanged rigid gold head tilts backward more noticeably, eyes very wide with blue pupils looking up and right. Both eyes and cross remain fully inside frame. No cracks, crumbling, detached towers, injuries or new anatomy. Invariants: Kinger has a warm sand-gold elongated chess-king head with a gold cross at the top. Exactly two large protruding white eyeballs with BLUE irises and black pupils: larger/higher eye on screen LEFT and smaller/lower eye on screen RIGHT. No mouth. Head emerges from one intact pale yellow sandcastle BODY. Broad front cylindrical tower with crenellated top, arched golden recessed doorway, periwinkle scallop shell above the arch, pastel pink/cyan/periwinkle pebble ornaments. Short left turret with small pointed sand roof, taller right turret with tiny cyan pole and pink flag. One pink starfish on lower-left edge of the castle's attached shallow irregular sand footing; one short cyan toy shovel leaning at lower-right, with small colored pebbles along footing. The shallow sand footing is the bottom of this body's silhouette, not a separate floor or scene. Preserve all towers, ornament positions, head proportions and castle structure. No hands, arms, feet, legs, human torso, cloak, robe, crown replacement or new anatomy. Shovel remains a small attached accessory, never a limb or weapon. Keep castle walls rigid and complete, maintain exact head identity, asymmetric eye sizes and blue irises. Movement is through tilt/head placement only, no stretching, shrinking parts, humanoid anatomy, robe, hands or feet. One complete character with generous transparent margins around cross, all towers, full footing, starfish, flag and shovel. Actual transparent RGBA, opaque character interior, crisp ink and cel shading. No scenery, floor, shadow, halo, text, labels, duplicate, motion trail or sprite sheet.",
+      "sha256": "01f51249e08c5d4f204435b6bc1ece67f39fd8c5b0f5add437fac96b56bcf1e3",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        1160,
+        1355
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        156,
+        25,
+        960,
+        1322
+      ],
+      "bytes": 1049517,
+      "visualReview": "Backward head/body recoil with raised pupils; castle remains complete without cracks or detached pieces."
+    },
+    {
+      "id": "sandcastlekinger-attack",
+      "appearanceId": "sandcastlekinger",
+      "slot": "attack",
+      "file": "assets/encore/poses/sandcastlekinger/attack.png",
+      "sourceGenerationId": "exec-be374fb2-5f5b-48d6-8ac1-da6cc241a18f",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/digital-circus-animiniz-beach-vacation-series",
+        "https://glitchproductions.store/cdn/shop/files/Beach_Series_Render_03.png?v=1765572441&width=1600"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-e577791d-0e73-46a6-a641-b3eccfbab8f7.png",
+        "/workspace/scratch/5f5114b49696/generated_images/exec-e1c7f075-eaa7-49cf-8ef2-d233f5c37773.png",
+        "/workspace/scratch/5f5114b49696/research/beach-series-03.png"
+      ],
+      "prompt": "Use case: precise-object-edit. Asset type: single transparent full-body attack sprite. Image 1 is the attack to correct. Image 2 is the approved Sand Castle Kinger identity; image 3 is the official reference. Preserve image 1's forward head-butt pose, gold chess head, two blue eyes, full front castle wall, arch/shell/pebbles, sand footing, lower-left star and lower-right shovel. Change ONE anatomical error only: the tall turret carrying the cyan pole and pink flag must be on the SCREEN RIGHT side behind Kinger's head, as in images 2 and 3. It must not be on the left. Move that whole tall flag-bearing turret to the right rear, keeping its flag visible to the right of the leaning head. The SMALL pointed-roof turret stays SCREEN LEFT. Preserve total three-tower layout, no added tower, no omitted tower, no human limbs. One complete character in unchanged 2D ink/cel style; ensure gold cross, both side towers, entire footing and flag have safe transparent margins. Actual transparent RGBA background, no scenery, shadows, text or duplicate. Nothing else changes.",
+      "sha256": "9ccff1a6044067bde938ec8bcd17882287d61fa4b74d8f84f63792634d4e8c92",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        1160,
+        1355
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        138,
+        16,
+        1079,
+        1327
+      ],
+      "bytes": 1035158,
+      "visualReview": "Inspected native generated image. Complete intact castle and chess head; larger upper left eye, smaller lower right eye, blue irises. Small pointed turret stays screen left; tall flag turret stays screen right. Shell, arch, pebble ornaments, starfish and cyan shovel retained. No invented hands, arms, legs or feet. Full silhouette inside frame; alpha checked separately. Corrected tower-side drift from rejected first attack."
+    },
+    {
+      "id": "sandcastlekinger-victory",
+      "appearanceId": "sandcastlekinger",
+      "slot": "victory",
+      "file": "assets/encore/poses/sandcastlekinger/victory.png",
+      "sourceGenerationId": "exec-dca1cd03-5732-481f-b5bb-0d384a923477",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/digital-circus-animiniz-beach-vacation-series",
+        "https://glitchproductions.store/cdn/shop/files/Beach_Series_Render_03.png?v=1765572441&width=1600"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-e1c7f075-eaa7-49cf-8ef2-d233f5c37773.png",
+        "/workspace/scratch/5f5114b49696/research/beach-series-03.png"
+      ],
+      "prompt": "Use case: identity-preserve. Asset type: one individual full-body victory sprite for Digital Circus Encore. Image 1 is approved Sand Castle Kinger 2D identity, image 2 official anatomical reference. Change ONLY pose: Proud victorious pose: castle body upright and stable; lift the unchanged gold chess head slightly higher from behind the battlements and tilt it back a little, both blue pupils looking upward with delighted wide eyes. No arms or cheering hands. The small pointed-roof turret stays screen LEFT and tall cyan-pole/pink-flag turret stays screen RIGHT. Full sand footing and ornaments retained. No confetti or extra objects. Invariants: Kinger has a warm sand-gold elongated chess-king head with a gold cross at the top. Exactly two large protruding white eyeballs with BLUE irises and black pupils: larger/higher eye on screen LEFT and smaller/lower eye on screen RIGHT. No mouth. Head emerges from one intact pale yellow sandcastle BODY. Broad front cylindrical tower with crenellated top, arched golden recessed doorway, periwinkle scallop shell above the arch, pastel pink/cyan/periwinkle pebble ornaments. Short left turret with small pointed sand roof, taller right turret with tiny cyan pole and pink flag. One pink starfish on lower-left edge of the castle's attached shallow irregular sand footing; one short cyan toy shovel leaning at lower-right, with small colored pebbles along footing. The shallow sand footing is the bottom of this body's silhouette, not a separate floor or scene. Preserve all towers, ornament positions, head proportions and castle structure. No hands, arms, feet, legs, human torso, cloak, robe, crown replacement or new anatomy. Shovel remains a small attached accessory, never a limb or weapon. Preserve exact head identity, geometry, asymmetric eye sizes and blue irises. Express action using tilt/head placement only, no reshaping, separating components, arms, hands, feet or legs. One complete character with generous transparent margins around gold cross, all three towers, flag, starfish, shovel and entire footing. Actual transparent RGBA, clean edges and opaque interior, crisp ink/cel shading. No scenery, floor, shadow, glow, text, label, duplicate, trails or sprite sheet.",
+      "sha256": "0f8c76a75290e770770e614114e95d5bfd87c6a298b4d09a9e2d1431c1d11158",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        1102,
+        1428
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        165,
+        16,
+        935,
+        1371
+      ],
+      "bytes": 1029073,
+      "visualReview": "Inspected native generated image. Complete intact castle and chess head; larger upper left eye, smaller lower right eye, blue irises. Small pointed turret stays screen left; tall flag turret stays screen right. Shell, arch, pebble ornaments, starfish and cyan shovel retained. No invented hands, arms, legs or feet. Full silhouette inside frame; alpha checked separately. Upward gaze and proud raised head."
+    },
+    {
+      "id": "sandcastlekinger-defeat",
+      "appearanceId": "sandcastlekinger",
+      "slot": "defeat",
+      "file": "assets/encore/poses/sandcastlekinger/defeat.png",
+      "sourceGenerationId": "exec-34b8aea1-ba85-4aa7-8822-1715ee4c9244",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/digital-circus-animiniz-beach-vacation-series",
+        "https://glitchproductions.store/cdn/shop/files/Beach_Series_Render_03.png?v=1765572441&width=1600"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-e1c7f075-eaa7-49cf-8ef2-d233f5c37773.png",
+        "/workspace/scratch/5f5114b49696/research/beach-series-03.png"
+      ],
+      "prompt": "Use case: identity-preserve. Asset type: one individual full-body defeat sprite for Digital Circus Encore. Image 1 is approved Sand Castle Kinger 2D identity, image 2 official anatomical reference. Change ONLY pose: Dejected non-graphic defeat: entire intact castle inclines mildly toward screen left, about eight degrees, while the rigid gold chess head bows down and forward. Both blue pupils look downward sadly; no mouth or eyebrows added. The head remains attached and fully identifiable with cross. Castle never collapses or crumbles: all walls, arch, footing, ornaments and shovel remain whole. Small pointed-roof turret remains screen LEFT, tall cyan-pole/pink-flag turret remains screen RIGHT. No humanoid limbs. Invariants: Kinger has a warm sand-gold elongated chess-king head with a gold cross at the top. Exactly two large protruding white eyeballs with BLUE irises and black pupils: larger/higher eye on screen LEFT and smaller/lower eye on screen RIGHT. No mouth. Head emerges from one intact pale yellow sandcastle BODY. Broad front cylindrical tower with crenellated top, arched golden recessed doorway, periwinkle scallop shell above the arch, pastel pink/cyan/periwinkle pebble ornaments. Short left turret with small pointed sand roof, taller right turret with tiny cyan pole and pink flag. One pink starfish on lower-left edge of the castle's attached shallow irregular sand footing; one short cyan toy shovel leaning at lower-right, with small colored pebbles along footing. The shallow sand footing is the bottom of this body's silhouette, not a separate floor or scene. Preserve all towers, ornament positions, head proportions and castle structure. No hands, arms, feet, legs, human torso, cloak, robe, crown replacement or new anatomy. Shovel remains a small attached accessory, never a limb or weapon. Preserve exact head identity, geometry, asymmetric eye sizes and blue irises. Express action using tilt/head placement only, no reshaping, separating components, arms, hands, feet or legs. One complete character with generous transparent margins around gold cross, all three towers, flag, starfish, shovel and entire footing. Actual transparent RGBA, clean edges and opaque interior, crisp ink/cel shading. No scenery, floor, shadow, glow, text, label, duplicate, trails or sprite sheet.",
+      "sha256": "f1e8a0d74bd3ec99d1bb107e0f8a3aaf350aa46425c828c62bdba28ce35d9df8",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        1160,
+        1355
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        164,
+        26,
+        955,
+        1313
+      ],
+      "bytes": 987794,
+      "visualReview": "Inspected native generated image. Complete intact castle and chess head; larger upper left eye, smaller lower right eye, blue irises. Small pointed turret stays screen left; tall flag turret stays screen right. Shell, arch, pebble ornaments, starfish and cyan shovel retained. No invented hands, arms, legs or feet. Full silhouette inside frame; alpha checked separately. Downward gaze and bowed head, intact castle."
+    }
+  ]
+}

@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { closeSync, fstatSync, openSync, readSync } from 'node:fs';
 import { ART_FILES } from '../combat/offline-manifest.mjs';
-import { COSTUMES, CROSSOVER_COSTUMES, FIGHTERS, STAGES, VARIANTS, equipCostume } from '../combat/data.mjs';
+import { COSTUMES, COSTUME_ADDITIONS, CROSSOVER_COSTUMES, FIGHTERS, STAGES, VARIANTS, equipCostume } from '../combat/data.mjs';
 import { CROSSOVER_FUSIONS } from '../combat/crossover-fusions.mjs';
 import { CROSSOVER_SERIES, crossoverStylesFor, matchesCostumeFilter } from '../combat/crossovers.mjs';
 import { updateCrossoverTracker } from '../scripts/combat-crossover-tracker.mjs';
@@ -22,7 +22,7 @@ test('the fourteen illustrated fighters retain three bodies per crossover withou
     assert.deepEqual(Object.keys(roster).sort(), illustrated.map(fighter => fighter.id).sort());
     assert.equal(new Set(Object.values(roster)).size, illustrated.length);
   }
-  assert.equal(new Set(COSTUMES.map(item => item.id)).size, 303 + fusions);
+  assert.equal(new Set(COSTUMES.map(item => item.id)).size, 303 + fusions + COSTUME_ADDITIONS.length);
   assert.equal(VARIANTS.length, 51);
   assert.equal(CROSSOVER_COSTUMES.length, 252 + fusions);
   for (const fighter of illustrated) {
@@ -41,7 +41,7 @@ test('the fourteen illustrated fighters retain three bodies per crossover withou
       }
     }
   }
-  assert.equal(COSTUMES.filter(item => matchesCostumeFilter(item, 'circus')).length, 51);
+  assert.equal(COSTUMES.filter(item => matchesCostumeFilter(item, 'circus')).length, 51 + COSTUME_ADDITIONS.length);
   assert.equal(COSTUMES.filter(item => matchesCostumeFilter(item, '', 'resident')).length, 126);
   assert.equal(COSTUMES.filter(item => matchesCostumeFilter(item, '', 'fusion')).length, fusions);
   assert.ok(crossoverStylesFor('', 'pomni').includes('fusion'));

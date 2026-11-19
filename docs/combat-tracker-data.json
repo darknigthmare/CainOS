@@ -7,7 +7,7 @@
     "stages": 22,
     "modes": 9,
     "atlas": 179,
-    "variants": 429,
+    "variants": 437,
     "archiveOnly": 74,
     "storyRoutes": 54,
     "storyChapters": 216,
@@ -15,12 +15,12 @@
     "storyBriefings": 216,
     "musicThemes": 22,
     "soundEffects": 26,
-    "offlineImages": 5331,
-    "offlineBytes": 2538831567,
+    "offlineImages": 5419,
+    "offlineBytes": 2636860685,
     "features": 106,
-    "production": 3092,
+    "production": 3100,
     "scenarios": 348,
-    "qa": 2255,
+    "qa": 2260,
     "presentationSequences": 270,
     "animatedStages": 22,
     "rebuiltStages": 3,
@@ -30,12 +30,13 @@
     "audioAmbiences": 22,
     "archiveVariants": 51,
     "dedicatedStages": 54,
-    "friendships": 54
+    "friendships": 54,
+    "costumeAdditions": 8
   },
   "qaSummary": {
-    "Réussi": 2246,
+    "Réussi": 2250,
     "Échec": 0,
-    "Non exécuté": 6,
+    "Non exécuté": 7,
     "À vérifier": 2,
     "Partiel": 1
   },
@@ -60080,6 +60081,102 @@
       "Archive liée : committeemember Type : npc_family.",
       "Identifier le plan exact puis comparer l’apparence.  Exact named-state mapping; source-frame verification remains outstanding. Exact image/state match uninspected.",
       ""
+    ],
+    [
+      "CIRCUS26-beachpomni",
+      "Tenue Circus",
+      "Pomni — Plage",
+      "Portrait, garde et neuf poses",
+      "Implémenté",
+      "P1",
+      "assets/encore/selection/beachpomni.png\nassets/encore/stance/beachpomni.png\nassets/encore/poses/beachpomni/",
+      "11 PNG individuels natifs inclus dans le manifeste du jeu. Portrait, garde, intro, attaque, attaque forte, impact, marche, saut, accroupi, victoire, défaite. Source : store-beach-pomni.",
+      "Version avec brassards de la peluche officielle. Le pistolet à eau de la figurine Aqua Blaster n’est pas ajouté à cette tenue. Référence consultée le 19 novembre 2026. Ce produit stylisé ne certifie ni les proportions exactes de la série ni ses mouvements. Poses et proportions adaptées au jeu ; animation et comparaison plan par plan de la série ouvertes.",
+      ""
+    ],
+    [
+      "CIRCUS26-noirragatha",
+      "Tenue Circus",
+      "Ragatha — Film noir",
+      "Portrait, garde et neuf poses",
+      "Implémenté",
+      "P1",
+      "assets/encore/selection/noirragatha.png\nassets/encore/stance/noirragatha.png\nassets/encore/poses/noirragatha/",
+      "11 PNG individuels natifs inclus dans le manifeste du jeu. Portrait, garde, intro, attaque, attaque forte, impact, marche, saut, accroupi, victoire, défaite. Source : store-noir-ragatha.",
+      "Costume comparé à la peluche officielle Noir Ragatha, sans attribution d’un plan ou d’un horodatage de la série. Référence consultée le 19 novembre 2026. Ce produit stylisé ne certifie ni les proportions exactes de la série ni ses mouvements. Poses et proportions adaptées au jeu ; animation et comparaison plan par plan de la série ouvertes.",
+      ""
+    ],
+    [
+      "CIRCUS26-presidentpomni",
+      "Tenue Circus",
+      "Pomni — Présidente",
+      "Portrait, garde et neuf poses",
+      "Implémenté",
+      "P1",
+      "assets/encore/selection/presidentpomni.png\nassets/encore/stance/presidentpomni.png\nassets/encore/poses/presidentpomni/",
+      "11 PNG individuels natifs inclus dans le manifeste du jeu. Portrait, garde, intro, attaque, attaque forte, impact, marche, saut, accroupi, victoire, défaite. Source : store-president-pomni.",
+      "Vêtements comparés à la figurine officielle. Le support doré placé entre ses pieds est exclu du personnage. Référence consultée le 19 novembre 2026. Ce produit stylisé ne certifie ni les proportions exactes de la série ni ses mouvements. Poses et proportions adaptées au jeu ; animation et comparaison plan par plan de la série ouvertes.",
+      ""
+    ],
+    [
+      "CIRCUS26-noirzooble",
+      "Tenue Circus",
+      "Zooble — Film noir",
+      "Portrait, garde et neuf poses",
+      "Implémenté",
+      "P1",
+      "assets/encore/selection/noirzooble.png\nassets/encore/stance/noirzooble.png\nassets/encore/poses/noirzooble/",
+      "11 PNG individuels natifs inclus dans le manifeste du jeu. Portrait, garde, intro, attaque, attaque forte, impact, marche, saut, accroupi, victoire, défaite. Source : store-noir-zooble.",
+      "Assemblage comparé à la figurine officielle. Les membres restent distincts ; les poses sont des adaptations de combat. Référence consultée le 19 novembre 2026. Ce produit stylisé ne certifie ni les proportions exactes de la série ni ses mouvements. Poses et proportions adaptées au jeu ; animation et comparaison plan par plan de la série ouvertes.",
+      ""
+    ],
+    [
+      "CIRCUS26-beachragatha",
+      "Tenue Circus",
+      "Ragatha — Nageuse",
+      "Portrait, garde et neuf poses",
+      "Implémenté",
+      "P1",
+      "assets/encore/selection/beachragatha.png\nassets/encore/stance/beachragatha.png\nassets/encore/poses/beachragatha/",
+      "11 PNG individuels natifs inclus dans le manifeste du jeu. Portrait, garde, intro, attaque, attaque forte, impact, marche, saut, accroupi, victoire, défaite. Source : store-swimmer-ragatha.",
+      "Tenue et bouée comparées à la figurine officielle Swimmer Ragatha. Les proportions sont celles du dessin de jeu. Référence consultée le 19 novembre 2026. Ce produit stylisé ne certifie ni les proportions exactes de la série ni ses mouvements. Poses et proportions adaptées au jeu ; animation et comparaison plan par plan de la série ouvertes.",
+      ""
+    ],
+    [
+      "CIRCUS26-beachzooble",
+      "Tenue Circus",
+      "Zooble — Plongée",
+      "Portrait, garde et neuf poses",
+      "Implémenté",
+      "P1",
+      "assets/encore/selection/beachzooble.png\nassets/encore/stance/beachzooble.png\nassets/encore/poses/beachzooble/",
+      "11 PNG individuels natifs inclus dans le manifeste du jeu. Portrait, garde, intro, attaque, attaque forte, impact, marche, saut, accroupi, victoire, défaite. Source : store-snorkeler-zooble.",
+      "Assemblage comparé à la figurine officielle Snorkeler Zooble. Chaque membre distinct et la pince unique sont conservés. Référence consultée le 19 novembre 2026. Ce produit stylisé ne certifie ni les proportions exactes de la série ni ses mouvements. Poses et proportions adaptées au jeu ; animation et comparaison plan par plan de la série ouvertes.",
+      ""
+    ],
+    [
+      "CIRCUS26-beachjax",
+      "Tenue Circus",
+      "Jax — Plage",
+      "Portrait, garde et neuf poses",
+      "Implémenté",
+      "P1",
+      "assets/encore/selection/beachjax.png\nassets/encore/stance/beachjax.png\nassets/encore/poses/beachjax/",
+      "11 PNG individuels natifs inclus dans le manifeste du jeu. Portrait, garde, intro, attaque, attaque forte, impact, marche, saut, accroupi, victoire, défaite. Source : store-beach-jax.",
+      "Apparence comparée à la figurine officielle Beach Vacation. La silhouette conserve les proportions longues du personnage dans le jeu. Référence consultée le 19 novembre 2026. Ce produit stylisé ne certifie ni les proportions exactes de la série ni ses mouvements. Poses et proportions adaptées au jeu ; animation et comparaison plan par plan de la série ouvertes.",
+      ""
+    ],
+    [
+      "CIRCUS26-sandcastlekinger",
+      "Tenue Circus",
+      "Kinger — Château de sable",
+      "Portrait, garde et neuf poses",
+      "Implémenté",
+      "P1",
+      "assets/encore/selection/sandcastlekinger.png\nassets/encore/stance/sandcastlekinger.png\nassets/encore/poses/sandcastlekinger/",
+      "11 PNG individuels natifs inclus dans le manifeste du jeu. Portrait, garde, intro, attaque, attaque forte, impact, marche, saut, accroupi, victoire, défaite. Source : store-sandcastle-kinger.",
+      "Apparence comparée à la figurine officielle Sand Castle Kinger. Les actions utilisent la tête et l’inclinaison du château, sans lui inventer une anatomie humaine. Référence consultée le 19 novembre 2026. Ce produit stylisé ne certifie ni les proportions exactes de la série ni ses mouvements. Poses et proportions adaptées au jeu ; animation et comparaison plan par plan de la série ouvertes.",
+      ""
     ]
   ],
   "scenarios": [
@@ -89413,6 +89510,61 @@
       "21 configurations recensées ; 20 scripts uniques contrôlés pour leur syntaxe. Exécution navigateur bloquée par la politique de l’environnement.",
       "Aucun résultat navigateur de cette session n’est déclaré réussi. Les anciennes campagnes restent des preuves historiques.",
       ""
+    ],
+    [
+      "CAST26-art",
+      "Tenues Circus · Inventaire",
+      "8 tenues complètes et sources officielles",
+      "Réussi",
+      "P0",
+      "docs/art-generation/cast-continuation-20261119/verification.json",
+      "88 PNG individuels : 8 portraits, 8 gardes et 72 actions. Empreintes natives, alpha et présence dans le manifeste vérifiés. Chaque tenue conserve onze dessins distincts.",
+      "La référence est un produit dérivé officiel stylisé. Aucun plan exact ni cycle animé complet n’est certifié.",
+      ""
+    ],
+    [
+      "CAST26-canvas",
+      "Tenues Circus · Canvas natif",
+      "Composition des sources par le rendu de production",
+      "Réussi",
+      "P0",
+      "docs/art-generation/cast-continuation-20261119/review/character-canvas-review.json",
+      "8 tenues : 72 actions et 8 gardes, 160 rendus dans les deux sens et 8 portraits. Aucun fichier manquant ; proportions et silhouettes revues.",
+      "Canvas2D exécuté avec Node et Skia. Ce résultat ne valide ni le DOM, ni les entrées du navigateur, ni le son ou le matériel physique.",
+      ""
+    ],
+    [
+      "CAST26-node",
+      "Tenues Circus · Code",
+      "Tests Node et constructions de cette passe",
+      "Réussi",
+      "P0",
+      "docs/art-generation/cast-continuation-20261119/verification.json",
+      "npm run qa : 401 tests réussis, aucun échec ni test ignoré. Journal : docs/art-generation/cast-continuation-20261119/qa.log.",
+      "Exécution datée de cette continuation. Les 399 tests de la passe précédente restent des preuves historiques distinctes. Aucun résultat navigateur déduit de Node.",
+      ""
+    ],
+    [
+      "CAST26-browser",
+      "Tenues Circus · Navigateur",
+      "Tentative de lancement Chromium",
+      "Non exécuté",
+      "P0",
+      "docs/art-generation/cast-continuation-20261119/browser-attempt.json",
+      "Lancement réellement tenté, bloqué avant navigation : FATAL:chrome/browser/process_singleton_posix.cc:297 Check failed: . socket() failed: Operation not permitted (1)",
+      "Aucune assertion navigateur exécutée. Interactions, service worker, audio et périphériques physiques restent à vérifier.",
+      ""
+    ],
+    [
+      "CAST26-workbook",
+      "Tenues Circus · Classeur",
+      "Ajout incrémental et conservation du suivi",
+      "Réussi",
+      "P0",
+      "scripts/update-combat-costume-workbook.mjs",
+      "8 lignes Production et 8 références ajoutées. Ordre, identifiants, notes, formules, tables et lignes QA antérieures préservés ; recalcul et réimport contrôlés.",
+      "Preuve : docs/art-generation/cast-continuation-20261119/workbook-review.json. Contrôle du classeur, distinct des tests du jeu et de la fidélité canonique.",
+      ""
     ]
   ],
   "sources": [
@@ -89827,7 +89979,7 @@
       "title": "Encore — inventaire du téléchargement hors ligne",
       "kind": "Manifest généré du build",
       "url": "combat/offline-manifest.mjs / scripts/build-combat-offline.mjs",
-      "scope": "4765 images dans le pack hors ligne, 1966132196 octets."
+      "scope": "5 419 images dans le manifeste local, 2 636 860 685 octets. Inventaire final de cette continuation ; la publication distante est un contrôle séparé."
     },
     {
       "id": "classification",
@@ -90199,30 +90351,92 @@
       "kind": "Index secondaire",
       "url": "https://tadc.fandom.com/wiki/Circus_Members",
       "scope": "Repérage textuel pour la couverture des personnages. Une entrée d’index ne certifie ni les sprites du jeu, ni une comparaison visuelle avec un plan officiel."
+    },
+    {
+      "id": "store-beach-pomni",
+      "title": "GLITCH — Beach Pomni Plush",
+      "url": "https://glitchproductions.store/products/beach-pomni-plush",
+      "kind": "Produit dérivé officiel",
+      "scope": "Version avec brassards de la peluche officielle. Le pistolet à eau de la figurine Aqua Blaster n’est pas ajouté à cette tenue. Référence consultée le 19 novembre 2026. Ce produit stylisé ne certifie ni les proportions exactes de la série ni ses mouvements."
+    },
+    {
+      "id": "store-noir-ragatha",
+      "title": "GLITCH — Noir Ragatha Plush",
+      "url": "https://glitchproductions.store/products/noir-ragatha-plush",
+      "kind": "Produit dérivé officiel",
+      "scope": "Costume comparé à la peluche officielle Noir Ragatha, sans attribution d’un plan ou d’un horodatage de la série. Référence consultée le 19 novembre 2026. Ce produit stylisé ne certifie ni les proportions exactes de la série ni ses mouvements."
+    },
+    {
+      "id": "store-president-pomni",
+      "title": "GLITCH — Costume Adventure, Pomni Présidente",
+      "url": "https://glitchproductions.store/products/digital-circus-animiniz-costume-adventure-series",
+      "imageUrl": "https://glitchproductions.store/cdn/shop/files/83.png?v=1762387272&width=1600",
+      "kind": "Produit dérivé officiel",
+      "scope": "Vêtements comparés à la figurine officielle. Le support doré placé entre ses pieds est exclu du personnage. Référence consultée le 19 novembre 2026. Ce produit stylisé ne certifie ni les proportions exactes de la série ni ses mouvements. Image de référence : https://glitchproductions.store/cdn/shop/files/83.png?v=1762387272&width=1600"
+    },
+    {
+      "id": "store-noir-zooble",
+      "title": "GLITCH — Costume Adventure, Zooble noir et blanc",
+      "url": "https://glitchproductions.store/products/digital-circus-animiniz-costume-adventure-series",
+      "imageUrl": "https://glitchproductions.store/cdn/shop/files/86.png?v=1762387272&width=1600",
+      "kind": "Produit dérivé officiel",
+      "scope": "Assemblage comparé à la figurine officielle. Les membres restent distincts ; les poses sont des adaptations de combat. Référence consultée le 19 novembre 2026. Ce produit stylisé ne certifie ni les proportions exactes de la série ni ses mouvements. Image de référence : https://glitchproductions.store/cdn/shop/files/86.png?v=1762387272&width=1600"
+    },
+    {
+      "id": "store-swimmer-ragatha",
+      "title": "GLITCH — Beach Vacation, Swimmer Ragatha",
+      "url": "https://glitchproductions.store/products/digital-circus-animiniz-beach-vacation-series",
+      "imageUrl": "https://glitchproductions.store/cdn/shop/files/Beach_Series_Render_02.png?v=1765572441&width=1600",
+      "kind": "Produit dérivé officiel",
+      "scope": "Tenue et bouée comparées à la figurine officielle Swimmer Ragatha. Les proportions sont celles du dessin de jeu. Référence consultée le 19 novembre 2026. Ce produit stylisé ne certifie ni les proportions exactes de la série ni ses mouvements. Image de référence : https://glitchproductions.store/cdn/shop/files/Beach_Series_Render_02.png?v=1765572441&width=1600"
+    },
+    {
+      "id": "store-snorkeler-zooble",
+      "title": "GLITCH — Beach Vacation, Snorkeler Zooble",
+      "url": "https://glitchproductions.store/products/digital-circus-animiniz-beach-vacation-series",
+      "imageUrl": "https://glitchproductions.store/cdn/shop/files/Beach_Series_Render_01.png?v=1765572441&width=1600",
+      "kind": "Produit dérivé officiel",
+      "scope": "Assemblage comparé à la figurine officielle Snorkeler Zooble. Chaque membre distinct et la pince unique sont conservés. Référence consultée le 19 novembre 2026. Ce produit stylisé ne certifie ni les proportions exactes de la série ni ses mouvements. Image de référence : https://glitchproductions.store/cdn/shop/files/Beach_Series_Render_01.png?v=1765572441&width=1600"
+    },
+    {
+      "id": "store-beach-jax",
+      "title": "GLITCH — Beach Vacation, Jax au coquillage",
+      "url": "https://glitchproductions.store/products/digital-circus-animiniz-beach-vacation-series",
+      "imageUrl": "https://glitchproductions.store/cdn/shop/files/Beach_Series_Render_04.png?v=1765572441&width=1600",
+      "kind": "Produit dérivé officiel",
+      "scope": "Apparence comparée à la figurine officielle Beach Vacation. La silhouette conserve les proportions longues du personnage dans le jeu. Référence consultée le 19 novembre 2026. Ce produit stylisé ne certifie ni les proportions exactes de la série ni ses mouvements. Image de référence : https://glitchproductions.store/cdn/shop/files/Beach_Series_Render_04.png?v=1765572441&width=1600"
+    },
+    {
+      "id": "store-sandcastle-kinger",
+      "title": "GLITCH — Beach Vacation, Sand Castle Kinger",
+      "url": "https://glitchproductions.store/products/digital-circus-animiniz-beach-vacation-series",
+      "imageUrl": "https://glitchproductions.store/cdn/shop/files/Beach_Series_Render_03.png?v=1765572441&width=1600",
+      "kind": "Produit dérivé officiel",
+      "scope": "Apparence comparée à la figurine officielle Sand Castle Kinger. Les actions utilisent la tête et l’inclinaison du château, sans lui inventer une anatomie humaine. Référence consultée le 19 novembre 2026. Ce produit stylisé ne certifie ni les proportions exactes de la série ni ses mouvements. Image de référence : https://glitchproductions.store/cdn/shop/files/Beach_Series_Render_03.png?v=1765572441&width=1600"
     }
   ],
-  "qaSummaryScope": "Historique conservé ; contrôles du classeur et preuves Node/Canvas du 19 novembre. Les suites navigateur restent non exécutées pour cette passe.",
+  "qaSummaryScope": "Total des lignes historiques, objectifs et contrôles datés. La campagne CAST26 est séparée ; ces lignes ne constituent pas autant de tests indépendants exécutés à nouveau.",
   "currentQa": {
     "gameVersion": "0.7.0",
-    "campaign": "workbook-reconciliation-2026-11-19",
+    "campaign": "cast-continuation-2026-11-19",
     "complete": false,
+    "evidence": "docs/art-generation/cast-continuation-20261119/verification.json",
+    "workbookEvidence": "docs/art-generation/cast-continuation-20261119/workbook-review.json",
     "rowIds": [
-      "WBMERGE26-identities",
-      "WBMERGE26-formulas",
-      "WBMERGE26-release",
-      "CHARCOV26-workbook",
-      "CHARCOV26-inventory",
-      "CHARCOV26-canvas",
-      "CHARCOV26-scenes",
-      "CHARCOV26-node",
-      "CHARCOV26-browser"
+      "CAST26-art",
+      "CAST26-canvas",
+      "CAST26-node",
+      "CAST26-browser",
+      "CAST26-workbook"
     ],
-    "evidence": "docs/combat-workbook-reconciliation-2026-11-19.json",
-    "scope": "Réconciliation des documents. La campagne CI complète des sources fusionnées reste requise.",
-    "characterCoverageEvidence": "docs/combat-character-workbook-review-2026-11-19.json",
-    "characterCompletionEvidence": "docs/combat-character-verification-2026-11-19.json"
+    "totals": {
+      "nodeTests": 401,
+      "nodePassed": 401,
+      "browserAssertionsExecuted": 0
+    },
+    "scope": "Tests Node, constructions, inventaire et Canvas natif exécutés ; suivi incrémental vérifié. Chromium bloqué avant navigation. Les résultats antérieurs restent dans leurs campagnes datées."
   },
-  "historicalQaRows": 2246,
+  "historicalQaRows": 2255,
   "qaCampaigns": [
     {
       "gameVersion": "0.7.0",
@@ -92019,6 +92233,26 @@
         "GDF26-N-ff86adbefadc6db6"
       ],
       "evidence": "docs/combat-qa-evidence-gamedev-followup-2026-10-29.json"
+    },
+    {
+      "gameVersion": "0.7.0",
+      "campaign": "workbook-reconciliation-2026-11-19",
+      "complete": false,
+      "rowIds": [
+        "WBMERGE26-identities",
+        "WBMERGE26-formulas",
+        "WBMERGE26-release",
+        "CHARCOV26-workbook",
+        "CHARCOV26-inventory",
+        "CHARCOV26-canvas",
+        "CHARCOV26-scenes",
+        "CHARCOV26-node",
+        "CHARCOV26-browser"
+      ],
+      "evidence": "docs/combat-workbook-reconciliation-2026-11-19.json",
+      "scope": "Réconciliation des documents. La campagne CI complète des sources fusionnées reste requise.",
+      "characterCoverageEvidence": "docs/combat-character-workbook-review-2026-11-19.json",
+      "characterCompletionEvidence": "docs/combat-character-verification-2026-11-19.json"
     }
   ],
   "gamedevPass": {
@@ -93312,5 +93546,857 @@
     "fullAnimationCyclesComplete": false,
     "completionEvidence": "docs/combat-character-verification-2026-11-19.json",
     "browserExecuted": false
+  },
+  "costumeAdditionCoverage": {
+    "schema": "encore-costume-addition-coverage/v1",
+    "asOf": "2026-11-19",
+    "ids": [
+      "beachpomni",
+      "noirragatha",
+      "presidentpomni",
+      "noirzooble",
+      "beachragatha",
+      "beachzooble",
+      "beachjax",
+      "sandcastlekinger"
+    ],
+    "appearances": 8,
+    "pngFiles": 88,
+    "bytes": 98029118,
+    "drawingsBySlot": {
+      "selection": 8,
+      "stance": 8,
+      "intro": 8,
+      "attack": 8,
+      "heavy": 8,
+      "hit": 8,
+      "walk": 8,
+      "jump": 8,
+      "crouch": 8,
+      "victory": 8,
+      "defeat": 8
+    },
+    "publishedFiles": 88,
+    "sourceIds": [
+      "store-beach-pomni",
+      "store-noir-ragatha",
+      "store-president-pomni",
+      "store-noir-zooble",
+      "store-swimmer-ragatha",
+      "store-snorkeler-zooble",
+      "store-beach-jax",
+      "store-sandcastle-kinger"
+    ],
+    "assets": [
+      {
+        "id": "beachpomni",
+        "slot": "selection",
+        "file": "assets/encore/selection/beachpomni.png",
+        "sha256": "4f104be35c2d1fb5494b7b0ddfb616ceb288edb795ec1a8094ff58e7996f674e",
+        "bytes": 1055943,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/manifest-beachpomni-noirragatha.json",
+        "published": true
+      },
+      {
+        "id": "beachpomni",
+        "slot": "stance",
+        "file": "assets/encore/stance/beachpomni.png",
+        "sha256": "18ab399df128d912d4af883780b7d027a31eacaddf64e177ce8a1ee2bb7aab93",
+        "bytes": 840184,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/manifest-beachpomni-noirragatha.json",
+        "published": true
+      },
+      {
+        "id": "beachpomni",
+        "slot": "intro",
+        "file": "assets/encore/poses/beachpomni/intro.png",
+        "sha256": "007b5464ac8b7deab126c712afce5609a92df872f7c33e085086dd685e0023e3",
+        "bytes": 1007066,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/manifest-beachpomni-noirragatha.json",
+        "published": true
+      },
+      {
+        "id": "beachpomni",
+        "slot": "attack",
+        "file": "assets/encore/poses/beachpomni/attack.png",
+        "sha256": "3adbe18b6b7b3d697f48ec7169d916fec51da1693b25403078d6bf6f73ad1817",
+        "bytes": 839651,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/manifest-beachpomni-noirragatha.json",
+        "published": true
+      },
+      {
+        "id": "beachpomni",
+        "slot": "heavy",
+        "file": "assets/encore/poses/beachpomni/heavy.png",
+        "sha256": "4f6150d94c846ac3914a871ba37c6ee1745dafc4b13f3eaab1c78659708544f5",
+        "bytes": 769935,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/manifest-beachpomni-noirragatha.json",
+        "published": true
+      },
+      {
+        "id": "beachpomni",
+        "slot": "hit",
+        "file": "assets/encore/poses/beachpomni/hit.png",
+        "sha256": "963377b2a460c918a74a7268522682a16ef15223a0f4b0585712bf3028fddaaf",
+        "bytes": 1015477,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/manifest-beachpomni-noirragatha.json",
+        "published": true
+      },
+      {
+        "id": "beachpomni",
+        "slot": "walk",
+        "file": "assets/encore/poses/beachpomni/walk.png",
+        "sha256": "da2be6e5fcb4121b1a7322f41b02057dd34d2b1f49218d64552bab6622b137e3",
+        "bytes": 929355,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/manifest-beachpomni-noirragatha.json",
+        "published": true
+      },
+      {
+        "id": "beachpomni",
+        "slot": "jump",
+        "file": "assets/encore/poses/beachpomni/jump.png",
+        "sha256": "e1cbf2f5f894029b5e5cb534fd0936d589933e40290eade75bc058079674cefe",
+        "bytes": 1050129,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/manifest-beachpomni-noirragatha.json",
+        "published": true
+      },
+      {
+        "id": "beachpomni",
+        "slot": "crouch",
+        "file": "assets/encore/poses/beachpomni/crouch.png",
+        "sha256": "0128d15f7b93ff79752fbe94e6f0cb8cf890d0ffd2fa181fbc245a2de37a58da",
+        "bytes": 936281,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/manifest-beachpomni-noirragatha.json",
+        "published": true
+      },
+      {
+        "id": "beachpomni",
+        "slot": "victory",
+        "file": "assets/encore/poses/beachpomni/victory.png",
+        "sha256": "eb3b5e94d869f97c59322f34e02218bc775bae649e3150b76f0af26c29593e3a",
+        "bytes": 1011954,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/manifest-beachpomni-noirragatha.json",
+        "published": true
+      },
+      {
+        "id": "beachpomni",
+        "slot": "defeat",
+        "file": "assets/encore/poses/beachpomni/defeat.png",
+        "sha256": "ab1f4efc9e612f2952e44429914d84803a9a7409ce1d52fd730f1b9804871146",
+        "bytes": 967405,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/manifest-beachpomni-noirragatha.json",
+        "published": true
+      },
+      {
+        "id": "noirragatha",
+        "slot": "selection",
+        "file": "assets/encore/selection/noirragatha.png",
+        "sha256": "4776cb2ae6b02edf453f14e550bfebc34a5046d4867aa5a79583d1e40d32f639",
+        "bytes": 1208430,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/manifest-beachpomni-noirragatha.json",
+        "published": true
+      },
+      {
+        "id": "noirragatha",
+        "slot": "stance",
+        "file": "assets/encore/stance/noirragatha.png",
+        "sha256": "0b55cdfecfc0f4adc7c3277fff041782f16aae0b7d4e53bff386448449d67cb0",
+        "bytes": 848840,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/manifest-beachpomni-noirragatha.json",
+        "published": true
+      },
+      {
+        "id": "noirragatha",
+        "slot": "intro",
+        "file": "assets/encore/poses/noirragatha/intro.png",
+        "sha256": "c05ef5cd0cbfa12fd8c9803e048e3d7c99cb7af7bdf6ee5d27bd2c4052ac9e88",
+        "bytes": 1084239,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/manifest-beachpomni-noirragatha.json",
+        "published": true
+      },
+      {
+        "id": "noirragatha",
+        "slot": "attack",
+        "file": "assets/encore/poses/noirragatha/attack.png",
+        "sha256": "30d989fc1bc90947a265e0d03074f0d2c53620ac75a4769acacc6816c52f3e10",
+        "bytes": 834681,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/manifest-beachpomni-noirragatha.json",
+        "published": true
+      },
+      {
+        "id": "noirragatha",
+        "slot": "heavy",
+        "file": "assets/encore/poses/noirragatha/heavy.png",
+        "sha256": "cac08ecefc9823d7e03f52fbb7742cc118c14c13204c0dde44b8e34135664db3",
+        "bytes": 853285,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/manifest-beachpomni-noirragatha.json",
+        "published": true
+      },
+      {
+        "id": "noirragatha",
+        "slot": "hit",
+        "file": "assets/encore/poses/noirragatha/hit.png",
+        "sha256": "1b2e1c84ea3578c8abd2f60bd6a7b16849f3cf5853e39fa2aab7081a6cd7d0c4",
+        "bytes": 966555,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/manifest-beachpomni-noirragatha.json",
+        "published": true
+      },
+      {
+        "id": "noirragatha",
+        "slot": "walk",
+        "file": "assets/encore/poses/noirragatha/walk.png",
+        "sha256": "bf882e3e74276a9c358f6e1e2e075da057cfa08695d1aa5870aa37252bf8c721",
+        "bytes": 847859,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/manifest-beachpomni-noirragatha.json",
+        "published": true
+      },
+      {
+        "id": "noirragatha",
+        "slot": "jump",
+        "file": "assets/encore/poses/noirragatha/jump.png",
+        "sha256": "4747388f8bb478697eafdd01b3bec401033566796592a6eec14a1ee142d09009",
+        "bytes": 1376830,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/manifest-beachpomni-noirragatha.json",
+        "published": true
+      },
+      {
+        "id": "noirragatha",
+        "slot": "crouch",
+        "file": "assets/encore/poses/noirragatha/crouch.png",
+        "sha256": "43f95ff1e695755625fe7b390d1857ca419721afc7c4fb265b24e62372fa2938",
+        "bytes": 977752,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/manifest-beachpomni-noirragatha.json",
+        "published": true
+      },
+      {
+        "id": "noirragatha",
+        "slot": "victory",
+        "file": "assets/encore/poses/noirragatha/victory.png",
+        "sha256": "631e5f21896c55236f668629d19c0cdf73c2f9f830333dfb8063b6f209b8bf06",
+        "bytes": 1057443,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/manifest-beachpomni-noirragatha.json",
+        "published": true
+      },
+      {
+        "id": "noirragatha",
+        "slot": "defeat",
+        "file": "assets/encore/poses/noirragatha/defeat.png",
+        "sha256": "f5d20aa4bfe2f829905883e151f34830976853942dcd81e5b62f1b0fcb7c3fe1",
+        "bytes": 1028805,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/manifest-beachpomni-noirragatha.json",
+        "published": true
+      },
+      {
+        "id": "presidentpomni",
+        "slot": "selection",
+        "file": "assets/encore/selection/presidentpomni.png",
+        "sha256": "8b512c0e52401661c79ee82f74f54807384249cfa309e8a480f7161b0abdf631",
+        "bytes": 941587,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/presidentpomni-selection.json",
+        "published": true
+      },
+      {
+        "id": "presidentpomni",
+        "slot": "stance",
+        "file": "assets/encore/stance/presidentpomni.png",
+        "sha256": "4b55d0be8b575d157842bc7291247a0819a1e24f7eb7ddff000a7731804c24f5",
+        "bytes": 831774,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/presidentpomni-stance.json",
+        "published": true
+      },
+      {
+        "id": "presidentpomni",
+        "slot": "intro",
+        "file": "assets/encore/poses/presidentpomni/intro.png",
+        "sha256": "0bbe2514307be89c4bcb0d1d87cb1ee19561eda9d72ef976c3e22c717b9758b0",
+        "bytes": 842629,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/presidentpomni-intro.json",
+        "published": true
+      },
+      {
+        "id": "presidentpomni",
+        "slot": "attack",
+        "file": "assets/encore/poses/presidentpomni/attack.png",
+        "sha256": "1a0b7ee7deca75d72b99d11480832d0464804ddedbe6d41ec9c6f3e565720209",
+        "bytes": 850882,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/presidentpomni-attack.json",
+        "published": true
+      },
+      {
+        "id": "presidentpomni",
+        "slot": "heavy",
+        "file": "assets/encore/poses/presidentpomni/heavy.png",
+        "sha256": "98d1801c63e14b30975bb85fa8c107a7bb082794c331052278dbb0e5c0e9673b",
+        "bytes": 821320,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/presidentpomni-heavy.json",
+        "published": true
+      },
+      {
+        "id": "presidentpomni",
+        "slot": "hit",
+        "file": "assets/encore/poses/presidentpomni/hit.png",
+        "sha256": "9f2bf79678470c3e2a50afe40d553a1cd1fbc33f696fe75b516a60dc5ee9e6e4",
+        "bytes": 999759,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/presidentpomni-hit.json",
+        "published": true
+      },
+      {
+        "id": "presidentpomni",
+        "slot": "walk",
+        "file": "assets/encore/poses/presidentpomni/walk.png",
+        "sha256": "7c09fb696a297197f7cfda3582058d48ca94edd24449c84bf9d293faf2eb6050",
+        "bytes": 1569782,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/presidentpomni-walk.json",
+        "published": true
+      },
+      {
+        "id": "presidentpomni",
+        "slot": "jump",
+        "file": "assets/encore/poses/presidentpomni/jump.png",
+        "sha256": "30c5ec692725af486840184459e1fa51ac19679a0d3d468f59f280f3bcb0b8f4",
+        "bytes": 1127239,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/presidentpomni-jump.json",
+        "published": true
+      },
+      {
+        "id": "presidentpomni",
+        "slot": "crouch",
+        "file": "assets/encore/poses/presidentpomni/crouch.png",
+        "sha256": "3b011540f0da67e611156945e3498db9aeddb953c40d19bd475053ec11cc67ac",
+        "bytes": 1129774,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/presidentpomni-crouch.json",
+        "published": true
+      },
+      {
+        "id": "presidentpomni",
+        "slot": "victory",
+        "file": "assets/encore/poses/presidentpomni/victory.png",
+        "sha256": "a90e8cc1b629bc02be272d83de72b813b7d763f7a93d6e2bdc8bc04b5c254fdf",
+        "bytes": 961079,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/presidentpomni-victory.json",
+        "published": true
+      },
+      {
+        "id": "presidentpomni",
+        "slot": "defeat",
+        "file": "assets/encore/poses/presidentpomni/defeat.png",
+        "sha256": "a40f803be6009a3f3837d3ae9307b96067c8816cc55e9a5fd56c9f7b156232c2",
+        "bytes": 1048411,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/presidentpomni-defeat.json",
+        "published": true
+      },
+      {
+        "id": "noirzooble",
+        "slot": "selection",
+        "file": "assets/encore/selection/noirzooble.png",
+        "sha256": "f60771724f6dc7bc2690fac037c9e03f1a52af45f639e956f8ced38eb18bb7b1",
+        "bytes": 1129031,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/manifest-noirzooble-beachzooble.json",
+        "published": true
+      },
+      {
+        "id": "noirzooble",
+        "slot": "stance",
+        "file": "assets/encore/stance/noirzooble.png",
+        "sha256": "cb1e76550fc439008910fc40e17af583fe326b6d2b418a0b14b989496dc4d1ca",
+        "bytes": 955347,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/manifest-noirzooble-beachzooble.json",
+        "published": true
+      },
+      {
+        "id": "noirzooble",
+        "slot": "intro",
+        "file": "assets/encore/poses/noirzooble/intro.png",
+        "sha256": "a2cdf65a942c5ee2ff551181f66d48ac2ae8971e62d1ccafbe44997569297dfa",
+        "bytes": 1124546,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/manifest-noirzooble-beachzooble.json",
+        "published": true
+      },
+      {
+        "id": "noirzooble",
+        "slot": "attack",
+        "file": "assets/encore/poses/noirzooble/attack.png",
+        "sha256": "1b33dbb38057a8ec1c315f2a2a0831346c86bd534dcbb48624a8b142357bdd68",
+        "bytes": 896614,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/manifest-noirzooble-beachzooble.json",
+        "published": true
+      },
+      {
+        "id": "noirzooble",
+        "slot": "heavy",
+        "file": "assets/encore/poses/noirzooble/heavy.png",
+        "sha256": "7ad1d6681b93c1193a3d798238155e35b9c81435f4228d8d39bbecfbe4bc6df8",
+        "bytes": 857235,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/manifest-noirzooble-beachzooble.json",
+        "published": true
+      },
+      {
+        "id": "noirzooble",
+        "slot": "hit",
+        "file": "assets/encore/poses/noirzooble/hit.png",
+        "sha256": "dc33eda6ecf98940d0da12fca6426a492b4b221640d6f9e46d9c620da00c54a7",
+        "bytes": 1113750,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/manifest-noirzooble-beachzooble.json",
+        "published": true
+      },
+      {
+        "id": "noirzooble",
+        "slot": "walk",
+        "file": "assets/encore/poses/noirzooble/walk.png",
+        "sha256": "feb2f2013b7f2341a876ac60e7ad0458379121667de6d5bb02b5e8f2b4f916ed",
+        "bytes": 845526,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/manifest-noirzooble-beachzooble.json",
+        "published": true
+      },
+      {
+        "id": "noirzooble",
+        "slot": "jump",
+        "file": "assets/encore/poses/noirzooble/jump.png",
+        "sha256": "962059480cfeb91cd0d1b6a481ae90f96b89131b21802bc1c49dabbc9d523979",
+        "bytes": 913344,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/manifest-noirzooble-beachzooble.json",
+        "published": true
+      },
+      {
+        "id": "noirzooble",
+        "slot": "crouch",
+        "file": "assets/encore/poses/noirzooble/crouch.png",
+        "sha256": "1df2053efb611062ca8413b7b6a62512fec0926d962a100497a5cf63720abee9",
+        "bytes": 1242004,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/manifest-noirzooble-beachzooble.json",
+        "published": true
+      },
+      {
+        "id": "noirzooble",
+        "slot": "victory",
+        "file": "assets/encore/poses/noirzooble/victory.png",
+        "sha256": "f00de382690f18713616e79cc411ce62c1db7c3501947a4cb0c355aeeebd4ad2",
+        "bytes": 1180125,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/manifest-noirzooble-beachzooble.json",
+        "published": true
+      },
+      {
+        "id": "noirzooble",
+        "slot": "defeat",
+        "file": "assets/encore/poses/noirzooble/defeat.png",
+        "sha256": "1570d8fbefb18fb6f7961cac3b36c7ff6918726bc4fd656bea4b0a4668ffb443",
+        "bytes": 1072284,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/manifest-noirzooble-beachzooble.json",
+        "published": true
+      },
+      {
+        "id": "beachragatha",
+        "slot": "selection",
+        "file": "assets/encore/selection/beachragatha.png",
+        "sha256": "a7e7b68419ee1859c92475ebe973a6f55619a9939555bc3550ca2445caf0c981",
+        "bytes": 1956856,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/beachragatha-selection.json",
+        "published": true
+      },
+      {
+        "id": "beachragatha",
+        "slot": "stance",
+        "file": "assets/encore/stance/beachragatha.png",
+        "sha256": "61df2bd744cf8376bb72d47acb15cc881ea006ece9b64e425267a30e1c74f7d7",
+        "bytes": 1838001,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/beachragatha-stance.json",
+        "published": true
+      },
+      {
+        "id": "beachragatha",
+        "slot": "intro",
+        "file": "assets/encore/poses/beachragatha/intro.png",
+        "sha256": "c5c1046395836c3d03074ddddb03a53a3b4baf6051d14dcf8b32fa4e3766fe02",
+        "bytes": 1884842,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/beachragatha-intro.json",
+        "published": true
+      },
+      {
+        "id": "beachragatha",
+        "slot": "attack",
+        "file": "assets/encore/poses/beachragatha/attack.png",
+        "sha256": "99dcac2c5a5ed273104f51e4f2e449eb347acb7ae75d6ec079415ecf0a26f243",
+        "bytes": 1929940,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/beachragatha-attack.json",
+        "published": true
+      },
+      {
+        "id": "beachragatha",
+        "slot": "heavy",
+        "file": "assets/encore/poses/beachragatha/heavy.png",
+        "sha256": "a68b3ee353286f5ad4839a1d688cbb041bf9a907f9a7083f123b7d8acbb613e1",
+        "bytes": 1777030,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/beachragatha-heavy.json",
+        "published": true
+      },
+      {
+        "id": "beachragatha",
+        "slot": "hit",
+        "file": "assets/encore/poses/beachragatha/hit.png",
+        "sha256": "ca9c2bf7acb58004896b38121a5ca8ae1c55b4234f04da3b312493065d24a884",
+        "bytes": 1957870,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/beachragatha-hit.json",
+        "published": true
+      },
+      {
+        "id": "beachragatha",
+        "slot": "walk",
+        "file": "assets/encore/poses/beachragatha/walk.png",
+        "sha256": "0022f7df42ca3176a457517b4e9dec902b7fa5c83a193ce03d2879bb1b494dcb",
+        "bytes": 1873643,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/beachragatha-walk.json",
+        "published": true
+      },
+      {
+        "id": "beachragatha",
+        "slot": "jump",
+        "file": "assets/encore/poses/beachragatha/jump.png",
+        "sha256": "bfdd2b569f66bac6447a4941f0436cf854948e43ec1d6e9292604610abecddcb",
+        "bytes": 1137672,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/beachragatha-jump.json",
+        "published": true
+      },
+      {
+        "id": "beachragatha",
+        "slot": "crouch",
+        "file": "assets/encore/poses/beachragatha/crouch.png",
+        "sha256": "23ad5ec6125743340c8d4dbb2fc91230648278945bee8e10fc3da660a1582e87",
+        "bytes": 1427987,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/beachragatha-crouch.json",
+        "published": true
+      },
+      {
+        "id": "beachragatha",
+        "slot": "victory",
+        "file": "assets/encore/poses/beachragatha/victory.png",
+        "sha256": "138f07a986cb2ea3b6ddaafea7627da45d99e092430e24dab7b8125f7013499b",
+        "bytes": 1877974,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/beachragatha-victory.json",
+        "published": true
+      },
+      {
+        "id": "beachragatha",
+        "slot": "defeat",
+        "file": "assets/encore/poses/beachragatha/defeat.png",
+        "sha256": "d6cddc66cfbae102c4df16ff8db76532dc30a096c331c768498ba6529f5d0dfe",
+        "bytes": 1700550,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/beachragatha-defeat.json",
+        "published": true
+      },
+      {
+        "id": "beachzooble",
+        "slot": "selection",
+        "file": "assets/encore/selection/beachzooble.png",
+        "sha256": "029e19804571c4c69356676711320310b720d6f349ad9d2187aeb2f47c4b59d7",
+        "bytes": 1626284,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/manifest-noirzooble-beachzooble.json",
+        "published": true
+      },
+      {
+        "id": "beachzooble",
+        "slot": "stance",
+        "file": "assets/encore/stance/beachzooble.png",
+        "sha256": "a9bf312d2727104635457213dcffad9e2d45f8a04d7fe4d1200e1174ba323d65",
+        "bytes": 1664083,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/manifest-noirzooble-beachzooble.json",
+        "published": true
+      },
+      {
+        "id": "beachzooble",
+        "slot": "intro",
+        "file": "assets/encore/poses/beachzooble/intro.png",
+        "sha256": "eded1ff67bc5d161393a3a7ba515f0a2c3a8173ce890e0c05e88e06b3885f2bb",
+        "bytes": 1621469,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/manifest-noirzooble-beachzooble.json",
+        "published": true
+      },
+      {
+        "id": "beachzooble",
+        "slot": "attack",
+        "file": "assets/encore/poses/beachzooble/attack.png",
+        "sha256": "31aaa56e49231a18810e224bbc54f34fb5dfc105d0900be21824c38af1fda1ae",
+        "bytes": 989155,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/manifest-noirzooble-beachzooble.json",
+        "published": true
+      },
+      {
+        "id": "beachzooble",
+        "slot": "heavy",
+        "file": "assets/encore/poses/beachzooble/heavy.png",
+        "sha256": "1536ad850fa20894026f5bc32a9d693298c56976e0dc1098df8e026dd02d469d",
+        "bytes": 843351,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/manifest-noirzooble-beachzooble.json",
+        "published": true
+      },
+      {
+        "id": "beachzooble",
+        "slot": "hit",
+        "file": "assets/encore/poses/beachzooble/hit.png",
+        "sha256": "589c4a31219e52f12fb1aed2ca7b3d583c5a9235d0c677b163ae1466b3c4d49b",
+        "bytes": 1669231,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/manifest-noirzooble-beachzooble.json",
+        "published": true
+      },
+      {
+        "id": "beachzooble",
+        "slot": "walk",
+        "file": "assets/encore/poses/beachzooble/walk.png",
+        "sha256": "af5a63b2e15890a96097d4439503a71cec9e5980d139720e6de06709cc02a42d",
+        "bytes": 917802,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/manifest-noirzooble-beachzooble.json",
+        "published": true
+      },
+      {
+        "id": "beachzooble",
+        "slot": "jump",
+        "file": "assets/encore/poses/beachzooble/jump.png",
+        "sha256": "1acd034851ecb22173d2dbdbbedfba4c58d24f0b2fdb18f04a8e4da8c6486514",
+        "bytes": 1643267,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/manifest-noirzooble-beachzooble.json",
+        "published": true
+      },
+      {
+        "id": "beachzooble",
+        "slot": "crouch",
+        "file": "assets/encore/poses/beachzooble/crouch.png",
+        "sha256": "311bcc6777d425251dce7a7849d9f53352a1d02ff3eed3eef5a04256ce115ffd",
+        "bytes": 1207854,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/manifest-noirzooble-beachzooble.json",
+        "published": true
+      },
+      {
+        "id": "beachzooble",
+        "slot": "victory",
+        "file": "assets/encore/poses/beachzooble/victory.png",
+        "sha256": "f75ad6b2cb3a13b23bcd2efdf0cda935a1cd8a25ec3c036fd4f7395cc601f5a8",
+        "bytes": 1624759,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/manifest-noirzooble-beachzooble.json",
+        "published": true
+      },
+      {
+        "id": "beachzooble",
+        "slot": "defeat",
+        "file": "assets/encore/poses/beachzooble/defeat.png",
+        "sha256": "692a58cb2e8aff5de6b8f63efa4189bd1b352c08142c6447ca17d0171ae76f51",
+        "bytes": 1081983,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/manifest-noirzooble-beachzooble.json",
+        "published": true
+      },
+      {
+        "id": "beachjax",
+        "slot": "selection",
+        "file": "assets/encore/selection/beachjax.png",
+        "sha256": "8c3648ee74c40c01a56e0d4ad2e9e723b3c5f34133f0e05a47b07df1c26415eb",
+        "bytes": 809299,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/beachjax-selection.json",
+        "published": true
+      },
+      {
+        "id": "beachjax",
+        "slot": "stance",
+        "file": "assets/encore/stance/beachjax.png",
+        "sha256": "cf44beb6e4b483c123bdb755b034300ca94baf5a57e9d36874087c83eda6e30b",
+        "bytes": 845235,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/beachjax-stance.json",
+        "published": true
+      },
+      {
+        "id": "beachjax",
+        "slot": "intro",
+        "file": "assets/encore/poses/beachjax/intro.png",
+        "sha256": "26d11c744678f16daf76fd4a41f86239c9e654d18e38c9123734c494e80376ab",
+        "bytes": 686723,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/beachjax-intro.json",
+        "published": true
+      },
+      {
+        "id": "beachjax",
+        "slot": "attack",
+        "file": "assets/encore/poses/beachjax/attack.png",
+        "sha256": "836d3bd957a9817411b422dae4893b088fdb6533433c1c5286a51a79c6a3c866",
+        "bytes": 696913,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/beachjax-attack.json",
+        "published": true
+      },
+      {
+        "id": "beachjax",
+        "slot": "heavy",
+        "file": "assets/encore/poses/beachjax/heavy.png",
+        "sha256": "c2135d33f7e0b760ec2ce7febf91a21ee9b59b3567e59a1fba31d7c86aa60e7f",
+        "bytes": 562065,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/beachjax-heavy.json",
+        "published": true
+      },
+      {
+        "id": "beachjax",
+        "slot": "hit",
+        "file": "assets/encore/poses/beachjax/hit.png",
+        "sha256": "c24755a1c21f27bcacf91aaf59ce6c56e8115dccb19413bf2ab80e2f05520e75",
+        "bytes": 836657,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/beachjax-hit.json",
+        "published": true
+      },
+      {
+        "id": "beachjax",
+        "slot": "walk",
+        "file": "assets/encore/poses/beachjax/walk.png",
+        "sha256": "2a631ea9a4ef380795e56c1596db8ad2a0b62991072ac908ce019df2e54787d2",
+        "bytes": 677395,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/beachjax-walk.json",
+        "published": true
+      },
+      {
+        "id": "beachjax",
+        "slot": "jump",
+        "file": "assets/encore/poses/beachjax/jump.png",
+        "sha256": "b63bc655354a658bdf7775a033dce0159828d82a0e58db19439d0c70b708a14b",
+        "bytes": 791478,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/beachjax-jump.json",
+        "published": true
+      },
+      {
+        "id": "beachjax",
+        "slot": "crouch",
+        "file": "assets/encore/poses/beachjax/crouch.png",
+        "sha256": "b42c0ecc1bfb7b32803ac652111205900e749033365bdfc229976ac167ff19ac",
+        "bytes": 906407,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/beachjax-crouch.json",
+        "published": true
+      },
+      {
+        "id": "beachjax",
+        "slot": "victory",
+        "file": "assets/encore/poses/beachjax/victory.png",
+        "sha256": "77dfea8a1d8459434932a500d537fc5bc8f555800d50c3245c583b44c6b8f255",
+        "bytes": 1324364,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/beachjax-victory.json",
+        "published": true
+      },
+      {
+        "id": "beachjax",
+        "slot": "defeat",
+        "file": "assets/encore/poses/beachjax/defeat.png",
+        "sha256": "65455d07901e2645cf77cb02d02c9f329fb6cc55a3551db3ca31a2ab2a8fa42e",
+        "bytes": 720743,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/beachjax-defeat.json",
+        "published": true
+      },
+      {
+        "id": "sandcastlekinger",
+        "slot": "selection",
+        "file": "assets/encore/selection/sandcastlekinger.png",
+        "sha256": "14bea0188d6b6e3f10ca919c9497bf058327f10e7bfcd7c2a2573144cca05e42",
+        "bytes": 998101,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/manifest-sandcastlekinger.json",
+        "published": true
+      },
+      {
+        "id": "sandcastlekinger",
+        "slot": "stance",
+        "file": "assets/encore/stance/sandcastlekinger.png",
+        "sha256": "99df9caf8346423ee9938097392a49c84ba929c8c7fed4166232fe03bcaa6225",
+        "bytes": 952404,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/manifest-sandcastlekinger.json",
+        "published": true
+      },
+      {
+        "id": "sandcastlekinger",
+        "slot": "intro",
+        "file": "assets/encore/poses/sandcastlekinger/intro.png",
+        "sha256": "ebe679f2d11da73e693d7cadb6af2fd56d2e74d167469236fb32abee36fbe951",
+        "bytes": 1048484,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/manifest-sandcastlekinger.json",
+        "published": true
+      },
+      {
+        "id": "sandcastlekinger",
+        "slot": "attack",
+        "file": "assets/encore/poses/sandcastlekinger/attack.png",
+        "sha256": "9ccff1a6044067bde938ec8bcd17882287d61fa4b74d8f84f63792634d4e8c92",
+        "bytes": 1035158,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/manifest-sandcastlekinger.json",
+        "published": true
+      },
+      {
+        "id": "sandcastlekinger",
+        "slot": "heavy",
+        "file": "assets/encore/poses/sandcastlekinger/heavy.png",
+        "sha256": "5eaff4c6a8f93bd105f180a3d8202a0114eca1c87be7ec0c87870cb8435360dc",
+        "bytes": 1058544,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/manifest-sandcastlekinger.json",
+        "published": true
+      },
+      {
+        "id": "sandcastlekinger",
+        "slot": "hit",
+        "file": "assets/encore/poses/sandcastlekinger/hit.png",
+        "sha256": "01f51249e08c5d4f204435b6bc1ece67f39fd8c5b0f5add437fac96b56bcf1e3",
+        "bytes": 1049517,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/manifest-sandcastlekinger.json",
+        "published": true
+      },
+      {
+        "id": "sandcastlekinger",
+        "slot": "walk",
+        "file": "assets/encore/poses/sandcastlekinger/walk.png",
+        "sha256": "5c183bda0ca379f03b40dedaccbc8f80833d19b03fba0ca925b9002e4ce42ab7",
+        "bytes": 978636,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/manifest-sandcastlekinger.json",
+        "published": true
+      },
+      {
+        "id": "sandcastlekinger",
+        "slot": "jump",
+        "file": "assets/encore/poses/sandcastlekinger/jump.png",
+        "sha256": "891a556e97bcd5124dfdf2122dd825626b931cb2eacd96e51cf18e7f2b311563",
+        "bytes": 909236,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/manifest-sandcastlekinger.json",
+        "published": true
+      },
+      {
+        "id": "sandcastlekinger",
+        "slot": "crouch",
+        "file": "assets/encore/poses/sandcastlekinger/crouch.png",
+        "sha256": "07854970a57e716bbed0cb9b1887a479096400de3b13b0d02d39983b26ec436c",
+        "bytes": 911148,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/manifest-sandcastlekinger.json",
+        "published": true
+      },
+      {
+        "id": "sandcastlekinger",
+        "slot": "victory",
+        "file": "assets/encore/poses/sandcastlekinger/victory.png",
+        "sha256": "0f8c76a75290e770770e614114e95d5bfd87c6a298b4d09a9e2d1431c1d11158",
+        "bytes": 1029073,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/manifest-sandcastlekinger.json",
+        "published": true
+      },
+      {
+        "id": "sandcastlekinger",
+        "slot": "defeat",
+        "file": "assets/encore/poses/sandcastlekinger/defeat.png",
+        "sha256": "f1e8a0d74bd3ec99d1bb107e0f8a3aaf350aa46425c828c62bdba28ce35d9df8",
+        "bytes": 987794,
+        "generationManifest": "docs/art-generation/cast-continuation-20261119/manifest-sandcastlekinger.json",
+        "published": true
+      }
+    ],
+    "scope": "8 tenues distinctes des 51 variantes historiques et des 378 costumes crossover. Références de produits officiels ; poses et proportions adaptées au jeu. Les 1 234 dessins de couverture historique restent comptés séparément.",
+    "canonicalSceneComparisonComplete": false,
+    "fullAnimationCyclesComplete": false,
+    "evidence": "docs/art-generation/cast-continuation-20261119/verification.json"
+  },
+  "costumeAdditionReview": {
+    "asOf": "2026-11-19",
+    "evidence": "docs/art-generation/cast-continuation-20261119/verification.json",
+    "workbookEvidence": "docs/art-generation/cast-continuation-20261119/workbook-review.json",
+    "qaRowIds": [
+      "CAST26-art",
+      "CAST26-canvas",
+      "CAST26-node",
+      "CAST26-browser",
+      "CAST26-workbook"
+    ],
+    "browserAssertionsExecuted": 0
   }
 }

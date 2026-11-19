@@ -1,0 +1,134 @@
+{
+  "schema": "encore-local-prop-recovery/v1",
+  "date": "2026-11-19",
+  "files": [
+    {
+      "id": "haunted-lamppost",
+      "label": "Lampadaire hanté courbé",
+      "file": "art/sources/recovered-local-props-20261119/haunted-lamppost.png",
+      "sourceGenerationId": "exec-0558989b-d233-48e8-a307-e0097ecb8779",
+      "method": "recovered-native-imagegen-output",
+      "sha256": "643cb5e4ad7e47ff3f4e98b6702d87d82a33ade5a2dde2b1ab6f93557a78315a",
+      "bytes": 1329877,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "status": "source-recovered-not-runtime-wired",
+      "visualReview": "Lampadaire entier, courbe et lanterne lisibles. Composition avec alpha natif sur fond bleu sombre : aucun halo diffus visible.",
+      "originalPrompt": "not recovered; no reconstruction claimed"
+    },
+    {
+      "id": "circus-ticket-dispenser",
+      "label": "Distributeur de tickets",
+      "file": "art/sources/recovered-local-props-20261119/circus-ticket-dispenser.png",
+      "sourceGenerationId": "exec-2a6f1a06-b006-43fc-a85e-eb0af60735d0",
+      "method": "recovered-native-imagegen-output",
+      "sha256": "7517f5c81ba184da71ee4a89d0629431f7dd6a78dd1dc930ef4776be807ddd61",
+      "bytes": 1189952,
+      "dimensions": [
+        1122,
+        1402
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "status": "source-recovered-not-runtime-wired",
+      "visualReview": "Distributeur isolé, manivelle et tickets lisibles, tous les contours contenus dans le fichier.",
+      "originalPrompt": "not recovered; no reconstruction claimed"
+    },
+    {
+      "id": "blue-hologram-pedestal",
+      "label": "Piédestal holographique bleu",
+      "file": "art/sources/recovered-local-props-20261119/blue-hologram-pedestal.png",
+      "sourceGenerationId": "exec-2ee5d148-068a-4a6f-b7af-32ad6f0d901e",
+      "method": "recovered-native-imagegen-output",
+      "sha256": "d5728ddf5647786f2c9920ade40fc40de762d1c9a7e4ca9b7c0ed3c34fedc09b",
+      "bytes": 1060878,
+      "dimensions": [
+        1179,
+        1334
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "status": "source-recovered-not-runtime-wired",
+      "visualReview": "Piédestal hexagonal unique, éclairage cyan contenu dans l’objet ; fond natif transparent.",
+      "originalPrompt": "not recovered; no reconstruction claimed"
+    },
+    {
+      "id": "pastel-turnstile",
+      "label": "Tourniquet pastel",
+      "file": "art/sources/recovered-local-props-20261119/pastel-turnstile.png",
+      "sourceGenerationId": "exec-493ee472-8764-4cb9-bf6a-2cd5b4803050",
+      "method": "recovered-native-imagegen-output",
+      "sha256": "c2dc9947705cab924dfa0180f33bc3012bd9b94c4bbb459b8bccefe6201e4130",
+      "bytes": 983163,
+      "dimensions": [
+        1137,
+        1383
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "status": "source-recovered-not-runtime-wired",
+      "visualReview": "Tourniquet entier, bras et végétation contenus, silhouette lisible sur fond bleu sombre.",
+      "originalPrompt": "not recovered; no reconstruction claimed"
+    },
+    {
+      "id": "vintage-brass-microphone",
+      "label": "Microphone en laiton",
+      "file": "art/sources/recovered-local-props-20261119/vintage-brass-microphone.png",
+      "sourceGenerationId": "exec-87e18eb1-87ef-4d2f-a0b9-4d32935edaed",
+      "method": "recovered-native-imagegen-output",
+      "sha256": "ca69aafcdff0395ad7f1daf0974fb54079b579015b2bfec0b7871d57bce050f6",
+      "bytes": 1260782,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "status": "source-recovered-not-runtime-wired",
+      "visualReview": "Microphone sur pied complet, trois pieds visibles. Aucun halo diffus dans la composition avec alpha natif.",
+      "originalPrompt": "not recovered; no reconstruction claimed"
+    },
+    {
+      "id": "bamboo-bell",
+      "label": "Cloche de bambou",
+      "file": "art/sources/recovered-local-props-20261119/bamboo-bell.png",
+      "sourceGenerationId": "exec-e25498a1-df9e-4677-b37c-16994c40b97b",
+      "method": "recovered-native-imagegen-output",
+      "sha256": "11e58a3c0734a1ee46368fd8630bb97b905bbdcd30492f3a51d77d7a23a9980c",
+      "bytes": 1663958,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "status": "source-recovered-not-runtime-wired",
+      "visualReview": "Bambou, cloche, feuillage et pied complets. Aucun halo diffus dans la composition avec alpha natif.",
+      "originalPrompt": "not recovered; no reconstruction claimed"
+    }
+  ],
+  "scope": "Copies natives identiques, inspectées visuellement ; accessoires originaux du fan-game. Aucune nouvelle génération ni apparition canonique revendiquée.",
+  "reviewMethod": "Composition de contrôle avec les PNG natifs sur fond bleu sombre via Canvas/Skia, sans altérer les sources. Placement dans les décors à définir."
+}

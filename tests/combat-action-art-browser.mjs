@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
-import { FIGHTERS, VARIANTS } from '../combat/data.mjs';
+import { FIGHTERS, VARIANTS, COSTUME_ADDITIONS } from '../combat/data.mjs';
 import { ACTION_ART } from '../combat/illustrations.mjs';
 
 let playwright;
@@ -18,7 +18,7 @@ const base = process.env.COMBAT_TEST_URL || 'http://127.0.0.1:4173';
 const checks = [], failures = [];
 const appearances = [
   ...FIGHTERS.map(fighter => ({ id: fighter.id, owner: fighter.id, keys: [...ACTION_ART, 'heavy'] })),
-  ...VARIANTS.map(variant => ({ id: variant.id, owner: variant.fighterId, keys: [...ACTION_ART, 'heavy'] })),
+  ...[...VARIANTS, ...COSTUME_ADDITIONS].map(variant => ({ id: variant.id, owner: variant.fighterId, keys: [...ACTION_ART, 'heavy'] })),
 ];
 const checked = (name, detail) => { checks.push({ name, detail, pass: true }); console.log('PASS ' + name); };
 const browser = await playwright.chromium.launch({ headless: true, executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH || undefined, args: ['--no-sandbox', '--disable-dev-shm-usage'] });
@@ -70,12 +70,12 @@ try {
   // displayed size separately rules out a wrong costume or a stale cached pose.
   for (const appearance of appearances) {
     const count = await page.evaluate(async ({ id, owner, keys }) => {
-      const { getFighter, VARIANTS } = await import('/combat/data.mjs');
+      const { getFighter, COSTUMES } = await import('/combat/data.mjs');
       const { CombatRenderer } = await import('/combat/render.mjs');
       const { loadFighterIllustration } = await import('/combat/illustrations.mjs');
       const { ART_FILES } = await import('/combat/offline-manifest.mjs');
       const baseFighter = getFighter(owner);
-      const variant = VARIANTS.find(item => item.id === id);
+      const variant = COSTUMES.find(item => item.id === id);
       const f = variant ? { ...baseFighter, costume: id, sprite: variant.sprite, visual: { ...baseFighter.visual, ...variant.visual }, animation: variant.animation || null } : baseFighter;
       const renderer = new CombatRenderer(document.createElement('canvas'));
       const ctx = renderer.ctx, draw = ctx.drawImage.bind(ctx);

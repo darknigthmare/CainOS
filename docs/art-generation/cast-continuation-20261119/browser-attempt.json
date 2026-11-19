@@ -1,0 +1,12 @@
+{
+  "schema": "encore-browser-attempt/v1",
+  "sessionDate": "2026-11-19",
+  "status": "blocked_before_page_navigation",
+  "executed": true,
+  "method": "Playwright chromium.launch, headless, /usr/bin/chromium, --no-sandbox and --disable-dev-shm-usage",
+  "failure": "FATAL:chrome/browser/process_singleton_posix.cc:297 Check failed: . socket() failed: Operation not permitted (1)",
+  "browserAssertionsExecuted": 0,
+  "scope": "No browser interaction, DOM, input, service-worker or physical-device result is claimed. Production Canvas2D rendering is checked separately through native Skia.",
+  "observedProcessLogTimestamp": "1119/233850.132738",
+  "timestampNote": "Horodatage brut du journal Chromium. Le fuseau de ce journal n’a pas été enregistré ; aucune conversion UTC n’est déduite."
+}

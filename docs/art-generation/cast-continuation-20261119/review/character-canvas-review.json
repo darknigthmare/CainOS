@@ -1,0 +1,1332 @@
+{
+  "schema": "encore-character-canvas-review/v1",
+  "createdAt": "2026-11-19T23:03:53.609Z",
+  "method": "Production Canvas2D modules executed by Node and native Skia; actual drawImage sources and transforms inspected.",
+  "limitations": [
+    "No browser, DOM, input, audio, service-worker or physical-device test.",
+    "Individual static poses do not establish frame-by-frame animation.",
+    "Asset identity/proportion fidelity requires separate visual review; no canonical 1:1 certification."
+  ],
+  "partial": false,
+  "additionsOnly": true,
+  "sources": {
+    "combat/data.mjs": "6910aaddf46645f98520f4cc6fb468c2bc43b6dd017d9237266a90f6c1bf892b",
+    "combat/costume-additions.mjs": "a000d72fe439b7c9f18d4cb38ebba193a4b302fda0212493e46226edb73b09fd",
+    "combat/illustrations.mjs": "c3de886221f6f05eebba1ad53f866d7ec486a1a13e0f0733c0e170c8fd81292f",
+    "combat/render.mjs": "91cdc8a8a4b5298644809714aa7e53219e1266e2ffc95478194a699a7bc1212f",
+    "combat/render-poses.mjs": "21e3afba8c19723ffdcb383402cc6339b63cb58df5d4323fda2ebde093ce0b29",
+    "combat/offline-manifest.mjs": "5986ca7ccf600790cb64f94a890f09e4c7474030002e7b9ec86467a10e7b224b",
+    "scripts/render-combat-character-review.mjs": "50cbffc3b24049a89410b707c84a7e40f9ed3d287a51320237fd39fee1ab6ede"
+  },
+  "actions": [
+    {
+      "id": "beachpomni",
+      "pose": "intro",
+      "file": "assets/encore/poses/beachpomni/intro.png",
+      "sha256": "007b5464ac8b7deab126c712afce5609a92df872f7c33e085086dd685e0023e3",
+      "bytes": 1007066,
+      "visibleBounds": {
+        "x": 15,
+        "y": 7,
+        "width": 341,
+        "height": 623
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "beachpomni",
+      "pose": "attack",
+      "file": "assets/encore/poses/beachpomni/attack.png",
+      "sha256": "3adbe18b6b7b3d697f48ec7169d916fec51da1693b25403078d6bf6f73ad1817",
+      "bytes": 839651,
+      "visibleBounds": {
+        "x": 48,
+        "y": 7,
+        "width": 508,
+        "height": 626
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "beachpomni",
+      "pose": "hit",
+      "file": "assets/encore/poses/beachpomni/hit.png",
+      "sha256": "963377b2a460c918a74a7268522682a16ef15223a0f4b0585712bf3028fddaaf",
+      "bytes": 1015477,
+      "visibleBounds": {
+        "x": 12,
+        "y": 6,
+        "width": 410,
+        "height": 631
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "beachpomni",
+      "pose": "walk",
+      "file": "assets/encore/poses/beachpomni/walk.png",
+      "sha256": "da2be6e5fcb4121b1a7322f41b02057dd34d2b1f49218d64552bab6622b137e3",
+      "bytes": 929355,
+      "visibleBounds": {
+        "x": 34,
+        "y": 12,
+        "width": 386,
+        "height": 615
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "beachpomni",
+      "pose": "jump",
+      "file": "assets/encore/poses/beachpomni/jump.png",
+      "sha256": "e1cbf2f5f894029b5e5cb534fd0936d589933e40290eade75bc058079674cefe",
+      "bytes": 1050129,
+      "visibleBounds": {
+        "x": 33,
+        "y": 9,
+        "width": 482,
+        "height": 604
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "beachpomni",
+      "pose": "crouch",
+      "file": "assets/encore/poses/beachpomni/crouch.png",
+      "sha256": "0128d15f7b93ff79752fbe94e6f0cb8cf890d0ffd2fa181fbc245a2de37a58da",
+      "bytes": 936281,
+      "visibleBounds": {
+        "x": 106,
+        "y": 27,
+        "width": 463,
+        "height": 544
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "beachpomni",
+      "pose": "victory",
+      "file": "assets/encore/poses/beachpomni/victory.png",
+      "sha256": "eb3b5e94d869f97c59322f34e02218bc775bae649e3150b76f0af26c29593e3a",
+      "bytes": 1011954,
+      "visibleBounds": {
+        "x": 18,
+        "y": 11,
+        "width": 333,
+        "height": 622
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "beachpomni",
+      "pose": "defeat",
+      "file": "assets/encore/poses/beachpomni/defeat.png",
+      "sha256": "ab1f4efc9e612f2952e44429914d84803a9a7409ce1d52fd730f1b9804871146",
+      "bytes": 967405,
+      "visibleBounds": {
+        "x": 110,
+        "y": 14,
+        "width": 417,
+        "height": 462
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "beachpomni",
+      "pose": "heavy",
+      "file": "assets/encore/poses/beachpomni/heavy.png",
+      "sha256": "4f6150d94c846ac3914a871ba37c6ee1745dafc4b13f3eaab1c78659708544f5",
+      "bytes": 769935,
+      "visibleBounds": {
+        "x": 30,
+        "y": 6,
+        "width": 557,
+        "height": 502
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "noirragatha",
+      "pose": "intro",
+      "file": "assets/encore/poses/noirragatha/intro.png",
+      "sha256": "c05ef5cd0cbfa12fd8c9803e048e3d7c99cb7af7bdf6ee5d27bd2c4052ac9e88",
+      "bytes": 1084239,
+      "visibleBounds": {
+        "x": 35,
+        "y": 6,
+        "width": 274,
+        "height": 625
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "noirragatha",
+      "pose": "attack",
+      "file": "assets/encore/poses/noirragatha/attack.png",
+      "sha256": "30d989fc1bc90947a265e0d03074f0d2c53620ac75a4769acacc6816c52f3e10",
+      "bytes": 834681,
+      "visibleBounds": {
+        "x": 43,
+        "y": 14,
+        "width": 490,
+        "height": 610
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "noirragatha",
+      "pose": "hit",
+      "file": "assets/encore/poses/noirragatha/hit.png",
+      "sha256": "1b2e1c84ea3578c8abd2f60bd6a7b16849f3cf5853e39fa2aab7081a6cd7d0c4",
+      "bytes": 966555,
+      "visibleBounds": {
+        "x": 24,
+        "y": 14,
+        "width": 369,
+        "height": 616
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "noirragatha",
+      "pose": "walk",
+      "file": "assets/encore/poses/noirragatha/walk.png",
+      "sha256": "bf882e3e74276a9c358f6e1e2e075da057cfa08695d1aa5870aa37252bf8c721",
+      "bytes": 847859,
+      "visibleBounds": {
+        "x": 82,
+        "y": 12,
+        "width": 298,
+        "height": 615
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "noirragatha",
+      "pose": "jump",
+      "file": "assets/encore/poses/noirragatha/jump.png",
+      "sha256": "4747388f8bb478697eafdd01b3bec401033566796592a6eec14a1ee142d09009",
+      "bytes": 1376830,
+      "visibleBounds": {
+        "x": 55,
+        "y": 27,
+        "width": 359,
+        "height": 583
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "noirragatha",
+      "pose": "crouch",
+      "file": "assets/encore/poses/noirragatha/crouch.png",
+      "sha256": "43f95ff1e695755625fe7b390d1857ca419721afc7c4fb265b24e62372fa2938",
+      "bytes": 977752,
+      "visibleBounds": {
+        "x": 110,
+        "y": 29,
+        "width": 386,
+        "height": 591
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "noirragatha",
+      "pose": "victory",
+      "file": "assets/encore/poses/noirragatha/victory.png",
+      "sha256": "631e5f21896c55236f668629d19c0cdf73c2f9f830333dfb8063b6f209b8bf06",
+      "bytes": 1057443,
+      "visibleBounds": {
+        "x": 38,
+        "y": 16,
+        "width": 288,
+        "height": 613
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "noirragatha",
+      "pose": "defeat",
+      "file": "assets/encore/poses/noirragatha/defeat.png",
+      "sha256": "f5d20aa4bfe2f829905883e151f34830976853942dcd81e5b62f1b0fcb7c3fe1",
+      "bytes": 1028805,
+      "visibleBounds": {
+        "x": 102,
+        "y": 12,
+        "width": 436,
+        "height": 566
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "noirragatha",
+      "pose": "heavy",
+      "file": "assets/encore/poses/noirragatha/heavy.png",
+      "sha256": "cac08ecefc9823d7e03f52fbb7742cc118c14c13204c0dde44b8e34135664db3",
+      "bytes": 853285,
+      "visibleBounds": {
+        "x": 49,
+        "y": 13,
+        "width": 455,
+        "height": 615
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "presidentpomni",
+      "pose": "intro",
+      "file": "assets/encore/poses/presidentpomni/intro.png",
+      "sha256": "0bbe2514307be89c4bcb0d1d87cb1ee19561eda9d72ef976c3e22c717b9758b0",
+      "bytes": 842629,
+      "visibleBounds": {
+        "x": 77,
+        "y": 7,
+        "width": 362,
+        "height": 624
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "presidentpomni",
+      "pose": "attack",
+      "file": "assets/encore/poses/presidentpomni/attack.png",
+      "sha256": "1a0b7ee7deca75d72b99d11480832d0464804ddedbe6d41ec9c6f3e565720209",
+      "bytes": 850882,
+      "visibleBounds": {
+        "x": 65,
+        "y": 13,
+        "width": 453,
+        "height": 617
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "presidentpomni",
+      "pose": "hit",
+      "file": "assets/encore/poses/presidentpomni/hit.png",
+      "sha256": "9f2bf79678470c3e2a50afe40d553a1cd1fbc33f696fe75b516a60dc5ee9e6e4",
+      "bytes": 999759,
+      "visibleBounds": {
+        "x": 17,
+        "y": 7,
+        "width": 421,
+        "height": 627
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "presidentpomni",
+      "pose": "walk",
+      "file": "assets/encore/poses/presidentpomni/walk.png",
+      "sha256": "7c09fb696a297197f7cfda3582058d48ca94edd24449c84bf9d293faf2eb6050",
+      "bytes": 1569782,
+      "visibleBounds": {
+        "x": 26,
+        "y": 12,
+        "width": 375,
+        "height": 617
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "presidentpomni",
+      "pose": "jump",
+      "file": "assets/encore/poses/presidentpomni/jump.png",
+      "sha256": "30c5ec692725af486840184459e1fa51ac19679a0d3d468f59f280f3bcb0b8f4",
+      "bytes": 1127239,
+      "visibleBounds": {
+        "x": 5,
+        "y": 10,
+        "width": 361,
+        "height": 508
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "presidentpomni",
+      "pose": "crouch",
+      "file": "assets/encore/poses/presidentpomni/crouch.png",
+      "sha256": "3b011540f0da67e611156945e3498db9aeddb953c40d19bd475053ec11cc67ac",
+      "bytes": 1129774,
+      "visibleBounds": {
+        "x": 51,
+        "y": 30,
+        "width": 463,
+        "height": 592
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "presidentpomni",
+      "pose": "victory",
+      "file": "assets/encore/poses/presidentpomni/victory.png",
+      "sha256": "a90e8cc1b629bc02be272d83de72b813b7d763f7a93d6e2bdc8bc04b5c254fdf",
+      "bytes": 961079,
+      "visibleBounds": {
+        "x": 9,
+        "y": 5,
+        "width": 356,
+        "height": 631
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "presidentpomni",
+      "pose": "defeat",
+      "file": "assets/encore/poses/presidentpomni/defeat.png",
+      "sha256": "a40f803be6009a3f3837d3ae9307b96067c8816cc55e9a5fd56c9f7b156232c2",
+      "bytes": 1048411,
+      "visibleBounds": {
+        "x": 15,
+        "y": 92,
+        "width": 339,
+        "height": 478
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "presidentpomni",
+      "pose": "heavy",
+      "file": "assets/encore/poses/presidentpomni/heavy.png",
+      "sha256": "98d1801c63e14b30975bb85fa8c107a7bb082794c331052278dbb0e5c0e9673b",
+      "bytes": 821320,
+      "visibleBounds": {
+        "x": 8,
+        "y": 14,
+        "width": 498,
+        "height": 619
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "noirzooble",
+      "pose": "intro",
+      "file": "assets/encore/poses/noirzooble/intro.png",
+      "sha256": "a2cdf65a942c5ee2ff551181f66d48ac2ae8971e62d1ccafbe44997569297dfa",
+      "bytes": 1124546,
+      "visibleBounds": {
+        "x": 19,
+        "y": 4,
+        "width": 319,
+        "height": 634
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "noirzooble",
+      "pose": "attack",
+      "file": "assets/encore/poses/noirzooble/attack.png",
+      "sha256": "1b33dbb38057a8ec1c315f2a2a0831346c86bd534dcbb48624a8b142357bdd68",
+      "bytes": 896614,
+      "visibleBounds": {
+        "x": 50,
+        "y": 6,
+        "width": 558,
+        "height": 574
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "noirzooble",
+      "pose": "hit",
+      "file": "assets/encore/poses/noirzooble/hit.png",
+      "sha256": "dc33eda6ecf98940d0da12fca6426a492b4b221640d6f9e46d9c620da00c54a7",
+      "bytes": 1113750,
+      "visibleBounds": {
+        "x": 9,
+        "y": 5,
+        "width": 428,
+        "height": 633
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "noirzooble",
+      "pose": "walk",
+      "file": "assets/encore/poses/noirzooble/walk.png",
+      "sha256": "feb2f2013b7f2341a876ac60e7ad0458379121667de6d5bb02b5e8f2b4f916ed",
+      "bytes": 845526,
+      "visibleBounds": {
+        "x": 118,
+        "y": 6,
+        "width": 379,
+        "height": 621
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "noirzooble",
+      "pose": "jump",
+      "file": "assets/encore/poses/noirzooble/jump.png",
+      "sha256": "962059480cfeb91cd0d1b6a481ae90f96b89131b21802bc1c49dabbc9d523979",
+      "bytes": 913344,
+      "visibleBounds": {
+        "x": 77,
+        "y": 9,
+        "width": 454,
+        "height": 617
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "noirzooble",
+      "pose": "crouch",
+      "file": "assets/encore/poses/noirzooble/crouch.png",
+      "sha256": "1df2053efb611062ca8413b7b6a62512fec0926d962a100497a5cf63720abee9",
+      "bytes": 1242004,
+      "visibleBounds": {
+        "x": 62,
+        "y": 6,
+        "width": 482,
+        "height": 625
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "noirzooble",
+      "pose": "victory",
+      "file": "assets/encore/poses/noirzooble/victory.png",
+      "sha256": "f00de382690f18713616e79cc411ce62c1db7c3501947a4cb0c355aeeebd4ad2",
+      "bytes": 1180125,
+      "visibleBounds": {
+        "x": 4,
+        "y": 3,
+        "width": 332,
+        "height": 635
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "noirzooble",
+      "pose": "defeat",
+      "file": "assets/encore/poses/noirzooble/defeat.png",
+      "sha256": "1570d8fbefb18fb6f7961cac3b36c7ff6918726bc4fd656bea4b0a4668ffb443",
+      "bytes": 1072284,
+      "visibleBounds": {
+        "x": 41,
+        "y": 7,
+        "width": 468,
+        "height": 627
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "noirzooble",
+      "pose": "heavy",
+      "file": "assets/encore/poses/noirzooble/heavy.png",
+      "sha256": "7ad1d6681b93c1193a3d798238155e35b9c81435f4228d8d39bbecfbe4bc6df8",
+      "bytes": 857235,
+      "visibleBounds": {
+        "x": 12,
+        "y": 5,
+        "width": 561,
+        "height": 629
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "beachragatha",
+      "pose": "intro",
+      "file": "assets/encore/poses/beachragatha/intro.png",
+      "sha256": "c5c1046395836c3d03074ddddb03a53a3b4baf6051d14dcf8b32fa4e3766fe02",
+      "bytes": 1884842,
+      "visibleBounds": {
+        "x": 25,
+        "y": 5,
+        "width": 352,
+        "height": 621
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "beachragatha",
+      "pose": "attack",
+      "file": "assets/encore/poses/beachragatha/attack.png",
+      "sha256": "99dcac2c5a5ed273104f51e4f2e449eb347acb7ae75d6ec079415ecf0a26f243",
+      "bytes": 1929940,
+      "visibleBounds": {
+        "x": 19,
+        "y": 11,
+        "width": 397,
+        "height": 617
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "beachragatha",
+      "pose": "hit",
+      "file": "assets/encore/poses/beachragatha/hit.png",
+      "sha256": "ca9c2bf7acb58004896b38121a5ca8ae1c55b4234f04da3b312493065d24a884",
+      "bytes": 1957870,
+      "visibleBounds": {
+        "x": 10,
+        "y": 11,
+        "width": 384,
+        "height": 621
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "beachragatha",
+      "pose": "walk",
+      "file": "assets/encore/poses/beachragatha/walk.png",
+      "sha256": "0022f7df42ca3176a457517b4e9dec902b7fa5c83a193ce03d2879bb1b494dcb",
+      "bytes": 1873643,
+      "visibleBounds": {
+        "x": 34,
+        "y": 5,
+        "width": 343,
+        "height": 619
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "beachragatha",
+      "pose": "jump",
+      "file": "assets/encore/poses/beachragatha/jump.png",
+      "sha256": "bfdd2b569f66bac6447a4941f0436cf854948e43ec1d6e9292604610abecddcb",
+      "bytes": 1137672,
+      "visibleBounds": {
+        "x": 82,
+        "y": 8,
+        "width": 438,
+        "height": 608
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "beachragatha",
+      "pose": "crouch",
+      "file": "assets/encore/poses/beachragatha/crouch.png",
+      "sha256": "23ad5ec6125743340c8d4dbb2fc91230648278945bee8e10fc3da660a1582e87",
+      "bytes": 1427987,
+      "visibleBounds": {
+        "x": 27,
+        "y": 8,
+        "width": 503,
+        "height": 626
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "beachragatha",
+      "pose": "victory",
+      "file": "assets/encore/poses/beachragatha/victory.png",
+      "sha256": "138f07a986cb2ea3b6ddaafea7627da45d99e092430e24dab7b8125f7013499b",
+      "bytes": 1877974,
+      "visibleBounds": {
+        "x": 34,
+        "y": 4,
+        "width": 353,
+        "height": 625
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "beachragatha",
+      "pose": "defeat",
+      "file": "assets/encore/poses/beachragatha/defeat.png",
+      "sha256": "d6cddc66cfbae102c4df16ff8db76532dc30a096c331c768498ba6529f5d0dfe",
+      "bytes": 1700550,
+      "visibleBounds": {
+        "x": 91,
+        "y": 4,
+        "width": 439,
+        "height": 422
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "beachragatha",
+      "pose": "heavy",
+      "file": "assets/encore/poses/beachragatha/heavy.png",
+      "sha256": "a68b3ee353286f5ad4839a1d688cbb041bf9a907f9a7083f123b7d8acbb613e1",
+      "bytes": 1777030,
+      "visibleBounds": {
+        "x": 65,
+        "y": 3,
+        "width": 491,
+        "height": 421
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "beachzooble",
+      "pose": "intro",
+      "file": "assets/encore/poses/beachzooble/intro.png",
+      "sha256": "eded1ff67bc5d161393a3a7ba515f0a2c3a8173ce890e0c05e88e06b3885f2bb",
+      "bytes": 1621469,
+      "visibleBounds": {
+        "x": 37,
+        "y": 3,
+        "width": 343,
+        "height": 636
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "beachzooble",
+      "pose": "attack",
+      "file": "assets/encore/poses/beachzooble/attack.png",
+      "sha256": "31aaa56e49231a18810e224bbc54f34fb5dfc105d0900be21824c38af1fda1ae",
+      "bytes": 989155,
+      "visibleBounds": {
+        "x": 19,
+        "y": 8,
+        "width": 555,
+        "height": 628
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "beachzooble",
+      "pose": "hit",
+      "file": "assets/encore/poses/beachzooble/hit.png",
+      "sha256": "589c4a31219e52f12fb1aed2ca7b3d583c5a9235d0c677b163ae1466b3c4d49b",
+      "bytes": 1669231,
+      "visibleBounds": {
+        "x": 6,
+        "y": 23,
+        "width": 374,
+        "height": 595
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "beachzooble",
+      "pose": "walk",
+      "file": "assets/encore/poses/beachzooble/walk.png",
+      "sha256": "af5a63b2e15890a96097d4439503a71cec9e5980d139720e6de06709cc02a42d",
+      "bytes": 917802,
+      "visibleBounds": {
+        "x": 84,
+        "y": 4,
+        "width": 417,
+        "height": 615
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "beachzooble",
+      "pose": "jump",
+      "file": "assets/encore/poses/beachzooble/jump.png",
+      "sha256": "1acd034851ecb22173d2dbdbbedfba4c58d24f0b2fdb18f04a8e4da8c6486514",
+      "bytes": 1643267,
+      "visibleBounds": {
+        "x": 33,
+        "y": 15,
+        "width": 368,
+        "height": 578
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "beachzooble",
+      "pose": "crouch",
+      "file": "assets/encore/poses/beachzooble/crouch.png",
+      "sha256": "311bcc6777d425251dce7a7849d9f53352a1d02ff3eed3eef5a04256ce115ffd",
+      "bytes": 1207854,
+      "visibleBounds": {
+        "x": 8,
+        "y": 7,
+        "width": 518,
+        "height": 629
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "beachzooble",
+      "pose": "victory",
+      "file": "assets/encore/poses/beachzooble/victory.png",
+      "sha256": "f75ad6b2cb3a13b23bcd2efdf0cda935a1cd8a25ec3c036fd4f7395cc601f5a8",
+      "bytes": 1624759,
+      "visibleBounds": {
+        "x": 26,
+        "y": 6,
+        "width": 387,
+        "height": 630
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "beachzooble",
+      "pose": "defeat",
+      "file": "assets/encore/poses/beachzooble/defeat.png",
+      "sha256": "692a58cb2e8aff5de6b8f63efa4189bd1b352c08142c6447ca17d0171ae76f51",
+      "bytes": 1081983,
+      "visibleBounds": {
+        "x": 22,
+        "y": 10,
+        "width": 542,
+        "height": 622
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "beachzooble",
+      "pose": "heavy",
+      "file": "assets/encore/poses/beachzooble/heavy.png",
+      "sha256": "1536ad850fa20894026f5bc32a9d693298c56976e0dc1098df8e026dd02d469d",
+      "bytes": 843351,
+      "visibleBounds": {
+        "x": 3,
+        "y": 4,
+        "width": 574,
+        "height": 628
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "beachjax",
+      "pose": "intro",
+      "file": "assets/encore/poses/beachjax/intro.png",
+      "sha256": "26d11c744678f16daf76fd4a41f86239c9e654d18e38c9123734c494e80376ab",
+      "bytes": 686723,
+      "visibleBounds": {
+        "x": 22,
+        "y": 7,
+        "width": 399,
+        "height": 626
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "beachjax",
+      "pose": "attack",
+      "file": "assets/encore/poses/beachjax/attack.png",
+      "sha256": "836d3bd957a9817411b422dae4893b088fdb6533433c1c5286a51a79c6a3c866",
+      "bytes": 696913,
+      "visibleBounds": {
+        "x": 3,
+        "y": 20,
+        "width": 259,
+        "height": 576
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "beachjax",
+      "pose": "hit",
+      "file": "assets/encore/poses/beachjax/hit.png",
+      "sha256": "c24755a1c21f27bcacf91aaf59ce6c56e8115dccb19413bf2ab80e2f05520e75",
+      "bytes": 836657,
+      "visibleBounds": {
+        "x": 3,
+        "y": 27,
+        "width": 253,
+        "height": 602
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "beachjax",
+      "pose": "walk",
+      "file": "assets/encore/poses/beachjax/walk.png",
+      "sha256": "2a631ea9a4ef380795e56c1596db8ad2a0b62991072ac908ce019df2e54787d2",
+      "bytes": 677395,
+      "visibleBounds": {
+        "x": 45,
+        "y": 17,
+        "width": 375,
+        "height": 606
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "beachjax",
+      "pose": "jump",
+      "file": "assets/encore/poses/beachjax/jump.png",
+      "sha256": "b63bc655354a658bdf7775a033dce0159828d82a0e58db19439d0c70b708a14b",
+      "bytes": 791478,
+      "visibleBounds": {
+        "x": 20,
+        "y": 18,
+        "width": 533,
+        "height": 595
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "beachjax",
+      "pose": "crouch",
+      "file": "assets/encore/poses/beachjax/crouch.png",
+      "sha256": "b42c0ecc1bfb7b32803ac652111205900e749033365bdfc229976ac167ff19ac",
+      "bytes": 906407,
+      "visibleBounds": {
+        "x": 29,
+        "y": 9,
+        "width": 578,
+        "height": 624
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "beachjax",
+      "pose": "victory",
+      "file": "assets/encore/poses/beachjax/victory.png",
+      "sha256": "77dfea8a1d8459434932a500d537fc5bc8f555800d50c3245c583b44c6b8f255",
+      "bytes": 1324364,
+      "visibleBounds": {
+        "x": 89,
+        "y": 7,
+        "width": 261,
+        "height": 629
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "beachjax",
+      "pose": "defeat",
+      "file": "assets/encore/poses/beachjax/defeat.png",
+      "sha256": "65455d07901e2645cf77cb02d02c9f329fb6cc55a3551db3ca31a2ab2a8fa42e",
+      "bytes": 720743,
+      "visibleBounds": {
+        "x": 32,
+        "y": 43,
+        "width": 576,
+        "height": 478
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "beachjax",
+      "pose": "heavy",
+      "file": "assets/encore/poses/beachjax/heavy.png",
+      "sha256": "c2135d33f7e0b760ec2ce7febf91a21ee9b59b3567e59a1fba31d7c86aa60e7f",
+      "bytes": 562065,
+      "visibleBounds": {
+        "x": 16,
+        "y": 6,
+        "width": 528,
+        "height": 629
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "sandcastlekinger",
+      "pose": "intro",
+      "file": "assets/encore/poses/sandcastlekinger/intro.png",
+      "sha256": "ebe679f2d11da73e693d7cadb6af2fd56d2e74d167469236fb32abee36fbe951",
+      "bytes": 1048484,
+      "visibleBounds": {
+        "x": 90,
+        "y": 5,
+        "width": 358,
+        "height": 628
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "sandcastlekinger",
+      "pose": "attack",
+      "file": "assets/encore/poses/sandcastlekinger/attack.png",
+      "sha256": "9ccff1a6044067bde938ec8bcd17882287d61fa4b74d8f84f63792634d4e8c92",
+      "bytes": 1035158,
+      "visibleBounds": {
+        "x": 65,
+        "y": 7,
+        "width": 445,
+        "height": 620
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "sandcastlekinger",
+      "pose": "hit",
+      "file": "assets/encore/poses/sandcastlekinger/hit.png",
+      "sha256": "01f51249e08c5d4f204435b6bc1ece67f39fd8c5b0f5add437fac96b56bcf1e3",
+      "bytes": 1049517,
+      "visibleBounds": {
+        "x": 73,
+        "y": 12,
+        "width": 381,
+        "height": 613
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "sandcastlekinger",
+      "pose": "walk",
+      "file": "assets/encore/poses/sandcastlekinger/walk.png",
+      "sha256": "5c183bda0ca379f03b40dedaccbc8f80833d19b03fba0ca925b9002e4ce42ab7",
+      "bytes": 978636,
+      "visibleBounds": {
+        "x": 74,
+        "y": 10,
+        "width": 406,
+        "height": 612
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "sandcastlekinger",
+      "pose": "jump",
+      "file": "assets/encore/poses/sandcastlekinger/jump.png",
+      "sha256": "891a556e97bcd5124dfdf2122dd825626b931cb2eacd96e51cf18e7f2b311563",
+      "bytes": 909236,
+      "visibleBounds": {
+        "x": 93,
+        "y": 14,
+        "width": 363,
+        "height": 571
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "sandcastlekinger",
+      "pose": "crouch",
+      "file": "assets/encore/poses/sandcastlekinger/crouch.png",
+      "sha256": "07854970a57e716bbed0cb9b1887a479096400de3b13b0d02d39983b26ec436c",
+      "bytes": 911148,
+      "visibleBounds": {
+        "x": 89,
+        "y": 93,
+        "width": 359,
+        "height": 539
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "sandcastlekinger",
+      "pose": "victory",
+      "file": "assets/encore/poses/sandcastlekinger/victory.png",
+      "sha256": "0f8c76a75290e770770e614114e95d5bfd87c6a298b4d09a9e2d1431c1d11158",
+      "bytes": 1029073,
+      "visibleBounds": {
+        "x": 74,
+        "y": 7,
+        "width": 345,
+        "height": 608
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "sandcastlekinger",
+      "pose": "defeat",
+      "file": "assets/encore/poses/sandcastlekinger/defeat.png",
+      "sha256": "f1e8a0d74bd3ec99d1bb107e0f8a3aaf350aa46425c828c62bdba28ce35d9df8",
+      "bytes": 987794,
+      "visibleBounds": {
+        "x": 77,
+        "y": 12,
+        "width": 374,
+        "height": 608
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "sandcastlekinger",
+      "pose": "heavy",
+      "file": "assets/encore/poses/sandcastlekinger/heavy.png",
+      "sha256": "5eaff4c6a8f93bd105f180a3d8202a0114eca1c87be7ec0c87870cb8435360dc",
+      "bytes": 1058544,
+      "visibleBounds": {
+        "x": 35,
+        "y": 20,
+        "width": 494,
+        "height": 610
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    }
+  ],
+  "stances": [
+    {
+      "id": "beachpomni",
+      "file": "assets/encore/stance/beachpomni.png",
+      "sha256": "18ab399df128d912d4af883780b7d027a31eacaddf64e177ce8a1ee2bb7aab93",
+      "bytes": 840184,
+      "rendered": true,
+      "bothFacings": true
+    },
+    {
+      "id": "noirragatha",
+      "file": "assets/encore/stance/noirragatha.png",
+      "sha256": "0b55cdfecfc0f4adc7c3277fff041782f16aae0b7d4e53bff386448449d67cb0",
+      "bytes": 848840,
+      "rendered": true,
+      "bothFacings": true
+    },
+    {
+      "id": "presidentpomni",
+      "file": "assets/encore/stance/presidentpomni.png",
+      "sha256": "4b55d0be8b575d157842bc7291247a0819a1e24f7eb7ddff000a7731804c24f5",
+      "bytes": 831774,
+      "rendered": true,
+      "bothFacings": true
+    },
+    {
+      "id": "noirzooble",
+      "file": "assets/encore/stance/noirzooble.png",
+      "sha256": "cb1e76550fc439008910fc40e17af583fe326b6d2b418a0b14b989496dc4d1ca",
+      "bytes": 955347,
+      "rendered": true,
+      "bothFacings": true
+    },
+    {
+      "id": "beachragatha",
+      "file": "assets/encore/stance/beachragatha.png",
+      "sha256": "61df2bd744cf8376bb72d47acb15cc881ea006ece9b64e425267a30e1c74f7d7",
+      "bytes": 1838001,
+      "rendered": true,
+      "bothFacings": true
+    },
+    {
+      "id": "beachzooble",
+      "file": "assets/encore/stance/beachzooble.png",
+      "sha256": "a9bf312d2727104635457213dcffad9e2d45f8a04d7fe4d1200e1174ba323d65",
+      "bytes": 1664083,
+      "rendered": true,
+      "bothFacings": true
+    },
+    {
+      "id": "beachjax",
+      "file": "assets/encore/stance/beachjax.png",
+      "sha256": "cf44beb6e4b483c123bdb755b034300ca94baf5a57e9d36874087c83eda6e30b",
+      "bytes": 845235,
+      "rendered": true,
+      "bothFacings": true
+    },
+    {
+      "id": "sandcastlekinger",
+      "file": "assets/encore/stance/sandcastlekinger.png",
+      "sha256": "99df9caf8346423ee9938097392a49c84ba929c8c7fed4166232fe03bcaa6225",
+      "bytes": 952404,
+      "rendered": true,
+      "bothFacings": true
+    }
+  ],
+  "portraits": [
+    {
+      "id": "beachpomni",
+      "archiveId": null,
+      "file": "assets/encore/selection/beachpomni.png",
+      "sha256": "4f104be35c2d1fb5494b7b0ddfb616ceb288edb795ec1a8094ff58e7996f674e",
+      "bytes": 1055943,
+      "rendered": true
+    },
+    {
+      "id": "noirragatha",
+      "archiveId": null,
+      "file": "assets/encore/selection/noirragatha.png",
+      "sha256": "4776cb2ae6b02edf453f14e550bfebc34a5046d4867aa5a79583d1e40d32f639",
+      "bytes": 1208430,
+      "rendered": true
+    },
+    {
+      "id": "presidentpomni",
+      "archiveId": null,
+      "file": "assets/encore/selection/presidentpomni.png",
+      "sha256": "8b512c0e52401661c79ee82f74f54807384249cfa309e8a480f7161b0abdf631",
+      "bytes": 941587,
+      "rendered": true
+    },
+    {
+      "id": "noirzooble",
+      "archiveId": null,
+      "file": "assets/encore/selection/noirzooble.png",
+      "sha256": "f60771724f6dc7bc2690fac037c9e03f1a52af45f639e956f8ced38eb18bb7b1",
+      "bytes": 1129031,
+      "rendered": true
+    },
+    {
+      "id": "beachragatha",
+      "archiveId": null,
+      "file": "assets/encore/selection/beachragatha.png",
+      "sha256": "a7e7b68419ee1859c92475ebe973a6f55619a9939555bc3550ca2445caf0c981",
+      "bytes": 1956856,
+      "rendered": true
+    },
+    {
+      "id": "beachzooble",
+      "archiveId": null,
+      "file": "assets/encore/selection/beachzooble.png",
+      "sha256": "029e19804571c4c69356676711320310b720d6f349ad9d2187aeb2f47c4b59d7",
+      "bytes": 1626284,
+      "rendered": true
+    },
+    {
+      "id": "beachjax",
+      "archiveId": null,
+      "file": "assets/encore/selection/beachjax.png",
+      "sha256": "8c3648ee74c40c01a56e0d4ad2e9e723b3c5f34133f0e05a47b07df1c26415eb",
+      "bytes": 809299,
+      "rendered": true
+    },
+    {
+      "id": "sandcastlekinger",
+      "archiveId": null,
+      "file": "assets/encore/selection/sandcastlekinger.png",
+      "sha256": "14bea0188d6b6e3f10ca919c9497bf058327f10e7bfcd7c2a2573144cca05e42",
+      "bytes": 998101,
+      "rendered": true
+    }
+  ],
+  "missing": [],
+  "sheets": [
+    "actions-beachpomni.jpg",
+    "actions-noirragatha.jpg",
+    "actions-presidentpomni.jpg",
+    "actions-noirzooble.jpg",
+    "actions-beachragatha.jpg",
+    "actions-beachzooble.jpg",
+    "actions-beachjax.jpg",
+    "actions-sandcastlekinger.jpg",
+    "archive-portraits-01.jpg"
+  ],
+  "browserTestStatus": "not_executed",
+  "counts": {
+    "appearances": 8,
+    "expectedActions": 72,
+    "actions": 72,
+    "stances": 8,
+    "drawChecks": 160,
+    "archiveEntries": 0,
+    "portraits": 8,
+    "expectedPortraits": 8,
+    "missing": 0
+  },
+  "complete": true
+}

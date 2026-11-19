@@ -1,0 +1,37 @@
+{
+  "id": "beachjax-victory",
+  "appearanceId": "beachjax",
+  "slot": "victory",
+  "file": "assets/encore/poses/beachjax/victory.png",
+  "sourceGenerationId": "exec-17d426d1-59c6-4b74-8ead-0096dbfc3dc6",
+  "method": "image_gen.imagegen",
+  "prompt": "Use case: identity-preserve. Create ONE individual whole-body 2D fighting-game pose image of BEACH JAX from The Amazing Digital Circus for Digital Circus Encore. Reference image 1 is the approved Beach Jax selection and is the strict design lock: same long lanky adult cartoon proportions, slim smooth lavender-purple featureless body, small narrow torso, long thin arms and legs, broad purple rounded cartoon rabbit feet, large simple purple cartoon hands, enormous yellow eyes with solid BLACK RECTANGULAR pupils, tiny flat deadpan mouth, oval head and TWO very long purple ears. Small vivid pink scallop shell remains securely fixed at the front of the lower belly/hip line, exactly as reference. Reference image 2 confirms official costume details only; do not imitate its squat chibi proportions, photographic toy rendering, backdrop or lighting. Retain crisp dark-purple outlines and controlled smooth cel shading of image 1. No human musculature, anatomical detail, fur texture, clothing, overalls, gloves, shoes or new accessory. Family-friendly smooth cartoon design. Entire figure visible including BOTH ear tips, hands, shell and broad feet, with clear 8-10 percent TRANSPARENT margins on every side. One figure on a real transparent RGBA background; no backdrop, beach, floor, cast shadow, pedestal, glow, effects, lettering, watermark, inset, repeated character or sprite sheet. POSE: a restrained awkward VICTORY celebration facing three-quarter toward screen RIGHT. Stand tall with one long arm raised overhead in a relaxed clenched cartoon fist and the other hand resting beside the waist; one knee slightly bent and its broad foot casually angled, other foot firmly planted. Tiny barely-there smile, yellow eyes with black rectangular pupils. Keep adult lanky proportions and two full very long ears, with raised fist separate from ears. Pink shell fixed and visible. This is a subtle humorous win gesture, not a muscular heroic flex or screaming expression.",
+  "referencePaths": [
+    "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/beachjax.png",
+    "/workspace/scratch/5f5114b49696/research/beach-series-04.png"
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/digital-circus-animiniz-beach-vacation-series",
+    "https://glitchproductions.store/cdn/shop/files/Beach_Series_Render_04.png?v=1765572441&width=1600"
+  ],
+  "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-17d426d1-59c6-4b74-8ead-0096dbfc3dc6.png",
+  "visualReview": "Complete upright awkward victory pose: one fist raised above the head, opposite hand at hip and a casually bent knee; slight smile with rectangular pupils and yellow eyes intact. Long purple ears and feet fully visible and shell fixed. Raw RGB preview shows a purple haze; actual alpha and threshold-12 silhouette inspected separately, so no pixel editing or regeneration based on hidden RGB. The root agent subsequently reviewed the final native composition and confirmed no visible halo, with complete and coherent silhouette.",
+  "sha256": "77dfea8a1d8459434932a500d537fc5bc8f555800d50c3245c583b44c6b8f255",
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "bytes": 1324364,
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "bboxAlpha12": [
+    213,
+    17,
+    838,
+    1527
+  ],
+  "nativeCopyVerified": true
+}

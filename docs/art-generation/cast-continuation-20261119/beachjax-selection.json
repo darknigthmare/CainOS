@@ -1,0 +1,30 @@
+{
+  "id": "beachjax-selection",
+  "appearanceId": "beachjax",
+  "slot": "selection",
+  "file": "assets/encore/selection/beachjax.png",
+  "sourceGenerationId": "exec-6a4ff027-d311-48aa-bd83-9fa11c411dd9",
+  "method": "image_gen.imagegen",
+  "prompt": "Create ONE individual complete full-body character selection sprite of BEACH JAX from The Amazing Digital Circus for the existing Encore fan-game. Input 1 is the OFFICIAL Beach Vacation figurine and controls outfit and visible details: lavender-purple smooth cartoon rabbit body, two very long upright purple ears, large yellow eyes with simple black rectangular pupils, tiny flat deadpan mouth, small vivid pink scallop shell fixed at the front of the lower belly/hip line, purple bare cartoon hands and broad rounded purple rabbit feet. Input 2 controls ONLY the existing game's taller, lanky adult rabbit proportions and crisp 2D outlined cel-shaded illustration style. Translate the official outfit onto those game proportions, do NOT copy the squat chibi toy proportions or the beach background. No overalls, no gloves, no shoes, no human muscles or realistic anatomy, no fur texture, no extra tail or new accessory. Entire body is smooth featureless purple cartoon material with the pink scallop shell kept securely in place, family-friendly slapstick character design. Pose: calm selection pose facing slightly toward screen-right, arms slightly spread with relaxed open cartoon hands and neutral startled expression, both feet planted. All ears, hands, shell and feet fully visible, 8 percent transparent margin. ONE figure, no duplicates, no inset, no sheet, no text, no floor, no shadows, no effect glow or scenery. Native transparent alpha background.",
+  "referencePaths": [
+    "research/beach-series-04.png",
+    "assets/encore/selection/jax.webp"
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/digital-circus-animiniz-beach-vacation-series",
+    "https://glitchproductions.store/cdn/shop/files/Beach_Series_Render_04.png?v=1765572441&width=1600"
+  ],
+  "sha256": "8c3648ee74c40c01a56e0d4ad2e9e723b3c5f34133f0e05a47b07df1c26415eb",
+  "dimensions": [
+    804,
+    1956
+  ],
+  "bytes": 809299,
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "nativeCopyVerified": true,
+  "visualReview": "Upright neutral selection with long ears, open hands and both broad feet fully visible. Reviewed with native alpha composition on a dark background. Lavender featureless cartoon body, long proportions, yellow eyes with rectangular pupils and fixed pink scallop remain consistent; no visible halo, duplicate figure, scenery or cropping."
+}

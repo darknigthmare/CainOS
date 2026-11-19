@@ -1,0 +1,1010 @@
+{
+  "schema": "encore-art-generation/v1",
+  "generatedOn": "2026-11-19",
+  "tool": "built-in image_gen",
+  "scope": [
+    "beachpomni",
+    "noirragatha"
+  ],
+  "status": "generated-and-source-reviewed",
+  "expectedPerAppearance": 11,
+  "expectedTotal": 22,
+  "nativePolicy": "PNG byte-identical copy of generator output; no cropping, recoloring, alpha editing, scaling or compositing.",
+  "sourceLimitations": "Official merchandise references establish costume details; full-body proportion translation and combat actions are fan-game adaptations, not frame-by-frame canonical certification. These are individual static drawings, not complete animated cycles. Native dimensions are recorded per file; no 4K claim.",
+  "runtimeReview": "Root agent will separately inspect production Canvas rendering and integration.",
+  "assets": [
+    {
+      "id": "beachpomni",
+      "slot": "selection",
+      "relativePath": "assets/encore/selection/beachpomni.png",
+      "nativeOutputPath": "/workspace/scratch/5f5114b49696/generated_images/exec-13e7ea6b-23cf-4d78-aaf5-e28264788f6f.png",
+      "prompt": "Use case: identity-preserve. Asset: one complete full-body character-selection PNG for Digital Circus — Encore. Subject: BEACH POMNI, the adult cartoon jester from The Amazing Digital Circus. INPUT ROLES: image 1 is the existing game Pomni and controls her canonical adult cartoon anatomy, slim long white arms/legs, short torso, round white face with pink-red cheek marks, brown bob with two blunt bangs, large oval eyes with SMALL red-and-blue six-sector pinwheel irises, two-point alternating red-blue jester cap with yellow brow trim and two yellow bells, and crisp dark-outline detailed 2D cel-shaded game illustration. Image 2 is the official beach plush and supplies COSTUME ONLY: two yellow inflatable armbands with gray circular valves, blue-and-white horizontal striped bathing top and pale blue shorts with white drawstring, blue slip-on shoes. Image 3 is official beach figurine, supporting costume detail: broad pale-blue shoulder straps, white-and-light-blue striped front panel and blue shorts, white arms/legs and blue shoes. Translate those clothes onto the taller slender proportions of image 1. Do NOT imitate chibi plush/figurine proportions or photo/render style. No swimsuit sexualization, retain the simple neutral cartoon torso shape. No water pistol or water effects. Pose: easy upright three-quarter-front selection pose, slightly nervous hopeful smile, arms loosely away from body so BOTH yellow arm floaties and gray valves read clearly, one foot modestly forward. Both hands are simple white cartoon hands, no red or blue gloves. Whole character from both cap bells to both shoes visible with 10 percent clear margin. Exactly ONE character in ONE transparent RGBA image. Clean rich 2D fighting-game art, controlled cel shadows, crisp linework; no 3D render or plush fuzz. No background, floor, cast shadow, scenery, beach, sun, pedestal, extra figure, text, label, watermark, particles or UI. Preserve all identity and costume details. Game pose adaptation from official merchandise references.",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/beach-pomni-plush",
+        "https://glitchproductions.store/cdn/shop/files/Plush_Pomni_Beach-SV5-P-1.png?v=1765422392&width=1600",
+        "https://glitchproductions.store/products/digital-circus-animiniz-beach-vacation-series",
+        "https://glitchproductions.store/cdn/shop/files/Beach_Series_Render_08.png?v=1765572441&width=1600"
+      ],
+      "referencePaths": [
+        "assets/encore/selection/pomni.webp",
+        "/workspace/scratch/5f5114b49696/research/beach-pomni-plush.png",
+        "/workspace/scratch/5f5114b49696/research/beach-series-08.png"
+      ],
+      "visualReview": {
+        "reviewed": true,
+        "notes": "Complete adult-game-proportioned Pomni with both hat bells, legs and blue flat shoes visible. Red-blue pinwheel irises, brown bob, striped blue/white top with straps, blue shorts/drawstring and two yellow floaties with gray valves are clear. No 3D/plush anatomy, gun, water, scenery or second character. Mermaid/superhero redesigns absent. Chosen floaties accessory follows official plush while torso/footwear reference also checked against official figurine."
+      },
+      "sha256": "4f104be35c2d1fb5494b7b0ddfb616ceb288edb795ec1a8094ff58e7996f674e",
+      "bytes": 1055943,
+      "width": 955,
+      "height": 1647,
+      "mode": "RGBA",
+      "alpha": {
+        "extrema": [
+          0,
+          255
+        ],
+        "bbox": [
+          0,
+          19,
+          947,
+          1647
+        ],
+        "bboxAt32": [
+          30,
+          22,
+          924,
+          1632
+        ],
+        "nonzeroPixels": 654390,
+        "transparentPixels": 918495
+      },
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "beachpomni",
+      "slot": "stance",
+      "relativePath": "assets/encore/stance/beachpomni.png",
+      "nativeOutputPath": "/workspace/scratch/5f5114b49696/generated_images/exec-53f23da3-be08-4030-bcc3-13698c4cbb5b.png",
+      "prompt": "Use case: identity-preserve. Create ONE individual full-body 2D fighting-game sprite of EXACTLY Beach Pomni from the input image. Identity and outfit LOCKED: adult cartoon jester with a large round white head, brown bob and two blunt bangs, red cheek marks, oval white eyes with SMALL red/blue six-segment pinwheel irises, two-point alternating red/blue jester cap with yellow brow trim and a yellow bell at each tip; short slender neutral torso, long thin white limbs, WHITE cartoon hands; pale-blue-and-white horizontal striped sleeveless bathing top with broad blue shoulder straps, pale-blue shorts with two white waist drawstrings, blue flat slip-on shoes, TWO yellow inflatable upper-arm floaties each with gray circular valve. Keep the reference exact identity, face asymmetry, head/body ratio, slim anatomy, palette, costume, sharp black outlines and detailed 2D cel shading. Change ONLY pose and expression. Character faces screen RIGHT in side/three-quarter view. Exactly ONE character, one image. Whole cap including both bells, both hands, both arm floaties and both shoes visible, no crop. Generous clear margin on all sides. True transparent RGBA background. NO setting, beach, floor, cast shadow, water pistol, weapon, water, opponent, second figure, sheet, duplicate limb, detached hand, glow, particle, speed line, text, label, frame, UI or watermark. No plush texture, chibi proportions, 3D rendering or sexualized anatomy. POSE: balanced neutral fighting GUARD facing RIGHT, feet spread with leading knee slightly bent and rear foot braced, upper body angled toward right, two white fists raised at chest height. Keep both yellow floaties attached to upper arms and clearly readable. Slightly anxious but determined eyes and small closed mouth. Still ready stance.",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/beach-pomni-plush",
+        "https://glitchproductions.store/cdn/shop/files/Plush_Pomni_Beach-SV5-P-1.png?v=1765422392&width=1600",
+        "https://glitchproductions.store/products/digital-circus-animiniz-beach-vacation-series",
+        "https://glitchproductions.store/cdn/shop/files/Beach_Series_Render_08.png?v=1765572441&width=1600"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/beachpomni.png"
+      ],
+      "visualReview": {
+        "reviewed": true,
+        "notes": "Right-facing guard with two raised white fists, bent front knee and braced back leg. Both yellow floaties with valves remain attached and visible; striped swimsuit, shorts, two drawstrings, blue shoes and pinwheel eyes stable. Complete cap and feet. Small forehead sweat mark is an expression detail."
+      },
+      "sha256": "18ab399df128d912d4af883780b7d027a31eacaddf64e177ce8a1ee2bb7aab93",
+      "bytes": 840184,
+      "width": 1168,
+      "height": 1347,
+      "mode": "RGBA",
+      "alpha": {
+        "extrema": [
+          0,
+          255
+        ],
+        "bbox": [
+          0,
+          14,
+          1149,
+          1347
+        ],
+        "bboxAt32": [
+          157,
+          17,
+          937,
+          1330
+        ],
+        "nonzeroPixels": 509404,
+        "transparentPixels": 1063892
+      },
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "beachpomni",
+      "slot": "intro",
+      "relativePath": "assets/encore/poses/beachpomni/intro.png",
+      "nativeOutputPath": "/workspace/scratch/5f5114b49696/generated_images/exec-b4b2d5e0-b4dd-4875-9e4d-93fdbc785bc7.png",
+      "prompt": "Use case: identity-preserve. Create ONE individual full-body 2D fighting-game sprite of EXACTLY Beach Pomni from the input image. Identity and outfit LOCKED: adult cartoon jester with a large round white head, brown bob and two blunt bangs, red cheek marks, oval white eyes with SMALL red/blue six-segment pinwheel irises, two-point alternating red/blue jester cap with yellow brow trim and a yellow bell at each tip; short slender neutral torso, long thin white limbs, WHITE cartoon hands; pale-blue-and-white horizontal striped sleeveless bathing top with broad blue shoulder straps, pale-blue shorts with two white waist drawstrings, blue flat slip-on shoes, TWO yellow inflatable upper-arm floaties each with gray circular valve. Keep the reference exact identity, face asymmetry, head/body ratio, slim anatomy, palette, costume, sharp black outlines and detailed 2D cel shading. Change ONLY pose and expression. Character faces screen RIGHT in side/three-quarter view. Exactly ONE character, one image. Whole cap including both bells, both hands, both arm floaties and both shoes visible, no crop. Generous clear margin on all sides. True transparent RGBA background. NO setting, beach, floor, cast shadow, water pistol, weapon, water, opponent, second figure, sheet, duplicate limb, detached hand, glow, particle, speed line, text, label, frame, UI or watermark. No plush texture, chibi proportions, 3D rendering or sexualized anatomy. POSE: friendly nervous ENTRANCE greeting facing RIGHT, one white hand raised in a small open wave beside face, other relaxed near waist, slight forward step, shoulders slightly shy. Hopeful modest smile. Keep both floaties and cap bells visible. Distinct upright entry pose rather than fighting guard.",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/beach-pomni-plush",
+        "https://glitchproductions.store/cdn/shop/files/Plush_Pomni_Beach-SV5-P-1.png?v=1765422392&width=1600",
+        "https://glitchproductions.store/products/digital-circus-animiniz-beach-vacation-series",
+        "https://glitchproductions.store/cdn/shop/files/Beach_Series_Render_08.png?v=1765572441&width=1600"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/beachpomni.png"
+      ],
+      "visualReview": {
+        "reviewed": true,
+        "notes": "Distinct shy friendly wave and crossing forward step toward right. Both white hands, yellow arm floats, cap bells and blue shoes intact; hopeful smile. No scenery, weapon, water or duplicate character."
+      },
+      "sha256": "007b5464ac8b7deab126c712afce5609a92df872f7c33e085086dd685e0023e3",
+      "bytes": 1007066,
+      "width": 955,
+      "height": 1647,
+      "mode": "RGBA",
+      "alpha": {
+        "extrema": [
+          0,
+          255
+        ],
+        "bbox": [
+          34,
+          16,
+          920,
+          1629
+        ],
+        "bboxAt32": [
+          38,
+          19,
+          915,
+          1622
+        ],
+        "nonzeroPixels": 635375,
+        "transparentPixels": 937510
+      },
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "beachpomni",
+      "slot": "attack",
+      "relativePath": "assets/encore/poses/beachpomni/attack.png",
+      "nativeOutputPath": "/workspace/scratch/5f5114b49696/generated_images/exec-a0a45aba-43ef-41ca-a946-c8457c0c3169.png",
+      "prompt": "Use case: identity-preserve. Create ONE individual full-body 2D fighting-game sprite of EXACTLY Beach Pomni from the input image. Identity and outfit LOCKED: adult cartoon jester with a large round white head, brown bob and two blunt bangs, red cheek marks, oval white eyes with SMALL red/blue six-segment pinwheel irises, two-point alternating red/blue jester cap with yellow brow trim and a yellow bell at each tip; short slender neutral torso, long thin white limbs, WHITE cartoon hands; pale-blue-and-white horizontal striped sleeveless bathing top with broad blue shoulder straps, pale-blue shorts with two white waist drawstrings, blue flat slip-on shoes, TWO yellow inflatable upper-arm floaties each with gray circular valve. Keep the reference exact identity, face asymmetry, head/body ratio, slim anatomy, palette, costume, sharp black outlines and detailed 2D cel shading. Change ONLY pose and expression. Character faces screen RIGHT in side/three-quarter view. Exactly ONE character, one image. Whole cap including both bells, both hands, both arm floaties and both shoes visible, no crop. Generous clear margin on all sides. True transparent RGBA background. NO setting, beach, floor, cast shadow, water pistol, weapon, water, opponent, second figure, sheet, duplicate limb, detached hand, glow, particle, speed line, text, label, frame, UI or watermark. No plush texture, chibi proportions, 3D rendering or sexualized anatomy. POSE: quick LIGHT ATTACK straight jab to the RIGHT at shoulder height, leading white fist extended horizontally, rear white fist close to chest, front knee bent, trailing leg braced. Body leaning naturally into the punch; both yellow upper-arm floaties remain attached and deform only slightly. Focused eyes and tense closed mouth. No impact overlay.",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/beach-pomni-plush",
+        "https://glitchproductions.store/cdn/shop/files/Plush_Pomni_Beach-SV5-P-1.png?v=1765422392&width=1600",
+        "https://glitchproductions.store/products/digital-circus-animiniz-beach-vacation-series",
+        "https://glitchproductions.store/cdn/shop/files/Beach_Series_Render_08.png?v=1765572441&width=1600"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/beachpomni.png"
+      ],
+      "visualReview": {
+        "reviewed": true,
+        "notes": "Extended rightward white-fist jab, other fist guards chest, forward bent knee and braced rear leg. Two arm floaties remain attached to upper arms; exact palette and outfit stable. Whole silhouette, no impact VFX or opponent."
+      },
+      "sha256": "3adbe18b6b7b3d697f48ec7169d916fec51da1693b25403078d6bf6f73ad1817",
+      "bytes": 839651,
+      "width": 1199,
+      "height": 1312,
+      "mode": "RGBA",
+      "alpha": {
+        "extrema": [
+          0,
+          255
+        ],
+        "bbox": [
+          56,
+          11,
+          1169,
+          1312
+        ],
+        "bboxAt32": [
+          98,
+          14,
+          1139,
+          1298
+        ],
+        "nonzeroPixels": 504784,
+        "transparentPixels": 1068304
+      },
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "beachpomni",
+      "slot": "heavy",
+      "relativePath": "assets/encore/poses/beachpomni/heavy.png",
+      "nativeOutputPath": "/workspace/scratch/5f5114b49696/generated_images/exec-74bc3070-1305-4753-b1d9-78895d52f444.png",
+      "prompt": "Use case: identity-preserve. Create ONE individual full-body 2D fighting-game sprite of EXACTLY Beach Pomni from the input image. Identity and outfit LOCKED: adult cartoon jester with a large round white head, brown bob and two blunt bangs, red cheek marks, oval white eyes with SMALL red/blue six-segment pinwheel irises, two-point alternating red/blue jester cap with yellow brow trim and a yellow bell at each tip; short slender neutral torso, long thin white limbs, WHITE cartoon hands; pale-blue-and-white horizontal striped sleeveless bathing top with broad blue shoulder straps, pale-blue shorts with two white waist drawstrings, blue flat slip-on shoes, TWO yellow inflatable upper-arm floaties each with gray circular valve. Keep the reference exact identity, face asymmetry, head/body ratio, slim anatomy, palette, costume, sharp black outlines and detailed 2D cel shading. Change ONLY pose and expression. Character faces screen RIGHT in side/three-quarter view. Exactly ONE character, one image. Whole cap including both bells, both hands, both arm floaties and both shoes visible, no crop. Generous clear margin on all sides. True transparent RGBA background. NO setting, beach, floor, cast shadow, water pistol, weapon, water, opponent, second figure, sheet, duplicate limb, detached hand, glow, particle, speed line, text, label, frame, UI or watermark. No plush texture, chibi proportions, 3D rendering or sexualized anatomy. POSE: powerful HEAVY side kick toward RIGHT, front leg fully extended horizontally toward right at waist level, supporting leg bent and planted, torso leaning slightly backward to balance, both white hands in guard near upper torso. Both yellow arm floaties remain visible. Focused determined expression. This is a distinct strong kicking silhouette, not a duplicate of the jab; keep both shoes, arms and hat bells fully inside canvas.",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/beach-pomni-plush",
+        "https://glitchproductions.store/cdn/shop/files/Plush_Pomni_Beach-SV5-P-1.png?v=1765422392&width=1600",
+        "https://glitchproductions.store/products/digital-circus-animiniz-beach-vacation-series",
+        "https://glitchproductions.store/cdn/shop/files/Beach_Series_Render_08.png?v=1765572441&width=1600"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/beachpomni.png"
+      ],
+      "visualReview": {
+        "reviewed": true,
+        "notes": "Distinct strong rightward side kick with fully extended leg, bent support knee and two white fists in guard. Both cap bells, floats and shoes intact. Eyes focused, no weapon, extra limb or VFX."
+      },
+      "sha256": "4f6150d94c846ac3914a871ba37c6ee1745dafc4b13f3eaab1c78659708544f5",
+      "bytes": 769935,
+      "width": 1392,
+      "height": 1130,
+      "mode": "RGBA",
+      "alpha": {
+        "extrema": [
+          0,
+          255
+        ],
+        "bbox": [
+          0,
+          11,
+          1372,
+          1114
+        ],
+        "bboxAt32": [
+          65,
+          14,
+          1277,
+          1104
+        ],
+        "nonzeroPixels": 425387,
+        "transparentPixels": 1147573
+      },
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "beachpomni",
+      "slot": "hit",
+      "relativePath": "assets/encore/poses/beachpomni/hit.png",
+      "nativeOutputPath": "/workspace/scratch/5f5114b49696/generated_images/exec-83830c92-463d-46f7-ba13-1a451682289c.png",
+      "prompt": "Use case: identity-preserve. Create ONE individual full-body 2D fighting-game sprite of EXACTLY Beach Pomni from the input image. Identity and outfit LOCKED: adult cartoon jester with a large round white head, brown bob and two blunt bangs, red cheek marks, oval white eyes with SMALL red/blue six-segment pinwheel irises, two-point alternating red/blue jester cap with yellow brow trim and a yellow bell at each tip; short slender neutral torso, long thin white limbs, WHITE cartoon hands; pale-blue-and-white horizontal striped sleeveless bathing top with broad blue shoulder straps, pale-blue shorts with two white waist drawstrings, blue flat slip-on shoes, TWO yellow inflatable upper-arm floaties each with gray circular valve. Keep the reference exact identity, face asymmetry, head/body ratio, slim anatomy, palette, costume, sharp black outlines and detailed 2D cel shading. Change ONLY pose and expression. Character faces screen RIGHT in side/three-quarter view. Exactly ONE character, one image. Whole cap including both bells, both hands, both arm floaties and both shoes visible, no crop. Generous clear margin on all sides. True transparent RGBA background. NO setting, beach, floor, cast shadow, water pistol, weapon, water, opponent, second figure, sheet, duplicate limb, detached hand, glow, particle, speed line, text, label, frame, UI or watermark. No plush texture, chibi proportions, 3D rendering or sexualized anatomy. POSE: non-graphic HIT REACTION, recoiling backward toward LEFT from a blow arriving from RIGHT, face and eyes still oriented RIGHT, torso leaning back, white hands lifted and spread unevenly in startled reflex, both knees bent and feet apart. Mouth slightly open, worried pinwheel eyes. Both floats, shoes and cap bells visible. No injury, blood, attacker or impact effects.",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/beach-pomni-plush",
+        "https://glitchproductions.store/cdn/shop/files/Plush_Pomni_Beach-SV5-P-1.png?v=1765422392&width=1600",
+        "https://glitchproductions.store/products/digital-circus-animiniz-beach-vacation-series",
+        "https://glitchproductions.store/cdn/shop/files/Beach_Series_Render_08.png?v=1765572441&width=1600"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/beachpomni.png"
+      ],
+      "visualReview": {
+        "reviewed": true,
+        "notes": "Backward-left recoil, surprised open mouth, white hands spread in startled reflex, bent knees. Two floaties/valves, hat bells, shorts and shoes preserved; no injury or external impact effect."
+      },
+      "sha256": "963377b2a460c918a74a7268522682a16ef15223a0f4b0585712bf3028fddaaf",
+      "bytes": 1015477,
+      "width": 1096,
+      "height": 1435,
+      "mode": "RGBA",
+      "alpha": {
+        "extrema": [
+          0,
+          255
+        ],
+        "bbox": [
+          23,
+          10,
+          1074,
+          1435
+        ],
+        "bboxAt32": [
+          28,
+          14,
+          946,
+          1427
+        ],
+        "nonzeroPixels": 603153,
+        "transparentPixels": 969607
+      },
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "beachpomni",
+      "slot": "walk",
+      "relativePath": "assets/encore/poses/beachpomni/walk.png",
+      "nativeOutputPath": "/workspace/scratch/5f5114b49696/generated_images/exec-10986167-c178-4d80-bdee-59b4ce5f7790.png",
+      "prompt": "Use case: identity-preserve. Create ONE individual full-body 2D fighting-game sprite of EXACTLY Beach Pomni from the input image. Identity and outfit LOCKED: adult cartoon jester with a large round white head, brown bob and two blunt bangs, red cheek marks, oval white eyes with SMALL red/blue six-segment pinwheel irises, two-point alternating red/blue jester cap with yellow brow trim and a yellow bell at each tip; short slender neutral torso, long thin white limbs, WHITE cartoon hands; pale-blue-and-white horizontal striped sleeveless bathing top with broad blue shoulder straps, pale-blue shorts with two white waist drawstrings, blue flat slip-on shoes, TWO yellow inflatable upper-arm floaties each with gray circular valve. Keep the reference exact identity, face asymmetry, head/body ratio, slim anatomy, palette, costume, sharp black outlines and detailed 2D cel shading. Change ONLY pose and expression. Character faces screen RIGHT in side/three-quarter view. Exactly ONE character, one image. Whole cap including both bells, both hands, both arm floaties and both shoes visible, no crop. Generous clear margin on all sides. True transparent RGBA background. NO setting, beach, floor, cast shadow, water pistol, weapon, water, opponent, second figure, sheet, duplicate limb, detached hand, glow, particle, speed line, text, label, frame, UI or watermark. No plush texture, chibi proportions, 3D rendering or sexualized anatomy. POSE: clear mid-stride WALK to the RIGHT, front leg reaching forward, rear heel lifted, arms counter-swinging naturally while yellow floaties stay around upper arms. Head and torso upright looking right, alert slightly nervous expression. Single readable walking key pose, entire feet and cap within frame, no motion smear or trail.",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/beach-pomni-plush",
+        "https://glitchproductions.store/cdn/shop/files/Plush_Pomni_Beach-SV5-P-1.png?v=1765422392&width=1600",
+        "https://glitchproductions.store/products/digital-circus-animiniz-beach-vacation-series",
+        "https://glitchproductions.store/cdn/shop/files/Beach_Series_Render_08.png?v=1765572441&width=1600"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/beachpomni.png"
+      ],
+      "visualReview": {
+        "reviewed": true,
+        "notes": "Long rightward mid-stride step with rear heel raised and natural counter-swinging arms. Alert nervous expression with small sweat mark. Whole body, two floats, both shoes and cap bells within frame."
+      },
+      "sha256": "da2be6e5fcb4121b1a7322f41b02057dd34d2b1f49218d64552bab6622b137e3",
+      "bytes": 929355,
+      "width": 1064,
+      "height": 1478,
+      "mode": "RGBA",
+      "alpha": {
+        "extrema": [
+          0,
+          255
+        ],
+        "bbox": [
+          47,
+          25,
+          1046,
+          1478
+        ],
+        "bboxAt32": [
+          80,
+          27,
+          968,
+          1448
+        ],
+        "nonzeroPixels": 549081,
+        "transparentPixels": 1023511
+      },
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "beachpomni",
+      "slot": "jump",
+      "relativePath": "assets/encore/poses/beachpomni/jump.png",
+      "nativeOutputPath": "/workspace/scratch/5f5114b49696/generated_images/exec-0e1631f2-380c-492d-8c24-ba193acfd162.png",
+      "prompt": "Use case: identity-preserve. Create ONE individual full-body 2D fighting-game sprite of EXACTLY Beach Pomni from the input image. Identity and outfit LOCKED: adult cartoon jester with a large round white head, brown bob and two blunt bangs, red cheek marks, oval white eyes with SMALL red/blue six-segment pinwheel irises, two-point alternating red/blue jester cap with yellow brow trim and a yellow bell at each tip; short slender neutral torso, long thin white limbs, WHITE cartoon hands; pale-blue-and-white horizontal striped sleeveless bathing top with broad blue shoulder straps, pale-blue shorts with two white waist drawstrings, blue flat slip-on shoes, TWO yellow inflatable upper-arm floaties each with gray circular valve. Keep the reference exact identity, face asymmetry, head/body ratio, slim anatomy, palette, costume, sharp black outlines and detailed 2D cel shading. Change ONLY pose and expression. Character faces screen RIGHT in side/three-quarter view. Exactly ONE character, one image. Whole cap including both bells, both hands, both arm floaties and both shoes visible, no crop. Generous clear margin on all sides. True transparent RGBA background. NO setting, beach, floor, cast shadow, water pistol, weapon, water, opponent, second figure, sheet, duplicate limb, detached hand, glow, particle, speed line, text, label, frame, UI or watermark. No plush texture, chibi proportions, 3D rendering or sexualized anatomy. POSE: midair JUMP toward RIGHT, both legs bent and both knees tucked below and forward of torso, BOTH blue shoes visibly airborne, one white hand held forward in guard and the other angled back for balance. Both yellow floaties stay attached to upper arms; hat points react subtly to motion but keep exact pattern and bells. Determined nervous expression. No shadow, floor, springboard or motion trails.",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/beach-pomni-plush",
+        "https://glitchproductions.store/cdn/shop/files/Plush_Pomni_Beach-SV5-P-1.png?v=1765422392&width=1600",
+        "https://glitchproductions.store/products/digital-circus-animiniz-beach-vacation-series",
+        "https://glitchproductions.store/cdn/shop/files/Beach_Series_Render_08.png?v=1765572441&width=1600"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/beachpomni.png"
+      ],
+      "visualReview": {
+        "reviewed": true,
+        "notes": "Airborne rightward jump with tucked knees and both blue shoes visible, one hand forward and one behind for balance. Both floaties, strap top and hat bells maintained, expressive nervous face. No ground shadow, weapon or duplicated anatomy."
+      },
+      "sha256": "e1cbf2f5f894029b5e5cb534fd0936d589933e40290eade75bc058079674cefe",
+      "bytes": 1050129,
+      "width": 1190,
+      "height": 1322,
+      "mode": "RGBA",
+      "alpha": {
+        "extrema": [
+          0,
+          255
+        ],
+        "bbox": [
+          0,
+          16,
+          1155,
+          1290
+        ],
+        "bboxAt32": [
+          69,
+          19,
+          1064,
+          1266
+        ],
+        "nonzeroPixels": 628499,
+        "transparentPixels": 944681
+      },
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "beachpomni",
+      "slot": "crouch",
+      "relativePath": "assets/encore/poses/beachpomni/crouch.png",
+      "nativeOutputPath": "/workspace/scratch/5f5114b49696/generated_images/exec-18c95a98-402f-4d82-9969-8799e11e5f20.png",
+      "prompt": "Use case: identity-preserve. Create ONE individual full-body 2D fighting-game sprite of EXACTLY Beach Pomni from the input image. Identity and outfit LOCKED: adult cartoon jester with a large round white head, brown bob and two blunt bangs, red cheek marks, oval white eyes with SMALL red/blue six-segment pinwheel irises, two-point alternating red/blue jester cap with yellow brow trim and a yellow bell at each tip; short slender neutral torso, long thin white limbs, WHITE cartoon hands; pale-blue-and-white horizontal striped sleeveless bathing top with broad blue shoulder straps, pale-blue shorts with two white waist drawstrings, blue flat slip-on shoes, TWO yellow inflatable upper-arm floaties each with gray circular valve. Keep the reference exact identity, face asymmetry, head/body ratio, slim anatomy, palette, costume, sharp black outlines and detailed 2D cel shading. Change ONLY pose and expression. Character faces screen RIGHT in side/three-quarter view. Exactly ONE character, one image. Whole cap including both bells, both hands, both arm floaties and both shoes visible, no crop. Generous clear margin on all sides. True transparent RGBA background. NO setting, beach, floor, cast shadow, water pistol, weapon, water, opponent, second figure, sheet, duplicate limb, detached hand, glow, particle, speed line, text, label, frame, UI or watermark. No plush texture, chibi proportions, 3D rendering or sexualized anatomy. POSE: LOW CROUCH defensive guard toward RIGHT, hips lowered near heel level, both knees deeply bent, torso leaning forward slightly, both white fists gathered near chest and face, yellow floaties still around upper arms. Keep slim limbs and short torso, both shoes under bent legs visible. Compact protected silhouette, alert pinwheel eyes and a small frown.",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/beach-pomni-plush",
+        "https://glitchproductions.store/cdn/shop/files/Plush_Pomni_Beach-SV5-P-1.png?v=1765422392&width=1600",
+        "https://glitchproductions.store/products/digital-circus-animiniz-beach-vacation-series",
+        "https://glitchproductions.store/cdn/shop/files/Beach_Series_Render_08.png?v=1765572441&width=1600"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/beachpomni.png"
+      ],
+      "visualReview": {
+        "reviewed": true,
+        "notes": "Compact low right-facing guard, both knees bent deeply and fists near face; both shoes and floaties attached, short blue shorts and striped top follow pose naturally. Full cap within clear frame."
+      },
+      "sha256": "0128d15f7b93ff79752fbe94e6f0cb8cf890d0ffd2fa181fbc245a2de37a58da",
+      "bytes": 936281,
+      "width": 1312,
+      "height": 1199,
+      "mode": "RGBA",
+      "alpha": {
+        "extrema": [
+          0,
+          255
+        ],
+        "bbox": [
+          0,
+          54,
+          1282,
+          1177
+        ],
+        "bboxAt32": [
+          217,
+          57,
+          1165,
+          1170
+        ],
+        "nonzeroPixels": 604829,
+        "transparentPixels": 968259
+      },
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "beachpomni",
+      "slot": "victory",
+      "relativePath": "assets/encore/poses/beachpomni/victory.png",
+      "nativeOutputPath": "/workspace/scratch/5f5114b49696/generated_images/exec-ec47a16c-7d85-4165-8e58-8972de48115d.png",
+      "prompt": "Use case: identity-preserve. Create ONE individual full-body 2D fighting-game sprite of EXACTLY Beach Pomni from the input image. Identity and outfit LOCKED: adult cartoon jester with a large round white head, brown bob and two blunt bangs, red cheek marks, oval white eyes with SMALL red/blue six-segment pinwheel irises, two-point alternating red/blue jester cap with yellow brow trim and a yellow bell at each tip; short slender neutral torso, long thin white limbs, WHITE cartoon hands; pale-blue-and-white horizontal striped sleeveless bathing top with broad blue shoulder straps, pale-blue shorts with two white waist drawstrings, blue flat slip-on shoes, TWO yellow inflatable upper-arm floaties each with gray circular valve. Keep the reference exact identity, face asymmetry, head/body ratio, slim anatomy, palette, costume, sharp black outlines and detailed 2D cel shading. Change ONLY pose and expression. Character faces screen RIGHT in side/three-quarter view. Exactly ONE character, one image. Whole cap including both bells, both hands, both arm floaties and both shoes visible, no crop. Generous clear margin on all sides. True transparent RGBA background. NO setting, beach, floor, cast shadow, water pistol, weapon, water, opponent, second figure, sheet, duplicate limb, detached hand, glow, particle, speed line, text, label, frame, UI or watermark. No plush texture, chibi proportions, 3D rendering or sexualized anatomy. POSE: VICTORY, standing upright in a relaxed stable stance facing RIGHT, one white fist raised above head triumphantly, other white hand at hip, delighted relieved smile. Entire raised hand, BOTH yellow floaties, hat cap and BOTH bells remain fully within clear canvas margins. No trophy, confetti, weapon, extra props or VFX.",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/beach-pomni-plush",
+        "https://glitchproductions.store/cdn/shop/files/Plush_Pomni_Beach-SV5-P-1.png?v=1765422392&width=1600",
+        "https://glitchproductions.store/products/digital-circus-animiniz-beach-vacation-series",
+        "https://glitchproductions.store/cdn/shop/files/Beach_Series_Render_08.png?v=1765572441&width=1600"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/beachpomni.png"
+      ],
+      "visualReview": {
+        "reviewed": true,
+        "notes": "Upright relieved victory smile, one white fist high and other at waist. Complete hat with both bells, two floaties, both blue shoes and two waist cords. No confetti, trophy, scenery or additional subject."
+      },
+      "sha256": "eb3b5e94d869f97c59322f34e02218bc775bae649e3150b76f0af26c29593e3a",
+      "bytes": 1011954,
+      "width": 955,
+      "height": 1647,
+      "mode": "RGBA",
+      "alpha": {
+        "extrema": [
+          0,
+          255
+        ],
+        "bbox": [
+          41,
+          25,
+          906,
+          1630
+        ],
+        "bboxAt32": [
+          47,
+          28,
+          903,
+          1628
+        ],
+        "nonzeroPixels": 596561,
+        "transparentPixels": 976324
+      },
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "beachpomni",
+      "slot": "defeat",
+      "relativePath": "assets/encore/poses/beachpomni/defeat.png",
+      "nativeOutputPath": "/workspace/scratch/5f5114b49696/generated_images/exec-e45dbd3e-61e1-485b-93cb-1f3a1b2d6c6d.png",
+      "prompt": "Use case: identity-preserve. Create ONE individual full-body 2D fighting-game sprite of EXACTLY Beach Pomni from the input image. Identity and outfit LOCKED: adult cartoon jester with a large round white head, brown bob and two blunt bangs, red cheek marks, oval white eyes with SMALL red/blue six-segment pinwheel irises, two-point alternating red/blue jester cap with yellow brow trim and a yellow bell at each tip; short slender neutral torso, long thin white limbs, WHITE cartoon hands; pale-blue-and-white horizontal striped sleeveless bathing top with broad blue shoulder straps, pale-blue shorts with two white waist drawstrings, blue flat slip-on shoes, TWO yellow inflatable upper-arm floaties each with gray circular valve. Keep the reference exact identity, face asymmetry, head/body ratio, slim anatomy, palette, costume, sharp black outlines and detailed 2D cel shading. Change ONLY pose and expression. Character faces screen RIGHT in side/three-quarter view. Exactly ONE character, one image. Whole cap including both bells, both hands, both arm floaties and both shoes visible, no crop. Generous clear margin on all sides. True transparent RGBA background. NO setting, beach, floor, cast shadow, water pistol, weapon, water, opponent, second figure, sheet, duplicate limb, detached hand, glow, particle, speed line, text, label, frame, UI or watermark. No plush texture, chibi proportions, 3D rendering or sexualized anatomy. POSE: non-graphic DEFEAT, seated low on implied ground with knees bent forward toward RIGHT, torso slumping, one white hand braced next to hip and other hand resting tiredly on knee. Head lowered a little, heavy-lidded worried pinwheel eyes, tiny sad mouth. Both arm floaties, both shoes and hat bells remain visible and attached. No tears, injury, blood, floor, shadow or additional object.",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/beach-pomni-plush",
+        "https://glitchproductions.store/cdn/shop/files/Plush_Pomni_Beach-SV5-P-1.png?v=1765422392&width=1600",
+        "https://glitchproductions.store/products/digital-circus-animiniz-beach-vacation-series",
+        "https://glitchproductions.store/cdn/shop/files/Beach_Series_Render_08.png?v=1765572441&width=1600"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/beachpomni.png"
+      ],
+      "visualReview": {
+        "reviewed": true,
+        "notes": "Seated exhausted non-graphic pose oriented right, one supporting hand and one hand on knee; both bent legs/shoes, arm floaties and jester cap preserved. Heavy-lidded pinwheel eyes and small sad mouth. No ground, injury or additional object."
+      },
+      "sha256": "ab1f4efc9e612f2952e44429914d84803a9a7409ce1d52fd730f1b9804871146",
+      "bytes": 967405,
+      "width": 1448,
+      "height": 1086,
+      "mode": "RGBA",
+      "alpha": {
+        "extrema": [
+          0,
+          255
+        ],
+        "bbox": [
+          39,
+          29,
+          1434,
+          1086
+        ],
+        "bboxAt32": [
+          249,
+          32,
+          1193,
+          1077
+        ],
+        "nonzeroPixels": 596827,
+        "transparentPixels": 975701
+      },
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "noirragatha",
+      "slot": "selection",
+      "relativePath": "assets/encore/selection/noirragatha.png",
+      "nativeOutputPath": "/workspace/scratch/5f5114b49696/generated_images/exec-13b8202f-460d-4b0f-9755-4afc2e794a95.png",
+      "prompt": "Use case: identity-preserve. Asset: Digital Circus — Encore character-selection artwork, ONE complete full-body character in a transparent PNG. Subject: NOIR RAGATHA from The Amazing Digital Circus. Input 1 is the existing game illustration: preserve Ragatha's slim, softly jointed rag-doll anatomy, long cloth limbs, round head size relative to body, asymmetrical face with one large button eye on viewer-left and one tall oval white eye with a black pupil on viewer-right, triangular nose, friendly stitched mouth, simplified mitten hands, low flat cloth shoes, and crisp 2D cel-shaded dark-outline illustration style. Input 2 is OFFICIAL COSTUME REFERENCE ONLY: replace clothing and colors to match its short charcoal-gray yarn bob with looped bangs, large pale-gray bow on top, black sleeveless V-neck dress and short pearl necklace, gray button eye, gray triangular nose and pale gray cloth skin. Entire character strictly BLACK / WHITE / NEUTRAL GRAY, no colored accents. Translate costume onto the game character proportions; do not copy the plush toy's squat head/body shape, sitting pose, fuzzy product-photo texture or manufacturing details. A simple black knee-length A-line dress with subtle fabric folds, low black flat shoes. Pose: calm selection pose, three-quarter front, head looking toward camera, one hand resting at waist and the other relaxed loosely at her side, slight gentle smile. Whole body from bow to feet visible, centered, 10 percent clear safe margin on every side. Exactly one character, no second figure, no inset, no sheet. Detailed clean 2D hand-drawn fighting-game artwork with controlled cel shading, restrained cloth highlights, sharp silhouette. True transparent RGBA background. No background, floor, cast shadow, text, captions, UI, watermark, scenery, weapons, particles, glow or decorative frame. Preserve canonical rag-doll identity; this is a game pose adaptation, not a photo.",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/noir-ragatha-plush",
+        "https://glitchproductions.store/cdn/shop/files/Plush_Ragatha_BlackDress_1.png?v=1763014366&width=1600"
+      ],
+      "referencePaths": [
+        "assets/encore/selection/ragatha.webp",
+        "/workspace/scratch/5f5114b49696/research/noir-ragatha-plush.png"
+      ],
+      "visualReview": {
+        "reviewed": true,
+        "notes": "Whole figure visible including large pale bow and low black shoes; left image-side button eye, right oval eye, short dark yarn bob, pearl necklace and sleeveless black V-neck A-line dress preserved. Adult game rag-doll proportions, clean 2D linework. No second character, scenery, text or detached body part observed. Margin narrower than requested but silhouette intact. Outfit details derive from official merchandise; hem geometry and battle-ready proportions are a game adaptation, not episode-frame certification."
+      },
+      "sha256": "4776cb2ae6b02edf453f14e550bfebc34a5046d4867aa5a79583d1e40d32f639",
+      "bytes": 1208430,
+      "width": 929,
+      "height": 1694,
+      "mode": "RGBA",
+      "alpha": {
+        "extrema": [
+          0,
+          255
+        ],
+        "bbox": [
+          31,
+          14,
+          915,
+          1681
+        ],
+        "bboxAt32": [
+          98,
+          16,
+          860,
+          1678
+        ],
+        "nonzeroPixels": 761901,
+        "transparentPixels": 811825
+      },
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "noirragatha",
+      "slot": "stance",
+      "relativePath": "assets/encore/stance/noirragatha.png",
+      "nativeOutputPath": "/workspace/scratch/5f5114b49696/generated_images/exec-d6893c5d-2593-43b0-b837-eb41b63bc1c5.png",
+      "prompt": "Use case: identity-preserve. Create ONE individual full-body 2D fighting-game sprite of EXACTLY the Noir Ragatha in the input image. Identity and outfit locked: gray rag-doll cloth body with long slim articulated limbs and mitten hands, charcoal-gray yarn bob and looped fringe, large pale bow, one gray button eye on the image-left side of the face and one tall oval white eye with black pupil on the image-right, gray triangular nose, small stitched mouth; pearl necklace, sleeveless black V-neck knee-length A-line dress, black flat cloth shoes. Strictly neutral grayscale throughout. Preserve the reference anatomy, head/body ratio, hair length, costume materials, line width, sharp outlines and detailed cel shading. Change the POSE only. Camera side/three-quarter view, character facing screen RIGHT. Keep dress naturally draped and covering body. Whole silhouette visible with generous 10% transparent margin around bow, limbs, hem and feet. Exactly ONE character in ONE image. True transparent RGBA. No backdrop, floor, ground shadow, props, opponent, duplicated body, detached limbs, particles, glow, trails, text, frame, watermark or UI. POSE: guarded neutral fighting stance facing RIGHT, feet apart with front knee softly bent, rear foot braced, shoulders angled right, both mitten fists raised at chest level, focused but kind facial expression. Clear ready-to-fight silhouette, still and balanced.",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/noir-ragatha-plush",
+        "https://glitchproductions.store/cdn/shop/files/Plush_Ragatha_BlackDress_1.png?v=1763014366&width=1600"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/noirragatha.png"
+      ],
+      "visualReview": {
+        "reviewed": true,
+        "notes": "Balanced right-facing guard; two mitten fists at chest, separated feet, complete bow and shoes. Gray face/button asymmetry, pearls and sleeveless black dress match approved selection. No extra limbs, props, background or text observed."
+      },
+      "sha256": "0b55cdfecfc0f4adc7c3277fff041782f16aae0b7d4e53bff386448449d67cb0",
+      "bytes": 848840,
+      "width": 1073,
+      "height": 1465,
+      "mode": "RGBA",
+      "alpha": {
+        "extrema": [
+          0,
+          255
+        ],
+        "bbox": [
+          0,
+          3,
+          1051,
+          1433
+        ],
+        "bboxAt32": [
+          144,
+          46,
+          825,
+          1423
+        ],
+        "nonzeroPixels": 502521,
+        "transparentPixels": 1069424
+      },
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "noirragatha",
+      "slot": "intro",
+      "relativePath": "assets/encore/poses/noirragatha/intro.png",
+      "nativeOutputPath": "/workspace/scratch/5f5114b49696/generated_images/exec-4b547cf6-16f7-402b-97f6-47521e962a04.png",
+      "prompt": "Use case: identity-preserve. Create ONE individual full-body 2D fighting-game sprite of EXACTLY the Noir Ragatha in the input image. Identity and outfit locked: gray rag-doll cloth body with long slim articulated limbs and mitten hands, charcoal-gray yarn bob and looped fringe, large pale bow, one gray button eye on the image-left side of the face and one tall oval white eye with black pupil on the image-right, gray triangular nose, small stitched mouth; pearl necklace, sleeveless black V-neck knee-length A-line dress, black flat cloth shoes. Strictly neutral grayscale throughout. Preserve the reference anatomy, head/body ratio, hair length, costume materials, line width, sharp outlines and detailed cel shading. Change the POSE only. Camera side/three-quarter view, character facing screen RIGHT. Keep dress naturally draped and covering body. Whole silhouette visible with generous 10% transparent margin around bow, limbs, hem and feet. Exactly ONE character in ONE image. True transparent RGBA. No backdrop, floor, ground shadow, props, opponent, duplicated body, detached limbs, particles, glow, trails, text, frame, watermark or UI. POSE: greeting on entry, facing RIGHT in three-quarter view, one hand raised in an open friendly wave beside her face, other arm resting beside her waist, one foot stepping lightly forward. Warm smile, upright poised posture. This is a distinct entrance pose, not the selection pose.",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/noir-ragatha-plush",
+        "https://glitchproductions.store/cdn/shop/files/Plush_Ragatha_BlackDress_1.png?v=1763014366&width=1600"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/noirragatha.png"
+      ],
+      "visualReview": {
+        "reviewed": true,
+        "notes": "Distinct right-facing friendly wave and forward step. One waving hand and one lowered hand, complete bow and feet. Monochrome costume and pearls match seed; no crop or unwanted additional subject."
+      },
+      "sha256": "c05ef5cd0cbfa12fd8c9803e048e3d7c99cb7af7bdf6ee5d27bd2c4052ac9e88",
+      "bytes": 1084239,
+      "width": 929,
+      "height": 1694,
+      "mode": "RGBA",
+      "alpha": {
+        "extrema": [
+          0,
+          255
+        ],
+        "bbox": [
+          0,
+          14,
+          901,
+          1674
+        ],
+        "bboxAt32": [
+          93,
+          16,
+          817,
+          1670
+        ],
+        "nonzeroPixels": 659920,
+        "transparentPixels": 913806
+      },
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "noirragatha",
+      "slot": "attack",
+      "relativePath": "assets/encore/poses/noirragatha/attack.png",
+      "nativeOutputPath": "/workspace/scratch/5f5114b49696/generated_images/exec-4c1d0e59-4b5d-40b2-bee9-a7106f9a73b8.png",
+      "prompt": "Use case: identity-preserve. Create ONE individual full-body 2D fighting-game sprite of EXACTLY the Noir Ragatha in the input image. Identity and outfit locked: gray rag-doll cloth body with long slim articulated limbs and mitten hands, charcoal-gray yarn bob and looped fringe, large pale bow, one gray button eye on the image-left side of the face and one tall oval white eye with black pupil on the image-right, gray triangular nose, small stitched mouth; pearl necklace, sleeveless black V-neck knee-length A-line dress, black flat cloth shoes. Strictly neutral grayscale throughout. Preserve the reference anatomy, head/body ratio, hair length, costume materials, line width, sharp outlines and detailed cel shading. Change the POSE only. Camera side/three-quarter view, character facing screen RIGHT. Keep dress naturally draped and covering body. Whole silhouette visible with generous 10% transparent margin around bow, limbs, hem and feet. Exactly ONE character in ONE image. True transparent RGBA. No backdrop, floor, ground shadow, props, opponent, duplicated body, detached limbs, particles, glow, trails, text, frame, watermark or UI. POSE: quick forward open-palm slap to the RIGHT at chest height, front arm fully extended right with open mitten palm, trailing arm bent near body, weight leaning onto bent front leg, rear foot braced. Determined expression. A clearly readable light-attack contact pose, no impact effects.",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/noir-ragatha-plush",
+        "https://glitchproductions.store/cdn/shop/files/Plush_Ragatha_BlackDress_1.png?v=1763014366&width=1600"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/noirragatha.png"
+      ],
+      "visualReview": {
+        "reviewed": true,
+        "notes": "Clear rightward open-palm extension with rear fist at waist and bent front knee. Complete body, draped black skirt, no detached parts or impact effects; identity and monochrome costume match seed."
+      },
+      "sha256": "30d989fc1bc90947a265e0d03074f0d2c53620ac75a4769acacc6816c52f3e10",
+      "bytes": 834681,
+      "width": 1199,
+      "height": 1312,
+      "mode": "RGBA",
+      "alpha": {
+        "extrema": [
+          0,
+          255
+        ],
+        "bbox": [
+          27,
+          26,
+          1167,
+          1282
+        ],
+        "bboxAt32": [
+          89,
+          30,
+          1091,
+          1279
+        ],
+        "nonzeroPixels": 507582,
+        "transparentPixels": 1065506
+      },
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "noirragatha",
+      "slot": "heavy",
+      "relativePath": "assets/encore/poses/noirragatha/heavy.png",
+      "nativeOutputPath": "/workspace/scratch/5f5114b49696/generated_images/exec-7ede7e11-6617-40af-928c-a6d7ff54ca3c.png",
+      "prompt": "Use case: identity-preserve. Create ONE individual full-body 2D fighting-game sprite of EXACTLY the Noir Ragatha in the input image. Identity and outfit locked: gray rag-doll cloth body with long slim articulated limbs and mitten hands, charcoal-gray yarn bob and looped fringe, large pale bow, one gray button eye on the image-left side of the face and one tall oval white eye with black pupil on the image-right, gray triangular nose, small stitched mouth; pearl necklace, sleeveless black V-neck knee-length A-line dress, black flat cloth shoes. Strictly neutral grayscale throughout. Preserve the reference anatomy, head/body ratio, hair length, costume materials, line width, sharp outlines and detailed cel shading. Change the POSE only. Camera side/three-quarter view, character facing screen RIGHT. Keep dress naturally draped and covering body. Whole silhouette visible with generous 10% transparent margin around bow, limbs, hem and feet. Exactly ONE character in ONE image. True transparent RGBA. No backdrop, floor, ground shadow, props, opponent, duplicated body, detached limbs, particles, glow, trails, text, frame, watermark or UI. POSE: strong heavy hammer swing toward RIGHT, both mitten hands clasped together over the front shoulder and sweeping forward/down at the moment before contact, upper torso leaning right, legs planted wide, front knee deeply bent. A powerful clear double-handed attack silhouette, not a simple straight punch. Bow, hair and skirt react subtly but keep their shape. No weapon, opponent or effects.",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/noir-ragatha-plush",
+        "https://glitchproductions.store/cdn/shop/files/Plush_Ragatha_BlackDress_1.png?v=1763014366&width=1600"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/noirragatha.png"
+      ],
+      "visualReview": {
+        "reviewed": true,
+        "notes": "Distinct two-handed forward/downward hammer swing; clasped mitten hands stay attached to two arms, legs wide with front knee bent. Bow, pearls, grayscale face and black sleeveless dress consistent. Entire silhouette visible, no added weapon or opponent."
+      },
+      "sha256": "cac08ecefc9823d7e03f52fbb7742cc118c14c13204c0dde44b8e34135664db3",
+      "bytes": 853285,
+      "width": 1221,
+      "height": 1289,
+      "mode": "RGBA",
+      "alpha": {
+        "extrema": [
+          0,
+          255
+        ],
+        "bbox": [
+          65,
+          25,
+          1119,
+          1271
+        ],
+        "bboxAt32": [
+          100,
+          27,
+          1016,
+          1265
+        ],
+        "nonzeroPixels": 523913,
+        "transparentPixels": 1049956
+      },
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "noirragatha",
+      "slot": "hit",
+      "relativePath": "assets/encore/poses/noirragatha/hit.png",
+      "nativeOutputPath": "/workspace/scratch/5f5114b49696/generated_images/exec-8fe27d08-4a92-4b4b-aae5-441b96037ce0.png",
+      "prompt": "Use case: identity-preserve. Create ONE individual full-body 2D fighting-game sprite of EXACTLY the Noir Ragatha in the input image. Identity and outfit locked: gray rag-doll cloth body with long slim articulated limbs and mitten hands, charcoal-gray yarn bob and looped fringe, large pale bow, one gray button eye on the image-left side of the face and one tall oval white eye with black pupil on the image-right, gray triangular nose, small stitched mouth; pearl necklace, sleeveless black V-neck knee-length A-line dress, black flat cloth shoes. Strictly neutral grayscale throughout. Preserve the reference anatomy, head/body ratio, hair length, costume materials, line width, sharp outlines and detailed cel shading. Change the POSE only. Camera side/three-quarter view, character facing screen RIGHT. Keep dress naturally draped and covering body. Whole silhouette visible with generous 10% transparent margin around bow, limbs, hem and feet. Exactly ONE character in ONE image. True transparent RGBA. No backdrop, floor, ground shadow, props, opponent, duplicated body, detached limbs, particles, glow, trails, text, frame, watermark or UI. POSE: recoil from a hit coming from the RIGHT, still oriented RIGHT, upper torso leaning back toward LEFT, front shoulder pulled back, both arms lifted unevenly in startled reflex, knees bent, feet separated and grounded. Oval eye wide, mouth a small surprised open shape. Non-graphic hit reaction with no injury, bruise, blood, impact star or external object.",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/noir-ragatha-plush",
+        "https://glitchproductions.store/cdn/shop/files/Plush_Ragatha_BlackDress_1.png?v=1763014366&width=1600"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/noirragatha.png"
+      ],
+      "visualReview": {
+        "reviewed": true,
+        "notes": "Clear backward-left recoil while facing right, startled oval eye and small open mouth, two raised uneven hands and bent knees. Complete body and gray costume, no injury or impact overlay."
+      },
+      "sha256": "1b2e1c84ea3578c8abd2f60bd6a7b16849f3cf5853e39fa2aab7081a6cd7d0c4",
+      "bytes": 966555,
+      "width": 1060,
+      "height": 1484,
+      "mode": "RGBA",
+      "alpha": {
+        "extrema": [
+          0,
+          255
+        ],
+        "bbox": [
+          52,
+          31,
+          1044,
+          1468
+        ],
+        "bboxAt32": [
+          55,
+          34,
+          910,
+          1461
+        ],
+        "nonzeroPixels": 608716,
+        "transparentPixels": 964324
+      },
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "noirragatha",
+      "slot": "walk",
+      "relativePath": "assets/encore/poses/noirragatha/walk.png",
+      "nativeOutputPath": "/workspace/scratch/5f5114b49696/generated_images/exec-c5d7acd3-a9df-46aa-b0d7-d30efb87e5dd.png",
+      "prompt": "Use case: identity-preserve. Create ONE individual full-body 2D fighting-game sprite of EXACTLY the Noir Ragatha in the input image. Identity and outfit locked: gray rag-doll cloth body with long slim articulated limbs and mitten hands, charcoal-gray yarn bob and looped fringe, large pale bow, one gray button eye on the image-left side of the face and one tall oval white eye with black pupil on the image-right, gray triangular nose, small stitched mouth; pearl necklace, sleeveless black V-neck knee-length A-line dress, black flat cloth shoes. Strictly neutral grayscale throughout. Preserve the reference anatomy, head/body ratio, hair length, costume materials, line width, sharp outlines and detailed cel shading. Change the POSE only. Camera side/three-quarter view, character facing screen RIGHT. Keep dress naturally draped and covering body. Whole silhouette visible with generous 10% transparent margin around bow, limbs, hem and feet. Exactly ONE character in ONE image. True transparent RGBA. No backdrop, floor, ground shadow, props, opponent, duplicated body, detached limbs, particles, glow, trails, text, frame, watermark or UI. POSE: side-view WALK to the RIGHT, a clear mid-stride moment with front leg stepping forward, trailing foot heel lifted, front arm back and rear arm forward in natural counter-swing. Upright torso and head looking RIGHT. Calm attentive face. No duplicated feet, speed lines or motion trails; one single walking pose.",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/noir-ragatha-plush",
+        "https://glitchproductions.store/cdn/shop/files/Plush_Ragatha_BlackDress_1.png?v=1763014366&width=1600"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/noirragatha.png"
+      ],
+      "visualReview": {
+        "reviewed": true,
+        "notes": "Readable rightward stride with one lifted rear heel and counter-swinging arms. Hair, bow, button eye, pearl necklace and draped black dress preserved; no duplicate limbs or motion trail."
+      },
+      "sha256": "bf882e3e74276a9c358f6e1e2e075da057cfa08695d1aa5870aa37252bf8c721",
+      "bytes": 847859,
+      "width": 1068,
+      "height": 1473,
+      "mode": "RGBA",
+      "alpha": {
+        "extrema": [
+          0,
+          255
+        ],
+        "bbox": [
+          185,
+          26,
+          1036,
+          1446
+        ],
+        "bboxAt32": [
+          189,
+          28,
+          874,
+          1443
+        ],
+        "nonzeroPixels": 493025,
+        "transparentPixels": 1080139
+      },
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "noirragatha",
+      "slot": "jump",
+      "relativePath": "assets/encore/poses/noirragatha/jump.png",
+      "nativeOutputPath": "/workspace/scratch/5f5114b49696/generated_images/exec-7215e44f-6206-401a-9675-2eebf9f4dd43.png",
+      "prompt": "Use case: identity-preserve. Create ONE individual full-body 2D fighting-game sprite of EXACTLY the Noir Ragatha in the input image. Identity and outfit locked: gray rag-doll cloth body with long slim articulated limbs and mitten hands, charcoal-gray yarn bob and looped fringe, large pale bow, one gray button eye on the image-left side of the face and one tall oval white eye with black pupil on the image-right, gray triangular nose, small stitched mouth; pearl necklace, sleeveless black V-neck knee-length A-line dress, black flat cloth shoes. Strictly neutral grayscale throughout. Preserve the reference anatomy, head/body ratio, hair length, costume materials, line width, sharp outlines and detailed cel shading. Change the POSE only. Camera side/three-quarter view, character facing screen RIGHT. Keep dress naturally draped and covering body. Whole silhouette visible with generous 10% transparent margin around bow, limbs, hem and feet. Exactly ONE character in ONE image. True transparent RGBA. No backdrop, floor, ground shadow, props, opponent, duplicated body, detached limbs, particles, glow, trails, text, frame, watermark or UI. POSE: midair JUMP toward RIGHT, BOTH feet clearly off the implied ground, knees tucked forward and underneath, torso leaning slightly right, forward mitten hand raised in guard and rear arm extended behind for balance. Hair, bow and dress lift only subtly with motion; keep skirt down and body covered. Full body and both shoes visible. No floor or drop shadow.",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/noir-ragatha-plush",
+        "https://glitchproductions.store/cdn/shop/files/Plush_Ragatha_BlackDress_1.png?v=1763014366&width=1600"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/noirragatha.png"
+      ],
+      "visualReview": {
+        "reviewed": true,
+        "notes": "Airborne rightward tuck with both feet beneath body, rear arm extended and leading hand in guard. Hair and skirt show restrained motion; complete bow, arms and shoes. Raw image display shows light halo around subject; final judgment deferred to alpha-composited runtime review, not assumed visible from hidden RGB. Alpha inspection: all four corners 0; bbox at alpha 8, 12 and 32 identical [123,61,920,1357]. No correction made based on hidden RGB."
+      },
+      "sha256": "4747388f8bb478697eafdd01b3bec401033566796592a6eec14a1ee142d09009",
+      "bytes": 1376830,
+      "width": 1104,
+      "height": 1424,
+      "mode": "RGBA",
+      "alpha": {
+        "extrema": [
+          0,
+          254
+        ],
+        "bbox": [
+          121,
+          33,
+          1050,
+          1400
+        ],
+        "bboxAt32": [
+          123,
+          61,
+          920,
+          1357
+        ],
+        "nonzeroPixels": 521695,
+        "transparentPixels": 1050401
+      },
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "noirragatha",
+      "slot": "crouch",
+      "relativePath": "assets/encore/poses/noirragatha/crouch.png",
+      "nativeOutputPath": "/workspace/scratch/5f5114b49696/generated_images/exec-02f18c4f-d070-4033-848f-bdfa5ba4408f.png",
+      "prompt": "Use case: identity-preserve. Create ONE individual full-body 2D fighting-game sprite of EXACTLY the Noir Ragatha in the input image. Identity and outfit locked: gray rag-doll cloth body with long slim articulated limbs and mitten hands, charcoal-gray yarn bob and looped fringe, large pale bow, one gray button eye on the image-left side of the face and one tall oval white eye with black pupil on the image-right, gray triangular nose, small stitched mouth; pearl necklace, sleeveless black V-neck knee-length A-line dress, black flat cloth shoes. Strictly neutral grayscale throughout. Preserve the reference anatomy, head/body ratio, hair length, costume materials, line width, sharp outlines and detailed cel shading. Change the POSE only. Camera side/three-quarter view, character facing screen RIGHT. Keep dress naturally draped and covering body. Whole silhouette visible with generous 10% transparent margin around bow, limbs, hem and feet. Exactly ONE character in ONE image. True transparent RGBA. No backdrop, floor, ground shadow, props, opponent, duplicated body, detached limbs, particles, glow, trails, text, frame, watermark or UI. POSE: LOW CROUCH guarding to the RIGHT, knees deeply bent, hips near heel height, torso leaning forward slightly, both mitten fists close to chest and face, one heel slightly lifted for balance. Compact defensive silhouette. Skirt bunches naturally over bent knees, covers body, feet clearly visible underneath. Distinct from standing guard.",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/noir-ragatha-plush",
+        "https://glitchproductions.store/cdn/shop/files/Plush_Ragatha_BlackDress_1.png?v=1763014366&width=1600"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/noirragatha.png"
+      ],
+      "visualReview": {
+        "reviewed": true,
+        "notes": "Low compact right-facing guard, two fists near chest and bent knees under naturally folded skirt. Both shoes visible, gray button-eye asymmetry and pearls maintained, no duplicated body parts."
+      },
+      "sha256": "43f95ff1e695755625fe7b390d1857ca419721afc7c4fb265b24e62372fa2938",
+      "bytes": 977752,
+      "width": 1199,
+      "height": 1312,
+      "mode": "RGBA",
+      "alpha": {
+        "extrema": [
+          0,
+          255
+        ],
+        "bbox": [
+          0,
+          58,
+          1179,
+          1312
+        ],
+        "bboxAt32": [
+          227,
+          60,
+          1016,
+          1270
+        ],
+        "nonzeroPixels": 639129,
+        "transparentPixels": 933959
+      },
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "noirragatha",
+      "slot": "victory",
+      "relativePath": "assets/encore/poses/noirragatha/victory.png",
+      "nativeOutputPath": "/workspace/scratch/5f5114b49696/generated_images/exec-a5d416a7-6a95-421f-8276-24086121bb64.png",
+      "prompt": "Use case: identity-preserve. Create ONE individual full-body 2D fighting-game sprite of EXACTLY the Noir Ragatha in the input image. Identity and outfit locked: gray rag-doll cloth body with long slim articulated limbs and mitten hands, charcoal-gray yarn bob and looped fringe, large pale bow, one gray button eye on the image-left side of the face and one tall oval white eye with black pupil on the image-right, gray triangular nose, small stitched mouth; pearl necklace, sleeveless black V-neck knee-length A-line dress, black flat cloth shoes. Strictly neutral grayscale throughout. Preserve the reference anatomy, head/body ratio, hair length, costume materials, line width, sharp outlines and detailed cel shading. Change the POSE only. Camera side/three-quarter view, character facing screen RIGHT. Keep dress naturally draped and covering body. Whole silhouette visible with generous 10% transparent margin around bow, limbs, hem and feet. Exactly ONE character in ONE image. True transparent RGBA. No backdrop, floor, ground shadow, props, opponent, duplicated body, detached limbs, particles, glow, trails, text, frame, watermark or UI. POSE: VICTORY celebration facing RIGHT, standing upright with proud gentle smile, one mitten fist raised high overhead, other hand on waist, chest lifted, feet apart in a stable confident stance. Bow and raised hand entirely inside image with clear margins. One figure only, no confetti or trophy.",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/noir-ragatha-plush",
+        "https://glitchproductions.store/cdn/shop/files/Plush_Ragatha_BlackDress_1.png?v=1763014366&width=1600"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/noirragatha.png"
+      ],
+      "visualReview": {
+        "reviewed": true,
+        "notes": "Raised rightward victory fist with other hand at waist and stable stance. Whole bow and hand within frame; black sleeveless dress and neutral grayscale styling stable."
+      },
+      "sha256": "631e5f21896c55236f668629d19c0cdf73c2f9f830333dfb8063b6f209b8bf06",
+      "bytes": 1057443,
+      "width": 929,
+      "height": 1694,
+      "mode": "RGBA",
+      "alpha": {
+        "extrema": [
+          0,
+          255
+        ],
+        "bbox": [
+          97,
+          37,
+          915,
+          1694
+        ],
+        "bboxAt32": [
+          100,
+          42,
+          863,
+          1665
+        ],
+        "nonzeroPixels": 661646,
+        "transparentPixels": 912080
+      },
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "noirragatha",
+      "slot": "defeat",
+      "relativePath": "assets/encore/poses/noirragatha/defeat.png",
+      "nativeOutputPath": "/workspace/scratch/5f5114b49696/generated_images/exec-ccf19eac-5145-4ca8-950f-ccf5de9c110c.png",
+      "prompt": "Use case: identity-preserve. Create ONE individual full-body 2D fighting-game sprite of EXACTLY the Noir Ragatha in the input image. Identity and outfit locked: gray rag-doll cloth body with long slim articulated limbs and mitten hands, charcoal-gray yarn bob and looped fringe, large pale bow, one gray button eye on the image-left side of the face and one tall oval white eye with black pupil on the image-right, gray triangular nose, small stitched mouth; pearl necklace, sleeveless black V-neck knee-length A-line dress, black flat cloth shoes. Strictly neutral grayscale throughout. Preserve the reference anatomy, head/body ratio, hair length, costume materials, line width, sharp outlines and detailed cel shading. Change the POSE only. Camera side/three-quarter view, character facing screen RIGHT. Keep dress naturally draped and covering body. Whole silhouette visible with generous 10% transparent margin around bow, limbs, hem and feet. Exactly ONE character in ONE image. True transparent RGBA. No backdrop, floor, ground shadow, props, opponent, duplicated body, detached limbs, particles, glow, trails, text, frame, watermark or UI. POSE: non-graphic DEFEAT resting on the implied ground, seated low with knees bent together to her RIGHT, upper torso slumped forward, one hand supporting beside hip and the other resting tiredly on a knee, bowed head and weary half-closed oval eye. Dress naturally covers seated legs, both shoes visible. No injury, blood, tears, floor, shadow, chair or other object. Entire bowed bow remains visible.",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/noir-ragatha-plush",
+        "https://glitchproductions.store/cdn/shop/files/Plush_Ragatha_BlackDress_1.png?v=1763014366&width=1600"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/noirragatha.png"
+      ],
+      "visualReview": {
+        "reviewed": true,
+        "notes": "Non-graphic tired seated posture facing right, one hand supports beside hip, another on covered knees; weary half-closed oval eye and lowered mouth. Both feet, bow and pearls present. No floor, injury, additional object or other character."
+      },
+      "sha256": "f5d20aa4bfe2f829905883e151f34830976853942dcd81e5b62f1b0fcb7c3fe1",
+      "bytes": 1028805,
+      "width": 1312,
+      "height": 1199,
+      "mode": "RGBA",
+      "alpha": {
+        "extrema": [
+          0,
+          255
+        ],
+        "bbox": [
+          207,
+          23,
+          1264,
+          1199
+        ],
+        "bboxAt32": [
+          210,
+          26,
+          1102,
+          1183
+        ],
+        "nonzeroPixels": 640454,
+        "transparentPixels": 932634
+      },
+      "nativeCopyVerified": true
+    }
+  ]
+}

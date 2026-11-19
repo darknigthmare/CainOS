@@ -1,0 +1,29 @@
+{
+  "id": "beachjax-heavy",
+  "appearanceId": "beachjax",
+  "slot": "heavy",
+  "file": "assets/encore/poses/beachjax/heavy.png",
+  "sourceGenerationId": "exec-d931bb5f-030a-4726-8c55-f8263282575e",
+  "method": "image_gen.imagegen",
+  "prompt": "Create ONE complete full-body 2D game sprite of BEACH JAX, reposing the APPROVED attached selection model. Preserve its exact lanky adult cartoon rabbit anatomy, lavender-purple smooth featureless body, two very long purple ears, yellow eyes with simple black rectangular pupils, deadpan small mouth, bare purple cartoon hands, large rounded purple rabbit feet, and the small pink scallop shell fixed securely on the front of the lower belly/hip line. Same clean dark outlines and cel shading, same head/body ratio and colors. No overalls, gloves or shoes, no extra accessories, no new fur or human musculature/anatomical details. Family-friendly smooth cartoon character. Exactly one character, two arms, two legs, two ears; full body from ear tips to feet visible with clear transparent margin. No scenery, shadows, ground, aura, sparks, motion lines, labels, or other figure. Native transparent alpha background. Face generally toward screen-right. Pose: HEAVY ATTACK, one long purple leg delivering a horizontal side kick toward screen-right, supporting leg and foot firmly visible, both purple hands guarding. Show entire kicking foot, both ear tips and the shell in its fixed position, no effects.",
+  "referencePaths": [
+    "assets/encore/selection/beachjax.png"
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/digital-circus-animiniz-beach-vacation-series",
+    "https://glitchproductions.store/cdn/shop/files/Beach_Series_Render_04.png?v=1765572441&width=1600"
+  ],
+  "sha256": "c2135d33f7e0b760ec2ce7febf91a21ee9b59b3567e59a1fba31d7c86aa60e7f",
+  "dimensions": [
+    1163,
+    1352
+  ],
+  "bytes": 562065,
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "nativeCopyVerified": true,
+  "visualReview": "Distinct rightward horizontal side kick with opposite foot supporting; complete raised foot, hands and ears. Reviewed with native alpha composition on a dark background. Lavender featureless cartoon body, long proportions, yellow eyes with rectangular pupils and fixed pink scallop remain consistent; no visible halo, duplicate figure, scenery or cropping."
+}

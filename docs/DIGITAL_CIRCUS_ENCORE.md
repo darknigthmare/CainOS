@@ -4,9 +4,9 @@ Version jouable : **0.7.0** — sortie initiale le 24 octobre 2026 ; catalogue e
 dessins individuels réunis le **19 novembre 2026**.
 
 Encore partage son moteur entre l’application CainOS et le jeu autonome :
-**54 combattants, 540 techniques, 22 arènes partagées, 9 modes, 429 costumes et 179 archives**.
+**54 combattants, 540 techniques, 22 arènes partagées, 9 modes, 437 costumes et 179 archives**.
 La réunion du 19 novembre 2026 conserve les 54 arrangements de scènes dédiées,
-les escales GLITCH, les 51 costumes d’archive et les 378 costumes crossover des
+les escales GLITCH, les 51 costumes d’archive, huit variantes supplémentaires et les 378 costumes crossover des
 quatorze combattants d’origine. Les costumes crossover des 40 PNJ promus restent
 à produire ; aucun choix ne pointe vers un dessin absent.
 L’extension PNJ promue porte le roster à 54 combattants et **162 finales de spectacle** ;
@@ -33,7 +33,18 @@ d’épisode contradictoires avec la route générée. Les dessins individuels d
 19 novembre remplacent ces cadrages dans la présentation courante ; cette
 réparation technique ne clôt pas leur comparaison avec les plans officiels.
 
-## Dessins individuels — 19 novembre 2026
+## Huit variantes supplémentaires — suite du 19 novembre
+
+Pomni Présidente, Pomni plage, Ragatha Film noir, Ragatha Nageuse, Zooble Film noir,
+Zooble Plongée, Jax Plage et Kinger Château de sable disposent chacun d’un portrait, d’une garde et de neuf actions
+individuelles. Ces **88 PNG natifs** portent le vestiaire à 437 costumes et la
+couverture statique hors crossover à **1 322 dessins**. Leurs références de produits
+officiels sont consultables dans la garde-robe. Le kit du personnage reste identique.
+Les 179 fiches d’archive historiques et leurs identifiants sont conservés.
+Voir le [rapport de cette suite](COMBAT_CAST_CONTINUATION_2026-11-19.md) pour les
+preuves, les sources et les limites de la comparaison.
+
+## Dessins individuels — point de reprise du 19 novembre 2026
 
 La couverture vérifiée du catalogue est de **1 234 dessins, sans emplacement manquant** : neuf actions pour
 chacune des 105 apparences jouables (54 combattants et 51 variantes), 105 gardes
@@ -311,10 +322,12 @@ Les arrangements `home-<id>` réutilisent ces décors et ne sont pas comptés co
 54 nouvelles peintures. Les couches illustrées disponibles chargent au-dessus du
 rendu de secours et suivent les mêmes limites de combat.
 
-Les **51 variantes sélectionnables** remplacent l’apparence du même combattant sans
+Les **51 variantes d’archive et huit variantes supplémentaires** remplacent l’apparence du même combattant sans
 modifier son kit. Leur attribution repose sur une liste explicite par identité :
 un parent, un rival, un accessoire, un effet ou une projection ne reçoit pas un kit
 simplement parce que son identifiant contient le nom d’un artiste.
+Les huit ajouts et leurs sources sont déclarés dans
+[`combat/costume-additions.mjs`](../combat/costume-additions.mjs).
 
 Les **179 entrées d’archive** restent consultables et filtrables : 54 combattants,
 51 variantes et 74 autres archives sans kit livré. Leur présence conserve la
@@ -653,6 +666,8 @@ anciens libellés en faits canoniques.
 Le registre [`combat/fidelity.mjs`](../combat/fidelity.mjs) et les fiches
 [`combat/costume-fidelity.mjs`](../combat/costume-fidelity.mjs) réunissent
 **667 entrées** : 54 personnages, 540 techniques, 22 arènes partagées et 51 costumes d’archive.
+La suite illustrée ajoute huit fiches de costume distinctes dans
+`combat/costume-additions.mjs`, portant ce total à **675**.
 Le jeu et le classeur lisent les mêmes sources, observations, adaptations et
 périmètres de revue. Un lien d'épisode ou un ancien nom d'archive ne valide pas
 une apparence à lui seul.

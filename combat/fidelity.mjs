@@ -1,5 +1,6 @@
 import { CROSSOVER_STAGES, CROSSOVER_STAGE_SOURCES } from './crossover-stages.mjs';
 import { EXPANSION_DEFS } from './roster-expansion.mjs';
+import { COSTUME_ADDITION_SOURCES } from './costume-additions.mjs';
 
 /**
  * Shared provenance for the codex and the planning workbook.
@@ -19,6 +20,7 @@ const episode = (id, title, video, scope) => ({ id, title: `GLITCH — ${title}`
 const still = (id, title, file, scope) => ({ id, title: `GLITCH — ${title}`, url: `https://static.wixstatic.com/media/${file}`, kind: 'Visuel officiel', scope: `${scope} Image publiée sur https://www.glitchprod.com/digital-circus et consultée pour cette revue.` });
 const merchandise = (id, title, file, page, scope) => ({ id, title: `GLITCH Store — ${title}`, url: `https://glitchproductions.store/cdn/shop/files/${file}`, kind: 'Produit dérivé officiel', scope: `${scope} Photographie consultée sur https://glitchproductions.store/products/${page}. Ce produit stylisé ne mesure pas les proportions ni les poses de la série.` });
 export const FIDELITY_SOURCES = freeze([
+  ...COSTUME_ADDITION_SOURCES,
   ...CROSSOVER_STAGE_SOURCES,
   { id: 'glitch', title: 'GLITCH — The Amazing Digital Circus', url: 'https://www.glitchprod.com/digital-circus', kind: 'Source primaire', scope: 'Présentation officielle et galerie de la série. La page ne documente ni les règles de combat ni les dimensions du jeu.' },
   episode('ep1', 'Pilot', 'HwAPLk_sQ3w', 'Référence du cirque, de ses résidents, de Caine, Bubble, Kaufmo et des Gloinks. Les plans non décrits dans les visuels consultés restent à revoir.'),

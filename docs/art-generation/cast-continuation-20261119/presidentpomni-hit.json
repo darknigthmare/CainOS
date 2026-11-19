@@ -1,0 +1,33 @@
+{
+  "id": "presidentpomni-hit",
+  "appearanceId": "presidentpomni",
+  "slot": "hit",
+  "file": "assets/encore/poses/presidentpomni/hit.png",
+  "sourceGenerationId": "exec-85f4d2a9-5334-43cb-ad4d-288538c6a837",
+  "method": "image_gen.imagegen",
+  "prompt": "Use case: stylized-concept. Asset type: one individual full-body 2D fighting-game action sprite. Edit reference 1 (approved President Pomni) into this new pose. Preserve exact design, colors and proportions: oversized expressive white face, brown bob and bangs, red/blue pinwheel irises, red/blue segmented jester hat with yellow trim and pompons, muted medium-blue tailored jacket and full-length trousers, white dress shirt, pale gray tie, white gloves, rounded black shoes. Clean detailed cel shading and crisp black outline. Entire character visible with generous transparent margins including both hat tips, hands, feet; native transparent RGBA, no background, shadow, floor, aura, glow, labels, text, props, second figure, inset or sprite sheet. Natural connected two arms and two legs. Pose: recoiling from an unseen opponent at screen right, torso bent back, eyes wide startled, mouth open, gloved hands spread defensively, knees bend to absorb the hit; no attacker, blood, wounds, impact effects or particles. Full body.",
+  "referencePaths": [
+    "assets/encore/selection/presidentpomni.png"
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/digital-circus-animiniz-costume-adventure-series"
+  ],
+  "sha256": "9f2bf79678470c3e2a50afe40d553a1cd1fbc33f696fe75b516a60dc5ee9e6e4",
+  "dimensions": [
+    1112,
+    1414
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "bboxAlpha12": [
+    38,
+    15,
+    969,
+    1401
+  ],
+  "bytes": 999759,
+  "visualReview": "Revue individuelle et composition avec alpha natif sur fond sombre : un personnage entier, accessoires contenus, costume et proportions cohérents entre les onze vues. Pose statique originale pour le jeu."
+}

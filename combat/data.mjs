@@ -1,5 +1,7 @@
 import { CROSSOVER_STAGES } from './crossover-stages.mjs';
 import { createCrossoverCostumes } from './crossovers.mjs';
+import { COSTUME_ADDITIONS } from './costume-additions.mjs';
+export { COSTUME_ADDITIONS } from './costume-additions.mjs';
 import { SPRITE_CATALOG } from './sprite-catalog.mjs';
 import { FIDELITY_SOURCES, getFighterFidelity, getMoveFidelity, getStageFidelity } from './fidelity.mjs';
 import { COSTUME_SPRITE_OVERRIDES, getCostumeFidelity } from './costume-fidelity.mjs';
@@ -390,7 +392,7 @@ export const ROSTER_ARCHIVE = SPRITE_CATALOG.map(entry => {
 export const ARCHIVE = ROSTER_ARCHIVE;
 export const VARIANTS = ROSTER_ARCHIVE.filter(entry => entry.baseFighterId && entry.id !== entry.baseFighterId);
 export const CROSSOVER_COSTUMES = createCrossoverCostumes(FIGHTERS);
-export const COSTUMES = [...VARIANTS, ...CROSSOVER_COSTUMES];
+export const COSTUMES = [...VARIANTS, ...CROSSOVER_COSTUMES, ...COSTUME_ADDITIONS];
 
 export function equipCostume(fighter, id) {
   const variant = COSTUMES.find(item => item.id === id && item.fighterId === fighter.id);
