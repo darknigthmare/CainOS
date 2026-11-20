@@ -1,0 +1,100 @@
+{
+  "schema": "encore-recovered-prop-review/v1",
+  "createdAt": "2026-11-20T07:02:19.053Z",
+  "phase": "integrated",
+  "environment": "Node + Skia, production stage-selector Canvas2D renderer; not a browser session",
+  "provenance": "art/sources/recovered-local-props-20261119/manifest.json",
+  "sources": {
+    "art/sources/recovered-local-props-20261119/manifest.json": "471731c1977d9406de5591188b528664c2b04e60fd3d223c2e85a9aa1302b8d1",
+    "combat/stage-parallax.mjs": "1e01fa0b4932f0e670bb6fa746c48b57de0c726a5637891e68427a161aecc77d",
+    "combat/render.mjs": "91cdc8a8a4b5298644809714aa7e53219e1266e2ffc95478194a699a7bc1212f",
+    "combat/engine.mjs": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
+    "combat/offline-manifest.mjs": "5c1004fe49b817137070ffb0304b7e61c1412a5017e2808e901e6c1a8c36cc10"
+  },
+  "assets": [
+    {
+      "id": "circus-ticket-dispenser",
+      "label": "Distributeur de tickets",
+      "source": "art/sources/recovered-local-props-20261119/circus-ticket-dispenser.png",
+      "file": "assets/encore/props/showgrounds/ticket-dispenser.png",
+      "stageId": "showgrounds",
+      "sha256": "7517f5c81ba184da71ee4a89d0629431f7dd6a78dd1dc930ef4776be807ddd61",
+      "bytes": 1189952,
+      "dimensions": [
+        1122,
+        1402
+      ],
+      "sourceGenerationId": "exec-2a6f1a06-b006-43fc-a85e-eb0af60735d0",
+      "nativeCopyVerified": true
+    }
+  ],
+  "scenes": [
+    {
+      "id": "showgrounds",
+      "name": "Showgrounds · Le parvis du château",
+      "file": "scene-showgrounds.png",
+      "sha256": "2c66d12a8169ebc25e165e309c6001add577b216ae4b4f5789e61cd324645155",
+      "prop": "assets/encore/props/showgrounds/ticket-dispenser.png",
+      "requested": true,
+      "draw": {
+        "file": "assets/encore/props/showgrounds/ticket-dispenser.png",
+        "coordinates": [
+          206,
+          455,
+          104.83737517831669,
+          131
+        ]
+      },
+      "complete": true,
+      "stageDefinitionUnchanged": true,
+      "cameras": [
+        {
+          "camera": -1,
+          "sha256": "aaf0fbdc0c9ed4dc1c6b3ad10f5bc030359763080d3eefa764d43159d976e116"
+        },
+        {
+          "camera": 0,
+          "sha256": "9841d3da58d2c20faef825d66771fb64f07d1f9c322619848532c69938ed794e"
+        },
+        {
+          "camera": 1,
+          "sha256": "cbbedeb06fd18478da88315020d9982a95a63c2a14ef137ff56216d7abe4e604"
+        }
+      ],
+      "beforeAfter": {
+        "baselineFile": "docs/art-generation/props-integration-20261120/before/scene-showgrounds.png",
+        "baselineSHA256": "43df43122bd302ecb75933a5e06f8812ff63578ccde6bf4e9298f53007afb9fb",
+        "changedPixels": 5351,
+        "bounds": {
+          "x": 180,
+          "y": 431,
+          "right": 269,
+          "bottom": 553
+        }
+      }
+    }
+  ],
+  "offline": {
+    "images": 5491,
+    "bytes": 2724652669,
+    "artVersion": "dbc2d48af8cbe42e",
+    "version": "0.7.0-fb6e3148b501"
+  },
+  "baseline": {
+    "file": "docs/art-generation/props-integration-20261120/before/canvas-review.json",
+    "sha256": "2cb7df4aae3cbcbb51e4a340b91ad94cc10bb65c159615614ca799fd465bd3dd",
+    "phase": "before_integration"
+  },
+  "limitations": [
+    "Original fan-game props; no claim of canonical episode appearance.",
+    "No DOM, input, audio or service-worker verification.",
+    "Visual review is recorded separately from successful rendering."
+  ],
+  "counts": {
+    "sources": 1,
+    "activeProps": 1,
+    "scenes": 1,
+    "cameraViews": 3,
+    "newNativeBytes": 1189952
+  }
+}

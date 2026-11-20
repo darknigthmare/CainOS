@@ -1,0 +1,73 @@
+{
+  "schema": "encore-native-art-discovery/v1",
+  "appearanceId": "watermelongangle",
+  "fighterId": "gangle",
+  "slot": "selection",
+  "status": "accepted_native",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "prompt": "Create a professional clean cel-shaded 2D full-body character sprite of WATERMELON GANGLE for a fan fighting game. This is Gangle, a white theatrical mask supported by a red ribbon body, not a human girl. Use reference image 1 as the authority for the specific OFFICIAL MERCHANDISE COSTUME AND ACCESSORIES. Use reference image 2 only for existing game linework, elongated ribbon anatomy, proportions and clean cel-shading. Do not copy the base costume from reference 2.\n\nCOSTUME TO PRESERVE FROM IMAGE 1: broad bright yellow floppy sunhat, with a periwinkle blue-purple hat band and a neat matching bow on the visible front-side. No flower. One white mask with two drooping black eye shapes and two cyan tear drops, a small gentle closed curved smile, a slightly puffed cheek and two tiny black watermelon seeds at that cheek. A periwinkle sweetheart-shaped bandeau/bodice and a short matching pleated skirt, with a thin band of the red ribbon torso visible at the waist. Body, neck and four limbs are vivid red flat ribbon strips, twisting and curling with the same structure as reference 2. Exactly TWO ribbon arms and TWO ribbon legs, no human skin, no human hands or fingers, no human feet or shoes. Limbs should look like broad flexible red ribbons, not tubes.\nACCESSORIES: one short dark charcoal-black tapered wooden watermelon-smashing bat with a brown handle, curled securely in one ribbon hand; in the other ribbon hand hold one small triangular watermelon slice, pink flesh, black seeds, pale yellow-green rind border, dark green outer rind. Preserve both accessories, but no giant half-watermelon on the ground.\n\nPOSE selection: a relaxed upright playable-character showcase, entire body in a gentle three-quarter view facing SCREEN RIGHT, head and torso orient screen-right. Her forward ribbon hand presents the watermelon slice near chest height; other ribbon arm holds the bat pointed diagonally down and away from the legs. Two distinct red ribbon legs curl naturally into two separate flattened ribbon ends on the same baseline. A readable elegant elongated Gangle silhouette, not the short toy proportions. Mask approximately one quarter of total height.\n\nART: bold controlled dark outlines, flat saturated color fills and two-tone cel shadows, a polished game roster illustration matching reference 2. No photorealistic material, no fabric texture, no 3D plastic shine. One character only, full body from hat top to both ribbon ends. Generous completely transparent empty margins on all sides, hat/props/feet fully inside frame. Native transparent alpha background. No background, no scenery, no floor, no puddle, no base, no text, no logo, no UI, no border, no sprite sheet. No aura, halo, glow, bloom, rim light, cast shadow or sparkles. Never include duplicated masks, spare limbs, detached hands, second character or inset view.",
+  "referencePaths": [
+    "docs/art-generation/cast-next-missing-20261120/references/watermelongangle/official-watermelon-gangle.png",
+    "assets/encore/selection/gangle.webp"
+  ],
+  "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-ae052927-f7e0-4fbd-a42e-b57b9af3cfb0.png",
+  "sourceGenerationId": "exec-ae052927-f7e0-4fbd-a42e-b57b9af3cfb0",
+  "file": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/selection.png",
+  "targetFile": "assets/encore/selection/watermelongangle.png",
+  "nativeFacing": "right",
+  "sourceURLs": [
+    "https://glitchproductions.store/products/digital-circus-animiniz-beach-vacation-series",
+    "https://glitchproductions.store/cdn/shop/files/Beach_Series_Render_05.png?v=1765572441&width=1600"
+  ],
+  "sourceKind": "Produit dérivé officiel",
+  "episodeFidelityClaim": false,
+  "visualReview": {
+    "status": "accepted",
+    "reviewer": "ribbit_references",
+    "scope": "Adaptation de la figurine officielle Watermelon Gangle aux proportions élancées du jeu. Distincte de beachgangle (paréo bleu fleuri, fleur rose et noix de coco). La demi-pastèque au sol et le décor de plage sont des éléments de scène exclus. Le ruban arrière peu visible dans la photo est décliné d’après l’anatomie déjà établie de Gangle ; aucune chaussure n’est inventée. Poses statiques originales pour le fan-game, sans certification canonique ni correspondance 1:1 d’épisode.",
+    "observations": [
+      "Masque unique, deux yeux noirs tombants, deux larmes cyan, bouche courbe et deux petites graines visibles.",
+      "Chapeau jaune à nœud pervenche, haut et jupe plissée assortis, rubans rouges, batte sombre et tranche de pastèque présents.",
+      "Deux bras et deux jambes de ruban, personnage entier orienté trois-quarts droite ; aucune main humaine ni chaussure.",
+      "Revue sur composite alpha opaque : aucun halo visible ; la couleur diffuse de l’aperçu brut se trouve sous alpha nul.",
+      "Bornes alpha > 12 entièrement internes ; marge basse native étroite (8 px) sans découpe du ruban."
+    ],
+    "alphaReview": "Composite sur fond #3c465a ; PNG natif inchangé."
+  },
+  "sha256": "35b49ea9a786736b9ce39852ad8e8c7d0919de2d9ac972d37424a028e0029d65",
+  "bytes": 1527470,
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "fullyTransparentPixels": 1007600,
+  "alpha12Bounds": [
+    76,
+    16,
+    945,
+    1528
+  ],
+  "alpha12BoundsThreshold": "alpha > 12",
+  "nativeCopyVerified": true,
+  "createdAt": "2026-11-20T13:16:43.263137+00:00",
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/cast-next-missing-20261120/references/watermelongangle/official-watermelon-gangle.png",
+      "sha256": "129a776c77d71a9d8ebe1dedb2499a4a1413fa96806ae997836acb6045a335cb",
+      "bytes": 2188514
+    },
+    {
+      "position": 2,
+      "file": "assets/encore/selection/gangle.webp",
+      "sha256": "0efb8aaf407420a9e7243377be42f0b603aab216f04c3e24453b2e221499b19f",
+      "bytes": 214892
+    }
+  ]
+}

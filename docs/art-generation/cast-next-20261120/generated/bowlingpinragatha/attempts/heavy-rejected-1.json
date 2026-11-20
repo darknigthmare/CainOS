@@ -1,0 +1,66 @@
+{
+  "schema": "encore-native-art-next/v1",
+  "appearanceId": "bowlingpinragatha",
+  "slot": "heavy",
+  "file": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/attempts/heavy-rejected-1.png",
+  "targetFile": "assets/encore/poses/bowlingpinragatha/heavy.png",
+  "createdAt": "2026-11-20T09:54:03.614287+00:00",
+  "status": "rejected_native",
+  "method": "image_gen.imagegen",
+  "nativeSourceFile": "/workspace/scratch/5f5114b49696/generated_images/exec-6d02b070-ca35-4998-b98d-07f8e0c2e52d.png",
+  "sourceGenerationId": "exec-6d02b070-ca35-4998-b98d-07f8e0c2e52d",
+  "sha256": "dadec12ab065553512d72f8b77fa531267283dfaf2004d1709090ff1994a449e",
+  "bytes": 1622901,
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "alpha12Bounds": [
+    246,
+    0,
+    1331,
+    1019
+  ],
+  "alphaThreshold": "alpha >= 12",
+  "nativeCopyVerified": true,
+  "nativeFacing": "right",
+  "prompt": "Create ONE individual complete-character 2D fighting-game sprite, polished cel shading with crisp dark contours, coherent with Digital Circus Encore. Keep all hat/bow tips, every hand, ornament, cane and the entire base/feet inside CLEAR TRANSPARENT MARGINS on ALL FOUR SIDES. True transparent RGBA. No scenery, floor, cast shadow, aura, external glow, particles, text, logo, watermark, inset or duplicate. One original static game adaptation; do not copy the product scene or its squat toy proportions. Reference 1 is the APPROVED SELECTION SEED: strictly preserve its identity, proportions, colors, exact anatomy and polished 2D style. Reference 2 supplies the official product details only. Make a genuinely different pose, never a mirrored or cropped copy of selection. DESIGN LOCK: ONE entire Bowling Pin Ragatha: familiar pale cloth Ragatha head with RED YARN HAIR, large BLUE BOW, one BLUE BUTTON EYE and the other normal eye with mauve eyelids, small triangular nose and friendly stitched-doll smile. Her ONLY BODY is a complete WHITE/VERY PALE GRAY BOWLING PIN with white pointed collar and rectangular PERIWINKLE PATCHES. The body narrows into a neck beneath the head and broadens into one continuous rounded pin base. ABSOLUTELY NO ARMS, HANDS, LEGS, FEET, normal dress skirt or added appendages. Preserve exactly this head-and-pin anatomy. The blue bowling ball and the other colored face-pins in the official photograph are separate props and must NOT appear. POSE: HEAVY ATTACK toward screen RIGHT: full pin angled into a powerful diagonal forward body-swing, head leading right and the rounded base trailing left. Keep the head connected to the complete white patched pin; no limbs, extra pin, ball or motion marks.",
+  "transparent_background": true,
+  "referencePaths": [
+    "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/selection.png",
+    "docs/art-generation/cast-next-20261120/research/merch/official-bowling-pin-ragatha.png"
+  ],
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/selection.png",
+      "sha256": "3eca98c6bc889b80e080889d34ec4a4ec7e0887141babf2e178f762f2e8cb01d",
+      "bytes": 1487585
+    },
+    {
+      "position": 2,
+      "file": "docs/art-generation/cast-next-20261120/research/merch/official-bowling-pin-ragatha.png",
+      "sha256": "fffc7d222e4a2b15431ade2bf47054b17af554364cc89ac1ede69f6dd1c4f7f5",
+      "bytes": 6499850,
+      "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_HeadpinRagatha.png?v=1773977710",
+      "pageUrl": "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series"
+    }
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_HeadpinRagatha.png?v=1773977710"
+  ],
+  "sourceKind": "Produit dérivé officiel",
+  "episodeFidelityClaim": false,
+  "includedInRuntime": false,
+  "visualReview": {
+    "reviewer": "generate_jax_ragatha",
+    "status": "rejected",
+    "reason": "Native alpha>=12 bounds touch the top canvas border (246,0,1331,1019). Complete transparent top margin is absent despite the main bow contour appearing slightly inset."
+  }
+}

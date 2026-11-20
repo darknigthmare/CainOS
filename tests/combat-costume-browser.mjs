@@ -8,7 +8,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { createHash } from 'node:crypto';
-import { FIGHTERS, VARIANTS } from '../combat/data.mjs';
+import { COSTUMES, FIGHTERS, VARIANTS } from '../combat/data.mjs';
 import { getFidelitySources } from '../combat/fidelity.mjs';
 import { GAME_VERSION } from '../combat/session.mjs';
 
@@ -183,10 +183,11 @@ try{
     const ids=await page.locator('.archive-card').evaluateAll(cards=>cards.map(card=>card.dataset.archiveId));
     for(const id of ids){
       const variant=VARIANTS.find(v=>v.id===id);
+      if(!variant) continue;
       await page.locator(`[data-appearance="${id}"]`).click();await wardrobeReady(page,id);
       await assertCostumePixels(variant, 'stance');
       const options=await page.locator('#wardrobe-variant option').evaluateAll(nodes=>nodes.map(n=>n.value));
-      assert.deepEqual(options,[variant.fighterId,...VARIANTS.filter(v=>v.fighterId===variant.fighterId).map(v=>v.id)]);
+      assert.deepEqual(options,[variant.fighterId,...COSTUMES.filter(v=>v.fighterId===variant.fighterId).map(v=>v.id)]);
       if(id==='ganglecomedy')await page.locator('#modal').screenshot({path:path.join(output,'costume-wardrobe.png')});
       await sourceNotes(page,variant);
       const png=await page.locator('#wardrobe-preview').evaluate(canvas=>canvas.toDataURL());

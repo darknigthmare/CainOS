@@ -1,0 +1,219 @@
+{
+  "schema": "encore-character-canvas-review/v1",
+  "createdAt": "2026-11-20T08:56:48.719Z",
+  "method": "Production Canvas2D modules executed by Node and native Skia; actual drawImage sources and transforms inspected.",
+  "limitations": [
+    "No browser, DOM, input, audio, service-worker or physical-device test.",
+    "Individual static poses do not establish frame-by-frame animation.",
+    "Asset identity/proportion fidelity requires separate visual review; no canonical 1:1 certification."
+  ],
+  "partial": false,
+  "additionsOnly": true,
+  "introducedOn": "2026-11-20",
+  "appearanceId": "abstractingqueenie",
+  "sources": {
+    "combat/data.mjs": "6910aaddf46645f98520f4cc6fb468c2bc43b6dd017d9237266a90f6c1bf892b",
+    "combat/costume-additions.mjs": "1aa4eabd6c27765bb087b7cf18a71f5bb6dacd385f10e2ebc442edbc7c420eda",
+    "combat/costume-continuation-20261120.mjs": "d3774d17d6058e72081cc7a236f748fc26cc2532fe94ddf772e9ad6de638eb0f",
+    "combat/costume-resumption-20261120.mjs": "5fc7997877eeab8a7b4e68b3a25e3be265abf0082755f02ed9b4b0657557a52e",
+    "combat/illustrations.mjs": "26aca8338be81bedbbbc1bb4bc59dd0aae8b7b7ef4d785cbbf353ac109c53b99",
+    "combat/render.mjs": "91cdc8a8a4b5298644809714aa7e53219e1266e2ffc95478194a699a7bc1212f",
+    "combat/render-poses.mjs": "21e3afba8c19723ffdcb383402cc6339b63cb58df5d4323fda2ebde093ce0b29",
+    "combat/offline-manifest.mjs": "ba853b6eb9bb8eb9ef8f0d49b46cebbec6214fbc84abacf5b3aba3cef53ae423",
+    "scripts/render-combat-character-review.mjs": "59e623f407e86dd639053f090d1bb8a0bc01a39dc04a441e3e08b737fe39f250"
+  },
+  "actions": [
+    {
+      "id": "abstractingqueenie",
+      "pose": "intro",
+      "file": "assets/encore/poses/abstractingqueenie/intro.png",
+      "sha256": "1a2628491d28da7cabdec638fde2f8b625ed1f785c3dfa64391d7a8ab025fc2a",
+      "bytes": 1683582,
+      "visibleBounds": {
+        "x": 33,
+        "y": 18,
+        "width": 361,
+        "height": 616
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "abstractingqueenie",
+      "pose": "attack",
+      "file": "assets/encore/poses/abstractingqueenie/attack.png",
+      "sha256": "961fa7da83647594bd153d95a1cc2631fd6c0d5a49b2d8824a936b2ede2cb56b",
+      "bytes": 1667403,
+      "visibleBounds": {
+        "x": 28,
+        "y": 14,
+        "width": 377,
+        "height": 619
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "abstractingqueenie",
+      "pose": "hit",
+      "file": "assets/encore/poses/abstractingqueenie/hit.png",
+      "sha256": "f8b1534519c2b4e8717d55e6f6fcd26b0c2b1ba3868c13e5c32627a480593924",
+      "bytes": 1684154,
+      "visibleBounds": {
+        "x": 22,
+        "y": 19,
+        "width": 377,
+        "height": 616
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "abstractingqueenie",
+      "pose": "walk",
+      "file": "assets/encore/poses/abstractingqueenie/walk.png",
+      "sha256": "636f8a0601e4479617022237a6e614f8bfd807513e99238219e10fed7d069fe1",
+      "bytes": 1653567,
+      "visibleBounds": {
+        "x": 14,
+        "y": 18,
+        "width": 405,
+        "height": 606
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "abstractingqueenie",
+      "pose": "jump",
+      "file": "assets/encore/poses/abstractingqueenie/jump.png",
+      "sha256": "0664f294ecc8a29ae9945ae7f4cadaf51b1b70a1e755366654e133304da5cd15",
+      "bytes": 1637961,
+      "visibleBounds": {
+        "x": 32,
+        "y": 17,
+        "width": 354,
+        "height": 547
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "abstractingqueenie",
+      "pose": "crouch",
+      "file": "assets/encore/poses/abstractingqueenie/crouch.png",
+      "sha256": "64b62f6d6ed76f68c3d65415148a06618e8a03f020bb9b312bdf8fb4c3423aed",
+      "bytes": 1516608,
+      "visibleBounds": {
+        "x": 69,
+        "y": 9,
+        "width": 487,
+        "height": 417
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "abstractingqueenie",
+      "pose": "victory",
+      "file": "assets/encore/poses/abstractingqueenie/victory.png",
+      "sha256": "fbdcd62a76435a1405147e0ebff3c50bbfdfead493f87829eefd4a8f03693fa4",
+      "bytes": 1611317,
+      "visibleBounds": {
+        "x": 48,
+        "y": 18,
+        "width": 333,
+        "height": 614
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "abstractingqueenie",
+      "pose": "defeat",
+      "file": "assets/encore/poses/abstractingqueenie/defeat.png",
+      "sha256": "2bbf2e14704834800722e40a248289e2e3f1a5677b3deb73d5b1f464c9122893",
+      "bytes": 1563588,
+      "visibleBounds": {
+        "x": 42,
+        "y": 5,
+        "width": 543,
+        "height": 418
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "abstractingqueenie",
+      "pose": "heavy",
+      "file": "assets/encore/poses/abstractingqueenie/heavy.png",
+      "sha256": "e8cb085a106280875fe7760baefc9687d5bfbf07700bcad3daaa39f2d549bbb4",
+      "bytes": 1618747,
+      "visibleBounds": {
+        "x": 19,
+        "y": 32,
+        "width": 393,
+        "height": 595
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    }
+  ],
+  "stances": [
+    {
+      "id": "abstractingqueenie",
+      "file": "assets/encore/stance/abstractingqueenie.png",
+      "sha256": "0388151ffe5647b253cd08348926136eb7f1f6ecb1d0d2574190546b6e5e227e",
+      "bytes": 1634820,
+      "nativeFacing": 1,
+      "rendered": true,
+      "bothFacings": true
+    }
+  ],
+  "portraits": [
+    {
+      "id": "abstractingqueenie",
+      "archiveId": null,
+      "file": "assets/encore/selection/abstractingqueenie.png",
+      "sha256": "3be556c8b0dda2e2b75966e4d42c57603e9b3fad5a48c8f9afa4f677ea358234",
+      "bytes": 1667501,
+      "rendered": true
+    }
+  ],
+  "missing": [],
+  "sheets": [
+    "actions-abstractingqueenie.jpg",
+    "archive-portraits-01.jpg"
+  ],
+  "browserTestStatus": "not_executed",
+  "counts": {
+    "appearances": 1,
+    "expectedActions": 9,
+    "actions": 9,
+    "stances": 1,
+    "drawChecks": 20,
+    "archiveEntries": 0,
+    "portraits": 1,
+    "expectedPortraits": 1,
+    "missing": 0
+  },
+  "complete": true
+}

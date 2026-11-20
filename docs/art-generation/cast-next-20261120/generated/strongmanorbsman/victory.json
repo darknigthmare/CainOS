@@ -1,0 +1,82 @@
+{
+  "schema": "encore-native-art-discovery/v1",
+  "appearanceId": "strongmanorbsman",
+  "slot": "victory",
+  "status": "accepted_native",
+  "createdAt": "2026-11-20T09:43:58.962025+00:00",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "prompt": "Use case: identity-preserve. Create ONE full-body transparent 2D game sprite of Strongman Orbsman. The sole reference is the approved selection; preserve its exact connected-sphere anatomy, its blue-violet colour, huge white eyes, black eyebrows, mint sweat marks, polished cel shading and black outlines. There are two stacked trunk spheres. EACH ARM has exactly four spheres total: three round arm segments and one round hand. Keep BOTH arms hanging in the same short relaxed downward arrangement as the reference, each hand holding the single silver barbell near belt level. Exactly two red spherical weights, one on each end of the same bar. Each leg has three round segments and one rounded foot. VICTORY POSE: face and eyes toward screen RIGHT, head lifted proudly, eyebrows relaxed, chest slightly thrust forward, legs wider apart in a strong confident standing finish. The bar stays LOW in front of the pelvis, with just a very slight diagonal tilt. Do not lift the hands above the waist or lengthen the arms. One complete character, full barbell and all feet and eyebrows inside clear margins. True transparent RGBA, no background, scene, floor, cast shadow, aura, glow, text, particles, duplicate or inset.",
+  "referencePaths": [
+    "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/selection.png"
+  ],
+  "portableReferences": [
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/selection.png",
+      "sha256": "ede51b07225e79c80eefdf12cd862e6b9d166211bb452ab16bebff59760e460c",
+      "bytes": 1518337
+    }
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_strongmanOrbsman.png?v=1773977710"
+  ],
+  "sourceKind": "Produit dérivé officiel",
+  "episodeFidelityClaim": false,
+  "sourceGenerationId": "exec-704d13c8-27bc-489b-97d1-c0edc28026ab",
+  "nativeSourceFile": "/workspace/scratch/5f5114b49696/generated_images/exec-704d13c8-27bc-489b-97d1-c0edc28026ab.png",
+  "file": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/victory.png",
+  "targetFile": "assets/encore/poses/strongmanorbsman/victory.png",
+  "sha256": "f87735a2e0b4f04db2dd30a7765e73b202b2c764b8dec2584ad38315002391d2",
+  "bytes": 1536055,
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "fullyTransparentPixels": 888748,
+  "alpha12Bounds": [
+    18,
+    123,
+    1001,
+    1474
+  ],
+  "alpha12BoundsThreshold": "alpha >= 12",
+  "nativeCopyVerified": true,
+  "nativeFacing": "right",
+  "visualReview": {
+    "reviewer": "generate_gangle_zooble",
+    "status": "accepted",
+    "observations": [
+      "Accepted low-bar proud finish after rejecting three topology-drifting attempts. Each arm visibly has four spheres including its round hand; two trunk spheres and the three leg spheres plus each foot are retained. Raised head, relaxed eyebrows and broad stance distinguish the celebration. Faces right, whole barbell and character fit in alpha bounds."
+    ],
+    "scope": "Approved merchandise identity and game presentation; original static game pose, no canonical episode certification."
+  },
+  "rejectedAttempts": [
+    {
+      "receipt": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/attempts/victory-01.json",
+      "file": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/attempts/victory-01.png",
+      "sourceGenerationId": "exec-fc9e5c8e-42d0-4da8-b60b-53913ed1c1a1",
+      "sha256": "826d82efe07d7555154235bdca6299f3b37a054f18980ae74b74952ab8abf342",
+      "reason": "Victory lengthens each arm into about six spheres rather than the four including the spherical hand in the accepted selection, and collapses the two-sphere torso/pelvis read. Do not integrate this anatomy drift."
+    },
+    {
+      "receipt": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/attempts/victory-02.json",
+      "file": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/attempts/victory-02.png",
+      "sourceGenerationId": "exec-a4e89eb1-9782-4997-9b89-17b141eb66da",
+      "sha256": "f09fa003a6ef37fdb2beee5c3bd84453b10762a75951df120e719163bc89fdf8",
+      "reason": "Overhead victory still adds too many spheres to each arm despite explicit topology lock. Keep rejected and change the celebration pose rather than accepting elongated anatomy."
+    },
+    {
+      "receipt": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/attempts/victory-03.json",
+      "file": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/attempts/victory-03.png",
+      "sourceGenerationId": "exec-3c8d5bd3-81d2-475b-912e-de8384e81589",
+      "sha256": "03b95a10e7601822401ec1a4a7e80e390f3404b4a3dd535fc00266add9ae38dd",
+      "reason": "Diagonal chest-level celebration restores the two trunk spheres but image-left arm has five spheres including its hand instead of four. Keep this asymmetric topology drift rejected."
+    }
+  ]
+}

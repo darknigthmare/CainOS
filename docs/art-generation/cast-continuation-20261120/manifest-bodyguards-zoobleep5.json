@@ -1,0 +1,1190 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-20",
+  "method": "image_gen.imagegen",
+  "policy": "Native generated PNG bytes copied without resizing, trimming, recompression, recoloring or alpha modification. One individual whole-body image per slot.",
+  "fidelity": "Primary official episode previews establish accessories; the official trailer thumbnail establishes the whole episode-five Zooble assembly. Episode previews are 320x180 pixels, and small unreadable details are not certified. Proportions and combat actions are original 2D fan-game adaptations; no episode-frame 1:1 fidelity claimed.",
+  "expectedAppearances": [
+    "bodyguardragatha",
+    "bodyguardzooble",
+    "zoobleep5"
+  ],
+  "expectedSlots": [
+    "selection",
+    "stance",
+    "intro",
+    "walk",
+    "jump",
+    "crouch",
+    "attack",
+    "heavy",
+    "hit",
+    "victory",
+    "defeat"
+  ],
+  "entries": [
+    {
+      "id": "bodyguardragatha-selection",
+      "appearanceId": "bodyguardragatha",
+      "slot": "selection",
+      "file": "assets/encore/selection/bodyguardragatha.png",
+      "sourceGenerationId": "exec-9f7fd1d4-974a-4b99-9a41-c4ed4be6e75d",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=260s",
+        "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/ragatha.webp",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/bodyguards-upper-260s-native.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode5-trailer-thumbnail.jpg"
+      ],
+      "prompt": "Use case: identity-preserve. Asset type: ONE individual full-body character-selection sprite for Digital Circus Encore. Image 1 is the existing Ragatha game character and controls identity, complete body, blue patchwork dress, red yarn hair, lavender hair bow, proportions, black shoes and crisp clean 2D cel-shaded illustration. Image 2 is the primary official episode-five bodyguard reference; Ragatha is the character on the LEFT. Image 3 is an official whole-body reference; use only Ragatha, not the others. Create Bodyguard Ragatha: SAME ordinary blue/periwinkle patchwork dress with short puff sleeves, white collar/cuffs/hem, red yarn hair, large lavender bow, cream fabric skin, triangular red nose, short cream legs and black rounded shoes. Add the exact large opaque BLACK SUNGLASSES covering both eye positions seen in image 2. No suit, earpiece, weapon, holster, extra uniform or invented accessories. Pose: full-length calm security attendant stance, both feet planted a little apart, one hand on her waist, the other hand relaxed beside her; small composed mouth. Keep all extremities, complete skirt hem, hair bow and shoes in frame with generous transparent margins. Flat polished 2D game illustration matching image 1, not a 3D toy or photo. Actual transparent RGBA background, clean silhouette and opaque character interior. One single figure only, no shadow, floor, environment, scenery, caption, text, frame, badge, watermark, glow, aura, duplicate view or sprite sheet. Preserve the exact dress and character; only the sunglasses and this pose differ from her base appearance.",
+      "sha256": "1467e634913d72e6edd4704434c7ee87df713fb4c1bc9779fd55c4ee222a4e3c",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        929,
+        1694
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        60,
+        16,
+        902,
+        1679
+      ],
+      "bytes": 1246827,
+      "visualReview": "Individually viewed: one complete character, distinctive appearance and anatomy retained; native transparency and safe alpha bounds verified.",
+      "productionStatus": "complete",
+      "includedInRuntime": true
+    },
+    {
+      "id": "bodyguardragatha-stance",
+      "appearanceId": "bodyguardragatha",
+      "slot": "stance",
+      "file": "assets/encore/stance/bodyguardragatha.png",
+      "sourceGenerationId": "exec-71ed74c4-83c6-4ae0-93cf-1ab84860f210",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=260s",
+        "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-9f7fd1d4-974a-4b99-9a41-c4ed4be6e75d.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/bodyguards-upper-260s-native.png"
+      ],
+      "prompt": "Use case: identity-preserve. ONE single full-body stance sprite for Digital Circus Encore. Image 1 is the approved selection sprite: preserve its exact character identity, body, proportions, clothing, colors and art style. Image 2 is supporting official reference only. Change ONLY the pose: Ready fighting guard: feet spread for balance, knees gently bent under skirt, both closed mitten-like hands up near chest, torso slightly turned toward screen right. Composed vigilant expression. Keep complete skirt and both shoes visible. Invariants: Keep the exact black opaque sunglasses, red yarn bob, large lavender hair bow, cream cloth face/skin, red triangular nose, small smile, same blue/periwinkle patchwork dress with white collar/cuffs/hem, puff sleeves, short cream legs and black rounded shoes. No other clothing or equipment. Same proportions, clean outlines and cel shading. This is one entire character in one individual image, not a collage or sprite sheet. Actual transparent RGBA background, opaque character interior, clean silhouette, generous margins around all tips, bow/antennas, hands and feet. No floor, shadow, haze, glow, motion trails, duplicate body, weapons, scene props, letters, text, frame or watermark. Render clean flat 2D game illustration.",
+      "sha256": "1073d82711ad5c35572c6b7a1d484e1b1443db1baab6c39a7be77a2db8c26643",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        1038,
+        1516
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        116,
+        27,
+        846,
+        1489
+      ],
+      "bytes": 1055667,
+      "visualReview": "Individually viewed: one complete character, distinctive appearance and anatomy retained; native transparency and safe alpha bounds verified.",
+      "productionStatus": "complete",
+      "includedInRuntime": true
+    },
+    {
+      "id": "bodyguardragatha-intro",
+      "appearanceId": "bodyguardragatha",
+      "slot": "intro",
+      "file": "assets/encore/poses/bodyguardragatha/intro.png",
+      "sourceGenerationId": "exec-5ed52bd6-2b83-4ded-9018-bc0163376dab",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=260s",
+        "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-9f7fd1d4-974a-4b99-9a41-c4ed4be6e75d.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/bodyguards-upper-260s-native.png"
+      ],
+      "prompt": "Use case: identity-preserve. ONE single full-body intro sprite for Digital Circus Encore. Image 1 is the approved selection sprite: preserve its exact character identity, body, proportions, clothing, colors and art style. Image 2 is supporting official reference only. Change ONLY the pose: Intro greeting: stand upright with one foot lightly forward, lift one hand to touch the outer edge of the sunglasses in a calm security-attendant salute; other hand stays on hip. Smile slightly. Glasses remain covering both eyes. Complete body. Invariants: Keep the exact black opaque sunglasses, red yarn bob, large lavender hair bow, cream cloth face/skin, red triangular nose, small smile, same blue/periwinkle patchwork dress with white collar/cuffs/hem, puff sleeves, short cream legs and black rounded shoes. No other clothing or equipment. Same proportions, clean outlines and cel shading. This is one entire character in one individual image, not a collage or sprite sheet. Actual transparent RGBA background, opaque character interior, clean silhouette, generous margins around all tips, bow/antennas, hands and feet. No floor, shadow, haze, glow, motion trails, duplicate body, weapons, scene props, letters, text, frame or watermark. Render clean flat 2D game illustration.",
+      "sha256": "9127600afc40002067ed9decee2c6afd27bfa8454a04e676013f5a6dc43f7b68",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        929,
+        1694
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        65,
+        15,
+        890,
+        1678
+      ],
+      "bytes": 1183410,
+      "visualReview": "Individually viewed: one complete character, distinctive appearance and anatomy retained; native transparency and safe alpha bounds verified.",
+      "productionStatus": "complete",
+      "includedInRuntime": true
+    },
+    {
+      "id": "bodyguardragatha-walk",
+      "appearanceId": "bodyguardragatha",
+      "slot": "walk",
+      "file": "assets/encore/poses/bodyguardragatha/walk.png",
+      "sourceGenerationId": "exec-4eed91e0-2cf0-4cc9-9bb7-611279e8fbd4",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=260s",
+        "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-9f7fd1d4-974a-4b99-9a41-c4ed4be6e75d.png"
+      ],
+      "prompt": "Use case: identity-preserve. ONE individual full-body walk sprite for Digital Circus Encore. The reference is the approved character selection sprite. Change ONLY pose: Mid-stride walk toward screen right, one black shoe forward and the other behind, arms swinging naturally opposite the steps. Skirt tilts softly with the stride while maintaining full length. Keep head and both opaque sunglasses directed slightly toward the viewer. Identity invariants: Keep the exact black opaque sunglasses, red yarn bob, large lavender hair bow, cream cloth face/skin, red triangular nose, small smile, same blue/periwinkle patchwork dress with white collar/cuffs/hem, puff sleeves, short cream legs and black rounded shoes. No other clothing or equipment. Same proportions, clean outlines and cel shading. Match the reference's exact character proportions and crisp outlined 2D cel-shaded art. One whole figure, true transparent RGBA background and opaque body interior. Generous transparent margins around every extremity, head bow/antennas, hands, peg and shoes. No background, shadow, floor, haze, glow, text, logo, extra accessories, motion trail, duplicate view or sprite sheet.",
+      "sha256": "f9e5e83b39fc0c69a818c244912d900c12879b82b445b6faaf87cae1b38d599f",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        929,
+        1693
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        56,
+        16,
+        873,
+        1660
+      ],
+      "bytes": 1251994,
+      "visualReview": "Individually viewed: one complete character, distinctive appearance and anatomy retained; native transparency and safe alpha bounds verified.",
+      "productionStatus": "complete",
+      "includedInRuntime": true
+    },
+    {
+      "id": "bodyguardragatha-jump",
+      "appearanceId": "bodyguardragatha",
+      "slot": "jump",
+      "file": "assets/encore/poses/bodyguardragatha/jump.png",
+      "sourceGenerationId": "exec-8b821d04-a4aa-4f04-a6c3-14cfd250802a",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=260s",
+        "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-9f7fd1d4-974a-4b99-9a41-c4ed4be6e75d.png"
+      ],
+      "prompt": "Use case: identity-preserve. ONE individual full-body jump sprite for Digital Circus Encore. The reference is the approved character selection sprite. Change ONLY pose: A single airborne jump: both knees bent and both black shoes off the ground under her full skirt, arms lifted outward for balance, head upright, confident small smile. Preserve dignity of the clothing and full skirt coverage. No floor and no action effects. Identity invariants: Keep the exact black opaque sunglasses, red yarn bob, large lavender hair bow, cream cloth face/skin, red triangular nose, small smile, same blue/periwinkle patchwork dress with white collar/cuffs/hem, puff sleeves, short cream legs and black rounded shoes. No other clothing or equipment. Same proportions, clean outlines and cel shading. Match the reference's exact character proportions and crisp outlined 2D cel-shaded art. One whole figure, true transparent RGBA background and opaque body interior. Generous transparent margins around every extremity, head bow/antennas, hands, peg and shoes. No background, shadow, floor, haze, glow, text, logo, extra accessories, motion trail, duplicate view or sprite sheet.",
+      "sha256": "4787faab8de5a47ed3d69c4f9f0318cd85a3a6b7f2d5e3458bcf7ce0b30fd427",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        1044,
+        1506
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        78,
+        34,
+        966,
+        1403
+      ],
+      "bytes": 1058365,
+      "visualReview": "Individually viewed: one complete character, distinctive appearance and anatomy retained; native transparency and safe alpha bounds verified.",
+      "productionStatus": "complete",
+      "includedInRuntime": true
+    },
+    {
+      "id": "bodyguardragatha-crouch",
+      "appearanceId": "bodyguardragatha",
+      "slot": "crouch",
+      "file": "assets/encore/poses/bodyguardragatha/crouch.png",
+      "sourceGenerationId": "exec-7fb567ca-a748-4ba1-b089-d1861379aa72",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=260s",
+        "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-9f7fd1d4-974a-4b99-9a41-c4ed4be6e75d.png"
+      ],
+      "prompt": "Use case: identity-preserve. ONE individual full-body crouch sprite for Digital Circus Encore. Reference image is the approved whole character. Change ONLY pose: Low crouching guard: bend both knees deeply, lower the whole torso and long skirt close to her black shoes, fists held near upper chest. Keep modest full-skirt coverage, composed expression and all body parts in frame. Mandatory identity invariants: Keep the exact black opaque sunglasses, red yarn bob, large lavender hair bow, cream cloth face/skin, red triangular nose, small smile, same blue/periwinkle patchwork dress with white collar/cuffs/hem, puff sleeves, short cream legs and black rounded shoes. No other clothing or equipment. Same proportions, clean outlines and cel shading. Exact same proportions, crisp black outlines and clean 2D cel shading. True transparent RGBA outside opaque character. One single complete figure with generous clear margins around bow/antennas, head, hands and feet; no cut-off shapes. No background, floor, shadow, glow, haze, text, symbols, motion effects, extra limbs, clothes or props, alternate view or sprite sheet.",
+      "sha256": "432f2e5d370f101a6e46f58884904f444a203065c60893d3de24233dc422fc25",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        1180,
+        1333
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        98,
+        15,
+        1014,
+        1315
+      ],
+      "bytes": 1157217,
+      "visualReview": "Individually viewed: one complete character, distinctive appearance and anatomy retained; native transparency and safe alpha bounds verified.",
+      "productionStatus": "complete",
+      "includedInRuntime": true
+    },
+    {
+      "id": "bodyguardragatha-attack",
+      "appearanceId": "bodyguardragatha",
+      "slot": "attack",
+      "file": "assets/encore/poses/bodyguardragatha/attack.png",
+      "sourceGenerationId": "exec-5a3ad9f6-4a64-4a84-9b76-65d8367d6d92",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=260s",
+        "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-9f7fd1d4-974a-4b99-9a41-c4ed4be6e75d.png"
+      ],
+      "prompt": "Use case: identity-preserve. ONE individual full-body attack sprite for Digital Circus Encore. Reference image is the approved whole character. Change ONLY pose: One controlled forward punch toward screen right: front arm extended with mitten fist at chest height, other fist near her chest, feet grounded in a wide step. Head stays three-quarter visible and glasses stay on. Full skirt and shoes visible; no enemy or impact effect. Mandatory identity invariants: Keep the exact black opaque sunglasses, red yarn bob, large lavender hair bow, cream cloth face/skin, red triangular nose, small smile, same blue/periwinkle patchwork dress with white collar/cuffs/hem, puff sleeves, short cream legs and black rounded shoes. No other clothing or equipment. Same proportions, clean outlines and cel shading. Exact same proportions, crisp black outlines and clean 2D cel shading. True transparent RGBA outside opaque character. One single complete figure with generous clear margins around bow/antennas, head, hands and feet; no cut-off shapes. No background, floor, shadow, glow, haze, text, symbols, motion effects, extra limbs, clothes or props, alternate view or sprite sheet.",
+      "sha256": "2922b99a9c3635bcd23d52160f17bafb0af5d577d0232a773a7b554487886521",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        1089,
+        1444
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        90,
+        27,
+        1002,
+        1424
+      ],
+      "bytes": 1048355,
+      "visualReview": "Individually viewed: one complete character, distinctive appearance and anatomy retained; native transparency and safe alpha bounds verified.",
+      "productionStatus": "complete",
+      "includedInRuntime": true
+    },
+    {
+      "id": "bodyguardragatha-heavy",
+      "appearanceId": "bodyguardragatha",
+      "slot": "heavy",
+      "file": "assets/encore/poses/bodyguardragatha/heavy.png",
+      "sourceGenerationId": "exec-1e1a4fdd-61b2-4f58-a184-28a0d0dcaa05",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=260s",
+        "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-9f7fd1d4-974a-4b99-9a41-c4ed4be6e75d.png"
+      ],
+      "prompt": "Use case: identity-preserve. ONE individual complete full-body heavy sprite for Digital Circus Encore. Reference image is the approved appearance. Change ONLY the pose: Powerful heavy attack wind-up: both mitten fists held together above and slightly in front of her shoulder, elbows raised, knees bent and feet spread. Entire skirt stays modest and complete; no weapon or effects. Clear forceful pose distinct from her straight jab. Identity and anatomy locks: Keep the exact black opaque sunglasses, red yarn bob, large lavender hair bow, cream cloth face/skin, red triangular nose, small smile, same blue/periwinkle patchwork dress with white collar/cuffs/hem, puff sleeves, short cream legs and black rounded shoes. No other clothing or equipment. Same proportions, clean outlines and cel shading. Same crisp outlined 2D cel-shaded game illustration and proportions. One whole subject with generous clear safe margins around every hair bow/antenna, hand and foot. Actual transparent RGBA background with opaque subject. No floor, background, shadow, glow, haze, letters, watermark, sprite sheet, duplicate view or extra accessories.",
+      "sha256": "11ca7692a0c73975ffb51df983622c845673b78b7e67dfd923d0816c89c30a36",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        1071,
+        1469
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        91,
+        20,
+        962,
+        1451
+      ],
+      "bytes": 1202496,
+      "visualReview": "Individually viewed: one complete character, distinctive appearance and anatomy retained; native transparency and safe alpha bounds verified.",
+      "productionStatus": "complete",
+      "includedInRuntime": true
+    },
+    {
+      "id": "bodyguardragatha-hit",
+      "appearanceId": "bodyguardragatha",
+      "slot": "hit",
+      "file": "assets/encore/poses/bodyguardragatha/hit.png",
+      "sourceGenerationId": "exec-66e7069e-0171-497b-8345-f6e16098dae0",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=260s",
+        "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-9f7fd1d4-974a-4b99-9a41-c4ed4be6e75d.png"
+      ],
+      "prompt": "Use case: identity-preserve. ONE individual complete full-body hit sprite for Digital Circus Encore. Reference image is the approved appearance. Change ONLY the pose: React to a hit: whole torso leans back slightly, one black shoe sliding behind the other, both arms spread in a startled balance gesture, small worried mouth. Glasses remain covering both eyes, hair and bow intact, no injury or damage, no effect marks. Identity and anatomy locks: Keep the exact black opaque sunglasses, red yarn bob, large lavender hair bow, cream cloth face/skin, red triangular nose, small smile, same blue/periwinkle patchwork dress with white collar/cuffs/hem, puff sleeves, short cream legs and black rounded shoes. No other clothing or equipment. Same proportions, clean outlines and cel shading. Same crisp outlined 2D cel-shaded game illustration and proportions. One whole subject with generous clear safe margins around every hair bow/antenna, hand and foot. Actual transparent RGBA background with opaque subject. No floor, background, shadow, glow, haze, letters, watermark, sprite sheet, duplicate view or extra accessories.",
+      "sha256": "1d025786afc566d7c015b4ce5c1313682b6e20d80c9898b1e28646859d6cb947",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        929,
+        1694
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        19,
+        16,
+        909,
+        1675
+      ],
+      "bytes": 1254198,
+      "visualReview": "Individually viewed: one complete character, distinctive appearance and anatomy retained; native transparency and safe alpha bounds verified.",
+      "productionStatus": "complete",
+      "includedInRuntime": true
+    },
+    {
+      "id": "bodyguardragatha-victory",
+      "appearanceId": "bodyguardragatha",
+      "slot": "victory",
+      "file": "assets/encore/poses/bodyguardragatha/victory.png",
+      "sourceGenerationId": "exec-d756cf46-e28b-43d9-88c1-5716ff13a2c1",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=260s",
+        "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-9f7fd1d4-974a-4b99-9a41-c4ed4be6e75d.png"
+      ],
+      "prompt": "Use case: identity-preserve. ONE individual complete full-body victory sprite for Digital Circus Encore. Reference image is the approved appearance. Change ONLY the pose: Victory pose: stand tall with one closed mitten fist raised above her shoulder, other hand on hip, small confident smile. Both shoes planted, complete long skirt and bow visible. Sunglasses stay on. No trophy, signs or particles. Identity and anatomy locks: Keep the exact black opaque sunglasses, red yarn bob, large lavender hair bow, cream cloth face/skin, red triangular nose, small smile, same blue/periwinkle patchwork dress with white collar/cuffs/hem, puff sleeves, short cream legs and black rounded shoes. No other clothing or equipment. Same proportions, clean outlines and cel shading. Same crisp outlined 2D cel-shaded game illustration and proportions. One whole subject with generous clear safe margins around every hair bow/antenna, hand and foot. Actual transparent RGBA background with opaque subject. No floor, background, shadow, glow, haze, letters, watermark, sprite sheet, duplicate view or extra accessories.",
+      "sha256": "acefc383357902e90b726264ec91a9aaccfb7f1a7e5b81090a08b50101812e8f",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        929,
+        1694
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        51,
+        15,
+        905,
+        1680
+      ],
+      "bytes": 1244506,
+      "visualReview": "Individually viewed: one complete character, distinctive appearance and anatomy retained; native transparency and safe alpha bounds verified.",
+      "productionStatus": "complete",
+      "includedInRuntime": true
+    },
+    {
+      "id": "bodyguardragatha-defeat",
+      "appearanceId": "bodyguardragatha",
+      "slot": "defeat",
+      "file": "assets/encore/poses/bodyguardragatha/defeat.png",
+      "sourceGenerationId": "exec-392a2a1f-6ec3-4ae4-8fbb-96ee5f996181",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=260s",
+        "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-9f7fd1d4-974a-4b99-9a41-c4ed4be6e75d.png"
+      ],
+      "prompt": "Use case: identity-preserve. ONE individual complete full-body defeat sprite for Digital Circus Encore. Reference image is the approved appearance. Change ONLY the pose: Gentle defeated pose: sit low with knees drawn under her full long skirt, head bowed a little, hands resting on the skirt, small downturned mouth. Both black shoes still visible at hem; all clothing, hair, bow and sunglasses intact. No injuries, tears, scene props or ground. Identity and anatomy locks: Keep the exact black opaque sunglasses, red yarn bob, large lavender hair bow, cream cloth face/skin, red triangular nose, small smile, same blue/periwinkle patchwork dress with white collar/cuffs/hem, puff sleeves, short cream legs and black rounded shoes. No other clothing or equipment. Same proportions, clean outlines and cel shading. Same crisp outlined 2D cel-shaded game illustration and proportions. One whole subject with generous clear safe margins around every hair bow/antenna, hand and foot. Actual transparent RGBA background with opaque subject. No floor, background, shadow, glow, haze, letters, watermark, sprite sheet, duplicate view or extra accessories.",
+      "sha256": "bb91339504b0e245608e09f50710db6ca9ef1e008c37c236d80e695ea412e7ac",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        1137,
+        1383
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        159,
+        68,
+        974,
+        1345
+      ],
+      "bytes": 1078501,
+      "visualReview": "Individually viewed: one complete character, distinctive appearance and anatomy retained; native transparency and safe alpha bounds verified.",
+      "productionStatus": "complete",
+      "includedInRuntime": true
+    },
+    {
+      "id": "bodyguardzooble-selection",
+      "appearanceId": "bodyguardzooble",
+      "slot": "selection",
+      "file": "assets/encore/selection/bodyguardzooble.png",
+      "sourceGenerationId": "exec-aa0e963f-53bb-4d87-87a9-9a7c45732956",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=260s",
+        "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/zooble-ep5-official-thumbnail-crop.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/bodyguards-upper-260s-native.png",
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/zooble.webp"
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: ONE individual full-body character-selection sprite for Digital Circus Encore. Create Bodyguard Zooble in their exact episode-five modular assembly plus opaque black sunglasses. Image 1 is the official whole-body anatomy reference, copy every distinctive piece and its side. Image 2 is the official episode bodyguard reference: Zooble is on the RIGHT; copy the oversized opaque BLACK SUNGLASSES covering both eyes. Image 3 controls ONLY the crisp outlined 2D cel-shaded game illustration style; its DIFFERENT torso ornament, hands, antennas and legs must NOT replace the anatomy in image 1. Whole subject invariants: bright pink broad triangular head pointing toward screen left, no mouth; cyan angular lightning antenna on screen left and black-white striped curled spring antenna on screen right. Yellow elongated spotted torso with orange/pink round spots, hollow violet inverted-triangle chest ornament, one small scalloped pink feather wing at upper screen-left torso. Exact unlike arms: screen-left arm is slender yellow articulated rod with yellow round elbow and yellow cartoon glove/hand; screen-right arm has a GREEN SPRING upper arm, PINK spherical elbow, long PINK-AND-WHITE striped straight lower rod, and ONE GREEN C-shaped pincer hand. Exact unlike legs: screen-left leg has a CYAN ZIGZAG upper section and a long tapered pointed RED-AND-YELLOW striped peg; screen-right leg is one long slim PURPLE bent rod ending in a rounded PURPLE foot/boot. Do not swap the sides, duplicate the claw, give ordinary human limbs, add clothes or replace the peg with a shoe. Both eyes are entirely hidden by dark black sunglasses as in the episode. Pose: relaxed upright watchful security stance, whole body standing on both unlike feet, arms slightly away from torso so every piece is legible; front three-quarter view preserving stated screen sides. Complete antenna tips, wing, hands and both feet visible with clear safe margins. One full character on true transparent RGBA background, no floor or shadow, no text, logo, effects, glow, props, scenery, box, toy pedestal, duplicates, collage or sprite sheet. Flat 2D illustrated art, not plush or 3D. Original fan-game pose based on the official anatomy.",
+      "sha256": "b9eba9cf8ddbaaabecd98e5d718bb8387e4c032b12f6fd36149214ee30579ee5",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "bboxAlpha12": [
+        101,
+        11,
+        891,
+        1527
+      ],
+      "bytes": 1515650,
+      "visualReview": "Individually viewed: one complete character, distinctive appearance and anatomy retained; native transparency and safe alpha bounds verified.",
+      "productionStatus": "complete",
+      "includedInRuntime": true
+    },
+    {
+      "id": "bodyguardzooble-stance",
+      "appearanceId": "bodyguardzooble",
+      "slot": "stance",
+      "file": "assets/encore/stance/bodyguardzooble.png",
+      "sourceGenerationId": "exec-37f3e262-6094-4413-bda7-ef47e43e303f",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=260s",
+        "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-aa0e963f-53bb-4d87-87a9-9a7c45732956.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/zooble-ep5-official-thumbnail-crop.png"
+      ],
+      "prompt": "Use case: identity-preserve. ONE single full-body stance sprite for Digital Circus Encore. Image 1 is the approved selection sprite: preserve its exact character identity, body, proportions, clothing, colors and art style. Image 2 is supporting official reference only. Change ONLY the pose: Ready fighting guard toward screen right: lower torso slightly, spread the unlike feet, bend the purple leg and the existing cyan zigzag without changing their parts; bring yellow hand near chest and green C-claw forward. Show all modular joints and both complete feet. Invariants: Keep the pink triangular mouthless head and opaque black sunglasses, cyan lightning antenna on screen left and black-white curled spring antenna on screen right, yellow spotted torso with hollow violet inverted triangle, pink feather wing screen left. Screen-left arm: slender yellow segmented rod, yellow round elbow, yellow hand. Screen-right arm: green spring, pink round elbow, pink-white striped straight forearm, one green C-claw. Screen-left leg: cyan zigzag, red-yellow pointed peg. Screen-right leg: long purple bendy rod, purple rounded boot. Preserve these sides and exactly two arms/two legs, no added pieces, no swaps, same 2D line art. This is one entire character in one individual image, not a collage or sprite sheet. Actual transparent RGBA background, opaque character interior, clean silhouette, generous margins around all tips, bow/antennas, hands and feet. No floor, shadow, haze, glow, motion trails, duplicate body, weapons, scene props, letters, text, frame or watermark. Render clean flat 2D game illustration.",
+      "sha256": "4db21fa1a7fe131d089cbfe745ed929d715a6b5844f24a4d680e5940426af973",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        48,
+        16,
+        1159,
+        1288
+      ],
+      "bytes": 736384,
+      "visualReview": "Individually viewed: one complete character, distinctive appearance and anatomy retained; native transparency and safe alpha bounds verified.",
+      "productionStatus": "complete",
+      "includedInRuntime": true
+    },
+    {
+      "id": "bodyguardzooble-intro",
+      "appearanceId": "bodyguardzooble",
+      "slot": "intro",
+      "file": "assets/encore/poses/bodyguardzooble/intro.png",
+      "sourceGenerationId": "exec-ad2bc54c-e48c-4645-8b39-1b8d4a46368a",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=260s",
+        "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-aa0e963f-53bb-4d87-87a9-9a7c45732956.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/zooble-ep5-official-thumbnail-crop.png"
+      ],
+      "prompt": "Use case: identity-preserve. ONE single full-body intro sprite for Digital Circus Encore. Image 1 is the approved selection sprite: preserve its exact character identity, body, proportions, clothing, colors and art style. Image 2 is supporting official reference only. Change ONLY the pose: Intro attitude: upright whole-body pose, yellow hand lifted to touch the upper outer edge of the sunglasses; green C-claw placed at waist. Slight curious head tilt, both unlike feet visible and safely planted; do not remove the glasses. Invariants: Keep the pink triangular mouthless head and opaque black sunglasses, cyan lightning antenna on screen left and black-white curled spring antenna on screen right, yellow spotted torso with hollow violet inverted triangle, pink feather wing screen left. Screen-left arm: slender yellow segmented rod, yellow round elbow, yellow hand. Screen-right arm: green spring, pink round elbow, pink-white striped straight forearm, one green C-claw. Screen-left leg: cyan zigzag, red-yellow pointed peg. Screen-right leg: long purple bendy rod, purple rounded boot. Preserve these sides and exactly two arms/two legs, no added pieces, no swaps, same 2D line art. This is one entire character in one individual image, not a collage or sprite sheet. Actual transparent RGBA background, opaque character interior, clean silhouette, generous margins around all tips, bow/antennas, hands and feet. No floor, shadow, haze, glow, motion trails, duplicate body, weapons, scene props, letters, text, frame or watermark. Render clean flat 2D game illustration.",
+      "sha256": "9adbf8c010aca506110f6224061b427ab336c48859a6d890c94067142fa34487",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "bboxAlpha12": [
+        142,
+        11,
+        873,
+        1524
+      ],
+      "bytes": 1420123,
+      "visualReview": "Individually viewed: one complete character, distinctive appearance and anatomy retained; native transparency and safe alpha bounds verified.",
+      "productionStatus": "complete",
+      "includedInRuntime": true
+    },
+    {
+      "id": "bodyguardzooble-walk",
+      "appearanceId": "bodyguardzooble",
+      "slot": "walk",
+      "file": "assets/encore/poses/bodyguardzooble/walk.png",
+      "sourceGenerationId": "exec-63827051-c08b-4c2b-8200-8ff199cd529a",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=260s",
+        "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-692bea6b-54c6-4a30-a80e-3cf256646f85.png",
+        "/workspace/scratch/5f5114b49696/generated_images/exec-aa0e963f-53bb-4d87-87a9-9a7c45732956.png"
+      ],
+      "prompt": "Use case: precise-object-edit. Correct ONLY the two arms in image 1, the walking sprite. Image 2 is the anatomical reference. Image 1 mistakenly swapped the arm shoulder attachments. Restore the yellow articulated rod arm with yellow elbow and yellow hand to the LEFT edge of the torso in the image; restore the green spring upper arm, pink spherical elbow, pink-white striped lower rod and green C-claw to the RIGHT edge of the torso. Show the left yellow hand on the left of the torso and the right green C-claw on its right; keep this simple and readable without crossing the torso. Do NOT change the walking legs, body, head, sunglasses, antennas, wing, chest triangle, proportions or 2D art. One full character, all tips visible. Genuine transparent RGBA background; no glow, scene, shadow, text or extra body parts. Preserve all anatomy except correcting the arm sides.",
+      "sha256": "8e0368aac2e159f8871c4d45eb7e7abda4abb0c172fa194192eaba0fcadc3e2f",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "bboxAlpha12": [
+        90,
+        10,
+        963,
+        1466
+      ],
+      "bytes": 1523656,
+      "visualReview": "Targeted arm-side correction inspected; yellow arm restored to image left, green spring/pincer arm to image right. Whole walking silhouette preserved.",
+      "productionStatus": "complete",
+      "includedInRuntime": true
+    },
+    {
+      "id": "bodyguardzooble-jump",
+      "appearanceId": "bodyguardzooble",
+      "slot": "jump",
+      "file": "assets/encore/poses/bodyguardzooble/jump.png",
+      "sourceGenerationId": "exec-e308c452-7d20-420b-ad3e-d8985c17d8aa",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=260s",
+        "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-aa0e963f-53bb-4d87-87a9-9a7c45732956.png"
+      ],
+      "prompt": "Use case: identity-preserve. ONE individual full-body jump sprite for Digital Circus Encore. The reference is the approved character selection sprite. Change ONLY pose: A single airborne jump: lift the purple boot leg forward while the cyan-zigzag peg leg folds back in its existing joints, arms lifted out for balance, triangular head upright. Keep complete unlike feet and antenna tips visible, no extra joints or body parts. Identity invariants: Keep the pink triangular mouthless head and opaque black sunglasses, cyan lightning antenna on screen left and black-white curled spring antenna on screen right, yellow spotted torso with hollow violet inverted triangle, pink feather wing screen left. Screen-left arm: slender yellow segmented rod, yellow round elbow, yellow hand. Screen-right arm: green spring, pink round elbow, pink-white striped straight forearm, one green C-claw. Screen-left leg: cyan zigzag, red-yellow pointed peg. Screen-right leg: long purple bendy rod, purple rounded boot. Preserve these sides and exactly two arms/two legs, no added pieces, no swaps, same 2D line art. Match the reference's exact character proportions and crisp outlined 2D cel-shaded art. One whole figure, true transparent RGBA background and opaque body interior. Generous transparent margins around every extremity, head bow/antennas, hands, peg and shoes. No background, shadow, floor, haze, glow, text, logo, extra accessories, motion trail, duplicate view or sprite sheet.",
+      "sha256": "f8256c0ebfd8b69301b7417b836ed0afd2558aa87cc22b53d83dd9983c5db747",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "bboxAlpha12": [
+        28,
+        88,
+        996,
+        1179
+      ],
+      "bytes": 1450546,
+      "visualReview": "Individually viewed: one complete character, distinctive appearance and anatomy retained; native transparency and safe alpha bounds verified.",
+      "productionStatus": "complete",
+      "includedInRuntime": true
+    },
+    {
+      "id": "bodyguardzooble-crouch",
+      "appearanceId": "bodyguardzooble",
+      "slot": "crouch",
+      "file": "assets/encore/poses/bodyguardzooble/crouch.png",
+      "sourceGenerationId": "exec-c3f785cc-67e6-4238-8cae-508365fe8e93",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=260s",
+        "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-0c749572-29b9-4bb0-94db-88ffe65233b2.png",
+        "/workspace/scratch/5f5114b49696/generated_images/exec-aa0e963f-53bb-4d87-87a9-9a7c45732956.png"
+      ],
+      "prompt": "Use case: precise-object-edit. Correct ONLY the RIGHT striped forearm in image 1, the crouching Zooble sprite. Image 2 confirms the anatomy. The striped pink-white forearm must be ONE STRAIGHT RIGID ROD connecting the pink spherical elbow to the green C-claw. Remove its invented middle bend entirely. Keep the green spring upper arm and pink elbow on the RIGHT of the torso; place the green claw farther outward to the right so the straight rod is easy to see and does not cross the torso. Keep exactly one green claw. Preserve EVERYTHING else in image 1: sunglasses, pink head, antennas, chest triangle, wing, yellow LEFT arm, crouching cyan/peg LEFT leg and purple boot RIGHT leg, body and 2D style. One complete character, true transparent RGBA, no extra anatomy, no glow, floor, shadow, background, text or sprite sheet. Safe margin around all extremities.",
+      "sha256": "90a7666b71d7296c9f0cbe33509de359716a5928cc47370751d80da9fec92979",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "bboxAlpha12": [
+        126,
+        255,
+        991,
+        1376
+      ],
+      "bytes": 1452335,
+      "visualReview": "Targeted correction visually inspected: right striped forearm is one straight rod. Both unlike arms and legs remain attached on the correct sides, full crouching body visible.",
+      "productionStatus": "complete",
+      "includedInRuntime": true
+    },
+    {
+      "id": "bodyguardzooble-attack",
+      "appearanceId": "bodyguardzooble",
+      "slot": "attack",
+      "file": "assets/encore/poses/bodyguardzooble/attack.png",
+      "sourceGenerationId": "exec-1e5a9e42-74a4-484f-8241-304adff1f029",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=260s",
+        "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-aa0e963f-53bb-4d87-87a9-9a7c45732956.png"
+      ],
+      "prompt": "Use case: identity-preserve. ONE individual full-body attack sprite for Digital Circus Encore. Reference image is the approved whole character. Change ONLY pose: One controlled short jab with the GREEN PINCER ARM on the RIGHT SIDE of the image, extending that existing spring/striped arm toward screen right. Yellow LEFT arm stays bent near left side of chest. Feet remain planted, peg on left and purple boot on right. No projectile, enemy or impact effect. Mandatory identity invariants: Keep the pink triangular mouthless head and opaque black sunglasses, cyan lightning antenna on screen left and black-white curled spring antenna on screen right, yellow spotted torso with hollow violet inverted triangle, pink feather wing screen left. Screen-left arm: slender yellow segmented rod, yellow round elbow, yellow hand. Screen-right arm: green spring, pink round elbow, pink-white striped straight forearm, one green C-claw. Screen-left leg: cyan zigzag, red-yellow pointed peg. Screen-right leg: long purple bendy rod, purple rounded boot. Preserve these sides and exactly two arms/two legs, no added pieces, no swaps, same 2D line art. Absolute anatomical attachment rule: yellow arm attaches to LEFT edge of torso in the image; green-spring/striped/pincer arm attaches to RIGHT edge. Do not swap their shoulder attachment even during movement. Exact same proportions, crisp black outlines and clean 2D cel shading. True transparent RGBA outside opaque character. One single complete figure with generous clear margins around bow/antennas, head, hands and feet; no cut-off shapes. No background, floor, shadow, glow, haze, text, symbols, motion effects, extra limbs, clothes or props, alternate view or sprite sheet.",
+      "sha256": "33b27cbf225253b43d07c0d44df41c31f9b4f99fbd15ccc9495f399d4b67513d",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "bboxAlpha12": [
+        116,
+        12,
+        991,
+        1520
+      ],
+      "bytes": 1488888,
+      "visualReview": "Individually viewed: one complete character, distinctive appearance and anatomy retained; native transparency and safe alpha bounds verified.",
+      "productionStatus": "complete",
+      "includedInRuntime": true
+    },
+    {
+      "id": "bodyguardzooble-heavy",
+      "appearanceId": "bodyguardzooble",
+      "slot": "heavy",
+      "file": "assets/encore/poses/bodyguardzooble/heavy.png",
+      "sourceGenerationId": "exec-a5e938f6-e692-46aa-847a-df1b4132523b",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=260s",
+        "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-aa0e963f-53bb-4d87-87a9-9a7c45732956.png"
+      ],
+      "prompt": "Use case: identity-preserve. ONE individual complete full-body heavy sprite for Digital Circus Encore. Reference image is the approved appearance. Change ONLY the pose: Heavy kick toward screen right with the PURPLE BOOT leg lifted and extended outward. Cyan zigzag/pointed peg leg remains on the LEFT supporting the body. LEFT yellow hand near left chest for balance, RIGHT green claw slightly raised on the right. Keep one straight striped forearm from pink elbow to claw. No invented limbs, impact effects or enemies. Identity and anatomy locks: Keep the pink triangular mouthless head and opaque black sunglasses, cyan lightning antenna on screen left and black-white curled spring antenna on screen right, yellow spotted torso with hollow violet inverted triangle, pink feather wing screen left. Screen-left arm: slender yellow segmented rod, yellow round elbow, yellow hand. Screen-right arm: green spring, pink round elbow, pink-white striped straight forearm, one green C-claw. Screen-left leg: cyan zigzag, red-yellow pointed peg. Screen-right leg: long purple bendy rod, purple rounded boot. Preserve these sides and exactly two arms/two legs, no added pieces, no swaps, same 2D line art. Absolute anatomical attachment rule: yellow arm attaches to LEFT edge of torso in the image; green-spring/striped/pincer arm attaches to RIGHT edge. Do not swap their shoulder attachment even during movement. The pink-white striped forearm is exactly ONE STRAIGHT RIGID ROD from pink elbow sphere to green C-claw. Never bend it at an extra joint or create another stripe section. Same crisp outlined 2D cel-shaded game illustration and proportions. One whole subject with generous clear safe margins around every hair bow/antenna, hand and foot. Actual transparent RGBA background with opaque subject. No floor, background, shadow, glow, haze, letters, watermark, sprite sheet, duplicate view or extra accessories.",
+      "sha256": "41cab5c9c740f954d14f2c58869eb2969c135b5abb4179313dc102b3dca56e2e",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "bboxAlpha12": [
+        46,
+        15,
+        986,
+        1519
+      ],
+      "bytes": 1444372,
+      "visualReview": "Individually viewed: one complete character, distinctive appearance and anatomy retained; native transparency and safe alpha bounds verified.",
+      "productionStatus": "complete",
+      "includedInRuntime": true
+    },
+    {
+      "id": "bodyguardzooble-hit",
+      "appearanceId": "bodyguardzooble",
+      "slot": "hit",
+      "file": "assets/encore/poses/bodyguardzooble/hit.png",
+      "sourceGenerationId": "exec-bf85d250-765e-497d-960b-f0c03d9fb7fd",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=260s",
+        "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-1620260f-cffa-4a38-994d-9e5e2c3beb00.png",
+        "/workspace/scratch/5f5114b49696/generated_images/exec-aa0e963f-53bb-4d87-87a9-9a7c45732956.png"
+      ],
+      "prompt": "Use case: precise-object-edit. One full-body hit sprite correction. Image 1 is the target and image 2 is the approved anatomy. Move ONLY the YELLOW articulated arm from the incorrect right-side shoulder to its correct shoulder on the LEFT edge of the torso as seen by the viewer. Its open yellow hand is raised defensively in the empty region FAR LEFT of the torso. Make its full shoulder-to-yellow-elbow-to-yellow-hand chain visible on the LEFT. Keep the GREEN spring/pink elbow/straight striped rod/green C-claw arm on the RIGHT exactly as it is. There must be one arm on each side, never two on the right. Do not change head tilt, glasses, antennas, eyes hidden, pink wing, chest triangle, body, legs, feet, pose, colors or 2D art. Preserve the cyan-zigzag red-yellow peg leg on the left and purple leg/boot on the right. True transparent RGBA, opaque character, all tips framed with margins, no shadow, background, haze, glow, text or extra limbs. Correct only the anatomical shoulder sides.",
+      "sha256": "0bca1f04d5b4e4ecf540096ebab9e6bc1d6d6a7735166f81bb5d78d2985e4a0a",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "bboxAlpha12": [
+        7,
+        81,
+        975,
+        1515
+      ],
+      "bytes": 1476088,
+      "visualReview": "Targeted arm-side correction visually inspected: yellow articulated arm attaches on image left and green spring/striped/pincer arm on image right. Full pose and unlike legs preserved.",
+      "productionStatus": "complete",
+      "includedInRuntime": true
+    },
+    {
+      "id": "bodyguardzooble-victory",
+      "appearanceId": "bodyguardzooble",
+      "slot": "victory",
+      "file": "assets/encore/poses/bodyguardzooble/victory.png",
+      "sourceGenerationId": "exec-bcde9c80-74ca-4dbb-8bd7-814dee5407c9",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=260s",
+        "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-7ac9ed53-b0c5-4183-a311-74775f42ea5a.png",
+        "/workspace/scratch/5f5114b49696/generated_images/exec-aa0e963f-53bb-4d87-87a9-9a7c45732956.png"
+      ],
+      "prompt": "Use case: precise-object-edit. One full-body victory sprite correction. Image 1 is the target and image 2 is the approved anatomy. Image 1 has the arms on the wrong sides. Remove both misplaced arms and restore their correct attachments from image 2. The YELLOW articulated arm must attach to the LEFT edge of the torso as seen by the viewer; its raised yellow hand makes the V sign on the FAR LEFT of the head, below the cyan lightning antenna. The GREEN spring arm must attach to the RIGHT edge of the torso; pink elbow, ONE straight pink-white striped forearm, green C-claw resting near RIGHT hip. The green claw must appear on the right, never the left. Keep the V gesture on the LEFT, never the right. Do not change head tilt, glasses, antennas, eyes hidden, pink wing, chest triangle, body, legs, feet, pose, colors or 2D art. Preserve the cyan-zigzag red-yellow peg leg on the left and purple leg/boot on the right. True transparent RGBA, opaque character, all tips framed with margins, no shadow, background, haze, glow, text or extra limbs. Correct only the anatomical shoulder sides.",
+      "sha256": "0018629750fcb14dfd23cea2dad1ba63aec0adc74981076296179402918cfe36",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "bboxAlpha12": [
+        64,
+        10,
+        875,
+        1526
+      ],
+      "bytes": 1464892,
+      "visualReview": "Targeted arm-side correction visually inspected: yellow articulated arm attaches on image left and green spring/striped/pincer arm on image right. Full pose and unlike legs preserved.",
+      "productionStatus": "complete",
+      "includedInRuntime": true
+    },
+    {
+      "id": "bodyguardzooble-defeat",
+      "appearanceId": "bodyguardzooble",
+      "slot": "defeat",
+      "file": "assets/encore/poses/bodyguardzooble/defeat.png",
+      "sourceGenerationId": "exec-12bee403-b827-46c6-9adf-d8360f4935cf",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=260s",
+        "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-aa0e963f-53bb-4d87-87a9-9a7c45732956.png"
+      ],
+      "prompt": "Use case: identity-preserve. ONE individual complete full-body defeat sprite for Digital Circus Encore. Reference image is the approved appearance. Change ONLY the pose: Defeated seated slump: lower the yellow spotted torso, head tilted down slightly but fully visible. LEFT cyan zigzag and pointed red-yellow peg extend leftward, RIGHT purple leg and boot bend to the right. LEFT yellow hand rests loosely left, RIGHT green claw rests at right hip with its straight striped forearm. All pieces remain connected and intact, no disassembly or transformed limbs. Sunglasses on, no damage. Identity and anatomy locks: Keep the pink triangular mouthless head and opaque black sunglasses, cyan lightning antenna on screen left and black-white curled spring antenna on screen right, yellow spotted torso with hollow violet inverted triangle, pink feather wing screen left. Screen-left arm: slender yellow segmented rod, yellow round elbow, yellow hand. Screen-right arm: green spring, pink round elbow, pink-white striped straight forearm, one green C-claw. Screen-left leg: cyan zigzag, red-yellow pointed peg. Screen-right leg: long purple bendy rod, purple rounded boot. Preserve these sides and exactly two arms/two legs, no added pieces, no swaps, same 2D line art. Absolute anatomical attachment rule: yellow arm attaches to LEFT edge of torso in the image; green-spring/striped/pincer arm attaches to RIGHT edge. Do not swap their shoulder attachment even during movement. The pink-white striped forearm is exactly ONE STRAIGHT RIGID ROD from pink elbow sphere to green C-claw. Never bend it at an extra joint or create another stripe section. Same crisp outlined 2D cel-shaded game illustration and proportions. One whole subject with generous clear safe margins around every hair bow/antenna, hand and foot. Actual transparent RGBA background with opaque subject. No floor, background, shadow, glow, haze, letters, watermark, sprite sheet, duplicate view or extra accessories.",
+      "sha256": "cc405e660ca8ae4e2747fda476585e2b35deafc884a943e686825735e4eaa860",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        27,
+        74,
+        1172,
+        1262
+      ],
+      "bytes": 831665,
+      "visualReview": "Individually viewed: one complete character, distinctive appearance and anatomy retained; native transparency and safe alpha bounds verified.",
+      "productionStatus": "complete",
+      "includedInRuntime": true
+    },
+    {
+      "id": "zoobleep5-selection",
+      "appearanceId": "zoobleep5",
+      "slot": "selection",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/zoobleep5/selection.png",
+      "sourceGenerationId": "exec-d58ef978-354a-44da-a780-b12abed014d5",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://www.youtube.com/watch?v=sQ5DCwcpMy0",
+        "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-aa0e963f-53bb-4d87-87a9-9a7c45732956.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/zooble-ep5-official-thumbnail-crop.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/zooble-ep5-upper-120s-native.png",
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/zooble.webp"
+      ],
+      "prompt": "Use case: precise-object-edit. Asset type: ONE whole-body episode-five Zooble selection sprite. Image 1 is the existing game adaptation of the EXACT correct episode-five modular body; preserve its complete anatomy, proportions, palette, limb sides, pose, wing, antennas and hollow triangle. Change ONLY the sunglasses: remove the black sunglasses entirely and show Zooble's two original asymmetrical eyes as established by official images 2 and 3. Large yellow spherical eye with black spiral pupil and lavender half-lid on SCREEN LEFT; smaller white spherical eye with black pupil, violet half-lid and three black lower eyelashes on SCREEN RIGHT. Dry half-lidded neutral expression. No mouth. Image 4 is the game illustration face style reference only; do NOT copy its different Y antenna, ring chest ornament or incorrect-for-this-episode arms and legs. Preserve image 1's cyan lightning antenna LEFT and black-white curly spring antenna RIGHT, pink triangular head, yellow/orange-pink spotted torso, violet hollow inverted triangle, pink feather wing LEFT. Preserve yellow articulated arm with yellow glove LEFT; green spring, pink elbow, pink-white striped forearm and green C-claw RIGHT; cyan-zigzag red/yellow pointed peg leg LEFT, long purple rod and purple boot RIGHT. One full character with every tip safely inside canvas and generous margins, genuinely transparent RGBA background. Crisp opaque 2D cel-shaded illustrated body, no glow, haze, floor, shadow, text, scenery, extra accessories, extra limbs, collage or sprite sheet.",
+      "sha256": "81e93ff323f46d6e940a432e0eb28fe83ee5858dcc3ba5c7b92bfea08a7a0bb5",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "bboxAlpha12": [
+        100,
+        15,
+        890,
+        1526
+      ],
+      "bytes": 1506910,
+      "visualReview": "Individually viewed: black sunglasses absent, large yellow spiral eye on image left and smaller white eye with purple lid and three lower lashes on image right. Correct episode-five torso, antennas, wing, unlike arms and legs retained in a complete selection pose.",
+      "targetFile": "assets/encore/selection/zoobleep5.png",
+      "productionStatus": "partial",
+      "includedInRuntime": false
+    },
+    {
+      "id": "zoobleep5-stance",
+      "appearanceId": "zoobleep5",
+      "slot": "stance",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/zoobleep5/stance.png",
+      "sourceGenerationId": "exec-c4a17db9-1d1b-496f-81ed-0c265adcb6d7",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://www.youtube.com/watch?v=sQ5DCwcpMy0",
+        "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-37f3e262-6094-4413-bda7-ef47e43e303f.png",
+        "/workspace/scratch/5f5114b49696/generated_images/exec-d58ef978-354a-44da-a780-b12abed014d5.png"
+      ],
+      "prompt": "Use case: precise-object-edit. ONE individual full-body stance sprite of episode-five Zooble WITHOUT sunglasses. Image 1 is the approved pose and exact correct modular anatomy. Image 2 is the approved unaccessorized identity and face. Change ONLY the eye area of image 1: remove the black sunglasses completely and replace them with the exact asymmetrical face from image 2, following the existing head tilt. Large YELLOW eye with black spiral pupil and lavender half-lid on the LEFT; smaller WHITE eye with black pupil, violet half-lid and exactly three black lower lashes on the RIGHT. No mouth, no sunglasses or other face accessory. Keep ALL the rest of image 1 unchanged, especially its pose, body proportions, cyan lightning LEFT antenna, black-white spiral RIGHT antenna, pink triangular head, yellow spotted body, hollow violet triangle, pink wing, yellow articulated LEFT arm and yellow hand, GREEN spring/pink spherical elbow/ONE STRAIGHT pink-white forearm rod/green C-claw RIGHT arm, cyan-zigzag red/yellow pointed peg LEFT leg and purple rod/boot RIGHT leg. Never move or swap arms, legs or shoulder attachment sides. Match image 1's crisp 2D illustration. True transparent RGBA background, opaque subject, clean silhouette and generous margins around every extremity. One single complete figure only, no glow, haze, ground, shadow, props, text, frames or sprite sheet.",
+      "sha256": "3235d5a89d559fa64ac4830758266dd8e5c2211613cc180002f9c929f83747ab",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        44,
+        13,
+        1155,
+        1289
+      ],
+      "bytes": 745695,
+      "visualReview": "Individually viewed: black sunglasses absent, large yellow spiral eye on image left and smaller white eye with purple lid and three lower lashes on image right. Correct episode-five torso, antennas, wing, unlike arms and legs retained in a complete stance pose.",
+      "targetFile": "assets/encore/stance/zoobleep5.png",
+      "productionStatus": "partial",
+      "includedInRuntime": false
+    },
+    {
+      "id": "zoobleep5-intro",
+      "appearanceId": "zoobleep5",
+      "slot": "intro",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/zoobleep5/intro.png",
+      "sourceGenerationId": "exec-adefabe4-32de-450c-9baf-b5bbab69c9ca",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://www.youtube.com/watch?v=sQ5DCwcpMy0",
+        "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-ad2bc54c-e48c-4645-8b39-1b8d4a46368a.png",
+        "/workspace/scratch/5f5114b49696/generated_images/exec-d58ef978-354a-44da-a780-b12abed014d5.png"
+      ],
+      "prompt": "Use case: precise-object-edit. ONE individual full-body intro sprite of episode-five Zooble WITHOUT sunglasses. Image 1 is the approved pose and exact correct modular anatomy. Image 2 is the approved unaccessorized identity and face. Change ONLY the eye area of image 1: remove the black sunglasses completely and replace them with the exact asymmetrical face from image 2, following the existing head tilt. Large YELLOW eye with black spiral pupil and lavender half-lid on the LEFT; smaller WHITE eye with black pupil, violet half-lid and exactly three black lower lashes on the RIGHT. No mouth, no sunglasses or other face accessory. Keep ALL the rest of image 1 unchanged, especially its pose, body proportions, cyan lightning LEFT antenna, black-white spiral RIGHT antenna, pink triangular head, yellow spotted body, hollow violet triangle, pink wing, yellow articulated LEFT arm and yellow hand, GREEN spring/pink spherical elbow/ONE STRAIGHT pink-white forearm rod/green C-claw RIGHT arm, cyan-zigzag red/yellow pointed peg LEFT leg and purple rod/boot RIGHT leg. Never move or swap arms, legs or shoulder attachment sides. Match image 1's crisp 2D illustration. True transparent RGBA background, opaque subject, clean silhouette and generous margins around every extremity. One single complete figure only, no glow, haze, ground, shadow, props, text, frames or sprite sheet.",
+      "sha256": "9feda71bc8a9e1d73bc2e90ad602604024d3d23ec3af87c8de2acda052f16c7c",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "bboxAlpha12": [
+        141,
+        10,
+        875,
+        1525
+      ],
+      "bytes": 1415628,
+      "visualReview": "Individually viewed: black sunglasses absent, large yellow spiral eye on image left and smaller white eye with purple lid and three lower lashes on image right. Correct episode-five torso, antennas, wing, unlike arms and legs retained in a complete intro pose.",
+      "targetFile": "assets/encore/poses/zoobleep5/intro.png",
+      "productionStatus": "partial",
+      "includedInRuntime": false
+    },
+    {
+      "id": "zoobleep5-walk",
+      "appearanceId": "zoobleep5",
+      "slot": "walk",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/zoobleep5/walk.png",
+      "sourceGenerationId": "exec-1380e757-fc8c-4341-be79-28252198a531",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://www.youtube.com/watch?v=sQ5DCwcpMy0",
+        "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-63827051-c08b-4c2b-8200-8ff199cd529a.png",
+        "/workspace/scratch/5f5114b49696/generated_images/exec-d58ef978-354a-44da-a780-b12abed014d5.png"
+      ],
+      "prompt": "Use case: precise-object-edit. ONE individual full-body walk sprite of episode-five Zooble WITHOUT sunglasses. Image 1 is the approved pose and exact correct modular anatomy. Image 2 is the approved unaccessorized identity and face. Change ONLY the eye area of image 1: remove the black sunglasses completely and replace them with the exact asymmetrical face from image 2, following the existing head tilt. Large YELLOW eye with black spiral pupil and lavender half-lid on the LEFT; smaller WHITE eye with black pupil, violet half-lid and exactly three black lower lashes on the RIGHT. No mouth, no sunglasses or other face accessory. Keep ALL the rest of image 1 unchanged, especially its pose, body proportions, cyan lightning LEFT antenna, black-white spiral RIGHT antenna, pink triangular head, yellow spotted body, hollow violet triangle, pink wing, yellow articulated LEFT arm and yellow hand, GREEN spring/pink spherical elbow/ONE STRAIGHT pink-white forearm rod/green C-claw RIGHT arm, cyan-zigzag red/yellow pointed peg LEFT leg and purple rod/boot RIGHT leg. Never move or swap arms, legs or shoulder attachment sides. Match image 1's crisp 2D illustration. True transparent RGBA background, opaque subject, clean silhouette and generous margins around every extremity. One single complete figure only, no glow, haze, ground, shadow, props, text, frames or sprite sheet.",
+      "sha256": "2fa6b86cdaa4687df0d5fc4af471920644344f2276d2fe1cb3e62828846e217d",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "bboxAlpha12": [
+        88,
+        9,
+        962,
+        1466
+      ],
+      "bytes": 1529675,
+      "visualReview": "Individually viewed: black sunglasses absent, large yellow spiral eye on image left and smaller white eye with purple lid and three lower lashes on image right. Correct episode-five torso, antennas, wing, unlike arms and legs retained in a complete walk pose.",
+      "targetFile": "assets/encore/poses/zoobleep5/walk.png",
+      "productionStatus": "partial",
+      "includedInRuntime": false
+    },
+    {
+      "id": "zoobleep5-jump",
+      "appearanceId": "zoobleep5",
+      "slot": "jump",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/zoobleep5/jump.png",
+      "sourceGenerationId": "exec-f920b9d9-8662-4080-89c2-0decc614bacc",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://www.youtube.com/watch?v=sQ5DCwcpMy0",
+        "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-e308c452-7d20-420b-ad3e-d8985c17d8aa.png",
+        "/workspace/scratch/5f5114b49696/generated_images/exec-d58ef978-354a-44da-a780-b12abed014d5.png"
+      ],
+      "prompt": "Use case: precise-object-edit. ONE individual full-body jump sprite of episode-five Zooble WITHOUT sunglasses. Image 1 is the approved pose and exact correct modular anatomy. Image 2 is the approved unaccessorized identity and face. Change ONLY the eye area of image 1: remove the black sunglasses completely and replace them with the exact asymmetrical face from image 2, following the existing head tilt. Large YELLOW eye with black spiral pupil and lavender half-lid on the LEFT; smaller WHITE eye with black pupil, violet half-lid and exactly three black lower lashes on the RIGHT. No mouth, no sunglasses or other face accessory. Keep ALL the rest of image 1 unchanged, especially its pose, body proportions, cyan lightning LEFT antenna, black-white spiral RIGHT antenna, pink triangular head, yellow spotted body, hollow violet triangle, pink wing, yellow articulated LEFT arm and yellow hand, GREEN spring/pink spherical elbow/ONE STRAIGHT pink-white forearm rod/green C-claw RIGHT arm, cyan-zigzag red/yellow pointed peg LEFT leg and purple rod/boot RIGHT leg. Never move or swap arms, legs or shoulder attachment sides. Match image 1's crisp 2D illustration. True transparent RGBA background, opaque subject, clean silhouette and generous margins around every extremity. One single complete figure only, no glow, haze, ground, shadow, props, text, frames or sprite sheet.",
+      "sha256": "c318d6639d4241c810e21b229408a31a5a8d381ca5189979ce236bec98f924cd",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "bboxAlpha12": [
+        27,
+        85,
+        995,
+        1179
+      ],
+      "bytes": 1436322,
+      "visualReview": "Individually viewed: black sunglasses absent, large yellow spiral eye on image left and smaller white eye with purple lid and three lower lashes on image right. Correct episode-five torso, antennas, wing, unlike arms and legs retained in a complete jump pose.",
+      "targetFile": "assets/encore/poses/zoobleep5/jump.png",
+      "productionStatus": "partial",
+      "includedInRuntime": false
+    },
+    {
+      "id": "zoobleep5-crouch",
+      "appearanceId": "zoobleep5",
+      "slot": "crouch",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/zoobleep5/crouch.png",
+      "sourceGenerationId": "exec-96de4c96-89cf-46c4-bc74-4064a238ab35",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://www.youtube.com/watch?v=sQ5DCwcpMy0",
+        "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-c3f785cc-67e6-4238-8cae-508365fe8e93.png",
+        "/workspace/scratch/5f5114b49696/generated_images/exec-d58ef978-354a-44da-a780-b12abed014d5.png"
+      ],
+      "prompt": "Use case: precise-object-edit. ONE individual full-body crouch sprite of episode-five Zooble WITHOUT sunglasses. Image 1 is the approved pose and exact correct modular anatomy. Image 2 is the approved unaccessorized identity and face. Change ONLY the eye area of image 1: remove the black sunglasses completely and replace them with the exact asymmetrical face from image 2, following the existing head tilt. Large YELLOW eye with black spiral pupil and lavender half-lid on the LEFT; smaller WHITE eye with black pupil, violet half-lid and exactly three black lower lashes on the RIGHT. No mouth, no sunglasses or other face accessory. Keep ALL the rest of image 1 unchanged, especially its pose, body proportions, cyan lightning LEFT antenna, black-white spiral RIGHT antenna, pink triangular head, yellow spotted body, hollow violet triangle, pink wing, yellow articulated LEFT arm and yellow hand, GREEN spring/pink spherical elbow/ONE STRAIGHT pink-white forearm rod/green C-claw RIGHT arm, cyan-zigzag red/yellow pointed peg LEFT leg and purple rod/boot RIGHT leg. Never move or swap arms, legs or shoulder attachment sides. Match image 1's crisp 2D illustration. True transparent RGBA background, opaque subject, clean silhouette and generous margins around every extremity. One single complete figure only, no glow, haze, ground, shadow, props, text, frames or sprite sheet.",
+      "sha256": "b2dcb46168adb6703aaab03f6b7dd3811b898a3d3ec31d9289feb6cb798054a0",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "bboxAlpha12": [
+        126,
+        255,
+        990,
+        1377
+      ],
+      "bytes": 1449005,
+      "visualReview": "Individually viewed: black sunglasses absent, large yellow spiral eye on image left and smaller white eye with purple lid and three lower lashes on image right. Correct episode-five torso, antennas, wing, unlike arms and legs retained in a complete crouch pose.",
+      "targetFile": "assets/encore/poses/zoobleep5/crouch.png",
+      "productionStatus": "partial",
+      "includedInRuntime": false
+    },
+    {
+      "id": "zoobleep5-attack",
+      "appearanceId": "zoobleep5",
+      "slot": "attack",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/zoobleep5/attack.png",
+      "sourceGenerationId": "exec-8573a65b-cced-4c93-ad9c-323f0e42e9a0",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://www.youtube.com/watch?v=sQ5DCwcpMy0",
+        "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-1e5a9e42-74a4-484f-8241-304adff1f029.png",
+        "/workspace/scratch/5f5114b49696/generated_images/exec-d58ef978-354a-44da-a780-b12abed014d5.png"
+      ],
+      "prompt": "Use case: precise-object-edit. ONE individual full-body attack sprite of episode-five Zooble WITHOUT sunglasses. Image 1 is the approved pose and exact correct modular anatomy. Image 2 is the approved unaccessorized identity and face. Change ONLY the eye area of image 1: remove the black sunglasses completely and replace them with the exact asymmetrical face from image 2, following the existing head tilt. Large YELLOW eye with black spiral pupil and lavender half-lid on the LEFT; smaller WHITE eye with black pupil, violet half-lid and exactly three black lower lashes on the RIGHT. No mouth, no sunglasses or other face accessory. Keep ALL the rest of image 1 unchanged, especially its pose, body proportions, cyan lightning LEFT antenna, black-white spiral RIGHT antenna, pink triangular head, yellow spotted body, hollow violet triangle, pink wing, yellow articulated LEFT arm and yellow hand, GREEN spring/pink spherical elbow/ONE STRAIGHT pink-white forearm rod/green C-claw RIGHT arm, cyan-zigzag red/yellow pointed peg LEFT leg and purple rod/boot RIGHT leg. Never move or swap arms, legs or shoulder attachment sides. Match image 1's crisp 2D illustration. True transparent RGBA background, opaque subject, clean silhouette and generous margins around every extremity. One single complete figure only, no glow, haze, ground, shadow, props, text, frames or sprite sheet.",
+      "sha256": "f11f55a6c59ce17ce14606d7c8de2399e5c9ea5ed3d7eda8987a23d2fcc80b4b",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "bboxAlpha12": [
+        113,
+        11,
+        975,
+        1521
+      ],
+      "bytes": 1453651,
+      "visualReview": "Individually viewed: black sunglasses absent, large yellow spiral eye on image left and smaller white eye with purple lid and three lower lashes on image right. Correct episode-five torso, antennas, wing, unlike arms and legs retained in a complete attack pose.",
+      "targetFile": "assets/encore/poses/zoobleep5/attack.png",
+      "productionStatus": "partial",
+      "includedInRuntime": false
+    },
+    {
+      "id": "zoobleep5-heavy",
+      "appearanceId": "zoobleep5",
+      "slot": "heavy",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/zoobleep5/heavy.png",
+      "sourceGenerationId": "exec-e028564a-fd8a-44ac-b2e4-56f70fc1705a",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://www.youtube.com/watch?v=sQ5DCwcpMy0",
+        "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-a5e938f6-e692-46aa-847a-df1b4132523b.png",
+        "/workspace/scratch/5f5114b49696/generated_images/exec-d58ef978-354a-44da-a780-b12abed014d5.png"
+      ],
+      "prompt": "Use case: precise-object-edit. ONE individual full-body heavy sprite of episode-five Zooble WITHOUT sunglasses. Image 1 is the approved pose and exact correct modular anatomy. Image 2 is the approved unaccessorized identity and face. Change ONLY the eye area of image 1: remove the black sunglasses completely and replace them with the exact asymmetrical face from image 2, following the existing head tilt. Large YELLOW eye with black spiral pupil and lavender half-lid on the LEFT; smaller WHITE eye with black pupil, violet half-lid and exactly three black lower lashes on the RIGHT. No mouth, no sunglasses or other face accessory. Keep ALL the rest of image 1 unchanged, especially its pose, body proportions, cyan lightning LEFT antenna, black-white spiral RIGHT antenna, pink triangular head, yellow spotted body, hollow violet triangle, pink wing, yellow articulated LEFT arm and yellow hand, GREEN spring/pink spherical elbow/ONE STRAIGHT pink-white forearm rod/green C-claw RIGHT arm, cyan-zigzag red/yellow pointed peg LEFT leg and purple rod/boot RIGHT leg. Never move or swap arms, legs or shoulder attachment sides. Match image 1's crisp 2D illustration. True transparent RGBA background, opaque subject, clean silhouette and generous margins around every extremity. One single complete figure only, no glow, haze, ground, shadow, props, text, frames or sprite sheet.",
+      "sha256": "782102e280d8e37557bb3076bd44d9ac1258f02e16e63c1fff04346292febc66",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "bboxAlpha12": [
+        44,
+        13,
+        988,
+        1519
+      ],
+      "bytes": 1450181,
+      "visualReview": "Individually viewed: black sunglasses absent, large yellow spiral eye on image left and smaller white eye with purple lid and three lower lashes on image right. Correct episode-five torso, antennas, wing, unlike arms and legs retained in a complete heavy pose.",
+      "targetFile": "assets/encore/poses/zoobleep5/heavy.png",
+      "productionStatus": "partial",
+      "includedInRuntime": false
+    }
+  ],
+  "completion": {
+    "expectedImages": 33,
+    "completedImages": 30,
+    "activeImages": 22,
+    "archivedPendingImages": 8,
+    "completeAppearances": [
+      "bodyguardragatha",
+      "bodyguardzooble"
+    ],
+    "pendingAppearances": [
+      "zoobleep5"
+    ],
+    "missingSlots": {
+      "zoobleep5": [
+        "hit",
+        "victory",
+        "defeat"
+      ]
+    },
+    "blockedBy": "image_gen HTTP 429 usage_limit_reached",
+    "resetAtUTC": "2026-11-20T08:08:32Z",
+    "sourceOfTruth": "Individual ID-slot.json records after frozen pending-assets relocation; PNG and individual JSON files were read only."
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "zoobleep5-heavy",
+  "appearanceId": "zoobleep5",
+  "slot": "heavy",
+  "file": "docs/art-generation/cast-continuation-20261120/pending-assets/zoobleep5/heavy.png",
+  "sourceGenerationId": "exec-e028564a-fd8a-44ac-b2e4-56f70fc1705a",
+  "method": "image_gen.imagegen",
+  "sourceURLs": [
+    "https://www.youtube.com/watch?v=sQ5DCwcpMy0",
+    "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg"
+  ],
+  "referencePaths": [
+    "/workspace/scratch/5f5114b49696/generated_images/exec-a5e938f6-e692-46aa-847a-df1b4132523b.png",
+    "/workspace/scratch/5f5114b49696/generated_images/exec-d58ef978-354a-44da-a780-b12abed014d5.png"
+  ],
+  "prompt": "Use case: precise-object-edit. ONE individual full-body heavy sprite of episode-five Zooble WITHOUT sunglasses. Image 1 is the approved pose and exact correct modular anatomy. Image 2 is the approved unaccessorized identity and face. Change ONLY the eye area of image 1: remove the black sunglasses completely and replace them with the exact asymmetrical face from image 2, following the existing head tilt. Large YELLOW eye with black spiral pupil and lavender half-lid on the LEFT; smaller WHITE eye with black pupil, violet half-lid and exactly three black lower lashes on the RIGHT. No mouth, no sunglasses or other face accessory. Keep ALL the rest of image 1 unchanged, especially its pose, body proportions, cyan lightning LEFT antenna, black-white spiral RIGHT antenna, pink triangular head, yellow spotted body, hollow violet triangle, pink wing, yellow articulated LEFT arm and yellow hand, GREEN spring/pink spherical elbow/ONE STRAIGHT pink-white forearm rod/green C-claw RIGHT arm, cyan-zigzag red/yellow pointed peg LEFT leg and purple rod/boot RIGHT leg. Never move or swap arms, legs or shoulder attachment sides. Match image 1's crisp 2D illustration. True transparent RGBA background, opaque subject, clean silhouette and generous margins around every extremity. One single complete figure only, no glow, haze, ground, shadow, props, text, frames or sprite sheet.",
+  "sha256": "782102e280d8e37557bb3076bd44d9ac1258f02e16e63c1fff04346292febc66",
+  "sourceBytesIdentical": true,
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "bboxAlpha12": [
+    44,
+    13,
+    988,
+    1519
+  ],
+  "bytes": 1450181,
+  "visualReview": "Individually viewed: black sunglasses absent, large yellow spiral eye on image left and smaller white eye with purple lid and three lower lashes on image right. Correct episode-five torso, antennas, wing, unlike arms and legs retained in a complete heavy pose.",
+  "targetFile": "assets/encore/poses/zoobleep5/heavy.png",
+  "productionStatus": "partial",
+  "includedInRuntime": false
+}

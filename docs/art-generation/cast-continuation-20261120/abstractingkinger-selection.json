@@ -1,0 +1,43 @@
+{
+  "id": "abstractingkinger-selection",
+  "appearanceId": "abstractingkinger",
+  "slot": "selection",
+  "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingkinger/selection.png",
+  "sourceGenerationId": "exec-71d8d96f-91f0-4724-b205-6241be060a75",
+  "method": "image_gen.imagegen",
+  "prompt": "Use case: stylized-concept. Asset type: one transparent full-body 2D fighting-game selection illustration. Draw ABSTRACTING KINGER from The Amazing Digital Circus. Reference 1 is the official partial-abstraction design; reference 2 is the game's clean outlined cel shading and tall chess-piece proportions. Preserve tall beige king chess-piece body with cross-shaped crown, one intact bulging white eye with BLUE iris, purple floor-length royal robe bordered by white spotted ermine, and two small white floating cartoon hands. The viewer-left half of his crown/head is smoky-black angular crystal carrying large flat concentric pastel yellow/purple eyes including one enlarged transformed eyeball; angular crystal growths also encase both wrists and project around the lower robe/base. Most purple robe and one normal face side remain recognizable. No human face, mouth, legs or feet; his body ends at robe/chess base with asymmetric crystal extensions. Adapt the official design to tall game proportions, not squat toy anatomy. Pose: neutral selection pose, slightly turned toward screen RIGHT, both floating hands spread in a tentative gesture, upright robe base. One complete character with crown, every spike, both hands and entire base within clear transparent margins. Crisp detailed 2D game art, true transparent RGBA. No background, floor, pedestal, shadows behind character, aura, effects, text or watermark.",
+  "referencePaths": [
+    "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedKinger.png",
+    "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/kinger.webp"
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/abstraction-animiniz",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedKinger.png?v=1780353722"
+  ],
+  "sourceType": "official-merchandise",
+  "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-71d8d96f-91f0-4724-b205-6241be060a75.png",
+  "sha256": "181107cc8433a9b53985aeae0d1389c15ab79c4f17f823f4cf1b1e5cb9f14265",
+  "dimensions": [
+    887,
+    1774
+  ],
+  "bytes": 1275414,
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "bboxAlpha12": [
+    37,
+    14,
+    873,
+    1760
+  ],
+  "nativeCopyVerified": true,
+  "visualReview": "One complete tall chess-piece Kinger. Purple ermine robe remains recognizable; viewer-left head/crown grows angular multi-eyed crystal, one large normal blue iris remains, small white floating hands have crystal cuffs, asymmetric lower crystal base. No invented human legs or mouth. Full crown, hands, robe base and spikes visible; selection pose matches game's tall proportions.",
+  "status": "generated-and-visually-reviewed",
+  "episodeFidelityClaim": false,
+  "targetFile": "assets/encore/selection/abstractingkinger.png",
+  "productionStatus": "partial",
+  "includedInRuntime": false
+}

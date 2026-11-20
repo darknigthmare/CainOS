@@ -1,0 +1,72 @@
+{
+  "id": "noirribbit:jump",
+  "appearanceId": "noirribbit",
+  "fighterId": "ribbit",
+  "slot": "jump",
+  "status": "accepted_native",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "file": "docs/art-generation/cast-next-20261120/generated/noirribbit/jump.png",
+  "targetFile": "assets/encore/poses/noirribbit/jump.png",
+  "referencePaths": [
+    "docs/art-generation/cast-next-20261120/generated/noirribbit/selection.png",
+    "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-noir.png"
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/ribbit-pendantz-blindbox",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Noir.png?v=1785768060"
+  ],
+  "sourceKind": "Produit dérivé officiel",
+  "episodeFidelityClaim": false,
+  "desiredNativeFacing": "right",
+  "prompt": "Use case: identity-preserve. Reference 1 is the APPROVED GAME DESIGN: preserve its exact face, anatomy, clothing, colours, details, proportions and drawing style, changing only the pose described below. Reference 2 confirms the official merchandise costume details. Do not copy the pose, photo background or toy proportions from reference 2.\n\nRIBBIT in the official NOIR merchandise costume. One slim anthropomorphic frog: one grey frog head with two large raised oval eyes, black pupils with white highlights, very dark violet half-lids, a light-grey muzzle and small weary downturned mouth. Grey skin, no green and no pink cheeks. Grey trench coat with lapels, overlapping front, waist belt and square buckle, white shirt collar, small black neck bow. Two grey frog hands at the ends of the coat sleeves; two long slim legs ending in black rounded frog feet. Keep the established game's slender Ribbit proportions and bold clean cel shading. Preserve this complete grey outfit and subdued expression. No hat, cigarette, weapon, keyring, tag, strap or lettering.\n\nJump: face SCREEN-RIGHT, both feet off the ground with knees bent, arms raised for balance; a readable airborne silhouette. All limbs and costume details fit inside the image with ample space.\n\nRender ONE complete polished hand-drawn 2D cel-shaded fighting-game sprite with clean dark outlines and clear flat colour regions. Entire figure including every eye, hat tip, feather tip, finger and both feet is fully inside generous transparent safety margins. True transparent RGBA background. No floor, cast shadow, glow, background, frame, text, watermark, duplicate body, speed lines or motion blur. Anatomical consistency is mandatory: one head, two arms, two hands, two legs and two feet. Native facing must be SCREEN-RIGHT; do not mirror anatomical costume details.",
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/cast-next-20261120/generated/noirribbit/selection.png",
+      "sha256": "7e0856ee931693f817f7206945d38b178c3e79007a68c77d6c908c066972b78d",
+      "bytes": 1279270
+    },
+    {
+      "position": 2,
+      "file": "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-noir.png",
+      "sha256": "fa7196988e32f61446b691b0b956abc103e9761827d9a19dbaae5e1292d8c31c",
+      "bytes": 1555468
+    }
+  ],
+  "schema": "encore-native-art-discovery/v1",
+  "includedInRuntime": false,
+  "nativeSourceFile": "/workspace/scratch/5f5114b49696/generated_images/exec-e333feb5-9301-4330-9fb5-46a009adf4bb.png",
+  "sourceGenerationId": "exec-e333feb5-9301-4330-9fb5-46a009adf4bb",
+  "nativeFacing": "right",
+  "visualReview": {
+    "reviewer": "generate_pomni_kinger",
+    "status": "accepted",
+    "observations": [
+      "Saut orienté à droite avec deux genoux repliés et deux mains ouvertes pour l’équilibre ; silhouette aérienne distincte.",
+      "Tête, manteau, pieds et mains entièrement cadrés ; identité et palette Noir préservées."
+    ],
+    "scope": "Official merchandise costume and approved game design preserved; original game pose, no canonical episode certification."
+  },
+  "dimensions": [
+    1199,
+    1312
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "alpha12Bounds": [
+    184,
+    31,
+    1107,
+    1279
+  ],
+  "alpha12BoundsThreshold": "alpha > 12",
+  "fullyTransparentPixels": 1104837,
+  "sha256": "834125bf3dddb717eaa715fa409f681ccfdfcbc8e9d707c94c91f242271e7a9b",
+  "bytes": 774755,
+  "nativeCopyVerified": true,
+  "createdAt": "2026-11-20T09:38:08.717272+00:00"
+}

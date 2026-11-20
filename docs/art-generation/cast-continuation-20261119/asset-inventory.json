@@ -1,0 +1,2132 @@
+{
+  "schema": "encore-costume-addition-inventory/v1",
+  "createdAt": "2026-11-19T23:03:19.507113+00:00",
+  "scope": "Eight additional outfits, eleven individual drawings per outfit; historical archive and crossover files excluded.",
+  "method": "Native source byte comparison, SHA-256, PNG decode and alpha>=12 framing. Visual and production Canvas reviews are recorded separately.",
+  "counts": {
+    "appearances": 8,
+    "files": 88,
+    "selection": 8,
+    "stances": 8,
+    "actions": 72,
+    "uniqueHashes": 88,
+    "nativeCopiesVerified": 88,
+    "transparent": 88,
+    "completeMargins": 88,
+    "bytes": 98029118
+  },
+  "assets": [
+    {
+      "appearanceId": "beachpomni",
+      "slot": "selection",
+      "file": "assets/encore/selection/beachpomni.png",
+      "sha256": "4f104be35c2d1fb5494b7b0ddfb616ceb288edb795ec1a8094ff58e7996f674e",
+      "bytes": 1055943,
+      "dimensions": [
+        955,
+        1647
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        30,
+        22,
+        924,
+        1633
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/manifest-beachpomni-noirragatha.json",
+      "sourceGenerationId": "exec-13e7ea6b-23cf-4d78-aaf5-e28264788f6f"
+    },
+    {
+      "appearanceId": "beachpomni",
+      "slot": "stance",
+      "file": "assets/encore/stance/beachpomni.png",
+      "sha256": "18ab399df128d912d4af883780b7d027a31eacaddf64e177ce8a1ee2bb7aab93",
+      "bytes": 840184,
+      "dimensions": [
+        1168,
+        1347
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        157,
+        17,
+        937,
+        1330
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/manifest-beachpomni-noirragatha.json",
+      "sourceGenerationId": "exec-53f23da3-be08-4030-bcc3-13698c4cbb5b"
+    },
+    {
+      "appearanceId": "beachpomni",
+      "slot": "intro",
+      "file": "assets/encore/poses/beachpomni/intro.png",
+      "sha256": "007b5464ac8b7deab126c712afce5609a92df872f7c33e085086dd685e0023e3",
+      "bytes": 1007066,
+      "dimensions": [
+        955,
+        1647
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        38,
+        18,
+        916,
+        1622
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/manifest-beachpomni-noirragatha.json",
+      "sourceGenerationId": "exec-b4b2d5e0-b4dd-4875-9e4d-93fdbc785bc7"
+    },
+    {
+      "appearanceId": "beachpomni",
+      "slot": "attack",
+      "file": "assets/encore/poses/beachpomni/attack.png",
+      "sha256": "3adbe18b6b7b3d697f48ec7169d916fec51da1693b25403078d6bf6f73ad1817",
+      "bytes": 839651,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        97,
+        14,
+        1139,
+        1298
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/manifest-beachpomni-noirragatha.json",
+      "sourceGenerationId": "exec-a0a45aba-43ef-41ca-a946-c8457c0c3169"
+    },
+    {
+      "appearanceId": "beachpomni",
+      "slot": "heavy",
+      "file": "assets/encore/poses/beachpomni/heavy.png",
+      "sha256": "4f6150d94c846ac3914a871ba37c6ee1745dafc4b13f3eaab1c78659708544f5",
+      "bytes": 769935,
+      "dimensions": [
+        1392,
+        1130
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        64,
+        14,
+        1277,
+        1105
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/manifest-beachpomni-noirragatha.json",
+      "sourceGenerationId": "exec-74bc3070-1305-4753-b1d9-78895d52f444"
+    },
+    {
+      "appearanceId": "beachpomni",
+      "slot": "hit",
+      "file": "assets/encore/poses/beachpomni/hit.png",
+      "sha256": "963377b2a460c918a74a7268522682a16ef15223a0f4b0585712bf3028fddaaf",
+      "bytes": 1015477,
+      "dimensions": [
+        1096,
+        1435
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        28,
+        14,
+        946,
+        1427
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/manifest-beachpomni-noirragatha.json",
+      "sourceGenerationId": "exec-83830c92-463d-46f7-ba13-1a451682289c"
+    },
+    {
+      "appearanceId": "beachpomni",
+      "slot": "walk",
+      "file": "assets/encore/poses/beachpomni/walk.png",
+      "sha256": "da2be6e5fcb4121b1a7322f41b02057dd34d2b1f49218d64552bab6622b137e3",
+      "bytes": 929355,
+      "dimensions": [
+        1064,
+        1478
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        80,
+        27,
+        969,
+        1449
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/manifest-beachpomni-noirragatha.json",
+      "sourceGenerationId": "exec-10986167-c178-4d80-bdee-59b4ce5f7790"
+    },
+    {
+      "appearanceId": "beachpomni",
+      "slot": "jump",
+      "file": "assets/encore/poses/beachpomni/jump.png",
+      "sha256": "e1cbf2f5f894029b5e5cb534fd0936d589933e40290eade75bc058079674cefe",
+      "bytes": 1050129,
+      "dimensions": [
+        1190,
+        1322
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        69,
+        19,
+        1064,
+        1266
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/manifest-beachpomni-noirragatha.json",
+      "sourceGenerationId": "exec-0e1631f2-380c-492d-8c24-ba193acfd162"
+    },
+    {
+      "appearanceId": "beachpomni",
+      "slot": "crouch",
+      "file": "assets/encore/poses/beachpomni/crouch.png",
+      "sha256": "0128d15f7b93ff79752fbe94e6f0cb8cf890d0ffd2fa181fbc245a2de37a58da",
+      "bytes": 936281,
+      "dimensions": [
+        1312,
+        1199
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        217,
+        56,
+        1166,
+        1170
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/manifest-beachpomni-noirragatha.json",
+      "sourceGenerationId": "exec-18c95a98-402f-4d82-9969-8799e11e5f20"
+    },
+    {
+      "appearanceId": "beachpomni",
+      "slot": "victory",
+      "file": "assets/encore/poses/beachpomni/victory.png",
+      "sha256": "eb3b5e94d869f97c59322f34e02218bc775bae649e3150b76f0af26c29593e3a",
+      "bytes": 1011954,
+      "dimensions": [
+        955,
+        1647
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        47,
+        28,
+        903,
+        1628
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/manifest-beachpomni-noirragatha.json",
+      "sourceGenerationId": "exec-ec47a16c-7d85-4165-8e58-8972de48115d"
+    },
+    {
+      "appearanceId": "beachpomni",
+      "slot": "defeat",
+      "file": "assets/encore/poses/beachpomni/defeat.png",
+      "sha256": "ab1f4efc9e612f2952e44429914d84803a9a7409ce1d52fd730f1b9804871146",
+      "bytes": 967405,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        249,
+        32,
+        1193,
+        1077
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/manifest-beachpomni-noirragatha.json",
+      "sourceGenerationId": "exec-e45dbd3e-61e1-485b-93cb-1f3a1b2d6c6d"
+    },
+    {
+      "appearanceId": "noirragatha",
+      "slot": "selection",
+      "file": "assets/encore/selection/noirragatha.png",
+      "sha256": "4776cb2ae6b02edf453f14e550bfebc34a5046d4867aa5a79583d1e40d32f639",
+      "bytes": 1208430,
+      "dimensions": [
+        929,
+        1694
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        97,
+        16,
+        861,
+        1679
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/manifest-beachpomni-noirragatha.json",
+      "sourceGenerationId": "exec-13b8202f-460d-4b0f-9755-4afc2e794a95"
+    },
+    {
+      "appearanceId": "noirragatha",
+      "slot": "stance",
+      "file": "assets/encore/stance/noirragatha.png",
+      "sha256": "0b55cdfecfc0f4adc7c3277fff041782f16aae0b7d4e53bff386448449d67cb0",
+      "bytes": 848840,
+      "dimensions": [
+        1073,
+        1465
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        143,
+        46,
+        825,
+        1423
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/manifest-beachpomni-noirragatha.json",
+      "sourceGenerationId": "exec-d6893c5d-2593-43b0-b837-eb41b63bc1c5"
+    },
+    {
+      "appearanceId": "noirragatha",
+      "slot": "intro",
+      "file": "assets/encore/poses/noirragatha/intro.png",
+      "sha256": "c05ef5cd0cbfa12fd8c9803e048e3d7c99cb7af7bdf6ee5d27bd2c4052ac9e88",
+      "bytes": 1084239,
+      "dimensions": [
+        929,
+        1694
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        93,
+        16,
+        817,
+        1670
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/manifest-beachpomni-noirragatha.json",
+      "sourceGenerationId": "exec-4b547cf6-16f7-402b-97f6-47521e962a04"
+    },
+    {
+      "appearanceId": "noirragatha",
+      "slot": "attack",
+      "file": "assets/encore/poses/noirragatha/attack.png",
+      "sha256": "30d989fc1bc90947a265e0d03074f0d2c53620ac75a4769acacc6816c52f3e10",
+      "bytes": 834681,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        89,
+        30,
+        1092,
+        1279
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/manifest-beachpomni-noirragatha.json",
+      "sourceGenerationId": "exec-4c1d0e59-4b5d-40b2-bee9-a7106f9a73b8"
+    },
+    {
+      "appearanceId": "noirragatha",
+      "slot": "heavy",
+      "file": "assets/encore/poses/noirragatha/heavy.png",
+      "sha256": "cac08ecefc9823d7e03f52fbb7742cc118c14c13204c0dde44b8e34135664db3",
+      "bytes": 853285,
+      "dimensions": [
+        1221,
+        1289
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        100,
+        27,
+        1016,
+        1265
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/manifest-beachpomni-noirragatha.json",
+      "sourceGenerationId": "exec-7ede7e11-6617-40af-928c-a6d7ff54ca3c"
+    },
+    {
+      "appearanceId": "noirragatha",
+      "slot": "hit",
+      "file": "assets/encore/poses/noirragatha/hit.png",
+      "sha256": "1b2e1c84ea3578c8abd2f60bd6a7b16849f3cf5853e39fa2aab7081a6cd7d0c4",
+      "bytes": 966555,
+      "dimensions": [
+        1060,
+        1484
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        55,
+        34,
+        910,
+        1461
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/manifest-beachpomni-noirragatha.json",
+      "sourceGenerationId": "exec-8fe27d08-4a92-4b4b-aae5-441b96037ce0"
+    },
+    {
+      "appearanceId": "noirragatha",
+      "slot": "walk",
+      "file": "assets/encore/poses/noirragatha/walk.png",
+      "sha256": "bf882e3e74276a9c358f6e1e2e075da057cfa08695d1aa5870aa37252bf8c721",
+      "bytes": 847859,
+      "dimensions": [
+        1068,
+        1473
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        188,
+        28,
+        874,
+        1443
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/manifest-beachpomni-noirragatha.json",
+      "sourceGenerationId": "exec-c5d7acd3-a9df-46aa-b0d7-d30efb87e5dd"
+    },
+    {
+      "appearanceId": "noirragatha",
+      "slot": "jump",
+      "file": "assets/encore/poses/noirragatha/jump.png",
+      "sha256": "4747388f8bb478697eafdd01b3bec401033566796592a6eec14a1ee142d09009",
+      "bytes": 1376830,
+      "dimensions": [
+        1104,
+        1424
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        123,
+        61,
+        920,
+        1357
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/manifest-beachpomni-noirragatha.json",
+      "sourceGenerationId": "exec-7215e44f-6206-401a-9675-2eebf9f4dd43"
+    },
+    {
+      "appearanceId": "noirragatha",
+      "slot": "crouch",
+      "file": "assets/encore/poses/noirragatha/crouch.png",
+      "sha256": "43f95ff1e695755625fe7b390d1857ca419721afc7c4fb265b24e62372fa2938",
+      "bytes": 977752,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        226,
+        60,
+        1016,
+        1270
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/manifest-beachpomni-noirragatha.json",
+      "sourceGenerationId": "exec-02f18c4f-d070-4033-848f-bdfa5ba4408f"
+    },
+    {
+      "appearanceId": "noirragatha",
+      "slot": "victory",
+      "file": "assets/encore/poses/noirragatha/victory.png",
+      "sha256": "631e5f21896c55236f668629d19c0cdf73c2f9f830333dfb8063b6f209b8bf06",
+      "bytes": 1057443,
+      "dimensions": [
+        929,
+        1694
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        100,
+        42,
+        863,
+        1665
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/manifest-beachpomni-noirragatha.json",
+      "sourceGenerationId": "exec-a5d416a7-6a95-421f-8276-24086121bb64"
+    },
+    {
+      "appearanceId": "noirragatha",
+      "slot": "defeat",
+      "file": "assets/encore/poses/noirragatha/defeat.png",
+      "sha256": "f5d20aa4bfe2f829905883e151f34830976853942dcd81e5b62f1b0fcb7c3fe1",
+      "bytes": 1028805,
+      "dimensions": [
+        1312,
+        1199
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        210,
+        26,
+        1102,
+        1184
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/manifest-beachpomni-noirragatha.json",
+      "sourceGenerationId": "exec-ccf19eac-5145-4ca8-950f-ccf5de9c110c"
+    },
+    {
+      "appearanceId": "presidentpomni",
+      "slot": "selection",
+      "file": "assets/encore/selection/presidentpomni.png",
+      "sha256": "8b512c0e52401661c79ee82f74f54807384249cfa309e8a480f7161b0abdf631",
+      "bytes": 941587,
+      "dimensions": [
+        955,
+        1647
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        24,
+        13,
+        933,
+        1635
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/presidentpomni-selection.json",
+      "sourceGenerationId": "exec-2513ae03-40b1-4428-b210-f576bca14ec3"
+    },
+    {
+      "appearanceId": "presidentpomni",
+      "slot": "stance",
+      "file": "assets/encore/stance/presidentpomni.png",
+      "sha256": "4b55d0be8b575d157842bc7291247a0819a1e24f7eb7ddff000a7731804c24f5",
+      "bytes": 831774,
+      "dimensions": [
+        1130,
+        1392
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        136,
+        43,
+        971,
+        1368
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/presidentpomni-stance.json",
+      "sourceGenerationId": "exec-a662eae4-f0d3-4d4e-b008-235a78f87557"
+    },
+    {
+      "appearanceId": "presidentpomni",
+      "slot": "intro",
+      "file": "assets/encore/poses/presidentpomni/intro.png",
+      "sha256": "0bbe2514307be89c4bcb0d1d87cb1ee19561eda9d72ef976c3e22c717b9758b0",
+      "bytes": 842629,
+      "dimensions": [
+        1164,
+        1351
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        162,
+        15,
+        928,
+        1332
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/presidentpomni-intro.json",
+      "sourceGenerationId": "exec-de1ceb45-6509-4ae9-bcef-94a79db7b21f"
+    },
+    {
+      "appearanceId": "presidentpomni",
+      "slot": "attack",
+      "file": "assets/encore/poses/presidentpomni/attack.png",
+      "sha256": "1a0b7ee7deca75d72b99d11480832d0464804ddedbe6d41ec9c6f3e565720209",
+      "bytes": 850882,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        133,
+        27,
+        1062,
+        1291
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/presidentpomni-attack.json",
+      "sourceGenerationId": "exec-948c9df4-7e98-4490-b41d-dd11b17f97a9"
+    },
+    {
+      "appearanceId": "presidentpomni",
+      "slot": "heavy",
+      "file": "assets/encore/poses/presidentpomni/heavy.png",
+      "sha256": "98d1801c63e14b30975bb85fa8c107a7bb082794c331052278dbb0e5c0e9673b",
+      "bytes": 821320,
+      "dimensions": [
+        1127,
+        1395
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        17,
+        30,
+        1102,
+        1380
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/presidentpomni-heavy.json",
+      "sourceGenerationId": "exec-f1bb122a-2c02-4d13-b532-d9f0a6e02037"
+    },
+    {
+      "appearanceId": "presidentpomni",
+      "slot": "hit",
+      "file": "assets/encore/poses/presidentpomni/hit.png",
+      "sha256": "9f2bf79678470c3e2a50afe40d553a1cd1fbc33f696fe75b516a60dc5ee9e6e4",
+      "bytes": 999759,
+      "dimensions": [
+        1112,
+        1414
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        38,
+        15,
+        969,
+        1401
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/presidentpomni-hit.json",
+      "sourceGenerationId": "exec-85f4d2a9-5334-43cb-ad4d-288538c6a837"
+    },
+    {
+      "appearanceId": "presidentpomni",
+      "slot": "walk",
+      "file": "assets/encore/poses/presidentpomni/walk.png",
+      "sha256": "7c09fb696a297197f7cfda3582058d48ca94edd24449c84bf9d293faf2eb6050",
+      "bytes": 1569782,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        63,
+        30,
+        962,
+        1509
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/presidentpomni-walk.json",
+      "sourceGenerationId": "exec-9f42b80d-8ca2-4604-bb56-23f0d6f3e4d4"
+    },
+    {
+      "appearanceId": "presidentpomni",
+      "slot": "jump",
+      "file": "assets/encore/poses/presidentpomni/jump.png",
+      "sha256": "30c5ec692725af486840184459e1fa51ac19679a0d3d468f59f280f3bcb0b8f4",
+      "bytes": 1127239,
+      "dimensions": [
+        955,
+        1647
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        14,
+        27,
+        942,
+        1332
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/presidentpomni-jump.json",
+      "sourceGenerationId": "exec-950c8a12-7a4f-4dc1-bf86-0041319f49c7"
+    },
+    {
+      "appearanceId": "presidentpomni",
+      "slot": "crouch",
+      "file": "assets/encore/poses/presidentpomni/crouch.png",
+      "sha256": "3b011540f0da67e611156945e3498db9aeddb953c40d19bd475053ec11cc67ac",
+      "bytes": 1129774,
+      "dimensions": [
+        1142,
+        1378
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        109,
+        65,
+        1106,
+        1338
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/presidentpomni-crouch.json",
+      "sourceGenerationId": "exec-c361381e-8157-4acb-8066-008da3ef49ca"
+    },
+    {
+      "appearanceId": "presidentpomni",
+      "slot": "victory",
+      "file": "assets/encore/poses/presidentpomni/victory.png",
+      "sha256": "a90e8cc1b629bc02be272d83de72b813b7d763f7a93d6e2bdc8bc04b5c254fdf",
+      "bytes": 961079,
+      "dimensions": [
+        955,
+        1647
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        23,
+        14,
+        939,
+        1637
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/presidentpomni-victory.json",
+      "sourceGenerationId": "exec-3616701d-99a1-4193-b7eb-9a9f5b08db63"
+    },
+    {
+      "appearanceId": "presidentpomni",
+      "slot": "defeat",
+      "file": "assets/encore/poses/presidentpomni/defeat.png",
+      "sha256": "a40f803be6009a3f3837d3ae9307b96067c8816cc55e9a5fd56c9f7b156232c2",
+      "bytes": 1048411,
+      "dimensions": [
+        955,
+        1647
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        40,
+        236,
+        911,
+        1467
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/presidentpomni-defeat.json",
+      "sourceGenerationId": "exec-6fc936bf-fac4-4c9a-9b8b-b2cea48d712d"
+    },
+    {
+      "appearanceId": "noirzooble",
+      "slot": "selection",
+      "file": "assets/encore/selection/noirzooble.png",
+      "sha256": "f60771724f6dc7bc2690fac037c9e03f1a52af45f639e956f8ced38eb18bb7b1",
+      "bytes": 1129031,
+      "dimensions": [
+        941,
+        1672
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        34,
+        8,
+        863,
+        1664
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/manifest-noirzooble-beachzooble.json",
+      "sourceGenerationId": "exec-61a2db97-4700-4daa-aa1d-9e1bad262984"
+    },
+    {
+      "appearanceId": "noirzooble",
+      "slot": "stance",
+      "file": "assets/encore/stance/noirzooble.png",
+      "sha256": "cb1e76550fc439008910fc40e17af583fe326b6d2b418a0b14b989496dc4d1ca",
+      "bytes": 955347,
+      "dimensions": [
+        1190,
+        1322
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        174,
+        12,
+        1061,
+        1304
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/manifest-noirzooble-beachzooble.json",
+      "sourceGenerationId": "exec-5ed83087-179a-49f2-9c6d-98ab44f3a2ca"
+    },
+    {
+      "appearanceId": "noirzooble",
+      "slot": "intro",
+      "file": "assets/encore/poses/noirzooble/intro.png",
+      "sha256": "a2cdf65a942c5ee2ff551181f66d48ac2ae8971e62d1ccafbe44997569297dfa",
+      "bytes": 1124546,
+      "dimensions": [
+        941,
+        1671
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        51,
+        12,
+        884,
+        1665
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/manifest-noirzooble-beachzooble.json",
+      "sourceGenerationId": "exec-30765c86-eedc-40eb-a109-cfc2ae913e83"
+    },
+    {
+      "appearanceId": "noirzooble",
+      "slot": "attack",
+      "file": "assets/encore/poses/noirzooble/attack.png",
+      "sha256": "1b33dbb38057a8ec1c315f2a2a0831346c86bd534dcbb48624a8b142357bdd68",
+      "bytes": 896614,
+      "dimensions": [
+        1312,
+        1199
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        103,
+        12,
+        1247,
+        1188
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/manifest-noirzooble-beachzooble.json",
+      "sourceGenerationId": "exec-4f2d4066-cdb7-4478-bcc1-7bfbcb05a0e1"
+    },
+    {
+      "appearanceId": "noirzooble",
+      "slot": "heavy",
+      "file": "assets/encore/poses/noirzooble/heavy.png",
+      "sha256": "7ad1d6681b93c1193a3d798238155e35b9c81435f4228d8d39bbecfbe4bc6df8",
+      "bytes": 857235,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        25,
+        10,
+        1175,
+        1300
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/manifest-noirzooble-beachzooble.json",
+      "sourceGenerationId": "exec-58e299b0-963e-4b14-9cc3-896877cc489e"
+    },
+    {
+      "appearanceId": "noirzooble",
+      "slot": "hit",
+      "file": "assets/encore/poses/noirzooble/hit.png",
+      "sha256": "dc33eda6ecf98940d0da12fca6426a492b4b221640d6f9e46d9c620da00c54a7",
+      "bytes": 1113750,
+      "dimensions": [
+        1071,
+        1469
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        21,
+        12,
+        1002,
+        1464
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/manifest-noirzooble-beachzooble.json",
+      "sourceGenerationId": "exec-8db02c25-273f-4fbf-aaf4-84dcb3d81392"
+    },
+    {
+      "appearanceId": "noirzooble",
+      "slot": "walk",
+      "file": "assets/encore/poses/noirzooble/walk.png",
+      "sha256": "feb2f2013b7f2341a876ac60e7ad0458379121667de6d5bb02b5e8f2b4f916ed",
+      "bytes": 845526,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        243,
+        12,
+        1018,
+        1285
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/manifest-noirzooble-beachzooble.json",
+      "sourceGenerationId": "exec-dbe04219-62a3-461a-9a22-25d33599690c"
+    },
+    {
+      "appearanceId": "noirzooble",
+      "slot": "jump",
+      "file": "assets/encore/poses/noirzooble/jump.png",
+      "sha256": "962059480cfeb91cd0d1b6a481ae90f96b89131b21802bc1c49dabbc9d523979",
+      "bytes": 913344,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        158,
+        18,
+        1088,
+        1283
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/manifest-noirzooble-beachzooble.json",
+      "sourceGenerationId": "exec-314020a5-9893-4cd9-94ff-62789b00ee7e"
+    },
+    {
+      "appearanceId": "noirzooble",
+      "slot": "crouch",
+      "file": "assets/encore/poses/noirzooble/crouch.png",
+      "sha256": "1df2053efb611062ca8413b7b6a62512fec0926d962a100497a5cf63720abee9",
+      "bytes": 1242004,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        127,
+        13,
+        1115,
+        1293
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/manifest-noirzooble-beachzooble.json",
+      "sourceGenerationId": "exec-a0b9f637-3e7e-4830-ba3f-9f6d398a0be9"
+    },
+    {
+      "appearanceId": "noirzooble",
+      "slot": "victory",
+      "file": "assets/encore/poses/noirzooble/victory.png",
+      "sha256": "f00de382690f18713616e79cc411ce62c1db7c3501947a4cb0c355aeeebd4ad2",
+      "bytes": 1180125,
+      "dimensions": [
+        941,
+        1671
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        11,
+        9,
+        879,
+        1665
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/manifest-noirzooble-beachzooble.json",
+      "sourceGenerationId": "exec-89cc149f-1bb2-4719-900a-1d1d7e1e5341"
+    },
+    {
+      "appearanceId": "noirzooble",
+      "slot": "defeat",
+      "file": "assets/encore/poses/noirzooble/defeat.png",
+      "sha256": "1570d8fbefb18fb6f7961cac3b36c7ff6918726bc4fd656bea4b0a4668ffb443",
+      "bytes": 1072284,
+      "dimensions": [
+        1217,
+        1292
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        83,
+        15,
+        1026,
+        1280
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/manifest-noirzooble-beachzooble.json",
+      "sourceGenerationId": "exec-8df7c47b-525a-4ecf-8c1d-1dc83fbf05f0"
+    },
+    {
+      "appearanceId": "beachragatha",
+      "slot": "selection",
+      "file": "assets/encore/selection/beachragatha.png",
+      "sha256": "a7e7b68419ee1859c92475ebe973a6f55619a9939555bc3550ca2445caf0c981",
+      "bytes": 1956856,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        64,
+        12,
+        902,
+        1524
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/beachragatha-selection.json",
+      "sourceGenerationId": "exec-aafc2ae1-42b3-4247-88c6-2782fe8a51f0"
+    },
+    {
+      "appearanceId": "beachragatha",
+      "slot": "stance",
+      "file": "assets/encore/stance/beachragatha.png",
+      "sha256": "61df2bd744cf8376bb72d47acb15cc881ea006ece9b64e425267a30e1c74f7d7",
+      "bytes": 1838001,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        64,
+        13,
+        892,
+        1517
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/beachragatha-stance.json",
+      "sourceGenerationId": "exec-c4618371-de93-46eb-9540-f68b65dec093"
+    },
+    {
+      "appearanceId": "beachragatha",
+      "slot": "intro",
+      "file": "assets/encore/poses/beachragatha/intro.png",
+      "sha256": "c5c1046395836c3d03074ddddb03a53a3b4baf6051d14dcf8b32fa4e3766fe02",
+      "bytes": 1884842,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        61,
+        13,
+        904,
+        1502
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/beachragatha-intro.json",
+      "sourceGenerationId": "exec-77b44848-1624-49b3-ae26-ab64e6bdc7a2"
+    },
+    {
+      "appearanceId": "beachragatha",
+      "slot": "attack",
+      "file": "assets/encore/poses/beachragatha/attack.png",
+      "sha256": "99dcac2c5a5ed273104f51e4f2e449eb347acb7ae75d6ec079415ecf0a26f243",
+      "bytes": 1929940,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        47,
+        27,
+        998,
+        1506
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/beachragatha-attack.json",
+      "sourceGenerationId": "exec-383f1d3d-1d91-4b37-9255-d1e58ca15c93"
+    },
+    {
+      "appearanceId": "beachragatha",
+      "slot": "heavy",
+      "file": "assets/encore/poses/beachragatha/heavy.png",
+      "sha256": "a68b3ee353286f5ad4839a1d688cbb041bf9a907f9a7083f123b7d8acbb613e1",
+      "bytes": 1777030,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        156,
+        7,
+        1334,
+        1016
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/beachragatha-heavy.json",
+      "sourceGenerationId": "exec-d6670fc1-803b-481a-917f-031f8941146a"
+    },
+    {
+      "appearanceId": "beachragatha",
+      "slot": "hit",
+      "file": "assets/encore/poses/beachragatha/hit.png",
+      "sha256": "ca9c2bf7acb58004896b38121a5ca8ae1c55b4234f04da3b312493065d24a884",
+      "bytes": 1957870,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        24,
+        26,
+        945,
+        1518
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/beachragatha-hit.json",
+      "sourceGenerationId": "exec-b7592926-2ce9-4aee-b855-4edb4a5fe338"
+    },
+    {
+      "appearanceId": "beachragatha",
+      "slot": "walk",
+      "file": "assets/encore/poses/beachragatha/walk.png",
+      "sha256": "0022f7df42ca3176a457517b4e9dec902b7fa5c83a193ce03d2879bb1b494dcb",
+      "bytes": 1873643,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        82,
+        11,
+        903,
+        1497
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/beachragatha-walk.json",
+      "sourceGenerationId": "exec-16f462d5-cf6b-41ee-8047-50d0b607caaa"
+    },
+    {
+      "appearanceId": "beachragatha",
+      "slot": "jump",
+      "file": "assets/encore/poses/beachragatha/jump.png",
+      "sha256": "bfdd2b569f66bac6447a4941f0436cf854948e43ec1d6e9292604610abecddcb",
+      "bytes": 1137672,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        168,
+        17,
+        1065,
+        1263
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/beachragatha-jump.json",
+      "sourceGenerationId": "exec-66c15996-3987-46ff-9eb2-6966ee461978"
+    },
+    {
+      "appearanceId": "beachragatha",
+      "slot": "crouch",
+      "file": "assets/encore/poses/beachragatha/crouch.png",
+      "sha256": "23ad5ec6125743340c8d4dbb2fc91230648278945bee8e10fc3da660a1582e87",
+      "bytes": 1427987,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        55,
+        16,
+        1086,
+        1299
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/beachragatha-crouch.json",
+      "sourceGenerationId": "exec-134179c2-e162-420c-a4db-7872f8c3c138"
+    },
+    {
+      "appearanceId": "beachragatha",
+      "slot": "victory",
+      "file": "assets/encore/poses/beachragatha/victory.png",
+      "sha256": "138f07a986cb2ea3b6ddaafea7627da45d99e092430e24dab7b8125f7013499b",
+      "bytes": 1877974,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        82,
+        9,
+        927,
+        1510
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/beachragatha-victory.json",
+      "sourceGenerationId": "exec-ab3f4927-f1b9-494c-8f28-576fd938725c"
+    },
+    {
+      "appearanceId": "beachragatha",
+      "slot": "defeat",
+      "file": "assets/encore/poses/beachragatha/defeat.png",
+      "sha256": "d6cddc66cfbae102c4df16ff8db76532dc30a096c331c768498ba6529f5d0dfe",
+      "bytes": 1700550,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        217,
+        9,
+        1273,
+        1022
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/beachragatha-defeat.json",
+      "sourceGenerationId": "exec-a8a4df2b-0cdb-4132-96f7-779935981429"
+    },
+    {
+      "appearanceId": "beachzooble",
+      "slot": "selection",
+      "file": "assets/encore/selection/beachzooble.png",
+      "sha256": "029e19804571c4c69356676711320310b720d6f349ad9d2187aeb2f47c4b59d7",
+      "bytes": 1626284,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        84,
+        14,
+        844,
+        1526
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/manifest-noirzooble-beachzooble.json",
+      "sourceGenerationId": "exec-33f0cdb5-d3a4-408a-8e11-722f49fc15de"
+    },
+    {
+      "appearanceId": "beachzooble",
+      "slot": "stance",
+      "file": "assets/encore/stance/beachzooble.png",
+      "sha256": "a9bf312d2727104635457213dcffad9e2d45f8a04d7fe4d1200e1174ba323d65",
+      "bytes": 1664083,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        74,
+        22,
+        948,
+        1515
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/manifest-noirzooble-beachzooble.json",
+      "sourceGenerationId": "exec-06177ae4-35fd-4fe2-8536-198d7b493430"
+    },
+    {
+      "appearanceId": "beachzooble",
+      "slot": "intro",
+      "file": "assets/encore/poses/beachzooble/intro.png",
+      "sha256": "eded1ff67bc5d161393a3a7ba515f0a2c3a8173ce890e0c05e88e06b3885f2bb",
+      "bytes": 1621469,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        89,
+        8,
+        912,
+        1533
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/manifest-noirzooble-beachzooble.json",
+      "sourceGenerationId": "exec-c1f7964d-8a0e-4de1-92ca-3ce127bf34c1"
+    },
+    {
+      "appearanceId": "beachzooble",
+      "slot": "attack",
+      "file": "assets/encore/poses/beachzooble/attack.png",
+      "sha256": "31aaa56e49231a18810e224bbc54f34fb5dfc105d0900be21824c38af1fda1ae",
+      "bytes": 989155,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        39,
+        17,
+        1176,
+        1303
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/manifest-noirzooble-beachzooble.json",
+      "sourceGenerationId": "exec-b513983d-3c4f-4707-b64a-c49512beb3d1"
+    },
+    {
+      "appearanceId": "beachzooble",
+      "slot": "heavy",
+      "file": "assets/encore/poses/beachzooble/heavy.png",
+      "sha256": "1536ad850fa20894026f5bc32a9d693298c56976e0dc1098df8e026dd02d469d",
+      "bytes": 843351,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        7,
+        9,
+        1182,
+        1296
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/manifest-noirzooble-beachzooble.json",
+      "sourceGenerationId": "exec-19ebbeed-235c-46e0-b590-6ec4556475cb"
+    },
+    {
+      "appearanceId": "beachzooble",
+      "slot": "hit",
+      "file": "assets/encore/poses/beachzooble/hit.png",
+      "sha256": "589c4a31219e52f12fb1aed2ca7b3d583c5a9235d0c677b163ae1466b3c4d49b",
+      "bytes": 1669231,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        13,
+        56,
+        912,
+        1484
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/manifest-noirzooble-beachzooble.json",
+      "sourceGenerationId": "exec-bb30c0aa-fbc3-44d6-83db-efc940011e47"
+    },
+    {
+      "appearanceId": "beachzooble",
+      "slot": "walk",
+      "file": "assets/encore/poses/beachzooble/walk.png",
+      "sha256": "af5a63b2e15890a96097d4439503a71cec9e5980d139720e6de06709cc02a42d",
+      "bytes": 917802,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        172,
+        8,
+        1026,
+        1270
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/manifest-noirzooble-beachzooble.json",
+      "sourceGenerationId": "exec-467db24a-ac2e-4c25-a00b-448456acc2a6"
+    },
+    {
+      "appearanceId": "beachzooble",
+      "slot": "jump",
+      "file": "assets/encore/poses/beachzooble/jump.png",
+      "sha256": "1acd034851ecb22173d2dbdbbedfba4c58d24f0b2fdb18f04a8e4da8c6486514",
+      "bytes": 1643267,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        78,
+        35,
+        962,
+        1423
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/manifest-noirzooble-beachzooble.json",
+      "sourceGenerationId": "exec-3be2f0e2-243a-4249-839d-ab797a7d2e73"
+    },
+    {
+      "appearanceId": "beachzooble",
+      "slot": "crouch",
+      "file": "assets/encore/poses/beachzooble/crouch.png",
+      "sha256": "311bcc6777d425251dce7a7849d9f53352a1d02ff3eed3eef5a04256ce115ffd",
+      "bytes": 1207854,
+      "dimensions": [
+        1207,
+        1303
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        17,
+        14,
+        1071,
+        1294
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/manifest-noirzooble-beachzooble.json",
+      "sourceGenerationId": "exec-df539fe6-73de-4e94-b31b-91a24be09912"
+    },
+    {
+      "appearanceId": "beachzooble",
+      "slot": "victory",
+      "file": "assets/encore/poses/beachzooble/victory.png",
+      "sha256": "f75ad6b2cb3a13b23bcd2efdf0cda935a1cd8a25ec3c036fd4f7395cc601f5a8",
+      "bytes": 1624759,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        64,
+        14,
+        990,
+        1526
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/manifest-noirzooble-beachzooble.json",
+      "sourceGenerationId": "exec-4bce693f-5785-43f8-a141-9658960180fe"
+    },
+    {
+      "appearanceId": "beachzooble",
+      "slot": "defeat",
+      "file": "assets/encore/poses/beachzooble/defeat.png",
+      "sha256": "692a58cb2e8aff5de6b8f63efa4189bd1b352c08142c6447ca17d0171ae76f51",
+      "bytes": 1081983,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        45,
+        20,
+        1156,
+        1295
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/manifest-noirzooble-beachzooble.json",
+      "sourceGenerationId": "exec-0a625f83-39b4-4ce8-b598-27e54c2977a4"
+    },
+    {
+      "appearanceId": "beachjax",
+      "slot": "selection",
+      "file": "assets/encore/selection/beachjax.png",
+      "sha256": "8c3648ee74c40c01a56e0d4ad2e9e723b3c5f34133f0e05a47b07df1c26415eb",
+      "bytes": 809299,
+      "dimensions": [
+        804,
+        1956
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        30,
+        24,
+        768,
+        1935
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/beachjax-selection.json",
+      "sourceGenerationId": "exec-6a4ff027-d311-48aa-bd83-9fa11c411dd9"
+    },
+    {
+      "appearanceId": "beachjax",
+      "slot": "stance",
+      "file": "assets/encore/stance/beachjax.png",
+      "sha256": "cf44beb6e4b483c123bdb755b034300ca94baf5a57e9d36874087c83eda6e30b",
+      "bytes": 845235,
+      "dimensions": [
+        804,
+        1957
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        24,
+        19,
+        776,
+        1932
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/beachjax-stance.json",
+      "sourceGenerationId": "exec-2f1d0c98-d563-4aaa-af55-b10dcd91d970"
+    },
+    {
+      "appearanceId": "beachjax",
+      "slot": "intro",
+      "file": "assets/encore/poses/beachjax/intro.png",
+      "sha256": "26d11c744678f16daf76fd4a41f86239c9e654d18e38c9123734c494e80376ab",
+      "bytes": 686723,
+      "dimensions": [
+        1038,
+        1515
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        53,
+        16,
+        998,
+        1498
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/beachjax-intro.json",
+      "sourceGenerationId": "exec-40079532-6efa-4972-b986-7a1741d76fb0"
+    },
+    {
+      "appearanceId": "beachjax",
+      "slot": "attack",
+      "file": "assets/encore/poses/beachjax/attack.png",
+      "sha256": "836d3bd957a9817411b422dae4893b088fdb6533433c1c5286a51a79c6a3c866",
+      "bytes": 696913,
+      "dimensions": [
+        805,
+        1954
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        10,
+        60,
+        799,
+        1819
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/beachjax-attack.json",
+      "sourceGenerationId": "exec-1c444746-eb96-40d6-9ded-1076fe36af0a"
+    },
+    {
+      "appearanceId": "beachjax",
+      "slot": "heavy",
+      "file": "assets/encore/poses/beachjax/heavy.png",
+      "sha256": "c2135d33f7e0b760ec2ce7febf91a21ee9b59b3567e59a1fba31d7c86aa60e7f",
+      "bytes": 562065,
+      "dimensions": [
+        1163,
+        1352
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        34,
+        12,
+        1147,
+        1341
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/beachjax-heavy.json",
+      "sourceGenerationId": "exec-d931bb5f-030a-4726-8c55-f8263282575e"
+    },
+    {
+      "appearanceId": "beachjax",
+      "slot": "hit",
+      "file": "assets/encore/poses/beachjax/hit.png",
+      "sha256": "c24755a1c21f27bcacf91aaf59ce6c56e8115dccb19413bf2ab80e2f05520e75",
+      "bytes": 836657,
+      "dimensions": [
+        805,
+        1954
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        10,
+        81,
+        780,
+        1921
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/beachjax-hit.json",
+      "sourceGenerationId": "exec-bc22188a-9964-4132-849b-3cf276c268f8"
+    },
+    {
+      "appearanceId": "beachjax",
+      "slot": "walk",
+      "file": "assets/encore/poses/beachjax/walk.png",
+      "sha256": "2a631ea9a4ef380795e56c1596db8ad2a0b62991072ac908ce019df2e54787d2",
+      "bytes": 677395,
+      "dimensions": [
+        1064,
+        1478
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        103,
+        40,
+        969,
+        1438
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/beachjax-walk.json",
+      "sourceGenerationId": "exec-49bad497-2250-4dca-9347-c4b14c833031"
+    },
+    {
+      "appearanceId": "beachjax",
+      "slot": "jump",
+      "file": "assets/encore/poses/beachjax/jump.png",
+      "sha256": "b63bc655354a658bdf7775a033dce0159828d82a0e58db19439d0c70b708a14b",
+      "bytes": 791478,
+      "dimensions": [
+        1182,
+        1330
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        42,
+        36,
+        1149,
+        1273
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/beachjax-jump.json",
+      "sourceGenerationId": "exec-2859bba4-7cad-4cf5-9c2b-6b00275ba255"
+    },
+    {
+      "appearanceId": "beachjax",
+      "slot": "crouch",
+      "file": "assets/encore/poses/beachjax/crouch.png",
+      "sha256": "b42c0ecc1bfb7b32803ac652111205900e749033365bdfc229976ac167ff19ac",
+      "bytes": 906407,
+      "dimensions": [
+        1246,
+        1263
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        58,
+        19,
+        1199,
+        1250
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/beachjax-crouch.json",
+      "sourceGenerationId": "exec-1a9b0145-c61d-47b8-8c67-d06ebe5c7e8f"
+    },
+    {
+      "appearanceId": "beachjax",
+      "slot": "victory",
+      "file": "assets/encore/poses/beachjax/victory.png",
+      "sha256": "77dfea8a1d8459434932a500d537fc5bc8f555800d50c3245c583b44c6b8f255",
+      "bytes": 1324364,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        213,
+        17,
+        838,
+        1527
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/beachjax-victory.json",
+      "sourceGenerationId": "exec-17d426d1-59c6-4b74-8ead-0096dbfc3dc6"
+    },
+    {
+      "appearanceId": "beachjax",
+      "slot": "defeat",
+      "file": "assets/encore/poses/beachjax/defeat.png",
+      "sha256": "65455d07901e2645cf77cb02d02c9f329fb6cc55a3551db3ca31a2ab2a8fa42e",
+      "bytes": 720743,
+      "dimensions": [
+        1374,
+        1145
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        68,
+        92,
+        1305,
+        1119
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/beachjax-defeat.json",
+      "sourceGenerationId": "exec-46301835-457b-4dcc-a172-cbfbf1d43039"
+    },
+    {
+      "appearanceId": "sandcastlekinger",
+      "slot": "selection",
+      "file": "assets/encore/selection/sandcastlekinger.png",
+      "sha256": "14bea0188d6b6e3f10ca919c9497bf058327f10e7bfcd7c2a2573144cca05e42",
+      "bytes": 998101,
+      "dimensions": [
+        1160,
+        1355
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        190,
+        15,
+        948,
+        1340
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/manifest-sandcastlekinger.json",
+      "sourceGenerationId": "exec-e1c7f075-eaa7-49cf-8ef2-d233f5c37773"
+    },
+    {
+      "appearanceId": "sandcastlekinger",
+      "slot": "stance",
+      "file": "assets/encore/stance/sandcastlekinger.png",
+      "sha256": "99df9caf8346423ee9938097392a49c84ba929c8c7fed4166232fe03bcaa6225",
+      "bytes": 952404,
+      "dimensions": [
+        1160,
+        1355
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        156,
+        144,
+        986,
+        1305
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/manifest-sandcastlekinger.json",
+      "sourceGenerationId": "exec-5ea3f765-2c7e-447f-b2da-3ee5e1b05141"
+    },
+    {
+      "appearanceId": "sandcastlekinger",
+      "slot": "intro",
+      "file": "assets/encore/poses/sandcastlekinger/intro.png",
+      "sha256": "ebe679f2d11da73e693d7cadb6af2fd56d2e74d167469236fb32abee36fbe951",
+      "bytes": 1048484,
+      "dimensions": [
+        1160,
+        1355
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        190,
+        10,
+        949,
+        1339
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/manifest-sandcastlekinger.json",
+      "sourceGenerationId": "exec-7feb7f13-e22e-444e-8ea3-ac3539e19182"
+    },
+    {
+      "appearanceId": "sandcastlekinger",
+      "slot": "attack",
+      "file": "assets/encore/poses/sandcastlekinger/attack.png",
+      "sha256": "9ccff1a6044067bde938ec8bcd17882287d61fa4b74d8f84f63792634d4e8c92",
+      "bytes": 1035158,
+      "dimensions": [
+        1160,
+        1355
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        138,
+        16,
+        1079,
+        1327
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/manifest-sandcastlekinger.json",
+      "sourceGenerationId": "exec-be374fb2-5f5b-48d6-8ac1-da6cc241a18f"
+    },
+    {
+      "appearanceId": "sandcastlekinger",
+      "slot": "heavy",
+      "file": "assets/encore/poses/sandcastlekinger/heavy.png",
+      "sha256": "5eaff4c6a8f93bd105f180a3d8202a0114eca1c87be7ec0c87870cb8435360dc",
+      "bytes": 1058544,
+      "dimensions": [
+        1160,
+        1355
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        74,
+        43,
+        1119,
+        1333
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/manifest-sandcastlekinger.json",
+      "sourceGenerationId": "exec-26c2842b-3d47-406d-b5b3-b4bf8d610ea4"
+    },
+    {
+      "appearanceId": "sandcastlekinger",
+      "slot": "hit",
+      "file": "assets/encore/poses/sandcastlekinger/hit.png",
+      "sha256": "01f51249e08c5d4f204435b6bc1ece67f39fd8c5b0f5add437fac96b56bcf1e3",
+      "bytes": 1049517,
+      "dimensions": [
+        1160,
+        1355
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        156,
+        25,
+        960,
+        1322
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/manifest-sandcastlekinger.json",
+      "sourceGenerationId": "exec-80f34519-5aaf-480c-9a59-f0ed7b57fccd"
+    },
+    {
+      "appearanceId": "sandcastlekinger",
+      "slot": "walk",
+      "file": "assets/encore/poses/sandcastlekinger/walk.png",
+      "sha256": "5c183bda0ca379f03b40dedaccbc8f80833d19b03fba0ca925b9002e4ce42ab7",
+      "bytes": 978636,
+      "dimensions": [
+        1160,
+        1355
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        158,
+        22,
+        1016,
+        1317
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/manifest-sandcastlekinger.json",
+      "sourceGenerationId": "exec-c66fb17b-0d04-4367-9ec4-e932065bfa32"
+    },
+    {
+      "appearanceId": "sandcastlekinger",
+      "slot": "jump",
+      "file": "assets/encore/poses/sandcastlekinger/jump.png",
+      "sha256": "891a556e97bcd5124dfdf2122dd825626b931cb2eacd96e51cf18e7f2b311563",
+      "bytes": 909236,
+      "dimensions": [
+        1160,
+        1355
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        197,
+        31,
+        965,
+        1238
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/manifest-sandcastlekinger.json",
+      "sourceGenerationId": "exec-fda200e8-2045-40d1-8909-15de3894bb70"
+    },
+    {
+      "appearanceId": "sandcastlekinger",
+      "slot": "crouch",
+      "file": "assets/encore/poses/sandcastlekinger/crouch.png",
+      "sha256": "07854970a57e716bbed0cb9b1887a479096400de3b13b0d02d39983b26ec436c",
+      "bytes": 911148,
+      "dimensions": [
+        1160,
+        1355
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        188,
+        198,
+        948,
+        1337
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/manifest-sandcastlekinger.json",
+      "sourceGenerationId": "exec-d959b41c-314f-41b2-9b64-142f663cc4fc"
+    },
+    {
+      "appearanceId": "sandcastlekinger",
+      "slot": "victory",
+      "file": "assets/encore/poses/sandcastlekinger/victory.png",
+      "sha256": "0f8c76a75290e770770e614114e95d5bfd87c6a298b4d09a9e2d1431c1d11158",
+      "bytes": 1029073,
+      "dimensions": [
+        1102,
+        1428
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        165,
+        16,
+        935,
+        1371
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/manifest-sandcastlekinger.json",
+      "sourceGenerationId": "exec-dca1cd03-5732-481f-b5bb-0d384a923477"
+    },
+    {
+      "appearanceId": "sandcastlekinger",
+      "slot": "defeat",
+      "file": "assets/encore/poses/sandcastlekinger/defeat.png",
+      "sha256": "f1e8a0d74bd3ec99d1bb107e0f8a3aaf350aa46425c828c62bdba28ce35d9df8",
+      "bytes": 987794,
+      "dimensions": [
+        1160,
+        1355
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        164,
+        26,
+        955,
+        1313
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261119/manifest-sandcastlekinger.json",
+      "sourceGenerationId": "exec-34b8aea1-ba85-4aa7-8822-1715ee4c9244"
+    }
+  ]
+}

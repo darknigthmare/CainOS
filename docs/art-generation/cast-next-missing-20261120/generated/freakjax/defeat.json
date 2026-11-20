@@ -1,0 +1,72 @@
+{
+  "appearanceId": "freakjax",
+  "fighterId": "jax",
+  "slot": "defeat",
+  "nativeFacing": "right",
+  "prompt": "Use case: identity-preserve / stylized-concept. Reference image 1 is the approved native 2D Freak Jax selection sprite; reference image 2 is the official GLITCH figurine showing the costume. Create ONE NEW full-body game sprite of this EXACT same Freak Jax character, with a genuinely different action pose described below. Preserve proportions, palette, linework and every costume trait from image 1.\nIdentity invariants: bare smooth round golden-yellow head, NO ears on head, TWO solid black rounded-square eyes, NO white eyeballs/pupils/nose/teeth, exactly FIVE small dark-ochre low-face marks. Lavender arms and broad three-toed lavender feet, yellow gloves, coral/salmon intact bib overalls with plain pale-pink rectangular pocket and pale-pink rolled cuffs. Preserve the large folded lavender rabbit-hood-like volume behind the shoulders and its TWO flattened ear-shaped lobes trailing beside/behind the body; do not turn these into a tail, erect ears or separate creature. No torn clothes, added emblems, yellow limbs, new anatomy or invented rear attachments. Keep a front/three-quarter view toward SCREEN-RIGHT so visible design remains supported by the references.\nPOSE: Gentle defeated seated pose facing SCREEN-RIGHT, sitting with shoulders slumped, one yellow-gloved hand resting against the side of the round head, the other on the knee; both legs bent in front with both complete lavender feet visible. Purple draped lobes pool behind. No injury, extra character, floor or shadow.\nArt direction: polished 2D cartoon fighting-game sprite, strong crisp dark outlines, clean flat colors with restrained cel shading, opaque character interior and completely transparent zero-alpha exterior. No 3D texture, background, floor, cast shadow, colored glow, aura, fuzzy fringe, caption, motion trails, speech bubble, particles or framing. Exactly one complete character with two hands and two feet, no collage or duplicated limbs. Portrait or square framing as needed to fit the action, with at least 5 percent transparent padding on all four sides. Do not crop the head, extended fingers, both feet, or long purple lobes. Original fan-game action pose, not an animation sequence or film frame.",
+  "referencePaths": [
+    "docs/art-generation/cast-next-missing-20261120/generated/freakjax/selection.png",
+    "docs/art-generation/cast-next-missing-20261120/references/freakjax/Animiniz_SideShow_freakJax.png"
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_freakJax.png?v=1773977710"
+  ],
+  "reviewer": "tracker_recovery",
+  "schema": "encore-native-next-missing-art/v1",
+  "id": "freakjax:defeat",
+  "status": "accepted_native",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "file": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/defeat.png",
+  "targetFile": "assets/encore/poses/freakjax/defeat.png",
+  "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-7eb42f81-c2d0-45c2-b043-fe6bdd2dbf1c.png",
+  "sourceGenerationId": "exec-7eb42f81-c2d0-45c2-b043-fe6bdd2dbf1c",
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/selection.png",
+      "sha256": "22ea8b9c34b9acd5b8b3889129d0436542d586ee716b73e6cff061af469a1010",
+      "bytes": 916364
+    },
+    {
+      "position": 2,
+      "file": "docs/art-generation/cast-next-missing-20261120/references/freakjax/Animiniz_SideShow_freakJax.png",
+      "sha256": "a5b25381cb9f25a235aaf00c7b27b36823910c5c7a211dbc658ae5e7f2f63a80",
+      "bytes": 578459
+    }
+  ],
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "alpha12Bounds": [
+    81,
+    55,
+    1117,
+    1230
+  ],
+  "alpha12BoundsThreshold": "alpha > 12",
+  "fullyTransparentPixels": 812901,
+  "sha256": "92b0196076e4d114dd1ba5ce29dc3f99e61a12e1b68f11e224cf615269e5f401",
+  "bytes": 1098984,
+  "nativeCopyVerified": true,
+  "sourceKind": "Produit dérivé officiel",
+  "episodeFidelityClaim": false,
+  "includedInRuntime": false,
+  "createdAt": "2026-11-20T13:36:42.864814+00:00",
+  "visualReview": {
+    "status": "accepted",
+    "reviewer": "tracker_recovery",
+    "observations": [
+      "Défaite assise distincte, tête soutenue par une main et autre main sur le genou ; deux pieds complets devant le corps, deux lobes violets derrière.",
+      "Costume intact et visage cohérent à cinq marques, sans blessures, sol, ombre ou autre personnage."
+    ],
+    "scope": "Official costume comparison and original game pose; no episode or complete animation certification."
+  }
+}

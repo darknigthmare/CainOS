@@ -1,0 +1,93 @@
+{
+  "schema": "encore-undermap-verification-v1",
+  "createdAt": "2026-11-20T13:32:58.553759+00:00",
+  "phase": "local-stage-final-verified",
+  "baseLocalCommit": "3858f03bba652fa56bdf422b5566dea86dbdcb9b",
+  "baseRemoteCommit": "3bd83cdf2e63e93275c8478795d5e2af32313f41",
+  "counts": {
+    "sharedStagesBefore": 22,
+    "sharedStagesAfter": 23,
+    "dedicatedArrangements": 54,
+    "newNativePNGs": 3,
+    "newNativeBytes": 1821031,
+    "existingPlanesPreserved": 66,
+    "totalSharedStagePlanes": 69,
+    "targetedTests": 80,
+    "targetedFailures": 0,
+    "historicalStoryRoutes": 54,
+    "historicalProgramFixtures": 45,
+    "historicalCheckpoints": 270,
+    "historicalReplayFixtures": 14,
+    "historicalReplayFrames": 3682,
+    "canvasCameras": 3,
+    "canvasScenesWithActors": 3,
+    "canvasChecks": 6
+  },
+  "sources": {
+    "combat/data.mjs": "02d7d40bf9e27d27d3a8e8adc593861cbfd7a7e357b3886308efb7e17e7705ba",
+    "combat/fidelity.mjs": "2e3ee2fe7c19e7ff40997abd2c5c8a1927fc7f5ef82e5522c7192225a8a3142e",
+    "combat/audio.mjs": "e774d5d5c50102dfd6b726affad4cdd546c9d05df070c928d6a3d9ba04c5e9ed",
+    "combat/audio-ambiences.mjs": "135a9fe8c62b99bf06c1182745bce6dbb2ffd31aca7d824e78852ff1d0470fc0",
+    "combat/stories.mjs": "763d0012eec0e59ac9454a9467596d7296b65cc64002918cc5db462b09a1fec7",
+    "combat/progression.mjs": "d1c06308fdf48e57b4ef4261d952237be3878cdfacd13ab234d1c6bde9dfae3e",
+    "combat/render-stage-motion.mjs": "327ff8a636f4a37cbd0d7f2d5063b51299c0708d992490189cc9db5d27c71e46",
+    "combat/render.mjs": "1bf5bbefabaa9330622a0eead66ece112889a0e1c354d902c977ea6f7abbdb56",
+    "combat/stage-parallax.mjs": "1e01fa0b4932f0e670bb6fa746c48b57de0c726a5637891e68427a161aecc77d",
+    "combat/engine.mjs": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
+    "combat/session.mjs": "9dce5b9d2fff5316cd280c8f58038d06134935717c3fd637e76042e308a1d65e",
+    "tests/combat-undermap.test.mjs": "007f96cdf8363befaae5d2ecef143afbc56cf715702d9cfd02ab16d221b5261b",
+    "tests/fixtures/combat-pre-undermap.json": "3b50be4fe6c51b3cb47babf874eeb159db1b619d87f995aa9fcbde0ca19b9a0d",
+    "scripts/review-combat-undermap-20261120.mjs": "d8e2112169524aaa56bff1875dc4545b14c8e826e32017f4ecb94309eadff341"
+  },
+  "unchangedHistoricalRuntime": {
+    "combat/engine.mjs": true,
+    "combat/session.mjs": true
+  },
+  "parallaxLoaderUnchanged": true,
+  "fixtureSHA256": "3b50be4fe6c51b3cb47babf874eeb159db1b619d87f995aa9fcbde0ca19b9a0d",
+  "testLog": {
+    "path": "targeted-tests.log",
+    "sha256": "96c8925f2fc22df83c6da1f8713592c0d98880612dc20ad4c960fe8408bbba9a"
+  },
+  "canvas": {
+    "path": "review/canvas-review.json",
+    "sha256": "5f063ee874cf5a435a9964fd6132a292645cecdffd63ee093bf48b4c3ae264fa",
+    "manifestSnapshot": {
+      "version": "0.7.0-cdc85685a728",
+      "artVersion": "cb628ae846008788",
+      "images": 5769,
+      "bytes": 3059080660
+    },
+    "checksPassed": 6,
+    "capturesUnchangedFromVisualReview": 6
+  },
+  "visualReview": {
+    "path": "visual-review.json",
+    "sha256": "7e5b65779c4d1cfd8ce54bced21f3dea17ee1fe9bad1a2d9bbc49acbd2ff22dc",
+    "accepted": true
+  },
+  "browser": "Not executed by this stage task. Parent CI #106 still in progress during the saved readback; it predates this stage.",
+  "publication": "No GitHub mutation for this wave; root owns global commit and publish signal.",
+  "updatedAt": "2026-11-20T13:53:09.450215+00:00",
+  "globalQA": {
+    "path": "../cast-next-missing-20261120/qa-result.json",
+    "sha256": "7a0218805612a44aa17f14ccf6cf06db3e4eb1aa3fc716f20c830ac5a2882877",
+    "log": "../cast-next-missing-20261120/qa.log",
+    "startedAt": "2026-11-20T13:46:59.558575+00:00",
+    "endedAt": "2026-11-20T13:48:11.183102+00:00",
+    "command": [
+      "npm",
+      "run",
+      "qa"
+    ],
+    "exitCode": 0,
+    "tests": {
+      "tests": 411,
+      "pass": 411,
+      "fail": 0,
+      "skipped": 0
+    },
+    "bothBuildsPassed": true
+  },
+  "globalHandoff": "Stage runtime and evidence are final for the recorded manifest. Workbook reconciliation and the global commit/publication are owned by root; no stage follow-up remains unless source or manifest bytes change."
+}

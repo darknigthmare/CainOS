@@ -84,10 +84,10 @@ async function withAudio(options, callback) {
 const liveSources = context => context.nodes.filter(node => ['oscillator', 'bufferSource'].includes(node.kind) && node.targets.size);
 const buses = context => context.nodes.filter(node => node.kind === 'gain').slice(0, 4);
 
-test('twelve immutable atmosphere scores cover the playable stages with distinct quiet textures', () => {
+test('immutable atmosphere scores cover the playable stages with distinct quiet textures', () => {
   assert.deepEqual(AMBIENCE_STAGE_IDS.slice().sort(), STAGES.map(stage => stage.id).sort());
-  assert.equal(AMBIENCE_STAGE_IDS.length, 12);
-  assert.equal(new Set(Object.values(AUDIO_AMBIENCES).map(item => JSON.stringify(item.layers))).size, 12);
+  assert.equal(AMBIENCE_STAGE_IDS.length, STAGES.length);
+  assert.equal(new Set(Object.values(AUDIO_AMBIENCES).map(item => JSON.stringify(item.layers))).size, STAGES.length);
   assert.ok(Object.isFrozen(AUDIO_AMBIENCES) && Object.isFrozen(AMBIENCE_STAGE_IDS));
   for (const item of Object.values(AUDIO_AMBIENCES)) {
     assert.ok(Object.isFrozen(item) && Object.isFrozen(item.layers));
@@ -118,7 +118,7 @@ test('stage atmospheres wait for an explicit unlock and the menu has no atmosphe
   audio.destroy();
 }));
 
-test('all twelve stages schedule audible resources and reuse one noise buffer', async () => withAudio({}, async ({ contexts, timers }) => {
+test('all stages schedule audible resources and reuse one noise buffer', async () => withAudio({}, async ({ contexts, timers }) => {
   const audio = new CombatAudio(); await audio.unlock(); const context = contexts[0];
   for (const id of AMBIENCE_STAGE_IDS) {
     audio.setTheme(id);

@@ -1,0 +1,818 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-19",
+  "method": "image_gen.imagegen",
+  "policy": "Native generated PNG bytes copied without resizing, trimming, recompression, recoloring or alpha modification. One individual whole-body image per slot.",
+  "fidelity": "Official GLITCH merchandise establishes costume and modular-body traits. 2D proportions and combat actions are original fan-game adaptations. No episode-frame 1:1 certification claimed; in-game visual review is tracked separately by integration.",
+  "expectedAppearances": [
+    "noirzooble",
+    "beachzooble"
+  ],
+  "expectedSlots": [
+    "selection",
+    "stance",
+    "intro",
+    "walk",
+    "jump",
+    "crouch",
+    "attack",
+    "heavy",
+    "hit",
+    "victory",
+    "defeat"
+  ],
+  "entries": [
+    {
+      "id": "noirzooble-selection",
+      "appearanceId": "noirzooble",
+      "slot": "selection",
+      "file": "assets/encore/selection/noirzooble.png",
+      "sourceGenerationId": "exec-61a2db97-4700-4daa-aa1d-9e1bad262984",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/digital-circus-animiniz-costume-adventure-series",
+        "https://glitchproductions.store/cdn/shop/files/86.png?v=1762387272&width=1600"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/research/noir-zooble-official.png",
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/zooble.webp"
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: one individual full-body character selection sprite for Digital Circus Encore. Create ONE Noir Zooble. Input image 1 is the official GLITCH costume and anatomical assembly reference; copy its exact identity, colors, modular pieces, and left-right asymmetry. Input image 2 is existing game art and controls ONLY the crisp clean 2D cel-shaded illustration style, ink contours and visual polish; do not copy its different limbs or torso ornaments. Adapt the official figurine into the existing game's slightly elongated complete body proportions without losing the original distinct shapes. Subject locks: Monochrome gray modular body with ONLY the cocktail shaker colored metallic indigo-blue and purple. Asymmetric broad triangular head pointing toward screen left; large left-screen half-lidded white eye with black spiral pupil, smaller right-screen white eye with black pupil and exactly three black lower lashes. No mouth. Gray lightning bolt antenna behind left eye and black-white striped twisted antenna atop head. Gray hollow triangle chest ornament and small scalloped gray wing projecting from upper-left torso. Light-gray plain apron panel at waist. Pale-gray segmented arms ending in distinct hand-like claw and open ring/pincer. Left-screen leg bends in a gray zigzag and ends in a tapered gray-white striped peg; right-screen leg is darker gray with one rounded dark boot. Keep these unlike legs on their respective screen sides. Shaker held as one small harmless metallic prop. No color anywhere except shaker. Pose: relaxed upright character-selection pose, full body clearly visible, slight three-quarter turn toward screen right but BOTH eyes remain visible and original screen-side assembly remains clear, neutral dry half-lidded expression. Arms positioned naturally near waist with accessories unobscured, legs separated. Actual transparent RGBA background. Single figure centered with safe clear margins at all edges, including antennas, hands, foot tips. No text, logo, scenery, floor, ground shadow, glow, aura, display base, toy box, multiple views, insets, duplicates or sprite sheet. Render flat 2D illustrated game art, never photograph, plush or 3D toy. One whole character in one image.",
+      "sha256": "f60771724f6dc7bc2690fac037c9e03f1a52af45f639e956f8ced38eb18bb7b1",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        941,
+        1672
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        34,
+        8,
+        863,
+        1664
+      ],
+      "bytes": 1129031,
+      "visualReview": "Single full-body grayscale Zooble with unlike legs, gray apron, triangular chest ornament, one spiral eye and three lower lashes under smaller eye; blue-purple shaker is sole colored accessory. All extremities visible."
+    },
+    {
+      "id": "noirzooble-stance",
+      "appearanceId": "noirzooble",
+      "slot": "stance",
+      "file": "assets/encore/stance/noirzooble.png",
+      "sourceGenerationId": "exec-5ed83087-179a-49f2-9c6d-98ab44f3a2ca",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/digital-circus-animiniz-costume-adventure-series",
+        "https://glitchproductions.store/cdn/shop/files/86.png?v=1762387272&width=1600"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-61a2db97-4700-4daa-aa1d-9e1bad262984.png",
+        "/workspace/scratch/5f5114b49696/research/noir-zooble-official.png"
+      ],
+      "prompt": "Use case: identity-preserve. Asset type: one full-body fighting stance sprite. Image 1 is approved Noir Zooble identity and 2D art; image 2 is the official anatomical reference. Change ONLY pose to a clear ready fighting guard: slightly lower body, bend both unlike knees, spread feet for balance, ring hand held defensively at chest height toward screen right, claw hand holding the blue-purple cocktail shaker close to chest. Preserve exact character assembly and costume: Monochrome gray modular body with ONLY the cocktail shaker colored metallic indigo-blue and purple. Asymmetric broad triangular head pointing toward screen left; large left-screen half-lidded white eye with black spiral pupil, smaller right-screen white eye with black pupil and exactly three black lower lashes. No mouth. Gray lightning bolt antenna behind left eye and black-white striped twisted antenna atop head. Gray hollow triangle chest ornament and small scalloped gray wing projecting from upper-left torso. Light-gray plain apron panel at waist. Pale-gray segmented arms ending in distinct hand-like claw and open ring/pincer. Left-screen leg bends in a gray zigzag and ends in a tapered gray-white striped peg; right-screen leg is darker gray with one rounded dark boot. Keep these unlike legs on their respective screen sides. Shaker held as one small harmless metallic prop. No color anywhere except shaker. Keep face turned three-quarter toward screen right but both eyes visible and left-right assembly fixed. Clean cel-shaded 2D cartoon, one complete character. True transparent RGBA; opaque interior, clean silhouette, no glow, ground or background. Full head antennas, hands and feet remain inside canvas with margins. No text, multiple poses, motion effects or extra anatomy.",
+      "sha256": "cb1e76550fc439008910fc40e17af583fe326b6d2b418a0b14b989496dc4d1ca",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        1190,
+        1322
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        174,
+        12,
+        1061,
+        1304
+      ],
+      "bytes": 955347,
+      "visualReview": "Bent knees and spread feet distinguish guard stance. Grayscale body, patterned peg left, dark boot right, held colored shaker, triangle chest and gray wing intact; one complete subject."
+    },
+    {
+      "id": "beachzooble-selection",
+      "appearanceId": "beachzooble",
+      "slot": "selection",
+      "file": "assets/encore/selection/beachzooble.png",
+      "sourceGenerationId": "exec-33f0cdb5-d3a4-408a-8e11-722f49fc15de",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/digital-circus-animiniz-beach-vacation-series",
+        "https://glitchproductions.store/cdn/shop/files/Beach_Series_Render_01.png?v=1765572441&width=1600"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-0deb5ae0-1dfe-4f3d-ae63-2389d89eb2e2.png",
+        "/workspace/scratch/5f5114b49696/research/beach-series-01.png"
+      ],
+      "prompt": "Use case: precise-object-edit. Asset type: transparent full-body game sprite. Correct image 1 using official anatomical reference image 2. Preserve the existing 2D art style, face, snorkel, parasol, shell horn, all colors, bag and unlike legs. Make ONLY these corrections: (1) remove ALL colored haze, glow, black background or shadow and output true clean transparency around the silhouette, including within gaps; (2) the screen-left orange arm has ONE mint-green circular elbow and ONE mint-green C-shaped hand. It must NOT have two C-shaped hands. Keep the single C-shaped hand forward near the torso holding the bag strap; change the extra C shape at far left into the round elbow joint so the anatomy reads as one continuous orange articulated arm. The C in front is the end of that arm, not attached as a chest ornament. Keep pink star on chest. Do not alter the other yellow hand on screen right. Single whole-body character, generous transparent margin, no text or props beyond shown accessories. Crisp opaque character interior, clean anti-aliased edges, genuinely transparent RGBA outside.",
+      "sha256": "029e19804571c4c69356676711320310b720d6f349ad9d2187aeb2f47c4b59d7",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "bboxAlpha12": [
+        84,
+        14,
+        844,
+        1526
+      ],
+      "bytes": 1626284,
+      "visualReview": "Single full-body colorful beach assembly. Mint elbow is circular with one C-shaped claw after targeted correction; pink star, parasol, shell horn, snorkel, bag, mint-blue peg and blue flipper intact. Visible RGB haze has alpha zero outside subject; preserved native RGBA."
+    },
+    {
+      "id": "beachzooble-stance",
+      "appearanceId": "beachzooble",
+      "slot": "stance",
+      "file": "assets/encore/stance/beachzooble.png",
+      "sourceGenerationId": "exec-06177ae4-35fd-4fe2-8536-198d7b493430",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/digital-circus-animiniz-beach-vacation-series",
+        "https://glitchproductions.store/cdn/shop/files/Beach_Series_Render_01.png?v=1765572441&width=1600"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-33f0cdb5-d3a4-408a-8e11-722f49fc15de.png",
+        "/workspace/scratch/5f5114b49696/research/beach-series-01.png"
+      ],
+      "prompt": "Use case: identity-preserve. Asset type: one individual full-body stance sprite for Digital Circus Encore. Image 1 is the approved 2D character identity; image 2 is the official costume assembly reference. Change ONLY pose: Ready fighting guard: lower torso slightly, spread unlike legs, bend red knee, yellow hand held in front of chest toward screen right; mint C-claw holds brown bag strap at left hip. Both feet supported, no motion effect. Preserve all identity invariants: Bright pink broad triangular head pointing screen left. Large yellow eye with black spiral pupil and pale pink half-lid on screen left, smaller white eye with black pupil and purple half-lid and three black lower lashes screen right. No mouth. Cream spiral seashell horn at upper-left head, red-white miniature beach umbrella atop head, curved blue snorkel along right-screen edge of face. Oval yellow modular torso with large pink five-point star chest ornament, small purple cross-like upper-left shoulder piece. Left-screen arm is orange with one mint-green round elbow joint and ONE mint-green C-shaped claw hand; never duplicate that claw as a torso ornament; right-screen arm segmented yellow and purple with yellow hand. Left-screen leg purple zigzag ending in a tapered mint-green peg with two blue horizontal bands; right-screen leg bent red ending in one blue swimming flipper. Beige open beach bag with brown straps hanging at left hip. Preserve unlike limbs exactly, no mirrored or duplicated fins, no normal human hands or feet. Match the first image's clean black ink contours, polished cel shading and coherent proportions. Both eyes visible; face and body generally oriented toward screen right without mirroring any anatomical piece. Actual transparent RGBA background, clean silhouette and opaque interior. One subject only, entire body and every accessory visible with generous clear margins; no scenery, ground, shadow, glow, text, labels, second pose, action trails or extra limbs. No toy render or photograph.",
+      "sha256": "a9bf312d2727104635457213dcffad9e2d45f8a04d7fe4d1200e1174ba323d65",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "bboxAlpha12": [
+        74,
+        22,
+        948,
+        1515
+      ],
+      "bytes": 1664083,
+      "visualReview": "Readied guard with low torso, bent red knee and yellow hand before chest. One mint C-claw holds bag; pink star, shell horn, umbrella, snorkel and unlike feet remain intact."
+    },
+    {
+      "id": "noirzooble-intro",
+      "appearanceId": "noirzooble",
+      "slot": "intro",
+      "file": "assets/encore/poses/noirzooble/intro.png",
+      "sourceGenerationId": "exec-30765c86-eedc-40eb-a109-cfc2ae913e83",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/digital-circus-animiniz-costume-adventure-series",
+        "https://glitchproductions.store/cdn/shop/files/86.png?v=1762387272&width=1600"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-61a2db97-4700-4daa-aa1d-9e1bad262984.png",
+        "/workspace/scratch/5f5114b49696/research/noir-zooble-official.png"
+      ],
+      "prompt": "Use case: identity-preserve. Asset type: one individual full-body intro sprite for Digital Circus Encore. Image 1 is the approved 2D character identity; image 2 is the official costume assembly reference. Change ONLY pose: Entrance greeting: stand tall with dark right-screen boot a half-step forward, ring hand raised near head in a small dry wave, claw hand holding indigo shaker lower beside waist. Head tilted slightly, unimpressed half-lidded expression. Full body and antenna remain clear. Preserve all identity invariants: Monochrome gray modular body with ONLY the cocktail shaker colored metallic indigo-blue and purple. Asymmetric broad triangular head pointing toward screen left; large left-screen half-lidded white eye with black spiral pupil, smaller right-screen white eye with black pupil and exactly three black lower lashes. No mouth. Gray lightning bolt antenna behind left eye and black-white striped twisted antenna atop head. Gray hollow triangle chest ornament and small scalloped gray wing projecting from upper-left torso. Light-gray plain apron panel at waist. Pale-gray segmented arms ending in distinct hand-like claw and open ring/pincer. Left-screen leg bends in a gray zigzag and ends in a tapered gray-white striped peg; right-screen leg is darker gray with one rounded dark boot. Keep these unlike legs on their respective screen sides. Shaker held as one small harmless metallic prop. No color anywhere except shaker. Match the first image's clean black ink contours, polished cel shading and coherent proportions. Both eyes visible; face and body generally oriented toward screen right without mirroring any anatomical piece. Actual transparent RGBA background, clean silhouette and opaque interior. One subject only, entire body and every accessory visible with generous clear margins; no scenery, ground, shadow, glow, text, labels, second pose, action trails or extra limbs. No toy render or photograph.",
+      "sha256": "a2cdf65a942c5ee2ff551181f66d48ac2ae8971e62d1ccafbe44997569297dfa",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        941,
+        1671
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        51,
+        12,
+        884,
+        1665
+      ],
+      "bytes": 1124546,
+      "visualReview": "Full-body greeting with raised ring hand, lowered shaker and slight head tilt; original grayscale assembly and two distinct legs retained."
+    },
+    {
+      "id": "beachzooble-intro",
+      "appearanceId": "beachzooble",
+      "slot": "intro",
+      "file": "assets/encore/poses/beachzooble/intro.png",
+      "sourceGenerationId": "exec-c1f7964d-8a0e-4de1-92ca-3ce127bf34c1",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/digital-circus-animiniz-beach-vacation-series",
+        "https://glitchproductions.store/cdn/shop/files/Beach_Series_Render_01.png?v=1765572441&width=1600"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-33f0cdb5-d3a4-408a-8e11-722f49fc15de.png",
+        "/workspace/scratch/5f5114b49696/research/beach-series-01.png"
+      ],
+      "prompt": "Use case: identity-preserve. Asset type: one individual full-body intro sprite for Digital Circus Encore. Image 1 is the approved 2D character identity; image 2 is the official costume assembly reference. Change ONLY pose: Entrance greeting: upright with blue flipper a half-step forward, yellow hand raised near shoulder in a casual wave, mint C-claw carrying beige beach bag at left hip. Head tilts slightly, parasol and horn visible, dry half-lidded expression. Preserve all identity invariants: Bright pink broad triangular head pointing screen left. Large yellow eye with black spiral pupil and pale pink half-lid on screen left, smaller white eye with black pupil and purple half-lid and three black lower lashes screen right. No mouth. Cream spiral seashell horn at upper-left head, red-white miniature beach umbrella atop head, curved blue snorkel along right-screen edge of face. Oval yellow modular torso with large pink five-point star chest ornament, small purple cross-like upper-left shoulder piece. Left-screen arm is orange with one mint-green round elbow joint and ONE mint-green C-shaped claw hand; never duplicate that claw as a torso ornament; right-screen arm segmented yellow and purple with yellow hand. Left-screen leg purple zigzag ending in a tapered mint-green peg with two blue horizontal bands; right-screen leg bent red ending in one blue swimming flipper. Beige open beach bag with brown straps hanging at left hip. Preserve unlike limbs exactly, no mirrored or duplicated fins, no normal human hands or feet. Match the first image's clean black ink contours, polished cel shading and coherent proportions. Both eyes visible; face and body generally oriented toward screen right without mirroring any anatomical piece. Actual transparent RGBA background, clean silhouette and opaque interior. One subject only, entire body and every accessory visible with generous clear margins; no scenery, ground, shadow, glow, text, labels, second pose, action trails or extra limbs. No toy render or photograph.",
+      "sha256": "eded1ff67bc5d161393a3a7ba515f0a2c3a8173ce890e0c05e88e06b3885f2bb",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "bboxAlpha12": [
+        89,
+        8,
+        912,
+        1532
+      ],
+      "bytes": 1621469,
+      "visualReview": "Greeting with yellow hand raised and bag in single mint C-claw; full parasol, shell, snorkel and both unique feet inside frame. Open stylized yellow hand is an animated fan-game pose."
+    },
+    {
+      "id": "noirzooble-walk",
+      "appearanceId": "noirzooble",
+      "slot": "walk",
+      "file": "assets/encore/poses/noirzooble/walk.png",
+      "sourceGenerationId": "exec-dbe04219-62a3-461a-9a22-25d33599690c",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/digital-circus-animiniz-costume-adventure-series",
+        "https://glitchproductions.store/cdn/shop/files/86.png?v=1762387272&width=1600"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-61a2db97-4700-4daa-aa1d-9e1bad262984.png",
+        "/workspace/scratch/5f5114b49696/research/noir-zooble-official.png"
+      ],
+      "prompt": "Use case: identity-preserve. Asset type: one individual full-body walk sprite for Digital Circus Encore. Image 1 is the approved 2D character identity; image 2 is the official costume assembly reference. Change ONLY pose: Walking toward screen right: dark boot on screen right takes a clear forward step, striped peg leg on screen left trails behind with bent zigzag knee; torso leans slightly forward, one arm swings lightly while claw securely holds indigo shaker at hip. Both eyes visible and both unique legs separate. Preserve all identity invariants: Monochrome gray modular body with ONLY the cocktail shaker colored metallic indigo-blue and purple. Asymmetric broad triangular head pointing toward screen left; large left-screen half-lidded white eye with black spiral pupil, smaller right-screen white eye with black pupil and exactly three black lower lashes. No mouth. Gray lightning bolt antenna behind left eye and black-white striped twisted antenna atop head. Gray hollow triangle chest ornament and small scalloped gray wing projecting from upper-left torso. Light-gray plain apron panel at waist. Pale-gray segmented arms ending in distinct hand-like claw and open ring/pincer. Left-screen leg bends in a gray zigzag and ends in a tapered gray-white striped peg; right-screen leg is darker gray with one rounded dark boot. Keep these unlike legs on their respective screen sides. Shaker held as one small harmless metallic prop. No color anywhere except shaker. Match the first image's clean black ink contours, polished cel shading and coherent proportions. Both eyes visible; face and body generally oriented toward screen right without mirroring any anatomical piece. Actual transparent RGBA background, clean silhouette and opaque interior. One subject only, entire body and every accessory visible with generous clear margins; no scenery, ground, shadow, glow, text, labels, second pose, action trails or extra limbs. No toy render or photograph.",
+      "sha256": "feb2f2013b7f2341a876ac60e7ad0458379121667de6d5bb02b5e8f2b4f916ed",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        243,
+        12,
+        1018,
+        1285
+      ],
+      "bytes": 845526,
+      "visualReview": "Clear forward step by dark boot with trailing striped peg; arms offset, blue-purple shaker held securely, apron and upper-body identities stable."
+    },
+    {
+      "id": "beachzooble-walk",
+      "appearanceId": "beachzooble",
+      "slot": "walk",
+      "file": "assets/encore/poses/beachzooble/walk.png",
+      "sourceGenerationId": "exec-467db24a-ac2e-4c25-a00b-448456acc2a6",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/digital-circus-animiniz-beach-vacation-series",
+        "https://glitchproductions.store/cdn/shop/files/Beach_Series_Render_01.png?v=1765572441&width=1600"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-33f0cdb5-d3a4-408a-8e11-722f49fc15de.png",
+        "/workspace/scratch/5f5114b49696/research/beach-series-01.png"
+      ],
+      "prompt": "Use case: identity-preserve. Asset type: one individual full-body walk sprite for Digital Circus Encore. Image 1 is the approved 2D character identity; image 2 is the official costume assembly reference. Change ONLY pose: Walking toward screen right: red leg and blue flipper take a clear forward step, purple zigzag leg and striped mint peg trail behind; torso leans forward slightly, yellow arm swings naturally, mint C-claw holds brown bag strap and beige bag swings slightly at left hip. Both unique legs separate and both eyes visible. Preserve all identity invariants: Bright pink broad triangular head pointing screen left. Large yellow eye with black spiral pupil and pale pink half-lid on screen left, smaller white eye with black pupil and purple half-lid and three black lower lashes screen right. No mouth. Cream spiral seashell horn at upper-left head, red-white miniature beach umbrella atop head, curved blue snorkel along right-screen edge of face. Oval yellow modular torso with large pink five-point star chest ornament, small purple cross-like upper-left shoulder piece. Left-screen arm is orange with one mint-green round elbow joint and ONE mint-green C-shaped claw hand; never duplicate that claw as a torso ornament; right-screen arm segmented yellow and purple with yellow hand. Left-screen leg purple zigzag ending in a tapered mint-green peg with two blue horizontal bands; right-screen leg bent red ending in one blue swimming flipper. Beige open beach bag with brown straps hanging at left hip. Preserve unlike limbs exactly, no mirrored or duplicated fins, no normal human hands or feet. Match image 1's clean black ink contours, polished cel shading and proportions. Both eyes visible; orient toward screen right without mirroring any anatomical piece. Actual transparent RGBA background, clean silhouette and opaque interior. One subject, entire body and all accessories inside generous transparent margins. No scenery, ground, shadow, glow, text, second pose, action trails or extra limbs. No toy render or photograph.",
+      "sha256": "af5a63b2e15890a96097d4439503a71cec9e5980d139720e6de06709cc02a42d",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        172,
+        8,
+        1026,
+        1270
+      ],
+      "bytes": 917802,
+      "visualReview": "Forward blue-flipper step and trailing mint peg clearly depict walking; one C-claw carries bag, unchanged face, snorkel, shell and umbrella."
+    },
+    {
+      "id": "noirzooble-jump",
+      "appearanceId": "noirzooble",
+      "slot": "jump",
+      "file": "assets/encore/poses/noirzooble/jump.png",
+      "sourceGenerationId": "exec-314020a5-9893-4cd9-94ff-62789b00ee7e",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/digital-circus-animiniz-costume-adventure-series",
+        "https://glitchproductions.store/cdn/shop/files/86.png?v=1762387272&width=1600"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-61a2db97-4700-4daa-aa1d-9e1bad262984.png",
+        "/workspace/scratch/5f5114b49696/research/noir-zooble-official.png"
+      ],
+      "prompt": "Use case: identity-preserve. Asset type: one individual full-body jump sprite for Digital Circus Encore. Image 1 is the approved 2D character identity; image 2 is the official costume assembly reference. Change ONLY pose: Clearly airborne jumping pose: torso lifted and tilted slightly forward, dark-boot leg bent upward on screen right, striped peg leg bends backward on screen left, ring hand raised for balance, other claw holding shaker securely. Make clean separated leg silhouettes and full head visible. No floor or motion lines. Preserve all identity invariants: Monochrome gray modular body with ONLY the cocktail shaker colored metallic indigo-blue and purple. Asymmetric broad triangular head pointing toward screen left; large left-screen half-lidded white eye with black spiral pupil, smaller right-screen white eye with black pupil and exactly three black lower lashes. No mouth. Gray lightning bolt antenna behind left eye and black-white striped twisted antenna atop head. Gray hollow triangle chest ornament and small scalloped gray wing projecting from upper-left torso. Light-gray plain apron panel at waist. Pale-gray segmented arms ending in distinct hand-like claw and open ring/pincer. Left-screen leg bends in a gray zigzag and ends in a tapered gray-white striped peg; right-screen leg is darker gray with one rounded dark boot. Keep these unlike legs on their respective screen sides. Shaker held as one small harmless metallic prop. No color anywhere except shaker. Match image 1's clean black ink contours, polished cel shading and proportions. Both eyes visible; orient toward screen right without mirroring any anatomical piece. Actual transparent RGBA background, clean silhouette and opaque interior. One subject, entire body and all accessories inside generous transparent margins. No scenery, ground, shadow, glow, text, second pose, action trails or extra limbs. No toy render or photograph.",
+      "sha256": "962059480cfeb91cd0d1b6a481ae90f96b89131b21802bc1c49dabbc9d523979",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        158,
+        18,
+        1088,
+        1283
+      ],
+      "bytes": 913344,
+      "visualReview": "Airborne knees and raised balancing ring hand; unlike gray peg and boot both intact, shaker held, face and grayscale costume stable."
+    },
+    {
+      "id": "beachzooble-jump",
+      "appearanceId": "beachzooble",
+      "slot": "jump",
+      "file": "assets/encore/poses/beachzooble/jump.png",
+      "sourceGenerationId": "exec-3be2f0e2-243a-4249-839d-ab797a7d2e73",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/digital-circus-animiniz-beach-vacation-series",
+        "https://glitchproductions.store/cdn/shop/files/Beach_Series_Render_01.png?v=1765572441&width=1600"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-33f0cdb5-d3a4-408a-8e11-722f49fc15de.png",
+        "/workspace/scratch/5f5114b49696/research/beach-series-01.png"
+      ],
+      "prompt": "Use case: identity-preserve. Asset type: one individual full-body jump sprite for Digital Circus Encore. Image 1 is the approved 2D character identity; image 2 is the official costume assembly reference. Change ONLY pose: Clearly airborne jumping pose: red leg with blue flipper bends upward on screen right, purple zigzag leg with mint striped peg bends back on screen left, yellow arm raised for balance, mint C-claw keeps hold of beige bag. Parasol, shell and snorkel remain attached. Clean separated leg silhouettes, no floor or motion lines. Preserve all identity invariants: Bright pink broad triangular head pointing screen left. Large yellow eye with black spiral pupil and pale pink half-lid on screen left, smaller white eye with black pupil and purple half-lid and three black lower lashes screen right. No mouth. Cream spiral seashell horn at upper-left head, red-white miniature beach umbrella atop head, curved blue snorkel along right-screen edge of face. Oval yellow modular torso with large pink five-point star chest ornament, small purple cross-like upper-left shoulder piece. Left-screen arm is orange with one mint-green round elbow joint and ONE mint-green C-shaped claw hand; never duplicate that claw as a torso ornament; right-screen arm segmented yellow and purple with yellow hand. Left-screen leg purple zigzag ending in a tapered mint-green peg with two blue horizontal bands; right-screen leg bent red ending in one blue swimming flipper. Beige open beach bag with brown straps hanging at left hip. Preserve unlike limbs exactly, no mirrored or duplicated fins, no normal human hands or feet. Match image 1's clean black ink contours, polished cel shading and proportions. Both eyes visible; orient toward screen right without mirroring any anatomical piece. Actual transparent RGBA background, clean silhouette and opaque interior. One subject, entire body and all accessories inside generous transparent margins. No scenery, ground, shadow, glow, text, second pose, action trails or extra limbs. No toy render or photograph.",
+      "sha256": "1acd034851ecb22173d2dbdbbedfba4c58d24f0b2fdb18f04a8e4da8c6486514",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "bboxAlpha12": [
+        78,
+        35,
+        962,
+        1423
+      ],
+      "bytes": 1643267,
+      "visualReview": "Airborne pose with raised red knee/blue flipper and rear purple/striped-mint leg; one beige bag and both arms remain coherent."
+    },
+    {
+      "id": "noirzooble-crouch",
+      "appearanceId": "noirzooble",
+      "slot": "crouch",
+      "file": "assets/encore/poses/noirzooble/crouch.png",
+      "sourceGenerationId": "exec-a0b9f637-3e7e-4830-ba3f-9f6d398a0be9",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/digital-circus-animiniz-costume-adventure-series",
+        "https://glitchproductions.store/cdn/shop/files/86.png?v=1762387272&width=1600"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-61a2db97-4700-4daa-aa1d-9e1bad262984.png",
+        "/workspace/scratch/5f5114b49696/research/noir-zooble-official.png"
+      ],
+      "prompt": "Use case: identity-preserve. Asset type: one individual full-body crouch sprite for Digital Circus Encore. Image 1 is the approved 2D character identity; image 2 is the official costume assembly reference. Change ONLY pose: Low defensive crouch: bend both unlike knees deeply and lower torso close to legs, dark right boot planted to the right and striped peg planted to left, ring hand held before chest guarding, claw holds shaker close to apron, head slightly tucked. Preserve full-scale anatomy and exact parts, not a shrunk standing figure. Preserve all identity invariants: Monochrome gray modular body with ONLY the cocktail shaker colored metallic indigo-blue and purple. Asymmetric broad triangular head pointing toward screen left; large left-screen half-lidded white eye with black spiral pupil, smaller right-screen white eye with black pupil and exactly three black lower lashes. No mouth. Gray lightning bolt antenna behind left eye and black-white striped twisted antenna atop head. Gray hollow triangle chest ornament and small scalloped gray wing projecting from upper-left torso. Light-gray plain apron panel at waist. Pale-gray segmented arms ending in distinct hand-like claw and open ring/pincer. Left-screen leg bends in a gray zigzag and ends in a tapered gray-white striped peg; right-screen leg is darker gray with one rounded dark boot. Keep these unlike legs on their respective screen sides. Shaker held as one small harmless metallic prop. No color anywhere except shaker. Match image 1's clean black ink contours, polished cel shading and proportions. Both eyes visible; orient toward screen right without mirroring any anatomical piece. Actual transparent RGBA background, clean silhouette and opaque interior. One subject, entire body and all accessories inside generous transparent margins. No scenery, ground, shadow, glow, text, second pose, action trails or extra limbs. No toy render or photograph.",
+      "sha256": "1df2053efb611062ca8413b7b6a62512fec0926d962a100497a5cf63720abee9",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        127,
+        13,
+        1115,
+        1293
+      ],
+      "bytes": 1242004,
+      "visualReview": "Deep crouch with wide bent knees, low apron and defensive ring hand; original unlike legs and blue-purple shaker retained."
+    },
+    {
+      "id": "beachzooble-crouch",
+      "appearanceId": "beachzooble",
+      "slot": "crouch",
+      "file": "assets/encore/poses/beachzooble/crouch.png",
+      "sourceGenerationId": "exec-df539fe6-73de-4e94-b31b-91a24be09912",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/digital-circus-animiniz-beach-vacation-series",
+        "https://glitchproductions.store/cdn/shop/files/Beach_Series_Render_01.png?v=1765572441&width=1600"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-33f0cdb5-d3a4-408a-8e11-722f49fc15de.png",
+        "/workspace/scratch/5f5114b49696/research/beach-series-01.png"
+      ],
+      "prompt": "Use case: identity-preserve. Asset type: one individual full-body crouch sprite for Digital Circus Encore. Image 1 is approved 2D character identity; image 2 is official costume assembly reference. Change ONLY pose: Low defensive crouch: bend both unlike knees deeply and lower torso toward the feet, red leg and blue flipper planted screen-right, purple zigzag leg and mint striped peg planted screen-left. Yellow hand guarding chest, mint C-claw holding bag strap with beige bag low at left. Head slightly tucked but parasol, shell and snorkel visible. Actual bent pose, not a shrunk standing figure. Preserve identity invariants: Bright pink broad triangular head pointing screen left. Large yellow eye with black spiral pupil and pale pink half-lid on screen left, smaller white eye with black pupil and purple half-lid and three black lower lashes screen right. No mouth. Cream spiral seashell horn at upper-left head, red-white miniature beach umbrella atop head, curved blue snorkel along right-screen edge of face. Oval yellow modular torso with large pink five-point star chest ornament, small purple cross-like upper-left shoulder piece. Left-screen arm is orange with one mint-green round elbow joint and ONE mint-green C-shaped claw hand; never duplicate that claw as a torso ornament; right-screen arm segmented yellow and purple with yellow hand. Left-screen leg purple zigzag ending in a tapered mint-green peg with two blue horizontal bands; right-screen leg bent red ending in one blue swimming flipper. Beige open beach bag with brown straps hanging at left hip. Preserve unlike limbs exactly, no mirrored or duplicated fins, no normal human hands or feet. Match image 1's clean black ink contours, polished cel shading and proportions. Both eyes visible; orient toward screen right without mirroring anatomical pieces. Actual transparent RGBA background, clean silhouette and opaque interior. One subject, entire body and every accessory inside generous clear margins. No scenery, ground, shadow, glow, text, labels, second pose, trails or extra limbs. No toy render or photograph.",
+      "sha256": "311bcc6777d425251dce7a7849d9f53352a1d02ff3eed3eef5a04256ce115ffd",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        1207,
+        1303
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        17,
+        14,
+        1071,
+        1294
+      ],
+      "bytes": 1207854,
+      "visualReview": "Deep crouch with bent unlike legs and lowered bag; single mint claw, yellow guard hand, chest star and all head accessories retained."
+    },
+    {
+      "id": "noirzooble-attack",
+      "appearanceId": "noirzooble",
+      "slot": "attack",
+      "file": "assets/encore/poses/noirzooble/attack.png",
+      "sourceGenerationId": "exec-4f2d4066-cdb7-4478-bcc1-7bfbcb05a0e1",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/digital-circus-animiniz-costume-adventure-series",
+        "https://glitchproductions.store/cdn/shop/files/86.png?v=1762387272&width=1600"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-61a2db97-4700-4daa-aa1d-9e1bad262984.png",
+        "/workspace/scratch/5f5114b49696/research/noir-zooble-official.png"
+      ],
+      "prompt": "Use case: identity-preserve. Asset type: one individual full-body attack sprite for Digital Circus Encore. Image 1 is approved 2D character identity; image 2 is official costume assembly reference. Change ONLY pose: Quick forward strike toward screen right: extend the ring/pincer hand and its pale gray arm fully to the right at chest height, torso lunges slightly, dark boot forward and striped peg behind. Claw hand retains the indigo shaker close against the left side of apron. Clear single strike silhouette with both eyes visible. Preserve identity invariants: Monochrome gray modular body with ONLY the cocktail shaker colored metallic indigo-blue and purple. Asymmetric broad triangular head pointing toward screen left; large left-screen half-lidded white eye with black spiral pupil, smaller right-screen white eye with black pupil and exactly three black lower lashes. No mouth. Gray lightning bolt antenna behind left eye and black-white striped twisted antenna atop head. Gray hollow triangle chest ornament and small scalloped gray wing projecting from upper-left torso. Light-gray plain apron panel at waist. Pale-gray segmented arms ending in distinct hand-like claw and open ring/pincer. Left-screen leg bends in a gray zigzag and ends in a tapered gray-white striped peg; right-screen leg is darker gray with one rounded dark boot. Keep these unlike legs on their respective screen sides. Shaker held as one small harmless metallic prop. No color anywhere except shaker. Match image 1's clean black ink contours, polished cel shading and proportions. Both eyes visible; orient toward screen right without mirroring anatomical pieces. Actual transparent RGBA background, clean silhouette and opaque interior. One subject, entire body and every accessory inside generous clear margins. No scenery, ground, shadow, glow, text, labels, second pose, trails or extra limbs. No toy render or photograph.",
+      "sha256": "1b33dbb38057a8ec1c315f2a2a0831346c86bd534dcbb48624a8b142357bdd68",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        1312,
+        1199
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        103,
+        12,
+        1247,
+        1188
+      ],
+      "bytes": 896614,
+      "visualReview": "Extended gray ring-hand strike, shaker held by other claw close to waist, dark boot forward and striped peg behind; one full figure."
+    },
+    {
+      "id": "beachzooble-attack",
+      "appearanceId": "beachzooble",
+      "slot": "attack",
+      "file": "assets/encore/poses/beachzooble/attack.png",
+      "sourceGenerationId": "exec-b513983d-3c4f-4707-b64a-c49512beb3d1",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/digital-circus-animiniz-beach-vacation-series",
+        "https://glitchproductions.store/cdn/shop/files/Beach_Series_Render_01.png?v=1765572441&width=1600"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-33f0cdb5-d3a4-408a-8e11-722f49fc15de.png",
+        "/workspace/scratch/5f5114b49696/research/beach-series-01.png"
+      ],
+      "prompt": "Use case: identity-preserve. Asset type: one individual full-body attack sprite for Digital Circus Encore. Image 1 is approved 2D character identity; image 2 is official costume assembly reference. Change ONLY pose: Quick forward strike toward screen right: extend yellow right arm and rounded yellow hand forward at chest height, torso lunges slightly, red leg and blue flipper forward and purple striped-peg leg behind. Orange left arm's single mint C-claw keeps beige bag close to left hip. One clear striking arm and no extra hands. Preserve identity invariants: Bright pink broad triangular head pointing screen left. Large yellow eye with black spiral pupil and pale pink half-lid on screen left, smaller white eye with black pupil and purple half-lid and three black lower lashes screen right. No mouth. Cream spiral seashell horn at upper-left head, red-white miniature beach umbrella atop head, curved blue snorkel along right-screen edge of face. Oval yellow modular torso with large pink five-point star chest ornament, small purple cross-like upper-left shoulder piece. Left-screen arm is orange with one mint-green round elbow joint and ONE mint-green C-shaped claw hand; never duplicate that claw as a torso ornament; right-screen arm segmented yellow and purple with yellow hand. Left-screen leg purple zigzag ending in a tapered mint-green peg with two blue horizontal bands; right-screen leg bent red ending in one blue swimming flipper. Beige open beach bag with brown straps hanging at left hip. Preserve unlike limbs exactly, no mirrored or duplicated fins, no normal human hands or feet. Match image 1's clean black ink contours, polished cel shading and proportions. Both eyes visible; orient toward screen right without mirroring anatomical pieces. Actual transparent RGBA background, clean silhouette and opaque interior. One subject, entire body and every accessory inside generous clear margins. No scenery, ground, shadow, glow, text, labels, second pose, trails or extra limbs. No toy render or photograph.",
+      "sha256": "31aaa56e49231a18810e224bbc54f34fb5dfc105d0900be21824c38af1fda1ae",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        39,
+        17,
+        1176,
+        1303
+      ],
+      "bytes": 989155,
+      "visualReview": "Extended yellow-arm strike with mint claw carrying bag, separated asymmetrical legs, intact shell, parasol, snorkel, and eyes."
+    },
+    {
+      "id": "noirzooble-heavy",
+      "appearanceId": "noirzooble",
+      "slot": "heavy",
+      "file": "assets/encore/poses/noirzooble/heavy.png",
+      "sourceGenerationId": "exec-58e299b0-963e-4b14-9cc3-896877cc489e",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/digital-circus-animiniz-costume-adventure-series",
+        "https://glitchproductions.store/cdn/shop/files/86.png?v=1762387272&width=1600"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-61a2db97-4700-4daa-aa1d-9e1bad262984.png",
+        "/workspace/scratch/5f5114b49696/research/noir-zooble-official.png"
+      ],
+      "prompt": "Use case: identity-preserve. Asset type: one individual full-body heavy sprite for Digital Circus Encore. Image 1 is approved 2D character identity; image 2 is official costume assembly reference. Change ONLY pose: Powerful side kick toward screen right: raise and extend the DARK BOOT and dark-gray leg horizontally to the right at waist height; striped tapered peg on screen left is the supporting leg. Tilt torso back slightly to balance, both arms bent in guard with claw hand on SCREEN LEFT holding indigo shaker and ring/pincer hand on SCREEN RIGHT raised near chest. Do not swap hands or cross their arms. Strong recognizable single kick silhouette, both eyes visible. Preserve identity invariants: Monochrome gray modular body with ONLY the cocktail shaker colored metallic indigo-blue and purple. Asymmetric broad triangular head pointing toward screen left; large left-screen half-lidded white eye with black spiral pupil, smaller right-screen white eye with black pupil and exactly three black lower lashes. No mouth. Gray lightning bolt antenna behind left eye and black-white striped twisted antenna atop head. Gray hollow triangle chest ornament and small scalloped gray wing projecting from upper-left torso. Light-gray plain apron panel at waist. Pale-gray segmented arms ending in distinct hand-like claw and open ring/pincer. Left-screen leg bends in a gray zigzag and ends in a tapered gray-white striped peg; right-screen leg is darker gray with one rounded dark boot. Keep these unlike legs on their respective screen sides. Shaker held as one small harmless metallic prop. No color anywhere except shaker. Match image 1's black ink contours, polished cel shading and proportions. Both eyes visible; orient toward screen right without mirroring pieces. Actual transparent RGBA background, clean silhouette and opaque interior. One character with entire body, all fingers and accessories visible, generous clear margins. No scenery, floor, shadow, glow, text, labels, second pose, motion effects or extra limbs. No toy render or photograph.",
+      "sha256": "7ad1d6681b93c1193a3d798238155e35b9c81435f4228d8d39bbecfbe4bc6df8",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        25,
+        10,
+        1175,
+        1300
+      ],
+      "bytes": 857235,
+      "visualReview": "Strong dark-boot side kick, striped peg supporting and both unlike hands kept on original sides; shaker, apron and both antennas preserved."
+    },
+    {
+      "id": "beachzooble-heavy",
+      "appearanceId": "beachzooble",
+      "slot": "heavy",
+      "file": "assets/encore/poses/beachzooble/heavy.png",
+      "sourceGenerationId": "exec-19ebbeed-235c-46e0-b590-6ec4556475cb",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/digital-circus-animiniz-beach-vacation-series",
+        "https://glitchproductions.store/cdn/shop/files/Beach_Series_Render_01.png?v=1765572441&width=1600"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-33f0cdb5-d3a4-408a-8e11-722f49fc15de.png",
+        "/workspace/scratch/5f5114b49696/research/beach-series-01.png"
+      ],
+      "prompt": "Use case: identity-preserve. Asset type: one individual full-body heavy sprite for Digital Circus Encore. Image 1 is approved 2D character identity; image 2 is official costume assembly reference. Change ONLY pose: Powerful side kick toward screen right: raise and extend the BLUE SWIMMING FLIPPER and RED leg to the right at waist height; purple zigzag leg and mint striped peg on screen left support the pose. Torso tilted back slightly, yellow hand screen-right guarding chest, single mint C-claw screen-left securely holding beige bag at left hip. One flipper only and preserve unlike legs. Preserve identity invariants: Bright pink broad triangular head pointing screen left. Large yellow eye with black spiral pupil and pale pink half-lid on screen left, smaller white eye with black pupil and purple half-lid and three black lower lashes screen right. No mouth. Cream spiral seashell horn at upper-left head, red-white miniature beach umbrella atop head, curved blue snorkel along right-screen edge of face. Oval yellow modular torso with large pink five-point star chest ornament, small purple cross-like upper-left shoulder piece. Left-screen arm is orange with one mint-green round elbow joint and ONE mint-green C-shaped claw hand; never duplicate that claw as a torso ornament; right-screen arm segmented yellow and purple with yellow hand. Left-screen leg purple zigzag ending in a tapered mint-green peg with two blue horizontal bands; right-screen leg bent red ending in one blue swimming flipper. Beige open beach bag with brown straps hanging at left hip. Preserve unlike limbs exactly, no mirrored or duplicated fins, no normal human hands or feet. Match image 1's black ink contours, polished cel shading and proportions. Both eyes visible; orient toward screen right without mirroring pieces. Actual transparent RGBA background, clean silhouette and opaque interior. One character with entire body, all fingers and accessories visible, generous clear margins. No scenery, floor, shadow, glow, text, labels, second pose, motion effects or extra limbs. No toy render or photograph.",
+      "sha256": "1536ad850fa20894026f5bc32a9d693298c56976e0dc1098df8e026dd02d469d",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        7,
+        9,
+        1182,
+        1296
+      ],
+      "bytes": 843351,
+      "visualReview": "Raised blue-flipper side kick on red leg, mint striped peg supporting, yellow guard hand and mint C-claw with bag; original accessory assembly retained."
+    },
+    {
+      "id": "noirzooble-hit",
+      "appearanceId": "noirzooble",
+      "slot": "hit",
+      "file": "assets/encore/poses/noirzooble/hit.png",
+      "sourceGenerationId": "exec-8db02c25-273f-4fbf-aaf4-84dcb3d81392",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/digital-circus-animiniz-costume-adventure-series",
+        "https://glitchproductions.store/cdn/shop/files/86.png?v=1762387272&width=1600"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-61a2db97-4700-4daa-aa1d-9e1bad262984.png",
+        "/workspace/scratch/5f5114b49696/research/noir-zooble-official.png"
+      ],
+      "prompt": "Use case: identity-preserve. Asset type: one individual full-body hit sprite for Digital Circus Encore. Image 1 is approved 2D character identity; image 2 is official costume assembly reference. Change ONLY pose: Non-graphic startled hit reaction: upper body recoils backward toward screen left, triangular head tilts back, eyelids lift slightly while spiral eye and smaller pupil remain correct. Both legs bend to catch balance, dark boot screen-right and striped peg screen-left. Ring hand raised protectively and claw holds shaker close. No wounds, damage, new mouth or impact effects. Preserve identity invariants: Monochrome gray modular body with ONLY the cocktail shaker colored metallic indigo-blue and purple. Asymmetric broad triangular head pointing toward screen left; large left-screen half-lidded white eye with black spiral pupil, smaller right-screen white eye with black pupil and exactly three black lower lashes. No mouth. Gray lightning bolt antenna behind left eye and black-white striped twisted antenna atop head. Gray hollow triangle chest ornament and small scalloped gray wing projecting from upper-left torso. Light-gray plain apron panel at waist. Pale-gray segmented arms ending in distinct hand-like claw and open ring/pincer. Left-screen leg bends in a gray zigzag and ends in a tapered gray-white striped peg; right-screen leg is darker gray with one rounded dark boot. Keep these unlike legs on their respective screen sides. Shaker held as one small harmless metallic prop. No color anywhere except shaker. Match image 1's black ink contours, polished cel shading and proportions. Both eyes visible; orient toward screen right without mirroring pieces. Actual transparent RGBA background, clean silhouette and opaque interior. One character with entire body, all fingers and accessories visible, generous clear margins. No scenery, floor, shadow, glow, text, labels, second pose, motion effects or extra limbs. No toy render or photograph.",
+      "sha256": "dc33eda6ecf98940d0da12fca6426a492b4b221640d6f9e46d9c620da00c54a7",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        1071,
+        1469
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        21,
+        12,
+        1002,
+        1464
+      ],
+      "bytes": 1113750,
+      "visualReview": "Backward recoil and widened eye expression; no mouth or damage added, preserved unlike limbs, head antennas, apron and single shaker."
+    },
+    {
+      "id": "beachzooble-hit",
+      "appearanceId": "beachzooble",
+      "slot": "hit",
+      "file": "assets/encore/poses/beachzooble/hit.png",
+      "sourceGenerationId": "exec-bb30c0aa-fbc3-44d6-83db-efc940011e47",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/digital-circus-animiniz-beach-vacation-series",
+        "https://glitchproductions.store/cdn/shop/files/Beach_Series_Render_01.png?v=1765572441&width=1600"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-33f0cdb5-d3a4-408a-8e11-722f49fc15de.png",
+        "/workspace/scratch/5f5114b49696/research/beach-series-01.png"
+      ],
+      "prompt": "Use case: identity-preserve. Asset type: one individual full-body hit sprite for Digital Circus Encore. Image 1 is approved 2D character identity; image 2 is official costume assembly reference. Change ONLY pose: Non-graphic startled hit reaction: upper body recoils backward toward screen left, triangular head and umbrella tilt back, eyelids lift slightly preserving both eye types. Both unlike legs bend to catch balance, blue flipper screen-right and mint striped peg screen-left. Yellow hand raised protectively, single mint C-claw holds beige bag closer. No wounds, damage, new mouth or effects. Preserve identity invariants: Bright pink broad triangular head pointing screen left. Large yellow eye with black spiral pupil and pale pink half-lid on screen left, smaller white eye with black pupil and purple half-lid and three black lower lashes screen right. No mouth. Cream spiral seashell horn at upper-left head, red-white miniature beach umbrella atop head, curved blue snorkel along right-screen edge of face. Oval yellow modular torso with large pink five-point star chest ornament, small purple cross-like upper-left shoulder piece. Left-screen arm is orange with one mint-green round elbow joint and ONE mint-green C-shaped claw hand; never duplicate that claw as a torso ornament; right-screen arm segmented yellow and purple with yellow hand. Left-screen leg purple zigzag ending in a tapered mint-green peg with two blue horizontal bands; right-screen leg bent red ending in one blue swimming flipper. Beige open beach bag with brown straps hanging at left hip. Preserve unlike limbs exactly, no mirrored or duplicated fins, no normal human hands or feet. Match image 1's black ink contours, polished cel shading and proportions. Both eyes visible; orient toward screen right without mirroring pieces. Actual transparent RGBA background, clean silhouette and opaque interior. One character with entire body, all fingers and accessories visible, generous clear margins. No scenery, floor, shadow, glow, text, labels, second pose, motion effects or extra limbs. No toy render or photograph.",
+      "sha256": "589c4a31219e52f12fb1aed2ca7b3d583c5a9235d0c677b163ae1466b3c4d49b",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "bboxAlpha12": [
+        13,
+        56,
+        912,
+        1484
+      ],
+      "bytes": 1669231,
+      "visualReview": "Backward recoil with lifted eyelids, protective yellow hand and bag held close by mint C-claw; intact unlike legs and all beach head accessories."
+    },
+    {
+      "id": "noirzooble-victory",
+      "appearanceId": "noirzooble",
+      "slot": "victory",
+      "file": "assets/encore/poses/noirzooble/victory.png",
+      "sourceGenerationId": "exec-89cc149f-1bb2-4719-900a-1d1d7e1e5341",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/digital-circus-animiniz-costume-adventure-series",
+        "https://glitchproductions.store/cdn/shop/files/86.png?v=1762387272&width=1600"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-61a2db97-4700-4daa-aa1d-9e1bad262984.png",
+        "/workspace/scratch/5f5114b49696/research/noir-zooble-official.png"
+      ],
+      "prompt": "Use case: identity-preserve. Asset type: one individual full-body victory sprite for Digital Circus Encore. Image 1 is approved 2D character identity; image 2 is official costume assembly reference. Change ONLY pose: Victorious confident flourish: stand upright with dark boot forward, raise the indigo-purple shaker in the CLAW hand on SCREEN LEFT beside the head as a small celebratory toast; RING hand remains on SCREEN RIGHT resting at hip. Head tilts slightly with smug half-lidded eyes, no mouth. Preserve hand sides and all unlike limbs. No confetti or extra props. Preserve identity invariants: Monochrome gray modular body with ONLY the cocktail shaker colored metallic indigo-blue and purple. Asymmetric broad triangular head pointing toward screen left; large left-screen half-lidded white eye with black spiral pupil, smaller right-screen white eye with black pupil and exactly three black lower lashes. No mouth. Gray lightning bolt antenna behind left eye and black-white striped twisted antenna atop head. Gray hollow triangle chest ornament and small scalloped gray wing projecting from upper-left torso. Light-gray plain apron panel at waist. Pale-gray segmented arms ending in distinct hand-like claw and open ring/pincer. Left-screen leg bends in a gray zigzag and ends in a tapered gray-white striped peg; right-screen leg is darker gray with one rounded dark boot. Keep these unlike legs on their respective screen sides. Shaker held as one small harmless metallic prop. No color anywhere except shaker. Match image 1's black ink contours, polished cel shading and proportions. Both eyes visible; orient toward screen right without mirroring anatomical pieces. Actual transparent RGBA background, clean silhouette and opaque interior. One character with entire body and all accessories visible, generous transparent margins. No scenery, floor, shadow, glow, text, labels, second pose, motion effects or extra limbs. No toy render or photograph.",
+      "sha256": "f00de382690f18713616e79cc411ce62c1db7c3501947a4cb0c355aeeebd4ad2",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        941,
+        1671
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        11,
+        9,
+        879,
+        1665
+      ],
+      "bytes": 1180125,
+      "visualReview": "Upright toast with raised shaker in screen-left claw and screen-right ring hand at hip; grayscale body, antenna pair, chest triangle, wing, apron and unlike feet retained."
+    },
+    {
+      "id": "beachzooble-victory",
+      "appearanceId": "beachzooble",
+      "slot": "victory",
+      "file": "assets/encore/poses/beachzooble/victory.png",
+      "sourceGenerationId": "exec-4bce693f-5785-43f8-a141-9658960180fe",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/digital-circus-animiniz-beach-vacation-series",
+        "https://glitchproductions.store/cdn/shop/files/Beach_Series_Render_01.png?v=1765572441&width=1600"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-33f0cdb5-d3a4-408a-8e11-722f49fc15de.png",
+        "/workspace/scratch/5f5114b49696/research/beach-series-01.png"
+      ],
+      "prompt": "Use case: identity-preserve. Asset type: one individual full-body victory sprite for Digital Circus Encore. Image 1 is approved 2D character identity; image 2 is official costume assembly reference. Change ONLY pose: Victorious relaxed beach flourish: stand upright with blue flipper slightly forward, YELLOW hand on SCREEN RIGHT raised high in celebration, ORANGE arm with single mint C-claw on SCREEN LEFT holds beige bag at hip. Head tilts with confident half-lidded eyes; retain parasol and shell. No confetti, drinks or extra props. Preserve identity invariants: Bright pink broad triangular head pointing screen left. Large yellow eye with black spiral pupil and pale pink half-lid on screen left, smaller white eye with black pupil and purple half-lid and three black lower lashes screen right. No mouth. Cream spiral seashell horn at upper-left head, red-white miniature beach umbrella atop head, curved blue snorkel along right-screen edge of face. Oval yellow modular torso with large pink five-point star chest ornament, small purple cross-like upper-left shoulder piece. Left-screen arm is orange with one mint-green round elbow joint and ONE mint-green C-shaped claw hand; never duplicate that claw as a torso ornament; right-screen arm segmented yellow and purple with yellow hand. Left-screen leg purple zigzag ending in a tapered mint-green peg with two blue horizontal bands; right-screen leg bent red ending in one blue swimming flipper. Beige open beach bag with brown straps hanging at left hip. Preserve unlike limbs exactly, no mirrored or duplicated fins, no normal human hands or feet. Match image 1's black ink contours, polished cel shading and proportions. Both eyes visible; orient toward screen right without mirroring anatomical pieces. Actual transparent RGBA background, clean silhouette and opaque interior. One character with entire body and all accessories visible, generous transparent margins. No scenery, floor, shadow, glow, text, labels, second pose, motion effects or extra limbs. No toy render or photograph.",
+      "sha256": "f75ad6b2cb3a13b23bcd2efdf0cda935a1cd8a25ec3c036fd4f7395cc601f5a8",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "bboxAlpha12": [
+        64,
+        14,
+        990,
+        1526
+      ],
+      "bytes": 1624759,
+      "visualReview": "Raised yellow arm celebrates; single mint C-claw carries bag at left hip, all beach head accessories and asymmetric legs retained."
+    },
+    {
+      "id": "noirzooble-defeat",
+      "appearanceId": "noirzooble",
+      "slot": "defeat",
+      "file": "assets/encore/poses/noirzooble/defeat.png",
+      "sourceGenerationId": "exec-8df7c47b-525a-4ecf-8c1d-1dc83fbf05f0",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/digital-circus-animiniz-costume-adventure-series",
+        "https://glitchproductions.store/cdn/shop/files/86.png?v=1762387272&width=1600"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-61a2db97-4700-4daa-aa1d-9e1bad262984.png",
+        "/workspace/scratch/5f5114b49696/research/noir-zooble-official.png"
+      ],
+      "prompt": "Use case: identity-preserve. Asset type: one individual full-body defeat sprite for Digital Circus Encore. Image 1 is approved 2D character identity; image 2 is official costume assembly reference. Change ONLY pose: Non-graphic defeated seated slump: torso sits low, head droops slightly toward screen left, eyelids low. Gray striped peg leg lies bent forward on SCREEN LEFT and dark boot leg extends forward on SCREEN RIGHT, both fully visible. Claw hand on screen left keeps shaker low near lap; ring hand on screen right rests beside body supporting seated pose. Keep apron draping over lap and all limbs connected. No injuries, broken pieces, new mouth or floor. Preserve identity invariants: Monochrome gray modular body with ONLY the cocktail shaker colored metallic indigo-blue and purple. Asymmetric broad triangular head pointing toward screen left; large left-screen half-lidded white eye with black spiral pupil, smaller right-screen white eye with black pupil and exactly three black lower lashes. No mouth. Gray lightning bolt antenna behind left eye and black-white striped twisted antenna atop head. Gray hollow triangle chest ornament and small scalloped gray wing projecting from upper-left torso. Light-gray plain apron panel at waist. Pale-gray segmented arms ending in distinct hand-like claw and open ring/pincer. Left-screen leg bends in a gray zigzag and ends in a tapered gray-white striped peg; right-screen leg is darker gray with one rounded dark boot. Keep these unlike legs on their respective screen sides. Shaker held as one small harmless metallic prop. No color anywhere except shaker. Match image 1's black ink contours, polished cel shading and proportions. Both eyes visible; orient toward screen right without mirroring anatomical pieces. Actual transparent RGBA background, clean silhouette and opaque interior. One character with entire body and all accessories visible, generous transparent margins. No scenery, floor, shadow, glow, text, labels, second pose, motion effects or extra limbs. No toy render or photograph.",
+      "sha256": "1570d8fbefb18fb6f7961cac3b36c7ff6918726bc4fd656bea4b0a4668ffb443",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        1217,
+        1292
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        83,
+        15,
+        1026,
+        1280
+      ],
+      "bytes": 1072284,
+      "visualReview": "Seated slump, unlike legs extended and fully visible; shaker held over apron with ring hand supporting body. Entire connected character, no injuries or missing parts."
+    },
+    {
+      "id": "beachzooble-defeat",
+      "appearanceId": "beachzooble",
+      "slot": "defeat",
+      "file": "assets/encore/poses/beachzooble/defeat.png",
+      "sourceGenerationId": "exec-0a625f83-39b4-4ce8-b598-27e54c2977a4",
+      "method": "image_gen.imagegen",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/digital-circus-animiniz-beach-vacation-series",
+        "https://glitchproductions.store/cdn/shop/files/Beach_Series_Render_01.png?v=1765572441&width=1600"
+      ],
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-33f0cdb5-d3a4-408a-8e11-722f49fc15de.png",
+        "/workspace/scratch/5f5114b49696/research/beach-series-01.png"
+      ],
+      "prompt": "Use case: identity-preserve. Asset type: one individual full-body defeat sprite for Digital Circus Encore. Image 1 is approved 2D character identity; image 2 is official costume assembly reference. Change ONLY pose: Non-graphic defeated seated slump: yellow torso sits low, head droops slightly toward screen left, eyelids low. Purple zigzag leg with mint striped peg lies bent forward on SCREEN LEFT and red leg with blue flipper extends forward on SCREEN RIGHT, both fully visible. Orange arm and single mint C-claw screen-left hold beige bag low near lap; yellow hand screen-right rests beside torso. Keep parasol, shell, snorkel, star and all limbs attached. No injuries, broken parts, new mouth or floor. Preserve identity invariants: Bright pink broad triangular head pointing screen left. Large yellow eye with black spiral pupil and pale pink half-lid on screen left, smaller white eye with black pupil and purple half-lid and three black lower lashes screen right. No mouth. Cream spiral seashell horn at upper-left head, red-white miniature beach umbrella atop head, curved blue snorkel along right-screen edge of face. Oval yellow modular torso with large pink five-point star chest ornament, small purple cross-like upper-left shoulder piece. Left-screen arm is orange with one mint-green round elbow joint and ONE mint-green C-shaped claw hand; never duplicate that claw as a torso ornament; right-screen arm segmented yellow and purple with yellow hand. Left-screen leg purple zigzag ending in a tapered mint-green peg with two blue horizontal bands; right-screen leg bent red ending in one blue swimming flipper. Beige open beach bag with brown straps hanging at left hip. Preserve unlike limbs exactly, no mirrored or duplicated fins, no normal human hands or feet. Match image 1's black ink contours, polished cel shading and proportions. Both eyes visible; orient toward screen right without mirroring anatomical pieces. Actual transparent RGBA background, clean silhouette and opaque interior. One character with entire body and all accessories visible, generous transparent margins. No scenery, floor, shadow, glow, text, labels, second pose, motion effects or extra limbs. No toy render or photograph.",
+      "sha256": "692a58cb2e8aff5de6b8f63efa4189bd1b352c08142c6447ca17d0171ae76f51",
+      "sourceBytesIdentical": true,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        45,
+        20,
+        1156,
+        1295
+      ],
+      "bytes": 1081983,
+      "visualReview": "Seated slump with both unlike legs extended, bag held near lap, yellow hand supporting body; full snorkel/parasol/shell head and body intact."
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "startedAt": "2026-11-20T08:57:19.259977+00:00",
+  "command": "node tests/combat-action-art-browser.mjs",
+  "executablePath": "/usr/bin/chromium",
+  "scope": "Current checkout, action-art browser suite; native Skia evidence is separate.",
+  "origin": "http://127.0.0.1:42071",
+  "exitCode": 1,
+  "status": "environment_blocked_before_navigation",
+  "completedAt": "2026-11-20T08:57:20.263365+00:00",
+  "log": "docs/art-generation/cast-resumption-20261120/browser-action-art.log",
+  "sourceSha256": "237eda4aca80184704e68f0e555cb7afe09444ca74388953dced2fb5d72364b2",
+  "reason": "Chromium process_singleton_posix socket() failed: Operation not permitted; SIGABRT before page navigation.",
+  "browserChecksCompleted": 0
+}

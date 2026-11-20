@@ -1,0 +1,1943 @@
+{
+  "schema": "encore-native-generated-art.v1",
+  "date": "2026-11-20",
+  "scope": "smilingtragedygangle and eight official merchandise abstraction appearances",
+  "appearanceIds": [
+    "smilingtragedygangle",
+    "abstractingpomni",
+    "abstractingjax",
+    "abstractingragatha",
+    "abstractingkinger",
+    "abstractinggangle",
+    "abstractingzooble",
+    "abstractingqueenie",
+    "badendcaine"
+  ],
+  "status": "partially_completed_service_quota",
+  "plannedImages": 99,
+  "completedImages": 39,
+  "missingImages": 60,
+  "activeAppearanceIds": [
+    "badendcaine"
+  ],
+  "pendingAppearanceIds": [
+    "smilingtragedygangle",
+    "abstractingpomni",
+    "abstractingjax",
+    "abstractingragatha",
+    "abstractingkinger",
+    "abstractinggangle",
+    "abstractingzooble",
+    "abstractingqueenie"
+  ],
+  "activeImages": 11,
+  "archivedPendingImages": 28,
+  "generatedBytes": 58893498,
+  "uniqueSHA256": 39,
+  "method": "image_gen.imagegen",
+  "nativePngsPreserved": true,
+  "episodeFidelityClaim": false,
+  "generationBlock": {
+    "httpStatus": 429,
+    "type": "usage_limit_reached",
+    "limitWindowMinutes": 1440,
+    "resetsAt": "2026-11-20T08:08:33Z",
+    "resetsAtParis": "2026-11-20T09:08:33+01:00",
+    "note": "Reset time announced by the service; generation was stopped and no bypass attempted."
+  },
+  "resumeCheckpoint": "docs/art-generation/cast-continuation-20261120/generation-resume.json",
+  "missingSlotsByAppearance": {
+    "smilingtragedygangle": [
+      "intro",
+      "attack",
+      "heavy",
+      "hit",
+      "walk",
+      "jump",
+      "crouch",
+      "victory",
+      "defeat"
+    ],
+    "abstractingpomni": [
+      "intro",
+      "attack",
+      "heavy",
+      "hit",
+      "walk",
+      "jump",
+      "crouch",
+      "victory",
+      "defeat"
+    ],
+    "abstractingjax": [
+      "attack",
+      "heavy",
+      "hit",
+      "walk",
+      "jump",
+      "crouch",
+      "victory",
+      "defeat"
+    ],
+    "abstractingragatha": [
+      "attack",
+      "heavy",
+      "hit",
+      "walk",
+      "jump",
+      "crouch",
+      "victory",
+      "defeat"
+    ],
+    "abstractingkinger": [
+      "intro",
+      "attack",
+      "heavy",
+      "hit",
+      "walk",
+      "jump",
+      "crouch",
+      "victory",
+      "defeat"
+    ],
+    "abstractinggangle": [
+      "intro",
+      "heavy",
+      "jump",
+      "crouch",
+      "victory",
+      "defeat"
+    ],
+    "abstractingzooble": [
+      "intro",
+      "attack",
+      "heavy",
+      "hit",
+      "walk",
+      "jump",
+      "crouch",
+      "victory",
+      "defeat"
+    ],
+    "abstractingqueenie": [
+      "victory",
+      "defeat"
+    ]
+  },
+  "items": [
+    {
+      "id": "smilingtragedygangle-selection",
+      "appearanceId": "smilingtragedygangle",
+      "slot": "selection",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/smilingtragedygangle/selection.png",
+      "sourceGenerationId": "exec-2e7364a5-5f5b-44af-839a-03c5d748b42d",
+      "method": "image_gen.imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: one transparent full-body character selection illustration for the 2D fighting game Digital Circus Encore. Create GANGLE in the SMILING TRAGEDY MASK state. Reference 1 provides the existing game's red ribbon body, proportions, crisp outlines and polished cel shading. Reference 2 is the official episode storyboard; use ONLY the face in the bottom-middle cell (row 3 column 2): white tragedy mask retaining BOTH small blue tear drops at its lateral cheeks, closed eyes shaped as gentle upward arches, and a small curved closed-mouth smile. Do not use the frown from reference 1 or the broad open laughing Comedy mask. Preserve one white mask, slender RED ribbon arms, open spiral ribbon torso and two separate flat curled ribbon feet; no human body, gloves, clothing, hair or extra mask. Pose: relaxed cheerful selection pose, three-quarter view turned slightly toward screen RIGHT, one ribbon hand loosely lifted near the chest, the other gently extended, both feet planted apart. Entire figure including mask rim and both feet with generous transparent margin on ALL sides. One single character, detailed clean 2D game art, true transparent RGBA background. No scenery, floor, cast shadow, glow, effects, letters, watermark, inset, frame or second character.",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/gangletragedy.webp",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/cast-episode6-storyboard-L3-M10.jpg"
+      ],
+      "sourceURLs": [
+        "https://www.youtube.com/watch?v=mOvhHim78YA",
+        "https://i.ytimg.com/sb/mOvhHim78YA/storyboard3_L3/M10.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCJX--8QG&sigh=rs$AOn4CLBRc1Pm_soGXt4VJR7qM3OM3K-a2A"
+      ],
+      "sourceType": "official-episode-storyboard",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-2e7364a5-5f5b-44af-839a-03c5d748b42d.png",
+      "sha256": "8a9ea123129eedbb45a8ad17979d65e5aa0818fb7e47842169eec804b1be83de",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 1539075,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "bboxAlpha12": [
+        22,
+        33,
+        915,
+        1511
+      ],
+      "nativeCopyVerified": true,
+      "visualReview": "One complete red ribbon Gangle, white tragedy mask retains both blue tears while eyes form closed upward arches and mouth a small smile matching episode6 storyboard bottom-middle cell. Ribbon torso, arms and two curled feet remain complete. Distinct relaxed selection pose; no second mask or scene. Native alpha checked, all threshold12 contours inside canvas. Apparent raw RGB fringe is not treated as opaque background.",
+      "status": "generated-and-visually-reviewed",
+      "episodeFidelityClaim": false,
+      "targetFile": "assets/encore/selection/smilingtragedygangle.png",
+      "productionStatus": "partial",
+      "includedInRuntime": false
+    },
+    {
+      "id": "smilingtragedygangle-stance",
+      "appearanceId": "smilingtragedygangle",
+      "slot": "stance",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/smilingtragedygangle/stance.png",
+      "sourceGenerationId": "exec-0da51ac9-3372-4ba4-a139-0427d881096e",
+      "method": "image_gen.imagegen",
+      "prompt": "Use case: identity-preserve. Draw ONE complete SMILING TRAGEDY GANGLE character in a distinct full-body 2D fighting-game action pose. Reference 1 is the approved exact design lock: one white tragedy mask, both lateral blue tears, eyes closed in gentle upward arches, small closed-mouth smile, slender red ribbon arms, spiral ribbon torso, two separate curled ribbon feet. Reference 2 bottom-middle cell confirms the official facial expression. Preserve the approved crisp dark outlines, detailed red cel shading and proportions. Keep the smiling tragedy face in this action; no broad comedy mask, second mask, human body, gloves or added accessory. Entire character with all ribbon ends, full mask and both feet inside clear transparent margins on every side. One character, true transparent RGBA, no background, floor, cast shadow, glow, aura, particles, text, watermark or duplicate. POSE: combat ready STANCE facing screen RIGHT in three-quarter view. Spiral torso slightly compressed, two ribbon feet spread with front foot advanced. Both ribbon arms curl upward into a compact guard at chest height, body balanced and ready. Maintain small gentle smile and closed arch eyes with both blue tears.",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/docs/art-generation/cast-continuation-20261120/pending-assets/smilingtragedygangle/selection.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/cast-episode6-storyboard-L3-M10.jpg"
+      ],
+      "sourceURLs": [
+        "https://www.youtube.com/watch?v=mOvhHim78YA",
+        "https://i.ytimg.com/sb/mOvhHim78YA/storyboard3_L3/M10.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCJX--8QG&sigh=rs$AOn4CLBRc1Pm_soGXt4VJR7qM3OM3K-a2A"
+      ],
+      "sourceType": "official-episode-storyboard",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-0da51ac9-3372-4ba4-a139-0427d881096e.png",
+      "sha256": "9039e1f4973eed292262ff2a6f3bbd5f6440a4b45ab15fdbffd0b413cb58b696",
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "bytes": 767470,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        90,
+        57,
+        1071,
+        1241
+      ],
+      "nativeCopyVerified": true,
+      "visualReview": "Distinct ready guard: spiral torso compressed, ribbon feet wide apart, two arms curled into chest-high guard, head oriented toward screen right. White mask keeps both blue tears, closed arches and small smile. Entire mask, arms and feet visible, consistent approved red cel-shaded design.",
+      "status": "generated-and-visually-reviewed",
+      "episodeFidelityClaim": false,
+      "targetFile": "assets/encore/stance/smilingtragedygangle.png",
+      "productionStatus": "partial",
+      "includedInRuntime": false,
+      "originalReferencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/smilingtragedygangle.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/cast-episode6-storyboard-L3-M10.jpg"
+      ]
+    },
+    {
+      "id": "abstractingpomni-selection",
+      "appearanceId": "abstractingpomni",
+      "slot": "selection",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingpomni/selection.png",
+      "sourceGenerationId": "exec-7f9a4918-9022-40f6-bcd2-976c379577bd",
+      "method": "image_gen.imagegen",
+      "prompt": "Use case: precise-object-edit. Correct this transparent full-body game illustration of Abstracting Pomni using reference 2 as exact design evidence. Keep all existing upper-body artwork, pose, costume, face, eye placement, hat crystals, arms, linework, cel shading and slender proportions unchanged. Change ONLY the two feet: the foot on the VIEWER'S LEFT must be the normal RED jester shoe with its yellow cuff; the foot on the VIEWER'S RIGHT must be the irregular dark crystal boot with a large concentric pastel eye and spikes. The source drawing currently has the foot transformation on the wrong side. Do not mirror the whole character. Preserve white lower legs. Keep the whole figure, all hat tips and both shoes entirely inside canvas with visibly clear transparent margins on all sides. True transparent RGBA background, no glow, floor, text, scene, second figure or extra effect. One complete character only.",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-8e4bb708-6ddc-45bd-8810-9fed7db4c02f.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractPomni.png"
+      ],
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractPomni.png?v=1780353721"
+      ],
+      "sourceType": "official-merchandise",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-7f9a4918-9022-40f6-bcd2-976c379577bd.png",
+      "sha256": "6e069cab81e5ee75d6b98c8fbca2a8ba7fda6949cb78923fd0e2b8a08168ee4a",
+      "dimensions": [
+        955,
+        1647
+      ],
+      "bytes": 1217005,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        21,
+        5,
+        942,
+        1619
+      ],
+      "nativeCopyVerified": true,
+      "visualReview": "Approved after targeted correction: normal red shoe now on viewer-left, crystal eye-bearing shoe on viewer-right, matching the official asymmetric foot pattern. One pale normal face half with pinwheel iris, opposing crystal face/hat, viewer-left crystal arm and viewer-right blue glove retained. Complete figure, natural worried selection stance, crisp cel shading, all spikes/hat tips and feet inside canvas.",
+      "status": "generated-and-visually-reviewed",
+      "episodeFidelityClaim": false,
+      "rejectedAttempts": [
+        {
+          "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-8e4bb708-6ddc-45bd-8810-9fed7db4c02f.png",
+          "reason": "Crystal shoe on wrong side of the body; corrected through built-in image generation."
+        }
+      ],
+      "targetFile": "assets/encore/selection/abstractingpomni.png",
+      "productionStatus": "partial",
+      "includedInRuntime": false
+    },
+    {
+      "id": "abstractingpomni-stance",
+      "appearanceId": "abstractingpomni",
+      "slot": "stance",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingpomni/stance.png",
+      "sourceGenerationId": "exec-c10092e6-27c8-42da-986a-0f82f35181db",
+      "method": "image_gen.imagegen",
+      "prompt": "Use case: identity-preserve. Asset type: ONE individual full-body transparent 2D fighting-game action sprite of ABSTRACTING POMNI. Reference 1 is the approved strict design lock for silhouette, proportions, exact transformation patches, eyes, colours and polished cel shading. Reference 2 supplies official design details only; do not imitate its squat toy proportions, setting or lighting. Slender Pomni with red-blue jester hat and suit, yellow trims/buttons, pale face with one normal red-blue pinwheel iris and brown bob. Opposing half of face/hat is dark angular crystal with flat pastel concentric eyes; one arm/hand is crystal, opposite hand is blue glove. Normal RED shoe and opposing CRYSTAL eye-bearing foot MUST stay on the same anatomical sides as the approved selection. Do not swap, mirror or redistribute the transformation. Preserve all individual eye-bearing hat growths and asymmetric patches; not fully abstracted. Create a genuinely distinct natural action pose, not a mirrored/cropped selection image. Every limb, crown/hat/ear tip, attached mask and crystal spike must fit fully inside clear transparent margins on ALL sides. One connected character, crisp detailed 2D art on true transparent RGBA; no scenery, floor, cast shadow, aura, glow, particles, labels, watermark, inset or duplicate. POSE: STANDING COMBAT GUARD facing screen RIGHT, three-quarter view. Feet spread, front foot advanced, knees gently flexed, both hands held near chest in a compact alert guard.",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/docs/art-generation/cast-continuation-20261120/pending-assets/abstractingpomni/selection.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractPomni.png"
+      ],
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractPomni.png?v=1780353721"
+      ],
+      "sourceType": "official-merchandise",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-c10092e6-27c8-42da-986a-0f82f35181db.png",
+      "sha256": "2c72e2d9e681c4a13fb4b61ab8dd3be0175db4c31234f8f819ff8fb21da7f9a6",
+      "dimensions": [
+        1176,
+        1337
+      ],
+      "bytes": 1039618,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        154,
+        11,
+        1033,
+        1319
+      ],
+      "nativeCopyVerified": true,
+      "visualReview": "Distinct wide combat guard facing right, knees bent and both normal blue and crystal hands raised. Normal red shoe on correct side and opposing crystal foot preserved, face/hat asymmetry and normal pinwheel iris intact. Complete figure and all tips inside canvas.",
+      "status": "generated-and-visually-reviewed",
+      "episodeFidelityClaim": false,
+      "targetFile": "assets/encore/stance/abstractingpomni.png",
+      "productionStatus": "partial",
+      "includedInRuntime": false,
+      "originalReferencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/abstractingpomni.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractPomni.png"
+      ]
+    },
+    {
+      "id": "abstractingjax-selection",
+      "appearanceId": "abstractingjax",
+      "slot": "selection",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingjax/selection.png",
+      "sourceGenerationId": "exec-77d73efc-58e1-43eb-a66a-1ae53bc7104f",
+      "method": "image_gen.imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: one transparent full-body 2D fighting-game selection illustration. Draw ABSTRACTING JAX from The Amazing Digital Circus. Reference 1 is the strict official partial-abstraction design. Reference 2 is the game style and lanky adult cartoon body proportion reference. Keep Jax tall and thin with long limbs and two very long ears, NOT a squat toy. Smooth purple rabbit body and pink overalls with yellow buttons remain partly visible; one normal yellow eye with black rectangular pupil, one yellow glove, and one broad purple rabbit foot remain. The viewer-right half of the head and very long ear is an irregular dark angular crystal mass containing flat concentric pastel yellow/pink/cyan eyes; additional growths cross one arm, the side of the body and one lower leg/foot, matching the official asymmetry. Preserve normal face half and overalls between black crystal patches. This is partial abstraction, not a fully black monster. Pose: uneasy but composed standing selection pose, body slightly turned toward screen RIGHT, normal hand near the overall bib, transformed arm loosely lowered, feet planted apart. Face keeps restrained small mouth. Full figure with both long ear tips, every eye-bearing spike, hands and feet completely inside canvas and 8 percent clear transparent margins. Crisp dark outlines, controlled cel shading consistent with reference 2. One character on true transparent RGBA. No photographic toy material, display base, scenery, floor, cast shadow, glow, effects, letters or watermark.",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedJax.png",
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/jax.webp"
+      ],
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedJax.png?v=1780353721"
+      ],
+      "sourceType": "official-merchandise",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-77d73efc-58e1-43eb-a66a-1ae53bc7104f.png",
+      "sha256": "1182d079c3dd9649c5b43b2781be6863a3ec0b0b04fbb7d60a10fba85b6d4534",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 1405678,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "bboxAlpha12": [
+        194,
+        15,
+        791,
+        1509
+      ],
+      "nativeCopyVerified": true,
+      "visualReview": "One complete tall lanky Jax; one normal purple ear and one elongated angular black crystal ear. Pink overalls, normal yellow eye/black rectangular pupil, one yellow glove and purple foot preserved; opposing face/arm/leg contain concentric pastel eyes. Full figure and spikes within native transparent margins. Partial abstraction differs from existing fully abstracted archive Jax. Selection pose approved; native alpha checked.",
+      "status": "generated-and-visually-reviewed",
+      "episodeFidelityClaim": false,
+      "targetFile": "assets/encore/selection/abstractingjax.png",
+      "productionStatus": "partial",
+      "includedInRuntime": false
+    },
+    {
+      "id": "abstractingjax-stance",
+      "appearanceId": "abstractingjax",
+      "slot": "stance",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingjax/stance.png",
+      "sourceGenerationId": "exec-7589ed00-471f-43e0-851c-778ca7458eff",
+      "method": "image_gen.imagegen",
+      "prompt": "Use case: identity-preserve. Asset type: ONE individual full-body transparent 2D fighting-game action sprite of ABSTRACTING JAX. Reference 1 is the approved strict design lock for silhouette, proportions, exact transformation patches, eyes, colours and polished cel shading. Reference 2 supplies official design details only; do not imitate its squat toy proportions, setting or lighting. Tall lanky purple cartoon rabbit, two very long ears, long thin limbs, pink overalls/yellow buttons. One normal yellow eye with black rectangular pupil, one yellow glove and broad purple foot. Opposing head half, very long ear, arm and leg are angular dark crystal with concentric pastel eyes. Keep exactly the approved anatomical side of every transformation and all normal body sections; not fully abstracted or chibi. Create a genuinely distinct natural action pose, not a mirrored/cropped selection image. Every limb, crown/hat/ear tip, attached mask and crystal spike must fit fully inside clear transparent margins on ALL sides. One connected character, crisp detailed 2D art on true transparent RGBA; no scenery, floor, cast shadow, aura, glow, particles, labels, watermark, inset or duplicate. POSE: STANDING COMBAT GUARD facing screen RIGHT, three-quarter view. Feet spread, front foot advanced, knees gently flexed, both hands held near chest in a compact alert guard.",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/docs/art-generation/cast-continuation-20261120/pending-assets/abstractingjax/selection.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedJax.png"
+      ],
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedJax.png?v=1780353721"
+      ],
+      "sourceType": "official-merchandise",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-7589ed00-471f-43e0-851c-778ca7458eff.png",
+      "sha256": "d7a4e585d3512aebbc6e3641be20ebcd7c17ef2c47f796c2d47f62d7f27cdd05",
+      "dimensions": [
+        1145,
+        1374
+      ],
+      "bytes": 723421,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        119,
+        9,
+        1001,
+        1359
+      ],
+      "nativeCopyVerified": true,
+      "visualReview": "Distinct wide guarded stance facing right with normal yellow glove and crystal hand raised, lanky legs flexed. One normal purple ear/foot and one crystalline ear/foot remain on correct sides; yellow normal eye and pastel concentric eyes preserved. Full tall figure including ear tips visible.",
+      "status": "generated-and-visually-reviewed",
+      "episodeFidelityClaim": false,
+      "targetFile": "assets/encore/stance/abstractingjax.png",
+      "productionStatus": "partial",
+      "includedInRuntime": false,
+      "originalReferencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/abstractingjax.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedJax.png"
+      ]
+    },
+    {
+      "id": "abstractingjax-intro",
+      "appearanceId": "abstractingjax",
+      "slot": "intro",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingjax/intro.png",
+      "sourceGenerationId": "exec-808963ea-0e43-4938-824b-257241c54715",
+      "method": "image_gen.imagegen",
+      "prompt": "Use case: identity-preserve. Asset type: ONE individual full-body transparent 2D fighting-game action sprite of ABSTRACTING JAX. Reference 1 is the approved strict design lock for silhouette, proportions, exact transformation patches, eyes, colours and polished cel shading. Reference 2 supplies official design details only; do not imitate its squat toy proportions, setting or lighting. Tall lanky purple cartoon rabbit, two very long ears, long thin limbs, pink overalls/yellow buttons. One normal yellow eye with black rectangular pupil, one yellow glove and broad purple foot. Opposing head half, very long ear, arm and leg are angular dark crystal with concentric pastel eyes. Keep exactly the approved anatomical side of every transformation and all normal body sections; not fully abstracted or chibi. Create a genuinely distinct natural action pose, not a mirrored/cropped selection image. Every limb, crown/hat/ear tip, attached mask and crystal spike must fit fully inside clear transparent margins on ALL sides. One connected character, crisp detailed 2D art on true transparent RGBA; no scenery, floor, cast shadow, aura, glow, particles, labels, watermark, inset or duplicate. POSE: INTRO gesture facing screen RIGHT: taking a small introductory step forward, one hand raised in a cautious greeting and the other extended low, torso upright with a fresh asymmetrical silhouette distinct from selection.",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/docs/art-generation/cast-continuation-20261120/pending-assets/abstractingjax/selection.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedJax.png"
+      ],
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedJax.png?v=1780353721"
+      ],
+      "sourceType": "official-merchandise",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-808963ea-0e43-4938-824b-257241c54715.png",
+      "sha256": "e31477fe92c0676bb89a10dbd81d50d3c700077581d21f93afe452b8a7524227",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 1534805,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "bboxAlpha12": [
+        96,
+        11,
+        883,
+        1517
+      ],
+      "nativeCopyVerified": true,
+      "visualReview": "Distinct introductory stepping pose with crystal hand raised openly and normal yellow hand extended low. Tall ears, asymmetrical crystal face/arm/leg, normal eye, pink overalls and purple foot remain correctly placed. Complete figure and all tips visible; transparent native PNG.",
+      "status": "generated-and-visually-reviewed",
+      "episodeFidelityClaim": false,
+      "targetFile": "assets/encore/poses/abstractingjax/intro.png",
+      "productionStatus": "partial",
+      "includedInRuntime": false,
+      "originalReferencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/abstractingjax.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedJax.png"
+      ]
+    },
+    {
+      "id": "abstractingragatha-selection",
+      "appearanceId": "abstractingragatha",
+      "slot": "selection",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingragatha/selection.png",
+      "sourceGenerationId": "exec-b4892e7d-a309-4a0d-9c12-b9bc476da14e",
+      "method": "image_gen.imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: one transparent full-body selection illustration for the 2D fighting game Digital Circus Encore. Draw ABSTRACTING RAGATHA faithfully adapting the official partial-abstraction design in reference 1 to the crisp outlined cel shading and normal full-body proportions of reference 2. Do not imitate the squat Animiniz figurine anatomy or its photographed backdrop. Preserve Ragatha's long red yarn hair on the viewer-left side, large periwinkle hair bow, visible blue button eye with black stitch, periwinkle puff-sleeve dress with white collar/hem and fabric patches, pale cloth hands, and one normal black shoe. Viewer-right half of the head/hair is smoky-black angular translucent crystal with several large flat concentric pastel eyes, including one in place of the normal eye; the mouth is a curved surreal yellow-purple eye-like smile as in official reference. Black crystal growths surround one shoulder and viewer-right lower leg/foot, while most of dress and normal left leg remain. Partial abstraction, not a fully black monster. Pose: relaxed but uneasy selection stance facing slightly screen RIGHT, one normal cloth hand raised near shoulder and the other resting near hip, feet apart. One single complete figure with all hair, bow, spikes, hands and feet inside ample true transparent margins. Polished 2D game art, no display base, backdrop, floor, drop shadow, aura, particles, letters, watermark or inset.",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedRagatha_01.png",
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/ragatha.webp"
+      ],
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedRagatha_01.png?v=1780353722"
+      ],
+      "sourceType": "official-merchandise",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-b4892e7d-a309-4a0d-9c12-b9bc476da14e.png",
+      "sha256": "da90f03acd382f8b46591855417a8bb29a4400088e1e4397ee7ebf11da01d181",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 1764655,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "bboxAlpha12": [
+        102,
+        9,
+        925,
+        1525
+      ],
+      "nativeCopyVerified": true,
+      "visualReview": "One complete Ragatha in tall game proportions, red yarn hair and blue button eye retained; opposing head is dark crystal with pastel concentric eyes and eye-like smile matching the official figure. Blue bow/patch dress, cloth hands, normal black left shoe and crystalline right foot remain visible. Complete asymmetric silhouette, crisp 2D cel shading, all margins checked.",
+      "status": "generated-and-visually-reviewed",
+      "episodeFidelityClaim": false,
+      "targetFile": "assets/encore/selection/abstractingragatha.png",
+      "productionStatus": "partial",
+      "includedInRuntime": false
+    },
+    {
+      "id": "abstractingragatha-stance",
+      "appearanceId": "abstractingragatha",
+      "slot": "stance",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingragatha/stance.png",
+      "sourceGenerationId": "exec-16b102e2-2c4c-4725-8a6b-afcc2261b033",
+      "method": "image_gen.imagegen",
+      "prompt": "Use case: precise-object-edit. Correct ONLY shoulder transformation placement in reference 1, the transparent combat stance of Abstracting Ragatha. Keep the pose, head, button eye, crystal eyes, smile, hair, bow, hands, dress, legs/feet and all artwork otherwise unchanged. Use the approved selection in reference 2 to match exact shoulder identity. Her anatomical RIGHT shoulder is on the VIEWER'S LEFT in this pose and MUST have the dark angular crystal growth around that shoulder/upper sleeve. The shoulder on the VIEWER'S RIGHT must be the normal rounded BLUE puff sleeve with white cuff; REMOVE the crystal shoulder/sleeve growth there. Do not remove any of the crystal HEAD, hair or transformed viewer-right FOOT. Do not mirror the figure or move any other body part. Maintain full body and all tips within clear transparent margins, crisp dark outlines and 2D cel shading. One figure on real transparent RGBA, no background, aura, floor, cast shadow, effects, text or watermark.",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-4dc99289-a026-4da1-bc49-fb79e4d80e55.png",
+        "/workspace/scratch/5f5114b49696/CainOS/docs/art-generation/cast-continuation-20261120/pending-assets/abstractingragatha/selection.png"
+      ],
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedRagatha_01.png?v=1780353722"
+      ],
+      "sourceType": "official-merchandise",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-16b102e2-2c4c-4725-8a6b-afcc2261b033.png",
+      "sha256": "3cbb0f06c0dec05794851327f35e46d6fe7015fe51c9b92eec8672e6f466fd37",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 1840025,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "bboxAlpha12": [
+        76,
+        20,
+        930,
+        1504
+      ],
+      "nativeCopyVerified": true,
+      "visualReview": "Corrected and approved: crystal growth restored to her anatomical right shoulder (viewer-left in this pose), opposing puff sleeve normal blue. Wide guard keeps blue button, hair/bow, concentric crystal eye/smile, dress patches and correct crystal leg. Entire full-body stance within canvas.",
+      "status": "generated-and-visually-reviewed",
+      "episodeFidelityClaim": false,
+      "rejectedAttempts": [
+        {
+          "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-4dc99289-a026-4da1-bc49-fb79e4d80e55.png",
+          "reason": "Crystal shoulder switched anatomical side despite other transformation pattern being correct; targeted correction required."
+        }
+      ],
+      "targetFile": "assets/encore/stance/abstractingragatha.png",
+      "productionStatus": "partial",
+      "includedInRuntime": false,
+      "originalReferencePaths": [
+        "/workspace/scratch/5f5114b49696/generated_images/exec-4dc99289-a026-4da1-bc49-fb79e4d80e55.png",
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/abstractingragatha.png"
+      ]
+    },
+    {
+      "id": "abstractingragatha-intro",
+      "appearanceId": "abstractingragatha",
+      "slot": "intro",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingragatha/intro.png",
+      "sourceGenerationId": "exec-c276553f-66f1-485f-a125-fcc7b46c2847",
+      "method": "image_gen.imagegen",
+      "prompt": "Use case: identity-preserve. Asset type: ONE individual full-body transparent 2D fighting-game action sprite of ABSTRACTING RAGATHA. Reference 1 is the approved strict design lock for silhouette, proportions, exact transformation patches, eyes, colours and polished cel shading. Reference 2 supplies official design details only; do not imitate its squat toy proportions, setting or lighting. Ragatha with blue bow, red yarn hair on normal side, blue button eye, blue patchwork dress with white collar/hem, pale cloth hands, one normal black shoe. Opposing side of head and one leg are black angular crystal with concentric pastel eyes; the dark face has a multicoloured eye-like curved smile, exactly as selection and official source. Crystal growth belongs to her anatomical RIGHT shoulder (viewer-left in frontal selection); her anatomical LEFT shoulder retains the rounded normal blue sleeve. Preserve this shoulder placement, asymmetry and costume; do not swap anatomical sides or restore normal face. Create a genuinely distinct natural action pose, not a mirrored/cropped selection image. Every limb, crown/hat/ear tip, attached mask and crystal spike must fit fully inside clear transparent margins on ALL sides. One connected character, crisp detailed 2D art on true transparent RGBA; no scenery, floor, cast shadow, aura, glow, particles, labels, watermark, inset or duplicate. POSE: INTRO gesture facing screen RIGHT: taking a small introductory step forward, one hand raised in a cautious greeting and the other extended low, torso upright with a fresh asymmetrical silhouette distinct from selection.",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/docs/art-generation/cast-continuation-20261120/pending-assets/abstractingragatha/selection.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedRagatha_01.png"
+      ],
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedRagatha_01.png?v=1780353722"
+      ],
+      "sourceType": "official-merchandise",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-c276553f-66f1-485f-a125-fcc7b46c2847.png",
+      "sha256": "d9fa8d0e768543170027a9af7046c58f4d334dff87fb18d9d08994cd3bc1b1f5",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 1846317,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "bboxAlpha12": [
+        82,
+        23,
+        915,
+        1512
+      ],
+      "nativeCopyVerified": true,
+      "visualReview": "Distinct forward introductory step and normal cloth-hand greeting. Correct anatomical right crystal shoulder and normal left blue sleeve preserved; blue button, yarn hair/bow, eye-like crystal smile, dress patches and opposing crystal leg remain coherent. Entire figure and both feet visible.",
+      "status": "generated-and-visually-reviewed",
+      "episodeFidelityClaim": false,
+      "targetFile": "assets/encore/poses/abstractingragatha/intro.png",
+      "productionStatus": "partial",
+      "includedInRuntime": false,
+      "originalReferencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/abstractingragatha.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedRagatha_01.png"
+      ]
+    },
+    {
+      "id": "abstractingkinger-selection",
+      "appearanceId": "abstractingkinger",
+      "slot": "selection",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingkinger/selection.png",
+      "sourceGenerationId": "exec-71d8d96f-91f0-4724-b205-6241be060a75",
+      "method": "image_gen.imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: one transparent full-body 2D fighting-game selection illustration. Draw ABSTRACTING KINGER from The Amazing Digital Circus. Reference 1 is the official partial-abstraction design; reference 2 is the game's clean outlined cel shading and tall chess-piece proportions. Preserve tall beige king chess-piece body with cross-shaped crown, one intact bulging white eye with BLUE iris, purple floor-length royal robe bordered by white spotted ermine, and two small white floating cartoon hands. The viewer-left half of his crown/head is smoky-black angular crystal carrying large flat concentric pastel yellow/purple eyes including one enlarged transformed eyeball; angular crystal growths also encase both wrists and project around the lower robe/base. Most purple robe and one normal face side remain recognizable. No human face, mouth, legs or feet; his body ends at robe/chess base with asymmetric crystal extensions. Adapt the official design to tall game proportions, not squat toy anatomy. Pose: neutral selection pose, slightly turned toward screen RIGHT, both floating hands spread in a tentative gesture, upright robe base. One complete character with crown, every spike, both hands and entire base within clear transparent margins. Crisp detailed 2D game art, true transparent RGBA. No background, floor, pedestal, shadows behind character, aura, effects, text or watermark.",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedKinger.png",
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/kinger.webp"
+      ],
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedKinger.png?v=1780353722"
+      ],
+      "sourceType": "official-merchandise",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-71d8d96f-91f0-4724-b205-6241be060a75.png",
+      "sha256": "181107cc8433a9b53985aeae0d1389c15ab79c4f17f823f4cf1b1e5cb9f14265",
+      "dimensions": [
+        887,
+        1774
+      ],
+      "bytes": 1275414,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        37,
+        14,
+        873,
+        1760
+      ],
+      "nativeCopyVerified": true,
+      "visualReview": "One complete tall chess-piece Kinger. Purple ermine robe remains recognizable; viewer-left head/crown grows angular multi-eyed crystal, one large normal blue iris remains, small white floating hands have crystal cuffs, asymmetric lower crystal base. No invented human legs or mouth. Full crown, hands, robe base and spikes visible; selection pose matches game's tall proportions.",
+      "status": "generated-and-visually-reviewed",
+      "episodeFidelityClaim": false,
+      "targetFile": "assets/encore/selection/abstractingkinger.png",
+      "productionStatus": "partial",
+      "includedInRuntime": false
+    },
+    {
+      "id": "abstractingkinger-stance",
+      "appearanceId": "abstractingkinger",
+      "slot": "stance",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingkinger/stance.png",
+      "sourceGenerationId": "exec-d3df710b-6ca4-41ec-98f9-cf6e51b60593",
+      "method": "image_gen.imagegen",
+      "prompt": "Use case: identity-preserve. Asset type: ONE individual full-body transparent 2D fighting-game action sprite of ABSTRACTING KINGER. Reference 1 is the approved strict design lock for silhouette, proportions, exact transformation patches, eyes, colours and polished cel shading. Reference 2 supplies official design details only; do not imitate its squat toy proportions, setting or lighting. Tall beige king chess piece with cross crown, one normal bulging blue-iris eye, purple floor-length robe with white black-spotted ermine. Opposing head/crown side is dark angular crystal with large concentric pastel eye and extra embedded eyes; two WHITE FLOATING HANDS with crystal cuffs, asymmetrical crystal robe base. Absolutely no human face, mouth, arms inside sleeves, legs or feet. Preserve exact normal/abstract side pattern. Create a genuinely distinct natural action pose, not a mirrored/cropped selection image. Every limb, crown/hat/ear tip, attached mask and crystal spike must fit fully inside clear transparent margins on ALL sides. One connected character, crisp detailed 2D art on true transparent RGBA; no scenery, floor, cast shadow, aura, glow, particles, labels, watermark, inset or duplicate. POSE: COMBAT GUARD facing screen RIGHT: tilt chess body slightly forward, float both white hands before chest with palms/fingers ready, robe base stable. No legs or feet.",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/docs/art-generation/cast-continuation-20261120/pending-assets/abstractingkinger/selection.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedKinger.png"
+      ],
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedKinger.png?v=1780353722"
+      ],
+      "sourceType": "official-merchandise",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-d3df710b-6ca4-41ec-98f9-cf6e51b60593.png",
+      "sha256": "5d020504e1da5dc847e1d2a65fb7c8c228e435da229214c1a9b882f4fa7ecf2c",
+      "dimensions": [
+        1141,
+        1379
+      ],
+      "bytes": 1202856,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        32,
+        3,
+        1122,
+        1375
+      ],
+      "nativeCopyVerified": true,
+      "visualReview": "Chess body leans forward into combat guard, both floating white hands raised before chest. Purple ermine robe, crystal cuffs, asymmetric head and lower base retained; normal blue iris remains. Entire crown and base visible, no human limbs added.",
+      "status": "generated-and-visually-reviewed",
+      "episodeFidelityClaim": false,
+      "targetFile": "assets/encore/stance/abstractingkinger.png",
+      "productionStatus": "partial",
+      "includedInRuntime": false,
+      "originalReferencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/abstractingkinger.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedKinger.png"
+      ]
+    },
+    {
+      "id": "abstractinggangle-selection",
+      "appearanceId": "abstractinggangle",
+      "slot": "selection",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractinggangle/selection.png",
+      "sourceGenerationId": "exec-b88b962d-02ee-4766-b075-feaa53496eaa",
+      "method": "image_gen.imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: one full-body transparent 2D fighting-game selection illustration. Draw the official ABSTRACTING GANGLE design from reference 1 as ONE creature. Reference 2 guides crisp dark contours and controlled cel shading only. Preserve the unusual official silhouette from reference 1: a compact hunched body of smoky-black semi-translucent angular crystal supported by FOUR short irregular crystal legs/feet, with red ribbon loops running over and around the back. TWO separate white theatre-mask faces are ATTACHED to this same single body: the larger comedy mask sits at the upper front-left with a broken/jagged side, and the smaller tragedy mask hangs at the front-right with TWO blue teardrops. Both masks have eerie flat concentric pastel yellow/pink/cyan eyes and purple stylized mouths, as reference 1. Several extra concentric eyes embedded in the crystal body. Do not turn this creature into normal standing ribbon Gangle; do not add a humanoid torso or human limbs. Do not make two characters. Pose: resting alert selection pose, three-quarter view facing screen RIGHT, four feet planted distinctly, both attached masks and ribbon loops clearly readable. Draw the entire creature with all spikes, four feet, ribbons and both masks inside generous transparent margins. Clean detailed 2D game artwork, not photographed plastic toy, no starry scene, pedestal, ground, drop shadow, glow, labels, text, watermark or extra character. True transparent RGBA background.",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedGangle.png",
+        "/workspace/scratch/5f5114b49696/CainOS/docs/art-generation/cast-continuation-20261120/pending-assets/abstractingjax/selection.png"
+      ],
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedGangle.png?v=1780353721"
+      ],
+      "sourceType": "official-merchandise",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-b88b962d-02ee-4766-b075-feaa53496eaa.png",
+      "sha256": "43a18bb3468f0c4283534b1c05480036aed89b78885be721d5290b463eb36ed2",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 1626561,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "bboxAlpha12": [
+        257,
+        10,
+        1296,
+        1018
+      ],
+      "nativeCopyVerified": true,
+      "visualReview": "One connected compact crystal quadruped with four feet, two attached white mask faces and red loops over the back. Broken comedy mask and tragedy mask with both blue tears retain concentric pastel eyes. This is one creature rather than two characters; official altered body silhouette preserved and complete. Clean 2D adaptation with transparent native alpha.",
+      "status": "generated-and-visually-reviewed",
+      "episodeFidelityClaim": false,
+      "targetFile": "assets/encore/selection/abstractinggangle.png",
+      "productionStatus": "partial",
+      "includedInRuntime": false,
+      "originalReferencePaths": [
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedGangle.png",
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/abstractingjax.png"
+      ]
+    },
+    {
+      "id": "abstractinggangle-stance",
+      "appearanceId": "abstractinggangle",
+      "slot": "stance",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractinggangle/stance.png",
+      "sourceGenerationId": "exec-1a5b70f5-7e80-46ff-aa32-a0cbe553aaf9",
+      "method": "image_gen.imagegen",
+      "prompt": "Use case: identity-preserve. Asset type: ONE individual full-body transparent 2D fighting-game action sprite of ABSTRACTING GANGLE. Reference 1 is the approved strict design lock for silhouette, proportions, exact transformation patches, eyes, colours and polished cel shading. Reference 2 supplies official design details only; do not imitate its squat toy proportions, setting or lighting. ONE compact hunched crystal quadruped with FOUR short angular feet/legs, dark faceted body carrying concentric pastel eyes, RED ribbon loops over the back. Two WHITE MASKS attached to this one connected creature: broken comedy mask and smaller tragedy mask with TWO BLUE TEARS. Both masks have concentric pastel eyes and purple mouths. Preserve their positions and every distinctive feature. No normal humanoid ribbon torso, no separate second creature and no human limbs. Create a genuinely distinct natural action pose, not a mirrored/cropped selection image. Every limb, crown/hat/ear tip, attached mask and crystal spike must fit fully inside clear transparent margins on ALL sides. One connected character, crisp detailed 2D art on true transparent RGBA; no scenery, floor, cast shadow, aura, glow, particles, labels, watermark, inset or duplicate. POSE: COMBAT STANCE toward screen RIGHT: four angular feet spread firmly, front body lowered slightly, both attached masks angled forward, red back loops taut.",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/docs/art-generation/cast-continuation-20261120/pending-assets/abstractinggangle/selection.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedGangle.png"
+      ],
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedGangle.png?v=1780353721"
+      ],
+      "sourceType": "official-merchandise",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-1a5b70f5-7e80-46ff-aa32-a0cbe553aaf9.png",
+      "sha256": "3a997f0a3fb342a08c1c48b6f358df5eb29084f0ce21295a0c0040912070f525",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 1706313,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "bboxAlpha12": [
+        56,
+        15,
+        1481,
+        1013
+      ],
+      "nativeCopyVerified": true,
+      "visualReview": "Single compact crystal quadruped with four feet widened into a low ready stance, two attached white masks with concentric eyes and two blue tragedy tears, red ribbon loops and all crystal spikes complete. Distinct lower guard from selection; approved silhouette retained.",
+      "status": "generated-and-visually-reviewed",
+      "episodeFidelityClaim": false,
+      "targetFile": "assets/encore/stance/abstractinggangle.png",
+      "productionStatus": "partial",
+      "includedInRuntime": false,
+      "originalReferencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/abstractinggangle.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedGangle.png"
+      ]
+    },
+    {
+      "id": "abstractinggangle-attack",
+      "appearanceId": "abstractinggangle",
+      "slot": "attack",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractinggangle/attack.png",
+      "method": "image_gen.imagegen",
+      "sourceGenerationId": "exec-0e77d5d5-5f24-4b47-8210-cb96b2613829",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-0e77d5d5-5f24-4b47-8210-cb96b2613829.png",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedGangle.png?v=1780353721"
+      ],
+      "sourceType": "official-merchandise",
+      "episodeFidelityClaim": false,
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/docs/art-generation/cast-continuation-20261120/pending-assets/abstractinggangle/selection.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedGangle.png"
+      ],
+      "prompt": "Use case: identity-preserve. Asset type: ONE individual full-body transparent 2D fighting-game action sprite of ABSTRACTING GANGLE. Reference 1 is the approved strict design lock for silhouette, proportions, exact transformation patches, eyes, colours and polished cel shading. Reference 2 supplies official design details only; do not imitate its squat toy proportions, setting or lighting. ONE compact hunched crystal quadruped with FOUR short angular feet/legs, dark faceted body carrying concentric pastel eyes, RED ribbon loops over the back. Two WHITE MASKS attached to this one connected creature: broken comedy mask and smaller tragedy mask with TWO BLUE TEARS. Both masks have concentric pastel eyes and purple mouths. Preserve their positions and every distinctive feature. No normal humanoid ribbon torso, no separate second creature and no human limbs. Create a genuinely distinct natural action pose, not a mirrored/cropped selection image. Every limb, crown/hat/ear tip, attached mask and crystal spike must fit fully inside clear transparent margins on ALL sides. One connected character, crisp detailed 2D art on true transparent RGBA; no scenery, floor, cast shadow, aura, glow, particles, labels, watermark, inset or duplicate. POSE: FAST ATTACK toward screen RIGHT: one foreleg reaches sharply forward in a clear claw/hoof swipe while the other foreleg and rear pair support a low forward lunge. Both masks and ribbons stay attached.",
+      "createdAt": "2026-11-20T04:52:01.742Z",
+      "visualReview": "Reviewed on a composed light background: one complete dark crystal quadruped, four limbs, broken comedy mask and tragedy mask with two blue tears attached to the same body, red ribbon loops and concentric eyes preserved. attack changes the body/feet pose. Clean transparency and complete contours; no glow visible after alpha composition. The front/masks point left like the selection reference; nativeFacing must be reviewed before eventual runtime activation.",
+      "sha256": "13b21d6ec77d35fdee6129c35b95e62ae04ad77f13ae7a0a73fea8d58874926c",
+      "bytes": 1619855,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "bboxAlpha12": [
+        71,
+        11,
+        1470,
+        993
+      ],
+      "nativeCopyVerified": true,
+      "targetFile": "assets/encore/poses/abstractinggangle/attack.png",
+      "productionStatus": "partial",
+      "includedInRuntime": false,
+      "originalReferencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/abstractinggangle.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedGangle.png"
+      ],
+      "visualReviewBoard": "docs/art-generation/cast-continuation-20261120/native-review/abstractinggangle-partial.jpg",
+      "visualReviewAt": "2026-11-20T04:57:35.154346+00:00",
+      "status": "generated-and-visually-reviewed",
+      "integrationReviewRequired": "Confirm nativeFacing for the left-pointing quadruped when all eleven slots exist."
+    },
+    {
+      "id": "abstractinggangle-hit",
+      "appearanceId": "abstractinggangle",
+      "slot": "hit",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractinggangle/hit.png",
+      "method": "image_gen.imagegen",
+      "sourceGenerationId": "exec-b296b9bd-834f-4537-8840-ec61345d99bf",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-b296b9bd-834f-4537-8840-ec61345d99bf.png",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedGangle.png?v=1780353721"
+      ],
+      "sourceType": "official-merchandise",
+      "episodeFidelityClaim": false,
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/docs/art-generation/cast-continuation-20261120/pending-assets/abstractinggangle/selection.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedGangle.png"
+      ],
+      "prompt": "Use case: identity-preserve. Asset type: ONE individual full-body transparent 2D fighting-game action sprite of ABSTRACTING GANGLE. Reference 1 is the approved strict design lock for silhouette, proportions, exact transformation patches, eyes, colours and polished cel shading. Reference 2 supplies official design details only; do not imitate its squat toy proportions, setting or lighting. ONE compact hunched crystal quadruped with FOUR short angular feet/legs, dark faceted body carrying concentric pastel eyes, RED ribbon loops over the back. Two WHITE MASKS attached to this one connected creature: broken comedy mask and smaller tragedy mask with TWO BLUE TEARS. Both masks have concentric pastel eyes and purple mouths. Preserve their positions and every distinctive feature. No normal humanoid ribbon torso, no separate second creature and no human limbs. Create a genuinely distinct natural action pose, not a mirrored/cropped selection image. Every limb, crown/hat/ear tip, attached mask and crystal spike must fit fully inside clear transparent margins on ALL sides. One connected character, crisp detailed 2D art on true transparent RGBA; no scenery, floor, cast shadow, aura, glow, particles, labels, watermark, inset or duplicate. POSE: HIT REACTION: connected body jolts backward toward LEFT, four legs splay to catch balance, mask heads tilt back and red loops sag. Preserve every foot and both masks; no cracks, injury or extra creature.",
+      "createdAt": "2026-11-20T04:51:14.659Z",
+      "visualReview": "Reviewed on a composed light background: one complete dark crystal quadruped, four limbs, broken comedy mask and tragedy mask with two blue tears attached to the same body, red ribbon loops and concentric eyes preserved. hit changes the body/feet pose. Clean transparency and complete contours; no glow visible after alpha composition. The front/masks point left like the selection reference; nativeFacing must be reviewed before eventual runtime activation.",
+      "sha256": "eed78dd62ae8c69e2abf1fba174bb3a60c3cde6a6a639a2f2f544dd2fcec9a86",
+      "bytes": 1610452,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "bboxAlpha12": [
+        80,
+        21,
+        1422,
+        1006
+      ],
+      "nativeCopyVerified": true,
+      "targetFile": "assets/encore/poses/abstractinggangle/hit.png",
+      "productionStatus": "partial",
+      "includedInRuntime": false,
+      "originalReferencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/abstractinggangle.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedGangle.png"
+      ],
+      "visualReviewBoard": "docs/art-generation/cast-continuation-20261120/native-review/abstractinggangle-partial.jpg",
+      "visualReviewAt": "2026-11-20T04:57:35.154671+00:00",
+      "status": "generated-and-visually-reviewed",
+      "integrationReviewRequired": "Confirm nativeFacing for the left-pointing quadruped when all eleven slots exist."
+    },
+    {
+      "id": "abstractinggangle-walk",
+      "appearanceId": "abstractinggangle",
+      "slot": "walk",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractinggangle/walk.png",
+      "method": "image_gen.imagegen",
+      "sourceGenerationId": "exec-d7dc95d2-5e4f-49e6-b2fd-d626eac49cbb",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-d7dc95d2-5e4f-49e6-b2fd-d626eac49cbb.png",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedGangle.png?v=1780353721"
+      ],
+      "sourceType": "official-merchandise",
+      "episodeFidelityClaim": false,
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/docs/art-generation/cast-continuation-20261120/pending-assets/abstractinggangle/selection.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedGangle.png"
+      ],
+      "prompt": "Use case: identity-preserve. Asset type: ONE individual full-body transparent 2D fighting-game action sprite of ABSTRACTING GANGLE. Reference 1 is the approved strict design lock for silhouette, proportions, exact transformation patches, eyes, colours and polished cel shading. Reference 2 supplies official design details only; do not imitate its squat toy proportions, setting or lighting. ONE compact hunched crystal quadruped with FOUR short angular feet/legs, dark faceted body carrying concentric pastel eyes, RED ribbon loops over the back. Two WHITE MASKS attached to this one connected creature: broken comedy mask and smaller tragedy mask with TWO BLUE TEARS. Both masks have concentric pastel eyes and purple mouths. Preserve their positions and every distinctive feature. No normal humanoid ribbon torso, no separate second creature and no human limbs. Create a genuinely distinct natural action pose, not a mirrored/cropped selection image. Every limb, crown/hat/ear tip, attached mask and crystal spike must fit fully inside clear transparent margins on ALL sides. One connected character, crisp detailed 2D art on true transparent RGBA; no scenery, floor, cast shadow, aura, glow, particles, labels, watermark, inset or duplicate. POSE: WALK toward screen RIGHT: natural quadruped step with one front foot and opposing rear foot advancing, remaining pair supporting body. Crystal torso remains hunched; both masks visible.",
+      "createdAt": "2026-11-20T04:52:03.127Z",
+      "visualReview": "Reviewed on a composed light background: one complete dark crystal quadruped, four limbs, broken comedy mask and tragedy mask with two blue tears attached to the same body, red ribbon loops and concentric eyes preserved. walk changes the body/feet pose. Clean transparency and complete contours; no glow visible after alpha composition. The front/masks point left like the selection reference; nativeFacing must be reviewed before eventual runtime activation.",
+      "sha256": "1e26538fd02316c12d170fd00e836cdc10aa9b58ef67a1e4a31d248eea6689ce",
+      "bytes": 1608030,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "bboxAlpha12": [
+        214,
+        12,
+        1369,
+        987
+      ],
+      "nativeCopyVerified": true,
+      "targetFile": "assets/encore/poses/abstractinggangle/walk.png",
+      "productionStatus": "partial",
+      "includedInRuntime": false,
+      "originalReferencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/abstractinggangle.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedGangle.png"
+      ],
+      "visualReviewBoard": "docs/art-generation/cast-continuation-20261120/native-review/abstractinggangle-partial.jpg",
+      "visualReviewAt": "2026-11-20T04:57:35.154924+00:00",
+      "status": "generated-and-visually-reviewed",
+      "integrationReviewRequired": "Confirm nativeFacing for the left-pointing quadruped when all eleven slots exist."
+    },
+    {
+      "id": "abstractingzooble-selection",
+      "appearanceId": "abstractingzooble",
+      "slot": "selection",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingzooble/selection.png",
+      "sourceGenerationId": "exec-e0954045-fd1c-467e-960a-2936ef40c324",
+      "method": "image_gen.imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: one transparent full-body 2D fighting-game selection illustration. Draw ABSTRACTING ZOOBLE faithfully using the official partial-abstraction design in reference 1; reference 2 provides crisp dark outlines, cel shading and full-body game proportions. Preserve pink triangular head, NO MOUTH, one normal bulging white eye with black pupil and lashes on viewer-right, checkered antenna, yellow spotted oval torso with cyan chest ring, red curly segmented arm and opposing orange-yellow arm, small pink rear wing, one normal long blue leg with blue foot. Viewer-left face/eye and lightning-shaped crest become angular smoky-black crystal with flat concentric yellow/purple/cyan pupil; black crystal around one forearm/hand, neck side and viewer-left lower leg/foot, with another eye-bearing crystal mass behind that foot, precisely as the official reference. Maintain recognisable colourful body sections between growths, not a fully abstracted monster. Pose: alert selection pose with weight on normal blue foot, transformed foot slightly advanced, normal hand lightly touching the other forearm, three-quarter turn toward screen RIGHT. Entire figure from both antenna tips through both feet visible with clear transparent margin on all sides. One character, detailed clean 2D game art, true transparent RGBA; no toy pedestal, room, floor, cast shadow, aura, particles, graphic icons, text, watermark or inset.",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedZooble_04.png",
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/zooble.webp"
+      ],
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedZooble_04.png?v=1780353721"
+      ],
+      "sourceType": "official-merchandise",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-e0954045-fd1c-467e-960a-2936ef40c324.png",
+      "sha256": "31670c334103a7ed2b5b21302af2268b9a6943d7f388c79c8201b1d516274dad",
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "bytes": 1154706,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        130,
+        17,
+        1000,
+        1304
+      ],
+      "nativeCopyVerified": true,
+      "visualReview": "Complete mouthless geometric Zooble: pink triangular head, one normal white eye and opposing crystal eye/crest; checkered antenna, yellow spotted torso/cyan ring, colourful mismatched arms and single normal blue leg remain. Crystal hand and opposite foot plus eye-bearing rear crystal mass match official pattern. Full antennas and both feet inside native transparent canvas.",
+      "status": "generated-and-visually-reviewed",
+      "episodeFidelityClaim": false,
+      "targetFile": "assets/encore/selection/abstractingzooble.png",
+      "productionStatus": "partial",
+      "includedInRuntime": false
+    },
+    {
+      "id": "abstractingzooble-stance",
+      "appearanceId": "abstractingzooble",
+      "slot": "stance",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingzooble/stance.png",
+      "sourceGenerationId": "exec-34aa526e-efd5-45c6-b34c-69dac0792c42",
+      "method": "image_gen.imagegen",
+      "prompt": "Use case: identity-preserve. Asset type: ONE individual full-body transparent 2D fighting-game action sprite of ABSTRACTING ZOOBLE. Reference 1 is the approved strict design lock for silhouette, proportions, exact transformation patches, eyes, colours and polished cel shading. Reference 2 supplies official design details only; do not imitate its squat toy proportions, setting or lighting. Mouthless colourful geometric Zooble: pink triangle head half crystalline with one normal white eye and one concentric pastel crystal eye, checkered antenna and crystal lightning crest, yellow spotted oval torso/cyan chest ring, pink rear wing, red curly arm with crystal hand and opposite orange/yellow arm, one normal long blue leg/foot and one crystal lower foot with rear eye-bearing growth. Preserve exact approved asymmetric assembly, no mouth or extra limbs. Create a genuinely distinct natural action pose, not a mirrored/cropped selection image. Every limb, crown/hat/ear tip, attached mask and crystal spike must fit fully inside clear transparent margins on ALL sides. One connected character, crisp detailed 2D art on true transparent RGBA; no scenery, floor, cast shadow, aura, glow, particles, labels, watermark, inset or duplicate. POSE: STANDING COMBAT GUARD facing screen RIGHT, three-quarter view. Feet spread, front foot advanced, knees gently flexed, both hands held near chest in a compact alert guard.",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/docs/art-generation/cast-continuation-20261120/pending-assets/abstractingzooble/selection.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedZooble_04.png"
+      ],
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedZooble_04.png?v=1780353721"
+      ],
+      "sourceType": "official-merchandise",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-34aa526e-efd5-45c6-b34c-69dac0792c42.png",
+      "sha256": "a5966b959c81211a2de7f38abd696401643b2e8389620b77f0102fbf90a9b48d",
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "bytes": 959487,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        143,
+        25,
+        1026,
+        1275
+      ],
+      "nativeCopyVerified": true,
+      "visualReview": "Ready guard toward right with bent mismatched legs and both hands raised. Mouthless triangular head, normal white eye opposite crystal eye/crest, checkered antenna, yellow spotted torso/cyan ring, normal blue foot and opposing crystal foot remain clear. All tips and feet visible.",
+      "status": "generated-and-visually-reviewed",
+      "episodeFidelityClaim": false,
+      "targetFile": "assets/encore/stance/abstractingzooble.png",
+      "productionStatus": "partial",
+      "includedInRuntime": false,
+      "originalReferencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/abstractingzooble.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedZooble_04.png"
+      ]
+    },
+    {
+      "id": "abstractingqueenie-selection",
+      "appearanceId": "abstractingqueenie",
+      "slot": "selection",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/selection.png",
+      "sourceGenerationId": "exec-25c7a414-dffa-4b89-b0e6-317c06d3735f",
+      "method": "image_gen.imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: one transparent full-body 2D fighting-game selection illustration. Draw ABSTRACTING QUEENIE faithfully from the official design in reference 1, using reference 2 only for the game's tall chess-piece proportions and crisp outlined cel shading. Queenie remains a tall muted rose-brown queen chess piece with scalloped crown/round finial, one intact bulging white eye with warm orange-brown iris and lashes, long BURGUNDY royal robe with white black-spotted ermine, and two small white floating cartoon hands. The viewer-right half of her head/crown becomes smoky-black faceted crystal with extra flat concentric pastel pink/yellow/purple eyes and one large transformed circular eye. Crystal spikes encase the wrists and project asymmetrically around the robe/chess base. Most robe and the normal face side remain visible. No human face, mouth, legs or feet. Partial abstraction, not the fully black monster. Pose: calm watchful selection stance turned slightly toward screen RIGHT, one hand gently presented forward, the other half-raised. Tall proportions, not squat collectible toy. One complete character with crown, all spikes, both hands and entire robe base clearly inside generous transparent margins. True transparent RGBA; no backdrop, floor, stand, cast shadow, aura, effects, text or watermark.",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedQueenie.png",
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/queenie.png"
+      ],
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedQueenie.png?v=1780353722"
+      ],
+      "sourceType": "official-merchandise",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-25c7a414-dffa-4b89-b0e6-317c06d3735f.png",
+      "sha256": "3be556c8b0dda2e2b75966e4d42c57603e9b3fad5a48c8f9afa4f677ea358234",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 1667501,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "bboxAlpha12": [
+        115,
+        7,
+        883,
+        1531
+      ],
+      "nativeCopyVerified": true,
+      "visualReview": "Complete tall rose-brown queen chess piece with scalloped crown/finial and burgundy ermine robe. Normal orange-brown eye and half face remain; opposing half is angular crystal with one large concentric eye and smaller embedded eyes. White hands with crystal cuffs and asymmetric lower crystal base preserved. No human legs or mouth. Full silhouette approved against official figure.",
+      "status": "generated-and-visually-reviewed",
+      "episodeFidelityClaim": false,
+      "targetFile": "assets/encore/selection/abstractingqueenie.png",
+      "productionStatus": "partial",
+      "includedInRuntime": false
+    },
+    {
+      "id": "abstractingqueenie-stance",
+      "appearanceId": "abstractingqueenie",
+      "introducedOn": "2026-11-20",
+      "slot": "stance",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/stance.png",
+      "sourceGenerationId": "exec-b0ddc4b9-0658-422d-a6d0-85180b249513",
+      "method": "image_gen.imagegen",
+      "prompt": "Use case: identity-preserve. Asset type: ONE full-body transparent 2D fighting-game pose of ABSTRACTING QUEENIE for Digital Circus — Encore. Reference 1 is the approved game identity, anatomy, costume and crisp cel-shaded illustration style; preserve those exactly. Reference 2 is the official merchandise design for supporting details only, never its scenery or toy proportions. She is a tall muted rose-brown QUEEN CHESS PIECE, not a humanoid: scalloped chess crown and round finial, no mouth or human face, no legs, no feet, no visible arms. Viewer-LEFT half of the head remains rose-brown with ONE normal white eye, warm orange-brown iris and lower lashes. Viewer-RIGHT half of head/crown is smoky-black angular crystal with ONE large flat concentric pastel lavender/pink/yellow eye plus the small embedded eyes from reference 1. Keep those sides; do not mirror. Long BURGUNDY royal robe with broad white black-spotted ermine trim, two SMALL white FLOATING cartoon hands with black-lavender crystal wrist cuffs, asymmetric crystal spikes and pastel eye around viewer-right hem/base. Preserve the slender tall chess silhouette, crown, color, material placement and exactly two hands. This is partial abstraction, with the normal half and most robe visible, not a fully black monster. Face and act toward screen RIGHT in three-quarter view. Rich clean 2D cel shading and controlled dark outlines, identical visual series to reference 1. Pose variation changes posture and floating hands only; never invent human knees, elbows or extra limbs. ONE complete character in the image, with whole crown, every crystal tip, both hands and whole robe/base inside at least 8 percent clear margin on all sides. Genuine transparent RGBA background: ABSOLUTELY NO scene, dark backdrop, haze, halo, aura, gradient, floor, platform, cast shadow, motion trails, detached fragments, particles, text, symbols, watermark, extra people, or contact-sheet panels.\nPOSE: combat-ready standing guard. Upright chess body with a slight forward inclination; both floating hands raised defensively at chest height, the screen-right hand leading and loosely curled, the other closer to the collar. Normal eye alert. Keep the full robe base visible. Distinct from the open-palmed selection portrait.",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/selection.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedQueenie.png"
+      ],
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedQueenie.png?v=1780353722"
+      ],
+      "sourceType": "official-merchandise",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-b0ddc4b9-0658-422d-a6d0-85180b249513.png",
+      "sha256": "0388151ffe5647b253cd08348926136eb7f1f6ecb1d0d2574190546b6e5e227e",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 1634820,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "bboxAlpha12": [
+        156,
+        8,
+        888,
+        1530
+      ],
+      "nativeCopyVerified": true,
+      "visualReview": "Whole tall queen chess piece in guard with two small white floating hands, rose-brown normal half and orange-brown eye, viewer-right half crystal with concentric eyes, burgundy ermine robe and asymmetric crystal base. Crown, hand cuffs and hem fully inside transparent image; no added mouth or human limbs. Identity and guard checked against the approved selection and official reference.",
+      "status": "generated-and-visually-reviewed",
+      "episodeFidelityClaim": false,
+      "targetFile": "assets/encore/stance/abstractingqueenie.png",
+      "productionStatus": "partial",
+      "includedInRuntime": false,
+      "originalReferencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/abstractingqueenie.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedQueenie.png"
+      ]
+    },
+    {
+      "id": "abstractingqueenie-intro",
+      "appearanceId": "abstractingqueenie",
+      "introducedOn": "2026-11-20",
+      "slot": "intro",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/intro.png",
+      "sourceGenerationId": "exec-0748a751-b6ba-477e-8239-7b04b9853243",
+      "method": "image_gen.imagegen",
+      "prompt": "Use case: identity-preserve. Asset type: ONE full-body transparent 2D fighting-game pose of ABSTRACTING QUEENIE for Digital Circus — Encore. Reference 1 is the approved game identity, anatomy, costume and crisp cel-shaded illustration style; preserve those exactly. Reference 2 is the official merchandise design for supporting details only, never its scenery or toy proportions. She is a tall muted rose-brown QUEEN CHESS PIECE, not a humanoid: scalloped chess crown and round finial, no mouth or human face, no legs, no feet, no visible arms. Viewer-LEFT half of the head remains rose-brown with ONE normal white eye, warm orange-brown iris and lower lashes. Viewer-RIGHT half of head/crown is smoky-black angular crystal with ONE large flat concentric pastel lavender/pink/yellow eye plus the small embedded eyes from reference 1. Keep those sides; do not mirror. Long BURGUNDY royal robe with broad white black-spotted ermine trim, two SMALL white FLOATING cartoon hands with black-lavender crystal wrist cuffs, asymmetric crystal spikes and pastel eye around viewer-right hem/base. Preserve the slender tall chess silhouette, crown, color, material placement and exactly two hands. This is partial abstraction, with the normal half and most robe visible, not a fully black monster. Face and act toward screen RIGHT in three-quarter view. Rich clean 2D cel shading and controlled dark outlines, identical visual series to reference 1. Pose variation changes posture and floating hands only; never invent human knees, elbows or extra limbs. ONE complete character in the image, with whole crown, every crystal tip, both hands and whole robe/base inside at least 8 percent clear margin on all sides. Genuine transparent RGBA background: ABSOLUTELY NO scene, dark backdrop, haze, halo, aura, gradient, floor, platform, cast shadow, motion trails, detached fragments, particles, text, symbols, watermark, extra people, or contact-sheet panels.\nPOSE: dignified arena entrance. Whole chess body gently tilted forward in a restrained royal bow, both floating hands spread outward in a controlled greeting at mid-torso height. Normal eye focused on screen-right. Tall rigid chess anatomy and full long robe remain intact.",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/selection.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedQueenie.png"
+      ],
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedQueenie.png?v=1780353722"
+      ],
+      "sourceType": "official-merchandise",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-0748a751-b6ba-477e-8239-7b04b9853243.png",
+      "sha256": "1a2628491d28da7cabdec638fde2f8b625ed1f785c3dfa64391d7a8ab025fc2a",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 1683582,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "bboxAlpha12": [
+        79,
+        43,
+        945,
+        1521
+      ],
+      "nativeCopyVerified": true,
+      "visualReview": "Whole tall queen chess piece with a restrained forward bow and two open floating hands. Correct normal/crystal sides, pastel eye disks, burgundy ermine robe, crystal cuffs and asymmetric base preserved. Complete silhouette and native alpha checked; no human limbs or extra effects.",
+      "status": "generated-and-visually-reviewed",
+      "episodeFidelityClaim": false,
+      "targetFile": "assets/encore/poses/abstractingqueenie/intro.png",
+      "productionStatus": "partial",
+      "includedInRuntime": false,
+      "originalReferencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/abstractingqueenie.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedQueenie.png"
+      ]
+    },
+    {
+      "id": "abstractingqueenie-attack",
+      "appearanceId": "abstractingqueenie",
+      "introducedOn": "2026-11-20",
+      "slot": "attack",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/attack.png",
+      "sourceGenerationId": "exec-80edbb4a-679a-4ac0-9e20-e8f19b092a80",
+      "method": "image_gen.imagegen",
+      "prompt": "Use case: identity-preserve. Asset type: ONE full-body transparent 2D fighting-game pose of ABSTRACTING QUEENIE for Digital Circus — Encore. Reference 1 is the approved game identity, anatomy, costume and crisp cel-shaded illustration style; preserve those exactly. Reference 2 is the official merchandise design for supporting details only, never its scenery or toy proportions. She is a tall muted rose-brown QUEEN CHESS PIECE, not a humanoid: scalloped chess crown and round finial, no mouth or human face, no legs, no feet, no visible arms. Viewer-LEFT half of the head remains rose-brown with ONE normal white eye, warm orange-brown iris and lower lashes. Viewer-RIGHT half of head/crown is smoky-black angular crystal with ONE large flat concentric pastel lavender/pink/yellow eye plus the small embedded eyes from reference 1. Keep those sides; do not mirror. Long BURGUNDY royal robe with broad white black-spotted ermine trim, two SMALL white FLOATING cartoon hands with black-lavender crystal wrist cuffs, asymmetric crystal spikes and pastel eye around viewer-right hem/base. Preserve the slender tall chess silhouette, crown, color, material placement and exactly two hands. This is partial abstraction, with the normal half and most robe visible, not a fully black monster. Face and act toward screen RIGHT in three-quarter view. Rich clean 2D cel shading and controlled dark outlines, identical visual series to reference 1. Pose variation changes posture and floating hands only; never invent human knees, elbows or extra limbs. ONE complete character in the image, with whole crown, every crystal tip, both hands and whole robe/base inside at least 8 percent clear margin on all sides. Genuine transparent RGBA background: ABSOLUTELY NO scene, dark backdrop, haze, halo, aura, gradient, floor, platform, cast shadow, motion trails, detached fragments, particles, text, symbols, watermark, extra people, or contact-sheet panels.\nPOSE: quick light strike toward screen-right. The leading small white floating hand makes a straight forward punch at chest level; the other small hand guards near the collar. Chess body leans a little into the strike, with robe and asymmetric crystal base following the motion. No beam, weapon, trail or impact effect.",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/selection.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedQueenie.png"
+      ],
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedQueenie.png?v=1780353722"
+      ],
+      "sourceType": "official-merchandise",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-80edbb4a-679a-4ac0-9e20-e8f19b092a80.png",
+      "sha256": "961fa7da83647594bd153d95a1cc2631fd6c0d5a49b2d8824a936b2ede2cb56b",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 1667403,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "bboxAlpha12": [
+        68,
+        35,
+        972,
+        1518
+      ],
+      "nativeCopyVerified": true,
+      "visualReview": "Distinct light punch toward screen-right with one small closed floating fist and the other hand guarding. Exactly two crystal-cuffed hands, normal/crystal head sides, concentric eye colors, burgundy ermine robe and crystal hem retained. Whole character with clear edges inside the native transparent image; no added limbs or effects.",
+      "status": "generated-and-visually-reviewed",
+      "episodeFidelityClaim": false,
+      "targetFile": "assets/encore/poses/abstractingqueenie/attack.png",
+      "productionStatus": "partial",
+      "includedInRuntime": false,
+      "originalReferencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/abstractingqueenie.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedQueenie.png"
+      ]
+    },
+    {
+      "id": "abstractingqueenie-heavy",
+      "appearanceId": "abstractingqueenie",
+      "introducedOn": "2026-11-20",
+      "slot": "heavy",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/heavy.png",
+      "sourceGenerationId": "exec-0317a439-3799-4973-8762-166be06a1b8b",
+      "method": "image_gen.imagegen",
+      "prompt": "Use case: identity-preserve. Asset type: ONE full-body transparent 2D fighting-game pose of ABSTRACTING QUEENIE for Digital Circus — Encore. Reference 1 is the approved game identity, anatomy, costume and crisp cel-shaded illustration style; preserve those exactly. Reference 2 is the official merchandise design for supporting details only, never its scenery or toy proportions. She is a tall muted rose-brown QUEEN CHESS PIECE, not a humanoid: scalloped chess crown and round finial, no mouth or human face, no legs, no feet, no visible arms. Viewer-LEFT half of the head remains rose-brown with ONE normal white eye, warm orange-brown iris and lower lashes. Viewer-RIGHT half of head/crown is smoky-black angular crystal with ONE large flat concentric pastel lavender/pink/yellow eye plus the small embedded eyes from reference 1. Keep those sides; do not mirror. Long BURGUNDY royal robe with broad white black-spotted ermine trim, two SMALL white FLOATING cartoon hands with black-lavender crystal wrist cuffs, asymmetric crystal spikes and pastel eye around viewer-right hem/base. Preserve the slender tall chess silhouette, crown, color, material placement and exactly two hands. This is partial abstraction, with the normal half and most robe visible, not a fully black monster. Face and act toward screen RIGHT in three-quarter view. Rich clean 2D cel shading and controlled dark outlines, identical visual series to reference 1. Pose variation changes posture and floating hands only; never invent human knees, elbows or extra limbs. ONE complete character in the image, with whole crown, every crystal tip, both hands and whole robe/base inside at least 8 percent clear margin on all sides. Genuine transparent RGBA background: ABSOLUTELY NO scene, dark backdrop, haze, halo, aura, gradient, floor, platform, cast shadow, motion trails, detached fragments, particles, text, symbols, watermark, extra people, or contact-sheet panels.\nPOSE: powerful heavy strike toward screen-right. Both small white floating hands thrust forward together as a forceful double-palm shove, separated clearly so exactly two hands read. The entire tall chess body inclines decisively into the shove; robe sweeps modestly behind the base. Keep the existing crystal cuffs, do not grow new weapons or extra arms. No external effects.",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/selection.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedQueenie.png"
+      ],
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedQueenie.png?v=1780353722"
+      ],
+      "sourceType": "official-merchandise",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-0317a439-3799-4973-8762-166be06a1b8b.png",
+      "sha256": "e8cb085a106280875fe7760baefc9687d5bfbf07700bcad3daaa39f2d549bbb4",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 1618747,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "bboxAlpha12": [
+        47,
+        78,
+        989,
+        1505
+      ],
+      "nativeCopyVerified": true,
+      "visualReview": "Distinct double-palm heavy shove with two clearly separated white floating hands and forward-leaning chess body. Correct crystal cuffs and head half, normal eye, burgundy ermine robe and asymmetric eye-bearing base. Entire crown, palms, spikes and hem visible; no weapons, extra anatomy or external effects.",
+      "status": "generated-and-visually-reviewed",
+      "episodeFidelityClaim": false,
+      "targetFile": "assets/encore/poses/abstractingqueenie/heavy.png",
+      "productionStatus": "partial",
+      "includedInRuntime": false,
+      "originalReferencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/abstractingqueenie.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedQueenie.png"
+      ]
+    },
+    {
+      "id": "abstractingqueenie-hit",
+      "appearanceId": "abstractingqueenie",
+      "introducedOn": "2026-11-20",
+      "slot": "hit",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/hit.png",
+      "sourceGenerationId": "exec-ad32a5d7-8ce9-4aa9-9cde-01a352c6cb1f",
+      "method": "image_gen.imagegen",
+      "prompt": "Use case: identity-preserve. Asset type: ONE full-body transparent 2D fighting-game pose of ABSTRACTING QUEENIE for Digital Circus — Encore. Reference 1 is the approved game identity, anatomy, costume and crisp cel-shaded illustration style; preserve those exactly. Reference 2 is the official merchandise design for supporting details only, never its scenery or toy proportions. She is a tall muted rose-brown QUEEN CHESS PIECE, not a humanoid: scalloped chess crown and round finial, no mouth or human face, no legs, no feet, no visible arms. Viewer-LEFT half of the head remains rose-brown with ONE normal white eye, warm orange-brown iris and lower lashes. Viewer-RIGHT half of head/crown is smoky-black angular crystal with ONE large flat concentric pastel lavender/pink/yellow eye plus the small embedded eyes from reference 1. Keep those sides; do not mirror. Long BURGUNDY royal robe with broad white black-spotted ermine trim, two SMALL white FLOATING cartoon hands with black-lavender crystal wrist cuffs, asymmetric crystal spikes and pastel eye around viewer-right hem/base. Preserve the slender tall chess silhouette, crown, color, material placement and exactly two hands. This is partial abstraction, with the normal half and most robe visible, not a fully black monster. Face and act toward screen RIGHT in three-quarter view. Rich clean 2D cel shading and controlled dark outlines, identical visual series to reference 1. Pose variation changes posture and floating hands only; never invent human knees, elbows or extra limbs. ONE complete character in the image, with whole crown, every crystal tip, both hands and whole robe/base inside at least 8 percent clear margin on all sides. Genuine transparent RGBA background: ABSOLUTELY NO scene, dark backdrop, haze, halo, aura, gradient, floor, platform, cast shadow, motion trails, detached fragments, particles, text, symbols, watermark, extra people, or contact-sheet panels.\nPOSE: recoil from being struck. Whole rigid chess body tilts backward toward screen-left, with both small white hands spread outward in surprise and the normal eye widened. Keep her intact; no injury, blood, cracks added to the normal half, floating debris or effect. Whole burgundy robe and original crystal hem visible.",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/selection.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedQueenie.png"
+      ],
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedQueenie.png?v=1780353722"
+      ],
+      "sourceType": "official-merchandise",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-ad32a5d7-8ce9-4aa9-9cde-01a352c6cb1f.png",
+      "sha256": "f8b1534519c2b4e8717d55e6f6fcd26b0c2b1ba3868c13e5c32627a480593924",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 1684154,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "bboxAlpha12": [
+        53,
+        45,
+        958,
+        1523
+      ],
+      "nativeCopyVerified": true,
+      "visualReview": "Reviewed against the approved selection and complete official reference: the rigid chess body recoils toward viewer-left, the normal eye is widened, and exactly two white floating hands spread in reaction. Burgundy ermine robe, viewer-right crystal half, embedded pastel eyes and full uncropped silhouette are preserved; no human limbs, damage, debris or opaque backdrop.",
+      "status": "generated-and-visually-reviewed",
+      "episodeFidelityClaim": false,
+      "targetFile": "assets/encore/poses/abstractingqueenie/hit.png",
+      "productionStatus": "partial",
+      "includedInRuntime": false,
+      "originalReferencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/abstractingqueenie.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedQueenie.png"
+      ]
+    },
+    {
+      "id": "abstractingqueenie-walk",
+      "appearanceId": "abstractingqueenie",
+      "introducedOn": "2026-11-20",
+      "slot": "walk",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/walk.png",
+      "sourceGenerationId": "exec-b6752fa9-6653-40f5-93ee-265219437282",
+      "method": "image_gen.imagegen",
+      "prompt": "Use case: identity-preserve. Asset type: ONE full-body transparent 2D fighting-game pose of ABSTRACTING QUEENIE for Digital Circus — Encore. Reference 1 is the approved game identity, anatomy, costume and crisp cel-shaded illustration style; preserve those exactly. Reference 2 is the official merchandise design for supporting details only, never its scenery or toy proportions. She is a tall muted rose-brown QUEEN CHESS PIECE, not a humanoid: scalloped chess crown and round finial, no mouth or human face, no legs, no feet, no visible arms. Viewer-LEFT half of the head remains rose-brown with ONE normal white eye, warm orange-brown iris and lower lashes. Viewer-RIGHT half of head/crown is smoky-black angular crystal with ONE large flat concentric pastel lavender/pink/yellow eye plus the small embedded eyes from reference 1. Keep those sides; do not mirror. Long BURGUNDY royal robe with broad white black-spotted ermine trim, two SMALL white FLOATING cartoon hands with black-lavender crystal wrist cuffs, asymmetric crystal spikes and pastel eye around viewer-right hem/base. Preserve the slender tall chess silhouette, crown, color, material placement and exactly two hands. This is partial abstraction, with the normal half and most robe visible, not a fully black monster. Face and act toward screen RIGHT in three-quarter view. Rich clean 2D cel shading and controlled dark outlines, identical visual series to reference 1. Pose variation changes posture and floating hands only; never invent human knees, elbows or extra limbs. ONE complete character in the image, with whole crown, every crystal tip, both hands and whole robe/base inside at least 8 percent clear margin on all sides. Genuine transparent RGBA background: ABSOLUTELY NO scene, dark backdrop, haze, halo, aura, gradient, floor, platform, cast shadow, motion trails, detached fragments, particles, text, symbols, watermark, extra people, or contact-sheet panels.\nPOSE: forward movement toward screen-right. Queenie glides as a chess piece with the whole tall body inclined slightly forward, one floating hand forward and the other drawn back; the robe's hem trails gently toward screen-left. No stepping human legs or feet, no ground, no motion trails. Preserve both original hands and crystal cuffs.",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/selection.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedQueenie.png"
+      ],
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedQueenie.png?v=1780353722"
+      ],
+      "sourceType": "official-merchandise",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-b6752fa9-6653-40f5-93ee-265219437282.png",
+      "sha256": "636f8a0601e4479617022237a6e614f8bfd807513e99238219e10fed7d069fe1",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 1653567,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "bboxAlpha12": [
+        34,
+        43,
+        1004,
+        1497
+      ],
+      "nativeCopyVerified": true,
+      "visualReview": "Reviewed against the approved selection and complete official reference: the tall chess body glides toward screen-right with a forward inclination and trailing burgundy robe, with exactly two white floating hands at opposing heights. Normal eye remains on viewer-left, crystal half and base on viewer-right; no feet, knees, added weapon or opaque backdrop.",
+      "status": "generated-and-visually-reviewed",
+      "episodeFidelityClaim": false,
+      "targetFile": "assets/encore/poses/abstractingqueenie/walk.png",
+      "productionStatus": "partial",
+      "includedInRuntime": false,
+      "originalReferencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/abstractingqueenie.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedQueenie.png"
+      ]
+    },
+    {
+      "id": "abstractingqueenie-jump",
+      "appearanceId": "abstractingqueenie",
+      "introducedOn": "2026-11-20",
+      "slot": "jump",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/jump.png",
+      "sourceGenerationId": "exec-38a116e1-f477-496a-b84e-1cf27fb68332",
+      "method": "image_gen.imagegen",
+      "prompt": "Use case: identity-preserve. Asset type: ONE full-body transparent 2D fighting-game pose of ABSTRACTING QUEENIE for Digital Circus — Encore. Reference 1 is the approved game identity, anatomy, costume and crisp cel-shaded illustration style; preserve those exactly. Reference 2 is the official merchandise design for supporting details only, never its scenery or toy proportions. She is a tall muted rose-brown QUEEN CHESS PIECE, not a humanoid: scalloped chess crown and round finial, no mouth or human face, no legs, no feet, no visible arms. Viewer-LEFT half of the head remains rose-brown with ONE normal white eye, warm orange-brown iris and lower lashes. Viewer-RIGHT half of head/crown is smoky-black angular crystal with ONE large flat concentric pastel lavender/pink/yellow eye plus the small embedded eyes from reference 1. Keep those sides; do not mirror. Long BURGUNDY royal robe with broad white black-spotted ermine trim, two SMALL white FLOATING cartoon hands with black-lavender crystal wrist cuffs, asymmetric crystal spikes and pastel eye around viewer-right hem/base. Preserve the slender tall chess silhouette, crown, color, material placement and exactly two hands. This is partial abstraction, with the normal half and most robe visible, not a fully black monster. Face and act toward screen RIGHT in three-quarter view. Rich clean 2D cel shading and controlled dark outlines, identical visual series to reference 1. Pose variation changes posture and floating hands only; never invent human knees, elbows or extra limbs. ONE complete character in the image, with whole crown, every crystal tip, both hands and whole robe/base inside at least 8 percent clear margin on all sides. Genuine transparent RGBA background: ABSOLUTELY NO scene, dark backdrop, haze, halo, aura, gradient, floor, platform, cast shadow, motion trails, detached fragments, particles, text, symbols, watermark, extra people, or contact-sheet panels.\nPOSE: jumping evasively. Whole queen chess body lifted in a compact airborne tilt toward screen-right; both small floating hands raised outward for balance, full robe/base floating with a modest natural flare. Preserve solid chess anatomy; no knees, feet, underside limbs, floor or shadow. Generous clear transparent space around the airborne character.",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/selection.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedQueenie.png"
+      ],
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedQueenie.png?v=1780353722"
+      ],
+      "sourceType": "official-merchandise",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-38a116e1-f477-496a-b84e-1cf27fb68332.png",
+      "sha256": "0664f294ecc8a29ae9945ae7f4cadaf51b1b70a1e755366654e133304da5cd15",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 1637961,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "bboxAlpha12": [
+        78,
+        40,
+        925,
+        1354
+      ],
+      "nativeCopyVerified": true,
+      "visualReview": "Reviewed against the approved selection and complete official reference: the complete chess body is airborne with a modest diagonal tilt and lifted hem, both white floating palms raised outward. No legs, feet or underside limbs have been introduced. Viewer-left normal eye, viewer-right crystal half and base eye, burgundy ermine robe and full margins are preserved.",
+      "status": "generated-and-visually-reviewed",
+      "episodeFidelityClaim": false,
+      "targetFile": "assets/encore/poses/abstractingqueenie/jump.png",
+      "productionStatus": "partial",
+      "includedInRuntime": false,
+      "originalReferencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/abstractingqueenie.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedQueenie.png"
+      ]
+    },
+    {
+      "id": "abstractingqueenie-crouch",
+      "appearanceId": "abstractingqueenie",
+      "introducedOn": "2026-11-20",
+      "slot": "crouch",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/crouch.png",
+      "sourceGenerationId": "exec-a697bc0e-bdfe-463b-bfba-654b6741a3c3",
+      "method": "image_gen.imagegen",
+      "prompt": "Use case: identity-preserve. Asset type: ONE full-body transparent 2D fighting-game pose of ABSTRACTING QUEENIE for Digital Circus — Encore. Reference 1 is the approved game identity, anatomy, costume and crisp cel-shaded illustration style; preserve those exactly. Reference 2 is the official merchandise design for supporting details only, never its scenery or toy proportions. She is a tall muted rose-brown QUEEN CHESS PIECE, not a humanoid: scalloped chess crown and round finial, no mouth or human face, no legs, no feet, no visible arms. Viewer-LEFT half of the head remains rose-brown with ONE normal white eye, warm orange-brown iris and lower lashes. Viewer-RIGHT half of head/crown is smoky-black angular crystal with ONE large flat concentric pastel lavender/pink/yellow eye plus the small embedded eyes from reference 1. Keep those sides; do not mirror. Long BURGUNDY royal robe with broad white black-spotted ermine trim, two SMALL white FLOATING cartoon hands with black-lavender crystal wrist cuffs, asymmetric crystal spikes and pastel eye around viewer-right hem/base. Preserve the slender tall chess silhouette, crown, color, material placement and exactly two hands. This is partial abstraction, with the normal half and most robe visible, not a fully black monster. Face and act toward screen RIGHT in three-quarter view. Rich clean 2D cel shading and controlled dark outlines, identical visual series to reference 1. Pose variation changes posture and floating hands only; never invent human knees, elbows or extra limbs. ONE complete character in the image, with whole crown, every crystal tip, both hands and whole robe/base inside at least 8 percent clear margin on all sides. Genuine transparent RGBA background: ABSOLUTELY NO scene, dark backdrop, haze, halo, aura, gradient, floor, platform, cast shadow, motion trails, detached fragments, particles, text, symbols, watermark, extra people, or contact-sheet panels.\nPOSE: low defensive evasive posture adapted to a CHESS PIECE. Tip the entire rigid queen body forward about 40 degrees toward screen-right around the robe base, crown and head lowered; bring both floating hands close together in a low protective guard. Keep the long chess form and burgundy robe recognisable, with the hem gathered at the base. Do not create bent human legs, a seated body, knees or feet. Entire diagonal silhouette and every crystal tip in frame.",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/selection.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedQueenie.png"
+      ],
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedQueenie.png?v=1780353722"
+      ],
+      "sourceType": "official-merchandise",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-a697bc0e-bdfe-463b-bfba-654b6741a3c3.png",
+      "sha256": "64b62f6d6ed76f68c3d65415148a06618e8a03f020bb9b312bdf8fb4c3423aed",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 1516608,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "bboxAlpha12": [
+        167,
+        22,
+        1334,
+        1022
+      ],
+      "nativeCopyVerified": true,
+      "visualReview": "Reviewed against the approved selection and complete official reference: the rigid chess body tips forward toward screen-right into a lowered guard, with exactly two white floating palms held low and robe gathered toward the base. The pose uses a chess-piece inclination without invented knees or legs. Normal and crystal halves, burgundy ermine robe, complete finial, spikes and hem retain the approved identity and remain uncropped.",
+      "status": "generated-and-visually-reviewed",
+      "episodeFidelityClaim": false,
+      "targetFile": "assets/encore/poses/abstractingqueenie/crouch.png",
+      "productionStatus": "partial",
+      "includedInRuntime": false,
+      "originalReferencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/abstractingqueenie.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedQueenie.png"
+      ]
+    },
+    {
+      "id": "badendcaine-selection",
+      "appearanceId": "badendcaine",
+      "slot": "selection",
+      "file": "assets/encore/selection/badendcaine.png",
+      "sourceGenerationId": "exec-a299f9e1-3be4-4e41-9771-0b97a2036342",
+      "method": "image_gen.imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: one transparent full-body 2D fighting-game selection illustration. Draw BAD END CAINE from the official design in reference 1, translated into the crisp dark contours and controlled cel shading of reference 2. Preserve the official composition as ONE unified character-state silhouette: Caine with red tailcoat, white shirt, black bow tie, black top hat, white gloves and black trousers/boots is partly engulfed and surrounded by an attached compact cluster of translucent pale blue Bubble-like spheres. Each sphere has small black dot eyes and a wide mouth of triangular white teeth; they form a connected irregular bubble mass around and behind him. Caine's huge red chattering-teeth head is wide open and tilted with TWO plain glossy eye globes, one RED and one BLUE, no normal white eyeballs or green iris. Keep his slim adult cartoon proportions, face and emerging coat/limbs readable inside the enveloping cluster; do not make a second standing Caine or a lineup of separate characters. One hand reaches out, body leans diagonally as in the official figure, with a dark boot showing at the base. Full entire unified silhouette including hat, all surrounding bubble edges, hands and lower base completely inside clear transparent margins. Detailed clean 2D artwork, no starry merchandise backdrop, floor, pedestal, added cane, cast shadow, glow, text, watermark, panel or inset. True transparent RGBA background.",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AniMiniz_DC_abstractedCaine.png",
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/caine.webp"
+      ],
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AniMiniz_DC_abstractedCaine.png?v=1780353722"
+      ],
+      "sourceType": "official-merchandise",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-a299f9e1-3be4-4e41-9771-0b97a2036342.png",
+      "sha256": "e2922ce42ae7fefd580aae833a41cd287e3ac2f8af4e0170ed100b28f310c8d3",
+      "dimensions": [
+        1214,
+        1295
+      ],
+      "bytes": 1699448,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        102,
+        19,
+        1109,
+        1286
+      ],
+      "nativeCopyVerified": true,
+      "visualReview": "Complete native source board inspected on 20 November. A single Caine remains wrapped in the connected pale-blue Bubble mass. Red coat, black hat/bow tie, open denture head with exactly one solid red and one solid blue eye remain consistent. Slot selection is distinct and readable; glove gestures and body tilt change without inventing another character. Full outer silhouette, hat, hands and lower boot stay inside the source. Alpha composes cleanly on the review background.",
+      "status": "generated-and-visually-reviewed",
+      "episodeFidelityClaim": false,
+      "visualReviewAt": "2026-11-20T04:49:42.642742+00:00",
+      "visualReviewBoard": "docs/art-generation/cast-continuation-20261120/native-review/badendcaine.jpg",
+      "productionStatus": "complete",
+      "includedInRuntime": true
+    },
+    {
+      "id": "badendcaine-stance",
+      "appearanceId": "badendcaine",
+      "slot": "stance",
+      "file": "assets/encore/stance/badendcaine.png",
+      "method": "image_gen.imagegen",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-4c36ca9c-9cd8-4868-a33e-ae89125a2f3c.png",
+      "sourceGenerationId": "exec-4c36ca9c-9cd8-4868-a33e-ae89125a2f3c",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AniMiniz_DC_abstractedCaine.png?v=1780353722"
+      ],
+      "sourceType": "official-merchandise",
+      "episodeFidelityClaim": false,
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/badendcaine.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AniMiniz_DC_abstractedCaine.png"
+      ],
+      "prompt": "Use case: stylized-concept. Produce ONE new individual full-body action sprite for Digital Circus Encore, Caine — Bad End, slot stance. Image 1 is the approved game selection design; preserve its exact character traits, crisp ink line and polished cel-shaded 2D art. Image 2 is the official merchandise reference, establishing this appearance, not an episode event. ONE unified connected character-state silhouette: a single Caine partly engulfed and surrounded by a compact attached irregular mass of translucent pale-blue Bubble spheres with small black dot eyes and wide mouths of triangular white teeth. Caine keeps a red tailcoat, white shirt, black bow tie, black top hat with red band, white gloves, black trousers and dark boot. Huge open red denture head with white rounded teeth and exactly TWO plain glossy eye globes, one solid RED and one solid BLUE, no normal white sclera and no green iris. Keep the attached Bubble mass wrapping his lower body and behind him; Caine remains one subject, never a normal free-standing man with a detached crowd. CHANGE to this new clearly distinct pose: A distinct ready stance facing screen RIGHT: the connected Bubble mass balances upright around him, one visible white glove held defensively in front of his chest, the other emerging slightly outward. Head turned toward the opponent with both solid eye globes. One bent dark boot at the lower edge. Keep him partly engulfed, never a free-standing normal Caine. Do not copy the selection pose. Entire subject from topmost hat or glove to bottommost boot and all outer Bubble curves must stay inside generous transparent margins on every edge. Preserve natural proportions; no stretched mouth, extra limbs, third eye, separate Caine, extra hat, cane or other accessory. Native high-resolution TRUE transparent RGBA background, clean alpha, no haze, glow, aura, ghost trails, floor, backdrop, cast shadow, effects, caption, watermark, panel, sheet or framing. Only one full-body pose.",
+      "createdAt": "2026-11-20T04:42:26.373Z",
+      "visualReview": "Complete native source board inspected on 20 November. A single Caine remains wrapped in the connected pale-blue Bubble mass. Red coat, black hat/bow tie, open denture head with exactly one solid red and one solid blue eye remain consistent. Slot stance is distinct and readable; glove gestures and body tilt change without inventing another character. Full outer silhouette, hat, hands and lower boot stay inside the source. Alpha composes cleanly on the review background.",
+      "sha256": "c2df37dd6d9acfd735c1975f5ea7f6d9408510282194e52f9976f9f86f1b0e62",
+      "bytes": 1546157,
+      "dimensions": [
+        1212,
+        1298
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        98,
+        28,
+        1122,
+        1262
+      ],
+      "nativeCopyVerified": true,
+      "visualReviewAt": "2026-11-20T04:49:42.644484+00:00",
+      "visualReviewBoard": "docs/art-generation/cast-continuation-20261120/native-review/badendcaine.jpg",
+      "status": "generated-and-visually-reviewed",
+      "productionStatus": "complete",
+      "includedInRuntime": true
+    },
+    {
+      "id": "badendcaine-intro",
+      "appearanceId": "badendcaine",
+      "slot": "intro",
+      "file": "assets/encore/poses/badendcaine/intro.png",
+      "method": "image_gen.imagegen",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-3abffdde-afcd-4754-8359-8e3d3bf105ef.png",
+      "sourceGenerationId": "exec-3abffdde-afcd-4754-8359-8e3d3bf105ef",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AniMiniz_DC_abstractedCaine.png?v=1780353722"
+      ],
+      "sourceType": "official-merchandise",
+      "episodeFidelityClaim": false,
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/badendcaine.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AniMiniz_DC_abstractedCaine.png"
+      ],
+      "prompt": "Use case: stylized-concept. Produce ONE new individual full-body action sprite for Digital Circus Encore, Caine — Bad End, slot intro. Image 1 is the approved game selection design; preserve its exact character traits, crisp ink line and polished cel-shaded 2D art. Image 2 is the official merchandise reference, establishing this appearance, not an episode event. ONE unified connected character-state silhouette: a single Caine partly engulfed and surrounded by a compact attached irregular mass of translucent pale-blue Bubble spheres with small black dot eyes and wide mouths of triangular white teeth. Caine keeps a red tailcoat, white shirt, black bow tie, black top hat with red band, white gloves, black trousers and dark boot. Huge open red denture head with white rounded teeth and exactly TWO plain glossy eye globes, one solid RED and one solid BLUE, no normal white sclera and no green iris. Keep the attached Bubble mass wrapping his lower body and behind him; Caine remains one subject, never a normal free-standing man with a detached crowd. CHANGE to this new clearly distinct pose: A distinct theatrical introduction pose facing screen RIGHT: one white gloved hand raised to touch the brim of his attached black top hat, the other hand extended in a small greeting, upper body leaning out from the connected Bubble mass. The Bubble cluster stays wrapped around his lower body; no second hat. Do not copy the selection pose. Entire subject from topmost hat or glove to bottommost boot and all outer Bubble curves must stay inside generous transparent margins on every edge. Preserve natural proportions; no stretched mouth, extra limbs, third eye, separate Caine, extra hat, cane or other accessory. Native high-resolution TRUE transparent RGBA background, clean alpha, no haze, glow, aura, ghost trails, floor, backdrop, cast shadow, effects, caption, watermark, panel, sheet or framing. Only one full-body pose.",
+      "createdAt": "2026-11-20T04:41:31.584Z",
+      "visualReview": "Complete native source board inspected on 20 November. A single Caine remains wrapped in the connected pale-blue Bubble mass. Red coat, black hat/bow tie, open denture head with exactly one solid red and one solid blue eye remain consistent. Slot intro is distinct and readable; glove gestures and body tilt change without inventing another character. Full outer silhouette, hat, hands and lower boot stay inside the source. Alpha composes cleanly on the review background.",
+      "sha256": "d3343bcc22f65d09f6a1933fb51013f60ae1dfd4cfe8f80e36f4ae0ef8cc373c",
+      "bytes": 1547596,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        20,
+        14,
+        1162,
+        1291
+      ],
+      "nativeCopyVerified": true,
+      "visualReviewAt": "2026-11-20T04:49:42.644743+00:00",
+      "visualReviewBoard": "docs/art-generation/cast-continuation-20261120/native-review/badendcaine.jpg",
+      "status": "generated-and-visually-reviewed",
+      "productionStatus": "complete",
+      "includedInRuntime": true
+    },
+    {
+      "id": "badendcaine-attack",
+      "appearanceId": "badendcaine",
+      "slot": "attack",
+      "file": "assets/encore/poses/badendcaine/attack.png",
+      "method": "image_gen.imagegen",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-49010ca7-c262-4a59-bae0-4d3ef7e44710.png",
+      "sourceGenerationId": "exec-49010ca7-c262-4a59-bae0-4d3ef7e44710",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AniMiniz_DC_abstractedCaine.png?v=1780353722"
+      ],
+      "sourceType": "official-merchandise",
+      "episodeFidelityClaim": false,
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/badendcaine.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AniMiniz_DC_abstractedCaine.png"
+      ],
+      "prompt": "Use case: stylized-concept. Produce ONE new individual full-body action sprite for Digital Circus Encore, Caine — Bad End, slot attack. Image 1 is the approved game selection design; preserve its exact character traits, crisp ink line and polished cel-shaded 2D art. Image 2 is the official merchandise reference, establishing this appearance, not an episode event. ONE unified connected character-state silhouette: a single Caine partly engulfed and surrounded by a compact attached irregular mass of translucent pale-blue Bubble spheres with small black dot eyes and wide mouths of triangular white teeth. Caine keeps a red tailcoat, white shirt, black bow tie, black top hat with red band, white gloves, black trousers and dark boot. Huge open red denture head with white rounded teeth and exactly TWO plain glossy eye globes, one solid RED and one solid BLUE, no normal white sclera and no green iris. Keep the attached Bubble mass wrapping his lower body and behind him; Caine remains one subject, never a normal free-standing man with a detached crowd. CHANGE to this new clearly distinct pose: A distinct light attacking pose facing screen RIGHT: Caine thrusts one white gloved fist horizontally to the right out of the attached Bubble mass, other glove bent defensively near his torso. The cluster leans with his red coat and denture head, remains compact and attached. No impact or trail. Do not copy the selection pose. Entire subject from topmost hat or glove to bottommost boot and all outer Bubble curves must stay inside generous transparent margins on every edge. Preserve natural proportions; no stretched mouth, extra limbs, third eye, separate Caine, extra hat, cane or other accessory. Native high-resolution TRUE transparent RGBA background, clean alpha, no haze, glow, aura, ghost trails, floor, backdrop, cast shadow, effects, caption, watermark, panel, sheet or framing. Only one full-body pose.",
+      "createdAt": "2026-11-20T04:40:57.139Z",
+      "visualReview": "Complete native source board inspected on 20 November. A single Caine remains wrapped in the connected pale-blue Bubble mass. Red coat, black hat/bow tie, open denture head with exactly one solid red and one solid blue eye remain consistent. Slot attack is distinct and readable; glove gestures and body tilt change without inventing another character. Full outer silhouette, hat, hands and lower boot stay inside the source. Alpha composes cleanly on the review background.",
+      "sha256": "89a2b31688cad821d7ee2df87506b71cfa63d50dde99da0e00b0d9b5980c5aac",
+      "bytes": 1544300,
+      "dimensions": [
+        1216,
+        1293
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        52,
+        48,
+        1183,
+        1257
+      ],
+      "nativeCopyVerified": true,
+      "visualReviewAt": "2026-11-20T04:49:42.644913+00:00",
+      "visualReviewBoard": "docs/art-generation/cast-continuation-20261120/native-review/badendcaine.jpg",
+      "status": "generated-and-visually-reviewed",
+      "productionStatus": "complete",
+      "includedInRuntime": true
+    },
+    {
+      "id": "badendcaine-heavy",
+      "appearanceId": "badendcaine",
+      "slot": "heavy",
+      "file": "assets/encore/poses/badendcaine/heavy.png",
+      "method": "image_gen.imagegen",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-4b24f80a-5a68-4b13-9765-96746c7ee039.png",
+      "sourceGenerationId": "exec-4b24f80a-5a68-4b13-9765-96746c7ee039",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AniMiniz_DC_abstractedCaine.png?v=1780353722"
+      ],
+      "sourceType": "official-merchandise",
+      "episodeFidelityClaim": false,
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/badendcaine.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AniMiniz_DC_abstractedCaine.png"
+      ],
+      "prompt": "Use case: stylized-concept. Produce ONE new individual full-body action sprite for Digital Circus Encore, Caine — Bad End, slot heavy. Image 1 is the approved game selection design; preserve its exact character traits, crisp ink line and polished cel-shaded 2D art. Image 2 is the official merchandise reference, establishing this appearance, not an episode event. ONE unified connected character-state silhouette: a single Caine partly engulfed and surrounded by a compact attached irregular mass of translucent pale-blue Bubble spheres with small black dot eyes and wide mouths of triangular white teeth. Caine keeps a red tailcoat, white shirt, black bow tie, black top hat with red band, white gloves, black trousers and dark boot. Huge open red denture head with white rounded teeth and exactly TWO plain glossy eye globes, one solid RED and one solid BLUE, no normal white sclera and no green iris. Keep the attached Bubble mass wrapping his lower body and behind him; Caine remains one subject, never a normal free-standing man with a detached crowd. CHANGE to this new clearly distinct pose: A distinct heavy attacking pose facing screen RIGHT: upper torso and denture head lean forward forcefully, visible gloved hand raised into a downward hammer strike, the other glove balancing. The connected Bubble cluster is tilted and braced around his lower body, one visible dark boot near its base. No weapon or effect. Do not copy the selection pose. Entire subject from topmost hat or glove to bottommost boot and all outer Bubble curves must stay inside generous transparent margins on every edge. Preserve natural proportions; no stretched mouth, extra limbs, third eye, separate Caine, extra hat, cane or other accessory. Native high-resolution TRUE transparent RGBA background, clean alpha, no haze, glow, aura, ghost trails, floor, backdrop, cast shadow, effects, caption, watermark, panel, sheet or framing. Only one full-body pose.",
+      "createdAt": "2026-11-20T04:43:23.613Z",
+      "visualReview": "Complete native source board inspected on 20 November. A single Caine remains wrapped in the connected pale-blue Bubble mass. Red coat, black hat/bow tie, open denture head with exactly one solid red and one solid blue eye remain consistent. Slot heavy is distinct and readable; glove gestures and body tilt change without inventing another character. Full outer silhouette, hat, hands and lower boot stay inside the source. Alpha composes cleanly on the review background.",
+      "sha256": "ea7a486800fff20e2c7c2141b5e7d031bf46a4ef5ee477bfa3f4add3b234d58c",
+      "bytes": 1706163,
+      "dimensions": [
+        1222,
+        1287
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        21,
+        32,
+        1164,
+        1264
+      ],
+      "nativeCopyVerified": true,
+      "visualReviewAt": "2026-11-20T04:49:42.643303+00:00",
+      "visualReviewBoard": "docs/art-generation/cast-continuation-20261120/native-review/badendcaine.jpg",
+      "status": "generated-and-visually-reviewed",
+      "productionStatus": "complete",
+      "includedInRuntime": true
+    },
+    {
+      "id": "badendcaine-hit",
+      "appearanceId": "badendcaine",
+      "slot": "hit",
+      "file": "assets/encore/poses/badendcaine/hit.png",
+      "method": "image_gen.imagegen",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-2183b45a-4822-4dec-85fe-e21b39abfdc4.png",
+      "sourceGenerationId": "exec-2183b45a-4822-4dec-85fe-e21b39abfdc4",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AniMiniz_DC_abstractedCaine.png?v=1780353722"
+      ],
+      "sourceType": "official-merchandise",
+      "episodeFidelityClaim": false,
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/badendcaine.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AniMiniz_DC_abstractedCaine.png"
+      ],
+      "prompt": "Use case: stylized-concept. Produce ONE new individual full-body action sprite for Digital Circus Encore, Caine — Bad End, slot hit. Image 1 is the approved game selection design; preserve its exact character traits, crisp ink line and polished cel-shaded 2D art. Image 2 is the official merchandise reference, establishing this appearance, not an episode event. ONE unified connected character-state silhouette: a single Caine partly engulfed and surrounded by a compact attached irregular mass of translucent pale-blue Bubble spheres with small black dot eyes and wide mouths of triangular white teeth. Caine keeps a red tailcoat, white shirt, black bow tie, black top hat with red band, white gloves, black trousers and dark boot. Huge open red denture head with white rounded teeth and exactly TWO plain glossy eye globes, one solid RED and one solid BLUE, no normal white sclera and no green iris. Keep the attached Bubble mass wrapping his lower body and behind him; Caine remains one subject, never a normal free-standing man with a detached crowd. CHANGE to this new clearly distinct pose: A distinct impact reaction pose: the unified Caine-and-Bubble mass tilts backwards toward screen LEFT; Caine's open denture head leans back, his two solid red and blue eye globes remain, both visible white gloves splay in surprise. His red coat is bent within the still connected cluster. No attacker or injury graphics. Do not copy the selection pose. Entire subject from topmost hat or glove to bottommost boot and all outer Bubble curves must stay inside generous transparent margins on every edge. Preserve natural proportions; no stretched mouth, extra limbs, third eye, separate Caine, extra hat, cane or other accessory. Native high-resolution TRUE transparent RGBA background, clean alpha, no haze, glow, aura, ghost trails, floor, backdrop, cast shadow, effects, caption, watermark, panel, sheet or framing. Only one full-body pose.",
+      "createdAt": "2026-11-20T04:44:58.470Z",
+      "visualReview": "Complete native source board inspected on 20 November. A single Caine remains wrapped in the connected pale-blue Bubble mass. Red coat, black hat/bow tie, open denture head with exactly one solid red and one solid blue eye remain consistent. Slot hit is distinct and readable; glove gestures and body tilt change without inventing another character. Full outer silhouette, hat, hands and lower boot stay inside the source. Alpha composes cleanly on the review background.",
+      "sha256": "f28a0653fcfb130db35983178c338cab287cbc3af276237beda5a7806ea45b0a",
+      "bytes": 1608322,
+      "dimensions": [
+        1215,
+        1295
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        39,
+        54,
+        1158,
+        1261
+      ],
+      "nativeCopyVerified": true,
+      "visualReviewAt": "2026-11-20T04:49:42.644290+00:00",
+      "visualReviewBoard": "docs/art-generation/cast-continuation-20261120/native-review/badendcaine.jpg",
+      "status": "generated-and-visually-reviewed",
+      "productionStatus": "complete",
+      "includedInRuntime": true
+    },
+    {
+      "id": "badendcaine-walk",
+      "appearanceId": "badendcaine",
+      "slot": "walk",
+      "file": "assets/encore/poses/badendcaine/walk.png",
+      "method": "image_gen.imagegen",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-a7146f58-5b09-400c-8f4d-a5a5880c12b8.png",
+      "sourceGenerationId": "exec-a7146f58-5b09-400c-8f4d-a5a5880c12b8",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AniMiniz_DC_abstractedCaine.png?v=1780353722"
+      ],
+      "sourceType": "official-merchandise",
+      "episodeFidelityClaim": false,
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/badendcaine.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AniMiniz_DC_abstractedCaine.png"
+      ],
+      "prompt": "Use case: stylized-concept. Produce ONE new individual full-body action sprite for Digital Circus Encore, Caine — Bad End, slot walk. Image 1 is the approved game selection design; preserve its exact character traits, crisp ink line and polished cel-shaded 2D art. Image 2 is the official merchandise reference, establishing this appearance, not an episode event. ONE unified connected character-state silhouette: a single Caine partly engulfed and surrounded by a compact attached irregular mass of translucent pale-blue Bubble spheres with small black dot eyes and wide mouths of triangular white teeth. Caine keeps a red tailcoat, white shirt, black bow tie, black top hat with red band, white gloves, black trousers and dark boot. Huge open red denture head with white rounded teeth and exactly TWO plain glossy eye globes, one solid RED and one solid BLUE, no normal white sclera and no green iris. Keep the attached Bubble mass wrapping his lower body and behind him; Caine remains one subject, never a normal free-standing man with a detached crowd. CHANGE to this new clearly distinct pose: A distinct moving stride facing screen RIGHT: the whole attached Bubble mass leans forward with Caine, one visible black trouser leg and dark boot stepping at its bottom edge and his white glove reaching ahead for balance. Keep Caine visibly partly engulfed in the compact cluster; no second character, no detached Bubble line. Do not copy the selection pose. Entire subject from topmost hat or glove to bottommost boot and all outer Bubble curves must stay inside generous transparent margins on every edge. Preserve natural proportions; no stretched mouth, extra limbs, third eye, separate Caine, extra hat, cane or other accessory. Native high-resolution TRUE transparent RGBA background, clean alpha, no haze, glow, aura, ghost trails, floor, backdrop, cast shadow, effects, caption, watermark, panel, sheet or framing. Only one full-body pose.",
+      "createdAt": "2026-11-20T04:45:56.830Z",
+      "visualReview": "Complete native source board inspected on 20 November. A single Caine remains wrapped in the connected pale-blue Bubble mass. Red coat, black hat/bow tie, open denture head with exactly one solid red and one solid blue eye remain consistent. Slot walk is distinct and readable; glove gestures and body tilt change without inventing another character. Full outer silhouette, hat, hands and lower boot stay inside the source. Alpha composes cleanly on the review background.",
+      "sha256": "eaaaf1107c54b8c7dc9a6d472f88f5ee872268325d1d53aeae940b89038abbf4",
+      "bytes": 1548652,
+      "dimensions": [
+        1215,
+        1295
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        31,
+        24,
+        1194,
+        1262
+      ],
+      "nativeCopyVerified": true,
+      "visualReviewAt": "2026-11-20T04:49:42.643509+00:00",
+      "visualReviewBoard": "docs/art-generation/cast-continuation-20261120/native-review/badendcaine.jpg",
+      "status": "generated-and-visually-reviewed",
+      "productionStatus": "complete",
+      "includedInRuntime": true
+    },
+    {
+      "id": "badendcaine-jump",
+      "appearanceId": "badendcaine",
+      "slot": "jump",
+      "file": "assets/encore/poses/badendcaine/jump.png",
+      "method": "image_gen.imagegen",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-67fe8e64-b8f1-4df3-8bf2-bc625355d14e.png",
+      "sourceGenerationId": "exec-67fe8e64-b8f1-4df3-8bf2-bc625355d14e",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AniMiniz_DC_abstractedCaine.png?v=1780353722"
+      ],
+      "sourceType": "official-merchandise",
+      "episodeFidelityClaim": false,
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/badendcaine.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AniMiniz_DC_abstractedCaine.png"
+      ],
+      "prompt": "Use case: stylized-concept. Produce ONE new individual full-body action sprite for Digital Circus Encore, Caine — Bad End, slot jump. Image 1 is the approved game selection design; preserve its exact character traits, crisp ink line and polished cel-shaded 2D art. Image 2 is the official merchandise reference, establishing this appearance, not an episode event. ONE unified connected character-state silhouette: a single Caine partly engulfed and surrounded by a compact attached irregular mass of translucent pale-blue Bubble spheres with small black dot eyes and wide mouths of triangular white teeth. Caine keeps a red tailcoat, white shirt, black bow tie, black top hat with red band, white gloves, black trousers and dark boot. Huge open red denture head with white rounded teeth and exactly TWO plain glossy eye globes, one solid RED and one solid BLUE, no normal white sclera and no green iris. Keep the attached Bubble mass wrapping his lower body and behind him; Caine remains one subject, never a normal free-standing man with a detached crowd. CHANGE to this new clearly distinct pose: A distinct airborne pose facing screen RIGHT: the entire connected Caine-and-Bubble mass lifts as one compact unit, Caine's visible dark boot bends up toward his red coat and white gloves reach out for balance. Entire subject suspended alone in transparent space, no ground, no shadow, no speed marks. Do not copy the selection pose. Entire subject from topmost hat or glove to bottommost boot and all outer Bubble curves must stay inside generous transparent margins on every edge. Preserve natural proportions; no stretched mouth, extra limbs, third eye, separate Caine, extra hat, cane or other accessory. Native high-resolution TRUE transparent RGBA background, clean alpha, no haze, glow, aura, ghost trails, floor, backdrop, cast shadow, effects, caption, watermark, panel, sheet or framing. Only one full-body pose.",
+      "createdAt": "2026-11-20T04:45:54.296Z",
+      "visualReview": "Complete native source board inspected on 20 November. A single Caine remains wrapped in the connected pale-blue Bubble mass. Red coat, black hat/bow tie, open denture head with exactly one solid red and one solid blue eye remain consistent. Slot jump is distinct and readable; glove gestures and body tilt change without inventing another character. Full outer silhouette, hat, hands and lower boot stay inside the source. Alpha composes cleanly on the review background.",
+      "sha256": "c620d508c988737a47ec19a927f474080342458304efcb55bfdd9ed865e5745f",
+      "bytes": 1473237,
+      "dimensions": [
+        1222,
+        1287
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        48,
+        30,
+        1186,
+        1264
+      ],
+      "nativeCopyVerified": true,
+      "visualReviewAt": "2026-11-20T04:49:42.644085+00:00",
+      "visualReviewBoard": "docs/art-generation/cast-continuation-20261120/native-review/badendcaine.jpg",
+      "status": "generated-and-visually-reviewed",
+      "productionStatus": "complete",
+      "includedInRuntime": true
+    },
+    {
+      "id": "badendcaine-crouch",
+      "appearanceId": "badendcaine",
+      "slot": "crouch",
+      "file": "assets/encore/poses/badendcaine/crouch.png",
+      "method": "image_gen.imagegen",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-72b88cc6-d606-4bb8-b49e-a93daf07ec40.png",
+      "sourceGenerationId": "exec-72b88cc6-d606-4bb8-b49e-a93daf07ec40",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AniMiniz_DC_abstractedCaine.png?v=1780353722"
+      ],
+      "sourceType": "official-merchandise",
+      "episodeFidelityClaim": false,
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/badendcaine.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AniMiniz_DC_abstractedCaine.png"
+      ],
+      "prompt": "Use case: stylized-concept. Produce ONE new individual full-body action sprite for Digital Circus Encore, Caine — Bad End, slot crouch. Image 1 is the approved game selection design; preserve its exact character traits, crisp ink line and polished cel-shaded 2D art. Image 2 is the official merchandise reference, establishing this appearance, not an episode event. ONE unified connected character-state silhouette: a single Caine partly engulfed and surrounded by a compact attached irregular mass of translucent pale-blue Bubble spheres with small black dot eyes and wide mouths of triangular white teeth. Caine keeps a red tailcoat, white shirt, black bow tie, black top hat with red band, white gloves, black trousers and dark boot. Huge open red denture head with white rounded teeth and exactly TWO plain glossy eye globes, one solid RED and one solid BLUE, no normal white sclera and no green iris. Keep the attached Bubble mass wrapping his lower body and behind him; Caine remains one subject, never a normal free-standing man with a detached crowd. CHANGE to this new clearly distinct pose: A distinct low defensive crouching pose facing screen RIGHT: the connected Bubble mass compresses into a squat compact shape; Caine hunches his upper torso and denture head lower, one white gloved hand held above near his attached hat and one in front. Visible dark boot tucked near the low base. Preserve every design element and do not flatten or stretch the drawing. Do not copy the selection pose. Entire subject from topmost hat or glove to bottommost boot and all outer Bubble curves must stay inside generous transparent margins on every edge. Preserve natural proportions; no stretched mouth, extra limbs, third eye, separate Caine, extra hat, cane or other accessory. Native high-resolution TRUE transparent RGBA background, clean alpha, no haze, glow, aura, ghost trails, floor, backdrop, cast shadow, effects, caption, watermark, panel, sheet or framing. Only one full-body pose.",
+      "createdAt": "2026-11-20T04:46:48.571Z",
+      "visualReview": "Complete native source board inspected on 20 November. A single Caine remains wrapped in the connected pale-blue Bubble mass. Red coat, black hat/bow tie, open denture head with exactly one solid red and one solid blue eye remain consistent. Slot crouch is distinct and readable; glove gestures and body tilt change without inventing another character. Full outer silhouette, hat, hands and lower boot stay inside the source. Alpha composes cleanly on the review background.",
+      "sha256": "7fb3692361297c80133079c237d2bdd5b7685a8e880508ca4dbbaa9fb451975f",
+      "bytes": 1595222,
+      "dimensions": [
+        1312,
+        1199
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        45,
+        50,
+        1227,
+        1157
+      ],
+      "nativeCopyVerified": true,
+      "visualReviewAt": "2026-11-20T04:49:42.645090+00:00",
+      "visualReviewBoard": "docs/art-generation/cast-continuation-20261120/native-review/badendcaine.jpg",
+      "status": "generated-and-visually-reviewed",
+      "productionStatus": "complete",
+      "includedInRuntime": true
+    },
+    {
+      "id": "badendcaine-victory",
+      "appearanceId": "badendcaine",
+      "slot": "victory",
+      "file": "assets/encore/poses/badendcaine/victory.png",
+      "method": "image_gen.imagegen",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-876c2417-0f44-437f-a6f5-d0d429f82d64.png",
+      "sourceGenerationId": "exec-876c2417-0f44-437f-a6f5-d0d429f82d64",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AniMiniz_DC_abstractedCaine.png?v=1780353722"
+      ],
+      "sourceType": "official-merchandise",
+      "episodeFidelityClaim": false,
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/badendcaine.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AniMiniz_DC_abstractedCaine.png"
+      ],
+      "prompt": "Use case: stylized-concept. Produce ONE new individual full-body action sprite for Digital Circus Encore, Caine — Bad End, slot victory. Image 1 is the approved game selection design; preserve its exact character traits, crisp ink line and polished cel-shaded 2D art. Image 2 is the official merchandise reference, establishing this appearance, not an episode event. ONE unified connected character-state silhouette: a single Caine partly engulfed and surrounded by a compact attached irregular mass of translucent pale-blue Bubble spheres with small black dot eyes and wide mouths of triangular white teeth. Caine keeps a red tailcoat, white shirt, black bow tie, black top hat with red band, white gloves, black trousers and dark boot. Huge open red denture head with white rounded teeth and exactly TWO plain glossy eye globes, one solid RED and one solid BLUE, no normal white sclera and no green iris. Keep the attached Bubble mass wrapping his lower body and behind him; Caine remains one subject, never a normal free-standing man with a detached crowd. CHANGE to this new clearly distinct pose: A distinct victory pose facing screen RIGHT: Caine raises one white gloved fist overhead triumphantly and rests the other near his red coat. The open denture head with plain red and blue eye globes tilts up; his top hat stays attached. The connected pale blue Bubble cluster remains wrapped around and behind the lower body with a visible dark boot. Do not copy the selection pose. Entire subject from topmost hat or glove to bottommost boot and all outer Bubble curves must stay inside generous transparent margins on every edge. Preserve natural proportions; no stretched mouth, extra limbs, third eye, separate Caine, extra hat, cane or other accessory. Native high-resolution TRUE transparent RGBA background, clean alpha, no haze, glow, aura, ghost trails, floor, backdrop, cast shadow, effects, caption, watermark, panel, sheet or framing. Only one full-body pose.",
+      "createdAt": "2026-11-20T04:47:45.423Z",
+      "visualReview": "Complete native source board inspected on 20 November. A single Caine remains wrapped in the connected pale-blue Bubble mass. Red coat, black hat/bow tie, open denture head with exactly one solid red and one solid blue eye remain consistent. Slot victory is distinct and readable; glove gestures and body tilt change without inventing another character. Full outer silhouette, hat, hands and lower boot stay inside the source. Alpha composes cleanly on the review background.",
+      "sha256": "42232c2d06a76c47f863dd95643f0edf6617ae7d5efe96bd7023bb32fdf1816f",
+      "bytes": 1610382,
+      "dimensions": [
+        1167,
+        1348
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        52,
+        15,
+        1088,
+        1326
+      ],
+      "nativeCopyVerified": true,
+      "visualReviewAt": "2026-11-20T04:49:42.643771+00:00",
+      "visualReviewBoard": "docs/art-generation/cast-continuation-20261120/native-review/badendcaine.jpg",
+      "status": "generated-and-visually-reviewed",
+      "productionStatus": "complete",
+      "includedInRuntime": true
+    },
+    {
+      "id": "badendcaine-defeat",
+      "appearanceId": "badendcaine",
+      "slot": "defeat",
+      "file": "assets/encore/poses/badendcaine/defeat.png",
+      "method": "image_gen.imagegen",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-ab847926-2e4f-456b-91e8-7d0748033cd9.png",
+      "sourceGenerationId": "exec-ab847926-2e4f-456b-91e8-7d0748033cd9",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/abstraction-animiniz",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AniMiniz_DC_abstractedCaine.png?v=1780353722"
+      ],
+      "sourceType": "official-merchandise",
+      "episodeFidelityClaim": false,
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/badendcaine.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AniMiniz_DC_abstractedCaine.png"
+      ],
+      "prompt": "Use case: stylized-concept. Produce ONE new individual full-body action sprite for Digital Circus Encore, Caine — Bad End, slot defeat. Image 1 is the approved game selection design; preserve its exact character traits, crisp ink line and polished cel-shaded 2D art. Image 2 is the official merchandise reference, establishing this appearance, not an episode event. ONE unified connected character-state silhouette: a single Caine partly engulfed and surrounded by a compact attached irregular mass of translucent pale-blue Bubble spheres with small black dot eyes and wide mouths of triangular white teeth. Caine keeps a red tailcoat, white shirt, black bow tie, black top hat with red band, white gloves, black trousers and dark boot. Huge open red denture head with white rounded teeth and exactly TWO plain glossy eye globes, one solid RED and one solid BLUE, no normal white sclera and no green iris. Keep the attached Bubble mass wrapping his lower body and behind him; Caine remains one subject, never a normal free-standing man with a detached crowd. CHANGE to this new clearly distinct pose: A distinct defeated pose: the entire attached Caine-and-Bubble cluster slumps sideways low toward screen LEFT, one visible dark boot and a relaxed white glove protruding at its lower front edge. His open denture head is tilted and black top hat remains attached, both plain red and blue eyes still present. All connected bubbles remain readable, no broken teeth, injury, floor or other figure. Do not copy the selection pose. Entire subject from topmost hat or glove to bottommost boot and all outer Bubble curves must stay inside generous transparent margins on every edge. Preserve natural proportions; no stretched mouth, extra limbs, third eye, separate Caine, extra hat, cane or other accessory. Native high-resolution TRUE transparent RGBA background, clean alpha, no haze, glow, aura, ghost trails, floor, backdrop, cast shadow, effects, caption, watermark, panel, sheet or framing. Only one full-body pose.",
+      "createdAt": "2026-11-20T04:47:34.275Z",
+      "visualReview": "Complete native source board inspected on 20 November. A single Caine remains wrapped in the connected pale-blue Bubble mass. Red coat, black hat/bow tie, open denture head with exactly one solid red and one solid blue eye remain consistent. Slot defeat is distinct and readable; glove gestures and body tilt change without inventing another character. Full outer silhouette, hat, hands and lower boot stay inside the source. Alpha composes cleanly on the review background.",
+      "sha256": "4c49a3f92024a6693bb230eddaef01b0a5cc0828b8bbe21aa4b4c7eb9f28c4d9",
+      "bytes": 1807933,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "bboxAlpha12": [
+        95,
+        27,
+        1386,
+        1006
+      ],
+      "nativeCopyVerified": true,
+      "visualReviewAt": "2026-11-20T04:49:42.643041+00:00",
+      "visualReviewBoard": "docs/art-generation/cast-continuation-20261120/native-review/badendcaine.jpg",
+      "status": "generated-and-visually-reviewed",
+      "productionStatus": "complete",
+      "includedInRuntime": true
+    }
+  ]
+}

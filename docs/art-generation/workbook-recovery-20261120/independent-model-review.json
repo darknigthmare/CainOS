@@ -1,0 +1,74 @@
+{
+  "schema": "encore-public-model-peer-review/v1",
+  "createdAt": "2026-11-20T07:20:15.537876+00:00",
+  "reviewer": "/root/remaining_reference_research",
+  "mode": "read-only JSON/native-input comparison; no authoring, export, import, or render executed by reviewer",
+  "status": "prepared-public-model-matches-constrained-target",
+  "hashesVerifiedByReviewerAndRecoveryAgent": {
+    "recreated-model.json": "71417e3269e7256b1b491ec56eeb8449ef5b40f272dbc56d021d4992e5724d09",
+    "native-target/manifest.json": "551858e25384777ed35f79babe7e33c7a3726b77eb008c3f5f1ec22eea53c6eb",
+    "native-source/manifest.json": "2cb76f3e67d4807d4522833cca0061df55c0ea3c15b76a795ee0a63d15b71596",
+    "recovery-plan.json": "1ba0b58a5c07c2f479bb597b3ae70ede2735b388d51fba60a6ad61d49d98cfde"
+  },
+  "snapshotInventory": {
+    "file": "docs/art-generation/workbook-recovery-20261120/native-snapshot-hashes.json",
+    "bytes": 3627,
+    "sha256": "65066bbc5afe1d947dc938dcf69ddf12930bac45554f591d52036ab1a9afbc7f"
+  },
+  "checked": {
+    "orderedSheets": 11,
+    "cellAddressesValuesAndEffectiveStyles": 78876,
+    "formulaTexts": 42,
+    "blankCells": 753,
+    "emptyStringCells": 8371,
+    "nativeTables": {
+      "count": 10,
+      "properties": [
+        "names",
+        "ranges",
+        "columns",
+        "style",
+        "filters",
+        "banding"
+      ]
+    },
+    "listValidations": 37,
+    "containsTextConditionalRules": {
+      "count": 286,
+      "properties": [
+        "text",
+        "colors",
+        "priority",
+        "normalized ranges"
+      ]
+    },
+    "columnWidths": true,
+    "explicitRowHeights": 6854,
+    "freezePanes": true,
+    "gridLines": true,
+    "tabColors": true
+  },
+  "defaultRowHeightInterpretation": "41 zero-height entries in Extension PNJ have customHeight=false in the public model. They are default sentinels, not observed loss of source row height.",
+  "findingsResolved": [
+    {
+      "finding": "The public model assigns custom number format IDs 200/201 to existing codes #,##0 and 0.00; a comparator limited to builtin IDs 0/2/3 would reject equivalent output.",
+      "resolution": "The reader now resolves allowed custom IDs >=164 by exact code; it permits only General, #,##0 and 0.00."
+    },
+    {
+      "finding": "A historical conditional range D107:D107 can serialize as D107.",
+      "resolution": "The reader canonicalizes singleton ranges before comparing validation/conditional sqref."
+    },
+    {
+      "finding": "The --reimport mode only checks 42 summary formulas/values and three table row counts.",
+      "resolution": "Its status and checked fields now state that bounded scope and explicitly require separate exhaustive native comparison and visual review."
+    }
+  ],
+  "notVerified": [
+    "XLSX export",
+    "XLSX reimport",
+    "Full XML theme and margins after export",
+    "Rendered appearance",
+    "Interactive response of validation and conditional formatting"
+  ],
+  "publicationApproved": false
+}

@@ -245,15 +245,15 @@ export const SPRITE_CATALOG = [
     "name": "Abel",
     "sourceAge": "PNJ supprime - Ep. 7",
     "sprite": {
-      "src": "../assets/images/cainos-pixel-cast-sheet.png",
-      "sheet": "base",
-      "cols": 6,
-      "rows": 3,
-      "col": 3,
-      "row": 2
+      "src": "../assets/images/cainos-pixel-cast-sheet-abel-pack.png",
+      "sheet": "abel",
+      "cols": 2,
+      "rows": 1,
+      "col": 1,
+      "row": 0
     },
     "source": "https://github.com/darknigthmare/CainOS/blob/4926834a2f063028903d6431e77f0bece859e671/app.js",
-    "provenance": "Archive CainOS. Le libellé du projet ne constitue pas une validation canonique.",
+    "provenance": "Mannequin articulé souriant : identité corrigée depuis la cellule abelfullbody de CainOS. Adaptation illustrée du projet ; proportions non certifiées sur une image d’épisode.",
     "status": "Visuel CainOS existant"
   },
   {

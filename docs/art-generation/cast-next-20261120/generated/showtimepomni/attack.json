@@ -1,0 +1,156 @@
+{
+  "id": "showtimepomni:recovery:attack",
+  "appearanceId": "showtimepomni",
+  "slot": "attack",
+  "status": "accepted_native",
+  "originalJobId": "showtimepomni:attack",
+  "originalPrompt": "Use case: identity-preserve. Reference 1 is the APPROVED GAME DESIGN: preserve its exact face, anatomy, clothing, colours, details, proportions and drawing style, changing only the pose described below. Reference 2 confirms the official merchandise costume details. Do not copy the pose, photo background or toy proportions from reference 2.\n\nPOMNI wearing the official SHOWTIME merchandise costume. Pomni's white face, brown bob and forehead locks, red cheeks, anxious expression; one red-and-blue two-point jester hat with yellow lower band and two yellow pompons. One prominent cream feather plume above the hat, and large cream feather costume plumes forming a decorative train behind the lower torso. The feathers are costume ornaments, never arms or biological wings. Gold dance leotard/bodice, white arms and white tights/legs, gold shoes. Exactly two arms and two legs, slender full-length proportions matching the game's Pomni art. Keep the gold-and-cream show costume; do not restore the old red/blue puff-sleeve jester suit. No extra hat, long dress, stage, curtain or pedestal.\n\nLight attack: face SCREEN-RIGHT and extend the forward arm into one straight punch toward SCREEN-RIGHT, other hand near the torso. Slight forward lunge with both feet visible. No opponent, no impact cloud, no trails.\n\nRender ONE complete polished hand-drawn 2D cel-shaded fighting-game sprite with clean dark outlines and clear flat colour regions. Entire figure including every eye, hat tip, feather tip, finger and both feet is fully inside generous transparent safety margins. True transparent RGBA background. No floor, cast shadow, glow, background, frame, text, watermark, duplicate body, speed lines or motion blur. Anatomical consistency is mandatory: one head, two arms, two hands, two legs and two feet. Native facing must be SCREEN-RIGHT; do not mirror anatomical costume details.\n\nWRIST LOCK: Both wrists are plain continuous white. White hands attach directly to white forearms. No wrist cuffs, bracelets, bands, jewellery, sleeve trim or gold detail at either wrist. Preserve the corrected approved selection exactly.",
+  "originalLostPNG": {
+    "slot": "attack",
+    "sourceGenerationId": "exec-3c6e9903-d4ab-4294-8985-d3ffa5f7719c",
+    "sha256": "99af5dcb607c71339d2f32dce401379e86f96d90c8cd1ceb18650a26571bc01d",
+    "bytes": 974098,
+    "dimensions": [
+      1199,
+      1312
+    ],
+    "alpha12Bounds": [
+      135,
+      13,
+      1108,
+      1299
+    ],
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "priorReviewStatus": "accepted_native",
+    "recoveryStatus": "bytes_lost_after_environment_replacement",
+    "nativeFacing": "right"
+  },
+  "referencePaths": [
+    "docs/art-generation/cast-next-20261120/generated/showtimepomni/selection.png",
+    "docs/art-generation/cast-next-20261120/generated/showtimepomni/defeat.png",
+    "docs/art-generation/cast-next-20261120/recovery-references/official-showtime-pomni.jpg"
+  ],
+  "prompt": "Use case: identity-preserve. Create ONE new native whole-body 2D fighting-game sprite. Reference 1 is the NEWLY APPROVED recovery selection drawing, and locks character design, anatomy, costume, proportions and polished dark-outline cel-shaded style. Reference 2 is the EXACT RECOVERED original defeat drawing from before the environment loss. Reference 3 is the official merchandise costume reference only. Use the new recovery selection for pose consistency; the lost original selection is not available or used. This is a NEW generation replacing a lost pose; do not recreate the photographed toy proportions or stage.\n\nPreserve Pomni's exact recovered-game identity: white face, brown bob with forehead locks, red cheeks, red/blue pinwheel pupils, red-and-blue two-point jester hat with yellow band and exactly two yellow pompons. One large cream feather above the hat; cream feather costume train behind the hips. Gold dance leotard, plain white arms and legs, gold shoes. No wrist cuffs, bracelets or bands: white hands connect directly to white forearms. Exactly TWO arms, TWO hands, TWO legs, TWO feet. Each cartoon hand has exactly FOUR digits in total: THREE fingers and ONE thumb. Feathers are costume decorations, never wings or limbs.\n\nLight attack facing SCREEN-RIGHT: one straight forward punch toward screen-right, other fist near torso, slight lunge.\n\nKeep every part fully inside generous transparent margins, including the tall hat feather, both pompons, train feathers, fingertips and both feet. One complete character only. True transparent RGBA background; no floor, stage, curtain, shadow, glow, motion effect, text, border, logo or duplicate character.",
+  "sourceURLs": [
+    "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_Canpomni.png?v=1773977710"
+  ],
+  "file": "docs/art-generation/cast-next-20261120/generated/showtimepomni/attack.png",
+  "targetFile": "assets/encore/poses/showtimepomni/attack.png",
+  "sourceKind": "Produit dérivé officiel",
+  "episodeFidelityClaim": false,
+  "transparent_background": true,
+  "method": "image_gen.imagegen",
+  "desiredNativeFacing": "right",
+  "recoveryReason": "Original accepted PNG bytes lost after environment replacement; no claim of byte-identical recovery.",
+  "schema": "encore-native-art-discovery/v1",
+  "nativeSourceFile": "/workspace/scratch/5f5114b49696/generated_images/exec-e9adc764-717d-48c8-85bc-62cca316480c.png",
+  "sourceGenerationId": "exec-e9adc764-717d-48c8-85bc-62cca316480c",
+  "nativeFacing": "right",
+  "includedInRuntime": false,
+  "actualToolReferencePaths": [
+    "/workspace/scratch/5f5114b49696/recovery/pomni/regenerated/showtimepomni/selection.png",
+    "/workspace/scratch/5f5114b49696/recovery/pomni/generated/showtimepomni/defeat.png",
+    "/workspace/scratch/5f5114b49696/recovery/pomni/references/official-showtime-pomni.jpg"
+  ],
+  "recoveryRegeneration": {
+    "date": "2026-11-20",
+    "reason": "Original PNG bytes lost after environment replacement; new native generation.",
+    "originalLostPNG": {
+      "slot": "attack",
+      "sourceGenerationId": "exec-3c6e9903-d4ab-4294-8985-d3ffa5f7719c",
+      "sha256": "99af5dcb607c71339d2f32dce401379e86f96d90c8cd1ceb18650a26571bc01d",
+      "bytes": 974098,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "alpha12Bounds": [
+        135,
+        13,
+        1108,
+        1299
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "priorReviewStatus": "accepted_native",
+      "recoveryStatus": "bytes_lost_after_environment_replacement",
+      "nativeFacing": "right"
+    },
+    "exactRecoveredSeedSHA256": "aff64f2b1fbf4294cc916399c1af418078632d731514c8eb3172cbcb987a0b44",
+    "notByteIdenticalToLostPose": true
+  },
+  "visualReview": {
+    "reviewer": "generate_pomni_kinger",
+    "status": "accepted",
+    "observations": [
+      "Coup léger vers la droite, un poing tendu et l’autre ramené, deux jambes en fente.",
+      "Bonnet, plume supérieure, train de plumes et body doré cohérents ; poignets blancs sans accessoire, pieds et mains entièrement cadrés."
+    ],
+    "scope": "Native recovery regeneration from the new approved selection, exact recovered defeat and reloaded official merchandise photo."
+  },
+  "dimensions": [
+    1199,
+    1312
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "alpha12Bounds": [
+    141,
+    17,
+    1102,
+    1300
+  ],
+  "alpha12BoundsThreshold": "alpha > 12",
+  "fullyTransparentPixels": 1029587,
+  "sha256": "e09f808f0f74bfb4051342e214f0b9dc28e9c4075ff093364113a5a87a1006da",
+  "bytes": 909788,
+  "gitBlobSHA": "bdda90b4c0cb093662e256ba5e9b9120fe243f2e",
+  "nativeCopyVerified": true,
+  "createdAt": "2026-11-20T10:34:22.009760+00:00",
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/cast-next-20261120/generated/showtimepomni/selection.png",
+      "sha256": "36657a67157a740bd2e26b9de7d8bc24163901eb68b80c1bd97e2c3317084093",
+      "bytes": 1563975,
+      "recoveryLocalPath": "/workspace/scratch/5f5114b49696/recovery/pomni/regenerated/showtimepomni/selection.png"
+    },
+    {
+      "position": 2,
+      "file": "docs/art-generation/cast-next-20261120/generated/showtimepomni/defeat.png",
+      "sha256": "aff64f2b1fbf4294cc916399c1af418078632d731514c8eb3172cbcb987a0b44",
+      "bytes": 1418103,
+      "recoveryLocalPath": "/workspace/scratch/5f5114b49696/recovery/pomni/generated/showtimepomni/defeat.png"
+    },
+    {
+      "position": 3,
+      "file": "docs/art-generation/cast-next-20261120/recovery-references/official-showtime-pomni.jpg",
+      "sha256": "a398e64a547fcecb3b4d6615d81e835ef6142b8aff1aa48e9135edd8d0a6ad46",
+      "bytes": 595909,
+      "recoveryLocalPath": "/workspace/scratch/5f5114b49696/recovery/pomni/references/official-showtime-pomni.jpg"
+    }
+  ],
+  "gitBlobUploaded": true,
+  "gitBlobVerified": true,
+  "recoveredFromLocalFile": "/workspace/scratch/5f5114b49696/recovery/pomni/regenerated/showtimepomni/attack.png",
+  "repositoryRecoveredAt": "2026-11-20T10:45:51.072563+00:00",
+  "recoveryVisualReview": {
+    "reviewer": "finish_showtime",
+    "reviewedAt": "2026-11-20T10:45:51.072563+00:00",
+    "status": "accepted",
+    "observations": [
+      "Native recovered source visually inspected: full body and complete costume, two arms and two legs, right-facing action.",
+      "All source bytes match the previously accepted generation receipt; source pose is distinct and unchanged."
+    ],
+    "scope": "Static game pose and source design consistency; no episode certification."
+  }
+}

@@ -1,0 +1,2131 @@
+{
+  "schema": "encore-historical-reference-recovery/v1",
+  "scope": [
+    "jaxsuitpomni",
+    "noirribbit",
+    "kaufmosuitribbit",
+    "intermissioncaine",
+    "bowlingpinragatha",
+    "ringmastercaine",
+    "strongmanorbsman",
+    "stagehandbubble"
+  ],
+  "receiptCount": 95,
+  "references": [
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/selection.png",
+      "expectedSHA256": "5cd4179ae983b9a050162159e47bad53ff95bd895c790ae38963fa2df74a3d6c",
+      "expectedBytes": 923013,
+      "usedBy": [
+        "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/attack.json",
+        "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/crouch.json",
+        "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/defeat.json",
+        "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/heavy.json",
+        "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/hit.json",
+        "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/intro.json",
+        "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/jump.json",
+        "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/stance.json",
+        "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/victory.json",
+        "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/walk.json"
+      ],
+      "sourceURLs": [
+        "https://glitchproductions.store/products/jax-suit-pomni-plush"
+      ],
+      "explicitURLs": [],
+      "exists": true,
+      "matches": true,
+      "status": "historical_bytes_restored",
+      "recovery": {
+        "method": "preloaded_native_seed_or_preserved_base_asset"
+      }
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/research/jaxsuitpomni/official-jaxsuitpomni-1.png",
+      "expectedSHA256": "782f6c5963f506fdbe50c69a1b98136c231e49698495275879ad306d31f7f5ba",
+      "expectedBytes": 327130,
+      "usedBy": [
+        "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/selection.json"
+      ],
+      "sourceURLs": [
+        "https://glitchproductions.store/products/jax-suit-pomni-plush",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/jax-suit-pomni-plush-1.png?v=1762358224"
+      ],
+      "explicitURLs": [],
+      "exists": true,
+      "matches": true,
+      "status": "historical_bytes_restored",
+      "recovery": {
+        "method": "direct_official_download",
+        "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/jax-suit-pomni-plush-1.png?v=1762358224",
+        "retrievedAt": "2026-11-20T10:31:49.972992+00:00",
+        "contentType": "image/png"
+      }
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/research/jaxsuitpomni/official-jaxsuitpomni-2.png",
+      "expectedSHA256": "69f87ad01cd0cd673edc7bcc4e5f16db9b5ed8eb689f41b93a115c213209d6ba",
+      "expectedBytes": 318519,
+      "usedBy": [
+        "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/selection.json"
+      ],
+      "sourceURLs": [
+        "https://glitchproductions.store/products/jax-suit-pomni-plush",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/jax-suit-pomni-plush-1.png?v=1762358224"
+      ],
+      "explicitURLs": [],
+      "exists": true,
+      "matches": true,
+      "status": "historical_bytes_restored",
+      "recovery": {
+        "method": "direct_official_download",
+        "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/jax-suit-pomni-plush-2.png?v=1762358224",
+        "retrievedAt": "2026-11-20T10:31:49.955779+00:00",
+        "contentType": "image/png"
+      }
+    },
+    {
+      "file": "assets/encore/selection/beachpomni.png",
+      "expectedSHA256": "4f104be35c2d1fb5494b7b0ddfb616ceb288edb795ec1a8094ff58e7996f674e",
+      "expectedBytes": 1055943,
+      "usedBy": [
+        "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/selection.json"
+      ],
+      "sourceURLs": [
+        "https://glitchproductions.store/products/jax-suit-pomni-plush",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/jax-suit-pomni-plush-1.png?v=1762358224"
+      ],
+      "explicitURLs": [],
+      "exists": true,
+      "matches": true,
+      "status": "historical_bytes_restored",
+      "recovery": {
+        "method": "preloaded_native_seed_or_preserved_base_asset"
+      }
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/noirribbit/selection.png",
+      "expectedSHA256": "7e0856ee931693f817f7206945d38b178c3e79007a68c77d6c908c066972b78d",
+      "expectedBytes": 1279270,
+      "usedBy": [
+        "docs/art-generation/cast-next-20261120/generated/noirribbit/attack.json",
+        "docs/art-generation/cast-next-20261120/generated/noirribbit/crouch.json",
+        "docs/art-generation/cast-next-20261120/generated/noirribbit/defeat.json",
+        "docs/art-generation/cast-next-20261120/generated/noirribbit/heavy.json",
+        "docs/art-generation/cast-next-20261120/generated/noirribbit/hit.json",
+        "docs/art-generation/cast-next-20261120/generated/noirribbit/intro.json",
+        "docs/art-generation/cast-next-20261120/generated/noirribbit/jump.json",
+        "docs/art-generation/cast-next-20261120/generated/noirribbit/stance.json",
+        "docs/art-generation/cast-next-20261120/generated/noirribbit/victory.json",
+        "docs/art-generation/cast-next-20261120/generated/noirribbit/walk.json"
+      ],
+      "sourceURLs": [
+        "https://glitchproductions.store/products/ribbit-pendantz-blindbox",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Noir.png?v=1785768060"
+      ],
+      "explicitURLs": [],
+      "exists": true,
+      "matches": true,
+      "status": "historical_bytes_restored",
+      "recovery": {
+        "method": "preloaded_native_seed_or_preserved_base_asset"
+      }
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-noir.png",
+      "expectedSHA256": "fa7196988e32f61446b691b0b956abc103e9761827d9a19dbaae5e1292d8c31c",
+      "expectedBytes": 1555468,
+      "usedBy": [
+        "docs/art-generation/cast-next-20261120/generated/noirribbit/attack.json",
+        "docs/art-generation/cast-next-20261120/generated/noirribbit/crouch.json",
+        "docs/art-generation/cast-next-20261120/generated/noirribbit/defeat.json",
+        "docs/art-generation/cast-next-20261120/generated/noirribbit/heavy.json",
+        "docs/art-generation/cast-next-20261120/generated/noirribbit/hit.json",
+        "docs/art-generation/cast-next-20261120/generated/noirribbit/intro.json",
+        "docs/art-generation/cast-next-20261120/generated/noirribbit/jump.json",
+        "docs/art-generation/cast-next-20261120/generated/noirribbit/selection.json",
+        "docs/art-generation/cast-next-20261120/generated/noirribbit/stance.json",
+        "docs/art-generation/cast-next-20261120/generated/noirribbit/victory.json",
+        "docs/art-generation/cast-next-20261120/generated/noirribbit/walk.json"
+      ],
+      "sourceURLs": [
+        "https://glitchproductions.store/products/ribbit-pendantz-blindbox",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Noir.png?v=1785768060"
+      ],
+      "explicitURLs": [],
+      "exists": true,
+      "matches": true,
+      "status": "historical_bytes_restored",
+      "recovery": {
+        "method": "direct_official_download",
+        "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Noir.png?v=1785768060",
+        "retrievedAt": "2026-11-20T10:31:50.226647+00:00",
+        "contentType": "image/png"
+      }
+    },
+    {
+      "file": "assets/encore/selection/ribbit.png",
+      "expectedSHA256": "a88927f18865fb289f4d9e045fd1a75f91363f5d9b535859efbebfd4e8bf566f",
+      "expectedBytes": 1352678,
+      "usedBy": [
+        "docs/art-generation/cast-next-20261120/generated/noirribbit/selection.json",
+        "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/selection.json"
+      ],
+      "sourceURLs": [
+        "https://glitchproductions.store/products/ribbit-pendantz-blindbox",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Noir.png?v=1785768060",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/KaufmoSuit.png?v=1785347150"
+      ],
+      "explicitURLs": [],
+      "exists": true,
+      "matches": true,
+      "status": "historical_bytes_restored",
+      "recovery": {
+        "method": "preloaded_native_seed_or_preserved_base_asset"
+      }
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/selection.png",
+      "expectedSHA256": "4e931f702f5758ed95c581651058b9ed2f0121e93d60305ee9bb8ec29865e378",
+      "expectedBytes": 1401496,
+      "usedBy": [
+        "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/attack.json",
+        "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/crouch.json",
+        "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/defeat.json",
+        "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/heavy.json",
+        "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/hit.json",
+        "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/intro.json",
+        "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/jump.json",
+        "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/stance.json",
+        "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/victory.json",
+        "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/walk.json"
+      ],
+      "sourceURLs": [
+        "https://glitchproductions.store/products/ribbit-pendantz-blindbox",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/KaufmoSuit.png?v=1785347150"
+      ],
+      "explicitURLs": [],
+      "exists": true,
+      "matches": true,
+      "status": "historical_bytes_restored",
+      "recovery": {
+        "method": "preloaded_native_seed_or_preserved_base_asset"
+      }
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-kaufmo-suit.png",
+      "expectedSHA256": "e54ef43b2e9e73eed83bad635b971c8ac8f8a2caf8c82dbfef755ffd29b2868d",
+      "expectedBytes": 1455321,
+      "usedBy": [
+        "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/attack.json",
+        "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/crouch.json",
+        "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/defeat.json",
+        "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/heavy.json",
+        "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/hit.json",
+        "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/intro.json",
+        "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/jump.json",
+        "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/selection.json",
+        "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/stance.json",
+        "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/victory.json",
+        "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/walk.json"
+      ],
+      "sourceURLs": [
+        "https://glitchproductions.store/products/ribbit-pendantz-blindbox",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/KaufmoSuit.png?v=1785347150"
+      ],
+      "explicitURLs": [],
+      "exists": true,
+      "matches": true,
+      "status": "historical_bytes_restored",
+      "recovery": {
+        "method": "direct_official_download",
+        "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/KaufmoSuit.png?v=1785347150",
+        "retrievedAt": "2026-11-20T10:31:54.893037+00:00",
+        "contentType": "image/png"
+      }
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/selection.png",
+      "expectedSHA256": "cdfc9b5405f7059498542b38a39bbd1d6ff83efe5ad35f44f09ba3be84bc6cef",
+      "expectedBytes": 1315027,
+      "usedBy": [
+        "docs/art-generation/cast-next-20261120/generated/intermissioncaine/attack.json",
+        "docs/art-generation/cast-next-20261120/generated/intermissioncaine/attempts/attack-rejected-1.json",
+        "docs/art-generation/cast-next-20261120/generated/intermissioncaine/attempts/intro-rejected-1.json",
+        "docs/art-generation/cast-next-20261120/generated/intermissioncaine/attempts/victory-rejected-1.json",
+        "docs/art-generation/cast-next-20261120/generated/intermissioncaine/crouch.json",
+        "docs/art-generation/cast-next-20261120/generated/intermissioncaine/defeat.json",
+        "docs/art-generation/cast-next-20261120/generated/intermissioncaine/heavy.json",
+        "docs/art-generation/cast-next-20261120/generated/intermissioncaine/hit.json",
+        "docs/art-generation/cast-next-20261120/generated/intermissioncaine/intro.json",
+        "docs/art-generation/cast-next-20261120/generated/intermissioncaine/jump.json",
+        "docs/art-generation/cast-next-20261120/generated/intermissioncaine/stance.json",
+        "docs/art-generation/cast-next-20261120/generated/intermissioncaine/victory.json",
+        "docs/art-generation/cast-next-20261120/generated/intermissioncaine/walk.json"
+      ],
+      "sourceURLs": [
+        "https://glitchproductions.store/products/digital-circus-animiniz-costume-adventure-series",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/81.png?v=1762387272"
+      ],
+      "explicitURLs": [],
+      "exists": true,
+      "matches": true,
+      "status": "historical_bytes_restored",
+      "recovery": {
+        "method": "preloaded_native_seed_or_preserved_base_asset"
+      }
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/research/states/official-intermission-caine.png",
+      "expectedSHA256": "441a3e2df39c7ba7a95167d7ba902858b960c7f9e38f4b9ef0efa69c5bef7be0",
+      "expectedBytes": 3889495,
+      "usedBy": [
+        "docs/art-generation/cast-next-20261120/generated/intermissioncaine/attack.json",
+        "docs/art-generation/cast-next-20261120/generated/intermissioncaine/attempts/attack-rejected-1.json",
+        "docs/art-generation/cast-next-20261120/generated/intermissioncaine/attempts/intro-rejected-1.json",
+        "docs/art-generation/cast-next-20261120/generated/intermissioncaine/attempts/victory-rejected-1.json",
+        "docs/art-generation/cast-next-20261120/generated/intermissioncaine/crouch.json",
+        "docs/art-generation/cast-next-20261120/generated/intermissioncaine/defeat.json",
+        "docs/art-generation/cast-next-20261120/generated/intermissioncaine/heavy.json",
+        "docs/art-generation/cast-next-20261120/generated/intermissioncaine/hit.json",
+        "docs/art-generation/cast-next-20261120/generated/intermissioncaine/intro.json",
+        "docs/art-generation/cast-next-20261120/generated/intermissioncaine/jump.json",
+        "docs/art-generation/cast-next-20261120/generated/intermissioncaine/selection.json",
+        "docs/art-generation/cast-next-20261120/generated/intermissioncaine/stance.json",
+        "docs/art-generation/cast-next-20261120/generated/intermissioncaine/victory.json",
+        "docs/art-generation/cast-next-20261120/generated/intermissioncaine/walk.json"
+      ],
+      "sourceURLs": [
+        "https://glitchproductions.store/products/digital-circus-animiniz-costume-adventure-series",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/81.png?v=1762387272"
+      ],
+      "explicitURLs": [
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/81.png?v=1762387272"
+      ],
+      "exists": true,
+      "matches": true,
+      "status": "historical_bytes_restored",
+      "recovery": {
+        "method": "official_CDN_format_negotiation",
+        "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/81.png?v=1762387272&format=png",
+        "accept": "image/png",
+        "retrievedAt": "2026-11-20T10:33:04.689665+00:00",
+        "contentType": "image/png"
+      }
+    },
+    {
+      "file": "assets/encore/selection/caine.webp",
+      "expectedSHA256": "9d2e8a00ffa0f1f55b5aecec59da05a4be6edfea355c6df34aea4bfec9f044e7",
+      "expectedBytes": 278502,
+      "usedBy": [
+        "docs/art-generation/cast-next-20261120/generated/intermissioncaine/selection.json",
+        "docs/art-generation/cast-next-20261120/generated/ringmastercaine/selection.json"
+      ],
+      "sourceURLs": [
+        "https://glitchproductions.store/products/digital-circus-animiniz-costume-adventure-series",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/81.png?v=1762387272",
+        "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_ringmasterCaine.png?v=1773977710"
+      ],
+      "explicitURLs": [],
+      "exists": true,
+      "matches": true,
+      "status": "historical_bytes_restored",
+      "recovery": {
+        "method": "preloaded_native_seed_or_preserved_base_asset"
+      }
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/selection.png",
+      "expectedSHA256": "3eca98c6bc889b80e080889d34ec4a4ec7e0887141babf2e178f762f2e8cb01d",
+      "expectedBytes": 1487585,
+      "usedBy": [
+        "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/attack.json",
+        "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/attempts/heavy-rejected-1.json",
+        "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/crouch.json",
+        "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/defeat.json",
+        "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/heavy.json",
+        "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/hit.json",
+        "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/intro.json",
+        "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/jump.json",
+        "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/stance.json",
+        "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/victory.json",
+        "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/walk.json"
+      ],
+      "sourceURLs": [
+        "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_HeadpinRagatha.png?v=1773977710"
+      ],
+      "explicitURLs": [],
+      "exists": true,
+      "matches": true,
+      "status": "historical_bytes_restored",
+      "recovery": {
+        "method": "preloaded_native_seed_or_preserved_base_asset"
+      }
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/research/merch/official-bowling-pin-ragatha.png",
+      "expectedSHA256": "fffc7d222e4a2b15431ade2bf47054b17af554364cc89ac1ede69f6dd1c4f7f5",
+      "expectedBytes": 6499850,
+      "usedBy": [
+        "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/attack.json",
+        "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/attempts/heavy-rejected-1.json",
+        "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/crouch.json",
+        "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/defeat.json",
+        "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/heavy.json",
+        "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/hit.json",
+        "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/intro.json",
+        "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/jump.json",
+        "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/selection.json",
+        "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/stance.json",
+        "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/victory.json",
+        "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/walk.json"
+      ],
+      "sourceURLs": [
+        "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_HeadpinRagatha.png?v=1773977710"
+      ],
+      "explicitURLs": [
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_HeadpinRagatha.png?v=1773977710"
+      ],
+      "exists": true,
+      "matches": true,
+      "status": "historical_bytes_restored",
+      "recovery": {
+        "method": "official_CDN_format_negotiation",
+        "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_HeadpinRagatha.png?v=1773977710&format=png",
+        "accept": "image/png",
+        "retrievedAt": "2026-11-20T10:33:04.638729+00:00",
+        "contentType": "image/png"
+      }
+    },
+    {
+      "file": "assets/encore/selection/ragatha.webp",
+      "expectedSHA256": "ef1ef3d6a4153027f1e28263a59f6c3aa5aaa8cce9a405b64a01013a53b5b5fe",
+      "expectedBytes": 247348,
+      "usedBy": [
+        "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/selection.json"
+      ],
+      "sourceURLs": [
+        "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_HeadpinRagatha.png?v=1773977710"
+      ],
+      "explicitURLs": [],
+      "exists": true,
+      "matches": true,
+      "status": "historical_bytes_restored",
+      "recovery": {
+        "method": "preloaded_native_seed_or_preserved_base_asset"
+      }
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/selection.png",
+      "expectedSHA256": "b95d9ff79564bb0ae0b536ef4b3cf48b1cc43af6f046fa687355ea753fc4d5fb",
+      "expectedBytes": 1539137,
+      "usedBy": [
+        "docs/art-generation/cast-next-20261120/generated/ringmastercaine/attack.json",
+        "docs/art-generation/cast-next-20261120/generated/ringmastercaine/crouch.json",
+        "docs/art-generation/cast-next-20261120/generated/ringmastercaine/defeat.json",
+        "docs/art-generation/cast-next-20261120/generated/ringmastercaine/heavy.json",
+        "docs/art-generation/cast-next-20261120/generated/ringmastercaine/hit.json",
+        "docs/art-generation/cast-next-20261120/generated/ringmastercaine/intro.json",
+        "docs/art-generation/cast-next-20261120/generated/ringmastercaine/jump.json",
+        "docs/art-generation/cast-next-20261120/generated/ringmastercaine/stance.json",
+        "docs/art-generation/cast-next-20261120/generated/ringmastercaine/victory.json",
+        "docs/art-generation/cast-next-20261120/generated/ringmastercaine/walk.json"
+      ],
+      "sourceURLs": [
+        "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_ringmasterCaine.png?v=1773977710"
+      ],
+      "explicitURLs": [],
+      "exists": true,
+      "matches": true,
+      "status": "historical_bytes_restored",
+      "recovery": {
+        "method": "preloaded_native_seed_or_preserved_base_asset"
+      }
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/research/merch/official-ringmaster-caine.png",
+      "expectedSHA256": "810e37a66b662ae00c610167fbd11b0e754b39c7eb0b70fa61ac0cd157e6b493",
+      "expectedBytes": 6486644,
+      "usedBy": [
+        "docs/art-generation/cast-next-20261120/generated/ringmastercaine/attack.json",
+        "docs/art-generation/cast-next-20261120/generated/ringmastercaine/crouch.json",
+        "docs/art-generation/cast-next-20261120/generated/ringmastercaine/defeat.json",
+        "docs/art-generation/cast-next-20261120/generated/ringmastercaine/heavy.json",
+        "docs/art-generation/cast-next-20261120/generated/ringmastercaine/hit.json",
+        "docs/art-generation/cast-next-20261120/generated/ringmastercaine/intro.json",
+        "docs/art-generation/cast-next-20261120/generated/ringmastercaine/jump.json",
+        "docs/art-generation/cast-next-20261120/generated/ringmastercaine/selection.json",
+        "docs/art-generation/cast-next-20261120/generated/ringmastercaine/stance.json",
+        "docs/art-generation/cast-next-20261120/generated/ringmastercaine/victory.json",
+        "docs/art-generation/cast-next-20261120/generated/ringmastercaine/walk.json"
+      ],
+      "sourceURLs": [
+        "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_ringmasterCaine.png?v=1773977710"
+      ],
+      "explicitURLs": [],
+      "exists": true,
+      "matches": true,
+      "status": "historical_bytes_restored",
+      "recovery": {
+        "method": "official_CDN_format_negotiation",
+        "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_ringmasterCaine.png?v=1773977710&format=png",
+        "accept": "image/png",
+        "retrievedAt": "2026-11-20T10:33:04.486775+00:00",
+        "contentType": "image/png"
+      }
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/selection.png",
+      "expectedSHA256": "ede51b07225e79c80eefdf12cd862e6b9d166211bb452ab16bebff59760e460c",
+      "expectedBytes": 1518337,
+      "usedBy": [
+        "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/attack.json",
+        "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/attempts/victory-01.json",
+        "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/attempts/victory-02.json",
+        "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/attempts/victory-03.json",
+        "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/crouch.json",
+        "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/defeat.json",
+        "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/heavy.json",
+        "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/hit.json",
+        "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/intro.json",
+        "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/jump.json",
+        "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/stance.json",
+        "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/victory.json",
+        "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/walk.json"
+      ],
+      "sourceURLs": [
+        "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_strongmanOrbsman.png?v=1773977710"
+      ],
+      "explicitURLs": [],
+      "exists": true,
+      "matches": true,
+      "status": "historical_bytes_restored",
+      "recovery": {
+        "method": "preloaded_native_seed_or_preserved_base_asset"
+      }
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/research/merch/official-strongman-orbsman.png",
+      "expectedSHA256": "47e8c316870904730493cf87cbbf8af0c94e93f9c0b49aacf821102612edc7ca",
+      "expectedBytes": 602038,
+      "usedBy": [
+        "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/attack.json",
+        "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/attempts/victory-01.json",
+        "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/attempts/victory-02.json",
+        "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/attempts/victory-03.json",
+        "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/crouch.json",
+        "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/defeat.json",
+        "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/heavy.json",
+        "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/hit.json",
+        "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/intro.json",
+        "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/jump.json",
+        "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/selection.json",
+        "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/stance.json",
+        "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/walk.json"
+      ],
+      "sourceURLs": [
+        "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_strongmanOrbsman.png?v=1773977710"
+      ],
+      "explicitURLs": [],
+      "exists": true,
+      "matches": true,
+      "status": "historical_bytes_restored",
+      "recovery": {
+        "method": "direct_official_download",
+        "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_strongmanOrbsman.png?v=1773977710",
+        "retrievedAt": "2026-11-20T10:31:58.645337+00:00",
+        "contentType": "image/jpeg"
+      }
+    },
+    {
+      "file": "assets/encore/selection/orbsman.png",
+      "expectedSHA256": "39b21e8b1532531830c98d1d1afd54973a0ea5721e5375ab7a2354bd6e2cf304",
+      "expectedBytes": 1432841,
+      "usedBy": [
+        "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/selection.json"
+      ],
+      "sourceURLs": [
+        "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_strongmanOrbsman.png?v=1773977710"
+      ],
+      "explicitURLs": [],
+      "exists": true,
+      "matches": true,
+      "status": "historical_bytes_restored",
+      "recovery": {
+        "method": "preloaded_native_seed_or_preserved_base_asset"
+      }
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/stagehandbubble/selection.png",
+      "expectedSHA256": "463f70055d4c9ed064016b6f3744ebfecc3c3dbd58efd9282b824ced2af1c0fa",
+      "expectedBytes": 820851,
+      "usedBy": [
+        "docs/art-generation/cast-next-20261120/generated/stagehandbubble/attack.json",
+        "docs/art-generation/cast-next-20261120/generated/stagehandbubble/crouch.json",
+        "docs/art-generation/cast-next-20261120/generated/stagehandbubble/defeat.json",
+        "docs/art-generation/cast-next-20261120/generated/stagehandbubble/heavy.json",
+        "docs/art-generation/cast-next-20261120/generated/stagehandbubble/hit.json",
+        "docs/art-generation/cast-next-20261120/generated/stagehandbubble/intro.json",
+        "docs/art-generation/cast-next-20261120/generated/stagehandbubble/jump.json",
+        "docs/art-generation/cast-next-20261120/generated/stagehandbubble/stance.json",
+        "docs/art-generation/cast-next-20261120/generated/stagehandbubble/victory.json",
+        "docs/art-generation/cast-next-20261120/generated/stagehandbubble/walk.json"
+      ],
+      "sourceURLs": [
+        "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_stagehandBubble.png?v=1773977710"
+      ],
+      "explicitURLs": [],
+      "exists": true,
+      "matches": true,
+      "status": "historical_bytes_restored",
+      "recovery": {
+        "method": "preloaded_native_seed_or_preserved_base_asset"
+      }
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/research/merch/official-stagehand-bubble.png",
+      "expectedSHA256": "c79461ad400eba410644a9a087dd3d0b70ef7b68a7dc9f1c423e60f55c9201d2",
+      "expectedBytes": 583218,
+      "usedBy": [
+        "docs/art-generation/cast-next-20261120/generated/stagehandbubble/attack.json",
+        "docs/art-generation/cast-next-20261120/generated/stagehandbubble/crouch.json",
+        "docs/art-generation/cast-next-20261120/generated/stagehandbubble/defeat.json",
+        "docs/art-generation/cast-next-20261120/generated/stagehandbubble/heavy.json",
+        "docs/art-generation/cast-next-20261120/generated/stagehandbubble/hit.json",
+        "docs/art-generation/cast-next-20261120/generated/stagehandbubble/intro.json",
+        "docs/art-generation/cast-next-20261120/generated/stagehandbubble/jump.json",
+        "docs/art-generation/cast-next-20261120/generated/stagehandbubble/selection.json",
+        "docs/art-generation/cast-next-20261120/generated/stagehandbubble/stance.json",
+        "docs/art-generation/cast-next-20261120/generated/stagehandbubble/victory.json",
+        "docs/art-generation/cast-next-20261120/generated/stagehandbubble/walk.json"
+      ],
+      "sourceURLs": [
+        "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_stagehandBubble.png?v=1773977710"
+      ],
+      "explicitURLs": [],
+      "exists": true,
+      "matches": true,
+      "status": "historical_bytes_restored",
+      "recovery": {
+        "method": "direct_official_download",
+        "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_stagehandBubble.png?v=1773977710",
+        "retrievedAt": "2026-11-20T10:31:58.609393+00:00",
+        "contentType": "image/jpeg"
+      }
+    }
+  ],
+  "complete": true,
+  "historicalReceiptsModified": false,
+  "completedAt": "2026-11-20T10:34:09.957123+00:00",
+  "uniqueReferences": 22,
+  "exactHistoricalReferences": 22,
+  "missingHistoricalReferences": [],
+  "historicalNativePNGsModified": false,
+  "recoveredGeneratedFilesVerified": 190,
+  "recoveredNativePNGs": 95,
+  "recoveredGenerationReceipts": 95,
+  "scopeNote": "The eight preloaded families only: 88 accepted native PNGs and 7 rejected native PNGs. Original imagegen source paths were lost; recovered files match the confirmed preupload Git SHA and SHA256 without changing historical receipts.",
+  "downloadEvidence": [
+    {
+      "historicalFile": "docs/art-generation/cast-next-20261120/research/jaxsuitpomni/official-jaxsuitpomni-1.png",
+      "requestedURL": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/jax-suit-pomni-plush-1.png?v=1762358224",
+      "resolvedURL": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/jax-suit-pomni-plush-1.png?v=1762358224",
+      "contentType": "image/png",
+      "detectedFormat": "png",
+      "sha256": "782f6c5963f506fdbe50c69a1b98136c231e49698495275879ad306d31f7f5ba",
+      "bytes": 327130,
+      "expectedSHA256": "782f6c5963f506fdbe50c69a1b98136c231e49698495275879ad306d31f7f5ba",
+      "expectedBytes": 327130,
+      "historicalExact": true,
+      "downloadFile": "docs/art-generation/cast-next-20261120/research/jaxsuitpomni/official-jaxsuitpomni-1.png",
+      "retrievedAt": "2026-11-20T10:31:49.972992+00:00"
+    },
+    {
+      "historicalFile": "docs/art-generation/cast-next-20261120/research/jaxsuitpomni/official-jaxsuitpomni-2.png",
+      "requestedURL": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/jax-suit-pomni-plush-2.png?v=1762358224",
+      "resolvedURL": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/jax-suit-pomni-plush-2.png?v=1762358224",
+      "contentType": "image/png",
+      "detectedFormat": "png",
+      "sha256": "69f87ad01cd0cd673edc7bcc4e5f16db9b5ed8eb689f41b93a115c213209d6ba",
+      "bytes": 318519,
+      "expectedSHA256": "69f87ad01cd0cd673edc7bcc4e5f16db9b5ed8eb689f41b93a115c213209d6ba",
+      "expectedBytes": 318519,
+      "historicalExact": true,
+      "downloadFile": "docs/art-generation/cast-next-20261120/research/jaxsuitpomni/official-jaxsuitpomni-2.png",
+      "retrievedAt": "2026-11-20T10:31:49.955779+00:00"
+    },
+    {
+      "historicalFile": "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-noir.png",
+      "requestedURL": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Noir.png?v=1785768060",
+      "resolvedURL": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Noir.png?v=1785768060",
+      "contentType": "image/png",
+      "detectedFormat": "png",
+      "sha256": "fa7196988e32f61446b691b0b956abc103e9761827d9a19dbaae5e1292d8c31c",
+      "bytes": 1555468,
+      "expectedSHA256": "fa7196988e32f61446b691b0b956abc103e9761827d9a19dbaae5e1292d8c31c",
+      "expectedBytes": 1555468,
+      "historicalExact": true,
+      "downloadFile": "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-noir.png",
+      "retrievedAt": "2026-11-20T10:31:50.226647+00:00"
+    },
+    {
+      "historicalFile": "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-kaufmo-suit.png",
+      "requestedURL": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/KaufmoSuit.png?v=1785347150",
+      "resolvedURL": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/KaufmoSuit.png?v=1785347150",
+      "contentType": "image/png",
+      "detectedFormat": "png",
+      "sha256": "e54ef43b2e9e73eed83bad635b971c8ac8f8a2caf8c82dbfef755ffd29b2868d",
+      "bytes": 1455321,
+      "expectedSHA256": "e54ef43b2e9e73eed83bad635b971c8ac8f8a2caf8c82dbfef755ffd29b2868d",
+      "expectedBytes": 1455321,
+      "historicalExact": true,
+      "downloadFile": "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-kaufmo-suit.png",
+      "retrievedAt": "2026-11-20T10:31:54.893037+00:00"
+    },
+    {
+      "historicalFile": "docs/art-generation/cast-next-20261120/research/states/official-intermission-caine.png",
+      "requestedURL": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/81.png?v=1762387272",
+      "resolvedURL": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/81.png?v=1762387272",
+      "contentType": "image/jpeg",
+      "detectedFormat": "jpg",
+      "sha256": "6c3a4635c8bf651f9554c916f56672f2948bea41fffff621c3e0ce6d8c5607be",
+      "bytes": 221531,
+      "expectedSHA256": "441a3e2df39c7ba7a95167d7ba902858b960c7f9e38f4b9ef0efa69c5bef7be0",
+      "expectedBytes": 3889495,
+      "historicalExact": false,
+      "downloadFile": "docs/art-generation/cast-next-20261120/research/references-recovered/official-intermission-caine-6c3a4635c8bf651f.jpg",
+      "retrievedAt": "2026-11-20T10:31:54.685684+00:00"
+    },
+    {
+      "historicalFile": "docs/art-generation/cast-next-20261120/research/merch/official-bowling-pin-ragatha.png",
+      "requestedURL": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_HeadpinRagatha.png?v=1773977710",
+      "resolvedURL": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_HeadpinRagatha.png?v=1773977710",
+      "contentType": "image/jpeg",
+      "detectedFormat": "jpg",
+      "sha256": "bcaa2f74eac8c7b736ab7640631edc1782cbb91c63795e024293e566d63955d3",
+      "bytes": 598597,
+      "expectedSHA256": "fffc7d222e4a2b15431ade2bf47054b17af554364cc89ac1ede69f6dd1c4f7f5",
+      "expectedBytes": 6499850,
+      "historicalExact": false,
+      "downloadFile": "docs/art-generation/cast-next-20261120/research/references-recovered/official-bowling-pin-ragatha-bcaa2f74eac8c7b7.jpg",
+      "retrievedAt": "2026-11-20T10:31:54.718373+00:00"
+    },
+    {
+      "historicalFile": "docs/art-generation/cast-next-20261120/research/merch/official-ringmaster-caine.png",
+      "requestedURL": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_ringmasterCaine.png?v=1773977710",
+      "resolvedURL": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_ringmasterCaine.png?v=1773977710",
+      "contentType": "image/jpeg",
+      "detectedFormat": "jpg",
+      "sha256": "7e2887e3cb6ffc26cc46a113e2309d935e18602ae2bba2fb911d8ff30162c416",
+      "bytes": 604650,
+      "expectedSHA256": "810e37a66b662ae00c610167fbd11b0e754b39c7eb0b70fa61ac0cd157e6b493",
+      "expectedBytes": 6486644,
+      "historicalExact": false,
+      "downloadFile": "docs/art-generation/cast-next-20261120/research/references-recovered/official-ringmaster-caine-7e2887e3cb6ffc26.jpg",
+      "retrievedAt": "2026-11-20T10:31:58.562752+00:00"
+    },
+    {
+      "historicalFile": "docs/art-generation/cast-next-20261120/research/merch/official-strongman-orbsman.png",
+      "requestedURL": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_strongmanOrbsman.png?v=1773977710",
+      "resolvedURL": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_strongmanOrbsman.png?v=1773977710",
+      "contentType": "image/jpeg",
+      "detectedFormat": "jpg",
+      "sha256": "47e8c316870904730493cf87cbbf8af0c94e93f9c0b49aacf821102612edc7ca",
+      "bytes": 602038,
+      "expectedSHA256": "47e8c316870904730493cf87cbbf8af0c94e93f9c0b49aacf821102612edc7ca",
+      "expectedBytes": 602038,
+      "historicalExact": true,
+      "downloadFile": "docs/art-generation/cast-next-20261120/research/merch/official-strongman-orbsman.png",
+      "retrievedAt": "2026-11-20T10:31:58.645337+00:00"
+    },
+    {
+      "historicalFile": "docs/art-generation/cast-next-20261120/research/merch/official-stagehand-bubble.png",
+      "requestedURL": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_stagehandBubble.png?v=1773977710",
+      "resolvedURL": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_stagehandBubble.png?v=1773977710",
+      "contentType": "image/jpeg",
+      "detectedFormat": "jpg",
+      "sha256": "c79461ad400eba410644a9a087dd3d0b70ef7b68a7dc9f1c423e60f55c9201d2",
+      "bytes": 583218,
+      "expectedSHA256": "c79461ad400eba410644a9a087dd3d0b70ef7b68a7dc9f1c423e60f55c9201d2",
+      "expectedBytes": 583218,
+      "historicalExact": true,
+      "downloadFile": "docs/art-generation/cast-next-20261120/research/merch/official-stagehand-bubble.png",
+      "retrievedAt": "2026-11-20T10:31:58.609393+00:00"
+    }
+  ],
+  "formatNegotiationEvidence": [
+    {
+      "historicalFile": "docs/art-generation/cast-next-20261120/research/states/official-intermission-caine.png",
+      "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/81.png?v=1762387272&format=png",
+      "accept": "image/png",
+      "contentType": "image/png",
+      "sha256": "441a3e2df39c7ba7a95167d7ba902858b960c7f9e38f4b9ef0efa69c5bef7be0",
+      "bytes": 3889495,
+      "historicalExact": true,
+      "retrievedAt": "2026-11-20T10:33:04.689665+00:00"
+    },
+    {
+      "historicalFile": "docs/art-generation/cast-next-20261120/research/merch/official-bowling-pin-ragatha.png",
+      "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_HeadpinRagatha.png?v=1773977710&format=png",
+      "accept": "image/png",
+      "contentType": "image/png",
+      "sha256": "fffc7d222e4a2b15431ade2bf47054b17af554364cc89ac1ede69f6dd1c4f7f5",
+      "bytes": 6499850,
+      "historicalExact": true,
+      "retrievedAt": "2026-11-20T10:33:04.638729+00:00"
+    },
+    {
+      "historicalFile": "docs/art-generation/cast-next-20261120/research/merch/official-ringmaster-caine.png",
+      "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_ringmasterCaine.png?v=1773977710&format=png",
+      "accept": "image/png",
+      "contentType": "image/png",
+      "sha256": "810e37a66b662ae00c610167fbd11b0e754b39c7eb0b70fa61ac0cd157e6b493",
+      "bytes": 6486644,
+      "historicalExact": true,
+      "retrievedAt": "2026-11-20T10:33:04.486775+00:00"
+    }
+  ],
+  "serializationCandidateNote": "Three in-memory PNG serialization trials did not match the historical hashes and were discarded. No transformed candidate was installed. The original PNGs were then retrieved byte-exact from the official CDN with format=png.",
+  "readOnlyPostRecoveryCheck": [
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/attack.json",
+      "sha256": "c7f19d1a715d21b43a583e867007c78073e1daf7f4b8a758fb9048f9f2901ab0",
+      "gitSHA": "06a567ff58d6149afc2b6c58a499d14abeded620",
+      "bytes": 3309,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/attack.png",
+      "sha256": "f6389b18ddf61d4807b1632faaade3470e891be7602b288dbca5e51ef1629307",
+      "gitSHA": "c6441365fb00e90edcc91ade1234ec247576cef0",
+      "bytes": 1385718,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/crouch.json",
+      "sha256": "2d0b447c1cb657c4f64ab7ba7e50a51215be3f357247b813bee652deddb356ae",
+      "gitSHA": "d006f932cb49d7e6e9112869e096a57507c1136d",
+      "bytes": 3318,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/crouch.png",
+      "sha256": "601c6af1d7bb583c7d323b435852f39b092258508850ca983c171dca210e482b",
+      "gitSHA": "30bf8fee027bb780136372ccf2f7c78408560954",
+      "bytes": 1194779,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/defeat.json",
+      "sha256": "bb7597f4861925a8907048f24df2e7f176766f0492d04a57d51dd5f4311abc7d",
+      "gitSHA": "539340e523cba5faec3cce94e5212da22b27499d",
+      "bytes": 3345,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/defeat.png",
+      "sha256": "275824da8abf27b8487c69cd141080d8efac37732a5a0bcf25af0694d31ea780",
+      "gitSHA": "4185bf5432305204c25454443e6bd9ac3428577e",
+      "bytes": 1098260,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/heavy.json",
+      "sha256": "2e48914e08abbbf7c142d7f9a494116790d714117bbefcca2395a6d77ba35f5c",
+      "gitSHA": "3133b8b418ec613097125fbaf708eb429ccc8602",
+      "bytes": 3355,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/heavy.png",
+      "sha256": "e6da33491c9140568f1a0594cb608d7a798f8d063267e5afd021b3ea84652c5c",
+      "gitSHA": "e2403f26426b220173bcd8aef1a175ad9f71a04c",
+      "bytes": 787731,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/hit.json",
+      "sha256": "ce8aec917f4acd83eb1101322820c2d198a3257b6f4cdf9b7a70adf28a3702ed",
+      "gitSHA": "70b5a2a0b4529099e601ace3adf729f32cf1f471",
+      "bytes": 3317,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/hit.png",
+      "sha256": "9232ef394885124ae4be51810aa712363c8b331b3518732e4e25e0f34751caa3",
+      "gitSHA": "512ea63026af414617d02e2c022c5e19bfddd574",
+      "bytes": 985431,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/intro.json",
+      "sha256": "ea4e528980eb56292d5a9f4c27d48cca94295123a8d01be27b600b423e97c91c",
+      "gitSHA": "fdc2327a31223185af8734a8246f2257ab564ca6",
+      "bytes": 3267,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/intro.png",
+      "sha256": "b9e304f112d63787fe86306a79968cd9d9abc047cd0307f01246d6afaef8891b",
+      "gitSHA": "94760b345b6eb0d6ebb9a8ecc862d9fcad1f0167",
+      "bytes": 995201,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/jump.json",
+      "sha256": "e33d1c24f2bbf4cbb448a3e2f0e1ef9961c070da6ebf03f35dae80ef708930fe",
+      "gitSHA": "6e879793e23f56800cfa0b059cf908988a9697e9",
+      "bytes": 3296,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/jump.png",
+      "sha256": "7f6ddda1139bacfbca9dcd29f2d59b20b1617554d10bda430ecb1f3ee8dcd1fa",
+      "gitSHA": "415bf9711e478c8d8234641a3d9b13a5a55acdd8",
+      "bytes": 1011058,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/selection.json",
+      "sha256": "e15ef58f053acde5b079680d5e4eed67d63c208eedb04f38195dcb4149d786b2",
+      "gitSHA": "e83b200e12427e08379cc16314bac39cd75aa0ad",
+      "bytes": 4336,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/selection.png",
+      "sha256": "5cd4179ae983b9a050162159e47bad53ff95bd895c790ae38963fa2df74a3d6c",
+      "gitSHA": "8a7507073896024a6f23c8c8b22389a52cc183ae",
+      "bytes": 923013,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/stance.json",
+      "sha256": "e354017d6c87167c99a55673e4d69dde4ddfe7ad03e1f0ffd74facb57d50bca5",
+      "gitSHA": "240c3f1e3bd8618e521f8616013059aeb6bb01b5",
+      "bytes": 3289,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/stance.png",
+      "sha256": "87721dfd7999af3b5d6d564135db0d9d26fcbf641b1514481e8e656ce1812fd4",
+      "gitSHA": "8da0e0e263fe563bf9efdd6d219c4dcd1c7db65d",
+      "bytes": 907265,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/victory.json",
+      "sha256": "da2759dc0c43a920451fa849e52a3576b7eb718c5b84b6ba4cc95d6dbd1f8031",
+      "gitSHA": "6ff002391f6324859e7c7d19dc161a898de819b5",
+      "bytes": 3302,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/victory.png",
+      "sha256": "310aa01b647b4bf10750a9884fb915dbce90e0fcfac2e6b122a25f8b332b10bf",
+      "gitSHA": "e0fe3d16203a6d849e5130375e8c8b25ee3d85a6",
+      "bytes": 939039,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/walk.json",
+      "sha256": "c731165856d09d3774bc0810c01846aa6508b7467a63dc603bca3f90eb9ed20b",
+      "gitSHA": "f0faecc896ddd985eb2a7c633676592188b5caaf",
+      "bytes": 3333,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/walk.png",
+      "sha256": "a1f21e7a09273340c0fb458a92a8d11fe364688bf5927e5630f02dac98ef693e",
+      "gitSHA": "ca1add57d7eed969f5681a9532631cb1cb7bdd25",
+      "bytes": 856379,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/noirribbit/attack.json",
+      "sha256": "db486c6964edf249b00354cccff480eef7af01f15eb8955b803af85b6550fc6c",
+      "gitSHA": "5dfd878d59de981bb7f028adc28e383fc2f3619e",
+      "bytes": 4452,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/noirribbit/attack.png",
+      "sha256": "bd9405b71dadee65c634d56763f9b123cdccfc4ab8ed9960045945e34fa8bc2d",
+      "gitSHA": "2bb1364b8cdb807805c5ac8c410c8d37558dfee8",
+      "bytes": 634539,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/noirribbit/crouch.json",
+      "sha256": "c97da62d29f94c82ead8ac9d96fbfc757cca5cd4c66d38464c70b42bb3ddc3fa",
+      "gitSHA": "6948011776edea936dede334e6c109ff93bdc349",
+      "bytes": 4417,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/noirribbit/crouch.png",
+      "sha256": "0734c41ad3edf682d31fc37bfb3b860fc0d8baa40b5c6a369f7b1bea447591bd",
+      "gitSHA": "7c5246591af3cbb71ed49e4d382971b447e31c9c",
+      "bytes": 691865,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/noirribbit/defeat.json",
+      "sha256": "4e40fec1bd7178826683b101f3ca1b44050740c16553476520788344bad70f36",
+      "gitSHA": "bd597d0c8f9a857eb05141972d44c8ad8e26b491",
+      "bytes": 4474,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/noirribbit/defeat.png",
+      "sha256": "755ac74442f18e51d29e7f2d52990588cf16b341cf3760954ae355b4044fd119",
+      "gitSHA": "fc16b036a0eeb0be1444bbf7cff6eb4ccb55c895",
+      "bytes": 779208,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/noirribbit/heavy.json",
+      "sha256": "139677e08de96976936d008e3b768466d06c296848971762dab8438a778d70bd",
+      "gitSHA": "979b3991e95023ad8ab3330197f7dee85f3dfdac",
+      "bytes": 4505,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/noirribbit/heavy.png",
+      "sha256": "31ebd5a9c53ae47ec5cf9a6435378a369e320ec3c6847f14694feda0a050f5b4",
+      "gitSHA": "6a6934e8c14df72e0f330e2a280475254d92fd29",
+      "bytes": 1284694,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/noirribbit/hit.json",
+      "sha256": "18e6f6adbe39379eab9f4cf474dfdf754bfdb11d20548f40fcccd449078424c5",
+      "gitSHA": "3410f873bc983b0ac83f695ddd2ef931ed539f81",
+      "bytes": 4410,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/noirribbit/hit.png",
+      "sha256": "c7e38f81f34572675481674618d28eb2da7712f2d796a84360fa762b02b7aaf5",
+      "gitSHA": "0fac70aad81b76160a12fda226b578d1478d05ea",
+      "bytes": 1367909,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/noirribbit/intro.json",
+      "sha256": "5476486d1a2e9a97a31c9bacbc03e12ff29fb97b2b791bdf0a95ea690ae650c7",
+      "gitSHA": "2e456b5d5635af7ccf6a71bce5a7815b48a0f389",
+      "bytes": 4356,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/noirribbit/intro.png",
+      "sha256": "680e3640ebe7333951175f8126e9b799956714a7df467c937a990d789a2c1630",
+      "gitSHA": "5f08a423449800883c411914784fb90c64022f28",
+      "bytes": 1312077,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/noirribbit/jump.json",
+      "sha256": "d36eedd9c69869c77828b373a72be3c89f3abe198862d03de21d3a48ae323913",
+      "gitSHA": "79d34910438c3ef8bfce4ef79010a4790ad35b9c",
+      "bytes": 4390,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/noirribbit/jump.png",
+      "sha256": "834125bf3dddb717eaa715fa409f681ccfdfcbc8e9d707c94c91f242271e7a9b",
+      "gitSHA": "4a0711115a400f9e31d3381d146e09d4fe7b84c1",
+      "bytes": 774755,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/noirribbit/selection.json",
+      "sha256": "2ed754fe675d1d7c72f1c5169fc654a736a1ec754cb9d1e3149ebde974d649aa",
+      "gitSHA": "feeaa7b0ecf9f0ebea96c9832f25ff231fffd40b",
+      "bytes": 4574,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/noirribbit/selection.png",
+      "sha256": "7e0856ee931693f817f7206945d38b178c3e79007a68c77d6c908c066972b78d",
+      "gitSHA": "e34d93b3e25a4d37c1ccc328c3c8c639e31520b6",
+      "bytes": 1279270,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/noirribbit/stance.json",
+      "sha256": "6bca631c8bc18ae1c88c3be7b0a85dad95bd4e4f92298b79cfac1f7a73d7c0f8",
+      "gitSHA": "4e2b3fcc73c29f041cde1bab9c90a7c4a4fd2734",
+      "bytes": 4378,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/noirribbit/stance.png",
+      "sha256": "4630a86d35b9fcd01eefaaf7b71c246cfa334f3a7ebb803fab93ee4442aa31c0",
+      "gitSHA": "dffdbd01b7a43308dee8860d071734aa831c2429",
+      "bytes": 1279890,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/noirribbit/victory.json",
+      "sha256": "8e2e58b9c888f20a30d369d5be31c2cc1ffe2d44b670a0a1d04f9a40528a91c7",
+      "gitSHA": "92c4877aae9e418791ab24c8137246e45245369a",
+      "bytes": 4425,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/noirribbit/victory.png",
+      "sha256": "2211cde3840d5e26c81df1e7e996722a07a0345a0da4c83d6eb9d33a596e62a3",
+      "gitSHA": "784e2e5b2e788d34e995d2e73912d9432bfb0c7a",
+      "bytes": 1311824,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/noirribbit/walk.json",
+      "sha256": "ae7b81de89e0afb8ce18f7dc36c5f8aedda7b92f94855e0ac54e66da4a8baaff",
+      "gitSHA": "f621ea704344aaa6ef67de81d209e4f622e23f88",
+      "bytes": 4377,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/noirribbit/walk.png",
+      "sha256": "3aea157537b0149a775293012ef5e56b032160f7ad3177f8520ad699404cbca5",
+      "gitSHA": "449f3fb5add3cc1caa7ed897b431caf275e72cc1",
+      "bytes": 1346053,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/attack.json",
+      "sha256": "e70b0902ac2a4fe6720cdd3f966f28b66ec55fcb65503f3d2db5edc24a39b116",
+      "gitSHA": "b19470642871edc2bb997ad9ee82b17d21d94e5e",
+      "bytes": 4415,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/attack.png",
+      "sha256": "2b7765bfdb71fa238933ee75c8c9e87c5efe431b8654c81cce57ac0508ea0e8e",
+      "gitSHA": "5eb9f1453e748dd857f5d2c553a3958bed69b6dd",
+      "bytes": 1293008,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/crouch.json",
+      "sha256": "b8b825c6d3dd811704a76d08e0a12316f917d0f26110347b569830bb36cb6790",
+      "gitSHA": "8d2b379c803bbd94188fc311eccf0f165b74e2af",
+      "bytes": 4392,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/crouch.png",
+      "sha256": "db8ecaa716c64f39cfddba737642ceb1a75ed0eb15f8e681992c1f9bb6faa5f5",
+      "gitSHA": "73d44311405dafc3929cc4503954956bc7ff2348",
+      "bytes": 746536,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/defeat.json",
+      "sha256": "0a0e9332c2bfc1a29fc2147f980c9b766de925733e234a3458d03839f8c1f048",
+      "gitSHA": "f45b738d0a4ee41bbf7702549f1daf1b00e92e27",
+      "bytes": 4464,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/defeat.png",
+      "sha256": "177a674530a60db4f52b33abcf3ec40aebb94f581576d0e72928cd5f9b4c65e7",
+      "gitSHA": "91a0504e27b0c3742e9be4fa93da90f53b2523ef",
+      "bytes": 786332,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/heavy.json",
+      "sha256": "e7d01bb8c757eb6d320c9542501d8dc035df23e46a688e9d1c4c4f12d85b407b",
+      "gitSHA": "42d50150ad9982c8578a18a2c19b27e62125a18c",
+      "bytes": 4470,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/heavy.png",
+      "sha256": "a72f3bb28a885e46b07b752eb7e7d606adcb453c28e369366c8210a874c0d5f0",
+      "gitSHA": "29cda249766e414f1106767ad3427f9e9c880b12",
+      "bytes": 1360039,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/hit.json",
+      "sha256": "8fcf5af25aba5b4c8d68c92ba6ee635fb3853290746d98cd49bb91d75655295f",
+      "gitSHA": "22bf104fb439167bdfec40bfa9458951ab45dec4",
+      "bytes": 4428,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/hit.png",
+      "sha256": "c5cccaff1dfbce3d27febcf1310b542766cceb8c8d3cb6f07d39842a0a12c000",
+      "gitSHA": "1516ecddf8acca8b0c94ce0b68d7183ca2d6e88d",
+      "bytes": 1474678,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/intro.json",
+      "sha256": "84054f07df2ec6734d583e7d19a27351c15f44e100b2f3bb5c50e54234622b6f",
+      "gitSHA": "c30d52419e8340251d42e444e6f5bb62131c7cca",
+      "bytes": 4370,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/intro.png",
+      "sha256": "7d45ccba02196755a6745575f4fb1fc72173f476992505ee2306d8cf7b8d36b6",
+      "gitSHA": "ce9eee5ae020eaa7f119a9a005fec574e633dca2",
+      "bytes": 1408732,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/jump.json",
+      "sha256": "3bc4793622b2588dd45c80e133d81020491670b0f565e13b0047aa825e1b9099",
+      "gitSHA": "f4d266d1dfec2bed2dc07d07b61c52a905440d1b",
+      "bytes": 4383,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/jump.png",
+      "sha256": "288af00f9612e314effb36d60d0d996a6f5c2710969c933c1e4b32f3e88aa369",
+      "gitSHA": "b27a19543bd0dfc36827dc1d5e05ae6887282bed",
+      "bytes": 724147,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/selection.json",
+      "sha256": "c7c0c8107e57c95af91d4a310f392f69b66fbeeb09dec6c8aeffadc5cf994483",
+      "gitSHA": "cbb9c74a0b49ba878ef3086299f3e5d892715aff",
+      "bytes": 4572,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/selection.png",
+      "sha256": "4e931f702f5758ed95c581651058b9ed2f0121e93d60305ee9bb8ec29865e378",
+      "gitSHA": "cd9130ac8859cc3c303970695010438537672562",
+      "bytes": 1401496,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/stance.json",
+      "sha256": "d9033f7fbc84bcb1daa5f9ddcf48fad6a927024fe28e1f8f52a3283570c3b094",
+      "gitSHA": "33a57b65795b72f90f75cfead3127a892d1baf2f",
+      "bytes": 4360,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/stance.png",
+      "sha256": "ddd3ccf122e5af6e0b4baf1961018e9fa9ef23f14ba1f0a6bb4964f78fcecd8d",
+      "gitSHA": "3920e1753760f982740e6f48bce272f93766649e",
+      "bytes": 1415133,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/victory.json",
+      "sha256": "587b47a4a28508c971a65ec06df677aacf2f586aa482424d10f468f4629ade7d",
+      "gitSHA": "e86243fa6e8a13e739ec43483f41f325ff3d8365",
+      "bytes": 4404,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/victory.png",
+      "sha256": "2bfb6233cb552839f6ecd0809ca5ce9abed38a5c0c4ba6937db483d5c9252b53",
+      "gitSHA": "ee2e49a54f9ebb95c903d8e3674926303c642ed9",
+      "bytes": 1416161,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/walk.json",
+      "sha256": "13e2149c3ad820f359ff8c03adafaf795a46282ab6f889731b5c84e09ebd5015",
+      "gitSHA": "d3f5417f543b0aca12be7202c81f475f0eaa66db",
+      "bytes": 4365,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/walk.png",
+      "sha256": "a3208c7a442461ff9c16c999a7cf6165799241112acdc70fd3fe89ecea3f8547",
+      "gitSHA": "8ba3c86b37d33bf6a850eac01eced278a205477d",
+      "bytes": 1465827,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/attack.json",
+      "sha256": "2c3128e7502640ba66e5ed3798332c492676d2ac6a02e0e9df1961701e33a32c",
+      "gitSHA": "8081622caaae7b50fda0257eb11e27151b7d2108",
+      "bytes": 7854,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/attack.png",
+      "sha256": "f750ba59fc70527075534807de43b6f601cddbe399f891186b9664617910ee21",
+      "gitSHA": "4aa877c719edf4896d1b62fa11b1ef9f2aae5967",
+      "bytes": 1275988,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/attempts/attack-rejected-1.json",
+      "sha256": "4cdd1d12845bba8ed8f2cf4a139c4ae1ef953f813ed42cbc23a952ad424c3f27",
+      "gitSHA": "cbd03601dd9440c3461a75183b2e8bd11528194c",
+      "bytes": 4416,
+      "status": "rejected_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/attempts/attack-rejected-1.png",
+      "sha256": "24ae3f554707a2ec26b2c6a657415312477da060beb02a0b5cd2067abedb170b",
+      "gitSHA": "b44daa4a6d0254d5a5f663bcc9630cff74af96e1",
+      "bytes": 1179625,
+      "status": "rejected_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/attempts/intro-rejected-1.json",
+      "sha256": "35670ba190f5d0ccf9b67dc3bd4e6d493f03a0f1ea8ff827b9e7e2b6a8a13279",
+      "gitSHA": "c72826c3eb2573e0afb33d4cf97827c1997e087d",
+      "bytes": 4380,
+      "status": "rejected_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/attempts/intro-rejected-1.png",
+      "sha256": "1d80c30be5c63d16c9bf6c44209ba126738fd64448fb453168ce71f8401364f4",
+      "gitSHA": "f2b18451c199809766e453ae9707a7e8ba7420ca",
+      "bytes": 1198821,
+      "status": "rejected_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/attempts/victory-rejected-1.json",
+      "sha256": "f542035986cc8593e89b54cd0d85a4e85741c50af0099797978bdc1d49b66cd6",
+      "gitSHA": "f54311ebbbe747bb9c7260624d0c9a0c7ec6fa97",
+      "bytes": 4891,
+      "status": "rejected_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/attempts/victory-rejected-1.png",
+      "sha256": "329092d9d69a187bf08a31beca5b781480e5ac01a9f7ab527ab584c69c9e051a",
+      "gitSHA": "1e8eaafe46194c5500d6ac9aa7a998f748f3c075",
+      "bytes": 1236920,
+      "status": "rejected_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/crouch.json",
+      "sha256": "21e5442414bf78fcf172e26aa69fef85e5b42bc82db69edc499108bfe27b33de",
+      "gitSHA": "1a9e16cbe3889bec04d8773656a392674525e2e7",
+      "bytes": 7505,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/crouch.png",
+      "sha256": "2249068df3ed2c0637605b3cd8f652b41fcaaca8ce1e5f46a4f3f42f26e1603b",
+      "gitSHA": "c992eded26c7d3050236f842ca35125003823f10",
+      "bytes": 1725115,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/defeat.json",
+      "sha256": "e88585cb401fff7c3ac1a38ca9eb3b7d365f2755b3b7c36d2a4c1cae0f133735",
+      "gitSHA": "bc15fd094088b1d3bd22ff561c0f59153b666386",
+      "bytes": 7503,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/defeat.png",
+      "sha256": "451f9b33242bb6a49cb32632337f46c1955789a1b0c6fb6c3d0e591488ed0ffa",
+      "gitSHA": "05aaf816fcf415e92c2d4a6bb67bfc975d27408b",
+      "bytes": 1338756,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/heavy.json",
+      "sha256": "2441a3535fb196183e2b26cd82aa59ab95b192a9e89febbbfcf4b4812b8f544a",
+      "gitSHA": "4066b00ac57e8b414bc8ead78390a321a3f35cf3",
+      "bytes": 7557,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/heavy.png",
+      "sha256": "a9cb44b24a63ab8526c9ed937835a504b628dea81d500d705cf1b3e6ddc8a816",
+      "gitSHA": "1bc3b6441cffda53da20ee98482804bd2b801e3e",
+      "bytes": 1407275,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/hit.json",
+      "sha256": "2575d1a974082ee56c8b78a3255df458ab2f846522f0221e984e27e63f46d852",
+      "gitSHA": "0b7fa097304f4219b11c7af7186167cd9fafc05e",
+      "bytes": 7498,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/hit.png",
+      "sha256": "e8a38f861078bd9b88255aca4f1d0f6ad73769875dd731c4461a9b5c3a18956d",
+      "gitSHA": "34c96cc6df1cfb395db4303a9cd03db3e0ce48d8",
+      "bytes": 1330746,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/intro.json",
+      "sha256": "18befe5db2ba25f9e1edd21ba7187457225479b76f95a269b7492e5d9f95cb7f",
+      "gitSHA": "95409d07d4881ab397456804fcdf2ba3c3d3e919",
+      "bytes": 7891,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/intro.png",
+      "sha256": "bfc52f2c77d0cdc8070c7d4e6ff95d19b12ff4e47a40989f11234e7b0a7ebc50",
+      "gitSHA": "0b8d03238ac732c3c387f635be879f1a4c45e624",
+      "bytes": 1455421,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/jump.json",
+      "sha256": "e439f751e40af1f6e6755a6b357c1dd40016514a142978f3e00aa666d004f5e1",
+      "gitSHA": "35b2dda3af9dbde14b6cbc7b8c1b6dce2f0de2d7",
+      "bytes": 7458,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/jump.png",
+      "sha256": "e1aa44aa9a728ba02032aa320ac766cfd13bd114522d63b54b4ba4b88a6d5b3c",
+      "gitSHA": "6be81bd35427ca8cf0e9e6d2d1dd58766d2ac4cb",
+      "bytes": 1208006,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/selection.json",
+      "sha256": "539081af87d769d46b7edaec48eee05053d39e34372239419260fa36d55f63c6",
+      "gitSHA": "1c801c38b1713e18ecbe345bb88ff0cc5aa1a35a",
+      "bytes": 5184,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/selection.png",
+      "sha256": "cdfc9b5405f7059498542b38a39bbd1d6ff83efe5ad35f44f09ba3be84bc6cef",
+      "gitSHA": "ec15e498afe9746af34cf55b95b89e6d6888e4c4",
+      "bytes": 1315027,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/stance.json",
+      "sha256": "193274b385acd05b4daa1e4ded861b35745898b5e2bcfb91a35f182859dd755f",
+      "gitSHA": "1b0b4ef9b911fc43bbedb0673a96957da8ea98c9",
+      "bytes": 5077,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/stance.png",
+      "sha256": "f782a57ba22c9239e201fc0e37e119813b339080e0caa2118b6991590cabdffc",
+      "gitSHA": "bde35ccdfc3a52011e3f03867127b224f2789cf4",
+      "bytes": 1288137,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/victory.json",
+      "sha256": "7e25aa257f40b61ae65f62746be893cb3c5d4573e37f8be02d64e45e7622937b",
+      "gitSHA": "acac836cd674baa7739198c3bc120d2a7751d2a8",
+      "bytes": 8375,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/victory.png",
+      "sha256": "ce23e99327ce5ed957cabf0b8ee98779fa215a2f21e303bdc432b44f6616e646",
+      "gitSHA": "e0a05baa11b0bd5ef59cdeef5e61a8666732cf66",
+      "bytes": 1345739,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/walk.json",
+      "sha256": "91b3a78fa29be4b11a608c71f662a9c6f4dc599aa3c8ec9e3fb3583b71929b90",
+      "gitSHA": "03a847db3f55cf0b5e027b4c1edfaed8649ea0c6",
+      "bytes": 7591,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/walk.png",
+      "sha256": "e10b8b2557358341db5989d82dc5b12dfa947b5d2ee79ce630a99d14caf4a6c1",
+      "gitSHA": "406d9e9d58a3f4b40afeb8da9ef0bae7c8a9df5e",
+      "bytes": 1775213,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/attack.json",
+      "sha256": "8904d781b76159489b52806338e66d565ed7c1323a1a756f897f404390640f21",
+      "gitSHA": "b1cb9f76c9405d48a010e0c9671d0dfdf75f7666",
+      "bytes": 4845,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/attack.png",
+      "sha256": "cf7640d55180d105b42f89ca6f7fe6e762a25769e624168261dee9822ff90386",
+      "gitSHA": "4abba63aaaa0f0f6b1c7fd8c33bec52227d04dee",
+      "bytes": 870794,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/attempts/heavy-rejected-1.json",
+      "sha256": "c831f88415adea9f5a046e4c103f9067d36cd556a62c4557b5dc3c0fd3919e95",
+      "gitSHA": "0a82d877092ee439130edd69a168be4b279759cd",
+      "bytes": 4268,
+      "status": "rejected_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/attempts/heavy-rejected-1.png",
+      "sha256": "dadec12ab065553512d72f8b77fa531267283dfaf2004d1709090ff1994a449e",
+      "gitSHA": "c954ef66259c6b00fb31a4c218615e58842d4e21",
+      "bytes": 1622901,
+      "status": "rejected_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/crouch.json",
+      "sha256": "db133f5f486d7c1f02d8fa84dcb9a88b73cb8658dd39d87c9da53819dd9eb13c",
+      "gitSHA": "685afb98475818a3eda0b053811580d01bbd8011",
+      "bytes": 4916,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/crouch.png",
+      "sha256": "c88a839fc994990603af5dad5932703b550605b921921213bdac5b3b7687808b",
+      "gitSHA": "8f43cb9a38e456d23b0a9465be8e12e9399f315c",
+      "bytes": 1416123,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/defeat.json",
+      "sha256": "77310055f3ae725d97f909b01a3801c9b0de41867c577d10697800c166b9aa08",
+      "gitSHA": "dfa34c294db95d8ba4c758330446dff53814213b",
+      "bytes": 4980,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/defeat.png",
+      "sha256": "bf778467b9c859be08546fe63eb6cf517c3611eba983155f09e2c027520778e5",
+      "gitSHA": "ff6f4531d9bcba4f2c85f73658d000272a76ca81",
+      "bytes": 1313197,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/heavy.json",
+      "sha256": "8aa093ba5ade2ed6fd59e326998fb17bd91b124ba80df24c149b1e9e76e5adc6",
+      "gitSHA": "fc4b677512f270b9d5c051639425419c8e8a57d5",
+      "bytes": 7484,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/heavy.png",
+      "sha256": "edf0f13decb21be1d38d57dc91526ad6de62fcc4d1acf814c958f12349778233",
+      "gitSHA": "c73f646121a8f6e45e4bf23f967b1abd24cb9e9f",
+      "bytes": 1364523,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/hit.json",
+      "sha256": "f256108525f77cd362ac3cba36960bd1dde769d8b515911f800e894412b4aa0c",
+      "gitSHA": "519a3231aee4b1307968abfa0fc1d62eb1942f80",
+      "bytes": 4903,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/hit.png",
+      "sha256": "ee50e3598417b47bc2ea4c5adf6ce18e7e9bb5ca0fbe6ebe8c1c6024a46e633b",
+      "gitSHA": "6c7852c6b2556dd9c038c6b98f80d719df8d3426",
+      "bytes": 895707,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/intro.json",
+      "sha256": "f2ee77c8c0c800b73d294a99ad8feb59dcaa3d783fae8046b04e97be60ff4da1",
+      "gitSHA": "b8633c3be1574b6954e0d1143feb49668f576d02",
+      "bytes": 4887,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/intro.png",
+      "sha256": "7be3e6964daaf8ef8acd4f74618df1eaaf6de2367fbaf9e4b085a8cee1085e31",
+      "gitSHA": "e9b8ed327c96997832f02d6ee453124a9f3cb890",
+      "bytes": 1528385,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/jump.json",
+      "sha256": "bb4fce37c4f51c59196128325c31970f3e44bfeb6bcafe36f1df1b1a62db47cc",
+      "gitSHA": "e722e6575b8e062e1343144e55bf019c0c4bc1a8",
+      "bytes": 4874,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/jump.png",
+      "sha256": "f0972de871db545f4d49b5de1771209c7fa2adb7eb25f5ff99877b6d09c213e5",
+      "gitSHA": "f5661045787ea411b7a95b53579827d97dbee427",
+      "bytes": 1504002,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/selection.json",
+      "sha256": "6d86b33e47981ac4144f0924de63ee77dd443534c02428f4ae806430bdc91e3c",
+      "gitSHA": "d89e975795b1c50201a2d64898581242a3bba5e1",
+      "bytes": 5017,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/selection.png",
+      "sha256": "3eca98c6bc889b80e080889d34ec4a4ec7e0887141babf2e178f762f2e8cb01d",
+      "gitSHA": "56e7907e31860d16b88cb4a1dd3280ef85470ea8",
+      "bytes": 1487585,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/stance.json",
+      "sha256": "438ed3fe8d86889dbd33f58709e27481c9839c1b93439799276478cae8f65b4a",
+      "gitSHA": "85ad1d90aa1810a9970fc34cc092a2984f9aa827",
+      "bytes": 4909,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/stance.png",
+      "sha256": "8881a0a263d6657c52719c12106d91c7e11c177916025a6b30535bbaf2077d3f",
+      "gitSHA": "5132a4b6e82bfd840251cab7233d0a17b8e59652",
+      "bytes": 1537013,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/victory.json",
+      "sha256": "227f633138b30e3dff245a6ea6738ddb41563ddd96e14dc0070be7b002e11ebd",
+      "gitSHA": "926b387f2e0660bd7ee10b168e23e8f0655d07c5",
+      "bytes": 4882,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/victory.png",
+      "sha256": "215bc7164b33c47f3a37cb0fa8ab391612de2ef35a3b3fbe6e1e2d40eec137ca",
+      "gitSHA": "01949da553e708fda9378612b5e37af8ecafcea1",
+      "bytes": 1520523,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/walk.json",
+      "sha256": "bec871c45e9b96198486d38b47b1a0d791171dad9b0552032c2ec0ded2d8b5ac",
+      "gitSHA": "fe5e24fe2e0f386caf1dbf9aa78f02a4067e4b42",
+      "bytes": 5031,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/walk.png",
+      "sha256": "5724adc2c0d3348aaa113fbd6a3a442f68564472d9d3023884e8f04e2d9a66f6",
+      "gitSHA": "d0ada99bc62ab5772ff64a9f8514c5abc5204441",
+      "bytes": 937680,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/attack.json",
+      "sha256": "ec7e326b8877fb84757ee513ea78e1a14b0fe45ed03cc0ff25cefdf1f4066505",
+      "gitSHA": "ee835dce01b76b9201f7bedd414e5d36f0deef67",
+      "bytes": 4148,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/attack.png",
+      "sha256": "d19b1f7281a46c41bbc5bcac672aab9998d4d6ac30fef785d72763febe2f6bb0",
+      "gitSHA": "9b487c156ff49a136c848fbb425cf9d7719ed926",
+      "bytes": 1380639,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/crouch.json",
+      "sha256": "a3d2b5121ab1b3fb270325427d09491975722f54a59166d3b509ec0c0c11994a",
+      "gitSHA": "6cabaf89c5cdd9c022e839ee694d7b102eee05aa",
+      "bytes": 4121,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/crouch.png",
+      "sha256": "94d378eb4885b08f729be393c3c1b079ebaa070a3fb96b21b667501f9a2f07bc",
+      "gitSHA": "aa6ac3775938b575af90e2de09cb644bcb5332ab",
+      "bytes": 1037488,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/defeat.json",
+      "sha256": "533aeb7233b3f675c21385fe83a1ceb86dea7e7e845a8e33f6a52b5c423de80e",
+      "gitSHA": "560e4736e3cd6fbbf6455419ed64fe6379db8513",
+      "bytes": 4166,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/defeat.png",
+      "sha256": "d5ae39821002807483e0f75385891e2b2013f62628a39de3ee4cc8c8b9971751",
+      "gitSHA": "3122f7ebbf99a2af091469f6c52c90cfde7562a5",
+      "bytes": 949416,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/heavy.json",
+      "sha256": "c3892c74071e1733bdfbaa31b4731a07bc0567e8d32f28c2c23d841eb967e7d3",
+      "gitSHA": "20016055a7aeb57b891956761556ee839e82b288",
+      "bytes": 4148,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/heavy.png",
+      "sha256": "cb1a9347e8f0c0251631ad833131a016957eced406403874973089b018ea0293",
+      "gitSHA": "948c76cfcf7997f5706cc125bfb0237e7be53c70",
+      "bytes": 1448200,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/hit.json",
+      "sha256": "0f4c7d62f7a765acca0fdc995392dc9648f5e9353dd0783d8c3cd7706fbbcbc6",
+      "gitSHA": "57cec41749ad716d20c564a4a509bfaa8079fdc9",
+      "bytes": 4154,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/hit.png",
+      "sha256": "e70d1da481cf75ab2f0732c3a3e56f1cb1f984ee1380b391206e072fa72dea19",
+      "gitSHA": "c5b9bb04cf3193e936bf729d5b3fe28e8c924765",
+      "bytes": 972923,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/intro.json",
+      "sha256": "cff806d1b51f40d95adc4b483983779b5784561c9259c1b58b8ebe3887f94be1",
+      "gitSHA": "8cf1bf66945a4d9302dc1797ef080876c5a8cace",
+      "bytes": 4139,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/intro.png",
+      "sha256": "08bf3469a66e4a87dd8402f8a61974db34a10aa6d2ae3093cfa78dcac964382f",
+      "gitSHA": "f4ba6a98e474cbb7fa0fba5ad29e1a434466db51",
+      "bytes": 869376,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/jump.json",
+      "sha256": "4427cad84db693d6c9de1cbc3eec8d303ab2691b3b953fc63553969f428c74bf",
+      "gitSHA": "11c2610a5b655494a5ad73b014da4d4df2f94b78",
+      "bytes": 4152,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/jump.png",
+      "sha256": "a6249cb59bc431e47229d6a6071d0ffe47251c8abc960fec643d8b60d49c99b0",
+      "gitSHA": "730b5aee903c46b7d400fa5bc06b1d09a4a2b8e0",
+      "bytes": 973156,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/selection.json",
+      "sha256": "fb6ad8d030f9eb2211842c60972bacc81c7c52fe675b8238866546dc5c649143",
+      "gitSHA": "bb6d6044be6e589e43e69f66478660ba780da4fd",
+      "bytes": 4062,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/selection.png",
+      "sha256": "b95d9ff79564bb0ae0b536ef4b3cf48b1cc43af6f046fa687355ea753fc4d5fb",
+      "gitSHA": "e49e7630ba1698eb76e9bbce45a1cb5b4d0170fe",
+      "bytes": 1539137,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/stance.json",
+      "sha256": "588b0b2b7263a849c2a555ea96299b71003793a0365e6309a46913fa62de48af",
+      "gitSHA": "dd5b789f1d16f7c7b28de460805ecf764cba5749",
+      "bytes": 4153,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/stance.png",
+      "sha256": "9ba904b80bdc7eb238e083d64507fa5056ea21f68d1c4c56b4cf8fe18af9cec1",
+      "gitSHA": "299d38a4f9850f997455ad1bfbe9e27539f72a1c",
+      "bytes": 826247,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/victory.json",
+      "sha256": "a7668b28c32302e0b1a534893870632eabc5eb77254f06899ecf8d8b8c9cddb5",
+      "gitSHA": "335d701da69a1d6206122c886fb5b3ea9625193e",
+      "bytes": 4129,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/victory.png",
+      "sha256": "3bb3d02157bb15f4a0c27a8b0b71df863e26937de70af20c750a43d841895b55",
+      "gitSHA": "128188216da8ff5764ddcd5f20caf07eb168dd75",
+      "bytes": 1520084,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/walk.json",
+      "sha256": "b9b9b03b3e20dc38adc9869186230e66e7da24b0ea02856bfc0fd05ace46d502",
+      "gitSHA": "4e7d3db12e111e0b74c9acac30c04d8316e1d5b6",
+      "bytes": 4122,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/walk.png",
+      "sha256": "78b73574cf7959957e8188bc7e23a8bfd817b824974e7149a8e7af69a9b2316c",
+      "gitSHA": "029bdf868d49c86a70807f226c8c6a2cbee4f52c",
+      "bytes": 947113,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/attack.json",
+      "sha256": "b87bba9afaa8b2c73d4fc489e0e6322d2433726496e800d43260891a6f7da816",
+      "gitSHA": "cb59b8b03602ffc943dfe5b5d93eb6ba21800ac9",
+      "bytes": 4286,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/attack.png",
+      "sha256": "e49508492769e75d1af820243e6a7582d7a537b1801df27c6b98cc4f2a71b34d",
+      "gitSHA": "04e4edf26f1e5ef8e13cb89d3c8b39020953e927",
+      "bytes": 1393453,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/attempts/victory-01.json",
+      "sha256": "6d094449722a9850b207901a0d67aec4f7292eb5f6ccb584a65041e084261674",
+      "gitSHA": "2c12f7d4d58f32c52a2e7184433926bcb21f1734",
+      "bytes": 3704,
+      "status": "rejected_visual"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/attempts/victory-01.png",
+      "sha256": "826d82efe07d7555154235bdca6299f3b37a054f18980ae74b74952ab8abf342",
+      "gitSHA": "e71fc2c481fe492397d0a4710a22bded351dd7b8",
+      "bytes": 1489539,
+      "status": "rejected_visual"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/attempts/victory-02.json",
+      "sha256": "d0119852ad7f9676e2f316f7260e00215aba20e00fc9e647890b498fb4a96e79",
+      "gitSHA": "5b610e76f48b3f70fcb61c94bd87e0b0205937e8",
+      "bytes": 4131,
+      "status": "rejected_visual"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/attempts/victory-02.png",
+      "sha256": "f09fa003a6ef37fdb2beee5c3bd84453b10762a75951df120e719163bc89fdf8",
+      "gitSHA": "dd9a2f0fec5a2631ed29cef6c2c19bb45e19a429",
+      "bytes": 1478746,
+      "status": "rejected_visual"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/attempts/victory-03.json",
+      "sha256": "b1c8ad8dd1ca9f1160de298586626b42ce62e3d5a600e984a6a9fcb88f6e8663",
+      "gitSHA": "26e89b4f46aad9641376af96e2fe5a8d2df21c75",
+      "bytes": 4151,
+      "status": "rejected_visual"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/attempts/victory-03.png",
+      "sha256": "03b95a10e7601822401ec1a4a7e80e390f3404b4a3dd535fc00266add9ae38dd",
+      "gitSHA": "7285d1c02d2398ba2aa99d36d965589984f4bf5d",
+      "bytes": 1535989,
+      "status": "rejected_visual"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/crouch.json",
+      "sha256": "1f47f0fe6c12b6ab345732768c30055a33222d82f6ceb7181402db744aaa38c2",
+      "gitSHA": "1964e4f056aab78d3a70d91ca06af4ba8c505b6a",
+      "bytes": 4254,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/crouch.png",
+      "sha256": "5672a9fa3db78d82c8405dc34a5de4bb708f8af1d91858450b10fd4dad17fc47",
+      "gitSHA": "44afae63f6e93c4a066c8af9e989f9d953f181bf",
+      "bytes": 872705,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/defeat.json",
+      "sha256": "36f1957310f080dfcb2fa97b6e5194740cc16456bcb1860b0e4e43987ce007e3",
+      "gitSHA": "f9b72b5091eea3102e8a74a804202b13dbe5674b",
+      "bytes": 4330,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/defeat.png",
+      "sha256": "003773700816ca44c00d85351607c3537cfbf937d1710fdbd5610c53ba460b1b",
+      "gitSHA": "5eb934a45f6598a93b9f27390f689276d5ae4e68",
+      "bytes": 1402930,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/heavy.json",
+      "sha256": "16cf9d696d5adb1d1b974b19f397490f1de314308d7eab5b7ff94a8ca3f02ef9",
+      "gitSHA": "318893fa531c5b2fa58db42e093f9bb89d7e347c",
+      "bytes": 4300,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/heavy.png",
+      "sha256": "ce9b21c555272264eb4fed1085fc1ecab2b5b957493070635d6b72ade255f2ae",
+      "gitSHA": "07224aaccc773cfc3aa9b025c0803a1286eb53b4",
+      "bytes": 853499,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/hit.json",
+      "sha256": "a8aee58e4739501e3f353d763a3de92aa91cd53834b6d44f36403e221466d7ca",
+      "gitSHA": "41d00add53ecd98e655fc51a4d609484b21760d7",
+      "bytes": 4309,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/hit.png",
+      "sha256": "52cef98fbb62e57e13f5ac6c01bcb141f4f94e7ae74ce1f169f8d92085ec5cdd",
+      "gitSHA": "bca240cb2035879a8398276c557de9e9cb73b02b",
+      "bytes": 920170,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/intro.json",
+      "sha256": "036b03cce7512b9b6759afdf83a51dd5cc4a998464f3a1a3cf6314b69c04b751",
+      "gitSHA": "fce7ef7310b4b1e605724b65f8704161d4b957fb",
+      "bytes": 4217,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/intro.png",
+      "sha256": "98c7993d422bf72a91177c816538a501b6a134acd0624376400624ddc70835ea",
+      "gitSHA": "c9968abe1782e1d6b1cb7904a38f352002f81d60",
+      "bytes": 924811,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/jump.json",
+      "sha256": "23cd6327f7a8fba8001a5fe1037f4c454d32957ea66654f3e81795f4dcf1d6d2",
+      "gitSHA": "eaaca196fac750c02a2411847e16461ee8470ae1",
+      "bytes": 4265,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/jump.png",
+      "sha256": "6be8d309bc4c8e7af6f1057df49aef6f7a02b667d924a22fb997acea6d0b8c52",
+      "gitSHA": "3f1383f1069008af507311bd916adbc3254f7e42",
+      "bytes": 815559,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/selection.json",
+      "sha256": "13222a73493acaa1e3bc205758053ab5560dcd8bb9b9f5813ff77ff60cb8bb72",
+      "gitSHA": "720c3d4a51462e2076a87af7e3ddb5c215483347",
+      "bytes": 4242,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/selection.png",
+      "sha256": "ede51b07225e79c80eefdf12cd862e6b9d166211bb452ab16bebff59760e460c",
+      "gitSHA": "743a200528f2d2641f4e8dda7a37ce02921cb6b2",
+      "bytes": 1518337,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/stance.json",
+      "sha256": "604fd9d8a8fa96dceb6813e0086d309648422a3ae9c8cb3b643a117b395e29d0",
+      "gitSHA": "bfe8eb4d5bc9f557d2ad62b9463c9a611c738400",
+      "bytes": 4226,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/stance.png",
+      "sha256": "82c5a84824c232f7608b97db29fa4d5a181c0812447e99868f6160cfe9df137d",
+      "gitSHA": "cf16c2e99bf1e38f6cefc12122509754304df3d3",
+      "bytes": 952869,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/victory.json",
+      "sha256": "cff1c5583830fd0ed79c4f4ca5d444781c3115b74afc51964371c1ec782e7e61",
+      "gitSHA": "f06076ea021505c33ab4de9a7da4c5a3e24cca38",
+      "bytes": 5327,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/victory.png",
+      "sha256": "f87735a2e0b4f04db2dd30a7765e73b202b2c764b8dec2584ad38315002391d2",
+      "gitSHA": "25b7760fa180fd3d7ae77c4ea4b563bb608af89a",
+      "bytes": 1536055,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/walk.json",
+      "sha256": "2cf389944203dc6a70bb72edc437fddf22972c350c7723f86df9253cc294a61e",
+      "gitSHA": "c8b3e31d196e8612f1f5f4b1956e19eade85ba97",
+      "bytes": 4288,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/walk.png",
+      "sha256": "fb01709646a9a8b2460c8d29f96d01d163ac528746010d493039b82235cb5e70",
+      "gitSHA": "df99af62c15da958619d666f78dd2ec22c209e47",
+      "bytes": 1003941,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/stagehandbubble/attack.json",
+      "sha256": "9728ecac454b48ee23c91ac37c0fb092c93270dbb352cbe4db17411288d14856",
+      "gitSHA": "e01208c58ecc249d1ce8ef0bb3e823cf15b5661f",
+      "bytes": 4446,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/stagehandbubble/attack.png",
+      "sha256": "0d7ae18fd8e4854097df55ba514b48181ad487bcd0f30de01aeec1bcb001eea1",
+      "gitSHA": "c0030f96b3989b5c0921dea7b5eeeb67ddc7675b",
+      "bytes": 1314653,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/stagehandbubble/crouch.json",
+      "sha256": "d04c49abf713500eabe0953cdbecdce9d91504250424140e4e359aae55229485",
+      "gitSHA": "b054a9996a81a269cdae4e7ff39e4d07862f7551",
+      "bytes": 4400,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/stagehandbubble/crouch.png",
+      "sha256": "2af9fb50ff8bee8cb3c4535f78e8e19535eefb8d013166c33bd5786ed69b0587",
+      "gitSHA": "766aa10d3b63af9eb4fe93635ab99ba5960b9b86",
+      "bytes": 907235,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/stagehandbubble/defeat.json",
+      "sha256": "706a9a967010f63da4897c07c9d422ccad9e6151a7b4a621c72677d72bd8a767",
+      "gitSHA": "8564aa5fae18f881b6ef9abcc12919a52958aade",
+      "bytes": 4435,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/stagehandbubble/defeat.png",
+      "sha256": "ff1b7498c43fd5f705970713f7f9cda38303b9a29a2ad147b934c12aecf4ebe5",
+      "gitSHA": "642008804319f9e4bd157c2da3ebe127292fbf52",
+      "bytes": 1250484,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/stagehandbubble/heavy.json",
+      "sha256": "39b436651db3a566066e16ef13253637c3c17b54e3a9706b932e45c6f59b04b9",
+      "gitSHA": "4995e7fff5fdf5305867956cc6a0f8986ea2e920",
+      "bytes": 4433,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/stagehandbubble/heavy.png",
+      "sha256": "9f1d80116926a663901bf84f3477307f5448cd0c7ab5c64f92b677ecf8a1d0a5",
+      "gitSHA": "238b8be72d5b8896b3f544caf75b42a921389b26",
+      "bytes": 1331782,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/stagehandbubble/hit.json",
+      "sha256": "26ccead07e38b4114ae4826f31765312dfd0eb2086c3822942338c45be365240",
+      "gitSHA": "35432ae38371ea40bff9aec8476da6127ed0297b",
+      "bytes": 4370,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/stagehandbubble/hit.png",
+      "sha256": "c64f40e2a2d1f4c6a9e936fc075782511a1006db83bab946a89c06523d642c6f",
+      "gitSHA": "6c532c64fac431cd0b3dcfb86b6c3f856923dcd3",
+      "bytes": 820923,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/stagehandbubble/intro.json",
+      "sha256": "276efa622a64660d5c83711e13641e3d37208727567252691c8875471e1f9860",
+      "gitSHA": "80ac0c8bd69bf40da05eb8b833075434861438a7",
+      "bytes": 4394,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/stagehandbubble/intro.png",
+      "sha256": "22a2aef752ee8ddfd8cdec3038ee985a383a9f0e2fcaa353c8808202ec4c1d3a",
+      "gitSHA": "1ce0db992a03607972cb9db25dbc6ad11ae5675c",
+      "bytes": 787318,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/stagehandbubble/jump.json",
+      "sha256": "3e327097c39a2ef00ad37591d168d97c497b3ef853b4652a7c5cac9f14876326",
+      "gitSHA": "29e1a65e8897a52b362d7934c01b31e46ac7fbbe",
+      "bytes": 4387,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/stagehandbubble/jump.png",
+      "sha256": "c216a7af8ac9d56c2242e0b5917672a9b7770f92e4f111868c83d85afd876e39",
+      "gitSHA": "3144b37517fcad27f29b4cde45c5ab4c62a98ce8",
+      "bytes": 793458,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/stagehandbubble/selection.json",
+      "sha256": "4fc7877754ece29bb0d2a6d9d44d295ca8f3b3f0f2637d2ff744ee91a32b16ab",
+      "gitSHA": "79832ee57aaea8fb40822bf159eab4988057e62f",
+      "bytes": 4028,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/stagehandbubble/selection.png",
+      "sha256": "463f70055d4c9ed064016b6f3744ebfecc3c3dbd58efd9282b824ced2af1c0fa",
+      "gitSHA": "40967851d5df1167d957e8b858cca6124bb0c594",
+      "bytes": 820851,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/stagehandbubble/stance.json",
+      "sha256": "d2c9540b9d31e973b2f31bf1efafbf79d8c692b6beb46b4149790bbbc1d56144",
+      "gitSHA": "b869cee1307e823ea0505ca3872ff4b2ee9de200",
+      "bytes": 4402,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/stagehandbubble/stance.png",
+      "sha256": "2767a833a73e5224d3ee9296c429fd1b2e54783cac760dba4d7331dd8932a1c5",
+      "gitSHA": "52b9eff89ad4430b1ce6785d81d1d77a08f8234c",
+      "bytes": 894538,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/stagehandbubble/victory.json",
+      "sha256": "682d3258fc28508fc1b18bcece69921f1700bae61fc23810381cac686a4e58c0",
+      "gitSHA": "460c6d49b726868b600252cb34c642c872eb2309",
+      "bytes": 4414,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/stagehandbubble/victory.png",
+      "sha256": "364ae03cb228af1674f3da519a4add3a752453f5e7fc71dede265bc57a173ebb",
+      "gitSHA": "b0cd001f0f3ac441e000b2f8e1617b36019ce17c",
+      "bytes": 760684,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/stagehandbubble/walk.json",
+      "sha256": "a6f6f319e3d1699731f8102419723925ad7ef7d02755bcc5ee76a31ef83f4f78",
+      "gitSHA": "e9ce4b08611e2d33a2492df9503123369a7ca164",
+      "bytes": 4410,
+      "status": "accepted_native"
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/stagehandbubble/walk.png",
+      "sha256": "3b066afee761bc58cd3c502f96d9e9da5b7615ec33f5c1e93211abe0caffdbdf",
+      "gitSHA": "107cfd966d15425b14c86b628398f343ce17cd83",
+      "bytes": 1280198,
+      "status": "accepted_native"
+    }
+  ]
+}

@@ -1,0 +1,220 @@
+{
+  "schema": "encore-character-canvas-review/v1",
+  "createdAt": "2026-11-20T10:56:48.117Z",
+  "method": "Production Canvas2D modules executed by Node and native Skia; actual drawImage sources and transforms inspected.",
+  "limitations": [
+    "No browser, DOM, input, audio, service-worker or physical-device test.",
+    "Individual static poses do not establish frame-by-frame animation.",
+    "Asset identity/proportion fidelity requires separate visual review; no canonical 1:1 certification."
+  ],
+  "partial": false,
+  "additionsOnly": true,
+  "introducedOn": "2026-11-20",
+  "appearanceId": "bowlingpinragatha",
+  "sources": {
+    "combat/data.mjs": "6910aaddf46645f98520f4cc6fb468c2bc43b6dd017d9237266a90f6c1bf892b",
+    "combat/costume-additions.mjs": "a3db2ecd8a368360b4e34179540d50c9c2250359a255c353a87dea135682d875",
+    "combat/costume-continuation-20261120.mjs": "d3774d17d6058e72081cc7a236f748fc26cc2532fe94ddf772e9ad6de638eb0f",
+    "combat/costume-resumption-20261120.mjs": "f83bde65b434f107abf7017e532a5600b2b43713f3b0e32308f8a1a2bd3be9d5",
+    "combat/costume-discoveries-20261120.mjs": "fb16daf1591a50602a68a84e2d7e5cafa12c230b2185ef4e1d627cec8a67565c",
+    "combat/illustrations.mjs": "26aca8338be81bedbbbc1bb4bc59dd0aae8b7b7ef4d785cbbf353ac109c53b99",
+    "combat/render.mjs": "91cdc8a8a4b5298644809714aa7e53219e1266e2ffc95478194a699a7bc1212f",
+    "combat/render-poses.mjs": "21e3afba8c19723ffdcb383402cc6339b63cb58df5d4323fda2ebde093ce0b29",
+    "combat/offline-manifest.mjs": "3e4808a0198e058ec85756265f575ebf63263278354b48c567fcbe3c755410b0",
+    "scripts/render-combat-character-review.mjs": "02a1c878bf23504d2c63e8046008a9f2a27b9389607a6f1166b498dda7fa780e"
+  },
+  "actions": [
+    {
+      "id": "bowlingpinragatha",
+      "pose": "intro",
+      "file": "assets/encore/poses/bowlingpinragatha/intro.png",
+      "sha256": "7be3e6964daaf8ef8acd4f74618df1eaaf6de2367fbaf9e4b085a8cee1085e31",
+      "bytes": 1528385,
+      "visibleBounds": {
+        "x": 46,
+        "y": 10,
+        "width": 347,
+        "height": 620
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "bowlingpinragatha",
+      "pose": "attack",
+      "file": "assets/encore/poses/bowlingpinragatha/attack.png",
+      "sha256": "cf7640d55180d105b42f89ca6f7fe6e762a25769e624168261dee9822ff90386",
+      "bytes": 870794,
+      "visibleBounds": {
+        "x": 131,
+        "y": 11,
+        "width": 428,
+        "height": 566
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "bowlingpinragatha",
+      "pose": "hit",
+      "file": "assets/encore/poses/bowlingpinragatha/hit.png",
+      "sha256": "ee50e3598417b47bc2ea4c5adf6ce18e7e9bb5ca0fbe6ebe8c1c6024a46e633b",
+      "bytes": 895707,
+      "visibleBounds": {
+        "x": 22,
+        "y": 10,
+        "width": 399,
+        "height": 614
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "bowlingpinragatha",
+      "pose": "walk",
+      "file": "assets/encore/poses/bowlingpinragatha/walk.png",
+      "sha256": "5724adc2c0d3348aaa113fbd6a3a442f68564472d9d3023884e8f04e2d9a66f6",
+      "bytes": 937680,
+      "visibleBounds": {
+        "x": 106,
+        "y": 1,
+        "width": 356,
+        "height": 636
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "bowlingpinragatha",
+      "pose": "jump",
+      "file": "assets/encore/poses/bowlingpinragatha/jump.png",
+      "sha256": "f0972de871db545f4d49b5de1771209c7fa2adb7eb25f5ff99877b6d09c213e5",
+      "bytes": 1504002,
+      "visibleBounds": {
+        "x": 71,
+        "y": 19,
+        "width": 315,
+        "height": 587
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "bowlingpinragatha",
+      "pose": "crouch",
+      "file": "assets/encore/poses/bowlingpinragatha/crouch.png",
+      "sha256": "c88a839fc994990603af5dad5932703b550605b921921213bdac5b3b7687808b",
+      "bytes": 1416123,
+      "visibleBounds": {
+        "x": 109,
+        "y": 5,
+        "width": 435,
+        "height": 417
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "bowlingpinragatha",
+      "pose": "victory",
+      "file": "assets/encore/poses/bowlingpinragatha/victory.png",
+      "sha256": "215bc7164b33c47f3a37cb0fa8ab391612de2ef35a3b3fbe6e1e2d40eec137ca",
+      "bytes": 1520523,
+      "visibleBounds": {
+        "x": 57,
+        "y": 13,
+        "width": 307,
+        "height": 623
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "bowlingpinragatha",
+      "pose": "defeat",
+      "file": "assets/encore/poses/bowlingpinragatha/defeat.png",
+      "sha256": "bf778467b9c859be08546fe63eb6cf517c3611eba983155f09e2c027520778e5",
+      "bytes": 1313197,
+      "visibleBounds": {
+        "x": 22,
+        "y": 8,
+        "width": 598,
+        "height": 305
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "bowlingpinragatha",
+      "pose": "heavy",
+      "file": "assets/encore/poses/bowlingpinragatha/heavy.png",
+      "sha256": "edf0f13decb21be1d38d57dc91526ad6de62fcc4d1acf814c958f12349778233",
+      "bytes": 1364523,
+      "visibleBounds": {
+        "x": 135,
+        "y": 18,
+        "width": 386,
+        "height": 393
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    }
+  ],
+  "stances": [
+    {
+      "id": "bowlingpinragatha",
+      "file": "assets/encore/stance/bowlingpinragatha.png",
+      "sha256": "8881a0a263d6657c52719c12106d91c7e11c177916025a6b30535bbaf2077d3f",
+      "bytes": 1537013,
+      "nativeFacing": 1,
+      "rendered": true,
+      "bothFacings": true
+    }
+  ],
+  "portraits": [
+    {
+      "id": "bowlingpinragatha",
+      "archiveId": null,
+      "file": "assets/encore/selection/bowlingpinragatha.png",
+      "sha256": "3eca98c6bc889b80e080889d34ec4a4ec7e0887141babf2e178f762f2e8cb01d",
+      "bytes": 1487585,
+      "rendered": true
+    }
+  ],
+  "missing": [],
+  "sheets": [
+    "actions-bowlingpinragatha.jpg",
+    "archive-portraits-01.jpg"
+  ],
+  "browserTestStatus": "not_executed",
+  "counts": {
+    "appearances": 1,
+    "expectedActions": 9,
+    "actions": 9,
+    "stances": 1,
+    "drawChecks": 20,
+    "archiveEntries": 0,
+    "portraits": 1,
+    "expectedPortraits": 1,
+    "missing": 0
+  },
+  "complete": true
+}

@@ -1,0 +1,34 @@
+{
+  "id": "presidentpomni-attack",
+  "appearanceId": "presidentpomni",
+  "slot": "attack",
+  "file": "assets/encore/poses/presidentpomni/attack.png",
+  "sourceGenerationId": "exec-948c9df4-7e98-4490-b41d-dd11b17f97a9",
+  "method": "image_gen.imagegen",
+  "prompt": "Use case: stylized-concept. Asset type: one full-body 2D fighting-game drawing. EDIT the approved President Pomni design in input image 1 into the requested pose; use input image 2 only to verify exact costume colors. Preserve this SAME single character identity, relative head/body proportions, brown bob and bangs, red-and-blue segmented jester hat with yellow band and two yellow pompons, white face, red/blue pinwheel irises, black outlines and blush. Preserve muted medium-blue tailored jacket and full-length trousers, white shirt, pale gray necktie, white gloves, rounded black shoes. Match crisp detailed 2D cel shading and black outlines of approved reference. Both arms and both legs present and anatomically connected; suit stays fully worn. Full body entirely visible, hat tips and shoes fully inside canvas, generous transparent margin on all sides. Transparent RGBA background only; no floor, shadow, glow, aura, speedline backdrop, added items, labels, text, watermark, separate effect sprite, second character, scene or sheet. Do not copy toy support. Pose request: a distinct light straight punch to the right, rightward leading white-gloved fist extended at chest height, other fist tucked near chest, one foot firmly forward, dynamic weight shift, determined expression. One individual figure only.",
+  "referencePaths": [
+    "assets/encore/selection/presidentpomni.png",
+    "research/costume-83.png"
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/digital-circus-animiniz-costume-adventure-series"
+  ],
+  "sha256": "1a0b7ee7deca75d72b99d11480832d0464804ddedbe6d41ec9c6f3e565720209",
+  "dimensions": [
+    1199,
+    1312
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "bboxAlpha12": [
+    133,
+    27,
+    1062,
+    1291
+  ],
+  "bytes": 850882,
+  "visualReview": "Revue individuelle et composition avec alpha natif sur fond sombre : un personnage entier, accessoires contenus, costume et proportions cohérents entre les onze vues. Pose statique originale pour le jeu."
+}

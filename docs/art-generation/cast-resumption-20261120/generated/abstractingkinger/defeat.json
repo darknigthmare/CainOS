@@ -1,0 +1,77 @@
+{
+  "schema": "encore-native-art-resumption/v1",
+  "method": "image_gen.imagegen",
+  "episodeFidelityClaim": false,
+  "checkpointFile": "docs/art-generation/cast-continuation-20261120/generation-resume.json",
+  "transparent_background": true,
+  "nativeFacing": "right",
+  "status": "accepted_native",
+  "includedInRuntime": false,
+  "appearanceId": "abstractingkinger",
+  "slot": "defeat",
+  "id": "abstractingkinger-defeat",
+  "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingkinger/defeat.png",
+  "targetFile": "assets/encore/poses/abstractingkinger/defeat.png",
+  "sourceGenerationId": "exec-e9439da8-0965-4ace-8e5d-3b33ac0a0530",
+  "nativeSourceFile": "/workspace/scratch/5f5114b49696/generated_images/exec-e9439da8-0965-4ace-8e5d-3b33ac0a0530.png",
+  "prompt": "Use case: identity-preserve. Asset type: ONE individual full-body transparent 2D fighting-game action sprite of ABSTRACTING KINGER. Reference 1 is the approved strict design lock for silhouette, proportions, exact transformation patches, eyes, colours and polished cel shading. Reference 2 supplies official design details only; do not imitate its squat toy proportions, setting or lighting. Tall beige king chess piece with cross crown, one normal bulging blue-iris eye, purple floor-length robe with white black-spotted ermine. Opposing head/crown side is dark angular crystal with large concentric pastel eye and extra embedded eyes; two WHITE FLOATING HANDS with crystal cuffs, asymmetrical crystal robe base. Absolutely no human face, mouth, arms inside sleeves, legs or feet. Preserve exact normal/abstract side pattern. Create a genuinely distinct natural action pose, not a mirrored/cropped selection image. Every limb, crown/hat/ear tip, attached mask and crystal spike must fit fully inside clear transparent margins on ALL sides. One connected character, crisp detailed 2D art on true transparent RGBA; no scenery, floor, cast shadow, aura, glow, particles, labels, watermark, inset or duplicate. ANATOMICAL CLARIFICATION: Each of the exactly two white hands with its crystal cuff floats independently, with clearly transparent gaps between cuff and torso/head. No purple sleeve, arm or connector to the robe. POSE: DEFEAT: entire chess-piece body gently toppled onto its side, crown tilted toward screen RIGHT, robe folded but complete, both floating white hands drooping near the body. Every feature intact, no breakage, blood or extra parts; full sideways silhouette visible.",
+  "checkpointPrompt": "Use case: identity-preserve. Asset type: ONE individual full-body transparent 2D fighting-game action sprite of ABSTRACTING KINGER. Reference 1 is the approved strict design lock for silhouette, proportions, exact transformation patches, eyes, colours and polished cel shading. Reference 2 supplies official design details only; do not imitate its squat toy proportions, setting or lighting. Tall beige king chess piece with cross crown, one normal bulging blue-iris eye, purple floor-length robe with white black-spotted ermine. Opposing head/crown side is dark angular crystal with large concentric pastel eye and extra embedded eyes; two WHITE FLOATING HANDS with crystal cuffs, asymmetrical crystal robe base. Absolutely no human face, mouth, arms inside sleeves, legs or feet. Preserve exact normal/abstract side pattern. Create a genuinely distinct natural action pose, not a mirrored/cropped selection image. Every limb, crown/hat/ear tip, attached mask and crystal spike must fit fully inside clear transparent margins on ALL sides. One connected character, crisp detailed 2D art on true transparent RGBA; no scenery, floor, cast shadow, aura, glow, particles, labels, watermark, inset or duplicate. POSE: DEFEAT: entire chess-piece body gently toppled onto its side, crown tilted toward screen RIGHT, robe folded but complete, both floating white hands drooping near the body. Every feature intact, no breakage, blood or extra parts; full sideways silhouette visible.",
+  "referencePaths": [
+    "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingkinger/selection.png",
+    "docs/art-generation/cast-continuation-20261120/references/official-AbstractedKinger.png"
+  ],
+  "portableReferences": [
+    {
+      "position": 1,
+      "kind": "repository-asset",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingkinger/selection.png",
+      "sha256": "181107cc8433a9b53985aeae0d1389c15ab79c4f17f823f4cf1b1e5cb9f14265",
+      "bytes": 1275414
+    },
+    {
+      "position": 2,
+      "kind": "official-source-reference",
+      "file": "docs/art-generation/cast-continuation-20261120/references/official-AbstractedKinger.png",
+      "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedKinger.png?v=1780353722",
+      "pageUrl": "https://glitchproductions.store/products/abstraction-animiniz",
+      "sha256": "3bd68b08f964e029caf73fcb9313c93a4f1b340ea02b1cc80c8514fe41541ef7",
+      "bytes": 2854111,
+      "restoreInstruction": "The exact reference is archived in this repository. If unavailable, download the named official image URL, verify and visually inspect it before generation. For an expired storyboard URL, refresh the storyboard through the official episode player metadata."
+    }
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/abstraction-animiniz",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedKinger.png?v=1780353722"
+  ],
+  "sourceKind": "Produit dérivé officiel",
+  "visualReview": {
+    "reviewer": "generate_pomni_kinger",
+    "status": "accepted",
+    "observations": [
+      "Entire chess body gently toppled onto its side, crown/head toward screen right and robe folded into a complete sideways silhouette.",
+      "Two white crystal-cuffed hands droop beside the body as independent units; no arms, legs, feet or invented parts.",
+      "Normal beige cross crown and blue eye, opposing crystal eyes, spotted ermine and crystal base remain intact with every tip inside the image bounds; no injury or effects."
+    ],
+    "scope": "Approved reference identity and native sprite fit; no canonical episode certification."
+  },
+  "dimensions": [
+    1774,
+    887
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "alpha12Bounds": [
+    23,
+    42,
+    1753,
+    874
+  ],
+  "fullyTransparentPixels": 871447,
+  "sha256": "281efa65161845981ee057ba23327183bedb5dd094777925429125ed27c60ef0",
+  "bytes": 1280084,
+  "nativeCopyVerified": true,
+  "createdAt": "2026-11-20T08:49:20.800699+00:00"
+}

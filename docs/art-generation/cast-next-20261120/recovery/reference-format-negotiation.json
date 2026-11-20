@@ -1,0 +1,35 @@
+{
+  "schema": "encore-reference-format-recovery/v1",
+  "attempts": [
+    {
+      "historicalFile": "docs/art-generation/cast-next-20261120/research/states/official-intermission-caine.png",
+      "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/81.png?v=1762387272&format=png",
+      "accept": "image/png",
+      "contentType": "image/png",
+      "sha256": "441a3e2df39c7ba7a95167d7ba902858b960c7f9e38f4b9ef0efa69c5bef7be0",
+      "bytes": 3889495,
+      "historicalExact": true,
+      "retrievedAt": "2026-11-20T10:33:04.689665+00:00"
+    },
+    {
+      "historicalFile": "docs/art-generation/cast-next-20261120/research/merch/official-bowling-pin-ragatha.png",
+      "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_HeadpinRagatha.png?v=1773977710&format=png",
+      "accept": "image/png",
+      "contentType": "image/png",
+      "sha256": "fffc7d222e4a2b15431ade2bf47054b17af554364cc89ac1ede69f6dd1c4f7f5",
+      "bytes": 6499850,
+      "historicalExact": true,
+      "retrievedAt": "2026-11-20T10:33:04.638729+00:00"
+    },
+    {
+      "historicalFile": "docs/art-generation/cast-next-20261120/research/merch/official-ringmaster-caine.png",
+      "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_ringmasterCaine.png?v=1773977710&format=png",
+      "accept": "image/png",
+      "contentType": "image/png",
+      "sha256": "810e37a66b662ae00c610167fbd11b0e754b39c7eb0b70fa61ac0cd157e6b493",
+      "bytes": 6486644,
+      "historicalExact": true,
+      "retrievedAt": "2026-11-20T10:33:04.486775+00:00"
+    }
+  ]
+}

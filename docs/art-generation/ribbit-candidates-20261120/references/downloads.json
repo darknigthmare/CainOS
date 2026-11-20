@@ -1,0 +1,141 @@
+{
+  "schema": "encore-official-reference-audit/v1",
+  "retrievedAt": "2026-11-20T12:19:48.099881+00:00",
+  "sourcePage": "https://glitchproductions.store/products/ribbit-pendantz-blindbox",
+  "sourceKind": "Produit dérivé officiel GLITCH",
+  "episodeClaim": false,
+  "downloadedAndInspected": [
+    {
+      "file": "docs/art-generation/ribbit-candidates-20261120/references/official-anime-ribbit.png",
+      "url": "https://glitchproductions.store/cdn/shop/files/Anime_1.png?v=1785347149&width=1600",
+      "bytes": 1130253,
+      "sha256": "02b2d7fccc04eb304961f381918888022363f0fda06c34a1e3b5b629de858ecf",
+      "contentType": "image/png",
+      "dimensions": [
+        1600,
+        1600
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visuallyInspected": true
+    },
+    {
+      "file": "docs/art-generation/ribbit-candidates-20261120/references/official-maid-ribbit.png",
+      "url": "https://glitchproductions.store/cdn/shop/files/Maid.png?v=1786203146&width=1600",
+      "bytes": 1428753,
+      "sha256": "77d722b8256f15c0d8116c8f57968c022c6feda1a11b04f5c675d49281c9f59c",
+      "contentType": "image/png",
+      "dimensions": [
+        1600,
+        1600
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visuallyInspected": true
+    },
+    {
+      "file": "docs/art-generation/ribbit-candidates-20261120/references/official-jax-suit-ribbit.png",
+      "url": "https://glitchproductions.store/cdn/shop/files/JaxSuit_1.png?v=1785347149&width=1600",
+      "bytes": 1467375,
+      "sha256": "a832fc71c7f8d0d647e9aec73baf7c21f29dd2663e6aae7699cab03504d3bfdc",
+      "contentType": "image/png",
+      "dimensions": [
+        1600,
+        1600
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visuallyInspected": true
+    },
+    {
+      "file": "docs/art-generation/ribbit-candidates-20261120/references/official-iconic-ribbit.png",
+      "url": "https://glitchproductions.store/cdn/shop/files/Iconic_1.png?v=1785347149&width=1600",
+      "bytes": 1085524,
+      "sha256": "d62ee29c8d07410db6ddfdde22965b719a305e9d6ec08aa1c48ab1788a6ce825",
+      "contentType": "image/png",
+      "dimensions": [
+        1600,
+        1600
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visuallyInspected": true
+    },
+    {
+      "file": "docs/art-generation/ribbit-candidates-20261120/references/official-ribbit-group-3.png",
+      "url": "https://glitchproductions.store/cdn/shop/files/Pendantz_3.png?v=1785768286&width=1600",
+      "bytes": 3267170,
+      "sha256": "12328706f4cb6e815a360d2bc797e438f7ce17d7970da4492b0a84e8ce5cb7cb",
+      "contentType": "image/png",
+      "dimensions": [
+        1600,
+        1600
+      ],
+      "mode": "RGB",
+      "visuallyInspected": true
+    },
+    {
+      "file": "docs/art-generation/ribbit-candidates-20261120/references/official-ribbit-group-2.png",
+      "url": "https://glitchproductions.store/cdn/shop/files/Pendantz_2.png?v=1785768286&width=1600",
+      "bytes": 2984773,
+      "sha256": "c06fcf5036cec9983819747ce98f9f2f68695b6cff60648b6ccfc7b6c62d99c2",
+      "contentType": "image/png",
+      "dimensions": [
+        1600,
+        1600
+      ],
+      "mode": "RGB",
+      "visuallyInspected": true
+    },
+    {
+      "file": "docs/art-generation/ribbit-candidates-20261120/references/official-ribbit-group-1.png",
+      "url": "https://glitchproductions.store/cdn/shop/files/Pendantz_1.png?v=1785768286&width=1600",
+      "bytes": 3129594,
+      "sha256": "742ba7985ef1ab40c1bf20c7605bb0c47e34ad3dda8571d9add307d7fef9bdc5",
+      "contentType": "image/png",
+      "dimensions": [
+        1600,
+        1600
+      ],
+      "mode": "RGB",
+      "visuallyInspected": true
+    },
+    {
+      "file": "docs/art-generation/ribbit-candidates-20261120/references/official-ribbit-group-4.png",
+      "url": "https://glitchproductions.store/cdn/shop/files/Pendantz_4.png?v=1785768286&width=1600",
+      "bytes": 3492306,
+      "sha256": "73f8ef552a7d379aa8c2398d1ca1fa3c029b16c7e19b5b6f0ecf21cb90f713a5",
+      "contentType": "image/png",
+      "dimensions": [
+        1600,
+        1600
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "visuallyInspected": true
+    }
+  ],
+  "recommendation": [
+    "animeribbit",
+    "jaxsuitribbit"
+  ],
+  "hold": [
+    "maidribbit"
+  ],
+  "holdReason": "Le modèle Maid est distinct, mais les pieds ne sont visibles dans aucune des trois vues officielles examinées. Éviter de choisir des chaussures arbitraires pour une famille complète."
+}

@@ -1,0 +1,29 @@
+{
+  "schema": "encore-undermap-generation-receipts-v1",
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "savedAt": "2026-11-20T13:31:45.819Z",
+  "nativeInventory": "asset-inventory.json",
+  "promptSet": "generation-prompts.json",
+  "planes": [
+    {
+      "plane": "far",
+      "outputHint": "Generated images are saved to /workspace/scratch/f726dc7a5ad2/generated_images as /workspace/scratch/f726dc7a5ad2/generated_images/exec-b47c7924-29e7-48f5-b9d7-570587aff922.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "nativePath": "native/far.png",
+      "activePath": "../../../assets/encore/stages/undermap/far.png"
+    },
+    {
+      "plane": "mid",
+      "outputHint": "Generated images are saved to /workspace/scratch/f726dc7a5ad2/generated_images as /workspace/scratch/f726dc7a5ad2/generated_images/exec-035ee84e-d2b3-45eb-82bd-d9b69d41448e.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "nativePath": "native/mid.png",
+      "activePath": "../../../assets/encore/stages/undermap/mid.png"
+    },
+    {
+      "plane": "near",
+      "outputHint": "Generated images are saved to /workspace/scratch/f726dc7a5ad2/generated_images as /workspace/scratch/f726dc7a5ad2/generated_images/exec-1c41e8f8-1bf7-4aad-a575-f09320d47e32.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "nativePath": "native/near.png",
+      "activePath": "../../../assets/encore/stages/undermap/near.png"
+    }
+  ],
+  "sourceHandling": "Original service outputs are retained, and both project source copies and active copies are byte-identical. No upscaling or alpha normalization."
+}

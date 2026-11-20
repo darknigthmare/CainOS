@@ -1,0 +1,219 @@
+{
+  "schema": "encore-character-canvas-review/v1",
+  "createdAt": "2026-11-20T08:56:50.641Z",
+  "method": "Production Canvas2D modules executed by Node and native Skia; actual drawImage sources and transforms inspected.",
+  "limitations": [
+    "No browser, DOM, input, audio, service-worker or physical-device test.",
+    "Individual static poses do not establish frame-by-frame animation.",
+    "Asset identity/proportion fidelity requires separate visual review; no canonical 1:1 certification."
+  ],
+  "partial": false,
+  "additionsOnly": true,
+  "introducedOn": "2026-11-20",
+  "appearanceId": "zoobleep5",
+  "sources": {
+    "combat/data.mjs": "6910aaddf46645f98520f4cc6fb468c2bc43b6dd017d9237266a90f6c1bf892b",
+    "combat/costume-additions.mjs": "1aa4eabd6c27765bb087b7cf18a71f5bb6dacd385f10e2ebc442edbc7c420eda",
+    "combat/costume-continuation-20261120.mjs": "d3774d17d6058e72081cc7a236f748fc26cc2532fe94ddf772e9ad6de638eb0f",
+    "combat/costume-resumption-20261120.mjs": "5fc7997877eeab8a7b4e68b3a25e3be265abf0082755f02ed9b4b0657557a52e",
+    "combat/illustrations.mjs": "26aca8338be81bedbbbc1bb4bc59dd0aae8b7b7ef4d785cbbf353ac109c53b99",
+    "combat/render.mjs": "91cdc8a8a4b5298644809714aa7e53219e1266e2ffc95478194a699a7bc1212f",
+    "combat/render-poses.mjs": "21e3afba8c19723ffdcb383402cc6339b63cb58df5d4323fda2ebde093ce0b29",
+    "combat/offline-manifest.mjs": "ba853b6eb9bb8eb9ef8f0d49b46cebbec6214fbc84abacf5b3aba3cef53ae423",
+    "scripts/render-combat-character-review.mjs": "59e623f407e86dd639053f090d1bb8a0bc01a39dc04a441e3e08b737fe39f250"
+  },
+  "actions": [
+    {
+      "id": "zoobleep5",
+      "pose": "intro",
+      "file": "assets/encore/poses/zoobleep5/intro.png",
+      "sha256": "9feda71bc8a9e1d73bc2e90ad602604024d3d23ec3af87c8de2acda052f16c7c",
+      "bytes": 1415628,
+      "visibleBounds": {
+        "x": 59,
+        "y": 4,
+        "width": 306,
+        "height": 632
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "zoobleep5",
+      "pose": "attack",
+      "file": "assets/encore/poses/zoobleep5/attack.png",
+      "sha256": "f11f55a6c59ce17ce14606d7c8de2399e5c9ea5ed3d7eda8987a23d2fcc80b4b",
+      "bytes": 1453651,
+      "visibleBounds": {
+        "x": 47,
+        "y": 5,
+        "width": 360,
+        "height": 629
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "zoobleep5",
+      "pose": "hit",
+      "file": "assets/encore/poses/zoobleep5/hit.png",
+      "sha256": "902c638beb280f08eb47290ff4754e7459cc28b7106627366c9c148a76b9837e",
+      "bytes": 1507503,
+      "visibleBounds": {
+        "x": 2,
+        "y": 34,
+        "width": 400,
+        "height": 597
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "zoobleep5",
+      "pose": "walk",
+      "file": "assets/encore/poses/zoobleep5/walk.png",
+      "sha256": "2fa6b86cdaa4687df0d5fc4af471920644344f2276d2fe1cb3e62828846e217d",
+      "bytes": 1529675,
+      "visibleBounds": {
+        "x": 37,
+        "y": 4,
+        "width": 364,
+        "height": 607
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "zoobleep5",
+      "pose": "jump",
+      "file": "assets/encore/poses/zoobleep5/jump.png",
+      "sha256": "c318d6639d4241c810e21b229408a31a5a8d381ca5189979ce236bec98f924cd",
+      "bytes": 1436322,
+      "visibleBounds": {
+        "x": 11,
+        "y": 35,
+        "width": 404,
+        "height": 456
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "zoobleep5",
+      "pose": "crouch",
+      "file": "assets/encore/poses/zoobleep5/crouch.png",
+      "sha256": "b2dcb46168adb6703aaab03f6b7dd3811b898a3d3ec31d9289feb6cb798054a0",
+      "bytes": 1449005,
+      "visibleBounds": {
+        "x": 52,
+        "y": 106,
+        "width": 361,
+        "height": 468
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "zoobleep5",
+      "pose": "victory",
+      "file": "assets/encore/poses/zoobleep5/victory.png",
+      "sha256": "b2b22bcec06a6c8ca6615cf52e64eb8960219ebb79e45a5c1088bf3d37ef64bf",
+      "bytes": 1458306,
+      "visibleBounds": {
+        "x": 26,
+        "y": 3,
+        "width": 339,
+        "height": 632
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "zoobleep5",
+      "pose": "defeat",
+      "file": "assets/encore/poses/zoobleep5/defeat.png",
+      "sha256": "6f6f779a47dff8fcc74bdd36ced0f68533fe45cb94e8350ceb857f19cdfb3807",
+      "bytes": 843884,
+      "visibleBounds": {
+        "x": 12,
+        "y": 36,
+        "width": 562,
+        "height": 582
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "zoobleep5",
+      "pose": "heavy",
+      "file": "assets/encore/poses/zoobleep5/heavy.png",
+      "sha256": "782102e280d8e37557bb3076bd44d9ac1258f02e16e63c1fff04346292febc66",
+      "bytes": 1450181,
+      "visibleBounds": {
+        "x": 18,
+        "y": 5,
+        "width": 394,
+        "height": 628
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    }
+  ],
+  "stances": [
+    {
+      "id": "zoobleep5",
+      "file": "assets/encore/stance/zoobleep5.png",
+      "sha256": "3235d5a89d559fa64ac4830758266dd8e5c2211613cc180002f9c929f83747ab",
+      "bytes": 745695,
+      "nativeFacing": 1,
+      "rendered": true,
+      "bothFacings": true
+    }
+  ],
+  "portraits": [
+    {
+      "id": "zoobleep5",
+      "archiveId": null,
+      "file": "assets/encore/selection/zoobleep5.png",
+      "sha256": "81e93ff323f46d6e940a432e0eb28fe83ee5858dcc3ba5c7b92bfea08a7a0bb5",
+      "bytes": 1506910,
+      "rendered": true
+    }
+  ],
+  "missing": [],
+  "sheets": [
+    "actions-zoobleep5.jpg",
+    "archive-portraits-01.jpg"
+  ],
+  "browserTestStatus": "not_executed",
+  "counts": {
+    "appearances": 1,
+    "expectedActions": 9,
+    "actions": 9,
+    "stances": 1,
+    "drawChecks": 20,
+    "archiveEntries": 0,
+    "portraits": 1,
+    "expectedPortraits": 1,
+    "missing": 0
+  },
+  "complete": true
+}

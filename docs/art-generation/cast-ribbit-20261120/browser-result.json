@@ -1,0 +1,26 @@
+{
+  "command": [
+    "node",
+    "tests/combat-action-art-browser.mjs"
+  ],
+  "startedAt": "2026-11-20T12:38:54.081770+00:00",
+  "endedAt": "2026-11-20T12:38:55.774527+00:00",
+  "elapsedSeconds": 1.693,
+  "exitCode": 1,
+  "log": "docs/art-generation/cast-ribbit-20261120/browser.log",
+  "sources": {
+    "combat/data.mjs": "6910aaddf46645f98520f4cc6fb468c2bc43b6dd017d9237266a90f6c1bf892b",
+    "combat/costume-additions.mjs": "0e4bf0e6d1d7a926c8f373c5d388179f5813116f5d9c1db1fb76a00329e216f2",
+    "combat/costume-ribbit-20261120.mjs": "c8ecfaae5894a5f6b0f96a6ac8038dd38a6ce57cc2e22ea51bca5aaa6a495b91",
+    "combat/illustrations.mjs": "26aca8338be81bedbbbc1bb4bc59dd0aae8b7b7ef4d785cbbf353ac109c53b99",
+    "combat/render.mjs": "91cdc8a8a4b5298644809714aa7e53219e1266e2ffc95478194a699a7bc1212f",
+    "combat/render-poses.mjs": "21e3afba8c19723ffdcb383402cc6339b63cb58df5d4323fda2ebde093ce0b29",
+    "combat/offline-manifest.mjs": "3e4808a0198e058ec85756265f575ebf63263278354b48c567fcbe3c755410b0"
+  },
+  "successfulChecks": 0,
+  "scope": [
+    "animeribbit",
+    "jaxsuitribbit"
+  ],
+  "status": "environment_blocked_before_navigation"
+}

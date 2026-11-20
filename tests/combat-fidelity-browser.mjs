@@ -110,7 +110,7 @@ try {
   assert.equal(new Set(stagePreviews.map(stage => stage.sha256)).size, STAGES.length);
   await page.locator('[data-stage="bigtop"]').click();
   await page.locator('.stage-preview').screenshot({ path: path.join(output, 'fidelity-stage-preview.png') });
-  checked('All 12 arena choices preview their actual distinct render', 'The selected label, pressed state, source disclosure and 1280 × 720 scene change together.');
+  checked('All arena choices preview their actual distinct render', 'The selected label, pressed state, source disclosure and 1280 × 720 scene change together.');
 
   await page.locator('[data-nav="home"]').first().click();
   await page.locator('.mode-card[data-mode="story"]').click();
@@ -120,7 +120,7 @@ try {
     assert.equal(await page.locator('#stage-preview').getAttribute('data-stage-preview'), expected);
     assert.equal(await page.locator(`[data-stage="${expected}"]`).getAttribute('aria-pressed'), 'true');
   }
-  assert.equal(await page.locator('.stage-card:disabled').count(), 12);
+  assert.equal(await page.locator('.stage-card:disabled').count(), STAGES.length);
   checked('Story selection previews the first chapter of all 14 routes', 'The preview follows the chosen artist and chapter rather than a previously chosen free-duel arena.');
 
   await page.locator('[data-nav="home"]').first().click();

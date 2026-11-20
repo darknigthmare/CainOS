@@ -1,0 +1,75 @@
+{
+  "schema": "encore-native-art-resumption/v1",
+  "appearanceId": "abstractingqueenie",
+  "slot": "victory",
+  "status": "accepted_native",
+  "createdAt": "2026-11-20T08:16:41.908886+00:00",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "prompt": "Use case: identity-preserve. Asset type: ONE full-body transparent 2D fighting-game pose of ABSTRACTING QUEENIE for Digital Circus — Encore. Reference 1 is the approved game identity, anatomy, costume and crisp cel-shaded illustration style; preserve those exactly. Reference 2 is the official merchandise design for supporting details only, never its scenery or toy proportions. She is a tall muted rose-brown QUEEN CHESS PIECE, not a humanoid: scalloped chess crown and round finial, no mouth or human face, no legs, no feet, no visible arms. Viewer-LEFT half of the head remains rose-brown with ONE normal white eye, warm orange-brown iris and lower lashes. Viewer-RIGHT half of head/crown is smoky-black angular crystal with ONE large flat concentric pastel lavender/pink/yellow eye plus the small embedded eyes from reference 1. Keep those sides; do not mirror. Long BURGUNDY royal robe with broad white black-spotted ermine trim, two SMALL white FLOATING cartoon hands with black-lavender crystal wrist cuffs, asymmetric crystal spikes and pastel eye around viewer-right hem/base. Preserve the slender tall chess silhouette, crown, color, material placement and exactly two hands. This is partial abstraction, with the normal half and most robe visible, not a fully black monster. Face and act toward screen RIGHT in three-quarter view. Rich clean 2D cel shading and controlled dark outlines, identical visual series to reference 1. Pose variation changes posture and floating hands only; never invent human knees, elbows or extra limbs. ONE complete character in the image, with whole crown, every crystal tip, both hands and whole robe/base inside at least 8 percent clear margin on all sides. Genuine transparent RGBA background: ABSOLUTELY NO scene, dark backdrop, haze, halo, aura, gradient, floor, platform, cast shadow, motion trails, detached fragments, particles, text, symbols, watermark, extra people, or contact-sheet panels.\nPOSE: restrained triumphant victory. Tall queen body upright with a slight proud backward tilt, both small floating hands lifted outward beside the shoulders/head in celebration, normal orange-brown eye confident. Keep exact queen crown, half-crystal face and long burgundy ermine robe. No crown changes, medal, trophy, confetti, aura or extra objects.",
+  "referencePaths": [
+    "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/selection.png",
+    "docs/art-generation/cast-continuation-20261120/references/official-AbstractedQueenie.png"
+  ],
+  "portableReferences": [
+    {
+      "position": 1,
+      "kind": "repository-asset",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/selection.png",
+      "sha256": "3be556c8b0dda2e2b75966e4d42c57603e9b3fad5a48c8f9afa4f677ea358234",
+      "bytes": 1667501
+    },
+    {
+      "position": 2,
+      "kind": "official-source-reference",
+      "file": "docs/art-generation/cast-continuation-20261120/references/official-AbstractedQueenie.png",
+      "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedQueenie.png?v=1780353722",
+      "pageUrl": "https://glitchproductions.store/products/abstraction-animiniz",
+      "sha256": "f38fb04562693c2e567668532a0667d0672bd3ca91d5f52c4440b582dc5c0c58",
+      "bytes": 2932419,
+      "restoreInstruction": "The exact reference is archived in this repository. If unavailable, download the named official image URL, verify and visually inspect it before generation. For an expired storyboard URL, refresh the storyboard through the official episode player metadata."
+    }
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/abstraction-animiniz",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedQueenie.png?v=1780353722"
+  ],
+  "sourceKind": "Produit dérivé officiel",
+  "episodeFidelityClaim": false,
+  "checkpointFile": "docs/art-generation/cast-continuation-20261120/generation-resume.json",
+  "sourceGenerationId": "exec-b52d3f48-a2e5-4dbd-911c-5d5b49cf42ce",
+  "nativeSourceFile": "/workspace/scratch/5f5114b49696/generated_images/exec-b52d3f48-a2e5-4dbd-911c-5d5b49cf42ce.png",
+  "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingqueenie/victory.png",
+  "targetFile": "assets/encore/poses/abstractingqueenie/victory.png",
+  "sha256": "fbdcd62a76435a1405147e0ebff3c50bbfdfead493f87829eefd4a8f03693fa4",
+  "bytes": 1611317,
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "fullyTransparentPixels": 996155,
+  "alpha12Bounds": [
+    116,
+    44,
+    913,
+    1516
+  ],
+  "nativeCopyVerified": true,
+  "nativeFacing": "right",
+  "visualReview": {
+    "reviewer": "root",
+    "status": "accepted",
+    "observations": [
+      "Exactly two floating hands raised in a victory gesture; no arms or legs.",
+      "Rose-brown normal half remains on viewer left and black-lavender crystal half on viewer right.",
+      "Full scalloped crown, burgundy ermine robe and crystal base preserved; no clipped contour.",
+      "Background RGB haze has zero alpha; no opaque background or ground."
+    ],
+    "scope": "Approved reference identity and sprite technical fit; not canonical episode certification."
+  }
+}

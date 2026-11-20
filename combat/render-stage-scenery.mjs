@@ -282,8 +282,29 @@ function kingdom(ctx) {
   }
 }
 
+// Fallback while the three office layers load, and for a first offline visit.
+function falseExit(ctx) {
+  rect(ctx, 0, 0, 1280, SCENERY_FLOOR, gradient(ctx, 0, 75, 0, 470, [[0, '#575e58'], [1, '#7e847b']]));
+  poly(ctx, [[0, 0], [1280, 0], [1115, 90], [98, 90]], '#373e3b');
+  for (const x of [90, 420, 770, 1080]) rect(ctx, x, 52, 108, 6, '#dfebd6');
+  rect(ctx, 0, 338, 1280, 7, '#b9c0b0');
+  rect(ctx, 0, 345, 1280, 138, '#676d64');
+  rect(ctx, 0, 483, 1280, 13, '#41463f');
+  rect(ctx, 0, 496, 1280, 72, '#51484b');
+  rect(ctx, 301, 170, 142, 326, '#413e39');
+  rect(ctx, 310, 177, 124, 319, '#803c3e');
+  rect(ctx, 316, 182, 111, 308, '#934644');
+  rect(ctx, 396, 351, 24, 6, '#d6cda9');
+  rect(ctx, 342, 134, 61, 26, '#6c2b2d');
+  text(ctx, 'EXIT', 372, 154, 17, '#f3e0c2');
+  for (let i = 0; i < 3; i++) {
+    rect(ctx, 1024, 320 + i * 56, 93, 54, '#595c51', '#44473f');
+    rect(ctx, 1056, 336 + i * 56, 29, 4, '#a8ab96');
+  }
+}
+
 export const REVIEWED_SCENERY_IDS = Object.freeze(['backstage', 'spudsy', 'kingdom']);
-const painters = Object.freeze({ backstage: hallway, spudsy, kingdom });
+const painters = Object.freeze({ backstage: hallway, spudsy, kingdom, falseexit: falseExit });
 
 /** Return false for scenes still rendered by their existing, scoped drawing. */
 export function drawStageScenery(ctx, stage) {

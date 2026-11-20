@@ -1,0 +1,396 @@
+{
+  "schema": "encore-recovered-prop-review/v1",
+  "createdAt": "2026-11-20T07:02:28.375Z",
+  "phase": "integrated",
+  "environment": "Node + Skia, production stage-selector Canvas2D renderer; not a browser session",
+  "provenance": "art/sources/recovered-local-props-20261119/manifest.json",
+  "sources": {
+    "art/sources/recovered-local-props-20261119/manifest.json": "471731c1977d9406de5591188b528664c2b04e60fd3d223c2e85a9aa1302b8d1",
+    "combat/stage-parallax.mjs": "1e01fa0b4932f0e670bb6fa746c48b57de0c726a5637891e68427a161aecc77d",
+    "combat/render.mjs": "91cdc8a8a4b5298644809714aa7e53219e1266e2ffc95478194a699a7bc1212f",
+    "combat/engine.mjs": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
+    "combat/offline-manifest.mjs": "5c1004fe49b817137070ffb0304b7e61c1412a5017e2808e901e6c1a8c36cc10"
+  },
+  "assets": [
+    {
+      "id": "haunted-lamppost",
+      "label": "Lampadaire hanté courbé",
+      "source": "art/sources/recovered-local-props-20261119/haunted-lamppost.png",
+      "file": "assets/encore/props/gaslightwharf/wharf-lamp.png",
+      "stageId": "gaslightwharf",
+      "sha256": "643cb5e4ad7e47ff3f4e98b6702d87d82a33ade5a2dde2b1ab6f93557a78315a",
+      "bytes": 1329877,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceGenerationId": "exec-0558989b-d233-48e8-a307-e0097ecb8779",
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "circus-ticket-dispenser",
+      "label": "Distributeur de tickets",
+      "source": "art/sources/recovered-local-props-20261119/circus-ticket-dispenser.png",
+      "file": "assets/encore/props/showgrounds/ticket-dispenser.png",
+      "stageId": "showgrounds",
+      "sha256": "7517f5c81ba184da71ee4a89d0629431f7dd6a78dd1dc930ef4776be807ddd61",
+      "bytes": 1189952,
+      "dimensions": [
+        1122,
+        1402
+      ],
+      "sourceGenerationId": "exec-2a6f1a06-b006-43fc-a85e-eb0af60735d0",
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "blue-hologram-pedestal",
+      "label": "Piédestal holographique bleu",
+      "source": "art/sources/recovered-local-props-20261119/blue-hologram-pedestal.png",
+      "file": "assets/encore/props/gameoverse/orbital-checkpoint.png",
+      "stageId": "gameoverse",
+      "sha256": "d5728ddf5647786f2c9920ade40fc40de762d1c9a7e4ca9b7c0ed3c34fedc09b",
+      "bytes": 1060878,
+      "dimensions": [
+        1179,
+        1334
+      ],
+      "sourceGenerationId": "exec-2ee5d148-068a-4a6f-b7af-32ad6f0d901e",
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "pastel-turnstile",
+      "label": "Tourniquet pastel",
+      "source": "art/sources/recovered-local-props-20261119/pastel-turnstile.png",
+      "file": "assets/encore/props/parkplanet/garden-turnstile.png",
+      "stageId": "parkplanet",
+      "sha256": "c2dc9947705cab924dfa0180f33bc3012bd9b94c4bbb459b8bccefe6201e4130",
+      "bytes": 983163,
+      "dimensions": [
+        1137,
+        1383
+      ],
+      "sourceGenerationId": "exec-493ee472-8764-4cb9-bf6a-2cd5b4803050",
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "vintage-brass-microphone",
+      "label": "Microphone en laiton",
+      "source": "art/sources/recovered-local-props-20261119/vintage-brass-microphone.png",
+      "file": "assets/encore/props/littledaisy/jazz-microphone.png",
+      "stageId": "littledaisy",
+      "sha256": "ca69aafcdff0395ad7f1daf0974fb54079b579015b2bfec0b7871d57bce050f6",
+      "bytes": 1260782,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceGenerationId": "exec-87e18eb1-87ef-4d2f-a0b9-4d32935edaed",
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "bamboo-bell",
+      "label": "Cloche de bambou",
+      "source": "art/sources/recovered-local-props-20261119/bamboo-bell.png",
+      "file": "assets/encore/props/simpleflipisland/bamboo-checkpoint.png",
+      "stageId": "simpleflipisland",
+      "sha256": "11e58a3c0734a1ee46368fd8630bb97b905bbdcd30492f3a51d77d7a23a9980c",
+      "bytes": 1663958,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceGenerationId": "exec-e25498a1-df9e-4677-b37c-16994c40b97b",
+      "nativeCopyVerified": true
+    }
+  ],
+  "scenes": [
+    {
+      "id": "gaslightwharf",
+      "name": "Gaslight District · Les quais",
+      "file": "scene-gaslightwharf.png",
+      "sha256": "9af1ce1ca93c3952a9b4b9723292e6ca7bbe2657a07cab1792373e1432ab607a",
+      "prop": "assets/encore/props/gaslightwharf/wharf-lamp.png",
+      "requested": true,
+      "draw": {
+        "file": "assets/encore/props/gaslightwharf/wharf-lamp.png",
+        "coordinates": [
+          1030,
+          352,
+          147.33333333333334,
+          221
+        ]
+      },
+      "complete": true,
+      "stageDefinitionUnchanged": true,
+      "cameras": [
+        {
+          "camera": -1,
+          "sha256": "874d7e2e0833ba0af10a549310003ce7c61e9c76e3c3c5beca31545462842028"
+        },
+        {
+          "camera": 0,
+          "sha256": "6a92df23f30a13f94024f8df516f9a98d95b99b1b50283960d33cc793fb250f5"
+        },
+        {
+          "camera": 1,
+          "sha256": "b14306780f299e713974d361278ec15f9e10c93058d354a664b117b85d3ca070"
+        }
+      ],
+      "beforeAfter": {
+        "baselineFile": "docs/art-generation/props-integration-20261120/before/scene-gaslightwharf.png",
+        "baselineSHA256": "b2809784a322c5c6e9f9d30e5a0fc980aec005ed2242de020a24cb6359ece296",
+        "changedPixels": 4510,
+        "bounds": {
+          "x": 1035,
+          "y": 328,
+          "right": 1112,
+          "bottom": 539
+        }
+      }
+    },
+    {
+      "id": "showgrounds",
+      "name": "Showgrounds · Le parvis du château",
+      "file": "scene-showgrounds.png",
+      "sha256": "2c66d12a8169ebc25e165e309c6001add577b216ae4b4f5789e61cd324645155",
+      "prop": "assets/encore/props/showgrounds/ticket-dispenser.png",
+      "requested": true,
+      "draw": {
+        "file": "assets/encore/props/showgrounds/ticket-dispenser.png",
+        "coordinates": [
+          206,
+          455,
+          104.83737517831669,
+          131
+        ]
+      },
+      "complete": true,
+      "stageDefinitionUnchanged": true,
+      "cameras": [
+        {
+          "camera": -1,
+          "sha256": "aaf0fbdc0c9ed4dc1c6b3ad10f5bc030359763080d3eefa764d43159d976e116"
+        },
+        {
+          "camera": 0,
+          "sha256": "9841d3da58d2c20faef825d66771fb64f07d1f9c322619848532c69938ed794e"
+        },
+        {
+          "camera": 1,
+          "sha256": "cbbedeb06fd18478da88315020d9982a95a63c2a14ef137ff56216d7abe4e604"
+        }
+      ],
+      "beforeAfter": {
+        "baselineFile": "docs/art-generation/props-integration-20261120/before/scene-showgrounds.png",
+        "baselineSHA256": "43df43122bd302ecb75933a5e06f8812ff63578ccde6bf4e9298f53007afb9fb",
+        "changedPixels": 5351,
+        "bounds": {
+          "x": 180,
+          "y": 431,
+          "right": 269,
+          "bottom": 553
+        }
+      }
+    },
+    {
+      "id": "gameoverse",
+      "name": "Gameoverse · En orbite",
+      "file": "scene-gameoverse.png",
+      "sha256": "49089d2228f2513c0c4edc61e789c4171f009f527ac36168bd7bac0617c68116",
+      "prop": "assets/encore/props/gameoverse/orbital-checkpoint.png",
+      "requested": true,
+      "draw": {
+        "file": "assets/encore/props/gameoverse/orbital-checkpoint.png",
+        "coordinates": [
+          134,
+          446,
+          136.1064467766117,
+          154
+        ]
+      },
+      "complete": true,
+      "stageDefinitionUnchanged": true,
+      "cameras": [
+        {
+          "camera": -1,
+          "sha256": "37289aa83bb7cb3a6ecf2b387d6a93ee81fd454712faed0e0ad72670740894e9"
+        },
+        {
+          "camera": 0,
+          "sha256": "ddd958c74fae7400d43e6824cff27d4eac835ae0bfeb43a79612a1d00a18f76c"
+        },
+        {
+          "camera": 1,
+          "sha256": "5b0e00100bb7afe4c7608bb2fac4bf3653a17c29acf81b9678cebdb5ebf55aee"
+        }
+      ],
+      "beforeAfter": {
+        "baselineFile": "docs/art-generation/props-integration-20261120/before/scene-gameoverse.png",
+        "baselineSHA256": "2607ca4525d5c3d0118124fde4babf4f7150c50dd8c1a36fe9cd482b380eb504",
+        "changedPixels": 8949,
+        "bounds": {
+          "x": 106,
+          "y": 421,
+          "right": 234,
+          "bottom": 569
+        }
+      }
+    },
+    {
+      "id": "parkplanet",
+      "name": "Park Planet · La terrasse",
+      "file": "scene-parkplanet.png",
+      "sha256": "e6c70c238c2d59febc7fabdba6055cc4bbf5efc5ffed7ed252e40d6b5726eddf",
+      "prop": "assets/encore/props/parkplanet/garden-turnstile.png",
+      "requested": true,
+      "draw": {
+        "file": "assets/encore/props/parkplanet/garden-turnstile.png",
+        "coordinates": [
+          214,
+          480,
+          87.14533622559652,
+          106
+        ]
+      },
+      "complete": true,
+      "stageDefinitionUnchanged": true,
+      "cameras": [
+        {
+          "camera": -1,
+          "sha256": "69d957e2c3fef43bf496098c786ab91997506132d622fc882f9bf9324704bddc"
+        },
+        {
+          "camera": 0,
+          "sha256": "4571e7f7b45f6094262c258bf4e5aa23da30854f8856ab338e8fb49096274f89"
+        },
+        {
+          "camera": 1,
+          "sha256": "3539bb371629fcc8da7ad0cf437c74f512eeed51a9bb004b44628758f85f76bc"
+        }
+      ],
+      "beforeAfter": {
+        "baselineFile": "docs/art-generation/props-integration-20261120/before/scene-parkplanet.png",
+        "baselineSHA256": "c881df0f16f7a0a93c3e0404b3f9e27a880b9f4497465eb9e8871d0515fdbf91",
+        "changedPixels": 2938,
+        "bounds": {
+          "x": 191,
+          "y": 458,
+          "right": 259,
+          "bottom": 548
+        }
+      }
+    },
+    {
+      "id": "littledaisy",
+      "name": "Little Daisy · Le club clandestin",
+      "file": "scene-littledaisy.png",
+      "sha256": "8bcd951cf7b948d6a6309681a1ab0584e34fe1b7f3d988e766ac50f16a774af7",
+      "prop": "assets/encore/props/littledaisy/jazz-microphone.png",
+      "requested": true,
+      "draw": {
+        "file": "assets/encore/props/littledaisy/jazz-microphone.png",
+        "coordinates": [
+          211,
+          409,
+          109.33333333333333,
+          164
+        ]
+      },
+      "complete": true,
+      "stageDefinitionUnchanged": true,
+      "cameras": [
+        {
+          "camera": -1,
+          "sha256": "49e3d06a6874d22a9fc859816cf0825d7dd74a08912d31dac9d17cfb9e011fb6"
+        },
+        {
+          "camera": 0,
+          "sha256": "985dc5cce6365502bd3ef8c30fc8877e18f33661db5b9e1171dfef9e18404bb1"
+        },
+        {
+          "camera": 1,
+          "sha256": "a533a095a659c9ea8ca0be4618eac31fcc16d4d791d026b7da541a5156a21e40"
+        }
+      ],
+      "beforeAfter": {
+        "baselineFile": "docs/art-generation/props-integration-20261120/before/scene-littledaisy.png",
+        "baselineSHA256": "21edde0642a1756ea0ddb1275284fb61feab4e76860491d6779cc00155cda8fc",
+        "changedPixels": 2032,
+        "bounds": {
+          "x": 210,
+          "y": 385,
+          "right": 260,
+          "bottom": 538
+        }
+      }
+    },
+    {
+      "id": "simpleflipisland",
+      "name": "Ultra Jump Mania! · L’île de Theo",
+      "file": "scene-simpleflipisland.png",
+      "sha256": "3f419a9419958c63f62bacb9f299f17e662d0a5685f346bae9d191932e768e2f",
+      "prop": "assets/encore/props/simpleflipisland/bamboo-checkpoint.png",
+      "requested": true,
+      "draw": {
+        "file": "assets/encore/props/simpleflipisland/bamboo-checkpoint.png",
+        "coordinates": [
+          1055,
+          447,
+          98.66666666666667,
+          148
+        ]
+      },
+      "complete": true,
+      "stageDefinitionUnchanged": true,
+      "cameras": [
+        {
+          "camera": -1,
+          "sha256": "c9ccb63cf86cd067f803c19418fc953439c7bba490e91206aef1fe013241b04f"
+        },
+        {
+          "camera": 0,
+          "sha256": "1fc7553c8f9d796ce4b3d835a34533e89468057d7cf372678f0ccf5c9b437cbb"
+        },
+        {
+          "camera": 1,
+          "sha256": "ef1b0299b31c0d348bd2f0afa22b51de15ebedc73adc6ee15f28ef2e8e87f0fe"
+        }
+      ],
+      "beforeAfter": {
+        "baselineFile": "docs/art-generation/props-integration-20261120/before/scene-simpleflipisland.png",
+        "baselineSHA256": "edc53c68ce566d517712ce5b825fa4d8e4977a386c01f3cbf6d38d3fc9f3a718",
+        "changedPixels": 3806,
+        "bounds": {
+          "x": 1025,
+          "y": 419,
+          "right": 1118,
+          "bottom": 562
+        }
+      }
+    }
+  ],
+  "offline": {
+    "images": 5491,
+    "bytes": 2724652669,
+    "artVersion": "dbc2d48af8cbe42e",
+    "version": "0.7.0-fb6e3148b501"
+  },
+  "baseline": {
+    "file": "docs/art-generation/props-integration-20261120/before/canvas-review.json",
+    "sha256": "2cb7df4aae3cbcbb51e4a340b91ad94cc10bb65c159615614ca799fd465bd3dd",
+    "phase": "before_integration"
+  },
+  "limitations": [
+    "Original fan-game props; no claim of canonical episode appearance.",
+    "No DOM, input, audio or service-worker verification.",
+    "Visual review is recorded separately from successful rendering."
+  ],
+  "counts": {
+    "sources": 6,
+    "activeProps": 6,
+    "scenes": 6,
+    "cameraViews": 18,
+    "newNativeBytes": 7488610
+  },
+  "renderingIsolation": "One production-renderer process per scene; source files are unchanged."
+}

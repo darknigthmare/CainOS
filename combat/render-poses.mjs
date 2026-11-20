@@ -188,8 +188,9 @@ export function actorPose(actor, options = {}) {
 /** Drawings describe one move. A punch must not stand in for a spell, throw or tail sweep. */
 export function illustratedAction(pose, attack) {
   if (pose.state.startsWith('attack-')) {
-    if ((attack?.name || attack?.def?.slot) !== 'light') return null;
-    if (pose.state === 'attack-active' || (pose.state === 'attack-recovery' && pose.phaseProgress < 0.4)) return 'attack';
+    const slot = attack?.name || attack?.def?.slot;
+    if (slot !== 'light' && slot !== 'heavy') return null;
+    if (pose.state === 'attack-active' || (pose.state === 'attack-recovery' && pose.phaseProgress < 0.4)) return slot === 'heavy' ? 'heavy' : 'attack';
     return null;
   }
   if (['intro', 'victory', 'defeat', 'walk', 'jump', 'crouch', 'hit'].includes(pose.state)) return pose.state;

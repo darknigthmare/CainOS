@@ -1,0 +1,84 @@
+{
+  "schema": "encore-native-art-resumption/v1",
+  "id": "abstractingzooble-heavy",
+  "appearanceId": "abstractingzooble",
+  "slot": "heavy",
+  "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingzooble/heavy.png",
+  "targetFile": "assets/encore/poses/abstractingzooble/heavy.png",
+  "method": "image_gen.imagegen",
+  "sourceGenerationId": "exec-a0e8f9a0-01f1-4a77-a73f-55ef3c6bc01d",
+  "nativeSourceFile": "/workspace/scratch/5f5114b49696/generated_images/exec-a0e8f9a0-01f1-4a77-a73f-55ef3c6bc01d.png",
+  "prompt": "Use case: identity-preserve. Asset type: ONE individual full-body transparent 2D fighting-game action sprite of ABSTRACTING ZOOBLE. Reference 1 is the approved strict design lock for silhouette, proportions, exact transformation patches, eyes, colours and polished cel shading. Reference 2 supplies official design details only; do not imitate its squat toy proportions, setting or lighting. Mouthless colourful geometric Zooble: pink triangle head half crystalline with one normal white eye and one concentric pastel crystal eye, checkered antenna and crystal lightning crest, yellow spotted oval torso/cyan chest ring, pink rear wing, red curly arm with crystal hand and opposite orange/yellow arm, one normal long blue leg/foot and one crystal lower foot with rear eye-bearing growth. Preserve exact approved asymmetric assembly, no mouth or extra limbs. Create a genuinely distinct natural action pose, not a mirrored/cropped selection image. Every limb, crown/hat/ear tip, attached mask and crystal spike must fit fully inside clear transparent margins on ALL sides. One connected character, crisp detailed 2D art on true transparent RGBA; no scenery, floor, cast shadow, aura, glow, particles, labels, watermark, inset or duplicate. POSE: HEAVY ATTACK toward screen RIGHT: wide grounded stance, torso twists strongly, both arms drive through a powerful sweeping downward strike, front knee deeply bent and rear heel lifted. Entire hands and feet visible, no effect or weapon.\nCORRECTION LOCK: Keep exactly ONE cyan ring at the ORANGE arm's chest joint, matching reference 1. The RED curled arm attaches without any cyan ring. Do not create a second cyan shoulder socket or ring. Preserve all other approved asymmetrical parts and the requested two-arm heavy-strike pose.",
+  "transparent_background": true,
+  "referencePaths": [
+    "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingzooble/selection.png",
+    "docs/art-generation/cast-continuation-20261120/references/official-AbstractedZooble_04.png"
+  ],
+  "portableReferences": [
+    {
+      "position": 1,
+      "kind": "repository-asset",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingzooble/selection.png",
+      "sha256": "31670c334103a7ed2b5b21302af2268b9a6943d7f388c79c8201b1d516274dad",
+      "bytes": 1154706
+    },
+    {
+      "position": 2,
+      "kind": "official-source-reference",
+      "file": "docs/art-generation/cast-continuation-20261120/references/official-AbstractedZooble_04.png",
+      "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedZooble_04.png?v=1780353721",
+      "pageUrl": "https://glitchproductions.store/products/abstraction-animiniz",
+      "sha256": "fd7be4a82e398bbe4b3682f9decff64dce07b527f8e8aa98bd646a8380c12bfa",
+      "bytes": 2987776,
+      "restoreInstruction": "The exact reference is archived in this repository. If unavailable, download the named official image URL, verify and visually inspect it before generation. For an expired storyboard URL, refresh the storyboard through the official episode player metadata."
+    }
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/abstraction-animiniz",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedZooble_04.png?v=1780353721"
+  ],
+  "sourceType": "official-merchandise",
+  "episodeFidelityClaim": false,
+  "sha256": "e655b27bf0f5bbb83331b8186a2246c121445e88f70917d4136bfe39a1b28a2d",
+  "bytes": 1086925,
+  "dimensions": [
+    1358,
+    1159
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "alpha12Bounds": [
+    39,
+    16,
+    1317,
+    1145
+  ],
+  "nativeCopyVerified": true,
+  "nativePixelsUnmodified": true,
+  "createdAt": "2026-11-20T08:35:40.683683+00:00",
+  "visualReviewAt": "2026-11-20T08:35:40.683683+00:00",
+  "visualReview": {
+    "reviewer": "generate_gangle_zooble",
+    "status": "accepted",
+    "observations": [
+      "Strong two-arm downward sweep toward screen right in a wide planted stance: blue front knee deeply bent, crystal rear leg extended, torso twisted. Corrected output has exactly one cyan ring at the orange-arm joint; red curled arm has no added cyan socket. Mouthless split head, two different eyes, checkered and lightning antennae, spotted body, pink wing, crystal shoulder/back star, crystal hand and eye-bearing crystal foot retained. All appendage tips fit inside transparent margins."
+    ],
+    "scope": "Approved reference identity and sprite technical fit; not canonical episode certification."
+  },
+  "nativeFacing": "right",
+  "status": "accepted_native",
+  "productionStatus": "awaiting-integration",
+  "includedInRuntime": false,
+  "originalQueuedPrompt": "Use case: identity-preserve. Asset type: ONE individual full-body transparent 2D fighting-game action sprite of ABSTRACTING ZOOBLE. Reference 1 is the approved strict design lock for silhouette, proportions, exact transformation patches, eyes, colours and polished cel shading. Reference 2 supplies official design details only; do not imitate its squat toy proportions, setting or lighting. Mouthless colourful geometric Zooble: pink triangle head half crystalline with one normal white eye and one concentric pastel crystal eye, checkered antenna and crystal lightning crest, yellow spotted oval torso/cyan chest ring, pink rear wing, red curly arm with crystal hand and opposite orange/yellow arm, one normal long blue leg/foot and one crystal lower foot with rear eye-bearing growth. Preserve exact approved asymmetric assembly, no mouth or extra limbs. Create a genuinely distinct natural action pose, not a mirrored/cropped selection image. Every limb, crown/hat/ear tip, attached mask and crystal spike must fit fully inside clear transparent margins on ALL sides. One connected character, crisp detailed 2D art on true transparent RGBA; no scenery, floor, cast shadow, aura, glow, particles, labels, watermark, inset or duplicate. POSE: HEAVY ATTACK toward screen RIGHT: wide grounded stance, torso twists strongly, both arms drive through a powerful sweeping downward strike, front knee deeply bent and rear heel lifted. Entire hands and feet visible, no effect or weapon.",
+  "rejectedAttempts": [
+    {
+      "nativeSourceFile": "/workspace/scratch/5f5114b49696/generated_images/exec-a91d62f1-67fd-401b-9243-b597f4a2c154.png",
+      "sourceGenerationId": "exec-a91d62f1-67fd-401b-9243-b597f4a2c154",
+      "reason": "The output adds two cyan shoulder rings, while the approved design has a single cyan ring at the orange-arm chest joint.",
+      "status": "rejected_design_drift"
+    }
+  ]
+}

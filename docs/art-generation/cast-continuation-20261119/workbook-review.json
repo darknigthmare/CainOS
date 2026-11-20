@@ -1,0 +1,421 @@
+{
+  "schema": "encore-costume-workbook-review/v1",
+  "createdAt": "2026-11-19T23:08:58.289Z",
+  "inputWorkbookSHA256": "74753dadc25049d4d967aea3b7df11a7f30f240b27270d1156824c49fdafcadc",
+  "inputDataSHA256": "b6bec25d2e57e29952a2ba8e44624b697e0e10c5bd3126a5f59b1916f3d18d8a",
+  "workbookSHA256": "fdba67e67cebfd18a5988017c86ee7abe6cbb5fa625d0d4b5e850c125deac89d",
+  "trackerDataSHA256": "cdc0eb3a39b03ec8bc40458f3790a7068c9af672f86dc09ac4f82e936a5ded32",
+  "builderSHA256": "0beb1317d7a5b5a5fded8b42c6efeb950df020c144521eab2654f2f15a497573",
+  "executionEvidence": {
+    "file": "docs/art-generation/cast-continuation-20261119/verification.json",
+    "sha256": "32b20311726e6d65d61aabe5d6873b3b2c4d4384bd441657711e976b947f88f6",
+    "hashesVerified": true,
+    "files": {
+      "combat/data.mjs": "6910aaddf46645f98520f4cc6fb468c2bc43b6dd017d9237266a90f6c1bf892b",
+      "combat/costume-additions.mjs": "a000d72fe439b7c9f18d4cb38ebba193a4b302fda0212493e46226edb73b09fd",
+      "combat/fidelity.mjs": "0357ac34337d7a73564050f3987643c9dd861bf9893161a34f4ab8534d29f6f4",
+      "combat/illustrations.mjs": "c3de886221f6f05eebba1ad53f866d7ec486a1a13e0f0733c0e170c8fd81292f",
+      "combat/render.mjs": "91cdc8a8a4b5298644809714aa7e53219e1266e2ffc95478194a699a7bc1212f",
+      "combat/render-poses.mjs": "21e3afba8c19723ffdcb383402cc6339b63cb58df5d4323fda2ebde093ce0b29",
+      "combat/offline-manifest.mjs": "5986ca7ccf600790cb64f94a890f09e4c7474030002e7b9ec86467a10e7b224b",
+      "scripts/render-combat-character-review.mjs": "50cbffc3b24049a89410b707c84a7e40f9ed3d287a51320237fd39fee1ab6ede",
+      "tests/combat-costume-additions.test.mjs": "e992e2c78533d3c955f04b09fb1ee57bf204371972d80f2ee1168dd7d4e3f7f3",
+      "tests/combat-crossovers.test.mjs": "77a165d90f7b26d7e78c7aa7de31d88a193a10ea9e3a9d6e50ebe58b69f01132",
+      "tests/combat-action-art-browser.mjs": "7747a39fe377f5a4868c5a9e06c259fbadd3a7ca0d82221617741aefecc60336",
+      "docs/art-generation/cast-continuation-20261119/asset-inventory.json": "4c908bc6450f5b316135cc2469cf95dde2d30cf4b8e584427901018ccf7c5447",
+      "docs/art-generation/cast-continuation-20261119/review/character-canvas-review.json": "981ee786ea6ef25bc5fcd552cf007bde0a7680d4df143c6cc44a34fc9d4ff5ad",
+      "docs/art-generation/cast-continuation-20261119/qa.log": "0472ad643daa47d9075672f485f73c933ee864ceed910d6cb21ae78aad7b1bed",
+      "docs/art-generation/cast-continuation-20261119/browser-attempt.json": "ec35d825cb3f295d869d749369cc21b97794922c33cbc0447ceaa86dd5d408be"
+    }
+  },
+  "counts": {
+    "sheets": 11,
+    "nativeTables": 10,
+    "productionBefore": 3092,
+    "productionAfter": 3100,
+    "qaBefore": 2255,
+    "qaAfter": 2260,
+    "sourcesBefore": 112,
+    "sourcesAfter": 120,
+    "costumes": 437,
+    "fighters": 54,
+    "archiveVariants": 51,
+    "newArtFiles": 88
+  },
+  "originalRowsIdsOrderNotesPreserved": true,
+  "unrelatedSheetValuesPreserved": true,
+  "historicalCoverageUnchanged": true,
+  "existingReferenceEdits": [
+    {
+      "id": "offline",
+      "cell": "Références!E64",
+      "previous": "4765 images dans le pack hors ligne, 1966132196 octets.",
+      "current": "5 419 images dans le manifeste local, 2 636 860 685 octets. Inventaire final de cette continuation ; la publication distante est un contrôle séparé."
+    }
+  ],
+  "sourceFooterPreserved": true,
+  "nativeTablesPreserved": true,
+  "formulas": {
+    "count": 42,
+    "recalculated": true,
+    "errors": 0,
+    "exportRoundTripPassed": true
+  },
+  "summaryChanges": [
+    {
+      "cell": "B11",
+      "formula": "=COUNTIFS('Atlas'!C6:C184,\"Variante visuelle\")+COUNTIFS('Production'!B6:B3105,\"Costume crossover\")+COUNTIFS('Production'!B6:B3105,\"Tenue Circus\")"
+    },
+    {
+      "cell": "B12",
+      "formula": "=COUNTIFS('Production'!B6:B3105,\"Arrangement d’arène\")"
+    },
+    {
+      "cell": "B16",
+      "formula": "=COUNTIFS('Production'!E$6:E$3105,B$14)"
+    },
+    {
+      "cell": "C16",
+      "formula": "=COUNTIFS('Production'!E$6:E$3105,C$14)"
+    },
+    {
+      "cell": "D16",
+      "formula": "=COUNTIFS('Production'!E$6:E$3105,D$14)"
+    },
+    {
+      "cell": "E16",
+      "formula": "=COUNTIFS('Production'!E$6:E$3105,E$14)"
+    },
+    {
+      "cell": "F16",
+      "formula": "=COUNTA('Production'!A6:A3105)"
+    },
+    {
+      "cell": "H19",
+      "formula": "=COUNTIFS('Scénarios'!B6:B353,\"Route individuelle\")&\" routes et \"&COUNTIFS('Production'!B6:B3105,\"Tableau d’histoire\")&\" tableaux\""
+    },
+    {
+      "cell": "H20",
+      "formula": "=COUNTIFS('Production'!B6:B3105,\"Briefing illustré\")&\" briefings de rencontre\""
+    },
+    {
+      "cell": "H21",
+      "formula": "=COUNTIFS('Production'!B6:B3105,\"Arène\",'Production'!D6:D3105,\"Musique de l’arène\")&\" thèmes musicaux d’arènes\""
+    },
+    {
+      "cell": "B22",
+      "formula": "=COUNTIFS('QA'!D6:D2265,B21)"
+    },
+    {
+      "cell": "C22",
+      "formula": "=COUNTIFS('QA'!D6:D2265,C21)"
+    },
+    {
+      "cell": "D22",
+      "formula": "=COUNTIFS('QA'!D6:D2265,D21)"
+    },
+    {
+      "cell": "E22",
+      "formula": "=COUNTIFS('QA'!D6:D2265,E21)"
+    },
+    {
+      "cell": "F22",
+      "formula": "=COUNTA('QA'!A6:A2265)"
+    },
+    {
+      "cell": "H22",
+      "formula": "=COUNTIFS('Production'!B6:B3105,\"Motif sonore\")&\" motifs sonores synthétiques\""
+    },
+    {
+      "cell": "B23",
+      "formula": "=COUNTIFS('QA'!D6:D2265,\"Partiel\")"
+    },
+    {
+      "cell": "H23",
+      "formula": "=COUNTIFS('Production'!B6:B3105,\"Présentation individuelle\")&\" séquences de présentation\""
+    },
+    {
+      "cell": "H24",
+      "formula": "=COUNTIFS('Production'!B6:B3105,\"Animation d’arène\")&\" ambiances visuelles animées\""
+    },
+    {
+      "cell": "H25",
+      "formula": "=COUNTIFS('Production'!B6:B3105,\"Costume\")&\" costumes historiques redessinés\""
+    },
+    {
+      "cell": "H31",
+      "formula": "=COUNTIFS('Production'!B6:B3105,\"Finition visuelle\")&\" présentations de KO\""
+    },
+    {
+      "cell": "H32",
+      "formula": "=COUNTIFS('Production'!B6:B3105,\"Arène\",'Production'!D6:D3105,\"Ambiance sonore\",'Production'!E6:E3105,\"Implémenté\")&\" ambiances sonores originales\""
+    },
+    {
+      "cell": "H27",
+      "formula": "=B7+B8+B9+COUNTIFS('Atlas'!C6:C184,\"Variante visuelle\")+COUNTIFS('Production'!B6:B3105,\"Tenue Circus\")&\" fiches, hors tenues crossover\""
+    },
+    {
+      "cell": "H2",
+      "value": "Version 0.7.0 · tenues au 19 novembre 2026"
+    },
+    {
+      "cell": "H8",
+      "value": "Tenues Circus et formes de série suivies en Production"
+    },
+    {
+      "cell": "H13",
+      "value": "401 tests Node de cette passe · Canvas natif revu"
+    },
+    {
+      "cell": "H14",
+      "value": "Chromium bloqué au lancement ; aucune assertion"
+    },
+    {
+      "cell": "H15",
+      "value": "Historique conservé ; campagne CAST26 ajoutée dans QA"
+    },
+    {
+      "cell": "H30",
+      "value": "105 apparences d’archive + 8 tenues (88 PNG)"
+    },
+    {
+      "cell": "A22",
+      "value": "Historique et contrôles datés"
+    }
+  ],
+  "renderedViews": [
+    {
+      "sheet": "Synthèse",
+      "range": "A1:H35",
+      "file": "docs/art-generation/cast-continuation-20261119/workbook-review/summary.png",
+      "sha256": "d7d143adf17fc6756373af6837dbe2400b036afbe197aba3131eb680141ab8b6",
+      "bytes": 261853
+    },
+    {
+      "sheet": "QA",
+      "range": "A2261:I2263",
+      "file": "docs/art-generation/cast-continuation-20261119/workbook-review/qa-runtime.png",
+      "sha256": "87a41815419611dd35ab8e8b3809fce90f2f60e93b07e845cb7fd57cccd5abe7",
+      "bytes": 98458
+    },
+    {
+      "sheet": "QA",
+      "range": "A2264:I2265",
+      "file": "docs/art-generation/cast-continuation-20261119/workbook-review/qa-browser-workbook.png",
+      "sha256": "6cdb4c6d1faaee152ea84f0c0e7bb34ad04332c7777f3529f1e2f4eb1345685a",
+      "bytes": 73608
+    },
+    {
+      "sheet": "Références",
+      "range": "A64:E64",
+      "file": "docs/art-generation/cast-continuation-20261119/workbook-review/reference-offline.png",
+      "sha256": "c7d3c87a972817dde0886d3e14afb5dab65205d1186f272e0c1a3573adbb609b",
+      "bytes": 20049
+    },
+    {
+      "sheet": "Production",
+      "range": "A3098:J3100",
+      "file": "docs/art-generation/cast-continuation-20261119/workbook-review/production-1.png",
+      "sha256": "cb0a775a0b0b134dd789c0469e823206dd9f2ff0a79db3b7983b720dd264fc47",
+      "bytes": 138335
+    },
+    {
+      "sheet": "Production",
+      "range": "A3101:J3103",
+      "file": "docs/art-generation/cast-continuation-20261119/workbook-review/production-2.png",
+      "sha256": "6416e7917f11ab04bc912986c313579328dd832ff2fdffa8ace6b82a1833e6f7",
+      "bytes": 140143
+    },
+    {
+      "sheet": "Production",
+      "range": "A3104:J3105",
+      "file": "docs/art-generation/cast-continuation-20261119/workbook-review/production-3.png",
+      "sha256": "8b3393f796b3405956d7be8682b70b175741e9de3a1f85c3bd15b63fe4b06af7",
+      "bytes": 97486
+    },
+    {
+      "sheet": "Références",
+      "range": "A118:E121",
+      "file": "docs/art-generation/cast-continuation-20261119/workbook-review/references-1.png",
+      "sha256": "4db410d4dcea06ac15233d5979d6ab478266fec483c39468cda8fa39d7ea11ee",
+      "bytes": 140772
+    },
+    {
+      "sheet": "Références",
+      "range": "A122:E125",
+      "file": "docs/art-generation/cast-continuation-20261119/workbook-review/references-2.png",
+      "sha256": "0bb5025aedac350dcf17cc83f8bd6ab0368a283c466e6b9bdc7197e6ddcc4a10",
+      "bytes": 163946
+    }
+  ],
+  "visualReview": {
+    "status": "reviewed",
+    "reviewer": "audit_local_unpublished",
+    "views": 9,
+    "notes": [
+      "Summary displays 437 costumes and separates the new 401-test Node pass from historical QA; browser assertions remain absent.",
+      "All eight new Production rows have readable file paths, eleven-drawing coverage, source identifiers and scoped merchandise/adaptation notes.",
+      "The five new QA rows distinguish native art, production Canvas, Node/builds, blocked browser launch and workbook verification.",
+      "All eight official merchandise references, exact image links where supplied and the corrected offline scope are visible without clipped cell content.",
+      "Existing typography, purple table bands, green status cells and yellow user-note columns remain consistent with the starting workbook.",
+      "Final summary label reads « 105 apparences d’archive + 8 tenues (88 PNG) »; these are appearances, not 105 distinct combat kits. Corrected summary rendered and reviewed again."
+    ]
+  },
+  "limitations": [
+    "Only the workbook was authored and checked here; the root verification supplies separately dated runtime evidence.",
+    "The historical 399-test result is preserved and is not counted as a new execution.",
+    "No desktop Excel session, browser assertion, physical-device test, full animation or scene-by-scene canonical approval is claimed."
+  ],
+  "nativePreservation": {
+    "sheets": 11,
+    "nativeTables": 10,
+    "existingCellStylesCompared": 78441,
+    "styleDifferences": 0,
+    "firstDifferences": [],
+    "paneViewColumnAndMergePreservation": true,
+    "tableColumnsAndStylesPreserved": true,
+    "existingValidationListsPreserved": true,
+    "featureCounts": [
+      {
+        "sheet": "Synthèse",
+        "feature": "dataValidations",
+        "before": 0,
+        "after": 0
+      },
+      {
+        "sheet": "Synthèse",
+        "feature": "conditionalFormatting",
+        "before": 1,
+        "after": 1
+      },
+      {
+        "sheet": "Fonctionnalités",
+        "feature": "dataValidations",
+        "before": 1,
+        "after": 1
+      },
+      {
+        "sheet": "Fonctionnalités",
+        "feature": "conditionalFormatting",
+        "before": 5,
+        "after": 5
+      },
+      {
+        "sheet": "Combattants",
+        "feature": "dataValidations",
+        "before": 1,
+        "after": 1
+      },
+      {
+        "sheet": "Combattants",
+        "feature": "conditionalFormatting",
+        "before": 3,
+        "after": 3
+      },
+      {
+        "sheet": "Techniques",
+        "feature": "dataValidations",
+        "before": 1,
+        "after": 1
+      },
+      {
+        "sheet": "Techniques",
+        "feature": "conditionalFormatting",
+        "before": 2,
+        "after": 2
+      },
+      {
+        "sheet": "Arènes",
+        "feature": "dataValidations",
+        "before": 1,
+        "after": 1
+      },
+      {
+        "sheet": "Arènes",
+        "feature": "conditionalFormatting",
+        "before": 3,
+        "after": 3
+      },
+      {
+        "sheet": "Atlas",
+        "feature": "dataValidations",
+        "before": 1,
+        "after": 1
+      },
+      {
+        "sheet": "Atlas",
+        "feature": "conditionalFormatting",
+        "before": 2,
+        "after": 2
+      },
+      {
+        "sheet": "Production",
+        "feature": "dataValidations",
+        "before": 1,
+        "after": 1
+      },
+      {
+        "sheet": "Production",
+        "feature": "conditionalFormatting",
+        "before": 8,
+        "after": 9
+      },
+      {
+        "sheet": "Scénarios",
+        "feature": "dataValidations",
+        "before": 1,
+        "after": 1
+      },
+      {
+        "sheet": "Scénarios",
+        "feature": "conditionalFormatting",
+        "before": 1,
+        "after": 1
+      },
+      {
+        "sheet": "Extension PNJ",
+        "feature": "dataValidations",
+        "before": 0,
+        "after": 0
+      },
+      {
+        "sheet": "Extension PNJ",
+        "feature": "conditionalFormatting",
+        "before": 0,
+        "after": 0
+      },
+      {
+        "sheet": "QA",
+        "feature": "dataValidations",
+        "before": 1,
+        "after": 1
+      },
+      {
+        "sheet": "QA",
+        "feature": "conditionalFormatting",
+        "before": 9,
+        "after": 10
+      },
+      {
+        "sheet": "Références",
+        "feature": "dataValidations",
+        "before": 0,
+        "after": 0
+      },
+      {
+        "sheet": "Références",
+        "feature": "conditionalFormatting",
+        "before": 0,
+        "after": 0
+      }
+    ]
+  },
+  "jsonHistoricalRowsPreserved": true,
+  "labelCorrection": {
+    "cell": "Synthèse!H30",
+    "value": "105 apparences d’archive + 8 tenues (88 PNG)",
+    "existingStylesReverified": 78441,
+    "otherReviewImagesByteIdentical": 8,
+    "trackerJsonByteIdentical": true
+  }
+}

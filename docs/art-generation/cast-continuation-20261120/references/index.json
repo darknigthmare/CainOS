@@ -1,0 +1,170 @@
+{
+  "schema": "encore-official-reference-archive/v1",
+  "date": "2026-11-20",
+  "scope": "Seven official abstraction images required by queued prompts, plus the official episode 6 storyboard actually used to establish the smiling tragedy expression.",
+  "fileCount": 8,
+  "bytes": 21127724,
+  "allNativeCopiesByteIdentical": true,
+  "items": [
+    {
+      "file": "docs/art-generation/cast-continuation-20261120/references/official-AbstractPomni.png",
+      "sha256": "914230b23c0c5c733c68d2e2e1f96e94d860eb1d2eacbb5a41d1c9824e27de42",
+      "bytes": 3429140,
+      "dimensions": [
+        2000,
+        2000
+      ],
+      "mode": "RGB",
+      "sourceUrl": "https://glitchproductions.store/products/abstraction-animiniz",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractPomni.png?v=1780353721",
+      "originalLocalPath": "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractPomni.png",
+      "nativeCopyVerified": true,
+      "appearanceIds": [
+        "abstractingpomni"
+      ],
+      "usage": [
+        "missing-job-reference"
+      ]
+    },
+    {
+      "file": "docs/art-generation/cast-continuation-20261120/references/official-AbstractedJax.png",
+      "sha256": "26b99bf9e94559b4da6c64601931d96fe3bf00a4e2965bcc224622f9c4189548",
+      "bytes": 3047080,
+      "dimensions": [
+        2000,
+        2000
+      ],
+      "mode": "RGB",
+      "sourceUrl": "https://glitchproductions.store/products/abstraction-animiniz",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedJax.png?v=1780353721",
+      "originalLocalPath": "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedJax.png",
+      "nativeCopyVerified": true,
+      "appearanceIds": [
+        "abstractingjax"
+      ],
+      "usage": [
+        "missing-job-reference"
+      ]
+    },
+    {
+      "file": "docs/art-generation/cast-continuation-20261120/references/official-AbstractedRagatha_01.png",
+      "sha256": "c9eb7d742d9d2ba895e210ac86158c3d19451cf2fa41f164ed01771b2752aec4",
+      "bytes": 2961443,
+      "dimensions": [
+        2000,
+        2000
+      ],
+      "mode": "RGB",
+      "sourceUrl": "https://glitchproductions.store/products/abstraction-animiniz",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedRagatha_01.png?v=1780353722",
+      "originalLocalPath": "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedRagatha_01.png",
+      "nativeCopyVerified": true,
+      "appearanceIds": [
+        "abstractingragatha"
+      ],
+      "usage": [
+        "missing-job-reference"
+      ]
+    },
+    {
+      "file": "docs/art-generation/cast-continuation-20261120/references/official-AbstractedKinger.png",
+      "sha256": "3bd68b08f964e029caf73fcb9313c93a4f1b340ea02b1cc80c8514fe41541ef7",
+      "bytes": 2854111,
+      "dimensions": [
+        2000,
+        2000
+      ],
+      "mode": "RGB",
+      "sourceUrl": "https://glitchproductions.store/products/abstraction-animiniz",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedKinger.png?v=1780353722",
+      "originalLocalPath": "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedKinger.png",
+      "nativeCopyVerified": true,
+      "appearanceIds": [
+        "abstractingkinger"
+      ],
+      "usage": [
+        "missing-job-reference"
+      ]
+    },
+    {
+      "file": "docs/art-generation/cast-continuation-20261120/references/official-AbstractedGangle.png",
+      "sha256": "5f730457979bf67bafefe369e9adbf76cf42faf0601667d1154ede2cee78cedc",
+      "bytes": 2869610,
+      "dimensions": [
+        2000,
+        2000
+      ],
+      "mode": "RGB",
+      "sourceUrl": "https://glitchproductions.store/products/abstraction-animiniz",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedGangle.png?v=1780353721",
+      "originalLocalPath": "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedGangle.png",
+      "nativeCopyVerified": true,
+      "appearanceIds": [
+        "abstractinggangle"
+      ],
+      "usage": [
+        "missing-job-reference"
+      ]
+    },
+    {
+      "file": "docs/art-generation/cast-continuation-20261120/references/official-AbstractedZooble_04.png",
+      "sha256": "fd7be4a82e398bbe4b3682f9decff64dce07b527f8e8aa98bd646a8380c12bfa",
+      "bytes": 2987776,
+      "dimensions": [
+        2000,
+        2000
+      ],
+      "mode": "RGB",
+      "sourceUrl": "https://glitchproductions.store/products/abstraction-animiniz",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedZooble_04.png?v=1780353721",
+      "originalLocalPath": "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedZooble_04.png",
+      "nativeCopyVerified": true,
+      "appearanceIds": [
+        "abstractingzooble"
+      ],
+      "usage": [
+        "missing-job-reference"
+      ]
+    },
+    {
+      "file": "docs/art-generation/cast-continuation-20261120/references/official-AbstractedQueenie.png",
+      "sha256": "f38fb04562693c2e567668532a0667d0672bd3ca91d5f52c4440b582dc5c0c58",
+      "bytes": 2932419,
+      "dimensions": [
+        2000,
+        2000
+      ],
+      "mode": "RGB",
+      "sourceUrl": "https://glitchproductions.store/products/abstraction-animiniz",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedQueenie.png?v=1780353722",
+      "originalLocalPath": "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedQueenie.png",
+      "nativeCopyVerified": true,
+      "appearanceIds": [
+        "abstractingqueenie"
+      ],
+      "usage": [
+        "missing-job-reference"
+      ]
+    },
+    {
+      "file": "docs/art-generation/cast-continuation-20261120/references/cast-episode6-storyboard-L3-M10.jpg",
+      "sha256": "6aea9ae174f8d6f9d1c3fe72ec2d6328a5cc87dc3fbcf682a763a9fc5fe3a9c2",
+      "bytes": 46145,
+      "dimensions": [
+        960,
+        540
+      ],
+      "mode": "RGB",
+      "sourceUrl": "https://www.youtube.com/watch?v=mOvhHim78YA",
+      "imageUrl": "https://i.ytimg.com/sb/mOvhHim78YA/storyboard3_L3/M10.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCJX--8QG&sigh=rs$AOn4CLBRc1Pm_soGXt4VJR7qM3OM3K-a2A",
+      "originalLocalPath": "/workspace/scratch/5f5114b49696/research/continuation-20261120/cast-episode6-storyboard-L3-M10.jpg",
+      "nativeCopyVerified": true,
+      "appearanceIds": [
+        "smilingtragedygangle"
+      ],
+      "usage": [
+        "selection-expression-evidence-only; not referenced by missing action prompts"
+      ]
+    }
+  ]
+}

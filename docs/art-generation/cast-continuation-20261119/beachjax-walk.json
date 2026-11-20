@@ -1,0 +1,37 @@
+{
+  "id": "beachjax-walk",
+  "appearanceId": "beachjax",
+  "slot": "walk",
+  "file": "assets/encore/poses/beachjax/walk.png",
+  "sourceGenerationId": "exec-49bad497-2250-4dca-9347-c4b14c833031",
+  "method": "image_gen.imagegen",
+  "prompt": "Use case: identity-preserve. Create ONE individual whole-body 2D fighting-game pose image of BEACH JAX from The Amazing Digital Circus for Digital Circus Encore. Reference image 1 is the approved Beach Jax selection and is the strict design lock: same long lanky adult cartoon proportions, slim smooth lavender-purple featureless body, small narrow torso, long thin arms and legs, broad purple rounded cartoon rabbit feet, large simple purple cartoon hands, enormous yellow eyes with solid BLACK RECTANGULAR pupils, tiny flat deadpan mouth, oval head and TWO very long purple ears. Small vivid pink scallop shell remains securely fixed at the front of the lower belly/hip line, exactly as reference. Reference image 2 confirms official costume details only; do not imitate its squat chibi proportions, photographic toy rendering, backdrop or lighting. Retain crisp dark-purple outlines and controlled smooth cel shading of image 1. No human musculature, anatomical detail, fur texture, clothing, overalls, gloves, shoes or new accessory. Family-friendly smooth cartoon design. Entire figure visible including BOTH ear tips, hands, shell and broad feet, with clear 8-10 percent TRANSPARENT margins on every side. One figure on a real transparent RGBA background; no backdrop, beach, floor, cast shadow, pedestal, glow, effects, lettering, watermark, inset, repeated character or sprite sheet. POSE: walking toward screen RIGHT, full-body three-quarter side view, natural long forward step with one broad foot planted ahead and the back heel lifted; opposite arm swings forward loosely at waist height while other swings backward, hands naturally relaxed. Tall thin torso upright, head looks toward screen right with neutral mildly puzzled expression. Ears trail subtly backward without losing their length. Shell unobscured and securely in place. This is a distinct WALK action, not an idle standing pose.",
+  "referencePaths": [
+    "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/beachjax.png",
+    "/workspace/scratch/5f5114b49696/research/beach-series-04.png"
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/digital-circus-animiniz-beach-vacation-series",
+    "https://glitchproductions.store/cdn/shop/files/Beach_Series_Render_04.png?v=1765572441&width=1600"
+  ],
+  "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-49bad497-2250-4dca-9347-c4b14c833031.png",
+  "visualReview": "Complete lanky Beach Jax stepping toward screen right, with one foot advanced and opposite arm swing. Both long ears trail left, all hands and broad feet remain intact, eyes preserve rectangular black pupils, pink scallop remains fixed and visible. Same purple featureless cartoon design and 2D cel shading as approved selection; no clothing or added scenery.",
+  "sha256": "2a631ea9a4ef380795e56c1596db8ad2a0b62991072ac908ce019df2e54787d2",
+  "dimensions": [
+    1064,
+    1478
+  ],
+  "bytes": 677395,
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "bboxAlpha12": [
+    103,
+    40,
+    969,
+    1438
+  ],
+  "nativeCopyVerified": true
+}

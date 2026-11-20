@@ -1,7 +1,11 @@
 /** Small stage-specific ambient layers, drawn behind actors above the floor. */
+import { CROSSOVER_STAGES } from './crossover-stages.mjs';
 import { SCENERY_ANCHORS } from './render-stage-scenery.mjs';
 export const AMBIENT_FLOOR = 568;
 export const STAGE_AMBIENCES = Object.freeze({
+  ...Object.fromEntries(CROSSOVER_STAGES.map(stage => [stage.id, stage.ambience])),
+  falseexit: 'Poussière sous les tubes fluorescents',
+  undermap: 'Pulsations bleues sous la carte',
   bigtop: 'Lueurs de piste', candy: 'Poussière de sucre', manor: 'Bougies du manoir', spudsy: 'Vapeur du comptoir',
   cellar: 'Présences du cellier', void: 'Reflets irisés', lake: 'Ondes du lac', training: 'Balayage de calibration',
   gloink: 'Formes du nid', kingdom: 'Scintillements de sucre', grounds: 'Nuages des terrains', backstage: 'Veilleuses du couloir',
@@ -11,6 +15,15 @@ const normalFrame = value => Number.isFinite(value) ? Math.max(0, value) : 0;
 const circle = (x, y, rx, ry, color, alpha = 1) => ({ kind: 'ellipse', x, y, rx, ry, color, alpha });
 const stroke = (points, color, alpha = 1, width = 1) => ({ kind: 'line', points, color, alpha, width });
 
+// Falling snow, warm room dust, airborne leaves and data lights all stay
+// behind the actors. Offset, size and drift are local to each environment.
+const crossoverParticles = {
+  coppernine: [19, 18, 9, 2.1, 1.7, '#e3efff'], silicacity: [7, -8, 2, 1.2, 3.5, '#e5bfff'],
+  portaurora: [11, -5, 15, 2.8, 1.0, '#efffff'], gaslightwharf: [9, -4, 5, 3.0, 1.7, '#dddfb2'],
+  parkplanet: [10, 6, 12, 2.4, 1.3, '#fff2c2'], gameoverse: [14, -13, 3, 1.9, 1.9, '#94eeff'],
+  littledaisy: [8, 3, 2, 1.2, 1.8, '#ffcc95'], showgrounds: [10, -3, 7, 1.7, 1.7, '#ffd493'],
+  simpleflipisland: [12, 4, 16, 2.6, 1.2, '#e4ffba'],
+};
 /** Deterministic coordinates only: no RNG, wall clock or actor mutation. */
 export function stageMotion(stage, frame = 0, reducedMotion = false, painted = false) {
   let id = typeof stage === 'string' ? stage : stage?.theme || stage?.id || 'bigtop';
@@ -18,7 +31,14 @@ export function stageMotion(stage, frame = 0, reducedMotion = false, painted = f
   if (!Object.hasOwn(STAGE_AMBIENCES, id)) return { id, frame: 0, shapes: [] };
   const tick = reducedMotion ? 0 : normalFrame(frame), t = tick / 60, shapes = [];
   const wave = (rate, phase = 0) => Math.sin(t * rate + phase);
-  if (painted && ['manor', 'spudsy', 'backstage'].includes(id)) {
+  if (Object.hasOwn(crossoverParticles, id)) {
+    const [count, rise, drift, rx, ry, color] = crossoverParticles[id];
+    for (let i = 0; i < count; i++) {
+      const y = 100 + ((i * 73 + t * rise) % 398 + 398) % 398;
+      const x = 35 + i * 1210 / count + wave(.46, i * 1.9) * drift;
+      shapes.push(circle(x, y, rx, ry, color, .14 + .04 * wave(.6, i)));
+    }
+  } else if (painted && ['manor', 'spudsy', 'backstage'].includes(id)) {
     // The vector candles, counter and wall lamps have their own coordinates.
     // Give the painted architecture unanchored dust or heat motes instead.
     const color = { manor: '#ffe2bb', spudsy: '#fff0cd', backstage: '#ffdcb2' }[id];
@@ -60,6 +80,10 @@ export function stageMotion(stage, frame = 0, reducedMotion = false, painted = f
     const y = 125 + (t * 24 % 390);
     shapes.push(stroke([[80, y], [1200, y]], '#a7ffdf', 0.16, 2));
     for (let i = 0; i < 9; i++) shapes.push(circle(180 + i * 115, 120, 2, 2, '#bdffef', 0.25 + (wave(0.9, i) + 1) * 0.15));
+  } else if (id === 'undermap') {
+    // Quiet reflected light, not episode animation or a simulation effect.
+    for (let i = 0; i < 3; i++) shapes.push(circle(170 + i * 470, 320 + i % 2 * 74,
+      26 + wave(.22, i) * 4, 42 + wave(.19, i) * 5, '#243dcb', .025 + (wave(.31, i * 1.7) + 1) * .012));
   } else if (id === 'gloink') {
     for (let i = 0; i < 7; i++) {
       const x = 80 + i * 185, y = 170 + (i * 87 % 265), angle = t * (i % 2 ? -0.12 : 0.12) + i, radius = 9 + i % 3 * 3;
@@ -74,6 +98,12 @@ export function stageMotion(stage, frame = 0, reducedMotion = false, painted = f
     for (let i = 0; i < 4; i++) {
       const x = ((i * 350 + t * 2.5) % 1480) - 100, y = 100 + i % 2 * 50;
       shapes.push(circle(x, y, 54, 13, '#e3e9ed', 0.14), circle(x + 36, y + 5, 40, 9, '#e3e9ed', 0.12));
+    }
+  } else if (id === 'falseexit') {
+    for (let i = 0; i < 7; i++) {
+      const x = 145 + i * 157 + wave(.33, i * 2.1) * 9;
+      const y = 115 + (55 * i + 3.5 * t) % 344;
+      shapes.push(circle(x, y, 1.3, 1.1, '#d5e2d1', .2 + .07 * wave(.62, i)));
     }
   } else if (id === 'backstage') {
     for (const [i, [x, y, radius]] of SCENERY_ANCHORS.backstage.lights.entries()) shapes.push(circle(x, y, radius * 1.5 + wave(0.5, i) * 2, radius + wave(0.5, i), '#ffe9b7', 0.07 + (wave(0.5, i) + 1) * 0.035));

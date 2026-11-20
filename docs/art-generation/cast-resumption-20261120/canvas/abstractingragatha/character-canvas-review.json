@@ -1,0 +1,219 @@
+{
+  "schema": "encore-character-canvas-review/v1",
+  "createdAt": "2026-11-20T08:56:42.062Z",
+  "method": "Production Canvas2D modules executed by Node and native Skia; actual drawImage sources and transforms inspected.",
+  "limitations": [
+    "No browser, DOM, input, audio, service-worker or physical-device test.",
+    "Individual static poses do not establish frame-by-frame animation.",
+    "Asset identity/proportion fidelity requires separate visual review; no canonical 1:1 certification."
+  ],
+  "partial": false,
+  "additionsOnly": true,
+  "introducedOn": "2026-11-20",
+  "appearanceId": "abstractingragatha",
+  "sources": {
+    "combat/data.mjs": "6910aaddf46645f98520f4cc6fb468c2bc43b6dd017d9237266a90f6c1bf892b",
+    "combat/costume-additions.mjs": "1aa4eabd6c27765bb087b7cf18a71f5bb6dacd385f10e2ebc442edbc7c420eda",
+    "combat/costume-continuation-20261120.mjs": "d3774d17d6058e72081cc7a236f748fc26cc2532fe94ddf772e9ad6de638eb0f",
+    "combat/costume-resumption-20261120.mjs": "5fc7997877eeab8a7b4e68b3a25e3be265abf0082755f02ed9b4b0657557a52e",
+    "combat/illustrations.mjs": "26aca8338be81bedbbbc1bb4bc59dd0aae8b7b7ef4d785cbbf353ac109c53b99",
+    "combat/render.mjs": "91cdc8a8a4b5298644809714aa7e53219e1266e2ffc95478194a699a7bc1212f",
+    "combat/render-poses.mjs": "21e3afba8c19723ffdcb383402cc6339b63cb58df5d4323fda2ebde093ce0b29",
+    "combat/offline-manifest.mjs": "ba853b6eb9bb8eb9ef8f0d49b46cebbec6214fbc84abacf5b3aba3cef53ae423",
+    "scripts/render-combat-character-review.mjs": "59e623f407e86dd639053f090d1bb8a0bc01a39dc04a441e3e08b737fe39f250"
+  },
+  "actions": [
+    {
+      "id": "abstractingragatha",
+      "pose": "intro",
+      "file": "assets/encore/poses/abstractingragatha/intro.png",
+      "sha256": "d9fa8d0e768543170027a9af7046c58f4d334dff87fb18d9d08994cd3bc1b1f5",
+      "bytes": 1846317,
+      "visibleBounds": {
+        "x": 34,
+        "y": 9,
+        "width": 347,
+        "height": 621
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "abstractingragatha",
+      "pose": "attack",
+      "file": "assets/encore/poses/abstractingragatha/attack.png",
+      "sha256": "c08f3ec9364c9d879f1cbd659260f07ef85f6cd7339040e48d8c6b496de97869",
+      "bytes": 1692523,
+      "visibleBounds": {
+        "x": 57,
+        "y": 4,
+        "width": 500,
+        "height": 416
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "abstractingragatha",
+      "pose": "hit",
+      "file": "assets/encore/poses/abstractingragatha/hit.png",
+      "sha256": "a2432ac0b00b051d64230d66a4c1bc21fd8243e5f1184245a4fc83232cd1c0ab",
+      "bytes": 1145596,
+      "visibleBounds": {
+        "x": 5,
+        "y": 9,
+        "width": 558,
+        "height": 620
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "abstractingragatha",
+      "pose": "walk",
+      "file": "assets/encore/poses/abstractingragatha/walk.png",
+      "sha256": "fea1ad278e88bff6b511000e5793d29a7ab1d5d63c67ee40932b8c62aedee481",
+      "bytes": 1106862,
+      "visibleBounds": {
+        "x": 61,
+        "y": 8,
+        "width": 438,
+        "height": 622
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "abstractingragatha",
+      "pose": "jump",
+      "file": "assets/encore/poses/abstractingragatha/jump.png",
+      "sha256": "596dd6d9a8eaf812088e4a5c3c39fcc918f21cec459cc7a069c006a1f76965ac",
+      "bytes": 1287177,
+      "visibleBounds": {
+        "x": 21,
+        "y": 3,
+        "width": 561,
+        "height": 585
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "abstractingragatha",
+      "pose": "crouch",
+      "file": "assets/encore/poses/abstractingragatha/crouch.png",
+      "sha256": "73f985a744221206cd78090c8bddcf4da3229bdb065ee2a0cd28ba7da76771c1",
+      "bytes": 1629628,
+      "visibleBounds": {
+        "x": 134,
+        "y": 5,
+        "width": 378,
+        "height": 417
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "abstractingragatha",
+      "pose": "victory",
+      "file": "assets/encore/poses/abstractingragatha/victory.png",
+      "sha256": "9f8e49eb93ffe3aae88c97f7dd922f83ecccfe3b30f9ce2043c34f300e487119",
+      "bytes": 1784687,
+      "visibleBounds": {
+        "x": 40,
+        "y": 6,
+        "width": 352,
+        "height": 627
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "abstractingragatha",
+      "pose": "defeat",
+      "file": "assets/encore/poses/abstractingragatha/defeat.png",
+      "sha256": "3e3b63fb70c8aaa06baa94d725f039eb59562013712c0413359986e0807f0355",
+      "bytes": 1613425,
+      "visibleBounds": {
+        "x": 90,
+        "y": 3,
+        "width": 486,
+        "height": 422
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "abstractingragatha",
+      "pose": "heavy",
+      "file": "assets/encore/poses/abstractingragatha/heavy.png",
+      "sha256": "17f3fd7f8390e856c45ec263b54c66af1ec0b862e8cd01a7c78e1ea422174507",
+      "bytes": 1662624,
+      "visibleBounds": {
+        "x": 76,
+        "y": 2,
+        "width": 424,
+        "height": 419
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    }
+  ],
+  "stances": [
+    {
+      "id": "abstractingragatha",
+      "file": "assets/encore/stance/abstractingragatha.png",
+      "sha256": "3cbb0f06c0dec05794851327f35e46d6fe7015fe51c9b92eec8672e6f466fd37",
+      "bytes": 1840025,
+      "nativeFacing": 1,
+      "rendered": true,
+      "bothFacings": true
+    }
+  ],
+  "portraits": [
+    {
+      "id": "abstractingragatha",
+      "archiveId": null,
+      "file": "assets/encore/selection/abstractingragatha.png",
+      "sha256": "da90f03acd382f8b46591855417a8bb29a4400088e1e4397ee7ebf11da01d181",
+      "bytes": 1764655,
+      "rendered": true
+    }
+  ],
+  "missing": [],
+  "sheets": [
+    "actions-abstractingragatha.jpg",
+    "archive-portraits-01.jpg"
+  ],
+  "browserTestStatus": "not_executed",
+  "counts": {
+    "appearances": 1,
+    "expectedActions": 9,
+    "actions": 9,
+    "stances": 1,
+    "drawChecks": 20,
+    "archiveEntries": 0,
+    "portraits": 1,
+    "expectedPortraits": 1,
+    "missing": 0
+  },
+  "complete": true
+}

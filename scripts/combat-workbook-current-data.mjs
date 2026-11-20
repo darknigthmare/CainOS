@@ -5,6 +5,7 @@ import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
 import { pathToFileURL } from 'node:url';
+import { updateCrossoverTracker } from './combat-crossover-tracker.mjs';
 import { updateIllustratedTracker } from './combat-illustrated-tracker.mjs';
 import { BROWSER_SUITES, browserSuiteLabel } from './combat-ci-suites.mjs';
 
@@ -140,5 +141,6 @@ export async function prepareCurrentTracker({ root, priorData, evidence }) {
   data.historicalQaRows=data.qa.length-activeIds.size;
   for(const key of Object.values(TRACKER_SHEETS)){const ids=data[key].map(row=>row[0]);assert(ids.every(hasValue));assert.equal(new Set(ids).size,ids.length,'Duplicate IDs in '+key);}
   updateIllustratedTracker(data, offline);
+  updateCrossoverTracker(data, offline, content);
   return {data,totals,fileDigest,offline};
 }

@@ -35,7 +35,7 @@ function record(state,entry,frame,options={}){
 }
 
 test('all 42 endings draw finite compositions on both winner sides without mutating the match',()=>{
-  assert.equal(FINISHER_CATALOG.length,42);
+  assert.equal(FINISHER_CATALOG.length, FIGHTERS.length * 3);
   for(const definition of FINISHER_CATALOG)for(const side of [0,1]){
     const {state,entry}=fixture(definition,side),before=JSON.stringify(state);
     for(const frame of [0,definition.durationFrames/2,definition.durationFrames]){

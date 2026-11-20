@@ -90,3 +90,110 @@ supérieure. Les deux contrôles de refus d’archive sont dans
 [combat-package-gates-0.7.0.json](combat-package-gates-0.7.0.json) : ancienne version
 du classeur et JSON compagnon modifié après revue. Ils utilisent une copie
 temporaire isolée et n’altèrent pas les documents de production.
+
+## Extension PNJ du 17 novembre 2026
+
+Le runtime tableur principal (`@oai/artifact-tool`) n’était pas disponible dans
+l’environnement de cette extension. Le classeur a donc été étendu de façon ciblée
+avec `openpyxl`, sur une copie de sauvegarde préalable :
+
+- 40 lignes dans **Combattants**, 400 dans **Techniques**, 240 dans **Scénarios**
+  (40 routes, 160 chapitres, 40 tournois) et 1 560 dans **Production** ;
+- une feuille **Extension PNJ** de 40 lignes synthétisant kit, histoire, rival,
+  finales et fidélité ;
+- six constats dans **QA** et l’extension des plages des formules de Synthèse.
+
+Les notes utilisateur existantes ne sont pas modifiées. Les formules étendues
+n’ont pas été recalculées par le moteur officiel : Excel les recalcule à
+l’ouverture. Le générateur officiel reste requis pour une publication certifiée,
+un recalcul contrôlé et l’égalité stricte entre classeur et JSON. La
+[vérification](combat-workbook-verification.json) et la
+[preuve QA](combat-qa-evidence-expansion-0.7.0.json) déclarent explicitement
+cette limite, ainsi que l’absence des suites Chromium complètes et des
+comparaisons canoniques 1:1 des 40 nouveaux sprites.
+
+## Réconciliation et complétion des personnages du 19 novembre 2026
+
+La passe du 19 novembre repart du classeur réconcilié entre la branche principale
+et le travail PNJ. Elle utilise le runtime tableur principal
+(`@oai/artifact-tool`) pour importer le fichier existant, étendre son suivi,
+recalculer les formules, exporter puis réimporter le résultat. L’historique du
+17 novembre ci-dessus reste conservé ; les nouveaux constats sont datés et
+identifiés séparément.
+
+Le générateur [update-combat-character-workbook.mjs](../scripts/update-combat-character-workbook.mjs)
+ajoute **179 lignes `COV-`** pour la couverture des apparences, **168 lignes
+`SERIES-`** pour les formes à comparer aux références, et **six constats QA**
+`CHARCOV26-`. Les lignes préexistantes gardent leur ordre, leur identifiant et
+leurs notes utilisateur. Le résultat comprend **3 092 lignes de Production**
+et **2 255 lignes de QA**, dans les **11 feuilles et 10 tableaux natifs**.
+
+### Couverture enregistrée
+
+La [matrice de couverture](combat-character-coverage-2026-11-19.json) suit
+**1 234 fichiers de personnages**, tous inclus dans le manifeste final :
+
+- **54 combattants et 51 variantes d’archive** disposent chacun de leur
+  sélection, de leur garde et de neuf actions distinctes : introduction,
+  attaque, attaque forte, impact reçu, marche, saut, accroupissement, victoire
+  et défaite. Ces 105 ensembles comptent **945 dessins d’action et 105 gardes**.
+- **179 fiches d’archive** disposent de **184 portraits individuels**. Les
+  groupes Best Children A/B, Âmes de Mildenhall A/B/C et Ombres rieuses A/B/C
+  conservent leurs sujets séparés. Les membres supplémentaires de ces groupes
+  sont des sujets de galerie ; ils n’ajoutent pas de kits de combat.
+- Aucun emplacement de dessin attendu n’est manquant. L’inventaire conserve
+  aussi les priorités principal, secondaire et tertiaire, les variantes et les
+  entrées encore à identifier. Ces catégories servent à la production du jeu.
+
+Les 168 formes issues de la recherche comprennent des états de base, des
+accessoires et des candidats à vérifier. Elles ne représentent pas 168
+personnages supplémentaires. Leurs lignes restent « À vérifier ». Les cycles
+d’animation complets et la comparaison canonique plan par plan restent ouverts,
+même lorsque les onze repères statiques d’une apparence sont présents.
+
+### Vérification du classeur et preuves du jeu
+
+La [revue du classeur](combat-character-workbook-review-2026-11-19.json) lie
+l’export XLSX, son JSON compagnon, la matrice, le générateur et le manifeste
+par leurs empreintes. **42 formules ont été recalculées sans erreur** ; une
+modification temporaire de statut a vérifié le recalcul des totaux avant d’être
+annulée. La réimportation a confirmé l’égalité des tableaux avec leur JSON, la
+conservation des notes et des formules, ainsi que les valeurs des feuilles
+hors périmètre.
+
+La [comparaison de mise en forme](combat-character-workbook-layout-review-2026-11-19.json)
+contrôle **74 737 cellules préexistantes** : aucune différence de style, de
+largeur de colonne, de gel des volets, de fusion ou de réglage de page.
+Aucune hauteur de ligne existante n’a diminué. Le pied de la feuille Références
+a été déplacé de 36 lignes pour préserver sa légende après l’ajout des sources.
+Les aperçus de Synthèse, Combattants, Atlas, Production, QA et Références ont
+été relus ; l’[aperçu de Synthèse](images/character-workbook-2026-11-19/summary.png)
+montre les totaux publiés.
+
+Les cinq constats du jeu sont importés depuis la
+[vérification finale](combat-character-verification-2026-11-19.json), après
+contrôle des empreintes des preuves, du runtime, des tests et des images :
+
+| Constat QA | Preuve et résultat |
+| --- | --- |
+| `CHARCOV26-inventory` | [Inventaire des images](combat-character-art-inventory-2026-11-19.json) : 1 234 fichiers, zéro emplacement manquant, 586 nouveaux chemins par rapport à la révision de comparaison et 517 rapprochements avec les octets natifs de génération. |
+| `CHARCOV26-canvas` | [Rendus des personnages](images/character-completion-2026-11-19/character-canvas-review.json) : 945 actions dans les deux sens, soit 1 890 contrôles de dessin, et 184 portraits. Aucun fichier manquant. |
+| `CHARCOV26-scenes` | [Rendus des scènes PNJ](images/character-scenes-2026-11-19/canvas-review.json) : 80 images de garde/sélection et dix scènes à trois plans. |
+| `CHARCOV26-node` | [Journal de `npm run qa`](combat-character-qa-2026-11-19.log) : 399 tests réussis, aucun échec ni test ignoré, puis construction de CainOS et d’Encore. |
+| `CHARCOV26-browser` | **Non exécuté** : 21 configurations recensées, syntaxe des 20 scripts uniques contrôlée ; l’accès au navigateur a été bloqué par la politique de l’environnement. |
+
+Le signal de bord à faible alpha de `Scratch/intro` reste visible dans
+l’inventaire. Sa revue sur fond gris opaque n’a montré ni halo visible, ni
+fragment, ni anatomie coupée ; le PNG natif a été conservé sans retouche.
+Les revues Canvas utilisent les modules de production avec Node et Skia et
+n’attestent pas les interactions DOM, l’audio ou les périphériques physiques.
+Aucune campagne navigateur historique n’est présentée comme une exécution de
+cette passe.
+
+L’export correspond au manifeste **`0.7.0-9d40b0881496`**, à l’art
+**`0e03085d0a637d14`**, et à ses **5 331 illustrations / 2 538 831 567 octets**
+pour l’ensemble du jeu. Les six sorties du classeur sont remplacées ensemble
+avec `publishWorkbookArtifacts`, après la revue et la réimportation. La
+vérification conserve `releaseReviewed: false` et `fullCiExecuted: false` :
+cette publication du suivi n’affirme pas qu’une campagne navigateur complète
+ou une validation canonique a eu lieu.

@@ -1,0 +1,15 @@
+CONTINUATION_WORKBOOK_PHASE {"label":"importing-baseline","rss":185610240,"heapTotal":45584384,"heapUsed":42104320,"external":33007632,"arrayBuffers":1613822}
+CONTINUATION_WORKBOOK_PHASE {"label":"baseline-imported","rss":467951616,"heapTotal":124170240,"heapUsed":104223440,"external":212158972,"arrayBuffers":1659056}
+CONTINUATION_WORKBOOK_PHASE {"label":"runtime-and-pending-evidence-verified","rss":461217792,"heapTotal":119279616,"heapUsed":115236856,"external":206755622,"arrayBuffers":1659056}
+CONTINUATION_WORKBOOK_PHASE {"label":"appending-tracker-rows","rss":467353600,"heapTotal":120066048,"heapUsed":115801816,"external":208575081,"arrayBuffers":3478515}
+CONTINUATION_WORKBOOK_PHASE {"label":"extending-Production-boundary","rss":469450752,"heapTotal":120066048,"heapUsed":115875632,"external":208575081,"arrayBuffers":3478515}
+CONTINUATION_WORKBOOK_PHASE {"label":"written-Production-tail","rss":512512000,"heapTotal":138678272,"heapUsed":116700120,"external":208575081,"arrayBuffers":3478515}
+CONTINUATION_WORKBOOK_PHASE {"label":"added-Production","rss":512774144,"heapTotal":121638912,"heapUsed":116818376,"external":208575081,"arrayBuffers":3478515}
+CONTINUATION_WORKBOOK_PHASE {"label":"formatted-Production","rss":512999424,"heapTotal":121638912,"heapUsed":117619936,"external":208575081,"arrayBuffers":3478515}
+CONTINUATION_WORKBOOK_PHASE {"label":"extending-QA-boundary","rss":513130496,"heapTotal":121901056,"heapUsed":117648240,"external":208575081,"arrayBuffers":3478515}
+CONTINUATION_WORKBOOK_PHASE {"label":"written-QA-tail","rss":513392640,"heapTotal":129241088,"heapUsed":117715776,"external":208575081,"arrayBuffers":3478515}
+CONTINUATION_WORKBOOK_PHASE {"label":"added-QA","rss":513392640,"heapTotal":122425344,"heapUsed":117802792,"external":208575081,"arrayBuffers":3478515}
+CONTINUATION_WORKBOOK_PHASE {"label":"formatted-QA","rss":513359872,"heapTotal":121901056,"heapUsed":117965568,"external":208575081,"arrayBuffers":3478515}
+CONTINUATION_WORKBOOK_PHASE {"label":"added-References","rss":501272576,"heapTotal":134746112,"heapUsed":119100512,"external":208575081,"arrayBuffers":3478515}
+CONTINUATION_WORKBOOK_PHASE {"label":"recalculated","rss":502493184,"heapTotal":144707584,"heapUsed":119368152,"external":208575081,"arrayBuffers":3478515}
+CONTINUATION_WORKBOOK_PHASE {"label":"exporting-without-render-caches","rss":502743040,"heapTotal":122687488,"heapUsed":110058816,"external":217384294,"arrayBuffers":3478515}

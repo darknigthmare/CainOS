@@ -1,0 +1,98 @@
+{
+  "schema": "encore-next-missing-visual-review/v1",
+  "createdAt": "2026-11-20T13:45:47.370919+00:00",
+  "status": "accepted_with_stated_scope",
+  "reviewer": "root assistant",
+  "method": "Native PNGs individually inspected by their producing assistant; alpha-composited eleven-pose overviews additionally inspected by root. Root then inspected all four nine-action sheets and all four selection-portrait outputs from the production Canvas2D renderer under native Skia.",
+  "appearances": [
+    {
+      "id": "watermelongangle",
+      "file": "generated/watermelongangle/review/family-alpha-overview.jpg",
+      "sha256": "5e78b1e6268ed50eada78d7aa025d3cdb010f9255010dc22e6d06f47c1707e19",
+      "status": "native_and_production_render_accepted",
+      "observation": "Chapeau jaune à nœud pervenche, haut et jupe assortis, rubans rouges, masque et larmes cyan, batte et pastèque maintenus ; silhouette entière dans les onze poses. L’attaque et le coup fort restent distincts.",
+      "productionFiles": [
+        {
+          "file": "review/watermelongangle/actions-watermelongangle.jpg",
+          "sha256": "d791ae67a3ba55be32bcdf40cf15b43338d21baf2259e642de76e07d7f4cb0d1"
+        },
+        {
+          "file": "review/watermelongangle/archive-portraits-01.jpg",
+          "sha256": "f6504eaddae6bcd3ab8ea256d760965fd7af7ec2551dfd1f0e2c7583e45f544b"
+        }
+      ],
+      "productionObservation": "Les neuf actions affichent la tenue attendue, avec des silhouettes et accessoires entièrement visibles. Le portrait conserve le corps entier et son rapport largeur/hauteur. Les effets de coup, ombres et indicateurs restent ceux du moteur ; ils ne sont pas ajoutés aux PNG natifs."
+    },
+    {
+      "id": "aquablasterpomni",
+      "file": "generated/aquablasterpomni/review/family-alpha-overview.jpg",
+      "sha256": "5bf4a8a40ab4be5ca3d113a11b582ac54810ab8547446f8874e5b56f7f335d05",
+      "status": "native_and_production_render_accepted",
+      "observation": "Bonnet rouge et bleu, iris en moulinet, tenue de plage rayée et short bleu maintenus. Pistolet multicolore présent dans les onze poses, brassards absents ; pose lourde distincte de la fente d’attaque.",
+      "productionFiles": [
+        {
+          "file": "review/aquablasterpomni/actions-aquablasterpomni.jpg",
+          "sha256": "f31ecb44600bd61077f36cff71abad31cd0b0732214a94ab400d325367486e5a"
+        },
+        {
+          "file": "review/aquablasterpomni/archive-portraits-01.jpg",
+          "sha256": "18d6a7e024befeaeb78322f2194839118f35e776297852ac8310ad4852a00af5"
+        }
+      ],
+      "productionObservation": "Les neuf actions affichent la tenue attendue, avec des silhouettes et accessoires entièrement visibles. Le portrait conserve le corps entier et son rapport largeur/hauteur. Les effets de coup, ombres et indicateurs restent ceux du moteur ; ils ne sont pas ajoutés aux PNG natifs."
+    },
+    {
+      "id": "ptocaine",
+      "file": "generated/ptocaine/review/family-alpha-overview.jpg",
+      "sha256": "76d19adb6196aee062aaafadeca1b98a96bce4a199ecbedb8b9af048bb81b9c3",
+      "status": "native_and_production_render_accepted",
+      "observation": "Dentier, haut-de-forme noir à bande rouge, lunettes menthe à verres jaunes, habit rouge, gants et chaussures cohérents. Silhouettes entières et poses distinctes ; aucun halo visible sur la composition alpha. Le corps reprend explicitement la référence de jeu existante.",
+      "productionFiles": [
+        {
+          "file": "review/ptocaine/actions-ptocaine.jpg",
+          "sha256": "2f0fbe7a60d5f220ae787fc5f932dcf3623b1cc30da4c6505b48b3ecef48a3dc"
+        },
+        {
+          "file": "review/ptocaine/archive-portraits-01.jpg",
+          "sha256": "5cdebd66bf80d436bbc125cd06cafc553f88745d151c0dced514af9ac4237eb7"
+        }
+      ],
+      "productionObservation": "Les neuf actions affichent la tenue attendue, avec des silhouettes et accessoires entièrement visibles. Le portrait conserve le corps entier et son rapport largeur/hauteur. Les effets de coup, ombres et indicateurs restent ceux du moteur ; ils ne sont pas ajoutés aux PNG natifs."
+    },
+    {
+      "id": "freakjax",
+      "file": "root-review/freakjax-native-overview.jpg",
+      "sha256": "b04b43b5069e525849f7fe41a1cebd0a19f77e3af323ac9c7b6718e88d08fed5",
+      "status": "native_and_production_render_accepted",
+      "observation": "Tête jaune ronde, deux yeux noirs carrés et marques brunes maintenus, salopette corail intacte et membres violets. Volume violet rabattu derrière les épaules, sans oreilles dressées ajoutées. Onze silhouettes entières et accessoires cohérents.",
+      "productionFiles": [
+        {
+          "file": "review/freakjax/actions-freakjax.jpg",
+          "sha256": "a289115222484d0681e5f03c794900f4be70d977e8ac6978f9243df69ab33de9"
+        },
+        {
+          "file": "review/freakjax/archive-portraits-01.jpg",
+          "sha256": "d03e922411f55a653a42547963f9ad5660284d40dc8c0fd837fde2ed5ca81c95"
+        }
+      ],
+      "productionObservation": "Les neuf actions affichent la tenue attendue, avec des silhouettes et accessoires entièrement visibles. Le portrait conserve le corps entier et son rapport largeur/hauteur. Les effets de coup, ombres et indicateurs restent ceux du moteur ; ils ne sont pas ajoutés aux PNG natifs."
+    }
+  ],
+  "limitations": [
+    "The reference merchandise is stylized; the original game poses do not certify episode animation.",
+    "No full-body appearance is invented for the still-obscured candidates in remaining-work.md.",
+    "This is not a browser, DOM, audio, service-worker or physical-device review.",
+    "The engine renders each fighter at its existing visual height; merchandise body proportions remain stylized."
+  ],
+  "productionReviewedAt": "2026-11-20T13:50:05.706791+00:00",
+  "productionChecks": {
+    "appearances": 4,
+    "actions": 36,
+    "stances": 4,
+    "portraits": 4,
+    "drawChecks": 80,
+    "missing": 0,
+    "evidence": "canvas-summary.json",
+    "directions": "Both source transforms are checked by the script; visual sheets show the right-facing draw."
+  }
+}

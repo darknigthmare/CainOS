@@ -1,0 +1,37 @@
+{
+  "id": "beachjax-jump",
+  "appearanceId": "beachjax",
+  "slot": "jump",
+  "file": "assets/encore/poses/beachjax/jump.png",
+  "sourceGenerationId": "exec-2859bba4-7cad-4cf5-9c2b-6b00275ba255",
+  "method": "image_gen.imagegen",
+  "prompt": "Use case: identity-preserve. Create ONE individual whole-body 2D fighting-game pose image of BEACH JAX from The Amazing Digital Circus for Digital Circus Encore. Reference image 1 is the approved Beach Jax selection and is the strict design lock: same long lanky adult cartoon proportions, slim smooth lavender-purple featureless body, small narrow torso, long thin arms and legs, broad purple rounded cartoon rabbit feet, large simple purple cartoon hands, enormous yellow eyes with solid BLACK RECTANGULAR pupils, tiny flat deadpan mouth, oval head and TWO very long purple ears. Small vivid pink scallop shell remains securely fixed at the front of the lower belly/hip line, exactly as reference. Reference image 2 confirms official costume details only; do not imitate its squat chibi proportions, photographic toy rendering, backdrop or lighting. Retain crisp dark-purple outlines and controlled smooth cel shading of image 1. No human musculature, anatomical detail, fur texture, clothing, overalls, gloves, shoes or new accessory. Family-friendly smooth cartoon design. Entire figure visible including BOTH ear tips, hands, shell and broad feet, with clear 8-10 percent TRANSPARENT margins on every side. One figure on a real transparent RGBA background; no backdrop, beach, floor, cast shadow, pedestal, glow, effects, lettering, watermark, inset, repeated character or sprite sheet. POSE: one clearly airborne JUMP pose traveling toward screen RIGHT. Long legs tuck naturally with the forward knee lifted and the rear lower leg bent back, both large feet visible and away from each other. Torso bends slightly forward, arms lifted outward for balance with both hands visible. Head three-quarter toward screen right, neutral startled deadpan face; two long ears bend gently backward with momentum but remain complete. Keep the pink shell securely fixed and visible. No movement trails, no dust, no impact and no ground.",
+  "referencePaths": [
+    "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/beachjax.png",
+    "/workspace/scratch/5f5114b49696/research/beach-series-04.png"
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/digital-circus-animiniz-beach-vacation-series",
+    "https://glitchproductions.store/cdn/shop/files/Beach_Series_Render_04.png?v=1765572441&width=1600"
+  ],
+  "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-2859bba4-7cad-4cf5-9c2b-6b00275ba255.png",
+  "visualReview": "Complete airborne rightward leap, forward knee lifted and trailing leg bent back, arms spread for balance. Both ear tips, both hands and both broad feet are fully visible; shell stays fixed at hip line, yellow eyes retain rectangular pupils. Lanky smooth purple anatomy and clean cel-shaded design remain consistent. No ground, duplicate or effects.",
+  "sha256": "b63bc655354a658bdf7775a033dce0159828d82a0e58db19439d0c70b708a14b",
+  "dimensions": [
+    1182,
+    1330
+  ],
+  "bytes": 791478,
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "bboxAlpha12": [
+    42,
+    36,
+    1149,
+    1273
+  ],
+  "nativeCopyVerified": true
+}

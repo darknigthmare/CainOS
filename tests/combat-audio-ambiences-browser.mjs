@@ -201,8 +201,8 @@ try {
     for (const cue of ['trap', 'ko', ...impactCues, 'parry', 'throwTech', 'select', 'confirm']) effects.push(await sample({ enabled: false, cue, seconds: 2 }));
     return { results, silent, effects };
   }, { ids: AMBIENCE_STAGE_IDS, impactCues: AUDIO_IMPACT_CUES });
-  assert.equal(pcm.results.length, 12);
-  assert.equal(new Set(pcm.results.map(item => item.sha256)).size, 12);
+  assert.equal(pcm.results.length, AMBIENCE_STAGE_IDS.length);
+  assert.equal(new Set(pcm.results.map(item => item.sha256)).size, AMBIENCE_STAGE_IDS.length);
   report.pcm = pcm;
   for (const item of pcm.results) {
     assert.equal(item.sampleRate, 24000); assert.equal(item.frames, 288000);

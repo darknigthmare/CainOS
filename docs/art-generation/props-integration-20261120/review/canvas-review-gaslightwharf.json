@@ -1,0 +1,100 @@
+{
+  "schema": "encore-recovered-prop-review/v1",
+  "createdAt": "2026-11-20T07:02:17.022Z",
+  "phase": "integrated",
+  "environment": "Node + Skia, production stage-selector Canvas2D renderer; not a browser session",
+  "provenance": "art/sources/recovered-local-props-20261119/manifest.json",
+  "sources": {
+    "art/sources/recovered-local-props-20261119/manifest.json": "471731c1977d9406de5591188b528664c2b04e60fd3d223c2e85a9aa1302b8d1",
+    "combat/stage-parallax.mjs": "1e01fa0b4932f0e670bb6fa746c48b57de0c726a5637891e68427a161aecc77d",
+    "combat/render.mjs": "91cdc8a8a4b5298644809714aa7e53219e1266e2ffc95478194a699a7bc1212f",
+    "combat/engine.mjs": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
+    "combat/offline-manifest.mjs": "5c1004fe49b817137070ffb0304b7e61c1412a5017e2808e901e6c1a8c36cc10"
+  },
+  "assets": [
+    {
+      "id": "haunted-lamppost",
+      "label": "Lampadaire hanté courbé",
+      "source": "art/sources/recovered-local-props-20261119/haunted-lamppost.png",
+      "file": "assets/encore/props/gaslightwharf/wharf-lamp.png",
+      "stageId": "gaslightwharf",
+      "sha256": "643cb5e4ad7e47ff3f4e98b6702d87d82a33ade5a2dde2b1ab6f93557a78315a",
+      "bytes": 1329877,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceGenerationId": "exec-0558989b-d233-48e8-a307-e0097ecb8779",
+      "nativeCopyVerified": true
+    }
+  ],
+  "scenes": [
+    {
+      "id": "gaslightwharf",
+      "name": "Gaslight District · Les quais",
+      "file": "scene-gaslightwharf.png",
+      "sha256": "9af1ce1ca93c3952a9b4b9723292e6ca7bbe2657a07cab1792373e1432ab607a",
+      "prop": "assets/encore/props/gaslightwharf/wharf-lamp.png",
+      "requested": true,
+      "draw": {
+        "file": "assets/encore/props/gaslightwharf/wharf-lamp.png",
+        "coordinates": [
+          1030,
+          352,
+          147.33333333333334,
+          221
+        ]
+      },
+      "complete": true,
+      "stageDefinitionUnchanged": true,
+      "cameras": [
+        {
+          "camera": -1,
+          "sha256": "874d7e2e0833ba0af10a549310003ce7c61e9c76e3c3c5beca31545462842028"
+        },
+        {
+          "camera": 0,
+          "sha256": "6a92df23f30a13f94024f8df516f9a98d95b99b1b50283960d33cc793fb250f5"
+        },
+        {
+          "camera": 1,
+          "sha256": "b14306780f299e713974d361278ec15f9e10c93058d354a664b117b85d3ca070"
+        }
+      ],
+      "beforeAfter": {
+        "baselineFile": "docs/art-generation/props-integration-20261120/before/scene-gaslightwharf.png",
+        "baselineSHA256": "b2809784a322c5c6e9f9d30e5a0fc980aec005ed2242de020a24cb6359ece296",
+        "changedPixels": 4510,
+        "bounds": {
+          "x": 1035,
+          "y": 328,
+          "right": 1112,
+          "bottom": 539
+        }
+      }
+    }
+  ],
+  "offline": {
+    "images": 5491,
+    "bytes": 2724652669,
+    "artVersion": "dbc2d48af8cbe42e",
+    "version": "0.7.0-fb6e3148b501"
+  },
+  "baseline": {
+    "file": "docs/art-generation/props-integration-20261120/before/canvas-review.json",
+    "sha256": "2cb7df4aae3cbcbb51e4a340b91ad94cc10bb65c159615614ca799fd465bd3dd",
+    "phase": "before_integration"
+  },
+  "limitations": [
+    "Original fan-game props; no claim of canonical episode appearance.",
+    "No DOM, input, audio or service-worker verification.",
+    "Visual review is recorded separately from successful rendering."
+  ],
+  "counts": {
+    "sources": 1,
+    "activeProps": 1,
+    "scenes": 1,
+    "cameraViews": 3,
+    "newNativeBytes": 1329877
+  }
+}

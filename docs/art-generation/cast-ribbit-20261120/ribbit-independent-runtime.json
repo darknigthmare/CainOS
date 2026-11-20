@@ -1,0 +1,35 @@
+{
+  "schema": "encore-ribbit-independent-runtime/v1",
+  "reviewer": "audit_github",
+  "observedAt": "2026-11-20T12:42:02.228Z",
+  "status": "passed",
+  "previousCostumes": 462,
+  "currentCostumes": 464,
+  "previousAdditions": 33,
+  "currentAdditions": 35,
+  "previousSources": 33,
+  "currentSources": 35,
+  "stableCostumePrefix": true,
+  "stableFighters": true,
+  "stableTechniques": true,
+  "stableHistoricalAtlas": true,
+  "stableStages": true,
+  "expectedAppendedIds": [
+    "animeribbit",
+    "jaxsuitribbit"
+  ],
+  "previousOfflineImages": 5700,
+  "currentOfflineImages": 5722,
+  "offlineImageDelta": 22,
+  "offlineByteDelta": 24631738,
+  "removedOfflineImages": 0,
+  "sources": {
+    "combat/costume-additions.mjs": "0e4bf0e6d1d7a926c8f373c5d388179f5813116f5d9c1db1fb76a00329e216f2",
+    "combat/costume-ribbit-20261120.mjs": "c8ecfaae5894a5f6b0f96a6ac8038dd38a6ce57cc2e22ea51bca5aaa6a495b91",
+    "combat/offline-manifest.mjs": "99a4bef5ac846f0518feb3f2062c48c23965c60ac4e5044dc221321fa0f211e1",
+    "tests/combat-action-art-browser.mjs": "6da6492169fcd6f3f425ef7e5f9c3dd96d98bbbaca0d3b7b80b27883d39343cd",
+    "tests/combat-costume-additions.test.mjs": "4e5ff6a205f7691c459aa6988301a08c4b0c905e63dc693e6b28078d06ef6dbb",
+    "scripts/render-combat-character-review.mjs": "bfc9872f4a7cc4ea099280eebb087385d5cb9fd24c113c6ddee9eb88fbd20754"
+  },
+  "probeCorrection": "Initial independent probe mistakenly expected costumeId and textual direction; final probe uses the existing costume and numeric nativeFacing API. No product code changed."
+}

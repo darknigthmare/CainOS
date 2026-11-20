@@ -1,0 +1,44 @@
+{
+  "id": "badendcaine-selection",
+  "appearanceId": "badendcaine",
+  "slot": "selection",
+  "file": "assets/encore/selection/badendcaine.png",
+  "sourceGenerationId": "exec-a299f9e1-3be4-4e41-9771-0b97a2036342",
+  "method": "image_gen.imagegen",
+  "prompt": "Use case: stylized-concept. Asset type: one transparent full-body 2D fighting-game selection illustration. Draw BAD END CAINE from the official design in reference 1, translated into the crisp dark contours and controlled cel shading of reference 2. Preserve the official composition as ONE unified character-state silhouette: Caine with red tailcoat, white shirt, black bow tie, black top hat, white gloves and black trousers/boots is partly engulfed and surrounded by an attached compact cluster of translucent pale blue Bubble-like spheres. Each sphere has small black dot eyes and a wide mouth of triangular white teeth; they form a connected irregular bubble mass around and behind him. Caine's huge red chattering-teeth head is wide open and tilted with TWO plain glossy eye globes, one RED and one BLUE, no normal white eyeballs or green iris. Keep his slim adult cartoon proportions, face and emerging coat/limbs readable inside the enveloping cluster; do not make a second standing Caine or a lineup of separate characters. One hand reaches out, body leans diagonally as in the official figure, with a dark boot showing at the base. Full entire unified silhouette including hat, all surrounding bubble edges, hands and lower base completely inside clear transparent margins. Detailed clean 2D artwork, no starry merchandise backdrop, floor, pedestal, added cane, cast shadow, glow, text, watermark, panel or inset. True transparent RGBA background.",
+  "referencePaths": [
+    "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AniMiniz_DC_abstractedCaine.png",
+    "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/caine.webp"
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/abstraction-animiniz",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AniMiniz_DC_abstractedCaine.png?v=1780353722"
+  ],
+  "sourceType": "official-merchandise",
+  "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-a299f9e1-3be4-4e41-9771-0b97a2036342.png",
+  "sha256": "e2922ce42ae7fefd580aae833a41cd287e3ac2f8af4e0170ed100b28f310c8d3",
+  "dimensions": [
+    1214,
+    1295
+  ],
+  "bytes": 1699448,
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "bboxAlpha12": [
+    102,
+    19,
+    1109,
+    1286
+  ],
+  "nativeCopyVerified": true,
+  "visualReview": "Complete native source board inspected on 20 November. A single Caine remains wrapped in the connected pale-blue Bubble mass. Red coat, black hat/bow tie, open denture head with exactly one solid red and one solid blue eye remain consistent. Slot selection is distinct and readable; glove gestures and body tilt change without inventing another character. Full outer silhouette, hat, hands and lower boot stay inside the source. Alpha composes cleanly on the review background.",
+  "status": "generated-and-visually-reviewed",
+  "episodeFidelityClaim": false,
+  "visualReviewAt": "2026-11-20T04:49:42.642742+00:00",
+  "visualReviewBoard": "docs/art-generation/cast-continuation-20261120/native-review/badendcaine.jpg",
+  "productionStatus": "complete",
+  "includedInRuntime": true
+}

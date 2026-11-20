@@ -1,0 +1,33 @@
+{
+  "id": "presidentpomni-defeat",
+  "appearanceId": "presidentpomni",
+  "slot": "defeat",
+  "file": "assets/encore/poses/presidentpomni/defeat.png",
+  "sourceGenerationId": "exec-6fc936bf-fac4-4c9a-9b8b-b2cea48d712d",
+  "method": "image_gen.imagegen",
+  "prompt": "One individual transparent RGBA 2D fighting-game sprite of President Pomni. Repose the single approved character in reference1, retaining exact muted blue pantsuit/jacket/lapels, white shirt, pale gray tie, white gloves, black rounded shoes, large white face, brown bob, segmented red-and-blue jester hat with yellow band and both pompons, pinwheel eyes and crisp black outline/cel shading. Preserve same head/body proportions and character identity. Entire full body including hat, hands and feet clearly inside transparent margins, no scenery, floor, background, glow, aura, lettering, labels, speed trails, extra figure or props. Pose: safe non-graphic defeated sitting pose on invisible floor, slumped shoulders and bowed head turned right, bent knees, one gloved hand supporting body and other on knee, tired sad expression; both shoes visible, no injuries.",
+  "referencePaths": [
+    "assets/encore/selection/presidentpomni.png"
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/digital-circus-animiniz-costume-adventure-series"
+  ],
+  "sha256": "a40f803be6009a3f3837d3ae9307b96067c8816cc55e9a5fd56c9f7b156232c2",
+  "dimensions": [
+    955,
+    1647
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "bboxAlpha12": [
+    40,
+    236,
+    911,
+    1467
+  ],
+  "bytes": 1048411,
+  "visualReview": "Revue individuelle et composition avec alpha natif sur fond sombre : un personnage entier, accessoires contenus, costume et proportions cohérents entre les onze vues. Pose statique originale pour le jeu."
+}

@@ -1,0 +1,47 @@
+{
+  "id": "abstractingkinger-stance",
+  "appearanceId": "abstractingkinger",
+  "slot": "stance",
+  "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingkinger/stance.png",
+  "sourceGenerationId": "exec-d3df710b-6ca4-41ec-98f9-cf6e51b60593",
+  "method": "image_gen.imagegen",
+  "prompt": "Use case: identity-preserve. Asset type: ONE individual full-body transparent 2D fighting-game action sprite of ABSTRACTING KINGER. Reference 1 is the approved strict design lock for silhouette, proportions, exact transformation patches, eyes, colours and polished cel shading. Reference 2 supplies official design details only; do not imitate its squat toy proportions, setting or lighting. Tall beige king chess piece with cross crown, one normal bulging blue-iris eye, purple floor-length robe with white black-spotted ermine. Opposing head/crown side is dark angular crystal with large concentric pastel eye and extra embedded eyes; two WHITE FLOATING HANDS with crystal cuffs, asymmetrical crystal robe base. Absolutely no human face, mouth, arms inside sleeves, legs or feet. Preserve exact normal/abstract side pattern. Create a genuinely distinct natural action pose, not a mirrored/cropped selection image. Every limb, crown/hat/ear tip, attached mask and crystal spike must fit fully inside clear transparent margins on ALL sides. One connected character, crisp detailed 2D art on true transparent RGBA; no scenery, floor, cast shadow, aura, glow, particles, labels, watermark, inset or duplicate. POSE: COMBAT GUARD facing screen RIGHT: tilt chess body slightly forward, float both white hands before chest with palms/fingers ready, robe base stable. No legs or feet.",
+  "referencePaths": [
+    "/workspace/scratch/5f5114b49696/CainOS/docs/art-generation/cast-continuation-20261120/pending-assets/abstractingkinger/selection.png",
+    "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedKinger.png"
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/abstraction-animiniz",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedKinger.png?v=1780353722"
+  ],
+  "sourceType": "official-merchandise",
+  "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-d3df710b-6ca4-41ec-98f9-cf6e51b60593.png",
+  "sha256": "5d020504e1da5dc847e1d2a65fb7c8c228e435da229214c1a9b882f4fa7ecf2c",
+  "dimensions": [
+    1141,
+    1379
+  ],
+  "bytes": 1202856,
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "bboxAlpha12": [
+    32,
+    3,
+    1122,
+    1375
+  ],
+  "nativeCopyVerified": true,
+  "visualReview": "Chess body leans forward into combat guard, both floating white hands raised before chest. Purple ermine robe, crystal cuffs, asymmetric head and lower base retained; normal blue iris remains. Entire crown and base visible, no human limbs added.",
+  "status": "generated-and-visually-reviewed",
+  "episodeFidelityClaim": false,
+  "targetFile": "assets/encore/stance/abstractingkinger.png",
+  "productionStatus": "partial",
+  "includedInRuntime": false,
+  "originalReferencePaths": [
+    "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/abstractingkinger.png",
+    "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedKinger.png"
+  ]
+}

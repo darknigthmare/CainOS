@@ -1,0 +1,24 @@
+{
+  "appearanceId": "bugtamerkinger",
+  "slot": "walk",
+  "status": "unused_native_variant",
+  "method": "image_gen.imagegen",
+  "prompt": "Use case: background-extraction. Edit the provided Bug Tamer Kinger sprite. Preserve the exact single character, pose, anatomy, proportions, clean outlines, internal cel shading and colors, bucket helmet and short U-shaped handle with brown grip, exactly TWO detached white gloves, purple ermine robe, red/cream striped hoop, stylized orange SOLID flames attached to hoop and the single butterfly. Only remove the entire surrounding background and ALL diffuse glows/halos/aura/shadow, including within the hoop around the butterfly and gaps between the two hands and body. Output must be a true clean transparent PNG cutout: every pixel outside the sharply outlined solid character/props is alpha=0, no translucent halo, no gray or black backdrop, no light bloom. The character and solid props themselves must be fully opaque, without any transparent wash. Keep every tip inside clear margins; do not crop or change this pose. No text, extra limbs, floor or scenery.",
+  "sourceGenerationId": "exec-f034a598-18e7-45dd-abbf-c89e89bc751e",
+  "nativeSourceFile": "/workspace/scratch/212405cce9d0/generated_images/exec-f034a598-18e7-45dd-abbf-c89e89bc751e.png",
+  "file": "docs/art-generation/cast-next-20261120/generated/bugtamerkinger/attempts/walk-unused-alpha-cleanup.png",
+  "sha256": "8eef4e44c046aafd223f130d7d0903d486a273b5dab95fe689a61a4d3f0071c0",
+  "bytes": 1594802,
+  "referencePaths": [
+    "docs/art-generation/cast-next-20261120/generated/bugtamerkinger/walk.png"
+  ],
+  "executionReferencePaths": [
+    "/workspace/scratch/212405cce9d0/generated_images/exec-6c61e609-ceac-4874-9ea4-a1978c75ba66.png"
+  ],
+  "visualReview": {
+    "status": "not_selected",
+    "reason": "Cleanup was initiated after raw viewer appeared to show glow. Source-over alpha diagnostics disproved the defect; original is valid and is kept active to preserve the original drawing. This derivative is neither required nor counted as a missing-pose replacement."
+  },
+  "active": false,
+  "countsAsMissingPoseCompletion": false
+}

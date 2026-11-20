@@ -1,0 +1,183 @@
+{
+  "schema": "encore-workbook-reconciliation/v1",
+  "gameVersion": "0.7.0",
+  "createdAt": "2026-11-19T17:53:31.698Z",
+  "sourceParents": {
+    "main": "402dbd952337089517ae2b472a71fd0bb0993411",
+    "pr7": "b64dc7ad33a7ec85f2bb69d906921403ad4cf09d"
+  },
+  "counts": {
+    "fighters": 54,
+    "moves": 540,
+    "stages": 22,
+    "modes": 9,
+    "atlas": 179,
+    "variants": 429,
+    "archiveOnly": 74,
+    "storyRoutes": 54,
+    "storyChapters": 216,
+    "storyPanels": 324,
+    "storyBriefings": 216,
+    "musicThemes": 22,
+    "soundEffects": 26,
+    "offlineImages": 4765,
+    "offlineBytes": 1966132196,
+    "features": 106,
+    "production": 2745,
+    "scenarios": 348,
+    "qa": 2249,
+    "presentationSequences": 270,
+    "animatedStages": 22,
+    "rebuiltStages": 3,
+    "refinedCostumes": 20,
+    "costumeReplacementSheets": 5,
+    "finishers": 162,
+    "audioAmbiences": 22,
+    "archiveVariants": 51,
+    "dedicatedStages": 54,
+    "friendships": 54
+  },
+  "qaSummary": {
+    "Réussi": 2241,
+    "Non exécuté": 5,
+    "À vérifier": 2,
+    "Partiel": 1,
+    "Échec": 0
+  },
+  "qaSummaryScope": "Historique conservé et contrôles de réconciliation. Les succès historiques ne constituent pas de nouveaux essais du runtime fusionné.",
+  "currentQa": {
+    "gameVersion": "0.7.0",
+    "campaign": "workbook-reconciliation-2026-11-19",
+    "complete": false,
+    "rowIds": [
+      "WBMERGE26-identities",
+      "WBMERGE26-formulas",
+      "WBMERGE26-release"
+    ],
+    "evidence": "docs/combat-workbook-reconciliation-2026-11-19.json",
+    "scope": "Réconciliation des documents. La campagne CI complète des sources fusionnées reste requise."
+  },
+  "parents": {
+    "main": {
+      "workbookSHA256": "066bf6e9c329f49205d311003bb09f2e56601752b0683bbd1f7b6daf42c30c4a",
+      "trackerDataSHA256": "ff821b70e64187b36c2ab426b1ae813b0a09c12ded8fd69214675bfbe961c67c"
+    },
+    "pr7": {
+      "workbookSHA256": "b8e00c73ae22a9b16caa2519b565f877d914f04e8affbcf8ab38344fc6d6abaf",
+      "trackerDataSHA256": "e1df47a17fc2eefb2e2bb7b48d52bff537dc729050eb1902cc12b171ad7bbd73"
+    }
+  },
+  "workbookSHA256": "5c63335a7506563bb4954ee344d1d6be1a88c4433a0366c6fceb41b1396c1fbf",
+  "trackerDataSHA256": "e6d42d61da26345f175fe11ee42fa946ec07044f3a3eabb84dac2097abe0fc66",
+  "nativeTables": [
+    {
+      "sheet": "Fonctionnalités",
+      "name": "EncoreFonctionnalites",
+      "style": "TableStyleLight1",
+      "filter": true,
+      "rows": 106
+    },
+    {
+      "sheet": "Combattants",
+      "name": "EncoreCombattants",
+      "style": "TableStyleLight1",
+      "filter": true,
+      "rows": 54
+    },
+    {
+      "sheet": "Techniques",
+      "name": "EncoreTechniques",
+      "style": "TableStyleLight1",
+      "filter": true,
+      "rows": 540
+    },
+    {
+      "sheet": "Arènes",
+      "name": "EncoreArenes",
+      "style": "TableStyleLight1",
+      "filter": true,
+      "rows": 22
+    },
+    {
+      "sheet": "Atlas",
+      "name": "EncoreAtlas",
+      "style": "TableStyleLight1",
+      "filter": true,
+      "rows": 179
+    },
+    {
+      "sheet": "Production",
+      "name": "EncoreProduction",
+      "style": "TableStyleLight1",
+      "filter": true,
+      "rows": 2745
+    },
+    {
+      "sheet": "Scénarios",
+      "name": "EncoreScenarios",
+      "style": "TableStyleLight1",
+      "filter": true,
+      "rows": 348
+    },
+    {
+      "sheet": "Extension PNJ",
+      "name": "EncoreExtensionPNJ",
+      "style": "TableStyleMedium9",
+      "filter": true,
+      "rows": 40
+    },
+    {
+      "sheet": "QA",
+      "name": "EncoreQA",
+      "style": "TableStyleLight1",
+      "filter": true,
+      "rows": 2249
+    },
+    {
+      "sheet": "Références",
+      "name": "EncoreReferences",
+      "style": "TableStyleLight1",
+      "filter": true,
+      "rows": 76
+    }
+  ],
+  "formulaErrors": 0,
+  "formulas": {
+    "count": 42,
+    "generalRecalculation": true,
+    "summaryValuesChecked": 42,
+    "existingSummaryFormulaCellsPreserved": true,
+    "desktopExcelOpened": false
+  },
+  "notesPreservation": {
+    "sourceNonEmptyNotes": 0,
+    "collisions": [],
+    "identityPreserved": true,
+    "exportRoundTripPassed": true,
+    "mainRowOrderPreserved": true
+  },
+  "statusMutationRecalculated": true,
+  "extensionSheetPreserved": true,
+  "modifiedCells": 4466,
+  "expandedRows": 967,
+  "renderedSheets": [
+    "Synthèse",
+    "Fonctionnalités",
+    "Combattants",
+    "Techniques",
+    "Arènes",
+    "Atlas",
+    "Production",
+    "Scénarios",
+    "Extension PNJ",
+    "QA",
+    "Références"
+  ],
+  "releaseReviewed": false,
+  "fullCiExecuted": false,
+  "limitations": [
+    "Document reconciliation only. No full CI claim or release gate override.",
+    "No desktop Excel session, physical-device review or new canonical visual certification.",
+    "Historical test evidence remains historical."
+  ]
+}

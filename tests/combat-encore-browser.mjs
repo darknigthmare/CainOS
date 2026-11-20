@@ -66,6 +66,22 @@ async function enterFight() {
   await advance(1800);
   assert.equal((await snapshot()).phase, 'fight');
 }
+async function enterTournament() {
+  await ready();
+  assert.equal((await program()).mode, 'tournament');
+  assert.equal((await program()).index, 0);
+  assert.deepEqual((await program()).results, []);
+  assert.equal(await page.locator('#modal[open] .story-intro').count(), 1);
+  assert.equal(await page.evaluate(() => window.Encore.paused), true);
+  const atIntro = await snapshot();
+  assert.equal(atIntro.phase, 'intro');
+  await advance(300);
+  assert.deepEqual(await snapshot(), atIntro, 'tournament introduction pauses the real simulation');
+  await page.locator('#modal [data-action="resume"]').click();
+  assert.equal(await page.locator('#modal[open]').count(), 0);
+  assert.equal(await page.evaluate(() => window.Encore.paused), false);
+  await enterFight();
+}
 async function start(mode, fighter = 'jax') {
   await page.locator(`.mode-card[data-mode="${mode}"]`).click();
   await page.locator(`[data-fighter="${fighter}"]`).click();
@@ -245,7 +261,7 @@ try {
   tournamentFixture.program = createProgram('tournament', 'jax', FIGHTERS, STAGES, { seed: 2718, difficulty: 'easy', roundTime: 120, stage: 'bigtop' });
   await importProfile(tournamentFixture, 'tournoi-vierge-2718.json');
   await page.locator('[data-action="resume-program"]').click();
-  await enterFight();
+  await enterTournament();
   await showBracket();
   assert.equal((await page.locator('.bracket-match small').allTextContents()).filter(text => text === 'Résultat CPU simulé').length, 3);
   assert.equal((await program()).tournament.participants.length, 8);
@@ -284,7 +300,7 @@ try {
   lossFixture.program = createProgram('tournament', 'jax', FIGHTERS, STAGES, { seed: 123, difficulty: 'hard', roundTime: 60 });
   await importProfile(lossFixture, 'tournoi-defaite-123.json');
   await page.locator('[data-action="resume-program"]').click();
-  await enterFight();
+  await enterTournament();
   await loseWithoutAttacking('tournament-elimination');
   const lostProfile = await profile(), lostBracket = await program();
   assert.equal(lostProfile.stats.matches, 1);
@@ -304,6 +320,8 @@ try {
   assert.deepEqual(await program(), lossFixture.program);
   assert.deepEqual((await profile()).stats, lostProfile.stats);
   assert.deepEqual((await snapshot()).fighters.map(fighter => fighter.hp), [10000, 10000]);
+  await enterTournament();
+  assert.deepEqual((await profile()).stats, lostProfile.stats, 'continuing the retry introduction preserves the recorded loss');
   checked('Tournament loss eliminates without a medal; replay starts a fresh bracket attempt', 'The real CPU wins; remaining results are simulated and retry resets index/results while preserving the recorded loss');
 
   // Reuse an actually earned checkpoint from the first story duel, not a

@@ -37,7 +37,7 @@ const report = {
   limitations: [
     'Canonical 1:1 art, voice acting and final sound mix remain unverified.',
     'Browser checks use Chromium and virtual clocks where explicitly recorded; physical phones, two physical controllers and low-end hardware are not exercised.',
-    'Historical before/after artwork suites are not rerun: the source PNG assets are unchanged in 0.7.',
+    'Historical before/after artwork comparisons are not rerun; the current action-art suite checks published PNG and WebP drawings directly.',
     'Gallery previews are not earned combat victories. Played matches are recorded separately by the roster and story suites.'
   ]
 };
@@ -51,7 +51,12 @@ async function run(file, extraEnv = {}, label = file) {
   let transcript = '', timedOut = false;
   const append = chunk => { transcript += chunk; process.stdout.write(chunk); };
   child.stdout.on('data', append); child.stderr.on('data', append);
-  const timer = setTimeout(() => { timedOut = true; child.kill('SIGTERM'); setTimeout(() => child.kill('SIGKILL'), 3000).unref(); }, 420000);
+  // The costume audit decodes 2,520 UHD files and renders both orientations.
+  const timeoutMinutes = file === 'tests/combat-crossovers-browser.mjs' ? 32
+    : file === 'tests/combat-roster-browser.mjs' ? 27
+    : file === 'tests/combat-finishers-browser.mjs' ? 25
+    : file === 'tests/combat-story-presentation-browser.mjs' ? 20 : 7;
+  const timer = setTimeout(() => { timedOut = true; child.kill('SIGTERM'); setTimeout(() => child.kill('SIGKILL'), 3000).unref(); }, timeoutMinutes * 60_000);
   let exitCode;
   try { exitCode = await new Promise((resolve, reject) => { child.on('error', reject); child.on('close', code => resolve(code ?? 1)); }); }
   finally { clearTimeout(timer); }

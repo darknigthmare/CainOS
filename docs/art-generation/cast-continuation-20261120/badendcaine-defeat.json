@@ -1,0 +1,45 @@
+{
+  "id": "badendcaine-defeat",
+  "appearanceId": "badendcaine",
+  "slot": "defeat",
+  "file": "assets/encore/poses/badendcaine/defeat.png",
+  "method": "image_gen.imagegen",
+  "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-ab847926-2e4f-456b-91e8-7d0748033cd9.png",
+  "sourceGenerationId": "exec-ab847926-2e4f-456b-91e8-7d0748033cd9",
+  "sourceURLs": [
+    "https://glitchproductions.store/products/abstraction-animiniz",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AniMiniz_DC_abstractedCaine.png?v=1780353722"
+  ],
+  "sourceType": "official-merchandise",
+  "episodeFidelityClaim": false,
+  "referencePaths": [
+    "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/badendcaine.png",
+    "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AniMiniz_DC_abstractedCaine.png"
+  ],
+  "prompt": "Use case: stylized-concept. Produce ONE new individual full-body action sprite for Digital Circus Encore, Caine — Bad End, slot defeat. Image 1 is the approved game selection design; preserve its exact character traits, crisp ink line and polished cel-shaded 2D art. Image 2 is the official merchandise reference, establishing this appearance, not an episode event. ONE unified connected character-state silhouette: a single Caine partly engulfed and surrounded by a compact attached irregular mass of translucent pale-blue Bubble spheres with small black dot eyes and wide mouths of triangular white teeth. Caine keeps a red tailcoat, white shirt, black bow tie, black top hat with red band, white gloves, black trousers and dark boot. Huge open red denture head with white rounded teeth and exactly TWO plain glossy eye globes, one solid RED and one solid BLUE, no normal white sclera and no green iris. Keep the attached Bubble mass wrapping his lower body and behind him; Caine remains one subject, never a normal free-standing man with a detached crowd. CHANGE to this new clearly distinct pose: A distinct defeated pose: the entire attached Caine-and-Bubble cluster slumps sideways low toward screen LEFT, one visible dark boot and a relaxed white glove protruding at its lower front edge. His open denture head is tilted and black top hat remains attached, both plain red and blue eyes still present. All connected bubbles remain readable, no broken teeth, injury, floor or other figure. Do not copy the selection pose. Entire subject from topmost hat or glove to bottommost boot and all outer Bubble curves must stay inside generous transparent margins on every edge. Preserve natural proportions; no stretched mouth, extra limbs, third eye, separate Caine, extra hat, cane or other accessory. Native high-resolution TRUE transparent RGBA background, clean alpha, no haze, glow, aura, ghost trails, floor, backdrop, cast shadow, effects, caption, watermark, panel, sheet or framing. Only one full-body pose.",
+  "createdAt": "2026-11-20T04:47:34.275Z",
+  "visualReview": "Complete native source board inspected on 20 November. A single Caine remains wrapped in the connected pale-blue Bubble mass. Red coat, black hat/bow tie, open denture head with exactly one solid red and one solid blue eye remain consistent. Slot defeat is distinct and readable; glove gestures and body tilt change without inventing another character. Full outer silhouette, hat, hands and lower boot stay inside the source. Alpha composes cleanly on the review background.",
+  "sha256": "4c49a3f92024a6693bb230eddaef01b0a5cc0828b8bbe21aa4b4c7eb9f28c4d9",
+  "bytes": 1807933,
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "bboxAlpha12": [
+    95,
+    27,
+    1386,
+    1006
+  ],
+  "nativeCopyVerified": true,
+  "visualReviewAt": "2026-11-20T04:49:42.643041+00:00",
+  "visualReviewBoard": "docs/art-generation/cast-continuation-20261120/native-review/badendcaine.jpg",
+  "status": "generated-and-visually-reviewed",
+  "productionStatus": "complete",
+  "includedInRuntime": true
+}

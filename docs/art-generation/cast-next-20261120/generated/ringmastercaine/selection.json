@@ -1,0 +1,66 @@
+{
+  "schema": "encore-native-art-discovery/v1",
+  "appearanceId": "ringmastercaine",
+  "slot": "selection",
+  "status": "accepted_native",
+  "createdAt": "2026-11-20T09:44:44.748937+00:00",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "prompt": "Create ONE individual complete-character 2D fighting-game sprite, polished cel shading with crisp dark contours, coherent with Digital Circus Encore. Keep all hat/bow tips, every hand, ornament, cane and the entire base/feet inside CLEAR TRANSPARENT MARGINS on ALL FOUR SIDES. True transparent RGBA. No scenery, floor, cast shadow, aura, external glow, particles, text, logo, watermark, inset or duplicate. One original static game adaptation; do not copy the product scene or its squat toy proportions. Reference 1 is the official DESIGN AND ANATOMY reference. Reference 2 is GAME ART STYLE ONLY: borrow its crisp linework and cel shading, NEVER its body, clothing or anatomy. DESIGN LOCK: ONE entire Ringmaster Caine wearing his BLACK outfit from the official Side Show product: RED denture head with white teeth and exactly two protruding round eyes with BLUE and GREEN irises, BLACK TOP HAT with RED band, BLACK GLITTER-FABRIC TUXEDO/TAILCOAT with thin pale trim, WHITE SHIRT FRONT with BLACK BUTTONS, small RED BOW TIE, WHITE GLOVES, BLACK TROUSERS and BLACK SHOES. Exactly TWO normal arms and TWO legs. One DARK CANE with a GOLD BALL KNOB. Keep the subtle glitter as small fabric highlights only, no external sparks or particles. Preserve the black tailcoat instead of the ordinary red Caine coat. No podium or round red/cream display plinth. POSE: SELECTION: full-body confident three-quarter presentation facing slightly screen RIGHT, black tailcoat tails and both black shoes visible, cane held elegantly in one white-gloved hand and other hand open at the waist. Tall natural game proportions, not a squat collectible.",
+  "referencePaths": [
+    "docs/art-generation/cast-next-20261120/research/merch/official-ringmaster-caine.png",
+    "assets/encore/selection/caine.webp"
+  ],
+  "portableReferences": [
+    {
+      "file": "docs/art-generation/cast-next-20261120/research/merch/official-ringmaster-caine.png",
+      "sha256": "810e37a66b662ae00c610167fbd11b0e754b39c7eb0b70fa61ac0cd157e6b493",
+      "bytes": 6486644
+    },
+    {
+      "file": "assets/encore/selection/caine.webp",
+      "sha256": "9d2e8a00ffa0f1f55b5aecec59da05a4be6edfea355c6df34aea4bfec9f044e7",
+      "bytes": 278502
+    }
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_ringmasterCaine.png?v=1773977710"
+  ],
+  "sourceKind": "Produit dérivé officiel",
+  "episodeFidelityClaim": false,
+  "sourceGenerationId": "exec-e478d934-ec02-40a7-ae2d-23efc8b138c0",
+  "nativeSourceFile": "/workspace/scratch/5f5114b49696/generated_images/exec-e478d934-ec02-40a7-ae2d-23efc8b138c0.png",
+  "file": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/selection.png",
+  "targetFile": "assets/encore/selection/ringmastercaine.png",
+  "sha256": "b95d9ff79564bb0ae0b536ef4b3cf48b1cc43af6f046fa687355ea753fc4d5fb",
+  "bytes": 1539137,
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "fullyTransparentPixels": 1021573,
+  "alpha12Bounds": [
+    62,
+    18,
+    958,
+    1521
+  ],
+  "alpha12BoundsThreshold": "alpha >= 12",
+  "nativeCopyVerified": true,
+  "nativeFacing": "right",
+  "visualReview": {
+    "reviewer": "root",
+    "status": "accepted",
+    "observations": [
+      "Official black glitter tailcoat with pale lapel piping, red bow tie, white shirt, black trousers and shoes preserved in tall game proportions.",
+      "One red denture head, blue and green eyes, black hat with red band, two gloved hands and one dark cane with golden ball; no display podium."
+    ],
+    "scope": "Approved merchandise identity and game presentation; original static game pose, no canonical episode certification."
+  }
+}

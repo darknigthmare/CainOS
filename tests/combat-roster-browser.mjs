@@ -1,5 +1,5 @@
 /**
- * Fourteen real Versus CPU duels, one for every base fighter.
+ * Real Versus CPU duels, one for every fighter in the current roster.
  * Uses normal menus, settings and physical keyboard events. Encore snapshots and
  * storage are read only. No production hook, state injection or health change.
  * clock.runFor delivers every RAF; it accelerates wall time, not simulation steps.
@@ -34,8 +34,8 @@ const report = {
   expectedFighters: FIGHTERS.map(({ id, name }) => ({ id, name })),
   sourceHashes: await hashes(), servedSources: [], checks: [], playedMatches: [], errors: [],
   limitations: [
-    'Fourteen completed base-fighter duels are separate from the aggregate assertion count. This is not an exhaustive test of all moves, matchups, costumes or difficulties.',
-    'The profile intentionally keeps the latest twelve history entries. Each of fourteen insertions and total-match increments is checked before and after reload.',
+    'Completed base-fighter duels are separate from the aggregate assertion count. This is not an exhaustive test of all moves, matchups, costumes or difficulties.',
+    'The profile intentionally keeps the latest twelve history entries. Each insertion and total-match increments is checked before and after reload.',
     'Headless Chromium with accelerated browser time; no physical phone, controllers, Windows launcher or performance claim.',
     'Only the last earned replay is exported and imported through the interface. The entire terminal snapshot is compared.',
     'Service workers and the HTTP cache are disabled in this fresh browser context to verify the served source bytes; offline behavior has its own suite.'
@@ -127,7 +127,7 @@ async function completeWithKeyboard() {
 }
 
 try {
-  assert.equal(GAME_VERSION, '0.7.0'); assert.equal(FIGHTERS.length, 14);
+  assert.equal(GAME_VERSION, '0.7.0'); assert.equal(FIGHTERS.length, 54);
   browser = await playwright.chromium.launch({ headless: true, executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH || undefined, args: ['--no-sandbox', '--disable-dev-shm-usage', '--single-process', '--no-zygote'] });
   report.browserVersion = browser.version();
   const context = await browser.newContext({ viewport: { width: 1280, height: 900 }, acceptDownloads: true, serviceWorkers: 'block' });
@@ -178,7 +178,7 @@ try {
     }
     const before = await profile();
     currentMatch = { number: index + 1, fighter: fighter.id, name: fighter.name, opponent: opponent.id, stage: stage.id, mode: 'versus', keyboard: { keyDown: 0, keyUp: 0, presses: {} } };
-    console.log(`START duel ${index + 1}/14: ${fighter.id} vs ${opponent.id} (${stage.id})`);
+    console.log(`START duel ${index + 1}/${FIGHTERS.length}: ${fighter.id} vs ${opponent.id} (${stage.id})`);
     await selectAndStart(fighter, opponent, stage);
     const terminal = await completeWithKeyboard();
     assert.ok([0, 1].includes(terminal.winner), 'a completed duel has a winning side');
@@ -241,21 +241,21 @@ try {
     assert.deepEqual(await stored(REPLAY_KEY), replay, 'earned replay survives reload');
     currentMatch.reloadVerified = true;
     report.playedMatches.push(currentMatch); lastReplay = replay; lastResult = terminal;
-    console.log(`DUEL COMPLETE ${index + 1}/14: ${fighter.id}, ${won ? 'win' : 'loss'}, ${terminal.frame} frames, profile ${earned.stats.matches} matches / ${earned.history.length} history entries, reload verified`);
+    console.log(`DUEL COMPLETE ${index + 1}/${FIGHTERS.length}: ${fighter.id}, ${won ? 'win' : 'loss'}, ${terminal.frame} frames, profile ${earned.stats.matches} matches / ${earned.history.length} history entries, reload verified`);
     currentMatch = null;
     await writeProgress();
   }
   const earned = await profile();
   assert.deepEqual(report.playedMatches.map(match => match.fighter), FIGHTERS.map(fighter => fighter.id));
-  assert.equal(new Set(report.playedMatches.map(match => match.fighter)).size, 14);
-  checked('All fourteen base fighters are selected through the Versus CPU menu', 'J1 appearance, CPU rival, stage, initial health and stored match configuration checked for every duel.');
-  assert.equal(earned.stats.matches, 14); assert.equal(earned.stats.wins + earned.stats.losses, 14);
-  checked('All fourteen keyboard duels reach a real match result', 'One winning round per duel, commands executed by J1, no abandoned or injected result; wins and losses both accepted.');
+  assert.equal(new Set(report.playedMatches.map(match => match.fighter)).size, FIGHTERS.length);
+  checked('All roster fighters are selected through the Versus CPU menu', 'J1 appearance, CPU rival, stage, initial health and stored match configuration checked for every duel.');
+  assert.equal(earned.stats.matches, FIGHTERS.length); assert.equal(earned.stats.wins + earned.stats.losses, FIGHTERS.length);
+  checked('All roster keyboard duels reach a real match result', 'One winning round per duel, commands executed by J1, no abandoned or injected result; wins and losses both accepted.');
   assert.equal(earned.history.length, 12);
-  checked('Each result adds exactly one match and the correct newest history entry', 'Fourteen match/win/loss increments and fourteen ordered history insertions; the final twelve-entry cap is respected.');
-  checked('Every result persists before its modal and is awarded once', 'Fourteen complete terminal snapshots and profiles remain unchanged during the result presentation.');
-  checked('All fourteen full profiles and earned replays survive reload', 'A real page reload after each completed duel, followed by exact profile and local replay comparisons.');
-  await fs.writeFile(path.join(output, 'earned-profile-14-duels.json'), JSON.stringify(earned, null, 2) + '\n');
+  checked('Each result adds exactly one match and the correct newest history entry', 'One match/win/loss increment and one ordered history insertion per duel; the final twelve-entry cap is respected.');
+  checked('Every result persists before its modal and is awarded once', 'All complete terminal snapshots and profiles remain unchanged during the result presentation.');
+  checked('All full profiles and earned replays survive reload', 'A real page reload after each completed duel, followed by exact profile and local replay comparisons.');
+  await fs.writeFile(path.join(output, `earned-profile-${FIGHTERS.length}-duels.json`), JSON.stringify(earned, null, 2) + '\n');
 
   const downloadEvent = page.waitForEvent('download');
   await page.locator('[data-action="export-replay"]').click();
@@ -267,7 +267,7 @@ try {
   assert.deepEqual(exported, normalized, 'UI export retains the earned recording, including normalized frame count');
   assert.equal(exported.version, '0.7.0'); assert.equal(replayRulesVersion(exported.version), '0.5.0');
   report.replayRoundTrip = { file: 'audit-combat/roster-0.7.0/last-earned-replay-0.7.0.json', bytes: replayBytes.length, sha256: sha(replayBytes), version: exported.version, rulesVersion: replayRulesVersion(exported.version), frames: exported.frames, exportedExactRecording: true };
-  checked('The last earned replay exports as version 0.7.0 with original rules 0.5.0', 'The downloaded JSON is compared with the complete validated recording saved by the fourteenth duel.');
+  checked('The last earned replay exports as version 0.7.0 with original rules 0.5.0', 'The downloaded JSON is compared with the complete validated recording saved by the last completed duel.');
   await page.locator('#import-replay').setInputFiles({ name: 'last-earned-replay-0.7.0.json', mimeType: 'application/json', buffer: replayBytes });
   await page.waitForFunction(() => window.Encore.ready && window.Encore.screen === 'fight', null, { polling: 50 });
   for (let step = 0; step < 40 && !(await page.locator('#modal[open]').count()); step++) await advance(5000);
@@ -305,5 +305,5 @@ try {
   if (browser) await browser.close();
   report.completedAt = new Date().toISOString();
   await writeProgress();
-  console.log(`${report.ok ? 'PASS' : 'FAIL'} roster: ${report.playedMatches.length}/14 completed duels, ${report.checks.length} aggregate checks; ${reportPath}`);
+  console.log(`${report.ok ? 'PASS' : 'FAIL'} roster: ${report.playedMatches.length}/${FIGHTERS.length} completed duels, ${report.checks.length} aggregate checks; ${reportPath}`);
 }

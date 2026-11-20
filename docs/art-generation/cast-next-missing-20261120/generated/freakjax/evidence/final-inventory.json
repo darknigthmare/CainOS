@@ -1,0 +1,422 @@
+{
+  "schema": "encore-native-family-handoff/v1",
+  "appearanceId": "freakjax",
+  "fighterId": "jax",
+  "createdAt": "2026-11-20T13:38:01.592803+00:00",
+  "status": "11_native_assets_accepted_pending_runtime_integration",
+  "expectedSlots": [
+    "selection",
+    "stance",
+    "intro",
+    "attack",
+    "heavy",
+    "hit",
+    "walk",
+    "jump",
+    "crouch",
+    "victory",
+    "defeat"
+  ],
+  "assetCount": 11,
+  "totalBytes": 11190160,
+  "allNativeBytesPreserved": true,
+  "allReceiptsVerified": true,
+  "allAlpha12SilhouettesInsideCanvas": true,
+  "borderAlphaMaximumObserved": 1,
+  "assetsWithAlphaOneBorderPixels": [
+    "selection",
+    "heavy",
+    "hit",
+    "walk",
+    "jump",
+    "crouch"
+  ],
+  "alphaScope": "Native alpha unchanged. All visible silhouettes at alpha > 12 are padded; six originals contain a few nearly transparent alpha=1 pixels at image borders. Exact zero alpha on every border is not claimed.",
+  "allReferenceHashesVerified": true,
+  "uniqueAssetHashes": 11,
+  "runtimeIntegrationPerformedByThisAgent": false,
+  "canonicalEpisodeFidelityClaim": false,
+  "assets": [
+    {
+      "slot": "selection",
+      "file": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/selection.png",
+      "receipt": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/selection.json",
+      "sha256": "22ea8b9c34b9acd5b8b3889129d0436542d586ee716b73e6cff061af469a1010",
+      "bytes": 916364,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBorderMaxTopBottomLeftRight": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "alpha12Bounds": [
+        135,
+        57,
+        951,
+        1280
+      ],
+      "fullyTransparentPixels": 909877,
+      "highOpacityPixelsAlpha240To255": 638015,
+      "nativeFacing": "right",
+      "nativeBytesMatch": true,
+      "visualReviewStatus": "accepted"
+    },
+    {
+      "slot": "stance",
+      "file": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/stance.png",
+      "receipt": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/stance.json",
+      "sha256": "23370947efcde758da86eeb156fd5faac85fcd12e5c2f64896c6ca2d409dabcf",
+      "bytes": 1007652,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBorderMaxTopBottomLeftRight": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "alpha12Bounds": [
+        73,
+        56,
+        1011,
+        1233
+      ],
+      "fullyTransparentPixels": 879736,
+      "highOpacityPixelsAlpha240To255": 677323,
+      "nativeFacing": "right",
+      "nativeBytesMatch": true,
+      "visualReviewStatus": "accepted"
+    },
+    {
+      "slot": "intro",
+      "file": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/intro.png",
+      "receipt": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/intro.json",
+      "sha256": "dc0d51b4ccf80b08393febc52b6bd119d944830d86aa0dae268adbcffdbc92ba",
+      "bytes": 916361,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBorderMaxTopBottomLeftRight": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "alpha12Bounds": [
+        144,
+        52,
+        1112,
+        1231
+      ],
+      "fullyTransparentPixels": 948408,
+      "highOpacityPixelsAlpha240To255": 603092,
+      "nativeFacing": "right",
+      "nativeBytesMatch": true,
+      "visualReviewStatus": "accepted"
+    },
+    {
+      "slot": "attack",
+      "file": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/attack.png",
+      "receipt": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/attack.json",
+      "sha256": "964542fc4390a89fa175bf7e1347e8440902bead46b0f55d8dbc9499f28f8bf1",
+      "bytes": 948653,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBorderMaxTopBottomLeftRight": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "alpha12Bounds": [
+        88,
+        61,
+        1136,
+        1205
+      ],
+      "fullyTransparentPixels": 917741,
+      "highOpacityPixelsAlpha240To255": 634406,
+      "nativeFacing": "right",
+      "nativeBytesMatch": true,
+      "visualReviewStatus": "accepted"
+    },
+    {
+      "slot": "heavy",
+      "file": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/heavy.png",
+      "receipt": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/heavy.json",
+      "sha256": "4ecfd357f19c28a44432cc3006fa334c89b58cab3eefe92476b52ef8d1cdb969",
+      "bytes": 1110718,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBorderMaxTopBottomLeftRight": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "alpha12Bounds": [
+        81,
+        24,
+        1177,
+        1240
+      ],
+      "fullyTransparentPixels": 840845,
+      "highOpacityPixelsAlpha240To255": 701778,
+      "nativeFacing": "right",
+      "nativeBytesMatch": true,
+      "visualReviewStatus": "accepted"
+    },
+    {
+      "slot": "hit",
+      "file": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/hit.png",
+      "receipt": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/hit.json",
+      "sha256": "42ad80824a7b8cd62225a01d9c59294a2fccd3875b04b08f1cbf00715b48dc20",
+      "bytes": 1090665,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBorderMaxTopBottomLeftRight": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "alpha12Bounds": [
+        88,
+        51,
+        1057,
+        1223
+      ],
+      "fullyTransparentPixels": 863044,
+      "highOpacityPixelsAlpha240To255": 686824,
+      "nativeFacing": "right",
+      "nativeBytesMatch": true,
+      "visualReviewStatus": "accepted"
+    },
+    {
+      "slot": "walk",
+      "file": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/walk.png",
+      "receipt": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/walk.json",
+      "sha256": "fc03f7b81940e8b0f6dff8c8c5562b2dfa8b8488193b38b427381e69b6b6edbe",
+      "bytes": 996758,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBorderMaxTopBottomLeftRight": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "alpha12Bounds": [
+        65,
+        39,
+        1049,
+        1225
+      ],
+      "fullyTransparentPixels": 882665,
+      "highOpacityPixelsAlpha240To255": 652506,
+      "nativeFacing": "right",
+      "nativeBytesMatch": true,
+      "visualReviewStatus": "accepted"
+    },
+    {
+      "slot": "jump",
+      "file": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/jump.png",
+      "receipt": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/jump.json",
+      "sha256": "4eefed9da6d3387c8e232010bfa1eb690348c5314f1bdff5f3f1cf192cb5ffcf",
+      "bytes": 1101865,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBorderMaxTopBottomLeftRight": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "alpha12Bounds": [
+        48,
+        61,
+        1200,
+        1210
+      ],
+      "fullyTransparentPixels": 869102,
+      "highOpacityPixelsAlpha240To255": 680481,
+      "nativeFacing": "right",
+      "nativeBytesMatch": true,
+      "visualReviewStatus": "accepted"
+    },
+    {
+      "slot": "crouch",
+      "file": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/crouch.png",
+      "receipt": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/crouch.json",
+      "sha256": "18c3e7f0a56e976ceb55fbbd03eb99595f9391c56593b604affb287432443477",
+      "bytes": 993734,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBorderMaxTopBottomLeftRight": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "alpha12Bounds": [
+        90,
+        77,
+        1160,
+        1206
+      ],
+      "fullyTransparentPixels": 866207,
+      "highOpacityPixelsAlpha240To255": 687078,
+      "nativeFacing": "right",
+      "nativeBytesMatch": true,
+      "visualReviewStatus": "accepted"
+    },
+    {
+      "slot": "victory",
+      "file": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/victory.png",
+      "receipt": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/victory.json",
+      "sha256": "cd5728d606d259f0a9693a89e7ccbd9a0de0ea66590b49a87f91ee5eaddbe25e",
+      "bytes": 1008406,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBorderMaxTopBottomLeftRight": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "alpha12Bounds": [
+        118,
+        61,
+        1088,
+        1235
+      ],
+      "fullyTransparentPixels": 866482,
+      "highOpacityPixelsAlpha240To255": 687078,
+      "nativeFacing": "right",
+      "nativeBytesMatch": true,
+      "visualReviewStatus": "accepted"
+    },
+    {
+      "slot": "defeat",
+      "file": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/defeat.png",
+      "receipt": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/defeat.json",
+      "sha256": "92b0196076e4d114dd1ba5ce29dc3f99e61a12e1b68f11e224cf615269e5f401",
+      "bytes": 1098984,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBorderMaxTopBottomLeftRight": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "alpha12Bounds": [
+        81,
+        55,
+        1117,
+        1230
+      ],
+      "fullyTransparentPixels": 812901,
+      "highOpacityPixelsAlpha240To255": 745560,
+      "nativeFacing": "right",
+      "nativeBytesMatch": true,
+      "visualReviewStatus": "accepted"
+    }
+  ],
+  "references": [
+    {
+      "file": "docs/art-generation/cast-next-missing-20261120/references/freakjax/Animiniz_SideShow_freakJax.png",
+      "sha256": "a5b25381cb9f25a235aaf00c7b27b36823910c5c7a211dbc658ae5e7f2f63a80",
+      "bytes": 578459
+    },
+    {
+      "file": "assets/encore/selection/animeribbit.png",
+      "sha256": "8f89fb6ab3112c0ac72973f86c0973a2a89e106b50ffdc6e991eefe911618b77",
+      "bytes": 1485567
+    },
+    {
+      "file": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/selection.png",
+      "sha256": "22ea8b9c34b9acd5b8b3889129d0436542d586ee716b73e6cff061af469a1010",
+      "bytes": 916364
+    }
+  ],
+  "errors": []
+}

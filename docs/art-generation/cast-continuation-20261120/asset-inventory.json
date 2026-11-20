@@ -1,0 +1,1613 @@
+{
+  "schema": "encore-costume-addition-inventory/v1",
+  "createdAt": "2026-11-20T04:57:38.857686+00:00",
+  "introducedOn": "2026-11-20",
+  "ids": [
+    "noirpomni",
+    "noirjax",
+    "noirkinger",
+    "badendcaine",
+    "bodyguardragatha",
+    "bodyguardzooble"
+  ],
+  "scope": "Six completed additional appearances, eleven individual drawings per appearance; nine incomplete appearances are archived separately after the service quota blocked generation.",
+  "method": "Native source byte comparison, SHA-256, PNG decode, minimum dimensions 768, native alpha and alpha>=12 framing. Visual and production Canvas reviews are recorded separately. Alpha maximum 254 is accepted as native near-opaque output; source pixels are never rewritten.",
+  "counts": {
+    "appearances": 6,
+    "files": 66,
+    "selection": 6,
+    "stances": 6,
+    "actions": 54,
+    "uniqueHashes": 66,
+    "nativeCopiesVerified": 66,
+    "transparent": 66,
+    "completeMargins": 66,
+    "bytes": 80303374
+  },
+  "assets": [
+    {
+      "appearanceId": "noirpomni",
+      "slot": "selection",
+      "file": "assets/encore/selection/noirpomni.png",
+      "sha256": "802776e61f9b6b94e505994badfca94aa7be79fcb0e943b9f0698e6bccd99f52",
+      "bytes": 908878,
+      "dimensions": [
+        955,
+        1647
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        46,
+        34,
+        921,
+        1629
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/noirpomni-selection.json",
+      "sourceGenerationId": "exec-024d0234-3d91-4163-bf3f-e33987567528"
+    },
+    {
+      "appearanceId": "noirpomni",
+      "slot": "stance",
+      "file": "assets/encore/stance/noirpomni.png",
+      "sha256": "8416d615efc987f0c648d70c1ee98d45c0b02104f009893a0493989005b4af88",
+      "bytes": 994821,
+      "dimensions": [
+        1037,
+        1517
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        80,
+        18,
+        958,
+        1507
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/noirpomni-stance.json",
+      "sourceGenerationId": "exec-dae73125-41b0-4c74-8661-cf0910dfeefb"
+    },
+    {
+      "appearanceId": "noirpomni",
+      "slot": "intro",
+      "file": "assets/encore/poses/noirpomni/intro.png",
+      "sha256": "ff4e0c78427c5ec59219f64c28fb0b835ef7dad1ee074bad99bce2437d5e40ca",
+      "bytes": 984357,
+      "dimensions": [
+        955,
+        1647
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        21,
+        25,
+        949,
+        1616
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/noirpomni-intro.json",
+      "sourceGenerationId": "exec-c97936a3-7a72-4ecc-a123-1b89cc967515"
+    },
+    {
+      "appearanceId": "noirpomni",
+      "slot": "attack",
+      "file": "assets/encore/poses/noirpomni/attack.png",
+      "sha256": "8700afe2963278ffd53e7b767bf0a6e680b85eb42d919e0d7b011756df88a556",
+      "bytes": 923835,
+      "dimensions": [
+        1179,
+        1334
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        74,
+        18,
+        1141,
+        1323
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/noirpomni-attack.json",
+      "sourceGenerationId": "exec-11774609-a5a7-43e6-82d8-c9d3412ff362"
+    },
+    {
+      "appearanceId": "noirpomni",
+      "slot": "heavy",
+      "file": "assets/encore/poses/noirpomni/heavy.png",
+      "sha256": "85a8e9bb5fccba205888944c9c3cd2b50056f58cf32fbb434966d39ebb16f475",
+      "bytes": 1089136,
+      "dimensions": [
+        1201,
+        1309
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        22,
+        16,
+        1191,
+        1301
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/noirpomni-heavy.json",
+      "sourceGenerationId": "exec-5ee07462-487d-4492-b95e-91075a2f5dee"
+    },
+    {
+      "appearanceId": "noirpomni",
+      "slot": "hit",
+      "file": "assets/encore/poses/noirpomni/hit.png",
+      "sha256": "33ce058c29d0e715e30940fa734a4b9ac1f5cb84c51d03a3f6c463b3bc270286",
+      "bytes": 915615,
+      "dimensions": [
+        1015,
+        1549
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        29,
+        17,
+        985,
+        1531
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/noirpomni-hit.json",
+      "sourceGenerationId": "exec-4d205108-32f7-4757-b6ab-aebb62b55480"
+    },
+    {
+      "appearanceId": "noirpomni",
+      "slot": "walk",
+      "file": "assets/encore/poses/noirpomni/walk.png",
+      "sha256": "bc0dd49be5d8f35fe99ebaba2a0c18a4f27eb547d7395a6c3cf0c38fc7ddb26c",
+      "bytes": 1027008,
+      "dimensions": [
+        955,
+        1647
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        29,
+        27,
+        930,
+        1623
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/noirpomni-walk.json",
+      "sourceGenerationId": "exec-ad3200c7-5030-4259-b8d7-2833253ebff1"
+    },
+    {
+      "appearanceId": "noirpomni",
+      "slot": "jump",
+      "file": "assets/encore/poses/noirpomni/jump.png",
+      "sha256": "53c072c4961eb280beeb036884d44b50589013c2b7d5fe1594c8aac42dd7e398",
+      "bytes": 1155032,
+      "dimensions": [
+        1217,
+        1293
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        12,
+        10,
+        1205,
+        1283
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/noirpomni-jump.json",
+      "sourceGenerationId": "exec-eb34abd4-c940-4a9c-965a-d3407339f158"
+    },
+    {
+      "appearanceId": "noirpomni",
+      "slot": "crouch",
+      "file": "assets/encore/poses/noirpomni/crouch.png",
+      "sha256": "c8cb7faeabec591932e9953087bc548a7468f2227e1bb2faabde5a402401e085",
+      "bytes": 1068296,
+      "dimensions": [
+        1312,
+        1199
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        182,
+        41,
+        1164,
+        1170
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/noirpomni-crouch.json",
+      "sourceGenerationId": "exec-555fc052-7e6e-4e73-ad16-cdb1cc98bacb"
+    },
+    {
+      "appearanceId": "noirpomni",
+      "slot": "victory",
+      "file": "assets/encore/poses/noirpomni/victory.png",
+      "sha256": "4cbe591dac72bb813db49d1430d743b1e37f3530ab86bceeacbcae6b7f573529",
+      "bytes": 982997,
+      "dimensions": [
+        955,
+        1647
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        50,
+        20,
+        903,
+        1637
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/noirpomni-victory.json",
+      "sourceGenerationId": "exec-94383d41-fb83-4f57-b46e-e52768dd5200"
+    },
+    {
+      "appearanceId": "noirpomni",
+      "slot": "defeat",
+      "file": "assets/encore/poses/noirpomni/defeat.png",
+      "sha256": "50dbb1bd1c3f9952c08878db4e7489b808bdad0c06be4fa1028f84d275238928",
+      "bytes": 1338763,
+      "dimensions": [
+        1312,
+        1199
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        94,
+        34,
+        1189,
+        1191
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/noirpomni-defeat.json",
+      "sourceGenerationId": "exec-2c7ea1f5-49ae-48e6-bfb6-915361f7b72f"
+    },
+    {
+      "appearanceId": "noirjax",
+      "slot": "selection",
+      "file": "assets/encore/selection/noirjax.png",
+      "sha256": "acfc128475e44b155ea60949780e7fe7571fd97e77d70dc0027919ec17e16b39",
+      "bytes": 621658,
+      "dimensions": [
+        887,
+        1774
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        197,
+        16,
+        689,
+        1764
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/noirjax-selection.json",
+      "sourceGenerationId": "exec-39e449ab-a2fa-4b95-a7e7-9353786275b0"
+    },
+    {
+      "appearanceId": "noirjax",
+      "slot": "stance",
+      "file": "assets/encore/stance/noirjax.png",
+      "sha256": "835190a3fad3ac9739adf2a2b73fba89c4c11354a24338589121bff4bf5fce2e",
+      "bytes": 1238219,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        96,
+        12,
+        928,
+        1528
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/noirjax-stance.json",
+      "sourceGenerationId": "exec-b0007106-e4e3-4f3d-80c7-d4173c3afe14"
+    },
+    {
+      "appearanceId": "noirjax",
+      "slot": "intro",
+      "file": "assets/encore/poses/noirjax/intro.png",
+      "sha256": "3ae45312e86589a22abbbd387e005128f499e7d018e37e401e8d68d04acfc95c",
+      "bytes": 691535,
+      "dimensions": [
+        887,
+        1774
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        30,
+        9,
+        872,
+        1765
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/noirjax-intro.json",
+      "sourceGenerationId": "exec-103ecf4d-1f91-4c63-8d40-1da4b786b74e"
+    },
+    {
+      "appearanceId": "noirjax",
+      "slot": "attack",
+      "file": "assets/encore/poses/noirjax/attack.png",
+      "sha256": "85705229af6cc844338acde053403a3f759f53902f785246586b5429d7abde9d",
+      "bytes": 604225,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        30,
+        4,
+        1078,
+        1445
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/noirjax-attack.json",
+      "sourceGenerationId": "exec-d18c5c8f-8b3f-4092-af15-8dd3d077b9db"
+    },
+    {
+      "appearanceId": "noirjax",
+      "slot": "heavy",
+      "file": "assets/encore/poses/noirjax/heavy.png",
+      "sha256": "934f48a44e8418b036bee9ff6b6df152fd6523a29f415b467de762dffceb292a",
+      "bytes": 1173895,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        96,
+        5,
+        1384,
+        1022
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/noirjax-heavy.json",
+      "sourceGenerationId": "exec-80cc281a-c880-464c-8822-da9393a737bf"
+    },
+    {
+      "appearanceId": "noirjax",
+      "slot": "hit",
+      "file": "assets/encore/poses/noirjax/hit.png",
+      "sha256": "6096b3464eca6fb424d43adcb5331e224c335a24e327b456d1d0b493cbd4192d",
+      "bytes": 666719,
+      "dimensions": [
+        1027,
+        1531
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        42,
+        13,
+        928,
+        1522
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/noirjax-hit.json",
+      "sourceGenerationId": "exec-9feb6a6a-062b-45d8-8361-398324a1c68d"
+    },
+    {
+      "appearanceId": "noirjax",
+      "slot": "walk",
+      "file": "assets/encore/poses/noirjax/walk.png",
+      "sha256": "b1d803b706e8ad8a7354037eb5c6c4a374a65b8c97a9c3e0dcf294ac85e6a3a9",
+      "bytes": 1260009,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        98,
+        22,
+        955,
+        1523
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/noirjax-walk.json",
+      "sourceGenerationId": "exec-fd4c3fe5-1ab0-4160-ab35-f3ef7b99b9d5"
+    },
+    {
+      "appearanceId": "noirjax",
+      "slot": "jump",
+      "file": "assets/encore/poses/noirjax/jump.png",
+      "sha256": "deb9c4d37f39ae20734fd7a912664dc2ade359b53d111af3763ad8bc8ff2d602",
+      "bytes": 782557,
+      "dimensions": [
+        1194,
+        1317
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        19,
+        23,
+        1171,
+        1301
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/noirjax-jump.json",
+      "sourceGenerationId": "exec-d11530d3-39f8-4ff7-947e-aefa759f27ff"
+    },
+    {
+      "appearanceId": "noirjax",
+      "slot": "crouch",
+      "file": "assets/encore/poses/noirjax/crouch.png",
+      "sha256": "bc1541dcd22ee0542ec0b86a1ef209c25e8cb5410a3fe7b1d87a674d4deb4246",
+      "bytes": 842397,
+      "dimensions": [
+        1247,
+        1261
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        139,
+        19,
+        1146,
+        1253
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/noirjax-crouch.json",
+      "sourceGenerationId": "exec-888b5d04-f1bc-49ce-8c4e-900b8909e24b"
+    },
+    {
+      "appearanceId": "noirjax",
+      "slot": "victory",
+      "file": "assets/encore/poses/noirjax/victory.png",
+      "sha256": "7513ea41933ea3de4be9b13974136c4ee6fca54e02ff5d5d1f2df4f707417e12",
+      "bytes": 683733,
+      "dimensions": [
+        887,
+        1774
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        184,
+        8,
+        768,
+        1767
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/noirjax-victory.json",
+      "sourceGenerationId": "exec-ddb31291-d7d5-4672-83a7-2fc6890b7b5b"
+    },
+    {
+      "appearanceId": "noirjax",
+      "slot": "defeat",
+      "file": "assets/encore/poses/noirjax/defeat.png",
+      "sha256": "3ffa91ad2ebe59d36b0bf9e461a8e4ac1e0bbc5d0af312008ca050c9b2923b3b",
+      "bytes": 847008,
+      "dimensions": [
+        1234,
+        1275
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        100,
+        26,
+        1154,
+        1257
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/noirjax-defeat.json",
+      "sourceGenerationId": "exec-2504136e-35ae-44a9-ae85-cb2af9d6ee40"
+    },
+    {
+      "appearanceId": "noirkinger",
+      "slot": "selection",
+      "file": "assets/encore/selection/noirkinger.png",
+      "sha256": "34689a3fc4ceaaab8fbff0c59f0680f02aca7d5edcb6cf444c6c5bc40a87d4f1",
+      "bytes": 1405315,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        119,
+        29,
+        932,
+        1513
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/noirkinger-selection.json",
+      "sourceGenerationId": "exec-c2c24632-6e50-4614-b1b2-1fb8ae24ace5"
+    },
+    {
+      "appearanceId": "noirkinger",
+      "slot": "stance",
+      "file": "assets/encore/stance/noirkinger.png",
+      "sha256": "65d1768a517c63ffdb8f35df4366c01ccb05974b2d89aac3ae59f5456cb81efe",
+      "bytes": 1468320,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        56,
+        71,
+        939,
+        1501
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/noirkinger-stance.json",
+      "sourceGenerationId": "exec-e729aada-f06f-44d9-869e-1d9e23de8e77"
+    },
+    {
+      "appearanceId": "noirkinger",
+      "slot": "intro",
+      "file": "assets/encore/poses/noirkinger/intro.png",
+      "sha256": "20fea1944dd6a3558beabf6ca7d74a9a0ed3ea24f0215e1b170c9a4d05882a72",
+      "bytes": 1486862,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        35,
+        29,
+        998,
+        1508
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/noirkinger-intro.json",
+      "sourceGenerationId": "exec-27284a70-91b0-475d-8997-93ce4a0d67e3"
+    },
+    {
+      "appearanceId": "noirkinger",
+      "slot": "attack",
+      "file": "assets/encore/poses/noirkinger/attack.png",
+      "sha256": "fc1344ce1eaa3188bfa6c68366a2e8a91dd6f4b418dc7a10ef48d9069ac4a007",
+      "bytes": 1468076,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        49,
+        63,
+        971,
+        1507
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/noirkinger-attack.json",
+      "sourceGenerationId": "exec-0476f571-46a9-4cfe-986d-980b51e6b4b5"
+    },
+    {
+      "appearanceId": "noirkinger",
+      "slot": "heavy",
+      "file": "assets/encore/poses/noirkinger/heavy.png",
+      "sha256": "5148f6ffa7deb2d706e0f9fa65c5ba9341a111f525eda65733c6ed830fd9716a",
+      "bytes": 1001632,
+      "dimensions": [
+        1144,
+        1375
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        18,
+        20,
+        1112,
+        1358
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/noirkinger-heavy.json",
+      "sourceGenerationId": "exec-f3df0fdc-7611-46c4-8ed6-760b4d04bbb2"
+    },
+    {
+      "appearanceId": "noirkinger",
+      "slot": "hit",
+      "file": "assets/encore/poses/noirkinger/hit.png",
+      "sha256": "aa33ce929da344bf12a2d4e7c8744b19e7cffc6d09855db0a3ec624538c42c6e",
+      "bytes": 1076465,
+      "dimensions": [
+        1124,
+        1399
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        24,
+        59,
+        1043,
+        1375
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/noirkinger-hit.json",
+      "sourceGenerationId": "exec-65310557-aa0f-49fb-a759-afc907923a79"
+    },
+    {
+      "appearanceId": "noirkinger",
+      "slot": "walk",
+      "file": "assets/encore/poses/noirkinger/walk.png",
+      "sha256": "9c89ce40d501110eb0e5c7cdbbc59bad85400e44752ef4e5061298baa1135edf",
+      "bytes": 1429608,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        75,
+        71,
+        953,
+        1490
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/noirkinger-walk.json",
+      "sourceGenerationId": "exec-3fd83286-464d-4b83-9e1a-0c68d8f79ad6"
+    },
+    {
+      "appearanceId": "noirkinger",
+      "slot": "jump",
+      "file": "assets/encore/poses/noirkinger/jump.png",
+      "sha256": "4b4bd5a4c204f7a878fc7f67d6d9322e92ded09ad920af6c8dc44e6b0486e8b5",
+      "bytes": 953478,
+      "dimensions": [
+        1106,
+        1422
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        43,
+        29,
+        1071,
+        1393
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/noirkinger-jump.json",
+      "sourceGenerationId": "exec-4071d3e3-afd9-4d09-8a9c-197b013704e2"
+    },
+    {
+      "appearanceId": "noirkinger",
+      "slot": "crouch",
+      "file": "assets/encore/poses/noirkinger/crouch.png",
+      "sha256": "8f921c26cf42ff081c0c43a548462f963fa4f2c0094891a6dc2273453792fd2d",
+      "bytes": 1031841,
+      "dimensions": [
+        1312,
+        1199
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        116,
+        11,
+        1209,
+        1191
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/noirkinger-crouch.json",
+      "sourceGenerationId": "exec-86fb93b9-50ce-4939-ae37-851249e32a03"
+    },
+    {
+      "appearanceId": "noirkinger",
+      "slot": "victory",
+      "file": "assets/encore/poses/noirkinger/victory.png",
+      "sha256": "0f97fcf5ffe8161465d5eaa1952abb7ecaa57577783bef4b85fedaa7959058e1",
+      "bytes": 1451994,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        36,
+        24,
+        989,
+        1523
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/noirkinger-victory.json",
+      "sourceGenerationId": "exec-bb5ec1da-7e18-45e2-9ffb-ef9061d9ac53"
+    },
+    {
+      "appearanceId": "noirkinger",
+      "slot": "defeat",
+      "file": "assets/encore/poses/noirkinger/defeat.png",
+      "sha256": "fc72cc116b468125a99e0220959e6607ca1dd8942ad4ba84e6994fc3e6822dd7",
+      "bytes": 1455543,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        27,
+        129,
+        961,
+        1479
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/noirkinger-defeat.json",
+      "sourceGenerationId": "exec-ee289c7a-a164-4c77-b84e-5930db4c5bac"
+    },
+    {
+      "appearanceId": "badendcaine",
+      "slot": "selection",
+      "file": "assets/encore/selection/badendcaine.png",
+      "sha256": "e2922ce42ae7fefd580aae833a41cd287e3ac2f8af4e0170ed100b28f310c8d3",
+      "bytes": 1699448,
+      "dimensions": [
+        1214,
+        1295
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        102,
+        19,
+        1109,
+        1286
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/badendcaine-selection.json",
+      "sourceGenerationId": "exec-a299f9e1-3be4-4e41-9771-0b97a2036342"
+    },
+    {
+      "appearanceId": "badendcaine",
+      "slot": "stance",
+      "file": "assets/encore/stance/badendcaine.png",
+      "sha256": "c2df37dd6d9acfd735c1975f5ea7f6d9408510282194e52f9976f9f86f1b0e62",
+      "bytes": 1546157,
+      "dimensions": [
+        1212,
+        1298
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        98,
+        28,
+        1122,
+        1262
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/badendcaine-stance.json",
+      "sourceGenerationId": "exec-4c36ca9c-9cd8-4868-a33e-ae89125a2f3c"
+    },
+    {
+      "appearanceId": "badendcaine",
+      "slot": "intro",
+      "file": "assets/encore/poses/badendcaine/intro.png",
+      "sha256": "d3343bcc22f65d09f6a1933fb51013f60ae1dfd4cfe8f80e36f4ae0ef8cc373c",
+      "bytes": 1547596,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        20,
+        14,
+        1162,
+        1291
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/badendcaine-intro.json",
+      "sourceGenerationId": "exec-3abffdde-afcd-4754-8359-8e3d3bf105ef"
+    },
+    {
+      "appearanceId": "badendcaine",
+      "slot": "attack",
+      "file": "assets/encore/poses/badendcaine/attack.png",
+      "sha256": "89a2b31688cad821d7ee2df87506b71cfa63d50dde99da0e00b0d9b5980c5aac",
+      "bytes": 1544300,
+      "dimensions": [
+        1216,
+        1293
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        52,
+        48,
+        1183,
+        1257
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/badendcaine-attack.json",
+      "sourceGenerationId": "exec-49010ca7-c262-4a59-bae0-4d3ef7e44710"
+    },
+    {
+      "appearanceId": "badendcaine",
+      "slot": "heavy",
+      "file": "assets/encore/poses/badendcaine/heavy.png",
+      "sha256": "ea7a486800fff20e2c7c2141b5e7d031bf46a4ef5ee477bfa3f4add3b234d58c",
+      "bytes": 1706163,
+      "dimensions": [
+        1222,
+        1287
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        21,
+        32,
+        1164,
+        1264
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/badendcaine-heavy.json",
+      "sourceGenerationId": "exec-4b24f80a-5a68-4b13-9765-96746c7ee039"
+    },
+    {
+      "appearanceId": "badendcaine",
+      "slot": "hit",
+      "file": "assets/encore/poses/badendcaine/hit.png",
+      "sha256": "f28a0653fcfb130db35983178c338cab287cbc3af276237beda5a7806ea45b0a",
+      "bytes": 1608322,
+      "dimensions": [
+        1215,
+        1295
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        39,
+        54,
+        1158,
+        1261
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/badendcaine-hit.json",
+      "sourceGenerationId": "exec-2183b45a-4822-4dec-85fe-e21b39abfdc4"
+    },
+    {
+      "appearanceId": "badendcaine",
+      "slot": "walk",
+      "file": "assets/encore/poses/badendcaine/walk.png",
+      "sha256": "eaaaf1107c54b8c7dc9a6d472f88f5ee872268325d1d53aeae940b89038abbf4",
+      "bytes": 1548652,
+      "dimensions": [
+        1215,
+        1295
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        31,
+        24,
+        1194,
+        1262
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/badendcaine-walk.json",
+      "sourceGenerationId": "exec-a7146f58-5b09-400c-8f4d-a5a5880c12b8"
+    },
+    {
+      "appearanceId": "badendcaine",
+      "slot": "jump",
+      "file": "assets/encore/poses/badendcaine/jump.png",
+      "sha256": "c620d508c988737a47ec19a927f474080342458304efcb55bfdd9ed865e5745f",
+      "bytes": 1473237,
+      "dimensions": [
+        1222,
+        1287
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        48,
+        30,
+        1186,
+        1264
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/badendcaine-jump.json",
+      "sourceGenerationId": "exec-67fe8e64-b8f1-4df3-8bf2-bc625355d14e"
+    },
+    {
+      "appearanceId": "badendcaine",
+      "slot": "crouch",
+      "file": "assets/encore/poses/badendcaine/crouch.png",
+      "sha256": "7fb3692361297c80133079c237d2bdd5b7685a8e880508ca4dbbaa9fb451975f",
+      "bytes": 1595222,
+      "dimensions": [
+        1312,
+        1199
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        45,
+        50,
+        1227,
+        1157
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/badendcaine-crouch.json",
+      "sourceGenerationId": "exec-72b88cc6-d606-4bb8-b49e-a93daf07ec40"
+    },
+    {
+      "appearanceId": "badendcaine",
+      "slot": "victory",
+      "file": "assets/encore/poses/badendcaine/victory.png",
+      "sha256": "42232c2d06a76c47f863dd95643f0edf6617ae7d5efe96bd7023bb32fdf1816f",
+      "bytes": 1610382,
+      "dimensions": [
+        1167,
+        1348
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        52,
+        15,
+        1088,
+        1326
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/badendcaine-victory.json",
+      "sourceGenerationId": "exec-876c2417-0f44-437f-a6f5-d0d429f82d64"
+    },
+    {
+      "appearanceId": "badendcaine",
+      "slot": "defeat",
+      "file": "assets/encore/poses/badendcaine/defeat.png",
+      "sha256": "4c49a3f92024a6693bb230eddaef01b0a5cc0828b8bbe21aa4b4c7eb9f28c4d9",
+      "bytes": 1807933,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        95,
+        27,
+        1386,
+        1006
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/badendcaine-defeat.json",
+      "sourceGenerationId": "exec-ab847926-2e4f-456b-91e8-7d0748033cd9"
+    },
+    {
+      "appearanceId": "bodyguardragatha",
+      "slot": "selection",
+      "file": "assets/encore/selection/bodyguardragatha.png",
+      "sha256": "1467e634913d72e6edd4704434c7ee87df713fb4c1bc9779fd55c4ee222a4e3c",
+      "bytes": 1246827,
+      "dimensions": [
+        929,
+        1694
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        60,
+        16,
+        902,
+        1679
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/bodyguardragatha-selection.json",
+      "sourceGenerationId": "exec-9f7fd1d4-974a-4b99-9a41-c4ed4be6e75d"
+    },
+    {
+      "appearanceId": "bodyguardragatha",
+      "slot": "stance",
+      "file": "assets/encore/stance/bodyguardragatha.png",
+      "sha256": "1073d82711ad5c35572c6b7a1d484e1b1443db1baab6c39a7be77a2db8c26643",
+      "bytes": 1055667,
+      "dimensions": [
+        1038,
+        1516
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        116,
+        27,
+        846,
+        1490
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/bodyguardragatha-stance.json",
+      "sourceGenerationId": "exec-71ed74c4-83c6-4ae0-93cf-1ab84860f210"
+    },
+    {
+      "appearanceId": "bodyguardragatha",
+      "slot": "intro",
+      "file": "assets/encore/poses/bodyguardragatha/intro.png",
+      "sha256": "9127600afc40002067ed9decee2c6afd27bfa8454a04e676013f5a6dc43f7b68",
+      "bytes": 1183410,
+      "dimensions": [
+        929,
+        1694
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        65,
+        15,
+        890,
+        1678
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/bodyguardragatha-intro.json",
+      "sourceGenerationId": "exec-5ed52bd6-2b83-4ded-9018-bc0163376dab"
+    },
+    {
+      "appearanceId": "bodyguardragatha",
+      "slot": "attack",
+      "file": "assets/encore/poses/bodyguardragatha/attack.png",
+      "sha256": "2922b99a9c3635bcd23d52160f17bafb0af5d577d0232a773a7b554487886521",
+      "bytes": 1048355,
+      "dimensions": [
+        1089,
+        1444
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        90,
+        27,
+        1002,
+        1424
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/bodyguardragatha-attack.json",
+      "sourceGenerationId": "exec-5a3ad9f6-4a64-4a84-9b76-65d8367d6d92"
+    },
+    {
+      "appearanceId": "bodyguardragatha",
+      "slot": "heavy",
+      "file": "assets/encore/poses/bodyguardragatha/heavy.png",
+      "sha256": "11ca7692a0c73975ffb51df983622c845673b78b7e67dfd923d0816c89c30a36",
+      "bytes": 1202496,
+      "dimensions": [
+        1071,
+        1469
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        91,
+        20,
+        962,
+        1451
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/bodyguardragatha-heavy.json",
+      "sourceGenerationId": "exec-1e1a4fdd-61b2-4f58-a184-28a0d0dcaa05"
+    },
+    {
+      "appearanceId": "bodyguardragatha",
+      "slot": "hit",
+      "file": "assets/encore/poses/bodyguardragatha/hit.png",
+      "sha256": "1d025786afc566d7c015b4ce5c1313682b6e20d80c9898b1e28646859d6cb947",
+      "bytes": 1254198,
+      "dimensions": [
+        929,
+        1694
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        19,
+        16,
+        909,
+        1675
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/bodyguardragatha-hit.json",
+      "sourceGenerationId": "exec-66e7069e-0171-497b-8345-f6e16098dae0"
+    },
+    {
+      "appearanceId": "bodyguardragatha",
+      "slot": "walk",
+      "file": "assets/encore/poses/bodyguardragatha/walk.png",
+      "sha256": "f9e5e83b39fc0c69a818c244912d900c12879b82b445b6faaf87cae1b38d599f",
+      "bytes": 1251994,
+      "dimensions": [
+        929,
+        1693
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        56,
+        16,
+        873,
+        1660
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/bodyguardragatha-walk.json",
+      "sourceGenerationId": "exec-4eed91e0-2cf0-4cc9-9bb7-611279e8fbd4"
+    },
+    {
+      "appearanceId": "bodyguardragatha",
+      "slot": "jump",
+      "file": "assets/encore/poses/bodyguardragatha/jump.png",
+      "sha256": "4787faab8de5a47ed3d69c4f9f0318cd85a3a6b7f2d5e3458bcf7ce0b30fd427",
+      "bytes": 1058365,
+      "dimensions": [
+        1044,
+        1506
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        78,
+        34,
+        966,
+        1403
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/bodyguardragatha-jump.json",
+      "sourceGenerationId": "exec-8b821d04-a4aa-4f04-a6c3-14cfd250802a"
+    },
+    {
+      "appearanceId": "bodyguardragatha",
+      "slot": "crouch",
+      "file": "assets/encore/poses/bodyguardragatha/crouch.png",
+      "sha256": "432f2e5d370f101a6e46f58884904f444a203065c60893d3de24233dc422fc25",
+      "bytes": 1157217,
+      "dimensions": [
+        1180,
+        1333
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        98,
+        15,
+        1014,
+        1315
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/bodyguardragatha-crouch.json",
+      "sourceGenerationId": "exec-7fb567ca-a748-4ba1-b089-d1861379aa72"
+    },
+    {
+      "appearanceId": "bodyguardragatha",
+      "slot": "victory",
+      "file": "assets/encore/poses/bodyguardragatha/victory.png",
+      "sha256": "acefc383357902e90b726264ec91a9aaccfb7f1a7e5b81090a08b50101812e8f",
+      "bytes": 1244506,
+      "dimensions": [
+        929,
+        1694
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        51,
+        15,
+        905,
+        1680
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/bodyguardragatha-victory.json",
+      "sourceGenerationId": "exec-d756cf46-e28b-43d9-88c1-5716ff13a2c1"
+    },
+    {
+      "appearanceId": "bodyguardragatha",
+      "slot": "defeat",
+      "file": "assets/encore/poses/bodyguardragatha/defeat.png",
+      "sha256": "bb91339504b0e245608e09f50710db6ca9ef1e008c37c236d80e695ea412e7ac",
+      "bytes": 1078501,
+      "dimensions": [
+        1137,
+        1383
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        159,
+        68,
+        974,
+        1345
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/bodyguardragatha-defeat.json",
+      "sourceGenerationId": "exec-392a2a1f-6ec3-4ae4-8fbb-96ee5f996181"
+    },
+    {
+      "appearanceId": "bodyguardzooble",
+      "slot": "selection",
+      "file": "assets/encore/selection/bodyguardzooble.png",
+      "sha256": "b9eba9cf8ddbaaabecd98e5d718bb8387e4c032b12f6fd36149214ee30579ee5",
+      "bytes": 1515650,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        101,
+        11,
+        891,
+        1527
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/bodyguardzooble-selection.json",
+      "sourceGenerationId": "exec-aa0e963f-53bb-4d87-87a9-9a7c45732956"
+    },
+    {
+      "appearanceId": "bodyguardzooble",
+      "slot": "stance",
+      "file": "assets/encore/stance/bodyguardzooble.png",
+      "sha256": "4db21fa1a7fe131d089cbfe745ed929d715a6b5844f24a4d680e5940426af973",
+      "bytes": 736384,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        48,
+        16,
+        1159,
+        1288
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/bodyguardzooble-stance.json",
+      "sourceGenerationId": "exec-37f3e262-6094-4413-bda7-ef47e43e303f"
+    },
+    {
+      "appearanceId": "bodyguardzooble",
+      "slot": "intro",
+      "file": "assets/encore/poses/bodyguardzooble/intro.png",
+      "sha256": "9adbf8c010aca506110f6224061b427ab336c48859a6d890c94067142fa34487",
+      "bytes": 1420123,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        142,
+        11,
+        873,
+        1524
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/bodyguardzooble-intro.json",
+      "sourceGenerationId": "exec-ad2bc54c-e48c-4645-8b39-1b8d4a46368a"
+    },
+    {
+      "appearanceId": "bodyguardzooble",
+      "slot": "attack",
+      "file": "assets/encore/poses/bodyguardzooble/attack.png",
+      "sha256": "33b27cbf225253b43d07c0d44df41c31f9b4f99fbd15ccc9495f399d4b67513d",
+      "bytes": 1488888,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        116,
+        12,
+        991,
+        1520
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/bodyguardzooble-attack.json",
+      "sourceGenerationId": "exec-1e5a9e42-74a4-484f-8241-304adff1f029"
+    },
+    {
+      "appearanceId": "bodyguardzooble",
+      "slot": "heavy",
+      "file": "assets/encore/poses/bodyguardzooble/heavy.png",
+      "sha256": "41cab5c9c740f954d14f2c58869eb2969c135b5abb4179313dc102b3dca56e2e",
+      "bytes": 1444372,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        46,
+        15,
+        986,
+        1519
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/bodyguardzooble-heavy.json",
+      "sourceGenerationId": "exec-a5e938f6-e692-46aa-847a-df1b4132523b"
+    },
+    {
+      "appearanceId": "bodyguardzooble",
+      "slot": "hit",
+      "file": "assets/encore/poses/bodyguardzooble/hit.png",
+      "sha256": "0bca1f04d5b4e4ecf540096ebab9e6bc1d6d6a7735166f81bb5d78d2985e4a0a",
+      "bytes": 1476088,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        7,
+        81,
+        975,
+        1515
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/bodyguardzooble-hit.json",
+      "sourceGenerationId": "exec-bf85d250-765e-497d-960b-f0c03d9fb7fd"
+    },
+    {
+      "appearanceId": "bodyguardzooble",
+      "slot": "walk",
+      "file": "assets/encore/poses/bodyguardzooble/walk.png",
+      "sha256": "8e0368aac2e159f8871c4d45eb7e7abda4abb0c172fa194192eaba0fcadc3e2f",
+      "bytes": 1523656,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        90,
+        9,
+        963,
+        1466
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/bodyguardzooble-walk.json",
+      "sourceGenerationId": "exec-63827051-c08b-4c2b-8200-8ff199cd529a"
+    },
+    {
+      "appearanceId": "bodyguardzooble",
+      "slot": "jump",
+      "file": "assets/encore/poses/bodyguardzooble/jump.png",
+      "sha256": "f8256c0ebfd8b69301b7417b836ed0afd2558aa87cc22b53d83dd9983c5db747",
+      "bytes": 1450546,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        28,
+        88,
+        996,
+        1179
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/bodyguardzooble-jump.json",
+      "sourceGenerationId": "exec-e308c452-7d20-420b-ad3e-d8985c17d8aa"
+    },
+    {
+      "appearanceId": "bodyguardzooble",
+      "slot": "crouch",
+      "file": "assets/encore/poses/bodyguardzooble/crouch.png",
+      "sha256": "90a7666b71d7296c9f0cbe33509de359716a5928cc47370751d80da9fec92979",
+      "bytes": 1452335,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        126,
+        255,
+        991,
+        1376
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/bodyguardzooble-crouch.json",
+      "sourceGenerationId": "exec-c3f785cc-67e6-4238-8cae-508365fe8e93"
+    },
+    {
+      "appearanceId": "bodyguardzooble",
+      "slot": "victory",
+      "file": "assets/encore/poses/bodyguardzooble/victory.png",
+      "sha256": "0018629750fcb14dfd23cea2dad1ba63aec0adc74981076296179402918cfe36",
+      "bytes": 1464892,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "boundsAlpha12": [
+        64,
+        10,
+        875,
+        1526
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/bodyguardzooble-victory.json",
+      "sourceGenerationId": "exec-bcde9c80-74ca-4dbb-8bd7-814dee5407c9"
+    },
+    {
+      "appearanceId": "bodyguardzooble",
+      "slot": "defeat",
+      "file": "assets/encore/poses/bodyguardzooble/defeat.png",
+      "sha256": "cc405e660ca8ae4e2747fda476585e2b35deafc884a943e686825735e4eaa860",
+      "bytes": 831665,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "boundsAlpha12": [
+        27,
+        74,
+        1172,
+        1262
+      ],
+      "nativeCopyVerified": true,
+      "provenanceFile": "docs/art-generation/cast-continuation-20261120/bodyguardzooble-defeat.json",
+      "sourceGenerationId": "exec-12bee403-b827-46c6-9adf-d8360f4935cf"
+    }
+  ]
+}

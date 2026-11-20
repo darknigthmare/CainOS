@@ -1,0 +1,77 @@
+{
+  "schema": "encore-native-art-resumption/v1",
+  "method": "image_gen.imagegen",
+  "episodeFidelityClaim": false,
+  "checkpointFile": "docs/art-generation/cast-continuation-20261120/generation-resume.json",
+  "transparent_background": true,
+  "nativeFacing": "right",
+  "status": "accepted_native",
+  "includedInRuntime": false,
+  "appearanceId": "abstractingpomni",
+  "slot": "crouch",
+  "id": "abstractingpomni-crouch",
+  "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingpomni/crouch.png",
+  "targetFile": "assets/encore/poses/abstractingpomni/crouch.png",
+  "sourceGenerationId": "exec-75e3354d-e17e-48ec-a3f8-b6beb1b47722",
+  "nativeSourceFile": "/workspace/scratch/5f5114b49696/generated_images/exec-75e3354d-e17e-48ec-a3f8-b6beb1b47722.png",
+  "prompt": "Use case: identity-preserve. Asset type: ONE individual full-body transparent 2D fighting-game action sprite of ABSTRACTING POMNI. Reference 1 is the approved strict design lock for silhouette, proportions, exact transformation patches, eyes, colours and polished cel shading. Reference 2 supplies official design details only; do not imitate its squat toy proportions, setting or lighting. Slender Pomni with red-blue jester hat and suit, yellow trims/buttons, pale face with one normal red-blue pinwheel iris and brown bob. Opposing half of face/hat is dark angular crystal with flat pastel concentric eyes; one arm/hand is crystal, opposite hand is blue glove. Normal RED shoe and opposing CRYSTAL eye-bearing foot MUST stay on the same anatomical sides as the approved selection. Do not swap, mirror or redistribute the transformation. Preserve all individual eye-bearing hat growths and asymmetric patches; not fully abstracted. Create a genuinely distinct natural action pose, not a mirrored/cropped selection image. Every limb, crown/hat/ear tip, attached mask and crystal spike must fit fully inside clear transparent margins on ALL sides. One connected character, crisp detailed 2D art on true transparent RGBA; no scenery, floor, cast shadow, aura, glow, particles, labels, watermark, inset or duplicate. ANATOMICAL SIDE LOCK: the normal RED shoe belongs to the same anatomical side as the CRYSTAL arm. The eye-bearing CRYSTAL foot belongs to the same anatomical side as the BLUE-gloved hand. Trace the legs from their hips and preserve that assignment even when the feet cross or change screen position. POSE: CROUCH defense facing screen RIGHT: bend both knees deeply and lower the hips, torso leaning forward, both hands held compactly near face/chest, both feet remain planted and separated. Keep all details within canvas.",
+  "checkpointPrompt": "Use case: identity-preserve. Asset type: ONE individual full-body transparent 2D fighting-game action sprite of ABSTRACTING POMNI. Reference 1 is the approved strict design lock for silhouette, proportions, exact transformation patches, eyes, colours and polished cel shading. Reference 2 supplies official design details only; do not imitate its squat toy proportions, setting or lighting. Slender Pomni with red-blue jester hat and suit, yellow trims/buttons, pale face with one normal red-blue pinwheel iris and brown bob. Opposing half of face/hat is dark angular crystal with flat pastel concentric eyes; one arm/hand is crystal, opposite hand is blue glove. Normal RED shoe and opposing CRYSTAL eye-bearing foot MUST stay on the same anatomical sides as the approved selection. Do not swap, mirror or redistribute the transformation. Preserve all individual eye-bearing hat growths and asymmetric patches; not fully abstracted. Create a genuinely distinct natural action pose, not a mirrored/cropped selection image. Every limb, crown/hat/ear tip, attached mask and crystal spike must fit fully inside clear transparent margins on ALL sides. One connected character, crisp detailed 2D art on true transparent RGBA; no scenery, floor, cast shadow, aura, glow, particles, labels, watermark, inset or duplicate. POSE: CROUCH defense facing screen RIGHT: bend both knees deeply and lower the hips, torso leaning forward, both hands held compactly near face/chest, both feet remain planted and separated. Keep all details within canvas.",
+  "referencePaths": [
+    "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingpomni/selection.png",
+    "docs/art-generation/cast-continuation-20261120/references/official-AbstractPomni.png"
+  ],
+  "portableReferences": [
+    {
+      "position": 1,
+      "kind": "repository-asset",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingpomni/selection.png",
+      "sha256": "6e069cab81e5ee75d6b98c8fbca2a8ba7fda6949cb78923fd0e2b8a08168ee4a",
+      "bytes": 1217005
+    },
+    {
+      "position": 2,
+      "kind": "official-source-reference",
+      "file": "docs/art-generation/cast-continuation-20261120/references/official-AbstractPomni.png",
+      "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractPomni.png?v=1780353721",
+      "pageUrl": "https://glitchproductions.store/products/abstraction-animiniz",
+      "sha256": "914230b23c0c5c733c68d2e2e1f96e94d860eb1d2eacbb5a41d1c9824e27de42",
+      "bytes": 3429140,
+      "restoreInstruction": "The exact reference is archived in this repository. If unavailable, download the named official image URL, verify and visually inspect it before generation. For an expired storyboard URL, refresh the storyboard through the official episode player metadata."
+    }
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/abstraction-animiniz",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractPomni.png?v=1780353721"
+  ],
+  "sourceKind": "Produit dérivé officiel",
+  "visualReview": {
+    "reviewer": "generate_pomni_kinger",
+    "status": "accepted",
+    "observations": [
+      "Low right-facing defensive crouch with both knees deeply bent and both hands guarding the face.",
+      "Normal red shoe is on the near crystal-arm side; far blue-glove side retains the eye-bearing crystal shoe.",
+      "One full figure, asymmetric partial-crystal mask and hat retained, complete hands and feet inside the canvas."
+    ],
+    "scope": "Approved reference identity and native sprite fit; no canonical episode certification."
+  },
+  "dimensions": [
+    1312,
+    1199
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "alpha12Bounds": [
+    158,
+    7,
+    1249,
+    1185
+  ],
+  "fullyTransparentPixels": 941093,
+  "sha256": "00b90e75262a0e6b644b04dd7661ab81bf0ee29e15730fcba9bd96a21eaa6243",
+  "bytes": 1151313,
+  "nativeCopyVerified": true,
+  "createdAt": "2026-11-20T08:31:09.799490+00:00"
+}

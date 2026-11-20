@@ -1,0 +1,37 @@
+{
+  "id": "beachjax-crouch",
+  "appearanceId": "beachjax",
+  "slot": "crouch",
+  "file": "assets/encore/poses/beachjax/crouch.png",
+  "sourceGenerationId": "exec-1a9b0145-c61d-47b8-8c67-d06ebe5c7e8f",
+  "method": "image_gen.imagegen",
+  "prompt": "Use case: identity-preserve. Create ONE individual whole-body 2D fighting-game pose image of BEACH JAX from The Amazing Digital Circus for Digital Circus Encore. Reference image 1 is the approved Beach Jax selection and is the strict design lock: same long lanky adult cartoon proportions, slim smooth lavender-purple featureless body, small narrow torso, long thin arms and legs, broad purple rounded cartoon rabbit feet, large simple purple cartoon hands, enormous yellow eyes with solid BLACK RECTANGULAR pupils, tiny flat deadpan mouth, oval head and TWO very long purple ears. Small vivid pink scallop shell remains securely fixed at the front of the lower belly/hip line, exactly as reference. Reference image 2 confirms official costume details only; do not imitate its squat chibi proportions, photographic toy rendering, backdrop or lighting. Retain crisp dark-purple outlines and controlled smooth cel shading of image 1. No human musculature, anatomical detail, fur texture, clothing, overalls, gloves, shoes or new accessory. Family-friendly smooth cartoon design. Entire figure visible including BOTH ear tips, hands, shell and broad feet, with clear 8-10 percent TRANSPARENT margins on every side. One figure on a real transparent RGBA background; no backdrop, beach, floor, cast shadow, pedestal, glow, effects, lettering, watermark, inset, repeated character or sprite sheet. POSE: low CROUCHING defensive pose facing screen RIGHT in a readable three-quarter side view. Both long legs bend deeply into a low balanced squat, torso leans forward modestly, both broad feet remain flat and separated. One arm bends with a relaxed guarding hand near the chest, the other open hand held forward at knee height for balance. Head looks right with cautious deadpan expression. Both very long ears tilt behind the head without being cropped. Keep pink shell securely fixed and visible; no foreshortened head-only view. Distinct low silhouette, both knees and feet readable.",
+  "referencePaths": [
+    "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/beachjax.png",
+    "/workspace/scratch/5f5114b49696/research/beach-series-04.png"
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/digital-circus-animiniz-beach-vacation-series",
+    "https://glitchproductions.store/cdn/shop/files/Beach_Series_Render_04.png?v=1765572441&width=1600"
+  ],
+  "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-1a9b0145-c61d-47b8-8c67-d06ebe5c7e8f.png",
+  "visualReview": "Distinct low defensive crouch facing right with deep knee bends, both broad feet planted apart, one hand guarding the chest and one extended low. Complete ears, hands and feet remain visible. The pink scallop stays fixed at the front; purple featureless slender limbs, yellow eyes and rectangular pupils preserve the selection design. No new clothing, scenery or anatomical detail.",
+  "sha256": "b42c0ecc1bfb7b32803ac652111205900e749033365bdfc229976ac167ff19ac",
+  "dimensions": [
+    1246,
+    1263
+  ],
+  "bytes": 906407,
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "bboxAlpha12": [
+    58,
+    19,
+    1199,
+    1250
+  ],
+  "nativeCopyVerified": true
+}

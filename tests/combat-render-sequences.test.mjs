@@ -14,7 +14,7 @@ test('all fourteen fighters have five individually timed immutable presentation 
     assert.ok(Object.isFrozen(s.keys)); assert.equal(s.keys[0].at, 0); assert.equal(s.keys.at(-1).at, s.duration);
     motions.add(JSON.stringify(s.keys));
   }
-  assert.equal(new Set(ids).size, 70); assert.equal(motions.size, 70);
+  assert.equal(new Set(ids).size, FIGHTERS.length * SEQUENCE_EVENTS.length); assert.equal(motions.size, FIGHTERS.length * SEQUENCE_EVENTS.length);
 });
 
 test('every sequence is finite, continuous at its keyframes and settles exactly', () => {
@@ -73,7 +73,7 @@ test('invalid sequence inputs are safe and negative frames clamp to the beginnin
   for (const frame of [-100, NaN, Infinity]) assert.deepEqual(sequencePose('jax', 'intro', frame), sequencePose('jax', 'intro', 0));
 });
 
-test('each of twelve stage ambiences has a distinct deterministic evolving layer', () => {
+test('each stage ambience has a distinct deterministic evolving layer', () => {
   assert.deepEqual(new Set(Object.keys(STAGE_AMBIENCES)), new Set(STAGES.map(s => s.id)));
   const forms = new Set();
   for (const s of STAGES) {
@@ -82,7 +82,7 @@ test('each of twelve stage ambiences has a distinct deterministic evolving layer
     assert.notDeepEqual(first.shapes, later.shapes); assert.deepEqual(later, stageMotion(s, 123));
     forms.add(JSON.stringify(first.shapes));
   }
-  assert.equal(forms.size, 12);
+  assert.equal(forms.size, STAGES.length);
 });
 
 test('reduced-motion stage layers are static, including the calibration scanner', () => {

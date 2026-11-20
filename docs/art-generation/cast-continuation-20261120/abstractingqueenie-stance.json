@@ -1,0 +1,48 @@
+{
+  "id": "abstractingqueenie-stance",
+  "appearanceId": "abstractingqueenie",
+  "introducedOn": "2026-11-20",
+  "slot": "stance",
+  "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/stance.png",
+  "sourceGenerationId": "exec-b0ddc4b9-0658-422d-a6d0-85180b249513",
+  "method": "image_gen.imagegen",
+  "prompt": "Use case: identity-preserve. Asset type: ONE full-body transparent 2D fighting-game pose of ABSTRACTING QUEENIE for Digital Circus — Encore. Reference 1 is the approved game identity, anatomy, costume and crisp cel-shaded illustration style; preserve those exactly. Reference 2 is the official merchandise design for supporting details only, never its scenery or toy proportions. She is a tall muted rose-brown QUEEN CHESS PIECE, not a humanoid: scalloped chess crown and round finial, no mouth or human face, no legs, no feet, no visible arms. Viewer-LEFT half of the head remains rose-brown with ONE normal white eye, warm orange-brown iris and lower lashes. Viewer-RIGHT half of head/crown is smoky-black angular crystal with ONE large flat concentric pastel lavender/pink/yellow eye plus the small embedded eyes from reference 1. Keep those sides; do not mirror. Long BURGUNDY royal robe with broad white black-spotted ermine trim, two SMALL white FLOATING cartoon hands with black-lavender crystal wrist cuffs, asymmetric crystal spikes and pastel eye around viewer-right hem/base. Preserve the slender tall chess silhouette, crown, color, material placement and exactly two hands. This is partial abstraction, with the normal half and most robe visible, not a fully black monster. Face and act toward screen RIGHT in three-quarter view. Rich clean 2D cel shading and controlled dark outlines, identical visual series to reference 1. Pose variation changes posture and floating hands only; never invent human knees, elbows or extra limbs. ONE complete character in the image, with whole crown, every crystal tip, both hands and whole robe/base inside at least 8 percent clear margin on all sides. Genuine transparent RGBA background: ABSOLUTELY NO scene, dark backdrop, haze, halo, aura, gradient, floor, platform, cast shadow, motion trails, detached fragments, particles, text, symbols, watermark, extra people, or contact-sheet panels.\nPOSE: combat-ready standing guard. Upright chess body with a slight forward inclination; both floating hands raised defensively at chest height, the screen-right hand leading and loosely curled, the other closer to the collar. Normal eye alert. Keep the full robe base visible. Distinct from the open-palmed selection portrait.",
+  "referencePaths": [
+    "/workspace/scratch/5f5114b49696/CainOS/docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/selection.png",
+    "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedQueenie.png"
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/abstraction-animiniz",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedQueenie.png?v=1780353722"
+  ],
+  "sourceType": "official-merchandise",
+  "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-b0ddc4b9-0658-422d-a6d0-85180b249513.png",
+  "sha256": "0388151ffe5647b253cd08348926136eb7f1f6ecb1d0d2574190546b6e5e227e",
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "bytes": 1634820,
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "bboxAlpha12": [
+    156,
+    8,
+    888,
+    1530
+  ],
+  "nativeCopyVerified": true,
+  "visualReview": "Whole tall queen chess piece in guard with two small white floating hands, rose-brown normal half and orange-brown eye, viewer-right half crystal with concentric eyes, burgundy ermine robe and asymmetric crystal base. Crown, hand cuffs and hem fully inside transparent image; no added mouth or human limbs. Identity and guard checked against the approved selection and official reference.",
+  "status": "generated-and-visually-reviewed",
+  "episodeFidelityClaim": false,
+  "targetFile": "assets/encore/stance/abstractingqueenie.png",
+  "productionStatus": "partial",
+  "includedInRuntime": false,
+  "originalReferencePaths": [
+    "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/abstractingqueenie.png",
+    "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedQueenie.png"
+  ]
+}

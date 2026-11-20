@@ -1,0 +1,220 @@
+{
+  "schema": "encore-character-canvas-review/v1",
+  "createdAt": "2026-11-20T10:56:50.169Z",
+  "method": "Production Canvas2D modules executed by Node and native Skia; actual drawImage sources and transforms inspected.",
+  "limitations": [
+    "No browser, DOM, input, audio, service-worker or physical-device test.",
+    "Individual static poses do not establish frame-by-frame animation.",
+    "Asset identity/proportion fidelity requires separate visual review; no canonical 1:1 certification."
+  ],
+  "partial": false,
+  "additionsOnly": true,
+  "introducedOn": "2026-11-20",
+  "appearanceId": "ringmastercaine",
+  "sources": {
+    "combat/data.mjs": "6910aaddf46645f98520f4cc6fb468c2bc43b6dd017d9237266a90f6c1bf892b",
+    "combat/costume-additions.mjs": "a3db2ecd8a368360b4e34179540d50c9c2250359a255c353a87dea135682d875",
+    "combat/costume-continuation-20261120.mjs": "d3774d17d6058e72081cc7a236f748fc26cc2532fe94ddf772e9ad6de638eb0f",
+    "combat/costume-resumption-20261120.mjs": "f83bde65b434f107abf7017e532a5600b2b43713f3b0e32308f8a1a2bd3be9d5",
+    "combat/costume-discoveries-20261120.mjs": "fb16daf1591a50602a68a84e2d7e5cafa12c230b2185ef4e1d627cec8a67565c",
+    "combat/illustrations.mjs": "26aca8338be81bedbbbc1bb4bc59dd0aae8b7b7ef4d785cbbf353ac109c53b99",
+    "combat/render.mjs": "91cdc8a8a4b5298644809714aa7e53219e1266e2ffc95478194a699a7bc1212f",
+    "combat/render-poses.mjs": "21e3afba8c19723ffdcb383402cc6339b63cb58df5d4323fda2ebde093ce0b29",
+    "combat/offline-manifest.mjs": "3e4808a0198e058ec85756265f575ebf63263278354b48c567fcbe3c755410b0",
+    "scripts/render-combat-character-review.mjs": "02a1c878bf23504d2c63e8046008a9f2a27b9389607a6f1166b498dda7fa780e"
+  },
+  "actions": [
+    {
+      "id": "ringmastercaine",
+      "pose": "intro",
+      "file": "assets/encore/poses/ringmastercaine/intro.png",
+      "sha256": "08bf3469a66e4a87dd8402f8a61974db34a10aa6d2ae3093cfa78dcac964382f",
+      "bytes": 869376,
+      "visibleBounds": {
+        "x": 17,
+        "y": 6,
+        "width": 550,
+        "height": 624
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "ringmastercaine",
+      "pose": "attack",
+      "file": "assets/encore/poses/ringmastercaine/attack.png",
+      "sha256": "d19b1f7281a46c41bbc5bcac672aab9998d4d6ac30fef785d72763febe2f6bb0",
+      "bytes": 1380639,
+      "visibleBounds": {
+        "x": 29,
+        "y": 6,
+        "width": 581,
+        "height": 415
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "ringmastercaine",
+      "pose": "hit",
+      "file": "assets/encore/poses/ringmastercaine/hit.png",
+      "sha256": "e70d1da481cf75ab2f0732c3a3e56f1cb1f984ee1380b391206e072fa72dea19",
+      "bytes": 972923,
+      "visibleBounds": {
+        "x": 32,
+        "y": 12,
+        "width": 522,
+        "height": 620
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "ringmastercaine",
+      "pose": "walk",
+      "file": "assets/encore/poses/ringmastercaine/walk.png",
+      "sha256": "78b73574cf7959957e8188bc7e23a8bfd817b824974e7149a8e7af69a9b2316c",
+      "bytes": 947113,
+      "visibleBounds": {
+        "x": 53,
+        "y": 6,
+        "width": 487,
+        "height": 631
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "ringmastercaine",
+      "pose": "jump",
+      "file": "assets/encore/poses/ringmastercaine/jump.png",
+      "sha256": "a6249cb59bc431e47229d6a6071d0ffe47251c8abc960fec643d8b60d49c99b0",
+      "bytes": 973156,
+      "visibleBounds": {
+        "x": 28,
+        "y": 9,
+        "width": 531,
+        "height": 617
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "ringmastercaine",
+      "pose": "crouch",
+      "file": "assets/encore/poses/ringmastercaine/crouch.png",
+      "sha256": "94d378eb4885b08f729be393c3c1b079ebaa070a3fb96b21b667501f9a2f07bc",
+      "bytes": 1037488,
+      "visibleBounds": {
+        "x": 64,
+        "y": 6,
+        "width": 533,
+        "height": 575
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "ringmastercaine",
+      "pose": "victory",
+      "file": "assets/encore/poses/ringmastercaine/victory.png",
+      "sha256": "3bb3d02157bb15f4a0c27a8b0b71df863e26937de70af20c750a43d841895b55",
+      "bytes": 1520084,
+      "visibleBounds": {
+        "x": 65,
+        "y": 17,
+        "width": 329,
+        "height": 612
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "ringmastercaine",
+      "pose": "defeat",
+      "file": "assets/encore/poses/ringmastercaine/defeat.png",
+      "sha256": "d5ae39821002807483e0f75385891e2b2013f62628a39de3ee4cc8c8b9971751",
+      "bytes": 949416,
+      "visibleBounds": {
+        "x": 47,
+        "y": 10,
+        "width": 470,
+        "height": 566
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "ringmastercaine",
+      "pose": "heavy",
+      "file": "assets/encore/poses/ringmastercaine/heavy.png",
+      "sha256": "cb1a9347e8f0c0251631ad833131a016957eced406403874973089b018ea0293",
+      "bytes": 1448200,
+      "visibleBounds": {
+        "x": 73,
+        "y": 5,
+        "width": 484,
+        "height": 418
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    }
+  ],
+  "stances": [
+    {
+      "id": "ringmastercaine",
+      "file": "assets/encore/stance/ringmastercaine.png",
+      "sha256": "9ba904b80bdc7eb238e083d64507fa5056ea21f68d1c4c56b4cf8fe18af9cec1",
+      "bytes": 826247,
+      "nativeFacing": 1,
+      "rendered": true,
+      "bothFacings": true
+    }
+  ],
+  "portraits": [
+    {
+      "id": "ringmastercaine",
+      "archiveId": null,
+      "file": "assets/encore/selection/ringmastercaine.png",
+      "sha256": "b95d9ff79564bb0ae0b536ef4b3cf48b1cc43af6f046fa687355ea753fc4d5fb",
+      "bytes": 1539137,
+      "rendered": true
+    }
+  ],
+  "missing": [],
+  "sheets": [
+    "actions-ringmastercaine.jpg",
+    "archive-portraits-01.jpg"
+  ],
+  "browserTestStatus": "not_executed",
+  "counts": {
+    "appearances": 1,
+    "expectedActions": 9,
+    "actions": 9,
+    "stances": 1,
+    "drawChecks": 20,
+    "archiveEntries": 0,
+    "portraits": 1,
+    "expectedPortraits": 1,
+    "missing": 0
+  },
+  "complete": true
+}

@@ -1,0 +1,9 @@
+{
+  "schema": "encore-catalog-preservation-baseline/v1",
+  "createdAt": "2026-11-20T10:31:03.989806+00:00",
+  "baseCommit": "6ea3e8041f71789f858ed724ceeb49a3e5efacff",
+  "baseTree": "4cdec75d327064adb7414d9ed0598aa94ce53727",
+  "trackedEncoreImageCount": 5546,
+  "imageTreeListingSha256": "6d70161169a7311a7f74ac676a6a5ef81bf0ce13632182acf9643a7bb4b65c3c",
+  "invariant": "Every historical tracked image retains its exact Git object; only 110 new active images may be added."
+}

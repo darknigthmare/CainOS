@@ -8,13 +8,14 @@ import {
   getFighterFidelity, getMoveFidelity, getStageFidelity, getFidelitySources,
 } from '../combat/fidelity.mjs';
 import { COSTUME_FIDELITY, getCostumeFidelity } from '../combat/costume-fidelity.mjs';
+import { EXPANSION_DEFS } from '../combat/roster-expansion.mjs';
 import { COSTUME_REFINEMENTS, REFINED_COSTUME_IDS } from '../combat/costume-refinements.mjs';
 
 test('all playable fighters, techniques and stages expose the shared review records', () => {
   assert.deepEqual(Object.keys(FIGHTER_FIDELITY).sort(), FIGHTERS.map(f => f.id).sort());
   assert.deepEqual(Object.keys(MOVE_FIDELITY).sort(), MOVES.map(m => m.id).sort());
   assert.deepEqual(Object.keys(STAGE_FIDELITY).sort(), STAGES.map(s => s.id).sort());
-  assert.equal(MOVES.length, 140);
+  assert.equal(MOVES.length, FIGHTERS.length * MOVE_SLOTS.length);
   for (const fighter of FIGHTERS) {
     assert.equal(fighter.fidelity, getFighterFidelity(fighter.id));
     for (const slot of MOVE_SLOTS) assert.equal(fighter.moves[slot].fidelity, getMoveFidelity(fighter.id, slot));
@@ -30,7 +31,7 @@ test('review records keep source scope, observations and invented combat separat
   for (const source of FIDELITY_SOURCES) {
     const url = new URL(source.url);
     assert.equal(url.protocol, 'https:');
-    assert.ok(['www.glitchprod.com', 'static.wixstatic.com', 'www.youtube.com', 'glitchproductions.store', 'www.comicsbeat.com', 'occ-0-3012-114.1.nflxso.net', 'static.wikia.nocookie.net', 'pbs.twimg.com'].includes(url.hostname));
+    assert.ok(['www.glitchprod.com', 'static.wixstatic.com', 'steamcommunity.com', 'www.youtube.com', 'glitchproductions.store', 'www.comicsbeat.com', 'occ-0-3012-114.1.nflxso.net', 'static.wikia.nocookie.net', 'pbs.twimg.com'].includes(url.hostname));
     if (['static.wikia.nocookie.net', 'pbs.twimg.com'].includes(url.hostname)) {
       assert.equal(source.kind, 'Copie sur un hébergement tiers');
       assert.match(source.scope, /tiers|republiée/);
@@ -59,6 +60,48 @@ test('review records keep source scope, observations and invented combat separat
   assert.deepEqual(STAGE_FIDELITY.training.sourceIds, []);
   assert.equal(STAGE_FIDELITY.training.reviewStatus, 'Création originale');
   assert.equal(STAGE_FIDELITY.lake.reviewStatus, 'Source primaire à identifier');
+});
+
+test('the forty promoted NPCs keep an open episode review with an individual atlas sprite record', () => {
+  assert.equal(EXPANSION_DEFS.length, 40);
+  for (const def of EXPANSION_DEFS) {
+    const item = FIGHTER_FIDELITY[def.id];
+    assert.ok(item, def.id);
+    assert.equal(item.reviewStatus, 'Épisode à revoir', def.id);
+    assert.deepEqual(item.observedTraits, [], def.id);
+    assert.ok(item.sourceIds.includes(def.sourceId), def.id);
+    const review = item.assetReview;
+    assert.equal(review.status, 'Revue technique 0.7.0 effectuée', def.id);
+    assert.equal(review.captureId, `expansion-sprites-0.7.0#${def.id}`, def.id);
+    assert.match(review.sheet, /^cainos-pixel-cast-sheet.*\.png$/, def.id);
+    assert.ok(review.cell.length > 5, def.id);
+    assert.match(review.extractedSize, /^\d+ × \d+ px$/, def.id);
+    assert.ok(review.visibleTraits.length >= 2 && review.visibleTraits.every(trait => trait.length > 20), def.id);
+    for (const field of ['framing', 'transparency', 'proportions', 'identityEvidence']) assert.ok(review[field].length > 30, `${def.id}:${field}`);
+    assert.ok(Array.isArray(review.issues), def.id);
+    assert.match(review.proportions, new RegExp(`corps de simulation ${def.width} × ${def.height} px`), def.id);
+    assert.ok(!/^Validé|^Certifié|^Conforme/.test(review.status), def.id);
+  }
+  assert.equal(Object.values(FIGHTER_FIDELITY).filter(item => item.assetReview).length, 40);
+});
+
+test('sprite reviews record identity contradictions and framing defects instead of smoothing them over', () => {
+  assert.match(FIGHTER_FIDELITY.scratch.assetReview.identityEvidence, /chien/);
+  assert.match(FIGHTER_FIDELITY.scratch.assetReview.issues.join(' '), /chat rayé/);
+  assert.match(FIGHTER_FIDELITY.chineseroomnpc.assetReview.issues.join(' '), /diorama/);
+  assert.match(FIGHTER_FIDELITY.barrelmonkey.assetReview.issues.join(' '), /Aucun tonneau/);
+  assert.match(FIGHTER_FIDELITY.mildenhallsouls.assetReview.issues.join(' '), /deux entités/);
+  assert.match(FIGHTER_FIDELITY.angel.assetReview.identityEvidence, /spectre du manoir/);
+  for (const id of ['ghostly', 'committeemember', 'gummyworm', 'barrelmonkey', 'mildenhallsouls', 'orangemannequin', 'yellowmannequin', 'magentamannequin', 'wormo', 'bizco', 'pinkcyclops', 'bulbcreature', 'gummyelephant', 'abel', 'candyguardcyan', 'candyguardblue', 'candyguardpurple']) {
+    assert.match(FIGHTER_FIDELITY[id].assetReview.framing, /reste|restent|traîne|apparaît|contient|touche|flotte|détaché/, id);
+  }
+  assert.deepEqual(FIGHTER_FIDELITY.angel.sourceIds, ['ep3']);
+  assert.deepEqual(FIGHTER_FIDELITY.abel.sourceIds, ['ep1', 'ep7']);
+  assert.deepEqual(FIGHTER_FIDELITY.blueai.sourceIds, ['ep1', 'ep9']);
+  assert.deepEqual(FIGHTER_FIDELITY.magentamannequin.sourceIds, ['ep1', 'ep2']);
+  assert.deepEqual(FIGHTER_FIDELITY.disappearingguy.sourceIds, ['ep1', 'ep5', 'ep6']);
+  assert.match(FIGHTER_FIDELITY.disappearingguy.reviewScope, /épisodes 5 et 6/);
+  assert.throws(() => FIGHTER_FIDELITY.scratch.assetReview.issues.push('mutation'), TypeError);
 });
 
 test('the nine episode references retain later costumes without claiming to have reviewed them', () => {
@@ -198,13 +241,16 @@ const rulesDigest = (fighters, omitRetreats = false) => {
   return createHash('sha256').update(JSON.stringify(canonical(rules))).digest('hex');
 };
 
+const ORIGINAL_FIGHTER_IDS = new Set(['pomni', 'jax', 'ragatha', 'gangle', 'zooble', 'kinger', 'caine', 'bubble', 'gummigoo', 'loolilalu', 'gloinkqueen', 'fudge', 'abstractedkaufmo', 'baronmildenhall']);
+const originalFighters = FIGHTERS.filter(fighter => ORIGINAL_FIGHTER_IDS.has(fighter.id));
+
 test('every old combat rule and body remains exact for 0.1.0 and 0.2.0 replays', () => {
   for (const version of ['0.1.0', '0.2.0']) {
-    const fighters = FIGHTERS.map(f => getReplayFighter(f.id, version));
+    const fighters = originalFighters.map(f => getReplayFighter(f.id, version));
     assert.equal(rulesDigest(fighters), LEGACY_RULES_SHA256, version);
     for (const fighter of fighters) assert.equal(fighter.moves, fighter.combat.moves);
   }
-  assert.equal(rulesDigest(FIGHTERS, true), UNCHANGED_RULES_SHA256, 'only the two retreat definitions may change in this pass');
+  assert.equal(rulesDigest(originalFighters, true), UNCHANGED_RULES_SHA256, 'only the two retreat definitions may change in this pass');
   for (const fighter of FIGHTERS) assert.equal(getReplayFighter(fighter.id, '0.3.0'), fighter);
   assert.notEqual(getReplayFighter('pomni', '0.2.0').moves.specialBack, getFighter('pomni').moves.specialBack);
 });
@@ -213,7 +259,7 @@ test('all fourteen kits and 140 techniques stay mechanically identical between p
   // Independently derived from git show 171f422:combat/data.mjs. Only presentation
   // fields (visual, sprite, animation, fidelity) are omitted; all authored combat,
   // body, resource, passive, move, power/speed/reach and health fields are included.
-  const mechanics = FIGHTERS.map(f => ({ id: f.id, power: f.power, speed: f.speed, reach: f.reach, stats: f.stats, combat: f.combat }));
+  const mechanics = originalFighters.map(f => ({ id: f.id, power: f.power, speed: f.speed, reach: f.reach, stats: f.stats, combat: f.combat }));
   const digest = createHash('sha256').update(JSON.stringify(canonical(mechanics))).digest('hex');
   assert.equal(digest, '8c074267273275cb52fa8da66c62dacf258f12d578949dc9f9423b4b62f4e608');
   for (const fighter of FIGHTERS) {

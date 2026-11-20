@@ -1,0 +1,243 @@
+{
+  "schema": "cainos.cast-candidate-reference-matrix.v1",
+  "date": "2026-11-20",
+  "recordedAt": "2026-11-20T06:55:12.985903+00:00",
+  "scope": "Eight unresolved priority candidates plus one newly observed official merchandise illustration.",
+  "frozenCheckpoint": {
+    "file": "../cast-continuation-20261120/generation-resume.json",
+    "sha256": "2ca4585a5e30eba98e9f044e40d637ef38d5a52912c09890efb85d503985cbe9",
+    "availablePngCount": 102,
+    "missingJobCount": 63,
+    "modifiedByThisAudit": false
+  },
+  "priorReviewSha256": "a4497ada948110a37369dd8171de954fe5ac51c96a160b374c4a67e87384a2b0",
+  "candidateCount": 9,
+  "newOfficialIllustrationCandidates": 1,
+  "readyAppearanceIds": [],
+  "readyJobCount": 0,
+  "generationCalls": 0,
+  "runtimeChanged": false,
+  "candidates": [
+    {
+      "id": "zooble__ep02_assembly",
+      "kind": "assembly",
+      "previousProposedId": "zoobleep2",
+      "previousStatus": "distinct-assembly-incomplete-reference",
+      "auditStatus": "no-new-primary-body-reference",
+      "newObservation": "The previous episode observations remain the current evidence; no new verified episode-two trailer reference was obtained.",
+      "unresolved": "Hands and small limb connections remain insufficiently defined.",
+      "newReferenceIds": [],
+      "priorEvidence": {
+        "file": "../cast-continuation-20261120/presidential-zooble-primary-review.json",
+        "candidateId": "zooble__ep02_assembly",
+        "officialEpisodeUrls": [
+          "https://www.youtube.com/watch?v=4ofJpOEXrZs&t=170s",
+          "https://www.youtube.com/watch?v=4ofJpOEXrZs&t=1380s",
+          "https://www.youtube.com/watch?v=4ofJpOEXrZs&t=1390s"
+        ]
+      },
+      "readyForFullBodyPoseSet": false,
+      "nextAction": "Obtain a readable official full-body frame or model reference. Do not reuse the secondary isolated render as proof.",
+      "runtimeChange": false
+    },
+    {
+      "id": "zooble__ep03_assembly",
+      "kind": "assembly",
+      "previousProposedId": "zoobleep3",
+      "previousStatus": "distinct-assembly-incomplete-reference",
+      "auditStatus": "new-partial-primary-reference",
+      "newObservation": "The official trailer at 36 seconds shows the contrasting hands more clearly: an angular yellow hand at image-left and a white glove at image-right, with the pink cone and striped antenna above.",
+      "unresolved": "The lower body and the complete attachment chain remain obscured or outside this close view.",
+      "newReferenceIds": [
+        "ep3-t36"
+      ],
+      "priorEvidence": {
+        "file": "../cast-continuation-20261120/presidential-zooble-primary-review.json",
+        "candidateId": "zooble__ep03_assembly",
+        "officialEpisodeUrls": [
+          "https://www.youtube.com/watch?v=bKjfw77cxeQ&t=260s",
+          "https://www.youtube.com/watch?v=bKjfw77cxeQ&t=270s",
+          "https://www.youtube.com/watch?v=bKjfw77cxeQ&t=290s",
+          "https://www.youtube.com/watch?v=bKjfw77cxeQ&t=300s",
+          "https://www.youtube.com/watch?v=bKjfw77cxeQ&t=310s",
+          "https://www.youtube.com/watch?v=bKjfw77cxeQ&t=620s"
+        ]
+      },
+      "readyForFullBodyPoseSet": false,
+      "nextAction": "Corroborate the entire limb chains in a readable standing view before posing the body.",
+      "runtimeChange": false
+    },
+    {
+      "id": "zooble__ep04_assembly",
+      "kind": "assembly",
+      "previousProposedId": "zoobleep4",
+      "previousStatus": "distinct-assembly-incomplete-reference",
+      "auditStatus": "trailer-does-not-resolve-civil-assembly",
+      "newObservation": "The 29-second trailer view shows Zooble in the Spudsy uniform; it is retained as a labeled comparison, not as a new civil model.",
+      "unresolved": "The civil assembly feet, joint details and continuity with the uniformed shot remain unverified.",
+      "newReferenceIds": [
+        "ep4-t29"
+      ],
+      "priorEvidence": {
+        "file": "../cast-continuation-20261120/presidential-zooble-primary-review.json",
+        "candidateId": "zooble__ep04_assembly",
+        "officialEpisodeUrls": [
+          "https://www.youtube.com/watch?v=Q9KWcWKo2T8&t=50s",
+          "https://www.youtube.com/watch?v=Q9KWcWKo2T8&t=60s",
+          "https://www.youtube.com/watch?v=Q9KWcWKo2T8&t=120s"
+        ]
+      },
+      "readyForFullBodyPoseSet": false,
+      "nextAction": "Capture a readable civil full-body shot. Do not remove the uniform and invent the body underneath.",
+      "runtimeChange": false
+    },
+    {
+      "id": "zooble__ep06_assembly",
+      "kind": "assembly",
+      "previousProposedId": "zoobleep6",
+      "previousStatus": "distinct-assembly-best-next-candidate",
+      "auditStatus": "new-partial-primary-reference-best-next-candidate",
+      "newObservation": "The 32-, 41- and 46-second trailer samples give complementary views of the yellow-hand arm. A purple shoulder-side piece, a light yellow/green segment, a small light junction and a red bent tube are visible across the views. The black-and-white segment and white hand are separately visible.",
+      "unresolved": "The exact small joint construction and the complete red-leg-to-violet-foot connection are still not sufficiently resolved at 320 by 180.",
+      "newReferenceIds": [
+        "ep6-t30",
+        "ep6-t32",
+        "ep6-t41",
+        "ep6-t46"
+      ],
+      "priorEvidence": {
+        "file": "../cast-continuation-20261120/presidential-zooble-primary-review.json",
+        "candidateId": "zooble__ep06_assembly",
+        "officialEpisodeUrls": [
+          "https://www.youtube.com/watch?v=mOvhHim78YA&t=140s",
+          "https://www.youtube.com/watch?v=mOvhHim78YA&t=150s",
+          "https://www.youtube.com/watch?v=mOvhHim78YA&t=210s",
+          "https://www.youtube.com/watch?v=mOvhHim78YA&t=230s",
+          "https://www.youtube.com/watch?v=mOvhHim78YA&t=290s",
+          "https://www.youtube.com/watch?v=mOvhHim78YA&t=310s"
+        ]
+      },
+      "readyForFullBodyPoseSet": false,
+      "nextAction": "Obtain a sharper official full-body frame showing the lower connection. Do not transplant the artbook sticker arms or its solid-colored lower leg into this episode assembly.",
+      "runtimeChange": false
+    },
+    {
+      "id": "zooble__ep07_assembly",
+      "kind": "assembly",
+      "previousProposedId": "zoobleep7casual",
+      "previousStatus": "ambiguous-generic-label-two-phases",
+      "auditStatus": "trailer-does-not-resolve-civil-assembly",
+      "newObservation": "The inspected trailer samples show beach glimpses and other scenes; they do not supply a readable complete pre-beach assembly.",
+      "unresolved": "The pre-beach arms, feet and connections remain incomplete.",
+      "newReferenceIds": [],
+      "priorEvidence": {
+        "file": "../cast-continuation-20261120/presidential-zooble-primary-review.json",
+        "candidateId": "zooble__ep07_assembly",
+        "officialEpisodeUrls": [
+          "https://www.youtube.com/watch?v=oaOG1xOk7XY&t=60s",
+          "https://www.youtube.com/watch?v=oaOG1xOk7XY&t=130s",
+          "https://www.youtube.com/watch?v=oaOG1xOk7XY&t=180s",
+          "https://www.youtube.com/watch?v=oaOG1xOk7XY&t=260s",
+          "https://www.youtube.com/watch?v=oaOG1xOk7XY&t=270s",
+          "https://www.youtube.com/watch?v=oaOG1xOk7XY&t=280s"
+        ]
+      },
+      "readyForFullBodyPoseSet": false,
+      "nextAction": "Keep the casual assembly separate from the beach and snorkeler merchandise variants.",
+      "runtimeChange": false
+    },
+    {
+      "id": "zooble__ep08_assembly",
+      "kind": "assembly",
+      "previousProposedId": "zoobleep8",
+      "previousStatus": "distinct-assembly-incomplete-reference",
+      "auditStatus": "new-partial-primary-reference",
+      "newObservation": "The 39- and 40-second trailer samples corroborate the yellow Y, striped spring antenna, purple torso ring and asymmetric arms. The dark 39-second view includes a yellow hand.",
+      "unresolved": "These views do not establish the complete lower silhouette or the small hand and joint construction.",
+      "newReferenceIds": [
+        "ep8-t39",
+        "ep8-t40"
+      ],
+      "priorEvidence": {
+        "file": "../cast-continuation-20261120/presidential-zooble-primary-review.json",
+        "candidateId": "zooble__ep08_assembly",
+        "officialEpisodeUrls": [
+          "https://www.youtube.com/watch?v=DMNlzf8PiEM&t=370s",
+          "https://www.youtube.com/watch?v=DMNlzf8PiEM&t=380s",
+          "https://www.youtube.com/watch?v=DMNlzf8PiEM&t=390s",
+          "https://www.youtube.com/watch?v=DMNlzf8PiEM&t=400s",
+          "https://www.youtube.com/watch?v=DMNlzf8PiEM&t=440s"
+        ]
+      },
+      "readyForFullBodyPoseSet": false,
+      "nextAction": "Get an unobstructed well-lit full-body source before authoring the assembly.",
+      "runtimeChange": false
+    },
+    {
+      "id": "jax__australian_extremist",
+      "kind": "costume",
+      "previousProposedId": "australianjax",
+      "previousStatus": "distinct-outfit-incomplete-reference",
+      "auditStatus": "no-new-primary-footwear-reference",
+      "newObservation": "The named Jax Pendantz lineup does not add a verified Australian full-body reference. The previous episode-five outfit observations stand.",
+      "unresolved": "Lower trousers, feet and footwear remain undocumented.",
+      "newReferenceIds": [
+        "official-jax-pendantz"
+      ],
+      "priorEvidence": {
+        "file": "../cast-continuation-20261120/presidential-zooble-primary-review.json",
+        "candidateId": "jax__australian_extremist",
+        "officialEpisodeUrls": [
+          "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=310s",
+          "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=360s"
+        ]
+      },
+      "readyForFullBodyPoseSet": false,
+      "nextAction": "Find a full-body primary view. Do not substitute the Hunter Jax outfit or choose boots by convention.",
+      "runtimeChange": false
+    },
+    {
+      "id": "gangle__noir_bar",
+      "kind": "costume",
+      "previousProposedId": "noirgangle",
+      "previousStatus": "distinct-upper-outfit-incomplete-reference",
+      "auditStatus": "no-new-primary-lower-body-reference",
+      "newObservation": "No additional public primary reference obtained in this pass establishes the lower outfit. The previous episode-five bar observations stand.",
+      "unresolved": "The bar hides the lower body in the previously documented detailed shots.",
+      "newReferenceIds": [],
+      "priorEvidence": {
+        "file": "../cast-continuation-20261120/presidential-zooble-primary-review.json",
+        "candidateId": "gangle__noir_bar",
+        "officialEpisodeUrls": [
+          "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=690s",
+          "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=810s",
+          "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=820s",
+          "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=950s",
+          "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=960s",
+          "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=1000s"
+        ]
+      },
+      "readyForFullBodyPoseSet": false,
+      "nextAction": "Find a clear full-body official image. Do not infer a skirt, trousers or ordinary ribbons under the bar.",
+      "runtimeChange": false
+    },
+    {
+      "id": "zooble__artbook_cocktail",
+      "kind": "official-merchandise-assembly-candidate",
+      "previousProposedId": null,
+      "previousStatus": null,
+      "auditStatus": "new-primary-candidate-connectivity-unresolved",
+      "sourceIdentity": "Zooble in the public artbook sticker-sheet preview; working descriptive label, not an official costume name.",
+      "newObservation": "A full silhouette is visible with a pink triangular head, yellow T and cyan lightning antennas, orange star on the yellow spotted torso, extra arms or appendages handling a shaker, a glass and a tray, a long purple leg with a cyan joint, and an angular red leg ending in a violet foot.",
+      "wholeSilhouetteVisible": true,
+      "anatomicalConnectivityEstablished": false,
+      "unresolved": "Some upper attachments disappear behind the head. The exact limb inventory and connections must be reconciled before independent action poses. Its extra limbs and different wing/arm treatment do not establish identity with the episode-six base assembly.",
+      "newReferenceIds": [
+        "artbook-zooble-cocktail"
+      ],
+      "readyForFullBodyPoseSet": false,
+      "nextAction": "Obtain another official angle or an explicit model sheet. Preserve the merchandise attribution and avoid treating the holographic foil reflections as skin markings.",
+      "runtimeChange": false
+    }
+  ]
+}

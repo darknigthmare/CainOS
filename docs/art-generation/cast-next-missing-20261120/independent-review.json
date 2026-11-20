@@ -1,0 +1,228 @@
+{
+  "schema": "encore-independent-canvas-visual-review/v1",
+  "createdAt": "2026-11-20T13:51:54.423113+00:00",
+  "reviewer": "ribbit_references",
+  "status": "accepted_with_documented_limits",
+  "independenceScope": "Revue de l’intégration Canvas réalisée sans produire ni modifier ces galeries, le runtime ou leurs rapports. Le relecteur a auparavant produit les sprites Watermelon Gangle et Aqua Blaster Pomni ; il ne revendique donc pas une indépendance de création artistique pour ces deux familles.",
+  "method": "Inspection visuelle individuelle des quatre planches d’actions et des quatre planches de portraits avec view_image, puis lecture des quatre rapports Canvas existants. Aucun nouveau rendu, test navigateur, changement de pixels ou changement runtime pendant cette revue.",
+  "directVisualCoverage": {
+    "actionSheets": 4,
+    "staticActions": 36,
+    "portraitSheets": 4,
+    "portraits": 4
+  },
+  "existingCanvasReportsAggregated": {
+    "actions": 36,
+    "stances": 4,
+    "portraits": 4,
+    "drawChecks": 80,
+    "missing": 0
+  },
+  "observations": {
+    "watermelongangle": [
+      "Les neuf actions montrent le masque blanc à larmes cyan, le chapeau jaune, le nœud et la tenue pervenche ; batte et tranche restent visibles.",
+      "Chapeau, batte levée du coup lourd et extrémités de rubans restent dans chaque cellule ; crouch, jump et defeat ont des silhouettes distinctes.",
+      "Le portrait entier garde les deux accessoires, sans découpe de la marge basse native ni halo sur le damier."
+    ],
+    "aquablasterpomni": [
+      "Les neuf actions conservent bonnet rouge/bleu à grelots jaunes, vêtements bleus/blancs, bras sans brassards et pistolet multicolore.",
+      "Deux jambes et deux bras restent lisibles ; le pistolet levé de victory, les chaussures et les deux grelots tiennent dans les cadres.",
+      "Le portrait garde le pistolet et les chaussures complets ; à cette échelle les yeux en moulinets sont petits, sans perte visible de l’identité."
+    ],
+    "ptocaine": [
+      "Lunettes menthe à verres jaunes, dentier rouge/blanc, haut-de-forme et habit rouge restent stables dans les neuf actions.",
+      "Main étendue de heavy, pieds de la fente et haut-de-forme restent entiers ; le corps accroupi et la défaite agenouillée restent lisibles.",
+      "Le portrait montre les lunettes et la silhouette complète sans rectangle opaque ni halo autour du chapeau."
+    ],
+    "freakjax": [
+      "Tête jaune sans oreilles dressées, yeux carrés, cinq marques brunes, salopette corail et membres violets sont cohérents entre les neuf actions.",
+      "Le volume violet arrière reste attaché visuellement à la silhouette ; coup de pied lourd et saut n’introduisent pas de membre supplémentaire visible.",
+      "Le portrait entier conserve poche, revers clairs et pieds violets ; les deux grandes formes noires des yeux restent nettes à cette taille."
+    ]
+  },
+  "crossFamilyObservations": [
+    "Les silhouettes sont entièrement visibles dans les cellules inspectées ; aucune coupure du haut des coiffes, des extrémités ou des accessoires n’a été relevée.",
+    "Le damier apparaît autour des contours sans halo lumineux ni plaque opaque visible. Les ombres elliptiques et arcs d’action de la composition ne sont pas des halos du PNG natif.",
+    "Aucune déformation disproportionnée visible du personnage à l’intérieur d’une pose ; les différences de hauteur entre garde basse, saut et poses debout restent compréhensibles."
+  ],
+  "concreteDefects": [],
+  "limitations": [
+    "Les quatre gardes et les 80 contrôles des deux orientations sont documentés dans les rapports Canvas ; les planches inspectées montrent les neuf actions vers la droite et les portraits, pas une revue visuelle séparée des deux sens.",
+    "Les galeries utilisent les modules de production Canvas sous Node/Skia sur damier. Elles ne prouvent pas un parcours navigateur, les entrées, l’audio, le service worker ou un essai sur appareil physique.",
+    "Cette revue ne valide pas le contact au sol, les occlusions ou les ombres dans chacune des arènes complètes.",
+    "Les neuf poses d’action sont des images statiques indépendantes, pas des cycles dessinés image par image.",
+    "Cette revue vérifie la cohérence avec les définitions et références déjà qualifiées ; elle ne certifie pas une fidélité canonique 1:1, les parties cachées des produits dérivés ou les proportions des épisodes."
+  ],
+  "visuallyInspectedFiles": [
+    {
+      "appearanceId": "watermelongangle",
+      "kind": "action_sheet",
+      "file": "docs/art-generation/cast-next-missing-20261120/review/watermelongangle/actions-watermelongangle.jpg",
+      "sha256": "d791ae67a3ba55be32bcdf40cf15b43338d21baf2259e642de76e07d7f4cb0d1",
+      "bytes": 129016,
+      "dimensions": [
+        1080,
+        1110
+      ],
+      "visuallyInspected": true
+    },
+    {
+      "appearanceId": "watermelongangle",
+      "kind": "portrait_sheet",
+      "file": "docs/art-generation/cast-next-missing-20261120/review/watermelongangle/archive-portraits-01.jpg",
+      "sha256": "f6504eaddae6bcd3ab8ea256d760965fd7af7ec2551dfd1f0e2c7583e45f544b",
+      "bytes": 18545,
+      "dimensions": [
+        1440,
+        284
+      ],
+      "visuallyInspected": true
+    },
+    {
+      "appearanceId": "aquablasterpomni",
+      "kind": "action_sheet",
+      "file": "docs/art-generation/cast-next-missing-20261120/review/aquablasterpomni/actions-aquablasterpomni.jpg",
+      "sha256": "f31ecb44600bd61077f36cff71abad31cd0b0732214a94ab400d325367486e5a",
+      "bytes": 123091,
+      "dimensions": [
+        1080,
+        1110
+      ],
+      "visuallyInspected": true
+    },
+    {
+      "appearanceId": "aquablasterpomni",
+      "kind": "portrait_sheet",
+      "file": "docs/art-generation/cast-next-missing-20261120/review/aquablasterpomni/archive-portraits-01.jpg",
+      "sha256": "18d6a7e024befeaeb78322f2194839118f35e776297852ac8310ad4852a00af5",
+      "bytes": 18773,
+      "dimensions": [
+        1440,
+        284
+      ],
+      "visuallyInspected": true
+    },
+    {
+      "appearanceId": "ptocaine",
+      "kind": "action_sheet",
+      "file": "docs/art-generation/cast-next-missing-20261120/review/ptocaine/actions-ptocaine.jpg",
+      "sha256": "2f0fbe7a60d5f220ae787fc5f932dcf3623b1cc30da4c6505b48b3ecef48a3dc",
+      "bytes": 143083,
+      "dimensions": [
+        1080,
+        1110
+      ],
+      "visuallyInspected": true
+    },
+    {
+      "appearanceId": "ptocaine",
+      "kind": "portrait_sheet",
+      "file": "docs/art-generation/cast-next-missing-20261120/review/ptocaine/archive-portraits-01.jpg",
+      "sha256": "5cdebd66bf80d436bbc125cd06cafc553f88745d151c0dced514af9ac4237eb7",
+      "bytes": 18054,
+      "dimensions": [
+        1440,
+        284
+      ],
+      "visuallyInspected": true
+    },
+    {
+      "appearanceId": "freakjax",
+      "kind": "action_sheet",
+      "file": "docs/art-generation/cast-next-missing-20261120/review/freakjax/actions-freakjax.jpg",
+      "sha256": "a289115222484d0681e5f03c794900f4be70d977e8ac6978f9243df69ab33de9",
+      "bytes": 162067,
+      "dimensions": [
+        1080,
+        1110
+      ],
+      "visuallyInspected": true
+    },
+    {
+      "appearanceId": "freakjax",
+      "kind": "portrait_sheet",
+      "file": "docs/art-generation/cast-next-missing-20261120/review/freakjax/archive-portraits-01.jpg",
+      "sha256": "d03e922411f55a653a42547963f9ad5660284d40dc8c0fd837fde2ed5ca81c95",
+      "bytes": 19639,
+      "dimensions": [
+        1440,
+        284
+      ],
+      "visuallyInspected": true
+    }
+  ],
+  "supportingReports": [
+    {
+      "appearanceId": "watermelongangle",
+      "file": "docs/art-generation/cast-next-missing-20261120/review/watermelongangle/character-canvas-review.json",
+      "sha256": "187d7de81be134bbbbf687d0cd6b269f81fd81e695f1ed299c498f6633a7c2ec",
+      "counts": {
+        "appearances": 1,
+        "expectedActions": 9,
+        "actions": 9,
+        "stances": 1,
+        "drawChecks": 20,
+        "archiveEntries": 0,
+        "portraits": 1,
+        "expectedPortraits": 1,
+        "missing": 0
+      },
+      "complete": true,
+      "browserTestStatus": "not_executed"
+    },
+    {
+      "appearanceId": "aquablasterpomni",
+      "file": "docs/art-generation/cast-next-missing-20261120/review/aquablasterpomni/character-canvas-review.json",
+      "sha256": "36a30fe9fae121969f6f525020932a62c3376ff4adcd7faba32edb1c7ef4273a",
+      "counts": {
+        "appearances": 1,
+        "expectedActions": 9,
+        "actions": 9,
+        "stances": 1,
+        "drawChecks": 20,
+        "archiveEntries": 0,
+        "portraits": 1,
+        "expectedPortraits": 1,
+        "missing": 0
+      },
+      "complete": true,
+      "browserTestStatus": "not_executed"
+    },
+    {
+      "appearanceId": "ptocaine",
+      "file": "docs/art-generation/cast-next-missing-20261120/review/ptocaine/character-canvas-review.json",
+      "sha256": "b6b83b3a2599024b3a2e731abfd392ed5f50920602272f30e1db7a7563cc3d44",
+      "counts": {
+        "appearances": 1,
+        "expectedActions": 9,
+        "actions": 9,
+        "stances": 1,
+        "drawChecks": 20,
+        "archiveEntries": 0,
+        "portraits": 1,
+        "expectedPortraits": 1,
+        "missing": 0
+      },
+      "complete": true,
+      "browserTestStatus": "not_executed"
+    },
+    {
+      "appearanceId": "freakjax",
+      "file": "docs/art-generation/cast-next-missing-20261120/review/freakjax/character-canvas-review.json",
+      "sha256": "2e17ba3c75d9475e7a9cb770b8d11b10b2cd2311f899f9f758b2ee3e36214df1",
+      "counts": {
+        "appearances": 1,
+        "expectedActions": 9,
+        "actions": 9,
+        "stances": 1,
+        "drawChecks": 20,
+        "archiveEntries": 0,
+        "portraits": 1,
+        "expectedPortraits": 1,
+        "missing": 0
+      },
+      "complete": true,
+      "browserTestStatus": "not_executed"
+    }
+  ]
+}

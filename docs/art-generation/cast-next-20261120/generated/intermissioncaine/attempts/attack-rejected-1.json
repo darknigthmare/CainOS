@@ -1,0 +1,66 @@
+{
+  "schema": "encore-native-art-next/v1",
+  "appearanceId": "intermissioncaine",
+  "slot": "attack",
+  "file": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/attempts/attack-rejected-1.png",
+  "targetFile": "assets/encore/poses/intermissioncaine/attack.png",
+  "createdAt": "2026-11-20T09:37:09.546678+00:00",
+  "status": "rejected_native",
+  "method": "image_gen.imagegen",
+  "nativeSourceFile": "/workspace/scratch/5f5114b49696/generated_images/exec-7095da69-921d-4ffd-a9de-b8b580ebb39f.png",
+  "sourceGenerationId": "exec-7095da69-921d-4ffd-a9de-b8b580ebb39f",
+  "sha256": "24ae3f554707a2ec26b2c6a657415312477da060beb02a0b5cd2067abedb170b",
+  "bytes": 1179625,
+  "dimensions": [
+    1312,
+    1199
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "alpha12Bounds": [
+    22,
+    67,
+    1292,
+    1157
+  ],
+  "alphaThreshold": "alpha >= 12",
+  "nativeCopyVerified": true,
+  "nativeFacing": "right",
+  "prompt": "Create ONE individual complete-character 2D fighting-game sprite, polished cel shading with crisp dark contours, coherent with Digital Circus Encore. Keep all hat/bow tips, every hand, ornament, cane and the entire base/feet inside CLEAR TRANSPARENT MARGINS on ALL FOUR SIDES. True transparent RGBA. No scenery, floor, cast shadow, aura, external glow, particles, text, logo, watermark, inset or duplicate. One original static game adaptation; do not copy the product scene or its squat toy proportions. Reference 1 is the APPROVED SELECTION SEED: strictly preserve its identity, proportions, colors, exact anatomy and polished 2D style. Reference 2 supplies the official product details only. Make a genuinely different pose, never a mirrored or cropped copy of selection. DESIGN LOCK: ONE entire Intermission Caine: a giant upright open orange-coral denture mouth with clean white teeth and orange interior. The mouth is the entire body: NO human torso, jacket, neck, legs or feet. Exactly TWO eyes: one ROUND WHITE eye with BLUE iris high on viewer-right, and one WHITE STAR-SHAPED eye with GREEN iris lower/front-left inside the mouth. A small BLACK TOP HAT with RED band rests on the star-shaped eye. Exactly FOUR separate WHITE GLOVE HANDS around the mouth, two on each side, without human arms or sleeves; one upper-left hand holds a BLACK CANE with a GOLD SPHERICAL KNOB. Exactly three small GOLD STAR ornaments stay close behind the denture silhouette as in the product. Preserve this one coherent magical character and its unusual anatomy. Never replace it by a normal ringmaster body, six-armed Caine, Bubble cluster, or another character. POSE: LIGHT ATTACK toward screen RIGHT: entire mouth leans forward, one free glove extends straight forward in a clear short punch, other two free gloves stay close as guard, cane hand draws the cane backward. Four hands total and every cane tip visible; no impact effect.",
+  "transparent_background": true,
+  "referencePaths": [
+    "docs/art-generation/cast-next-20261120/generated/intermissioncaine/selection.png",
+    "docs/art-generation/cast-next-20261120/research/states/official-intermission-caine.png"
+  ],
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/selection.png",
+      "sha256": "cdfc9b5405f7059498542b38a39bbd1d6ff83efe5ad35f44f09ba3be84bc6cef",
+      "bytes": 1315027
+    },
+    {
+      "position": 2,
+      "file": "docs/art-generation/cast-next-20261120/research/states/official-intermission-caine.png",
+      "sha256": "441a3e2df39c7ba7a95167d7ba902858b960c7f9e38f4b9ef0efa69c5bef7be0",
+      "bytes": 3889495,
+      "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/81.png?v=1762387272",
+      "pageUrl": "https://glitchproductions.store/products/digital-circus-animiniz-costume-adventure-series"
+    }
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/digital-circus-animiniz-costume-adventure-series",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/81.png?v=1762387272"
+  ],
+  "sourceKind": "Produit dérivé officiel",
+  "episodeFidelityClaim": false,
+  "includedInRuntime": false,
+  "visualReview": {
+    "reviewer": "generate_jax_ragatha",
+    "status": "rejected",
+    "reason": "Only three hands are visible: cane hand at upper-left, one lower-left guard fist and one punching fist at right. Required fourth lower-right guard hand is missing."
+  }
+}

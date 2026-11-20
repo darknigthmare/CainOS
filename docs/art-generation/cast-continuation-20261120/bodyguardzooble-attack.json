@@ -1,0 +1,37 @@
+{
+  "id": "bodyguardzooble-attack",
+  "appearanceId": "bodyguardzooble",
+  "slot": "attack",
+  "file": "assets/encore/poses/bodyguardzooble/attack.png",
+  "sourceGenerationId": "exec-1e5a9e42-74a4-484f-8241-304adff1f029",
+  "method": "image_gen.imagegen",
+  "sourceURLs": [
+    "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=260s",
+    "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg"
+  ],
+  "referencePaths": [
+    "/workspace/scratch/5f5114b49696/generated_images/exec-aa0e963f-53bb-4d87-87a9-9a7c45732956.png"
+  ],
+  "prompt": "Use case: identity-preserve. ONE individual full-body attack sprite for Digital Circus Encore. Reference image is the approved whole character. Change ONLY pose: One controlled short jab with the GREEN PINCER ARM on the RIGHT SIDE of the image, extending that existing spring/striped arm toward screen right. Yellow LEFT arm stays bent near left side of chest. Feet remain planted, peg on left and purple boot on right. No projectile, enemy or impact effect. Mandatory identity invariants: Keep the pink triangular mouthless head and opaque black sunglasses, cyan lightning antenna on screen left and black-white curled spring antenna on screen right, yellow spotted torso with hollow violet inverted triangle, pink feather wing screen left. Screen-left arm: slender yellow segmented rod, yellow round elbow, yellow hand. Screen-right arm: green spring, pink round elbow, pink-white striped straight forearm, one green C-claw. Screen-left leg: cyan zigzag, red-yellow pointed peg. Screen-right leg: long purple bendy rod, purple rounded boot. Preserve these sides and exactly two arms/two legs, no added pieces, no swaps, same 2D line art. Absolute anatomical attachment rule: yellow arm attaches to LEFT edge of torso in the image; green-spring/striped/pincer arm attaches to RIGHT edge. Do not swap their shoulder attachment even during movement. Exact same proportions, crisp black outlines and clean 2D cel shading. True transparent RGBA outside opaque character. One single complete figure with generous clear margins around bow/antennas, head, hands and feet; no cut-off shapes. No background, floor, shadow, glow, haze, text, symbols, motion effects, extra limbs, clothes or props, alternate view or sprite sheet.",
+  "sha256": "33b27cbf225253b43d07c0d44df41c31f9b4f99fbd15ccc9495f399d4b67513d",
+  "sourceBytesIdentical": true,
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "bboxAlpha12": [
+    116,
+    12,
+    991,
+    1520
+  ],
+  "bytes": 1488888,
+  "visualReview": "Individually viewed: one complete character, distinctive appearance and anatomy retained; native transparency and safe alpha bounds verified.",
+  "productionStatus": "complete",
+  "includedInRuntime": true
+}

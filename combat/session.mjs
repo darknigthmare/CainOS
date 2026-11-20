@@ -1,6 +1,6 @@
 /** Shared, versioned local profile and replay format for the OS and standalone. */
 import { cleanBindings, DEFAULT_BINDINGS } from './bindings.mjs';
-import { FIGHTERS, STAGES, VARIANTS } from './data.mjs';
+import { FIGHTERS, STAGES, COSTUMES } from './data.mjs';
 import { validateProgram } from './progression.mjs';
 export const SAVE_KEY = 'cainos.circus-combat.profile.v1';
 export const SAVE_BACKUP_KEY = `${SAVE_KEY}.backup`;
@@ -20,7 +20,7 @@ export function replayRulesVersion(version) {
 export const SLOT_ORDER = ['light', 'heavy', 'low', 'throw', 'special', 'specialDown', 'specialForward', 'specialBack', 'super', 'utility'];
 const FLAGS = ['left', 'right', 'down', 'guard', 'jump', 'dash', 'tech'];
 export const MAX_PACKED_INPUT = (SLOT_ORDER.length << FLAGS.length) | ((1 << FLAGS.length) - 1);
-export const DEFAULT_SETTINGS = Object.freeze({ layout: 'azerty', difficulty: 'normal', seconds: 90, rounds: 2, volume: .25, sound: true, music: false, musicVolume: .2, ambience: true, ambienceVolume: .35, finishers: true, reducedMotion: false, enhancedReadability: false, hitboxes: false, touch: 'auto', bindings: DEFAULT_BINDINGS });
+export const DEFAULT_SETTINGS = Object.freeze({ layout: 'azerty', difficulty: 'normal', seconds: 90, rounds: 2, volume: .25, sound: true, music: false, musicVolume: .2, ambience: true, ambienceVolume: .35, finishers: true, friendships: false, reducedMotion: false, enhancedReadability: false, hitboxes: false, touch: 'auto', bindings: DEFAULT_BINDINGS });
 const integer = (v, lo, hi, fallback = lo) => Number.isInteger(v) && v >= lo && v <= hi ? v : fallback;
 const choice = (v, allowed, fallback) => allowed.includes(v) ? v : fallback;
 export function cleanSettings(value = {}) {
@@ -31,7 +31,7 @@ export function cleanSettings(value = {}) {
     seconds: choice(s.seconds, [60, 90, 120], 90), rounds: choice(s.rounds, [1, 2, 3], 2),
     volume: typeof s.volume === 'number' && Number.isFinite(s.volume) ? Math.max(0, Math.min(1, s.volume)) : .25,
     sound: s.sound !== false, reducedMotion: s.reducedMotion === true, enhancedReadability: s.enhancedReadability === true, hitboxes: s.hitboxes === true,
-    music: s.music === true, ambience: s.ambience !== false, finishers: s.finishers !== false,
+    music: s.music === true, ambience: s.ambience !== false, finishers: s.finishers !== false, friendships: s.friendships === true,
     ambienceVolume: typeof s.ambienceVolume === 'number' && Number.isFinite(s.ambienceVolume) ? Math.max(0, Math.min(1, s.ambienceVolume)) : .35,
     musicVolume: typeof s.musicVolume === 'number' && Number.isFinite(s.musicVolume) ? Math.max(0, Math.min(1, s.musicVolume)) : .2,
     touch: choice(s.touch, ['auto', 'on', 'off'], 'auto'), bindings: cleanBindings(s.bindings)
@@ -56,7 +56,7 @@ export function validateProfile(value, { strictProgram = true } = {}) {
   profile.stories = [...new Set((Array.isArray(value.stories) ? value.stories : []).filter(id => FIGHTERS.some(f => f.id === id)))];
   if (value.program != null) {
     try {
-      profile.program = validateProgram(value.program, FIGHTERS, STAGES, VARIANTS);
+      profile.program = validateProgram(value.program, FIGHTERS, STAGES, COSTUMES);
       if (profile.program.status !== 'active') profile.program = null;
     } catch (error) {
       if (strictProgram !== false) throw error;
@@ -139,7 +139,7 @@ export function validateReplay(value, fighterIds, stageIds) {
   if (c.initialHealth !== undefined && (!Array.isArray(c.initialHealth) || c.initialHealth.length !== 2 || !c.initialHealth.every(v => Number.isInteger(v) && v > 0 && v <= 10000))) throw new Error('La santé initiale du replay est invalide.');
   const initialHealth = c.initialHealth ? [...c.initialHealth] : [10000, 10000];
   const variants = c.variants === undefined ? ['', ''] : c.variants;
-  if (!Array.isArray(variants) || variants.length !== 2 || !variants.every((id, i) => id === '' || VARIANTS.some(v => v.id === id && v.fighterId === c.fighters[i]))) throw new Error('Une apparence du replay ne correspond pas à son combattant.');
+  if (!Array.isArray(variants) || variants.length !== 2 || !variants.every((id, i) => id === '' || COSTUMES.some(v => v.id === id && v.fighterId === c.fighters[i]))) throw new Error('Une apparence du replay ne correspond pas à son combattant.');
   return { format: value.format, version: value.version, config: { fighters: [...c.fighters], variants: [...variants], stage: c.stage, seed: c.seed, roundsToWin: c.roundsToWin, roundTime: c.roundTime, difficulty: c.difficulty, cpu: [...c.cpu], initialHealth }, runs: value.runs.map(r => [...r]), frames: total };
 }
 export function* replayInputs(replay) {
@@ -153,8 +153,8 @@ export const MODES = [
   { id: 'survival', name: 'Encore. Encore.', eyebrow: '05 / SURVIE', icon: '∞', description: 'Dix adversaires. Ta santé se transmet entre les duels.', label: '10 vagues' },
   { id: 'training', name: 'Les répétitions', eyebrow: '06 / ENTRAÎNEMENT', icon: '⌘', description: 'Étudie les techniques, la garde et les ouvertures.', label: 'Laboratoire' },
   { id: 'challenge', name: 'Les défis de Caine', eyebrow: '07 / OBJECTIFS', icon: '◇', description: 'Six exercices de précision et de maîtrise du combat.', label: '6 défis' },
-  { id: 'story', name: 'Derrière le rideau', eyebrow: '08 / HISTOIRES', icon: '❧', description: 'Quatorze histoires originales. Quatre rencontres pour chaque artiste.', label: '14 parcours' },
-  { id: 'tournament', name: 'La coupe du cirque', eyebrow: '09 / TOURNOI', icon: '♜', description: 'Huit participants, un tableau et trois victoires pour soulever la coupe.', label: 'Élimination directe' }
+  { id: 'story', name: 'Derrière le rideau', eyebrow: '08 / HISTOIRES', icon: '❧', description: `${FIGHTERS.length} histoires originales. Quatre rencontres pour chaque artiste.`, label: `${FIGHTERS.length} parcours` },
+  { id: 'tournament', name: 'La coupe du cirque', eyebrow: '09 / TOURNOI', icon: '♜', description: 'Huit participants, ton rival dans l’autre moitié et trois victoires pour soulever la coupe.', label: 'Élimination directe' }
 ];
 export const CHALLENGES = [
   { id: 'first-impact', name: 'Entrée en scène', text: 'Infliger 2 000 dégâts en 60 secondes.', goal: 2000, metric: 'damage', dummy: 'idle' },

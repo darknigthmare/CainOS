@@ -1,0 +1,38 @@
+{
+  "id": "bodyguardzooble-victory",
+  "appearanceId": "bodyguardzooble",
+  "slot": "victory",
+  "file": "assets/encore/poses/bodyguardzooble/victory.png",
+  "sourceGenerationId": "exec-bcde9c80-74ca-4dbb-8bd7-814dee5407c9",
+  "method": "image_gen.imagegen",
+  "sourceURLs": [
+    "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=260s",
+    "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg"
+  ],
+  "referencePaths": [
+    "/workspace/scratch/5f5114b49696/generated_images/exec-7ac9ed53-b0c5-4183-a311-74775f42ea5a.png",
+    "/workspace/scratch/5f5114b49696/generated_images/exec-aa0e963f-53bb-4d87-87a9-9a7c45732956.png"
+  ],
+  "prompt": "Use case: precise-object-edit. One full-body victory sprite correction. Image 1 is the target and image 2 is the approved anatomy. Image 1 has the arms on the wrong sides. Remove both misplaced arms and restore their correct attachments from image 2. The YELLOW articulated arm must attach to the LEFT edge of the torso as seen by the viewer; its raised yellow hand makes the V sign on the FAR LEFT of the head, below the cyan lightning antenna. The GREEN spring arm must attach to the RIGHT edge of the torso; pink elbow, ONE straight pink-white striped forearm, green C-claw resting near RIGHT hip. The green claw must appear on the right, never the left. Keep the V gesture on the LEFT, never the right. Do not change head tilt, glasses, antennas, eyes hidden, pink wing, chest triangle, body, legs, feet, pose, colors or 2D art. Preserve the cyan-zigzag red-yellow peg leg on the left and purple leg/boot on the right. True transparent RGBA, opaque character, all tips framed with margins, no shadow, background, haze, glow, text or extra limbs. Correct only the anatomical shoulder sides.",
+  "sha256": "0018629750fcb14dfd23cea2dad1ba63aec0adc74981076296179402918cfe36",
+  "sourceBytesIdentical": true,
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "bboxAlpha12": [
+    64,
+    10,
+    875,
+    1526
+  ],
+  "bytes": 1464892,
+  "visualReview": "Targeted arm-side correction visually inspected: yellow articulated arm attaches on image left and green spring/striped/pincer arm on image right. Full pose and unlike legs preserved.",
+  "productionStatus": "complete",
+  "includedInRuntime": true
+}

@@ -1,3 +1,16 @@
+import { FIGHTERS, STAGES } from './data.mjs';
+import { EXPANSION_DEFS, EXPANSION_RIVALS } from './roster-expansion.mjs';
+
+// These forty routes were authored against the published 22-arena catalog.
+// Adding a selectable arena must not rewrite chapters, panels or saved routes.
+const EXPANSION_STAGE_IDS = Object.freeze([
+  'bigtop', 'candy', 'manor', 'spudsy', 'cellar', 'void', 'lake', 'training',
+  'gloink', 'kingdom', 'grounds', 'backstage', 'coppernine', 'silicacity',
+  'portaurora', 'gaslightwharf', 'parkplanet', 'gameoverse', 'littledaisy',
+  'showgrounds', 'simpleflipisland', 'falseexit',
+]);
+const EXPANSION_STAGES = Object.freeze(EXPANSION_STAGE_IDS.map(id => STAGES.find(stage => stage.id === id)));
+
 /**
  * Original Encore fan-fiction. These routes are game scenarios, not episodes,
  * recovered memories or claims about canonical events in The Amazing Digital Circus.
@@ -261,6 +274,67 @@ for (const [fighterId, value] of Object.entries(presentations)) {
   Object.assign(stories[fighterId], value);
   for (const kind of ['prologue', 'epilogue']) value[kind].forEach((item, index) => { item.id = `${fighterId}-${kind}-${index + 1}`; });
 }
+
+// PNJ promotion routes: generated from one reviewed record per character so the
+// six tableaux, four chapters and ending stay unique and lore-scoped.
+const expansionPanel = (fighterId, kind, index, stageId, composition, cast, summary, first, second) => ({
+  id: `${fighterId}-${kind}-${index + 1}`, kind, title: `${summary.slice(0, 34)}… ${kind === 'prologue' ? 'P' : 'E'}${index + 1}`, stageId, composition,
+  cast: [...cast], summary,
+  dialogue: [{ speakerId: 'narration', speaker: 'Narration', text: first }, { speakerId: 'narration', speaker: 'Narration', text: second }]
+});
+function expansionRoute(def, index) {
+  const rivalName = FIGHTERS.find(fighter => fighter.id === def.rivalId)?.name || def.rivalId;
+  const pool = FIGHTERS.map(fighter => fighter.id).filter(id => id !== def.id && id !== def.rivalId);
+  const used = new Set([def.id, def.rivalId]);
+  const pick = start => {
+    for (let step = 0; step < pool.length; step++) {
+      const id = pool[(start + step) % pool.length];
+      if (!used.has(id)) { used.add(id); return id; }
+    }
+    return pool[0];
+  };
+  const opponentIds = [pick(index), pick(index * 3 + 5), def.rivalId, pick(index * 7 + 11)];
+  const chapters = opponentIds.map((opponentId, sceneIndex) => {
+    const opponentName = FIGHTERS.find(fighter => fighter.id === opponentId)?.name || opponentId;
+    const stage = EXPANSION_STAGES[(index * 2 + sceneIndex) % EXPANSION_STAGES.length];
+    return {
+      title: `${def.name} · ${['Premier', 'Deuxième', 'Troisième', 'Dernier'][sceneIndex]} passage`,
+      opponentId, stageId: stage.id,
+      summary: `${def.name} traverse ${stage.name} et y rencontre ${opponentName}. Cette scène originale d’Encore adapte son rôle de ${def.role.toLowerCase()}, sans affirmer un événement canonique.`,
+      dialogue: [
+        { speakerId: 'narration', speaker: 'Narration', text: `${def.name} avance dans ${stage.name} ; ${opponentName} garde le passage du ${sceneIndex + 1}e tableau.` },
+        { speakerId: 'narration', speaker: 'Narration', text: `Le parcours continue sans réplique attribuée : ${def.name} choisit de rester jusqu’à la fin de la scène.` }
+      ]
+    };
+  });
+  const intro = `${def.name} reçoit une invitation de Caine pour un parcours de quatre scènes. ${def.title} : cette route originale d’Encore suit son rôle de ${def.role.toLowerCase()} et place ${rivalName} sur son chemin, sans promettre de sortie du cirque.`;
+  const ending = `${def.name} termine son parcours de ${def.title.toLowerCase()}. La dernière scène se referme sur ${rivalName} et sur un choix modeste : rester, ranger le décor et revenir pour un autre numéro. Cette conclusion est une création d’Encore, sans événement canonique ajouté.`;
+  const compositions = ['solo', 'focus-left', 'focus-right', 'ensemble', 'wide', 'duet'];
+  const prologue = Array.from({ length: 3 }, (_, panelIndex) => {
+    const stage = EXPANSION_STAGES[(index + panelIndex) % EXPANSION_STAGES.length];
+    const cast = panelIndex === 0 ? [def.id] : [def.id, def.rivalId];
+    return expansionPanel(def.id, 'prologue', panelIndex, stage.id, compositions[panelIndex], cast,
+      `${def.name} découvre le programme de ${stage.name} et prépare son entrée. ${def.title} sert de repère à ce prologue original d’Encore.`,
+      `${def.name} lit la première ligne du programme dans ${stage.name}.`,
+      `${rivalName} est annoncé plus loin ; la route peut commencer.`);
+  });
+  const epilogue = Array.from({ length: 3 }, (_, panelIndex) => {
+    const stage = EXPANSION_STAGES[(index + 3 + panelIndex) % EXPANSION_STAGES.length];
+    const other = opponentIds[panelIndex % 3];
+    const cast = panelIndex === 0 ? [def.id, def.rivalId] : panelIndex === 1 ? [def.id] : [def.id, def.rivalId, other];
+    return expansionPanel(def.id, 'epilogue', panelIndex, stage.id, compositions[3 + panelIndex], cast,
+      `${def.name} retrouve ${stage.name} après le parcours et laisse le décor en place. ${def.title} conclut cette fin originale sans récompense canonique.`,
+      `${def.name} vérifie une dernière fois le passage avant de quitter ${stage.name}.`,
+      `La scène se termine avec ${rivalName} et les autres artistes encore présents.`);
+  });
+  return {
+    fighterId: def.id, title: `${def.title} — ${def.name}`, intro, chapters, ending,
+    referenceIds: [{ ep1: 'pilot', ep2: 'candy', ep3: 'manor', ep4: 'spudsy' }[def.sourceId] || 'series'],
+    writingApproach: `Route générée pour l’extension PNJ d’Encore à partir d’une fiche vérifiée. ${def.name} conserve son rôle de ${def.role.toLowerCase()} ; les quatre scènes, les répliques de narration et la conclusion sont des créations originales de fan-game, sans reprise d’un épisode.`,
+    prologue, epilogue
+  };
+}
+EXPANSION_DEFS.forEach((def, index) => { stories[def.id] = expansionRoute(def, index); });
 const freeze = value => {
   if (value && typeof value === 'object') { for (const child of Object.values(value)) freeze(child); Object.freeze(value); }
   return value;
@@ -270,3 +344,29 @@ export const STORY_REFERENCES = freeze(references);
 export function getStoryRoute(fighterId) { return typeof fighterId === 'string' && Object.hasOwn(STORY_ROUTES, fighterId) ? STORY_ROUTES[fighterId] : null; }
 export function getStoryScene(fighterId, index) { return Number.isInteger(index) ? getStoryRoute(fighterId)?.chapters[index] || null : null; }
 export function getStoryEnding(fighterId) { return getStoryRoute(fighterId)?.ending || ''; }
+
+// The rival is one of the four authored chapters, never an extra opponent.
+// Encore pairs friends and counterparts; the host remains the final encounter.
+export const STORY_RIVALS = freeze({
+  pomni: 'jax', jax: 'zooble', ragatha: 'pomni', gangle: 'jax', zooble: 'jax',
+  kinger: 'pomni', caine: 'jax', bubble: 'zooble', gummigoo: 'fudge',
+  loolilalu: 'gloinkqueen', gloinkqueen: 'zooble', fudge: 'loolilalu',
+  abstractedkaufmo: 'ragatha', baronmildenhall: 'kinger',
+  ...EXPANSION_RIVALS
+});
+export function getStoryRival(fighterId) {
+  const route = getStoryRoute(fighterId), rivalId = STORY_RIVALS[fighterId];
+  if (!route || !rivalId) return null;
+  const index = route.chapters.findIndex(chapter => chapter.opponentId === rivalId);
+  if (index < 0) return null;
+  return { id: rivalId, name: names[rivalId] || FIGHTERS.find(fighter => fighter.id === rivalId)?.name || rivalId, index, scene: route.chapters[index] };
+}
+export function getStoryBrief(fighterId) {
+  const route = getStoryRoute(fighterId);
+  if (!route) return null;
+  return {
+    fighterId, title: route.title, intro: route.intro,
+    opponentCount: route.chapters.length, rival: getStoryRival(fighterId),
+    chapters: route.chapters, ending: route.ending
+  };
+}

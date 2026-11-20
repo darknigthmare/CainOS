@@ -1,0 +1,16 @@
+{
+  "schema": "encore-prop-browser-attempt/v1",
+  "startedAt": "2026-11-20T07:03:04.801640+00:00",
+  "completedAt": "2026-11-20T07:03:05.808361+00:00",
+  "command": "node tests/combat-stage-art-browser.mjs",
+  "executable": "/usr/bin/chromium",
+  "serverStarted": true,
+  "serverError": null,
+  "exitCode": 1,
+  "passedChecks": 0,
+  "status": "blocked_before_page_navigation",
+  "failure": "Chromium socket() failed: Operation not permitted (1)",
+  "log": "docs/art-generation/props-integration-20261120/browser-attempt.log",
+  "logSHA256": "c773e5b1246610f6f1a8f286dc55a22d3c32c7e4078b824adb4e8313fe50a820",
+  "testSHA256": "14a88ed23b7a3b91a855e7d2b6a49cd31e4c4b12b87ead7a607c9375764d00d1"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "abstractingragatha-stance",
+  "appearanceId": "abstractingragatha",
+  "slot": "stance",
+  "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingragatha/stance.png",
+  "sourceGenerationId": "exec-16b102e2-2c4c-4725-8a6b-afcc2261b033",
+  "method": "image_gen.imagegen",
+  "prompt": "Use case: precise-object-edit. Correct ONLY shoulder transformation placement in reference 1, the transparent combat stance of Abstracting Ragatha. Keep the pose, head, button eye, crystal eyes, smile, hair, bow, hands, dress, legs/feet and all artwork otherwise unchanged. Use the approved selection in reference 2 to match exact shoulder identity. Her anatomical RIGHT shoulder is on the VIEWER'S LEFT in this pose and MUST have the dark angular crystal growth around that shoulder/upper sleeve. The shoulder on the VIEWER'S RIGHT must be the normal rounded BLUE puff sleeve with white cuff; REMOVE the crystal shoulder/sleeve growth there. Do not remove any of the crystal HEAD, hair or transformed viewer-right FOOT. Do not mirror the figure or move any other body part. Maintain full body and all tips within clear transparent margins, crisp dark outlines and 2D cel shading. One figure on real transparent RGBA, no background, aura, floor, cast shadow, effects, text or watermark.",
+  "referencePaths": [
+    "/workspace/scratch/5f5114b49696/generated_images/exec-4dc99289-a026-4da1-bc49-fb79e4d80e55.png",
+    "/workspace/scratch/5f5114b49696/CainOS/docs/art-generation/cast-continuation-20261120/pending-assets/abstractingragatha/selection.png"
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/abstraction-animiniz",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedRagatha_01.png?v=1780353722"
+  ],
+  "sourceType": "official-merchandise",
+  "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-16b102e2-2c4c-4725-8a6b-afcc2261b033.png",
+  "sha256": "3cbb0f06c0dec05794851327f35e46d6fe7015fe51c9b92eec8672e6f466fd37",
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "bytes": 1840025,
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "bboxAlpha12": [
+    76,
+    20,
+    930,
+    1504
+  ],
+  "nativeCopyVerified": true,
+  "visualReview": "Corrected and approved: crystal growth restored to her anatomical right shoulder (viewer-left in this pose), opposing puff sleeve normal blue. Wide guard keeps blue button, hair/bow, concentric crystal eye/smile, dress patches and correct crystal leg. Entire full-body stance within canvas.",
+  "status": "generated-and-visually-reviewed",
+  "episodeFidelityClaim": false,
+  "rejectedAttempts": [
+    {
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-4dc99289-a026-4da1-bc49-fb79e4d80e55.png",
+      "reason": "Crystal shoulder switched anatomical side despite other transformation pattern being correct; targeted correction required."
+    }
+  ],
+  "targetFile": "assets/encore/stance/abstractingragatha.png",
+  "productionStatus": "partial",
+  "includedInRuntime": false,
+  "originalReferencePaths": [
+    "/workspace/scratch/5f5114b49696/generated_images/exec-4dc99289-a026-4da1-bc49-fb79e4d80e55.png",
+    "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/abstractingragatha.png"
+  ]
+}

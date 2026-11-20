@@ -1,0 +1,34 @@
+{
+  "id": "beachragatha-selection",
+  "appearanceId": "beachragatha",
+  "slot": "selection",
+  "file": "assets/encore/selection/beachragatha.png",
+  "sourceGenerationId": "exec-aafc2ae1-42b3-4247-88c6-2782fe8a51f0",
+  "method": "image_gen.imagegen",
+  "prompt": "Use case: stylized-concept. Asset type: full-body character selection sprite for Digital Circus Encore. Create ONE Ragatha in her Swimmer Ragatha costume shown by official GLITCH figurine in reference1, using the crisp detailed 2D cel shaded game illustration style and adult rag-doll proportions of reference2. Reference1 controls costume and identity details; do not copy toy/chibi proportions. Ragatha has peach-beige cloth skin, bright red thick yarn bob and bangs, one blue button with dark X on the eye at viewer-left and one white eye with black pupil at viewer-right, tiny orange-red triangle nose, soft red smile. Wear the periwinkle blue bathing top from reference, a matching periwinkle bandana tied into a bow on viewer-right side of her head with a pink flower. A bright pink inflatable HORSE swim ring circles her waist, horse head on viewer-left, purple mane and tail, white muzzle; no unicorn horn. Any lower matching swimwear stays covered by the ring exactly like reference. Two bare beige cloth legs and simple rounded cloth doll feet with no human toes and no shoes, doll arms with mitten hands. Standing relaxed in three-quarter view subtly facing right, one hand resting on the swim ring and one raised in gentle greeting. Full body with headband, float, hands and both feet wholly inside generous transparent safety margins. ONE single character including her worn float. Actual transparent RGBA background, no ground, shadow, glow, beach, water, scenery, support base, other characters, label, logo, lettering, watermark. Clean attractive detailed 2D fighting-game art, no photographic fabric toy, no 3D figurine, no sexualized posing.",
+  "referencePaths": [
+    "research/beach-series-02.png",
+    "assets/encore/stance/ragatha.webp"
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/digital-circus-animiniz-beach-vacation-series"
+  ],
+  "sha256": "a7e7b68419ee1859c92475ebe973a6f55619a9939555bc3550ca2445caf0c981",
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "bboxAlpha12": [
+    64,
+    12,
+    902,
+    1524
+  ],
+  "bytes": 1956856,
+  "visualReview": "Revue individuelle et composition avec alpha natif sur fond sombre : un personnage entier, accessoires contenus, costume et proportions cohérents entre les onze vues. Pose statique originale pour le jeu. Bouée cheval conservée, sans corne ; deux bras et deux jambes de chiffon."
+}

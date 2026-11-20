@@ -1,6 +1,11 @@
+import { CROSSOVER_STAGES } from './crossover-stages.mjs';
+import { createCrossoverCostumes } from './crossovers.mjs';
+import { COSTUME_ADDITIONS } from './costume-additions.mjs';
+export { COSTUME_ADDITIONS } from './costume-additions.mjs';
 import { SPRITE_CATALOG } from './sprite-catalog.mjs';
 import { FIDELITY_SOURCES, getFighterFidelity, getMoveFidelity, getStageFidelity } from './fidelity.mjs';
 import { COSTUME_SPRITE_OVERRIDES, getCostumeFidelity } from './costume-fidelity.mjs';
+import { EXPANSION_DEFS, buildExpansionKit, expansionFighterConfig } from './roster-expansion.mjs';
 
 /**
  * Digital Circus — Encore content.
@@ -39,6 +44,12 @@ function fighter(id, name, title, role, color, sourceId, kit, config = {}) {
   const combat = { key: id, resource: { kind: 'energy', label: 'STABILITÉ', max: 100, regen: 0.15 }, passive: {}, links: [['light', 'heavy'], ['low', 'special'], ['heavy', 'specialForward']], simulationBody: { width, height, crouchHeight: Math.round(height * 0.53) }, moves: kit };
   return { id, uid: id, name, title, role, color, power, speed, reach, stats: { health: 10000, power, speed, jump: 12.6, defense: 1 }, combat, moves: kit, sprite: spriteOf(id), animation: coreAnimated.has(id) ? { src: `../assets/images/cainos-${id}-animation-sheet.png`, cols: 4, rows: 2, frames: { idle: [0, 1], walk: [2, 3], talk: [4, 5], attack: [6], hurt: [7] } } : null, visual: { width, height, profile: role === 'Colosse' ? 'giant' : id === 'bubble' ? 'floating' : 'humanoid' }, loreSource: sourceId, provenance: 'Apparence issue de CainOS. Techniques adaptées pour le jeu.', fidelity: getFighterFidelity(id), ...extra };
 }
+
+const expansionFighters = EXPANSION_DEFS.map(def => fighter(
+  def.id, def.name, def.title, def.role, def.color, def.sourceId,
+  Object.fromEntries(Object.entries(buildExpansionKit(def)).map(([slot, entry]) => [slot, move(slot, entry.name, entry.description, entry.fields)])),
+  expansionFighterConfig(def)
+));
 
 export const FIGHTERS = [
   fighter('pomni', 'Pomni', 'Un pas vers la sortie', 'Esquive', '#f46582', 'ep1', {
@@ -209,6 +220,7 @@ export const FIGHTERS = [
     super: move('super', 'Dernière chasse', 'Trois tirs spectraux espacés.', { kind: 'projectile', reach: 1100, tag: 'precision', count: 3, interval: 10, speed: 23, life: 58, height: 155, damage: 690, startup: 30, recovery: 52, cost: 38, meter: 85 }),
     utility: move('utility', 'Préparer la cartouche', 'Restaure la stabilité du tir virtuel.', { restore: 36, startup: 24, recovery: 36 }),
   }, { speed: 0.93, power: 1.03, height: 250 }),
+  ...expansionFighters,
 ];
 
 export const MOVES = FIGHTERS.flatMap(f => MOVE_SLOTS.map(slot => ({ id: `${f.id}.${slot}`, fighterId: f.id, fighterName: f.name, ...f.moves[slot] })));
@@ -226,7 +238,31 @@ export const STAGES = [
   stage('kingdom', 'Le palais de sucre', 'Des arches de confiserie dans Candy Canyon.', { sky: '#29213d', back: '#74496a', accent: '#ffe7b3', floor: '#684760', grid: '#ab7e9b' }, 'ep2'),
   stage('grounds', 'Les terrains du cirque', 'La pelouse numérique au pied du chapiteau.', { sky: '#173149', back: '#386278', accent: '#ffe29c', floor: '#31584e', grid: '#6c9172' }, 'ep1'),
   stage('backstage', 'Le couloir des portes', 'Les portes des résidents servent de fond de scène.', { sky: '#171326', back: '#462b4e', accent: '#efc694', floor: '#4a3549', grid: '#876779' }, 'ep1'),
+  ...CROSSOVER_STAGES.map(({ id, series, name, description, palette, sourceId }) =>
+    stage(id, name, description, palette, sourceId, { series, provenance: 'Arène crossover adaptée pour Encore' })),
+  stage('falseexit', 'La fausse sortie', 'Une porte rouge au fond des bureaux gris du pilote.', { sky: '#434844', back: '#727a71', accent: '#d44d4c', floor: '#574c4c', grid: '#665954' }, 'ep1'),
+  stage('undermap', 'Sous la carte', 'La salle quadrillée bleue sous Candy Canyon, au sol réfléchissant.', { sky: '#020321', back: '#050837', accent: '#315bff', floor: '#040525', grid: '#1d26cc' }, 'ep2'),
 ];
+
+// One dedicated arrangement per playable artist, next to the shared
+// series arenas. Each reuses the reviewed scenery of its source episode as a
+// base and only changes the accent, so the decor stays grounded instead of
+// inventing a measured set plan. These are fan-game adaptations.
+const HOME_BASE = Object.freeze({ ep1: 'bigtop', ep2: 'candy', ep3: 'manor', ep4: 'spudsy', cainos: 'lake', adaptation: 'training' });
+function dedicatedStage(fighter) {
+  const base = STAGES.find(item => item.id === (HOME_BASE[fighter.loreSource] || 'bigtop')) || STAGES[0];
+  const palette = Object.freeze({ ...base.palette, accent: fighter.color });
+  return Object.freeze({
+    ...base, id: `home-${fighter.id}`, name: `${base.name} · scène de ${fighter.name}`,
+    description: `Arrangement dédié à ${fighter.name} dans ${base.name}. Décor de fan-game adapté ; aucun plan de plateau canonique n’est mesuré.`,
+    theme: base.id, palette, colors: palette, dedicatedTo: fighter.id, fidelity: base.fidelity,
+  });
+}
+export const DEDICATED_STAGES = Object.freeze(FIGHTERS.map(dedicatedStage));
+export const ALL_STAGES = Object.freeze([...STAGES, ...DEDICATED_STAGES]);
+export function getDedicatedStage(fighterId) {
+  return DEDICATED_STAGES.find(stage => stage.dedicatedTo === fighterId) || null;
+}
 
 // A matching substring is not an identity: Jax's parents, rival NPCs, body
 // parts and mental projections remain archives. Only reviewed appearances of
@@ -335,8 +371,11 @@ const archiveOnlyGroups = [
     reason: 'Création ou archive de production sans identité jouable validée. Reste consultable avant attribution d’un rôle.',
   },
 ];
-export const ARCHIVE_ONLY_ENTRIES = Object.freeze(Object.fromEntries(archiveOnlyGroups.flatMap(({ ids, ...classification }) => ids.map(id => [id, Object.freeze({ ...classification })]))));
 const fighterIds = new Set(FIGHTERS.map(f => f.id));
+// Promoted PNJ now own a fighter kit, so they leave the archive-only register.
+export const ARCHIVE_ONLY_ENTRIES = Object.freeze(Object.fromEntries(archiveOnlyGroups
+  .flatMap(({ ids, ...classification }) => ids.map(id => [id, Object.freeze({ ...classification })]))
+  .filter(([id]) => !fighterIds.has(id))));
 
 export function classifyArchiveEntry(id) {
   if (fighterIds.has(id)) return { category: 'fighter', baseFighterId: id, playable: true, archiveKind: null, classificationReason: 'Combattant jouable avec son propre kit de dix techniques.' };
@@ -353,6 +392,16 @@ export const ROSTER_ARCHIVE = SPRITE_CATALOG.map(entry => {
 });
 export const ARCHIVE = ROSTER_ARCHIVE;
 export const VARIANTS = ROSTER_ARCHIVE.filter(entry => entry.baseFighterId && entry.id !== entry.baseFighterId);
+export const CROSSOVER_COSTUMES = createCrossoverCostumes(FIGHTERS);
+export const COSTUMES = [...VARIANTS, ...CROSSOVER_COSTUMES, ...COSTUME_ADDITIONS];
+
+export function equipCostume(fighter, id) {
+  const variant = COSTUMES.find(item => item.id === id && item.fighterId === fighter.id);
+  if (!variant) return fighter;
+  return { ...fighter, sprite: variant.sprite, animation: variant.animation || null,
+    visual: { ...fighter.visual, ...variant.visual }, costume: variant.id };
+}
+
 export const MODES = [
   { id: 'versus', name: 'Versus CPU', description: 'Un duel libre contre l’ordinateur.' },
   { id: 'local', name: 'Duel local', description: 'Deux joueurs sur le même appareil.' },
@@ -366,7 +415,7 @@ export const MODES = [
 ];
 
 export function getFighter(id) { return FIGHTERS.find(f => f.id === id) || FIGHTERS[0]; }
-export function getStage(id) { return STAGES.find(s => s.id === id) || STAGES[0]; }
+export function getStage(id) { return ALL_STAGES.find(s => s.id === id) || STAGES[0]; }
 
 // Replay rules are selected from the recording's version, not the current UI.
 // These two definitions are the exact 0.1.0/0.2.0 rules, including their original

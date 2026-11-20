@@ -1,0 +1,999 @@
+{
+  "date": "2026-11-20",
+  "reviewer": "missing_cast_research",
+  "scope": "Cinq rôles présidentiels, huit assemblages génériques de Zooble et repères de Gangle noir ; la revue des quatorze états relève de l’agent audit.",
+  "method": "Inspection visuelle des storyboards YouTube officiels GLITCH, recoupement avec miniature officielle du trailer et sprites locaux existants. Les cellules natives font 320x180 pixels et sont espacées de dix secondes ; les horodatages sont des repères d’aperçu. Les copies review4x utilisent nearest et n’ajoutent aucun détail.",
+  "claims": "Les silhouettes distinctes sont établies seulement pour les pièces lisibles. Les parties cachées, gestes ou accessoires flous ne sont pas inventés. Les numéros d’épisode ne créent pas automatiquement de nouveaux personnages.",
+  "candidates": [
+    {
+      "id": "ragatha__bodyguard",
+      "proposedId": "bodyguardragatha",
+      "status": "production-authorized",
+      "kind": "accessory-appearance",
+      "distinctFrom": [
+        "ragatha",
+        "noirragatha"
+      ],
+      "observed": "Robe pervenche à pièces cousues, nœud violet, cheveux rouges et chaussures noires de la base ; lunettes noires couvrant les deux yeux.",
+      "notObserved": "Aucun costume noir, earpiece, holster, arme ou nouvelle anatomie.",
+      "sources": [
+        {
+          "episode": 5,
+          "timestampSeconds": 260,
+          "episodeUrl": "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=260s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode5-storyboard-L3-M2.jpg",
+          "cellIndex": 8,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/L4p2gN2CzsA/storyboard3_L3/M2.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCIzJ0cIG&sigh=rs$AOn4CLBe62PjqkpfouZ09cKwrw1Ge3h_Ow"
+        },
+        {
+          "episode": 5,
+          "timestampSeconds": 360,
+          "episodeUrl": "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=360s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode5-storyboard-L3-M4.jpg",
+          "cellIndex": 0,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/L4p2gN2CzsA/storyboard3_L3/M4.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCIzJ0cIG&sigh=rs$AOn4CLBe62PjqkpfouZ09cKwrw1Ge3h_Ow"
+        }
+      ],
+      "decision": "Ajouter une apparence accessoirisée séparée ; ne pas décrire une nouvelle tenue de costume-cravate."
+    },
+    {
+      "id": "zooble__bodyguard",
+      "proposedId": "bodyguardzooble",
+      "status": "production-authorized",
+      "kind": "accessory-appearance",
+      "distinctFrom": [
+        "zooble",
+        "noirzooble",
+        "spudsyzooble",
+        "japanesezooble",
+        "baseballzooble"
+      ],
+      "observed": "Assemblage de l’épisode 5 décrit ci-dessous, avec lunettes noires.",
+      "notObserved": "Aucune veste, arme ou tablier.",
+      "sources": [
+        {
+          "episode": 5,
+          "timestampSeconds": 260,
+          "episodeUrl": "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=260s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode5-storyboard-L3-M2.jpg",
+          "cellIndex": 8,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/L4p2gN2CzsA/storyboard3_L3/M2.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCIzJ0cIG&sigh=rs$AOn4CLBe62PjqkpfouZ09cKwrw1Ge3h_Ow"
+        },
+        {
+          "episode": 5,
+          "timestampSeconds": 310,
+          "episodeUrl": "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=310s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode5-storyboard-L3-M3.jpg",
+          "cellIndex": 4,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/L4p2gN2CzsA/storyboard3_L3/M3.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCIzJ0cIG&sigh=rs$AOn4CLBe62PjqkpfouZ09cKwrw1Ge3h_Ow"
+        },
+        {
+          "episode": 5,
+          "timestampSeconds": 360,
+          "episodeUrl": "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=360s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode5-storyboard-L3-M4.jpg",
+          "cellIndex": 0,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/L4p2gN2CzsA/storyboard3_L3/M4.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCIzJ0cIG&sigh=rs$AOn4CLBe62PjqkpfouZ09cKwrw1Ge3h_Ow"
+        }
+      ],
+      "additionalSource": "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg",
+      "decision": "Ajouter séparément de l’assemblage sans lunettes."
+    },
+    {
+      "id": "kinger__presidential_aide",
+      "status": "base-appearance-role-alias",
+      "kind": "role",
+      "coveredBy": "kinger",
+      "observed": "Tête de roi, cape violette à bordure claire tachetée et mains blanches détachées ; papiers du rôle.",
+      "notObserved": "Aucune tenue présidentielle distincte.",
+      "sources": [
+        {
+          "episode": 5,
+          "timestampSeconds": 280,
+          "episodeUrl": "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=280s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode5-storyboard-L3-M3.jpg",
+          "cellIndex": 1,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/L4p2gN2CzsA/storyboard3_L3/M3.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCIzJ0cIG&sigh=rs$AOn4CLBe62PjqkpfouZ09cKwrw1Ge3h_Ow"
+        },
+        {
+          "episode": 5,
+          "timestampSeconds": 290,
+          "episodeUrl": "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=290s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode5-storyboard-L3-M3.jpg",
+          "cellIndex": 2,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/L4p2gN2CzsA/storyboard3_L3/M3.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCIzJ0cIG&sigh=rs$AOn4CLBe62PjqkpfouZ09cKwrw1Ge3h_Ow"
+        },
+        {
+          "episode": 5,
+          "timestampSeconds": 300,
+          "episodeUrl": "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=300s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode5-storyboard-L3-M3.jpg",
+          "cellIndex": 3,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/L4p2gN2CzsA/storyboard3_L3/M3.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCIzJ0cIG&sigh=rs$AOn4CLBe62PjqkpfouZ09cKwrw1Ge3h_Ow"
+        },
+        {
+          "episode": 5,
+          "timestampSeconds": 350,
+          "episodeUrl": "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=350s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode5-storyboard-L3-M3.jpg",
+          "cellIndex": 8,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/L4p2gN2CzsA/storyboard3_L3/M3.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCIzJ0cIG&sigh=rs$AOn4CLBe62PjqkpfouZ09cKwrw1Ge3h_Ow"
+        }
+      ],
+      "decision": "Ne pas produire un corps supplémentaire d’après le seul nom du rôle."
+    },
+    {
+      "id": "jax__australian_extremist",
+      "proposedId": "australianjax",
+      "status": "distinct-outfit-incomplete-reference",
+      "kind": "costume",
+      "distinctFrom": [
+        "jax",
+        "hunterjax"
+      ],
+      "observed": "Chapeau brun à larges bords traversé par les oreilles, chemise khaki à col/manches courtes et poches, ceinture sombre à boucle, pantalon khaki long ; mallette grise dans la scène.",
+      "notObserved": "Pieds, bas de pantalon et chaussures pas établis dans les vues inspectées ; ne pas inventer des bottes.",
+      "sources": [
+        {
+          "episode": 5,
+          "timestampSeconds": 310,
+          "episodeUrl": "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=310s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode5-storyboard-L3-M3.jpg",
+          "cellIndex": 4,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/L4p2gN2CzsA/storyboard3_L3/M3.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCIzJ0cIG&sigh=rs$AOn4CLBe62PjqkpfouZ09cKwrw1Ge3h_Ow"
+        },
+        {
+          "episode": 5,
+          "timestampSeconds": 360,
+          "episodeUrl": "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=360s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode5-storyboard-L3-M4.jpg",
+          "cellIndex": 0,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/L4p2gN2CzsA/storyboard3_L3/M4.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCIzJ0cIG&sigh=rs$AOn4CLBe62PjqkpfouZ09cKwrw1Ge3h_Ow"
+        }
+      ],
+      "additionalSource": "https://www.youtube.com/watch?v=sQ5DCwcpMy0&t=42s",
+      "decision": "Tenue réellement distincte ; différer onze images corps entier jusqu’à une vue des pieds. Hunterjax (casque colonial/gilet/short) ne couvre pas cette tenue."
+    },
+    {
+      "id": "gangle__new_zealand_extremist",
+      "status": "scene-prop-incomplete-reference",
+      "kind": "accessory-state",
+      "observed": "Masque blanc triste et rubans rouges ordinaires à l’entrée ; bloc/accessoire sanglé au torse dans le plan de groupe.",
+      "notObserved": "Détails fins de l’accessoire, construction exacte et nouvelle tenue non établis.",
+      "sources": [
+        {
+          "episode": 5,
+          "timestampSeconds": 360,
+          "episodeUrl": "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=360s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode5-storyboard-L3-M4.jpg",
+          "cellIndex": 0,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/L4p2gN2CzsA/storyboard3_L3/M4.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCIzJ0cIG&sigh=rs$AOn4CLBe62PjqkpfouZ09cKwrw1Ge3h_Ow"
+        }
+      ],
+      "decision": "Ne pas inventer un costume ou dispositif complet. L’identité et les rubans sont déjà couverts ; seul l’accessoire serait à comparer."
+    },
+    {
+      "id": "gangle__noir_bar",
+      "proposedId": "noirgangle",
+      "status": "distinct-upper-outfit-incomplete-reference",
+      "kind": "costume",
+      "observed": "Masque monochrome à yeux noirs tombants, larmes claires ; large col clair, poitrine sombre et bras rubans sombres. Dessin sur papier dans une scène, verre sur le bar.",
+      "notObserved": "Bas du corps masqué par le bar dans les plans détaillés ; nature exacte du vêtement sous la taille non établie.",
+      "sources": [
+        {
+          "episode": 5,
+          "timestampSeconds": 690,
+          "episodeUrl": "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=690s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode5-storyboard-L3-M7.jpg",
+          "cellIndex": 6,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/L4p2gN2CzsA/storyboard3_L3/M7.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCIzJ0cIG&sigh=rs$AOn4CLBe62PjqkpfouZ09cKwrw1Ge3h_Ow"
+        },
+        {
+          "episode": 5,
+          "timestampSeconds": 810,
+          "episodeUrl": "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=810s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode5-storyboard-L3-M9.jpg",
+          "cellIndex": 0,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/L4p2gN2CzsA/storyboard3_L3/M9.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCIzJ0cIG&sigh=rs$AOn4CLBe62PjqkpfouZ09cKwrw1Ge3h_Ow"
+        },
+        {
+          "episode": 5,
+          "timestampSeconds": 820,
+          "episodeUrl": "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=820s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode5-storyboard-L3-M9.jpg",
+          "cellIndex": 1,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/L4p2gN2CzsA/storyboard3_L3/M9.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCIzJ0cIG&sigh=rs$AOn4CLBe62PjqkpfouZ09cKwrw1Ge3h_Ow"
+        },
+        {
+          "episode": 5,
+          "timestampSeconds": 950,
+          "episodeUrl": "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=950s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode5-storyboard-L3-M10.jpg",
+          "cellIndex": 5,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/L4p2gN2CzsA/storyboard3_L3/M10.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCIzJ0cIG&sigh=rs$AOn4CLBe62PjqkpfouZ09cKwrw1Ge3h_Ow"
+        },
+        {
+          "episode": 5,
+          "timestampSeconds": 960,
+          "episodeUrl": "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=960s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode5-storyboard-L3-M10.jpg",
+          "cellIndex": 6,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/L4p2gN2CzsA/storyboard3_L3/M10.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCIzJ0cIG&sigh=rs$AOn4CLBe62PjqkpfouZ09cKwrw1Ge3h_Ow"
+        },
+        {
+          "episode": 5,
+          "timestampSeconds": 1000,
+          "episodeUrl": "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=1000s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode5-storyboard-L3-M11.jpg",
+          "cellIndex": 1,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/L4p2gN2CzsA/storyboard3_L3/M11.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCIzJ0cIG&sigh=rs$AOn4CLBe62PjqkpfouZ09cKwrw1Ge3h_Ow"
+        }
+      ],
+      "decision": "Haut distinct confirmé, pas une simple désaturation ; différer silhouette entière sans vue du bas. Les plans permettent de reproduire un portrait mais pas de certifier un nouveau corps entier."
+    },
+    {
+      "id": "zooble__ep02_assembly",
+      "proposedId": "zoobleep2",
+      "status": "distinct-assembly-incomplete-reference",
+      "kind": "assembly",
+      "distinctFrom": [
+        "zooble",
+        "spudsyzooble",
+        "mouthlesszooble"
+      ],
+      "parts": {
+        "head": "Triangle rose ; éclair cyan à gauche et flèche jaune vers le haut à droite.",
+        "torso": "Jaune tacheté, rectangle noir/blanc à rayures diagonales au torse, petite aile rose.",
+        "arms": "Long bras jaune/orange à gauche, membre violet de l’autre côté ; contours des mains insuffisamment définis dans les sources primaires.",
+        "legs": "Une pointe rayée orange/noir et une longue jambe violette avec pied violet visibles dans les plans larges ; raccords trop petits."
+      },
+      "sources": [
+        {
+          "episode": 2,
+          "timestampSeconds": 170,
+          "episodeUrl": "https://www.youtube.com/watch?v=4ofJpOEXrZs&t=170s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode2-storyboard-L3-M1.jpg",
+          "cellIndex": 8,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/4ofJpOEXrZs/storyboard3_L3/M1.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCKyp8bAG&sigh=rs$AOn4CLCALNd51ie-KHsf9DqZ9r1L5fXlig"
+        },
+        {
+          "episode": 2,
+          "timestampSeconds": 1380,
+          "episodeUrl": "https://www.youtube.com/watch?v=4ofJpOEXrZs&t=1380s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode2-storyboard-L3-M15.jpg",
+          "cellIndex": 3,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/4ofJpOEXrZs/storyboard3_L3/M15.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCKyp8bAG&sigh=rs$AOn4CLCALNd51ie-KHsf9DqZ9r1L5fXlig"
+        },
+        {
+          "episode": 2,
+          "timestampSeconds": 1390,
+          "episodeUrl": "https://www.youtube.com/watch?v=4ofJpOEXrZs&t=1390s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode2-storyboard-L3-M15.jpg",
+          "cellIndex": 4,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/4ofJpOEXrZs/storyboard3_L3/M15.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCKyp8bAG&sigh=rs$AOn4CLCALNd51ie-KHsf9DqZ9r1L5fXlig"
+        }
+      ],
+      "limitation": "Le cutout miroir zooble-ep2-mirror.png est cohérent mais d’origine secondaire ; il n’est pas employé comme preuve primaire autonome.",
+      "decision": "Différence d’assemblage confirmée, génération corps entier retenue en attente de détails primaires lisibles des mains/raccords."
+    },
+    {
+      "id": "zooble__ep03_assembly",
+      "proposedId": "zoobleep3",
+      "status": "distinct-assembly-incomplete-reference",
+      "kind": "assembly",
+      "distinctFrom": [
+        "zooble",
+        "zooble__ep02_assembly"
+      ],
+      "parts": {
+        "head": "Cône torsadé rose à gauche, antenne en Y rayée noir/blanc à droite.",
+        "torso": "Jaune tacheté, anneau cyan au torse, aile à rayures ondulées roses/jaunes.",
+        "arms": "Une main blanche et des segments jaunes visibles ; autre chaîne de pièces partiellement masquée.",
+        "legs": "Segments mint/cyan, partie rayée et pied violet vus assis ; connexions et côté de chaque petite pièce insuffisamment lisibles."
+      },
+      "sources": [
+        {
+          "episode": 3,
+          "timestampSeconds": 260,
+          "episodeUrl": "https://www.youtube.com/watch?v=bKjfw77cxeQ&t=260s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode3-storyboard-L3-M2.jpg",
+          "cellIndex": 8,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/bKjfw77cxeQ/storyboard3_L3/M2.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCKGE0LcG&sigh=rs$AOn4CLDKqdYBTzcHTJWO0pPCtlrwfxl6hQ"
+        },
+        {
+          "episode": 3,
+          "timestampSeconds": 270,
+          "episodeUrl": "https://www.youtube.com/watch?v=bKjfw77cxeQ&t=270s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode3-storyboard-L3-M3.jpg",
+          "cellIndex": 0,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/bKjfw77cxeQ/storyboard3_L3/M3.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCKGE0LcG&sigh=rs$AOn4CLDKqdYBTzcHTJWO0pPCtlrwfxl6hQ"
+        },
+        {
+          "episode": 3,
+          "timestampSeconds": 290,
+          "episodeUrl": "https://www.youtube.com/watch?v=bKjfw77cxeQ&t=290s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode3-storyboard-L3-M3.jpg",
+          "cellIndex": 2,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/bKjfw77cxeQ/storyboard3_L3/M3.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCKGE0LcG&sigh=rs$AOn4CLDKqdYBTzcHTJWO0pPCtlrwfxl6hQ"
+        },
+        {
+          "episode": 3,
+          "timestampSeconds": 300,
+          "episodeUrl": "https://www.youtube.com/watch?v=bKjfw77cxeQ&t=300s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode3-storyboard-L3-M3.jpg",
+          "cellIndex": 3,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/bKjfw77cxeQ/storyboard3_L3/M3.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCKGE0LcG&sigh=rs$AOn4CLDKqdYBTzcHTJWO0pPCtlrwfxl6hQ"
+        },
+        {
+          "episode": 3,
+          "timestampSeconds": 310,
+          "episodeUrl": "https://www.youtube.com/watch?v=bKjfw77cxeQ&t=310s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode3-storyboard-L3-M3.jpg",
+          "cellIndex": 4,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/bKjfw77cxeQ/storyboard3_L3/M3.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCKGE0LcG&sigh=rs$AOn4CLDKqdYBTzcHTJWO0pPCtlrwfxl6hQ"
+        },
+        {
+          "episode": 3,
+          "timestampSeconds": 620,
+          "episodeUrl": "https://www.youtube.com/watch?v=bKjfw77cxeQ&t=620s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode3-storyboard-L3-M6.jpg",
+          "cellIndex": 8,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/bKjfw77cxeQ/storyboard3_L3/M6.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCKGE0LcG&sigh=rs$AOn4CLDKqdYBTzcHTJWO0pPCtlrwfxl6hQ"
+        }
+      ],
+      "decision": "Différence confirmée par corne/aile, mais vues surtout assises et petits raccords masqués. Ne pas bâtir une anatomie complète depuis ces seules silhouettes."
+    },
+    {
+      "id": "zooble__ep04_assembly",
+      "proposedId": "zoobleep4",
+      "status": "distinct-assembly-incomplete-reference",
+      "kind": "assembly",
+      "distinctFrom": [
+        "zooble",
+        "spudsyzooble"
+      ],
+      "parts": {
+        "head": "Spirale bleue à gauche, flèche jaune à droite.",
+        "torso": "Jaune tacheté, anneau cyan, aile bleue à petits points clairs.",
+        "arms": "Pièce verte courbe d’un côté ; pièces de l’autre bras et main peu lisibles.",
+        "legs": "Membres dissemblables verts/jaunes et longs segments, pieds/raccords en partie hors champ."
+      },
+      "sources": [
+        {
+          "episode": 4,
+          "timestampSeconds": 50,
+          "episodeUrl": "https://www.youtube.com/watch?v=Q9KWcWKo2T8&t=50s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode4-storyboard-L3-M0.jpg",
+          "cellIndex": 5,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/Q9KWcWKo2T8/storyboard3_L3/M0.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCJbh3boG&sigh=rs$AOn4CLCM0ahXyCrOwxHh2s-zwy4rg9N99Q"
+        },
+        {
+          "episode": 4,
+          "timestampSeconds": 60,
+          "episodeUrl": "https://www.youtube.com/watch?v=Q9KWcWKo2T8&t=60s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode4-storyboard-L3-M0.jpg",
+          "cellIndex": 6,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/Q9KWcWKo2T8/storyboard3_L3/M0.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCJbh3boG&sigh=rs$AOn4CLCM0ahXyCrOwxHh2s-zwy4rg9N99Q"
+        },
+        {
+          "episode": 4,
+          "timestampSeconds": 120,
+          "episodeUrl": "https://www.youtube.com/watch?v=Q9KWcWKo2T8&t=120s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode4-storyboard-L3-M1.jpg",
+          "cellIndex": 3,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/Q9KWcWKo2T8/storyboard3_L3/M1.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCJbh3boG&sigh=rs$AOn4CLCM0ahXyCrOwxHh2s-zwy4rg9N99Q"
+        }
+      ],
+      "decision": "Assemblage civil d’avant le travail distinct. Le sprite spudsyzooble avec uniforme ne le couvre pas. Bas du corps et raccords à sourcer avant génération."
+    },
+    {
+      "id": "zooble__ep05_assembly",
+      "proposedId": "zoobleep5",
+      "status": "production-authorized",
+      "kind": "assembly",
+      "distinctFrom": [
+        "zooble",
+        "noirzooble",
+        "spudsyzooble",
+        "mouthlesszooble",
+        "japanesezooble",
+        "baseballzooble",
+        "bodyguardzooble"
+      ],
+      "parts": {
+        "head": "Triangle rose sans bouche ; grand œil jaune à spirale gauche et petit œil blanc à paupière violette droite. Éclair cyan gauche ; ressort noir/blanc droite.",
+        "torso": "Jaune avec pois orange/roses, triangle creux violet, aile plume rose.",
+        "leftArmImage": "Tiges articulées jaunes, rotule jaune, main jaune.",
+        "rightArmImage": "Ressort vert, rotule rose, tige rose/blanc rayée, une pince verte en C.",
+        "leftLegImage": "Zigzag cyan puis quille pointue rayée rouge/jaune.",
+        "rightLegImage": "Longue tige violette courbée et pied violet."
+      },
+      "sources": [
+        {
+          "episode": 5,
+          "timestampSeconds": 10,
+          "episodeUrl": "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=10s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode5-storyboard-L3-M0.jpg",
+          "cellIndex": 1,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/L4p2gN2CzsA/storyboard3_L3/M0.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCIzJ0cIG&sigh=rs$AOn4CLBe62PjqkpfouZ09cKwrw1Ge3h_Ow"
+        },
+        {
+          "episode": 5,
+          "timestampSeconds": 60,
+          "episodeUrl": "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=60s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode5-storyboard-L3-M0.jpg",
+          "cellIndex": 6,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/L4p2gN2CzsA/storyboard3_L3/M0.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCIzJ0cIG&sigh=rs$AOn4CLBe62PjqkpfouZ09cKwrw1Ge3h_Ow"
+        },
+        {
+          "episode": 5,
+          "timestampSeconds": 100,
+          "episodeUrl": "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=100s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode5-storyboard-L3-M1.jpg",
+          "cellIndex": 1,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/L4p2gN2CzsA/storyboard3_L3/M1.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCIzJ0cIG&sigh=rs$AOn4CLBe62PjqkpfouZ09cKwrw1Ge3h_Ow"
+        },
+        {
+          "episode": 5,
+          "timestampSeconds": 120,
+          "episodeUrl": "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=120s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode5-storyboard-L3-M1.jpg",
+          "cellIndex": 3,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/L4p2gN2CzsA/storyboard3_L3/M1.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCIzJ0cIG&sigh=rs$AOn4CLBe62PjqkpfouZ09cKwrw1Ge3h_Ow"
+        },
+        {
+          "episode": 5,
+          "timestampSeconds": 160,
+          "episodeUrl": "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=160s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode5-storyboard-L3-M1.jpg",
+          "cellIndex": 7,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/L4p2gN2CzsA/storyboard3_L3/M1.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCIzJ0cIG&sigh=rs$AOn4CLBe62PjqkpfouZ09cKwrw1Ge3h_Ow"
+        }
+      ],
+      "additionalSource": "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg",
+      "additionalLocalFile": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode5-trailer-thumbnail.jpg",
+      "decision": "Corps entier attesté par miniature officielle en haute définition ; produire onze images sans lunettes, séparées de bodyguardzooble."
+    },
+    {
+      "id": "zooble__ep06_assembly",
+      "proposedId": "zoobleep6",
+      "status": "distinct-assembly-best-next-candidate",
+      "kind": "assembly",
+      "distinctFrom": [
+        "zooble",
+        "zooble__ep05_assembly"
+      ],
+      "parts": {
+        "head": "Antenne T jaune côté gauche, éclair mint/cyan côté droit.",
+        "torso": "Jaune tacheté, étoile orange en relief au torse, aile de chauve-souris à contour bleu/violet et membranes cyan.",
+        "leftArmImage": "Segment rayé noir/blanc avec main blanche.",
+        "rightArmImage": "Segments violet/vert/jaune ou orange visibles ; chaîne exacte des raccords encore ambiguë dans les vues étudiées.",
+        "leftLegImage": "Segment violet, joint mint et long bas rose/magenta à points clairs, terminaison en boucle/pied recourbé.",
+        "rightLegImage": "Partie rouge anguleuse et pied bleu/violet ; petit raccord supérieur insuffisamment lisible."
+      },
+      "sources": [
+        {
+          "episode": 6,
+          "timestampSeconds": 140,
+          "episodeUrl": "https://www.youtube.com/watch?v=mOvhHim78YA&t=140s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode6-storyboard-L3-M1.jpg",
+          "cellIndex": 5,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/mOvhHim78YA/storyboard3_L3/M1.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCJX--8QG&sigh=rs$AOn4CLBRc1Pm_soGXt4VJR7qM3OM3K-a2A"
+        },
+        {
+          "episode": 6,
+          "timestampSeconds": 150,
+          "episodeUrl": "https://www.youtube.com/watch?v=mOvhHim78YA&t=150s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode6-storyboard-L3-M1.jpg",
+          "cellIndex": 6,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/mOvhHim78YA/storyboard3_L3/M1.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCJX--8QG&sigh=rs$AOn4CLBRc1Pm_soGXt4VJR7qM3OM3K-a2A"
+        },
+        {
+          "episode": 6,
+          "timestampSeconds": 210,
+          "episodeUrl": "https://www.youtube.com/watch?v=mOvhHim78YA&t=210s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode6-storyboard-L3-M2.jpg",
+          "cellIndex": 3,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/mOvhHim78YA/storyboard3_L3/M2.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCJX--8QG&sigh=rs$AOn4CLBRc1Pm_soGXt4VJR7qM3OM3K-a2A"
+        },
+        {
+          "episode": 6,
+          "timestampSeconds": 230,
+          "episodeUrl": "https://www.youtube.com/watch?v=mOvhHim78YA&t=230s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode6-storyboard-L3-M2.jpg",
+          "cellIndex": 5,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/mOvhHim78YA/storyboard3_L3/M2.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCJX--8QG&sigh=rs$AOn4CLBRc1Pm_soGXt4VJR7qM3OM3K-a2A"
+        },
+        {
+          "episode": 6,
+          "timestampSeconds": 290,
+          "episodeUrl": "https://www.youtube.com/watch?v=mOvhHim78YA&t=290s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode6-storyboard-L3-M3.jpg",
+          "cellIndex": 2,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/mOvhHim78YA/storyboard3_L3/M3.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCJX--8QG&sigh=rs$AOn4CLBRc1Pm_soGXt4VJR7qM3OM3K-a2A"
+        },
+        {
+          "episode": 6,
+          "timestampSeconds": 310,
+          "episodeUrl": "https://www.youtube.com/watch?v=mOvhHim78YA&t=310s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode6-storyboard-L3-M3.jpg",
+          "cellIndex": 4,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/mOvhHim78YA/storyboard3_L3/M3.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCJX--8QG&sigh=rs$AOn4CLBRc1Pm_soGXt4VJR7qM3OM3K-a2A"
+        }
+      ],
+      "decision": "Meilleure prochaine cible après ep5 : plusieurs vues concordantes du corps et des jambes. Différence avérée ; préciser le second bras et le petit raccord du pied avant onze poses fidèles. Ne pas prendre les armes scéniques pour un changement d’anatomie."
+    },
+    {
+      "id": "zooble__ep07_assembly",
+      "proposedId": "zoobleep7casual",
+      "status": "ambiguous-generic-label-two-phases",
+      "kind": "assembly",
+      "distinctFrom": [
+        "zooble",
+        "beachzooble"
+      ],
+      "parts": {
+        "beforeBeach": "Avant la plage : antenne cyan en croix/T côté gauche et tige jaune terminée par disque orange côté droit, carré creux cyan au torse, corps jaune tacheté ; bras/pieds non intégralement relevés.",
+        "beach": "À la plage : coquillage/parasole, étoile rose, assemblage plage ; le costume beachzooble existant vise précisément la figurine officielle avec tuba/sac."
+      },
+      "sources": [
+        {
+          "episode": 7,
+          "timestampSeconds": 60,
+          "episodeUrl": "https://www.youtube.com/watch?v=oaOG1xOk7XY&t=60s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode7-storyboard-L3-M0.jpg",
+          "cellIndex": 6,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/oaOG1xOk7XY/storyboard3_L3/M0.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCLmX5MkG&sigh=rs$AOn4CLA5TZizZcDNEYdu24gvGm9HHh2_dg"
+        },
+        {
+          "episode": 7,
+          "timestampSeconds": 130,
+          "episodeUrl": "https://www.youtube.com/watch?v=oaOG1xOk7XY&t=130s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode7-storyboard-L3-M1.jpg",
+          "cellIndex": 4,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/oaOG1xOk7XY/storyboard3_L3/M1.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCLmX5MkG&sigh=rs$AOn4CLA5TZizZcDNEYdu24gvGm9HHh2_dg"
+        },
+        {
+          "episode": 7,
+          "timestampSeconds": 180,
+          "episodeUrl": "https://www.youtube.com/watch?v=oaOG1xOk7XY&t=180s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode7-storyboard-L3-M2.jpg",
+          "cellIndex": 0,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/oaOG1xOk7XY/storyboard3_L3/M2.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCLmX5MkG&sigh=rs$AOn4CLA5TZizZcDNEYdu24gvGm9HHh2_dg"
+        },
+        {
+          "episode": 7,
+          "timestampSeconds": 260,
+          "episodeUrl": "https://www.youtube.com/watch?v=oaOG1xOk7XY&t=260s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode7-storyboard-L3-M2.jpg",
+          "cellIndex": 8,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/oaOG1xOk7XY/storyboard3_L3/M2.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCLmX5MkG&sigh=rs$AOn4CLA5TZizZcDNEYdu24gvGm9HHh2_dg"
+        },
+        {
+          "episode": 7,
+          "timestampSeconds": 270,
+          "episodeUrl": "https://www.youtube.com/watch?v=oaOG1xOk7XY&t=270s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode7-storyboard-L3-M3.jpg",
+          "cellIndex": 0,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/oaOG1xOk7XY/storyboard3_L3/M3.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCLmX5MkG&sigh=rs$AOn4CLA5TZizZcDNEYdu24gvGm9HHh2_dg"
+        },
+        {
+          "episode": 7,
+          "timestampSeconds": 280,
+          "episodeUrl": "https://www.youtube.com/watch?v=oaOG1xOk7XY&t=280s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode7-storyboard-L3-M3.jpg",
+          "cellIndex": 1,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/oaOG1xOk7XY/storyboard3_L3/M3.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCLmX5MkG&sigh=rs$AOn4CLA5TZizZcDNEYdu24gvGm9HHh2_dg"
+        }
+      ],
+      "decision": "Ne pas clore toute la ligne par beachzooble. L’assemblage d’avant-plage est distinct mais son bas reste à documenter ; les vues de la plage doivent être comparées au périmètre exact du produit déjà illustré."
+    },
+    {
+      "id": "zooble__ep08_assembly",
+      "proposedId": "zoobleep8",
+      "status": "distinct-assembly-incomplete-reference",
+      "kind": "assembly",
+      "distinctFrom": [
+        "zooble",
+        "mouthlesszooble"
+      ],
+      "parts": {
+        "head": "Y jaune à gauche, spirale/ressort rayé noir/blanc à droite.",
+        "torso": "Anneau creux violet sur torse jaune tacheté, aile bleu pâle à points colorés.",
+        "arms": "Une tige cyan et un bras en ressort rose/rouge ; mains et raccords trop petits dans les vues entières inspectées.",
+        "legs": "Membres dissemblables rose/cyan visibles, mais silhouettes fines ne permettent pas une description exacte de toutes les pièces."
+      },
+      "sources": [
+        {
+          "episode": 8,
+          "timestampSeconds": 370,
+          "episodeUrl": "https://www.youtube.com/watch?v=DMNlzf8PiEM&t=370s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode8-storyboard-L3-M4.jpg",
+          "cellIndex": 1,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/DMNlzf8PiEM/storyboard3_L3/M4.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCJK27c0G&sigh=rs$AOn4CLDjlm8VVxs4gR25NLXq0v9viTntww"
+        },
+        {
+          "episode": 8,
+          "timestampSeconds": 380,
+          "episodeUrl": "https://www.youtube.com/watch?v=DMNlzf8PiEM&t=380s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode8-storyboard-L3-M4.jpg",
+          "cellIndex": 2,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/DMNlzf8PiEM/storyboard3_L3/M4.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCJK27c0G&sigh=rs$AOn4CLDjlm8VVxs4gR25NLXq0v9viTntww"
+        },
+        {
+          "episode": 8,
+          "timestampSeconds": 390,
+          "episodeUrl": "https://www.youtube.com/watch?v=DMNlzf8PiEM&t=390s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode8-storyboard-L3-M4.jpg",
+          "cellIndex": 3,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/DMNlzf8PiEM/storyboard3_L3/M4.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCJK27c0G&sigh=rs$AOn4CLDjlm8VVxs4gR25NLXq0v9viTntww"
+        },
+        {
+          "episode": 8,
+          "timestampSeconds": 400,
+          "episodeUrl": "https://www.youtube.com/watch?v=DMNlzf8PiEM&t=400s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode8-storyboard-L3-M4.jpg",
+          "cellIndex": 4,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/DMNlzf8PiEM/storyboard3_L3/M4.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCJK27c0G&sigh=rs$AOn4CLDjlm8VVxs4gR25NLXq0v9viTntww"
+        },
+        {
+          "episode": 8,
+          "timestampSeconds": 440,
+          "episodeUrl": "https://www.youtube.com/watch?v=DMNlzf8PiEM&t=440s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode8-storyboard-L3-M4.jpg",
+          "cellIndex": 8,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/DMNlzf8PiEM/storyboard3_L3/M4.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCJK27c0G&sigh=rs$AOn4CLDjlm8VVxs4gR25NLXq0v9viTntww"
+        }
+      ],
+      "decision": "Assemblage distinct confirmé. Le nom mouthlesszooble ne le couvre pas et son sprite actuel montre d’autres pièces. Ne pas générer les raccords/mains encore illisibles."
+    },
+    {
+      "id": "zooble__ep09_assembly",
+      "status": "opening-alias-of-ep08-no-unique-assembly-established",
+      "kind": "assembly-label",
+      "aliasOf": "zooble__ep08_assembly",
+      "sources": [
+        {
+          "episode": 9,
+          "timestampSeconds": 80,
+          "episodeUrl": "https://www.youtube.com/watch?v=PVy-bcTsO8A&t=80s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode9-storyboard-L3-M0.jpg",
+          "cellIndex": 8,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/PVy-bcTsO8A/storyboard3_L3/M0.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCPDbyNEG&sigh=rs$AOn4CLBI5t4Zgvob7cjkEb_udIG9p-ySZA"
+        },
+        {
+          "episode": 9,
+          "timestampSeconds": 100,
+          "episodeUrl": "https://www.youtube.com/watch?v=PVy-bcTsO8A&t=100s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode9-storyboard-L3-M1.jpg",
+          "cellIndex": 1,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/PVy-bcTsO8A/storyboard3_L3/M1.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCPDbyNEG&sigh=rs$AOn4CLBI5t4Zgvob7cjkEb_udIG9p-ySZA"
+        },
+        {
+          "episode": 9,
+          "timestampSeconds": 120,
+          "episodeUrl": "https://www.youtube.com/watch?v=PVy-bcTsO8A&t=120s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode9-storyboard-L3-M1.jpg",
+          "cellIndex": 3,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/PVy-bcTsO8A/storyboard3_L3/M1.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCPDbyNEG&sigh=rs$AOn4CLBI5t4Zgvob7cjkEb_udIG9p-ySZA"
+        },
+        {
+          "episode": 9,
+          "timestampSeconds": 3160,
+          "episodeUrl": "https://www.youtube.com/watch?v=PVy-bcTsO8A&t=3160s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode9-storyboard-L3-M35.jpg",
+          "cellIndex": 1,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/PVy-bcTsO8A/storyboard3_L3/M35.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCPDbyNEG&sigh=rs$AOn4CLBI5t4Zgvob7cjkEb_udIG9p-ySZA"
+        },
+        {
+          "episode": 9,
+          "timestampSeconds": 3260,
+          "episodeUrl": "https://www.youtube.com/watch?v=PVy-bcTsO8A&t=3260s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode9-storyboard-L3-M36.jpg",
+          "cellIndex": 2,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/PVy-bcTsO8A/storyboard3_L3/M36.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCPDbyNEG&sigh=rs$AOn4CLBI5t4Zgvob7cjkEb_udIG9p-ySZA"
+        },
+        {
+          "episode": 9,
+          "timestampSeconds": 3280,
+          "episodeUrl": "https://www.youtube.com/watch?v=PVy-bcTsO8A&t=3280s",
+          "file": "/workspace/scratch/5f5114b49696/research/continuation-20261120/episode9-storyboard-L3-M36.jpg",
+          "cellIndex": 4,
+          "cellSize": [
+            320,
+            180
+          ],
+          "visuallyInspected": true,
+          "storyboardURL": "https://i.ytimg.com/sb/PVy-bcTsO8A/storyboard3_L3/M36.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCPDbyNEG&sigh=rs$AOn4CLBI5t4Zgvob7cjkEb_udIG9p-ySZA"
+        }
+      ],
+      "observed": "Début : même Y jaune, spirale noir/blanc, anneau violet et aile bleu pâle que l’épisode 8. Fin : montage de plusieurs apparences antérieures ; T jaune/éclair cyan, puis assemblage à anneau cyan notamment.",
+      "decision": "Aucun neuvième assemblage exclusif démontré par le seul numéro d’épisode. Traiter le début comme alias ep8 ; le montage final n’est pas une tenue nouvelle. Une revue intégrale de l’épisode reste distincte de ce constat ciblé."
+    }
+  ]
+}

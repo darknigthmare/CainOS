@@ -1,0 +1,76 @@
+{
+  "schema": "encore-native-art-resumption/v1",
+  "method": "image_gen.imagegen",
+  "episodeFidelityClaim": false,
+  "checkpointFile": "docs/art-generation/cast-continuation-20261120/generation-resume.json",
+  "transparent_background": true,
+  "nativeFacing": "right",
+  "status": "accepted_native",
+  "includedInRuntime": false,
+  "appearanceId": "abstractingpomni",
+  "slot": "heavy",
+  "id": "abstractingpomni-heavy",
+  "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingpomni/heavy.png",
+  "targetFile": "assets/encore/poses/abstractingpomni/heavy.png",
+  "sourceGenerationId": "exec-b8d1aec4-9e6a-4d4c-97bb-498b9d0087b8",
+  "nativeSourceFile": "/workspace/scratch/5f5114b49696/generated_images/exec-b8d1aec4-9e6a-4d4c-97bb-498b9d0087b8.png",
+  "prompt": "Use case: identity-preserve. Asset type: ONE individual full-body transparent 2D fighting-game action sprite of ABSTRACTING POMNI. Reference 1 is the approved strict design lock for silhouette, proportions, exact transformation patches, eyes, colours and polished cel shading. Reference 2 supplies official design details only; do not imitate its squat toy proportions, setting or lighting. Slender Pomni with red-blue jester hat and suit, yellow trims/buttons, pale face with one normal red-blue pinwheel iris and brown bob. Opposing half of face/hat is dark angular crystal with flat pastel concentric eyes; one arm/hand is crystal, opposite hand is blue glove. Normal RED shoe and opposing CRYSTAL eye-bearing foot MUST stay on the same anatomical sides as the approved selection. Do not swap, mirror or redistribute the transformation. Preserve all individual eye-bearing hat growths and asymmetric patches; not fully abstracted. Create a genuinely distinct natural action pose, not a mirrored/cropped selection image. Every limb, crown/hat/ear tip, attached mask and crystal spike must fit fully inside clear transparent margins on ALL sides. One connected character, crisp detailed 2D art on true transparent RGBA; no scenery, floor, cast shadow, aura, glow, particles, labels, watermark, inset or duplicate. POSE: HEAVY ATTACK toward screen RIGHT: wide grounded stance, torso twists strongly, both arms drive through a powerful sweeping downward strike, front knee deeply bent and rear heel lifted. Entire hands and feet visible, no effect or weapon.",
+  "referencePaths": [
+    "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingpomni/selection.png",
+    "docs/art-generation/cast-continuation-20261120/references/official-AbstractPomni.png"
+  ],
+  "portableReferences": [
+    {
+      "position": 1,
+      "kind": "repository-asset",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingpomni/selection.png",
+      "sha256": "6e069cab81e5ee75d6b98c8fbca2a8ba7fda6949cb78923fd0e2b8a08168ee4a",
+      "bytes": 1217005
+    },
+    {
+      "position": 2,
+      "kind": "official-source-reference",
+      "file": "docs/art-generation/cast-continuation-20261120/references/official-AbstractPomni.png",
+      "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractPomni.png?v=1780353721",
+      "pageUrl": "https://glitchproductions.store/products/abstraction-animiniz",
+      "sha256": "914230b23c0c5c733c68d2e2e1f96e94d860eb1d2eacbb5a41d1c9824e27de42",
+      "bytes": 3429140,
+      "restoreInstruction": "The exact reference is archived in this repository. If unavailable, download the named official image URL, verify and visually inspect it before generation. For an expired storyboard URL, refresh the storyboard through the official episode player metadata."
+    }
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/abstraction-animiniz",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractPomni.png?v=1780353721"
+  ],
+  "sourceKind": "Produit dérivé officiel",
+  "visualReview": {
+    "reviewer": "generate_pomni_kinger",
+    "status": "accepted",
+    "observations": [
+      "A forceful wide right-facing lunge with both arms sweeping forward and down, distinct from the straight-palm light attack.",
+      "One crystal arm and one blue glove, normal red rear shoe and opposite crystal front foot, half-crystal hat/face retained.",
+      "Whole body and crystal tips inside the canvas; no added weapon, figure or detached pieces."
+    ],
+    "scope": "Approved reference identity and native sprite fit; no canonical episode certification."
+  },
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "alpha12Bounds": [
+    112,
+    6,
+    1277,
+    1012
+  ],
+  "fullyTransparentPixels": 1049478,
+  "sha256": "456284aba2350d9e20f9916592d086d2003bc2ba261f0f71014996f1fd83d3ac",
+  "bytes": 1784330,
+  "nativeCopyVerified": true,
+  "createdAt": "2026-11-20T08:20:27.168542+00:00"
+}

@@ -306,10 +306,11 @@ export function drawFinisherScene(ctx, state, entry, frame, { reducedMotion = fa
   ctx.save();
   rect(ctx,0,0,1280,84,'#101222');rect(ctx,0,626,1280,94,'#101222');
   rect(ctx,0,82,1280,2,'#d2b478');rect(ctx,0,626,1280,2,'#d2b478');
-  text(ctx,'FINALE DE SPECTACLE',640,23,13,'#c8b086');
+  const friendship = entry.presentation === 'friendship';
+  text(ctx,friendship ? 'NUMÉRO D’AMITIÉ' : 'FINALE DE SPECTACLE',640,23,13,'#c8b086');
   text(ctx,entry.title || 'Rappel',640,55,28,'#f0e3cb','center',1150);
   text(ctx,view.beat?.title || 'Le rideau se referme',640,656,22,'#f0e3cb','center',1120);
-  text(ctx,'CRÉATION ENCORE · ' + (definition.name || entry.fighterId),640,692,13,'#b9afc7','center',1120);
+  text(ctx,(friendship ? 'AMITIÉ DE SPECTACLE' : 'CRÉATION ENCORE') + ' · ' + (definition.name || entry.fighterId),640,692,13,'#b9afc7','center',1120);
   ctx.restore();
   return view;
 }

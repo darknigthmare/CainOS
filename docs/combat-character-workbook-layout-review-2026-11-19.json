@@ -1,0 +1,50 @@
+{
+  "schema": "encore-character-workbook-layout-review/v1",
+  "method": "Read-only OOXML comparison; no workbook cells or styles modified by this check.",
+  "inputWorkbookSHA256": "5c63335a7506563bb4954ee344d1d6be1a88c4433a0366c6fceb41b1396c1fbf",
+  "outputWorkbookSHA256": "74753dadc25049d4d967aea3b7df11a7f30f240b27270d1156824c49fdafcadc",
+  "sheetOrderPreserved": true,
+  "sheets": 11,
+  "existingCellStylesCompared": 74737,
+  "existingRowHeightsChecked": 6409,
+  "styleDifferences": [],
+  "layoutDifferences": [],
+  "nonSummaryFormulaDifferences": [],
+  "intentionalChanges": "Appended Production, QA and References rows; reference footer moved by 36 rows; edited-row heights only increase; summary formulas extend through appended rows.",
+  "pass": true,
+  "createdAt": "2026-11-19T21:58:27.749824+00:00",
+  "visualInspection": {
+    "reviewed": true,
+    "views": [
+      {
+        "file": "docs/images/character-workbook-2026-11-19/summary.png",
+        "sha256": "fbcd7fa5c17919a2b159efe7c4933fc5c06c38a6e9b2ef34f7254799b5a2eaea"
+      },
+      {
+        "file": "docs/images/character-workbook-2026-11-19/roster.png",
+        "sha256": "8e54a2a371120b0fb0e524a8fabdca68ab404e63961a0a54a59ecd83d0aa9a78"
+      },
+      {
+        "file": "docs/images/character-workbook-2026-11-19/atlas.png",
+        "sha256": "a27a3ced73c37eb44a47d44b34dc8080968f1e805984dee64c13b1f0572541d6"
+      },
+      {
+        "file": "docs/images/character-workbook-2026-11-19/coverage.png",
+        "sha256": "e36cb39b25f188dc28d46ca668411d5740314835cbf49029de4846aded054b62"
+      },
+      {
+        "file": "docs/images/character-workbook-2026-11-19/series.png",
+        "sha256": "a1063f17d42a5ed35f2c564230d470d6529588efcaf14ea1fe0a5b23fee55ced"
+      },
+      {
+        "file": "docs/images/character-workbook-2026-11-19/qa-all-current.png",
+        "sha256": "62c890b7a124a1988f7b35a5ac7e43cdcb7b1ae71992f196c41993ff892d01c2"
+      },
+      {
+        "file": "docs/images/character-workbook-2026-11-19/references-tail.png",
+        "sha256": "b63e77a909fe967b3418f6284f10a58ebad1adffb9f0c964d3036a4200663bcf"
+      }
+    ],
+    "note": "Summary, character tables, added coverage/research rows, all six new QA records and relocated reference legend reviewed. Final full QA and reference views rendered from the exported workbook after reimport."
+  }
+}

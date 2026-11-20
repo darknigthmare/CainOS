@@ -1,0 +1,56 @@
+{
+  "schema": "encore-browser-attempt/v1",
+  "sessionDate": "2026-11-20",
+  "status": "blocked_before_page_navigation",
+  "executed": true,
+  "startedAt": "2026-11-20T04:18:02.568840+00:00",
+  "completedAt": "2026-11-20T04:18:34.981032+00:00",
+  "method": "Five Playwright suites launched with system /usr/bin/chromium, headless, --no-sandbox and --disable-dev-shm-usage.",
+  "failure": "FATAL:chrome/browser/process_singleton_posix.cc:297 Check failed: . socket() failed: Operation not permitted (1)",
+  "browserAssertionsExecuted": 0,
+  "scope": "Local environment capability attempts performed during this continuation, before the fifteen-appearance asset pack was complete. Chromium failed before opening any page; these attempts do not certify the new artwork, browser interactions, DOM, inputs, service worker, sound or physical peripherals. Remote CI results are tracked separately for their exact commit.",
+  "attempts": [
+    {
+      "test": "tests/combat-browser.mjs",
+      "exitCode": 1,
+      "executable": "/usr/bin/chromium",
+      "log": "docs/art-generation/cast-continuation-20261120/browser-logs/combat-browser.system-chromium.log",
+      "sha256": "44d9aabffaf6641fe5734d0bfbc4232a22eac003ea8d1d38d687d5b7d41661cb",
+      "browserBlockedBeforeNavigation": true
+    },
+    {
+      "test": "tests/combat-accessibility-browser.mjs",
+      "exitCode": 1,
+      "executable": "/usr/bin/chromium",
+      "log": "docs/art-generation/cast-continuation-20261120/browser-logs/combat-accessibility-browser.system-chromium.log",
+      "sha256": "394f3449425dbff55e1bd600e8e523f5b960455abd6329e5f778262b28ac0110",
+      "browserBlockedBeforeNavigation": true
+    },
+    {
+      "test": "tests/combat-crossovers-browser.mjs",
+      "exitCode": 1,
+      "executable": "/usr/bin/chromium",
+      "log": "docs/art-generation/cast-continuation-20261120/browser-logs/combat-crossovers-browser.system-chromium.log",
+      "sha256": "727d8395c6575f07b202066420de0cde4c0e8da3698f4c34d5075168848ccca2",
+      "browserBlockedBeforeNavigation": true
+    },
+    {
+      "test": "tests/combat-profile-recovery-browser.mjs",
+      "exitCode": 1,
+      "executable": "/usr/bin/chromium",
+      "log": "docs/art-generation/cast-continuation-20261120/browser-logs/combat-profile-recovery-browser.system-chromium.log",
+      "sha256": "f6eb758b78ca8324e32659c178b20715880e2c7c3588345350110664b5aeeff6",
+      "browserBlockedBeforeNavigation": true
+    },
+    {
+      "test": "tests/combat-encore-browser.mjs",
+      "exitCode": 1,
+      "executable": "/usr/bin/chromium",
+      "log": "docs/art-generation/cast-continuation-20261120/browser-logs/combat-encore-browser.system-chromium.log",
+      "sha256": "7c9f9d03788f73934a5956c85c2ec926bf5820c6068438ea60f86886e745db8a",
+      "browserBlockedBeforeNavigation": true
+    }
+  ],
+  "observedProcessLogTimestamp": "1120/051832.397983",
+  "timestampNote": "Raw Chromium log stamp; timezone was not independently recorded. Execution UTC timestamps above come from the validation runner."
+}

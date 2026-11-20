@@ -1,0 +1,34 @@
+{
+  "id": "presidentpomni-selection",
+  "appearanceId": "presidentpomni",
+  "slot": "selection",
+  "file": "assets/encore/selection/presidentpomni.png",
+  "sourceGenerationId": "exec-2513ae03-40b1-4428-b210-f576bca14ec3",
+  "method": "image_gen.imagegen",
+  "sourceURLs": [
+    "https://glitchproductions.store/products/digital-circus-animiniz-costume-adventure-series"
+  ],
+  "referencePaths": [
+    "research/costume-83.png",
+    "assets/encore/selection/pomni.webp"
+  ],
+  "prompt": "Use case: stylized-concept. Asset type: individual full-body fighter selection illustration for Digital Circus Encore. Create ONE President Pomni, faithful to the outfit shown in reference image 1 (official GLITCH President Pomni figurine), drawn in the crisp clean 2D cel-shaded game style of reference image 2 (existing Pomni sprite). Reference 1 controls outfit and colors only; reference 2 controls the recognizable adult cartoon character proportions, large expressive white face, brown bob with side locks, slender arms and legs. Do not copy the figurine's compressed toy anatomy. President costume: muted medium blue tailored jacket with lapels, matching full-length trousers, white dress shirt, pale gray tie, white cartoon gloves, plain rounded black shoes. Preserve the red and royal-blue segmented jester hat with yellow band and two yellow pompons, red/blue pinwheel irises, black eye outlines, rosy cheek spots. Pose: standing upright three-quarter view slightly facing screen right, anxious friendly expression, both gloved hands making a small peace-sign gesture near upper chest, full legs and both shoes visible. Well-defined silhouette and restrained fabric folds; show exact suit over the body, no jester bodysuit below suit. Genuine transparent RGBA background, no floor, ground shadow, glow, aura, scenery, props, podium, text, labels, brand marks, gold supporting ornament, second character, inset or sprite sheet. Single subject centered with wide transparent safety margin on every edge including hat tips and shoes. Detailed 2D game art, no photograph, no plush, no 3D toy render. Output one whole-body image.",
+  "sha256": "8b512c0e52401661c79ee82f74f54807384249cfa309e8a480f7161b0abdf631",
+  "dimensions": [
+    955,
+    1647
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "bboxAlpha12": [
+    24,
+    13,
+    933,
+    1635
+  ],
+  "bytes": 941587,
+  "visualReview": "Revue individuelle et composition avec alpha natif sur fond sombre : un personnage entier, accessoires contenus, costume et proportions cohérents entre les onze vues. Pose statique originale pour le jeu."
+}

@@ -28,6 +28,13 @@ const archive = tables.flatMap(table => Object.entries(table.map).map(([id, [col
   provenance: 'Archive CainOS. Le libellé du projet ne constitue pas une validation canonique.',
   status: 'Visuel CainOS existant',
 })));
+// Preserve the historical ID/order while retiring the unrelated base-atlas
+// Abel concept. The OS uses the same explicit abelfullbody alias.
+const abel = archive.find(item => item.id === 'abel');
+const abelMannequin = archive.find(item => item.id === 'abelfullbody');
+if (!abel || !abelMannequin) throw new Error('Missing Abel mannequin reference');
+abel.sprite = { ...abelMannequin.sprite };
+abel.provenance = 'Mannequin articulé souriant : identité corrigée depuis la cellule abelfullbody de CainOS. Adaptation illustrée du projet ; proportions non certifiées sur une image d’épisode.';
 if (new Set(archive.map(item => item.id)).size !== archive.length) throw new Error('Duplicate atlas ID');
 for (const item of archive) await fs.access(path.resolve(root, 'combat', item.sprite.src));
 await fs.mkdir(path.join(root, 'combat'), { recursive: true });

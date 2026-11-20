@@ -1,0 +1,101 @@
+{
+  "schema": "encore-prop-integration-verification/v1",
+  "status": "passed_with_browser_environment_limitation",
+  "scope": "Six recovered native props integrated into existing stages; no new character image generation.",
+  "assets": {
+    "count": 6,
+    "bytes": 7488610,
+    "nativeCopiesVerified": 6,
+    "inventory": "docs/art-generation/props-integration-20261120/native-inventory.json",
+    "sha256": "de502c91fd8a9297f85890086dc81218f4a9ff99d0dcaeb762cc5bbbab8b3eb2"
+  },
+  "qa": {
+    "command": "npm run qa",
+    "startedAt": "2026-11-20T06:59:45.871948+00:00",
+    "finishedAt": "2026-11-20T07:00:32.927389+00:00",
+    "exitCode": 0,
+    "counts": {
+      "tests": 401,
+      "pass": 401,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "log": "docs/art-generation/props-integration-20261120/qa.log",
+    "logSHA256": "14f9c4d4431a9e35a508eaae835aea542134ad151449c88d8ec5a76c484807a1"
+  },
+  "builds": [
+    {
+      "directory": "dist",
+      "nativePropsVerified": 6,
+      "runtimeFilesVerified": 4,
+      "completed": true
+    },
+    {
+      "directory": "dist-combat",
+      "nativePropsVerified": 6,
+      "runtimeFilesVerified": 4,
+      "completed": true
+    }
+  ],
+  "canvas": {
+    "report": "docs/art-generation/props-integration-20261120/review/canvas-review.json",
+    "sha256": "460ddf46ef0b05093b505e4ec9784e5fb13d87d44297247f75aec9889ac15ac1",
+    "counts": {
+      "sources": 6,
+      "activeProps": 6,
+      "scenes": 6,
+      "cameraViews": 18,
+      "newNativeBytes": 7488610
+    },
+    "baselineHashesVerified": true,
+    "visualReview": {
+      "reviewer": "root; ci_and_publication for the final orbital placement",
+      "result": "passed",
+      "notes": "Six native props viewed on dark and light backgrounds, six stage compositions and before/after frames reviewed. Orbital pedestal moved down 18 pixels to sit on the platform. Source pixels unchanged. Props remain peripheral and are rendered behind actors."
+    }
+  },
+  "browser": {
+    "schema": "encore-prop-browser-attempt/v1",
+    "startedAt": "2026-11-20T07:03:04.801640+00:00",
+    "completedAt": "2026-11-20T07:03:05.808361+00:00",
+    "command": "node tests/combat-stage-art-browser.mjs",
+    "executable": "/usr/bin/chromium",
+    "serverStarted": true,
+    "serverError": null,
+    "exitCode": 1,
+    "passedChecks": 0,
+    "status": "blocked_before_page_navigation",
+    "failure": "Chromium socket() failed: Operation not permitted (1)",
+    "log": "docs/art-generation/props-integration-20261120/browser-attempt.log",
+    "logSHA256": "c773e5b1246610f6f1a8f286dc55a22d3c32c7e4078b824adb4e8313fe50a820",
+    "testSHA256": "14a88ed23b7a3b91a855e7d2b6a49cd31e4c4b12b87ead7a607c9375764d00d1"
+  },
+  "offline": {
+    "images": 5491,
+    "bytes": 2724652669,
+    "artVersion": "dbc2d48af8cbe42e",
+    "version": "0.7.0-fb6e3148b501"
+  },
+  "sourceHashes": {
+    "combat/stage-parallax.mjs": "1e01fa0b4932f0e670bb6fa746c48b57de0c726a5637891e68427a161aecc77d",
+    "combat/offline-manifest.mjs": "5c1004fe49b817137070ffb0304b7e61c1412a5017e2808e901e6c1a8c36cc10",
+    "combat/render.mjs": "91cdc8a8a4b5298644809714aa7e53219e1266e2ffc95478194a699a7bc1212f",
+    "combat/engine.mjs": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
+    "scripts/render-combat-prop-review.mjs": "15232ab0880bf09fd9edc56b537befb1abb42a11aaa50dabfe8a958c8fabbf0e",
+    "tests/combat-stage-art-browser.mjs": "14a88ed23b7a3b91a855e7d2b6a49cd31e4c4b12b87ead7a607c9375764d00d1",
+    "docs/art-generation/cast-continuation-20261120/generation-resume.json": "2ca4585a5e30eba98e9f044e40d637ef38d5a52912c09890efb85d503985cbe9",
+    "docs/art-generation/cast-continuation-20261120/appearance-plan.json": "f95e680d701d0130c4ab6830f3502e8e1866159f039970b2637014ffa90f4253"
+  },
+  "preservedCharacterGeneration": {
+    "acceptedNativeImages": 102,
+    "pendingPoses": 63,
+    "generationServiceResetUTC": "2026-11-20T08:08:33Z"
+  },
+  "limitations": [
+    "Local Chromium is blocked before navigation; six new browser prop scenarios await CI for this revision.",
+    "Original fan-game props and stage compositions; no canonical 1:1 certification.",
+    "Workbook recovery is tracked separately."
+  ]
+}

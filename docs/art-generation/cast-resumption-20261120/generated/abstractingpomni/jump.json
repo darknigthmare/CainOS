@@ -1,0 +1,77 @@
+{
+  "schema": "encore-native-art-resumption/v1",
+  "method": "image_gen.imagegen",
+  "episodeFidelityClaim": false,
+  "checkpointFile": "docs/art-generation/cast-continuation-20261120/generation-resume.json",
+  "transparent_background": true,
+  "nativeFacing": "right",
+  "status": "accepted_native",
+  "includedInRuntime": false,
+  "appearanceId": "abstractingpomni",
+  "slot": "jump",
+  "id": "abstractingpomni-jump",
+  "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingpomni/jump.png",
+  "targetFile": "assets/encore/poses/abstractingpomni/jump.png",
+  "sourceGenerationId": "exec-70d3b12d-4e32-43b7-ac50-af82bf1d63ba",
+  "nativeSourceFile": "/workspace/scratch/5f5114b49696/generated_images/exec-70d3b12d-4e32-43b7-ac50-af82bf1d63ba.png",
+  "prompt": "Use case: identity-preserve. Asset type: ONE individual full-body transparent 2D fighting-game action sprite of ABSTRACTING POMNI. Reference 1 is the approved strict design lock for silhouette, proportions, exact transformation patches, eyes, colours and polished cel shading. Reference 2 supplies official design details only; do not imitate its squat toy proportions, setting or lighting. Slender Pomni with red-blue jester hat and suit, yellow trims/buttons, pale face with one normal red-blue pinwheel iris and brown bob. Opposing half of face/hat is dark angular crystal with flat pastel concentric eyes; one arm/hand is crystal, opposite hand is blue glove. Normal RED shoe and opposing CRYSTAL eye-bearing foot MUST stay on the same anatomical sides as the approved selection. Do not swap, mirror or redistribute the transformation. Preserve all individual eye-bearing hat growths and asymmetric patches; not fully abstracted. Create a genuinely distinct natural action pose, not a mirrored/cropped selection image. Every limb, crown/hat/ear tip, attached mask and crystal spike must fit fully inside clear transparent margins on ALL sides. One connected character, crisp detailed 2D art on true transparent RGBA; no scenery, floor, cast shadow, aura, glow, particles, labels, watermark, inset or duplicate. ANATOMICAL SIDE LOCK: the normal RED shoe belongs to the same anatomical side as the CRYSTAL arm. The eye-bearing CRYSTAL foot belongs to the same anatomical side as the BLUE-gloved hand. Trace the legs from their hips and preserve that assignment even when the feet cross or change screen position. POSE: JUMP toward screen RIGHT: full figure suspended in midair with both legs off the ground, one knee raised and the other tucked backward, arms spread to balance. Keep all silhouette details and both feet visible; no ground, shadow or motion effect.",
+  "checkpointPrompt": "Use case: identity-preserve. Asset type: ONE individual full-body transparent 2D fighting-game action sprite of ABSTRACTING POMNI. Reference 1 is the approved strict design lock for silhouette, proportions, exact transformation patches, eyes, colours and polished cel shading. Reference 2 supplies official design details only; do not imitate its squat toy proportions, setting or lighting. Slender Pomni with red-blue jester hat and suit, yellow trims/buttons, pale face with one normal red-blue pinwheel iris and brown bob. Opposing half of face/hat is dark angular crystal with flat pastel concentric eyes; one arm/hand is crystal, opposite hand is blue glove. Normal RED shoe and opposing CRYSTAL eye-bearing foot MUST stay on the same anatomical sides as the approved selection. Do not swap, mirror or redistribute the transformation. Preserve all individual eye-bearing hat growths and asymmetric patches; not fully abstracted. Create a genuinely distinct natural action pose, not a mirrored/cropped selection image. Every limb, crown/hat/ear tip, attached mask and crystal spike must fit fully inside clear transparent margins on ALL sides. One connected character, crisp detailed 2D art on true transparent RGBA; no scenery, floor, cast shadow, aura, glow, particles, labels, watermark, inset or duplicate. POSE: JUMP toward screen RIGHT: full figure suspended in midair with both legs off the ground, one knee raised and the other tucked backward, arms spread to balance. Keep all silhouette details and both feet visible; no ground, shadow or motion effect.",
+  "referencePaths": [
+    "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingpomni/selection.png",
+    "docs/art-generation/cast-continuation-20261120/references/official-AbstractPomni.png"
+  ],
+  "portableReferences": [
+    {
+      "position": 1,
+      "kind": "repository-asset",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingpomni/selection.png",
+      "sha256": "6e069cab81e5ee75d6b98c8fbca2a8ba7fda6949cb78923fd0e2b8a08168ee4a",
+      "bytes": 1217005
+    },
+    {
+      "position": 2,
+      "kind": "official-source-reference",
+      "file": "docs/art-generation/cast-continuation-20261120/references/official-AbstractPomni.png",
+      "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractPomni.png?v=1780353721",
+      "pageUrl": "https://glitchproductions.store/products/abstraction-animiniz",
+      "sha256": "914230b23c0c5c733c68d2e2e1f96e94d860eb1d2eacbb5a41d1c9824e27de42",
+      "bytes": 3429140,
+      "restoreInstruction": "The exact reference is archived in this repository. If unavailable, download the named official image URL, verify and visually inspect it before generation. For an expired storyboard URL, refresh the storyboard through the official episode player metadata."
+    }
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/abstraction-animiniz",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractPomni.png?v=1780353721"
+  ],
+  "sourceKind": "Produit dérivé officiel",
+  "visualReview": {
+    "reviewer": "generate_pomni_kinger",
+    "status": "accepted",
+    "observations": [
+      "Airborne right-facing leap with far knee raised, near leg bent back and both arms spread.",
+      "Normal red shoe remains connected to the near leg on the crystal-arm side; far raised leg ends in the eye-bearing crystal foot.",
+      "Approved partial-crystal head and arm design retained, whole figure and extremities inside transparent margins, no ground or effects."
+    ],
+    "scope": "Approved reference identity and native sprite fit; no canonical episode certification."
+  },
+  "dimensions": [
+    1199,
+    1312
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "alpha12Bounds": [
+    13,
+    8,
+    1179,
+    1177
+  ],
+  "fullyTransparentPixels": 928804,
+  "sha256": "1b4be4cc9c306a0c338a684ceec43cd0c5958423438f75868b1aa82e0f168383",
+  "bytes": 1233883,
+  "nativeCopyVerified": true,
+  "createdAt": "2026-11-20T08:29:50.840898+00:00"
+}

@@ -1,0 +1,109 @@
+{
+  "schema": "encore-catalog-visual-review/v1",
+  "createdAt": "2026-11-20T11:03:00.509194+00:00",
+  "reviewer": "root",
+  "method": "Visual inspection of all ten production-Canvas action contact sheets and the ten-portrait overview at their exported review scale.",
+  "counts": {
+    "appearances": 10,
+    "actions": 90,
+    "portraits": 10
+  },
+  "status": "accepted_at_review_scale",
+  "portraitOverview": {
+    "file": "docs/art-generation/cast-next-20261120/review/overview.jpg",
+    "sha256": "b6f023efa385a7e6e6b7b6b18a06ea8b9bc720fc85186e3740be2cf0b7f79e7c"
+  },
+  "appearances": [
+    {
+      "appearanceId": "jaxsuitpomni",
+      "sheet": "docs/art-generation/cast-next-20261120/review/jaxsuitpomni/actions-jaxsuitpomni.jpg",
+      "sheetSha256": "e92451fc628fbf98bfe555f6958d8c11e40573b90ce0cb761cf99062d866725c",
+      "actionsReviewed": 9,
+      "status": "accepted_at_review_scale",
+      "observation": "Combinaison lapin mauve, salopette rose et accessoire conservés; neuf silhouettes distinctes, oreilles et pieds visibles."
+    },
+    {
+      "appearanceId": "noirribbit",
+      "sheet": "docs/art-generation/cast-next-20261120/review/noirribbit/actions-noirribbit.jpg",
+      "sheetSha256": "cabfa3e563aebd6ca1cac324add670d20991d47ee63553f1e5f2cad391ba6411",
+      "actionsReviewed": 9,
+      "status": "accepted_at_review_scale",
+      "observation": "Palette de gris, manteau ceinturé, nœud et silhouette de grenouille cohérents; les poses basses restent dans le cadre."
+    },
+    {
+      "appearanceId": "kaufmosuitribbit",
+      "sheet": "docs/art-generation/cast-next-20261120/review/kaufmosuitribbit/actions-kaufmosuitribbit.jpg",
+      "sheetSha256": "6e987559e001a52a46e17432702f929e9d68fbc21ed6ebc08c0e902e17daab89",
+      "actionsReviewed": 9,
+      "status": "accepted_at_review_scale",
+      "observation": "Combinaison jaune, col bleu, boutons et chaussures rouges cohérents; les membres allongés restent lisibles."
+    },
+    {
+      "appearanceId": "intermissioncaine",
+      "sheet": "docs/art-generation/cast-next-20261120/review/intermissioncaine/actions-intermissioncaine.jpg",
+      "sheetSha256": "6a1caa44c7a75188734246d17db6fe9b51572187f11ed2de87801a2ebe2bd867",
+      "actionsReviewed": 9,
+      "status": "accepted_at_review_scale",
+      "observation": "Mâchoire flottante, yeux, chapeau, étoiles et quatre gants flottants conservés; absence de corps humain intentionnelle."
+    },
+    {
+      "appearanceId": "showtimepomni",
+      "sheet": "docs/art-generation/cast-next-20261120/review/showtimepomni/actions-showtimepomni.jpg",
+      "sheetSha256": "cef6aa192f716fb6347ac695c161f3e739f3bf7768bf425c5c54bd67009b4935",
+      "actionsReviewed": 9,
+      "status": "accepted_at_review_scale",
+      "observation": "Body et chaussures dorés, membres clairs, plumes crème et bonnet rouge/bleu cohérents; les poses de saut, accroupissement et victoire complètent la série. Expressions adaptées, notamment les yeux, et non reproduction exacte de la figurine."
+    },
+    {
+      "appearanceId": "bowlingpinragatha",
+      "sheet": "docs/art-generation/cast-next-20261120/review/bowlingpinragatha/actions-bowlingpinragatha.jpg",
+      "sheetSha256": "938e324c3e83f854ad3ce6160e56a0ca4bdadaa292eed61e884539119035c887",
+      "actionsReviewed": 9,
+      "status": "accepted_at_review_scale",
+      "observation": "Silhouette de quille, cheveux rouges et œil bouton conservés; aucun bras ou jambe ajouté. Portrait source tourné vers la gauche, poses de combat vers la droite."
+    },
+    {
+      "appearanceId": "ringmastercaine",
+      "sheet": "docs/art-generation/cast-next-20261120/review/ringmastercaine/actions-ringmastercaine.jpg",
+      "sheetSha256": "0ac58f2d24e9c846c7de0208b4f9aa644fb2149d837624063cada6369590415f",
+      "actionsReviewed": 9,
+      "status": "accepted_at_review_scale",
+      "observation": "Habit noir, nœud rouge, haut-de-forme et canne cohérents; le haut du chapeau et les extrémités restent visibles."
+    },
+    {
+      "appearanceId": "strongmanorbsman",
+      "sheet": "docs/art-generation/cast-next-20261120/review/strongmanorbsman/actions-strongmanorbsman.jpg",
+      "sheetSha256": "b4c5512a6ae33b92e2df1f2c51301de7f52c9a40abe038ebf6d60ed6482a56f0",
+      "actionsReviewed": 9,
+      "status": "accepted_at_review_scale",
+      "observation": "Corps en sphères bleues et haltère à masses rouges conservés; mains, masses et pieds visibles dans les neuf poses."
+    },
+    {
+      "appearanceId": "stagehandbubble",
+      "sheet": "docs/art-generation/cast-next-20261120/review/stagehandbubble/actions-stagehandbubble.jpg",
+      "sheetSha256": "724630e18a9601b0c500d9b238d382c273ad71b60a0fccf8658e3bf089114ca5",
+      "actionsReviewed": 9,
+      "status": "accepted_at_review_scale",
+      "observation": "Bulle dentée, langue, chapeau et caméra conservés; silhouette volontairement petite dans le moteur et sans membres humains."
+    },
+    {
+      "appearanceId": "bugtamerkinger",
+      "sheet": "docs/art-generation/cast-next-20261120/review/bugtamerkinger/actions-bugtamerkinger.jpg",
+      "sheetSha256": "ee31c29d265053255bc3a7915a5fb8b2de6003a800d2516ea8860568a18c8152",
+      "actionsReviewed": 9,
+      "status": "accepted_at_review_scale",
+      "observation": "Pièce de roi, robe violette à hermine, casque-seau métallique à anse, cerceau rayé à flammes et papillon, et deux mains détachées cohérents; absence de jambes intentionnelle. Les originaux walk et victory sont propres une fois composités avec leur alpha."
+    }
+  ],
+  "observations": [
+    "No missing character part, unintended solid background, or clipped silhouette was observed on the contact sheets.",
+    "Source-over alpha compositing preserves the native drawings; hidden RGB under transparent pixels is not a rendered halo.",
+    "Ground shadows, action trails, victory rings and crouch markers visible in the sheets are production-renderer effects."
+  ],
+  "limitations": [
+    "Static pose and portrait review does not establish full animation cycles or canonical scene fidelity.",
+    "Contact sheets do not replace inspection of every native PNG at full resolution.",
+    "Official product names identify costume references; some action expressions and proportions are original game adaptations.",
+    "The browser suites remain blocked locally before navigation and must be checked on the published commit."
+  ]
+}

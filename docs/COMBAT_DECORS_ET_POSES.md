@@ -44,7 +44,7 @@ Les plans lointain, médian et proche partagent un cadre de 3840 × 2160. Les de
 
 ## Poses par apparence
 
-Les nouvelles poses sont des dessins isolés, orientés vers la droite. Leur grand côté mesure 2160 pixels pour 489 fichiers et 3840 pixels pour les 15 autres. Le moteur les retourne pour le joueur de droite et règle l’appui, la durée et les transitions. L’attaque illustrée couvre le coup léger. Les autres techniques conservent leur présentation propre. Les sept combattants qui disposent déjà d’une planche animée combinent ces poses avec leurs cellules d’origine. Les 51 tenues ont chacune les huit dessins indiqués ci-dessous. [États de présentation](../combat/render-poses.mjs)
+Les nouvelles poses sont des dessins isolés, orientés vers la droite. Leur grand côté mesure 2160 pixels pour 489 fichiers et 3840 pixels pour les 15 autres. Le moteur les retourne pour le joueur de droite et règle l’appui, la durée et les transitions. Ce lot documente l’attaque légère. Le lot suivant présente les [quatorze poses de coup lourd, les arènes et les costumes crossover](COMBAT_CROSSOVERS_GLITCH.md#galerie-des-ressources-jouables). Les sept combattants qui disposent déjà d’une planche animée combinent ces poses avec leurs cellules d’origine. Les 51 tenues ont chacune les huit dessins indiqués ci-dessous. [États de présentation](../combat/render-poses.mjs)
 
 ### Apparences originales
 

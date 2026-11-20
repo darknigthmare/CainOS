@@ -1,0 +1,75 @@
+{
+  "schema": "encore-native-art-resumption/v1",
+  "id": "abstractingzooble-crouch",
+  "appearanceId": "abstractingzooble",
+  "slot": "crouch",
+  "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingzooble/crouch.png",
+  "targetFile": "assets/encore/poses/abstractingzooble/crouch.png",
+  "method": "image_gen.imagegen",
+  "sourceGenerationId": "exec-1715ea9f-9865-4e96-9581-47819fa6dd03",
+  "nativeSourceFile": "/workspace/scratch/5f5114b49696/generated_images/exec-1715ea9f-9865-4e96-9581-47819fa6dd03.png",
+  "prompt": "Use case: identity-preserve. Asset type: ONE individual full-body transparent 2D fighting-game action sprite of ABSTRACTING ZOOBLE. Reference 1 is the approved strict design lock for silhouette, proportions, exact transformation patches, eyes, colours and polished cel shading. Reference 2 supplies official design details only; do not imitate its squat toy proportions, setting or lighting. Mouthless colourful geometric Zooble: pink triangle head half crystalline with one normal white eye and one concentric pastel crystal eye, checkered antenna and crystal lightning crest, yellow spotted oval torso/cyan chest ring, pink rear wing, red curly arm with crystal hand and opposite orange/yellow arm, one normal long blue leg/foot and one crystal lower foot with rear eye-bearing growth. Preserve exact approved asymmetric assembly, no mouth or extra limbs. Create a genuinely distinct natural action pose, not a mirrored/cropped selection image. Every limb, crown/hat/ear tip, attached mask and crystal spike must fit fully inside clear transparent margins on ALL sides. One connected character, crisp detailed 2D art on true transparent RGBA; no scenery, floor, cast shadow, aura, glow, particles, labels, watermark, inset or duplicate. POSE: CROUCH defense facing screen RIGHT: bend both knees deeply and lower the hips, torso leaning forward, both hands held compactly near face/chest, both feet remain planted and separated. Keep all details within canvas.",
+  "transparent_background": true,
+  "referencePaths": [
+    "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingzooble/selection.png",
+    "docs/art-generation/cast-continuation-20261120/references/official-AbstractedZooble_04.png"
+  ],
+  "portableReferences": [
+    {
+      "position": 1,
+      "kind": "repository-asset",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingzooble/selection.png",
+      "sha256": "31670c334103a7ed2b5b21302af2268b9a6943d7f388c79c8201b1d516274dad",
+      "bytes": 1154706
+    },
+    {
+      "position": 2,
+      "kind": "official-source-reference",
+      "file": "docs/art-generation/cast-continuation-20261120/references/official-AbstractedZooble_04.png",
+      "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedZooble_04.png?v=1780353721",
+      "pageUrl": "https://glitchproductions.store/products/abstraction-animiniz",
+      "sha256": "fd7be4a82e398bbe4b3682f9decff64dce07b527f8e8aa98bd646a8380c12bfa",
+      "bytes": 2987776,
+      "restoreInstruction": "The exact reference is archived in this repository. If unavailable, download the named official image URL, verify and visually inspect it before generation. For an expired storyboard URL, refresh the storyboard through the official episode player metadata."
+    }
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/abstraction-animiniz",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedZooble_04.png?v=1780353721"
+  ],
+  "sourceType": "official-merchandise",
+  "episodeFidelityClaim": false,
+  "sha256": "af562343875b8ef6754128b7578b7f6207b230c3cb6f7a0d27401c17b085989a",
+  "bytes": 1066986,
+  "dimensions": [
+    1312,
+    1199
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "alpha12Bounds": [
+    150,
+    31,
+    1171,
+    1175
+  ],
+  "nativeCopyVerified": true,
+  "nativePixelsUnmodified": true,
+  "createdAt": "2026-11-20T08:42:15.305054+00:00",
+  "visualReviewAt": "2026-11-20T08:42:15.305054+00:00",
+  "visualReview": {
+    "reviewer": "generate_gangle_zooble",
+    "status": "accepted",
+    "observations": [
+      "Deep two-knee crouch facing screen right, torso inclined forward and both different hands raised compactly near the face. The two forearms overlap in the guard while remaining the red curled/crystal-hand arm and the orange/yellow-hand arm. The approved head split, distinct eyes, antennae, spotted body, one cyan ring, pink wing, crystal shoulder/back star and blue/crystal feet with rear eye growth remain present. Both feet are separated and planted; full tips and fingers are inside transparent margins."
+    ],
+    "scope": "Approved reference identity and sprite technical fit; not canonical episode certification."
+  },
+  "nativeFacing": "right",
+  "status": "accepted_native",
+  "productionStatus": "awaiting-integration",
+  "includedInRuntime": false
+}
