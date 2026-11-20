@@ -1,0 +1,933 @@
+{
+  "schema": "encore-pending-review/v1",
+  "createdAt": "2026-11-20T05:01:09.168Z",
+  "method": "@napi-rs/canvas (Skia), PNG compositing to JPEG",
+  "plan": "../appearance-plan.json",
+  "planSHA256": "f95e680d701d0130c4ab6830f3502e8e1866159f039970b2637014ffa90f4253",
+  "pendingAppearances": 9,
+  "expectedSlots": 99,
+  "availableSources": 36,
+  "missingSlots": 63,
+  "includedInRuntime": false,
+  "sourcePolicy": "All PNG bytes remain unchanged. Complete native image canvases are fitted into review cells without cropping. JPEGs are review compositions only, never game assets.",
+  "sourceHashesUnchanged": true,
+  "boards": [
+    {
+      "appearanceId": "smilingtragedygangle",
+      "name": "Gangle — sourire de tragédie",
+      "file": "smilingtragedygangle.jpg",
+      "available": 2,
+      "missing": 9,
+      "dimensions": [
+        2360,
+        1440
+      ],
+      "bytes": 210803,
+      "sha256": "69d8ddadb45cc7460cb1c4fdb7727120058bba1b9ea3508b3935677c94bda325",
+      "slots": [
+        {
+          "slot": "selection",
+          "available": true
+        },
+        {
+          "slot": "stance",
+          "available": true
+        },
+        {
+          "slot": "intro",
+          "available": false
+        },
+        {
+          "slot": "walk",
+          "available": false
+        },
+        {
+          "slot": "jump",
+          "available": false
+        },
+        {
+          "slot": "crouch",
+          "available": false
+        },
+        {
+          "slot": "attack",
+          "available": false
+        },
+        {
+          "slot": "heavy",
+          "available": false
+        },
+        {
+          "slot": "hit",
+          "available": false
+        },
+        {
+          "slot": "victory",
+          "available": false
+        },
+        {
+          "slot": "defeat",
+          "available": false
+        }
+      ]
+    },
+    {
+      "appearanceId": "abstractingpomni",
+      "name": "Pomni — abstraction partielle",
+      "file": "abstractingpomni.jpg",
+      "available": 2,
+      "missing": 9,
+      "dimensions": [
+        2360,
+        1440
+      ],
+      "bytes": 233003,
+      "sha256": "67275dcfd79d0ab5ee0828a552b2d6902ee6c732d815bf2504f9fad833a7e34b",
+      "slots": [
+        {
+          "slot": "selection",
+          "available": true
+        },
+        {
+          "slot": "stance",
+          "available": true
+        },
+        {
+          "slot": "intro",
+          "available": false
+        },
+        {
+          "slot": "walk",
+          "available": false
+        },
+        {
+          "slot": "jump",
+          "available": false
+        },
+        {
+          "slot": "crouch",
+          "available": false
+        },
+        {
+          "slot": "attack",
+          "available": false
+        },
+        {
+          "slot": "heavy",
+          "available": false
+        },
+        {
+          "slot": "hit",
+          "available": false
+        },
+        {
+          "slot": "victory",
+          "available": false
+        },
+        {
+          "slot": "defeat",
+          "available": false
+        }
+      ]
+    },
+    {
+      "appearanceId": "abstractingjax",
+      "name": "Jax — abstraction partielle",
+      "file": "abstractingjax.jpg",
+      "available": 3,
+      "missing": 8,
+      "dimensions": [
+        2360,
+        1440
+      ],
+      "bytes": 239647,
+      "sha256": "1c67dd702694a227239cdaef0bc5c31b4c48647517ef00602b8b37eea7fe681a",
+      "slots": [
+        {
+          "slot": "selection",
+          "available": true
+        },
+        {
+          "slot": "stance",
+          "available": true
+        },
+        {
+          "slot": "intro",
+          "available": true
+        },
+        {
+          "slot": "walk",
+          "available": false
+        },
+        {
+          "slot": "jump",
+          "available": false
+        },
+        {
+          "slot": "crouch",
+          "available": false
+        },
+        {
+          "slot": "attack",
+          "available": false
+        },
+        {
+          "slot": "heavy",
+          "available": false
+        },
+        {
+          "slot": "hit",
+          "available": false
+        },
+        {
+          "slot": "victory",
+          "available": false
+        },
+        {
+          "slot": "defeat",
+          "available": false
+        }
+      ]
+    },
+    {
+      "appearanceId": "abstractingragatha",
+      "name": "Ragatha — abstraction partielle",
+      "file": "abstractingragatha.jpg",
+      "available": 3,
+      "missing": 8,
+      "dimensions": [
+        2360,
+        1440
+      ],
+      "bytes": 293247,
+      "sha256": "226aa4fa5d8e3c597a4657a655d547f6b19cdf60c9631455144bd566c71bdb4a",
+      "slots": [
+        {
+          "slot": "selection",
+          "available": true
+        },
+        {
+          "slot": "stance",
+          "available": true
+        },
+        {
+          "slot": "intro",
+          "available": true
+        },
+        {
+          "slot": "walk",
+          "available": false
+        },
+        {
+          "slot": "jump",
+          "available": false
+        },
+        {
+          "slot": "crouch",
+          "available": false
+        },
+        {
+          "slot": "attack",
+          "available": false
+        },
+        {
+          "slot": "heavy",
+          "available": false
+        },
+        {
+          "slot": "hit",
+          "available": false
+        },
+        {
+          "slot": "victory",
+          "available": false
+        },
+        {
+          "slot": "defeat",
+          "available": false
+        }
+      ]
+    },
+    {
+      "appearanceId": "abstractingkinger",
+      "name": "Kinger — abstraction partielle",
+      "file": "abstractingkinger.jpg",
+      "available": 2,
+      "missing": 9,
+      "dimensions": [
+        2360,
+        1440
+      ],
+      "bytes": 227274,
+      "sha256": "2fb3ac70950f7974dbb13082b0b9c41d89900ff8172c819b2468606fb3c9c351",
+      "slots": [
+        {
+          "slot": "selection",
+          "available": true
+        },
+        {
+          "slot": "stance",
+          "available": true
+        },
+        {
+          "slot": "intro",
+          "available": false
+        },
+        {
+          "slot": "walk",
+          "available": false
+        },
+        {
+          "slot": "jump",
+          "available": false
+        },
+        {
+          "slot": "crouch",
+          "available": false
+        },
+        {
+          "slot": "attack",
+          "available": false
+        },
+        {
+          "slot": "heavy",
+          "available": false
+        },
+        {
+          "slot": "hit",
+          "available": false
+        },
+        {
+          "slot": "victory",
+          "available": false
+        },
+        {
+          "slot": "defeat",
+          "available": false
+        }
+      ]
+    },
+    {
+      "appearanceId": "abstractinggangle",
+      "name": "Gangle — abstraction partielle",
+      "file": "abstractinggangle.jpg",
+      "available": 5,
+      "missing": 6,
+      "dimensions": [
+        2360,
+        1440
+      ],
+      "bytes": 268133,
+      "sha256": "5241a8aa3e717b0a2092f01b4904f03aaca0261f6af02491c4c96fdfef03f3f4",
+      "slots": [
+        {
+          "slot": "selection",
+          "available": true
+        },
+        {
+          "slot": "stance",
+          "available": true
+        },
+        {
+          "slot": "intro",
+          "available": false
+        },
+        {
+          "slot": "walk",
+          "available": true
+        },
+        {
+          "slot": "jump",
+          "available": false
+        },
+        {
+          "slot": "crouch",
+          "available": false
+        },
+        {
+          "slot": "attack",
+          "available": true
+        },
+        {
+          "slot": "heavy",
+          "available": false
+        },
+        {
+          "slot": "hit",
+          "available": true
+        },
+        {
+          "slot": "victory",
+          "available": false
+        },
+        {
+          "slot": "defeat",
+          "available": false
+        }
+      ]
+    },
+    {
+      "appearanceId": "abstractingzooble",
+      "name": "Zooble — abstraction partielle",
+      "file": "abstractingzooble.jpg",
+      "available": 2,
+      "missing": 9,
+      "dimensions": [
+        2360,
+        1440
+      ],
+      "bytes": 220429,
+      "sha256": "5ed9343a073d1af00b83ed923bc20461dd61e3da8624462a77096bcc4dc04a8c",
+      "slots": [
+        {
+          "slot": "selection",
+          "available": true
+        },
+        {
+          "slot": "stance",
+          "available": true
+        },
+        {
+          "slot": "intro",
+          "available": false
+        },
+        {
+          "slot": "walk",
+          "available": false
+        },
+        {
+          "slot": "jump",
+          "available": false
+        },
+        {
+          "slot": "crouch",
+          "available": false
+        },
+        {
+          "slot": "attack",
+          "available": false
+        },
+        {
+          "slot": "heavy",
+          "available": false
+        },
+        {
+          "slot": "hit",
+          "available": false
+        },
+        {
+          "slot": "victory",
+          "available": false
+        },
+        {
+          "slot": "defeat",
+          "available": false
+        }
+      ]
+    },
+    {
+      "appearanceId": "abstractingqueenie",
+      "name": "Queenie — abstraction partielle",
+      "file": "abstractingqueenie.jpg",
+      "available": 9,
+      "missing": 2,
+      "dimensions": [
+        2360,
+        1440
+      ],
+      "bytes": 497885,
+      "sha256": "ec804f4e043808ddb7a7fdbdacf80aa3f719b19271afb9cb721e80cf7e92cc5e",
+      "slots": [
+        {
+          "slot": "selection",
+          "available": true
+        },
+        {
+          "slot": "stance",
+          "available": true
+        },
+        {
+          "slot": "intro",
+          "available": true
+        },
+        {
+          "slot": "walk",
+          "available": true
+        },
+        {
+          "slot": "jump",
+          "available": true
+        },
+        {
+          "slot": "crouch",
+          "available": true
+        },
+        {
+          "slot": "attack",
+          "available": true
+        },
+        {
+          "slot": "heavy",
+          "available": true
+        },
+        {
+          "slot": "hit",
+          "available": true
+        },
+        {
+          "slot": "victory",
+          "available": false
+        },
+        {
+          "slot": "defeat",
+          "available": false
+        }
+      ]
+    },
+    {
+      "appearanceId": "zoobleep5",
+      "name": "Zooble — Assemblage épisode 5",
+      "file": "zoobleep5.jpg",
+      "available": 8,
+      "missing": 3,
+      "dimensions": [
+        2360,
+        1440
+      ],
+      "bytes": 434138,
+      "sha256": "7803226885b3dc8727b9d45658ce0998c2ba72b52b63eb38aacaa6ae3f14a57c",
+      "slots": [
+        {
+          "slot": "selection",
+          "available": true
+        },
+        {
+          "slot": "stance",
+          "available": true
+        },
+        {
+          "slot": "intro",
+          "available": true
+        },
+        {
+          "slot": "walk",
+          "available": true
+        },
+        {
+          "slot": "jump",
+          "available": true
+        },
+        {
+          "slot": "crouch",
+          "available": true
+        },
+        {
+          "slot": "attack",
+          "available": true
+        },
+        {
+          "slot": "heavy",
+          "available": true
+        },
+        {
+          "slot": "hit",
+          "available": false
+        },
+        {
+          "slot": "victory",
+          "available": false
+        },
+        {
+          "slot": "defeat",
+          "available": false
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "appearanceId": "smilingtragedygangle",
+      "slot": "selection",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/smilingtragedygangle/selection.png",
+      "expectedSHA256": "8a9ea123129eedbb45a8ad17979d65e5aa0818fb7e47842169eec804b1be83de",
+      "sha256Before": "8a9ea123129eedbb45a8ad17979d65e5aa0818fb7e47842169eec804b1be83de",
+      "bytes": 1539075,
+      "sha256After": "8a9ea123129eedbb45a8ad17979d65e5aa0818fb7e47842169eec804b1be83de",
+      "unchanged": true
+    },
+    {
+      "appearanceId": "smilingtragedygangle",
+      "slot": "stance",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/smilingtragedygangle/stance.png",
+      "expectedSHA256": "9039e1f4973eed292262ff2a6f3bbd5f6440a4b45ab15fdbffd0b413cb58b696",
+      "sha256Before": "9039e1f4973eed292262ff2a6f3bbd5f6440a4b45ab15fdbffd0b413cb58b696",
+      "bytes": 767470,
+      "sha256After": "9039e1f4973eed292262ff2a6f3bbd5f6440a4b45ab15fdbffd0b413cb58b696",
+      "unchanged": true
+    },
+    {
+      "appearanceId": "abstractingpomni",
+      "slot": "selection",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingpomni/selection.png",
+      "expectedSHA256": "6e069cab81e5ee75d6b98c8fbca2a8ba7fda6949cb78923fd0e2b8a08168ee4a",
+      "sha256Before": "6e069cab81e5ee75d6b98c8fbca2a8ba7fda6949cb78923fd0e2b8a08168ee4a",
+      "bytes": 1217005,
+      "sha256After": "6e069cab81e5ee75d6b98c8fbca2a8ba7fda6949cb78923fd0e2b8a08168ee4a",
+      "unchanged": true
+    },
+    {
+      "appearanceId": "abstractingpomni",
+      "slot": "stance",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingpomni/stance.png",
+      "expectedSHA256": "2c72e2d9e681c4a13fb4b61ab8dd3be0175db4c31234f8f819ff8fb21da7f9a6",
+      "sha256Before": "2c72e2d9e681c4a13fb4b61ab8dd3be0175db4c31234f8f819ff8fb21da7f9a6",
+      "bytes": 1039618,
+      "sha256After": "2c72e2d9e681c4a13fb4b61ab8dd3be0175db4c31234f8f819ff8fb21da7f9a6",
+      "unchanged": true
+    },
+    {
+      "appearanceId": "abstractingjax",
+      "slot": "selection",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingjax/selection.png",
+      "expectedSHA256": "1182d079c3dd9649c5b43b2781be6863a3ec0b0b04fbb7d60a10fba85b6d4534",
+      "sha256Before": "1182d079c3dd9649c5b43b2781be6863a3ec0b0b04fbb7d60a10fba85b6d4534",
+      "bytes": 1405678,
+      "sha256After": "1182d079c3dd9649c5b43b2781be6863a3ec0b0b04fbb7d60a10fba85b6d4534",
+      "unchanged": true
+    },
+    {
+      "appearanceId": "abstractingjax",
+      "slot": "stance",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingjax/stance.png",
+      "expectedSHA256": "d7a4e585d3512aebbc6e3641be20ebcd7c17ef2c47f796c2d47f62d7f27cdd05",
+      "sha256Before": "d7a4e585d3512aebbc6e3641be20ebcd7c17ef2c47f796c2d47f62d7f27cdd05",
+      "bytes": 723421,
+      "sha256After": "d7a4e585d3512aebbc6e3641be20ebcd7c17ef2c47f796c2d47f62d7f27cdd05",
+      "unchanged": true
+    },
+    {
+      "appearanceId": "abstractingjax",
+      "slot": "intro",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingjax/intro.png",
+      "expectedSHA256": "e31477fe92c0676bb89a10dbd81d50d3c700077581d21f93afe452b8a7524227",
+      "sha256Before": "e31477fe92c0676bb89a10dbd81d50d3c700077581d21f93afe452b8a7524227",
+      "bytes": 1534805,
+      "sha256After": "e31477fe92c0676bb89a10dbd81d50d3c700077581d21f93afe452b8a7524227",
+      "unchanged": true
+    },
+    {
+      "appearanceId": "abstractingragatha",
+      "slot": "selection",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingragatha/selection.png",
+      "expectedSHA256": "da90f03acd382f8b46591855417a8bb29a4400088e1e4397ee7ebf11da01d181",
+      "sha256Before": "da90f03acd382f8b46591855417a8bb29a4400088e1e4397ee7ebf11da01d181",
+      "bytes": 1764655,
+      "sha256After": "da90f03acd382f8b46591855417a8bb29a4400088e1e4397ee7ebf11da01d181",
+      "unchanged": true
+    },
+    {
+      "appearanceId": "abstractingragatha",
+      "slot": "stance",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingragatha/stance.png",
+      "expectedSHA256": "3cbb0f06c0dec05794851327f35e46d6fe7015fe51c9b92eec8672e6f466fd37",
+      "sha256Before": "3cbb0f06c0dec05794851327f35e46d6fe7015fe51c9b92eec8672e6f466fd37",
+      "bytes": 1840025,
+      "sha256After": "3cbb0f06c0dec05794851327f35e46d6fe7015fe51c9b92eec8672e6f466fd37",
+      "unchanged": true
+    },
+    {
+      "appearanceId": "abstractingragatha",
+      "slot": "intro",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingragatha/intro.png",
+      "expectedSHA256": "d9fa8d0e768543170027a9af7046c58f4d334dff87fb18d9d08994cd3bc1b1f5",
+      "sha256Before": "d9fa8d0e768543170027a9af7046c58f4d334dff87fb18d9d08994cd3bc1b1f5",
+      "bytes": 1846317,
+      "sha256After": "d9fa8d0e768543170027a9af7046c58f4d334dff87fb18d9d08994cd3bc1b1f5",
+      "unchanged": true
+    },
+    {
+      "appearanceId": "abstractingkinger",
+      "slot": "selection",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingkinger/selection.png",
+      "expectedSHA256": "181107cc8433a9b53985aeae0d1389c15ab79c4f17f823f4cf1b1e5cb9f14265",
+      "sha256Before": "181107cc8433a9b53985aeae0d1389c15ab79c4f17f823f4cf1b1e5cb9f14265",
+      "bytes": 1275414,
+      "sha256After": "181107cc8433a9b53985aeae0d1389c15ab79c4f17f823f4cf1b1e5cb9f14265",
+      "unchanged": true
+    },
+    {
+      "appearanceId": "abstractingkinger",
+      "slot": "stance",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingkinger/stance.png",
+      "expectedSHA256": "5d020504e1da5dc847e1d2a65fb7c8c228e435da229214c1a9b882f4fa7ecf2c",
+      "sha256Before": "5d020504e1da5dc847e1d2a65fb7c8c228e435da229214c1a9b882f4fa7ecf2c",
+      "bytes": 1202856,
+      "sha256After": "5d020504e1da5dc847e1d2a65fb7c8c228e435da229214c1a9b882f4fa7ecf2c",
+      "unchanged": true
+    },
+    {
+      "appearanceId": "abstractinggangle",
+      "slot": "selection",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractinggangle/selection.png",
+      "expectedSHA256": "43a18bb3468f0c4283534b1c05480036aed89b78885be721d5290b463eb36ed2",
+      "sha256Before": "43a18bb3468f0c4283534b1c05480036aed89b78885be721d5290b463eb36ed2",
+      "bytes": 1626561,
+      "sha256After": "43a18bb3468f0c4283534b1c05480036aed89b78885be721d5290b463eb36ed2",
+      "unchanged": true
+    },
+    {
+      "appearanceId": "abstractinggangle",
+      "slot": "stance",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractinggangle/stance.png",
+      "expectedSHA256": "3a997f0a3fb342a08c1c48b6f358df5eb29084f0ce21295a0c0040912070f525",
+      "sha256Before": "3a997f0a3fb342a08c1c48b6f358df5eb29084f0ce21295a0c0040912070f525",
+      "bytes": 1706313,
+      "sha256After": "3a997f0a3fb342a08c1c48b6f358df5eb29084f0ce21295a0c0040912070f525",
+      "unchanged": true
+    },
+    {
+      "appearanceId": "abstractinggangle",
+      "slot": "walk",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractinggangle/walk.png",
+      "expectedSHA256": "1e26538fd02316c12d170fd00e836cdc10aa9b58ef67a1e4a31d248eea6689ce",
+      "sha256Before": "1e26538fd02316c12d170fd00e836cdc10aa9b58ef67a1e4a31d248eea6689ce",
+      "bytes": 1608030,
+      "sha256After": "1e26538fd02316c12d170fd00e836cdc10aa9b58ef67a1e4a31d248eea6689ce",
+      "unchanged": true
+    },
+    {
+      "appearanceId": "abstractinggangle",
+      "slot": "attack",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractinggangle/attack.png",
+      "expectedSHA256": "13b21d6ec77d35fdee6129c35b95e62ae04ad77f13ae7a0a73fea8d58874926c",
+      "sha256Before": "13b21d6ec77d35fdee6129c35b95e62ae04ad77f13ae7a0a73fea8d58874926c",
+      "bytes": 1619855,
+      "sha256After": "13b21d6ec77d35fdee6129c35b95e62ae04ad77f13ae7a0a73fea8d58874926c",
+      "unchanged": true
+    },
+    {
+      "appearanceId": "abstractinggangle",
+      "slot": "hit",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractinggangle/hit.png",
+      "expectedSHA256": "eed78dd62ae8c69e2abf1fba174bb3a60c3cde6a6a639a2f2f544dd2fcec9a86",
+      "sha256Before": "eed78dd62ae8c69e2abf1fba174bb3a60c3cde6a6a639a2f2f544dd2fcec9a86",
+      "bytes": 1610452,
+      "sha256After": "eed78dd62ae8c69e2abf1fba174bb3a60c3cde6a6a639a2f2f544dd2fcec9a86",
+      "unchanged": true
+    },
+    {
+      "appearanceId": "abstractingzooble",
+      "slot": "selection",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingzooble/selection.png",
+      "expectedSHA256": "31670c334103a7ed2b5b21302af2268b9a6943d7f388c79c8201b1d516274dad",
+      "sha256Before": "31670c334103a7ed2b5b21302af2268b9a6943d7f388c79c8201b1d516274dad",
+      "bytes": 1154706,
+      "sha256After": "31670c334103a7ed2b5b21302af2268b9a6943d7f388c79c8201b1d516274dad",
+      "unchanged": true
+    },
+    {
+      "appearanceId": "abstractingzooble",
+      "slot": "stance",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingzooble/stance.png",
+      "expectedSHA256": "a5966b959c81211a2de7f38abd696401643b2e8389620b77f0102fbf90a9b48d",
+      "sha256Before": "a5966b959c81211a2de7f38abd696401643b2e8389620b77f0102fbf90a9b48d",
+      "bytes": 959487,
+      "sha256After": "a5966b959c81211a2de7f38abd696401643b2e8389620b77f0102fbf90a9b48d",
+      "unchanged": true
+    },
+    {
+      "appearanceId": "abstractingqueenie",
+      "slot": "selection",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/selection.png",
+      "expectedSHA256": "3be556c8b0dda2e2b75966e4d42c57603e9b3fad5a48c8f9afa4f677ea358234",
+      "sha256Before": "3be556c8b0dda2e2b75966e4d42c57603e9b3fad5a48c8f9afa4f677ea358234",
+      "bytes": 1667501,
+      "sha256After": "3be556c8b0dda2e2b75966e4d42c57603e9b3fad5a48c8f9afa4f677ea358234",
+      "unchanged": true
+    },
+    {
+      "appearanceId": "abstractingqueenie",
+      "slot": "stance",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/stance.png",
+      "expectedSHA256": "0388151ffe5647b253cd08348926136eb7f1f6ecb1d0d2574190546b6e5e227e",
+      "sha256Before": "0388151ffe5647b253cd08348926136eb7f1f6ecb1d0d2574190546b6e5e227e",
+      "bytes": 1634820,
+      "sha256After": "0388151ffe5647b253cd08348926136eb7f1f6ecb1d0d2574190546b6e5e227e",
+      "unchanged": true
+    },
+    {
+      "appearanceId": "abstractingqueenie",
+      "slot": "intro",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/intro.png",
+      "expectedSHA256": "1a2628491d28da7cabdec638fde2f8b625ed1f785c3dfa64391d7a8ab025fc2a",
+      "sha256Before": "1a2628491d28da7cabdec638fde2f8b625ed1f785c3dfa64391d7a8ab025fc2a",
+      "bytes": 1683582,
+      "sha256After": "1a2628491d28da7cabdec638fde2f8b625ed1f785c3dfa64391d7a8ab025fc2a",
+      "unchanged": true
+    },
+    {
+      "appearanceId": "abstractingqueenie",
+      "slot": "walk",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/walk.png",
+      "expectedSHA256": "636f8a0601e4479617022237a6e614f8bfd807513e99238219e10fed7d069fe1",
+      "sha256Before": "636f8a0601e4479617022237a6e614f8bfd807513e99238219e10fed7d069fe1",
+      "bytes": 1653567,
+      "sha256After": "636f8a0601e4479617022237a6e614f8bfd807513e99238219e10fed7d069fe1",
+      "unchanged": true
+    },
+    {
+      "appearanceId": "abstractingqueenie",
+      "slot": "jump",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/jump.png",
+      "expectedSHA256": "0664f294ecc8a29ae9945ae7f4cadaf51b1b70a1e755366654e133304da5cd15",
+      "sha256Before": "0664f294ecc8a29ae9945ae7f4cadaf51b1b70a1e755366654e133304da5cd15",
+      "bytes": 1637961,
+      "sha256After": "0664f294ecc8a29ae9945ae7f4cadaf51b1b70a1e755366654e133304da5cd15",
+      "unchanged": true
+    },
+    {
+      "appearanceId": "abstractingqueenie",
+      "slot": "crouch",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/crouch.png",
+      "expectedSHA256": "64b62f6d6ed76f68c3d65415148a06618e8a03f020bb9b312bdf8fb4c3423aed",
+      "sha256Before": "64b62f6d6ed76f68c3d65415148a06618e8a03f020bb9b312bdf8fb4c3423aed",
+      "bytes": 1516608,
+      "sha256After": "64b62f6d6ed76f68c3d65415148a06618e8a03f020bb9b312bdf8fb4c3423aed",
+      "unchanged": true
+    },
+    {
+      "appearanceId": "abstractingqueenie",
+      "slot": "attack",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/attack.png",
+      "expectedSHA256": "961fa7da83647594bd153d95a1cc2631fd6c0d5a49b2d8824a936b2ede2cb56b",
+      "sha256Before": "961fa7da83647594bd153d95a1cc2631fd6c0d5a49b2d8824a936b2ede2cb56b",
+      "bytes": 1667403,
+      "sha256After": "961fa7da83647594bd153d95a1cc2631fd6c0d5a49b2d8824a936b2ede2cb56b",
+      "unchanged": true
+    },
+    {
+      "appearanceId": "abstractingqueenie",
+      "slot": "heavy",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/heavy.png",
+      "expectedSHA256": "e8cb085a106280875fe7760baefc9687d5bfbf07700bcad3daaa39f2d549bbb4",
+      "sha256Before": "e8cb085a106280875fe7760baefc9687d5bfbf07700bcad3daaa39f2d549bbb4",
+      "bytes": 1618747,
+      "sha256After": "e8cb085a106280875fe7760baefc9687d5bfbf07700bcad3daaa39f2d549bbb4",
+      "unchanged": true
+    },
+    {
+      "appearanceId": "abstractingqueenie",
+      "slot": "hit",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/hit.png",
+      "expectedSHA256": "f8b1534519c2b4e8717d55e6f6fcd26b0c2b1ba3868c13e5c32627a480593924",
+      "sha256Before": "f8b1534519c2b4e8717d55e6f6fcd26b0c2b1ba3868c13e5c32627a480593924",
+      "bytes": 1684154,
+      "sha256After": "f8b1534519c2b4e8717d55e6f6fcd26b0c2b1ba3868c13e5c32627a480593924",
+      "unchanged": true
+    },
+    {
+      "appearanceId": "zoobleep5",
+      "slot": "selection",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/zoobleep5/selection.png",
+      "expectedSHA256": "81e93ff323f46d6e940a432e0eb28fe83ee5858dcc3ba5c7b92bfea08a7a0bb5",
+      "sha256Before": "81e93ff323f46d6e940a432e0eb28fe83ee5858dcc3ba5c7b92bfea08a7a0bb5",
+      "bytes": 1506910,
+      "sha256After": "81e93ff323f46d6e940a432e0eb28fe83ee5858dcc3ba5c7b92bfea08a7a0bb5",
+      "unchanged": true
+    },
+    {
+      "appearanceId": "zoobleep5",
+      "slot": "stance",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/zoobleep5/stance.png",
+      "expectedSHA256": "3235d5a89d559fa64ac4830758266dd8e5c2211613cc180002f9c929f83747ab",
+      "sha256Before": "3235d5a89d559fa64ac4830758266dd8e5c2211613cc180002f9c929f83747ab",
+      "bytes": 745695,
+      "sha256After": "3235d5a89d559fa64ac4830758266dd8e5c2211613cc180002f9c929f83747ab",
+      "unchanged": true
+    },
+    {
+      "appearanceId": "zoobleep5",
+      "slot": "intro",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/zoobleep5/intro.png",
+      "expectedSHA256": "9feda71bc8a9e1d73bc2e90ad602604024d3d23ec3af87c8de2acda052f16c7c",
+      "sha256Before": "9feda71bc8a9e1d73bc2e90ad602604024d3d23ec3af87c8de2acda052f16c7c",
+      "bytes": 1415628,
+      "sha256After": "9feda71bc8a9e1d73bc2e90ad602604024d3d23ec3af87c8de2acda052f16c7c",
+      "unchanged": true
+    },
+    {
+      "appearanceId": "zoobleep5",
+      "slot": "walk",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/zoobleep5/walk.png",
+      "expectedSHA256": "2fa6b86cdaa4687df0d5fc4af471920644344f2276d2fe1cb3e62828846e217d",
+      "sha256Before": "2fa6b86cdaa4687df0d5fc4af471920644344f2276d2fe1cb3e62828846e217d",
+      "bytes": 1529675,
+      "sha256After": "2fa6b86cdaa4687df0d5fc4af471920644344f2276d2fe1cb3e62828846e217d",
+      "unchanged": true
+    },
+    {
+      "appearanceId": "zoobleep5",
+      "slot": "jump",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/zoobleep5/jump.png",
+      "expectedSHA256": "c318d6639d4241c810e21b229408a31a5a8d381ca5189979ce236bec98f924cd",
+      "sha256Before": "c318d6639d4241c810e21b229408a31a5a8d381ca5189979ce236bec98f924cd",
+      "bytes": 1436322,
+      "sha256After": "c318d6639d4241c810e21b229408a31a5a8d381ca5189979ce236bec98f924cd",
+      "unchanged": true
+    },
+    {
+      "appearanceId": "zoobleep5",
+      "slot": "crouch",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/zoobleep5/crouch.png",
+      "expectedSHA256": "b2dcb46168adb6703aaab03f6b7dd3811b898a3d3ec31d9289feb6cb798054a0",
+      "sha256Before": "b2dcb46168adb6703aaab03f6b7dd3811b898a3d3ec31d9289feb6cb798054a0",
+      "bytes": 1449005,
+      "sha256After": "b2dcb46168adb6703aaab03f6b7dd3811b898a3d3ec31d9289feb6cb798054a0",
+      "unchanged": true
+    },
+    {
+      "appearanceId": "zoobleep5",
+      "slot": "attack",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/zoobleep5/attack.png",
+      "expectedSHA256": "f11f55a6c59ce17ce14606d7c8de2399e5c9ea5ed3d7eda8987a23d2fcc80b4b",
+      "sha256Before": "f11f55a6c59ce17ce14606d7c8de2399e5c9ea5ed3d7eda8987a23d2fcc80b4b",
+      "bytes": 1453651,
+      "sha256After": "f11f55a6c59ce17ce14606d7c8de2399e5c9ea5ed3d7eda8987a23d2fcc80b4b",
+      "unchanged": true
+    },
+    {
+      "appearanceId": "zoobleep5",
+      "slot": "heavy",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/zoobleep5/heavy.png",
+      "expectedSHA256": "782102e280d8e37557bb3076bd44d9ac1258f02e16e63c1fff04346292febc66",
+      "sha256Before": "782102e280d8e37557bb3076bd44d9ac1258f02e16e63c1fff04346292febc66",
+      "bytes": 1450181,
+      "sha256After": "782102e280d8e37557bb3076bd44d9ac1258f02e16e63c1fff04346292febc66",
+      "unchanged": true
+    }
+  ],
+  "visualReview": {
+    "reviewedAt": "2026-11-20T05:03:31.826304+00:00",
+    "reviewedBoards": [
+      "smilingtragedygangle.jpg",
+      "abstractingpomni.jpg",
+      "abstractingjax.jpg",
+      "abstractingragatha.jpg",
+      "abstractingkinger.jpg",
+      "abstractinggangle.jpg",
+      "abstractingzooble.jpg",
+      "abstractingqueenie.jpg",
+      "zoobleep5.jpg"
+    ],
+    "method": "Chaque JPEG ouvert et inspecté individuellement à taille lisible avec view_image.",
+    "checks": [
+      "Titre EN PRÉPARATION et compte N/11 conformes au plan.",
+      "Onze cellules étiquetées par apparence ; 36 images présentes et 63 mentions À générer.",
+      "Silhouettes entières visibles sur fond clair, sans recadrage ni superposition aux étiquettes.",
+      "Statut hors runtime explicite sur chaque planche.",
+      "36 empreintes sources inchangées et conformes au plan gelé après revue."
+    ],
+    "layoutIssues": [],
+    "scope": "Revue de composition et de conservation des sources ; ne certifie pas la fidélité canonique des poses."
+  }
+}

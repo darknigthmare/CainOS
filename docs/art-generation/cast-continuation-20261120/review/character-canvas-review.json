@@ -1,0 +1,1012 @@
+{
+  "schema": "encore-character-canvas-review/v1",
+  "createdAt": "2026-11-20T05:00:51.609Z",
+  "method": "Production Canvas2D modules executed by Node and native Skia; actual drawImage sources and transforms inspected.",
+  "limitations": [
+    "No browser, DOM, input, audio, service-worker or physical-device test.",
+    "Individual static poses do not establish frame-by-frame animation.",
+    "Asset identity/proportion fidelity requires separate visual review; no canonical 1:1 certification."
+  ],
+  "partial": false,
+  "additionsOnly": true,
+  "introducedOn": "2026-11-20",
+  "sources": {
+    "combat/data.mjs": "6910aaddf46645f98520f4cc6fb468c2bc43b6dd017d9237266a90f6c1bf892b",
+    "combat/costume-additions.mjs": "16444b1aa187d1f0cb6cfdcb9f8c78104a86fbc2e25e0340eb53e5dc84d04318",
+    "combat/costume-continuation-20261120.mjs": "d3774d17d6058e72081cc7a236f748fc26cc2532fe94ddf772e9ad6de638eb0f",
+    "combat/illustrations.mjs": "c3de886221f6f05eebba1ad53f866d7ec486a1a13e0f0733c0e170c8fd81292f",
+    "combat/render.mjs": "91cdc8a8a4b5298644809714aa7e53219e1266e2ffc95478194a699a7bc1212f",
+    "combat/render-poses.mjs": "21e3afba8c19723ffdcb383402cc6339b63cb58df5d4323fda2ebde093ce0b29",
+    "combat/offline-manifest.mjs": "708c1ff8433a9094e069c0c49dcb871d073859b846d3ee43df5e6a24553f49e2",
+    "scripts/render-combat-character-review.mjs": "800d3eed71bd3b20d1e819e779ef597f163aedbe1a87b4eec81d5b4e56473aa9"
+  },
+  "actions": [
+    {
+      "id": "noirpomni",
+      "pose": "intro",
+      "file": "assets/encore/poses/noirpomni/intro.png",
+      "sha256": "ff4e0c78427c5ec59219f64c28fb0b835ef7dad1ee074bad99bce2437d5e40ca",
+      "bytes": 984357,
+      "visibleBounds": {
+        "x": 8,
+        "y": 10,
+        "width": 361,
+        "height": 618
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "noirpomni",
+      "pose": "attack",
+      "file": "assets/encore/poses/noirpomni/attack.png",
+      "sha256": "8700afe2963278ffd53e7b767bf0a6e680b85eb42d919e0d7b011756df88a556",
+      "bytes": 923835,
+      "visibleBounds": {
+        "x": 35,
+        "y": 9,
+        "width": 513,
+        "height": 626
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "noirpomni",
+      "pose": "hit",
+      "file": "assets/encore/poses/noirpomni/hit.png",
+      "sha256": "33ce058c29d0e715e30940fa734a4b9ac1f5cb84c51d03a3f6c463b3bc270286",
+      "bytes": 915615,
+      "visibleBounds": {
+        "x": 12,
+        "y": 7,
+        "width": 395,
+        "height": 626
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "noirpomni",
+      "pose": "walk",
+      "file": "assets/encore/poses/noirpomni/walk.png",
+      "sha256": "bc0dd49be5d8f35fe99ebaba2a0c18a4f27eb547d7395a6c3cf0c38fc7ddb26c",
+      "bytes": 1027008,
+      "visibleBounds": {
+        "x": 11,
+        "y": 10,
+        "width": 350,
+        "height": 621
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "noirpomni",
+      "pose": "jump",
+      "file": "assets/encore/poses/noirpomni/jump.png",
+      "sha256": "53c072c4961eb280beeb036884d44b50589013c2b7d5fe1594c8aac42dd7e398",
+      "bytes": 1155032,
+      "visibleBounds": {
+        "x": 6,
+        "y": 5,
+        "width": 590,
+        "height": 630
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "noirpomni",
+      "pose": "crouch",
+      "file": "assets/encore/poses/noirpomni/crouch.png",
+      "sha256": "c8cb7faeabec591932e9953087bc548a7468f2227e1bb2faabde5a402401e085",
+      "bytes": 1068296,
+      "visibleBounds": {
+        "x": 89,
+        "y": 20,
+        "width": 479,
+        "height": 551
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "noirpomni",
+      "pose": "victory",
+      "file": "assets/encore/poses/noirpomni/victory.png",
+      "sha256": "4cbe591dac72bb813db49d1430d743b1e37f3530ab86bceeacbcae6b7f573529",
+      "bytes": 982997,
+      "visibleBounds": {
+        "x": 19,
+        "y": 8,
+        "width": 332,
+        "height": 628
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "noirpomni",
+      "pose": "defeat",
+      "file": "assets/encore/poses/noirpomni/defeat.png",
+      "sha256": "50dbb1bd1c3f9952c08878db4e7489b808bdad0c06be4fa1028f84d275238928",
+      "bytes": 1338763,
+      "visibleBounds": {
+        "x": 46,
+        "y": 16,
+        "width": 534,
+        "height": 565
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "noirpomni",
+      "pose": "heavy",
+      "file": "assets/encore/poses/noirpomni/heavy.png",
+      "sha256": "85a8e9bb5fccba205888944c9c3cd2b50056f58cf32fbb434966d39ebb16f475",
+      "bytes": 1089136,
+      "visibleBounds": {
+        "x": 11,
+        "y": 8,
+        "width": 571,
+        "height": 628
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "noirjax",
+      "pose": "intro",
+      "file": "assets/encore/poses/noirjax/intro.png",
+      "sha256": "3ae45312e86589a22abbbd387e005128f499e7d018e37e401e8d68d04acfc95c",
+      "bytes": 691535,
+      "visibleBounds": {
+        "x": 11,
+        "y": 3,
+        "width": 304,
+        "height": 634
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "noirjax",
+      "pose": "attack",
+      "file": "assets/encore/poses/noirjax/attack.png",
+      "sha256": "85705229af6cc844338acde053403a3f759f53902f785246586b5429d7abde9d",
+      "bytes": 604225,
+      "visibleBounds": {
+        "x": 13,
+        "y": 2,
+        "width": 464,
+        "height": 637
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "noirjax",
+      "pose": "hit",
+      "file": "assets/encore/poses/noirjax/hit.png",
+      "sha256": "6096b3464eca6fb424d43adcb5331e224c335a24e327b456d1d0b493cbd4192d",
+      "bytes": 666719,
+      "visibleBounds": {
+        "x": 18,
+        "y": 5,
+        "width": 370,
+        "height": 631
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "noirjax",
+      "pose": "walk",
+      "file": "assets/encore/poses/noirjax/walk.png",
+      "sha256": "b1d803b706e8ad8a7354037eb5c6c4a374a65b8c97a9c3e0dcf294ac85e6a3a9",
+      "bytes": 1260009,
+      "visibleBounds": {
+        "x": 41,
+        "y": 9,
+        "width": 357,
+        "height": 626
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "noirjax",
+      "pose": "jump",
+      "file": "assets/encore/poses/noirjax/jump.png",
+      "sha256": "deb9c4d37f39ae20734fd7a912664dc2ade359b53d111af3763ad8bc8ff2d602",
+      "bytes": 782557,
+      "visibleBounds": {
+        "x": 9,
+        "y": 11,
+        "width": 560,
+        "height": 621
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "noirjax",
+      "pose": "crouch",
+      "file": "assets/encore/poses/noirjax/crouch.png",
+      "sha256": "bc1541dcd22ee0542ec0b86a1ef209c25e8cb5410a3fe7b1d87a674d4deb4246",
+      "bytes": 842397,
+      "visibleBounds": {
+        "x": 70,
+        "y": 9,
+        "width": 512,
+        "height": 627
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "noirjax",
+      "pose": "victory",
+      "file": "assets/encore/poses/noirjax/victory.png",
+      "sha256": "7513ea41933ea3de4be9b13974136c4ee6fca54e02ff5d5d1f2df4f707417e12",
+      "bytes": 683733,
+      "visibleBounds": {
+        "x": 66,
+        "y": 3,
+        "width": 211,
+        "height": 634
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "noirjax",
+      "pose": "defeat",
+      "file": "assets/encore/poses/noirjax/defeat.png",
+      "sha256": "3ffa91ad2ebe59d36b0bf9e461a8e4ac1e0bbc5d0af312008ca050c9b2923b3b",
+      "bytes": 847008,
+      "visibleBounds": {
+        "x": 50,
+        "y": 13,
+        "width": 529,
+        "height": 618
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "noirjax",
+      "pose": "heavy",
+      "file": "assets/encore/poses/noirjax/heavy.png",
+      "sha256": "934f48a44e8418b036bee9ff6b6df152fd6523a29f415b467de762dffceb292a",
+      "bytes": 1173895,
+      "visibleBounds": {
+        "x": 40,
+        "y": 2,
+        "width": 537,
+        "height": 424
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "noirkinger",
+      "pose": "intro",
+      "file": "assets/encore/poses/noirkinger/intro.png",
+      "sha256": "20fea1944dd6a3558beabf6ca7d74a9a0ed3ea24f0215e1b170c9a4d05882a72",
+      "bytes": 1486862,
+      "visibleBounds": {
+        "x": 14,
+        "y": 12,
+        "width": 402,
+        "height": 616
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "noirkinger",
+      "pose": "attack",
+      "file": "assets/encore/poses/noirkinger/attack.png",
+      "sha256": "fc1344ce1eaa3188bfa6c68366a2e8a91dd6f4b418dc7a10ef48d9069ac4a007",
+      "bytes": 1468076,
+      "visibleBounds": {
+        "x": 20,
+        "y": 26,
+        "width": 385,
+        "height": 602
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "noirkinger",
+      "pose": "hit",
+      "file": "assets/encore/poses/noirkinger/hit.png",
+      "sha256": "aa33ce929da344bf12a2d4e7c8744b19e7cffc6d09855db0a3ec624538c42c6e",
+      "bytes": 1076465,
+      "visibleBounds": {
+        "x": 11,
+        "y": 27,
+        "width": 466,
+        "height": 602
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "noirkinger",
+      "pose": "walk",
+      "file": "assets/encore/poses/noirkinger/walk.png",
+      "sha256": "9c89ce40d501110eb0e5c7cdbbc59bad85400e44752ef4e5061298baa1135edf",
+      "bytes": 1429608,
+      "visibleBounds": {
+        "x": 31,
+        "y": 30,
+        "width": 367,
+        "height": 591
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "noirkinger",
+      "pose": "jump",
+      "file": "assets/encore/poses/noirkinger/jump.png",
+      "sha256": "4b4bd5a4c204f7a878fc7f67d6d9322e92ded09ad920af6c8dc44e6b0486e8b5",
+      "bytes": 953478,
+      "visibleBounds": {
+        "x": 19,
+        "y": 13,
+        "width": 463,
+        "height": 614
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "noirkinger",
+      "pose": "crouch",
+      "file": "assets/encore/poses/noirkinger/crouch.png",
+      "sha256": "8f921c26cf42ff081c0c43a548462f963fa4f2c0094891a6dc2273453792fd2d",
+      "bytes": 1031841,
+      "visibleBounds": {
+        "x": 56,
+        "y": 5,
+        "width": 534,
+        "height": 576
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "noirkinger",
+      "pose": "victory",
+      "file": "assets/encore/poses/noirkinger/victory.png",
+      "sha256": "0f97fcf5ffe8161465d5eaa1952abb7ecaa57577783bef4b85fedaa7959058e1",
+      "bytes": 1451994,
+      "visibleBounds": {
+        "x": 15,
+        "y": 10,
+        "width": 398,
+        "height": 625
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "noirkinger",
+      "pose": "defeat",
+      "file": "assets/encore/poses/noirkinger/defeat.png",
+      "sha256": "fc72cc116b468125a99e0220959e6607ca1dd8942ad4ba84e6994fc3e6822dd7",
+      "bytes": 1455543,
+      "visibleBounds": {
+        "x": 11,
+        "y": 54,
+        "width": 390,
+        "height": 562
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "noirkinger",
+      "pose": "heavy",
+      "file": "assets/encore/poses/noirkinger/heavy.png",
+      "sha256": "5148f6ffa7deb2d706e0f9fa65c5ba9341a111f525eda65733c6ed830fd9716a",
+      "bytes": 1001632,
+      "visibleBounds": {
+        "x": 8,
+        "y": 9,
+        "width": 509,
+        "height": 623
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "badendcaine",
+      "pose": "intro",
+      "file": "assets/encore/poses/badendcaine/intro.png",
+      "sha256": "d3343bcc22f65d09f6a1933fb51013f60ae1dfd4cfe8f80e36f4ae0ef8cc373c",
+      "bytes": 1547596,
+      "visibleBounds": {
+        "x": 10,
+        "y": 7,
+        "width": 557,
+        "height": 623
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "badendcaine",
+      "pose": "attack",
+      "file": "assets/encore/poses/badendcaine/attack.png",
+      "sha256": "89a2b31688cad821d7ee2df87506b71cfa63d50dde99da0e00b0d9b5980c5aac",
+      "bytes": 1544300,
+      "visibleBounds": {
+        "x": 25,
+        "y": 24,
+        "width": 561,
+        "height": 598
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "badendcaine",
+      "pose": "hit",
+      "file": "assets/encore/poses/badendcaine/hit.png",
+      "sha256": "f28a0653fcfb130db35983178c338cab287cbc3af276237beda5a7806ea45b0a",
+      "bytes": 1608322,
+      "visibleBounds": {
+        "x": 19,
+        "y": 27,
+        "width": 553,
+        "height": 596
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "badendcaine",
+      "pose": "walk",
+      "file": "assets/encore/poses/badendcaine/walk.png",
+      "sha256": "eaaaf1107c54b8c7dc9a6d472f88f5ee872268325d1d53aeae940b89038abbf4",
+      "bytes": 1548652,
+      "visibleBounds": {
+        "x": 15,
+        "y": 12,
+        "width": 575,
+        "height": 612
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "badendcaine",
+      "pose": "jump",
+      "file": "assets/encore/poses/badendcaine/jump.png",
+      "sha256": "c620d508c988737a47ec19a927f474080342458304efcb55bfdd9ed865e5745f",
+      "bytes": 1473237,
+      "visibleBounds": {
+        "x": 24,
+        "y": 15,
+        "width": 566,
+        "height": 613
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "badendcaine",
+      "pose": "crouch",
+      "file": "assets/encore/poses/badendcaine/crouch.png",
+      "sha256": "7fb3692361297c80133079c237d2bdd5b7685a8e880508ca4dbbaa9fb451975f",
+      "bytes": 1595222,
+      "visibleBounds": {
+        "x": 22,
+        "y": 24,
+        "width": 577,
+        "height": 541
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "badendcaine",
+      "pose": "victory",
+      "file": "assets/encore/poses/badendcaine/victory.png",
+      "sha256": "42232c2d06a76c47f863dd95643f0edf6617ae7d5efe96bd7023bb32fdf1816f",
+      "bytes": 1610382,
+      "visibleBounds": {
+        "x": 25,
+        "y": 7,
+        "width": 492,
+        "height": 622
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "badendcaine",
+      "pose": "defeat",
+      "file": "assets/encore/poses/badendcaine/defeat.png",
+      "sha256": "4c49a3f92024a6693bb230eddaef01b0a5cc0828b8bbe21aa4b4c7eb9f28c4d9",
+      "bytes": 1807933,
+      "visibleBounds": {
+        "x": 39,
+        "y": 11,
+        "width": 538,
+        "height": 408
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "badendcaine",
+      "pose": "heavy",
+      "file": "assets/encore/poses/badendcaine/heavy.png",
+      "sha256": "ea7a486800fff20e2c7c2141b5e7d031bf46a4ef5ee477bfa3f4add3b234d58c",
+      "bytes": 1706163,
+      "visibleBounds": {
+        "x": 10,
+        "y": 16,
+        "width": 569,
+        "height": 613
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "bodyguardragatha",
+      "pose": "intro",
+      "file": "assets/encore/poses/bodyguardragatha/intro.png",
+      "sha256": "9127600afc40002067ed9decee2c6afd27bfa8454a04e676013f5a6dc43f7b68",
+      "bytes": 1183410,
+      "visibleBounds": {
+        "x": 24,
+        "y": 6,
+        "width": 312,
+        "height": 628
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "bodyguardragatha",
+      "pose": "attack",
+      "file": "assets/encore/poses/bodyguardragatha/attack.png",
+      "sha256": "2922b99a9c3635bcd23d52160f17bafb0af5d577d0232a773a7b554487886521",
+      "bytes": 1048355,
+      "visibleBounds": {
+        "x": 40,
+        "y": 12,
+        "width": 404,
+        "height": 619
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "bodyguardragatha",
+      "pose": "hit",
+      "file": "assets/encore/poses/bodyguardragatha/hit.png",
+      "sha256": "1d025786afc566d7c015b4ce5c1313682b6e20d80c9898b1e28646859d6cb947",
+      "bytes": 1254198,
+      "visibleBounds": {
+        "x": 7,
+        "y": 6,
+        "width": 337,
+        "height": 627
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "bodyguardragatha",
+      "pose": "walk",
+      "file": "assets/encore/poses/bodyguardragatha/walk.png",
+      "sha256": "f9e5e83b39fc0c69a818c244912d900c12879b82b445b6faaf87cae1b38d599f",
+      "bytes": 1251994,
+      "visibleBounds": {
+        "x": 21,
+        "y": 6,
+        "width": 309,
+        "height": 622
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "bodyguardragatha",
+      "pose": "jump",
+      "file": "assets/encore/poses/bodyguardragatha/jump.png",
+      "sha256": "4787faab8de5a47ed3d69c4f9f0318cd85a3a6b7f2d5e3458bcf7ce0b30fd427",
+      "bytes": 1058365,
+      "visibleBounds": {
+        "x": 33,
+        "y": 14,
+        "width": 378,
+        "height": 582
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "bodyguardragatha",
+      "pose": "crouch",
+      "file": "assets/encore/poses/bodyguardragatha/crouch.png",
+      "sha256": "432f2e5d370f101a6e46f58884904f444a203065c60893d3de24233dc422fc25",
+      "bytes": 1157217,
+      "visibleBounds": {
+        "x": 47,
+        "y": 7,
+        "width": 440,
+        "height": 625
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "bodyguardragatha",
+      "pose": "victory",
+      "file": "assets/encore/poses/bodyguardragatha/victory.png",
+      "sha256": "acefc383357902e90b726264ec91a9aaccfb7f1a7e5b81090a08b50101812e8f",
+      "bytes": 1244506,
+      "visibleBounds": {
+        "x": 19,
+        "y": 6,
+        "width": 323,
+        "height": 629
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "bodyguardragatha",
+      "pose": "defeat",
+      "file": "assets/encore/poses/bodyguardragatha/defeat.png",
+      "sha256": "bb91339504b0e245608e09f50710db6ca9ef1e008c37c236d80e695ea412e7ac",
+      "bytes": 1078501,
+      "visibleBounds": {
+        "x": 74,
+        "y": 31,
+        "width": 376,
+        "height": 591
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "bodyguardragatha",
+      "pose": "heavy",
+      "file": "assets/encore/poses/bodyguardragatha/heavy.png",
+      "sha256": "11ca7692a0c73975ffb51df983622c845673b78b7e67dfd923d0816c89c30a36",
+      "bytes": 1202496,
+      "visibleBounds": {
+        "x": 40,
+        "y": 8,
+        "width": 380,
+        "height": 624
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "bodyguardzooble",
+      "pose": "intro",
+      "file": "assets/encore/poses/bodyguardzooble/intro.png",
+      "sha256": "9adbf8c010aca506110f6224061b427ab336c48859a6d890c94067142fa34487",
+      "bytes": 1420123,
+      "visibleBounds": {
+        "x": 59,
+        "y": 4,
+        "width": 305,
+        "height": 631
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "bodyguardzooble",
+      "pose": "attack",
+      "file": "assets/encore/poses/bodyguardzooble/attack.png",
+      "sha256": "33b27cbf225253b43d07c0d44df41c31f9b4f99fbd15ccc9495f399d4b67513d",
+      "bytes": 1488888,
+      "visibleBounds": {
+        "x": 49,
+        "y": 5,
+        "width": 364,
+        "height": 628
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "bodyguardzooble",
+      "pose": "hit",
+      "file": "assets/encore/poses/bodyguardzooble/hit.png",
+      "sha256": "0bca1f04d5b4e4ecf540096ebab9e6bc1d6d6a7735166f81bb5d78d2985e4a0a",
+      "bytes": 1476088,
+      "visibleBounds": {
+        "x": 3,
+        "y": 34,
+        "width": 403,
+        "height": 597
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "bodyguardzooble",
+      "pose": "walk",
+      "file": "assets/encore/poses/bodyguardzooble/walk.png",
+      "sha256": "8e0368aac2e159f8871c4d45eb7e7abda4abb0c172fa194192eaba0fcadc3e2f",
+      "bytes": 1523656,
+      "visibleBounds": {
+        "x": 37,
+        "y": 4,
+        "width": 365,
+        "height": 607
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "bodyguardzooble",
+      "pose": "jump",
+      "file": "assets/encore/poses/bodyguardzooble/jump.png",
+      "sha256": "f8256c0ebfd8b69301b7417b836ed0afd2558aa87cc22b53d83dd9983c5db747",
+      "bytes": 1450546,
+      "visibleBounds": {
+        "x": 12,
+        "y": 37,
+        "width": 403,
+        "height": 454
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "bodyguardzooble",
+      "pose": "crouch",
+      "file": "assets/encore/poses/bodyguardzooble/crouch.png",
+      "sha256": "90a7666b71d7296c9f0cbe33509de359716a5928cc47370751d80da9fec92979",
+      "bytes": 1452335,
+      "visibleBounds": {
+        "x": 53,
+        "y": 106,
+        "width": 360,
+        "height": 468
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "bodyguardzooble",
+      "pose": "victory",
+      "file": "assets/encore/poses/bodyguardzooble/victory.png",
+      "sha256": "0018629750fcb14dfd23cea2dad1ba63aec0adc74981076296179402918cfe36",
+      "bytes": 1464892,
+      "visibleBounds": {
+        "x": 27,
+        "y": 4,
+        "width": 338,
+        "height": 632
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "bodyguardzooble",
+      "pose": "defeat",
+      "file": "assets/encore/poses/bodyguardzooble/defeat.png",
+      "sha256": "cc405e660ca8ae4e2747fda476585e2b35deafc884a943e686825735e4eaa860",
+      "bytes": 831665,
+      "visibleBounds": {
+        "x": 13,
+        "y": 36,
+        "width": 559,
+        "height": 580
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "bodyguardzooble",
+      "pose": "heavy",
+      "file": "assets/encore/poses/bodyguardzooble/heavy.png",
+      "sha256": "41cab5c9c740f954d14f2c58869eb2969c135b5abb4179313dc102b3dca56e2e",
+      "bytes": 1444372,
+      "visibleBounds": {
+        "x": 19,
+        "y": 6,
+        "width": 392,
+        "height": 627
+      },
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    }
+  ],
+  "stances": [
+    {
+      "id": "noirpomni",
+      "file": "assets/encore/stance/noirpomni.png",
+      "sha256": "8416d615efc987f0c648d70c1ee98d45c0b02104f009893a0493989005b4af88",
+      "bytes": 994821,
+      "rendered": true,
+      "bothFacings": true
+    },
+    {
+      "id": "noirjax",
+      "file": "assets/encore/stance/noirjax.png",
+      "sha256": "835190a3fad3ac9739adf2a2b73fba89c4c11354a24338589121bff4bf5fce2e",
+      "bytes": 1238219,
+      "rendered": true,
+      "bothFacings": true
+    },
+    {
+      "id": "noirkinger",
+      "file": "assets/encore/stance/noirkinger.png",
+      "sha256": "65d1768a517c63ffdb8f35df4366c01ccb05974b2d89aac3ae59f5456cb81efe",
+      "bytes": 1468320,
+      "rendered": true,
+      "bothFacings": true
+    },
+    {
+      "id": "badendcaine",
+      "file": "assets/encore/stance/badendcaine.png",
+      "sha256": "c2df37dd6d9acfd735c1975f5ea7f6d9408510282194e52f9976f9f86f1b0e62",
+      "bytes": 1546157,
+      "rendered": true,
+      "bothFacings": true
+    },
+    {
+      "id": "bodyguardragatha",
+      "file": "assets/encore/stance/bodyguardragatha.png",
+      "sha256": "1073d82711ad5c35572c6b7a1d484e1b1443db1baab6c39a7be77a2db8c26643",
+      "bytes": 1055667,
+      "rendered": true,
+      "bothFacings": true
+    },
+    {
+      "id": "bodyguardzooble",
+      "file": "assets/encore/stance/bodyguardzooble.png",
+      "sha256": "4db21fa1a7fe131d089cbfe745ed929d715a6b5844f24a4d680e5940426af973",
+      "bytes": 736384,
+      "rendered": true,
+      "bothFacings": true
+    }
+  ],
+  "portraits": [
+    {
+      "id": "noirpomni",
+      "archiveId": null,
+      "file": "assets/encore/selection/noirpomni.png",
+      "sha256": "802776e61f9b6b94e505994badfca94aa7be79fcb0e943b9f0698e6bccd99f52",
+      "bytes": 908878,
+      "rendered": true
+    },
+    {
+      "id": "noirjax",
+      "archiveId": null,
+      "file": "assets/encore/selection/noirjax.png",
+      "sha256": "acfc128475e44b155ea60949780e7fe7571fd97e77d70dc0027919ec17e16b39",
+      "bytes": 621658,
+      "rendered": true
+    },
+    {
+      "id": "noirkinger",
+      "archiveId": null,
+      "file": "assets/encore/selection/noirkinger.png",
+      "sha256": "34689a3fc4ceaaab8fbff0c59f0680f02aca7d5edcb6cf444c6c5bc40a87d4f1",
+      "bytes": 1405315,
+      "rendered": true
+    },
+    {
+      "id": "badendcaine",
+      "archiveId": null,
+      "file": "assets/encore/selection/badendcaine.png",
+      "sha256": "e2922ce42ae7fefd580aae833a41cd287e3ac2f8af4e0170ed100b28f310c8d3",
+      "bytes": 1699448,
+      "rendered": true
+    },
+    {
+      "id": "bodyguardragatha",
+      "archiveId": null,
+      "file": "assets/encore/selection/bodyguardragatha.png",
+      "sha256": "1467e634913d72e6edd4704434c7ee87df713fb4c1bc9779fd55c4ee222a4e3c",
+      "bytes": 1246827,
+      "rendered": true
+    },
+    {
+      "id": "bodyguardzooble",
+      "archiveId": null,
+      "file": "assets/encore/selection/bodyguardzooble.png",
+      "sha256": "b9eba9cf8ddbaaabecd98e5d718bb8387e4c032b12f6fd36149214ee30579ee5",
+      "bytes": 1515650,
+      "rendered": true
+    }
+  ],
+  "missing": [],
+  "sheets": [
+    "actions-noirpomni.jpg",
+    "actions-noirjax.jpg",
+    "actions-noirkinger.jpg",
+    "actions-badendcaine.jpg",
+    "actions-bodyguardragatha.jpg",
+    "actions-bodyguardzooble.jpg",
+    "archive-portraits-01.jpg"
+  ],
+  "browserTestStatus": "not_executed",
+  "counts": {
+    "appearances": 6,
+    "expectedActions": 54,
+    "actions": 54,
+    "stances": 6,
+    "drawChecks": 120,
+    "archiveEntries": 0,
+    "portraits": 6,
+    "expectedPortraits": 6,
+    "missing": 0
+  },
+  "complete": true
+}

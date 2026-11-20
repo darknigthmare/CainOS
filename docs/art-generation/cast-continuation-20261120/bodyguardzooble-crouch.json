@@ -1,0 +1,38 @@
+{
+  "id": "bodyguardzooble-crouch",
+  "appearanceId": "bodyguardzooble",
+  "slot": "crouch",
+  "file": "assets/encore/poses/bodyguardzooble/crouch.png",
+  "sourceGenerationId": "exec-c3f785cc-67e6-4238-8cae-508365fe8e93",
+  "method": "image_gen.imagegen",
+  "sourceURLs": [
+    "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=260s",
+    "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg"
+  ],
+  "referencePaths": [
+    "/workspace/scratch/5f5114b49696/generated_images/exec-0c749572-29b9-4bb0-94db-88ffe65233b2.png",
+    "/workspace/scratch/5f5114b49696/generated_images/exec-aa0e963f-53bb-4d87-87a9-9a7c45732956.png"
+  ],
+  "prompt": "Use case: precise-object-edit. Correct ONLY the RIGHT striped forearm in image 1, the crouching Zooble sprite. Image 2 confirms the anatomy. The striped pink-white forearm must be ONE STRAIGHT RIGID ROD connecting the pink spherical elbow to the green C-claw. Remove its invented middle bend entirely. Keep the green spring upper arm and pink elbow on the RIGHT of the torso; place the green claw farther outward to the right so the straight rod is easy to see and does not cross the torso. Keep exactly one green claw. Preserve EVERYTHING else in image 1: sunglasses, pink head, antennas, chest triangle, wing, yellow LEFT arm, crouching cyan/peg LEFT leg and purple boot RIGHT leg, body and 2D style. One complete character, true transparent RGBA, no extra anatomy, no glow, floor, shadow, background, text or sprite sheet. Safe margin around all extremities.",
+  "sha256": "90a7666b71d7296c9f0cbe33509de359716a5928cc47370751d80da9fec92979",
+  "sourceBytesIdentical": true,
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "bboxAlpha12": [
+    126,
+    255,
+    991,
+    1376
+  ],
+  "bytes": 1452335,
+  "visualReview": "Targeted correction visually inspected: right striped forearm is one straight rod. Both unlike arms and legs remain attached on the correct sides, full crouching body visible.",
+  "productionStatus": "complete",
+  "includedInRuntime": true
+}

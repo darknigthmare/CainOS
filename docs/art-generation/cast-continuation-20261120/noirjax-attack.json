@@ -1,0 +1,43 @@
+{
+  "id": "noirjax-attack",
+  "appearanceId": "noirjax",
+  "slot": "attack",
+  "file": "assets/encore/poses/noirjax/attack.png",
+  "method": "image_gen.imagegen",
+  "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-d18c5c8f-8b3f-4092-af15-8dd3d077b9db.png",
+  "sourceURLs": [
+    "https://glitchproductions.store/products/jax-pendantz"
+  ],
+  "sourceImageURL": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/JaxPendantz_Noir.png?v=1780351074",
+  "referencePaths": [
+    "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/noirjax.png",
+    "/workspace/scratch/5f5114b49696/research/continuation-20261120/JaxPendantz_Noir.png"
+  ],
+  "prompt": "Use case: stylized-concept. Create ONE individual full-body 2D game action drawing: Jax — Film noir, attack. Image 1 is the approved character design; preserve its precise monochrome clothing, head, facial traits, anatomy, proportions and crisp cel-shaded ink style. Image 2 is the official costume reference. Identity: Jax the lanky cartoon rabbit in his official Noir outfit. Entirely grayscale. Long slim gray torso and limbs, very tall long gray rabbit ears fully visible. Narrow half-lidded pale-gray eyes with rectangular black pupils, broad toothy smug grin, no nose. White collared short sleeve shirt, long slim black tie, gray suspenders, black long trousers, dark broad rounded shoes and white cartoon gloves. No pink overalls, no purple. Keep tall lanky original proportions from the game style, not plush anatomy.  CHANGE THE POSE to this distinct action: light attack: a compact forward straight punch aimed horizontally toward screen right, rear hand guarding close to chest; entire extension visible. The result is an original static combat pose for Encore. Preserve the same character and costume in both references; no color, no new accessories. Two arms and two legs only, white gloves, long dark trousers, dark shoes. Character primarily faces screen right except hit/defeat body reaction. Full entire subject contained from very highest hat/ear/hand tip to lowest foot/base, with safe transparent margins on every edge. True transparent RGBA background with crisp clean silhouette; no gray haze, no halo, NO GLOW, no aura, no floor, no drop shadow, no scenery, no text, no framing, no second person, no attacker, no ghost limbs, no movement trails, no effect graphics. Never a sheet or multi-panel image: only one full-body pose. Native high resolution.",
+  "outputHint": "Generated images are saved to /workspace/scratch/5f5114b49696/generated_images as /workspace/scratch/5f5114b49696/generated_images/exec-d18c5c8f-8b3f-4092-af15-8dd3d077b9db.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "createdAt": "2026-11-20T04:29:17.237Z",
+  "visualReview": "Reviewed the complete native source board on 20 November: Tall gray rabbit with two long ears, rectangular pupils and toothy smile; white collared shirt, black tie, suspenders and full dark trousers/shoes remain consistent. Limbs remain long and complete. Slot attack is distinct and readable. Native alpha composes cleanly on a light background; no visible glow or floor, no cut-off part or extra character. These are original game poses, not episode frames.",
+  "sha256": "85705229af6cc844338acde053403a3f759f53902f785246586b5429d7abde9d",
+  "bytes": 604225,
+  "dimensions": [
+    1086,
+    1448
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "bboxAlpha12": [
+    30,
+    4,
+    1078,
+    1445
+  ],
+  "visualReviewAt": "2026-11-20T04:48:14.464555+00:00",
+  "visualReviewBoard": "docs/art-generation/cast-continuation-20261120/native-review/noirjax.jpg",
+  "status": "generated-and-visually-reviewed",
+  "nativeCopyVerified": true,
+  "productionStatus": "complete",
+  "includedInRuntime": true
+}

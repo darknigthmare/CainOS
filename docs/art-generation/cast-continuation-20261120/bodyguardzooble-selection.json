@@ -1,0 +1,39 @@
+{
+  "id": "bodyguardzooble-selection",
+  "appearanceId": "bodyguardzooble",
+  "slot": "selection",
+  "file": "assets/encore/selection/bodyguardzooble.png",
+  "sourceGenerationId": "exec-aa0e963f-53bb-4d87-87a9-9a7c45732956",
+  "method": "image_gen.imagegen",
+  "sourceURLs": [
+    "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=260s",
+    "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg"
+  ],
+  "referencePaths": [
+    "/workspace/scratch/5f5114b49696/research/continuation-20261120/zooble-ep5-official-thumbnail-crop.png",
+    "/workspace/scratch/5f5114b49696/research/continuation-20261120/bodyguards-upper-260s-native.png",
+    "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/zooble.webp"
+  ],
+  "prompt": "Use case: stylized-concept. Asset type: ONE individual full-body character-selection sprite for Digital Circus Encore. Create Bodyguard Zooble in their exact episode-five modular assembly plus opaque black sunglasses. Image 1 is the official whole-body anatomy reference, copy every distinctive piece and its side. Image 2 is the official episode bodyguard reference: Zooble is on the RIGHT; copy the oversized opaque BLACK SUNGLASSES covering both eyes. Image 3 controls ONLY the crisp outlined 2D cel-shaded game illustration style; its DIFFERENT torso ornament, hands, antennas and legs must NOT replace the anatomy in image 1. Whole subject invariants: bright pink broad triangular head pointing toward screen left, no mouth; cyan angular lightning antenna on screen left and black-white striped curled spring antenna on screen right. Yellow elongated spotted torso with orange/pink round spots, hollow violet inverted-triangle chest ornament, one small scalloped pink feather wing at upper screen-left torso. Exact unlike arms: screen-left arm is slender yellow articulated rod with yellow round elbow and yellow cartoon glove/hand; screen-right arm has a GREEN SPRING upper arm, PINK spherical elbow, long PINK-AND-WHITE striped straight lower rod, and ONE GREEN C-shaped pincer hand. Exact unlike legs: screen-left leg has a CYAN ZIGZAG upper section and a long tapered pointed RED-AND-YELLOW striped peg; screen-right leg is one long slim PURPLE bent rod ending in a rounded PURPLE foot/boot. Do not swap the sides, duplicate the claw, give ordinary human limbs, add clothes or replace the peg with a shoe. Both eyes are entirely hidden by dark black sunglasses as in the episode. Pose: relaxed upright watchful security stance, whole body standing on both unlike feet, arms slightly away from torso so every piece is legible; front three-quarter view preserving stated screen sides. Complete antenna tips, wing, hands and both feet visible with clear safe margins. One full character on true transparent RGBA background, no floor or shadow, no text, logo, effects, glow, props, scenery, box, toy pedestal, duplicates, collage or sprite sheet. Flat 2D illustrated art, not plush or 3D. Original fan-game pose based on the official anatomy.",
+  "sha256": "b9eba9cf8ddbaaabecd98e5d718bb8387e4c032b12f6fd36149214ee30579ee5",
+  "sourceBytesIdentical": true,
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "bboxAlpha12": [
+    101,
+    11,
+    891,
+    1527
+  ],
+  "bytes": 1515650,
+  "visualReview": "Individually viewed: one complete character, distinctive appearance and anatomy retained; native transparency and safe alpha bounds verified.",
+  "productionStatus": "complete",
+  "includedInRuntime": true
+}

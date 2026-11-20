@@ -1,0 +1,37 @@
+{
+  "id": "bodyguardzooble-heavy",
+  "appearanceId": "bodyguardzooble",
+  "slot": "heavy",
+  "file": "assets/encore/poses/bodyguardzooble/heavy.png",
+  "sourceGenerationId": "exec-a5e938f6-e692-46aa-847a-df1b4132523b",
+  "method": "image_gen.imagegen",
+  "sourceURLs": [
+    "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=260s",
+    "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg"
+  ],
+  "referencePaths": [
+    "/workspace/scratch/5f5114b49696/generated_images/exec-aa0e963f-53bb-4d87-87a9-9a7c45732956.png"
+  ],
+  "prompt": "Use case: identity-preserve. ONE individual complete full-body heavy sprite for Digital Circus Encore. Reference image is the approved appearance. Change ONLY the pose: Heavy kick toward screen right with the PURPLE BOOT leg lifted and extended outward. Cyan zigzag/pointed peg leg remains on the LEFT supporting the body. LEFT yellow hand near left chest for balance, RIGHT green claw slightly raised on the right. Keep one straight striped forearm from pink elbow to claw. No invented limbs, impact effects or enemies. Identity and anatomy locks: Keep the pink triangular mouthless head and opaque black sunglasses, cyan lightning antenna on screen left and black-white curled spring antenna on screen right, yellow spotted torso with hollow violet inverted triangle, pink feather wing screen left. Screen-left arm: slender yellow segmented rod, yellow round elbow, yellow hand. Screen-right arm: green spring, pink round elbow, pink-white striped straight forearm, one green C-claw. Screen-left leg: cyan zigzag, red-yellow pointed peg. Screen-right leg: long purple bendy rod, purple rounded boot. Preserve these sides and exactly two arms/two legs, no added pieces, no swaps, same 2D line art. Absolute anatomical attachment rule: yellow arm attaches to LEFT edge of torso in the image; green-spring/striped/pincer arm attaches to RIGHT edge. Do not swap their shoulder attachment even during movement. The pink-white striped forearm is exactly ONE STRAIGHT RIGID ROD from pink elbow sphere to green C-claw. Never bend it at an extra joint or create another stripe section. Same crisp outlined 2D cel-shaded game illustration and proportions. One whole subject with generous clear safe margins around every hair bow/antenna, hand and foot. Actual transparent RGBA background with opaque subject. No floor, background, shadow, glow, haze, letters, watermark, sprite sheet, duplicate view or extra accessories.",
+  "sha256": "41cab5c9c740f954d14f2c58869eb2969c135b5abb4179313dc102b3dca56e2e",
+  "sourceBytesIdentical": true,
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "bboxAlpha12": [
+    46,
+    15,
+    986,
+    1519
+  ],
+  "bytes": 1444372,
+  "visualReview": "Individually viewed: one complete character, distinctive appearance and anatomy retained; native transparency and safe alpha bounds verified.",
+  "productionStatus": "complete",
+  "includedInRuntime": true
+}

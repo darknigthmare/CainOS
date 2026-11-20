@@ -1,0 +1,44 @@
+{
+  "id": "noirjax-selection",
+  "appearanceId": "noirjax",
+  "slot": "selection",
+  "file": "assets/encore/selection/noirjax.png",
+  "method": "image_gen.imagegen",
+  "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-39e449ab-a2fa-4b95-a7e7-9353786275b0.png",
+  "sourceURLs": [
+    "https://glitchproductions.store/products/jax-pendantz"
+  ],
+  "sourceImageURL": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/JaxPendantz_Noir.png?v=1780351074",
+  "referencePaths": [
+    "/workspace/scratch/5f5114b49696/research/continuation-20261120/JaxPendantz_Noir.png",
+    "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/noirragatha.png",
+    "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/presidentpomni.png"
+  ],
+  "prompt": "Use case: stylized-concept. Asset type: individual full-body selection illustration for the Digital Circus Encore game. Create exactly ONE Jax the lanky cartoon rabbit in his official Noir outfit. Entirely grayscale. Long slim gray torso and limbs, very tall long gray rabbit ears fully visible. Narrow half-lidded pale-gray eyes with rectangular black pupils, broad toothy smug grin, no nose. White collared short sleeve shirt, long slim black tie, gray suspenders, black long trousers, dark broad rounded shoes and white cartoon gloves. No pink overalls, no purple. Keep tall lanky original proportions from the game style, not plush anatomy. Selection pose: upright three-quarter view facing screen right, one hand on hip and the other casually hooking a thumb behind a suspender, wry confidence. Reference image 1 controls this costume's shapes, clothing and monochrome palette; references 2 and 3 control only the crisp clean ink outlines and restrained 2D cel-shaded game style. Keep the original recognizable character anatomy, do not copy the toy's proportions or fabric. True transparent RGBA background. Full entire subject including hat, all ears, hands and all feet/base contained with generous clean transparent padding on every edge. No keychain, metal ring, hanging loop, tag, text, labels, logos, shadows on ground, scenery, floor, frame, extra character, duplicate body, split view, contact sheet, animation sheet, or cropped body. Single centered drawing only. Smooth confident contours, detailed high quality native resolution.",
+  "outputHint": "Generated images are saved to /workspace/scratch/5f5114b49696/generated_images as /workspace/scratch/5f5114b49696/generated_images/exec-39e449ab-a2fa-4b95-a7e7-9353786275b0.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "createdAt": "2026-11-20T04:24:56.214Z",
+  "visualReview": "Reviewed the complete native source board on 20 November: Tall gray rabbit with two long ears, rectangular pupils and toothy smile; white collared shirt, black tie, suspenders and full dark trousers/shoes remain consistent. Limbs remain long and complete. Slot selection is distinct and readable. Native alpha composes cleanly on a light background; no visible glow or floor, no cut-off part or extra character. These are original game poses, not episode frames.",
+  "sha256": "acfc128475e44b155ea60949780e7fe7571fd97e77d70dc0027919ec17e16b39",
+  "bytes": 621658,
+  "dimensions": [
+    887,
+    1774
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "bboxAlpha12": [
+    197,
+    16,
+    689,
+    1764
+  ],
+  "visualReviewAt": "2026-11-20T04:48:14.457108+00:00",
+  "visualReviewBoard": "docs/art-generation/cast-continuation-20261120/native-review/noirjax.jpg",
+  "status": "generated-and-visually-reviewed",
+  "nativeCopyVerified": true,
+  "productionStatus": "complete",
+  "includedInRuntime": true
+}

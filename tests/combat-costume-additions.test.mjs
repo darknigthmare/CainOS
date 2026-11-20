@@ -8,9 +8,20 @@ import { getFidelitySources } from '../combat/fidelity.mjs';
 import { createProgram, validateProgram } from '../combat/progression.mjs';
 import { emptyProfile, GAME_VERSION, validateProfile, validateReplay } from '../combat/session.mjs';
 
+const appearanceWaves = {
+  '2026-11-19': ['beachpomni', 'noirragatha', 'presidentpomni', 'noirzooble',
+    'beachragatha', 'beachzooble', 'beachjax', 'sandcastlekinger'],
+  '2026-11-20': ['noirpomni', 'noirjax', 'noirkinger', 'badendcaine',
+    'bodyguardragatha', 'bodyguardzooble'],
+};
+
 test('additional outfits retain their owner, authored kit and saved appearance through replay and campaign round trips', () => {
-  assert.equal(COSTUME_ADDITIONS.length, 8);
+  assert.equal(COSTUME_ADDITIONS.length, 14);
   assert.equal(VARIANTS.length, 51, 'historical atlas remains stable');
+  for (const [date, ids] of Object.entries(appearanceWaves)) {
+    assert.deepEqual(COSTUME_ADDITIONS.filter(outfit => outfit.introducedOn === date).map(outfit => outfit.id), ids,
+      date + ': preserve the historical wave and identify every new appearance');
+  }
   for (const outfit of COSTUME_ADDITIONS) {
     const owner = FIGHTERS.find(f => f.id === outfit.fighterId);
     const other = FIGHTERS.find(f => f.id !== outfit.fighterId);
@@ -34,7 +45,19 @@ test('additional outfits retain their owner, authored kit and saved appearance t
     assert.throws(() => validate({ ...replay, config: { ...config, variants: ['', outfit.id] } }));
     const sources = getFidelitySources(outfit.fidelity.sourceIds);
     assert.equal(sources.length, outfit.fidelity.sourceIds.length);
-    assert.ok(sources.every(source => source.url.startsWith('https://glitchproductions.store/products/')));
+    for (const source of sources) {
+      const url = new URL(source.url);
+      assert.equal(url.protocol, 'https:');
+      if (source.kind.startsWith('Épisode')) {
+        assert.equal(url.hostname, 'www.youtube.com');
+        assert.equal(url.pathname, '/watch');
+        assert.ok(url.searchParams.get('v'), 'episode sources identify the official video');
+      } else {
+        assert.equal(source.kind, 'Produit dérivé officiel');
+        assert.equal(url.hostname, 'glitchproductions.store');
+        assert.ok(url.pathname.startsWith('/products/'));
+      }
+    }
   }
 });
 
@@ -53,5 +76,5 @@ test('each additional outfit ships all eleven independent native-alpha PNG drawi
       signatures.add(createHash('sha256').update(bytes).digest('hex'));
     }
   }
-  assert.equal(signatures.size, 88, 'each slot has its own drawing');
+  assert.equal(signatures.size, 154, 'each slot in both active dated waves has its own drawing');
 });

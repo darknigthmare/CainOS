@@ -1,0 +1,43 @@
+{
+  "id": "noirpomni-victory",
+  "appearanceId": "noirpomni",
+  "slot": "victory",
+  "file": "assets/encore/poses/noirpomni/victory.png",
+  "method": "image_gen.imagegen",
+  "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-94383d41-fb83-4f57-b46e-e52768dd5200.png",
+  "sourceURLs": [
+    "https://glitchproductions.store/products/pomni-animiniz-pendantz"
+  ],
+  "sourceImageURL": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Pomni-Noir.png?v=1765582743",
+  "referencePaths": [
+    "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/noirpomni.png",
+    "/workspace/scratch/5f5114b49696/research/continuation-20261120/Pomni-Noir.png"
+  ],
+  "prompt": "Use case: stylized-concept. Create ONE individual full-body 2D game action drawing: Pomni — Film noir, victory. Image 1 is the approved character design; preserve its precise monochrome clothing, head, facial traits, anatomy, proportions and crisp cel-shaded ink style. Image 2 is the official costume reference. Identity: Pomni in her official Noir outfit. Entirely grayscale, no red, blue, yellow or other colored detail. Her recognisable large white face, dark short bob with side locks, large eyes with grayscale pinwheel irises, small worried mouth. Two-point jester hat in alternating pale and mid gray with gray pompoms. White collared short sleeve shirt, small black necktie, slim dark suspenders, high-waisted black full-length trousers and dark rounded shoes. White gloves. Slender cartoon limbs, proportions consistent with the supplied game style, not compressed plush anatomy.  CHANGE THE POSE to this distinct action: a confident victory pose, upright, one fist raised high and other hand on hip, pleased character-specific expression, no props. The result is an original static combat pose for Encore. Preserve the same character and costume in both references; no color, no new accessories. Two arms and two legs only, white gloves, long dark trousers, dark shoes. Character primarily faces screen right except hit/defeat body reaction. Full entire subject contained from very highest hat/ear/hand tip to lowest foot/base, with safe transparent margins on every edge. True transparent RGBA background with crisp clean silhouette; no gray haze, no halo, NO GLOW, no aura, no floor, no drop shadow, no scenery, no text, no framing, no second person, no attacker, no ghost limbs, no movement trails, no effect graphics. Never a sheet or multi-panel image: only one full-body pose. Native high resolution.",
+  "outputHint": "Generated images are saved to /workspace/scratch/5f5114b49696/generated_images as /workspace/scratch/5f5114b49696/generated_images/exec-94383d41-fb83-4f57-b46e-e52768dd5200.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "createdAt": "2026-11-20T04:37:02.959Z",
+  "visualReview": "Reviewed the complete native source board on 20 November: Grayscale jester hat and pinwheel eyes, dark bob, white collared shirt, black tie and suspenders, full dark trousers and shoes remain consistent. Two arms, two legs, all extremities visible. Slot victory is distinct and readable. Native alpha composes cleanly on a light background; no visible glow or floor, no cut-off part or extra character. These are original game poses, not episode frames.",
+  "sha256": "4cbe591dac72bb813db49d1430d743b1e37f3530ab86bceeacbcae6b7f573529",
+  "bytes": 982997,
+  "dimensions": [
+    955,
+    1647
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "bboxAlpha12": [
+    50,
+    20,
+    903,
+    1637
+  ],
+  "visualReviewAt": "2026-11-20T04:48:14.445050+00:00",
+  "visualReviewBoard": "docs/art-generation/cast-continuation-20261120/native-review/noirpomni.jpg",
+  "status": "generated-and-visually-reviewed",
+  "nativeCopyVerified": true,
+  "productionStatus": "complete",
+  "includedInRuntime": true
+}

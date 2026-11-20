@@ -1,0 +1,43 @@
+{
+  "id": "noirkinger-jump",
+  "appearanceId": "noirkinger",
+  "slot": "jump",
+  "file": "assets/encore/poses/noirkinger/jump.png",
+  "method": "image_gen.imagegen",
+  "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-4071d3e3-afd9-4d09-8a9c-197b013704e2.png",
+  "sourceURLs": [
+    "https://glitchproductions.store/products/kinger-animiniz-pendantz"
+  ],
+  "sourceImageURL": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_Pendantz_Kinger_Noir.png?v=1773978005",
+  "referencePaths": [
+    "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/noirkinger.png",
+    "/workspace/scratch/5f5114b49696/research/continuation-20261120/Animiniz_Pendantz_Kinger_Noir.png"
+  ],
+  "prompt": "Use case: stylized-concept. Create ONE individual full-body 2D game action drawing: Kinger — Film noir, jump. Image 1 is the approved character design; preserve its precise monochrome clothing, head, facial traits, anatomy, proportions and crisp cel-shaded ink style. Image 2 is the official costume reference. Identity: Kinger in the exact official Noir outfit: entirely grayscale anthropomorphic chess king with narrow gray chess-piece neck and two large protruding white eyeballs with small dark pupils; a gray fedora with dark gray ribbon on top. Torso is one flared conical gray chess-piece body, thick rolled gray collar, three dark round buttons down the front and two light gray suspenders with pale attachment tabs. Flat dark round chess-base at bottom. Two detached floating white cartoon gloves near his sides. No attached arms, NO legs, NO feet, no royal purple cloak, no ermine trim. Hat conceals the top of the chess piece, never put a human face under the hat, no mouth or nose.  CHANGE THE POSE to this distinct action: an airborne hop of the entire intact chess piece, body tilts slightly, both detached hands spread to balance, hat stays on; no legs or feet, no shadow or motion streaks. The result is an original static combat pose for Encore. Preserve the same character and costume in both references; no color, no new accessories. Two detached floating white gloves only. NO human arms, no human legs, knees, feet or shoes. Gray conical chess torso with three buttons and two pale suspenders; wide fedora, two protruding eyes, no mouth, no nose. Character primarily faces screen right except hit/defeat body reaction. Full entire subject contained from very highest hat/ear/hand tip to lowest foot/base, with safe transparent margins on every edge. True transparent RGBA background with crisp clean silhouette; no gray haze, no halo, NO GLOW, no aura, no floor, no drop shadow, no scenery, no text, no framing, no second person, no attacker, no ghost limbs, no movement trails, no effect graphics. Never a sheet or multi-panel image: only one full-body pose. Native high resolution.",
+  "outputHint": "Generated images are saved to /workspace/scratch/5f5114b49696/generated_images as /workspace/scratch/5f5114b49696/generated_images/exec-4071d3e3-afd9-4d09-8a9c-197b013704e2.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "createdAt": "2026-11-20T04:38:37.421Z",
+  "visualReview": "Reviewed the complete native source board on 20 November: Gray chess-piece body, two protruding eyes, fedora, thick collar, three buttons and two light suspenders; exactly two floating white gloves, no legs or attached arms. Tilts and floating hands express each action. Slot jump is distinct and readable. Native alpha composes cleanly on a light background; no visible glow or floor, no cut-off part or extra character. These are original game poses, not episode frames.",
+  "sha256": "4b4bd5a4c204f7a878fc7f67d6d9322e92ded09ad920af6c8dc44e6b0486e8b5",
+  "bytes": 953478,
+  "dimensions": [
+    1106,
+    1422
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "bboxAlpha12": [
+    43,
+    29,
+    1071,
+    1393
+  ],
+  "visualReviewAt": "2026-11-20T04:48:14.527756+00:00",
+  "visualReviewBoard": "docs/art-generation/cast-continuation-20261120/native-review/noirkinger.jpg",
+  "status": "generated-and-visually-reviewed",
+  "nativeCopyVerified": true,
+  "productionStatus": "complete",
+  "includedInRuntime": true
+}

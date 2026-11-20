@@ -1,0 +1,37 @@
+{
+  "id": "bodyguardragatha-victory",
+  "appearanceId": "bodyguardragatha",
+  "slot": "victory",
+  "file": "assets/encore/poses/bodyguardragatha/victory.png",
+  "sourceGenerationId": "exec-d756cf46-e28b-43d9-88c1-5716ff13a2c1",
+  "method": "image_gen.imagegen",
+  "sourceURLs": [
+    "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=260s",
+    "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg"
+  ],
+  "referencePaths": [
+    "/workspace/scratch/5f5114b49696/generated_images/exec-9f7fd1d4-974a-4b99-9a41-c4ed4be6e75d.png"
+  ],
+  "prompt": "Use case: identity-preserve. ONE individual complete full-body victory sprite for Digital Circus Encore. Reference image is the approved appearance. Change ONLY the pose: Victory pose: stand tall with one closed mitten fist raised above her shoulder, other hand on hip, small confident smile. Both shoes planted, complete long skirt and bow visible. Sunglasses stay on. No trophy, signs or particles. Identity and anatomy locks: Keep the exact black opaque sunglasses, red yarn bob, large lavender hair bow, cream cloth face/skin, red triangular nose, small smile, same blue/periwinkle patchwork dress with white collar/cuffs/hem, puff sleeves, short cream legs and black rounded shoes. No other clothing or equipment. Same proportions, clean outlines and cel shading. Same crisp outlined 2D cel-shaded game illustration and proportions. One whole subject with generous clear safe margins around every hair bow/antenna, hand and foot. Actual transparent RGBA background with opaque subject. No floor, background, shadow, glow, haze, letters, watermark, sprite sheet, duplicate view or extra accessories.",
+  "sha256": "acefc383357902e90b726264ec91a9aaccfb7f1a7e5b81090a08b50101812e8f",
+  "sourceBytesIdentical": true,
+  "dimensions": [
+    929,
+    1694
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "bboxAlpha12": [
+    51,
+    15,
+    905,
+    1680
+  ],
+  "bytes": 1244506,
+  "visualReview": "Individually viewed: one complete character, distinctive appearance and anatomy retained; native transparency and safe alpha bounds verified.",
+  "productionStatus": "complete",
+  "includedInRuntime": true
+}

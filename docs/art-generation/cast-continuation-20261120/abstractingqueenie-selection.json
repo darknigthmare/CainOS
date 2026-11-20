@@ -1,0 +1,43 @@
+{
+  "id": "abstractingqueenie-selection",
+  "appearanceId": "abstractingqueenie",
+  "slot": "selection",
+  "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/selection.png",
+  "sourceGenerationId": "exec-25c7a414-dffa-4b89-b0e6-317c06d3735f",
+  "method": "image_gen.imagegen",
+  "prompt": "Use case: stylized-concept. Asset type: one transparent full-body 2D fighting-game selection illustration. Draw ABSTRACTING QUEENIE faithfully from the official design in reference 1, using reference 2 only for the game's tall chess-piece proportions and crisp outlined cel shading. Queenie remains a tall muted rose-brown queen chess piece with scalloped crown/round finial, one intact bulging white eye with warm orange-brown iris and lashes, long BURGUNDY royal robe with white black-spotted ermine, and two small white floating cartoon hands. The viewer-right half of her head/crown becomes smoky-black faceted crystal with extra flat concentric pastel pink/yellow/purple eyes and one large transformed circular eye. Crystal spikes encase the wrists and project asymmetrically around the robe/chess base. Most robe and the normal face side remain visible. No human face, mouth, legs or feet. Partial abstraction, not the fully black monster. Pose: calm watchful selection stance turned slightly toward screen RIGHT, one hand gently presented forward, the other half-raised. Tall proportions, not squat collectible toy. One complete character with crown, all spikes, both hands and entire robe base clearly inside generous transparent margins. True transparent RGBA; no backdrop, floor, stand, cast shadow, aura, effects, text or watermark.",
+  "referencePaths": [
+    "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedQueenie.png",
+    "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/queenie.png"
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/abstraction-animiniz",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedQueenie.png?v=1780353722"
+  ],
+  "sourceType": "official-merchandise",
+  "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-25c7a414-dffa-4b89-b0e6-317c06d3735f.png",
+  "sha256": "3be556c8b0dda2e2b75966e4d42c57603e9b3fad5a48c8f9afa4f677ea358234",
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "bytes": 1667501,
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "bboxAlpha12": [
+    115,
+    7,
+    883,
+    1531
+  ],
+  "nativeCopyVerified": true,
+  "visualReview": "Complete tall rose-brown queen chess piece with scalloped crown/finial and burgundy ermine robe. Normal orange-brown eye and half face remain; opposing half is angular crystal with one large concentric eye and smaller embedded eyes. White hands with crystal cuffs and asymmetric lower crystal base preserved. No human legs or mouth. Full silhouette approved against official figure.",
+  "status": "generated-and-visually-reviewed",
+  "episodeFidelityClaim": false,
+  "targetFile": "assets/encore/selection/abstractingqueenie.png",
+  "productionStatus": "partial",
+  "includedInRuntime": false
+}

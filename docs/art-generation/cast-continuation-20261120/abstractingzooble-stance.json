@@ -1,0 +1,47 @@
+{
+  "id": "abstractingzooble-stance",
+  "appearanceId": "abstractingzooble",
+  "slot": "stance",
+  "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingzooble/stance.png",
+  "sourceGenerationId": "exec-34aa526e-efd5-45c6-b34c-69dac0792c42",
+  "method": "image_gen.imagegen",
+  "prompt": "Use case: identity-preserve. Asset type: ONE individual full-body transparent 2D fighting-game action sprite of ABSTRACTING ZOOBLE. Reference 1 is the approved strict design lock for silhouette, proportions, exact transformation patches, eyes, colours and polished cel shading. Reference 2 supplies official design details only; do not imitate its squat toy proportions, setting or lighting. Mouthless colourful geometric Zooble: pink triangle head half crystalline with one normal white eye and one concentric pastel crystal eye, checkered antenna and crystal lightning crest, yellow spotted oval torso/cyan chest ring, pink rear wing, red curly arm with crystal hand and opposite orange/yellow arm, one normal long blue leg/foot and one crystal lower foot with rear eye-bearing growth. Preserve exact approved asymmetric assembly, no mouth or extra limbs. Create a genuinely distinct natural action pose, not a mirrored/cropped selection image. Every limb, crown/hat/ear tip, attached mask and crystal spike must fit fully inside clear transparent margins on ALL sides. One connected character, crisp detailed 2D art on true transparent RGBA; no scenery, floor, cast shadow, aura, glow, particles, labels, watermark, inset or duplicate. POSE: STANDING COMBAT GUARD facing screen RIGHT, three-quarter view. Feet spread, front foot advanced, knees gently flexed, both hands held near chest in a compact alert guard.",
+  "referencePaths": [
+    "/workspace/scratch/5f5114b49696/CainOS/docs/art-generation/cast-continuation-20261120/pending-assets/abstractingzooble/selection.png",
+    "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedZooble_04.png"
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/abstraction-animiniz",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedZooble_04.png?v=1780353721"
+  ],
+  "sourceType": "official-merchandise",
+  "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-34aa526e-efd5-45c6-b34c-69dac0792c42.png",
+  "sha256": "a5966b959c81211a2de7f38abd696401643b2e8389620b77f0102fbf90a9b48d",
+  "dimensions": [
+    1199,
+    1312
+  ],
+  "bytes": 959487,
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "bboxAlpha12": [
+    143,
+    25,
+    1026,
+    1275
+  ],
+  "nativeCopyVerified": true,
+  "visualReview": "Ready guard toward right with bent mismatched legs and both hands raised. Mouthless triangular head, normal white eye opposite crystal eye/crest, checkered antenna, yellow spotted torso/cyan ring, normal blue foot and opposing crystal foot remain clear. All tips and feet visible.",
+  "status": "generated-and-visually-reviewed",
+  "episodeFidelityClaim": false,
+  "targetFile": "assets/encore/stance/abstractingzooble.png",
+  "productionStatus": "partial",
+  "includedInRuntime": false,
+  "originalReferencePaths": [
+    "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/abstractingzooble.png",
+    "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedZooble_04.png"
+  ]
+}

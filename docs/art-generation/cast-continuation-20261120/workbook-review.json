@@ -1,0 +1,162 @@
+{
+  "schema": "encore-costume-workbook-review/v1",
+  "status": "export_blocked_memory",
+  "createdAt": "2026-11-20T05:29:09.910860+00:00",
+  "introducedOn": "2026-11-20",
+  "summary": "The dated tracker changes were prepared, recalculated and visually reviewed in memory. Native XLSX export did not complete. No updated workbook or tracker JSON was installed.",
+  "builder": {
+    "file": "scripts/update-combat-continuation-20261120-workbook.mjs",
+    "sha256": "6f7c69b685bbfbd1124c22b29f48382c7ae9dc56de00c52fadeb935efe19c286"
+  },
+  "installedHistoricalFiles": {
+    "asOf": "2026-11-19",
+    "workbook": {
+      "file": "docs/DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx",
+      "sha256": "fdba67e67cebfd18a5988017c86ee7abe6cbb5fa625d0d4b5e850c125deac89d",
+      "bytes": 751648
+    },
+    "tracker": {
+      "file": "docs/combat-tracker-data.json",
+      "sha256": "cdc0eb3a39b03ec8bc40458f3790a7068c9af672f86dc09ac4f82e936a5ded32",
+      "bytes": 4426869
+    },
+    "productionRows": 3100,
+    "qaRows": 2260,
+    "sources": 120,
+    "byteIdenticalToInput": true,
+    "gitDiffEmpty": true
+  },
+  "preparation": {
+    "counts": {
+      "sheets": 11,
+      "nativeTables": 10,
+      "productionBefore": 3100,
+      "productionAfter": 3115,
+      "qaBefore": 2260,
+      "qaAfter": 2265,
+      "sourcesBefore": 120,
+      "sourcesAfter": 135,
+      "costumes": 443,
+      "fighters": 54,
+      "archiveVariants": 51,
+      "fidelityRecords": 681,
+      "newAppearances": 6,
+      "costumeAdditions": 14,
+      "newArtFiles": 66,
+      "cumulativeAdditionArtFiles": 154,
+      "pendingAppearances": 9,
+      "pendingArtFiles": 36,
+      "pendingMissingFiles": 63,
+      "newProductionImplemented": 6,
+      "newProductionPartial": 9
+    },
+    "formulas": {
+      "scope": "in_memory_before_export",
+      "count": 42,
+      "recalculated": true,
+      "errors": 0
+    },
+    "visualReview": {
+      "status": "reviewed_in_memory_before_export",
+      "reviewedViews": 13,
+      "notes": "Reviewed the summary, five Production views, two QA draft views and five source views. Active and pending counts are distinct, source kinds retained, text fits. QA draft success labels were not treated as completed export or reimport checks."
+    },
+    "plannedProductionStatuses": {
+      "Implémenté": 6,
+      "Partiel": 9
+    },
+    "installed": false
+  },
+  "export": {
+    "attempted": true,
+    "succeeded": false,
+    "xlsxWritten": false,
+    "roundTripExecuted": false,
+    "lastStage": "exporting-without-render-caches",
+    "lastReturnCode": -9,
+    "lastMaximumRSSKiB": 666580,
+    "attempts": [
+      {
+        "heapLimitMiB": 176,
+        "returnCode": -6,
+        "elapsedSeconds": 14.091610705007042,
+        "maximumRSSKiB": 535200,
+        "resources": "docs/art-generation/cast-continuation-20261120/workbook-preparation/diagnostics/export-176-resources.json",
+        "result": "V8 JavaScript heap limit"
+      },
+      {
+        "heapLimitMiB": 256,
+        "returnCode": -6,
+        "elapsedSeconds": 16.31707450799877,
+        "maximumRSSKiB": 606264,
+        "resources": "docs/art-generation/cast-continuation-20261120/workbook-preparation/diagnostics/export-256-resources.json",
+        "result": "V8 JavaScript heap limit"
+      },
+      {
+        "heapLimitMiB": 320,
+        "returnCode": -9,
+        "elapsedSeconds": 15.940812822002044,
+        "maximumRSSKiB": 666580,
+        "resources": "docs/art-generation/cast-continuation-20261120/workbook-preparation/diagnostics/export-320-resources.json",
+        "result": "SIGKILL during native XLSX export"
+      }
+    ],
+    "attemptsStopped": true
+  },
+  "checkpoint": {
+    "file": "docs/art-generation/cast-continuation-20261120/workbook-preparation-checkpoint.json.gz",
+    "compression": "gzip",
+    "sha256": "ee313dcbf58045bf0a3be897d8901c8b483b5e32ef5f2fa76c5747e2654c778d",
+    "bytes": 767313,
+    "uncompressedSHA256": "9f549c235d63a3343c3397df0ca005436b516dc1a523426aa3f6fe495d0ab466",
+    "uncompressedBytes": 8800035,
+    "decompressionVerified": true,
+    "status": "prepared_state_not_exported",
+    "warning": "verificationDraft contains proposed final review fields. They are not completed export or reimport evidence. workbookSHA256 is null and exportRoundTripPassed is false."
+  },
+  "runtimeEvidence": {
+    "file": "docs/art-generation/cast-continuation-20261120/verification.json",
+    "sha256": "dbed52ba64736df0f1f7b763944723cafb237a0f039167bdd0d5c407c05b9292",
+    "scope": "Independent successful runtime, assets, Node, builds and Canvas evidence; it does not certify workbook export."
+  },
+  "publishedPreviews": [
+    {
+      "file": "docs/art-generation/cast-continuation-20261120/workbook-preparation/production-1.png",
+      "sha256": "95539d7c3672462ef8f735fd3829a341d24024a5a520914f2e5e1f7b207bd87d",
+      "bytes": 143113,
+      "scope": "Prepared Production rows in memory; not installed in the historical XLSX."
+    },
+    {
+      "file": "docs/art-generation/cast-continuation-20261120/workbook-preparation/production-2.png",
+      "sha256": "41cdb8cb39d676f22fa34dc868415cb4994c41ce89c37ed96a6c430e5af370f5",
+      "bytes": 230802,
+      "scope": "Prepared Production rows in memory; not installed in the historical XLSX."
+    },
+    {
+      "file": "docs/art-generation/cast-continuation-20261120/workbook-preparation/production-3.png",
+      "sha256": "f762a6012555a390790104f89cbf355e9a046a110bbe8aa05e80ff9da4fa9881",
+      "bytes": 230823,
+      "scope": "Prepared Production rows in memory; not installed in the historical XLSX."
+    },
+    {
+      "file": "docs/art-generation/cast-continuation-20261120/workbook-preparation/production-4.png",
+      "sha256": "080c27597ff1c34952a10d589517c18067eace5243a03572c14f006dd2c6fdae",
+      "bytes": 215811,
+      "scope": "Prepared Production rows in memory; not installed in the historical XLSX."
+    },
+    {
+      "file": "docs/art-generation/cast-continuation-20261120/workbook-preparation/production-5.png",
+      "sha256": "5925abba0b5d9eacdac9f6dd128072f5f0ea90a70dedacc4ed8dbc03d690c758",
+      "bytes": 240073,
+      "scope": "Prepared Production rows in memory; not installed in the historical XLSX."
+    }
+  ],
+  "omittedPreviews": [
+    "Summary and QA draft views are retained outside the published preview set because export/reimport verification did not complete."
+  ],
+  "limitations": [
+    "The historical XLSX and tracker JSON remain the installed files.",
+    "Targets of 3115 Production rows, 2265 QA rows and 135 sources were prepared but not delivered as an updated XLSX.",
+    "No native Excel session, successful XLSX export or export round trip is claimed for this preparation."
+  ]
+}

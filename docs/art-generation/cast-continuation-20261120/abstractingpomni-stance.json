@@ -1,0 +1,47 @@
+{
+  "id": "abstractingpomni-stance",
+  "appearanceId": "abstractingpomni",
+  "slot": "stance",
+  "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingpomni/stance.png",
+  "sourceGenerationId": "exec-c10092e6-27c8-42da-986a-0f82f35181db",
+  "method": "image_gen.imagegen",
+  "prompt": "Use case: identity-preserve. Asset type: ONE individual full-body transparent 2D fighting-game action sprite of ABSTRACTING POMNI. Reference 1 is the approved strict design lock for silhouette, proportions, exact transformation patches, eyes, colours and polished cel shading. Reference 2 supplies official design details only; do not imitate its squat toy proportions, setting or lighting. Slender Pomni with red-blue jester hat and suit, yellow trims/buttons, pale face with one normal red-blue pinwheel iris and brown bob. Opposing half of face/hat is dark angular crystal with flat pastel concentric eyes; one arm/hand is crystal, opposite hand is blue glove. Normal RED shoe and opposing CRYSTAL eye-bearing foot MUST stay on the same anatomical sides as the approved selection. Do not swap, mirror or redistribute the transformation. Preserve all individual eye-bearing hat growths and asymmetric patches; not fully abstracted. Create a genuinely distinct natural action pose, not a mirrored/cropped selection image. Every limb, crown/hat/ear tip, attached mask and crystal spike must fit fully inside clear transparent margins on ALL sides. One connected character, crisp detailed 2D art on true transparent RGBA; no scenery, floor, cast shadow, aura, glow, particles, labels, watermark, inset or duplicate. POSE: STANDING COMBAT GUARD facing screen RIGHT, three-quarter view. Feet spread, front foot advanced, knees gently flexed, both hands held near chest in a compact alert guard.",
+  "referencePaths": [
+    "/workspace/scratch/5f5114b49696/CainOS/docs/art-generation/cast-continuation-20261120/pending-assets/abstractingpomni/selection.png",
+    "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractPomni.png"
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/abstraction-animiniz",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractPomni.png?v=1780353721"
+  ],
+  "sourceType": "official-merchandise",
+  "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-c10092e6-27c8-42da-986a-0f82f35181db.png",
+  "sha256": "2c72e2d9e681c4a13fb4b61ab8dd3be0175db4c31234f8f819ff8fb21da7f9a6",
+  "dimensions": [
+    1176,
+    1337
+  ],
+  "bytes": 1039618,
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "bboxAlpha12": [
+    154,
+    11,
+    1033,
+    1319
+  ],
+  "nativeCopyVerified": true,
+  "visualReview": "Distinct wide combat guard facing right, knees bent and both normal blue and crystal hands raised. Normal red shoe on correct side and opposing crystal foot preserved, face/hat asymmetry and normal pinwheel iris intact. Complete figure and all tips inside canvas.",
+  "status": "generated-and-visually-reviewed",
+  "episodeFidelityClaim": false,
+  "targetFile": "assets/encore/stance/abstractingpomni.png",
+  "productionStatus": "partial",
+  "includedInRuntime": false,
+  "originalReferencePaths": [
+    "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/abstractingpomni.png",
+    "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractPomni.png"
+  ]
+}

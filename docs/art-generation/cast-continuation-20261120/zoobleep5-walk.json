@@ -1,0 +1,39 @@
+{
+  "id": "zoobleep5-walk",
+  "appearanceId": "zoobleep5",
+  "slot": "walk",
+  "file": "docs/art-generation/cast-continuation-20261120/pending-assets/zoobleep5/walk.png",
+  "sourceGenerationId": "exec-1380e757-fc8c-4341-be79-28252198a531",
+  "method": "image_gen.imagegen",
+  "sourceURLs": [
+    "https://www.youtube.com/watch?v=sQ5DCwcpMy0",
+    "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg"
+  ],
+  "referencePaths": [
+    "/workspace/scratch/5f5114b49696/generated_images/exec-63827051-c08b-4c2b-8200-8ff199cd529a.png",
+    "/workspace/scratch/5f5114b49696/generated_images/exec-d58ef978-354a-44da-a780-b12abed014d5.png"
+  ],
+  "prompt": "Use case: precise-object-edit. ONE individual full-body walk sprite of episode-five Zooble WITHOUT sunglasses. Image 1 is the approved pose and exact correct modular anatomy. Image 2 is the approved unaccessorized identity and face. Change ONLY the eye area of image 1: remove the black sunglasses completely and replace them with the exact asymmetrical face from image 2, following the existing head tilt. Large YELLOW eye with black spiral pupil and lavender half-lid on the LEFT; smaller WHITE eye with black pupil, violet half-lid and exactly three black lower lashes on the RIGHT. No mouth, no sunglasses or other face accessory. Keep ALL the rest of image 1 unchanged, especially its pose, body proportions, cyan lightning LEFT antenna, black-white spiral RIGHT antenna, pink triangular head, yellow spotted body, hollow violet triangle, pink wing, yellow articulated LEFT arm and yellow hand, GREEN spring/pink spherical elbow/ONE STRAIGHT pink-white forearm rod/green C-claw RIGHT arm, cyan-zigzag red/yellow pointed peg LEFT leg and purple rod/boot RIGHT leg. Never move or swap arms, legs or shoulder attachment sides. Match image 1's crisp 2D illustration. True transparent RGBA background, opaque subject, clean silhouette and generous margins around every extremity. One single complete figure only, no glow, haze, ground, shadow, props, text, frames or sprite sheet.",
+  "sha256": "2fa6b86cdaa4687df0d5fc4af471920644344f2276d2fe1cb3e62828846e217d",
+  "sourceBytesIdentical": true,
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "bboxAlpha12": [
+    88,
+    9,
+    962,
+    1466
+  ],
+  "bytes": 1529675,
+  "visualReview": "Individually viewed: black sunglasses absent, large yellow spiral eye on image left and smaller white eye with purple lid and three lower lashes on image right. Correct episode-five torso, antennas, wing, unlike arms and legs retained in a complete walk pose.",
+  "targetFile": "assets/encore/poses/zoobleep5/walk.png",
+  "productionStatus": "partial",
+  "includedInRuntime": false
+}

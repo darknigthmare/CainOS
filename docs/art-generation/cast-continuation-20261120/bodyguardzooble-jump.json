@@ -1,0 +1,37 @@
+{
+  "id": "bodyguardzooble-jump",
+  "appearanceId": "bodyguardzooble",
+  "slot": "jump",
+  "file": "assets/encore/poses/bodyguardzooble/jump.png",
+  "sourceGenerationId": "exec-e308c452-7d20-420b-ad3e-d8985c17d8aa",
+  "method": "image_gen.imagegen",
+  "sourceURLs": [
+    "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=260s",
+    "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg"
+  ],
+  "referencePaths": [
+    "/workspace/scratch/5f5114b49696/generated_images/exec-aa0e963f-53bb-4d87-87a9-9a7c45732956.png"
+  ],
+  "prompt": "Use case: identity-preserve. ONE individual full-body jump sprite for Digital Circus Encore. The reference is the approved character selection sprite. Change ONLY pose: A single airborne jump: lift the purple boot leg forward while the cyan-zigzag peg leg folds back in its existing joints, arms lifted out for balance, triangular head upright. Keep complete unlike feet and antenna tips visible, no extra joints or body parts. Identity invariants: Keep the pink triangular mouthless head and opaque black sunglasses, cyan lightning antenna on screen left and black-white curled spring antenna on screen right, yellow spotted torso with hollow violet inverted triangle, pink feather wing screen left. Screen-left arm: slender yellow segmented rod, yellow round elbow, yellow hand. Screen-right arm: green spring, pink round elbow, pink-white striped straight forearm, one green C-claw. Screen-left leg: cyan zigzag, red-yellow pointed peg. Screen-right leg: long purple bendy rod, purple rounded boot. Preserve these sides and exactly two arms/two legs, no added pieces, no swaps, same 2D line art. Match the reference's exact character proportions and crisp outlined 2D cel-shaded art. One whole figure, true transparent RGBA background and opaque body interior. Generous transparent margins around every extremity, head bow/antennas, hands, peg and shoes. No background, shadow, floor, haze, glow, text, logo, extra accessories, motion trail, duplicate view or sprite sheet.",
+  "sha256": "f8256c0ebfd8b69301b7417b836ed0afd2558aa87cc22b53d83dd9983c5db747",
+  "sourceBytesIdentical": true,
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "bboxAlpha12": [
+    28,
+    88,
+    996,
+    1179
+  ],
+  "bytes": 1450546,
+  "visualReview": "Individually viewed: one complete character, distinctive appearance and anatomy retained; native transparency and safe alpha bounds verified.",
+  "productionStatus": "complete",
+  "includedInRuntime": true
+}

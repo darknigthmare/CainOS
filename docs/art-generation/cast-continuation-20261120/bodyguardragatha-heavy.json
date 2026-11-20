@@ -1,0 +1,37 @@
+{
+  "id": "bodyguardragatha-heavy",
+  "appearanceId": "bodyguardragatha",
+  "slot": "heavy",
+  "file": "assets/encore/poses/bodyguardragatha/heavy.png",
+  "sourceGenerationId": "exec-1e1a4fdd-61b2-4f58-a184-28a0d0dcaa05",
+  "method": "image_gen.imagegen",
+  "sourceURLs": [
+    "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=260s",
+    "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg"
+  ],
+  "referencePaths": [
+    "/workspace/scratch/5f5114b49696/generated_images/exec-9f7fd1d4-974a-4b99-9a41-c4ed4be6e75d.png"
+  ],
+  "prompt": "Use case: identity-preserve. ONE individual complete full-body heavy sprite for Digital Circus Encore. Reference image is the approved appearance. Change ONLY the pose: Powerful heavy attack wind-up: both mitten fists held together above and slightly in front of her shoulder, elbows raised, knees bent and feet spread. Entire skirt stays modest and complete; no weapon or effects. Clear forceful pose distinct from her straight jab. Identity and anatomy locks: Keep the exact black opaque sunglasses, red yarn bob, large lavender hair bow, cream cloth face/skin, red triangular nose, small smile, same blue/periwinkle patchwork dress with white collar/cuffs/hem, puff sleeves, short cream legs and black rounded shoes. No other clothing or equipment. Same proportions, clean outlines and cel shading. Same crisp outlined 2D cel-shaded game illustration and proportions. One whole subject with generous clear safe margins around every hair bow/antenna, hand and foot. Actual transparent RGBA background with opaque subject. No floor, background, shadow, glow, haze, letters, watermark, sprite sheet, duplicate view or extra accessories.",
+  "sha256": "11ca7692a0c73975ffb51df983622c845673b78b7e67dfd923d0816c89c30a36",
+  "sourceBytesIdentical": true,
+  "dimensions": [
+    1071,
+    1469
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "bboxAlpha12": [
+    91,
+    20,
+    962,
+    1451
+  ],
+  "bytes": 1202496,
+  "visualReview": "Individually viewed: one complete character, distinctive appearance and anatomy retained; native transparency and safe alpha bounds verified.",
+  "productionStatus": "complete",
+  "includedInRuntime": true
+}

@@ -6,7 +6,7 @@ CainOS is a retro C&A mainframe-style interactive web app inspired by The Amazin
 
 CainOS includes **Circus Combat — Encore**, a shared combat application and
 standalone game adapted from the real CQC engine of `shadow-codec-ops`.
-The playable game version is **0.7.0**. The GLITCH wardrobe was updated on **18 November 2026**; the combined character artwork pass is dated **19 November 2026**.
+The playable game version is **0.7.0**. The GLITCH wardrobe was updated on **18 November 2026**; the latest Circus appearance continuation is dated **20 November 2026**.
 
 - In CainOS: complete the existing first-use calibration, then launch **Circus Combat**.
 - Direct game: open **`/combat/`** on the same static server.
@@ -15,7 +15,30 @@ The playable game version is **0.7.0**. The GLITCH wardrobe was updated on **18 
 - Controls, architecture, references and remaining work: **[Digital Circus — Encore](docs/DIGITAL_CIRCUS_ENCORE.md)**.
 - To equip a crossover, open the fighter or opponent’s wardrobe and select **Filtrer les tenues**. Choose the series and **Fusion originale** to see the character’s redesigned body. [Compare the fusion portraits and combat stances](docs/COMBAT_GALERIE_FUSIONS.md) or [browse the GLITCH wardrobe and arena gallery](docs/COMBAT_CROSSOVERS_GLITCH.md).
 
-The game combines **54 fighters, 540 techniques, 22 shared arenas, 437 selectable costumes and 179 searchable archive entries**. Fourteen fighters have individually authored kits; 40 promoted archive NPCs use the extension kits described below. The 54 dedicated stage arrangements reuse shared scenery and are counted separately. Its nine standard modes are joined by nine illustrated crossover visits under **Escales GLITCH**. The wardrobe contains 51 archive costumes, eight additional illustrated Circus outfits, 252 tributes and residents, and 126 original fusions for the original fourteen fighters. Crossovers for the forty promoted NPCs remain to be produced. The combat techniques and stories are original fan-game adaptations.
+The game combines **54 fighters, 540 techniques, 22 shared arenas, 443 selectable costumes and 179 searchable archive entries**. Fourteen fighters have individually authored kits; 40 promoted archive NPCs use the extension kits described below. The 54 dedicated stage arrangements reuse shared scenery and are counted separately. Its nine standard modes are joined by nine illustrated crossover visits under **Escales GLITCH**. The wardrobe contains 51 archive costumes, 14 additional illustrated Circus appearances, 252 tributes and residents, and 126 original fusions for the original fourteen fighters. Crossovers for the forty promoted NPCs remain to be produced. The combat techniques and stories are original fan-game adaptations.
+
+### Six completed appearances and nine in preparation — 20 November continuation
+
+Noir Pomni, Noir Jax, Noir Kinger, Bodyguard Ragatha, Bodyguard Zooble and Bad End
+Caine each receive **eleven independent native-alpha PNGs**. These **66 active new
+drawings** bring the two dated waves to **14 complete appearances and 154 PNGs**.
+Combined character art outside the crossovers totals **1,388 files: 1,071 actions,
+119 stances and 198 portraits**.
+
+A further **36 native drawings for nine appearances** are preserved in the PR's
+production archive: Zooble's episode-five assembly, Smiling Tragedy Gangle and the
+seven partially abstracting characters (Pomni, Jax, Ragatha, Kinger, Gangle, Zooble
+and Queenie). **63 action poses remain to generate** after the image service's daily
+quota stopped this pass. The incomplete appearances are outside the active wardrobe
+and offline pack. The checkpoint retains every completed file, reference and missing
+pose prompt; no absent slot is filled by duplicating or transforming another drawing.
+
+Each active appearance retains its fighter's kit and survives profile, campaign and
+replay round trips. Episode observations and official merchandise designs are
+attributed separately: an Abstraction Animiniz design does not establish an episode
+event. The [20 November continuation report](docs/COMBAT_CAST_CONTINUATION_2026-11-20.md)
+links both inventories, the visual reviews, verification and exact resumption point.
+The 19 November evidence below remains a historical checkpoint.
 
 ### Eight additional outfits — 19 November continuation
 
@@ -25,7 +48,7 @@ stance and nine action poses. Their wardrobe entries include the inspected
 official merchandise references. They use the existing fighter's moves and
 statistics, and retain the historical atlas, profile and replay identities.
 See the [continuation report and visual review](docs/COMBAT_CAST_CONTINUATION_2026-11-19.md).
-The combined character-art coverage becomes **1,322 files**; the 378 crossover
+At that checkpoint, combined character-art coverage reached **1,322 files**; the 378 crossover
 costumes remain separately counted. These are static fan-game drawings;
 frame-by-frame animation and scene-level canonical comparison remain open.
 
@@ -115,8 +138,8 @@ horizontal fighting arena. Their floor artwork also follows the new composition;
 collisions are unchanged. The other nine static backgrounds remain identical. See the [stage review](docs/combat-stage-review-0.6.0.json) and
 [before/after sheet](docs/images/encore-stage-comparison-0.6.0.png).
 
-The shared fidelity registers contain **675 records**: 54 fighters, 540 techniques,
-22 shared arenas, 51 archive costumes and eight additional Circus outfits. They separate technical checks, observed reference
+The shared fidelity registers contain **681 records**: 54 fighters, 540 techniques,
+22 shared arenas, 51 archive costumes and 14 additional Circus appearances. They separate technical checks, observed reference
 traits, original adaptations and remaining discrepancies. **This release does not
 claim complete canonical or pixel-exact 1:1 fidelity.**
 
@@ -170,7 +193,7 @@ coloured Mannequins. Their kits are role-based templates adapted for Encore;
 their routes and tournament text are generated from one reviewed record per
 character. They are original fan-game adaptations, not canonical powers. The
 roster now exposes **162 stage finales** (42 authored, 120 generated for the
-promoted PNJ) and **675 fidelity records**, including the eight additional outfits. The remaining 74 archive identities
+promoted PNJ) and **681 fidelity records**, including the 14 additional appearances. The remaining 74 archive identities
 (props, effects, abstractions, humans and unreviewed duplicates) stay
 non-playable. See [roster-expansion.mjs](combat/roster-expansion.mjs).
 

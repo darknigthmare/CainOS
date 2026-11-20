@@ -1,0 +1,37 @@
+{
+  "id": "bodyguardragatha-attack",
+  "appearanceId": "bodyguardragatha",
+  "slot": "attack",
+  "file": "assets/encore/poses/bodyguardragatha/attack.png",
+  "sourceGenerationId": "exec-5a3ad9f6-4a64-4a84-9b76-65d8367d6d92",
+  "method": "image_gen.imagegen",
+  "sourceURLs": [
+    "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=260s",
+    "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg"
+  ],
+  "referencePaths": [
+    "/workspace/scratch/5f5114b49696/generated_images/exec-9f7fd1d4-974a-4b99-9a41-c4ed4be6e75d.png"
+  ],
+  "prompt": "Use case: identity-preserve. ONE individual full-body attack sprite for Digital Circus Encore. Reference image is the approved whole character. Change ONLY pose: One controlled forward punch toward screen right: front arm extended with mitten fist at chest height, other fist near her chest, feet grounded in a wide step. Head stays three-quarter visible and glasses stay on. Full skirt and shoes visible; no enemy or impact effect. Mandatory identity invariants: Keep the exact black opaque sunglasses, red yarn bob, large lavender hair bow, cream cloth face/skin, red triangular nose, small smile, same blue/periwinkle patchwork dress with white collar/cuffs/hem, puff sleeves, short cream legs and black rounded shoes. No other clothing or equipment. Same proportions, clean outlines and cel shading. Exact same proportions, crisp black outlines and clean 2D cel shading. True transparent RGBA outside opaque character. One single complete figure with generous clear margins around bow/antennas, head, hands and feet; no cut-off shapes. No background, floor, shadow, glow, haze, text, symbols, motion effects, extra limbs, clothes or props, alternate view or sprite sheet.",
+  "sha256": "2922b99a9c3635bcd23d52160f17bafb0af5d577d0232a773a7b554487886521",
+  "sourceBytesIdentical": true,
+  "dimensions": [
+    1089,
+    1444
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "bboxAlpha12": [
+    90,
+    27,
+    1002,
+    1424
+  ],
+  "bytes": 1048355,
+  "visualReview": "Individually viewed: one complete character, distinctive appearance and anatomy retained; native transparency and safe alpha bounds verified.",
+  "productionStatus": "complete",
+  "includedInRuntime": true
+}

@@ -1,0 +1,39 @@
+{
+  "id": "zoobleep5-attack",
+  "appearanceId": "zoobleep5",
+  "slot": "attack",
+  "file": "docs/art-generation/cast-continuation-20261120/pending-assets/zoobleep5/attack.png",
+  "sourceGenerationId": "exec-8573a65b-cced-4c93-ad9c-323f0e42e9a0",
+  "method": "image_gen.imagegen",
+  "sourceURLs": [
+    "https://www.youtube.com/watch?v=sQ5DCwcpMy0",
+    "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg"
+  ],
+  "referencePaths": [
+    "/workspace/scratch/5f5114b49696/generated_images/exec-1e5a9e42-74a4-484f-8241-304adff1f029.png",
+    "/workspace/scratch/5f5114b49696/generated_images/exec-d58ef978-354a-44da-a780-b12abed014d5.png"
+  ],
+  "prompt": "Use case: precise-object-edit. ONE individual full-body attack sprite of episode-five Zooble WITHOUT sunglasses. Image 1 is the approved pose and exact correct modular anatomy. Image 2 is the approved unaccessorized identity and face. Change ONLY the eye area of image 1: remove the black sunglasses completely and replace them with the exact asymmetrical face from image 2, following the existing head tilt. Large YELLOW eye with black spiral pupil and lavender half-lid on the LEFT; smaller WHITE eye with black pupil, violet half-lid and exactly three black lower lashes on the RIGHT. No mouth, no sunglasses or other face accessory. Keep ALL the rest of image 1 unchanged, especially its pose, body proportions, cyan lightning LEFT antenna, black-white spiral RIGHT antenna, pink triangular head, yellow spotted body, hollow violet triangle, pink wing, yellow articulated LEFT arm and yellow hand, GREEN spring/pink spherical elbow/ONE STRAIGHT pink-white forearm rod/green C-claw RIGHT arm, cyan-zigzag red/yellow pointed peg LEFT leg and purple rod/boot RIGHT leg. Never move or swap arms, legs or shoulder attachment sides. Match image 1's crisp 2D illustration. True transparent RGBA background, opaque subject, clean silhouette and generous margins around every extremity. One single complete figure only, no glow, haze, ground, shadow, props, text, frames or sprite sheet.",
+  "sha256": "f11f55a6c59ce17ce14606d7c8de2399e5c9ea5ed3d7eda8987a23d2fcc80b4b",
+  "sourceBytesIdentical": true,
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "bboxAlpha12": [
+    113,
+    11,
+    975,
+    1521
+  ],
+  "bytes": 1453651,
+  "visualReview": "Individually viewed: black sunglasses absent, large yellow spiral eye on image left and smaller white eye with purple lid and three lower lashes on image right. Correct episode-five torso, antennas, wing, unlike arms and legs retained in a complete attack pose.",
+  "targetFile": "assets/encore/poses/zoobleep5/attack.png",
+  "productionStatus": "partial",
+  "includedInRuntime": false
+}

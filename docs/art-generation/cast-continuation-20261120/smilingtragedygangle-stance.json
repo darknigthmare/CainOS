@@ -1,0 +1,47 @@
+{
+  "id": "smilingtragedygangle-stance",
+  "appearanceId": "smilingtragedygangle",
+  "slot": "stance",
+  "file": "docs/art-generation/cast-continuation-20261120/pending-assets/smilingtragedygangle/stance.png",
+  "sourceGenerationId": "exec-0da51ac9-3372-4ba4-a139-0427d881096e",
+  "method": "image_gen.imagegen",
+  "prompt": "Use case: identity-preserve. Draw ONE complete SMILING TRAGEDY GANGLE character in a distinct full-body 2D fighting-game action pose. Reference 1 is the approved exact design lock: one white tragedy mask, both lateral blue tears, eyes closed in gentle upward arches, small closed-mouth smile, slender red ribbon arms, spiral ribbon torso, two separate curled ribbon feet. Reference 2 bottom-middle cell confirms the official facial expression. Preserve the approved crisp dark outlines, detailed red cel shading and proportions. Keep the smiling tragedy face in this action; no broad comedy mask, second mask, human body, gloves or added accessory. Entire character with all ribbon ends, full mask and both feet inside clear transparent margins on every side. One character, true transparent RGBA, no background, floor, cast shadow, glow, aura, particles, text, watermark or duplicate. POSE: combat ready STANCE facing screen RIGHT in three-quarter view. Spiral torso slightly compressed, two ribbon feet spread with front foot advanced. Both ribbon arms curl upward into a compact guard at chest height, body balanced and ready. Maintain small gentle smile and closed arch eyes with both blue tears.",
+  "referencePaths": [
+    "/workspace/scratch/5f5114b49696/CainOS/docs/art-generation/cast-continuation-20261120/pending-assets/smilingtragedygangle/selection.png",
+    "/workspace/scratch/5f5114b49696/research/continuation-20261120/cast-episode6-storyboard-L3-M10.jpg"
+  ],
+  "sourceURLs": [
+    "https://www.youtube.com/watch?v=mOvhHim78YA",
+    "https://i.ytimg.com/sb/mOvhHim78YA/storyboard3_L3/M10.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCJX--8QG&sigh=rs$AOn4CLBRc1Pm_soGXt4VJR7qM3OM3K-a2A"
+  ],
+  "sourceType": "official-episode-storyboard",
+  "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-0da51ac9-3372-4ba4-a139-0427d881096e.png",
+  "sha256": "9039e1f4973eed292262ff2a6f3bbd5f6440a4b45ab15fdbffd0b413cb58b696",
+  "dimensions": [
+    1199,
+    1312
+  ],
+  "bytes": 767470,
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "bboxAlpha12": [
+    90,
+    57,
+    1071,
+    1241
+  ],
+  "nativeCopyVerified": true,
+  "visualReview": "Distinct ready guard: spiral torso compressed, ribbon feet wide apart, two arms curled into chest-high guard, head oriented toward screen right. White mask keeps both blue tears, closed arches and small smile. Entire mask, arms and feet visible, consistent approved red cel-shaded design.",
+  "status": "generated-and-visually-reviewed",
+  "episodeFidelityClaim": false,
+  "targetFile": "assets/encore/stance/smilingtragedygangle.png",
+  "productionStatus": "partial",
+  "includedInRuntime": false,
+  "originalReferencePaths": [
+    "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/smilingtragedygangle.png",
+    "/workspace/scratch/5f5114b49696/research/continuation-20261120/cast-episode6-storyboard-L3-M10.jpg"
+  ]
+}

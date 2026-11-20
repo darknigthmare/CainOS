@@ -1,0 +1,1295 @@
+{
+  "schema": "encore-cast-continuation-plan/v1",
+  "introducedOn": "2026-11-20",
+  "createdAt": "2026-11-20T04:55:10.256605+00:00",
+  "status": "partially_completed_service_quota",
+  "plannedAppearances": 15,
+  "plannedFiles": 165,
+  "generatedFiles": 102,
+  "activeIds": [
+    "noirpomni",
+    "noirjax",
+    "noirkinger",
+    "badendcaine",
+    "bodyguardragatha",
+    "bodyguardzooble"
+  ],
+  "pendingIds": [
+    "smilingtragedygangle",
+    "abstractingpomni",
+    "abstractingjax",
+    "abstractingragatha",
+    "abstractingkinger",
+    "abstractinggangle",
+    "abstractingzooble",
+    "abstractingqueenie",
+    "zoobleep5"
+  ],
+  "activeFiles": 66,
+  "pendingFiles": 36,
+  "missingFiles": 63,
+  "generationBlock": {
+    "httpStatus": 429,
+    "type": "usage_limit_reached",
+    "limitWindowMinutes": 1440,
+    "resetsAt": "2026-11-20T08:08:33Z",
+    "resetsAtParis": "2026-11-20T09:08:33+01:00",
+    "note": "Reset time announced by the service; generation was stopped and no bypass attempted."
+  },
+  "referencePathMap": {
+    "assets/encore/selection/smilingtragedygangle.png": "docs/art-generation/cast-continuation-20261120/pending-assets/smilingtragedygangle/selection.png",
+    "assets/encore/stance/smilingtragedygangle.png": "docs/art-generation/cast-continuation-20261120/pending-assets/smilingtragedygangle/stance.png",
+    "assets/encore/selection/abstractingpomni.png": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingpomni/selection.png",
+    "assets/encore/stance/abstractingpomni.png": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingpomni/stance.png",
+    "assets/encore/selection/abstractingjax.png": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingjax/selection.png",
+    "assets/encore/stance/abstractingjax.png": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingjax/stance.png",
+    "assets/encore/poses/abstractingjax/intro.png": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingjax/intro.png",
+    "assets/encore/selection/abstractingragatha.png": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingragatha/selection.png",
+    "assets/encore/stance/abstractingragatha.png": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingragatha/stance.png",
+    "assets/encore/poses/abstractingragatha/intro.png": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingragatha/intro.png",
+    "assets/encore/selection/abstractingkinger.png": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingkinger/selection.png",
+    "assets/encore/stance/abstractingkinger.png": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingkinger/stance.png",
+    "assets/encore/selection/abstractinggangle.png": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractinggangle/selection.png",
+    "assets/encore/stance/abstractinggangle.png": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractinggangle/stance.png",
+    "assets/encore/poses/abstractinggangle/attack.png": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractinggangle/attack.png",
+    "assets/encore/poses/abstractinggangle/hit.png": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractinggangle/hit.png",
+    "assets/encore/poses/abstractinggangle/walk.png": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractinggangle/walk.png",
+    "assets/encore/selection/abstractingzooble.png": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingzooble/selection.png",
+    "assets/encore/stance/abstractingzooble.png": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingzooble/stance.png",
+    "assets/encore/selection/abstractingqueenie.png": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/selection.png",
+    "assets/encore/stance/abstractingqueenie.png": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/stance.png",
+    "assets/encore/poses/abstractingqueenie/intro.png": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/intro.png",
+    "assets/encore/poses/abstractingqueenie/attack.png": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/attack.png",
+    "assets/encore/poses/abstractingqueenie/heavy.png": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/heavy.png",
+    "assets/encore/poses/abstractingqueenie/hit.png": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/hit.png",
+    "assets/encore/poses/abstractingqueenie/walk.png": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/walk.png",
+    "assets/encore/poses/abstractingqueenie/jump.png": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/jump.png",
+    "assets/encore/poses/abstractingqueenie/crouch.png": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/crouch.png",
+    "assets/encore/selection/zoobleep5.png": "docs/art-generation/cast-continuation-20261120/pending-assets/zoobleep5/selection.png",
+    "assets/encore/stance/zoobleep5.png": "docs/art-generation/cast-continuation-20261120/pending-assets/zoobleep5/stance.png",
+    "assets/encore/poses/zoobleep5/intro.png": "docs/art-generation/cast-continuation-20261120/pending-assets/zoobleep5/intro.png",
+    "assets/encore/poses/zoobleep5/attack.png": "docs/art-generation/cast-continuation-20261120/pending-assets/zoobleep5/attack.png",
+    "assets/encore/poses/zoobleep5/heavy.png": "docs/art-generation/cast-continuation-20261120/pending-assets/zoobleep5/heavy.png",
+    "assets/encore/poses/zoobleep5/walk.png": "docs/art-generation/cast-continuation-20261120/pending-assets/zoobleep5/walk.png",
+    "assets/encore/poses/zoobleep5/jump.png": "docs/art-generation/cast-continuation-20261120/pending-assets/zoobleep5/jump.png",
+    "assets/encore/poses/zoobleep5/crouch.png": "docs/art-generation/cast-continuation-20261120/pending-assets/zoobleep5/crouch.png"
+  },
+  "appearances": [
+    {
+      "id": "noirpomni",
+      "fighterId": "pomni",
+      "name": "Pomni — Film noir",
+      "sourceId": "store-noir-pomni",
+      "sourceTitle": "GLITCH — Pomni — Film noir Pendantz",
+      "sourceUrl": "https://glitchproductions.store/products/pomni-animiniz-pendantz",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Pomni-Noir.png?v=1765582743",
+      "sourceKind": "Produit dérivé officiel",
+      "introducedOn": "2026-11-20",
+      "traits": [
+        "Palette en niveaux de gris, bonnet de bouffon à deux pointes et pompons gris, carré sombre, visage blanc et iris en moulinet gris.",
+        "Chemise blanche à col, petite cravate noire, bretelles sombres, pantalon noir et chaussures sombres."
+      ],
+      "scope": "Tenue comparée au Pendantz officiel. La silhouette du jeu conserve les proportions longues du personnage ; le mousqueton, sa boucle et les étiquettes sont exclus.",
+      "state": "active",
+      "availableSlots": [
+        "selection",
+        "stance",
+        "intro",
+        "attack",
+        "heavy",
+        "hit",
+        "walk",
+        "jump",
+        "crouch",
+        "victory",
+        "defeat"
+      ],
+      "missingSlots": [],
+      "files": [
+        {
+          "slot": "selection",
+          "file": "assets/encore/selection/noirpomni.png",
+          "targetFile": null,
+          "sha256": "802776e61f9b6b94e505994badfca94aa7be79fcb0e943b9f0698e6bccd99f52",
+          "bytes": 908878
+        },
+        {
+          "slot": "stance",
+          "file": "assets/encore/stance/noirpomni.png",
+          "targetFile": null,
+          "sha256": "8416d615efc987f0c648d70c1ee98d45c0b02104f009893a0493989005b4af88",
+          "bytes": 994821
+        },
+        {
+          "slot": "intro",
+          "file": "assets/encore/poses/noirpomni/intro.png",
+          "targetFile": null,
+          "sha256": "ff4e0c78427c5ec59219f64c28fb0b835ef7dad1ee074bad99bce2437d5e40ca",
+          "bytes": 984357
+        },
+        {
+          "slot": "attack",
+          "file": "assets/encore/poses/noirpomni/attack.png",
+          "targetFile": null,
+          "sha256": "8700afe2963278ffd53e7b767bf0a6e680b85eb42d919e0d7b011756df88a556",
+          "bytes": 923835
+        },
+        {
+          "slot": "heavy",
+          "file": "assets/encore/poses/noirpomni/heavy.png",
+          "targetFile": null,
+          "sha256": "85a8e9bb5fccba205888944c9c3cd2b50056f58cf32fbb434966d39ebb16f475",
+          "bytes": 1089136
+        },
+        {
+          "slot": "hit",
+          "file": "assets/encore/poses/noirpomni/hit.png",
+          "targetFile": null,
+          "sha256": "33ce058c29d0e715e30940fa734a4b9ac1f5cb84c51d03a3f6c463b3bc270286",
+          "bytes": 915615
+        },
+        {
+          "slot": "walk",
+          "file": "assets/encore/poses/noirpomni/walk.png",
+          "targetFile": null,
+          "sha256": "bc0dd49be5d8f35fe99ebaba2a0c18a4f27eb547d7395a6c3cf0c38fc7ddb26c",
+          "bytes": 1027008
+        },
+        {
+          "slot": "jump",
+          "file": "assets/encore/poses/noirpomni/jump.png",
+          "targetFile": null,
+          "sha256": "53c072c4961eb280beeb036884d44b50589013c2b7d5fe1594c8aac42dd7e398",
+          "bytes": 1155032
+        },
+        {
+          "slot": "crouch",
+          "file": "assets/encore/poses/noirpomni/crouch.png",
+          "targetFile": null,
+          "sha256": "c8cb7faeabec591932e9953087bc548a7468f2227e1bb2faabde5a402401e085",
+          "bytes": 1068296
+        },
+        {
+          "slot": "victory",
+          "file": "assets/encore/poses/noirpomni/victory.png",
+          "targetFile": null,
+          "sha256": "4cbe591dac72bb813db49d1430d743b1e37f3530ab86bceeacbcae6b7f573529",
+          "bytes": 982997
+        },
+        {
+          "slot": "defeat",
+          "file": "assets/encore/poses/noirpomni/defeat.png",
+          "targetFile": null,
+          "sha256": "50dbb1bd1c3f9952c08878db4e7489b808bdad0c06be4fa1028f84d275238928",
+          "bytes": 1338763
+        }
+      ]
+    },
+    {
+      "id": "noirjax",
+      "fighterId": "jax",
+      "name": "Jax — Film noir",
+      "sourceId": "store-noir-jax",
+      "sourceTitle": "GLITCH — Jax — Film noir Pendantz",
+      "sourceUrl": "https://glitchproductions.store/products/jax-pendantz",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/JaxPendantz_Noir.png?v=1780351074",
+      "sourceKind": "Produit dérivé officiel",
+      "introducedOn": "2026-11-20",
+      "traits": [
+        "Lapin filiforme gris, deux très longues oreilles, yeux clairs à pupilles noires rectangulaires, large sourire à dents.",
+        "Chemise blanche à col, cravate noire, bretelles grises, pantalon noir et chaussures sombres ; aucun violet ni rose."
+      ],
+      "scope": "Tenue comparée au Pendantz officiel. La silhouette du jeu conserve les proportions longues du personnage ; le mousqueton, sa boucle et les étiquettes sont exclus.",
+      "state": "active",
+      "availableSlots": [
+        "selection",
+        "stance",
+        "intro",
+        "attack",
+        "heavy",
+        "hit",
+        "walk",
+        "jump",
+        "crouch",
+        "victory",
+        "defeat"
+      ],
+      "missingSlots": [],
+      "files": [
+        {
+          "slot": "selection",
+          "file": "assets/encore/selection/noirjax.png",
+          "targetFile": null,
+          "sha256": "acfc128475e44b155ea60949780e7fe7571fd97e77d70dc0027919ec17e16b39",
+          "bytes": 621658
+        },
+        {
+          "slot": "stance",
+          "file": "assets/encore/stance/noirjax.png",
+          "targetFile": null,
+          "sha256": "835190a3fad3ac9739adf2a2b73fba89c4c11354a24338589121bff4bf5fce2e",
+          "bytes": 1238219
+        },
+        {
+          "slot": "intro",
+          "file": "assets/encore/poses/noirjax/intro.png",
+          "targetFile": null,
+          "sha256": "3ae45312e86589a22abbbd387e005128f499e7d018e37e401e8d68d04acfc95c",
+          "bytes": 691535
+        },
+        {
+          "slot": "attack",
+          "file": "assets/encore/poses/noirjax/attack.png",
+          "targetFile": null,
+          "sha256": "85705229af6cc844338acde053403a3f759f53902f785246586b5429d7abde9d",
+          "bytes": 604225
+        },
+        {
+          "slot": "heavy",
+          "file": "assets/encore/poses/noirjax/heavy.png",
+          "targetFile": null,
+          "sha256": "934f48a44e8418b036bee9ff6b6df152fd6523a29f415b467de762dffceb292a",
+          "bytes": 1173895
+        },
+        {
+          "slot": "hit",
+          "file": "assets/encore/poses/noirjax/hit.png",
+          "targetFile": null,
+          "sha256": "6096b3464eca6fb424d43adcb5331e224c335a24e327b456d1d0b493cbd4192d",
+          "bytes": 666719
+        },
+        {
+          "slot": "walk",
+          "file": "assets/encore/poses/noirjax/walk.png",
+          "targetFile": null,
+          "sha256": "b1d803b706e8ad8a7354037eb5c6c4a374a65b8c97a9c3e0dcf294ac85e6a3a9",
+          "bytes": 1260009
+        },
+        {
+          "slot": "jump",
+          "file": "assets/encore/poses/noirjax/jump.png",
+          "targetFile": null,
+          "sha256": "deb9c4d37f39ae20734fd7a912664dc2ade359b53d111af3763ad8bc8ff2d602",
+          "bytes": 782557
+        },
+        {
+          "slot": "crouch",
+          "file": "assets/encore/poses/noirjax/crouch.png",
+          "targetFile": null,
+          "sha256": "bc1541dcd22ee0542ec0b86a1ef209c25e8cb5410a3fe7b1d87a674d4deb4246",
+          "bytes": 842397
+        },
+        {
+          "slot": "victory",
+          "file": "assets/encore/poses/noirjax/victory.png",
+          "targetFile": null,
+          "sha256": "7513ea41933ea3de4be9b13974136c4ee6fca54e02ff5d5d1f2df4f707417e12",
+          "bytes": 683733
+        },
+        {
+          "slot": "defeat",
+          "file": "assets/encore/poses/noirjax/defeat.png",
+          "targetFile": null,
+          "sha256": "3ffa91ad2ebe59d36b0bf9e461a8e4ac1e0bbc5d0af312008ca050c9b2923b3b",
+          "bytes": 847008
+        }
+      ]
+    },
+    {
+      "id": "noirkinger",
+      "fighterId": "kinger",
+      "name": "Kinger — Film noir",
+      "sourceId": "store-noir-kinger",
+      "sourceTitle": "GLITCH — Kinger — Film noir Pendantz",
+      "sourceUrl": "https://glitchproductions.store/products/kinger-animiniz-pendantz",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_Pendantz_Kinger_Noir.png?v=1773978005",
+      "sourceKind": "Produit dérivé officiel",
+      "introducedOn": "2026-11-20",
+      "traits": [
+        "Pièce d’échecs grise à deux grands yeux saillants, coiffée d’un fedora gris à ruban sombre.",
+        "Corps conique gris à trois boutons, col épais et deux bretelles claires ; deux mains blanches flottantes, sans jambes."
+      ],
+      "scope": "Tenue comparée au Pendantz officiel. La silhouette du jeu conserve les proportions longues du personnage ; le mousqueton, sa boucle et les étiquettes sont exclus.",
+      "state": "active",
+      "availableSlots": [
+        "selection",
+        "stance",
+        "intro",
+        "attack",
+        "heavy",
+        "hit",
+        "walk",
+        "jump",
+        "crouch",
+        "victory",
+        "defeat"
+      ],
+      "missingSlots": [],
+      "files": [
+        {
+          "slot": "selection",
+          "file": "assets/encore/selection/noirkinger.png",
+          "targetFile": null,
+          "sha256": "34689a3fc4ceaaab8fbff0c59f0680f02aca7d5edcb6cf444c6c5bc40a87d4f1",
+          "bytes": 1405315
+        },
+        {
+          "slot": "stance",
+          "file": "assets/encore/stance/noirkinger.png",
+          "targetFile": null,
+          "sha256": "65d1768a517c63ffdb8f35df4366c01ccb05974b2d89aac3ae59f5456cb81efe",
+          "bytes": 1468320
+        },
+        {
+          "slot": "intro",
+          "file": "assets/encore/poses/noirkinger/intro.png",
+          "targetFile": null,
+          "sha256": "20fea1944dd6a3558beabf6ca7d74a9a0ed3ea24f0215e1b170c9a4d05882a72",
+          "bytes": 1486862
+        },
+        {
+          "slot": "attack",
+          "file": "assets/encore/poses/noirkinger/attack.png",
+          "targetFile": null,
+          "sha256": "fc1344ce1eaa3188bfa6c68366a2e8a91dd6f4b418dc7a10ef48d9069ac4a007",
+          "bytes": 1468076
+        },
+        {
+          "slot": "heavy",
+          "file": "assets/encore/poses/noirkinger/heavy.png",
+          "targetFile": null,
+          "sha256": "5148f6ffa7deb2d706e0f9fa65c5ba9341a111f525eda65733c6ed830fd9716a",
+          "bytes": 1001632
+        },
+        {
+          "slot": "hit",
+          "file": "assets/encore/poses/noirkinger/hit.png",
+          "targetFile": null,
+          "sha256": "aa33ce929da344bf12a2d4e7c8744b19e7cffc6d09855db0a3ec624538c42c6e",
+          "bytes": 1076465
+        },
+        {
+          "slot": "walk",
+          "file": "assets/encore/poses/noirkinger/walk.png",
+          "targetFile": null,
+          "sha256": "9c89ce40d501110eb0e5c7cdbbc59bad85400e44752ef4e5061298baa1135edf",
+          "bytes": 1429608
+        },
+        {
+          "slot": "jump",
+          "file": "assets/encore/poses/noirkinger/jump.png",
+          "targetFile": null,
+          "sha256": "4b4bd5a4c204f7a878fc7f67d6d9322e92ded09ad920af6c8dc44e6b0486e8b5",
+          "bytes": 953478
+        },
+        {
+          "slot": "crouch",
+          "file": "assets/encore/poses/noirkinger/crouch.png",
+          "targetFile": null,
+          "sha256": "8f921c26cf42ff081c0c43a548462f963fa4f2c0094891a6dc2273453792fd2d",
+          "bytes": 1031841
+        },
+        {
+          "slot": "victory",
+          "file": "assets/encore/poses/noirkinger/victory.png",
+          "targetFile": null,
+          "sha256": "0f97fcf5ffe8161465d5eaa1952abb7ecaa57577783bef4b85fedaa7959058e1",
+          "bytes": 1451994
+        },
+        {
+          "slot": "defeat",
+          "file": "assets/encore/poses/noirkinger/defeat.png",
+          "targetFile": null,
+          "sha256": "fc72cc116b468125a99e0220959e6607ca1dd8942ad4ba84e6994fc3e6822dd7",
+          "bytes": 1455543
+        }
+      ]
+    },
+    {
+      "id": "smilingtragedygangle",
+      "fighterId": "gangle",
+      "name": "Gangle — sourire de tragédie",
+      "sourceId": "episode6-smilingtragedygangle",
+      "sourceTitle": "GLITCH — Épisode 6, sourire du masque de tragédie",
+      "sourceUrl": "https://www.youtube.com/watch?v=mOvhHim78YA",
+      "imageUrl": "https://i.ytimg.com/sb/mOvhHim78YA/storyboard3_L3/M10.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCJX--8QG&sigh=rs$AOn4CLBRc1Pm_soGXt4VJR7qM3OM3K-a2A",
+      "sourceKind": "Épisode officiel",
+      "introducedOn": "2026-11-20",
+      "traits": [
+        "Masque de tragédie blanc, deux larmes bleues latérales, yeux fermés en arches et petit sourire. Corps normal en rubans rouges. État confirmé sur la planche officielle ep6, ligne 3 colonne 2 (~970 s)."
+      ],
+      "scope": "Expression observée vers 16 min 10 s sur le storyboard de la vidéo officielle : sourire, yeux fermés et larmes du masque de tragédie conservés. Le corps en rubans est celui de Gangle ; les poses de combat sont originales.",
+      "state": "pending",
+      "availableSlots": [
+        "selection",
+        "stance"
+      ],
+      "missingSlots": [
+        "intro",
+        "attack",
+        "heavy",
+        "hit",
+        "walk",
+        "jump",
+        "crouch",
+        "victory",
+        "defeat"
+      ],
+      "files": [
+        {
+          "slot": "selection",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/smilingtragedygangle/selection.png",
+          "targetFile": "assets/encore/selection/smilingtragedygangle.png",
+          "sha256": "8a9ea123129eedbb45a8ad17979d65e5aa0818fb7e47842169eec804b1be83de",
+          "bytes": 1539075
+        },
+        {
+          "slot": "stance",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/smilingtragedygangle/stance.png",
+          "targetFile": "assets/encore/stance/smilingtragedygangle.png",
+          "sha256": "9039e1f4973eed292262ff2a6f3bbd5f6440a4b45ab15fdbffd0b413cb58b696",
+          "bytes": 767470
+        }
+      ]
+    },
+    {
+      "id": "abstractingpomni",
+      "fighterId": "pomni",
+      "name": "Pomni — abstraction partielle",
+      "sourceId": "store-abstractingpomni",
+      "sourceTitle": "GLITCH — Abstraction Animiniz, Pomni — abstraction partielle",
+      "sourceUrl": "https://glitchproductions.store/products/abstraction-animiniz",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractPomni.png?v=1780353721",
+      "sourceKind": "Produit dérivé officiel",
+      "introducedOn": "2026-11-20",
+      "traits": [
+        "Costume rouge/bleu à boutons et bords jaunes conservé, visage partagé entre moitié normale et cristaux sombres à yeux concentriques, clochette/chapeau partiellement abstraits, un bras et un pied cristallins."
+      ],
+      "scope": "Apparence comparée à la figurine officielle Abstraction Animiniz. Les éléments normaux et abstraits restent réunis dans le même personnage. Cette déclinaison de produit n’atteste pas un événement ou une transformation montrée dans un épisode.",
+      "state": "pending",
+      "availableSlots": [
+        "selection",
+        "stance"
+      ],
+      "missingSlots": [
+        "intro",
+        "attack",
+        "heavy",
+        "hit",
+        "walk",
+        "jump",
+        "crouch",
+        "victory",
+        "defeat"
+      ],
+      "files": [
+        {
+          "slot": "selection",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingpomni/selection.png",
+          "targetFile": "assets/encore/selection/abstractingpomni.png",
+          "sha256": "6e069cab81e5ee75d6b98c8fbca2a8ba7fda6949cb78923fd0e2b8a08168ee4a",
+          "bytes": 1217005
+        },
+        {
+          "slot": "stance",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingpomni/stance.png",
+          "targetFile": "assets/encore/stance/abstractingpomni.png",
+          "sha256": "2c72e2d9e681c4a13fb4b61ab8dd3be0175db4c31234f8f819ff8fb21da7f9a6",
+          "bytes": 1039618
+        }
+      ]
+    },
+    {
+      "id": "abstractingjax",
+      "fighterId": "jax",
+      "name": "Jax — abstraction partielle",
+      "sourceId": "store-abstractingjax",
+      "sourceTitle": "GLITCH — Abstraction Animiniz, Jax — abstraction partielle",
+      "sourceUrl": "https://glitchproductions.store/products/abstraction-animiniz",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedJax.png?v=1780353721",
+      "sourceKind": "Produit dérivé officiel",
+      "introducedOn": "2026-11-20",
+      "traits": [
+        "Lapin violet avec salopette rose, gant jaune et pied violet encore visibles. Moitié de tête, une très longue oreille, un bras et une jambe gagnés par les cristaux à yeux concentriques."
+      ],
+      "scope": "Apparence comparée à la figurine officielle Abstraction Animiniz. Les éléments normaux et abstraits restent réunis dans le même personnage. Cette déclinaison de produit n’atteste pas un événement ou une transformation montrée dans un épisode.",
+      "state": "pending",
+      "availableSlots": [
+        "selection",
+        "stance",
+        "intro"
+      ],
+      "missingSlots": [
+        "attack",
+        "heavy",
+        "hit",
+        "walk",
+        "jump",
+        "crouch",
+        "victory",
+        "defeat"
+      ],
+      "files": [
+        {
+          "slot": "selection",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingjax/selection.png",
+          "targetFile": "assets/encore/selection/abstractingjax.png",
+          "sha256": "1182d079c3dd9649c5b43b2781be6863a3ec0b0b04fbb7d60a10fba85b6d4534",
+          "bytes": 1405678
+        },
+        {
+          "slot": "stance",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingjax/stance.png",
+          "targetFile": "assets/encore/stance/abstractingjax.png",
+          "sha256": "d7a4e585d3512aebbc6e3641be20ebcd7c17ef2c47f796c2d47f62d7f27cdd05",
+          "bytes": 723421
+        },
+        {
+          "slot": "intro",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingjax/intro.png",
+          "targetFile": "assets/encore/poses/abstractingjax/intro.png",
+          "sha256": "e31477fe92c0676bb89a10dbd81d50d3c700077581d21f93afe452b8a7524227",
+          "bytes": 1534805
+        }
+      ]
+    },
+    {
+      "id": "abstractingragatha",
+      "fighterId": "ragatha",
+      "name": "Ragatha — abstraction partielle",
+      "sourceId": "store-abstractingragatha",
+      "sourceTitle": "GLITCH — Abstraction Animiniz, Ragatha — abstraction partielle",
+      "sourceUrl": "https://glitchproductions.store/products/abstraction-animiniz",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedRagatha_01.png?v=1780353722",
+      "sourceKind": "Produit dérivé officiel",
+      "introducedOn": "2026-11-20",
+      "traits": [
+        "Robe bleue, nœud bleu, cheveux rouges et œil-bouton bleu conservés. Moitié de tête noire cristalline avec yeux concentriques, une jambe et une épaule abstraites."
+      ],
+      "scope": "Apparence comparée à la figurine officielle Abstraction Animiniz. Les éléments normaux et abstraits restent réunis dans le même personnage. Cette déclinaison de produit n’atteste pas un événement ou une transformation montrée dans un épisode.",
+      "state": "pending",
+      "availableSlots": [
+        "selection",
+        "stance",
+        "intro"
+      ],
+      "missingSlots": [
+        "attack",
+        "heavy",
+        "hit",
+        "walk",
+        "jump",
+        "crouch",
+        "victory",
+        "defeat"
+      ],
+      "files": [
+        {
+          "slot": "selection",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingragatha/selection.png",
+          "targetFile": "assets/encore/selection/abstractingragatha.png",
+          "sha256": "da90f03acd382f8b46591855417a8bb29a4400088e1e4397ee7ebf11da01d181",
+          "bytes": 1764655
+        },
+        {
+          "slot": "stance",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingragatha/stance.png",
+          "targetFile": "assets/encore/stance/abstractingragatha.png",
+          "sha256": "3cbb0f06c0dec05794851327f35e46d6fe7015fe51c9b92eec8672e6f466fd37",
+          "bytes": 1840025
+        },
+        {
+          "slot": "intro",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingragatha/intro.png",
+          "targetFile": "assets/encore/poses/abstractingragatha/intro.png",
+          "sha256": "d9fa8d0e768543170027a9af7046c58f4d334dff87fb18d9d08994cd3bc1b1f5",
+          "bytes": 1846317
+        }
+      ]
+    },
+    {
+      "id": "abstractingkinger",
+      "fighterId": "kinger",
+      "name": "Kinger — abstraction partielle",
+      "sourceId": "store-abstractingkinger",
+      "sourceTitle": "GLITCH — Abstraction Animiniz, Kinger — abstraction partielle",
+      "sourceUrl": "https://glitchproductions.store/products/abstraction-animiniz",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedKinger.png?v=1780353722",
+      "sourceKind": "Produit dérivé officiel",
+      "introducedOn": "2026-11-20",
+      "traits": [
+        "Pièce d’échecs beige et œil bleu normal partiellement préservés, robe violette bordée d’hermine blanche. Moitié tête et base cristallines sombres à plusieurs yeux ; mains blanches flottantes avec poignets abstraits."
+      ],
+      "scope": "Apparence comparée à la figurine officielle Abstraction Animiniz. Les éléments normaux et abstraits restent réunis dans le même personnage. Cette déclinaison de produit n’atteste pas un événement ou une transformation montrée dans un épisode.",
+      "state": "pending",
+      "availableSlots": [
+        "selection",
+        "stance"
+      ],
+      "missingSlots": [
+        "intro",
+        "attack",
+        "heavy",
+        "hit",
+        "walk",
+        "jump",
+        "crouch",
+        "victory",
+        "defeat"
+      ],
+      "files": [
+        {
+          "slot": "selection",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingkinger/selection.png",
+          "targetFile": "assets/encore/selection/abstractingkinger.png",
+          "sha256": "181107cc8433a9b53985aeae0d1389c15ab79c4f17f823f4cf1b1e5cb9f14265",
+          "bytes": 1275414
+        },
+        {
+          "slot": "stance",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingkinger/stance.png",
+          "targetFile": "assets/encore/stance/abstractingkinger.png",
+          "sha256": "5d020504e1da5dc847e1d2a65fb7c8c228e435da229214c1a9b882f4fa7ecf2c",
+          "bytes": 1202856
+        }
+      ]
+    },
+    {
+      "id": "abstractinggangle",
+      "fighterId": "gangle",
+      "name": "Gangle — abstraction partielle",
+      "sourceId": "store-abstractinggangle",
+      "sourceTitle": "GLITCH — Abstraction Animiniz, Gangle — abstraction partielle",
+      "sourceUrl": "https://glitchproductions.store/products/abstraction-animiniz",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedGangle.png?v=1780353721",
+      "sourceKind": "Produit dérivé officiel",
+      "introducedOn": "2026-11-20",
+      "traits": [
+        "Corps compact de cristal sombre translucide sur quatre pieds, rubans rouges en boucles sur le dos, deux masques blancs distincts attachés au même corps : comédie fissurée et tragédie aux deux larmes bleues, tous deux à iris multicolores concentriques. Une seule créature."
+      ],
+      "scope": "Apparence comparée à la figurine officielle Abstraction Animiniz. Les éléments normaux et abstraits restent réunis dans le même personnage. Cette déclinaison de produit n’atteste pas un événement ou une transformation montrée dans un épisode.",
+      "state": "pending",
+      "availableSlots": [
+        "selection",
+        "stance",
+        "attack",
+        "hit",
+        "walk"
+      ],
+      "missingSlots": [
+        "intro",
+        "heavy",
+        "jump",
+        "crouch",
+        "victory",
+        "defeat"
+      ],
+      "files": [
+        {
+          "slot": "selection",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractinggangle/selection.png",
+          "targetFile": "assets/encore/selection/abstractinggangle.png",
+          "sha256": "43a18bb3468f0c4283534b1c05480036aed89b78885be721d5290b463eb36ed2",
+          "bytes": 1626561
+        },
+        {
+          "slot": "stance",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractinggangle/stance.png",
+          "targetFile": "assets/encore/stance/abstractinggangle.png",
+          "sha256": "3a997f0a3fb342a08c1c48b6f358df5eb29084f0ce21295a0c0040912070f525",
+          "bytes": 1706313
+        },
+        {
+          "slot": "attack",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractinggangle/attack.png",
+          "targetFile": "assets/encore/poses/abstractinggangle/attack.png",
+          "sha256": "13b21d6ec77d35fdee6129c35b95e62ae04ad77f13ae7a0a73fea8d58874926c",
+          "bytes": 1619855
+        },
+        {
+          "slot": "hit",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractinggangle/hit.png",
+          "targetFile": "assets/encore/poses/abstractinggangle/hit.png",
+          "sha256": "eed78dd62ae8c69e2abf1fba174bb3a60c3cde6a6a639a2f2f544dd2fcec9a86",
+          "bytes": 1610452
+        },
+        {
+          "slot": "walk",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractinggangle/walk.png",
+          "targetFile": "assets/encore/poses/abstractinggangle/walk.png",
+          "sha256": "1e26538fd02316c12d170fd00e836cdc10aa9b58ef67a1e4a31d248eea6689ce",
+          "bytes": 1608030
+        }
+      ]
+    },
+    {
+      "id": "abstractingzooble",
+      "fighterId": "zooble",
+      "name": "Zooble — abstraction partielle",
+      "sourceId": "store-abstractingzooble",
+      "sourceTitle": "GLITCH — Abstraction Animiniz, Zooble — abstraction partielle",
+      "sourceUrl": "https://glitchproductions.store/products/abstraction-animiniz",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedZooble_04.png?v=1780353721",
+      "sourceKind": "Produit dérivé officiel",
+      "introducedOn": "2026-11-20",
+      "traits": [
+        "Assemblage géométrique coloré, tête triangulaire rose partiellement préservée avec un œil blanc normal. Autre moitié de tête et œil, crête, une extrémité de bras et une jambe cristallins ; torse jaune à taches, anneau cyan, jambe bleue et pied bleu restants."
+      ],
+      "scope": "Apparence comparée à la figurine officielle Abstraction Animiniz. Les éléments normaux et abstraits restent réunis dans le même personnage. Cette déclinaison de produit n’atteste pas un événement ou une transformation montrée dans un épisode.",
+      "state": "pending",
+      "availableSlots": [
+        "selection",
+        "stance"
+      ],
+      "missingSlots": [
+        "intro",
+        "attack",
+        "heavy",
+        "hit",
+        "walk",
+        "jump",
+        "crouch",
+        "victory",
+        "defeat"
+      ],
+      "files": [
+        {
+          "slot": "selection",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingzooble/selection.png",
+          "targetFile": "assets/encore/selection/abstractingzooble.png",
+          "sha256": "31670c334103a7ed2b5b21302af2268b9a6943d7f388c79c8201b1d516274dad",
+          "bytes": 1154706
+        },
+        {
+          "slot": "stance",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingzooble/stance.png",
+          "targetFile": "assets/encore/stance/abstractingzooble.png",
+          "sha256": "a5966b959c81211a2de7f38abd696401643b2e8389620b77f0102fbf90a9b48d",
+          "bytes": 959487
+        }
+      ]
+    },
+    {
+      "id": "abstractingqueenie",
+      "fighterId": "queenie",
+      "name": "Queenie — abstraction partielle",
+      "sourceId": "store-abstractingqueenie",
+      "sourceTitle": "GLITCH — Abstraction Animiniz, Queenie — abstraction partielle",
+      "sourceUrl": "https://glitchproductions.store/products/abstraction-animiniz",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedQueenie.png?v=1780353722",
+      "sourceKind": "Produit dérivé officiel",
+      "introducedOn": "2026-11-20",
+      "traits": [
+        "Pièce d’échecs brun rosé et œil brun/orange normal partiellement préservés, robe bordeaux à hermine blanche. Moitié de tête, poignets et base cristallins avec yeux concentriques ; distincte des monstres entièrement abstraits déjà archivés."
+      ],
+      "scope": "Apparence comparée à la figurine officielle Abstraction Animiniz. Les éléments normaux et abstraits restent réunis dans le même personnage. Cette déclinaison de produit n’atteste pas un événement ou une transformation montrée dans un épisode.",
+      "state": "pending",
+      "availableSlots": [
+        "selection",
+        "stance",
+        "intro",
+        "attack",
+        "heavy",
+        "hit",
+        "walk",
+        "jump",
+        "crouch"
+      ],
+      "missingSlots": [
+        "victory",
+        "defeat"
+      ],
+      "files": [
+        {
+          "slot": "selection",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/selection.png",
+          "targetFile": "assets/encore/selection/abstractingqueenie.png",
+          "sha256": "3be556c8b0dda2e2b75966e4d42c57603e9b3fad5a48c8f9afa4f677ea358234",
+          "bytes": 1667501
+        },
+        {
+          "slot": "stance",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/stance.png",
+          "targetFile": "assets/encore/stance/abstractingqueenie.png",
+          "sha256": "0388151ffe5647b253cd08348926136eb7f1f6ecb1d0d2574190546b6e5e227e",
+          "bytes": 1634820
+        },
+        {
+          "slot": "intro",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/intro.png",
+          "targetFile": "assets/encore/poses/abstractingqueenie/intro.png",
+          "sha256": "1a2628491d28da7cabdec638fde2f8b625ed1f785c3dfa64391d7a8ab025fc2a",
+          "bytes": 1683582
+        },
+        {
+          "slot": "attack",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/attack.png",
+          "targetFile": "assets/encore/poses/abstractingqueenie/attack.png",
+          "sha256": "961fa7da83647594bd153d95a1cc2631fd6c0d5a49b2d8824a936b2ede2cb56b",
+          "bytes": 1667403
+        },
+        {
+          "slot": "heavy",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/heavy.png",
+          "targetFile": "assets/encore/poses/abstractingqueenie/heavy.png",
+          "sha256": "e8cb085a106280875fe7760baefc9687d5bfbf07700bcad3daaa39f2d549bbb4",
+          "bytes": 1618747
+        },
+        {
+          "slot": "hit",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/hit.png",
+          "targetFile": "assets/encore/poses/abstractingqueenie/hit.png",
+          "sha256": "f8b1534519c2b4e8717d55e6f6fcd26b0c2b1ba3868c13e5c32627a480593924",
+          "bytes": 1684154
+        },
+        {
+          "slot": "walk",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/walk.png",
+          "targetFile": "assets/encore/poses/abstractingqueenie/walk.png",
+          "sha256": "636f8a0601e4479617022237a6e614f8bfd807513e99238219e10fed7d069fe1",
+          "bytes": 1653567
+        },
+        {
+          "slot": "jump",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/jump.png",
+          "targetFile": "assets/encore/poses/abstractingqueenie/jump.png",
+          "sha256": "0664f294ecc8a29ae9945ae7f4cadaf51b1b70a1e755366654e133304da5cd15",
+          "bytes": 1637961
+        },
+        {
+          "slot": "crouch",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingqueenie/crouch.png",
+          "targetFile": "assets/encore/poses/abstractingqueenie/crouch.png",
+          "sha256": "64b62f6d6ed76f68c3d65415148a06618e8a03f020bb9b312bdf8fb4c3423aed",
+          "bytes": 1516608
+        }
+      ]
+    },
+    {
+      "id": "badendcaine",
+      "fighterId": "caine",
+      "name": "Caine — Bad End",
+      "sourceId": "store-badendcaine",
+      "sourceTitle": "GLITCH — Abstraction Animiniz, Caine — Bad End",
+      "sourceUrl": "https://glitchproductions.store/products/abstraction-animiniz",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AniMiniz_DC_abstractedCaine.png?v=1780353722",
+      "sourceKind": "Produit dérivé officiel",
+      "introducedOn": "2026-11-20",
+      "traits": [
+        "Caine en veste rouge, nœud papillon et haut-de-forme noirs, tête-dentier ouverte avec deux globes rouge et bleu pleins. Son corps est englouti dans un groupe compact de sphères Bubble translucides bleutées, aux yeux noirs et dents triangulaires. Composition d’un état unique de Caine, distincte du Caine abattu normal."
+      ],
+      "scope": "Apparence comparée à la figurine officielle Abstraction Animiniz. Les éléments normaux et abstraits restent réunis dans le même personnage. Cette déclinaison de produit n’atteste pas un événement ou une transformation montrée dans un épisode.",
+      "state": "active",
+      "availableSlots": [
+        "selection",
+        "stance",
+        "intro",
+        "attack",
+        "heavy",
+        "hit",
+        "walk",
+        "jump",
+        "crouch",
+        "victory",
+        "defeat"
+      ],
+      "missingSlots": [],
+      "files": [
+        {
+          "slot": "selection",
+          "file": "assets/encore/selection/badendcaine.png",
+          "targetFile": null,
+          "sha256": "e2922ce42ae7fefd580aae833a41cd287e3ac2f8af4e0170ed100b28f310c8d3",
+          "bytes": 1699448
+        },
+        {
+          "slot": "stance",
+          "file": "assets/encore/stance/badendcaine.png",
+          "targetFile": null,
+          "sha256": "c2df37dd6d9acfd735c1975f5ea7f6d9408510282194e52f9976f9f86f1b0e62",
+          "bytes": 1546157
+        },
+        {
+          "slot": "intro",
+          "file": "assets/encore/poses/badendcaine/intro.png",
+          "targetFile": null,
+          "sha256": "d3343bcc22f65d09f6a1933fb51013f60ae1dfd4cfe8f80e36f4ae0ef8cc373c",
+          "bytes": 1547596
+        },
+        {
+          "slot": "attack",
+          "file": "assets/encore/poses/badendcaine/attack.png",
+          "targetFile": null,
+          "sha256": "89a2b31688cad821d7ee2df87506b71cfa63d50dde99da0e00b0d9b5980c5aac",
+          "bytes": 1544300
+        },
+        {
+          "slot": "heavy",
+          "file": "assets/encore/poses/badendcaine/heavy.png",
+          "targetFile": null,
+          "sha256": "ea7a486800fff20e2c7c2141b5e7d031bf46a4ef5ee477bfa3f4add3b234d58c",
+          "bytes": 1706163
+        },
+        {
+          "slot": "hit",
+          "file": "assets/encore/poses/badendcaine/hit.png",
+          "targetFile": null,
+          "sha256": "f28a0653fcfb130db35983178c338cab287cbc3af276237beda5a7806ea45b0a",
+          "bytes": 1608322
+        },
+        {
+          "slot": "walk",
+          "file": "assets/encore/poses/badendcaine/walk.png",
+          "targetFile": null,
+          "sha256": "eaaaf1107c54b8c7dc9a6d472f88f5ee872268325d1d53aeae940b89038abbf4",
+          "bytes": 1548652
+        },
+        {
+          "slot": "jump",
+          "file": "assets/encore/poses/badendcaine/jump.png",
+          "targetFile": null,
+          "sha256": "c620d508c988737a47ec19a927f474080342458304efcb55bfdd9ed865e5745f",
+          "bytes": 1473237
+        },
+        {
+          "slot": "crouch",
+          "file": "assets/encore/poses/badendcaine/crouch.png",
+          "targetFile": null,
+          "sha256": "7fb3692361297c80133079c237d2bdd5b7685a8e880508ca4dbbaa9fb451975f",
+          "bytes": 1595222
+        },
+        {
+          "slot": "victory",
+          "file": "assets/encore/poses/badendcaine/victory.png",
+          "targetFile": null,
+          "sha256": "42232c2d06a76c47f863dd95643f0edf6617ae7d5efe96bd7023bb32fdf1816f",
+          "bytes": 1610382
+        },
+        {
+          "slot": "defeat",
+          "file": "assets/encore/poses/badendcaine/defeat.png",
+          "targetFile": null,
+          "sha256": "4c49a3f92024a6693bb230eddaef01b0a5cc0828b8bbe21aa4b4c7eb9f28c4d9",
+          "bytes": 1807933
+        }
+      ]
+    },
+    {
+      "id": "bodyguardragatha",
+      "fighterId": "ragatha",
+      "name": "Ragatha — Garde du corps",
+      "sourceId": "episode5-bodyguard-ragatha",
+      "sourceTitle": "GLITCH — épisode 5, Ragatha dans l’aventure présidentielle",
+      "sourceUrl": "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=260s",
+      "imageUrl": "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg",
+      "sourceKind": "Épisode officiel et miniature officielle du trailer",
+      "traits": [
+        "Robe pervenche à pièces cousues, col et poignets blancs, cheveux de laine rouges, grand nœud violet et chaussures noires.",
+        "Grandes lunettes de soleil noires opaques sur les deux yeux ; aucun costume noir, équipement de sécurité ou arme n’est attesté."
+      ],
+      "scope": "Variante d’accessoire du même personnage. Lunettes et robe observées dans les aperçus officiels à 4 min 20 s et 6 min de l’épisode 5 ; silhouette de base recoupée avec la miniature officielle du trailer. Les aperçus de scène font 320 × 180 pixels : les petits détails ne sont pas certifiés. Poses de jeu originales, sans fidélité 1:1 annoncée.",
+      "classificationReason": "Apparence accessoirisée de Ragatha ; même identité et même kit.",
+      "introducedOn": "2026-11-20",
+      "state": "active",
+      "availableSlots": [
+        "selection",
+        "stance",
+        "intro",
+        "attack",
+        "heavy",
+        "hit",
+        "walk",
+        "jump",
+        "crouch",
+        "victory",
+        "defeat"
+      ],
+      "missingSlots": [],
+      "files": [
+        {
+          "slot": "selection",
+          "file": "assets/encore/selection/bodyguardragatha.png",
+          "targetFile": null,
+          "sha256": "1467e634913d72e6edd4704434c7ee87df713fb4c1bc9779fd55c4ee222a4e3c",
+          "bytes": 1246827
+        },
+        {
+          "slot": "stance",
+          "file": "assets/encore/stance/bodyguardragatha.png",
+          "targetFile": null,
+          "sha256": "1073d82711ad5c35572c6b7a1d484e1b1443db1baab6c39a7be77a2db8c26643",
+          "bytes": 1055667
+        },
+        {
+          "slot": "intro",
+          "file": "assets/encore/poses/bodyguardragatha/intro.png",
+          "targetFile": null,
+          "sha256": "9127600afc40002067ed9decee2c6afd27bfa8454a04e676013f5a6dc43f7b68",
+          "bytes": 1183410
+        },
+        {
+          "slot": "attack",
+          "file": "assets/encore/poses/bodyguardragatha/attack.png",
+          "targetFile": null,
+          "sha256": "2922b99a9c3635bcd23d52160f17bafb0af5d577d0232a773a7b554487886521",
+          "bytes": 1048355
+        },
+        {
+          "slot": "heavy",
+          "file": "assets/encore/poses/bodyguardragatha/heavy.png",
+          "targetFile": null,
+          "sha256": "11ca7692a0c73975ffb51df983622c845673b78b7e67dfd923d0816c89c30a36",
+          "bytes": 1202496
+        },
+        {
+          "slot": "hit",
+          "file": "assets/encore/poses/bodyguardragatha/hit.png",
+          "targetFile": null,
+          "sha256": "1d025786afc566d7c015b4ce5c1313682b6e20d80c9898b1e28646859d6cb947",
+          "bytes": 1254198
+        },
+        {
+          "slot": "walk",
+          "file": "assets/encore/poses/bodyguardragatha/walk.png",
+          "targetFile": null,
+          "sha256": "f9e5e83b39fc0c69a818c244912d900c12879b82b445b6faaf87cae1b38d599f",
+          "bytes": 1251994
+        },
+        {
+          "slot": "jump",
+          "file": "assets/encore/poses/bodyguardragatha/jump.png",
+          "targetFile": null,
+          "sha256": "4787faab8de5a47ed3d69c4f9f0318cd85a3a6b7f2d5e3458bcf7ce0b30fd427",
+          "bytes": 1058365
+        },
+        {
+          "slot": "crouch",
+          "file": "assets/encore/poses/bodyguardragatha/crouch.png",
+          "targetFile": null,
+          "sha256": "432f2e5d370f101a6e46f58884904f444a203065c60893d3de24233dc422fc25",
+          "bytes": 1157217
+        },
+        {
+          "slot": "victory",
+          "file": "assets/encore/poses/bodyguardragatha/victory.png",
+          "targetFile": null,
+          "sha256": "acefc383357902e90b726264ec91a9aaccfb7f1a7e5b81090a08b50101812e8f",
+          "bytes": 1244506
+        },
+        {
+          "slot": "defeat",
+          "file": "assets/encore/poses/bodyguardragatha/defeat.png",
+          "targetFile": null,
+          "sha256": "bb91339504b0e245608e09f50710db6ca9ef1e008c37c236d80e695ea412e7ac",
+          "bytes": 1078501
+        }
+      ]
+    },
+    {
+      "id": "bodyguardzooble",
+      "fighterId": "zooble",
+      "name": "Zooble — Garde du corps",
+      "sourceId": "episode5-bodyguard-zooble",
+      "sourceTitle": "GLITCH — épisode 5, Zooble dans l’aventure présidentielle",
+      "sourceUrl": "https://www.youtube.com/watch?v=L4p2gN2CzsA&t=260s",
+      "imageUrl": "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg",
+      "sourceKind": "Épisode officiel et miniature officielle du trailer",
+      "traits": [
+        "Tête triangulaire rose sans bouche et lunettes noires opaques ; antenne cyan en éclair à gauche de l’image et ressort rayé noir/blanc à droite.",
+        "Torse jaune à pois orange/roses, triangle creux violet au torse et petite aile plume rose.",
+        "Bras gauche de l’image jaune articulé avec main jaune ; bras droit : ressort vert, rotule rose, tige rayée rose/blanc et pince verte unique.",
+        "Jambe gauche de l’image en zigzag cyan puis pointe rayée rouge/jaune ; autre jambe longue violette et pied violet."
+      ],
+      "scope": "Assemblage coloré de l’épisode 5 avec lunettes noires. Corps entier observé sur la miniature officielle du trailer ; lunettes et continuité des pièces recoupées dans les aperçus de l’aventure présidentielle à 4 min 20 s et 6 min. La miniature établit la composition des pièces ; les mouvements restent des adaptations 2D. Cette apparence avec lunettes ne remplace pas la version sans lunettes zooble__ep05_assembly.",
+      "classificationReason": "Apparence accessoirisée de l’assemblage de Zooble dans l’épisode 5 ; même identité et même kit.",
+      "introducedOn": "2026-11-20",
+      "state": "active",
+      "availableSlots": [
+        "selection",
+        "stance",
+        "intro",
+        "attack",
+        "heavy",
+        "hit",
+        "walk",
+        "jump",
+        "crouch",
+        "victory",
+        "defeat"
+      ],
+      "missingSlots": [],
+      "files": [
+        {
+          "slot": "selection",
+          "file": "assets/encore/selection/bodyguardzooble.png",
+          "targetFile": null,
+          "sha256": "b9eba9cf8ddbaaabecd98e5d718bb8387e4c032b12f6fd36149214ee30579ee5",
+          "bytes": 1515650
+        },
+        {
+          "slot": "stance",
+          "file": "assets/encore/stance/bodyguardzooble.png",
+          "targetFile": null,
+          "sha256": "4db21fa1a7fe131d089cbfe745ed929d715a6b5844f24a4d680e5940426af973",
+          "bytes": 736384
+        },
+        {
+          "slot": "intro",
+          "file": "assets/encore/poses/bodyguardzooble/intro.png",
+          "targetFile": null,
+          "sha256": "9adbf8c010aca506110f6224061b427ab336c48859a6d890c94067142fa34487",
+          "bytes": 1420123
+        },
+        {
+          "slot": "attack",
+          "file": "assets/encore/poses/bodyguardzooble/attack.png",
+          "targetFile": null,
+          "sha256": "33b27cbf225253b43d07c0d44df41c31f9b4f99fbd15ccc9495f399d4b67513d",
+          "bytes": 1488888
+        },
+        {
+          "slot": "heavy",
+          "file": "assets/encore/poses/bodyguardzooble/heavy.png",
+          "targetFile": null,
+          "sha256": "41cab5c9c740f954d14f2c58869eb2969c135b5abb4179313dc102b3dca56e2e",
+          "bytes": 1444372
+        },
+        {
+          "slot": "hit",
+          "file": "assets/encore/poses/bodyguardzooble/hit.png",
+          "targetFile": null,
+          "sha256": "0bca1f04d5b4e4ecf540096ebab9e6bc1d6d6a7735166f81bb5d78d2985e4a0a",
+          "bytes": 1476088
+        },
+        {
+          "slot": "walk",
+          "file": "assets/encore/poses/bodyguardzooble/walk.png",
+          "targetFile": null,
+          "sha256": "8e0368aac2e159f8871c4d45eb7e7abda4abb0c172fa194192eaba0fcadc3e2f",
+          "bytes": 1523656
+        },
+        {
+          "slot": "jump",
+          "file": "assets/encore/poses/bodyguardzooble/jump.png",
+          "targetFile": null,
+          "sha256": "f8256c0ebfd8b69301b7417b836ed0afd2558aa87cc22b53d83dd9983c5db747",
+          "bytes": 1450546
+        },
+        {
+          "slot": "crouch",
+          "file": "assets/encore/poses/bodyguardzooble/crouch.png",
+          "targetFile": null,
+          "sha256": "90a7666b71d7296c9f0cbe33509de359716a5928cc47370751d80da9fec92979",
+          "bytes": 1452335
+        },
+        {
+          "slot": "victory",
+          "file": "assets/encore/poses/bodyguardzooble/victory.png",
+          "targetFile": null,
+          "sha256": "0018629750fcb14dfd23cea2dad1ba63aec0adc74981076296179402918cfe36",
+          "bytes": 1464892
+        },
+        {
+          "slot": "defeat",
+          "file": "assets/encore/poses/bodyguardzooble/defeat.png",
+          "targetFile": null,
+          "sha256": "cc405e660ca8ae4e2747fda476585e2b35deafc884a943e686825735e4eaa860",
+          "bytes": 831665
+        }
+      ]
+    },
+    {
+      "id": "zoobleep5",
+      "fighterId": "zooble",
+      "name": "Zooble — Assemblage épisode 5",
+      "sourceId": "episode5-zooble-assembly",
+      "sourceTitle": "GLITCH — épisode 5, assemblage de Zooble sans lunettes",
+      "sourceUrl": "https://www.youtube.com/watch?v=sQ5DCwcpMy0",
+      "imageUrl": "https://i.ytimg.com/vi/sQ5DCwcpMy0/maxresdefault.jpg",
+      "sourceKind": "Épisode officiel et miniature officielle du trailer",
+      "traits": [
+        "Tête triangulaire rose sans bouche ; grand œil jaune à pupille en spirale à gauche de l’image et petit œil blanc à paupière violette à droite. Aucun accessoire sur les yeux.",
+        "Antennes cyan en éclair et ressort rayé noir/blanc ; torse jaune à pois orange/roses, triangle creux violet et aile plume rose.",
+        "Bras gauche de l’image jaune articulé avec main jaune ; bras droit : ressort vert, rotule rose, tige rayée rose/blanc et pince verte unique.",
+        "Jambe gauche de l’image en zigzag cyan puis pointe rayée rouge/jaune ; autre jambe longue violette et pied violet."
+      ],
+      "scope": "Assemblage sans lunettes vu corps entier sur la miniature officielle du trailer de l’épisode 5 et recoupé sur les plans de début de l’épisode. Ni l’assemblage de base existant, ni l’uniforme Spudsy, ni la version film noir ne couvrent exactement ces pièces et couleurs. Version séparée de bodyguardzooble ; les poses sont des adaptations 2D originales.",
+      "classificationReason": "Assemblage distinct du même Zooble ; même identité et même kit.",
+      "introducedOn": "2026-11-20",
+      "state": "pending",
+      "availableSlots": [
+        "selection",
+        "stance",
+        "intro",
+        "attack",
+        "heavy",
+        "walk",
+        "jump",
+        "crouch"
+      ],
+      "missingSlots": [
+        "hit",
+        "victory",
+        "defeat"
+      ],
+      "files": [
+        {
+          "slot": "selection",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/zoobleep5/selection.png",
+          "targetFile": "assets/encore/selection/zoobleep5.png",
+          "sha256": "81e93ff323f46d6e940a432e0eb28fe83ee5858dcc3ba5c7b92bfea08a7a0bb5",
+          "bytes": 1506910
+        },
+        {
+          "slot": "stance",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/zoobleep5/stance.png",
+          "targetFile": "assets/encore/stance/zoobleep5.png",
+          "sha256": "3235d5a89d559fa64ac4830758266dd8e5c2211613cc180002f9c929f83747ab",
+          "bytes": 745695
+        },
+        {
+          "slot": "intro",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/zoobleep5/intro.png",
+          "targetFile": "assets/encore/poses/zoobleep5/intro.png",
+          "sha256": "9feda71bc8a9e1d73bc2e90ad602604024d3d23ec3af87c8de2acda052f16c7c",
+          "bytes": 1415628
+        },
+        {
+          "slot": "attack",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/zoobleep5/attack.png",
+          "targetFile": "assets/encore/poses/zoobleep5/attack.png",
+          "sha256": "f11f55a6c59ce17ce14606d7c8de2399e5c9ea5ed3d7eda8987a23d2fcc80b4b",
+          "bytes": 1453651
+        },
+        {
+          "slot": "heavy",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/zoobleep5/heavy.png",
+          "targetFile": "assets/encore/poses/zoobleep5/heavy.png",
+          "sha256": "782102e280d8e37557bb3076bd44d9ac1258f02e16e63c1fff04346292febc66",
+          "bytes": 1450181
+        },
+        {
+          "slot": "walk",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/zoobleep5/walk.png",
+          "targetFile": "assets/encore/poses/zoobleep5/walk.png",
+          "sha256": "2fa6b86cdaa4687df0d5fc4af471920644344f2276d2fe1cb3e62828846e217d",
+          "bytes": 1529675
+        },
+        {
+          "slot": "jump",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/zoobleep5/jump.png",
+          "targetFile": "assets/encore/poses/zoobleep5/jump.png",
+          "sha256": "c318d6639d4241c810e21b229408a31a5a8d381ca5189979ce236bec98f924cd",
+          "bytes": 1436322
+        },
+        {
+          "slot": "crouch",
+          "file": "docs/art-generation/cast-continuation-20261120/pending-assets/zoobleep5/crouch.png",
+          "targetFile": "assets/encore/poses/zoobleep5/crouch.png",
+          "sha256": "b2dcb46168adb6703aaab03f6b7dd3811b898a3d3ec31d9289feb6cb798054a0",
+          "bytes": 1449005
+        }
+      ]
+    }
+  ]
+}

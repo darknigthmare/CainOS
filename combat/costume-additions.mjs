@@ -1,8 +1,9 @@
 /**
- * Additional Circus outfits illustrated from named official merchandise.
+ * Additional Circus appearances illustrated from named official references.
  * These are appearances of existing fighters, with original fan-game poses.
  * Keeping them outside the historical atlas preserves its IDs and ordering.
  */
+import { COSTUME_CONTINUATION_DEFINITIONS } from './costume-continuation-20261120.mjs';
 const costumePage = 'https://glitchproductions.store/products/digital-circus-animiniz-costume-adventure-series';
 const beachPage = 'https://glitchproductions.store/products/digital-circus-animiniz-beach-vacation-series';
 const defs = [
@@ -73,23 +74,28 @@ const defs = [
       'Corps-château entier conservé, sans bras, mains ou jambes ajoutés.'],
     scope: 'Apparence comparée à la figurine officielle Sand Castle Kinger. Les actions utilisent la tête et l’inclinaison du château, sans lui inventer une anatomie humaine.',
   },
+  ...COSTUME_CONTINUATION_DEFINITIONS,
 ];
 export const COSTUME_ADDITION_SOURCES = Object.freeze(defs.map(def => Object.freeze({
   id: def.sourceId, title: def.sourceTitle, url: def.sourceUrl,
   ...(def.imageUrl ? { imageUrl: def.imageUrl } : {}),
-  kind: 'Produit dérivé officiel',
-  scope: def.scope + ' Référence consultée le 19 novembre 2026. Ce produit stylisé ne certifie ni les proportions exactes de la série ni ses mouvements.',
+  kind: def.sourceKind || 'Produit dérivé officiel',
+  scope: def.scope + ' Référence consultée le ' + (def.introducedOn === '2026-11-20' ? '20' : '19') + ' novembre 2026. ' +
+    (def.sourceKind?.startsWith('Épisode')
+      ? 'Les plans indiqués attestent les éléments décrits ; les poses originales ne constituent pas une reproduction image par image de la série.'
+      : 'Ce produit stylisé ne certifie ni les proportions exactes de la série ni ses mouvements.'),
 })));
 export const COSTUME_ADDITIONS = Object.freeze(defs.map(def => Object.freeze({
   id: def.id, name: def.name, fighterId: def.fighterId, baseFighterId: def.fighterId,
+  introducedOn: def.introducedOn || '2026-11-19',
   category: 'variant', playable: false, archiveKind: null,
-  classificationReason: 'Tenue du même personnage, illustrée séparément et réutilisant son kit sans changement des règles.',
+  classificationReason: def.classificationReason || 'Apparence du même personnage, illustrée séparément et réutilisant son kit sans changement des règles.',
   sprite: Object.freeze({ src: '../assets/encore/stance/' + def.id + '.png',
     cols: 1, rows: 1, col: 0, row: 0, matteMode: 'native-alpha', nativeFacing: 1 }),
   fidelity: Object.freeze({
     sourceIds: [def.sourceId], observedTraits: def.traits,
     combatAdaptation: 'Portrait, garde et neuf poses statiques créés pour Encore. Les techniques et les statistiques restent celles du personnage.',
-    reviewStatus: 'Costume comparé au produit officiel',
+    reviewStatus: def.sourceKind?.startsWith('Épisode') ? 'Éléments comparés aux plans officiels indiqués' : 'Costume comparé au produit officiel',
     reviewScope: def.scope + ' La comparaison scène par scène et l’animation image par image restent à réaliser.',
   }),
 })));

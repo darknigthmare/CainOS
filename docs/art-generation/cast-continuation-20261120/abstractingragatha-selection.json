@@ -1,0 +1,43 @@
+{
+  "id": "abstractingragatha-selection",
+  "appearanceId": "abstractingragatha",
+  "slot": "selection",
+  "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingragatha/selection.png",
+  "sourceGenerationId": "exec-b4892e7d-a309-4a0d-9c12-b9bc476da14e",
+  "method": "image_gen.imagegen",
+  "prompt": "Use case: stylized-concept. Asset type: one transparent full-body selection illustration for the 2D fighting game Digital Circus Encore. Draw ABSTRACTING RAGATHA faithfully adapting the official partial-abstraction design in reference 1 to the crisp outlined cel shading and normal full-body proportions of reference 2. Do not imitate the squat Animiniz figurine anatomy or its photographed backdrop. Preserve Ragatha's long red yarn hair on the viewer-left side, large periwinkle hair bow, visible blue button eye with black stitch, periwinkle puff-sleeve dress with white collar/hem and fabric patches, pale cloth hands, and one normal black shoe. Viewer-right half of the head/hair is smoky-black angular translucent crystal with several large flat concentric pastel eyes, including one in place of the normal eye; the mouth is a curved surreal yellow-purple eye-like smile as in official reference. Black crystal growths surround one shoulder and viewer-right lower leg/foot, while most of dress and normal left leg remain. Partial abstraction, not a fully black monster. Pose: relaxed but uneasy selection stance facing slightly screen RIGHT, one normal cloth hand raised near shoulder and the other resting near hip, feet apart. One single complete figure with all hair, bow, spikes, hands and feet inside ample true transparent margins. Polished 2D game art, no display base, backdrop, floor, drop shadow, aura, particles, letters, watermark or inset.",
+  "referencePaths": [
+    "/workspace/scratch/5f5114b49696/research/continuation-20261120/official-AbstractedRagatha_01.png",
+    "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/ragatha.webp"
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/abstraction-animiniz",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedRagatha_01.png?v=1780353722"
+  ],
+  "sourceType": "official-merchandise",
+  "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-b4892e7d-a309-4a0d-9c12-b9bc476da14e.png",
+  "sha256": "da90f03acd382f8b46591855417a8bb29a4400088e1e4397ee7ebf11da01d181",
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "bytes": 1764655,
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "bboxAlpha12": [
+    102,
+    9,
+    925,
+    1525
+  ],
+  "nativeCopyVerified": true,
+  "visualReview": "One complete Ragatha in tall game proportions, red yarn hair and blue button eye retained; opposing head is dark crystal with pastel concentric eyes and eye-like smile matching the official figure. Blue bow/patch dress, cloth hands, normal black left shoe and crystalline right foot remain visible. Complete asymmetric silhouette, crisp 2D cel shading, all margins checked.",
+  "status": "generated-and-visually-reviewed",
+  "episodeFidelityClaim": false,
+  "targetFile": "assets/encore/selection/abstractingragatha.png",
+  "productionStatus": "partial",
+  "includedInRuntime": false
+}

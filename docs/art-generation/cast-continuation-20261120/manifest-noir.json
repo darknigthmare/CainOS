@@ -1,0 +1,1364 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-20",
+  "method": "image_gen.imagegen",
+  "scope": "Three monochrome appearances compared to official Pendantz; eleven original individual poses each, native bytes preserved. Merchandise reference does not certify an episode event.",
+  "entries": [
+    {
+      "id": "noirpomni-selection",
+      "appearanceId": "noirpomni",
+      "slot": "selection",
+      "file": "assets/encore/selection/noirpomni.png",
+      "method": "image_gen.imagegen",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-024d0234-3d91-4163-bf3f-e33987567528.png",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/pomni-animiniz-pendantz"
+      ],
+      "sourceImageURL": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Pomni-Noir.png?v=1765582743",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/Pomni-Noir.png",
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/noirragatha.png",
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/presidentpomni.png"
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: individual full-body selection illustration for the Digital Circus Encore game. Create exactly ONE Pomni in her official Noir outfit. Entirely grayscale, no red, blue, yellow or other colored detail. Her recognisable large white face, dark short bob with side locks, large eyes with grayscale pinwheel irises, small worried mouth. Two-point jester hat in alternating pale and mid gray with gray pompoms. White collared short sleeve shirt, small black necktie, slim dark suspenders, high-waisted black full-length trousers and dark rounded shoes. White gloves. Slender cartoon limbs, proportions consistent with the supplied game style, not compressed plush anatomy. Selection pose: upright, slightly three-quarter facing screen right, anxious dry expression, one hand near collar and other hanging naturally. Reference image 1 controls this costume's shapes, clothing and monochrome palette; references 2 and 3 control only the crisp clean ink outlines and restrained 2D cel-shaded game style. Keep the original recognizable character anatomy, do not copy the toy's proportions or fabric. True transparent RGBA background. Full entire subject including hat, all ears, hands and all feet/base contained with generous clean transparent padding on every edge. No keychain, metal ring, hanging loop, tag, text, labels, logos, shadows on ground, scenery, floor, frame, extra character, duplicate body, split view, contact sheet, animation sheet, or cropped body. Single centered drawing only. Smooth confident contours, detailed high quality native resolution.",
+      "outputHint": "Generated images are saved to /workspace/scratch/5f5114b49696/generated_images as /workspace/scratch/5f5114b49696/generated_images/exec-024d0234-3d91-4163-bf3f-e33987567528.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "createdAt": "2026-11-20T04:24:24.363Z",
+      "visualReview": "Reviewed the complete native source board on 20 November: Grayscale jester hat and pinwheel eyes, dark bob, white collared shirt, black tie and suspenders, full dark trousers and shoes remain consistent. Two arms, two legs, all extremities visible. Slot selection is distinct and readable. Native alpha composes cleanly on a light background; no visible glow or floor, no cut-off part or extra character. These are original game poses, not episode frames.",
+      "sha256": "802776e61f9b6b94e505994badfca94aa7be79fcb0e943b9f0698e6bccd99f52",
+      "bytes": 908878,
+      "dimensions": [
+        955,
+        1647
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        46,
+        34,
+        921,
+        1629
+      ],
+      "visualReviewAt": "2026-11-20T04:48:14.399912+00:00",
+      "visualReviewBoard": "docs/art-generation/cast-continuation-20261120/native-review/noirpomni.jpg",
+      "status": "generated-and-visually-reviewed",
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "noirpomni-stance",
+      "appearanceId": "noirpomni",
+      "slot": "stance",
+      "file": "assets/encore/stance/noirpomni.png",
+      "method": "image_gen.imagegen",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-dae73125-41b0-4c74-8661-cf0910dfeefb.png",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/pomni-animiniz-pendantz"
+      ],
+      "sourceImageURL": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Pomni-Noir.png?v=1765582743",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/noirpomni.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/Pomni-Noir.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create ONE individual full-body 2D game action drawing: Pomni — Film noir, stance. Image 1 is the approved character design; preserve its precise monochrome clothing, head, facial traits, anatomy, proportions and crisp cel-shaded ink style. Image 2 is the official costume reference. Identity: Pomni in her official Noir outfit. Entirely grayscale, no red, blue, yellow or other colored detail. Her recognisable large white face, dark short bob with side locks, large eyes with grayscale pinwheel irises, small worried mouth. Two-point jester hat in alternating pale and mid gray with gray pompoms. White collared short sleeve shirt, small black necktie, slim dark suspenders, high-waisted black full-length trousers and dark rounded shoes. White gloves. Slender cartoon limbs, proportions consistent with the supplied game style, not compressed plush anatomy.  CHANGE THE POSE to this distinct action: fighting ready stance, three-quarter facing screen right; legs apart, knees slightly flexed, both fists up near chest, alert face. The result is an original static combat pose for Encore. Preserve the same character and costume in both references; no color, no new accessories. Two arms and two legs only, white gloves, long dark trousers, dark shoes. Character primarily faces screen right except hit/defeat body reaction. Full entire subject contained from very highest hat/ear/hand tip to lowest foot/base, with safe transparent margins on every edge. True transparent RGBA background with crisp clean silhouette; no gray haze, no halo, NO GLOW, no aura, no floor, no drop shadow, no scenery, no text, no framing, no second person, no attacker, no ghost limbs, no movement trails, no effect graphics. Never a sheet or multi-panel image: only one full-body pose. Native high resolution.",
+      "outputHint": "Generated images are saved to /workspace/scratch/5f5114b49696/generated_images as /workspace/scratch/5f5114b49696/generated_images/exec-dae73125-41b0-4c74-8661-cf0910dfeefb.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "createdAt": "2026-11-20T04:26:52.789Z",
+      "visualReview": "Reviewed the complete native source board on 20 November: Grayscale jester hat and pinwheel eyes, dark bob, white collared shirt, black tie and suspenders, full dark trousers and shoes remain consistent. Two arms, two legs, all extremities visible. Slot stance is distinct and readable. Native alpha composes cleanly on a light background; no visible glow or floor, no cut-off part or extra character. These are original game poses, not episode frames.",
+      "sha256": "8416d615efc987f0c648d70c1ee98d45c0b02104f009893a0493989005b4af88",
+      "bytes": 994821,
+      "dimensions": [
+        1037,
+        1517
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        80,
+        18,
+        958,
+        1507
+      ],
+      "visualReviewAt": "2026-11-20T04:48:14.408408+00:00",
+      "visualReviewBoard": "docs/art-generation/cast-continuation-20261120/native-review/noirpomni.jpg",
+      "status": "generated-and-visually-reviewed",
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "noirpomni-intro",
+      "appearanceId": "noirpomni",
+      "slot": "intro",
+      "file": "assets/encore/poses/noirpomni/intro.png",
+      "method": "image_gen.imagegen",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-c97936a3-7a72-4ecc-a123-1b89cc967515.png",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/pomni-animiniz-pendantz"
+      ],
+      "sourceImageURL": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Pomni-Noir.png?v=1765582743",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/noirpomni.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/Pomni-Noir.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create ONE individual full-body 2D game action drawing: Pomni — Film noir, intro. Image 1 is the approved character design; preserve its precise monochrome clothing, head, facial traits, anatomy, proportions and crisp cel-shaded ink style. Image 2 is the official costume reference. Identity: Pomni in her official Noir outfit. Entirely grayscale, no red, blue, yellow or other colored detail. Her recognisable large white face, dark short bob with side locks, large eyes with grayscale pinwheel irises, small worried mouth. Two-point jester hat in alternating pale and mid gray with gray pompoms. White collared short sleeve shirt, small black necktie, slim dark suspenders, high-waisted black full-length trousers and dark rounded shoes. White gloves. Slender cartoon limbs, proportions consistent with the supplied game style, not compressed plush anatomy.  CHANGE THE POSE to this distinct action: entering the match, upright, one hand raised in an expressive greeting and the other hand held outward; a welcoming but character-specific expression. The result is an original static combat pose for Encore. Preserve the same character and costume in both references; no color, no new accessories. Two arms and two legs only, white gloves, long dark trousers, dark shoes. Character primarily faces screen right except hit/defeat body reaction. Full entire subject contained from very highest hat/ear/hand tip to lowest foot/base, with safe transparent margins on every edge. True transparent RGBA background with crisp clean silhouette; no gray haze, no halo, NO GLOW, no aura, no floor, no drop shadow, no scenery, no text, no framing, no second person, no attacker, no ghost limbs, no movement trails, no effect graphics. Never a sheet or multi-panel image: only one full-body pose. Native high resolution.",
+      "outputHint": "Generated images are saved to /workspace/scratch/5f5114b49696/generated_images as /workspace/scratch/5f5114b49696/generated_images/exec-c97936a3-7a72-4ecc-a123-1b89cc967515.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "createdAt": "2026-11-20T04:27:30.006Z",
+      "visualReview": "Reviewed the complete native source board on 20 November: Grayscale jester hat and pinwheel eyes, dark bob, white collared shirt, black tie and suspenders, full dark trousers and shoes remain consistent. Two arms, two legs, all extremities visible. Slot intro is distinct and readable. Native alpha composes cleanly on a light background; no visible glow or floor, no cut-off part or extra character. These are original game poses, not episode frames.",
+      "sha256": "ff4e0c78427c5ec59219f64c28fb0b835ef7dad1ee074bad99bce2437d5e40ca",
+      "bytes": 984357,
+      "dimensions": [
+        955,
+        1647
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        21,
+        25,
+        949,
+        1616
+      ],
+      "visualReviewAt": "2026-11-20T04:48:14.413180+00:00",
+      "visualReviewBoard": "docs/art-generation/cast-continuation-20261120/native-review/noirpomni.jpg",
+      "status": "generated-and-visually-reviewed",
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "noirpomni-attack",
+      "appearanceId": "noirpomni",
+      "slot": "attack",
+      "file": "assets/encore/poses/noirpomni/attack.png",
+      "method": "image_gen.imagegen",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-11774609-a5a7-43e6-82d8-c9d3412ff362.png",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/pomni-animiniz-pendantz"
+      ],
+      "sourceImageURL": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Pomni-Noir.png?v=1765582743",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/noirpomni.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/Pomni-Noir.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create ONE individual full-body 2D game action drawing: Pomni — Film noir, attack. Image 1 is the approved character design; preserve its precise monochrome clothing, head, facial traits, anatomy, proportions and crisp cel-shaded ink style. Image 2 is the official costume reference. Identity: Pomni in her official Noir outfit. Entirely grayscale, no red, blue, yellow or other colored detail. Her recognisable large white face, dark short bob with side locks, large eyes with grayscale pinwheel irises, small worried mouth. Two-point jester hat in alternating pale and mid gray with gray pompoms. White collared short sleeve shirt, small black necktie, slim dark suspenders, high-waisted black full-length trousers and dark rounded shoes. White gloves. Slender cartoon limbs, proportions consistent with the supplied game style, not compressed plush anatomy.  CHANGE THE POSE to this distinct action: light attack: a compact forward straight punch aimed horizontally toward screen right, rear hand guarding close to chest; entire extension visible. The result is an original static combat pose for Encore. Preserve the same character and costume in both references; no color, no new accessories. Two arms and two legs only, white gloves, long dark trousers, dark shoes. Character primarily faces screen right except hit/defeat body reaction. Full entire subject contained from very highest hat/ear/hand tip to lowest foot/base, with safe transparent margins on every edge. True transparent RGBA background with crisp clean silhouette; no gray haze, no halo, NO GLOW, no aura, no floor, no drop shadow, no scenery, no text, no framing, no second person, no attacker, no ghost limbs, no movement trails, no effect graphics. Never a sheet or multi-panel image: only one full-body pose. Native high resolution.",
+      "outputHint": "Generated images are saved to /workspace/scratch/5f5114b49696/generated_images as /workspace/scratch/5f5114b49696/generated_images/exec-11774609-a5a7-43e6-82d8-c9d3412ff362.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "createdAt": "2026-11-20T04:28:20.776Z",
+      "visualReview": "Reviewed the complete native source board on 20 November: Grayscale jester hat and pinwheel eyes, dark bob, white collared shirt, black tie and suspenders, full dark trousers and shoes remain consistent. Two arms, two legs, all extremities visible. Slot attack is distinct and readable. Native alpha composes cleanly on a light background; no visible glow or floor, no cut-off part or extra character. These are original game poses, not episode frames.",
+      "sha256": "8700afe2963278ffd53e7b767bf0a6e680b85eb42d919e0d7b011756df88a556",
+      "bytes": 923835,
+      "dimensions": [
+        1179,
+        1334
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        74,
+        18,
+        1141,
+        1323
+      ],
+      "visualReviewAt": "2026-11-20T04:48:14.417697+00:00",
+      "visualReviewBoard": "docs/art-generation/cast-continuation-20261120/native-review/noirpomni.jpg",
+      "status": "generated-and-visually-reviewed",
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "noirpomni-heavy",
+      "appearanceId": "noirpomni",
+      "slot": "heavy",
+      "file": "assets/encore/poses/noirpomni/heavy.png",
+      "method": "image_gen.imagegen",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-5ee07462-487d-4492-b95e-91075a2f5dee.png",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/pomni-animiniz-pendantz"
+      ],
+      "sourceImageURL": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Pomni-Noir.png?v=1765582743",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/noirpomni.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/Pomni-Noir.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create ONE individual full-body 2D game action drawing: Pomni — Film noir, heavy. Image 1 is the approved character design; preserve its precise monochrome clothing, head, facial traits, anatomy, proportions and crisp cel-shaded ink style. Image 2 is the official costume reference. Identity: Pomni in her official Noir outfit. Entirely grayscale, no red, blue, yellow or other colored detail. Her recognisable large white face, dark short bob with side locks, large eyes with grayscale pinwheel irises, small worried mouth. Two-point jester hat in alternating pale and mid gray with gray pompoms. White collared short sleeve shirt, small black necktie, slim dark suspenders, high-waisted black full-length trousers and dark rounded shoes. White gloves. Slender cartoon limbs, proportions consistent with the supplied game style, not compressed plush anatomy.  CHANGE THE POSE to this distinct action: heavy attack: broad powerful forward body lunge and emphatic double-handed palm thrust toward screen right; wide planted support, no effects. The result is an original static combat pose for Encore. Preserve the same character and costume in both references; no color, no new accessories. Two arms and two legs only, white gloves, long dark trousers, dark shoes. Character primarily faces screen right except hit/defeat body reaction. Full entire subject contained from very highest hat/ear/hand tip to lowest foot/base, with safe transparent margins on every edge. True transparent RGBA background with crisp clean silhouette; no gray haze, no halo, NO GLOW, no aura, no floor, no drop shadow, no scenery, no text, no framing, no second person, no attacker, no ghost limbs, no movement trails, no effect graphics. Never a sheet or multi-panel image: only one full-body pose. Native high resolution.",
+      "outputHint": "Generated images are saved to /workspace/scratch/5f5114b49696/generated_images as /workspace/scratch/5f5114b49696/generated_images/exec-5ee07462-487d-4492-b95e-91075a2f5dee.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "createdAt": "2026-11-20T04:30:08.965Z",
+      "visualReview": "Reviewed the complete native source board on 20 November: Grayscale jester hat and pinwheel eyes, dark bob, white collared shirt, black tie and suspenders, full dark trousers and shoes remain consistent. Two arms, two legs, all extremities visible. Slot heavy is distinct and readable. Native alpha composes cleanly on a light background; no visible glow or floor, no cut-off part or extra character. These are original game poses, not episode frames.",
+      "sha256": "85a8e9bb5fccba205888944c9c3cd2b50056f58cf32fbb434966d39ebb16f475",
+      "bytes": 1089136,
+      "dimensions": [
+        1201,
+        1309
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        22,
+        16,
+        1191,
+        1301
+      ],
+      "visualReviewAt": "2026-11-20T04:48:14.421646+00:00",
+      "visualReviewBoard": "docs/art-generation/cast-continuation-20261120/native-review/noirpomni.jpg",
+      "status": "generated-and-visually-reviewed",
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "noirpomni-hit",
+      "appearanceId": "noirpomni",
+      "slot": "hit",
+      "file": "assets/encore/poses/noirpomni/hit.png",
+      "method": "image_gen.imagegen",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-4d205108-32f7-4757-b6ab-aebb62b55480.png",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/pomni-animiniz-pendantz"
+      ],
+      "sourceImageURL": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Pomni-Noir.png?v=1765582743",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/noirpomni.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/Pomni-Noir.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create ONE individual full-body 2D game action drawing: Pomni — Film noir, hit. Image 1 is the approved character design; preserve its precise monochrome clothing, head, facial traits, anatomy, proportions and crisp cel-shaded ink style. Image 2 is the official costume reference. Identity: Pomni in her official Noir outfit. Entirely grayscale, no red, blue, yellow or other colored detail. Her recognisable large white face, dark short bob with side locks, large eyes with grayscale pinwheel irises, small worried mouth. Two-point jester hat in alternating pale and mid gray with gray pompoms. White collared short sleeve shirt, small black necktie, slim dark suspenders, high-waisted black full-length trousers and dark rounded shoes. White gloves. Slender cartoon limbs, proportions consistent with the supplied game style, not compressed plush anatomy.  CHANGE THE POSE to this distinct action: reacting to a hit coming from screen right: torso leans back toward screen left, head recoils and both arms raised involuntarily, feet still visible and grounded; no attacker, no blood. The result is an original static combat pose for Encore. Preserve the same character and costume in both references; no color, no new accessories. Two arms and two legs only, white gloves, long dark trousers, dark shoes. Character primarily faces screen right except hit/defeat body reaction. Full entire subject contained from very highest hat/ear/hand tip to lowest foot/base, with safe transparent margins on every edge. True transparent RGBA background with crisp clean silhouette; no gray haze, no halo, NO GLOW, no aura, no floor, no drop shadow, no scenery, no text, no framing, no second person, no attacker, no ghost limbs, no movement trails, no effect graphics. Never a sheet or multi-panel image: only one full-body pose. Native high resolution.",
+      "outputHint": "Generated images are saved to /workspace/scratch/5f5114b49696/generated_images as /workspace/scratch/5f5114b49696/generated_images/exec-4d205108-32f7-4757-b6ab-aebb62b55480.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "createdAt": "2026-11-20T04:30:51.151Z",
+      "visualReview": "Reviewed the complete native source board on 20 November: Grayscale jester hat and pinwheel eyes, dark bob, white collared shirt, black tie and suspenders, full dark trousers and shoes remain consistent. Two arms, two legs, all extremities visible. Slot hit is distinct and readable. Native alpha composes cleanly on a light background; no visible glow or floor, no cut-off part or extra character. These are original game poses, not episode frames.",
+      "sha256": "33ce058c29d0e715e30940fa734a4b9ac1f5cb84c51d03a3f6c463b3bc270286",
+      "bytes": 915615,
+      "dimensions": [
+        1015,
+        1549
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        29,
+        17,
+        985,
+        1531
+      ],
+      "visualReviewAt": "2026-11-20T04:48:14.429336+00:00",
+      "visualReviewBoard": "docs/art-generation/cast-continuation-20261120/native-review/noirpomni.jpg",
+      "status": "generated-and-visually-reviewed",
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "noirpomni-walk",
+      "appearanceId": "noirpomni",
+      "slot": "walk",
+      "file": "assets/encore/poses/noirpomni/walk.png",
+      "method": "image_gen.imagegen",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-ad3200c7-5030-4259-b8d7-2833253ebff1.png",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/pomni-animiniz-pendantz"
+      ],
+      "sourceImageURL": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Pomni-Noir.png?v=1765582743",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/noirpomni.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/Pomni-Noir.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create ONE individual full-body 2D game action drawing: Pomni — Film noir, walk. Image 1 is the approved character design; preserve its precise monochrome clothing, head, facial traits, anatomy, proportions and crisp cel-shaded ink style. Image 2 is the official costume reference. Identity: Pomni in her official Noir outfit. Entirely grayscale, no red, blue, yellow or other colored detail. Her recognisable large white face, dark short bob with side locks, large eyes with grayscale pinwheel irises, small worried mouth. Two-point jester hat in alternating pale and mid gray with gray pompoms. White collared short sleeve shirt, small black necktie, slim dark suspenders, high-waisted black full-length trousers and dark rounded shoes. White gloves. Slender cartoon limbs, proportions consistent with the supplied game style, not compressed plush anatomy.  CHANGE THE POSE to this distinct action: distinct walking stride toward screen right; leading foot forward and rear foot back, opposite arms swinging, torso balanced upright. The result is an original static combat pose for Encore. Preserve the same character and costume in both references; no color, no new accessories. Two arms and two legs only, white gloves, long dark trousers, dark shoes. Character primarily faces screen right except hit/defeat body reaction. Full entire subject contained from very highest hat/ear/hand tip to lowest foot/base, with safe transparent margins on every edge. True transparent RGBA background with crisp clean silhouette; no gray haze, no halo, NO GLOW, no aura, no floor, no drop shadow, no scenery, no text, no framing, no second person, no attacker, no ghost limbs, no movement trails, no effect graphics. Never a sheet or multi-panel image: only one full-body pose. Native high resolution.",
+      "outputHint": "Generated images are saved to /workspace/scratch/5f5114b49696/generated_images as /workspace/scratch/5f5114b49696/generated_images/exec-ad3200c7-5030-4259-b8d7-2833253ebff1.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "createdAt": "2026-11-20T04:32:09.039Z",
+      "visualReview": "Reviewed the complete native source board on 20 November: Grayscale jester hat and pinwheel eyes, dark bob, white collared shirt, black tie and suspenders, full dark trousers and shoes remain consistent. Two arms, two legs, all extremities visible. Slot walk is distinct and readable. Native alpha composes cleanly on a light background; no visible glow or floor, no cut-off part or extra character. These are original game poses, not episode frames.",
+      "sha256": "bc0dd49be5d8f35fe99ebaba2a0c18a4f27eb547d7395a6c3cf0c38fc7ddb26c",
+      "bytes": 1027008,
+      "dimensions": [
+        955,
+        1647
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        29,
+        27,
+        930,
+        1623
+      ],
+      "visualReviewAt": "2026-11-20T04:48:14.431032+00:00",
+      "visualReviewBoard": "docs/art-generation/cast-continuation-20261120/native-review/noirpomni.jpg",
+      "status": "generated-and-visually-reviewed",
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "noirpomni-jump",
+      "appearanceId": "noirpomni",
+      "slot": "jump",
+      "file": "assets/encore/poses/noirpomni/jump.png",
+      "method": "image_gen.imagegen",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-eb34abd4-c940-4a9c-965a-d3407339f158.png",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/pomni-animiniz-pendantz"
+      ],
+      "sourceImageURL": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Pomni-Noir.png?v=1765582743",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/noirpomni.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/Pomni-Noir.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create ONE individual full-body 2D game action drawing: Pomni — Film noir, jump. Image 1 is the approved character design; preserve its precise monochrome clothing, head, facial traits, anatomy, proportions and crisp cel-shaded ink style. Image 2 is the official costume reference. Identity: Pomni in her official Noir outfit. Entirely grayscale, no red, blue, yellow or other colored detail. Her recognisable large white face, dark short bob with side locks, large eyes with grayscale pinwheel irises, small worried mouth. Two-point jester hat in alternating pale and mid gray with gray pompoms. White collared short sleeve shirt, small black necktie, slim dark suspenders, high-waisted black full-length trousers and dark rounded shoes. White gloves. Slender cartoon limbs, proportions consistent with the supplied game style, not compressed plush anatomy.  CHANGE THE POSE to this distinct action: in midair, legs bent in a controlled tuck with both feet fully visible, arms spread for balance, airborne dynamic silhouette; no ground or shadow. The result is an original static combat pose for Encore. Preserve the same character and costume in both references; no color, no new accessories. Two arms and two legs only, white gloves, long dark trousers, dark shoes. Character primarily faces screen right except hit/defeat body reaction. Full entire subject contained from very highest hat/ear/hand tip to lowest foot/base, with safe transparent margins on every edge. True transparent RGBA background with crisp clean silhouette; no gray haze, no halo, NO GLOW, no aura, no floor, no drop shadow, no scenery, no text, no framing, no second person, no attacker, no ghost limbs, no movement trails, no effect graphics. Never a sheet or multi-panel image: only one full-body pose. Native high resolution.",
+      "outputHint": "Generated images are saved to /workspace/scratch/5f5114b49696/generated_images as /workspace/scratch/5f5114b49696/generated_images/exec-eb34abd4-c940-4a9c-965a-d3407339f158.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "createdAt": "2026-11-20T04:33:08.571Z",
+      "visualReview": "Reviewed the complete native source board on 20 November: Grayscale jester hat and pinwheel eyes, dark bob, white collared shirt, black tie and suspenders, full dark trousers and shoes remain consistent. Two arms, two legs, all extremities visible. Slot jump is distinct and readable. Native alpha composes cleanly on a light background; no visible glow or floor, no cut-off part or extra character. These are original game poses, not episode frames.",
+      "sha256": "53c072c4961eb280beeb036884d44b50589013c2b7d5fe1594c8aac42dd7e398",
+      "bytes": 1155032,
+      "dimensions": [
+        1217,
+        1293
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        12,
+        10,
+        1205,
+        1283
+      ],
+      "visualReviewAt": "2026-11-20T04:48:14.435515+00:00",
+      "visualReviewBoard": "docs/art-generation/cast-continuation-20261120/native-review/noirpomni.jpg",
+      "status": "generated-and-visually-reviewed",
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "noirpomni-crouch",
+      "appearanceId": "noirpomni",
+      "slot": "crouch",
+      "file": "assets/encore/poses/noirpomni/crouch.png",
+      "method": "image_gen.imagegen",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-555fc052-7e6e-4e73-ad16-cdb1cc98bacb.png",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/pomni-animiniz-pendantz"
+      ],
+      "sourceImageURL": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Pomni-Noir.png?v=1765582743",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/noirpomni.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/Pomni-Noir.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create ONE individual full-body 2D game action drawing: Pomni — Film noir, crouch. Image 1 is the approved character design; preserve its precise monochrome clothing, head, facial traits, anatomy, proportions and crisp cel-shaded ink style. Image 2 is the official costume reference. Identity: Pomni in her official Noir outfit. Entirely grayscale, no red, blue, yellow or other colored detail. Her recognisable large white face, dark short bob with side locks, large eyes with grayscale pinwheel irises, small worried mouth. Two-point jester hat in alternating pale and mid gray with gray pompoms. White collared short sleeve shirt, small black necktie, slim dark suspenders, high-waisted black full-length trousers and dark rounded shoes. White gloves. Slender cartoon limbs, proportions consistent with the supplied game style, not compressed plush anatomy.  CHANGE THE POSE to this distinct action: low defensive crouch, both knees deeply bent and both feet planted, compact hunched torso and hands protecting head, whole body visible. The result is an original static combat pose for Encore. Preserve the same character and costume in both references; no color, no new accessories. Two arms and two legs only, white gloves, long dark trousers, dark shoes. Character primarily faces screen right except hit/defeat body reaction. Full entire subject contained from very highest hat/ear/hand tip to lowest foot/base, with safe transparent margins on every edge. True transparent RGBA background with crisp clean silhouette; no gray haze, no halo, NO GLOW, no aura, no floor, no drop shadow, no scenery, no text, no framing, no second person, no attacker, no ghost limbs, no movement trails, no effect graphics. Never a sheet or multi-panel image: only one full-body pose. Native high resolution.",
+      "outputHint": "Generated images are saved to /workspace/scratch/5f5114b49696/generated_images as /workspace/scratch/5f5114b49696/generated_images/exec-555fc052-7e6e-4e73-ad16-cdb1cc98bacb.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "createdAt": "2026-11-20T04:36:23.434Z",
+      "visualReview": "Reviewed the complete native source board on 20 November: Grayscale jester hat and pinwheel eyes, dark bob, white collared shirt, black tie and suspenders, full dark trousers and shoes remain consistent. Two arms, two legs, all extremities visible. Slot crouch is distinct and readable. Native alpha composes cleanly on a light background; no visible glow or floor, no cut-off part or extra character. These are original game poses, not episode frames.",
+      "sha256": "c8cb7faeabec591932e9953087bc548a7468f2227e1bb2faabde5a402401e085",
+      "bytes": 1068296,
+      "dimensions": [
+        1312,
+        1199
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        182,
+        41,
+        1164,
+        1170
+      ],
+      "visualReviewAt": "2026-11-20T04:48:14.441552+00:00",
+      "visualReviewBoard": "docs/art-generation/cast-continuation-20261120/native-review/noirpomni.jpg",
+      "status": "generated-and-visually-reviewed",
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "noirpomni-victory",
+      "appearanceId": "noirpomni",
+      "slot": "victory",
+      "file": "assets/encore/poses/noirpomni/victory.png",
+      "method": "image_gen.imagegen",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-94383d41-fb83-4f57-b46e-e52768dd5200.png",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/pomni-animiniz-pendantz"
+      ],
+      "sourceImageURL": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Pomni-Noir.png?v=1765582743",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/noirpomni.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/Pomni-Noir.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create ONE individual full-body 2D game action drawing: Pomni — Film noir, victory. Image 1 is the approved character design; preserve its precise monochrome clothing, head, facial traits, anatomy, proportions and crisp cel-shaded ink style. Image 2 is the official costume reference. Identity: Pomni in her official Noir outfit. Entirely grayscale, no red, blue, yellow or other colored detail. Her recognisable large white face, dark short bob with side locks, large eyes with grayscale pinwheel irises, small worried mouth. Two-point jester hat in alternating pale and mid gray with gray pompoms. White collared short sleeve shirt, small black necktie, slim dark suspenders, high-waisted black full-length trousers and dark rounded shoes. White gloves. Slender cartoon limbs, proportions consistent with the supplied game style, not compressed plush anatomy.  CHANGE THE POSE to this distinct action: a confident victory pose, upright, one fist raised high and other hand on hip, pleased character-specific expression, no props. The result is an original static combat pose for Encore. Preserve the same character and costume in both references; no color, no new accessories. Two arms and two legs only, white gloves, long dark trousers, dark shoes. Character primarily faces screen right except hit/defeat body reaction. Full entire subject contained from very highest hat/ear/hand tip to lowest foot/base, with safe transparent margins on every edge. True transparent RGBA background with crisp clean silhouette; no gray haze, no halo, NO GLOW, no aura, no floor, no drop shadow, no scenery, no text, no framing, no second person, no attacker, no ghost limbs, no movement trails, no effect graphics. Never a sheet or multi-panel image: only one full-body pose. Native high resolution.",
+      "outputHint": "Generated images are saved to /workspace/scratch/5f5114b49696/generated_images as /workspace/scratch/5f5114b49696/generated_images/exec-94383d41-fb83-4f57-b46e-e52768dd5200.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "createdAt": "2026-11-20T04:37:02.959Z",
+      "visualReview": "Reviewed the complete native source board on 20 November: Grayscale jester hat and pinwheel eyes, dark bob, white collared shirt, black tie and suspenders, full dark trousers and shoes remain consistent. Two arms, two legs, all extremities visible. Slot victory is distinct and readable. Native alpha composes cleanly on a light background; no visible glow or floor, no cut-off part or extra character. These are original game poses, not episode frames.",
+      "sha256": "4cbe591dac72bb813db49d1430d743b1e37f3530ab86bceeacbcae6b7f573529",
+      "bytes": 982997,
+      "dimensions": [
+        955,
+        1647
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        50,
+        20,
+        903,
+        1637
+      ],
+      "visualReviewAt": "2026-11-20T04:48:14.445050+00:00",
+      "visualReviewBoard": "docs/art-generation/cast-continuation-20261120/native-review/noirpomni.jpg",
+      "status": "generated-and-visually-reviewed",
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "noirpomni-defeat",
+      "appearanceId": "noirpomni",
+      "slot": "defeat",
+      "file": "assets/encore/poses/noirpomni/defeat.png",
+      "method": "image_gen.imagegen",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-2c7ea1f5-49ae-48e6-bfb6-915361f7b72f.png",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/pomni-animiniz-pendantz"
+      ],
+      "sourceImageURL": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Pomni-Noir.png?v=1765582743",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/noirpomni.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/Pomni-Noir.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create ONE individual full-body 2D game action drawing: Pomni — Film noir, defeat. Image 1 is the approved character design; preserve its precise monochrome clothing, head, facial traits, anatomy, proportions and crisp cel-shaded ink style. Image 2 is the official costume reference. Identity: Pomni in her official Noir outfit. Entirely grayscale, no red, blue, yellow or other colored detail. Her recognisable large white face, dark short bob with side locks, large eyes with grayscale pinwheel irises, small worried mouth. Two-point jester hat in alternating pale and mid gray with gray pompoms. White collared short sleeve shirt, small black necktie, slim dark suspenders, high-waisted black full-length trousers and dark rounded shoes. White gloves. Slender cartoon limbs, proportions consistent with the supplied game style, not compressed plush anatomy.  CHANGE THE POSE to this distinct action: exhausted defeated pose, sitting low with legs bent in front and arms limp, head tilted down, sad or dazed expression; whole body and both feet visible. The result is an original static combat pose for Encore. Preserve the same character and costume in both references; no color, no new accessories. Two arms and two legs only, white gloves, long dark trousers, dark shoes. Character primarily faces screen right except hit/defeat body reaction. Full entire subject contained from very highest hat/ear/hand tip to lowest foot/base, with safe transparent margins on every edge. True transparent RGBA background with crisp clean silhouette; no gray haze, no halo, NO GLOW, no aura, no floor, no drop shadow, no scenery, no text, no framing, no second person, no attacker, no ghost limbs, no movement trails, no effect graphics. Never a sheet or multi-panel image: only one full-body pose. Native high resolution.",
+      "outputHint": "Generated images are saved to /workspace/scratch/5f5114b49696/generated_images as /workspace/scratch/5f5114b49696/generated_images/exec-2c7ea1f5-49ae-48e6-bfb6-915361f7b72f.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "createdAt": "2026-11-20T04:39:31.947Z",
+      "visualReview": "Reviewed the complete native source board on 20 November: Grayscale jester hat and pinwheel eyes, dark bob, white collared shirt, black tie and suspenders, full dark trousers and shoes remain consistent. Two arms, two legs, all extremities visible. Slot defeat is distinct and readable. Native alpha composes cleanly on a light background; no visible glow or floor, no cut-off part or extra character. These are original game poses, not episode frames.",
+      "sha256": "50dbb1bd1c3f9952c08878db4e7489b808bdad0c06be4fa1028f84d275238928",
+      "bytes": 1338763,
+      "dimensions": [
+        1312,
+        1199
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        94,
+        34,
+        1189,
+        1191
+      ],
+      "visualReviewAt": "2026-11-20T04:48:14.448617+00:00",
+      "visualReviewBoard": "docs/art-generation/cast-continuation-20261120/native-review/noirpomni.jpg",
+      "status": "generated-and-visually-reviewed",
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "noirjax-selection",
+      "appearanceId": "noirjax",
+      "slot": "selection",
+      "file": "assets/encore/selection/noirjax.png",
+      "method": "image_gen.imagegen",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-39e449ab-a2fa-4b95-a7e7-9353786275b0.png",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/jax-pendantz"
+      ],
+      "sourceImageURL": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/JaxPendantz_Noir.png?v=1780351074",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/JaxPendantz_Noir.png",
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/noirragatha.png",
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/presidentpomni.png"
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: individual full-body selection illustration for the Digital Circus Encore game. Create exactly ONE Jax the lanky cartoon rabbit in his official Noir outfit. Entirely grayscale. Long slim gray torso and limbs, very tall long gray rabbit ears fully visible. Narrow half-lidded pale-gray eyes with rectangular black pupils, broad toothy smug grin, no nose. White collared short sleeve shirt, long slim black tie, gray suspenders, black long trousers, dark broad rounded shoes and white cartoon gloves. No pink overalls, no purple. Keep tall lanky original proportions from the game style, not plush anatomy. Selection pose: upright three-quarter view facing screen right, one hand on hip and the other casually hooking a thumb behind a suspender, wry confidence. Reference image 1 controls this costume's shapes, clothing and monochrome palette; references 2 and 3 control only the crisp clean ink outlines and restrained 2D cel-shaded game style. Keep the original recognizable character anatomy, do not copy the toy's proportions or fabric. True transparent RGBA background. Full entire subject including hat, all ears, hands and all feet/base contained with generous clean transparent padding on every edge. No keychain, metal ring, hanging loop, tag, text, labels, logos, shadows on ground, scenery, floor, frame, extra character, duplicate body, split view, contact sheet, animation sheet, or cropped body. Single centered drawing only. Smooth confident contours, detailed high quality native resolution.",
+      "outputHint": "Generated images are saved to /workspace/scratch/5f5114b49696/generated_images as /workspace/scratch/5f5114b49696/generated_images/exec-39e449ab-a2fa-4b95-a7e7-9353786275b0.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "createdAt": "2026-11-20T04:24:56.214Z",
+      "visualReview": "Reviewed the complete native source board on 20 November: Tall gray rabbit with two long ears, rectangular pupils and toothy smile; white collared shirt, black tie, suspenders and full dark trousers/shoes remain consistent. Limbs remain long and complete. Slot selection is distinct and readable. Native alpha composes cleanly on a light background; no visible glow or floor, no cut-off part or extra character. These are original game poses, not episode frames.",
+      "sha256": "acfc128475e44b155ea60949780e7fe7571fd97e77d70dc0027919ec17e16b39",
+      "bytes": 621658,
+      "dimensions": [
+        887,
+        1774
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        197,
+        16,
+        689,
+        1764
+      ],
+      "visualReviewAt": "2026-11-20T04:48:14.457108+00:00",
+      "visualReviewBoard": "docs/art-generation/cast-continuation-20261120/native-review/noirjax.jpg",
+      "status": "generated-and-visually-reviewed",
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "noirjax-stance",
+      "appearanceId": "noirjax",
+      "slot": "stance",
+      "file": "assets/encore/stance/noirjax.png",
+      "method": "image_gen.imagegen",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-b0007106-e4e3-4f3d-80c7-d4173c3afe14.png",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/jax-pendantz"
+      ],
+      "sourceImageURL": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/JaxPendantz_Noir.png?v=1780351074",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/noirjax.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/JaxPendantz_Noir.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create ONE individual full-body 2D game action drawing: Jax — Film noir, stance. Image 1 is the approved character design; preserve its precise monochrome clothing, head, facial traits, anatomy, proportions and crisp cel-shaded ink style. Image 2 is the official costume reference. Identity: Jax the lanky cartoon rabbit in his official Noir outfit. Entirely grayscale. Long slim gray torso and limbs, very tall long gray rabbit ears fully visible. Narrow half-lidded pale-gray eyes with rectangular black pupils, broad toothy smug grin, no nose. White collared short sleeve shirt, long slim black tie, gray suspenders, black long trousers, dark broad rounded shoes and white cartoon gloves. No pink overalls, no purple. Keep tall lanky original proportions from the game style, not plush anatomy.  CHANGE THE POSE to this distinct action: fighting ready stance, three-quarter facing screen right; legs apart, knees slightly flexed, both fists up near chest, alert face. The result is an original static combat pose for Encore. Preserve the same character and costume in both references; no color, no new accessories. Two arms and two legs only, white gloves, long dark trousers, dark shoes. Character primarily faces screen right except hit/defeat body reaction. Full entire subject contained from very highest hat/ear/hand tip to lowest foot/base, with safe transparent margins on every edge. True transparent RGBA background with crisp clean silhouette; no gray haze, no halo, NO GLOW, no aura, no floor, no drop shadow, no scenery, no text, no framing, no second person, no attacker, no ghost limbs, no movement trails, no effect graphics. Never a sheet or multi-panel image: only one full-body pose. Native high resolution.",
+      "outputHint": "Generated images are saved to /workspace/scratch/5f5114b49696/generated_images as /workspace/scratch/5f5114b49696/generated_images/exec-b0007106-e4e3-4f3d-80c7-d4173c3afe14.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "createdAt": "2026-11-20T04:28:14.608Z",
+      "visualReview": "Reviewed the complete native source board on 20 November: Tall gray rabbit with two long ears, rectangular pupils and toothy smile; white collared shirt, black tie, suspenders and full dark trousers/shoes remain consistent. Limbs remain long and complete. Slot stance is distinct and readable. Native alpha composes cleanly on a light background; no visible glow or floor, no cut-off part or extra character. These are original game poses, not episode frames.",
+      "sha256": "835190a3fad3ac9739adf2a2b73fba89c4c11354a24338589121bff4bf5fce2e",
+      "bytes": 1238219,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "bboxAlpha12": [
+        96,
+        12,
+        928,
+        1528
+      ],
+      "visualReviewAt": "2026-11-20T04:48:14.458406+00:00",
+      "visualReviewBoard": "docs/art-generation/cast-continuation-20261120/native-review/noirjax.jpg",
+      "status": "generated-and-visually-reviewed",
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "noirjax-intro",
+      "appearanceId": "noirjax",
+      "slot": "intro",
+      "file": "assets/encore/poses/noirjax/intro.png",
+      "method": "image_gen.imagegen",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-103ecf4d-1f91-4c63-8d40-1da4b786b74e.png",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/jax-pendantz"
+      ],
+      "sourceImageURL": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/JaxPendantz_Noir.png?v=1780351074",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/noirjax.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/JaxPendantz_Noir.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create ONE individual full-body 2D game action drawing: Jax — Film noir, intro. Image 1 is the approved character design; preserve its precise monochrome clothing, head, facial traits, anatomy, proportions and crisp cel-shaded ink style. Image 2 is the official costume reference. Identity: Jax the lanky cartoon rabbit in his official Noir outfit. Entirely grayscale. Long slim gray torso and limbs, very tall long gray rabbit ears fully visible. Narrow half-lidded pale-gray eyes with rectangular black pupils, broad toothy smug grin, no nose. White collared short sleeve shirt, long slim black tie, gray suspenders, black long trousers, dark broad rounded shoes and white cartoon gloves. No pink overalls, no purple. Keep tall lanky original proportions from the game style, not plush anatomy.  CHANGE THE POSE to this distinct action: entering the match, upright, one hand raised in an expressive greeting and the other hand held outward; a welcoming but character-specific expression. The result is an original static combat pose for Encore. Preserve the same character and costume in both references; no color, no new accessories. Two arms and two legs only, white gloves, long dark trousers, dark shoes. Character primarily faces screen right except hit/defeat body reaction. Full entire subject contained from very highest hat/ear/hand tip to lowest foot/base, with safe transparent margins on every edge. True transparent RGBA background with crisp clean silhouette; no gray haze, no halo, NO GLOW, no aura, no floor, no drop shadow, no scenery, no text, no framing, no second person, no attacker, no ghost limbs, no movement trails, no effect graphics. Never a sheet or multi-panel image: only one full-body pose. Native high resolution.",
+      "outputHint": "Generated images are saved to /workspace/scratch/5f5114b49696/generated_images as /workspace/scratch/5f5114b49696/generated_images/exec-103ecf4d-1f91-4c63-8d40-1da4b786b74e.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "createdAt": "2026-11-20T04:28:48.071Z",
+      "visualReview": "Reviewed the complete native source board on 20 November: Tall gray rabbit with two long ears, rectangular pupils and toothy smile; white collared shirt, black tie, suspenders and full dark trousers/shoes remain consistent. Limbs remain long and complete. Slot intro is distinct and readable. Native alpha composes cleanly on a light background; no visible glow or floor, no cut-off part or extra character. These are original game poses, not episode frames.",
+      "sha256": "3ae45312e86589a22abbbd387e005128f499e7d018e37e401e8d68d04acfc95c",
+      "bytes": 691535,
+      "dimensions": [
+        887,
+        1774
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        30,
+        9,
+        872,
+        1765
+      ],
+      "visualReviewAt": "2026-11-20T04:48:14.461903+00:00",
+      "visualReviewBoard": "docs/art-generation/cast-continuation-20261120/native-review/noirjax.jpg",
+      "status": "generated-and-visually-reviewed",
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "noirjax-attack",
+      "appearanceId": "noirjax",
+      "slot": "attack",
+      "file": "assets/encore/poses/noirjax/attack.png",
+      "method": "image_gen.imagegen",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-d18c5c8f-8b3f-4092-af15-8dd3d077b9db.png",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/jax-pendantz"
+      ],
+      "sourceImageURL": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/JaxPendantz_Noir.png?v=1780351074",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/noirjax.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/JaxPendantz_Noir.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create ONE individual full-body 2D game action drawing: Jax — Film noir, attack. Image 1 is the approved character design; preserve its precise monochrome clothing, head, facial traits, anatomy, proportions and crisp cel-shaded ink style. Image 2 is the official costume reference. Identity: Jax the lanky cartoon rabbit in his official Noir outfit. Entirely grayscale. Long slim gray torso and limbs, very tall long gray rabbit ears fully visible. Narrow half-lidded pale-gray eyes with rectangular black pupils, broad toothy smug grin, no nose. White collared short sleeve shirt, long slim black tie, gray suspenders, black long trousers, dark broad rounded shoes and white cartoon gloves. No pink overalls, no purple. Keep tall lanky original proportions from the game style, not plush anatomy.  CHANGE THE POSE to this distinct action: light attack: a compact forward straight punch aimed horizontally toward screen right, rear hand guarding close to chest; entire extension visible. The result is an original static combat pose for Encore. Preserve the same character and costume in both references; no color, no new accessories. Two arms and two legs only, white gloves, long dark trousers, dark shoes. Character primarily faces screen right except hit/defeat body reaction. Full entire subject contained from very highest hat/ear/hand tip to lowest foot/base, with safe transparent margins on every edge. True transparent RGBA background with crisp clean silhouette; no gray haze, no halo, NO GLOW, no aura, no floor, no drop shadow, no scenery, no text, no framing, no second person, no attacker, no ghost limbs, no movement trails, no effect graphics. Never a sheet or multi-panel image: only one full-body pose. Native high resolution.",
+      "outputHint": "Generated images are saved to /workspace/scratch/5f5114b49696/generated_images as /workspace/scratch/5f5114b49696/generated_images/exec-d18c5c8f-8b3f-4092-af15-8dd3d077b9db.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "createdAt": "2026-11-20T04:29:17.237Z",
+      "visualReview": "Reviewed the complete native source board on 20 November: Tall gray rabbit with two long ears, rectangular pupils and toothy smile; white collared shirt, black tie, suspenders and full dark trousers/shoes remain consistent. Limbs remain long and complete. Slot attack is distinct and readable. Native alpha composes cleanly on a light background; no visible glow or floor, no cut-off part or extra character. These are original game poses, not episode frames.",
+      "sha256": "85705229af6cc844338acde053403a3f759f53902f785246586b5429d7abde9d",
+      "bytes": 604225,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        30,
+        4,
+        1078,
+        1445
+      ],
+      "visualReviewAt": "2026-11-20T04:48:14.464555+00:00",
+      "visualReviewBoard": "docs/art-generation/cast-continuation-20261120/native-review/noirjax.jpg",
+      "status": "generated-and-visually-reviewed",
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "noirjax-heavy",
+      "appearanceId": "noirjax",
+      "slot": "heavy",
+      "file": "assets/encore/poses/noirjax/heavy.png",
+      "method": "image_gen.imagegen",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-80cc281a-c880-464c-8822-da9393a737bf.png",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/jax-pendantz"
+      ],
+      "sourceImageURL": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/JaxPendantz_Noir.png?v=1780351074",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/noirjax.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/JaxPendantz_Noir.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create ONE individual full-body 2D game action drawing: Jax — Film noir, heavy. Image 1 is the approved character design; preserve its precise monochrome clothing, head, facial traits, anatomy, proportions and crisp cel-shaded ink style. Image 2 is the official costume reference. Identity: Jax the lanky cartoon rabbit in his official Noir outfit. Entirely grayscale. Long slim gray torso and limbs, very tall long gray rabbit ears fully visible. Narrow half-lidded pale-gray eyes with rectangular black pupils, broad toothy smug grin, no nose. White collared short sleeve shirt, long slim black tie, gray suspenders, black long trousers, dark broad rounded shoes and white cartoon gloves. No pink overalls, no purple. Keep tall lanky original proportions from the game style, not plush anatomy.  CHANGE THE POSE to this distinct action: heavy attack: broad powerful forward body lunge and emphatic double-handed palm thrust toward screen right; wide planted support, no effects. The result is an original static combat pose for Encore. Preserve the same character and costume in both references; no color, no new accessories. Two arms and two legs only, white gloves, long dark trousers, dark shoes. Character primarily faces screen right except hit/defeat body reaction. Full entire subject contained from very highest hat/ear/hand tip to lowest foot/base, with safe transparent margins on every edge. True transparent RGBA background with crisp clean silhouette; no gray haze, no halo, NO GLOW, no aura, no floor, no drop shadow, no scenery, no text, no framing, no second person, no attacker, no ghost limbs, no movement trails, no effect graphics. Never a sheet or multi-panel image: only one full-body pose. Native high resolution.",
+      "outputHint": "Generated images are saved to /workspace/scratch/5f5114b49696/generated_images as /workspace/scratch/5f5114b49696/generated_images/exec-80cc281a-c880-464c-8822-da9393a737bf.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "createdAt": "2026-11-20T04:29:56.881Z",
+      "visualReview": "Reviewed the complete native source board on 20 November: Tall gray rabbit with two long ears, rectangular pupils and toothy smile; white collared shirt, black tie, suspenders and full dark trousers/shoes remain consistent. Limbs remain long and complete. Slot heavy is distinct and readable. Native alpha composes cleanly on a light background; no visible glow or floor, no cut-off part or extra character. These are original game poses, not episode frames.",
+      "sha256": "934f48a44e8418b036bee9ff6b6df152fd6523a29f415b467de762dffceb292a",
+      "bytes": 1173895,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "bboxAlpha12": [
+        96,
+        5,
+        1384,
+        1022
+      ],
+      "visualReviewAt": "2026-11-20T04:48:14.466796+00:00",
+      "visualReviewBoard": "docs/art-generation/cast-continuation-20261120/native-review/noirjax.jpg",
+      "status": "generated-and-visually-reviewed",
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "noirjax-hit",
+      "appearanceId": "noirjax",
+      "slot": "hit",
+      "file": "assets/encore/poses/noirjax/hit.png",
+      "method": "image_gen.imagegen",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-9feb6a6a-062b-45d8-8361-398324a1c68d.png",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/jax-pendantz"
+      ],
+      "sourceImageURL": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/JaxPendantz_Noir.png?v=1780351074",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/noirjax.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/JaxPendantz_Noir.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create ONE individual full-body 2D game action drawing: Jax — Film noir, hit. Image 1 is the approved character design; preserve its precise monochrome clothing, head, facial traits, anatomy, proportions and crisp cel-shaded ink style. Image 2 is the official costume reference. Identity: Jax the lanky cartoon rabbit in his official Noir outfit. Entirely grayscale. Long slim gray torso and limbs, very tall long gray rabbit ears fully visible. Narrow half-lidded pale-gray eyes with rectangular black pupils, broad toothy smug grin, no nose. White collared short sleeve shirt, long slim black tie, gray suspenders, black long trousers, dark broad rounded shoes and white cartoon gloves. No pink overalls, no purple. Keep tall lanky original proportions from the game style, not plush anatomy.  CHANGE THE POSE to this distinct action: reacting to a hit coming from screen right: torso leans back toward screen left, head recoils and both arms raised involuntarily, feet still visible and grounded; no attacker, no blood. The result is an original static combat pose for Encore. Preserve the same character and costume in both references; no color, no new accessories. Two arms and two legs only, white gloves, long dark trousers, dark shoes. Character primarily faces screen right except hit/defeat body reaction. Full entire subject contained from very highest hat/ear/hand tip to lowest foot/base, with safe transparent margins on every edge. True transparent RGBA background with crisp clean silhouette; no gray haze, no halo, NO GLOW, no aura, no floor, no drop shadow, no scenery, no text, no framing, no second person, no attacker, no ghost limbs, no movement trails, no effect graphics. Never a sheet or multi-panel image: only one full-body pose. Native high resolution.",
+      "outputHint": "Generated images are saved to /workspace/scratch/5f5114b49696/generated_images as /workspace/scratch/5f5114b49696/generated_images/exec-9feb6a6a-062b-45d8-8361-398324a1c68d.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "createdAt": "2026-11-20T04:30:35.804Z",
+      "visualReview": "Reviewed the complete native source board on 20 November: Tall gray rabbit with two long ears, rectangular pupils and toothy smile; white collared shirt, black tie, suspenders and full dark trousers/shoes remain consistent. Limbs remain long and complete. Slot hit is distinct and readable. Native alpha composes cleanly on a light background; no visible glow or floor, no cut-off part or extra character. These are original game poses, not episode frames.",
+      "sha256": "6096b3464eca6fb424d43adcb5331e224c335a24e327b456d1d0b493cbd4192d",
+      "bytes": 666719,
+      "dimensions": [
+        1027,
+        1531
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        42,
+        13,
+        928,
+        1522
+      ],
+      "visualReviewAt": "2026-11-20T04:48:14.470810+00:00",
+      "visualReviewBoard": "docs/art-generation/cast-continuation-20261120/native-review/noirjax.jpg",
+      "status": "generated-and-visually-reviewed",
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "noirjax-walk",
+      "appearanceId": "noirjax",
+      "slot": "walk",
+      "file": "assets/encore/poses/noirjax/walk.png",
+      "method": "image_gen.imagegen",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-fd4c3fe5-1ab0-4160-ab35-f3ef7b99b9d5.png",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/jax-pendantz"
+      ],
+      "sourceImageURL": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/JaxPendantz_Noir.png?v=1780351074",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/noirjax.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/JaxPendantz_Noir.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create ONE individual full-body 2D game action drawing: Jax — Film noir, walk. Image 1 is the approved character design; preserve its precise monochrome clothing, head, facial traits, anatomy, proportions and crisp cel-shaded ink style. Image 2 is the official costume reference. Identity: Jax the lanky cartoon rabbit in his official Noir outfit. Entirely grayscale. Long slim gray torso and limbs, very tall long gray rabbit ears fully visible. Narrow half-lidded pale-gray eyes with rectangular black pupils, broad toothy smug grin, no nose. White collared short sleeve shirt, long slim black tie, gray suspenders, black long trousers, dark broad rounded shoes and white cartoon gloves. No pink overalls, no purple. Keep tall lanky original proportions from the game style, not plush anatomy.  CHANGE THE POSE to this distinct action: distinct walking stride toward screen right; leading foot forward and rear foot back, opposite arms swinging, torso balanced upright. The result is an original static combat pose for Encore. Preserve the same character and costume in both references; no color, no new accessories. Two arms and two legs only, white gloves, long dark trousers, dark shoes. Character primarily faces screen right except hit/defeat body reaction. Full entire subject contained from very highest hat/ear/hand tip to lowest foot/base, with safe transparent margins on every edge. True transparent RGBA background with crisp clean silhouette; no gray haze, no halo, NO GLOW, no aura, no floor, no drop shadow, no scenery, no text, no framing, no second person, no attacker, no ghost limbs, no movement trails, no effect graphics. Never a sheet or multi-panel image: only one full-body pose. Native high resolution.",
+      "outputHint": "Generated images are saved to /workspace/scratch/5f5114b49696/generated_images as /workspace/scratch/5f5114b49696/generated_images/exec-fd4c3fe5-1ab0-4160-ab35-f3ef7b99b9d5.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "createdAt": "2026-11-20T04:31:28.759Z",
+      "visualReview": "Reviewed the complete native source board on 20 November: Tall gray rabbit with two long ears, rectangular pupils and toothy smile; white collared shirt, black tie, suspenders and full dark trousers/shoes remain consistent. Limbs remain long and complete. Slot walk is distinct and readable. Native alpha composes cleanly on a light background; no visible glow or floor, no cut-off part or extra character. These are original game poses, not episode frames.",
+      "sha256": "b1d803b706e8ad8a7354037eb5c6c4a374a65b8c97a9c3e0dcf294ac85e6a3a9",
+      "bytes": 1260009,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "bboxAlpha12": [
+        98,
+        22,
+        955,
+        1523
+      ],
+      "visualReviewAt": "2026-11-20T04:48:14.473275+00:00",
+      "visualReviewBoard": "docs/art-generation/cast-continuation-20261120/native-review/noirjax.jpg",
+      "status": "generated-and-visually-reviewed",
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "noirjax-jump",
+      "appearanceId": "noirjax",
+      "slot": "jump",
+      "file": "assets/encore/poses/noirjax/jump.png",
+      "method": "image_gen.imagegen",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-d11530d3-39f8-4ff7-947e-aefa759f27ff.png",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/jax-pendantz"
+      ],
+      "sourceImageURL": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/JaxPendantz_Noir.png?v=1780351074",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/noirjax.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/JaxPendantz_Noir.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create ONE individual full-body 2D game action drawing: Jax — Film noir, jump. Image 1 is the approved character design; preserve its precise monochrome clothing, head, facial traits, anatomy, proportions and crisp cel-shaded ink style. Image 2 is the official costume reference. Identity: Jax the lanky cartoon rabbit in his official Noir outfit. Entirely grayscale. Long slim gray torso and limbs, very tall long gray rabbit ears fully visible. Narrow half-lidded pale-gray eyes with rectangular black pupils, broad toothy smug grin, no nose. White collared short sleeve shirt, long slim black tie, gray suspenders, black long trousers, dark broad rounded shoes and white cartoon gloves. No pink overalls, no purple. Keep tall lanky original proportions from the game style, not plush anatomy.  CHANGE THE POSE to this distinct action: in midair, legs bent in a controlled tuck with both feet fully visible, arms spread for balance, airborne dynamic silhouette; no ground or shadow. The result is an original static combat pose for Encore. Preserve the same character and costume in both references; no color, no new accessories. Two arms and two legs only, white gloves, long dark trousers, dark shoes. Character primarily faces screen right except hit/defeat body reaction. Full entire subject contained from very highest hat/ear/hand tip to lowest foot/base, with safe transparent margins on every edge. True transparent RGBA background with crisp clean silhouette; no gray haze, no halo, NO GLOW, no aura, no floor, no drop shadow, no scenery, no text, no framing, no second person, no attacker, no ghost limbs, no movement trails, no effect graphics. Never a sheet or multi-panel image: only one full-body pose. Native high resolution.",
+      "outputHint": "Generated images are saved to /workspace/scratch/5f5114b49696/generated_images as /workspace/scratch/5f5114b49696/generated_images/exec-d11530d3-39f8-4ff7-947e-aefa759f27ff.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "createdAt": "2026-11-20T04:32:16.438Z",
+      "visualReview": "Reviewed the complete native source board on 20 November: Tall gray rabbit with two long ears, rectangular pupils and toothy smile; white collared shirt, black tie, suspenders and full dark trousers/shoes remain consistent. Limbs remain long and complete. Slot jump is distinct and readable. Native alpha composes cleanly on a light background; no visible glow or floor, no cut-off part or extra character. These are original game poses, not episode frames.",
+      "sha256": "deb9c4d37f39ae20734fd7a912664dc2ade359b53d111af3763ad8bc8ff2d602",
+      "bytes": 782557,
+      "dimensions": [
+        1194,
+        1317
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        19,
+        23,
+        1171,
+        1301
+      ],
+      "visualReviewAt": "2026-11-20T04:48:14.477474+00:00",
+      "visualReviewBoard": "docs/art-generation/cast-continuation-20261120/native-review/noirjax.jpg",
+      "status": "generated-and-visually-reviewed",
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "noirjax-crouch",
+      "appearanceId": "noirjax",
+      "slot": "crouch",
+      "file": "assets/encore/poses/noirjax/crouch.png",
+      "method": "image_gen.imagegen",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-888b5d04-f1bc-49ce-8c4e-900b8909e24b.png",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/jax-pendantz"
+      ],
+      "sourceImageURL": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/JaxPendantz_Noir.png?v=1780351074",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/noirjax.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/JaxPendantz_Noir.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create ONE individual full-body 2D game action drawing: Jax — Film noir, crouch. Image 1 is the approved character design; preserve its precise monochrome clothing, head, facial traits, anatomy, proportions and crisp cel-shaded ink style. Image 2 is the official costume reference. Identity: Jax the lanky cartoon rabbit in his official Noir outfit. Entirely grayscale. Long slim gray torso and limbs, very tall long gray rabbit ears fully visible. Narrow half-lidded pale-gray eyes with rectangular black pupils, broad toothy smug grin, no nose. White collared short sleeve shirt, long slim black tie, gray suspenders, black long trousers, dark broad rounded shoes and white cartoon gloves. No pink overalls, no purple. Keep tall lanky original proportions from the game style, not plush anatomy.  CHANGE THE POSE to this distinct action: low defensive crouch, both knees deeply bent and both feet planted, compact hunched torso and hands protecting head, whole body visible. The result is an original static combat pose for Encore. Preserve the same character and costume in both references; no color, no new accessories. Two arms and two legs only, white gloves, long dark trousers, dark shoes. Character primarily faces screen right except hit/defeat body reaction. Full entire subject contained from very highest hat/ear/hand tip to lowest foot/base, with safe transparent margins on every edge. True transparent RGBA background with crisp clean silhouette; no gray haze, no halo, NO GLOW, no aura, no floor, no drop shadow, no scenery, no text, no framing, no second person, no attacker, no ghost limbs, no movement trails, no effect graphics. Never a sheet or multi-panel image: only one full-body pose. Native high resolution.",
+      "outputHint": "Generated images are saved to /workspace/scratch/5f5114b49696/generated_images as /workspace/scratch/5f5114b49696/generated_images/exec-888b5d04-f1bc-49ce-8c4e-900b8909e24b.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "createdAt": "2026-11-20T04:34:46.542Z",
+      "visualReview": "Reviewed the complete native source board on 20 November: Tall gray rabbit with two long ears, rectangular pupils and toothy smile; white collared shirt, black tie, suspenders and full dark trousers/shoes remain consistent. Limbs remain long and complete. Slot crouch is distinct and readable. Native alpha composes cleanly on a light background; no visible glow or floor, no cut-off part or extra character. These are original game poses, not episode frames.",
+      "sha256": "bc1541dcd22ee0542ec0b86a1ef209c25e8cb5410a3fe7b1d87a674d4deb4246",
+      "bytes": 842397,
+      "dimensions": [
+        1247,
+        1261
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        139,
+        19,
+        1146,
+        1253
+      ],
+      "visualReviewAt": "2026-11-20T04:48:14.480406+00:00",
+      "visualReviewBoard": "docs/art-generation/cast-continuation-20261120/native-review/noirjax.jpg",
+      "status": "generated-and-visually-reviewed",
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "noirjax-victory",
+      "appearanceId": "noirjax",
+      "slot": "victory",
+      "file": "assets/encore/poses/noirjax/victory.png",
+      "method": "image_gen.imagegen",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-ddb31291-d7d5-4672-83a7-2fc6890b7b5b.png",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/jax-pendantz"
+      ],
+      "sourceImageURL": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/JaxPendantz_Noir.png?v=1780351074",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/noirjax.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/JaxPendantz_Noir.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create ONE individual full-body 2D game action drawing: Jax — Film noir, victory. Image 1 is the approved character design; preserve its precise monochrome clothing, head, facial traits, anatomy, proportions and crisp cel-shaded ink style. Image 2 is the official costume reference. Identity: Jax the lanky cartoon rabbit in his official Noir outfit. Entirely grayscale. Long slim gray torso and limbs, very tall long gray rabbit ears fully visible. Narrow half-lidded pale-gray eyes with rectangular black pupils, broad toothy smug grin, no nose. White collared short sleeve shirt, long slim black tie, gray suspenders, black long trousers, dark broad rounded shoes and white cartoon gloves. No pink overalls, no purple. Keep tall lanky original proportions from the game style, not plush anatomy.  CHANGE THE POSE to this distinct action: a confident victory pose, upright, one fist raised high and other hand on hip, pleased character-specific expression, no props. The result is an original static combat pose for Encore. Preserve the same character and costume in both references; no color, no new accessories. Two arms and two legs only, white gloves, long dark trousers, dark shoes. Character primarily faces screen right except hit/defeat body reaction. Full entire subject contained from very highest hat/ear/hand tip to lowest foot/base, with safe transparent margins on every edge. True transparent RGBA background with crisp clean silhouette; no gray haze, no halo, NO GLOW, no aura, no floor, no drop shadow, no scenery, no text, no framing, no second person, no attacker, no ghost limbs, no movement trails, no effect graphics. Never a sheet or multi-panel image: only one full-body pose. Native high resolution.",
+      "outputHint": "Generated images are saved to /workspace/scratch/5f5114b49696/generated_images as /workspace/scratch/5f5114b49696/generated_images/exec-ddb31291-d7d5-4672-83a7-2fc6890b7b5b.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "createdAt": "2026-11-20T04:35:33.899Z",
+      "visualReview": "Reviewed the complete native source board on 20 November: Tall gray rabbit with two long ears, rectangular pupils and toothy smile; white collared shirt, black tie, suspenders and full dark trousers/shoes remain consistent. Limbs remain long and complete. Slot victory is distinct and readable. Native alpha composes cleanly on a light background; no visible glow or floor, no cut-off part or extra character. These are original game poses, not episode frames.",
+      "sha256": "7513ea41933ea3de4be9b13974136c4ee6fca54e02ff5d5d1f2df4f707417e12",
+      "bytes": 683733,
+      "dimensions": [
+        887,
+        1774
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        184,
+        8,
+        768,
+        1767
+      ],
+      "visualReviewAt": "2026-11-20T04:48:14.483631+00:00",
+      "visualReviewBoard": "docs/art-generation/cast-continuation-20261120/native-review/noirjax.jpg",
+      "status": "generated-and-visually-reviewed",
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "noirjax-defeat",
+      "appearanceId": "noirjax",
+      "slot": "defeat",
+      "file": "assets/encore/poses/noirjax/defeat.png",
+      "method": "image_gen.imagegen",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-2504136e-35ae-44a9-ae85-cb2af9d6ee40.png",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/jax-pendantz"
+      ],
+      "sourceImageURL": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/JaxPendantz_Noir.png?v=1780351074",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/noirjax.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/JaxPendantz_Noir.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create ONE individual full-body 2D game action drawing: Jax — Film noir, defeat. Image 1 is the approved character design; preserve its precise monochrome clothing, head, facial traits, anatomy, proportions and crisp cel-shaded ink style. Image 2 is the official costume reference. Identity: Jax the lanky cartoon rabbit in his official Noir outfit. Entirely grayscale. Long slim gray torso and limbs, very tall long gray rabbit ears fully visible. Narrow half-lidded pale-gray eyes with rectangular black pupils, broad toothy smug grin, no nose. White collared short sleeve shirt, long slim black tie, gray suspenders, black long trousers, dark broad rounded shoes and white cartoon gloves. No pink overalls, no purple. Keep tall lanky original proportions from the game style, not plush anatomy.  CHANGE THE POSE to this distinct action: exhausted defeated pose, sitting low with legs bent in front and arms limp, head tilted down, sad or dazed expression; whole body and both feet visible. The result is an original static combat pose for Encore. Preserve the same character and costume in both references; no color, no new accessories. Two arms and two legs only, white gloves, long dark trousers, dark shoes. Character primarily faces screen right except hit/defeat body reaction. Full entire subject contained from very highest hat/ear/hand tip to lowest foot/base, with safe transparent margins on every edge. True transparent RGBA background with crisp clean silhouette; no gray haze, no halo, NO GLOW, no aura, no floor, no drop shadow, no scenery, no text, no framing, no second person, no attacker, no ghost limbs, no movement trails, no effect graphics. Never a sheet or multi-panel image: only one full-body pose. Native high resolution.",
+      "outputHint": "Generated images are saved to /workspace/scratch/5f5114b49696/generated_images as /workspace/scratch/5f5114b49696/generated_images/exec-2504136e-35ae-44a9-ae85-cb2af9d6ee40.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "createdAt": "2026-11-20T04:37:50.486Z",
+      "visualReview": "Reviewed the complete native source board on 20 November: Tall gray rabbit with two long ears, rectangular pupils and toothy smile; white collared shirt, black tie, suspenders and full dark trousers/shoes remain consistent. Limbs remain long and complete. Slot defeat is distinct and readable. Native alpha composes cleanly on a light background; no visible glow or floor, no cut-off part or extra character. These are original game poses, not episode frames.",
+      "sha256": "3ffa91ad2ebe59d36b0bf9e461a8e4ac1e0bbc5d0af312008ca050c9b2923b3b",
+      "bytes": 847008,
+      "dimensions": [
+        1234,
+        1275
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        100,
+        26,
+        1154,
+        1257
+      ],
+      "visualReviewAt": "2026-11-20T04:48:14.486321+00:00",
+      "visualReviewBoard": "docs/art-generation/cast-continuation-20261120/native-review/noirjax.jpg",
+      "status": "generated-and-visually-reviewed",
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "noirkinger-selection",
+      "appearanceId": "noirkinger",
+      "slot": "selection",
+      "file": "assets/encore/selection/noirkinger.png",
+      "method": "image_gen.imagegen",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-c2c24632-6e50-4614-b1b2-1fb8ae24ace5.png",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/kinger-animiniz-pendantz"
+      ],
+      "sourceImageURL": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_Pendantz_Kinger_Noir.png?v=1773978005",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/Animiniz_Pendantz_Kinger_Noir.png",
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/noirragatha.png",
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/presidentpomni.png"
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: individual full-body selection illustration for the Digital Circus Encore game. Create exactly ONE Kinger in the exact official Noir outfit: entirely grayscale anthropomorphic chess king with narrow gray chess-piece neck and two large protruding white eyeballs with small dark pupils; a gray fedora with dark gray ribbon on top. Torso is one flared conical gray chess-piece body, thick rolled gray collar, three dark round buttons down the front and two light gray suspenders with pale attachment tabs. Flat dark round chess-base at bottom. Two detached floating white cartoon gloves near his sides. No attached arms, NO legs, NO feet, no royal purple cloak, no ermine trim. Hat conceals the top of the chess piece, never put a human face under the hat, no mouth or nose. Selection pose: upright three-quarter toward screen right, eyes mildly alarmed, one floating hand gently touching the hat brim, other hand close to the torso. Match smooth clean 2D cel-shaded game art, not plush texture. Reference image 1 controls this costume's shapes, clothing and monochrome palette; references 2 and 3 control only the crisp clean ink outlines and restrained 2D cel-shaded game style. Keep the original recognizable character anatomy, do not copy the toy's proportions or fabric. True transparent RGBA background. Full entire subject including hat, all ears, hands and all feet/base contained with generous clean transparent padding on every edge. No keychain, metal ring, hanging loop, tag, text, labels, logos, shadows on ground, scenery, floor, frame, extra character, duplicate body, split view, contact sheet, animation sheet, or cropped body. Single centered drawing only. Smooth confident contours, detailed high quality native resolution.",
+      "outputHint": "Generated images are saved to /workspace/scratch/5f5114b49696/generated_images as /workspace/scratch/5f5114b49696/generated_images/exec-c2c24632-6e50-4614-b1b2-1fb8ae24ace5.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "createdAt": "2026-11-20T04:23:42.970Z",
+      "visualReview": "Reviewed the complete native source board on 20 November: Gray chess-piece body, two protruding eyes, fedora, thick collar, three buttons and two light suspenders; exactly two floating white gloves, no legs or attached arms. Tilts and floating hands express each action. Slot selection is distinct and readable. Native alpha composes cleanly on a light background; no visible glow or floor, no cut-off part or extra character. These are original game poses, not episode frames.",
+      "sha256": "34689a3fc4ceaaab8fbff0c59f0680f02aca7d5edcb6cf444c6c5bc40a87d4f1",
+      "bytes": 1405315,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "bboxAlpha12": [
+        119,
+        29,
+        932,
+        1513
+      ],
+      "visualReviewAt": "2026-11-20T04:48:14.490308+00:00",
+      "visualReviewBoard": "docs/art-generation/cast-continuation-20261120/native-review/noirkinger.jpg",
+      "status": "generated-and-visually-reviewed",
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "noirkinger-stance",
+      "appearanceId": "noirkinger",
+      "slot": "stance",
+      "file": "assets/encore/stance/noirkinger.png",
+      "method": "image_gen.imagegen",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-e729aada-f06f-44d9-869e-1d9e23de8e77.png",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/kinger-animiniz-pendantz"
+      ],
+      "sourceImageURL": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_Pendantz_Kinger_Noir.png?v=1773978005",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/noirkinger.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/Animiniz_Pendantz_Kinger_Noir.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create ONE individual full-body 2D game action drawing: Kinger — Film noir, stance. Image 1 is the approved character design; preserve its precise monochrome clothing, head, facial traits, anatomy, proportions and crisp cel-shaded ink style. Image 2 is the official costume reference. Identity: Kinger in the exact official Noir outfit: entirely grayscale anthropomorphic chess king with narrow gray chess-piece neck and two large protruding white eyeballs with small dark pupils; a gray fedora with dark gray ribbon on top. Torso is one flared conical gray chess-piece body, thick rolled gray collar, three dark round buttons down the front and two light gray suspenders with pale attachment tabs. Flat dark round chess-base at bottom. Two detached floating white cartoon gloves near his sides. No attached arms, NO legs, NO feet, no royal purple cloak, no ermine trim. Hat conceals the top of the chess piece, never put a human face under the hat, no mouth or nose.  CHANGE THE POSE to this distinct action: ready stance by a slight forward lean of the whole conical chess body, both detached floating gloves in a raised guard, pupils looking screen right. The result is an original static combat pose for Encore. Preserve the same character and costume in both references; no color, no new accessories. Two detached floating white gloves only. NO human arms, no human legs, knees, feet or shoes. Gray conical chess torso with three buttons and two pale suspenders; wide fedora, two protruding eyes, no mouth, no nose. Character primarily faces screen right except hit/defeat body reaction. Full entire subject contained from very highest hat/ear/hand tip to lowest foot/base, with safe transparent margins on every edge. True transparent RGBA background with crisp clean silhouette; no gray haze, no halo, NO GLOW, no aura, no floor, no drop shadow, no scenery, no text, no framing, no second person, no attacker, no ghost limbs, no movement trails, no effect graphics. Never a sheet or multi-panel image: only one full-body pose. Native high resolution.",
+      "outputHint": "Generated images are saved to /workspace/scratch/5f5114b49696/generated_images as /workspace/scratch/5f5114b49696/generated_images/exec-e729aada-f06f-44d9-869e-1d9e23de8e77.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "createdAt": "2026-11-20T04:27:37.153Z",
+      "visualReview": "Reviewed the complete native source board on 20 November: Gray chess-piece body, two protruding eyes, fedora, thick collar, three buttons and two light suspenders; exactly two floating white gloves, no legs or attached arms. Tilts and floating hands express each action. Slot stance is distinct and readable. Native alpha composes cleanly on a light background; no visible glow or floor, no cut-off part or extra character. These are original game poses, not episode frames.",
+      "sha256": "65d1768a517c63ffdb8f35df4366c01ccb05974b2d89aac3ae59f5456cb81efe",
+      "bytes": 1468320,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "bboxAlpha12": [
+        56,
+        71,
+        939,
+        1501
+      ],
+      "visualReviewAt": "2026-11-20T04:48:14.498931+00:00",
+      "visualReviewBoard": "docs/art-generation/cast-continuation-20261120/native-review/noirkinger.jpg",
+      "status": "generated-and-visually-reviewed",
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "noirkinger-intro",
+      "appearanceId": "noirkinger",
+      "slot": "intro",
+      "file": "assets/encore/poses/noirkinger/intro.png",
+      "method": "image_gen.imagegen",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-27284a70-91b0-475d-8997-93ce4a0d67e3.png",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/kinger-animiniz-pendantz"
+      ],
+      "sourceImageURL": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_Pendantz_Kinger_Noir.png?v=1773978005",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/noirkinger.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/Animiniz_Pendantz_Kinger_Noir.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create ONE individual full-body 2D game action drawing: Kinger — Film noir, intro. Image 1 is the approved character design; preserve its precise monochrome clothing, head, facial traits, anatomy, proportions and crisp cel-shaded ink style. Image 2 is the official costume reference. Identity: Kinger in the exact official Noir outfit: entirely grayscale anthropomorphic chess king with narrow gray chess-piece neck and two large protruding white eyeballs with small dark pupils; a gray fedora with dark gray ribbon on top. Torso is one flared conical gray chess-piece body, thick rolled gray collar, three dark round buttons down the front and two light gray suspenders with pale attachment tabs. Flat dark round chess-base at bottom. Two detached floating white cartoon gloves near his sides. No attached arms, NO legs, NO feet, no royal purple cloak, no ermine trim. Hat conceals the top of the chess piece, never put a human face under the hat, no mouth or nose.  CHANGE THE POSE to this distinct action: upright introduction, one floating hand lifting the hat brim in greeting while the other extends courteously; hat remains on head. The result is an original static combat pose for Encore. Preserve the same character and costume in both references; no color, no new accessories. Two detached floating white gloves only. NO human arms, no human legs, knees, feet or shoes. Gray conical chess torso with three buttons and two pale suspenders; wide fedora, two protruding eyes, no mouth, no nose. Character primarily faces screen right except hit/defeat body reaction. Full entire subject contained from very highest hat/ear/hand tip to lowest foot/base, with safe transparent margins on every edge. True transparent RGBA background with crisp clean silhouette; no gray haze, no halo, NO GLOW, no aura, no floor, no drop shadow, no scenery, no text, no framing, no second person, no attacker, no ghost limbs, no movement trails, no effect graphics. Never a sheet or multi-panel image: only one full-body pose. Native high resolution.",
+      "outputHint": "Generated images are saved to /workspace/scratch/5f5114b49696/generated_images as /workspace/scratch/5f5114b49696/generated_images/exec-27284a70-91b0-475d-8997-93ce4a0d67e3.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "createdAt": "2026-11-20T04:29:27.939Z",
+      "visualReview": "Reviewed the complete native source board on 20 November: Gray chess-piece body, two protruding eyes, fedora, thick collar, three buttons and two light suspenders; exactly two floating white gloves, no legs or attached arms. Tilts and floating hands express each action. Slot intro is distinct and readable. Native alpha composes cleanly on a light background; no visible glow or floor, no cut-off part or extra character. These are original game poses, not episode frames.",
+      "sha256": "20fea1944dd6a3558beabf6ca7d74a9a0ed3ea24f0215e1b170c9a4d05882a72",
+      "bytes": 1486862,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "bboxAlpha12": [
+        35,
+        29,
+        998,
+        1508
+      ],
+      "visualReviewAt": "2026-11-20T04:48:14.505472+00:00",
+      "visualReviewBoard": "docs/art-generation/cast-continuation-20261120/native-review/noirkinger.jpg",
+      "status": "generated-and-visually-reviewed",
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "noirkinger-attack",
+      "appearanceId": "noirkinger",
+      "slot": "attack",
+      "file": "assets/encore/poses/noirkinger/attack.png",
+      "method": "image_gen.imagegen",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-0476f571-46a9-4cfe-986d-980b51e6b4b5.png",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/kinger-animiniz-pendantz"
+      ],
+      "sourceImageURL": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_Pendantz_Kinger_Noir.png?v=1773978005",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/noirkinger.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/Animiniz_Pendantz_Kinger_Noir.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create ONE individual full-body 2D game action drawing: Kinger — Film noir, attack. Image 1 is the approved character design; preserve its precise monochrome clothing, head, facial traits, anatomy, proportions and crisp cel-shaded ink style. Image 2 is the official costume reference. Identity: Kinger in the exact official Noir outfit: entirely grayscale anthropomorphic chess king with narrow gray chess-piece neck and two large protruding white eyeballs with small dark pupils; a gray fedora with dark gray ribbon on top. Torso is one flared conical gray chess-piece body, thick rolled gray collar, three dark round buttons down the front and two light gray suspenders with pale attachment tabs. Flat dark round chess-base at bottom. Two detached floating white cartoon gloves near his sides. No attached arms, NO legs, NO feet, no royal purple cloak, no ermine trim. Hat conceals the top of the chess piece, never put a human face under the hat, no mouth or nose.  CHANGE THE POSE to this distinct action: light attack, one detached glove thrust horizontally toward screen right in a compact punch, other glove guarding near collar, conical chess body leaning slightly forward. The result is an original static combat pose for Encore. Preserve the same character and costume in both references; no color, no new accessories. Two detached floating white gloves only. NO human arms, no human legs, knees, feet or shoes. Gray conical chess torso with three buttons and two pale suspenders; wide fedora, two protruding eyes, no mouth, no nose. Character primarily faces screen right except hit/defeat body reaction. Full entire subject contained from very highest hat/ear/hand tip to lowest foot/base, with safe transparent margins on every edge. True transparent RGBA background with crisp clean silhouette; no gray haze, no halo, NO GLOW, no aura, no floor, no drop shadow, no scenery, no text, no framing, no second person, no attacker, no ghost limbs, no movement trails, no effect graphics. Never a sheet or multi-panel image: only one full-body pose. Native high resolution.",
+      "outputHint": "Generated images are saved to /workspace/scratch/5f5114b49696/generated_images as /workspace/scratch/5f5114b49696/generated_images/exec-0476f571-46a9-4cfe-986d-980b51e6b4b5.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "createdAt": "2026-11-20T04:31:19.158Z",
+      "visualReview": "Reviewed the complete native source board on 20 November: Gray chess-piece body, two protruding eyes, fedora, thick collar, three buttons and two light suspenders; exactly two floating white gloves, no legs or attached arms. Tilts and floating hands express each action. Slot attack is distinct and readable. Native alpha composes cleanly on a light background; no visible glow or floor, no cut-off part or extra character. These are original game poses, not episode frames.",
+      "sha256": "fc1344ce1eaa3188bfa6c68366a2e8a91dd6f4b418dc7a10ef48d9069ac4a007",
+      "bytes": 1468076,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "bboxAlpha12": [
+        49,
+        63,
+        971,
+        1507
+      ],
+      "visualReviewAt": "2026-11-20T04:48:14.511315+00:00",
+      "visualReviewBoard": "docs/art-generation/cast-continuation-20261120/native-review/noirkinger.jpg",
+      "status": "generated-and-visually-reviewed",
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "noirkinger-heavy",
+      "appearanceId": "noirkinger",
+      "slot": "heavy",
+      "file": "assets/encore/poses/noirkinger/heavy.png",
+      "method": "image_gen.imagegen",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-f3df0fdc-7611-46c4-8ed6-760b4d04bbb2.png",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/kinger-animiniz-pendantz"
+      ],
+      "sourceImageURL": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_Pendantz_Kinger_Noir.png?v=1773978005",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/noirkinger.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/Animiniz_Pendantz_Kinger_Noir.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create ONE individual full-body 2D game action drawing: Kinger — Film noir, heavy. Image 1 is the approved character design; preserve its precise monochrome clothing, head, facial traits, anatomy, proportions and crisp cel-shaded ink style. Image 2 is the official costume reference. Identity: Kinger in the exact official Noir outfit: entirely grayscale anthropomorphic chess king with narrow gray chess-piece neck and two large protruding white eyeballs with small dark pupils; a gray fedora with dark gray ribbon on top. Torso is one flared conical gray chess-piece body, thick rolled gray collar, three dark round buttons down the front and two light gray suspenders with pale attachment tabs. Flat dark round chess-base at bottom. Two detached floating white cartoon gloves near his sides. No attached arms, NO legs, NO feet, no royal purple cloak, no ermine trim. Hat conceals the top of the chess piece, never put a human face under the hat, no mouth or nose.  CHANGE THE POSE to this distinct action: heavy attack, both floating gloves pushing hard toward screen right together, whole conical body leaning decisively in that direction; hat stays on, full flat base visible. The result is an original static combat pose for Encore. Preserve the same character and costume in both references; no color, no new accessories. Two detached floating white gloves only. NO human arms, no human legs, knees, feet or shoes. Gray conical chess torso with three buttons and two pale suspenders; wide fedora, two protruding eyes, no mouth, no nose. Character primarily faces screen right except hit/defeat body reaction. Full entire subject contained from very highest hat/ear/hand tip to lowest foot/base, with safe transparent margins on every edge. True transparent RGBA background with crisp clean silhouette; no gray haze, no halo, NO GLOW, no aura, no floor, no drop shadow, no scenery, no text, no framing, no second person, no attacker, no ghost limbs, no movement trails, no effect graphics. Never a sheet or multi-panel image: only one full-body pose. Native high resolution.",
+      "outputHint": "Generated images are saved to /workspace/scratch/5f5114b49696/generated_images as /workspace/scratch/5f5114b49696/generated_images/exec-f3df0fdc-7611-46c4-8ed6-760b4d04bbb2.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "createdAt": "2026-11-20T04:32:02.501Z",
+      "visualReview": "Reviewed the complete native source board on 20 November: Gray chess-piece body, two protruding eyes, fedora, thick collar, three buttons and two light suspenders; exactly two floating white gloves, no legs or attached arms. Tilts and floating hands express each action. Slot heavy is distinct and readable. Native alpha composes cleanly on a light background; no visible glow or floor, no cut-off part or extra character. These are original game poses, not episode frames.",
+      "sha256": "5148f6ffa7deb2d706e0f9fa65c5ba9341a111f525eda65733c6ed830fd9716a",
+      "bytes": 1001632,
+      "dimensions": [
+        1144,
+        1375
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        18,
+        20,
+        1112,
+        1358
+      ],
+      "visualReviewAt": "2026-11-20T04:48:14.514558+00:00",
+      "visualReviewBoard": "docs/art-generation/cast-continuation-20261120/native-review/noirkinger.jpg",
+      "status": "generated-and-visually-reviewed",
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "noirkinger-hit",
+      "appearanceId": "noirkinger",
+      "slot": "hit",
+      "file": "assets/encore/poses/noirkinger/hit.png",
+      "method": "image_gen.imagegen",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-65310557-aa0f-49fb-a759-afc907923a79.png",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/kinger-animiniz-pendantz"
+      ],
+      "sourceImageURL": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_Pendantz_Kinger_Noir.png?v=1773978005",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/noirkinger.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/Animiniz_Pendantz_Kinger_Noir.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create ONE individual full-body 2D game action drawing: Kinger — Film noir, hit. Image 1 is the approved character design; preserve its precise monochrome clothing, head, facial traits, anatomy, proportions and crisp cel-shaded ink style. Image 2 is the official costume reference. Identity: Kinger in the exact official Noir outfit: entirely grayscale anthropomorphic chess king with narrow gray chess-piece neck and two large protruding white eyeballs with small dark pupils; a gray fedora with dark gray ribbon on top. Torso is one flared conical gray chess-piece body, thick rolled gray collar, three dark round buttons down the front and two light gray suspenders with pale attachment tabs. Flat dark round chess-base at bottom. Two detached floating white cartoon gloves near his sides. No attached arms, NO legs, NO feet, no royal purple cloak, no ermine trim. Hat conceals the top of the chess piece, never put a human face under the hat, no mouth or nose.  CHANGE THE POSE to this distinct action: hit reaction, whole conical chess body tilted back toward screen left with alarmed eyes, both floating gloves raised, fedora still on head; entire base visible. The result is an original static combat pose for Encore. Preserve the same character and costume in both references; no color, no new accessories. Two detached floating white gloves only. NO human arms, no human legs, knees, feet or shoes. Gray conical chess torso with three buttons and two pale suspenders; wide fedora, two protruding eyes, no mouth, no nose. Character primarily faces screen right except hit/defeat body reaction. Full entire subject contained from very highest hat/ear/hand tip to lowest foot/base, with safe transparent margins on every edge. True transparent RGBA background with crisp clean silhouette; no gray haze, no halo, NO GLOW, no aura, no floor, no drop shadow, no scenery, no text, no framing, no second person, no attacker, no ghost limbs, no movement trails, no effect graphics. Never a sheet or multi-panel image: only one full-body pose. Native high resolution.",
+      "outputHint": "Generated images are saved to /workspace/scratch/5f5114b49696/generated_images as /workspace/scratch/5f5114b49696/generated_images/exec-65310557-aa0f-49fb-a759-afc907923a79.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "createdAt": "2026-11-20T04:33:58.619Z",
+      "visualReview": "Reviewed the complete native source board on 20 November: Gray chess-piece body, two protruding eyes, fedora, thick collar, three buttons and two light suspenders; exactly two floating white gloves, no legs or attached arms. Tilts and floating hands express each action. Slot hit is distinct and readable. Native alpha composes cleanly on a light background; no visible glow or floor, no cut-off part or extra character. These are original game poses, not episode frames.",
+      "sha256": "aa33ce929da344bf12a2d4e7c8744b19e7cffc6d09855db0a3ec624538c42c6e",
+      "bytes": 1076465,
+      "dimensions": [
+        1124,
+        1399
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        24,
+        59,
+        1043,
+        1375
+      ],
+      "visualReviewAt": "2026-11-20T04:48:14.516788+00:00",
+      "visualReviewBoard": "docs/art-generation/cast-continuation-20261120/native-review/noirkinger.jpg",
+      "status": "generated-and-visually-reviewed",
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "noirkinger-walk",
+      "appearanceId": "noirkinger",
+      "slot": "walk",
+      "file": "assets/encore/poses/noirkinger/walk.png",
+      "method": "image_gen.imagegen",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-3fd83286-464d-4b83-9e1a-0c68d8f79ad6.png",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/kinger-animiniz-pendantz"
+      ],
+      "sourceImageURL": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_Pendantz_Kinger_Noir.png?v=1773978005",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/noirkinger.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/Animiniz_Pendantz_Kinger_Noir.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create ONE individual full-body 2D game action drawing: Kinger — Film noir, walk. Image 1 is the approved character design; preserve its precise monochrome clothing, head, facial traits, anatomy, proportions and crisp cel-shaded ink style. Image 2 is the official costume reference. Identity: Kinger in the exact official Noir outfit: entirely grayscale anthropomorphic chess king with narrow gray chess-piece neck and two large protruding white eyeballs with small dark pupils; a gray fedora with dark gray ribbon on top. Torso is one flared conical gray chess-piece body, thick rolled gray collar, three dark round buttons down the front and two light gray suspenders with pale attachment tabs. Flat dark round chess-base at bottom. Two detached floating white cartoon gloves near his sides. No attached arms, NO legs, NO feet, no royal purple cloak, no ermine trim. Hat conceals the top of the chess piece, never put a human face under the hat, no mouth or nose.  CHANGE THE POSE to this distinct action: a gliding chess-piece step toward screen right, whole body tilted slightly forward, one floating glove leading and the other behind, base rocking slightly; no walking legs. The result is an original static combat pose for Encore. Preserve the same character and costume in both references; no color, no new accessories. Two detached floating white gloves only. NO human arms, no human legs, knees, feet or shoes. Gray conical chess torso with three buttons and two pale suspenders; wide fedora, two protruding eyes, no mouth, no nose. Character primarily faces screen right except hit/defeat body reaction. Full entire subject contained from very highest hat/ear/hand tip to lowest foot/base, with safe transparent margins on every edge. True transparent RGBA background with crisp clean silhouette; no gray haze, no halo, NO GLOW, no aura, no floor, no drop shadow, no scenery, no text, no framing, no second person, no attacker, no ghost limbs, no movement trails, no effect graphics. Never a sheet or multi-panel image: only one full-body pose. Native high resolution.",
+      "outputHint": "Generated images are saved to /workspace/scratch/5f5114b49696/generated_images as /workspace/scratch/5f5114b49696/generated_images/exec-3fd83286-464d-4b83-9e1a-0c68d8f79ad6.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "createdAt": "2026-11-20T04:36:59.923Z",
+      "visualReview": "Reviewed the complete native source board on 20 November: Gray chess-piece body, two protruding eyes, fedora, thick collar, three buttons and two light suspenders; exactly two floating white gloves, no legs or attached arms. Tilts and floating hands express each action. Slot walk is distinct and readable. Native alpha composes cleanly on a light background; no visible glow or floor, no cut-off part or extra character. These are original game poses, not episode frames.",
+      "sha256": "9c89ce40d501110eb0e5c7cdbbc59bad85400e44752ef4e5061298baa1135edf",
+      "bytes": 1429608,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "bboxAlpha12": [
+        75,
+        71,
+        953,
+        1490
+      ],
+      "visualReviewAt": "2026-11-20T04:48:14.521331+00:00",
+      "visualReviewBoard": "docs/art-generation/cast-continuation-20261120/native-review/noirkinger.jpg",
+      "status": "generated-and-visually-reviewed",
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "noirkinger-jump",
+      "appearanceId": "noirkinger",
+      "slot": "jump",
+      "file": "assets/encore/poses/noirkinger/jump.png",
+      "method": "image_gen.imagegen",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-4071d3e3-afd9-4d09-8a9c-197b013704e2.png",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/kinger-animiniz-pendantz"
+      ],
+      "sourceImageURL": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_Pendantz_Kinger_Noir.png?v=1773978005",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/noirkinger.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/Animiniz_Pendantz_Kinger_Noir.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create ONE individual full-body 2D game action drawing: Kinger — Film noir, jump. Image 1 is the approved character design; preserve its precise monochrome clothing, head, facial traits, anatomy, proportions and crisp cel-shaded ink style. Image 2 is the official costume reference. Identity: Kinger in the exact official Noir outfit: entirely grayscale anthropomorphic chess king with narrow gray chess-piece neck and two large protruding white eyeballs with small dark pupils; a gray fedora with dark gray ribbon on top. Torso is one flared conical gray chess-piece body, thick rolled gray collar, three dark round buttons down the front and two light gray suspenders with pale attachment tabs. Flat dark round chess-base at bottom. Two detached floating white cartoon gloves near his sides. No attached arms, NO legs, NO feet, no royal purple cloak, no ermine trim. Hat conceals the top of the chess piece, never put a human face under the hat, no mouth or nose.  CHANGE THE POSE to this distinct action: an airborne hop of the entire intact chess piece, body tilts slightly, both detached hands spread to balance, hat stays on; no legs or feet, no shadow or motion streaks. The result is an original static combat pose for Encore. Preserve the same character and costume in both references; no color, no new accessories. Two detached floating white gloves only. NO human arms, no human legs, knees, feet or shoes. Gray conical chess torso with three buttons and two pale suspenders; wide fedora, two protruding eyes, no mouth, no nose. Character primarily faces screen right except hit/defeat body reaction. Full entire subject contained from very highest hat/ear/hand tip to lowest foot/base, with safe transparent margins on every edge. True transparent RGBA background with crisp clean silhouette; no gray haze, no halo, NO GLOW, no aura, no floor, no drop shadow, no scenery, no text, no framing, no second person, no attacker, no ghost limbs, no movement trails, no effect graphics. Never a sheet or multi-panel image: only one full-body pose. Native high resolution.",
+      "outputHint": "Generated images are saved to /workspace/scratch/5f5114b49696/generated_images as /workspace/scratch/5f5114b49696/generated_images/exec-4071d3e3-afd9-4d09-8a9c-197b013704e2.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "createdAt": "2026-11-20T04:38:37.421Z",
+      "visualReview": "Reviewed the complete native source board on 20 November: Gray chess-piece body, two protruding eyes, fedora, thick collar, three buttons and two light suspenders; exactly two floating white gloves, no legs or attached arms. Tilts and floating hands express each action. Slot jump is distinct and readable. Native alpha composes cleanly on a light background; no visible glow or floor, no cut-off part or extra character. These are original game poses, not episode frames.",
+      "sha256": "4b4bd5a4c204f7a878fc7f67d6d9322e92ded09ad920af6c8dc44e6b0486e8b5",
+      "bytes": 953478,
+      "dimensions": [
+        1106,
+        1422
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        43,
+        29,
+        1071,
+        1393
+      ],
+      "visualReviewAt": "2026-11-20T04:48:14.527756+00:00",
+      "visualReviewBoard": "docs/art-generation/cast-continuation-20261120/native-review/noirkinger.jpg",
+      "status": "generated-and-visually-reviewed",
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "noirkinger-crouch",
+      "appearanceId": "noirkinger",
+      "slot": "crouch",
+      "file": "assets/encore/poses/noirkinger/crouch.png",
+      "method": "image_gen.imagegen",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-86fb93b9-50ce-4939-ae37-851249e32a03.png",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/kinger-animiniz-pendantz"
+      ],
+      "sourceImageURL": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_Pendantz_Kinger_Noir.png?v=1773978005",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/noirkinger.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/Animiniz_Pendantz_Kinger_Noir.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create ONE individual full-body 2D game action drawing: Kinger — Film noir, crouch. Image 1 is the approved character design; preserve its precise monochrome clothing, head, facial traits, anatomy, proportions and crisp cel-shaded ink style. Image 2 is the official costume reference. Identity: Kinger in the exact official Noir outfit: entirely grayscale anthropomorphic chess king with narrow gray chess-piece neck and two large protruding white eyeballs with small dark pupils; a gray fedora with dark gray ribbon on top. Torso is one flared conical gray chess-piece body, thick rolled gray collar, three dark round buttons down the front and two light gray suspenders with pale attachment tabs. Flat dark round chess-base at bottom. Two detached floating white cartoon gloves near his sides. No attached arms, NO legs, NO feet, no royal purple cloak, no ermine trim. Hat conceals the top of the chess piece, never put a human face under the hat, no mouth or nose.  CHANGE THE POSE to this distinct action: low defensive pose: conical body tilts to one side, head ducks toward collar beneath fedora, both floating gloves guarding the face; body remains intact without knees or limbs. The result is an original static combat pose for Encore. Preserve the same character and costume in both references; no color, no new accessories. Two detached floating white gloves only. NO human arms, no human legs, knees, feet or shoes. Gray conical chess torso with three buttons and two pale suspenders; wide fedora, two protruding eyes, no mouth, no nose. Character primarily faces screen right except hit/defeat body reaction. Full entire subject contained from very highest hat/ear/hand tip to lowest foot/base, with safe transparent margins on every edge. True transparent RGBA background with crisp clean silhouette; no gray haze, no halo, NO GLOW, no aura, no floor, no drop shadow, no scenery, no text, no framing, no second person, no attacker, no ghost limbs, no movement trails, no effect graphics. Never a sheet or multi-panel image: only one full-body pose. Native high resolution.",
+      "outputHint": "Generated images are saved to /workspace/scratch/5f5114b49696/generated_images as /workspace/scratch/5f5114b49696/generated_images/exec-86fb93b9-50ce-4939-ae37-851249e32a03.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "createdAt": "2026-11-20T04:40:04.795Z",
+      "visualReview": "Reviewed the complete native source board on 20 November: Gray chess-piece body, two protruding eyes, fedora, thick collar, three buttons and two light suspenders; exactly two floating white gloves, no legs or attached arms. Tilts and floating hands express each action. Slot crouch is distinct and readable. Native alpha composes cleanly on a light background; no visible glow or floor, no cut-off part or extra character. These are original game poses, not episode frames.",
+      "sha256": "8f921c26cf42ff081c0c43a548462f963fa4f2c0094891a6dc2273453792fd2d",
+      "bytes": 1031841,
+      "dimensions": [
+        1312,
+        1199
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "bboxAlpha12": [
+        116,
+        11,
+        1209,
+        1191
+      ],
+      "visualReviewAt": "2026-11-20T04:48:14.529923+00:00",
+      "visualReviewBoard": "docs/art-generation/cast-continuation-20261120/native-review/noirkinger.jpg",
+      "status": "generated-and-visually-reviewed",
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "noirkinger-victory",
+      "appearanceId": "noirkinger",
+      "slot": "victory",
+      "file": "assets/encore/poses/noirkinger/victory.png",
+      "method": "image_gen.imagegen",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-bb5ec1da-7e18-45e2-9ffb-ef9061d9ac53.png",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/kinger-animiniz-pendantz"
+      ],
+      "sourceImageURL": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_Pendantz_Kinger_Noir.png?v=1773978005",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/noirkinger.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/Animiniz_Pendantz_Kinger_Noir.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create ONE individual full-body 2D game action drawing: Kinger — Film noir, victory. Image 1 is the approved character design; preserve its precise monochrome clothing, head, facial traits, anatomy, proportions and crisp cel-shaded ink style. Image 2 is the official costume reference. Identity: Kinger in the exact official Noir outfit: entirely grayscale anthropomorphic chess king with narrow gray chess-piece neck and two large protruding white eyeballs with small dark pupils; a gray fedora with dark gray ribbon on top. Torso is one flared conical gray chess-piece body, thick rolled gray collar, three dark round buttons down the front and two light gray suspenders with pale attachment tabs. Flat dark round chess-base at bottom. Two detached floating white cartoon gloves near his sides. No attached arms, NO legs, NO feet, no royal purple cloak, no ermine trim. Hat conceals the top of the chess piece, never put a human face under the hat, no mouth or nose.  CHANGE THE POSE to this distinct action: celebratory upright pose, both detached white gloves raised, wide delighted eyes, fedora worn, complete gray conical chess base visible. The result is an original static combat pose for Encore. Preserve the same character and costume in both references; no color, no new accessories. Two detached floating white gloves only. NO human arms, no human legs, knees, feet or shoes. Gray conical chess torso with three buttons and two pale suspenders; wide fedora, two protruding eyes, no mouth, no nose. Character primarily faces screen right except hit/defeat body reaction. Full entire subject contained from very highest hat/ear/hand tip to lowest foot/base, with safe transparent margins on every edge. True transparent RGBA background with crisp clean silhouette; no gray haze, no halo, NO GLOW, no aura, no floor, no drop shadow, no scenery, no text, no framing, no second person, no attacker, no ghost limbs, no movement trails, no effect graphics. Never a sheet or multi-panel image: only one full-body pose. Native high resolution.",
+      "outputHint": "Generated images are saved to /workspace/scratch/5f5114b49696/generated_images as /workspace/scratch/5f5114b49696/generated_images/exec-bb5ec1da-7e18-45e2-9ffb-ef9061d9ac53.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "createdAt": "2026-11-20T04:44:01.223Z",
+      "visualReview": "Reviewed the complete native source board on 20 November: Gray chess-piece body, two protruding eyes, fedora, thick collar, three buttons and two light suspenders; exactly two floating white gloves, no legs or attached arms. Tilts and floating hands express each action. Slot victory is distinct and readable. Native alpha composes cleanly on a light background; no visible glow or floor, no cut-off part or extra character. These are original game poses, not episode frames.",
+      "sha256": "0f97fcf5ffe8161465d5eaa1952abb7ecaa57577783bef4b85fedaa7959058e1",
+      "bytes": 1451994,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "bboxAlpha12": [
+        36,
+        24,
+        989,
+        1523
+      ],
+      "visualReviewAt": "2026-11-20T04:48:14.533904+00:00",
+      "visualReviewBoard": "docs/art-generation/cast-continuation-20261120/native-review/noirkinger.jpg",
+      "status": "generated-and-visually-reviewed",
+      "nativeCopyVerified": true
+    },
+    {
+      "id": "noirkinger-defeat",
+      "appearanceId": "noirkinger",
+      "slot": "defeat",
+      "file": "assets/encore/poses/noirkinger/defeat.png",
+      "method": "image_gen.imagegen",
+      "nativeSource": "/workspace/scratch/5f5114b49696/generated_images/exec-ee289c7a-a164-4c77-b84e-5930db4c5bac.png",
+      "sourceURLs": [
+        "https://glitchproductions.store/products/kinger-animiniz-pendantz"
+      ],
+      "sourceImageURL": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_Pendantz_Kinger_Noir.png?v=1773978005",
+      "referencePaths": [
+        "/workspace/scratch/5f5114b49696/CainOS/assets/encore/selection/noirkinger.png",
+        "/workspace/scratch/5f5114b49696/research/continuation-20261120/Animiniz_Pendantz_Kinger_Noir.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create ONE individual full-body 2D game action drawing: Kinger — Film noir, defeat. Image 1 is the approved character design; preserve its precise monochrome clothing, head, facial traits, anatomy, proportions and crisp cel-shaded ink style. Image 2 is the official costume reference. Identity: Kinger in the exact official Noir outfit: entirely grayscale anthropomorphic chess king with narrow gray chess-piece neck and two large protruding white eyeballs with small dark pupils; a gray fedora with dark gray ribbon on top. Torso is one flared conical gray chess-piece body, thick rolled gray collar, three dark round buttons down the front and two light gray suspenders with pale attachment tabs. Flat dark round chess-base at bottom. Two detached floating white cartoon gloves near his sides. No attached arms, NO legs, NO feet, no royal purple cloak, no ermine trim. Hat conceals the top of the chess piece, never put a human face under the hat, no mouth or nose.  CHANGE THE POSE to this distinct action: slumped defeat pose, full chess piece tilted far toward screen left in a diagonal, eyes dazed, both floating hands hang down, fedora stays on; preserve conical body and full base, no human anatomy. The result is an original static combat pose for Encore. Preserve the same character and costume in both references; no color, no new accessories. Two detached floating white gloves only. NO human arms, no human legs, knees, feet or shoes. Gray conical chess torso with three buttons and two pale suspenders; wide fedora, two protruding eyes, no mouth, no nose. Character primarily faces screen right except hit/defeat body reaction. Full entire subject contained from very highest hat/ear/hand tip to lowest foot/base, with safe transparent margins on every edge. True transparent RGBA background with crisp clean silhouette; no gray haze, no halo, NO GLOW, no aura, no floor, no drop shadow, no scenery, no text, no framing, no second person, no attacker, no ghost limbs, no movement trails, no effect graphics. Never a sheet or multi-panel image: only one full-body pose. Native high resolution.",
+      "outputHint": "Generated images are saved to /workspace/scratch/5f5114b49696/generated_images as /workspace/scratch/5f5114b49696/generated_images/exec-ee289c7a-a164-4c77-b84e-5930db4c5bac.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "createdAt": "2026-11-20T04:44:28.448Z",
+      "visualReview": "Reviewed the complete native source board on 20 November: Gray chess-piece body, two protruding eyes, fedora, thick collar, three buttons and two light suspenders; exactly two floating white gloves, no legs or attached arms. Tilts and floating hands express each action. Slot defeat is distinct and readable. Native alpha composes cleanly on a light background; no visible glow or floor, no cut-off part or extra character. These are original game poses, not episode frames.",
+      "sha256": "fc72cc116b468125a99e0220959e6607ca1dd8942ad4ba84e6994fc3e6822dd7",
+      "bytes": 1455543,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "bboxAlpha12": [
+        27,
+        129,
+        961,
+        1479
+      ],
+      "visualReviewAt": "2026-11-20T04:48:14.540928+00:00",
+      "visualReviewBoard": "docs/art-generation/cast-continuation-20261120/native-review/noirkinger.jpg",
+      "status": "generated-and-visually-reviewed",
+      "nativeCopyVerified": true
+    }
+  ]
+}

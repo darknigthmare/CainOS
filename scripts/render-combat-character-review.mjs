@@ -33,6 +33,13 @@ const args = process.argv.slice(2), at = args.indexOf('--output');
 const output = path.resolve(at < 0 ? 'audit-combat/character-review-2026-11-19' : args[at + 1]);
 const partial = args.includes('--available-only');
 const additionsOnly = args.includes('--costume-additions');
+const introducedAt = args.indexOf('--introduced-on');
+const introducedOn = introducedAt < 0 ? null : args[introducedAt + 1];
+assert(introducedAt < 0 || additionsOnly, '--introduced-on requires --costume-additions');
+assert(introducedAt < 0 || (typeof introducedOn === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(introducedOn)), 'Expected an ISO introduction date after --introduced-on');
+const additions = COSTUME_ADDITIONS.filter(item => !introducedOn || item.introducedOn === introducedOn);
+assert(!introducedOn || additions.length, 'No appearances introduced on ' + introducedOn);
+const reportDate = introducedOn || new Date().toISOString().slice(0, 10);
 await fs.mkdir(output, { recursive: true });
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 const published = new Set(ART_FILES);
@@ -42,8 +49,8 @@ const report = { schema: 'encore-character-canvas-review/v1', createdAt: new Dat
   limitations: ['No browser, DOM, input, audio, service-worker or physical-device test.',
     'Individual static poses do not establish frame-by-frame animation.',
     'Asset identity/proportion fidelity requires separate visual review; no canonical 1:1 certification.'],
-  partial, additionsOnly, sources: {}, actions: [], stances: [], portraits: [], missing: [], sheets: [], browserTestStatus: 'not_executed' };
-for (const file of ['combat/data.mjs','combat/costume-additions.mjs','combat/illustrations.mjs','combat/render.mjs','combat/render-poses.mjs','combat/offline-manifest.mjs','scripts/render-combat-character-review.mjs']) {
+  partial, additionsOnly, introducedOn, sources: {}, actions: [], stances: [], portraits: [], missing: [], sheets: [], browserTestStatus: 'not_executed' };
+for (const file of ['combat/data.mjs','combat/costume-additions.mjs','combat/costume-continuation-20261120.mjs','combat/illustrations.mjs','combat/render.mjs','combat/render-poses.mjs','combat/offline-manifest.mjs','scripts/render-combat-character-review.mjs']) {
   report.sources[file] = sha(await fs.readFile(path.join(repo, file)));
 }
 function background(ctx, width, height) {
@@ -52,7 +59,7 @@ function background(ctx, width, height) {
     if ((x / 24 + y / 24) % 2) { ctx.fillStyle = '#30394d'; ctx.fillRect(x, y, 24, 24); }
   }
 }
-const appearances = [...(additionsOnly ? [] : FIGHTERS.map(f => ({ id: f.id, name: f.name, f }))), ...(additionsOnly ? COSTUME_ADDITIONS : [...VARIANTS, ...COSTUME_ADDITIONS]).map(v => {
+const appearances = [...(additionsOnly ? [] : FIGHTERS.map(f => ({ id: f.id, name: f.name, f }))), ...(additionsOnly ? additions : [...VARIANTS, ...additions]).map(v => {
   const base = FIGHTERS.find(f => f.id === v.baseFighterId);
   return { id: v.id, name: v.name || v.label || v.id, f: { ...base, costume: v.id, sprite: v.sprite,
     visual: { ...base.visual, ...v.visual }, animation: v.animation || null } };
@@ -131,7 +138,7 @@ for (const { id, f } of appearances) {
 const portraits = (additionsOnly ? [] : ARCHIVE).flatMap(item => {
   const parts = archiveSelectionParts(item.id);
   return parts.length ? parts.map(part => ({ ...item, id: part.id, name: part.label, archiveId: item.id })) : [{ ...item, archiveId: item.id }];
-}).concat(COSTUME_ADDITIONS.map(item => ({ ...equipCostume(FIGHTERS.find(f => f.id === item.fighterId), item.id), id: item.id, archiveId: null })));
+}).concat(additions.map(item => ({ ...equipCostume(FIGHTERS.find(f => f.id === item.fighterId), item.id), id: item.id, archiveId: null })));
 for (let offset = 0; offset < portraits.length; offset += 24) {
   const rows = Math.ceil(Math.min(24, portraits.length - offset) / 6);
   const sheet = createCanvas(1440, rows * 284), sc = sheet.getContext('2d'); background(sc, sheet.width, sheet.height);
@@ -161,9 +168,9 @@ const table = items => ['| Apparence | Actions rendues | Planche |', '| --- | --
     return `| ${item.name} | ${count}/9 | ${count ? `[${item.id}](actions-${item.id}.jpg)` : 'Non publiée'} |`;
   })].join('\n');
 const reportLink = path.relative(output, path.join(repo, 'docs', additionsOnly
-  ? 'COMBAT_CAST_CONTINUATION_2026-11-19.md' : 'COMBAT_CHARACTER_COMPLETION_2026-11-19.md')).split(path.sep).join('/');
+  ? `COMBAT_CAST_CONTINUATION_${reportDate}.md` : 'COMBAT_CHARACTER_COMPLETION_2026-11-19.md')).split(path.sep).join('/');
 const gallery = [
-  '# Personnages d’Encore — galerie du 19 novembre 2026', '',
+  '# Personnages d’Encore — galerie du ' + reportDate, '',
   `${report.counts.actions} actions statiques de ${appearances.length} apparences et ${report.counts.portraits} portraits individuels ont été rendus avec les modules Canvas du jeu.`, '',
   'Chaque planche rassemble des fichiers individuels pour faciliter la revue. Les fichiers de jeu restent séparés. Ce rendu Node/Skia ne constitue pas un parcours navigateur, une animation image par image ou une certification canonique.', '',
   '[Rapport des sources et contrôles](character-canvas-review.json) · [Bilan de la passe](' + reportLink + ')', '',
