@@ -23,11 +23,11 @@ const appearanceWaves = {
     'showtimepomni', 'bowlingpinragatha', 'ringmastercaine', 'strongmanorbsman',
     'stagehandbubble', 'bugtamerkinger', 'animeribbit', 'jaxsuitribbit',
     'watermelongangle', 'aquablasterpomni', 'ptocaine', 'freakjax', 'caferibbit',
-    'cafekinger', 'cafepomni'],
+    'cafekinger', 'cafepomni', 'caferagatha', 'cafegangle', 'cafezooble'],
 };
 
 test('additional outfits retain their owner, authored kit and saved appearance through replay and campaign round trips', () => {
-  assert.equal(COSTUME_ADDITIONS.length, 42);
+  assert.equal(COSTUME_ADDITIONS.length, 45);
   assert.equal(VARIANTS.length, 51, 'historical atlas remains stable');
   for (const [date, ids] of Object.entries(appearanceWaves)) {
     assert.deepEqual(COSTUME_ADDITIONS.filter(outfit => outfit.introducedOn === date).map(outfit => outfit.id), ids,
@@ -65,7 +65,7 @@ test('additional outfits retain their owner, authored kit and saved appearance t
         assert.equal(url.hostname, 'www.youtube.com');
         assert.equal(url.pathname, '/watch');
         assert.ok(url.searchParams.get('v'), 'episode sources identify the official video');
-      } else if (['caferibbit', 'cafekinger', 'cafepomni'].includes(outfit.id)) {
+      } else if (['caferibbit', 'cafekinger', 'cafepomni', 'caferagatha', 'cafegangle', 'cafezooble'].includes(outfit.id)) {
         assert.equal(source.kind, 'Illustration officielle de collaboration commerciale');
         assert.equal(url.hostname, 'prtimes.jp');
         assert.equal(url.pathname, '/main/html/rd/p/000008857.000016756.html');
@@ -93,7 +93,24 @@ test('each additional outfit ships all eleven independent native-alpha PNG drawi
       signatures.add(createHash('sha256').update(bytes).digest('hex'));
     }
   }
-  assert.equal(signatures.size, 462, 'all 42 appearances have eleven independent drawings');
+  assert.equal(signatures.size, 495, 'all 45 appearances have eleven independent drawings');
+});
+
+test('Cafe Ragatha, Gangle and Zooble append after the unchanged 477-costume checkpoint', () => {
+  const hash = bytes => createHash('sha256').update(bytes).digest('hex');
+  const baselineBytes = readFileSync(new URL('../docs/art-generation/continuation-20261120-c/baseline.json', import.meta.url));
+  assert.equal(hash(baselineBytes), '2493bf0950134d03a63a6ab925c773fd97ecce20860a3ff5954c32a44d442387',
+    'preserve the independently captured pre-Cafe-C checkpoint');
+  const baseline = JSON.parse(baselineBytes);
+  const additions = ['caferagatha', 'cafegangle', 'cafezooble'];
+  assert.equal(baseline.costumeCount, 477);
+  assert.deepEqual(COSTUMES.slice(0, 477).map(outfit => outfit.id), baseline.costumeIds);
+  assert.equal(hash(JSON.stringify(COSTUMES.slice(0, 477))), baseline.costumesSHA256);
+  assert.deepEqual(COSTUME_ADDITIONS.slice(0, 42).map(outfit => outfit.id), baseline.circusAdditionIds);
+  assert.deepEqual(COSTUME_EXTENSION_ORDER.slice(0, 48), baseline.publishedExtensionIds);
+  assert.deepEqual(COSTUMES.slice(477, 480).map(outfit => outfit.id), additions);
+  assert.deepEqual(COSTUME_ADDITIONS.slice(42, 45).map(outfit => outfit.id), additions);
+  assert.deepEqual(COSTUME_EXTENSION_ORDER.slice(48, 51), additions);
 });
 
 test('resumed appearances append the frozen checkpoint definitions without changing the first fourteen entries', () => {

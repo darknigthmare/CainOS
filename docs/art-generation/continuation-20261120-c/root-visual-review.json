@@ -1,0 +1,47 @@
+{
+  "schema": "encore-cafe-c-root-visual-review/v1",
+  "createdAt": "2026-11-20T19:42:35.650069+00:00",
+  "reviewer": "root",
+  "status": "accepted_with_stated_scope",
+  "reviewedArtifacts": [
+    {
+      "file": "docs/art-generation/continuation-20261120-c/canvas/scenes/scenes-overview.jpg",
+      "sha256": "b5e8236239c7ec9ef035baba1cb0265eb465a1ca59c2f7b7fe9592f5571b7f6f"
+    },
+    {
+      "file": "docs/art-generation/continuation-20261120-c/canvas/caferagatha/actions-caferagatha.jpg",
+      "sha256": "28ebe325cb4becc55d4686b78ac5ca9652baafdd1a3c210d077829208c6b528c"
+    },
+    {
+      "file": "docs/art-generation/continuation-20261120-c/canvas/caferagatha/archive-portraits-01.jpg",
+      "sha256": "05e8cc92caef1683063f16ce226087941293f7987dcad40321cff08e380f491b"
+    },
+    {
+      "file": "docs/art-generation/continuation-20261120-c/canvas/cafegangle/actions-cafegangle.jpg",
+      "sha256": "3d2e422abe6740491fe7af0d7367d388a4222b4a242f642de83e4be0a3d6332c"
+    },
+    {
+      "file": "docs/art-generation/continuation-20261120-c/canvas/cafegangle/archive-portraits-01.jpg",
+      "sha256": "3ac76f05add09993786163e927288ee67e80e0279f0a66dd6bfd0bc5cf3c3cc8"
+    },
+    {
+      "file": "docs/art-generation/continuation-20261120-c/canvas/cafezooble/actions-cafezooble.jpg",
+      "sha256": "3565fba13e58aa69ec415b6d80c6eb79de9db4e61a61202f962028714331bcc3"
+    },
+    {
+      "file": "docs/art-generation/continuation-20261120-c/canvas/cafezooble/archive-portraits-01.jpg",
+      "sha256": "475eb0b75e1a25f4d13bdbb48c4403a8b20e0d60010ed11e93c6e5997de3526e"
+    }
+  ],
+  "observations": [
+    "Les trois planches d’actions et les trois portraits du renderer ont été examinés. Les coiffes, mains, antennes et deux terminaisons des pieds restent dans le cadre.",
+    "Les trois scènes montrent les familles dans les deux orientations au fil des couples. Les vêtements clairs, les rubans rouges et les membres asymétriques restent lisibles sur les décors de production.",
+    "Les arcs de frappe et les ombres visibles viennent du renderer ; ils ne sont pas intégrés aux PNG natifs.",
+    "Les différences propres aux trois tenues Café sont conservées : nœuds et plateformes de Ragatha, masque/coiffe/rubans et mains gris lilas de Gangle, gilet violet/tablier/membres asymétriques de Zooble."
+  ],
+  "limits": [
+    "Revue visuelle de rendus statiques de production, sans parcours navigateur réussi.",
+    "Les gestes, arrière des vêtements et détails masqués restent des adaptations ; aucune certification canonique 1:1.",
+    "Onze dessins individuels par famille ne constituent pas des cycles d’animation complets."
+  ]
+}

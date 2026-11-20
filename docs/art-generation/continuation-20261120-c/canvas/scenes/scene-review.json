@@ -1,0 +1,149 @@
+{
+  "schema": "encore-cafe-c-scene-review/v1",
+  "createdAt": "2026-11-20T19:39:37.312Z",
+  "method": "Production CombatEngine, CombatRenderer and image/parallax loaders executed by Node + native Skia.",
+  "browserTestStatus": "not_executed",
+  "sources": {
+    "combat/data.mjs": "3e8933c915c92380fe0c0a1d7342f67fb3d947dead8ba05749ac7139773c9a58",
+    "combat/costume-continuation-20261120-c.mjs": "ac5a20f76a4e75a170af9e4cf8b0d84396e9cfc5e6d93e65722c9119090b50d2",
+    "combat/render.mjs": "0fd83aaa999edab666be0a7b4538338b57ec33cb2f90e041da18a47c7de87347",
+    "combat/engine.mjs": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
+    "combat/illustrations.mjs": "26aca8338be81bedbbbc1bb4bc59dd0aae8b7b7ef4d785cbbf353ac109c53b99",
+    "combat/stage-parallax.mjs": "1e01fa0b4932f0e670bb6fa746c48b57de0c726a5637891e68427a161aecc77d",
+    "combat/offline-manifest.mjs": "c01a7b6ce1ac3335b4442bade97e75b435e65b5c8f30fda9c400a4e682a1f1c0",
+    "docs/art-generation/continuation-20261120-c/canvas/review-cafe-scenes.mjs": "7d20d5c41e920c3aa106559c0197c42969bfc57d1533fd3f26ce7e92aca5a256"
+  },
+  "scenes": [
+    {
+      "stage": "softballfield",
+      "file": "docs/art-generation/continuation-20261120-c/canvas/scenes/scene-softballfield.png",
+      "sha256": "f6e727d2bad69e2034d8db086baccddf8ac822558f7d5d800dc1601f5280b61d",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "nativeStagePlanes": 3,
+      "preload": true,
+      "simulationUnchanged": true,
+      "actors": [
+        {
+          "appearanceId": "caferagatha",
+          "owner": "ragatha",
+          "file": "assets/encore/stance/caferagatha.png",
+          "face": 1,
+          "nativeFacing": 1,
+          "actualDrawSourceVerified": true,
+          "facingVerified": true,
+          "uniformScale": true
+        },
+        {
+          "appearanceId": "cafegangle",
+          "owner": "gangle",
+          "file": "assets/encore/stance/cafegangle.png",
+          "face": -1,
+          "nativeFacing": 1,
+          "actualDrawSourceVerified": true,
+          "facingVerified": true,
+          "uniformScale": true
+        }
+      ]
+    },
+    {
+      "stage": "barnoir",
+      "file": "docs/art-generation/continuation-20261120-c/canvas/scenes/scene-barnoir.png",
+      "sha256": "26aa822a4be9001b42b33e8b646362df39658ddf262a2e0a4bdc75ae740c58d7",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "nativeStagePlanes": 3,
+      "preload": true,
+      "simulationUnchanged": true,
+      "actors": [
+        {
+          "appearanceId": "cafegangle",
+          "owner": "gangle",
+          "file": "assets/encore/stance/cafegangle.png",
+          "face": 1,
+          "nativeFacing": 1,
+          "actualDrawSourceVerified": true,
+          "facingVerified": true,
+          "uniformScale": true
+        },
+        {
+          "appearanceId": "cafezooble",
+          "owner": "zooble",
+          "file": "assets/encore/stance/cafezooble.png",
+          "face": -1,
+          "nativeFacing": 1,
+          "actualDrawSourceVerified": true,
+          "facingVerified": true,
+          "uniformScale": true
+        }
+      ]
+    },
+    {
+      "stage": "undermap",
+      "file": "docs/art-generation/continuation-20261120-c/canvas/scenes/scene-undermap.png",
+      "sha256": "7fc1d9f7e834cdc1db8ac49c58f81118307388c3c72f893623b8bdcafd6fed0b",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "nativeStagePlanes": 3,
+      "preload": true,
+      "simulationUnchanged": true,
+      "actors": [
+        {
+          "appearanceId": "cafezooble",
+          "owner": "zooble",
+          "file": "assets/encore/stance/cafezooble.png",
+          "face": 1,
+          "nativeFacing": 1,
+          "actualDrawSourceVerified": true,
+          "facingVerified": true,
+          "uniformScale": true
+        },
+        {
+          "appearanceId": "caferagatha",
+          "owner": "ragatha",
+          "file": "assets/encore/stance/caferagatha.png",
+          "face": -1,
+          "nativeFacing": 1,
+          "actualDrawSourceVerified": true,
+          "facingVerified": true,
+          "uniformScale": true
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Static Canvas render only: no browser, input, audio, service-worker or physical-device execution.",
+    "Individual authored poses do not establish complete animation cycles.",
+    "No canonical 1:1 certification."
+  ],
+  "overview": {
+    "file": "docs/art-generation/continuation-20261120-c/canvas/scenes/scenes-overview.jpg",
+    "sha256": "b5e8236239c7ec9ef035baba1cb0265eb465a1ca59c2f7b7fe9592f5571b7f6f"
+  },
+  "requestedFiles": [
+    "assets/encore/stages/barnoir/far.png",
+    "assets/encore/stages/barnoir/mid.png",
+    "assets/encore/stages/barnoir/near.png",
+    "assets/encore/stages/softballfield/far.png",
+    "assets/encore/stages/softballfield/mid.png",
+    "assets/encore/stages/softballfield/near.png",
+    "assets/encore/stages/undermap/far.png",
+    "assets/encore/stages/undermap/mid.png",
+    "assets/encore/stages/undermap/near.png",
+    "assets/encore/stance/cafegangle.png",
+    "assets/encore/stance/caferagatha.png",
+    "assets/encore/stance/cafezooble.png"
+  ],
+  "counts": {
+    "scenes": 3,
+    "authoredStanceDraws": 6,
+    "appearances": 3
+  },
+  "complete": true
+}

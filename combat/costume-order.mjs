@@ -47,7 +47,10 @@ export const COSTUME_EXTENSION_ORDER = Object.freeze([
   "cafepomni",
   "glitch-metarunner-ribbit-hommage",
   "glitch-metarunner-ribbit-resident",
-  "glitch-metarunner-ribbit-fusion"
+  "glitch-metarunner-ribbit-fusion",
+  "caferagatha",
+  "cafegangle",
+  "cafezooble"
 ]);
 
 /** Resolve the explicit order without cloning or changing any costume record. */

@@ -1,0 +1,129 @@
+{
+  "schema": "encore-cafe-c-visual-review/v1",
+  "createdAt": "2026-11-20T19:40:46.397262+00:00",
+  "reviewer": "generate_cafe_ragatha",
+  "status": "accepted_with_stated_scope",
+  "canvasReport": "docs/art-generation/continuation-20261120-c/canvas/canvas-review.json",
+  "canvasReportSHA256": "cd202ec3825953e800bc968793ca75e74bccece14181dc313a4683afa6429a1d",
+  "observedCounts": {
+    "appearances": 3,
+    "expectedActions": 27,
+    "actions": 27,
+    "stances": 3,
+    "drawChecks": 60,
+    "portraits": 3,
+    "expectedPortraits": 3,
+    "uniquePublishedDrawings": 33,
+    "missing": 0,
+    "aliasedActions": 0
+  },
+  "reviewedArtifacts": [
+    {
+      "appearanceId": "caferagatha",
+      "file": "docs/art-generation/continuation-20261120-c/canvas/caferagatha/actions-caferagatha.jpg",
+      "sha256": "28ebe325cb4becc55d4686b78ac5ca9652baafdd1a3c210d077829208c6b528c"
+    },
+    {
+      "appearanceId": "caferagatha",
+      "file": "docs/art-generation/continuation-20261120-c/canvas/caferagatha/archive-portraits-01.jpg",
+      "sha256": "05e8cc92caef1683063f16ce226087941293f7987dcad40321cff08e380f491b"
+    },
+    {
+      "appearanceId": "cafegangle",
+      "file": "docs/art-generation/continuation-20261120-c/canvas/cafegangle/actions-cafegangle.jpg",
+      "sha256": "3d2e422abe6740491fe7af0d7367d388a4222b4a242f642de83e4be0a3d6332c"
+    },
+    {
+      "appearanceId": "cafegangle",
+      "file": "docs/art-generation/continuation-20261120-c/canvas/cafegangle/archive-portraits-01.jpg",
+      "sha256": "3ac76f05add09993786163e927288ee67e80e0279f0a66dd6bfd0bc5cf3c3cc8"
+    },
+    {
+      "appearanceId": "cafezooble",
+      "file": "docs/art-generation/continuation-20261120-c/canvas/cafezooble/actions-cafezooble.jpg",
+      "sha256": "3565fba13e58aa69ec415b6d80c6eb79de9db4e61a61202f962028714331bcc3"
+    },
+    {
+      "appearanceId": "cafezooble",
+      "file": "docs/art-generation/continuation-20261120-c/canvas/cafezooble/archive-portraits-01.jpg",
+      "sha256": "475eb0b75e1a25f4d13bdbb48c4403a8b20e0d60010ed11e93c6e5997de3526e"
+    },
+    {
+      "file": "docs/art-generation/continuation-20261120-c/canvas/scenes/scenes-overview.jpg",
+      "sha256": "b5e8236239c7ec9ef035baba1cb0265eb465a1ca59c2f7b7fe9592f5571b7f6f"
+    }
+  ],
+  "appearances": [
+    {
+      "id": "caferagatha",
+      "status": "accepted_with_stated_scope",
+      "observations": [
+        "The nine action cells show distinct welcoming curtsey, straight punch, recoil, stride, leap, crouch, raised-fist victory, seated defeat and two-handed heavy poses.",
+        "The button eye, red yarn hair, navy coif bows, pale-blue apron bows, white stockings and two platform shoes remain visible at game scale; the white scalloped hems stay legible on the checkerboard and scene backgrounds.",
+        "The portrait includes the full coif and both soles. The production-scaled crouch and defeat fit their cells without clipping."
+      ]
+    },
+    {
+      "id": "cafegangle",
+      "status": "accepted_with_stated_scope",
+      "observations": [
+        "The nine action cells retain the mask, cafe coif and dress, pale lilac-gray hands and red ribbon limbs; the ribbons remain readable beneath the dress.",
+        "The attack and heavy are distinct extended-arm drawings; the jump and lowered poses use visibly different silhouettes. The original body shape remains recognisable across them.",
+        "The portrait is complete. The white mask, apron and red ribbons remain distinct from the dark Barnoir scenery."
+      ]
+    },
+    {
+      "id": "cafezooble",
+      "status": "accepted_with_stated_scope",
+      "observations": [
+        "The triangular pink head, asymmetric eyes and antennae, green/yellow arm, red/gray claw arm, purple cafe uniform, coil foot and dark shoe remain legible.",
+        "The wide heavy, seated defeat and compact crouch stay inside their cells, including the antenna tips and mismatched feet.",
+        "The full portrait is retained. Purple clothing remains readable in the dark scenes through its lighter edging and contrasted body pieces."
+      ]
+    }
+  ],
+  "sceneObservations": [
+    {
+      "stage": "softballfield",
+      "file": "docs/art-generation/continuation-20261120-c/canvas/scenes/scene-softballfield.png",
+      "observations": [
+        "Ragatha on the left and Gangle on the right face one another; complete silhouettes are separated from the field and stadium.",
+        "White costume panels, red hair and red ribbons remain readable at the rendered scale."
+      ]
+    },
+    {
+      "stage": "barnoir",
+      "file": "docs/art-generation/continuation-20261120-c/canvas/scenes/scene-barnoir.png",
+      "observations": [
+        "Gangle on the left and Zooble on the right face one another against the actual neon bar scenery.",
+        "The mask, apron, colored limbs and purple uniform edges remain readable; neither silhouette is cropped or hidden by foreground scenery."
+      ]
+    },
+    {
+      "stage": "undermap",
+      "file": "docs/art-generation/continuation-20261120-c/canvas/scenes/scene-undermap.png",
+      "observations": [
+        "Zooble on the left and Ragatha on the right face one another against the grid scenery.",
+        "Both complete silhouettes and mismatched Zooble feet remain visible; no colored asset-background halo was observed."
+      ]
+    }
+  ],
+  "sharedObservations": [
+    "All three action galleries and all three portrait galleries were visually inspected.",
+    "The visible sprites have no unintended colored halo or clipped hands, headwear, antenna tips or feet.",
+    "Attack arcs, ground shadows and stance/action markers visible in the galleries are production-rendered effects; the native image assets remain unchanged.",
+    "The actual source-canvas checks verify the installed authored files, both orientations and uniform scaling. Three supplementary scenes verify six further authored stance draws and preserve simulation state."
+  ],
+  "limitations": [
+    "Production Canvas2D modules were run in Node with native Skia; no browser, DOM, input, audio, service-worker or physical-device test was executed.",
+    "The 60 directed draw checks cover 27 action files and 3 stance files in both orientations; 3 selection portraits are reviewed separately. They are not 60 distinct new drawings.",
+    "Single static action drawings do not establish complete animation cycles.",
+    "Rendering and visual readability do not certify canonical 1:1 costume or episode fidelity.",
+    "Only the three recorded static pair scenes were reviewed; no claim is made about an entire interactive match."
+  ],
+  "additionalSceneCounts": {
+    "scenes": 3,
+    "authoredStanceDraws": 6,
+    "appearances": 3
+  }
+}

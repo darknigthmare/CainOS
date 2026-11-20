@@ -1,0 +1,87 @@
+{
+  "appearanceId": "cafezooble",
+  "slot": "heavy",
+  "useCase": "identity-preserve",
+  "prompt": "Use case: identity-preserve.\nCreate exactly ONE new full-body 2D sprite pose of Cafe Zooble. Image 1 is the accepted game selection: lock this exact character design, face identity, limb assembly, palette, proportions, clothing and crisp flat linework. Image 2 is the official Cafe poster: only Zooble at center-right supports costume details, do not add any other character.\nINVARIANTS: pink triangular head with NO mouth; large yellow spiral eye and smaller white eye, purple lids and three black lashes under small eye; cyan lightning antenna and separate black/white striped spring antenna, small pink shoulder wing. Exactly two arms, GREEN forearm ending in YELLOW mitten and RED arm ending in pale GRAY claw; retain both white cuffs. White short sleeves and bib with tiny dark buttons, purple tailored vest and bow tie, long NAVY apron with purple trim and side sash. Exactly two asymmetrical legs, gray fabric on both, one ending in YELLOW SPIRAL foot and the other in NAVY laced closed shoe. No gold shoe strip, no second normal shoe, no bare dotted torso, no mouth. Preserve the same shoulder and leg sides as the seed, do not mirror the outfit.\nPOSE: A committed heavy downward claw strike towards SCREEN RIGHT, captured at its striking endpoint: torso leans forward, red arm swings diagonally down-right with gray claw open, yellow mitten braces close to upper torso, navy shoe lunges far forward, rear yellow spiral foot remains whole. Strong distinct silhouette and a wide stance. No effects or added weapons.\nFlat cel shading, no rendered lighting effects, entire character occupies around 72 percent of a portrait canvas with clear transparent margins at top/bottom/sides. If a pose is wide, zoom out to include it fully. Native transparent RGBA; outside silhouette alpha zero, clean outlines and solid painted interior. No environment, ground, cast shadow, glowing aura, trails, text, watermark, panel, duplicate figure, food, glass, tray or extra limbs. One character, one pose, one image. Original static game pose with official outfit.",
+  "referencePaths": [
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/selection.png",
+    "docs/art-generation/continuation-20261120-c/cafe/references/animate-press-main.jpg"
+  ],
+  "referenceRoles": [
+    "Accepted Cafe Zooble selection identity/assembly/palette anchor",
+    "Official Cafe costume reference; only Zooble"
+  ],
+  "sourceUrls": [
+    "https://prtimes.jp/main/html/rd/p/000008857.000016756.html"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "root",
+  "definitionSha256": "f6cbef6ee7b484a505bbef70f6f45fcacf8f17d2c8c222b867a914e3ba0f8407",
+  "expectedReferenceSHA256": {
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/selection.png": "8e9b01071c18df0cc3a38e2f4e00916b11843a826dc828e398e04f55f3bfec8c",
+    "docs/art-generation/continuation-20261120-c/cafe/references/animate-press-main.jpg": "135cc4a9f9a02c4ed0b9358c98754ab5339a054520c6ad53c9dd2a02323f397b"
+  },
+  "jobPath": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jobs/heavy.json",
+  "schema": "encore-native-continuation-c-cafe-art/v1",
+  "id": "cafezooble:heavy",
+  "status": "accepted_native",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "file": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/heavy.png",
+  "targetFile": "assets/encore/poses/cafezooble/heavy.png",
+  "nativeSourceFile": "/workspace/scratch/0c4db74bdd9c/generated_images/exec-0da14f93-a909-4b95-82c4-1bcdd1386fa5.png",
+  "sourceGenerationId": "exec-0da14f93-a909-4b95-82c4-1bcdd1386fa5",
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/selection.png",
+      "sha256": "8e9b01071c18df0cc3a38e2f4e00916b11843a826dc828e398e04f55f3bfec8c",
+      "bytes": 1414609
+    },
+    {
+      "position": 2,
+      "file": "docs/art-generation/continuation-20261120-c/cafe/references/animate-press-main.jpg",
+      "sha256": "135cc4a9f9a02c4ed0b9358c98754ab5339a054520c6ad53c9dd2a02323f397b",
+      "bytes": 181618
+    }
+  ],
+  "dimensions": [
+    1199,
+    1312
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "alpha12Bounds": [
+    60,
+    94,
+    1101,
+    1252
+  ],
+  "alpha12BoundsThreshold": "alpha > 12",
+  "fullyTransparentPixels": 1090987,
+  "sha256": "3f5a44e2862fe00bfaab680f588d9abfa286f794bad6dca5a79f5992baed4ca0",
+  "bytes": 842534,
+  "nativeCopyVerified": true,
+  "sourceKind": "Illustration officielle de collaboration commerciale",
+  "episodeFidelityClaim": false,
+  "includedInRuntime": true,
+  "createdAt": "2026-11-20T19:35:41.725507+00:00",
+  "visualReview": {
+    "status": "accepted",
+    "reviewer": "root",
+    "observations": [
+      "Attaque lourde étendue, silhouette entière et bien détachée ; pied jaune spiralé et chaussure marine distincts.",
+      "Composite observé sur fond clair et fond sombre : contours propres, aucune lueur visible hors silhouette ; copie PNG native inchangée."
+    ],
+    "scope": "Official costume comparison and original game pose; no episode or complete animation certification."
+  },
+  "runtimeIntegration": {
+    "activatedAt": "2026-11-20T19:36:53.843910+00:00",
+    "targetFile": "assets/encore/poses/cafezooble/heavy.png",
+    "sha256": "3f5a44e2862fe00bfaab680f588d9abfa286f794bad6dca5a79f5992baed4ca0",
+    "method": "Byte-identical copy after complete native review and frozen-prefix checks"
+  }
+}

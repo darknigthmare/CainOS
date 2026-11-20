@@ -1,0 +1,470 @@
+{
+  "schema": "encore-cafe-c-independent-integration-review/v1",
+  "createdAt": "2026-11-20T19:44:36.443044+00:00",
+  "status": "passed_targeted_review_with_documented_limits",
+  "reviewer": "audit_missing_assets",
+  "baseCommit": "d0b1c092120b2c472354b67ffbf136f6a58004c5",
+  "readOnlyRuntimeReview": true,
+  "blockers": [],
+  "findings": [
+    {
+      "id": "historical-prefix",
+      "status": "passed",
+      "evidence": "Fresh Node import: all 477 existing costume IDs and serialized objects match the pinned baseline; first 42 Circus appearance IDs and first 48 published extension IDs match. Roster and stages hashes also match.",
+      "costumes": 477,
+      "costumesSHA256": "fe0cc2b77e851e5a2df45c6682c180148fd60a13d40488b12ad2e292e084419d"
+    },
+    {
+      "id": "three-only",
+      "status": "passed",
+      "evidence": "Exactly 480 unique costume IDs. Costume, appearance and extension tails equal caferagatha, cafegangle, cafezooble in that order; owners are ragatha, gangle, zooble. Active module objects equal the three frozen definition JSON files."
+    },
+    {
+      "id": "native-copies",
+      "status": "passed",
+      "evidence": "33 distinct generation IDs and PNG SHA-256 values. Original imagegen files, archived PNGs and deployed runtime PNGs compare byte for byte; receipt and inventory hashes and byte sizes agree.",
+      "nativePNGs": 33,
+      "bytes": 42202157
+    },
+    {
+      "id": "receipts-and-jobs",
+      "status": "passed",
+      "evidence": "All 33 receipts accepted, marked includedInRuntime, nativeCopyVerified and nativeFacing right; each has accepted visual-review observations. Prompt, ordered reference paths, expected reference hashes, definition hash and identity agree with the exact job. Inventory receipt and job hashes agree. All 66 reference occurrences have matching current bytes/hash and remain inside the repository.",
+      "receipts": 33,
+      "jobs": 33,
+      "referenceComparisons": 66
+    },
+    {
+      "id": "image-schema",
+      "status": "passed",
+      "evidence": "Pillow inspected all 33 files: RGBA, minimum side at least 768, transparent pixels present, opaque/semiopaque content present, dimensions/extrema/alpha>12 bounding boxes agree with receipts and inventory. Alpha>12 bounds remain strictly inside every frame. This is a mechanical format/frame check, not renewed visual approval."
+    },
+    {
+      "id": "offline-delta",
+      "status": "passed",
+      "evidence": "Compared with d0b1c092: exactly 33 new asset paths and one new core module, no removed image/core entries; old image order preserved, no duplicate image paths. ART_BYTES delta equals the summed native file sizes.",
+      "offlineImages": 5907,
+      "addedImages": 33,
+      "removedImages": 0,
+      "addedBytes": 42202157,
+      "addedCoreModules": [
+        "costume-continuation-20261120-c.mjs"
+      ]
+    },
+    {
+      "id": "scope-and-code",
+      "status": "passed",
+      "evidence": "Installer pins baseline/definitions/entry/order, rejects incomplete or changed native inputs, rechecks inputs before mutation, copies without pixel transforms and verifies active catalogue. Verifier keeps count/native/build/historical/QA/canvas/browser evidence distinct. Entry/order diffs append only this wave. data, engine, session, stories, stage-parallax, crossovers and crossover-npc-additions files equal the base commit byte for byte. No blocking schema or scope inconsistency found."
+    },
+    {
+      "id": "test-changes",
+      "status": "passed",
+      "evidence": "Costume tests retain historical atlas checks and existing replay/campaign coverage while adding all three families, updating exact cumulative counts and adding a pinned 477-object prefix regression. Fidelity correction allows only the three explicit Animate Cafe source IDs with required scope patterns; domain/source validation is not broadened. Renderer review change only adds the new module to its source-hash inventory."
+    }
+  ],
+  "nativeEvidence": [
+    {
+      "appearanceId": "caferagatha",
+      "slot": "selection",
+      "file": "assets/encore/selection/caferagatha.png",
+      "sha256": "9064974567908f7ae17624c94596822e4e0488120c5311e99651f900c760ede0",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/selection.json",
+      "receiptSHA256": "22495257981b036a8e856f187b36138e8c69a46ce6a4d88ac6ce1806ebc3c231",
+      "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/jobs/selection.json",
+      "jobSHA256": "77b25c6000cae66f25ab30a97a25a2af73c9a48ed8fbb81b17ef054f7c5f264e",
+      "originalArchiveRuntimeByteIdentical": true
+    },
+    {
+      "appearanceId": "caferagatha",
+      "slot": "stance",
+      "file": "assets/encore/stance/caferagatha.png",
+      "sha256": "d3e60454e0b3dc41d9476dd0b408bb39184ccd0045512a90851a961a6bebde32",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/stance.json",
+      "receiptSHA256": "4258f9c2477611505731b8811be3986b833de707714522d3ea58eec94023b0bd",
+      "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/jobs/stance.json",
+      "jobSHA256": "6d1b9734f5f1f340fd7b9886588cdeb7bd2b51a1443c45a39d725aaee768ab95",
+      "originalArchiveRuntimeByteIdentical": true
+    },
+    {
+      "appearanceId": "caferagatha",
+      "slot": "intro",
+      "file": "assets/encore/poses/caferagatha/intro.png",
+      "sha256": "1703bfef82339f684610ca7227f2ecc86c79229b20249e2b2c684fd4bbb9ba04",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/intro.json",
+      "receiptSHA256": "38c29c4bfcbe7c022c73a7f6121ad0e5c25ddd4f664f03089f5f09dea7e1c7ff",
+      "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/jobs/intro.json",
+      "jobSHA256": "fe6fc4e887c0d76a90d0e9e44ccbdac5232f60697db94baa1e17ecd183905493",
+      "originalArchiveRuntimeByteIdentical": true
+    },
+    {
+      "appearanceId": "caferagatha",
+      "slot": "attack",
+      "file": "assets/encore/poses/caferagatha/attack.png",
+      "sha256": "582684eb7be710aa0aa3caca326beaf72715cf55a215b12e129f3aa07ef328fa",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/attack.json",
+      "receiptSHA256": "e7074c4b0945d2515d82006c4a291779087e2606a167209601193f353134b82d",
+      "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/jobs/attack.json",
+      "jobSHA256": "b0557c0a5e130dd06fb12239f43461a8f3468452482efc51b7978031b82cb44a",
+      "originalArchiveRuntimeByteIdentical": true
+    },
+    {
+      "appearanceId": "caferagatha",
+      "slot": "heavy",
+      "file": "assets/encore/poses/caferagatha/heavy.png",
+      "sha256": "8d481a626b4356abfadb8796a235071ee832fab56283d0be702d887ff32dd206",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/heavy.json",
+      "receiptSHA256": "e015174f4620de05b03937df8b3dbfbc7f027e00d62de57a827dfecf08e432f3",
+      "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/jobs/heavy.json",
+      "jobSHA256": "ab96ff9775e1f2558fb8eafe10c6ad5e1da92d3146ecc69052720abce115cbe4",
+      "originalArchiveRuntimeByteIdentical": true
+    },
+    {
+      "appearanceId": "caferagatha",
+      "slot": "hit",
+      "file": "assets/encore/poses/caferagatha/hit.png",
+      "sha256": "955d41314984a3e034fb0b72c065c0a52729bf854d140004287ed0fad7275752",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/hit.json",
+      "receiptSHA256": "135c34c4bb833efef128b5bcb8c262b78a2c7d641c657c8681f251abefb8ffea",
+      "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/jobs/hit.json",
+      "jobSHA256": "68be45ec316c162e656240aa386ebdc97c8733266067de371516b8907a326da4",
+      "originalArchiveRuntimeByteIdentical": true
+    },
+    {
+      "appearanceId": "caferagatha",
+      "slot": "walk",
+      "file": "assets/encore/poses/caferagatha/walk.png",
+      "sha256": "78e9de3ad432a77e4429891509d81cdc55f734a6932df9fd3a9e1bec5cc0f545",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/walk.json",
+      "receiptSHA256": "af48372d4a2a7dae93196c94dfaac64a6a8ab0d158768e8a31651ee75137710a",
+      "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/jobs/walk.json",
+      "jobSHA256": "d6fc62f3c5f4abd790e85118236a1521510aded1c243072f3555280e7b2109f9",
+      "originalArchiveRuntimeByteIdentical": true
+    },
+    {
+      "appearanceId": "caferagatha",
+      "slot": "jump",
+      "file": "assets/encore/poses/caferagatha/jump.png",
+      "sha256": "6392d7d170cf1c2691faeafab938f23c3767d7a255a62e8abc076976bb1138c4",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/jump.json",
+      "receiptSHA256": "2c7a1f068a89ac25225f5ce1e45bacf82f28c9bb998643fda517031e23f69dbe",
+      "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/jobs/jump.json",
+      "jobSHA256": "454f9c3852b30aa0132239cb1341d6fa6caa47ee07c1b22583e228acf85d6b3e",
+      "originalArchiveRuntimeByteIdentical": true
+    },
+    {
+      "appearanceId": "caferagatha",
+      "slot": "crouch",
+      "file": "assets/encore/poses/caferagatha/crouch.png",
+      "sha256": "1db14ecec2189109213e035c285c85597e81bcfcc74bf1159fdb4360094432be",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/crouch.json",
+      "receiptSHA256": "7f4cd66a13dc1514c0fc99392f31b0502838ac2f5487faa8978a007b7b49022f",
+      "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/jobs/crouch.json",
+      "jobSHA256": "b0667f7a81119cbe1d27d48ede79ae1fea7baa2ee688b9a5b1603c1b5106c224",
+      "originalArchiveRuntimeByteIdentical": true
+    },
+    {
+      "appearanceId": "caferagatha",
+      "slot": "victory",
+      "file": "assets/encore/poses/caferagatha/victory.png",
+      "sha256": "c74b44c7fc4e4e92409e52d39932705a73220ae7c766cc3148f6a0e1900be367",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/victory.json",
+      "receiptSHA256": "2908d9c3bf9b333a0338490105f6b7a563dd8d9e93eaffcebfd6fb84d5a840d7",
+      "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/jobs/victory.json",
+      "jobSHA256": "736a4a6c405f3b8ab5ac0998a7407176e3505ec5bdfa95ab550d052161bfdb5d",
+      "originalArchiveRuntimeByteIdentical": true
+    },
+    {
+      "appearanceId": "caferagatha",
+      "slot": "defeat",
+      "file": "assets/encore/poses/caferagatha/defeat.png",
+      "sha256": "50d78eaac2217cb95d4f5a06afadb64a4d8a723b1c952d5dcbc7c2cb0378adce",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/defeat.json",
+      "receiptSHA256": "8b046e17510cbe08441488d218f8c06142f7b731c53b6874272685b1b4052fcd",
+      "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/jobs/defeat.json",
+      "jobSHA256": "5aa5547880bd2c85783562b17dd6c2db670dfda0ec4ccf6e11c409b5afaa425d",
+      "originalArchiveRuntimeByteIdentical": true
+    },
+    {
+      "appearanceId": "cafegangle",
+      "slot": "selection",
+      "file": "assets/encore/selection/cafegangle.png",
+      "sha256": "d47262a0cd8306917ad51b41999a412046b1376c6f75ce4a1f3e4ef166f35510",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/selection.json",
+      "receiptSHA256": "4f47699c07df95af3f977139a30db1a731818a80bb1952e1ed449571705a0788",
+      "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/jobs/selection.json",
+      "jobSHA256": "0d1f57c2f5dcb1726750c230997976786df47cee10f1ada1e54bef981176314f",
+      "originalArchiveRuntimeByteIdentical": true
+    },
+    {
+      "appearanceId": "cafegangle",
+      "slot": "stance",
+      "file": "assets/encore/stance/cafegangle.png",
+      "sha256": "5137ed1bfba96c48365cda3e4aa16b23b555e544a384c536da32e2af71cb370b",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/stance.json",
+      "receiptSHA256": "10a2f5f17d349d7dd58dd7f15b97a3f69f50df439c9d502f768521f202580591",
+      "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/jobs/stance.json",
+      "jobSHA256": "acb9c2daeff576c3f90ef7006da367f10207c6a3279c3e0115ffe774931d226c",
+      "originalArchiveRuntimeByteIdentical": true
+    },
+    {
+      "appearanceId": "cafegangle",
+      "slot": "intro",
+      "file": "assets/encore/poses/cafegangle/intro.png",
+      "sha256": "b88abb8005adf392f2dd6f77979495e2ea1fbd9a6bce62edcb270c33cb6a46b3",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/intro.json",
+      "receiptSHA256": "60ffe58732b1d4c98c44b24faafc1dbd178c2542c606191f8a1b0f9ce7d1bc45",
+      "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/jobs/intro.json",
+      "jobSHA256": "8b2a039fc526e7459beee4d44c366e6661afd7505686da36c222f0cdee86a179",
+      "originalArchiveRuntimeByteIdentical": true
+    },
+    {
+      "appearanceId": "cafegangle",
+      "slot": "attack",
+      "file": "assets/encore/poses/cafegangle/attack.png",
+      "sha256": "5cfed0c6818fcd323fbd4494d31f7cad9ed5712f8ee16981c4f1924b203ce181",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/attack.json",
+      "receiptSHA256": "9aa332b45a3354b77ce5e8919d598333e83f2a680fb3ea6547b0054ca75d600e",
+      "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/jobs/attack.json",
+      "jobSHA256": "d388ef398e293dd7ba181dcc3669c4238f89b9a84ed93bf201c73df87f2a461c",
+      "originalArchiveRuntimeByteIdentical": true
+    },
+    {
+      "appearanceId": "cafegangle",
+      "slot": "heavy",
+      "file": "assets/encore/poses/cafegangle/heavy.png",
+      "sha256": "e7195e188fc3a3fafd98054ef94a5e6b3a914e3996a22634060b90bd7b16b1f8",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/heavy.json",
+      "receiptSHA256": "5096fdde729ef3eb8fd6a2f594fd50ce57e71ccecaa34846be184df1d64a0fea",
+      "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/jobs/heavy.json",
+      "jobSHA256": "e49c42671c7773c525617c6ccb888653ce45f5bd3f635eba1d4253647cddb79a",
+      "originalArchiveRuntimeByteIdentical": true
+    },
+    {
+      "appearanceId": "cafegangle",
+      "slot": "hit",
+      "file": "assets/encore/poses/cafegangle/hit.png",
+      "sha256": "5c5487c32d05c60382505a0d5ac3dc8acae409edf2fc7ae180722d632576519a",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/hit.json",
+      "receiptSHA256": "9560dbd8df34239250c376753cb4802441fc139aa69506b0b96a5c64eb89eb8e",
+      "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/jobs/hit.json",
+      "jobSHA256": "1f97af492e32840a3189cea40710d8eae8575d4a1d51d6dc05b6db76474ed3ba",
+      "originalArchiveRuntimeByteIdentical": true
+    },
+    {
+      "appearanceId": "cafegangle",
+      "slot": "walk",
+      "file": "assets/encore/poses/cafegangle/walk.png",
+      "sha256": "e6faa1a88848501f0c6e0dd3c42d8e2eed6256c30e610c9433ed5c9107120522",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/walk.json",
+      "receiptSHA256": "90e6234500bd5531f0a6798a2bd2ae8d5f91ad0f1f32e39bb13023a0218308f4",
+      "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/jobs/walk.json",
+      "jobSHA256": "8bda4df90c33ac21c07c39f3a170833cf1a6946172365411c9dcfc1d4a91d710",
+      "originalArchiveRuntimeByteIdentical": true
+    },
+    {
+      "appearanceId": "cafegangle",
+      "slot": "jump",
+      "file": "assets/encore/poses/cafegangle/jump.png",
+      "sha256": "db72e894e2c946070442f04df9cf1d6dacd359ba8f8f4bb3ea7a5b0d030634c8",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/jump.json",
+      "receiptSHA256": "02cb9b03e93ffe16d629a5f4368686666ed815c515ed8afe09049155d6a3db81",
+      "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/jobs/jump.json",
+      "jobSHA256": "17b12d518135a8c734835aa7baafea7b14f32c0aa8ba9dafc3c25eebc30f62a4",
+      "originalArchiveRuntimeByteIdentical": true
+    },
+    {
+      "appearanceId": "cafegangle",
+      "slot": "crouch",
+      "file": "assets/encore/poses/cafegangle/crouch.png",
+      "sha256": "1f18b95099cfb6071b7fb65bcc611115dfceb062642f8370b3994c4238625ff6",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/crouch.json",
+      "receiptSHA256": "3a7e2f18058b92d71511d05cddba883eea047cea9d1eb8a8881a1e9bfbfed7a5",
+      "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/jobs/crouch.json",
+      "jobSHA256": "e14b7602169085cbd2c8b14a3a7478321c534bfe8b2f1458269aaef50d58ff69",
+      "originalArchiveRuntimeByteIdentical": true
+    },
+    {
+      "appearanceId": "cafegangle",
+      "slot": "victory",
+      "file": "assets/encore/poses/cafegangle/victory.png",
+      "sha256": "4a356a29adb7bd551ba401365122897bef127079891412ce7dc76ebfac03eebf",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/victory.json",
+      "receiptSHA256": "64abd2786886f7b136081a68de874cef6a2ee9487764bf2fa7859b6f409ee744",
+      "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/jobs/victory.json",
+      "jobSHA256": "051bf7bd69fc602b948f8a31abdc4324900e882382707128c56b7522815800b2",
+      "originalArchiveRuntimeByteIdentical": true
+    },
+    {
+      "appearanceId": "cafegangle",
+      "slot": "defeat",
+      "file": "assets/encore/poses/cafegangle/defeat.png",
+      "sha256": "0f0803c1d170f877835b3dcd2a92bde7631eedd5af49524a420acc548e873b58",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/defeat.json",
+      "receiptSHA256": "e6656bb62e8cf07275ae72f6d021c2f318d3797c12f9bee4c78ef53b6f157735",
+      "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/jobs/defeat.json",
+      "jobSHA256": "3513ec4faa1a8695693aa61175da8f69fe5efbf65350f372714ab1048f8c8dfc",
+      "originalArchiveRuntimeByteIdentical": true
+    },
+    {
+      "appearanceId": "cafezooble",
+      "slot": "selection",
+      "file": "assets/encore/selection/cafezooble.png",
+      "sha256": "8e9b01071c18df0cc3a38e2f4e00916b11843a826dc828e398e04f55f3bfec8c",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/selection.json",
+      "receiptSHA256": "442103f2f55d8d485f2bbdd8f452970945b9212b29a509d7f4e918f9b0a636ab",
+      "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jobs/selection-correction.json",
+      "jobSHA256": "9764555ababede86c0bea058094d951a0a3d16d6a8dd14c230be5fbb7c02192e",
+      "originalArchiveRuntimeByteIdentical": true
+    },
+    {
+      "appearanceId": "cafezooble",
+      "slot": "stance",
+      "file": "assets/encore/stance/cafezooble.png",
+      "sha256": "b951065075dc8ca65acbb1a8341edd16c390433d22eb3972ef69605b2cb7d97e",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/stance.json",
+      "receiptSHA256": "b250668877ab2325fd9cd5dbfb7254eb4f3b88892fb4cb13b0428e44e97e0283",
+      "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jobs/stance.json",
+      "jobSHA256": "b474ca574fb76cbb316182a933b29840c6d3ef1d3f224a24f673594ffe65bd18",
+      "originalArchiveRuntimeByteIdentical": true
+    },
+    {
+      "appearanceId": "cafezooble",
+      "slot": "intro",
+      "file": "assets/encore/poses/cafezooble/intro.png",
+      "sha256": "f88521d48d4a3cd3b6b3023c01e9934c0b136bcfc503a696af3890f3df743a0d",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/intro.json",
+      "receiptSHA256": "0ad13a2b38a8c0931e18da9b8030d202ba354b3b229fcc686a1999bbb8ef1191",
+      "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jobs/intro.json",
+      "jobSHA256": "7db5708184d2004a57b6290ce29e2e747c2e7cab35214978f567f9592e73f0f4",
+      "originalArchiveRuntimeByteIdentical": true
+    },
+    {
+      "appearanceId": "cafezooble",
+      "slot": "attack",
+      "file": "assets/encore/poses/cafezooble/attack.png",
+      "sha256": "3cabd8a6148eba6f19f727545e74e2f1a932a4daff2505cd222476fc2a9ed0e4",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/attack.json",
+      "receiptSHA256": "13dc87a491bc9a26f9160515864bac37e79fe0784dad1daca136eadda1614f9c",
+      "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jobs/attack.json",
+      "jobSHA256": "acc1c3ad88f7d863bed1129116565905ca3954cd4eebec714850054b54900834",
+      "originalArchiveRuntimeByteIdentical": true
+    },
+    {
+      "appearanceId": "cafezooble",
+      "slot": "heavy",
+      "file": "assets/encore/poses/cafezooble/heavy.png",
+      "sha256": "3f5a44e2862fe00bfaab680f588d9abfa286f794bad6dca5a79f5992baed4ca0",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/heavy.json",
+      "receiptSHA256": "69153f99988dc477eba37841a1d987c2dd83ba23ac98bb6aa6c5086493d8b230",
+      "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jobs/heavy.json",
+      "jobSHA256": "08e2b70bfbc2f75e905f56cdbb5a08a68449805eb337c7786d6810c7b9c8df14",
+      "originalArchiveRuntimeByteIdentical": true
+    },
+    {
+      "appearanceId": "cafezooble",
+      "slot": "hit",
+      "file": "assets/encore/poses/cafezooble/hit.png",
+      "sha256": "0826116970b3c300a8e3b710e6250f1f8ea856dcf70ca7d62be1b8e83607fd09",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/hit.json",
+      "receiptSHA256": "02dfbe02b147f293c18770e19a8eed7dc81ea16bdf3aa28cf720608eca9f50c8",
+      "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jobs/hit.json",
+      "jobSHA256": "47af8ddcae0d0d65d46cee7fb777fe24e28a62edcd749825bb1aee5e805eb49f",
+      "originalArchiveRuntimeByteIdentical": true
+    },
+    {
+      "appearanceId": "cafezooble",
+      "slot": "walk",
+      "file": "assets/encore/poses/cafezooble/walk.png",
+      "sha256": "8814582e56af0b91d9cebdfc760e86805732e9aa1940e6c934deef30c8d1b2d5",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/walk.json",
+      "receiptSHA256": "8310874ccc70dd9e360d04e7c56760e53dd8499fcf70c69c973e7f233842d0cd",
+      "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jobs/walk.json",
+      "jobSHA256": "3765a40ffc534e7dc5656cf9dfe85a6e4207666f2d6e9f5892029c6f1d6c565a",
+      "originalArchiveRuntimeByteIdentical": true
+    },
+    {
+      "appearanceId": "cafezooble",
+      "slot": "jump",
+      "file": "assets/encore/poses/cafezooble/jump.png",
+      "sha256": "8f5649f1e79b3901b0551f4bf4d6e7b73ea6b046fa20b18bd0822190fbe103b5",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jump.json",
+      "receiptSHA256": "d69a26f3fb96e289167bb5014d7e7d8e381d00751139211e6b426ca838f69536",
+      "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jobs/jump.json",
+      "jobSHA256": "85e9a97d344f6300828db32d1b7b8c69a1dd9b34b9596c7bd3de925ace71b892",
+      "originalArchiveRuntimeByteIdentical": true
+    },
+    {
+      "appearanceId": "cafezooble",
+      "slot": "crouch",
+      "file": "assets/encore/poses/cafezooble/crouch.png",
+      "sha256": "99661cacefd65761cb37374d6a7860c235db2debc422e75b8a7821f74f84b039",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/crouch.json",
+      "receiptSHA256": "677b587e36a66430d8046426b8925859500c885f18669449a640ff5690fe029e",
+      "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jobs/crouch.json",
+      "jobSHA256": "5e2bb03ef46fef6135e23332ab11b7289f8eca422fa59d8f790442a4fa1264fe",
+      "originalArchiveRuntimeByteIdentical": true
+    },
+    {
+      "appearanceId": "cafezooble",
+      "slot": "victory",
+      "file": "assets/encore/poses/cafezooble/victory.png",
+      "sha256": "f92c6f194f2ff464af91b92d0af3fefcef17f2973624dc69090b3731f71d0b37",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/victory.json",
+      "receiptSHA256": "f084fa15b6183d1d8ca9150f45f904a1c175a18dd9e2a22f4df48c21425b503c",
+      "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jobs/victory.json",
+      "jobSHA256": "f9fd4103e8c1fae1b2dc548cf49df7e0b91276c22736afe9859d0f5a4e675bac",
+      "originalArchiveRuntimeByteIdentical": true
+    },
+    {
+      "appearanceId": "cafezooble",
+      "slot": "defeat",
+      "file": "assets/encore/poses/cafezooble/defeat.png",
+      "sha256": "23d45949f6c9bb78c4ddbf3d4725e7e59af405fcbf0d504b1be2f13483272559",
+      "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/defeat.json",
+      "receiptSHA256": "f716a89d01f7e9efdf425f9eb7b487abed85bd225c3d34b3d2361f6a1b80e5b7",
+      "jobFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jobs/defeat.json",
+      "jobSHA256": "4d3b0a38d6e0dec472487fdacc211276ae4a7b876f34d83b1c43a2212e59767f",
+      "originalArchiveRuntimeByteIdentical": true
+    }
+  ],
+  "sourceHashes": {
+    "docs/art-generation/continuation-20261120-c/cafe/integrate-native.py": "c7f6d3054942ceb472374829664c082a767c50a46ffb9053ecacbfc058860bad",
+    "scripts/verify-combat-continuation-20261120-c.py": "4e8189d40198d94017b37ddf117aaabcc4ba2cc0c9294eda58a83dc8f166c29d",
+    "combat/costume-continuation-20261120-c.mjs": "ac5a20f76a4e75a170af9e4cf8b0d84396e9cfc5e6d93e65722c9119090b50d2",
+    "combat/costume-additions.mjs": "9a726b9ab27027263f09f41abc162ada236b626e156eeca4bc29e7b328ca412d",
+    "combat/costume-order.mjs": "2df4a7f20dff74db43168a61c3b6285c34e7d2c9f2bfa64c8355b6c622aad62d",
+    "combat/offline-manifest.mjs": "c01a7b6ce1ac3335b4442bade97e75b435e65b5c8f30fda9c400a4e682a1f1c0",
+    "tests/combat-costume-additions.test.mjs": "033a75cb75a870e3ce8c0c921399a27589d4732e5f6f534339b9be6215e1da16",
+    "tests/combat-fidelity.test.mjs": "13c7262e27f0371bc9e0cd07eb03e5ca206f0446345fa418edad1b5eb990897e",
+    "scripts/render-combat-character-review.mjs": "daa67f57a0c3a996bd8e91d2425010c13d238d6ac5d143ed091c24e78ba72443",
+    "docs/art-generation/continuation-20261120-c/baseline.json": "2493bf0950134d03a63a6ab925c773fd97ecce20860a3ff5954c32a44d442387",
+    "docs/art-generation/continuation-20261120-c/cafe/asset-inventory.json": "cf6ccfab4e4d049aab9547721a4408a6260a527c84418ac882742c63addeabbc",
+    "docs/art-generation/continuation-20261120-c/cafe/generation-completion.json": "76bf053e41892848dca80b3b467e0070252400967aa15415e5f840eda435990c",
+    "docs/art-generation/continuation-20261120-c/cafe/definitions/caferagatha.json": "7e7e4089742816d9ae310404d10ecc7ed0fd526e8be1452e604dfbbf979de654",
+    "docs/art-generation/continuation-20261120-c/cafe/definitions/cafegangle.json": "67d8e5543ce2904c4a97c025f3f97a112320e7eba941863cbeffae53bd1f6d9e",
+    "docs/art-generation/continuation-20261120-c/cafe/definitions/cafezooble.json": "f6cbef6ee7b484a505bbef70f6f45fcacf8f17d2c8c222b867a914e3ba0f8407"
+  },
+  "existingQAObservedOnly": {
+    "rerunByThisReview": false,
+    "executionFile": "docs/art-generation/continuation-20261120-c/qa-execution.json",
+    "executionSHA256": "089dda26c3458f4d10448b9d18795c73106884bbb4e3b7a8fdb9fb5d67eb933f",
+    "log": "docs/art-generation/continuation-20261120-c/qa.log",
+    "logSHA256": "570018fc3f5573a7e0e863d959aec1d3634e4fea2bf0d965f20d53a3ff11dcb4",
+    "exitCode": 0,
+    "tests": 432,
+    "pass": 432,
+    "fail": 0,
+    "skipped": 0
+  },
+  "limitations": [
+    "This review did not rerun QA, builds, browser or the integration/verifier scripts. The existing final QA log was read only.",
+    "No new visual approval of the 33 drawings was performed in this integration review. Existing per-image visual reviews were checked for consistency; this reviewer previously authored the Gangle family.",
+    "Byte equality establishes that the native tool output was preserved; it does not certify canonical 1:1 fidelity, unseen anatomy or complete animation cycles.",
+    "Browser review remains not_executed with zero successful checks after Chromium failed before navigation; no browser screenshot or UI success is inferred from static/canvas checks.",
+    "Historical asset byte preservation across all 5830 old assets and both build outputs was reported separately by the parent verifier; this targeted review directly rechecked the 477-object runtime prefix, seven critical modules and the 33 new native originals/archive/runtime copies."
+  ],
+  "writesLimitedTo": [
+    "docs/art-generation/continuation-20261120-c/independent-integration-review.json",
+    "docs/art-generation/continuation-20261120-c/independent-integration-review.md"
+  ]
+}

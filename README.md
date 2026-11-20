@@ -6,7 +6,7 @@ CainOS is a retro C&A mainframe-style interactive web app inspired by The Amazin
 
 CainOS includes **Circus Combat — Encore**, a shared combat application and
 standalone game adapted from the real CQC engine of `shadow-codec-ops`.
-The playable game version is **0.7.0**. The original GLITCH wardrobe dates from **18 November 2026**; the latest **20 November 2026** continuation adds Café Kinger, Café Pomni, three Ribbit × Meta Runner designs and the softball field.
+The playable game version is **0.7.0**. The original GLITCH wardrobe dates from **18 November 2026**; the latest **20 November 2026** continuation adds Café Ragatha, Café Gangle and Café Zooble after the Kinger / Pomni / Meta Runner / softball wave.
 
 - In CainOS: complete the existing first-use calibration, then launch **Circus Combat**.
 - Direct game: open **`/combat/`** on the same static server.
@@ -15,9 +15,32 @@ The playable game version is **0.7.0**. The original GLITCH wardrobe dates from 
 - Controls, architecture, references and remaining work: **[Digital Circus — Encore](docs/DIGITAL_CIRCUS_ENCORE.md)**.
 - To equip a crossover, open the fighter or opponent’s wardrobe and select **Filtrer les tenues**. Choose the series and **Fusion originale** to see the character’s redesigned body. [Compare the fusion portraits and combat stances](docs/COMBAT_GALERIE_FUSIONS.md) or [browse the GLITCH wardrobe and arena gallery](docs/COMBAT_CROSSOVERS_GLITCH.md).
 
-The game combines **54 fighters, 540 techniques, 25 shared arenas, 477 selectable costumes and 179 searchable archive entries**. Fourteen fighters have individually authored kits; 40 promoted archive NPCs use the extension kits described below. The 54 dedicated stage arrangements reuse shared scenery and are counted separately. Its nine standard modes are joined by nine illustrated crossover visits under **Escales GLITCH**. The wardrobe contains **51 archive costumes, 42 additional illustrated Circus appearances / 462 PNGs, and 384 crossovers / 3,847 files**. The original fourteen crossover owners retain all 27 appearances each; Ribbit now has six appearances across Murder Drones and Meta Runner out of the 27 possible across the nine collections, while the other 39 promoted NPCs still have none. The combat techniques and stories are original fan-game adaptations.
+The game combines **54 fighters, 540 techniques, 25 shared arenas, 480 selectable costumes and 179 searchable archive entries**. Fourteen fighters have individually authored kits; 40 promoted archive NPCs use the extension kits described below. The 54 dedicated stage arrangements reuse shared scenery and are counted separately. Its nine standard modes are joined by nine illustrated crossover visits under **Escales GLITCH**. The wardrobe contains **51 archive costumes, 45 additional illustrated Circus appearances / 495 PNGs, and 384 crossovers / 3,847 files**. The original fourteen crossover owners retain all 27 appearances each; Ribbit now has six appearances across Murder Drones and Meta Runner out of the 27 possible across the nine collections, while the other 39 promoted NPCs still have none. The combat techniques and stories are original fan-game adaptations.
 
-### Two Café outfits, Ribbit × Meta Runner and the softball field — latest continuation
+### Café Ragatha, Café Gangle and Café Zooble — latest continuation
+
+**Three complete outfits and 33 individual native PNGs** extend the wardrobe.
+Each has a selection portrait, a stance and nine distinct action drawings.
+The large pale-blue apron bows and platform shoes of Ragatha, Gangle's elongated
+mask and ribbon limbs, and Zooble's asymmetric limbs distinguish the families
+from their older maid or noir appearances. Their existing fighter kits are retained.
+
+**432 tests, both builds and 60 character Canvas drawing checks pass.**
+Three further production scenes show the outfits on the softball field, Barnoir
+and Undermap. The 33 images match all 66 distribution copies; **5,830 earlier
+Encore files** and the complete **477-costume prefix** remain unchanged.
+The offline pack contains **5,907 images**. The tracker contains **3,344 Production rows,
+2,493 QA rows and 164 sources**, with 83,423 cells compared without differences.
+
+The [current report](docs/COMBAT_CONTINUATION_C_2026-11-20.md),
+[production galleries and evidence](docs/art-generation/continuation-20261120-c/README.md),
+[tracker reconciliation](docs/art-generation/continuation-20261120-c/workbook/README.md)
+and [remaining-work register](docs/art-generation/continuation-20261120-c/remaining-work.md)
+record the exact scope. Local Chromium failed before opening a page, so no browser
+interaction success is claimed. Complete animation cycles, obscured references,
+**1,074 NPC crossover outfits** and physical-device checks remain open.
+
+### Two Café outfits, Ribbit × Meta Runner and the softball field — previous continuation
 
 **Café Kinger** and **Café Pomni** add two complete Circus appearances. Ribbit gains
 three original Meta Runner designs: **Hommage · Tari**, **Analyste de replays**
@@ -35,11 +58,11 @@ zone in CainOS. This wave adds it to Encore and delivers **58 native PNGs /
 
 **431 tests, both builds, 100 character Canvas checks and six stage checks pass.**
 The 58 images match all 116 distribution copies, and the 5,772 earlier Encore
-files remain unchanged. The tracker contains **3,308 Production rows, 2,454 QA
+files remain unchanged. At that checkpoint the tracker contained **3,308 Production rows, 2,454 QA
 rows and 161 sources**, with an **82,697-cell comparison without differences**,
 42 formulas preserved and 50 reviewed views.
 
-The [current wave report](docs/COMBAT_CONTINUATION_B_2026-11-20.md),
+The [dated wave report](docs/COMBAT_CONTINUATION_B_2026-11-20.md),
 [production and verification dossier](docs/art-generation/continuation-20261120-b/README.md)
 and [workbook dossier](docs/art-generation/continuation-20261120-b/workbook/README.md)
 record the executed checks and their scope. The

@@ -5,9 +5,9 @@ dessins individuels réunis le **19 novembre 2026**, puis complétés le
 **20 novembre 2026**.
 
 Encore partage son moteur entre l’application CainOS et le jeu autonome :
-**54 combattants, 540 techniques, 25 arènes partagées, 9 modes, 477 costumes et 179 archives**.
+**54 combattants, 540 techniques, 25 arènes partagées, 9 modes, 480 costumes et 179 archives**.
 Le catalogue conserve les 54 arrangements de scènes dédiées,
-les escales GLITCH, **51 costumes d’archive**, **42 variantes Circus / 462 PNG** et
+les escales GLITCH, **51 costumes d’archive**, **45 variantes Circus / 495 PNG** et
 **384 costumes crossover / 3 847 fichiers**. Les quatorze propriétaires historiques
 conservent chacun leurs 27 crossovers ; Ribbit possède maintenant les trois styles
 Murder Drones et les trois styles Meta Runner, soit **6/27** parmi les neuf collections. Ses sept autres séries et
@@ -37,7 +37,31 @@ d’épisode contradictoires avec la route générée. Les dessins individuels d
 19 novembre remplacent ces cadrages dans la présentation courante ; cette
 réparation technique ne clôt pas leur comparaison avec les plans officiels.
 
-## Dernière suite — deux Café, Ribbit × Meta Runner et le stade de softball
+## Dernière suite — Ragatha, Gangle et Zooble Café
+
+**Trois familles et 33 PNG natifs individuels** complètent les tenues Café.
+Ragatha conserve les grands nœuds bleu clair du tablier et ses plateformes ;
+Gangle le masque allongé, la coiffe à oreilles roses et ses rubans rouges ;
+Zooble le gilet violet, le tablier marine et ses membres asymétriques. Chaque
+famille possède un portrait, une garde et neuf actions, dont son propre coup lourd.
+
+**432 tests, les deux builds et 60 contrôles Canvas passent**. Les trois portraits
+et trois scènes de production sur le stade de softball, Barnoir et Sous la carte
+ont été examinés. Les 66 copies de PNG dans les distributions sont identiques ;
+les **5 830 anciens fichiers Encore** et les **477 costumes précédents** restent
+inchangés. Le paquet hors ligne contient maintenant **5 907 images**.
+
+Le [bilan courant](COMBAT_CONTINUATION_C_2026-11-20.md), les
+[galeries et preuves](art-generation/continuation-20261120-c/README.md), le
+[dossier du classeur](art-generation/continuation-20261120-c/workbook/README.md)
+et le [registre des manquants](art-generation/continuation-20261120-c/remaining-work.md)
+consignent les résultats et leurs limites. Une tentative Chromium a échoué avant
+la création d’une page ; aucun parcours navigateur réussi n’est déclaré.
+Les poses statiques ne clôturent ni les animations complètes ni les comparaisons
+canoniques des parties masquées. Les **1 074 tenues crossover PNJ** restantes
+et les essais physiques gardent leur statut ouvert.
+
+## Suite précédente — deux Café, Ribbit × Meta Runner et le stade de softball
 
 **Café Kinger** et **Café Pomni** complètent les tenues Circus d’après les
 illustrations officielles de la collaboration Animate Café. **Ribbit × Meta Runner**
@@ -60,16 +84,16 @@ modifications ; les 54 arrangements dédiés restent des réemplois des scènes 
 
 La QA finale réussit **431 tests et les deux builds**. Les personnages passent
 **100 contrôles Canvas** et le stade **six contrôles** ; les copies natives et les
-**5 772 anciens fichiers Encore** sont intacts. Le classeur contient **3 308 lignes
+**5 772 anciens fichiers Encore** sont intacts. À ce point d’étape, le classeur contenait **3 308 lignes
 Production, 2 454 lignes QA et 161 sources**. Sa comparaison de **82 697 cellules**
 ne relève aucune différence, avec 42 formules conservées et 50 vues inspectées.
 
-Le [rapport courant](COMBAT_CONTINUATION_B_2026-11-20.md), les
+Le [rapport de ce point d’étape](COMBAT_CONTINUATION_B_2026-11-20.md), les
 [galeries et preuves](art-generation/continuation-20261120-b/README.md), le
 [dossier du stade](art-generation/continuation-20261120-b/stage/README.md) et le
 [suivi du classeur](art-generation/continuation-20261120-b/workbook/README.md)
 consignent les résultats réellement exécutés. Le
-[registre courant des manquants](art-generation/continuation-20261120-b/remaining-work.md)
+[registre des manquants à ce point d’étape](art-generation/continuation-20261120-b/remaining-work.md)
 conserve les **1 074 tenues crossover de PNJ encore absentes**, les références
 occultées, les cycles animés complets et les essais matériels. Les comptes rendus
 ci-dessous restent des points d’étape datés.
@@ -1030,9 +1054,8 @@ techniques et les tests ne constituent pas une certification canonique 1:1.
 
 ## Classeur de production
 
-Le [dossier de mise à jour du lot courant](art-generation/continuation-20261120-b/workbook/README.md)
-relie les preuves propres à Café Kinger, Café Pomni, aux trois crossovers Meta Runner
-de Ribbit et au stade de softball. Les compteurs, l’export, le réimport et les résultats de contrôle de cette
+Le [dossier de mise à jour du lot courant](art-generation/continuation-20261120-c/workbook/README.md)
+relie les preuves propres à Ragatha, Gangle et Zooble Café. Les compteurs, l’export, le réimport et les résultats de contrôle de cette
 vague sont consignés dans ce dossier ; les nombres ci-dessous décrivent les campagnes
 historiques et ne sont pas réattribués au nouveau lot.
 

@@ -13,11 +13,13 @@ les trois styles Murder Drones et Meta Runner, soit **6/27** sur les neuf collec
 39 autres PNJ promus n’ont pas encore de crossover. Les quatorze propriétaires
 historiques conservent leurs neuf séries complètes.
 
-Le [bilan courant](COMBAT_CONTINUATION_B_2026-11-20.md) et les
+Le [bilan de la dernière fusion](COMBAT_CONTINUATION_B_2026-11-20.md) et ses
 [galeries de production](art-generation/continuation-20261120-b/README.md) documentent
-la dernière fusion avec Café Kinger, Café Pomni et le stade de softball. Le
-[registre des manquants](art-generation/continuation-20261120-b/remaining-work.md) et le
-[dossier du classeur](art-generation/continuation-20261120-b/workbook/README.md) conservent
+Meta Runner avec Café Kinger, Café Pomni et le stade de softball. La
+[continuation courante](COMBAT_CONTINUATION_C_2026-11-20.md) ajoute ensuite Ragatha,
+Gangle et Zooble Café et conserve les 384 crossovers. Le
+[registre des manquants](art-generation/continuation-20261120-c/remaining-work.md) et le
+[dossier du classeur](art-generation/continuation-20261120-c/workbook/README.md) conservent
 les limites et les contrôles datés, sans transformer une pose statique en cycle animé.
 
 ![Pomni et Jax dans un duel sur Copper 9](images/fusion-copper9-pomni-jax.webp)

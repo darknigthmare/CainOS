@@ -1,0 +1,25 @@
+{
+  "appearanceId": "cafegangle",
+  "slot": "stance",
+  "useCase": "stylized-concept",
+  "prompt": "Use case: stylized-concept. Asset type: ONE individual full-body transparent 2D fighting-game action sprite for Digital Circus Encore.\nImage 1 is the approved Cafe Gangle game design: preserve her EXACT identity, proportions, mask, palette, clothes, line weight and all decorative details. Image 2 is the official cafe costume reference. Draw only the same Gangle in ONE new pose. Change the pose only; no replacement costume or anatomy.\n\nLocks: elongated smooth white mask, very large BLACK vertical arched eyes and small w-shaped mouth; white frilled headband, navy band, two white triangular COSTUME ears with pink centers, navy side bows with pale lines and red accents. Navy puff-sleeve dress, white finely pleated bib and scalloped apron, red neck bow on navy backing with yellow HEART, navy apron-side bows with red tails, muted lilac vertical skirt panel on anatomical LEFT, pale fine hem trim and white scalloped underskirt. TWO red flexible RIBBON arms with small pale LAVENDER-GRAY mitten hands and white cuffs. Exactly TWO lower red ribbon strips ending in forked tips, with no human legs, feet, shoes or skin. Mittens are simple and consistent with the approved design. No serving props: tray, food, glass, green ring, stirrer and shaker all excluded.\n\nPOSE: Combat guard: three-quarter SIDE VIEW strongly facing SCREEN-RIGHT, mask and attention directed right. Raise both pale lavender-gray mitten hands in a compact guard before the chest, with the leading hand farther to the right. Two long red ribbon arms gently bend, skirt steady. The two lower red ribbon ends form a balanced separated support stance. No real legs, feet or shoes.\n\nCrisp dark contours, clean flat color and restrained cel shading, matching approved image 1. Full figure centered with GENEROUS transparent padding on all sides; about 75 percent height; every costume ear, bow, hand, ribbon and forked tip entirely in frame. Transparent native RGBA. No background, ground, cast shadow, glow, halo, white sticker border, text, logo, watermark, panels, sprite sheet, duplicate subject, extra limbs or cropped edge. This is a new original action drawing preserving the illustrated merchandise costume.",
+  "referencePaths": [
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/selection.png",
+    "docs/art-generation/continuation-20261120-c/cafe/references/cafegangle-detail.png"
+  ],
+  "referenceRoles": [
+    "Approved Cafe Gangle native seed: visual identity, costume, palette and proportions",
+    "Official cafe outfit; serving accessories excluded"
+  ],
+  "sourceUrls": [
+    "https://prtimes.jp/main/html/rd/p/000008857.000016756.html",
+    "https://www.animatecafe.jp/event/ac000791"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "audit_missing_assets",
+  "definitionSha256": "67d8e5543ce2904c4a97c025f3f97a112320e7eba941863cbeffae53bd1f6d9e",
+  "expectedReferenceSHA256": {
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/selection.png": "d47262a0cd8306917ad51b41999a412046b1376c6f75ce4a1f3e4ef166f35510",
+    "docs/art-generation/continuation-20261120-c/cafe/references/cafegangle-detail.png": "c5525413c608d28ab070538965a185a96c1e41d455a5d312b00eb85a0d6de3b2"
+  }
+}

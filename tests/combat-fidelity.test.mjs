@@ -40,6 +40,9 @@ test('review records keep source scope, observations and invented combat separat
         'animate-cafe-ribbit': [/Pendantz Maid/, /ne qualifie pas le bas encore masqué de maidribbit/],
         'animate-cafe-kinger': [/corps conique et sa base entière/, /mains ne sont pas clairement attribuables à Kinger/, /gants flottants/, /sans ajout de bras/],
         'animate-cafe-pomni': [/silhouette entière, les deux jambes et les deux chaussures/, /mains croisées.*masquent une partie du haut du plastron/, /dos non montré/, /Distincte de maidpomni/],
+        'animate-cafe-ragatha': [/grands nœuds bleus du tablier/, /distincte de maidragatha/, /surfaces arrière non visibles/, /Aucune présence en épisode/],
+        'animate-cafe-gangle': [/Distinct de maidgangle/, /appendices gris lilas/, /anatomie des doigts et le dos masqué ne sont pas certifiés/, /aucune anatomie animale ou humaine supplémentaire/],
+        'animate-cafe-zooble': [/Distincte de noirzooble/, /attaches partiellement masquées/, /aucune apparition en épisode/, /correspondance 1:1/],
       };
       assert.ok(Object.hasOwn(reviewedCafeScopes, source.id), 'Unreviewed Animate Café source');
       for (const scope of reviewedCafeScopes[source.id]) assert.match(source.scope, scope, source.id);
