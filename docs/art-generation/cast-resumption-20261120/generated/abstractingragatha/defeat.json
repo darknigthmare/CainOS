@@ -1,0 +1,75 @@
+{
+  "schema": "encore-native-art-resumption/v1",
+  "id": "abstractingragatha-defeat",
+  "appearanceId": "abstractingragatha",
+  "slot": "defeat",
+  "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingragatha/defeat.png",
+  "targetFile": "assets/encore/poses/abstractingragatha/defeat.png",
+  "createdAt": "2026-11-20T08:48:23.575831+00:00",
+  "sourceGenerationId": "exec-14255ba8-cfcf-4e73-8167-3b79fd1b93a6",
+  "nativeSourceFile": "/workspace/scratch/5f5114b49696/generated_images/exec-14255ba8-cfcf-4e73-8167-3b79fd1b93a6.png",
+  "method": "image_gen.imagegen",
+  "prompt": "Use case: identity-preserve. Asset type: ONE individual full-body transparent 2D fighting-game action sprite of ABSTRACTING RAGATHA. Reference 1 is the approved strict design lock for silhouette, proportions, exact transformation patches, eyes, colours and polished cel shading. Reference 2 supplies official design details only; do not imitate its squat toy proportions, setting or lighting. Ragatha with blue bow, red yarn hair on normal side, blue button eye, blue patchwork dress with white collar/hem, pale cloth hands, one normal black shoe. Opposing side of head and one leg are black angular crystal with concentric pastel eyes; the dark face has a multicoloured eye-like curved smile, exactly as selection and official source. Crystal growth belongs to her anatomical RIGHT shoulder (viewer-left in frontal selection); her anatomical LEFT shoulder retains the rounded normal blue sleeve. Preserve this shoulder placement, asymmetry and costume; do not swap anatomical sides or restore normal face. Create a genuinely distinct natural action pose, not a mirrored/cropped selection image. Every limb, crown/hat/ear tip, attached mask and crystal spike must fit fully inside clear transparent margins on ALL sides. One connected character, crisp detailed 2D art on true transparent RGBA; no scenery, floor, cast shadow, aura, glow, particles, labels, watermark, inset or duplicate. POSE: DEFEAT facing screen RIGHT: safe non-graphic exhausted kneel, one knee down and other foot planted, torso bowed and one hand braced low, head droops. All anatomy, costume and crystal features intact and fully visible.",
+  "transparent_background": true,
+  "referencePaths": [
+    "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingragatha/selection.png",
+    "docs/art-generation/cast-continuation-20261120/references/official-AbstractedRagatha_01.png"
+  ],
+  "portableReferences": [
+    {
+      "position": 1,
+      "kind": "repository-asset",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingragatha/selection.png",
+      "sha256": "da90f03acd382f8b46591855417a8bb29a4400088e1e4397ee7ebf11da01d181",
+      "bytes": 1764655
+    },
+    {
+      "position": 2,
+      "kind": "official-source-reference",
+      "file": "docs/art-generation/cast-continuation-20261120/references/official-AbstractedRagatha_01.png",
+      "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedRagatha_01.png?v=1780353722",
+      "pageUrl": "https://glitchproductions.store/products/abstraction-animiniz",
+      "sha256": "c9eb7d742d9d2ba895e210ac86158c3d19451cf2fa41f164ed01771b2752aec4",
+      "bytes": 2961443,
+      "restoreInstruction": "The exact reference is archived in this repository. If unavailable, download the named official image URL, verify and visually inspect it before generation. For an expired storyboard URL, refresh the storyboard through the official episode player metadata."
+    }
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/abstraction-animiniz",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedRagatha_01.png?v=1780353722"
+  ],
+  "sourceKind": "Produit dérivé officiel",
+  "checkpointFile": "docs/art-generation/cast-continuation-20261120/generation-resume.json",
+  "sha256": "3e3b63fb70c8aaa06baa94d725f039eb59562013712c0413359986e0807f0355",
+  "bytes": 1613425,
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "alpha12Bounds": [
+    215,
+    8,
+    1382,
+    1018
+  ],
+  "fullyTransparentPixels": 1015670,
+  "nativeCopyVerified": true,
+  "nativeFacing": "right",
+  "visualReview": {
+    "reviewer": "generate_jax_ragatha",
+    "status": "accepted",
+    "observations": [
+      "Complete defeated kneeling pose facing screen right with head bowed, crystal left leg folded behind and normal right knee raised over black shoe. Right arm braces on the ground from the crystalline anatomical right shoulder; left arm with normal blue rounded sleeve rests across the raised knee. Correct bow, yarn hair, button eye, crystal face and patchwork dress retained; all crystal spikes, hands and feet are visible within clear margins.",
+      "Native RGBA and clear threshold-12 contour margins verified; source bytes unchanged."
+    ],
+    "scope": "Approved reference identity and sprite technical fit; not canonical episode certification."
+  },
+  "status": "accepted_native",
+  "includedInRuntime": false,
+  "episodeFidelityClaim": false
+}

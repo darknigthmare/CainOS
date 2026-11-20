@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { COSTUMES, COSTUME_ADDITIONS, FIGHTERS, STAGES, VARIANTS, equipCostume } from '../combat/data.mjs';
+import { COSTUME_RESUMPTION_DEFINITIONS, getCostumeNativeFacing } from '../combat/costume-resumption-20261120.mjs';
 import { ART_FILES } from '../combat/offline-manifest.mjs';
 import { getFidelitySources } from '../combat/fidelity.mjs';
 import { createProgram, validateProgram } from '../combat/progression.mjs';
@@ -12,11 +13,13 @@ const appearanceWaves = {
   '2026-11-19': ['beachpomni', 'noirragatha', 'presidentpomni', 'noirzooble',
     'beachragatha', 'beachzooble', 'beachjax', 'sandcastlekinger'],
   '2026-11-20': ['noirpomni', 'noirjax', 'noirkinger', 'badendcaine',
-    'bodyguardragatha', 'bodyguardzooble'],
+    'bodyguardragatha', 'bodyguardzooble', 'smilingtragedygangle', 'abstractingpomni',
+    'abstractingjax', 'abstractingragatha', 'abstractingkinger', 'abstractinggangle',
+    'abstractingzooble', 'abstractingqueenie', 'zoobleep5'],
 };
 
 test('additional outfits retain their owner, authored kit and saved appearance through replay and campaign round trips', () => {
-  assert.equal(COSTUME_ADDITIONS.length, 14);
+  assert.equal(COSTUME_ADDITIONS.length, 23);
   assert.equal(VARIANTS.length, 51, 'historical atlas remains stable');
   for (const [date, ids] of Object.entries(appearanceWaves)) {
     assert.deepEqual(COSTUME_ADDITIONS.filter(outfit => outfit.introducedOn === date).map(outfit => outfit.id), ids,
@@ -32,6 +35,8 @@ test('additional outfits retain their owner, authored kit and saved appearance t
     assert.equal(dressed.moves, owner.moves);
     assert.equal(dressed.combat, owner.combat);
     assert.deepEqual(dressed.visual, owner.visual);
+    assert.equal(dressed.sprite.nativeFacing, outfit.id === 'abstractinggangle' ? -1 : 1,
+      outfit.id + ': the atlas fallback must retain the reviewed stance direction');
     assert.equal(equipCostume(other, outfit.id), other);
     const program = createProgram('story', owner.id, FIGHTERS, STAGES, { variantId: outfit.id, seed: 7 });
     assert.equal(validateProgram(JSON.parse(JSON.stringify(program))).variantId, outfit.id);
@@ -76,5 +81,43 @@ test('each additional outfit ships all eleven independent native-alpha PNG drawi
       signatures.add(createHash('sha256').update(bytes).digest('hex'));
     }
   }
-  assert.equal(signatures.size, 154, 'each slot in both active dated waves has its own drawing');
+  assert.equal(signatures.size, 253, 'all 23 appearances have eleven independent drawings');
+});
+
+test('resumed appearances append the frozen checkpoint definitions without changing the first fourteen entries', () => {
+  const checkpoint = JSON.parse(readFileSync(new URL('../docs/art-generation/cast-continuation-20261120/generation-resume.json', import.meta.url)));
+  const definitions = checkpoint.pendingIds.map(id => checkpoint.appearances.find(entry => entry.id === id).definition);
+  assert.deepEqual(COSTUME_RESUMPTION_DEFINITIONS, definitions);
+  assert.deepEqual(COSTUME_ADDITIONS.slice(0, 14).map(entry => entry.id), [
+    'beachpomni', 'noirragatha', 'presidentpomni', 'noirzooble', 'beachragatha',
+    'beachzooble', 'beachjax', 'sandcastlekinger', 'noirpomni', 'noirjax', 'noirkinger',
+    'badendcaine', 'bodyguardragatha', 'bodyguardzooble',
+  ]);
+  assert.deepEqual(COSTUME_ADDITIONS.slice(14).map(entry => entry.id), checkpoint.pendingIds);
+  for (const slot of ['selection', 'stance', 'attack', 'hit', 'walk', 'jump', 'crouch', 'victory', 'defeat']) {
+    assert.equal(getCostumeNativeFacing('abstractinggangle', slot), -1, slot);
+  }
+  for (const slot of ['intro', 'heavy']) assert.equal(getCostumeNativeFacing('abstractinggangle', slot), 1, slot);
+  assert.equal(getCostumeNativeFacing('abstractinggangle', 'unpublished'), 1, 'unknown slots preserve the historical default');
+  for (const id of ['gangle', 'smilingtragedygangle', 'beachpomni', 'not-published']) {
+    for (const slot of ['selection', 'stance', 'intro', 'attack', 'heavy', 'hit', 'walk', 'jump', 'crouch', 'victory', 'defeat']) {
+      assert.equal(getCostumeNativeFacing(id, slot), 1, id + '/' + slot);
+    }
+  }
+});
+
+test('runtime directions agree with the individually reviewed completion records for all ninety-nine resumed drawings', () => {
+  const completion = JSON.parse(readFileSync(new URL('../docs/art-generation/cast-resumption-20261120/generation-completion.json', import.meta.url)));
+  const reviewed = completion.appearances.flatMap(appearance => appearance.files.map(file => ({
+    appearanceId: appearance.id, slot: file.slot, nativeFacing: file.nativeFacing,
+  })));
+  assert.equal(reviewed.length, 99);
+  assert.equal(new Set(reviewed.map(file => file.appearanceId + '/' + file.slot)).size, 99);
+  // The review is independent of runtime metadata. This also prevents confusing
+  // the crystalline two-mask Gangle with the right-facing smiling tragedy mask.
+  for (const file of reviewed) {
+    assert.ok(file.nativeFacing === 'left' || file.nativeFacing === 'right');
+    assert.equal(getCostumeNativeFacing(file.appearanceId, file.slot), file.nativeFacing === 'left' ? -1 : 1,
+      file.appearanceId + '/' + file.slot + ': use the direction of this reviewed image');
+  }
 });

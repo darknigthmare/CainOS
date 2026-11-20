@@ -1,0 +1,82 @@
+{
+  "schema": "encore-native-art-resumption/v1",
+  "id": "abstractinggangle-defeat",
+  "appearanceId": "abstractinggangle",
+  "slot": "defeat",
+  "file": "docs/art-generation/cast-resumption-20261120/generated/abstractinggangle/defeat.png",
+  "targetFile": "assets/encore/poses/abstractinggangle/defeat.png",
+  "method": "image_gen.imagegen",
+  "sourceGenerationId": "exec-4b0788dc-2bcf-403b-ac9f-e9f17fbe3194",
+  "nativeSourceFile": "/workspace/scratch/5f5114b49696/generated_images/exec-4b0788dc-2bcf-403b-ac9f-e9f17fbe3194.png",
+  "prompt": "Use case: identity-preserve. Asset type: ONE individual full-body transparent 2D fighting-game action sprite of ABSTRACTING GANGLE. Reference 1 is the approved strict design lock for silhouette, proportions, exact transformation patches, eyes, colours and polished cel shading. Reference 2 supplies official design details only; do not imitate its squat toy proportions, setting or lighting. ONE compact hunched crystal quadruped with FOUR short angular feet/legs, dark faceted body carrying concentric pastel eyes, RED ribbon loops over the back. Two WHITE MASKS attached to this one connected creature: broken comedy mask and smaller tragedy mask with TWO BLUE TEARS. Both masks have concentric pastel eyes and purple mouths. Preserve their positions and every distinctive feature. No normal humanoid ribbon torso, no separate second creature and no human limbs. Create a genuinely distinct natural action pose, not a mirrored/cropped selection image. Every limb, crown/hat/ear tip, attached mask and crystal spike must fit fully inside clear transparent margins on ALL sides. One connected character, crisp detailed 2D art on true transparent RGBA; no scenery, floor, cast shadow, aura, glow, particles, labels, watermark, inset or duplicate. POSE: DEFEAT: compact crystal quadruped slumped gently onto one side, all four feet folded and visible, both masks tilted low but attached and intact, red loops relaxed. No fragmentation, blood, second character or ground.",
+  "transparent_background": true,
+  "referencePaths": [
+    "docs/art-generation/cast-continuation-20261120/pending-assets/abstractinggangle/selection.png",
+    "docs/art-generation/cast-continuation-20261120/references/official-AbstractedGangle.png"
+  ],
+  "portableReferences": [
+    {
+      "position": 1,
+      "kind": "repository-asset",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractinggangle/selection.png",
+      "sha256": "43a18bb3468f0c4283534b1c05480036aed89b78885be721d5290b463eb36ed2",
+      "bytes": 1626561
+    },
+    {
+      "position": 2,
+      "kind": "official-source-reference",
+      "file": "docs/art-generation/cast-continuation-20261120/references/official-AbstractedGangle.png",
+      "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedGangle.png?v=1780353721",
+      "pageUrl": "https://glitchproductions.store/products/abstraction-animiniz",
+      "sha256": "5f730457979bf67bafefe369e9adbf76cf42faf0601667d1154ede2cee78cedc",
+      "bytes": 2869610,
+      "restoreInstruction": "The exact reference is archived in this repository. If unavailable, download the named official image URL, verify and visually inspect it before generation. For an expired storyboard URL, refresh the storyboard through the official episode player metadata."
+    }
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/abstraction-animiniz",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractedGangle.png?v=1780353721"
+  ],
+  "sourceType": "official-merchandise",
+  "episodeFidelityClaim": false,
+  "sha256": "dda58efed31926afb53782ca8f52faddc49f7a457565deec71539c1ccc954e03",
+  "bytes": 1667908,
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "alpha12Bounds": [
+    101,
+    90,
+    1399,
+    955
+  ],
+  "nativeCopyVerified": true,
+  "nativePixelsUnmodified": true,
+  "createdAt": "2026-11-20T08:27:46.505321+00:00",
+  "visualReviewAt": "2026-11-20T08:27:46.505321+00:00",
+  "visualReview": {
+    "reviewer": "generate_gangle_zooble",
+    "status": "accepted",
+    "observations": [
+      "The same connected crystal quadruped is slumped low with folded angular legs; the farther rear leg is partly occluded. Both masks tilt down and remain attached and intact, with the tragedy's two blue tears and the comedy fracture retained. Red back loops relax and eye motifs remain on the crystal body. The front and large mask point LEFT. Complete character contours fit within transparent margins; no fragmentation or separate character."
+    ],
+    "scope": "Approved reference identity and sprite technical fit; not canonical episode certification."
+  },
+  "nativeFacing": "left",
+  "status": "accepted_native",
+  "productionStatus": "awaiting-integration",
+  "includedInRuntime": false,
+  "priorInterruptedAttempt": {
+    "observedAt": "2026-11-20T08:25:15Z",
+    "status": "no-output-path-captured-during-execution-environment-interruption",
+    "savedFile": false,
+    "newNativeFileFound": false,
+    "note": "The attempt result lacked output_hint and the execution environment became unavailable. After the environment returned, no native file newer than the preceding victory output existed. This receipt records the successful retry only."
+  }
+}

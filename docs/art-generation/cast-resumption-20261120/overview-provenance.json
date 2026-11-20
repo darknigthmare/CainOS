@@ -1,0 +1,96 @@
+{
+  "schema": "encore-review-overview/v1",
+  "method": "Contact sheet of production Canvas portrait renders, cropped from the review JPEGs; native source PNGs unmodified.",
+  "inputs": [
+    {
+      "file": "docs/art-generation/cast-resumption-20261120/canvas/smilingtragedygangle/archive-portraits-01.jpg",
+      "sha256": "36c25b588e1c9cb907ea03915d84c0828ca965ec71a8bc60ba63370e24f70675",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 240,
+        "height": 254
+      }
+    },
+    {
+      "file": "docs/art-generation/cast-resumption-20261120/canvas/abstractingpomni/archive-portraits-01.jpg",
+      "sha256": "436c3a75f8827b2baba7038f3f6efcf788b276aa8291b6f56d1d287c0bf26a0f",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 240,
+        "height": 254
+      }
+    },
+    {
+      "file": "docs/art-generation/cast-resumption-20261120/canvas/abstractingjax/archive-portraits-01.jpg",
+      "sha256": "b52a047ec464b12bb854c10fdabae2ac51018551565c48280591080c78328298",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 240,
+        "height": 254
+      }
+    },
+    {
+      "file": "docs/art-generation/cast-resumption-20261120/canvas/abstractingragatha/archive-portraits-01.jpg",
+      "sha256": "c77f5826c3ef851eb1306c28ef502073628810b5f606fabb317786efac7e2fd3",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 240,
+        "height": 254
+      }
+    },
+    {
+      "file": "docs/art-generation/cast-resumption-20261120/canvas/abstractingkinger/archive-portraits-01.jpg",
+      "sha256": "5844e4231aa21ae0018e9a549b7ddaf6aa92a92568bc21c49b64bdcdd53981c0",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 240,
+        "height": 254
+      }
+    },
+    {
+      "file": "docs/art-generation/cast-resumption-20261120/canvas/abstractinggangle/archive-portraits-01.jpg",
+      "sha256": "496c81c0472db549b2b48de2c802940daa761d026c601880d3e92e8c578f1bc3",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 240,
+        "height": 254
+      }
+    },
+    {
+      "file": "docs/art-generation/cast-resumption-20261120/canvas/abstractingzooble/archive-portraits-01.jpg",
+      "sha256": "66e726e11ed89519b98bbd7a7336460e815434b7ab6d5b1f09278f788b4eab3f",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 240,
+        "height": 254
+      }
+    },
+    {
+      "file": "docs/art-generation/cast-resumption-20261120/canvas/abstractingqueenie/archive-portraits-01.jpg",
+      "sha256": "be4d78c1f203d4d54596a64ff41d05b2e68057ed0b78ed4d37fb714b1ac031bd",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 240,
+        "height": 254
+      }
+    },
+    {
+      "file": "docs/art-generation/cast-resumption-20261120/canvas/zoobleep5/archive-portraits-01.jpg",
+      "sha256": "b708865071188fd73632d51abdc304c686ac63adf3cc6962f8df3f736ef66ae2",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 240,
+        "height": 254
+      }
+    }
+  ]
+}

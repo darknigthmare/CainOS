@@ -1,0 +1,76 @@
+{
+  "schema": "encore-native-art-resumption/v1",
+  "appearanceId": "abstractingpomni",
+  "slot": "attack",
+  "id": "abstractingpomni-attack",
+  "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingpomni/attack.png",
+  "targetFile": "assets/encore/poses/abstractingpomni/attack.png",
+  "sourceGenerationId": "exec-293851ad-8601-46ab-b142-ccd30b99e02a",
+  "method": "image_gen.imagegen",
+  "prompt": "Use case: identity-preserve. Asset type: ONE individual full-body transparent 2D fighting-game action sprite of ABSTRACTING POMNI. Reference 1 is the approved strict design lock for silhouette, proportions, exact transformation patches, eyes, colours and polished cel shading. Reference 2 supplies official design details only; do not imitate its squat toy proportions, setting or lighting. Slender Pomni with red-blue jester hat and suit, yellow trims/buttons, pale face with one normal red-blue pinwheel iris and brown bob. Opposing half of face/hat is dark angular crystal with flat pastel concentric eyes; one arm/hand is crystal, opposite hand is blue glove. Normal RED shoe and opposing CRYSTAL eye-bearing foot MUST stay on the same anatomical sides as the approved selection. Do not swap, mirror or redistribute the transformation. Preserve all individual eye-bearing hat growths and asymmetric patches; not fully abstracted. Create a genuinely distinct natural action pose, not a mirrored/cropped selection image. Every limb, crown/hat/ear tip, attached mask and crystal spike must fit fully inside clear transparent margins on ALL sides. One connected character, crisp detailed 2D art on true transparent RGBA; no scenery, floor, cast shadow, aura, glow, particles, labels, watermark, inset or duplicate. POSE: FAST ATTACK toward screen RIGHT: clear forward lunge and a straight leading-hand strike at chest height, rear hand held back as guard, front knee bent, back leg extended. No target or impact effect.",
+  "referencePaths": [
+    "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingpomni/selection.png",
+    "docs/art-generation/cast-continuation-20261120/references/official-AbstractPomni.png"
+  ],
+  "portableReferences": [
+    {
+      "position": 1,
+      "kind": "repository-asset",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingpomni/selection.png",
+      "sha256": "6e069cab81e5ee75d6b98c8fbca2a8ba7fda6949cb78923fd0e2b8a08168ee4a",
+      "bytes": 1217005
+    },
+    {
+      "position": 2,
+      "kind": "official-source-reference",
+      "file": "docs/art-generation/cast-continuation-20261120/references/official-AbstractPomni.png",
+      "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractPomni.png?v=1780353721",
+      "pageUrl": "https://glitchproductions.store/products/abstraction-animiniz",
+      "sha256": "914230b23c0c5c733c68d2e2e1f96e94d860eb1d2eacbb5a41d1c9824e27de42",
+      "bytes": 3429140,
+      "restoreInstruction": "The exact reference is archived in this repository. If unavailable, download the named official image URL, verify and visually inspect it before generation. For an expired storyboard URL, refresh the storyboard through the official episode player metadata."
+    }
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/abstraction-animiniz",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractPomni.png?v=1780353721"
+  ],
+  "sourceKind": "Produit dérivé officiel",
+  "episodeFidelityClaim": false,
+  "checkpointFile": "docs/art-generation/cast-continuation-20261120/generation-resume.json",
+  "nativeSourceFile": "/workspace/scratch/5f5114b49696/generated_images/exec-293851ad-8601-46ab-b142-ccd30b99e02a.png",
+  "transparent_background": true,
+  "nativeFacing": "right",
+  "visualReview": {
+    "reviewer": "generate_pomni_kinger",
+    "status": "accepted",
+    "observations": [
+      "Clear right-facing forward lunge and leading blue-gloved palm strike, crystal rear fist held as guard.",
+      "Normal red shoe stays on the rear leg and the opposite eye-bearing crystal foot is forward; asymmetric hat, face and arm design retained.",
+      "One complete figure, all hat tips, hands and feet inside the canvas; native alpha is inspected separately from background RGB."
+    ],
+    "scope": "Approved reference identity and native sprite fit; no canonical episode certification."
+  },
+  "status": "accepted_native",
+  "includedInRuntime": false,
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "alpha12Bounds": [
+    67,
+    7,
+    1386,
+    1011
+  ],
+  "fullyTransparentPixels": 1069604,
+  "sha256": "6149bd804d336e9e08039e5ebd2faa35c8e46ac54e131d77920bb09294b840e7",
+  "bytes": 1672355,
+  "nativeCopyVerified": true,
+  "createdAt": "2026-11-20T08:18:59.343403+00:00"
+}

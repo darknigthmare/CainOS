@@ -1,4 +1,5 @@
 import { ART_FILES } from './offline-manifest.mjs';
+import { getCostumeNativeFacing } from './costume-resumption-20261120.mjs';
 
 const published = new Set(ART_FILES);
 const frames = { selection: new Map(), stance: new Map(), poses: new Map() };
@@ -51,7 +52,7 @@ export function campaignIllustration(fighterId, panelId) {
   return path ? new URL(path, import.meta.url).href : null;
 }
 
-async function readFrame(path, kind) {
+async function readFrame(path, kind, nativeFacing) {
   const image = new Image();
   image.src = new URL(path, import.meta.url).href;
   try {
@@ -74,7 +75,7 @@ async function readFrame(path, kind) {
     }
     if (right < left || bottom < top) return null;
     const bounds = { x: left, y: top, width: right - left + 1, height: bottom - top + 1 };
-    return { canvas, x: 0, y: 0, width: canvas.width, height: canvas.height, bounds, nativeFacing: 1 };
+    return { canvas, x: 0, y: 0, width: canvas.width, height: canvas.height, bounds, nativeFacing };
   } catch { return null; }
   finally { image.removeAttribute('src'); }
 }
@@ -101,7 +102,8 @@ export function loadFighterIllustration(kind, fighter, pose) {
     retryAt.delete(path);
   }
   if (!pending.has(path)) {
-    const task = decoders[nextDecoder].then(() => readFrame(path, kind)).then(frame => {
+    const nativeFacing = getCostumeNativeFacing(appearanceId, kind === 'poses' ? pose : kind);
+    const task = decoders[nextDecoder].then(() => readFrame(path, kind, nativeFacing)).then(frame => {
       if (frame) {
         if (cache.size >= limits[kind].count) cache.delete(cache.keys().next().value);
         cache.set(key, frame);

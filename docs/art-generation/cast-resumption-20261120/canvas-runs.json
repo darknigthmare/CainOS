@@ -1,0 +1,159 @@
+{
+  "createdAt": "2026-11-20T08:56:51.706989+00:00",
+  "processIsolation": "One sequential process per appearance to bound native canvas memory",
+  "runs": [
+    {
+      "appearanceId": "smilingtragedygangle",
+      "command": [
+        "node",
+        "scripts/render-combat-character-review.mjs",
+        "--costume-additions",
+        "--introduced-on",
+        "2026-11-20",
+        "--appearance",
+        "smilingtragedygangle",
+        "--output",
+        "docs/art-generation/cast-resumption-20261120/canvas/smilingtragedygangle",
+        "--report",
+        "docs/COMBAT_CAST_RESUMPTION_2026-11-20.md"
+      ],
+      "exitCode": 0
+    },
+    {
+      "appearanceId": "abstractingpomni",
+      "command": [
+        "node",
+        "scripts/render-combat-character-review.mjs",
+        "--costume-additions",
+        "--introduced-on",
+        "2026-11-20",
+        "--appearance",
+        "abstractingpomni",
+        "--output",
+        "docs/art-generation/cast-resumption-20261120/canvas/abstractingpomni",
+        "--report",
+        "docs/COMBAT_CAST_RESUMPTION_2026-11-20.md"
+      ],
+      "exitCode": 0
+    },
+    {
+      "appearanceId": "abstractingjax",
+      "command": [
+        "node",
+        "scripts/render-combat-character-review.mjs",
+        "--costume-additions",
+        "--introduced-on",
+        "2026-11-20",
+        "--appearance",
+        "abstractingjax",
+        "--output",
+        "docs/art-generation/cast-resumption-20261120/canvas/abstractingjax",
+        "--report",
+        "docs/COMBAT_CAST_RESUMPTION_2026-11-20.md"
+      ],
+      "exitCode": 0
+    },
+    {
+      "appearanceId": "abstractingragatha",
+      "command": [
+        "node",
+        "scripts/render-combat-character-review.mjs",
+        "--costume-additions",
+        "--introduced-on",
+        "2026-11-20",
+        "--appearance",
+        "abstractingragatha",
+        "--output",
+        "docs/art-generation/cast-resumption-20261120/canvas/abstractingragatha",
+        "--report",
+        "docs/COMBAT_CAST_RESUMPTION_2026-11-20.md"
+      ],
+      "exitCode": 0
+    },
+    {
+      "appearanceId": "abstractingkinger",
+      "command": [
+        "node",
+        "scripts/render-combat-character-review.mjs",
+        "--costume-additions",
+        "--introduced-on",
+        "2026-11-20",
+        "--appearance",
+        "abstractingkinger",
+        "--output",
+        "docs/art-generation/cast-resumption-20261120/canvas/abstractingkinger",
+        "--report",
+        "docs/COMBAT_CAST_RESUMPTION_2026-11-20.md"
+      ],
+      "exitCode": 0
+    },
+    {
+      "appearanceId": "abstractinggangle",
+      "command": [
+        "node",
+        "scripts/render-combat-character-review.mjs",
+        "--costume-additions",
+        "--introduced-on",
+        "2026-11-20",
+        "--appearance",
+        "abstractinggangle",
+        "--output",
+        "docs/art-generation/cast-resumption-20261120/canvas/abstractinggangle",
+        "--report",
+        "docs/COMBAT_CAST_RESUMPTION_2026-11-20.md"
+      ],
+      "exitCode": 0
+    },
+    {
+      "appearanceId": "abstractingzooble",
+      "command": [
+        "node",
+        "scripts/render-combat-character-review.mjs",
+        "--costume-additions",
+        "--introduced-on",
+        "2026-11-20",
+        "--appearance",
+        "abstractingzooble",
+        "--output",
+        "docs/art-generation/cast-resumption-20261120/canvas/abstractingzooble",
+        "--report",
+        "docs/COMBAT_CAST_RESUMPTION_2026-11-20.md"
+      ],
+      "exitCode": 0
+    },
+    {
+      "appearanceId": "abstractingqueenie",
+      "command": [
+        "node",
+        "scripts/render-combat-character-review.mjs",
+        "--costume-additions",
+        "--introduced-on",
+        "2026-11-20",
+        "--appearance",
+        "abstractingqueenie",
+        "--output",
+        "docs/art-generation/cast-resumption-20261120/canvas/abstractingqueenie",
+        "--report",
+        "docs/COMBAT_CAST_RESUMPTION_2026-11-20.md"
+      ],
+      "exitCode": 0
+    },
+    {
+      "appearanceId": "zoobleep5",
+      "command": [
+        "node",
+        "scripts/render-combat-character-review.mjs",
+        "--costume-additions",
+        "--introduced-on",
+        "2026-11-20",
+        "--appearance",
+        "zoobleep5",
+        "--output",
+        "docs/art-generation/cast-resumption-20261120/canvas/zoobleep5",
+        "--report",
+        "docs/COMBAT_CAST_RESUMPTION_2026-11-20.md"
+      ],
+      "exitCode": 0
+    }
+  ]
+}

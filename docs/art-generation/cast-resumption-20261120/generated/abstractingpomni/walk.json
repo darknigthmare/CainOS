@@ -1,0 +1,80 @@
+{
+  "schema": "encore-native-art-resumption/v1",
+  "method": "image_gen.imagegen",
+  "episodeFidelityClaim": false,
+  "checkpointFile": "docs/art-generation/cast-continuation-20261120/generation-resume.json",
+  "transparent_background": true,
+  "nativeFacing": "right",
+  "status": "accepted_native",
+  "includedInRuntime": false,
+  "appearanceId": "abstractingpomni",
+  "slot": "walk",
+  "id": "abstractingpomni-walk",
+  "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingpomni/walk.png",
+  "targetFile": "assets/encore/poses/abstractingpomni/walk.png",
+  "sourceGenerationId": "exec-2547c9ca-dafa-4474-bc01-1da9ada4f6b0",
+  "nativeSourceFile": "/workspace/scratch/5f5114b49696/generated_images/exec-2547c9ca-dafa-4474-bc01-1da9ada4f6b0.png",
+  "prompt": "Use case: precise-object-edit. Reference 1 is the full-body walking game sprite to correct. Reference 2 is the approved identity design. Change ONLY the two shoes in reference 1, correcting their anatomical assignment. Keep every other pixel-level design feature, pose, head, face, hat, eyes, crystal arm, blue glove, costume, white legs, yellow cuffs, colours, shading and canvas framing unchanged. In this walking pose the NEAR leg beneath the large visible red/blue puffed hip advances toward screen RIGHT: its forward shoe at the LOWER RIGHT must be the normal rounded RED jester shoe, with its yellow cuff. The FAR leg trails toward screen LEFT: its rear shoe at the LOWER LEFT must be the dark angular CRYSTAL shoe with the pastel concentric eye and spikes, with its yellow cuff. The first version kept the shoes on their original screen sides despite the legs changing positions; fix the shoes only, do not mirror the character or move the legs. Preserve exact shoe design/material from reference 2, adapting naturally to the already drawn foot orientations. One complete character, all hat tips, hands, crystal spikes and shoes fully inside transparent margins. Genuine transparent RGBA, no backdrop, halo, glow, floor, shadow, particles, text or additional objects.",
+  "checkpointPrompt": "Use case: identity-preserve. Asset type: ONE individual full-body transparent 2D fighting-game action sprite of ABSTRACTING POMNI. Reference 1 is the approved strict design lock for silhouette, proportions, exact transformation patches, eyes, colours and polished cel shading. Reference 2 supplies official design details only; do not imitate its squat toy proportions, setting or lighting. Slender Pomni with red-blue jester hat and suit, yellow trims/buttons, pale face with one normal red-blue pinwheel iris and brown bob. Opposing half of face/hat is dark angular crystal with flat pastel concentric eyes; one arm/hand is crystal, opposite hand is blue glove. Normal RED shoe and opposing CRYSTAL eye-bearing foot MUST stay on the same anatomical sides as the approved selection. Do not swap, mirror or redistribute the transformation. Preserve all individual eye-bearing hat growths and asymmetric patches; not fully abstracted. Create a genuinely distinct natural action pose, not a mirrored/cropped selection image. Every limb, crown/hat/ear tip, attached mask and crystal spike must fit fully inside clear transparent margins on ALL sides. One connected character, crisp detailed 2D art on true transparent RGBA; no scenery, floor, cast shadow, aura, glow, particles, labels, watermark, inset or duplicate. POSE: WALK toward screen RIGHT: natural long stride with one foot forward and opposing arm swing, rear heel lifting, torso balanced. Distinct walking pose, not neutral standing.",
+  "referencePaths": [
+    "docs/art-generation/cast-resumption-20261120/generated/abstractingpomni/walk-v1.png",
+    "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingpomni/selection.png"
+  ],
+  "portableReferences": [
+    {
+      "position": 1,
+      "kind": "generated-correction-input",
+      "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingpomni/walk-v1.png",
+      "sha256": "ad27cc8285ac49ed5e592a0a56b95116d4414b42bddf90c4211cd5b6cc032275",
+      "bytes": 1083853
+    },
+    {
+      "position": 2,
+      "kind": "repository-asset",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingpomni/selection.png",
+      "sha256": "6e069cab81e5ee75d6b98c8fbca2a8ba7fda6949cb78923fd0e2b8a08168ee4a",
+      "bytes": 1217005
+    }
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/abstraction-animiniz",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractPomni.png?v=1780353721"
+  ],
+  "sourceKind": "Produit dérivé officiel",
+  "rejectedAttempts": [
+    {
+      "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingpomni/walk-v1.png",
+      "reason": "Foot transformation followed screen sides instead of the near/far anatomical legs in the walking pose."
+    }
+  ],
+  "visualReview": {
+    "reviewer": "generate_pomni_kinger",
+    "status": "accepted",
+    "observations": [
+      "Targeted native correction restores the normal red shoe to the near leg advancing right; the opposing far leg trails left with its eye-bearing crystal shoe.",
+      "Arm swing is now contralateral to the actual anatomical foot assignment; hat, face, blue glove and crystal arm remain unchanged in design.",
+      "Full natural walking silhouette, all tips and feet within alpha margins; original rejected attempt remains preserved for provenance."
+    ],
+    "scope": "Approved reference identity and native sprite fit; no canonical episode certification."
+  },
+  "dimensions": [
+    1129,
+    1393
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "alpha12Bounds": [
+    64,
+    10,
+    1007,
+    1337
+  ],
+  "fullyTransparentPixels": 1030342,
+  "sha256": "6dc2df262b6bb1735227b09b773bd7f7b3810492b7dcd0af83e1fe98738601a8",
+  "bytes": 1074729,
+  "nativeCopyVerified": true,
+  "createdAt": "2026-11-20T08:27:02.061516+00:00"
+}

@@ -1,0 +1,68 @@
+{
+  "schema": "encore-native-art-resumption/v1",
+  "id": "abstractingzooble-hit",
+  "appearanceId": "abstractingzooble",
+  "slot": "hit",
+  "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingzooble/hit.png",
+  "targetFile": "assets/encore/poses/abstractingzooble/hit.png",
+  "method": "image_gen.imagegen",
+  "sourceGenerationId": "exec-03c34987-e5e5-4eec-b9dc-0fd649aa1cbe",
+  "nativeSourceFile": "/workspace/scratch/5f5114b49696/generated_images/exec-03c34987-e5e5-4eec-b9dc-0fd649aa1cbe.png",
+  "prompt": "Use case: identity-preserve. Create ONE individual full-body transparent 2D character sprite of ABSTRACTING ZOOBLE, using the attached approved selection image as the sole exact design reference. Keep its proportions, distinctive asymmetric assembly, colours and polished cel shading. Mouthless pink triangular head, viewer-left half crystalline with one concentric pastel crystal eye and viewer-right normal white eye; checkered Y-shaped antenna and crystal lightning crest. Yellow spotted oval torso, exactly ONE cyan ring at the ORANGE arm's chest joint, pink rear wing and crystal shoulder/back star. Red curled arm with a crystal hand, attached without a cyan ring, and opposite orange arm with a yellow hand. One long blue leg and shoe, and opposite cyan lower leg with pink ankle collar and crystal foot with eye-bearing rear growth. Do not add any parts or duplicate the cyan ring.\nPOSE: A neutral, surprised balance-recovery gesture. Zooble simply loses balance for a moment while standing: torso leans backward toward screen left, knees flex, both feet remain close to the ground, and the two arms open naturally to regain balance. Head and gaze turn toward screen RIGHT with a mildly surprised expression through the eyes only, still no mouth. Keep all components intact and connected. The moment is calm and playful, with no other character or event depicted.\nOne distinct complete character only. Every hand, foot, antenna and crystal tip stays fully inside generous clear transparent margins on all sides. Crisp detailed 2D art on true transparent RGBA. No background, scenery, floor, cast shadow, aura, glow, motion marks, particles, text, watermark, inset or duplicate.",
+  "transparent_background": true,
+  "referencePaths": [
+    "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingzooble/selection.png"
+  ],
+  "portableReferences": [
+    {
+      "position": 1,
+      "kind": "repository-asset",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingzooble/selection.png",
+      "sha256": "31670c334103a7ed2b5b21302af2268b9a6943d7f388c79c8201b1d516274dad",
+      "bytes": 1154706
+    }
+  ],
+  "sourceURLs": [],
+  "sourceType": "approved-repository-selection",
+  "episodeFidelityClaim": false,
+  "sha256": "b8f606220d71a6ef37b545635a65418b494d6eeda38f35362d447408229fcfc0",
+  "bytes": 1106562,
+  "dimensions": [
+    1199,
+    1312
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "alpha12Bounds": [
+    82,
+    13,
+    1072,
+    1296
+  ],
+  "nativeCopyVerified": true,
+  "nativePixelsUnmodified": true,
+  "createdAt": "2026-11-20T08:49:52.121292+00:00",
+  "visualReviewAt": "2026-11-20T08:49:52.121292+00:00",
+  "visualReview": {
+    "reviewer": "generate_gangle_zooble",
+    "status": "accepted",
+    "observations": [
+      "Distinct neutral balance-recovery pose: both knees flexed, torso leaning slightly toward screen left, both hands opened to regain balance, eyes looking screen right with raised brow. No other character or event depicted. Exactly one cyan ring at orange arm; red curled arm has no cyan attachment. Approved mouthless head, checkered antenna, crystal crest/star, spotted torso, rear pink wing, mismatched complete legs and eye-bearing rear crystal growth retained. Entire connected character fits with clear margins. Accepted as the neutral surprised alternative for this runtime slot; original blocked output was not inspected or recreated."
+    ],
+    "scope": "Approved reference identity and sprite technical fit; not canonical episode certification."
+  },
+  "nativeFacing": "right",
+  "status": "accepted_native",
+  "productionStatus": "awaiting-integration",
+  "includedInRuntime": false,
+  "originalQueuedPrompt": "Use case: identity-preserve. Asset type: ONE individual full-body transparent 2D fighting-game action sprite of ABSTRACTING ZOOBLE. Reference 1 is the approved strict design lock for silhouette, proportions, exact transformation patches, eyes, colours and polished cel shading. Reference 2 supplies official design details only; do not imitate its squat toy proportions, setting or lighting. Mouthless colourful geometric Zooble: pink triangle head half crystalline with one normal white eye and one concentric pastel crystal eye, checkered antenna and crystal lightning crest, yellow spotted oval torso/cyan chest ring, pink rear wing, red curly arm with crystal hand and opposite orange/yellow arm, one normal long blue leg/foot and one crystal lower foot with rear eye-bearing growth. Preserve exact approved asymmetric assembly, no mouth or extra limbs. Create a genuinely distinct natural action pose, not a mirrored/cropped selection image. Every limb, crown/hat/ear tip, attached mask and crystal spike must fit fully inside clear transparent margins on ALL sides. One connected character, crisp detailed 2D art on true transparent RGBA; no scenery, floor, cast shadow, aura, glow, particles, labels, watermark, inset or duplicate. POSE: HIT REACTION: recoiling backward toward screen LEFT while still oriented RIGHT, shoulders pulled back, torso arched, one foot skids forward and arms splay defensively. No injury, blood, attacker or impact effect.",
+  "alternativePoseIntent": "distinct neutral surprised balance-recovery gesture; no depiction of a strike or attacker",
+  "priorBlockedAttempt": {
+    "receipt": "docs/art-generation/cast-resumption-20261120/generated/abstractingzooble/attempts/hit-output-moderation.json",
+    "requestId": "9aba2781-b874-44f1-8bef-d914dcea6e4d",
+    "scope": "Original output was blocked and not received or inspected. This is a separate neutral pose from the approved selection, not a reproduction of that output."
+  }
+}

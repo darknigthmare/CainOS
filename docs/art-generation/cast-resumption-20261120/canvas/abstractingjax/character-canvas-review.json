@@ -1,0 +1,219 @@
+{
+  "schema": "encore-character-canvas-review/v1",
+  "createdAt": "2026-11-20T08:56:40.134Z",
+  "method": "Production Canvas2D modules executed by Node and native Skia; actual drawImage sources and transforms inspected.",
+  "limitations": [
+    "No browser, DOM, input, audio, service-worker or physical-device test.",
+    "Individual static poses do not establish frame-by-frame animation.",
+    "Asset identity/proportion fidelity requires separate visual review; no canonical 1:1 certification."
+  ],
+  "partial": false,
+  "additionsOnly": true,
+  "introducedOn": "2026-11-20",
+  "appearanceId": "abstractingjax",
+  "sources": {
+    "combat/data.mjs": "6910aaddf46645f98520f4cc6fb468c2bc43b6dd017d9237266a90f6c1bf892b",
+    "combat/costume-additions.mjs": "1aa4eabd6c27765bb087b7cf18a71f5bb6dacd385f10e2ebc442edbc7c420eda",
+    "combat/costume-continuation-20261120.mjs": "d3774d17d6058e72081cc7a236f748fc26cc2532fe94ddf772e9ad6de638eb0f",
+    "combat/costume-resumption-20261120.mjs": "5fc7997877eeab8a7b4e68b3a25e3be265abf0082755f02ed9b4b0657557a52e",
+    "combat/illustrations.mjs": "26aca8338be81bedbbbc1bb4bc59dd0aae8b7b7ef4d785cbbf353ac109c53b99",
+    "combat/render.mjs": "91cdc8a8a4b5298644809714aa7e53219e1266e2ffc95478194a699a7bc1212f",
+    "combat/render-poses.mjs": "21e3afba8c19723ffdcb383402cc6339b63cb58df5d4323fda2ebde093ce0b29",
+    "combat/offline-manifest.mjs": "ba853b6eb9bb8eb9ef8f0d49b46cebbec6214fbc84abacf5b3aba3cef53ae423",
+    "scripts/render-combat-character-review.mjs": "59e623f407e86dd639053f090d1bb8a0bc01a39dc04a441e3e08b737fe39f250"
+  },
+  "actions": [
+    {
+      "id": "abstractingjax",
+      "pose": "intro",
+      "file": "assets/encore/poses/abstractingjax/intro.png",
+      "sha256": "e31477fe92c0676bb89a10dbd81d50d3c700077581d21f93afe452b8a7524227",
+      "bytes": 1534805,
+      "visibleBounds": {
+        "x": 40,
+        "y": 5,
+        "width": 328,
+        "height": 627
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "abstractingjax",
+      "pose": "attack",
+      "file": "assets/encore/poses/abstractingjax/attack.png",
+      "sha256": "9cae49ee9543bf3bcf12b80963238d1a36daca4b8fbf6a2d80c299439e1d6de0",
+      "bytes": 1460039,
+      "visibleBounds": {
+        "x": 40,
+        "y": 5,
+        "width": 553,
+        "height": 417
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "abstractingjax",
+      "pose": "hit",
+      "file": "assets/encore/poses/abstractingjax/hit.png",
+      "sha256": "0bc878651e66492447aeda41756418fb4660e06d39cda0c5989887eabee1542f",
+      "bytes": 816820,
+      "visibleBounds": {
+        "x": 12,
+        "y": 5,
+        "width": 533,
+        "height": 627
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "abstractingjax",
+      "pose": "walk",
+      "file": "assets/encore/poses/abstractingjax/walk.png",
+      "sha256": "41f90c05460090d4e7a1c40d6c5f4303a55208119e65e752f30f36cfb700fa49",
+      "bytes": 680205,
+      "visibleBounds": {
+        "x": 64,
+        "y": 3,
+        "width": 457,
+        "height": 629
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "abstractingjax",
+      "pose": "jump",
+      "file": "assets/encore/poses/abstractingjax/jump.png",
+      "sha256": "9a370aa1a29b02affb056ca8bca6719a4803ee772c9f7fcf821f4c907c67c094",
+      "bytes": 907807,
+      "visibleBounds": {
+        "x": 21,
+        "y": 3,
+        "width": 599,
+        "height": 542
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "abstractingjax",
+      "pose": "crouch",
+      "file": "assets/encore/poses/abstractingjax/crouch.png",
+      "sha256": "dc6016efaaa4410c0762c731a5615d83840fd02c237600082cccc41139b260e2",
+      "bytes": 795973,
+      "visibleBounds": {
+        "x": 57,
+        "y": 12,
+        "width": 518,
+        "height": 567
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "abstractingjax",
+      "pose": "victory",
+      "file": "assets/encore/poses/abstractingjax/victory.png",
+      "sha256": "ebadaa82d7aff3c20d43fad5b9af60d319b1dc10b682267dadf715984b736bd9",
+      "bytes": 1501780,
+      "visibleBounds": {
+        "x": 65,
+        "y": 6,
+        "width": 295,
+        "height": 628
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "abstractingjax",
+      "pose": "defeat",
+      "file": "assets/encore/poses/abstractingjax/defeat.png",
+      "sha256": "d49bd959f77bf3676e8be92d3166f0eac22f2e3e5ef59144b772330447f451d5",
+      "bytes": 1462902,
+      "visibleBounds": {
+        "x": 90,
+        "y": 7,
+        "width": 464,
+        "height": 414
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "abstractingjax",
+      "pose": "heavy",
+      "file": "assets/encore/poses/abstractingjax/heavy.png",
+      "sha256": "fd3ddc7f7284bb976cfdeb3fcc417913670e2e69904d63626904b3cdc151f4e5",
+      "bytes": 1515426,
+      "visibleBounds": {
+        "x": 49,
+        "y": 4,
+        "width": 493,
+        "height": 419
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    }
+  ],
+  "stances": [
+    {
+      "id": "abstractingjax",
+      "file": "assets/encore/stance/abstractingjax.png",
+      "sha256": "d7a4e585d3512aebbc6e3641be20ebcd7c17ef2c47f796c2d47f62d7f27cdd05",
+      "bytes": 723421,
+      "nativeFacing": 1,
+      "rendered": true,
+      "bothFacings": true
+    }
+  ],
+  "portraits": [
+    {
+      "id": "abstractingjax",
+      "archiveId": null,
+      "file": "assets/encore/selection/abstractingjax.png",
+      "sha256": "1182d079c3dd9649c5b43b2781be6863a3ec0b0b04fbb7d60a10fba85b6d4534",
+      "bytes": 1405678,
+      "rendered": true
+    }
+  ],
+  "missing": [],
+  "sheets": [
+    "actions-abstractingjax.jpg",
+    "archive-portraits-01.jpg"
+  ],
+  "browserTestStatus": "not_executed",
+  "counts": {
+    "appearances": 1,
+    "expectedActions": 9,
+    "actions": 9,
+    "stances": 1,
+    "drawChecks": 20,
+    "archiveEntries": 0,
+    "portraits": 1,
+    "expectedPortraits": 1,
+    "missing": 0
+  },
+  "complete": true
+}

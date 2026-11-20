@@ -15,7 +15,34 @@ The playable game version is **0.7.0**. The GLITCH wardrobe was updated on **18 
 - Controls, architecture, references and remaining work: **[Digital Circus — Encore](docs/DIGITAL_CIRCUS_ENCORE.md)**.
 - To equip a crossover, open the fighter or opponent’s wardrobe and select **Filtrer les tenues**. Choose the series and **Fusion originale** to see the character’s redesigned body. [Compare the fusion portraits and combat stances](docs/COMBAT_GALERIE_FUSIONS.md) or [browse the GLITCH wardrobe and arena gallery](docs/COMBAT_CROSSOVERS_GLITCH.md).
 
-The game combines **54 fighters, 540 techniques, 22 shared arenas, 443 selectable costumes and 179 searchable archive entries**. Fourteen fighters have individually authored kits; 40 promoted archive NPCs use the extension kits described below. The 54 dedicated stage arrangements reuse shared scenery and are counted separately. Its nine standard modes are joined by nine illustrated crossover visits under **Escales GLITCH**. The wardrobe contains 51 archive costumes, 14 additional illustrated Circus appearances, 252 tributes and residents, and 126 original fusions for the original fourteen fighters. Crossovers for the forty promoted NPCs remain to be produced. The combat techniques and stories are original fan-game adaptations.
+The game combines **54 fighters, 540 techniques, 22 shared arenas, 452 selectable costumes and 179 searchable archive entries**. Fourteen fighters have individually authored kits; 40 promoted archive NPCs use the extension kits described below. The 54 dedicated stage arrangements reuse shared scenery and are counted separately. Its nine standard modes are joined by nine illustrated crossover visits under **Escales GLITCH**. The wardrobe contains 51 archive costumes, 23 additional illustrated Circus appearances, 252 tributes and residents, and 126 original fusions for the original fourteen fighters. Crossovers for the forty promoted NPCs remain to be produced. The combat techniques and stories are original fan-game adaptations.
+
+### Nine completed appearances — resumed generation on 20 November
+
+All **63 poses queued in the frozen checkpoint are now generated**. Together with
+the 36 preserved drawings, they complete Smiling Tragedy Gangle, the seven partially
+abstracting characters (Pomni, Jax, Ragatha, Kinger, Gangle, Zooble and Queenie), and
+Zooble's episode-five assembly without sunglasses. Each appearance has its own
+selection portrait, stance and nine action drawings: **99 native PNGs newly active**.
+
+The two dated waves now contain **23 complete additional appearances and 253 native
+PNGs**. Character art outside the crossovers totals **1,487 files: 1,152 actions,
+128 stances and 207 portraits**. The offline pack contains **5,590 images totalling
+2,860,106,610 bytes**. Existing kits, simulation identities, profile formats and
+replay rules are preserved.
+
+Every accepted PNG is copied byte for byte. The renderer respects the reviewed
+direction of each partially abstracting Gangle drawing; its two right-facing poses
+and nine left-facing slots share the same costume without transforming source files.
+The [resumption report](docs/COMBAT_CAST_RESUMPTION_2026-11-20.md) links the completed
+queue, per-image provenance, production-renderer gallery and verification evidence.
+The earlier checkpoint remains unchanged as historical evidence. Static fan-game
+poses do not establish frame-by-frame animation or canonical episode fidelity.
+
+The installed workbook is still the preserved earlier revision: the existing XLSX
+export memory blocker remains open. The new manifest records these nine completed
+appearances so a later successful atomic workbook update can reconcile them together
+with the six stage props.
 
 ### Six recovered stage props — 20 November continuation
 
@@ -23,8 +50,8 @@ The wharf lamp, castle ticket dispenser, orbital checkpoint, garden turnstile,
 jazz microphone and bamboo checkpoint now load in their six existing arenas.
 Their **six native PNGs are copied byte for byte** from the recovered source
 archive. The orbital pedestal is lowered by 18 pixels to place its base on the
-platform. The offline catalogue contains **5,491 images, totalling 2,724,652,669
-bytes**; the fighter and costume counts above are unchanged.
+platform. At that checkpoint the offline catalogue contained **5,491 images,
+totalling 2,724,652,669 bytes**; the later character resumption is counted above.
 
 The [prop continuation report](docs/COMBAT_PROPS_CONTINUATION_2026-11-20.md)
 links the six before/after comparisons, 18 camera checks, 401 passing Node tests
@@ -36,8 +63,8 @@ commit's remote CI has now passed, including its browser suite.
 The [additional primary-reference audit](docs/art-generation/cast-reference-audit-20261120/audit-report.md)
 records nine candidates and nine targeted extracts. It adds no ready appearance
 or generation job: hidden joints and feet remain unresolved. The existing
-**102 accepted character drawings and 63 pending poses** retain their exact
-checkpoint.
+**102 accepted character drawings and 63 then-pending poses** retain their exact
+historical checkpoint. The resumption above completes all 63 queued poses.
 
 The [workbook recovery checkpoint](docs/art-generation/workbook-recovery-20261120/README.md)
 preserves a complete public model of the eleven sheets. Independent review
@@ -46,7 +73,7 @@ still exceeds the available memory, so the four installed tracker files remain
 byte-identical to the previous revision. The saved model covers the cast pass;
 the six-prop tracker update remains a separate step after export recovery.
 
-### Six completed appearances and nine in preparation — 20 November continuation
+### Earlier checkpoint: six completed appearances and nine in preparation
 
 Noir Pomni, Noir Jax, Noir Kinger, Bodyguard Ragatha, Bodyguard Zooble and Bad End
 Caine each receive **eleven independent native-alpha PNGs**. These **66 active new
@@ -57,9 +84,9 @@ Combined character art outside the crossovers totals **1,388 files: 1,071 action
 A further **36 native drawings for nine appearances** are preserved in the PR's
 production archive: Zooble's episode-five assembly, Smiling Tragedy Gangle and the
 seven partially abstracting characters (Pomni, Jax, Ragatha, Kinger, Gangle, Zooble
-and Queenie). **63 action poses remain to generate** after the image service's daily
-quota stopped this pass. The incomplete appearances are outside the active wardrobe
-and offline pack. The checkpoint retains every completed file, reference and missing
+and Queenie). **63 action poses remained to generate** when the image service's daily
+quota stopped that pass. The incomplete appearances were outside the active wardrobe
+and offline pack until the resumption above. The checkpoint retains every completed file, reference and missing
 pose prompt; no absent slot is filled by duplicating or transforming another drawing.
 
 Each active appearance retains its fighter's kit and survives profile, campaign and

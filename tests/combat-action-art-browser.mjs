@@ -69,7 +69,7 @@ try {
   // including the transform for player two. A direct source comparison at
   // displayed size separately rules out a wrong costume or a stale cached pose.
   for (const appearance of appearances) {
-    const count = await page.evaluate(async ({ id, owner, keys }) => {
+    const result = await page.evaluate(async ({ id, owner, keys }) => {
       const { getFighter, COSTUMES } = await import('/combat/data.mjs');
       const { CombatRenderer } = await import('/combat/render.mjs');
       const { loadFighterIllustration } = await import('/combat/illustrations.mjs');
@@ -79,7 +79,7 @@ try {
       const f = variant ? { ...baseFighter, costume: id, sprite: variant.sprite, visual: { ...baseFighter.visual, ...variant.visual }, animation: variant.animation || null } : baseFighter;
       const renderer = new CombatRenderer(document.createElement('canvas'));
       const ctx = renderer.ctx, draw = ctx.drawImage.bind(ctx);
-      const sampled = [];
+      const sampled = [], nativeFacings = {};
       ctx.drawImage = (source, ...args) => {
         sampled.push({ source, matrix: ctx.getTransform() });
         return draw(source, ...args);
@@ -87,6 +87,8 @@ try {
       for (const key of keys) {
         const expected = await loadFighterIllustration('poses', f, key);
         if (!expected) throw new Error('Missing ' + id + '/' + key);
+        if (expected.nativeFacing !== 1 && expected.nativeFacing !== -1) throw new Error('Missing native direction: ' + id + '/' + key);
+        nativeFacings[key] = expected.nativeFacing;
         const image = new Image();
         const stem = '../assets/encore/poses/' + id + '/' + key;
         const published = [stem + '.webp', stem + '.png'].find(file => ART_FILES.includes(file));
@@ -116,7 +118,7 @@ try {
           sampled.length = 0;
           renderer.drawActor(actor, 0, true, { phase, winner: key === 'defeat' ? 1 : 0 });
           const emitted = sampled.find(item => item.source === expected.canvas);
-          if (!emitted || Math.sign(emitted.matrix.a) !== face) throw new Error('Wrong action/orientation: ' + id + '/' + key);
+          if (!emitted || Math.sign(emitted.matrix.a) !== face * expected.nativeFacing) throw new Error('Wrong action/orientation: ' + id + '/' + key);
           const { a, b, c, d } = emitted.matrix;
           const height = f.visual?.height || f.combat?.simulationBody?.height || 230;
           const worldHeight = height * (key === 'crouch' || key === 'defeat' ? 0.74 : 1);
@@ -126,9 +128,32 @@ try {
           }
         }
       }
-      return keys.length;
+      if (id === 'abstractinggangle') {
+        if (f.sprite.nativeFacing !== -1) throw new Error('Gangle stance fallback must face left');
+        const stance = await loadFighterIllustration('stance', f);
+        const selection = await loadFighterIllustration('selection', f);
+        if (stance?.nativeFacing !== -1 || selection?.nativeFacing !== -1) throw new Error('Gangle portrait/stance direction lost in decoding');
+        for (const face of [1, -1]) {
+          sampled.length = 0;
+          renderer.drawActor({ f, slot: 0, state: 'idle', x: 500, y: 568, face, onGround: true }, 0, true);
+          const emitted = sampled.find(item => item.source === stance.canvas);
+          if (!emitted || Math.sign(emitted.matrix.a) !== -face) throw new Error('Gangle stance must mirror on player one, not player two');
+        }
+      }
+      return { count: keys.length, nativeFacings };
     }, appearance);
-    assert.equal(count, appearance.keys.length);
+    assert.equal(result.count, appearance.keys.length);
+    if (appearance.id === 'abstractinggangle') {
+      // Independent visual-review expectations catch a loader that assigns the
+      // stance direction to every pose, or silently returns the historical +1.
+      assert.deepEqual(result.nativeFacings, {
+        intro: 1, attack: -1, hit: -1, walk: -1, jump: -1, crouch: -1,
+        victory: -1, defeat: -1, heavy: 1,
+      });
+      checked('Abstracting Gangle retains the reviewed mixed directions in both arena positions', {
+        nativeFacings: result.nativeFacings, selection: -1, stance: -1, stanceDrawCallsCompared: 2,
+      });
+    }
   }
   const total = appearances.reduce((sum, entry) => sum + entry.keys.length, 0);
   assert.equal(requests.size, total);

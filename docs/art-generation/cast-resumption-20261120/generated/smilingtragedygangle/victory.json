@@ -1,0 +1,62 @@
+{
+  "schema": "encore-native-art-resumption/v1",
+  "appearanceId": "smilingtragedygangle",
+  "slot": "victory",
+  "status": "accepted_native",
+  "createdAt": "2026-11-20T08:48:28.793887+00:00",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "prompt": "Use case: identity-preserve. Draw ONE complete SMILING TRAGEDY GANGLE character in a distinct full-body 2D fighting-game action pose. Reference 1 is the approved exact design lock: one white tragedy mask, both lateral blue tears, eyes closed in gentle upward arches, small closed-mouth smile, slender red ribbon arms, spiral ribbon torso, two separate curled ribbon feet. Preserve the approved crisp dark outlines, detailed red cel shading and proportions. Keep the smiling tragedy face in this action; no broad comedy mask, second mask, human body, gloves or added accessory. Entire character with all ribbon ends, full mask and both feet inside clear transparent margins on every side. One character, true transparent RGBA, no background, floor, cast shadow, glow, aura, particles, text, watermark or duplicate. POSE: VICTORY: tall joyful spiral torso stretches upward, one ribbon arm lifts high above mask and other curls outward, one foot planted and other delicately lifted. Keep closed arch eyes, small smile and both blue tear drops. No trophy or effects.",
+  "referencePaths": [
+    "docs/art-generation/cast-continuation-20261120/pending-assets/smilingtragedygangle/selection.png"
+  ],
+  "portableReferences": [
+    {
+      "position": 1,
+      "kind": "repository-asset",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/smilingtragedygangle/selection.png",
+      "sha256": "8a9ea123129eedbb45a8ad17979d65e5aa0818fb7e47842169eec804b1be83de",
+      "bytes": 1539075
+    }
+  ],
+  "sourceURLs": [
+    "https://www.youtube.com/watch?v=mOvhHim78YA",
+    "https://i.ytimg.com/sb/mOvhHim78YA/storyboard3_L3/M10.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCJX--8QG&sigh=rs$AOn4CLBRc1Pm_soGXt4VJR7qM3OM3K-a2A"
+  ],
+  "sourceKind": "Épisode officiel",
+  "episodeFidelityClaim": false,
+  "checkpointFile": "docs/art-generation/cast-continuation-20261120/generation-resume.json",
+  "sourceGenerationId": "exec-486c5eac-4a42-4bf7-9760-9b4f9f15309e",
+  "nativeSourceFile": "/workspace/scratch/5f5114b49696/generated_images/exec-486c5eac-4a42-4bf7-9760-9b4f9f15309e.png",
+  "file": "docs/art-generation/cast-resumption-20261120/generated/smilingtragedygangle/victory.png",
+  "targetFile": "assets/encore/poses/smilingtragedygangle/victory.png",
+  "sha256": "08a5d670e932839158554de18652594c6eb1d4f9e14d229893918c9d90782f18",
+  "bytes": 1519703,
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "fullyTransparentPixels": 1105826,
+  "alpha12Bounds": [
+    46,
+    34,
+    986,
+    1506
+  ],
+  "nativeCopyVerified": true,
+  "nativeFacing": "right",
+  "visualReview": {
+    "reviewer": "root",
+    "status": "accepted",
+    "observations": [
+      "Masque unique avec sourire discret, yeux arqués et deux larmes bleues, sans accessoire ajouté.",
+      "Victoire distincte avec torse spiralé étiré, un bras levé et un pied soulevé ; tous les rubans restent dans le cadre."
+    ],
+    "scope": "Approved reference identity and sprite technical fit; not canonical episode certification."
+  }
+}

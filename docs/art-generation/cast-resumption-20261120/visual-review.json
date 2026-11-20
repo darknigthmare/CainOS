@@ -1,0 +1,78 @@
+{
+  "schema": "encore-resumption-visual-review/v1",
+  "reviewedAt": "2026-11-20T09:01:32.957574+00:00",
+  "status": "accepted_for_static_game_presentation",
+  "method": "Visual inspection of production Canvas contact sheets after individual native PNG reviews.",
+  "reviews": [
+    {
+      "appearanceId": "smilingtragedygangle",
+      "file": "canvas/smilingtragedygangle/actions-smilingtragedygangle.jpg",
+      "reviewer": "root",
+      "posesReviewed": 9,
+      "findings": "Complete visible silhouettes; approved identity and distinct limbs/accessories retained; readable action poses."
+    },
+    {
+      "appearanceId": "abstractingpomni",
+      "file": "canvas/abstractingpomni/actions-abstractingpomni.jpg",
+      "reviewer": "root",
+      "posesReviewed": 9,
+      "findings": "Complete visible silhouettes; approved identity and distinct limbs/accessories retained; readable action poses."
+    },
+    {
+      "appearanceId": "abstractingjax",
+      "file": "canvas/abstractingjax/actions-abstractingjax.jpg",
+      "reviewer": "generate_pomni_kinger",
+      "posesReviewed": 9,
+      "findings": "Complete visible silhouettes; approved identity and distinct limbs/accessories retained; readable action poses."
+    },
+    {
+      "appearanceId": "abstractingragatha",
+      "file": "canvas/abstractingragatha/actions-abstractingragatha.jpg",
+      "reviewer": "generate_pomni_kinger",
+      "posesReviewed": 9,
+      "findings": "Complete visible silhouettes; approved identity and distinct limbs/accessories retained; readable action poses."
+    },
+    {
+      "appearanceId": "abstractingkinger",
+      "file": "canvas/abstractingkinger/actions-abstractingkinger.jpg",
+      "reviewer": "root",
+      "posesReviewed": 9,
+      "findings": "Complete visible silhouettes; approved identity and distinct limbs/accessories retained; readable action poses."
+    },
+    {
+      "appearanceId": "abstractinggangle",
+      "file": "canvas/abstractinggangle/actions-abstractinggangle.jpg",
+      "reviewer": "root",
+      "posesReviewed": 9,
+      "findings": "Complete visible silhouettes; approved identity and distinct limbs/accessories retained; readable action poses."
+    },
+    {
+      "appearanceId": "abstractingzooble",
+      "file": "canvas/abstractingzooble/actions-abstractingzooble.jpg",
+      "reviewer": "generate_pomni_kinger",
+      "posesReviewed": 9,
+      "findings": "Complete visible silhouettes; approved identity and distinct limbs/accessories retained; readable action poses."
+    },
+    {
+      "appearanceId": "abstractingqueenie",
+      "file": "canvas/abstractingqueenie/actions-abstractingqueenie.jpg",
+      "reviewer": "root",
+      "posesReviewed": 9,
+      "findings": "Complete visible silhouettes; approved identity and distinct limbs/accessories retained; readable action poses."
+    },
+    {
+      "appearanceId": "zoobleep5",
+      "file": "canvas/zoobleep5/actions-zoobleep5.jpg",
+      "reviewer": "generate_pomni_kinger",
+      "posesReviewed": 9,
+      "findings": "Complete visible silhouettes; approved identity and distinct limbs/accessories retained; readable action poses."
+    }
+  ],
+  "nonBlockingObservations": [
+    "Jax and Ragatha jump poses appear more massive than standing drawings when folded silhouettes are registered to a common game height; no nonuniform stretching or cropping observed."
+  ],
+  "limits": [
+    "Static contact-sheet review, not frame-by-frame animation or canonical episode certification.",
+    "Contact sheets display actor facing right; both renderer transform directions are inspected separately in Canvas reports."
+  ]
+}

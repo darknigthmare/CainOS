@@ -1,0 +1,75 @@
+{
+  "schema": "encore-native-art-resumption/v1",
+  "id": "abstractingpomni-intro",
+  "appearanceId": "abstractingpomni",
+  "slot": "intro",
+  "file": "docs/art-generation/cast-resumption-20261120/generated/abstractingpomni/intro.png",
+  "targetFile": "assets/encore/poses/abstractingpomni/intro.png",
+  "sourceGenerationId": "exec-9007af84-f0e8-4e46-b5e9-6c68bbb479ef",
+  "method": "image_gen.imagegen",
+  "prompt": "Use case: identity-preserve. Asset type: ONE individual full-body transparent 2D fighting-game action sprite of ABSTRACTING POMNI. Reference 1 is the approved strict design lock for silhouette, proportions, exact transformation patches, eyes, colours and polished cel shading. Reference 2 supplies official design details only; do not imitate its squat toy proportions, setting or lighting. Slender Pomni with red-blue jester hat and suit, yellow trims/buttons, pale face with one normal red-blue pinwheel iris and brown bob. Opposing half of face/hat is dark angular crystal with flat pastel concentric eyes; one arm/hand is crystal, opposite hand is blue glove. Normal RED shoe and opposing CRYSTAL eye-bearing foot MUST stay on the same anatomical sides as the approved selection. Do not swap, mirror or redistribute the transformation. Preserve all individual eye-bearing hat growths and asymmetric patches; not fully abstracted. Create a genuinely distinct natural action pose, not a mirrored/cropped selection image. Every limb, crown/hat/ear tip, attached mask and crystal spike must fit fully inside clear transparent margins on ALL sides. One connected character, crisp detailed 2D art on true transparent RGBA; no scenery, floor, cast shadow, aura, glow, particles, labels, watermark, inset or duplicate. POSE: INTRO gesture facing screen RIGHT: taking a small introductory step forward, one hand raised in a cautious greeting and the other extended low, torso upright with a fresh asymmetrical silhouette distinct from selection.",
+  "referencePaths": [
+    "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingpomni/selection.png",
+    "docs/art-generation/cast-continuation-20261120/references/official-AbstractPomni.png"
+  ],
+  "portableReferences": [
+    {
+      "position": 1,
+      "kind": "repository-asset",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/abstractingpomni/selection.png",
+      "sha256": "6e069cab81e5ee75d6b98c8fbca2a8ba7fda6949cb78923fd0e2b8a08168ee4a",
+      "bytes": 1217005
+    },
+    {
+      "position": 2,
+      "kind": "official-source-reference",
+      "file": "docs/art-generation/cast-continuation-20261120/references/official-AbstractPomni.png",
+      "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractPomni.png?v=1780353721",
+      "pageUrl": "https://glitchproductions.store/products/abstraction-animiniz",
+      "sha256": "914230b23c0c5c733c68d2e2e1f96e94d860eb1d2eacbb5a41d1c9824e27de42",
+      "bytes": 3429140,
+      "restoreInstruction": "The exact reference is archived in this repository. If unavailable, download the named official image URL, verify and visually inspect it before generation. For an expired storyboard URL, refresh the storyboard through the official episode player metadata."
+    }
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/abstraction-animiniz",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/AbstractPomni.png?v=1780353721"
+  ],
+  "sourceKind": "Produit dérivé officiel",
+  "episodeFidelityClaim": false,
+  "transparent_background": true,
+  "nativeFacing": "right",
+  "visualReview": {
+    "reviewer": "generate_pomni_kinger",
+    "status": "requires_correction",
+    "observations": [
+      "Accepted: one full-body Pomni taking an introductory step toward screen right, normal blue-gloved hand raised in greeting and crystal arm low. Red normal shoe and opposing crystal eye-bearing foot preserve the approved transformation pattern; all hat spikes, hands and feet remain inside the canvas. Crisp cel shading and full identity retained. Native alpha preserved.",
+      "Subsequent anatomical review: crossed near leg appears to carry the crystal shoe instead of the normal red shoe; a targeted foot correction is required before acceptance."
+    ],
+    "scope": "Approved reference identity and native sprite fit; no canonical episode certification."
+  },
+  "status": "rejected_native",
+  "includedInRuntime": false,
+  "dimensions": [
+    1146,
+    1372
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "sha256": "853aaa4b9355ab75eb59436467dd31dd1d8efb2b2deddb2d06c0a68bc6b7384e",
+  "bytes": 1033928,
+  "nativeCopyVerified": true,
+  "createdAt": "2026-11-20T08:17:19.767792+00:00",
+  "nativeSourceFile": "/workspace/scratch/5f5114b49696/generated_images/exec-9007af84-f0e8-4e46-b5e9-6c68bbb479ef.png",
+  "alpha12Bounds": [
+    114,
+    11,
+    926,
+    1342
+  ],
+  "checkpointFile": "docs/art-generation/cast-continuation-20261120/generation-resume.json",
+  "fullyTransparentPixels": 1064180
+}

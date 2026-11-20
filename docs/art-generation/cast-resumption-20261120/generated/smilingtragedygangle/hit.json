@@ -1,0 +1,63 @@
+{
+  "schema": "encore-native-art-resumption/v1",
+  "appearanceId": "smilingtragedygangle",
+  "slot": "hit",
+  "status": "accepted_native",
+  "createdAt": "2026-11-20T08:39:27.426871+00:00",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "prompt": "Use case: identity-preserve. Draw ONE complete SMILING TRAGEDY GANGLE character in a distinct full-body 2D fighting-game action pose. Reference 1 is the approved exact design lock: one white tragedy mask, both lateral blue tears, eyes closed in gentle upward arches, small closed-mouth smile, slender red ribbon arms, spiral ribbon torso, two separate curled ribbon feet. Preserve the approved crisp dark outlines, detailed red cel shading and proportions. Keep the smiling tragedy face in this action; no broad comedy mask, second mask, human body, gloves or added accessory. Entire character with all ribbon ends, full mask and both feet inside clear transparent margins on every side. One character, true transparent RGBA, no background, floor, cast shadow, glow, aura, particles, text, watermark or duplicate. POSE: HIT REACTION: spiral torso bends backward toward screen LEFT, arms open defensively at different heights, one ribbon foot slides forward while the other curls under for balance. The same small smiling tragedy mask retains both blue tears; no damaged mask.",
+  "referencePaths": [
+    "docs/art-generation/cast-continuation-20261120/pending-assets/smilingtragedygangle/selection.png"
+  ],
+  "portableReferences": [
+    {
+      "position": 1,
+      "kind": "repository-asset",
+      "file": "docs/art-generation/cast-continuation-20261120/pending-assets/smilingtragedygangle/selection.png",
+      "sha256": "8a9ea123129eedbb45a8ad17979d65e5aa0818fb7e47842169eec804b1be83de",
+      "bytes": 1539075
+    }
+  ],
+  "sourceURLs": [
+    "https://www.youtube.com/watch?v=mOvhHim78YA",
+    "https://i.ytimg.com/sb/mOvhHim78YA/storyboard3_L3/M10.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCJX--8QG&sigh=rs$AOn4CLBRc1Pm_soGXt4VJR7qM3OM3K-a2A"
+  ],
+  "sourceKind": "Épisode officiel",
+  "episodeFidelityClaim": false,
+  "checkpointFile": "docs/art-generation/cast-continuation-20261120/generation-resume.json",
+  "sourceGenerationId": "exec-b810c113-8637-4f8a-bcd3-4daedc1c0c73",
+  "nativeSourceFile": "/workspace/scratch/5f5114b49696/generated_images/exec-b810c113-8637-4f8a-bcd3-4daedc1c0c73.png",
+  "file": "docs/art-generation/cast-resumption-20261120/generated/smilingtragedygangle/hit.png",
+  "targetFile": "assets/encore/poses/smilingtragedygangle/hit.png",
+  "sha256": "beba63ee3ddbdb3fecebaf8cfa4e883b89b917b3f3a99d7139ab81e7b1602a9a",
+  "bytes": 1469098,
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "fullyTransparentPixels": 1117334,
+  "alpha12Bounds": [
+    35,
+    179,
+    975,
+    1364
+  ],
+  "nativeCopyVerified": true,
+  "nativeFacing": "right",
+  "visualReview": {
+    "reviewer": "root",
+    "status": "accepted",
+    "observations": [
+      "Backward recoil to screen left, arms open at different heights and feet offset for balance.",
+      "Single intact white smiling tragedy mask with both blue tears and closed arched eyes; complete spiral torso and two ribbon feet.",
+      "No damage or extra parts, full native transparent silhouette preserved."
+    ],
+    "scope": "Approved reference identity and sprite technical fit; not canonical episode certification."
+  }
+}

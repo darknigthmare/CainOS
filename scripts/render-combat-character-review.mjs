@@ -35,10 +35,16 @@ const partial = args.includes('--available-only');
 const additionsOnly = args.includes('--costume-additions');
 const introducedAt = args.indexOf('--introduced-on');
 const introducedOn = introducedAt < 0 ? null : args[introducedAt + 1];
+const appearanceAt = args.indexOf('--appearance');
+const appearanceId = appearanceAt < 0 ? null : args[appearanceAt + 1];
+const reportAt = args.indexOf('--report');
+assert(appearanceAt < 0 || additionsOnly, '--appearance requires --costume-additions');
+assert(appearanceAt < 0 || (typeof appearanceId === 'string' && /^[a-z0-9]+$/.test(appearanceId)), 'Expected an appearance ID');
 assert(introducedAt < 0 || additionsOnly, '--introduced-on requires --costume-additions');
 assert(introducedAt < 0 || (typeof introducedOn === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(introducedOn)), 'Expected an ISO introduction date after --introduced-on');
-const additions = COSTUME_ADDITIONS.filter(item => !introducedOn || item.introducedOn === introducedOn);
+const additions = COSTUME_ADDITIONS.filter(item => (!introducedOn || item.introducedOn === introducedOn) && (!appearanceId || item.id === appearanceId));
 assert(!introducedOn || additions.length, 'No appearances introduced on ' + introducedOn);
+assert(!appearanceId || additions.length === 1, 'Unknown additional appearance: ' + appearanceId);
 const reportDate = introducedOn || new Date().toISOString().slice(0, 10);
 await fs.mkdir(output, { recursive: true });
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
@@ -49,8 +55,8 @@ const report = { schema: 'encore-character-canvas-review/v1', createdAt: new Dat
   limitations: ['No browser, DOM, input, audio, service-worker or physical-device test.',
     'Individual static poses do not establish frame-by-frame animation.',
     'Asset identity/proportion fidelity requires separate visual review; no canonical 1:1 certification.'],
-  partial, additionsOnly, introducedOn, sources: {}, actions: [], stances: [], portraits: [], missing: [], sheets: [], browserTestStatus: 'not_executed' };
-for (const file of ['combat/data.mjs','combat/costume-additions.mjs','combat/costume-continuation-20261120.mjs','combat/illustrations.mjs','combat/render.mjs','combat/render-poses.mjs','combat/offline-manifest.mjs','scripts/render-combat-character-review.mjs']) {
+  partial, additionsOnly, introducedOn, appearanceId, sources: {}, actions: [], stances: [], portraits: [], missing: [], sheets: [], browserTestStatus: 'not_executed' };
+for (const file of ['combat/data.mjs','combat/costume-additions.mjs','combat/costume-continuation-20261120.mjs','combat/costume-resumption-20261120.mjs','combat/illustrations.mjs','combat/render.mjs','combat/render-poses.mjs','combat/offline-manifest.mjs','scripts/render-combat-character-review.mjs']) {
   report.sources[file] = sha(await fs.readFile(path.join(repo, file)));
 }
 function background(ctx, width, height) {
@@ -81,11 +87,12 @@ for (const { id, f } of appearances) {
       const emitted = sampled.find(row => row.source === stance.canvas);
       assert.ok(emitted, id + ': renderer must use its own stance');
       const { a, b, c, d } = emitted.matrix;
-      assert.equal(Math.sign(a), face, id + ': stance facing');
+      assert.ok([-1, 1].includes(stance.nativeFacing), id + ': known source direction');
+      assert.equal(Math.sign(a), face * stance.nativeFacing, id + ': stance facing');
       assert.ok(Math.abs(Math.hypot(a, b) - Math.hypot(c, d)) < 0.0001, id + ': uniform stance scale');
     }
     const bytes = await fs.readFile(path.join(repo, stanceFile));
-    report.stances.push({ id, file: stanceFile, sha256: sha(bytes), bytes: bytes.length, rendered: true, bothFacings: true });
+    report.stances.push({ id, file: stanceFile, sha256: sha(bytes), bytes: bytes.length, nativeFacing: stance.nativeFacing, rendered: true, bothFacings: true });
   }
   const sheet = createCanvas(1080, 1110), sc = sheet.getContext('2d');
   background(sc, sheet.width, sheet.height);
@@ -108,7 +115,8 @@ for (const { id, f } of appearances) {
       const emitted = sampled.find(row => row.source === expected.canvas);
       assert.ok(emitted, id + '/' + pose + ': renderer must use the authored drawing');
       const { a, b, c, d } = emitted.matrix;
-      assert.equal(Math.sign(a), face, id + '/' + pose + ': facing');
+      assert.ok([-1, 1].includes(expected.nativeFacing), id + '/' + pose + ': known source direction');
+      assert.equal(Math.sign(a), face * expected.nativeFacing, id + '/' + pose + ': facing');
       assert.ok(Math.abs(Math.hypot(a, b) - Math.hypot(c, d)) < 0.0001, 'uniform scale');
       const height = (f.visual?.height || f.combat?.simulationBody?.height || 230) * (['crouch','defeat'].includes(pose) ? 0.74 : 1);
       assert.ok(Math.abs(Math.hypot(c, d) * expected.bounds.height - height) < 0.01, id + '/' + pose + ': visible height');
@@ -126,7 +134,7 @@ for (const { id, f } of appearances) {
     }
     const bytes = await fs.readFile(path.join(repo, file));
     report.actions.push({ id, pose, file, sha256: sha(bytes), bytes: bytes.length,
-      visibleBounds: expected.bounds, bothFacings: true, uniformScale: true, rendered: true });
+      visibleBounds: expected.bounds, nativeFacing: expected.nativeFacing, bothFacings: true, uniformScale: true, rendered: true });
     checked++;
   }
   if (checked) {
@@ -167,8 +175,9 @@ const table = items => ['| Apparence | Actions rendues | Planche |', '| --- | --
     const count = report.actions.filter(action => action.id === item.id).length;
     return `| ${item.name} | ${count}/9 | ${count ? `[${item.id}](actions-${item.id}.jpg)` : 'Non publiée'} |`;
   })].join('\n');
-const reportLink = path.relative(output, path.join(repo, 'docs', additionsOnly
-  ? `COMBAT_CAST_CONTINUATION_${reportDate}.md` : 'COMBAT_CHARACTER_COMPLETION_2026-11-19.md')).split(path.sep).join('/');
+const reportTarget = reportAt < 0 ? path.join(repo, 'docs', additionsOnly
+  ? `COMBAT_CAST_CONTINUATION_${reportDate}.md` : 'COMBAT_CHARACTER_COMPLETION_2026-11-19.md') : path.resolve(repo, args[reportAt + 1]);
+const reportLink = path.relative(output, reportTarget).split(path.sep).join('/');
 const gallery = [
   '# Personnages d’Encore — galerie du ' + reportDate, '',
   `${report.counts.actions} actions statiques de ${appearances.length} apparences et ${report.counts.portraits} portraits individuels ont été rendus avec les modules Canvas du jeu.`, '',

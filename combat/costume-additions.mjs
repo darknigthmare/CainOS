@@ -4,6 +4,7 @@
  * Keeping them outside the historical atlas preserves its IDs and ordering.
  */
 import { COSTUME_CONTINUATION_DEFINITIONS } from './costume-continuation-20261120.mjs';
+import { COSTUME_RESUMPTION_DEFINITIONS, getCostumeNativeFacing } from './costume-resumption-20261120.mjs';
 const costumePage = 'https://glitchproductions.store/products/digital-circus-animiniz-costume-adventure-series';
 const beachPage = 'https://glitchproductions.store/products/digital-circus-animiniz-beach-vacation-series';
 const defs = [
@@ -75,6 +76,7 @@ const defs = [
     scope: 'Apparence comparée à la figurine officielle Sand Castle Kinger. Les actions utilisent la tête et l’inclinaison du château, sans lui inventer une anatomie humaine.',
   },
   ...COSTUME_CONTINUATION_DEFINITIONS,
+  ...COSTUME_RESUMPTION_DEFINITIONS,
 ];
 export const COSTUME_ADDITION_SOURCES = Object.freeze(defs.map(def => Object.freeze({
   id: def.sourceId, title: def.sourceTitle, url: def.sourceUrl,
@@ -91,7 +93,7 @@ export const COSTUME_ADDITIONS = Object.freeze(defs.map(def => Object.freeze({
   category: 'variant', playable: false, archiveKind: null,
   classificationReason: def.classificationReason || 'Apparence du même personnage, illustrée séparément et réutilisant son kit sans changement des règles.',
   sprite: Object.freeze({ src: '../assets/encore/stance/' + def.id + '.png',
-    cols: 1, rows: 1, col: 0, row: 0, matteMode: 'native-alpha', nativeFacing: 1 }),
+    cols: 1, rows: 1, col: 0, row: 0, matteMode: 'native-alpha', nativeFacing: getCostumeNativeFacing(def.id, 'stance') }),
   fidelity: Object.freeze({
     sourceIds: [def.sourceId], observedTraits: def.traits,
     combatAdaptation: 'Portrait, garde et neuf poses statiques créés pour Encore. Les techniques et les statistiques restent celles du personnage.',

@@ -1,0 +1,1110 @@
+{
+  "schema": "encore-independent-runtime-review/v1",
+  "createdAt": "2026-11-20T08:56:32.068Z",
+  "status": "passed",
+  "method": "Call the actual exported runtime lookup and compare each result against the separate completion manifest and accepted native-generation receipt. Expected directions are never copied from the runtime table or its tests.",
+  "scope": "Read-only module/source classification and file/provenance review; no browser or Skia rendering.",
+  "manifest": {
+    "file": "docs/art-generation/cast-resumption-20261120/generation-completion.json",
+    "sha256": "f6a9c81fbdd6113bb921bc1d1166df927a36912ee3ec12f6bffdc50ec97e0494"
+  },
+  "runtimeModule": {
+    "file": "combat/costume-resumption-20261120.mjs",
+    "sha256": "5fc7997877eeab8a7b4e68b3a25e3be265abf0082755f02ed9b4b0657557a52e"
+  },
+  "counts": {
+    "appearances": 9,
+    "slots": 99,
+    "receiptDirectionsCompared": 63,
+    "manifestDirectionsCompared": 99,
+    "leftFacingSlots": 9,
+    "rightFacingSlots": 90,
+    "verifiedActivePNGBytes": 135453941,
+    "issues": 0
+  },
+  "families": [
+    {
+      "appearanceId": "smilingtragedygangle",
+      "fighterId": "gangle",
+      "baseFighterId": "gangle",
+      "category": "variant",
+      "playable": false,
+      "sourceId": "episode6-smilingtragedygangle",
+      "sourceKind": "Épisode officiel",
+      "slots": 11
+    },
+    {
+      "appearanceId": "abstractingpomni",
+      "fighterId": "pomni",
+      "baseFighterId": "pomni",
+      "category": "variant",
+      "playable": false,
+      "sourceId": "store-abstractingpomni",
+      "sourceKind": "Produit dérivé officiel",
+      "slots": 11
+    },
+    {
+      "appearanceId": "abstractingjax",
+      "fighterId": "jax",
+      "baseFighterId": "jax",
+      "category": "variant",
+      "playable": false,
+      "sourceId": "store-abstractingjax",
+      "sourceKind": "Produit dérivé officiel",
+      "slots": 11
+    },
+    {
+      "appearanceId": "abstractingragatha",
+      "fighterId": "ragatha",
+      "baseFighterId": "ragatha",
+      "category": "variant",
+      "playable": false,
+      "sourceId": "store-abstractingragatha",
+      "sourceKind": "Produit dérivé officiel",
+      "slots": 11
+    },
+    {
+      "appearanceId": "abstractingkinger",
+      "fighterId": "kinger",
+      "baseFighterId": "kinger",
+      "category": "variant",
+      "playable": false,
+      "sourceId": "store-abstractingkinger",
+      "sourceKind": "Produit dérivé officiel",
+      "slots": 11
+    },
+    {
+      "appearanceId": "abstractinggangle",
+      "fighterId": "gangle",
+      "baseFighterId": "gangle",
+      "category": "variant",
+      "playable": false,
+      "sourceId": "store-abstractinggangle",
+      "sourceKind": "Produit dérivé officiel",
+      "slots": 11
+    },
+    {
+      "appearanceId": "abstractingzooble",
+      "fighterId": "zooble",
+      "baseFighterId": "zooble",
+      "category": "variant",
+      "playable": false,
+      "sourceId": "store-abstractingzooble",
+      "sourceKind": "Produit dérivé officiel",
+      "slots": 11
+    },
+    {
+      "appearanceId": "abstractingqueenie",
+      "fighterId": "queenie",
+      "baseFighterId": "queenie",
+      "category": "variant",
+      "playable": false,
+      "sourceId": "store-abstractingqueenie",
+      "sourceKind": "Produit dérivé officiel",
+      "slots": 11
+    },
+    {
+      "appearanceId": "zoobleep5",
+      "fighterId": "zooble",
+      "baseFighterId": "zooble",
+      "category": "variant",
+      "playable": false,
+      "sourceId": "episode5-zooble-assembly",
+      "sourceKind": "Épisode officiel et miniature officielle du trailer",
+      "slots": 11
+    }
+  ],
+  "slots": [
+    {
+      "key": "smilingtragedygangle/selection",
+      "origin": "frozen_checkpoint",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": null,
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/selection/smilingtragedygangle.png",
+      "sha256": "8a9ea123129eedbb45a8ad17979d65e5aa0818fb7e47842169eec804b1be83de",
+      "bytes": 1539075
+    },
+    {
+      "key": "smilingtragedygangle/stance",
+      "origin": "frozen_checkpoint",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": null,
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/stance/smilingtragedygangle.png",
+      "sha256": "9039e1f4973eed292262ff2a6f3bbd5f6440a4b45ab15fdbffd0b413cb58b696",
+      "bytes": 767470
+    },
+    {
+      "key": "smilingtragedygangle/intro",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/smilingtragedygangle/intro.png",
+      "sha256": "312d17615bb1c4077f5c732164971dfd7a86b6bc7998b00fbbf8e415dd1f1476",
+      "bytes": 1510384
+    },
+    {
+      "key": "smilingtragedygangle/attack",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/smilingtragedygangle/attack.png",
+      "sha256": "d19948958bd3cabe5f7b72deaf4ac5099fd77e6ebbc4a9fc781183e803fc73de",
+      "bytes": 1445857
+    },
+    {
+      "key": "smilingtragedygangle/heavy",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/smilingtragedygangle/heavy.png",
+      "sha256": "fbd2ca6f5548cc9c4762e5af7ae301285e3d676255d76143f05803dd45eaabc8",
+      "bytes": 898705
+    },
+    {
+      "key": "smilingtragedygangle/hit",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/smilingtragedygangle/hit.png",
+      "sha256": "beba63ee3ddbdb3fecebaf8cfa4e883b89b917b3f3a99d7139ab81e7b1602a9a",
+      "bytes": 1469098
+    },
+    {
+      "key": "smilingtragedygangle/walk",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/smilingtragedygangle/walk.png",
+      "sha256": "0852011b3cdbc8a461ff9688104ca290a1c0d33a08232377b37569e278c00388",
+      "bytes": 1537318
+    },
+    {
+      "key": "smilingtragedygangle/jump",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/smilingtragedygangle/jump.png",
+      "sha256": "139d0f9886755370ef2543e272f7f4f8b4a574ebd9d2b5e1bc190c35fe8b0f46",
+      "bytes": 1433962
+    },
+    {
+      "key": "smilingtragedygangle/crouch",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/smilingtragedygangle/crouch.png",
+      "sha256": "34887fb010948a9341ae0cc0b4b9b587e3c38f2d2ca5209f28ee07667e2edbb4",
+      "bytes": 1416361
+    },
+    {
+      "key": "smilingtragedygangle/victory",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/smilingtragedygangle/victory.png",
+      "sha256": "08a5d670e932839158554de18652594c6eb1d4f9e14d229893918c9d90782f18",
+      "bytes": 1519703
+    },
+    {
+      "key": "smilingtragedygangle/defeat",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/smilingtragedygangle/defeat.png",
+      "sha256": "ccccecf086f26792aef23ee489cd93f82b7e9bc22eba9bf65a4ded047a998531",
+      "bytes": 1410286
+    },
+    {
+      "key": "abstractingpomni/selection",
+      "origin": "frozen_checkpoint",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": null,
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/selection/abstractingpomni.png",
+      "sha256": "6e069cab81e5ee75d6b98c8fbca2a8ba7fda6949cb78923fd0e2b8a08168ee4a",
+      "bytes": 1217005
+    },
+    {
+      "key": "abstractingpomni/stance",
+      "origin": "frozen_checkpoint",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": null,
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/stance/abstractingpomni.png",
+      "sha256": "2c72e2d9e681c4a13fb4b61ab8dd3be0175db4c31234f8f819ff8fb21da7f9a6",
+      "bytes": 1039618
+    },
+    {
+      "key": "abstractingpomni/intro",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/abstractingpomni/intro.png",
+      "sha256": "5ff77c485c4c70edd25f50d6904588014e28e1d7d7403528e5f680aa5905f007",
+      "bytes": 998996
+    },
+    {
+      "key": "abstractingpomni/attack",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/abstractingpomni/attack.png",
+      "sha256": "6149bd804d336e9e08039e5ebd2faa35c8e46ac54e131d77920bb09294b840e7",
+      "bytes": 1672355
+    },
+    {
+      "key": "abstractingpomni/heavy",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/abstractingpomni/heavy.png",
+      "sha256": "456284aba2350d9e20f9916592d086d2003bc2ba261f0f71014996f1fd83d3ac",
+      "bytes": 1784330
+    },
+    {
+      "key": "abstractingpomni/hit",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/abstractingpomni/hit.png",
+      "sha256": "54087bfc1e2c0c197edbad6c2454163038cb3174645ae4f2ea9e030eb3cdab39",
+      "bytes": 1106336
+    },
+    {
+      "key": "abstractingpomni/walk",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/abstractingpomni/walk.png",
+      "sha256": "6dc2df262b6bb1735227b09b773bd7f7b3810492b7dcd0af83e1fe98738601a8",
+      "bytes": 1074729
+    },
+    {
+      "key": "abstractingpomni/jump",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/abstractingpomni/jump.png",
+      "sha256": "1b4be4cc9c306a0c338a684ceec43cd0c5958423438f75868b1aa82e0f168383",
+      "bytes": 1233883
+    },
+    {
+      "key": "abstractingpomni/crouch",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/abstractingpomni/crouch.png",
+      "sha256": "00b90e75262a0e6b644b04dd7661ab81bf0ee29e15730fcba9bd96a21eaa6243",
+      "bytes": 1151313
+    },
+    {
+      "key": "abstractingpomni/victory",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/abstractingpomni/victory.png",
+      "sha256": "0eceeb57a339a0f98f92d4c3bdf51f92e1d83ca996a20f455fbf4a9be461882d",
+      "bytes": 1194206
+    },
+    {
+      "key": "abstractingpomni/defeat",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/abstractingpomni/defeat.png",
+      "sha256": "002632ef44d50b5982282d380fd80f9cf2805d212b37caeffecb9b653142102e",
+      "bytes": 1250554
+    },
+    {
+      "key": "abstractingjax/selection",
+      "origin": "frozen_checkpoint",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": null,
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/selection/abstractingjax.png",
+      "sha256": "1182d079c3dd9649c5b43b2781be6863a3ec0b0b04fbb7d60a10fba85b6d4534",
+      "bytes": 1405678
+    },
+    {
+      "key": "abstractingjax/stance",
+      "origin": "frozen_checkpoint",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": null,
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/stance/abstractingjax.png",
+      "sha256": "d7a4e585d3512aebbc6e3641be20ebcd7c17ef2c47f796c2d47f62d7f27cdd05",
+      "bytes": 723421
+    },
+    {
+      "key": "abstractingjax/intro",
+      "origin": "frozen_checkpoint",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": null,
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/abstractingjax/intro.png",
+      "sha256": "e31477fe92c0676bb89a10dbd81d50d3c700077581d21f93afe452b8a7524227",
+      "bytes": 1534805
+    },
+    {
+      "key": "abstractingjax/attack",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/abstractingjax/attack.png",
+      "sha256": "9cae49ee9543bf3bcf12b80963238d1a36daca4b8fbf6a2d80c299439e1d6de0",
+      "bytes": 1460039
+    },
+    {
+      "key": "abstractingjax/heavy",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/abstractingjax/heavy.png",
+      "sha256": "fd3ddc7f7284bb976cfdeb3fcc417913670e2e69904d63626904b3cdc151f4e5",
+      "bytes": 1515426
+    },
+    {
+      "key": "abstractingjax/hit",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/abstractingjax/hit.png",
+      "sha256": "0bc878651e66492447aeda41756418fb4660e06d39cda0c5989887eabee1542f",
+      "bytes": 816820
+    },
+    {
+      "key": "abstractingjax/walk",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/abstractingjax/walk.png",
+      "sha256": "41f90c05460090d4e7a1c40d6c5f4303a55208119e65e752f30f36cfb700fa49",
+      "bytes": 680205
+    },
+    {
+      "key": "abstractingjax/jump",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/abstractingjax/jump.png",
+      "sha256": "9a370aa1a29b02affb056ca8bca6719a4803ee772c9f7fcf821f4c907c67c094",
+      "bytes": 907807
+    },
+    {
+      "key": "abstractingjax/crouch",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/abstractingjax/crouch.png",
+      "sha256": "dc6016efaaa4410c0762c731a5615d83840fd02c237600082cccc41139b260e2",
+      "bytes": 795973
+    },
+    {
+      "key": "abstractingjax/victory",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/abstractingjax/victory.png",
+      "sha256": "ebadaa82d7aff3c20d43fad5b9af60d319b1dc10b682267dadf715984b736bd9",
+      "bytes": 1501780
+    },
+    {
+      "key": "abstractingjax/defeat",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/abstractingjax/defeat.png",
+      "sha256": "d49bd959f77bf3676e8be92d3166f0eac22f2e3e5ef59144b772330447f451d5",
+      "bytes": 1462902
+    },
+    {
+      "key": "abstractingragatha/selection",
+      "origin": "frozen_checkpoint",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": null,
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/selection/abstractingragatha.png",
+      "sha256": "da90f03acd382f8b46591855417a8bb29a4400088e1e4397ee7ebf11da01d181",
+      "bytes": 1764655
+    },
+    {
+      "key": "abstractingragatha/stance",
+      "origin": "frozen_checkpoint",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": null,
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/stance/abstractingragatha.png",
+      "sha256": "3cbb0f06c0dec05794851327f35e46d6fe7015fe51c9b92eec8672e6f466fd37",
+      "bytes": 1840025
+    },
+    {
+      "key": "abstractingragatha/intro",
+      "origin": "frozen_checkpoint",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": null,
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/abstractingragatha/intro.png",
+      "sha256": "d9fa8d0e768543170027a9af7046c58f4d334dff87fb18d9d08994cd3bc1b1f5",
+      "bytes": 1846317
+    },
+    {
+      "key": "abstractingragatha/attack",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/abstractingragatha/attack.png",
+      "sha256": "c08f3ec9364c9d879f1cbd659260f07ef85f6cd7339040e48d8c6b496de97869",
+      "bytes": 1692523
+    },
+    {
+      "key": "abstractingragatha/heavy",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/abstractingragatha/heavy.png",
+      "sha256": "17f3fd7f8390e856c45ec263b54c66af1ec0b862e8cd01a7c78e1ea422174507",
+      "bytes": 1662624
+    },
+    {
+      "key": "abstractingragatha/hit",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/abstractingragatha/hit.png",
+      "sha256": "a2432ac0b00b051d64230d66a4c1bc21fd8243e5f1184245a4fc83232cd1c0ab",
+      "bytes": 1145596
+    },
+    {
+      "key": "abstractingragatha/walk",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/abstractingragatha/walk.png",
+      "sha256": "fea1ad278e88bff6b511000e5793d29a7ab1d5d63c67ee40932b8c62aedee481",
+      "bytes": 1106862
+    },
+    {
+      "key": "abstractingragatha/jump",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/abstractingragatha/jump.png",
+      "sha256": "596dd6d9a8eaf812088e4a5c3c39fcc918f21cec459cc7a069c006a1f76965ac",
+      "bytes": 1287177
+    },
+    {
+      "key": "abstractingragatha/crouch",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/abstractingragatha/crouch.png",
+      "sha256": "73f985a744221206cd78090c8bddcf4da3229bdb065ee2a0cd28ba7da76771c1",
+      "bytes": 1629628
+    },
+    {
+      "key": "abstractingragatha/victory",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/abstractingragatha/victory.png",
+      "sha256": "9f8e49eb93ffe3aae88c97f7dd922f83ecccfe3b30f9ce2043c34f300e487119",
+      "bytes": 1784687
+    },
+    {
+      "key": "abstractingragatha/defeat",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/abstractingragatha/defeat.png",
+      "sha256": "3e3b63fb70c8aaa06baa94d725f039eb59562013712c0413359986e0807f0355",
+      "bytes": 1613425
+    },
+    {
+      "key": "abstractingkinger/selection",
+      "origin": "frozen_checkpoint",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": null,
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/selection/abstractingkinger.png",
+      "sha256": "181107cc8433a9b53985aeae0d1389c15ab79c4f17f823f4cf1b1e5cb9f14265",
+      "bytes": 1275414
+    },
+    {
+      "key": "abstractingkinger/stance",
+      "origin": "frozen_checkpoint",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": null,
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/stance/abstractingkinger.png",
+      "sha256": "5d020504e1da5dc847e1d2a65fb7c8c228e435da229214c1a9b882f4fa7ecf2c",
+      "bytes": 1202856
+    },
+    {
+      "key": "abstractingkinger/intro",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/abstractingkinger/intro.png",
+      "sha256": "add0d85fb9e6c1629271fac5ced44ee5c2167a4b20d92d03ac19493a1eee6e0d",
+      "bytes": 1058058
+    },
+    {
+      "key": "abstractingkinger/attack",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/abstractingkinger/attack.png",
+      "sha256": "3e7b75b4c608e8e1a4e1259d3264cd35723fc84909b56ae922f76fb0992c5582",
+      "bytes": 1043693
+    },
+    {
+      "key": "abstractingkinger/heavy",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/abstractingkinger/heavy.png",
+      "sha256": "2ae28f00ccc858ee709cc243ea6b567f7f471595bbc0ea4b947499b110ed605d",
+      "bytes": 1221845
+    },
+    {
+      "key": "abstractingkinger/hit",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/abstractingkinger/hit.png",
+      "sha256": "4dabc9ebb37b6ad0a24b36cf5a54fd6fe32745e690fa5d621fd5918a9d01869c",
+      "bytes": 1354079
+    },
+    {
+      "key": "abstractingkinger/walk",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/abstractingkinger/walk.png",
+      "sha256": "8c86d009a3c9448e6e3ac6f5034ee45d4021aa160e42c7917781386df12cfac6",
+      "bytes": 1097591
+    },
+    {
+      "key": "abstractingkinger/jump",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/abstractingkinger/jump.png",
+      "sha256": "60fdb3fc823b91e6a4b01f3da9ba2515f57d6e7b2a3c5af55d4a45a3ba07bfdf",
+      "bytes": 1178703
+    },
+    {
+      "key": "abstractingkinger/crouch",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/abstractingkinger/crouch.png",
+      "sha256": "a43c8172214584a2f81fe1470d788a60f38658cabdd410630651ab1494d2e9f3",
+      "bytes": 1784750
+    },
+    {
+      "key": "abstractingkinger/victory",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/abstractingkinger/victory.png",
+      "sha256": "2ad04b74221ca01ee401b81a3c0b2dae53ff924ea532d1e07de61b9f30029924",
+      "bytes": 1343099
+    },
+    {
+      "key": "abstractingkinger/defeat",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/abstractingkinger/defeat.png",
+      "sha256": "281efa65161845981ee057ba23327183bedb5dd094777925429125ed27c60ef0",
+      "bytes": 1280084
+    },
+    {
+      "key": "abstractinggangle/selection",
+      "origin": "frozen_checkpoint",
+      "manifestNativeFacing": "left",
+      "acceptedReceiptNativeFacing": null,
+      "runtimeLookup": -1,
+      "targetFile": "assets/encore/selection/abstractinggangle.png",
+      "sha256": "43a18bb3468f0c4283534b1c05480036aed89b78885be721d5290b463eb36ed2",
+      "bytes": 1626561
+    },
+    {
+      "key": "abstractinggangle/stance",
+      "origin": "frozen_checkpoint",
+      "manifestNativeFacing": "left",
+      "acceptedReceiptNativeFacing": null,
+      "runtimeLookup": -1,
+      "targetFile": "assets/encore/stance/abstractinggangle.png",
+      "sha256": "3a997f0a3fb342a08c1c48b6f358df5eb29084f0ce21295a0c0040912070f525",
+      "bytes": 1706313
+    },
+    {
+      "key": "abstractinggangle/attack",
+      "origin": "frozen_checkpoint",
+      "manifestNativeFacing": "left",
+      "acceptedReceiptNativeFacing": null,
+      "runtimeLookup": -1,
+      "targetFile": "assets/encore/poses/abstractinggangle/attack.png",
+      "sha256": "13b21d6ec77d35fdee6129c35b95e62ae04ad77f13ae7a0a73fea8d58874926c",
+      "bytes": 1619855
+    },
+    {
+      "key": "abstractinggangle/hit",
+      "origin": "frozen_checkpoint",
+      "manifestNativeFacing": "left",
+      "acceptedReceiptNativeFacing": null,
+      "runtimeLookup": -1,
+      "targetFile": "assets/encore/poses/abstractinggangle/hit.png",
+      "sha256": "eed78dd62ae8c69e2abf1fba174bb3a60c3cde6a6a639a2f2f544dd2fcec9a86",
+      "bytes": 1610452
+    },
+    {
+      "key": "abstractinggangle/walk",
+      "origin": "frozen_checkpoint",
+      "manifestNativeFacing": "left",
+      "acceptedReceiptNativeFacing": null,
+      "runtimeLookup": -1,
+      "targetFile": "assets/encore/poses/abstractinggangle/walk.png",
+      "sha256": "1e26538fd02316c12d170fd00e836cdc10aa9b58ef67a1e4a31d248eea6689ce",
+      "bytes": 1608030
+    },
+    {
+      "key": "abstractinggangle/intro",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/abstractinggangle/intro.png",
+      "sha256": "cd8c90ffec0b928000b2a93a9c5bb6667aa92dd90f62ff05504d4080b586bafd",
+      "bytes": 1521826
+    },
+    {
+      "key": "abstractinggangle/heavy",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/abstractinggangle/heavy.png",
+      "sha256": "edcb7cff35ed17ab0a06e2ab6203baf77ea38daff87481994c58a231cbff877c",
+      "bytes": 1567434
+    },
+    {
+      "key": "abstractinggangle/jump",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "left",
+      "acceptedReceiptNativeFacing": "left",
+      "runtimeLookup": -1,
+      "targetFile": "assets/encore/poses/abstractinggangle/jump.png",
+      "sha256": "eb633a09ebb1f252692310e43de27cd0c29d9caa5bce17e531e812eaa69940bb",
+      "bytes": 1647743
+    },
+    {
+      "key": "abstractinggangle/crouch",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "left",
+      "acceptedReceiptNativeFacing": "left",
+      "runtimeLookup": -1,
+      "targetFile": "assets/encore/poses/abstractinggangle/crouch.png",
+      "sha256": "f690705f780a769e48baa7279ef63b9268d60de22b1b6c5542df8a2099537823",
+      "bytes": 1615439
+    },
+    {
+      "key": "abstractinggangle/victory",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "left",
+      "acceptedReceiptNativeFacing": "left",
+      "runtimeLookup": -1,
+      "targetFile": "assets/encore/poses/abstractinggangle/victory.png",
+      "sha256": "7ca2371ab4b6a3ed387fc903daea0e23e88c61566482a3f8c18c691599c5fd64",
+      "bytes": 1547367
+    },
+    {
+      "key": "abstractinggangle/defeat",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "left",
+      "acceptedReceiptNativeFacing": "left",
+      "runtimeLookup": -1,
+      "targetFile": "assets/encore/poses/abstractinggangle/defeat.png",
+      "sha256": "dda58efed31926afb53782ca8f52faddc49f7a457565deec71539c1ccc954e03",
+      "bytes": 1667908
+    },
+    {
+      "key": "abstractingzooble/selection",
+      "origin": "frozen_checkpoint",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": null,
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/selection/abstractingzooble.png",
+      "sha256": "31670c334103a7ed2b5b21302af2268b9a6943d7f388c79c8201b1d516274dad",
+      "bytes": 1154706
+    },
+    {
+      "key": "abstractingzooble/stance",
+      "origin": "frozen_checkpoint",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": null,
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/stance/abstractingzooble.png",
+      "sha256": "a5966b959c81211a2de7f38abd696401643b2e8389620b77f0102fbf90a9b48d",
+      "bytes": 959487
+    },
+    {
+      "key": "abstractingzooble/intro",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/abstractingzooble/intro.png",
+      "sha256": "022ec3744d2257f97caf4c607610a3bf894add5de0d1c8a2553450838773fe13",
+      "bytes": 1048647
+    },
+    {
+      "key": "abstractingzooble/attack",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/abstractingzooble/attack.png",
+      "sha256": "c4f33bd10647267e530adf0e7fe22de91aa09b61f9e29a014e4d99ed18432fb0",
+      "bytes": 1670249
+    },
+    {
+      "key": "abstractingzooble/heavy",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/abstractingzooble/heavy.png",
+      "sha256": "e655b27bf0f5bbb83331b8186a2246c121445e88f70917d4136bfe39a1b28a2d",
+      "bytes": 1086925
+    },
+    {
+      "key": "abstractingzooble/hit",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/abstractingzooble/hit.png",
+      "sha256": "b8f606220d71a6ef37b545635a65418b494d6eeda38f35362d447408229fcfc0",
+      "bytes": 1106562
+    },
+    {
+      "key": "abstractingzooble/walk",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/abstractingzooble/walk.png",
+      "sha256": "50a52b5f2eee8b3530cdf01b706a6908d2f381a0877efc30490fd72fc401fcf4",
+      "bytes": 1068416
+    },
+    {
+      "key": "abstractingzooble/jump",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/abstractingzooble/jump.png",
+      "sha256": "3510c79529ede62fd8dc93be6ae1525bbe9b61d42849aab648527aaf4a632385",
+      "bytes": 1016107
+    },
+    {
+      "key": "abstractingzooble/crouch",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/abstractingzooble/crouch.png",
+      "sha256": "af562343875b8ef6754128b7578b7f6207b230c3cb6f7a0d27401c17b085989a",
+      "bytes": 1066986
+    },
+    {
+      "key": "abstractingzooble/victory",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/abstractingzooble/victory.png",
+      "sha256": "403fd99056e2d497e7cd975f11f2dfe45ed820782e2850bf8bc5b1f60b6995bf",
+      "bytes": 972489
+    },
+    {
+      "key": "abstractingzooble/defeat",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/abstractingzooble/defeat.png",
+      "sha256": "3072ada644a0548e901b6baf55f11add26e73f781603cfad5569c87931660d67",
+      "bytes": 1138340
+    },
+    {
+      "key": "abstractingqueenie/selection",
+      "origin": "frozen_checkpoint",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": null,
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/selection/abstractingqueenie.png",
+      "sha256": "3be556c8b0dda2e2b75966e4d42c57603e9b3fad5a48c8f9afa4f677ea358234",
+      "bytes": 1667501
+    },
+    {
+      "key": "abstractingqueenie/stance",
+      "origin": "frozen_checkpoint",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": null,
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/stance/abstractingqueenie.png",
+      "sha256": "0388151ffe5647b253cd08348926136eb7f1f6ecb1d0d2574190546b6e5e227e",
+      "bytes": 1634820
+    },
+    {
+      "key": "abstractingqueenie/intro",
+      "origin": "frozen_checkpoint",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": null,
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/abstractingqueenie/intro.png",
+      "sha256": "1a2628491d28da7cabdec638fde2f8b625ed1f785c3dfa64391d7a8ab025fc2a",
+      "bytes": 1683582
+    },
+    {
+      "key": "abstractingqueenie/attack",
+      "origin": "frozen_checkpoint",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": null,
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/abstractingqueenie/attack.png",
+      "sha256": "961fa7da83647594bd153d95a1cc2631fd6c0d5a49b2d8824a936b2ede2cb56b",
+      "bytes": 1667403
+    },
+    {
+      "key": "abstractingqueenie/heavy",
+      "origin": "frozen_checkpoint",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": null,
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/abstractingqueenie/heavy.png",
+      "sha256": "e8cb085a106280875fe7760baefc9687d5bfbf07700bcad3daaa39f2d549bbb4",
+      "bytes": 1618747
+    },
+    {
+      "key": "abstractingqueenie/hit",
+      "origin": "frozen_checkpoint",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": null,
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/abstractingqueenie/hit.png",
+      "sha256": "f8b1534519c2b4e8717d55e6f6fcd26b0c2b1ba3868c13e5c32627a480593924",
+      "bytes": 1684154
+    },
+    {
+      "key": "abstractingqueenie/walk",
+      "origin": "frozen_checkpoint",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": null,
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/abstractingqueenie/walk.png",
+      "sha256": "636f8a0601e4479617022237a6e614f8bfd807513e99238219e10fed7d069fe1",
+      "bytes": 1653567
+    },
+    {
+      "key": "abstractingqueenie/jump",
+      "origin": "frozen_checkpoint",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": null,
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/abstractingqueenie/jump.png",
+      "sha256": "0664f294ecc8a29ae9945ae7f4cadaf51b1b70a1e755366654e133304da5cd15",
+      "bytes": 1637961
+    },
+    {
+      "key": "abstractingqueenie/crouch",
+      "origin": "frozen_checkpoint",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": null,
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/abstractingqueenie/crouch.png",
+      "sha256": "64b62f6d6ed76f68c3d65415148a06618e8a03f020bb9b312bdf8fb4c3423aed",
+      "bytes": 1516608
+    },
+    {
+      "key": "abstractingqueenie/victory",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/abstractingqueenie/victory.png",
+      "sha256": "fbdcd62a76435a1405147e0ebff3c50bbfdfead493f87829eefd4a8f03693fa4",
+      "bytes": 1611317
+    },
+    {
+      "key": "abstractingqueenie/defeat",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/abstractingqueenie/defeat.png",
+      "sha256": "2bbf2e14704834800722e40a248289e2e3f1a5677b3deb73d5b1f464c9122893",
+      "bytes": 1563588
+    },
+    {
+      "key": "zoobleep5/selection",
+      "origin": "frozen_checkpoint",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": null,
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/selection/zoobleep5.png",
+      "sha256": "81e93ff323f46d6e940a432e0eb28fe83ee5858dcc3ba5c7b92bfea08a7a0bb5",
+      "bytes": 1506910
+    },
+    {
+      "key": "zoobleep5/stance",
+      "origin": "frozen_checkpoint",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": null,
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/stance/zoobleep5.png",
+      "sha256": "3235d5a89d559fa64ac4830758266dd8e5c2211613cc180002f9c929f83747ab",
+      "bytes": 745695
+    },
+    {
+      "key": "zoobleep5/intro",
+      "origin": "frozen_checkpoint",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": null,
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/zoobleep5/intro.png",
+      "sha256": "9feda71bc8a9e1d73bc2e90ad602604024d3d23ec3af87c8de2acda052f16c7c",
+      "bytes": 1415628
+    },
+    {
+      "key": "zoobleep5/attack",
+      "origin": "frozen_checkpoint",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": null,
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/zoobleep5/attack.png",
+      "sha256": "f11f55a6c59ce17ce14606d7c8de2399e5c9ea5ed3d7eda8987a23d2fcc80b4b",
+      "bytes": 1453651
+    },
+    {
+      "key": "zoobleep5/heavy",
+      "origin": "frozen_checkpoint",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": null,
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/zoobleep5/heavy.png",
+      "sha256": "782102e280d8e37557bb3076bd44d9ac1258f02e16e63c1fff04346292febc66",
+      "bytes": 1450181
+    },
+    {
+      "key": "zoobleep5/walk",
+      "origin": "frozen_checkpoint",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": null,
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/zoobleep5/walk.png",
+      "sha256": "2fa6b86cdaa4687df0d5fc4af471920644344f2276d2fe1cb3e62828846e217d",
+      "bytes": 1529675
+    },
+    {
+      "key": "zoobleep5/jump",
+      "origin": "frozen_checkpoint",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": null,
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/zoobleep5/jump.png",
+      "sha256": "c318d6639d4241c810e21b229408a31a5a8d381ca5189979ce236bec98f924cd",
+      "bytes": 1436322
+    },
+    {
+      "key": "zoobleep5/crouch",
+      "origin": "frozen_checkpoint",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": null,
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/zoobleep5/crouch.png",
+      "sha256": "b2dcb46168adb6703aaab03f6b7dd3811b898a3d3ec31d9289feb6cb798054a0",
+      "bytes": 1449005
+    },
+    {
+      "key": "zoobleep5/hit",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/zoobleep5/hit.png",
+      "sha256": "902c638beb280f08eb47290ff4754e7459cc28b7106627366c9c148a76b9837e",
+      "bytes": 1507503
+    },
+    {
+      "key": "zoobleep5/victory",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/zoobleep5/victory.png",
+      "sha256": "b2b22bcec06a6c8ca6615cf52e64eb8960219ebb79e45a5c1088bf3d37ef64bf",
+      "bytes": 1458306
+    },
+    {
+      "key": "zoobleep5/defeat",
+      "origin": "resumed_generation",
+      "manifestNativeFacing": "right",
+      "acceptedReceiptNativeFacing": "right",
+      "runtimeLookup": 1,
+      "targetFile": "assets/encore/poses/zoobleep5/defeat.png",
+      "sha256": "6f6f779a47dff8fcc74bdd36ced0f68533fe45cb94e8350ceb857f19cdfb3807",
+      "bytes": 843884
+    }
+  ],
+  "issues": []
+}
