@@ -1,0 +1,43 @@
+{
+  "stage": "barnoir",
+  "count": 3,
+  "bytes": 2555199,
+  "assets": [
+    {
+      "plane": "far",
+      "path": "assets/encore/stages/barnoir/far.png",
+      "nativePath": "docs/art-generation/stage-next-wave-20261120/native/far.png",
+      "bytes": 1421811,
+      "sha256": "e051e8cf276e3dc440dc81220d1af46cdcbae82f7d8ba026d2f44cebf2ac38d1",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB"
+    },
+    {
+      "plane": "mid",
+      "path": "assets/encore/stages/barnoir/mid.png",
+      "nativePath": "docs/art-generation/stage-next-wave-20261120/native/mid.png",
+      "bytes": 928982,
+      "sha256": "77b6bdc2dccafb7d78557396d81ba27120d852e540566587f47542ac2a811713",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "plane": "near",
+      "path": "assets/encore/stages/barnoir/near.png",
+      "nativePath": "docs/art-generation/stage-next-wave-20261120/native/near.png",
+      "bytes": 204406,
+      "sha256": "44c6343da751ef851ad57ef0af72adf435ce0f256b0557d523316144f59516f1",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGBA"
+    }
+  ]
+}

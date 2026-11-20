@@ -1,0 +1,82 @@
+{
+  "appearanceId": "glitch-murderdrones-ribbit-hommage",
+  "fighterId": "ribbit",
+  "series": "murderdrones",
+  "style": "hommage",
+  "slot": "jump",
+  "prompt": "Use case: precise local correction of a transparent game sprite. Edit REFERENCE IMAGE 1. Preserve the same full-body Ribbit Uzi-homage sprite, screen-right facing, pose, body proportions, expression, enormous raised white/black eyes, mint muzzle, pink cheeks and bow tie, black pom-pom beanie, black hoodie, white screen-and-crossbones emblem, two violet sleeve stripes, fluffy dark hem, long slim green legs, violet ankle cuffs, black rounded boots, outlines, flat colors and cel shading. Reference image 2 is the existing game Ribbit stance for identity only, NOT a guide for the finger count. This three-digit convention is an original design choice harmonizing this new crossover collection, not a canonical claim.\nKeep the exact airborne jumping pose, spread arms, one raised bent knee and one backward-bent leg. ONLY CORRECT BOTH OPEN GREEN HANDS. Each original hand has four finger lobes; each corrected hand must have EXACTLY THREE visible rounded digit tips TOTAL, including the thumb: one thumb plus two fingers. Both hands should be clean open THREE-PRONGED cartoon frog hands with THREE obvious protruding lobes and TWO obvious gaps between the digits. Do not count the palm or wrist as a digit. No fourth small nub, no extra knuckle tip, no two-finger V, no missing or fused digit. The hand at screen-left and the raised hand at screen-right must each separately show all THREE digit ends. Keep the palms in place and the open flying gesture.\nAll anatomy other than the requested hand corrections must remain as close as possible to reference 1. Keep both hands naturally attached to their existing wrists and sleeve cuffs. No new accessories, body changes, pose changes, costume changes, direction changes or effects. Output one complete sprite on genuine transparent background with native alpha, approximately square canvas matching the source composition, with every body part and both boots inside safe transparent margins. No floor, shadow, text, labels, border, checkerboard, background or duplicate figure.",
+  "referencePaths": [
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/jump.png",
+    "assets/encore/stance/ribbit.png"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "/root/audit_github",
+  "tool": "image_gen",
+  "transparentBackground": true,
+  "correction": {
+    "attempt": 2,
+    "replaces": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/jump.json",
+    "reason": "Harmonize the new original crossover design to three visible digit lobes total per hand, including the thumb. No canonical anatomy claim.",
+    "scope": "Hands only; preserve costume, body, original pose, facing and framing."
+  },
+  "schema": "encore-native-npc-crossover/v1",
+  "id": "glitch-murderdrones-ribbit-hommage:jump",
+  "status": "accepted_native",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/jump.png",
+  "targetFile": "assets/encore/crossovers/murderdrones/ribbit/hommage/jump.png",
+  "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-58c163ee-529e-4ee3-9020-b519df2cd8f6.png",
+  "sourceGenerationId": "exec-58c163ee-529e-4ee3-9020-b519df2cd8f6",
+  "definitionFile": "docs/art-generation/npc-crossovers-next-wave-20261120/definitions/glitch-murderdrones-ribbit-hommage.json",
+  "definitionSHA256": "04c8fffed2e11021004c8e387f318b11f459f4f5cf97a5cfa8922bbe51529e93",
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/jump.png",
+      "sha256": "5b44236ee5577d71fea24cac12ec6cad20d09af368d3eee9436395d25516237e",
+      "bytes": 759433
+    },
+    {
+      "position": 2,
+      "file": "assets/encore/stance/ribbit.png",
+      "sha256": "db12ab81247248b83279ecfbd74bb5472e31e8c7424fafcbd5bfb964dcc96769",
+      "bytes": 615267
+    }
+  ],
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "alpha12Bounds": [
+    149,
+    11,
+    1085,
+    1162
+  ],
+  "alpha12BoundsThreshold": "alpha > 12",
+  "fullyTransparentPixels": 1111344,
+  "sha256": "7990c365e9d19c3337815b36f9544408ce549634bfb2275dc2bba6a1ce167c53",
+  "bytes": 760662,
+  "nativeCopyVerified": true,
+  "sourceKind": "Création originale pour Encore",
+  "episodeFidelityClaim": false,
+  "canonicalCostumeClaim": false,
+  "includedInRuntime": true,
+  "createdAt": "2026-11-20T15:24:47.208500+00:00",
+  "visualReview": {
+    "status": "accepted",
+    "reviewer": "/root/audit_github",
+    "observations": [
+      "Les deux mains ouvertes montrent chacune trois lobes arrondis distincts au total, pouce compris, avec deux espaces entre les trois extrémités.",
+      "Convention anatomique originale du nouveau lot de crossovers ; aucune conformité canonique aux mains de Ribbit ou à un produit officiel revendiquée.",
+      "Saut orienté à droite, bras écartés, genou levé, jambe arrière repliée et tenue Uzi conservés. Les deux bottes et tout le personnage restent dans les marges transparentes."
+    ],
+    "scope": "Original crossover identity, entire figure, costume continuity and readable game pose; no canonical costume or complete animation claim."
+  }
+}

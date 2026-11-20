@@ -1,0 +1,15 @@
+{
+  "appearanceId": "glitch-murderdrones-ribbit-resident",
+  "fighterId": "ribbit",
+  "series": "murderdrones",
+  "style": "resident",
+  "slot": "selection",
+  "prompt": "Create one complete, entire head-to-toes character for the existing Digital Circus — Encore 2D fighting game. An ORIGINAL fan-game crossover redesign, not canonical merchandise. Clean polished 2D cel shading, confident dark contour, gentle warm upper-left highlights, 3/4 view facing RIGHT. Keep the slender long-legged frog silhouette and friendly identity of the first image, whose game proportions are intentionally an adaptation. The second reference establishes Ribbit identity only; never draw the keychain ring or strap. One single character, no duplicate, no grid, no caption, no text or watermark, no scenery, no floor or cast shadow. Native true transparent RGBA. Tall 1024x1536 composition, entire figure including all toes with generous clear margins on every side, no cropping. RIBBIT — TECHNICIENNE DES CONDUITES, an original resident of a Murder Drones bunker. Keep Ribbit BIOLOGICAL: green frog skin, huge separate protruding white eyes with black oval pupils and small white highlights, mint oval muzzle, cheerful simple mouth, round pink cheeks, pink bow tie at throat, long slim arms and legs. Outfit is a charcoal maintenance jumpsuit with muted olive panels, short rolled sleeves exposing green forearms, slim charcoal trouser legs stopping above ankles. Rounded olive knee pads, narrow amber reflective bands at ankles, dark belt with two small olive pouches and compact wrench and screwdriver secured in the pouches. Bare green hands with three rounded digits and wide bare green three-lobed frog feet. No boots, no gloves, no hat or hood, no visor, no hair, no wings or tail. Amber lamp as a small rectangular badge on the chest. The third image is ONLY a palette/workwear style reference; do not copy Pomni's hat, eyes, boots or body. SELECTION portrait pose: relaxed confident upright stance, one green hand resting on the belt, other hand raised in a small friendly open greeting, both entire green feet flat and visible; looking to the right with slight smile. Clear clothing silhouette, no held separate object.",
+  "referencePaths": [
+    "assets/encore/stance/ribbit.png",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/references/official-iconic-ribbit.png",
+    "assets/encore/crossovers/murderdrones/pomni/resident/selection.webp"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "root"
+}

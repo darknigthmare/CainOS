@@ -4,6 +4,7 @@ import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { COSTUMES, COSTUME_ADDITIONS, FIGHTERS, STAGES, VARIANTS, equipCostume } from '../combat/data.mjs';
 import { COSTUME_RESUMPTION_DEFINITIONS, getCostumeNativeFacing } from '../combat/costume-resumption-20261120.mjs';
+import { COSTUME_NEXT_WAVE_DEFINITIONS } from '../combat/costume-next-wave-20261120.mjs';
 import { ART_FILES } from '../combat/offline-manifest.mjs';
 import { getFidelitySources } from '../combat/fidelity.mjs';
 import { createProgram, validateProgram } from '../combat/progression.mjs';
@@ -19,11 +20,11 @@ const appearanceWaves = {
     'jaxsuitpomni', 'noirribbit', 'kaufmosuitribbit', 'intermissioncaine',
     'showtimepomni', 'bowlingpinragatha', 'ringmastercaine', 'strongmanorbsman',
     'stagehandbubble', 'bugtamerkinger', 'animeribbit', 'jaxsuitribbit',
-    'watermelongangle', 'aquablasterpomni', 'ptocaine', 'freakjax'],
+    'watermelongangle', 'aquablasterpomni', 'ptocaine', 'freakjax', 'caferibbit'],
 };
 
 test('additional outfits retain their owner, authored kit and saved appearance through replay and campaign round trips', () => {
-  assert.equal(COSTUME_ADDITIONS.length, 39);
+  assert.equal(COSTUME_ADDITIONS.length, 40);
   assert.equal(VARIANTS.length, 51, 'historical atlas remains stable');
   for (const [date, ids] of Object.entries(appearanceWaves)) {
     assert.deepEqual(COSTUME_ADDITIONS.filter(outfit => outfit.introducedOn === date).map(outfit => outfit.id), ids,
@@ -61,6 +62,10 @@ test('additional outfits retain their owner, authored kit and saved appearance t
         assert.equal(url.hostname, 'www.youtube.com');
         assert.equal(url.pathname, '/watch');
         assert.ok(url.searchParams.get('v'), 'episode sources identify the official video');
+      } else if (outfit.id === 'caferibbit') {
+        assert.equal(source.kind, 'Illustration officielle de collaboration commerciale');
+        assert.equal(url.hostname, 'prtimes.jp');
+        assert.equal(url.pathname, '/main/html/rd/p/000008857.000016756.html');
       } else {
         assert.equal(source.kind, 'Produit dérivé officiel');
         assert.equal(url.hostname, 'glitchproductions.store');
@@ -85,7 +90,7 @@ test('each additional outfit ships all eleven independent native-alpha PNG drawi
       signatures.add(createHash('sha256').update(bytes).digest('hex'));
     }
   }
-  assert.equal(signatures.size, 429, 'all 39 appearances have eleven independent drawings');
+  assert.equal(signatures.size, 440, 'all 40 appearances have eleven independent drawings');
 });
 
 test('resumed appearances append the frozen checkpoint definitions without changing the first fourteen entries', () => {
@@ -158,6 +163,15 @@ test('new catalogue drawings match reviewed native directions and exact archived
   assert.equal(new Set(nextFiles.map(file => file.appearanceId + '/' + file.slot)).size, 44);
   assert.equal(new Set(nextFiles.map(file => file.sha256)).size, 44);
   files.push(...nextFiles);
+  const wave = JSON.parse(readFileSync(new URL('../docs/art-generation/cast-next-wave-20261120/generation-completion.json', import.meta.url)));
+  assert.equal(wave.status, 'complete_active');
+  assert.deepEqual(wave.order, ['caferibbit']);
+  assert.deepEqual(COSTUME_ADDITIONS.slice(39).map(entry => entry.id), wave.order);
+  const cafeFiles = wave.appearances.flatMap(appearance => appearance.files);
+  assert.equal(cafeFiles.length, 11);
+  assert.equal(new Set(cafeFiles.map(file => file.appearanceId + '/' + file.slot)).size, 11);
+  assert.equal(new Set(cafeFiles.map(file => file.sha256)).size, 11);
+  files.push(...cafeFiles);
   // The independently reviewed records protect mixed source directions, including
   // Ragatha's left-facing portrait beside her right-facing combat drawings.
   for (const file of files) {
@@ -168,5 +182,57 @@ test('new catalogue drawings match reviewed native directions and exact archived
     const archived = readFileSync(new URL('../' + file.archiveFile, import.meta.url));
     assert.deepEqual(installed, archived, file.file + ': no resizing or re-encoding');
     assert.equal(createHash('sha256').update(installed).digest('hex'), file.sha256);
+  }
+});
+
+test('Cafe Ribbit preserves the 468-costume prefix and binds every installed pose to its frozen owner and accepted receipt', () => {
+  const hash = bytes => createHash('sha256').update(bytes).digest('hex');
+  const read = path => readFileSync(new URL('../' + path, import.meta.url));
+  const wave = 'docs/art-generation/cast-next-wave-20261120/';
+  const baselineBytes = read('docs/art-generation/npc-crossovers-next-wave-20261120/integration-baseline.json');
+  assert.equal(hash(baselineBytes), '1bea46363a8b121b71db75eb2da67f21b7db55254bc85eda5d242bb15e23acbf');
+  const baseline = JSON.parse(baselineBytes);
+  assert.deepEqual(COSTUME_ADDITIONS.slice(0, 39).map(outfit => outfit.id), baseline.appearanceIds);
+  assert.deepEqual(COSTUMES.slice(0, 468).map(outfit => outfit.id), baseline.costumeIds);
+  assert.equal(hash(JSON.stringify(COSTUMES.slice(0, 468))), baseline.costumesSHA256);
+  for (const outfit of COSTUME_ADDITIONS.slice(0, 39)) {
+    assert.equal(hash(JSON.stringify(outfit)), baseline.costumeHashes[outfit.id], outfit.id + ': historical definition unchanged');
+  }
+  assert.equal(COSTUMES[468].id, 'caferibbit', 'append Cafe before subsequent new crossover entries');
+  const definitionBytes = read(wave + 'definitions/caferibbit.json');
+  const definition = JSON.parse(definitionBytes);
+  assert.deepEqual(COSTUME_NEXT_WAVE_DEFINITIONS, [definition]);
+  assert.equal(definition.fighterId, 'ribbit');
+  const outfit = COSTUME_ADDITIONS.find(value => value.id === 'caferibbit');
+  assert.equal(outfit.fighterId, 'ribbit');
+  assert.equal(outfit.baseFighterId, 'ribbit');
+  assert.equal(COSTUMES.some(value => value.id === 'maidribbit'), false, 'the separate Pendantz candidate remains unclosed');
+  const completion = JSON.parse(read(wave + 'generation-completion.json'));
+  assert.deepEqual(completion.order, ['caferibbit']);
+  assert.equal(completion.counts.cumulativeAppearances, 40);
+  assert.equal(completion.counts.cumulativeAppearancePngs, 440);
+  assert.equal(completion.appearances[0].fighterId, 'ribbit');
+  assert.deepEqual(completion.appearances[0].files.map(file => file.slot), completion.slots);
+  for (const file of completion.appearances[0].files) {
+    const receipt = JSON.parse(read(file.receiptFile));
+    assert.equal(receipt.appearanceId, 'caferibbit');
+    assert.equal(receipt.slot, file.slot);
+    assert.equal(receipt.status, 'accepted_native');
+    assert.equal(receipt.visualReview.status, 'accepted');
+    assert.equal(receipt.method, 'image_gen.imagegen');
+    assert.equal(receipt.nativeCopyVerified, true);
+    assert.equal(receipt.definitionSha256, hash(definitionBytes));
+    assert.equal(receipt.nativeFacing, 'right');
+    assert.equal(receipt.sha256, file.sha256);
+    assert.equal(receipt.targetFile, file.file);
+    assert.equal(receipt.file, file.archiveFile);
+    assert.equal(hash(read(file.file)), receipt.sha256);
+    assert.equal(hash(read(file.archiveFile)), receipt.sha256);
+    assert.deepEqual(file.references, receipt.portableReferences);
+    for (const reference of receipt.portableReferences) {
+      const bytes = read(reference.file);
+      assert.equal(hash(bytes), reference.sha256, reference.file + ': original reference retained');
+      assert.equal(bytes.length, reference.bytes);
+    }
   }
 });

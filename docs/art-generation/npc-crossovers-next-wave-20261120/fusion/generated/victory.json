@@ -1,0 +1,73 @@
+{
+  "appearanceId": "glitch-murderdrones-ribbit-fusion",
+  "fighterId": "ribbit",
+  "series": "murderdrones",
+  "style": "fusion",
+  "slot": "victory",
+  "prompt": "Edit ONLY the first image. Preserve the entire mechanical Ribbit victory pose, face, optics, all green/mint armor, pink bow plate, purple lights, proportions, feet, arm positioning, colors and shading. Correct only the raised fist in the upper RIGHT corner: it currently shows FOUR mint fingertip caps (three at the top/right, plus one thumb cap across the front). Redesign this closed fist as EXACTLY THREE mechanical digits TOTAL: TWO curled fingers behind, and ONE thumb crossing their front. There must be exactly THREE pale mint caps visible in the raised fist, not four; remove the extra middle upper curled finger and smoothly reconnect the green palm. Keep the fist about the same size and at the same location. The second image establishes the chosen three-digit anatomy for this original redesign. Keep the hand on hip unchanged. One complete head-to-toes figure including the whole raised fist, with native true transparent RGBA and clear margins. No background, ground, shadows, glow, labels, text or extra objects.",
+  "referencePaths": [
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/attempts/victory-01.png",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/selection.png"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "root",
+  "correctionOf": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/attempts/victory-01.png",
+  "schema": "encore-native-npc-crossover/v1",
+  "id": "glitch-murderdrones-ribbit-fusion:victory",
+  "status": "accepted_native",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "file": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/victory.png",
+  "targetFile": "assets/encore/crossovers/murderdrones/ribbit/fusion/victory.png",
+  "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-b36d91e8-ad8d-4015-b274-0ef28c475cd4.png",
+  "sourceGenerationId": "exec-b36d91e8-ad8d-4015-b274-0ef28c475cd4",
+  "definitionFile": "docs/art-generation/npc-crossovers-next-wave-20261120/definitions/glitch-murderdrones-ribbit-fusion.json",
+  "definitionSHA256": "13a3808fa1c1b21767e5aa4eb26362a57d7a8005a8b44c0129941fbafddf672d",
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/attempts/victory-01.png",
+      "sha256": "22fb957a3821c5d64af51bd31f7a5def5aef1838cfc38a1bb2d18307bccde3b3",
+      "bytes": 1613847
+    },
+    {
+      "position": 2,
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/selection.png",
+      "sha256": "b4aeaf8ad54544eac7640f87603501ac3b7e3b8e0bfa4e68ef76b993c136968e",
+      "bytes": 1685503
+    }
+  ],
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "alpha12Bounds": [
+    91,
+    39,
+    926,
+    1525
+  ],
+  "alpha12BoundsThreshold": "alpha > 12",
+  "fullyTransparentPixels": 1113639,
+  "sha256": "67d4f944fdc33b14d4983510fc546d24eac57cacaff2c9484c2565f26034bdd1",
+  "bytes": 1619342,
+  "nativeCopyVerified": true,
+  "sourceKind": "Création originale pour Encore",
+  "episodeFidelityClaim": false,
+  "canonicalCostumeClaim": false,
+  "includedInRuntime": true,
+  "createdAt": "2026-11-20T15:26:47.838719+00:00",
+  "visualReview": {
+    "status": "accepted",
+    "reviewer": "root",
+    "observations": [
+      "Correction native inspectée : le poing levé comporte deux doigts repliés et un pouce, soit trois capsules claires. Pose, carénage, optiques, plaque rose et autre main conservés ; figure entière. Harmonisation originale de ce lot, sans affirmation anatomique canonique."
+    ],
+    "scope": "Original crossover identity, entire figure, costume continuity and readable game pose; no canonical costume or complete animation claim."
+  }
+}

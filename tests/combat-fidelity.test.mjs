@@ -31,7 +31,21 @@ test('review records keep source scope, observations and invented combat separat
   for (const source of FIDELITY_SOURCES) {
     const url = new URL(source.url);
     assert.equal(url.protocol, 'https:');
-    assert.ok(['www.glitchprod.com', 'static.wixstatic.com', 'steamcommunity.com', 'www.youtube.com', 'glitchproductions.store', 'www.comicsbeat.com', 'occ-0-3012-114.1.nflxso.net', 'static.wikia.nocookie.net', 'pbs.twimg.com'].includes(url.hostname));
+    assert.ok(['www.glitchprod.com', 'static.wixstatic.com', 'steamcommunity.com', 'www.youtube.com', 'glitchproductions.store', 'www.comicsbeat.com', 'occ-0-3012-114.1.nflxso.net', 'static.wikia.nocookie.net', 'pbs.twimg.com', 'prtimes.jp'].includes(url.hostname), `Unreviewed source host: ${url.hostname}`);
+    if (url.hostname === 'prtimes.jp') {
+      // Animate Holdings' own release for its official Digital Circus café collaboration.
+      assert.equal(url.pathname, '/main/html/rd/p/000008857.000016756.html');
+      assert.equal(source.id, 'animate-cafe-ribbit');
+      assert.equal(source.kind, 'Illustration officielle de collaboration commerciale');
+      assert.match(source.scope, /Pendantz Maid/);
+    }
+    if (source.kind === 'Vignettes de l’épisode officiel') {
+      assert.equal(source.id, 'glitch-barnoir-storyboards');
+      assert.equal(url.hostname, 'www.youtube.com');
+      assert.equal(url.searchParams.get('v'), 'L4p2gN2CzsA');
+      assert.match(source.scope, /320 × 180/);
+      assert.match(source.scope, /Aucun visionnage du flux complet revendiqué/);
+    }
     if (['static.wikia.nocookie.net', 'pbs.twimg.com'].includes(url.hostname)) {
       assert.equal(source.kind, 'Copie sur un hébergement tiers');
       assert.match(source.scope, /tiers|republiée/);
@@ -50,7 +64,7 @@ test('review records keep source scope, observations and invented combat separat
     if (item.reviewStatus === 'Épisode à revoir') assert.deepEqual(item.observedTraits, []);
     if (item.reviewStatus === 'Référence visuelle consultée') {
       assert.ok(item.observedTraits.length > 0);
-      assert.ok(getFidelitySources(item.sourceIds).some(s => s.kind === 'Visuel officiel'));
+      assert.ok(getFidelitySources(item.sourceIds).some(s => ['Visuel officiel', 'Vignettes de l’épisode officiel'].includes(s.kind)), `Unreviewed visual source: ${item.sourceIds.join(', ')}`);
     }
   }
   for (const move of Object.values(MOVE_FIDELITY)) {

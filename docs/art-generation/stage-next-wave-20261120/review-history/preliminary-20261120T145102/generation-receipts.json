@@ -1,0 +1,162 @@
+{
+  "schema": "encore-barnoir-generation-receipts/v1",
+  "createdAt": "2026-11-20T14:42:29.063Z",
+  "tool": "image_gen.imagegen",
+  "calls": 3,
+  "nativePreserved": true,
+  "stageId": "barnoir",
+  "images": [
+    {
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "plane": "far",
+      "sourcePath": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-82d60b3a-4ec5-4974-89fb-b1d6429c9cf6.png",
+      "nativePath": "docs/art-generation/stage-next-wave-20261120/native/far.png",
+      "bytes": 1421811,
+      "sha256": "e051e8cf276e3dc440dc81220d1af46cdcbae82f7d8ba026d2f44cebf2ac38d1",
+      "generationId": "exec-82d60b3a-4ec5-4974-89fb-b1d6429c9cf6",
+      "nativeCopyVerified": true,
+      "status": "accepted_native",
+      "visualInspection": "Native plane inspected individually, then production loader composites and combat scenes at cameras -1, 0, +1 inspected in review/three-cameras.png. See visual-review.md for scope and limitations.",
+      "transparentBackgroundRequested": false,
+      "inputReferences": [
+        {
+          "path": "docs/art-generation/stage-next-wave-20261120/references/episode5-storyboard-L3-M7.jpg",
+          "sha256": "66fffd5d73e5a6bbe8df4fc8959fc06bac41a2c84fba7528c3c6ac40853e9295",
+          "bytes": 45582,
+          "role": "official YouTube storyboard reference"
+        },
+        {
+          "path": "docs/art-generation/stage-next-wave-20261120/references/episode5-storyboard-L3-M11.jpg",
+          "sha256": "def97ccad574da19c3d7a08fe8c1f934509575c1eb7a8a1eca3578c749872877",
+          "bytes": 60673,
+          "role": "official YouTube storyboard reference"
+        },
+        {
+          "path": "docs/art-generation/stage-next-wave-20261120/references/episode5-storyboard-L3-M10.jpg",
+          "sha256": "6a7fa1d3c4d1f6656c720053e46a073c290d0619eaee1785617e7e2bc8ac287f",
+          "bytes": 57754,
+          "role": "official YouTube storyboard reference"
+        }
+      ],
+      "activePath": "assets/encore/stages/barnoir/far.png",
+      "activeCopyVerified": true,
+      "nativeAlphaPreserved": "not applicable: opaque RGB native source",
+      "compositeReview": {
+        "path": "docs/art-generation/stage-next-wave-20261120/review/three-cameras.png",
+        "sha256": "4c77c6e135a1d8b6a7b124ebe43d2600d6a807275de95f6832179ded75fe19f1",
+        "reviewedAt": "2026-11-20T14:52:59.485047+00:00"
+      }
+    },
+    {
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBounds": [
+        0,
+        519,
+        1672,
+        941
+      ],
+      "topQuarterAlphaMax": 1,
+      "plane": "mid",
+      "sourcePath": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-00d584d8-3743-427f-8dac-5441666afc88.png",
+      "nativePath": "docs/art-generation/stage-next-wave-20261120/native/mid.png",
+      "bytes": 928982,
+      "sha256": "77b6bdc2dccafb7d78557396d81ba27120d852e540566587f47542ac2a811713",
+      "generationId": "exec-00d584d8-3743-427f-8dac-5441666afc88",
+      "nativeCopyVerified": true,
+      "status": "accepted_native",
+      "visualInspection": "Native plane inspected individually, then production loader composites and combat scenes at cameras -1, 0, +1 inspected in review/three-cameras.png. See visual-review.md for scope and limitations.",
+      "transparentBackgroundRequested": true,
+      "inputReferences": [
+        {
+          "path": "docs/art-generation/stage-next-wave-20261120/native/far.png",
+          "sha256": "e051e8cf276e3dc440dc81220d1af46cdcbae82f7d8ba026d2f44cebf2ac38d1",
+          "bytes": 1421811,
+          "role": "generated alignment layer"
+        },
+        {
+          "path": "docs/art-generation/stage-next-wave-20261120/references/episode5-storyboard-L3-M7.jpg",
+          "sha256": "66fffd5d73e5a6bbe8df4fc8959fc06bac41a2c84fba7528c3c6ac40853e9295",
+          "bytes": 45582,
+          "role": "official YouTube storyboard reference"
+        },
+        {
+          "path": "docs/art-generation/stage-next-wave-20261120/references/episode5-storyboard-L3-M11.jpg",
+          "sha256": "def97ccad574da19c3d7a08fe8c1f934509575c1eb7a8a1eca3578c749872877",
+          "bytes": 60673,
+          "role": "official YouTube storyboard reference"
+        }
+      ],
+      "activePath": "assets/encore/stages/barnoir/mid.png",
+      "activeCopyVerified": true,
+      "nativeAlphaPreserved": true,
+      "compositeReview": {
+        "path": "docs/art-generation/stage-next-wave-20261120/review/three-cameras.png",
+        "sha256": "4c77c6e135a1d8b6a7b124ebe43d2600d6a807275de95f6832179ded75fe19f1",
+        "reviewedAt": "2026-11-20T14:52:59.485047+00:00"
+      }
+    },
+    {
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        85
+      ],
+      "visibleBounds": [
+        1,
+        850,
+        1642,
+        941
+      ],
+      "standingAreaAlphaMax": 1,
+      "plane": "near",
+      "sourcePath": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-930da960-fc41-4804-bf6b-33909c70cf72.png",
+      "nativePath": "docs/art-generation/stage-next-wave-20261120/native/near.png",
+      "bytes": 204406,
+      "sha256": "44c6343da751ef851ad57ef0af72adf435ce0f256b0557d523316144f59516f1",
+      "generationId": "exec-930da960-fc41-4804-bf6b-33909c70cf72",
+      "nativeCopyVerified": true,
+      "status": "accepted_native",
+      "visualInspection": "Native plane inspected individually, then production loader composites and combat scenes at cameras -1, 0, +1 inspected in review/three-cameras.png. See visual-review.md for scope and limitations.",
+      "transparentBackgroundRequested": true,
+      "inputReferences": [
+        {
+          "path": "docs/art-generation/stage-next-wave-20261120/native/far.png",
+          "sha256": "e051e8cf276e3dc440dc81220d1af46cdcbae82f7d8ba026d2f44cebf2ac38d1",
+          "bytes": 1421811,
+          "role": "generated alignment layer"
+        },
+        {
+          "path": "docs/art-generation/stage-next-wave-20261120/native/mid.png",
+          "sha256": "77b6bdc2dccafb7d78557396d81ba27120d852e540566587f47542ac2a811713",
+          "bytes": 928982,
+          "role": "generated alignment layer"
+        }
+      ],
+      "activePath": "assets/encore/stages/barnoir/near.png",
+      "activeCopyVerified": true,
+      "nativeAlphaPreserved": true,
+      "compositeReview": {
+        "path": "docs/art-generation/stage-next-wave-20261120/review/three-cameras.png",
+        "sha256": "4c77c6e135a1d8b6a7b124ebe43d2600d6a807275de95f6832179ded75fe19f1",
+        "reviewedAt": "2026-11-20T14:52:59.485047+00:00"
+      }
+    }
+  ],
+  "compositeReviewAcceptedAt": "2026-11-20T14:52:59.485047+00:00"
+}

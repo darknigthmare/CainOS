@@ -1,0 +1,49 @@
+{
+  "schema": "encore-tracker-baseline-visual/v1",
+  "reviewedAt": "2026-11-20T15:13:18.474Z",
+  "status": "accepted_as_baseline",
+  "workbookSHA256": "048d758f614daf1ad388a12fed5955b853734c2c1c47d92fb7a6e493512eea12",
+  "views": [
+    {
+      "file": "baseline-summary.png",
+      "sha256": "df90c0035b44cbfe036bd3c95362c097a0e163ce0fa4117720bb61716460b1d5",
+      "status": "inspected",
+      "reviewer": "/root/tracker_recovery"
+    },
+    {
+      "file": "baseline-stage-left.png",
+      "sha256": "1518e4e20cf7acc9d0113f8f6e657ada93ed5adab3791f3b06987d8a08640514",
+      "status": "inspected",
+      "reviewer": "/root/tracker_recovery"
+    },
+    {
+      "file": "baseline-stage-right.png",
+      "sha256": "64fd233c4ccb8908e265d3d5fea21e373a6466293f6cfc83d12e2e67846446ca",
+      "status": "inspected",
+      "reviewer": "/root/tracker_recovery"
+    },
+    {
+      "file": "baseline-production.png",
+      "sha256": "acb65d0c8f94abe4657ad03877d6c142252cf61a02197814aacecdda60cd154c",
+      "status": "inspected",
+      "reviewer": "/root/tracker_recovery"
+    },
+    {
+      "file": "baseline-qa.png",
+      "sha256": "22b6d4f68e4df920c58fa87b51dab6a38831d08ca246479362a591da9ee46c25",
+      "status": "inspected",
+      "reviewer": "/root/tracker_recovery"
+    },
+    {
+      "file": "baseline-references.png",
+      "sha256": "d6ef17aceba67aa701075677f755b1786e7dbcddd373ac099a89489a8afe213d",
+      "status": "inspected",
+      "reviewer": "/root/tracker_recovery"
+    }
+  ],
+  "observations": [
+    "Synthèse lisible : 54 combattants, 468 costumes, 23 arènes, 3 188 lignes Production et 2 335 lignes QA.",
+    "Colonnes jaunes de notes, statuts de QA historiques et ordre du dernier lot conservés dans les vues initiales.",
+    "Légende de Références entière, de Lecture du suivi à Limites QA ; les lignes seront déplacées sans perte pour les nouvelles sources."
+  ]
+}

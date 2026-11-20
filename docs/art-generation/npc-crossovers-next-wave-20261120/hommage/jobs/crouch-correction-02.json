@@ -1,0 +1,22 @@
+{
+  "appearanceId": "glitch-murderdrones-ribbit-hommage",
+  "fighterId": "ribbit",
+  "series": "murderdrones",
+  "style": "hommage",
+  "slot": "crouch",
+  "prompt": "Use case: precise local correction of a transparent game sprite. Edit REFERENCE IMAGE 1. Preserve the same full-body Ribbit Uzi-homage sprite, screen-right facing, pose, body proportions, expression, enormous raised white/black eyes, mint muzzle, pink cheeks and bow tie, black pom-pom beanie, black hoodie, white screen-and-crossbones emblem, two violet sleeve stripes, fluffy dark hem, long slim green legs, violet ankle cuffs, black rounded boots, outlines, flat colors and cel shading. Reference image 2 is the existing game Ribbit stance for identity only, NOT a guide for the finger count. This three-digit convention is an original design choice harmonizing this new crossover collection, not a canonical claim.\nKeep the exact low crouching pose, both knees bent and boots planted. ONLY CORRECT THE RAISED OPEN HAND AT SCREEN RIGHT, beside the face. That hand currently shows four rounded digits. Make it a clean open THREE-PRONGED cartoon frog hand with EXACTLY THREE visible rounded digit tips TOTAL, including the thumb: one thumb plus two fingers. Show THREE obvious protruding lobes and TWO clear gaps. No fourth little nub or extra finger. Preserve the current palm position, wrist, sleeve cuff and open guard gesture. The resting hand at SCREEN LEFT on the knee already has three visible lobes: preserve it without adding or removing any digits. Do not edit that resting hand, the knees or the face.\nAll anatomy other than the requested hand corrections must remain as close as possible to reference 1. Keep both hands naturally attached to their existing wrists and sleeve cuffs. No new accessories, body changes, pose changes, costume changes, direction changes or effects. Output one complete sprite on genuine transparent background with native alpha, approximately square canvas matching the source composition, with every body part and both boots inside safe transparent margins. No floor, shadow, text, labels, border, checkerboard, background or duplicate figure.",
+  "referencePaths": [
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/crouch.png",
+    "assets/encore/stance/ribbit.png"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "/root/audit_github",
+  "tool": "image_gen",
+  "transparentBackground": true,
+  "correction": {
+    "attempt": 2,
+    "replaces": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/crouch.json",
+    "reason": "Harmonize the new original crossover design to three visible digit lobes total per hand, including the thumb. No canonical anatomy claim.",
+    "scope": "Hands only; preserve costume, body, original pose, facing and framing."
+  }
+}

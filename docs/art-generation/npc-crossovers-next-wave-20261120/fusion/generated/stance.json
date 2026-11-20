@@ -1,0 +1,65 @@
+{
+  "appearanceId": "glitch-murderdrones-ribbit-fusion",
+  "fighterId": "ribbit",
+  "series": "murderdrones",
+  "style": "fusion",
+  "slot": "stance",
+  "prompt": "Use the attached approved selection image as the exact identity, proportions, costume, materials, color and 2D cel-shading reference. Draw ONE new full-body pose of the SAME original Encore crossover Ribbit. Keep the ENTIRE mechanical frog design: separate glossy black optical domes with magenta LED pupils, green shell, mint muzzle and belly, pink cheek LEDs and metal bow, round dark pivots with tiny purple accents, green/mint long limbs, three-digit robot hands and three-lobed robot feet. No organic skin, clothes, hair, wings, tail or extra weapons. COMBAT STANCE: standing in a broad balanced right-facing guard, both knees slightly bent, left rear hand held in a small fist near chest, forward right hand open at shoulder height, both feet planted apart. Ready for action, distinctly lower and more guarded than the selection reference. Three-quarter side view, native facing RIGHT. Clean black contours, gentle upper-left highlights, restrained cel shading matching the reference. One character only, full head-to-toes including raised hands and all feet, with comfortable transparent margin around the ENTIRE silhouette. Use a canvas wide enough for this pose (portrait 1024x1536 or square 1536x1536 if needed); never crop or squeeze limbs. Native true transparent RGBA, clean alpha edges, no scene/background/ground/halo/text/grid/watermark. This is a separate action drawing, not a transformation, crop or composited duplicate of the selection.",
+  "referencePaths": [
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/selection.png"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "root",
+  "schema": "encore-native-npc-crossover/v1",
+  "id": "glitch-murderdrones-ribbit-fusion:stance",
+  "status": "accepted_native",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "file": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/stance.png",
+  "targetFile": "assets/encore/crossovers/murderdrones/ribbit/fusion/stance.png",
+  "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-41eabb11-24b0-4d4d-915f-07515c74b0be.png",
+  "sourceGenerationId": "exec-41eabb11-24b0-4d4d-915f-07515c74b0be",
+  "definitionFile": "docs/art-generation/npc-crossovers-next-wave-20261120/definitions/glitch-murderdrones-ribbit-fusion.json",
+  "definitionSHA256": "13a3808fa1c1b21767e5aa4eb26362a57d7a8005a8b44c0129941fbafddf672d",
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/selection.png",
+      "sha256": "b4aeaf8ad54544eac7640f87603501ac3b7e3b8e0bfa4e68ef76b993c136968e",
+      "bytes": 1685503
+    }
+  ],
+  "dimensions": [
+    1199,
+    1312
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "alpha12Bounds": [
+    47,
+    71,
+    1163,
+    1282
+  ],
+  "alpha12BoundsThreshold": "alpha > 12",
+  "fullyTransparentPixels": 1080624,
+  "sha256": "caf3b3f409ed6cec5c9c1beb1c7aeae19e951d3664f4cd52650081ce5c780111",
+  "bytes": 980827,
+  "nativeCopyVerified": true,
+  "sourceKind": "Création originale pour Encore",
+  "episodeFidelityClaim": false,
+  "canonicalCostumeClaim": false,
+  "includedInRuntime": true,
+  "createdAt": "2026-11-20T14:45:37.930971+00:00",
+  "visualReview": {
+    "status": "accepted",
+    "reviewer": "root",
+    "observations": [
+      "Garde basse mécanique vers la droite, optiques et nœud-plaque conservés, articulations et panneaux lisibles, mains et deux pieds complets ; silhouette distincte du portrait."
+    ],
+    "scope": "Original crossover identity, entire figure, costume continuity and readable game pose; no canonical costume or complete animation claim."
+  }
+}

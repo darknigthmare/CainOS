@@ -1,0 +1,664 @@
+{
+  "schema": "encore-next-wave-workbook-visual-review/v1",
+  "reviewedAt": "2026-11-20T15:56:39.441882+00:00",
+  "status": "accepted",
+  "workbookSHA256": "4ffcd9d1e17cedbc4a6495f103573eb231a77006d2dabb210f2abbdbca781091",
+  "planSha256": "dd1ee1b35fd000dff0e06045e3a13315f05f331cb8fccf0304346ec06b74e0c1",
+  "method": "44 final rendered ranges independently inspected by /root/ribbit_references, with six baseline views; 12 final ranges directly inspected by /root/tracker_recovery and four by /root. Individual reports retain reviewer scope and limitations.",
+  "reviewedFinalViews": 44,
+  "baselineViewsCompared": 6,
+  "individualDrawingsChecked": 44,
+  "independentReview": {
+    "file": "independent-visual-review.json",
+    "sha256": "1a8b4e319fb142f2d6936b757b1407ab64252a14767f8dff00422ee965e7ac54",
+    "status": "accepted_with_stated_scope",
+    "reviewer": "/root/ribbit_references"
+  },
+  "targetedReview": {
+    "file": "targeted-visual-review.json",
+    "sha256": "a21de12ad1a74ed6849adec8dc8f4fda673afcc3fa84c81427aa2759ed67797a",
+    "status": "accepted_for_reviewed_ranges",
+    "primaryReviewerViews": 12,
+    "rootReviewerViews": 4
+  },
+  "observations": [
+    "Les 44 dessins sont détaillés dans Production et QA pour les quatre familles Café, Hommage, Résident et Fusion ; les noms, SHA-256 et chemins de reçus restent entièrement lisibles.",
+    "Les trois lobes visibles sont une harmonisation des créations originales de ce lot, et non une caractéristique canonique officiellement attestée.",
+    "La famille Café est une adaptation d’une illustration officielle de collaboration ; elle ne résout pas la référence incomplète du Maid Ribbit Pendantz.",
+    "Les colonnes jaunes de notes utilisateur restent visibles dans les plages inspectées. Les six vues baseline ont servi de comparaison de présentation.",
+    "Le navigateur reste Non exécuté, avec tentative bloquée avant navigation et zéro validation navigateur des quatre apparences finales.",
+    "Le suivi distingue les images natives et leurs reçus, les contrôles Canvas statiques, les tests Node/constructions, les références de lore et la publication distante.",
+    "Aucun défaut concret de lisibilité, de coupure de chemin ou de portée n’a été relevé dans les 44 vues."
+  ],
+  "resolvedInspectionNotes": [
+    "Un doute initial sur la visibilité du statut en colonne D dans trois vues de fonctionnalités a été levé par inspection agrandie des pixels existants : « Implémenté » est présent. Aucun défaut du PNG, aucune correction ni régénération demandée.",
+    "QA 13 et QA 14 ont été rouvertes individuellement après une sortie d’outil tronquée, puis réellement inspectées avant cette conclusion."
+  ],
+  "concreteDefects": [],
+  "limits": [
+    "Cette preuve porte sur les 44 plages exportées, et non sur l’examen visuel de chacune des 81 412 cellules du classeur.",
+    "Le réimport, les 42 formules, les 10 tables et la comparaison XML native de 81 412 cellules sans différence sont contrôlés séparément par tracker_recovery ; cette revue visuelle ne les réexécute pas.",
+    "Aucune session Excel desktop, interaction navigateur, écoute sur périphérique physique ni animation complète n’a été exécutée par cette revue.",
+    "La lisibilité des références et de leurs limites ne certifie pas une fidélité canonique intégrale des créations.",
+    "La conservation exhaustive des anciennes notes relève de la comparaison native séparée ; cette revue confirme leur présentation dans les plages effectivement inspectées.",
+    "Le réviseur n’a pas créé ni exporté ce classeur ; il a participé auparavant à la production de Café et de quatre corrections Hommage. L’indépendance revendiquée ici concerne la revue du classeur et de ses rendus."
+  ],
+  "views": [
+    {
+      "name": "summary-top",
+      "file": "summary-top.png",
+      "sheet": "Synthèse",
+      "range": "A1:H18",
+      "sha256": "584fbfa60a809ddf178e4276e3d91315d03029a87edf73749a65e05cef9a88ce",
+      "dimensions": [
+        1890,
+        667
+      ],
+      "actuallyInspected": true,
+      "status": "accepted_with_stated_scope",
+      "observation": "Titres, compteurs et statuts lisibles ; 24 arènes, 472 costumes, 3242 lignes Production et 2389 lignes QA cohérents avec le plan."
+    },
+    {
+      "name": "summary-bottom",
+      "file": "summary-bottom.png",
+      "sheet": "Synthèse",
+      "range": "A19:H35",
+      "sha256": "f129e49bc1a34320c196a687a59703abe8511b63fa95b884ba72554654692f64",
+      "dimensions": [
+        1890,
+        639
+      ],
+      "actuallyInspected": true,
+      "status": "accepted_with_stated_scope",
+      "observation": "Sous-totaux, notes de portée et absence de validation navigateur lisibles ; pas de confusion entre implémentation, tests techniques et fidélité artistique."
+    },
+    {
+      "name": "stage-left",
+      "file": "stage-left.png",
+      "sheet": "Arènes",
+      "range": "A29:L29",
+      "sha256": "81192dda48df7dfdae494422429be41199edc7d20fc26f2f1dd00ec27682f6e1",
+      "dimensions": [
+        2380,
+        103
+      ],
+      "actuallyInspected": true,
+      "status": "accepted_with_stated_scope",
+      "observation": "Nouvelle arène barnoir et paramètres de jeu lisibles ; lignes et colonnes correctement alignées."
+    },
+    {
+      "name": "stage-right",
+      "file": "stage-right.png",
+      "sheet": "Arènes",
+      "range": "M29:T29",
+      "sha256": "2ead00f36514389d972e2d6b0b392691dea503765ae5f455e6403cab7ecd926e",
+      "dimensions": [
+        5980,
+        103
+      ],
+      "actuallyInspected": true,
+      "status": "accepted_with_stated_scope",
+      "observation": "Trois plans natifs et limites des références storyboard lisibles ; colonne de notes jaunes conservée."
+    },
+    {
+      "name": "feature-pre-02",
+      "file": "feature-pre-02.png",
+      "sheet": "Fonctionnalités",
+      "range": "A61:I61",
+      "sha256": "adea6992c42e175d31f0e9fbb62a761bf71c73ea2804be50a40eb4c078f7a1da",
+      "dimensions": [
+        3560,
+        85
+      ],
+      "actuallyInspected": true,
+      "status": "accepted_with_stated_scope",
+      "observation": "Statut et texte de fonctionnalité lisibles ; quatre apparences ajoutées, couverture partielle des PNJ et limites de validation restent explicites ; notes jaunes conservées."
+    },
+    {
+      "name": "feature-pre-03",
+      "file": "feature-pre-03.png",
+      "sheet": "Fonctionnalités",
+      "range": "A62:I62",
+      "sha256": "38d4a1d6b1e30d5ade19a015b16c8f4b1383e2ff6714a5d3d02e25f926d6ad01",
+      "dimensions": [
+        3560,
+        85
+      ],
+      "actuallyInspected": true,
+      "status": "accepted_with_stated_scope",
+      "observation": "Statut et texte de fonctionnalité lisibles ; quatre apparences ajoutées, couverture partielle des PNJ et limites de validation restent explicites ; notes jaunes conservées."
+    },
+    {
+      "name": "feature-prd-11",
+      "file": "feature-prd-11.png",
+      "sheet": "Fonctionnalités",
+      "range": "A95:I95",
+      "sha256": "314a5b7a7bcd6b95416849564663c8dc92ea3ede84593e3d5d3770f38d4a96a6",
+      "dimensions": [
+        3560,
+        76
+      ],
+      "actuallyInspected": true,
+      "status": "accepted_with_stated_scope",
+      "observation": "Statut et texte de fonctionnalité lisibles ; quatre apparences ajoutées, couverture partielle des PNJ et limites de validation restent explicites ; notes jaunes conservées."
+    },
+    {
+      "name": "feature-pre-09",
+      "file": "feature-pre-09.png",
+      "sheet": "Fonctionnalités",
+      "range": "A68:I68",
+      "sha256": "baee50dd6e1a8e185a2f7b80d29e0454d29094e63716fdc338c9c1a29d046ced",
+      "dimensions": [
+        3560,
+        76
+      ],
+      "actuallyInspected": true,
+      "status": "accepted_with_stated_scope",
+      "observation": "Statut et texte de fonctionnalité lisibles ; quatre apparences ajoutées, couverture partielle des PNJ et limites de validation restent explicites ; notes jaunes conservées."
+    },
+    {
+      "name": "feature-pre-17",
+      "file": "feature-pre-17.png",
+      "sheet": "Fonctionnalités",
+      "range": "A101:I101",
+      "sha256": "6cd7602c0e91d6f2da26df6701aefedc39f4d8f8dbdefbf8d079bc72e01460b2",
+      "dimensions": [
+        3560,
+        76
+      ],
+      "actuallyInspected": true,
+      "status": "accepted_with_stated_scope",
+      "observation": "Statut et texte de fonctionnalité lisibles ; quatre apparences ajoutées, couverture partielle des PNJ et limites de validation restent explicites ; notes jaunes conservées."
+    },
+    {
+      "name": "feature-pre-21",
+      "file": "feature-pre-21.png",
+      "sheet": "Fonctionnalités",
+      "range": "A107:I107",
+      "sha256": "02bf2d794755c2020d9a17a59ab35ff177af6b433728e8650956b1f58ba93f71",
+      "dimensions": [
+        3560,
+        140
+      ],
+      "actuallyInspected": true,
+      "status": "accepted_with_stated_scope",
+      "observation": "Statut et texte de fonctionnalité lisibles ; quatre apparences ajoutées, couverture partielle des PNJ et limites de validation restent explicites ; notes jaunes conservées."
+    },
+    {
+      "name": "production-1",
+      "file": "production-1.png",
+      "sheet": "Production",
+      "range": "A3194:J3197",
+      "sha256": "1ac463820ea479f25fe6c4628de17715f535ff1fcc235b30eb315e1a1e011ba9",
+      "dimensions": [
+        4020,
+        749
+      ],
+      "actuallyInspected": true,
+      "status": "accepted_with_stated_scope",
+      "observation": "Les quatre familles sont présentées dans l’ordre Café, Hommage, Résident, Fusion. Café ne ferme pas maidribbit Pendantz ; trois lobes décrits comme harmonisation originale."
+    },
+    {
+      "name": "production-2",
+      "file": "production-2.png",
+      "sheet": "Production",
+      "range": "A3198:J3201",
+      "sha256": "d6f2006e6169fd4712d1f56b2b4dc45fd496937d10dc06713fc63947811f5e60",
+      "dimensions": [
+        4020,
+        927
+      ],
+      "actuallyInspected": true,
+      "status": "accepted_with_stated_scope",
+      "observation": "Détails des dessins individuels lisibles, y compris chemins PNG, empreintes SHA-256 et chemins de reçus complets. Aucun texte utile tronqué en hauteur ; notes jaunes conservées."
+    },
+    {
+      "name": "production-3",
+      "file": "production-3.png",
+      "sheet": "Production",
+      "range": "A3202:J3205",
+      "sha256": "340a79723b34cb8cf4af856e48699c46644c7065debaf06f121d08c3f6f51f8d",
+      "dimensions": [
+        4020,
+        927
+      ],
+      "actuallyInspected": true,
+      "status": "accepted_with_stated_scope",
+      "observation": "Détails des dessins individuels lisibles, y compris chemins PNG, empreintes SHA-256 et chemins de reçus complets. Aucun texte utile tronqué en hauteur ; notes jaunes conservées."
+    },
+    {
+      "name": "production-4",
+      "file": "production-4.png",
+      "sheet": "Production",
+      "range": "A3206:J3209",
+      "sha256": "7f395cbaad8775d6dd9036ec1c36454bf2e0e7cbe72117f1cfd8d61a6a33e859",
+      "dimensions": [
+        4020,
+        927
+      ],
+      "actuallyInspected": true,
+      "status": "accepted_with_stated_scope",
+      "observation": "Détails des dessins individuels lisibles, y compris chemins PNG, empreintes SHA-256 et chemins de reçus complets. Aucun texte utile tronqué en hauteur ; notes jaunes conservées."
+    },
+    {
+      "name": "production-5",
+      "file": "production-5.png",
+      "sheet": "Production",
+      "range": "A3210:J3213",
+      "sha256": "28d08178f6f61594c7aa9b1b93c28567cd36a80dcc8dbf6d00ffadd67748fb12",
+      "dimensions": [
+        4020,
+        927
+      ],
+      "actuallyInspected": true,
+      "status": "accepted_with_stated_scope",
+      "observation": "Détails des dessins individuels lisibles, y compris chemins PNG, empreintes SHA-256 et chemins de reçus complets. Aucun texte utile tronqué en hauteur ; notes jaunes conservées."
+    },
+    {
+      "name": "production-6",
+      "file": "production-6.png",
+      "sheet": "Production",
+      "range": "A3214:J3217",
+      "sha256": "5cc6e372d002a8cdb29896bc7056d74505db66a4dd4b4535f02c0e5ce15b51d0",
+      "dimensions": [
+        4020,
+        927
+      ],
+      "actuallyInspected": true,
+      "status": "accepted_with_stated_scope",
+      "observation": "Détails des dessins individuels lisibles, y compris chemins PNG, empreintes SHA-256 et chemins de reçus complets. Aucun texte utile tronqué en hauteur ; notes jaunes conservées."
+    },
+    {
+      "name": "production-7",
+      "file": "production-7.png",
+      "sheet": "Production",
+      "range": "A3218:J3221",
+      "sha256": "0f2fca0452332048bf3d79a93a03297b719d275a08ce1fc440c99bfebbe24280",
+      "dimensions": [
+        4020,
+        927
+      ],
+      "actuallyInspected": true,
+      "status": "accepted_with_stated_scope",
+      "observation": "Détails des dessins individuels lisibles, y compris chemins PNG, empreintes SHA-256 et chemins de reçus complets. Aucun texte utile tronqué en hauteur ; notes jaunes conservées."
+    },
+    {
+      "name": "production-8",
+      "file": "production-8.png",
+      "sheet": "Production",
+      "range": "A3222:J3225",
+      "sha256": "2f051bd4b205fa8eeebe6d00c48694c1c764a32290c28c237309506d1d7cfa3a",
+      "dimensions": [
+        4020,
+        927
+      ],
+      "actuallyInspected": true,
+      "status": "accepted_with_stated_scope",
+      "observation": "Détails des dessins individuels lisibles, y compris chemins PNG, empreintes SHA-256 et chemins de reçus complets. Aucun texte utile tronqué en hauteur ; notes jaunes conservées."
+    },
+    {
+      "name": "production-9",
+      "file": "production-9.png",
+      "sheet": "Production",
+      "range": "A3226:J3229",
+      "sha256": "b8b9406ae4291513bf3bc53f05e5d4099295315488f79d251a381ea299483cac",
+      "dimensions": [
+        4020,
+        927
+      ],
+      "actuallyInspected": true,
+      "status": "accepted_with_stated_scope",
+      "observation": "Détails des dessins individuels lisibles, y compris chemins PNG, empreintes SHA-256 et chemins de reçus complets. Aucun texte utile tronqué en hauteur ; notes jaunes conservées."
+    },
+    {
+      "name": "production-10",
+      "file": "production-10.png",
+      "sheet": "Production",
+      "range": "A3230:J3233",
+      "sha256": "81e04c0372c6e7363a2b7798408408e1d9a4b1d0fe40fd1ab86f712fb051fdaa",
+      "dimensions": [
+        4020,
+        927
+      ],
+      "actuallyInspected": true,
+      "status": "accepted_with_stated_scope",
+      "observation": "Détails des dessins individuels lisibles, y compris chemins PNG, empreintes SHA-256 et chemins de reçus complets. Aucun texte utile tronqué en hauteur ; notes jaunes conservées."
+    },
+    {
+      "name": "production-11",
+      "file": "production-11.png",
+      "sheet": "Production",
+      "range": "A3234:J3237",
+      "sha256": "2dcad5c440c2207ac9cca991b78d3c958d483d74b4a349018be7ad6027bab9e4",
+      "dimensions": [
+        4020,
+        927
+      ],
+      "actuallyInspected": true,
+      "status": "accepted_with_stated_scope",
+      "observation": "Détails des dessins individuels lisibles, y compris chemins PNG, empreintes SHA-256 et chemins de reçus complets. Aucun texte utile tronqué en hauteur ; notes jaunes conservées."
+    },
+    {
+      "name": "production-12",
+      "file": "production-12.png",
+      "sheet": "Production",
+      "range": "A3238:J3241",
+      "sha256": "6e58625e3865a2bc69bb39677cb90b0fb0cdec7826a83b7a76f2dd4324b05100",
+      "dimensions": [
+        4020,
+        927
+      ],
+      "actuallyInspected": true,
+      "status": "accepted_with_stated_scope",
+      "observation": "Détails des dessins individuels lisibles, y compris chemins PNG, empreintes SHA-256 et chemins de reçus complets. Aucun texte utile tronqué en hauteur ; notes jaunes conservées."
+    },
+    {
+      "name": "production-13",
+      "file": "production-13.png",
+      "sheet": "Production",
+      "range": "A3242:J3245",
+      "sha256": "e22d9415cb5318b6ab4af230382024c88f6de8d76fb2789560fc156ad138efec",
+      "dimensions": [
+        4020,
+        307
+      ],
+      "actuallyInspected": true,
+      "status": "accepted_with_stated_scope",
+      "observation": "Livrables du bar, musique et ambiance lisibles ; distinctions entre images natives, compositions originales et références observées maintenues."
+    },
+    {
+      "name": "production-14",
+      "file": "production-14.png",
+      "sheet": "Production",
+      "range": "A3246:J3247",
+      "sha256": "4b61ce9d471e4d54f438db41308692eec5d6841b127f685cae7b041b81cd3175",
+      "dimensions": [
+        4020,
+        151
+      ],
+      "actuallyInspected": true,
+      "status": "accepted_with_stated_scope",
+      "observation": "Livrables du bar, musique et ambiance lisibles ; distinctions entre images natives, compositions originales et références observées maintenues."
+    },
+    {
+      "name": "qa-1",
+      "file": "qa-1.png",
+      "sheet": "QA",
+      "range": "A2341:I2344",
+      "sha256": "2b1ff42cb9861c6213635fb55f294846ac5eb5eff0c5509296fbce733f70f751",
+      "dimensions": [
+        4980,
+        793
+      ],
+      "actuallyInspected": true,
+      "status": "accepted_with_stated_scope",
+      "observation": "Contrôles des PNG individuels lisibles, avec état Réussi, chemins d’actifs et de reçus, SHA-256 complets et limites alpha/native. Notes jaunes conservées."
+    },
+    {
+      "name": "qa-2",
+      "file": "qa-2.png",
+      "sheet": "QA",
+      "range": "A2345:I2348",
+      "sha256": "c4e8ef11aed6d3b3663a221eb2074e2f5a09ccb99ec1c86e89b6c71d6ea258b1",
+      "dimensions": [
+        4980,
+        793
+      ],
+      "actuallyInspected": true,
+      "status": "accepted_with_stated_scope",
+      "observation": "Contrôles des PNG individuels lisibles, avec état Réussi, chemins d’actifs et de reçus, SHA-256 complets et limites alpha/native. Notes jaunes conservées."
+    },
+    {
+      "name": "qa-3",
+      "file": "qa-3.png",
+      "sheet": "QA",
+      "range": "A2349:I2352",
+      "sha256": "5ac90bfb1043263cbeb09e21de36ef44d2c39ee12174f3878e780106e6fb397a",
+      "dimensions": [
+        4980,
+        793
+      ],
+      "actuallyInspected": true,
+      "status": "accepted_with_stated_scope",
+      "observation": "Contrôles des PNG individuels lisibles, avec état Réussi, chemins d’actifs et de reçus, SHA-256 complets et limites alpha/native. Notes jaunes conservées."
+    },
+    {
+      "name": "qa-4",
+      "file": "qa-4.png",
+      "sheet": "QA",
+      "range": "A2353:I2356",
+      "sha256": "54118185573c24c0aeb7518073cdf82d5ebefb10a71301d3719eb3475bb43c3a",
+      "dimensions": [
+        4980,
+        793
+      ],
+      "actuallyInspected": true,
+      "status": "accepted_with_stated_scope",
+      "observation": "Contrôles des PNG individuels lisibles, avec état Réussi, chemins d’actifs et de reçus, SHA-256 complets et limites alpha/native. Notes jaunes conservées."
+    },
+    {
+      "name": "qa-5",
+      "file": "qa-5.png",
+      "sheet": "QA",
+      "range": "A2357:I2360",
+      "sha256": "fdee8e32ff3701d349c09e4de0ae7ee420e48f34f7b63cfed4c8faf6cfb92710",
+      "dimensions": [
+        4980,
+        793
+      ],
+      "actuallyInspected": true,
+      "status": "accepted_with_stated_scope",
+      "observation": "Contrôles des PNG individuels lisibles, avec état Réussi, chemins d’actifs et de reçus, SHA-256 complets et limites alpha/native. Notes jaunes conservées."
+    },
+    {
+      "name": "qa-6",
+      "file": "qa-6.png",
+      "sheet": "QA",
+      "range": "A2361:I2364",
+      "sha256": "c9503606b370be3291ff50f0056210319efd4625498870c5678ccf0b8bf57478",
+      "dimensions": [
+        4980,
+        793
+      ],
+      "actuallyInspected": true,
+      "status": "accepted_with_stated_scope",
+      "observation": "Contrôles des PNG individuels lisibles, avec état Réussi, chemins d’actifs et de reçus, SHA-256 complets et limites alpha/native. Notes jaunes conservées."
+    },
+    {
+      "name": "qa-7",
+      "file": "qa-7.png",
+      "sheet": "QA",
+      "range": "A2365:I2368",
+      "sha256": "a0453879083bffb2857533a2fc386dc3b9e2fbf9c7e13ca591cb2d2a2791f6e3",
+      "dimensions": [
+        4980,
+        793
+      ],
+      "actuallyInspected": true,
+      "status": "accepted_with_stated_scope",
+      "observation": "Contrôles des PNG individuels lisibles, avec état Réussi, chemins d’actifs et de reçus, SHA-256 complets et limites alpha/native. Notes jaunes conservées."
+    },
+    {
+      "name": "qa-8",
+      "file": "qa-8.png",
+      "sheet": "QA",
+      "range": "A2369:I2372",
+      "sha256": "8e926d58f6ff45fe11a064ee2965465c5a421c19819efa75ca2bc34dbf1f73c2",
+      "dimensions": [
+        4980,
+        793
+      ],
+      "actuallyInspected": true,
+      "status": "accepted_with_stated_scope",
+      "observation": "Contrôles des PNG individuels lisibles, avec état Réussi, chemins d’actifs et de reçus, SHA-256 complets et limites alpha/native. Notes jaunes conservées."
+    },
+    {
+      "name": "qa-9",
+      "file": "qa-9.png",
+      "sheet": "QA",
+      "range": "A2373:I2376",
+      "sha256": "94cf2e61e89dca46291b7b24007588dcb622450206aeee305299d47553609f8e",
+      "dimensions": [
+        4980,
+        793
+      ],
+      "actuallyInspected": true,
+      "status": "accepted_with_stated_scope",
+      "observation": "Contrôles des PNG individuels lisibles, avec état Réussi, chemins d’actifs et de reçus, SHA-256 complets et limites alpha/native. Notes jaunes conservées."
+    },
+    {
+      "name": "qa-10",
+      "file": "qa-10.png",
+      "sheet": "QA",
+      "range": "A2377:I2380",
+      "sha256": "054037762fd9d24e24d9d1ed2e7053813136a4ac3c3200039e43fc6514855638",
+      "dimensions": [
+        4980,
+        793
+      ],
+      "actuallyInspected": true,
+      "status": "accepted_with_stated_scope",
+      "observation": "Contrôles des PNG individuels lisibles, avec état Réussi, chemins d’actifs et de reçus, SHA-256 complets et limites alpha/native. Notes jaunes conservées."
+    },
+    {
+      "name": "qa-11",
+      "file": "qa-11.png",
+      "sheet": "QA",
+      "range": "A2381:I2384",
+      "sha256": "540fe45a19db0ea1c3cfc0a1c17658d5eb978f67e7df6da0250a3edc610d1ece",
+      "dimensions": [
+        4980,
+        793
+      ],
+      "actuallyInspected": true,
+      "status": "accepted_with_stated_scope",
+      "observation": "Contrôles des PNG individuels lisibles, avec état Réussi, chemins d’actifs et de reçus, SHA-256 complets et limites alpha/native. Notes jaunes conservées."
+    },
+    {
+      "name": "qa-12",
+      "file": "qa-12.png",
+      "sheet": "QA",
+      "range": "A2385:I2388",
+      "sha256": "97da9d34933367c54bbb941a9d58386df2534fcff8690bc1517f642231d36203",
+      "dimensions": [
+        4980,
+        272
+      ],
+      "actuallyInspected": true,
+      "status": "accepted_with_stated_scope",
+      "observation": "Trois plans du bar et synthèse des 44 dessins lisibles : dimensions natives 1672 × 941 pour les plans, 56 983 581 octets pour les 44 PNG ; pas de prétention 4K."
+    },
+    {
+      "name": "qa-13",
+      "file": "qa-13.png",
+      "sheet": "QA",
+      "range": "A2389:I2392",
+      "sha256": "738f5d8920c6148f7862e101a2ae2b185717293026b51fcd5eb777385a7d3176",
+      "dimensions": [
+        4980,
+        244
+      ],
+      "actuallyInspected": true,
+      "status": "accepted_with_stated_scope",
+      "observation": "Canvas, arène, tests et intégrité séparés et lisibles : 80 contrôles Canvas, 419 tests Node, deux constructions et conservation des 5725 fichiers historiques rapportés comme preuves datées."
+    },
+    {
+      "name": "qa-14",
+      "file": "qa-14.png",
+      "sheet": "QA",
+      "range": "A2393:I2394",
+      "sha256": "a6b9733d6ae93eeb621ca9cc17b4febd4a05087c08f50391e8c820466b36c9d2",
+      "dimensions": [
+        4980,
+        151
+      ],
+      "actuallyInspected": true,
+      "status": "accepted_with_stated_scope",
+      "observation": "Navigateur affiché Non exécuté : Chromium bloqué au lancement avant navigation, zéro contrôle réussi et aucune validation navigateur des quatre apparences finales. Le statut du suivi distingue export/réimport de toute session Excel desktop."
+    },
+    {
+      "name": "references-new",
+      "file": "references-new.png",
+      "sheet": "Références",
+      "range": "A159:E162",
+      "sha256": "b562c1b2afe371472b1cf7c8d7e930c81daa5e2c666d22143bbf3661d6a85655",
+      "dimensions": [
+        3240,
+        476
+      ],
+      "actuallyInspected": true,
+      "status": "accepted_with_stated_scope",
+      "observation": "Quatre nouvelles références entièrement lisibles. Café distinct de Maid Pendantz ; storyboard limité ; Iconic ne prouve pas trois doigts ; Hommage et créations Résident/Fusion décrits sans certification canonique."
+    },
+    {
+      "name": "references-offline",
+      "file": "references-offline.png",
+      "sheet": "Références",
+      "range": "A64:E64",
+      "sha256": "c4bdd0c47754a8ca49bd09e8286f2f2a0172698aa0f5905a0c8ccf10503c18c5",
+      "dimensions": [
+        3240,
+        59
+      ],
+      "actuallyInspected": true,
+      "status": "accepted_with_stated_scope",
+      "observation": "Inventaire hors ligne lisible : 5816 images et 3 118 619 440 octets ; vérification de publication GitHub explicitement séparée."
+    },
+    {
+      "name": "references-footer",
+      "file": "references-footer.png",
+      "sheet": "Références",
+      "range": "A163:E173",
+      "sha256": "115a22851dccd4ab2be3c1406d3b3c7def627bd95b1b5cb0ed863c94c8e2b5a0",
+      "dimensions": [
+        3240,
+        401
+      ],
+      "actuallyInspected": true,
+      "status": "accepted_with_stated_scope",
+      "observation": "Légende des statuts, limites Lore/QA et règles de conservation des notes utilisateur lisibles jusqu’à la dernière ligne."
+    },
+    {
+      "name": "source-music",
+      "file": "source-music.png",
+      "sheet": "Références",
+      "range": "A63:E63",
+      "sha256": "f9d24c854385bfe332ed7cf238c7590a70c48807cdfb2006b1a1c56908c35ee4",
+      "dimensions": [
+        3240,
+        59
+      ],
+      "actuallyInspected": true,
+      "status": "accepted_with_stated_scope",
+      "observation": "26 motifs synthétiques et 24 thèmes originaux explicitement attribués au jeu."
+    },
+    {
+      "name": "source-stage-ambiences",
+      "file": "source-stage-ambiences.png",
+      "sheet": "Références",
+      "range": "A60:E60",
+      "sha256": "f0d692e37ed8a23eb3b52d1311ad1ecd9098e70df87bfe907251791f6820a701",
+      "dimensions": [
+        3240,
+        63
+      ],
+      "actuallyInspected": true,
+      "status": "accepted_with_stated_scope",
+      "observation": "24 ambiances visuelles et comportement de mouvements réduits lisibles."
+    },
+    {
+      "name": "source-audio-ambiences-07",
+      "file": "source-audio-ambiences-07.png",
+      "sheet": "Références",
+      "range": "A67:E67",
+      "sha256": "66821330442207522629910621afbbdaf2402c9d3cdca31d09d847eed1ccc866",
+      "dimensions": [
+        3240,
+        121
+      ],
+      "actuallyInspected": true,
+      "status": "accepted_with_stated_scope",
+      "observation": "24 ambiances sonores décrites comme synthèse originale ; absence de captation de la série et de validation du mixage sur matériel physique explicite."
+    }
+  ]
+}

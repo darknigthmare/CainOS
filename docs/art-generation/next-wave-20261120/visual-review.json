@@ -1,0 +1,117 @@
+{
+  "schema": "encore-next-wave-visual-review/v1",
+  "status": "accepted_with_stated_scope",
+  "reviewer": "root",
+  "reviewedAt": "2026-11-20T15:39:26.859255+00:00",
+  "appearanceReviews": [
+    {
+      "id": "caferibbit",
+      "status": "accepted",
+      "inspectedSheets": 2,
+      "evidence": [
+        {
+          "file": "docs/art-generation/next-wave-20261120/review/caferibbit/actions-caferibbit.jpg",
+          "sha256": "784e62cc5d210875d5494e07f6121af0d6c5cd71fea3485d59a12bc7f5e344f9"
+        },
+        {
+          "file": "docs/art-generation/next-wave-20261120/review/caferibbit/archive-portraits-01.jpg",
+          "sha256": "5d851aa87eaa9865c631fc4d6af01f524a239866a31508e4a0baa51daa4f312e"
+        },
+        {
+          "file": "docs/art-generation/next-wave-20261120/review/caferibbit/character-canvas-review.json",
+          "sha256": "8652f55873cf631be05c7af3462ca523f95f50808c283f6ccd43e23a1b0403c4"
+        }
+      ]
+    },
+    {
+      "id": "glitch-murderdrones-ribbit-hommage",
+      "status": "accepted",
+      "inspectedSheets": 2,
+      "evidence": [
+        {
+          "file": "docs/art-generation/next-wave-20261120/review/glitch-murderdrones-ribbit-hommage/actions-glitch-murderdrones-ribbit-hommage.jpg",
+          "sha256": "0c5806071dbe818a383fa32da215bdfce2cfa25aed7298e5de264191ea6e1446"
+        },
+        {
+          "file": "docs/art-generation/next-wave-20261120/review/glitch-murderdrones-ribbit-hommage/archive-portraits-01.jpg",
+          "sha256": "ff6f99efa906939117f882fd58bb107416baf008fa148c1aebc66689742b6c28"
+        },
+        {
+          "file": "docs/art-generation/next-wave-20261120/review/glitch-murderdrones-ribbit-hommage/character-canvas-review.json",
+          "sha256": "7fa5147d35c50aa35b7c15f136c5e5135cdacac758e64e38012738b55beb48dc"
+        }
+      ]
+    },
+    {
+      "id": "glitch-murderdrones-ribbit-resident",
+      "status": "accepted",
+      "inspectedSheets": 2,
+      "evidence": [
+        {
+          "file": "docs/art-generation/next-wave-20261120/review/glitch-murderdrones-ribbit-resident/actions-glitch-murderdrones-ribbit-resident.jpg",
+          "sha256": "6ad74e280997c620ba20af4c89b4869cce3b2a9a7baf3e705ed309c8834e85fc"
+        },
+        {
+          "file": "docs/art-generation/next-wave-20261120/review/glitch-murderdrones-ribbit-resident/archive-portraits-01.jpg",
+          "sha256": "0e218196f5bdf1681c865a44dd9b47dcb905b7e7cf8a08c11b5196cb2ce1e37f"
+        },
+        {
+          "file": "docs/art-generation/next-wave-20261120/review/glitch-murderdrones-ribbit-resident/character-canvas-review.json",
+          "sha256": "f2110ab827ea27c77fa7f38c6488a89222a3a8bfc8aa7bfe9e92da9c9d0a3ccc"
+        }
+      ]
+    },
+    {
+      "id": "glitch-murderdrones-ribbit-fusion",
+      "status": "accepted",
+      "inspectedSheets": 2,
+      "evidence": [
+        {
+          "file": "docs/art-generation/next-wave-20261120/review/glitch-murderdrones-ribbit-fusion/actions-glitch-murderdrones-ribbit-fusion.jpg",
+          "sha256": "bbc9a906c5e12638fb57dcb9d80b36460c3fec160cc85fef49622f409d42becc"
+        },
+        {
+          "file": "docs/art-generation/next-wave-20261120/review/glitch-murderdrones-ribbit-fusion/archive-portraits-01.jpg",
+          "sha256": "c560573539802f15555868cbb86ffff7971f7e254a5392028d0f992e4157bad4"
+        },
+        {
+          "file": "docs/art-generation/next-wave-20261120/review/glitch-murderdrones-ribbit-fusion/character-canvas-review.json",
+          "sha256": "6a10a095137fd0b1d912c428e72e6ab7e114bca4481d266ce255f6ca3eb6e01f"
+        }
+      ]
+    }
+  ],
+  "inspectedAppearanceSheets": 8,
+  "stageReview": {
+    "stage": "barnoir",
+    "status": "accepted",
+    "evidence": [
+      {
+        "file": "docs/art-generation/stage-next-wave-20261120/review/three-cameras.png",
+        "sha256": "4c77c6e135a1d8b6a7b124ebe43d2600d6a807275de95f6832179ded75fe19f1"
+      },
+      {
+        "file": "docs/art-generation/stage-next-wave-20261120/review/scene-center.png",
+        "sha256": "321d58fa2b27fd3e8c4e70f3a20f1be6ec7835d171bad4e0d92650f574fec373"
+      },
+      {
+        "file": "docs/art-generation/stage-next-wave-20261120/review/canvas-review.json",
+        "sha256": "246adf6f77409ae104e65f268088151257b9e7896b265a0fbf18964ffe32acb6"
+      }
+    ]
+  },
+  "observations": [
+    "Les quatre apparences sont identifiables et entières dans leurs portraits et leurs neuf actions. Aucun morceau de voisin, bord coupé ou fond plein parasite observé.",
+    "Le costume Café conserve sa robe, ses revers blancs festonnés et ses chaussures sombres ; les poses de combat restent des adaptations du jeu.",
+    "Les trois crossovers distinguent un hommage habillé, une technicienne biologique et un corps entièrement mécanique. Les trois doigts appartiennent à la définition originale de ce lot, sans attribution canonique.",
+    "Les effets de mouvement et les ombres visibles sont produits par le renderer ; les PNG natifs transparents restent inchangés.",
+    "Barnoir garde une piste horizontale visible et des silhouettes lisibles dans les trois positions de caméra ; le comptoir ne masque pas les pieds."
+  ],
+  "limitations": [
+    "Revue Canvas2D native Skia et fichiers décodés, sans navigation ni interaction navigateur.",
+    "Neuf actions statiques par famille ; les cycles image par image restent ouverts.",
+    "Aucune certification canonique générale 1:1. Le Café et Pendantz Maid demeurent deux costumes distincts.",
+    "La référence Iconic ne décrit pas les doigts. Les extrémités historiques ne sont pas modifiées."
+  ],
+  "canonicalScopeAddendum": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/hand-count-scope-addendum.md"
+}

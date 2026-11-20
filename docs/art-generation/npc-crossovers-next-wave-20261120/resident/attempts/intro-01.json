@@ -1,0 +1,33 @@
+{
+  "appearanceId": "glitch-murderdrones-ribbit-resident",
+  "fighterId": "ribbit",
+  "series": "murderdrones",
+  "style": "resident",
+  "slot": "intro",
+  "prompt": "Use the attached approved selection image as the exact identity, proportions, costume, materials, color and 2D cel-shading reference. Draw ONE new full-body pose of the SAME original Encore crossover Ribbit. Keep the BIOLOGICAL green frog identity, huge white-and-black eyes, mint muzzle, pink cheeks and bow; charcoal/olive jumpsuit, short rolled sleeves, chest amber lamp, two belt pouches with tools secured, round knee pads, ankle amber bands, bare green three-digit hands and three-lobed feet. No change of outfit, no hat, no boots, no gloves, no robot conversion. INTRODUCTION POSE: upright with confident small smile, one hand briefly touching the pink bow at the throat and the other arm extended sideways in a theatrical welcome toward screen right; weight on rear foot, forward foot lightly ahead, entire body visible. Three-quarter side view, native facing RIGHT. Clean black contours, gentle upper-left highlights, restrained cel shading matching the reference. One character only, full head-to-toes including raised hands and all feet, with comfortable transparent margin around the ENTIRE silhouette. Use a canvas wide enough for this pose (portrait 1024x1536 or square 1536x1536 if needed); never crop or squeeze limbs. Native true transparent RGBA, clean alpha edges, no scene/background/ground/halo/text/grid/watermark. This is a separate action drawing, not a transformation, crop or composited duplicate of the selection.",
+  "referencePaths": [
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/selection.png"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "root",
+  "status": "rejected_visual_review",
+  "method": "image_gen.imagegen",
+  "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/attempts/intro-01.png",
+  "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-7c927c3d-75a9-47cd-bc42-89e39cfa5a50.png",
+  "sourceGenerationId": "exec-7c927c3d-75a9-47cd-bc42-89e39cfa5a50",
+  "sha256": "688b2c9c3aafd282ab799ee7ea80c879c3721ce23e5744186c478b75fa78370a",
+  "bytes": 1536975,
+  "nativeCopyVerified": true,
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "portableReferences": [
+    {
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/selection.png",
+      "sha256": "fe3c01b6b6d57bc532af4ce7d9114f93a804146d38b4a0263a3f06876618b686"
+    }
+  ],
+  "includedInRuntime": false,
+  "reason": "La main de présentation comporte quatre doigts visibles au lieu des trois lobes définis ; demander une correction native."
+}

@@ -1,0 +1,12 @@
+{
+  "status": "published_locally_verified",
+  "createdAt": "2026-11-20T15:56:41.456Z",
+  "files": {
+    "DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx": "4ffcd9d1e17cedbc4a6495f103573eb231a77006d2dabb210f2abbdbca781091",
+    "combat-tracker-data.json": "82c44b7598e3c7822f62a166555258d68ebe442577fa61dd2613e7f6f4d6e218",
+    "combat-workbook-verification.json": "05d9006314b12bc9b44b9d53e4e18d71791822d8613d8cf77f506c3c1a80d25b"
+  },
+  "historicalQaEvidencePreserved": true,
+  "historicalQaEvidenceSHA256": "eb0edceabdd0f1e2a939f892327717ac59e0188c6a904f8aec9952ed089e74f5",
+  "gitPublishedByThisScript": false
+}

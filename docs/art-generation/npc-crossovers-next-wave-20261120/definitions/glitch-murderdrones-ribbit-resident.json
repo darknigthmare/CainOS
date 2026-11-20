@@ -1,0 +1,34 @@
+{
+  "id": "glitch-murderdrones-ribbit-resident",
+  "fighterId": "ribbit",
+  "series": "murderdrones",
+  "introducedOn": "2026-11-20",
+  "sourceKind": "Création originale pour Encore",
+  "episodeFidelityClaim": false,
+  "canonicalCostumeClaim": false,
+  "bodyProportions": "Adaptation élancée de Ribbit déjà utilisée dans le jeu ; ne constitue pas un modèle canonique.",
+  "nativeFacing": "right",
+  "requiredSlots": [
+    "selection",
+    "stance",
+    "intro",
+    "attack",
+    "heavy",
+    "hit",
+    "walk",
+    "jump",
+    "crouch",
+    "victory",
+    "defeat"
+  ],
+  "referenceSourceURLs": [
+    "https://glitchproductions.store/products/ribbit-pendantz-blindbox",
+    "https://glitchproductions.store/products/uzi-v2-animatez"
+  ],
+  "style": "resident",
+  "name": "Murder Drones · Technicienne des conduites",
+  "title": "Technicienne des conduites",
+  "design": "Ribbit biologique verte, grands yeux proéminents blancs/noirs, museau menthe, joues et nœud roses ; combinaison de maintenance anthracite avec panneaux olive, manches retroussées, ceinture de petites pochettes et deux outils rangés, genouillères arrondies, petites bandes ambre. Mains vertes à trois doigts et pieds verts à trois lobes nus. Aucun bonnet ou sweat Uzi. Rôle original de technicienne dans un bunker de Copper 9.",
+  "spriteDirectory": "assets/encore/crossovers/murderdrones/ribbit/resident",
+  "fidelityScope": "Design et poses originaux ; références officielles utilisées uniquement pour l’identité de Ribbit et les motifs visuels de Murder Drones."
+}

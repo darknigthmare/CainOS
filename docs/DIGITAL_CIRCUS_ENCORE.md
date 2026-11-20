@@ -5,11 +5,14 @@ dessins individuels réunis le **19 novembre 2026**, puis complétés le
 **20 novembre 2026**.
 
 Encore partage son moteur entre l’application CainOS et le jeu autonome :
-**54 combattants, 540 techniques, 23 arènes partagées, 9 modes, 468 costumes et 179 archives**.
+**54 combattants, 540 techniques, 24 arènes partagées, 9 modes, 472 costumes et 179 archives**.
 Le catalogue conserve les 54 arrangements de scènes dédiées,
-les escales GLITCH, les 51 costumes d’archive, 39 variantes supplémentaires et les 378 costumes crossover des
-quatorze combattants d’origine. Les costumes crossover des 40 PNJ promus restent
-à produire ; aucun choix ne pointe vers un dessin absent.
+les escales GLITCH, **51 costumes d’archive**, **40 variantes Circus / 440 PNG** et
+**381 costumes crossover / 3 814 fichiers**. Les quatorze propriétaires historiques
+conservent chacun leurs 27 crossovers ; Ribbit possède maintenant les trois styles
+Murder Drones, soit **3/27** parmi les neuf collections. Ses huit autres séries et
+les **39 autres PNJ sans crossover** restent ouverts. Aucun choix ne pointe vers
+un dessin absent.
 L’extension PNJ promue porte le roster à 54 combattants et **162 finales de spectacle** ;
 les chiffres historiques 0.7 ci-dessous décrivent les quatorze combattants d’origine.
 La sortie initiale 0.7.0 ajoutait **42 finales de spectacle**, trois pour chacun des quatorze
@@ -34,17 +37,50 @@ d’épisode contradictoires avec la route générée. Les dessins individuels d
 19 novembre remplacent ces cadrages dans la présentation courante ; cette
 réparation technique ne clôt pas leur comparaison avec les plans officiels.
 
-## Dernière suite — quatre apparences et Sous la carte, 20 novembre
+## Dernière suite — Café Ribbit, trois crossovers et le bar des néons, 20 novembre
+
+**Café Ribbit** complète les tenues Circus. Les premières déclinaisons crossover
+d’un PNJ promu sont **Ribbit · Hommage Uzi**, **Ribbit · Technicienne des conduites**
+et **Ribbit · Automate amphibien**, sa fusion mécanique avec l’univers Murder Drones.
+Ces quatre familles disposent chacune d’un portrait, d’une garde et de neuf actions
+distinctes, dont un coup lourd propre : **44 PNG natifs**. Les trois crossovers sont
+des créations originales ; leur présence ne qualifie pas les 24 déclinaisons encore
+manquantes de Ribbit ni celles des 39 autres PNJ. Les 468 costumes antérieurs gardent
+leurs identifiants et leur ordre.
+
+**Le bar des néons** (`barnoir`) devient la **24e arène partagée**, avec trois plans
+natifs et une revue à trois positions de caméra. Les étagères, les suspensions,
+le comptoir, le damier et les néons visibles dans les références de l’épisode 5
+guident le décor ; la géométrie de combat et les ambiances sont des adaptations du jeu.
+Les **47 PNG natifs du lot** représentent **59 538 780 octets**, copiés sans retouche
+ni réencodage. Les 54 arrangements dédiés restent des réemplois de scènes partagées.
+
+Le [bilan de la vague](COMBAT_NEXT_WAVE_2026-11-20.md), les
+[galeries et reçus](art-generation/next-wave-20261120/README.md) et le
+[dossier du bar](art-generation/stage-next-wave-20261120/README.md) décrivent les
+sources, la portée des images et la conservation de la progression. Les **80 contrôles
+de dessin Canvas des costumes** et les **six contrôles Canvas du bar** passent.
+La tentative Chromium documentée s’est arrêtée avant navigation, avec zéro contrôle ;
+ces rendus ne constituent pas une validation des interactions navigateur.
+
+Les résultats datés de la QA globale et de la réconciliation du classeur restent
+dans les nouveaux rapports, notamment le
+[dossier du suivi](art-generation/workbook-next-wave-20261120/README.md).
+Le [registre courant des manquants](art-generation/next-wave-20261120/remaining-work.md)
+conserve les références occultées, les crossovers encore absents, les cycles animés
+et les essais matériels. Les bilans ci-dessous gardent leurs chiffres historiques.
+
+## Suite précédente — quatre apparences et Sous la carte, 20 novembre
 
 Watermelon Gangle, Aqua Blaster Pomni, PTO Caine et Freak Jax disposent chacun
 de onze dessins individuels : **44 PNG natifs supplémentaires**, portant la
-collection Circus à **39 apparences / 429 PNG**. Les propriétaires et kits sont
+collection Circus à **39 apparences / 429 PNG** à ce point d’étape. Les propriétaires et kits sont
 conservés, ainsi que les données et l’ordre des 35 apparences précédentes.
 Les différences avec les costumes déjà présents et les limites des références
 sont détaillées dans le [bilan du lot](COMBAT_NEXT_MISSING_2026-11-20.md).
 
 La nouvelle arène **Sous la carte** (`undermap`) ajoute trois plans natifs à la
-salle indigo quadrillée de l’épisode 2. Le catalogue compte désormais 23 arènes
+salle indigo quadrillée de l’épisode 2. Le catalogue comptait alors 23 arènes
 partagées et 69 plans ; les 54 arrangements dédiés restent distincts de ce compte.
 Ses dimensions, sa piste, sa musique et son ambiance sont des adaptations du jeu
 documentées dans le [dossier du décor](art-generation/stage-next-missing-20261120/README.md).
@@ -55,11 +91,11 @@ Le paquet hors ligne contient **5 769 images**. Les revues Canvas, l’intégrit
 des copies et la réconciliation du classeur sont liées dans le bilan ; la
 validation navigateur du commit publié reste distinguée des preuves locales.
 
-Le [registre courant](art-generation/cast-next-missing-20261120/remaining-work.md)
+Le [registre de ce point d’étape](art-generation/cast-next-missing-20261120/remaining-work.md)
 conserve les références encore masquées, les cycles d’animation complets, les
 crossovers des quarante PNJ et les essais matériels comme travaux ouverts.
 
-## Suite précédente — Anime Ribbit et Jax-Suit Ribbit, 20 novembre
+## Suite antérieure — Anime Ribbit et Jax-Suit Ribbit, 20 novembre
 
 Les deux nouvelles apparences disposent chacune d’un portrait, d’une garde et de
 neuf actions distinctes : **22 PNG natifs ajoutés**, portant les variantes Circus
@@ -364,16 +400,17 @@ cellier, le Vide, le lac numérique, la salle de calibration, le nid des Gloinks
 le palais de sucre, les terrains du cirque et le couloir des portes. Les arènes
 partagent une surface de duel sans danger aléatoire. Les décors ont une géométrie
 dessinée dans Canvas et une palette propre.
-La fausse sortie et les neuf arènes GLITCH portent le catalogue partagé à 22.
+La fausse sortie et les neuf arènes GLITCH avaient porté le catalogue partagé à 22.
+Sous la carte et le bar des néons le portent maintenant à **24 arènes / 72 plans**.
 Les arrangements `home-<id>` réutilisent ces décors et ne sont pas comptés comme
 54 nouvelles peintures. Les couches illustrées disponibles chargent au-dessus du
 rendu de secours et suivent les mêmes limites de combat.
 
-Les **51 variantes d’archive et huit variantes supplémentaires** remplacent l’apparence du même combattant sans
+Les **51 variantes d’archive et 40 variantes Circus supplémentaires** remplacent l’apparence du même combattant sans
 modifier son kit. Leur attribution repose sur une liste explicite par identité :
 un parent, un rival, un accessoire, un effet ou une projection ne reçoit pas un kit
 simplement parce que son identifiant contient le nom d’un artiste.
-Les huit ajouts et leurs sources sont déclarés dans
+Les ajouts Circus et leurs sources sont déclarés dans
 [`combat/costume-additions.mjs`](../combat/costume-additions.mjs).
 
 Les **179 entrées d’archive** restent consultables et filtrables : 54 combattants,
@@ -712,9 +749,10 @@ anciens libellés en faits canoniques.
 
 Le registre [`combat/fidelity.mjs`](../combat/fidelity.mjs) et les fiches
 [`combat/costume-fidelity.mjs`](../combat/costume-fidelity.mjs) réunissent
-**668 entrées** : 54 personnages, 540 techniques, 23 arènes partagées et 51 costumes d’archive.
-Les suites illustrées ajoutent 39 fiches de costume distinctes dans
-`combat/costume-additions.mjs`, portant ce total documenté à **707**.
+**669 entrées** : 54 personnages, 540 techniques, 24 arènes partagées et 51 costumes d’archive.
+Les suites illustrées ajoutent 40 fiches de costume distinctes dans
+`combat/costume-additions.mjs`, portant ce sous-total documenté à **709**, hors fiches
+de création originale des crossovers.
 Le jeu et le classeur lisent les mêmes sources, observations, adaptations et
 périmètres de revue. Un lien d'épisode ou un ancien nom d'archive ne valide pas
 une apparence à lui seul.
@@ -955,6 +993,12 @@ techniques et les tests ne constituent pas une certification canonique 1:1.
 
 ## Classeur de production
 
+Le [dossier de mise à jour du lot courant](art-generation/workbook-next-wave-20261120/README.md)
+relie les preuves propres à Café Ribbit, aux trois crossovers de Ribbit et au bar
+des néons. Les compteurs, l’export, le réimport et les résultats de contrôle de cette
+vague sont consignés dans ce dossier ; les nombres ci-dessous décrivent les campagnes
+historiques et ne sont pas réattribués au nouveau lot.
+
 [`DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx`](DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx) comporte
 désormais **onze feuilles et dix tableaux filtrables** : Synthèse, Fonctionnalités,
 Combattants, Techniques, Arènes, Atlas, Production, Scénarios, Extension PNJ, QA
@@ -1140,8 +1184,11 @@ COMBAT_TEST_URL=http://127.0.0.1:4178 node tests/combat-roster-browser.mjs
 
 ### Travail restant
 
-Le [bilan du 19 novembre](COMBAT_CHARACTER_COMPLETION_2026-11-19.md) suit les
-dessins statiques et portraits du catalogue courant. Les cycles d’animation,
+Le [registre de la vague courante](art-generation/next-wave-20261120/remaining-work.md)
+suit les apparences et arènes réellement absentes, notamment les huit autres séries
+de Ribbit et les 39 PNJ sans crossover. Le
+[bilan du 19 novembre](COMBAT_CHARACTER_COMPLETION_2026-11-19.md) conserve la couverture
+historique des dessins statiques et portraits de base. Les cycles d’animation,
 la revue canonique complète, les enregistrements d’ambiance et voix dédiées,
 le mixage sur appareils et l’équilibrage compétitif restent partiels ou prévus.
 Les 74 autres archives conservent leur statut sans kit livré.

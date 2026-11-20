@@ -1,0 +1,365 @@
+{
+  "schema": "encore-native-family-review/v1",
+  "appearanceId": "caferibbit",
+  "reviewer": "ribbit_references",
+  "reviewedAt": "2026-11-20T14:59:05.223786+00:00",
+  "status": "accepted_native_family",
+  "acceptedSlotCount": 11,
+  "expectedSlotCount": 11,
+  "nativeBytes": 14052030,
+  "imageGenerationCalls": 13,
+  "acceptedImages": 11,
+  "rejectedImages": 2,
+  "definitionFile": "docs/art-generation/cast-next-wave-20261120/definitions/caferibbit.json",
+  "definitionSha256": "68a3ad72d57180cf9e6f3032422bd8b49e89150763a856d281bae3d16596c20e",
+  "qualificationFile": "docs/art-generation/cast-next-wave-20261120/candidate-review-caferibbit.md",
+  "qualificationSha256": "ef0eba7b09eb8cf40f5b963353c3ba56113b359966126c471a3e4de82c44d0fb",
+  "sourceIndexFile": "docs/art-generation/cast-next-wave-20261120/references/caferibbit/sources.json",
+  "sourceIndexSha256": "d677ff74a11a6749d7abd2bf062fa9f66014e8d25c9a90638f3b7acb05507035",
+  "files": [
+    {
+      "slot": "selection",
+      "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/selection.png",
+      "sha256": "638c8ced2802e022b25a2674dd9380757cfdff3a02b5a46acff4bda2fbe295e2",
+      "bytes": 1495892,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alpha12Bounds": [
+        96,
+        21,
+        770,
+        1523
+      ],
+      "nativeFacing": "right",
+      "receipt": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/selection.json",
+      "receiptSha256": "065f7c344fbdd31e5b32fce15732c950b91b0615805b996680ebda4c20cea96f",
+      "status": "accepted_native",
+      "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-a533b04f-d92e-4a67-bf03-86730ee41e13.png",
+      "nativeCopyVerified": true
+    },
+    {
+      "slot": "stance",
+      "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/stance.png",
+      "sha256": "b553a8a3673511308c37070e22ac5b8648df6b2a67ae5b8a9b832f3547ff1e18",
+      "bytes": 1534954,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alpha12Bounds": [
+        142,
+        82,
+        879,
+        1503
+      ],
+      "nativeFacing": "right",
+      "receipt": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/stance.json",
+      "receiptSha256": "1c3b62843e2f89c76bade0a42fe51bb68b5b96ba63e255f266ae1f2032f891e6",
+      "status": "accepted_native",
+      "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-bad4c196-bdcd-497c-a8d0-b00cd65c79d9.png",
+      "nativeCopyVerified": true
+    },
+    {
+      "slot": "intro",
+      "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/intro.png",
+      "sha256": "43c9a9f7fa941476090794bb0c3a52a9ff440cda784defd870e1e31f5673d64c",
+      "bytes": 1458643,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alpha12Bounds": [
+        109,
+        59,
+        960,
+        1509
+      ],
+      "nativeFacing": "right",
+      "receipt": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/intro.json",
+      "receiptSha256": "e8622d23d5923d880f415b2d6d307641de9e5300de632bcbdb6bbe898dee6c0f",
+      "status": "accepted_native",
+      "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-08d59638-2bf2-45bf-b9a1-4ec7bbd80698.png",
+      "nativeCopyVerified": true
+    },
+    {
+      "slot": "attack",
+      "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/attack.png",
+      "sha256": "d363d6124938290f04ae03227a6d4755a617a7ba621c4ed91f363e2ebb421fb1",
+      "bytes": 791622,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "alpha12Bounds": [
+        110,
+        45,
+        1124,
+        1293
+      ],
+      "nativeFacing": "right",
+      "receipt": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/attack.json",
+      "receiptSha256": "1b76361647a734b40ba27ad8c45d1deed0d37489d95a00e4921557a1c980329b",
+      "status": "accepted_native",
+      "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-e9b80a4d-6da5-4351-bfad-614099bb9ece.png",
+      "nativeCopyVerified": true
+    },
+    {
+      "slot": "heavy",
+      "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/heavy.png",
+      "sha256": "ba86c05acb6dbd5cffacc2333b39bb427a7958e86e45379a15cb776255b8d9f7",
+      "bytes": 781909,
+      "dimensions": [
+        1205,
+        1305
+      ],
+      "alpha12Bounds": [
+        48,
+        42,
+        1159,
+        1278
+      ],
+      "nativeFacing": "right",
+      "receipt": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/heavy.json",
+      "receiptSha256": "98db3ce2c4508780503a0e2a8161657bdc922e8928c7a198a662536b774d5019",
+      "status": "accepted_native",
+      "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-f383d6ac-c3a7-4608-aa5e-d81bd4931cd1.png",
+      "nativeCopyVerified": true
+    },
+    {
+      "slot": "walk",
+      "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/walk.png",
+      "sha256": "0cca789f97424558eb80f6178418ccfac61a926fb5e09c9f73886a13658ae090",
+      "bytes": 1566034,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alpha12Bounds": [
+        95,
+        39,
+        924,
+        1504
+      ],
+      "nativeFacing": "right",
+      "receipt": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/walk.json",
+      "receiptSha256": "1f80d32fa9f399123d201f55d0b0bac7780bf96561a7904d0dab36c4727c42f0",
+      "status": "accepted_native",
+      "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-e7eacb5f-b050-4018-bc69-340b3232921e.png",
+      "nativeCopyVerified": true
+    },
+    {
+      "slot": "jump",
+      "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/jump.png",
+      "sha256": "5a420a78e722d843554d3dd37e70e47f011e693fe8b9e927912e94bd67bd78d0",
+      "bytes": 1555510,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alpha12Bounds": [
+        152,
+        64,
+        966,
+        1488
+      ],
+      "nativeFacing": "right",
+      "receipt": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/jump.json",
+      "receiptSha256": "13e98e2c60aa8d7040935f88103070885bd7192fc40c83acdd57d44a739319c8",
+      "status": "accepted_native",
+      "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-afe4834f-6e1e-48e2-ab8f-669c765f466f.png",
+      "nativeCopyVerified": true
+    },
+    {
+      "slot": "crouch",
+      "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/crouch.png",
+      "sha256": "6b91fa00359ae859fac06681f9e527c75847d4bb3b883d7514e3e0f5b9707e1d",
+      "bytes": 938347,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "alpha12Bounds": [
+        165,
+        35,
+        966,
+        1297
+      ],
+      "nativeFacing": "right",
+      "receipt": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/crouch.json",
+      "receiptSha256": "4cb9ed5d46b3421233e6f23740683d885f42521f03ba89dbfa826a3477121f17",
+      "status": "accepted_native",
+      "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-624f6848-796a-424d-8ac1-b10d6eaefa41.png",
+      "nativeCopyVerified": true
+    },
+    {
+      "slot": "hit",
+      "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/hit.png",
+      "sha256": "2a72a6b6b12cc4a0c8a8b6ff6606c89bf738f86a1d373dc52470e7f098bfe4ee",
+      "bytes": 1544665,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alpha12Bounds": [
+        110,
+        97,
+        931,
+        1502
+      ],
+      "nativeFacing": "right",
+      "receipt": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/hit.json",
+      "receiptSha256": "f9902d76084ec51c8e33ee0da99e085947bb702df60b52fa5702b28152034b52",
+      "status": "accepted_native",
+      "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-5bf8253f-45bb-41c8-8582-7b26ceaf5ad8.png",
+      "nativeCopyVerified": true
+    },
+    {
+      "slot": "victory",
+      "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/victory.png",
+      "sha256": "102b5fb20020b7b67dc7acf5b94f14ed4b40ecd8d8c403e90cb12d6971926dd4",
+      "bytes": 1498244,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alpha12Bounds": [
+        192,
+        34,
+        915,
+        1521
+      ],
+      "nativeFacing": "right",
+      "receipt": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/victory.json",
+      "receiptSha256": "844c6c2e37302d264ccd7fc63abeebb1d359a51db62a864c9792b7a952b89fea",
+      "status": "accepted_native",
+      "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-1f162c72-7a0f-4979-af0a-9d5d76dcd1ed.png",
+      "nativeCopyVerified": true
+    },
+    {
+      "slot": "defeat",
+      "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/defeat.png",
+      "sha256": "903dec112c77b63dedd7eed348abcb3c88a143b6b99a9491a18f4cef750b9034",
+      "bytes": 886210,
+      "dimensions": [
+        1207,
+        1303
+      ],
+      "alpha12Bounds": [
+        135,
+        80,
+        974,
+        1255
+      ],
+      "nativeFacing": "right",
+      "receipt": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/defeat.json",
+      "receiptSha256": "2f90f258bc525021bae9ded3b7a67f447fb1700558baff75c94ce4b5185a8151",
+      "status": "accepted_native",
+      "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-3b8a1a49-72bf-4dc2-9545-bf8f214fd0f1.png",
+      "nativeCopyVerified": true
+    }
+  ],
+  "visualEvidence": [
+    {
+      "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/review/selection-alpha.jpg",
+      "sha256": "c7ae4270b6b084c5410eef03e3fabfd66f44dcd564dd12cb7ef52b0d38462922",
+      "visuallyInspected": true
+    },
+    {
+      "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/review/stance-alpha.jpg",
+      "sha256": "7a499f1ab5aa26cf359218b5b7af13b68bd9d11ff608a1184a8e3467b7448af6",
+      "visuallyInspected": true
+    },
+    {
+      "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/review/intro-alpha.jpg",
+      "sha256": "5f88251022b10ac119f29462573106b6968f6dd395a174f55266a7d2cd766612",
+      "visuallyInspected": true
+    },
+    {
+      "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/review/attack-alpha.jpg",
+      "sha256": "79f560f8c9f976d54243180326ce52b3f828dac55afb513332352a0329f8f29c",
+      "visuallyInspected": true
+    },
+    {
+      "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/review/heavy-alpha.jpg",
+      "sha256": "f9df583a4ec92a65773f4f468c638f3f5e5e6acf29a91b1d31c233e9e5226da9",
+      "visuallyInspected": true
+    },
+    {
+      "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/review/walk-alpha.jpg",
+      "sha256": "0135322d075ef8ae0156333184fcfadbabd740a310d39a08b61f38864e95a410",
+      "visuallyInspected": true
+    },
+    {
+      "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/review/jump-alpha.jpg",
+      "sha256": "ea9b4c01dd1c5795b45c9928212a7b603b0570367943560b9b5bb3a30cddc890",
+      "visuallyInspected": true
+    },
+    {
+      "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/review/crouch-alpha.jpg",
+      "sha256": "fcca02abb635bc3e0387e66e65948835d0821243c9c9f75f4cdf926fc616d230",
+      "visuallyInspected": true
+    },
+    {
+      "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/review/hit-alpha.jpg",
+      "sha256": "c9b2911466a70b84aef9c89c1fa18f09c27d78c9bed3a421c593cefdd38877e4",
+      "visuallyInspected": true
+    },
+    {
+      "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/review/victory-alpha.jpg",
+      "sha256": "06f6ccf80fb8292b57bd06528b24001358cb9f361b2fe2f1aa9a886b2aa53d0c",
+      "visuallyInspected": true
+    },
+    {
+      "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/review/defeat-alpha.jpg",
+      "sha256": "aa45e44fb4fe14049e00c7ccc8b93a6d5f73fbd4d3161a3fa27be1a2eca8f164",
+      "visuallyInspected": true
+    },
+    {
+      "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/review/family-overview.jpg",
+      "sha256": "241f6942a702f0b1866ea560115907cfbfe2dd303c30987bd14a57df875e16a3",
+      "visuallyInspected": true
+    }
+  ],
+  "rejectedAttempts": [
+    {
+      "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/attempts/defeat-01.png",
+      "sha256": "9736978d3958b9cd5e721d0ec3b8e2959794e783eb366c868539dfcf54c5b4ed",
+      "receipt": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/attempts/defeat-01.json",
+      "reason": {
+        "status": "rejected",
+        "observations": [
+          "Sur la jambe avant plantée à droite, le revers festonné et le cœur rose de la chaussette sont placés près de la cheville au lieu de la jonction entre peau verte et bas blanc."
+        ]
+      }
+    },
+    {
+      "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/attempts/heavy-01.png",
+      "sha256": "67d14192251950326f96a821316beb6ed5c6a324ebb33bd5963d80c07802f4f5",
+      "receipt": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/attempts/heavy-01.json",
+      "reason": {
+        "status": "rejected",
+        "reviewer": "ribbit_references",
+        "observations": [
+          "Raised-leg white sock top cuff and pink accent incorrectly drawn near the ankle instead of at the green-to-white transition below the knee. Correction required."
+        ]
+      }
+    }
+  ],
+  "observations": [
+    "Les onze poses ont été inspectées individuellement sur leur rendu natif et sur une composition alpha claire et sombre, puis ensemble sur une planche.",
+    "Silhouettes entières vers la droite : une tête de grenouille intacte, deux bras et deux jambes ; vêtements et chaussures cohérents.",
+    "Aucun halo visible dans les compositions ; les éventuelles couleurs cachées sous alpha nul ont été conservées sans retouche.",
+    "Heavy et defeat ont chacun nécessité une correction image_gen du revers d’une chaussette, déplacé de la cheville au haut du bas. Les tentatives refusées restent archivées.",
+    "Chaque PNG final est identique octet pour octet à sa sortie image_gen native ; aucune transformation des pixels de production.",
+    "La tenue est issue de la collaboration officielle Animate Café. Elle constitue un candidat distinct de Maid Ribbit Pendantz et ne ferme pas ce dernier."
+  ],
+  "limits": [
+    "Adaptation de jeu tirée d’une illustration commerciale officielle ; aucune certification 1:1, d’épisode, de dos non visible ou de cycle animé complet.",
+    "Joues roses, proportions élancées et petites interprétations de rubans relèvent du style de jeu défini par la sélection acceptée.",
+    "Les marges alpha réelles sont consignées par pose ; elles sont internes, mais ne satisfont pas toutes les 10 % demandés dans le prompt.",
+    "La source officielle montre un plateau et un dessert volontairement omis dans les poses de combat.",
+    "Cette revue ne couvre pas le runtime, le navigateur, le son, le stage ni le classeur. Les sources sont prêtes pour intégration ; aucun actif runtime copié par cet agent."
+  ]
+}

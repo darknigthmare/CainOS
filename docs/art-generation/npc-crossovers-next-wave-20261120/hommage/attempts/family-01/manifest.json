@@ -1,0 +1,263 @@
+{
+  "schema": "encore-native-family-archive/v1",
+  "appearanceId": "glitch-murderdrones-ribbit-hommage",
+  "archivedAt": "2026-11-20T15:18:13.341635+00:00",
+  "immutableSnapshot": true,
+  "reason": "Révision anatomique de huit poses : les mains ouvertes montrent quatre doigts alors que Ribbit doit conserver trois lobes visibles. Archive antérieure à toute correction, sans modification des octets.",
+  "requiredRevisionSlots": [
+    "selection",
+    "stance",
+    "intro",
+    "attack",
+    "hit",
+    "jump",
+    "crouch",
+    "defeat"
+  ],
+  "retainedSlots": [
+    "heavy",
+    "walk",
+    "victory"
+  ],
+  "files": [
+    {
+      "originalFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/attack.png",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/attack.png",
+      "sha256": "3fe9250207098ecc9ca08fb15ee9268926269e0648c898d7f714cc5f81be914f",
+      "bytes": 1215129
+    },
+    {
+      "originalFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/crouch.png",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/crouch.png",
+      "sha256": "b0b9bba19eb38ea27e356624ac5491df21295f152987cf3953c96cfac96919c0",
+      "bytes": 890957
+    },
+    {
+      "originalFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/defeat.png",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/defeat.png",
+      "sha256": "047149da8e96fd666656bdc7350605297b9d5b1a74e62d17b55baa023a4366a0",
+      "bytes": 760321
+    },
+    {
+      "originalFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/heavy.png",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/heavy.png",
+      "sha256": "90cd3b607f74c4618422ba172e8ac498e37e85212cd011de1a35bdadce0b35d3",
+      "bytes": 1155353
+    },
+    {
+      "originalFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/hit.png",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/hit.png",
+      "sha256": "842c55a77b7c5b087f7ac46ec662f7853414c293233d0d2b808e602900d81d2a",
+      "bytes": 741345
+    },
+    {
+      "originalFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/intro.png",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/intro.png",
+      "sha256": "d4b6fd7e3de18af7d2346bbd45acfc77c374145b298083c3f2657f8db9c911b1",
+      "bytes": 717176
+    },
+    {
+      "originalFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/jump.png",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/jump.png",
+      "sha256": "5b44236ee5577d71fea24cac12ec6cad20d09af368d3eee9436395d25516237e",
+      "bytes": 759433
+    },
+    {
+      "originalFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/selection.png",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/selection.png",
+      "sha256": "ea9bf4c31ea98cc6422699abb1ad7190378bd35deb940fa0e821fd9c407b418f",
+      "bytes": 1402255
+    },
+    {
+      "originalFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/stance.png",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/stance.png",
+      "sha256": "a29d6fb634765beb3ba33592764f4854bef9124bc347c6aba221295ad705963c",
+      "bytes": 708161
+    },
+    {
+      "originalFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/victory.png",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/victory.png",
+      "sha256": "43ecd2b83b7c132a83ac0c2301879f01901dfd6f0710822a540263a4ca12733c",
+      "bytes": 1371435
+    },
+    {
+      "originalFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/walk.png",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/walk.png",
+      "sha256": "c3c0881fd9e5833eaeb6f49a86db52d91d242c97d92a2b4989a30d4ec52af418",
+      "bytes": 682248
+    },
+    {
+      "originalFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/attack.json",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/attack.json",
+      "sha256": "5564b4e5043478d73b6e3bb6826f39106e700d93e8c4cb19ba75e0b6fd8f5360",
+      "bytes": 5021
+    },
+    {
+      "originalFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/crouch.json",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/crouch.json",
+      "sha256": "b0783d40e6899d45781440147569966e7a84f48bf02c9684056e732c54e65181",
+      "bytes": 5054
+    },
+    {
+      "originalFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/defeat.json",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/defeat.json",
+      "sha256": "6ca26ab466f6cd66527e7e999f0807cef036f1fce7174b116b381b8a075923c3",
+      "bytes": 5128
+    },
+    {
+      "originalFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/heavy.json",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/heavy.json",
+      "sha256": "066eccd769bf97c0eb54d391296ad769a9653a41941e81dbfe0864525b76ad40",
+      "bytes": 5053
+    },
+    {
+      "originalFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/hit.json",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/hit.json",
+      "sha256": "a04a4fd5f7f8cbf36791c01735814825e06df70d6cbd59d192627c2a6104141a",
+      "bytes": 5187
+    },
+    {
+      "originalFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/intro.json",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/intro.json",
+      "sha256": "4c2c8bccd05353055a014130d4e3edf9a8e8b366466c4f9934eb81084d5f6e0f",
+      "bytes": 5003
+    },
+    {
+      "originalFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/jump.json",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/jump.json",
+      "sha256": "0bde398c5336e614be303b1602e6c66e121c6e2d52fbef4e74a1c1b40113428f",
+      "bytes": 5029
+    },
+    {
+      "originalFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/selection.json",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/selection.json",
+      "sha256": "a79a7008ef19735b7e7d5c9074f868ec90e8e226f1dc6aa2693762351c8c6288",
+      "bytes": 6026
+    },
+    {
+      "originalFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/stance.json",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/stance.json",
+      "sha256": "70246344228e1029cb0493504bc87de9793c2ae7ac6b3354554ca4ef819ec49e",
+      "bytes": 5017
+    },
+    {
+      "originalFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/victory.json",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/victory.json",
+      "sha256": "5ed67468a3fed25c3dafa26d7766b44bc70a6e382c1e93839dba8091273f8507",
+      "bytes": 5130
+    },
+    {
+      "originalFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/walk.json",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/walk.json",
+      "sha256": "247123f78afe68cd870750dd43230adfacf647d94b11e451aee15557ee7e05a2",
+      "bytes": 5060
+    },
+    {
+      "originalFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/jobs/attack.json",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/jobs/attack.json",
+      "sha256": "ecacdf3d07beb1bf9d73eb7efb6ee92415ada3b95d2b64715d2859b842eda996",
+      "bytes": 2347
+    },
+    {
+      "originalFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/jobs/crouch.json",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/jobs/crouch.json",
+      "sha256": "8a1f4956c0914582cff2bf642766d65d8f85c16a6a3ec89e0d0657a5c8b09204",
+      "bytes": 2369
+    },
+    {
+      "originalFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/jobs/defeat.json",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/jobs/defeat.json",
+      "sha256": "bf63daf6a069c24cca2c301995176d6e158900e0110e364cfe041bb16d70e029",
+      "bytes": 2411
+    },
+    {
+      "originalFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/jobs/heavy.json",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/jobs/heavy.json",
+      "sha256": "64aba2fb964069e876efbce637cc1834741f1600dac3eea6aacf8f12881aaa3c",
+      "bytes": 2374
+    },
+    {
+      "originalFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/jobs/hit.json",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/jobs/hit.json",
+      "sha256": "9dfc8a8ed6a01c94c332c9a611bfecaffb72f9e622ccfd3e18e3aeb47a6716dd",
+      "bytes": 2396
+    },
+    {
+      "originalFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/jobs/intro.json",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/jobs/intro.json",
+      "sha256": "25b724aed2fc14eaab3709771ac576c516551a73ab5ea6acc3cc77c41e6baff5",
+      "bytes": 2353
+    },
+    {
+      "originalFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/jobs/jump.json",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/jobs/jump.json",
+      "sha256": "27fedb67f68503bdb2cdf1c9e464409e53f7ea4088d8031a53f513ad19df9ec3",
+      "bytes": 2343
+    },
+    {
+      "originalFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/jobs/selection.json",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/jobs/selection.json",
+      "sha256": "e0b1a6305ee62b8912cf8781ba6dc8f0a840014457ca335bc5793dc75226e5ca",
+      "bytes": 2962
+    },
+    {
+      "originalFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/jobs/stance.json",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/jobs/stance.json",
+      "sha256": "11be60eeda454cfe4d529c42d976e6b79e7616511f0d78a61d7838565c680811",
+      "bytes": 2327
+    },
+    {
+      "originalFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/jobs/victory.json",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/jobs/victory.json",
+      "sha256": "24588944fd5a06ab1a8bdedf7d026cfb082394221a534e23c22943469970f3b0",
+      "bytes": 2356
+    },
+    {
+      "originalFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/jobs/walk.json",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/jobs/walk.json",
+      "sha256": "59f378cfbc7e04c19ac6b6e7abda1e52182b0aa5e927c537f980414a02ed3ee1",
+      "bytes": 2310
+    },
+    {
+      "originalFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generation-completion.json",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generation-completion.json",
+      "sha256": "29192740d7713a63ada240995c2a91819ac60dffeb50d1a225e0fa0f6c3055d0",
+      "bytes": 12018
+    },
+    {
+      "originalFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/visual-review.json",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/visual-review.json",
+      "sha256": "188dd05c02927871df1bc6adff90188650b102314a372f60a83ca26c8fdc9bf5",
+      "bytes": 1942
+    },
+    {
+      "originalFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/native-alpha-review.png",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/native-alpha-review.png",
+      "sha256": "80adc32c9a16e910c618e598a134525854f58fd8747a7f91d71d7a555653e754",
+      "bytes": 579681
+    },
+    {
+      "originalFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/README.md",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/README.md",
+      "sha256": "1223fff6518957d7ab5b97f57f09ec26129dc1eebad6cd8a2d1b1c02135cd0ba",
+      "bytes": 2711
+    },
+    {
+      "originalFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/reference-review.md",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/reference-review.md",
+      "sha256": "4a82f5e5cdf535eeb2b027f7b53e9e8626de2e2c95fe2d528a01e7dec6b6c9ff",
+      "bytes": 2672
+    },
+    {
+      "originalFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/audit-native.py",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/audit-native.py",
+      "sha256": "9245c9e5331b0805e60ca2851226b408dc6d5ab2a82c7c2b48cfbbebe6944236",
+      "bytes": 4503
+    }
+  ],
+  "independentReview": {
+    "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/independent-review.json",
+    "sha256": "270bf83e22ed1a221b79c3c70652944401145fb8357950016b474ae67bd68567"
+  },
+  "referencePreservation": "Les anciens jobs et reçus restent inchangés dans cette archive. Les références du seed historique pourront être repointées vers son PNG archivé de même SHA, avec originalReferencePath, sans substitution par le nouveau seed corrigé."
+}

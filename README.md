@@ -6,7 +6,7 @@ CainOS is a retro C&A mainframe-style interactive web app inspired by The Amazin
 
 CainOS includes **Circus Combat — Encore**, a shared combat application and
 standalone game adapted from the real CQC engine of `shadow-codec-ops`.
-The playable game version is **0.7.0**. The GLITCH wardrobe was updated on **18 November 2026**; the latest Circus appearance continuation is dated **20 November 2026**.
+The playable game version is **0.7.0**. The original GLITCH wardrobe dates from **18 November 2026**; the latest **20 November 2026** continuation adds Café Ribbit, the first three promoted-NPC crossovers and a new arena.
 
 - In CainOS: complete the existing first-use calibration, then launch **Circus Combat**.
 - Direct game: open **`/combat/`** on the same static server.
@@ -15,14 +15,42 @@ The playable game version is **0.7.0**. The GLITCH wardrobe was updated on **18 
 - Controls, architecture, references and remaining work: **[Digital Circus — Encore](docs/DIGITAL_CIRCUS_ENCORE.md)**.
 - To equip a crossover, open the fighter or opponent’s wardrobe and select **Filtrer les tenues**. Choose the series and **Fusion originale** to see the character’s redesigned body. [Compare the fusion portraits and combat stances](docs/COMBAT_GALERIE_FUSIONS.md) or [browse the GLITCH wardrobe and arena gallery](docs/COMBAT_CROSSOVERS_GLITCH.md).
 
-The game combines **54 fighters, 540 techniques, 23 shared arenas, 468 selectable costumes and 179 searchable archive entries**. Fourteen fighters have individually authored kits; 40 promoted archive NPCs use the extension kits described below. The 54 dedicated stage arrangements reuse shared scenery and are counted separately. Its nine standard modes are joined by nine illustrated crossover visits under **Escales GLITCH**. The wardrobe contains 51 archive costumes, 39 additional illustrated Circus appearances, 252 tributes and residents, and 126 original fusions for the original fourteen fighters. Crossovers for the forty promoted NPCs remain to be produced. The combat techniques and stories are original fan-game adaptations.
+The game combines **54 fighters, 540 techniques, 24 shared arenas, 472 selectable costumes and 179 searchable archive entries**. Fourteen fighters have individually authored kits; 40 promoted archive NPCs use the extension kits described below. The 54 dedicated stage arrangements reuse shared scenery and are counted separately. Its nine standard modes are joined by nine illustrated crossover visits under **Escales GLITCH**. The wardrobe contains **51 archive costumes, 40 additional illustrated Circus appearances / 440 PNGs, and 381 crossovers / 3,814 files**. The original fourteen crossover owners retain all 27 appearances each; Ribbit now has three Murder Drones appearances out of the 27 possible across the nine collections, while the other 39 promoted NPCs still have none. The combat techniques and stories are original fan-game adaptations.
 
-### Four appearances and Undermap — latest 20 November continuation
+### Café Ribbit, three NPC crossovers and Barnoir — latest 20 November continuation
+
+**Café Ribbit** joins the Circus wardrobe. Ribbit also receives three distinct
+Murder Drones designs: **Hommage · Uzi Doorman**, **Technicienne des conduites**
+and the mechanical fusion **Automate amphibien**. Each family has a selection
+portrait, a stance and nine individual action drawings, including its own heavy:
+**44 new native character PNGs**. Only these three complete NPC crossover families
+are exposed; the older 468 costume entries keep their identity and order.
+
+**Le bar des néons** (`barnoir`) adds the episode-five bar as the **24th shared
+arena**, with three separate parallax planes. Its neon signs, shelves, counter
+and tiled floor are grounded in the inspected reference images; ring geometry,
+lighting and original audio are game adaptations. The **47 native PNGs** in this
+wave total **59,538,780 bytes**, preserved without retouching or re-encoding.
+
+The current [wave report](docs/COMBAT_NEXT_WAVE_2026-11-20.md) and
+[production galleries](docs/art-generation/next-wave-20261120/README.md) link the
+receipts and sources. **80 costume Canvas drawing checks and six Barnoir Canvas
+checks passed**. These renderer checks are distinct from browser interaction;
+the documented local Chromium attempt stopped before navigation and executed
+zero checks. The dated global QA and workbook results belong to the new reports.
+
+The [remaining-work register](docs/art-generation/next-wave-20261120/remaining-work.md)
+keeps Ribbit's other eight crossover collections, the 39 untouched NPC owners,
+obscured costume references, full animation cycles and physical-device checks
+open. The [workbook update dossier](docs/art-generation/workbook-next-wave-20261120/README.md)
+records the current reconciliation separately from the historical exports below.
+
+### Four appearances and Undermap — previous 20 November continuation
 
 **Watermelon Gangle, Aqua Blaster Pomni, PTO Caine and Freak Jax** add four complete
 appearance families and **44 individual native PNGs**. Each has a selection
 portrait, a stance and nine action drawings. The cumulative Circus additions
-now contain **39 appearances / 429 PNGs**. Their distinct references and adaptations
+then contained **39 appearances / 429 PNGs**. Their distinct references and adaptations
 are documented in the [continuation report](docs/COMBAT_NEXT_MISSING_2026-11-20.md)
 and [four production-render galleries](docs/art-generation/cast-next-missing-20261120/README.md).
 
@@ -40,18 +68,18 @@ earlier Encore asset files remain byte-identical. The offline pack contains
 **5,769 images**. The earlier local Chromium startup failure is historical;
 no successful local browser execution of this batch is claimed.
 
-The [current remaining-work register](docs/art-generation/cast-next-missing-20261120/remaining-work.md)
+The [remaining-work register at that checkpoint](docs/art-generation/cast-next-missing-20261120/remaining-work.md)
 removes the four completed candidates and the new arena. It retains obscured
 costume references, full animation cycles, forty NPC crossover families and
-physical-device checks as open work. The [new workbook evidence](docs/art-generation/workbook-next-missing-20261120/README.md)
+physical-device checks as open work. The [workbook evidence from that checkpoint](docs/art-generation/workbook-next-missing-20261120/README.md)
 continues from the reconciled XLSX without replacing historical IDs or notes.
-The tracker now contains **3,188 Production rows, 2,335 QA rows and 153 sources**.
+The tracker then contained **3,188 Production rows, 2,335 QA rows and 153 sources**.
 Its final export matches **80,346 cells with zero differences**; **42 formulas**,
 eleven sheets and ten tables survive recalculation and reimport. All 36 final
 review views are checked, including the 44 new drawing rows with their native
 dimensions, hashes and receipt links.
 
-### Anime Ribbit and Jax-Suit Ribbit — previous 20 November continuation
+### Anime Ribbit and Jax-Suit Ribbit — earlier 20 November continuation
 
 **Two more appearances and 22 separate native PNGs** complete Anime Ribbit and
 Jax-Suit Ribbit. Each has a selection portrait, a stance and nine action drawings.
@@ -285,8 +313,10 @@ horizontal fighting arena. Their floor artwork also follows the new composition;
 collisions are unchanged. The other nine static backgrounds remain identical. See the [stage review](docs/combat-stage-review-0.6.0.json) and
 [before/after sheet](docs/images/encore-stage-comparison-0.6.0.png).
 
-The shared fidelity registers contain **700 records**: 54 fighters, 540 techniques,
-22 shared arenas, 51 archive costumes and 33 additional Circus appearances. They separate technical checks, observed reference
+At the earlier 33-appearance checkpoint, the shared fidelity registers contained
+**700 records**: 54 fighters, 540 techniques, 22 shared arenas, 51 archive costumes
+and 33 additional Circus appearances. The current 24-arena, 40-addition catalogue
+contains **709 such records**, before the separate original crossover designs. They separate technical checks, observed reference
 traits, original adaptations and remaining discrepancies. **This release does not
 claim complete canonical or pixel-exact 1:1 fidelity.**
 
@@ -340,7 +370,7 @@ coloured Mannequins. Their kits are role-based templates adapted for Encore;
 their routes and tournament text are generated from one reviewed record per
 character. They are original fan-game adaptations, not canonical powers. The
 roster now exposes **162 stage finales** (42 authored, 120 generated for the
-promoted PNJ) and **700 fidelity records**, including the 33 additional appearances. The remaining 74 archive identities
+promoted PNJ) and **709 fidelity records**, including the 40 additional Circus appearances. The remaining 74 archive identities
 (props, effects, abstractions, humans and unreviewed duplicates) stay
 non-playable. See [roster-expansion.mjs](combat/roster-expansion.mjs).
 

@@ -1,0 +1,79 @@
+{
+  "appearanceId": "glitch-murderdrones-ribbit-fusion",
+  "fighterId": "ribbit",
+  "series": "murderdrones",
+  "style": "fusion",
+  "slot": "selection",
+  "prompt": "Create one complete, entire head-to-toes character for the existing Digital Circus — Encore 2D fighting game. An ORIGINAL fan-game crossover redesign, not canonical merchandise. Clean polished 2D cel shading, confident dark contour, gentle warm upper-left highlights, 3/4 view facing RIGHT. Keep the slender long-legged frog silhouette and friendly identity of the first image, whose game proportions are intentionally an adaptation. The second reference establishes Ribbit identity only; never draw the keychain ring or strap. One single character, no duplicate, no grid, no caption, no text or watermark, no scenery, no floor or cast shadow. Native true transparent RGBA. Tall 1024x1536 composition, entire figure including all toes with generous clear margins on every side, no cropping. RIBBIT — AUTOMATE AMPHIBIEN, an original full-body fusion with the industrial robot language of Murder Drones. Transform the ENTIRE body into an elegant slim green mechanical amphibian, keeping Ribbit's long limb proportions and recognizable frog head. Head has two separate huge protruding glossy BLACK oval optical domes, each with one bright magenta LED oval pupil and a tiny pale highlight; they remain separate frog eyes, never a single human visor. Green head shell and light mint oval muzzle shell with small friendly black smile seam. Two round pink cheek light panels. Pink bow tie becomes a faceted metal chest plate at throat. Torso is green segmented shell around one large mint belly panel with a tiny violet status light. Slender green arms and legs, dark charcoal ROUND pivot joints at shoulders, elbows, hips and knees, mint forearm and shin panels, small violet indicator lines. Both hands have three rounded mechanical digits, both large frog feet have three rounded mechanical toes. No organic skin. No clothing, hoodie, hat, hair, weapon, wings, spikes or tail. Third image is only for LED/segmented-metal design language; NEVER copy Uzi's human head, hairstyle, black hoodie or gun. SELECTION portrait pose: upright welcoming confident three-quarter stance facing right, one hand loosely at chest and the other held outward open as if introducing herself, legs slightly apart, both entire feet visible. Robot has the charming friendly demeanor of Ribbit. Clearly readable polished 2D illustration, restrained gloss, no luminous aura outside the body.",
+  "referencePaths": [
+    "assets/encore/stance/ribbit.png",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/references/official-iconic-ribbit.png",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/references/official-uzi-front.png"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "root",
+  "schema": "encore-native-npc-crossover/v1",
+  "id": "glitch-murderdrones-ribbit-fusion:selection",
+  "status": "accepted_native",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "file": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/selection.png",
+  "targetFile": "assets/encore/crossovers/murderdrones/ribbit/fusion/selection.png",
+  "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-ac135460-f09a-4c76-9b32-2b12d1ef0e4a.png",
+  "sourceGenerationId": "exec-ac135460-f09a-4c76-9b32-2b12d1ef0e4a",
+  "definitionFile": "docs/art-generation/npc-crossovers-next-wave-20261120/definitions/glitch-murderdrones-ribbit-fusion.json",
+  "definitionSHA256": "13a3808fa1c1b21767e5aa4eb26362a57d7a8005a8b44c0129941fbafddf672d",
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "assets/encore/stance/ribbit.png",
+      "sha256": "db12ab81247248b83279ecfbd74bb5472e31e8c7424fafcbd5bfb964dcc96769",
+      "bytes": 615267
+    },
+    {
+      "position": 2,
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/references/official-iconic-ribbit.png",
+      "sha256": "d62ee29c8d07410db6ddfdde22965b719a305e9d6ec08aa1c48ab1788a6ce825",
+      "bytes": 1085524
+    },
+    {
+      "position": 3,
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/references/official-uzi-front.png",
+      "sha256": "a4cd219899ce902fdf07e5545b5691b874df46776b82c106fbea48daeac1f162",
+      "bytes": 1280711
+    }
+  ],
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "alpha12Bounds": [
+    50,
+    54,
+    993,
+    1505
+  ],
+  "alpha12BoundsThreshold": "alpha > 12",
+  "fullyTransparentPixels": 1118395,
+  "sha256": "b4aeaf8ad54544eac7640f87603501ac3b7e3b8e0bfa4e68ef76b993c136968e",
+  "bytes": 1685503,
+  "nativeCopyVerified": true,
+  "sourceKind": "Création originale pour Encore",
+  "episodeFidelityClaim": false,
+  "canonicalCostumeClaim": false,
+  "includedInRuntime": true,
+  "createdAt": "2026-11-20T14:42:07.332910+00:00",
+  "visualReview": {
+    "status": "accepted",
+    "reviewer": "root",
+    "observations": [
+      "Figure mécanique entière orientée à droite ; deux optiques bombées distinctes à LED magenta, museau menthe, nœud-plaque rose, pivots ronds et trois lobes aux pieds cohérents. Contrôle sur damier : silhouette dégagée, pas de halo visible."
+    ],
+    "scope": "Original crossover identity, entire figure, costume continuity and readable game pose; no canonical costume or complete animation claim."
+  }
+}

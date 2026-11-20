@@ -1,0 +1,27 @@
+{
+  "createdAt": "2026-11-20T15:28:31.278984+00:00",
+  "files": [
+    {
+      "variant": "hommage",
+      "slot": "defeat",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/defeat.png",
+      "sha256": "944594d769172882bf175f6927efad3e33e883cfd583f36e5a98654aea2390e4",
+      "receipt": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/defeat.json",
+      "receiptSha256": "31cbac242d5a689e89f5e25f72de1a99572cc0358d987953ae4e81d240586794",
+      "diagnostic": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-04/hommage-defeat-alpha.jpg",
+      "diagnosticSha256": "8bfc8f3784d4d9bfe783175dcc9c3b3831e3c4eaeabde73862941562f4735c1a",
+      "visualReviewStatus": "pending"
+    },
+    {
+      "variant": "fusion",
+      "slot": "victory",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/victory.png",
+      "sha256": "67d4f944fdc33b14d4983510fc546d24eac57cacaff2c9484c2565f26034bdd1",
+      "receipt": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/victory.json",
+      "receiptSha256": "7cfec831af72a3ac7014e24b61bd00c9f373b9260e13fd5b1899ce0edf60b8a7",
+      "diagnostic": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-04/fusion-victory-alpha.jpg",
+      "diagnosticSha256": "58b16951615844152be35b05c6cdac4ca23f46eec79a7fe0ac04cd827ee783d6",
+      "visualReviewStatus": "pending"
+    }
+  ]
+}

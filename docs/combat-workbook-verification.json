@@ -1,245 +1,324 @@
 {
-  "schema": "encore-tracker-next-missing-review/v1",
-  "createdAt": "2026-11-20T14:09:38.397Z",
+  "schema": "encore-tracker-next-wave-review/v1",
+  "createdAt": "2026-11-20T15:56:41.325Z",
   "gameVersion": "0.7.0",
-  "workbookSHA256": "048d758f614daf1ad388a12fed5955b853734c2c1c47d92fb7a6e493512eea12",
-  "trackerDataSHA256": "868975a52cb6e4f28adbf4bb98e957f142deef7a240472c4879c7c2c148feb56",
+  "workbookSHA256": "4ffcd9d1e17cedbc4a6495f103573eb231a77006d2dabb210f2abbdbca781091",
+  "trackerDataSHA256": "82c44b7598e3c7822f62a166555258d68ebe442577fa61dd2613e7f6f4d6e218",
   "sourceDigests": {
-    "docs/art-generation/cast-next-missing-20261120/generation-completion.json": "454273e19fa72b2c5af96119d023b165da341f2f3c9b121ef65aeddef6314e25",
-    "docs/art-generation/cast-next-missing-20261120/asset-inventory.json": "e88d6bcd2f535fdceed1d586ce6810ae5321838079cf2663ecc2aba229785d60",
-    "docs/art-generation/cast-next-missing-20261120/qa-result.json": "7a0218805612a44aa17f14ccf6cf06db3e4eb1aa3fc716f20c830ac5a2882877",
-    "docs/art-generation/cast-next-missing-20261120/qa.log": "f0b0583d934bc00bba5d2a91a95401a2c6d9285f3a9c33692d2179171e496423",
-    "docs/art-generation/cast-next-missing-20261120/runtime-counts.json": "eab161df17f1f76eb80fadf62feac81d8f5bbef4b8982cec192ebeb7e33ded70",
-    "docs/art-generation/cast-next-missing-20261120/canvas-summary.json": "92e5d855462578cbed8845514a41ef0d0613ec463162ba6a2e5663d7a47aa594",
-    "docs/art-generation/cast-next-missing-20261120/build-integrity.json": "61509811b7761d218b150cdd946761ca2f60ea5a45198fc831b4cae303e2fece",
-    "docs/art-generation/cast-next-missing-20261120/verification.json": "168b8a406d44e7fe501b182777ae0273fac28b0a106086ea54891e16b6b3c274",
-    "docs/art-generation/cast-next-missing-20261120/visual-review.json": "5b7c18506a8bf941471b841d2a421a5eefe10616efd1958c75249ff886ea5f9b",
-    "docs/art-generation/cast-next-missing-20261120/independent-review.json": "d2fdcb1940dd6ee8e0d8eeeab1e7aa34b79017a3d7a9e8b60d4b0e243d246d85",
-    "docs/art-generation/stage-next-missing-20261120/asset-inventory.json": "1333a394299ddcee2db125c3c4ba472da57d936ed2a6b75258fdcb7727d62996",
-    "docs/art-generation/stage-next-missing-20261120/verification.json": "88992c02003666b32a4d92607dd21184f641ca38e3058601a6159ebde8e26bd7",
-    "docs/art-generation/stage-next-missing-20261120/review/canvas-review.json": "5f063ee874cf5a435a9964fd6132a292645cecdffd63ee093bf48b4c3ae264fa",
-    "docs/art-generation/stage-next-missing-20261120/visual-review.json": "7e5b65779c4d1cfd8ce54bced21f3dea17ee1fe9bad1a2d9bbc49acbd2ff22dc",
-    "docs/art-generation/stage-next-missing-20261120/targeted-tests.log": "96c8925f2fc22df83c6da1f8713592c0d98880612dc20ad4c960fe8408bbba9a",
-    "combat/data.mjs": "02d7d40bf9e27d27d3a8e8adc593861cbfd7a7e357b3886308efb7e17e7705ba",
-    "combat/costume-additions.mjs": "d1d9c194b316efca6db2f1833c94d820dfdf0b1f028ede091a40a411a6a0619f",
-    "combat/costume-next-missing-20261120.mjs": "2ba4dbc117c128245422a7f595d91d0b172bfc91dc3e55a7d4b70424e86bd901",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/hand-count-scope-addendum.md": "a8ffd26f49ce23ef7fe967e40530fdb38db79d2122526e1c3dc8577c41ca4755",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/integration-baseline.json": "1bea46363a8b121b71db75eb2da67f21b7db55254bc85eda5d242bb15e23acbf",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/historical-assets.json": "1781b8a85478aa87ba32db44845b2a8e4c1ba0612568877f2c073de978d4763c",
+    "docs/art-generation/next-wave-20261120/generation-completion.json": "8cd56ab9dd2a844e00018d657d5e8eb646da2d9b4d251350b2280615f5f563aa",
+    "docs/art-generation/next-wave-20261120/asset-inventory.json": "131a55a3e99a5b2236300e263c57d4a358e8a2c33bd80368e5490cad72b362cd",
+    "docs/art-generation/cast-next-wave-20261120/generation-completion.json": "9ff4bb9f1f89f884e9b275863d7c1b88da49d865e87d2fff1031363076b41c08",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/generation-completion.json": "f42caee6d82b8e7b217369fe4e813c771581e9635576e6091a63beb8d71e5bb2",
+    "docs/art-generation/next-wave-20261120/qa-result.json": "c9e5215f2f5748da15a33ae1eb6baffa25dee157a76df079ce955c57e0e05155",
+    "docs/art-generation/next-wave-20261120/qa.log": "6e6b915ae9bfe13af0b907880558d02fe6d6dbc393a3bc907a13802f498f5c3c",
+    "docs/art-generation/next-wave-20261120/runtime-counts.json": "cdb39e3cfd16238a124fe9519b13bccedffe8b8fdeef5c6c816dfa979188a89a",
+    "docs/art-generation/next-wave-20261120/canvas-summary.json": "7ef0065fd2d6a0ae3c0d773c699e1d9885525711227e82d0592c5edd349392d0",
+    "docs/art-generation/next-wave-20261120/build-integrity.json": "a069a970bed1e3e4bfb8aea30bd46f0d9e3437be4ee0188ca2ad43dbefb9b35d",
+    "docs/art-generation/next-wave-20261120/verification.json": "8fb17d84df5c1ff80aa360a185da51288dbbe9d6db671756c5cf4344656c7aa9",
+    "docs/art-generation/stage-next-wave-20261120/asset-inventory.json": "5086cb85282105717cf651e840e03cf72f4bbf9b3da5fb4b424d21b51018aab8",
+    "docs/art-generation/stage-next-wave-20261120/generation-receipts.json": "50528540fe2e47060b98b98564778d95baa2ac44240e9ef25cc9ea4d6b923f4b",
+    "docs/art-generation/stage-next-wave-20261120/verification.json": "4b32edeee66c52e8b64f8a454683cd6557f034a0b93ee3c0d65ecf76808fe393",
+    "docs/art-generation/stage-next-wave-20261120/review/canvas-review.json": "246adf6f77409ae104e65f268088151257b9e7896b265a0fbf18964ffe32acb6",
+    "docs/art-generation/stage-next-wave-20261120/visual-review.md": "ccb9e2e09d9b9df5d18befec6595b1003e1886ad788887e4f9110ac32ac50902",
+    "docs/art-generation/stage-next-wave-20261120/targeted-tests.log": "e92a44579f4b5af8319879915129c60a99afc0e900f5df1c46f8b511a5bc1497",
+    "docs/art-generation/stage-next-wave-20261120/browser-result.json": "959583d46b6836a9fca4cbd73d3fff727af7b8df5d29a31b20ccf03bd4c319a0",
+    "docs/art-generation/stage-next-wave-20261120/browser.log": "c086a582f6a8d233ccb6e4012dc90e1a771139518a6931c10d3936209f31feb9",
+    "docs/art-generation/next-wave-20261120/visual-review.json": "e10b14351308894aca713234ab50be5bfbd69dfd413c0357d0c23ae12d3b2c90",
+    "docs/art-generation/next-wave-20261120/independent-visual-review.json": "b4889573fae8d05b1779ffe2aae5123eda87e68324251634332f6f8f4bd5d10e",
+    "combat/data.mjs": "7081daa24f8557c6964c75955071a3527ae49c03393e04d6d0dee0d97d4e5fe6",
+    "combat/costume-additions.mjs": "dacc968d23ccffa246b686a641dedb0308b14c122652c4a477e72927ddd5e3e4",
+    "combat/costume-next-wave-20261120.mjs": "dd644e2868c8c3ca92564ea64a18cccee1c1765f364d92c19e83689b7ca6cd4e",
+    "combat/crossovers.mjs": "16e0b81e1f1581bd0b66dd0c61b1b55172ec27481f4792734f7e041f04a93711",
+    "combat/crossover-npc-additions.mjs": "0656ad94c7565d6fd20b344dfc8039b1ea05e0387b035666726b3114f94fec9d",
     "combat/illustrations.mjs": "26aca8338be81bedbbbc1bb4bc59dd0aae8b7b7ef4d785cbbf353ac109c53b99",
-    "combat/render.mjs": "1bf5bbefabaa9330622a0eead66ece112889a0e1c354d902c977ea6f7abbdb56",
+    "combat/render.mjs": "a7005f67651ad0a2da5955f9146c95f6e7e93ce9c3c2f38bd2bf1c3791d12d73",
     "combat/render-poses.mjs": "21e3afba8c19723ffdcb383402cc6339b63cb58df5d4323fda2ebde093ce0b29",
-    "combat/offline-manifest.mjs": "f6e631dc7e7c1ac497663c7f78b4e0f64c6100891b22e9230c4c70ee693a1585",
-    "combat/fidelity.mjs": "2e3ee2fe7c19e7ff40997abd2c5c8a1927fc7f5ef82e5522c7192225a8a3142e",
-    "combat/audio.mjs": "e774d5d5c50102dfd6b726affad4cdd546c9d05df070c928d6a3d9ba04c5e9ed",
-    "combat/audio-ambiences.mjs": "135a9fe8c62b99bf06c1182745bce6dbb2ffd31aca7d824e78852ff1d0470fc0",
-    "combat/progression.mjs": "d1c06308fdf48e57b4ef4261d952237be3878cdfacd13ab234d1c6bde9dfae3e",
+    "combat/offline-manifest.mjs": "583ff9fc856c355d153eaba75ef4558f207094680136abcdab06d3fbc532bc1e",
+    "combat/fidelity.mjs": "13f113f52d3d544eebc57064a1aafd1fae0c9d2485e5f567e52390f5c5a4e2dc",
+    "combat/audio.mjs": "4fa423e9b31ddd2344df9d0824693fe08963d5117e35a87c2534ef391ed5c978",
+    "combat/audio-ambiences.mjs": "38a5e4221066b3c2c2fec8f7af6977ca7c219a3117d73f1e00d1cddba34cba3c",
+    "combat/progression.mjs": "ec113e2657bd6b479741543dd1f0fb8338195fb9ca1bb85e381834b35a0055e8",
     "combat/stories.mjs": "763d0012eec0e59ac9454a9467596d7296b65cc64002918cc5db462b09a1fec7",
-    "combat/render-stage-motion.mjs": "327ff8a636f4a37cbd0d7f2d5063b51299c0708d992490189cc9db5d27c71e46",
+    "combat/render-stage-motion.mjs": "94338bb181d5b0813be022d932f85bfdf5838f9111baba2d24a9ed3b3be088eb",
     "combat/stage-parallax.mjs": "1e01fa0b4932f0e670bb6fa746c48b57de0c726a5637891e68427a161aecc77d",
     "combat/engine.mjs": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
     "combat/session.mjs": "9dce5b9d2fff5316cd280c8f58038d06134935717c3fd637e76042e308a1d65e",
-    "tests/combat-undermap.test.mjs": "007f96cdf8363befaae5d2ecef143afbc56cf715702d9cfd02ab16d221b5261b",
-    "tests/fixtures/combat-pre-undermap.json": "3b50be4fe6c51b3cb47babf874eeb159db1b619d87f995aa9fcbde0ca19b9a0d",
-    "scripts/review-combat-undermap-20261120.mjs": "d8e2112169524aaa56bff1875dc4545b14c8e826e32017f4ecb94309eadff341",
-    "docs/art-generation/cast-next-missing-20261120/review/watermelongangle/character-canvas-review.json": "187d7de81be134bbbbf687d0cd6b269f81fd81e695f1ed299c498f6633a7c2ec",
-    "docs/art-generation/cast-next-missing-20261120/review/aquablasterpomni/character-canvas-review.json": "36a30fe9fae121969f6f525020932a62c3376ff4adcd7faba32edb1c7ef4273a",
-    "docs/art-generation/cast-next-missing-20261120/review/ptocaine/character-canvas-review.json": "b6b83b3a2599024b3a2e731abfd392ed5f50920602272f30e1db7a7563cc3d44",
-    "docs/art-generation/cast-next-missing-20261120/review/freakjax/character-canvas-review.json": "2e17ba3c75d9475e7a9cb770b8d11b10b2cd2311f899f9f758b2ee3e36214df1",
-    "docs/art-generation/cast-next-missing-20261120/candidate-review-watermelongangle.md": "6fb5690b971b08faebe8c97146dd50081ccb57e41c41bf3f03cc852fb6ea454b",
-    "docs/art-generation/cast-next-missing-20261120/candidate-review-aquablasterpomni.md": "7c05a5560efc9fcdd1d422fa00014d9fa5b10abddfcc094a014dd636eed8ff8b",
-    "docs/art-generation/cast-next-missing-20261120/candidate-review-ptocaine.md": "dc6cbdc345af04cb85a2385bc228514952d707ee8aa7fb1d9c95dbff2307e5f1",
-    "docs/art-generation/cast-next-missing-20261120/candidate-review-freakjax.md": "451175d25a37728e488debed77cb08f6a1b0040210ea524634f03148bfd30dee",
-    "docs/art-generation/cast-next-missing-20261120/candidate-review-australianjax.md": "8159b44594a6005e4caf7bda17d3dfea372d08479c3abfd7c96fbb45fe8fd29a",
-    "docs/art-generation/cast-next-missing-20261120/candidate-review-noirgangle.md": "62f3bbdba5d72994be5c74c1079f6ec4807daf3b0f59d355452504cec365226b",
-    "docs/art-generation/cast-next-missing-20261120/candidate-review-contortionistzooble.md": "7b29756366e47d92cebad8bb6c0f1c86ddb49e68935d3998b8eeeb61b334d817",
-    "docs/art-generation/cast-next-missing-20261120/candidate-review-hotdogabel.md": "2b2e98540533b05cec33d3dea2544a7b272f24808486fd30e6603c7dcb30f531",
-    "docs/art-generation/cast-next-missing-20261120/remaining-work.md": "e7b9aab6b15ea9996a134ac13a9b30f421b7d4a0c0bf1c288d924c2b0f0583f6",
-    "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/selection.json": "7656e6a88115569faf180d40d14d035d5d0cbe63394aa03bd478a5a9335bb679",
-    "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/stance.json": "47e828cf061eac5a34e57df1db1cca9eba230dd7cef3783fbab66a25fcfa8c06",
-    "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/intro.json": "fb70b5b10712a7ecc7d690f90f0815158f0424c16a0dcb7ec0e8e670f09d7d2f",
-    "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/attack.json": "a4a670e55ad6fd2005d747debc516907d5eae841173e16950e9f7079e5df94f9",
-    "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/heavy.json": "1b6fd66fa1fb71b6dc6f07c75db55f30fba26f4ddc03b851ab9b19e4f427ad83",
-    "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/hit.json": "30bc0ece6bb971d5aff399e860c07b36c28fe1025f598c8f178e370f052979b8",
-    "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/walk.json": "46a530d9f57fcc7f1820bd4d7b59d33b24cb77b2769d8285de2a8e7f495de557",
-    "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/jump.json": "51c484637db6065e9126d35c101709ffe740f6528be4761c6d4e95df672517b8",
-    "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/crouch.json": "1c47eca6a8cb42efd7705b981d0d76516d7e12435b1dca83777eab920eb6a3a1",
-    "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/victory.json": "68b5a6c7ab4c01ee3cb5740032895cdd2c1bccdfffeb3fb59c5f41e33b0fbc22",
-    "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/defeat.json": "0d0e19300533c415aa54cfd757ee5e1c8bf6cf09077f5573c1ec0e96edc0c7f1",
-    "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/selection.json": "9832163733dba4f90bf4d289ff283005d55ceb7c06539c2369ef3e52669151a2",
-    "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/stance.json": "e9018fdbd6d2bcb1655add134198438d1f590fedffc40616c173d343a7548ac6",
-    "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/intro.json": "5ddeddd19595569d4469406aacf8db44a1de6debabf1100ec533c17f186982eb",
-    "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/attack.json": "84c738174ff9cc5af898a9125115604eb60717a91fc1de781b621d7a7db2b956",
-    "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/heavy.json": "c447d3f08d45a8ac34fd9bd0c06cebef9a0100667dc84c284e500324be168cea",
-    "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/hit.json": "e02951b494a883f7ef80ed1bf8b05daafac90d9c042e2e0a61685856b337fdb6",
-    "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/walk.json": "1b9f13916d0ca4c41b4f3bb4a500188b6d838cfe50c5b2fa373bc6f90bc653db",
-    "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/jump.json": "76bbce9fa624081bf51f4047d793c11a90ec93e638addb5b42c714323f365dc4",
-    "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/crouch.json": "665c6d029820b2fad44aebf8e17254536478353b485da34d12361152d9c5b54d",
-    "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/victory.json": "2f92bf7dc279251d219f139abdcfc4993ae0c518bc5d801e75120a0c7d172bd9",
-    "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/defeat.json": "bfa76ce675000f36f54fef38cd192ebbf58573518f00080ec327046e2c4ccb33",
-    "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/selection.json": "04f651900aaffd6909e550f57c9261e08c990ab535367bf3ac674602c39dded5",
-    "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/stance.json": "0241b4719fdb266723f61e90471b388e50e4b39e3f393055d10079bd19482361",
-    "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/intro.json": "8afd3b71009637e06c440dfc13405a6a3023c1de1b8c1ab4d6bb06528736e7c3",
-    "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/attack.json": "c4dc8b4f2a9eac3685e79f146cbbe73e9b809f82d87ada06065b02bde09c15b3",
-    "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/heavy.json": "4509a804ddb9e8fb3da73d5868a1a943be9d6626bd1071ab03ab2c58d98bafb6",
-    "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/hit.json": "168f67974011e1c6fc489959bcf3f506c52be33b6aa709749d26bfd5a4a5c431",
-    "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/walk.json": "62307b977b870d6332ef14d82a8e62553a2b3a42b246d5f16c605ba60c227920",
-    "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/jump.json": "17bd5e46ce9467def3088f73d9d31b4935f47164f29df236ce43ea77ffca3f12",
-    "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/crouch.json": "9ddc043a1a6b26be72e98724865e67d0ea710bcc4c3d76ceaa1cbfea4517718b",
-    "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/victory.json": "e2273b0cca8fbeab1726b8f3a255783627591214ddc29050cce77e515c952d92",
-    "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/defeat.json": "f85053bf40eef4fed4ac71cc6e97dfc2164e12f3f042835512823507afbf11ea",
-    "docs/art-generation/cast-next-missing-20261120/generated/freakjax/selection.json": "87dba66b6186c5eed58c5050013f3657a3f118a37f67f3fde6da7ffe989b9f3a",
-    "docs/art-generation/cast-next-missing-20261120/generated/freakjax/stance.json": "8daa993f5726ed76ea8d5b856279fb6ea685d7553bd3842fd5e6508db511888e",
-    "docs/art-generation/cast-next-missing-20261120/generated/freakjax/intro.json": "ada90c14265c17941be4179b9b66e310fdfd0777030c7ed723dbeebcff61c5b5",
-    "docs/art-generation/cast-next-missing-20261120/generated/freakjax/attack.json": "fce6c43121dd0e540bd44baec0a46c924ad2fba2ced3de3d1c5f6dfd933d58d2",
-    "docs/art-generation/cast-next-missing-20261120/generated/freakjax/heavy.json": "0c92bc47b11e6ab07f4515c6c4f2d0ec8046baa7e706faa5809712db8f8a3d75",
-    "docs/art-generation/cast-next-missing-20261120/generated/freakjax/hit.json": "83f11cc92bcdeb8b36e39e90b695a274a5d7e923b20c8d1d2a0ecd583380daa8",
-    "docs/art-generation/cast-next-missing-20261120/generated/freakjax/walk.json": "bd7f7c40f1844a3891f691afbad3389cb0b46d4d1c14c499c8363d7da4d870bc",
-    "docs/art-generation/cast-next-missing-20261120/generated/freakjax/jump.json": "915b3b87cf73091ec88ca836cf7f88563f99f33a9f795da9a55de8cb51b0e4b4",
-    "docs/art-generation/cast-next-missing-20261120/generated/freakjax/crouch.json": "ff4c7c31f2ac9bef14392079f0beccb00db0f2b57a1936df408fc000ae29b211",
-    "docs/art-generation/cast-next-missing-20261120/generated/freakjax/victory.json": "089149846741891ff6ea148dc6c8baa2f40e43c1a89225c9e5a91c4d26341529",
-    "docs/art-generation/cast-next-missing-20261120/generated/freakjax/defeat.json": "6772bd5bd3227aba248fb73e1288f9add198338110bc27de54eaf000c204b2d4",
-    "scripts/update-combat-next-missing-workbook-20261120.mjs": "e3be5d67082c4546a4ebd2bc9a2e1bba1087386d14ffa88181185acf24a6fdd0",
+    "tests/combat-barnoir.test.mjs": "a332d296c68cad4cb607e18793b8b84c0cabc9940ee6fc47467293e9d76a10e1",
+    "tests/fixtures/combat-pre-barnoir.json": "96a3e7c26f1da9a391b3baefed824f7855ebfb76ec62c44282b5b722c29785f7",
+    "scripts/review-combat-barnoir-20261120.mjs": "b3b8c1d6e3e6486ee832cbf7df6e723ae496f3391102e3b7dd7fe4672e52434e",
+    "docs/art-generation/next-wave-20261120/review/caferibbit/character-canvas-review.json": "8652f55873cf631be05c7af3462ca523f95f50808c283f6ccd43e23a1b0403c4",
+    "docs/art-generation/next-wave-20261120/review/glitch-murderdrones-ribbit-hommage/character-canvas-review.json": "7fa5147d35c50aa35b7c15f136c5e5135cdacac758e64e38012738b55beb48dc",
+    "docs/art-generation/next-wave-20261120/review/glitch-murderdrones-ribbit-resident/character-canvas-review.json": "f2110ab827ea27c77fa7f38c6488a89222a3a8bfc8aa7bfe9e92da9c9d0a3ccc",
+    "docs/art-generation/next-wave-20261120/review/glitch-murderdrones-ribbit-fusion/character-canvas-review.json": "6a10a095137fd0b1d912c428e72e6ab7e114bca4481d266ce255f6ca3eb6e01f",
+    "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/selection.png": "638c8ced2802e022b25a2674dd9380757cfdff3a02b5a46acff4bda2fbe295e2",
+    "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/selection.json": "065f7c344fbdd31e5b32fce15732c950b91b0615805b996680ebda4c20cea96f",
+    "docs/art-generation/cast-next-wave-20261120/references/caferibbit/ribbit-cafe-detail.png": "7359975baf1aa8f956cfbad282f2c3a1103820519dfcae238327de91a681dc9f",
+    "assets/encore/selection/ribbit.png": "a88927f18865fb289f4d9e045fd1a75f91363f5d9b535859efbebfd4e8bf566f",
+    "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/stance.png": "b553a8a3673511308c37070e22ac5b8648df6b2a67ae5b8a9b832f3547ff1e18",
+    "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/stance.json": "1c3b62843e2f89c76bade0a42fe51bb68b5b96ba63e255f266ae1f2032f891e6",
+    "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/intro.png": "43c9a9f7fa941476090794bb0c3a52a9ff440cda784defd870e1e31f5673d64c",
+    "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/intro.json": "e8622d23d5923d880f415b2d6d307641de9e5300de632bcbdb6bbe898dee6c0f",
+    "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/attack.png": "d363d6124938290f04ae03227a6d4755a617a7ba621c4ed91f363e2ebb421fb1",
+    "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/attack.json": "1b76361647a734b40ba27ad8c45d1deed0d37489d95a00e4921557a1c980329b",
+    "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/heavy.png": "ba86c05acb6dbd5cffacc2333b39bb427a7958e86e45379a15cb776255b8d9f7",
+    "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/heavy.json": "98db3ce2c4508780503a0e2a8161657bdc922e8928c7a198a662536b774d5019",
+    "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/attempts/heavy-01.png": "67d14192251950326f96a821316beb6ed5c6a324ebb33bd5963d80c07802f4f5",
+    "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/hit.png": "2a72a6b6b12cc4a0c8a8b6ff6606c89bf738f86a1d373dc52470e7f098bfe4ee",
+    "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/hit.json": "f9902d76084ec51c8e33ee0da99e085947bb702df60b52fa5702b28152034b52",
+    "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/walk.png": "0cca789f97424558eb80f6178418ccfac61a926fb5e09c9f73886a13658ae090",
+    "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/walk.json": "1f80d32fa9f399123d201f55d0b0bac7780bf96561a7904d0dab36c4727c42f0",
+    "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/jump.png": "5a420a78e722d843554d3dd37e70e47f011e693fe8b9e927912e94bd67bd78d0",
+    "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/jump.json": "13e98e2c60aa8d7040935f88103070885bd7192fc40c83acdd57d44a739319c8",
+    "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/crouch.png": "6b91fa00359ae859fac06681f9e527c75847d4bb3b883d7514e3e0f5b9707e1d",
+    "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/crouch.json": "4cb9ed5d46b3421233e6f23740683d885f42521f03ba89dbfa826a3477121f17",
+    "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/victory.png": "102b5fb20020b7b67dc7acf5b94f14ed4b40ecd8d8c403e90cb12d6971926dd4",
+    "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/victory.json": "844c6c2e37302d264ccd7fc63abeebb1d359a51db62a864c9792b7a952b89fea",
+    "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/defeat.png": "903dec112c77b63dedd7eed348abcb3c88a143b6b99a9491a18f4cef750b9034",
+    "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/defeat.json": "2f90f258bc525021bae9ded3b7a67f447fb1700558baff75c94ce4b5185a8151",
+    "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/attempts/defeat-01.png": "9736978d3958b9cd5e721d0ec3b8e2959794e783eb366c868539dfcf54c5b4ed",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/definitions/glitch-murderdrones-ribbit-hommage.json": "04c8fffed2e11021004c8e387f318b11f459f4f5cf97a5cfa8922bbe51529e93",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/selection.png": "dd43a5386874e25da5f61b0d823c87de3d146f024c96d64091e5957355c3ef5b",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/selection.json": "951ecd9ea639e632879c50bb5dc71f9aa5faa650d7948573f2fc07bbb8b82547",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/selection.png": "ea9bf4c31ea98cc6422699abb1ad7190378bd35deb940fa0e821fd9c407b418f",
+    "assets/encore/stance/ribbit.png": "db12ab81247248b83279ecfbd74bb5472e31e8c7424fafcbd5bfb964dcc96769",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/stance.png": "6102d83c295487da3689dfe449ffdb9e4b62c20c19babd83415646e95a278f9a",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/stance.json": "8912d82f2d029822c7f20253b921103d165f890a48e29c796d5657b53cda6400",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/stance.png": "a29d6fb634765beb3ba33592764f4854bef9124bc347c6aba221295ad705963c",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/intro.png": "daa9c9327805617cccd5d4a956147c2a2d7bbb3ef592184b08802182d4067fba",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/intro.json": "469a57bc66af99f2d0e4048ed69096543ec090e79707509ac998dd77eb5634cb",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/intro.png": "d4b6fd7e3de18af7d2346bbd45acfc77c374145b298083c3f2657f8db9c911b1",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/attack.png": "13c985b85e8281c08c365ee7f1ec7123c4a97f180ebc60fa54ab195d18d8c1f7",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/attack.json": "15b31ddc3608f7e314299311661df5bc2195f988c80c4c9c3a6931b2f29f70cf",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/attack.png": "3fe9250207098ecc9ca08fb15ee9268926269e0648c898d7f714cc5f81be914f",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/heavy.png": "90cd3b607f74c4618422ba172e8ac498e37e85212cd011de1a35bdadce0b35d3",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/heavy.json": "985b25aa8474eb4d3470415b2b322cee2d94c8ca9915f0efa4681bc8c66ab2d9",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/references/official-iconic-ribbit.png": "d62ee29c8d07410db6ddfdde22965b719a305e9d6ec08aa1c48ab1788a6ce825",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/references/official-uzi-front.png": "a4cd219899ce902fdf07e5545b5691b874df46776b82c106fbea48daeac1f162",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/hit.png": "67cb91d7585795e8436d6d317f09ba714786cf42fa5163ece0cf9c05d04d807c",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/hit.json": "428862709a22e6ee5d257f4d228f603c20eaf230ecd184ba71102327ac8ebc01",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/hit-correction-02/hit.png": "5cf4237971e44751e509c8ec2556e26c18f48b9b1341c935194a296428bff52e",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/hit.png": "842c55a77b7c5b087f7ac46ec662f7853414c293233d0d2b808e602900d81d2a",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/walk.png": "c3c0881fd9e5833eaeb6f49a86db52d91d242c97d92a2b4989a30d4ec52af418",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/walk.json": "e676633cfa7a002678a5c9fdf9a6488627f4a4364a34399db8797f9826262b54",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/jump.png": "7990c365e9d19c3337815b36f9544408ce549634bfb2275dc2bba6a1ce167c53",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/jump.json": "de73906dc90c8bb991be456afaa20a0ae9cad37a67edb5eaf42ce228ba778834",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/jump.png": "5b44236ee5577d71fea24cac12ec6cad20d09af368d3eee9436395d25516237e",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/crouch.png": "e76f856d3a9ed50312204c9b10ca63cec8179a6310497f9491028284e4a29ba8",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/crouch.json": "1415be86323562800125ab70151c38b86166653c15770ab4895266deae527c80",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/crouch.png": "b0b9bba19eb38ea27e356624ac5491df21295f152987cf3953c96cfac96919c0",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/victory.png": "43ecd2b83b7c132a83ac0c2301879f01901dfd6f0710822a540263a4ca12733c",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/victory.json": "7e91e97ba92e7d2892cc7ef20d0e3a1ddb958dbe92d33fb1166deb15e09da2bb",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/defeat.png": "944594d769172882bf175f6927efad3e33e883cfd583f36e5a98654aea2390e4",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/defeat.json": "b5d8297abdc4f0c60cb0cca25ac7c674f422cee2f20909ad47ff0ebfe3d22f98",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/defeat.png": "047149da8e96fd666656bdc7350605297b9d5b1a74e62d17b55baa023a4366a0",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/definitions/glitch-murderdrones-ribbit-resident.json": "3a2fc2646759c1d3c2e895eb6c907c29ed171bf834554938338a985348fcc973",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/selection.png": "fe3c01b6b6d57bc532af4ce7d9114f93a804146d38b4a0263a3f06876618b686",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/selection.json": "58cf3ef4f7964b179681603d1763d19a9b4f93de08ce3d596c9bcab074cd1981",
+    "assets/encore/crossovers/murderdrones/pomni/resident/selection.webp": "356c3c5dd37ce1843cf260a0c8a99412b44176bf9ad35e1088fae4a928cab8dc",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/stance.png": "3cdffc3f01e48fe77f0c66c045eb258b6337f53e5734fb742b20ee7b3c317a5b",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/stance.json": "eff4f8663e187d24d23ce6594d0a0752601be4ff519ff66ca39950a7d07e1094",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/intro.png": "f219e23a39874d0de4ce45691da6d95ce49fd5cc482523f2732787bdec5b25ec",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/intro.json": "44f36cad1051331611f1724b19b184ceebe0503724a769718f3e19a42d79c512",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/attempts/intro-01.png": "688b2c9c3aafd282ab799ee7ea80c879c3721ce23e5744186c478b75fa78370a",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/attack.png": "d82aabde2a0a935df7f6e41ee2bdb0284e4d878311f7730a1a7653ba99e8b0b5",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/attack.json": "0f4c979e22eeb99403d63fe1ccc3833208a492f5869a8de7959f9e7b80fbf96e",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/heavy.png": "1c551bc99c22b29513e919a113c2691ff1c553253753c39dca444895ae2fcbff",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/heavy.json": "63608950da5917f937f3e54bd54cf10c8316e3c87e9297b90a37382b6819c691",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/hit.png": "4240b2e593e5c9f04d03041f4f0a1bc093b0a70a086365a113ad54be8b5953b6",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/hit.json": "9800833de366dcb68f5f5824060888b67602a38fe36916724b9ac19ff747f016",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/walk.png": "ad601e57df0543e6a41852b338f70d0600e1370cab187e020b91e342dd0e15ac",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/walk.json": "cf047939b3c54c3dd0a636a99dd060bde7860dae8e03a8da4419c64446fad71a",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/jump.png": "3539017a11b0fda003f34867c69126abfd41ba112fdad4e95898595cb2d7e54a",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/jump.json": "ff2339dee6afbecb60d5eb9487a7e441807279ad35173a38b0d4920e321fc817",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/attempts/jump-01.png": "08837f8c8d7a34d8f96ab251a9eb8086912fea3db14e8cd810b7d5d6d67601df",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/crouch.png": "3c35deeef6d0be94d4a0900e2a5ec4bd40281e9fa5d91392f134f6ad26b5ce6e",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/crouch.json": "3c2062971edf97fd3722ab7f7b47375f424e60403b8ee2d32c128e98c242d54f",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/attempts/crouch-01.png": "ef49791117078e6d65c93350686c1c9c67ed5d9752a2bf5214dbaef0b369fec6",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/victory.png": "79d35d5c3a7694302d7abb5ef8c1a855164a278dfb6104b7542ba8f12ba41eeb",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/victory.json": "7d553b70dfcdb0c07da11a7aa82941da9d987762898e8a882ea14246cb69e6e6",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/defeat.png": "ffac04a093aa65513db7f58307fc8071118f354ba6b4aa4e2d0ff0e80cfdb3d0",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/defeat.json": "9876efc3aeef3dba3db52c5e561c07663c4284a952e20884c35bc90b91759b90",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/definitions/glitch-murderdrones-ribbit-fusion.json": "13a3808fa1c1b21767e5aa4eb26362a57d7a8005a8b44c0129941fbafddf672d",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/selection.png": "b4aeaf8ad54544eac7640f87603501ac3b7e3b8e0bfa4e68ef76b993c136968e",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/selection.json": "5e86292af1409e66d2acd462c51942b805d9726bc7f8ab39b0c22ebecd7fcb98",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/stance.png": "caf3b3f409ed6cec5c9c1beb1c7aeae19e951d3664f4cd52650081ce5c780111",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/stance.json": "b49979474c0b5ad0dae6f64536f1151c577c2e5ae0cb49c5404bf1cc9f94372d",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/intro.png": "6e26008bb918bcc2e48c723d9ed180e1eed79fdd49883f25f75fdaa3bf52c1c5",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/intro.json": "fa0c862d07e957408769100a94fd4e50fd45239c18f71456abe828cec198ab62",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/attack.png": "6ef768cadd1f4f694d4edaec0698b64841ad987c14956d839767403a9adc8040",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/attack.json": "c988bf06e6523a305a5b4657b077f4d809a7e7bc281313112313308a1ed296f2",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/heavy.png": "886b61a7d2313cdca74d35a0040118ed0faed8583e10554bc7f67ed3636457e5",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/heavy.json": "fc98a3bcf9536b6ded47cfc99b0475cd846fda06f927ccf8202d1f7f43fa0348",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/hit.png": "18666434c7a7e1b82f504203b69f15de314209aaa432b7b7d4a0edb86edab897",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/hit.json": "1d43d0244fbcd2e7fbf770b0ae5ae999e2924bb80845cdb1372916cbff04c95e",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/attempts/hit-01.png": "2fa981bd82b57e5da47ae2c0d0afba5cc31a6a2e68bfba7529e50c882c49be34",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/walk.png": "bf8b75b671fbbf9d3b01d07d2ef56cb0c45d6c3731c2c1fe915b381f83cc53dd",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/walk.json": "b005e591ab404eaff138a9e6fb83de38ef3042a7aae39a2cdb6cac048fba1a4b",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/jump.png": "aa14d384551b950d464672b0fafe7b3a18b0d0388f8e44bf649bfdd882c70c04",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/jump.json": "3242b49fae267174478fc88c3d1c9e21f28ede1230eb5e50bac213ad0e012017",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/crouch.png": "ad1b7d467c845c204ba7737c1a2746b3040fb941910e0cc0623a4062470a8528",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/crouch.json": "5625ff449c82b123e819fa4b5d7ec6320a64b830a0030eb210b4c2247dc7e288",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/victory.png": "67d4f944fdc33b14d4983510fc546d24eac57cacaff2c9484c2565f26034bdd1",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/victory.json": "426012aa030fe8cc967d597430196ad75ba2c261bce25a24e3d01c91f8666075",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/attempts/victory-01.png": "22fb957a3821c5d64af51bd31f7a5def5aef1838cfc38a1bb2d18307bccde3b3",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/defeat.png": "73864da647baf49463c57a30ae817a119287467c7644db2d19974e76037aea83",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/defeat.json": "4f5ffdd4a70db86c75c94e951f640a0ee1467722793d9100d8e5a29a40c9192e",
+    "docs/art-generation/stage-next-wave-20261120/references/episode5-storyboard-L3-M7.jpg": "66fffd5d73e5a6bbe8df4fc8959fc06bac41a2c84fba7528c3c6ac40853e9295",
+    "docs/art-generation/stage-next-wave-20261120/references/episode5-storyboard-L3-M11.jpg": "def97ccad574da19c3d7a08fe8c1f934509575c1eb7a8a1eca3578c749872877",
+    "docs/art-generation/stage-next-wave-20261120/references/episode5-storyboard-L3-M10.jpg": "6a7fa1d3c4d1f6656c720053e46a073c290d0619eaee1785617e7e2bc8ac287f",
+    "docs/art-generation/stage-next-wave-20261120/native/far.png": "e051e8cf276e3dc440dc81220d1af46cdcbae82f7d8ba026d2f44cebf2ac38d1",
+    "docs/art-generation/stage-next-wave-20261120/native/mid.png": "77b6bdc2dccafb7d78557396d81ba27120d852e540566587f47542ac2a811713",
+    "docs/art-generation/stage-next-wave-20261120/native/near.png": "44c6343da751ef851ad57ef0af72adf435ce0f256b0557d523316144f59516f1",
+    "scripts/update-combat-next-wave-workbook-20261120.mjs": "b0c03c5d9ad9370a9626bab9fd98388caa15851ceafe9370f1a4f3d6e1ac7b88",
     "scripts/inspect-combat-workbook-native.py": "44d1a662c0f87804689fb090424eb700ab709b1f1335f7097bd3673f92764c8b",
     "scripts/workbook-publication.mjs": "5c7c3951ae8e1bec61f25de95a6ea890042ba931c16c42de59a55ee1f06be12e"
   },
   "baselineHashes": {
-    "docs/DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx": "aea3c94ea5921f9ed1fd0a4c46b769587c338b2a63d4d70fef8f18a70b0dda5a",
-    "docs/combat-tracker-data.json": "d84353598c621b729098937f9816b5930b960746d85072cbcdd637322157f7c8",
-    "docs/combat-workbook-verification.json": "7a109393d86a814cdb28129968d2fcf7f072c7da45df61777ef0a8360e18dcfd",
+    "docs/DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx": "048d758f614daf1ad388a12fed5955b853734c2c1c47d92fb7a6e493512eea12",
+    "docs/combat-tracker-data.json": "868975a52cb6e4f28adbf4bb98e957f142deef7a240472c4879c7c2c148feb56",
+    "docs/combat-workbook-verification.json": "2869d022d06c0a267bf32e689ca2d1cf1e32ff35d195e759535b8096be6d14d9",
     "docs/combat-qa-evidence-0.7.0.json": "eb0edceabdd0f1e2a939f892327717ac59e0188c6a904f8aec9952ed089e74f5"
   },
   "baselineSnapshotHashes": {
-    "manifest.json": "fb8e407c86fde3103731392175bd151b2411b7b7c676c5fc2505070c988b0620",
-    "sheet-1.json": "569841db17a7061ea33098561c7836ee89f800b3c65aebc41f6650e3543a1ab3",
+    "manifest.json": "4dcea6a5d0283821a881e9bf12ce146228f59846c96a7c6f15ad3f8e275fcf63",
+    "sheet-1.json": "f58f510c720c547d3eb3fa5f9ad57e2f98090ef2369e89e12c9a73d6cf0a9852",
     "sheet-2.json": "d390e938145393b5f88402f9d065b207e8f20acc6e666ef7e765c59078bf7c35",
     "sheet-3.json": "bf8ba722b2e8a3031d3f38556f89a7b43596d7312ff17f1a0f5243dabb50a869",
     "sheet-4.json": "050f9143bd0be3d1aec07a4b1d931ff1d1444087a7f778f02ce1bfd8d6e31109",
-    "sheet-5.json": "08ef71da57e0472426aa19c67175a8a020c04424c4d77413bfc6bb036264a057",
+    "sheet-5.json": "c4c4c132a842b31ad14828910c5915ce761db375ed0178dd515f669e539fd3bf",
     "sheet-6.json": "3c4d61d76407417401b2a88ed319f6225670bfd3f3db6394305c57a1aa8b2e48",
-    "sheet-7.json": "21c77d13360206e4f6fed14a0e92116de07aa27ca81bcf584d61e6892e33bfbc",
+    "sheet-7.json": "72fed5ced27268cf21e74397a5d8e45f5cc9f8d8cb5a1c4a3440f4649f67d277",
     "sheet-8.json": "ac1439a04a5e54d63c249162052da92494fa11d5157dcf816bec45e01ffece4e",
     "sheet-9.json": "276fd10f944e5aead9ec725cae3ffbed01903e4c215e3fb11c3fd6180f113350",
-    "sheet-10.json": "a949d346a44acfe4071508b35704a43defe0acd9fe505ad02a15b95d8f5e8997",
-    "sheet-11.json": "8c993f65d9ed8d510cc4f23979f71f76e5ccea6e4135b6562ca1c52617bebdf2"
+    "sheet-10.json": "1cc7dd7a1e4fd81fa9741125a58b30f53559fc3eedee02a008a095710d25ba21",
+    "sheet-11.json": "f3e49d4fdff4ee15902dae8704c84b911b28036b000cbde1bd382677737e4f65"
   },
   "counts": {
     "fighters": 54,
     "moves": 540,
-    "stages": 23,
+    "stages": 24,
     "modes": 9,
     "atlas": 179,
-    "variants": 468,
+    "variants": 472,
     "archiveOnly": 74,
     "storyRoutes": 54,
     "storyChapters": 216,
     "storyPanels": 324,
     "storyBriefings": 216,
-    "musicThemes": 23,
+    "musicThemes": 24,
     "soundEffects": 26,
-    "offlineImages": 5769,
-    "offlineBytes": 3059080660,
+    "offlineImages": 5816,
+    "offlineBytes": 3118619440,
     "features": 106,
-    "production": 3188,
+    "production": 3242,
     "scenarios": 348,
-    "qa": 2335,
+    "qa": 2389,
     "presentationSequences": 270,
-    "animatedStages": 23,
+    "animatedStages": 24,
     "rebuiltStages": 3,
     "refinedCostumes": 20,
     "costumeReplacementSheets": 5,
     "finishers": 162,
-    "audioAmbiences": 23,
+    "audioAmbiences": 24,
     "archiveVariants": 51,
     "dedicatedStages": 54,
     "friendships": 54,
-    "costumeAdditions": 39,
+    "costumeAdditions": 40,
     "pendingCostumeAdditions": 0,
     "pendingCostumeArtFiles": 0,
+    "crossovers": 381,
     "sheets": 11,
     "nativeTables": 10,
-    "sources": 153,
+    "sources": 157,
     "addedProductionRows": 54,
     "addedQaRows": 54,
     "addedSourceRows": 4,
     "addedStageRows": 1,
-    "costumePngs": 429,
+    "costumePngs": 440,
+    "crossoverCostumes": 381,
+    "crossoverDrawings": 3814,
     "newIndividualDrawingRows": 44,
-    "historicalCells": 79280,
-    "totalNativeCells": 80346
+    "historicalCells": 80346,
+    "totalNativeCells": 81412
   },
   "runtimeManifest": {
-    "offlineVersion": "0.7.0-cdc85685a728",
-    "artVersion": "cb628ae846008788",
-    "artFiles": 5769,
-    "artBytes": 3059080660,
-    "sha256": "f6e631dc7e7c1ac497663c7f78b4e0f64c6100891b22e9230c4c70ee693a1585"
+    "offlineVersion": "0.7.0-087fd3609c69",
+    "artVersion": "0c178f8964773da7",
+    "artFiles": 5816,
+    "artBytes": 3118619440,
+    "sha256": "583ff9fc856c355d153eaba75ef4558f207094680136abcdab06d3fbc532bc1e"
   },
   "currentQa": {
     "gameVersion": "0.7.0",
-    "campaign": "next29-2026-11-20",
+    "campaign": "next-wave-2026-11-20",
     "complete": false,
-    "evidence": "docs/art-generation/cast-next-missing-20261120/verification.json",
-    "workbookEvidence": "docs/art-generation/workbook-next-missing-20261120/workbook-review.json",
+    "evidence": "docs/art-generation/next-wave-20261120/verification.json",
+    "workbookEvidence": "docs/art-generation/workbook-next-wave-20261120/workbook-review.json",
     "rowIds": [
-      "NEXT29-asset-watermelongangle-selection",
-      "NEXT29-asset-watermelongangle-stance",
-      "NEXT29-asset-watermelongangle-intro",
-      "NEXT29-asset-watermelongangle-attack",
-      "NEXT29-asset-watermelongangle-heavy",
-      "NEXT29-asset-watermelongangle-hit",
-      "NEXT29-asset-watermelongangle-walk",
-      "NEXT29-asset-watermelongangle-jump",
-      "NEXT29-asset-watermelongangle-crouch",
-      "NEXT29-asset-watermelongangle-victory",
-      "NEXT29-asset-watermelongangle-defeat",
-      "NEXT29-asset-aquablasterpomni-selection",
-      "NEXT29-asset-aquablasterpomni-stance",
-      "NEXT29-asset-aquablasterpomni-intro",
-      "NEXT29-asset-aquablasterpomni-attack",
-      "NEXT29-asset-aquablasterpomni-heavy",
-      "NEXT29-asset-aquablasterpomni-hit",
-      "NEXT29-asset-aquablasterpomni-walk",
-      "NEXT29-asset-aquablasterpomni-jump",
-      "NEXT29-asset-aquablasterpomni-crouch",
-      "NEXT29-asset-aquablasterpomni-victory",
-      "NEXT29-asset-aquablasterpomni-defeat",
-      "NEXT29-asset-ptocaine-selection",
-      "NEXT29-asset-ptocaine-stance",
-      "NEXT29-asset-ptocaine-intro",
-      "NEXT29-asset-ptocaine-attack",
-      "NEXT29-asset-ptocaine-heavy",
-      "NEXT29-asset-ptocaine-hit",
-      "NEXT29-asset-ptocaine-walk",
-      "NEXT29-asset-ptocaine-jump",
-      "NEXT29-asset-ptocaine-crouch",
-      "NEXT29-asset-ptocaine-victory",
-      "NEXT29-asset-ptocaine-defeat",
-      "NEXT29-asset-freakjax-selection",
-      "NEXT29-asset-freakjax-stance",
-      "NEXT29-asset-freakjax-intro",
-      "NEXT29-asset-freakjax-attack",
-      "NEXT29-asset-freakjax-heavy",
-      "NEXT29-asset-freakjax-hit",
-      "NEXT29-asset-freakjax-walk",
-      "NEXT29-asset-freakjax-jump",
-      "NEXT29-asset-freakjax-crouch",
-      "NEXT29-asset-freakjax-victory",
-      "NEXT29-asset-freakjax-defeat",
-      "UNDERMAP29-asset-far",
-      "UNDERMAP29-asset-mid",
-      "UNDERMAP29-asset-near",
-      "NEXT29-art",
-      "NEXT29-canvas",
-      "UNDERMAP29-canvas",
-      "NEXT29-node",
-      "NEXT29-integrity",
-      "NEXT29-browser",
-      "TRACKER29-update"
+      "WAVE30-asset-caferibbit-selection",
+      "WAVE30-asset-caferibbit-stance",
+      "WAVE30-asset-caferibbit-intro",
+      "WAVE30-asset-caferibbit-attack",
+      "WAVE30-asset-caferibbit-heavy",
+      "WAVE30-asset-caferibbit-hit",
+      "WAVE30-asset-caferibbit-walk",
+      "WAVE30-asset-caferibbit-jump",
+      "WAVE30-asset-caferibbit-crouch",
+      "WAVE30-asset-caferibbit-victory",
+      "WAVE30-asset-caferibbit-defeat",
+      "WAVE30-asset-glitch-murderdrones-ribbit-hommage-selection",
+      "WAVE30-asset-glitch-murderdrones-ribbit-hommage-stance",
+      "WAVE30-asset-glitch-murderdrones-ribbit-hommage-intro",
+      "WAVE30-asset-glitch-murderdrones-ribbit-hommage-attack",
+      "WAVE30-asset-glitch-murderdrones-ribbit-hommage-heavy",
+      "WAVE30-asset-glitch-murderdrones-ribbit-hommage-hit",
+      "WAVE30-asset-glitch-murderdrones-ribbit-hommage-walk",
+      "WAVE30-asset-glitch-murderdrones-ribbit-hommage-jump",
+      "WAVE30-asset-glitch-murderdrones-ribbit-hommage-crouch",
+      "WAVE30-asset-glitch-murderdrones-ribbit-hommage-victory",
+      "WAVE30-asset-glitch-murderdrones-ribbit-hommage-defeat",
+      "WAVE30-asset-glitch-murderdrones-ribbit-resident-selection",
+      "WAVE30-asset-glitch-murderdrones-ribbit-resident-stance",
+      "WAVE30-asset-glitch-murderdrones-ribbit-resident-intro",
+      "WAVE30-asset-glitch-murderdrones-ribbit-resident-attack",
+      "WAVE30-asset-glitch-murderdrones-ribbit-resident-heavy",
+      "WAVE30-asset-glitch-murderdrones-ribbit-resident-hit",
+      "WAVE30-asset-glitch-murderdrones-ribbit-resident-walk",
+      "WAVE30-asset-glitch-murderdrones-ribbit-resident-jump",
+      "WAVE30-asset-glitch-murderdrones-ribbit-resident-crouch",
+      "WAVE30-asset-glitch-murderdrones-ribbit-resident-victory",
+      "WAVE30-asset-glitch-murderdrones-ribbit-resident-defeat",
+      "WAVE30-asset-glitch-murderdrones-ribbit-fusion-selection",
+      "WAVE30-asset-glitch-murderdrones-ribbit-fusion-stance",
+      "WAVE30-asset-glitch-murderdrones-ribbit-fusion-intro",
+      "WAVE30-asset-glitch-murderdrones-ribbit-fusion-attack",
+      "WAVE30-asset-glitch-murderdrones-ribbit-fusion-heavy",
+      "WAVE30-asset-glitch-murderdrones-ribbit-fusion-hit",
+      "WAVE30-asset-glitch-murderdrones-ribbit-fusion-walk",
+      "WAVE30-asset-glitch-murderdrones-ribbit-fusion-jump",
+      "WAVE30-asset-glitch-murderdrones-ribbit-fusion-crouch",
+      "WAVE30-asset-glitch-murderdrones-ribbit-fusion-victory",
+      "WAVE30-asset-glitch-murderdrones-ribbit-fusion-defeat",
+      "BARNOIR30-asset-far",
+      "BARNOIR30-asset-mid",
+      "BARNOIR30-asset-near",
+      "WAVE30-art",
+      "WAVE30-canvas",
+      "BARNOIR30-canvas",
+      "WAVE30-node",
+      "WAVE30-integrity",
+      "WAVE30-browser",
+      "TRACKER30-update"
     ],
     "totals": {
-      "nodeTests": 411,
-      "nodePassed": 411,
+      "nodeTests": 419,
+      "nodePassed": 419,
       "browserAssertionsExecutedByWorkbookUpdate": 0
     },
-    "scope": "Preuves du lot final importées avec leur date et leurs empreintes. La mise à jour contrôle le classeur et les octets des actifs sans se déclarer nouvelle exécution des tests du jeu."
+    "scope": "Preuves finales importées avec leurs dates et empreintes. Les tests du jeu ne sont pas présentés comme exécutés par le builder du classeur."
   },
   "formulas": {
     "count": 42,
@@ -251,396 +330,746 @@
   "nativeComparison": {
     "schema": "encore-native-workbook-comparison/v1",
     "status": "passed",
-    "cellsChecked": 80346,
+    "cellsChecked": 81412,
     "expectedSHA256": null,
-    "actualSHA256": "048d758f614daf1ad388a12fed5955b853734c2c1c47d92fb7a6e493512eea12",
+    "actualSHA256": "4ffcd9d1e17cedbc4a6495f103573eb231a77006d2dabb210f2abbdbca781091",
     "expectedSnapshotHashes": {
-      "manifest.json": "781c0447b580ab60d0d69a43d419b01f4d52fd76fe0e8bddf487f781b30153ae",
-      "sheet-1.json": "d2c7348717c7b1c8ffafe0b3837714990e858c50c9d12c1efe4e5f7f27d9afb1",
-      "sheet-2.json": "dfc99df85e81fed8ba4c4f48372dbf48f8c8fb8dd142c049aab63736b3bb3e41",
+      "manifest.json": "b9e32714958dd4ea74f52d6d68a13d58aaf7f4c91f6900c5394cbce466b705d3",
+      "sheet-1.json": "25d540b079e3a18c689c8812e87e26016002ce9e959feb25eb13ca026342e81a",
+      "sheet-2.json": "623006c5eac02ac76fcce90e15c16db1be8e6674987c992d1027cc66e0085bb6",
       "sheet-3.json": "cb190954c7f66477b74cd2eda7f63d354c9f9a814ee2f878d18ce1a39365bce8",
       "sheet-4.json": "8cbea3eb38e6d8e57df000807619bfaa0a5f72e7b49c04d19f9f77e7d1ba43f3",
-      "sheet-5.json": "66b9a0a1daa15459e2d6c387822b1f24cd42cdf054071b57bda631aefeb201fe",
+      "sheet-5.json": "b99cf271cf1057db60b04de91ade8773a5691cac28cd204c626de9e4b4b638b5",
       "sheet-6.json": "e1b73192e588b2a3669df523d86b1609bd002cdcdaa1014a778825b33cd28409",
-      "sheet-7.json": "a29c7f08494c3dff8670a69d1a722d2f493afbcfda7e58f3ca2dc58b8d7f93b6",
+      "sheet-7.json": "ce7abb69c2f2de154d863ecbdc09f54c3c231e273cb13d847bf8b088b75674ec",
       "sheet-8.json": "7c8457e3e6e5875b2d87e48803a1c52648f4e842b661650ad8f4e5e5c3cdb3d5",
       "sheet-9.json": "5bd283aa6342e65f1311d468f2a2a434c63abfe6adc788d1cd8bbf99d49011f9",
-      "sheet-10.json": "af89759b46c43794d5efd8be835d9fe5dc079971e9b56f601d8bd03208ddb353",
-      "sheet-11.json": "b55eea3401b786fbb8ff9de3decdaef96f14bbfca284234aa73409dd11edd229"
+      "sheet-10.json": "0cb0e50dd67bfc5c9c2986c6f3f12c12de6db66d61721e1b932cd648dce8b33c",
+      "sheet-11.json": "736e49efbbe253c2ea888515ffd65b8267081712566b3974607268adc1aa4e9e"
     },
     "differences": []
   },
   "reimport": {
     "status": "passed",
-    "sha256": "048d758f614daf1ad388a12fed5955b853734c2c1c47d92fb7a6e493512eea12",
-    "planSha256": "bc458583311ddf14624f370636ce7854d884d6f0292ea168539ea8e97f780687",
-    "trackerDataSha256": "868975a52cb6e4f28adbf4bb98e957f142deef7a240472c4879c7c2c148feb56",
+    "sha256": "4ffcd9d1e17cedbc4a6495f103573eb231a77006d2dabb210f2abbdbca781091",
+    "planSha256": "dd1ee1b35fd000dff0e06045e3a13315f05f331cb8fccf0304346ec06b74e0c1",
+    "trackerDataSha256": "82c44b7598e3c7822f62a166555258d68ebe442577fa61dd2613e7f6f4d6e218",
     "formulas": 42,
     "allTableRowsCompared": true,
     "sheets": 11,
     "nativeTables": 10
   },
   "visualReview": {
-    "schema": "encore-tracker-next-missing-visual-review/v1",
+    "schema": "encore-next-wave-workbook-visual-review/v1",
+    "reviewedAt": "2026-11-20T15:56:39.441882+00:00",
     "status": "accepted",
-    "createdAt": "2026-11-20T14:09:33.792Z",
-    "reviewer": "/root/tracker_recovery",
-    "workbookSHA256": "048d758f614daf1ad388a12fed5955b853734c2c1c47d92fb7a6e493512eea12",
-    "planSha256": "bc458583311ddf14624f370636ce7854d884d6f0292ea168539ea8e97f780687",
+    "workbookSHA256": "4ffcd9d1e17cedbc4a6495f103573eb231a77006d2dabb210f2abbdbca781091",
+    "planSha256": "dd1ee1b35fd000dff0e06045e3a13315f05f331cb8fccf0304346ec06b74e0c1",
+    "method": "44 final rendered ranges independently inspected by /root/ribbit_references, with six baseline views; 12 final ranges directly inspected by /root/tracker_recovery and four by /root. Individual reports retain reviewer scope and limitations.",
+    "reviewedFinalViews": 44,
+    "baselineViewsCompared": 6,
+    "individualDrawingsChecked": 44,
+    "independentReview": {
+      "file": "independent-visual-review.json",
+      "sha256": "1a8b4e319fb142f2d6936b757b1407ab64252a14767f8dff00422ee965e7ac54",
+      "status": "accepted_with_stated_scope",
+      "reviewer": "/root/ribbit_references"
+    },
+    "targetedReview": {
+      "file": "targeted-visual-review.json",
+      "sha256": "a21de12ad1a74ed6849adec8dc8f4fda673afcc3fa84c81427aa2759ed67797a",
+      "status": "accepted_for_reviewed_ranges",
+      "primaryReviewerViews": 12,
+      "rootReviewerViews": 4
+    },
+    "observations": [
+      "Les 44 dessins sont détaillés dans Production et QA pour les quatre familles Café, Hommage, Résident et Fusion ; les noms, SHA-256 et chemins de reçus restent entièrement lisibles.",
+      "Les trois lobes visibles sont une harmonisation des créations originales de ce lot, et non une caractéristique canonique officiellement attestée.",
+      "La famille Café est une adaptation d’une illustration officielle de collaboration ; elle ne résout pas la référence incomplète du Maid Ribbit Pendantz.",
+      "Les colonnes jaunes de notes utilisateur restent visibles dans les plages inspectées. Les six vues baseline ont servi de comparaison de présentation.",
+      "Le navigateur reste Non exécuté, avec tentative bloquée avant navigation et zéro validation navigateur des quatre apparences finales.",
+      "Le suivi distingue les images natives et leurs reçus, les contrôles Canvas statiques, les tests Node/constructions, les références de lore et la publication distante.",
+      "Aucun défaut concret de lisibilité, de coupure de chemin ou de portée n’a été relevé dans les 44 vues."
+    ],
+    "resolvedInspectionNotes": [
+      "Un doute initial sur la visibilité du statut en colonne D dans trois vues de fonctionnalités a été levé par inspection agrandie des pixels existants : « Implémenté » est présent. Aucun défaut du PNG, aucune correction ni régénération demandée.",
+      "QA 13 et QA 14 ont été rouvertes individuellement après une sortie d’outil tronquée, puis réellement inspectées avant cette conclusion."
+    ],
+    "concreteDefects": [],
+    "limits": [
+      "Cette preuve porte sur les 44 plages exportées, et non sur l’examen visuel de chacune des 81 412 cellules du classeur.",
+      "Le réimport, les 42 formules, les 10 tables et la comparaison XML native de 81 412 cellules sans différence sont contrôlés séparément par tracker_recovery ; cette revue visuelle ne les réexécute pas.",
+      "Aucune session Excel desktop, interaction navigateur, écoute sur périphérique physique ni animation complète n’a été exécutée par cette revue.",
+      "La lisibilité des références et de leurs limites ne certifie pas une fidélité canonique intégrale des créations.",
+      "La conservation exhaustive des anciennes notes relève de la comparaison native séparée ; cette revue confirme leur présentation dans les plages effectivement inspectées.",
+      "Le réviseur n’a pas créé ni exporté ce classeur ; il a participé auparavant à la production de Café et de quatre corrections Hommage. L’indépendance revendiquée ici concerne la revue du classeur et de ses rendus."
+    ],
     "views": [
       {
+        "name": "summary-top",
         "file": "summary-top.png",
         "sheet": "Synthèse",
         "range": "A1:H18",
-        "sha256": "df90c0035b44cbfe036bd3c95362c097a0e163ce0fa4117720bb61716460b1d5",
-        "status": "accepted",
-        "inspection": "Previously inspected accepted render; final render independently regenerated and exact PNG bytes unchanged"
+        "sha256": "584fbfa60a809ddf178e4276e3d91315d03029a87edf73749a65e05cef9a88ce",
+        "dimensions": [
+          1890,
+          667
+        ],
+        "actuallyInspected": true,
+        "status": "accepted_with_stated_scope",
+        "observation": "Titres, compteurs et statuts lisibles ; 24 arènes, 472 costumes, 3242 lignes Production et 2389 lignes QA cohérents avec le plan."
       },
       {
+        "name": "summary-bottom",
         "file": "summary-bottom.png",
         "sheet": "Synthèse",
         "range": "A19:H35",
-        "sha256": "7dc7cc83af3daa3025df49b01771806ef2b43318ffda3e05b949c5235dacf253",
-        "status": "accepted",
-        "inspection": "Previously inspected accepted render; final render independently regenerated and exact PNG bytes unchanged"
+        "sha256": "f129e49bc1a34320c196a687a59703abe8511b63fa95b884ba72554654692f64",
+        "dimensions": [
+          1890,
+          639
+        ],
+        "actuallyInspected": true,
+        "status": "accepted_with_stated_scope",
+        "observation": "Sous-totaux, notes de portée et absence de validation navigateur lisibles ; pas de confusion entre implémentation, tests techniques et fidélité artistique."
       },
       {
+        "name": "stage-left",
         "file": "stage-left.png",
         "sheet": "Arènes",
-        "range": "A28:L28",
-        "sha256": "1518e4e20cf7acc9d0113f8f6e657ada93ed5adab3791f3b06987d8a08640514",
-        "status": "accepted",
-        "inspection": "Previously inspected accepted render; final render independently regenerated and exact PNG bytes unchanged"
+        "range": "A29:L29",
+        "sha256": "81192dda48df7dfdae494422429be41199edc7d20fc26f2f1dd00ec27682f6e1",
+        "dimensions": [
+          2380,
+          103
+        ],
+        "actuallyInspected": true,
+        "status": "accepted_with_stated_scope",
+        "observation": "Nouvelle arène barnoir et paramètres de jeu lisibles ; lignes et colonnes correctement alignées."
       },
       {
+        "name": "stage-right",
         "file": "stage-right.png",
         "sheet": "Arènes",
-        "range": "M28:T28",
-        "sha256": "64fd233c4ccb8908e265d3d5fea21e373a6466293f6cfc83d12e2e67846446ca",
-        "status": "accepted",
-        "inspection": "Previously inspected accepted render; final render independently regenerated and exact PNG bytes unchanged"
+        "range": "M29:T29",
+        "sha256": "2ead00f36514389d972e2d6b0b392691dea503765ae5f455e6403cab7ecd926e",
+        "dimensions": [
+          5980,
+          103
+        ],
+        "actuallyInspected": true,
+        "status": "accepted_with_stated_scope",
+        "observation": "Trois plans natifs et limites des références storyboard lisibles ; colonne de notes jaunes conservée."
       },
       {
-        "file": "australian-reference.png",
-        "sheet": "Production",
-        "range": "A3027:J3027",
-        "sha256": "385827c0f57cdd075dafa7c42686d9a92414fe454c4568c68dea9f2553eec36a",
-        "status": "accepted",
-        "inspection": "Previously inspected accepted render; final render independently regenerated and exact PNG bytes unchanged"
+        "name": "feature-pre-02",
+        "file": "feature-pre-02.png",
+        "sheet": "Fonctionnalités",
+        "range": "A61:I61",
+        "sha256": "adea6992c42e175d31f0e9fbb62a761bf71c73ea2804be50a40eb4c078f7a1da",
+        "dimensions": [
+          3560,
+          85
+        ],
+        "actuallyInspected": true,
+        "status": "accepted_with_stated_scope",
+        "observation": "Statut et texte de fonctionnalité lisibles ; quatre apparences ajoutées, couverture partielle des PNJ et limites de validation restent explicites ; notes jaunes conservées."
       },
       {
+        "name": "feature-pre-03",
+        "file": "feature-pre-03.png",
+        "sheet": "Fonctionnalités",
+        "range": "A62:I62",
+        "sha256": "38d4a1d6b1e30d5ade19a015b16c8f4b1383e2ff6714a5d3d02e25f926d6ad01",
+        "dimensions": [
+          3560,
+          85
+        ],
+        "actuallyInspected": true,
+        "status": "accepted_with_stated_scope",
+        "observation": "Statut et texte de fonctionnalité lisibles ; quatre apparences ajoutées, couverture partielle des PNJ et limites de validation restent explicites ; notes jaunes conservées."
+      },
+      {
+        "name": "feature-prd-11",
+        "file": "feature-prd-11.png",
+        "sheet": "Fonctionnalités",
+        "range": "A95:I95",
+        "sha256": "314a5b7a7bcd6b95416849564663c8dc92ea3ede84593e3d5d3770f38d4a96a6",
+        "dimensions": [
+          3560,
+          76
+        ],
+        "actuallyInspected": true,
+        "status": "accepted_with_stated_scope",
+        "observation": "Statut et texte de fonctionnalité lisibles ; quatre apparences ajoutées, couverture partielle des PNJ et limites de validation restent explicites ; notes jaunes conservées."
+      },
+      {
+        "name": "feature-pre-09",
+        "file": "feature-pre-09.png",
+        "sheet": "Fonctionnalités",
+        "range": "A68:I68",
+        "sha256": "baee50dd6e1a8e185a2f7b80d29e0454d29094e63716fdc338c9c1a29d046ced",
+        "dimensions": [
+          3560,
+          76
+        ],
+        "actuallyInspected": true,
+        "status": "accepted_with_stated_scope",
+        "observation": "Statut et texte de fonctionnalité lisibles ; quatre apparences ajoutées, couverture partielle des PNJ et limites de validation restent explicites ; notes jaunes conservées."
+      },
+      {
+        "name": "feature-pre-17",
+        "file": "feature-pre-17.png",
+        "sheet": "Fonctionnalités",
+        "range": "A101:I101",
+        "sha256": "6cd7602c0e91d6f2da26df6701aefedc39f4d8f8dbdefbf8d079bc72e01460b2",
+        "dimensions": [
+          3560,
+          76
+        ],
+        "actuallyInspected": true,
+        "status": "accepted_with_stated_scope",
+        "observation": "Statut et texte de fonctionnalité lisibles ; quatre apparences ajoutées, couverture partielle des PNJ et limites de validation restent explicites ; notes jaunes conservées."
+      },
+      {
+        "name": "feature-pre-21",
+        "file": "feature-pre-21.png",
+        "sheet": "Fonctionnalités",
+        "range": "A107:I107",
+        "sha256": "02bf2d794755c2020d9a17a59ab35ff177af6b433728e8650956b1f58ba93f71",
+        "dimensions": [
+          3560,
+          140
+        ],
+        "actuallyInspected": true,
+        "status": "accepted_with_stated_scope",
+        "observation": "Statut et texte de fonctionnalité lisibles ; quatre apparences ajoutées, couverture partielle des PNJ et limites de validation restent explicites ; notes jaunes conservées."
+      },
+      {
+        "name": "production-1",
         "file": "production-1.png",
         "sheet": "Production",
-        "range": "A3140:J3143",
-        "sha256": "e1df3446eb6aff77e74352b18fc41d94a3924339d90ff87ec6dffd736c942d37",
-        "status": "accepted",
-        "inspection": "Previously inspected accepted render; final render independently regenerated and exact PNG bytes unchanged"
+        "range": "A3194:J3197",
+        "sha256": "1ac463820ea479f25fe6c4628de17715f535ff1fcc235b30eb315e1a1e011ba9",
+        "dimensions": [
+          4020,
+          749
+        ],
+        "actuallyInspected": true,
+        "status": "accepted_with_stated_scope",
+        "observation": "Les quatre familles sont présentées dans l’ordre Café, Hommage, Résident, Fusion. Café ne ferme pas maidribbit Pendantz ; trois lobes décrits comme harmonisation originale."
       },
       {
+        "name": "production-2",
         "file": "production-2.png",
         "sheet": "Production",
-        "range": "A3144:J3147",
-        "sha256": "961355909124da0dda64c9f42f0801405523b014d0aca85bbbcafc4229ebf492",
-        "status": "accepted",
-        "inspection": "Final corrected render opened and inspected"
+        "range": "A3198:J3201",
+        "sha256": "d6f2006e6169fd4712d1f56b2b4dc45fd496937d10dc06713fc63947811f5e60",
+        "dimensions": [
+          4020,
+          927
+        ],
+        "actuallyInspected": true,
+        "status": "accepted_with_stated_scope",
+        "observation": "Détails des dessins individuels lisibles, y compris chemins PNG, empreintes SHA-256 et chemins de reçus complets. Aucun texte utile tronqué en hauteur ; notes jaunes conservées."
       },
       {
+        "name": "production-3",
         "file": "production-3.png",
         "sheet": "Production",
-        "range": "A3148:J3151",
-        "sha256": "30d45585f8a4044909fb00478366144c5f0f7336b1286415e81d0cb6a8d41b7f",
-        "status": "accepted",
-        "inspection": "Final corrected render opened and inspected"
+        "range": "A3202:J3205",
+        "sha256": "340a79723b34cb8cf4af856e48699c46644c7065debaf06f121d08c3f6f51f8d",
+        "dimensions": [
+          4020,
+          927
+        ],
+        "actuallyInspected": true,
+        "status": "accepted_with_stated_scope",
+        "observation": "Détails des dessins individuels lisibles, y compris chemins PNG, empreintes SHA-256 et chemins de reçus complets. Aucun texte utile tronqué en hauteur ; notes jaunes conservées."
       },
       {
+        "name": "production-4",
         "file": "production-4.png",
         "sheet": "Production",
-        "range": "A3152:J3155",
-        "sha256": "2819e3f29cccdee2a603378f792456a8a25f4bf5c4cf2a6b7103d4567679bba2",
-        "status": "accepted",
-        "inspection": "Final corrected render opened and inspected"
+        "range": "A3206:J3209",
+        "sha256": "7f395cbaad8775d6dd9036ec1c36454bf2e0e7cbe72117f1cfd8d61a6a33e859",
+        "dimensions": [
+          4020,
+          927
+        ],
+        "actuallyInspected": true,
+        "status": "accepted_with_stated_scope",
+        "observation": "Détails des dessins individuels lisibles, y compris chemins PNG, empreintes SHA-256 et chemins de reçus complets. Aucun texte utile tronqué en hauteur ; notes jaunes conservées."
       },
       {
+        "name": "production-5",
         "file": "production-5.png",
         "sheet": "Production",
-        "range": "A3156:J3159",
-        "sha256": "184808344e96327e8e283af1a0aa3d5d47de546a81986a0415e139bc3d1f8222",
-        "status": "accepted",
-        "inspection": "Final corrected render opened and inspected"
+        "range": "A3210:J3213",
+        "sha256": "28d08178f6f61594c7aa9b1b93c28567cd36a80dcc8dbf6d00ffadd67748fb12",
+        "dimensions": [
+          4020,
+          927
+        ],
+        "actuallyInspected": true,
+        "status": "accepted_with_stated_scope",
+        "observation": "Détails des dessins individuels lisibles, y compris chemins PNG, empreintes SHA-256 et chemins de reçus complets. Aucun texte utile tronqué en hauteur ; notes jaunes conservées."
       },
       {
+        "name": "production-6",
         "file": "production-6.png",
         "sheet": "Production",
-        "range": "A3160:J3163",
-        "sha256": "649cbe585910b8d873c77e663e261245b77dd56abe4df32f3756aa82e4265d5d",
-        "status": "accepted",
-        "inspection": "Final corrected render opened and inspected"
+        "range": "A3214:J3217",
+        "sha256": "5cc6e372d002a8cdb29896bc7056d74505db66a4dd4b4535f02c0e5ce15b51d0",
+        "dimensions": [
+          4020,
+          927
+        ],
+        "actuallyInspected": true,
+        "status": "accepted_with_stated_scope",
+        "observation": "Détails des dessins individuels lisibles, y compris chemins PNG, empreintes SHA-256 et chemins de reçus complets. Aucun texte utile tronqué en hauteur ; notes jaunes conservées."
       },
       {
+        "name": "production-7",
         "file": "production-7.png",
         "sheet": "Production",
-        "range": "A3164:J3167",
-        "sha256": "3841407a8cae42d59c93f388f27a8e9232dd98473446365508dfd38b543f0dbe",
-        "status": "accepted",
-        "inspection": "Final corrected render opened and inspected"
+        "range": "A3218:J3221",
+        "sha256": "0f2fca0452332048bf3d79a93a03297b719d275a08ce1fc440c99bfebbe24280",
+        "dimensions": [
+          4020,
+          927
+        ],
+        "actuallyInspected": true,
+        "status": "accepted_with_stated_scope",
+        "observation": "Détails des dessins individuels lisibles, y compris chemins PNG, empreintes SHA-256 et chemins de reçus complets. Aucun texte utile tronqué en hauteur ; notes jaunes conservées."
       },
       {
+        "name": "production-8",
         "file": "production-8.png",
         "sheet": "Production",
-        "range": "A3168:J3171",
-        "sha256": "f584181f259634345dd20d9ca6dab4d732d95aff35312b36ac382648d11d1f97",
-        "status": "accepted",
-        "inspection": "Final corrected render opened and inspected"
+        "range": "A3222:J3225",
+        "sha256": "2f051bd4b205fa8eeebe6d00c48694c1c764a32290c28c237309506d1d7cfa3a",
+        "dimensions": [
+          4020,
+          927
+        ],
+        "actuallyInspected": true,
+        "status": "accepted_with_stated_scope",
+        "observation": "Détails des dessins individuels lisibles, y compris chemins PNG, empreintes SHA-256 et chemins de reçus complets. Aucun texte utile tronqué en hauteur ; notes jaunes conservées."
       },
       {
+        "name": "production-9",
         "file": "production-9.png",
         "sheet": "Production",
-        "range": "A3172:J3175",
-        "sha256": "f9fd42f5dab6f061e1cd2f66861dab49ad65674e9e29fa3ffc48ea2f140f6b1e",
-        "status": "accepted",
-        "inspection": "Final corrected render opened and inspected"
+        "range": "A3226:J3229",
+        "sha256": "b8b9406ae4291513bf3bc53f05e5d4099295315488f79d251a381ea299483cac",
+        "dimensions": [
+          4020,
+          927
+        ],
+        "actuallyInspected": true,
+        "status": "accepted_with_stated_scope",
+        "observation": "Détails des dessins individuels lisibles, y compris chemins PNG, empreintes SHA-256 et chemins de reçus complets. Aucun texte utile tronqué en hauteur ; notes jaunes conservées."
       },
       {
+        "name": "production-10",
         "file": "production-10.png",
         "sheet": "Production",
-        "range": "A3176:J3179",
-        "sha256": "2c59405dcc3072f6c0fda4e6f88608ad27a98e0d09140ed2f33a1109409b3185",
-        "status": "accepted",
-        "inspection": "Final corrected render opened and inspected"
+        "range": "A3230:J3233",
+        "sha256": "81e04c0372c6e7363a2b7798408408e1d9a4b1d0fe40fd1ab86f712fb051fdaa",
+        "dimensions": [
+          4020,
+          927
+        ],
+        "actuallyInspected": true,
+        "status": "accepted_with_stated_scope",
+        "observation": "Détails des dessins individuels lisibles, y compris chemins PNG, empreintes SHA-256 et chemins de reçus complets. Aucun texte utile tronqué en hauteur ; notes jaunes conservées."
       },
       {
+        "name": "production-11",
         "file": "production-11.png",
         "sheet": "Production",
-        "range": "A3180:J3183",
-        "sha256": "d152c0e227ea4e0b4a2a1833e7e0ebba9c8cfc7d85f00fbc8e07b19b07727acc",
-        "status": "accepted",
-        "inspection": "Final corrected render opened and inspected"
+        "range": "A3234:J3237",
+        "sha256": "2dcad5c440c2207ac9cca991b78d3c958d483d74b4a349018be7ad6027bab9e4",
+        "dimensions": [
+          4020,
+          927
+        ],
+        "actuallyInspected": true,
+        "status": "accepted_with_stated_scope",
+        "observation": "Détails des dessins individuels lisibles, y compris chemins PNG, empreintes SHA-256 et chemins de reçus complets. Aucun texte utile tronqué en hauteur ; notes jaunes conservées."
       },
       {
+        "name": "production-12",
         "file": "production-12.png",
         "sheet": "Production",
-        "range": "A3184:J3187",
-        "sha256": "09c51c3f6c0328ec1f6f0fa848c27ab771e17d363dc294efec612f0116afc9d1",
-        "status": "accepted",
-        "inspection": "Final corrected render opened and inspected"
+        "range": "A3238:J3241",
+        "sha256": "6e58625e3865a2bc69bb39677cb90b0fb0cdec7826a83b7a76f2dd4324b05100",
+        "dimensions": [
+          4020,
+          927
+        ],
+        "actuallyInspected": true,
+        "status": "accepted_with_stated_scope",
+        "observation": "Détails des dessins individuels lisibles, y compris chemins PNG, empreintes SHA-256 et chemins de reçus complets. Aucun texte utile tronqué en hauteur ; notes jaunes conservées."
       },
       {
+        "name": "production-13",
         "file": "production-13.png",
         "sheet": "Production",
-        "range": "A3188:J3191",
-        "sha256": "33e76e0f44016475f6f9079f9705a668a8da109967e03248b0246cfbbf3b0da9",
-        "status": "accepted",
-        "inspection": "Previously inspected accepted render; final render independently regenerated and exact PNG bytes unchanged"
+        "range": "A3242:J3245",
+        "sha256": "e22d9415cb5318b6ab4af230382024c88f6de8d76fb2789560fc156ad138efec",
+        "dimensions": [
+          4020,
+          307
+        ],
+        "actuallyInspected": true,
+        "status": "accepted_with_stated_scope",
+        "observation": "Livrables du bar, musique et ambiance lisibles ; distinctions entre images natives, compositions originales et références observées maintenues."
       },
       {
+        "name": "production-14",
         "file": "production-14.png",
         "sheet": "Production",
-        "range": "A3192:J3193",
-        "sha256": "788856732b2656835c1ad6beae9a393dc9fb4a5d8dc72f10ec6e163462356688",
-        "status": "accepted",
-        "inspection": "Previously inspected accepted render; final render independently regenerated and exact PNG bytes unchanged"
+        "range": "A3246:J3247",
+        "sha256": "4b61ce9d471e4d54f438db41308692eec5d6841b127f685cae7b041b81cd3175",
+        "dimensions": [
+          4020,
+          151
+        ],
+        "actuallyInspected": true,
+        "status": "accepted_with_stated_scope",
+        "observation": "Livrables du bar, musique et ambiance lisibles ; distinctions entre images natives, compositions originales et références observées maintenues."
       },
       {
+        "name": "qa-1",
         "file": "qa-1.png",
         "sheet": "QA",
-        "range": "A2287:I2290",
-        "sha256": "e3e2fcf7c901f122299c95b4478e8bc8ed8f494f32312d7ee90de53b17f1aaa2",
-        "status": "accepted",
-        "inspection": "Previously inspected accepted render; final render independently regenerated and exact PNG bytes unchanged"
+        "range": "A2341:I2344",
+        "sha256": "2b1ff42cb9861c6213635fb55f294846ac5eb5eff0c5509296fbce733f70f751",
+        "dimensions": [
+          4980,
+          793
+        ],
+        "actuallyInspected": true,
+        "status": "accepted_with_stated_scope",
+        "observation": "Contrôles des PNG individuels lisibles, avec état Réussi, chemins d’actifs et de reçus, SHA-256 complets et limites alpha/native. Notes jaunes conservées."
       },
       {
+        "name": "qa-2",
         "file": "qa-2.png",
         "sheet": "QA",
-        "range": "A2291:I2294",
-        "sha256": "576bf5ff60445726669830c2f4caabdf09ab78f4915131db52c17fcf21c44b48",
-        "status": "accepted",
-        "inspection": "Previously inspected accepted render; final render independently regenerated and exact PNG bytes unchanged"
+        "range": "A2345:I2348",
+        "sha256": "c4e8ef11aed6d3b3663a221eb2074e2f5a09ccb99ec1c86e89b6c71d6ea258b1",
+        "dimensions": [
+          4980,
+          793
+        ],
+        "actuallyInspected": true,
+        "status": "accepted_with_stated_scope",
+        "observation": "Contrôles des PNG individuels lisibles, avec état Réussi, chemins d’actifs et de reçus, SHA-256 complets et limites alpha/native. Notes jaunes conservées."
       },
       {
+        "name": "qa-3",
         "file": "qa-3.png",
         "sheet": "QA",
-        "range": "A2295:I2298",
-        "sha256": "1b6724bbaa0f9ec3329175e79657c06853a8a246403f280feb8a04878487374e",
-        "status": "accepted",
-        "inspection": "Previously inspected accepted render; final render independently regenerated and exact PNG bytes unchanged"
+        "range": "A2349:I2352",
+        "sha256": "5ac90bfb1043263cbeb09e21de36ef44d2c39ee12174f3878e780106e6fb397a",
+        "dimensions": [
+          4980,
+          793
+        ],
+        "actuallyInspected": true,
+        "status": "accepted_with_stated_scope",
+        "observation": "Contrôles des PNG individuels lisibles, avec état Réussi, chemins d’actifs et de reçus, SHA-256 complets et limites alpha/native. Notes jaunes conservées."
       },
       {
+        "name": "qa-4",
         "file": "qa-4.png",
         "sheet": "QA",
-        "range": "A2299:I2302",
-        "sha256": "ab8298d16851c9fc430f1b3c1c257d40d00427779cd25851cffcbdd25957ece7",
-        "status": "accepted",
-        "inspection": "Previously inspected accepted render; final render independently regenerated and exact PNG bytes unchanged"
+        "range": "A2353:I2356",
+        "sha256": "54118185573c24c0aeb7518073cdf82d5ebefb10a71301d3719eb3475bb43c3a",
+        "dimensions": [
+          4980,
+          793
+        ],
+        "actuallyInspected": true,
+        "status": "accepted_with_stated_scope",
+        "observation": "Contrôles des PNG individuels lisibles, avec état Réussi, chemins d’actifs et de reçus, SHA-256 complets et limites alpha/native. Notes jaunes conservées."
       },
       {
+        "name": "qa-5",
         "file": "qa-5.png",
         "sheet": "QA",
-        "range": "A2303:I2306",
-        "sha256": "ea9a871aff22e20f7f17d47deb48f256c6d51d6e1d0757da97344ddde49b7723",
-        "status": "accepted",
-        "inspection": "Previously inspected accepted render; final render independently regenerated and exact PNG bytes unchanged"
+        "range": "A2357:I2360",
+        "sha256": "fdee8e32ff3701d349c09e4de0ae7ee420e48f34f7b63cfed4c8faf6cfb92710",
+        "dimensions": [
+          4980,
+          793
+        ],
+        "actuallyInspected": true,
+        "status": "accepted_with_stated_scope",
+        "observation": "Contrôles des PNG individuels lisibles, avec état Réussi, chemins d’actifs et de reçus, SHA-256 complets et limites alpha/native. Notes jaunes conservées."
       },
       {
+        "name": "qa-6",
         "file": "qa-6.png",
         "sheet": "QA",
-        "range": "A2307:I2310",
-        "sha256": "f002c119d9c3a37d2b5f9704758e8e4c3fc3cd1d9d732ce6150caa664beeeea0",
-        "status": "accepted",
-        "inspection": "Previously inspected accepted render; final render independently regenerated and exact PNG bytes unchanged"
+        "range": "A2361:I2364",
+        "sha256": "c9503606b370be3291ff50f0056210319efd4625498870c5678ccf0b8bf57478",
+        "dimensions": [
+          4980,
+          793
+        ],
+        "actuallyInspected": true,
+        "status": "accepted_with_stated_scope",
+        "observation": "Contrôles des PNG individuels lisibles, avec état Réussi, chemins d’actifs et de reçus, SHA-256 complets et limites alpha/native. Notes jaunes conservées."
       },
       {
+        "name": "qa-7",
         "file": "qa-7.png",
         "sheet": "QA",
-        "range": "A2311:I2314",
-        "sha256": "3dc228172ef5021dcd2e02d38485f4e58775fba396fa6af58d1984c9138bef2a",
-        "status": "accepted",
-        "inspection": "Previously inspected accepted render; final render independently regenerated and exact PNG bytes unchanged"
+        "range": "A2365:I2368",
+        "sha256": "a0453879083bffb2857533a2fc386dc3b9e2fbf9c7e13ca591cb2d2a2791f6e3",
+        "dimensions": [
+          4980,
+          793
+        ],
+        "actuallyInspected": true,
+        "status": "accepted_with_stated_scope",
+        "observation": "Contrôles des PNG individuels lisibles, avec état Réussi, chemins d’actifs et de reçus, SHA-256 complets et limites alpha/native. Notes jaunes conservées."
       },
       {
+        "name": "qa-8",
         "file": "qa-8.png",
         "sheet": "QA",
-        "range": "A2315:I2318",
-        "sha256": "5e115d44bd61aa5c1a221f95f980591a16be27c4fa72f6f89ffac189261527dc",
-        "status": "accepted",
-        "inspection": "Previously inspected accepted render; final render independently regenerated and exact PNG bytes unchanged"
+        "range": "A2369:I2372",
+        "sha256": "8e926d58f6ff45fe11a064ee2965465c5a421c19819efa75ca2bc34dbf1f73c2",
+        "dimensions": [
+          4980,
+          793
+        ],
+        "actuallyInspected": true,
+        "status": "accepted_with_stated_scope",
+        "observation": "Contrôles des PNG individuels lisibles, avec état Réussi, chemins d’actifs et de reçus, SHA-256 complets et limites alpha/native. Notes jaunes conservées."
       },
       {
+        "name": "qa-9",
         "file": "qa-9.png",
         "sheet": "QA",
-        "range": "A2319:I2322",
-        "sha256": "821ed3094d65954f3870785ca28555e9929f2ad004e9f649b03fbff931f6995b",
-        "status": "accepted",
-        "inspection": "Previously inspected accepted render; final render independently regenerated and exact PNG bytes unchanged"
+        "range": "A2373:I2376",
+        "sha256": "94cf2e61e89dca46291b7b24007588dcb622450206aeee305299d47553609f8e",
+        "dimensions": [
+          4980,
+          793
+        ],
+        "actuallyInspected": true,
+        "status": "accepted_with_stated_scope",
+        "observation": "Contrôles des PNG individuels lisibles, avec état Réussi, chemins d’actifs et de reçus, SHA-256 complets et limites alpha/native. Notes jaunes conservées."
       },
       {
+        "name": "qa-10",
         "file": "qa-10.png",
         "sheet": "QA",
-        "range": "A2323:I2326",
-        "sha256": "1067287ab2c33ee29a5494aaba516d633e42d263c248c531ac74cb90423e3ee9",
-        "status": "accepted",
-        "inspection": "Previously inspected accepted render; final render independently regenerated and exact PNG bytes unchanged"
+        "range": "A2377:I2380",
+        "sha256": "054037762fd9d24e24d9d1ed2e7053813136a4ac3c3200039e43fc6514855638",
+        "dimensions": [
+          4980,
+          793
+        ],
+        "actuallyInspected": true,
+        "status": "accepted_with_stated_scope",
+        "observation": "Contrôles des PNG individuels lisibles, avec état Réussi, chemins d’actifs et de reçus, SHA-256 complets et limites alpha/native. Notes jaunes conservées."
       },
       {
+        "name": "qa-11",
         "file": "qa-11.png",
         "sheet": "QA",
-        "range": "A2327:I2330",
-        "sha256": "b9538d74c0273aba7c97dc87719fb964b61bde12397d3bd79f61e7e5c6e2cf22",
-        "status": "accepted",
-        "inspection": "Previously inspected accepted render; final render independently regenerated and exact PNG bytes unchanged"
+        "range": "A2381:I2384",
+        "sha256": "540fe45a19db0ea1c3cfc0a1c17658d5eb978f67e7df6da0250a3edc610d1ece",
+        "dimensions": [
+          4980,
+          793
+        ],
+        "actuallyInspected": true,
+        "status": "accepted_with_stated_scope",
+        "observation": "Contrôles des PNG individuels lisibles, avec état Réussi, chemins d’actifs et de reçus, SHA-256 complets et limites alpha/native. Notes jaunes conservées."
       },
       {
+        "name": "qa-12",
         "file": "qa-12.png",
         "sheet": "QA",
-        "range": "A2331:I2334",
-        "sha256": "2bbb25fbf86635d1d4645568ff54d57b272af8e40c65e9564393a2d895807eb6",
-        "status": "accepted",
-        "inspection": "Previously inspected accepted render; final render independently regenerated and exact PNG bytes unchanged"
+        "range": "A2385:I2388",
+        "sha256": "97da9d34933367c54bbb941a9d58386df2534fcff8690bc1517f642231d36203",
+        "dimensions": [
+          4980,
+          272
+        ],
+        "actuallyInspected": true,
+        "status": "accepted_with_stated_scope",
+        "observation": "Trois plans du bar et synthèse des 44 dessins lisibles : dimensions natives 1672 × 941 pour les plans, 56 983 581 octets pour les 44 PNG ; pas de prétention 4K."
       },
       {
+        "name": "qa-13",
         "file": "qa-13.png",
         "sheet": "QA",
-        "range": "A2335:I2338",
-        "sha256": "0cedaf10810afaebfdd4273c6d6229a81fe93203a0e0db61edc1936f61c0e50b",
-        "status": "accepted",
-        "inspection": "Previously inspected accepted render; final render independently regenerated and exact PNG bytes unchanged"
+        "range": "A2389:I2392",
+        "sha256": "738f5d8920c6148f7862e101a2ae2b185717293026b51fcd5eb777385a7d3176",
+        "dimensions": [
+          4980,
+          244
+        ],
+        "actuallyInspected": true,
+        "status": "accepted_with_stated_scope",
+        "observation": "Canvas, arène, tests et intégrité séparés et lisibles : 80 contrôles Canvas, 419 tests Node, deux constructions et conservation des 5725 fichiers historiques rapportés comme preuves datées."
       },
       {
+        "name": "qa-14",
         "file": "qa-14.png",
         "sheet": "QA",
-        "range": "A2339:I2340",
-        "sha256": "b012d071594e2a58b313cc8aaa196a413ae2e7bb9e55a287a817bf5f63918bb7",
-        "status": "accepted",
-        "inspection": "Previously inspected accepted render; final render independently regenerated and exact PNG bytes unchanged"
+        "range": "A2393:I2394",
+        "sha256": "a6b9733d6ae93eeb621ca9cc17b4febd4a05087c08f50391e8c820466b36c9d2",
+        "dimensions": [
+          4980,
+          151
+        ],
+        "actuallyInspected": true,
+        "status": "accepted_with_stated_scope",
+        "observation": "Navigateur affiché Non exécuté : Chromium bloqué au lancement avant navigation, zéro contrôle réussi et aucune validation navigateur des quatre apparences finales. Le statut du suivi distingue export/réimport de toute session Excel desktop."
       },
       {
+        "name": "references-new",
         "file": "references-new.png",
         "sheet": "Références",
-        "range": "A155:E158",
-        "sha256": "0169693b9a9fc818018856587791367d91624688249eaa33b913699d329b01a6",
-        "status": "accepted",
-        "inspection": "Previously inspected accepted render; final render independently regenerated and exact PNG bytes unchanged"
+        "range": "A159:E162",
+        "sha256": "b562c1b2afe371472b1cf7c8d7e930c81daa5e2c666d22143bbf3661d6a85655",
+        "dimensions": [
+          3240,
+          476
+        ],
+        "actuallyInspected": true,
+        "status": "accepted_with_stated_scope",
+        "observation": "Quatre nouvelles références entièrement lisibles. Café distinct de Maid Pendantz ; storyboard limité ; Iconic ne prouve pas trois doigts ; Hommage et créations Résident/Fusion décrits sans certification canonique."
       },
       {
+        "name": "references-offline",
         "file": "references-offline.png",
         "sheet": "Références",
         "range": "A64:E64",
-        "sha256": "6830169e2c53d4f55dbe4863b6bc0f85c399c66d0ce5b8103a7f081e56631c01",
-        "status": "accepted",
-        "inspection": "Previously inspected accepted render; final render independently regenerated and exact PNG bytes unchanged"
+        "sha256": "c4bdd0c47754a8ca49bd09e8286f2f2a0172698aa0f5905a0c8ccf10503c18c5",
+        "dimensions": [
+          3240,
+          59
+        ],
+        "actuallyInspected": true,
+        "status": "accepted_with_stated_scope",
+        "observation": "Inventaire hors ligne lisible : 5816 images et 3 118 619 440 octets ; vérification de publication GitHub explicitement séparée."
       },
       {
+        "name": "references-footer",
         "file": "references-footer.png",
         "sheet": "Références",
-        "range": "A159:E169",
-        "sha256": "034491e64e34f2803b3529b5bf1c1ac9ef2423bda7930419b7bfcdc6d9a39c0c",
-        "status": "accepted",
-        "inspection": "Previously inspected accepted render; final render independently regenerated and exact PNG bytes unchanged"
+        "range": "A163:E173",
+        "sha256": "115a22851dccd4ab2be3c1406d3b3c7def627bd95b1b5cb0ed863c94c8e2b5a0",
+        "dimensions": [
+          3240,
+          401
+        ],
+        "actuallyInspected": true,
+        "status": "accepted_with_stated_scope",
+        "observation": "Légende des statuts, limites Lore/QA et règles de conservation des notes utilisateur lisibles jusqu’à la dernière ligne."
+      },
+      {
+        "name": "source-music",
+        "file": "source-music.png",
+        "sheet": "Références",
+        "range": "A63:E63",
+        "sha256": "f9d24c854385bfe332ed7cf238c7590a70c48807cdfb2006b1a1c56908c35ee4",
+        "dimensions": [
+          3240,
+          59
+        ],
+        "actuallyInspected": true,
+        "status": "accepted_with_stated_scope",
+        "observation": "26 motifs synthétiques et 24 thèmes originaux explicitement attribués au jeu."
+      },
+      {
+        "name": "source-stage-ambiences",
+        "file": "source-stage-ambiences.png",
+        "sheet": "Références",
+        "range": "A60:E60",
+        "sha256": "f0d692e37ed8a23eb3b52d1311ad1ecd9098e70df87bfe907251791f6820a701",
+        "dimensions": [
+          3240,
+          63
+        ],
+        "actuallyInspected": true,
+        "status": "accepted_with_stated_scope",
+        "observation": "24 ambiances visuelles et comportement de mouvements réduits lisibles."
+      },
+      {
+        "name": "source-audio-ambiences-07",
+        "file": "source-audio-ambiences-07.png",
+        "sheet": "Références",
+        "range": "A67:E67",
+        "sha256": "66821330442207522629910621afbbdaf2402c9d3cdca31d09d847eed1ccc866",
+        "dimensions": [
+          3240,
+          121
+        ],
+        "actuallyInspected": true,
+        "status": "accepted_with_stated_scope",
+        "observation": "24 ambiances sonores décrites comme synthèse originale ; absence de captation de la série et de validation du mixage sur matériel physique explicite."
+      }
+    ]
+  },
+  "baselineVisualReview": {
+    "schema": "encore-tracker-baseline-visual/v1",
+    "reviewedAt": "2026-11-20T15:13:18.474Z",
+    "status": "accepted_as_baseline",
+    "workbookSHA256": "048d758f614daf1ad388a12fed5955b853734c2c1c47d92fb7a6e493512eea12",
+    "views": [
+      {
+        "file": "baseline-summary.png",
+        "sha256": "df90c0035b44cbfe036bd3c95362c097a0e163ce0fa4117720bb61716460b1d5",
+        "status": "inspected",
+        "reviewer": "/root/tracker_recovery"
+      },
+      {
+        "file": "baseline-stage-left.png",
+        "sha256": "1518e4e20cf7acc9d0113f8f6e657ada93ed5adab3791f3b06987d8a08640514",
+        "status": "inspected",
+        "reviewer": "/root/tracker_recovery"
+      },
+      {
+        "file": "baseline-stage-right.png",
+        "sha256": "64fd233c4ccb8908e265d3d5fea21e373a6466293f6cfc83d12e2e67846446ca",
+        "status": "inspected",
+        "reviewer": "/root/tracker_recovery"
+      },
+      {
+        "file": "baseline-production.png",
+        "sha256": "acb65d0c8f94abe4657ad03877d6c142252cf61a02197814aacecdda60cd154c",
+        "status": "inspected",
+        "reviewer": "/root/tracker_recovery"
+      },
+      {
+        "file": "baseline-qa.png",
+        "sha256": "22b6d4f68e4df920c58fa87b51dab6a38831d08ca246479362a591da9ee46c25",
+        "status": "inspected",
+        "reviewer": "/root/tracker_recovery"
+      },
+      {
+        "file": "baseline-references.png",
+        "sha256": "d6ef17aceba67aa701075677f755b1786e7dbcddd373ac099a89489a8afe213d",
+        "status": "inspected",
+        "reviewer": "/root/tracker_recovery"
       }
     ],
-    "baselineViewsInspected": 6,
-    "finalViewsAccepted": 36,
-    "method": {
-      "initialViewsOpened": 36,
-      "initialAcceptedUnchanged": 25,
-      "correctedFinalViewsOpened": 11,
-      "allFinalPngDigestsVerified": true
-    },
     "observations": [
-      "The 44 new individual Production rows show complete dimensions, byte sizes, SHA-256 values and receipt paths after a minimum row height of 140 points; no vertical clipping remains in the inspected renders.",
-      "The four family rows appear in the required order: watermelongangle, aquablasterpomni, ptocaine, freakjax; individual drawing rows do not duplicate the costume count.",
-      "The summary displays 23 shared stages, 468 costumes, 3,188 Production rows and 2,335 QA rows. Four new source rows bring the reference count to 153.",
-      "The six new stage Production rows, the three native stage PNG checks and final QA evidence are visible; native dimensions are 1672 by 941 pixels.",
-      "The new browser QA row remains Non exécuté. The Australian Jax row remains À vérifier and says the khaki shorts are confirmed while the feet remain masked.",
-      "The original alternating fills, status colors, yellow user-note columns and reference footer remain readable and aligned."
-    ],
-    "correctionHistory": {
-      "initialReview": "initial-visual-review.json",
-      "initialNativeComparison": "initial-native-comparison.json",
-      "correctedFiles": [
-        "production-2.png",
-        "production-3.png",
-        "production-4.png",
-        "production-5.png",
-        "production-6.png",
-        "production-7.png",
-        "production-8.png",
-        "production-9.png",
-        "production-10.png",
-        "production-11.png",
-        "production-12.png"
-      ],
-      "unchangedAcceptedFiles": [
-        "summary-top.png",
-        "summary-bottom.png",
-        "stage-left.png",
-        "stage-right.png",
-        "australian-reference.png",
-        "production-1.png",
-        "production-13.png",
-        "production-14.png",
-        "qa-1.png",
-        "qa-2.png",
-        "qa-3.png",
-        "qa-4.png",
-        "qa-5.png",
-        "qa-6.png",
-        "qa-7.png",
-        "qa-8.png",
-        "qa-9.png",
-        "qa-10.png",
-        "qa-11.png",
-        "qa-12.png",
-        "qa-13.png",
-        "qa-14.png",
-        "references-new.png",
-        "references-offline.png",
-        "references-footer.png"
-      ]
-    },
-    "limitations": [
-      "This review examines rendered worksheet regions and the recorded native comparison; it is not a desktop Excel session.",
-      "The game QA, Canvas evidence and canonical-art limitations retain the exact scopes recorded by the frozen generation wave.",
-      "The wide original workbook column layout is retained; detailed image views may require zoom for reading at normal desktop width."
+      "Synthèse lisible : 54 combattants, 468 costumes, 23 arènes, 3 188 lignes Production et 2 335 lignes QA.",
+      "Colonnes jaunes de notes, statuts de QA historiques et ordre du dernier lot conservés dans les vues initiales.",
+      "Légende de Références entière, de Lecture du suivi à Limites QA ; les lignes seront déplacées sans perte pour les nouvelles sources."
     ]
   },
   "assetSlotVerification": {
@@ -648,10 +1077,10 @@
     "status": "passed",
     "verifiedSlots": 44,
     "order": [
-      "watermelongangle",
-      "aquablasterpomni",
-      "ptocaine",
-      "freakjax"
+      "caferibbit",
+      "glitch-murderdrones-ribbit-hommage",
+      "glitch-murderdrones-ribbit-resident",
+      "glitch-murderdrones-ribbit-fusion"
     ],
     "slots": [
       "selection",
@@ -668,15 +1097,279 @@
     ],
     "checks": [
       {
-        "appearanceId": "watermelongangle",
+        "appearanceId": "caferibbit",
         "slot": "selection",
-        "file": "assets/encore/selection/watermelongangle.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/selection.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/selection.json",
-        "sha256": "35b49ea9a786736b9ce39852ad8e8c7d0919de2d9ac972d37424a028e0029d65",
-        "bytes": 1527470,
-        "productionId": "NEXT29-watermelongangle-selection",
-        "qaId": "NEXT29-asset-watermelongangle-selection",
+        "file": "assets/encore/selection/caferibbit.png",
+        "archiveFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/selection.png",
+        "receiptFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/selection.json",
+        "sha256": "638c8ced2802e022b25a2674dd9380757cfdff3a02b5a46acff4bda2fbe295e2",
+        "bytes": 1495892,
+        "productionId": "WAVE30-caferibbit-selection",
+        "qaId": "WAVE30-asset-caferibbit-selection",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          96,
+          21,
+          770,
+          1523
+        ]
+      },
+      {
+        "appearanceId": "caferibbit",
+        "slot": "stance",
+        "file": "assets/encore/stance/caferibbit.png",
+        "archiveFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/stance.png",
+        "receiptFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/stance.json",
+        "sha256": "b553a8a3673511308c37070e22ac5b8648df6b2a67ae5b8a9b832f3547ff1e18",
+        "bytes": 1534954,
+        "productionId": "WAVE30-caferibbit-stance",
+        "qaId": "WAVE30-asset-caferibbit-stance",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          142,
+          82,
+          879,
+          1503
+        ]
+      },
+      {
+        "appearanceId": "caferibbit",
+        "slot": "intro",
+        "file": "assets/encore/poses/caferibbit/intro.png",
+        "archiveFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/intro.png",
+        "receiptFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/intro.json",
+        "sha256": "43c9a9f7fa941476090794bb0c3a52a9ff440cda784defd870e1e31f5673d64c",
+        "bytes": 1458643,
+        "productionId": "WAVE30-caferibbit-intro",
+        "qaId": "WAVE30-asset-caferibbit-intro",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          109,
+          59,
+          960,
+          1509
+        ]
+      },
+      {
+        "appearanceId": "caferibbit",
+        "slot": "attack",
+        "file": "assets/encore/poses/caferibbit/attack.png",
+        "archiveFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/attack.png",
+        "receiptFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/attack.json",
+        "sha256": "d363d6124938290f04ae03227a6d4755a617a7ba621c4ed91f363e2ebb421fb1",
+        "bytes": 791622,
+        "productionId": "WAVE30-caferibbit-attack",
+        "qaId": "WAVE30-asset-caferibbit-attack",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1199,
+          1312
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          110,
+          45,
+          1124,
+          1293
+        ]
+      },
+      {
+        "appearanceId": "caferibbit",
+        "slot": "heavy",
+        "file": "assets/encore/poses/caferibbit/heavy.png",
+        "archiveFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/heavy.png",
+        "receiptFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/heavy.json",
+        "sha256": "ba86c05acb6dbd5cffacc2333b39bb427a7958e86e45379a15cb776255b8d9f7",
+        "bytes": 781909,
+        "productionId": "WAVE30-caferibbit-heavy",
+        "qaId": "WAVE30-asset-caferibbit-heavy",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1205,
+          1305
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          48,
+          42,
+          1159,
+          1278
+        ]
+      },
+      {
+        "appearanceId": "caferibbit",
+        "slot": "hit",
+        "file": "assets/encore/poses/caferibbit/hit.png",
+        "archiveFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/hit.png",
+        "receiptFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/hit.json",
+        "sha256": "2a72a6b6b12cc4a0c8a8b6ff6606c89bf738f86a1d373dc52470e7f098bfe4ee",
+        "bytes": 1544665,
+        "productionId": "WAVE30-caferibbit-hit",
+        "qaId": "WAVE30-asset-caferibbit-hit",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          110,
+          97,
+          931,
+          1502
+        ]
+      },
+      {
+        "appearanceId": "caferibbit",
+        "slot": "walk",
+        "file": "assets/encore/poses/caferibbit/walk.png",
+        "archiveFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/walk.png",
+        "receiptFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/walk.json",
+        "sha256": "0cca789f97424558eb80f6178418ccfac61a926fb5e09c9f73886a13658ae090",
+        "bytes": 1566034,
+        "productionId": "WAVE30-caferibbit-walk",
+        "qaId": "WAVE30-asset-caferibbit-walk",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          95,
+          39,
+          924,
+          1504
+        ]
+      },
+      {
+        "appearanceId": "caferibbit",
+        "slot": "jump",
+        "file": "assets/encore/poses/caferibbit/jump.png",
+        "archiveFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/jump.png",
+        "receiptFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/jump.json",
+        "sha256": "5a420a78e722d843554d3dd37e70e47f011e693fe8b9e927912e94bd67bd78d0",
+        "bytes": 1555510,
+        "productionId": "WAVE30-caferibbit-jump",
+        "qaId": "WAVE30-asset-caferibbit-jump",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          152,
+          64,
+          966,
+          1488
+        ]
+      },
+      {
+        "appearanceId": "caferibbit",
+        "slot": "crouch",
+        "file": "assets/encore/poses/caferibbit/crouch.png",
+        "archiveFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/crouch.png",
+        "receiptFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/crouch.json",
+        "sha256": "6b91fa00359ae859fac06681f9e527c75847d4bb3b883d7514e3e0f5b9707e1d",
+        "bytes": 938347,
+        "productionId": "WAVE30-caferibbit-crouch",
+        "qaId": "WAVE30-asset-caferibbit-crouch",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1199,
+          1312
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          165,
+          35,
+          966,
+          1297
+        ]
+      },
+      {
+        "appearanceId": "caferibbit",
+        "slot": "victory",
+        "file": "assets/encore/poses/caferibbit/victory.png",
+        "archiveFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/victory.png",
+        "receiptFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/victory.json",
+        "sha256": "102b5fb20020b7b67dc7acf5b94f14ed4b40ecd8d8c403e90cb12d6971926dd4",
+        "bytes": 1498244,
+        "productionId": "WAVE30-caferibbit-victory",
+        "qaId": "WAVE30-asset-caferibbit-victory",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          192,
+          34,
+          915,
+          1521
+        ]
+      },
+      {
+        "appearanceId": "caferibbit",
+        "slot": "defeat",
+        "file": "assets/encore/poses/caferibbit/defeat.png",
+        "archiveFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/defeat.png",
+        "receiptFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/defeat.json",
+        "sha256": "903dec112c77b63dedd7eed348abcb3c88a143b6b99a9491a18f4cef750b9034",
+        "bytes": 886210,
+        "productionId": "WAVE30-caferibbit-defeat",
+        "qaId": "WAVE30-asset-caferibbit-defeat",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1207,
+          1303
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          135,
+          80,
+          974,
+          1255
+        ]
+      },
+      {
+        "appearanceId": "glitch-murderdrones-ribbit-hommage",
+        "slot": "selection",
+        "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/selection.png",
+        "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/selection.png",
+        "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/selection.json",
+        "sha256": "dd43a5386874e25da5f61b0d823c87de3d146f024c96d64091e5957355c3ef5b",
+        "bytes": 1435680,
+        "productionId": "WAVE30-glitch-murderdrones-ribbit-hommage-selection",
+        "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-hommage-selection",
         "nativeCopyVerified": true,
         "offline": true,
         "dimensions": [
@@ -686,237 +1379,21 @@
         "mode": "RGBA",
         "alpha12Bounds": [
           76,
-          16,
-          945,
-          1528
+          34,
+          965,
+          1517
         ]
       },
       {
-        "appearanceId": "watermelongangle",
+        "appearanceId": "glitch-murderdrones-ribbit-hommage",
         "slot": "stance",
-        "file": "assets/encore/stance/watermelongangle.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/stance.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/stance.json",
-        "sha256": "7a1e29f4c0cc21f560ec9234b4de37540782b80a868e425b29cb9ccaad9f311a",
-        "bytes": 610564,
-        "productionId": "NEXT29-watermelongangle-stance",
-        "qaId": "NEXT29-asset-watermelongangle-stance",
-        "nativeCopyVerified": true,
-        "offline": true,
-        "dimensions": [
-          1199,
-          1312
-        ],
-        "mode": "RGBA",
-        "alpha12Bounds": [
-          236,
-          168,
-          1000,
-          1183
-        ]
-      },
-      {
-        "appearanceId": "watermelongangle",
-        "slot": "intro",
-        "file": "assets/encore/poses/watermelongangle/intro.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/intro.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/intro.json",
-        "sha256": "0867094ac29df1cbacdce6752ae82f34dd9b64f8fefa58fc63e6941114b90b62",
-        "bytes": 495465,
-        "productionId": "NEXT29-watermelongangle-intro",
-        "qaId": "NEXT29-asset-watermelongangle-intro",
-        "nativeCopyVerified": true,
-        "offline": true,
-        "dimensions": [
-          1312,
-          1199
-        ],
-        "mode": "RGBA",
-        "alpha12Bounds": [
-          355,
-          162,
-          977,
-          1062
-        ]
-      },
-      {
-        "appearanceId": "watermelongangle",
-        "slot": "attack",
-        "file": "assets/encore/poses/watermelongangle/attack.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/attack.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/attack.json",
-        "sha256": "79ee1961a5d0285ed540cfc6b8b8d0cedb90d92e6794a357fd36fb61fe122d11",
-        "bytes": 554595,
-        "productionId": "NEXT29-watermelongangle-attack",
-        "qaId": "NEXT29-asset-watermelongangle-attack",
-        "nativeCopyVerified": true,
-        "offline": true,
-        "dimensions": [
-          1312,
-          1199
-        ],
-        "mode": "RGBA",
-        "alpha12Bounds": [
-          133,
-          185,
-          1210,
-          1040
-        ]
-      },
-      {
-        "appearanceId": "watermelongangle",
-        "slot": "heavy",
-        "file": "assets/encore/poses/watermelongangle/heavy.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/heavy.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/heavy.json",
-        "sha256": "fc0987cad03482b06e5e4a3a48e95d41b100740e6cd114c6649b312103e80fc2",
-        "bytes": 542307,
-        "productionId": "NEXT29-watermelongangle-heavy",
-        "qaId": "NEXT29-asset-watermelongangle-heavy",
-        "nativeCopyVerified": true,
-        "offline": true,
-        "dimensions": [
-          1199,
-          1312
-        ],
-        "mode": "RGBA",
-        "alpha12Bounds": [
-          318,
-          134,
-          928,
-          1201
-        ]
-      },
-      {
-        "appearanceId": "watermelongangle",
-        "slot": "hit",
-        "file": "assets/encore/poses/watermelongangle/hit.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/hit.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/hit.json",
-        "sha256": "e9ff8240b557ddf0fb527090711e5b2a6f0cd6a10098fe86c8ca15e3328e6648",
-        "bytes": 544695,
-        "productionId": "NEXT29-watermelongangle-hit",
-        "qaId": "NEXT29-asset-watermelongangle-hit",
-        "nativeCopyVerified": true,
-        "offline": true,
-        "dimensions": [
-          1199,
-          1312
-        ],
-        "mode": "RGBA",
-        "alpha12Bounds": [
-          185,
-          223,
-          837,
-          1163
-        ]
-      },
-      {
-        "appearanceId": "watermelongangle",
-        "slot": "walk",
-        "file": "assets/encore/poses/watermelongangle/walk.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/walk.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/walk.json",
-        "sha256": "05ac74df9d231f1bfa045513abeee5c8f9a7afb3d6bb053a79bbd20a6a55e035",
-        "bytes": 586881,
-        "productionId": "NEXT29-watermelongangle-walk",
-        "qaId": "NEXT29-asset-watermelongangle-walk",
-        "nativeCopyVerified": true,
-        "offline": true,
-        "dimensions": [
-          1199,
-          1312
-        ],
-        "mode": "RGBA",
-        "alpha12Bounds": [
-          238,
-          153,
-          917,
-          1168
-        ]
-      },
-      {
-        "appearanceId": "watermelongangle",
-        "slot": "jump",
-        "file": "assets/encore/poses/watermelongangle/jump.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/jump.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/jump.json",
-        "sha256": "830577977bf8be9383870d3264b3ec155376fd7bbae908a637b359ea70f991e9",
-        "bytes": 627177,
-        "productionId": "NEXT29-watermelongangle-jump",
-        "qaId": "NEXT29-asset-watermelongangle-jump",
-        "nativeCopyVerified": true,
-        "offline": true,
-        "dimensions": [
-          1199,
-          1312
-        ],
-        "mode": "RGBA",
-        "alpha12Bounds": [
-          210,
-          139,
-          984,
-          1113
-        ]
-      },
-      {
-        "appearanceId": "watermelongangle",
-        "slot": "crouch",
-        "file": "assets/encore/poses/watermelongangle/crouch.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/crouch.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/crouch.json",
-        "sha256": "06e009c6ee6227a068ae39ee920bfb973d47904bb4591e72ffd93fc3de6d5b23",
-        "bytes": 554025,
-        "productionId": "NEXT29-watermelongangle-crouch",
-        "qaId": "NEXT29-asset-watermelongangle-crouch",
-        "nativeCopyVerified": true,
-        "offline": true,
-        "dimensions": [
-          1312,
-          1199
-        ],
-        "mode": "RGBA",
-        "alpha12Bounds": [
-          304,
-          295,
-          1025,
-          1062
-        ]
-      },
-      {
-        "appearanceId": "watermelongangle",
-        "slot": "victory",
-        "file": "assets/encore/poses/watermelongangle/victory.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/victory.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/victory.json",
-        "sha256": "08465899e55f5602a125b166f75c39d38ea6c82193503e41b05e734330c8584d",
-        "bytes": 545167,
-        "productionId": "NEXT29-watermelongangle-victory",
-        "qaId": "NEXT29-asset-watermelongangle-victory",
-        "nativeCopyVerified": true,
-        "offline": true,
-        "dimensions": [
-          1199,
-          1312
-        ],
-        "mode": "RGBA",
-        "alpha12Bounds": [
-          191,
-          138,
-          976,
-          1203
-        ]
-      },
-      {
-        "appearanceId": "watermelongangle",
-        "slot": "defeat",
-        "file": "assets/encore/poses/watermelongangle/defeat.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/defeat.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/defeat.json",
-        "sha256": "67c8813222047c3bb8cb5430d034775dd2999b76041b07780654127ee0eff3ee",
-        "bytes": 688903,
-        "productionId": "NEXT29-watermelongangle-defeat",
-        "qaId": "NEXT29-asset-watermelongangle-defeat",
+        "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/stance.png",
+        "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/stance.png",
+        "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/stance.json",
+        "sha256": "6102d83c295487da3689dfe449ffdb9e4b62c20c19babd83415646e95a278f9a",
+        "bytes": 732645,
+        "productionId": "WAVE30-glitch-murderdrones-ribbit-hommage-stance",
+        "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-hommage-stance",
         "nativeCopyVerified": true,
         "offline": true,
         "dimensions": [
@@ -925,190 +1402,190 @@
         ],
         "mode": "RGBA",
         "alpha12Bounds": [
-          184,
-          185,
-          1039,
-          1154
+          160,
+          31,
+          1069,
+          1236
         ]
       },
       {
-        "appearanceId": "aquablasterpomni",
-        "slot": "selection",
-        "file": "assets/encore/selection/aquablasterpomni.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/selection.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/selection.json",
-        "sha256": "c7024d22cd9d61d360c99761a63132b9c2fc06fc338df17eff10d2211fd56925",
-        "bytes": 1514241,
-        "productionId": "NEXT29-aquablasterpomni-selection",
-        "qaId": "NEXT29-asset-aquablasterpomni-selection",
-        "nativeCopyVerified": true,
-        "offline": true,
-        "dimensions": [
-          1024,
-          1536
-        ],
-        "mode": "RGBA",
-        "alpha12Bounds": [
-          117,
-          64,
-          897,
-          1486
-        ]
-      },
-      {
-        "appearanceId": "aquablasterpomni",
-        "slot": "stance",
-        "file": "assets/encore/stance/aquablasterpomni.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/stance.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/stance.json",
-        "sha256": "4bed9241895059ba2b8217082ed01e6b52ccbbb6404084a5fdd834381c8f3595",
-        "bytes": 761461,
-        "productionId": "NEXT29-aquablasterpomni-stance",
-        "qaId": "NEXT29-asset-aquablasterpomni-stance",
-        "nativeCopyVerified": true,
-        "offline": true,
-        "dimensions": [
-          1199,
-          1312
-        ],
-        "mode": "RGBA",
-        "alpha12Bounds": [
-          184,
-          80,
-          970,
-          1256
-        ]
-      },
-      {
-        "appearanceId": "aquablasterpomni",
+        "appearanceId": "glitch-murderdrones-ribbit-hommage",
         "slot": "intro",
-        "file": "assets/encore/poses/aquablasterpomni/intro.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/intro.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/intro.json",
-        "sha256": "c895c1b8c015702b4f029939f8bdfa54beba5ab949ef28e6ce82b4ae36294160",
-        "bytes": 1544535,
-        "productionId": "NEXT29-aquablasterpomni-intro",
-        "qaId": "NEXT29-asset-aquablasterpomni-intro",
+        "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/intro.png",
+        "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/intro.png",
+        "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/intro.json",
+        "sha256": "daa9c9327805617cccd5d4a956147c2a2d7bbb3ef592184b08802182d4067fba",
+        "bytes": 724483,
+        "productionId": "WAVE30-glitch-murderdrones-ribbit-hommage-intro",
+        "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-hommage-intro",
         "nativeCopyVerified": true,
         "offline": true,
         "dimensions": [
-          1024,
-          1536
+          1254,
+          1254
         ],
         "mode": "RGBA",
         "alpha12Bounds": [
-          118,
-          63,
-          900,
-          1462
+          211,
+          19,
+          1026,
+          1239
         ]
       },
       {
-        "appearanceId": "aquablasterpomni",
+        "appearanceId": "glitch-murderdrones-ribbit-hommage",
         "slot": "attack",
-        "file": "assets/encore/poses/aquablasterpomni/attack.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/attack.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/attack.json",
-        "sha256": "2ab997db41dcf6da3ed4cb8ada90bdb0b5a6b4e52cbdca5de265e1cf127f31e9",
-        "bytes": 772786,
-        "productionId": "NEXT29-aquablasterpomni-attack",
-        "qaId": "NEXT29-asset-aquablasterpomni-attack",
+        "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/attack.png",
+        "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/attack.png",
+        "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/attack.json",
+        "sha256": "13c985b85e8281c08c365ee7f1ec7123c4a97f180ebc60fa54ab195d18d8c1f7",
+        "bytes": 1228713,
+        "productionId": "WAVE30-glitch-murderdrones-ribbit-hommage-attack",
+        "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-hommage-attack",
         "nativeCopyVerified": true,
         "offline": true,
         "dimensions": [
-          1312,
-          1199
+          1536,
+          1024
         ],
         "mode": "RGBA",
         "alpha12Bounds": [
-          155,
-          75,
-          1158,
-          1142
+          253,
+          17,
+          1170,
+          1017
         ]
       },
       {
-        "appearanceId": "aquablasterpomni",
+        "appearanceId": "glitch-murderdrones-ribbit-hommage",
         "slot": "heavy",
-        "file": "assets/encore/poses/aquablasterpomni/heavy.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/heavy.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/heavy.json",
-        "sha256": "0e00d02285632ebfbdc3cb3ba3523b43dcdc351c7632928f71c3e33acd671a6b",
-        "bytes": 851157,
-        "productionId": "NEXT29-aquablasterpomni-heavy",
-        "qaId": "NEXT29-asset-aquablasterpomni-heavy",
+        "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/heavy.png",
+        "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/heavy.png",
+        "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/heavy.json",
+        "sha256": "90cd3b607f74c4618422ba172e8ac498e37e85212cd011de1a35bdadce0b35d3",
+        "bytes": 1155353,
+        "productionId": "WAVE30-glitch-murderdrones-ribbit-hommage-heavy",
+        "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-hommage-heavy",
         "nativeCopyVerified": true,
         "offline": true,
         "dimensions": [
-          1199,
-          1312
+          1536,
+          1024
         ],
         "mode": "RGBA",
         "alpha12Bounds": [
-          128,
-          104,
-          1021,
-          1260
+          347,
+          19,
+          1205,
+          1014
         ]
       },
       {
-        "appearanceId": "aquablasterpomni",
+        "appearanceId": "glitch-murderdrones-ribbit-hommage",
         "slot": "hit",
-        "file": "assets/encore/poses/aquablasterpomni/hit.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/hit.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/hit.json",
-        "sha256": "85a385d520b69aab8a62aff8f384f711bb1205ae1948c2238d8b96a41565d32f",
-        "bytes": 1512821,
-        "productionId": "NEXT29-aquablasterpomni-hit",
-        "qaId": "NEXT29-asset-aquablasterpomni-hit",
+        "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/hit.png",
+        "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/hit.png",
+        "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/hit.json",
+        "sha256": "67cb91d7585795e8436d6d317f09ba714786cf42fa5163ece0cf9c05d04d807c",
+        "bytes": 748844,
+        "productionId": "WAVE30-glitch-murderdrones-ribbit-hommage-hit",
+        "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-hommage-hit",
         "nativeCopyVerified": true,
         "offline": true,
         "dimensions": [
-          1024,
-          1536
+          1254,
+          1254
         ],
         "mode": "RGBA",
         "alpha12Bounds": [
-          69,
-          133,
-          876,
-          1449
+          172,
+          45,
+          935,
+          1237
         ]
       },
       {
-        "appearanceId": "aquablasterpomni",
+        "appearanceId": "glitch-murderdrones-ribbit-hommage",
         "slot": "walk",
-        "file": "assets/encore/poses/aquablasterpomni/walk.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/walk.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/walk.json",
-        "sha256": "a6bdc6e9fee8ea12f5d9c18ac0149ab2b68ce7845bc594647132f8496a66bb22",
-        "bytes": 718965,
-        "productionId": "NEXT29-aquablasterpomni-walk",
-        "qaId": "NEXT29-asset-aquablasterpomni-walk",
+        "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/walk.png",
+        "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/walk.png",
+        "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/walk.json",
+        "sha256": "c3c0881fd9e5833eaeb6f49a86db52d91d242c97d92a2b4989a30d4ec52af418",
+        "bytes": 682248,
+        "productionId": "WAVE30-glitch-murderdrones-ribbit-hommage-walk",
+        "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-hommage-walk",
         "nativeCopyVerified": true,
         "offline": true,
         "dimensions": [
-          1199,
-          1312
+          1254,
+          1254
         ],
         "mode": "RGBA",
         "alpha12Bounds": [
-          259,
-          70,
-          963,
-          1252
+          238,
+          17,
+          1011,
+          1236
         ]
       },
       {
-        "appearanceId": "aquablasterpomni",
+        "appearanceId": "glitch-murderdrones-ribbit-hommage",
         "slot": "jump",
-        "file": "assets/encore/poses/aquablasterpomni/jump.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/jump.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/jump.json",
-        "sha256": "59d9faa8b998e23fce65c9450b088ec9c77f3082ef08ce2a1dc8c7512eb1873d",
-        "bytes": 1469970,
-        "productionId": "NEXT29-aquablasterpomni-jump",
-        "qaId": "NEXT29-asset-aquablasterpomni-jump",
+        "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/jump.png",
+        "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/jump.png",
+        "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/jump.json",
+        "sha256": "7990c365e9d19c3337815b36f9544408ce549634bfb2275dc2bba6a1ce167c53",
+        "bytes": 760662,
+        "productionId": "WAVE30-glitch-murderdrones-ribbit-hommage-jump",
+        "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-hommage-jump",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          149,
+          11,
+          1085,
+          1162
+        ]
+      },
+      {
+        "appearanceId": "glitch-murderdrones-ribbit-hommage",
+        "slot": "crouch",
+        "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/crouch.png",
+        "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/crouch.png",
+        "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/crouch.json",
+        "sha256": "e76f856d3a9ed50312204c9b10ca63cec8179a6310497f9491028284e4a29ba8",
+        "bytes": 903887,
+        "productionId": "WAVE30-glitch-murderdrones-ribbit-hommage-crouch",
+        "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-hommage-crouch",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          124,
+          52,
+          1107,
+          1225
+        ]
+      },
+      {
+        "appearanceId": "glitch-murderdrones-ribbit-hommage",
+        "slot": "victory",
+        "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/victory.png",
+        "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/victory.png",
+        "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/victory.json",
+        "sha256": "43ecd2b83b7c132a83ac0c2301879f01901dfd6f0710822a540263a4ca12733c",
+        "bytes": 1371435,
+        "productionId": "WAVE30-glitch-murderdrones-ribbit-hommage-victory",
+        "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-hommage-victory",
         "nativeCopyVerified": true,
         "offline": true,
         "dimensions": [
@@ -1118,45 +1595,45 @@
         "mode": "RGBA",
         "alpha12Bounds": [
           119,
-          111,
-          902,
-          1321
+          37,
+          858,
+          1510
         ]
       },
       {
-        "appearanceId": "aquablasterpomni",
-        "slot": "crouch",
-        "file": "assets/encore/poses/aquablasterpomni/crouch.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/crouch.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/crouch.json",
-        "sha256": "e70c8d6e853e0146d4efc3d7380f1bc1de48abf37fc845d3bc324f3d19179beb",
-        "bytes": 905643,
-        "productionId": "NEXT29-aquablasterpomni-crouch",
-        "qaId": "NEXT29-asset-aquablasterpomni-crouch",
+        "appearanceId": "glitch-murderdrones-ribbit-hommage",
+        "slot": "defeat",
+        "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/defeat.png",
+        "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/defeat.png",
+        "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/defeat.json",
+        "sha256": "944594d769172882bf175f6927efad3e33e883cfd583f36e5a98654aea2390e4",
+        "bytes": 775116,
+        "productionId": "WAVE30-glitch-murderdrones-ribbit-hommage-defeat",
+        "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-hommage-defeat",
         "nativeCopyVerified": true,
         "offline": true,
         "dimensions": [
-          1199,
-          1312
+          1254,
+          1254
         ],
         "mode": "RGBA",
         "alpha12Bounds": [
-          153,
-          126,
-          1050,
-          1250
+          178,
+          51,
+          1016,
+          1223
         ]
       },
       {
-        "appearanceId": "aquablasterpomni",
-        "slot": "victory",
-        "file": "assets/encore/poses/aquablasterpomni/victory.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/victory.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/victory.json",
-        "sha256": "9893d8465d97699a02d7dc3045a8b0b0a98dff699c3dae5947cb13c7d6920a39",
-        "bytes": 1512530,
-        "productionId": "NEXT29-aquablasterpomni-victory",
-        "qaId": "NEXT29-asset-aquablasterpomni-victory",
+        "appearanceId": "glitch-murderdrones-ribbit-resident",
+        "slot": "selection",
+        "file": "assets/encore/crossovers/murderdrones/ribbit/resident/selection.png",
+        "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/selection.png",
+        "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/selection.json",
+        "sha256": "fe3c01b6b6d57bc532af4ce7d9114f93a804146d38b4a0263a3f06876618b686",
+        "bytes": 1524779,
+        "productionId": "WAVE30-glitch-murderdrones-ribbit-resident-selection",
+        "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-resident-selection",
         "nativeCopyVerified": true,
         "offline": true,
         "dimensions": [
@@ -1165,22 +1642,22 @@
         ],
         "mode": "RGBA",
         "alpha12Bounds": [
-          88,
-          98,
-          972,
-          1486
+          112,
+          43,
+          948,
+          1501
         ]
       },
       {
-        "appearanceId": "aquablasterpomni",
-        "slot": "defeat",
-        "file": "assets/encore/poses/aquablasterpomni/defeat.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/defeat.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/defeat.json",
-        "sha256": "e2bbd7813ef5c838e636fb3e70d800ec7555a752fa22abd000ed388a43fc485d",
-        "bytes": 875406,
-        "productionId": "NEXT29-aquablasterpomni-defeat",
-        "qaId": "NEXT29-asset-aquablasterpomni-defeat",
+        "appearanceId": "glitch-murderdrones-ribbit-resident",
+        "slot": "stance",
+        "file": "assets/encore/crossovers/murderdrones/ribbit/resident/stance.png",
+        "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/stance.png",
+        "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/stance.json",
+        "sha256": "3cdffc3f01e48fe77f0c66c045eb258b6337f53e5734fb742b20ee7b3c317a5b",
+        "bytes": 948345,
+        "productionId": "WAVE30-glitch-murderdrones-ribbit-resident-stance",
+        "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-resident-stance",
         "nativeCopyVerified": true,
         "offline": true,
         "dimensions": [
@@ -1189,94 +1666,46 @@
         ],
         "mode": "RGBA",
         "alpha12Bounds": [
-          142,
-          129,
-          1048,
-          1258
+          46,
+          39,
+          1154,
+          1289
         ]
       },
       {
-        "appearanceId": "ptocaine",
-        "slot": "selection",
-        "file": "assets/encore/selection/ptocaine.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/selection.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/selection.json",
-        "sha256": "f913f4f7c6e2cede6e37171f0b0bfbdddfc81d5343708798f2d533e3aae16c09",
-        "bytes": 910063,
-        "productionId": "NEXT29-ptocaine-selection",
-        "qaId": "NEXT29-asset-ptocaine-selection",
-        "nativeCopyVerified": true,
-        "offline": true,
-        "dimensions": [
-          1086,
-          1448
-        ],
-        "mode": "RGBA",
-        "alpha12Bounds": [
-          151,
-          15,
-          1028,
-          1435
-        ]
-      },
-      {
-        "appearanceId": "ptocaine",
-        "slot": "stance",
-        "file": "assets/encore/stance/ptocaine.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/stance.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/stance.json",
-        "sha256": "ef1c3b99c218dfdd0c28142968fa0914962ad1c2ea9067b2dd4ec93a30e63d74",
-        "bytes": 943984,
-        "productionId": "NEXT29-ptocaine-stance",
-        "qaId": "NEXT29-asset-ptocaine-stance",
-        "nativeCopyVerified": true,
-        "offline": true,
-        "dimensions": [
-          1151,
-          1367
-        ],
-        "mode": "RGBA",
-        "alpha12Bounds": [
-          113,
-          10,
-          979,
-          1358
-        ]
-      },
-      {
-        "appearanceId": "ptocaine",
+        "appearanceId": "glitch-murderdrones-ribbit-resident",
         "slot": "intro",
-        "file": "assets/encore/poses/ptocaine/intro.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/intro.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/intro.json",
-        "sha256": "ce2935908062b673beefd4905d4a857ffebb69b472f5f12c95d8784039a88c2a",
-        "bytes": 931163,
-        "productionId": "NEXT29-ptocaine-intro",
-        "qaId": "NEXT29-asset-ptocaine-intro",
+        "file": "assets/encore/crossovers/murderdrones/ribbit/resident/intro.png",
+        "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/intro.png",
+        "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/intro.json",
+        "sha256": "f219e23a39874d0de4ce45691da6d95ce49fd5cc482523f2732787bdec5b25ec",
+        "bytes": 1487206,
+        "productionId": "WAVE30-glitch-murderdrones-ribbit-resident-intro",
+        "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-resident-intro",
         "nativeCopyVerified": true,
         "offline": true,
         "dimensions": [
-          1214,
-          1295
+          1024,
+          1536
         ],
         "mode": "RGBA",
         "alpha12Bounds": [
-          32,
-          10,
-          1182,
-          1283
+          103,
+          38,
+          946,
+          1492
         ]
       },
       {
-        "appearanceId": "ptocaine",
+        "appearanceId": "glitch-murderdrones-ribbit-resident",
         "slot": "attack",
-        "file": "assets/encore/poses/ptocaine/attack.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/attack.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/attack.json",
-        "sha256": "338bc7a5cba5403afef518f0db5ba8ad01eb52c7f62e92a379af93e828dec298",
-        "bytes": 1341582,
-        "productionId": "NEXT29-ptocaine-attack",
-        "qaId": "NEXT29-asset-ptocaine-attack",
+        "file": "assets/encore/crossovers/murderdrones/ribbit/resident/attack.png",
+        "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/attack.png",
+        "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/attack.json",
+        "sha256": "d82aabde2a0a935df7f6e41ee2bdb0284e4d878311f7730a1a7653ba99e8b0b5",
+        "bytes": 1385550,
+        "productionId": "WAVE30-glitch-murderdrones-ribbit-resident-attack",
+        "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-resident-attack",
         "nativeCopyVerified": true,
         "offline": true,
         "dimensions": [
@@ -1285,190 +1714,214 @@
         ],
         "mode": "RGBA",
         "alpha12Bounds": [
-          195,
-          8,
-          1321,
+          121,
+          16,
+          1330,
           1015
         ]
       },
       {
-        "appearanceId": "ptocaine",
+        "appearanceId": "glitch-murderdrones-ribbit-resident",
         "slot": "heavy",
-        "file": "assets/encore/poses/ptocaine/heavy.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/heavy.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/heavy.json",
-        "sha256": "550d1676e632feb1a7bfa472c7c949515072c6a3cf7f558ae5d61a498d484da3",
-        "bytes": 936106,
-        "productionId": "NEXT29-ptocaine-heavy",
-        "qaId": "NEXT29-asset-ptocaine-heavy",
+        "file": "assets/encore/crossovers/murderdrones/ribbit/resident/heavy.png",
+        "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/heavy.png",
+        "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/heavy.json",
+        "sha256": "1c551bc99c22b29513e919a113c2691ff1c553253753c39dca444895ae2fcbff",
+        "bytes": 1509732,
+        "productionId": "WAVE30-glitch-murderdrones-ribbit-resident-heavy",
+        "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-resident-heavy",
         "nativeCopyVerified": true,
         "offline": true,
         "dimensions": [
-          1448,
-          1086
+          1024,
+          1536
         ],
         "mode": "RGBA",
         "alpha12Bounds": [
-          64,
-          8,
-          1385,
-          1073
+          49,
+          69,
+          975,
+          1497
         ]
       },
       {
-        "appearanceId": "ptocaine",
+        "appearanceId": "glitch-murderdrones-ribbit-resident",
         "slot": "hit",
-        "file": "assets/encore/poses/ptocaine/hit.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/hit.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/hit.json",
-        "sha256": "38a8763400c8da23935231b6e3ac25519a6215cb83182d4cbbf36921349e0272",
-        "bytes": 1043937,
-        "productionId": "NEXT29-ptocaine-hit",
-        "qaId": "NEXT29-asset-ptocaine-hit",
+        "file": "assets/encore/crossovers/murderdrones/ribbit/resident/hit.png",
+        "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/hit.png",
+        "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/hit.json",
+        "sha256": "4240b2e593e5c9f04d03041f4f0a1bc093b0a70a086365a113ad54be8b5953b6",
+        "bytes": 1603205,
+        "productionId": "WAVE30-glitch-murderdrones-ribbit-resident-hit",
+        "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-resident-hit",
         "nativeCopyVerified": true,
         "offline": true,
         "dimensions": [
-          1086,
-          1448
+          1024,
+          1536
         ],
         "mode": "RGBA",
         "alpha12Bounds": [
-          45,
-          27,
-          950,
-          1439
+          33,
+          79,
+          928,
+          1492
         ]
       },
       {
-        "appearanceId": "ptocaine",
+        "appearanceId": "glitch-murderdrones-ribbit-resident",
         "slot": "walk",
-        "file": "assets/encore/poses/ptocaine/walk.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/walk.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/walk.json",
-        "sha256": "adbb121d8c51c73ba02e146934c8fe92894047e582bfc83959f93da7e306c8cf",
-        "bytes": 980030,
-        "productionId": "NEXT29-ptocaine-walk",
-        "qaId": "NEXT29-asset-ptocaine-walk",
+        "file": "assets/encore/crossovers/murderdrones/ribbit/resident/walk.png",
+        "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/walk.png",
+        "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/walk.json",
+        "sha256": "ad601e57df0543e6a41852b338f70d0600e1370cab187e020b91e342dd0e15ac",
+        "bytes": 1576067,
+        "productionId": "WAVE30-glitch-murderdrones-ribbit-resident-walk",
+        "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-resident-walk",
         "nativeCopyVerified": true,
         "offline": true,
         "dimensions": [
-          1086,
-          1448
+          1024,
+          1536
         ],
         "mode": "RGBA",
         "alpha12Bounds": [
-          155,
-          11,
-          934,
-          1438
+          71,
+          47,
+          972,
+          1460
         ]
       },
       {
-        "appearanceId": "ptocaine",
+        "appearanceId": "glitch-murderdrones-ribbit-resident",
         "slot": "jump",
-        "file": "assets/encore/poses/ptocaine/jump.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/jump.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/jump.json",
-        "sha256": "9a95cfbc28f76220256ab38d57e97524c0ade3d37ef7de0363353ba323de3189",
-        "bytes": 1037616,
-        "productionId": "NEXT29-ptocaine-jump",
-        "qaId": "NEXT29-asset-ptocaine-jump",
+        "file": "assets/encore/crossovers/murderdrones/ribbit/resident/jump.png",
+        "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/jump.png",
+        "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/jump.json",
+        "sha256": "3539017a11b0fda003f34867c69126abfd41ba112fdad4e95898595cb2d7e54a",
+        "bytes": 1461010,
+        "productionId": "WAVE30-glitch-murderdrones-ribbit-resident-jump",
+        "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-resident-jump",
         "nativeCopyVerified": true,
         "offline": true,
         "dimensions": [
-          1158,
-          1358
+          1536,
+          1024
         ],
         "mode": "RGBA",
         "alpha12Bounds": [
-          25,
-          11,
-          1128,
-          1260
-        ]
-      },
-      {
-        "appearanceId": "ptocaine",
-        "slot": "crouch",
-        "file": "assets/encore/poses/ptocaine/crouch.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/crouch.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/crouch.json",
-        "sha256": "8c9936d52d890726a61906594e31cf0bb1a34ea815f1cf186b08ca14e491a96a",
-        "bytes": 1013805,
-        "productionId": "NEXT29-ptocaine-crouch",
-        "qaId": "NEXT29-asset-ptocaine-crouch",
-        "nativeCopyVerified": true,
-        "offline": true,
-        "dimensions": [
-          1216,
-          1293
-        ],
-        "mode": "RGBA",
-        "alpha12Bounds": [
-          96,
-          12,
-          1035,
-          1282
-        ]
-      },
-      {
-        "appearanceId": "ptocaine",
-        "slot": "victory",
-        "file": "assets/encore/poses/ptocaine/victory.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/victory.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/victory.json",
-        "sha256": "fa5c30cb10bdae0ab90a29f4527f56d791fc73c7dc376e9ff786cf3e438bd58a",
-        "bytes": 931407,
-        "productionId": "NEXT29-ptocaine-victory",
-        "qaId": "NEXT29-asset-ptocaine-victory",
-        "nativeCopyVerified": true,
-        "offline": true,
-        "dimensions": [
-          1086,
-          1448
-        ],
-        "mode": "RGBA",
-        "alpha12Bounds": [
-          142,
+          249,
           9,
-          965,
-          1436
+          1328,
+          1000
         ]
       },
       {
-        "appearanceId": "ptocaine",
-        "slot": "defeat",
-        "file": "assets/encore/poses/ptocaine/defeat.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/defeat.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/defeat.json",
-        "sha256": "9a4481e9db3550e62753fa9ca4ce5b9ab0ddcb3b2799ef5ad24fa16343597d6a",
-        "bytes": 933698,
-        "productionId": "NEXT29-ptocaine-defeat",
-        "qaId": "NEXT29-asset-ptocaine-defeat",
+        "appearanceId": "glitch-murderdrones-ribbit-resident",
+        "slot": "crouch",
+        "file": "assets/encore/crossovers/murderdrones/ribbit/resident/crouch.png",
+        "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/crouch.png",
+        "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/crouch.json",
+        "sha256": "3c35deeef6d0be94d4a0900e2a5ec4bd40281e9fa5d91392f134f6ad26b5ce6e",
+        "bytes": 1475759,
+        "productionId": "WAVE30-glitch-murderdrones-ribbit-resident-crouch",
+        "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-resident-crouch",
         "nativeCopyVerified": true,
         "offline": true,
         "dimensions": [
-          1240,
-          1268
+          1536,
+          1024
         ],
         "mode": "RGBA",
         "alpha12Bounds": [
-          137,
-          10,
-          1073,
-          1246
+          201,
+          14,
+          1314,
+          1007
         ]
       },
       {
-        "appearanceId": "freakjax",
+        "appearanceId": "glitch-murderdrones-ribbit-resident",
+        "slot": "victory",
+        "file": "assets/encore/crossovers/murderdrones/ribbit/resident/victory.png",
+        "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/victory.png",
+        "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/victory.json",
+        "sha256": "79d35d5c3a7694302d7abb5ef8c1a855164a278dfb6104b7542ba8f12ba41eeb",
+        "bytes": 1523489,
+        "productionId": "WAVE30-glitch-murderdrones-ribbit-resident-victory",
+        "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-resident-victory",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          131,
+          42,
+          929,
+          1514
+        ]
+      },
+      {
+        "appearanceId": "glitch-murderdrones-ribbit-resident",
+        "slot": "defeat",
+        "file": "assets/encore/crossovers/murderdrones/ribbit/resident/defeat.png",
+        "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/defeat.png",
+        "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/defeat.json",
+        "sha256": "ffac04a093aa65513db7f58307fc8071118f354ba6b4aa4e2d0ff0e80cfdb3d0",
+        "bytes": 1519080,
+        "productionId": "WAVE30-glitch-murderdrones-ribbit-resident-defeat",
+        "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-resident-defeat",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          145,
+          17,
+          1370,
+          1021
+        ]
+      },
+      {
+        "appearanceId": "glitch-murderdrones-ribbit-fusion",
         "slot": "selection",
-        "file": "assets/encore/selection/freakjax.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/selection.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/selection.json",
-        "sha256": "22ea8b9c34b9acd5b8b3889129d0436542d586ee716b73e6cff061af469a1010",
-        "bytes": 916364,
-        "productionId": "NEXT29-freakjax-selection",
-        "qaId": "NEXT29-asset-freakjax-selection",
+        "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/selection.png",
+        "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/selection.png",
+        "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/selection.json",
+        "sha256": "b4aeaf8ad54544eac7640f87603501ac3b7e3b8e0bfa4e68ef76b993c136968e",
+        "bytes": 1685503,
+        "productionId": "WAVE30-glitch-murderdrones-ribbit-fusion-selection",
+        "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-fusion-selection",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          50,
+          54,
+          993,
+          1505
+        ]
+      },
+      {
+        "appearanceId": "glitch-murderdrones-ribbit-fusion",
+        "slot": "stance",
+        "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/stance.png",
+        "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/stance.png",
+        "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/stance.json",
+        "sha256": "caf3b3f409ed6cec5c9c1beb1c7aeae19e951d3664f4cd52650081ce5c780111",
+        "bytes": 980827,
+        "productionId": "WAVE30-glitch-murderdrones-ribbit-fusion-stance",
+        "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-fusion-stance",
         "nativeCopyVerified": true,
         "offline": true,
         "dimensions": [
@@ -1477,393 +1930,382 @@
         ],
         "mode": "RGBA",
         "alpha12Bounds": [
-          135,
-          57,
-          951,
-          1280
+          47,
+          71,
+          1163,
+          1282
         ]
       },
       {
-        "appearanceId": "freakjax",
-        "slot": "stance",
-        "file": "assets/encore/stance/freakjax.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/stance.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/stance.json",
-        "sha256": "23370947efcde758da86eeb156fd5faac85fcd12e5c2f64896c6ca2d409dabcf",
-        "bytes": 1007652,
-        "productionId": "NEXT29-freakjax-stance",
-        "qaId": "NEXT29-asset-freakjax-stance",
-        "nativeCopyVerified": true,
-        "offline": true,
-        "dimensions": [
-          1254,
-          1254
-        ],
-        "mode": "RGBA",
-        "alpha12Bounds": [
-          73,
-          56,
-          1011,
-          1233
-        ]
-      },
-      {
-        "appearanceId": "freakjax",
+        "appearanceId": "glitch-murderdrones-ribbit-fusion",
         "slot": "intro",
-        "file": "assets/encore/poses/freakjax/intro.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/intro.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/intro.json",
-        "sha256": "dc0d51b4ccf80b08393febc52b6bd119d944830d86aa0dae268adbcffdbc92ba",
-        "bytes": 916361,
-        "productionId": "NEXT29-freakjax-intro",
-        "qaId": "NEXT29-asset-freakjax-intro",
+        "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/intro.png",
+        "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/intro.png",
+        "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/intro.json",
+        "sha256": "6e26008bb918bcc2e48c723d9ed180e1eed79fdd49883f25f75fdaa3bf52c1c5",
+        "bytes": 1580313,
+        "productionId": "WAVE30-glitch-murderdrones-ribbit-fusion-intro",
+        "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-fusion-intro",
         "nativeCopyVerified": true,
         "offline": true,
         "dimensions": [
-          1254,
-          1254
+          1024,
+          1536
         ],
         "mode": "RGBA",
         "alpha12Bounds": [
-          144,
-          52,
-          1112,
-          1231
+          87,
+          54,
+          983,
+          1511
         ]
       },
       {
-        "appearanceId": "freakjax",
+        "appearanceId": "glitch-murderdrones-ribbit-fusion",
         "slot": "attack",
-        "file": "assets/encore/poses/freakjax/attack.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/attack.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/attack.json",
-        "sha256": "964542fc4390a89fa175bf7e1347e8440902bead46b0f55d8dbc9499f28f8bf1",
-        "bytes": 948653,
-        "productionId": "NEXT29-freakjax-attack",
-        "qaId": "NEXT29-asset-freakjax-attack",
+        "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/attack.png",
+        "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/attack.png",
+        "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/attack.json",
+        "sha256": "6ef768cadd1f4f694d4edaec0698b64841ad987c14956d839767403a9adc8040",
+        "bytes": 1559299,
+        "productionId": "WAVE30-glitch-murderdrones-ribbit-fusion-attack",
+        "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-fusion-attack",
         "nativeCopyVerified": true,
         "offline": true,
         "dimensions": [
-          1254,
-          1254
+          1536,
+          1024
         ],
         "mode": "RGBA",
         "alpha12Bounds": [
-          88,
-          61,
-          1136,
-          1205
+          76,
+          21,
+          1443,
+          1016
         ]
       },
       {
-        "appearanceId": "freakjax",
+        "appearanceId": "glitch-murderdrones-ribbit-fusion",
         "slot": "heavy",
-        "file": "assets/encore/poses/freakjax/heavy.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/heavy.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/heavy.json",
-        "sha256": "4ecfd357f19c28a44432cc3006fa334c89b58cab3eefe92476b52ef8d1cdb969",
-        "bytes": 1110718,
-        "productionId": "NEXT29-freakjax-heavy",
-        "qaId": "NEXT29-asset-freakjax-heavy",
+        "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/heavy.png",
+        "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/heavy.png",
+        "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/heavy.json",
+        "sha256": "886b61a7d2313cdca74d35a0040118ed0faed8583e10554bc7f67ed3636457e5",
+        "bytes": 1548839,
+        "productionId": "WAVE30-glitch-murderdrones-ribbit-fusion-heavy",
+        "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-fusion-heavy",
         "nativeCopyVerified": true,
         "offline": true,
         "dimensions": [
-          1254,
-          1254
+          1024,
+          1536
         ],
         "mode": "RGBA",
         "alpha12Bounds": [
-          81,
-          24,
-          1177,
-          1240
+          47,
+          66,
+          982,
+          1495
         ]
       },
       {
-        "appearanceId": "freakjax",
+        "appearanceId": "glitch-murderdrones-ribbit-fusion",
         "slot": "hit",
-        "file": "assets/encore/poses/freakjax/hit.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/hit.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/hit.json",
-        "sha256": "42ad80824a7b8cd62225a01d9c59294a2fccd3875b04b08f1cbf00715b48dc20",
-        "bytes": 1090665,
-        "productionId": "NEXT29-freakjax-hit",
-        "qaId": "NEXT29-asset-freakjax-hit",
+        "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/hit.png",
+        "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/hit.png",
+        "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/hit.json",
+        "sha256": "18666434c7a7e1b82f504203b69f15de314209aaa432b7b7d4a0edb86edab897",
+        "bytes": 1692613,
+        "productionId": "WAVE30-glitch-murderdrones-ribbit-fusion-hit",
+        "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-fusion-hit",
         "nativeCopyVerified": true,
         "offline": true,
         "dimensions": [
-          1254,
-          1254
+          1024,
+          1536
         ],
         "mode": "RGBA",
         "alpha12Bounds": [
-          88,
-          51,
-          1057,
-          1223
+          41,
+          106,
+          947,
+          1498
         ]
       },
       {
-        "appearanceId": "freakjax",
+        "appearanceId": "glitch-murderdrones-ribbit-fusion",
         "slot": "walk",
-        "file": "assets/encore/poses/freakjax/walk.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/walk.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/walk.json",
-        "sha256": "fc03f7b81940e8b0f6dff8c8c5562b2dfa8b8488193b38b427381e69b6b6edbe",
-        "bytes": 996758,
-        "productionId": "NEXT29-freakjax-walk",
-        "qaId": "NEXT29-asset-freakjax-walk",
+        "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/walk.png",
+        "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/walk.png",
+        "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/walk.json",
+        "sha256": "bf8b75b671fbbf9d3b01d07d2ef56cb0c45d6c3731c2c1fe915b381f83cc53dd",
+        "bytes": 884865,
+        "productionId": "WAVE30-glitch-murderdrones-ribbit-fusion-walk",
+        "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-fusion-walk",
         "nativeCopyVerified": true,
         "offline": true,
         "dimensions": [
-          1254,
-          1254
+          1195,
+          1316
         ],
         "mode": "RGBA",
         "alpha12Bounds": [
-          65,
-          39,
-          1049,
-          1225
+          103,
+          30,
+          1108,
+          1252
         ]
       },
       {
-        "appearanceId": "freakjax",
+        "appearanceId": "glitch-murderdrones-ribbit-fusion",
         "slot": "jump",
-        "file": "assets/encore/poses/freakjax/jump.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/jump.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/jump.json",
-        "sha256": "4eefed9da6d3387c8e232010bfa1eb690348c5314f1bdff5f3f1cf192cb5ffcf",
-        "bytes": 1101865,
-        "productionId": "NEXT29-freakjax-jump",
-        "qaId": "NEXT29-asset-freakjax-jump",
+        "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/jump.png",
+        "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/jump.png",
+        "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/jump.json",
+        "sha256": "aa14d384551b950d464672b0fafe7b3a18b0d0388f8e44bf649bfdd882c70c04",
+        "bytes": 1573405,
+        "productionId": "WAVE30-glitch-murderdrones-ribbit-fusion-jump",
+        "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-fusion-jump",
         "nativeCopyVerified": true,
         "offline": true,
         "dimensions": [
-          1254,
-          1254
+          1536,
+          1024
         ],
         "mode": "RGBA",
         "alpha12Bounds": [
-          48,
-          61,
-          1200,
-          1210
+          171,
+          18,
+          1362,
+          1004
         ]
       },
       {
-        "appearanceId": "freakjax",
+        "appearanceId": "glitch-murderdrones-ribbit-fusion",
         "slot": "crouch",
-        "file": "assets/encore/poses/freakjax/crouch.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/crouch.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/crouch.json",
-        "sha256": "18c3e7f0a56e976ceb55fbbd03eb99595f9391c56593b604affb287432443477",
-        "bytes": 993734,
-        "productionId": "NEXT29-freakjax-crouch",
-        "qaId": "NEXT29-asset-freakjax-crouch",
+        "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/crouch.png",
+        "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/crouch.png",
+        "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/crouch.json",
+        "sha256": "ad1b7d467c845c204ba7737c1a2746b3040fb941910e0cc0623a4062470a8528",
+        "bytes": 1663822,
+        "productionId": "WAVE30-glitch-murderdrones-ribbit-fusion-crouch",
+        "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-fusion-crouch",
         "nativeCopyVerified": true,
         "offline": true,
         "dimensions": [
-          1254,
-          1254
+          1536,
+          1024
         ],
         "mode": "RGBA",
         "alpha12Bounds": [
-          90,
-          77,
-          1160,
-          1206
+          184,
+          12,
+          1404,
+          1013
         ]
       },
       {
-        "appearanceId": "freakjax",
+        "appearanceId": "glitch-murderdrones-ribbit-fusion",
         "slot": "victory",
-        "file": "assets/encore/poses/freakjax/victory.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/victory.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/victory.json",
-        "sha256": "cd5728d606d259f0a9693a89e7ccbd9a0de0ea66590b49a87f91ee5eaddbe25e",
-        "bytes": 1008406,
-        "productionId": "NEXT29-freakjax-victory",
-        "qaId": "NEXT29-asset-freakjax-victory",
+        "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/victory.png",
+        "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/victory.png",
+        "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/victory.json",
+        "sha256": "67d4f944fdc33b14d4983510fc546d24eac57cacaff2c9484c2565f26034bdd1",
+        "bytes": 1619342,
+        "productionId": "WAVE30-glitch-murderdrones-ribbit-fusion-victory",
+        "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-fusion-victory",
         "nativeCopyVerified": true,
         "offline": true,
         "dimensions": [
-          1254,
-          1254
+          1024,
+          1536
         ],
         "mode": "RGBA",
         "alpha12Bounds": [
-          118,
-          61,
-          1088,
-          1235
+          91,
+          39,
+          926,
+          1525
         ]
       },
       {
-        "appearanceId": "freakjax",
+        "appearanceId": "glitch-murderdrones-ribbit-fusion",
         "slot": "defeat",
-        "file": "assets/encore/poses/freakjax/defeat.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/defeat.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/defeat.json",
-        "sha256": "92b0196076e4d114dd1ba5ce29dc3f99e61a12e1b68f11e224cf615269e5f401",
-        "bytes": 1098984,
-        "productionId": "NEXT29-freakjax-defeat",
-        "qaId": "NEXT29-asset-freakjax-defeat",
+        "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/defeat.png",
+        "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/defeat.png",
+        "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/defeat.json",
+        "sha256": "73864da647baf49463c57a30ae817a119287467c7644db2d19974e76037aea83",
+        "bytes": 1609435,
+        "productionId": "WAVE30-glitch-murderdrones-ribbit-fusion-defeat",
+        "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-fusion-defeat",
         "nativeCopyVerified": true,
         "offline": true,
         "dimensions": [
-          1254,
-          1254
+          1536,
+          1024
         ],
         "mode": "RGBA",
         "alpha12Bounds": [
-          81,
-          55,
-          1117,
-          1230
+          160,
+          11,
+          1395,
+          1020
         ]
       }
     ],
     "productionRowCount": 44,
     "qaRowCount": 44
   },
-  "historicalCellsConstrained": 79280,
+  "historicalCellsConstrained": 80346,
   "originalIdsAndOrderPreserved": true,
   "userNotesPreserved": true,
   "historicalEvidencePreserved": true,
-  "correctedReference": {
-    "id": "SERIES-jax__australian_extremist",
-    "row": 3027,
-    "keptStatus": "À vérifier"
+  "coverageChanges": {
+    "featureIds": [
+      "PRE-02",
+      "PRE-03",
+      "PRD-11",
+      "PRE-09",
+      "PRE-17",
+      "PRE-21"
+    ],
+    "sourceIds": [
+      "music",
+      "stage-ambiences",
+      "audio-ambiences-07"
+    ],
+    "promotedNpcFamilies": 3,
+    "remainingNpcFamilies": 1077,
+    "noHistoricalProductionRowChanged": true
   },
   "appendedProductionIds": [
-    "NEXT29-watermelongangle",
-    "NEXT29-aquablasterpomni",
-    "NEXT29-ptocaine",
-    "NEXT29-freakjax",
-    "NEXT29-watermelongangle-selection",
-    "NEXT29-watermelongangle-stance",
-    "NEXT29-watermelongangle-intro",
-    "NEXT29-watermelongangle-attack",
-    "NEXT29-watermelongangle-heavy",
-    "NEXT29-watermelongangle-hit",
-    "NEXT29-watermelongangle-walk",
-    "NEXT29-watermelongangle-jump",
-    "NEXT29-watermelongangle-crouch",
-    "NEXT29-watermelongangle-victory",
-    "NEXT29-watermelongangle-defeat",
-    "NEXT29-aquablasterpomni-selection",
-    "NEXT29-aquablasterpomni-stance",
-    "NEXT29-aquablasterpomni-intro",
-    "NEXT29-aquablasterpomni-attack",
-    "NEXT29-aquablasterpomni-heavy",
-    "NEXT29-aquablasterpomni-hit",
-    "NEXT29-aquablasterpomni-walk",
-    "NEXT29-aquablasterpomni-jump",
-    "NEXT29-aquablasterpomni-crouch",
-    "NEXT29-aquablasterpomni-victory",
-    "NEXT29-aquablasterpomni-defeat",
-    "NEXT29-ptocaine-selection",
-    "NEXT29-ptocaine-stance",
-    "NEXT29-ptocaine-intro",
-    "NEXT29-ptocaine-attack",
-    "NEXT29-ptocaine-heavy",
-    "NEXT29-ptocaine-hit",
-    "NEXT29-ptocaine-walk",
-    "NEXT29-ptocaine-jump",
-    "NEXT29-ptocaine-crouch",
-    "NEXT29-ptocaine-victory",
-    "NEXT29-ptocaine-defeat",
-    "NEXT29-freakjax-selection",
-    "NEXT29-freakjax-stance",
-    "NEXT29-freakjax-intro",
-    "NEXT29-freakjax-attack",
-    "NEXT29-freakjax-heavy",
-    "NEXT29-freakjax-hit",
-    "NEXT29-freakjax-walk",
-    "NEXT29-freakjax-jump",
-    "NEXT29-freakjax-crouch",
-    "NEXT29-freakjax-victory",
-    "NEXT29-freakjax-defeat",
-    "ART-undermap-background",
-    "ART-undermap-floor",
-    "ART-undermap-foreground",
-    "ART-undermap-music",
-    "ART-undermap-ambience",
-    "ANIM-undermap-ambience"
+    "WAVE30-caferibbit",
+    "COST-glitch-murderdrones-ribbit-hommage",
+    "COST-glitch-murderdrones-ribbit-resident",
+    "COST-glitch-murderdrones-ribbit-fusion",
+    "WAVE30-caferibbit-selection",
+    "WAVE30-caferibbit-stance",
+    "WAVE30-caferibbit-intro",
+    "WAVE30-caferibbit-attack",
+    "WAVE30-caferibbit-heavy",
+    "WAVE30-caferibbit-hit",
+    "WAVE30-caferibbit-walk",
+    "WAVE30-caferibbit-jump",
+    "WAVE30-caferibbit-crouch",
+    "WAVE30-caferibbit-victory",
+    "WAVE30-caferibbit-defeat",
+    "WAVE30-glitch-murderdrones-ribbit-hommage-selection",
+    "WAVE30-glitch-murderdrones-ribbit-hommage-stance",
+    "WAVE30-glitch-murderdrones-ribbit-hommage-intro",
+    "WAVE30-glitch-murderdrones-ribbit-hommage-attack",
+    "WAVE30-glitch-murderdrones-ribbit-hommage-heavy",
+    "WAVE30-glitch-murderdrones-ribbit-hommage-hit",
+    "WAVE30-glitch-murderdrones-ribbit-hommage-walk",
+    "WAVE30-glitch-murderdrones-ribbit-hommage-jump",
+    "WAVE30-glitch-murderdrones-ribbit-hommage-crouch",
+    "WAVE30-glitch-murderdrones-ribbit-hommage-victory",
+    "WAVE30-glitch-murderdrones-ribbit-hommage-defeat",
+    "WAVE30-glitch-murderdrones-ribbit-resident-selection",
+    "WAVE30-glitch-murderdrones-ribbit-resident-stance",
+    "WAVE30-glitch-murderdrones-ribbit-resident-intro",
+    "WAVE30-glitch-murderdrones-ribbit-resident-attack",
+    "WAVE30-glitch-murderdrones-ribbit-resident-heavy",
+    "WAVE30-glitch-murderdrones-ribbit-resident-hit",
+    "WAVE30-glitch-murderdrones-ribbit-resident-walk",
+    "WAVE30-glitch-murderdrones-ribbit-resident-jump",
+    "WAVE30-glitch-murderdrones-ribbit-resident-crouch",
+    "WAVE30-glitch-murderdrones-ribbit-resident-victory",
+    "WAVE30-glitch-murderdrones-ribbit-resident-defeat",
+    "WAVE30-glitch-murderdrones-ribbit-fusion-selection",
+    "WAVE30-glitch-murderdrones-ribbit-fusion-stance",
+    "WAVE30-glitch-murderdrones-ribbit-fusion-intro",
+    "WAVE30-glitch-murderdrones-ribbit-fusion-attack",
+    "WAVE30-glitch-murderdrones-ribbit-fusion-heavy",
+    "WAVE30-glitch-murderdrones-ribbit-fusion-hit",
+    "WAVE30-glitch-murderdrones-ribbit-fusion-walk",
+    "WAVE30-glitch-murderdrones-ribbit-fusion-jump",
+    "WAVE30-glitch-murderdrones-ribbit-fusion-crouch",
+    "WAVE30-glitch-murderdrones-ribbit-fusion-victory",
+    "WAVE30-glitch-murderdrones-ribbit-fusion-defeat",
+    "ART-barnoir-background",
+    "ART-barnoir-floor",
+    "ART-barnoir-foreground",
+    "ART-barnoir-music",
+    "ART-barnoir-ambience",
+    "ANIM-barnoir-ambience"
   ],
   "appendedQaIds": [
-    "NEXT29-asset-watermelongangle-selection",
-    "NEXT29-asset-watermelongangle-stance",
-    "NEXT29-asset-watermelongangle-intro",
-    "NEXT29-asset-watermelongangle-attack",
-    "NEXT29-asset-watermelongangle-heavy",
-    "NEXT29-asset-watermelongangle-hit",
-    "NEXT29-asset-watermelongangle-walk",
-    "NEXT29-asset-watermelongangle-jump",
-    "NEXT29-asset-watermelongangle-crouch",
-    "NEXT29-asset-watermelongangle-victory",
-    "NEXT29-asset-watermelongangle-defeat",
-    "NEXT29-asset-aquablasterpomni-selection",
-    "NEXT29-asset-aquablasterpomni-stance",
-    "NEXT29-asset-aquablasterpomni-intro",
-    "NEXT29-asset-aquablasterpomni-attack",
-    "NEXT29-asset-aquablasterpomni-heavy",
-    "NEXT29-asset-aquablasterpomni-hit",
-    "NEXT29-asset-aquablasterpomni-walk",
-    "NEXT29-asset-aquablasterpomni-jump",
-    "NEXT29-asset-aquablasterpomni-crouch",
-    "NEXT29-asset-aquablasterpomni-victory",
-    "NEXT29-asset-aquablasterpomni-defeat",
-    "NEXT29-asset-ptocaine-selection",
-    "NEXT29-asset-ptocaine-stance",
-    "NEXT29-asset-ptocaine-intro",
-    "NEXT29-asset-ptocaine-attack",
-    "NEXT29-asset-ptocaine-heavy",
-    "NEXT29-asset-ptocaine-hit",
-    "NEXT29-asset-ptocaine-walk",
-    "NEXT29-asset-ptocaine-jump",
-    "NEXT29-asset-ptocaine-crouch",
-    "NEXT29-asset-ptocaine-victory",
-    "NEXT29-asset-ptocaine-defeat",
-    "NEXT29-asset-freakjax-selection",
-    "NEXT29-asset-freakjax-stance",
-    "NEXT29-asset-freakjax-intro",
-    "NEXT29-asset-freakjax-attack",
-    "NEXT29-asset-freakjax-heavy",
-    "NEXT29-asset-freakjax-hit",
-    "NEXT29-asset-freakjax-walk",
-    "NEXT29-asset-freakjax-jump",
-    "NEXT29-asset-freakjax-crouch",
-    "NEXT29-asset-freakjax-victory",
-    "NEXT29-asset-freakjax-defeat",
-    "UNDERMAP29-asset-far",
-    "UNDERMAP29-asset-mid",
-    "UNDERMAP29-asset-near",
-    "NEXT29-art",
-    "NEXT29-canvas",
-    "UNDERMAP29-canvas",
-    "NEXT29-node",
-    "NEXT29-integrity",
-    "NEXT29-browser",
-    "TRACKER29-update"
+    "WAVE30-asset-caferibbit-selection",
+    "WAVE30-asset-caferibbit-stance",
+    "WAVE30-asset-caferibbit-intro",
+    "WAVE30-asset-caferibbit-attack",
+    "WAVE30-asset-caferibbit-heavy",
+    "WAVE30-asset-caferibbit-hit",
+    "WAVE30-asset-caferibbit-walk",
+    "WAVE30-asset-caferibbit-jump",
+    "WAVE30-asset-caferibbit-crouch",
+    "WAVE30-asset-caferibbit-victory",
+    "WAVE30-asset-caferibbit-defeat",
+    "WAVE30-asset-glitch-murderdrones-ribbit-hommage-selection",
+    "WAVE30-asset-glitch-murderdrones-ribbit-hommage-stance",
+    "WAVE30-asset-glitch-murderdrones-ribbit-hommage-intro",
+    "WAVE30-asset-glitch-murderdrones-ribbit-hommage-attack",
+    "WAVE30-asset-glitch-murderdrones-ribbit-hommage-heavy",
+    "WAVE30-asset-glitch-murderdrones-ribbit-hommage-hit",
+    "WAVE30-asset-glitch-murderdrones-ribbit-hommage-walk",
+    "WAVE30-asset-glitch-murderdrones-ribbit-hommage-jump",
+    "WAVE30-asset-glitch-murderdrones-ribbit-hommage-crouch",
+    "WAVE30-asset-glitch-murderdrones-ribbit-hommage-victory",
+    "WAVE30-asset-glitch-murderdrones-ribbit-hommage-defeat",
+    "WAVE30-asset-glitch-murderdrones-ribbit-resident-selection",
+    "WAVE30-asset-glitch-murderdrones-ribbit-resident-stance",
+    "WAVE30-asset-glitch-murderdrones-ribbit-resident-intro",
+    "WAVE30-asset-glitch-murderdrones-ribbit-resident-attack",
+    "WAVE30-asset-glitch-murderdrones-ribbit-resident-heavy",
+    "WAVE30-asset-glitch-murderdrones-ribbit-resident-hit",
+    "WAVE30-asset-glitch-murderdrones-ribbit-resident-walk",
+    "WAVE30-asset-glitch-murderdrones-ribbit-resident-jump",
+    "WAVE30-asset-glitch-murderdrones-ribbit-resident-crouch",
+    "WAVE30-asset-glitch-murderdrones-ribbit-resident-victory",
+    "WAVE30-asset-glitch-murderdrones-ribbit-resident-defeat",
+    "WAVE30-asset-glitch-murderdrones-ribbit-fusion-selection",
+    "WAVE30-asset-glitch-murderdrones-ribbit-fusion-stance",
+    "WAVE30-asset-glitch-murderdrones-ribbit-fusion-intro",
+    "WAVE30-asset-glitch-murderdrones-ribbit-fusion-attack",
+    "WAVE30-asset-glitch-murderdrones-ribbit-fusion-heavy",
+    "WAVE30-asset-glitch-murderdrones-ribbit-fusion-hit",
+    "WAVE30-asset-glitch-murderdrones-ribbit-fusion-walk",
+    "WAVE30-asset-glitch-murderdrones-ribbit-fusion-jump",
+    "WAVE30-asset-glitch-murderdrones-ribbit-fusion-crouch",
+    "WAVE30-asset-glitch-murderdrones-ribbit-fusion-victory",
+    "WAVE30-asset-glitch-murderdrones-ribbit-fusion-defeat",
+    "BARNOIR30-asset-far",
+    "BARNOIR30-asset-mid",
+    "BARNOIR30-asset-near",
+    "WAVE30-art",
+    "WAVE30-canvas",
+    "BARNOIR30-canvas",
+    "WAVE30-node",
+    "WAVE30-integrity",
+    "WAVE30-browser",
+    "TRACKER30-update"
   ],
   "appendedSourceIds": [
-    "store-beach-watermelongangle",
-    "store-beach-aquablasterpomni",
-    "store-pto-caine",
-    "store-sideshow-freakjax"
+    "animate-cafe-ribbit",
+    "glitch-barnoir-storyboards",
+    "npc-ribbit-iconic-20261120",
+    "npc-md-uzi-v2-20261120"
   ],
-  "appendedStageId": "undermap",
+  "appendedStageId": "barnoir",
   "qaEvidence": {
-    "tests": 411,
+    "tests": 419,
     "failures": 0,
     "bothBuildsPassed": true,
     "costumeCanvasDrawChecks": 80,
     "stageCanvasChecks": 6,
     "nativeDistributionComparisons": 94,
-    "moduleComparisons": 32,
-    "historicalEncoreFiles": 5678
+    "moduleComparisons": 36,
+    "historicalEncoreFiles": 5725
   },
   "releaseReviewed": false,
   "fullCiExecutedByWorkbookUpdate": false,

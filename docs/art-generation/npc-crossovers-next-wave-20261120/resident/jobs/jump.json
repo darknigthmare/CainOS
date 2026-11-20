@@ -1,0 +1,15 @@
+{
+  "appearanceId": "glitch-murderdrones-ribbit-resident",
+  "fighterId": "ribbit",
+  "series": "murderdrones",
+  "style": "resident",
+  "slot": "jump",
+  "prompt": "Edit ONLY the FIRST attached image. Preserve the entire airborne Ribbit character, exact leap pose, face, head, outfit, tools, long limb proportions, colors and polished 2D linework. Correct the open green hand on the LEFT of the picture (her trailing arm). It currently has four digit lobes. Make that hand have EXACTLY THREE rounded digits in TOTAL, as her other hand does: remove the small extra lobe on the lower-right side closest to the wrist, and cleanly close that palm outline. Keep the three larger lobes pointing up and left; do not add a new thumb. The second image is the approved original selection reference showing the three-lobed frog hands. Nothing else changes. One full head-to-toes figure including all feet and both hands, native transparent RGBA, no background/floor/halo/text/extra limbs. Deliver the complete corrected drawing, not a hand crop.",
+  "referencePaths": [
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/attempts/jump-01.png",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/selection.png"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "root",
+  "correctionOf": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/attempts/jump-01.png"
+}

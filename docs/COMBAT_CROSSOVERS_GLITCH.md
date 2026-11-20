@@ -1,8 +1,12 @@
 # Les collections GLITCH d’Encore
 
-Chaque combattant du cirque peut rendre hommage à un personnage de l’œuvre, incarner un habitant de son univers ou adopter une fusion originale. Pour cette troisième apparence, la silhouette et les traits du combattant sont redessinés dans le langage visuel de la série. Le joueur garde les attaques, les statistiques et le scénario de son combattant. Les créations d’Encore sont des adaptations de fan. [Catalogue du studio](https://www.glitchprod.com/our-shows)
+Les collections permettent de rendre hommage à un personnage de l’œuvre, d’incarner un habitant de son univers ou d’adopter une fusion originale. Pour cette troisième apparence, la silhouette et les traits du combattant sont redessinés dans le langage visuel de la série. Le joueur garde les attaques, les statistiques et le scénario de son combattant. Les créations d’Encore sont des adaptations de fan. [Catalogue du studio](https://www.glitchprod.com/our-shows)
 
-Les neuf univers comptent 252 tenues « Hommage » ou « Résident », auxquelles s’ajoutent 126 fusions originales dans 9 univers. Chacune de ces tenues dispose de dix dessins individuels pour la sélection, la garde, l’attaque, la victoire, l’entrée, la marche, le saut, la position accroupie, l’impact reçu et la défaite. Les coups légers et lourds utilisent le dessin d’attaque de la tenue quand il est disponible, pendant la phase active et le début de la récupération. Les quatorze combattants d’origine disposent chacun d’un dessin propre à leur coup lourd.
+Le catalogue courant compte **381 costumes crossover / 3 814 fichiers** dans neuf collections. Les **quatorze propriétaires historiques** conservent leurs 27 tenues chacun, soit les **378 costumes** du premier catalogue. **Ribbit** inaugure les crossovers des PNJ promus avec trois styles Murder Drones : **3/27** parmi les neuf collections. Ses huit autres séries et les **39 autres PNJ sans crossover** restent à produire ; le menu n’invente pas de costume pour un corps sans dessin complet.
+
+Le bloc historique du 18 novembre réunissait **252 tenues « Hommage » ou « Résident » et 126 fusions originales**. Ces tenues conservent leurs dix dessins de sélection, garde, attaque, victoire, entrée, marche, saut, accroupissement, impact et défaite. Leurs coups légers et lourds peuvent réemployer le dessin d’attaque pendant la phase active et le début de la récupération. Les quatorze combattants d’origine disposent également chacun d’un dessin propre à leur coup lourd. Les **trois nouvelles familles Ribbit** possèdent chacune **onze PNG natifs**, avec un dessin distinct pour leur coup lourd.
+
+La [vague du 20 novembre](COMBAT_NEXT_WAVE_2026-11-20.md) réunit aussi Café Ribbit et le bar des néons : **47 PNG natifs**, dont 44 dessins de personnages et trois plans d’arène, pour **59 538 780 octets**. Les [galeries et preuves du lot](art-generation/next-wave-20261120/README.md), le [registre des manquants](art-generation/next-wave-20261120/remaining-work.md) et le [dossier du classeur](art-generation/workbook-next-wave-20261120/README.md) gardent leurs résultats et limites propres. Les crossovers restent distincts des **40 variantes Circus / 440 PNG** et des 51 costumes d’archive du vestiaire de 472 costumes.
 
 Sur l’accueil du mode Combat, **Escales GLITCH** ouvre le choix des neuf destinations. Sélectionnez une escale pour lire son introduction, puis remportez le duel pour afficher sa fin. Chaque étape possède une arène à trois profondeurs et un tableau d’introduction et de fin. L’arène comporte un fond et deux plans transparents. Les poses, l’habillage et les escales sont imaginés pour le jeu. [Fichiers des costumes](../assets/encore/crossovers/) · [Illustrations du parcours](../assets/encore/escales/)
 
@@ -37,7 +41,25 @@ La vitrine GlitchX présente les projets de créateurs invités et sa mascotte B
 
 ## Galerie des ressources jouables
 
-Chaque lien de tenue ouvre les WebP individuels de cette apparence. Les combattants équipés conservent le gabarit et le jeu de coups de leur personnage.
+Chaque lien de tenue ouvre les PNG ou WebP individuels de cette apparence. Les combattants équipés conservent le gabarit et le jeu de coups de leur personnage.
+
+### Ribbit — premiers crossovers de PNJ, 20 novembre
+
+Ces trois designs sont originaux : l’hommage reprend des motifs de la tenue d’Uzi,
+la résidente devient une technicienne biologique des conduites, et la fusion
+transforme Ribbit en automate amphibien. Les trois styles gardent leur identité
+distincte. L’harmonisation à trois lobes des mains visibles est un choix artistique
+du lot ; elle ne prouve aucune anatomie canonique. Le registre conserve les poses
+initiales, les corrections et leur revue indépendante.
+
+| Hommage · Uzi Doorman | Résidente · Technicienne des conduites | Fusion · Automate amphibien |
+| --- | --- | --- |
+| ![Ribbit dans sa tenue hommage Uzi](../assets/encore/crossovers/murderdrones/ribbit/hommage/selection.png) | ![Ribbit technicienne des conduites](../assets/encore/crossovers/murderdrones/ribbit/resident/selection.png) | ![Fusion mécanique de Ribbit](../assets/encore/crossovers/murderdrones/ribbit/fusion/selection.png) |
+| [Garde](../assets/encore/crossovers/murderdrones/ribbit/hommage/stance.png) · [Onze PNG](../assets/encore/crossovers/murderdrones/ribbit/hommage/) | [Garde](../assets/encore/crossovers/murderdrones/ribbit/resident/stance.png) · [Onze PNG](../assets/encore/crossovers/murderdrones/ribbit/resident/) | [Garde](../assets/encore/crossovers/murderdrones/ribbit/fusion/stance.png) · [Onze PNG](../assets/encore/crossovers/murderdrones/ribbit/fusion/) |
+
+Les planches collectives des neuf univers ci-dessous restent celles des quatorze
+propriétaires historiques. Ribbit est présenté séparément ici et dans la
+[galerie des fusions](COMBAT_GALERIE_FUSIONS.md#murder-drones).
 
 ### Les neuf escales
 
@@ -136,6 +158,7 @@ Dans la sélection du joueur ou de son adversaire, choisissez **Murder Drones** 
 | The Fudge | [Hommage à Uzi Doorman](../assets/encore/crossovers/murderdrones/fudge/hommage/) | [Recycleur de la colonie](../assets/encore/crossovers/murderdrones/fudge/resident/) | [Fourneau de cuivre](../assets/encore/crossovers/murderdrones/fudge/fusion/) |
 | Kaufmo — abstraction | [Hommage à Uzi Doorman](../assets/encore/crossovers/murderdrones/abstractedkaufmo/hommage/) | [Anomalie de quarantaine](../assets/encore/crossovers/murderdrones/abstractedkaufmo/resident/) | [Anomalie des optiques](../assets/encore/crossovers/murderdrones/abstractedkaufmo/fusion/) |
 | Baron Mildenhall | [Hommage à Uzi Doorman](../assets/encore/crossovers/murderdrones/baronmildenhall/hommage/) | [Intendant du bunker](../assets/encore/crossovers/murderdrones/baronmildenhall/resident/) | [Arpenteur spectral](../assets/encore/crossovers/murderdrones/baronmildenhall/fusion/) |
+| Ribbit — ajout du 20 novembre | [Hommage à Uzi Doorman](../assets/encore/crossovers/murderdrones/ribbit/hommage/) | [Technicienne des conduites](../assets/encore/crossovers/murderdrones/ribbit/resident/) | [Automate amphibien](../assets/encore/crossovers/murderdrones/ribbit/fusion/) |
 
 ### The Gaslight District
 

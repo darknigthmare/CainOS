@@ -1,0 +1,29 @@
+{
+  "appearanceId": "glitch-murderdrones-ribbit-hommage",
+  "fighterId": "ribbit",
+  "series": "murderdrones",
+  "style": "hommage",
+  "slot": "stance",
+  "useCase": "precise-object-edit",
+  "prompt": "Use case: precise-object-edit. Make a minimal anatomy correction to one existing transparent 2D game sprite.\nImage 1 is the EDIT TARGET: the complete Ribbit Uzi-homage sprite. Preserve its pose, canvas orientation, long green frog proportions, whole intact head, both huge eyes, mint muzzle, pink cheeks and bow, black pom-pom beanie, black hoodie, exact white chest emblem, purple sleeve bands, fluffy dark hem, long green legs, purple ankle bands and black boots. Preserve the clean cel shading, line weights and colors. This is an original fan-game costume. Image 2 is the existing Ribbit anatomy guide ONLY for the simple frog-hand construction; do not copy its bare-body outfit or stance.\nThe extended OPEN GUARD HAND at SCREEN-RIGHT currently has four separate protruding rounded digits. Redraw ONLY that one hand with EXACTLY THREE visible rounded digits TOTAL, including the thumb: one shorter thumb lobe plus two longer rounded frog fingers. Remove the extra fourth finger while retaining the open guard gesture and wrist position. Keep the hand near the chest unchanged.\nCRITICAL COUNT: THREE visible terminal hand lobes in total, not three fingers plus another thumb. This is a small silhouette correction, not a redesign. All other shapes and the whole original pose remain as close to image 1 as possible. Exactly one frog head, two arms, two hands, two legs and two boots. Entire character fully visible, turned SCREEN-RIGHT, without cropping any headwear, hand or sole. Retain genuine native RGBA transparency and clear margin around the complete silhouette. No background, floor, shadow, text, glow, halo, sticker edge, added prop or extra limb. Output one native transparent PNG.",
+  "referencePaths": [
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/stance.png",
+    "assets/encore/stance/ribbit.png"
+  ],
+  "referenceRoles": [
+    "Archived exact pose and costume to preserve; edit the specified hand only",
+    "Existing Ribbit frog hand anatomy only"
+  ],
+  "sourceUrls": [
+    "https://glitchproductions.store/products/ribbit-pendantz-blindbox",
+    "https://glitchproductions.store/products/uzi-v2-animatez"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "ribbit_references",
+  "correctionOf": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/stance.png",
+  "previousReceiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/stance.json",
+  "previousJobFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/jobs/stance.json",
+  "previousImageSHA256": "a29d6fb634765beb3ba33592764f4854bef9124bc347c6aba221295ad705963c",
+  "revisionReason": "Remove the fourth visible finger while preserving the original sprite and all unrelated details.",
+  "revisionScope": "Original three-lobe hand harmonization for this batch, consistent with its Resident/Fusion selections; no official or canonical anatomy claim."
+}

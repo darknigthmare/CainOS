@@ -1,0 +1,99 @@
+{
+  "schema": "encore-barnoir-preliminary-review-archive-v1",
+  "archivedAt": "2026-11-20T15:32:24.191976+00:00",
+  "reason": "Keep preliminary manifest review and original targeted-test provenance before rendering the final manifest.",
+  "offline": {
+    "version": "0.7.0-3f1a000c96ca",
+    "artVersion": "31622490fbe0884a",
+    "images": 5772,
+    "bytes": 3061635859
+  },
+  "files": [
+    {
+      "file": "README.snapshot.txt",
+      "bytes": 8785,
+      "sha256": "aaa98815a225040686bb7eaa1656ad787466574564caa4951308cf30b8605bc2"
+    },
+    {
+      "file": "browser-result.json",
+      "bytes": 1529,
+      "sha256": "959583d46b6836a9fca4cbd73d3fff727af7b8df5d29a31b20ccf03bd4c319a0"
+    },
+    {
+      "file": "browser.log",
+      "bytes": 7619,
+      "sha256": "c086a582f6a8d233ccb6e4012dc90e1a771139518a6931c10d3936209f31feb9"
+    },
+    {
+      "file": "canvas-review.log",
+      "bytes": 257,
+      "sha256": "5d720a282739f642b9c5e9fbb40f428b42649e79a23bb6ad262df6035c724b9f"
+    },
+    {
+      "file": "generation-receipts.json",
+      "bytes": 6728,
+      "sha256": "cb286771a064ef32991bbc296d2da0047d772e5e1c0b1b72edecbe11882d729f"
+    },
+    {
+      "file": "review/canvas-review.json",
+      "bytes": 5616,
+      "sha256": "4a1bc51c528abce1438e6a0ce0261a63ece5ae47860b9965e3ba622b7fe0cd8f"
+    },
+    {
+      "file": "review/fallback.png",
+      "bytes": 79616,
+      "sha256": "dc6b6cd50f77735b64250d7ef1bb4fa0081d1fe5b0c745bb50c7c1f16ebc18fb"
+    },
+    {
+      "file": "review/planes-center.png",
+      "bytes": 987122,
+      "sha256": "f0c059c21cbc10aac6963860d28f2260b0cfe4ae1031aee0be4f7a5b557f23b6"
+    },
+    {
+      "file": "review/planes-left.png",
+      "bytes": 987221,
+      "sha256": "b53ff734d195a8d1b3f1ff192ebfdb6f40f69c984c506f43f7578d41fdcb78c6"
+    },
+    {
+      "file": "review/planes-right.png",
+      "bytes": 987040,
+      "sha256": "a6f1233fd36c7c6e8812bcea2a485616561f3f6c0195eaf10386faff0f755ba6"
+    },
+    {
+      "file": "review/scene-center.png",
+      "bytes": 1028511,
+      "sha256": "321d58fa2b27fd3e8c4e70f3a20f1be6ec7835d171bad4e0d92650f574fec373"
+    },
+    {
+      "file": "review/scene-left.png",
+      "bytes": 1028144,
+      "sha256": "220676fe7ad07094e8e590cd1a545958eefde9846250bff79fa58cb75c8580a3"
+    },
+    {
+      "file": "review/scene-right.png",
+      "bytes": 1027547,
+      "sha256": "443002a12540e0f4b2850433942d6b351a1b12e187785eba276dd8f9fcc4160f"
+    },
+    {
+      "file": "review/three-cameras.png",
+      "bytes": 984390,
+      "sha256": "4c77c6e135a1d8b6a7b124ebe43d2600d6a807275de95f6832179ded75fe19f1"
+    },
+    {
+      "file": "targeted-tests.log",
+      "bytes": 8799,
+      "sha256": "e92a44579f4b5af8319879915129c60a99afc0e900f5df1c46f8b511a5bc1497"
+    },
+    {
+      "file": "verification.json",
+      "bytes": 4645,
+      "sha256": "6e1ce6563eb133870cdd8518a0a587faac3cafa4ba43cc27a2dc34a23c014353"
+    },
+    {
+      "file": "visual-review.snapshot.txt",
+      "bytes": 3507,
+      "sha256": "ca9ab8ef51a18d43260ec66096c59d44fd657ca5db4c13574074974508f0ceed"
+    }
+  ],
+  "markdownSnapshots": "Original Markdown bytes are preserved as .snapshot.txt because their relative links were rooted at the original dossier, not at this archive directory."
+}

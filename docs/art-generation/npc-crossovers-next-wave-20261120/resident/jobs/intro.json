@@ -1,0 +1,15 @@
+{
+  "appearanceId": "glitch-murderdrones-ribbit-resident",
+  "fighterId": "ribbit",
+  "series": "murderdrones",
+  "style": "resident",
+  "slot": "intro",
+  "prompt": "Edit the FIRST image only. Preserve its complete Ribbit character, exact pose, face, slender proportions, costume, all tools, colors, linework, shading, feet, placement and native transparency. Correct ONLY the extended open green hand on the RIGHT of the picture: it must have EXACTLY THREE digits in total, a single upper thumb-like rounded lobe and ONLY TWO rounded fingers pointing right. Remove the extra fourth finger naturally, preserving the hand outline and anatomy in the same 2D drawing style. The second image is the accepted identity reference showing the THREE-digit frog hands. Do not introduce any other change. Entire figure head to toes, generous clear transparent margin. True transparent RGBA with no background, shadow, text, labels or effects. Output one complete corrected original character image.",
+  "referencePaths": [
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/attempts/intro-01.png",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/selection.png"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "root",
+  "correctionOf": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/attempts/intro-01.png"
+}

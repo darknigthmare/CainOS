@@ -1,0 +1,156 @@
+{
+  "schema": "encore-barnoir-parent-ci-followup-v1",
+  "observedAt": "2026-11-20T14:53:57.100Z",
+  "scope": "Historical published base only; not the uncommitted Barnoir/NPC wave.",
+  "pr": {
+    "url": "https://github.com/darknigthmare/CainOS/pull/7",
+    "number": 7,
+    "state": "closed",
+    "merged": true,
+    "mergeable": false,
+    "draft": false,
+    "title": "Compléter Encore : 39 apparences, 23 arènes et suivi réconcilié",
+    "base": "feat/encore-fighter-campaign-art",
+    "base_sha": "3cebb6f5adb92c371444fd634ae4b45f7aeabcd0",
+    "head": "feat/encore-glitch-crossovers",
+    "head_sha": "5be043ba21f3fe7a6dedd3fa1b00dc36f296b540",
+    "head_repo_id": 1282278000,
+    "head_repo_full_name": "darknigthmare/CainOS",
+    "merge_commit_sha": "a56bf7b9e793412760a4f39aa04926355d31a7ce",
+    "created_at": "2026-11-18T13:14:57Z",
+    "updated_at": "2026-11-20T14:42:59Z",
+    "closed_at": "2026-11-20T14:34:54Z",
+    "merged_at": "2026-11-20T14:34:54Z",
+    "commits": 72,
+    "changed_files": 0,
+    "additions": 0,
+    "deletions": 0,
+    "display_url": "https://github.com/darknigthmare/CainOS/pull/7",
+    "display_title": "Compléter Encore : 39 apparences, 23 arènes et suivi réconcilié"
+  },
+  "jobs": [
+    {
+      "id": 136346305931,
+      "name": "combat",
+      "status": "completed",
+      "conclusion": "cancelled",
+      "run_id": 44753267800,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Install project dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Install asset verification runtime",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Contracts, Node tests and both builds",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7
+        },
+        {
+          "name": "Install browser verification runtime",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8
+        },
+        {
+          "name": "Browser verification",
+          "status": "completed",
+          "conclusion": "cancelled",
+          "number": 9
+        },
+        {
+          "name": "Build reviewable delivery",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 10
+        },
+        {
+          "name": "Upload verification evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11
+        },
+        {
+          "name": "Upload standalone delivery",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 12
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 22
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 23
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 24
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 25
+        }
+      ]
+    }
+  ],
+  "commitStatuses": [
+    {
+      "context": "Vercel – cainos",
+      "state": "failure",
+      "description": "Deployment rate limited — retry in 24 hours.",
+      "url": "https://vercel.com/darknigthmares-projects?upgradeToPro=build-rate-limit",
+      "createdAt": "2026-11-20T14:25:01Z"
+    },
+    {
+      "context": "Vercel – digital-circus-encore",
+      "state": "failure",
+      "description": "Deployment rate limited — retry in 24 hours.",
+      "url": "https://vercel.com/darknigthmares-projects?upgradeToPro=build-rate-limit",
+      "createdAt": "2026-11-20T14:25:01Z"
+    }
+  ],
+  "actionsTaken": "Read-only. No merge, close, cancellation, rerun, quota change, commit, branch update or PR edit by this wave."
+}

@@ -1,0 +1,15 @@
+{
+  "appearanceId": "glitch-murderdrones-ribbit-fusion",
+  "fighterId": "ribbit",
+  "series": "murderdrones",
+  "style": "fusion",
+  "slot": "hit",
+  "prompt": "Edit only the FIRST attached drawing. Keep the entire mechanical Ribbit, exact hit-recoil pose, face, robot eyes, expression, green and mint shell, pink bow plate, LED details, feet, proportions, colors and cel shading unchanged. Correct ONLY the open mechanical hand in front of the chest on the RIGHT of the picture, near the open mouth: it currently has four digits. Make that hand have exactly THREE mechanical digits total. Keep the two long upper fingers and the lower-left thumb. Remove the short extra finger projecting to the RIGHT from the palm; close the palm outline naturally with the same green shell and black joints. The hand must then have three pale mint fingertip pads total, not four. The second image is the approved selection identity reference with three-digit hands. Preserve everything else, including the three-digit rear hand. Output one full corrected head-to-toes figure in native transparent RGBA, no crop, no background, no floor, no shadow, no text or effects.",
+  "referencePaths": [
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/attempts/hit-01.png",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/selection.png"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "root",
+  "correctionOf": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/attempts/hit-01.png"
+}

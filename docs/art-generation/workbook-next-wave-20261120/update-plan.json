@@ -1,0 +1,2832 @@
+{
+  "schema": "encore-tracker-next-wave-plan/v1",
+  "createdAt": "2026-11-20T15:42:30.762Z",
+  "baselineHashes": {
+    "docs/DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx": "048d758f614daf1ad388a12fed5955b853734c2c1c47d92fb7a6e493512eea12",
+    "docs/combat-tracker-data.json": "868975a52cb6e4f28adbf4bb98e957f142deef7a240472c4879c7c2c148feb56",
+    "docs/combat-workbook-verification.json": "2869d022d06c0a267bf32e689ca2d1cf1e32ff35d195e759535b8096be6d14d9",
+    "docs/combat-qa-evidence-0.7.0.json": "eb0edceabdd0f1e2a939f892327717ac59e0188c6a904f8aec9952ed089e74f5"
+  },
+  "baselineSnapshotHashes": {
+    "manifest.json": "4dcea6a5d0283821a881e9bf12ce146228f59846c96a7c6f15ad3f8e275fcf63",
+    "sheet-1.json": "f58f510c720c547d3eb3fa5f9ad57e2f98090ef2369e89e12c9a73d6cf0a9852",
+    "sheet-2.json": "d390e938145393b5f88402f9d065b207e8f20acc6e666ef7e765c59078bf7c35",
+    "sheet-3.json": "bf8ba722b2e8a3031d3f38556f89a7b43596d7312ff17f1a0f5243dabb50a869",
+    "sheet-4.json": "050f9143bd0be3d1aec07a4b1d931ff1d1444087a7f778f02ce1bfd8d6e31109",
+    "sheet-5.json": "c4c4c132a842b31ad14828910c5915ce761db375ed0178dd515f669e539fd3bf",
+    "sheet-6.json": "3c4d61d76407417401b2a88ed319f6225670bfd3f3db6394305c57a1aa8b2e48",
+    "sheet-7.json": "72fed5ced27268cf21e74397a5d8e45f5cc9f8d8cb5a1c4a3440f4649f67d277",
+    "sheet-8.json": "ac1439a04a5e54d63c249162052da92494fa11d5157dcf816bec45e01ffece4e",
+    "sheet-9.json": "276fd10f944e5aead9ec725cae3ffbed01903e4c215e3fb11c3fd6180f113350",
+    "sheet-10.json": "1cc7dd7a1e4fd81fa9741125a58b30f53559fc3eedee02a008a095710d25ba21",
+    "sheet-11.json": "f3e49d4fdff4ee15902dae8704c84b911b28036b000cbde1bd382677737e4f65"
+  },
+  "historicalCellsConstrained": 80346,
+  "approvedChangedCells": [
+    {
+      "sheet": "Fonctionnalités",
+      "cell": "C61",
+      "before": [
+        "string",
+        "22 arènes thématiques",
+        null
+      ],
+      "value": "24 arènes thématiques",
+      "formula": null
+    },
+    {
+      "sheet": "Fonctionnalités",
+      "cell": "G62",
+      "before": [
+        "string",
+        "429 tenues équipables, dont 378 crossovers en 9 collections. Le joueur et le rival peuvent utiliser des apparences différentes.",
+        null
+      ],
+      "value": "472 tenues équipables : 51 variantes d’archive, 40 tenues Circus et 381 crossovers dans 9 collections. Le joueur et le rival peuvent utiliser des apparences différentes.",
+      "formula": null
+    },
+    {
+      "sheet": "Fonctionnalités",
+      "cell": "H62",
+      "before": [
+        "string",
+        "Les fiches de production identifient les hommages, les rôles d’habitants et les fusions originales. Les 51 tenues historiques conservent leurs fiches d’archive.",
+        null
+      ],
+      "value": "Les 378 crossovers des 14 propriétaires historiques restent intacts. Ribbit commence avec les 3 styles Murder Drones ; ses 8 autres séries et les 39 autres PNJ restent manquants. Les fusions et rôles sont des créations originales.",
+      "formula": null
+    },
+    {
+      "sheet": "Fonctionnalités",
+      "cell": "G95",
+      "before": [
+        "string",
+        "Documenter 54 combattants, 540 techniques, 22 arènes, 51 tenues historiques et 378 tenues crossover avec leurs repères et sources.",
+        null
+      ],
+      "value": "Documenter 54 combattants, 540 techniques, 24 arènes, 51 variantes historiques, 40 tenues Circus et 381 crossovers, avec leurs repères et limites de référence.",
+      "formula": null
+    },
+    {
+      "sheet": "Fonctionnalités",
+      "cell": "G68",
+      "before": [
+        "string",
+        "22 thèmes originaux de synthèse, un par arène, avec leur tempo et leur mélodie. Les réglages de musique et de bruitages sont indépendants.",
+        null
+      ],
+      "value": "24 thèmes originaux de synthèse, un par arène, avec leur tempo et leur mélodie. Les réglages de musique et de bruitages sont indépendants.",
+      "formula": null
+    },
+    {
+      "sheet": "Fonctionnalités",
+      "cell": "G101",
+      "before": [
+        "string",
+        "22 ambiances derrière les combattants. Le réglage de mouvements réduits fige les effets.",
+        null
+      ],
+      "value": "24 ambiances derrière les combattants. Le réglage de mouvements réduits fige les effets.",
+      "formula": null
+    },
+    {
+      "sheet": "Fonctionnalités",
+      "cell": "G107",
+      "before": [
+        "string",
+        "22 ambiances originales avec volume indépendant, arrêt à la pause et changement d’arène.",
+        null
+      ],
+      "value": "24 ambiances originales avec volume indépendant, arrêt à la pause et changement d’arène.",
+      "formula": null
+    },
+    {
+      "sheet": "Références",
+      "cell": "E63",
+      "before": [
+        "string",
+        "26 motifs synthétiques et 22 thèmes originaux composés pour Encore.",
+        null
+      ],
+      "value": "26 motifs synthétiques et 24 thèmes originaux composés pour Encore.",
+      "formula": null
+    },
+    {
+      "sheet": "Références",
+      "cell": "E60",
+      "before": [
+        "string",
+        "22 ambiances visuelles derrière les combattants. Le réglage de mouvements réduits fige leurs effets.",
+        null
+      ],
+      "value": "24 ambiances visuelles derrière les combattants. Le réglage de mouvements réduits fige leurs effets.",
+      "formula": null
+    },
+    {
+      "sheet": "Références",
+      "cell": "B67",
+      "before": [
+        "string",
+        "Encore — 22 ambiances sonores",
+        null
+      ],
+      "value": "Encore — 24 ambiances sonores",
+      "formula": null
+    },
+    {
+      "sheet": "Références",
+      "cell": "E64",
+      "before": [
+        "string",
+        "5 769 images et 3 059 080 660 octets dans le manifeste local. La publication GitHub est vérifiée séparément.",
+        null
+      ],
+      "value": "5 816 images et 3 118 619 440 octets dans le manifeste local. La publication GitHub est vérifiée séparément.",
+      "formula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "B7",
+      "before": [
+        "number",
+        54,
+        "=COUNTA('Combattants'!A6:A59)"
+      ],
+      "value": 54,
+      "formula": "=COUNTA('Combattants'!A6:A59)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "B8",
+      "before": [
+        "number",
+        540,
+        "=COUNTA('Techniques'!A6:A545)"
+      ],
+      "value": 540,
+      "formula": "=COUNTA('Techniques'!A6:A545)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "B9",
+      "before": [
+        "number",
+        23,
+        "=COUNTA('Arènes'!A6:A28)"
+      ],
+      "value": 24,
+      "formula": "=COUNTA('Arènes'!A6:A29)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "B10",
+      "before": [
+        "number",
+        179,
+        "=COUNTA('Atlas'!A6:A184)"
+      ],
+      "value": 179,
+      "formula": "=COUNTA('Atlas'!A6:A184)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "B11",
+      "before": [
+        "number",
+        468,
+        "=COUNTIFS('Atlas'!C6:C184,\"Variante visuelle\")+COUNTIFS('Production'!B6:B3193,\"Costume crossover\")+COUNTIFS('Production'!B6:B3193,\"Tenue Circus\")"
+      ],
+      "value": 472,
+      "formula": "=COUNTIFS('Atlas'!C6:C184,\"Variante visuelle\")+COUNTIFS('Production'!B6:B3247,\"Costume crossover\")+COUNTIFS('Production'!B6:B3247,\"Tenue Circus\")"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "B12",
+      "before": [
+        "number",
+        54,
+        "=COUNTIFS('Production'!B6:B3193,\"Arrangement d’arène\")"
+      ],
+      "value": 54,
+      "formula": "=COUNTIFS('Production'!B6:B3247,\"Arrangement d’arène\")"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "B15",
+      "before": [
+        "number",
+        85,
+        "=COUNTIFS('Fonctionnalités'!D$6:D$111,B$14)"
+      ],
+      "value": 85,
+      "formula": "=COUNTIFS('Fonctionnalités'!D$6:D$111,B$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "C15",
+      "before": [
+        "number",
+        7,
+        "=COUNTIFS('Fonctionnalités'!D$6:D$111,C$14)"
+      ],
+      "value": 7,
+      "formula": "=COUNTIFS('Fonctionnalités'!D$6:D$111,C$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "D15",
+      "before": [
+        "number",
+        12,
+        "=COUNTIFS('Fonctionnalités'!D$6:D$111,D$14)"
+      ],
+      "value": 12,
+      "formula": "=COUNTIFS('Fonctionnalités'!D$6:D$111,D$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "E15",
+      "before": [
+        "number",
+        2,
+        "=COUNTIFS('Fonctionnalités'!D$6:D$111,E$14)"
+      ],
+      "value": 2,
+      "formula": "=COUNTIFS('Fonctionnalités'!D$6:D$111,E$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "F15",
+      "before": [
+        "number",
+        106,
+        "=COUNTA('Fonctionnalités'!A6:A111)"
+      ],
+      "value": 106,
+      "formula": "=COUNTA('Fonctionnalités'!A6:A111)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "B16",
+      "before": [
+        "number",
+        2008,
+        "=COUNTIFS('Production'!E$6:E$3193,B$14)"
+      ],
+      "value": 2062,
+      "formula": "=COUNTIFS('Production'!E$6:E$3247,B$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "C16",
+      "before": [
+        "number",
+        957,
+        "=COUNTIFS('Production'!E$6:E$3193,C$14)"
+      ],
+      "value": 957,
+      "formula": "=COUNTIFS('Production'!E$6:E$3247,C$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "D16",
+      "before": [
+        "number",
+        54,
+        "=COUNTIFS('Production'!E$6:E$3193,D$14)"
+      ],
+      "value": 54,
+      "formula": "=COUNTIFS('Production'!E$6:E$3247,D$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "E16",
+      "before": [
+        "number",
+        169,
+        "=COUNTIFS('Production'!E$6:E$3193,E$14)"
+      ],
+      "value": 169,
+      "formula": "=COUNTIFS('Production'!E$6:E$3247,E$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "F16",
+      "before": [
+        "number",
+        3188,
+        "=COUNTA('Production'!A6:A3193)"
+      ],
+      "value": 3242,
+      "formula": "=COUNTA('Production'!A6:A3247)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "B17",
+      "before": [
+        "number",
+        343,
+        "=COUNTIFS('Scénarios'!H$6:H$353,B$14)"
+      ],
+      "value": 343,
+      "formula": "=COUNTIFS('Scénarios'!H$6:H$353,B$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "C17",
+      "before": [
+        "number",
+        0,
+        "=COUNTIFS('Scénarios'!H$6:H$353,C$14)"
+      ],
+      "value": 0,
+      "formula": "=COUNTIFS('Scénarios'!H$6:H$353,C$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "D17",
+      "before": [
+        "number",
+        4,
+        "=COUNTIFS('Scénarios'!H$6:H$353,D$14)"
+      ],
+      "value": 4,
+      "formula": "=COUNTIFS('Scénarios'!H$6:H$353,D$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "E17",
+      "before": [
+        "number",
+        1,
+        "=COUNTIFS('Scénarios'!H$6:H$353,E$14)"
+      ],
+      "value": 1,
+      "formula": "=COUNTIFS('Scénarios'!H$6:H$353,E$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "F17",
+      "before": [
+        "number",
+        348,
+        "=COUNTA('Scénarios'!A6:A353)"
+      ],
+      "value": 348,
+      "formula": "=COUNTA('Scénarios'!A6:A353)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "B18",
+      "before": [
+        "number",
+        105,
+        "=COUNTIFS('Atlas'!E$6:E$184,B$14)"
+      ],
+      "value": 105,
+      "formula": "=COUNTIFS('Atlas'!E$6:E$184,B$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "C18",
+      "before": [
+        "number",
+        74,
+        "=COUNTIFS('Atlas'!E$6:E$184,C$14)"
+      ],
+      "value": 74,
+      "formula": "=COUNTIFS('Atlas'!E$6:E$184,C$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "D18",
+      "before": [
+        "number",
+        0,
+        "=COUNTIFS('Atlas'!E$6:E$184,D$14)"
+      ],
+      "value": 0,
+      "formula": "=COUNTIFS('Atlas'!E$6:E$184,D$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "E18",
+      "before": [
+        "number",
+        0,
+        "=COUNTIFS('Atlas'!E$6:E$184,E$14)"
+      ],
+      "value": 0,
+      "formula": "=COUNTIFS('Atlas'!E$6:E$184,E$14)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "F18",
+      "before": [
+        "number",
+        179,
+        "=COUNTA('Atlas'!A6:A184)"
+      ],
+      "value": 179,
+      "formula": "=COUNTA('Atlas'!A6:A184)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H19",
+      "before": [
+        "string",
+        "54 routes et 324 tableaux",
+        "=COUNTIFS('Scénarios'!B6:B353,\"Route individuelle\")&\" routes et \"&COUNTIFS('Production'!B6:B3193,\"Tableau d’histoire\")&\" tableaux\""
+      ],
+      "value": "54 routes et 324 tableaux",
+      "formula": "=COUNTIFS('Scénarios'!B6:B353,\"Route individuelle\")&\" routes et \"&COUNTIFS('Production'!B6:B3247,\"Tableau d’histoire\")&\" tableaux\""
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H20",
+      "before": [
+        "string",
+        "216 briefings de rencontre",
+        "=COUNTIFS('Production'!B6:B3193,\"Briefing illustré\")&\" briefings de rencontre\""
+      ],
+      "value": "216 briefings de rencontre",
+      "formula": "=COUNTIFS('Production'!B6:B3247,\"Briefing illustré\")&\" briefings de rencontre\""
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H21",
+      "before": [
+        "string",
+        "23 thèmes musicaux d’arènes",
+        "=COUNTIFS('Production'!B6:B3193,\"Arène\",'Production'!D6:D3193,\"Musique de l’arène\")&\" thèmes musicaux d’arènes\""
+      ],
+      "value": "24 thèmes musicaux d’arènes",
+      "formula": "=COUNTIFS('Production'!B6:B3247,\"Arène\",'Production'!D6:D3247,\"Musique de l’arène\")&\" thèmes musicaux d’arènes\""
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "B22",
+      "before": [
+        "number",
+        2318,
+        "=COUNTIFS('QA'!D6:D2340,B21)"
+      ],
+      "value": 2371,
+      "formula": "=COUNTIFS('QA'!D6:D2394,B21)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "C22",
+      "before": [
+        "number",
+        0,
+        "=COUNTIFS('QA'!D6:D2340,C21)"
+      ],
+      "value": 0,
+      "formula": "=COUNTIFS('QA'!D6:D2394,C21)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "D22",
+      "before": [
+        "number",
+        14,
+        "=COUNTIFS('QA'!D6:D2340,D21)"
+      ],
+      "value": 15,
+      "formula": "=COUNTIFS('QA'!D6:D2394,D21)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "E22",
+      "before": [
+        "number",
+        2,
+        "=COUNTIFS('QA'!D6:D2340,E21)"
+      ],
+      "value": 2,
+      "formula": "=COUNTIFS('QA'!D6:D2394,E21)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "F22",
+      "before": [
+        "number",
+        2335,
+        "=COUNTA('QA'!A6:A2340)"
+      ],
+      "value": 2389,
+      "formula": "=COUNTA('QA'!A6:A2394)"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H22",
+      "before": [
+        "string",
+        "26 motifs sonores synthétiques",
+        "=COUNTIFS('Production'!B6:B3193,\"Motif sonore\")&\" motifs sonores synthétiques\""
+      ],
+      "value": "26 motifs sonores synthétiques",
+      "formula": "=COUNTIFS('Production'!B6:B3247,\"Motif sonore\")&\" motifs sonores synthétiques\""
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "B23",
+      "before": [
+        "number",
+        1,
+        "=COUNTIFS('QA'!D6:D2340,\"Partiel\")"
+      ],
+      "value": 1,
+      "formula": "=COUNTIFS('QA'!D6:D2394,\"Partiel\")"
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H23",
+      "before": [
+        "string",
+        "270 séquences de présentation",
+        "=COUNTIFS('Production'!B6:B3193,\"Présentation individuelle\")&\" séquences de présentation\""
+      ],
+      "value": "270 séquences de présentation",
+      "formula": "=COUNTIFS('Production'!B6:B3247,\"Présentation individuelle\")&\" séquences de présentation\""
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H24",
+      "before": [
+        "string",
+        "23 ambiances visuelles animées",
+        "=COUNTIFS('Production'!B6:B3193,\"Animation d’arène\")&\" ambiances visuelles animées\""
+      ],
+      "value": "24 ambiances visuelles animées",
+      "formula": "=COUNTIFS('Production'!B6:B3247,\"Animation d’arène\")&\" ambiances visuelles animées\""
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H25",
+      "before": [
+        "string",
+        "20 costumes historiques redessinés",
+        "=COUNTIFS('Production'!B6:B3193,\"Costume\")&\" costumes historiques redessinés\""
+      ],
+      "value": "20 costumes historiques redessinés",
+      "formula": "=COUNTIFS('Production'!B6:B3247,\"Costume\")&\" costumes historiques redessinés\""
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H27",
+      "before": [
+        "string",
+        "707 fiches, hors tenues crossover",
+        "=B7+B8+B9+COUNTIFS('Atlas'!C6:C184,\"Variante visuelle\")+COUNTIFS('Production'!B6:B3193,\"Tenue Circus\")&\" fiches, hors tenues crossover\""
+      ],
+      "value": "709 fiches, hors tenues crossover",
+      "formula": "=B7+B8+B9+COUNTIFS('Atlas'!C6:C184,\"Variante visuelle\")+COUNTIFS('Production'!B6:B3247,\"Tenue Circus\")&\" fiches, hors tenues crossover\""
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H31",
+      "before": [
+        "string",
+        "162 présentations de KO",
+        "=COUNTIFS('Production'!B6:B3193,\"Finition visuelle\")&\" présentations de KO\""
+      ],
+      "value": "162 présentations de KO",
+      "formula": "=COUNTIFS('Production'!B6:B3247,\"Finition visuelle\")&\" présentations de KO\""
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H32",
+      "before": [
+        "string",
+        "23 ambiances sonores originales",
+        "=COUNTIFS('Production'!B6:B3193,\"Arène\",'Production'!D6:D3193,\"Ambiance sonore\",'Production'!E6:E3193,\"Implémenté\")&\" ambiances sonores originales\""
+      ],
+      "value": "24 ambiances sonores originales",
+      "formula": "=COUNTIFS('Production'!B6:B3247,\"Arène\",'Production'!D6:D3247,\"Ambiance sonore\",'Production'!E6:E3247,\"Implémenté\")&\" ambiances sonores originales\""
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H2",
+      "before": [
+        "string",
+        "Version 0.7.0 · nouveaux manquants · 20 novembre 2026",
+        null
+      ],
+      "value": "Version 0.7.0 · nouvelle vague · 20 novembre 2026",
+      "formula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H8",
+      "before": [
+        "string",
+        "39 tenues Circus · 429 dessins individuels",
+        null
+      ],
+      "value": "40 tenues Circus · 440 dessins individuels",
+      "formula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H13",
+      "before": [
+        "string",
+        "411 tests Node dans la preuve finale du lot",
+        null
+      ],
+      "value": "419 tests Node dans la preuve finale du lot",
+      "formula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H14",
+      "before": [
+        "string",
+        "État navigateur détaillé dans la preuve datée",
+        null
+      ],
+      "value": "Navigateur local non exécuté ; tentative documentée",
+      "formula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H15",
+      "before": [
+        "string",
+        "Classeur recalculé et réimporté ; historique conservé",
+        null
+      ],
+      "value": "Classeur recalculé et réimporté ; historique conservé",
+      "formula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H16",
+      "before": [
+        "string",
+        "4 tenues · 44 dessins · 1 arène à trois plans",
+        null
+      ],
+      "value": "1 tenue · 3 crossovers · 44 dessins · 1 arène",
+      "formula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H30",
+      "before": [
+        "string",
+        "105 ensembles de base + 39 tenues (429 PNG)",
+        null
+      ],
+      "value": "105 ensembles de base + 40 tenues (440 PNG)",
+      "formula": null
+    },
+    {
+      "sheet": "Synthèse",
+      "cell": "H34",
+      "before": [
+        "string",
+        "23 arènes communes · 54 arrangements à décor partagé",
+        null
+      ],
+      "value": "24 arènes communes · 54 arrangements à décor partagé",
+      "formula": null
+    }
+  ],
+  "approvedRowHeightChanges": [
+    {
+      "sheet": "Fonctionnalités",
+      "row": 61,
+      "before": 47,
+      "after": 49
+    },
+    {
+      "sheet": "Fonctionnalités",
+      "row": 62,
+      "before": 34,
+      "after": 49
+    },
+    {
+      "sheet": "Fonctionnalités",
+      "row": 68,
+      "before": 34,
+      "after": 42
+    },
+    {
+      "sheet": "Fonctionnalités",
+      "row": 95,
+      "before": 34,
+      "after": 42
+    },
+    {
+      "sheet": "Fonctionnalités",
+      "row": 101,
+      "before": 34,
+      "after": 42
+    }
+  ],
+  "coverageChanges": {
+    "featureIds": [
+      "PRE-02",
+      "PRE-03",
+      "PRD-11",
+      "PRE-09",
+      "PRE-17",
+      "PRE-21"
+    ],
+    "sourceIds": [
+      "music",
+      "stage-ambiences",
+      "audio-ambiences-07"
+    ],
+    "promotedNpcFamilies": 3,
+    "remainingNpcFamilies": 1077,
+    "noHistoricalProductionRowChanged": true
+  },
+  "appendedProductionIds": [
+    "WAVE30-caferibbit",
+    "COST-glitch-murderdrones-ribbit-hommage",
+    "COST-glitch-murderdrones-ribbit-resident",
+    "COST-glitch-murderdrones-ribbit-fusion",
+    "WAVE30-caferibbit-selection",
+    "WAVE30-caferibbit-stance",
+    "WAVE30-caferibbit-intro",
+    "WAVE30-caferibbit-attack",
+    "WAVE30-caferibbit-heavy",
+    "WAVE30-caferibbit-hit",
+    "WAVE30-caferibbit-walk",
+    "WAVE30-caferibbit-jump",
+    "WAVE30-caferibbit-crouch",
+    "WAVE30-caferibbit-victory",
+    "WAVE30-caferibbit-defeat",
+    "WAVE30-glitch-murderdrones-ribbit-hommage-selection",
+    "WAVE30-glitch-murderdrones-ribbit-hommage-stance",
+    "WAVE30-glitch-murderdrones-ribbit-hommage-intro",
+    "WAVE30-glitch-murderdrones-ribbit-hommage-attack",
+    "WAVE30-glitch-murderdrones-ribbit-hommage-heavy",
+    "WAVE30-glitch-murderdrones-ribbit-hommage-hit",
+    "WAVE30-glitch-murderdrones-ribbit-hommage-walk",
+    "WAVE30-glitch-murderdrones-ribbit-hommage-jump",
+    "WAVE30-glitch-murderdrones-ribbit-hommage-crouch",
+    "WAVE30-glitch-murderdrones-ribbit-hommage-victory",
+    "WAVE30-glitch-murderdrones-ribbit-hommage-defeat",
+    "WAVE30-glitch-murderdrones-ribbit-resident-selection",
+    "WAVE30-glitch-murderdrones-ribbit-resident-stance",
+    "WAVE30-glitch-murderdrones-ribbit-resident-intro",
+    "WAVE30-glitch-murderdrones-ribbit-resident-attack",
+    "WAVE30-glitch-murderdrones-ribbit-resident-heavy",
+    "WAVE30-glitch-murderdrones-ribbit-resident-hit",
+    "WAVE30-glitch-murderdrones-ribbit-resident-walk",
+    "WAVE30-glitch-murderdrones-ribbit-resident-jump",
+    "WAVE30-glitch-murderdrones-ribbit-resident-crouch",
+    "WAVE30-glitch-murderdrones-ribbit-resident-victory",
+    "WAVE30-glitch-murderdrones-ribbit-resident-defeat",
+    "WAVE30-glitch-murderdrones-ribbit-fusion-selection",
+    "WAVE30-glitch-murderdrones-ribbit-fusion-stance",
+    "WAVE30-glitch-murderdrones-ribbit-fusion-intro",
+    "WAVE30-glitch-murderdrones-ribbit-fusion-attack",
+    "WAVE30-glitch-murderdrones-ribbit-fusion-heavy",
+    "WAVE30-glitch-murderdrones-ribbit-fusion-hit",
+    "WAVE30-glitch-murderdrones-ribbit-fusion-walk",
+    "WAVE30-glitch-murderdrones-ribbit-fusion-jump",
+    "WAVE30-glitch-murderdrones-ribbit-fusion-crouch",
+    "WAVE30-glitch-murderdrones-ribbit-fusion-victory",
+    "WAVE30-glitch-murderdrones-ribbit-fusion-defeat",
+    "ART-barnoir-background",
+    "ART-barnoir-floor",
+    "ART-barnoir-foreground",
+    "ART-barnoir-music",
+    "ART-barnoir-ambience",
+    "ANIM-barnoir-ambience"
+  ],
+  "appendedQaIds": [
+    "WAVE30-asset-caferibbit-selection",
+    "WAVE30-asset-caferibbit-stance",
+    "WAVE30-asset-caferibbit-intro",
+    "WAVE30-asset-caferibbit-attack",
+    "WAVE30-asset-caferibbit-heavy",
+    "WAVE30-asset-caferibbit-hit",
+    "WAVE30-asset-caferibbit-walk",
+    "WAVE30-asset-caferibbit-jump",
+    "WAVE30-asset-caferibbit-crouch",
+    "WAVE30-asset-caferibbit-victory",
+    "WAVE30-asset-caferibbit-defeat",
+    "WAVE30-asset-glitch-murderdrones-ribbit-hommage-selection",
+    "WAVE30-asset-glitch-murderdrones-ribbit-hommage-stance",
+    "WAVE30-asset-glitch-murderdrones-ribbit-hommage-intro",
+    "WAVE30-asset-glitch-murderdrones-ribbit-hommage-attack",
+    "WAVE30-asset-glitch-murderdrones-ribbit-hommage-heavy",
+    "WAVE30-asset-glitch-murderdrones-ribbit-hommage-hit",
+    "WAVE30-asset-glitch-murderdrones-ribbit-hommage-walk",
+    "WAVE30-asset-glitch-murderdrones-ribbit-hommage-jump",
+    "WAVE30-asset-glitch-murderdrones-ribbit-hommage-crouch",
+    "WAVE30-asset-glitch-murderdrones-ribbit-hommage-victory",
+    "WAVE30-asset-glitch-murderdrones-ribbit-hommage-defeat",
+    "WAVE30-asset-glitch-murderdrones-ribbit-resident-selection",
+    "WAVE30-asset-glitch-murderdrones-ribbit-resident-stance",
+    "WAVE30-asset-glitch-murderdrones-ribbit-resident-intro",
+    "WAVE30-asset-glitch-murderdrones-ribbit-resident-attack",
+    "WAVE30-asset-glitch-murderdrones-ribbit-resident-heavy",
+    "WAVE30-asset-glitch-murderdrones-ribbit-resident-hit",
+    "WAVE30-asset-glitch-murderdrones-ribbit-resident-walk",
+    "WAVE30-asset-glitch-murderdrones-ribbit-resident-jump",
+    "WAVE30-asset-glitch-murderdrones-ribbit-resident-crouch",
+    "WAVE30-asset-glitch-murderdrones-ribbit-resident-victory",
+    "WAVE30-asset-glitch-murderdrones-ribbit-resident-defeat",
+    "WAVE30-asset-glitch-murderdrones-ribbit-fusion-selection",
+    "WAVE30-asset-glitch-murderdrones-ribbit-fusion-stance",
+    "WAVE30-asset-glitch-murderdrones-ribbit-fusion-intro",
+    "WAVE30-asset-glitch-murderdrones-ribbit-fusion-attack",
+    "WAVE30-asset-glitch-murderdrones-ribbit-fusion-heavy",
+    "WAVE30-asset-glitch-murderdrones-ribbit-fusion-hit",
+    "WAVE30-asset-glitch-murderdrones-ribbit-fusion-walk",
+    "WAVE30-asset-glitch-murderdrones-ribbit-fusion-jump",
+    "WAVE30-asset-glitch-murderdrones-ribbit-fusion-crouch",
+    "WAVE30-asset-glitch-murderdrones-ribbit-fusion-victory",
+    "WAVE30-asset-glitch-murderdrones-ribbit-fusion-defeat",
+    "BARNOIR30-asset-far",
+    "BARNOIR30-asset-mid",
+    "BARNOIR30-asset-near",
+    "WAVE30-art",
+    "WAVE30-canvas",
+    "BARNOIR30-canvas",
+    "WAVE30-node",
+    "WAVE30-integrity",
+    "WAVE30-browser",
+    "TRACKER30-update"
+  ],
+  "appendedSourceIds": [
+    "animate-cafe-ribbit",
+    "glitch-barnoir-storyboards",
+    "npc-ribbit-iconic-20261120",
+    "npc-md-uzi-v2-20261120"
+  ],
+  "appendedStageId": "barnoir",
+  "evidenceHashes": {
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/hand-count-scope-addendum.md": "a8ffd26f49ce23ef7fe967e40530fdb38db79d2122526e1c3dc8577c41ca4755",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/integration-baseline.json": "1bea46363a8b121b71db75eb2da67f21b7db55254bc85eda5d242bb15e23acbf",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/historical-assets.json": "1781b8a85478aa87ba32db44845b2a8e4c1ba0612568877f2c073de978d4763c",
+    "docs/art-generation/next-wave-20261120/generation-completion.json": "8cd56ab9dd2a844e00018d657d5e8eb646da2d9b4d251350b2280615f5f563aa",
+    "docs/art-generation/next-wave-20261120/asset-inventory.json": "131a55a3e99a5b2236300e263c57d4a358e8a2c33bd80368e5490cad72b362cd",
+    "docs/art-generation/cast-next-wave-20261120/generation-completion.json": "9ff4bb9f1f89f884e9b275863d7c1b88da49d865e87d2fff1031363076b41c08",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/generation-completion.json": "f42caee6d82b8e7b217369fe4e813c771581e9635576e6091a63beb8d71e5bb2",
+    "docs/art-generation/next-wave-20261120/qa-result.json": "c9e5215f2f5748da15a33ae1eb6baffa25dee157a76df079ce955c57e0e05155",
+    "docs/art-generation/next-wave-20261120/qa.log": "6e6b915ae9bfe13af0b907880558d02fe6d6dbc393a3bc907a13802f498f5c3c",
+    "docs/art-generation/next-wave-20261120/runtime-counts.json": "cdb39e3cfd16238a124fe9519b13bccedffe8b8fdeef5c6c816dfa979188a89a",
+    "docs/art-generation/next-wave-20261120/canvas-summary.json": "7ef0065fd2d6a0ae3c0d773c699e1d9885525711227e82d0592c5edd349392d0",
+    "docs/art-generation/next-wave-20261120/build-integrity.json": "a069a970bed1e3e4bfb8aea30bd46f0d9e3437be4ee0188ca2ad43dbefb9b35d",
+    "docs/art-generation/next-wave-20261120/verification.json": "8fb17d84df5c1ff80aa360a185da51288dbbe9d6db671756c5cf4344656c7aa9",
+    "docs/art-generation/stage-next-wave-20261120/asset-inventory.json": "5086cb85282105717cf651e840e03cf72f4bbf9b3da5fb4b424d21b51018aab8",
+    "docs/art-generation/stage-next-wave-20261120/generation-receipts.json": "50528540fe2e47060b98b98564778d95baa2ac44240e9ef25cc9ea4d6b923f4b",
+    "docs/art-generation/stage-next-wave-20261120/verification.json": "4b32edeee66c52e8b64f8a454683cd6557f034a0b93ee3c0d65ecf76808fe393",
+    "docs/art-generation/stage-next-wave-20261120/review/canvas-review.json": "246adf6f77409ae104e65f268088151257b9e7896b265a0fbf18964ffe32acb6",
+    "docs/art-generation/stage-next-wave-20261120/visual-review.md": "ccb9e2e09d9b9df5d18befec6595b1003e1886ad788887e4f9110ac32ac50902",
+    "docs/art-generation/stage-next-wave-20261120/targeted-tests.log": "e92a44579f4b5af8319879915129c60a99afc0e900f5df1c46f8b511a5bc1497",
+    "docs/art-generation/stage-next-wave-20261120/browser-result.json": "959583d46b6836a9fca4cbd73d3fff727af7b8df5d29a31b20ccf03bd4c319a0",
+    "docs/art-generation/stage-next-wave-20261120/browser.log": "c086a582f6a8d233ccb6e4012dc90e1a771139518a6931c10d3936209f31feb9",
+    "docs/art-generation/next-wave-20261120/visual-review.json": "e10b14351308894aca713234ab50be5bfbd69dfd413c0357d0c23ae12d3b2c90",
+    "docs/art-generation/next-wave-20261120/independent-visual-review.json": "b4889573fae8d05b1779ffe2aae5123eda87e68324251634332f6f8f4bd5d10e",
+    "combat/data.mjs": "7081daa24f8557c6964c75955071a3527ae49c03393e04d6d0dee0d97d4e5fe6",
+    "combat/costume-additions.mjs": "dacc968d23ccffa246b686a641dedb0308b14c122652c4a477e72927ddd5e3e4",
+    "combat/costume-next-wave-20261120.mjs": "dd644e2868c8c3ca92564ea64a18cccee1c1765f364d92c19e83689b7ca6cd4e",
+    "combat/crossovers.mjs": "16e0b81e1f1581bd0b66dd0c61b1b55172ec27481f4792734f7e041f04a93711",
+    "combat/crossover-npc-additions.mjs": "0656ad94c7565d6fd20b344dfc8039b1ea05e0387b035666726b3114f94fec9d",
+    "combat/illustrations.mjs": "26aca8338be81bedbbbc1bb4bc59dd0aae8b7b7ef4d785cbbf353ac109c53b99",
+    "combat/render.mjs": "a7005f67651ad0a2da5955f9146c95f6e7e93ce9c3c2f38bd2bf1c3791d12d73",
+    "combat/render-poses.mjs": "21e3afba8c19723ffdcb383402cc6339b63cb58df5d4323fda2ebde093ce0b29",
+    "combat/offline-manifest.mjs": "583ff9fc856c355d153eaba75ef4558f207094680136abcdab06d3fbc532bc1e",
+    "combat/fidelity.mjs": "13f113f52d3d544eebc57064a1aafd1fae0c9d2485e5f567e52390f5c5a4e2dc",
+    "combat/audio.mjs": "4fa423e9b31ddd2344df9d0824693fe08963d5117e35a87c2534ef391ed5c978",
+    "combat/audio-ambiences.mjs": "38a5e4221066b3c2c2fec8f7af6977ca7c219a3117d73f1e00d1cddba34cba3c",
+    "combat/progression.mjs": "ec113e2657bd6b479741543dd1f0fb8338195fb9ca1bb85e381834b35a0055e8",
+    "combat/stories.mjs": "763d0012eec0e59ac9454a9467596d7296b65cc64002918cc5db462b09a1fec7",
+    "combat/render-stage-motion.mjs": "94338bb181d5b0813be022d932f85bfdf5838f9111baba2d24a9ed3b3be088eb",
+    "combat/stage-parallax.mjs": "1e01fa0b4932f0e670bb6fa746c48b57de0c726a5637891e68427a161aecc77d",
+    "combat/engine.mjs": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
+    "combat/session.mjs": "9dce5b9d2fff5316cd280c8f58038d06134935717c3fd637e76042e308a1d65e",
+    "tests/combat-barnoir.test.mjs": "a332d296c68cad4cb607e18793b8b84c0cabc9940ee6fc47467293e9d76a10e1",
+    "tests/fixtures/combat-pre-barnoir.json": "96a3e7c26f1da9a391b3baefed824f7855ebfb76ec62c44282b5b722c29785f7",
+    "scripts/review-combat-barnoir-20261120.mjs": "b3b8c1d6e3e6486ee832cbf7df6e723ae496f3391102e3b7dd7fe4672e52434e",
+    "docs/art-generation/next-wave-20261120/review/caferibbit/character-canvas-review.json": "8652f55873cf631be05c7af3462ca523f95f50808c283f6ccd43e23a1b0403c4",
+    "docs/art-generation/next-wave-20261120/review/glitch-murderdrones-ribbit-hommage/character-canvas-review.json": "7fa5147d35c50aa35b7c15f136c5e5135cdacac758e64e38012738b55beb48dc",
+    "docs/art-generation/next-wave-20261120/review/glitch-murderdrones-ribbit-resident/character-canvas-review.json": "f2110ab827ea27c77fa7f38c6488a89222a3a8bfc8aa7bfe9e92da9c9d0a3ccc",
+    "docs/art-generation/next-wave-20261120/review/glitch-murderdrones-ribbit-fusion/character-canvas-review.json": "6a10a095137fd0b1d912c428e72e6ab7e114bca4481d266ce255f6ca3eb6e01f",
+    "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/selection.png": "638c8ced2802e022b25a2674dd9380757cfdff3a02b5a46acff4bda2fbe295e2",
+    "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/selection.json": "065f7c344fbdd31e5b32fce15732c950b91b0615805b996680ebda4c20cea96f",
+    "docs/art-generation/cast-next-wave-20261120/references/caferibbit/ribbit-cafe-detail.png": "7359975baf1aa8f956cfbad282f2c3a1103820519dfcae238327de91a681dc9f",
+    "assets/encore/selection/ribbit.png": "a88927f18865fb289f4d9e045fd1a75f91363f5d9b535859efbebfd4e8bf566f",
+    "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/stance.png": "b553a8a3673511308c37070e22ac5b8648df6b2a67ae5b8a9b832f3547ff1e18",
+    "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/stance.json": "1c3b62843e2f89c76bade0a42fe51bb68b5b96ba63e255f266ae1f2032f891e6",
+    "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/intro.png": "43c9a9f7fa941476090794bb0c3a52a9ff440cda784defd870e1e31f5673d64c",
+    "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/intro.json": "e8622d23d5923d880f415b2d6d307641de9e5300de632bcbdb6bbe898dee6c0f",
+    "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/attack.png": "d363d6124938290f04ae03227a6d4755a617a7ba621c4ed91f363e2ebb421fb1",
+    "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/attack.json": "1b76361647a734b40ba27ad8c45d1deed0d37489d95a00e4921557a1c980329b",
+    "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/heavy.png": "ba86c05acb6dbd5cffacc2333b39bb427a7958e86e45379a15cb776255b8d9f7",
+    "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/heavy.json": "98db3ce2c4508780503a0e2a8161657bdc922e8928c7a198a662536b774d5019",
+    "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/attempts/heavy-01.png": "67d14192251950326f96a821316beb6ed5c6a324ebb33bd5963d80c07802f4f5",
+    "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/hit.png": "2a72a6b6b12cc4a0c8a8b6ff6606c89bf738f86a1d373dc52470e7f098bfe4ee",
+    "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/hit.json": "f9902d76084ec51c8e33ee0da99e085947bb702df60b52fa5702b28152034b52",
+    "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/walk.png": "0cca789f97424558eb80f6178418ccfac61a926fb5e09c9f73886a13658ae090",
+    "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/walk.json": "1f80d32fa9f399123d201f55d0b0bac7780bf96561a7904d0dab36c4727c42f0",
+    "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/jump.png": "5a420a78e722d843554d3dd37e70e47f011e693fe8b9e927912e94bd67bd78d0",
+    "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/jump.json": "13e98e2c60aa8d7040935f88103070885bd7192fc40c83acdd57d44a739319c8",
+    "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/crouch.png": "6b91fa00359ae859fac06681f9e527c75847d4bb3b883d7514e3e0f5b9707e1d",
+    "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/crouch.json": "4cb9ed5d46b3421233e6f23740683d885f42521f03ba89dbfa826a3477121f17",
+    "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/victory.png": "102b5fb20020b7b67dc7acf5b94f14ed4b40ecd8d8c403e90cb12d6971926dd4",
+    "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/victory.json": "844c6c2e37302d264ccd7fc63abeebb1d359a51db62a864c9792b7a952b89fea",
+    "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/defeat.png": "903dec112c77b63dedd7eed348abcb3c88a143b6b99a9491a18f4cef750b9034",
+    "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/defeat.json": "2f90f258bc525021bae9ded3b7a67f447fb1700558baff75c94ce4b5185a8151",
+    "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/attempts/defeat-01.png": "9736978d3958b9cd5e721d0ec3b8e2959794e783eb366c868539dfcf54c5b4ed",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/definitions/glitch-murderdrones-ribbit-hommage.json": "04c8fffed2e11021004c8e387f318b11f459f4f5cf97a5cfa8922bbe51529e93",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/selection.png": "dd43a5386874e25da5f61b0d823c87de3d146f024c96d64091e5957355c3ef5b",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/selection.json": "951ecd9ea639e632879c50bb5dc71f9aa5faa650d7948573f2fc07bbb8b82547",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/selection.png": "ea9bf4c31ea98cc6422699abb1ad7190378bd35deb940fa0e821fd9c407b418f",
+    "assets/encore/stance/ribbit.png": "db12ab81247248b83279ecfbd74bb5472e31e8c7424fafcbd5bfb964dcc96769",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/stance.png": "6102d83c295487da3689dfe449ffdb9e4b62c20c19babd83415646e95a278f9a",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/stance.json": "8912d82f2d029822c7f20253b921103d165f890a48e29c796d5657b53cda6400",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/stance.png": "a29d6fb634765beb3ba33592764f4854bef9124bc347c6aba221295ad705963c",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/intro.png": "daa9c9327805617cccd5d4a956147c2a2d7bbb3ef592184b08802182d4067fba",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/intro.json": "469a57bc66af99f2d0e4048ed69096543ec090e79707509ac998dd77eb5634cb",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/intro.png": "d4b6fd7e3de18af7d2346bbd45acfc77c374145b298083c3f2657f8db9c911b1",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/attack.png": "13c985b85e8281c08c365ee7f1ec7123c4a97f180ebc60fa54ab195d18d8c1f7",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/attack.json": "15b31ddc3608f7e314299311661df5bc2195f988c80c4c9c3a6931b2f29f70cf",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/attack.png": "3fe9250207098ecc9ca08fb15ee9268926269e0648c898d7f714cc5f81be914f",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/heavy.png": "90cd3b607f74c4618422ba172e8ac498e37e85212cd011de1a35bdadce0b35d3",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/heavy.json": "985b25aa8474eb4d3470415b2b322cee2d94c8ca9915f0efa4681bc8c66ab2d9",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/references/official-iconic-ribbit.png": "d62ee29c8d07410db6ddfdde22965b719a305e9d6ec08aa1c48ab1788a6ce825",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/references/official-uzi-front.png": "a4cd219899ce902fdf07e5545b5691b874df46776b82c106fbea48daeac1f162",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/hit.png": "67cb91d7585795e8436d6d317f09ba714786cf42fa5163ece0cf9c05d04d807c",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/hit.json": "428862709a22e6ee5d257f4d228f603c20eaf230ecd184ba71102327ac8ebc01",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/hit-correction-02/hit.png": "5cf4237971e44751e509c8ec2556e26c18f48b9b1341c935194a296428bff52e",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/hit.png": "842c55a77b7c5b087f7ac46ec662f7853414c293233d0d2b808e602900d81d2a",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/walk.png": "c3c0881fd9e5833eaeb6f49a86db52d91d242c97d92a2b4989a30d4ec52af418",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/walk.json": "e676633cfa7a002678a5c9fdf9a6488627f4a4364a34399db8797f9826262b54",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/jump.png": "7990c365e9d19c3337815b36f9544408ce549634bfb2275dc2bba6a1ce167c53",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/jump.json": "de73906dc90c8bb991be456afaa20a0ae9cad37a67edb5eaf42ce228ba778834",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/jump.png": "5b44236ee5577d71fea24cac12ec6cad20d09af368d3eee9436395d25516237e",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/crouch.png": "e76f856d3a9ed50312204c9b10ca63cec8179a6310497f9491028284e4a29ba8",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/crouch.json": "1415be86323562800125ab70151c38b86166653c15770ab4895266deae527c80",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/crouch.png": "b0b9bba19eb38ea27e356624ac5491df21295f152987cf3953c96cfac96919c0",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/victory.png": "43ecd2b83b7c132a83ac0c2301879f01901dfd6f0710822a540263a4ca12733c",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/victory.json": "7e91e97ba92e7d2892cc7ef20d0e3a1ddb958dbe92d33fb1166deb15e09da2bb",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/defeat.png": "944594d769172882bf175f6927efad3e33e883cfd583f36e5a98654aea2390e4",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/defeat.json": "b5d8297abdc4f0c60cb0cca25ac7c674f422cee2f20909ad47ff0ebfe3d22f98",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/defeat.png": "047149da8e96fd666656bdc7350605297b9d5b1a74e62d17b55baa023a4366a0",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/definitions/glitch-murderdrones-ribbit-resident.json": "3a2fc2646759c1d3c2e895eb6c907c29ed171bf834554938338a985348fcc973",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/selection.png": "fe3c01b6b6d57bc532af4ce7d9114f93a804146d38b4a0263a3f06876618b686",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/selection.json": "58cf3ef4f7964b179681603d1763d19a9b4f93de08ce3d596c9bcab074cd1981",
+    "assets/encore/crossovers/murderdrones/pomni/resident/selection.webp": "356c3c5dd37ce1843cf260a0c8a99412b44176bf9ad35e1088fae4a928cab8dc",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/stance.png": "3cdffc3f01e48fe77f0c66c045eb258b6337f53e5734fb742b20ee7b3c317a5b",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/stance.json": "eff4f8663e187d24d23ce6594d0a0752601be4ff519ff66ca39950a7d07e1094",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/intro.png": "f219e23a39874d0de4ce45691da6d95ce49fd5cc482523f2732787bdec5b25ec",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/intro.json": "44f36cad1051331611f1724b19b184ceebe0503724a769718f3e19a42d79c512",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/attempts/intro-01.png": "688b2c9c3aafd282ab799ee7ea80c879c3721ce23e5744186c478b75fa78370a",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/attack.png": "d82aabde2a0a935df7f6e41ee2bdb0284e4d878311f7730a1a7653ba99e8b0b5",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/attack.json": "0f4c979e22eeb99403d63fe1ccc3833208a492f5869a8de7959f9e7b80fbf96e",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/heavy.png": "1c551bc99c22b29513e919a113c2691ff1c553253753c39dca444895ae2fcbff",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/heavy.json": "63608950da5917f937f3e54bd54cf10c8316e3c87e9297b90a37382b6819c691",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/hit.png": "4240b2e593e5c9f04d03041f4f0a1bc093b0a70a086365a113ad54be8b5953b6",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/hit.json": "9800833de366dcb68f5f5824060888b67602a38fe36916724b9ac19ff747f016",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/walk.png": "ad601e57df0543e6a41852b338f70d0600e1370cab187e020b91e342dd0e15ac",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/walk.json": "cf047939b3c54c3dd0a636a99dd060bde7860dae8e03a8da4419c64446fad71a",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/jump.png": "3539017a11b0fda003f34867c69126abfd41ba112fdad4e95898595cb2d7e54a",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/jump.json": "ff2339dee6afbecb60d5eb9487a7e441807279ad35173a38b0d4920e321fc817",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/attempts/jump-01.png": "08837f8c8d7a34d8f96ab251a9eb8086912fea3db14e8cd810b7d5d6d67601df",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/crouch.png": "3c35deeef6d0be94d4a0900e2a5ec4bd40281e9fa5d91392f134f6ad26b5ce6e",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/crouch.json": "3c2062971edf97fd3722ab7f7b47375f424e60403b8ee2d32c128e98c242d54f",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/attempts/crouch-01.png": "ef49791117078e6d65c93350686c1c9c67ed5d9752a2bf5214dbaef0b369fec6",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/victory.png": "79d35d5c3a7694302d7abb5ef8c1a855164a278dfb6104b7542ba8f12ba41eeb",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/victory.json": "7d553b70dfcdb0c07da11a7aa82941da9d987762898e8a882ea14246cb69e6e6",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/defeat.png": "ffac04a093aa65513db7f58307fc8071118f354ba6b4aa4e2d0ff0e80cfdb3d0",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/defeat.json": "9876efc3aeef3dba3db52c5e561c07663c4284a952e20884c35bc90b91759b90",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/definitions/glitch-murderdrones-ribbit-fusion.json": "13a3808fa1c1b21767e5aa4eb26362a57d7a8005a8b44c0129941fbafddf672d",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/selection.png": "b4aeaf8ad54544eac7640f87603501ac3b7e3b8e0bfa4e68ef76b993c136968e",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/selection.json": "5e86292af1409e66d2acd462c51942b805d9726bc7f8ab39b0c22ebecd7fcb98",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/stance.png": "caf3b3f409ed6cec5c9c1beb1c7aeae19e951d3664f4cd52650081ce5c780111",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/stance.json": "b49979474c0b5ad0dae6f64536f1151c577c2e5ae0cb49c5404bf1cc9f94372d",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/intro.png": "6e26008bb918bcc2e48c723d9ed180e1eed79fdd49883f25f75fdaa3bf52c1c5",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/intro.json": "fa0c862d07e957408769100a94fd4e50fd45239c18f71456abe828cec198ab62",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/attack.png": "6ef768cadd1f4f694d4edaec0698b64841ad987c14956d839767403a9adc8040",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/attack.json": "c988bf06e6523a305a5b4657b077f4d809a7e7bc281313112313308a1ed296f2",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/heavy.png": "886b61a7d2313cdca74d35a0040118ed0faed8583e10554bc7f67ed3636457e5",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/heavy.json": "fc98a3bcf9536b6ded47cfc99b0475cd846fda06f927ccf8202d1f7f43fa0348",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/hit.png": "18666434c7a7e1b82f504203b69f15de314209aaa432b7b7d4a0edb86edab897",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/hit.json": "1d43d0244fbcd2e7fbf770b0ae5ae999e2924bb80845cdb1372916cbff04c95e",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/attempts/hit-01.png": "2fa981bd82b57e5da47ae2c0d0afba5cc31a6a2e68bfba7529e50c882c49be34",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/walk.png": "bf8b75b671fbbf9d3b01d07d2ef56cb0c45d6c3731c2c1fe915b381f83cc53dd",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/walk.json": "b005e591ab404eaff138a9e6fb83de38ef3042a7aae39a2cdb6cac048fba1a4b",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/jump.png": "aa14d384551b950d464672b0fafe7b3a18b0d0388f8e44bf649bfdd882c70c04",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/jump.json": "3242b49fae267174478fc88c3d1c9e21f28ede1230eb5e50bac213ad0e012017",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/crouch.png": "ad1b7d467c845c204ba7737c1a2746b3040fb941910e0cc0623a4062470a8528",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/crouch.json": "5625ff449c82b123e819fa4b5d7ec6320a64b830a0030eb210b4c2247dc7e288",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/victory.png": "67d4f944fdc33b14d4983510fc546d24eac57cacaff2c9484c2565f26034bdd1",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/victory.json": "426012aa030fe8cc967d597430196ad75ba2c261bce25a24e3d01c91f8666075",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/attempts/victory-01.png": "22fb957a3821c5d64af51bd31f7a5def5aef1838cfc38a1bb2d18307bccde3b3",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/defeat.png": "73864da647baf49463c57a30ae817a119287467c7644db2d19974e76037aea83",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/defeat.json": "4f5ffdd4a70db86c75c94e951f640a0ee1467722793d9100d8e5a29a40c9192e",
+    "docs/art-generation/stage-next-wave-20261120/references/episode5-storyboard-L3-M7.jpg": "66fffd5d73e5a6bbe8df4fc8959fc06bac41a2c84fba7528c3c6ac40853e9295",
+    "docs/art-generation/stage-next-wave-20261120/references/episode5-storyboard-L3-M11.jpg": "def97ccad574da19c3d7a08fe8c1f934509575c1eb7a8a1eca3578c749872877",
+    "docs/art-generation/stage-next-wave-20261120/references/episode5-storyboard-L3-M10.jpg": "6a7fa1d3c4d1f6656c720053e46a073c290d0619eaee1785617e7e2bc8ac287f",
+    "docs/art-generation/stage-next-wave-20261120/native/far.png": "e051e8cf276e3dc440dc81220d1af46cdcbae82f7d8ba026d2f44cebf2ac38d1",
+    "docs/art-generation/stage-next-wave-20261120/native/mid.png": "77b6bdc2dccafb7d78557396d81ba27120d852e540566587f47542ac2a811713",
+    "docs/art-generation/stage-next-wave-20261120/native/near.png": "44c6343da751ef851ad57ef0af72adf435ce0f256b0557d523316144f59516f1"
+  },
+  "runtimeManifest": {
+    "offlineVersion": "0.7.0-087fd3609c69",
+    "artVersion": "0c178f8964773da7",
+    "artFiles": 5816,
+    "artBytes": 3118619440,
+    "sha256": "583ff9fc856c355d153eaba75ef4558f207094680136abcdab06d3fbc532bc1e"
+  },
+  "counts": {
+    "fighters": 54,
+    "moves": 540,
+    "stages": 24,
+    "modes": 9,
+    "atlas": 179,
+    "variants": 472,
+    "archiveOnly": 74,
+    "storyRoutes": 54,
+    "storyChapters": 216,
+    "storyPanels": 324,
+    "storyBriefings": 216,
+    "musicThemes": 24,
+    "soundEffects": 26,
+    "offlineImages": 5816,
+    "offlineBytes": 3118619440,
+    "features": 106,
+    "production": 3242,
+    "scenarios": 348,
+    "qa": 2389,
+    "presentationSequences": 270,
+    "animatedStages": 24,
+    "rebuiltStages": 3,
+    "refinedCostumes": 20,
+    "costumeReplacementSheets": 5,
+    "finishers": 162,
+    "audioAmbiences": 24,
+    "archiveVariants": 51,
+    "dedicatedStages": 54,
+    "friendships": 54,
+    "costumeAdditions": 40,
+    "pendingCostumeAdditions": 0,
+    "pendingCostumeArtFiles": 0,
+    "crossovers": 381,
+    "sheets": 11,
+    "nativeTables": 10,
+    "sources": 157,
+    "addedProductionRows": 54,
+    "addedQaRows": 54,
+    "addedSourceRows": 4,
+    "addedStageRows": 1,
+    "costumePngs": 440,
+    "crossoverCostumes": 381,
+    "crossoverDrawings": 3814,
+    "newIndividualDrawingRows": 44,
+    "historicalCells": 80346,
+    "totalNativeCells": 81412
+  },
+  "formulas": [
+    {
+      "cell": "B7",
+      "formula": "=COUNTA('Combattants'!A6:A59)",
+      "value": 54
+    },
+    {
+      "cell": "B8",
+      "formula": "=COUNTA('Techniques'!A6:A545)",
+      "value": 540
+    },
+    {
+      "cell": "B9",
+      "formula": "=COUNTA('Arènes'!A6:A29)",
+      "value": 24
+    },
+    {
+      "cell": "B10",
+      "formula": "=COUNTA('Atlas'!A6:A184)",
+      "value": 179
+    },
+    {
+      "cell": "B11",
+      "formula": "=COUNTIFS('Atlas'!C6:C184,\"Variante visuelle\")+COUNTIFS('Production'!B6:B3247,\"Costume crossover\")+COUNTIFS('Production'!B6:B3247,\"Tenue Circus\")",
+      "value": 472
+    },
+    {
+      "cell": "B12",
+      "formula": "=COUNTIFS('Production'!B6:B3247,\"Arrangement d’arène\")",
+      "value": 54
+    },
+    {
+      "cell": "B15",
+      "formula": "=COUNTIFS('Fonctionnalités'!D$6:D$111,B$14)",
+      "value": 85
+    },
+    {
+      "cell": "C15",
+      "formula": "=COUNTIFS('Fonctionnalités'!D$6:D$111,C$14)",
+      "value": 7
+    },
+    {
+      "cell": "D15",
+      "formula": "=COUNTIFS('Fonctionnalités'!D$6:D$111,D$14)",
+      "value": 12
+    },
+    {
+      "cell": "E15",
+      "formula": "=COUNTIFS('Fonctionnalités'!D$6:D$111,E$14)",
+      "value": 2
+    },
+    {
+      "cell": "F15",
+      "formula": "=COUNTA('Fonctionnalités'!A6:A111)",
+      "value": 106
+    },
+    {
+      "cell": "B16",
+      "formula": "=COUNTIFS('Production'!E$6:E$3247,B$14)",
+      "value": 2062
+    },
+    {
+      "cell": "C16",
+      "formula": "=COUNTIFS('Production'!E$6:E$3247,C$14)",
+      "value": 957
+    },
+    {
+      "cell": "D16",
+      "formula": "=COUNTIFS('Production'!E$6:E$3247,D$14)",
+      "value": 54
+    },
+    {
+      "cell": "E16",
+      "formula": "=COUNTIFS('Production'!E$6:E$3247,E$14)",
+      "value": 169
+    },
+    {
+      "cell": "F16",
+      "formula": "=COUNTA('Production'!A6:A3247)",
+      "value": 3242
+    },
+    {
+      "cell": "B17",
+      "formula": "=COUNTIFS('Scénarios'!H$6:H$353,B$14)",
+      "value": 343
+    },
+    {
+      "cell": "C17",
+      "formula": "=COUNTIFS('Scénarios'!H$6:H$353,C$14)",
+      "value": 0
+    },
+    {
+      "cell": "D17",
+      "formula": "=COUNTIFS('Scénarios'!H$6:H$353,D$14)",
+      "value": 4
+    },
+    {
+      "cell": "E17",
+      "formula": "=COUNTIFS('Scénarios'!H$6:H$353,E$14)",
+      "value": 1
+    },
+    {
+      "cell": "F17",
+      "formula": "=COUNTA('Scénarios'!A6:A353)",
+      "value": 348
+    },
+    {
+      "cell": "B18",
+      "formula": "=COUNTIFS('Atlas'!E$6:E$184,B$14)",
+      "value": 105
+    },
+    {
+      "cell": "C18",
+      "formula": "=COUNTIFS('Atlas'!E$6:E$184,C$14)",
+      "value": 74
+    },
+    {
+      "cell": "D18",
+      "formula": "=COUNTIFS('Atlas'!E$6:E$184,D$14)",
+      "value": 0
+    },
+    {
+      "cell": "E18",
+      "formula": "=COUNTIFS('Atlas'!E$6:E$184,E$14)",
+      "value": 0
+    },
+    {
+      "cell": "F18",
+      "formula": "=COUNTA('Atlas'!A6:A184)",
+      "value": 179
+    },
+    {
+      "cell": "H19",
+      "formula": "=COUNTIFS('Scénarios'!B6:B353,\"Route individuelle\")&\" routes et \"&COUNTIFS('Production'!B6:B3247,\"Tableau d’histoire\")&\" tableaux\"",
+      "value": "54 routes et 324 tableaux"
+    },
+    {
+      "cell": "H20",
+      "formula": "=COUNTIFS('Production'!B6:B3247,\"Briefing illustré\")&\" briefings de rencontre\"",
+      "value": "216 briefings de rencontre"
+    },
+    {
+      "cell": "H21",
+      "formula": "=COUNTIFS('Production'!B6:B3247,\"Arène\",'Production'!D6:D3247,\"Musique de l’arène\")&\" thèmes musicaux d’arènes\"",
+      "value": "24 thèmes musicaux d’arènes"
+    },
+    {
+      "cell": "B22",
+      "formula": "=COUNTIFS('QA'!D6:D2394,B21)",
+      "value": 2371
+    },
+    {
+      "cell": "C22",
+      "formula": "=COUNTIFS('QA'!D6:D2394,C21)",
+      "value": 0
+    },
+    {
+      "cell": "D22",
+      "formula": "=COUNTIFS('QA'!D6:D2394,D21)",
+      "value": 15
+    },
+    {
+      "cell": "E22",
+      "formula": "=COUNTIFS('QA'!D6:D2394,E21)",
+      "value": 2
+    },
+    {
+      "cell": "F22",
+      "formula": "=COUNTA('QA'!A6:A2394)",
+      "value": 2389
+    },
+    {
+      "cell": "H22",
+      "formula": "=COUNTIFS('Production'!B6:B3247,\"Motif sonore\")&\" motifs sonores synthétiques\"",
+      "value": "26 motifs sonores synthétiques"
+    },
+    {
+      "cell": "B23",
+      "formula": "=COUNTIFS('QA'!D6:D2394,\"Partiel\")",
+      "value": 1
+    },
+    {
+      "cell": "H23",
+      "formula": "=COUNTIFS('Production'!B6:B3247,\"Présentation individuelle\")&\" séquences de présentation\"",
+      "value": "270 séquences de présentation"
+    },
+    {
+      "cell": "H24",
+      "formula": "=COUNTIFS('Production'!B6:B3247,\"Animation d’arène\")&\" ambiances visuelles animées\"",
+      "value": "24 ambiances visuelles animées"
+    },
+    {
+      "cell": "H25",
+      "formula": "=COUNTIFS('Production'!B6:B3247,\"Costume\")&\" costumes historiques redessinés\"",
+      "value": "20 costumes historiques redessinés"
+    },
+    {
+      "cell": "H27",
+      "formula": "=B7+B8+B9+COUNTIFS('Atlas'!C6:C184,\"Variante visuelle\")+COUNTIFS('Production'!B6:B3247,\"Tenue Circus\")&\" fiches, hors tenues crossover\"",
+      "value": "709 fiches, hors tenues crossover"
+    },
+    {
+      "cell": "H31",
+      "formula": "=COUNTIFS('Production'!B6:B3247,\"Finition visuelle\")&\" présentations de KO\"",
+      "value": "162 présentations de KO"
+    },
+    {
+      "cell": "H32",
+      "formula": "=COUNTIFS('Production'!B6:B3247,\"Arène\",'Production'!D6:D3247,\"Ambiance sonore\",'Production'!E6:E3247,\"Implémenté\")&\" ambiances sonores originales\"",
+      "value": "24 ambiances sonores originales"
+    }
+  ],
+  "statusMutationCell": "E3194",
+  "scopes": [
+    [
+      "Synthèse",
+      "A1:H18",
+      "summary-top"
+    ],
+    [
+      "Synthèse",
+      "A19:H35",
+      "summary-bottom"
+    ],
+    [
+      "Arènes",
+      "A29:L29",
+      "stage-left"
+    ],
+    [
+      "Arènes",
+      "M29:T29",
+      "stage-right"
+    ],
+    [
+      "Fonctionnalités",
+      "A61:I61",
+      "feature-pre-02"
+    ],
+    [
+      "Fonctionnalités",
+      "A62:I62",
+      "feature-pre-03"
+    ],
+    [
+      "Fonctionnalités",
+      "A95:I95",
+      "feature-prd-11"
+    ],
+    [
+      "Fonctionnalités",
+      "A68:I68",
+      "feature-pre-09"
+    ],
+    [
+      "Fonctionnalités",
+      "A101:I101",
+      "feature-pre-17"
+    ],
+    [
+      "Fonctionnalités",
+      "A107:I107",
+      "feature-pre-21"
+    ],
+    [
+      "Production",
+      "A3194:J3197",
+      "production-1"
+    ],
+    [
+      "Production",
+      "A3198:J3201",
+      "production-2"
+    ],
+    [
+      "Production",
+      "A3202:J3205",
+      "production-3"
+    ],
+    [
+      "Production",
+      "A3206:J3209",
+      "production-4"
+    ],
+    [
+      "Production",
+      "A3210:J3213",
+      "production-5"
+    ],
+    [
+      "Production",
+      "A3214:J3217",
+      "production-6"
+    ],
+    [
+      "Production",
+      "A3218:J3221",
+      "production-7"
+    ],
+    [
+      "Production",
+      "A3222:J3225",
+      "production-8"
+    ],
+    [
+      "Production",
+      "A3226:J3229",
+      "production-9"
+    ],
+    [
+      "Production",
+      "A3230:J3233",
+      "production-10"
+    ],
+    [
+      "Production",
+      "A3234:J3237",
+      "production-11"
+    ],
+    [
+      "Production",
+      "A3238:J3241",
+      "production-12"
+    ],
+    [
+      "Production",
+      "A3242:J3245",
+      "production-13"
+    ],
+    [
+      "Production",
+      "A3246:J3247",
+      "production-14"
+    ],
+    [
+      "QA",
+      "A2341:I2344",
+      "qa-1"
+    ],
+    [
+      "QA",
+      "A2345:I2348",
+      "qa-2"
+    ],
+    [
+      "QA",
+      "A2349:I2352",
+      "qa-3"
+    ],
+    [
+      "QA",
+      "A2353:I2356",
+      "qa-4"
+    ],
+    [
+      "QA",
+      "A2357:I2360",
+      "qa-5"
+    ],
+    [
+      "QA",
+      "A2361:I2364",
+      "qa-6"
+    ],
+    [
+      "QA",
+      "A2365:I2368",
+      "qa-7"
+    ],
+    [
+      "QA",
+      "A2369:I2372",
+      "qa-8"
+    ],
+    [
+      "QA",
+      "A2373:I2376",
+      "qa-9"
+    ],
+    [
+      "QA",
+      "A2377:I2380",
+      "qa-10"
+    ],
+    [
+      "QA",
+      "A2381:I2384",
+      "qa-11"
+    ],
+    [
+      "QA",
+      "A2385:I2388",
+      "qa-12"
+    ],
+    [
+      "QA",
+      "A2389:I2392",
+      "qa-13"
+    ],
+    [
+      "QA",
+      "A2393:I2394",
+      "qa-14"
+    ],
+    [
+      "Références",
+      "A159:E162",
+      "references-new"
+    ],
+    [
+      "Références",
+      "A64:E64",
+      "references-offline"
+    ],
+    [
+      "Références",
+      "A163:E173",
+      "references-footer"
+    ],
+    [
+      "Références",
+      "A63:E63",
+      "source-music"
+    ],
+    [
+      "Références",
+      "A60:E60",
+      "source-stage-ambiences"
+    ],
+    [
+      "Références",
+      "A67:E67",
+      "source-audio-ambiences-07"
+    ]
+  ],
+  "historicalFooterShift": 4,
+  "assetSlotChecks": [
+    {
+      "appearanceId": "caferibbit",
+      "slot": "selection",
+      "file": "assets/encore/selection/caferibbit.png",
+      "archiveFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/selection.png",
+      "receiptFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/selection.json",
+      "sha256": "638c8ced2802e022b25a2674dd9380757cfdff3a02b5a46acff4bda2fbe295e2",
+      "bytes": 1495892,
+      "productionId": "WAVE30-caferibbit-selection",
+      "qaId": "WAVE30-asset-caferibbit-selection",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        96,
+        21,
+        770,
+        1523
+      ]
+    },
+    {
+      "appearanceId": "caferibbit",
+      "slot": "stance",
+      "file": "assets/encore/stance/caferibbit.png",
+      "archiveFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/stance.png",
+      "receiptFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/stance.json",
+      "sha256": "b553a8a3673511308c37070e22ac5b8648df6b2a67ae5b8a9b832f3547ff1e18",
+      "bytes": 1534954,
+      "productionId": "WAVE30-caferibbit-stance",
+      "qaId": "WAVE30-asset-caferibbit-stance",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        142,
+        82,
+        879,
+        1503
+      ]
+    },
+    {
+      "appearanceId": "caferibbit",
+      "slot": "intro",
+      "file": "assets/encore/poses/caferibbit/intro.png",
+      "archiveFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/intro.png",
+      "receiptFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/intro.json",
+      "sha256": "43c9a9f7fa941476090794bb0c3a52a9ff440cda784defd870e1e31f5673d64c",
+      "bytes": 1458643,
+      "productionId": "WAVE30-caferibbit-intro",
+      "qaId": "WAVE30-asset-caferibbit-intro",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        109,
+        59,
+        960,
+        1509
+      ]
+    },
+    {
+      "appearanceId": "caferibbit",
+      "slot": "attack",
+      "file": "assets/encore/poses/caferibbit/attack.png",
+      "archiveFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/attack.png",
+      "receiptFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/attack.json",
+      "sha256": "d363d6124938290f04ae03227a6d4755a617a7ba621c4ed91f363e2ebb421fb1",
+      "bytes": 791622,
+      "productionId": "WAVE30-caferibbit-attack",
+      "qaId": "WAVE30-asset-caferibbit-attack",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        110,
+        45,
+        1124,
+        1293
+      ]
+    },
+    {
+      "appearanceId": "caferibbit",
+      "slot": "heavy",
+      "file": "assets/encore/poses/caferibbit/heavy.png",
+      "archiveFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/heavy.png",
+      "receiptFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/heavy.json",
+      "sha256": "ba86c05acb6dbd5cffacc2333b39bb427a7958e86e45379a15cb776255b8d9f7",
+      "bytes": 781909,
+      "productionId": "WAVE30-caferibbit-heavy",
+      "qaId": "WAVE30-asset-caferibbit-heavy",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1205,
+        1305
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        48,
+        42,
+        1159,
+        1278
+      ]
+    },
+    {
+      "appearanceId": "caferibbit",
+      "slot": "hit",
+      "file": "assets/encore/poses/caferibbit/hit.png",
+      "archiveFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/hit.png",
+      "receiptFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/hit.json",
+      "sha256": "2a72a6b6b12cc4a0c8a8b6ff6606c89bf738f86a1d373dc52470e7f098bfe4ee",
+      "bytes": 1544665,
+      "productionId": "WAVE30-caferibbit-hit",
+      "qaId": "WAVE30-asset-caferibbit-hit",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        110,
+        97,
+        931,
+        1502
+      ]
+    },
+    {
+      "appearanceId": "caferibbit",
+      "slot": "walk",
+      "file": "assets/encore/poses/caferibbit/walk.png",
+      "archiveFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/walk.png",
+      "receiptFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/walk.json",
+      "sha256": "0cca789f97424558eb80f6178418ccfac61a926fb5e09c9f73886a13658ae090",
+      "bytes": 1566034,
+      "productionId": "WAVE30-caferibbit-walk",
+      "qaId": "WAVE30-asset-caferibbit-walk",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        95,
+        39,
+        924,
+        1504
+      ]
+    },
+    {
+      "appearanceId": "caferibbit",
+      "slot": "jump",
+      "file": "assets/encore/poses/caferibbit/jump.png",
+      "archiveFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/jump.png",
+      "receiptFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/jump.json",
+      "sha256": "5a420a78e722d843554d3dd37e70e47f011e693fe8b9e927912e94bd67bd78d0",
+      "bytes": 1555510,
+      "productionId": "WAVE30-caferibbit-jump",
+      "qaId": "WAVE30-asset-caferibbit-jump",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        152,
+        64,
+        966,
+        1488
+      ]
+    },
+    {
+      "appearanceId": "caferibbit",
+      "slot": "crouch",
+      "file": "assets/encore/poses/caferibbit/crouch.png",
+      "archiveFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/crouch.png",
+      "receiptFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/crouch.json",
+      "sha256": "6b91fa00359ae859fac06681f9e527c75847d4bb3b883d7514e3e0f5b9707e1d",
+      "bytes": 938347,
+      "productionId": "WAVE30-caferibbit-crouch",
+      "qaId": "WAVE30-asset-caferibbit-crouch",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        165,
+        35,
+        966,
+        1297
+      ]
+    },
+    {
+      "appearanceId": "caferibbit",
+      "slot": "victory",
+      "file": "assets/encore/poses/caferibbit/victory.png",
+      "archiveFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/victory.png",
+      "receiptFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/victory.json",
+      "sha256": "102b5fb20020b7b67dc7acf5b94f14ed4b40ecd8d8c403e90cb12d6971926dd4",
+      "bytes": 1498244,
+      "productionId": "WAVE30-caferibbit-victory",
+      "qaId": "WAVE30-asset-caferibbit-victory",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        192,
+        34,
+        915,
+        1521
+      ]
+    },
+    {
+      "appearanceId": "caferibbit",
+      "slot": "defeat",
+      "file": "assets/encore/poses/caferibbit/defeat.png",
+      "archiveFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/defeat.png",
+      "receiptFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/defeat.json",
+      "sha256": "903dec112c77b63dedd7eed348abcb3c88a143b6b99a9491a18f4cef750b9034",
+      "bytes": 886210,
+      "productionId": "WAVE30-caferibbit-defeat",
+      "qaId": "WAVE30-asset-caferibbit-defeat",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1207,
+        1303
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        135,
+        80,
+        974,
+        1255
+      ]
+    },
+    {
+      "appearanceId": "glitch-murderdrones-ribbit-hommage",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/selection.png",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/selection.png",
+      "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/selection.json",
+      "sha256": "dd43a5386874e25da5f61b0d823c87de3d146f024c96d64091e5957355c3ef5b",
+      "bytes": 1435680,
+      "productionId": "WAVE30-glitch-murderdrones-ribbit-hommage-selection",
+      "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-hommage-selection",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        76,
+        34,
+        965,
+        1517
+      ]
+    },
+    {
+      "appearanceId": "glitch-murderdrones-ribbit-hommage",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/stance.png",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/stance.png",
+      "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/stance.json",
+      "sha256": "6102d83c295487da3689dfe449ffdb9e4b62c20c19babd83415646e95a278f9a",
+      "bytes": 732645,
+      "productionId": "WAVE30-glitch-murderdrones-ribbit-hommage-stance",
+      "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-hommage-stance",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        160,
+        31,
+        1069,
+        1236
+      ]
+    },
+    {
+      "appearanceId": "glitch-murderdrones-ribbit-hommage",
+      "slot": "intro",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/intro.png",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/intro.png",
+      "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/intro.json",
+      "sha256": "daa9c9327805617cccd5d4a956147c2a2d7bbb3ef592184b08802182d4067fba",
+      "bytes": 724483,
+      "productionId": "WAVE30-glitch-murderdrones-ribbit-hommage-intro",
+      "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-hommage-intro",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        211,
+        19,
+        1026,
+        1239
+      ]
+    },
+    {
+      "appearanceId": "glitch-murderdrones-ribbit-hommage",
+      "slot": "attack",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/attack.png",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/attack.png",
+      "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/attack.json",
+      "sha256": "13c985b85e8281c08c365ee7f1ec7123c4a97f180ebc60fa54ab195d18d8c1f7",
+      "bytes": 1228713,
+      "productionId": "WAVE30-glitch-murderdrones-ribbit-hommage-attack",
+      "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-hommage-attack",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        253,
+        17,
+        1170,
+        1017
+      ]
+    },
+    {
+      "appearanceId": "glitch-murderdrones-ribbit-hommage",
+      "slot": "heavy",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/heavy.png",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/heavy.png",
+      "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/heavy.json",
+      "sha256": "90cd3b607f74c4618422ba172e8ac498e37e85212cd011de1a35bdadce0b35d3",
+      "bytes": 1155353,
+      "productionId": "WAVE30-glitch-murderdrones-ribbit-hommage-heavy",
+      "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-hommage-heavy",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        347,
+        19,
+        1205,
+        1014
+      ]
+    },
+    {
+      "appearanceId": "glitch-murderdrones-ribbit-hommage",
+      "slot": "hit",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/hit.png",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/hit.png",
+      "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/hit.json",
+      "sha256": "67cb91d7585795e8436d6d317f09ba714786cf42fa5163ece0cf9c05d04d807c",
+      "bytes": 748844,
+      "productionId": "WAVE30-glitch-murderdrones-ribbit-hommage-hit",
+      "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-hommage-hit",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        172,
+        45,
+        935,
+        1237
+      ]
+    },
+    {
+      "appearanceId": "glitch-murderdrones-ribbit-hommage",
+      "slot": "walk",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/walk.png",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/walk.png",
+      "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/walk.json",
+      "sha256": "c3c0881fd9e5833eaeb6f49a86db52d91d242c97d92a2b4989a30d4ec52af418",
+      "bytes": 682248,
+      "productionId": "WAVE30-glitch-murderdrones-ribbit-hommage-walk",
+      "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-hommage-walk",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        238,
+        17,
+        1011,
+        1236
+      ]
+    },
+    {
+      "appearanceId": "glitch-murderdrones-ribbit-hommage",
+      "slot": "jump",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/jump.png",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/jump.png",
+      "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/jump.json",
+      "sha256": "7990c365e9d19c3337815b36f9544408ce549634bfb2275dc2bba6a1ce167c53",
+      "bytes": 760662,
+      "productionId": "WAVE30-glitch-murderdrones-ribbit-hommage-jump",
+      "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-hommage-jump",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        149,
+        11,
+        1085,
+        1162
+      ]
+    },
+    {
+      "appearanceId": "glitch-murderdrones-ribbit-hommage",
+      "slot": "crouch",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/crouch.png",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/crouch.png",
+      "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/crouch.json",
+      "sha256": "e76f856d3a9ed50312204c9b10ca63cec8179a6310497f9491028284e4a29ba8",
+      "bytes": 903887,
+      "productionId": "WAVE30-glitch-murderdrones-ribbit-hommage-crouch",
+      "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-hommage-crouch",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        124,
+        52,
+        1107,
+        1225
+      ]
+    },
+    {
+      "appearanceId": "glitch-murderdrones-ribbit-hommage",
+      "slot": "victory",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/victory.png",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/victory.png",
+      "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/victory.json",
+      "sha256": "43ecd2b83b7c132a83ac0c2301879f01901dfd6f0710822a540263a4ca12733c",
+      "bytes": 1371435,
+      "productionId": "WAVE30-glitch-murderdrones-ribbit-hommage-victory",
+      "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-hommage-victory",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        119,
+        37,
+        858,
+        1510
+      ]
+    },
+    {
+      "appearanceId": "glitch-murderdrones-ribbit-hommage",
+      "slot": "defeat",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/defeat.png",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/defeat.png",
+      "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/defeat.json",
+      "sha256": "944594d769172882bf175f6927efad3e33e883cfd583f36e5a98654aea2390e4",
+      "bytes": 775116,
+      "productionId": "WAVE30-glitch-murderdrones-ribbit-hommage-defeat",
+      "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-hommage-defeat",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        178,
+        51,
+        1016,
+        1223
+      ]
+    },
+    {
+      "appearanceId": "glitch-murderdrones-ribbit-resident",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/resident/selection.png",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/selection.png",
+      "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/selection.json",
+      "sha256": "fe3c01b6b6d57bc532af4ce7d9114f93a804146d38b4a0263a3f06876618b686",
+      "bytes": 1524779,
+      "productionId": "WAVE30-glitch-murderdrones-ribbit-resident-selection",
+      "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-resident-selection",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        112,
+        43,
+        948,
+        1501
+      ]
+    },
+    {
+      "appearanceId": "glitch-murderdrones-ribbit-resident",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/resident/stance.png",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/stance.png",
+      "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/stance.json",
+      "sha256": "3cdffc3f01e48fe77f0c66c045eb258b6337f53e5734fb742b20ee7b3c317a5b",
+      "bytes": 948345,
+      "productionId": "WAVE30-glitch-murderdrones-ribbit-resident-stance",
+      "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-resident-stance",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        46,
+        39,
+        1154,
+        1289
+      ]
+    },
+    {
+      "appearanceId": "glitch-murderdrones-ribbit-resident",
+      "slot": "intro",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/resident/intro.png",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/intro.png",
+      "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/intro.json",
+      "sha256": "f219e23a39874d0de4ce45691da6d95ce49fd5cc482523f2732787bdec5b25ec",
+      "bytes": 1487206,
+      "productionId": "WAVE30-glitch-murderdrones-ribbit-resident-intro",
+      "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-resident-intro",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        103,
+        38,
+        946,
+        1492
+      ]
+    },
+    {
+      "appearanceId": "glitch-murderdrones-ribbit-resident",
+      "slot": "attack",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/resident/attack.png",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/attack.png",
+      "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/attack.json",
+      "sha256": "d82aabde2a0a935df7f6e41ee2bdb0284e4d878311f7730a1a7653ba99e8b0b5",
+      "bytes": 1385550,
+      "productionId": "WAVE30-glitch-murderdrones-ribbit-resident-attack",
+      "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-resident-attack",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        121,
+        16,
+        1330,
+        1015
+      ]
+    },
+    {
+      "appearanceId": "glitch-murderdrones-ribbit-resident",
+      "slot": "heavy",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/resident/heavy.png",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/heavy.png",
+      "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/heavy.json",
+      "sha256": "1c551bc99c22b29513e919a113c2691ff1c553253753c39dca444895ae2fcbff",
+      "bytes": 1509732,
+      "productionId": "WAVE30-glitch-murderdrones-ribbit-resident-heavy",
+      "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-resident-heavy",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        49,
+        69,
+        975,
+        1497
+      ]
+    },
+    {
+      "appearanceId": "glitch-murderdrones-ribbit-resident",
+      "slot": "hit",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/resident/hit.png",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/hit.png",
+      "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/hit.json",
+      "sha256": "4240b2e593e5c9f04d03041f4f0a1bc093b0a70a086365a113ad54be8b5953b6",
+      "bytes": 1603205,
+      "productionId": "WAVE30-glitch-murderdrones-ribbit-resident-hit",
+      "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-resident-hit",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        33,
+        79,
+        928,
+        1492
+      ]
+    },
+    {
+      "appearanceId": "glitch-murderdrones-ribbit-resident",
+      "slot": "walk",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/resident/walk.png",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/walk.png",
+      "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/walk.json",
+      "sha256": "ad601e57df0543e6a41852b338f70d0600e1370cab187e020b91e342dd0e15ac",
+      "bytes": 1576067,
+      "productionId": "WAVE30-glitch-murderdrones-ribbit-resident-walk",
+      "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-resident-walk",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        71,
+        47,
+        972,
+        1460
+      ]
+    },
+    {
+      "appearanceId": "glitch-murderdrones-ribbit-resident",
+      "slot": "jump",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/resident/jump.png",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/jump.png",
+      "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/jump.json",
+      "sha256": "3539017a11b0fda003f34867c69126abfd41ba112fdad4e95898595cb2d7e54a",
+      "bytes": 1461010,
+      "productionId": "WAVE30-glitch-murderdrones-ribbit-resident-jump",
+      "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-resident-jump",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        249,
+        9,
+        1328,
+        1000
+      ]
+    },
+    {
+      "appearanceId": "glitch-murderdrones-ribbit-resident",
+      "slot": "crouch",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/resident/crouch.png",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/crouch.png",
+      "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/crouch.json",
+      "sha256": "3c35deeef6d0be94d4a0900e2a5ec4bd40281e9fa5d91392f134f6ad26b5ce6e",
+      "bytes": 1475759,
+      "productionId": "WAVE30-glitch-murderdrones-ribbit-resident-crouch",
+      "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-resident-crouch",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        201,
+        14,
+        1314,
+        1007
+      ]
+    },
+    {
+      "appearanceId": "glitch-murderdrones-ribbit-resident",
+      "slot": "victory",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/resident/victory.png",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/victory.png",
+      "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/victory.json",
+      "sha256": "79d35d5c3a7694302d7abb5ef8c1a855164a278dfb6104b7542ba8f12ba41eeb",
+      "bytes": 1523489,
+      "productionId": "WAVE30-glitch-murderdrones-ribbit-resident-victory",
+      "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-resident-victory",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        131,
+        42,
+        929,
+        1514
+      ]
+    },
+    {
+      "appearanceId": "glitch-murderdrones-ribbit-resident",
+      "slot": "defeat",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/resident/defeat.png",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/defeat.png",
+      "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/defeat.json",
+      "sha256": "ffac04a093aa65513db7f58307fc8071118f354ba6b4aa4e2d0ff0e80cfdb3d0",
+      "bytes": 1519080,
+      "productionId": "WAVE30-glitch-murderdrones-ribbit-resident-defeat",
+      "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-resident-defeat",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        145,
+        17,
+        1370,
+        1021
+      ]
+    },
+    {
+      "appearanceId": "glitch-murderdrones-ribbit-fusion",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/selection.png",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/selection.png",
+      "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/selection.json",
+      "sha256": "b4aeaf8ad54544eac7640f87603501ac3b7e3b8e0bfa4e68ef76b993c136968e",
+      "bytes": 1685503,
+      "productionId": "WAVE30-glitch-murderdrones-ribbit-fusion-selection",
+      "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-fusion-selection",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        50,
+        54,
+        993,
+        1505
+      ]
+    },
+    {
+      "appearanceId": "glitch-murderdrones-ribbit-fusion",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/stance.png",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/stance.png",
+      "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/stance.json",
+      "sha256": "caf3b3f409ed6cec5c9c1beb1c7aeae19e951d3664f4cd52650081ce5c780111",
+      "bytes": 980827,
+      "productionId": "WAVE30-glitch-murderdrones-ribbit-fusion-stance",
+      "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-fusion-stance",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        47,
+        71,
+        1163,
+        1282
+      ]
+    },
+    {
+      "appearanceId": "glitch-murderdrones-ribbit-fusion",
+      "slot": "intro",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/intro.png",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/intro.png",
+      "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/intro.json",
+      "sha256": "6e26008bb918bcc2e48c723d9ed180e1eed79fdd49883f25f75fdaa3bf52c1c5",
+      "bytes": 1580313,
+      "productionId": "WAVE30-glitch-murderdrones-ribbit-fusion-intro",
+      "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-fusion-intro",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        87,
+        54,
+        983,
+        1511
+      ]
+    },
+    {
+      "appearanceId": "glitch-murderdrones-ribbit-fusion",
+      "slot": "attack",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/attack.png",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/attack.png",
+      "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/attack.json",
+      "sha256": "6ef768cadd1f4f694d4edaec0698b64841ad987c14956d839767403a9adc8040",
+      "bytes": 1559299,
+      "productionId": "WAVE30-glitch-murderdrones-ribbit-fusion-attack",
+      "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-fusion-attack",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        76,
+        21,
+        1443,
+        1016
+      ]
+    },
+    {
+      "appearanceId": "glitch-murderdrones-ribbit-fusion",
+      "slot": "heavy",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/heavy.png",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/heavy.png",
+      "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/heavy.json",
+      "sha256": "886b61a7d2313cdca74d35a0040118ed0faed8583e10554bc7f67ed3636457e5",
+      "bytes": 1548839,
+      "productionId": "WAVE30-glitch-murderdrones-ribbit-fusion-heavy",
+      "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-fusion-heavy",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        47,
+        66,
+        982,
+        1495
+      ]
+    },
+    {
+      "appearanceId": "glitch-murderdrones-ribbit-fusion",
+      "slot": "hit",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/hit.png",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/hit.png",
+      "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/hit.json",
+      "sha256": "18666434c7a7e1b82f504203b69f15de314209aaa432b7b7d4a0edb86edab897",
+      "bytes": 1692613,
+      "productionId": "WAVE30-glitch-murderdrones-ribbit-fusion-hit",
+      "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-fusion-hit",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        41,
+        106,
+        947,
+        1498
+      ]
+    },
+    {
+      "appearanceId": "glitch-murderdrones-ribbit-fusion",
+      "slot": "walk",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/walk.png",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/walk.png",
+      "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/walk.json",
+      "sha256": "bf8b75b671fbbf9d3b01d07d2ef56cb0c45d6c3731c2c1fe915b381f83cc53dd",
+      "bytes": 884865,
+      "productionId": "WAVE30-glitch-murderdrones-ribbit-fusion-walk",
+      "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-fusion-walk",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1195,
+        1316
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        103,
+        30,
+        1108,
+        1252
+      ]
+    },
+    {
+      "appearanceId": "glitch-murderdrones-ribbit-fusion",
+      "slot": "jump",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/jump.png",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/jump.png",
+      "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/jump.json",
+      "sha256": "aa14d384551b950d464672b0fafe7b3a18b0d0388f8e44bf649bfdd882c70c04",
+      "bytes": 1573405,
+      "productionId": "WAVE30-glitch-murderdrones-ribbit-fusion-jump",
+      "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-fusion-jump",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        171,
+        18,
+        1362,
+        1004
+      ]
+    },
+    {
+      "appearanceId": "glitch-murderdrones-ribbit-fusion",
+      "slot": "crouch",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/crouch.png",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/crouch.png",
+      "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/crouch.json",
+      "sha256": "ad1b7d467c845c204ba7737c1a2746b3040fb941910e0cc0623a4062470a8528",
+      "bytes": 1663822,
+      "productionId": "WAVE30-glitch-murderdrones-ribbit-fusion-crouch",
+      "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-fusion-crouch",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        184,
+        12,
+        1404,
+        1013
+      ]
+    },
+    {
+      "appearanceId": "glitch-murderdrones-ribbit-fusion",
+      "slot": "victory",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/victory.png",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/victory.png",
+      "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/victory.json",
+      "sha256": "67d4f944fdc33b14d4983510fc546d24eac57cacaff2c9484c2565f26034bdd1",
+      "bytes": 1619342,
+      "productionId": "WAVE30-glitch-murderdrones-ribbit-fusion-victory",
+      "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-fusion-victory",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        91,
+        39,
+        926,
+        1525
+      ]
+    },
+    {
+      "appearanceId": "glitch-murderdrones-ribbit-fusion",
+      "slot": "defeat",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/defeat.png",
+      "archiveFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/defeat.png",
+      "receiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/defeat.json",
+      "sha256": "73864da647baf49463c57a30ae817a119287467c7644db2d19974e76037aea83",
+      "bytes": 1609435,
+      "productionId": "WAVE30-glitch-murderdrones-ribbit-fusion-defeat",
+      "qaId": "WAVE30-asset-glitch-murderdrones-ribbit-fusion-defeat",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        160,
+        11,
+        1395,
+        1020
+      ]
+    }
+  ],
+  "activeAssetDigests": [
+    {
+      "file": "assets/encore/selection/caferibbit.png",
+      "sha256": "638c8ced2802e022b25a2674dd9380757cfdff3a02b5a46acff4bda2fbe295e2",
+      "bytes": 1495892
+    },
+    {
+      "file": "assets/encore/stance/caferibbit.png",
+      "sha256": "b553a8a3673511308c37070e22ac5b8648df6b2a67ae5b8a9b832f3547ff1e18",
+      "bytes": 1534954
+    },
+    {
+      "file": "assets/encore/poses/caferibbit/intro.png",
+      "sha256": "43c9a9f7fa941476090794bb0c3a52a9ff440cda784defd870e1e31f5673d64c",
+      "bytes": 1458643
+    },
+    {
+      "file": "assets/encore/poses/caferibbit/attack.png",
+      "sha256": "d363d6124938290f04ae03227a6d4755a617a7ba621c4ed91f363e2ebb421fb1",
+      "bytes": 791622
+    },
+    {
+      "file": "assets/encore/poses/caferibbit/heavy.png",
+      "sha256": "ba86c05acb6dbd5cffacc2333b39bb427a7958e86e45379a15cb776255b8d9f7",
+      "bytes": 781909
+    },
+    {
+      "file": "assets/encore/poses/caferibbit/hit.png",
+      "sha256": "2a72a6b6b12cc4a0c8a8b6ff6606c89bf738f86a1d373dc52470e7f098bfe4ee",
+      "bytes": 1544665
+    },
+    {
+      "file": "assets/encore/poses/caferibbit/walk.png",
+      "sha256": "0cca789f97424558eb80f6178418ccfac61a926fb5e09c9f73886a13658ae090",
+      "bytes": 1566034
+    },
+    {
+      "file": "assets/encore/poses/caferibbit/jump.png",
+      "sha256": "5a420a78e722d843554d3dd37e70e47f011e693fe8b9e927912e94bd67bd78d0",
+      "bytes": 1555510
+    },
+    {
+      "file": "assets/encore/poses/caferibbit/crouch.png",
+      "sha256": "6b91fa00359ae859fac06681f9e527c75847d4bb3b883d7514e3e0f5b9707e1d",
+      "bytes": 938347
+    },
+    {
+      "file": "assets/encore/poses/caferibbit/victory.png",
+      "sha256": "102b5fb20020b7b67dc7acf5b94f14ed4b40ecd8d8c403e90cb12d6971926dd4",
+      "bytes": 1498244
+    },
+    {
+      "file": "assets/encore/poses/caferibbit/defeat.png",
+      "sha256": "903dec112c77b63dedd7eed348abcb3c88a143b6b99a9491a18f4cef750b9034",
+      "bytes": 886210
+    },
+    {
+      "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/selection.png",
+      "sha256": "dd43a5386874e25da5f61b0d823c87de3d146f024c96d64091e5957355c3ef5b",
+      "bytes": 1435680
+    },
+    {
+      "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/stance.png",
+      "sha256": "6102d83c295487da3689dfe449ffdb9e4b62c20c19babd83415646e95a278f9a",
+      "bytes": 732645
+    },
+    {
+      "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/intro.png",
+      "sha256": "daa9c9327805617cccd5d4a956147c2a2d7bbb3ef592184b08802182d4067fba",
+      "bytes": 724483
+    },
+    {
+      "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/attack.png",
+      "sha256": "13c985b85e8281c08c365ee7f1ec7123c4a97f180ebc60fa54ab195d18d8c1f7",
+      "bytes": 1228713
+    },
+    {
+      "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/heavy.png",
+      "sha256": "90cd3b607f74c4618422ba172e8ac498e37e85212cd011de1a35bdadce0b35d3",
+      "bytes": 1155353
+    },
+    {
+      "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/hit.png",
+      "sha256": "67cb91d7585795e8436d6d317f09ba714786cf42fa5163ece0cf9c05d04d807c",
+      "bytes": 748844
+    },
+    {
+      "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/walk.png",
+      "sha256": "c3c0881fd9e5833eaeb6f49a86db52d91d242c97d92a2b4989a30d4ec52af418",
+      "bytes": 682248
+    },
+    {
+      "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/jump.png",
+      "sha256": "7990c365e9d19c3337815b36f9544408ce549634bfb2275dc2bba6a1ce167c53",
+      "bytes": 760662
+    },
+    {
+      "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/crouch.png",
+      "sha256": "e76f856d3a9ed50312204c9b10ca63cec8179a6310497f9491028284e4a29ba8",
+      "bytes": 903887
+    },
+    {
+      "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/victory.png",
+      "sha256": "43ecd2b83b7c132a83ac0c2301879f01901dfd6f0710822a540263a4ca12733c",
+      "bytes": 1371435
+    },
+    {
+      "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/defeat.png",
+      "sha256": "944594d769172882bf175f6927efad3e33e883cfd583f36e5a98654aea2390e4",
+      "bytes": 775116
+    },
+    {
+      "file": "assets/encore/crossovers/murderdrones/ribbit/resident/selection.png",
+      "sha256": "fe3c01b6b6d57bc532af4ce7d9114f93a804146d38b4a0263a3f06876618b686",
+      "bytes": 1524779
+    },
+    {
+      "file": "assets/encore/crossovers/murderdrones/ribbit/resident/stance.png",
+      "sha256": "3cdffc3f01e48fe77f0c66c045eb258b6337f53e5734fb742b20ee7b3c317a5b",
+      "bytes": 948345
+    },
+    {
+      "file": "assets/encore/crossovers/murderdrones/ribbit/resident/intro.png",
+      "sha256": "f219e23a39874d0de4ce45691da6d95ce49fd5cc482523f2732787bdec5b25ec",
+      "bytes": 1487206
+    },
+    {
+      "file": "assets/encore/crossovers/murderdrones/ribbit/resident/attack.png",
+      "sha256": "d82aabde2a0a935df7f6e41ee2bdb0284e4d878311f7730a1a7653ba99e8b0b5",
+      "bytes": 1385550
+    },
+    {
+      "file": "assets/encore/crossovers/murderdrones/ribbit/resident/heavy.png",
+      "sha256": "1c551bc99c22b29513e919a113c2691ff1c553253753c39dca444895ae2fcbff",
+      "bytes": 1509732
+    },
+    {
+      "file": "assets/encore/crossovers/murderdrones/ribbit/resident/hit.png",
+      "sha256": "4240b2e593e5c9f04d03041f4f0a1bc093b0a70a086365a113ad54be8b5953b6",
+      "bytes": 1603205
+    },
+    {
+      "file": "assets/encore/crossovers/murderdrones/ribbit/resident/walk.png",
+      "sha256": "ad601e57df0543e6a41852b338f70d0600e1370cab187e020b91e342dd0e15ac",
+      "bytes": 1576067
+    },
+    {
+      "file": "assets/encore/crossovers/murderdrones/ribbit/resident/jump.png",
+      "sha256": "3539017a11b0fda003f34867c69126abfd41ba112fdad4e95898595cb2d7e54a",
+      "bytes": 1461010
+    },
+    {
+      "file": "assets/encore/crossovers/murderdrones/ribbit/resident/crouch.png",
+      "sha256": "3c35deeef6d0be94d4a0900e2a5ec4bd40281e9fa5d91392f134f6ad26b5ce6e",
+      "bytes": 1475759
+    },
+    {
+      "file": "assets/encore/crossovers/murderdrones/ribbit/resident/victory.png",
+      "sha256": "79d35d5c3a7694302d7abb5ef8c1a855164a278dfb6104b7542ba8f12ba41eeb",
+      "bytes": 1523489
+    },
+    {
+      "file": "assets/encore/crossovers/murderdrones/ribbit/resident/defeat.png",
+      "sha256": "ffac04a093aa65513db7f58307fc8071118f354ba6b4aa4e2d0ff0e80cfdb3d0",
+      "bytes": 1519080
+    },
+    {
+      "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/selection.png",
+      "sha256": "b4aeaf8ad54544eac7640f87603501ac3b7e3b8e0bfa4e68ef76b993c136968e",
+      "bytes": 1685503
+    },
+    {
+      "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/stance.png",
+      "sha256": "caf3b3f409ed6cec5c9c1beb1c7aeae19e951d3664f4cd52650081ce5c780111",
+      "bytes": 980827
+    },
+    {
+      "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/intro.png",
+      "sha256": "6e26008bb918bcc2e48c723d9ed180e1eed79fdd49883f25f75fdaa3bf52c1c5",
+      "bytes": 1580313
+    },
+    {
+      "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/attack.png",
+      "sha256": "6ef768cadd1f4f694d4edaec0698b64841ad987c14956d839767403a9adc8040",
+      "bytes": 1559299
+    },
+    {
+      "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/heavy.png",
+      "sha256": "886b61a7d2313cdca74d35a0040118ed0faed8583e10554bc7f67ed3636457e5",
+      "bytes": 1548839
+    },
+    {
+      "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/hit.png",
+      "sha256": "18666434c7a7e1b82f504203b69f15de314209aaa432b7b7d4a0edb86edab897",
+      "bytes": 1692613
+    },
+    {
+      "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/walk.png",
+      "sha256": "bf8b75b671fbbf9d3b01d07d2ef56cb0c45d6c3731c2c1fe915b381f83cc53dd",
+      "bytes": 884865
+    },
+    {
+      "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/jump.png",
+      "sha256": "aa14d384551b950d464672b0fafe7b3a18b0d0388f8e44bf649bfdd882c70c04",
+      "bytes": 1573405
+    },
+    {
+      "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/crouch.png",
+      "sha256": "ad1b7d467c845c204ba7737c1a2746b3040fb941910e0cc0623a4062470a8528",
+      "bytes": 1663822
+    },
+    {
+      "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/victory.png",
+      "sha256": "67d4f944fdc33b14d4983510fc546d24eac57cacaff2c9484c2565f26034bdd1",
+      "bytes": 1619342
+    },
+    {
+      "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/defeat.png",
+      "sha256": "73864da647baf49463c57a30ae817a119287467c7644db2d19974e76037aea83",
+      "bytes": 1609435
+    },
+    {
+      "file": "assets/encore/stages/barnoir/far.png",
+      "sha256": "e051e8cf276e3dc440dc81220d1af46cdcbae82f7d8ba026d2f44cebf2ac38d1",
+      "bytes": 1421811
+    },
+    {
+      "file": "assets/encore/stages/barnoir/mid.png",
+      "sha256": "77b6bdc2dccafb7d78557396d81ba27120d852e540566587f47542ac2a811713",
+      "bytes": 928982
+    },
+    {
+      "file": "assets/encore/stages/barnoir/near.png",
+      "sha256": "44c6343da751ef851ad57ef0af72adf435ce0f256b0557d523316144f59516f1",
+      "bytes": 204406
+    }
+  ],
+  "qaEvidence": {
+    "tests": 419,
+    "failures": 0,
+    "bothBuildsPassed": true,
+    "costumeCanvasDrawChecks": 80,
+    "stageCanvasChecks": 6,
+    "nativeDistributionComparisons": 94,
+    "moduleComparisons": 36,
+    "historicalEncoreFiles": 5725
+  }
+}

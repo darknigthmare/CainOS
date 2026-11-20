@@ -90,5 +90,8 @@ export const AUDIO_AMBIENCES = freeze({
   undermap: ambience('undermap', 'Résonance sous la carte', 'Deux oscillations faibles traversent la salle quadrillée ; création sonore du jeu.', 11.7, [
     tone(66, 64, 2.7, 0, 'sine', .010), tone(440, 435, 1.5, 5.4, 'sine', .006),
   ]),
+  barnoir: ambience('barnoir', 'Lumières après le service', 'Un faible bourdonnement électrique et un tintement synthétique espacé ; création du jeu.', 10.8, [
+    tone(92, 93, 2.4, 0, 'sine', .009), air(390, 310, 1.6, 3.2, 'lowpass', .010), tone(1340, 1310, .14, 6.9, 'sine', .007),
+  ]),
 });
 export const AMBIENCE_STAGE_IDS = Object.freeze(Object.keys(AUDIO_AMBIENCES));

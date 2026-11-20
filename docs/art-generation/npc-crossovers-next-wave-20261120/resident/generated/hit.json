@@ -1,0 +1,65 @@
+{
+  "appearanceId": "glitch-murderdrones-ribbit-resident",
+  "fighterId": "ribbit",
+  "series": "murderdrones",
+  "style": "resident",
+  "slot": "hit",
+  "prompt": "Use the attached approved selection image as the exact identity, proportions, costume, materials, color and 2D cel-shading reference. Draw ONE new full-body pose of the SAME original Encore crossover Ribbit. Keep the BIOLOGICAL green frog identity, huge white-and-black eyes, mint muzzle, pink cheeks and bow; charcoal/olive jumpsuit, short rolled sleeves, chest amber lamp, two belt pouches with tools secured, round knee pads, ankle amber bands, bare green three-digit hands and three-lobed feet. No change of outfit, no hat, no boots, no gloves, no robot conversion. HIT REACTION POSE: recoiling backwards toward screen left from an unseen strike, torso leaning back, head tilted back but face still looks toward screen right, mouth startled, one arm drawn defensively in front of the chest and other open hand thrown slightly behind, knees flexed and both feet grounded. No attacker, wound, blood, impact effect or added props. Three-quarter side view, native facing RIGHT. Clean black contours, gentle upper-left highlights, restrained cel shading matching the reference. One character only, full head-to-toes including raised hands and all feet, with comfortable transparent margin around the ENTIRE silhouette. Use a canvas wide enough for this pose (portrait 1024x1536 or square 1536x1536 if needed); never crop or squeeze limbs. Native true transparent RGBA, clean alpha edges, no scene/background/ground/halo/text/grid/watermark. This is a separate action drawing, not a transformation, crop or composited duplicate of the selection. HAND COUNT LOCK: each open hand has EXACTLY THREE rounded digits in total (one thumb-like lobe and two fingers); never add a fourth lobe or finger. Preserve the three-lobed frog hand anatomy of the reference.",
+  "referencePaths": [
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/selection.png"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "root",
+  "schema": "encore-native-npc-crossover/v1",
+  "id": "glitch-murderdrones-ribbit-resident:hit",
+  "status": "accepted_native",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/hit.png",
+  "targetFile": "assets/encore/crossovers/murderdrones/ribbit/resident/hit.png",
+  "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-43a90618-ff51-465c-8792-78f2310ce3f6.png",
+  "sourceGenerationId": "exec-43a90618-ff51-465c-8792-78f2310ce3f6",
+  "definitionFile": "docs/art-generation/npc-crossovers-next-wave-20261120/definitions/glitch-murderdrones-ribbit-resident.json",
+  "definitionSHA256": "3a2fc2646759c1d3c2e895eb6c907c29ed171bf834554938338a985348fcc973",
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/selection.png",
+      "sha256": "fe3c01b6b6d57bc532af4ce7d9114f93a804146d38b4a0263a3f06876618b686",
+      "bytes": 1524779
+    }
+  ],
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "alpha12Bounds": [
+    33,
+    79,
+    928,
+    1492
+  ],
+  "alpha12BoundsThreshold": "alpha > 12",
+  "fullyTransparentPixels": 1013769,
+  "sha256": "4240b2e593e5c9f04d03041f4f0a1bc093b0a70a086365a113ad54be8b5953b6",
+  "bytes": 1603205,
+  "nativeCopyVerified": true,
+  "sourceKind": "Création originale pour Encore",
+  "episodeFidelityClaim": false,
+  "canonicalCostumeClaim": false,
+  "includedInRuntime": true,
+  "createdAt": "2026-11-20T15:15:05.231104+00:00",
+  "visualReview": {
+    "status": "accepted",
+    "reviewer": "root",
+    "observations": [
+      "Recul du buste et expression surprise vers la droite ; trois lobes visibles à chaque main, aucun membre ajouté. Combinaison et accessoires cohérents ; silhouette entière."
+    ],
+    "scope": "Original crossover identity, entire figure, costume continuity and readable game pose; no canonical costume or complete animation claim."
+  }
+}

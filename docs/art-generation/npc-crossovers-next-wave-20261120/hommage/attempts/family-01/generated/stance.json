@@ -1,0 +1,81 @@
+{
+  "appearanceId": "glitch-murderdrones-ribbit-hommage",
+  "fighterId": "ribbit",
+  "series": "murderdrones",
+  "style": "hommage",
+  "slot": "stance",
+  "prompt": "Use case: identity-preserve. Asset type: one individually drawn full-body 2D fighting-game sprite. Reference image 1 is the accepted Ribbit Uzi-homage selection sprite: it is the exact character and costume to preserve. Reference image 2 is official Iconic Ribbit for identity; image 3 is official Uzi for outfit motifs only. Change the pose as requested while keeping the same slender biological green frog, huge raised white/black eyes, pale mint muzzle, pink cheeks, pink bow tie, black pom-pom beanie behind the eyes, black hoodie with white screen/crossbones emblem, violet double sleeve bands, dark fluffy hem, long uncovered green legs, violet ankle bands and broad rounded black ankle boots with dark gray soles. Bare green hands. Keep exactly the same 2D dark outlines, flat colors, restrained cel shading, proportions and costume details as image 1. No robot head, hair, visor, mechanical limbs, pants, weapons, tools or extra accessories.\nPOSE — combat guard: balanced wide stance, knees lightly bent, torso leaning slightly toward screen-right. One green hand extended in a loose open guard and the other close to the chest; both boots firmly planted, full silhouette visible. Approximately square canvas.\nEntire single character only, three-quarter facing screen-right, face directed right. Preserve both eyes and both feet, with all anatomy inside the canvas and ample transparent margin on every side. Genuine transparent background with native alpha. No scenery, floor, shadow, glow, smoke, floating particles, text, labels, grid, border or duplicate figure. Output one finished sprite, not a sheet or a comparison. Redraw the pose naturally; do not merely rotate or mirror the source.",
+  "referencePaths": [
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/selection.png",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/references/official-iconic-ribbit.png",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/references/official-uzi-front.png"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "/root/tracker_recovery",
+  "tool": "image_gen",
+  "transparentBackground": true,
+  "schema": "encore-native-npc-crossover/v1",
+  "id": "glitch-murderdrones-ribbit-hommage:stance",
+  "status": "accepted_native",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/stance.png",
+  "targetFile": "assets/encore/crossovers/murderdrones/ribbit/hommage/stance.png",
+  "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-6c5a1298-c6b0-46e1-93dc-b7975c60ddff.png",
+  "sourceGenerationId": "exec-6c5a1298-c6b0-46e1-93dc-b7975c60ddff",
+  "definitionFile": "docs/art-generation/npc-crossovers-next-wave-20261120/definitions/glitch-murderdrones-ribbit-hommage.json",
+  "definitionSHA256": "04c8fffed2e11021004c8e387f318b11f459f4f5cf97a5cfa8922bbe51529e93",
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/selection.png",
+      "sha256": "ea9bf4c31ea98cc6422699abb1ad7190378bd35deb940fa0e821fd9c407b418f",
+      "bytes": 1402255
+    },
+    {
+      "position": 2,
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/references/official-iconic-ribbit.png",
+      "sha256": "d62ee29c8d07410db6ddfdde22965b719a305e9d6ec08aa1c48ab1788a6ce825",
+      "bytes": 1085524
+    },
+    {
+      "position": 3,
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/references/official-uzi-front.png",
+      "sha256": "a4cd219899ce902fdf07e5545b5691b874df46776b82c106fbea48daeac1f162",
+      "bytes": 1280711
+    }
+  ],
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "alpha12Bounds": [
+    160,
+    34,
+    1091,
+    1236
+  ],
+  "alpha12BoundsThreshold": "alpha > 12",
+  "fullyTransparentPixels": 1139404,
+  "sha256": "a29d6fb634765beb3ba33592764f4854bef9124bc347c6aba221295ad705963c",
+  "bytes": 708161,
+  "nativeCopyVerified": true,
+  "sourceKind": "Création originale pour Encore",
+  "episodeFidelityClaim": false,
+  "canonicalCostumeClaim": false,
+  "includedInRuntime": false,
+  "createdAt": "2026-11-20T14:43:23.692150+00:00",
+  "visualReview": {
+    "status": "accepted",
+    "reviewer": "/root/tracker_recovery",
+    "observations": [
+      "Garde inspectée : jambes écartées et fléchies, deux bottines complètes sur une même ligne de sol implicite, main avant ouverte et seconde en protection. Visage et costume restent identiques au portrait validé ; orientation droite, aucune duplication de membre."
+    ],
+    "scope": "Original crossover identity, entire figure, costume continuity and readable game pose; no canonical costume or complete animation claim."
+  }
+}

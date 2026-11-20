@@ -1,0 +1,74 @@
+{
+  "appearanceId": "caferibbit",
+  "slot": "defeat",
+  "useCase": "stylized-concept",
+  "prompt": "Use case: stylized-concept. Asset type: one individual transparent 2D full-body combat sprite for Digital Circus Encore.\nInput image 1 is the APPROVED Cafe Ribbit selection sprite: preserve its exact design, proportions, colors, line weight and clean cel shading. Input image 2 is the official Animate Cafe reference, confirming the clothes and complete shoes. Generate a new pose of exactly this one frog character, not a collage or animation sheet.\nLOCK ALL DESIGN: green frog skin and mint muzzle; huge white eyes with black pie-cut pupils and navy upper lids; pink cheeks, small smile; white frilled headband with navy side bows and small pink ribbon ends; slim pink neck ribbon; dark navy short dress, white bib with navy heart, white ruffled apron with exactly two dark navy decorative bows, white scalloped cuffs, green frog hands, two long white socks with frilled top cuffs and pink accents, rounded dark navy shoes with berry-pink sole edges. Preserve the accepted head and costume, do not convert to a human, rabbit or plush. One intact head, two arms, two hands, two legs and two shoes.\nPOSE: Exhausted defeat pose facing SCREEN-RIGHT. One knee lowered in a modest kneel and the other foot planted forward, shoulders slumped, one green hand resting on the raised knee and the other lowered open at the side; head gently bowed but turned right. Two legs and both complete shoes remain visible. No floor, shadow, prop, tears flying, body disassembly or extra limbs.\nTECHNICAL: full body entirely visible and facing SCREEN-RIGHT; gaze right even if the body bends. No tray or dessert; all hands empty. Center the character with at least 10 percent genuinely transparent margin around the extreme headband, hands and feet, in a canvas appropriate to the pose. Crisp dark outlines, restrained flat cel shading. Genuine native RGBA transparency, no scenery, ground, cast shadow, reflection, text, logo, frame, sticker edge, glow, halo, bloom, colored haze, motion trail, duplicate body or cropped extremities. Do not copy hidden background RGB from a reference into visible pixels. One clean native PNG.",
+  "referencePaths": [
+    "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/selection.png",
+    "docs/art-generation/cast-next-wave-20261120/references/caferibbit/ribbit-cafe-detail.png"
+  ],
+  "referenceRoles": [
+    "Accepted selection: fixed family design and drawing style",
+    "Official cafe costume and complete visible lower body"
+  ],
+  "sourceUrls": [
+    "https://prtimes.jp/main/html/rd/p/000008857.000016756.html",
+    "https://www.animatecafe.jp/event/ac000791"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "ribbit_references",
+  "definitionSha256": "68a3ad72d57180cf9e6f3032422bd8b49e89150763a856d281bae3d16596c20e",
+  "schema": "encore-native-next-missing-art/v1",
+  "id": "caferibbit:defeat",
+  "status": "rejected_visual",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/attempts/defeat-01.png",
+  "targetFile": "assets/encore/poses/caferibbit/defeat.png",
+  "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-81843e87-5f38-4c60-872f-f87156d93196.png",
+  "sourceGenerationId": "exec-81843e87-5f38-4c60-872f-f87156d93196",
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/selection.png",
+      "sha256": "638c8ced2802e022b25a2674dd9380757cfdff3a02b5a46acff4bda2fbe295e2",
+      "bytes": 1495892
+    },
+    {
+      "position": 2,
+      "file": "docs/art-generation/cast-next-wave-20261120/references/caferibbit/ribbit-cafe-detail.png",
+      "sha256": "7359975baf1aa8f956cfbad282f2c3a1103820519dfcae238327de91a681dc9f",
+      "bytes": 139654
+    }
+  ],
+  "dimensions": [
+    1207,
+    1303
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "alpha12Bounds": [
+    136,
+    82,
+    974,
+    1253
+  ],
+  "alpha12BoundsThreshold": "alpha > 12",
+  "fullyTransparentPixels": 1044806,
+  "sha256": "9736978d3958b9cd5e721d0ec3b8e2959794e783eb366c868539dfcf54c5b4ed",
+  "bytes": 880311,
+  "nativeCopyVerified": true,
+  "sourceKind": "Illustration officielle de collaboration commerciale",
+  "episodeFidelityClaim": false,
+  "includedInRuntime": false,
+  "createdAt": "2026-11-20T14:56:43.557260+00:00",
+  "visualReview": {
+    "status": "rejected",
+    "observations": [
+      "Sur la jambe avant plantée à droite, le revers festonné et le cœur rose de la chaussette sont placés près de la cheville au lieu de la jonction entre peau verte et bas blanc."
+    ]
+  }
+}

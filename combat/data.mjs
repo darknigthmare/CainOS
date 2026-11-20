@@ -1,5 +1,5 @@
 import { CROSSOVER_STAGES } from './crossover-stages.mjs';
-import { createCrossoverCostumes } from './crossovers.mjs';
+import { createLegacyCrossoverCostumes, createNpcCrossoverCostumes } from './crossovers.mjs';
 import { COSTUME_ADDITIONS } from './costume-additions.mjs';
 export { COSTUME_ADDITIONS } from './costume-additions.mjs';
 import { SPRITE_CATALOG } from './sprite-catalog.mjs';
@@ -242,6 +242,7 @@ export const STAGES = [
     stage(id, name, description, palette, sourceId, { series, provenance: 'Arène crossover adaptée pour Encore' })),
   stage('falseexit', 'La fausse sortie', 'Une porte rouge au fond des bureaux gris du pilote.', { sky: '#434844', back: '#727a71', accent: '#d44d4c', floor: '#574c4c', grid: '#665954' }, 'ep1'),
   stage('undermap', 'Sous la carte', 'La salle quadrillée bleue sous Candy Canyon, au sol réfléchissant.', { sky: '#020321', back: '#050837', accent: '#315bff', floor: '#040525', grid: '#1d26cc' }, 'ep2'),
+  stage('barnoir', 'Le bar des néons', 'Le comptoir sombre et le damier du bar de l’épisode 5.', { sky: '#090e11', back: '#172524', accent: '#ed8fc4', floor: '#202726', grid: '#85938e' }, 'ep5'),
 ];
 
 // One dedicated arrangement per playable artist, next to the shared
@@ -392,8 +393,12 @@ export const ROSTER_ARCHIVE = SPRITE_CATALOG.map(entry => {
 });
 export const ARCHIVE = ROSTER_ARCHIVE;
 export const VARIANTS = ROSTER_ARCHIVE.filter(entry => entry.baseFighterId && entry.id !== entry.baseFighterId);
-export const CROSSOVER_COSTUMES = createCrossoverCostumes(FIGHTERS);
-export const COSTUMES = [...VARIANTS, ...CROSSOVER_COSTUMES, ...COSTUME_ADDITIONS];
+const LEGACY_CROSSOVER_COSTUMES = createLegacyCrossoverCostumes(FIGHTERS);
+const NPC_CROSSOVER_COSTUMES = createNpcCrossoverCostumes(FIGHTERS);
+export const CROSSOVER_COSTUMES = [...LEGACY_CROSSOVER_COSTUMES, ...NPC_CROSSOVER_COSTUMES];
+// Append new NPC costumes after the published wardrobe instead of inserting
+// them among historical series entries and shifting existing costume indices.
+export const COSTUMES = [...VARIANTS, ...LEGACY_CROSSOVER_COSTUMES, ...COSTUME_ADDITIONS, ...NPC_CROSSOVER_COSTUMES];
 
 export function equipCostume(fighter, id) {
   const variant = COSTUMES.find(item => item.id === id && item.fighterId === fighter.id);

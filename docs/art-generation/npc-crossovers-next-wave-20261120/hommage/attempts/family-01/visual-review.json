@@ -1,0 +1,41 @@
+{
+  "schema": "encore-native-family-visual-review/v1",
+  "appearanceId": "glitch-murderdrones-ribbit-hommage",
+  "reviewer": "/root/tracker_recovery",
+  "reviewedAt": "2026-11-20T14:55:37.948596+00:00",
+  "status": "accepted",
+  "nativeImagesInspectedIndividually": 11,
+  "nativeImageSlots": [
+    "selection",
+    "stance",
+    "intro",
+    "attack",
+    "heavy",
+    "hit",
+    "walk",
+    "jump",
+    "crouch",
+    "victory",
+    "defeat"
+  ],
+  "alphaCompositedContactSheetInspected": true,
+  "contactSheet": {
+    "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/native-alpha-review.png",
+    "sha256": "80adc32c9a16e910c618e598a134525854f58fd8747a7f91d71d7a555653e754"
+  },
+  "generationCompletion": {
+    "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generation-completion.json",
+    "sha256": "29192740d7713a63ada240995c2a91819ac60dffeb50d1a225e0fa0f6c3055d0"
+  },
+  "observations": [
+    "Onze poses distinctes, un seul personnage entier par image ; extrémités et bottes à l’intérieur du cadre.",
+    "Identité de Ribbit et détails du costume cohérents : yeux surélevés, museau menthe, joues et nœud roses, bonnet à pompon, sweat sombre avec emblème blanc et bandes violettes, longues jambes vertes, bottines sombres.",
+    "La composition de l’alpha sur damier montre une transparence propre et aucun halo de fond visible ; les RGB sous alpha nul restent conservés dans les PNG natifs.",
+    "La frappe de paume et le coup de pied haut sont distincts ; saut, accroupissement, victoire et défaite se lisent séparément."
+  ],
+  "limitations": [
+    "Les proportions élancées et ce costume sont des créations originales pour Encore, pas une tenue attestée dans un épisode.",
+    "Cette revue ne vaut pas validation du chargeur Canvas, des collisions ou des builds ; ces contrôles appartiennent à l’intégration finale."
+  ],
+  "nativeFilesUnmodified": true
+}

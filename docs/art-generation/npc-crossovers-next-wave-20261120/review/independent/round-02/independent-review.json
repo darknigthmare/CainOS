@@ -1,0 +1,107 @@
+{
+  "createdAt": "2026-11-20T15:24:31.090823+00:00",
+  "files": [
+    {
+      "variant": "resident",
+      "slot": "crouch",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/crouch.png",
+      "sha256": "3c35deeef6d0be94d4a0900e2a5ec4bd40281e9fa5d91392f134f6ad26b5ce6e",
+      "receipt": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/crouch.json",
+      "receiptSha256": "30e62fe476271199e3dcbb42451350ef75b2c94fff4caf1137bb0d26ceea4876",
+      "diagnostic": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-02/resident-crouch-alpha.jpg",
+      "diagnosticSha256": "21d4da2f2208d56dd0a1567e261922dbdfeec1c213f645cef37b4ae19a11f243",
+      "visualReviewStatus": "no_concrete_defect_observed",
+      "observations": [
+        "Composition alpha claire et sombre inspectée : identité, membres entiers, raccords et accessoires cohérents. Les mains ouvertes montrent trois lobes ; pas de quatrième doigt distinct dans les mains repliées."
+      ],
+      "sourceUnchangedAtReview": true
+    },
+    {
+      "variant": "resident",
+      "slot": "defeat",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/defeat.png",
+      "sha256": "ffac04a093aa65513db7f58307fc8071118f354ba6b4aa4e2d0ff0e80cfdb3d0",
+      "receipt": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/defeat.json",
+      "receiptSha256": "ff321efaa7a7285bfcb9798eda0fce28f944c18b9b341955d67fafe9288a9012",
+      "diagnostic": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-02/resident-defeat-alpha.jpg",
+      "diagnosticSha256": "7558a1301f86eff99c85a2ff65fcbfbebf57c06f0268dd683c063e5c5468077d",
+      "visualReviewStatus": "no_concrete_defect_observed",
+      "observations": [
+        "Composition alpha claire et sombre inspectée : identité, membres entiers, raccords et accessoires cohérents. Les mains ouvertes montrent trois lobes ; pas de quatrième doigt distinct dans les mains repliées."
+      ],
+      "sourceUnchangedAtReview": true
+    },
+    {
+      "variant": "resident",
+      "slot": "hit",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/hit.png",
+      "sha256": "4240b2e593e5c9f04d03041f4f0a1bc093b0a70a086365a113ad54be8b5953b6",
+      "receipt": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/hit.json",
+      "receiptSha256": "663ea394bfc77a02b5ce8f6b2e2d0ebc45d68efb1dd660e31605ef3bbd93947c",
+      "diagnostic": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-02/resident-hit-alpha.jpg",
+      "diagnosticSha256": "9275c1f63f96f216019f1ad87b82cb6e7fdba129b5e3b89105d7714106cd6cda",
+      "visualReviewStatus": "no_concrete_defect_observed",
+      "observations": [
+        "Composition alpha claire et sombre inspectée : identité, membres entiers, raccords et accessoires cohérents. Les mains ouvertes montrent trois lobes ; pas de quatrième doigt distinct dans les mains repliées."
+      ],
+      "sourceUnchangedAtReview": true
+    },
+    {
+      "variant": "resident",
+      "slot": "victory",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/victory.png",
+      "sha256": "79d35d5c3a7694302d7abb5ef8c1a855164a278dfb6104b7542ba8f12ba41eeb",
+      "receipt": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/victory.json",
+      "receiptSha256": "1675e366c8d0248cfb0682960885f09b5559f784ef5492267be5b051d3160e07",
+      "diagnostic": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-02/resident-victory-alpha.jpg",
+      "diagnosticSha256": "0c46b3fcf902485d22e118b960fad4358e9c39d6a95246d7fe3e497bd8b187db",
+      "visualReviewStatus": "no_concrete_defect_observed",
+      "observations": [
+        "Composition alpha claire et sombre inspectée : identité, membres entiers, raccords et accessoires cohérents. Les mains ouvertes montrent trois lobes ; pas de quatrième doigt distinct dans les mains repliées."
+      ],
+      "sourceUnchangedAtReview": true
+    },
+    {
+      "variant": "fusion",
+      "slot": "defeat",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/defeat.png",
+      "sha256": "73864da647baf49463c57a30ae817a119287467c7644db2d19974e76037aea83",
+      "receipt": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/defeat.json",
+      "receiptSha256": "7086bdc959463846d89abbacc3150c1da0478ec1092bfc2ed6018e4b3ec0e76a",
+      "diagnostic": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-02/fusion-defeat-alpha.jpg",
+      "diagnosticSha256": "518d863072dceb1a2a023fb8b6178a058defe93b99284a156bfad352e9026dca",
+      "visualReviewStatus": "no_concrete_defect_observed",
+      "observations": [
+        "Composition alpha claire et sombre inspectée : identité, membres entiers, raccords et accessoires cohérents. Les mains ouvertes montrent trois lobes ; pas de quatrième doigt distinct dans les mains repliées."
+      ],
+      "sourceUnchangedAtReview": true
+    },
+    {
+      "variant": "fusion",
+      "slot": "hit",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/hit.png",
+      "sha256": "18666434c7a7e1b82f504203b69f15de314209aaa432b7b7d4a0edb86edab897",
+      "receipt": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/hit.json",
+      "receiptSha256": "eb0e00f29a4e1b119711d7ec7fe3666ef175465d49becb656d23bad6c2a65e31",
+      "diagnostic": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-02/fusion-hit-alpha.jpg",
+      "diagnosticSha256": "c4df9526ae2273d77a50d718454018e7de97be474b93567b1967451ef206548e",
+      "visualReviewStatus": "no_concrete_defect_observed",
+      "observations": [
+        "Composition alpha claire et sombre inspectée : identité, membres entiers, raccords et accessoires cohérents. Les mains ouvertes montrent trois lobes ; pas de quatrième doigt distinct dans les mains repliées."
+      ],
+      "sourceUnchangedAtReview": true
+    }
+  ],
+  "schema": "encore-independent-npc-visual-review/v1",
+  "reviewer": "ribbit_references",
+  "reviewedAt": "2026-11-20T15:25:20.935817+00:00",
+  "status": "partial_review_no_new_defect_observed",
+  "inspectedAcceptedPngs": 6,
+  "scope": "Independent review of the six newly accepted Resident/Fusion poses after the initial 26-image snapshot.",
+  "concreteDefects": [],
+  "limits": [
+    "Fusion victory and the revised Hommage family are not included in this round.",
+    "Three visible hand lobes are an original design choice for this batch, not an officially demonstrated canonical anatomy.",
+    "Native PNGs/jobs/receipts unchanged. Separate alpha diagnostics only; no in-game renderer or browser validation."
+  ]
+}
