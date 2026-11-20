@@ -1,0 +1,4606 @@
+[
+  {
+    "appearanceId": "jaxsuitpomni",
+    "slot": "selection",
+    "file": "assets/encore/selection/jaxsuitpomni.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/selection.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/selection.json",
+    "sha256": "5cd4179ae983b9a050162159e47bad53ff95bd895c790ae38963fa2df74a3d6c",
+    "bytes": 923013,
+    "dimensions": [
+      955,
+      1647
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      123,
+      12,
+      809,
+      1632
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "file": "docs/art-generation/cast-next-20261120/research/jaxsuitpomni/official-jaxsuitpomni-1.png",
+        "sha256": "782f6c5963f506fdbe50c69a1b98136c231e49698495275879ad306d31f7f5ba",
+        "bytes": 327130,
+        "currentVerification": "exact"
+      },
+      {
+        "file": "docs/art-generation/cast-next-20261120/research/jaxsuitpomni/official-jaxsuitpomni-2.png",
+        "sha256": "69f87ad01cd0cd673edc7bcc4e5f16db9b5ed8eb689f41b93a115c213209d6ba",
+        "bytes": 318519,
+        "currentVerification": "exact"
+      },
+      {
+        "file": "assets/encore/selection/beachpomni.png",
+        "sha256": "4f104be35c2d1fb5494b7b0ddfb616ceb288edb795ec1a8094ff58e7996f674e",
+        "bytes": 1055943,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "jaxsuitpomni",
+    "slot": "stance",
+    "file": "assets/encore/stance/jaxsuitpomni.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/stance.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/stance.json",
+    "sha256": "87721dfd7999af3b5d6d564135db0d9d26fcbf641b1514481e8e656ce1812fd4",
+    "bytes": 907265,
+    "dimensions": [
+      1047,
+      1502
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      114,
+      13,
+      877,
+      1491
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "file": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/selection.png",
+        "sha256": "5cd4179ae983b9a050162159e47bad53ff95bd895c790ae38963fa2df74a3d6c",
+        "bytes": 923013,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "jaxsuitpomni",
+    "slot": "intro",
+    "file": "assets/encore/poses/jaxsuitpomni/intro.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/intro.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/intro.json",
+    "sha256": "b9e304f112d63787fe86306a79968cd9d9abc047cd0307f01246d6afaef8891b",
+    "bytes": 995201,
+    "dimensions": [
+      955,
+      1647
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      65,
+      23,
+      884,
+      1631
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "file": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/selection.png",
+        "sha256": "5cd4179ae983b9a050162159e47bad53ff95bd895c790ae38963fa2df74a3d6c",
+        "bytes": 923013,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "jaxsuitpomni",
+    "slot": "attack",
+    "file": "assets/encore/poses/jaxsuitpomni/attack.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/attack.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/attack.json",
+    "sha256": "f6389b18ddf61d4807b1632faaade3470e891be7602b288dbca5e51ef1629307",
+    "bytes": 1385718,
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "alpha12Bounds": [
+      218,
+      8,
+      1271,
+      1013
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "file": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/selection.png",
+        "sha256": "5cd4179ae983b9a050162159e47bad53ff95bd895c790ae38963fa2df74a3d6c",
+        "bytes": 923013,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "jaxsuitpomni",
+    "slot": "heavy",
+    "file": "assets/encore/poses/jaxsuitpomni/heavy.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/heavy.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/heavy.json",
+    "sha256": "e6da33491c9140568f1a0594cb608d7a798f8d063267e5afd021b3ea84652c5c",
+    "bytes": 787731,
+    "dimensions": [
+      1188,
+      1324
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      31,
+      11,
+      1156,
+      1310
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "file": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/selection.png",
+        "sha256": "5cd4179ae983b9a050162159e47bad53ff95bd895c790ae38963fa2df74a3d6c",
+        "bytes": 923013,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "jaxsuitpomni",
+    "slot": "hit",
+    "file": "assets/encore/poses/jaxsuitpomni/hit.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/hit.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/hit.json",
+    "sha256": "9232ef394885124ae4be51810aa712363c8b331b3518732e4e25e0f34751caa3",
+    "bytes": 985431,
+    "dimensions": [
+      961,
+      1637
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      132,
+      9,
+      830,
+      1631
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "file": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/selection.png",
+        "sha256": "5cd4179ae983b9a050162159e47bad53ff95bd895c790ae38963fa2df74a3d6c",
+        "bytes": 923013,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "jaxsuitpomni",
+    "slot": "walk",
+    "file": "assets/encore/poses/jaxsuitpomni/walk.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/walk.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/walk.json",
+    "sha256": "a1f21e7a09273340c0fb458a92a8d11fe364688bf5927e5630f02dac98ef693e",
+    "bytes": 856379,
+    "dimensions": [
+      1135,
+      1386
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      172,
+      8,
+      950,
+      1371
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "file": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/selection.png",
+        "sha256": "5cd4179ae983b9a050162159e47bad53ff95bd895c790ae38963fa2df74a3d6c",
+        "bytes": 923013,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "jaxsuitpomni",
+    "slot": "jump",
+    "file": "assets/encore/poses/jaxsuitpomni/jump.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/jump.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/jump.json",
+    "sha256": "7f6ddda1139bacfbca9dcd29f2d59b20b1617554d10bda430ecb1f3ee8dcd1fa",
+    "bytes": 1011058,
+    "dimensions": [
+      1070,
+      1470
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      79,
+      24,
+      998,
+      1450
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "file": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/selection.png",
+        "sha256": "5cd4179ae983b9a050162159e47bad53ff95bd895c790ae38963fa2df74a3d6c",
+        "bytes": 923013,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "jaxsuitpomni",
+    "slot": "crouch",
+    "file": "assets/encore/poses/jaxsuitpomni/crouch.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/crouch.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/crouch.json",
+    "sha256": "601c6af1d7bb583c7d323b435852f39b092258508850ca983c171dca210e482b",
+    "bytes": 1194779,
+    "dimensions": [
+      1165,
+      1350
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      81,
+      16,
+      1045,
+      1336
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "file": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/selection.png",
+        "sha256": "5cd4179ae983b9a050162159e47bad53ff95bd895c790ae38963fa2df74a3d6c",
+        "bytes": 923013,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "jaxsuitpomni",
+    "slot": "victory",
+    "file": "assets/encore/poses/jaxsuitpomni/victory.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/victory.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/victory.json",
+    "sha256": "310aa01b647b4bf10750a9884fb915dbce90e0fcfac2e6b122a25f8b332b10bf",
+    "bytes": 939039,
+    "dimensions": [
+      955,
+      1647
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      134,
+      12,
+      920,
+      1635
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "file": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/selection.png",
+        "sha256": "5cd4179ae983b9a050162159e47bad53ff95bd895c790ae38963fa2df74a3d6c",
+        "bytes": 923013,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "jaxsuitpomni",
+    "slot": "defeat",
+    "file": "assets/encore/poses/jaxsuitpomni/defeat.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/defeat.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/defeat.json",
+    "sha256": "275824da8abf27b8487c69cd141080d8efac37732a5a0bcf25af0694d31ea780",
+    "bytes": 1098260,
+    "dimensions": [
+      1171,
+      1343
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      70,
+      63,
+      1097,
+      1310
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "file": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/selection.png",
+        "sha256": "5cd4179ae983b9a050162159e47bad53ff95bd895c790ae38963fa2df74a3d6c",
+        "bytes": 923013,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "noirribbit",
+    "slot": "selection",
+    "file": "assets/encore/selection/noirribbit.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/noirribbit/selection.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/noirribbit/selection.json",
+    "sha256": "7e0856ee931693f817f7206945d38b178c3e79007a68c77d6c908c066972b78d",
+    "bytes": 1279270,
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "alpha12Bounds": [
+      146,
+      30,
+      829,
+      1521
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-noir.png",
+        "sha256": "fa7196988e32f61446b691b0b956abc103e9761827d9a19dbaae5e1292d8c31c",
+        "bytes": 1555468,
+        "currentVerification": "exact"
+      },
+      {
+        "position": 2,
+        "file": "assets/encore/selection/ribbit.png",
+        "sha256": "a88927f18865fb289f4d9e045fd1a75f91363f5d9b535859efbebfd4e8bf566f",
+        "bytes": 1352678,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "noirribbit",
+    "slot": "stance",
+    "file": "assets/encore/stance/noirribbit.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/noirribbit/stance.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/noirribbit/stance.json",
+    "sha256": "4630a86d35b9fcd01eefaaf7b71c246cfa334f3a7ebb803fab93ee4442aa31c0",
+    "bytes": 1279890,
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "alpha12Bounds": [
+      97,
+      168,
+      891,
+      1471
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-20261120/generated/noirribbit/selection.png",
+        "sha256": "7e0856ee931693f817f7206945d38b178c3e79007a68c77d6c908c066972b78d",
+        "bytes": 1279270,
+        "currentVerification": "exact"
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-noir.png",
+        "sha256": "fa7196988e32f61446b691b0b956abc103e9761827d9a19dbaae5e1292d8c31c",
+        "bytes": 1555468,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "noirribbit",
+    "slot": "intro",
+    "file": "assets/encore/poses/noirribbit/intro.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/noirribbit/intro.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/noirribbit/intro.json",
+    "sha256": "680e3640ebe7333951175f8126e9b799956714a7df467c937a990d789a2c1630",
+    "bytes": 1312077,
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "alpha12Bounds": [
+      140,
+      29,
+      947,
+      1516
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-20261120/generated/noirribbit/selection.png",
+        "sha256": "7e0856ee931693f817f7206945d38b178c3e79007a68c77d6c908c066972b78d",
+        "bytes": 1279270,
+        "currentVerification": "exact"
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-noir.png",
+        "sha256": "fa7196988e32f61446b691b0b956abc103e9761827d9a19dbaae5e1292d8c31c",
+        "bytes": 1555468,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "noirribbit",
+    "slot": "attack",
+    "file": "assets/encore/poses/noirribbit/attack.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/noirribbit/attack.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/noirribbit/attack.json",
+    "sha256": "bd9405b71dadee65c634d56763f9b123cdccfc4ab8ed9960045945e34fa8bc2d",
+    "bytes": 634539,
+    "dimensions": [
+      1190,
+      1322
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      54,
+      80,
+      1135,
+      1273
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-20261120/generated/noirribbit/selection.png",
+        "sha256": "7e0856ee931693f817f7206945d38b178c3e79007a68c77d6c908c066972b78d",
+        "bytes": 1279270,
+        "currentVerification": "exact"
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-noir.png",
+        "sha256": "fa7196988e32f61446b691b0b956abc103e9761827d9a19dbaae5e1292d8c31c",
+        "bytes": 1555468,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "noirribbit",
+    "slot": "heavy",
+    "file": "assets/encore/poses/noirribbit/heavy.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/noirribbit/heavy.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/noirribbit/heavy.json",
+    "sha256": "31ebd5a9c53ae47ec5cf9a6435378a369e320ec3c6847f14694feda0a050f5b4",
+    "bytes": 1284694,
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "alpha12Bounds": [
+      127,
+      63,
+      1439,
+      994
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-20261120/generated/noirribbit/selection.png",
+        "sha256": "7e0856ee931693f817f7206945d38b178c3e79007a68c77d6c908c066972b78d",
+        "bytes": 1279270,
+        "currentVerification": "exact"
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-noir.png",
+        "sha256": "fa7196988e32f61446b691b0b956abc103e9761827d9a19dbaae5e1292d8c31c",
+        "bytes": 1555468,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "noirribbit",
+    "slot": "hit",
+    "file": "assets/encore/poses/noirribbit/hit.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/noirribbit/hit.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/noirribbit/hit.json",
+    "sha256": "c7e38f81f34572675481674618d28eb2da7712f2d796a84360fa762b02b7aaf5",
+    "bytes": 1367909,
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "alpha12Bounds": [
+      119,
+      89,
+      924,
+      1481
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-20261120/generated/noirribbit/selection.png",
+        "sha256": "7e0856ee931693f817f7206945d38b178c3e79007a68c77d6c908c066972b78d",
+        "bytes": 1279270,
+        "currentVerification": "exact"
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-noir.png",
+        "sha256": "fa7196988e32f61446b691b0b956abc103e9761827d9a19dbaae5e1292d8c31c",
+        "bytes": 1555468,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "noirribbit",
+    "slot": "walk",
+    "file": "assets/encore/poses/noirribbit/walk.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/noirribbit/walk.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/noirribbit/walk.json",
+    "sha256": "3aea157537b0149a775293012ef5e56b032160f7ad3177f8520ad699404cbca5",
+    "bytes": 1346053,
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "alpha12Bounds": [
+      115,
+      38,
+      943,
+      1504
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-20261120/generated/noirribbit/selection.png",
+        "sha256": "7e0856ee931693f817f7206945d38b178c3e79007a68c77d6c908c066972b78d",
+        "bytes": 1279270,
+        "currentVerification": "exact"
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-noir.png",
+        "sha256": "fa7196988e32f61446b691b0b956abc103e9761827d9a19dbaae5e1292d8c31c",
+        "bytes": 1555468,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "noirribbit",
+    "slot": "jump",
+    "file": "assets/encore/poses/noirribbit/jump.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/noirribbit/jump.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/noirribbit/jump.json",
+    "sha256": "834125bf3dddb717eaa715fa409f681ccfdfcbc8e9d707c94c91f242271e7a9b",
+    "bytes": 774755,
+    "dimensions": [
+      1199,
+      1312
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      184,
+      31,
+      1107,
+      1279
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-20261120/generated/noirribbit/selection.png",
+        "sha256": "7e0856ee931693f817f7206945d38b178c3e79007a68c77d6c908c066972b78d",
+        "bytes": 1279270,
+        "currentVerification": "exact"
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-noir.png",
+        "sha256": "fa7196988e32f61446b691b0b956abc103e9761827d9a19dbaae5e1292d8c31c",
+        "bytes": 1555468,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "noirribbit",
+    "slot": "crouch",
+    "file": "assets/encore/poses/noirribbit/crouch.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/noirribbit/crouch.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/noirribbit/crouch.json",
+    "sha256": "0734c41ad3edf682d31fc37bfb3b860fc0d8baa40b5c6a369f7b1bea447591bd",
+    "bytes": 691865,
+    "dimensions": [
+      1312,
+      1199
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      273,
+      108,
+      1007,
+      1155
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-20261120/generated/noirribbit/selection.png",
+        "sha256": "7e0856ee931693f817f7206945d38b178c3e79007a68c77d6c908c066972b78d",
+        "bytes": 1279270,
+        "currentVerification": "exact"
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-noir.png",
+        "sha256": "fa7196988e32f61446b691b0b956abc103e9761827d9a19dbaae5e1292d8c31c",
+        "bytes": 1555468,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "noirribbit",
+    "slot": "victory",
+    "file": "assets/encore/poses/noirribbit/victory.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/noirribbit/victory.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/noirribbit/victory.json",
+    "sha256": "2211cde3840d5e26c81df1e7e996722a07a0345a0da4c83d6eb9d33a596e62a3",
+    "bytes": 1311824,
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "alpha12Bounds": [
+      138,
+      30,
+      903,
+      1520
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-20261120/generated/noirribbit/selection.png",
+        "sha256": "7e0856ee931693f817f7206945d38b178c3e79007a68c77d6c908c066972b78d",
+        "bytes": 1279270,
+        "currentVerification": "exact"
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-noir.png",
+        "sha256": "fa7196988e32f61446b691b0b956abc103e9761827d9a19dbaae5e1292d8c31c",
+        "bytes": 1555468,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "noirribbit",
+    "slot": "defeat",
+    "file": "assets/encore/poses/noirribbit/defeat.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/noirribbit/defeat.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/noirribbit/defeat.json",
+    "sha256": "755ac74442f18e51d29e7f2d52990588cf16b341cf3760954ae355b4044fd119",
+    "bytes": 779208,
+    "dimensions": [
+      1199,
+      1312
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      96,
+      128,
+      1063,
+      1243
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-20261120/generated/noirribbit/selection.png",
+        "sha256": "7e0856ee931693f817f7206945d38b178c3e79007a68c77d6c908c066972b78d",
+        "bytes": 1279270,
+        "currentVerification": "exact"
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-noir.png",
+        "sha256": "fa7196988e32f61446b691b0b956abc103e9761827d9a19dbaae5e1292d8c31c",
+        "bytes": 1555468,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "kaufmosuitribbit",
+    "slot": "selection",
+    "file": "assets/encore/selection/kaufmosuitribbit.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/selection.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/selection.json",
+    "sha256": "4e931f702f5758ed95c581651058b9ed2f0121e93d60305ee9bb8ec29865e378",
+    "bytes": 1401496,
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "alpha12Bounds": [
+      89,
+      12,
+      814,
+      1524
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-kaufmo-suit.png",
+        "sha256": "e54ef43b2e9e73eed83bad635b971c8ac8f8a2caf8c82dbfef755ffd29b2868d",
+        "bytes": 1455321,
+        "currentVerification": "exact"
+      },
+      {
+        "position": 2,
+        "file": "assets/encore/selection/ribbit.png",
+        "sha256": "a88927f18865fb289f4d9e045fd1a75f91363f5d9b535859efbebfd4e8bf566f",
+        "bytes": 1352678,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "kaufmosuitribbit",
+    "slot": "stance",
+    "file": "assets/encore/stance/kaufmosuitribbit.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/stance.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/stance.json",
+    "sha256": "ddd3ccf122e5af6e0b4baf1961018e9fa9ef23f14ba1f0a6bb4964f78fcecd8d",
+    "bytes": 1415133,
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "alpha12Bounds": [
+      97,
+      91,
+      918,
+      1487
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/selection.png",
+        "sha256": "4e931f702f5758ed95c581651058b9ed2f0121e93d60305ee9bb8ec29865e378",
+        "bytes": 1401496,
+        "currentVerification": "exact"
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-kaufmo-suit.png",
+        "sha256": "e54ef43b2e9e73eed83bad635b971c8ac8f8a2caf8c82dbfef755ffd29b2868d",
+        "bytes": 1455321,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "kaufmosuitribbit",
+    "slot": "intro",
+    "file": "assets/encore/poses/kaufmosuitribbit/intro.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/intro.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/intro.json",
+    "sha256": "7d45ccba02196755a6745575f4fb1fc72173f476992505ee2306d8cf7b8d36b6",
+    "bytes": 1408732,
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "alpha12Bounds": [
+      146,
+      18,
+      943,
+      1520
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/selection.png",
+        "sha256": "4e931f702f5758ed95c581651058b9ed2f0121e93d60305ee9bb8ec29865e378",
+        "bytes": 1401496,
+        "currentVerification": "exact"
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-kaufmo-suit.png",
+        "sha256": "e54ef43b2e9e73eed83bad635b971c8ac8f8a2caf8c82dbfef755ffd29b2868d",
+        "bytes": 1455321,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "kaufmosuitribbit",
+    "slot": "attack",
+    "file": "assets/encore/poses/kaufmosuitribbit/attack.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/attack.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/attack.json",
+    "sha256": "2b7765bfdb71fa238933ee75c8c9e87c5efe431b8654c81cce57ac0508ea0e8e",
+    "bytes": 1293008,
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "alpha12Bounds": [
+      275,
+      16,
+      1326,
+      1014
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/selection.png",
+        "sha256": "4e931f702f5758ed95c581651058b9ed2f0121e93d60305ee9bb8ec29865e378",
+        "bytes": 1401496,
+        "currentVerification": "exact"
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-kaufmo-suit.png",
+        "sha256": "e54ef43b2e9e73eed83bad635b971c8ac8f8a2caf8c82dbfef755ffd29b2868d",
+        "bytes": 1455321,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "kaufmosuitribbit",
+    "slot": "heavy",
+    "file": "assets/encore/poses/kaufmosuitribbit/heavy.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/heavy.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/heavy.json",
+    "sha256": "a72f3bb28a885e46b07b752eb7e7d606adcb453c28e369366c8210a874c0d5f0",
+    "bytes": 1360039,
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "alpha12Bounds": [
+      68,
+      31,
+      1499,
+      1009
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/selection.png",
+        "sha256": "4e931f702f5758ed95c581651058b9ed2f0121e93d60305ee9bb8ec29865e378",
+        "bytes": 1401496,
+        "currentVerification": "exact"
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-kaufmo-suit.png",
+        "sha256": "e54ef43b2e9e73eed83bad635b971c8ac8f8a2caf8c82dbfef755ffd29b2868d",
+        "bytes": 1455321,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "kaufmosuitribbit",
+    "slot": "hit",
+    "file": "assets/encore/poses/kaufmosuitribbit/hit.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/hit.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/hit.json",
+    "sha256": "c5cccaff1dfbce3d27febcf1310b542766cceb8c8d3cb6f07d39842a0a12c000",
+    "bytes": 1474678,
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "alpha12Bounds": [
+      59,
+      27,
+      971,
+      1521
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/selection.png",
+        "sha256": "4e931f702f5758ed95c581651058b9ed2f0121e93d60305ee9bb8ec29865e378",
+        "bytes": 1401496,
+        "currentVerification": "exact"
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-kaufmo-suit.png",
+        "sha256": "e54ef43b2e9e73eed83bad635b971c8ac8f8a2caf8c82dbfef755ffd29b2868d",
+        "bytes": 1455321,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "kaufmosuitribbit",
+    "slot": "walk",
+    "file": "assets/encore/poses/kaufmosuitribbit/walk.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/walk.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/walk.json",
+    "sha256": "a3208c7a442461ff9c16c999a7cf6165799241112acdc70fd3fe89ecea3f8547",
+    "bytes": 1465827,
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "alpha12Bounds": [
+      95,
+      54,
+      932,
+      1460
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/selection.png",
+        "sha256": "4e931f702f5758ed95c581651058b9ed2f0121e93d60305ee9bb8ec29865e378",
+        "bytes": 1401496,
+        "currentVerification": "exact"
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-kaufmo-suit.png",
+        "sha256": "e54ef43b2e9e73eed83bad635b971c8ac8f8a2caf8c82dbfef755ffd29b2868d",
+        "bytes": 1455321,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "kaufmosuitribbit",
+    "slot": "jump",
+    "file": "assets/encore/poses/kaufmosuitribbit/jump.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/jump.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/jump.json",
+    "sha256": "288af00f9612e314effb36d60d0d996a6f5c2710969c933c1e4b32f3e88aa369",
+    "bytes": 724147,
+    "dimensions": [
+      1199,
+      1312
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      133,
+      95,
+      1076,
+      1133
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/selection.png",
+        "sha256": "4e931f702f5758ed95c581651058b9ed2f0121e93d60305ee9bb8ec29865e378",
+        "bytes": 1401496,
+        "currentVerification": "exact"
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-kaufmo-suit.png",
+        "sha256": "e54ef43b2e9e73eed83bad635b971c8ac8f8a2caf8c82dbfef755ffd29b2868d",
+        "bytes": 1455321,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "kaufmosuitribbit",
+    "slot": "crouch",
+    "file": "assets/encore/poses/kaufmosuitribbit/crouch.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/crouch.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/crouch.json",
+    "sha256": "db8ecaa716c64f39cfddba737642ceb1a75ed0eb15f8e681992c1f9bb6faa5f5",
+    "bytes": 746536,
+    "dimensions": [
+      1312,
+      1199
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      291,
+      77,
+      1040,
+      1169
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/selection.png",
+        "sha256": "4e931f702f5758ed95c581651058b9ed2f0121e93d60305ee9bb8ec29865e378",
+        "bytes": 1401496,
+        "currentVerification": "exact"
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-kaufmo-suit.png",
+        "sha256": "e54ef43b2e9e73eed83bad635b971c8ac8f8a2caf8c82dbfef755ffd29b2868d",
+        "bytes": 1455321,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "kaufmosuitribbit",
+    "slot": "victory",
+    "file": "assets/encore/poses/kaufmosuitribbit/victory.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/victory.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/victory.json",
+    "sha256": "2bfb6233cb552839f6ecd0809ca5ce9abed38a5c0c4ba6937db483d5c9252b53",
+    "bytes": 1416161,
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "alpha12Bounds": [
+      184,
+      32,
+      894,
+      1520
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/selection.png",
+        "sha256": "4e931f702f5758ed95c581651058b9ed2f0121e93d60305ee9bb8ec29865e378",
+        "bytes": 1401496,
+        "currentVerification": "exact"
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-kaufmo-suit.png",
+        "sha256": "e54ef43b2e9e73eed83bad635b971c8ac8f8a2caf8c82dbfef755ffd29b2868d",
+        "bytes": 1455321,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "kaufmosuitribbit",
+    "slot": "defeat",
+    "file": "assets/encore/poses/kaufmosuitribbit/defeat.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/defeat.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/defeat.json",
+    "sha256": "177a674530a60db4f52b33abcf3ec40aebb94f581576d0e72928cd5f9b4c65e7",
+    "bytes": 786332,
+    "dimensions": [
+      1217,
+      1293
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      134,
+      107,
+      1037,
+      1230
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/selection.png",
+        "sha256": "4e931f702f5758ed95c581651058b9ed2f0121e93d60305ee9bb8ec29865e378",
+        "bytes": 1401496,
+        "currentVerification": "exact"
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-kaufmo-suit.png",
+        "sha256": "e54ef43b2e9e73eed83bad635b971c8ac8f8a2caf8c82dbfef755ffd29b2868d",
+        "bytes": 1455321,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "intermissioncaine",
+    "slot": "selection",
+    "file": "assets/encore/selection/intermissioncaine.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/selection.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/selection.json",
+    "sha256": "cdfc9b5405f7059498542b38a39bbd1d6ff83efe5ad35f44f09ba3be84bc6cef",
+    "bytes": 1315027,
+    "dimensions": [
+      1312,
+      1199
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      32,
+      38,
+      1269,
+      1163
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-20261120/research/states/official-intermission-caine.png",
+        "sha256": "441a3e2df39c7ba7a95167d7ba902858b960c7f9e38f4b9ef0efa69c5bef7be0",
+        "bytes": 3889495,
+        "kind": "official-product-reference",
+        "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/81.png?v=1762387272",
+        "pageUrl": "https://glitchproductions.store/products/digital-circus-animiniz-costume-adventure-series",
+        "currentVerification": "exact"
+      },
+      {
+        "position": 2,
+        "file": "assets/encore/selection/caine.webp",
+        "sha256": "9d2e8a00ffa0f1f55b5aecec59da05a4be6edfea355c6df34aea4bfec9f044e7",
+        "bytes": 278502,
+        "kind": "game-style-only",
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "intermissioncaine",
+    "slot": "stance",
+    "file": "assets/encore/stance/intermissioncaine.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/stance.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/stance.json",
+    "sha256": "f782a57ba22c9239e201fc0e37e119813b339080e0caa2118b6991590cabdffc",
+    "bytes": 1288137,
+    "dimensions": [
+      1312,
+      1199
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      44,
+      112,
+      1249,
+      1108
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/selection.png",
+        "sha256": "cdfc9b5405f7059498542b38a39bbd1d6ff83efe5ad35f44f09ba3be84bc6cef",
+        "bytes": 1315027,
+        "kind": "accepted-native-selection-seed",
+        "currentVerification": "exact"
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-20261120/research/states/official-intermission-caine.png",
+        "sha256": "441a3e2df39c7ba7a95167d7ba902858b960c7f9e38f4b9ef0efa69c5bef7be0",
+        "bytes": 3889495,
+        "kind": "official-product-reference",
+        "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/81.png?v=1762387272",
+        "pageUrl": "https://glitchproductions.store/products/digital-circus-animiniz-costume-adventure-series",
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "intermissioncaine",
+    "slot": "intro",
+    "file": "assets/encore/poses/intermissioncaine/intro.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/intro.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/intro.json",
+    "sha256": "bfc52f2c77d0cdc8070c7d4e6ff95d19b12ff4e47a40989f11234e7b0a7ebc50",
+    "bytes": 1455421,
+    "dimensions": [
+      1312,
+      1199
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      24,
+      30,
+      1297,
+      1188
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/selection.png",
+        "sha256": "cdfc9b5405f7059498542b38a39bbd1d6ff83efe5ad35f44f09ba3be84bc6cef",
+        "bytes": 1315027,
+        "kind": "accepted-native-selection-seed",
+        "currentVerification": "exact"
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-20261120/research/states/official-intermission-caine.png",
+        "sha256": "441a3e2df39c7ba7a95167d7ba902858b960c7f9e38f4b9ef0efa69c5bef7be0",
+        "bytes": 3889495,
+        "kind": "official-product-reference",
+        "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/81.png?v=1762387272",
+        "pageUrl": "https://glitchproductions.store/products/digital-circus-animiniz-costume-adventure-series",
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "intermissioncaine",
+    "slot": "attack",
+    "file": "assets/encore/poses/intermissioncaine/attack.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/attack.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/attack.json",
+    "sha256": "f750ba59fc70527075534807de43b6f601cddbe399f891186b9664617910ee21",
+    "bytes": 1275988,
+    "dimensions": [
+      1312,
+      1199
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      29,
+      50,
+      1288,
+      1162
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/selection.png",
+        "sha256": "cdfc9b5405f7059498542b38a39bbd1d6ff83efe5ad35f44f09ba3be84bc6cef",
+        "bytes": 1315027,
+        "kind": "accepted-native-selection-seed",
+        "currentVerification": "exact"
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-20261120/research/states/official-intermission-caine.png",
+        "sha256": "441a3e2df39c7ba7a95167d7ba902858b960c7f9e38f4b9ef0efa69c5bef7be0",
+        "bytes": 3889495,
+        "kind": "official-product-reference",
+        "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/81.png?v=1762387272",
+        "pageUrl": "https://glitchproductions.store/products/digital-circus-animiniz-costume-adventure-series",
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "intermissioncaine",
+    "slot": "heavy",
+    "file": "assets/encore/poses/intermissioncaine/heavy.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/heavy.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/heavy.json",
+    "sha256": "a9cb44b24a63ab8526c9ed937835a504b628dea81d500d705cf1b3e6ddc8a816",
+    "bytes": 1407275,
+    "dimensions": [
+      1402,
+      1122
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      28,
+      63,
+      1366,
+      1091
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/selection.png",
+        "sha256": "cdfc9b5405f7059498542b38a39bbd1d6ff83efe5ad35f44f09ba3be84bc6cef",
+        "bytes": 1315027,
+        "kind": "accepted-native-selection-seed",
+        "currentVerification": "exact"
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-20261120/research/states/official-intermission-caine.png",
+        "sha256": "441a3e2df39c7ba7a95167d7ba902858b960c7f9e38f4b9ef0efa69c5bef7be0",
+        "bytes": 3889495,
+        "kind": "official-product-reference",
+        "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/81.png?v=1762387272",
+        "pageUrl": "https://glitchproductions.store/products/digital-circus-animiniz-costume-adventure-series",
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "intermissioncaine",
+    "slot": "hit",
+    "file": "assets/encore/poses/intermissioncaine/hit.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/hit.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/hit.json",
+    "sha256": "e8a38f861078bd9b88255aca4f1d0f6ad73769875dd731c4461a9b5c3a18956d",
+    "bytes": 1330746,
+    "dimensions": [
+      1312,
+      1199
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      10,
+      12,
+      1293,
+      1186
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/selection.png",
+        "sha256": "cdfc9b5405f7059498542b38a39bbd1d6ff83efe5ad35f44f09ba3be84bc6cef",
+        "bytes": 1315027,
+        "kind": "accepted-native-selection-seed",
+        "currentVerification": "exact"
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-20261120/research/states/official-intermission-caine.png",
+        "sha256": "441a3e2df39c7ba7a95167d7ba902858b960c7f9e38f4b9ef0efa69c5bef7be0",
+        "bytes": 3889495,
+        "kind": "official-product-reference",
+        "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/81.png?v=1762387272",
+        "pageUrl": "https://glitchproductions.store/products/digital-circus-animiniz-costume-adventure-series",
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "intermissioncaine",
+    "slot": "walk",
+    "file": "assets/encore/poses/intermissioncaine/walk.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/walk.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/walk.json",
+    "sha256": "e10b8b2557358341db5989d82dc5b12dfa947b5d2ee79ce630a99d14caf4a6c1",
+    "bytes": 1775213,
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "alpha12Bounds": [
+      73,
+      18,
+      1496,
+      1014
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/selection.png",
+        "sha256": "cdfc9b5405f7059498542b38a39bbd1d6ff83efe5ad35f44f09ba3be84bc6cef",
+        "bytes": 1315027,
+        "kind": "accepted-native-selection-seed",
+        "currentVerification": "exact"
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-20261120/research/states/official-intermission-caine.png",
+        "sha256": "441a3e2df39c7ba7a95167d7ba902858b960c7f9e38f4b9ef0efa69c5bef7be0",
+        "bytes": 3889495,
+        "kind": "official-product-reference",
+        "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/81.png?v=1762387272",
+        "pageUrl": "https://glitchproductions.store/products/digital-circus-animiniz-costume-adventure-series",
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "intermissioncaine",
+    "slot": "jump",
+    "file": "assets/encore/poses/intermissioncaine/jump.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/jump.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/jump.json",
+    "sha256": "e1aa44aa9a728ba02032aa320ac766cfd13bd114522d63b54b4ba4b88a6d5b3c",
+    "bytes": 1208006,
+    "dimensions": [
+      1312,
+      1199
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      75,
+      11,
+      1199,
+      1137
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/selection.png",
+        "sha256": "cdfc9b5405f7059498542b38a39bbd1d6ff83efe5ad35f44f09ba3be84bc6cef",
+        "bytes": 1315027,
+        "kind": "accepted-native-selection-seed",
+        "currentVerification": "exact"
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-20261120/research/states/official-intermission-caine.png",
+        "sha256": "441a3e2df39c7ba7a95167d7ba902858b960c7f9e38f4b9ef0efa69c5bef7be0",
+        "bytes": 3889495,
+        "kind": "official-product-reference",
+        "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/81.png?v=1762387272",
+        "pageUrl": "https://glitchproductions.store/products/digital-circus-animiniz-costume-adventure-series",
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "intermissioncaine",
+    "slot": "crouch",
+    "file": "assets/encore/poses/intermissioncaine/crouch.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/crouch.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/crouch.json",
+    "sha256": "2249068df3ed2c0637605b3cd8f652b41fcaaca8ce1e5f46a4f3f42f26e1603b",
+    "bytes": 1725115,
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "alpha12Bounds": [
+      80,
+      69,
+      1459,
+      979
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/selection.png",
+        "sha256": "cdfc9b5405f7059498542b38a39bbd1d6ff83efe5ad35f44f09ba3be84bc6cef",
+        "bytes": 1315027,
+        "kind": "accepted-native-selection-seed",
+        "currentVerification": "exact"
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-20261120/research/states/official-intermission-caine.png",
+        "sha256": "441a3e2df39c7ba7a95167d7ba902858b960c7f9e38f4b9ef0efa69c5bef7be0",
+        "bytes": 3889495,
+        "kind": "official-product-reference",
+        "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/81.png?v=1762387272",
+        "pageUrl": "https://glitchproductions.store/products/digital-circus-animiniz-costume-adventure-series",
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "intermissioncaine",
+    "slot": "victory",
+    "file": "assets/encore/poses/intermissioncaine/victory.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/victory.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/victory.json",
+    "sha256": "ce23e99327ce5ed957cabf0b8ee98779fa215a2f21e303bdc432b44f6616e646",
+    "bytes": 1345739,
+    "dimensions": [
+      1322,
+      1190
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      26,
+      16,
+      1296,
+      1174
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/selection.png",
+        "sha256": "cdfc9b5405f7059498542b38a39bbd1d6ff83efe5ad35f44f09ba3be84bc6cef",
+        "bytes": 1315027,
+        "kind": "accepted-native-selection-seed",
+        "currentVerification": "exact"
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-20261120/research/states/official-intermission-caine.png",
+        "sha256": "441a3e2df39c7ba7a95167d7ba902858b960c7f9e38f4b9ef0efa69c5bef7be0",
+        "bytes": 3889495,
+        "kind": "official-product-reference",
+        "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/81.png?v=1762387272",
+        "pageUrl": "https://glitchproductions.store/products/digital-circus-animiniz-costume-adventure-series",
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "intermissioncaine",
+    "slot": "defeat",
+    "file": "assets/encore/poses/intermissioncaine/defeat.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/defeat.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/defeat.json",
+    "sha256": "451f9b33242bb6a49cb32632337f46c1955789a1b0c6fb6c3d0e591488ed0ffa",
+    "bytes": 1338756,
+    "dimensions": [
+      1375,
+      1144
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      32,
+      124,
+      1337,
+      1096
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-20261120/generated/intermissioncaine/selection.png",
+        "sha256": "cdfc9b5405f7059498542b38a39bbd1d6ff83efe5ad35f44f09ba3be84bc6cef",
+        "bytes": 1315027,
+        "kind": "accepted-native-selection-seed",
+        "currentVerification": "exact"
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-20261120/research/states/official-intermission-caine.png",
+        "sha256": "441a3e2df39c7ba7a95167d7ba902858b960c7f9e38f4b9ef0efa69c5bef7be0",
+        "bytes": 3889495,
+        "kind": "official-product-reference",
+        "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/81.png?v=1762387272",
+        "pageUrl": "https://glitchproductions.store/products/digital-circus-animiniz-costume-adventure-series",
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "showtimepomni",
+    "slot": "selection",
+    "file": "assets/encore/selection/showtimepomni.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/showtimepomni/selection.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/showtimepomni/selection.json",
+    "sha256": "36657a67157a740bd2e26b9de7d8bc24163901eb68b80c1bd97e2c3317084093",
+    "bytes": 1563975,
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "alpha12Bounds": [
+      105,
+      24,
+      898,
+      1522
+    ],
+    "nativeFacing": "right",
+    "recovery": "new_native_after_environment_loss",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-20261120/generated/showtimepomni/defeat.png",
+        "sha256": "aff64f2b1fbf4294cc916399c1af418078632d731514c8eb3172cbcb987a0b44",
+        "bytes": 1418103,
+        "recoveryLocalPath": "/workspace/scratch/5f5114b49696/recovery/pomni/generated/showtimepomni/defeat.png",
+        "currentVerification": "exact"
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-20261120/recovery-references/official-showtime-pomni.jpg",
+        "sha256": "a398e64a547fcecb3b4d6615d81e835ef6142b8aff1aa48e9135edd8d0a6ad46",
+        "bytes": 595909,
+        "recoveryLocalPath": "/workspace/scratch/5f5114b49696/recovery/pomni/references/official-showtime-pomni.jpg",
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "showtimepomni",
+    "slot": "stance",
+    "file": "assets/encore/stance/showtimepomni.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/showtimepomni/stance.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/showtimepomni/stance.json",
+    "sha256": "77e43bb3e8b2525b807c05157bcc6c29975db800b451de9b0e29c5804a0df493",
+    "bytes": 1650314,
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "alpha12Bounds": [
+      40,
+      28,
+      910,
+      1518
+    ],
+    "nativeFacing": "right",
+    "recovery": "new_native_after_environment_loss",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-20261120/generated/showtimepomni/selection.png",
+        "sha256": "36657a67157a740bd2e26b9de7d8bc24163901eb68b80c1bd97e2c3317084093",
+        "bytes": 1563975,
+        "recoveryLocalPath": "/workspace/scratch/5f5114b49696/recovery/pomni/regenerated/showtimepomni/selection.png",
+        "currentVerification": "exact"
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-20261120/generated/showtimepomni/defeat.png",
+        "sha256": "aff64f2b1fbf4294cc916399c1af418078632d731514c8eb3172cbcb987a0b44",
+        "bytes": 1418103,
+        "recoveryLocalPath": "/workspace/scratch/5f5114b49696/recovery/pomni/generated/showtimepomni/defeat.png",
+        "currentVerification": "exact"
+      },
+      {
+        "position": 3,
+        "file": "docs/art-generation/cast-next-20261120/recovery-references/official-showtime-pomni.jpg",
+        "sha256": "a398e64a547fcecb3b4d6615d81e835ef6142b8aff1aa48e9135edd8d0a6ad46",
+        "bytes": 595909,
+        "recoveryLocalPath": "/workspace/scratch/5f5114b49696/recovery/pomni/references/official-showtime-pomni.jpg",
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "showtimepomni",
+    "slot": "intro",
+    "file": "assets/encore/poses/showtimepomni/intro.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/showtimepomni/intro.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/showtimepomni/intro.json",
+    "sha256": "595696364e07179b2b9c220c6475ded583baafa99ec00267460b8c3e6746ff07",
+    "bytes": 1599167,
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "alpha12Bounds": [
+      96,
+      24,
+      925,
+      1510
+    ],
+    "nativeFacing": "right",
+    "recovery": "new_native_after_environment_loss",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-20261120/generated/showtimepomni/selection.png",
+        "sha256": "36657a67157a740bd2e26b9de7d8bc24163901eb68b80c1bd97e2c3317084093",
+        "bytes": 1563975,
+        "recoveryLocalPath": "/workspace/scratch/5f5114b49696/recovery/pomni/regenerated/showtimepomni/selection.png",
+        "currentVerification": "exact"
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-20261120/generated/showtimepomni/defeat.png",
+        "sha256": "aff64f2b1fbf4294cc916399c1af418078632d731514c8eb3172cbcb987a0b44",
+        "bytes": 1418103,
+        "recoveryLocalPath": "/workspace/scratch/5f5114b49696/recovery/pomni/generated/showtimepomni/defeat.png",
+        "currentVerification": "exact"
+      },
+      {
+        "position": 3,
+        "file": "docs/art-generation/cast-next-20261120/recovery-references/official-showtime-pomni.jpg",
+        "sha256": "a398e64a547fcecb3b4d6615d81e835ef6142b8aff1aa48e9135edd8d0a6ad46",
+        "bytes": 595909,
+        "recoveryLocalPath": "/workspace/scratch/5f5114b49696/recovery/pomni/references/official-showtime-pomni.jpg",
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "showtimepomni",
+    "slot": "attack",
+    "file": "assets/encore/poses/showtimepomni/attack.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/showtimepomni/attack.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/showtimepomni/attack.json",
+    "sha256": "e09f808f0f74bfb4051342e214f0b9dc28e9c4075ff093364113a5a87a1006da",
+    "bytes": 909788,
+    "dimensions": [
+      1199,
+      1312
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      141,
+      17,
+      1102,
+      1301
+    ],
+    "nativeFacing": "right",
+    "recovery": "new_native_after_environment_loss",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-20261120/generated/showtimepomni/selection.png",
+        "sha256": "36657a67157a740bd2e26b9de7d8bc24163901eb68b80c1bd97e2c3317084093",
+        "bytes": 1563975,
+        "recoveryLocalPath": "/workspace/scratch/5f5114b49696/recovery/pomni/regenerated/showtimepomni/selection.png",
+        "currentVerification": "exact"
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-20261120/generated/showtimepomni/defeat.png",
+        "sha256": "aff64f2b1fbf4294cc916399c1af418078632d731514c8eb3172cbcb987a0b44",
+        "bytes": 1418103,
+        "recoveryLocalPath": "/workspace/scratch/5f5114b49696/recovery/pomni/generated/showtimepomni/defeat.png",
+        "currentVerification": "exact"
+      },
+      {
+        "position": 3,
+        "file": "docs/art-generation/cast-next-20261120/recovery-references/official-showtime-pomni.jpg",
+        "sha256": "a398e64a547fcecb3b4d6615d81e835ef6142b8aff1aa48e9135edd8d0a6ad46",
+        "bytes": 595909,
+        "recoveryLocalPath": "/workspace/scratch/5f5114b49696/recovery/pomni/references/official-showtime-pomni.jpg",
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "showtimepomni",
+    "slot": "heavy",
+    "file": "assets/encore/poses/showtimepomni/heavy.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/showtimepomni/heavy.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/showtimepomni/heavy.json",
+    "sha256": "b2760ed3d00a80c986ab48b0634b04cb4cd83287803b5d680c6baa2ac121dd15",
+    "bytes": 1417130,
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "alpha12Bounds": [
+      209,
+      17,
+      1230,
+      1013
+    ],
+    "nativeFacing": "right",
+    "recovery": "new_native_after_environment_loss",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-20261120/generated/showtimepomni/selection.png",
+        "sha256": "36657a67157a740bd2e26b9de7d8bc24163901eb68b80c1bd97e2c3317084093",
+        "bytes": 1563975,
+        "recoveryLocalPath": "/workspace/scratch/5f5114b49696/recovery/pomni/regenerated/showtimepomni/selection.png",
+        "currentVerification": "exact"
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-20261120/generated/showtimepomni/defeat.png",
+        "sha256": "aff64f2b1fbf4294cc916399c1af418078632d731514c8eb3172cbcb987a0b44",
+        "bytes": 1418103,
+        "recoveryLocalPath": "/workspace/scratch/5f5114b49696/recovery/pomni/generated/showtimepomni/defeat.png",
+        "currentVerification": "exact"
+      },
+      {
+        "position": 3,
+        "file": "docs/art-generation/cast-next-20261120/recovery-references/official-showtime-pomni.jpg",
+        "sha256": "a398e64a547fcecb3b4d6615d81e835ef6142b8aff1aa48e9135edd8d0a6ad46",
+        "bytes": 595909,
+        "recoveryLocalPath": "/workspace/scratch/5f5114b49696/recovery/pomni/references/official-showtime-pomni.jpg",
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "showtimepomni",
+    "slot": "hit",
+    "file": "assets/encore/poses/showtimepomni/hit.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/showtimepomni/hit.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/showtimepomni/hit.json",
+    "sha256": "46cda1342af6a14f9992ca3ced11e9713130648c5ad8db36821767f172069c7c",
+    "bytes": 1671013,
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "alpha12Bounds": [
+      56,
+      25,
+      919,
+      1525
+    ],
+    "nativeFacing": "right",
+    "recovery": "new_native_after_environment_loss",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-20261120/generated/showtimepomni/selection.png",
+        "sha256": "36657a67157a740bd2e26b9de7d8bc24163901eb68b80c1bd97e2c3317084093",
+        "bytes": 1563975,
+        "recoveryLocalPath": "/workspace/scratch/5f5114b49696/recovery/pomni/regenerated/showtimepomni/selection.png",
+        "currentVerification": "exact"
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-20261120/generated/showtimepomni/defeat.png",
+        "sha256": "aff64f2b1fbf4294cc916399c1af418078632d731514c8eb3172cbcb987a0b44",
+        "bytes": 1418103,
+        "recoveryLocalPath": "/workspace/scratch/5f5114b49696/recovery/pomni/generated/showtimepomni/defeat.png",
+        "currentVerification": "exact"
+      },
+      {
+        "position": 3,
+        "file": "docs/art-generation/cast-next-20261120/recovery-references/official-showtime-pomni.jpg",
+        "sha256": "a398e64a547fcecb3b4d6615d81e835ef6142b8aff1aa48e9135edd8d0a6ad46",
+        "bytes": 595909,
+        "recoveryLocalPath": "/workspace/scratch/5f5114b49696/recovery/pomni/references/official-showtime-pomni.jpg",
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "showtimepomni",
+    "slot": "walk",
+    "file": "assets/encore/poses/showtimepomni/walk.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/showtimepomni/walk.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/showtimepomni/walk.json",
+    "sha256": "0eeeb9fde20a63309c001f53bcfe6823f6776dd5d038404dd37324bc609eb873",
+    "bytes": 881860,
+    "dimensions": [
+      1199,
+      1312
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      176,
+      16,
+      942,
+      1293
+    ],
+    "nativeFacing": "right",
+    "recovery": "new_native_after_environment_loss",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-20261120/generated/showtimepomni/selection.png",
+        "sha256": "36657a67157a740bd2e26b9de7d8bc24163901eb68b80c1bd97e2c3317084093",
+        "bytes": 1563975,
+        "recoveryLocalPath": "/workspace/scratch/5f5114b49696/recovery/pomni/regenerated/showtimepomni/selection.png",
+        "currentVerification": "exact"
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-20261120/generated/showtimepomni/defeat.png",
+        "sha256": "aff64f2b1fbf4294cc916399c1af418078632d731514c8eb3172cbcb987a0b44",
+        "bytes": 1418103,
+        "recoveryLocalPath": "/workspace/scratch/5f5114b49696/recovery/pomni/generated/showtimepomni/defeat.png",
+        "currentVerification": "exact"
+      },
+      {
+        "position": 3,
+        "file": "docs/art-generation/cast-next-20261120/recovery-references/official-showtime-pomni.jpg",
+        "sha256": "a398e64a547fcecb3b4d6615d81e835ef6142b8aff1aa48e9135edd8d0a6ad46",
+        "bytes": 595909,
+        "recoveryLocalPath": "/workspace/scratch/5f5114b49696/recovery/pomni/references/official-showtime-pomni.jpg",
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "showtimepomni",
+    "slot": "jump",
+    "file": "assets/encore/poses/showtimepomni/jump.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/showtimepomni/jump.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/showtimepomni/jump.json",
+    "sha256": "3ccc7993d16eb265435ffc3945473c52ed6e810418afeb1c42a57d52c70a2713",
+    "bytes": 983622,
+    "dimensions": [
+      1218,
+      1291
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      135,
+      12,
+      1059,
+      1230
+    ],
+    "nativeFacing": "right",
+    "recovery": "new_native_after_environment_loss",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-20261120/generated/showtimepomni/selection.png",
+        "sha256": "36657a67157a740bd2e26b9de7d8bc24163901eb68b80c1bd97e2c3317084093",
+        "bytes": 1563975,
+        "currentVerification": "exact"
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-20261120/generated/showtimepomni/defeat.png",
+        "sha256": "aff64f2b1fbf4294cc916399c1af418078632d731514c8eb3172cbcb987a0b44",
+        "bytes": 1418103,
+        "currentVerification": "exact"
+      },
+      {
+        "position": 3,
+        "file": "docs/art-generation/cast-next-20261120/recovery-references/official-showtime-pomni.jpg",
+        "sha256": "a398e64a547fcecb3b4d6615d81e835ef6142b8aff1aa48e9135edd8d0a6ad46",
+        "bytes": 595909,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "showtimepomni",
+    "slot": "crouch",
+    "file": "assets/encore/poses/showtimepomni/crouch.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/showtimepomni/crouch.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/showtimepomni/crouch.json",
+    "sha256": "0cafbba6525b703d4d4c04103483edbac0a94fdb0fbc98243131b777d910ee2d",
+    "bytes": 1369620,
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "alpha12Bounds": [
+      321,
+      10,
+      1138,
+      1016
+    ],
+    "nativeFacing": "right",
+    "recovery": "new_native_after_environment_loss",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-20261120/generated/showtimepomni/selection.png",
+        "sha256": "36657a67157a740bd2e26b9de7d8bc24163901eb68b80c1bd97e2c3317084093",
+        "bytes": 1563975,
+        "currentVerification": "exact"
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-20261120/generated/showtimepomni/defeat.png",
+        "sha256": "aff64f2b1fbf4294cc916399c1af418078632d731514c8eb3172cbcb987a0b44",
+        "bytes": 1418103,
+        "currentVerification": "exact"
+      },
+      {
+        "position": 3,
+        "file": "docs/art-generation/cast-next-20261120/recovery-references/official-showtime-pomni.jpg",
+        "sha256": "a398e64a547fcecb3b4d6615d81e835ef6142b8aff1aa48e9135edd8d0a6ad46",
+        "bytes": 595909,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "showtimepomni",
+    "slot": "victory",
+    "file": "assets/encore/poses/showtimepomni/victory.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/showtimepomni/victory.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/showtimepomni/victory.json",
+    "sha256": "c3d0136ff6c5c0a0542706b83f3a6941020949d5d5304015abf9e48a15826c27",
+    "bytes": 1596596,
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "alpha12Bounds": [
+      96,
+      22,
+      926,
+      1520
+    ],
+    "nativeFacing": "right",
+    "recovery": "new_native_after_environment_loss",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-20261120/generated/showtimepomni/selection.png",
+        "sha256": "36657a67157a740bd2e26b9de7d8bc24163901eb68b80c1bd97e2c3317084093",
+        "bytes": 1563975,
+        "currentVerification": "exact"
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-20261120/generated/showtimepomni/defeat.png",
+        "sha256": "aff64f2b1fbf4294cc916399c1af418078632d731514c8eb3172cbcb987a0b44",
+        "bytes": 1418103,
+        "currentVerification": "exact"
+      },
+      {
+        "position": 3,
+        "file": "docs/art-generation/cast-next-20261120/recovery-references/official-showtime-pomni.jpg",
+        "sha256": "a398e64a547fcecb3b4d6615d81e835ef6142b8aff1aa48e9135edd8d0a6ad46",
+        "bytes": 595909,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "showtimepomni",
+    "slot": "defeat",
+    "file": "assets/encore/poses/showtimepomni/defeat.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/showtimepomni/defeat.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/showtimepomni/defeat.json",
+    "sha256": "aff64f2b1fbf4294cc916399c1af418078632d731514c8eb3172cbcb987a0b44",
+    "bytes": 1418103,
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "alpha12Bounds": [
+      260,
+      22,
+      1173,
+      1015
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_persisted_tool_result",
+    "references": []
+  },
+  {
+    "appearanceId": "bowlingpinragatha",
+    "slot": "selection",
+    "file": "assets/encore/selection/bowlingpinragatha.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/selection.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/selection.json",
+    "sha256": "3eca98c6bc889b80e080889d34ec4a4ec7e0887141babf2e178f762f2e8cb01d",
+    "bytes": 1487585,
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "alpha12Bounds": [
+      107,
+      10,
+      909,
+      1524
+    ],
+    "nativeFacing": "left",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-bowling-pin-ragatha.png",
+        "sha256": "fffc7d222e4a2b15431ade2bf47054b17af554364cc89ac1ede69f6dd1c4f7f5",
+        "bytes": 6499850,
+        "kind": "official-product-reference",
+        "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_HeadpinRagatha.png?v=1773977710",
+        "pageUrl": "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+        "currentVerification": "exact"
+      },
+      {
+        "position": 2,
+        "file": "assets/encore/selection/ragatha.webp",
+        "sha256": "ef1ef3d6a4153027f1e28263a59f6c3aa5aaa8cce9a405b64a01013a53b5b5fe",
+        "bytes": 247348,
+        "kind": "game-style-only",
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "bowlingpinragatha",
+    "slot": "stance",
+    "file": "assets/encore/stance/bowlingpinragatha.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/stance.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/stance.json",
+    "sha256": "8881a0a263d6657c52719c12106d91c7e11c177916025a6b30535bbaf2077d3f",
+    "bytes": 1537013,
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "alpha12Bounds": [
+      153,
+      36,
+      925,
+      1513
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/selection.png",
+        "sha256": "3eca98c6bc889b80e080889d34ec4a4ec7e0887141babf2e178f762f2e8cb01d",
+        "bytes": 1487585,
+        "kind": "accepted-native-selection-seed",
+        "currentVerification": "exact"
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-bowling-pin-ragatha.png",
+        "sha256": "fffc7d222e4a2b15431ade2bf47054b17af554364cc89ac1ede69f6dd1c4f7f5",
+        "bytes": 6499850,
+        "kind": "official-product-reference",
+        "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_HeadpinRagatha.png?v=1773977710",
+        "pageUrl": "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "bowlingpinragatha",
+    "slot": "intro",
+    "file": "assets/encore/poses/bowlingpinragatha/intro.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/intro.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/intro.json",
+    "sha256": "7be3e6964daaf8ef8acd4f74618df1eaaf6de2367fbaf9e4b085a8cee1085e31",
+    "bytes": 1528385,
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "alpha12Bounds": [
+      110,
+      24,
+      941,
+      1511
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/selection.png",
+        "sha256": "3eca98c6bc889b80e080889d34ec4a4ec7e0887141babf2e178f762f2e8cb01d",
+        "bytes": 1487585,
+        "kind": "accepted-native-selection-seed",
+        "currentVerification": "exact"
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-bowling-pin-ragatha.png",
+        "sha256": "fffc7d222e4a2b15431ade2bf47054b17af554364cc89ac1ede69f6dd1c4f7f5",
+        "bytes": 6499850,
+        "kind": "official-product-reference",
+        "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_HeadpinRagatha.png?v=1773977710",
+        "pageUrl": "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "bowlingpinragatha",
+    "slot": "attack",
+    "file": "assets/encore/poses/bowlingpinragatha/attack.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/attack.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/attack.json",
+    "sha256": "cf7640d55180d105b42f89ca6f7fe6e762a25769e624168261dee9822ff90386",
+    "bytes": 870794,
+    "dimensions": [
+      1312,
+      1199
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      269,
+      23,
+      1145,
+      1182
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/selection.png",
+        "sha256": "3eca98c6bc889b80e080889d34ec4a4ec7e0887141babf2e178f762f2e8cb01d",
+        "bytes": 1487585,
+        "kind": "accepted-native-selection-seed",
+        "currentVerification": "exact"
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-bowling-pin-ragatha.png",
+        "sha256": "fffc7d222e4a2b15431ade2bf47054b17af554364cc89ac1ede69f6dd1c4f7f5",
+        "bytes": 6499850,
+        "kind": "official-product-reference",
+        "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_HeadpinRagatha.png?v=1773977710",
+        "pageUrl": "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "bowlingpinragatha",
+    "slot": "heavy",
+    "file": "assets/encore/poses/bowlingpinragatha/heavy.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/heavy.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/heavy.json",
+    "sha256": "edf0f13decb21be1d38d57dc91526ad6de62fcc4d1acf814c958f12349778233",
+    "bytes": 1364523,
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "alpha12Bounds": [
+      325,
+      44,
+      1250,
+      985
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/selection.png",
+        "sha256": "3eca98c6bc889b80e080889d34ec4a4ec7e0887141babf2e178f762f2e8cb01d",
+        "bytes": 1487585,
+        "kind": "accepted-native-selection-seed",
+        "currentVerification": "exact"
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-bowling-pin-ragatha.png",
+        "sha256": "fffc7d222e4a2b15431ade2bf47054b17af554364cc89ac1ede69f6dd1c4f7f5",
+        "bytes": 6499850,
+        "kind": "official-product-reference",
+        "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_HeadpinRagatha.png?v=1773977710",
+        "pageUrl": "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "bowlingpinragatha",
+    "slot": "hit",
+    "file": "assets/encore/poses/bowlingpinragatha/hit.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/hit.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/hit.json",
+    "sha256": "ee50e3598417b47bc2ea4c5adf6ce18e7e9bb5ca0fbe6ebe8c1c6024a46e633b",
+    "bytes": 895707,
+    "dimensions": [
+      1199,
+      1312
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      46,
+      20,
+      863,
+      1279
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/selection.png",
+        "sha256": "3eca98c6bc889b80e080889d34ec4a4ec7e0887141babf2e178f762f2e8cb01d",
+        "bytes": 1487585,
+        "kind": "accepted-native-selection-seed",
+        "currentVerification": "exact"
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-bowling-pin-ragatha.png",
+        "sha256": "fffc7d222e4a2b15431ade2bf47054b17af554364cc89ac1ede69f6dd1c4f7f5",
+        "bytes": 6499850,
+        "kind": "official-product-reference",
+        "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_HeadpinRagatha.png?v=1773977710",
+        "pageUrl": "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "bowlingpinragatha",
+    "slot": "walk",
+    "file": "assets/encore/poses/bowlingpinragatha/walk.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/walk.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/walk.json",
+    "sha256": "5724adc2c0d3348aaa113fbd6a3a442f68564472d9d3023884e8f04e2d9a66f6",
+    "bytes": 937680,
+    "dimensions": [
+      1167,
+      1347
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      224,
+      1,
+      974,
+      1340
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/selection.png",
+        "sha256": "3eca98c6bc889b80e080889d34ec4a4ec7e0887141babf2e178f762f2e8cb01d",
+        "bytes": 1487585,
+        "kind": "accepted-native-selection-seed",
+        "currentVerification": "exact"
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-bowling-pin-ragatha.png",
+        "sha256": "fffc7d222e4a2b15431ade2bf47054b17af554364cc89ac1ede69f6dd1c4f7f5",
+        "bytes": 6499850,
+        "kind": "official-product-reference",
+        "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_HeadpinRagatha.png?v=1773977710",
+        "pageUrl": "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "bowlingpinragatha",
+    "slot": "jump",
+    "file": "assets/encore/poses/bowlingpinragatha/jump.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/jump.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/jump.json",
+    "sha256": "f0972de871db545f4d49b5de1771209c7fa2adb7eb25f5ff99877b6d09c213e5",
+    "bytes": 1504002,
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "alpha12Bounds": [
+      169,
+      45,
+      925,
+      1455
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/selection.png",
+        "sha256": "3eca98c6bc889b80e080889d34ec4a4ec7e0887141babf2e178f762f2e8cb01d",
+        "bytes": 1487585,
+        "kind": "accepted-native-selection-seed",
+        "currentVerification": "exact"
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-bowling-pin-ragatha.png",
+        "sha256": "fffc7d222e4a2b15431ade2bf47054b17af554364cc89ac1ede69f6dd1c4f7f5",
+        "bytes": 6499850,
+        "kind": "official-product-reference",
+        "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_HeadpinRagatha.png?v=1773977710",
+        "pageUrl": "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "bowlingpinragatha",
+    "slot": "crouch",
+    "file": "assets/encore/poses/bowlingpinragatha/crouch.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/crouch.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/crouch.json",
+    "sha256": "c88a839fc994990603af5dad5932703b550605b921921213bdac5b3b7687808b",
+    "bytes": 1416123,
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "alpha12Bounds": [
+      262,
+      13,
+      1305,
+      1012
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/selection.png",
+        "sha256": "3eca98c6bc889b80e080889d34ec4a4ec7e0887141babf2e178f762f2e8cb01d",
+        "bytes": 1487585,
+        "kind": "accepted-native-selection-seed",
+        "currentVerification": "exact"
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-bowling-pin-ragatha.png",
+        "sha256": "fffc7d222e4a2b15431ade2bf47054b17af554364cc89ac1ede69f6dd1c4f7f5",
+        "bytes": 6499850,
+        "kind": "official-product-reference",
+        "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_HeadpinRagatha.png?v=1773977710",
+        "pageUrl": "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "bowlingpinragatha",
+    "slot": "victory",
+    "file": "assets/encore/poses/bowlingpinragatha/victory.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/victory.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/victory.json",
+    "sha256": "215bc7164b33c47f3a37cb0fa8ab391612de2ef35a3b3fbe6e1e2d40eec137ca",
+    "bytes": 1520523,
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "alpha12Bounds": [
+      138,
+      32,
+      874,
+      1525
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/selection.png",
+        "sha256": "3eca98c6bc889b80e080889d34ec4a4ec7e0887141babf2e178f762f2e8cb01d",
+        "bytes": 1487585,
+        "kind": "accepted-native-selection-seed",
+        "currentVerification": "exact"
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-bowling-pin-ragatha.png",
+        "sha256": "fffc7d222e4a2b15431ade2bf47054b17af554364cc89ac1ede69f6dd1c4f7f5",
+        "bytes": 6499850,
+        "kind": "official-product-reference",
+        "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_HeadpinRagatha.png?v=1773977710",
+        "pageUrl": "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "bowlingpinragatha",
+    "slot": "defeat",
+    "file": "assets/encore/poses/bowlingpinragatha/defeat.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/defeat.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/defeat.json",
+    "sha256": "bf778467b9c859be08546fe63eb6cf517c3611eba983155f09e2c027520778e5",
+    "bytes": 1313197,
+    "dimensions": [
+      1774,
+      887
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      62,
+      22,
+      1718,
+      868
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-20261120/generated/bowlingpinragatha/selection.png",
+        "sha256": "3eca98c6bc889b80e080889d34ec4a4ec7e0887141babf2e178f762f2e8cb01d",
+        "bytes": 1487585,
+        "kind": "accepted-native-selection-seed",
+        "currentVerification": "exact"
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-bowling-pin-ragatha.png",
+        "sha256": "fffc7d222e4a2b15431ade2bf47054b17af554364cc89ac1ede69f6dd1c4f7f5",
+        "bytes": 6499850,
+        "kind": "official-product-reference",
+        "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_HeadpinRagatha.png?v=1773977710",
+        "pageUrl": "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "ringmastercaine",
+    "slot": "selection",
+    "file": "assets/encore/selection/ringmastercaine.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/selection.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/selection.json",
+    "sha256": "b95d9ff79564bb0ae0b536ef4b3cf48b1cc43af6f046fa687355ea753fc4d5fb",
+    "bytes": 1539137,
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "alpha12Bounds": [
+      62,
+      18,
+      958,
+      1521
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-ringmaster-caine.png",
+        "sha256": "810e37a66b662ae00c610167fbd11b0e754b39c7eb0b70fa61ac0cd157e6b493",
+        "bytes": 6486644,
+        "currentVerification": "exact"
+      },
+      {
+        "file": "assets/encore/selection/caine.webp",
+        "sha256": "9d2e8a00ffa0f1f55b5aecec59da05a4be6edfea355c6df34aea4bfec9f044e7",
+        "bytes": 278502,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "ringmastercaine",
+    "slot": "stance",
+    "file": "assets/encore/stance/ringmastercaine.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/stance.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/stance.json",
+    "sha256": "9ba904b80bdc7eb238e083d64507fa5056ea21f68d1c4c56b4cf8fe18af9cec1",
+    "bytes": 826247,
+    "dimensions": [
+      1216,
+      1293
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      210,
+      7,
+      1010,
+      1286
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "file": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/selection.png",
+        "sha256": "b95d9ff79564bb0ae0b536ef4b3cf48b1cc43af6f046fa687355ea753fc4d5fb",
+        "bytes": 1539137,
+        "currentVerification": "exact"
+      },
+      {
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-ringmaster-caine.png",
+        "sha256": "810e37a66b662ae00c610167fbd11b0e754b39c7eb0b70fa61ac0cd157e6b493",
+        "bytes": 6486644,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "ringmastercaine",
+    "slot": "intro",
+    "file": "assets/encore/poses/ringmastercaine/intro.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/intro.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/intro.json",
+    "sha256": "08bf3469a66e4a87dd8402f8a61974db34a10aa6d2ae3093cfa78dcac964382f",
+    "bytes": 869376,
+    "dimensions": [
+      1199,
+      1312
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      34,
+      12,
+      1163,
+      1292
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "file": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/selection.png",
+        "sha256": "b95d9ff79564bb0ae0b536ef4b3cf48b1cc43af6f046fa687355ea753fc4d5fb",
+        "bytes": 1539137,
+        "currentVerification": "exact"
+      },
+      {
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-ringmaster-caine.png",
+        "sha256": "810e37a66b662ae00c610167fbd11b0e754b39c7eb0b70fa61ac0cd157e6b493",
+        "bytes": 6486644,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "ringmastercaine",
+    "slot": "attack",
+    "file": "assets/encore/poses/ringmastercaine/attack.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/attack.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/attack.json",
+    "sha256": "d19b1f7281a46c41bbc5bcac672aab9998d4d6ac30fef785d72763febe2f6bb0",
+    "bytes": 1380639,
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "alpha12Bounds": [
+      71,
+      15,
+      1464,
+      1010
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "file": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/selection.png",
+        "sha256": "b95d9ff79564bb0ae0b536ef4b3cf48b1cc43af6f046fa687355ea753fc4d5fb",
+        "bytes": 1539137,
+        "currentVerification": "exact"
+      },
+      {
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-ringmaster-caine.png",
+        "sha256": "810e37a66b662ae00c610167fbd11b0e754b39c7eb0b70fa61ac0cd157e6b493",
+        "bytes": 6486644,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "ringmastercaine",
+    "slot": "heavy",
+    "file": "assets/encore/poses/ringmastercaine/heavy.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/heavy.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/heavy.json",
+    "sha256": "cb1a9347e8f0c0251631ad833131a016957eced406403874973089b018ea0293",
+    "bytes": 1448200,
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "alpha12Bounds": [
+      176,
+      13,
+      1338,
+      1013
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "file": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/selection.png",
+        "sha256": "b95d9ff79564bb0ae0b536ef4b3cf48b1cc43af6f046fa687355ea753fc4d5fb",
+        "bytes": 1539137,
+        "currentVerification": "exact"
+      },
+      {
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-ringmaster-caine.png",
+        "sha256": "810e37a66b662ae00c610167fbd11b0e754b39c7eb0b70fa61ac0cd157e6b493",
+        "bytes": 6486644,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "ringmastercaine",
+    "slot": "hit",
+    "file": "assets/encore/poses/ringmastercaine/hit.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/hit.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/hit.json",
+    "sha256": "e70d1da481cf75ab2f0732c3a3e56f1cb1f984ee1380b391206e072fa72dea19",
+    "bytes": 972923,
+    "dimensions": [
+      1199,
+      1312
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      65,
+      26,
+      1134,
+      1296
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "file": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/selection.png",
+        "sha256": "b95d9ff79564bb0ae0b536ef4b3cf48b1cc43af6f046fa687355ea753fc4d5fb",
+        "bytes": 1539137,
+        "currentVerification": "exact"
+      },
+      {
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-ringmaster-caine.png",
+        "sha256": "810e37a66b662ae00c610167fbd11b0e754b39c7eb0b70fa61ac0cd157e6b493",
+        "bytes": 6486644,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "ringmastercaine",
+    "slot": "walk",
+    "file": "assets/encore/poses/ringmastercaine/walk.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/walk.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/walk.json",
+    "sha256": "78b73574cf7959957e8188bc7e23a8bfd817b824974e7149a8e7af69a9b2316c",
+    "bytes": 947113,
+    "dimensions": [
+      1218,
+      1292
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      107,
+      12,
+      1091,
+      1285
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "file": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/selection.png",
+        "sha256": "b95d9ff79564bb0ae0b536ef4b3cf48b1cc43af6f046fa687355ea753fc4d5fb",
+        "bytes": 1539137,
+        "currentVerification": "exact"
+      },
+      {
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-ringmaster-caine.png",
+        "sha256": "810e37a66b662ae00c610167fbd11b0e754b39c7eb0b70fa61ac0cd157e6b493",
+        "bytes": 6486644,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "ringmastercaine",
+    "slot": "jump",
+    "file": "assets/encore/poses/ringmastercaine/jump.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/jump.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/jump.json",
+    "sha256": "a6249cb59bc431e47229d6a6071d0ffe47251c8abc960fec643d8b60d49c99b0",
+    "bytes": 973156,
+    "dimensions": [
+      1199,
+      1312
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      58,
+      19,
+      1146,
+      1283
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "file": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/selection.png",
+        "sha256": "b95d9ff79564bb0ae0b536ef4b3cf48b1cc43af6f046fa687355ea753fc4d5fb",
+        "bytes": 1539137,
+        "currentVerification": "exact"
+      },
+      {
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-ringmaster-caine.png",
+        "sha256": "810e37a66b662ae00c610167fbd11b0e754b39c7eb0b70fa61ac0cd157e6b493",
+        "bytes": 6486644,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "ringmastercaine",
+    "slot": "crouch",
+    "file": "assets/encore/poses/ringmastercaine/crouch.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/crouch.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/crouch.json",
+    "sha256": "94d378eb4885b08f729be393c3c1b079ebaa070a3fb96b21b667501f9a2f07bc",
+    "bytes": 1037488,
+    "dimensions": [
+      1312,
+      1199
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      131,
+      12,
+      1223,
+      1191
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "file": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/selection.png",
+        "sha256": "b95d9ff79564bb0ae0b536ef4b3cf48b1cc43af6f046fa687355ea753fc4d5fb",
+        "bytes": 1539137,
+        "currentVerification": "exact"
+      },
+      {
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-ringmaster-caine.png",
+        "sha256": "810e37a66b662ae00c610167fbd11b0e754b39c7eb0b70fa61ac0cd157e6b493",
+        "bytes": 6486644,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "ringmastercaine",
+    "slot": "victory",
+    "file": "assets/encore/poses/ringmastercaine/victory.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/victory.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/victory.json",
+    "sha256": "3bb3d02157bb15f4a0c27a8b0b71df863e26937de70af20c750a43d841895b55",
+    "bytes": 1520084,
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "alpha12Bounds": [
+      156,
+      41,
+      945,
+      1509
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "file": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/selection.png",
+        "sha256": "b95d9ff79564bb0ae0b536ef4b3cf48b1cc43af6f046fa687355ea753fc4d5fb",
+        "bytes": 1539137,
+        "currentVerification": "exact"
+      },
+      {
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-ringmaster-caine.png",
+        "sha256": "810e37a66b662ae00c610167fbd11b0e754b39c7eb0b70fa61ac0cd157e6b493",
+        "bytes": 6486644,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "ringmastercaine",
+    "slot": "defeat",
+    "file": "assets/encore/poses/ringmastercaine/defeat.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/defeat.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/defeat.json",
+    "sha256": "d5ae39821002807483e0f75385891e2b2013f62628a39de3ee4cc8c8b9971751",
+    "bytes": 949416,
+    "dimensions": [
+      1312,
+      1199
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      96,
+      21,
+      1060,
+      1180
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "file": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/selection.png",
+        "sha256": "b95d9ff79564bb0ae0b536ef4b3cf48b1cc43af6f046fa687355ea753fc4d5fb",
+        "bytes": 1539137,
+        "currentVerification": "exact"
+      },
+      {
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-ringmaster-caine.png",
+        "sha256": "810e37a66b662ae00c610167fbd11b0e754b39c7eb0b70fa61ac0cd157e6b493",
+        "bytes": 6486644,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "strongmanorbsman",
+    "slot": "selection",
+    "file": "assets/encore/selection/strongmanorbsman.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/selection.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/selection.json",
+    "sha256": "ede51b07225e79c80eefdf12cd862e6b9d166211bb452ab16bebff59760e460c",
+    "bytes": 1518337,
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "alpha12Bounds": [
+      17,
+      144,
+      1004,
+      1468
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-strongman-orbsman.png",
+        "sha256": "47e8c316870904730493cf87cbbf8af0c94e93f9c0b49aacf821102612edc7ca",
+        "bytes": 602038,
+        "currentVerification": "exact"
+      },
+      {
+        "file": "assets/encore/selection/orbsman.png",
+        "sha256": "39b21e8b1532531830c98d1d1afd54973a0ea5721e5375ab7a2354bd6e2cf304",
+        "bytes": 1432841,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "strongmanorbsman",
+    "slot": "stance",
+    "file": "assets/encore/stance/strongmanorbsman.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/stance.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/stance.json",
+    "sha256": "82c5a84824c232f7608b97db29fa4d5a181c0812447e99868f6160cfe9df137d",
+    "bytes": 952869,
+    "dimensions": [
+      1312,
+      1199
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      58,
+      44,
+      1253,
+      1182
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "file": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/selection.png",
+        "sha256": "ede51b07225e79c80eefdf12cd862e6b9d166211bb452ab16bebff59760e460c",
+        "bytes": 1518337,
+        "currentVerification": "exact"
+      },
+      {
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-strongman-orbsman.png",
+        "sha256": "47e8c316870904730493cf87cbbf8af0c94e93f9c0b49aacf821102612edc7ca",
+        "bytes": 602038,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "strongmanorbsman",
+    "slot": "intro",
+    "file": "assets/encore/poses/strongmanorbsman/intro.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/intro.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/intro.json",
+    "sha256": "98c7993d422bf72a91177c816538a501b6a134acd0624376400624ddc70835ea",
+    "bytes": 924811,
+    "dimensions": [
+      1199,
+      1312
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      49,
+      44,
+      1144,
+      1288
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "file": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/selection.png",
+        "sha256": "ede51b07225e79c80eefdf12cd862e6b9d166211bb452ab16bebff59760e460c",
+        "bytes": 1518337,
+        "currentVerification": "exact"
+      },
+      {
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-strongman-orbsman.png",
+        "sha256": "47e8c316870904730493cf87cbbf8af0c94e93f9c0b49aacf821102612edc7ca",
+        "bytes": 602038,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "strongmanorbsman",
+    "slot": "attack",
+    "file": "assets/encore/poses/strongmanorbsman/attack.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/attack.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/attack.json",
+    "sha256": "e49508492769e75d1af820243e6a7582d7a537b1801df27c6b98cc4f2a71b34d",
+    "bytes": 1393453,
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "alpha12Bounds": [
+      171,
+      25,
+      1393,
+      999
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "file": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/selection.png",
+        "sha256": "ede51b07225e79c80eefdf12cd862e6b9d166211bb452ab16bebff59760e460c",
+        "bytes": 1518337,
+        "currentVerification": "exact"
+      },
+      {
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-strongman-orbsman.png",
+        "sha256": "47e8c316870904730493cf87cbbf8af0c94e93f9c0b49aacf821102612edc7ca",
+        "bytes": 602038,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "strongmanorbsman",
+    "slot": "heavy",
+    "file": "assets/encore/poses/strongmanorbsman/heavy.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/heavy.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/heavy.json",
+    "sha256": "ce9b21c555272264eb4fed1085fc1ecab2b5b957493070635d6b72ade255f2ae",
+    "bytes": 853499,
+    "dimensions": [
+      1199,
+      1312
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      53,
+      73,
+      1150,
+      1260
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "file": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/selection.png",
+        "sha256": "ede51b07225e79c80eefdf12cd862e6b9d166211bb452ab16bebff59760e460c",
+        "bytes": 1518337,
+        "currentVerification": "exact"
+      },
+      {
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-strongman-orbsman.png",
+        "sha256": "47e8c316870904730493cf87cbbf8af0c94e93f9c0b49aacf821102612edc7ca",
+        "bytes": 602038,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "strongmanorbsman",
+    "slot": "hit",
+    "file": "assets/encore/poses/strongmanorbsman/hit.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/hit.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/hit.json",
+    "sha256": "52cef98fbb62e57e13f5ac6c01bcb141f4f94e7ae74ce1f169f8d92085ec5cdd",
+    "bytes": 920170,
+    "dimensions": [
+      1199,
+      1312
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      121,
+      57,
+      1069,
+      1263
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "file": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/selection.png",
+        "sha256": "ede51b07225e79c80eefdf12cd862e6b9d166211bb452ab16bebff59760e460c",
+        "bytes": 1518337,
+        "currentVerification": "exact"
+      },
+      {
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-strongman-orbsman.png",
+        "sha256": "47e8c316870904730493cf87cbbf8af0c94e93f9c0b49aacf821102612edc7ca",
+        "bytes": 602038,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "strongmanorbsman",
+    "slot": "walk",
+    "file": "assets/encore/poses/strongmanorbsman/walk.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/walk.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/walk.json",
+    "sha256": "fb01709646a9a8b2460c8d29f96d01d163ac528746010d493039b82235cb5e70",
+    "bytes": 1003941,
+    "dimensions": [
+      1199,
+      1312
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      58,
+      63,
+      1128,
+      1264
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "file": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/selection.png",
+        "sha256": "ede51b07225e79c80eefdf12cd862e6b9d166211bb452ab16bebff59760e460c",
+        "bytes": 1518337,
+        "currentVerification": "exact"
+      },
+      {
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-strongman-orbsman.png",
+        "sha256": "47e8c316870904730493cf87cbbf8af0c94e93f9c0b49aacf821102612edc7ca",
+        "bytes": 602038,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "strongmanorbsman",
+    "slot": "jump",
+    "file": "assets/encore/poses/strongmanorbsman/jump.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/jump.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/jump.json",
+    "sha256": "6be8d309bc4c8e7af6f1057df49aef6f7a02b667d924a22fb997acea6d0b8c52",
+    "bytes": 815559,
+    "dimensions": [
+      1312,
+      1199
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      111,
+      106,
+      1197,
+      1091
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "file": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/selection.png",
+        "sha256": "ede51b07225e79c80eefdf12cd862e6b9d166211bb452ab16bebff59760e460c",
+        "bytes": 1518337,
+        "currentVerification": "exact"
+      },
+      {
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-strongman-orbsman.png",
+        "sha256": "47e8c316870904730493cf87cbbf8af0c94e93f9c0b49aacf821102612edc7ca",
+        "bytes": 602038,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "strongmanorbsman",
+    "slot": "crouch",
+    "file": "assets/encore/poses/strongmanorbsman/crouch.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/crouch.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/crouch.json",
+    "sha256": "5672a9fa3db78d82c8405dc34a5de4bb708f8af1d91858450b10fd4dad17fc47",
+    "bytes": 872705,
+    "dimensions": [
+      1312,
+      1199
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      90,
+      150,
+      1218,
+      1147
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "file": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/selection.png",
+        "sha256": "ede51b07225e79c80eefdf12cd862e6b9d166211bb452ab16bebff59760e460c",
+        "bytes": 1518337,
+        "currentVerification": "exact"
+      },
+      {
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-strongman-orbsman.png",
+        "sha256": "47e8c316870904730493cf87cbbf8af0c94e93f9c0b49aacf821102612edc7ca",
+        "bytes": 602038,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "strongmanorbsman",
+    "slot": "victory",
+    "file": "assets/encore/poses/strongmanorbsman/victory.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/victory.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/victory.json",
+    "sha256": "f87735a2e0b4f04db2dd30a7765e73b202b2c764b8dec2584ad38315002391d2",
+    "bytes": 1536055,
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "alpha12Bounds": [
+      18,
+      123,
+      1001,
+      1474
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "file": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/selection.png",
+        "sha256": "ede51b07225e79c80eefdf12cd862e6b9d166211bb452ab16bebff59760e460c",
+        "bytes": 1518337,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "strongmanorbsman",
+    "slot": "defeat",
+    "file": "assets/encore/poses/strongmanorbsman/defeat.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/defeat.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/defeat.json",
+    "sha256": "003773700816ca44c00d85351607c3537cfbf937d1710fdbd5610c53ba460b1b",
+    "bytes": 1402930,
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "alpha12Bounds": [
+      193,
+      48,
+      1341,
+      1014
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "file": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/selection.png",
+        "sha256": "ede51b07225e79c80eefdf12cd862e6b9d166211bb452ab16bebff59760e460c",
+        "bytes": 1518337,
+        "currentVerification": "exact"
+      },
+      {
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-strongman-orbsman.png",
+        "sha256": "47e8c316870904730493cf87cbbf8af0c94e93f9c0b49aacf821102612edc7ca",
+        "bytes": 602038,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "stagehandbubble",
+    "slot": "selection",
+    "file": "assets/encore/selection/stagehandbubble.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/stagehandbubble/selection.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/stagehandbubble/selection.json",
+    "sha256": "463f70055d4c9ed064016b6f3744ebfecc3c3dbd58efd9282b824ced2af1c0fa",
+    "bytes": 820851,
+    "dimensions": [
+      1312,
+      1199
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      332,
+      26,
+      1058,
+      1178
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-stagehand-bubble.png",
+        "sha256": "c79461ad400eba410644a9a087dd3d0b70ef7b68a7dc9f1c423e60f55c9201d2",
+        "bytes": 583218,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "stagehandbubble",
+    "slot": "stance",
+    "file": "assets/encore/stance/stagehandbubble.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/stagehandbubble/stance.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/stagehandbubble/stance.json",
+    "sha256": "2767a833a73e5224d3ee9296c429fd1b2e54783cac760dba4d7331dd8932a1c5",
+    "bytes": 894538,
+    "dimensions": [
+      1312,
+      1199
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      220,
+      68,
+      1093,
+      1162
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "file": "docs/art-generation/cast-next-20261120/generated/stagehandbubble/selection.png",
+        "sha256": "463f70055d4c9ed064016b6f3744ebfecc3c3dbd58efd9282b824ced2af1c0fa",
+        "bytes": 820851,
+        "currentVerification": "exact"
+      },
+      {
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-stagehand-bubble.png",
+        "sha256": "c79461ad400eba410644a9a087dd3d0b70ef7b68a7dc9f1c423e60f55c9201d2",
+        "bytes": 583218,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "stagehandbubble",
+    "slot": "intro",
+    "file": "assets/encore/poses/stagehandbubble/intro.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/stagehandbubble/intro.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/stagehandbubble/intro.json",
+    "sha256": "22a2aef752ee8ddfd8cdec3038ee985a383a9f0e2fcaa353c8808202ec4c1d3a",
+    "bytes": 787318,
+    "dimensions": [
+      1312,
+      1199
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      327,
+      15,
+      1027,
+      1121
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "file": "docs/art-generation/cast-next-20261120/generated/stagehandbubble/selection.png",
+        "sha256": "463f70055d4c9ed064016b6f3744ebfecc3c3dbd58efd9282b824ced2af1c0fa",
+        "bytes": 820851,
+        "currentVerification": "exact"
+      },
+      {
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-stagehand-bubble.png",
+        "sha256": "c79461ad400eba410644a9a087dd3d0b70ef7b68a7dc9f1c423e60f55c9201d2",
+        "bytes": 583218,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "stagehandbubble",
+    "slot": "attack",
+    "file": "assets/encore/poses/stagehandbubble/attack.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/stagehandbubble/attack.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/stagehandbubble/attack.json",
+    "sha256": "0d7ae18fd8e4854097df55ba514b48181ad487bcd0f30de01aeec1bcb001eea1",
+    "bytes": 1314653,
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "alpha12Bounds": [
+      303,
+      21,
+      1224,
+      1002
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "file": "docs/art-generation/cast-next-20261120/generated/stagehandbubble/selection.png",
+        "sha256": "463f70055d4c9ed064016b6f3744ebfecc3c3dbd58efd9282b824ced2af1c0fa",
+        "bytes": 820851,
+        "currentVerification": "exact"
+      },
+      {
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-stagehand-bubble.png",
+        "sha256": "c79461ad400eba410644a9a087dd3d0b70ef7b68a7dc9f1c423e60f55c9201d2",
+        "bytes": 583218,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "stagehandbubble",
+    "slot": "heavy",
+    "file": "assets/encore/poses/stagehandbubble/heavy.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/stagehandbubble/heavy.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/stagehandbubble/heavy.json",
+    "sha256": "9f1d80116926a663901bf84f3477307f5448cd0c7ab5c64f92b677ecf8a1d0a5",
+    "bytes": 1331782,
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "alpha12Bounds": [
+      254,
+      22,
+      1280,
+      1010
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "file": "docs/art-generation/cast-next-20261120/generated/stagehandbubble/selection.png",
+        "sha256": "463f70055d4c9ed064016b6f3744ebfecc3c3dbd58efd9282b824ced2af1c0fa",
+        "bytes": 820851,
+        "currentVerification": "exact"
+      },
+      {
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-stagehand-bubble.png",
+        "sha256": "c79461ad400eba410644a9a087dd3d0b70ef7b68a7dc9f1c423e60f55c9201d2",
+        "bytes": 583218,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "stagehandbubble",
+    "slot": "hit",
+    "file": "assets/encore/poses/stagehandbubble/hit.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/stagehandbubble/hit.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/stagehandbubble/hit.json",
+    "sha256": "c64f40e2a2d1f4c6a9e936fc075782511a1006db83bab946a89c06523d642c6f",
+    "bytes": 820923,
+    "dimensions": [
+      1312,
+      1199
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      160,
+      38,
+      1102,
+      1144
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "file": "docs/art-generation/cast-next-20261120/generated/stagehandbubble/selection.png",
+        "sha256": "463f70055d4c9ed064016b6f3744ebfecc3c3dbd58efd9282b824ced2af1c0fa",
+        "bytes": 820851,
+        "currentVerification": "exact"
+      },
+      {
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-stagehand-bubble.png",
+        "sha256": "c79461ad400eba410644a9a087dd3d0b70ef7b68a7dc9f1c423e60f55c9201d2",
+        "bytes": 583218,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "stagehandbubble",
+    "slot": "walk",
+    "file": "assets/encore/poses/stagehandbubble/walk.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/stagehandbubble/walk.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/stagehandbubble/walk.json",
+    "sha256": "3b066afee761bc58cd3c502f96d9e9da5b7615ec33f5c1e93211abe0caffdbdf",
+    "bytes": 1280198,
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "alpha12Bounds": [
+      293,
+      25,
+      1219,
+      999
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "file": "docs/art-generation/cast-next-20261120/generated/stagehandbubble/selection.png",
+        "sha256": "463f70055d4c9ed064016b6f3744ebfecc3c3dbd58efd9282b824ced2af1c0fa",
+        "bytes": 820851,
+        "currentVerification": "exact"
+      },
+      {
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-stagehand-bubble.png",
+        "sha256": "c79461ad400eba410644a9a087dd3d0b70ef7b68a7dc9f1c423e60f55c9201d2",
+        "bytes": 583218,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "stagehandbubble",
+    "slot": "jump",
+    "file": "assets/encore/poses/stagehandbubble/jump.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/stagehandbubble/jump.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/stagehandbubble/jump.json",
+    "sha256": "c216a7af8ac9d56c2242e0b5917672a9b7770f92e4f111868c83d85afd876e39",
+    "bytes": 793458,
+    "dimensions": [
+      1312,
+      1199
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      242,
+      30,
+      1136,
+      1178
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "file": "docs/art-generation/cast-next-20261120/generated/stagehandbubble/selection.png",
+        "sha256": "463f70055d4c9ed064016b6f3744ebfecc3c3dbd58efd9282b824ced2af1c0fa",
+        "bytes": 820851,
+        "currentVerification": "exact"
+      },
+      {
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-stagehand-bubble.png",
+        "sha256": "c79461ad400eba410644a9a087dd3d0b70ef7b68a7dc9f1c423e60f55c9201d2",
+        "bytes": 583218,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "stagehandbubble",
+    "slot": "crouch",
+    "file": "assets/encore/poses/stagehandbubble/crouch.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/stagehandbubble/crouch.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/stagehandbubble/crouch.json",
+    "sha256": "2af9fb50ff8bee8cb3c4535f78e8e19535eefb8d013166c33bd5786ed69b0587",
+    "bytes": 907235,
+    "dimensions": [
+      1312,
+      1199
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      177,
+      123,
+      1154,
+      1127
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "file": "docs/art-generation/cast-next-20261120/generated/stagehandbubble/selection.png",
+        "sha256": "463f70055d4c9ed064016b6f3744ebfecc3c3dbd58efd9282b824ced2af1c0fa",
+        "bytes": 820851,
+        "currentVerification": "exact"
+      },
+      {
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-stagehand-bubble.png",
+        "sha256": "c79461ad400eba410644a9a087dd3d0b70ef7b68a7dc9f1c423e60f55c9201d2",
+        "bytes": 583218,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "stagehandbubble",
+    "slot": "victory",
+    "file": "assets/encore/poses/stagehandbubble/victory.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/stagehandbubble/victory.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/stagehandbubble/victory.json",
+    "sha256": "364ae03cb228af1674f3da519a4add3a752453f5e7fc71dede265bc57a173ebb",
+    "bytes": 760684,
+    "dimensions": [
+      1312,
+      1199
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      315,
+      21,
+      1096,
+      1165
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "file": "docs/art-generation/cast-next-20261120/generated/stagehandbubble/selection.png",
+        "sha256": "463f70055d4c9ed064016b6f3744ebfecc3c3dbd58efd9282b824ced2af1c0fa",
+        "bytes": 820851,
+        "currentVerification": "exact"
+      },
+      {
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-stagehand-bubble.png",
+        "sha256": "c79461ad400eba410644a9a087dd3d0b70ef7b68a7dc9f1c423e60f55c9201d2",
+        "bytes": 583218,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "stagehandbubble",
+    "slot": "defeat",
+    "file": "assets/encore/poses/stagehandbubble/defeat.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/stagehandbubble/defeat.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/stagehandbubble/defeat.json",
+    "sha256": "ff1b7498c43fd5f705970713f7f9cda38303b9a29a2ad147b934c12aecf4ebe5",
+    "bytes": 1250484,
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "alpha12Bounds": [
+      357,
+      63,
+      1134,
+      995
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_preuploaded_git_blob",
+    "references": [
+      {
+        "file": "docs/art-generation/cast-next-20261120/generated/stagehandbubble/selection.png",
+        "sha256": "463f70055d4c9ed064016b6f3744ebfecc3c3dbd58efd9282b824ced2af1c0fa",
+        "bytes": 820851,
+        "currentVerification": "exact"
+      },
+      {
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-stagehand-bubble.png",
+        "sha256": "c79461ad400eba410644a9a087dd3d0b70ef7b68a7dc9f1c423e60f55c9201d2",
+        "bytes": 583218,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "bugtamerkinger",
+    "slot": "selection",
+    "file": "assets/encore/selection/bugtamerkinger.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/bugtamerkinger/selection.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/bugtamerkinger/selection.json",
+    "sha256": "2c4d58c196154f686db40e59c8d99df6f08b1289514aa36fd8766319bf3e4dd3",
+    "bytes": 1047573,
+    "dimensions": [
+      1199,
+      1312
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      83,
+      47,
+      1171,
+      1271
+    ],
+    "nativeFacing": "right",
+    "recovery": "new_native_after_environment_loss",
+    "references": [
+      {
+        "file": "docs/art-generation/cast-next-20261120/generated/bugtamerkinger/defeat.png",
+        "sha256": "4e1e853ec0eae434b2d08fd7877079e28b9c14d37b4222dcd2b0a22050389d66",
+        "bytes": 1078042,
+        "currentVerification": "exact"
+      },
+      {
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-bug-tamer-kinger-recovered.jpg",
+        "sha256": "bc0734c2f92f9a2d2119df3b6f67b2edc2bfbfe49820afbfcd7960800b3c2561",
+        "bytes": 587257,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "bugtamerkinger",
+    "slot": "stance",
+    "file": "assets/encore/stance/bugtamerkinger.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/bugtamerkinger/stance.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/bugtamerkinger/stance.json",
+    "sha256": "557f9ee7e9004deba0248c65b82291fae1e5020e3a3afad667bf7b6b572e6180",
+    "bytes": 1126852,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      98,
+      53,
+      1190,
+      1218
+    ],
+    "nativeFacing": "right",
+    "recovery": "new_native_after_environment_loss",
+    "references": [
+      {
+        "file": "docs/art-generation/cast-next-20261120/generated/bugtamerkinger/defeat.png",
+        "sha256": "4e1e853ec0eae434b2d08fd7877079e28b9c14d37b4222dcd2b0a22050389d66",
+        "bytes": 1078042,
+        "currentVerification": "exact"
+      },
+      {
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-bug-tamer-kinger-recovered.jpg",
+        "sha256": "bc0734c2f92f9a2d2119df3b6f67b2edc2bfbfe49820afbfcd7960800b3c2561",
+        "bytes": 587257,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "bugtamerkinger",
+    "slot": "intro",
+    "file": "assets/encore/poses/bugtamerkinger/intro.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/bugtamerkinger/intro.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/bugtamerkinger/intro.json",
+    "sha256": "45416a274fe12e368dff3918ad5473c017eb5bbd3692cd3a3777e5837b705d63",
+    "bytes": 1090351,
+    "dimensions": [
+      1221,
+      1289
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      51,
+      49,
+      1175,
+      1265
+    ],
+    "nativeFacing": "right",
+    "recovery": "new_native_after_environment_loss",
+    "references": [
+      {
+        "file": "docs/art-generation/cast-next-20261120/generated/bugtamerkinger/defeat.png",
+        "sha256": "4e1e853ec0eae434b2d08fd7877079e28b9c14d37b4222dcd2b0a22050389d66",
+        "bytes": 1078042,
+        "currentVerification": "exact"
+      },
+      {
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-bug-tamer-kinger-recovered.jpg",
+        "sha256": "bc0734c2f92f9a2d2119df3b6f67b2edc2bfbfe49820afbfcd7960800b3c2561",
+        "bytes": 587257,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "bugtamerkinger",
+    "slot": "attack",
+    "file": "assets/encore/poses/bugtamerkinger/attack.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/bugtamerkinger/attack.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/bugtamerkinger/attack.json",
+    "sha256": "0d767e0f6edab391299b306dcd52d3bdbf2eb0ed381fb1da1e7dab594a89311b",
+    "bytes": 1049007,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      71,
+      71,
+      1216,
+      1215
+    ],
+    "nativeFacing": "right",
+    "recovery": "new_native_after_environment_loss",
+    "references": [
+      {
+        "file": "docs/art-generation/cast-next-20261120/generated/bugtamerkinger/defeat.png",
+        "sha256": "4e1e853ec0eae434b2d08fd7877079e28b9c14d37b4222dcd2b0a22050389d66",
+        "bytes": 1078042,
+        "currentVerification": "exact"
+      },
+      {
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-bug-tamer-kinger-recovered.jpg",
+        "sha256": "bc0734c2f92f9a2d2119df3b6f67b2edc2bfbfe49820afbfcd7960800b3c2561",
+        "bytes": 587257,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "bugtamerkinger",
+    "slot": "heavy",
+    "file": "assets/encore/poses/bugtamerkinger/heavy.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/bugtamerkinger/heavy.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/bugtamerkinger/heavy.json",
+    "sha256": "43f14e374b895b98de35642798c5e5170c6f2f46ee12c674bf45216bba39f6ce",
+    "bytes": 1022416,
+    "dimensions": [
+      1312,
+      1199
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      60,
+      26,
+      1254,
+      1187
+    ],
+    "nativeFacing": "right",
+    "recovery": "new_native_after_environment_loss",
+    "references": [
+      {
+        "file": "docs/art-generation/cast-next-20261120/generated/bugtamerkinger/defeat.png",
+        "sha256": "4e1e853ec0eae434b2d08fd7877079e28b9c14d37b4222dcd2b0a22050389d66",
+        "bytes": 1078042,
+        "currentVerification": "exact"
+      },
+      {
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-bug-tamer-kinger-recovered.jpg",
+        "sha256": "bc0734c2f92f9a2d2119df3b6f67b2edc2bfbfe49820afbfcd7960800b3c2561",
+        "bytes": 587257,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "bugtamerkinger",
+    "slot": "hit",
+    "file": "assets/encore/poses/bugtamerkinger/hit.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/bugtamerkinger/hit.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/bugtamerkinger/hit.json",
+    "sha256": "3b2cd31baf415598eff31baa3f8e5c3ea9c233ddab3de668568831104904a075",
+    "bytes": 1155303,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      133,
+      17,
+      1133,
+      1244
+    ],
+    "nativeFacing": "right",
+    "recovery": "new_native_after_environment_loss",
+    "references": [
+      {
+        "file": "docs/art-generation/cast-next-20261120/generated/bugtamerkinger/defeat.png",
+        "sha256": "4e1e853ec0eae434b2d08fd7877079e28b9c14d37b4222dcd2b0a22050389d66",
+        "bytes": 1078042,
+        "currentVerification": "exact"
+      },
+      {
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-bug-tamer-kinger-recovered.jpg",
+        "sha256": "bc0734c2f92f9a2d2119df3b6f67b2edc2bfbfe49820afbfcd7960800b3c2561",
+        "bytes": 587257,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "bugtamerkinger",
+    "slot": "walk",
+    "file": "assets/encore/poses/bugtamerkinger/walk.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/bugtamerkinger/walk.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/bugtamerkinger/walk.json",
+    "sha256": "454d56820858aa9ad5211792458cc554cb891f4fa912dd6425f95d6296c14936",
+    "bytes": 1639317,
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "alpha12Bounds": [
+      101,
+      41,
+      1499,
+      1004
+    ],
+    "nativeFacing": "right",
+    "recovery": "new_native_after_environment_loss",
+    "references": [
+      {
+        "file": "docs/art-generation/cast-next-20261120/generated/bugtamerkinger/defeat.png",
+        "sha256": "4e1e853ec0eae434b2d08fd7877079e28b9c14d37b4222dcd2b0a22050389d66",
+        "bytes": 1078042,
+        "currentVerification": "exact"
+      },
+      {
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-bug-tamer-kinger-recovered.jpg",
+        "sha256": "bc0734c2f92f9a2d2119df3b6f67b2edc2bfbfe49820afbfcd7960800b3c2561",
+        "bytes": 587257,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "bugtamerkinger",
+    "slot": "jump",
+    "file": "assets/encore/poses/bugtamerkinger/jump.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/bugtamerkinger/jump.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/bugtamerkinger/jump.json",
+    "sha256": "4846c9be2226b11530b986b193c0b77716daecc7f6c675e6b17aa9d7f1e99f00",
+    "bytes": 1072246,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      57,
+      53,
+      1198,
+      1165
+    ],
+    "nativeFacing": "right",
+    "recovery": "new_native_after_environment_loss",
+    "references": [
+      {
+        "file": "docs/art-generation/cast-next-20261120/generated/bugtamerkinger/defeat.png",
+        "sha256": "4e1e853ec0eae434b2d08fd7877079e28b9c14d37b4222dcd2b0a22050389d66",
+        "bytes": 1078042,
+        "currentVerification": "exact"
+      },
+      {
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-bug-tamer-kinger-recovered.jpg",
+        "sha256": "bc0734c2f92f9a2d2119df3b6f67b2edc2bfbfe49820afbfcd7960800b3c2561",
+        "bytes": 587257,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "bugtamerkinger",
+    "slot": "crouch",
+    "file": "assets/encore/poses/bugtamerkinger/crouch.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/bugtamerkinger/crouch.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/bugtamerkinger/crouch.json",
+    "sha256": "a51c468f38cb727cfea0edca4d0bd44953b7669be87af6a8813c455fb0fa543d",
+    "bytes": 1592030,
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "alpha12Bounds": [
+      113,
+      144,
+      1471,
+      975
+    ],
+    "nativeFacing": "right",
+    "recovery": "new_native_after_environment_loss",
+    "references": [
+      {
+        "file": "docs/art-generation/cast-next-20261120/generated/bugtamerkinger/defeat.png",
+        "sha256": "4e1e853ec0eae434b2d08fd7877079e28b9c14d37b4222dcd2b0a22050389d66",
+        "bytes": 1078042,
+        "currentVerification": "exact"
+      },
+      {
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-bug-tamer-kinger-recovered.jpg",
+        "sha256": "bc0734c2f92f9a2d2119df3b6f67b2edc2bfbfe49820afbfcd7960800b3c2561",
+        "bytes": 587257,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "bugtamerkinger",
+    "slot": "victory",
+    "file": "assets/encore/poses/bugtamerkinger/victory.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/bugtamerkinger/victory.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/bugtamerkinger/victory.json",
+    "sha256": "c1cc8da0a99ca184601df02c88a23da67206d66fbc0a9885fbd5e2e48df8002e",
+    "bytes": 1577407,
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "alpha12Bounds": [
+      98,
+      16,
+      1445,
+      1015
+    ],
+    "nativeFacing": "right",
+    "recovery": "new_native_after_environment_loss",
+    "references": [
+      {
+        "file": "docs/art-generation/cast-next-20261120/generated/bugtamerkinger/defeat.png",
+        "sha256": "4e1e853ec0eae434b2d08fd7877079e28b9c14d37b4222dcd2b0a22050389d66",
+        "bytes": 1078042,
+        "currentVerification": "exact"
+      },
+      {
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-bug-tamer-kinger-recovered.jpg",
+        "sha256": "bc0734c2f92f9a2d2119df3b6f67b2edc2bfbfe49820afbfcd7960800b3c2561",
+        "bytes": 587257,
+        "currentVerification": "exact"
+      }
+    ]
+  },
+  {
+    "appearanceId": "bugtamerkinger",
+    "slot": "defeat",
+    "file": "assets/encore/poses/bugtamerkinger/defeat.png",
+    "archiveFile": "docs/art-generation/cast-next-20261120/generated/bugtamerkinger/defeat.png",
+    "receiptFile": "docs/art-generation/cast-next-20261120/generated/bugtamerkinger/defeat.json",
+    "sha256": "4e1e853ec0eae434b2d08fd7877079e28b9c14d37b4222dcd2b0a22050389d66",
+    "bytes": 1078042,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      155,
+      66,
+      1097,
+      1219
+    ],
+    "nativeFacing": "right",
+    "recovery": "exact_persisted_tool_result",
+    "references": [
+      {
+        "file": "docs/art-generation/cast-next-20261120/generated/bugtamerkinger/selection.png",
+        "sha256": "70338a25133f009b96081ca3f1cfcb8b8360151347b00b56dcd482db44f6b058",
+        "bytes": 1046609,
+        "availability": "lost_original_reference",
+        "doNotResolveToRegeneratedFile": true,
+        "currentVerification": "historical_bytes_unavailable_after_environment_loss"
+      },
+      {
+        "file": "docs/art-generation/cast-next-20261120/research/merch/official-bug-tamer-kinger.png",
+        "sha256": "5dc0dc8f04c9667b5975f7ab7b005eb95900589d9a1d9dd97820887d74bcf94e",
+        "bytes": 6448103,
+        "availability": "lost_original_reference",
+        "doNotResolveToFreshJpeg": true,
+        "currentVerification": "exact"
+      }
+    ]
+  }
+]

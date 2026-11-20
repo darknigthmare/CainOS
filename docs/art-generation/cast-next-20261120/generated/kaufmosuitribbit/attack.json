@@ -1,0 +1,72 @@
+{
+  "id": "kaufmosuitribbit:attack",
+  "appearanceId": "kaufmosuitribbit",
+  "fighterId": "ribbit",
+  "slot": "attack",
+  "status": "accepted_native",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "file": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/attack.png",
+  "targetFile": "assets/encore/poses/kaufmosuitribbit/attack.png",
+  "referencePaths": [
+    "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/selection.png",
+    "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-kaufmo-suit.png"
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/ribbit-pendantz-blindbox",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/KaufmoSuit.png?v=1785347150"
+  ],
+  "sourceKind": "Produit dérivé officiel",
+  "episodeFidelityClaim": false,
+  "desiredNativeFacing": "right",
+  "prompt": "Use case: identity-preserve. Reference 1 is the APPROVED GAME DESIGN: preserve its exact face, anatomy, clothing, colours, details, proportions and drawing style, changing only the pose described below. Reference 2 confirms the official merchandise costume details. Do not copy the pose, photo background or toy proportions from reference 2.\n\nRIBBIT wearing the official KAUFMO SUIT merchandise costume. One slim anthropomorphic green frog with two large raised oval eyes, black pupils with white highlights, dark violet lower eyelid accents, a pale mint muzzle, pink cheek patches and small curved smile. Keep the established game's slender Ribbit proportions. Yellow clown suit covering torso and legs, broad blue ruffled collar, exactly TWO large red pompons stacked vertically on the chest, two white gloved hands, two red rounded clown feet. Keep the frog head and frog identity. No clown nose, hat, rabbit ears, pink neck bow, keyring, tag, strap or lettering. Not the character Kaufmo.\n\nLight attack: face SCREEN-RIGHT and extend the forward arm into one straight punch toward SCREEN-RIGHT, other hand near the torso. Slight forward lunge with both feet visible. No opponent, no impact cloud, no trails.\n\nRender ONE complete polished hand-drawn 2D cel-shaded fighting-game sprite with clean dark outlines and clear flat colour regions. Entire figure including every eye, hat tip, feather tip, finger and both feet is fully inside generous transparent safety margins. True transparent RGBA background. No floor, cast shadow, glow, background, frame, text, watermark, duplicate body, speed lines or motion blur. Anatomical consistency is mandatory: one head, two arms, two hands, two legs and two feet. Native facing must be SCREEN-RIGHT; do not mirror anatomical costume details.",
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/selection.png",
+      "sha256": "4e931f702f5758ed95c581651058b9ed2f0121e93d60305ee9bb8ec29865e378",
+      "bytes": 1401496
+    },
+    {
+      "position": 2,
+      "file": "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-kaufmo-suit.png",
+      "sha256": "e54ef43b2e9e73eed83bad635b971c8ac8f8a2caf8c82dbfef755ffd29b2868d",
+      "bytes": 1455321
+    }
+  ],
+  "schema": "encore-native-art-discovery/v1",
+  "includedInRuntime": false,
+  "nativeSourceFile": "/workspace/scratch/5f5114b49696/generated_images/exec-162d8ac2-436b-43be-8f64-69142a176bd1.png",
+  "sourceGenerationId": "exec-162d8ac2-436b-43be-8f64-69142a176bd1",
+  "nativeFacing": "right",
+  "visualReview": {
+    "reviewer": "generate_pomni_kinger",
+    "status": "accepted",
+    "observations": [
+      "Coup léger vers la droite, bras avant tendu et autre poing ramené ; fente avec deux pieds visibles.",
+      "Deux pompons rouges, collerette bleue et tête de grenouille préservés ; pas de membre supplémentaire ni élément coupé."
+    ],
+    "scope": "Official merchandise costume and approved game design preserved; original game pose, no canonical episode certification."
+  },
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "alpha12Bounds": [
+    275,
+    16,
+    1326,
+    1014
+  ],
+  "alpha12BoundsThreshold": "alpha > 12",
+  "fullyTransparentPixels": 1251314,
+  "sha256": "2b7765bfdb71fa238933ee75c8c9e87c5efe431b8654c81cce57ac0508ea0e8e",
+  "bytes": 1293008,
+  "nativeCopyVerified": true,
+  "createdAt": "2026-11-20T09:45:38.662620+00:00"
+}

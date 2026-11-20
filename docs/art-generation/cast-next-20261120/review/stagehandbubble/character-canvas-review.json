@@ -1,0 +1,220 @@
+{
+  "schema": "encore-character-canvas-review/v1",
+  "createdAt": "2026-11-20T10:56:57.628Z",
+  "method": "Production Canvas2D modules executed by Node and native Skia; actual drawImage sources and transforms inspected.",
+  "limitations": [
+    "No browser, DOM, input, audio, service-worker or physical-device test.",
+    "Individual static poses do not establish frame-by-frame animation.",
+    "Asset identity/proportion fidelity requires separate visual review; no canonical 1:1 certification."
+  ],
+  "partial": false,
+  "additionsOnly": true,
+  "introducedOn": "2026-11-20",
+  "appearanceId": "stagehandbubble",
+  "sources": {
+    "combat/data.mjs": "6910aaddf46645f98520f4cc6fb468c2bc43b6dd017d9237266a90f6c1bf892b",
+    "combat/costume-additions.mjs": "a3db2ecd8a368360b4e34179540d50c9c2250359a255c353a87dea135682d875",
+    "combat/costume-continuation-20261120.mjs": "d3774d17d6058e72081cc7a236f748fc26cc2532fe94ddf772e9ad6de638eb0f",
+    "combat/costume-resumption-20261120.mjs": "f83bde65b434f107abf7017e532a5600b2b43713f3b0e32308f8a1a2bd3be9d5",
+    "combat/costume-discoveries-20261120.mjs": "fb16daf1591a50602a68a84e2d7e5cafa12c230b2185ef4e1d627cec8a67565c",
+    "combat/illustrations.mjs": "26aca8338be81bedbbbc1bb4bc59dd0aae8b7b7ef4d785cbbf353ac109c53b99",
+    "combat/render.mjs": "91cdc8a8a4b5298644809714aa7e53219e1266e2ffc95478194a699a7bc1212f",
+    "combat/render-poses.mjs": "21e3afba8c19723ffdcb383402cc6339b63cb58df5d4323fda2ebde093ce0b29",
+    "combat/offline-manifest.mjs": "3e4808a0198e058ec85756265f575ebf63263278354b48c567fcbe3c755410b0",
+    "scripts/render-combat-character-review.mjs": "02a1c878bf23504d2c63e8046008a9f2a27b9389607a6f1166b498dda7fa780e"
+  },
+  "actions": [
+    {
+      "id": "stagehandbubble",
+      "pose": "intro",
+      "file": "assets/encore/poses/stagehandbubble/intro.png",
+      "sha256": "22a2aef752ee8ddfd8cdec3038ee985a383a9f0e2fcaa353c8808202ec4c1d3a",
+      "bytes": 787318,
+      "visibleBounds": {
+        "x": 159,
+        "y": 7,
+        "width": 342,
+        "height": 540
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "stagehandbubble",
+      "pose": "attack",
+      "file": "assets/encore/poses/stagehandbubble/attack.png",
+      "sha256": "0d7ae18fd8e4854097df55ba514b48181ad487bcd0f30de01aeec1bcb001eea1",
+      "bytes": 1314653,
+      "visibleBounds": {
+        "x": 126,
+        "y": 9,
+        "width": 384,
+        "height": 409
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "stagehandbubble",
+      "pose": "hit",
+      "file": "assets/encore/poses/stagehandbubble/hit.png",
+      "sha256": "c64f40e2a2d1f4c6a9e936fc075782511a1006db83bab946a89c06523d642c6f",
+      "bytes": 820923,
+      "visibleBounds": {
+        "x": 78,
+        "y": 18,
+        "width": 460,
+        "height": 540
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "stagehandbubble",
+      "pose": "walk",
+      "file": "assets/encore/poses/stagehandbubble/walk.png",
+      "sha256": "3b066afee761bc58cd3c502f96d9e9da5b7615ec33f5c1e93211abe0caffdbdf",
+      "bytes": 1280198,
+      "visibleBounds": {
+        "x": 122,
+        "y": 10,
+        "width": 386,
+        "height": 406
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "stagehandbubble",
+      "pose": "jump",
+      "file": "assets/encore/poses/stagehandbubble/jump.png",
+      "sha256": "c216a7af8ac9d56c2242e0b5917672a9b7770f92e4f111868c83d85afd876e39",
+      "bytes": 793458,
+      "visibleBounds": {
+        "x": 118,
+        "y": 14,
+        "width": 436,
+        "height": 561
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "stagehandbubble",
+      "pose": "crouch",
+      "file": "assets/encore/poses/stagehandbubble/crouch.png",
+      "sha256": "2af9fb50ff8bee8cb3c4535f78e8e19535eefb8d013166c33bd5786ed69b0587",
+      "bytes": 907235,
+      "visibleBounds": {
+        "x": 86,
+        "y": 60,
+        "width": 477,
+        "height": 490
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "stagehandbubble",
+      "pose": "victory",
+      "file": "assets/encore/poses/stagehandbubble/victory.png",
+      "sha256": "364ae03cb228af1674f3da519a4add3a752453f5e7fc71dede265bc57a173ebb",
+      "bytes": 760684,
+      "visibleBounds": {
+        "x": 153,
+        "y": 10,
+        "width": 382,
+        "height": 559
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "stagehandbubble",
+      "pose": "defeat",
+      "file": "assets/encore/poses/stagehandbubble/defeat.png",
+      "sha256": "ff1b7498c43fd5f705970713f7f9cda38303b9a29a2ad147b934c12aecf4ebe5",
+      "bytes": 1250484,
+      "visibleBounds": {
+        "x": 149,
+        "y": 26,
+        "width": 323,
+        "height": 389
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "stagehandbubble",
+      "pose": "heavy",
+      "file": "assets/encore/poses/stagehandbubble/heavy.png",
+      "sha256": "9f1d80116926a663901bf84f3477307f5448cd0c7ab5c64f92b677ecf8a1d0a5",
+      "bytes": 1331782,
+      "visibleBounds": {
+        "x": 106,
+        "y": 9,
+        "width": 427,
+        "height": 412
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    }
+  ],
+  "stances": [
+    {
+      "id": "stagehandbubble",
+      "file": "assets/encore/stance/stagehandbubble.png",
+      "sha256": "2767a833a73e5224d3ee9296c429fd1b2e54783cac760dba4d7331dd8932a1c5",
+      "bytes": 894538,
+      "nativeFacing": 1,
+      "rendered": true,
+      "bothFacings": true
+    }
+  ],
+  "portraits": [
+    {
+      "id": "stagehandbubble",
+      "archiveId": null,
+      "file": "assets/encore/selection/stagehandbubble.png",
+      "sha256": "463f70055d4c9ed064016b6f3744ebfecc3c3dbd58efd9282b824ced2af1c0fa",
+      "bytes": 820851,
+      "rendered": true
+    }
+  ],
+  "missing": [],
+  "sheets": [
+    "actions-stagehandbubble.jpg",
+    "archive-portraits-01.jpg"
+  ],
+  "browserTestStatus": "not_executed",
+  "counts": {
+    "appearances": 1,
+    "expectedActions": 9,
+    "actions": 9,
+    "stances": 1,
+    "drawChecks": 20,
+    "archiveEntries": 0,
+    "portraits": 1,
+    "expectedPortraits": 1,
+    "missing": 0
+  },
+  "complete": true
+}

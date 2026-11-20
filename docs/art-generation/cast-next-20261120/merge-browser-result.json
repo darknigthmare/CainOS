@@ -1,0 +1,25 @@
+{
+  "schema": "encore-focused-merge-browser/v1",
+  "startedAt": "2026-11-20T10:58:36.648963+00:00",
+  "completedAt": "2026-11-20T10:58:38.245327+00:00",
+  "elapsedSeconds": 1.596,
+  "command": [
+    "node",
+    "tests/combat-merge-browser.mjs"
+  ],
+  "origin": "http://127.0.0.1:39839",
+  "chromiumExecutable": "/usr/bin/chromium",
+  "exitCode": 1,
+  "testSourceSha256": "f9bca9ff3d7297b88bb368ff7e133b9e71dd63eb8958fe06564ab4e37c5b3e82",
+  "testSourceUnchanged": true,
+  "reportCopied": false,
+  "log": "docs/art-generation/cast-next-20261120/merge-browser.log",
+  "report": null,
+  "checks": 0,
+  "checksPassed": 0,
+  "errors": [],
+  "failure": "Chromium aborted before page navigation: process_singleton_posix.cc:297 socket() failed: Operation not permitted (1).",
+  "pass": false,
+  "status": "environment_blocked_before_navigation",
+  "logSha256": "0606f38e346a907d63149b826690cb76d4d25a392601572032ab2936e935b7f8"
+}

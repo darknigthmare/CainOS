@@ -1,0 +1,220 @@
+{
+  "schema": "encore-character-canvas-review/v1",
+  "createdAt": "2026-11-20T10:56:38.235Z",
+  "method": "Production Canvas2D modules executed by Node and native Skia; actual drawImage sources and transforms inspected.",
+  "limitations": [
+    "No browser, DOM, input, audio, service-worker or physical-device test.",
+    "Individual static poses do not establish frame-by-frame animation.",
+    "Asset identity/proportion fidelity requires separate visual review; no canonical 1:1 certification."
+  ],
+  "partial": false,
+  "additionsOnly": true,
+  "introducedOn": "2026-11-20",
+  "appearanceId": "noirribbit",
+  "sources": {
+    "combat/data.mjs": "6910aaddf46645f98520f4cc6fb468c2bc43b6dd017d9237266a90f6c1bf892b",
+    "combat/costume-additions.mjs": "a3db2ecd8a368360b4e34179540d50c9c2250359a255c353a87dea135682d875",
+    "combat/costume-continuation-20261120.mjs": "d3774d17d6058e72081cc7a236f748fc26cc2532fe94ddf772e9ad6de638eb0f",
+    "combat/costume-resumption-20261120.mjs": "f83bde65b434f107abf7017e532a5600b2b43713f3b0e32308f8a1a2bd3be9d5",
+    "combat/costume-discoveries-20261120.mjs": "fb16daf1591a50602a68a84e2d7e5cafa12c230b2185ef4e1d627cec8a67565c",
+    "combat/illustrations.mjs": "26aca8338be81bedbbbc1bb4bc59dd0aae8b7b7ef4d785cbbf353ac109c53b99",
+    "combat/render.mjs": "91cdc8a8a4b5298644809714aa7e53219e1266e2ffc95478194a699a7bc1212f",
+    "combat/render-poses.mjs": "21e3afba8c19723ffdcb383402cc6339b63cb58df5d4323fda2ebde093ce0b29",
+    "combat/offline-manifest.mjs": "3e4808a0198e058ec85756265f575ebf63263278354b48c567fcbe3c755410b0",
+    "scripts/render-combat-character-review.mjs": "02a1c878bf23504d2c63e8046008a9f2a27b9389607a6f1166b498dda7fa780e"
+  },
+  "actions": [
+    {
+      "id": "noirribbit",
+      "pose": "intro",
+      "file": "assets/encore/poses/noirribbit/intro.png",
+      "sha256": "680e3640ebe7333951175f8126e9b799956714a7df467c937a990d789a2c1630",
+      "bytes": 1312077,
+      "visibleBounds": {
+        "x": 58,
+        "y": 12,
+        "width": 337,
+        "height": 620
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "noirribbit",
+      "pose": "attack",
+      "file": "assets/encore/poses/noirribbit/attack.png",
+      "sha256": "bd9405b71dadee65c634d56763f9b123cdccfc4ab8ed9960045945e34fa8bc2d",
+      "bytes": 634539,
+      "visibleBounds": {
+        "x": 26,
+        "y": 38,
+        "width": 523,
+        "height": 578
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "noirribbit",
+      "pose": "hit",
+      "file": "assets/encore/poses/noirribbit/hit.png",
+      "sha256": "c7e38f81f34572675481674618d28eb2da7712f2d796a84360fa762b02b7aaf5",
+      "bytes": 1367909,
+      "visibleBounds": {
+        "x": 49,
+        "y": 37,
+        "width": 337,
+        "height": 580
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "noirribbit",
+      "pose": "walk",
+      "file": "assets/encore/poses/noirribbit/walk.png",
+      "sha256": "3aea157537b0149a775293012ef5e56b032160f7ad3177f8520ad699404cbca5",
+      "bytes": 1346053,
+      "visibleBounds": {
+        "x": 48,
+        "y": 16,
+        "width": 345,
+        "height": 611
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "noirribbit",
+      "pose": "jump",
+      "file": "assets/encore/poses/noirribbit/jump.png",
+      "sha256": "834125bf3dddb717eaa715fa409f681ccfdfcbc8e9d707c94c91f242271e7a9b",
+      "bytes": 774755,
+      "visibleBounds": {
+        "x": 90,
+        "y": 15,
+        "width": 450,
+        "height": 609
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "noirribbit",
+      "pose": "crouch",
+      "file": "assets/encore/poses/noirribbit/crouch.png",
+      "sha256": "0734c41ad3edf682d31fc37bfb3b860fc0d8baa40b5c6a369f7b1bea447591bd",
+      "bytes": 691865,
+      "visibleBounds": {
+        "x": 133,
+        "y": 53,
+        "width": 358,
+        "height": 511
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "noirribbit",
+      "pose": "victory",
+      "file": "assets/encore/poses/noirribbit/victory.png",
+      "sha256": "2211cde3840d5e26c81df1e7e996722a07a0345a0da4c83d6eb9d33a596e62a3",
+      "bytes": 1311824,
+      "visibleBounds": {
+        "x": 57,
+        "y": 12,
+        "width": 320,
+        "height": 622
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "noirribbit",
+      "pose": "defeat",
+      "file": "assets/encore/poses/noirribbit/defeat.png",
+      "sha256": "755ac74442f18e51d29e7f2d52990588cf16b341cf3760954ae355b4044fd119",
+      "bytes": 779208,
+      "visibleBounds": {
+        "x": 47,
+        "y": 62,
+        "width": 472,
+        "height": 544
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "noirribbit",
+      "pose": "heavy",
+      "file": "assets/encore/poses/noirribbit/heavy.png",
+      "sha256": "31ebd5a9c53ae47ec5cf9a6435378a369e320ec3c6847f14694feda0a050f5b4",
+      "bytes": 1284694,
+      "visibleBounds": {
+        "x": 53,
+        "y": 26,
+        "width": 547,
+        "height": 388
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    }
+  ],
+  "stances": [
+    {
+      "id": "noirribbit",
+      "file": "assets/encore/stance/noirribbit.png",
+      "sha256": "4630a86d35b9fcd01eefaaf7b71c246cfa334f3a7ebb803fab93ee4442aa31c0",
+      "bytes": 1279890,
+      "nativeFacing": 1,
+      "rendered": true,
+      "bothFacings": true
+    }
+  ],
+  "portraits": [
+    {
+      "id": "noirribbit",
+      "archiveId": null,
+      "file": "assets/encore/selection/noirribbit.png",
+      "sha256": "7e0856ee931693f817f7206945d38b178c3e79007a68c77d6c908c066972b78d",
+      "bytes": 1279270,
+      "rendered": true
+    }
+  ],
+  "missing": [],
+  "sheets": [
+    "actions-noirribbit.jpg",
+    "archive-portraits-01.jpg"
+  ],
+  "browserTestStatus": "not_executed",
+  "counts": {
+    "appearances": 1,
+    "expectedActions": 9,
+    "actions": 9,
+    "stances": 1,
+    "drawChecks": 20,
+    "archiveEntries": 0,
+    "portraits": 1,
+    "expectedPortraits": 1,
+    "missing": 0
+  },
+  "complete": true
+}

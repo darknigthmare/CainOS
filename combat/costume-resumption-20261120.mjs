@@ -147,13 +147,14 @@ export const COSTUME_RESUMPTION_DEFINITIONS = [
 // Reviewed direction of the unmodified drawings. Gangle's poses intentionally
 // have mixed directions; changing actors must never reuse a family-wide flip.
 const nativeFacingBySlot = Object.freeze({
+  bowlingpinragatha: Object.freeze({ selection: -1 }),
   abstractinggangle: Object.freeze({
     selection: -1, stance: -1, intro: 1, attack: -1, heavy: 1, hit: -1,
     walk: -1, jump: -1, crouch: -1, victory: -1, defeat: -1,
   }),
 });
 
-/** Historical illustrations and the other resumed families face right. */
+/** Unlisted appearance slots preserve the historical right-facing default. */
 export function getCostumeNativeFacing(appearanceId, slot) {
   return nativeFacingBySlot[appearanceId]?.[slot] === -1 ? -1 : 1;
 }

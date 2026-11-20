@@ -1,0 +1,308 @@
+{
+  "schema": "encore-native-loss-inventory/v1",
+  "createdAt": "2026-11-20T10:26:33.230197+00:00",
+  "exactlyRecovered": 1,
+  "acceptedPNGsLost": 10,
+  "rejectedPNGsLost": 2,
+  "records": [
+    {
+      "slot": "selection",
+      "sourceGenerationId": "exec-baa946f6-eb5e-4511-9966-37a600a434d8",
+      "sha256": "d17cc174b27cc1912aec9c6140f75459a2198b551866ebdd2b1c28cb16a0300b",
+      "bytes": 1628606,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alpha12Bounds": [
+        113,
+        17,
+        896,
+        1519
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "priorReviewStatus": "accepted_native",
+      "recoveryStatus": "bytes_lost_after_environment_replacement",
+      "nativeFacing": "right"
+    },
+    {
+      "slot": "stance",
+      "sourceGenerationId": "exec-45204186-ef74-41be-9006-bc324dbe2edc",
+      "sha256": "bb8a5c5c4c805cf1dcb1a91a09b394a847fa367b54abbe502dab228276696eb2",
+      "bytes": 1642742,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alpha12Bounds": [
+        72,
+        18,
+        877,
+        1503
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "priorReviewStatus": "accepted_native",
+      "recoveryStatus": "bytes_lost_after_environment_replacement",
+      "nativeFacing": "right"
+    },
+    {
+      "slot": "intro",
+      "sourceGenerationId": "exec-95ba7747-8b72-4266-a40d-d01b347a37e9",
+      "sha256": "d4ad63bff39b2c65e04c77a9764abdee2c2390ccbc51a65bf4a98b8c6bb74256",
+      "bytes": 1615539,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alpha12Bounds": [
+        103,
+        19,
+        929,
+        1504
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "priorReviewStatus": "accepted_native",
+      "recoveryStatus": "bytes_lost_after_environment_replacement",
+      "nativeFacing": "right"
+    },
+    {
+      "slot": "attack",
+      "sourceGenerationId": "exec-3c6e9903-d4ab-4294-8985-d3ffa5f7719c",
+      "sha256": "99af5dcb607c71339d2f32dce401379e86f96d90c8cd1ceb18650a26571bc01d",
+      "bytes": 974098,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "alpha12Bounds": [
+        135,
+        13,
+        1108,
+        1299
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "priorReviewStatus": "accepted_native",
+      "recoveryStatus": "bytes_lost_after_environment_replacement",
+      "nativeFacing": "right"
+    },
+    {
+      "slot": "heavy",
+      "sourceGenerationId": "exec-b23d585c-5888-4896-8585-ecfc0020d74d",
+      "sha256": "0fb2b83c7ac1f0c6108ae2fd8a2cd27f1a77403e21813b718e7b62ccca391b58",
+      "bytes": 1521711,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha12Bounds": [
+        124,
+        14,
+        1423,
+        1012
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "priorReviewStatus": "accepted_native",
+      "recoveryStatus": "bytes_lost_after_environment_replacement",
+      "nativeFacing": "right"
+    },
+    {
+      "slot": "hit",
+      "sourceGenerationId": "exec-d6b3e8d8-7ee6-4aaa-858c-e1f91cabfd3a",
+      "sha256": "8676a3066c6057d4e5021cbf6cafc5682dcd266c2e051b7df3808f3c5735782d",
+      "bytes": 1643041,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alpha12Bounds": [
+        38,
+        19,
+        975,
+        1519
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "priorReviewStatus": "accepted_native",
+      "recoveryStatus": "bytes_lost_after_environment_replacement",
+      "nativeFacing": "right"
+    },
+    {
+      "slot": "walk",
+      "sourceGenerationId": "exec-0928f581-9cf7-4aba-ae76-4f9cb74b58e8",
+      "sha256": "5057082a4d9872ddcb4d802df221242924f4417dd9276d397210b31854c387c8",
+      "bytes": 1634731,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alpha12Bounds": [
+        109,
+        16,
+        920,
+        1495
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "priorReviewStatus": "accepted_native",
+      "recoveryStatus": "bytes_lost_after_environment_replacement",
+      "nativeFacing": "right"
+    },
+    {
+      "slot": "jump",
+      "sourceGenerationId": "exec-7ae14fa4-4e65-466a-8629-bf2ffb37343b",
+      "sha256": "0152d4e1dfc6140ec2777cddc898ee18c9fb13f33d81807f18602113e94234cf",
+      "bytes": 1058383,
+      "dimensions": [
+        1200,
+        1310
+      ],
+      "alpha12Bounds": [
+        97,
+        18,
+        1087,
+        1282
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "priorReviewStatus": "accepted_native",
+      "recoveryStatus": "bytes_lost_after_environment_replacement",
+      "nativeFacing": "right"
+    },
+    {
+      "slot": "crouch",
+      "sourceGenerationId": "exec-b6bfdcd7-cca1-4e43-a068-bb82c5894da0",
+      "sha256": "1d77bb5f1dccb42da5105898b1c61daad87b1bbb32c5c71e6434a7715740c34f",
+      "bytes": 999325,
+      "dimensions": [
+        1312,
+        1199
+      ],
+      "alpha12Bounds": [
+        136,
+        16,
+        1075,
+        1195
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "priorReviewStatus": "accepted_native",
+      "recoveryStatus": "bytes_lost_after_environment_replacement",
+      "nativeFacing": "right"
+    },
+    {
+      "slot": "victory",
+      "sourceGenerationId": "exec-c1b895f4-dbd1-47f2-8193-277ffa21d45a",
+      "sha256": "12d8d6af0488f98b0ffd3eabeaa3aa9bdf47909cf380826ed3a62a875baa7ade",
+      "bytes": 1656209,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alpha12Bounds": [
+        114,
+        14,
+        984,
+        1525
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "priorReviewStatus": "accepted_native",
+      "recoveryStatus": "bytes_lost_after_environment_replacement",
+      "nativeFacing": "right"
+    },
+    {
+      "slot": "defeat",
+      "sourceGenerationId": "exec-10758272-ca8f-4ce0-81fc-22ce058e459e",
+      "sha256": "aff64f2b1fbf4294cc916399c1af418078632d731514c8eb3172cbcb987a0b44",
+      "bytes": 1418103,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha12Bounds": [
+        260,
+        22,
+        1173,
+        1015
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "priorReviewStatus": "accepted_native",
+      "recoveryStatus": "recovered_exact",
+      "nativeFacing": "right"
+    },
+    {
+      "slot": "selection-rejected-v1",
+      "sourceGenerationId": "exec-017e2e4c-6ae3-4191-936d-7bfbdf9ce960",
+      "sha256": "89b5a374baa92f722ccda6234cfbe9eb84cb3cfbbfa11c7c3f3cd9641b1579f6",
+      "bytes": 1646709,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alpha12Bounds": [
+        113,
+        18,
+        895,
+        1519
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "priorReviewStatus": "rejected_native",
+      "recoveryStatus": "bytes_lost_after_environment_replacement",
+      "nativeFacing": "right"
+    },
+    {
+      "slot": "hit-rejected-v1",
+      "sourceGenerationId": "exec-bcb8215a-4d68-4bae-89d3-8379eab39c98",
+      "sha256": "e12b8dec63c4fa759571f16d1d44e1732144ff7ec1962666da2908c3853eecdc",
+      "bytes": 1648301,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alpha12Bounds": [
+        38,
+        19,
+        975,
+        1519
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "priorReviewStatus": "rejected_native",
+      "recoveryStatus": "bytes_lost_after_environment_replacement",
+      "nativeFacing": "right"
+    }
+  ]
+}

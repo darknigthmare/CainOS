@@ -1,0 +1,23 @@
+{
+  "schema": "encore-primary-reference-recovery/v1",
+  "status": "fresh_official_retrieval_not_original_bytes",
+  "file": "docs/art-generation/cast-next-20261120/research/merch/official-bug-tamer-kinger-recovered.jpg",
+  "localFile": "/workspace/scratch/5f5114b49696/recovery/gangle/references/official-bug-tamer-kinger-recovered.jpg",
+  "url": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_bugTamerKinger.png?v=1773977710",
+  "pageUrl": "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+  "contentType": "image/jpeg",
+  "sha256": "bc0734c2f92f9a2d2119df3b6f67b2edc2bfbfe49820afbfcd7960800b3c2561",
+  "bytes": 587257,
+  "dimensions": [
+    2000,
+    2000
+  ],
+  "mode": "RGB",
+  "originalLostFile": "docs/art-generation/cast-next-20261120/research/merch/official-bug-tamer-kinger.png",
+  "originalLostSha256": "5dc0dc8f04c9667b5975f7ab7b005eb95900589d9a1d9dd97820887d74bcf94e",
+  "originalLostBytes": 6448103,
+  "recoveredAt": "2026-11-20T10:29:34.547166+00:00",
+  "note": "Same official public URL now serves JPEG bytes. Keep distinct file and hash; visual review required before new generation.",
+  "reviewStatus": "visually_reviewed",
+  "visualReview": "Fresh JPEG from official URL inspected: beige chess head, blue irises, ribbed metal bucket with brown-gripped front handle, purple ermine robe, two white hands, striped flaming hoop and one red/orange butterfly match the original viewed official composition. The unrelated floor flames remain excluded."
+}

@@ -1,0 +1,96 @@
+{
+  "schema": "encore-recovery-tree-build/v1",
+  "repository": "darknigthmare/CainOS",
+  "branch": "recovery/cast-next-20261120",
+  "expectedParent": "6ea3e8041f71789f858ed724ceeb49a3e5efacff",
+  "baseTree": "4cdec75d327064adb7414d9ed0598aa94ce53727",
+  "startedAt": "2026-11-20T10:26:41.994Z",
+  "directAttemptFailure": {
+    "error": "GitHub API error 422: {\"message\":\"Sorry, your request timed out.  It's likely that your input was too large to process.  Consider building the tree incrementally, or building the commits you need in a local clone of the repository and then pushing them to GitHub.\",\"documentation_url\":\"https://docs.github.com/rest/git/trees#create-a-tree\",\"status\":\"422\"}",
+    "error_code": "INVALID_ARGUMENT",
+    "error_data": {
+      "message": "Sorry, your request timed out.  It's likely that your input was too large to process.  Consider building the tree incrementally, or building the commits you need in a local clone of the repository and then pushing them to GitHub.",
+      "documentation_url": "https://docs.github.com/rest/git/trees#create-a-tree",
+      "status": "422"
+    }
+  },
+  "familyTrees": {
+    "jaxsuitpomni": {
+      "sha": "25a1edb3f3e978a56cac581024fc4ab91d9484de",
+      "entries": 22,
+      "createdAt": "2026-11-20T10:26:43.018Z"
+    },
+    "noirribbit": {
+      "sha": "7f65753acbbc47b071d772e4e2da27c3a340b7d4",
+      "entries": 22,
+      "createdAt": "2026-11-20T10:26:44.507Z"
+    },
+    "kaufmosuitribbit": {
+      "sha": "6a2061631ab55c1ac4e41a2efd08a38541ceb197",
+      "entries": 22,
+      "createdAt": "2026-11-20T10:26:45.209Z"
+    },
+    "intermissioncaine": {
+      "sha": "e93fa51d3d0749f992922e4b7277ef6db4b27ca7",
+      "entries": 28,
+      "createdAt": "2026-11-20T10:26:45.774Z"
+    },
+    "bowlingpinragatha": {
+      "sha": "c7c1264092f51d2136f87cb61cc7e5859cdc29e5",
+      "entries": 24,
+      "createdAt": "2026-11-20T10:26:47.070Z"
+    },
+    "ringmastercaine": {
+      "sha": "141e7af662f90787bad4e3cdf0ab8fdb05f64913",
+      "entries": 22,
+      "createdAt": "2026-11-20T10:26:47.662Z"
+    },
+    "strongmanorbsman": {
+      "sha": "334e370998e5cefdecbeff4afe968ab3356d5a1f",
+      "entries": 28,
+      "createdAt": "2026-11-20T10:26:48.960Z"
+    },
+    "stagehandbubble": {
+      "sha": "d85dec7607ca42b17dca04f24eddfc74953e3ab2",
+      "entries": 22,
+      "createdAt": "2026-11-20T10:26:50.084Z"
+    }
+  },
+  "commitCreated": true,
+  "branchCreated": true,
+  "prBranchTouched": false,
+  "generatedTree": "c3f204c8f87a9e24f7f8ec6b289b211dc6c3d093",
+  "tree": "85bedd89abdfb1573c65c3448ada6138d0a523ae",
+  "treeCreated": true,
+  "generatedTreeVerified": {
+    "leafCount": 190,
+    "everyPathAndShaMatches": true,
+    "verifiedAt": "2026-11-20T10:27:17.762Z"
+  },
+  "commit": "52789faa0ef3ac1f0b51d05fa3661da897edaec9",
+  "createdAt": "2026-11-20T10:27:26.012Z",
+  "prReadback": {
+    "observedAt": "2026-11-20T10:27:44.651Z",
+    "head": "feat/encore-glitch-crossovers",
+    "headSha": "6ea3e8041f71789f858ed724ceeb49a3e5efacff",
+    "draft": true,
+    "state": "open",
+    "merged": false
+  },
+  "commitReadback": {
+    "sha": "52789faa0ef3ac1f0b51d05fa3661da897edaec9",
+    "tree": "85bedd89abdfb1573c65c3448ada6138d0a523ae",
+    "parents": [
+      "6ea3e8041f71789f858ed724ceeb49a3e5efacff"
+    ]
+  },
+  "branchReadback": {
+    "branches": [
+      {
+        "branch": "recovery/cast-next-20261120"
+      }
+    ],
+    "cursor": "MQ"
+  },
+  "status": "backup_branch_created_and_verified"
+}

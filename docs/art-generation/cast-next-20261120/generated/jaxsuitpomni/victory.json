@@ -1,0 +1,59 @@
+{
+  "schema": "encore-native-art-discovery/v1",
+  "appearanceId": "jaxsuitpomni",
+  "slot": "victory",
+  "status": "accepted_native",
+  "createdAt": "2026-11-20T09:39:42.992351+00:00",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "prompt": "Use case: identity-preserve. Draw ONE complete POMNI IN THE JAX SUIT in the approved reference's exact 2D game design. Keep the white face, brown bob/forehead locks, red-and-blue pinwheel irises and orange cheeks, pale lavender rabbit hood with two long rounded ears and small yellow/black eye motifs, lavender covered limbs, yellow gloves, pink short overalls with EXACTLY TWO yellow buttons and ONE bib pocket, and two broad lavender rabbit feet with toe seams. Preserve the reference's proportions, clean dark outlines, colors and detailed cel shading. The small grey toy prop revolver with black grip stays in her anatomical RIGHT glove, lowered or tucked close to the hip, with no firing, flash or projectile. The other glove is empty. No jester hat, bells, ordinary Jax face, new costume piece, extra limb or duplicate accessory. Entire body including both ear tips and both soles inside clear transparent margins, facing screen-right in three-quarter game view. One character, true transparent RGBA, no background, floor, cast shadow, glow, text, logo, watermark or effects. POSE: VICTORY. Cheerful triumphant smile, empty left fist lifted overhead, right prop hand lowered by hip, one foot planted and the other lightly lifted. Keep both hood ears separate from the raised glove and entirely in frame.",
+  "referencePaths": [
+    "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/selection.png"
+  ],
+  "portableReferences": [
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/selection.png",
+      "sha256": "5cd4179ae983b9a050162159e47bad53ff95bd895c790ae38963fa2df74a3d6c",
+      "bytes": 923013
+    }
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/jax-suit-pomni-plush"
+  ],
+  "sourceKind": "Produit dérivé officiel",
+  "episodeFidelityClaim": false,
+  "sourceGenerationId": "exec-7180b3a5-b9a7-44dc-b25e-0e6ab24bbb06",
+  "nativeSourceFile": "/workspace/scratch/5f5114b49696/generated_images/exec-7180b3a5-b9a7-44dc-b25e-0e6ab24bbb06.png",
+  "file": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/victory.png",
+  "targetFile": "assets/encore/poses/jaxsuitpomni/victory.png",
+  "sha256": "310aa01b647b4bf10750a9884fb915dbce90e0fcfac2e6b122a25f8b332b10bf",
+  "bytes": 939039,
+  "dimensions": [
+    955,
+    1647
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "fullyTransparentPixels": 1021228,
+  "alpha12Bounds": [
+    134,
+    12,
+    920,
+    1635
+  ],
+  "alpha12BoundsThreshold": "alpha >= 12",
+  "nativeCopyVerified": true,
+  "nativeFacing": "right",
+  "visualReview": {
+    "reviewer": "root",
+    "status": "accepted",
+    "observations": [
+      "Happy victory gesture with empty left fist raised and one bent leg, distinct from stance and walking.",
+      "Single prop remains down in right hand; both ears, both feet, hood motifs, two buttons and pocket all preserved."
+    ],
+    "scope": "Approved merchandise identity and game presentation; original static game pose, no canonical episode certification."
+  }
+}

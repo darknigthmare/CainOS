@@ -15,7 +15,32 @@ The playable game version is **0.7.0**. The GLITCH wardrobe was updated on **18 
 - Controls, architecture, references and remaining work: **[Digital Circus — Encore](docs/DIGITAL_CIRCUS_ENCORE.md)**.
 - To equip a crossover, open the fighter or opponent’s wardrobe and select **Filtrer les tenues**. Choose the series and **Fusion originale** to see the character’s redesigned body. [Compare the fusion portraits and combat stances](docs/COMBAT_GALERIE_FUSIONS.md) or [browse the GLITCH wardrobe and arena gallery](docs/COMBAT_CROSSOVERS_GLITCH.md).
 
-The game combines **54 fighters, 540 techniques, 22 shared arenas, 452 selectable costumes and 179 searchable archive entries**. Fourteen fighters have individually authored kits; 40 promoted archive NPCs use the extension kits described below. The 54 dedicated stage arrangements reuse shared scenery and are counted separately. Its nine standard modes are joined by nine illustrated crossover visits under **Escales GLITCH**. The wardrobe contains 51 archive costumes, 23 additional illustrated Circus appearances, 252 tributes and residents, and 126 original fusions for the original fourteen fighters. Crossovers for the forty promoted NPCs remain to be produced. The combat techniques and stories are original fan-game adaptations.
+The game combines **54 fighters, 540 techniques, 22 shared arenas, 462 selectable costumes and 179 searchable archive entries**. Fourteen fighters have individually authored kits; 40 promoted archive NPCs use the extension kits described below. The 54 dedicated stage arrangements reuse shared scenery and are counted separately. Its nine standard modes are joined by nine illustrated crossover visits under **Escales GLITCH**. The wardrobe contains 51 archive costumes, 33 additional illustrated Circus appearances, 252 tributes and residents, and 126 original fusions for the original fourteen fighters. Crossovers for the forty promoted NPCs remain to be produced. The combat techniques and stories are original fan-game adaptations.
+
+### Ten more illustrated appearances — 20 November continuation
+
+The next recovered batch completes **ten appearances and 110 individual native
+PNG drawings**: Jax-Suit Pomni, Noir Ribbit, Kaufmo-Suit Ribbit, Intermission Caine,
+Showtime Pomni, Bowling Pin Ragatha, Ringmaster Caine, Strongman Orbsman,
+Stagehand Bubble and Bug Tamer Kinger. Every family has one selection portrait,
+one stance and nine separate action drawings. The game now contains **33 additional
+Circus appearances / 363 native PNGs** across the dated waves.
+
+The preserved native files and recovered generation records are checked before
+activation. The portrait of Bowling Pin Ragatha keeps its reviewed left-facing
+source direction; her combat poses face right. The existing wardrobe owners,
+move sets, profiles and replay rules are retained. These are appearance variants,
+not ten new fighter identities.
+
+The [continuation report](docs/COMBAT_CAST_DISCOVERIES_2026-11-20.md) links the
+new gallery, per-file provenance, actual checks and remaining candidates. A
+previous browser assertion that incorrectly excluded Queenie's already published
+abstraction outfit is updated to match the existing catalogue.
+
+The official GLITCH product references identify the costumes; the action poses
+are original adaptations for Encore. Canonical scene comparisons and complete
+animation cycles remain tracked separately. The installed workbook retains its
+previous revision; the new manifests preserve the ten additions for reconciliation.
 
 ### Nine completed appearances — resumed generation on 20 November
 
@@ -194,8 +219,8 @@ horizontal fighting arena. Their floor artwork also follows the new composition;
 collisions are unchanged. The other nine static backgrounds remain identical. See the [stage review](docs/combat-stage-review-0.6.0.json) and
 [before/after sheet](docs/images/encore-stage-comparison-0.6.0.png).
 
-The shared fidelity registers contain **681 records**: 54 fighters, 540 techniques,
-22 shared arenas, 51 archive costumes and 14 additional Circus appearances. They separate technical checks, observed reference
+The shared fidelity registers contain **700 records**: 54 fighters, 540 techniques,
+22 shared arenas, 51 archive costumes and 33 additional Circus appearances. They separate technical checks, observed reference
 traits, original adaptations and remaining discrepancies. **This release does not
 claim complete canonical or pixel-exact 1:1 fidelity.**
 
@@ -249,7 +274,7 @@ coloured Mannequins. Their kits are role-based templates adapted for Encore;
 their routes and tournament text are generated from one reviewed record per
 character. They are original fan-game adaptations, not canonical powers. The
 roster now exposes **162 stage finales** (42 authored, 120 generated for the
-promoted PNJ) and **681 fidelity records**, including the 14 additional appearances. The remaining 74 archive identities
+promoted PNJ) and **700 fidelity records**, including the 33 additional appearances. The remaining 74 archive identities
 (props, effects, abstractions, humans and unreviewed duplicates) stay
 non-playable. See [roster-expansion.mjs](combat/roster-expansion.mjs).
 

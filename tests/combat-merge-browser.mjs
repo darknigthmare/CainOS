@@ -42,10 +42,10 @@ async function select(page, mode, fighter) {
 try {
   const page = await pageFor();
   await select(page, 'local', 'queenie');
-  assert.deepEqual(await page.locator('#variant-0 option').evaluateAll(items => items.map(item => item.value)), ['']);
+  assert.deepEqual(await page.locator('#variant-0 option').evaluateAll(items => items.map(item => item.value)), ['', 'abstractingqueenie']);
   await page.locator('[data-stage="home-queenie"]').click();
   assert.equal(await page.locator('[data-stage="home-queenie"]').getAttribute('aria-pressed'), 'true');
-  pass('54 fighters are selectable; a promoted NPC has no nonexistent crossover choices');
+  pass('54 fighters are selectable; Queenie offers her illustrated appearance without nonexistent crossover choices');
   await page.locator('[data-fighter="pomni"]').click();
   const picker = page.locator('[data-costume-picker="variant-0"]');
   await picker.locator('summary').click();

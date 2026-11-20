@@ -1,0 +1,59 @@
+{
+  "schema": "encore-native-art-discovery/v1",
+  "appearanceId": "jaxsuitpomni",
+  "slot": "walk",
+  "status": "accepted_native",
+  "createdAt": "2026-11-20T09:36:13.263623+00:00",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "prompt": "Use case: identity-preserve. Draw ONE complete POMNI IN THE JAX SUIT in the approved reference's exact 2D game design. Keep the white face, brown bob/forehead locks, red-and-blue pinwheel irises and orange cheeks, pale lavender rabbit hood with two long rounded ears and small yellow/black eye motifs, lavender covered limbs, yellow gloves, pink short overalls with EXACTLY TWO yellow buttons and ONE bib pocket, and two broad lavender rabbit feet with toe seams. Preserve the reference's proportions, clean dark outlines, colors and detailed cel shading. The small grey toy prop revolver with black grip stays in her anatomical RIGHT glove, lowered or tucked close to the hip, with no firing, flash or projectile. The other glove is empty. No jester hat, bells, ordinary Jax face, new costume piece, extra limb or duplicate accessory. Entire body including both ear tips and both soles inside clear transparent margins, facing screen-right in three-quarter game view. One character, true transparent RGBA, no background, floor, cast shadow, glow, text, logo, watermark or effects. POSE: WALK. A distinct walking stride toward screen-right, front foot stepping heel-first, rear heel lifted, empty left arm swung naturally with opposite leg, prop hand on anatomical right kept lowered. Preserve both ears and all limb attachments.",
+  "referencePaths": [
+    "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/selection.png"
+  ],
+  "portableReferences": [
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/selection.png",
+      "sha256": "5cd4179ae983b9a050162159e47bad53ff95bd895c790ae38963fa2df74a3d6c",
+      "bytes": 923013
+    }
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/jax-suit-pomni-plush"
+  ],
+  "sourceKind": "Produit dérivé officiel",
+  "episodeFidelityClaim": false,
+  "sourceGenerationId": "exec-09ba4ce2-6e74-4df8-9eb2-f9d83b33981b",
+  "nativeSourceFile": "/workspace/scratch/5f5114b49696/generated_images/exec-09ba4ce2-6e74-4df8-9eb2-f9d83b33981b.png",
+  "file": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/walk.png",
+  "targetFile": "assets/encore/poses/jaxsuitpomni/walk.png",
+  "sha256": "a1f21e7a09273340c0fb458a92a8d11fe364688bf5927e5630f02dac98ef693e",
+  "bytes": 856379,
+  "dimensions": [
+    1135,
+    1386
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "fullyTransparentPixels": 1091088,
+  "alpha12Bounds": [
+    172,
+    8,
+    950,
+    1371
+  ],
+  "alpha12BoundsThreshold": "alpha >= 12",
+  "nativeCopyVerified": true,
+  "nativeFacing": "right",
+  "visualReview": {
+    "reviewer": "root",
+    "status": "accepted",
+    "observations": [
+      "Distinct walking stride toward screen-right with front sole raised and rear foot bent; empty glove swings forward.",
+      "Single prop lowered in right hand and complete silhouette; hood motifs, pinwheel eyes and two-button outfit match seed."
+    ],
+    "scope": "Approved merchandise identity and game presentation; original static game pose, no canonical episode certification."
+  }
+}

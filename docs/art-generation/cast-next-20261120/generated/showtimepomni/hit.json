@@ -1,0 +1,156 @@
+{
+  "id": "showtimepomni:recovery:hit",
+  "appearanceId": "showtimepomni",
+  "slot": "hit",
+  "status": "accepted_native",
+  "originalJobId": "showtimepomni:hit",
+  "originalPrompt": "Use case: identity-preserve. NATIVE HAND ANATOMY CORRECTION for the Showtime Pomni HIT pose. Reference 1 is an UNAPPROVED hit-pose draft. Reference 2 is the approved character design and hand anatomy.\n\nKeep the entire hit-pose draft unchanged in overall drawing and pose: frightened Pomni recoils to screen-left but faces SCREEN-RIGHT, both open hands raised, both legs braced, full gold leotard, plain white arms/legs, gold shoes, red-and-blue jester hat with two yellow pompons, one cream hat feather and cream feather train behind the hips. Preserve the composition, face, pinwheel pupils, colour placement, all clothing and polished 2D cel style.\n\nCorrect BOTH open hands to have EXACTLY FOUR DIGITS EACH: one thumb plus THREE longer rounded fingers, matching the four-digit cartoon hands in reference 2. There must NOT be five digits on either hand. Remove the extra finger naturally from each open hand. Clear simple four-digit silhouettes, no fused or broken fingers. Both wrists remain plain white without cuffs, bracelets or bands.\n\nOne complete Pomni, exactly two arms, two hands, two legs and two feet. Entire character from uppermost feather tip to both soles fully inside generous transparent margins. True transparent RGBA background; no floor, stage, shadows, glow, effect, text or duplicate character.",
+  "originalLostPNG": {
+    "slot": "hit",
+    "sourceGenerationId": "exec-d6b3e8d8-7ee6-4aaa-858c-e1f91cabfd3a",
+    "sha256": "8676a3066c6057d4e5021cbf6cafc5682dcd266c2e051b7df3808f3c5735782d",
+    "bytes": 1643041,
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "alpha12Bounds": [
+      38,
+      19,
+      975,
+      1519
+    ],
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "priorReviewStatus": "accepted_native",
+    "recoveryStatus": "bytes_lost_after_environment_replacement",
+    "nativeFacing": "right"
+  },
+  "referencePaths": [
+    "docs/art-generation/cast-next-20261120/generated/showtimepomni/selection.png",
+    "docs/art-generation/cast-next-20261120/generated/showtimepomni/defeat.png",
+    "docs/art-generation/cast-next-20261120/recovery-references/official-showtime-pomni.jpg"
+  ],
+  "prompt": "Use case: identity-preserve. Create ONE new native whole-body 2D fighting-game sprite. Reference 1 is the NEWLY APPROVED recovery selection drawing, and locks character design, anatomy, costume, proportions and polished dark-outline cel-shaded style. Reference 2 is the EXACT RECOVERED original defeat drawing from before the environment loss. Reference 3 is the official merchandise costume reference only. Use the new recovery selection for pose consistency; the lost original selection is not available or used. This is a NEW generation replacing a lost pose; do not recreate the photographed toy proportions or stage.\n\nPreserve Pomni's exact recovered-game identity: white face, brown bob with forehead locks, red cheeks, red/blue pinwheel pupils, red-and-blue two-point jester hat with yellow band and exactly two yellow pompons. One large cream feather above the hat; cream feather costume train behind the hips. Gold dance leotard, plain white arms and legs, gold shoes. No wrist cuffs, bracelets or bands: white hands connect directly to white forearms. Exactly TWO arms, TWO hands, TWO legs, TWO feet. Each cartoon hand has exactly FOUR digits in total: THREE fingers and ONE thumb. Feathers are costume decorations, never wings or limbs.\n\nTaking a hit while still facing SCREEN-RIGHT: recoil torso toward screen-left, startled expression, both open hands lifted and feet braced. Both hands must have exactly three fingers plus one thumb each.\n\nKeep every part fully inside generous transparent margins, including the tall hat feather, both pompons, train feathers, fingertips and both feet. One complete character only. True transparent RGBA background; no floor, stage, curtain, shadow, glow, motion effect, text, border, logo or duplicate character.",
+  "sourceURLs": [
+    "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_Canpomni.png?v=1773977710"
+  ],
+  "file": "docs/art-generation/cast-next-20261120/generated/showtimepomni/hit.png",
+  "targetFile": "assets/encore/poses/showtimepomni/hit.png",
+  "sourceKind": "Produit dérivé officiel",
+  "episodeFidelityClaim": false,
+  "transparent_background": true,
+  "method": "image_gen.imagegen",
+  "desiredNativeFacing": "right",
+  "recoveryReason": "Original accepted PNG bytes lost after environment replacement; no claim of byte-identical recovery.",
+  "schema": "encore-native-art-discovery/v1",
+  "nativeSourceFile": "/workspace/scratch/5f5114b49696/generated_images/exec-831957e8-5546-41f0-a0c9-5c9e349525af.png",
+  "sourceGenerationId": "exec-831957e8-5546-41f0-a0c9-5c9e349525af",
+  "nativeFacing": "right",
+  "includedInRuntime": false,
+  "actualToolReferencePaths": [
+    "/workspace/scratch/5f5114b49696/recovery/pomni/regenerated/showtimepomni/selection.png",
+    "/workspace/scratch/5f5114b49696/recovery/pomni/generated/showtimepomni/defeat.png",
+    "/workspace/scratch/5f5114b49696/recovery/pomni/references/official-showtime-pomni.jpg"
+  ],
+  "recoveryRegeneration": {
+    "date": "2026-11-20",
+    "reason": "Original PNG bytes lost after environment replacement; new native generation.",
+    "originalLostPNG": {
+      "slot": "hit",
+      "sourceGenerationId": "exec-d6b3e8d8-7ee6-4aaa-858c-e1f91cabfd3a",
+      "sha256": "8676a3066c6057d4e5021cbf6cafc5682dcd266c2e051b7df3808f3c5735782d",
+      "bytes": 1643041,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alpha12Bounds": [
+        38,
+        19,
+        975,
+        1519
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "priorReviewStatus": "accepted_native",
+      "recoveryStatus": "bytes_lost_after_environment_replacement",
+      "nativeFacing": "right"
+    },
+    "exactRecoveredSeedSHA256": "aff64f2b1fbf4294cc916399c1af418078632d731514c8eb3172cbcb987a0b44",
+    "notByteIdenticalToLostPose": true
+  },
+  "visualReview": {
+    "reviewer": "generate_pomni_kinger",
+    "status": "accepted",
+    "observations": [
+      "Réaction au coup : buste en recul vers la gauche, regard et corps orientés à droite, deux mains ouvertes à exactement trois doigts et un pouce chacune.",
+      "Deux jambes complètes et pieds bracés ; bonnet, plume, train et body doré préservés, aucun bracelet."
+    ],
+    "scope": "Native recovery regeneration from the new approved selection, exact recovered defeat and reloaded official merchandise photo."
+  },
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "alpha12Bounds": [
+    56,
+    25,
+    919,
+    1525
+  ],
+  "alpha12BoundsThreshold": "alpha > 12",
+  "fullyTransparentPixels": 857467,
+  "sha256": "46cda1342af6a14f9992ca3ced11e9713130648c5ad8db36821767f172069c7c",
+  "bytes": 1671013,
+  "gitBlobSHA": "b5b05bf23b0af511313a539972e3511fb1768601",
+  "nativeCopyVerified": true,
+  "createdAt": "2026-11-20T10:36:53.066144+00:00",
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/cast-next-20261120/generated/showtimepomni/selection.png",
+      "sha256": "36657a67157a740bd2e26b9de7d8bc24163901eb68b80c1bd97e2c3317084093",
+      "bytes": 1563975,
+      "recoveryLocalPath": "/workspace/scratch/5f5114b49696/recovery/pomni/regenerated/showtimepomni/selection.png"
+    },
+    {
+      "position": 2,
+      "file": "docs/art-generation/cast-next-20261120/generated/showtimepomni/defeat.png",
+      "sha256": "aff64f2b1fbf4294cc916399c1af418078632d731514c8eb3172cbcb987a0b44",
+      "bytes": 1418103,
+      "recoveryLocalPath": "/workspace/scratch/5f5114b49696/recovery/pomni/generated/showtimepomni/defeat.png"
+    },
+    {
+      "position": 3,
+      "file": "docs/art-generation/cast-next-20261120/recovery-references/official-showtime-pomni.jpg",
+      "sha256": "a398e64a547fcecb3b4d6615d81e835ef6142b8aff1aa48e9135edd8d0a6ad46",
+      "bytes": 595909,
+      "recoveryLocalPath": "/workspace/scratch/5f5114b49696/recovery/pomni/references/official-showtime-pomni.jpg"
+    }
+  ],
+  "gitBlobUploaded": true,
+  "gitBlobVerified": true,
+  "recoveredFromLocalFile": "/workspace/scratch/5f5114b49696/recovery/pomni/regenerated/showtimepomni/hit.png",
+  "repositoryRecoveredAt": "2026-11-20T10:45:51.072563+00:00",
+  "recoveryVisualReview": {
+    "reviewer": "finish_showtime",
+    "reviewedAt": "2026-11-20T10:45:51.072563+00:00",
+    "status": "accepted",
+    "observations": [
+      "Native recovered source visually inspected: full body and complete costume, two arms and two legs, right-facing action.",
+      "All source bytes match the previously accepted generation receipt; source pose is distinct and unchanged."
+    ],
+    "scope": "Static game pose and source design consistency; no episode certification."
+  }
+}

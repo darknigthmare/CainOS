@@ -1,0 +1,517 @@
+{
+  "definitions": [
+    {
+      "id": "strongmanorbsman",
+      "fighterId": "orbsman",
+      "name": "Orbsman — homme fort",
+      "sourceId": "store-sideshow-strongmanorbsman",
+      "sourceTitle": "GLITCH — The Amazing Digital Circus ANIMINIZ: Side Show Series — Strongman Orbsman",
+      "sourceUrl": "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_strongmanOrbsman.png?v=1773977710",
+      "sourceKind": "Produit dérivé officiel",
+      "introducedOn": "2026-11-20",
+      "traits": [
+        "Corps bleu/violet composé de sphères, deux grands yeux blancs à pupilles noires et sourcils noirs épais relevés.",
+        "Petites gouttes vert menthe de transpiration sur le visage.",
+        "Deux mains sphériques tiennent une barre métallique avec une grosse boule rouge à chaque extrémité."
+      ],
+      "scope": "Apparence et accessoires comparés à la figurine officielle Side Show. Proportions et poses adaptées au dessin du jeu, sans certification de présence en épisode. Les accessoires restent visuels et ne changent aucune technique ou règle de combat. Le corps est celui du Orbsman existant : il s’agit surtout d’une apparence accessoirisée à haltère, pas d’une nouvelle espèce ni d’une tenue textile. Conserver deux extrémités rouges sur une seule barre, sans ajout de doigts humains."
+    },
+    {
+      "id": "stagehandbubble",
+      "fighterId": "bubble",
+      "name": "Bubble — régisseur",
+      "sourceId": "store-sideshow-stagehandbubble",
+      "sourceTitle": "GLITCH — The Amazing Digital Circus ANIMINIZ: Side Show Series — Stagehand Bubble",
+      "sourceUrl": "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_stagehandBubble.png?v=1773977710",
+      "sourceKind": "Produit dérivé officiel",
+      "introducedOn": "2026-11-20",
+      "traits": [
+        "Bubble sphérique/translucide bleu très pâle, yeux noirs, dents triangulaires blanches et grande langue rouge sortie.",
+        "Haut-de-forme noir à bande rouge sous/derrière Bubble.",
+        "Grosse caméra de cinéma grise au-dessus, objectifs noirs sur tourelle circulaire et voyant rouge ; supports gris visibles derrière la sphère."
+      ],
+      "scope": "Apparence et accessoires comparés à la figurine officielle Side Show. Proportions et poses adaptées au dessin du jeu, sans certification de présence en épisode. Les accessoires restent visuels et ne changent aucune technique ou règle de combat. La nouveauté repose sur la composition Bubble + caméra + chapeau, pas sur une anatomie humanoïde. Aucune main ou jambe à inventer ; préserver l’ensemble accessoirisé pour les poses. Les inscriptions minuscules de marque ne sont pas nécessaires au dessin de jeu."
+    },
+    {
+      "id": "bugtamerkinger",
+      "fighterId": "kinger",
+      "name": "Kinger — dompteur d’insectes",
+      "sourceId": "store-sideshow-bugtamerkinger",
+      "sourceTitle": "GLITCH — The Amazing Digital Circus ANIMINIZ: Side Show Series — Bug Tamer Kinger",
+      "sourceUrl": "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_bugTamerKinger.png?v=1773977710",
+      "sourceKind": "Produit dérivé officiel",
+      "introducedOn": "2026-11-20",
+      "traits": [
+        "Tête de pièce d’échecs beige et deux yeux saillants à iris bleus ; robe violette avec hermine blanche tachetée de noir.",
+        "Casque-seau métallique gris à reliefs horizontaux ; anse métallique passant devant la tête avec poignée marron sous le visage.",
+        "Deux mains blanches ; l’une porte un cerceau rayé rouge et crème, garni de flammes orange, avec un petit papillon rouge/orange à corps sombre."
+      ],
+      "scope": "Apparence et accessoires comparés à la figurine officielle Side Show. Proportions et poses adaptées au dessin du jeu, sans certification de présence en épisode. Les accessoires restent visuels et ne changent aucune technique ou règle de combat. Référence de produit avec accessoires : conserver le cerceau tenu si la déclinaison dompteur est choisie, sans inventer bras ou jambes. Aucun pouvoir de feu ou événement d’épisode n’est établi par cette figurine."
+    }
+  ],
+  "jobs": [
+    {
+      "appearanceId": "bugtamerkinger",
+      "slot": "selection",
+      "status": "queued_replacement_after_workspace_loss",
+      "prompt": "Use case: stylized-concept. Asset type: ONE individual full-body transparent 2D fighting-game sprite for Encore. Crisp dark outlines, polished restrained cel shading, saturated local colours, clear silhouette at small game scale, consistent light from upper left. Match the named official merchandise identity; this is an original game-pose adaptation, not a claim about an episode. Keep the complete single character and every carried prop inside generous clear transparent margins on ALL sides. True transparent RGBA background. No scenery, curtains, floor, cast shadow, aura, glow, particles, text, watermark, panel, inset, duplicated character or cropped extremity. Input image 1 is the byte-identical recovered defeat sprite, used as the strict design lock for proportions, shape, colours, shading and every prop. Its tired pose and expression must change to the requested new action. Input image 2 is the official source to preserve identity details, excluding its scene. Generate a genuinely new action, not a crop or mirror. DESIGN LOCK: BUG TAMER KINGER from the official Side Show merchandise. One beige chess-king body/head with two protruding white eyeballs and blue irises. Long purple royal robe with white ermine trim bearing sparse black marks. A ribbed grey metal BUCKET worn upside down as helmet, with its curved metal handle hanging in front of the face and brown grip below the face. Exactly TWO detached floating white gloved hands, no arms or legs or feet. One hand holds one red-and-cream striped hoop with attached orange stylized flames around its upper rim and a single small red/orange butterfly with dark body within its lower opening. The second hand stays separate and visible. Keep bucket, handle, grip, robe, two hands, hoop, flames and butterfly intact. Do not copy the unrelated flame pile on the merchandise floor. POSE: SELECT: full-length upright hero pose, three-quarter side view facing screen RIGHT, one floating white hand holds the flaming striped hoop to the forward/right side and the other hand open beside the robe; small butterfly stays within the hoop opening.",
+      "referencePaths": [
+        "docs/art-generation/cast-next-20261120/generated/bugtamerkinger/defeat.png",
+        "docs/art-generation/cast-next-20261120/research/merch/official-bug-tamer-kinger-recovered.jpg"
+      ],
+      "executionReferencePaths": [
+        "/workspace/scratch/5f5114b49696/recovery/gangle/bugtamerkinger-defeat.png",
+        "/workspace/scratch/5f5114b49696/recovery/gangle/references/official-bug-tamer-kinger-recovered.jpg"
+      ],
+      "sourceURLs": [
+        "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_bugTamerKinger.png?v=1773977710"
+      ],
+      "transparent_background": true,
+      "nativeFacingRequested": "right",
+      "recovery": {
+        "reason": "Original workspace disappeared before these PNGs were uploaded; new native replacements, not recovered originals.",
+        "supersedesLostNative": {
+          "appearanceId": "bugtamerkinger",
+          "slot": "selection",
+          "sourceGenerationId": "exec-6837a0f0-0ad5-4845-a8e0-157a6a9453b5",
+          "sha256": "70338a25133f009b96081ca3f1cfcb8b8360151347b00b56dcd482db44f6b058",
+          "bytes": 1046609,
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "alpha12Bounds": [
+            113,
+            59,
+            1177,
+            1220
+          ],
+          "nativeFacing": "right",
+          "originalStatus": "accepted_native",
+          "availability": "lost_with_original_workspace",
+          "remoteGitSha": null
+        },
+        "seed": "Recovered original defeat, byte-exact; original selection is lost.",
+        "officialReference": "Fresh verified 2000×2000 JPEG response from the same official URL; original archived PNG byte stream is unavailable. New SHA recorded, never presented as old file."
+      }
+    },
+    {
+      "appearanceId": "bugtamerkinger",
+      "slot": "stance",
+      "status": "queued_replacement_after_workspace_loss",
+      "prompt": "Use case: stylized-concept. Asset type: ONE individual full-body transparent 2D fighting-game sprite for Encore. Crisp dark outlines, polished restrained cel shading, saturated local colours, clear silhouette at small game scale, consistent light from upper left. Match the named official merchandise identity; this is an original game-pose adaptation, not a claim about an episode. Keep the complete single character and every carried prop inside generous clear transparent margins on ALL sides. True transparent RGBA background. No scenery, curtains, floor, cast shadow, aura, glow, particles, text, watermark, panel, inset, duplicated character or cropped extremity. Input image 1 is the byte-identical recovered defeat sprite, used as the strict design lock for proportions, shape, colours, shading and every prop. Its tired pose and expression must change to the requested new action. Input image 2 is the official source to preserve identity details, excluding its scene. Generate a genuinely new action, not a crop or mirror. DESIGN LOCK: BUG TAMER KINGER from the official Side Show merchandise. One beige chess-king body/head with two protruding white eyeballs and blue irises. Long purple royal robe with white ermine trim bearing sparse black marks. A ribbed grey metal BUCKET worn upside down as helmet, with its curved metal handle hanging in front of the face and brown grip below the face. Exactly TWO detached floating white gloved hands, no arms or legs or feet. One hand holds one red-and-cream striped hoop with attached orange stylized flames around its upper rim and a single small red/orange butterfly with dark body within its lower opening. The second hand stays separate and visible. Keep bucket, handle, grip, robe, two hands, hoop, flames and butterfly intact. Do not copy the unrelated flame pile on the merchandise floor. POSE: STANCE: robe/base angled slightly forward and both eyes looking screen RIGHT, hoop held steadily near chest height by one floating hand, free hand raised defensively; preserve both hands and the butterfly.",
+      "referencePaths": [
+        "docs/art-generation/cast-next-20261120/generated/bugtamerkinger/defeat.png",
+        "docs/art-generation/cast-next-20261120/research/merch/official-bug-tamer-kinger-recovered.jpg"
+      ],
+      "executionReferencePaths": [
+        "/workspace/scratch/5f5114b49696/recovery/gangle/bugtamerkinger-defeat.png",
+        "/workspace/scratch/5f5114b49696/recovery/gangle/references/official-bug-tamer-kinger-recovered.jpg"
+      ],
+      "sourceURLs": [
+        "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_bugTamerKinger.png?v=1773977710"
+      ],
+      "transparent_background": true,
+      "nativeFacingRequested": "right",
+      "recovery": {
+        "reason": "Original workspace disappeared before these PNGs were uploaded; new native replacements, not recovered originals.",
+        "supersedesLostNative": {
+          "appearanceId": "bugtamerkinger",
+          "slot": "stance",
+          "sourceGenerationId": "exec-d7065a0e-df20-479c-aad4-ef091b3cf39e",
+          "sha256": "50680196eab9ba69448e4972c0dcb8f3f49198df7a639ed6a80c671b5a52bdff",
+          "bytes": 1074012,
+          "dimensions": [
+            1199,
+            1312
+          ],
+          "alpha12Bounds": [
+            52,
+            90,
+            1167,
+            1248
+          ],
+          "nativeFacing": "right",
+          "originalStatus": "accepted_native",
+          "availability": "lost_with_original_workspace",
+          "remoteGitSha": null
+        },
+        "seed": "Recovered original defeat, byte-exact; original selection is lost.",
+        "officialReference": "Fresh verified 2000×2000 JPEG response from the same official URL; original archived PNG byte stream is unavailable. New SHA recorded, never presented as old file."
+      }
+    },
+    {
+      "appearanceId": "bugtamerkinger",
+      "slot": "intro",
+      "status": "queued_replacement_after_workspace_loss",
+      "prompt": "Use case: stylized-concept. Asset type: ONE individual full-body transparent 2D fighting-game sprite for Encore. Crisp dark outlines, polished restrained cel shading, saturated local colours, clear silhouette at small game scale, consistent light from upper left. Match the named official merchandise identity; this is an original game-pose adaptation, not a claim about an episode. Keep the complete single character and every carried prop inside generous clear transparent margins on ALL sides. True transparent RGBA background. No scenery, curtains, floor, cast shadow, aura, glow, particles, text, watermark, panel, inset, duplicated character or cropped extremity. Input image 1 is the byte-identical recovered defeat sprite, used as the strict design lock for proportions, shape, colours, shading and every prop. Its tired pose and expression must change to the requested new action. Input image 2 is the official source to preserve identity details, excluding its scene. Generate a genuinely new action, not a crop or mirror. DESIGN LOCK: BUG TAMER KINGER from the official Side Show merchandise. One beige chess-king body/head with two protruding white eyeballs and blue irises. Long purple royal robe with white ermine trim bearing sparse black marks. A ribbed grey metal BUCKET worn upside down as helmet, with its curved metal handle hanging in front of the face and brown grip below the face. Exactly TWO detached floating white gloved hands, no arms or legs or feet. One hand holds one red-and-cream striped hoop with attached orange stylized flames around its upper rim and a single small red/orange butterfly with dark body within its lower opening. The second hand stays separate and visible. Keep bucket, handle, grip, robe, two hands, hoop, flames and butterfly intact. Do not copy the unrelated flame pile on the merchandise floor. POSE: INTRO: gentle showman greeting, free white hand presents outward, other floating hand raises the striped flaming hoop proudly beside the head, eyes facing screen RIGHT; butterfly stays within hoop.",
+      "referencePaths": [
+        "docs/art-generation/cast-next-20261120/generated/bugtamerkinger/defeat.png",
+        "docs/art-generation/cast-next-20261120/research/merch/official-bug-tamer-kinger-recovered.jpg"
+      ],
+      "executionReferencePaths": [
+        "/workspace/scratch/5f5114b49696/recovery/gangle/bugtamerkinger-defeat.png",
+        "/workspace/scratch/5f5114b49696/recovery/gangle/references/official-bug-tamer-kinger-recovered.jpg"
+      ],
+      "sourceURLs": [
+        "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_bugTamerKinger.png?v=1773977710"
+      ],
+      "transparent_background": true,
+      "nativeFacingRequested": "right",
+      "recovery": {
+        "reason": "Original workspace disappeared before these PNGs were uploaded; new native replacements, not recovered originals.",
+        "supersedesLostNative": {
+          "appearanceId": "bugtamerkinger",
+          "slot": "intro",
+          "sourceGenerationId": "exec-8ab9eb4e-689d-4828-a563-9e6387fc1850",
+          "sha256": "1c9d77817a8956c34e523f9b1191c33c0c4da6d04f5abc002f3603ec72cebade",
+          "bytes": 928547,
+          "dimensions": [
+            1199,
+            1312
+          ],
+          "alpha12Bounds": [
+            59,
+            63,
+            1158,
+            1271
+          ],
+          "nativeFacing": "right",
+          "originalStatus": "accepted_native",
+          "availability": "lost_with_original_workspace",
+          "remoteGitSha": null
+        },
+        "seed": "Recovered original defeat, byte-exact; original selection is lost.",
+        "officialReference": "Fresh verified 2000×2000 JPEG response from the same official URL; original archived PNG byte stream is unavailable. New SHA recorded, never presented as old file."
+      }
+    },
+    {
+      "appearanceId": "bugtamerkinger",
+      "slot": "walk",
+      "status": "queued_replacement_after_workspace_loss",
+      "prompt": "Use case: stylized-concept. Asset type: ONE individual full-body transparent 2D fighting-game sprite for Encore. Crisp dark outlines, polished restrained cel shading, saturated local colours, clear silhouette at small game scale, consistent light from upper left. Match the named official merchandise identity; this is an original game-pose adaptation, not a claim about an episode. Keep the complete single character and every carried prop inside generous clear transparent margins on ALL sides. True transparent RGBA background. No scenery, curtains, floor, cast shadow, aura, glow, particles, text, watermark, panel, inset, duplicated character or cropped extremity. Input image 1 is the byte-identical recovered defeat sprite, used as the strict design lock for proportions, shape, colours, shading and every prop. Its tired pose and expression must change to the requested new action. Input image 2 is the official source to preserve identity details, excluding its scene. Generate a genuinely new action, not a crop or mirror. DESIGN LOCK: BUG TAMER KINGER from the official Side Show merchandise. One beige chess-king body/head with two protruding white eyeballs and blue irises. Long purple royal robe with white ermine trim bearing sparse black marks. A ribbed grey metal BUCKET worn upside down as helmet, with its curved metal handle hanging in front of the face and brown grip below the face. Exactly TWO detached floating white gloved hands, no arms or legs or feet. One hand holds one red-and-cream striped hoop with attached orange stylized flames around its upper rim and a single small red/orange butterfly with dark body within its lower opening. The second hand stays separate and visible. Keep bucket, handle, grip, robe, two hands, hoop, flames and butterfly intact. Do not copy the unrelated flame pile on the merchandise floor. POSE: WALK / GLIDE: chess body and robe lean into forward travel toward screen RIGHT, robe hem shifts subtly, hoop hand carries the hoop ahead and free hand trails; no invented legs or feet.",
+      "referencePaths": [
+        "docs/art-generation/cast-next-20261120/generated/bugtamerkinger/defeat.png",
+        "docs/art-generation/cast-next-20261120/research/merch/official-bug-tamer-kinger-recovered.jpg"
+      ],
+      "executionReferencePaths": [
+        "/workspace/scratch/5f5114b49696/recovery/gangle/bugtamerkinger-defeat.png",
+        "/workspace/scratch/5f5114b49696/recovery/gangle/references/official-bug-tamer-kinger-recovered.jpg"
+      ],
+      "sourceURLs": [
+        "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_bugTamerKinger.png?v=1773977710"
+      ],
+      "transparent_background": true,
+      "nativeFacingRequested": "right",
+      "recovery": {
+        "reason": "Original workspace disappeared before these PNGs were uploaded; new native replacements, not recovered originals.",
+        "supersedesLostNative": {
+          "appearanceId": "bugtamerkinger",
+          "slot": "walk",
+          "sourceGenerationId": "exec-14f7ea26-95cb-46c3-9a99-f800d09cfce7",
+          "sha256": "083bebac5b1ebd775cf6193003895b24590c02c6c0e57f124f78ece10988c01d",
+          "bytes": 1592955,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "alpha12Bounds": [
+            237,
+            38,
+            1412,
+            1005
+          ],
+          "nativeFacing": "right",
+          "originalStatus": "accepted_native",
+          "availability": "lost_with_original_workspace",
+          "remoteGitSha": null
+        },
+        "seed": "Recovered original defeat, byte-exact; original selection is lost.",
+        "officialReference": "Fresh verified 2000×2000 JPEG response from the same official URL; original archived PNG byte stream is unavailable. New SHA recorded, never presented as old file."
+      }
+    },
+    {
+      "appearanceId": "bugtamerkinger",
+      "slot": "jump",
+      "status": "queued_replacement_after_workspace_loss",
+      "prompt": "Use case: stylized-concept. Asset type: ONE individual full-body transparent 2D fighting-game sprite for Encore. Crisp dark outlines, polished restrained cel shading, saturated local colours, clear silhouette at small game scale, consistent light from upper left. Match the named official merchandise identity; this is an original game-pose adaptation, not a claim about an episode. Keep the complete single character and every carried prop inside generous clear transparent margins on ALL sides. True transparent RGBA background. No scenery, curtains, floor, cast shadow, aura, glow, particles, text, watermark, panel, inset, duplicated character or cropped extremity. Input image 1 is the byte-identical recovered defeat sprite, used as the strict design lock for proportions, shape, colours, shading and every prop. Its tired pose and expression must change to the requested new action. Input image 2 is the official source to preserve identity details, excluding its scene. Generate a genuinely new action, not a crop or mirror. DESIGN LOCK: BUG TAMER KINGER from the official Side Show merchandise. One beige chess-king body/head with two protruding white eyeballs and blue irises. Long purple royal robe with white ermine trim bearing sparse black marks. A ribbed grey metal BUCKET worn upside down as helmet, with its curved metal handle hanging in front of the face and brown grip below the face. Exactly TWO detached floating white gloved hands, no arms or legs or feet. One hand holds one red-and-cream striped hoop with attached orange stylized flames around its upper rim and a single small red/orange butterfly with dark body within its lower opening. The second hand stays separate and visible. Keep bucket, handle, grip, robe, two hands, hoop, flames and butterfly intact. Do not copy the unrelated flame pile on the merchandise floor. POSE: JUMP: entire chess body and robe airborne, slightly forward toward screen RIGHT, free hand raised for balance and hoop hand keeps the ring beside the body; no legs, ground or shadow.",
+      "referencePaths": [
+        "docs/art-generation/cast-next-20261120/generated/bugtamerkinger/defeat.png",
+        "docs/art-generation/cast-next-20261120/research/merch/official-bug-tamer-kinger-recovered.jpg"
+      ],
+      "executionReferencePaths": [
+        "/workspace/scratch/5f5114b49696/recovery/gangle/bugtamerkinger-defeat.png",
+        "/workspace/scratch/5f5114b49696/recovery/gangle/references/official-bug-tamer-kinger-recovered.jpg"
+      ],
+      "sourceURLs": [
+        "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_bugTamerKinger.png?v=1773977710"
+      ],
+      "transparent_background": true,
+      "nativeFacingRequested": "right",
+      "recovery": {
+        "reason": "Original workspace disappeared before these PNGs were uploaded; new native replacements, not recovered originals.",
+        "supersedesLostNative": {
+          "appearanceId": "bugtamerkinger",
+          "slot": "jump",
+          "sourceGenerationId": "exec-c11573c1-f345-49cd-ae26-0d26be40e2ba",
+          "sha256": "7440856ca0fd2ae4d3dda1fa4ab40da486fae6a7488532743d2ba6d75a185dbc",
+          "bytes": 1063626,
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "alpha12Bounds": [
+            55,
+            70,
+            1225,
+            1184
+          ],
+          "nativeFacing": "right",
+          "originalStatus": "accepted_native",
+          "availability": "lost_with_original_workspace",
+          "remoteGitSha": null
+        },
+        "seed": "Recovered original defeat, byte-exact; original selection is lost.",
+        "officialReference": "Fresh verified 2000×2000 JPEG response from the same official URL; original archived PNG byte stream is unavailable. New SHA recorded, never presented as old file."
+      }
+    },
+    {
+      "appearanceId": "bugtamerkinger",
+      "slot": "crouch",
+      "status": "queued_replacement_after_workspace_loss",
+      "prompt": "Use case: stylized-concept. Asset type: ONE individual full-body transparent 2D fighting-game sprite for Encore. Crisp dark outlines, polished restrained cel shading, saturated local colours, clear silhouette at small game scale, consistent light from upper left. Match the named official merchandise identity; this is an original game-pose adaptation, not a claim about an episode. Keep the complete single character and every carried prop inside generous clear transparent margins on ALL sides. True transparent RGBA background. No scenery, curtains, floor, cast shadow, aura, glow, particles, text, watermark, panel, inset, duplicated character or cropped extremity. Input image 1 is the byte-identical recovered defeat sprite, used as the strict design lock for proportions, shape, colours, shading and every prop. Its tired pose and expression must change to the requested new action. Input image 2 is the official source to preserve identity details, excluding its scene. Generate a genuinely new action, not a crop or mirror. DESIGN LOCK: BUG TAMER KINGER from the official Side Show merchandise. One beige chess-king body/head with two protruding white eyeballs and blue irises. Long purple royal robe with white ermine trim bearing sparse black marks. A ribbed grey metal BUCKET worn upside down as helmet, with its curved metal handle hanging in front of the face and brown grip below the face. Exactly TWO detached floating white gloved hands, no arms or legs or feet. One hand holds one red-and-cream striped hoop with attached orange stylized flames around its upper rim and a single small red/orange butterfly with dark body within its lower opening. The second hand stays separate and visible. Keep bucket, handle, grip, robe, two hands, hoop, flames and butterfly intact. Do not copy the unrelated flame pile on the merchandise floor. POSE: CROUCH / DUCK: chess body tilts low forward toward screen RIGHT with robe pooling more broadly at its base, eyes peek under bucket edge, free hand low and hoop lowered beside body. Do not invent knees, legs or arms.",
+      "referencePaths": [
+        "docs/art-generation/cast-next-20261120/generated/bugtamerkinger/defeat.png",
+        "docs/art-generation/cast-next-20261120/research/merch/official-bug-tamer-kinger-recovered.jpg"
+      ],
+      "executionReferencePaths": [
+        "/workspace/scratch/5f5114b49696/recovery/gangle/bugtamerkinger-defeat.png",
+        "/workspace/scratch/5f5114b49696/recovery/gangle/references/official-bug-tamer-kinger-recovered.jpg"
+      ],
+      "sourceURLs": [
+        "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_bugTamerKinger.png?v=1773977710"
+      ],
+      "transparent_background": true,
+      "nativeFacingRequested": "right",
+      "recovery": {
+        "reason": "Original workspace disappeared before these PNGs were uploaded; new native replacements, not recovered originals.",
+        "supersedesLostNative": {
+          "appearanceId": "bugtamerkinger",
+          "slot": "crouch",
+          "sourceGenerationId": "exec-7c8dddcb-3a9e-4f7d-a35f-a6d61f2cd9cd",
+          "sha256": "31ddf16899efd90b99addffbd0d897cc3dbd86ebaeab7be4911773cdbf26076e",
+          "bytes": 1008265,
+          "dimensions": [
+            1312,
+            1199
+          ],
+          "alpha12Bounds": [
+            30,
+            207,
+            1295,
+            1074
+          ],
+          "nativeFacing": "right",
+          "originalStatus": "accepted_native",
+          "availability": "lost_with_original_workspace",
+          "remoteGitSha": null
+        },
+        "seed": "Recovered original defeat, byte-exact; original selection is lost.",
+        "officialReference": "Fresh verified 2000×2000 JPEG response from the same official URL; original archived PNG byte stream is unavailable. New SHA recorded, never presented as old file."
+      }
+    },
+    {
+      "appearanceId": "bugtamerkinger",
+      "slot": "attack",
+      "status": "queued_replacement_after_workspace_loss",
+      "prompt": "Use case: stylized-concept. Asset type: ONE individual full-body transparent 2D fighting-game sprite for Encore. Crisp dark outlines, polished restrained cel shading, saturated local colours, clear silhouette at small game scale, consistent light from upper left. Match the named official merchandise identity; this is an original game-pose adaptation, not a claim about an episode. Keep the complete single character and every carried prop inside generous clear transparent margins on ALL sides. True transparent RGBA background. No scenery, curtains, floor, cast shadow, aura, glow, particles, text, watermark, panel, inset, duplicated character or cropped extremity. Input image 1 is the byte-identical recovered defeat sprite, used as the strict design lock for proportions, shape, colours, shading and every prop. Its tired pose and expression must change to the requested new action. Input image 2 is the official source to preserve identity details, excluding its scene. Generate a genuinely new action, not a crop or mirror. DESIGN LOCK: BUG TAMER KINGER from the official Side Show merchandise. One beige chess-king body/head with two protruding white eyeballs and blue irises. Long purple royal robe with white ermine trim bearing sparse black marks. A ribbed grey metal BUCKET worn upside down as helmet, with its curved metal handle hanging in front of the face and brown grip below the face. Exactly TWO detached floating white gloved hands, no arms or legs or feet. One hand holds one red-and-cream striped hoop with attached orange stylized flames around its upper rim and a single small red/orange butterfly with dark body within its lower opening. The second hand stays separate and visible. Keep bucket, handle, grip, robe, two hands, hoop, flames and butterfly intact. Do not copy the unrelated flame pile on the merchandise floor. POSE: ATTACK: free floating white hand extends in a short forward jab-like gesture toward screen RIGHT; other floating hand keeps the same flaming striped hoop safely beside the robe, butterfly within it; no opponent, strike effect or extra hand.",
+      "referencePaths": [
+        "docs/art-generation/cast-next-20261120/generated/bugtamerkinger/defeat.png",
+        "docs/art-generation/cast-next-20261120/research/merch/official-bug-tamer-kinger-recovered.jpg"
+      ],
+      "executionReferencePaths": [
+        "/workspace/scratch/5f5114b49696/recovery/gangle/bugtamerkinger-defeat.png",
+        "/workspace/scratch/5f5114b49696/recovery/gangle/references/official-bug-tamer-kinger-recovered.jpg"
+      ],
+      "sourceURLs": [
+        "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_bugTamerKinger.png?v=1773977710"
+      ],
+      "transparent_background": true,
+      "nativeFacingRequested": "right",
+      "recovery": {
+        "reason": "Original workspace disappeared before these PNGs were uploaded; new native replacements, not recovered originals.",
+        "supersedesLostNative": {
+          "appearanceId": "bugtamerkinger",
+          "slot": "attack",
+          "sourceGenerationId": "exec-b1dcdffd-aaa1-44d9-a935-5867dc1f9f77",
+          "sha256": "a4332ca79d91ed4f685b277ff400eb106473e21ba78517756691e251e23d3f1b",
+          "bytes": 1021208,
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "alpha12Bounds": [
+            72,
+            71,
+            1188,
+            1196
+          ],
+          "nativeFacing": "right",
+          "originalStatus": "accepted_native",
+          "availability": "lost_with_original_workspace",
+          "remoteGitSha": null
+        },
+        "seed": "Recovered original defeat, byte-exact; original selection is lost.",
+        "officialReference": "Fresh verified 2000×2000 JPEG response from the same official URL; original archived PNG byte stream is unavailable. New SHA recorded, never presented as old file."
+      }
+    },
+    {
+      "appearanceId": "bugtamerkinger",
+      "slot": "heavy",
+      "status": "queued_replacement_after_workspace_loss",
+      "prompt": "Use case: stylized-concept. Asset type: ONE individual full-body transparent 2D fighting-game sprite for Encore. Crisp dark outlines, polished restrained cel shading, saturated local colours, clear silhouette at small game scale, consistent light from upper left. Match the named official merchandise identity; this is an original game-pose adaptation, not a claim about an episode. Keep the complete single character and every carried prop inside generous clear transparent margins on ALL sides. True transparent RGBA background. No scenery, curtains, floor, cast shadow, aura, glow, particles, text, watermark, panel, inset, duplicated character or cropped extremity. Input image 1 is the byte-identical recovered defeat sprite, used as the strict design lock for proportions, shape, colours, shading and every prop. Its tired pose and expression must change to the requested new action. Input image 2 is the official source to preserve identity details, excluding its scene. Generate a genuinely new action, not a crop or mirror. DESIGN LOCK: BUG TAMER KINGER from the official Side Show merchandise. One beige chess-king body/head with two protruding white eyeballs and blue irises. Long purple royal robe with white ermine trim bearing sparse black marks. A ribbed grey metal BUCKET worn upside down as helmet, with its curved metal handle hanging in front of the face and brown grip below the face. Exactly TWO detached floating white gloved hands, no arms or legs or feet. One hand holds one red-and-cream striped hoop with attached orange stylized flames around its upper rim and a single small red/orange butterfly with dark body within its lower opening. The second hand stays separate and visible. Keep bucket, handle, grip, robe, two hands, hoop, flames and butterfly intact. Do not copy the unrelated flame pile on the merchandise floor. POSE: HEAVY: strong forward lean toward screen RIGHT, free white hand thrust forward farther and hoop hand lifts the same hoop above shoulder level; preserve bucket handle, robe and butterfly without fire projectiles.",
+      "referencePaths": [
+        "docs/art-generation/cast-next-20261120/generated/bugtamerkinger/defeat.png",
+        "docs/art-generation/cast-next-20261120/research/merch/official-bug-tamer-kinger-recovered.jpg"
+      ],
+      "executionReferencePaths": [
+        "/workspace/scratch/5f5114b49696/recovery/gangle/bugtamerkinger-defeat.png",
+        "/workspace/scratch/5f5114b49696/recovery/gangle/references/official-bug-tamer-kinger-recovered.jpg"
+      ],
+      "sourceURLs": [
+        "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_bugTamerKinger.png?v=1773977710"
+      ],
+      "transparent_background": true,
+      "nativeFacingRequested": "right",
+      "recovery": {
+        "reason": "Original workspace disappeared before these PNGs were uploaded; new native replacements, not recovered originals.",
+        "supersedesLostNative": {
+          "appearanceId": "bugtamerkinger",
+          "slot": "heavy",
+          "sourceGenerationId": "exec-b6cda7c4-ed90-407a-b848-99330a75efa0",
+          "sha256": "301fa8bade0a0d1fe33cb917aafb06561b5a6db2a71a655298ab0c23ea68321b",
+          "bytes": 936369,
+          "dimensions": [
+            1312,
+            1199
+          ],
+          "alpha12Bounds": [
+            152,
+            8,
+            1233,
+            1191
+          ],
+          "nativeFacing": "right",
+          "originalStatus": "accepted_native",
+          "availability": "lost_with_original_workspace",
+          "remoteGitSha": null
+        },
+        "seed": "Recovered original defeat, byte-exact; original selection is lost.",
+        "officialReference": "Fresh verified 2000×2000 JPEG response from the same official URL; original archived PNG byte stream is unavailable. New SHA recorded, never presented as old file."
+      }
+    },
+    {
+      "appearanceId": "bugtamerkinger",
+      "slot": "hit",
+      "status": "queued_replacement_after_workspace_loss",
+      "prompt": "Use case: stylized-concept. Asset type: ONE individual full-body transparent 2D fighting-game sprite for Encore. Crisp dark outlines, polished restrained cel shading, saturated local colours, clear silhouette at small game scale, consistent light from upper left. Match the named official merchandise identity; this is an original game-pose adaptation, not a claim about an episode. Keep the complete single character and every carried prop inside generous clear transparent margins on ALL sides. True transparent RGBA background. No scenery, curtains, floor, cast shadow, aura, glow, particles, text, watermark, panel, inset, duplicated character or cropped extremity. Input image 1 is the byte-identical recovered defeat sprite, used as the strict design lock for proportions, shape, colours, shading and every prop. Its tired pose and expression must change to the requested new action. Input image 2 is the official source to preserve identity details, excluding its scene. Generate a genuinely new action, not a crop or mirror. DESIGN LOCK: BUG TAMER KINGER from the official Side Show merchandise. One beige chess-king body/head with two protruding white eyeballs and blue irises. Long purple royal robe with white ermine trim bearing sparse black marks. A ribbed grey metal BUCKET worn upside down as helmet, with its curved metal handle hanging in front of the face and brown grip below the face. Exactly TWO detached floating white gloved hands, no arms or legs or feet. One hand holds one red-and-cream striped hoop with attached orange stylized flames around its upper rim and a single small red/orange butterfly with dark body within its lower opening. The second hand stays separate and visible. Keep bucket, handle, grip, robe, two hands, hoop, flames and butterfly intact. Do not copy the unrelated flame pile on the merchandise floor. POSE: HIT / REACTION: surprised backward lean of the chess body while still facing screen RIGHT, eyes wide, free hand spread and hoop hand draws the intact hoop closer; no impact, injury or detached props.",
+      "referencePaths": [
+        "docs/art-generation/cast-next-20261120/generated/bugtamerkinger/defeat.png",
+        "docs/art-generation/cast-next-20261120/research/merch/official-bug-tamer-kinger-recovered.jpg"
+      ],
+      "executionReferencePaths": [
+        "/workspace/scratch/5f5114b49696/recovery/gangle/bugtamerkinger-defeat.png",
+        "/workspace/scratch/5f5114b49696/recovery/gangle/references/official-bug-tamer-kinger-recovered.jpg"
+      ],
+      "sourceURLs": [
+        "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_bugTamerKinger.png?v=1773977710"
+      ],
+      "transparent_background": true,
+      "nativeFacingRequested": "right",
+      "recovery": {
+        "reason": "Original workspace disappeared before these PNGs were uploaded; new native replacements, not recovered originals.",
+        "supersedesLostNative": {
+          "appearanceId": "bugtamerkinger",
+          "slot": "hit",
+          "sourceGenerationId": "exec-bbe11bf8-ef5d-42ce-b840-fe177f31c47c",
+          "sha256": "9a0d06a09d8cecbefa26d49ddcf5306a9541860e8cf5096444449ca55659985c",
+          "bytes": 1157975,
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "alpha12Bounds": [
+            129,
+            83,
+            1066,
+            1199
+          ],
+          "nativeFacing": "right",
+          "originalStatus": "accepted_native",
+          "availability": "lost_with_original_workspace",
+          "remoteGitSha": null
+        },
+        "seed": "Recovered original defeat, byte-exact; original selection is lost.",
+        "officialReference": "Fresh verified 2000×2000 JPEG response from the same official URL; original archived PNG byte stream is unavailable. New SHA recorded, never presented as old file."
+      }
+    },
+    {
+      "appearanceId": "bugtamerkinger",
+      "slot": "victory",
+      "status": "queued_replacement_after_workspace_loss",
+      "prompt": "Use case: stylized-concept. Asset type: ONE individual full-body transparent 2D fighting-game sprite for Encore. Crisp dark outlines, polished restrained cel shading, saturated local colours, clear silhouette at small game scale, consistent light from upper left. Match the named official merchandise identity; this is an original game-pose adaptation, not a claim about an episode. Keep the complete single character and every carried prop inside generous clear transparent margins on ALL sides. True transparent RGBA background. No scenery, curtains, floor, cast shadow, aura, glow, particles, text, watermark, panel, inset, duplicated character or cropped extremity. Input image 1 is the byte-identical recovered defeat sprite, used as the strict design lock for proportions, shape, colours, shading and every prop. Its tired pose and expression must change to the requested new action. Input image 2 is the official source to preserve identity details, excluding its scene. Generate a genuinely new action, not a crop or mirror. DESIGN LOCK: BUG TAMER KINGER from the official Side Show merchandise. One beige chess-king body/head with two protruding white eyeballs and blue irises. Long purple royal robe with white ermine trim bearing sparse black marks. A ribbed grey metal BUCKET worn upside down as helmet, with its curved metal handle hanging in front of the face and brown grip below the face. Exactly TWO detached floating white gloved hands, no arms or legs or feet. One hand holds one red-and-cream striped hoop with attached orange stylized flames around its upper rim and a single small red/orange butterfly with dark body within its lower opening. The second hand stays separate and visible. Keep bucket, handle, grip, robe, two hands, hoop, flames and butterfly intact. Do not copy the unrelated flame pile on the merchandise floor. POSE: VICTORY: cheerful upright showman salute, eyes facing screen RIGHT. Free white hand lifted high to the LEFT of the bucket with a clear transparent gap; hoop-holding white hand is FAR TO THE RIGHT at shoulder height, also separated from the head and robe by a large clear transparent gap. The hoop stands upright to the far right with its butterfly inside. Keep exactly two detached floating hands. CRITICAL: the bucket handle is a short rigid U-shape framing only the FACE, attached at both ends to the bucket rim, with its brown grip directly below the face. Its metal sides must NOT extend toward, touch, or connect to either hand or hoop. No rods, arms, wrists connected to the body, or extra support struts. Entire robe, bucket, hand tips and upper hoop flames inside generous margins.",
+      "referencePaths": [
+        "docs/art-generation/cast-next-20261120/generated/bugtamerkinger/defeat.png",
+        "docs/art-generation/cast-next-20261120/research/merch/official-bug-tamer-kinger-recovered.jpg"
+      ],
+      "executionReferencePaths": [
+        "/workspace/scratch/5f5114b49696/recovery/gangle/bugtamerkinger-defeat.png",
+        "/workspace/scratch/5f5114b49696/recovery/gangle/references/official-bug-tamer-kinger-recovered.jpg"
+      ],
+      "sourceURLs": [
+        "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+        "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_bugTamerKinger.png?v=1773977710"
+      ],
+      "transparent_background": true,
+      "nativeFacingRequested": "right",
+      "recovery": {
+        "reason": "Original workspace disappeared before these PNGs were uploaded; new native replacements, not recovered originals.",
+        "supersedesLostNative": {
+          "appearanceId": "bugtamerkinger",
+          "slot": "victory",
+          "sourceGenerationId": "exec-b7719200-b184-4b81-97ca-60c5f332284f",
+          "sha256": "890b23607c11a83267ca347ec7bfd51fb3f9e7c2a28a85b9ab276297535e982c",
+          "bytes": 1530521,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "alpha12Bounds": [
+            128,
+            13,
+            1436,
+            1004
+          ],
+          "nativeFacing": "right",
+          "originalStatus": "accepted_native",
+          "availability": "lost_with_original_workspace",
+          "remoteGitSha": null
+        },
+        "seed": "Recovered original defeat, byte-exact; original selection is lost.",
+        "officialReference": "Fresh verified 2000×2000 JPEG response from the same official URL; original archived PNG byte stream is unavailable. New SHA recorded, never presented as old file."
+      }
+    }
+  ]
+}

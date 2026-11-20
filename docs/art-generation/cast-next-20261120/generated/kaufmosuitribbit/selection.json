@@ -1,0 +1,73 @@
+{
+  "id": "kaufmosuitribbit:selection",
+  "appearanceId": "kaufmosuitribbit",
+  "fighterId": "ribbit",
+  "slot": "selection",
+  "status": "accepted_native",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "file": "docs/art-generation/cast-next-20261120/generated/kaufmosuitribbit/selection.png",
+  "targetFile": "assets/encore/selection/kaufmosuitribbit.png",
+  "referencePaths": [
+    "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-kaufmo-suit.png",
+    "assets/encore/selection/ribbit.png"
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/ribbit-pendantz-blindbox",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/KaufmoSuit.png?v=1785347150"
+  ],
+  "sourceKind": "Produit dérivé officiel",
+  "episodeFidelityClaim": false,
+  "desiredNativeFacing": "right",
+  "prompt": "Use case: identity-preserve. Reference 1 is the exact OFFICIAL COSTUME AND COLOUR authority. Reference 2 supplies the game's character identity, slender proportions and polished 2D drawing style ONLY, not its old clothing. Adapt the official costume to the game character; do not reproduce the short plush/vinyl proportions or the photographed background.\n\nRIBBIT wearing the official KAUFMO SUIT merchandise costume. One slim anthropomorphic green frog with two large raised oval eyes, black pupils with white highlights, dark violet lower eyelid accents, a pale mint muzzle, pink cheek patches and small curved smile. Keep the established game's slender Ribbit proportions. Yellow clown suit covering torso and legs, broad blue ruffled collar, exactly TWO large red pompons stacked vertically on the chest, two white gloved hands, two red rounded clown feet. Keep the frog head and frog identity. No clown nose, hat, rabbit ears, pink neck bow, keyring, tag, strap or lettering. Not the character Kaufmo.\n\nSelection portrait: full-body standing character, relaxed and clearly readable, body in three-quarter view oriented toward SCREEN-RIGHT. Both feet separated, arms relaxed with one small expressive gesture. Every part of the character and costume fully visible.\n\nRender ONE complete polished hand-drawn 2D cel-shaded fighting-game sprite with clean dark outlines and clear flat colour regions. Entire figure including every eye, hat tip, feather tip, finger and both feet is fully inside generous transparent safety margins. True transparent RGBA background. No floor, cast shadow, glow, background, frame, text, watermark, duplicate body, speed lines or motion blur. Anatomical consistency is mandatory: one head, two arms, two hands, two legs and two feet. Native facing must be SCREEN-RIGHT; do not mirror anatomical costume details.",
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-kaufmo-suit.png",
+      "sha256": "e54ef43b2e9e73eed83bad635b971c8ac8f8a2caf8c82dbfef755ffd29b2868d",
+      "bytes": 1455321
+    },
+    {
+      "position": 2,
+      "file": "assets/encore/selection/ribbit.png",
+      "sha256": "a88927f18865fb289f4d9e045fd1a75f91363f5d9b535859efbebfd4e8bf566f",
+      "bytes": 1352678
+    }
+  ],
+  "schema": "encore-native-art-discovery/v1",
+  "includedInRuntime": false,
+  "nativeSourceFile": "/workspace/scratch/5f5114b49696/generated_images/exec-98d2ac56-76c9-4fdb-9e2a-a0bdd66fe0f6.png",
+  "sourceGenerationId": "exec-98d2ac56-76c9-4fdb-9e2a-a0bdd66fe0f6",
+  "nativeFacing": "right",
+  "visualReview": {
+    "reviewer": "generate_pomni_kinger",
+    "status": "accepted",
+    "observations": [
+      "Ribbit conserve sa tête de grenouille verte, museau menthe, joues roses et grands yeux à accents de paupières violets.",
+      "Combinaison jaune complète, large collerette bleue, exactement deux pompons rouges, deux gants blancs et chaussures rouges ; anneau et sangle exclus.",
+      "Sélection debout approuvée comme référence de design pour les dix actions ; silhouette élancée entière orientée à droite."
+    ],
+    "scope": "Official merchandise costume and approved game design preserved; original game pose, no canonical episode certification."
+  },
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "alpha12Bounds": [
+    89,
+    12,
+    814,
+    1524
+  ],
+  "alpha12BoundsThreshold": "alpha > 12",
+  "fullyTransparentPixels": 1145875,
+  "sha256": "4e931f702f5758ed95c581651058b9ed2f0121e93d60305ee9bb8ec29865e378",
+  "bytes": 1401496,
+  "nativeCopyVerified": true,
+  "createdAt": "2026-11-20T09:42:43.659835+00:00"
+}

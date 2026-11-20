@@ -1,0 +1,77 @@
+{
+  "renderer": "Node @napi-rs/canvas; standard source-over, no source modifications",
+  "metrics": [
+    {
+      "slot": "walk",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha0": 1008997,
+      "alpha1to11": 17139,
+      "alpha12to63": 2989,
+      "alpha64to239": 7798,
+      "alpha240to255": 535941,
+      "bounds1": [
+        23,
+        21,
+        1524,
+        1008
+      ],
+      "bounds12": [
+        101,
+        41,
+        1499,
+        1004
+      ],
+      "bounds128": [
+        102,
+        41,
+        1498,
+        1003
+      ],
+      "bounds240": [
+        102,
+        42,
+        1497,
+        1002
+      ]
+    },
+    {
+      "slot": "victory",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha0": 1073795,
+      "alpha1to11": 17067,
+      "alpha12to63": 2605,
+      "alpha64to239": 6706,
+      "alpha240to255": 472691,
+      "bounds1": [
+        0,
+        14,
+        1506,
+        1024
+      ],
+      "bounds12": [
+        98,
+        16,
+        1445,
+        1015
+      ],
+      "bounds128": [
+        98,
+        16,
+        1444,
+        1014
+      ],
+      "bounds240": [
+        99,
+        17,
+        1443,
+        1014
+      ]
+    }
+  ]
+}

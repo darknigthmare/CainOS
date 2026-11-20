@@ -15,11 +15,14 @@ const appearanceWaves = {
   '2026-11-20': ['noirpomni', 'noirjax', 'noirkinger', 'badendcaine',
     'bodyguardragatha', 'bodyguardzooble', 'smilingtragedygangle', 'abstractingpomni',
     'abstractingjax', 'abstractingragatha', 'abstractingkinger', 'abstractinggangle',
-    'abstractingzooble', 'abstractingqueenie', 'zoobleep5'],
+    'abstractingzooble', 'abstractingqueenie', 'zoobleep5',
+    'jaxsuitpomni', 'noirribbit', 'kaufmosuitribbit', 'intermissioncaine',
+    'showtimepomni', 'bowlingpinragatha', 'ringmastercaine', 'strongmanorbsman',
+    'stagehandbubble', 'bugtamerkinger'],
 };
 
 test('additional outfits retain their owner, authored kit and saved appearance through replay and campaign round trips', () => {
-  assert.equal(COSTUME_ADDITIONS.length, 23);
+  assert.equal(COSTUME_ADDITIONS.length, 33);
   assert.equal(VARIANTS.length, 51, 'historical atlas remains stable');
   for (const [date, ids] of Object.entries(appearanceWaves)) {
     assert.deepEqual(COSTUME_ADDITIONS.filter(outfit => outfit.introducedOn === date).map(outfit => outfit.id), ids,
@@ -81,7 +84,7 @@ test('each additional outfit ships all eleven independent native-alpha PNG drawi
       signatures.add(createHash('sha256').update(bytes).digest('hex'));
     }
   }
-  assert.equal(signatures.size, 253, 'all 23 appearances have eleven independent drawings');
+  assert.equal(signatures.size, 363, 'all 33 appearances have eleven independent drawings');
 });
 
 test('resumed appearances append the frozen checkpoint definitions without changing the first fourteen entries', () => {
@@ -93,7 +96,7 @@ test('resumed appearances append the frozen checkpoint definitions without chang
     'beachzooble', 'beachjax', 'sandcastlekinger', 'noirpomni', 'noirjax', 'noirkinger',
     'badendcaine', 'bodyguardragatha', 'bodyguardzooble',
   ]);
-  assert.deepEqual(COSTUME_ADDITIONS.slice(14).map(entry => entry.id), checkpoint.pendingIds);
+  assert.deepEqual(COSTUME_ADDITIONS.slice(14, 23).map(entry => entry.id), checkpoint.pendingIds);
   for (const slot of ['selection', 'stance', 'attack', 'hit', 'walk', 'jump', 'crouch', 'victory', 'defeat']) {
     assert.equal(getCostumeNativeFacing('abstractinggangle', slot), -1, slot);
   }
@@ -119,5 +122,25 @@ test('runtime directions agree with the individually reviewed completion records
     assert.ok(file.nativeFacing === 'left' || file.nativeFacing === 'right');
     assert.equal(getCostumeNativeFacing(file.appearanceId, file.slot), file.nativeFacing === 'left' ? -1 : 1,
       file.appearanceId + '/' + file.slot + ': use the direction of this reviewed image');
+  }
+});
+
+test('new catalogue drawings match reviewed native directions and exact archived PNGs', () => {
+  const completion = JSON.parse(readFileSync(new URL('../docs/art-generation/cast-next-20261120/generation-completion.json', import.meta.url)));
+  assert.equal(completion.status, 'complete_active');
+  assert.deepEqual(COSTUME_ADDITIONS.slice(23).map(entry => entry.id), completion.order);
+  const files = completion.appearances.flatMap(appearance => appearance.files);
+  assert.equal(files.length, 110);
+  assert.equal(new Set(files.map(file => file.appearanceId + '/' + file.slot)).size, 110);
+  // The independently reviewed records protect mixed source directions, including
+  // Ragatha's left-facing portrait beside her right-facing combat drawings.
+  for (const file of files) {
+    assert.ok(file.nativeFacing === 'left' || file.nativeFacing === 'right');
+    assert.equal(getCostumeNativeFacing(file.appearanceId, file.slot), file.nativeFacing === 'left' ? -1 : 1,
+      file.appearanceId + '/' + file.slot + ': preserve the reviewed source direction');
+    const installed = readFileSync(new URL('../' + file.file, import.meta.url));
+    const archived = readFileSync(new URL('../' + file.archiveFile, import.meta.url));
+    assert.deepEqual(installed, archived, file.file + ': no resizing or re-encoding');
+    assert.equal(createHash('sha256').update(installed).digest('hex'), file.sha256);
   }
 });

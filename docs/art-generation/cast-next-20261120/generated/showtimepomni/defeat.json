@@ -1,0 +1,63 @@
+{
+  "id": "showtimepomni:defeat",
+  "appearanceId": "showtimepomni",
+  "fighterId": "pomni",
+  "slot": "defeat",
+  "status": "accepted_native",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "file": "docs/art-generation/cast-next-20261120/generated/showtimepomni/defeat.png",
+  "targetFile": "assets/encore/poses/showtimepomni/defeat.png",
+  "referencePaths": [
+    "docs/art-generation/cast-next-20261120/generated/showtimepomni/selection.png",
+    "docs/art-generation/cast-next-20261120/research/merch/official-showtime-pomni.png"
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_Canpomni.png?v=1773977710"
+  ],
+  "sourceKind": "Produit dérivé officiel",
+  "episodeFidelityClaim": false,
+  "desiredNativeFacing": "right",
+  "prompt": "Use case: identity-preserve. Reference 1 is the APPROVED GAME DESIGN: preserve its exact face, anatomy, clothing, colours, details, proportions and drawing style, changing only the pose described below. Reference 2 confirms the official merchandise costume details. Do not copy the pose, photo background or toy proportions from reference 2.\n\nPOMNI wearing the official SHOWTIME merchandise costume. Pomni's white face, brown bob and forehead locks, red cheeks, anxious expression; one red-and-blue two-point jester hat with yellow lower band and two yellow pompons. One prominent cream feather plume above the hat, and large cream feather costume plumes forming a decorative train behind the lower torso. The feathers are costume ornaments, never arms or biological wings. Gold dance leotard/bodice, white arms and white tights/legs, gold shoes. Exactly two arms and two legs, slender full-length proportions matching the game's Pomni art. Keep the gold-and-cream show costume; do not restore the old red/blue puff-sleeve jester suit. No extra hat, long dress, stage, curtain or pedestal.\n\nDefeat: face SCREEN-RIGHT, one knee down on the ground with the other knee bent up, torso slumped and head lowered, both hands visible in a tired pose. Entire character intact and fully within the frame. No injury, extra character or background.\n\nRender ONE complete polished hand-drawn 2D cel-shaded fighting-game sprite with clean dark outlines and clear flat colour regions. Entire figure including every eye, hat tip, feather tip, finger and both feet is fully inside generous transparent safety margins. True transparent RGBA background. No floor, cast shadow, glow, background, frame, text, watermark, duplicate body, speed lines or motion blur. Anatomical consistency is mandatory: one head, two arms, two hands, two legs and two feet. Native facing must be SCREEN-RIGHT; do not mirror anatomical costume details.\n\nWRIST LOCK: Both wrists are plain continuous white. White hands attach directly to white forearms. No wrist cuffs, bracelets, bands, jewellery, sleeve trim or gold detail at either wrist. Preserve the corrected approved selection exactly.\n\nHAND ANATOMY LOCK: Each hand has exactly FOUR cartoon digits in total: one thumb and THREE fingers, as in the approved selection. Never five digits. Both hands remain anatomically intact and plain white.",
+  "sourceGenerationId": "exec-10758272-ca8f-4ce0-81fc-22ce058e459e",
+  "sha256": "aff64f2b1fbf4294cc916399c1af418078632d731514c8eb3172cbcb987a0b44",
+  "bytes": 1418103,
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "alpha12Bounds": [
+    260,
+    22,
+    1173,
+    1015
+  ],
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "priorReviewStatus": "accepted_native",
+  "recoveryStatus": "recovered_exact",
+  "nativeFacing": "right",
+  "schema": "encore-native-art-discovery/v1",
+  "nativeSourceFile": "/workspace/scratch/5f5114b49696/recovery/pomni/generated/showtimepomni/defeat.png",
+  "recoveredFromLocalFile": "/workspace/scratch/5f5114b49696/recovery/pomni/generated/showtimepomni/defeat.png",
+  "repositoryRecoveredAt": "2026-11-20T10:45:51.072563+00:00",
+  "nativeCopyVerified": true,
+  "mode": "RGBA",
+  "fullyTransparentPixels": 1061675,
+  "alpha12BoundsThreshold": "alpha >= 12",
+  "gitBlobSHA": "5509d95c546cab42e0c9cce20b7d418793383876",
+  "visualReview": {
+    "reviewer": "finish_showtime",
+    "status": "accepted",
+    "observations": [
+      "Exhausted kneeling pose facing right; one knee down and one raised.",
+      "Two intact hands with three fingers and a thumb, two complete legs and gold shoes; plain wrists, feathered gold costume preserved.",
+      "Full silhouette within margins."
+    ],
+    "scope": "Re-inspection of exact recovered original native game drawing."
+  },
+  "referenceRecoveryNote": "Historical prompt references pointed to the then-approved original selection and merchandise PNG. Their byte streams were lost. The current selection and reloaded JPEG are documented recovery references, not misrepresented as original generation inputs."
+}

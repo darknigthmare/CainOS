@@ -1,0 +1,220 @@
+{
+  "schema": "encore-character-canvas-review/v1",
+  "createdAt": "2026-11-20T10:56:42.874Z",
+  "method": "Production Canvas2D modules executed by Node and native Skia; actual drawImage sources and transforms inspected.",
+  "limitations": [
+    "No browser, DOM, input, audio, service-worker or physical-device test.",
+    "Individual static poses do not establish frame-by-frame animation.",
+    "Asset identity/proportion fidelity requires separate visual review; no canonical 1:1 certification."
+  ],
+  "partial": false,
+  "additionsOnly": true,
+  "introducedOn": "2026-11-20",
+  "appearanceId": "intermissioncaine",
+  "sources": {
+    "combat/data.mjs": "6910aaddf46645f98520f4cc6fb468c2bc43b6dd017d9237266a90f6c1bf892b",
+    "combat/costume-additions.mjs": "a3db2ecd8a368360b4e34179540d50c9c2250359a255c353a87dea135682d875",
+    "combat/costume-continuation-20261120.mjs": "d3774d17d6058e72081cc7a236f748fc26cc2532fe94ddf772e9ad6de638eb0f",
+    "combat/costume-resumption-20261120.mjs": "f83bde65b434f107abf7017e532a5600b2b43713f3b0e32308f8a1a2bd3be9d5",
+    "combat/costume-discoveries-20261120.mjs": "fb16daf1591a50602a68a84e2d7e5cafa12c230b2185ef4e1d627cec8a67565c",
+    "combat/illustrations.mjs": "26aca8338be81bedbbbc1bb4bc59dd0aae8b7b7ef4d785cbbf353ac109c53b99",
+    "combat/render.mjs": "91cdc8a8a4b5298644809714aa7e53219e1266e2ffc95478194a699a7bc1212f",
+    "combat/render-poses.mjs": "21e3afba8c19723ffdcb383402cc6339b63cb58df5d4323fda2ebde093ce0b29",
+    "combat/offline-manifest.mjs": "3e4808a0198e058ec85756265f575ebf63263278354b48c567fcbe3c755410b0",
+    "scripts/render-combat-character-review.mjs": "02a1c878bf23504d2c63e8046008a9f2a27b9389607a6f1166b498dda7fa780e"
+  },
+  "actions": [
+    {
+      "id": "intermissioncaine",
+      "pose": "intro",
+      "file": "assets/encore/poses/intermissioncaine/intro.png",
+      "sha256": "bfc52f2c77d0cdc8070c7d4e6ff95d19b12ff4e47a40989f11234e7b0a7ebc50",
+      "bytes": 1455421,
+      "visibleBounds": {
+        "x": 11,
+        "y": 15,
+        "width": 622,
+        "height": 565
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "intermissioncaine",
+      "pose": "attack",
+      "file": "assets/encore/poses/intermissioncaine/attack.png",
+      "sha256": "f750ba59fc70527075534807de43b6f601cddbe399f891186b9664617910ee21",
+      "bytes": 1275988,
+      "visibleBounds": {
+        "x": 14,
+        "y": 24,
+        "width": 615,
+        "height": 543
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "intermissioncaine",
+      "pose": "hit",
+      "file": "assets/encore/poses/intermissioncaine/hit.png",
+      "sha256": "e8a38f861078bd9b88255aca4f1d0f6ad73769875dd731c4461a9b5c3a18956d",
+      "bytes": 1330746,
+      "visibleBounds": {
+        "x": 5,
+        "y": 6,
+        "width": 626,
+        "height": 573
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "intermissioncaine",
+      "pose": "walk",
+      "file": "assets/encore/poses/intermissioncaine/walk.png",
+      "sha256": "e10b8b2557358341db5989d82dc5b12dfa947b5d2ee79ce630a99d14caf4a6c1",
+      "bytes": 1775213,
+      "visibleBounds": {
+        "x": 31,
+        "y": 8,
+        "width": 593,
+        "height": 415
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "intermissioncaine",
+      "pose": "jump",
+      "file": "assets/encore/poses/intermissioncaine/jump.png",
+      "sha256": "e1aa44aa9a728ba02032aa320ac766cfd13bd114522d63b54b4ba4b88a6d5b3c",
+      "bytes": 1208006,
+      "visibleBounds": {
+        "x": 36,
+        "y": 5,
+        "width": 549,
+        "height": 550
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "intermissioncaine",
+      "pose": "crouch",
+      "file": "assets/encore/poses/intermissioncaine/crouch.png",
+      "sha256": "2249068df3ed2c0637605b3cd8f652b41fcaaca8ce1e5f46a4f3f42f26e1603b",
+      "bytes": 1725115,
+      "visibleBounds": {
+        "x": 33,
+        "y": 29,
+        "width": 575,
+        "height": 379
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "intermissioncaine",
+      "pose": "victory",
+      "file": "assets/encore/poses/intermissioncaine/victory.png",
+      "sha256": "ce23e99327ce5ed957cabf0b8ee98779fa215a2f21e303bdc432b44f6616e646",
+      "bytes": 1345739,
+      "visibleBounds": {
+        "x": 12,
+        "y": 8,
+        "width": 616,
+        "height": 560
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "intermissioncaine",
+      "pose": "defeat",
+      "file": "assets/encore/poses/intermissioncaine/defeat.png",
+      "sha256": "451f9b33242bb6a49cb32632337f46c1955789a1b0c6fb6c3d0e591488ed0ffa",
+      "bytes": 1338756,
+      "visibleBounds": {
+        "x": 15,
+        "y": 58,
+        "width": 607,
+        "height": 452
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "intermissioncaine",
+      "pose": "heavy",
+      "file": "assets/encore/poses/intermissioncaine/heavy.png",
+      "sha256": "a9cb44b24a63ab8526c9ed937835a504b628dea81d500d705cf1b3e6ddc8a816",
+      "bytes": 1407275,
+      "visibleBounds": {
+        "x": 13,
+        "y": 29,
+        "width": 611,
+        "height": 469
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    }
+  ],
+  "stances": [
+    {
+      "id": "intermissioncaine",
+      "file": "assets/encore/stance/intermissioncaine.png",
+      "sha256": "f782a57ba22c9239e201fc0e37e119813b339080e0caa2118b6991590cabdffc",
+      "bytes": 1288137,
+      "nativeFacing": 1,
+      "rendered": true,
+      "bothFacings": true
+    }
+  ],
+  "portraits": [
+    {
+      "id": "intermissioncaine",
+      "archiveId": null,
+      "file": "assets/encore/selection/intermissioncaine.png",
+      "sha256": "cdfc9b5405f7059498542b38a39bbd1d6ff83efe5ad35f44f09ba3be84bc6cef",
+      "bytes": 1315027,
+      "rendered": true
+    }
+  ],
+  "missing": [],
+  "sheets": [
+    "actions-intermissioncaine.jpg",
+    "archive-portraits-01.jpg"
+  ],
+  "browserTestStatus": "not_executed",
+  "counts": {
+    "appearances": 1,
+    "expectedActions": 9,
+    "actions": 9,
+    "stances": 1,
+    "drawChecks": 20,
+    "archiveEntries": 0,
+    "portraits": 1,
+    "expectedPortraits": 1,
+    "missing": 0
+  },
+  "complete": true
+}

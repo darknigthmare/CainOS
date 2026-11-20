@@ -1,0 +1,220 @@
+{
+  "schema": "encore-character-canvas-review/v1",
+  "createdAt": "2026-11-20T10:56:54.140Z",
+  "method": "Production Canvas2D modules executed by Node and native Skia; actual drawImage sources and transforms inspected.",
+  "limitations": [
+    "No browser, DOM, input, audio, service-worker or physical-device test.",
+    "Individual static poses do not establish frame-by-frame animation.",
+    "Asset identity/proportion fidelity requires separate visual review; no canonical 1:1 certification."
+  ],
+  "partial": false,
+  "additionsOnly": true,
+  "introducedOn": "2026-11-20",
+  "appearanceId": "strongmanorbsman",
+  "sources": {
+    "combat/data.mjs": "6910aaddf46645f98520f4cc6fb468c2bc43b6dd017d9237266a90f6c1bf892b",
+    "combat/costume-additions.mjs": "a3db2ecd8a368360b4e34179540d50c9c2250359a255c353a87dea135682d875",
+    "combat/costume-continuation-20261120.mjs": "d3774d17d6058e72081cc7a236f748fc26cc2532fe94ddf772e9ad6de638eb0f",
+    "combat/costume-resumption-20261120.mjs": "f83bde65b434f107abf7017e532a5600b2b43713f3b0e32308f8a1a2bd3be9d5",
+    "combat/costume-discoveries-20261120.mjs": "fb16daf1591a50602a68a84e2d7e5cafa12c230b2185ef4e1d627cec8a67565c",
+    "combat/illustrations.mjs": "26aca8338be81bedbbbc1bb4bc59dd0aae8b7b7ef4d785cbbf353ac109c53b99",
+    "combat/render.mjs": "91cdc8a8a4b5298644809714aa7e53219e1266e2ffc95478194a699a7bc1212f",
+    "combat/render-poses.mjs": "21e3afba8c19723ffdcb383402cc6339b63cb58df5d4323fda2ebde093ce0b29",
+    "combat/offline-manifest.mjs": "3e4808a0198e058ec85756265f575ebf63263278354b48c567fcbe3c755410b0",
+    "scripts/render-combat-character-review.mjs": "02a1c878bf23504d2c63e8046008a9f2a27b9389607a6f1166b498dda7fa780e"
+  },
+  "actions": [
+    {
+      "id": "strongmanorbsman",
+      "pose": "intro",
+      "file": "assets/encore/poses/strongmanorbsman/intro.png",
+      "sha256": "98c7993d422bf72a91177c816538a501b6a134acd0624376400624ddc70835ea",
+      "bytes": 924811,
+      "visibleBounds": {
+        "x": 24,
+        "y": 22,
+        "width": 534,
+        "height": 606
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "strongmanorbsman",
+      "pose": "attack",
+      "file": "assets/encore/poses/strongmanorbsman/attack.png",
+      "sha256": "e49508492769e75d1af820243e6a7582d7a537b1801df27c6b98cc4f2a71b34d",
+      "bytes": 1393453,
+      "visibleBounds": {
+        "x": 71,
+        "y": 10,
+        "width": 509,
+        "height": 407
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "strongmanorbsman",
+      "pose": "hit",
+      "file": "assets/encore/poses/strongmanorbsman/hit.png",
+      "sha256": "52cef98fbb62e57e13f5ac6c01bcb141f4f94e7ae74ce1f169f8d92085ec5cdd",
+      "bytes": 920170,
+      "visibleBounds": {
+        "x": 59,
+        "y": 28,
+        "width": 463,
+        "height": 588
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "strongmanorbsman",
+      "pose": "walk",
+      "file": "assets/encore/poses/strongmanorbsman/walk.png",
+      "sha256": "fb01709646a9a8b2460c8d29f96d01d163ac528746010d493039b82235cb5e70",
+      "bytes": 1003941,
+      "visibleBounds": {
+        "x": 28,
+        "y": 31,
+        "width": 522,
+        "height": 586
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "strongmanorbsman",
+      "pose": "jump",
+      "file": "assets/encore/poses/strongmanorbsman/jump.png",
+      "sha256": "6be8d309bc4c8e7af6f1057df49aef6f7a02b667d924a22fb997acea6d0b8c52",
+      "bytes": 815559,
+      "visibleBounds": {
+        "x": 54,
+        "y": 52,
+        "width": 530,
+        "height": 481
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "strongmanorbsman",
+      "pose": "crouch",
+      "file": "assets/encore/poses/strongmanorbsman/crouch.png",
+      "sha256": "5672a9fa3db78d82c8405dc34a5de4bb708f8af1d91858450b10fd4dad17fc47",
+      "bytes": 872705,
+      "visibleBounds": {
+        "x": 44,
+        "y": 73,
+        "width": 550,
+        "height": 487
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "strongmanorbsman",
+      "pose": "victory",
+      "file": "assets/encore/poses/strongmanorbsman/victory.png",
+      "sha256": "f87735a2e0b4f04db2dd30a7765e73b202b2c764b8dec2584ad38315002391d2",
+      "bytes": 1536055,
+      "visibleBounds": {
+        "x": 8,
+        "y": 51,
+        "width": 410,
+        "height": 563
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "strongmanorbsman",
+      "pose": "defeat",
+      "file": "assets/encore/poses/strongmanorbsman/defeat.png",
+      "sha256": "003773700816ca44c00d85351607c3537cfbf937d1710fdbd5610c53ba460b1b",
+      "bytes": 1402930,
+      "visibleBounds": {
+        "x": 80,
+        "y": 20,
+        "width": 479,
+        "height": 403
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "strongmanorbsman",
+      "pose": "heavy",
+      "file": "assets/encore/poses/strongmanorbsman/heavy.png",
+      "sha256": "ce9b21c555272264eb4fed1085fc1ecab2b5b957493070635d6b72ade255f2ae",
+      "bytes": 853499,
+      "visibleBounds": {
+        "x": 26,
+        "y": 35,
+        "width": 535,
+        "height": 580
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    }
+  ],
+  "stances": [
+    {
+      "id": "strongmanorbsman",
+      "file": "assets/encore/stance/strongmanorbsman.png",
+      "sha256": "82c5a84824c232f7608b97db29fa4d5a181c0812447e99868f6160cfe9df137d",
+      "bytes": 952869,
+      "nativeFacing": 1,
+      "rendered": true,
+      "bothFacings": true
+    }
+  ],
+  "portraits": [
+    {
+      "id": "strongmanorbsman",
+      "archiveId": null,
+      "file": "assets/encore/selection/strongmanorbsman.png",
+      "sha256": "ede51b07225e79c80eefdf12cd862e6b9d166211bb452ab16bebff59760e460c",
+      "bytes": 1518337,
+      "rendered": true
+    }
+  ],
+  "missing": [],
+  "sheets": [
+    "actions-strongmanorbsman.jpg",
+    "archive-portraits-01.jpg"
+  ],
+  "browserTestStatus": "not_executed",
+  "counts": {
+    "appearances": 1,
+    "expectedActions": 9,
+    "actions": 9,
+    "stances": 1,
+    "drawChecks": 20,
+    "archiveEntries": 0,
+    "portraits": 1,
+    "expectedPortraits": 1,
+    "missing": 0
+  },
+  "complete": true
+}

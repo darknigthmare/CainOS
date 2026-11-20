@@ -1,0 +1,220 @@
+{
+  "schema": "encore-character-canvas-review/v1",
+  "createdAt": "2026-11-20T10:56:45.756Z",
+  "method": "Production Canvas2D modules executed by Node and native Skia; actual drawImage sources and transforms inspected.",
+  "limitations": [
+    "No browser, DOM, input, audio, service-worker or physical-device test.",
+    "Individual static poses do not establish frame-by-frame animation.",
+    "Asset identity/proportion fidelity requires separate visual review; no canonical 1:1 certification."
+  ],
+  "partial": false,
+  "additionsOnly": true,
+  "introducedOn": "2026-11-20",
+  "appearanceId": "showtimepomni",
+  "sources": {
+    "combat/data.mjs": "6910aaddf46645f98520f4cc6fb468c2bc43b6dd017d9237266a90f6c1bf892b",
+    "combat/costume-additions.mjs": "a3db2ecd8a368360b4e34179540d50c9c2250359a255c353a87dea135682d875",
+    "combat/costume-continuation-20261120.mjs": "d3774d17d6058e72081cc7a236f748fc26cc2532fe94ddf772e9ad6de638eb0f",
+    "combat/costume-resumption-20261120.mjs": "f83bde65b434f107abf7017e532a5600b2b43713f3b0e32308f8a1a2bd3be9d5",
+    "combat/costume-discoveries-20261120.mjs": "fb16daf1591a50602a68a84e2d7e5cafa12c230b2185ef4e1d627cec8a67565c",
+    "combat/illustrations.mjs": "26aca8338be81bedbbbc1bb4bc59dd0aae8b7b7ef4d785cbbf353ac109c53b99",
+    "combat/render.mjs": "91cdc8a8a4b5298644809714aa7e53219e1266e2ffc95478194a699a7bc1212f",
+    "combat/render-poses.mjs": "21e3afba8c19723ffdcb383402cc6339b63cb58df5d4323fda2ebde093ce0b29",
+    "combat/offline-manifest.mjs": "3e4808a0198e058ec85756265f575ebf63263278354b48c567fcbe3c755410b0",
+    "scripts/render-combat-character-review.mjs": "02a1c878bf23504d2c63e8046008a9f2a27b9389607a6f1166b498dda7fa780e"
+  },
+  "actions": [
+    {
+      "id": "showtimepomni",
+      "pose": "intro",
+      "file": "assets/encore/poses/showtimepomni/intro.png",
+      "sha256": "595696364e07179b2b9c220c6475ded583baafa99ec00267460b8c3e6746ff07",
+      "bytes": 1599167,
+      "visibleBounds": {
+        "x": 40,
+        "y": 10,
+        "width": 346,
+        "height": 619
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "showtimepomni",
+      "pose": "attack",
+      "file": "assets/encore/poses/showtimepomni/attack.png",
+      "sha256": "e09f808f0f74bfb4051342e214f0b9dc28e9c4075ff093364113a5a87a1006da",
+      "bytes": 909788,
+      "visibleBounds": {
+        "x": 69,
+        "y": 8,
+        "width": 469,
+        "height": 626
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "showtimepomni",
+      "pose": "hit",
+      "file": "assets/encore/poses/showtimepomni/hit.png",
+      "sha256": "46cda1342af6a14f9992ca3ced11e9713130648c5ad8db36821767f172069c7c",
+      "bytes": 1671013,
+      "visibleBounds": {
+        "x": 23,
+        "y": 10,
+        "width": 360,
+        "height": 626
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "showtimepomni",
+      "pose": "walk",
+      "file": "assets/encore/poses/showtimepomni/walk.png",
+      "sha256": "0eeeb9fde20a63309c001f53bcfe6823f6776dd5d038404dd37324bc609eb873",
+      "bytes": 881860,
+      "visibleBounds": {
+        "x": 86,
+        "y": 8,
+        "width": 374,
+        "height": 623
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "showtimepomni",
+      "pose": "jump",
+      "file": "assets/encore/poses/showtimepomni/jump.png",
+      "sha256": "3ccc7993d16eb265435ffc3945473c52ed6e810418afeb1c42a57d52c70a2713",
+      "bytes": 983622,
+      "visibleBounds": {
+        "x": 67,
+        "y": 6,
+        "width": 458,
+        "height": 604
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "showtimepomni",
+      "pose": "crouch",
+      "file": "assets/encore/poses/showtimepomni/crouch.png",
+      "sha256": "0cafbba6525b703d4d4c04103483edbac0a94fdb0fbc98243131b777d910ee2d",
+      "bytes": 1369620,
+      "visibleBounds": {
+        "x": 134,
+        "y": 4,
+        "width": 340,
+        "height": 420
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "showtimepomni",
+      "pose": "victory",
+      "file": "assets/encore/poses/showtimepomni/victory.png",
+      "sha256": "c3d0136ff6c5c0a0542706b83f3a6941020949d5d5304015abf9e48a15826c27",
+      "bytes": 1596596,
+      "visibleBounds": {
+        "x": 40,
+        "y": 9,
+        "width": 346,
+        "height": 625
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "showtimepomni",
+      "pose": "defeat",
+      "file": "assets/encore/poses/showtimepomni/defeat.png",
+      "sha256": "aff64f2b1fbf4294cc916399c1af418078632d731514c8eb3172cbcb987a0b44",
+      "bytes": 1418103,
+      "visibleBounds": {
+        "x": 108,
+        "y": 9,
+        "width": 381,
+        "height": 414
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "showtimepomni",
+      "pose": "heavy",
+      "file": "assets/encore/poses/showtimepomni/heavy.png",
+      "sha256": "b2760ed3d00a80c986ab48b0634b04cb4cd83287803b5d680c6baa2ac121dd15",
+      "bytes": 1417130,
+      "visibleBounds": {
+        "x": 87,
+        "y": 7,
+        "width": 426,
+        "height": 416
+      },
+      "nativeFacing": 1,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    }
+  ],
+  "stances": [
+    {
+      "id": "showtimepomni",
+      "file": "assets/encore/stance/showtimepomni.png",
+      "sha256": "77e43bb3e8b2525b807c05157bcc6c29975db800b451de9b0e29c5804a0df493",
+      "bytes": 1650314,
+      "nativeFacing": 1,
+      "rendered": true,
+      "bothFacings": true
+    }
+  ],
+  "portraits": [
+    {
+      "id": "showtimepomni",
+      "archiveId": null,
+      "file": "assets/encore/selection/showtimepomni.png",
+      "sha256": "36657a67157a740bd2e26b9de7d8bc24163901eb68b80c1bd97e2c3317084093",
+      "bytes": 1563975,
+      "rendered": true
+    }
+  ],
+  "missing": [],
+  "sheets": [
+    "actions-showtimepomni.jpg",
+    "archive-portraits-01.jpg"
+  ],
+  "browserTestStatus": "not_executed",
+  "counts": {
+    "appearances": 1,
+    "expectedActions": 9,
+    "actions": 9,
+    "stances": 1,
+    "drawChecks": 20,
+    "archiveEntries": 0,
+    "portraits": 1,
+    "expectedPortraits": 1,
+    "missing": 0
+  },
+  "complete": true
+}

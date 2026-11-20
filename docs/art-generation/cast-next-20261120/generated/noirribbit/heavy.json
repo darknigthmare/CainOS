@@ -1,0 +1,72 @@
+{
+  "id": "noirribbit:heavy",
+  "appearanceId": "noirribbit",
+  "fighterId": "ribbit",
+  "slot": "heavy",
+  "status": "accepted_native",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "file": "docs/art-generation/cast-next-20261120/generated/noirribbit/heavy.png",
+  "targetFile": "assets/encore/poses/noirribbit/heavy.png",
+  "referencePaths": [
+    "docs/art-generation/cast-next-20261120/generated/noirribbit/selection.png",
+    "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-noir.png"
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/ribbit-pendantz-blindbox",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Noir.png?v=1785768060"
+  ],
+  "sourceKind": "Produit dérivé officiel",
+  "episodeFidelityClaim": false,
+  "desiredNativeFacing": "right",
+  "prompt": "Use case: identity-preserve. Reference 1 is the APPROVED GAME DESIGN: preserve its exact face, anatomy, clothing, colours, details, proportions and drawing style, changing only the pose described below. Reference 2 confirms the official merchandise costume details. Do not copy the pose, photo background or toy proportions from reference 2.\n\nRIBBIT in the official NOIR merchandise costume. One slim anthropomorphic frog: one grey frog head with two large raised oval eyes, black pupils with white highlights, very dark violet half-lids, a light-grey muzzle and small weary downturned mouth. Grey skin, no green and no pink cheeks. Grey trench coat with lapels, overlapping front, waist belt and square buckle, white shirt collar, small black neck bow. Two grey frog hands at the ends of the coat sleeves; two long slim legs ending in black rounded frog feet. Keep the established game's slender Ribbit proportions and bold clean cel shading. Preserve this complete grey outfit and subdued expression. No hat, cigarette, weapon, keyring, tag, strap or lettering.\n\nHeavy attack: face SCREEN-RIGHT in one strong forward lunging strike with the leading arm, rear arm drawn back and knees bent. Distinct from the light jab, a more forceful low forward body commitment; two hands and two feet remain visible. No prop weapon or added effect.\n\nRender ONE complete polished hand-drawn 2D cel-shaded fighting-game sprite with clean dark outlines and clear flat colour regions. Entire figure including every eye, hat tip, feather tip, finger and both feet is fully inside generous transparent safety margins. True transparent RGBA background. No floor, cast shadow, glow, background, frame, text, watermark, duplicate body, speed lines or motion blur. Anatomical consistency is mandatory: one head, two arms, two hands, two legs and two feet. Native facing must be SCREEN-RIGHT; do not mirror anatomical costume details.",
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/cast-next-20261120/generated/noirribbit/selection.png",
+      "sha256": "7e0856ee931693f817f7206945d38b178c3e79007a68c77d6c908c066972b78d",
+      "bytes": 1279270
+    },
+    {
+      "position": 2,
+      "file": "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-noir.png",
+      "sha256": "fa7196988e32f61446b691b0b956abc103e9761827d9a19dbaae5e1292d8c31c",
+      "bytes": 1555468
+    }
+  ],
+  "schema": "encore-native-art-discovery/v1",
+  "includedInRuntime": false,
+  "nativeSourceFile": "/workspace/scratch/5f5114b49696/generated_images/exec-9f1b2d05-79a3-449a-8893-5dadc3b81fe7.png",
+  "sourceGenerationId": "exec-9f1b2d05-79a3-449a-8893-5dadc3b81fe7",
+  "nativeFacing": "right",
+  "visualReview": {
+    "reviewer": "generate_pomni_kinger",
+    "status": "accepted",
+    "observations": [
+      "Attaque lourde distincte : fente basse, paume avant projetée vers la droite et bras arrière ramené ; deux jambes et deux mains séparées.",
+      "Costume entier sans ajout d’accessoire ni effet ; tête, mains et pieds conservent des marges transparentes."
+    ],
+    "scope": "Official merchandise costume and approved game design preserved; original game pose, no canonical episode certification."
+  },
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "alpha12Bounds": [
+    127,
+    63,
+    1439,
+    994
+  ],
+  "alpha12BoundsThreshold": "alpha > 12",
+  "fullyTransparentPixels": 1143309,
+  "sha256": "31ebd5a9c53ae47ec5cf9a6435378a369e320ec3c6847f14694feda0a050f5b4",
+  "bytes": 1284694,
+  "nativeCopyVerified": true,
+  "createdAt": "2026-11-20T09:34:42.155374+00:00"
+}

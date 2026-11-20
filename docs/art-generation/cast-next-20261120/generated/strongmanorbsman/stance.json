@@ -1,0 +1,65 @@
+{
+  "schema": "encore-native-art-discovery/v1",
+  "appearanceId": "strongmanorbsman",
+  "slot": "stance",
+  "status": "accepted_native",
+  "createdAt": "2026-11-20T09:29:56.926449+00:00",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "prompt": "Use case: stylized-concept. Asset type: ONE individual full-body transparent 2D fighting-game sprite for Encore. Crisp dark outlines, polished restrained cel shading, saturated local colours, clear silhouette at small game scale, consistent light from upper left. Match the named official merchandise identity; this is an original game-pose adaptation, not a claim about an episode. Keep the complete single character and every carried prop inside generous clear transparent margins on ALL sides. True transparent RGBA background. No scenery, curtains, floor, cast shadow, aura, glow, particles, text, watermark, panel, inset, duplicated character or cropped extremity. Input image 1 is the accepted game selection and the strict design lock for proportions, shape, colours, shading and every prop. Input image 2 is the official source to preserve identity details, excluding its scene. Generate a genuinely new action, not a crop or mirror. DESIGN LOCK: STRONGMAN ORBSMAN from the official Side Show merchandise. One blue-violet character made entirely of connected polished rounded spheres: large head, smaller round torso and pelvis, two arms of spheres ending in two spherical hands without fingers, two legs of spheres ending in rounded feet. Two huge white eyes with black pupils, thick black eyebrows and small mint sweat drops. No mouth, clothing or human musculature. Preserve the official ball topology. One single silver barbell with exactly TWO big red spherical weights, one at each end, carried by the two round hands. Keep the entire bar and both red weights inside the frame. POSE: STANCE: knees/round leg chains slightly flexed, feet offset, barbell held steadily across waist height with both round hands; face and weight toward screen RIGHT.",
+  "referencePaths": [
+    "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/selection.png",
+    "docs/art-generation/cast-next-20261120/research/merch/official-strongman-orbsman.png"
+  ],
+  "portableReferences": [
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/selection.png",
+      "sha256": "ede51b07225e79c80eefdf12cd862e6b9d166211bb452ab16bebff59760e460c",
+      "bytes": 1518337
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/research/merch/official-strongman-orbsman.png",
+      "sha256": "47e8c316870904730493cf87cbbf8af0c94e93f9c0b49aacf821102612edc7ca",
+      "bytes": 602038
+    }
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_strongmanOrbsman.png?v=1773977710"
+  ],
+  "sourceKind": "Produit dérivé officiel",
+  "episodeFidelityClaim": false,
+  "sourceGenerationId": "exec-ba7617f2-c9c5-4aec-8a4a-7751e45f13c2",
+  "nativeSourceFile": "/workspace/scratch/5f5114b49696/generated_images/exec-ba7617f2-c9c5-4aec-8a4a-7751e45f13c2.png",
+  "file": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/stance.png",
+  "targetFile": "assets/encore/stance/strongmanorbsman.png",
+  "sha256": "82c5a84824c232f7608b97db29fa4d5a181c0812447e99868f6160cfe9df137d",
+  "bytes": 952869,
+  "dimensions": [
+    1312,
+    1199
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "fullyTransparentPixels": 929850,
+  "alpha12Bounds": [
+    58,
+    44,
+    1253,
+    1182
+  ],
+  "alpha12BoundsThreshold": "alpha >= 12",
+  "nativeCopyVerified": true,
+  "nativeFacing": "right",
+  "visualReview": {
+    "reviewer": "generate_gangle_zooble",
+    "status": "accepted",
+    "observations": [
+      "Braced bent-leg stance with offset feet and barbell at waist; spherical hands, two red end weights, eyebrows and mint marks preserved. Head and eyes face screen right. Entire character and barbell remain inside margins."
+    ],
+    "scope": "Approved merchandise identity and game presentation; original static game pose, no canonical episode certification."
+  }
+}

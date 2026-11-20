@@ -1,0 +1,59 @@
+{
+  "schema": "encore-native-art-discovery/v1",
+  "appearanceId": "jaxsuitpomni",
+  "slot": "defeat",
+  "status": "accepted_native",
+  "createdAt": "2026-11-20T09:41:11.386446+00:00",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "prompt": "Use case: identity-preserve. Draw ONE complete POMNI IN THE JAX SUIT in the approved reference's exact 2D game design. Keep the white face, brown bob/forehead locks, red-and-blue pinwheel irises and orange cheeks, pale lavender rabbit hood with two long rounded ears and small yellow/black eye motifs, lavender covered limbs, yellow gloves, pink short overalls with EXACTLY TWO yellow buttons and ONE bib pocket, and two broad lavender rabbit feet with toe seams. Preserve the reference's proportions, clean dark outlines, colors and detailed cel shading. The small grey toy prop revolver with black grip stays in her anatomical RIGHT glove, lowered or tucked close to the hip, with no firing, flash or projectile. The other glove is empty. No jester hat, bells, ordinary Jax face, new costume piece, extra limb or duplicate accessory. Entire body including both ear tips and both soles inside clear transparent margins, facing screen-right in three-quarter game view. One character, true transparent RGBA, no background, floor, cast shadow, glow, text, logo, watermark or effects. POSE: DEFEAT. Tired seated slump, knees folded to one side but both lavender feet visible, left glove rests limply on lap, right glove still holds the one small grey prop low beside the body. Head lowered, ears sag slightly but keep their exact shape. No broken parts or injury.",
+  "referencePaths": [
+    "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/selection.png"
+  ],
+  "portableReferences": [
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/selection.png",
+      "sha256": "5cd4179ae983b9a050162159e47bad53ff95bd895c790ae38963fa2df74a3d6c",
+      "bytes": 923013
+    }
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/jax-suit-pomni-plush"
+  ],
+  "sourceKind": "Produit dérivé officiel",
+  "episodeFidelityClaim": false,
+  "sourceGenerationId": "exec-b3cb0586-e510-48da-9307-d059b5f6952e",
+  "nativeSourceFile": "/workspace/scratch/5f5114b49696/generated_images/exec-b3cb0586-e510-48da-9307-d059b5f6952e.png",
+  "file": "docs/art-generation/cast-next-20261120/generated/jaxsuitpomni/defeat.png",
+  "targetFile": "assets/encore/poses/jaxsuitpomni/defeat.png",
+  "sha256": "275824da8abf27b8487c69cd141080d8efac37732a5a0bcf25af0694d31ea780",
+  "bytes": 1098260,
+  "dimensions": [
+    1171,
+    1343
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "fullyTransparentPixels": 895766,
+  "alpha12Bounds": [
+    70,
+    63,
+    1097,
+    1310
+  ],
+  "alpha12BoundsThreshold": "alpha >= 12",
+  "nativeCopyVerified": true,
+  "nativeFacing": "right",
+  "visualReview": {
+    "reviewer": "root",
+    "status": "accepted",
+    "observations": [
+      "Distinct seated defeated pose with drooping hood ears, slumped shoulders and tired pinwheel eyes.",
+      "Both feet and both hands visible, right glove retains one lowered prop, two buttons and bib pocket match seed."
+    ],
+    "scope": "Approved merchandise identity and game presentation; original static game pose, no canonical episode certification."
+  }
+}
