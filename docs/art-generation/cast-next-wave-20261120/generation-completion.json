@@ -1,0 +1,507 @@
+{
+  "schema": "encore-next-wave-completion/v1",
+  "status": "complete_active",
+  "createdAt": "2026-11-20T15:05:38.651692+00:00",
+  "baseCommit": "570fdb31512cdd2a2d5ba5e2c26d7c10b47ae063",
+  "baseTree": "c689b08b48514f54e17d1df2c828a46718a5660a",
+  "publishedParent": "5be043ba21f3fe7a6dedd3fa1b00dc36f296b540",
+  "order": [
+    "caferibbit"
+  ],
+  "slots": [
+    "selection",
+    "stance",
+    "intro",
+    "attack",
+    "heavy",
+    "hit",
+    "walk",
+    "jump",
+    "crouch",
+    "victory",
+    "defeat"
+  ],
+  "appearances": [
+    {
+      "id": "caferibbit",
+      "name": "Ribbit — Café",
+      "fighterId": "ribbit",
+      "files": [
+        {
+          "appearanceId": "caferibbit",
+          "slot": "selection",
+          "file": "assets/encore/selection/caferibbit.png",
+          "archiveFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/selection.png",
+          "receiptFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/selection.json",
+          "sha256": "638c8ced2802e022b25a2674dd9380757cfdff3a02b5a46acff4bda2fbe295e2",
+          "bytes": 1495892,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            96,
+            21,
+            770,
+            1523
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-a533b04f-d92e-4a67-bf03-86730ee41e13",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/cast-next-wave-20261120/references/caferibbit/ribbit-cafe-detail.png",
+              "sha256": "7359975baf1aa8f956cfbad282f2c3a1103820519dfcae238327de91a681dc9f",
+              "bytes": 139654
+            },
+            {
+              "position": 2,
+              "file": "assets/encore/selection/ribbit.png",
+              "sha256": "a88927f18865fb289f4d9e045fd1a75f91363f5d9b535859efbebfd4e8bf566f",
+              "bytes": 1352678
+            }
+          ]
+        },
+        {
+          "appearanceId": "caferibbit",
+          "slot": "stance",
+          "file": "assets/encore/stance/caferibbit.png",
+          "archiveFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/stance.png",
+          "receiptFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/stance.json",
+          "sha256": "b553a8a3673511308c37070e22ac5b8648df6b2a67ae5b8a9b832f3547ff1e18",
+          "bytes": 1534954,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            142,
+            82,
+            879,
+            1503
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-bad4c196-bdcd-497c-a8d0-b00cd65c79d9",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/selection.png",
+              "sha256": "638c8ced2802e022b25a2674dd9380757cfdff3a02b5a46acff4bda2fbe295e2",
+              "bytes": 1495892
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/cast-next-wave-20261120/references/caferibbit/ribbit-cafe-detail.png",
+              "sha256": "7359975baf1aa8f956cfbad282f2c3a1103820519dfcae238327de91a681dc9f",
+              "bytes": 139654
+            }
+          ]
+        },
+        {
+          "appearanceId": "caferibbit",
+          "slot": "intro",
+          "file": "assets/encore/poses/caferibbit/intro.png",
+          "archiveFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/intro.png",
+          "receiptFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/intro.json",
+          "sha256": "43c9a9f7fa941476090794bb0c3a52a9ff440cda784defd870e1e31f5673d64c",
+          "bytes": 1458643,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            109,
+            59,
+            960,
+            1509
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-08d59638-2bf2-45bf-b9a1-4ec7bbd80698",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/selection.png",
+              "sha256": "638c8ced2802e022b25a2674dd9380757cfdff3a02b5a46acff4bda2fbe295e2",
+              "bytes": 1495892
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/cast-next-wave-20261120/references/caferibbit/ribbit-cafe-detail.png",
+              "sha256": "7359975baf1aa8f956cfbad282f2c3a1103820519dfcae238327de91a681dc9f",
+              "bytes": 139654
+            }
+          ]
+        },
+        {
+          "appearanceId": "caferibbit",
+          "slot": "attack",
+          "file": "assets/encore/poses/caferibbit/attack.png",
+          "archiveFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/attack.png",
+          "receiptFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/attack.json",
+          "sha256": "d363d6124938290f04ae03227a6d4755a617a7ba621c4ed91f363e2ebb421fb1",
+          "bytes": 791622,
+          "dimensions": [
+            1199,
+            1312
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            110,
+            45,
+            1124,
+            1293
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-e9b80a4d-6da5-4351-bfad-614099bb9ece",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/selection.png",
+              "sha256": "638c8ced2802e022b25a2674dd9380757cfdff3a02b5a46acff4bda2fbe295e2",
+              "bytes": 1495892
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/cast-next-wave-20261120/references/caferibbit/ribbit-cafe-detail.png",
+              "sha256": "7359975baf1aa8f956cfbad282f2c3a1103820519dfcae238327de91a681dc9f",
+              "bytes": 139654
+            }
+          ]
+        },
+        {
+          "appearanceId": "caferibbit",
+          "slot": "heavy",
+          "file": "assets/encore/poses/caferibbit/heavy.png",
+          "archiveFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/heavy.png",
+          "receiptFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/heavy.json",
+          "sha256": "ba86c05acb6dbd5cffacc2333b39bb427a7958e86e45379a15cb776255b8d9f7",
+          "bytes": 781909,
+          "dimensions": [
+            1205,
+            1305
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            48,
+            42,
+            1159,
+            1278
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-f383d6ac-c3a7-4608-aa5e-d81bd4931cd1",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/attempts/heavy-01.png",
+              "sha256": "67d14192251950326f96a821316beb6ed5c6a324ebb33bd5963d80c07802f4f5",
+              "bytes": 777235
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/selection.png",
+              "sha256": "638c8ced2802e022b25a2674dd9380757cfdff3a02b5a46acff4bda2fbe295e2",
+              "bytes": 1495892
+            },
+            {
+              "position": 3,
+              "file": "docs/art-generation/cast-next-wave-20261120/references/caferibbit/ribbit-cafe-detail.png",
+              "sha256": "7359975baf1aa8f956cfbad282f2c3a1103820519dfcae238327de91a681dc9f",
+              "bytes": 139654
+            }
+          ]
+        },
+        {
+          "appearanceId": "caferibbit",
+          "slot": "hit",
+          "file": "assets/encore/poses/caferibbit/hit.png",
+          "archiveFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/hit.png",
+          "receiptFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/hit.json",
+          "sha256": "2a72a6b6b12cc4a0c8a8b6ff6606c89bf738f86a1d373dc52470e7f098bfe4ee",
+          "bytes": 1544665,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            110,
+            97,
+            931,
+            1502
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-5bf8253f-45bb-41c8-8582-7b26ceaf5ad8",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/selection.png",
+              "sha256": "638c8ced2802e022b25a2674dd9380757cfdff3a02b5a46acff4bda2fbe295e2",
+              "bytes": 1495892
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/cast-next-wave-20261120/references/caferibbit/ribbit-cafe-detail.png",
+              "sha256": "7359975baf1aa8f956cfbad282f2c3a1103820519dfcae238327de91a681dc9f",
+              "bytes": 139654
+            }
+          ]
+        },
+        {
+          "appearanceId": "caferibbit",
+          "slot": "walk",
+          "file": "assets/encore/poses/caferibbit/walk.png",
+          "archiveFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/walk.png",
+          "receiptFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/walk.json",
+          "sha256": "0cca789f97424558eb80f6178418ccfac61a926fb5e09c9f73886a13658ae090",
+          "bytes": 1566034,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            95,
+            39,
+            924,
+            1504
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-e7eacb5f-b050-4018-bc69-340b3232921e",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/selection.png",
+              "sha256": "638c8ced2802e022b25a2674dd9380757cfdff3a02b5a46acff4bda2fbe295e2",
+              "bytes": 1495892
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/cast-next-wave-20261120/references/caferibbit/ribbit-cafe-detail.png",
+              "sha256": "7359975baf1aa8f956cfbad282f2c3a1103820519dfcae238327de91a681dc9f",
+              "bytes": 139654
+            }
+          ]
+        },
+        {
+          "appearanceId": "caferibbit",
+          "slot": "jump",
+          "file": "assets/encore/poses/caferibbit/jump.png",
+          "archiveFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/jump.png",
+          "receiptFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/jump.json",
+          "sha256": "5a420a78e722d843554d3dd37e70e47f011e693fe8b9e927912e94bd67bd78d0",
+          "bytes": 1555510,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            152,
+            64,
+            966,
+            1488
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-afe4834f-6e1e-48e2-ab8f-669c765f466f",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/selection.png",
+              "sha256": "638c8ced2802e022b25a2674dd9380757cfdff3a02b5a46acff4bda2fbe295e2",
+              "bytes": 1495892
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/cast-next-wave-20261120/references/caferibbit/ribbit-cafe-detail.png",
+              "sha256": "7359975baf1aa8f956cfbad282f2c3a1103820519dfcae238327de91a681dc9f",
+              "bytes": 139654
+            }
+          ]
+        },
+        {
+          "appearanceId": "caferibbit",
+          "slot": "crouch",
+          "file": "assets/encore/poses/caferibbit/crouch.png",
+          "archiveFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/crouch.png",
+          "receiptFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/crouch.json",
+          "sha256": "6b91fa00359ae859fac06681f9e527c75847d4bb3b883d7514e3e0f5b9707e1d",
+          "bytes": 938347,
+          "dimensions": [
+            1199,
+            1312
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            165,
+            35,
+            966,
+            1297
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-624f6848-796a-424d-8ac1-b10d6eaefa41",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/selection.png",
+              "sha256": "638c8ced2802e022b25a2674dd9380757cfdff3a02b5a46acff4bda2fbe295e2",
+              "bytes": 1495892
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/cast-next-wave-20261120/references/caferibbit/ribbit-cafe-detail.png",
+              "sha256": "7359975baf1aa8f956cfbad282f2c3a1103820519dfcae238327de91a681dc9f",
+              "bytes": 139654
+            }
+          ]
+        },
+        {
+          "appearanceId": "caferibbit",
+          "slot": "victory",
+          "file": "assets/encore/poses/caferibbit/victory.png",
+          "archiveFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/victory.png",
+          "receiptFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/victory.json",
+          "sha256": "102b5fb20020b7b67dc7acf5b94f14ed4b40ecd8d8c403e90cb12d6971926dd4",
+          "bytes": 1498244,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            192,
+            34,
+            915,
+            1521
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-1f162c72-7a0f-4979-af0a-9d5d76dcd1ed",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/selection.png",
+              "sha256": "638c8ced2802e022b25a2674dd9380757cfdff3a02b5a46acff4bda2fbe295e2",
+              "bytes": 1495892
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/cast-next-wave-20261120/references/caferibbit/ribbit-cafe-detail.png",
+              "sha256": "7359975baf1aa8f956cfbad282f2c3a1103820519dfcae238327de91a681dc9f",
+              "bytes": 139654
+            }
+          ]
+        },
+        {
+          "appearanceId": "caferibbit",
+          "slot": "defeat",
+          "file": "assets/encore/poses/caferibbit/defeat.png",
+          "archiveFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/defeat.png",
+          "receiptFile": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/defeat.json",
+          "sha256": "903dec112c77b63dedd7eed348abcb3c88a143b6b99a9491a18f4cef750b9034",
+          "bytes": 886210,
+          "dimensions": [
+            1207,
+            1303
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            135,
+            80,
+            974,
+            1255
+          ],
+          "nativeFacing": "right",
+          "sourceGenerationId": "exec-3b8a1a49-72bf-4dc2-9545-bf8f214fd0f1",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/attempts/defeat-01.png",
+              "sha256": "9736978d3958b9cd5e721d0ec3b8e2959794e783eb366c868539dfcf54c5b4ed",
+              "bytes": 880311
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/selection.png",
+              "sha256": "638c8ced2802e022b25a2674dd9380757cfdff3a02b5a46acff4bda2fbe295e2",
+              "bytes": 1495892
+            },
+            {
+              "position": 3,
+              "file": "docs/art-generation/cast-next-wave-20261120/references/caferibbit/ribbit-cafe-detail.png",
+              "sha256": "7359975baf1aa8f956cfbad282f2c3a1103820519dfcae238327de91a681dc9f",
+              "bytes": 139654
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "completeAppearances": 1,
+    "nativePngs": 11,
+    "newNativePngs": 11,
+    "bytes": 14052030,
+    "cumulativeAppearances": 40,
+    "cumulativeAppearancePngs": 440,
+    "equipableCostumes": 469
+  },
+  "historicalPrefix": {
+    "manifest": "docs/art-generation/npc-crossovers-next-wave-20261120/integration-baseline.json",
+    "sha256": "1bea46363a8b121b71db75eb2da67f21b7db55254bc85eda5d242bb15e23acbf",
+    "appearancesPreserved": 39,
+    "costumesPreserved": 468,
+    "definitionsAndOrderPreserved": true
+  },
+  "limitations": [
+    "Official collaboration illustration references do not certify episode appearances or close Maid Ribbit Pendantz.",
+    "Eleven independent static drawings per appearance are not full animation cycles.",
+    "Owners, combat kits and statistics are unchanged; source-specific visibility limits remain in each definition.",
+    "Offline manifest, global builds/QA and workbook reconciliation are separate steps."
+  ]
+}

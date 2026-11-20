@@ -1,0 +1,514 @@
+{
+  "schema": "encore-next-wave-build-integrity/v1",
+  "status": "passed",
+  "complete": true,
+  "baseCommit": "570fdb31512cdd2a2d5ba5e2c26d7c10b47ae063",
+  "newNativePNG": 47,
+  "newNativeBytes": 59538780,
+  "nativeBuildCopies": 94,
+  "copies": [
+    {
+      "build": "dist",
+      "file": "assets/encore/selection/caferibbit.png",
+      "sha256": "638c8ced2802e022b25a2674dd9380757cfdff3a02b5a46acff4bda2fbe295e2"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/stance/caferibbit.png",
+      "sha256": "b553a8a3673511308c37070e22ac5b8648df6b2a67ae5b8a9b832f3547ff1e18"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/caferibbit/intro.png",
+      "sha256": "43c9a9f7fa941476090794bb0c3a52a9ff440cda784defd870e1e31f5673d64c"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/caferibbit/attack.png",
+      "sha256": "d363d6124938290f04ae03227a6d4755a617a7ba621c4ed91f363e2ebb421fb1"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/caferibbit/heavy.png",
+      "sha256": "ba86c05acb6dbd5cffacc2333b39bb427a7958e86e45379a15cb776255b8d9f7"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/caferibbit/hit.png",
+      "sha256": "2a72a6b6b12cc4a0c8a8b6ff6606c89bf738f86a1d373dc52470e7f098bfe4ee"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/caferibbit/walk.png",
+      "sha256": "0cca789f97424558eb80f6178418ccfac61a926fb5e09c9f73886a13658ae090"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/caferibbit/jump.png",
+      "sha256": "5a420a78e722d843554d3dd37e70e47f011e693fe8b9e927912e94bd67bd78d0"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/caferibbit/crouch.png",
+      "sha256": "6b91fa00359ae859fac06681f9e527c75847d4bb3b883d7514e3e0f5b9707e1d"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/caferibbit/victory.png",
+      "sha256": "102b5fb20020b7b67dc7acf5b94f14ed4b40ecd8d8c403e90cb12d6971926dd4"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/caferibbit/defeat.png",
+      "sha256": "903dec112c77b63dedd7eed348abcb3c88a143b6b99a9491a18f4cef750b9034"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/selection.png",
+      "sha256": "dd43a5386874e25da5f61b0d823c87de3d146f024c96d64091e5957355c3ef5b"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/stance.png",
+      "sha256": "6102d83c295487da3689dfe449ffdb9e4b62c20c19babd83415646e95a278f9a"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/intro.png",
+      "sha256": "daa9c9327805617cccd5d4a956147c2a2d7bbb3ef592184b08802182d4067fba"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/attack.png",
+      "sha256": "13c985b85e8281c08c365ee7f1ec7123c4a97f180ebc60fa54ab195d18d8c1f7"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/heavy.png",
+      "sha256": "90cd3b607f74c4618422ba172e8ac498e37e85212cd011de1a35bdadce0b35d3"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/hit.png",
+      "sha256": "67cb91d7585795e8436d6d317f09ba714786cf42fa5163ece0cf9c05d04d807c"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/walk.png",
+      "sha256": "c3c0881fd9e5833eaeb6f49a86db52d91d242c97d92a2b4989a30d4ec52af418"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/jump.png",
+      "sha256": "7990c365e9d19c3337815b36f9544408ce549634bfb2275dc2bba6a1ce167c53"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/crouch.png",
+      "sha256": "e76f856d3a9ed50312204c9b10ca63cec8179a6310497f9491028284e4a29ba8"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/victory.png",
+      "sha256": "43ecd2b83b7c132a83ac0c2301879f01901dfd6f0710822a540263a4ca12733c"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/defeat.png",
+      "sha256": "944594d769172882bf175f6927efad3e33e883cfd583f36e5a98654aea2390e4"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/resident/selection.png",
+      "sha256": "fe3c01b6b6d57bc532af4ce7d9114f93a804146d38b4a0263a3f06876618b686"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/resident/stance.png",
+      "sha256": "3cdffc3f01e48fe77f0c66c045eb258b6337f53e5734fb742b20ee7b3c317a5b"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/resident/intro.png",
+      "sha256": "f219e23a39874d0de4ce45691da6d95ce49fd5cc482523f2732787bdec5b25ec"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/resident/attack.png",
+      "sha256": "d82aabde2a0a935df7f6e41ee2bdb0284e4d878311f7730a1a7653ba99e8b0b5"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/resident/heavy.png",
+      "sha256": "1c551bc99c22b29513e919a113c2691ff1c553253753c39dca444895ae2fcbff"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/resident/hit.png",
+      "sha256": "4240b2e593e5c9f04d03041f4f0a1bc093b0a70a086365a113ad54be8b5953b6"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/resident/walk.png",
+      "sha256": "ad601e57df0543e6a41852b338f70d0600e1370cab187e020b91e342dd0e15ac"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/resident/jump.png",
+      "sha256": "3539017a11b0fda003f34867c69126abfd41ba112fdad4e95898595cb2d7e54a"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/resident/crouch.png",
+      "sha256": "3c35deeef6d0be94d4a0900e2a5ec4bd40281e9fa5d91392f134f6ad26b5ce6e"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/resident/victory.png",
+      "sha256": "79d35d5c3a7694302d7abb5ef8c1a855164a278dfb6104b7542ba8f12ba41eeb"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/resident/defeat.png",
+      "sha256": "ffac04a093aa65513db7f58307fc8071118f354ba6b4aa4e2d0ff0e80cfdb3d0"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/selection.png",
+      "sha256": "b4aeaf8ad54544eac7640f87603501ac3b7e3b8e0bfa4e68ef76b993c136968e"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/stance.png",
+      "sha256": "caf3b3f409ed6cec5c9c1beb1c7aeae19e951d3664f4cd52650081ce5c780111"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/intro.png",
+      "sha256": "6e26008bb918bcc2e48c723d9ed180e1eed79fdd49883f25f75fdaa3bf52c1c5"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/attack.png",
+      "sha256": "6ef768cadd1f4f694d4edaec0698b64841ad987c14956d839767403a9adc8040"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/heavy.png",
+      "sha256": "886b61a7d2313cdca74d35a0040118ed0faed8583e10554bc7f67ed3636457e5"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/hit.png",
+      "sha256": "18666434c7a7e1b82f504203b69f15de314209aaa432b7b7d4a0edb86edab897"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/walk.png",
+      "sha256": "bf8b75b671fbbf9d3b01d07d2ef56cb0c45d6c3731c2c1fe915b381f83cc53dd"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/jump.png",
+      "sha256": "aa14d384551b950d464672b0fafe7b3a18b0d0388f8e44bf649bfdd882c70c04"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/crouch.png",
+      "sha256": "ad1b7d467c845c204ba7737c1a2746b3040fb941910e0cc0623a4062470a8528"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/victory.png",
+      "sha256": "67d4f944fdc33b14d4983510fc546d24eac57cacaff2c9484c2565f26034bdd1"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/defeat.png",
+      "sha256": "73864da647baf49463c57a30ae817a119287467c7644db2d19974e76037aea83"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/stages/barnoir/far.png",
+      "sha256": "e051e8cf276e3dc440dc81220d1af46cdcbae82f7d8ba026d2f44cebf2ac38d1"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/stages/barnoir/mid.png",
+      "sha256": "77b6bdc2dccafb7d78557396d81ba27120d852e540566587f47542ac2a811713"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/stages/barnoir/near.png",
+      "sha256": "44c6343da751ef851ad57ef0af72adf435ce0f256b0557d523316144f59516f1"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/selection/caferibbit.png",
+      "sha256": "638c8ced2802e022b25a2674dd9380757cfdff3a02b5a46acff4bda2fbe295e2"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/stance/caferibbit.png",
+      "sha256": "b553a8a3673511308c37070e22ac5b8648df6b2a67ae5b8a9b832f3547ff1e18"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/caferibbit/intro.png",
+      "sha256": "43c9a9f7fa941476090794bb0c3a52a9ff440cda784defd870e1e31f5673d64c"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/caferibbit/attack.png",
+      "sha256": "d363d6124938290f04ae03227a6d4755a617a7ba621c4ed91f363e2ebb421fb1"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/caferibbit/heavy.png",
+      "sha256": "ba86c05acb6dbd5cffacc2333b39bb427a7958e86e45379a15cb776255b8d9f7"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/caferibbit/hit.png",
+      "sha256": "2a72a6b6b12cc4a0c8a8b6ff6606c89bf738f86a1d373dc52470e7f098bfe4ee"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/caferibbit/walk.png",
+      "sha256": "0cca789f97424558eb80f6178418ccfac61a926fb5e09c9f73886a13658ae090"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/caferibbit/jump.png",
+      "sha256": "5a420a78e722d843554d3dd37e70e47f011e693fe8b9e927912e94bd67bd78d0"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/caferibbit/crouch.png",
+      "sha256": "6b91fa00359ae859fac06681f9e527c75847d4bb3b883d7514e3e0f5b9707e1d"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/caferibbit/victory.png",
+      "sha256": "102b5fb20020b7b67dc7acf5b94f14ed4b40ecd8d8c403e90cb12d6971926dd4"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/caferibbit/defeat.png",
+      "sha256": "903dec112c77b63dedd7eed348abcb3c88a143b6b99a9491a18f4cef750b9034"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/selection.png",
+      "sha256": "dd43a5386874e25da5f61b0d823c87de3d146f024c96d64091e5957355c3ef5b"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/stance.png",
+      "sha256": "6102d83c295487da3689dfe449ffdb9e4b62c20c19babd83415646e95a278f9a"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/intro.png",
+      "sha256": "daa9c9327805617cccd5d4a956147c2a2d7bbb3ef592184b08802182d4067fba"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/attack.png",
+      "sha256": "13c985b85e8281c08c365ee7f1ec7123c4a97f180ebc60fa54ab195d18d8c1f7"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/heavy.png",
+      "sha256": "90cd3b607f74c4618422ba172e8ac498e37e85212cd011de1a35bdadce0b35d3"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/hit.png",
+      "sha256": "67cb91d7585795e8436d6d317f09ba714786cf42fa5163ece0cf9c05d04d807c"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/walk.png",
+      "sha256": "c3c0881fd9e5833eaeb6f49a86db52d91d242c97d92a2b4989a30d4ec52af418"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/jump.png",
+      "sha256": "7990c365e9d19c3337815b36f9544408ce549634bfb2275dc2bba6a1ce167c53"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/crouch.png",
+      "sha256": "e76f856d3a9ed50312204c9b10ca63cec8179a6310497f9491028284e4a29ba8"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/victory.png",
+      "sha256": "43ecd2b83b7c132a83ac0c2301879f01901dfd6f0710822a540263a4ca12733c"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/hommage/defeat.png",
+      "sha256": "944594d769172882bf175f6927efad3e33e883cfd583f36e5a98654aea2390e4"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/resident/selection.png",
+      "sha256": "fe3c01b6b6d57bc532af4ce7d9114f93a804146d38b4a0263a3f06876618b686"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/resident/stance.png",
+      "sha256": "3cdffc3f01e48fe77f0c66c045eb258b6337f53e5734fb742b20ee7b3c317a5b"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/resident/intro.png",
+      "sha256": "f219e23a39874d0de4ce45691da6d95ce49fd5cc482523f2732787bdec5b25ec"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/resident/attack.png",
+      "sha256": "d82aabde2a0a935df7f6e41ee2bdb0284e4d878311f7730a1a7653ba99e8b0b5"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/resident/heavy.png",
+      "sha256": "1c551bc99c22b29513e919a113c2691ff1c553253753c39dca444895ae2fcbff"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/resident/hit.png",
+      "sha256": "4240b2e593e5c9f04d03041f4f0a1bc093b0a70a086365a113ad54be8b5953b6"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/resident/walk.png",
+      "sha256": "ad601e57df0543e6a41852b338f70d0600e1370cab187e020b91e342dd0e15ac"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/resident/jump.png",
+      "sha256": "3539017a11b0fda003f34867c69126abfd41ba112fdad4e95898595cb2d7e54a"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/resident/crouch.png",
+      "sha256": "3c35deeef6d0be94d4a0900e2a5ec4bd40281e9fa5d91392f134f6ad26b5ce6e"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/resident/victory.png",
+      "sha256": "79d35d5c3a7694302d7abb5ef8c1a855164a278dfb6104b7542ba8f12ba41eeb"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/resident/defeat.png",
+      "sha256": "ffac04a093aa65513db7f58307fc8071118f354ba6b4aa4e2d0ff0e80cfdb3d0"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/selection.png",
+      "sha256": "b4aeaf8ad54544eac7640f87603501ac3b7e3b8e0bfa4e68ef76b993c136968e"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/stance.png",
+      "sha256": "caf3b3f409ed6cec5c9c1beb1c7aeae19e951d3664f4cd52650081ce5c780111"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/intro.png",
+      "sha256": "6e26008bb918bcc2e48c723d9ed180e1eed79fdd49883f25f75fdaa3bf52c1c5"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/attack.png",
+      "sha256": "6ef768cadd1f4f694d4edaec0698b64841ad987c14956d839767403a9adc8040"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/heavy.png",
+      "sha256": "886b61a7d2313cdca74d35a0040118ed0faed8583e10554bc7f67ed3636457e5"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/hit.png",
+      "sha256": "18666434c7a7e1b82f504203b69f15de314209aaa432b7b7d4a0edb86edab897"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/walk.png",
+      "sha256": "bf8b75b671fbbf9d3b01d07d2ef56cb0c45d6c3731c2c1fe915b381f83cc53dd"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/jump.png",
+      "sha256": "aa14d384551b950d464672b0fafe7b3a18b0d0388f8e44bf649bfdd882c70c04"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/crouch.png",
+      "sha256": "ad1b7d467c845c204ba7737c1a2746b3040fb941910e0cc0623a4062470a8528"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/victory.png",
+      "sha256": "67d4f944fdc33b14d4983510fc546d24eac57cacaff2c9484c2565f26034bdd1"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/crossovers/murderdrones/ribbit/fusion/defeat.png",
+      "sha256": "73864da647baf49463c57a30ae817a119287467c7644db2d19974e76037aea83"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/stages/barnoir/far.png",
+      "sha256": "e051e8cf276e3dc440dc81220d1af46cdcbae82f7d8ba026d2f44cebf2ac38d1"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/stages/barnoir/mid.png",
+      "sha256": "77b6bdc2dccafb7d78557396d81ba27120d852e540566587f47542ac2a811713"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/stages/barnoir/near.png",
+      "sha256": "44c6343da751ef851ad57ef0af72adf435ce0f256b0557d523316144f59516f1"
+    }
+  ],
+  "moduleComparisons": 36,
+  "nativeAssetComparisons": 94,
+  "costumeComparisons": 88,
+  "stageComparisons": 6,
+  "historicalAssetsCompared": 5725,
+  "historicalAssetsUnchanged": true,
+  "historicalEncoreFilesVerified": 5725,
+  "preservedRuntimeModules": {
+    "combat/engine.mjs": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
+    "combat/session.mjs": "9dce5b9d2fff5316cd280c8f58038d06134935717c3fd637e76042e308a1d65e",
+    "combat/stories.mjs": "763d0012eec0e59ac9454a9467596d7296b65cc64002918cc5db462b09a1fec7",
+    "combat/stage-parallax.mjs": "1e01fa0b4932f0e670bb6fa746c48b57de0c726a5637891e68427a161aecc77d"
+  },
+  "sources": {
+    "combat/data.mjs": "7081daa24f8557c6964c75955071a3527ae49c03393e04d6d0dee0d97d4e5fe6",
+    "combat/costume-additions.mjs": "dacc968d23ccffa246b686a641dedb0308b14c122652c4a477e72927ddd5e3e4",
+    "combat/costume-next-wave-20261120.mjs": "dd644e2868c8c3ca92564ea64a18cccee1c1765f364d92c19e83689b7ca6cd4e",
+    "combat/crossovers.mjs": "16e0b81e1f1581bd0b66dd0c61b1b55172ec27481f4792734f7e041f04a93711",
+    "combat/crossover-npc-additions.mjs": "0656ad94c7565d6fd20b344dfc8039b1ea05e0387b035666726b3114f94fec9d",
+    "combat/illustrations.mjs": "26aca8338be81bedbbbc1bb4bc59dd0aae8b7b7ef4d785cbbf353ac109c53b99",
+    "combat/render.mjs": "a7005f67651ad0a2da5955f9146c95f6e7e93ce9c3c2f38bd2bf1c3791d12d73",
+    "combat/render-poses.mjs": "21e3afba8c19723ffdcb383402cc6339b63cb58df5d4323fda2ebde093ce0b29",
+    "combat/offline-manifest.mjs": "583ff9fc856c355d153eaba75ef4558f207094680136abcdab06d3fbc532bc1e",
+    "combat/fidelity.mjs": "13f113f52d3d544eebc57064a1aafd1fae0c9d2485e5f567e52390f5c5a4e2dc",
+    "combat/audio.mjs": "4fa423e9b31ddd2344df9d0824693fe08963d5117e35a87c2534ef391ed5c978",
+    "combat/audio-ambiences.mjs": "38a5e4221066b3c2c2fec8f7af6977ca7c219a3117d73f1e00d1cddba34cba3c",
+    "combat/progression.mjs": "ec113e2657bd6b479741543dd1f0fb8338195fb9ca1bb85e381834b35a0055e8",
+    "combat/stories.mjs": "763d0012eec0e59ac9454a9467596d7296b65cc64002918cc5db462b09a1fec7",
+    "combat/render-stage-motion.mjs": "94338bb181d5b0813be022d932f85bfdf5838f9111baba2d24a9ed3b3be088eb",
+    "combat/stage-parallax.mjs": "1e01fa0b4932f0e670bb6fa746c48b57de0c726a5637891e68427a161aecc77d",
+    "combat/engine.mjs": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
+    "combat/session.mjs": "9dce5b9d2fff5316cd280c8f58038d06134935717c3fd637e76042e308a1d65e"
+  }
+}

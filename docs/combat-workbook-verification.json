@@ -1,245 +1,293 @@
 {
-  "schema": "encore-tracker-next-missing-review/v1",
-  "createdAt": "2026-11-20T14:09:38.397Z",
+  "schema": "encore-tracker-continuation-c-review/v1",
+  "createdAt": "2026-11-20T19:51:26.998Z",
   "gameVersion": "0.7.0",
-  "workbookSHA256": "048d758f614daf1ad388a12fed5955b853734c2c1c47d92fb7a6e493512eea12",
-  "trackerDataSHA256": "868975a52cb6e4f28adbf4bb98e957f142deef7a240472c4879c7c2c148feb56",
+  "workbookSHA256": "c73e603bbf3418cc72cb3a866912780781217566d190765748d55fe8bf507842",
+  "trackerDataSHA256": "770c112140dd5ec4442cb0f61053b807e2aad52b8e0f6cfafa0e859f9eefb962",
   "sourceDigests": {
-    "docs/art-generation/cast-next-missing-20261120/generation-completion.json": "454273e19fa72b2c5af96119d023b165da341f2f3c9b121ef65aeddef6314e25",
-    "docs/art-generation/cast-next-missing-20261120/asset-inventory.json": "e88d6bcd2f535fdceed1d586ce6810ae5321838079cf2663ecc2aba229785d60",
-    "docs/art-generation/cast-next-missing-20261120/qa-result.json": "7a0218805612a44aa17f14ccf6cf06db3e4eb1aa3fc716f20c830ac5a2882877",
-    "docs/art-generation/cast-next-missing-20261120/qa.log": "f0b0583d934bc00bba5d2a91a95401a2c6d9285f3a9c33692d2179171e496423",
-    "docs/art-generation/cast-next-missing-20261120/runtime-counts.json": "eab161df17f1f76eb80fadf62feac81d8f5bbef4b8982cec192ebeb7e33ded70",
-    "docs/art-generation/cast-next-missing-20261120/canvas-summary.json": "92e5d855462578cbed8845514a41ef0d0613ec463162ba6a2e5663d7a47aa594",
-    "docs/art-generation/cast-next-missing-20261120/build-integrity.json": "61509811b7761d218b150cdd946761ca2f60ea5a45198fc831b4cae303e2fece",
-    "docs/art-generation/cast-next-missing-20261120/verification.json": "168b8a406d44e7fe501b182777ae0273fac28b0a106086ea54891e16b6b3c274",
-    "docs/art-generation/cast-next-missing-20261120/visual-review.json": "5b7c18506a8bf941471b841d2a421a5eefe10616efd1958c75249ff886ea5f9b",
-    "docs/art-generation/cast-next-missing-20261120/independent-review.json": "d2fdcb1940dd6ee8e0d8eeeab1e7aa34b79017a3d7a9e8b60d4b0e243d246d85",
-    "docs/art-generation/stage-next-missing-20261120/asset-inventory.json": "1333a394299ddcee2db125c3c4ba472da57d936ed2a6b75258fdcb7727d62996",
-    "docs/art-generation/stage-next-missing-20261120/verification.json": "88992c02003666b32a4d92607dd21184f641ca38e3058601a6159ebde8e26bd7",
-    "docs/art-generation/stage-next-missing-20261120/review/canvas-review.json": "5f063ee874cf5a435a9964fd6132a292645cecdffd63ee093bf48b4c3ae264fa",
-    "docs/art-generation/stage-next-missing-20261120/visual-review.json": "7e5b65779c4d1cfd8ce54bced21f3dea17ee1fe9bad1a2d9bbc49acbd2ff22dc",
-    "docs/art-generation/stage-next-missing-20261120/targeted-tests.log": "96c8925f2fc22df83c6da1f8713592c0d98880612dc20ad4c960fe8408bbba9a",
-    "combat/data.mjs": "02d7d40bf9e27d27d3a8e8adc593861cbfd7a7e357b3886308efb7e17e7705ba",
-    "combat/costume-additions.mjs": "d1d9c194b316efca6db2f1833c94d820dfdf0b1f028ede091a40a411a6a0619f",
+    "docs/art-generation/continuation-20261120-c/verification.json": "926a001b97c9171d538b3b645017fa9a1e55c507e68e02c107e62186a7d50204",
+    "docs/art-generation/continuation-20261120-c/cafe/integration-proof.json": "3212e47a836f5e081cca91f7a4c27deab3bd202d048030915c300cf50ba698ba",
+    "docs/art-generation/continuation-20261120-c/cafe/generation-completion.json": "76bf053e41892848dca80b3b467e0070252400967aa15415e5f840eda435990c",
+    "docs/art-generation/continuation-20261120-c/cafe/asset-inventory.json": "cf6ccfab4e4d049aab9547721a4408a6260a527c84418ac882742c63addeabbc",
+    "docs/art-generation/continuation-20261120-c/canvas/canvas-review.json": "cd202ec3825953e800bc968793ca75e74bccece14181dc313a4683afa6429a1d",
+    "docs/art-generation/continuation-20261120-c/baseline.json": "2493bf0950134d03a63a6ab925c773fd97ecce20860a3ff5954c32a44d442387",
+    "docs/art-generation/continuation-20261120-c/qa.log": "570018fc3f5573a7e0e863d959aec1d3634e4fea2bf0d965f20d53a3ff11dcb4",
+    "combat/data.mjs": "3e8933c915c92380fe0c0a1d7342f67fb3d947dead8ba05749ac7139773c9a58",
+    "combat/costume-additions.mjs": "9a726b9ab27027263f09f41abc162ada236b626e156eeca4bc29e7b328ca412d",
+    "combat/costume-continuation-20261120.mjs": "d3774d17d6058e72081cc7a236f748fc26cc2532fe94ddf772e9ad6de638eb0f",
+    "combat/costume-resumption-20261120.mjs": "f83bde65b434f107abf7017e532a5600b2b43713f3b0e32308f8a1a2bd3be9d5",
+    "combat/costume-discoveries-20261120.mjs": "fb16daf1591a50602a68a84e2d7e5cafa12c230b2185ef4e1d627cec8a67565c",
+    "combat/costume-ribbit-20261120.mjs": "c8ecfaae5894a5f6b0f96a6ac8038dd38a6ce57cc2e22ea51bca5aaa6a495b91",
     "combat/costume-next-missing-20261120.mjs": "2ba4dbc117c128245422a7f595d91d0b172bfc91dc3e55a7d4b70424e86bd901",
+    "combat/costume-next-wave-20261120.mjs": "dd644e2868c8c3ca92564ea64a18cccee1c1765f364d92c19e83689b7ca6cd4e",
+    "combat/costume-order.mjs": "2df4a7f20dff74db43168a61c3b6285c34e7d2c9f2bfa64c8355b6c622aad62d",
+    "combat/costume-continuation-20261120-b.mjs": "3136498a0c30a45adbeabd801eeca2898d51b21eb8198b402685914c20f1b994",
+    "combat/costume-continuation-20261120-c.mjs": "ac5a20f76a4e75a170af9e4cf8b0d84396e9cfc5e6d93e65722c9119090b50d2",
+    "combat/crossovers.mjs": "16e0b81e1f1581bd0b66dd0c61b1b55172ec27481f4792734f7e041f04a93711",
+    "combat/crossover-npc-additions.mjs": "75eb80ed31b51961ef260e8430c5371844c174aff888daaf6110e3b4c290cd94",
     "combat/illustrations.mjs": "26aca8338be81bedbbbc1bb4bc59dd0aae8b7b7ef4d785cbbf353ac109c53b99",
-    "combat/render.mjs": "1bf5bbefabaa9330622a0eead66ece112889a0e1c354d902c977ea6f7abbdb56",
+    "combat/render.mjs": "0fd83aaa999edab666be0a7b4538338b57ec33cb2f90e041da18a47c7de87347",
     "combat/render-poses.mjs": "21e3afba8c19723ffdcb383402cc6339b63cb58df5d4323fda2ebde093ce0b29",
-    "combat/offline-manifest.mjs": "f6e631dc7e7c1ac497663c7f78b4e0f64c6100891b22e9230c4c70ee693a1585",
-    "combat/fidelity.mjs": "2e3ee2fe7c19e7ff40997abd2c5c8a1927fc7f5ef82e5522c7192225a8a3142e",
-    "combat/audio.mjs": "e774d5d5c50102dfd6b726affad4cdd546c9d05df070c928d6a3d9ba04c5e9ed",
-    "combat/audio-ambiences.mjs": "135a9fe8c62b99bf06c1182745bce6dbb2ffd31aca7d824e78852ff1d0470fc0",
-    "combat/progression.mjs": "d1c06308fdf48e57b4ef4261d952237be3878cdfacd13ab234d1c6bde9dfae3e",
+    "combat/offline-manifest.mjs": "c01a7b6ce1ac3335b4442bade97e75b435e65b5c8f30fda9c400a4e682a1f1c0",
+    "scripts/render-combat-character-review.mjs": "daa67f57a0c3a996bd8e91d2425010c13d238d6ac5d143ed091c24e78ba72443",
+    "docs/art-generation/continuation-20261120-c/browser-review/report.json": "7d95527ccb47ed2f429120600e9fe73e68e3076bdab9cad5cad2cc89b60dcae5",
+    "docs/art-generation/continuation-20261120-c/browser-review/run.log": "d6d1a4575a83b08de64ee2d09eab57f676221746357f98a51f89a4fc96c24021",
+    "docs/art-generation/continuation-20261120-c/browser-review/launch-preflight.json": "c4e17fa94ed1e4fb46c703e6928ec8adc5e5a10381a2825fb6fdf5c60edede7a",
+    "docs/art-generation/continuation-20261120-c/canvas/visual-review.json": "ed4f1f980d0416e3ca260d2d118a308a88a2193655aef022127245ade1165632",
+    "docs/art-generation/continuation-20261120-c/runtime-counts.json": "178a3e06c1bc449401d4b68a63362d6c3e3a7dba064c6fafaaa6b3d7d42b1437",
+    "docs/art-generation/continuation-20261120-c/qa-result.json": "967278604bb56b2005f4138f954f888afb862991c8b93232d24769a7d6042ec6",
+    "docs/art-generation/continuation-20261120-c/build-integrity.json": "bd10bfa70e0f9e1aa30d0c7034ad31525278989e408a97c8bf35db4775617e5e",
+    "docs/art-generation/continuation-20261120-c/browser-review/browser-review.json": "8dc05e1b5b2cabba995523f7fe1823ee9adb3e632c8d17dfc050ca6808ae8975",
+    "docs/art-generation/continuation-20261120-c/root-visual-review.json": "c1306383e917a7582138722f13a42ddabbb05f476547faf23ec6892874588ebc",
+    "combat/fidelity.mjs": "137a3a292f85e16989f0afd376e8d8bf9266a1569e378299f92c17eb9407e103",
+    "combat/audio.mjs": "438cd9eec28d2311713f02e331839a6e87cac22c6ddf30563841ffbdf244ba45",
+    "combat/audio-ambiences.mjs": "d613ccf9fd3dca2c235ac21f7fc22060b41df424e87db515642655ac84d96e91",
+    "combat/progression.mjs": "f17b878a5d3afc6d88fb1450cde340b9c716cf378c87d5c529c21fb4a45f88ee",
     "combat/stories.mjs": "763d0012eec0e59ac9454a9467596d7296b65cc64002918cc5db462b09a1fec7",
-    "combat/render-stage-motion.mjs": "327ff8a636f4a37cbd0d7f2d5063b51299c0708d992490189cc9db5d27c71e46",
+    "combat/render-stage-motion.mjs": "3b9c1b583b58a357196e3e1ca498ede8bf20dfd0151a5ec7ec13dc0e4c9051bc",
     "combat/stage-parallax.mjs": "1e01fa0b4932f0e670bb6fa746c48b57de0c726a5637891e68427a161aecc77d",
     "combat/engine.mjs": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
     "combat/session.mjs": "9dce5b9d2fff5316cd280c8f58038d06134935717c3fd637e76042e308a1d65e",
-    "tests/combat-undermap.test.mjs": "007f96cdf8363befaae5d2ecef143afbc56cf715702d9cfd02ab16d221b5261b",
-    "tests/fixtures/combat-pre-undermap.json": "3b50be4fe6c51b3cb47babf874eeb159db1b619d87f995aa9fcbde0ca19b9a0d",
-    "scripts/review-combat-undermap-20261120.mjs": "d8e2112169524aaa56bff1875dc4545b14c8e826e32017f4ecb94309eadff341",
-    "docs/art-generation/cast-next-missing-20261120/review/watermelongangle/character-canvas-review.json": "187d7de81be134bbbbf687d0cd6b269f81fd81e695f1ed299c498f6633a7c2ec",
-    "docs/art-generation/cast-next-missing-20261120/review/aquablasterpomni/character-canvas-review.json": "36a30fe9fae121969f6f525020932a62c3376ff4adcd7faba32edb1c7ef4273a",
-    "docs/art-generation/cast-next-missing-20261120/review/ptocaine/character-canvas-review.json": "b6b83b3a2599024b3a2e731abfd392ed5f50920602272f30e1db7a7563cc3d44",
-    "docs/art-generation/cast-next-missing-20261120/review/freakjax/character-canvas-review.json": "2e17ba3c75d9475e7a9cb770b8d11b10b2cd2311f899f9f758b2ee3e36214df1",
-    "docs/art-generation/cast-next-missing-20261120/candidate-review-watermelongangle.md": "6fb5690b971b08faebe8c97146dd50081ccb57e41c41bf3f03cc852fb6ea454b",
-    "docs/art-generation/cast-next-missing-20261120/candidate-review-aquablasterpomni.md": "7c05a5560efc9fcdd1d422fa00014d9fa5b10abddfcc094a014dd636eed8ff8b",
-    "docs/art-generation/cast-next-missing-20261120/candidate-review-ptocaine.md": "dc6cbdc345af04cb85a2385bc228514952d707ee8aa7fb1d9c95dbff2307e5f1",
-    "docs/art-generation/cast-next-missing-20261120/candidate-review-freakjax.md": "451175d25a37728e488debed77cb08f6a1b0040210ea524634f03148bfd30dee",
-    "docs/art-generation/cast-next-missing-20261120/candidate-review-australianjax.md": "8159b44594a6005e4caf7bda17d3dfea372d08479c3abfd7c96fbb45fe8fd29a",
-    "docs/art-generation/cast-next-missing-20261120/candidate-review-noirgangle.md": "62f3bbdba5d72994be5c74c1079f6ec4807daf3b0f59d355452504cec365226b",
-    "docs/art-generation/cast-next-missing-20261120/candidate-review-contortionistzooble.md": "7b29756366e47d92cebad8bb6c0f1c86ddb49e68935d3998b8eeeb61b334d817",
-    "docs/art-generation/cast-next-missing-20261120/candidate-review-hotdogabel.md": "2b2e98540533b05cec33d3dea2544a7b272f24808486fd30e6603c7dcb30f531",
-    "docs/art-generation/cast-next-missing-20261120/remaining-work.md": "e7b9aab6b15ea9996a134ac13a9b30f421b7d4a0c0bf1c288d924c2b0f0583f6",
-    "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/selection.json": "7656e6a88115569faf180d40d14d035d5d0cbe63394aa03bd478a5a9335bb679",
-    "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/stance.json": "47e828cf061eac5a34e57df1db1cca9eba230dd7cef3783fbab66a25fcfa8c06",
-    "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/intro.json": "fb70b5b10712a7ecc7d690f90f0815158f0424c16a0dcb7ec0e8e670f09d7d2f",
-    "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/attack.json": "a4a670e55ad6fd2005d747debc516907d5eae841173e16950e9f7079e5df94f9",
-    "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/heavy.json": "1b6fd66fa1fb71b6dc6f07c75db55f30fba26f4ddc03b851ab9b19e4f427ad83",
-    "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/hit.json": "30bc0ece6bb971d5aff399e860c07b36c28fe1025f598c8f178e370f052979b8",
-    "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/walk.json": "46a530d9f57fcc7f1820bd4d7b59d33b24cb77b2769d8285de2a8e7f495de557",
-    "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/jump.json": "51c484637db6065e9126d35c101709ffe740f6528be4761c6d4e95df672517b8",
-    "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/crouch.json": "1c47eca6a8cb42efd7705b981d0d76516d7e12435b1dca83777eab920eb6a3a1",
-    "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/victory.json": "68b5a6c7ab4c01ee3cb5740032895cdd2c1bccdfffeb3fb59c5f41e33b0fbc22",
-    "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/defeat.json": "0d0e19300533c415aa54cfd757ee5e1c8bf6cf09077f5573c1ec0e96edc0c7f1",
-    "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/selection.json": "9832163733dba4f90bf4d289ff283005d55ceb7c06539c2369ef3e52669151a2",
-    "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/stance.json": "e9018fdbd6d2bcb1655add134198438d1f590fedffc40616c173d343a7548ac6",
-    "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/intro.json": "5ddeddd19595569d4469406aacf8db44a1de6debabf1100ec533c17f186982eb",
-    "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/attack.json": "84c738174ff9cc5af898a9125115604eb60717a91fc1de781b621d7a7db2b956",
-    "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/heavy.json": "c447d3f08d45a8ac34fd9bd0c06cebef9a0100667dc84c284e500324be168cea",
-    "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/hit.json": "e02951b494a883f7ef80ed1bf8b05daafac90d9c042e2e0a61685856b337fdb6",
-    "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/walk.json": "1b9f13916d0ca4c41b4f3bb4a500188b6d838cfe50c5b2fa373bc6f90bc653db",
-    "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/jump.json": "76bbce9fa624081bf51f4047d793c11a90ec93e638addb5b42c714323f365dc4",
-    "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/crouch.json": "665c6d029820b2fad44aebf8e17254536478353b485da34d12361152d9c5b54d",
-    "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/victory.json": "2f92bf7dc279251d219f139abdcfc4993ae0c518bc5d801e75120a0c7d172bd9",
-    "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/defeat.json": "bfa76ce675000f36f54fef38cd192ebbf58573518f00080ec327046e2c4ccb33",
-    "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/selection.json": "04f651900aaffd6909e550f57c9261e08c990ab535367bf3ac674602c39dded5",
-    "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/stance.json": "0241b4719fdb266723f61e90471b388e50e4b39e3f393055d10079bd19482361",
-    "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/intro.json": "8afd3b71009637e06c440dfc13405a6a3023c1de1b8c1ab4d6bb06528736e7c3",
-    "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/attack.json": "c4dc8b4f2a9eac3685e79f146cbbe73e9b809f82d87ada06065b02bde09c15b3",
-    "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/heavy.json": "4509a804ddb9e8fb3da73d5868a1a943be9d6626bd1071ab03ab2c58d98bafb6",
-    "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/hit.json": "168f67974011e1c6fc489959bcf3f506c52be33b6aa709749d26bfd5a4a5c431",
-    "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/walk.json": "62307b977b870d6332ef14d82a8e62553a2b3a42b246d5f16c605ba60c227920",
-    "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/jump.json": "17bd5e46ce9467def3088f73d9d31b4935f47164f29df236ce43ea77ffca3f12",
-    "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/crouch.json": "9ddc043a1a6b26be72e98724865e67d0ea710bcc4c3d76ceaa1cbfea4517718b",
-    "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/victory.json": "e2273b0cca8fbeab1726b8f3a255783627591214ddc29050cce77e515c952d92",
-    "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/defeat.json": "f85053bf40eef4fed4ac71cc6e97dfc2164e12f3f042835512823507afbf11ea",
-    "docs/art-generation/cast-next-missing-20261120/generated/freakjax/selection.json": "87dba66b6186c5eed58c5050013f3657a3f118a37f67f3fde6da7ffe989b9f3a",
-    "docs/art-generation/cast-next-missing-20261120/generated/freakjax/stance.json": "8daa993f5726ed76ea8d5b856279fb6ea685d7553bd3842fd5e6508db511888e",
-    "docs/art-generation/cast-next-missing-20261120/generated/freakjax/intro.json": "ada90c14265c17941be4179b9b66e310fdfd0777030c7ed723dbeebcff61c5b5",
-    "docs/art-generation/cast-next-missing-20261120/generated/freakjax/attack.json": "fce6c43121dd0e540bd44baec0a46c924ad2fba2ced3de3d1c5f6dfd933d58d2",
-    "docs/art-generation/cast-next-missing-20261120/generated/freakjax/heavy.json": "0c92bc47b11e6ab07f4515c6c4f2d0ec8046baa7e706faa5809712db8f8a3d75",
-    "docs/art-generation/cast-next-missing-20261120/generated/freakjax/hit.json": "83f11cc92bcdeb8b36e39e90b695a274a5d7e923b20c8d1d2a0ecd583380daa8",
-    "docs/art-generation/cast-next-missing-20261120/generated/freakjax/walk.json": "bd7f7c40f1844a3891f691afbad3389cb0b46d4d1c14c499c8363d7da4d870bc",
-    "docs/art-generation/cast-next-missing-20261120/generated/freakjax/jump.json": "915b3b87cf73091ec88ca836cf7f88563f99f33a9f795da9a55de8cb51b0e4b4",
-    "docs/art-generation/cast-next-missing-20261120/generated/freakjax/crouch.json": "ff4c7c31f2ac9bef14392079f0beccb00db0f2b57a1936df408fc000ae29b211",
-    "docs/art-generation/cast-next-missing-20261120/generated/freakjax/victory.json": "089149846741891ff6ea148dc6c8baa2f40e43c1a89225c9e5a91c4d26341529",
-    "docs/art-generation/cast-next-missing-20261120/generated/freakjax/defeat.json": "6772bd5bd3227aba248fb73e1288f9add198338110bc27de54eaf000c204b2d4",
-    "scripts/update-combat-next-missing-workbook-20261120.mjs": "e3be5d67082c4546a4ebd2bc9a2e1bba1087386d14ffa88181185acf24a6fdd0",
+    "docs/art-generation/continuation-20261120-c/cafe/definitions/caferagatha.json": "7e7e4089742816d9ae310404d10ecc7ed0fd526e8be1452e604dfbbf979de654",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/selection.json": "22495257981b036a8e856f187b36138e8c69a46ce6a4d88ac6ce1806ebc3c231",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/jobs/selection.json": "77b25c6000cae66f25ab30a97a25a2af73c9a48ed8fbb81b17ef054f7c5f264e",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/selection.png": "9064974567908f7ae17624c94596822e4e0488120c5311e99651f900c760ede0",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/attempts/selection-initial/native.png": "9623578081cd56ef87e5cf4c7e33855d665bf3f60b27e89ad434d7505d6dfca3",
+    "docs/art-generation/continuation-20261120-b/cafe/references/animate-press-main.jpg": "135cc4a9f9a02c4ed0b9358c98754ab5339a054520c6ad53c9dd2a02323f397b",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/stance.json": "4258f9c2477611505731b8811be3986b833de707714522d3ea58eec94023b0bd",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/jobs/stance.json": "6d1b9734f5f1f340fd7b9886588cdeb7bd2b51a1443c45a39d725aaee768ab95",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/stance.png": "d3e60454e0b3dc41d9476dd0b408bb39184ccd0045512a90851a961a6bebde32",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/intro.json": "38c29c4bfcbe7c022c73a7f6121ad0e5c25ddd4f664f03089f5f09dea7e1c7ff",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/jobs/intro.json": "fe6fc4e887c0d76a90d0e9e44ccbdac5232f60697db94baa1e17ecd183905493",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/intro.png": "1703bfef82339f684610ca7227f2ecc86c79229b20249e2b2c684fd4bbb9ba04",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/attack.json": "e7074c4b0945d2515d82006c4a291779087e2606a167209601193f353134b82d",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/jobs/attack.json": "b0557c0a5e130dd06fb12239f43461a8f3468452482efc51b7978031b82cb44a",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/attack.png": "582684eb7be710aa0aa3caca326beaf72715cf55a215b12e129f3aa07ef328fa",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/heavy.json": "e015174f4620de05b03937df8b3dbfbc7f027e00d62de57a827dfecf08e432f3",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/jobs/heavy.json": "ab96ff9775e1f2558fb8eafe10c6ad5e1da92d3146ecc69052720abce115cbe4",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/heavy.png": "8d481a626b4356abfadb8796a235071ee832fab56283d0be702d887ff32dd206",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/hit.json": "135c34c4bb833efef128b5bcb8c262b78a2c7d641c657c8681f251abefb8ffea",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/jobs/hit.json": "68be45ec316c162e656240aa386ebdc97c8733266067de371516b8907a326da4",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/hit.png": "955d41314984a3e034fb0b72c065c0a52729bf854d140004287ed0fad7275752",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/walk.json": "af48372d4a2a7dae93196c94dfaac64a6a8ab0d158768e8a31651ee75137710a",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/jobs/walk.json": "d6fc62f3c5f4abd790e85118236a1521510aded1c243072f3555280e7b2109f9",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/walk.png": "78e9de3ad432a77e4429891509d81cdc55f734a6932df9fd3a9e1bec5cc0f545",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/jump.json": "2c7a1f068a89ac25225f5ce1e45bacf82f28c9bb998643fda517031e23f69dbe",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/jobs/jump.json": "454f9c3852b30aa0132239cb1341d6fa6caa47ee07c1b22583e228acf85d6b3e",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/jump.png": "6392d7d170cf1c2691faeafab938f23c3767d7a255a62e8abc076976bb1138c4",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/crouch.json": "7f4cd66a13dc1514c0fc99392f31b0502838ac2f5487faa8978a007b7b49022f",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/jobs/crouch.json": "b0667f7a81119cbe1d27d48ede79ae1fea7baa2ee688b9a5b1603c1b5106c224",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/crouch.png": "1db14ecec2189109213e035c285c85597e81bcfcc74bf1159fdb4360094432be",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/victory.json": "2908d9c3bf9b333a0338490105f6b7a563dd8d9e93eaffcebfd6fb84d5a840d7",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/jobs/victory.json": "736a4a6c405f3b8ab5ac0998a7407176e3505ec5bdfa95ab550d052161bfdb5d",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/victory.png": "c74b44c7fc4e4e92409e52d39932705a73220ae7c766cc3148f6a0e1900be367",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/defeat.json": "8b046e17510cbe08441488d218f8c06142f7b731c53b6874272685b1b4052fcd",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/jobs/defeat.json": "5aa5547880bd2c85783562b17dd6c2db670dfda0ec4ccf6e11c409b5afaa425d",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/defeat.png": "50d78eaac2217cb95d4f5a06afadb64a4d8a723b1c952d5dcbc7c2cb0378adce",
+    "docs/art-generation/continuation-20261120-c/cafe/definitions/cafegangle.json": "67d8e5543ce2904c4a97c025f3f97a112320e7eba941863cbeffae53bd1f6d9e",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/selection.json": "4f47699c07df95af3f977139a30db1a731818a80bb1952e1ed449571705a0788",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/jobs/selection.json": "0d1f57c2f5dcb1726750c230997976786df47cee10f1ada1e54bef981176314f",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/selection.png": "d47262a0cd8306917ad51b41999a412046b1376c6f75ce4a1f3e4ef166f35510",
+    "docs/art-generation/continuation-20261120-c/cafe/references/cafegangle-detail.png": "c5525413c608d28ab070538965a185a96c1e41d455a5d312b00eb85a0d6de3b2",
+    "assets/encore/stance/cafepomni.png": "dc2344f8df5ad54a171778f6a1aa0d0f66e7251b71da27dd43b7a4d58d3b050b",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/stance.json": "10a2f5f17d349d7dd58dd7f15b97a3f69f50df439c9d502f768521f202580591",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/jobs/stance.json": "acb9c2daeff576c3f90ef7006da367f10207c6a3279c3e0115ffe774931d226c",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/stance.png": "5137ed1bfba96c48365cda3e4aa16b23b555e544a384c536da32e2af71cb370b",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/intro.json": "60ffe58732b1d4c98c44b24faafc1dbd178c2542c606191f8a1b0f9ce7d1bc45",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/jobs/intro.json": "8b2a039fc526e7459beee4d44c366e6661afd7505686da36c222f0cdee86a179",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/intro.png": "b88abb8005adf392f2dd6f77979495e2ea1fbd9a6bce62edcb270c33cb6a46b3",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/attack.json": "9aa332b45a3354b77ce5e8919d598333e83f2a680fb3ea6547b0054ca75d600e",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/jobs/attack.json": "d388ef398e293dd7ba181dcc3669c4238f89b9a84ed93bf201c73df87f2a461c",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/attack.png": "5cfed0c6818fcd323fbd4494d31f7cad9ed5712f8ee16981c4f1924b203ce181",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/heavy.json": "5096fdde729ef3eb8fd6a2f594fd50ce57e71ccecaa34846be184df1d64a0fea",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/jobs/heavy.json": "e49c42671c7773c525617c6ccb888653ce45f5bd3f635eba1d4253647cddb79a",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/heavy.png": "e7195e188fc3a3fafd98054ef94a5e6b3a914e3996a22634060b90bd7b16b1f8",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/hit.json": "9560dbd8df34239250c376753cb4802441fc139aa69506b0b96a5c64eb89eb8e",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/jobs/hit.json": "1f97af492e32840a3189cea40710d8eae8575d4a1d51d6dc05b6db76474ed3ba",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/hit.png": "5c5487c32d05c60382505a0d5ac3dc8acae409edf2fc7ae180722d632576519a",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/walk.json": "90e6234500bd5531f0a6798a2bd2ae8d5f91ad0f1f32e39bb13023a0218308f4",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/jobs/walk.json": "8bda4df90c33ac21c07c39f3a170833cf1a6946172365411c9dcfc1d4a91d710",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/walk.png": "e6faa1a88848501f0c6e0dd3c42d8e2eed6256c30e610c9433ed5c9107120522",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/jump.json": "02cb9b03e93ffe16d629a5f4368686666ed815c515ed8afe09049155d6a3db81",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/jobs/jump.json": "17b12d518135a8c734835aa7baafea7b14f32c0aa8ba9dafc3c25eebc30f62a4",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/jump.png": "db72e894e2c946070442f04df9cf1d6dacd359ba8f8f4bb3ea7a5b0d030634c8",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/crouch.json": "3a7e2f18058b92d71511d05cddba883eea047cea9d1eb8a8881a1e9bfbfed7a5",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/jobs/crouch.json": "e14b7602169085cbd2c8b14a3a7478321c534bfe8b2f1458269aaef50d58ff69",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/crouch.png": "1f18b95099cfb6071b7fb65bcc611115dfceb062642f8370b3994c4238625ff6",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/victory.json": "64abd2786886f7b136081a68de874cef6a2ee9487764bf2fa7859b6f409ee744",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/jobs/victory.json": "051bf7bd69fc602b948f8a31abdc4324900e882382707128c56b7522815800b2",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/victory.png": "4a356a29adb7bd551ba401365122897bef127079891412ce7dc76ebfac03eebf",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/defeat.json": "e6656bb62e8cf07275ae72f6d021c2f318d3797c12f9bee4c78ef53b6f157735",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/jobs/defeat.json": "3513ec4faa1a8695693aa61175da8f69fe5efbf65350f372714ab1048f8c8dfc",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/defeat.png": "0f0803c1d170f877835b3dcd2a92bde7631eedd5af49524a420acc548e873b58",
+    "docs/art-generation/continuation-20261120-c/cafe/definitions/cafezooble.json": "f6cbef6ee7b484a505bbef70f6f45fcacf8f17d2c8c222b867a914e3ba0f8407",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/selection.json": "442103f2f55d8d485f2bbdd8f452970945b9212b29a509d7f4e918f9b0a636ab",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jobs/selection-correction.json": "9764555ababede86c0bea058094d951a0a3d16d6a8dd14c230be5fbb7c02192e",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/selection.png": "8e9b01071c18df0cc3a38e2f4e00916b11843a826dc828e398e04f55f3bfec8c",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/attempts/selection-halo/native.png": "d073adc2b7db8e8e8186bda0a66ddff04c64a302746ea8bb71800a5b7084d111",
+    "docs/art-generation/continuation-20261120-c/cafe/references/animate-press-main.jpg": "135cc4a9f9a02c4ed0b9358c98754ab5339a054520c6ad53c9dd2a02323f397b",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/stance.json": "b250668877ab2325fd9cd5dbfb7254eb4f3b88892fb4cb13b0428e44e97e0283",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jobs/stance.json": "b474ca574fb76cbb316182a933b29840c6d3ef1d3f224a24f673594ffe65bd18",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/stance.png": "b951065075dc8ca65acbb1a8341edd16c390433d22eb3972ef69605b2cb7d97e",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/intro.json": "0ad13a2b38a8c0931e18da9b8030d202ba354b3b229fcc686a1999bbb8ef1191",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jobs/intro.json": "7db5708184d2004a57b6290ce29e2e747c2e7cab35214978f567f9592e73f0f4",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/intro.png": "f88521d48d4a3cd3b6b3023c01e9934c0b136bcfc503a696af3890f3df743a0d",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/attack.json": "13dc87a491bc9a26f9160515864bac37e79fe0784dad1daca136eadda1614f9c",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jobs/attack.json": "acc1c3ad88f7d863bed1129116565905ca3954cd4eebec714850054b54900834",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/attack.png": "3cabd8a6148eba6f19f727545e74e2f1a932a4daff2505cd222476fc2a9ed0e4",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/heavy.json": "69153f99988dc477eba37841a1d987c2dd83ba23ac98bb6aa6c5086493d8b230",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jobs/heavy.json": "08e2b70bfbc2f75e905f56cdbb5a08a68449805eb337c7786d6810c7b9c8df14",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/heavy.png": "3f5a44e2862fe00bfaab680f588d9abfa286f794bad6dca5a79f5992baed4ca0",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/hit.json": "02dfbe02b147f293c18770e19a8eed7dc81ea16bdf3aa28cf720608eca9f50c8",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jobs/hit.json": "47af8ddcae0d0d65d46cee7fb777fe24e28a62edcd749825bb1aee5e805eb49f",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/hit.png": "0826116970b3c300a8e3b710e6250f1f8ea856dcf70ca7d62be1b8e83607fd09",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/walk.json": "8310874ccc70dd9e360d04e7c56760e53dd8499fcf70c69c973e7f233842d0cd",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jobs/walk.json": "3765a40ffc534e7dc5656cf9dfe85a6e4207666f2d6e9f5892029c6f1d6c565a",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/walk.png": "8814582e56af0b91d9cebdfc760e86805732e9aa1940e6c934deef30c8d1b2d5",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jump.json": "d69a26f3fb96e289167bb5014d7e7d8e381d00751139211e6b426ca838f69536",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jobs/jump.json": "85e9a97d344f6300828db32d1b7b8c69a1dd9b34b9596c7bd3de925ace71b892",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jump.png": "8f5649f1e79b3901b0551f4bf4d6e7b73ea6b046fa20b18bd0822190fbe103b5",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/crouch.json": "677b587e36a66430d8046426b8925859500c885f18669449a640ff5690fe029e",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jobs/crouch.json": "5e2bb03ef46fef6135e23332ab11b7289f8eca422fa59d8f790442a4fa1264fe",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/crouch.png": "99661cacefd65761cb37374d6a7860c235db2debc422e75b8a7821f74f84b039",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/victory.json": "f084fa15b6183d1d8ca9150f45f904a1c175a18dd9e2a22f4df48c21425b503c",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jobs/victory.json": "f9fd4103e8c1fae1b2dc548cf49df7e0b91276c22736afe9859d0f5a4e675bac",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/victory.png": "f92c6f194f2ff464af91b92d0af3fefcef17f2973624dc69090b3731f71d0b37",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/defeat.json": "f716a89d01f7e9efdf425f9eb7b487abed85bd225c3d34b3d2361f6a1b80e5b7",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jobs/defeat.json": "4d3b0a38d6e0dec472487fdacc211276ae4a7b876f34d83b1c43a2212e59767f",
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/defeat.png": "23d45949f6c9bb78c4ddbf3d4725e7e59af405fcbf0d504b1be2f13483272559",
+    "scripts/update-combat-continuation-c-workbook-20261120.mjs": "f337cbe8a895b148d25ea8aa8ae7a563c02a9d64dea426df7d110c31c42de9f5",
     "scripts/inspect-combat-workbook-native.py": "44d1a662c0f87804689fb090424eb700ab709b1f1335f7097bd3673f92764c8b",
     "scripts/workbook-publication.mjs": "5c7c3951ae8e1bec61f25de95a6ea890042ba931c16c42de59a55ee1f06be12e"
   },
   "baselineHashes": {
-    "docs/DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx": "aea3c94ea5921f9ed1fd0a4c46b769587c338b2a63d4d70fef8f18a70b0dda5a",
-    "docs/combat-tracker-data.json": "d84353598c621b729098937f9816b5930b960746d85072cbcdd637322157f7c8",
-    "docs/combat-workbook-verification.json": "7a109393d86a814cdb28129968d2fcf7f072c7da45df61777ef0a8360e18dcfd",
+    "docs/DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx": "4420382c7994e74bd0410fdcd1b6aa7aa01071540ef4b51e2fb247bc4a11cd3e",
+    "docs/combat-tracker-data.json": "839790a0a128e09573e0c1578ccecc46e1dc20819c75108650c666a2aeabb352",
+    "docs/combat-workbook-verification.json": "024bcd3c67b272eccd789af0ed89b6bc0b8a7e3da7f44e6ea2386ce7c1573127",
     "docs/combat-qa-evidence-0.7.0.json": "eb0edceabdd0f1e2a939f892327717ac59e0188c6a904f8aec9952ed089e74f5"
   },
   "baselineSnapshotHashes": {
-    "manifest.json": "fb8e407c86fde3103731392175bd151b2411b7b7c676c5fc2505070c988b0620",
-    "sheet-1.json": "569841db17a7061ea33098561c7836ee89f800b3c65aebc41f6650e3543a1ab3",
-    "sheet-2.json": "d390e938145393b5f88402f9d065b207e8f20acc6e666ef7e765c59078bf7c35",
+    "manifest.json": "1b9972851d74d572762f81eabd02a666e0f89e7eb2fab17e99cb82faa39ebb26",
+    "sheet-1.json": "1ec06fec327bb7bd605be64ea1063cd238d12872531486efae3677d36dfdeb4c",
+    "sheet-2.json": "17a09390fae11968270686467ac5a67abf562b6d3fa9025cd4f5eb1db0ad495e",
     "sheet-3.json": "bf8ba722b2e8a3031d3f38556f89a7b43596d7312ff17f1a0f5243dabb50a869",
     "sheet-4.json": "050f9143bd0be3d1aec07a4b1d931ff1d1444087a7f778f02ce1bfd8d6e31109",
-    "sheet-5.json": "08ef71da57e0472426aa19c67175a8a020c04424c4d77413bfc6bb036264a057",
+    "sheet-5.json": "858b4c5320abe79568082baeb5bebe65df1995102c8ca18212eaf457dccc3fed",
     "sheet-6.json": "3c4d61d76407417401b2a88ed319f6225670bfd3f3db6394305c57a1aa8b2e48",
-    "sheet-7.json": "21c77d13360206e4f6fed14a0e92116de07aa27ca81bcf584d61e6892e33bfbc",
+    "sheet-7.json": "cebaa31a8a9d535f2d17f77f1b8709a0c607051e55a3a6ce4aca898bb2056a43",
     "sheet-8.json": "ac1439a04a5e54d63c249162052da92494fa11d5157dcf816bec45e01ffece4e",
     "sheet-9.json": "276fd10f944e5aead9ec725cae3ffbed01903e4c215e3fb11c3fd6180f113350",
-    "sheet-10.json": "a949d346a44acfe4071508b35704a43defe0acd9fe505ad02a15b95d8f5e8997",
-    "sheet-11.json": "8c993f65d9ed8d510cc4f23979f71f76e5ccea6e4135b6562ca1c52617bebdf2"
+    "sheet-10.json": "65b1d0c1b5d3adb2b486f804ef69c8e390e4f5ebba46cf0e3ecc684d8f5da5f5",
+    "sheet-11.json": "4896b64f0bdb54787b41f5ffc6b34340ca97362c1667bc0dd463425c87348a03"
   },
   "counts": {
     "fighters": 54,
     "moves": 540,
-    "stages": 23,
+    "stages": 25,
     "modes": 9,
     "atlas": 179,
-    "variants": 468,
+    "variants": 480,
     "archiveOnly": 74,
     "storyRoutes": 54,
     "storyChapters": 216,
     "storyPanels": 324,
     "storyBriefings": 216,
-    "musicThemes": 23,
+    "musicThemes": 25,
     "soundEffects": 26,
-    "offlineImages": 5769,
-    "offlineBytes": 3059080660,
+    "offlineImages": 5907,
+    "offlineBytes": 3215944062,
     "features": 106,
-    "production": 3188,
+    "production": 3344,
     "scenarios": 348,
-    "qa": 2335,
+    "qa": 2493,
     "presentationSequences": 270,
-    "animatedStages": 23,
+    "animatedStages": 25,
     "rebuiltStages": 3,
     "refinedCostumes": 20,
     "costumeReplacementSheets": 5,
     "finishers": 162,
-    "audioAmbiences": 23,
+    "audioAmbiences": 25,
     "archiveVariants": 51,
     "dedicatedStages": 54,
     "friendships": 54,
-    "costumeAdditions": 39,
+    "costumeAdditions": 45,
     "pendingCostumeAdditions": 0,
     "pendingCostumeArtFiles": 0,
+    "crossovers": 384,
     "sheets": 11,
     "nativeTables": 10,
-    "sources": 153,
-    "addedProductionRows": 54,
-    "addedQaRows": 54,
-    "addedSourceRows": 4,
-    "addedStageRows": 1,
-    "costumePngs": 429,
-    "newIndividualDrawingRows": 44,
-    "historicalCells": 79280,
-    "totalNativeCells": 80346
+    "sources": 164,
+    "addedProductionRows": 36,
+    "addedQaRows": 39,
+    "addedSourceRows": 3,
+    "addedStageRows": 0,
+    "costumePngs": 495,
+    "crossoverCostumes": 384,
+    "crossoverDrawings": 3847,
+    "newIndividualDrawingRows": 33,
+    "historicalCells": 82697,
+    "totalNativeCells": 83423
   },
   "runtimeManifest": {
-    "offlineVersion": "0.7.0-cdc85685a728",
-    "artVersion": "cb628ae846008788",
-    "artFiles": 5769,
-    "artBytes": 3059080660,
-    "sha256": "f6e631dc7e7c1ac497663c7f78b4e0f64c6100891b22e9230c4c70ee693a1585"
+    "offlineVersion": "0.7.0-274a8da5b442",
+    "artVersion": "6a11a21a795ee221",
+    "artFiles": 5907,
+    "artBytes": 3215944062,
+    "sha256": "c01a7b6ce1ac3335b4442bade97e75b435e65b5c8f30fda9c400a4e682a1f1c0"
   },
   "currentQa": {
     "gameVersion": "0.7.0",
-    "campaign": "next29-2026-11-20",
+    "campaign": "continuation-c-2026-11-20",
     "complete": false,
-    "evidence": "docs/art-generation/cast-next-missing-20261120/verification.json",
-    "workbookEvidence": "docs/art-generation/workbook-next-missing-20261120/workbook-review.json",
+    "evidence": "docs/art-generation/continuation-20261120-c/verification.json",
+    "workbookEvidence": "docs/art-generation/continuation-20261120-c/workbook/workbook-review.json",
     "rowIds": [
-      "NEXT29-asset-watermelongangle-selection",
-      "NEXT29-asset-watermelongangle-stance",
-      "NEXT29-asset-watermelongangle-intro",
-      "NEXT29-asset-watermelongangle-attack",
-      "NEXT29-asset-watermelongangle-heavy",
-      "NEXT29-asset-watermelongangle-hit",
-      "NEXT29-asset-watermelongangle-walk",
-      "NEXT29-asset-watermelongangle-jump",
-      "NEXT29-asset-watermelongangle-crouch",
-      "NEXT29-asset-watermelongangle-victory",
-      "NEXT29-asset-watermelongangle-defeat",
-      "NEXT29-asset-aquablasterpomni-selection",
-      "NEXT29-asset-aquablasterpomni-stance",
-      "NEXT29-asset-aquablasterpomni-intro",
-      "NEXT29-asset-aquablasterpomni-attack",
-      "NEXT29-asset-aquablasterpomni-heavy",
-      "NEXT29-asset-aquablasterpomni-hit",
-      "NEXT29-asset-aquablasterpomni-walk",
-      "NEXT29-asset-aquablasterpomni-jump",
-      "NEXT29-asset-aquablasterpomni-crouch",
-      "NEXT29-asset-aquablasterpomni-victory",
-      "NEXT29-asset-aquablasterpomni-defeat",
-      "NEXT29-asset-ptocaine-selection",
-      "NEXT29-asset-ptocaine-stance",
-      "NEXT29-asset-ptocaine-intro",
-      "NEXT29-asset-ptocaine-attack",
-      "NEXT29-asset-ptocaine-heavy",
-      "NEXT29-asset-ptocaine-hit",
-      "NEXT29-asset-ptocaine-walk",
-      "NEXT29-asset-ptocaine-jump",
-      "NEXT29-asset-ptocaine-crouch",
-      "NEXT29-asset-ptocaine-victory",
-      "NEXT29-asset-ptocaine-defeat",
-      "NEXT29-asset-freakjax-selection",
-      "NEXT29-asset-freakjax-stance",
-      "NEXT29-asset-freakjax-intro",
-      "NEXT29-asset-freakjax-attack",
-      "NEXT29-asset-freakjax-heavy",
-      "NEXT29-asset-freakjax-hit",
-      "NEXT29-asset-freakjax-walk",
-      "NEXT29-asset-freakjax-jump",
-      "NEXT29-asset-freakjax-crouch",
-      "NEXT29-asset-freakjax-victory",
-      "NEXT29-asset-freakjax-defeat",
-      "UNDERMAP29-asset-far",
-      "UNDERMAP29-asset-mid",
-      "UNDERMAP29-asset-near",
-      "NEXT29-art",
-      "NEXT29-canvas",
-      "UNDERMAP29-canvas",
-      "NEXT29-node",
-      "NEXT29-integrity",
-      "NEXT29-browser",
-      "TRACKER29-update"
+      "WAVE32-asset-caferagatha-selection",
+      "WAVE32-asset-caferagatha-stance",
+      "WAVE32-asset-caferagatha-intro",
+      "WAVE32-asset-caferagatha-attack",
+      "WAVE32-asset-caferagatha-heavy",
+      "WAVE32-asset-caferagatha-hit",
+      "WAVE32-asset-caferagatha-walk",
+      "WAVE32-asset-caferagatha-jump",
+      "WAVE32-asset-caferagatha-crouch",
+      "WAVE32-asset-caferagatha-victory",
+      "WAVE32-asset-caferagatha-defeat",
+      "WAVE32-asset-cafegangle-selection",
+      "WAVE32-asset-cafegangle-stance",
+      "WAVE32-asset-cafegangle-intro",
+      "WAVE32-asset-cafegangle-attack",
+      "WAVE32-asset-cafegangle-heavy",
+      "WAVE32-asset-cafegangle-hit",
+      "WAVE32-asset-cafegangle-walk",
+      "WAVE32-asset-cafegangle-jump",
+      "WAVE32-asset-cafegangle-crouch",
+      "WAVE32-asset-cafegangle-victory",
+      "WAVE32-asset-cafegangle-defeat",
+      "WAVE32-asset-cafezooble-selection",
+      "WAVE32-asset-cafezooble-stance",
+      "WAVE32-asset-cafezooble-intro",
+      "WAVE32-asset-cafezooble-attack",
+      "WAVE32-asset-cafezooble-heavy",
+      "WAVE32-asset-cafezooble-hit",
+      "WAVE32-asset-cafezooble-walk",
+      "WAVE32-asset-cafezooble-jump",
+      "WAVE32-asset-cafezooble-crouch",
+      "WAVE32-asset-cafezooble-victory",
+      "WAVE32-asset-cafezooble-defeat",
+      "WAVE32-art",
+      "WAVE32-canvas",
+      "WAVE32-node",
+      "WAVE32-integrity",
+      "WAVE32-browser",
+      "TRACKER32-update"
     ],
     "totals": {
-      "nodeTests": 411,
-      "nodePassed": 411,
+      "nodeTests": 432,
+      "nodePassed": 432,
       "browserAssertionsExecutedByWorkbookUpdate": 0
     },
-    "scope": "Preuves du lot final importées avec leur date et leurs empreintes. La mise à jour contrôle le classeur et les octets des actifs sans se déclarer nouvelle exécution des tests du jeu."
+    "scope": "Preuves finales importées avec leurs dates et empreintes. Les tests du jeu ne sont pas présentés comme exécutés par le builder du classeur."
   },
   "formulas": {
     "count": 42,
@@ -251,407 +299,498 @@
   "nativeComparison": {
     "schema": "encore-native-workbook-comparison/v1",
     "status": "passed",
-    "cellsChecked": 80346,
+    "cellsChecked": 83423,
     "expectedSHA256": null,
-    "actualSHA256": "048d758f614daf1ad388a12fed5955b853734c2c1c47d92fb7a6e493512eea12",
+    "actualSHA256": "c73e603bbf3418cc72cb3a866912780781217566d190765748d55fe8bf507842",
     "expectedSnapshotHashes": {
-      "manifest.json": "781c0447b580ab60d0d69a43d419b01f4d52fd76fe0e8bddf487f781b30153ae",
-      "sheet-1.json": "d2c7348717c7b1c8ffafe0b3837714990e858c50c9d12c1efe4e5f7f27d9afb1",
-      "sheet-2.json": "dfc99df85e81fed8ba4c4f48372dbf48f8c8fb8dd142c049aab63736b3bb3e41",
+      "manifest.json": "cbd93ba0c78fa8dc5f003716494a63676d49f725c9da64b81c5abe9a228f850f",
+      "sheet-1.json": "472c0c236f4da5501e82f691eb29cfbcd3f73a94ae1d609f610a37c27705023f",
+      "sheet-2.json": "7df3dce9e8f4179a29edaf14c0d19e53fbd8db890a3531f6154dd59a1409937d",
       "sheet-3.json": "cb190954c7f66477b74cd2eda7f63d354c9f9a814ee2f878d18ce1a39365bce8",
       "sheet-4.json": "8cbea3eb38e6d8e57df000807619bfaa0a5f72e7b49c04d19f9f77e7d1ba43f3",
-      "sheet-5.json": "66b9a0a1daa15459e2d6c387822b1f24cd42cdf054071b57bda631aefeb201fe",
+      "sheet-5.json": "dce3cb8f46e7da55712fed91444a7d03dd34fd2a868dda31fb79bc5d0d34a937",
       "sheet-6.json": "e1b73192e588b2a3669df523d86b1609bd002cdcdaa1014a778825b33cd28409",
-      "sheet-7.json": "a29c7f08494c3dff8670a69d1a722d2f493afbcfda7e58f3ca2dc58b8d7f93b6",
+      "sheet-7.json": "311bdc7eda702f1ed04f4dc18258462a201d6ecad4fe5bc7b186ff0a2dc98632",
       "sheet-8.json": "7c8457e3e6e5875b2d87e48803a1c52648f4e842b661650ad8f4e5e5c3cdb3d5",
       "sheet-9.json": "5bd283aa6342e65f1311d468f2a2a434c63abfe6adc788d1cd8bbf99d49011f9",
-      "sheet-10.json": "af89759b46c43794d5efd8be835d9fe5dc079971e9b56f601d8bd03208ddb353",
-      "sheet-11.json": "b55eea3401b786fbb8ff9de3decdaef96f14bbfca284234aa73409dd11edd229"
+      "sheet-10.json": "182d7cf4a1902ffc13b90bbc2557f105c11dcecdb6254d0f23f71ec91a464876",
+      "sheet-11.json": "6f7b76ec9aba61fb8e5829b0ddbc1ac25008cf03e3fb250911a74d068a92234d"
     },
     "differences": []
   },
   "reimport": {
     "status": "passed",
-    "sha256": "048d758f614daf1ad388a12fed5955b853734c2c1c47d92fb7a6e493512eea12",
-    "planSha256": "bc458583311ddf14624f370636ce7854d884d6f0292ea168539ea8e97f780687",
-    "trackerDataSha256": "868975a52cb6e4f28adbf4bb98e957f142deef7a240472c4879c7c2c148feb56",
+    "sha256": "c73e603bbf3418cc72cb3a866912780781217566d190765748d55fe8bf507842",
+    "planSha256": "b52d17ef37419232a175b51184d3d3bc5a2a2c2fdb077d76d2e069fa6b8f21ab",
+    "trackerDataSha256": "770c112140dd5ec4442cb0f61053b807e2aad52b8e0f6cfafa0e859f9eefb962",
     "formulas": 42,
     "allTableRowsCompared": true,
     "sheets": 11,
     "nativeTables": 10
   },
   "visualReview": {
-    "schema": "encore-tracker-next-missing-visual-review/v1",
+    "schema": "encore-tracker-combined-visual-review/v1",
+    "createdAt": "2026-11-20T19:51:23.670975+00:00",
     "status": "accepted",
-    "createdAt": "2026-11-20T14:09:33.792Z",
-    "reviewer": "/root/tracker_recovery",
-    "workbookSHA256": "048d758f614daf1ad388a12fed5955b853734c2c1c47d92fb7a6e493512eea12",
-    "planSha256": "bc458583311ddf14624f370636ce7854d884d6f0292ea168539ea8e97f780687",
+    "workbookSHA256": "c73e603bbf3418cc72cb3a866912780781217566d190765748d55fe8bf507842",
+    "planSha256": "b52d17ef37419232a175b51184d3d3bc5a2a2c2fdb077d76d2e069fa6b8f21ab",
+    "reviewers": [
+      {
+        "file": "author-visual-review.json",
+        "sha256": "1d3046c8aad2015f0d94e09d888509ee911f637aa1b49ce88e50f6b07eea8efe",
+        "reviewer": "/root/resume_publication",
+        "views": 7,
+        "status": "accepted"
+      },
+      {
+        "file": "independent-visual-review.json",
+        "sha256": "0f06fdd1c048681fcf832831e18fd035fa69c3c8f937651a53113b7e5ed7b726",
+        "reviewer": "/root/generate_cafe_ragatha",
+        "views": 20,
+        "status": "accepted"
+      }
+    ],
     "views": [
       {
         "file": "summary-top.png",
-        "sheet": "Synthèse",
-        "range": "A1:H18",
-        "sha256": "df90c0035b44cbfe036bd3c95362c097a0e163ce0fa4117720bb61716460b1d5",
+        "sha256": "78a1a337c022a8469950bff487e7427199b5032a35338f02ae4c06f3b69d6d61",
         "status": "accepted",
-        "inspection": "Previously inspected accepted render; final render independently regenerated and exact PNG bytes unchanged"
+        "observations": "Synthèse, en-tête et totaux lisibles : 480 costumes, 45 tenues Circus et 495 PNG ; 3 344 lignes Production. Les 432 tests du lot sont datés et le navigateur local reste indiqué non exécuté. Aucune collision ni coupure de texte observée."
       },
       {
         "file": "summary-bottom.png",
-        "sheet": "Synthèse",
-        "range": "A19:H35",
-        "sha256": "7dc7cc83af3daa3025df49b01771806ef2b43318ffda3e05b949c5235dacf253",
+        "sha256": "d95ea47b87bf94bcf098063cc0d6a88603072206ed56a2cbc3b3d0cfc032309f",
         "status": "accepted",
-        "inspection": "Previously inspected accepted render; final render independently regenerated and exact PNG bytes unchanged"
+        "observations": "Le tableau QA affiche 2 493 lignes : 2 473 réussites, 17 non exécutées, 2 à vérifier, plus le constat historique partiel distinct. Le rappel 105 ensembles de base + 45 tenues (495 PNG) est lisible. Notes et limites de finition conservées."
       },
       {
-        "file": "stage-left.png",
-        "sheet": "Arènes",
-        "range": "A28:L28",
-        "sha256": "1518e4e20cf7acc9d0113f8f6e657ada93ed5adab3791f3b06987d8a08640514",
+        "file": "feature-pre-03.png",
+        "sha256": "4272024fff5069537332bd4d8b24eeb87d2bf8d74a1c2529df5650cce17aff35",
         "status": "accepted",
-        "inspection": "Previously inspected accepted render; final render independently regenerated and exact PNG bytes unchanged"
+        "observations": "La ligne PRE-03 conserve ses colonnes et son statut. Le total 480 est détaillé en 51 archives, 45 Circus et 384 crossovers ; les limites des 39 autres PNJ et sept séries de Ribbit restent explicites. Texte visible dans les cellules concernées."
       },
       {
-        "file": "stage-right.png",
-        "sheet": "Arènes",
-        "range": "M28:T28",
-        "sha256": "64fd233c4ccb8908e265d3d5fea21e373a6466293f6cfc83d12e2e67846446ca",
+        "file": "feature-prd-11.png",
+        "sha256": "1a8a7a7cdce3a600a4363247a03f8e59d1984bf87caa434f4574ebfb8fad8fec",
         "status": "accepted",
-        "inspection": "Previously inspected accepted render; final render independently regenerated and exact PNG bytes unchanged"
-      },
-      {
-        "file": "australian-reference.png",
-        "sheet": "Production",
-        "range": "A3027:J3027",
-        "sha256": "385827c0f57cdd075dafa7c42686d9a92414fe454c4568c68dea9f2553eec36a",
-        "status": "accepted",
-        "inspection": "Previously inspected accepted render; final render independently regenerated and exact PNG bytes unchanged"
+        "observations": "La ligne PRD-11 présente 54 combattants, 540 techniques, 25 arènes, 51 variantes historiques, 45 Circus et 384 crossovers. Le périmètre des références et les réserves graphiques restent lisibles ; aucune colonne écrasée."
       },
       {
         "file": "production-1.png",
+        "sha256": "17d1e8edd9643bc62700db5e84913f376a341e59fe08be617720aa5db9fac46b",
         "sheet": "Production",
-        "range": "A3140:J3143",
-        "sha256": "e1df3446eb6aff77e74352b18fc41d94a3924339d90ff87ec6dffd736c942d37",
+        "range": "A3314:J3316",
         "status": "accepted",
-        "inspection": "Previously inspected accepted render; final render independently regenerated and exact PNG bytes unchanged"
+        "reviewedRows": [
+          "WAVE32-caferagatha",
+          "WAVE32-cafegangle",
+          "WAVE32-cafezooble"
+        ],
+        "observations": [
+          "Rows 3314–3316 contain exactly the three Café families, each marked Implémenté with selection, stance and action-directory paths.",
+          "The 11-drawing scope, official-collaboration adaptations, differences from existing variants, 20 November 2026 reference date and open animation/canonical work are readable without clipping. The yellow J notes cells are blank."
+        ]
       },
       {
         "file": "production-2.png",
+        "sha256": "5cdb17bc4cf7879eec1fb60c771ec38cbec2e1ec5f2ff51d0edc8a40f70d1b7f",
         "sheet": "Production",
-        "range": "A3144:J3147",
-        "sha256": "961355909124da0dda64c9f42f0801405523b014d0aca85bbbcafc4229ebf492",
+        "range": "A3317:J3320",
         "status": "accepted",
-        "inspection": "Final corrected render opened and inspected"
+        "reviewedRows": [
+          "WAVE32-caferagatha-selection",
+          "WAVE32-caferagatha-stance",
+          "WAVE32-caferagatha-intro",
+          "WAVE32-caferagatha-attack"
+        ],
+        "observations": [
+          "Rows 3317–3320 contain Ragatha selection, stance, intro and attack with their individual IDs, active PNG paths, complete SHA-256 values and receipt paths.",
+          "All four native sizes read 1024 × 1536 RGBA; wrapped receipt/hash lines remain inside their cells. Green implementation statuses and blank yellow notes are intact."
+        ]
       },
       {
         "file": "production-3.png",
+        "sha256": "1cf9c60a2dd2cb845f585439c1faa25576d440db655006f777cbe9e3a143bf8f",
         "sheet": "Production",
-        "range": "A3148:J3151",
-        "sha256": "30d45585f8a4044909fb00478366144c5f0f7336b1286415e81d0cb6a8d41b7f",
+        "range": "A3321:J3324",
         "status": "accepted",
-        "inspection": "Final corrected render opened and inspected"
+        "reviewedRows": [
+          "WAVE32-caferagatha-heavy",
+          "WAVE32-caferagatha-hit",
+          "WAVE32-caferagatha-walk",
+          "WAVE32-caferagatha-jump"
+        ],
+        "observations": [
+          "Rows 3321–3324 contain Ragatha heavy, hit, walk and jump in the expected order with distinct hashes and matching PNG/receipt names.",
+          "Byte counts, 1024 × 1536 dimensions and the static-pose/animation limitation remain readable. No clipping or overlap is visible; yellow notes remain blank."
+        ]
       },
       {
         "file": "production-4.png",
+        "sha256": "2488d5e2582e7b75750592f30ee85164a9f2ec7f02b0fc78e9f0c96e4c5f45de",
         "sheet": "Production",
-        "range": "A3152:J3155",
-        "sha256": "2819e3f29cccdee2a603378f792456a8a25f4bf5c4cf2a6b7103d4567679bba2",
+        "range": "A3325:J3328",
         "status": "accepted",
-        "inspection": "Final corrected render opened and inspected"
+        "reviewedRows": [
+          "WAVE32-caferagatha-crouch",
+          "WAVE32-caferagatha-victory",
+          "WAVE32-caferagatha-defeat",
+          "WAVE32-cafegangle-selection"
+        ],
+        "observations": [
+          "Rows 3325–3328 complete Ragatha crouch, victory and defeat, then introduce Gangle selection.",
+          "The transition preserves the owner and file paths; Gangle selection correctly shows its distinct 1086 × 1448 native dimensions. The full evidence text fits and yellow notes are blank."
+        ]
       },
       {
         "file": "production-5.png",
+        "sha256": "8a9816bdbd97d49783a518c97200093abba419c52cc78a5417ad43c7075e4eaf",
         "sheet": "Production",
-        "range": "A3156:J3159",
-        "sha256": "184808344e96327e8e283af1a0aa3d5d47de546a81986a0415e139bc3d1f8222",
+        "range": "A3329:J3332",
         "status": "accepted",
-        "inspection": "Final corrected render opened and inspected"
+        "reviewedRows": [
+          "WAVE32-cafegangle-stance",
+          "WAVE32-cafegangle-intro",
+          "WAVE32-cafegangle-attack",
+          "WAVE32-cafegangle-heavy"
+        ],
+        "observations": [
+          "Rows 3329–3332 contain Gangle stance, intro, attack and heavy with complete, distinct evidence.",
+          "The 1199 × 1312 heavy size is retained beside the 1086 × 1448 rows; no forced common dimensions are claimed. Hashes and receipt paths wrap without clipping; yellow notes remain blank."
+        ]
       },
       {
         "file": "production-6.png",
+        "sha256": "9fa644c8de7da04a26ab0fea925c8aabb3bfe0cdbfb305a37ab31c9575ce24bd",
         "sheet": "Production",
-        "range": "A3160:J3163",
-        "sha256": "649cbe585910b8d873c77e663e261245b77dd56abe4df32f3756aa82e4265d5d",
+        "range": "A3333:J3336",
         "status": "accepted",
-        "inspection": "Final corrected render opened and inspected"
+        "reviewedRows": [
+          "WAVE32-cafegangle-hit",
+          "WAVE32-cafegangle-walk",
+          "WAVE32-cafegangle-jump",
+          "WAVE32-cafegangle-crouch"
+        ],
+        "observations": [
+          "Rows 3333–3336 contain Gangle hit, walk, jump and crouch, with 1198 × 1313 recorded for crouch.",
+          "All four IDs, active paths, receipt paths, full hashes and implementation statuses are visible. Scope text is complete and yellow notes remain blank."
+        ]
       },
       {
         "file": "production-7.png",
+        "sha256": "a618e58a89ff54d2de6e58f729f9c6e674701589bad69cb5b54e8f9a8a274784",
         "sheet": "Production",
-        "range": "A3164:J3167",
-        "sha256": "3841407a8cae42d59c93f388f27a8e9232dd98473446365508dfd38b543f0dbe",
+        "range": "A3337:J3340",
         "status": "accepted",
-        "inspection": "Final corrected render opened and inspected"
+        "reviewedRows": [
+          "WAVE32-cafegangle-victory",
+          "WAVE32-cafegangle-defeat",
+          "WAVE32-cafezooble-selection",
+          "WAVE32-cafezooble-stance"
+        ],
+        "observations": [
+          "Rows 3337–3340 contain Gangle victory/defeat followed by Zooble selection/stance.",
+          "The owner transition, different native sizes and corresponding receipt paths remain unambiguous; all content fits, with blank yellow notes."
+        ]
       },
       {
         "file": "production-8.png",
+        "sha256": "f8e95860dec5ff1a1f73c8634eb03547e71663ab15ace0075ef4044d69f6c027",
         "sheet": "Production",
-        "range": "A3168:J3171",
-        "sha256": "f584181f259634345dd20d9ca6dab4d732d95aff35312b36ac382648d11d1f97",
+        "range": "A3341:J3344",
         "status": "accepted",
-        "inspection": "Final corrected render opened and inspected"
+        "reviewedRows": [
+          "WAVE32-cafezooble-intro",
+          "WAVE32-cafezooble-attack",
+          "WAVE32-cafezooble-heavy",
+          "WAVE32-cafezooble-hit"
+        ],
+        "observations": [
+          "Rows 3341–3344 contain Zooble intro, attack, heavy and hit with distinct IDs and hashes.",
+          "The heavy drawing correctly retains its 1199 × 1312 dimensions while the other rows show 1024 × 1536; no clipped paths or scope text is visible. Yellow notes remain blank."
+        ]
       },
       {
         "file": "production-9.png",
+        "sha256": "01bc5694c2cb3ef301717d2fcba4fab78e3844b1df8d4018680de96dbf7869de",
         "sheet": "Production",
-        "range": "A3172:J3175",
-        "sha256": "f9fd42f5dab6f061e1cd2f66861dab49ad65674e9e29fa3ffc48ea2f140f6b1e",
+        "range": "A3345:J3348",
         "status": "accepted",
-        "inspection": "Final corrected render opened and inspected"
+        "reviewedRows": [
+          "WAVE32-cafezooble-walk",
+          "WAVE32-cafezooble-jump",
+          "WAVE32-cafezooble-crouch",
+          "WAVE32-cafezooble-victory"
+        ],
+        "observations": [
+          "Rows 3345–3348 contain Zooble walk, jump, crouch and victory in the expected order.",
+          "Their 1024 × 1536 dimensions, byte counts, full hashes, active PNG names and receipt paths are readable; statuses and blank yellow notes are preserved."
+        ]
       },
       {
         "file": "production-10.png",
+        "sha256": "fb1dae02419f528782836c6a3eb3695819dd0a7579e1caf825901738db4b865f",
         "sheet": "Production",
-        "range": "A3176:J3179",
-        "sha256": "2c59405dcc3072f6c0fda4e6f88608ad27a98e0d09140ed2f33a1109409b3185",
+        "range": "A3349:J3349",
         "status": "accepted",
-        "inspection": "Final corrected render opened and inspected"
-      },
-      {
-        "file": "production-11.png",
-        "sheet": "Production",
-        "range": "A3180:J3183",
-        "sha256": "d152c0e227ea4e0b4a2a1833e7e0ebba9c8cfc7d85f00fbc8e07b19b07727acc",
-        "status": "accepted",
-        "inspection": "Final corrected render opened and inspected"
-      },
-      {
-        "file": "production-12.png",
-        "sheet": "Production",
-        "range": "A3184:J3187",
-        "sha256": "09c51c3f6c0328ec1f6f0fa848c27ab771e17d363dc294efec612f0116afc9d1",
-        "status": "accepted",
-        "inspection": "Final corrected render opened and inspected"
-      },
-      {
-        "file": "production-13.png",
-        "sheet": "Production",
-        "range": "A3188:J3191",
-        "sha256": "33e76e0f44016475f6f9079f9705a668a8da109967e03248b0246cfbbf3b0da9",
-        "status": "accepted",
-        "inspection": "Previously inspected accepted render; final render independently regenerated and exact PNG bytes unchanged"
-      },
-      {
-        "file": "production-14.png",
-        "sheet": "Production",
-        "range": "A3192:J3193",
-        "sha256": "788856732b2656835c1ad6beae9a393dc9fb4a5d8dc72f10ec6e163462356688",
-        "status": "accepted",
-        "inspection": "Previously inspected accepted render; final render independently regenerated and exact PNG bytes unchanged"
+        "reviewedRows": [
+          "WAVE32-cafezooble-defeat"
+        ],
+        "observations": [
+          "Row 3349 contains Zooble defeat, the final one of exactly 33 drawing rows.",
+          "The complete SHA-256, 1468896-byte count, 1024 × 1536 dimensions, receipt path and open animation/canonical limitation fit within the single-row view; the yellow notes cell remains blank."
+        ]
       },
       {
         "file": "qa-1.png",
+        "sha256": "5b09daf95af8a3003df74540301d0f2d4dc64dd3ab709a7fabbf06cf5c4772c5",
         "sheet": "QA",
-        "range": "A2287:I2290",
-        "sha256": "e3e2fcf7c901f122299c95b4478e8bc8ed8f494f32312d7ee90de53b17f1aaa2",
+        "range": "A2460:I2463",
         "status": "accepted",
-        "inspection": "Previously inspected accepted render; final render independently regenerated and exact PNG bytes unchanged"
+        "reviewedRows": [
+          "WAVE32-asset-caferagatha-selection",
+          "WAVE32-asset-caferagatha-stance",
+          "WAVE32-asset-caferagatha-intro",
+          "WAVE32-asset-caferagatha-attack"
+        ],
+        "observations": [
+          "Rows 2460–2463 cover Ragatha selection, stance, intro and attack with individual WAVE32-asset IDs, Réussi statuses and P0 priority.",
+          "Active files, accepted receipts, full hashes and native dimensions are readable. Each row states that a pose image is neither an animation cycle nor episode certification; yellow I notes are blank."
+        ]
       },
       {
         "file": "qa-2.png",
+        "sha256": "e1674e115464f3915ac00416b6ead035bdf22fd3c614a8785649b7c4610de83d",
         "sheet": "QA",
-        "range": "A2291:I2294",
-        "sha256": "576bf5ff60445726669830c2f4caabdf09ab78f4915131db52c17fcf21c44b48",
+        "range": "A2464:I2467",
         "status": "accepted",
-        "inspection": "Previously inspected accepted render; final render independently regenerated and exact PNG bytes unchanged"
+        "reviewedRows": [
+          "WAVE32-asset-caferagatha-heavy",
+          "WAVE32-asset-caferagatha-hit",
+          "WAVE32-asset-caferagatha-walk",
+          "WAVE32-asset-caferagatha-jump"
+        ],
+        "observations": [
+          "Rows 2464–2467 cover Ragatha heavy, hit, walk and jump in the expected order with distinct hashes.",
+          "The active/archive/receipt equality statement and limits remain readable without overlap or clipping. Yellow notes are blank."
+        ]
       },
       {
         "file": "qa-3.png",
+        "sha256": "15d8a16dff25977b218c348440d2deaed03fba684fa5a733ab350b05ce818f83",
         "sheet": "QA",
-        "range": "A2295:I2298",
-        "sha256": "1b6724bbaa0f9ec3329175e79657c06853a8a246403f280feb8a04878487374e",
+        "range": "A2468:I2471",
         "status": "accepted",
-        "inspection": "Previously inspected accepted render; final render independently regenerated and exact PNG bytes unchanged"
+        "reviewedRows": [
+          "WAVE32-asset-caferagatha-crouch",
+          "WAVE32-asset-caferagatha-victory",
+          "WAVE32-asset-caferagatha-defeat",
+          "WAVE32-asset-cafegangle-selection"
+        ],
+        "observations": [
+          "Rows 2468–2471 cover Ragatha crouch, victory and defeat, followed by Gangle selection.",
+          "The owner transition, Gangle native dimensions and corresponding paths/hashes remain correct and visible; all four rows retain their scope limitation and blank yellow notes."
+        ]
       },
       {
         "file": "qa-4.png",
+        "sha256": "11eff60ed4be32669ef7aee09b3bbd27cd56a25d00973d4c6cc8019470eccf0f",
         "sheet": "QA",
-        "range": "A2299:I2302",
-        "sha256": "ab8298d16851c9fc430f1b3c1c257d40d00427779cd25851cffcbdd25957ece7",
+        "range": "A2472:I2475",
         "status": "accepted",
-        "inspection": "Previously inspected accepted render; final render independently regenerated and exact PNG bytes unchanged"
+        "reviewedRows": [
+          "WAVE32-asset-cafegangle-stance",
+          "WAVE32-asset-cafegangle-intro",
+          "WAVE32-asset-cafegangle-attack",
+          "WAVE32-asset-cafegangle-heavy"
+        ],
+        "observations": [
+          "Rows 2472–2475 cover Gangle stance, intro, attack and heavy.",
+          "The heavy row retains the 1199 × 1312 native size, distinct from the other three rows. Full SHA-256 strings, file/receipt paths and limitations are readable; yellow notes are blank."
+        ]
       },
       {
         "file": "qa-5.png",
+        "sha256": "e33b7f74a687d63a6950d82f27f0c1c62a4ad59b5644d0815977194d3ffa3e43",
         "sheet": "QA",
-        "range": "A2303:I2306",
-        "sha256": "ea9a871aff22e20f7f17d47deb48f256c6d51d6e1d0757da97344ddde49b7723",
+        "range": "A2476:I2479",
         "status": "accepted",
-        "inspection": "Previously inspected accepted render; final render independently regenerated and exact PNG bytes unchanged"
+        "reviewedRows": [
+          "WAVE32-asset-cafegangle-hit",
+          "WAVE32-asset-cafegangle-walk",
+          "WAVE32-asset-cafegangle-jump",
+          "WAVE32-asset-cafegangle-crouch"
+        ],
+        "observations": [
+          "Rows 2476–2479 cover Gangle hit, walk, jump and crouch with the expected individual IDs.",
+          "The 1198 × 1313 crouch dimensions are explicit; all evidence columns and the static-pose limitation fit within their cells, with blank yellow notes."
+        ]
       },
       {
         "file": "qa-6.png",
+        "sha256": "fc0179e8aadc0b08031a277cf631ce2f5a9e09b8a99b64780391ddbfab1c1d6c",
         "sheet": "QA",
-        "range": "A2307:I2310",
-        "sha256": "f002c119d9c3a37d2b5f9704758e8e4c3fc3cd1d9d732ce6150caa664beeeea0",
+        "range": "A2480:I2483",
         "status": "accepted",
-        "inspection": "Previously inspected accepted render; final render independently regenerated and exact PNG bytes unchanged"
+        "reviewedRows": [
+          "WAVE32-asset-cafegangle-victory",
+          "WAVE32-asset-cafegangle-defeat",
+          "WAVE32-asset-cafezooble-selection",
+          "WAVE32-asset-cafezooble-stance"
+        ],
+        "observations": [
+          "Rows 2480–2483 cover Gangle victory/defeat and Zooble selection/stance.",
+          "The owner change, variable native dimensions and corresponding complete hashes remain unambiguous. No clipping is visible and yellow notes are blank."
+        ]
       },
       {
         "file": "qa-7.png",
+        "sha256": "a6dc3d61827f8729c6e16da23726062f88a327a6676614a275377dd605c7f65c",
         "sheet": "QA",
-        "range": "A2311:I2314",
-        "sha256": "3dc228172ef5021dcd2e02d38485f4e58775fba396fa6af58d1984c9138bef2a",
+        "range": "A2484:I2487",
         "status": "accepted",
-        "inspection": "Previously inspected accepted render; final render independently regenerated and exact PNG bytes unchanged"
+        "reviewedRows": [
+          "WAVE32-asset-cafezooble-intro",
+          "WAVE32-asset-cafezooble-attack",
+          "WAVE32-asset-cafezooble-heavy",
+          "WAVE32-asset-cafezooble-hit"
+        ],
+        "observations": [
+          "Rows 2484–2487 cover Zooble intro, attack, heavy and hit with individual Réussi statuses.",
+          "The 1199 × 1312 heavy size and the other 1024 × 1536 sizes agree with Production. Full paths, hashes and scope text are visible; yellow notes are blank."
+        ]
       },
       {
         "file": "qa-8.png",
+        "sha256": "92e9c551babf48bf6e0b5d62dfc3611a9134e98821f931ddb78fe8216b38e773",
         "sheet": "QA",
-        "range": "A2315:I2318",
-        "sha256": "5e115d44bd61aa5c1a221f95f980591a16be27c4fa72f6f89ffac189261527dc",
+        "range": "A2488:I2491",
         "status": "accepted",
-        "inspection": "Previously inspected accepted render; final render independently regenerated and exact PNG bytes unchanged"
+        "reviewedRows": [
+          "WAVE32-asset-cafezooble-walk",
+          "WAVE32-asset-cafezooble-jump",
+          "WAVE32-asset-cafezooble-crouch",
+          "WAVE32-asset-cafezooble-victory"
+        ],
+        "observations": [
+          "Rows 2488–2491 cover Zooble walk, jump, crouch and victory, bringing the visible asset-QA sequence to 32 rows before the final defeat row.",
+          "All four hashes, dimensions, byte counts and active/receipt paths are complete and readable. Yellow notes remain blank."
+        ]
       },
       {
         "file": "qa-9.png",
+        "sha256": "44892db8ea1bd3e5e5ab2c64580f5bc77c02dca63e3ffadad291c4b2dfe0baed",
         "sheet": "QA",
-        "range": "A2319:I2322",
-        "sha256": "821ed3094d65954f3870785ca28555e9929f2ad004e9f649b03fbff931f6995b",
+        "range": "A2492:I2495",
         "status": "accepted",
-        "inspection": "Previously inspected accepted render; final render independently regenerated and exact PNG bytes unchanged"
+        "reviewedRows": [
+          "WAVE32-asset-cafezooble-defeat",
+          "WAVE32-art",
+          "WAVE32-canvas",
+          "WAVE32-node"
+        ],
+        "observations": [
+          "Row 2492 completes the 33rd individual asset check with Zooble defeat. Rows 2493–2495 separately record inventory, Canvas and Node/build evidence.",
+          "The summary reads 3 selections, 3 stances, 27 poses, 33 distinct native PNGs and 42202157 bytes; Canvas reads 60 checks and zero missing files.",
+          "The Node result reads 432 passed out of 432 with zero failures and two successful builds, dated 2026-11-20T19:41:26.550999+00:00. The qa.log and verification paths are complete, and the text distinguishes this dated run from historical totals. Yellow notes are blank."
+        ]
       },
       {
         "file": "qa-10.png",
+        "sha256": "bd09a495abce047698ddcd1e8f28537fd3c9426b38a92f290079a5ae9896e16c",
         "sheet": "QA",
-        "range": "A2323:I2326",
-        "sha256": "1067287ab2c33ee29a5494aaba516d633e42d263c248c531ac74cb90423e3ee9",
+        "range": "A2496:I2498",
         "status": "accepted",
-        "inspection": "Previously inspected accepted render; final render independently regenerated and exact PNG bytes unchanged"
-      },
-      {
-        "file": "qa-11.png",
-        "sheet": "QA",
-        "range": "A2327:I2330",
-        "sha256": "b9538d74c0273aba7c97dc87719fb964b61bde12397d3bd79f61e7e5c6e2cf22",
-        "status": "accepted",
-        "inspection": "Previously inspected accepted render; final render independently regenerated and exact PNG bytes unchanged"
-      },
-      {
-        "file": "qa-12.png",
-        "sheet": "QA",
-        "range": "A2331:I2334",
-        "sha256": "2bbb25fbf86635d1d4645568ff54d57b272af8e40c65e9564393a2d895807eb6",
-        "status": "accepted",
-        "inspection": "Previously inspected accepted render; final render independently regenerated and exact PNG bytes unchanged"
-      },
-      {
-        "file": "qa-13.png",
-        "sheet": "QA",
-        "range": "A2335:I2338",
-        "sha256": "0cedaf10810afaebfdd4273c6d6229a81fe93203a0e0db61edc1936f61c0e50b",
-        "status": "accepted",
-        "inspection": "Previously inspected accepted render; final render independently regenerated and exact PNG bytes unchanged"
-      },
-      {
-        "file": "qa-14.png",
-        "sheet": "QA",
-        "range": "A2339:I2340",
-        "sha256": "b012d071594e2a58b313cc8aaa196a413ae2e7bb9e55a287a817bf5f63918bb7",
-        "status": "accepted",
-        "inspection": "Previously inspected accepted render; final render independently regenerated and exact PNG bytes unchanged"
+        "reviewedRows": [
+          "WAVE32-integrity",
+          "WAVE32-browser",
+          "TRACKER32-update"
+        ],
+        "observations": [
+          "Rows 2496–2498 separately show distribution/history integrity, the unexecuted browser attempt and the tracker update.",
+          "Integrity records 66 image copies, 38 module copies and 5830 historical Encore files. The browser row visibly remains Non exécuté and explains the launch failure before navigation and zero browser checks.",
+          "Tracker evidence records 42 formulas, 11 sheets and 10 tables, with no desktop-Excel-session claim. All text fits within the reduced row heights; yellow notes are blank."
+        ]
       },
       {
         "file": "references-new.png",
-        "sheet": "Références",
-        "range": "A155:E158",
-        "sha256": "0169693b9a9fc818018856587791367d91624688249eaa33b913699d329b01a6",
+        "sha256": "5ce12a12201935b462cbf7ad626d2a25ecbc896b443273699a7b53cfaa3f50eb",
         "status": "accepted",
-        "inspection": "Previously inspected accepted render; final render independently regenerated and exact PNG bytes unchanged"
+        "observations": "Les trois sources Café apparaissent dans le bon ordre, Ragatha, Gangle, Zooble. Titres, URL et paragraphes de portée sont complets dans les cellules avec retour à la ligne. Distinctions des anciennes tenues et réserves sur le canon, les parties cachées et les animations conservées."
       },
       {
         "file": "references-offline.png",
-        "sheet": "Références",
-        "range": "A64:E64",
-        "sha256": "6830169e2c53d4f55dbe4863b6bc0f85c399c66d0ce5b8103a7f081e56631c01",
+        "sha256": "3321cf0227d5b2b0050175c866fbbbecf3c24a23bc12e58f7ca01c2242556cb5",
         "status": "accepted",
-        "inspection": "Previously inspected accepted render; final render independently regenerated and exact PNG bytes unchanged"
+        "observations": "La référence hors ligne affiche 5 907 images et 3 215 944 062 octets. Le texte sépare clairement le manifeste local et la publication GitHub ; la ligne reste lisible."
       },
       {
         "file": "references-footer.png",
-        "sheet": "Références",
-        "range": "A159:E169",
-        "sha256": "034491e64e34f2803b3529b5bf1c1ac9ef2423bda7930419b7bfcdc6d9a39c0c",
+        "sha256": "3584169f82ee61f983bec8faa82c50eed12b354a8eeae8c701e41a50b14255be",
         "status": "accepted",
-        "inspection": "Previously inspected accepted render; final render independently regenerated and exact PNG bytes unchanged"
+        "observations": "Le pied de Références est décalé de trois lignes, avec les onze lignes de légende 170 à 180. Définitions, notes utilisateur et limites QA restent visibles, dans leur ordre et sans collision."
       }
     ],
-    "baselineViewsInspected": 6,
-    "finalViewsAccepted": 36,
-    "method": {
-      "initialViewsOpened": 36,
-      "initialAcceptedUnchanged": 25,
-      "correctedFinalViewsOpened": 11,
-      "allFinalPngDigestsVerified": true
-    },
-    "observations": [
-      "The 44 new individual Production rows show complete dimensions, byte sizes, SHA-256 values and receipt paths after a minimum row height of 140 points; no vertical clipping remains in the inspected renders.",
-      "The four family rows appear in the required order: watermelongangle, aquablasterpomni, ptocaine, freakjax; individual drawing rows do not duplicate the costume count.",
-      "The summary displays 23 shared stages, 468 costumes, 3,188 Production rows and 2,335 QA rows. Four new source rows bring the reference count to 153.",
-      "The six new stage Production rows, the three native stage PNG checks and final QA evidence are visible; native dimensions are 1672 by 941 pixels.",
-      "The new browser QA row remains Non exécuté. The Australian Jax row remains À vérifier and says the khaki shorts are confirmed while the feet remain masked.",
-      "The original alternating fills, status colors, yellow user-note columns and reference footer remain readable and aligned."
-    ],
-    "correctionHistory": {
-      "initialReview": "initial-visual-review.json",
-      "initialNativeComparison": "initial-native-comparison.json",
-      "correctedFiles": [
-        "production-2.png",
-        "production-3.png",
-        "production-4.png",
-        "production-5.png",
-        "production-6.png",
-        "production-7.png",
-        "production-8.png",
-        "production-9.png",
-        "production-10.png",
-        "production-11.png",
-        "production-12.png"
-      ],
-      "unchangedAcceptedFiles": [
-        "summary-top.png",
-        "summary-bottom.png",
-        "stage-left.png",
-        "stage-right.png",
-        "australian-reference.png",
-        "production-1.png",
-        "production-13.png",
-        "production-14.png",
-        "qa-1.png",
-        "qa-2.png",
-        "qa-3.png",
-        "qa-4.png",
-        "qa-5.png",
-        "qa-6.png",
-        "qa-7.png",
-        "qa-8.png",
-        "qa-9.png",
-        "qa-10.png",
-        "qa-11.png",
-        "qa-12.png",
-        "qa-13.png",
-        "qa-14.png",
-        "references-new.png",
-        "references-offline.png",
-        "references-footer.png"
-      ]
-    },
+    "concreteDefects": [],
     "limitations": [
-      "This review examines rendered worksheet regions and the recorded native comparison; it is not a desktop Excel session.",
-      "The game QA, Canvas evidence and canonical-art limitations retain the exact scopes recorded by the frozen generation wave.",
-      "The wide original workbook column layout is retained; detailed image views may require zoom for reading at normal desktop width."
+      "Revue des 27 vues finales du classeur réimporté, distincte des quatre vues de base.",
+      "Aucune session Excel de bureau, exécution navigateur ni approbation canonique des dessins n’est revendiquée par cette revue."
     ]
+  },
+  "baselineVisualReview": {
+    "schema": "encore-tracker-baseline-visual-review/v1",
+    "status": "accepted_as_baseline",
+    "reviewedAt": "2026-11-20T19:31:34.810Z",
+    "reviewer": "resume_publication",
+    "workbookSHA256": "4420382c7994e74bd0410fdcd1b6aa7aa01071540ef4b51e2fb247bc4a11cd3e",
+    "views": [
+      {
+        "file": "baseline-summary.png",
+        "sha256": "cd219272b2c118cdc3233e6fa17b7c31c833ca9c6f3cd812eb7dc3de50b0867b",
+        "bytes": 124801,
+        "observations": [
+          "Totals 54 fighters, 540 techniques, 25 arenas, 477 costumes, 3,308 Production. Violet headings, spacing and existing incomplete-art statuses read clearly."
+        ],
+        "status": "accepted"
+      },
+      {
+        "file": "baseline-production.png",
+        "sha256": "c6364f147bf4b238e065069fe0c19d3738be10ef98731318fcb818d71a5a13d7",
+        "bytes": 267292,
+        "observations": [
+          "Existing Cafe Kinger, Cafe Pomni and Ribbit Tari family rows retain stable IDs, green implemented statuses, source scopes and blank yellow note cells. Full row text fits."
+        ],
+        "status": "accepted"
+      },
+      {
+        "file": "baseline-qa.png",
+        "sha256": "f28564af0790de68768189198a4001a1c1ca8c6ea24208305e43f5b72f09efe0",
+        "bytes": 99430,
+        "observations": [
+          "Browser non-executed row and previous tracker execution row are visible; proof paths and limitations fit without vertical clipping."
+        ],
+        "status": "accepted"
+      },
+      {
+        "file": "baseline-references.png",
+        "sha256": "ac616450bd1b6c9c08a35f1ecb5be0f576e2abc50bffb540c189205cd76e5676",
+        "bytes": 95064,
+        "observations": [
+          "Preserved footer defines statuses, user notes and QA limits. Distinct title row and readable cells through the footer."
+        ],
+        "status": "accepted"
+      }
+    ],
+    "scope": "Four newly rendered, directly inspected views of the installed baseline. No new Café C execution status is asserted."
   },
   "assetSlotVerification": {
     "schema": "encore-tracker-asset-slots/v1",
     "status": "passed",
-    "verifiedSlots": 44,
+    "verifiedSlots": 33,
     "order": [
-      "watermelongangle",
-      "aquablasterpomni",
-      "ptocaine",
-      "freakjax"
+      "caferagatha",
+      "cafegangle",
+      "cafezooble"
     ],
     "slots": [
       "selection",
@@ -668,15 +807,15 @@
     ],
     "checks": [
       {
-        "appearanceId": "watermelongangle",
+        "appearanceId": "caferagatha",
         "slot": "selection",
-        "file": "assets/encore/selection/watermelongangle.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/selection.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/selection.json",
-        "sha256": "35b49ea9a786736b9ce39852ad8e8c7d0919de2d9ac972d37424a028e0029d65",
-        "bytes": 1527470,
-        "productionId": "NEXT29-watermelongangle-selection",
-        "qaId": "NEXT29-asset-watermelongangle-selection",
+        "file": "assets/encore/selection/caferagatha.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/selection.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/selection.json",
+        "sha256": "9064974567908f7ae17624c94596822e4e0488120c5311e99651f900c760ede0",
+        "bytes": 1531705,
+        "productionId": "WAVE32-caferagatha-selection",
+        "qaId": "WAVE32-asset-caferagatha-selection",
         "nativeCopyVerified": true,
         "offline": true,
         "dimensions": [
@@ -685,526 +824,262 @@
         ],
         "mode": "RGBA",
         "alpha12Bounds": [
-          76,
-          16,
-          945,
-          1528
+          192,
+          178,
+          816,
+          1494
         ]
       },
       {
-        "appearanceId": "watermelongangle",
+        "appearanceId": "caferagatha",
         "slot": "stance",
-        "file": "assets/encore/stance/watermelongangle.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/stance.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/stance.json",
-        "sha256": "7a1e29f4c0cc21f560ec9234b4de37540782b80a868e425b29cb9ccaad9f311a",
-        "bytes": 610564,
-        "productionId": "NEXT29-watermelongangle-stance",
-        "qaId": "NEXT29-asset-watermelongangle-stance",
+        "file": "assets/encore/stance/caferagatha.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/stance.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/stance.json",
+        "sha256": "d3e60454e0b3dc41d9476dd0b408bb39184ccd0045512a90851a961a6bebde32",
+        "bytes": 1524985,
+        "productionId": "WAVE32-caferagatha-stance",
+        "qaId": "WAVE32-asset-caferagatha-stance",
         "nativeCopyVerified": true,
         "offline": true,
         "dimensions": [
-          1199,
-          1312
+          1024,
+          1536
         ],
         "mode": "RGBA",
         "alpha12Bounds": [
-          236,
-          168,
-          1000,
-          1183
+          152,
+          178,
+          859,
+          1432
         ]
       },
       {
-        "appearanceId": "watermelongangle",
+        "appearanceId": "caferagatha",
         "slot": "intro",
-        "file": "assets/encore/poses/watermelongangle/intro.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/intro.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/intro.json",
-        "sha256": "0867094ac29df1cbacdce6752ae82f34dd9b64f8fefa58fc63e6941114b90b62",
-        "bytes": 495465,
-        "productionId": "NEXT29-watermelongangle-intro",
-        "qaId": "NEXT29-asset-watermelongangle-intro",
+        "file": "assets/encore/poses/caferagatha/intro.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/intro.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/intro.json",
+        "sha256": "1703bfef82339f684610ca7227f2ecc86c79229b20249e2b2c684fd4bbb9ba04",
+        "bytes": 1507690,
+        "productionId": "WAVE32-caferagatha-intro",
+        "qaId": "WAVE32-asset-caferagatha-intro",
         "nativeCopyVerified": true,
         "offline": true,
         "dimensions": [
-          1312,
-          1199
+          1024,
+          1536
         ],
         "mode": "RGBA",
         "alpha12Bounds": [
-          355,
           162,
-          977,
-          1062
+          176,
+          859,
+          1455
         ]
       },
       {
-        "appearanceId": "watermelongangle",
+        "appearanceId": "caferagatha",
         "slot": "attack",
-        "file": "assets/encore/poses/watermelongangle/attack.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/attack.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/attack.json",
-        "sha256": "79ee1961a5d0285ed540cfc6b8b8d0cedb90d92e6794a357fd36fb61fe122d11",
-        "bytes": 554595,
-        "productionId": "NEXT29-watermelongangle-attack",
-        "qaId": "NEXT29-asset-watermelongangle-attack",
+        "file": "assets/encore/poses/caferagatha/attack.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/attack.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/attack.json",
+        "sha256": "582684eb7be710aa0aa3caca326beaf72715cf55a215b12e129f3aa07ef328fa",
+        "bytes": 1560043,
+        "productionId": "WAVE32-caferagatha-attack",
+        "qaId": "WAVE32-asset-caferagatha-attack",
         "nativeCopyVerified": true,
         "offline": true,
         "dimensions": [
-          1312,
-          1199
+          1024,
+          1536
         ],
         "mode": "RGBA",
         "alpha12Bounds": [
-          133,
-          185,
-          1210,
-          1040
+          103,
+          172,
+          956,
+          1433
         ]
       },
       {
-        "appearanceId": "watermelongangle",
+        "appearanceId": "caferagatha",
         "slot": "heavy",
-        "file": "assets/encore/poses/watermelongangle/heavy.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/heavy.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/heavy.json",
-        "sha256": "fc0987cad03482b06e5e4a3a48e95d41b100740e6cd114c6649b312103e80fc2",
-        "bytes": 542307,
-        "productionId": "NEXT29-watermelongangle-heavy",
-        "qaId": "NEXT29-asset-watermelongangle-heavy",
+        "file": "assets/encore/poses/caferagatha/heavy.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/heavy.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/heavy.json",
+        "sha256": "8d481a626b4356abfadb8796a235071ee832fab56283d0be702d887ff32dd206",
+        "bytes": 1536729,
+        "productionId": "WAVE32-caferagatha-heavy",
+        "qaId": "WAVE32-asset-caferagatha-heavy",
         "nativeCopyVerified": true,
         "offline": true,
         "dimensions": [
-          1199,
-          1312
+          1024,
+          1536
         ],
         "mode": "RGBA",
         "alpha12Bounds": [
-          318,
-          134,
-          928,
-          1201
+          46,
+          207,
+          955,
+          1427
         ]
       },
       {
-        "appearanceId": "watermelongangle",
+        "appearanceId": "caferagatha",
         "slot": "hit",
-        "file": "assets/encore/poses/watermelongangle/hit.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/hit.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/hit.json",
-        "sha256": "e9ff8240b557ddf0fb527090711e5b2a6f0cd6a10098fe86c8ca15e3328e6648",
-        "bytes": 544695,
-        "productionId": "NEXT29-watermelongangle-hit",
-        "qaId": "NEXT29-asset-watermelongangle-hit",
+        "file": "assets/encore/poses/caferagatha/hit.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/hit.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/hit.json",
+        "sha256": "955d41314984a3e034fb0b72c065c0a52729bf854d140004287ed0fad7275752",
+        "bytes": 1485446,
+        "productionId": "WAVE32-caferagatha-hit",
+        "qaId": "WAVE32-asset-caferagatha-hit",
         "nativeCopyVerified": true,
         "offline": true,
         "dimensions": [
-          1199,
-          1312
+          1024,
+          1536
         ],
         "mode": "RGBA",
         "alpha12Bounds": [
-          185,
-          223,
-          837,
-          1163
+          84,
+          229,
+          887,
+          1441
         ]
       },
       {
-        "appearanceId": "watermelongangle",
+        "appearanceId": "caferagatha",
         "slot": "walk",
-        "file": "assets/encore/poses/watermelongangle/walk.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/walk.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/walk.json",
-        "sha256": "05ac74df9d231f1bfa045513abeee5c8f9a7afb3d6bb053a79bbd20a6a55e035",
-        "bytes": 586881,
-        "productionId": "NEXT29-watermelongangle-walk",
-        "qaId": "NEXT29-asset-watermelongangle-walk",
+        "file": "assets/encore/poses/caferagatha/walk.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/walk.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/walk.json",
+        "sha256": "78e9de3ad432a77e4429891509d81cdc55f734a6932df9fd3a9e1bec5cc0f545",
+        "bytes": 1576424,
+        "productionId": "WAVE32-caferagatha-walk",
+        "qaId": "WAVE32-asset-caferagatha-walk",
         "nativeCopyVerified": true,
         "offline": true,
         "dimensions": [
-          1199,
-          1312
+          1024,
+          1536
         ],
         "mode": "RGBA",
         "alpha12Bounds": [
-          238,
-          153,
-          917,
-          1168
+          131,
+          131,
+          890,
+          1446
         ]
       },
       {
-        "appearanceId": "watermelongangle",
+        "appearanceId": "caferagatha",
         "slot": "jump",
-        "file": "assets/encore/poses/watermelongangle/jump.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/jump.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/jump.json",
-        "sha256": "830577977bf8be9383870d3264b3ec155376fd7bbae908a637b359ea70f991e9",
-        "bytes": 627177,
-        "productionId": "NEXT29-watermelongangle-jump",
-        "qaId": "NEXT29-asset-watermelongangle-jump",
+        "file": "assets/encore/poses/caferagatha/jump.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/jump.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/jump.json",
+        "sha256": "6392d7d170cf1c2691faeafab938f23c3767d7a255a62e8abc076976bb1138c4",
+        "bytes": 1552602,
+        "productionId": "WAVE32-caferagatha-jump",
+        "qaId": "WAVE32-asset-caferagatha-jump",
         "nativeCopyVerified": true,
         "offline": true,
         "dimensions": [
-          1199,
-          1312
+          1024,
+          1536
         ],
         "mode": "RGBA",
         "alpha12Bounds": [
-          210,
-          139,
-          984,
-          1113
+          157,
+          172,
+          931,
+          1407
         ]
       },
       {
-        "appearanceId": "watermelongangle",
+        "appearanceId": "caferagatha",
         "slot": "crouch",
-        "file": "assets/encore/poses/watermelongangle/crouch.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/crouch.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/crouch.json",
-        "sha256": "06e009c6ee6227a068ae39ee920bfb973d47904bb4591e72ffd93fc3de6d5b23",
-        "bytes": 554025,
-        "productionId": "NEXT29-watermelongangle-crouch",
-        "qaId": "NEXT29-asset-watermelongangle-crouch",
+        "file": "assets/encore/poses/caferagatha/crouch.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/crouch.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/crouch.json",
+        "sha256": "1db14ecec2189109213e035c285c85597e81bcfcc74bf1159fdb4360094432be",
+        "bytes": 1500321,
+        "productionId": "WAVE32-caferagatha-crouch",
+        "qaId": "WAVE32-asset-caferagatha-crouch",
         "nativeCopyVerified": true,
         "offline": true,
         "dimensions": [
-          1312,
-          1199
+          1024,
+          1536
         ],
         "mode": "RGBA",
         "alpha12Bounds": [
-          304,
-          295,
-          1025,
-          1062
+          114,
+          294,
+          955,
+          1380
         ]
       },
       {
-        "appearanceId": "watermelongangle",
+        "appearanceId": "caferagatha",
         "slot": "victory",
-        "file": "assets/encore/poses/watermelongangle/victory.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/victory.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/victory.json",
-        "sha256": "08465899e55f5602a125b166f75c39d38ea6c82193503e41b05e734330c8584d",
-        "bytes": 545167,
-        "productionId": "NEXT29-watermelongangle-victory",
-        "qaId": "NEXT29-asset-watermelongangle-victory",
+        "file": "assets/encore/poses/caferagatha/victory.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/victory.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/victory.json",
+        "sha256": "c74b44c7fc4e4e92409e52d39932705a73220ae7c766cc3148f6a0e1900be367",
+        "bytes": 1520099,
+        "productionId": "WAVE32-caferagatha-victory",
+        "qaId": "WAVE32-asset-caferagatha-victory",
         "nativeCopyVerified": true,
         "offline": true,
         "dimensions": [
-          1199,
-          1312
+          1024,
+          1536
         ],
         "mode": "RGBA",
         "alpha12Bounds": [
-          191,
-          138,
-          976,
-          1203
+          190,
+          160,
+          829,
+          1469
         ]
       },
       {
-        "appearanceId": "watermelongangle",
+        "appearanceId": "caferagatha",
         "slot": "defeat",
-        "file": "assets/encore/poses/watermelongangle/defeat.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/defeat.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/defeat.json",
-        "sha256": "67c8813222047c3bb8cb5430d034775dd2999b76041b07780654127ee0eff3ee",
-        "bytes": 688903,
-        "productionId": "NEXT29-watermelongangle-defeat",
-        "qaId": "NEXT29-asset-watermelongangle-defeat",
+        "file": "assets/encore/poses/caferagatha/defeat.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/defeat.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/defeat.json",
+        "sha256": "50d78eaac2217cb95d4f5a06afadb64a4d8a723b1c952d5dcbc7c2cb0378adce",
+        "bytes": 1455459,
+        "productionId": "WAVE32-caferagatha-defeat",
+        "qaId": "WAVE32-asset-caferagatha-defeat",
         "nativeCopyVerified": true,
         "offline": true,
         "dimensions": [
-          1254,
-          1254
+          1024,
+          1536
         ],
         "mode": "RGBA",
         "alpha12Bounds": [
-          184,
-          185,
-          1039,
-          1154
+          44,
+          294,
+          981,
+          1362
         ]
       },
       {
-        "appearanceId": "aquablasterpomni",
+        "appearanceId": "cafegangle",
         "slot": "selection",
-        "file": "assets/encore/selection/aquablasterpomni.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/selection.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/selection.json",
-        "sha256": "c7024d22cd9d61d360c99761a63132b9c2fc06fc338df17eff10d2211fd56925",
-        "bytes": 1514241,
-        "productionId": "NEXT29-aquablasterpomni-selection",
-        "qaId": "NEXT29-asset-aquablasterpomni-selection",
-        "nativeCopyVerified": true,
-        "offline": true,
-        "dimensions": [
-          1024,
-          1536
-        ],
-        "mode": "RGBA",
-        "alpha12Bounds": [
-          117,
-          64,
-          897,
-          1486
-        ]
-      },
-      {
-        "appearanceId": "aquablasterpomni",
-        "slot": "stance",
-        "file": "assets/encore/stance/aquablasterpomni.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/stance.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/stance.json",
-        "sha256": "4bed9241895059ba2b8217082ed01e6b52ccbbb6404084a5fdd834381c8f3595",
-        "bytes": 761461,
-        "productionId": "NEXT29-aquablasterpomni-stance",
-        "qaId": "NEXT29-asset-aquablasterpomni-stance",
-        "nativeCopyVerified": true,
-        "offline": true,
-        "dimensions": [
-          1199,
-          1312
-        ],
-        "mode": "RGBA",
-        "alpha12Bounds": [
-          184,
-          80,
-          970,
-          1256
-        ]
-      },
-      {
-        "appearanceId": "aquablasterpomni",
-        "slot": "intro",
-        "file": "assets/encore/poses/aquablasterpomni/intro.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/intro.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/intro.json",
-        "sha256": "c895c1b8c015702b4f029939f8bdfa54beba5ab949ef28e6ce82b4ae36294160",
-        "bytes": 1544535,
-        "productionId": "NEXT29-aquablasterpomni-intro",
-        "qaId": "NEXT29-asset-aquablasterpomni-intro",
-        "nativeCopyVerified": true,
-        "offline": true,
-        "dimensions": [
-          1024,
-          1536
-        ],
-        "mode": "RGBA",
-        "alpha12Bounds": [
-          118,
-          63,
-          900,
-          1462
-        ]
-      },
-      {
-        "appearanceId": "aquablasterpomni",
-        "slot": "attack",
-        "file": "assets/encore/poses/aquablasterpomni/attack.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/attack.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/attack.json",
-        "sha256": "2ab997db41dcf6da3ed4cb8ada90bdb0b5a6b4e52cbdca5de265e1cf127f31e9",
-        "bytes": 772786,
-        "productionId": "NEXT29-aquablasterpomni-attack",
-        "qaId": "NEXT29-asset-aquablasterpomni-attack",
-        "nativeCopyVerified": true,
-        "offline": true,
-        "dimensions": [
-          1312,
-          1199
-        ],
-        "mode": "RGBA",
-        "alpha12Bounds": [
-          155,
-          75,
-          1158,
-          1142
-        ]
-      },
-      {
-        "appearanceId": "aquablasterpomni",
-        "slot": "heavy",
-        "file": "assets/encore/poses/aquablasterpomni/heavy.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/heavy.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/heavy.json",
-        "sha256": "0e00d02285632ebfbdc3cb3ba3523b43dcdc351c7632928f71c3e33acd671a6b",
-        "bytes": 851157,
-        "productionId": "NEXT29-aquablasterpomni-heavy",
-        "qaId": "NEXT29-asset-aquablasterpomni-heavy",
-        "nativeCopyVerified": true,
-        "offline": true,
-        "dimensions": [
-          1199,
-          1312
-        ],
-        "mode": "RGBA",
-        "alpha12Bounds": [
-          128,
-          104,
-          1021,
-          1260
-        ]
-      },
-      {
-        "appearanceId": "aquablasterpomni",
-        "slot": "hit",
-        "file": "assets/encore/poses/aquablasterpomni/hit.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/hit.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/hit.json",
-        "sha256": "85a385d520b69aab8a62aff8f384f711bb1205ae1948c2238d8b96a41565d32f",
-        "bytes": 1512821,
-        "productionId": "NEXT29-aquablasterpomni-hit",
-        "qaId": "NEXT29-asset-aquablasterpomni-hit",
-        "nativeCopyVerified": true,
-        "offline": true,
-        "dimensions": [
-          1024,
-          1536
-        ],
-        "mode": "RGBA",
-        "alpha12Bounds": [
-          69,
-          133,
-          876,
-          1449
-        ]
-      },
-      {
-        "appearanceId": "aquablasterpomni",
-        "slot": "walk",
-        "file": "assets/encore/poses/aquablasterpomni/walk.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/walk.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/walk.json",
-        "sha256": "a6bdc6e9fee8ea12f5d9c18ac0149ab2b68ce7845bc594647132f8496a66bb22",
-        "bytes": 718965,
-        "productionId": "NEXT29-aquablasterpomni-walk",
-        "qaId": "NEXT29-asset-aquablasterpomni-walk",
-        "nativeCopyVerified": true,
-        "offline": true,
-        "dimensions": [
-          1199,
-          1312
-        ],
-        "mode": "RGBA",
-        "alpha12Bounds": [
-          259,
-          70,
-          963,
-          1252
-        ]
-      },
-      {
-        "appearanceId": "aquablasterpomni",
-        "slot": "jump",
-        "file": "assets/encore/poses/aquablasterpomni/jump.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/jump.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/jump.json",
-        "sha256": "59d9faa8b998e23fce65c9450b088ec9c77f3082ef08ce2a1dc8c7512eb1873d",
-        "bytes": 1469970,
-        "productionId": "NEXT29-aquablasterpomni-jump",
-        "qaId": "NEXT29-asset-aquablasterpomni-jump",
-        "nativeCopyVerified": true,
-        "offline": true,
-        "dimensions": [
-          1024,
-          1536
-        ],
-        "mode": "RGBA",
-        "alpha12Bounds": [
-          119,
-          111,
-          902,
-          1321
-        ]
-      },
-      {
-        "appearanceId": "aquablasterpomni",
-        "slot": "crouch",
-        "file": "assets/encore/poses/aquablasterpomni/crouch.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/crouch.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/crouch.json",
-        "sha256": "e70c8d6e853e0146d4efc3d7380f1bc1de48abf37fc845d3bc324f3d19179beb",
-        "bytes": 905643,
-        "productionId": "NEXT29-aquablasterpomni-crouch",
-        "qaId": "NEXT29-asset-aquablasterpomni-crouch",
-        "nativeCopyVerified": true,
-        "offline": true,
-        "dimensions": [
-          1199,
-          1312
-        ],
-        "mode": "RGBA",
-        "alpha12Bounds": [
-          153,
-          126,
-          1050,
-          1250
-        ]
-      },
-      {
-        "appearanceId": "aquablasterpomni",
-        "slot": "victory",
-        "file": "assets/encore/poses/aquablasterpomni/victory.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/victory.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/victory.json",
-        "sha256": "9893d8465d97699a02d7dc3045a8b0b0a98dff699c3dae5947cb13c7d6920a39",
-        "bytes": 1512530,
-        "productionId": "NEXT29-aquablasterpomni-victory",
-        "qaId": "NEXT29-asset-aquablasterpomni-victory",
-        "nativeCopyVerified": true,
-        "offline": true,
-        "dimensions": [
-          1024,
-          1536
-        ],
-        "mode": "RGBA",
-        "alpha12Bounds": [
-          88,
-          98,
-          972,
-          1486
-        ]
-      },
-      {
-        "appearanceId": "aquablasterpomni",
-        "slot": "defeat",
-        "file": "assets/encore/poses/aquablasterpomni/defeat.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/defeat.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/defeat.json",
-        "sha256": "e2bbd7813ef5c838e636fb3e70d800ec7555a752fa22abd000ed388a43fc485d",
-        "bytes": 875406,
-        "productionId": "NEXT29-aquablasterpomni-defeat",
-        "qaId": "NEXT29-asset-aquablasterpomni-defeat",
-        "nativeCopyVerified": true,
-        "offline": true,
-        "dimensions": [
-          1199,
-          1312
-        ],
-        "mode": "RGBA",
-        "alpha12Bounds": [
-          142,
-          129,
-          1048,
-          1258
-        ]
-      },
-      {
-        "appearanceId": "ptocaine",
-        "slot": "selection",
-        "file": "assets/encore/selection/ptocaine.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/selection.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/selection.json",
-        "sha256": "f913f4f7c6e2cede6e37171f0b0bfbdddfc81d5343708798f2d533e3aae16c09",
-        "bytes": 910063,
-        "productionId": "NEXT29-ptocaine-selection",
-        "qaId": "NEXT29-asset-ptocaine-selection",
+        "file": "assets/encore/selection/cafegangle.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/selection.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/selection.json",
+        "sha256": "d47262a0cd8306917ad51b41999a412046b1376c6f75ce4a1f3e4ef166f35510",
+        "bytes": 891954,
+        "productionId": "WAVE32-cafegangle-selection",
+        "qaId": "WAVE32-asset-cafegangle-selection",
         "nativeCopyVerified": true,
         "offline": true,
         "dimensions": [
@@ -1213,663 +1088,635 @@
         ],
         "mode": "RGBA",
         "alpha12Bounds": [
-          151,
-          15,
-          1028,
-          1435
-        ]
-      },
-      {
-        "appearanceId": "ptocaine",
-        "slot": "stance",
-        "file": "assets/encore/stance/ptocaine.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/stance.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/stance.json",
-        "sha256": "ef1c3b99c218dfdd0c28142968fa0914962ad1c2ea9067b2dd4ec93a30e63d74",
-        "bytes": 943984,
-        "productionId": "NEXT29-ptocaine-stance",
-        "qaId": "NEXT29-asset-ptocaine-stance",
-        "nativeCopyVerified": true,
-        "offline": true,
-        "dimensions": [
-          1151,
-          1367
-        ],
-        "mode": "RGBA",
-        "alpha12Bounds": [
-          113,
-          10,
-          979,
-          1358
-        ]
-      },
-      {
-        "appearanceId": "ptocaine",
-        "slot": "intro",
-        "file": "assets/encore/poses/ptocaine/intro.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/intro.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/intro.json",
-        "sha256": "ce2935908062b673beefd4905d4a857ffebb69b472f5f12c95d8784039a88c2a",
-        "bytes": 931163,
-        "productionId": "NEXT29-ptocaine-intro",
-        "qaId": "NEXT29-asset-ptocaine-intro",
-        "nativeCopyVerified": true,
-        "offline": true,
-        "dimensions": [
-          1214,
-          1295
-        ],
-        "mode": "RGBA",
-        "alpha12Bounds": [
+          182,
           32,
-          10,
-          1182,
-          1283
+          875,
+          1422
         ]
       },
       {
-        "appearanceId": "ptocaine",
+        "appearanceId": "cafegangle",
+        "slot": "stance",
+        "file": "assets/encore/stance/cafegangle.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/stance.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/stance.json",
+        "sha256": "5137ed1bfba96c48365cda3e4aa16b23b555e544a384c536da32e2af71cb370b",
+        "bytes": 860381,
+        "productionId": "WAVE32-cafegangle-stance",
+        "qaId": "WAVE32-asset-cafegangle-stance",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1086,
+          1448
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          165,
+          80,
+          902,
+          1393
+        ]
+      },
+      {
+        "appearanceId": "cafegangle",
+        "slot": "intro",
+        "file": "assets/encore/poses/cafegangle/intro.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/intro.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/intro.json",
+        "sha256": "b88abb8005adf392f2dd6f77979495e2ea1fbd9a6bce62edcb270c33cb6a46b3",
+        "bytes": 883421,
+        "productionId": "WAVE32-cafegangle-intro",
+        "qaId": "WAVE32-asset-cafegangle-intro",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1086,
+          1448
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          101,
+          65,
+          993,
+          1406
+        ]
+      },
+      {
+        "appearanceId": "cafegangle",
         "slot": "attack",
-        "file": "assets/encore/poses/ptocaine/attack.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/attack.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/attack.json",
-        "sha256": "338bc7a5cba5403afef518f0db5ba8ad01eb52c7f62e92a379af93e828dec298",
-        "bytes": 1341582,
-        "productionId": "NEXT29-ptocaine-attack",
-        "qaId": "NEXT29-asset-ptocaine-attack",
+        "file": "assets/encore/poses/cafegangle/attack.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/attack.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/attack.json",
+        "sha256": "5cfed0c6818fcd323fbd4494d31f7cad9ed5712f8ee16981c4f1924b203ce181",
+        "bytes": 887721,
+        "productionId": "WAVE32-cafegangle-attack",
+        "qaId": "WAVE32-asset-cafegangle-attack",
         "nativeCopyVerified": true,
         "offline": true,
         "dimensions": [
-          1536,
-          1024
+          1086,
+          1448
         ],
         "mode": "RGBA",
         "alpha12Bounds": [
-          195,
-          8,
-          1321,
-          1015
+          109,
+          83,
+          1004,
+          1400
         ]
       },
       {
-        "appearanceId": "ptocaine",
+        "appearanceId": "cafegangle",
         "slot": "heavy",
-        "file": "assets/encore/poses/ptocaine/heavy.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/heavy.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/heavy.json",
-        "sha256": "550d1676e632feb1a7bfa472c7c949515072c6a3cf7f558ae5d61a498d484da3",
-        "bytes": 936106,
-        "productionId": "NEXT29-ptocaine-heavy",
-        "qaId": "NEXT29-asset-ptocaine-heavy",
-        "nativeCopyVerified": true,
-        "offline": true,
-        "dimensions": [
-          1448,
-          1086
-        ],
-        "mode": "RGBA",
-        "alpha12Bounds": [
-          64,
-          8,
-          1385,
-          1073
-        ]
-      },
-      {
-        "appearanceId": "ptocaine",
-        "slot": "hit",
-        "file": "assets/encore/poses/ptocaine/hit.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/hit.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/hit.json",
-        "sha256": "38a8763400c8da23935231b6e3ac25519a6215cb83182d4cbbf36921349e0272",
-        "bytes": 1043937,
-        "productionId": "NEXT29-ptocaine-hit",
-        "qaId": "NEXT29-asset-ptocaine-hit",
-        "nativeCopyVerified": true,
-        "offline": true,
-        "dimensions": [
-          1086,
-          1448
-        ],
-        "mode": "RGBA",
-        "alpha12Bounds": [
-          45,
-          27,
-          950,
-          1439
-        ]
-      },
-      {
-        "appearanceId": "ptocaine",
-        "slot": "walk",
-        "file": "assets/encore/poses/ptocaine/walk.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/walk.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/walk.json",
-        "sha256": "adbb121d8c51c73ba02e146934c8fe92894047e582bfc83959f93da7e306c8cf",
-        "bytes": 980030,
-        "productionId": "NEXT29-ptocaine-walk",
-        "qaId": "NEXT29-asset-ptocaine-walk",
-        "nativeCopyVerified": true,
-        "offline": true,
-        "dimensions": [
-          1086,
-          1448
-        ],
-        "mode": "RGBA",
-        "alpha12Bounds": [
-          155,
-          11,
-          934,
-          1438
-        ]
-      },
-      {
-        "appearanceId": "ptocaine",
-        "slot": "jump",
-        "file": "assets/encore/poses/ptocaine/jump.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/jump.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/jump.json",
-        "sha256": "9a95cfbc28f76220256ab38d57e97524c0ade3d37ef7de0363353ba323de3189",
-        "bytes": 1037616,
-        "productionId": "NEXT29-ptocaine-jump",
-        "qaId": "NEXT29-asset-ptocaine-jump",
-        "nativeCopyVerified": true,
-        "offline": true,
-        "dimensions": [
-          1158,
-          1358
-        ],
-        "mode": "RGBA",
-        "alpha12Bounds": [
-          25,
-          11,
-          1128,
-          1260
-        ]
-      },
-      {
-        "appearanceId": "ptocaine",
-        "slot": "crouch",
-        "file": "assets/encore/poses/ptocaine/crouch.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/crouch.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/crouch.json",
-        "sha256": "8c9936d52d890726a61906594e31cf0bb1a34ea815f1cf186b08ca14e491a96a",
-        "bytes": 1013805,
-        "productionId": "NEXT29-ptocaine-crouch",
-        "qaId": "NEXT29-asset-ptocaine-crouch",
-        "nativeCopyVerified": true,
-        "offline": true,
-        "dimensions": [
-          1216,
-          1293
-        ],
-        "mode": "RGBA",
-        "alpha12Bounds": [
-          96,
-          12,
-          1035,
-          1282
-        ]
-      },
-      {
-        "appearanceId": "ptocaine",
-        "slot": "victory",
-        "file": "assets/encore/poses/ptocaine/victory.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/victory.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/victory.json",
-        "sha256": "fa5c30cb10bdae0ab90a29f4527f56d791fc73c7dc376e9ff786cf3e438bd58a",
-        "bytes": 931407,
-        "productionId": "NEXT29-ptocaine-victory",
-        "qaId": "NEXT29-asset-ptocaine-victory",
-        "nativeCopyVerified": true,
-        "offline": true,
-        "dimensions": [
-          1086,
-          1448
-        ],
-        "mode": "RGBA",
-        "alpha12Bounds": [
-          142,
-          9,
-          965,
-          1436
-        ]
-      },
-      {
-        "appearanceId": "ptocaine",
-        "slot": "defeat",
-        "file": "assets/encore/poses/ptocaine/defeat.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/defeat.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/defeat.json",
-        "sha256": "9a4481e9db3550e62753fa9ca4ce5b9ab0ddcb3b2799ef5ad24fa16343597d6a",
-        "bytes": 933698,
-        "productionId": "NEXT29-ptocaine-defeat",
-        "qaId": "NEXT29-asset-ptocaine-defeat",
-        "nativeCopyVerified": true,
-        "offline": true,
-        "dimensions": [
-          1240,
-          1268
-        ],
-        "mode": "RGBA",
-        "alpha12Bounds": [
-          137,
-          10,
-          1073,
-          1246
-        ]
-      },
-      {
-        "appearanceId": "freakjax",
-        "slot": "selection",
-        "file": "assets/encore/selection/freakjax.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/selection.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/selection.json",
-        "sha256": "22ea8b9c34b9acd5b8b3889129d0436542d586ee716b73e6cff061af469a1010",
-        "bytes": 916364,
-        "productionId": "NEXT29-freakjax-selection",
-        "qaId": "NEXT29-asset-freakjax-selection",
+        "file": "assets/encore/poses/cafegangle/heavy.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/heavy.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/heavy.json",
+        "sha256": "e7195e188fc3a3fafd98054ef94a5e6b3a914e3996a22634060b90bd7b16b1f8",
+        "bytes": 954409,
+        "productionId": "WAVE32-cafegangle-heavy",
+        "qaId": "WAVE32-asset-cafegangle-heavy",
         "nativeCopyVerified": true,
         "offline": true,
         "dimensions": [
           1199,
           1312
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          60,
+          60,
+          1161,
+          1267
+        ]
+      },
+      {
+        "appearanceId": "cafegangle",
+        "slot": "hit",
+        "file": "assets/encore/poses/cafegangle/hit.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/hit.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/hit.json",
+        "sha256": "5c5487c32d05c60382505a0d5ac3dc8acae409edf2fc7ae180722d632576519a",
+        "bytes": 920043,
+        "productionId": "WAVE32-cafegangle-hit",
+        "qaId": "WAVE32-asset-cafegangle-hit",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1086,
+          1448
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          188,
+          55,
+          961,
+          1412
+        ]
+      },
+      {
+        "appearanceId": "cafegangle",
+        "slot": "walk",
+        "file": "assets/encore/poses/cafegangle/walk.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/walk.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/walk.json",
+        "sha256": "e6faa1a88848501f0c6e0dd3c42d8e2eed6256c30e610c9433ed5c9107120522",
+        "bytes": 898347,
+        "productionId": "WAVE32-cafegangle-walk",
+        "qaId": "WAVE32-asset-cafegangle-walk",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1086,
+          1448
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          162,
+          88,
+          925,
+          1391
+        ]
+      },
+      {
+        "appearanceId": "cafegangle",
+        "slot": "jump",
+        "file": "assets/encore/poses/cafegangle/jump.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/jump.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/jump.json",
+        "sha256": "db72e894e2c946070442f04df9cf1d6dacd359ba8f8f4bb3ea7a5b0d030634c8",
+        "bytes": 984748,
+        "productionId": "WAVE32-cafegangle-jump",
+        "qaId": "WAVE32-asset-cafegangle-jump",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1086,
+          1448
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          111,
+          81,
+          1018,
+          1313
+        ]
+      },
+      {
+        "appearanceId": "cafegangle",
+        "slot": "crouch",
+        "file": "assets/encore/poses/cafegangle/crouch.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/crouch.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/crouch.json",
+        "sha256": "1f18b95099cfb6071b7fb65bcc611115dfceb062642f8370b3994c4238625ff6",
+        "bytes": 992524,
+        "productionId": "WAVE32-cafegangle-crouch",
+        "qaId": "WAVE32-asset-cafegangle-crouch",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1198,
+          1313
         ],
         "mode": "RGBA",
         "alpha12Bounds": [
           135,
-          57,
-          951,
-          1280
+          93,
+          1031,
+          1249
         ]
       },
       {
-        "appearanceId": "freakjax",
-        "slot": "stance",
-        "file": "assets/encore/stance/freakjax.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/stance.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/stance.json",
-        "sha256": "23370947efcde758da86eeb156fd5faac85fcd12e5c2f64896c6ca2d409dabcf",
-        "bytes": 1007652,
-        "productionId": "NEXT29-freakjax-stance",
-        "qaId": "NEXT29-asset-freakjax-stance",
-        "nativeCopyVerified": true,
-        "offline": true,
-        "dimensions": [
-          1254,
-          1254
-        ],
-        "mode": "RGBA",
-        "alpha12Bounds": [
-          73,
-          56,
-          1011,
-          1233
-        ]
-      },
-      {
-        "appearanceId": "freakjax",
-        "slot": "intro",
-        "file": "assets/encore/poses/freakjax/intro.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/intro.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/intro.json",
-        "sha256": "dc0d51b4ccf80b08393febc52b6bd119d944830d86aa0dae268adbcffdbc92ba",
-        "bytes": 916361,
-        "productionId": "NEXT29-freakjax-intro",
-        "qaId": "NEXT29-asset-freakjax-intro",
-        "nativeCopyVerified": true,
-        "offline": true,
-        "dimensions": [
-          1254,
-          1254
-        ],
-        "mode": "RGBA",
-        "alpha12Bounds": [
-          144,
-          52,
-          1112,
-          1231
-        ]
-      },
-      {
-        "appearanceId": "freakjax",
-        "slot": "attack",
-        "file": "assets/encore/poses/freakjax/attack.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/attack.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/attack.json",
-        "sha256": "964542fc4390a89fa175bf7e1347e8440902bead46b0f55d8dbc9499f28f8bf1",
-        "bytes": 948653,
-        "productionId": "NEXT29-freakjax-attack",
-        "qaId": "NEXT29-asset-freakjax-attack",
-        "nativeCopyVerified": true,
-        "offline": true,
-        "dimensions": [
-          1254,
-          1254
-        ],
-        "mode": "RGBA",
-        "alpha12Bounds": [
-          88,
-          61,
-          1136,
-          1205
-        ]
-      },
-      {
-        "appearanceId": "freakjax",
-        "slot": "heavy",
-        "file": "assets/encore/poses/freakjax/heavy.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/heavy.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/heavy.json",
-        "sha256": "4ecfd357f19c28a44432cc3006fa334c89b58cab3eefe92476b52ef8d1cdb969",
-        "bytes": 1110718,
-        "productionId": "NEXT29-freakjax-heavy",
-        "qaId": "NEXT29-asset-freakjax-heavy",
-        "nativeCopyVerified": true,
-        "offline": true,
-        "dimensions": [
-          1254,
-          1254
-        ],
-        "mode": "RGBA",
-        "alpha12Bounds": [
-          81,
-          24,
-          1177,
-          1240
-        ]
-      },
-      {
-        "appearanceId": "freakjax",
-        "slot": "hit",
-        "file": "assets/encore/poses/freakjax/hit.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/hit.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/hit.json",
-        "sha256": "42ad80824a7b8cd62225a01d9c59294a2fccd3875b04b08f1cbf00715b48dc20",
-        "bytes": 1090665,
-        "productionId": "NEXT29-freakjax-hit",
-        "qaId": "NEXT29-asset-freakjax-hit",
-        "nativeCopyVerified": true,
-        "offline": true,
-        "dimensions": [
-          1254,
-          1254
-        ],
-        "mode": "RGBA",
-        "alpha12Bounds": [
-          88,
-          51,
-          1057,
-          1223
-        ]
-      },
-      {
-        "appearanceId": "freakjax",
-        "slot": "walk",
-        "file": "assets/encore/poses/freakjax/walk.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/walk.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/walk.json",
-        "sha256": "fc03f7b81940e8b0f6dff8c8c5562b2dfa8b8488193b38b427381e69b6b6edbe",
-        "bytes": 996758,
-        "productionId": "NEXT29-freakjax-walk",
-        "qaId": "NEXT29-asset-freakjax-walk",
-        "nativeCopyVerified": true,
-        "offline": true,
-        "dimensions": [
-          1254,
-          1254
-        ],
-        "mode": "RGBA",
-        "alpha12Bounds": [
-          65,
-          39,
-          1049,
-          1225
-        ]
-      },
-      {
-        "appearanceId": "freakjax",
-        "slot": "jump",
-        "file": "assets/encore/poses/freakjax/jump.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/jump.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/jump.json",
-        "sha256": "4eefed9da6d3387c8e232010bfa1eb690348c5314f1bdff5f3f1cf192cb5ffcf",
-        "bytes": 1101865,
-        "productionId": "NEXT29-freakjax-jump",
-        "qaId": "NEXT29-asset-freakjax-jump",
-        "nativeCopyVerified": true,
-        "offline": true,
-        "dimensions": [
-          1254,
-          1254
-        ],
-        "mode": "RGBA",
-        "alpha12Bounds": [
-          48,
-          61,
-          1200,
-          1210
-        ]
-      },
-      {
-        "appearanceId": "freakjax",
-        "slot": "crouch",
-        "file": "assets/encore/poses/freakjax/crouch.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/crouch.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/crouch.json",
-        "sha256": "18c3e7f0a56e976ceb55fbbd03eb99595f9391c56593b604affb287432443477",
-        "bytes": 993734,
-        "productionId": "NEXT29-freakjax-crouch",
-        "qaId": "NEXT29-asset-freakjax-crouch",
-        "nativeCopyVerified": true,
-        "offline": true,
-        "dimensions": [
-          1254,
-          1254
-        ],
-        "mode": "RGBA",
-        "alpha12Bounds": [
-          90,
-          77,
-          1160,
-          1206
-        ]
-      },
-      {
-        "appearanceId": "freakjax",
+        "appearanceId": "cafegangle",
         "slot": "victory",
-        "file": "assets/encore/poses/freakjax/victory.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/victory.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/victory.json",
-        "sha256": "cd5728d606d259f0a9693a89e7ccbd9a0de0ea66590b49a87f91ee5eaddbe25e",
-        "bytes": 1008406,
-        "productionId": "NEXT29-freakjax-victory",
-        "qaId": "NEXT29-asset-freakjax-victory",
+        "file": "assets/encore/poses/cafegangle/victory.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/victory.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/victory.json",
+        "sha256": "4a356a29adb7bd551ba401365122897bef127079891412ce7dc76ebfac03eebf",
+        "bytes": 897634,
+        "productionId": "WAVE32-cafegangle-victory",
+        "qaId": "WAVE32-asset-cafegangle-victory",
         "nativeCopyVerified": true,
         "offline": true,
         "dimensions": [
-          1254,
-          1254
+          1086,
+          1448
         ],
         "mode": "RGBA",
         "alpha12Bounds": [
-          118,
-          61,
-          1088,
-          1235
+          202,
+          35,
+          875,
+          1425
         ]
       },
       {
-        "appearanceId": "freakjax",
+        "appearanceId": "cafegangle",
         "slot": "defeat",
-        "file": "assets/encore/poses/freakjax/defeat.png",
-        "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/defeat.png",
-        "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/defeat.json",
-        "sha256": "92b0196076e4d114dd1ba5ce29dc3f99e61a12e1b68f11e224cf615269e5f401",
-        "bytes": 1098984,
-        "productionId": "NEXT29-freakjax-defeat",
-        "qaId": "NEXT29-asset-freakjax-defeat",
+        "file": "assets/encore/poses/cafegangle/defeat.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/defeat.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/defeat.json",
+        "sha256": "0f0803c1d170f877835b3dcd2a92bde7631eedd5af49524a420acc548e873b58",
+        "bytes": 937073,
+        "productionId": "WAVE32-cafegangle-defeat",
+        "qaId": "WAVE32-asset-cafegangle-defeat",
         "nativeCopyVerified": true,
         "offline": true,
         "dimensions": [
-          1254,
-          1254
+          1199,
+          1312
         ],
         "mode": "RGBA",
         "alpha12Bounds": [
-          81,
+          157,
+          77,
+          1106,
+          1255
+        ]
+      },
+      {
+        "appearanceId": "cafezooble",
+        "slot": "selection",
+        "file": "assets/encore/selection/cafezooble.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/selection.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/selection.json",
+        "sha256": "8e9b01071c18df0cc3a38e2f4e00916b11843a826dc828e398e04f55f3bfec8c",
+        "bytes": 1414609,
+        "productionId": "WAVE32-cafezooble-selection",
+        "qaId": "WAVE32-asset-cafezooble-selection",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          208,
+          71,
+          783,
+          1496
+        ]
+      },
+      {
+        "appearanceId": "cafezooble",
+        "slot": "stance",
+        "file": "assets/encore/stance/cafezooble.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/stance.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/stance.json",
+        "sha256": "b951065075dc8ca65acbb1a8341edd16c390433d22eb3972ef69605b2cb7d97e",
+        "bytes": 1453219,
+        "productionId": "WAVE32-cafezooble-stance",
+        "qaId": "WAVE32-asset-cafezooble-stance",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          101,
+          96,
+          913,
+          1447
+        ]
+      },
+      {
+        "appearanceId": "cafezooble",
+        "slot": "intro",
+        "file": "assets/encore/poses/cafezooble/intro.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/intro.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/intro.json",
+        "sha256": "f88521d48d4a3cd3b6b3023c01e9934c0b136bcfc503a696af3890f3df743a0d",
+        "bytes": 1422045,
+        "productionId": "WAVE32-cafezooble-intro",
+        "qaId": "WAVE32-asset-cafezooble-intro",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          203,
+          49,
+          859,
+          1503
+        ]
+      },
+      {
+        "appearanceId": "cafezooble",
+        "slot": "attack",
+        "file": "assets/encore/poses/cafezooble/attack.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/attack.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/attack.json",
+        "sha256": "3cabd8a6148eba6f19f727545e74e2f1a932a4daff2505cd222476fc2a9ed0e4",
+        "bytes": 1438638,
+        "productionId": "WAVE32-cafezooble-attack",
+        "qaId": "WAVE32-asset-cafezooble-attack",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          50,
+          100,
+          970,
+          1432
+        ]
+      },
+      {
+        "appearanceId": "cafezooble",
+        "slot": "heavy",
+        "file": "assets/encore/poses/cafezooble/heavy.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/heavy.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/heavy.json",
+        "sha256": "3f5a44e2862fe00bfaab680f588d9abfa286f794bad6dca5a79f5992baed4ca0",
+        "bytes": 842534,
+        "productionId": "WAVE32-cafezooble-heavy",
+        "qaId": "WAVE32-asset-cafezooble-heavy",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1199,
+          1312
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          60,
+          94,
+          1101,
+          1252
+        ]
+      },
+      {
+        "appearanceId": "cafezooble",
+        "slot": "hit",
+        "file": "assets/encore/poses/cafezooble/hit.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/hit.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/hit.json",
+        "sha256": "0826116970b3c300a8e3b710e6250f1f8ea856dcf70ca7d62be1b8e83607fd09",
+        "bytes": 1418943,
+        "productionId": "WAVE32-cafezooble-hit",
+        "qaId": "WAVE32-asset-cafezooble-hit",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          138,
+          38,
+          799,
+          1511
+        ]
+      },
+      {
+        "appearanceId": "cafezooble",
+        "slot": "walk",
+        "file": "assets/encore/poses/cafezooble/walk.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/walk.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/walk.json",
+        "sha256": "8814582e56af0b91d9cebdfc760e86805732e9aa1940e6c934deef30c8d1b2d5",
+        "bytes": 1487567,
+        "productionId": "WAVE32-cafezooble-walk",
+        "qaId": "WAVE32-asset-cafezooble-walk",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          94,
+          63,
+          904,
+          1469
+        ]
+      },
+      {
+        "appearanceId": "cafezooble",
+        "slot": "jump",
+        "file": "assets/encore/poses/cafezooble/jump.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jump.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jump.json",
+        "sha256": "8f5649f1e79b3901b0551f4bf4d6e7b73ea6b046fa20b18bd0822190fbe103b5",
+        "bytes": 1517991,
+        "productionId": "WAVE32-cafezooble-jump",
+        "qaId": "WAVE32-asset-cafezooble-jump",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          145,
+          39,
+          935,
+          1464
+        ]
+      },
+      {
+        "appearanceId": "cafezooble",
+        "slot": "crouch",
+        "file": "assets/encore/poses/cafezooble/crouch.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/crouch.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/crouch.json",
+        "sha256": "99661cacefd65761cb37374d6a7860c235db2debc422e75b8a7821f74f84b039",
+        "bytes": 1482236,
+        "productionId": "WAVE32-cafezooble-crouch",
+        "qaId": "WAVE32-asset-cafezooble-crouch",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
           55,
-          1117,
-          1230
+          167,
+          963,
+          1365
+        ]
+      },
+      {
+        "appearanceId": "cafezooble",
+        "slot": "victory",
+        "file": "assets/encore/poses/cafezooble/victory.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/victory.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/victory.json",
+        "sha256": "f92c6f194f2ff464af91b92d0af3fefcef17f2973624dc69090b3731f71d0b37",
+        "bytes": 1395721,
+        "productionId": "WAVE32-cafezooble-victory",
+        "qaId": "WAVE32-asset-cafezooble-victory",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          156,
+          41,
+          817,
+          1502
+        ]
+      },
+      {
+        "appearanceId": "cafezooble",
+        "slot": "defeat",
+        "file": "assets/encore/poses/cafezooble/defeat.png",
+        "archiveFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/defeat.png",
+        "receiptFile": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/defeat.json",
+        "sha256": "23d45949f6c9bb78c4ddbf3d4725e7e59af405fcbf0d504b1be2f13483272559",
+        "bytes": 1468896,
+        "productionId": "WAVE32-cafezooble-defeat",
+        "qaId": "WAVE32-asset-cafezooble-defeat",
+        "nativeCopyVerified": true,
+        "offline": true,
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "mode": "RGBA",
+        "alpha12Bounds": [
+          52,
+          166,
+          971,
+          1426
         ]
       }
     ],
-    "productionRowCount": 44,
-    "qaRowCount": 44
+    "productionRowCount": 33,
+    "qaRowCount": 33
   },
-  "historicalCellsConstrained": 79280,
+  "historicalCellsConstrained": 82697,
   "originalIdsAndOrderPreserved": true,
   "userNotesPreserved": true,
   "historicalEvidencePreserved": true,
-  "correctedReference": {
-    "id": "SERIES-jax__australian_extremist",
-    "row": 3027,
-    "keptStatus": "À vérifier"
+  "coverageChanges": {
+    "featureIds": [
+      "PRE-03",
+      "PRD-11"
+    ],
+    "sourceIds": [],
+    "promotedNpcFamilies": 6,
+    "remainingNpcFamilies": 1074,
+    "noHistoricalProductionRowChanged": true,
+    "allStageAndCrossoverDataPreserved": true
   },
   "appendedProductionIds": [
-    "NEXT29-watermelongangle",
-    "NEXT29-aquablasterpomni",
-    "NEXT29-ptocaine",
-    "NEXT29-freakjax",
-    "NEXT29-watermelongangle-selection",
-    "NEXT29-watermelongangle-stance",
-    "NEXT29-watermelongangle-intro",
-    "NEXT29-watermelongangle-attack",
-    "NEXT29-watermelongangle-heavy",
-    "NEXT29-watermelongangle-hit",
-    "NEXT29-watermelongangle-walk",
-    "NEXT29-watermelongangle-jump",
-    "NEXT29-watermelongangle-crouch",
-    "NEXT29-watermelongangle-victory",
-    "NEXT29-watermelongangle-defeat",
-    "NEXT29-aquablasterpomni-selection",
-    "NEXT29-aquablasterpomni-stance",
-    "NEXT29-aquablasterpomni-intro",
-    "NEXT29-aquablasterpomni-attack",
-    "NEXT29-aquablasterpomni-heavy",
-    "NEXT29-aquablasterpomni-hit",
-    "NEXT29-aquablasterpomni-walk",
-    "NEXT29-aquablasterpomni-jump",
-    "NEXT29-aquablasterpomni-crouch",
-    "NEXT29-aquablasterpomni-victory",
-    "NEXT29-aquablasterpomni-defeat",
-    "NEXT29-ptocaine-selection",
-    "NEXT29-ptocaine-stance",
-    "NEXT29-ptocaine-intro",
-    "NEXT29-ptocaine-attack",
-    "NEXT29-ptocaine-heavy",
-    "NEXT29-ptocaine-hit",
-    "NEXT29-ptocaine-walk",
-    "NEXT29-ptocaine-jump",
-    "NEXT29-ptocaine-crouch",
-    "NEXT29-ptocaine-victory",
-    "NEXT29-ptocaine-defeat",
-    "NEXT29-freakjax-selection",
-    "NEXT29-freakjax-stance",
-    "NEXT29-freakjax-intro",
-    "NEXT29-freakjax-attack",
-    "NEXT29-freakjax-heavy",
-    "NEXT29-freakjax-hit",
-    "NEXT29-freakjax-walk",
-    "NEXT29-freakjax-jump",
-    "NEXT29-freakjax-crouch",
-    "NEXT29-freakjax-victory",
-    "NEXT29-freakjax-defeat",
-    "ART-undermap-background",
-    "ART-undermap-floor",
-    "ART-undermap-foreground",
-    "ART-undermap-music",
-    "ART-undermap-ambience",
-    "ANIM-undermap-ambience"
+    "WAVE32-caferagatha",
+    "WAVE32-cafegangle",
+    "WAVE32-cafezooble",
+    "WAVE32-caferagatha-selection",
+    "WAVE32-caferagatha-stance",
+    "WAVE32-caferagatha-intro",
+    "WAVE32-caferagatha-attack",
+    "WAVE32-caferagatha-heavy",
+    "WAVE32-caferagatha-hit",
+    "WAVE32-caferagatha-walk",
+    "WAVE32-caferagatha-jump",
+    "WAVE32-caferagatha-crouch",
+    "WAVE32-caferagatha-victory",
+    "WAVE32-caferagatha-defeat",
+    "WAVE32-cafegangle-selection",
+    "WAVE32-cafegangle-stance",
+    "WAVE32-cafegangle-intro",
+    "WAVE32-cafegangle-attack",
+    "WAVE32-cafegangle-heavy",
+    "WAVE32-cafegangle-hit",
+    "WAVE32-cafegangle-walk",
+    "WAVE32-cafegangle-jump",
+    "WAVE32-cafegangle-crouch",
+    "WAVE32-cafegangle-victory",
+    "WAVE32-cafegangle-defeat",
+    "WAVE32-cafezooble-selection",
+    "WAVE32-cafezooble-stance",
+    "WAVE32-cafezooble-intro",
+    "WAVE32-cafezooble-attack",
+    "WAVE32-cafezooble-heavy",
+    "WAVE32-cafezooble-hit",
+    "WAVE32-cafezooble-walk",
+    "WAVE32-cafezooble-jump",
+    "WAVE32-cafezooble-crouch",
+    "WAVE32-cafezooble-victory",
+    "WAVE32-cafezooble-defeat"
   ],
   "appendedQaIds": [
-    "NEXT29-asset-watermelongangle-selection",
-    "NEXT29-asset-watermelongangle-stance",
-    "NEXT29-asset-watermelongangle-intro",
-    "NEXT29-asset-watermelongangle-attack",
-    "NEXT29-asset-watermelongangle-heavy",
-    "NEXT29-asset-watermelongangle-hit",
-    "NEXT29-asset-watermelongangle-walk",
-    "NEXT29-asset-watermelongangle-jump",
-    "NEXT29-asset-watermelongangle-crouch",
-    "NEXT29-asset-watermelongangle-victory",
-    "NEXT29-asset-watermelongangle-defeat",
-    "NEXT29-asset-aquablasterpomni-selection",
-    "NEXT29-asset-aquablasterpomni-stance",
-    "NEXT29-asset-aquablasterpomni-intro",
-    "NEXT29-asset-aquablasterpomni-attack",
-    "NEXT29-asset-aquablasterpomni-heavy",
-    "NEXT29-asset-aquablasterpomni-hit",
-    "NEXT29-asset-aquablasterpomni-walk",
-    "NEXT29-asset-aquablasterpomni-jump",
-    "NEXT29-asset-aquablasterpomni-crouch",
-    "NEXT29-asset-aquablasterpomni-victory",
-    "NEXT29-asset-aquablasterpomni-defeat",
-    "NEXT29-asset-ptocaine-selection",
-    "NEXT29-asset-ptocaine-stance",
-    "NEXT29-asset-ptocaine-intro",
-    "NEXT29-asset-ptocaine-attack",
-    "NEXT29-asset-ptocaine-heavy",
-    "NEXT29-asset-ptocaine-hit",
-    "NEXT29-asset-ptocaine-walk",
-    "NEXT29-asset-ptocaine-jump",
-    "NEXT29-asset-ptocaine-crouch",
-    "NEXT29-asset-ptocaine-victory",
-    "NEXT29-asset-ptocaine-defeat",
-    "NEXT29-asset-freakjax-selection",
-    "NEXT29-asset-freakjax-stance",
-    "NEXT29-asset-freakjax-intro",
-    "NEXT29-asset-freakjax-attack",
-    "NEXT29-asset-freakjax-heavy",
-    "NEXT29-asset-freakjax-hit",
-    "NEXT29-asset-freakjax-walk",
-    "NEXT29-asset-freakjax-jump",
-    "NEXT29-asset-freakjax-crouch",
-    "NEXT29-asset-freakjax-victory",
-    "NEXT29-asset-freakjax-defeat",
-    "UNDERMAP29-asset-far",
-    "UNDERMAP29-asset-mid",
-    "UNDERMAP29-asset-near",
-    "NEXT29-art",
-    "NEXT29-canvas",
-    "UNDERMAP29-canvas",
-    "NEXT29-node",
-    "NEXT29-integrity",
-    "NEXT29-browser",
-    "TRACKER29-update"
+    "WAVE32-asset-caferagatha-selection",
+    "WAVE32-asset-caferagatha-stance",
+    "WAVE32-asset-caferagatha-intro",
+    "WAVE32-asset-caferagatha-attack",
+    "WAVE32-asset-caferagatha-heavy",
+    "WAVE32-asset-caferagatha-hit",
+    "WAVE32-asset-caferagatha-walk",
+    "WAVE32-asset-caferagatha-jump",
+    "WAVE32-asset-caferagatha-crouch",
+    "WAVE32-asset-caferagatha-victory",
+    "WAVE32-asset-caferagatha-defeat",
+    "WAVE32-asset-cafegangle-selection",
+    "WAVE32-asset-cafegangle-stance",
+    "WAVE32-asset-cafegangle-intro",
+    "WAVE32-asset-cafegangle-attack",
+    "WAVE32-asset-cafegangle-heavy",
+    "WAVE32-asset-cafegangle-hit",
+    "WAVE32-asset-cafegangle-walk",
+    "WAVE32-asset-cafegangle-jump",
+    "WAVE32-asset-cafegangle-crouch",
+    "WAVE32-asset-cafegangle-victory",
+    "WAVE32-asset-cafegangle-defeat",
+    "WAVE32-asset-cafezooble-selection",
+    "WAVE32-asset-cafezooble-stance",
+    "WAVE32-asset-cafezooble-intro",
+    "WAVE32-asset-cafezooble-attack",
+    "WAVE32-asset-cafezooble-heavy",
+    "WAVE32-asset-cafezooble-hit",
+    "WAVE32-asset-cafezooble-walk",
+    "WAVE32-asset-cafezooble-jump",
+    "WAVE32-asset-cafezooble-crouch",
+    "WAVE32-asset-cafezooble-victory",
+    "WAVE32-asset-cafezooble-defeat",
+    "WAVE32-art",
+    "WAVE32-canvas",
+    "WAVE32-node",
+    "WAVE32-integrity",
+    "WAVE32-browser",
+    "TRACKER32-update"
   ],
   "appendedSourceIds": [
-    "store-beach-watermelongangle",
-    "store-beach-aquablasterpomni",
-    "store-pto-caine",
-    "store-sideshow-freakjax"
+    "animate-cafe-ragatha",
+    "animate-cafe-gangle",
+    "animate-cafe-zooble"
   ],
-  "appendedStageId": "undermap",
+  "appendedStageId": null,
   "qaEvidence": {
-    "tests": 411,
+    "tests": 432,
     "failures": 0,
     "bothBuildsPassed": true,
-    "costumeCanvasDrawChecks": 80,
-    "stageCanvasChecks": 6,
-    "nativeDistributionComparisons": 94,
-    "moduleComparisons": 32,
-    "historicalEncoreFiles": 5678
+    "costumeCanvasDrawChecks": 60,
+    "stageCanvasChecks": 0,
+    "nativeDistributionComparisons": 66,
+    "moduleComparisons": 38,
+    "historicalEncoreFiles": 5830
   },
   "releaseReviewed": false,
   "fullCiExecutedByWorkbookUpdate": false,
   "canonicalVisualApproval": false,
   "limitations": [
-    "The update authored and checked the workbook, all native cells, all ten tables, all forty-two formulas and the forty-four individual drawing slots.",
+    "The update authored and checked the workbook, all native cells, all ten tables, all forty-two formulas and the thirty-three individual drawing slots.",
     "Runtime QA and Canvas results retain the dates, versions and scopes of the final frozen generation wave.",
     "No desktop Excel session, physical-device test, full animation cycle or scene-by-scene canonical approval is claimed.",
     "The published fields in costume coverage denote active local files; GitHub publication is recorded separately."

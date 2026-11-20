@@ -1,0 +1,368 @@
+{
+  "schema": "encore-native-family-completion/v1",
+  "appearanceId": "glitch-murderdrones-ribbit-hommage",
+  "createdAt": "2026-11-20T14:55:01.019435+00:00",
+  "generationMethod": "image_gen.imagegen",
+  "count": 11,
+  "totalBytes": 10403813,
+  "slots": [
+    "selection",
+    "stance",
+    "intro",
+    "attack",
+    "heavy",
+    "hit",
+    "walk",
+    "jump",
+    "crouch",
+    "victory",
+    "defeat"
+  ],
+  "allNativeCopiesVerified": true,
+  "allNativeAlphaPreserved": true,
+  "uniqueImageHashes": 11,
+  "portableReferenceComparisons": 34,
+  "includedInRuntime": false,
+  "runtimeIntegrationStatus": "Pending root integration and final Canvas/build evidence",
+  "definition": {
+    "file": "docs/art-generation/npc-crossovers-next-wave-20261120/definitions/glitch-murderdrones-ribbit-hommage.json",
+    "sha256": "04c8fffed2e11021004c8e387f318b11f459f4f5cf97a5cfa8922bbe51529e93"
+  },
+  "reviewPreview": {
+    "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/native-alpha-review.png",
+    "sha256": "80adc32c9a16e910c618e598a134525854f58fd8747a7f91d71d7a555653e754",
+    "scope": "Derived QA contact sheet only; never a runtime asset"
+  },
+  "assets": [
+    {
+      "slot": "selection",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/selection.png",
+      "targetFile": "assets/encore/crossovers/murderdrones/ribbit/hommage/selection.png",
+      "bytes": 1402255,
+      "sha256": "ea9bf4c31ea98cc6422699abb1ad7190378bd35deb940fa0e821fd9c407b418f",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alpha12Bounds": [
+        80,
+        35,
+        973,
+        1516
+      ],
+      "nativeCopyVerified": true,
+      "job": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/jobs/selection.json",
+        "sha256": "e0b1a6305ee62b8912cf8781ba6dc8f0a840014457ca335bc5793dc75226e5ca"
+      },
+      "receipt": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/selection.json",
+        "sha256": "a79a7008ef19735b7e7d5c9074f868ec90e8e226f1dc6aa2693762351c8c6288"
+      }
+    },
+    {
+      "slot": "stance",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/stance.png",
+      "targetFile": "assets/encore/crossovers/murderdrones/ribbit/hommage/stance.png",
+      "bytes": 708161,
+      "sha256": "a29d6fb634765beb3ba33592764f4854bef9124bc347c6aba221295ad705963c",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alpha12Bounds": [
+        160,
+        34,
+        1091,
+        1236
+      ],
+      "nativeCopyVerified": true,
+      "job": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/jobs/stance.json",
+        "sha256": "11be60eeda454cfe4d529c42d976e6b79e7616511f0d78a61d7838565c680811"
+      },
+      "receipt": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/stance.json",
+        "sha256": "70246344228e1029cb0493504bc87de9793c2ae7ac6b3354554ca4ef819ec49e"
+      }
+    },
+    {
+      "slot": "intro",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/intro.png",
+      "targetFile": "assets/encore/crossovers/murderdrones/ribbit/hommage/intro.png",
+      "bytes": 717176,
+      "sha256": "d4b6fd7e3de18af7d2346bbd45acfc77c374145b298083c3f2657f8db9c911b1",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alpha12Bounds": [
+        213,
+        20,
+        1025,
+        1238
+      ],
+      "nativeCopyVerified": true,
+      "job": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/jobs/intro.json",
+        "sha256": "25b724aed2fc14eaab3709771ac576c516551a73ab5ea6acc3cc77c41e6baff5"
+      },
+      "receipt": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/intro.json",
+        "sha256": "4c2c8bccd05353055a014130d4e3edf9a8e8b366466c4f9934eb81084d5f6e0f"
+      }
+    },
+    {
+      "slot": "attack",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/attack.png",
+      "targetFile": "assets/encore/crossovers/murderdrones/ribbit/hommage/attack.png",
+      "bytes": 1215129,
+      "sha256": "3fe9250207098ecc9ca08fb15ee9268926269e0648c898d7f714cc5f81be914f",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alpha12Bounds": [
+        286,
+        17,
+        1212,
+        1017
+      ],
+      "nativeCopyVerified": true,
+      "job": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/jobs/attack.json",
+        "sha256": "ecacdf3d07beb1bf9d73eb7efb6ee92415ada3b95d2b64715d2859b842eda996"
+      },
+      "receipt": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/attack.json",
+        "sha256": "5564b4e5043478d73b6e3bb6826f39106e700d93e8c4cb19ba75e0b6fd8f5360"
+      }
+    },
+    {
+      "slot": "heavy",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/heavy.png",
+      "targetFile": "assets/encore/crossovers/murderdrones/ribbit/hommage/heavy.png",
+      "bytes": 1155353,
+      "sha256": "90cd3b607f74c4618422ba172e8ac498e37e85212cd011de1a35bdadce0b35d3",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alpha12Bounds": [
+        347,
+        19,
+        1205,
+        1014
+      ],
+      "nativeCopyVerified": true,
+      "job": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/jobs/heavy.json",
+        "sha256": "64aba2fb964069e876efbce637cc1834741f1600dac3eea6aacf8f12881aaa3c"
+      },
+      "receipt": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/heavy.json",
+        "sha256": "066eccd769bf97c0eb54d391296ad769a9653a41941e81dbfe0864525b76ad40"
+      }
+    },
+    {
+      "slot": "hit",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/hit.png",
+      "targetFile": "assets/encore/crossovers/murderdrones/ribbit/hommage/hit.png",
+      "bytes": 741345,
+      "sha256": "842c55a77b7c5b087f7ac46ec662f7853414c293233d0d2b808e602900d81d2a",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alpha12Bounds": [
+        173,
+        47,
+        934,
+        1237
+      ],
+      "nativeCopyVerified": true,
+      "job": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/jobs/hit.json",
+        "sha256": "9dfc8a8ed6a01c94c332c9a611bfecaffb72f9e622ccfd3e18e3aeb47a6716dd"
+      },
+      "receipt": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/hit.json",
+        "sha256": "a04a4fd5f7f8cbf36791c01735814825e06df70d6cbd59d192627c2a6104141a"
+      }
+    },
+    {
+      "slot": "walk",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/walk.png",
+      "targetFile": "assets/encore/crossovers/murderdrones/ribbit/hommage/walk.png",
+      "bytes": 682248,
+      "sha256": "c3c0881fd9e5833eaeb6f49a86db52d91d242c97d92a2b4989a30d4ec52af418",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alpha12Bounds": [
+        238,
+        17,
+        1011,
+        1236
+      ],
+      "nativeCopyVerified": true,
+      "job": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/jobs/walk.json",
+        "sha256": "59f378cfbc7e04c19ac6b6e7abda1e52182b0aa5e927c537f980414a02ed3ee1"
+      },
+      "receipt": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/walk.json",
+        "sha256": "247123f78afe68cd870750dd43230adfacf647d94b11e451aee15557ee7e05a2"
+      }
+    },
+    {
+      "slot": "jump",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/jump.png",
+      "targetFile": "assets/encore/crossovers/murderdrones/ribbit/hommage/jump.png",
+      "bytes": 759433,
+      "sha256": "5b44236ee5577d71fea24cac12ec6cad20d09af368d3eee9436395d25516237e",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alpha12Bounds": [
+        142,
+        11,
+        1091,
+        1162
+      ],
+      "nativeCopyVerified": true,
+      "job": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/jobs/jump.json",
+        "sha256": "27fedb67f68503bdb2cdf1c9e464409e53f7ea4088d8031a53f513ad19df9ec3"
+      },
+      "receipt": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/jump.json",
+        "sha256": "0bde398c5336e614be303b1602e6c66e121c6e2d52fbef4e74a1c1b40113428f"
+      }
+    },
+    {
+      "slot": "crouch",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/crouch.png",
+      "targetFile": "assets/encore/crossovers/murderdrones/ribbit/hommage/crouch.png",
+      "bytes": 890957,
+      "sha256": "b0b9bba19eb38ea27e356624ac5491df21295f152987cf3953c96cfac96919c0",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alpha12Bounds": [
+        125,
+        56,
+        1109,
+        1224
+      ],
+      "nativeCopyVerified": true,
+      "job": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/jobs/crouch.json",
+        "sha256": "8a1f4956c0914582cff2bf642766d65d8f85c16a6a3ec89e0d0657a5c8b09204"
+      },
+      "receipt": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/crouch.json",
+        "sha256": "b0783d40e6899d45781440147569966e7a84f48bf02c9684056e732c54e65181"
+      }
+    },
+    {
+      "slot": "victory",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/victory.png",
+      "targetFile": "assets/encore/crossovers/murderdrones/ribbit/hommage/victory.png",
+      "bytes": 1371435,
+      "sha256": "43ecd2b83b7c132a83ac0c2301879f01901dfd6f0710822a540263a4ca12733c",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alpha12Bounds": [
+        119,
+        37,
+        858,
+        1510
+      ],
+      "nativeCopyVerified": true,
+      "job": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/jobs/victory.json",
+        "sha256": "24588944fd5a06ab1a8bdedf7d026cfb082394221a534e23c22943469970f3b0"
+      },
+      "receipt": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/victory.json",
+        "sha256": "5ed67468a3fed25c3dafa26d7766b44bc70a6e382c1e93839dba8091273f8507"
+      }
+    },
+    {
+      "slot": "defeat",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/defeat.png",
+      "targetFile": "assets/encore/crossovers/murderdrones/ribbit/hommage/defeat.png",
+      "bytes": 760321,
+      "sha256": "047149da8e96fd666656bdc7350605297b9d5b1a74e62d17b55baa023a4366a0",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alpha12Bounds": [
+        178,
+        51,
+        1015,
+        1222
+      ],
+      "nativeCopyVerified": true,
+      "job": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/jobs/defeat.json",
+        "sha256": "bf63daf6a069c24cca2c301995176d6e158900e0110e364cfe041bb16d70e029"
+      },
+      "receipt": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/defeat.json",
+        "sha256": "6ca26ab466f6cd66527e7e999f0807cef036f1fce7174b116b381b8a075923c3"
+      }
+    }
+  ]
+}

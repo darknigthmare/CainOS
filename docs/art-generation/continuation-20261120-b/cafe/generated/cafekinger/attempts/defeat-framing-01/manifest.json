@@ -1,0 +1,26 @@
+{
+  "createdAt": "2026-11-20T17:12:21.836847+00:00",
+  "reason": "Native bottom-edge contact; preserve exact prior output before generative framing correction",
+  "files": [
+    {
+      "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/attempts/defeat-framing-01/alpha-review.jpg",
+      "sha256": "d19044297874a26b4f365e899a42e8a9bce65778cda904f471957e200a82f559",
+      "bytes": 75601
+    },
+    {
+      "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/attempts/defeat-framing-01/job.json",
+      "sha256": "f324e26b69568ee6bdeb9bf2925ee3b55705aa7b1c5984518d56ccf598526220",
+      "bytes": 3115
+    },
+    {
+      "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/attempts/defeat-framing-01/native.png",
+      "sha256": "ca972c0104fcdda2c49cce2a1fdfde47697e77d3fbf91f5e3c3da51f6921745f",
+      "bytes": 1359494
+    },
+    {
+      "file": "docs/art-generation/continuation-20261120-b/cafe/generated/cafekinger/attempts/defeat-framing-01/receipt.json",
+      "sha256": "0cf42b923c795399d8ca37aed4843a61eaac2c476d2fc5d02f81f815cfd08759",
+      "bytes": 4856
+    }
+  ]
+}

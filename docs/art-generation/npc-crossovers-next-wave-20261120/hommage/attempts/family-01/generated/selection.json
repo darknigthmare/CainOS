@@ -1,0 +1,88 @@
+{
+  "appearanceId": "glitch-murderdrones-ribbit-hommage",
+  "fighterId": "ribbit",
+  "series": "murderdrones",
+  "style": "hommage",
+  "slot": "selection",
+  "prompt": "Use case: stylized-concept. Asset type: one individual full-body character-selection sprite for the existing 2D fighting game Digital Circus — Encore. Create Ribbit wearing an original Uzi Doorman homage outfit, not Uzi herself and not a robot fusion.\nInput references: image 1 is the existing game's Ribbit stance and governs the long slender frog proportions, bold clean outlines and simple cel shading. Image 2 is official Iconic Ribbit merchandise and governs the green frog head, huge raised white/black eyes, mint muzzle, pink cheeks and pink bow; ignore its ring, strap and plush proportions. Images 3 and 4 are official Uzi product photos for the black pom-pom beanie, black hoodie with white screen-and-crossbones motif, purple accents and rounded black boots only; ignore Uzi's hair, robot face, railgun, pedestal and 3D finish.\nLocked design: green biological frog, two large raised eyes fully visible, friendly curved smile and pale mint muzzle, pink cheek patches. Small plain black pom-pom beanie fitted behind/between the raised eyes. Pink bow tie visibly at the neck. Black long-sleeved hoodie, dark charcoal trim, one crisp white screen-and-crossbones motif on the chest, narrow violet sleeve accents. Long uncovered green legs below the hoodie, violet ankle bands, rounded broad black ankle boots with dark gray soles, no pants. Bare green hands. No hair, opaque visor, mechanical limbs, goggles, tool belt or wings.\nPose: relaxed confident full-body selection pose in a three-quarter view facing screen-right; one hand rests near the hoodie pocket and the other gives a small friendly open-palm greeting; both boots planted separately and completely visible. Keep the whole character from pom-pom to soles inside the frame with generous transparent margins. Maintain the slender game silhouette and clear readable limbs.\nMedium: polished 2D cartoon game illustration, strong dark contours, controlled flat colors and minimal cel shading. Exactly one character, isolated on a genuinely transparent background with native alpha. Portrait canvas approximately 1024 by 1536. No scenery, floor, cast shadow, colored glow, product stand, texture, words, labels, watermark, border, grid or second character.",
+  "referencePaths": [
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/references/game-ribbit-stance.png",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/references/official-iconic-ribbit.png",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/references/official-uzi-front.png",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/references/official-uzi-back.png"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "/root/tracker_recovery",
+  "tool": "image_gen",
+  "transparentBackground": true,
+  "schema": "encore-native-npc-crossover/v1",
+  "id": "glitch-murderdrones-ribbit-hommage:selection",
+  "status": "accepted_native",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/selection.png",
+  "targetFile": "assets/encore/crossovers/murderdrones/ribbit/hommage/selection.png",
+  "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-fee31973-52dd-4c8f-b824-bbe8d0fd6d29.png",
+  "sourceGenerationId": "exec-fee31973-52dd-4c8f-b824-bbe8d0fd6d29",
+  "definitionFile": "docs/art-generation/npc-crossovers-next-wave-20261120/definitions/glitch-murderdrones-ribbit-hommage.json",
+  "definitionSHA256": "04c8fffed2e11021004c8e387f318b11f459f4f5cf97a5cfa8922bbe51529e93",
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/references/game-ribbit-stance.png",
+      "sha256": "db12ab81247248b83279ecfbd74bb5472e31e8c7424fafcbd5bfb964dcc96769",
+      "bytes": 615267
+    },
+    {
+      "position": 2,
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/references/official-iconic-ribbit.png",
+      "sha256": "d62ee29c8d07410db6ddfdde22965b719a305e9d6ec08aa1c48ab1788a6ce825",
+      "bytes": 1085524
+    },
+    {
+      "position": 3,
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/references/official-uzi-front.png",
+      "sha256": "a4cd219899ce902fdf07e5545b5691b874df46776b82c106fbea48daeac1f162",
+      "bytes": 1280711
+    },
+    {
+      "position": 4,
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/references/official-uzi-back.png",
+      "sha256": "f2d4f34a8f7c33af3acd7407de05a97e9cad161518e62d29bd04008c5e493c0d",
+      "bytes": 1360487
+    }
+  ],
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "alpha12Bounds": [
+    80,
+    35,
+    973,
+    1516
+  ],
+  "alpha12BoundsThreshold": "alpha > 12",
+  "fullyTransparentPixels": 1048366,
+  "sha256": "ea9bf4c31ea98cc6422699abb1ad7190378bd35deb940fa0e821fd9c407b418f",
+  "bytes": 1402255,
+  "nativeCopyVerified": true,
+  "sourceKind": "Création originale pour Encore",
+  "episodeFidelityClaim": false,
+  "canonicalCostumeClaim": false,
+  "includedInRuntime": false,
+  "createdAt": "2026-11-20T14:40:38.905181+00:00",
+  "visualReview": {
+    "status": "accepted",
+    "reviewer": "/root/tracker_recovery",
+    "observations": [
+      "Portrait entier inspecté : Ribbit biologique vert, deux yeux proéminents libres, museau menthe, joues et nœud roses, bonnet noir à pompon, sweat noir avec motif blanc et accents violets, longues jambes vertes, deux bottines complètes. Orientation droite lisible. Alpha natif contrôlé : [0,254], aucun pixel alpha > 12 sur le bord ; aucun détourage ni réencodage."
+    ],
+    "scope": "Original crossover identity, entire figure, costume continuity and readable game pose; no canonical costume or complete animation claim."
+  }
+}

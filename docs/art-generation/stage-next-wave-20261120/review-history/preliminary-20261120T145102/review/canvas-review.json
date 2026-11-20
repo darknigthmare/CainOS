@@ -1,0 +1,171 @@
+{
+  "schema": "encore-barnoir-canvas-review-v1",
+  "createdAt": "2026-11-20T14:51:02.196Z",
+  "stage": "barnoir",
+  "method": "Node + native Skia using production loadStagePlanes, drawStagePlanes and CombatRenderer.",
+  "browserTestStatus": "not_executed",
+  "limitations": [
+    "No browser, DOM, input, audio, service-worker or physical-device assertions.",
+    "Three official YouTube storyboard sheets ground the large forms and materials. Each cell is only 320 x 180; fine lettering, occluded geometry, parallax layout and ambient light remain adaptations.",
+    "Successful rendering does not replace separate visual inspection."
+  ],
+  "sources": {
+    "combat/data.mjs": "9dae3a4e0367f04e2bf7d2d653ec2601c7770eb977d3342c84e92636098d8cc7",
+    "combat/fidelity.mjs": "13f113f52d3d544eebc57064a1aafd1fae0c9d2485e5f567e52390f5c5a4e2dc",
+    "combat/progression.mjs": "ec113e2657bd6b479741543dd1f0fb8338195fb9ca1bb85e381834b35a0055e8",
+    "combat/stories.mjs": "763d0012eec0e59ac9454a9467596d7296b65cc64002918cc5db462b09a1fec7",
+    "combat/render.mjs": "a7005f67651ad0a2da5955f9146c95f6e7e93ce9c3c2f38bd2bf1c3791d12d73",
+    "combat/render-stage-motion.mjs": "94338bb181d5b0813be022d932f85bfdf5838f9111baba2d24a9ed3b3be088eb",
+    "combat/stage-parallax.mjs": "1e01fa0b4932f0e670bb6fa746c48b57de0c726a5637891e68427a161aecc77d",
+    "combat/engine.mjs": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
+    "combat/offline-manifest.mjs": "afcee476ad1e90ac746e88984804f5ad49de1dd38c3efb9724f13a95bb343dbd",
+    "scripts/review-combat-barnoir-20261120.mjs": "b3b8c1d6e3e6486ee832cbf7df6e723ae496f3391102e3b7dd7fe4672e52434e"
+  },
+  "assets": [
+    {
+      "file": "assets/encore/stages/barnoir/far.png",
+      "bytes": 1421811,
+      "sha256": "e051e8cf276e3dc440dc81220d1af46cdcbae82f7d8ba026d2f44cebf2ac38d1",
+      "requested": true
+    },
+    {
+      "file": "assets/encore/stages/barnoir/mid.png",
+      "bytes": 928982,
+      "sha256": "77b6bdc2dccafb7d78557396d81ba27120d852e540566587f47542ac2a811713",
+      "requested": true
+    },
+    {
+      "file": "assets/encore/stages/barnoir/near.png",
+      "bytes": 204406,
+      "sha256": "44c6343da751ef851ad57ef0af72adf435ce0f256b0557d523316144f59516f1",
+      "requested": true
+    }
+  ],
+  "cameras": [
+    {
+      "camera": -1,
+      "file": "planes-left.png",
+      "sha256": "b53ff734d195a8d1b3f1ff192ebfdb6f40f69c984c506f43f7578d41fdcb78c6",
+      "fullyOpaque": true
+    },
+    {
+      "camera": 0,
+      "file": "planes-center.png",
+      "sha256": "f0c059c21cbc10aac6963860d28f2260b0cfe4ae1031aee0be4f7a5b557f23b6",
+      "fullyOpaque": true
+    },
+    {
+      "camera": 1,
+      "file": "planes-right.png",
+      "sha256": "a6f1233fd36c7c6e8812bcea2a485616561f3f6c0195eaf10386faff0f755ba6",
+      "fullyOpaque": true
+    }
+  ],
+  "scenes": [
+    {
+      "camera": -1,
+      "file": "scene-left.png",
+      "sha256": "220676fe7ad07094e8e590cd1a545958eefde9846250bff79fa58cb75c8580a3",
+      "actors": [
+        {
+          "id": "pomni",
+          "x": 65,
+          "y": 568
+        },
+        {
+          "id": "gummigoo",
+          "x": 191,
+          "y": 568
+        }
+      ]
+    },
+    {
+      "camera": 0,
+      "file": "scene-center.png",
+      "sha256": "321d58fa2b27fd3e8c4e70f3a20f1be6ec7835d171bad4e0d92650f574fec373",
+      "actors": [
+        {
+          "id": "pomni",
+          "x": 320,
+          "y": 568
+        },
+        {
+          "id": "gummigoo",
+          "x": 960,
+          "y": 568
+        }
+      ]
+    },
+    {
+      "camera": 1,
+      "file": "scene-right.png",
+      "sha256": "443002a12540e0f4b2850433942d6b351a1b12e187785eba276dd8f9fcc4160f",
+      "actors": [
+        {
+          "id": "pomni",
+          "x": 1089,
+          "y": 568
+        },
+        {
+          "id": "gummigoo",
+          "x": 1215,
+          "y": 568
+        }
+      ]
+    }
+  ],
+  "offline": {
+    "version": "0.7.0-3f1a000c96ca",
+    "artVersion": "31622490fbe0884a",
+    "images": 5772,
+    "bytes": 3061635859
+  },
+  "checks": [
+    {
+      "name": "Three published native PNGs decoded through the actual loader",
+      "pass": true
+    },
+    {
+      "name": "Procedural fallback is distinct from the circus",
+      "pass": true,
+      "file": "fallback.png",
+      "sha256": "dc6b6cd50f77735b64250d7ef1bb4fa0081d1fe5b0c745bb50c7c1f16ebc18fb"
+    },
+    {
+      "name": "Three distinct camera positions compose without transparent gaps",
+      "pass": true
+    },
+    {
+      "name": "Reduced motion fixes the camera at zero for all three actor arrangements",
+      "pass": true
+    },
+    {
+      "name": "Ambient neon light evolves while every floor pixel remains identical",
+      "pass": true,
+      "frames": [
+        {
+          "full": "bb74f7b3149a688ca2b932d97e7697b0c57bd9f0c33dc80ee66766048e115bd2",
+          "floor": "c6a24b16376c37bec67df81b2d7a1a5b53de68317b9c0437305cff4d1c7df5f7"
+        },
+        {
+          "full": "8665caee7aaf164fd459f6c5a0055ffc65c3c448775689f34b07617bc3a54174",
+          "floor": "c6a24b16376c37bec67df81b2d7a1a5b53de68317b9c0437305cff4d1c7df5f7"
+        }
+      ]
+    },
+    {
+      "name": "Rendering keeps stage definitions and actor review states unchanged",
+      "pass": true
+    }
+  ],
+  "overview": "three-cameras.png",
+  "requestedFiles": [
+    "assets/encore/stages/barnoir/far.png",
+    "assets/encore/stages/barnoir/mid.png",
+    "assets/encore/stages/barnoir/near.png",
+    "assets/encore/stance/gummigoo.webp",
+    "assets/encore/stance/pomni.webp",
+    "assets/images/cainos-pixel-cast-sheet.png",
+    "assets/images/cainos-pomni-animation-sheet.png"
+  ]
+}

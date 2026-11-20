@@ -1,0 +1,11 @@
+{
+  "command": "npm run qa",
+  "startedAt": "2026-11-20T19:38:02.432655+00:00",
+  "completedAt": "2026-11-20T19:39:04.739166+00:00",
+  "exitCode": 1,
+  "log": "docs/art-generation/continuation-20261120-c/attempts/global-qa-01/qa.log",
+  "tests": 432,
+  "passed": 431,
+  "failed": 1,
+  "reason": "The reviewed Animate Café source allowlist did not yet include the three new named costume sources. The exact official path and source-kind checks were retained; three explicit IDs and costume-specific scope assertions were added."
+}

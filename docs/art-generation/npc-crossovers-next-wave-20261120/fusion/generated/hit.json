@@ -1,0 +1,73 @@
+{
+  "appearanceId": "glitch-murderdrones-ribbit-fusion",
+  "fighterId": "ribbit",
+  "series": "murderdrones",
+  "style": "fusion",
+  "slot": "hit",
+  "prompt": "Edit only the FIRST attached drawing. Keep the entire mechanical Ribbit, exact hit-recoil pose, face, robot eyes, expression, green and mint shell, pink bow plate, LED details, feet, proportions, colors and cel shading unchanged. Correct ONLY the open mechanical hand in front of the chest on the RIGHT of the picture, near the open mouth: it currently has four digits. Make that hand have exactly THREE mechanical digits total. Keep the two long upper fingers and the lower-left thumb. Remove the short extra finger projecting to the RIGHT from the palm; close the palm outline naturally with the same green shell and black joints. The hand must then have three pale mint fingertip pads total, not four. The second image is the approved selection identity reference with three-digit hands. Preserve everything else, including the three-digit rear hand. Output one full corrected head-to-toes figure in native transparent RGBA, no crop, no background, no floor, no shadow, no text or effects.",
+  "referencePaths": [
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/attempts/hit-01.png",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/selection.png"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "root",
+  "correctionOf": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/attempts/hit-01.png",
+  "schema": "encore-native-npc-crossover/v1",
+  "id": "glitch-murderdrones-ribbit-fusion:hit",
+  "status": "accepted_native",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "file": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/hit.png",
+  "targetFile": "assets/encore/crossovers/murderdrones/ribbit/fusion/hit.png",
+  "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-75210b90-cdba-43f6-8ec4-170b673c3113.png",
+  "sourceGenerationId": "exec-75210b90-cdba-43f6-8ec4-170b673c3113",
+  "definitionFile": "docs/art-generation/npc-crossovers-next-wave-20261120/definitions/glitch-murderdrones-ribbit-fusion.json",
+  "definitionSHA256": "13a3808fa1c1b21767e5aa4eb26362a57d7a8005a8b44c0129941fbafddf672d",
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/attempts/hit-01.png",
+      "sha256": "2fa981bd82b57e5da47ae2c0d0afba5cc31a6a2e68bfba7529e50c882c49be34",
+      "bytes": 1699712
+    },
+    {
+      "position": 2,
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/selection.png",
+      "sha256": "b4aeaf8ad54544eac7640f87603501ac3b7e3b8e0bfa4e68ef76b993c136968e",
+      "bytes": 1685503
+    }
+  ],
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "alpha12Bounds": [
+    41,
+    106,
+    947,
+    1498
+  ],
+  "alpha12BoundsThreshold": "alpha > 12",
+  "fullyTransparentPixels": 1113973,
+  "sha256": "18666434c7a7e1b82f504203b69f15de314209aaa432b7b7d4a0edb86edab897",
+  "bytes": 1692613,
+  "nativeCopyVerified": true,
+  "sourceKind": "Création originale pour Encore",
+  "episodeFidelityClaim": false,
+  "canonicalCostumeClaim": false,
+  "includedInRuntime": true,
+  "createdAt": "2026-11-20T15:23:50.561491+00:00",
+  "visualReview": {
+    "status": "accepted",
+    "reviewer": "root",
+    "observations": [
+      "Correction native inspectée : la main de garde a trois doigts mécaniques, comme la main arrière. Recul et expression surprise conservés, optiques et coque cohérentes ; figure entière."
+    ],
+    "scope": "Original crossover identity, entire figure, costume continuity and readable game pose; no canonical costume or complete animation claim."
+  }
+}

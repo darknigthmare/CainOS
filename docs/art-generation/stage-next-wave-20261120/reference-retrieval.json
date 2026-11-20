@@ -1,0 +1,91 @@
+{
+  "schema": "encore-barnoir-reference-retrieval/v1",
+  "source": "Official GLITCH episode 5, public YouTube storyboard stills",
+  "episodeUrl": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+  "originManifest": "docs/art-generation/cast-next-missing-20261120/references/noirgangle/downloads.json",
+  "originManifestSHA256": "217d7f4de21b4700e738a4999536ca0d86a45bc39204695b7049886844811cc7",
+  "storyboardSpec": "https://i.ytimg.com/sb/L4p2gN2CzsA/storyboard3_L$L/$N.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCIzJ0cIG|48#27#100#10#10#0#default#rs$AOn4CLDM6chHYyO2XHI4zA7FO7TR2ZFx2w|80#45#155#10#10#10000#M$M#rs$AOn4CLBjLJqlJQ31N1-uYYOLrp2p-TJ44w|160#90#155#5#5#10000#M$M#rs$AOn4CLCrs_BLIPUa2f9XU-XBXNCzaMDXkA|320#180#155#3#3#10000#M$M#rs$AOn4CLBe62PjqkpfouZ09cKwrw1Ge3h_Ow",
+  "watchResponseSha256": "aeab3231c595ebaf3ef3dba53a5a36a200e8f2523c9b60c852c57178983e8ffc",
+  "downloads": [
+    {
+      "path": "references/episode5-storyboard-L3-M7.jpg",
+      "url": "https://i.ytimg.com/sb/L4p2gN2CzsA/storyboard3_L3/M7.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCIzJ0cIG&sigh=rs$AOn4CLBe62PjqkpfouZ09cKwrw1Ge3h_Ow",
+      "episodeUrl": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "sha256": "66fffd5d73e5a6bbe8df4fc8959fc06bac41a2c84fba7528c3c6ac40853e9295",
+      "bytes": 45582,
+      "size": [
+        960,
+        540
+      ],
+      "storyboard": {
+        "level": 3,
+        "page": 7,
+        "cellWidth": 320,
+        "cellHeight": 180,
+        "columns": 3,
+        "rows": 3,
+        "intervalSeconds": 10,
+        "firstTimestampSeconds": 630
+      },
+      "matchesPriorArchive": true,
+      "downloadedAt": "2026-11-20T14:33:16.425926+00:00"
+    },
+    {
+      "path": "references/episode5-storyboard-L3-M10.jpg",
+      "url": "https://i.ytimg.com/sb/L4p2gN2CzsA/storyboard3_L3/M10.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCIzJ0cIG&sigh=rs$AOn4CLBe62PjqkpfouZ09cKwrw1Ge3h_Ow",
+      "episodeUrl": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "sha256": "6a7fa1d3c4d1f6656c720053e46a073c290d0619eaee1785617e7e2bc8ac287f",
+      "bytes": 57754,
+      "size": [
+        960,
+        540
+      ],
+      "storyboard": {
+        "level": 3,
+        "page": 10,
+        "cellWidth": 320,
+        "cellHeight": 180,
+        "columns": 3,
+        "rows": 3,
+        "intervalSeconds": 10,
+        "firstTimestampSeconds": 900
+      },
+      "matchesPriorArchive": true,
+      "downloadedAt": "2026-11-20T14:33:20.650255+00:00"
+    },
+    {
+      "path": "references/episode5-storyboard-L3-M11.jpg",
+      "url": "https://i.ytimg.com/sb/L4p2gN2CzsA/storyboard3_L3/M11.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCIzJ0cIG&sigh=rs$AOn4CLBe62PjqkpfouZ09cKwrw1Ge3h_Ow",
+      "episodeUrl": "https://www.youtube.com/watch?v=L4p2gN2CzsA",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "sha256": "def97ccad574da19c3d7a08fe8c1f934509575c1eb7a8a1eca3578c749872877",
+      "bytes": 60673,
+      "size": [
+        960,
+        540
+      ],
+      "storyboard": {
+        "level": 3,
+        "page": 11,
+        "cellWidth": 320,
+        "cellHeight": 180,
+        "columns": 3,
+        "rows": 3,
+        "intervalSeconds": 10,
+        "firstTimestampSeconds": 990
+      },
+      "matchesPriorArchive": true,
+      "downloadedAt": "2026-11-20T14:33:24.434076+00:00"
+    }
+  ],
+  "limits": [
+    "Each source cell is 320 x 180, sampled every 10 seconds. Approximate timestamps derive from the storyboard grid.",
+    "No full episode stream is claimed to have been watched in this stage audit.",
+    "Character occlusions, architecture behind the camera and fine sign lettering are not validated."
+  ]
+}

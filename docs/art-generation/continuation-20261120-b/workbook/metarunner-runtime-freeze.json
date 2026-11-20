@@ -1,0 +1,59 @@
+{
+  "schema": "encore-metarunner-runtime-freeze/v1",
+  "createdAt": "2026-11-20T17:31:26.867726+00:00",
+  "status": "runtime_integrated_targeted_checks_passed_offline_regeneration_pending",
+  "costumes": 477,
+  "crossovers": 384,
+  "metaRunner": {
+    "families": 3,
+    "nativePNG": 33,
+    "bytes": 28018143
+  },
+  "historicalPrefix": {
+    "costumes": 472,
+    "sha256": "5dafc529d6121a2850b7bfad54684f57e7223bfd29c2051b3687c00bed057685",
+    "crossovers": 381,
+    "npcDefinitions": 3
+  },
+  "runtimeFiles": {
+    "combat/crossover-npc-additions.mjs": "75eb80ed31b51961ef260e8430c5371844c174aff888daaf6110e3b4c290cd94",
+    "combat/costume-order.mjs": "f053e51f49a81c7a340ab246d85f4945260d14ed7c7630dfd002feb2d6e6d5f7"
+  },
+  "offlineManifestUnchangedSHA256": "fadef68870a9f6de11e52fe9fd1c886eb5b55cf6b76d93ba2df75e1961f98ffc",
+  "idempotence": {
+    "filesChecked": 105,
+    "allUnchanged": true
+  },
+  "targetedTests": {
+    "executed": 8,
+    "passed": 8,
+    "failed": 0,
+    "excludedPendingOfflineManifest": 2,
+    "reportedSkippedCounter": 0
+  },
+  "firstPreflightFailure": "metarunner-preflight-attempt-01.json",
+  "provenanceCorrection": "Resolve the unique recorded correction job by exact receipt fields; no source, job, accepted image or frozen definition changed.",
+  "initialTestAttempt": "The initial negative name pattern did not exclude the two offline tests in this runtime; those two failed on missing ART_FILES entries. Its raw result remains archived. The successful scoped run used --test-skip-pattern, without weakening any assertion.",
+  "globalQaExecuted": false,
+  "workbookExported": false,
+  "proofSHA256": {
+    "docs/art-generation/continuation-20261120-b/workbook/metarunner-preflight-check.json": "db58c78f973d89ff3eff76634d7fc50a86433cae23c550d3237aff8dc15fd661",
+    "docs/art-generation/continuation-20261120-b/workbook/metarunner-preflight-check.log": "e42699fee9b44193763ef8bad2494f78197d12482804402d62ce7eaac73c1228",
+    "docs/art-generation/continuation-20261120-b/workbook/metarunner-activation.json": "0fa181a13100c9833dfc137857462583240229379d1a6e280582d67d1595c54a",
+    "docs/art-generation/continuation-20261120-b/workbook/metarunner-activation.log": "01287114c3b4172da61cad0459998d696d2ab73cf604e2f4463771a4e813d20f",
+    "docs/art-generation/continuation-20261120-b/workbook/metarunner-idempotency.json": "2c0527c44734836ea154ab802f5e5a7156b15206e6c91a73b9470864cce461a5",
+    "docs/art-generation/continuation-20261120-b/workbook/metarunner-idempotency.log": "d4379c008f3c9c9ab890d6e5f61567537649ba6a8063981aeb7b566f8a7ffe33",
+    "docs/art-generation/continuation-20261120-b/workbook/metarunner-targeted-tests-attempt-01.json": "d480cc6633ce1994085dd0b2577d34cc3e431cef61005331a72c82513b5acf21",
+    "docs/art-generation/continuation-20261120-b/workbook/metarunner-targeted-tests-attempt-01.log": "93fda5d5f6a9ac7da75131c616fbaf3c07d66ade4b8e6451042c248f3edb8b6a",
+    "docs/art-generation/continuation-20261120-b/workbook/metarunner-targeted-tests.json": "4c12b96a8e329635fca7890b5895473216c6821caf53ed22a827eeb6e79c9c2a",
+    "docs/art-generation/continuation-20261120-b/workbook/metarunner-targeted-tests.log": "82787103a453b6a9a4a75a31a506abacf4c5791d9f1cc0912635136014450c85",
+    "scripts/integrate-combat-metarunner-20261120-b.py": "87f1d925b9239d3f85c8d4ad32e0bd7340aa024889f19d3efb45b2beaa927b8d",
+    "tests/combat-costume-order.test.mjs": "9fbf58113e480a154e2e9257843497af728d72e0b59811a82453aa48ff20d24c",
+    "tests/combat-crossovers.test.mjs": "680fec3166dc3eeb888cc30480858413264edf5a89cb69b2fb80e946228fb327",
+    "tests/combat-metarunner.test.mjs": "be593644262135b805d8316b557c64d5e195b231b979f56fe78dabf4651c694f",
+    "docs/art-generation/continuation-20261120-b/metarunner/generation-completion.json": "55ddfbd4ea6b217680f57b4c902484ab51d340296a2dfc9a754ba9baddda837b",
+    "docs/art-generation/continuation-20261120-b/metarunner/asset-inventory.json": "1c8ede241dceaaf45d34ebb074a246a7fda05ee2c4aa87bc730c85fbae84cbb8",
+    "docs/art-generation/continuation-20261120-b/metarunner/integration-receipt.json": "c09250e18e574d29f464fccb32e175177906cd0e82c55e96f2ff6446b1900213",
+    "docs/art-generation/continuation-20261120-b/metarunner/review/root-final-six-review.json": "36661b1644de1bb3f465326683c9807c977b053b98d40384585ccd277bd8bef5"
+  }
+}

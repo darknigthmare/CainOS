@@ -1,0 +1,519 @@
+{
+  "schema": "encore-softballfield-historical-planes-v1",
+  "verifiedAt": "2026-11-20T17:01:16.610758+00:00",
+  "baseLocalCommit": "38e8000cad61f4b229ad300877f44c31356343fa",
+  "count": 72,
+  "changed": 0,
+  "files": [
+    {
+      "stage": "bigtop",
+      "file": "assets/encore/stages/bigtop/far.webp",
+      "beforeSHA256": "b2731bf03caeb4c8f9ff22100b3521501f144355e8a64b13424d4a4fbc810b7d",
+      "currentSHA256": "b2731bf03caeb4c8f9ff22100b3521501f144355e8a64b13424d4a4fbc810b7d",
+      "unchanged": true
+    },
+    {
+      "stage": "bigtop",
+      "file": "assets/encore/stages/bigtop/mid.webp",
+      "beforeSHA256": "b3462cabd939d7ef4fa4948ca1197d0ad40bf3768d4bc948be944edbeace2221",
+      "currentSHA256": "b3462cabd939d7ef4fa4948ca1197d0ad40bf3768d4bc948be944edbeace2221",
+      "unchanged": true
+    },
+    {
+      "stage": "bigtop",
+      "file": "assets/encore/stages/bigtop/near.webp",
+      "beforeSHA256": "56d5c44ffeeffc1aecff24b2331829b4acac32586d29fcf8a8e144d37b1a716d",
+      "currentSHA256": "56d5c44ffeeffc1aecff24b2331829b4acac32586d29fcf8a8e144d37b1a716d",
+      "unchanged": true
+    },
+    {
+      "stage": "candy",
+      "file": "assets/encore/stages/candy/far.webp",
+      "beforeSHA256": "bdcc0042cf1af0942fc75d8128edf2cf400a19378469eb38a9c695f66c0d9167",
+      "currentSHA256": "bdcc0042cf1af0942fc75d8128edf2cf400a19378469eb38a9c695f66c0d9167",
+      "unchanged": true
+    },
+    {
+      "stage": "candy",
+      "file": "assets/encore/stages/candy/mid.webp",
+      "beforeSHA256": "f0cbb247c1d0b2809e4912ebf347f0a5b3fcb2ac8756f14bf374e5a4a82a3650",
+      "currentSHA256": "f0cbb247c1d0b2809e4912ebf347f0a5b3fcb2ac8756f14bf374e5a4a82a3650",
+      "unchanged": true
+    },
+    {
+      "stage": "candy",
+      "file": "assets/encore/stages/candy/near.webp",
+      "beforeSHA256": "82cee50266e7f570d809232809ae056a911b0a53e260b1727aa56f1872d7d893",
+      "currentSHA256": "82cee50266e7f570d809232809ae056a911b0a53e260b1727aa56f1872d7d893",
+      "unchanged": true
+    },
+    {
+      "stage": "manor",
+      "file": "assets/encore/stages/manor/far.webp",
+      "beforeSHA256": "a8c7bbb051eab577f4cf30337ec56b336aeaeb6c6c257ad77719bc20964f1af2",
+      "currentSHA256": "a8c7bbb051eab577f4cf30337ec56b336aeaeb6c6c257ad77719bc20964f1af2",
+      "unchanged": true
+    },
+    {
+      "stage": "manor",
+      "file": "assets/encore/stages/manor/mid.webp",
+      "beforeSHA256": "ee2962ccc3a2c77aa282e6a78fac793b15768932593b4486df7a1718982939e0",
+      "currentSHA256": "ee2962ccc3a2c77aa282e6a78fac793b15768932593b4486df7a1718982939e0",
+      "unchanged": true
+    },
+    {
+      "stage": "manor",
+      "file": "assets/encore/stages/manor/near.webp",
+      "beforeSHA256": "e7a3ba6932517c61cc95fc01ea3dcd46d869ea43dc1656986ae22c76176f285a",
+      "currentSHA256": "e7a3ba6932517c61cc95fc01ea3dcd46d869ea43dc1656986ae22c76176f285a",
+      "unchanged": true
+    },
+    {
+      "stage": "spudsy",
+      "file": "assets/encore/stages/spudsy/far.webp",
+      "beforeSHA256": "261476bc691a6dbd3dac1f35e40457b7b81324b2713dd82381817f1a74c98b38",
+      "currentSHA256": "261476bc691a6dbd3dac1f35e40457b7b81324b2713dd82381817f1a74c98b38",
+      "unchanged": true
+    },
+    {
+      "stage": "spudsy",
+      "file": "assets/encore/stages/spudsy/mid.webp",
+      "beforeSHA256": "ee1847f2e2693fd79f5bc28bdf231cefd52b0ef1c3f959f63d344751a45eadf4",
+      "currentSHA256": "ee1847f2e2693fd79f5bc28bdf231cefd52b0ef1c3f959f63d344751a45eadf4",
+      "unchanged": true
+    },
+    {
+      "stage": "spudsy",
+      "file": "assets/encore/stages/spudsy/near.webp",
+      "beforeSHA256": "7a8bf4497956ce8726f35928404a36a1903e323f2e7a568aa6111a19cb83bffe",
+      "currentSHA256": "7a8bf4497956ce8726f35928404a36a1903e323f2e7a568aa6111a19cb83bffe",
+      "unchanged": true
+    },
+    {
+      "stage": "cellar",
+      "file": "assets/encore/stages/cellar/far.webp",
+      "beforeSHA256": "e97bac93e780a8cd3c115c424e93de509f7264ab97c276cf9c7fb8f6018c6941",
+      "currentSHA256": "e97bac93e780a8cd3c115c424e93de509f7264ab97c276cf9c7fb8f6018c6941",
+      "unchanged": true
+    },
+    {
+      "stage": "cellar",
+      "file": "assets/encore/stages/cellar/mid.webp",
+      "beforeSHA256": "3ec9dec8a2e15ae2852dfa623213aba16c2c13191068eba76241251a7d5bab12",
+      "currentSHA256": "3ec9dec8a2e15ae2852dfa623213aba16c2c13191068eba76241251a7d5bab12",
+      "unchanged": true
+    },
+    {
+      "stage": "cellar",
+      "file": "assets/encore/stages/cellar/near.webp",
+      "beforeSHA256": "cdc26a8d9f584c282d16acb62e5023a688f61558b376a55cc579eea054e3bba0",
+      "currentSHA256": "cdc26a8d9f584c282d16acb62e5023a688f61558b376a55cc579eea054e3bba0",
+      "unchanged": true
+    },
+    {
+      "stage": "void",
+      "file": "assets/encore/stages/void/far.webp",
+      "beforeSHA256": "35c05d540ae5f97577ec4a5032766ffd7813300005926fad8b80534b27ffb70d",
+      "currentSHA256": "35c05d540ae5f97577ec4a5032766ffd7813300005926fad8b80534b27ffb70d",
+      "unchanged": true
+    },
+    {
+      "stage": "void",
+      "file": "assets/encore/stages/void/mid.webp",
+      "beforeSHA256": "7d06ee60771ecccdfe6ac552e323e4691d0ea5ca21de59038a73588a12e5f9e2",
+      "currentSHA256": "7d06ee60771ecccdfe6ac552e323e4691d0ea5ca21de59038a73588a12e5f9e2",
+      "unchanged": true
+    },
+    {
+      "stage": "void",
+      "file": "assets/encore/stages/void/near.webp",
+      "beforeSHA256": "cabad6f02f25c142df644fd437d876068d47ec525f2b7d3bccd863b9b6f99af7",
+      "currentSHA256": "cabad6f02f25c142df644fd437d876068d47ec525f2b7d3bccd863b9b6f99af7",
+      "unchanged": true
+    },
+    {
+      "stage": "lake",
+      "file": "assets/encore/stages/lake/far.webp",
+      "beforeSHA256": "f10b64a6e673e5a4b2c7f71875bdb24a01ef6d71e2ca7b40f1d06a3447ae611e",
+      "currentSHA256": "f10b64a6e673e5a4b2c7f71875bdb24a01ef6d71e2ca7b40f1d06a3447ae611e",
+      "unchanged": true
+    },
+    {
+      "stage": "lake",
+      "file": "assets/encore/stages/lake/mid.webp",
+      "beforeSHA256": "30346017433600843c84e7b820d830a2744ff33662a2244f008216686268ed4c",
+      "currentSHA256": "30346017433600843c84e7b820d830a2744ff33662a2244f008216686268ed4c",
+      "unchanged": true
+    },
+    {
+      "stage": "lake",
+      "file": "assets/encore/stages/lake/near.webp",
+      "beforeSHA256": "846ce84e8488eb347fe97cce150a34ff5a068e5addb6eaa61ef5d75141102e3b",
+      "currentSHA256": "846ce84e8488eb347fe97cce150a34ff5a068e5addb6eaa61ef5d75141102e3b",
+      "unchanged": true
+    },
+    {
+      "stage": "training",
+      "file": "assets/encore/stages/training/far.webp",
+      "beforeSHA256": "98c8926d890dd47784d02fda5a24f4d3ae756c8af16bf095ac09500053fe57f3",
+      "currentSHA256": "98c8926d890dd47784d02fda5a24f4d3ae756c8af16bf095ac09500053fe57f3",
+      "unchanged": true
+    },
+    {
+      "stage": "training",
+      "file": "assets/encore/stages/training/mid.webp",
+      "beforeSHA256": "015c2657bef85ea419571436d7b90e748286599b87d86dc9554dfab61855b642",
+      "currentSHA256": "015c2657bef85ea419571436d7b90e748286599b87d86dc9554dfab61855b642",
+      "unchanged": true
+    },
+    {
+      "stage": "training",
+      "file": "assets/encore/stages/training/near.webp",
+      "beforeSHA256": "e7a300b4dc33b4509d111049137e314427c2c105e3e8286a30305c83bfa1315e",
+      "currentSHA256": "e7a300b4dc33b4509d111049137e314427c2c105e3e8286a30305c83bfa1315e",
+      "unchanged": true
+    },
+    {
+      "stage": "gloink",
+      "file": "assets/encore/stages/gloink/far.webp",
+      "beforeSHA256": "56cb1aa7cad48086cd7a6bdf0ec3b3875a19cf5c18c5c201a80c1395f6827e56",
+      "currentSHA256": "56cb1aa7cad48086cd7a6bdf0ec3b3875a19cf5c18c5c201a80c1395f6827e56",
+      "unchanged": true
+    },
+    {
+      "stage": "gloink",
+      "file": "assets/encore/stages/gloink/mid.webp",
+      "beforeSHA256": "b88defad9e51d7bff872626dd6f08e4e1e6b2bc6239582c966ee54361f29ff53",
+      "currentSHA256": "b88defad9e51d7bff872626dd6f08e4e1e6b2bc6239582c966ee54361f29ff53",
+      "unchanged": true
+    },
+    {
+      "stage": "gloink",
+      "file": "assets/encore/stages/gloink/near.webp",
+      "beforeSHA256": "12319fe8193cbb8280db1213cc73ab3d42b0e979c1029cf022c3ea65a0c07627",
+      "currentSHA256": "12319fe8193cbb8280db1213cc73ab3d42b0e979c1029cf022c3ea65a0c07627",
+      "unchanged": true
+    },
+    {
+      "stage": "kingdom",
+      "file": "assets/encore/stages/kingdom/far.webp",
+      "beforeSHA256": "de8029cd5df4e952e825e6da1289c0587a61a48fb3fd4aaa399e22aed033c4d0",
+      "currentSHA256": "de8029cd5df4e952e825e6da1289c0587a61a48fb3fd4aaa399e22aed033c4d0",
+      "unchanged": true
+    },
+    {
+      "stage": "kingdom",
+      "file": "assets/encore/stages/kingdom/mid.webp",
+      "beforeSHA256": "3f5fb8f930d81693c5f7010eea06472f7fbe8c3385ac7c2c961a19cfd465f991",
+      "currentSHA256": "3f5fb8f930d81693c5f7010eea06472f7fbe8c3385ac7c2c961a19cfd465f991",
+      "unchanged": true
+    },
+    {
+      "stage": "kingdom",
+      "file": "assets/encore/stages/kingdom/near.webp",
+      "beforeSHA256": "74bf4582913283c7636a70cb0a4aef075db7f6b55f318751b290395d1ccec4f9",
+      "currentSHA256": "74bf4582913283c7636a70cb0a4aef075db7f6b55f318751b290395d1ccec4f9",
+      "unchanged": true
+    },
+    {
+      "stage": "grounds",
+      "file": "assets/encore/stages/grounds/far.webp",
+      "beforeSHA256": "9e40ae2c5b7ffa2a3cc3d2797df16b5ebebaa0a5c5f7fb3043c6d41969803d87",
+      "currentSHA256": "9e40ae2c5b7ffa2a3cc3d2797df16b5ebebaa0a5c5f7fb3043c6d41969803d87",
+      "unchanged": true
+    },
+    {
+      "stage": "grounds",
+      "file": "assets/encore/stages/grounds/mid.webp",
+      "beforeSHA256": "f07470b568ca2bebcfb59b6768db8885eb1c380081c286f788335229e4fce5e9",
+      "currentSHA256": "f07470b568ca2bebcfb59b6768db8885eb1c380081c286f788335229e4fce5e9",
+      "unchanged": true
+    },
+    {
+      "stage": "grounds",
+      "file": "assets/encore/stages/grounds/near.webp",
+      "beforeSHA256": "f84bd12a82afd55e095b3148640ee48b59b420b1d026f5a7a6060fdc9835b6e2",
+      "currentSHA256": "f84bd12a82afd55e095b3148640ee48b59b420b1d026f5a7a6060fdc9835b6e2",
+      "unchanged": true
+    },
+    {
+      "stage": "backstage",
+      "file": "assets/encore/stages/backstage/far.webp",
+      "beforeSHA256": "34d59cae2ff34829a1356b74dc8dcb61695f92318613f864ec4af8609e94e6ca",
+      "currentSHA256": "34d59cae2ff34829a1356b74dc8dcb61695f92318613f864ec4af8609e94e6ca",
+      "unchanged": true
+    },
+    {
+      "stage": "backstage",
+      "file": "assets/encore/stages/backstage/mid.webp",
+      "beforeSHA256": "cae1b07b60cce8681a89752d40b4f0bfaef09fd01139a177ec6dab5bf5b66707",
+      "currentSHA256": "cae1b07b60cce8681a89752d40b4f0bfaef09fd01139a177ec6dab5bf5b66707",
+      "unchanged": true
+    },
+    {
+      "stage": "backstage",
+      "file": "assets/encore/stages/backstage/near.webp",
+      "beforeSHA256": "1c0a45d5e4d326f7b81d12ea1c545304d85ce68e1b8ecc2ea2d9189dd5dcb09d",
+      "currentSHA256": "1c0a45d5e4d326f7b81d12ea1c545304d85ce68e1b8ecc2ea2d9189dd5dcb09d",
+      "unchanged": true
+    },
+    {
+      "stage": "coppernine",
+      "file": "assets/encore/stages/coppernine/far.webp",
+      "beforeSHA256": "e01b729aab57647ce2ea756c564d334a04b5ed7c763d6fcbbe9041e8e40d6f36",
+      "currentSHA256": "e01b729aab57647ce2ea756c564d334a04b5ed7c763d6fcbbe9041e8e40d6f36",
+      "unchanged": true
+    },
+    {
+      "stage": "coppernine",
+      "file": "assets/encore/stages/coppernine/mid.webp",
+      "beforeSHA256": "03984d9fdb80827e8fc94b170140f00f1595f04ab185fb3cbf31f02261925a5b",
+      "currentSHA256": "03984d9fdb80827e8fc94b170140f00f1595f04ab185fb3cbf31f02261925a5b",
+      "unchanged": true
+    },
+    {
+      "stage": "coppernine",
+      "file": "assets/encore/stages/coppernine/near.webp",
+      "beforeSHA256": "1171382f4f0eff8c76247aeb107c937a342ad447cb44038037e3fcca98868605",
+      "currentSHA256": "1171382f4f0eff8c76247aeb107c937a342ad447cb44038037e3fcca98868605",
+      "unchanged": true
+    },
+    {
+      "stage": "silicacity",
+      "file": "assets/encore/stages/silicacity/far.webp",
+      "beforeSHA256": "0e8a4223ab67341961e574556b469b9b4f82cd5d41f8ab8b5c0bcc2a9c29fd77",
+      "currentSHA256": "0e8a4223ab67341961e574556b469b9b4f82cd5d41f8ab8b5c0bcc2a9c29fd77",
+      "unchanged": true
+    },
+    {
+      "stage": "silicacity",
+      "file": "assets/encore/stages/silicacity/mid.webp",
+      "beforeSHA256": "a728b277971da4462d68db3d02dd2d3048336a0db18ae3977bfbf7bee1d580af",
+      "currentSHA256": "a728b277971da4462d68db3d02dd2d3048336a0db18ae3977bfbf7bee1d580af",
+      "unchanged": true
+    },
+    {
+      "stage": "silicacity",
+      "file": "assets/encore/stages/silicacity/near.webp",
+      "beforeSHA256": "291995215eddb6bd2d28b5f178ce075a84f79bb53ccbd6e1dc215330280c4db3",
+      "currentSHA256": "291995215eddb6bd2d28b5f178ce075a84f79bb53ccbd6e1dc215330280c4db3",
+      "unchanged": true
+    },
+    {
+      "stage": "portaurora",
+      "file": "assets/encore/stages/portaurora/far.webp",
+      "beforeSHA256": "6ee53fb31ba6441d09339cccdbcaedc95e15f61788f79398cc4d32ebb80145c5",
+      "currentSHA256": "6ee53fb31ba6441d09339cccdbcaedc95e15f61788f79398cc4d32ebb80145c5",
+      "unchanged": true
+    },
+    {
+      "stage": "portaurora",
+      "file": "assets/encore/stages/portaurora/mid.webp",
+      "beforeSHA256": "1cf6fd2de07a99a3784f6f9c71d421dea11f195368b7313024566ffbe998ef1b",
+      "currentSHA256": "1cf6fd2de07a99a3784f6f9c71d421dea11f195368b7313024566ffbe998ef1b",
+      "unchanged": true
+    },
+    {
+      "stage": "portaurora",
+      "file": "assets/encore/stages/portaurora/near.webp",
+      "beforeSHA256": "dc7afb6da9cff9c3baff5aa82209e9355636984e98421ace49e86e11c952dc71",
+      "currentSHA256": "dc7afb6da9cff9c3baff5aa82209e9355636984e98421ace49e86e11c952dc71",
+      "unchanged": true
+    },
+    {
+      "stage": "gaslightwharf",
+      "file": "assets/encore/stages/gaslightwharf/far.webp",
+      "beforeSHA256": "28c1d728e98efb458e521b26da094fc3353b70c51bc20c2b9739e81b083d3747",
+      "currentSHA256": "28c1d728e98efb458e521b26da094fc3353b70c51bc20c2b9739e81b083d3747",
+      "unchanged": true
+    },
+    {
+      "stage": "gaslightwharf",
+      "file": "assets/encore/stages/gaslightwharf/mid.webp",
+      "beforeSHA256": "9ae7d78e91c6e45782db60d725eec2a5bd4aa07ebd4da02ef1c41e45b4fe457a",
+      "currentSHA256": "9ae7d78e91c6e45782db60d725eec2a5bd4aa07ebd4da02ef1c41e45b4fe457a",
+      "unchanged": true
+    },
+    {
+      "stage": "gaslightwharf",
+      "file": "assets/encore/stages/gaslightwharf/near.webp",
+      "beforeSHA256": "05882e98253b3686332bddd3c09ca915b6b7b56e23cde2839962fdbb6846ef83",
+      "currentSHA256": "05882e98253b3686332bddd3c09ca915b6b7b56e23cde2839962fdbb6846ef83",
+      "unchanged": true
+    },
+    {
+      "stage": "parkplanet",
+      "file": "assets/encore/stages/parkplanet/far.webp",
+      "beforeSHA256": "cc3d23740ca2b087a9f741b3b13927426f00dc7733eec728a1e9f0ed6c74d74d",
+      "currentSHA256": "cc3d23740ca2b087a9f741b3b13927426f00dc7733eec728a1e9f0ed6c74d74d",
+      "unchanged": true
+    },
+    {
+      "stage": "parkplanet",
+      "file": "assets/encore/stages/parkplanet/mid.webp",
+      "beforeSHA256": "e159363b24657b317c42e720e30e80f092875f197c9e63a44e2192afd9d4de18",
+      "currentSHA256": "e159363b24657b317c42e720e30e80f092875f197c9e63a44e2192afd9d4de18",
+      "unchanged": true
+    },
+    {
+      "stage": "parkplanet",
+      "file": "assets/encore/stages/parkplanet/near.webp",
+      "beforeSHA256": "e11e04a9717c55383991b9b2086752a77470c13c7476cbf39f4fba839a34c9cc",
+      "currentSHA256": "e11e04a9717c55383991b9b2086752a77470c13c7476cbf39f4fba839a34c9cc",
+      "unchanged": true
+    },
+    {
+      "stage": "gameoverse",
+      "file": "assets/encore/stages/gameoverse/far.webp",
+      "beforeSHA256": "a60b1e63f81bd8161ea1edb63e43277636cac371df7f96ce1702670e196c753d",
+      "currentSHA256": "a60b1e63f81bd8161ea1edb63e43277636cac371df7f96ce1702670e196c753d",
+      "unchanged": true
+    },
+    {
+      "stage": "gameoverse",
+      "file": "assets/encore/stages/gameoverse/mid.webp",
+      "beforeSHA256": "32fd3f66ff339351bb1030a53443f5ef0c5987da0feab3f41e69c5bab67c2918",
+      "currentSHA256": "32fd3f66ff339351bb1030a53443f5ef0c5987da0feab3f41e69c5bab67c2918",
+      "unchanged": true
+    },
+    {
+      "stage": "gameoverse",
+      "file": "assets/encore/stages/gameoverse/near.webp",
+      "beforeSHA256": "5484e1f8e3481de28c7f51eb73c2f820bdefa3999b1b74dbbb2c7848af4430b3",
+      "currentSHA256": "5484e1f8e3481de28c7f51eb73c2f820bdefa3999b1b74dbbb2c7848af4430b3",
+      "unchanged": true
+    },
+    {
+      "stage": "littledaisy",
+      "file": "assets/encore/stages/littledaisy/far.webp",
+      "beforeSHA256": "b746fa6aef34bb286918d7b061829033fe2e1343645546ce4dbe517c2dd0d6d1",
+      "currentSHA256": "b746fa6aef34bb286918d7b061829033fe2e1343645546ce4dbe517c2dd0d6d1",
+      "unchanged": true
+    },
+    {
+      "stage": "littledaisy",
+      "file": "assets/encore/stages/littledaisy/mid.webp",
+      "beforeSHA256": "3f0f2c9ee967c5faed87b4e22414d577a5e9c51507c59a43794d987b2d80861b",
+      "currentSHA256": "3f0f2c9ee967c5faed87b4e22414d577a5e9c51507c59a43794d987b2d80861b",
+      "unchanged": true
+    },
+    {
+      "stage": "littledaisy",
+      "file": "assets/encore/stages/littledaisy/near.webp",
+      "beforeSHA256": "e0ba090e4de57681cde1b0a29abf906092e66b74cc6729a6a1f70da0b538afc6",
+      "currentSHA256": "e0ba090e4de57681cde1b0a29abf906092e66b74cc6729a6a1f70da0b538afc6",
+      "unchanged": true
+    },
+    {
+      "stage": "showgrounds",
+      "file": "assets/encore/stages/showgrounds/far.webp",
+      "beforeSHA256": "f1f55e22e301199f58646d57d50e71ae7a8569b0da9f0908e935337a0742b77a",
+      "currentSHA256": "f1f55e22e301199f58646d57d50e71ae7a8569b0da9f0908e935337a0742b77a",
+      "unchanged": true
+    },
+    {
+      "stage": "showgrounds",
+      "file": "assets/encore/stages/showgrounds/mid.webp",
+      "beforeSHA256": "9cbb7274b96f783251d5d4ba797f6219b93991bc46849679e1de78bae35141f5",
+      "currentSHA256": "9cbb7274b96f783251d5d4ba797f6219b93991bc46849679e1de78bae35141f5",
+      "unchanged": true
+    },
+    {
+      "stage": "showgrounds",
+      "file": "assets/encore/stages/showgrounds/near.webp",
+      "beforeSHA256": "a3a1e817e699a68d43b80128497d03576e4e6182874b46d9a9978bf8b23cd8be",
+      "currentSHA256": "a3a1e817e699a68d43b80128497d03576e4e6182874b46d9a9978bf8b23cd8be",
+      "unchanged": true
+    },
+    {
+      "stage": "simpleflipisland",
+      "file": "assets/encore/stages/simpleflipisland/far.webp",
+      "beforeSHA256": "3eb0a60e487dc45f7ae349651069dff274e2236820459579b65b3a8a65797d45",
+      "currentSHA256": "3eb0a60e487dc45f7ae349651069dff274e2236820459579b65b3a8a65797d45",
+      "unchanged": true
+    },
+    {
+      "stage": "simpleflipisland",
+      "file": "assets/encore/stages/simpleflipisland/mid.webp",
+      "beforeSHA256": "b364c89ea22698eadf3bed8977142e702672d11976ec51b11a34ab5d75b86be4",
+      "currentSHA256": "b364c89ea22698eadf3bed8977142e702672d11976ec51b11a34ab5d75b86be4",
+      "unchanged": true
+    },
+    {
+      "stage": "simpleflipisland",
+      "file": "assets/encore/stages/simpleflipisland/near.webp",
+      "beforeSHA256": "6a52545e73adfdea00a087101998d3a0652ab0e85beebba976499d836db303d0",
+      "currentSHA256": "6a52545e73adfdea00a087101998d3a0652ab0e85beebba976499d836db303d0",
+      "unchanged": true
+    },
+    {
+      "stage": "falseexit",
+      "file": "assets/encore/stages/falseexit/far.png",
+      "beforeSHA256": "138df372cffe060db63b8d93f6109f6ceb08f66d0373ad31aa286e586cc5020a",
+      "currentSHA256": "138df372cffe060db63b8d93f6109f6ceb08f66d0373ad31aa286e586cc5020a",
+      "unchanged": true
+    },
+    {
+      "stage": "falseexit",
+      "file": "assets/encore/stages/falseexit/mid.png",
+      "beforeSHA256": "84275261c9340380d084a7f32f774598638dd3a884ccb77188233c0dae2455fc",
+      "currentSHA256": "84275261c9340380d084a7f32f774598638dd3a884ccb77188233c0dae2455fc",
+      "unchanged": true
+    },
+    {
+      "stage": "falseexit",
+      "file": "assets/encore/stages/falseexit/near.png",
+      "beforeSHA256": "8f76e338460107aa49ddc0344f3f056df436b25b9f4372bab4251bfe9dac586c",
+      "currentSHA256": "8f76e338460107aa49ddc0344f3f056df436b25b9f4372bab4251bfe9dac586c",
+      "unchanged": true
+    },
+    {
+      "stage": "undermap",
+      "file": "assets/encore/stages/undermap/far.png",
+      "beforeSHA256": "8632502788b9f69092ae1cf4b5ae36d9d41af37c9e7155c9475c53879b6ff352",
+      "currentSHA256": "8632502788b9f69092ae1cf4b5ae36d9d41af37c9e7155c9475c53879b6ff352",
+      "unchanged": true
+    },
+    {
+      "stage": "undermap",
+      "file": "assets/encore/stages/undermap/mid.png",
+      "beforeSHA256": "3a27fd151543855490ae95f6250ed127e0bd46c1599b77dff1132ec95f9ac311",
+      "currentSHA256": "3a27fd151543855490ae95f6250ed127e0bd46c1599b77dff1132ec95f9ac311",
+      "unchanged": true
+    },
+    {
+      "stage": "undermap",
+      "file": "assets/encore/stages/undermap/near.png",
+      "beforeSHA256": "2e062ba46a9284669b9a19e113dbd1906cafd3f33688c900a22d7217e5869ec1",
+      "currentSHA256": "2e062ba46a9284669b9a19e113dbd1906cafd3f33688c900a22d7217e5869ec1",
+      "unchanged": true
+    },
+    {
+      "stage": "barnoir",
+      "file": "assets/encore/stages/barnoir/far.png",
+      "beforeSHA256": "e051e8cf276e3dc440dc81220d1af46cdcbae82f7d8ba026d2f44cebf2ac38d1",
+      "currentSHA256": "e051e8cf276e3dc440dc81220d1af46cdcbae82f7d8ba026d2f44cebf2ac38d1",
+      "unchanged": true
+    },
+    {
+      "stage": "barnoir",
+      "file": "assets/encore/stages/barnoir/mid.png",
+      "beforeSHA256": "77b6bdc2dccafb7d78557396d81ba27120d852e540566587f47542ac2a811713",
+      "currentSHA256": "77b6bdc2dccafb7d78557396d81ba27120d852e540566587f47542ac2a811713",
+      "unchanged": true
+    },
+    {
+      "stage": "barnoir",
+      "file": "assets/encore/stages/barnoir/near.png",
+      "beforeSHA256": "44c6343da751ef851ad57ef0af72adf435ce0f256b0557d523316144f59516f1",
+      "currentSHA256": "44c6343da751ef851ad57ef0af72adf435ce0f256b0557d523316144f59516f1",
+      "unchanged": true
+    }
+  ],
+  "unchangedHistoricalRuntime": {
+    "combat/engine.mjs": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
+    "combat/session.mjs": "9dce5b9d2fff5316cd280c8f58038d06134935717c3fd637e76042e308a1d65e",
+    "combat/stories.mjs": "763d0012eec0e59ac9454a9467596d7296b65cc64002918cc5db462b09a1fec7",
+    "combat/stage-parallax.mjs": "1e01fa0b4932f0e670bb6fa746c48b57de0c726a5637891e68427a161aecc77d"
+  }
+}

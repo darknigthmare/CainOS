@@ -1,0 +1,88 @@
+{
+  "appearanceId": "caferagatha",
+  "fighterId": "ragatha",
+  "slot": "defeat",
+  "useCase": "identity-preserve",
+  "prompt": "Use case: identity-preserve.\nAsset type: one individual full-body transparent 2D fighting-game pose for Digital Circus Encore.\nImage 1 is the approved Cafe Ragatha sprite and the strict authority for this family's identity, costume, palette, proportions, line width and shading. Image 2 is the official DECOTTO poster costume reference: Ragatha is second character from the left. Create a new distinct pose of ONLY Ragatha; keep the same family design.\n\nINVARIANTS: beige doll face and hands, short red yarn hair; blue stitched X-button eye and one white black-pupil eye, red triangular nose. White frilled coif with dark NAVY side bows only, NO tall lavender bow. Dark NAVY puff-sleeve dress, white pleated bib and pale-blue neck bow; white apron with two large pale-blue side bows, pale stitched patch motifs and scalloped white hem. White stockings on TWO legs, dark NAVY chunky platform shoes with the white toe accents on TWO feet. Beige doll hands remain ungloved. No red bows, no generic black maid uniform, no gold shoe buckles, no apron button.\n\nDEFEAT: tired but unharmed seated pose facing SCREEN-RIGHT, one knee bent up and the other leg angled forward, both whole navy platform shoes visible. One beige doll hand rests gently on the knee and the other supports her at her side, shoulders slumped with a small disappointed expression. Skirt and apron cover body naturally, no underwear visible; no wounds, tears, floor or shadow.\n\nOutput exactly ONE character in ONE pose, whole body fully visible. Portrait canvas, character silhouette at about 72 percent height with generous clear margins around every hand, shoe, hair and coif tip. Side-view gameplay readability, face and body toward SCREEN-RIGHT. Preserve crisp flat color and restrained cel shading. Genuinely transparent RGBA background, fully opaque body and clean antialiased edges. No floor, background, shadow, glow, haze, halo, white sticker outline, text, logo, watermark, props, extra limbs, extra characters, collage or pose sheet.",
+  "referencePaths": [
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/selection.png",
+    "docs/art-generation/continuation-20261120-b/cafe/references/animate-press-main.jpg"
+  ],
+  "referenceRoles": [
+    "Accepted Cafe Ragatha family seed; identity, clothing, proportions and style",
+    "Official DECOTTO Cafe costume authority; Ragatha second from left"
+  ],
+  "sourceUrls": [
+    "https://prtimes.jp/main/html/rd/p/000008857.000016756.html"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "generate_cafe_ragatha",
+  "definitionSha256": "7e7e4089742816d9ae310404d10ecc7ed0fd526e8be1452e604dfbbf979de654",
+  "expectedReferenceSHA256": {
+    "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/selection.png": "9064974567908f7ae17624c94596822e4e0488120c5311e99651f900c760ede0",
+    "docs/art-generation/continuation-20261120-b/cafe/references/animate-press-main.jpg": "135cc4a9f9a02c4ed0b9358c98754ab5339a054520c6ad53c9dd2a02323f397b"
+  },
+  "schema": "encore-native-continuation-c-cafe-art/v1",
+  "id": "caferagatha:defeat",
+  "status": "accepted_native",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "file": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/defeat.png",
+  "targetFile": "assets/encore/poses/caferagatha/defeat.png",
+  "nativeSourceFile": "/workspace/scratch/0c4db74bdd9c/generated_images/exec-b418ffe2-0bcf-4bb0-904f-c3395c2cf77c.png",
+  "sourceGenerationId": "exec-b418ffe2-0bcf-4bb0-904f-c3395c2cf77c",
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/continuation-20261120-c/cafe/generated/caferagatha/selection.png",
+      "sha256": "9064974567908f7ae17624c94596822e4e0488120c5311e99651f900c760ede0",
+      "bytes": 1531705
+    },
+    {
+      "position": 2,
+      "file": "docs/art-generation/continuation-20261120-b/cafe/references/animate-press-main.jpg",
+      "sha256": "135cc4a9f9a02c4ed0b9358c98754ab5339a054520c6ad53c9dd2a02323f397b",
+      "bytes": 181618
+    }
+  ],
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "alpha12Bounds": [
+    44,
+    294,
+    981,
+    1362
+  ],
+  "alpha12BoundsThreshold": "alpha > 12",
+  "fullyTransparentPixels": 1016029,
+  "sha256": "50d78eaac2217cb95d4f5a06afadb64a4d8a723b1c952d5dcbc7c2cb0378adce",
+  "bytes": 1455459,
+  "nativeCopyVerified": true,
+  "sourceKind": "Illustration officielle de collaboration commerciale",
+  "episodeFidelityClaim": false,
+  "includedInRuntime": true,
+  "createdAt": "2026-11-20T19:34:10.312436+00:00",
+  "visualReview": {
+    "status": "accepted",
+    "reviewer": "generate_cafe_ragatha",
+    "observations": [
+      "Seated defeated pose with downcast face, one planted hand and two visible shoes; complete silhouette; no injury effects.",
+      "Reviewed native alpha composited on both light and dark opaque backgrounds: clean visible silhouette without a visible colored halo; original PNG bytes unchanged.",
+      "Family invariants retained: beige button-eyed doll, red yarn hair, navy coif bows and dress, pale-blue apron bows, scalloped white apron, white stockings and navy platforms. Costume adaptation and original game pose; in-game placement remains a separate review."
+    ],
+    "scope": "Official costume comparison and original game pose; no episode or complete animation certification."
+  },
+  "runtimeIntegration": {
+    "activatedAt": "2026-11-20T19:36:53.843910+00:00",
+    "targetFile": "assets/encore/poses/caferagatha/defeat.png",
+    "sha256": "50d78eaac2217cb95d4f5a06afadb64a4d8a723b1c952d5dcbc7c2cb0378adce",
+    "method": "Byte-identical copy after complete native review and frozen-prefix checks"
+  }
+}

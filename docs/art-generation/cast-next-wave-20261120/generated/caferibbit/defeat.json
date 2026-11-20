@@ -1,0 +1,86 @@
+{
+  "appearanceId": "caferibbit",
+  "slot": "defeat",
+  "useCase": "precise-object-edit",
+  "prompt": "Use case: precise-object-edit. Production transparent 2D combat sprite correction.\nImage 1 is the edit target: Cafe Ribbit kneeling in defeat with the foot on the SCREEN-RIGHT planted. KEEP this pose, entire face and bowed expression, headband bows, both green arms and hands, dress, apron, the bent rear leg at screen-left, both navy shoes, all colors and cel-shaded style unchanged.\nCorrect ONE costume mistake on the FRONT PLANTED LEG AT SCREEN-RIGHT. The white scalloped sock cuff with its tiny pink heart is incorrectly positioned around the ankle, immediately above the shoe. Move this cuff and pink heart UP to the TOP edge of the white sock, at the green-to-white boundary just BELOW the raised knee and resting hand. The white sock must be one continuous white tube FROM the top cuff below the knee DOWN TO the navy shoe, with NO second frill or heart at the ankle. The resting hand must remain a green hand; do not confuse its wrist cuff with the sock cuff. Image 2 and image 3 show the intended costume. Only one top cuff on each sock. Keep the rear sock cuff at screen-left unchanged.\nPreserve exactly one intact frog head, two arms and hands, two legs and both full shoes. Do not expose underwear or change the outfit. Character turned and looking SCREEN-RIGHT. Preserve native transparent RGBA background with a transparent margin surrounding the entire silhouette. No floor, shadow, solid background, checkerboard, glow, halo, motion trail, duplicate, watermark or text.",
+  "referencePaths": [
+    "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/attempts/defeat-01.png",
+    "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/selection.png",
+    "docs/art-generation/cast-next-wave-20261120/references/caferibbit/ribbit-cafe-detail.png"
+  ],
+  "referenceRoles": [
+    "Edit target: preserve the kneeling defeat pose; correct front planted sock cuff only",
+    "Accepted costume: top cuffs belong at the green-to-white boundary below each knee",
+    "Official cafe costume"
+  ],
+  "sourceUrls": [
+    "https://prtimes.jp/main/html/rd/p/000008857.000016756.html",
+    "https://www.animatecafe.jp/event/ac000791"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "ribbit_references",
+  "definitionSha256": "68a3ad72d57180cf9e6f3032422bd8b49e89150763a856d281bae3d16596c20e",
+  "correctionOf": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/attempts/defeat-01.png",
+  "schema": "encore-native-next-missing-art/v1",
+  "id": "caferibbit:defeat",
+  "status": "accepted_native",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/defeat.png",
+  "targetFile": "assets/encore/poses/caferibbit/defeat.png",
+  "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-3b8a1a49-72bf-4dc2-9545-bf8f214fd0f1.png",
+  "sourceGenerationId": "exec-3b8a1a49-72bf-4dc2-9545-bf8f214fd0f1",
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/attempts/defeat-01.png",
+      "sha256": "9736978d3958b9cd5e721d0ec3b8e2959794e783eb366c868539dfcf54c5b4ed",
+      "bytes": 880311
+    },
+    {
+      "position": 2,
+      "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/selection.png",
+      "sha256": "638c8ced2802e022b25a2674dd9380757cfdff3a02b5a46acff4bda2fbe295e2",
+      "bytes": 1495892
+    },
+    {
+      "position": 3,
+      "file": "docs/art-generation/cast-next-wave-20261120/references/caferibbit/ribbit-cafe-detail.png",
+      "sha256": "7359975baf1aa8f956cfbad282f2c3a1103820519dfcae238327de91a681dc9f",
+      "bytes": 139654
+    }
+  ],
+  "dimensions": [
+    1207,
+    1303
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "alpha12Bounds": [
+    135,
+    80,
+    974,
+    1255
+  ],
+  "alpha12BoundsThreshold": "alpha > 12",
+  "fullyTransparentPixels": 1038862,
+  "sha256": "903dec112c77b63dedd7eed348abcb3c88a143b6b99a9491a18f4cef750b9034",
+  "bytes": 886210,
+  "nativeCopyVerified": true,
+  "sourceKind": "Illustration officielle de collaboration commerciale",
+  "episodeFidelityClaim": false,
+  "includedInRuntime": false,
+  "createdAt": "2026-11-20T14:58:17.887294+00:00",
+  "visualReview": {
+    "status": "accepted",
+    "reviewer": "ribbit_references",
+    "observations": [
+      "Défaite à genou entière et lisible vers la droite, deux bras et deux jambes. Revers et cœur rose de la chaussette avant replacés juste sous le genou ; tube blanc continu jusqu’à la chaussure sans second revers à la cheville.",
+      "Composition alpha claire et sombre inspectée et aperçu des 11 poses relu : cohérence de coiffe, cœur, tablier, nœuds et chaussures ; aucun halo visible ni rognage. Octets natifs conservés sans retouche."
+    ],
+    "scope": "Official costume comparison and original game pose; no episode or complete animation certification."
+  }
+}

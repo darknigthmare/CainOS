@@ -1,0 +1,128 @@
+{
+  "schema": "encore-historical-parent-ci-observation-v1",
+  "observedAt": "2026-11-20T17:07:33.756Z",
+  "scope": "Published parent PR #9 at 6c99eb43 only. This does not validate the unfinished continuation.",
+  "run": {
+    "id": 44770251668,
+    "runNumber": 110,
+    "headSHA": "6c99eb430e0ffcc17406428fee1ff6d8e2edeab4",
+    "status": "in_progress",
+    "conclusion": null,
+    "url": "https://github.com/darknigthmare/CainOS/actions/runs/44770251668"
+  },
+  "jobs": [
+    {
+      "id": 136405680671,
+      "status": "in_progress",
+      "conclusion": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "startedAt": "2026-11-20T16:08:22Z",
+          "completedAt": "2026-11-20T16:08:25Z"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "startedAt": "2026-11-20T16:08:25Z",
+          "completedAt": "2026-11-20T16:14:00Z"
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "startedAt": "2026-11-20T16:14:00Z",
+          "completedAt": "2026-11-20T16:14:04Z"
+        },
+        {
+          "name": "Install project dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "startedAt": "2026-11-20T16:14:04Z",
+          "completedAt": "2026-11-20T16:14:06Z"
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "startedAt": "2026-11-20T16:14:06Z",
+          "completedAt": "2026-11-20T16:14:06Z"
+        },
+        {
+          "name": "Install asset verification runtime",
+          "status": "completed",
+          "conclusion": "success",
+          "startedAt": "2026-11-20T16:14:06Z",
+          "completedAt": "2026-11-20T16:14:12Z"
+        },
+        {
+          "name": "Contracts, Node tests and both builds",
+          "status": "completed",
+          "conclusion": "success",
+          "startedAt": "2026-11-20T16:14:12Z",
+          "completedAt": "2026-11-20T16:14:56Z"
+        },
+        {
+          "name": "Install browser verification runtime",
+          "status": "completed",
+          "conclusion": "success",
+          "startedAt": "2026-11-20T16:14:56Z",
+          "completedAt": "2026-11-20T16:15:38Z"
+        },
+        {
+          "name": "Browser verification",
+          "status": "in_progress",
+          "conclusion": null,
+          "startedAt": "2026-11-20T16:15:38Z",
+          "completedAt": null
+        },
+        {
+          "name": "Build reviewable delivery",
+          "status": "pending",
+          "conclusion": null,
+          "startedAt": null,
+          "completedAt": null
+        },
+        {
+          "name": "Upload verification evidence",
+          "status": "pending",
+          "conclusion": null,
+          "startedAt": null,
+          "completedAt": null
+        },
+        {
+          "name": "Upload standalone delivery",
+          "status": "pending",
+          "conclusion": null,
+          "startedAt": null,
+          "completedAt": null
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "status": "pending",
+          "conclusion": null,
+          "startedAt": null,
+          "completedAt": null
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "status": "pending",
+          "conclusion": null,
+          "startedAt": null,
+          "completedAt": null
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "pending",
+          "conclusion": null,
+          "startedAt": null,
+          "completedAt": null
+        }
+      ]
+    }
+  ],
+  "actionsTaken": "Read-only observation; no rerun, cancellation, deployment or quota changes."
+}

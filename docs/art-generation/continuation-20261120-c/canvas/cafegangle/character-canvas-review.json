@@ -1,0 +1,252 @@
+{
+  "schema": "encore-character-canvas-review/v1",
+  "createdAt": "2026-11-20T19:37:57.188Z",
+  "method": "Production Canvas2D modules executed by Node and native Skia; actual drawImage sources and transforms inspected.",
+  "limitations": [
+    "No browser, DOM, input, audio, service-worker or physical-device test.",
+    "Individual static poses do not establish frame-by-frame animation.",
+    "Asset identity/proportion fidelity requires separate visual review; no canonical 1:1 certification."
+  ],
+  "partial": false,
+  "additionsOnly": true,
+  "crossoversOnly": false,
+  "introducedOn": "2026-11-20",
+  "appearanceId": "cafegangle",
+  "sources": {
+    "combat/data.mjs": "3e8933c915c92380fe0c0a1d7342f67fb3d947dead8ba05749ac7139773c9a58",
+    "combat/costume-additions.mjs": "9a726b9ab27027263f09f41abc162ada236b626e156eeca4bc29e7b328ca412d",
+    "combat/costume-continuation-20261120.mjs": "d3774d17d6058e72081cc7a236f748fc26cc2532fe94ddf772e9ad6de638eb0f",
+    "combat/costume-resumption-20261120.mjs": "f83bde65b434f107abf7017e532a5600b2b43713f3b0e32308f8a1a2bd3be9d5",
+    "combat/costume-discoveries-20261120.mjs": "fb16daf1591a50602a68a84e2d7e5cafa12c230b2185ef4e1d627cec8a67565c",
+    "combat/costume-ribbit-20261120.mjs": "c8ecfaae5894a5f6b0f96a6ac8038dd38a6ce57cc2e22ea51bca5aaa6a495b91",
+    "combat/costume-next-missing-20261120.mjs": "2ba4dbc117c128245422a7f595d91d0b172bfc91dc3e55a7d4b70424e86bd901",
+    "combat/costume-next-wave-20261120.mjs": "dd644e2868c8c3ca92564ea64a18cccee1c1765f364d92c19e83689b7ca6cd4e",
+    "combat/costume-order.mjs": "2df4a7f20dff74db43168a61c3b6285c34e7d2c9f2bfa64c8355b6c622aad62d",
+    "combat/costume-continuation-20261120-b.mjs": "3136498a0c30a45adbeabd801eeca2898d51b21eb8198b402685914c20f1b994",
+    "combat/costume-continuation-20261120-c.mjs": "ac5a20f76a4e75a170af9e4cf8b0d84396e9cfc5e6d93e65722c9119090b50d2",
+    "combat/crossovers.mjs": "16e0b81e1f1581bd0b66dd0c61b1b55172ec27481f4792734f7e041f04a93711",
+    "combat/crossover-npc-additions.mjs": "75eb80ed31b51961ef260e8430c5371844c174aff888daaf6110e3b4c290cd94",
+    "combat/illustrations.mjs": "26aca8338be81bedbbbc1bb4bc59dd0aae8b7b7ef4d785cbbf353ac109c53b99",
+    "combat/render.mjs": "0fd83aaa999edab666be0a7b4538338b57ec33cb2f90e041da18a47c7de87347",
+    "combat/render-poses.mjs": "21e3afba8c19723ffdcb383402cc6339b63cb58df5d4323fda2ebde093ce0b29",
+    "combat/offline-manifest.mjs": "c01a7b6ce1ac3335b4442bade97e75b435e65b5c8f30fda9c400a4e682a1f1c0",
+    "scripts/render-combat-character-review.mjs": "daa67f57a0c3a996bd8e91d2425010c13d238d6ac5d143ed091c24e78ba72443"
+  },
+  "actions": [
+    {
+      "id": "cafegangle",
+      "pose": "intro",
+      "sourcePose": "intro",
+      "file": "assets/encore/poses/cafegangle/intro.png",
+      "sha256": "b88abb8005adf392f2dd6f77979495e2ea1fbd9a6bce62edcb270c33cb6a46b3",
+      "bytes": 883421,
+      "visibleBounds": {
+        "x": 45,
+        "y": 29,
+        "width": 394,
+        "height": 593
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "cafegangle",
+      "pose": "attack",
+      "sourcePose": "attack",
+      "file": "assets/encore/poses/cafegangle/attack.png",
+      "sha256": "5cfed0c6818fcd323fbd4494d31f7cad9ed5712f8ee16981c4f1924b203ce181",
+      "bytes": 887721,
+      "visibleBounds": {
+        "x": 48,
+        "y": 37,
+        "width": 396,
+        "height": 582
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "cafegangle",
+      "pose": "hit",
+      "sourcePose": "hit",
+      "file": "assets/encore/poses/cafegangle/hit.png",
+      "sha256": "5c5487c32d05c60382505a0d5ac3dc8acae409edf2fc7ae180722d632576519a",
+      "bytes": 920043,
+      "visibleBounds": {
+        "x": 83,
+        "y": 24,
+        "width": 342,
+        "height": 600
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "cafegangle",
+      "pose": "walk",
+      "sourcePose": "walk",
+      "file": "assets/encore/poses/cafegangle/walk.png",
+      "sha256": "e6faa1a88848501f0c6e0dd3c42d8e2eed6256c30e610c9433ed5c9107120522",
+      "bytes": 898347,
+      "visibleBounds": {
+        "x": 71,
+        "y": 39,
+        "width": 338,
+        "height": 576
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "cafegangle",
+      "pose": "jump",
+      "sourcePose": "jump",
+      "file": "assets/encore/poses/cafegangle/jump.png",
+      "sha256": "db72e894e2c946070442f04df9cf1d6dacd359ba8f8f4bb3ea7a5b0d030634c8",
+      "bytes": 984748,
+      "visibleBounds": {
+        "x": 49,
+        "y": 36,
+        "width": 401,
+        "height": 544
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "cafegangle",
+      "pose": "crouch",
+      "sourcePose": "crouch",
+      "file": "assets/encore/poses/cafegangle/crouch.png",
+      "sha256": "1f18b95099cfb6071b7fb65bcc611115dfceb062642f8370b3994c4238625ff6",
+      "bytes": 992524,
+      "visibleBounds": {
+        "x": 66,
+        "y": 45,
+        "width": 437,
+        "height": 564
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "cafegangle",
+      "pose": "victory",
+      "sourcePose": "victory",
+      "file": "assets/encore/poses/cafegangle/victory.png",
+      "sha256": "4a356a29adb7bd551ba401365122897bef127079891412ce7dc76ebfac03eebf",
+      "bytes": 897634,
+      "visibleBounds": {
+        "x": 89,
+        "y": 15,
+        "width": 298,
+        "height": 615
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "cafegangle",
+      "pose": "defeat",
+      "sourcePose": "defeat",
+      "file": "assets/encore/poses/cafegangle/defeat.png",
+      "sha256": "0f0803c1d170f877835b3dcd2a92bde7631eedd5af49524a420acc548e873b58",
+      "bytes": 937073,
+      "visibleBounds": {
+        "x": 77,
+        "y": 37,
+        "width": 462,
+        "height": 575
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    },
+    {
+      "id": "cafegangle",
+      "pose": "heavy",
+      "sourcePose": "heavy",
+      "file": "assets/encore/poses/cafegangle/heavy.png",
+      "sha256": "e7195e188fc3a3fafd98054ef94a5e6b3a914e3996a22634060b90bd7b16b1f8",
+      "bytes": 954409,
+      "visibleBounds": {
+        "x": 29,
+        "y": 29,
+        "width": 538,
+        "height": 589
+      },
+      "nativeFacing": 1,
+      "sourceVerified": true,
+      "bothFacings": true,
+      "uniformScale": true,
+      "rendered": true
+    }
+  ],
+  "stances": [
+    {
+      "id": "cafegangle",
+      "file": "assets/encore/stance/cafegangle.png",
+      "sha256": "5137ed1bfba96c48365cda3e4aa16b23b555e544a384c536da32e2af71cb370b",
+      "bytes": 860381,
+      "nativeFacing": 1,
+      "rendered": true,
+      "sourceVerified": true,
+      "bothFacings": true
+    }
+  ],
+  "portraits": [
+    {
+      "id": "cafegangle",
+      "archiveId": null,
+      "file": "assets/encore/selection/cafegangle.png",
+      "sha256": "d47262a0cd8306917ad51b41999a412046b1376c6f75ce4a1f3e4ef166f35510",
+      "bytes": 891954,
+      "rendered": true,
+      "sourceVerified": true,
+      "uniformScaleWithinPixelRounding": true,
+      "directionalAPI": false
+    }
+  ],
+  "missing": [],
+  "sheets": [
+    "actions-cafegangle.jpg",
+    "archive-portraits-01.jpg"
+  ],
+  "browserTestStatus": "not_executed",
+  "counts": {
+    "appearances": 1,
+    "expectedActions": 9,
+    "actions": 9,
+    "stances": 1,
+    "drawChecks": 20,
+    "archiveEntries": 0,
+    "portraits": 1,
+    "expectedPortraits": 1,
+    "missing": 0,
+    "aliasedActions": 0
+  },
+  "complete": true
+}

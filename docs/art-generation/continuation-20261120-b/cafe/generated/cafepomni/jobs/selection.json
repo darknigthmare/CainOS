@@ -1,0 +1,30 @@
+{
+  "appearanceId": "cafepomni",
+  "slot": "selection",
+  "useCase": "stylized-concept",
+  "prompt": "Use case: stylized-concept.\nAsset type: one full-body transparent 2D character selection sprite for Digital Circus Encore.\n\nCreate exactly ONE Pomni wearing the official Animate Cafe costume in image 1. Image 1 is the authority for clothes, colors and accessory placement. Image 2 provides only the existing game's clean cel-shaded style, face identity and body proportions; replace its jester jumpsuit and colored gloves with the cafe outfit.\n\nKeep Pomni's white face, short brown bob, huge white eyes with red-and-blue pinwheel irises and red cheeks. The COMPLETE jester hat has two long red-and-dark-navy points with round YELLOW bells at both ends; a WHITE frilled maid headband sits over its front. Preserve the complete hat silhouette and its dark navy decorative bows. The dress is short dark navy, with small puff sleeves and white frill edging; the white ruffled apron has a large BLUE bow on her anatomical right side and a large RED bow on her anatomical left. White gloves and small white scalloped wrist cuffs. The obscured upper apron bib stays simple white; add no new emblem or buttons. Two slim WHITE legs, small WHITE scalloped ankle cuffs, and rounded closed shoes: RED on her anatomical right foot, DARK NAVY on her anatomical left foot, with the small white shoe accents visible in image 1. No yellow ankle cuffs, black tights, black-only shoes, white hat pompoms or red-blue jumpsuit.\n\nSelection pose: relaxed standing three-quarter pose facing SCREEN-RIGHT, eyes screen-right, a small cautious smile. One white-gloved hand raised politely and the other lightly beside the waist. Two arms, two hands, two separate legs and two shoes, one intact face and hat. No serving tray, food or other characters.\n\nCrisp dark contours, restrained two-tone cel shading and clean flat color. Entire character centered with generous transparent space around ALL hat tips, fingertips and shoe soles; body occupies about 75 percent of canvas height. Keep the head-to-body scale of the game reference, not an exaggerated merchandise chibi. Native transparent RGBA background. No floor, environment, shadow, glow, halo, sticker outline, text, logo, watermark, collage, duplicate character or cropped extremities.",
+  "referencePaths": [
+    "docs/art-generation/continuation-20261120-b/cafe/references/cafepomni-detail.png",
+    "assets/encore/selection/pomni.webp"
+  ],
+  "referenceRoles": [
+    "Official cafe outfit and full silhouette",
+    "Existing Pomni game drawing style, identity and proportions"
+  ],
+  "sourceUrls": [
+    "https://prtimes.jp/main/html/rd/p/000008857.000016756.html",
+    "https://www.animatecafe.jp/event/ac000791"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "ribbit_references",
+  "definitionSha256": "93b2acb2d0b4fb269727a18e0f16460ee610979089227acb8dbaa7d39720014c",
+  "expectedReferenceSHA256": {
+    "docs/art-generation/continuation-20261120-b/cafe/references/cafepomni-detail.png": "b5bd88345eeed2098cc9b281d4aee07fea9d2c41c77699ffe3dadf53daa59b09",
+    "assets/encore/selection/pomni.webp": "50fa49cc6678b85959fc0f6fcc6b2a5665265238eccd1d7cf8c05206db874ca7"
+  },
+  "referenceRoleMetadataCorrection": {
+    "updatedAt": "2026-11-20T17:17:00.452669+00:00",
+    "originalRole": "Existing game drawing style, identity and proportions; Kinger floating gloves only",
+    "reason": "Correct shared descriptive label for the second reference, which is the unchanged Pomni image. Prompt, input paths, input hashes and native image are unchanged."
+  }
+}

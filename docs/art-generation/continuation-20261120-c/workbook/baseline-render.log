@@ -1,0 +1,5 @@
+MONO_WASM: WebAssembly resource does not have the expected content type "application/wasm", so falling back to slower ArrayBuffer instantiation.
+{"phase":"rendered-baseline-summary","rss":605298688,"heapTotal":279961600,"heapUsed":105341928,"external":171436994,"arrayBuffers":1783857}
+{"phase":"rendered-baseline-production","rss":618430464,"heapTotal":257159168,"heapUsed":109545112,"external":166189468,"arrayBuffers":1928872}
+{"phase":"rendered-baseline-qa","rss":620535808,"heapTotal":259391488,"heapUsed":111775760,"external":165526040,"arrayBuffers":1762622}
+{"phase":"rendered-baseline-references","rss":622522368,"heapTotal":260702208,"heapUsed":112053936,"external":165503812,"arrayBuffers":1759640}

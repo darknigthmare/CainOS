@@ -1,0 +1,14 @@
+{"phase":"authored-Synthèse","rss":292638720,"heapTotal":196784128,"heapUsed":40802472,"external":20367634,"arrayBuffers":1613822}
+{"phase":"authored-Fonctionnalités","rss":294387712,"heapTotal":183939072,"heapUsed":42612352,"external":20367674,"arrayBuffers":1613822}
+{"phase":"authored-Combattants","rss":296955904,"heapTotal":191803392,"heapUsed":44320160,"external":20367674,"arrayBuffers":1613822}
+{"phase":"authored-Techniques","rss":347619328,"heapTotal":231075840,"heapUsed":56015064,"external":20367674,"arrayBuffers":1613822}
+{"phase":"authored-Arènes","rss":350765056,"heapTotal":211939328,"heapUsed":55491832,"external":20367674,"arrayBuffers":1613822}
+{"phase":"authored-Atlas","rss":352116736,"heapTotal":232796160,"heapUsed":61913416,"external":20367674,"arrayBuffers":1613822}
+{"phase":"authored-Production","rss":664530944,"heapTotal":291123200,"heapUsed":99471920,"external":20367674,"arrayBuffers":1613822}
+{"phase":"authored-Scénarios","rss":666066944,"heapTotal":275648512,"heapUsed":99422048,"external":20367674,"arrayBuffers":1613822}
+{"phase":"authored-Extension PNJ","rss":665944064,"heapTotal":255725568,"heapUsed":99124632,"external":20367674,"arrayBuffers":1613822}
+{"phase":"authored-QA","rss":673509376,"heapTotal":344760320,"heapUsed":128788904,"external":20367674,"arrayBuffers":1613822}
+{"phase":"authored-Références","rss":674770944,"heapTotal":305520640,"heapUsed":127311584,"external":20367674,"arrayBuffers":1613822}
+MONO_WASM: WebAssembly resource does not have the expected content type "application/wasm", so falling back to slower ArrayBuffer instantiation.
+Inspect result written to file: /workspace/scratch/0c4db74bdd9c/outputs/tracker-continuation-c-20261120/DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx.inspect.ndjson
+{"phase":"exported","rss":1116135424,"heapTotal":540151808,"heapUsed":430422992,"external":232713911,"arrayBuffers":1659022}

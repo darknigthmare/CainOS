@@ -1,0 +1,17 @@
+{
+  "appearanceId": "glitch-metarunner-ribbit-fusion",
+  "fighterId": "ribbit",
+  "series": "metarunner",
+  "style": "fusion",
+  "slot": "victory",
+  "nativeFacing": "right",
+  "prompt": "Edit ONLY the small mechanical hand resting at the waist on IMAGE RIGHT of reference 1. Leave the raised fist at upper image-left EXACTLY as it is: it already correctly has three digits. Leave all other anatomy, pose, expression, armour, colours, materials, feet, head and native transparency unchanged. The hand at the waist currently shows only TWO white rounded fingertip pads. Redraw that small hand as a relaxed lightly curled THREE-digit mechanical frog hand, resting at the hip, with THREE CLEARLY VISIBLE SEPARATE white rounded fingertip lobes TOTAL, one thumb plus two fingers. Make their three-tip silhouette unambiguous, with small dark separations. Reference 2 shows the original three-digit mechanical hand anatomy; use only that anatomical detail, not its pose. No fourth tip, no two-tip hand, no residual stub. Keep the waist arm bent at the same place and preserve all surrounding armour/body exactly. No clothes, text, ground, shadow, particles, external glow or background. Full-body transparent PNG, entire feet and both hands inside frame. Original anatomy design choice; no canonical claim.",
+  "referencePaths": [
+    "docs/art-generation/continuation-20261120-b/metarunner/fusion/attempts/victory-02/victory.png",
+    "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/selection.png"
+  ],
+  "reviewer": "audit_github",
+  "definitionSHA256": "8838b39db6a0ab378603aec7ad863ecb9bb917017eca00fb1ed08efd2ca064b3",
+  "attempt": 3,
+  "supersedesRejectedAttempt": "docs/art-generation/continuation-20261120-b/metarunner/fusion/attempts/victory-02/receipt.json"
+}

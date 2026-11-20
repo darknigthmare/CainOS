@@ -1,0 +1,37 @@
+{
+  "appearanceId": "glitch-metarunner-ribbit-resident",
+  "fighterId": "ribbit",
+  "series": "metarunner",
+  "style": "resident",
+  "slot": "heavy",
+  "nativeFacing": "right",
+  "prompt": "Edit the FIRST referenced image into a clean native TRANSPARENT PNG cutout. Keep its full-body two-palm forward lunge pose, exact outfit and face. The SECOND reference is the accepted identity and material reference. Remove ALL diffuse grey, green, purple or cyan haze outside the character silhouette: every background pixel outside normal crisp edge antialiasing must be truly alpha zero. No outer glow, no bloom, no rim fog, no floor, no shadow, no black background. Preserve the entire figure and ample transparent margins. IMPORTANT ANATOMY FIX: each hand must have exactly THREE digits TOTAL: TWO elongated rounded fingers plus ONE shorter opposing thumb, no fourth digit. Maintain the exact original biological/cybernetic sides and materials. This is the same original Ribbit crossover design, not a new outfit. Biological bright-green Ribbit frog with huge protruding white eyes and black pie-cut pupils, mint muzzle, pink cheek circles and hot-pink fabric bow tie. Long slender game-adapted frog limbs. Original esports replay analyst resident of the Meta Runner world. Wear a sleeveless short navy esports jacket with distinct MAGENTA side panels over a cream short-sleeve tee; navy athletic shorts; small smooth grey kneepads; bare green lower legs; purple high-top sneakers with cyan soles. LEFT forearm is a light-grey cybernetic prosthesis with navy joints and thin cyan interface strips, ending in THREE rounded robotic digits. RIGHT hand is green, exactly THREE rounded digits, with a compact black screen wristband. Keep the pink bow tie visible and no headphones blocking eyes. No hoodie, tool belt, weapons, company logo, floating interface, extra device or tail. Clear sporty silhouette.",
+  "referencePaths": [
+    "docs/art-generation/continuation-20261120-b/metarunner/resident/rejected/heavy-attempt01.png",
+    "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/selection.png"
+  ],
+  "reviewer": "root",
+  "definitionSHA256": "3d33426cdce79299964858cb31b199c7b0bc829dc7ee14e53c2ba90b6da983d4",
+  "method": "image_gen.imagegen",
+  "status": "superseded_native_variant",
+  "reason": "Ancienne poussée à paumes ouvertes remplacée par la fente à poings fermés finalement sélectionnée. Le halo initialement soupçonné n’est pas confirmé en composition alpha ; aucun défaut de transparence revendiqué.",
+  "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-ca1eae2b-b4ad-4526-9f5e-f8391d6d6100.png",
+  "sourceGenerationId": "exec-ca1eae2b-b4ad-4526-9f5e-f8391d6d6100",
+  "file": "docs/art-generation/continuation-20261120-b/metarunner/resident/rejected/heavy-attempt02.png",
+  "bytes": 1429851,
+  "sha256": "a779b324bfee9ddd3c2d992d5d5aa65d4e6e8d93b38a7945b0d3ef4e184c1ede",
+  "mode": "RGBA",
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "includedInRuntime": false,
+  "initialReviewReason": "Halo extérieur diffus toujours présent malgré correction ; pose non activée.",
+  "alphaReassessment": {
+    "reviewer": "root",
+    "reviewedAt": "2026-11-20T17:13:44.992409+00:00",
+    "diagnostic": "docs/art-generation/continuation-20261120-b/metarunner/review/rejected-attempts-alpha.png",
+    "diagnosticSHA256": "302795db28d9e9010958e4b8098e139472db929dac36a1b9e95b3f125a86b2b4",
+    "observation": "Toutes les cinq tentatives ont une composition alpha sans halo diffus. Les écarts de doigts sont évalués séparément ; deux variantes correctes restent simplement non retenues."
+  }
+}

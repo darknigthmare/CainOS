@@ -1,0 +1,27 @@
+{
+  "appearanceId": "cafezooble",
+  "slot": "selection",
+  "useCase": "stylized-concept",
+  "prompt": "Use case: precise-object-edit.\nEdit target: Image 1, the generated full-body Cafe Zooble sprite. Image 2 is the official costume reference: ONLY Zooble in purple at center-right.\nKeep the character identity, asymmetrical assembly, clothing, pose, expression, linework and flat colors exactly as Image 1, with these precise corrections:\n1. REMOVE ALL colored glow, fog, aura, rim lighting and cast shadow around every part. Pixels outside the clean outline must be fully transparent alpha zero. This must look like a flat isolated game sprite, with no lighting effects at all. Preserve solid opaque painted interiors and only normal thin anti-aliasing on edges.\n2. Give the entire figure about 12 percent clear transparent margin on top AND bottom and at least 10 percent at the left/right edges. Both antennas, both hands, spiral foot and shoe entirely inside; no close crop.\n3. The navy dress shoe has no GOLD stripe: remove the gold stripe and use the small dark laces visible on the official poster. Keep the same shoe shape.\n4. Preserve the pink triangular head WITHOUT a mouth, two distinct eyes with purple lids, cyan lightning antenna and black-white spring antenna. White shirt, purple waistcoat, navy apron with purple border. Green arm/yellow mitten, red arm/pale gray claw, pink wing, gray trouser legs, one yellow spiral foot and one navy shoe. No anatomy change, no new clothing or props.\nOne character only, one transparent RGBA portrait image, no background, no ground, no glow, no vignette, no light bloom, no labels or text.",
+  "referencePaths": [
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/attempts/selection-halo/native.png",
+    "docs/art-generation/continuation-20261120-c/cafe/references/animate-press-main.jpg"
+  ],
+  "referenceRoles": [
+    "Edit target: generated selection; preserve design, remove glow and adjust margins and shoe detail",
+    "Official Cafe Zooble uniform, identity and shoe detail"
+  ],
+  "sourceUrls": [
+    "https://prtimes.jp/main/html/rd/p/000008857.000016756.html"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "root",
+  "definitionSha256": "f6cbef6ee7b484a505bbef70f6f45fcacf8f17d2c8c222b867a914e3ba0f8407",
+  "expectedReferenceSHA256": {
+    "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/attempts/selection-halo/native.png": "d073adc2b7db8e8e8186bda0a66ddff04c64a302746ea8bb71800a5b7084d111",
+    "docs/art-generation/continuation-20261120-c/cafe/references/animate-press-main.jpg": "135cc4a9f9a02c4ed0b9358c98754ab5339a054520c6ad53c9dd2a02323f397b"
+  },
+  "correctsAttempt": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/attempts/selection-halo/native.png",
+  "jobPath": "docs/art-generation/continuation-20261120-c/cafe/generated/cafezooble/jobs/selection-correction.json"
+}
+

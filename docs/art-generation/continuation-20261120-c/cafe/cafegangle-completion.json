@@ -1,0 +1,252 @@
+{
+  "schema": "encore-cafe-family-review/v1",
+  "appearanceId": "cafegangle",
+  "createdAt": "2026-11-20T19:32:50.649983+00:00",
+  "status": "complete_native_pending_runtime_integration",
+  "reviewer": "audit_missing_assets",
+  "nativeImages": 11,
+  "bytes": 10108255,
+  "slots": [
+    "selection",
+    "stance",
+    "intro",
+    "attack",
+    "heavy",
+    "hit",
+    "walk",
+    "jump",
+    "crouch",
+    "victory",
+    "defeat"
+  ],
+  "files": [
+    {
+      "id": "cafegangle:selection",
+      "slot": "selection",
+      "file": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/selection.png",
+      "targetFile": "assets/encore/selection/cafegangle.png",
+      "sha256": "d47262a0cd8306917ad51b41999a412046b1376c6f75ce4a1f3e4ef166f35510",
+      "bytes": 891954,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "alpha12Bounds": [
+        182,
+        32,
+        875,
+        1422
+      ],
+      "nativeFacing": "right",
+      "sourceGenerationId": "exec-b66c95a2-4342-4317-8688-2837492f2578"
+    },
+    {
+      "id": "cafegangle:stance",
+      "slot": "stance",
+      "file": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/stance.png",
+      "targetFile": "assets/encore/stance/cafegangle.png",
+      "sha256": "5137ed1bfba96c48365cda3e4aa16b23b555e544a384c536da32e2af71cb370b",
+      "bytes": 860381,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "alpha12Bounds": [
+        165,
+        80,
+        902,
+        1393
+      ],
+      "nativeFacing": "right",
+      "sourceGenerationId": "exec-989caf0d-2554-45fe-a6fd-0c1fd70b0caa"
+    },
+    {
+      "id": "cafegangle:intro",
+      "slot": "intro",
+      "file": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/intro.png",
+      "targetFile": "assets/encore/poses/cafegangle/intro.png",
+      "sha256": "b88abb8005adf392f2dd6f77979495e2ea1fbd9a6bce62edcb270c33cb6a46b3",
+      "bytes": 883421,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "alpha12Bounds": [
+        101,
+        65,
+        993,
+        1406
+      ],
+      "nativeFacing": "right",
+      "sourceGenerationId": "exec-32266cd7-9cde-4a43-adc8-ed249ddf02a3"
+    },
+    {
+      "id": "cafegangle:attack",
+      "slot": "attack",
+      "file": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/attack.png",
+      "targetFile": "assets/encore/poses/cafegangle/attack.png",
+      "sha256": "5cfed0c6818fcd323fbd4494d31f7cad9ed5712f8ee16981c4f1924b203ce181",
+      "bytes": 887721,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "alpha12Bounds": [
+        109,
+        83,
+        1004,
+        1400
+      ],
+      "nativeFacing": "right",
+      "sourceGenerationId": "exec-ca4b86ae-3adc-4ebb-b3d3-d6f127c1ffc8"
+    },
+    {
+      "id": "cafegangle:heavy",
+      "slot": "heavy",
+      "file": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/heavy.png",
+      "targetFile": "assets/encore/poses/cafegangle/heavy.png",
+      "sha256": "e7195e188fc3a3fafd98054ef94a5e6b3a914e3996a22634060b90bd7b16b1f8",
+      "bytes": 954409,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "alpha12Bounds": [
+        60,
+        60,
+        1161,
+        1267
+      ],
+      "nativeFacing": "right",
+      "sourceGenerationId": "exec-b3be6d84-1e00-4c2a-8c50-fe5772be0caa"
+    },
+    {
+      "id": "cafegangle:hit",
+      "slot": "hit",
+      "file": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/hit.png",
+      "targetFile": "assets/encore/poses/cafegangle/hit.png",
+      "sha256": "5c5487c32d05c60382505a0d5ac3dc8acae409edf2fc7ae180722d632576519a",
+      "bytes": 920043,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "alpha12Bounds": [
+        188,
+        55,
+        961,
+        1412
+      ],
+      "nativeFacing": "right",
+      "sourceGenerationId": "exec-bed0a0e3-c345-4e4c-853d-2ce4cbcad124"
+    },
+    {
+      "id": "cafegangle:walk",
+      "slot": "walk",
+      "file": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/walk.png",
+      "targetFile": "assets/encore/poses/cafegangle/walk.png",
+      "sha256": "e6faa1a88848501f0c6e0dd3c42d8e2eed6256c30e610c9433ed5c9107120522",
+      "bytes": 898347,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "alpha12Bounds": [
+        162,
+        88,
+        925,
+        1391
+      ],
+      "nativeFacing": "right",
+      "sourceGenerationId": "exec-bd3834ef-c7f9-476f-9c83-38c9af1d2797"
+    },
+    {
+      "id": "cafegangle:jump",
+      "slot": "jump",
+      "file": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/jump.png",
+      "targetFile": "assets/encore/poses/cafegangle/jump.png",
+      "sha256": "db72e894e2c946070442f04df9cf1d6dacd359ba8f8f4bb3ea7a5b0d030634c8",
+      "bytes": 984748,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "alpha12Bounds": [
+        111,
+        81,
+        1018,
+        1313
+      ],
+      "nativeFacing": "right",
+      "sourceGenerationId": "exec-061aabd5-ed9b-4da1-9aaf-96c032016765"
+    },
+    {
+      "id": "cafegangle:crouch",
+      "slot": "crouch",
+      "file": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/crouch.png",
+      "targetFile": "assets/encore/poses/cafegangle/crouch.png",
+      "sha256": "1f18b95099cfb6071b7fb65bcc611115dfceb062642f8370b3994c4238625ff6",
+      "bytes": 992524,
+      "dimensions": [
+        1198,
+        1313
+      ],
+      "alpha12Bounds": [
+        135,
+        93,
+        1031,
+        1249
+      ],
+      "nativeFacing": "right",
+      "sourceGenerationId": "exec-8c93a202-2058-4b13-ba15-a7670f704d56"
+    },
+    {
+      "id": "cafegangle:victory",
+      "slot": "victory",
+      "file": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/victory.png",
+      "targetFile": "assets/encore/poses/cafegangle/victory.png",
+      "sha256": "4a356a29adb7bd551ba401365122897bef127079891412ce7dc76ebfac03eebf",
+      "bytes": 897634,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "alpha12Bounds": [
+        202,
+        35,
+        875,
+        1425
+      ],
+      "nativeFacing": "right",
+      "sourceGenerationId": "exec-d7f3cae1-54a3-4e8d-9393-8f921e9808fa"
+    },
+    {
+      "id": "cafegangle:defeat",
+      "slot": "defeat",
+      "file": "docs/art-generation/continuation-20261120-c/cafe/generated/cafegangle/defeat.png",
+      "targetFile": "assets/encore/poses/cafegangle/defeat.png",
+      "sha256": "0f0803c1d170f877835b3dcd2a92bde7631eedd5af49524a420acc548e873b58",
+      "bytes": 937073,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "alpha12Bounds": [
+        157,
+        77,
+        1106,
+        1255
+      ],
+      "nativeFacing": "right",
+      "sourceGenerationId": "exec-7ff47a78-2a59-4efd-bd3d-c52bcf83d600"
+    }
+  ],
+  "nativeCopyVerified": true,
+  "canonicalFidelityClaim": false,
+  "completeAnimationClaim": false,
+  "runtimeIntegrated": false,
+  "limitations": [
+    "Illustration commerciale stylisée et vue unique ; dos et doigts non attestés canoniquement.",
+    "Onze poses statiques ; revue dans le renderer de production à effectuer par le coordinateur."
+  ]
+}

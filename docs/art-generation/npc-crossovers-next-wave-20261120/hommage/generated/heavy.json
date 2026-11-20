@@ -1,0 +1,83 @@
+{
+  "appearanceId": "glitch-murderdrones-ribbit-hommage",
+  "fighterId": "ribbit",
+  "series": "murderdrones",
+  "style": "hommage",
+  "slot": "heavy",
+  "prompt": "Use case: identity-preserve. Asset type: one individually drawn full-body 2D fighting-game sprite. Reference image 1 is the accepted Ribbit Uzi-homage selection sprite: it is the exact character and costume to preserve. Reference image 2 is official Iconic Ribbit for identity; image 3 is official Uzi for outfit motifs only. Change the pose as requested while keeping the same slender biological green frog, huge raised white/black eyes, pale mint muzzle, pink cheeks, pink bow tie, black pom-pom beanie behind the eyes, black hoodie with white screen/crossbones emblem, violet double sleeve bands, dark fluffy hem, long uncovered green legs, violet ankle bands and broad rounded black ankle boots with dark gray soles. Bare green hands. Keep exactly the same 2D dark outlines, flat colors, restrained cel shading, proportions and costume details as image 1. No robot head, hair, visor, mechanical limbs, pants, weapons, tools or extra accessories.\nPOSE — strong attack: a powerful high front kick toward screen-right, one broad black boot raised and extended at head height, supporting boot grounded, torso leaning back naturally, both green hands balancing in guard. No weapon or trail. All limbs and both boots inside the wide canvas approximately 1536 by 1024.\nEntire single character only, three-quarter facing screen-right, face directed right. Preserve both eyes and both feet, with all anatomy inside the canvas and ample transparent margin on every side. Genuine transparent background with native alpha. No scenery, floor, shadow, glow, smoke, floating particles, text, labels, grid, border or duplicate figure. Output one finished sprite, not a sheet or a comparison. Redraw the pose naturally; do not merely rotate or mirror the source.",
+  "referencePaths": [
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/selection.png",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/references/official-iconic-ribbit.png",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/references/official-uzi-front.png"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "/root/tracker_recovery",
+  "tool": "image_gen",
+  "transparentBackground": true,
+  "schema": "encore-native-npc-crossover/v1",
+  "id": "glitch-murderdrones-ribbit-hommage:heavy",
+  "status": "accepted_native",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/heavy.png",
+  "targetFile": "assets/encore/crossovers/murderdrones/ribbit/hommage/heavy.png",
+  "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-6c874817-0bee-42ca-8933-43e5d297b73a.png",
+  "sourceGenerationId": "exec-6c874817-0bee-42ca-8933-43e5d297b73a",
+  "definitionFile": "docs/art-generation/npc-crossovers-next-wave-20261120/definitions/glitch-murderdrones-ribbit-hommage.json",
+  "definitionSHA256": "04c8fffed2e11021004c8e387f318b11f459f4f5cf97a5cfa8922bbe51529e93",
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/selection.png",
+      "sha256": "ea9bf4c31ea98cc6422699abb1ad7190378bd35deb940fa0e821fd9c407b418f",
+      "bytes": 1402255,
+      "originalReferencePath": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/selection.png",
+      "relocationReason": "Historical seed archived unchanged before three-digit anatomy corrections; reference bytes and SHA are identical."
+    },
+    {
+      "position": 2,
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/references/official-iconic-ribbit.png",
+      "sha256": "d62ee29c8d07410db6ddfdde22965b719a305e9d6ec08aa1c48ab1788a6ce825",
+      "bytes": 1085524
+    },
+    {
+      "position": 3,
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/references/official-uzi-front.png",
+      "sha256": "a4cd219899ce902fdf07e5545b5691b874df46776b82c106fbea48daeac1f162",
+      "bytes": 1280711
+    }
+  ],
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "alpha12Bounds": [
+    347,
+    19,
+    1205,
+    1014
+  ],
+  "alpha12BoundsThreshold": "alpha > 12",
+  "fullyTransparentPixels": 1284130,
+  "sha256": "90cd3b607f74c4618422ba172e8ac498e37e85212cd011de1a35bdadce0b35d3",
+  "bytes": 1155353,
+  "nativeCopyVerified": true,
+  "sourceKind": "Création originale pour Encore",
+  "episodeFidelityClaim": false,
+  "canonicalCostumeClaim": false,
+  "includedInRuntime": true,
+  "createdAt": "2026-11-20T14:45:08.623552+00:00",
+  "visualReview": {
+    "status": "accepted",
+    "reviewer": "/root/tracker_recovery",
+    "observations": [
+      "Coup fort inspecté : grand coup de pied haut vers la droite, autre bottine en appui, torse incliné et bras de garde distincts. Deux jambes seulement, pied levé intégralement cadré ; identité et costume fidèles au portrait de cette création originale."
+    ],
+    "scope": "Original crossover identity, entire figure, costume continuity and readable game pose; no canonical costume or complete animation claim."
+  }
+}

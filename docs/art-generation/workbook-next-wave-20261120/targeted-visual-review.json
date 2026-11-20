@@ -1,0 +1,126 @@
+{
+  "schema": "encore-workbook-targeted-visual-review/v1",
+  "createdAt": "2026-11-20T15:50:57.661715+00:00",
+  "status": "accepted_for_reviewed_ranges",
+  "workbookSHA256": "4ffcd9d1e17cedbc4a6495f103573eb231a77006d2dabb210f2abbdbca781091",
+  "planSha256": "dd1ee1b35fd000dff0e06045e3a13315f05f331cb8fccf0304346ec06b74e0c1",
+  "reviews": [
+    {
+      "reviewer": "/root/tracker_recovery",
+      "method": "Direct inspection of the rendered PNGs through view_image; twelve final views. No inspection of unviewed images is claimed.",
+      "files": [
+        "summary-top.png",
+        "summary-bottom.png",
+        "feature-pre-03.png",
+        "production-1.png",
+        "production-2.png",
+        "production-5.png",
+        "production-12.png",
+        "qa-14.png",
+        "references-new.png",
+        "references-footer.png",
+        "stage-left.png",
+        "stage-right.png"
+      ],
+      "observations": [
+        "Summary counts 54 fighters, 540 moves, 24 stages and 472 costumes are legible; historical QA totals are explicitly dated history.",
+        "The four family rows are distinct and in the prescribed order: Café, Hommage, Résident, Fusion.",
+        "The individually sampled Production rows display complete dimensions, SHA-256 values and native receipt paths without visible vertical clipping.",
+        "The current blocked Barnoir browser attempt is explicitly Non exécuté with zero successful checks; final costume browser validation is not claimed.",
+        "References distinguish official observed source details from original fan-game adaptation, including the three-lobe hand direction; incomplete Maid and hidden-foot references are not closed.",
+        "Barnoir and the preserved reference footer display complete text; yellow user-note cells remain present."
+      ],
+      "concreteDefectsObserved": []
+    },
+    {
+      "reviewer": "/root",
+      "method": "Direct visual review reported by the parent agent in a collaboration message; four final views.",
+      "files": [
+        "summary-top.png",
+        "production-1.png",
+        "qa-14.png",
+        "references-new.png"
+      ],
+      "observations": [
+        "Texts legible and cells adjusted; counts 54/540/24/472 displayed.",
+        "Families distinguished, original scope of hand direction explicit, browser Non exécuté."
+      ],
+      "concreteDefectsObserved": []
+    }
+  ],
+  "views": [
+    {
+      "file": "summary-top.png",
+      "sheet": "Synthèse",
+      "range": "A1:H18",
+      "sha256": "584fbfa60a809ddf178e4276e3d91315d03029a87edf73749a65e05cef9a88ce"
+    },
+    {
+      "file": "summary-bottom.png",
+      "sheet": "Synthèse",
+      "range": "A19:H35",
+      "sha256": "f129e49bc1a34320c196a687a59703abe8511b63fa95b884ba72554654692f64"
+    },
+    {
+      "file": "feature-pre-03.png",
+      "sheet": "Fonctionnalités",
+      "range": "A62:I62",
+      "sha256": "38d4a1d6b1e30d5ade19a015b16c8f4b1383e2ff6714a5d3d02e25f926d6ad01"
+    },
+    {
+      "file": "production-1.png",
+      "sheet": "Production",
+      "range": "A3194:J3197",
+      "sha256": "1ac463820ea479f25fe6c4628de17715f535ff1fcc235b30eb315e1a1e011ba9"
+    },
+    {
+      "file": "production-2.png",
+      "sheet": "Production",
+      "range": "A3198:J3201",
+      "sha256": "d6f2006e6169fd4712d1f56b2b4dc45fd496937d10dc06713fc63947811f5e60"
+    },
+    {
+      "file": "production-5.png",
+      "sheet": "Production",
+      "range": "A3210:J3213",
+      "sha256": "28d08178f6f61594c7aa9b1b93c28567cd36a80dcc8dbf6d00ffadd67748fb12"
+    },
+    {
+      "file": "production-12.png",
+      "sheet": "Production",
+      "range": "A3238:J3241",
+      "sha256": "6e58625e3865a2bc69bb39677cb90b0fb0cdec7826a83b7a76f2dd4324b05100"
+    },
+    {
+      "file": "qa-14.png",
+      "sheet": "QA",
+      "range": "A2393:I2394",
+      "sha256": "a6b9733d6ae93eeb621ca9cc17b4febd4a05087c08f50391e8c820466b36c9d2"
+    },
+    {
+      "file": "references-new.png",
+      "sheet": "Références",
+      "range": "A159:E162",
+      "sha256": "b562c1b2afe371472b1cf7c8d7e930c81daa5e2c666d22143bbf3661d6a85655"
+    },
+    {
+      "file": "references-footer.png",
+      "sheet": "Références",
+      "range": "A163:E173",
+      "sha256": "115a22851dccd4ab2be3c1406d3b3c7def627bd95b1b5cb0ed863c94c8e2b5a0"
+    },
+    {
+      "file": "stage-left.png",
+      "sheet": "Arènes",
+      "range": "A29:L29",
+      "sha256": "81192dda48df7dfdae494422429be41199edc7d20fc26f2f1dd00ec27682f6e1"
+    },
+    {
+      "file": "stage-right.png",
+      "sheet": "Arènes",
+      "range": "M29:T29",
+      "sha256": "2ead00f36514389d972e2d6b0b392691dea503765ae5f455e6403cab7ecd926e"
+    }
+  ],
+  "full44ViewReviewRequired": true
+}

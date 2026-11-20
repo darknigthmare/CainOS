@@ -1,0 +1,36 @@
+{
+  "id": "glitch-metarunner-ribbit-resident",
+  "fighterId": "ribbit",
+  "series": "metarunner",
+  "style": "resident",
+  "name": "Meta Runner · Analyste de replays",
+  "title": "Analyste de replays",
+  "introducedOn": "2026-11-20",
+  "sourceKind": "Création originale pour Encore",
+  "episodeFidelityClaim": false,
+  "canonicalCostumeClaim": false,
+  "bodyProportions": "Adaptation élancée déjà utilisée dans le jeu ; trois doigts choisis pour ce crossover original, sans attribution au Pendantz.",
+  "nativeFacing": "right",
+  "requiredSlots": [
+    "selection",
+    "stance",
+    "intro",
+    "attack",
+    "heavy",
+    "hit",
+    "walk",
+    "jump",
+    "crouch",
+    "victory",
+    "defeat"
+  ],
+  "referenceSourceURLs": [
+    "https://glitchproductions.store/products/ribbit-pendantz-blindbox",
+    "https://www.glitchprod.com/meta-runner",
+    "https://glitchproductions.store/products/tari-hoodie"
+  ],
+  "design": "Ribbit biologique verte, yeux blancs/noirs, museau menthe, joues et nœud roses ; veste sans manches marine à panneaux magenta sur t-shirt crème, short marine, genouillères grises et jambes vertes visibles ; baskets montantes prune et cyan. Avant-bras gauche cybernétique gris clair à jointures marine et lignes cyan, main à trois doigts ; main droite verte à trois doigts et bracelet écran noir. Rôle original d’analyste esport, sans emblème d’entreprise canonique.",
+  "generationDesign": "Biological bright-green Ribbit frog with huge protruding white eyes and black pie-cut pupils, mint muzzle, pink cheek circles and hot-pink fabric bow tie. Long slender game-adapted frog limbs. Original esports replay analyst resident of the Meta Runner world. Wear a sleeveless short navy esports jacket with distinct MAGENTA side panels over a cream short-sleeve tee; navy athletic shorts; small smooth grey kneepads; bare green lower legs; purple high-top sneakers with cyan soles. LEFT forearm is a light-grey cybernetic prosthesis with navy joints and thin cyan interface strips, ending in THREE rounded robotic digits. RIGHT hand is green, exactly THREE rounded digits, with a compact black screen wristband. Keep the pink bow tie visible and no headphones blocking eyes. No hoodie, tool belt, weapons, company logo, floating interface, extra device or tail. Clear sporty silhouette.",
+  "spriteDirectory": "assets/encore/crossovers/metarunner/ribbit/resident",
+  "fidelityScope": "Identité de Ribbit et motifs officiels Meta Runner sourcés ; assemblage du costume, anatomie cybernétique, rôle et poses originaux. Ni costume canonique ni modèle 1:1 revendiqué."
+}

@@ -1,0 +1,25 @@
+{
+  "appearanceId": "cafezooble",
+  "slot": "selection",
+  "useCase": "stylized-concept",
+  "prompt": "Use case: stylized-concept.\nAsset type: exactly one complete transparent 2D character selection sprite for Digital Circus Encore.\nImage 1 is the official Animate Cafe poster: use ONLY Zooble, the pink triangular-headed figure at center-right in the purple waiter uniform between Kinger and Gangle. Image 1 is authoritative for this costume and limb colors. Image 2 is the game's Zooble portrait, a style/identity reference ONLY: do not transfer its yellow dotted torso, blue boot or bare body to this cafe outfit.\nCreate one full-body Zooble — Cafe, standing casually in three-quarter view facing screen RIGHT with a dry unimpressed expression. Keep the complete pink triangular head WITHOUT a mouth, unequal eyes (large yellow eye with black spiral pupil and small white eye with black pupil and three lashes below), purple upper eyelids, cyan lightning-shaped antenna and separate black/white striped spring antenna. The small pink wing behind the shoulder stays. Exactly two mismatched arms and two mismatched legs as on the poster: one GREEN forearm with a YELLOW mitten hand, the opposite RED arm with GRAY claw/mitten hand; short white sleeves, purple waistcoat, dark purple bow tie, white shirt bib and its tiny dark buttons, long dark navy waiter apron with violet edges and waist sash. Preserve the poster's lower body: gray covered leg ends in a small YELLOW spiral-shaped foot on one side, opposite leg has light gray sock and a dark navy closed dress shoe. Never turn both feet into matching boots or add human fingers to the claw. Keep the visible garment seams simple where the source is hidden.\nPose: relaxed standing, arms slightly away from torso, yellow mitten resting palm-up near waist and gray hand relaxed at the other side. Entire head, antennas, fingers, yellow curled foot and sole visible. Do not hold the drink: omit glass, food and service tray.\nClean crisp dark linework and restrained two-tone cel shading consistent with the game's 2D assets, flat readable colors, same long limb proportions. Character occupies about 72 percent of the canvas height with generous transparent margin on EVERY side. Native transparent RGBA, portrait canvas. No environment, floor, ground shadow, halo, text, logo, border, watermark, extra characters, panels or duplicate poses. ONE character ONE image. Preserve identity and official outfit details, using an original selection pose.",
+  "referencePaths": [
+    "docs/art-generation/continuation-20261120-c/cafe/references/animate-press-main.jpg",
+    "assets/encore/selection/zooble.webp"
+  ],
+  "referenceRoles": [
+    "Official Animate Cafe costume, colors and limb assembly; only central-right Zooble",
+    "Existing game Zooble identity and linework only; replace clothes and limb palette with official Cafe assembly"
+  ],
+  "sourceUrls": [
+    "https://prtimes.jp/main/html/rd/p/000008857.000016756.html"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "root",
+  "definitionSha256": "f6cbef6ee7b484a505bbef70f6f45fcacf8f17d2c8c222b867a914e3ba0f8407",
+  "expectedReferenceSHA256": {
+    "docs/art-generation/continuation-20261120-c/cafe/references/animate-press-main.jpg": "135cc4a9f9a02c4ed0b9358c98754ab5339a054520c6ad53c9dd2a02323f397b",
+    "assets/encore/selection/zooble.webp": "b9c69767871e8401e88f886464efb6ea7c75045b4d37f27af356a19b871026fb"
+  }
+}
+

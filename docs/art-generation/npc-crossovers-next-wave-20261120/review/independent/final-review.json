@@ -1,0 +1,970 @@
+{
+  "schema": "encore-independent-npc-final-native-review/v1",
+  "reviewer": "/root/ribbit_references",
+  "reviewedAt": "2026-11-20T15:36:27.872642+00:00",
+  "status": "accepted_with_stated_scope",
+  "scope": "Final native PNG review covering the current 33 images of three original Ribbit × Murder Drones families; exact image hashes connect earlier visual rounds to the integrated inventory.",
+  "currentAcceptedImages": 33,
+  "uniqueImageHashes": 33,
+  "totalBytes": 42931551,
+  "independentImageReviewsByThisReviewer": 29,
+  "families": [
+    {
+      "variant": "hommage",
+      "acceptedCurrentImages": 11,
+      "bytes": 10519066,
+      "completeOverviewInspected": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/native-alpha-review.png",
+        "sha256": "b06823b2048af96b372c3898e528753998c42b76e86e53ab349a7b534e7d1531"
+      }
+    },
+    {
+      "variant": "resident",
+      "acceptedCurrentImages": 11,
+      "bytes": 16014222,
+      "completeOverviewInspected": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/review/family-alpha-overview.jpg",
+        "sha256": "66cbc545fd3d132f88517645f93e724be652ef91cc31aece1adc8991a4894f56"
+      }
+    },
+    {
+      "variant": "fusion",
+      "acceptedCurrentImages": 11,
+      "bytes": 16398263,
+      "completeOverviewInspected": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/review/family-alpha-overview.jpg",
+        "sha256": "5d0f22482d17a8179f2577ea140842da6368d8c67b04bd2da0ba0ffcb5e622e1"
+      }
+    }
+  ],
+  "files": [
+    {
+      "variant": "hommage",
+      "slot": "selection",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/selection.png",
+      "sha256": "dd43a5386874e25da5f61b0d823c87de3d146f024c96d64091e5957355c3ef5b",
+      "bytes": 1435680,
+      "receipt": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/selection.json",
+        "sha256": "951ecd9ea639e632879c50bb5dc71f9aa5faa650d7948573f2fc07bbb8b82547"
+      },
+      "includedInRuntime": true,
+      "targetFile": "assets/encore/crossovers/murderdrones/ribbit/hommage/selection.png",
+      "runtimeImageHashMatches": true,
+      "visualOutcome": "no_concrete_defect_observed",
+      "reviewRelationship": "author_review_by_ribbit_references_with_documented_independent_cross_review_by_audit_github",
+      "inspectedEvidence": {
+        "diagnostic": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/review/corrections/selection-alpha.jpg",
+          "sha256": "a5c50efcf9be3014b2026acf391e280dbd0e2face65cb55242e7a45c85f1e7ce"
+        },
+        "report": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/visual-review.json",
+          "sha256": "2cd6113c100b202a6688fa55787696e92fe28cd154c06a02087fc6cc18a3e0de"
+        },
+        "independentCrossReview": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/review/corrections/cross-review-audit-github.json",
+          "sha256": "df92b06296f704ec7c216990069da1815bb4a85ec38a74f6118aed5ae9d55932"
+        }
+      }
+    },
+    {
+      "variant": "hommage",
+      "slot": "stance",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/stance.png",
+      "sha256": "6102d83c295487da3689dfe449ffdb9e4b62c20c19babd83415646e95a278f9a",
+      "bytes": 732645,
+      "receipt": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/stance.json",
+        "sha256": "8912d82f2d029822c7f20253b921103d165f890a48e29c796d5657b53cda6400"
+      },
+      "includedInRuntime": true,
+      "targetFile": "assets/encore/crossovers/murderdrones/ribbit/hommage/stance.png",
+      "runtimeImageHashMatches": true,
+      "visualOutcome": "no_concrete_defect_observed",
+      "reviewRelationship": "author_review_by_ribbit_references_with_documented_independent_cross_review_by_audit_github",
+      "inspectedEvidence": {
+        "diagnostic": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/review/corrections/stance-alpha.jpg",
+          "sha256": "7f00e08b291845920bc3bf726d11561cda55ae7e00e80459be2023581adaf303"
+        },
+        "report": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/visual-review.json",
+          "sha256": "2cd6113c100b202a6688fa55787696e92fe28cd154c06a02087fc6cc18a3e0de"
+        },
+        "independentCrossReview": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/review/corrections/cross-review-audit-github.json",
+          "sha256": "df92b06296f704ec7c216990069da1815bb4a85ec38a74f6118aed5ae9d55932"
+        }
+      }
+    },
+    {
+      "variant": "hommage",
+      "slot": "intro",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/intro.png",
+      "sha256": "daa9c9327805617cccd5d4a956147c2a2d7bbb3ef592184b08802182d4067fba",
+      "bytes": 724483,
+      "receipt": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/intro.json",
+        "sha256": "469a57bc66af99f2d0e4048ed69096543ec090e79707509ac998dd77eb5634cb"
+      },
+      "includedInRuntime": true,
+      "targetFile": "assets/encore/crossovers/murderdrones/ribbit/hommage/intro.png",
+      "runtimeImageHashMatches": true,
+      "visualOutcome": "no_concrete_defect_observed",
+      "reviewRelationship": "author_review_by_ribbit_references_with_documented_independent_cross_review_by_audit_github",
+      "inspectedEvidence": {
+        "diagnostic": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/review/corrections/intro-alpha.jpg",
+          "sha256": "fc4cdc136e1e6bcd92ab974b3f0fd7098423712735f1a39fa992ee24f7841c56"
+        },
+        "report": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/visual-review.json",
+          "sha256": "2cd6113c100b202a6688fa55787696e92fe28cd154c06a02087fc6cc18a3e0de"
+        },
+        "independentCrossReview": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/review/corrections/cross-review-audit-github.json",
+          "sha256": "df92b06296f704ec7c216990069da1815bb4a85ec38a74f6118aed5ae9d55932"
+        }
+      }
+    },
+    {
+      "variant": "hommage",
+      "slot": "attack",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/attack.png",
+      "sha256": "13c985b85e8281c08c365ee7f1ec7123c4a97f180ebc60fa54ab195d18d8c1f7",
+      "bytes": 1228713,
+      "receipt": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/attack.json",
+        "sha256": "15b31ddc3608f7e314299311661df5bc2195f988c80c4c9c3a6931b2f29f70cf"
+      },
+      "includedInRuntime": true,
+      "targetFile": "assets/encore/crossovers/murderdrones/ribbit/hommage/attack.png",
+      "runtimeImageHashMatches": true,
+      "visualOutcome": "no_concrete_defect_observed",
+      "reviewRelationship": "author_review_by_ribbit_references_with_documented_independent_cross_review_by_audit_github",
+      "inspectedEvidence": {
+        "diagnostic": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/review/corrections/attack-alpha.jpg",
+          "sha256": "2ded9ec2aace169ba73f8b36abf8e6ce950ebc3977a970fee02021d64ac28ebf"
+        },
+        "report": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/visual-review.json",
+          "sha256": "2cd6113c100b202a6688fa55787696e92fe28cd154c06a02087fc6cc18a3e0de"
+        },
+        "independentCrossReview": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/review/corrections/cross-review-audit-github.json",
+          "sha256": "df92b06296f704ec7c216990069da1815bb4a85ec38a74f6118aed5ae9d55932"
+        }
+      }
+    },
+    {
+      "variant": "hommage",
+      "slot": "heavy",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/heavy.png",
+      "sha256": "90cd3b607f74c4618422ba172e8ac498e37e85212cd011de1a35bdadce0b35d3",
+      "bytes": 1155353,
+      "receipt": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/heavy.json",
+        "sha256": "985b25aa8474eb4d3470415b2b322cee2d94c8ca9915f0efa4681bc8c66ab2d9"
+      },
+      "includedInRuntime": true,
+      "targetFile": "assets/encore/crossovers/murderdrones/ribbit/hommage/heavy.png",
+      "runtimeImageHashMatches": true,
+      "visualOutcome": "no_concrete_defect_observed",
+      "reviewRelationship": "independent_of_generation_by_ribbit_references",
+      "inspectedEvidence": {
+        "report": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/independent-review.json",
+          "sha256": "270bf83e22ed1a221b79c3c70652944401145fb8357950016b474ae67bd68567"
+        },
+        "diagnostic": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/hommage-heavy-alpha.jpg",
+          "sha256": "70b6c04b509995dfa15fa38af071e41f936b9871f65a69d5741541e65b2c348b"
+        }
+      }
+    },
+    {
+      "variant": "hommage",
+      "slot": "hit",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/hit.png",
+      "sha256": "67cb91d7585795e8436d6d317f09ba714786cf42fa5163ece0cf9c05d04d807c",
+      "bytes": 748844,
+      "receipt": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/hit.json",
+        "sha256": "428862709a22e6ee5d257f4d228f603c20eaf230ecd184ba71102327ac8ebc01"
+      },
+      "includedInRuntime": true,
+      "targetFile": "assets/encore/crossovers/murderdrones/ribbit/hommage/hit.png",
+      "runtimeImageHashMatches": true,
+      "visualOutcome": "no_concrete_defect_observed",
+      "reviewRelationship": "independent_of_generation_by_ribbit_references",
+      "inspectedEvidence": {
+        "report": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-03/independent-review.json",
+          "sha256": "c94cbeae0976478b3c0e11f24a26ef133635a84b47c32be7e3ba537d9a0c59ee"
+        },
+        "diagnostic": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-03/hommage-hit-alpha.jpg",
+          "sha256": "d98ff404b9f57dd9eb57b43f5274e4e193fb3bef38a8d0217933995998d480de"
+        }
+      }
+    },
+    {
+      "variant": "hommage",
+      "slot": "walk",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/walk.png",
+      "sha256": "c3c0881fd9e5833eaeb6f49a86db52d91d242c97d92a2b4989a30d4ec52af418",
+      "bytes": 682248,
+      "receipt": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/walk.json",
+        "sha256": "e676633cfa7a002678a5c9fdf9a6488627f4a4364a34399db8797f9826262b54"
+      },
+      "includedInRuntime": true,
+      "targetFile": "assets/encore/crossovers/murderdrones/ribbit/hommage/walk.png",
+      "runtimeImageHashMatches": true,
+      "visualOutcome": "no_concrete_defect_observed",
+      "reviewRelationship": "independent_of_generation_by_ribbit_references",
+      "inspectedEvidence": {
+        "report": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/independent-review.json",
+          "sha256": "270bf83e22ed1a221b79c3c70652944401145fb8357950016b474ae67bd68567"
+        },
+        "diagnostic": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/hommage-walk-alpha.jpg",
+          "sha256": "9d91e3099d4492466ead9b557dea40f6a5acc1743d3508dd5e169c8ca4f2819c"
+        }
+      }
+    },
+    {
+      "variant": "hommage",
+      "slot": "jump",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/jump.png",
+      "sha256": "7990c365e9d19c3337815b36f9544408ce549634bfb2275dc2bba6a1ce167c53",
+      "bytes": 760662,
+      "receipt": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/jump.json",
+        "sha256": "de73906dc90c8bb991be456afaa20a0ae9cad37a67edb5eaf42ce228ba778834"
+      },
+      "includedInRuntime": true,
+      "targetFile": "assets/encore/crossovers/murderdrones/ribbit/hommage/jump.png",
+      "runtimeImageHashMatches": true,
+      "visualOutcome": "no_concrete_defect_observed",
+      "reviewRelationship": "independent_of_generation_by_ribbit_references",
+      "inspectedEvidence": {
+        "report": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-03/independent-review.json",
+          "sha256": "c94cbeae0976478b3c0e11f24a26ef133635a84b47c32be7e3ba537d9a0c59ee"
+        },
+        "diagnostic": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-03/hommage-jump-alpha.jpg",
+          "sha256": "4cfd1cc0002164afe5f50e9b6c73d01ce1016611174089a943f9344b669a8767"
+        }
+      }
+    },
+    {
+      "variant": "hommage",
+      "slot": "crouch",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/crouch.png",
+      "sha256": "e76f856d3a9ed50312204c9b10ca63cec8179a6310497f9491028284e4a29ba8",
+      "bytes": 903887,
+      "receipt": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/crouch.json",
+        "sha256": "1415be86323562800125ab70151c38b86166653c15770ab4895266deae527c80"
+      },
+      "includedInRuntime": true,
+      "targetFile": "assets/encore/crossovers/murderdrones/ribbit/hommage/crouch.png",
+      "runtimeImageHashMatches": true,
+      "visualOutcome": "no_concrete_defect_observed",
+      "reviewRelationship": "independent_of_generation_by_ribbit_references",
+      "inspectedEvidence": {
+        "report": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-03/independent-review.json",
+          "sha256": "c94cbeae0976478b3c0e11f24a26ef133635a84b47c32be7e3ba537d9a0c59ee"
+        },
+        "diagnostic": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-03/hommage-crouch-alpha.jpg",
+          "sha256": "5827081a604474ceb5c23cbbd18d1419988c52fe66d968a47f4a7c70189fbd9d"
+        }
+      }
+    },
+    {
+      "variant": "hommage",
+      "slot": "victory",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/victory.png",
+      "sha256": "43ecd2b83b7c132a83ac0c2301879f01901dfd6f0710822a540263a4ca12733c",
+      "bytes": 1371435,
+      "receipt": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/victory.json",
+        "sha256": "7e91e97ba92e7d2892cc7ef20d0e3a1ddb958dbe92d33fb1166deb15e09da2bb"
+      },
+      "includedInRuntime": true,
+      "targetFile": "assets/encore/crossovers/murderdrones/ribbit/hommage/victory.png",
+      "runtimeImageHashMatches": true,
+      "visualOutcome": "no_concrete_defect_observed",
+      "reviewRelationship": "independent_of_generation_by_ribbit_references",
+      "inspectedEvidence": {
+        "report": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/independent-review.json",
+          "sha256": "270bf83e22ed1a221b79c3c70652944401145fb8357950016b474ae67bd68567"
+        },
+        "diagnostic": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/hommage-victory-alpha.jpg",
+          "sha256": "6585429bea220491c5b20ef598180b07e759af420e92f05c31198a8fd9ccd22d"
+        }
+      }
+    },
+    {
+      "variant": "hommage",
+      "slot": "defeat",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/defeat.png",
+      "sha256": "944594d769172882bf175f6927efad3e33e883cfd583f36e5a98654aea2390e4",
+      "bytes": 775116,
+      "receipt": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/defeat.json",
+        "sha256": "b5d8297abdc4f0c60cb0cca25ac7c674f422cee2f20909ad47ff0ebfe3d22f98"
+      },
+      "includedInRuntime": true,
+      "targetFile": "assets/encore/crossovers/murderdrones/ribbit/hommage/defeat.png",
+      "runtimeImageHashMatches": true,
+      "visualOutcome": "no_concrete_defect_observed",
+      "reviewRelationship": "independent_of_generation_by_ribbit_references",
+      "inspectedEvidence": {
+        "report": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-04/independent-review.json",
+          "sha256": "c423e985fd7f51ee218a8485303b85736a3cd93f96083cfefae9bd831d801762"
+        },
+        "diagnostic": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-04/hommage-defeat-alpha.jpg",
+          "sha256": "8bfc8f3784d4d9bfe783175dcc9c3b3831e3c4eaeabde73862941562f4735c1a"
+        }
+      }
+    },
+    {
+      "variant": "resident",
+      "slot": "selection",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/selection.png",
+      "sha256": "fe3c01b6b6d57bc532af4ce7d9114f93a804146d38b4a0263a3f06876618b686",
+      "bytes": 1524779,
+      "receipt": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/selection.json",
+        "sha256": "58cf3ef4f7964b179681603d1763d19a9b4f93de08ce3d596c9bcab074cd1981"
+      },
+      "includedInRuntime": true,
+      "targetFile": "assets/encore/crossovers/murderdrones/ribbit/resident/selection.png",
+      "runtimeImageHashMatches": true,
+      "visualOutcome": "no_concrete_defect_observed",
+      "reviewRelationship": "independent_of_generation_by_ribbit_references",
+      "inspectedEvidence": {
+        "report": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/independent-review.json",
+          "sha256": "270bf83e22ed1a221b79c3c70652944401145fb8357950016b474ae67bd68567"
+        },
+        "diagnostic": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/resident-selection-alpha.jpg",
+          "sha256": "8397f84908707da33b0e906daaae844bd9fc6b443d0b60b0753fbb1e3a0d0d64"
+        }
+      }
+    },
+    {
+      "variant": "resident",
+      "slot": "stance",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/stance.png",
+      "sha256": "3cdffc3f01e48fe77f0c66c045eb258b6337f53e5734fb742b20ee7b3c317a5b",
+      "bytes": 948345,
+      "receipt": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/stance.json",
+        "sha256": "eff4f8663e187d24d23ce6594d0a0752601be4ff519ff66ca39950a7d07e1094"
+      },
+      "includedInRuntime": true,
+      "targetFile": "assets/encore/crossovers/murderdrones/ribbit/resident/stance.png",
+      "runtimeImageHashMatches": true,
+      "visualOutcome": "no_concrete_defect_observed",
+      "reviewRelationship": "independent_of_generation_by_ribbit_references",
+      "inspectedEvidence": {
+        "report": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/independent-review.json",
+          "sha256": "270bf83e22ed1a221b79c3c70652944401145fb8357950016b474ae67bd68567"
+        },
+        "diagnostic": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/resident-stance-alpha.jpg",
+          "sha256": "3aad367b874d8df09f3d4fd9c7a88cdc88be3389c8b18513bcf9a2b04d8e6e5e"
+        }
+      }
+    },
+    {
+      "variant": "resident",
+      "slot": "intro",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/intro.png",
+      "sha256": "f219e23a39874d0de4ce45691da6d95ce49fd5cc482523f2732787bdec5b25ec",
+      "bytes": 1487206,
+      "receipt": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/intro.json",
+        "sha256": "44f36cad1051331611f1724b19b184ceebe0503724a769718f3e19a42d79c512"
+      },
+      "includedInRuntime": true,
+      "targetFile": "assets/encore/crossovers/murderdrones/ribbit/resident/intro.png",
+      "runtimeImageHashMatches": true,
+      "visualOutcome": "no_concrete_defect_observed",
+      "reviewRelationship": "independent_of_generation_by_ribbit_references",
+      "inspectedEvidence": {
+        "report": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/independent-review.json",
+          "sha256": "270bf83e22ed1a221b79c3c70652944401145fb8357950016b474ae67bd68567"
+        },
+        "diagnostic": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/resident-intro-alpha.jpg",
+          "sha256": "27d5ae9696089ebd7685d8ebffa9c1e00ce3339e8f4b1dc3b4715ba11bfe8ca5"
+        }
+      }
+    },
+    {
+      "variant": "resident",
+      "slot": "attack",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/attack.png",
+      "sha256": "d82aabde2a0a935df7f6e41ee2bdb0284e4d878311f7730a1a7653ba99e8b0b5",
+      "bytes": 1385550,
+      "receipt": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/attack.json",
+        "sha256": "0f4c979e22eeb99403d63fe1ccc3833208a492f5869a8de7959f9e7b80fbf96e"
+      },
+      "includedInRuntime": true,
+      "targetFile": "assets/encore/crossovers/murderdrones/ribbit/resident/attack.png",
+      "runtimeImageHashMatches": true,
+      "visualOutcome": "no_concrete_defect_observed",
+      "reviewRelationship": "independent_of_generation_by_ribbit_references",
+      "inspectedEvidence": {
+        "report": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/independent-review.json",
+          "sha256": "270bf83e22ed1a221b79c3c70652944401145fb8357950016b474ae67bd68567"
+        },
+        "diagnostic": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/resident-attack-alpha.jpg",
+          "sha256": "bd4c10f983e9b014b7ab1258926f5846945aecedb25db466b3f3473c1b860b5f"
+        }
+      }
+    },
+    {
+      "variant": "resident",
+      "slot": "heavy",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/heavy.png",
+      "sha256": "1c551bc99c22b29513e919a113c2691ff1c553253753c39dca444895ae2fcbff",
+      "bytes": 1509732,
+      "receipt": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/heavy.json",
+        "sha256": "63608950da5917f937f3e54bd54cf10c8316e3c87e9297b90a37382b6819c691"
+      },
+      "includedInRuntime": true,
+      "targetFile": "assets/encore/crossovers/murderdrones/ribbit/resident/heavy.png",
+      "runtimeImageHashMatches": true,
+      "visualOutcome": "no_concrete_defect_observed",
+      "reviewRelationship": "independent_of_generation_by_ribbit_references",
+      "inspectedEvidence": {
+        "report": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/independent-review.json",
+          "sha256": "270bf83e22ed1a221b79c3c70652944401145fb8357950016b474ae67bd68567"
+        },
+        "diagnostic": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/resident-heavy-alpha.jpg",
+          "sha256": "335053ab76b8ca8c645a1dbb23c66b9e80ecf84c504902135ac2b97864f9bb81"
+        }
+      }
+    },
+    {
+      "variant": "resident",
+      "slot": "hit",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/hit.png",
+      "sha256": "4240b2e593e5c9f04d03041f4f0a1bc093b0a70a086365a113ad54be8b5953b6",
+      "bytes": 1603205,
+      "receipt": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/hit.json",
+        "sha256": "9800833de366dcb68f5f5824060888b67602a38fe36916724b9ac19ff747f016"
+      },
+      "includedInRuntime": true,
+      "targetFile": "assets/encore/crossovers/murderdrones/ribbit/resident/hit.png",
+      "runtimeImageHashMatches": true,
+      "visualOutcome": "no_concrete_defect_observed",
+      "reviewRelationship": "independent_of_generation_by_ribbit_references",
+      "inspectedEvidence": {
+        "report": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-02/independent-review.json",
+          "sha256": "9e83edac7c88c24bbfbd47b1cc5de60dd0fd255357b913538342379ca0a1defa"
+        },
+        "diagnostic": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-02/resident-hit-alpha.jpg",
+          "sha256": "9275c1f63f96f216019f1ad87b82cb6e7fdba129b5e3b89105d7714106cd6cda"
+        }
+      }
+    },
+    {
+      "variant": "resident",
+      "slot": "walk",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/walk.png",
+      "sha256": "ad601e57df0543e6a41852b338f70d0600e1370cab187e020b91e342dd0e15ac",
+      "bytes": 1576067,
+      "receipt": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/walk.json",
+        "sha256": "cf047939b3c54c3dd0a636a99dd060bde7860dae8e03a8da4419c64446fad71a"
+      },
+      "includedInRuntime": true,
+      "targetFile": "assets/encore/crossovers/murderdrones/ribbit/resident/walk.png",
+      "runtimeImageHashMatches": true,
+      "visualOutcome": "no_concrete_defect_observed",
+      "reviewRelationship": "independent_of_generation_by_ribbit_references",
+      "inspectedEvidence": {
+        "report": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/independent-review.json",
+          "sha256": "270bf83e22ed1a221b79c3c70652944401145fb8357950016b474ae67bd68567"
+        },
+        "diagnostic": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/resident-walk-alpha.jpg",
+          "sha256": "39f6315e4c59683bfd89aabe5e33bbaae656685dfde1738f36c96ae302c75202"
+        }
+      }
+    },
+    {
+      "variant": "resident",
+      "slot": "jump",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/jump.png",
+      "sha256": "3539017a11b0fda003f34867c69126abfd41ba112fdad4e95898595cb2d7e54a",
+      "bytes": 1461010,
+      "receipt": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/jump.json",
+        "sha256": "ff2339dee6afbecb60d5eb9487a7e441807279ad35173a38b0d4920e321fc817"
+      },
+      "includedInRuntime": true,
+      "targetFile": "assets/encore/crossovers/murderdrones/ribbit/resident/jump.png",
+      "runtimeImageHashMatches": true,
+      "visualOutcome": "no_concrete_defect_observed",
+      "reviewRelationship": "independent_of_generation_by_ribbit_references",
+      "inspectedEvidence": {
+        "report": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/independent-review.json",
+          "sha256": "270bf83e22ed1a221b79c3c70652944401145fb8357950016b474ae67bd68567"
+        },
+        "diagnostic": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/resident-jump-alpha.jpg",
+          "sha256": "ac19ed3f61957728c8a789e280998b9352445de54011e18bb7312f58db319d9f"
+        }
+      }
+    },
+    {
+      "variant": "resident",
+      "slot": "crouch",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/crouch.png",
+      "sha256": "3c35deeef6d0be94d4a0900e2a5ec4bd40281e9fa5d91392f134f6ad26b5ce6e",
+      "bytes": 1475759,
+      "receipt": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/crouch.json",
+        "sha256": "3c2062971edf97fd3722ab7f7b47375f424e60403b8ee2d32c128e98c242d54f"
+      },
+      "includedInRuntime": true,
+      "targetFile": "assets/encore/crossovers/murderdrones/ribbit/resident/crouch.png",
+      "runtimeImageHashMatches": true,
+      "visualOutcome": "no_concrete_defect_observed",
+      "reviewRelationship": "independent_of_generation_by_ribbit_references",
+      "inspectedEvidence": {
+        "report": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-02/independent-review.json",
+          "sha256": "9e83edac7c88c24bbfbd47b1cc5de60dd0fd255357b913538342379ca0a1defa"
+        },
+        "diagnostic": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-02/resident-crouch-alpha.jpg",
+          "sha256": "21d4da2f2208d56dd0a1567e261922dbdfeec1c213f645cef37b4ae19a11f243"
+        }
+      }
+    },
+    {
+      "variant": "resident",
+      "slot": "victory",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/victory.png",
+      "sha256": "79d35d5c3a7694302d7abb5ef8c1a855164a278dfb6104b7542ba8f12ba41eeb",
+      "bytes": 1523489,
+      "receipt": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/victory.json",
+        "sha256": "7d553b70dfcdb0c07da11a7aa82941da9d987762898e8a882ea14246cb69e6e6"
+      },
+      "includedInRuntime": true,
+      "targetFile": "assets/encore/crossovers/murderdrones/ribbit/resident/victory.png",
+      "runtimeImageHashMatches": true,
+      "visualOutcome": "no_concrete_defect_observed",
+      "reviewRelationship": "independent_of_generation_by_ribbit_references",
+      "inspectedEvidence": {
+        "report": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-02/independent-review.json",
+          "sha256": "9e83edac7c88c24bbfbd47b1cc5de60dd0fd255357b913538342379ca0a1defa"
+        },
+        "diagnostic": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-02/resident-victory-alpha.jpg",
+          "sha256": "0c46b3fcf902485d22e118b960fad4358e9c39d6a95246d7fe3e497bd8b187db"
+        }
+      }
+    },
+    {
+      "variant": "resident",
+      "slot": "defeat",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/defeat.png",
+      "sha256": "ffac04a093aa65513db7f58307fc8071118f354ba6b4aa4e2d0ff0e80cfdb3d0",
+      "bytes": 1519080,
+      "receipt": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/defeat.json",
+        "sha256": "9876efc3aeef3dba3db52c5e561c07663c4284a952e20884c35bc90b91759b90"
+      },
+      "includedInRuntime": true,
+      "targetFile": "assets/encore/crossovers/murderdrones/ribbit/resident/defeat.png",
+      "runtimeImageHashMatches": true,
+      "visualOutcome": "no_concrete_defect_observed",
+      "reviewRelationship": "independent_of_generation_by_ribbit_references",
+      "inspectedEvidence": {
+        "report": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-02/independent-review.json",
+          "sha256": "9e83edac7c88c24bbfbd47b1cc5de60dd0fd255357b913538342379ca0a1defa"
+        },
+        "diagnostic": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-02/resident-defeat-alpha.jpg",
+          "sha256": "7558a1301f86eff99c85a2ff65fcbfbebf57c06f0268dd683c063e5c5468077d"
+        }
+      }
+    },
+    {
+      "variant": "fusion",
+      "slot": "selection",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/selection.png",
+      "sha256": "b4aeaf8ad54544eac7640f87603501ac3b7e3b8e0bfa4e68ef76b993c136968e",
+      "bytes": 1685503,
+      "receipt": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/selection.json",
+        "sha256": "5e86292af1409e66d2acd462c51942b805d9726bc7f8ab39b0c22ebecd7fcb98"
+      },
+      "includedInRuntime": true,
+      "targetFile": "assets/encore/crossovers/murderdrones/ribbit/fusion/selection.png",
+      "runtimeImageHashMatches": true,
+      "visualOutcome": "no_concrete_defect_observed",
+      "reviewRelationship": "independent_of_generation_by_ribbit_references",
+      "inspectedEvidence": {
+        "report": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/independent-review.json",
+          "sha256": "270bf83e22ed1a221b79c3c70652944401145fb8357950016b474ae67bd68567"
+        },
+        "diagnostic": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/fusion-selection-alpha.jpg",
+          "sha256": "2bbdeb2ef18fd5d50db7e79d6c82cf286b1ae08350ba44b93b3f2a93d451214a"
+        }
+      }
+    },
+    {
+      "variant": "fusion",
+      "slot": "stance",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/stance.png",
+      "sha256": "caf3b3f409ed6cec5c9c1beb1c7aeae19e951d3664f4cd52650081ce5c780111",
+      "bytes": 980827,
+      "receipt": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/stance.json",
+        "sha256": "b49979474c0b5ad0dae6f64536f1151c577c2e5ae0cb49c5404bf1cc9f94372d"
+      },
+      "includedInRuntime": true,
+      "targetFile": "assets/encore/crossovers/murderdrones/ribbit/fusion/stance.png",
+      "runtimeImageHashMatches": true,
+      "visualOutcome": "no_concrete_defect_observed",
+      "reviewRelationship": "independent_of_generation_by_ribbit_references",
+      "inspectedEvidence": {
+        "report": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/independent-review.json",
+          "sha256": "270bf83e22ed1a221b79c3c70652944401145fb8357950016b474ae67bd68567"
+        },
+        "diagnostic": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/fusion-stance-alpha.jpg",
+          "sha256": "027ed71da6252cf8b4bb4276c5b9aabda70167e5a8034331c6d39ee83d836523"
+        }
+      }
+    },
+    {
+      "variant": "fusion",
+      "slot": "intro",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/intro.png",
+      "sha256": "6e26008bb918bcc2e48c723d9ed180e1eed79fdd49883f25f75fdaa3bf52c1c5",
+      "bytes": 1580313,
+      "receipt": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/intro.json",
+        "sha256": "fa0c862d07e957408769100a94fd4e50fd45239c18f71456abe828cec198ab62"
+      },
+      "includedInRuntime": true,
+      "targetFile": "assets/encore/crossovers/murderdrones/ribbit/fusion/intro.png",
+      "runtimeImageHashMatches": true,
+      "visualOutcome": "no_concrete_defect_observed",
+      "reviewRelationship": "independent_of_generation_by_ribbit_references",
+      "inspectedEvidence": {
+        "report": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/independent-review.json",
+          "sha256": "270bf83e22ed1a221b79c3c70652944401145fb8357950016b474ae67bd68567"
+        },
+        "diagnostic": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/fusion-intro-alpha.jpg",
+          "sha256": "158c9908982c4bab4f727ab27b63f7719769b68562f63fd1054744afd446d4b4"
+        }
+      }
+    },
+    {
+      "variant": "fusion",
+      "slot": "attack",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/attack.png",
+      "sha256": "6ef768cadd1f4f694d4edaec0698b64841ad987c14956d839767403a9adc8040",
+      "bytes": 1559299,
+      "receipt": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/attack.json",
+        "sha256": "c988bf06e6523a305a5b4657b077f4d809a7e7bc281313112313308a1ed296f2"
+      },
+      "includedInRuntime": true,
+      "targetFile": "assets/encore/crossovers/murderdrones/ribbit/fusion/attack.png",
+      "runtimeImageHashMatches": true,
+      "visualOutcome": "no_concrete_defect_observed",
+      "reviewRelationship": "independent_of_generation_by_ribbit_references",
+      "inspectedEvidence": {
+        "report": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/independent-review.json",
+          "sha256": "270bf83e22ed1a221b79c3c70652944401145fb8357950016b474ae67bd68567"
+        },
+        "diagnostic": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/fusion-attack-alpha.jpg",
+          "sha256": "a02b4cc1dde11dbeeb01beb951da1bae1030b8783ca58d7e1e5e021211c1a0ab"
+        }
+      }
+    },
+    {
+      "variant": "fusion",
+      "slot": "heavy",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/heavy.png",
+      "sha256": "886b61a7d2313cdca74d35a0040118ed0faed8583e10554bc7f67ed3636457e5",
+      "bytes": 1548839,
+      "receipt": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/heavy.json",
+        "sha256": "fc98a3bcf9536b6ded47cfc99b0475cd846fda06f927ccf8202d1f7f43fa0348"
+      },
+      "includedInRuntime": true,
+      "targetFile": "assets/encore/crossovers/murderdrones/ribbit/fusion/heavy.png",
+      "runtimeImageHashMatches": true,
+      "visualOutcome": "no_concrete_defect_observed",
+      "reviewRelationship": "independent_of_generation_by_ribbit_references",
+      "inspectedEvidence": {
+        "report": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/independent-review.json",
+          "sha256": "270bf83e22ed1a221b79c3c70652944401145fb8357950016b474ae67bd68567"
+        },
+        "diagnostic": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/fusion-heavy-alpha.jpg",
+          "sha256": "1f0a9454a486d14dac1fd854c1d3245c7d965ceda7e8583bd2bf5ff331c16ab5"
+        }
+      }
+    },
+    {
+      "variant": "fusion",
+      "slot": "hit",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/hit.png",
+      "sha256": "18666434c7a7e1b82f504203b69f15de314209aaa432b7b7d4a0edb86edab897",
+      "bytes": 1692613,
+      "receipt": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/hit.json",
+        "sha256": "1d43d0244fbcd2e7fbf770b0ae5ae999e2924bb80845cdb1372916cbff04c95e"
+      },
+      "includedInRuntime": true,
+      "targetFile": "assets/encore/crossovers/murderdrones/ribbit/fusion/hit.png",
+      "runtimeImageHashMatches": true,
+      "visualOutcome": "no_concrete_defect_observed",
+      "reviewRelationship": "independent_of_generation_by_ribbit_references",
+      "inspectedEvidence": {
+        "report": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-02/independent-review.json",
+          "sha256": "9e83edac7c88c24bbfbd47b1cc5de60dd0fd255357b913538342379ca0a1defa"
+        },
+        "diagnostic": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-02/fusion-hit-alpha.jpg",
+          "sha256": "c4df9526ae2273d77a50d718454018e7de97be474b93567b1967451ef206548e"
+        }
+      }
+    },
+    {
+      "variant": "fusion",
+      "slot": "walk",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/walk.png",
+      "sha256": "bf8b75b671fbbf9d3b01d07d2ef56cb0c45d6c3731c2c1fe915b381f83cc53dd",
+      "bytes": 884865,
+      "receipt": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/walk.json",
+        "sha256": "b005e591ab404eaff138a9e6fb83de38ef3042a7aae39a2cdb6cac048fba1a4b"
+      },
+      "includedInRuntime": true,
+      "targetFile": "assets/encore/crossovers/murderdrones/ribbit/fusion/walk.png",
+      "runtimeImageHashMatches": true,
+      "visualOutcome": "no_concrete_defect_observed",
+      "reviewRelationship": "independent_of_generation_by_ribbit_references",
+      "inspectedEvidence": {
+        "report": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/independent-review.json",
+          "sha256": "270bf83e22ed1a221b79c3c70652944401145fb8357950016b474ae67bd68567"
+        },
+        "diagnostic": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/fusion-walk-alpha.jpg",
+          "sha256": "5516e354ee4e05fe218e5e7f1a79d5d5e58bf6a33ca1a24998b42f24351dfd14"
+        }
+      }
+    },
+    {
+      "variant": "fusion",
+      "slot": "jump",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/jump.png",
+      "sha256": "aa14d384551b950d464672b0fafe7b3a18b0d0388f8e44bf649bfdd882c70c04",
+      "bytes": 1573405,
+      "receipt": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/jump.json",
+        "sha256": "3242b49fae267174478fc88c3d1c9e21f28ede1230eb5e50bac213ad0e012017"
+      },
+      "includedInRuntime": true,
+      "targetFile": "assets/encore/crossovers/murderdrones/ribbit/fusion/jump.png",
+      "runtimeImageHashMatches": true,
+      "visualOutcome": "no_concrete_defect_observed",
+      "reviewRelationship": "independent_of_generation_by_ribbit_references",
+      "inspectedEvidence": {
+        "report": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/independent-review.json",
+          "sha256": "270bf83e22ed1a221b79c3c70652944401145fb8357950016b474ae67bd68567"
+        },
+        "diagnostic": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/fusion-jump-alpha.jpg",
+          "sha256": "9cff217eef5bd3a7d663a48ca69aa1fcc2e194b17676ac668a08f66c6cadf175"
+        }
+      }
+    },
+    {
+      "variant": "fusion",
+      "slot": "crouch",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/crouch.png",
+      "sha256": "ad1b7d467c845c204ba7737c1a2746b3040fb941910e0cc0623a4062470a8528",
+      "bytes": 1663822,
+      "receipt": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/crouch.json",
+        "sha256": "5625ff449c82b123e819fa4b5d7ec6320a64b830a0030eb210b4c2247dc7e288"
+      },
+      "includedInRuntime": true,
+      "targetFile": "assets/encore/crossovers/murderdrones/ribbit/fusion/crouch.png",
+      "runtimeImageHashMatches": true,
+      "visualOutcome": "no_concrete_defect_observed",
+      "reviewRelationship": "independent_of_generation_by_ribbit_references",
+      "inspectedEvidence": {
+        "report": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/independent-review.json",
+          "sha256": "270bf83e22ed1a221b79c3c70652944401145fb8357950016b474ae67bd68567"
+        },
+        "diagnostic": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/fusion-crouch-alpha.jpg",
+          "sha256": "545cafc9209a672e2657518471375825ab4fda0eceb39d0324a911afdcf35d12"
+        }
+      }
+    },
+    {
+      "variant": "fusion",
+      "slot": "victory",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/victory.png",
+      "sha256": "67d4f944fdc33b14d4983510fc546d24eac57cacaff2c9484c2565f26034bdd1",
+      "bytes": 1619342,
+      "receipt": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/victory.json",
+        "sha256": "426012aa030fe8cc967d597430196ad75ba2c261bce25a24e3d01c91f8666075"
+      },
+      "includedInRuntime": true,
+      "targetFile": "assets/encore/crossovers/murderdrones/ribbit/fusion/victory.png",
+      "runtimeImageHashMatches": true,
+      "visualOutcome": "no_concrete_defect_observed",
+      "reviewRelationship": "independent_of_generation_by_ribbit_references",
+      "inspectedEvidence": {
+        "report": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-04/independent-review.json",
+          "sha256": "c423e985fd7f51ee218a8485303b85736a3cd93f96083cfefae9bd831d801762"
+        },
+        "diagnostic": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-04/fusion-victory-alpha.jpg",
+          "sha256": "58b16951615844152be35b05c6cdac4ca23f46eec79a7fe0ac04cd827ee783d6"
+        }
+      }
+    },
+    {
+      "variant": "fusion",
+      "slot": "defeat",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/defeat.png",
+      "sha256": "73864da647baf49463c57a30ae817a119287467c7644db2d19974e76037aea83",
+      "bytes": 1609435,
+      "receipt": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/defeat.json",
+        "sha256": "4f5ffdd4a70db86c75c94e951f640a0ee1467722793d9100d8e5a29a40c9192e"
+      },
+      "includedInRuntime": true,
+      "targetFile": "assets/encore/crossovers/murderdrones/ribbit/fusion/defeat.png",
+      "runtimeImageHashMatches": true,
+      "visualOutcome": "no_concrete_defect_observed",
+      "reviewRelationship": "independent_of_generation_by_ribbit_references",
+      "inspectedEvidence": {
+        "report": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-02/independent-review.json",
+          "sha256": "9e83edac7c88c24bbfbd47b1cc5de60dd0fd255357b913538342379ca0a1defa"
+        },
+        "diagnostic": {
+          "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-02/fusion-defeat-alpha.jpg",
+          "sha256": "518d863072dceb1a2a023fb8b6178a058defe93b99284a156bfad352e9026dca"
+        }
+      }
+    }
+  ],
+  "reviewRounds": [
+    {
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-01/independent-review.json",
+      "sha256": "270bf83e22ed1a221b79c3c70652944401145fb8357950016b474ae67bd68567"
+    },
+    {
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-02/independent-review.json",
+      "sha256": "9e83edac7c88c24bbfbd47b1cc5de60dd0fd255357b913538342379ca0a1defa"
+    },
+    {
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-03/independent-review.json",
+      "sha256": "c94cbeae0976478b3c0e11f24a26ef133635a84b47c32be7e3ba537d9a0c59ee"
+    },
+    {
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-04/independent-review.json",
+      "sha256": "c423e985fd7f51ee218a8485303b85736a3cd93f96083cfefae9bd831d801762"
+    }
+  ],
+  "resolvedRevision": {
+    "family": "hommage",
+    "originalDeviations": 8,
+    "newNativeHarmonizations": 8,
+    "unchangedOriginalDrawings": 3,
+    "correctionImageGenerationCalls": 9,
+    "rejectedNativeAttempts": 1,
+    "completion": {
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generation-completion.json",
+      "sha256": "5d2ee067533f476c96127015338623184f35c999681fe485f8aef3b6744cabeb"
+    },
+    "historicalArchive": {
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/manifest.json",
+      "sha256": "96dc391d8abf344f0b3194e963528dddc65f7cba038444151e00050afec6c433"
+    }
+  },
+  "observations": [
+    "Les trois familles conservent leurs identités distinctes : hommage biologique en bonnet et sweat, résident biologique en combinaison à outils et lampe, fusion mécanique à dômes optiques et articulations segmentées.",
+    "Les figures sont entières dans les PNG et diagnostics inspectés. Les extrémités et les raccords visibles sont cohérents ; aucun ajout de membre ni élément coupé n’a été relevé.",
+    "La revue finale des trois planches complètes sur damier confirme la continuité de chaque famille après remplacement des huit poses Hommage.",
+    "Les mains ouvertes visées sont harmonisées à trois lobes. Les faces latérales des paumes, les plis d’un poing et les doigts masqués ne sont pas comptés arbitrairement comme des doigts supplémentaires.",
+    "Les 33 reçus courants portent includedInRuntime=true ; leur SHA diffère des instantanés antérieurs en raison de cette activation. Les PNG examinés conservent les mêmes SHA que leurs diagnostics et copies installées."
+  ],
+  "concreteDefects": [],
+  "limits": [
+    "Les trois lobes sont un choix de création original pour ce lot, pas une anatomie canonique prouvée par GLITCH.",
+    "Le reviewer a produit quatre corrections Hommage ; leur validation indépendante complémentaire est attribuée à audit_github dans son rapport de revue croisée, lié ici par empreinte.",
+    "Les revues historiques et les 39 fichiers de family-01 sont conservés comme preuves datées ; leurs anciens constats ne sont pas réécrits pour les confondre avec l’état final.",
+    "Les diagnostics alpha sont des dérivés de contrôle. Aucun octet d’image native n’a été modifié par la revue.",
+    "Cette synthèse native ne prouve ni parcours dans un navigateur, ni exécution du renderer Canvas, ni collisions, ni interpolation ou animation complète. Les preuves Canvas finales sont distinctes."
+  ],
+  "crossReview": {
+    "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/review/corrections/cross-review-audit-github.json",
+    "sha256": "df92b06296f704ec7c216990069da1815bb4a85ec38a74f6118aed5ae9d55932"
+  },
+  "authorImageReviewsWithDocumentedCrossReview": 4
+}

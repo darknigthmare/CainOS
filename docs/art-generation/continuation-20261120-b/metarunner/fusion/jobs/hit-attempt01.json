@@ -1,0 +1,14 @@
+{
+  "appearanceId": "glitch-metarunner-ribbit-fusion",
+  "fighterId": "ribbit",
+  "series": "metarunner",
+  "style": "fusion",
+  "slot": "hit",
+  "nativeFacing": "right",
+  "prompt": "Generate ONE new full-body native TRANSPARENT PNG fighting-game sprite of the EXACT same original Ribbit crossover character in the provided reference. Preserve the reference identity, proportions, costume, colour blocking, eye shapes, three-digit hands, three-lobed feet if present, cybernetic anatomy and detailed materials. Change ONLY the pose and expression as specified. Draw it from scratch as one coherent character; do not paste, mirror, crop, stretch, add limbs or make a sprite sheet. Clean cel shading and dark outlines matching reference. Character faces three-quarter RIGHT, nose/gaze toward image right. Maintain generous transparent margin on every side and show the ENTIRE head, both hands and both feet. No background, floor, cast shadow, text, watermark, additional figure, energy trail or separate graphic. Design lock: A full-body ORIGINAL digital avatar fusion of Ribbit with Meta Runner cybernetic gaming aesthetics. Entire anatomy reconstructed as a sleek synthetic amphibian: emerald-green faceted frog head, two huge bulging WHITE eyes with black pie-cut pupils, mint muzzle plate, pink cheek inlays and a readable friendly frog smile. Long slim cybernetic limbs, pearlescent WHITE and pale-CYAN armour plates, dark NAVY flexible joints, thin cyan circuit seams; mint oval abdominal plate. A MAGENTA bow-shaped luminous solid chest node is integrated into sternum, NOT fabric. Both mechanical hands have exactly THREE rounded articulated digits. Long frog-shaped mechanical feet end in THREE broad rounded lobes, not human shoes. Body is solid opaque with clean cel-shaded panels, subtle small edge lights only. No clothes, hoodie, hair, tail, wings, claws, floating display, separate particles, all-black visor or yellow Murder Drones eyes. Preserve Ribbit identity, do not copy the human/jester features from style reference. POSE: Single recoil pose after a light hit: torso and head leaning back toward image left, knees bent, both arms raised apart defensively, mouth slightly open surprised; gaze still right. A stable single body with both feet visible, no injury, no impact particles or extra silhouette.",
+  "referencePaths": [
+    "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/selection.png"
+  ],
+  "reviewer": "root",
+  "definitionSHA256": "8838b39db6a0ab378603aec7ad863ecb9bb917017eca00fb1ed08efd2ca064b3"
+}

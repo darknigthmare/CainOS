@@ -1,0 +1,2080 @@
+{
+  "schema": "encore-stage-next-wave-inventory/v1",
+  "createdAt": "2026-11-20T14:33:09.568792+00:00",
+  "baseLocalCommit": "570fdb31512cdd2a2d5ba5e2c26d7c10b47ae063",
+  "baseRemoteCommit": "5be043ba21f3fe7a6dedd3fa1b00dc36f296b540",
+  "sharedCount": 23,
+  "dedicatedCount": 54,
+  "allDedicatedReuseSharedArt": true,
+  "missingSharedPlanes": 0,
+  "stages": [
+    {
+      "id": "bigtop",
+      "name": "La grande piste",
+      "description": "Le salon coloré du cirque, ses canapés et sa porte arrondie.",
+      "theme": "bigtop",
+      "palette": {
+        "sky": "#2588bd",
+        "back": "#53bad5",
+        "accent": "#ffb526",
+        "floor": "#ff9c43",
+        "grid": "#ffe7a0"
+      },
+      "colors": {
+        "sky": "#2588bd",
+        "back": "#53bad5",
+        "accent": "#ffb526",
+        "floor": "#ff9c43",
+        "grid": "#ffe7a0"
+      },
+      "sourceId": "ep1",
+      "width": 1280,
+      "floor": 568,
+      "bounds": {
+        "left": 65,
+        "right": 1215
+      },
+      "provenance": "Décor de combat adapté",
+      "fidelity": {
+        "sourceIds": [
+          "ep1",
+          "glitch-cast",
+          "glitch-circus-props"
+        ],
+        "observedTraits": [
+          "Rideaux rouges et accessoires de jeu de grande taille, dont dés et cubes.",
+          "Damier au sol, murs colorés et portes arrondies dans les vues consultées."
+        ],
+        "combatAdaptation": "Piste horizontale, limites du ring et perspective simplifiée créées pour le duel.",
+        "reviewStatus": "Référence visuelle consultée",
+        "reviewScope": "Palette et objets comparés à deux visuels officiels ; disposition complète du chapiteau non reconstruite. Ce repère ne valide ni l’ensemble du rendu, ni ses dimensions, ni les autres apparences."
+      }
+    },
+    {
+      "id": "candy",
+      "name": "Candy Canyon",
+      "description": "Un canyon de confiseries et la route du convoi.",
+      "theme": "candy",
+      "palette": {
+        "sky": "#211a39",
+        "back": "#7e446f",
+        "accent": "#ffc3dc",
+        "floor": "#754857",
+        "grid": "#b4778e"
+      },
+      "colors": {
+        "sky": "#211a39",
+        "back": "#7e446f",
+        "accent": "#ffc3dc",
+        "floor": "#754857",
+        "grid": "#b4778e"
+      },
+      "sourceId": "ep2",
+      "width": 1280,
+      "floor": 568,
+      "bounds": {
+        "left": 65,
+        "right": 1215
+      },
+      "provenance": "Décor de combat adapté",
+      "fidelity": {
+        "sourceIds": [
+          "ep2"
+        ],
+        "observedTraits": [],
+        "combatAdaptation": "La route du convoi et le canyon deviennent une piste horizontale de combat.",
+        "reviewStatus": "Épisode à revoir",
+        "reviewScope": "Épisode 2 identifié ; relief, route, confiseries et lumière à comparer sur des plans du canyon. Le visuel de la cour ne valide pas ce paysage."
+      }
+    },
+    {
+      "id": "manor",
+      "name": "Mildenhall Manor",
+      "description": "La grande salle sous les portraits et les bougies.",
+      "theme": "manor",
+      "palette": {
+        "sky": "#101b27",
+        "back": "#273b42",
+        "accent": "#b7d9b8",
+        "floor": "#303637",
+        "grid": "#64787c"
+      },
+      "colors": {
+        "sky": "#101b27",
+        "back": "#273b42",
+        "accent": "#b7d9b8",
+        "floor": "#303637",
+        "grid": "#64787c"
+      },
+      "sourceId": "ep3",
+      "width": 1280,
+      "floor": 568,
+      "bounds": {
+        "left": 65,
+        "right": 1215
+      },
+      "provenance": "Décor de combat adapté",
+      "fidelity": {
+        "sourceIds": [
+          "ep3"
+        ],
+        "observedTraits": [],
+        "combatAdaptation": "Salle du manoir reconstruite en décor de duel sans parcours d’exploration.",
+        "reviewStatus": "Épisode à revoir",
+        "reviewScope": "Épisode 3 identifié ; architecture, portraits et bougies à contrôler sur les plans de la salle choisie."
+      }
+    },
+    {
+      "id": "spudsy",
+      "name": "Spudsy’s",
+      "description": "Un duel devant le comptoir après le service.",
+      "theme": "spudsy",
+      "palette": {
+        "sky": "#251b27",
+        "back": "#6d3344",
+        "accent": "#ffd85d",
+        "floor": "#5a4554",
+        "grid": "#bd7584"
+      },
+      "colors": {
+        "sky": "#251b27",
+        "back": "#6d3344",
+        "accent": "#ffd85d",
+        "floor": "#5a4554",
+        "grid": "#bd7584"
+      },
+      "sourceId": "ep4",
+      "width": 1280,
+      "floor": 568,
+      "bounds": {
+        "left": 65,
+        "right": 1215
+      },
+      "provenance": "Décor de combat adapté",
+      "fidelity": {
+        "sourceIds": [
+          "ep4",
+          "netflix-spudsy-counter"
+        ],
+        "observedTraits": [
+          "Façade supérieure bordeaux, grands panneaux de menu jaunes et cuisine ouverte claire/inox derrière le service.",
+          "Comptoir clair avec devant rouge à bandes horizontales dorées.",
+          "Logo circulaire clair à centre rouge portant un S, postes de caisse sombres et équipements de cuisine visibles."
+        ],
+        "combatAdaptation": "Recomposition frontale : comptoir blanc/rouge continu, passe de cuisine, hotte, gril, paniers de cuisson, distributeur et caisse. Les cinq panneaux et les mots français lisibles décrivent des catégories du jeu ; ils ne transcrivent pas les offres de la série. La vapeur décorative est rattachée à la surface de cuisson, au-dessus du sol fixe.",
+        "reviewStatus": "Référence visuelle consultée — comparaison partielle",
+        "reviewScope": "Comparaison avec la vignette officielle du distributeur Netflix de l’épisode 4. Faible résolution 300 × 169 : couleurs et grandes masses observées, texte fin et mesures non certifiés. Le placement exact des équipements, le nombre de menus et le plan du restaurant complet restent à revoir dans la vidéo."
+      }
+    },
+    {
+      "id": "cellar",
+      "name": "Le cellier",
+      "description": "Des yeux multicolores dans l’obscurité, autour d’une lumière centrale.",
+      "theme": "cellar",
+      "palette": {
+        "sky": "#08090c",
+        "back": "#142d39",
+        "accent": "#a7ffff",
+        "floor": "#08090c",
+        "grid": "#acb3c1"
+      },
+      "colors": {
+        "sky": "#08090c",
+        "back": "#142d39",
+        "accent": "#a7ffff",
+        "floor": "#08090c",
+        "grid": "#acb3c1"
+      },
+      "sourceId": "ep1",
+      "width": 1280,
+      "floor": 568,
+      "bounds": {
+        "left": 65,
+        "right": 1215
+      },
+      "provenance": "Décor de combat adapté",
+      "fidelity": {
+        "sourceIds": [
+          "ep1",
+          "glitch-cellar"
+        ],
+        "observedTraits": [
+          "Espace presque noir rempli d’yeux multicolores.",
+          "Lumière blanche centrale et reflet faible sur le sol."
+        ],
+        "combatAdaptation": "Sol jouable et distance entre les combattants créés pour le duel ; les yeux servent de décor.",
+        "reviewStatus": "Référence visuelle consultée",
+        "reviewScope": "Ambiance et motifs observés dans l’image officielle du cellier ; aucune porte d’archives déduite de ce plan. Ce repère ne valide ni l’ensemble du rendu, ni ses dimensions, ni les autres apparences."
+      }
+    },
+    {
+      "id": "void",
+      "name": "Le Vide",
+      "description": "Un espace blanc et irisé, adapté en piste de duel.",
+      "theme": "void",
+      "palette": {
+        "sky": "#c6c9f6",
+        "back": "#e7eaff",
+        "accent": "#ffffff",
+        "floor": "#f7f6ff",
+        "grid": "#daddff"
+      },
+      "colors": {
+        "sky": "#c6c9f6",
+        "back": "#e7eaff",
+        "accent": "#ffffff",
+        "floor": "#f7f6ff",
+        "grid": "#daddff"
+      },
+      "sourceId": "ep1",
+      "width": 1280,
+      "floor": 568,
+      "bounds": {
+        "left": 65,
+        "right": 1215
+      },
+      "provenance": "Décor de combat adapté",
+      "fidelity": {
+        "sourceIds": [
+          "ep1",
+          "glitch-void"
+        ],
+        "observedTraits": [
+          "Espace blanc aux nuances bleu pâle et lilas.",
+          "Bandes et franges multicolores dans le plan de Pomni."
+        ],
+        "combatAdaptation": "Une limite de sol est nécessaire au duel ; elle constitue une convention de jeu. Le plan de référence ne fournit pas de ring mesurable.",
+        "reviewStatus": "Référence visuelle consultée",
+        "reviewScope": "Le Vide est comparé à son propre visuel officiel ; le couloir EXIT et le quadrillage sous Candy Canyon correspondent à d’autres lieux. Ce repère ne valide ni l’ensemble du rendu, ni ses dimensions, ni les autres apparences."
+      }
+    },
+    {
+      "id": "lake",
+      "name": "Le lac numérique",
+      "description": "Une rive construite à partir des décors déjà présents dans CainOS.",
+      "theme": "lake",
+      "palette": {
+        "sky": "#152c46",
+        "back": "#245b74",
+        "accent": "#a5e9ff",
+        "floor": "#3e5d62",
+        "grid": "#699596"
+      },
+      "colors": {
+        "sky": "#152c46",
+        "back": "#245b74",
+        "accent": "#a5e9ff",
+        "floor": "#3e5d62",
+        "grid": "#699596"
+      },
+      "sourceId": "cainos",
+      "width": 1280,
+      "floor": 568,
+      "bounds": {
+        "left": 65,
+        "right": 1215
+      },
+      "provenance": "Décor de combat adapté",
+      "fidelity": {
+        "sourceIds": [],
+        "observedTraits": [],
+        "combatAdaptation": "Rive issue des décors de CainOS, conservée comme adaptation à vérifier.",
+        "reviewStatus": "Source primaire à identifier",
+        "reviewScope": "Aucun visuel primaire précis rattaché à ce décor dans cette revue. Son nom ne constitue pas une validation de lieu canonique."
+      },
+      "sourceStatus": "Décor CainOS à vérifier contre une source primaire"
+    },
+    {
+      "id": "training",
+      "name": "Salle de calibration",
+      "description": "Une grille claire pour mesurer portée et timing.",
+      "theme": "training",
+      "palette": {
+        "sky": "#101621",
+        "back": "#1a2938",
+        "accent": "#a7ffdf",
+        "floor": "#223443",
+        "grid": "#416176"
+      },
+      "colors": {
+        "sky": "#101621",
+        "back": "#1a2938",
+        "accent": "#a7ffdf",
+        "floor": "#223443",
+        "grid": "#416176"
+      },
+      "sourceId": "adaptation",
+      "width": 1280,
+      "floor": 568,
+      "bounds": {
+        "left": 65,
+        "right": 1215
+      },
+      "provenance": "Décor de combat adapté",
+      "fidelity": {
+        "sourceIds": [],
+        "observedTraits": [],
+        "combatAdaptation": "Grille, repères et espace de mesure entièrement créés pour l’entraînement du fan-game.",
+        "reviewStatus": "Création originale",
+        "reviewScope": "Décor utilitaire du jeu ; aucune reproduction d’un lieu de la série revendiquée."
+      }
+    },
+    {
+      "id": "gloink",
+      "name": "Le nid des Gloinks",
+      "description": "Des formes géométriques s’amassent autour du ring.",
+      "theme": "gloink",
+      "palette": {
+        "sky": "#191229",
+        "back": "#3e2953",
+        "accent": "#ffc98b",
+        "floor": "#3d2a4f",
+        "grid": "#815585"
+      },
+      "colors": {
+        "sky": "#191229",
+        "back": "#3e2953",
+        "accent": "#ffc98b",
+        "floor": "#3d2a4f",
+        "grid": "#815585"
+      },
+      "sourceId": "ep1",
+      "width": 1280,
+      "floor": 568,
+      "bounds": {
+        "left": 65,
+        "right": 1215
+      },
+      "provenance": "Décor de combat adapté",
+      "fidelity": {
+        "sourceIds": [
+          "ep1"
+        ],
+        "observedTraits": [],
+        "combatAdaptation": "Le nid devient un ring parsemé de motifs géométriques ; aucune reproduction de sa géographie complète.",
+        "reviewStatus": "Épisode à revoir",
+        "reviewScope": "Pilote identifié ; matière, palette, volumes et disposition du nid à comparer à une séquence primaire."
+      }
+    },
+    {
+      "id": "kingdom",
+      "name": "Le palais de sucre",
+      "description": "Des arches de confiserie dans Candy Canyon.",
+      "theme": "kingdom",
+      "palette": {
+        "sky": "#29213d",
+        "back": "#74496a",
+        "accent": "#ffe7b3",
+        "floor": "#684760",
+        "grid": "#ab7e9b"
+      },
+      "colors": {
+        "sky": "#29213d",
+        "back": "#74496a",
+        "accent": "#ffe7b3",
+        "floor": "#684760",
+        "grid": "#ab7e9b"
+      },
+      "sourceId": "ep2",
+      "width": 1280,
+      "floor": 568,
+      "bounds": {
+        "left": 65,
+        "right": 1215
+      },
+      "provenance": "Décor de combat adapté",
+      "fidelity": {
+        "sourceIds": [
+          "ep2",
+          "glitch-candy-court"
+        ],
+        "observedTraits": [
+          "Architecture de confiserie rouge/rose dans la cour, ouvertures cintrées en retrait et large passage ornementé.",
+          "Volutes de glaçage clair autour du passage, décors arrondis et larges piliers au premier plan.",
+          "Petites ouvertures en arcade dans les façades plus éloignées et sol rose visible."
+        ],
+        "combatAdaptation": "La façade générique à deux tours pointues devient une cour recomposée : piliers de premier plan, arcades latérales, ouvertures en retrait, portail large et volutes de glaçage. Les marches de fond restent au-dessus de y568 et ne modifient pas la piste. La symétrie, les proportions, les ornements secondaires et les joints du sol sont des choix lisibles pour le duel.",
+        "reviewStatus": "Référence visuelle consultée — comparaison partielle",
+        "reviewScope": "Comparaison du palais avec le visuel officiel GLITCH déjà identifié, cette fois inspecté pour l’architecture. Le cadrage et les personnages masquent une partie de la cour : aucune mesure, géographie complète ou reproduction exhaustive n’est revendiquée. Cette image ne valide pas la route du canyon, qui reste une autre arène."
+      }
+    },
+    {
+      "id": "grounds",
+      "name": "Les terrains du cirque",
+      "description": "La pelouse numérique au pied du chapiteau.",
+      "theme": "grounds",
+      "palette": {
+        "sky": "#173149",
+        "back": "#386278",
+        "accent": "#ffe29c",
+        "floor": "#31584e",
+        "grid": "#6c9172"
+      },
+      "colors": {
+        "sky": "#173149",
+        "back": "#386278",
+        "accent": "#ffe29c",
+        "floor": "#31584e",
+        "grid": "#6c9172"
+      },
+      "sourceId": "ep1",
+      "width": 1280,
+      "floor": 568,
+      "bounds": {
+        "left": 65,
+        "right": 1215
+      },
+      "provenance": "Décor de combat adapté",
+      "fidelity": {
+        "sourceIds": [
+          "ep1"
+        ],
+        "observedTraits": [],
+        "combatAdaptation": "Extérieur du cirque utilisé comme piste de duel avec une pelouse simplifiée.",
+        "reviewStatus": "Épisode à revoir",
+        "reviewScope": "Pilote identifié ; chapiteau, végétation, horizon et éclairage de l’extérieur à comparer sur un plan dédié."
+      }
+    },
+    {
+      "id": "backstage",
+      "name": "Le couloir des portes",
+      "description": "Les portes des résidents servent de fond de scène.",
+      "theme": "backstage",
+      "palette": {
+        "sky": "#171326",
+        "back": "#462b4e",
+        "accent": "#efc694",
+        "floor": "#4a3549",
+        "grid": "#876779"
+      },
+      "colors": {
+        "sky": "#171326",
+        "back": "#462b4e",
+        "accent": "#efc694",
+        "floor": "#4a3549",
+        "grid": "#876779"
+      },
+      "sourceId": "ep1",
+      "width": 1280,
+      "floor": 568,
+      "bounds": {
+        "left": 65,
+        "right": 1215
+      },
+      "provenance": "Décor de combat adapté",
+      "fidelity": {
+        "sourceIds": [
+          "ep1",
+          "pilot-residents-copy-near",
+          "pilot-residents-copy-wide"
+        ],
+        "observedTraits": [
+          "Dans les copies attribuées au pilote : long couloir à murs rose, rouge et orange, grands panneaux verticaux, tapis rouge et plinthes claires.",
+          "Portes en bois plus basses que les murs, boutons dorés et médaillons de visages ; Kaufmo apparaît sur le plan proche.",
+          "Cadres de bois clair contenant des images abstraites, arche rouge au fond, pots de plantes et cubes colorés sur le plan large."
+        ],
+        "combatAdaptation": "La loge générique avec miroir à ampoules et caisses est remplacée par une recomposition du couloir. Six portes et médaillons dessinés en Canvas, tableaux abstraits, trois plafonniers, profondeur centrale et tapis rouge conservent une ligne de combat horizontale à y568. Ordre des chambres, portraits simplifiés, nombre de cadres, perspective et dimensions sont des choix du jeu.",
+        "reviewStatus": "Comparaison partielle — copies du pilote à confirmer",
+        "reviewScope": "Les deux copies ont été inspectées, mais le flux de l’épisode officiel n’a fourni aucun plan visible dans cet environnement. Aucune frame directe ni aucun horodatage canonique n’est déclaré validé. Aucun panneau EXIT, couloir de bureaux ou fausse sortie n’est substitué aux chambres. La référence au produit dérivé de chambres a été écartée comme preuve du couloir."
+      }
+    },
+    {
+      "id": "coppernine",
+      "name": "Copper 9 · Colonie gelée",
+      "description": "Une route ensevelie sous la neige, entre les ruines industrielles de Murder Drones.",
+      "theme": "coppernine",
+      "palette": {
+        "sky": "#161b38",
+        "back": "#334665",
+        "accent": "#cedaff",
+        "floor": "#344561",
+        "grid": "#769ab9"
+      },
+      "colors": {
+        "sky": "#161b38",
+        "back": "#334665",
+        "accent": "#cedaff",
+        "floor": "#344561",
+        "grid": "#769ab9"
+      },
+      "sourceId": "stage-coppernine",
+      "width": 1280,
+      "floor": 568,
+      "bounds": {
+        "left": 65,
+        "right": 1215
+      },
+      "provenance": "Arène crossover adaptée pour Encore",
+      "fidelity": {
+        "sourceIds": [
+          "stage-coppernine"
+        ],
+        "observedTraits": [
+          "Le paysage nocturne officiel montre les masses sombres des installations, la neige bleue et la brume froide."
+        ],
+        "combatAdaptation": "Une route ensevelie sous la neige, entre les ruines industrielles de Murder Drones. Les trois plans et le sol horizontal sont composés pour le duel.",
+        "reviewStatus": "Adaptation crossover documentée",
+        "reviewScope": "La composition en parallaxe, les accessoires et leurs proportions sont interprétés pour Encore."
+      },
+      "series": "murderdrones"
+    },
+    {
+      "id": "silicacity",
+      "name": "Silica City · Les toits",
+      "description": "Les tours et les écrans de la ville de Meta Runner éclairent une terrasse de service.",
+      "theme": "silicacity",
+      "palette": {
+        "sky": "#241d42",
+        "back": "#433663",
+        "accent": "#f5a4f5",
+        "floor": "#313952",
+        "grid": "#55759a"
+      },
+      "colors": {
+        "sky": "#241d42",
+        "back": "#433663",
+        "accent": "#f5a4f5",
+        "floor": "#313952",
+        "grid": "#55759a"
+      },
+      "sourceId": "stage-silicacity",
+      "width": 1280,
+      "floor": 568,
+      "bounds": {
+        "left": 65,
+        "right": 1215
+      },
+      "provenance": "Arène crossover adaptée pour Encore",
+      "fidelity": {
+        "sourceIds": [
+          "stage-silicacity"
+        ],
+        "observedTraits": [
+          "La vue officielle de Silica City présente des gratte-ciel verticaux aux enseignes lumineuses cyan, roses et violettes."
+        ],
+        "combatAdaptation": "Les tours et les écrans de la ville de Meta Runner éclairent une terrasse de service. Les trois plans et le sol horizontal sont composés pour le duel.",
+        "reviewStatus": "Adaptation crossover documentée",
+        "reviewScope": "La composition en parallaxe, les accessoires et leurs proportions sont interprétés pour Encore."
+      },
+      "series": "metarunner"
+    },
+    {
+      "id": "portaurora",
+      "name": "Port Aurora · La promenade",
+      "description": "Une promenade claire entre les palmiers et les bâtiments du port de Sunset Paradise.",
+      "theme": "portaurora",
+      "palette": {
+        "sky": "#65b8d7",
+        "back": "#70b5c7",
+        "accent": "#ffe6a3",
+        "floor": "#e7b698",
+        "grid": "#fff1c4"
+      },
+      "colors": {
+        "sky": "#65b8d7",
+        "back": "#70b5c7",
+        "accent": "#ffe6a3",
+        "floor": "#e7b698",
+        "grid": "#fff1c4"
+      },
+      "sourceId": "stage-portaurora",
+      "width": 1280,
+      "floor": 568,
+      "bounds": {
+        "left": 65,
+        "right": 1215
+      },
+      "provenance": "Arène crossover adaptée pour Encore",
+      "fidelity": {
+        "sourceIds": [
+          "stage-portaurora"
+        ],
+        "observedTraits": [
+          "Le bord de mer illustré présente des palmiers, des terrasses et pavillons clairs aux accents bleus sous un ciel vif."
+        ],
+        "combatAdaptation": "Une promenade claire entre les palmiers et les bâtiments du port de Sunset Paradise. Les trois plans et le sol horizontal sont composés pour le duel.",
+        "reviewStatus": "Adaptation crossover documentée",
+        "reviewScope": "La composition en parallaxe, les accessoires et leurs proportions sont interprétés pour Encore."
+      },
+      "series": "sunsetparadise"
+    },
+    {
+      "id": "gaslightwharf",
+      "name": "Gaslight District · Les quais",
+      "description": "Le bois humide d’un ponton longe les ateliers de la ville des morts-vivants.",
+      "theme": "gaslightwharf",
+      "palette": {
+        "sky": "#1b2926",
+        "back": "#31423a",
+        "accent": "#e6d688",
+        "floor": "#403d33",
+        "grid": "#81765a"
+      },
+      "colors": {
+        "sky": "#1b2926",
+        "back": "#31423a",
+        "accent": "#e6d688",
+        "floor": "#403d33",
+        "grid": "#81765a"
+      },
+      "sourceId": "stage-gaslightwharf",
+      "width": 1280,
+      "floor": 568,
+      "bounds": {
+        "left": 65,
+        "right": 1215
+      },
+      "provenance": "Arène crossover adaptée pour Encore",
+      "fidelity": {
+        "sourceIds": [
+          "stage-gaslightwharf"
+        ],
+        "observedTraits": [
+          "Les visuels de la série associent les silhouettes très sombres à une lumière jaune-verte. Le port est une recomposition pour Encore."
+        ],
+        "combatAdaptation": "Le bois humide d’un ponton longe les ateliers de la ville des morts-vivants. Les trois plans et le sol horizontal sont composés pour le duel.",
+        "reviewStatus": "Adaptation crossover documentée",
+        "reviewScope": "La composition en parallaxe, les accessoires et leurs proportions sont interprétés pour Encore."
+      },
+      "series": "gaslightdistrict"
+    },
+    {
+      "id": "parkplanet",
+      "name": "Park Planet · La terrasse",
+      "description": "Le jardin suspendu de Knights of Guinevere domine une mer de nuages.",
+      "theme": "parkplanet",
+      "palette": {
+        "sky": "#859bc4",
+        "back": "#82a995",
+        "accent": "#f9e7b5",
+        "floor": "#b9a38d",
+        "grid": "#e7d6ad"
+      },
+      "colors": {
+        "sky": "#859bc4",
+        "back": "#82a995",
+        "accent": "#f9e7b5",
+        "floor": "#b9a38d",
+        "grid": "#e7d6ad"
+      },
+      "sourceId": "stage-parkplanet",
+      "width": 1280,
+      "floor": 568,
+      "bounds": {
+        "left": 65,
+        "right": 1215
+      },
+      "provenance": "Arène crossover adaptée pour Encore",
+      "fidelity": {
+        "sourceIds": [
+          "stage-parkplanet"
+        ],
+        "observedTraits": [
+          "La présentation officielle situe le parc d’attractions dans les nuages et montre un jardin de conte aux couleurs douces."
+        ],
+        "combatAdaptation": "Le jardin suspendu de Knights of Guinevere domine une mer de nuages. Les trois plans et le sol horizontal sont composés pour le duel.",
+        "reviewStatus": "Adaptation crossover documentée",
+        "reviewScope": "La composition en parallaxe, les accessoires et leurs proportions sont interprétés pour Encore."
+      },
+      "series": "knightsofguinevere"
+    },
+    {
+      "id": "gameoverse",
+      "name": "Gameoverse · En orbite",
+      "description": "Une plate-forme de jeu surplombe l’horizon pixellisé de la planète bleue.",
+      "theme": "gameoverse",
+      "palette": {
+        "sky": "#191b49",
+        "back": "#3154a6",
+        "accent": "#96e9ff",
+        "floor": "#293558",
+        "grid": "#6c8fc0"
+      },
+      "colors": {
+        "sky": "#191b49",
+        "back": "#3154a6",
+        "accent": "#96e9ff",
+        "floor": "#293558",
+        "grid": "#6c8fc0"
+      },
+      "sourceId": "stage-gameoverse",
+      "width": 1280,
+      "floor": 568,
+      "bounds": {
+        "left": 65,
+        "right": 1215
+      },
+      "provenance": "Arène crossover adaptée pour Encore",
+      "fidelity": {
+        "sourceIds": [
+          "stage-gameoverse"
+        ],
+        "observedTraits": [
+          "Le fond officiel montre un astre bleu quadrillé de motifs clairs devant un espace violet et étoilé."
+        ],
+        "combatAdaptation": "Une plate-forme de jeu surplombe l’horizon pixellisé de la planète bleue. Les trois plans et le sol horizontal sont composés pour le duel.",
+        "reviewStatus": "Adaptation crossover documentée",
+        "reviewScope": "La composition en parallaxe, les accessoires et leurs proportions sont interprétés pour Encore."
+      },
+      "series": "gameoverse"
+    },
+    {
+      "id": "littledaisy",
+      "name": "Little Daisy · Le club clandestin",
+      "description": "Sous le Little Daisy Café, le parquet de la salle de jazz fait office de piste.",
+      "theme": "littledaisy",
+      "palette": {
+        "sky": "#372e35",
+        "back": "#554034",
+        "accent": "#e6ae65",
+        "floor": "#765444",
+        "grid": "#b5825c"
+      },
+      "colors": {
+        "sky": "#372e35",
+        "back": "#554034",
+        "accent": "#e6ae65",
+        "floor": "#765444",
+        "grid": "#b5825c"
+      },
+      "sourceId": "stage-littledaisy",
+      "width": 1280,
+      "floor": 568,
+      "bounds": {
+        "left": 65,
+        "right": 1215
+      },
+      "provenance": "Arène crossover adaptée pour Encore",
+      "fidelity": {
+        "sourceIds": [
+          "stage-littledaisy"
+        ],
+        "observedTraits": [
+          "La série situe le club clandestin sous le Little Daisy Café. La palette nocturne s’appuie sur l’illustration officielle de Saint-Louis."
+        ],
+        "combatAdaptation": "Sous le Little Daisy Café, le parquet de la salle de jazz fait office de piste. Les trois plans et le sol horizontal sont composés pour le duel.",
+        "reviewStatus": "Adaptation crossover documentée",
+        "reviewScope": "La composition en parallaxe, les accessoires et leurs proportions sont interprétés pour Encore."
+      },
+      "series": "lackadaisy"
+    },
+    {
+      "id": "showgrounds",
+      "name": "Showgrounds · Le parvis du château",
+      "description": "La grande roue se dresse à côté du château de SMG4, coiffé de sa casquette bleue.",
+      "theme": "showgrounds",
+      "palette": {
+        "sky": "#c58268",
+        "back": "#8b956b",
+        "accent": "#fff1a3",
+        "floor": "#aa794f",
+        "grid": "#dba874"
+      },
+      "colors": {
+        "sky": "#c58268",
+        "back": "#8b956b",
+        "accent": "#fff1a3",
+        "floor": "#aa794f",
+        "grid": "#dba874"
+      },
+      "sourceId": "stage-showgrounds",
+      "width": 1280,
+      "floor": 568,
+      "bounds": {
+        "left": 65,
+        "right": 1215
+      },
+      "provenance": "Arène crossover adaptée pour Encore",
+      "fidelity": {
+        "sourceIds": [
+          "stage-showgrounds",
+          "smg4-showgrounds-map"
+        ],
+        "observedTraits": [
+          "La vue du Showgrounds publiée par SMG4 Official montre le château rond, son emblème, ses frises bleu et blanc et la grande roue."
+        ],
+        "combatAdaptation": "La grande roue se dresse à côté du château de SMG4, coiffé de sa casquette bleue. Les trois plans et le sol horizontal sont composés pour le duel.",
+        "reviewStatus": "Adaptation crossover documentée",
+        "reviewScope": "La composition en parallaxe, les accessoires et leurs proportions sont interprétés pour Encore."
+      },
+      "series": "smg4"
+    },
+    {
+      "id": "simpleflipisland",
+      "name": "Ultra Jump Mania! · L’île de Theo",
+      "description": "Une corniche de sable et d’herbe domine la plage où commence le pilote de Theo.",
+      "theme": "simpleflipisland",
+      "palette": {
+        "sky": "#62bce0",
+        "back": "#64bd9c",
+        "accent": "#ffe37d",
+        "floor": "#dba55e",
+        "grid": "#ffdf8e"
+      },
+      "colors": {
+        "sky": "#62bce0",
+        "back": "#64bd9c",
+        "accent": "#ffe37d",
+        "floor": "#dba55e",
+        "grid": "#ffdf8e"
+      },
+      "sourceId": "stage-simpleflipisland",
+      "width": 1280,
+      "floor": 568,
+      "bounds": {
+        "left": 65,
+        "right": 1215
+      },
+      "provenance": "Arène crossover adaptée pour Encore",
+      "fidelity": {
+        "sourceIds": [
+          "stage-simpleflipisland"
+        ],
+        "observedTraits": [
+          "Les images du pilote de GLITCH montrent la plage, la lumière tropicale, l’herbe vive et les reliefs stylisés de l’île."
+        ],
+        "combatAdaptation": "Une corniche de sable et d’herbe domine la plage où commence le pilote de Theo. Les trois plans et le sol horizontal sont composés pour le duel.",
+        "reviewStatus": "Adaptation crossover documentée",
+        "reviewScope": "La composition en parallaxe, les accessoires et leurs proportions sont interprétés pour Encore."
+      },
+      "series": "ultrajumpmania"
+    },
+    {
+      "id": "falseexit",
+      "name": "La fausse sortie",
+      "description": "Une porte rouge au fond des bureaux gris du pilote.",
+      "theme": "falseexit",
+      "palette": {
+        "sky": "#434844",
+        "back": "#727a71",
+        "accent": "#d44d4c",
+        "floor": "#574c4c",
+        "grid": "#665954"
+      },
+      "colors": {
+        "sky": "#434844",
+        "back": "#727a71",
+        "accent": "#d44d4c",
+        "floor": "#574c4c",
+        "grid": "#665954"
+      },
+      "sourceId": "ep1",
+      "width": 1280,
+      "floor": 568,
+      "bounds": {
+        "left": 65,
+        "right": 1215
+      },
+      "provenance": "Décor de combat adapté",
+      "fidelity": {
+        "sourceIds": [
+          "ep1",
+          "glitch-false-exit"
+        ],
+        "observedTraits": [
+          "Une porte rouge identifiée par le mot EXIT se détache des parois grises du couloir."
+        ],
+        "combatAdaptation": "La piste est élargie pour accueillir deux combattants. Le mobilier, les plafonniers et les distances entre les plans sont recomposés pour Encore.",
+        "reviewStatus": "Référence visuelle consultée",
+        "reviewScope": "Le visuel officiel renseigne la porte et la palette du couloir. La géométrie du duel est une adaptation."
+      }
+    },
+    {
+      "id": "undermap",
+      "name": "Sous la carte",
+      "description": "La salle quadrillée bleue sous Candy Canyon, au sol réfléchissant.",
+      "theme": "undermap",
+      "palette": {
+        "sky": "#020321",
+        "back": "#050837",
+        "accent": "#315bff",
+        "floor": "#040525",
+        "grid": "#1d26cc"
+      },
+      "colors": {
+        "sky": "#020321",
+        "back": "#050837",
+        "accent": "#315bff",
+        "floor": "#040525",
+        "grid": "#1d26cc"
+      },
+      "sourceId": "ep2",
+      "width": 1280,
+      "floor": 568,
+      "bounds": {
+        "left": 65,
+        "right": 1215
+      },
+      "provenance": "Décor de combat adapté",
+      "fidelity": {
+        "sourceIds": [
+          "ep2",
+          "glitch-undermap"
+        ],
+        "observedTraits": [
+          "Espace indigo sombre parcouru de grandes lignes quadrillées bleu cobalt.",
+          "Sol brillant avec perspective et reflets bleus, distinct du Vide blanc du pilote."
+        ],
+        "combatAdaptation": "Les personnages du visuel sont retirés ; trois plans séparés, une piste horizontale à y568 et des reflets de premier plan composent une arène originale pour Encore. La disposition de la grille et la profondeur sont adaptées au duel.",
+        "reviewStatus": "Référence visuelle consultée",
+        "reviewScope": "Palette, grille et matière du sol comparées au visuel officiel GLITCH de Pomni et Gummigoo sous la carte. Un seul plan de référence est consulté : aucune géographie complète, mesure du lieu ni animation canonique n’est certifiée. Ce repère ne valide ni l’ensemble du rendu, ni ses dimensions, ni les autres apparences."
+      }
+    }
+  ],
+  "dedicated": [
+    {
+      "id": "home-pomni",
+      "name": "La grande piste · scène de Pomni",
+      "theme": "bigtop",
+      "dedicatedTo": "pomni"
+    },
+    {
+      "id": "home-jax",
+      "name": "La grande piste · scène de Jax",
+      "theme": "bigtop",
+      "dedicatedTo": "jax"
+    },
+    {
+      "id": "home-ragatha",
+      "name": "La grande piste · scène de Ragatha",
+      "theme": "bigtop",
+      "dedicatedTo": "ragatha"
+    },
+    {
+      "id": "home-gangle",
+      "name": "La grande piste · scène de Gangle",
+      "theme": "bigtop",
+      "dedicatedTo": "gangle"
+    },
+    {
+      "id": "home-zooble",
+      "name": "La grande piste · scène de Zooble",
+      "theme": "bigtop",
+      "dedicatedTo": "zooble"
+    },
+    {
+      "id": "home-kinger",
+      "name": "Mildenhall Manor · scène de Kinger",
+      "theme": "manor",
+      "dedicatedTo": "kinger"
+    },
+    {
+      "id": "home-caine",
+      "name": "La grande piste · scène de Caine",
+      "theme": "bigtop",
+      "dedicatedTo": "caine"
+    },
+    {
+      "id": "home-bubble",
+      "name": "La grande piste · scène de Bubble",
+      "theme": "bigtop",
+      "dedicatedTo": "bubble"
+    },
+    {
+      "id": "home-gummigoo",
+      "name": "Candy Canyon · scène de Gummigoo",
+      "theme": "candy",
+      "dedicatedTo": "gummigoo"
+    },
+    {
+      "id": "home-loolilalu",
+      "name": "Candy Canyon · scène de Loolilalu",
+      "theme": "candy",
+      "dedicatedTo": "loolilalu"
+    },
+    {
+      "id": "home-gloinkqueen",
+      "name": "La grande piste · scène de Gloink Queen",
+      "theme": "bigtop",
+      "dedicatedTo": "gloinkqueen"
+    },
+    {
+      "id": "home-fudge",
+      "name": "Candy Canyon · scène de The Fudge",
+      "theme": "candy",
+      "dedicatedTo": "fudge"
+    },
+    {
+      "id": "home-abstractedkaufmo",
+      "name": "La grande piste · scène de Kaufmo — abstraction",
+      "theme": "bigtop",
+      "dedicatedTo": "abstractedkaufmo"
+    },
+    {
+      "id": "home-baronmildenhall",
+      "name": "Mildenhall Manor · scène de Baron Mildenhall",
+      "theme": "manor",
+      "dedicatedTo": "baronmildenhall"
+    },
+    {
+      "id": "home-queenie",
+      "name": "La grande piste · scène de Queenie",
+      "theme": "bigtop",
+      "dedicatedTo": "queenie"
+    },
+    {
+      "id": "home-kaufmo",
+      "name": "La grande piste · scène de Kaufmo",
+      "theme": "bigtop",
+      "dedicatedTo": "kaufmo"
+    },
+    {
+      "id": "home-ribbit",
+      "name": "La grande piste · scène de Ribbit",
+      "theme": "bigtop",
+      "dedicatedTo": "ribbit"
+    },
+    {
+      "id": "home-scratch",
+      "name": "La grande piste · scène de Scratch",
+      "theme": "bigtop",
+      "dedicatedTo": "scratch"
+    },
+    {
+      "id": "home-wormo",
+      "name": "La grande piste · scène de Wormo",
+      "theme": "bigtop",
+      "dedicatedTo": "wormo"
+    },
+    {
+      "id": "home-bizco",
+      "name": "La grande piste · scène de Bizco",
+      "theme": "bigtop",
+      "dedicatedTo": "bizco"
+    },
+    {
+      "id": "home-rattie",
+      "name": "La grande piste · scène de Rattie",
+      "theme": "bigtop",
+      "dedicatedTo": "rattie"
+    },
+    {
+      "id": "home-spike",
+      "name": "La grande piste · scène de Spike",
+      "theme": "bigtop",
+      "dedicatedTo": "spike"
+    },
+    {
+      "id": "home-pinkcyclops",
+      "name": "La grande piste · scène de Pink Furry Cyclops",
+      "theme": "bigtop",
+      "dedicatedTo": "pinkcyclops"
+    },
+    {
+      "id": "home-yellowclown",
+      "name": "La grande piste · scène de Frowning Yellow Clown",
+      "theme": "bigtop",
+      "dedicatedTo": "yellowclown"
+    },
+    {
+      "id": "home-oyster",
+      "name": "La grande piste · scène de The Oyster",
+      "theme": "bigtop",
+      "dedicatedTo": "oyster"
+    },
+    {
+      "id": "home-bulbcreature",
+      "name": "La grande piste · scène de Light Green Bulb Creature",
+      "theme": "bigtop",
+      "dedicatedTo": "bulbcreature"
+    },
+    {
+      "id": "home-abel",
+      "name": "La grande piste · scène de Abel",
+      "theme": "bigtop",
+      "dedicatedTo": "abel"
+    },
+    {
+      "id": "home-max",
+      "name": "Candy Canyon · scène de Max",
+      "theme": "candy",
+      "dedicatedTo": "max"
+    },
+    {
+      "id": "home-chad",
+      "name": "Candy Canyon · scène de Chad",
+      "theme": "candy",
+      "dedicatedTo": "chad"
+    },
+    {
+      "id": "home-orbsman",
+      "name": "Mildenhall Manor · scène de Orbsman",
+      "theme": "manor",
+      "dedicatedTo": "orbsman"
+    },
+    {
+      "id": "home-ming",
+      "name": "La grande piste · scène de Ming",
+      "theme": "bigtop",
+      "dedicatedTo": "ming"
+    },
+    {
+      "id": "home-marthamildenhall",
+      "name": "Mildenhall Manor · scène de Martha Mildenhall",
+      "theme": "manor",
+      "dedicatedTo": "marthamildenhall"
+    },
+    {
+      "id": "home-ghostly",
+      "name": "Mildenhall Manor · scène de Ghostly",
+      "theme": "manor",
+      "dedicatedTo": "ghostly"
+    },
+    {
+      "id": "home-angel",
+      "name": "Mildenhall Manor · scène de Angel",
+      "theme": "manor",
+      "dedicatedTo": "angel"
+    },
+    {
+      "id": "home-disappearingguy",
+      "name": "La grande piste · scène de Disappearing Guy",
+      "theme": "bigtop",
+      "dedicatedTo": "disappearingguy"
+    },
+    {
+      "id": "home-committeemember",
+      "name": "La grande piste · scène de Committee Member",
+      "theme": "bigtop",
+      "dedicatedTo": "committeemember"
+    },
+    {
+      "id": "home-shrimpnpc",
+      "name": "Candy Canyon · scène de Shrimp NPC",
+      "theme": "candy",
+      "dedicatedTo": "shrimpnpc"
+    },
+    {
+      "id": "home-chineseroomnpc",
+      "name": "La grande piste · scène de Chinese Room NPC",
+      "theme": "bigtop",
+      "dedicatedTo": "chineseroomnpc"
+    },
+    {
+      "id": "home-blueai",
+      "name": "La grande piste · scène de Blue AI",
+      "theme": "bigtop",
+      "dedicatedTo": "blueai"
+    },
+    {
+      "id": "home-cookiebutterfly",
+      "name": "Candy Canyon · scène de Cookie Butterfly",
+      "theme": "candy",
+      "dedicatedTo": "cookiebutterfly"
+    },
+    {
+      "id": "home-gummyelephant",
+      "name": "Candy Canyon · scène de Gummy Elephant",
+      "theme": "candy",
+      "dedicatedTo": "gummyelephant"
+    },
+    {
+      "id": "home-giantcentipede",
+      "name": "Candy Canyon · scène de Giant Centipede",
+      "theme": "candy",
+      "dedicatedTo": "giantcentipede"
+    },
+    {
+      "id": "home-spudsycustomer",
+      "name": "Spudsy’s · scène de Spudsy Customer",
+      "theme": "spudsy",
+      "dedicatedTo": "spudsycustomer"
+    },
+    {
+      "id": "home-candyguardcyan",
+      "name": "Candy Canyon · scène de Candy Guard Cyan",
+      "theme": "candy",
+      "dedicatedTo": "candyguardcyan"
+    },
+    {
+      "id": "home-candyguardblue",
+      "name": "Candy Canyon · scène de Candy Guard Blue",
+      "theme": "candy",
+      "dedicatedTo": "candyguardblue"
+    },
+    {
+      "id": "home-candyguardpurple",
+      "name": "Candy Canyon · scène de Candy Guard Violet",
+      "theme": "candy",
+      "dedicatedTo": "candyguardpurple"
+    },
+    {
+      "id": "home-gummyworm",
+      "name": "Candy Canyon · scène de Gummy Worm",
+      "theme": "candy",
+      "dedicatedTo": "gummyworm"
+    },
+    {
+      "id": "home-barrelmonkey",
+      "name": "La grande piste · scène de Barrel Monkey",
+      "theme": "bigtop",
+      "dedicatedTo": "barrelmonkey"
+    },
+    {
+      "id": "home-jeffery",
+      "name": "La grande piste · scène de Jeffery",
+      "theme": "bigtop",
+      "dedicatedTo": "jeffery"
+    },
+    {
+      "id": "home-mildenhallsouls",
+      "name": "Mildenhall Manor · scène de Mildenhall Souls",
+      "theme": "manor",
+      "dedicatedTo": "mildenhallsouls"
+    },
+    {
+      "id": "home-redmannequin",
+      "name": "La grande piste · scène de Red Mannequin",
+      "theme": "bigtop",
+      "dedicatedTo": "redmannequin"
+    },
+    {
+      "id": "home-orangemannequin",
+      "name": "La grande piste · scène de Orange Mannequin",
+      "theme": "bigtop",
+      "dedicatedTo": "orangemannequin"
+    },
+    {
+      "id": "home-yellowmannequin",
+      "name": "La grande piste · scène de Yellow Mannequin",
+      "theme": "bigtop",
+      "dedicatedTo": "yellowmannequin"
+    },
+    {
+      "id": "home-magentamannequin",
+      "name": "La grande piste · scène de Magenta Mannequin",
+      "theme": "bigtop",
+      "dedicatedTo": "magentamannequin"
+    }
+  ],
+  "planes": [
+    {
+      "stage": "bigtop",
+      "plane": "far",
+      "path": "assets/encore/stages/bigtop/far.webp",
+      "bytes": 272690,
+      "sha256": "b2731bf03caeb4c8f9ff22100b3521501f144355e8a64b13424d4a4fbc810b7d",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGB"
+    },
+    {
+      "stage": "bigtop",
+      "plane": "mid",
+      "path": "assets/encore/stages/bigtop/mid.webp",
+      "bytes": 75630,
+      "sha256": "b3462cabd939d7ef4fa4948ca1197d0ad40bf3768d4bc948be944edbeace2221",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "stage": "bigtop",
+      "plane": "near",
+      "path": "assets/encore/stages/bigtop/near.webp",
+      "bytes": 75900,
+      "sha256": "56d5c44ffeeffc1aecff24b2331829b4acac32586d29fcf8a8e144d37b1a716d",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "stage": "candy",
+      "plane": "far",
+      "path": "assets/encore/stages/candy/far.webp",
+      "bytes": 320662,
+      "sha256": "bdcc0042cf1af0942fc75d8128edf2cf400a19378469eb38a9c695f66c0d9167",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGB"
+    },
+    {
+      "stage": "candy",
+      "plane": "mid",
+      "path": "assets/encore/stages/candy/mid.webp",
+      "bytes": 86656,
+      "sha256": "f0cbb247c1d0b2809e4912ebf347f0a5b3fcb2ac8756f14bf374e5a4a82a3650",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "stage": "candy",
+      "plane": "near",
+      "path": "assets/encore/stages/candy/near.webp",
+      "bytes": 55468,
+      "sha256": "82cee50266e7f570d809232809ae056a911b0a53e260b1727aa56f1872d7d893",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "stage": "manor",
+      "plane": "far",
+      "path": "assets/encore/stages/manor/far.webp",
+      "bytes": 377516,
+      "sha256": "a8c7bbb051eab577f4cf30337ec56b336aeaeb6c6c257ad77719bc20964f1af2",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGB"
+    },
+    {
+      "stage": "manor",
+      "plane": "mid",
+      "path": "assets/encore/stages/manor/mid.webp",
+      "bytes": 100994,
+      "sha256": "ee2962ccc3a2c77aa282e6a78fac793b15768932593b4486df7a1718982939e0",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "stage": "manor",
+      "plane": "near",
+      "path": "assets/encore/stages/manor/near.webp",
+      "bytes": 80982,
+      "sha256": "e7a3ba6932517c61cc95fc01ea3dcd46d869ea43dc1656986ae22c76176f285a",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "stage": "spudsy",
+      "plane": "far",
+      "path": "assets/encore/stages/spudsy/far.webp",
+      "bytes": 325656,
+      "sha256": "261476bc691a6dbd3dac1f35e40457b7b81324b2713dd82381817f1a74c98b38",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGB"
+    },
+    {
+      "stage": "spudsy",
+      "plane": "mid",
+      "path": "assets/encore/stages/spudsy/mid.webp",
+      "bytes": 107976,
+      "sha256": "ee1847f2e2693fd79f5bc28bdf231cefd52b0ef1c3f959f63d344751a45eadf4",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "stage": "spudsy",
+      "plane": "near",
+      "path": "assets/encore/stages/spudsy/near.webp",
+      "bytes": 64212,
+      "sha256": "7a8bf4497956ce8726f35928404a36a1903e323f2e7a568aa6111a19cb83bffe",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "stage": "cellar",
+      "plane": "far",
+      "path": "assets/encore/stages/cellar/far.webp",
+      "bytes": 57084,
+      "sha256": "e97bac93e780a8cd3c115c424e93de509f7264ab97c276cf9c7fb8f6018c6941",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGB"
+    },
+    {
+      "stage": "cellar",
+      "plane": "mid",
+      "path": "assets/encore/stages/cellar/mid.webp",
+      "bytes": 103280,
+      "sha256": "3ec9dec8a2e15ae2852dfa623213aba16c2c13191068eba76241251a7d5bab12",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "stage": "cellar",
+      "plane": "near",
+      "path": "assets/encore/stages/cellar/near.webp",
+      "bytes": 49364,
+      "sha256": "cdc26a8d9f584c282d16acb62e5023a688f61558b376a55cc579eea054e3bba0",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "stage": "void",
+      "plane": "far",
+      "path": "assets/encore/stages/void/far.webp",
+      "bytes": 239818,
+      "sha256": "35c05d540ae5f97577ec4a5032766ffd7813300005926fad8b80534b27ffb70d",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGB"
+    },
+    {
+      "stage": "void",
+      "plane": "mid",
+      "path": "assets/encore/stages/void/mid.webp",
+      "bytes": 99650,
+      "sha256": "7d06ee60771ecccdfe6ac552e323e4691d0ea5ca21de59038a73588a12e5f9e2",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "stage": "void",
+      "plane": "near",
+      "path": "assets/encore/stages/void/near.webp",
+      "bytes": 46166,
+      "sha256": "cabad6f02f25c142df644fd437d876068d47ec525f2b7d3bccd863b9b6f99af7",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "stage": "lake",
+      "plane": "far",
+      "path": "assets/encore/stages/lake/far.webp",
+      "bytes": 370954,
+      "sha256": "f10b64a6e673e5a4b2c7f71875bdb24a01ef6d71e2ca7b40f1d06a3447ae611e",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGB"
+    },
+    {
+      "stage": "lake",
+      "plane": "mid",
+      "path": "assets/encore/stages/lake/mid.webp",
+      "bytes": 81734,
+      "sha256": "30346017433600843c84e7b820d830a2744ff33662a2244f008216686268ed4c",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "stage": "lake",
+      "plane": "near",
+      "path": "assets/encore/stages/lake/near.webp",
+      "bytes": 61864,
+      "sha256": "846ce84e8488eb347fe97cce150a34ff5a068e5addb6eaa61ef5d75141102e3b",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "stage": "training",
+      "plane": "far",
+      "path": "assets/encore/stages/training/far.webp",
+      "bytes": 268682,
+      "sha256": "98c8926d890dd47784d02fda5a24f4d3ae756c8af16bf095ac09500053fe57f3",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGB"
+    },
+    {
+      "stage": "training",
+      "plane": "mid",
+      "path": "assets/encore/stages/training/mid.webp",
+      "bytes": 58534,
+      "sha256": "015c2657bef85ea419571436d7b90e748286599b87d86dc9554dfab61855b642",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "stage": "training",
+      "plane": "near",
+      "path": "assets/encore/stages/training/near.webp",
+      "bytes": 63872,
+      "sha256": "e7a300b4dc33b4509d111049137e314427c2c105e3e8286a30305c83bfa1315e",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "stage": "gloink",
+      "plane": "far",
+      "path": "assets/encore/stages/gloink/far.webp",
+      "bytes": 245470,
+      "sha256": "56cb1aa7cad48086cd7a6bdf0ec3b3875a19cf5c18c5c201a80c1395f6827e56",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGB"
+    },
+    {
+      "stage": "gloink",
+      "plane": "mid",
+      "path": "assets/encore/stages/gloink/mid.webp",
+      "bytes": 110176,
+      "sha256": "b88defad9e51d7bff872626dd6f08e4e1e6b2bc6239582c966ee54361f29ff53",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "stage": "gloink",
+      "plane": "near",
+      "path": "assets/encore/stages/gloink/near.webp",
+      "bytes": 56296,
+      "sha256": "12319fe8193cbb8280db1213cc73ab3d42b0e979c1029cf022c3ea65a0c07627",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "stage": "kingdom",
+      "plane": "far",
+      "path": "assets/encore/stages/kingdom/far.webp",
+      "bytes": 477382,
+      "sha256": "de8029cd5df4e952e825e6da1289c0587a61a48fb3fd4aaa399e22aed033c4d0",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGB"
+    },
+    {
+      "stage": "kingdom",
+      "plane": "mid",
+      "path": "assets/encore/stages/kingdom/mid.webp",
+      "bytes": 157822,
+      "sha256": "3f5fb8f930d81693c5f7010eea06472f7fbe8c3385ac7c2c961a19cfd465f991",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "stage": "kingdom",
+      "plane": "near",
+      "path": "assets/encore/stages/kingdom/near.webp",
+      "bytes": 110306,
+      "sha256": "74bf4582913283c7636a70cb0a4aef075db7f6b55f318751b290395d1ccec4f9",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "stage": "grounds",
+      "plane": "far",
+      "path": "assets/encore/stages/grounds/far.webp",
+      "bytes": 464618,
+      "sha256": "9e40ae2c5b7ffa2a3cc3d2797df16b5ebebaa0a5c5f7fb3043c6d41969803d87",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGB"
+    },
+    {
+      "stage": "grounds",
+      "plane": "mid",
+      "path": "assets/encore/stages/grounds/mid.webp",
+      "bytes": 67290,
+      "sha256": "f07470b568ca2bebcfb59b6768db8885eb1c380081c286f788335229e4fce5e9",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "stage": "grounds",
+      "plane": "near",
+      "path": "assets/encore/stages/grounds/near.webp",
+      "bytes": 119772,
+      "sha256": "f84bd12a82afd55e095b3148640ee48b59b420b1d026f5a7a6060fdc9835b6e2",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "stage": "backstage",
+      "plane": "far",
+      "path": "assets/encore/stages/backstage/far.webp",
+      "bytes": 344070,
+      "sha256": "34d59cae2ff34829a1356b74dc8dcb61695f92318613f864ec4af8609e94e6ca",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGB"
+    },
+    {
+      "stage": "backstage",
+      "plane": "mid",
+      "path": "assets/encore/stages/backstage/mid.webp",
+      "bytes": 60312,
+      "sha256": "cae1b07b60cce8681a89752d40b4f0bfaef09fd01139a177ec6dab5bf5b66707",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "stage": "backstage",
+      "plane": "near",
+      "path": "assets/encore/stages/backstage/near.webp",
+      "bytes": 67058,
+      "sha256": "1c0a45d5e4d326f7b81d12ea1c545304d85ce68e1b8ecc2ea2d9189dd5dcb09d",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "stage": "coppernine",
+      "plane": "far",
+      "path": "assets/encore/stages/coppernine/far.webp",
+      "bytes": 565010,
+      "sha256": "e01b729aab57647ce2ea756c564d334a04b5ed7c763d6fcbbe9041e8e40d6f36",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGB"
+    },
+    {
+      "stage": "coppernine",
+      "plane": "mid",
+      "path": "assets/encore/stages/coppernine/mid.webp",
+      "bytes": 114300,
+      "sha256": "03984d9fdb80827e8fc94b170140f00f1595f04ab185fb3cbf31f02261925a5b",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "stage": "coppernine",
+      "plane": "near",
+      "path": "assets/encore/stages/coppernine/near.webp",
+      "bytes": 58172,
+      "sha256": "1171382f4f0eff8c76247aeb107c937a342ad447cb44038037e3fcca98868605",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "stage": "silicacity",
+      "plane": "far",
+      "path": "assets/encore/stages/silicacity/far.webp",
+      "bytes": 517646,
+      "sha256": "0e8a4223ab67341961e574556b469b9b4f82cd5d41f8ab8b5c0bcc2a9c29fd77",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGB"
+    },
+    {
+      "stage": "silicacity",
+      "plane": "mid",
+      "path": "assets/encore/stages/silicacity/mid.webp",
+      "bytes": 95708,
+      "sha256": "a728b277971da4462d68db3d02dd2d3048336a0db18ae3977bfbf7bee1d580af",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "stage": "silicacity",
+      "plane": "near",
+      "path": "assets/encore/stages/silicacity/near.webp",
+      "bytes": 54184,
+      "sha256": "291995215eddb6bd2d28b5f178ce075a84f79bb53ccbd6e1dc215330280c4db3",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "stage": "portaurora",
+      "plane": "far",
+      "path": "assets/encore/stages/portaurora/far.webp",
+      "bytes": 445178,
+      "sha256": "6ee53fb31ba6441d09339cccdbcaedc95e15f61788f79398cc4d32ebb80145c5",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGB"
+    },
+    {
+      "stage": "portaurora",
+      "plane": "mid",
+      "path": "assets/encore/stages/portaurora/mid.webp",
+      "bytes": 156788,
+      "sha256": "1cf6fd2de07a99a3784f6f9c71d421dea11f195368b7313024566ffbe998ef1b",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "stage": "portaurora",
+      "plane": "near",
+      "path": "assets/encore/stages/portaurora/near.webp",
+      "bytes": 165804,
+      "sha256": "dc7afb6da9cff9c3baff5aa82209e9355636984e98421ace49e86e11c952dc71",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "stage": "gaslightwharf",
+      "plane": "far",
+      "path": "assets/encore/stages/gaslightwharf/far.webp",
+      "bytes": 492948,
+      "sha256": "28c1d728e98efb458e521b26da094fc3353b70c51bc20c2b9739e81b083d3747",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGB"
+    },
+    {
+      "stage": "gaslightwharf",
+      "plane": "mid",
+      "path": "assets/encore/stages/gaslightwharf/mid.webp",
+      "bytes": 170396,
+      "sha256": "9ae7d78e91c6e45782db60d725eec2a5bd4aa07ebd4da02ef1c41e45b4fe457a",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "stage": "gaslightwharf",
+      "plane": "near",
+      "path": "assets/encore/stages/gaslightwharf/near.webp",
+      "bytes": 66586,
+      "sha256": "05882e98253b3686332bddd3c09ca915b6b7b56e23cde2839962fdbb6846ef83",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "stage": "parkplanet",
+      "plane": "far",
+      "path": "assets/encore/stages/parkplanet/far.webp",
+      "bytes": 779136,
+      "sha256": "cc3d23740ca2b087a9f741b3b13927426f00dc7733eec728a1e9f0ed6c74d74d",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGB"
+    },
+    {
+      "stage": "parkplanet",
+      "plane": "mid",
+      "path": "assets/encore/stages/parkplanet/mid.webp",
+      "bytes": 226130,
+      "sha256": "e159363b24657b317c42e720e30e80f092875f197c9e63a44e2192afd9d4de18",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "stage": "parkplanet",
+      "plane": "near",
+      "path": "assets/encore/stages/parkplanet/near.webp",
+      "bytes": 114828,
+      "sha256": "e11e04a9717c55383991b9b2086752a77470c13c7476cbf39f4fba839a34c9cc",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "stage": "gameoverse",
+      "plane": "far",
+      "path": "assets/encore/stages/gameoverse/far.webp",
+      "bytes": 394648,
+      "sha256": "a60b1e63f81bd8161ea1edb63e43277636cac371df7f96ce1702670e196c753d",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGB"
+    },
+    {
+      "stage": "gameoverse",
+      "plane": "mid",
+      "path": "assets/encore/stages/gameoverse/mid.webp",
+      "bytes": 69758,
+      "sha256": "32fd3f66ff339351bb1030a53443f5ef0c5987da0feab3f41e69c5bab67c2918",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "stage": "gameoverse",
+      "plane": "near",
+      "path": "assets/encore/stages/gameoverse/near.webp",
+      "bytes": 60046,
+      "sha256": "5484e1f8e3481de28c7f51eb73c2f820bdefa3999b1b74dbbb2c7848af4430b3",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "stage": "littledaisy",
+      "plane": "far",
+      "path": "assets/encore/stages/littledaisy/far.webp",
+      "bytes": 1135602,
+      "sha256": "b746fa6aef34bb286918d7b061829033fe2e1343645546ce4dbe517c2dd0d6d1",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGB"
+    },
+    {
+      "stage": "littledaisy",
+      "plane": "mid",
+      "path": "assets/encore/stages/littledaisy/mid.webp",
+      "bytes": 197302,
+      "sha256": "3f0f2c9ee967c5faed87b4e22414d577a5e9c51507c59a43794d987b2d80861b",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "stage": "littledaisy",
+      "plane": "near",
+      "path": "assets/encore/stages/littledaisy/near.webp",
+      "bytes": 134622,
+      "sha256": "e0ba090e4de57681cde1b0a29abf906092e66b74cc6729a6a1f70da0b538afc6",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "stage": "showgrounds",
+      "plane": "far",
+      "path": "assets/encore/stages/showgrounds/far.webp",
+      "bytes": 640556,
+      "sha256": "f1f55e22e301199f58646d57d50e71ae7a8569b0da9f0908e935337a0742b77a",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGB"
+    },
+    {
+      "stage": "showgrounds",
+      "plane": "mid",
+      "path": "assets/encore/stages/showgrounds/mid.webp",
+      "bytes": 123636,
+      "sha256": "9cbb7274b96f783251d5d4ba797f6219b93991bc46849679e1de78bae35141f5",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "stage": "showgrounds",
+      "plane": "near",
+      "path": "assets/encore/stages/showgrounds/near.webp",
+      "bytes": 82692,
+      "sha256": "a3a1e817e699a68d43b80128497d03576e4e6182874b46d9a9978bf8b23cd8be",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "stage": "simpleflipisland",
+      "plane": "far",
+      "path": "assets/encore/stages/simpleflipisland/far.webp",
+      "bytes": 511454,
+      "sha256": "3eb0a60e487dc45f7ae349651069dff274e2236820459579b65b3a8a65797d45",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGB"
+    },
+    {
+      "stage": "simpleflipisland",
+      "plane": "mid",
+      "path": "assets/encore/stages/simpleflipisland/mid.webp",
+      "bytes": 161458,
+      "sha256": "b364c89ea22698eadf3bed8977142e702672d11976ec51b11a34ab5d75b86be4",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "stage": "simpleflipisland",
+      "plane": "near",
+      "path": "assets/encore/stages/simpleflipisland/near.webp",
+      "bytes": 117228,
+      "sha256": "6a52545e73adfdea00a087101998d3a0652ab0e85beebba976499d836db303d0",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "stage": "falseexit",
+      "plane": "far",
+      "path": "assets/encore/stages/falseexit/far.png",
+      "bytes": 2360124,
+      "sha256": "138df372cffe060db63b8d93f6109f6ceb08f66d0373ad31aa286e586cc5020a",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB"
+    },
+    {
+      "stage": "falseexit",
+      "plane": "mid",
+      "path": "assets/encore/stages/falseexit/mid.png",
+      "bytes": 389739,
+      "sha256": "84275261c9340380d084a7f32f774598638dd3a884ccb77188233c0dae2455fc",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "stage": "falseexit",
+      "plane": "near",
+      "path": "assets/encore/stages/falseexit/near.png",
+      "bytes": 224318,
+      "sha256": "8f76e338460107aa49ddc0344f3f056df436b25b9f4372bab4251bfe9dac586c",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "stage": "undermap",
+      "plane": "far",
+      "path": "assets/encore/stages/undermap/far.png",
+      "bytes": 1163294,
+      "sha256": "8632502788b9f69092ae1cf4b5ae36d9d41af37c9e7155c9475c53879b6ff352",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB"
+    },
+    {
+      "stage": "undermap",
+      "plane": "mid",
+      "path": "assets/encore/stages/undermap/mid.png",
+      "bytes": 464706,
+      "sha256": "3a27fd151543855490ae95f6250ed127e0bd46c1599b77dff1132ec95f9ac311",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "stage": "undermap",
+      "plane": "near",
+      "path": "assets/encore/stages/undermap/near.png",
+      "bytes": 193031,
+      "sha256": "2e062ba46a9284669b9a19e113dbd1906cafd3f33688c900a22d7217e5869ec1",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGBA"
+    }
+  ]
+}

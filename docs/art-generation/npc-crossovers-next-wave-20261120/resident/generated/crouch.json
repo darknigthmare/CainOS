@@ -1,0 +1,73 @@
+{
+  "appearanceId": "glitch-murderdrones-ribbit-resident",
+  "fighterId": "ribbit",
+  "series": "murderdrones",
+  "style": "resident",
+  "slot": "crouch",
+  "prompt": "Edit only the FIRST attached image. Keep this entire crouching Ribbit character and every detail of its pose, face, head, costume, tools, colors, shading, feet and composition unchanged, EXCEPT the open green hand resting on the invisible ground at the bottom RIGHT of the image. That hand currently has four rounded digits. It must have EXACTLY THREE rounded digits total, as in the second reference image. Preserve the low left-pointing thumb-like lobe and only TWO rounded fingers extending rightward; naturally remove the uppermost extra rightward finger and merge that contour into the palm. The remaining three digits must be clearly separated by two notches. Do not change the wrist attachment, arm or posture. Do not crop: output the complete head-to-toes character with native true transparent RGBA, no background, no floor, no shadow, no text, no effects. One character only.",
+  "referencePaths": [
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/attempts/crouch-01.png",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/selection.png"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "root",
+  "correctionOf": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/attempts/crouch-01.png",
+  "schema": "encore-native-npc-crossover/v1",
+  "id": "glitch-murderdrones-ribbit-resident:crouch",
+  "status": "accepted_native",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/crouch.png",
+  "targetFile": "assets/encore/crossovers/murderdrones/ribbit/resident/crouch.png",
+  "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-e31c1833-df4a-4758-862c-c04fd600e475.png",
+  "sourceGenerationId": "exec-e31c1833-df4a-4758-862c-c04fd600e475",
+  "definitionFile": "docs/art-generation/npc-crossovers-next-wave-20261120/definitions/glitch-murderdrones-ribbit-resident.json",
+  "definitionSHA256": "3a2fc2646759c1d3c2e895eb6c907c29ed171bf834554938338a985348fcc973",
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/attempts/crouch-01.png",
+      "sha256": "ef49791117078e6d65c93350686c1c9c67ed5d9752a2bf5214dbaef0b369fec6",
+      "bytes": 1461298
+    },
+    {
+      "position": 2,
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/selection.png",
+      "sha256": "fe3c01b6b6d57bc532af4ce7d9114f93a804146d38b4a0263a3f06876618b686",
+      "bytes": 1524779
+    }
+  ],
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "alpha12Bounds": [
+    201,
+    14,
+    1314,
+    1007
+  ],
+  "alpha12BoundsThreshold": "alpha > 12",
+  "fullyTransparentPixels": 1010705,
+  "sha256": "3c35deeef6d0be94d4a0900e2a5ec4bd40281e9fa5d91392f134f6ad26b5ce6e",
+  "bytes": 1475759,
+  "nativeCopyVerified": true,
+  "sourceKind": "Création originale pour Encore",
+  "episodeFidelityClaim": false,
+  "canonicalCostumeClaim": false,
+  "includedInRuntime": true,
+  "createdAt": "2026-11-20T15:15:04.454824+00:00",
+  "visualReview": {
+    "status": "accepted",
+    "reviewer": "root",
+    "observations": [
+      "Correction native inspectée : la main appuyée en avant comporte maintenant trois lobes. Accroupissement bas, costume, genouillères, outils et deux pieds entiers conservés."
+    ],
+    "scope": "Original crossover identity, entire figure, costume continuity and readable game pose; no canonical costume or complete animation claim."
+  }
+}

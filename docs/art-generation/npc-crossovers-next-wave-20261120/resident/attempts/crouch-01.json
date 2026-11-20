@@ -1,0 +1,33 @@
+{
+  "appearanceId": "glitch-murderdrones-ribbit-resident",
+  "fighterId": "ribbit",
+  "series": "murderdrones",
+  "style": "resident",
+  "slot": "crouch",
+  "prompt": "Use the attached approved selection image as the exact identity, proportions, costume, materials, color and 2D cel-shading reference. Draw ONE new full-body pose of the SAME original Encore crossover Ribbit. Keep the BIOLOGICAL green frog identity, huge white-and-black eyes, mint muzzle, pink cheeks and bow; charcoal/olive jumpsuit, short rolled sleeves, chest amber lamp, two belt pouches with tools secured, round knee pads, ankle amber bands, bare green three-digit hands and three-lobed feet. No change of outfit, no hat, no boots, no gloves, no robot conversion. CROUCH POSE: deep low right-facing frog squat, hips near heels, both long knees strongly bent, both complete feet spread and resting at the same lower baseline, torso leans forward, one hand raised near chest and the other braced forward in guard. Keep giant eyes, face and pink bow unobstructed. No scenery. Three-quarter side view, native facing RIGHT. Clean black contours, gentle upper-left highlights, restrained cel shading matching the reference. One character only, full head-to-toes including raised hands and all feet, with comfortable transparent margin around the ENTIRE silhouette. Use a canvas wide enough for this pose (portrait 1024x1536 or square 1536x1536 if needed); never crop or squeeze limbs. Native true transparent RGBA, clean alpha edges, no scene/background/ground/halo/text/grid/watermark. This is a separate action drawing, not a transformation, crop or composited duplicate of the selection. HAND COUNT LOCK: each open hand has EXACTLY THREE rounded digits in total (one thumb-like lobe and two fingers); never add a fourth lobe or finger. Preserve the three-lobed frog hand anatomy of the reference.",
+  "referencePaths": [
+    "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/selection.png"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "root",
+  "status": "rejected_visual_review",
+  "method": "image_gen.imagegen",
+  "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/attempts/crouch-01.png",
+  "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-0d2e363b-5213-49a4-960f-b855e5b7c808.png",
+  "sourceGenerationId": "exec-0d2e363b-5213-49a4-960f-b855e5b7c808",
+  "sha256": "ef49791117078e6d65c93350686c1c9c67ed5d9752a2bf5214dbaef0b369fec6",
+  "bytes": 1461298,
+  "nativeCopyVerified": true,
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "portableReferences": [
+    {
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/resident/generated/selection.png",
+      "sha256": "fe3c01b6b6d57bc532af4ce7d9114f93a804146d38b4a0263a3f06876618b686"
+    }
+  ],
+  "includedInRuntime": false,
+  "reason": "La main appuyée au sol comporte quatre lobes ; correction native demandée pour conserver trois doigts."
+}

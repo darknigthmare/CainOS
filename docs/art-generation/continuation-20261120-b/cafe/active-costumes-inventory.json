@@ -1,0 +1,2392 @@
+{
+  "schema": "encore-cafe-duplicate-review-inventory/v1",
+  "reviewedOn": "2026-11-20",
+  "baselineCommit": "38e8000cad61f4b229ad300877f44c31356343fa",
+  "scope": "All 51 archive costumes and 40 Circus additions. Crossover styles are outside the cafe costume comparison.",
+  "archiveCount": 51,
+  "circusCount": 40,
+  "archive": [
+    {
+      "id": "ganglekawaii",
+      "name": "Kawaii Gangle",
+      "fighterId": "gangle",
+      "baseFighterId": "gangle",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-variants.png",
+        "sheet": "variants",
+        "cols": 4,
+        "rows": 3,
+        "col": 3,
+        "row": 0
+      },
+      "observedTraits": [],
+      "assetTraits": [
+        "Masque clair arrondi aux grands yeux brillants et joues roses.",
+        "Rubans pastel, gros nœuds roses à cœur, mains blanches et étoiles."
+      ],
+      "sourceIds": [],
+      "reviewScope": "Revue du sprite du projet uniquement. Aucune image primaire de cette tenue n’a été comparée ; les noms et les rattachements de jeu ne prouvent pas une apparition dans la série."
+    },
+    {
+      "id": "ganglecomedy",
+      "name": "Gangle Comedy Mask",
+      "fighterId": "gangle",
+      "baseFighterId": "gangle",
+      "sprite": {
+        "src": "../assets/images/cainos-costumes-gangle-0.6.0.png",
+        "sheet": "gangle-0.6.0",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "sourceRect": {
+          "x": 15,
+          "y": 140,
+          "width": 580,
+          "height": 815
+        },
+        "matteMode": "native-alpha"
+      },
+      "observedTraits": [
+        "Masque souriant blanc avec yeux noirs arqués visible parmi les deux masques de la peluche.",
+        "Corps de rubans rouges sur le produit officiel."
+      ],
+      "assetTraits": [
+        "Masque blanc entier, yeux noirs arqués et large bouche souriante.",
+        "Torse en spirale et membres de rubans rouges ; les bras se terminent par des boucles rouges, sans gants blancs."
+      ],
+      "sourceIds": [
+        "store-gangle-masks"
+      ],
+      "reviewScope": "Le nouveau dessin reprend le masque comique blanc et les rubans rouges de la référence officielle. Les mains humaines blanches ont été remplacées par des extrémités de ruban. Le masque entier et la pose sont une adaptation de l’état comique, sans certification des proportions de la série."
+    },
+    {
+      "id": "gangletragedy",
+      "name": "Gangle Tragedy Mask",
+      "fighterId": "gangle",
+      "baseFighterId": "gangle",
+      "sprite": {
+        "src": "../assets/images/cainos-costumes-gangle-0.6.0.png",
+        "sheet": "gangle-0.6.0",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "sourceRect": {
+          "x": 602,
+          "y": 198,
+          "width": 410,
+          "height": 757
+        },
+        "matteMode": "native-alpha"
+      },
+      "observedTraits": [
+        "Masque triste blanc, yeux noirs et larmes bleues.",
+        "Rubans rouges et masque triste entier sur la figurine ; fragments du masque souriant à son pied."
+      ],
+      "assetTraits": [
+        "Masque triste blanc entier et non fissuré, yeux noirs tombants, deux larmes turquoise et bouche triste.",
+        "Corps et membres en rubans rouges, bras recourbés vers le visage ; aucun gant ni débris au sol attaché."
+      ],
+      "sourceIds": [
+        "store-gangle-figure",
+        "store-gangle-masks"
+      ],
+      "reviewScope": "La figurine officielle distingue le masque triste entier des fragments du masque comique. Le nouveau masque triste est intact, ses membres sont rouges et sans mains humaines. Les fragments au sol ne sont pas incorporés au personnage mobile. La pose et les proportions restent une adaptation en pixel art."
+    },
+    {
+      "id": "darkduojax",
+      "name": "Dark Duo Jax",
+      "fighterId": "jax",
+      "baseFighterId": "jax",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-requested-variants.png",
+        "sheet": "requested",
+        "cols": 5,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "sourceRect": {
+          "x": 115,
+          "y": 25,
+          "width": 310,
+          "height": 730
+        }
+      },
+      "observedTraits": [],
+      "assetTraits": [
+        "Lapin violet aux longues oreilles, yeux et dents jaunes.",
+        "Long manteau noir doublé de rouge, rose au revers, cravate et chaussures sombres."
+      ],
+      "sourceIds": [],
+      "reviewScope": "Revue du sprite du projet uniquement. Aucune image primaire de cette tenue n’a été comparée ; les noms et les rattachements de jeu ne prouvent pas une apparition dans la série."
+    },
+    {
+      "id": "darkduogangle",
+      "name": "Dark Duo Gangle",
+      "fighterId": "gangle",
+      "baseFighterId": "gangle",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-requested-variants.png",
+        "sheet": "requested",
+        "cols": 5,
+        "rows": 1,
+        "col": 1,
+        "row": 0,
+        "sourceRect": {
+          "x": 430,
+          "y": 145,
+          "width": 400,
+          "height": 610
+        }
+      },
+      "observedTraits": [],
+      "assetTraits": [
+        "Masque blanc souriant et rubans rouges.",
+        "Corsage et jupe noirs à bordures rouges, gants sombres et plusieurs boucles de ruban."
+      ],
+      "sourceIds": [],
+      "reviewScope": "Revue du sprite du projet uniquement. Aucune image primaire de cette tenue n’a été comparée ; les noms et les rattachements de jeu ne prouvent pas une apparition dans la série."
+    },
+    {
+      "id": "maidjax",
+      "name": "Maid Jax",
+      "fighterId": "jax",
+      "baseFighterId": "jax",
+      "sprite": {
+        "src": "../assets/images/cainos-costumes-uniforms-0.6.0.png",
+        "sheet": "uniforms-0.6.0",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "sourceRect": {
+          "x": 40,
+          "y": 15,
+          "width": 477,
+          "height": 985
+        },
+        "matteMode": "native-alpha"
+      },
+      "observedTraits": [
+        "Coiffe et tablier blancs sur une robe noire.",
+        "Cœur violet au buste, bas blancs et chaussures noires à nœud sur la figurine."
+      ],
+      "assetTraits": [
+        "Lapin violet aux longues oreilles, yeux et dents jaunes, coiffe et gants blancs.",
+        "Robe noire à cœur violet, tablier blanc à volants, bas blancs et chaussures noires à nœuds noirs."
+      ],
+      "sourceIds": [
+        "store-maid-jax",
+        "ep5",
+        "ep9"
+      ],
+      "reviewScope": "Les détails visibles sur Maid Jax Animatez sont repris dans le nouveau dessin : cœur violet, coiffe, tablier, bas blancs et nœuds noirs. La pose et les proportions restent une adaptation en pixel art ; aucun plan des épisodes 5 ou 9 ni modèle 3D mesuré n’est certifié."
+    },
+    {
+      "id": "maidragatha",
+      "name": "Maid Ragatha",
+      "fighterId": "ragatha",
+      "baseFighterId": "ragatha",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-requested-variants.png",
+        "sheet": "requested",
+        "cols": 5,
+        "rows": 1,
+        "col": 3,
+        "row": 0,
+        "sourceRect": {
+          "x": 1165,
+          "y": 130,
+          "width": 375,
+          "height": 620
+        }
+      },
+      "observedTraits": [],
+      "assetTraits": [
+        "Cheveux de laine rouges et œil en bouton bleu.",
+        "Coiffe blanche, longue robe noire, tablier blanc à bouton bleu et main tendue."
+      ],
+      "sourceIds": [],
+      "reviewScope": "Revue du sprite du projet uniquement. Aucune image primaire de cette tenue n’a été comparée ; les noms et les rattachements de jeu ne prouvent pas une apparition dans la série."
+    },
+    {
+      "id": "maidpomni",
+      "name": "Maid Pomni",
+      "fighterId": "pomni",
+      "baseFighterId": "pomni",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-requested-variants.png",
+        "sheet": "requested",
+        "cols": 5,
+        "rows": 1,
+        "col": 4,
+        "row": 0
+      },
+      "observedTraits": [],
+      "assetTraits": [
+        "Visage blanc, cheveux bruns et iris rouges et bleus.",
+        "Bonnet de bouffon sombre, coiffe à volants, robe noire et tablier blanc."
+      ],
+      "sourceIds": [],
+      "reviewScope": "Revue du sprite du projet uniquement. Aucune image primaire de cette tenue n’a été comparée ; les noms et les rattachements de jeu ne prouvent pas une apparition dans la série."
+    },
+    {
+      "id": "maidgangle",
+      "name": "Maid Gangle",
+      "fighterId": "gangle",
+      "baseFighterId": "gangle",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-extra-variants.png",
+        "sheet": "extra",
+        "cols": 2,
+        "rows": 1,
+        "col": 0,
+        "row": 0
+      },
+      "observedTraits": [],
+      "assetTraits": [
+        "Masque blanc souriant au-dessus d’un corps de rubans rouges.",
+        "Coiffe et tablier blancs, robe noire, nœuds rouges et mains blanches écartées."
+      ],
+      "sourceIds": [],
+      "reviewScope": "Revue du sprite du projet uniquement. Aucune image primaire de cette tenue n’a été comparée ; les noms et les rattachements de jeu ne prouvent pas une apparition dans la série."
+    },
+    {
+      "id": "jaxgirl",
+      "name": "Jax Girl",
+      "fighterId": "jax",
+      "baseFighterId": "jax",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-extra-variants.png",
+        "sheet": "extra",
+        "cols": 2,
+        "rows": 1,
+        "col": 1,
+        "row": 0
+      },
+      "observedTraits": [],
+      "assetTraits": [
+        "Visage de lapin violet, longues oreilles et yeux jaunes.",
+        "Longs cheveux bleu vert, nœud rose, tee-shirt clair, manches rayées et pantalon sombre."
+      ],
+      "sourceIds": [],
+      "reviewScope": "Revue du sprite du projet uniquement. Aucune image primaire de cette tenue n’a été comparée ; les noms et les rattachements de jeu ne prouvent pas une apparition dans la série."
+    },
+    {
+      "id": "beachgangle",
+      "name": "Beach Gangle",
+      "fighterId": "gangle",
+      "baseFighterId": "gangle",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-japanese-pack.png",
+        "sheet": "japanese",
+        "cols": 5,
+        "rows": 2,
+        "col": 0,
+        "row": 0,
+        "sourceRect": {
+          "x": 40,
+          "y": 40,
+          "width": 320,
+          "height": 455
+        }
+      },
+      "observedTraits": [],
+      "assetTraits": [
+        "Masque blanc et rubans rouges.",
+        "Grand chapeau de paille à fleur rose, paréo bleu fleuri à étoile et noix de coco avec ombrelle."
+      ],
+      "sourceIds": [
+        "ep7"
+      ],
+      "reviewScope": "L’épisode indiqué par les archives est une cible de comparaison. Aucun plan de cette tenue n’a été vérifié dans cette revue ; son nom, sa disponibilité et sa fiche technique ne prouvent pas son apparence canonique."
+    },
+    {
+      "id": "japanesegangle",
+      "name": "Japanese Gangle",
+      "fighterId": "gangle",
+      "baseFighterId": "gangle",
+      "sprite": {
+        "src": "../assets/images/cainos-costumes-gangle-0.6.0.png",
+        "sheet": "gangle-0.6.0",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "sourceRect": {
+          "x": 1065,
+          "y": 180,
+          "width": 455,
+          "height": 780
+        },
+        "matteMode": "native-alpha"
+      },
+      "observedTraits": [
+        "Anime Gangle porte un col marin bleu, un nœud rouge et une jupe bleue.",
+        "Masque blanc avec grandes formes noires aux yeux, rubans rouges et sac sombre sur la figurine de groupe."
+      ],
+      "assetTraits": [
+        "Masque blanc aux grandes formes noires des yeux, joues roses et petite bouche souriante.",
+        "Col marin et jupe bleus, nœud rouge, membres de rubans rouges et sac sombre à nœud rouge ; aucune fleur ni étoile dorée dans les yeux."
+      ],
+      "sourceIds": [
+        "store-costume-group",
+        "ep5"
+      ],
+      "reviewScope": "Le nouveau dessin suit les motifs de la figurine Anime Gangle : yeux noirs, uniforme marin bleu et blanc, nœud rouge, rubans et sac sombre. Fleur, pétales et étoiles dorées ont été retirés. La comparaison porte sur le produit officiel ; aucun plan de l’épisode 5 ni proportion de modèle n’est certifié."
+    },
+    {
+      "id": "rhinogangle",
+      "name": "Rhino Gangle",
+      "fighterId": "gangle",
+      "baseFighterId": "gangle",
+      "sprite": {
+        "src": "../assets/images/cainos-costumes-creatures-0.6.0.png",
+        "sheet": "creatures-0.6.0",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "sourceRect": {
+          "x": 290,
+          "y": 495,
+          "width": 380,
+          "height": 518
+        },
+        "matteMode": "native-alpha"
+      },
+      "observedTraits": [],
+      "assetTraits": [
+        "Tête de rhinocéros gris clair, corne, chapeau de safari et gilet beige.",
+        "Corps et membres en rubans rouges, sans socle, pierre ni herbe attachés."
+      ],
+      "sourceIds": [
+        "ep5"
+      ],
+      "reviewScope": "L’épisode indiqué par les archives est une cible de comparaison. Aucun plan de cette tenue n’a été vérifié dans cette revue ; son nom, sa disponibilité et sa fiche technique ne prouvent pas son apparence canonique."
+    },
+    {
+      "id": "workgangle",
+      "name": "Work Gangle",
+      "fighterId": "gangle",
+      "baseFighterId": "gangle",
+      "sprite": {
+        "src": "../assets/images/cainos-costumes-uniforms-0.6.0.png",
+        "sheet": "uniforms-0.6.0",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "sourceRect": {
+          "x": 527,
+          "y": 145,
+          "width": 528,
+          "height": 855
+        },
+        "matteMode": "native-alpha"
+      },
+      "observedTraits": [
+        "Chemise gris bleu clair, cravate bleu pâle et badge de responsable.",
+        "Masque souriant aux dents nombreuses, yeux ronds noirs et blancs et étoile jaune sur la joue."
+      ],
+      "assetTraits": [
+        "Masque blanc au large sourire denté, yeux noirs à anneaux blancs, joue rose et petite étoile jaune.",
+        "Chemise gris bleu clair, cravate bleu pâle, badge beige, pantalon noir et bras constitués de rubans rouges."
+      ],
+      "sourceIds": [
+        "store-spudsy-gangle",
+        "ep4"
+      ],
+      "reviewScope": "Le nouvel état de responsable reprend la chemise claire, la cravate pâle, le badge et le masque denté avec étoile de la photo officielle Spudsy Gangle. Le produit présente plusieurs visages ; cette variante ne remplace pas la diversité des états de Gangle dans l’épisode 4. La pose debout est une adaptation du jeu."
+    },
+    {
+      "id": "japanesejax",
+      "name": "Japanese Jax",
+      "fighterId": "jax",
+      "baseFighterId": "jax",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-japanese-pack.png",
+        "sheet": "japanese",
+        "cols": 5,
+        "rows": 2,
+        "col": 4,
+        "row": 0
+      },
+      "observedTraits": [],
+      "assetTraits": [
+        "Longues oreilles et visage de lapin violet aux yeux jaunes.",
+        "Veste scolaire noire, cravate rouge rayée, sac brun et pantalon sombre."
+      ],
+      "sourceIds": [
+        "ep5"
+      ],
+      "reviewScope": "L’épisode indiqué par les archives est une cible de comparaison. Aucun plan de cette tenue n’a été vérifié dans cette revue ; son nom, sa disponibilité et sa fiche technique ne prouvent pas son apparence canonique."
+    },
+    {
+      "id": "japaneseragatha",
+      "name": "Japanese Ragatha",
+      "fighterId": "ragatha",
+      "baseFighterId": "ragatha",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-japanese-pack.png",
+        "sheet": "japanese",
+        "cols": 5,
+        "rows": 2,
+        "col": 0,
+        "row": 1
+      },
+      "observedTraits": [],
+      "assetTraits": [
+        "Cheveux de laine rouges, nœud bleu et œil en bouton.",
+        "Veste noire, nœud rouge, jupe à carreaux bleue et guêtres blanches."
+      ],
+      "sourceIds": [
+        "ep5"
+      ],
+      "reviewScope": "L’épisode indiqué par les archives est une cible de comparaison. Aucun plan de cette tenue n’a été vérifié dans cette revue ; son nom, sa disponibilité et sa fiche technique ne prouvent pas son apparence canonique."
+    },
+    {
+      "id": "japanesepomni",
+      "name": "Japanese Pomni",
+      "fighterId": "pomni",
+      "baseFighterId": "pomni",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-japanese-pack.png",
+        "sheet": "japanese",
+        "cols": 5,
+        "rows": 2,
+        "col": 1,
+        "row": 1,
+        "sourceRect": {
+          "x": 355,
+          "y": 560,
+          "width": 275,
+          "height": 410
+        }
+      },
+      "observedTraits": [],
+      "assetTraits": [
+        "Bonnet de bouffon rouge et bleu, iris des deux couleurs et cheveux bruns.",
+        "Col marin, nœud rouge, jupe bleue à carreaux, collants rouges et sac à dos."
+      ],
+      "sourceIds": [
+        "ep5"
+      ],
+      "reviewScope": "L’épisode indiqué par les archives est une cible de comparaison. Aucun plan de cette tenue n’a été vérifié dans cette revue ; son nom, sa disponibilité et sa fiche technique ne prouvent pas son apparence canonique."
+    },
+    {
+      "id": "japanesekinger",
+      "name": "Japanese Kinger",
+      "fighterId": "kinger",
+      "baseFighterId": "kinger",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-japanese-pack.png",
+        "sheet": "japanese",
+        "cols": 5,
+        "rows": 2,
+        "col": 2,
+        "row": 1,
+        "sourceRect": {
+          "x": 660,
+          "y": 495,
+          "width": 240,
+          "height": 475
+        }
+      },
+      "observedTraits": [],
+      "assetTraits": [
+        "Tête de roi en bois avec croix et grands yeux débordants.",
+        "Veste noire, cravate verte, sac à dos et gants blancs."
+      ],
+      "sourceIds": [
+        "ep5"
+      ],
+      "reviewScope": "L’épisode indiqué par les archives est une cible de comparaison. Aucun plan de cette tenue n’a été vérifié dans cette revue ; son nom, sa disponibilité et sa fiche technique ne prouvent pas son apparence canonique."
+    },
+    {
+      "id": "japanesezooble",
+      "name": "Japanese Zooble",
+      "fighterId": "zooble",
+      "baseFighterId": "zooble",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-japanese-pack.png",
+        "sheet": "japanese",
+        "cols": 5,
+        "rows": 2,
+        "col": 3,
+        "row": 1
+      },
+      "observedTraits": [],
+      "assetTraits": [
+        "Tête triangulaire rose, yeux dépareillés et antennes de formes différentes.",
+        "Chemisier blanc, nœud vert, jupe bleue et sac noir ; membres modulaires multicolores."
+      ],
+      "sourceIds": [
+        "ep5"
+      ],
+      "reviewScope": "L’épisode indiqué par les archives est une cible de comparaison. Aucun plan de cette tenue n’a été vérifié dans cette revue ; son nom, sa disponibilité et sa fiche technique ne prouvent pas son apparence canonique."
+    },
+    {
+      "id": "japanesegummigoo",
+      "name": "Japanese Gummigoo",
+      "fighterId": "gummigoo",
+      "baseFighterId": "gummigoo",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-japanese-pack.png",
+        "sheet": "japanese",
+        "cols": 5,
+        "rows": 2,
+        "col": 4,
+        "row": 1,
+        "sourceRect": {
+          "x": 1200,
+          "y": 525,
+          "width": 325,
+          "height": 445
+        }
+      },
+      "observedTraits": [
+        "Gummigoo apparaît vert et jaune translucide dans le plan officiel sous la carte.",
+        "Museau de crocodile et chapeau brun sont visibles dans ce plan."
+      ],
+      "assetTraits": [
+        "Crocodile jaune orangé, museau denté, crêtes de dos et long appendice caudal.",
+        "Chapeau brun décoré de bonbons, veste noire, cravate et pantalon à carreaux bleus."
+      ],
+      "sourceIds": [
+        "glitch-undermap"
+      ],
+      "reviewScope": "Comparaison limitée à l’identité et à la couleur de base : le costume scolaire de l’atlas est jaune orangé et opaque. Aucune tenue scolaire de Gummigoo n’est documentée par cette image ; son vêtement reste une réinterprétation du projet."
+    },
+    {
+      "id": "baseballjax",
+      "name": "Baseball Jax",
+      "fighterId": "jax",
+      "baseFighterId": "jax",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-baseball-pack.png",
+        "sheet": "baseball",
+        "cols": 6,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "sourceRect": {
+          "x": 90,
+          "y": 25,
+          "width": 300,
+          "height": 645
+        }
+      },
+      "observedTraits": [],
+      "assetTraits": [
+        "Lapin violet aux yeux jaunes avec une balle dans la main.",
+        "Casquette bleue, haut bleu et salopette rose rayée."
+      ],
+      "sourceIds": [
+        "ep5"
+      ],
+      "reviewScope": "L’épisode indiqué par les archives est une cible de comparaison. Aucun plan de cette tenue n’a été vérifié dans cette revue ; son nom, sa disponibilité et sa fiche technique ne prouvent pas son apparence canonique."
+    },
+    {
+      "id": "baseballzooble",
+      "name": "Baseball Zooble",
+      "fighterId": "zooble",
+      "baseFighterId": "zooble",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-baseball-pack.png",
+        "sheet": "baseball",
+        "cols": 6,
+        "rows": 1,
+        "col": 1,
+        "row": 0,
+        "sourceRect": {
+          "x": 420,
+          "y": 80,
+          "width": 350,
+          "height": 590
+        }
+      },
+      "observedTraits": [],
+      "assetTraits": [
+        "Tête triangulaire rose, antennes et membres asymétriques.",
+        "Casquette bleue, maillot blanc rayé et gros gant contenant une balle."
+      ],
+      "sourceIds": [
+        "ep5"
+      ],
+      "reviewScope": "L’épisode indiqué par les archives est une cible de comparaison. Aucun plan de cette tenue n’a été vérifié dans cette revue ; son nom, sa disponibilité et sa fiche technique ne prouvent pas son apparence canonique."
+    },
+    {
+      "id": "baseballgangle",
+      "name": "Baseball Gangle",
+      "fighterId": "gangle",
+      "baseFighterId": "gangle",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-baseball-pack.png",
+        "sheet": "baseball",
+        "cols": 6,
+        "rows": 1,
+        "col": 2,
+        "row": 0,
+        "sourceRect": {
+          "x": 790,
+          "y": 130,
+          "width": 280,
+          "height": 535
+        }
+      },
+      "observedTraits": [],
+      "assetTraits": [
+        "Masque blanc triste, larme bleue et rubans rouges.",
+        "Casquette bleue, maillot blanc rayé et gant de baseball brun."
+      ],
+      "sourceIds": [
+        "ep5"
+      ],
+      "reviewScope": "L’épisode indiqué par les archives est une cible de comparaison. Aucun plan de cette tenue n’a été vérifié dans cette revue ; son nom, sa disponibilité et sa fiche technique ne prouvent pas son apparence canonique."
+    },
+    {
+      "id": "baseballragatha",
+      "name": "Baseball Ragatha",
+      "fighterId": "ragatha",
+      "baseFighterId": "ragatha",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-baseball-pack.png",
+        "sheet": "baseball",
+        "cols": 6,
+        "rows": 1,
+        "col": 3,
+        "row": 0
+      },
+      "observedTraits": [],
+      "assetTraits": [
+        "Cheveux rouges en laine, bouton bleu à l’œil et casquette bleue.",
+        "Robe bleue à rayures et pièces de tissu ; batte tenue près de l’épaule."
+      ],
+      "sourceIds": [
+        "ep5"
+      ],
+      "reviewScope": "L’épisode indiqué par les archives est une cible de comparaison. Aucun plan de cette tenue n’a été vérifié dans cette revue ; son nom, sa disponibilité et sa fiche technique ne prouvent pas son apparence canonique."
+    },
+    {
+      "id": "baseballpomni",
+      "name": "Baseball Pomni",
+      "fighterId": "pomni",
+      "baseFighterId": "pomni",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-baseball-pack.png",
+        "sheet": "baseball",
+        "cols": 6,
+        "rows": 1,
+        "col": 4,
+        "row": 0
+      },
+      "observedTraits": [],
+      "assetTraits": [
+        "Bonnet de bouffon rouge et bleu avec casquette bleue superposée.",
+        "Iris rouges et bleus, gants de couleurs différentes et combinaison de bouffon."
+      ],
+      "sourceIds": [
+        "ep5"
+      ],
+      "reviewScope": "L’épisode indiqué par les archives est une cible de comparaison. Aucun plan de cette tenue n’a été vérifié dans cette revue ; son nom, sa disponibilité et sa fiche technique ne prouvent pas son apparence canonique."
+    },
+    {
+      "id": "baseballkinger",
+      "name": "Baseball Kinger",
+      "fighterId": "kinger",
+      "baseFighterId": "kinger",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-baseball-pack.png",
+        "sheet": "baseball",
+        "cols": 6,
+        "rows": 1,
+        "col": 5,
+        "row": 0
+      },
+      "observedTraits": [],
+      "assetTraits": [
+        "Tête de roi en bois, croix, gros yeux et casquette bleue.",
+        "Manteau violet bordé de fourrure tachetée, gant de baseball et gouttes bleues."
+      ],
+      "sourceIds": [
+        "ep5"
+      ],
+      "reviewScope": "L’épisode indiqué par les archives est une cible de comparaison. Aucun plan de cette tenue n’a été vérifié dans cette revue ; son nom, sa disponibilité et sa fiche technique ne prouvent pas son apparence canonique."
+    },
+    {
+      "id": "shadowpomni",
+      "name": "Shadow Pomni",
+      "fighterId": "pomni",
+      "baseFighterId": "pomni",
+      "sprite": {
+        "src": "../assets/images/cainos-costumes-shadow-0.6.0.png",
+        "sheet": "shadow-0.6.0",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "sourceRect": {
+          "x": 75,
+          "y": 125,
+          "width": 308,
+          "height": 417
+        },
+        "matteMode": "native-alpha"
+      },
+      "observedTraits": [],
+      "assetTraits": [
+        "Bonnet de bouffon sombre, iris en spirale lumineux et sourire denté.",
+        "Corps noir, griffes et contour vert."
+      ],
+      "sourceIds": [],
+      "reviewScope": "Revue du sprite du projet uniquement. Aucune image primaire de cette tenue n’a été comparée ; les noms et les rattachements de jeu ne prouvent pas une apparition dans la série."
+    },
+    {
+      "id": "shadowjax",
+      "name": "Shadow Jax",
+      "fighterId": "jax",
+      "baseFighterId": "jax",
+      "sprite": {
+        "src": "../assets/images/cainos-costumes-shadow-0.6.0.png",
+        "sheet": "shadow-0.6.0",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "sourceRect": {
+          "x": 444,
+          "y": 0,
+          "width": 270,
+          "height": 540
+        },
+        "matteMode": "native-alpha"
+      },
+      "observedTraits": [],
+      "assetTraits": [
+        "Lapin noir aux très longues oreilles, yeux et sourire jaunes.",
+        "Contour vert, doigts étirés et traces rouges de vêtement."
+      ],
+      "sourceIds": [],
+      "reviewScope": "Revue du sprite du projet uniquement. Aucune image primaire de cette tenue n’a été comparée ; les noms et les rattachements de jeu ne prouvent pas une apparition dans la série."
+    },
+    {
+      "id": "shadowragatha",
+      "name": "Shadow Ragatha",
+      "fighterId": "ragatha",
+      "baseFighterId": "ragatha",
+      "sprite": {
+        "src": "../assets/images/cainos-costumes-shadow-0.6.0.png",
+        "sheet": "shadow-0.6.0",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "sourceRect": {
+          "x": 803,
+          "y": 70,
+          "width": 315,
+          "height": 470
+        },
+        "matteMode": "native-alpha"
+      },
+      "observedTraits": [],
+      "assetTraits": [
+        "Coiffure de mèches rigides, bouton rouge à un œil et robe à pièces.",
+        "Silhouette noire avec contour vert et mains étirées."
+      ],
+      "sourceIds": [],
+      "reviewScope": "Revue du sprite du projet uniquement. Aucune image primaire de cette tenue n’a été comparée ; les noms et les rattachements de jeu ne prouvent pas une apparition dans la série."
+    },
+    {
+      "id": "shadowkinger",
+      "name": "Shadow Kinger",
+      "fighterId": "kinger",
+      "baseFighterId": "kinger",
+      "sprite": {
+        "src": "../assets/images/cainos-costumes-shadow-0.6.0.png",
+        "sheet": "shadow-0.6.0",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "sourceRect": {
+          "x": 1190,
+          "y": 22,
+          "width": 275,
+          "height": 523
+        },
+        "matteMode": "native-alpha"
+      },
+      "observedTraits": [],
+      "assetTraits": [
+        "Croix de roi, grands yeux bleus et longue tête sombre.",
+        "Manteau noir ondulant, deux mains étirées et contour vert."
+      ],
+      "sourceIds": [],
+      "reviewScope": "Revue du sprite du projet uniquement. Aucune image primaire de cette tenue n’a été comparée ; les noms et les rattachements de jeu ne prouvent pas une apparition dans la série."
+    },
+    {
+      "id": "shadowgangle",
+      "name": "Shadow Gangle",
+      "fighterId": "gangle",
+      "baseFighterId": "gangle",
+      "sprite": {
+        "src": "../assets/images/cainos-costumes-shadow-0.6.0.png",
+        "sheet": "shadow-0.6.0",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "sourceRect": {
+          "x": 65,
+          "y": 565,
+          "width": 302,
+          "height": 459
+        },
+        "matteMode": "native-alpha"
+      },
+      "observedTraits": [],
+      "assetTraits": [
+        "Masque noir triste aux yeux et à la bouche jaunes.",
+        "Corps en spirales de ruban noir et rouge, mains en crochet et contour vert."
+      ],
+      "sourceIds": [],
+      "reviewScope": "Revue du sprite du projet uniquement. Aucune image primaire de cette tenue n’a été comparée ; les noms et les rattachements de jeu ne prouvent pas une apparition dans la série."
+    },
+    {
+      "id": "shadowzooble",
+      "name": "Shadow Zooble",
+      "fighterId": "zooble",
+      "baseFighterId": "zooble",
+      "sprite": {
+        "src": "../assets/images/cainos-costumes-shadow-0.6.0.png",
+        "sheet": "shadow-0.6.0",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "sourceRect": {
+          "x": 433,
+          "y": 536,
+          "width": 300,
+          "height": 488
+        },
+        "matteMode": "native-alpha"
+      },
+      "observedTraits": [],
+      "assetTraits": [
+        "Tête triangulaire noire, yeux dépareillés et antennes asymétriques.",
+        "Membres géométriques noirs à contour vert, mains en pinces et segments de tailles différentes."
+      ],
+      "sourceIds": [],
+      "reviewScope": "Revue du sprite du projet uniquement. Aucune image primaire de cette tenue n’a été comparée ; les noms et les rattachements de jeu ne prouvent pas une apparition dans la série."
+    },
+    {
+      "id": "shadowcaine",
+      "name": "Shadow Caine",
+      "fighterId": "caine",
+      "baseFighterId": "caine",
+      "sprite": {
+        "src": "../assets/images/cainos-costumes-shadow-0.6.0.png",
+        "sheet": "shadow-0.6.0",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "sourceRect": {
+          "x": 810,
+          "y": 535,
+          "width": 335,
+          "height": 489
+        },
+        "matteMode": "native-alpha"
+      },
+      "observedTraits": [],
+      "assetTraits": [
+        "Chapeau haut-de-forme, mâchoires dentées et yeux flottants lumineux.",
+        "Vêtement noir, nœud rouge, mains en griffes et bas du corps en volutes."
+      ],
+      "sourceIds": [],
+      "reviewScope": "Revue du sprite du projet uniquement. Aucune image primaire de cette tenue n’a été comparée ; les noms et les rattachements de jeu ne prouvent pas une apparition dans la série."
+    },
+    {
+      "id": "horrorpomnivoid",
+      "name": "Horror Pomni Void-Eyes",
+      "fighterId": "pomni",
+      "baseFighterId": "pomni",
+      "sprite": {
+        "src": "../assets/images/cainos-costumes-horror-0.6.0.png",
+        "sheet": "horror-0.6.0",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "sourceRect": {
+          "x": 300,
+          "y": 5,
+          "width": 370,
+          "height": 477
+        },
+        "matteMode": "native-alpha"
+      },
+      "observedTraits": [],
+      "assetTraits": [
+        "Bonnet et combinaison de bouffon rouges et bleus.",
+        "Orbites noires, coulures sombres et deux globes oculaires portés dans les mains."
+      ],
+      "sourceIds": [],
+      "reviewScope": "Revue du sprite du projet uniquement. Aucune image primaire de cette tenue n’a été comparée ; les noms et les rattachements de jeu ne prouvent pas une apparition dans la série."
+    },
+    {
+      "id": "horrorpomnispiral",
+      "name": "Horror Pomni Spiral-Eyes",
+      "fighterId": "pomni",
+      "baseFighterId": "pomni",
+      "sprite": {
+        "src": "../assets/images/cainos-costumes-horror-0.6.0.png",
+        "sheet": "horror-0.6.0",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "sourceRect": {
+          "x": 880,
+          "y": 0,
+          "width": 380,
+          "height": 480
+        },
+        "matteMode": "native-alpha",
+        "component": "largest"
+      },
+      "observedTraits": [],
+      "assetTraits": [
+        "Bonnet et combinaison de bouffon rouges et bleus.",
+        "Yeux orange en spirale, sourire denté, mains tendues et contour lumineux vert."
+      ],
+      "sourceIds": [],
+      "reviewScope": "Revue du sprite du projet uniquement. Aucune image primaire de cette tenue n’a été comparée ; les noms et les rattachements de jeu ne prouvent pas une apparition dans la série."
+    },
+    {
+      "id": "horrorpomniskull",
+      "name": "Horror Pomni Skull-Mask",
+      "fighterId": "pomni",
+      "baseFighterId": "pomni",
+      "sprite": {
+        "src": "../assets/images/cainos-costumes-horror-0.6.0.png",
+        "sheet": "horror-0.6.0",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "sourceRect": {
+          "x": 300,
+          "y": 505,
+          "width": 380,
+          "height": 500
+        },
+        "matteMode": "native-alpha"
+      },
+      "observedTraits": [],
+      "assetTraits": [
+        "Bonnet et combinaison de bouffon rouges et bleus.",
+        "Visage de crâne jaune, orbites sombres, bouche dentée et mains serrées devant le torse."
+      ],
+      "sourceIds": [],
+      "reviewScope": "Revue du sprite du projet uniquement. Aucune image primaire de cette tenue n’a été comparée ; les noms et les rattachements de jeu ne prouvent pas une apparition dans la série."
+    },
+    {
+      "id": "hunterjax",
+      "name": "Hunter Jax",
+      "fighterId": "jax",
+      "baseFighterId": "jax",
+      "sprite": {
+        "src": "../assets/images/cainos-costumes-horror-0.6.0.png",
+        "sheet": "horror-0.6.0",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "sourceRect": {
+          "x": 900,
+          "y": 455,
+          "width": 405,
+          "height": 563
+        },
+        "matteMode": "native-alpha",
+        "component": "largest"
+      },
+      "observedTraits": [],
+      "assetTraits": [
+        "Lapin violet aux yeux jaunes, chapeau de safari et fusil vertical.",
+        "Chemise et short beiges, gilet vert, ceintures et bottes brunes ; une jambe repliée."
+      ],
+      "sourceIds": [
+        "ep5"
+      ],
+      "reviewScope": "L’épisode indiqué par les archives est une cible de comparaison. Aucun plan de cette tenue n’a été vérifié dans cette revue ; son nom, sa disponibilité et sa fiche technique ne prouvent pas son apparence canonique."
+    },
+    {
+      "id": "gloinkqueenscale",
+      "name": "Gloink Queen True Scale",
+      "fighterId": "gloinkqueen",
+      "baseFighterId": "gloinkqueen",
+      "sprite": {
+        "src": "../assets/images/cainos-costumes-creatures-0.6.0.png",
+        "sheet": "creatures-0.6.0",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "sourceRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1536,
+          "height": 565
+        },
+        "matteMode": "native-alpha",
+        "component": "largest",
+        "nativeFacing": -1
+      },
+      "observedTraits": [],
+      "assetTraits": [
+        "Long corps rose à taches jaunes, nombreux yeux et grande bouche dentée à bord bleu.",
+        "La reine est isolée ; aucun petit Gloink ni quadrillage n’accompagne le dessin."
+      ],
+      "sourceIds": [
+        "ep1"
+      ],
+      "reviewScope": "L’épisode indiqué par les archives est une cible de comparaison. Aucun plan de cette tenue n’a été vérifié dans cette revue ; son nom, sa disponibilité et sa fiche technique ne prouvent pas son apparence canonique."
+    },
+    {
+      "id": "peeledjax",
+      "name": "Jax - Skin Peeled Off",
+      "fighterId": "jax",
+      "baseFighterId": "jax",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-canon-npc-pack-m.png",
+        "sheet": "canonM",
+        "cols": 6,
+        "rows": 1,
+        "col": 3,
+        "row": 0
+      },
+      "observedTraits": [],
+      "assetTraits": [
+        "Lapin jaune très mince aux grands yeux blancs et longues oreilles.",
+        "Lambeaux de salopette rose et posture repliée."
+      ],
+      "sourceIds": [
+        "ep8"
+      ],
+      "reviewScope": "L’épisode indiqué par les archives est une cible de comparaison. Aucun plan de cette tenue n’a été vérifié dans cette revue ; son nom, sa disponibilité et sa fiche technique ne prouvent pas son apparence canonique."
+    },
+    {
+      "id": "spudsypomni",
+      "name": "Spudsy Pomni",
+      "fighterId": "pomni",
+      "baseFighterId": "pomni",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-canon-npc-pack-n.png",
+        "sheet": "canonN",
+        "cols": 6,
+        "rows": 1,
+        "col": 1,
+        "row": 0
+      },
+      "observedTraits": [],
+      "assetTraits": [
+        "Bonnet rouge et bleu, visage blanc et cheveux bruns.",
+        "Chemise bleu pétrole à badge jaune, pantalon noir et bras tombants."
+      ],
+      "sourceIds": [
+        "ep4"
+      ],
+      "reviewScope": "L’épisode indiqué par les archives est une cible de comparaison. Aucun plan de cette tenue n’a été vérifié dans cette revue ; son nom, sa disponibilité et sa fiche technique ne prouvent pas son apparence canonique."
+    },
+    {
+      "id": "spudsyjax",
+      "name": "Spudsy Jax",
+      "fighterId": "jax",
+      "baseFighterId": "jax",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-canon-npc-pack-n.png",
+        "sheet": "canonN",
+        "cols": 6,
+        "rows": 1,
+        "col": 2,
+        "row": 0
+      },
+      "observedTraits": [],
+      "assetTraits": [
+        "Lapin violet aux longues oreilles et yeux jaunes.",
+        "Chemise bleu pétrole à badge jaune, pantalon noir et mains près des poches."
+      ],
+      "sourceIds": [
+        "ep4"
+      ],
+      "reviewScope": "L’épisode indiqué par les archives est une cible de comparaison. Aucun plan de cette tenue n’a été vérifié dans cette revue ; son nom, sa disponibilité et sa fiche technique ne prouvent pas son apparence canonique."
+    },
+    {
+      "id": "spudsyragatha",
+      "name": "Spudsy Ragatha",
+      "fighterId": "ragatha",
+      "baseFighterId": "ragatha",
+      "sprite": {
+        "src": "../assets/images/cainos-costumes-uniforms-0.6.0.png",
+        "sheet": "uniforms-0.6.0",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "sourceRect": {
+          "x": 1050,
+          "y": 115,
+          "width": 465,
+          "height": 885
+        },
+        "matteMode": "native-alpha"
+      },
+      "observedTraits": [
+        "Figurine de Ragatha avec visière, uniforme gris foncé et badge clair.",
+        "Cheveux rouges, œil en bouton bleu et paupières violettes."
+      ],
+      "assetTraits": [
+        "Cheveux rouges en laine, œil en bouton bleu, paupière violette et visière sombre.",
+        "Uniforme et tablier gris foncé, badge clair, pantalon sombre et chaussures noires."
+      ],
+      "sourceIds": [
+        "store-spudsy-ragatha",
+        "ep4"
+      ],
+      "reviewScope": "Visière, uniforme gris foncé et badge clair corrigés d’après Spudsy Ragatha Animiniz. L’œil en bouton bleu et la paupière violette sont repris. La pose, la silhouette élancée et le visage restent une interprétation en pixel art ; la scène exacte de l’épisode 4 n’est pas validée par la figurine."
+    },
+    {
+      "id": "spudsyzooble",
+      "name": "Spudsy Zooble",
+      "fighterId": "zooble",
+      "baseFighterId": "zooble",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-canon-npc-pack-n.png",
+        "sheet": "canonN",
+        "cols": 6,
+        "rows": 1,
+        "col": 4,
+        "row": 0,
+        "sourceRect": {
+          "x": 1430,
+          "y": 80,
+          "width": 315,
+          "height": 575
+        }
+      },
+      "observedTraits": [],
+      "assetTraits": [
+        "Tête triangulaire rose, antennes et aile rose latérale.",
+        "Chemise bleu pétrole, badge jaune, short noir et jambes modulaires asymétriques."
+      ],
+      "sourceIds": [
+        "ep4"
+      ],
+      "reviewScope": "L’épisode indiqué par les archives est une cible de comparaison. Aucun plan de cette tenue n’a été vérifié dans cette revue ; son nom, sa disponibilité et sa fiche technique ne prouvent pas son apparence canonique."
+    },
+    {
+      "id": "possessedpomni",
+      "name": "Pomni possessed",
+      "fighterId": "pomni",
+      "baseFighterId": "pomni",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-canon-npc-pack-p.png",
+        "sheet": "canonP",
+        "cols": 4,
+        "rows": 1,
+        "col": 1,
+        "row": 0,
+        "sourceRect": {
+          "x": 405,
+          "y": 190,
+          "width": 325,
+          "height": 530
+        }
+      },
+      "observedTraits": [],
+      "assetTraits": [
+        "Bonnet rouge et bleu et combinaison à boutons jaunes.",
+        "Orbites noires avec motifs rouges et bleus, coulures rouges et petite bouche rouge."
+      ],
+      "sourceIds": [
+        "ep3"
+      ],
+      "reviewScope": "L’épisode indiqué par les archives est une cible de comparaison. Aucun plan de cette tenue n’a été vérifié dans cette revue ; son nom, sa disponibilité et sa fiche technique ne prouvent pas son apparence canonique."
+    },
+    {
+      "id": "monstrouscaine",
+      "name": "Caine multi-arm",
+      "fighterId": "caine",
+      "baseFighterId": "caine",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-canon-npc-pack-p.png",
+        "sheet": "canonP",
+        "cols": 4,
+        "rows": 1,
+        "col": 2,
+        "row": 0,
+        "sourceRect": {
+          "x": 805,
+          "y": 125,
+          "width": 510,
+          "height": 600
+        }
+      },
+      "observedTraits": [],
+      "assetTraits": [
+        "Mâchoires dentées, deux yeux, haut-de-forme noir et queue-de-pie rouge.",
+        "Six bras gantés blancs déployés de part et d’autre du corps."
+      ],
+      "sourceIds": [
+        "ep8"
+      ],
+      "reviewScope": "L’épisode indiqué par les archives est une cible de comparaison. Aucun plan de cette tenue n’a été vérifié dans cette revue ; son nom, sa disponibilité et sa fiche technique ne prouvent pas son apparence canonique."
+    },
+    {
+      "id": "flamingozooble",
+      "name": "Flamingo Zooble",
+      "fighterId": "zooble",
+      "baseFighterId": "zooble",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-canon-npc-pack-p.png",
+        "sheet": "canonP",
+        "cols": 4,
+        "rows": 1,
+        "col": 3,
+        "row": 0
+      },
+      "observedTraits": [],
+      "assetTraits": [
+        "Tête triangulaire rose, antennes et corps modulaire jaune à taches roses.",
+        "Cou rose recourbé et longues jambes terminées par des pieds d’oiseau roses."
+      ],
+      "sourceIds": [
+        "ep5"
+      ],
+      "reviewScope": "L’épisode indiqué par les archives est une cible de comparaison. Aucun plan de cette tenue n’a été vérifié dans cette revue ; son nom, sa disponibilité et sa fiche technique ne prouvent pas son apparence canonique."
+    },
+    {
+      "id": "mouthlesspomni",
+      "name": "Pomni sans bouche",
+      "fighterId": "pomni",
+      "baseFighterId": "pomni",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-canon-npc-pack-q.png",
+        "sheet": "canonQ",
+        "cols": 4,
+        "rows": 1,
+        "col": 0,
+        "row": 0
+      },
+      "observedTraits": [],
+      "assetTraits": [
+        "Bonnet rouge et bleu, grands iris et combinaison de bouffon.",
+        "Zone blanche continue à la place de la bouche."
+      ],
+      "sourceIds": [
+        "ep8"
+      ],
+      "reviewScope": "L’épisode indiqué par les archives est une cible de comparaison. Aucun plan de cette tenue n’a été vérifié dans cette revue ; son nom, sa disponibilité et sa fiche technique ne prouvent pas son apparence canonique."
+    },
+    {
+      "id": "mouthlessjax",
+      "name": "Jax sans bouche",
+      "fighterId": "jax",
+      "baseFighterId": "jax",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-canon-npc-pack-q.png",
+        "sheet": "canonQ",
+        "cols": 4,
+        "rows": 1,
+        "col": 1,
+        "row": 0
+      },
+      "observedTraits": [],
+      "assetTraits": [
+        "Lapin violet aux yeux jaunes et longues oreilles.",
+        "Salopette rose et visage sans bouche dessinée."
+      ],
+      "sourceIds": [
+        "ep8"
+      ],
+      "reviewScope": "L’épisode indiqué par les archives est une cible de comparaison. Aucun plan de cette tenue n’a été vérifié dans cette revue ; son nom, sa disponibilité et sa fiche technique ne prouvent pas son apparence canonique."
+    },
+    {
+      "id": "mouthlesszooble",
+      "name": "Zooble sans bouche",
+      "fighterId": "zooble",
+      "baseFighterId": "zooble",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-canon-npc-pack-q.png",
+        "sheet": "canonQ",
+        "cols": 4,
+        "rows": 1,
+        "col": 2,
+        "row": 0
+      },
+      "observedTraits": [],
+      "assetTraits": [
+        "Tête triangulaire rose aux deux yeux dépareillés.",
+        "Aucune bouche dessinée ; corps et membres géométriques multicolores."
+      ],
+      "sourceIds": [
+        "ep8"
+      ],
+      "reviewScope": "L’épisode indiqué par les archives est une cible de comparaison. Aucun plan de cette tenue n’a été vérifié dans cette revue ; son nom, sa disponibilité et sa fiche technique ne prouvent pas son apparence canonique."
+    },
+    {
+      "id": "inertbubble",
+      "name": "Bubble inerte",
+      "fighterId": "bubble",
+      "baseFighterId": "bubble",
+      "sprite": {
+        "src": "../assets/images/cainos-costumes-creatures-0.6.0.png",
+        "sheet": "creatures-0.6.0",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "sourceRect": {
+          "x": 918,
+          "y": 665,
+          "width": 325,
+          "height": 297
+        },
+        "matteMode": "native-alpha"
+      },
+      "observedTraits": [],
+      "assetTraits": [
+        "Bulle ronde à contour lavande, deux traits noirs pour les yeux et reflets blancs.",
+        "Centre réellement translucide en alpha natif, sans ombre au sol attachée."
+      ],
+      "sourceIds": [
+        "ep9"
+      ],
+      "reviewScope": "L’épisode indiqué par les archives est une cible de comparaison. Aucun plan de cette tenue n’a été vérifié dans cette revue ; son nom, sa disponibilité et sa fiche technique ne prouvent pas son apparence canonique."
+    },
+    {
+      "id": "groundedcaine",
+      "name": "Caine prive de pouvoir",
+      "fighterId": "caine",
+      "baseFighterId": "caine",
+      "sprite": {
+        "src": "../assets/images/cainos-pixel-cast-sheet-canon-npc-pack-r.png",
+        "sheet": "canonR",
+        "cols": 4,
+        "rows": 1,
+        "col": 0,
+        "row": 0
+      },
+      "observedTraits": [],
+      "assetTraits": [
+        "Mâchoires et yeux baissés, haut-de-forme et queue-de-pie rouge.",
+        "Bras tombants, genoux fléchis et canne dirigée vers le sol."
+      ],
+      "sourceIds": [
+        "ep9"
+      ],
+      "reviewScope": "L’épisode indiqué par les archives est une cible de comparaison. Aucun plan de cette tenue n’a été vérifié dans cette revue ; son nom, sa disponibilité et sa fiche technique ne prouvent pas son apparence canonique."
+    }
+  ],
+  "circus": [
+    {
+      "id": "beachpomni",
+      "name": "Pomni — Plage",
+      "fighterId": "pomni",
+      "baseFighterId": "pomni",
+      "sprite": {
+        "src": "../assets/encore/stance/beachpomni.png",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "matteMode": "native-alpha",
+        "nativeFacing": 1
+      },
+      "observedTraits": [
+        "Bonnet de bouffon rouge et bleu, bordure et grelots jaunes, visage blanc et iris en moulinet.",
+        "Haut rayé bleu et blanc, short bleu à cordon, chaussures bleues et brassards jaunes de la peluche."
+      ],
+      "assetTraits": [],
+      "sourceIds": [
+        "store-beach-pomni"
+      ],
+      "reviewScope": "Version avec brassards de la peluche officielle. Le pistolet à eau de la figurine Aqua Blaster n’est pas ajouté à cette tenue. La comparaison scène par scène et l’animation image par image restent à réaliser."
+    },
+    {
+      "id": "noirragatha",
+      "name": "Ragatha — Film noir",
+      "fighterId": "ragatha",
+      "baseFighterId": "ragatha",
+      "sprite": {
+        "src": "../assets/encore/stance/noirragatha.png",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "matteMode": "native-alpha",
+        "nativeFacing": 1
+      },
+      "observedTraits": [
+        "Palette entièrement en niveaux de gris, cheveux en laine courts et grand nœud clair.",
+        "Œil bouton cousu, collier de perles, robe noire sans manches à col en V et chaussures noires."
+      ],
+      "assetTraits": [],
+      "sourceIds": [
+        "store-noir-ragatha"
+      ],
+      "reviewScope": "Costume comparé à la peluche officielle Noir Ragatha, sans attribution d’un plan ou d’un horodatage de la série. La comparaison scène par scène et l’animation image par image restent à réaliser."
+    },
+    {
+      "id": "presidentpomni",
+      "name": "Pomni — Présidente",
+      "fighterId": "pomni",
+      "baseFighterId": "pomni",
+      "sprite": {
+        "src": "../assets/encore/stance/presidentpomni.png",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "matteMode": "native-alpha",
+        "nativeFacing": 1
+      },
+      "observedTraits": [
+        "Tailleur pantalon bleu, chemise blanche, cravate gris clair, gants blancs et chaussures noires.",
+        "Bonnet rouge et bleu à bordure jaune et iris en moulinet conservés."
+      ],
+      "assetTraits": [],
+      "sourceIds": [
+        "store-president-pomni"
+      ],
+      "reviewScope": "Vêtements comparés à la figurine officielle. Le support doré placé entre ses pieds est exclu du personnage. La comparaison scène par scène et l’animation image par image restent à réaliser."
+    },
+    {
+      "id": "noirzooble",
+      "name": "Zooble — Film noir",
+      "fighterId": "zooble",
+      "baseFighterId": "zooble",
+      "sprite": {
+        "src": "../assets/encore/stance/noirzooble.png",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "matteMode": "native-alpha",
+        "nativeFacing": 1
+      },
+      "observedTraits": [
+        "Assemblage asymétrique gris, tête triangulaire sans bouche, pupille en spirale et trois cils sous le petit œil.",
+        "Antennes en éclair et spirale rayée, triangle creux au torse, petite aile, tablier clair, une jambe rayée et une botte sombre.",
+        "Shaker bleu violet, seul accessoire coloré."
+      ],
+      "assetTraits": [],
+      "sourceIds": [
+        "store-noir-zooble"
+      ],
+      "reviewScope": "Assemblage comparé à la figurine officielle. Les membres restent distincts ; les poses sont des adaptations de combat. La comparaison scène par scène et l’animation image par image restent à réaliser."
+    },
+    {
+      "id": "beachragatha",
+      "name": "Ragatha — Nageuse",
+      "fighterId": "ragatha",
+      "baseFighterId": "ragatha",
+      "sprite": {
+        "src": "../assets/encore/stance/beachragatha.png",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "matteMode": "native-alpha",
+        "nativeFacing": 1
+      },
+      "observedTraits": [
+        "Cheveux de laine rouges, œil bouton bleu, bandeau pervenche avec fleur rose et haut de bain pervenche.",
+        "Bouée cheval rose avec museau blanc et crinière violette, sans corne. Jambes de chiffon beiges et pieds nus arrondis."
+      ],
+      "assetTraits": [],
+      "sourceIds": [
+        "store-swimmer-ragatha"
+      ],
+      "reviewScope": "Tenue et bouée comparées à la figurine officielle Swimmer Ragatha. Les proportions sont celles du dessin de jeu. La comparaison scène par scène et l’animation image par image restent à réaliser."
+    },
+    {
+      "id": "beachzooble",
+      "name": "Zooble — Plongée",
+      "fighterId": "zooble",
+      "baseFighterId": "zooble",
+      "sprite": {
+        "src": "../assets/encore/stance/beachzooble.png",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "matteMode": "native-alpha",
+        "nativeFacing": 1
+      },
+      "observedTraits": [
+        "Tête triangulaire rose sans bouche, œil jaune à spirale, coquillage, petit parasol et tuba bleu.",
+        "Torse jaune à étoile rose, bras orange terminé par une pince menthe, autre bras segmenté jaune et violet.",
+        "Jambe en zigzag à pied conique rayé, autre jambe rouge avec une palme bleue et sac de plage beige."
+      ],
+      "assetTraits": [],
+      "sourceIds": [
+        "store-snorkeler-zooble"
+      ],
+      "reviewScope": "Assemblage comparé à la figurine officielle Snorkeler Zooble. Chaque membre distinct et la pince unique sont conservés. La comparaison scène par scène et l’animation image par image restent à réaliser."
+    },
+    {
+      "id": "beachjax",
+      "name": "Jax — Plage",
+      "fighterId": "jax",
+      "baseFighterId": "jax",
+      "sprite": {
+        "src": "../assets/encore/stance/beachjax.png",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "matteMode": "native-alpha",
+        "nativeFacing": 1
+      },
+      "observedTraits": [
+        "Lapin violet filiforme, longues oreilles, yeux jaunes à pupilles noires rectangulaires et petite bouche neutre.",
+        "Petit coquillage rose devant les hanches, corps violet lisse, mains et grands pieds violets, sans salopette ni gants."
+      ],
+      "assetTraits": [],
+      "sourceIds": [
+        "store-beach-jax"
+      ],
+      "reviewScope": "Apparence comparée à la figurine officielle Beach Vacation. La silhouette conserve les proportions longues du personnage dans le jeu. La comparaison scène par scène et l’animation image par image restent à réaliser."
+    },
+    {
+      "id": "sandcastlekinger",
+      "name": "Kinger — Château de sable",
+      "fighterId": "kinger",
+      "baseFighterId": "kinger",
+      "sprite": {
+        "src": "../assets/encore/stance/sandcastlekinger.png",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "matteMode": "native-alpha",
+        "nativeFacing": 1
+      },
+      "observedTraits": [
+        "Tête de roi dorée avec croix et deux grands yeux blancs à iris bleus, au-dessus d’un château jaune.",
+        "Tours crénelées, porte arrondie, coquillage violet, perles pastel, étoile rose, pelle cyan et petit drapeau rose.",
+        "Corps-château entier conservé, sans bras, mains ou jambes ajoutés."
+      ],
+      "assetTraits": [],
+      "sourceIds": [
+        "store-sandcastle-kinger"
+      ],
+      "reviewScope": "Apparence comparée à la figurine officielle Sand Castle Kinger. Les actions utilisent la tête et l’inclinaison du château, sans lui inventer une anatomie humaine. La comparaison scène par scène et l’animation image par image restent à réaliser."
+    },
+    {
+      "id": "noirpomni",
+      "name": "Pomni — Film noir",
+      "fighterId": "pomni",
+      "baseFighterId": "pomni",
+      "sprite": {
+        "src": "../assets/encore/stance/noirpomni.png",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "matteMode": "native-alpha",
+        "nativeFacing": 1
+      },
+      "observedTraits": [
+        "Palette en niveaux de gris, bonnet de bouffon à deux pointes et pompons gris, carré sombre, visage blanc et iris en moulinet gris.",
+        "Chemise blanche à col, petite cravate noire, bretelles sombres, pantalon noir et chaussures sombres."
+      ],
+      "assetTraits": [],
+      "sourceIds": [
+        "store-noir-pomni"
+      ],
+      "reviewScope": "Tenue comparée au Pendantz officiel. La silhouette du jeu conserve les proportions longues du personnage ; le mousqueton, sa boucle et les étiquettes sont exclus. La comparaison scène par scène et l’animation image par image restent à réaliser."
+    },
+    {
+      "id": "noirjax",
+      "name": "Jax — Film noir",
+      "fighterId": "jax",
+      "baseFighterId": "jax",
+      "sprite": {
+        "src": "../assets/encore/stance/noirjax.png",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "matteMode": "native-alpha",
+        "nativeFacing": 1
+      },
+      "observedTraits": [
+        "Lapin filiforme gris, deux très longues oreilles, yeux clairs à pupilles noires rectangulaires, large sourire à dents.",
+        "Chemise blanche à col, cravate noire, bretelles grises, pantalon noir et chaussures sombres ; aucun violet ni rose."
+      ],
+      "assetTraits": [],
+      "sourceIds": [
+        "store-noir-jax"
+      ],
+      "reviewScope": "Tenue comparée au Pendantz officiel. La silhouette du jeu conserve les proportions longues du personnage ; le mousqueton, sa boucle et les étiquettes sont exclus. La comparaison scène par scène et l’animation image par image restent à réaliser."
+    },
+    {
+      "id": "noirkinger",
+      "name": "Kinger — Film noir",
+      "fighterId": "kinger",
+      "baseFighterId": "kinger",
+      "sprite": {
+        "src": "../assets/encore/stance/noirkinger.png",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "matteMode": "native-alpha",
+        "nativeFacing": 1
+      },
+      "observedTraits": [
+        "Pièce d’échecs grise à deux grands yeux saillants, coiffée d’un fedora gris à ruban sombre.",
+        "Corps conique gris à trois boutons, col épais et deux bretelles claires ; deux mains blanches flottantes, sans jambes."
+      ],
+      "assetTraits": [],
+      "sourceIds": [
+        "store-noir-kinger"
+      ],
+      "reviewScope": "Tenue comparée au Pendantz officiel. La silhouette du jeu conserve les proportions longues du personnage ; le mousqueton, sa boucle et les étiquettes sont exclus. La comparaison scène par scène et l’animation image par image restent à réaliser."
+    },
+    {
+      "id": "badendcaine",
+      "name": "Caine — Bad End",
+      "fighterId": "caine",
+      "baseFighterId": "caine",
+      "sprite": {
+        "src": "../assets/encore/stance/badendcaine.png",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "matteMode": "native-alpha",
+        "nativeFacing": 1
+      },
+      "observedTraits": [
+        "Caine en veste rouge, nœud papillon et haut-de-forme noirs, tête-dentier ouverte avec deux globes rouge et bleu pleins. Son corps est englouti dans un groupe compact de sphères Bubble translucides bleutées, aux yeux noirs et dents triangulaires. Composition d’un état unique de Caine, distincte du Caine abattu normal."
+      ],
+      "assetTraits": [],
+      "sourceIds": [
+        "store-badendcaine"
+      ],
+      "reviewScope": "Apparence comparée à la figurine officielle Abstraction Animiniz. Les éléments normaux et abstraits restent réunis dans le même personnage. Cette déclinaison de produit n’atteste pas un événement ou une transformation montrée dans un épisode. La comparaison scène par scène et l’animation image par image restent à réaliser."
+    },
+    {
+      "id": "bodyguardragatha",
+      "name": "Ragatha — Garde du corps",
+      "fighterId": "ragatha",
+      "baseFighterId": "ragatha",
+      "sprite": {
+        "src": "../assets/encore/stance/bodyguardragatha.png",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "matteMode": "native-alpha",
+        "nativeFacing": 1
+      },
+      "observedTraits": [
+        "Robe pervenche à pièces cousues, col et poignets blancs, cheveux de laine rouges, grand nœud violet et chaussures noires.",
+        "Grandes lunettes de soleil noires opaques sur les deux yeux ; aucun costume noir, équipement de sécurité ou arme n’est attesté."
+      ],
+      "assetTraits": [],
+      "sourceIds": [
+        "episode5-bodyguard-ragatha"
+      ],
+      "reviewScope": "Variante d’accessoire du même personnage. Lunettes et robe observées dans les aperçus officiels à 4 min 20 s et 6 min de l’épisode 5 ; silhouette de base recoupée avec la miniature officielle du trailer. Les aperçus de scène font 320 × 180 pixels : les petits détails ne sont pas certifiés. Poses de jeu originales, sans fidélité 1:1 annoncée. La comparaison scène par scène et l’animation image par image restent à réaliser."
+    },
+    {
+      "id": "bodyguardzooble",
+      "name": "Zooble — Garde du corps",
+      "fighterId": "zooble",
+      "baseFighterId": "zooble",
+      "sprite": {
+        "src": "../assets/encore/stance/bodyguardzooble.png",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "matteMode": "native-alpha",
+        "nativeFacing": 1
+      },
+      "observedTraits": [
+        "Tête triangulaire rose sans bouche et lunettes noires opaques ; antenne cyan en éclair à gauche de l’image et ressort rayé noir/blanc à droite.",
+        "Torse jaune à pois orange/roses, triangle creux violet au torse et petite aile plume rose.",
+        "Bras gauche de l’image jaune articulé avec main jaune ; bras droit : ressort vert, rotule rose, tige rayée rose/blanc et pince verte unique.",
+        "Jambe gauche de l’image en zigzag cyan puis pointe rayée rouge/jaune ; autre jambe longue violette et pied violet."
+      ],
+      "assetTraits": [],
+      "sourceIds": [
+        "episode5-bodyguard-zooble"
+      ],
+      "reviewScope": "Assemblage coloré de l’épisode 5 avec lunettes noires. Corps entier observé sur la miniature officielle du trailer ; lunettes et continuité des pièces recoupées dans les aperçus de l’aventure présidentielle à 4 min 20 s et 6 min. La miniature établit la composition des pièces ; les mouvements restent des adaptations 2D. Cette apparence avec lunettes ne remplace pas la version sans lunettes zooble__ep05_assembly. La comparaison scène par scène et l’animation image par image restent à réaliser."
+    },
+    {
+      "id": "smilingtragedygangle",
+      "name": "Gangle — sourire de tragédie",
+      "fighterId": "gangle",
+      "baseFighterId": "gangle",
+      "sprite": {
+        "src": "../assets/encore/stance/smilingtragedygangle.png",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "matteMode": "native-alpha",
+        "nativeFacing": 1
+      },
+      "observedTraits": [
+        "Masque de tragédie blanc, deux larmes bleues latérales, yeux fermés en arches et petit sourire. Corps normal en rubans rouges. État confirmé sur la planche officielle ep6, ligne 3 colonne 2 (~970 s)."
+      ],
+      "assetTraits": [],
+      "sourceIds": [
+        "episode6-smilingtragedygangle"
+      ],
+      "reviewScope": "Expression observée vers 16 min 10 s sur le storyboard de la vidéo officielle : sourire, yeux fermés et larmes du masque de tragédie conservés. Le corps en rubans est celui de Gangle ; les poses de combat sont originales. La comparaison scène par scène et l’animation image par image restent à réaliser."
+    },
+    {
+      "id": "abstractingpomni",
+      "name": "Pomni — abstraction partielle",
+      "fighterId": "pomni",
+      "baseFighterId": "pomni",
+      "sprite": {
+        "src": "../assets/encore/stance/abstractingpomni.png",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "matteMode": "native-alpha",
+        "nativeFacing": 1
+      },
+      "observedTraits": [
+        "Costume rouge/bleu à boutons et bords jaunes conservé, visage partagé entre moitié normale et cristaux sombres à yeux concentriques, clochette/chapeau partiellement abstraits, un bras et un pied cristallins."
+      ],
+      "assetTraits": [],
+      "sourceIds": [
+        "store-abstractingpomni"
+      ],
+      "reviewScope": "Apparence comparée à la figurine officielle Abstraction Animiniz. Les éléments normaux et abstraits restent réunis dans le même personnage. Cette déclinaison de produit n’atteste pas un événement ou une transformation montrée dans un épisode. La comparaison scène par scène et l’animation image par image restent à réaliser."
+    },
+    {
+      "id": "abstractingjax",
+      "name": "Jax — abstraction partielle",
+      "fighterId": "jax",
+      "baseFighterId": "jax",
+      "sprite": {
+        "src": "../assets/encore/stance/abstractingjax.png",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "matteMode": "native-alpha",
+        "nativeFacing": 1
+      },
+      "observedTraits": [
+        "Lapin violet avec salopette rose, gant jaune et pied violet encore visibles. Moitié de tête, une très longue oreille, un bras et une jambe gagnés par les cristaux à yeux concentriques."
+      ],
+      "assetTraits": [],
+      "sourceIds": [
+        "store-abstractingjax"
+      ],
+      "reviewScope": "Apparence comparée à la figurine officielle Abstraction Animiniz. Les éléments normaux et abstraits restent réunis dans le même personnage. Cette déclinaison de produit n’atteste pas un événement ou une transformation montrée dans un épisode. La comparaison scène par scène et l’animation image par image restent à réaliser."
+    },
+    {
+      "id": "abstractingragatha",
+      "name": "Ragatha — abstraction partielle",
+      "fighterId": "ragatha",
+      "baseFighterId": "ragatha",
+      "sprite": {
+        "src": "../assets/encore/stance/abstractingragatha.png",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "matteMode": "native-alpha",
+        "nativeFacing": 1
+      },
+      "observedTraits": [
+        "Robe bleue, nœud bleu, cheveux rouges et œil-bouton bleu conservés. Moitié de tête noire cristalline avec yeux concentriques, une jambe et une épaule abstraites."
+      ],
+      "assetTraits": [],
+      "sourceIds": [
+        "store-abstractingragatha"
+      ],
+      "reviewScope": "Apparence comparée à la figurine officielle Abstraction Animiniz. Les éléments normaux et abstraits restent réunis dans le même personnage. Cette déclinaison de produit n’atteste pas un événement ou une transformation montrée dans un épisode. La comparaison scène par scène et l’animation image par image restent à réaliser."
+    },
+    {
+      "id": "abstractingkinger",
+      "name": "Kinger — abstraction partielle",
+      "fighterId": "kinger",
+      "baseFighterId": "kinger",
+      "sprite": {
+        "src": "../assets/encore/stance/abstractingkinger.png",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "matteMode": "native-alpha",
+        "nativeFacing": 1
+      },
+      "observedTraits": [
+        "Pièce d’échecs beige et œil bleu normal partiellement préservés, robe violette bordée d’hermine blanche. Moitié tête et base cristallines sombres à plusieurs yeux ; mains blanches flottantes avec poignets abstraits."
+      ],
+      "assetTraits": [],
+      "sourceIds": [
+        "store-abstractingkinger"
+      ],
+      "reviewScope": "Apparence comparée à la figurine officielle Abstraction Animiniz. Les éléments normaux et abstraits restent réunis dans le même personnage. Cette déclinaison de produit n’atteste pas un événement ou une transformation montrée dans un épisode. La comparaison scène par scène et l’animation image par image restent à réaliser."
+    },
+    {
+      "id": "abstractinggangle",
+      "name": "Gangle — abstraction partielle",
+      "fighterId": "gangle",
+      "baseFighterId": "gangle",
+      "sprite": {
+        "src": "../assets/encore/stance/abstractinggangle.png",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "matteMode": "native-alpha",
+        "nativeFacing": -1
+      },
+      "observedTraits": [
+        "Corps compact de cristal sombre translucide sur quatre pieds, rubans rouges en boucles sur le dos, deux masques blancs distincts attachés au même corps : comédie fissurée et tragédie aux deux larmes bleues, tous deux à iris multicolores concentriques. Une seule créature."
+      ],
+      "assetTraits": [],
+      "sourceIds": [
+        "store-abstractinggangle"
+      ],
+      "reviewScope": "Apparence comparée à la figurine officielle Abstraction Animiniz. Les éléments normaux et abstraits restent réunis dans le même personnage. Cette déclinaison de produit n’atteste pas un événement ou une transformation montrée dans un épisode. La comparaison scène par scène et l’animation image par image restent à réaliser."
+    },
+    {
+      "id": "abstractingzooble",
+      "name": "Zooble — abstraction partielle",
+      "fighterId": "zooble",
+      "baseFighterId": "zooble",
+      "sprite": {
+        "src": "../assets/encore/stance/abstractingzooble.png",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "matteMode": "native-alpha",
+        "nativeFacing": 1
+      },
+      "observedTraits": [
+        "Assemblage géométrique coloré, tête triangulaire rose partiellement préservée avec un œil blanc normal. Autre moitié de tête et œil, crête, une extrémité de bras et une jambe cristallins ; torse jaune à taches, anneau cyan, jambe bleue et pied bleu restants."
+      ],
+      "assetTraits": [],
+      "sourceIds": [
+        "store-abstractingzooble"
+      ],
+      "reviewScope": "Apparence comparée à la figurine officielle Abstraction Animiniz. Les éléments normaux et abstraits restent réunis dans le même personnage. Cette déclinaison de produit n’atteste pas un événement ou une transformation montrée dans un épisode. La comparaison scène par scène et l’animation image par image restent à réaliser."
+    },
+    {
+      "id": "abstractingqueenie",
+      "name": "Queenie — abstraction partielle",
+      "fighterId": "queenie",
+      "baseFighterId": "queenie",
+      "sprite": {
+        "src": "../assets/encore/stance/abstractingqueenie.png",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "matteMode": "native-alpha",
+        "nativeFacing": 1
+      },
+      "observedTraits": [
+        "Pièce d’échecs brun rosé et œil brun/orange normal partiellement préservés, robe bordeaux à hermine blanche. Moitié de tête, poignets et base cristallins avec yeux concentriques ; distincte des monstres entièrement abstraits déjà archivés."
+      ],
+      "assetTraits": [],
+      "sourceIds": [
+        "store-abstractingqueenie"
+      ],
+      "reviewScope": "Apparence comparée à la figurine officielle Abstraction Animiniz. Les éléments normaux et abstraits restent réunis dans le même personnage. Cette déclinaison de produit n’atteste pas un événement ou une transformation montrée dans un épisode. La comparaison scène par scène et l’animation image par image restent à réaliser."
+    },
+    {
+      "id": "zoobleep5",
+      "name": "Zooble — Assemblage épisode 5",
+      "fighterId": "zooble",
+      "baseFighterId": "zooble",
+      "sprite": {
+        "src": "../assets/encore/stance/zoobleep5.png",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "matteMode": "native-alpha",
+        "nativeFacing": 1
+      },
+      "observedTraits": [
+        "Tête triangulaire rose sans bouche ; grand œil jaune à pupille en spirale à gauche de l’image et petit œil blanc à paupière violette à droite. Aucun accessoire sur les yeux.",
+        "Antennes cyan en éclair et ressort rayé noir/blanc ; torse jaune à pois orange/roses, triangle creux violet et aile plume rose.",
+        "Bras gauche de l’image jaune articulé avec main jaune ; bras droit : ressort vert, rotule rose, tige rayée rose/blanc et pince verte unique.",
+        "Jambe gauche de l’image en zigzag cyan puis pointe rayée rouge/jaune ; autre jambe longue violette et pied violet."
+      ],
+      "assetTraits": [],
+      "sourceIds": [
+        "episode5-zooble-assembly"
+      ],
+      "reviewScope": "Assemblage sans lunettes vu corps entier sur la miniature officielle du trailer de l’épisode 5 et recoupé sur les plans de début de l’épisode. Ni l’assemblage de base existant, ni l’uniforme Spudsy, ni la version film noir ne couvrent exactement ces pièces et couleurs. Version séparée de bodyguardzooble ; les poses sont des adaptations 2D originales. La comparaison scène par scène et l’animation image par image restent à réaliser."
+    },
+    {
+      "id": "jaxsuitpomni",
+      "name": "Pomni — combinaison Jax",
+      "fighterId": "pomni",
+      "baseFighterId": "pomni",
+      "sprite": {
+        "src": "../assets/encore/stance/jaxsuitpomni.png",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "matteMode": "native-alpha",
+        "nativeFacing": 1
+      },
+      "observedTraits": [
+        "Visage blanc, cheveux bruns et iris rouges/bleus de Pomni visibles dans une capuche-lapin lavande à deux longues oreilles et motifs d’yeux jaunes/noirs.",
+        "Combinaison lavande, gants jaunes, salopette courte rose à deux boutons jaunes et poche de poitrine, grands pieds lavande. Petit pistolet accessoire gris à poignée noire."
+      ],
+      "assetTraits": [],
+      "sourceIds": [
+        "store-jaxsuit-pomni"
+      ],
+      "reviewScope": "Costume et accessoire comparés aux photos officielles de la peluche Jax-Suit Pomni. Les proportions debout et les poses de combat sont adaptées au dessin du jeu ; l’accessoire reste visuel et ne crée pas de technique d’arme. Cette source de marchandise ne constitue pas une certification de présence en épisode. La comparaison scène par scène et l’animation image par image restent à réaliser."
+    },
+    {
+      "id": "noirribbit",
+      "name": "Ribbit — film noir",
+      "fighterId": "ribbit",
+      "baseFighterId": "ribbit",
+      "sprite": {
+        "src": "../assets/encore/stance/noirribbit.png",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "matteMode": "native-alpha",
+        "nativeFacing": 1
+      },
+      "observedTraits": [
+        "Grenouille gris clair avec grands yeux ovales, pupilles noires, paupières violet très sombre et bouche maussade.",
+        "Trench-coat gris à revers et ceinture à boucle carrée, col blanc, petit nœud noir, mains grises et pieds noirs."
+      ],
+      "assetTraits": [],
+      "sourceIds": [
+        "store-pendantz-noirribbit"
+      ],
+      "reviewScope": "Costume comparé au produit officiel Ribbit Pendantz Noir. Les proportions élancées et les poses sont adaptées au dessin de Ribbit dans le jeu. L’anneau et la sangle du porte-clés sont exclus. Source de marchandise ; aucune présence en épisode n’est certifiée. La comparaison scène par scène et l’animation image par image restent à réaliser."
+    },
+    {
+      "id": "kaufmosuitribbit",
+      "name": "Ribbit — costume Kaufmo",
+      "fighterId": "ribbit",
+      "baseFighterId": "ribbit",
+      "sprite": {
+        "src": "../assets/encore/stance/kaufmosuitribbit.png",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "matteMode": "native-alpha",
+        "nativeFacing": 1
+      },
+      "observedTraits": [
+        "Tête de grenouille verte à museau menthe, joues roses et grands yeux ovales à pupilles noires.",
+        "Combinaison jaune, deux gros pompons rouges sur le torse, large collerette bleue, mains blanches et pieds rouges."
+      ],
+      "assetTraits": [],
+      "sourceIds": [
+        "store-pendantz-kaufmosuitribbit"
+      ],
+      "reviewScope": "Costume comparé au produit officiel Ribbit Pendantz Kaufmo Suit. Ribbit conserve son identité de grenouille et les proportions du dessin du jeu ; ce n’est pas Kaufmo. Anneau, sangle et texture de peluche exclus. Source de marchandise ; aucune présence en épisode n’est certifiée. La comparaison scène par scène et l’animation image par image restent à réaliser."
+    },
+    {
+      "id": "intermissioncaine",
+      "name": "Caine — Intermission",
+      "fighterId": "caine",
+      "baseFighterId": "caine",
+      "sprite": {
+        "src": "../assets/encore/stance/intermissioncaine.png",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "matteMode": "native-alpha",
+        "nativeFacing": 1
+      },
+      "observedTraits": [
+        "Une bouche de dentier géante, ouverte et dressée, aux gencives corail orangé, aux dents blanches et à la cavité orange constitue tout le corps ; aucun torse humain ni aucune jambe.",
+        "Deux yeux blancs distincts : un œil rond à iris bleu en haut à droite de l’image, et un œil en forme d’étoile à iris vert plus bas, à l’avant gauche de la bouche.",
+        "Un petit haut-de-forme noir à ruban rouge repose de biais sur l’œil étoilé vert.",
+        "Exactement quatre gants blancs flottent autour de la bouche, deux de chaque côté, sans bras humains ni manches ; un gant tient une canne noire à pommeau sphérique doré.",
+        "Trois ornements en étoiles dorées restent proches derrière la silhouette du dentier ; ils appartiennent au modèle et ne forment pas un effet de particules.",
+        "La référence individuelle et la scène de groupe montrent la base complète du dentier et les quatre gants ; aucune tenue inférieure cachée n’est inventée."
+      ],
+      "assetTraits": [],
+      "sourceIds": [
+        "store-intermissioncaine"
+      ],
+      "reviewScope": "Apparence comparée au produit officiel Intermission Caine. Les poses sont des adaptations 2D originales de cette bouche à quatre gants ; le produit ne prouve pas une transformation montrée dans un épisode. Le personnage conserve son propriétaire, son kit et les règles existantes du jeu. La comparaison scène par scène et l’animation image par image restent à réaliser."
+    },
+    {
+      "id": "showtimepomni",
+      "name": "Pomni — Showtime",
+      "fighterId": "pomni",
+      "baseFighterId": "pomni",
+      "sprite": {
+        "src": "../assets/encore/stance/showtimepomni.png",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "matteMode": "native-alpha",
+        "nativeFacing": 1
+      },
+      "observedTraits": [
+        "Visage blanc et carré brun de Pomni, bonnet rouge/bleu à bord jaune et pompons jaunes.",
+        "Costume de spectacle blanc/crème et or : body doré, membres blancs et chaussures dorées ; grandes plumes crème à l’arrière et plume au-dessus du bonnet."
+      ],
+      "assetTraits": [],
+      "sourceIds": [
+        "store-sideshow-showtimepomni"
+      ],
+      "reviewScope": "Costume comparé à la figurine officielle Showtime Pomni de la série Side Show. Les plumes sont des décorations du costume, pas des membres supplémentaires. Proportions et poses adaptées au dessin du jeu ; le body partiellement caché par la pose de la figurine fait l’objet d’une interprétation cohérente. Source de marchandise ; aucune présence en épisode n’est certifiée. La comparaison scène par scène et l’animation image par image restent à réaliser."
+    },
+    {
+      "id": "bowlingpinragatha",
+      "name": "Ragatha — Quille de bowling",
+      "fighterId": "ragatha",
+      "baseFighterId": "ragatha",
+      "sprite": {
+        "src": "../assets/encore/stance/bowlingpinragatha.png",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "matteMode": "native-alpha",
+        "nativeFacing": 1
+      },
+      "observedTraits": [
+        "Tête de Ragatha au visage clair, aux cheveux rouges en laine et au grand nœud bleu.",
+        "Œil-bouton bleu à gauche de l’image ; autre œil normal avec paupières mauves, petit nez triangulaire et bouche de poupée expressive.",
+        "Le corps entier est une seule quille blanche ou gris très clair, au col blanc pointu et aux pièces rectangulaires pervenche ; son contour se rétrécit sous la tête et s’arrondit vers la base.",
+        "Aucun bras, main, jambe ni pied visible dans la référence ; les poses utilisent l’inclinaison, le balancement ou le déplacement de la quille entière.",
+        "La boule bleue, les autres quilles à visage, les rideaux et le sol de la photographie sont des éléments séparés exclus du dessin individuel."
+      ],
+      "assetTraits": [],
+      "sourceIds": [
+        "store-bowlingpinragatha"
+      ],
+      "reviewScope": "Apparence comparée au produit officiel Side Show. La quille entière reste le corps de Ragatha ; les actions statiques sont des adaptations originales sans membres ajoutés. Cette référence de marchandise ne certifie pas une tenue ou une transformation montrée dans un épisode ; le kit de Ragatha est conservé. La comparaison scène par scène et l’animation image par image restent à réaliser."
+    },
+    {
+      "id": "ringmastercaine",
+      "name": "Caine — Maître de piste noir",
+      "fighterId": "caine",
+      "baseFighterId": "caine",
+      "sprite": {
+        "src": "../assets/encore/stance/ringmastercaine.png",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "matteMode": "native-alpha",
+        "nativeFacing": 1
+      },
+      "observedTraits": [
+        "Tête de dentier rouge à dents blanches, deux yeux ronds aux iris bleu et vert, haut-de-forme noir à ruban rouge.",
+        "Smoking ou queue-de-pie noir scintillant à liserés clairs, plastron blanc à boutons noirs et petit nœud papillon rouge.",
+        "Deux bras terminés par des gants blancs, pantalon et chaussures noirs ; anatomie humanoïde habituelle de Caine avec deux jambes.",
+        "Une canne sombre à pommeau doré accompagne le personnage.",
+        "Le podium rayé rouge et crème à bordure dorée, les rideaux et le sol du produit sont exclus. La veste reste noire et se distingue du costume rouge de base."
+      ],
+      "assetTraits": [],
+      "sourceIds": [
+        "store-ringmastercaine"
+      ],
+      "reviewScope": "Tenue comparée au produit officiel Ringmaster Caine de la gamme Side Show. Les onze poses sont des adaptations 2D originales pour le jeu, sans podium. Cette référence de marchandise ne prouve pas une apparition en épisode ; propriétaire et kit de Caine restent inchangés. La comparaison scène par scène et l’animation image par image restent à réaliser."
+    },
+    {
+      "id": "strongmanorbsman",
+      "name": "Orbsman — homme fort",
+      "fighterId": "orbsman",
+      "baseFighterId": "orbsman",
+      "sprite": {
+        "src": "../assets/encore/stance/strongmanorbsman.png",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "matteMode": "native-alpha",
+        "nativeFacing": 1
+      },
+      "observedTraits": [
+        "Corps bleu/violet composé de sphères, deux grands yeux blancs à pupilles noires et sourcils noirs épais relevés.",
+        "Petites gouttes vert menthe de transpiration sur le visage.",
+        "Deux mains sphériques tiennent une barre métallique avec une grosse boule rouge à chaque extrémité."
+      ],
+      "assetTraits": [],
+      "sourceIds": [
+        "store-sideshow-strongmanorbsman"
+      ],
+      "reviewScope": "Apparence et accessoires comparés à la figurine officielle Side Show. Proportions et poses adaptées au dessin du jeu, sans certification de présence en épisode. Les accessoires restent visuels et ne changent aucune technique ou règle de combat. Le corps est celui du Orbsman existant : il s’agit surtout d’une apparence accessoirisée à haltère, pas d’une nouvelle espèce ni d’une tenue textile. Conserver deux extrémités rouges sur une seule barre, sans ajout de doigts humains. La comparaison scène par scène et l’animation image par image restent à réaliser."
+    },
+    {
+      "id": "stagehandbubble",
+      "name": "Bubble — régisseur",
+      "fighterId": "bubble",
+      "baseFighterId": "bubble",
+      "sprite": {
+        "src": "../assets/encore/stance/stagehandbubble.png",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "matteMode": "native-alpha",
+        "nativeFacing": 1
+      },
+      "observedTraits": [
+        "Bubble sphérique/translucide bleu très pâle, yeux noirs, dents triangulaires blanches et grande langue rouge sortie.",
+        "Haut-de-forme noir à bande rouge sous/derrière Bubble.",
+        "Grosse caméra de cinéma grise au-dessus, objectifs noirs sur tourelle circulaire et voyant rouge ; supports gris visibles derrière la sphère."
+      ],
+      "assetTraits": [],
+      "sourceIds": [
+        "store-sideshow-stagehandbubble"
+      ],
+      "reviewScope": "Apparence et accessoires comparés à la figurine officielle Side Show. Proportions et poses adaptées au dessin du jeu, sans certification de présence en épisode. Les accessoires restent visuels et ne changent aucune technique ou règle de combat. La nouveauté repose sur la composition Bubble + caméra + chapeau, pas sur une anatomie humanoïde. Aucune main ou jambe à inventer ; préserver l’ensemble accessoirisé pour les poses. Les inscriptions minuscules de marque ne sont pas nécessaires au dessin de jeu. La comparaison scène par scène et l’animation image par image restent à réaliser."
+    },
+    {
+      "id": "bugtamerkinger",
+      "name": "Kinger — dompteur d’insectes",
+      "fighterId": "kinger",
+      "baseFighterId": "kinger",
+      "sprite": {
+        "src": "../assets/encore/stance/bugtamerkinger.png",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "matteMode": "native-alpha",
+        "nativeFacing": 1
+      },
+      "observedTraits": [
+        "Tête de pièce d’échecs beige et deux yeux saillants à iris bleus ; robe violette avec hermine blanche tachetée de noir.",
+        "Casque-seau métallique gris à reliefs horizontaux ; anse métallique passant devant la tête avec poignée marron sous le visage.",
+        "Deux mains blanches ; l’une porte un cerceau rayé rouge et crème, garni de flammes orange, avec un petit papillon rouge/orange à corps sombre."
+      ],
+      "assetTraits": [],
+      "sourceIds": [
+        "store-sideshow-bugtamerkinger"
+      ],
+      "reviewScope": "Apparence et accessoires comparés à la figurine officielle Side Show. Proportions et poses adaptées au dessin du jeu, sans certification de présence en épisode. Les accessoires restent visuels et ne changent aucune technique ou règle de combat. Référence de produit avec accessoires : conserver le cerceau tenu si la déclinaison dompteur est choisie, sans inventer bras ou jambes. Aucun pouvoir de feu ou événement d’épisode n’est établi par cette figurine. La comparaison scène par scène et l’animation image par image restent à réaliser."
+    },
+    {
+      "id": "animeribbit",
+      "name": "Ribbit — Anime",
+      "fighterId": "ribbit",
+      "baseFighterId": "ribbit",
+      "sprite": {
+        "src": "../assets/encore/stance/animeribbit.png",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "matteMode": "native-alpha",
+        "nativeFacing": 1
+      },
+      "observedTraits": [
+        "Tête de grenouille verte, museau menthe, joues roses et grands yeux anime aux iris rose/bordeaux, pupilles bleu nuit et reflets blancs ; petits cils sous les yeux.",
+        "Chemisier blanc à manches courtes, gilet jaune crème à col V bordé de beige, grand nœud rose à deux longs pans et jupe plissée rose.",
+        "Deux bras et deux jambes verts, chaussettes blanches à un fin liseré rose et chaussures arrondies bleu nuit."
+      ],
+      "assetTraits": [],
+      "sourceIds": [
+        "store-pendantz-animeribbit"
+      ],
+      "reviewScope": "Tenue et expression comparées au produit officiel Anime Ribbit. Les proportions élancées, les mains et les onze poses statiques sont adaptées au dessin du jeu. L’anneau et la sangle du porte-clés sont exclus. Cette référence de marchandise ne certifie pas une apparition en épisode. Ribbit conserve son kit et ses statistiques existants. La comparaison scène par scène et l’animation image par image restent à réaliser."
+    },
+    {
+      "id": "jaxsuitribbit",
+      "name": "Ribbit — combinaison Jax",
+      "fighterId": "ribbit",
+      "baseFighterId": "ribbit",
+      "sprite": {
+        "src": "../assets/encore/stance/jaxsuitribbit.png",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "matteMode": "native-alpha",
+        "nativeFacing": 1
+      },
+      "observedTraits": [
+        "Tête de grenouille verte, museau menthe, joues roses, grands yeux ovales à paupières violet sombre mi-closes et sourire à dents rectangulaires.",
+        "Combinaison lavande avec capuche à deux oreilles de lapin ; petit nœud rose sur l’oreille gauche anatomique. Salopette corail/rose à deux boutons jaunes et poche avant, deux gants jaunes et deux pieds lavande."
+      ],
+      "assetTraits": [],
+      "sourceIds": [
+        "store-pendantz-jaxsuitribbit"
+      ],
+      "reviewScope": "Adaptation de l’apparence de marchandise officielle Jax-Suit Ribbit aux proportions élancées du jeu. Ce personnage reste Ribbit, pas Jax ni Pomni. Anneau, sangle et texture photographique de peluche exclus. Poses statiques originales pour le fan-game ; aucune présence dans un épisode ni fidélité canonique certifiée. La comparaison scène par scène et l’animation image par image restent à réaliser."
+    },
+    {
+      "id": "watermelongangle",
+      "name": "Gangle — Pastèque",
+      "fighterId": "gangle",
+      "baseFighterId": "gangle",
+      "sprite": {
+        "src": "../assets/encore/stance/watermelongangle.png",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "matteMode": "native-alpha",
+        "nativeFacing": 1
+      },
+      "observedTraits": [
+        "Masque blanc, grands yeux noirs tombants, larmes cyan et membres de ruban rouge ; chapeau jaune à large bord et ruban/nœud pervenche, sans fleur rose.",
+        "Haut pervenche et jupe plissée assortie, mince bande rouge à la taille ; une batte sombre à manche brun et une tranche de pastèque rose à graines noires et écorce verte."
+      ],
+      "assetTraits": [],
+      "sourceIds": [
+        "store-beach-watermelongangle"
+      ],
+      "reviewScope": "Adaptation de la figurine officielle Watermelon Gangle aux proportions élancées du jeu. Distincte de beachgangle (paréo bleu fleuri, fleur rose et noix de coco). La demi-pastèque au sol et le décor de plage sont des éléments de scène exclus. Le ruban arrière peu visible dans la photo est décliné d’après l’anatomie déjà établie de Gangle ; aucune chaussure n’est inventée. Poses statiques originales pour le fan-game, sans certification canonique ni correspondance 1:1 d’épisode. La comparaison scène par scène et l’animation image par image restent à réaliser."
+    },
+    {
+      "id": "aquablasterpomni",
+      "name": "Pomni — Aqua Blaster",
+      "fighterId": "pomni",
+      "baseFighterId": "pomni",
+      "sprite": {
+        "src": "../assets/encore/stance/aquablasterpomni.png",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "matteMode": "native-alpha",
+        "nativeFacing": 1
+      },
+      "observedTraits": [
+        "Visage blanc, cheveux bruns, yeux en moulinets rouge et bleu ; bonnet de bouffon rouge et bleu avec bordure et grelots jaunes.",
+        "Haut rayé bleu clair et blanc, short bleu clair à cordon blanc et chaussures bleues ; aucun brassard. Pistolet à eau rose/magenta, canon nervuré vert vif, embout orange et réservoir/anse turquoise."
+      ],
+      "assetTraits": [],
+      "sourceIds": [
+        "store-beach-aquablasterpomni"
+      ],
+      "reviewScope": "Adaptation de la figurine officielle Aqua Blaster Pomni aux proportions du jeu. Variante distincte de beachpomni, issu de la peluche à brassards jaunes sans pistolet. Le socle de flaque et le jet moulé sont exclus du sprite neutre ; le pistolet est conservé dans chaque pose. Les vêtements sont partiellement masqués par l’arme dans le rendu et sont prolongés de façon cohérente avec les parties visibles et beachpomni. Poses statiques originales pour le fan-game ; aucune fidélité canonique 1:1 n’est revendiquée. La comparaison scène par scène et l’animation image par image restent à réaliser."
+    },
+    {
+      "id": "ptocaine",
+      "name": "Caine — Congés",
+      "fighterId": "caine",
+      "baseFighterId": "caine",
+      "sprite": {
+        "src": "../assets/encore/stance/ptocaine.png",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "matteMode": "native-alpha",
+        "nativeFacing": 1
+      },
+      "observedTraits": [
+        "Grande monture de lunettes vert menthe, verres jaunes transparents, haut-de-forme noir à bande rouge.",
+        "Dentier rouge à dents blanches, habit rouge de Caine, gants blancs, pantalon et chaussures noirs."
+      ],
+      "assetTraits": [],
+      "sourceIds": [
+        "store-pto-caine"
+      ],
+      "reviewScope": "Variante portant les lunettes de PTO Caine. Le transat et le verre sont des éléments de présentation exclus du combattant ; la pose debout et les proportions reprennent le corps de Caine déjà utilisé par le jeu. Les parties de l’habit masquées dans la figurine assise restent fondées sur ce dessin de base, sans prétendre à une observation nouvelle de la série. La comparaison scène par scène et l’animation image par image restent à réaliser."
+    },
+    {
+      "id": "freakjax",
+      "name": "Jax — Freak Jax",
+      "fighterId": "jax",
+      "baseFighterId": "jax",
+      "sprite": {
+        "src": "../assets/encore/stance/freakjax.png",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "matteMode": "native-alpha",
+        "nativeFacing": 1
+      },
+      "observedTraits": [
+        "Tête ronde jaune sans oreilles dressées, deux yeux noirs carrés aux angles arrondis et cinq petites marques brunes au bas du visage, sans blanc des yeux ni grand sourire denté.",
+        "Membres violets, deux gants jaunes, salopette corail intacte à revers rose clair et poche claire, deux pieds violets arrondis à trois lobes.",
+        "Grand volume violet rabattu derrière les épaules, avec deux longues extrémités évoquant les oreilles retirées, conservé comme dans la figurine sans lui inventer une nouvelle anatomie."
+      ],
+      "assetTraits": [],
+      "sourceIds": [
+        "store-sideshow-freakjax"
+      ],
+      "reviewScope": "Costume comparé à la figurine officielle Freak Jax et à sa photo de groupe. Il diffère du dessin historique peeledjax par la tête, les yeux, les couleurs des membres et les vêtements. Poses statiques originales adaptées au jeu en 2D ; la marchandise ne certifie aucune présence dans un épisode. La vue arrière cachée et les attaches ne sont pas recréées. La comparaison scène par scène et l’animation image par image restent à réaliser."
+    },
+    {
+      "id": "caferibbit",
+      "name": "Ribbit — Café",
+      "fighterId": "ribbit",
+      "baseFighterId": "ribbit",
+      "sprite": {
+        "src": "../assets/encore/stance/caferibbit.png",
+        "cols": 1,
+        "rows": 1,
+        "col": 0,
+        "row": 0,
+        "matteMode": "native-alpha",
+        "nativeFacing": 1
+      },
+      "observedTraits": [
+        "Grenouille verte au museau menthe, grands yeux blancs à pupilles noires découpées et paupières bleu nuit ; coiffe blanche et nœuds bleu nuit latéraux, ruban rose au cou.",
+        "Robe courte bleu nuit, plastron et tablier blancs à volants, cœur bleu nuit sur le plastron et nœuds bleu nuit sur le tablier ; manchettes blanches festonnées, bras et mains verts.",
+        "Deux jambes vertes, longues chaussettes blanches à revers festonnés avec petits accents roses et chaussures fermées arrondies bleu nuit à bords de semelle rose sombre."
+      ],
+      "assetTraits": [],
+      "sourceIds": [
+        "animate-cafe-ribbit"
+      ],
+      "reviewScope": "Adaptation de l’illustration officielle DECOTTO by Animate Café aux proportions et au dessin du jeu. Le personnage entier, ses deux jambes et ses deux chaussures sont visibles sur l’affiche. Le plateau et le dessert sont des accessoires de présentation exclus des poses de combat. Les nœuds et motifs café diffèrent du Pendantz Maid : cette famille ne qualifie pas le bas encore masqué de maidribbit. Le dos non illustré est traité sobrement à partir des bords visibles, sans prétention de nouvelle vue canonique. Poses statiques originales de fan-game ; aucune présence en épisode, correspondance 1:1 ni animation complète certifiée. La comparaison scène par scène et l’animation image par image restent à réaliser."
+    }
+  ],
+  "sourceFiles": [
+    {
+      "file": "combat/data.mjs",
+      "sha256": "7081daa24f8557c6964c75955071a3527ae49c03393e04d6d0dee0d97d4e5fe6"
+    },
+    {
+      "file": "combat/costume-additions.mjs",
+      "sha256": "dacc968d23ccffa246b686a641dedb0308b14c122652c4a477e72927ddd5e3e4"
+    },
+    {
+      "file": "combat/costume-fidelity.mjs",
+      "sha256": "a346156fc0f1107a72a2d6a8b331aeba3122f631a95941a2e9b0a6b9d36dd3d6"
+    },
+    {
+      "file": "combat/costume-next-wave-20261120.mjs",
+      "sha256": "dd644e2868c8c3ca92564ea64a18cccee1c1765f364d92c19e83689b7ca6cd4e"
+    }
+  ]
+}

@@ -1,0 +1,320 @@
+{
+  "schema": "encore-next-wave-independent-canvas-visual-review/v1",
+  "reviewer": "/root/ribbit_references",
+  "reviewedAt": "2026-11-20T15:39:39.952168+00:00",
+  "status": "accepted_with_stated_scope",
+  "scope": "Independent visual reading of the eight final Canvas sheets produced by root, alongside their exact reports and current source hashes. No renderer rerun was performed by this review.",
+  "independenceScope": "Independent of the final Canvas execution and root’s inspection. The reviewer produced the Café family and four Hommage hand corrections; this is not a claim of complete independence from asset creation. The latter four corrections also have audit_github cross-review.",
+  "method": "Production Canvas2D renderer under native Skia, with exact decoded sources; no browser interaction.",
+  "canvasSummary": {
+    "file": "docs/art-generation/next-wave-20261120/canvas-summary.json",
+    "sha256": "7ef0065fd2d6a0ae3c0d773c699e1d9885525711227e82d0592c5edd349392d0",
+    "bytes": 14793
+  },
+  "reportedCounts": {
+    "appearances": 4,
+    "actions": 36,
+    "stances": 4,
+    "drawChecks": 80,
+    "portraits": 4,
+    "missing": 0,
+    "aliasedActions": 0
+  },
+  "actualVisualInspectionCounts": {
+    "sheets": 8,
+    "actionSheets": 4,
+    "actionPoses": 36,
+    "selectionPortraitSheets": 4,
+    "selectionPortraits": 4,
+    "stanceSheets": 0
+  },
+  "families": [
+    {
+      "appearanceId": "caferibbit",
+      "report": {
+        "file": "docs/art-generation/next-wave-20261120/review/caferibbit/character-canvas-review.json",
+        "sha256": "8652f55873cf631be05c7af3462ca523f95f50808c283f6ccd43e23a1b0403c4",
+        "bytes": 7887
+      },
+      "reportedCounts": {
+        "appearances": 1,
+        "expectedActions": 9,
+        "actions": 9,
+        "stances": 1,
+        "drawChecks": 20,
+        "archiveEntries": 0,
+        "portraits": 1,
+        "expectedPortraits": 1,
+        "missing": 0,
+        "aliasedActions": 0
+      },
+      "visuallyInspectedActionPoses": 9,
+      "visuallyInspectedPortraits": 1,
+      "views": [
+        {
+          "appearanceId": "caferibbit",
+          "kind": "action_sheet",
+          "file": "docs/art-generation/next-wave-20261120/review/caferibbit/actions-caferibbit.jpg",
+          "sha256": "784e62cc5d210875d5494e07f6121af0d6c5cd71fea3485d59a12bc7f5e344f9",
+          "bytes": 105832,
+          "actuallyOpenedAndVisuallyInspected": true,
+          "visualOutcome": "no_concrete_defect_observed"
+        },
+        {
+          "appearanceId": "caferibbit",
+          "kind": "selection_portrait_sheet",
+          "file": "docs/art-generation/next-wave-20261120/review/caferibbit/archive-portraits-01.jpg",
+          "sha256": "5d851aa87eaa9865c631fc4d6af01f524a239866a31508e4a0baa51daa4f312e",
+          "bytes": 17531,
+          "actuallyOpenedAndVisuallyInspected": true,
+          "visualOutcome": "no_concrete_defect_observed"
+        }
+      ],
+      "observations": [
+        "Les neuf poses Canvas sont distinctes et entières ; coiffe, tenue sombre à tablier et volants blancs, petits nœuds, longues chaussettes et semelles roses restent reconnaissables.",
+        "Le portrait de sélection affiche la tenue Café attendue, dans ses proportions élancées et sans étirement visible. Aucun élément du personnage n’est coupé.",
+        "Le contour se détache proprement sur le fond de contrôle sombre. Les effets de frappe, d’accroupissement et de victoire du renderer sont visibles autour du personnage."
+      ]
+    },
+    {
+      "appearanceId": "glitch-murderdrones-ribbit-hommage",
+      "report": {
+        "file": "docs/art-generation/next-wave-20261120/review/glitch-murderdrones-ribbit-hommage/character-canvas-review.json",
+        "sha256": "7fa5147d35c50aa35b7c15f136c5e5135cdacac758e64e38012738b55beb48dc",
+        "bytes": 8449
+      },
+      "reportedCounts": {
+        "appearances": 1,
+        "expectedActions": 9,
+        "actions": 9,
+        "stances": 1,
+        "drawChecks": 20,
+        "archiveEntries": 0,
+        "portraits": 1,
+        "expectedPortraits": 1,
+        "missing": 0,
+        "aliasedActions": 0
+      },
+      "visuallyInspectedActionPoses": 9,
+      "visuallyInspectedPortraits": 1,
+      "views": [
+        {
+          "appearanceId": "glitch-murderdrones-ribbit-hommage",
+          "kind": "action_sheet",
+          "file": "docs/art-generation/next-wave-20261120/review/glitch-murderdrones-ribbit-hommage/actions-glitch-murderdrones-ribbit-hommage.jpg",
+          "sha256": "0c5806071dbe818a383fa32da215bdfce2cfa25aed7298e5de264191ea6e1446",
+          "bytes": 102257,
+          "actuallyOpenedAndVisuallyInspected": true,
+          "visualOutcome": "no_concrete_defect_observed"
+        },
+        {
+          "appearanceId": "glitch-murderdrones-ribbit-hommage",
+          "kind": "selection_portrait_sheet",
+          "file": "docs/art-generation/next-wave-20261120/review/glitch-murderdrones-ribbit-hommage/archive-portraits-01.jpg",
+          "sha256": "ff6f99efa906939117f882fd58bb107416baf008fa148c1aebc66689742b6c28",
+          "bytes": 18554,
+          "actuallyOpenedAndVisuallyInspected": true,
+          "visualOutcome": "no_concrete_defect_observed"
+        }
+      ],
+      "observations": [
+        "Bonnet à pompon, sweat sombre, motif blanc, bandes violettes, nœud rose, jambes vertes et bottes restent cohérents dans les neuf actions et le portrait.",
+        "Les poses de paume, coup de pied, saut, accroupissement et défaite sont lisibles ; la sélection affichée correspond à la version harmonisée de la main.",
+        "Aucune coupure d’extrémité, fond opaque résiduel ou déformation visible du portrait n’a été relevé à l’échelle des planches."
+      ]
+    },
+    {
+      "appearanceId": "glitch-murderdrones-ribbit-resident",
+      "report": {
+        "file": "docs/art-generation/next-wave-20261120/review/glitch-murderdrones-ribbit-resident/character-canvas-review.json",
+        "sha256": "f2110ab827ea27c77fa7f38c6488a89222a3a8bfc8aa7bfe9e92da9c9d0a3ccc",
+        "bytes": 8477
+      },
+      "reportedCounts": {
+        "appearances": 1,
+        "expectedActions": 9,
+        "actions": 9,
+        "stances": 1,
+        "drawChecks": 20,
+        "archiveEntries": 0,
+        "portraits": 1,
+        "expectedPortraits": 1,
+        "missing": 0,
+        "aliasedActions": 0
+      },
+      "visuallyInspectedActionPoses": 9,
+      "visuallyInspectedPortraits": 1,
+      "views": [
+        {
+          "appearanceId": "glitch-murderdrones-ribbit-resident",
+          "kind": "action_sheet",
+          "file": "docs/art-generation/next-wave-20261120/review/glitch-murderdrones-ribbit-resident/actions-glitch-murderdrones-ribbit-resident.jpg",
+          "sha256": "6ad74e280997c620ba20af4c89b4869cce3b2a9a7baf3e705ed309c8834e85fc",
+          "bytes": 116384,
+          "actuallyOpenedAndVisuallyInspected": true,
+          "visualOutcome": "no_concrete_defect_observed"
+        },
+        {
+          "appearanceId": "glitch-murderdrones-ribbit-resident",
+          "kind": "selection_portrait_sheet",
+          "file": "docs/art-generation/next-wave-20261120/review/glitch-murderdrones-ribbit-resident/archive-portraits-01.jpg",
+          "sha256": "0e218196f5bdf1681c865a44dd9b47dcb905b7e7cf8a08c11b5196cb2ce1e37f",
+          "bytes": 19088,
+          "actuallyOpenedAndVisuallyInspected": true,
+          "visualOutcome": "no_concrete_defect_observed"
+        }
+      ],
+      "observations": [
+        "La combinaison sombre et olive, les accents ambre, la lampe et la ceinture d’outils distinguent clairement le résident du corps mécanique de la fusion.",
+        "Les jambes et pieds nus, les gestes d’attaque, les mains visibles et les raccords restent lisibles dans le rendu ; la pose assise de défaite et le saut ne sont pas coupés.",
+        "Le portrait de sélection conserve la silhouette entière et ses proportions sans étirement apparent."
+      ]
+    },
+    {
+      "appearanceId": "glitch-murderdrones-ribbit-fusion",
+      "report": {
+        "file": "docs/art-generation/next-wave-20261120/review/glitch-murderdrones-ribbit-fusion/character-canvas-review.json",
+        "sha256": "6a10a095137fd0b1d912c428e72e6ab7e114bca4481d266ce255f6ca3eb6e01f",
+        "bytes": 8427
+      },
+      "reportedCounts": {
+        "appearances": 1,
+        "expectedActions": 9,
+        "actions": 9,
+        "stances": 1,
+        "drawChecks": 20,
+        "archiveEntries": 0,
+        "portraits": 1,
+        "expectedPortraits": 1,
+        "missing": 0,
+        "aliasedActions": 0
+      },
+      "visuallyInspectedActionPoses": 9,
+      "visuallyInspectedPortraits": 1,
+      "views": [
+        {
+          "appearanceId": "glitch-murderdrones-ribbit-fusion",
+          "kind": "action_sheet",
+          "file": "docs/art-generation/next-wave-20261120/review/glitch-murderdrones-ribbit-fusion/actions-glitch-murderdrones-ribbit-fusion.jpg",
+          "sha256": "bbc9a906c5e12638fb57dcb9d80b36460c3fec160cc85fef49622f409d42becc",
+          "bytes": 117825,
+          "actuallyOpenedAndVisuallyInspected": true,
+          "visualOutcome": "no_concrete_defect_observed"
+        },
+        {
+          "appearanceId": "glitch-murderdrones-ribbit-fusion",
+          "kind": "selection_portrait_sheet",
+          "file": "docs/art-generation/next-wave-20261120/review/glitch-murderdrones-ribbit-fusion/archive-portraits-01.jpg",
+          "sha256": "c560573539802f15555868cbb86ffff7971f7e254a5392028d0f992e4157bad4",
+          "bytes": 19114,
+          "actuallyOpenedAndVisuallyInspected": true,
+          "visualOutcome": "no_concrete_defect_observed"
+        }
+      ],
+      "observations": [
+        "Les deux dômes optiques noirs aux pupilles magenta, le museau menthe, le nœud mécanique et les articulations segmentées se retrouvent dans chaque action et le portrait.",
+        "La frappe, le saut, l’accroupissement et la défaite restent distincts ; aucune extrémité coupée ni pièce flottante ajoutée n’a été relevée.",
+        "La pose de victoire corrigée est celle affichée et le portrait correspond à la sélection mécanique entière, avec des proportions cohérentes."
+      ]
+    }
+  ],
+  "runtimeSourcesComparedToReports": [
+    {
+      "file": "combat/data.mjs",
+      "sha256": "7081daa24f8557c6964c75955071a3527ae49c03393e04d6d0dee0d97d4e5fe6"
+    },
+    {
+      "file": "combat/costume-additions.mjs",
+      "sha256": "dacc968d23ccffa246b686a641dedb0308b14c122652c4a477e72927ddd5e3e4"
+    },
+    {
+      "file": "combat/costume-next-wave-20261120.mjs",
+      "sha256": "dd644e2868c8c3ca92564ea64a18cccee1c1765f364d92c19e83689b7ca6cd4e"
+    },
+    {
+      "file": "combat/crossovers.mjs",
+      "sha256": "16e0b81e1f1581bd0b66dd0c61b1b55172ec27481f4792734f7e041f04a93711"
+    },
+    {
+      "file": "combat/crossover-npc-additions.mjs",
+      "sha256": "0656ad94c7565d6fd20b344dfc8039b1ea05e0387b035666726b3114f94fec9d"
+    },
+    {
+      "file": "combat/illustrations.mjs",
+      "sha256": "26aca8338be81bedbbbc1bb4bc59dd0aae8b7b7ef4d785cbbf353ac109c53b99"
+    },
+    {
+      "file": "combat/render.mjs",
+      "sha256": "a7005f67651ad0a2da5955f9146c95f6e7e93ce9c3c2f38bd2bf1c3791d12d73"
+    },
+    {
+      "file": "combat/render-poses.mjs",
+      "sha256": "21e3afba8c19723ffdcb383402cc6339b63cb58df5d4323fda2ebde093ce0b29"
+    },
+    {
+      "file": "combat/offline-manifest.mjs",
+      "sha256": "583ff9fc856c355d153eaba75ef4558f207094680136abcdab06d3fbc532bc1e"
+    },
+    {
+      "file": "combat/fidelity.mjs",
+      "sha256": "13f113f52d3d544eebc57064a1aafd1fae0c9d2485e5f567e52390f5c5a4e2dc"
+    },
+    {
+      "file": "combat/audio.mjs",
+      "sha256": "4fa423e9b31ddd2344df9d0824693fe08963d5117e35a87c2534ef391ed5c978"
+    },
+    {
+      "file": "combat/audio-ambiences.mjs",
+      "sha256": "38a5e4221066b3c2c2fec8f7af6977ca7c219a3117d73f1e00d1cddba34cba3c"
+    },
+    {
+      "file": "combat/progression.mjs",
+      "sha256": "ec113e2657bd6b479741543dd1f0fb8338195fb9ca1bb85e381834b35a0055e8"
+    },
+    {
+      "file": "combat/stories.mjs",
+      "sha256": "763d0012eec0e59ac9454a9467596d7296b65cc64002918cc5db462b09a1fec7"
+    },
+    {
+      "file": "combat/render-stage-motion.mjs",
+      "sha256": "94338bb181d5b0813be022d932f85bfdf5838f9111baba2d24a9ed3b3be088eb"
+    },
+    {
+      "file": "combat/stage-parallax.mjs",
+      "sha256": "1e01fa0b4932f0e670bb6fa746c48b57de0c726a5637891e68427a161aecc77d"
+    },
+    {
+      "file": "combat/engine.mjs",
+      "sha256": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807"
+    },
+    {
+      "file": "combat/session.mjs",
+      "sha256": "9dce5b9d2fff5316cd280c8f58038d06134935717c3fd637e76042e308a1d65e"
+    }
+  ],
+  "runtimeSourcesUnchangedAtReview": true,
+  "relatedNativeReview": {
+    "file": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/final-review.json",
+    "sha256": "89000b7f5a65c825139e3ccf37be7a846592275b0a0ba0e1868285a5f9ad5e7b",
+    "bytes": 49663
+  },
+  "hommageCorrectionsCrossReview": {
+    "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/review/corrections/cross-review-audit-github.json",
+    "sha256": "df92b06296f704ec7c216990069da1815bb4a85ec38a74f6118aed5ae9d55932",
+    "bytes": 7250
+  },
+  "concreteDefects": [],
+  "limitations": [
+    "The eight inspected sheets show 36 static action poses and four selection portraits. The four stances and opposite-facing draw checks are supported by the executed reports; they are not claimed to appear in these eight visual sheets.",
+    "The reports record 80 draw checks, zero missing assets and zero aliased actions. This review binds those reports and the exact inspected files by SHA256; it does not rerun or expand the tests.",
+    "Production Canvas2D under Node/native Skia is the execution surface. Browser, DOM, controls, input, audio, service-worker behavior and physical devices remain not executed here.",
+    "Static sheets do not establish animation timing, transitions, interpolation, collision accuracy or a complete frame-by-frame animation.",
+    "Café is an illustrated source adaptation; the three Murder Drones variants are original Encore creations. No canonical costume, episode-by-episode fidelity or official 1:1 anatomy certification is made.",
+    "The three-lobe hand treatment in the crossover set is an original harmonization choice. Fine digit counts are documented in native alpha reviews; masked or folded fingers are not fully countable from reduced Canvas previews.",
+    "The small arcs, ground shadows and action indicators visible in the sheets belong to the renderer presentation; the native PNG transparency was evaluated separately.",
+    "No native asset, runtime module, report or rendered sheet was modified during this inspection."
+  ],
+  "browserTestStatus": "not_executed",
+  "animationCertification": false,
+  "canonicalCertification": false
+}

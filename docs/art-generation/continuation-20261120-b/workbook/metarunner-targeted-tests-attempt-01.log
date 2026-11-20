@@ -1,0 +1,56 @@
+✔ the complete 472-costume prefix keeps its published IDs, order and fields (52.680391ms)
+✔ explicit addition order appends successive mixed Circus and NPC batches without shifting published records (58.092723ms)
+✔ ambiguous or incomplete addition registries fail with explicit IDs (6.451976ms)
+✔ the fourteen complete crossover wardrobes and the explicitly reviewed NPC groups coexist (13.743172ms)
+✔ the published Murder Drones Ribbit group retains its historical positions and all 468 earlier wardrobe entries (11.358282ms)
+✔ replays, profiles and campaign checkpoints retain historical and NPC crossovers only for their owner (10.586141ms)
+✔ the production tracker counts individual published poses and preserves notes across an update (4.993204ms)
+✖ historical crossover views remain WebP and new NPC families publish all eleven native PNG slots (390.311911ms)
+✔ the three explicit Ribbit Meta Runner designs append after both Cafe outfits and preserve their owner kit (18.053766ms)
+✖ all 33 Meta Runner slots retain native bytes, accepted receipts, frozen definitions and exact job references (48.271421ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 8
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1302.258378
+
+✖ failing tests:
+
+test at tests/combat-crossovers.test.mjs:138:1
+✖ historical crossover views remain WebP and new NPC families publish all eleven native PNG slots (390.311911ms)
+  AssertionError [ERR_ASSERTION]: glitch-metarunner-ribbit-hommage/selection
+      at TestContext.<anonymous> (file:///workspace/scratch/f726dc7a5ad2/CainOS/tests/combat-crossovers.test.mjs:146:14)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/combat-metarunner.test.mjs:45:1
+✖ all 33 Meta Runner slots retain native bytes, accepted receipts, frozen definitions and exact job references (48.271421ms)
+  AssertionError [ERR_ASSERTION]: assets/encore/crossovers/metarunner/ribbit/hommage/selection.png
+      at TestContext.<anonymous> (file:///workspace/scratch/f726dc7a5ad2/CainOS/tests/combat-metarunner.test.mjs:70:14)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

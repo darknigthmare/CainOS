@@ -1,0 +1,193 @@
+{
+  "schema": "encore-native-family-visual-review/v2",
+  "appearanceId": "glitch-murderdrones-ribbit-hommage",
+  "reviewer": "/root/ribbit_references",
+  "reviewedAt": "2026-11-20T15:35:56.536457+00:00",
+  "status": "accepted_with_stated_scope",
+  "nativeImagesInspectedIndividually": 11,
+  "nativeImageSlots": [
+    "selection",
+    "stance",
+    "intro",
+    "attack",
+    "heavy",
+    "hit",
+    "walk",
+    "jump",
+    "crouch",
+    "victory",
+    "defeat"
+  ],
+  "reviewerAuthoredCorrectionSlots": [
+    "selection",
+    "stance",
+    "intro",
+    "attack"
+  ],
+  "independentlyReviewedByThisReviewerSlots": [
+    "heavy",
+    "hit",
+    "walk",
+    "jump",
+    "crouch",
+    "victory",
+    "defeat"
+  ],
+  "authorReviewCrossCheckedBy": "/root/audit_github",
+  "crossReviewEvidence": {
+    "kind": "independent_visual_review_file",
+    "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/review/corrections/cross-review-audit-github.json",
+    "sha256": "df92b06296f704ec7c216990069da1815bb4a85ec38a74f6118aed5ae9d55932"
+  },
+  "alphaCompositedContactSheetInspected": true,
+  "contactSheet": {
+    "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/native-alpha-review.png",
+    "sha256": "b06823b2048af96b372c3898e528753998c42b76e86e53ab349a7b534e7d1531"
+  },
+  "generationCompletion": {
+    "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generation-completion.json",
+    "sha256": "5d2ee067533f476c96127015338623184f35c999681fe485f8aef3b6744cabeb"
+  },
+  "revision": {
+    "newAcceptedCorrections": 8,
+    "retainedOriginalDrawings": 3,
+    "correctionImageGenerationCalls": 9,
+    "rejectedAttempts": 1,
+    "archive": {
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/manifest.json",
+      "sha256": "96dc391d8abf344f0b3194e963528dddc65f7cba038444151e00050afec6c433"
+    },
+    "archiveUnchanged": true,
+    "unchangedFrozenDefinition": {
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/definitions/glitch-murderdrones-ribbit-hommage.json",
+      "sha256": "04c8fffed2e11021004c8e387f318b11f459f4f5cf97a5cfa8922bbe51529e93"
+    }
+  },
+  "files": [
+    {
+      "slot": "selection",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/selection.png",
+      "sha256": "dd43a5386874e25da5f61b0d823c87de3d146f024c96d64091e5957355c3ef5b",
+      "receipt": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/selection.json",
+        "sha256": "951ecd9ea639e632879c50bb5dc71f9aa5faa650d7948573f2fc07bbb8b82547"
+      },
+      "revisionDisposition": "new_native_harmonization"
+    },
+    {
+      "slot": "stance",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/stance.png",
+      "sha256": "6102d83c295487da3689dfe449ffdb9e4b62c20c19babd83415646e95a278f9a",
+      "receipt": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/stance.json",
+        "sha256": "8912d82f2d029822c7f20253b921103d165f890a48e29c796d5657b53cda6400"
+      },
+      "revisionDisposition": "new_native_harmonization"
+    },
+    {
+      "slot": "intro",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/intro.png",
+      "sha256": "daa9c9327805617cccd5d4a956147c2a2d7bbb3ef592184b08802182d4067fba",
+      "receipt": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/intro.json",
+        "sha256": "469a57bc66af99f2d0e4048ed69096543ec090e79707509ac998dd77eb5634cb"
+      },
+      "revisionDisposition": "new_native_harmonization"
+    },
+    {
+      "slot": "attack",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/attack.png",
+      "sha256": "13c985b85e8281c08c365ee7f1ec7123c4a97f180ebc60fa54ab195d18d8c1f7",
+      "receipt": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/attack.json",
+        "sha256": "15b31ddc3608f7e314299311661df5bc2195f988c80c4c9c3a6931b2f29f70cf"
+      },
+      "revisionDisposition": "new_native_harmonization"
+    },
+    {
+      "slot": "heavy",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/heavy.png",
+      "sha256": "90cd3b607f74c4618422ba172e8ac498e37e85212cd011de1a35bdadce0b35d3",
+      "receipt": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/heavy.json",
+        "sha256": "985b25aa8474eb4d3470415b2b322cee2d94c8ca9915f0efa4681bc8c66ab2d9"
+      },
+      "revisionDisposition": "retained_original_native"
+    },
+    {
+      "slot": "hit",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/hit.png",
+      "sha256": "67cb91d7585795e8436d6d317f09ba714786cf42fa5163ece0cf9c05d04d807c",
+      "receipt": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/hit.json",
+        "sha256": "428862709a22e6ee5d257f4d228f603c20eaf230ecd184ba71102327ac8ebc01"
+      },
+      "revisionDisposition": "new_native_harmonization"
+    },
+    {
+      "slot": "walk",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/walk.png",
+      "sha256": "c3c0881fd9e5833eaeb6f49a86db52d91d242c97d92a2b4989a30d4ec52af418",
+      "receipt": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/walk.json",
+        "sha256": "e676633cfa7a002678a5c9fdf9a6488627f4a4364a34399db8797f9826262b54"
+      },
+      "revisionDisposition": "retained_original_native"
+    },
+    {
+      "slot": "jump",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/jump.png",
+      "sha256": "7990c365e9d19c3337815b36f9544408ce549634bfb2275dc2bba6a1ce167c53",
+      "receipt": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/jump.json",
+        "sha256": "de73906dc90c8bb991be456afaa20a0ae9cad37a67edb5eaf42ce228ba778834"
+      },
+      "revisionDisposition": "new_native_harmonization"
+    },
+    {
+      "slot": "crouch",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/crouch.png",
+      "sha256": "e76f856d3a9ed50312204c9b10ca63cec8179a6310497f9491028284e4a29ba8",
+      "receipt": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/crouch.json",
+        "sha256": "1415be86323562800125ab70151c38b86166653c15770ab4895266deae527c80"
+      },
+      "revisionDisposition": "new_native_harmonization"
+    },
+    {
+      "slot": "victory",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/victory.png",
+      "sha256": "43ecd2b83b7c132a83ac0c2301879f01901dfd6f0710822a540263a4ca12733c",
+      "receipt": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/victory.json",
+        "sha256": "7e91e97ba92e7d2892cc7ef20d0e3a1ddb958dbe92d33fb1166deb15e09da2bb"
+      },
+      "revisionDisposition": "retained_original_native"
+    },
+    {
+      "slot": "defeat",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/defeat.png",
+      "sha256": "944594d769172882bf175f6927efad3e33e883cfd583f36e5a98654aea2390e4",
+      "receipt": {
+        "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/defeat.json",
+        "sha256": "b5d8297abdc4f0c60cb0cca25ac7c674f422cee2f20909ad47ff0ebfe3d22f98"
+      },
+      "revisionDisposition": "new_native_harmonization"
+    }
+  ],
+  "observations": [
+    "Onze personnages individuels entiers, poses distinctes et éléments caractéristiques cohérents : yeux surélevés, museau menthe, joues et nœud roses, bonnet à pompon, sweat sombre à motif blanc et bandes violettes, jambes vertes et bottines sombres.",
+    "Les huit mains ou ensembles de mains visés par la révision montrent maintenant trois lobes visibles, pouce compris. Les trois dessins conservés ne présentaient pas de quatrième doigt distinct nécessitant une révision.",
+    "L’alpha réellement composé est propre sur les diagnostics clairs, sombres et sur damier ; aucun halo de fond visible ni membre coupé relevé. Les RGB invisibles sous alpha nul restent préservés.",
+    "Les 11 sorties natives et leurs copies installées ont des octets et empreintes identiques. Les reçus actuels enregistrent includedInRuntime=true."
+  ],
+  "concreteDefects": [],
+  "limitations": [
+    "Le choix de trois lobes est une harmonisation originale du lot inspirée des sélections Résident et Fusion. Les sources officielles ne démontrent pas ici un nombre canonique de doigts.",
+    "Les poings fermés, les mains superposées et la main dans la poche ne permettent pas un comptage anatomique complet ; aucune extrémité cachée n’est inventée dans la conclusion.",
+    "Cette revue distingue les quatre corrections dont le reviewer est auteur des sept autres images relues indépendamment ; la revue croisée des quatre corrections est attribuée à audit_github.",
+    "Le costume et les proportions sont des créations pour Encore, sans revendication de tenue officielle ou de fidélité à un épisode.",
+    "Les diagnostics dérivés servent à la revue des PNG natifs. Ils ne constituent pas une validation navigateur, du chargeur Canvas, des collisions, des transitions ou d’une animation complète."
+  ],
+  "nativeFilesUnmodifiedByReview": true
+}

@@ -4,6 +4,25 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { CROSSOVER_COSTUMES } from '../combat/data.mjs';
+import { ART_FILES } from '../combat/offline-manifest.mjs';
+
+// Resolve the declared costume directory against the same published formats
+// as illustrationPath. New native PNG costumes must not inherit WebP paths.
+const publishedArt = new Set(ART_FILES);
+function costumeSource(entry, key, fallback = null) {
+  assert.ok(entry?.sprite?.crossoverDirectory, 'Missing crossover directory');
+  for (const slot of [key, ...(fallback ? [fallback] : [])]) {
+    for (const extension of ['webp', 'png']) {
+      const file = `${entry.sprite.crossoverDirectory}/${slot}.${extension}`;
+      if (publishedArt.has(file)) return path.posix.resolve('/combat', file);
+    }
+  }
+  assert.fail(`Missing published crossover slot: ${entry.id}/${key}`);
+}
+const costumeById = id => {
+  const entry = CROSSOVER_COSTUMES.find(item => item.id === id);
+  assert.ok(entry, 'Unknown crossover: ' + id); return entry;
+};
 
 let playwright;
 try { playwright = await import('playwright'); }
@@ -32,7 +51,7 @@ function traceDraws() {
       if (src) {
         const path = new URL(src, location.href).pathname;
         sources.set(this.canvas, path);
-        if (path.endsWith('/attack.webp')) {
+        if (/\/(attack|heavy)\.(webp|png)$/.test(path)) {
           if (original) window.decodedAttacks.add(path);
           else if (this.canvas.id === 'arena') {
             const probe = window.duelHeavies?.find(move => move.path === path && !move.observed);
@@ -58,6 +77,7 @@ try {
   const pairs = fusionsOnly
     ? [['pomni', 'murderdrones', 'fusion'], ['jax', 'murderdrones', 'fusion']]
     : [['pomni', 'murderdrones', 'resident'], ['jax', 'metarunner', 'hommage']];
+  const pairCostumes = pairs.map(([owner, series, style]) => costumeById(`glitch-${series}-${owner}-${style}`));
   for (const [side, [owner, series, style]] of pairs.entries()) {
     const picker = page.locator(`[data-costume-picker="variant-${side}"]`);
     await picker.locator('summary').click();
@@ -67,23 +87,23 @@ try {
     const options = await picker.locator(`#variant-${side} option`).evaluateAll(items => items.map(item => item.value));
     assert.deepEqual(options, ['', id]); // Keep current appearance available while filtering.
     await picker.locator(`#variant-${side}`).selectOption(id);
-    await page.waitForFunction(({side, owner, series, style}) => {
+    await page.waitForFunction(({side, source}) => {
       const canvas = document.querySelector(`[data-selection-artist="${side}"] canvas`);
-      return window.crossoverSources.get(canvas) === `/assets/encore/crossovers/${series}/${owner}/${style}/selection.webp`;
-    }, {side, owner, series, style});
+      return window.crossoverSources.get(canvas) === source;
+    }, {side, source: costumeSource(pairCostumes[side], 'selection')});
   }
   await page.locator('[data-action="start"]').click();
   await page.waitForFunction(() => window.Encore.ready && window.Encore.snapshot.phase === 'fight');
-  for (const [owner, series, style] of pairs) assert.ok(fetched.has(`/assets/encore/crossovers/${series}/${owner}/${style}/stance.webp`));
+  for (const entry of pairCostumes) assert.ok(fetched.has(costumeSource(entry, 'stance')));
   pass('Les filtres des deux joueurs, leurs portraits et leurs gardes ouvrent un duel local', { appearances: 2 });
-  const bindings = await page.evaluate(async pairs => {
+  const bindings = await page.evaluate(async selected => {
     const { getFighter } = await import('/combat/data.mjs');
-    window.duelHeavies = pairs.map(([owner, series, style], side) => {
-      const { startup, active, recovery } = getFighter(owner).moves.heavy;
-      return { side, startup, active, recovery, path: `/assets/encore/crossovers/${series}/${owner}/${style}/attack.webp` };
+    window.duelHeavies = selected.map(({ fighterId, path }, side) => {
+      const { startup, active, recovery } = getFighter(fighterId).moves.heavy;
+      return { side, startup, active, recovery, path };
     });
     return window.Encore.profile.settings.bindings.map(player => player.heavy[0]);
-  }, pairs);
+  }, pairCostumes.map(entry => ({ fighterId: entry.fighterId, path: costumeSource(entry, 'heavy', 'attack') })));
   await page.waitForFunction(() => window.duelHeavies.every(move => window.decodedAttacks.has(move.path)));
   await page.locator('#arena').focus();
   // Under CPU load a video frame can skip a five-tick active window. Let the
@@ -119,16 +139,16 @@ try {
   await seriesFilter.selectOption('murderdrones');
   await styleFilter.selectOption('fusion');
   await wardrobe.locator('#wardrobe-variant').selectOption('glitch-murderdrones-pomni-fusion');
-  await inventory.waitForFunction(() => {
+  await inventory.waitForFunction(sources => {
     const source = window.crossoverSources.get(document.querySelector('#wardrobe-preview'));
-    return ['/stance.webp', '/intro.webp'].some(view => source === '/assets/encore/crossovers/murderdrones/pomni/fusion' + view);
-  });
+    return sources.includes(source);
+  }, ['stance', 'intro'].map(key => costumeSource(costumeById('glitch-murderdrones-pomni-fusion'), key)));
   pass('Le vestiaire affiche la fusion de Pomni et réinitialise le filtre pour les tenues du cirque', { appearance: 'glitch-murderdrones-pomni-fusion' });
   await seriesFilter.selectOption('smg4');
   await wardrobe.locator('[data-costume-filter="style"]').selectOption('resident');
   await wardrobe.locator('#wardrobe-variant').selectOption('glitch-smg4-pomni-resident');
-  await inventory.waitForFunction(() => window.crossoverSources.get(document.querySelector('#wardrobe-preview')) === '/assets/encore/crossovers/smg4/pomni/resident/stance.webp' ||
-    window.crossoverSources.get(document.querySelector('#wardrobe-preview')) === '/assets/encore/crossovers/smg4/pomni/resident/intro.webp');
+  await inventory.waitForFunction(sources => sources.includes(window.crossoverSources.get(document.querySelector('#wardrobe-preview'))),
+    ['stance', 'intro'].map(key => costumeSource(costumeById('glitch-smg4-pomni-resident'), key)));
   await inventory.locator('[data-try-appearance="glitch-smg4-pomni-resident"]').click();
   await inventory.waitForFunction(() => window.Encore.ready);
   pass('La garde-robe compare le résident et permet de l’essayer en entraînement', { appearance: 'glitch-smg4-pomni-resident' });

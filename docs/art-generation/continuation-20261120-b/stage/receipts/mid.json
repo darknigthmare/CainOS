@@ -1,0 +1,69 @@
+{
+  "schema": "encore-native-stage-plane-receipt-v1",
+  "stageId": "softballfield",
+  "plane": "mid",
+  "status": "accepted_native",
+  "includedInRuntime": true,
+  "generatedOrigin": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-97322c27-0017-44d6-a898-075e5cef236b.png",
+  "nativePath": "native/mid.png",
+  "job": "jobs/mid-01.json",
+  "jobSHA256": "1d4643a407f8f00d640882e4200630503fb5830a0cda6d17e4bf4ebf759b1992",
+  "tool": "image_gen.imagegen",
+  "sha256": "66dfb01a55abd8b28b8cf404074b20021cfb5fff040d8c9efbc27efa24bf0842",
+  "bytes": 907121,
+  "size": [
+    1672,
+    941
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "visibleAlphaBoundsAbove12": [
+    0,
+    655,
+    1672,
+    941
+  ],
+  "copiedByteIdentically": true,
+  "noRetouchOrReencoding": true,
+  "inspectedAt": "2026-11-20T16:40:09.375448+00:00",
+  "observations": [
+    "Native transparent top with a low grass-to-earth transition spanning the frame.",
+    "Earth is clear and flat around the projected combat foot line; no object, fence or repeated stadium.",
+    "The horizontal infield strip is an original fighting-game adaptation, not a measured sports diamond."
+  ],
+  "portableReferences": [
+    {
+      "path": "native/far.png",
+      "sha256": "17ba8d0d695d9c1a2438e8bcf79c7a58f31505536b4e1a5bdc9c7c4bb7e1dc9f"
+    },
+    {
+      "path": "references/episode5-storyboard-L3-M15.jpg",
+      "sha256": "60f8b505c2dc00dbdf2c3f1312a706d9a1090682995a3e3ce6d9f987e0184a7a"
+    }
+  ],
+  "compositeReview": {
+    "phase": "final",
+    "report": "review/canvas-review.json",
+    "reportSHA256": "c32477f05d91a31131d20c91f1662b145b58b6893bf5ceba6342d99c35322526",
+    "image": "review/three-cameras.png",
+    "imageSHA256": "4ecaaef28e393fa1b7f744a3d7416e69459b07c25682b90a95917d279ebaa5c6",
+    "inspectedAt": "2026-11-20T17:36:28.170858+00:00",
+    "status": "accepted_with_stated_scope",
+    "scope": "Image bytes are identical to the final views actually inspected; report refreshed after a test-only source correction."
+  },
+  "activePath": "assets/encore/stages/softballfield/mid.png",
+  "activeSHA256": "66dfb01a55abd8b28b8cf404074b20021cfb5fff040d8c9efbc27efa24bf0842",
+  "installedAt": "2026-11-20T16:44:51.582454+00:00",
+  "preliminaryCompositeReview": {
+    "phase": "preliminary",
+    "report": "preliminary/review/canvas-review.json",
+    "reportSHA256": "06208f489110e318385ef42815d7b9464593e421c89e90f36bed171dd6e1e8ab",
+    "image": "preliminary/review/three-cameras.png",
+    "imageSHA256": "4ecaaef28e393fa1b7f744a3d7416e69459b07c25682b90a95917d279ebaa5c6",
+    "inspectedAt": "2026-11-20T17:06:48.313029+00:00",
+    "status": "accepted_with_stated_scope"
+  }
+}

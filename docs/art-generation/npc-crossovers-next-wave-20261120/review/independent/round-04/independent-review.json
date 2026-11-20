@@ -1,0 +1,49 @@
+{
+  "createdAt": "2026-11-20T15:28:31.278984+00:00",
+  "files": [
+    {
+      "variant": "hommage",
+      "slot": "defeat",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/defeat.png",
+      "sha256": "944594d769172882bf175f6927efad3e33e883cfd583f36e5a98654aea2390e4",
+      "receipt": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/defeat.json",
+      "diagnostic": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-04/hommage-defeat-alpha.jpg",
+      "diagnosticSha256": "8bfc8f3784d4d9bfe783175dcc9c3b3831e3c4eaeabde73862941562f4735c1a",
+      "visualReviewStatus": "no_concrete_defect_observed",
+      "receiptSha256AtSnapshot": "31cbac242d5a689e89f5e25f72de1a99572cc0358d987953ae4e81d240586794",
+      "receiptSha256": "b5d8297abdc4f0c60cb0cca25ac7c674f422cee2f20909ad47ff0ebfe3d22f98",
+      "receiptMetadataNote": "Current receipt hash after includedInRuntime=true; image hash unchanged from the inspected snapshot.",
+      "observations": [
+        "La main sur le genou et la main abaissée présentent trois lobes visibles ; pose, tenue et silhouette entière conservées. Composition alpha claire et sombre propre."
+      ]
+    },
+    {
+      "variant": "fusion",
+      "slot": "victory",
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/victory.png",
+      "sha256": "67d4f944fdc33b14d4983510fc546d24eac57cacaff2c9484c2565f26034bdd1",
+      "receipt": "docs/art-generation/npc-crossovers-next-wave-20261120/fusion/generated/victory.json",
+      "diagnostic": "docs/art-generation/npc-crossovers-next-wave-20261120/review/independent/round-04/fusion-victory-alpha.jpg",
+      "diagnosticSha256": "58b16951615844152be35b05c6cdac4ca23f46eec79a7fe0ac04cd827ee783d6",
+      "visualReviewStatus": "no_concrete_defect_observed",
+      "receiptSha256AtSnapshot": "7cfec831af72a3ac7014e24b61bd00c9f373b9260e13fd5b1899ce0edf60b8a7",
+      "receiptSha256": "426012aa030fe8cc967d597430196ad75ba2c261bce25a24e3d01c91f8666075",
+      "receiptMetadataNote": "Current receipt hash after includedInRuntime=true; image hash unchanged from the inspected snapshot.",
+      "observations": [
+        "Le poing levé montre deux doigts repliés et un pouce ; identité mécanique, raccords, pieds et silhouette entière conservés. Composition alpha claire et sombre propre."
+      ]
+    }
+  ],
+  "schema": "encore-independent-npc-visual-review/v1",
+  "reviewer": "ribbit_references",
+  "reviewedAt": "2026-11-20T15:35:12.960197+00:00",
+  "status": "accepted_with_stated_scope",
+  "inspectedAcceptedPngs": 2,
+  "scope": "Independent review of the final Hommage defeat correction and Fusion victory correction.",
+  "concreteDefects": [],
+  "limits": [
+    "Three visible hand lobes are an original batch harmonization choice, not canonical anatomy.",
+    "Closed fists and overlapped hands are assessed only where digits are visibly distinguishable.",
+    "Review of separate native alpha diagnostics; no browser, Canvas execution or animation claim."
+  ]
+}

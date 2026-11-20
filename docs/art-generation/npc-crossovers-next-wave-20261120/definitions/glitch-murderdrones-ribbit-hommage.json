@@ -1,0 +1,34 @@
+{
+  "id": "glitch-murderdrones-ribbit-hommage",
+  "fighterId": "ribbit",
+  "series": "murderdrones",
+  "introducedOn": "2026-11-20",
+  "sourceKind": "Création originale pour Encore",
+  "episodeFidelityClaim": false,
+  "canonicalCostumeClaim": false,
+  "bodyProportions": "Adaptation élancée de Ribbit déjà utilisée dans le jeu ; ne constitue pas un modèle canonique.",
+  "nativeFacing": "right",
+  "requiredSlots": [
+    "selection",
+    "stance",
+    "intro",
+    "attack",
+    "heavy",
+    "hit",
+    "walk",
+    "jump",
+    "crouch",
+    "victory",
+    "defeat"
+  ],
+  "referenceSourceURLs": [
+    "https://glitchproductions.store/products/ribbit-pendantz-blindbox",
+    "https://glitchproductions.store/products/uzi-v2-animatez"
+  ],
+  "style": "hommage",
+  "name": "Murder Drones · Hommage · Uzi Doorman",
+  "title": "Hommage · Uzi Doorman",
+  "design": "Ribbit biologique verte, grands yeux proéminents blancs/noirs, museau menthe, joues et nœud roses. Petit bonnet noir à pompon entre les yeux, sweat noir à capuche avec motif écran/os blanc et accents violets, bottines noires arrondies adaptées à ses pieds. Aucun masque, chevelure ou visière qui cacherait son identité. Hommage original à la tenue d’Uzi.",
+  "spriteDirectory": "assets/encore/crossovers/murderdrones/ribbit/hommage",
+  "fidelityScope": "Design et poses originaux ; références officielles utilisées uniquement pour l’identité de Ribbit et les motifs visuels de Murder Drones."
+}

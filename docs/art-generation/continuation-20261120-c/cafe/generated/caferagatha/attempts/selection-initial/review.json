@@ -1,0 +1,10 @@
+{
+  "status": "rejected_for_revision",
+  "reasons": [
+    "Unwanted lavender base-costume head bow persists above the cafe coif.",
+    "Unwanted luminous haze around silhouette."
+  ],
+  "nativeSourceFile": "/workspace/scratch/0c4db74bdd9c/generated_images/exec-4ce57fb1-a377-416a-895c-9fc6e69fc92f.png",
+  "sha256": "9623578081cd56ef87e5cf4c7e33855d665bf3f60b27e89ad434d7505d6dfca3",
+  "reviewAddendum": "The haze observation was made from a raw preview before opaque-background compositing; it does not by itself establish visible alpha-background haze. The unwanted lavender head bow remains the confirmed reason for revision. Final accepted images were reviewed as alpha composites on both light and dark backgrounds and have no observed visible colored halo."
+}

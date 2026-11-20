@@ -1,0 +1,88 @@
+{
+  "appearanceId": "glitch-murderdrones-ribbit-hommage",
+  "fighterId": "ribbit",
+  "series": "murderdrones",
+  "style": "hommage",
+  "slot": "intro",
+  "useCase": "precise-object-edit",
+  "prompt": "Use case: precise-object-edit. Make a minimal anatomy correction to one existing transparent 2D game sprite.\nImage 1 is the EDIT TARGET: the complete Ribbit Uzi-homage sprite. Preserve its pose, canvas orientation, long green frog proportions, whole intact head, both huge eyes, mint muzzle, pink cheeks and bow, black pom-pom beanie, black hoodie, exact white chest emblem, purple sleeve bands, fluffy dark hem, long green legs, purple ankle bands and black boots. Preserve the clean cel shading, line weights and colors. This is an original fan-game costume. Image 2 is the existing Ribbit anatomy guide ONLY for the simple frog-hand construction; do not copy its bare-body outfit or stance.\nThe LOWERED OPEN HAND at SCREEN-LEFT currently has four separate rounded digits. Redraw ONLY that lowered hand with EXACTLY THREE visible digits TOTAL, including the thumb: two long downward rounded fingers and one shorter side thumb. Keep the wrist and arm where they are. Do not change the raised hand touching the beanie or any other part of the pose.\nCRITICAL COUNT: THREE visible terminal hand lobes in total, not three fingers plus another thumb. This is a small silhouette correction, not a redesign. All other shapes and the whole original pose remain as close to image 1 as possible. Exactly one frog head, two arms, two hands, two legs and two boots. Entire character fully visible, turned SCREEN-RIGHT, without cropping any headwear, hand or sole. Retain genuine native RGBA transparency and clear margin around the complete silhouette. No background, floor, shadow, text, glow, halo, sticker edge, added prop or extra limb. Output one native transparent PNG.",
+  "referencePaths": [
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/intro.png",
+    "assets/encore/stance/ribbit.png"
+  ],
+  "referenceRoles": [
+    "Archived exact pose and costume to preserve; edit the specified hand only",
+    "Existing Ribbit frog hand anatomy only"
+  ],
+  "sourceUrls": [
+    "https://glitchproductions.store/products/ribbit-pendantz-blindbox",
+    "https://glitchproductions.store/products/uzi-v2-animatez"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "ribbit_references",
+  "correctionOf": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/intro.png",
+  "previousReceiptFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/intro.json",
+  "previousJobFile": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/jobs/intro.json",
+  "previousImageSHA256": "d4b6fd7e3de18af7d2346bbd45acfc77c374145b298083c3f2657f8db9c911b1",
+  "revisionReason": "Remove the fourth visible finger while preserving the original sprite and all unrelated details.",
+  "revisionScope": "Original three-lobe hand harmonization for this batch, consistent with its Resident/Fusion selections; no official or canonical anatomy claim.",
+  "schema": "encore-native-npc-crossover/v1",
+  "id": "glitch-murderdrones-ribbit-hommage:intro",
+  "status": "accepted_native",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/intro.png",
+  "targetFile": "assets/encore/crossovers/murderdrones/ribbit/hommage/intro.png",
+  "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-df935b0b-c17d-4fee-96ec-08f518090f52.png",
+  "sourceGenerationId": "exec-df935b0b-c17d-4fee-96ec-08f518090f52",
+  "definitionFile": "docs/art-generation/npc-crossovers-next-wave-20261120/definitions/glitch-murderdrones-ribbit-hommage.json",
+  "definitionSHA256": "04c8fffed2e11021004c8e387f318b11f459f4f5cf97a5cfa8922bbe51529e93",
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/intro.png",
+      "sha256": "d4b6fd7e3de18af7d2346bbd45acfc77c374145b298083c3f2657f8db9c911b1",
+      "bytes": 717176
+    },
+    {
+      "position": 2,
+      "file": "assets/encore/stance/ribbit.png",
+      "sha256": "db12ab81247248b83279ecfbd74bb5472e31e8c7424fafcbd5bfb964dcc96769",
+      "bytes": 615267
+    }
+  ],
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "alpha12Bounds": [
+    211,
+    19,
+    1026,
+    1239
+  ],
+  "alpha12BoundsThreshold": "alpha > 12",
+  "fullyTransparentPixels": 1138286,
+  "sha256": "daa9c9327805617cccd5d4a956147c2a2d7bbb3ef592184b08802182d4067fba",
+  "bytes": 724483,
+  "nativeCopyVerified": true,
+  "sourceKind": "Création originale pour Encore",
+  "episodeFidelityClaim": false,
+  "canonicalCostumeClaim": false,
+  "includedInRuntime": true,
+  "createdAt": "2026-11-20T15:24:27.432170+00:00",
+  "visualReview": {
+    "status": "accepted",
+    "reviewer": "ribbit_references",
+    "observations": [
+      "Main basse harmonisée à trois lobes visibles, pouce compris ; main au bonnet et geste de salut conservés. Figure entière, identité, vêtement et pose cohérents avec l’original archivé.",
+      "Composition alpha claire et sombre inspectée : pas de halo visible ni rognage. Harmonisation anatomique originale du lot, sans affirmation canonique. Octets natifs préservés sans retouche."
+    ],
+    "scope": "Original crossover identity, entire figure, costume continuity and readable game pose; no canonical costume or complete animation claim."
+  }
+}

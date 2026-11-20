@@ -1,0 +1,23 @@
+{
+  "schema": "encore-tracker-next-wave-baseline/v1",
+  "createdAt": "2026-11-20T14:58:35.742Z",
+  "files": {
+    "docs/DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx": {
+      "bytes": 725856,
+      "sha256": "048d758f614daf1ad388a12fed5955b853734c2c1c47d92fb7a6e493512eea12"
+    },
+    "docs/combat-tracker-data.json": {
+      "bytes": 5042071,
+      "sha256": "868975a52cb6e4f28adbf4bb98e957f142deef7a240472c4879c7c2c148feb56"
+    },
+    "docs/combat-workbook-verification.json": {
+      "bytes": 78489,
+      "sha256": "2869d022d06c0a267bf32e689ca2d1cf1e32ff35d195e759535b8096be6d14d9"
+    },
+    "docs/combat-qa-evidence-0.7.0.json": {
+      "bytes": 588368,
+      "sha256": "eb0edceabdd0f1e2a939f892327717ac59e0188c6a904f8aec9952ed089e74f5"
+    }
+  },
+  "scope": "Current published tracker baseline; historical evidence retained byte for byte."
+}

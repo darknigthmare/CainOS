@@ -1,0 +1,140 @@
+{
+  "schema": "encore-continuation-b-root-visual-review/v1",
+  "reviewedAt": "2026-11-20T17:35:12.204510+00:00",
+  "reviewer": "root",
+  "status": "accepted_with_stated_scope",
+  "families": [
+    {
+      "id": "cafekinger",
+      "report": "docs/art-generation/continuation-20261120-b/review/cafekinger/character-canvas-review.json",
+      "reportSHA256": "80a190f4a2fe39052663f61dce0f50a1307ad499a7336f63ecfffaa89b7c4fa6",
+      "actuallyViewed": [
+        {
+          "file": "docs/art-generation/continuation-20261120-b/review/cafekinger/actions-cafekinger.jpg",
+          "sha256": "943f0f9b676d67c40abf2ee122880d0ac1aec1147c39b1b0f486d40cda43c649"
+        },
+        {
+          "file": "docs/art-generation/continuation-20261120-b/review/cafekinger/archive-portraits-01.jpg",
+          "sha256": "527c5bfe68a5fd81e3e24f892f7c8109ed618fb928d5775ea9b65a2159be7f85"
+        }
+      ]
+    },
+    {
+      "id": "cafepomni",
+      "report": "docs/art-generation/continuation-20261120-b/review/cafepomni/character-canvas-review.json",
+      "reportSHA256": "09d44163bb774b6cb068e8735c81c7fda03294f43abdcd74b2976d959504dd3a",
+      "actuallyViewed": [
+        {
+          "file": "docs/art-generation/continuation-20261120-b/review/cafepomni/actions-cafepomni.jpg",
+          "sha256": "ae54fb18bae4d06ee5d8295547c10f66f5ade1353666e7edf58567b84ed9e080"
+        },
+        {
+          "file": "docs/art-generation/continuation-20261120-b/review/cafepomni/archive-portraits-01.jpg",
+          "sha256": "4ed34d9ea4e20b046afedc469d6ed5d65a69256645034a326e30e3b87e9cd069"
+        }
+      ]
+    },
+    {
+      "id": "glitch-metarunner-ribbit-hommage",
+      "report": "docs/art-generation/continuation-20261120-b/review/glitch-metarunner-ribbit-hommage/character-canvas-review.json",
+      "reportSHA256": "e3e804a604c5f37db1f67b5b1808dd2bc03ffdb0e3e77c69faaf5214fa9cade4",
+      "actuallyViewed": [
+        {
+          "file": "docs/art-generation/continuation-20261120-b/review/glitch-metarunner-ribbit-hommage/actions-glitch-metarunner-ribbit-hommage.jpg",
+          "sha256": "d3efabe205f86f1e10b203ddc96045e72e60d3f355377295bf4ea937ebc167de"
+        },
+        {
+          "file": "docs/art-generation/continuation-20261120-b/review/glitch-metarunner-ribbit-hommage/archive-portraits-01.jpg",
+          "sha256": "f33b734aa626d9bf497fd7b6c606a76ad2683a3f47c879c525b66fe6e98b176e"
+        }
+      ]
+    },
+    {
+      "id": "glitch-metarunner-ribbit-resident",
+      "report": "docs/art-generation/continuation-20261120-b/review/glitch-metarunner-ribbit-resident/character-canvas-review.json",
+      "reportSHA256": "a400a0f048ee54c0957dc03ed1c098eb2a7258df87d1f843b7092bb6f0649d4e",
+      "actuallyViewed": [
+        {
+          "file": "docs/art-generation/continuation-20261120-b/review/glitch-metarunner-ribbit-resident/actions-glitch-metarunner-ribbit-resident.jpg",
+          "sha256": "d019cb0822c062f34b9c8c728fa6f0584674006f2d8e2b8aac70a4ee7f7a57f4"
+        },
+        {
+          "file": "docs/art-generation/continuation-20261120-b/review/glitch-metarunner-ribbit-resident/archive-portraits-01.jpg",
+          "sha256": "d498cc14c5040ca0ad4bdfc5b2eaa9a4c51b9d458051fa738b069c4a41c56dec"
+        }
+      ]
+    },
+    {
+      "id": "glitch-metarunner-ribbit-fusion",
+      "report": "docs/art-generation/continuation-20261120-b/review/glitch-metarunner-ribbit-fusion/character-canvas-review.json",
+      "reportSHA256": "e287e46ef6227a078bfa53904713f9c5817421470c7775ebc00897c03324ae5d",
+      "actuallyViewed": [
+        {
+          "file": "docs/art-generation/continuation-20261120-b/review/glitch-metarunner-ribbit-fusion/actions-glitch-metarunner-ribbit-fusion.jpg",
+          "sha256": "1e11192fdf730c968194461140470c7f1075c25e62f37d98bd3b7ab73833e396"
+        },
+        {
+          "file": "docs/art-generation/continuation-20261120-b/review/glitch-metarunner-ribbit-fusion/archive-portraits-01.jpg",
+          "sha256": "4276d5e0537e106c60849a88604c16aefaced78fcd4797f98335d0b6b307235c"
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "families": 5,
+    "actionSheetsViewed": 5,
+    "actionDrawingsViewed": 45,
+    "portraitSheetsViewed": 5,
+    "portraitsViewed": 5,
+    "technicalDirectionalDrawChecks": 100
+  },
+  "observations": [
+    "Les cinq planches de neuf actions et les cinq portraits ont été effectivement inspectés : silhouettes entières, cadrage utile, transparence et matériaux cohérents.",
+    "Kinger Café conserve sa base de pièce et ses gants flottants sans jambes ajoutées ; Pomni Café conserve ses deux nœuds, grelots et chaussures bicolores.",
+    "Les trois styles Meta Runner restent distincts : tenue hommage cyan et blanche, tenue de compétition marine et magenta, corps de fusion entièrement synthétique.",
+    "Les positions de marche, saut, accroupissement, victoire, défaite, attaque et coup lourd sont lisibles ; chaque coup lourd est un dessin propre. Les effets de combat ajoutés par le renderer restent distincts des PNG.",
+    "Les cinq portraits entrent dans leur cadre sans découpe du corps ni étirement visible. Aucun défaut concret restant relevé sur ces dix planches."
+  ],
+  "technicalEvidence": {
+    "file": "canvas-summary.json",
+    "sha256": "4844f9395c8f57ce48d65e401f010a9ebed08db5e2e8aad4b9ae4c6e6c8da3e5",
+    "scope": "Les gardes et actions sont contrôlées dans les deux orientations par le renderer de production. Les cinq gardes ont une vérification technique, sans planche séparée prétendue vue ici ; leurs PNG natifs ont été inspectés dans les revues natives."
+  },
+  "nativeReviews": [
+    "cafe/review/native-final-review.json",
+    "metarunner/review/native-alpha-review-27.json",
+    "metarunner/review/root-final-six-review.json"
+  ],
+  "limitations": [
+    "Rendu Canvas2D sous Node/Skia ; aucun parcours navigateur, entrée, audio, service worker ou essai matériel.",
+    "Onze images statiques par famille ne constituent pas un cycle animé complet.",
+    "Les adaptations commerciales Café et les crossovers originaux ne valent pas certification canonique générale 1:1."
+  ],
+  "stageFinalReview": {
+    "reviewedAt": "2026-11-20T17:37:17.751118+00:00",
+    "status": "accepted_with_stated_scope",
+    "report": "stage/verification.json",
+    "reportSHA256": "0b7e295a0a6031f4b799f0ee68de51cfa745fd5fd06a725680485e0a95962cf8",
+    "actuallyViewed": [
+      {
+        "file": "stage/review/three-cameras.png",
+        "sha256": "4ecaaef28e393fa1b7f744a3d7416e69459b07c25682b90a95917d279ebaa5c6"
+      },
+      {
+        "file": "stage/review/fallback.png",
+        "sha256": "e41a25c45e02ed2f32a73fb766a4af7eb19b91b87027150e178d023245a7f4ba"
+      }
+    ],
+    "observations": [
+      "La planche finale montre les trois cadrages et les trois scènes avec Pomni et Gummigoo. La piste horizontale, les pieds et les ombres restent lisibles aux positions gauche, centre et droite.",
+      "Les herbes du premier plan restent en bas ; aucun panneau, filet ou obstacle ne masque la piste. Les repères de tribunes, projecteurs et tableau sont lisibles.",
+      "Le rendu de secours conserve une scène de stade simple et une piste dégagée. Il est une adaptation procédurale, pas une reproduction détaillée du PNG."
+    ],
+    "scope": "Deux images de diagnostic effectivement inspectées par root ; les six contrôles et les empreintes des huit vues proviennent du rapport technique final. Aucune navigation ou interaction navigateur.",
+    "metadataRefresh": {
+      "at": "2026-11-20T17:38:50.065484+00:00",
+      "reason": "Only the archived Markdown source path was corrected and the archive-manifest hash propagated. Canvas report, reviewed images, test and runtime sources are unchanged. No rerender or new manual image inspection is claimed by this metadata refresh.",
+      "previousReview": "attempts/consolidation-before-stage-archive-path-fix/visual-review.json"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "appearanceId": "cafepomni",
+  "slot": "hit",
+  "useCase": "stylized-concept",
+  "prompt": "Use case: stylized-concept.\nAsset type: ONE original full-body hit action sprite for the existing Digital Circus Encore game.\n\nReference image 1 is the accepted cafepomni selection: lock its identity, proportions, line weight, cel shading, costume construction and colors. Reference image 2 is the official Animate Cafe illustration detail: preserve its distinctive outfit. Make a genuinely new hit pose, not a flipped or mechanically moved copy. Only one character.\n\nPomni keeps her white face, brown bob, red/blue pinwheel irises, red cheeks, complete red/dark-navy two-point jester hat with TWO YELLOW bells, white frilled headband and navy bows. Short dark navy puff-sleeved dress, white ruffled bib/apron, BLUE bow at anatomical right and RED bow at anatomical left, white gloves and scalloped cuffs, two slender WHITE legs, white scalloped ankle cuffs. Right anatomical shoe is RED and left anatomical shoe is DARK NAVY with white accents. Preserve the neck bow shown in the accepted selection. Do not swap the shoes or apron bows, darken the legs, introduce yellow ankle cuffs or convert the hat to white pompoms.\n\nPOSE: Hit reaction: torso recoils toward screen-left while face and gaze remain toward screen-right; eyes widen with a startled open mouth. Two white-gloved hands lift defensively, legs stagger to catch balance. Keep the hat and all clothes intact, no injuries or marks.\n\nNative orientation is SCREEN-RIGHT. Keep all visible costume asymmetry consistent with the selection. Crisp dark contours and restrained flat two-tone cel shading, same polished 2D game family. Center the complete silhouette with generous transparent space around every extremity; use a wider composition if needed so nothing touches the edges. Native transparent RGBA. No scenery, floor, cast shadow, halo, bloom, sticker outline, motion streaks, text, logo, watermark, duplicate figure or additional limbs. Preserve all original image pixels in the delivered native result; no painted checkerboard or solid background.",
+  "referencePaths": [
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/selection.png",
+    "docs/art-generation/continuation-20261120-b/cafe/references/cafepomni-detail.png"
+  ],
+  "referenceRoles": [
+    "Accepted selection: drawing family, identity, proportions and costume construction",
+    "Official cafe illustration: outfit authority"
+  ],
+  "sourceUrls": [
+    "https://prtimes.jp/main/html/rd/p/000008857.000016756.html",
+    "https://www.animatecafe.jp/event/ac000791"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "ribbit_references",
+  "definitionSha256": "93b2acb2d0b4fb269727a18e0f16460ee610979089227acb8dbaa7d39720014c",
+  "expectedReferenceSHA256": {
+    "docs/art-generation/continuation-20261120-b/cafe/generated/cafepomni/selection.png": "dd3053cb2f9b1f458749c57d13218089901eae246b1834b771267d8019342da9",
+    "docs/art-generation/continuation-20261120-b/cafe/references/cafepomni-detail.png": "b5bd88345eeed2098cc9b281d4aee07fea9d2c41c77699ffe3dadf53daa59b09"
+  }
+}

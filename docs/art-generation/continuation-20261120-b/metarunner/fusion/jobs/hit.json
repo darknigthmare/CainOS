@@ -1,0 +1,14 @@
+{
+  "appearanceId": "glitch-metarunner-ribbit-fusion",
+  "fighterId": "ribbit",
+  "series": "metarunner",
+  "style": "fusion",
+  "slot": "hit",
+  "nativeFacing": "right",
+  "prompt": "Draw ONE new complete full-body character sprite from the provided CLEAN identity reference, native PNG with a TRUE transparent background. Match identity, proportions, exact costume and materials. Crisp cel shading and solid outlines. No background lighting, no aura, no bloom, no haze, no cast shadow or floor: all outside-of-silhouette pixels are transparent except ordinary one-pixel edge antialiasing. Keep generous margins around whole body. One character, no text or extras. A full-body ORIGINAL digital avatar fusion of Ribbit with Meta Runner cybernetic gaming aesthetics. Entire anatomy reconstructed as a sleek synthetic amphibian: emerald-green faceted frog head, two huge bulging WHITE eyes with black pie-cut pupils, mint muzzle plate, pink cheek inlays and a readable friendly frog smile. Long slim cybernetic limbs, pearlescent WHITE and pale-CYAN armour plates, dark NAVY flexible joints, thin cyan circuit seams; mint oval abdominal plate. A MAGENTA bow-shaped luminous solid chest node is integrated into sternum, NOT fabric. Both mechanical hands have exactly THREE rounded articulated digits. Long frog-shaped mechanical feet end in THREE broad rounded lobes, not human shoes. Body is solid opaque with clean cel-shaded panels, subtle small edge lights only. No clothes, hoodie, hair, tail, wings, claws, floating display, separate particles, all-black visor or yellow Murder Drones eyes. Preserve Ribbit identity, do not copy the human/jester features from style reference. POSE: Recoil reaction: lean torso and head back toward image left, surprised open mouth, knees bent. Both arms raised apart with TWO SEPARATE CLOSED three-digit mechanical fists (two curled fingers, one folded thumb), not open hands. Full body and both feet clearly inside image.",
+  "referencePaths": [
+    "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/selection.png"
+  ],
+  "reviewer": "root",
+  "definitionSHA256": "8838b39db6a0ab378603aec7ad863ecb9bb917017eca00fb1ed08efd2ca064b3"
+}

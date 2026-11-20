@@ -1,0 +1,15 @@
+{
+  "appearanceId": "glitch-metarunner-ribbit-fusion",
+  "fighterId": "ribbit",
+  "series": "metarunner",
+  "style": "fusion",
+  "slot": "heavy",
+  "nativeFacing": "right",
+  "prompt": "Edit the FIRST referenced image into a clean native TRANSPARENT PNG cutout. Keep its full-body two-palm forward lunge pose, exact outfit and face. The SECOND reference is the accepted identity and material reference. Remove ALL diffuse grey, green, purple or cyan haze outside the character silhouette: every background pixel outside normal crisp edge antialiasing must be truly alpha zero. No outer glow, no bloom, no rim fog, no floor, no shadow, no black background. Preserve the entire figure and ample transparent margins. IMPORTANT ANATOMY FIX: each hand must have exactly THREE digits TOTAL: TWO elongated rounded fingers plus ONE shorter opposing thumb, no fourth digit. Maintain the exact original biological/cybernetic sides and materials. This is the same original Ribbit crossover design, not a new outfit. A full-body ORIGINAL digital avatar fusion of Ribbit with Meta Runner cybernetic gaming aesthetics. Entire anatomy reconstructed as a sleek synthetic amphibian: emerald-green faceted frog head, two huge bulging WHITE eyes with black pie-cut pupils, mint muzzle plate, pink cheek inlays and a readable friendly frog smile. Long slim cybernetic limbs, pearlescent WHITE and pale-CYAN armour plates, dark NAVY flexible joints, thin cyan circuit seams; mint oval abdominal plate. A MAGENTA bow-shaped luminous solid chest node is integrated into sternum, NOT fabric. Both mechanical hands have exactly THREE rounded articulated digits. Long frog-shaped mechanical feet end in THREE broad rounded lobes, not human shoes. Body is solid opaque with clean cel-shaded panels, subtle small edge lights only. No clothes, hoodie, hair, tail, wings, claws, floating display, separate particles, all-black visor or yellow Murder Drones eyes. Preserve Ribbit identity, do not copy the human/jester features from style reference.",
+  "referencePaths": [
+    "docs/art-generation/continuation-20261120-b/metarunner/fusion/rejected/heavy-attempt01.png",
+    "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/selection.png"
+  ],
+  "reviewer": "root",
+  "definitionSHA256": "8838b39db6a0ab378603aec7ad863ecb9bb917017eca00fb1ed08efd2ca064b3"
+}

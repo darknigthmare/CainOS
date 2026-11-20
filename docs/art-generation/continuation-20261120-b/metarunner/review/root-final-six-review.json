@@ -1,0 +1,79 @@
+{
+  "schema": "encore-metarunner-root-final-six-review/v1",
+  "reviewedAt": "2026-11-20T17:22:46.333469+00:00",
+  "reviewer": "root",
+  "status": "accepted_with_stated_scope",
+  "sourceReview": {
+    "file": "docs/art-generation/continuation-20261120-b/metarunner/review/audit-github-victory-defeat.json",
+    "sha256": "9ac4b2f17dfda94d4abd2f6f151ec6cc37e916ad5dde61d733362b690a36a39e"
+  },
+  "images": [
+    {
+      "style": "hommage",
+      "slot": "victory",
+      "nativePNG": "hommage/generated/victory.png",
+      "nativeSHA256": "7bf70e391f99cf1930c3befc11606bfde8c42ea465e4719cb5aa08d3e5ae6acf",
+      "inspectedDiagnostic": {
+        "file": "hommage/review/audit-victory-defeat/victory-alpha.jpg",
+        "sha256": "65ed216ead0422b2582034a0bd77537c504d24c3c611f43ebcc204c313630387"
+      }
+    },
+    {
+      "style": "hommage",
+      "slot": "defeat",
+      "nativePNG": "hommage/generated/defeat.png",
+      "nativeSHA256": "bde4f046c964478fd51496078e7b45d6437ae56ba229554ed4b86df38cd8a03b",
+      "inspectedDiagnostic": {
+        "file": "hommage/review/audit-victory-defeat/defeat-alpha.jpg",
+        "sha256": "bfa0077914e631bc0975cd41012de2b66a1721c31d2292448cb4d88f7bd17c65"
+      }
+    },
+    {
+      "style": "resident",
+      "slot": "victory",
+      "nativePNG": "resident/generated/victory.png",
+      "nativeSHA256": "49a47fc5a216966671fc2caf17d4f1df11405d2b5721bffe4c078b872665300a",
+      "inspectedDiagnostic": {
+        "file": "resident/review/audit-victory-defeat/victory-02-alpha.jpg",
+        "sha256": "930c677fcbbb12e6e5c1c08e0aac21108d9609a942ae76f80f64c59268c67b78"
+      }
+    },
+    {
+      "style": "resident",
+      "slot": "defeat",
+      "nativePNG": "resident/generated/defeat.png",
+      "nativeSHA256": "2ce6b4e07748f736cac688fdbb803ed6adb02537a64253e1574e3fc76b9aaa5b",
+      "inspectedDiagnostic": {
+        "file": "resident/review/audit-victory-defeat/defeat-alpha.jpg",
+        "sha256": "bd507baa276550097afb10db61616d0d9e50dfaab2e284c1f8dc4da0cd4a6472"
+      }
+    },
+    {
+      "style": "fusion",
+      "slot": "victory",
+      "nativePNG": "fusion/generated/victory.png",
+      "nativeSHA256": "de74398e329f6a69a95d2f192ed697651f4281d8d44eb5fe0aef2ee764eb4550",
+      "inspectedDiagnostic": {
+        "file": "fusion/review/audit-victory-defeat/victory-03-alpha.jpg",
+        "sha256": "21908d1bb8672feefc8717f5c277e985685b181a0210f74b3f3e6564ddc73eea"
+      }
+    },
+    {
+      "style": "fusion",
+      "slot": "defeat",
+      "nativePNG": "fusion/generated/defeat.png",
+      "nativeSHA256": "b2c2c71841837209ca1978d6119e6c4b0822d1ca51b74fb1fbfbaad497e57e9f",
+      "inspectedDiagnostic": {
+        "file": "fusion/review/audit-victory-defeat/defeat-alpha.jpg",
+        "sha256": "221888c5b54456018f11ee12d57db3f596e7ea8539a6065f50fbd55c495ce1fd"
+      }
+    }
+  ],
+  "observations": [
+    "Les six compositions alpha clair/sombre ont été effectivement vues par root. Silhouettes entières, chaussures ou pieds intégralement cadrés et absence de halo diffus sur les deux fonds.",
+    "Les trois tenues maintiennent leurs matériaux et repères propres. Hommage et Résident conservent leur avant-bras cybernétique gauche ; Fusion conserve un corps synthétique complet.",
+    "Les poings de victoire corrigés et les mains de défaite ont une lecture cohérente à trois lobes, compte tenu des poings fermés et des occlusions. La victoire Fusion finale montre trois lobes sur chacune des deux mains.",
+    "Victoire et défaite restent distinctes et lisibles. Aucun défaut concret restant relevé sur ces six vues."
+  ],
+  "scope": "Revue visuelle des six PNG natifs via leurs compositions alpha de diagnostic uniquement. Pas de certification canonique, de cycles animés complets ni de validation navigateur. Les 27 autres poses ont leur revue root distincte."
+}

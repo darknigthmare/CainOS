@@ -1,0 +1,163 @@
+{
+  "schema": "encore-softballfield-verification-v1",
+  "createdAt": "2026-11-20T17:34:06.265371+00:00",
+  "phase": "final-manifest-canvas-reviewed-browser-not-executed",
+  "baseLocalCommit": "38e8000cad61f4b229ad300877f44c31356343fa",
+  "baseRemoteCommit": "6c99eb430e0ffcc17406428fee1ff6d8e2edeab4",
+  "counts": {
+    "sharedStagesBefore": 24,
+    "sharedStagesAfter": 25,
+    "dedicatedArrangements": 54,
+    "newNativePNGs": 3,
+    "newNativeBytes": 3125830,
+    "generationCalls": 4,
+    "acceptedGenerationCalls": 3,
+    "rejectedGenerationCalls": 1,
+    "existingPlanesPreserved": 72,
+    "totalSharedStagePlanes": 75,
+    "targetedTests": 111,
+    "targetedFailures": 0,
+    "historicalStoryRoutes": 54,
+    "historicalProgramFixtures": 75,
+    "historicalCheckpoints": 450,
+    "historicalReplayFixtures": 4,
+    "historicalReplayFrames": 1052,
+    "historicalCostumePrefix": 472,
+    "nativeCopyComparisons": 6,
+    "acceptedInputReferenceHashComparisons": 5,
+    "canvasChecks": 6,
+    "canvasCameras": 3,
+    "canvasCombatScenes": 3,
+    "browserSuccessfulChecks": 0
+  },
+  "sources": {
+    "combat/data.mjs": "3e8933c915c92380fe0c0a1d7342f67fb3d947dead8ba05749ac7139773c9a58",
+    "combat/fidelity.mjs": "137a3a292f85e16989f0afd376e8d8bf9266a1569e378299f92c17eb9407e103",
+    "combat/progression.mjs": "f17b878a5d3afc6d88fb1450cde340b9c716cf378c87d5c529c21fb4a45f88ee",
+    "combat/stories.mjs": "763d0012eec0e59ac9454a9467596d7296b65cc64002918cc5db462b09a1fec7",
+    "combat/render.mjs": "0fd83aaa999edab666be0a7b4538338b57ec33cb2f90e041da18a47c7de87347",
+    "combat/render-stage-motion.mjs": "3b9c1b583b58a357196e3e1ca498ede8bf20dfd0151a5ec7ec13dc0e4c9051bc",
+    "combat/stage-parallax.mjs": "1e01fa0b4932f0e670bb6fa746c48b57de0c726a5637891e68427a161aecc77d",
+    "combat/engine.mjs": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
+    "combat/offline-manifest.mjs": "3eed3002ea71f36129e95ff4d08480aafc615816a2487f4a49697630f75fe3af",
+    "combat/audio.mjs": "438cd9eec28d2311713f02e331839a6e87cac22c6ddf30563841ffbdf244ba45",
+    "combat/audio-ambiences.mjs": "d613ccf9fd3dca2c235ac21f7fc22060b41df424e87db515642655ac84d96e91",
+    "combat/costume-order.mjs": "f053e51f49a81c7a340ab246d85f4945260d14ed7c7630dfd002feb2d6e6d5f7",
+    "tests/combat-softballfield.test.mjs": "df3be4bfe202aa13f0c67017f1208e5ae754ef40437b92bc65c0e20d40f8e293",
+    "tests/combat-fidelity.test.mjs": "1227cae8fb2584ce495bac27011281c692b90a8be38607c9da8e3fb6b8bada50",
+    "scripts/review-combat-softballfield-20261120-b.mjs": "f91423d2b0b21b157894c918f7063ec4c5e6d7c21cd929472914df5c6f960886",
+    "combat/session.mjs": "9dce5b9d2fff5316cd280c8f58038d06134935717c3fd637e76042e308a1d65e",
+    "tests/fixtures/combat-pre-softballfield.json": "504bf44aaa1e84b46482385755ad468283ae84e95bb4c594f82b810bd0c65dfe"
+  },
+  "sourceFreeze": "Current hashes describe the final Canvas source freeze. The earlier targeted execution retains its separate source snapshot; integrated global QA is recorded independently.",
+  "unchangedHistoricalRuntime": {
+    "combat/engine.mjs": true,
+    "combat/session.mjs": true,
+    "combat/stories.mjs": true,
+    "combat/stage-parallax.mjs": true
+  },
+  "fixtureSHA256": "504bf44aaa1e84b46482385755ad468283ae84e95bb4c594f82b810bd0c65dfe",
+  "testLog": {
+    "path": "targeted-tests.log",
+    "sha256": "d851de47a498909704c744a4e4ec7812a57fc0994be82296d6af791d1acfe6f4",
+    "scope": "Dated targeted execution before final character integration. Not rerun during this final Canvas refresh."
+  },
+  "targetedTests": {
+    "evidence": "targeted-test-evidence.json",
+    "sha256": "4bf57a5867dc136a51d5436e9bc5a644fff541c32b23a7480bc9f31715a89619",
+    "startedAt": "2026-11-20T16:52:01.953220+00:00",
+    "endedAt": "2026-11-20T16:52:05.277173+00:00",
+    "tests": 111,
+    "pass": 111,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0,
+    "rerunDuringFinalCanvasRefresh": false
+  },
+  "existingPlanes": {
+    "count": 72,
+    "changed": 0,
+    "proof": "existing-planes-preserved-final.json",
+    "proofSHA256": "d82a5461f1ea717d9906d98d887a9fd0f0623ea199864614d475259f82201c77",
+    "reverifiedAtFinalCanvasReview": "2026-11-20T17:34:06.265371+00:00"
+  },
+  "canvas": {
+    "status": "passed-and-visually-inspected",
+    "report": "review/canvas-review.json",
+    "reportSHA256": "1264fc7d7bcda528b72efaf9cc82fe74b02d52e557753b15c97a4144d580c60c",
+    "composite": "review/three-cameras.png",
+    "compositeSHA256": "4ecaaef28e393fa1b7f744a3d7416e69459b07c25682b90a95917d279ebaa5c6",
+    "visualReview": "visual-review.md",
+    "visualReviewSHA256": "f2c80f5319f26bc0aa1b048810499cd6600423bb0063a83cb147c0cb026eff75",
+    "log": "canvas-review.log",
+    "logSHA256": "a072300a01dd13e4175cb596f6f36f761461ee60c8956acdd9d96ef2d3db127e",
+    "checks": 6,
+    "cameras": 3,
+    "scenes": 3,
+    "offline": {
+      "version": "0.7.0-17366238b519",
+      "artVersion": "20311abb70caa13c",
+      "images": 5874,
+      "bytes": 3173741905
+    },
+    "scope": "Production loader and renderer on the final manifest; no browser, input, audio, physical-device or canonical scene-certification claim.",
+    "pixelComparisonWithPreliminary": {
+      "unchangedViews": [
+        "planes-left.png",
+        "planes-center.png",
+        "planes-right.png",
+        "scene-left.png",
+        "scene-center.png",
+        "scene-right.png",
+        "three-cameras.png",
+        "fallback.png"
+      ],
+      "count": 8
+    },
+    "independentPreliminaryVisualReview": "preliminary/independent-visual-review.json",
+    "independentPreliminaryVisualReviewSHA256": "c248d1b656b32b9c9828a0894b5838915461592b48fa6ae6bb5d3e21a024c5f6",
+    "independentReviewScope": "The dated preliminary inspection is preserved, not claimed as a new independent final-manifest execution. The reviewed output images are byte-identical."
+  },
+  "browser": {
+    "status": "not_executed",
+    "attempted": false,
+    "successfulChecks": 0,
+    "report": "browser-result.json",
+    "reportSHA256": "fc3b47d5a2360f8142f949473819e4f35904ae266c4bf2579e00e3e9b7691732",
+    "log": "browser.log",
+    "logSHA256": "88772ea0a34d72d219c2d354b2e4089bee67145e500b21109391a010a9376328",
+    "historicalAttempt": {
+      "receipt": "../../stage-next-wave-20261120/browser-result.json",
+      "receiptSHA256": "959583d46b6836a9fca4cbd73d3fff727af7b8df5d29a31b20ccf03bd4c319a0",
+      "startedAt": "2026-11-20T14:51:46.083930+00:00",
+      "endedAt": "2026-11-20T14:51:47.586016+00:00",
+      "status": "environment_blocked_before_navigation",
+      "successfulChecks": 0,
+      "exitCode": 1,
+      "log": "../../stage-next-wave-20261120/browser.log",
+      "logSHA256": "c086a582f6a8d233ccb6e4012dc90e1a771139518a6931c10d3936209f31feb9",
+      "scope": "Historical Barnoir attempt, before its final manifest. Does not validate softballfield or any current costume."
+    },
+    "reason": "Identical Chromium environment failure already observed before navigation; no repeat requested by the parent task.",
+    "scope": "No local browser execution for this continuation. Production Canvas evidence is separate.",
+    "historicalParentCI": "ci-parent-final.json",
+    "historicalParentCISHA256": "ecfb057379605c0848cdeb66ef2fdafb2124adceb34008f5dd4ad5f4ec0f8ef3"
+  },
+  "globalQA": {
+    "report": "../qa-result.json",
+    "scope": "Authoritative dated QA of the entire integrated continuation, produced separately by the root task. Its outcome is not inferred from this stage Canvas review."
+  },
+  "preliminaryArchive": {
+    "manifest": "preliminary/archive-manifest.json",
+    "sha256": "39d2a13b5db4a7977a2d9ce0297af0e87a7f7f81074bcae303003ca4be170216",
+    "offline": {
+      "version": "0.7.0-408e0b2a5290",
+      "artVersion": "a688b34df05f735c",
+      "images": 5819,
+      "bytes": 3121745270
+    },
+    "filesVerifiedUnchanged": 13
+  },
+  "publication": "Await root frozen global commit and guarded PR publication; no remote mutation performed for this continuation at the time of this stage report."
+}

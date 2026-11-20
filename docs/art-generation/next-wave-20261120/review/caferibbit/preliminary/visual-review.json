@@ -1,0 +1,34 @@
+{
+  "schema": "encore-cafe-canvas-visual-review/v1",
+  "reviewer": "ribbit_references",
+  "reviewedAt": "2026-11-20T15:13:11.684873+00:00",
+  "status": "accepted_preliminary",
+  "appearanceId": "caferibbit",
+  "canvasReport": "docs/art-generation/next-wave-20261120/review/caferibbit/preliminary/character-canvas-review.json",
+  "canvasReportSha256": "68f688a707d26987630d8378ccda131cdee627d4b603df3b498ea2816c647320",
+  "manifestSha256": "6ed955f5f7bb403bb68235860edf414e984db47c761396add7708f97e3825411",
+  "files": [
+    {
+      "file": "docs/art-generation/next-wave-20261120/review/caferibbit/preliminary/actions-caferibbit.jpg",
+      "sha256": "784e62cc5d210875d5494e07f6121af0d6c5cd71fea3485d59a12bc7f5e344f9",
+      "visuallyInspected": true
+    },
+    {
+      "file": "docs/art-generation/next-wave-20261120/review/caferibbit/preliminary/archive-portraits-01.jpg",
+      "sha256": "5d851aa87eaa9865c631fc4d6af01f524a239866a31508e4a0baa51daa4f312e",
+      "visuallyInspected": true
+    }
+  ],
+  "observations": [
+    "Les neuf actions sont visibles entières au rendu et à l’échelle du moteur Canvas : coiffe, mains et chaussures restent dans le cadre.",
+    "La silhouette reste identifiable, la tenue et les chaussettes sont cohérentes entre les neuf actions.",
+    "Le portrait de sélection est entier, sans déformation visible ni fond incrusté.",
+    "Aucun halo visible autour du costume sur le damier. Les ombres au sol, traits de combat et transparence de défaite appartiennent au rendu du moteur."
+  ],
+  "limits": [
+    "Revue préliminaire sur le manifeste contenant Café et bar ; à rafraîchir sur le manifeste final de la vague.",
+    "Le contrôle mécanique vérifie 20 rendus dans les deux sens, dont la garde ; seules la planche des neuf actions et celle du portrait ont fait l’objet de cette inspection visuelle.",
+    "Exécution Node/Skia du renderer de production, sans navigateur, commandes physiques, audio ni partie jouée.",
+    "Illustrations statiques originales ; aucune certification canonique 1:1 ou cycle animé complet."
+  ]
+}

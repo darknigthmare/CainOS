@@ -1,0 +1,39 @@
+{
+  "schema": "encore-stage-dated-proof-archive-v1",
+  "archivedAt": "2026-11-20T17:35:15.714471+00:00",
+  "reason": "The global QA exposed a test-only Cafe source scope assertion limited to Ribbit. Runtime and native assets did not change. Preserve this first final-manifest Canvas report before refreshing its source snapshot after the strict three-ID test correction.",
+  "files": [
+    {
+      "path": "verification.json",
+      "sha256": "efdb129ce0fec28cf9ffd2120392490992bbe657efd3907e3aa45a5800e36042",
+      "bytes": 8015,
+      "originalPath": "verification.json"
+    },
+    {
+      "path": "visual-review.original.md.txt",
+      "sha256": "f2c80f5319f26bc0aa1b048810499cd6600423bb0063a83cb147c0cb026eff75",
+      "bytes": 3402,
+      "originalPath": "visual-review.md"
+    },
+    {
+      "path": "canvas-review.log",
+      "sha256": "a072300a01dd13e4175cb596f6f36f761461ee60c8956acdd9d96ef2d3db127e",
+      "bytes": 262,
+      "originalPath": "canvas-review.log"
+    },
+    {
+      "path": "review/canvas-review.json",
+      "sha256": "1264fc7d7bcda528b72efaf9cc82fe74b02d52e557753b15c97a4144d580c60c",
+      "bytes": 6532,
+      "originalPath": "review/canvas-review.json"
+    },
+    {
+      "path": "existing-planes-preserved-final.json",
+      "sha256": "d82a5461f1ea717d9906d98d887a9fd0f0623ea199864614d475259f82201c77",
+      "bytes": 22510,
+      "originalPath": "existing-planes-preserved-final.json"
+    }
+  ],
+  "originalPathRoot": "docs/art-generation/continuation-20261120-b/stage",
+  "archiveNote": "Exact original snapshot bytes. The historical Markdown is stored as .original.md.txt so its original relative URLs are not misrepresented as live links from this nested archive."
+}

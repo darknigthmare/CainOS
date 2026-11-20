@@ -1,0 +1,53 @@
+{
+  "schema": "encore-workbook-continuation-b-installation/v1",
+  "createdAt": "2026-11-20T17:51:55.057873+00:00",
+  "status": "installed_and_all_digests_reverified",
+  "installedFiles": {
+    "docs/DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx": {
+      "sha256": "4420382c7994e74bd0410fdcd1b6aa7aa01071540ef4b51e2fb247bc4a11cd3e",
+      "bytes": 763010
+    },
+    "docs/combat-tracker-data.json": {
+      "sha256": "839790a0a128e09573e0c1578ccecc46e1dc20819c75108650c666a2aeabb352",
+      "bytes": 5702103
+    },
+    "docs/combat-workbook-verification.json": {
+      "sha256": "024bcd3c67b272eccd789af0ed89b6bc0b8a7e3da7f44e6ea2386ce7c1573127",
+      "bytes": 123163
+    }
+  },
+  "workbookReviewMatchesInstalledVerification": true,
+  "sourceDigestsChecked": 195,
+  "sourceDigestDifferences": [],
+  "activeNativeAssetsChecked": 58,
+  "finalViewsChecked": 50,
+  "baselineViewsChecked": 6,
+  "diagnosticReadingAidsChecked": 14,
+  "additionalWorkbookViewsFromDiagnostics": 0,
+  "nativeCellsCompared": 82697,
+  "formulas": 42,
+  "sheets": 11,
+  "tables": 10,
+  "historicalCellsConstrained": 81412,
+  "historicalQaEvidenceSHA256": "eb0edceabdd0f1e2a939f892327717ac59e0188c6a904f8aec9952ed089e74f5",
+  "proofFilesSHA256": {
+    "README.md": "9741fd184ca4409c333f52a5ce7ba764d42d77d72e6f5fdb84ee19b8be616c31",
+    "preparation.md": "114b359a97779546edb1390db0ea8e47b74fdab1c5ef67f13313ca69310870fb",
+    "workbook-review.json": "024bcd3c67b272eccd789af0ed89b6bc0b8a7e3da7f44e6ea2386ce7c1573127",
+    "update-plan.json": "2a18d8c9d5b667409db2acaf4443eed854e095cc1196033b9c465db0c28d4299",
+    "publication.json": "d344661034c618d73ab0952d4ff5e8e941312b557b484e41ae2d394534bd13d0",
+    "execution.json": "5f27f772096ff351fce5225a0e73630734d5aea9e0d8fe0872464620d25a09c3",
+    "visual-review.json": "19636889d8405610d189d212715b1dadd2959496300a9fb611c24b25c6fd1c7e",
+    "root-visual-review.json": "adbc02d6f68c9e4d08596294d1a5bd558b006d0ac51c3fa94dbc619904d74cd7",
+    "independent-visual-review.json": "f0d9a714a2010db4f26bef913ac323f16f550464b380a0b748d96eefccc6d39e",
+    "root-diagnostics/manifest.json": "5c18ea05cbd54abe43f71d5d72675bd26c1795c7c136a6bdcce6f0514d98e559",
+    "rendered-views.json": "e7dfd440577992e1c96a637fa46019dd3a088d7660fd98b87d05ec64d4e916dd",
+    "native-snapshot-hashes.json": "7cec572bf2a618f8623dfd08eee7239b6f96b2cee6b064c7e8187543f7443717",
+    "native-comparison.json": "42a2292bdafe3f623631a3d6296ce472a9c32b78cfaa1adbfa4d33ba7a6fc8e4",
+    "reimport-result.json": "f9481a5b1dc96bb5f6b155cce53c18029d0d6496b59ba1af16880742ccbf9d1f",
+    "authoring-result.json": "5026c7a01b74d63df18baf5a2ff725d08aa1e571dcd096d94358ddfbbde9dae1",
+    "asset-slot-verification.json": "19045a45a1141a325e8f2ecb7fa6af2bde1218dee973634822b8849b2c88f5eb"
+  },
+  "gitCommitOrPushPerformed": false,
+  "remainingScope": "Game and browser limits remain those of the dated global evidence; this installation does not constitute a new game QA run or desktop Excel session."
+}

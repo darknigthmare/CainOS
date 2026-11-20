@@ -1,0 +1,21 @@
+# Revue finale — stade de softball
+
+La [planche finale](review/three-cameras.png) et le [repli procédural final](review/fallback.png) ont été inspectés après exécution du vrai chargeur de parallaxe et de `CombatRenderer` sur le manifeste **`0.7.0-17366238b519` / art `20311abb70caa13c`, 5 874 images, 3 173 741 905 octets**. Cette exécution est distincte de la revue préliminaire.
+
+## Composition et lisibilité
+
+Aux caméras −1, 0 et +1, le ciel bleu, les tribunes brunes, les structures bleues, les projecteurs blancs et le panneau vert vide forment un stade lisible. Le fond couvre tout le cadre sans trou transparent ni rupture visible entre les plans. La piste ocre reste dégagée ; Pomni et Gummigoo gardent leurs pieds lisibles sur le sol. Les petites herbes du premier plan restent aux coins inférieurs, sans voile blanc ni obstruction des acteurs. Le repli procédural conserve les mêmes grandes masses avec un dessin plus simple ; il ne substitue pas le cirque au stade et ne contient aucun acteur.
+
+Les huit PNG de revue — trois assemblages, trois scènes de combat, la planche et le repli — sont strictement identiques aux octets de leurs versions préliminaires. La [revue indépendante préliminaire](preliminary/independent-visual-review.json) conserve sa date et sa portée ; cette égalité d’images ne la transforme pas en une nouvelle exécution indépendante sur le manifeste final.
+
+## Mesures et conservation
+
+Le [rapport Canvas](review/canvas-review.json) passe **six contrôles, trois caméras et trois scènes**. Le maximum d’alpha du seul premier plan au-dessus de la ligne des pieds vaut 2, 2 puis 1 sur 255. Les variations lumineuses changent le haut de l’image sans modifier un pixel du sol. Le mode de mouvement réduit maintient la caméra à zéro et le rendu conserve les définitions du stage et les états des acteurs.
+
+Les trois sorties natives restent installées à l’octet près : fond RGB opaque 1 672 × 941, plan médian RGBA 1 672 × 941 et premier plan RGBA 1 671 × 941. Aucune retouche, normalisation de dimensions ou réencodage des PNG livrés. Les [72 anciens plans et quatre modules historiques](existing-planes-preserved-final.json) ont été revérifiés sans différence. Les [111 tests ciblés](targeted-test-evidence.json) gardent leur exécution de 16:52 UTC et leurs propres empreintes ; ils n’ont pas été relancés pendant cette revue. La QA intégrale du lot relève du [rapport principal](../qa-result.json).
+
+## Portée des preuves
+
+Les deux planches officielles [M12](references/episode5-storyboard-L3-M12.jpg) et [M15](references/episode5-storyboard-L3-M15.jpg), cellules 320 × 180, établissent les grandes formes et matériaux. La perspective de duel, les distances, les textures fines, les plans de parallaxe, la musique et les variations lumineuses restent des adaptations originales. Aucune géométrie cachée, mesure canonique ni exactitude intégrale n’est certifiée.
+
+Le [navigateur local n’a pas été exécuté](browser-result.json) pour cette continuation : zéro commande, zéro contrôle. Son antécédent de lancement Barnoir reste séparé et daté. La [CI réussie du parent publié](ci-parent-final.json) porte uniquement sur `6c99eb43`, avant ce lot. La revue Canvas finale n’évalue pas les interactions DOM, les entrées, l’audio, le service worker ou les appareils physiques.

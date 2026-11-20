@@ -1,0 +1,34 @@
+{
+  "id": "glitch-murderdrones-ribbit-fusion",
+  "fighterId": "ribbit",
+  "series": "murderdrones",
+  "introducedOn": "2026-11-20",
+  "sourceKind": "Création originale pour Encore",
+  "episodeFidelityClaim": false,
+  "canonicalCostumeClaim": false,
+  "bodyProportions": "Adaptation élancée de Ribbit déjà utilisée dans le jeu ; ne constitue pas un modèle canonique.",
+  "nativeFacing": "right",
+  "requiredSlots": [
+    "selection",
+    "stance",
+    "intro",
+    "attack",
+    "heavy",
+    "hit",
+    "walk",
+    "jump",
+    "crouch",
+    "victory",
+    "defeat"
+  ],
+  "referenceSourceURLs": [
+    "https://glitchproductions.store/products/ribbit-pendantz-blindbox",
+    "https://glitchproductions.store/products/uzi-v2-animatez"
+  ],
+  "style": "fusion",
+  "name": "Murder Drones · Automate amphibien",
+  "title": "Automate amphibien",
+  "design": "Ribbit entièrement mécanique : longue silhouette amphibienne élancée, carénage vert/menthe, deux optiques bombées noires séparées à pupilles LED magenta, museau-coque menthe avec sourire mécanique, joues à diodes roses, nœud rose devenu plaque métallique. Joints ronds anthracite aux épaules/coudes/hanches/genoux, avant-bras et tibias vert clair, mains et pieds mécaniques à trois lobes. Ventre plaque menthe avec petit témoin violet. Aucun costume Uzi, cheveux, ailes ou queue. Fusion originale du corps de Ribbit avec un automate inspiré des worker drones.",
+  "spriteDirectory": "assets/encore/crossovers/murderdrones/ribbit/fusion",
+  "fidelityScope": "Design et poses originaux ; références officielles utilisées uniquement pour l’identité de Ribbit et les motifs visuels de Murder Drones."
+}

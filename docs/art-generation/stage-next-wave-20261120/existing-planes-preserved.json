@@ -1,0 +1,491 @@
+{
+  "schema": "encore-barnoir-old-planes-preserved-v1",
+  "checkedAt": "2026-11-20T14:52:59.485047+00:00",
+  "baseCommit": "570fdb31512cdd2a2d5ba5e2c26d7c10b47ae063",
+  "count": 69,
+  "files": [
+    {
+      "file": "assets/encore/stages/backstage/far.webp",
+      "baseBlob": "cc88139220b90a3d67b42cd01a29bc5ff9b2371c",
+      "sha256": "34d59cae2ff34829a1356b74dc8dcb61695f92318613f864ec4af8609e94e6ca",
+      "bytes": 344070,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/backstage/mid.webp",
+      "baseBlob": "48621e1448a9ae293b2f8c8c02a6b1b37c941b20",
+      "sha256": "cae1b07b60cce8681a89752d40b4f0bfaef09fd01139a177ec6dab5bf5b66707",
+      "bytes": 60312,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/backstage/near.webp",
+      "baseBlob": "831fd6f50c96b1a5183e921a5862a6c38df42b32",
+      "sha256": "1c0a45d5e4d326f7b81d12ea1c545304d85ce68e1b8ecc2ea2d9189dd5dcb09d",
+      "bytes": 67058,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/bigtop/far.webp",
+      "baseBlob": "5b7ad2081e7e0efec38f90a81a40d508315eeab6",
+      "sha256": "b2731bf03caeb4c8f9ff22100b3521501f144355e8a64b13424d4a4fbc810b7d",
+      "bytes": 272690,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/bigtop/mid.webp",
+      "baseBlob": "fdf6f9b4804f02ba824da401ffb6ab75cf42cc79",
+      "sha256": "b3462cabd939d7ef4fa4948ca1197d0ad40bf3768d4bc948be944edbeace2221",
+      "bytes": 75630,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/bigtop/near.webp",
+      "baseBlob": "0532a02fa9a1b59e1f7988c7c9f6ba55f552ce90",
+      "sha256": "56d5c44ffeeffc1aecff24b2331829b4acac32586d29fcf8a8e144d37b1a716d",
+      "bytes": 75900,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/candy/far.webp",
+      "baseBlob": "30fc5ddc97fae8eef6dcbe239c87625ccd737361",
+      "sha256": "bdcc0042cf1af0942fc75d8128edf2cf400a19378469eb38a9c695f66c0d9167",
+      "bytes": 320662,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/candy/mid.webp",
+      "baseBlob": "59cd311f0cf85032004c8b178d4ed9e1eff86dad",
+      "sha256": "f0cbb247c1d0b2809e4912ebf347f0a5b3fcb2ac8756f14bf374e5a4a82a3650",
+      "bytes": 86656,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/candy/near.webp",
+      "baseBlob": "c6ab1205c17f37e382f1d77c75b7c156d84b181d",
+      "sha256": "82cee50266e7f570d809232809ae056a911b0a53e260b1727aa56f1872d7d893",
+      "bytes": 55468,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/cellar/far.webp",
+      "baseBlob": "32b796e41be970f33c50a1a4d1d0b3087c488884",
+      "sha256": "e97bac93e780a8cd3c115c424e93de509f7264ab97c276cf9c7fb8f6018c6941",
+      "bytes": 57084,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/cellar/mid.webp",
+      "baseBlob": "2279897c6d7a16cb3e71a7e91543b43e979f8916",
+      "sha256": "3ec9dec8a2e15ae2852dfa623213aba16c2c13191068eba76241251a7d5bab12",
+      "bytes": 103280,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/cellar/near.webp",
+      "baseBlob": "2b149b656d1261ad2846f631290ac55448cc3df1",
+      "sha256": "cdc26a8d9f584c282d16acb62e5023a688f61558b376a55cc579eea054e3bba0",
+      "bytes": 49364,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/coppernine/far.webp",
+      "baseBlob": "8a9abc979094b6017bbbbbabd8525a2600a3761c",
+      "sha256": "e01b729aab57647ce2ea756c564d334a04b5ed7c763d6fcbbe9041e8e40d6f36",
+      "bytes": 565010,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/coppernine/mid.webp",
+      "baseBlob": "a43dc3c32b8065d4ff1d3437ff8cf972a7c9a8b0",
+      "sha256": "03984d9fdb80827e8fc94b170140f00f1595f04ab185fb3cbf31f02261925a5b",
+      "bytes": 114300,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/coppernine/near.webp",
+      "baseBlob": "f4a028ae0d8eeec69f22a349ba0ece0a44ccbe14",
+      "sha256": "1171382f4f0eff8c76247aeb107c937a342ad447cb44038037e3fcca98868605",
+      "bytes": 58172,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/falseexit/far.png",
+      "baseBlob": "3d4ffb7e8fe4e5b6edab7c5f44eaabd4852baff1",
+      "sha256": "138df372cffe060db63b8d93f6109f6ceb08f66d0373ad31aa286e586cc5020a",
+      "bytes": 2360124,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/falseexit/mid.png",
+      "baseBlob": "6f9137c63ad95b9cb8344bdaa199300cadd2894d",
+      "sha256": "84275261c9340380d084a7f32f774598638dd3a884ccb77188233c0dae2455fc",
+      "bytes": 389739,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/falseexit/near.png",
+      "baseBlob": "f36fbc8660b75d232b1290147ed8d8aac7296e9f",
+      "sha256": "8f76e338460107aa49ddc0344f3f056df436b25b9f4372bab4251bfe9dac586c",
+      "bytes": 224318,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/gameoverse/far.webp",
+      "baseBlob": "c011e394678237298b91cbe93d56cf07d1abfac0",
+      "sha256": "a60b1e63f81bd8161ea1edb63e43277636cac371df7f96ce1702670e196c753d",
+      "bytes": 394648,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/gameoverse/mid.webp",
+      "baseBlob": "4a870ffc3c2d967bc8f973da0d5acd264a2f817f",
+      "sha256": "32fd3f66ff339351bb1030a53443f5ef0c5987da0feab3f41e69c5bab67c2918",
+      "bytes": 69758,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/gameoverse/near.webp",
+      "baseBlob": "83c960df05c2ada6dc040d9a4cec9ca9b2de0b91",
+      "sha256": "5484e1f8e3481de28c7f51eb73c2f820bdefa3999b1b74dbbb2c7848af4430b3",
+      "bytes": 60046,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/gaslightwharf/far.webp",
+      "baseBlob": "ea93fece3f86543db14b3dd0afa1fad272103d74",
+      "sha256": "28c1d728e98efb458e521b26da094fc3353b70c51bc20c2b9739e81b083d3747",
+      "bytes": 492948,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/gaslightwharf/mid.webp",
+      "baseBlob": "7ff86df23714275337b1cf208c1be7337d5e4123",
+      "sha256": "9ae7d78e91c6e45782db60d725eec2a5bd4aa07ebd4da02ef1c41e45b4fe457a",
+      "bytes": 170396,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/gaslightwharf/near.webp",
+      "baseBlob": "f09ef403d6eb2ee6bd7a2f56fcca0ada56a93ba1",
+      "sha256": "05882e98253b3686332bddd3c09ca915b6b7b56e23cde2839962fdbb6846ef83",
+      "bytes": 66586,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/gloink/far.webp",
+      "baseBlob": "baf11d30f403ffd3eed9fea19420ec6377e3855a",
+      "sha256": "56cb1aa7cad48086cd7a6bdf0ec3b3875a19cf5c18c5c201a80c1395f6827e56",
+      "bytes": 245470,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/gloink/mid.webp",
+      "baseBlob": "59ea886aff9d736069a93a9ef220dd0a81046498",
+      "sha256": "b88defad9e51d7bff872626dd6f08e4e1e6b2bc6239582c966ee54361f29ff53",
+      "bytes": 110176,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/gloink/near.webp",
+      "baseBlob": "d2cae730b2222616ecc37ea957a945074a85bddd",
+      "sha256": "12319fe8193cbb8280db1213cc73ab3d42b0e979c1029cf022c3ea65a0c07627",
+      "bytes": 56296,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/grounds/far.webp",
+      "baseBlob": "ed23647f1a88b98d779660ce01c9702b6cab8332",
+      "sha256": "9e40ae2c5b7ffa2a3cc3d2797df16b5ebebaa0a5c5f7fb3043c6d41969803d87",
+      "bytes": 464618,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/grounds/mid.webp",
+      "baseBlob": "662270ba6cb8215527812fee283c5f8271531f48",
+      "sha256": "f07470b568ca2bebcfb59b6768db8885eb1c380081c286f788335229e4fce5e9",
+      "bytes": 67290,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/grounds/near.webp",
+      "baseBlob": "1899f75d761d597e1a7ecd7e172e13b4bb4e0a82",
+      "sha256": "f84bd12a82afd55e095b3148640ee48b59b420b1d026f5a7a6060fdc9835b6e2",
+      "bytes": 119772,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/kingdom/far.webp",
+      "baseBlob": "10bdd7f66ade022072004682a9dacfd9194d4acc",
+      "sha256": "de8029cd5df4e952e825e6da1289c0587a61a48fb3fd4aaa399e22aed033c4d0",
+      "bytes": 477382,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/kingdom/mid.webp",
+      "baseBlob": "51c8fe49b59e63c02cc40b6e59ce90735cca1eff",
+      "sha256": "3f5fb8f930d81693c5f7010eea06472f7fbe8c3385ac7c2c961a19cfd465f991",
+      "bytes": 157822,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/kingdom/near.webp",
+      "baseBlob": "990583366667213912825874d42a68ee7c272dcf",
+      "sha256": "74bf4582913283c7636a70cb0a4aef075db7f6b55f318751b290395d1ccec4f9",
+      "bytes": 110306,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/lake/far.webp",
+      "baseBlob": "91bab092d828b61fd8e37797fca1309f36a90009",
+      "sha256": "f10b64a6e673e5a4b2c7f71875bdb24a01ef6d71e2ca7b40f1d06a3447ae611e",
+      "bytes": 370954,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/lake/mid.webp",
+      "baseBlob": "f29c9a205bd10affed6b8be24b4f94d2fbc02c46",
+      "sha256": "30346017433600843c84e7b820d830a2744ff33662a2244f008216686268ed4c",
+      "bytes": 81734,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/lake/near.webp",
+      "baseBlob": "77bbac2e709789eaffb7a50cc316d2c68ed5c2af",
+      "sha256": "846ce84e8488eb347fe97cce150a34ff5a068e5addb6eaa61ef5d75141102e3b",
+      "bytes": 61864,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/littledaisy/far.webp",
+      "baseBlob": "4c9a13c8d27c81ee8eac90ef88562e58eabbaa22",
+      "sha256": "b746fa6aef34bb286918d7b061829033fe2e1343645546ce4dbe517c2dd0d6d1",
+      "bytes": 1135602,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/littledaisy/mid.webp",
+      "baseBlob": "d3a7a07374cee965f074215b144e94e61b1f8c73",
+      "sha256": "3f0f2c9ee967c5faed87b4e22414d577a5e9c51507c59a43794d987b2d80861b",
+      "bytes": 197302,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/littledaisy/near.webp",
+      "baseBlob": "2616ec9531a4b5933d92748c6dc391aaabe754e7",
+      "sha256": "e0ba090e4de57681cde1b0a29abf906092e66b74cc6729a6a1f70da0b538afc6",
+      "bytes": 134622,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/manor/far.webp",
+      "baseBlob": "3c2bc6c257d0a1f3ae25ae32ed5068da91d3068b",
+      "sha256": "a8c7bbb051eab577f4cf30337ec56b336aeaeb6c6c257ad77719bc20964f1af2",
+      "bytes": 377516,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/manor/mid.webp",
+      "baseBlob": "b12dad314a03066144603339d64f9890a40ee0e5",
+      "sha256": "ee2962ccc3a2c77aa282e6a78fac793b15768932593b4486df7a1718982939e0",
+      "bytes": 100994,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/manor/near.webp",
+      "baseBlob": "31a48ba1e728a42d81d5cdae6b1dab054cd36ab3",
+      "sha256": "e7a3ba6932517c61cc95fc01ea3dcd46d869ea43dc1656986ae22c76176f285a",
+      "bytes": 80982,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/parkplanet/far.webp",
+      "baseBlob": "a3122050a0e30d0957f3008e0fc5b29320aa3f1b",
+      "sha256": "cc3d23740ca2b087a9f741b3b13927426f00dc7733eec728a1e9f0ed6c74d74d",
+      "bytes": 779136,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/parkplanet/mid.webp",
+      "baseBlob": "3aea05d6a5fd233651b7473f45d36a4cd508a86e",
+      "sha256": "e159363b24657b317c42e720e30e80f092875f197c9e63a44e2192afd9d4de18",
+      "bytes": 226130,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/parkplanet/near.webp",
+      "baseBlob": "b8f0096cee898582ffa5314e6c2ed3d9330bbe05",
+      "sha256": "e11e04a9717c55383991b9b2086752a77470c13c7476cbf39f4fba839a34c9cc",
+      "bytes": 114828,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/portaurora/far.webp",
+      "baseBlob": "6f277e8a345564a9ef3ec640a0c7f6bc9d2939d2",
+      "sha256": "6ee53fb31ba6441d09339cccdbcaedc95e15f61788f79398cc4d32ebb80145c5",
+      "bytes": 445178,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/portaurora/mid.webp",
+      "baseBlob": "02df5d193b389f3c08a462935965542bf34d2a49",
+      "sha256": "1cf6fd2de07a99a3784f6f9c71d421dea11f195368b7313024566ffbe998ef1b",
+      "bytes": 156788,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/portaurora/near.webp",
+      "baseBlob": "413b0e71f7ea380bc1d57baa693bdb91937fa292",
+      "sha256": "dc7afb6da9cff9c3baff5aa82209e9355636984e98421ace49e86e11c952dc71",
+      "bytes": 165804,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/showgrounds/far.webp",
+      "baseBlob": "8d79a93ba01f1fa6debd0a5e5381a51e0b51f7a0",
+      "sha256": "f1f55e22e301199f58646d57d50e71ae7a8569b0da9f0908e935337a0742b77a",
+      "bytes": 640556,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/showgrounds/mid.webp",
+      "baseBlob": "1d497476467b163139d86a82131643ea818cdbb8",
+      "sha256": "9cbb7274b96f783251d5d4ba797f6219b93991bc46849679e1de78bae35141f5",
+      "bytes": 123636,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/showgrounds/near.webp",
+      "baseBlob": "c5c1ae07be8d75a5e2fca5541c9a2420f1f3c607",
+      "sha256": "a3a1e817e699a68d43b80128497d03576e4e6182874b46d9a9978bf8b23cd8be",
+      "bytes": 82692,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/silicacity/far.webp",
+      "baseBlob": "95c63c2454a1619198e8d49c5ab2171dd591f544",
+      "sha256": "0e8a4223ab67341961e574556b469b9b4f82cd5d41f8ab8b5c0bcc2a9c29fd77",
+      "bytes": 517646,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/silicacity/mid.webp",
+      "baseBlob": "134dd5c705d87bd5cf13a611465b0c4b99a6f8b5",
+      "sha256": "a728b277971da4462d68db3d02dd2d3048336a0db18ae3977bfbf7bee1d580af",
+      "bytes": 95708,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/silicacity/near.webp",
+      "baseBlob": "c7906968c7df5133be3bd4839c097771ed9e6e96",
+      "sha256": "291995215eddb6bd2d28b5f178ce075a84f79bb53ccbd6e1dc215330280c4db3",
+      "bytes": 54184,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/simpleflipisland/far.webp",
+      "baseBlob": "fb40fe7136ee19ccaf5268e1d0445870145cef03",
+      "sha256": "3eb0a60e487dc45f7ae349651069dff274e2236820459579b65b3a8a65797d45",
+      "bytes": 511454,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/simpleflipisland/mid.webp",
+      "baseBlob": "064125ebf75d174bd2cb1cb1cb7b271039efbb31",
+      "sha256": "b364c89ea22698eadf3bed8977142e702672d11976ec51b11a34ab5d75b86be4",
+      "bytes": 161458,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/simpleflipisland/near.webp",
+      "baseBlob": "f88afa55cfc912fe5d0dc3c2d40c6567b45e4c02",
+      "sha256": "6a52545e73adfdea00a087101998d3a0652ab0e85beebba976499d836db303d0",
+      "bytes": 117228,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/spudsy/far.webp",
+      "baseBlob": "9c368adc12451a3c170b67aa1ca3c534ec61e90d",
+      "sha256": "261476bc691a6dbd3dac1f35e40457b7b81324b2713dd82381817f1a74c98b38",
+      "bytes": 325656,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/spudsy/mid.webp",
+      "baseBlob": "eb12fd0d2812772045dd841a084d49b7784ead64",
+      "sha256": "ee1847f2e2693fd79f5bc28bdf231cefd52b0ef1c3f959f63d344751a45eadf4",
+      "bytes": 107976,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/spudsy/near.webp",
+      "baseBlob": "c806c5371aa16eca395096bec48fd044b6f1dcce",
+      "sha256": "7a8bf4497956ce8726f35928404a36a1903e323f2e7a568aa6111a19cb83bffe",
+      "bytes": 64212,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/training/far.webp",
+      "baseBlob": "619727db1bf31e99f70cbfc4e6cf724999f62170",
+      "sha256": "98c8926d890dd47784d02fda5a24f4d3ae756c8af16bf095ac09500053fe57f3",
+      "bytes": 268682,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/training/mid.webp",
+      "baseBlob": "59470cabfd68d45b2cca23954588e5e90bad36e9",
+      "sha256": "015c2657bef85ea419571436d7b90e748286599b87d86dc9554dfab61855b642",
+      "bytes": 58534,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/training/near.webp",
+      "baseBlob": "0225352372ee74634bc434c5b0c3e79b58722731",
+      "sha256": "e7a300b4dc33b4509d111049137e314427c2c105e3e8286a30305c83bfa1315e",
+      "bytes": 63872,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/undermap/far.png",
+      "baseBlob": "476cf4092aaf386762023738ee15db701ae27111",
+      "sha256": "8632502788b9f69092ae1cf4b5ae36d9d41af37c9e7155c9475c53879b6ff352",
+      "bytes": 1163294,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/undermap/mid.png",
+      "baseBlob": "58920da83b465a1a286d6c187392f401c37d320e",
+      "sha256": "3a27fd151543855490ae95f6250ed127e0bd46c1599b77dff1132ec95f9ac311",
+      "bytes": 464706,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/undermap/near.png",
+      "baseBlob": "6373f8972a5c6b0bb722283ec09613059ef5e12e",
+      "sha256": "2e062ba46a9284669b9a19e113dbd1906cafd3f33688c900a22d7217e5869ec1",
+      "bytes": 193031,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/void/far.webp",
+      "baseBlob": "0738a5e59e3c8c88f4fc5a6c3bfa55c3d64bc539",
+      "sha256": "35c05d540ae5f97577ec4a5032766ffd7813300005926fad8b80534b27ffb70d",
+      "bytes": 239818,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/void/mid.webp",
+      "baseBlob": "de666bb1c1260df91441e0da49ba650cbc00e438",
+      "sha256": "7d06ee60771ecccdfe6ac552e323e4691d0ea5ca21de59038a73588a12e5f9e2",
+      "bytes": 99650,
+      "unchanged": true
+    },
+    {
+      "file": "assets/encore/stages/void/near.webp",
+      "baseBlob": "75659caef6bd401db4f7c41aeebb18e9be5e2952",
+      "sha256": "cabad6f02f25c142df644fd437d876068d47ec525f2b7d3bccd863b9b6f99af7",
+      "bytes": 46166,
+      "unchanged": true
+    }
+  ]
+}

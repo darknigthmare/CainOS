@@ -1,0 +1,139 @@
+{
+  "schema": "encore-barnoir-verification-v1",
+  "createdAt": "2026-11-20T14:48:03.806970+00:00",
+  "phase": "final-manifest-canvas-reviewed-browser-launch-blocked",
+  "baseLocalCommit": "570fdb31512cdd2a2d5ba5e2c26d7c10b47ae063",
+  "baseRemoteCommit": "5be043ba21f3fe7a6dedd3fa1b00dc36f296b540",
+  "counts": {
+    "sharedStagesBefore": 23,
+    "sharedStagesAfter": 24,
+    "dedicatedArrangements": 54,
+    "newNativePNGs": 3,
+    "newNativeBytes": 2555199,
+    "existingPlanesPreserved": 69,
+    "totalSharedStagePlanes": 72,
+    "targetedTests": 86,
+    "targetedFailures": 0,
+    "historicalStoryRoutes": 54,
+    "historicalProgramFixtures": 60,
+    "historicalCheckpoints": 360,
+    "historicalReplayFixtures": 3,
+    "historicalReplayFrames": 789,
+    "earlierCheckpointsRetested": 270,
+    "earlierReplaysRetested": 14,
+    "earlierReplayFramesRetested": 3682,
+    "nativeCopyComparisons": 6,
+    "inputReferenceHashComparisons": 8,
+    "canvasChecks": 6,
+    "canvasCameras": 3,
+    "canvasCombatScenes": 3,
+    "browserSuccessfulChecks": 0
+  },
+  "sources": {
+    "combat/data.mjs": "7081daa24f8557c6964c75955071a3527ae49c03393e04d6d0dee0d97d4e5fe6",
+    "combat/fidelity.mjs": "13f113f52d3d544eebc57064a1aafd1fae0c9d2485e5f567e52390f5c5a4e2dc",
+    "combat/audio.mjs": "4fa423e9b31ddd2344df9d0824693fe08963d5117e35a87c2534ef391ed5c978",
+    "combat/audio-ambiences.mjs": "38a5e4221066b3c2c2fec8f7af6977ca7c219a3117d73f1e00d1cddba34cba3c",
+    "combat/progression.mjs": "ec113e2657bd6b479741543dd1f0fb8338195fb9ca1bb85e381834b35a0055e8",
+    "combat/stories.mjs": "763d0012eec0e59ac9454a9467596d7296b65cc64002918cc5db462b09a1fec7",
+    "combat/render-stage-motion.mjs": "94338bb181d5b0813be022d932f85bfdf5838f9111baba2d24a9ed3b3be088eb",
+    "combat/render.mjs": "a7005f67651ad0a2da5955f9146c95f6e7e93ce9c3c2f38bd2bf1c3791d12d73",
+    "combat/stage-parallax.mjs": "1e01fa0b4932f0e670bb6fa746c48b57de0c726a5637891e68427a161aecc77d",
+    "combat/engine.mjs": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
+    "combat/session.mjs": "9dce5b9d2fff5316cd280c8f58038d06134935717c3fd637e76042e308a1d65e",
+    "tests/combat-barnoir.test.mjs": "a332d296c68cad4cb607e18793b8b84c0cabc9940ee6fc47467293e9d76a10e1",
+    "tests/fixtures/combat-pre-barnoir.json": "96a3e7c26f1da9a391b3baefed824f7855ebfb76ec62c44282b5b722c29785f7",
+    "scripts/review-combat-barnoir-20261120.mjs": "b3b8c1d6e3e6486ee832cbf7df6e723ae496f3391102e3b7dd7fe4672e52434e",
+    "combat/offline-manifest.mjs": "583ff9fc856c355d153eaba75ef4558f207094680136abcdab06d3fbc532bc1e"
+  },
+  "unchangedHistoricalRuntime": {
+    "combat/engine.mjs": true,
+    "combat/session.mjs": true,
+    "combat/stories.mjs": true,
+    "combat/stage-parallax.mjs": true
+  },
+  "fixtureSHA256": "96a3e7c26f1da9a391b3baefed824f7855ebfb76ec62c44282b5b722c29785f7",
+  "testLog": {
+    "path": "targeted-tests.log",
+    "sha256": "e92a44579f4b5af8319879915129c60a99afc0e900f5df1c46f8b511a5bc1497",
+    "scope": "Historical targeted execution, not rerun during the final Canvas refresh."
+  },
+  "canvas": {
+    "status": "passed-and-visually-inspected",
+    "report": "review/canvas-review.json",
+    "reportSHA256": "246adf6f77409ae104e65f268088151257b9e7896b265a0fbf18964ffe32acb6",
+    "composite": "review/three-cameras.png",
+    "compositeSHA256": "4c77c6e135a1d8b6a7b124ebe43d2600d6a807275de95f6832179ded75fe19f1",
+    "visualReview": "visual-review.md",
+    "visualReviewSHA256": "ccb9e2e09d9b9df5d18befec6595b1003e1886ad788887e4f9110ac32ac50902",
+    "checks": 6,
+    "cameras": 3,
+    "scenes": 3,
+    "offline": {
+      "version": "0.7.0-087fd3609c69",
+      "artVersion": "0c178f8964773da7",
+      "images": 5816,
+      "bytes": 3118619440
+    },
+    "scope": "Production loader and renderer on the final manifest; no browser, input, audio, physical-device or canonical scene-certification claim.",
+    "pixelComparisonWithPreliminary": {
+      "unchangedViews": [
+        "planes-left.png",
+        "planes-center.png",
+        "planes-right.png",
+        "scene-left.png",
+        "scene-center.png",
+        "scene-right.png",
+        "three-cameras.png",
+        "fallback.png"
+      ],
+      "count": 8
+    }
+  },
+  "browser": {
+    "status": "environment_blocked_before_navigation",
+    "successfulChecks": 0,
+    "exitCode": 1,
+    "attempt": "browser-result.json",
+    "attemptSHA256": "959583d46b6836a9fca4cbd73d3fff727af7b8df5d29a31b20ccf03bd4c319a0",
+    "log": "browser.log",
+    "attemptedAt": "2026-11-20T14:51:46.083930+00:00",
+    "reason": "Chromium aborted at launch before navigation: socket() failed, Operation not permitted.",
+    "historicalCI": "ci-state.json",
+    "scope": "Current-wave attempt at 14:51:46 UTC before final costume integration and final manifest; 0 checks before launch abort. No new attempt during final Canvas refresh and no validation of the final costumes or manifest.",
+    "logSHA256": "c086a582f6a8d233ccb6e4012dc90e1a771139518a6931c10d3936209f31feb9"
+  },
+  "publication": "No remote mutation by this wave yet. PR #7 was merged externally; the root task will authorize a new draft PR after the workbook and final commit freeze.",
+  "updatedAt": "2026-11-20T15:34:42.250812+00:00",
+  "existingPlanes": {
+    "count": 69,
+    "changed": 0,
+    "proof": "existing-planes-preserved.json",
+    "proofSHA256": "e8c1056729225bc9d6e56e7110cae5f62613775474d86ea69aeb73a6eb825cdd",
+    "reverifiedAtFinalCanvasReview": "2026-11-20T15:34:42.250812+00:00"
+  },
+  "sourceFreeze": "Current source hashes describe the final Canvas review. The historical targeted test execution retains its own source snapshot in targeted-test-evidence.json; the global QA run is separate.",
+  "finalCanvasReviewedAt": "2026-11-20T15:34:42.250812+00:00",
+  "targetedTests": {
+    "evidence": "targeted-test-evidence.json",
+    "sha256": "248136a9c173254354c81d2dd304b3aa9e6073d85e96b7c586db94395637ab7a",
+    "tests": 86,
+    "pass": 86,
+    "fail": 0,
+    "rerunDuringFinalCanvasRefresh": false
+  },
+  "globalQA": {
+    "report": "../next-wave-20261120/qa-result.json",
+    "scope": "Authoritative dated QA of the integrated wave, produced by the root task. Its outcome is recorded separately and is not inferred from this Canvas review."
+  },
+  "preliminaryArchive": {
+    "manifest": "review-history/preliminary-20261120T145102/archive-manifest.json",
+    "sha256": "7023511541853541573f4bccca9a7b975123c925785d4a45225c05f0149ca76e",
+    "offline": {
+      "version": "0.7.0-3f1a000c96ca",
+      "artVersion": "31622490fbe0884a",
+      "images": 5772,
+      "bytes": 3061635859
+    }
+  }
+}

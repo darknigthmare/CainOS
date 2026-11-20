@@ -1,0 +1,24 @@
+{
+  "appearanceId": "glitch-murderdrones-ribbit-hommage",
+  "fighterId": "ribbit",
+  "series": "murderdrones",
+  "style": "hommage",
+  "slot": "hit",
+  "prompt": "Use case: precise local correction. Edit REFERENCE IMAGE 1, the transparent full-body Ribbit Uzi-homage hit-reaction sprite. Keep this exact sprite, outfit, recoiling pose, body, long legs, black boots, mint muzzle, huge eyes, beanie, hoodie, white emblem, violet sleeve bands, bow, outlines, colors, composition and right-facing direction. The raised open hand at SCREEN RIGHT is already correct with THREE visible digits; preserve that hand.\nONLY EDIT THE HAND AT SCREEN LEFT, held beside the chest, which currently has only TWO protruding digits. Add one clearly separated rounded digit to that left-side hand so its silhouette has EXACTLY THREE visible digit tips TOTAL: one thumb and two fingers. Make a clean open three-pronged cartoon frog hand with THREE obvious rounded lobes and TWO obvious gaps between them, all digit ends visible. Do not count the wrist or palm as a finger. Do not make a mitten, two-finger V, four-finger hand or extra knuckle. Keep the palm in the same place, the wrist attached to the same black sleeve and the open-palmed recoil gesture. This three-digit rule is an original crossover-design convention, not a claim about an official character model.\nREFERENCE IMAGE 2 is the archived initial pose, only for unchanged costume/body details. REFERENCE IMAGE 3 is the existing game Ribbit stance, only for identity and color; it is NOT a guide to the requested finger count. Everything outside the screen-left hand must remain as close as possible to reference 1. Keep the already-correct right-side hand unchanged.\nOne complete sprite on genuine transparent background with native alpha, approximately square canvas. Entire figure within generous transparent margins, including both boots. No floor, shadow, effects, text, border, checkerboard or duplicate character.",
+  "referencePaths": [
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/hit-correction-02/hit.png",
+    "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/hit.png",
+    "assets/encore/stance/ribbit.png"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "/root/audit_github",
+  "tool": "image_gen",
+  "transparentBackground": true,
+  "correction": {
+    "attempt": 3,
+    "replaces": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/generated/hit.json",
+    "reason": "Attempt 2 left only two distinct lobes on the screen-left hand; add a third while preserving the already-correct three-digit right-side hand.",
+    "scope": "Hands only; preserve the original costume, body, pose, orientation and framing.",
+    "rejectedPriorAttempt": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/hit-correction-02/review.json"
+  }
+}

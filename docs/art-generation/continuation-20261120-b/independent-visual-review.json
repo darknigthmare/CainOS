@@ -1,0 +1,813 @@
+{
+  "schema": "encore-continuation-b-independent-visual-review/v1",
+  "createdAt": "2026-11-20T17:35:55.366784+00:00",
+  "reviewer": "ribbit_references",
+  "status": "accepted_with_stated_scope",
+  "method": "Independent manual inspection of the ten existing final Canvas JPEG sheets through view_image, followed by SHA checks against the current exact source assets and runtime. No rerender or browser execution.",
+  "offlineManifest": {
+    "file": "combat/offline-manifest.mjs",
+    "sha256": "3eed3002ea71f36129e95ff4d08480aafc615816a2487f4a49697630f75fe3af",
+    "version": "0.7.0-17366238b519"
+  },
+  "canvasSummary": {
+    "file": "docs/art-generation/continuation-20261120-b/canvas-summary.json",
+    "sha256": "4844f9395c8f57ce48d65e401f010a9ebed08db5e2e8aad4b9ae4c6e6c8da3e5",
+    "complete": true,
+    "counts": {
+      "appearances": 5,
+      "actions": 45,
+      "stances": 5,
+      "drawChecks": 100,
+      "portraits": 5,
+      "missing": 0,
+      "aliasedActions": 0
+    }
+  },
+  "manualInspectionCounts": {
+    "galleries": 5,
+    "sheets": 10,
+    "actionsVisibleOnSheets": 45,
+    "selectionPortraitsVisibleOnSheets": 5,
+    "standaloneStanceSheets": 0,
+    "mirroredSheetViews": 0
+  },
+  "technicalEvidenceReviewed": {
+    "reports": 5,
+    "drawChecksReported": 100,
+    "actionsReported": 45,
+    "stancesReported": 5,
+    "portraitsReported": 5,
+    "missingReported": 0,
+    "aliasedActionsReported": 0,
+    "mappedSourceImagesHashChecked": 55,
+    "currentRuntimeHashesMatchReports": true
+  },
+  "views": [
+    {
+      "appearanceId": "cafekinger",
+      "file": "docs/art-generation/continuation-20261120-b/review/cafekinger/actions-cafekinger.jpg",
+      "sha256": "943f0f9b676d67c40abf2ee122880d0ac1aec1147c39b1b0f486d40cda43c649",
+      "bytes": 118718,
+      "dimensions": [
+        1080,
+        1110
+      ],
+      "kind": "nine_action_sheet",
+      "actuallyInspected": true,
+      "status": "accepted_with_stated_scope"
+    },
+    {
+      "appearanceId": "cafekinger",
+      "file": "docs/art-generation/continuation-20261120-b/review/cafekinger/archive-portraits-01.jpg",
+      "sha256": "527c5bfe68a5fd81e3e24f892f7c8109ed618fb928d5775ea9b65a2159be7f85",
+      "bytes": 14620,
+      "dimensions": [
+        1440,
+        284
+      ],
+      "kind": "selection_portrait_sheet",
+      "actuallyInspected": true,
+      "status": "accepted_with_stated_scope"
+    },
+    {
+      "appearanceId": "cafepomni",
+      "file": "docs/art-generation/continuation-20261120-b/review/cafepomni/actions-cafepomni.jpg",
+      "sha256": "ae54fb18bae4d06ee5d8295547c10f66f5ade1353666e7edf58567b84ed9e080",
+      "bytes": 136159,
+      "dimensions": [
+        1080,
+        1110
+      ],
+      "kind": "nine_action_sheet",
+      "actuallyInspected": true,
+      "status": "accepted_with_stated_scope"
+    },
+    {
+      "appearanceId": "cafepomni",
+      "file": "docs/art-generation/continuation-20261120-b/review/cafepomni/archive-portraits-01.jpg",
+      "sha256": "4ed34d9ea4e20b046afedc469d6ed5d65a69256645034a326e30e3b87e9cd069",
+      "bytes": 19468,
+      "dimensions": [
+        1440,
+        284
+      ],
+      "kind": "selection_portrait_sheet",
+      "actuallyInspected": true,
+      "status": "accepted_with_stated_scope"
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-hommage",
+      "file": "docs/art-generation/continuation-20261120-b/review/glitch-metarunner-ribbit-hommage/actions-glitch-metarunner-ribbit-hommage.jpg",
+      "sha256": "d3efabe205f86f1e10b203ddc96045e72e60d3f355377295bf4ea937ebc167de",
+      "bytes": 100900,
+      "dimensions": [
+        1080,
+        1110
+      ],
+      "kind": "nine_action_sheet",
+      "actuallyInspected": true,
+      "status": "accepted_with_stated_scope"
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-hommage",
+      "file": "docs/art-generation/continuation-20261120-b/review/glitch-metarunner-ribbit-hommage/archive-portraits-01.jpg",
+      "sha256": "f33b734aa626d9bf497fd7b6c606a76ad2683a3f47c879c525b66fe6e98b176e",
+      "bytes": 18224,
+      "dimensions": [
+        1440,
+        284
+      ],
+      "kind": "selection_portrait_sheet",
+      "actuallyInspected": true,
+      "status": "accepted_with_stated_scope"
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-resident",
+      "file": "docs/art-generation/continuation-20261120-b/review/glitch-metarunner-ribbit-resident/actions-glitch-metarunner-ribbit-resident.jpg",
+      "sha256": "d019cb0822c062f34b9c8c728fa6f0584674006f2d8e2b8aac70a4ee7f7a57f4",
+      "bytes": 109196,
+      "dimensions": [
+        1080,
+        1110
+      ],
+      "kind": "nine_action_sheet",
+      "actuallyInspected": true,
+      "status": "accepted_with_stated_scope"
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-resident",
+      "file": "docs/art-generation/continuation-20261120-b/review/glitch-metarunner-ribbit-resident/archive-portraits-01.jpg",
+      "sha256": "d498cc14c5040ca0ad4bdfc5b2eaa9a4c51b9d458051fa738b069c4a41c56dec",
+      "bytes": 19198,
+      "dimensions": [
+        1440,
+        284
+      ],
+      "kind": "selection_portrait_sheet",
+      "actuallyInspected": true,
+      "status": "accepted_with_stated_scope"
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-fusion",
+      "file": "docs/art-generation/continuation-20261120-b/review/glitch-metarunner-ribbit-fusion/actions-glitch-metarunner-ribbit-fusion.jpg",
+      "sha256": "1e11192fdf730c968194461140470c7f1075c25e62f37d98bd3b7ab73833e396",
+      "bytes": 108951,
+      "dimensions": [
+        1080,
+        1110
+      ],
+      "kind": "nine_action_sheet",
+      "actuallyInspected": true,
+      "status": "accepted_with_stated_scope"
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-fusion",
+      "file": "docs/art-generation/continuation-20261120-b/review/glitch-metarunner-ribbit-fusion/archive-portraits-01.jpg",
+      "sha256": "4276d5e0537e106c60849a88604c16aefaced78fcd4797f98335d0b6b307235c",
+      "bytes": 19214,
+      "dimensions": [
+        1440,
+        284
+      ],
+      "kind": "selection_portrait_sheet",
+      "actuallyInspected": true,
+      "status": "accepted_with_stated_scope"
+    }
+  ],
+  "familyReports": [
+    {
+      "appearanceId": "cafekinger",
+      "file": "docs/art-generation/continuation-20261120-b/review/cafekinger/character-canvas-review.json",
+      "sha256": "80a190f4a2fe39052663f61dce0f50a1307ad499a7336f63ecfffaa89b7c4fa6",
+      "counts": {
+        "appearances": 1,
+        "expectedActions": 9,
+        "actions": 9,
+        "stances": 1,
+        "drawChecks": 20,
+        "archiveEntries": 0,
+        "portraits": 1,
+        "expectedPortraits": 1,
+        "missing": 0,
+        "aliasedActions": 0
+      },
+      "observations": [
+        "Les neuf actions montrent la pièce d’échecs entière, sa base, la croix, les deux yeux, le monocle/chaîne et les deux gants flottants. Aucun bras ou jambe humaine ajouté.",
+        "Queue-de-pie violette, gilet et fleur cohérents ; intro, frappe, recul, déplacement, saut, esquive, victoire et défaite lisibles. Le portrait conserve toute la silhouette."
+      ]
+    },
+    {
+      "appearanceId": "cafepomni",
+      "file": "docs/art-generation/continuation-20261120-b/review/cafepomni/character-canvas-review.json",
+      "sha256": "09d44163bb774b6cb068e8735c81c7fda03294f43abdcd74b2976d959504dd3a",
+      "counts": {
+        "appearances": 1,
+        "expectedActions": 9,
+        "actions": 9,
+        "stances": 1,
+        "drawChecks": 20,
+        "archiveEntries": 0,
+        "portraits": 1,
+        "expectedPortraits": 1,
+        "missing": 0,
+        "aliasedActions": 0
+      },
+      "observations": [
+        "Les neuf actions conservent le bonnet entier et ses deux grelots, le bandeau blanc, les deux nœuds de tablier et les deux chaussures rouge/marine.",
+        "Silhouette entière, deux bras et deux jambes cohérents ; poses basses et défaite distinctes, visage lisible et portrait entier."
+      ]
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-hommage",
+      "file": "docs/art-generation/continuation-20261120-b/review/glitch-metarunner-ribbit-hommage/character-canvas-review.json",
+      "sha256": "e3e804a604c5f37db1f67b5b1808dd2bc03ffdb0e3e77c69faaf5214fa9cade4",
+      "counts": {
+        "appearances": 1,
+        "expectedActions": 9,
+        "actions": 9,
+        "stances": 1,
+        "drawChecks": 20,
+        "archiveEntries": 0,
+        "portraits": 1,
+        "expectedPortraits": 1,
+        "missing": 0,
+        "aliasedActions": 0
+      },
+      "observations": [
+        "Identité Ribbit, veste cyan/blanche, pantalon marine, nœud magenta, main biologique et avant-bras cybernétique restent cohérents dans les actions et le portrait.",
+        "Aucune extrémité coupée ni halo diffus visible ; coup lourd distinct. Les doigts masqués ou repliés ne sont pas comptés comme une anatomie intégralement visible."
+      ]
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-resident",
+      "file": "docs/art-generation/continuation-20261120-b/review/glitch-metarunner-ribbit-resident/character-canvas-review.json",
+      "sha256": "a400a0f048ee54c0957dc03ed1c098eb2a7258df87d1f843b7092bb6f0649d4e",
+      "counts": {
+        "appearances": 1,
+        "expectedActions": 9,
+        "actions": 9,
+        "stances": 1,
+        "drawChecks": 20,
+        "archiveEntries": 0,
+        "portraits": 1,
+        "expectedPortraits": 1,
+        "missing": 0,
+        "aliasedActions": 0
+      },
+      "observations": [
+        "Veste marine/magenta, tee crème, short, genouillères, jambes vertes et baskets cyan/violettes restent cohérents.",
+        "Silhouettes entières et actions lisibles, avec bras biologique et cybernétique conservés. Aucun halo diffus visible sur le damier."
+      ]
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-fusion",
+      "file": "docs/art-generation/continuation-20261120-b/review/glitch-metarunner-ribbit-fusion/character-canvas-review.json",
+      "sha256": "e287e46ef6227a078bfa53904713f9c5817421470c7775ebc00897c03324ae5d",
+      "counts": {
+        "appearances": 1,
+        "expectedActions": 9,
+        "actions": 9,
+        "stances": 1,
+        "drawChecks": 20,
+        "archiveEntries": 0,
+        "portraits": 1,
+        "expectedPortraits": 1,
+        "missing": 0,
+        "aliasedActions": 0
+      },
+      "observations": [
+        "Plaques pâles, articulations marine, lignes cyan et nœud pectoral magenta restent cohérents ; pieds amphibies entiers.",
+        "Le corps synthétique reste distinct des deux tenues biologiques. Actions, coup lourd et portrait sont lisibles, sans halo diffus ni membre supplémentaire visible."
+      ]
+    }
+  ],
+  "sourceImages": [
+    {
+      "appearanceId": "cafekinger",
+      "category": "actions",
+      "slot": "intro",
+      "file": "assets/encore/poses/cafekinger/intro.png",
+      "sha256": "1e8b2f54e8a85d45b0290f412b75d1fa714ce8c56ddf05df3058e0ff3f89c4aa",
+      "sourceVerifiedByCanvasReport": true,
+      "sourceHashRecheckedAtReview": true
+    },
+    {
+      "appearanceId": "cafekinger",
+      "category": "actions",
+      "slot": "attack",
+      "file": "assets/encore/poses/cafekinger/attack.png",
+      "sha256": "f630f373b9ddfecebc7849d46c6f0653a3e8b5d958e88c723fad222b3f6a1877",
+      "sourceVerifiedByCanvasReport": true,
+      "sourceHashRecheckedAtReview": true
+    },
+    {
+      "appearanceId": "cafekinger",
+      "category": "actions",
+      "slot": "hit",
+      "file": "assets/encore/poses/cafekinger/hit.png",
+      "sha256": "390a7d034e1914d4324e6a9df3990504d8f5384c79fee1e56d6edbf0f8affbc2",
+      "sourceVerifiedByCanvasReport": true,
+      "sourceHashRecheckedAtReview": true
+    },
+    {
+      "appearanceId": "cafekinger",
+      "category": "actions",
+      "slot": "walk",
+      "file": "assets/encore/poses/cafekinger/walk.png",
+      "sha256": "a5e36e9940f0b321b9fe7e2e91fd173ba08a4f757699ea577af65a70f2fac02f",
+      "sourceVerifiedByCanvasReport": true,
+      "sourceHashRecheckedAtReview": true
+    },
+    {
+      "appearanceId": "cafekinger",
+      "category": "actions",
+      "slot": "jump",
+      "file": "assets/encore/poses/cafekinger/jump.png",
+      "sha256": "2a23eb61bac62268c5a1cc6ac3302b8ba5cfacbab82ffddb1a4fa3cfaa7cad17",
+      "sourceVerifiedByCanvasReport": true,
+      "sourceHashRecheckedAtReview": true
+    },
+    {
+      "appearanceId": "cafekinger",
+      "category": "actions",
+      "slot": "crouch",
+      "file": "assets/encore/poses/cafekinger/crouch.png",
+      "sha256": "4e3a9a3a9a469b435103784a545fbd8cfa3351e397943bf1d2d568fbce0f5c91",
+      "sourceVerifiedByCanvasReport": true,
+      "sourceHashRecheckedAtReview": true
+    },
+    {
+      "appearanceId": "cafekinger",
+      "category": "actions",
+      "slot": "victory",
+      "file": "assets/encore/poses/cafekinger/victory.png",
+      "sha256": "8a67a00ae06ae1889c113b0e5bd4aa337d12d0c8a7a0cd5d2e030019e42f2f1f",
+      "sourceVerifiedByCanvasReport": true,
+      "sourceHashRecheckedAtReview": true
+    },
+    {
+      "appearanceId": "cafekinger",
+      "category": "actions",
+      "slot": "defeat",
+      "file": "assets/encore/poses/cafekinger/defeat.png",
+      "sha256": "98ceb4149a55d66fa7f73c1a11d1c03fb9254a3d9ca0269e72cbceb56a3864da",
+      "sourceVerifiedByCanvasReport": true,
+      "sourceHashRecheckedAtReview": true
+    },
+    {
+      "appearanceId": "cafekinger",
+      "category": "actions",
+      "slot": "heavy",
+      "file": "assets/encore/poses/cafekinger/heavy.png",
+      "sha256": "a333b4fdd459c62c4610fa82994b2e6048fb1c562920c28d437b050508097358",
+      "sourceVerifiedByCanvasReport": true,
+      "sourceHashRecheckedAtReview": true
+    },
+    {
+      "appearanceId": "cafekinger",
+      "category": "stances",
+      "slot": "stance",
+      "file": "assets/encore/stance/cafekinger.png",
+      "sha256": "4b035586d8295dfe8b96f04106917842acc3704249c08e5c388939b4b537bf1b",
+      "sourceVerifiedByCanvasReport": true,
+      "sourceHashRecheckedAtReview": true
+    },
+    {
+      "appearanceId": "cafekinger",
+      "category": "portraits",
+      "slot": "selection",
+      "file": "assets/encore/selection/cafekinger.png",
+      "sha256": "274ed8ca57cd3351483464df04433d41266c43c041008d74b0bf9f810e5b91d7",
+      "sourceVerifiedByCanvasReport": true,
+      "sourceHashRecheckedAtReview": true
+    },
+    {
+      "appearanceId": "cafepomni",
+      "category": "actions",
+      "slot": "intro",
+      "file": "assets/encore/poses/cafepomni/intro.png",
+      "sha256": "c4f678c7f7148c4b66e9648321e859ca8e27c6349bcac72f7853e9e1b695cc48",
+      "sourceVerifiedByCanvasReport": true,
+      "sourceHashRecheckedAtReview": true
+    },
+    {
+      "appearanceId": "cafepomni",
+      "category": "actions",
+      "slot": "attack",
+      "file": "assets/encore/poses/cafepomni/attack.png",
+      "sha256": "ac4f934a2920f716c69c05fd562335dcaf0013f587142496270bd2025b0dbba5",
+      "sourceVerifiedByCanvasReport": true,
+      "sourceHashRecheckedAtReview": true
+    },
+    {
+      "appearanceId": "cafepomni",
+      "category": "actions",
+      "slot": "hit",
+      "file": "assets/encore/poses/cafepomni/hit.png",
+      "sha256": "ce234a5a7bd843257d454258232af85e4e244bf454b30def75d463193264dc62",
+      "sourceVerifiedByCanvasReport": true,
+      "sourceHashRecheckedAtReview": true
+    },
+    {
+      "appearanceId": "cafepomni",
+      "category": "actions",
+      "slot": "walk",
+      "file": "assets/encore/poses/cafepomni/walk.png",
+      "sha256": "09ed0adeef001ba69cca8238ff8450ae24a195316d9966a3cfc2116738db0079",
+      "sourceVerifiedByCanvasReport": true,
+      "sourceHashRecheckedAtReview": true
+    },
+    {
+      "appearanceId": "cafepomni",
+      "category": "actions",
+      "slot": "jump",
+      "file": "assets/encore/poses/cafepomni/jump.png",
+      "sha256": "108d73a49f717c89d4acdf9e91be65b094de80cb35a3e6fbb20341bc561cabe8",
+      "sourceVerifiedByCanvasReport": true,
+      "sourceHashRecheckedAtReview": true
+    },
+    {
+      "appearanceId": "cafepomni",
+      "category": "actions",
+      "slot": "crouch",
+      "file": "assets/encore/poses/cafepomni/crouch.png",
+      "sha256": "793d7e1254591b04f23a16b627dbbd849bc5f5dc772ebb35ad261b4ce72583ff",
+      "sourceVerifiedByCanvasReport": true,
+      "sourceHashRecheckedAtReview": true
+    },
+    {
+      "appearanceId": "cafepomni",
+      "category": "actions",
+      "slot": "victory",
+      "file": "assets/encore/poses/cafepomni/victory.png",
+      "sha256": "96a986005e35ea1a3b9cfbd5d0f2117df8b0b7b566395cf449e298b36a9bfadb",
+      "sourceVerifiedByCanvasReport": true,
+      "sourceHashRecheckedAtReview": true
+    },
+    {
+      "appearanceId": "cafepomni",
+      "category": "actions",
+      "slot": "defeat",
+      "file": "assets/encore/poses/cafepomni/defeat.png",
+      "sha256": "2feff3b699e1365e5ae56787ae88fb05ab1b9c876f7f2cc4153f9696f0c371fa",
+      "sourceVerifiedByCanvasReport": true,
+      "sourceHashRecheckedAtReview": true
+    },
+    {
+      "appearanceId": "cafepomni",
+      "category": "actions",
+      "slot": "heavy",
+      "file": "assets/encore/poses/cafepomni/heavy.png",
+      "sha256": "e119b9d164d26dabc175118d11ccfe0ab3184e9613a5944cff6f20c2a427fb0d",
+      "sourceVerifiedByCanvasReport": true,
+      "sourceHashRecheckedAtReview": true
+    },
+    {
+      "appearanceId": "cafepomni",
+      "category": "stances",
+      "slot": "stance",
+      "file": "assets/encore/stance/cafepomni.png",
+      "sha256": "dc2344f8df5ad54a171778f6a1aa0d0f66e7251b71da27dd43b7a4d58d3b050b",
+      "sourceVerifiedByCanvasReport": true,
+      "sourceHashRecheckedAtReview": true
+    },
+    {
+      "appearanceId": "cafepomni",
+      "category": "portraits",
+      "slot": "selection",
+      "file": "assets/encore/selection/cafepomni.png",
+      "sha256": "dd3053cb2f9b1f458749c57d13218089901eae246b1834b771267d8019342da9",
+      "sourceVerifiedByCanvasReport": true,
+      "sourceHashRecheckedAtReview": true
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-hommage",
+      "category": "actions",
+      "slot": "intro",
+      "file": "assets/encore/crossovers/metarunner/ribbit/hommage/intro.png",
+      "sha256": "5f744b70af9328152324f88e025778f016f697b5a99895c184cb9df4fdb40b49",
+      "sourceVerifiedByCanvasReport": true,
+      "sourceHashRecheckedAtReview": true
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-hommage",
+      "category": "actions",
+      "slot": "attack",
+      "file": "assets/encore/crossovers/metarunner/ribbit/hommage/attack.png",
+      "sha256": "3ff2fa3dd5b3fc64961f7417f724cfd8030f1748d3ecfdedd95c3e29824640a8",
+      "sourceVerifiedByCanvasReport": true,
+      "sourceHashRecheckedAtReview": true
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-hommage",
+      "category": "actions",
+      "slot": "hit",
+      "file": "assets/encore/crossovers/metarunner/ribbit/hommage/hit.png",
+      "sha256": "f1f19ecdec728fc1c9699962c9ea4893558b736f4b8bdc7cd20c96e4f075e0da",
+      "sourceVerifiedByCanvasReport": true,
+      "sourceHashRecheckedAtReview": true
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-hommage",
+      "category": "actions",
+      "slot": "walk",
+      "file": "assets/encore/crossovers/metarunner/ribbit/hommage/walk.png",
+      "sha256": "9e13a21c083cb17feef275e4540a6e3ac39181d44c92601844c454d39d75ae54",
+      "sourceVerifiedByCanvasReport": true,
+      "sourceHashRecheckedAtReview": true
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-hommage",
+      "category": "actions",
+      "slot": "jump",
+      "file": "assets/encore/crossovers/metarunner/ribbit/hommage/jump.png",
+      "sha256": "066842d08009481b27e597e8b7d72daee3b8d0c7f8d13c10f816be085eca22a6",
+      "sourceVerifiedByCanvasReport": true,
+      "sourceHashRecheckedAtReview": true
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-hommage",
+      "category": "actions",
+      "slot": "crouch",
+      "file": "assets/encore/crossovers/metarunner/ribbit/hommage/crouch.png",
+      "sha256": "b0ea55e9529f71656bd1720c90d6204eae9b86e5488173423e0fa240b5f3f09d",
+      "sourceVerifiedByCanvasReport": true,
+      "sourceHashRecheckedAtReview": true
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-hommage",
+      "category": "actions",
+      "slot": "victory",
+      "file": "assets/encore/crossovers/metarunner/ribbit/hommage/victory.png",
+      "sha256": "7bf70e391f99cf1930c3befc11606bfde8c42ea465e4719cb5aa08d3e5ae6acf",
+      "sourceVerifiedByCanvasReport": true,
+      "sourceHashRecheckedAtReview": true
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-hommage",
+      "category": "actions",
+      "slot": "defeat",
+      "file": "assets/encore/crossovers/metarunner/ribbit/hommage/defeat.png",
+      "sha256": "bde4f046c964478fd51496078e7b45d6437ae56ba229554ed4b86df38cd8a03b",
+      "sourceVerifiedByCanvasReport": true,
+      "sourceHashRecheckedAtReview": true
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-hommage",
+      "category": "actions",
+      "slot": "heavy",
+      "file": "assets/encore/crossovers/metarunner/ribbit/hommage/heavy.png",
+      "sha256": "ab798d624da6e9b9d3747f585755b31eb124fb2390dec5d08d8d5471fa506e5f",
+      "sourceVerifiedByCanvasReport": true,
+      "sourceHashRecheckedAtReview": true
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-hommage",
+      "category": "stances",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/metarunner/ribbit/hommage/stance.png",
+      "sha256": "baa3212257643a6c1cb4afcac50f591b5cf1def68c8bd76470c4868f35cf514f",
+      "sourceVerifiedByCanvasReport": true,
+      "sourceHashRecheckedAtReview": true
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-hommage",
+      "category": "portraits",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/metarunner/ribbit/hommage/selection.png",
+      "sha256": "78cc1900845c7e552dc4c090082d2d259069a5e0aac1e764ecbd2e20e6355d58",
+      "sourceVerifiedByCanvasReport": true,
+      "sourceHashRecheckedAtReview": true
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-resident",
+      "category": "actions",
+      "slot": "intro",
+      "file": "assets/encore/crossovers/metarunner/ribbit/resident/intro.png",
+      "sha256": "63ad3612218cd7f73d1ca04cae4faf2667c43ce4036974c9ccde4c735b0ae9c7",
+      "sourceVerifiedByCanvasReport": true,
+      "sourceHashRecheckedAtReview": true
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-resident",
+      "category": "actions",
+      "slot": "attack",
+      "file": "assets/encore/crossovers/metarunner/ribbit/resident/attack.png",
+      "sha256": "0f361c706582463d8c0c4c9ad07aece8d2836337071149f55deee4da05f71c0c",
+      "sourceVerifiedByCanvasReport": true,
+      "sourceHashRecheckedAtReview": true
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-resident",
+      "category": "actions",
+      "slot": "hit",
+      "file": "assets/encore/crossovers/metarunner/ribbit/resident/hit.png",
+      "sha256": "4ac3bce2ba6c62b0c4fd148130859befef835a22d5ca342aa6c608eb822085fd",
+      "sourceVerifiedByCanvasReport": true,
+      "sourceHashRecheckedAtReview": true
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-resident",
+      "category": "actions",
+      "slot": "walk",
+      "file": "assets/encore/crossovers/metarunner/ribbit/resident/walk.png",
+      "sha256": "1230d9929381ad0c6806cf7e7909b4366894f64b1ae0de70297ed727908b6cab",
+      "sourceVerifiedByCanvasReport": true,
+      "sourceHashRecheckedAtReview": true
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-resident",
+      "category": "actions",
+      "slot": "jump",
+      "file": "assets/encore/crossovers/metarunner/ribbit/resident/jump.png",
+      "sha256": "387af220a09a3c50ad699348f87bbe8a177e7db608151199dace4d43d803510f",
+      "sourceVerifiedByCanvasReport": true,
+      "sourceHashRecheckedAtReview": true
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-resident",
+      "category": "actions",
+      "slot": "crouch",
+      "file": "assets/encore/crossovers/metarunner/ribbit/resident/crouch.png",
+      "sha256": "f41af4680c2fbe95d6698d8fecddb6325eddb7dbce511958ea0f11f02bbf1b96",
+      "sourceVerifiedByCanvasReport": true,
+      "sourceHashRecheckedAtReview": true
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-resident",
+      "category": "actions",
+      "slot": "victory",
+      "file": "assets/encore/crossovers/metarunner/ribbit/resident/victory.png",
+      "sha256": "49a47fc5a216966671fc2caf17d4f1df11405d2b5721bffe4c078b872665300a",
+      "sourceVerifiedByCanvasReport": true,
+      "sourceHashRecheckedAtReview": true
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-resident",
+      "category": "actions",
+      "slot": "defeat",
+      "file": "assets/encore/crossovers/metarunner/ribbit/resident/defeat.png",
+      "sha256": "2ce6b4e07748f736cac688fdbb803ed6adb02537a64253e1574e3fc76b9aaa5b",
+      "sourceVerifiedByCanvasReport": true,
+      "sourceHashRecheckedAtReview": true
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-resident",
+      "category": "actions",
+      "slot": "heavy",
+      "file": "assets/encore/crossovers/metarunner/ribbit/resident/heavy.png",
+      "sha256": "c7064406ab64caeaa071ccb11f1c5e9cdfc8a3eebf5d1318c383f1bd3fe442b7",
+      "sourceVerifiedByCanvasReport": true,
+      "sourceHashRecheckedAtReview": true
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-resident",
+      "category": "stances",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/metarunner/ribbit/resident/stance.png",
+      "sha256": "15e370e15b83ee8c4e76d0873384710552d5c964c84240eb02d9a23b96a1b3f2",
+      "sourceVerifiedByCanvasReport": true,
+      "sourceHashRecheckedAtReview": true
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-resident",
+      "category": "portraits",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/metarunner/ribbit/resident/selection.png",
+      "sha256": "e1b43f0af6b7c4e87d36d15843a9047e491eae3e5e23450de879e75d4b60d61c",
+      "sourceVerifiedByCanvasReport": true,
+      "sourceHashRecheckedAtReview": true
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-fusion",
+      "category": "actions",
+      "slot": "intro",
+      "file": "assets/encore/crossovers/metarunner/ribbit/fusion/intro.png",
+      "sha256": "757ecf2fc43dbf0872b724b57433ec44058a9021f4dbf4a5c351dbe010156338",
+      "sourceVerifiedByCanvasReport": true,
+      "sourceHashRecheckedAtReview": true
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-fusion",
+      "category": "actions",
+      "slot": "attack",
+      "file": "assets/encore/crossovers/metarunner/ribbit/fusion/attack.png",
+      "sha256": "2a5584483f87200a118aa30485e668653925c7cb2f5c8ae0b87ab3a0667ee91c",
+      "sourceVerifiedByCanvasReport": true,
+      "sourceHashRecheckedAtReview": true
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-fusion",
+      "category": "actions",
+      "slot": "hit",
+      "file": "assets/encore/crossovers/metarunner/ribbit/fusion/hit.png",
+      "sha256": "17b8d5207b776c5d309969e01e9eb2859b5f0241f5b970fd16d23d87496f35f7",
+      "sourceVerifiedByCanvasReport": true,
+      "sourceHashRecheckedAtReview": true
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-fusion",
+      "category": "actions",
+      "slot": "walk",
+      "file": "assets/encore/crossovers/metarunner/ribbit/fusion/walk.png",
+      "sha256": "4185d3f1936f674d5070254141521c38cb93af03c19f17c90140c10fd3b03267",
+      "sourceVerifiedByCanvasReport": true,
+      "sourceHashRecheckedAtReview": true
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-fusion",
+      "category": "actions",
+      "slot": "jump",
+      "file": "assets/encore/crossovers/metarunner/ribbit/fusion/jump.png",
+      "sha256": "5d852f1212a23b9177cbbc65d27ec3c1355b857f7cef6399c384c09bf272c277",
+      "sourceVerifiedByCanvasReport": true,
+      "sourceHashRecheckedAtReview": true
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-fusion",
+      "category": "actions",
+      "slot": "crouch",
+      "file": "assets/encore/crossovers/metarunner/ribbit/fusion/crouch.png",
+      "sha256": "981dc120521bd3df683a17327ddd6d950b70e69026dee1062e6e449e9880187d",
+      "sourceVerifiedByCanvasReport": true,
+      "sourceHashRecheckedAtReview": true
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-fusion",
+      "category": "actions",
+      "slot": "victory",
+      "file": "assets/encore/crossovers/metarunner/ribbit/fusion/victory.png",
+      "sha256": "de74398e329f6a69a95d2f192ed697651f4281d8d44eb5fe0aef2ee764eb4550",
+      "sourceVerifiedByCanvasReport": true,
+      "sourceHashRecheckedAtReview": true
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-fusion",
+      "category": "actions",
+      "slot": "defeat",
+      "file": "assets/encore/crossovers/metarunner/ribbit/fusion/defeat.png",
+      "sha256": "b2c2c71841837209ca1978d6119e6c4b0822d1ca51b74fb1fbfbaad497e57e9f",
+      "sourceVerifiedByCanvasReport": true,
+      "sourceHashRecheckedAtReview": true
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-fusion",
+      "category": "actions",
+      "slot": "heavy",
+      "file": "assets/encore/crossovers/metarunner/ribbit/fusion/heavy.png",
+      "sha256": "246358f1267378e222b580f84c51f63b20c63151010980ab012918dee6935969",
+      "sourceVerifiedByCanvasReport": true,
+      "sourceHashRecheckedAtReview": true
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-fusion",
+      "category": "stances",
+      "slot": "stance",
+      "file": "assets/encore/crossovers/metarunner/ribbit/fusion/stance.png",
+      "sha256": "d7358a61b8b4b149a77a63be03bb58ec69d439b67c36bd792c00ead8e0e225b1",
+      "sourceVerifiedByCanvasReport": true,
+      "sourceHashRecheckedAtReview": true
+    },
+    {
+      "appearanceId": "glitch-metarunner-ribbit-fusion",
+      "category": "portraits",
+      "slot": "selection",
+      "file": "assets/encore/crossovers/metarunner/ribbit/fusion/selection.png",
+      "sha256": "66f93f23e324372ae66f1c0e164fd67ebd28bb329f38eb151758c595cf7d875e",
+      "sourceVerifiedByCanvasReport": true,
+      "sourceHashRecheckedAtReview": true
+    }
+  ],
+  "runtimeSources": {
+    "combat/data.mjs": "3e8933c915c92380fe0c0a1d7342f67fb3d947dead8ba05749ac7139773c9a58",
+    "combat/costume-additions.mjs": "6ca423daada66954c5b7760f021d38b047516afb68c1f3dd873567288db8789d",
+    "combat/costume-continuation-20261120.mjs": "d3774d17d6058e72081cc7a236f748fc26cc2532fe94ddf772e9ad6de638eb0f",
+    "combat/costume-resumption-20261120.mjs": "f83bde65b434f107abf7017e532a5600b2b43713f3b0e32308f8a1a2bd3be9d5",
+    "combat/costume-discoveries-20261120.mjs": "fb16daf1591a50602a68a84e2d7e5cafa12c230b2185ef4e1d627cec8a67565c",
+    "combat/costume-ribbit-20261120.mjs": "c8ecfaae5894a5f6b0f96a6ac8038dd38a6ce57cc2e22ea51bca5aaa6a495b91",
+    "combat/costume-next-missing-20261120.mjs": "2ba4dbc117c128245422a7f595d91d0b172bfc91dc3e55a7d4b70424e86bd901",
+    "combat/costume-next-wave-20261120.mjs": "dd644e2868c8c3ca92564ea64a18cccee1c1765f364d92c19e83689b7ca6cd4e",
+    "combat/costume-order.mjs": "f053e51f49a81c7a340ab246d85f4945260d14ed7c7630dfd002feb2d6e6d5f7",
+    "combat/costume-continuation-20261120-b.mjs": "3136498a0c30a45adbeabd801eeca2898d51b21eb8198b402685914c20f1b994",
+    "combat/crossovers.mjs": "16e0b81e1f1581bd0b66dd0c61b1b55172ec27481f4792734f7e041f04a93711",
+    "combat/crossover-npc-additions.mjs": "75eb80ed31b51961ef260e8430c5371844c174aff888daaf6110e3b4c290cd94",
+    "combat/illustrations.mjs": "26aca8338be81bedbbbc1bb4bc59dd0aae8b7b7ef4d785cbbf353ac109c53b99",
+    "combat/render.mjs": "0fd83aaa999edab666be0a7b4538338b57ec33cb2f90e041da18a47c7de87347",
+    "combat/render-poses.mjs": "21e3afba8c19723ffdcb383402cc6339b63cb58df5d4323fda2ebde093ce0b29",
+    "combat/offline-manifest.mjs": "3eed3002ea71f36129e95ff4d08480aafc615816a2487f4a49697630f75fe3af",
+    "scripts/render-combat-character-review.mjs": "3b6519a33e5e923c10517c8a12135f112ae30822247c16bfdda55a4b9a134e09"
+  },
+  "commonObservations": [
+    "Les 45 actions et cinq portraits montrés sont entiers et lisibles, sans alias visuel évident, disparition de costume ni halo diffus au contour.",
+    "Les ombres au sol, anneaux de victoire, flèches d’accroupissement et arcs de frappe visibles sont des effets du moteur ; ils ne sont pas attribués aux PNG natifs.",
+    "Les différences de pose et de taille de présentation suivent le rendu statique des actions. Cette revue ne mesure pas la fluidité d’un cycle animé."
+  ],
+  "defects": [],
+  "limits": [
+    "Les planches montrent neuf actions et un portrait par famille. Les cinq gardes et les deux sens sont vérifiés dans les rapports techniques, mais ne sont pas présentés comme cinq images de garde ou cent vues manuellement inspectées ici.",
+    "Les rendus utilisent les modules Canvas2D de production sous Node/Skia ; aucun parcours navigateur, DOM, entrée, service-worker, son ou appareil physique n’est validé.",
+    "Les poses isolées ne constituent pas des animations complètes et ne prouvent pas une fidélité canonique 1:1.",
+    "Les limites des sources Café et les designs originaux Meta Runner restent celles des définitions et revues séparées. Les trois lobes des designs Ribbit ne sont pas une affirmation anatomique officielle.",
+    "Le stade et le classeur ont leurs revues distinctes et ne sont pas inclus dans ces dix planches de personnages."
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "startedAt": "2026-11-20T17:30:58.636150+00:00",
+  "completedAt": "2026-11-20T17:30:59.404776+00:00",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "--test",
+    "--test-skip-pattern=historical crossover views|all 33 Meta Runner slots",
+    "tests/combat-costume-order.test.mjs",
+    "tests/combat-crossovers.test.mjs",
+    "tests/combat-metarunner.test.mjs"
+  ],
+  "exitCode": 0,
+  "testFileSHA256": "be593644262135b805d8316b557c64d5e195b231b979f56fe78dabf4651c694f",
+  "stdout": "✔ the complete 472-costume prefix keeps its published IDs, order and fields (11.634006ms)\n✔ explicit addition order appends successive mixed Circus and NPC batches without shifting published records (18.364826ms)\n✔ ambiguous or incomplete addition registries fail with explicit IDs (0.881996ms)\n✔ the fourteen complete crossover wardrobes and the explicitly reviewed NPC groups coexist (19.627531ms)\n✔ the published Murder Drones Ribbit group retains its historical positions and all 468 earlier wardrobe entries (11.83728ms)\n✔ replays, profiles and campaign checkpoints retain historical and NPC crossovers only for their owner (6.906587ms)\n✔ the production tracker counts individual published poses and preserves notes across an update (3.500219ms)\n✔ the three explicit Ribbit Meta Runner designs append after both Cafe outfits and preserve their owner kit (2.936473ms)\nℹ tests 8\nℹ suites 0\nℹ pass 8\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 590.836349\n",
+  "stderr": "",
+  "scope": "Order, full historical prefix, ownership, registry, profile/replay and tracker regression. Offline-dependent tests deliberately excluded until parent regenerates the global manifest.",
+  "priorAttempt": "metarunner-targeted-tests-attempt-01.json"
+}

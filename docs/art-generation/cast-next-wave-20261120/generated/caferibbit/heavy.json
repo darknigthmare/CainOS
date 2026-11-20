@@ -1,0 +1,86 @@
+{
+  "appearanceId": "caferibbit",
+  "slot": "heavy",
+  "useCase": "precise-object-edit",
+  "prompt": "Use case: precise-object-edit. Production transparent 2D combat sprite correction.\nImage 1 is the edit target: Cafe Ribbit performing the forward kick. KEEP this pose, the entire face, headband bows, two green arms and fists, dress, apron, low standing leg, both navy shoes, all colors and cel-shaded drawing style unchanged.\nCorrect ONE costume mistake on the HORIZONTAL RAISED LEG pointing SCREEN-RIGHT. Its white scalloped sock cuff with the tiny pink heart is incorrectly located close to the ankle/shoe. Move that scalloped cuff and its pink heart toward the body, to the TOP edge of the white sock where the green leg changes to white. The white sock must extend continuously FROM that top cuff TO the navy shoe, with NO second frill or heart near the ankle. There must be only one top cuff on this raised sock. Image 2 and image 3 demonstrate the intended sock construction. Keep both legs long and the complete kicking shoe in the frame.\nPreserve exactly one intact frog head, two arms with two hands, two legs and two shoes. Do not change the outfit or add accessories. Do not add or expose underwear. Keep the character turned and looking SCREEN-RIGHT. Preserve actual native transparent RGBA background. The entire silhouette must have transparent margin on all sides, including the extended kicking toe. No solid background, checkerboard, shadow, motion trail, glow, halo, duplicate, watermark or text.",
+  "referencePaths": [
+    "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/attempts/heavy-01.png",
+    "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/selection.png",
+    "docs/art-generation/cast-next-wave-20261120/references/caferibbit/ribbit-cafe-detail.png"
+  ],
+  "referenceRoles": [
+    "Edit target: preserve the heavy kicking pose; correct raised sock cuff only",
+    "Accepted costume: top cuffs belong at the green-to-white boundary below each knee",
+    "Official cafe costume"
+  ],
+  "sourceUrls": [
+    "https://prtimes.jp/main/html/rd/p/000008857.000016756.html",
+    "https://www.animatecafe.jp/event/ac000791"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "ribbit_references",
+  "definitionSha256": "68a3ad72d57180cf9e6f3032422bd8b49e89150763a856d281bae3d16596c20e",
+  "correctionOf": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/attempts/heavy-01.png",
+  "schema": "encore-native-next-missing-art/v1",
+  "id": "caferibbit:heavy",
+  "status": "accepted_native",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/heavy.png",
+  "targetFile": "assets/encore/poses/caferibbit/heavy.png",
+  "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-f383d6ac-c3a7-4608-aa5e-d81bd4931cd1.png",
+  "sourceGenerationId": "exec-f383d6ac-c3a7-4608-aa5e-d81bd4931cd1",
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/attempts/heavy-01.png",
+      "sha256": "67d14192251950326f96a821316beb6ed5c6a324ebb33bd5963d80c07802f4f5",
+      "bytes": 777235
+    },
+    {
+      "position": 2,
+      "file": "docs/art-generation/cast-next-wave-20261120/generated/caferibbit/selection.png",
+      "sha256": "638c8ced2802e022b25a2674dd9380757cfdff3a02b5a46acff4bda2fbe295e2",
+      "bytes": 1495892
+    },
+    {
+      "position": 3,
+      "file": "docs/art-generation/cast-next-wave-20261120/references/caferibbit/ribbit-cafe-detail.png",
+      "sha256": "7359975baf1aa8f956cfbad282f2c3a1103820519dfcae238327de91a681dc9f",
+      "bytes": 139654
+    }
+  ],
+  "dimensions": [
+    1205,
+    1305
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "alpha12Bounds": [
+    48,
+    42,
+    1159,
+    1278
+  ],
+  "alpha12BoundsThreshold": "alpha > 12",
+  "fullyTransparentPixels": 1143736,
+  "sha256": "ba86c05acb6dbd5cffacc2333b39bb427a7958e86e45379a15cb776255b8d9f7",
+  "bytes": 781909,
+  "nativeCopyVerified": true,
+  "sourceKind": "Illustration officielle de collaboration commerciale",
+  "episodeFidelityClaim": false,
+  "includedInRuntime": false,
+  "createdAt": "2026-11-20T14:48:54.717536+00:00",
+  "visualReview": {
+    "status": "accepted",
+    "reviewer": "ribbit_references",
+    "observations": [
+      "Coup de pied vers la droite entier. Revers et petit cœur de la chaussette levée replacés à la jonction vert/blanc ; aucun second revers près de la cheville. Pose et autres vêtements conservés.",
+      "Composition alpha sur fond clair et sombre inspectée ; pas de halo visible, pas de rognage, deux bras et deux jambes. Octets natifs conservés sans retouche."
+    ],
+    "scope": "Official costume comparison and original game pose; no episode or complete animation certification."
+  }
+}

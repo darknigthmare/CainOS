@@ -1,0 +1,150 @@
+{
+  "scope": "Diagnostic compositing only; all native PNG bytes remain unchanged.",
+  "assets": [
+    {
+      "file": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/selection.png",
+      "sha256": "78cc1900845c7e552dc4c090082d2d259069a5e0aac1e764ecbd2e20e6355d58",
+      "reviewImage": "docs/art-generation/continuation-20261120-b/metarunner/review/hommage-native-alpha-27.png"
+    },
+    {
+      "file": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/stance.png",
+      "sha256": "baa3212257643a6c1cb4afcac50f591b5cf1def68c8bd76470c4868f35cf514f",
+      "reviewImage": "docs/art-generation/continuation-20261120-b/metarunner/review/hommage-native-alpha-27.png"
+    },
+    {
+      "file": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/intro.png",
+      "sha256": "5f744b70af9328152324f88e025778f016f697b5a99895c184cb9df4fdb40b49",
+      "reviewImage": "docs/art-generation/continuation-20261120-b/metarunner/review/hommage-native-alpha-27.png"
+    },
+    {
+      "file": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/attack.png",
+      "sha256": "3ff2fa3dd5b3fc64961f7417f724cfd8030f1748d3ecfdedd95c3e29824640a8",
+      "reviewImage": "docs/art-generation/continuation-20261120-b/metarunner/review/hommage-native-alpha-27.png"
+    },
+    {
+      "file": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/heavy.png",
+      "sha256": "ab798d624da6e9b9d3747f585755b31eb124fb2390dec5d08d8d5471fa506e5f",
+      "reviewImage": "docs/art-generation/continuation-20261120-b/metarunner/review/hommage-native-alpha-27.png"
+    },
+    {
+      "file": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/hit.png",
+      "sha256": "f1f19ecdec728fc1c9699962c9ea4893558b736f4b8bdc7cd20c96e4f075e0da",
+      "reviewImage": "docs/art-generation/continuation-20261120-b/metarunner/review/hommage-native-alpha-27.png"
+    },
+    {
+      "file": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/walk.png",
+      "sha256": "9e13a21c083cb17feef275e4540a6e3ac39181d44c92601844c454d39d75ae54",
+      "reviewImage": "docs/art-generation/continuation-20261120-b/metarunner/review/hommage-native-alpha-27.png"
+    },
+    {
+      "file": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/jump.png",
+      "sha256": "066842d08009481b27e597e8b7d72daee3b8d0c7f8d13c10f816be085eca22a6",
+      "reviewImage": "docs/art-generation/continuation-20261120-b/metarunner/review/hommage-native-alpha-27.png"
+    },
+    {
+      "file": "docs/art-generation/continuation-20261120-b/metarunner/hommage/generated/crouch.png",
+      "sha256": "b0ea55e9529f71656bd1720c90d6204eae9b86e5488173423e0fa240b5f3f09d",
+      "reviewImage": "docs/art-generation/continuation-20261120-b/metarunner/review/hommage-native-alpha-27.png"
+    },
+    {
+      "file": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/selection.png",
+      "sha256": "e1b43f0af6b7c4e87d36d15843a9047e491eae3e5e23450de879e75d4b60d61c",
+      "reviewImage": "docs/art-generation/continuation-20261120-b/metarunner/review/resident-native-alpha-27.png"
+    },
+    {
+      "file": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/stance.png",
+      "sha256": "15e370e15b83ee8c4e76d0873384710552d5c964c84240eb02d9a23b96a1b3f2",
+      "reviewImage": "docs/art-generation/continuation-20261120-b/metarunner/review/resident-native-alpha-27.png"
+    },
+    {
+      "file": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/intro.png",
+      "sha256": "63ad3612218cd7f73d1ca04cae4faf2667c43ce4036974c9ccde4c735b0ae9c7",
+      "reviewImage": "docs/art-generation/continuation-20261120-b/metarunner/review/resident-native-alpha-27.png"
+    },
+    {
+      "file": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/attack.png",
+      "sha256": "0f361c706582463d8c0c4c9ad07aece8d2836337071149f55deee4da05f71c0c",
+      "reviewImage": "docs/art-generation/continuation-20261120-b/metarunner/review/resident-native-alpha-27.png"
+    },
+    {
+      "file": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/heavy.png",
+      "sha256": "c7064406ab64caeaa071ccb11f1c5e9cdfc8a3eebf5d1318c383f1bd3fe442b7",
+      "reviewImage": "docs/art-generation/continuation-20261120-b/metarunner/review/resident-native-alpha-27.png"
+    },
+    {
+      "file": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/hit.png",
+      "sha256": "4ac3bce2ba6c62b0c4fd148130859befef835a22d5ca342aa6c608eb822085fd",
+      "reviewImage": "docs/art-generation/continuation-20261120-b/metarunner/review/resident-native-alpha-27.png"
+    },
+    {
+      "file": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/walk.png",
+      "sha256": "1230d9929381ad0c6806cf7e7909b4366894f64b1ae0de70297ed727908b6cab",
+      "reviewImage": "docs/art-generation/continuation-20261120-b/metarunner/review/resident-native-alpha-27.png"
+    },
+    {
+      "file": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/jump.png",
+      "sha256": "387af220a09a3c50ad699348f87bbe8a177e7db608151199dace4d43d803510f",
+      "reviewImage": "docs/art-generation/continuation-20261120-b/metarunner/review/resident-native-alpha-27.png"
+    },
+    {
+      "file": "docs/art-generation/continuation-20261120-b/metarunner/resident/generated/crouch.png",
+      "sha256": "f41af4680c2fbe95d6698d8fecddb6325eddb7dbce511958ea0f11f02bbf1b96",
+      "reviewImage": "docs/art-generation/continuation-20261120-b/metarunner/review/resident-native-alpha-27.png"
+    },
+    {
+      "file": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/selection.png",
+      "sha256": "66f93f23e324372ae66f1c0e164fd67ebd28bb329f38eb151758c595cf7d875e",
+      "reviewImage": "docs/art-generation/continuation-20261120-b/metarunner/review/fusion-native-alpha-27.png"
+    },
+    {
+      "file": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/stance.png",
+      "sha256": "d7358a61b8b4b149a77a63be03bb58ec69d439b67c36bd792c00ead8e0e225b1",
+      "reviewImage": "docs/art-generation/continuation-20261120-b/metarunner/review/fusion-native-alpha-27.png"
+    },
+    {
+      "file": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/intro.png",
+      "sha256": "757ecf2fc43dbf0872b724b57433ec44058a9021f4dbf4a5c351dbe010156338",
+      "reviewImage": "docs/art-generation/continuation-20261120-b/metarunner/review/fusion-native-alpha-27.png"
+    },
+    {
+      "file": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/attack.png",
+      "sha256": "2a5584483f87200a118aa30485e668653925c7cb2f5c8ae0b87ab3a0667ee91c",
+      "reviewImage": "docs/art-generation/continuation-20261120-b/metarunner/review/fusion-native-alpha-27.png"
+    },
+    {
+      "file": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/heavy.png",
+      "sha256": "246358f1267378e222b580f84c51f63b20c63151010980ab012918dee6935969",
+      "reviewImage": "docs/art-generation/continuation-20261120-b/metarunner/review/fusion-native-alpha-27.png"
+    },
+    {
+      "file": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/hit.png",
+      "sha256": "17b8d5207b776c5d309969e01e9eb2859b5f0241f5b970fd16d23d87496f35f7",
+      "reviewImage": "docs/art-generation/continuation-20261120-b/metarunner/review/fusion-native-alpha-27.png"
+    },
+    {
+      "file": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/walk.png",
+      "sha256": "4185d3f1936f674d5070254141521c38cb93af03c19f17c90140c10fd3b03267",
+      "reviewImage": "docs/art-generation/continuation-20261120-b/metarunner/review/fusion-native-alpha-27.png"
+    },
+    {
+      "file": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/jump.png",
+      "sha256": "5d852f1212a23b9177cbbc65d27ec3c1355b857f7cef6399c384c09bf272c277",
+      "reviewImage": "docs/art-generation/continuation-20261120-b/metarunner/review/fusion-native-alpha-27.png"
+    },
+    {
+      "file": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/crouch.png",
+      "sha256": "981dc120521bd3df683a17327ddd6d950b70e69026dee1062e6e449e9880187d",
+      "reviewImage": "docs/art-generation/continuation-20261120-b/metarunner/review/fusion-native-alpha-27.png"
+    }
+  ],
+  "reviewer": "root",
+  "reviewedAt": "2026-11-20T17:13:44.995791+00:00",
+  "status": "accepted_with_stated_scope",
+  "reviewedNativeFiles": 27,
+  "observations": [
+    "Les 27 silhouettes sont entières et lisibles, avec palettes cohérentes par famille.",
+    "Composition alpha sur fond clair et fond sombre inspectée pour chaque dessin ; aucun halo diffus composé.",
+    "Les gestes et positions des mains ont été examinés sur les images natives ; les doigts partiellement occultés sont notés dans les reçus.",
+    "Les proportions élancées et les trois doigts sont des choix de ce crossover original, sans revendication canonique."
+  ]
+}

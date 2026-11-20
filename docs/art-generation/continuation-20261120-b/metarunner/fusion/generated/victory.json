@@ -1,0 +1,76 @@
+{
+  "appearanceId": "glitch-metarunner-ribbit-fusion",
+  "fighterId": "ribbit",
+  "series": "metarunner",
+  "style": "fusion",
+  "slot": "victory",
+  "nativeFacing": "right",
+  "prompt": "Edit ONLY the small mechanical hand resting at the waist on IMAGE RIGHT of reference 1. Leave the raised fist at upper image-left EXACTLY as it is: it already correctly has three digits. Leave all other anatomy, pose, expression, armour, colours, materials, feet, head and native transparency unchanged. The hand at the waist currently shows only TWO white rounded fingertip pads. Redraw that small hand as a relaxed lightly curled THREE-digit mechanical frog hand, resting at the hip, with THREE CLEARLY VISIBLE SEPARATE white rounded fingertip lobes TOTAL, one thumb plus two fingers. Make their three-tip silhouette unambiguous, with small dark separations. Reference 2 shows the original three-digit mechanical hand anatomy; use only that anatomical detail, not its pose. No fourth tip, no two-tip hand, no residual stub. Keep the waist arm bent at the same place and preserve all surrounding armour/body exactly. No clothes, text, ground, shadow, particles, external glow or background. Full-body transparent PNG, entire feet and both hands inside frame. Original anatomy design choice; no canonical claim.",
+  "referencePaths": [
+    "docs/art-generation/continuation-20261120-b/metarunner/fusion/attempts/victory-02/victory.png",
+    "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/selection.png"
+  ],
+  "reviewer": "audit_github",
+  "definitionSHA256": "8838b39db6a0ab378603aec7ad863ecb9bb917017eca00fb1ed08efd2ca064b3",
+  "attempt": 3,
+  "supersedesRejectedAttempt": "docs/art-generation/continuation-20261120-b/metarunner/fusion/attempts/victory-02/receipt.json",
+  "schema": "encore-native-npc-crossover/v1",
+  "id": "glitch-metarunner-ribbit-fusion:victory",
+  "status": "accepted_native",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "file": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/victory.png",
+  "targetFile": "assets/encore/crossovers/metarunner/ribbit/fusion/victory.png",
+  "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-147b5ed3-038a-4f39-9ed1-30a899910051.png",
+  "sourceGenerationId": "exec-147b5ed3-038a-4f39-9ed1-30a899910051",
+  "definitionFile": "docs/art-generation/continuation-20261120-b/metarunner/definitions/glitch-metarunner-ribbit-fusion.json",
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/continuation-20261120-b/metarunner/fusion/attempts/victory-02/victory.png",
+      "sha256": "f547de46b103be089c28e70425710755eec11013e6839329667b222285920e2d",
+      "bytes": 859047
+    },
+    {
+      "position": 2,
+      "file": "docs/art-generation/continuation-20261120-b/metarunner/fusion/generated/selection.png",
+      "sha256": "66f93f23e324372ae66f1c0e164fd67ebd28bb329f38eb151758c595cf7d875e",
+      "bytes": 941029
+    }
+  ],
+  "dimensions": [
+    1086,
+    1448
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "alpha12Bounds": [
+    158,
+    33,
+    966,
+    1422
+  ],
+  "alpha12BoundsThreshold": "alpha > 12",
+  "fullyTransparentPixels": 1165453,
+  "sha256": "de74398e329f6a69a95d2f192ed697651f4281d8d44eb5fe0aef2ee764eb4550",
+  "bytes": 877568,
+  "nativeCopyVerified": true,
+  "sourceKind": "Création originale pour Encore",
+  "episodeFidelityClaim": false,
+  "canonicalCostumeClaim": false,
+  "includedInRuntime": true,
+  "createdAt": "2026-11-20T17:21:40.484364+00:00",
+  "visualReview": {
+    "status": "accepted",
+    "reviewer": "audit_github",
+    "observations": [
+      "Native alpha composed on light and dark backgrounds: no external halo, floor or cast shadow. Full figure and both feet remain inside canvas.",
+      "Cheerful victory facing right. The raised fist has two curled digit tips plus one thumb, three total; the corrected waist hand now clearly displays three separate rounded digit tips. White/cyan armour, navy joints, mint abdomen, pink chest bow node and three-lobed feet match the original selection.",
+      "Original three-digit design, no canonical costume or full animation claim. Diagnostics actually inspected: review/audit-victory-defeat/victory-03-alpha.jpg and victory-03-hands.jpg."
+    ],
+    "scope": "Original crossover identity, entire figure, costume continuity and readable game pose; no canonical costume or complete animation claim."
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "createdAt": "2026-11-20T15:18:34.340259+00:00",
+  "archiveManifest": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/attempts/family-01/manifest.json",
+  "archiveManifestSha256": "96dc391d8abf344f0b3194e963528dddc65f7cba038444151e00050afec6c433",
+  "unchangedSeedSha256": "ea9bf4c31ea98cc6422699abb1ad7190378bd35deb940fa0e821fd9c407b418f",
+  "retainedPoseReferenceRelocations": [
+    {
+      "slot": "heavy",
+      "receipt": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/heavy.json",
+      "originalReceiptSha256": "066eccd769bf97c0eb54d391296ad769a9653a41941e81dbfe0864525b76ad40",
+      "newReceiptSha256": "a79c2b3f357c3bb879bcd90167743411a56b31b1554b2135255084fbbd1773c8",
+      "pngSha256": "90cd3b607f74c4618422ba172e8ac498e37e85212cd011de1a35bdadce0b35d3"
+    },
+    {
+      "slot": "walk",
+      "receipt": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/walk.json",
+      "originalReceiptSha256": "247123f78afe68cd870750dd43230adfacf647d94b11e451aee15557ee7e05a2",
+      "newReceiptSha256": "ac5012da9e4973366febfaa165ef0afc9cb992a6b4491695fd105eab5a2ca7b4",
+      "pngSha256": "c3c0881fd9e5833eaeb6f49a86db52d91d242c97d92a2b4989a30d4ec52af418"
+    },
+    {
+      "slot": "victory",
+      "receipt": "docs/art-generation/npc-crossovers-next-wave-20261120/hommage/generated/victory.json",
+      "originalReceiptSha256": "5ed67468a3fed25c3dafa26d7766b44bc70a6e382c1e93839dba8091273f8507",
+      "newReceiptSha256": "ba3f6d72236430c377cc4bd442f7ccaabceb013b76d5c79da4b11894637452de",
+      "pngSha256": "43ecd2b83b7c132a83ac0c2301879f01901dfd6f0710822a540263a4ca12733c"
+    }
+  ],
+  "liberatedSlots": [
+    "selection",
+    "stance",
+    "intro",
+    "attack",
+    "hit",
+    "jump",
+    "crouch",
+    "defeat"
+  ],
+  "archivedFilesUnmodified": true
+}
