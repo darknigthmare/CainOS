@@ -9,7 +9,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
 import { pathToFileURL } from 'node:url';
-import { FIGHTERS, STAGES, ALL_STAGES } from '../combat/data.mjs';
+import { FIGHTERS, STAGES, getDedicatedStage } from '../combat/data.mjs';
 import { GAME_VERSION, SAVE_KEY, REPLAY_KEY } from '../combat/session.mjs';
 
 let playwright;
@@ -175,17 +175,21 @@ try {
     await expectFocus(page, selector, fighter.name + ' remains focused after selection');
     assert.equal(await page.locator(selector).getAttribute('aria-pressed'), 'true');
     assert.equal(await page.locator('[data-selection-artist="0"] h3').textContent(), fighter.name);
+    const expectedStages = [...STAGES, ...[...new Set([fighter.id, 'jax'])].map(getDedicatedStage)];
+    assert.deepEqual(await page.locator('.stage-card').evaluateAll(cards => cards.map(card => card.dataset.stage)), expectedStages.map(stage => stage.id), fighter.id + ' exposes shared stages and only the selected artists’ dedicated stages');
   }
   checked('all fighter choices keep focus and update the selected artist', { fighters: FIGHTERS.map(item => item.id) });
   await activate(page, '[data-fighter="pomni"]');
-  await group(page, '.stages', ALL_STAGES.length, 'Arena cards');
-  for (const stage of ALL_STAGES) {
+  const visibleStages = [...STAGES, ...['pomni', 'jax'].map(getDedicatedStage)];
+  assert.deepEqual(await page.locator('.stage-card').evaluateAll(cards => cards.map(card => card.dataset.stage)), visibleStages.map(stage => stage.id));
+  await group(page, '.stages', visibleStages.length, 'Arena cards');
+  for (const stage of visibleStages) {
     const selector = `[data-stage="${stage.id}"]`; await activate(page, selector);
     await expectFocus(page, selector);
     assert.equal(await page.locator(selector).getAttribute('aria-pressed'), 'true');
     assert.equal(await page.locator('#stage-preview').getAttribute('data-stage-preview'), stage.id);
   }
-  checked('all stage choices retain focus and synchronize the preview', { stages: ALL_STAGES.map(item => item.id) });
+  checked('all displayed stage choices retain focus and synchronize the preview', { stages: visibleStages.map(item => item.id) });
 
   const wardrobeOpener = '[data-selection-artist="0"] [data-appearance]';
   await activate(page, wardrobeOpener);
@@ -342,8 +346,10 @@ try {
   await phone.keyboard.press('End'); await phone.keyboard.press('Enter');
   await expectFocus(phone, `[data-fighter="${FIGHTERS.at(-1).id}"]`);
   await phone.keyboard.press('Home'); await phone.keyboard.press('Enter'); await expectFocus(phone, '[data-fighter="pomni"]');
-  await group(phone, '.stages', ALL_STAGES.length, '390px stage grid');
-  await phone.keyboard.press('End'); await phone.keyboard.press('Enter'); await expectFocus(phone, `[data-stage="${STAGES.at(-1).id}"]`);
+  assert.deepEqual(await phone.locator('.stage-card').evaluateAll(cards => cards.map(card => card.dataset.stage)), visibleStages.map(stage => stage.id));
+  await group(phone, '.stages', visibleStages.length, '390px stage grid');
+  await phone.keyboard.press('End'); await phone.keyboard.press('Enter'); await expectFocus(phone, `[data-stage="${visibleStages.at(-1).id}"]`);
+  assert.equal(await phone.locator('#stage-preview').getAttribute('data-stage-preview'), visibleStages.at(-1).id);
   await noOverflow(phone, '390px selection');
   await activate(phone, wardrobeOpener); await phone.locator('#modal[open]').waitFor();
   await tabTo(phone, '#wardrobe-variant'); await phone.keyboard.press('ArrowDown'); await expectFocus(phone, '#wardrobe-variant');

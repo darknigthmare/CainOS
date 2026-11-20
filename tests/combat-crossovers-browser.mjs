@@ -151,7 +151,7 @@ try {
       currentFighter = entry.fighterId;
     }
     const assetDirectory = new URL('../combat/' + entry.sprite.crossoverDirectory + '/', import.meta.url);
-    const files = (await fs.readdir(fileURLToPath(assetDirectory))).filter(name => name.endsWith('.webp')).sort();
+    const files = (await fs.readdir(fileURLToPath(assetDirectory))).filter(name => /\.(webp|png)$/.test(name)).sort();
     const counts = await audit.evaluate(async ({entry, files}) => {
       const { getFighter, equipCostume } = await import('/combat/data.mjs');
       const { ART_FILES } = await import('/combat/offline-manifest.mjs');
@@ -170,13 +170,15 @@ try {
       const keys = ['selection', 'stance', ...ACTION_ART];
       const published = ART_FILES.filter(path => path.startsWith(directory + '/')).map(path => path.slice(directory.length + 1)).sort();
       if (JSON.stringify(files) !== JSON.stringify(published)) throw new Error('Le manifeste diffère des fichiers de ' + entry.id);
+      // Match illustrationPath: published WebP first, then native-alpha PNG.
+      const source = key => ['webp', 'png'].map(extension => directory + '/' + key + '.' + extension).find(path => ART_FILES.includes(path)) || null;
+      const exists = key => source(key) !== null;
       for (const key of keys) {
-        if (!ART_FILES.includes(directory + '/' + key + '.webp')) throw new Error('Vue absente du manifeste : ' + entry.id + '/' + key);
+        if (!exists(key)) throw new Error('Vue absente du manifeste : ' + entry.id + '/' + key);
       }
-      const exists = key => ART_FILES.includes(directory + '/' + key + '.webp');
       for (const key of keys) {
         const frame = await loadFighterIllustration(key === 'selection' || key === 'stance' ? key : 'poses', f, key);
-        const expected = directory.replace('..','') + '/' + (exists(key) ? key : 'stance') + '.webp';
+        const expected = source(exists(key) ? key : 'stance').replace('..','');
         if (exists(key) && (!frame || window.crossoverSources.get(frame.canvas) !== expected)) throw new Error('Décodage incorrect ' + expected);
         if (!exists(key) && frame) throw new Error('Texture inattendue pour ' + entry.id + '/' + key);
         if (key === 'selection') continue;
@@ -201,7 +203,7 @@ try {
         renderer.drawActor(actor, 32, true, {phase:'fight'});
         const strike = window.crossoverAuditDraw;
         const heavyKey = exists('heavy') ? 'heavy' : exists('attack') ? 'attack' : 'stance';
-        if (strike?.path !== directory.replace('..','') + '/' + heavyKey + '.webp' || Math.sign(strike.matrix.a) !== face)
+        if (strike?.path !== source(heavyKey).replace('..','') || Math.sign(strike.matrix.a) !== face)
           throw new Error('Dessin ou orientation incorrects du coup lourd de ' + entry.id);
       }
       return {textures:keys.filter(exists).length + Number(exists('heavy')), orientations:2*(keys.length-1), heavyOrientations:2};
