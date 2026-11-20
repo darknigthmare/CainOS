@@ -16,7 +16,7 @@ const PLANES = [
 const PROPS = {
   coppernine: ['colony-heater', 182, 563, 117], silicacity: ['uplink-repeater', 236, 555, 152],
   portaurora: ['lifebuoy-station', 1050, 517, 133], gaslightwharf: ['wharf-lamp', 1072, 545, 221],
-  parkplanet: ['garden-turnstile', 226, 558, 106], gameoverse: ['orbital-checkpoint', 170, 554, 154],
+  parkplanet: ['garden-turnstile', 226, 558, 106], gameoverse: ['orbital-checkpoint', 170, 572, 154],
   littledaisy: ['jazz-microphone', 234, 545, 164], showgrounds: ['ticket-dispenser', 226, 558, 131],
   simpleflipisland: ['bamboo-checkpoint', 1072, 567, 148], grounds: ['cotton-candy-cart', 215, 555, 150],
 };

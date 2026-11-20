@@ -17,6 +17,28 @@ The playable game version is **0.7.0**. The GLITCH wardrobe was updated on **18 
 
 The game combines **54 fighters, 540 techniques, 22 shared arenas, 443 selectable costumes and 179 searchable archive entries**. Fourteen fighters have individually authored kits; 40 promoted archive NPCs use the extension kits described below. The 54 dedicated stage arrangements reuse shared scenery and are counted separately. Its nine standard modes are joined by nine illustrated crossover visits under **Escales GLITCH**. The wardrobe contains 51 archive costumes, 14 additional illustrated Circus appearances, 252 tributes and residents, and 126 original fusions for the original fourteen fighters. Crossovers for the forty promoted NPCs remain to be produced. The combat techniques and stories are original fan-game adaptations.
 
+### Six recovered stage props — 20 November continuation
+
+The wharf lamp, castle ticket dispenser, orbital checkpoint, garden turnstile,
+jazz microphone and bamboo checkpoint now load in their six existing arenas.
+Their **six native PNGs are copied byte for byte** from the recovered source
+archive. The orbital pedestal is lowered by 18 pixels to place its base on the
+platform. The offline catalogue contains **5,491 images, totalling 2,724,652,669
+bytes**; the fighter and costume counts above are unchanged.
+
+The [prop continuation report](docs/COMBAT_PROPS_CONTINUATION_2026-11-20.md)
+links the six before/after comparisons, 18 camera checks, 401 passing Node tests
+and both successful builds. The new browser failure/recovery/cache scenarios
+await a successful browser run for this revision: local Chromium fails before
+navigation because socket creation is denied. Separately, the preceding cast
+commit's remote CI has now passed, including its browser suite.
+
+The [additional primary-reference audit](docs/art-generation/cast-reference-audit-20261120/audit-report.md)
+records nine candidates and nine targeted extracts. It adds no ready appearance
+or generation job: hidden joints and feet remain unresolved. The existing
+**102 accepted character drawings and 63 pending poses** retain their exact
+checkpoint.
+
 ### Six completed appearances and nine in preparation — 20 November continuation
 
 Noir Pomni, Noir Jax, Noir Kinger, Bodyguard Ragatha, Bodyguard Zooble and Bad End

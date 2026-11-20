@@ -1,0 +1,100 @@
+{
+  "schema": "encore-recovered-prop-review/v1",
+  "createdAt": "2026-11-20T07:02:25.005Z",
+  "phase": "integrated",
+  "environment": "Node + Skia, production stage-selector Canvas2D renderer; not a browser session",
+  "provenance": "art/sources/recovered-local-props-20261119/manifest.json",
+  "sources": {
+    "art/sources/recovered-local-props-20261119/manifest.json": "471731c1977d9406de5591188b528664c2b04e60fd3d223c2e85a9aa1302b8d1",
+    "combat/stage-parallax.mjs": "1e01fa0b4932f0e670bb6fa746c48b57de0c726a5637891e68427a161aecc77d",
+    "combat/render.mjs": "91cdc8a8a4b5298644809714aa7e53219e1266e2ffc95478194a699a7bc1212f",
+    "combat/engine.mjs": "b8d0a3f93117cd2f92bac1f712a6371e35099a0da1c599cbf91633b780bf7807",
+    "combat/offline-manifest.mjs": "5c1004fe49b817137070ffb0304b7e61c1412a5017e2808e901e6c1a8c36cc10"
+  },
+  "assets": [
+    {
+      "id": "vintage-brass-microphone",
+      "label": "Microphone en laiton",
+      "source": "art/sources/recovered-local-props-20261119/vintage-brass-microphone.png",
+      "file": "assets/encore/props/littledaisy/jazz-microphone.png",
+      "stageId": "littledaisy",
+      "sha256": "ca69aafcdff0395ad7f1daf0974fb54079b579015b2bfec0b7871d57bce050f6",
+      "bytes": 1260782,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceGenerationId": "exec-87e18eb1-87ef-4d2f-a0b9-4d32935edaed",
+      "nativeCopyVerified": true
+    }
+  ],
+  "scenes": [
+    {
+      "id": "littledaisy",
+      "name": "Little Daisy · Le club clandestin",
+      "file": "scene-littledaisy.png",
+      "sha256": "8bcd951cf7b948d6a6309681a1ab0584e34fe1b7f3d988e766ac50f16a774af7",
+      "prop": "assets/encore/props/littledaisy/jazz-microphone.png",
+      "requested": true,
+      "draw": {
+        "file": "assets/encore/props/littledaisy/jazz-microphone.png",
+        "coordinates": [
+          211,
+          409,
+          109.33333333333333,
+          164
+        ]
+      },
+      "complete": true,
+      "stageDefinitionUnchanged": true,
+      "cameras": [
+        {
+          "camera": -1,
+          "sha256": "49e3d06a6874d22a9fc859816cf0825d7dd74a08912d31dac9d17cfb9e011fb6"
+        },
+        {
+          "camera": 0,
+          "sha256": "985dc5cce6365502bd3ef8c30fc8877e18f33661db5b9e1171dfef9e18404bb1"
+        },
+        {
+          "camera": 1,
+          "sha256": "a533a095a659c9ea8ca0be4618eac31fcc16d4d791d026b7da541a5156a21e40"
+        }
+      ],
+      "beforeAfter": {
+        "baselineFile": "docs/art-generation/props-integration-20261120/before/scene-littledaisy.png",
+        "baselineSHA256": "21edde0642a1756ea0ddb1275284fb61feab4e76860491d6779cc00155cda8fc",
+        "changedPixels": 2032,
+        "bounds": {
+          "x": 210,
+          "y": 385,
+          "right": 260,
+          "bottom": 538
+        }
+      }
+    }
+  ],
+  "offline": {
+    "images": 5491,
+    "bytes": 2724652669,
+    "artVersion": "dbc2d48af8cbe42e",
+    "version": "0.7.0-fb6e3148b501"
+  },
+  "baseline": {
+    "file": "docs/art-generation/props-integration-20261120/before/canvas-review.json",
+    "sha256": "2cb7df4aae3cbcbb51e4a340b91ad94cc10bb65c159615614ca799fd465bd3dd",
+    "phase": "before_integration"
+  },
+  "limitations": [
+    "Original fan-game props; no claim of canonical episode appearance.",
+    "No DOM, input, audio or service-worker verification.",
+    "Visual review is recorded separately from successful rendering."
+  ],
+  "counts": {
+    "sources": 1,
+    "activeProps": 1,
+    "scenes": 1,
+    "cameraViews": 3,
+    "newNativeBytes": 1260782
+  }
+}
