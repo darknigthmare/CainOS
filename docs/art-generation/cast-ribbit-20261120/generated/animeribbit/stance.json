@@ -1,0 +1,69 @@
+{
+  "appearanceId": "animeribbit",
+  "fighterId": "ribbit",
+  "slot": "stance",
+  "nativeFacing": "right",
+  "prompt": "Use case: identity-preserve.\nAsset type: one individual fighting-game pose, Digital Circus — Encore.\nImage 1 is the APPROVED Anime Ribbit game model: preserve its exact green and mint frog skin, giant oval anime eyes with magenta irises/dark navy pupils/white glossy highlights and small lower eyelashes, pink cheeks, white mouth interior, slender frog anatomy and clean dark cel-shaded outlines. Image 2 is the official costume authority.\nLOCK all costume parts: short-sleeved WHITE blouse, PALE BUTTER-YELLOW V-neck sleeveless vest with tan V trim, BRIGHT PINK neck bow with TWO LONG TAILS, modest PINK PLEATED SKIRT, WHITE SOCKS each with ONE narrow pink band, rounded DARK NAVY SHOES. Arms, hands and legs use the SAME cool GREEN as the head, never yellow/olive. Exactly one head, two arms/two hands, two legs/two feet. No added props.\nPOSE:\nCombat idle guard: clear side-facing silhouette towards SCREEN-RIGHT. Feet apart with knees softly flexed, rear heel grounded, torso slightly forward, both hands raised defensively in front of the upper chest. Determined but friendly expression. Both huge eyes stay recognisable and both shoes show.\nOne separate full-body polished 2D cel-shaded sprite facing SCREEN-RIGHT. Adapt the whole-body pose, never merely rotate or warp the reference. Keep the character entirely within comfortable transparent margins: full eye tops, hands/fingers and both shoes must be visible. True transparent RGBA background with clean cutout edge; all pixels outside figure zero alpha. No glow, halo, gradient backdrop, ground, cast shadow, text, watermark, second character, speed trails, motion blur or extra limbs. Match the approved model and official costume; original fan-game pose, not a photograph or chibi plush.",
+  "referencePaths": [
+    "docs/art-generation/cast-ribbit-20261120/generated/animeribbit/selection.png",
+    "docs/art-generation/ribbit-candidates-20261120/references/official-anime-ribbit.png"
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/ribbit-pendantz-blindbox"
+  ],
+  "schema": "encore-native-ribbit-art/v1",
+  "id": "animeribbit:stance",
+  "status": "accepted_native",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "file": "docs/art-generation/cast-ribbit-20261120/generated/animeribbit/stance.png",
+  "targetFile": "assets/encore/stance/animeribbit.png",
+  "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-d2cd19db-f6c3-42b3-9efb-2aa65c1b66e5.png",
+  "sourceGenerationId": "exec-d2cd19db-f6c3-42b3-9efb-2aa65c1b66e5",
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/cast-ribbit-20261120/generated/animeribbit/selection.png",
+      "sha256": "8f89fb6ab3112c0ac72973f86c0973a2a89e106b50ffdc6e991eefe911618b77",
+      "bytes": 1485567
+    },
+    {
+      "position": 2,
+      "file": "docs/art-generation/ribbit-candidates-20261120/references/official-anime-ribbit.png",
+      "sha256": "02b2d7fccc04eb304961f381918888022363f0fda06c34a1e3b5b629de858ecf",
+      "bytes": 1130253
+    }
+  ],
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "alpha12Bounds": [
+    109,
+    63,
+    891,
+    1487
+  ],
+  "alpha12BoundsThreshold": "alpha > 12",
+  "fullyTransparentPixels": 1108033,
+  "sha256": "b07128898ea0589bf5a0f0c1f40e14fba63dc5565a03573418cc57bb70b31ebb",
+  "bytes": 1509969,
+  "nativeCopyVerified": true,
+  "sourceKind": "Produit dérivé officiel",
+  "episodeFidelityClaim": false,
+  "includedInRuntime": false,
+  "createdAt": "2026-11-20T12:25:51.511824+00:00",
+  "visualReview": {
+    "status": "accepted",
+    "reviewer": "root",
+    "observations": [
+      "Deux mains en garde et genoux fléchis ; tenue et yeux conservés ; corps entier vers la droite, deux chaussures visibles."
+    ],
+    "scope": "Official costume comparison and original game pose; no episode or complete animation certification."
+  }
+}

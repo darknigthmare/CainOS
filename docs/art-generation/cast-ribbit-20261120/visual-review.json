@@ -1,0 +1,34 @@
+{
+  "schema": "encore-ribbit-visual-review/v1",
+  "reviewedAt": "2026-11-20T12:44:07.185230+00:00",
+  "status": "accepted_with_stated_scope",
+  "reviewer": "root",
+  "appearances": [
+    "animeribbit",
+    "jaxsuitribbit"
+  ],
+  "filesInspected": [
+    "review/animeribbit/actions-animeribbit.jpg",
+    "review/animeribbit/archive-portraits-01.jpg",
+    "review/jaxsuitribbit/actions-jaxsuitribbit.jpg",
+    "review/jaxsuitribbit/archive-portraits-01.jpg"
+  ],
+  "observations": [
+    "Both final production Canvas action sheets and both selection portrait sheets were visually inspected.",
+    "Each action cell contains one complete identifiable Ribbit silhouette; no unintended background is visible after alpha composition.",
+    "Anime Ribbit retains green limbs, large magenta anime eyes, yellow vest, pink bow and pleated skirt, white socks and dark shoes.",
+    "Jax-Suit Ribbit retains the green frog face, lavender rabbit hood and limbs, pink ear bow and overalls, and yellow gloves.",
+    "The game action effects and grounding shadows are supplied by the existing renderer.",
+    "Native image bytes and alpha were preserved; no crop, recolor, retouch, or resampling was applied to active PNGs."
+  ],
+  "scope": "Static merchandise-inspired fan-game poses. Not a full animation cycle or episode-by-episode canonical certification.",
+  "sources": {
+    "combat/data.mjs": "6910aaddf46645f98520f4cc6fb468c2bc43b6dd017d9237266a90f6c1bf892b",
+    "combat/costume-additions.mjs": "0e4bf0e6d1d7a926c8f373c5d388179f5813116f5d9c1db1fb76a00329e216f2",
+    "combat/costume-ribbit-20261120.mjs": "c8ecfaae5894a5f6b0f96a6ac8038dd38a6ce57cc2e22ea51bca5aaa6a495b91",
+    "combat/illustrations.mjs": "26aca8338be81bedbbbc1bb4bc59dd0aae8b7b7ef4d785cbbf353ac109c53b99",
+    "combat/render.mjs": "91cdc8a8a4b5298644809714aa7e53219e1266e2ffc95478194a699a7bc1212f",
+    "combat/render-poses.mjs": "21e3afba8c19723ffdcb383402cc6339b63cb58df5d4323fda2ebde093ce0b29",
+    "combat/offline-manifest.mjs": "99a4bef5ac846f0518feb3f2062c48c23965c60ac4e5044dc221321fa0f211e1"
+  }
+}

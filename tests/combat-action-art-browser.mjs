@@ -12,14 +12,19 @@ catch (error) {
   if (!process.env.CODEX_PRIMARY_RUNTIME_NODE_MODULES) throw error;
   playwright = await import(pathToFileURL(path.join(process.env.CODEX_PRIMARY_RUNTIME_NODE_MODULES, 'playwright/index.mjs')).href);
 }
-const output = path.resolve('audit-combat/action-art');
+const output = path.resolve(process.env.COMBAT_ACTION_ART_OUTPUT || 'audit-combat/action-art');
 await fs.mkdir(output, { recursive: true });
 const base = process.env.COMBAT_TEST_URL || 'http://127.0.0.1:4173';
 const checks = [], failures = [];
-const appearances = [
+const allAppearances = [
   ...FIGHTERS.map(fighter => ({ id: fighter.id, owner: fighter.id, keys: [...ACTION_ART, 'heavy'] })),
   ...[...VARIANTS, ...COSTUME_ADDITIONS].map(variant => ({ id: variant.id, owner: variant.fighterId, keys: [...ACTION_ART, 'heavy'] })),
 ];
+// An explicit local scope keeps a small art review practical. CI omits this
+// option and continues to exercise the complete installed catalogue.
+const requestedIds = (process.env.COMBAT_ACTION_ART_APPEARANCES || '').split(',').map(id => id.trim()).filter(Boolean);
+for (const id of requestedIds) assert.ok(allAppearances.some(item => item.id === id), 'Unknown appearance: ' + id);
+const appearances = requestedIds.length ? allAppearances.filter(item => requestedIds.includes(item.id)) : allAppearances;
 const checked = (name, detail) => { checks.push({ name, detail, pass: true }); console.log('PASS ' + name); };
 const browser = await playwright.chromium.launch({ headless: true, executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH || undefined, args: ['--no-sandbox', '--disable-dev-shm-usage'] });
 const context = await browser.newContext({ serviceWorkers: 'block' });
@@ -64,6 +69,7 @@ try {
   await page.unroute(blocked);
   await page.clock.fastForward(5100);
   checked('A missing action keeps its exact-costume archive without repeated requests per frame', { frames: 12, failedRequests });
+  if (!appearances.some(item => item.id === 'maidjax')) requests.delete('/assets/encore/poses/maidjax/crouch.webp');
 
   // Run the production selection logic and capture the actual drawImage call,
   // including the transform for player two. A direct source comparison at
@@ -157,11 +163,11 @@ try {
   }
   const total = appearances.reduce((sum, entry) => sum + entry.keys.length, 0);
   assert.equal(requests.size, total);
-  checked('All original and costumed action drawings render on both sides of the arena', { appearances: appearances.length, drawings: total, drawCallsCompared: total * 2 });
+  checked(requestedIds.length ? 'Selected action drawings render on both sides of the arena' : 'All original and costumed action drawings render on both sides of the arena', { appearances: appearances.length, drawings: total, drawCallsCompared: total * 2 });
 } catch (error) {
   failures.push(error.stack || String(error));
   console.error(failures[0]); process.exitCode = 1;
 } finally {
   await browser.close();
-  await fs.writeFile(path.join(output, 'browser-report.json'), JSON.stringify({ checks, errors: failures }, null, 2));
+  await fs.writeFile(path.join(output, 'browser-report.json'), JSON.stringify({ scope: requestedIds.length ? 'selected_appearances' : 'complete_catalogue', appearanceIds: appearances.map(item => item.id), checks, errors: failures }, null, 2));
 }

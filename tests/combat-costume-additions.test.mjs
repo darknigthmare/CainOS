@@ -18,11 +18,11 @@ const appearanceWaves = {
     'abstractingzooble', 'abstractingqueenie', 'zoobleep5',
     'jaxsuitpomni', 'noirribbit', 'kaufmosuitribbit', 'intermissioncaine',
     'showtimepomni', 'bowlingpinragatha', 'ringmastercaine', 'strongmanorbsman',
-    'stagehandbubble', 'bugtamerkinger'],
+    'stagehandbubble', 'bugtamerkinger', 'animeribbit', 'jaxsuitribbit'],
 };
 
 test('additional outfits retain their owner, authored kit and saved appearance through replay and campaign round trips', () => {
-  assert.equal(COSTUME_ADDITIONS.length, 33);
+  assert.equal(COSTUME_ADDITIONS.length, 35);
   assert.equal(VARIANTS.length, 51, 'historical atlas remains stable');
   for (const [date, ids] of Object.entries(appearanceWaves)) {
     assert.deepEqual(COSTUME_ADDITIONS.filter(outfit => outfit.introducedOn === date).map(outfit => outfit.id), ids,
@@ -84,7 +84,7 @@ test('each additional outfit ships all eleven independent native-alpha PNG drawi
       signatures.add(createHash('sha256').update(bytes).digest('hex'));
     }
   }
-  assert.equal(signatures.size, 363, 'all 33 appearances have eleven independent drawings');
+  assert.equal(signatures.size, 385, 'all 35 appearances have eleven independent drawings');
 });
 
 test('resumed appearances append the frozen checkpoint definitions without changing the first fourteen entries', () => {
@@ -128,10 +128,17 @@ test('runtime directions agree with the individually reviewed completion records
 test('new catalogue drawings match reviewed native directions and exact archived PNGs', () => {
   const completion = JSON.parse(readFileSync(new URL('../docs/art-generation/cast-next-20261120/generation-completion.json', import.meta.url)));
   assert.equal(completion.status, 'complete_active');
-  assert.deepEqual(COSTUME_ADDITIONS.slice(23).map(entry => entry.id), completion.order);
+  assert.deepEqual(COSTUME_ADDITIONS.slice(23, 33).map(entry => entry.id), completion.order);
   const files = completion.appearances.flatMap(appearance => appearance.files);
   assert.equal(files.length, 110);
   assert.equal(new Set(files.map(file => file.appearanceId + '/' + file.slot)).size, 110);
+  const ribbit = JSON.parse(readFileSync(new URL('../docs/art-generation/cast-ribbit-20261120/generation-completion.json', import.meta.url)));
+  assert.equal(ribbit.status, 'complete_active');
+  assert.deepEqual(COSTUME_ADDITIONS.slice(33).map(entry => entry.id), ribbit.order);
+  const ribbitFiles = ribbit.appearances.flatMap(appearance => appearance.files);
+  assert.equal(ribbitFiles.length, 22);
+  assert.equal(new Set(ribbitFiles.map(file => file.appearanceId + '/' + file.slot)).size, 22);
+  files.push(...ribbitFiles);
   // The independently reviewed records protect mixed source directions, including
   // Ragatha's left-facing portrait beside her right-facing combat drawings.
   for (const file of files) {

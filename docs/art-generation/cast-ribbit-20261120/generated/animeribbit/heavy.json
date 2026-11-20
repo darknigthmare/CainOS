@@ -1,0 +1,69 @@
+{
+  "appearanceId": "animeribbit",
+  "fighterId": "ribbit",
+  "slot": "heavy",
+  "nativeFacing": "right",
+  "prompt": "Use case: identity-preserve.\nAsset type: one individual fighting-game pose, Digital Circus — Encore.\nImage 1 is the APPROVED Anime Ribbit game model: preserve its exact green and mint frog skin, giant oval anime eyes with magenta irises/dark navy pupils/white glossy highlights and small lower eyelashes, pink cheeks, white mouth interior, slender frog anatomy and clean dark cel-shaded outlines. Image 2 is the official costume authority.\nLOCK all costume parts: short-sleeved WHITE blouse, PALE BUTTER-YELLOW V-neck sleeveless vest with tan V trim, BRIGHT PINK neck bow with TWO LONG TAILS, modest PINK PLEATED SKIRT, WHITE SOCKS each with ONE narrow pink band, rounded DARK NAVY SHOES. Arms, hands and legs use the SAME cool GREEN as the head, never yellow/olive. Exactly one head, two arms/two hands, two legs/two feet. No added props.\nPOSE:\nHeavy attack: a strong side kick toward SCREEN-RIGHT, one navy shoe extended at waist height, supporting green leg planted, both hands raised for balance. The pleated skirt hangs modestly over the hips with only natural cloth motion, no underwear view. Full kicking shoe and supporting shoe completely inside frame. Clear powerful sideways fighting silhouette, not the light palm-strike pose.\nOne separate full-body polished 2D cel-shaded sprite facing SCREEN-RIGHT. Adapt the whole-body pose, never merely rotate or warp the reference. Keep the character entirely within comfortable transparent margins: full eye tops, hands/fingers and both shoes must be visible. True transparent RGBA background with clean cutout edge; all pixels outside figure zero alpha. No glow, halo, gradient backdrop, ground, cast shadow, text, watermark, second character, speed trails, motion blur or extra limbs. Match the approved model and official costume; original fan-game pose, not a photograph or chibi plush.",
+  "referencePaths": [
+    "docs/art-generation/cast-ribbit-20261120/generated/animeribbit/selection.png",
+    "docs/art-generation/ribbit-candidates-20261120/references/official-anime-ribbit.png"
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/ribbit-pendantz-blindbox"
+  ],
+  "schema": "encore-native-ribbit-art/v1",
+  "id": "animeribbit:heavy",
+  "status": "accepted_native",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "file": "docs/art-generation/cast-ribbit-20261120/generated/animeribbit/heavy.png",
+  "targetFile": "assets/encore/poses/animeribbit/heavy.png",
+  "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-1991c96a-5f03-434c-bddf-a5b95ca65dd7.png",
+  "sourceGenerationId": "exec-1991c96a-5f03-434c-bddf-a5b95ca65dd7",
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/cast-ribbit-20261120/generated/animeribbit/selection.png",
+      "sha256": "8f89fb6ab3112c0ac72973f86c0973a2a89e106b50ffdc6e991eefe911618b77",
+      "bytes": 1485567
+    },
+    {
+      "position": 2,
+      "file": "docs/art-generation/ribbit-candidates-20261120/references/official-anime-ribbit.png",
+      "sha256": "02b2d7fccc04eb304961f381918888022363f0fda06c34a1e3b5b629de858ecf",
+      "bytes": 1130253
+    }
+  ],
+  "dimensions": [
+    1218,
+    1291
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "alpha12Bounds": [
+    43,
+    12,
+    1187,
+    1281
+  ],
+  "alpha12BoundsThreshold": "alpha > 12",
+  "fullyTransparentPixels": 1168083,
+  "sha256": "aa3822f21395352d822981196cfcc182cf531cde85e8c161b0a8d3bdbbc4cda2",
+  "bytes": 750779,
+  "nativeCopyVerified": true,
+  "sourceKind": "Produit dérivé officiel",
+  "episodeFidelityClaim": false,
+  "includedInRuntime": false,
+  "createdAt": "2026-11-20T12:28:56.974123+00:00",
+  "visualReview": {
+    "status": "accepted",
+    "reviewer": "root",
+    "observations": [
+      "Coup de pied latéral vers la droite, une jambe d’appui et deux bras en équilibre ; deux chaussures complètes, jupe couvrante et silhouette différente de l’attaque légère."
+    ],
+    "scope": "Official costume comparison and original game pose; no episode or complete animation certification."
+  }
+}

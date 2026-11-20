@@ -262,7 +262,11 @@ def extract(filename, directory):
             attrs(fmt, ["defaultRowHeight", "baseColWidth"])
             require(float(fmt.get("defaultRowHeight", "15")) == 15 and float(fmt.get("baseColWidth", "8")) == 8, "Nondefault sheet dimensions unsupported")
             for c in s.findall("m:cols/m:col", NS):
-                attrs(c, ["min", "max", "width", "customWidth"])
+                attrs(c, ["min", "max", "width", "customWidth", "hidden"])
+                # Current artifact-tool emits explicit hidden="0". This is the
+                # same visible state as an omitted attribute; actual hidden
+                # columns still require a preservation adapter and are refused.
+                require(not boolean(c.get("hidden")), "Hidden columns unsupported")
                 for number in range(int(c.get("min")), int(c.get("max")) + 1):
                     info["widths"][str(number)] = float(c.get("width"))
             for row in s.findall("m:sheetData/m:row", NS):
@@ -353,7 +357,9 @@ def compare(expected_dir, actual_dir, report):
             checked += 1
             check(cell[2:5], current[2:5], f"{es['name']}/{address}/type-value-formula")
             check(e["styles"][cell[5]], a["styles"][current[5]], f"{es['name']}/{address}/effective style")
-    result = {"schema": "encore-native-workbook-comparison/v1", "status": "passed" if not differences else "failed", "cellsChecked": checked, "expectedSHA256": e.get("sha256"), "actualSHA256": a.get("sha256"), "differences": differences}
+    expected_files = ["manifest.json"] + [s["file"] for s in e["sheets"]]
+    expected_hashes = {name: hashlib.sha256((expected_dir / name).read_bytes()).hexdigest() for name in expected_files}
+    result = {"schema": "encore-native-workbook-comparison/v1", "status": "passed" if not differences else "failed", "cellsChecked": checked, "expectedSHA256": e.get("sha256"), "actualSHA256": a.get("sha256"), "expectedSnapshotHashes": expected_hashes, "differences": differences}
     Path(report).write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n")
     require(not differences, f"Native comparison failed; see {report}")
     return result

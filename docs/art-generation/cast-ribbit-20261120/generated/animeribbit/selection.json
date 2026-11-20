@@ -1,0 +1,77 @@
+{
+  "appearanceId": "animeribbit",
+  "fighterId": "ribbit",
+  "slot": "selection",
+  "nativeFacing": "right",
+  "prompt": "Use case: identity-preserve / precise-object-edit.\nImage 1 is the existing full-body Anime Ribbit selection sprite to correct. Image 2 is the official colour and clothing reference.\nKeep the same character, anatomy, slender proportions, pleasant selection pose, face, huge anime eyes, green head, smile, yellow V-neck vest, white short sleeves, pink bow and pleated skirt, navy shoes and polished cel-shaded linework.\nMake only these corrections:\n1. Recolour the exposed arms, hands and legs to the SAME cool medium green as the outer skin of the head. They must not remain the yellow/olive green of the old base character. Preserve sensible cel shading.\n2. White socks have ONE narrow pink band each, as seen on the official reference. Remove the second band.\n3. Remove EVERY coloured glow, halo, fuzzy shadow or aura outside the figure. The silhouette must have clean crisp anti-aliased cutout edges against completely transparent zero-alpha space, not a blurred colored fringe. Character interior opaque.\n4. Place the entire unchanged figure inside the canvas with comfortable transparent padding on all four sides, at least 4% of image height above the head and below both shoes. No cropping. Portrait aspect ratio.\nOutput one full-body character sprite only, transparent RGBA, no background, floor, shadows, words, framing or extra character. Preserve all remaining details and orientation toward SCREEN-RIGHT.",
+  "referencePaths": [
+    "docs/art-generation/cast-ribbit-20261120/generated/animeribbit/attempts/selection-01.png",
+    "docs/art-generation/ribbit-candidates-20261120/references/official-anime-ribbit.png"
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/ribbit-pendantz-blindbox",
+    "https://glitchproductions.store/cdn/shop/files/Anime_1.png?v=1785347149&width=1600"
+  ],
+  "observations": [
+    "Costume gilet crème, blouse blanche, nœud rose à longs pans, jupe plissée, chaussettes blanches à un liseré et chaussures bleu nuit comparé au produit officiel.",
+    "Visage vert/menthe et yeux anime préservés ; membres corrigés au vert du visage. Corps entier, deux mains et deux chaussures visibles ; orientation vers la droite.",
+    "Les pixels de fond échantillonnés ont alpha nul ; les couleurs RGB cachées ne sont pas une ombre visible du sprite. Revue sur fond de jeu à effectuer après intégration."
+  ],
+  "schema": "encore-native-ribbit-art/v1",
+  "id": "animeribbit:selection",
+  "status": "accepted_native",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "file": "docs/art-generation/cast-ribbit-20261120/generated/animeribbit/selection.png",
+  "targetFile": "assets/encore/selection/animeribbit.png",
+  "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-7657f884-ce53-4f20-b46a-08139d629ce8.png",
+  "sourceGenerationId": "exec-7657f884-ce53-4f20-b46a-08139d629ce8",
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/cast-ribbit-20261120/generated/animeribbit/attempts/selection-01.png",
+      "sha256": "aad919e0c3a33a486d592716d4eab208065d736dfc31879aa9d9b57a4ea27e7d",
+      "bytes": 1487203
+    },
+    {
+      "position": 2,
+      "file": "docs/art-generation/ribbit-candidates-20261120/references/official-anime-ribbit.png",
+      "sha256": "02b2d7fccc04eb304961f381918888022363f0fda06c34a1e3b5b629de858ecf",
+      "bytes": 1130253
+    }
+  ],
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "alpha12Bounds": [
+    127,
+    44,
+    945,
+    1521
+  ],
+  "alpha12BoundsThreshold": "alpha > 12",
+  "fullyTransparentPixels": 1148727,
+  "sha256": "8f89fb6ab3112c0ac72973f86c0973a2a89e106b50ffdc6e991eefe911618b77",
+  "bytes": 1485567,
+  "nativeCopyVerified": true,
+  "sourceKind": "Produit dérivé officiel",
+  "episodeFidelityClaim": false,
+  "includedInRuntime": false,
+  "createdAt": "2026-11-20T12:23:16.429542+00:00",
+  "visualReview": {
+    "status": "accepted",
+    "reviewer": "root",
+    "observations": [
+      "Costume gilet crème, blouse blanche, nœud rose à longs pans, jupe plissée, chaussettes blanches à un liseré et chaussures bleu nuit comparé au produit officiel.",
+      "Visage vert/menthe et yeux anime préservés ; membres corrigés au vert du visage. Corps entier, deux mains et deux chaussures visibles ; orientation vers la droite.",
+      "Les pixels de fond échantillonnés ont alpha nul ; les couleurs RGB cachées ne sont pas une ombre visible du sprite. Revue sur fond de jeu à effectuer après intégration."
+    ],
+    "scope": "Official costume comparison and original game pose; no episode or complete animation certification."
+  }
+}

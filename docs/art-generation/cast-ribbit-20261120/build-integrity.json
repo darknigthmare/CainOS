@@ -1,0 +1,237 @@
+{
+  "status": "passed",
+  "nativeAssetComparisons": 44,
+  "moduleComparisons": 14,
+  "historicalEncoreFilesVerified": 5656,
+  "copies": [
+    {
+      "build": "dist",
+      "file": "assets/encore/selection/animeribbit.png",
+      "sha256": "8f89fb6ab3112c0ac72973f86c0973a2a89e106b50ffdc6e991eefe911618b77"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/stance/animeribbit.png",
+      "sha256": "b07128898ea0589bf5a0f0c1f40e14fba63dc5565a03573418cc57bb70b31ebb"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/animeribbit/intro.png",
+      "sha256": "5473e5b3ce48ede923143919bd300e655018d33f090989af5017e7880d8b8925"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/animeribbit/attack.png",
+      "sha256": "ce1592e6dc31cf4c1be648abceefd7a0c69511b0a5217c3a2ff66b6d8e4b4b79"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/animeribbit/heavy.png",
+      "sha256": "aa3822f21395352d822981196cfcc182cf531cde85e8c161b0a8d3bdbbc4cda2"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/animeribbit/hit.png",
+      "sha256": "052ee16785dd5cb460ec41a78a97a6fe09a01c22ba649c84f3bce34070ef9c20"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/animeribbit/walk.png",
+      "sha256": "be0ebcbad138c4d480b987a67634703632d1db4a57317b70700af6102a14d68b"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/animeribbit/jump.png",
+      "sha256": "d2d149c623cd723eb4620a3e45a7692b35903a1f8bba269d64518a064a09aa8c"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/animeribbit/crouch.png",
+      "sha256": "6e5c11213995d375b01cc67b899527226da8af0a8b5d869576c8dfb388d2834a"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/animeribbit/victory.png",
+      "sha256": "224473d7a719e09cf6337b0b02541b81776586ad380b69186637d3b5ad750e0e"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/animeribbit/defeat.png",
+      "sha256": "6dcdc4a7983aca02ee5e688427f784832f4fa3f8e981bd14f71ef9411863d598"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/selection/jaxsuitribbit.png",
+      "sha256": "4dc2162fa6c5e02fddfff06104ed7fd77751f0be2152c7c53ff66cde467d3460"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/stance/jaxsuitribbit.png",
+      "sha256": "90c39f39629cdf4fe037cf97ca66cce3e189c91c1e879e02661955cba65bc0ff"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/jaxsuitribbit/intro.png",
+      "sha256": "53d6d7de00d4dc280b114994c92416c32865b3cee57795b31cb33009dbe8c2d6"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/jaxsuitribbit/attack.png",
+      "sha256": "cbb158de826e07c094cfaa0b10d62e36cdbc72789a3a2efabd2651f599c2faef"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/jaxsuitribbit/heavy.png",
+      "sha256": "c9163abcd105483c0a3dd6a5b6956375548d2fd98372260fe7fe9961e802dd72"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/jaxsuitribbit/hit.png",
+      "sha256": "000e8a444c8410990062be8ab55592fd96014e2b8fca98020e003d7cde2bcf6b"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/jaxsuitribbit/walk.png",
+      "sha256": "39a95be67a703a669314975d707b8dcfb4de7f5a95df66fe2ad783d5809974e6"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/jaxsuitribbit/jump.png",
+      "sha256": "64bada3b7a3bd9cc242b7b9e7f2f5f56019a05a09e0f15ab00e49026fe29bd09"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/jaxsuitribbit/crouch.png",
+      "sha256": "e1c91767578431812cbcade9eba732e8b04806f40593cfcb7a07444b0fe816a6"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/jaxsuitribbit/victory.png",
+      "sha256": "338bfe7c63943e51e0688a8e1724c9bf498ebbc97f4c568a52b13fce67abd103"
+    },
+    {
+      "build": "dist",
+      "file": "assets/encore/poses/jaxsuitribbit/defeat.png",
+      "sha256": "7b4249e4e8f2e9bf94617e4c9e44028c9f9baf28f20c87421b41dddd08f415df"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/selection/animeribbit.png",
+      "sha256": "8f89fb6ab3112c0ac72973f86c0973a2a89e106b50ffdc6e991eefe911618b77"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/stance/animeribbit.png",
+      "sha256": "b07128898ea0589bf5a0f0c1f40e14fba63dc5565a03573418cc57bb70b31ebb"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/animeribbit/intro.png",
+      "sha256": "5473e5b3ce48ede923143919bd300e655018d33f090989af5017e7880d8b8925"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/animeribbit/attack.png",
+      "sha256": "ce1592e6dc31cf4c1be648abceefd7a0c69511b0a5217c3a2ff66b6d8e4b4b79"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/animeribbit/heavy.png",
+      "sha256": "aa3822f21395352d822981196cfcc182cf531cde85e8c161b0a8d3bdbbc4cda2"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/animeribbit/hit.png",
+      "sha256": "052ee16785dd5cb460ec41a78a97a6fe09a01c22ba649c84f3bce34070ef9c20"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/animeribbit/walk.png",
+      "sha256": "be0ebcbad138c4d480b987a67634703632d1db4a57317b70700af6102a14d68b"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/animeribbit/jump.png",
+      "sha256": "d2d149c623cd723eb4620a3e45a7692b35903a1f8bba269d64518a064a09aa8c"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/animeribbit/crouch.png",
+      "sha256": "6e5c11213995d375b01cc67b899527226da8af0a8b5d869576c8dfb388d2834a"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/animeribbit/victory.png",
+      "sha256": "224473d7a719e09cf6337b0b02541b81776586ad380b69186637d3b5ad750e0e"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/animeribbit/defeat.png",
+      "sha256": "6dcdc4a7983aca02ee5e688427f784832f4fa3f8e981bd14f71ef9411863d598"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/selection/jaxsuitribbit.png",
+      "sha256": "4dc2162fa6c5e02fddfff06104ed7fd77751f0be2152c7c53ff66cde467d3460"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/stance/jaxsuitribbit.png",
+      "sha256": "90c39f39629cdf4fe037cf97ca66cce3e189c91c1e879e02661955cba65bc0ff"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/jaxsuitribbit/intro.png",
+      "sha256": "53d6d7de00d4dc280b114994c92416c32865b3cee57795b31cb33009dbe8c2d6"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/jaxsuitribbit/attack.png",
+      "sha256": "cbb158de826e07c094cfaa0b10d62e36cdbc72789a3a2efabd2651f599c2faef"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/jaxsuitribbit/heavy.png",
+      "sha256": "c9163abcd105483c0a3dd6a5b6956375548d2fd98372260fe7fe9961e802dd72"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/jaxsuitribbit/hit.png",
+      "sha256": "000e8a444c8410990062be8ab55592fd96014e2b8fca98020e003d7cde2bcf6b"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/jaxsuitribbit/walk.png",
+      "sha256": "39a95be67a703a669314975d707b8dcfb4de7f5a95df66fe2ad783d5809974e6"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/jaxsuitribbit/jump.png",
+      "sha256": "64bada3b7a3bd9cc242b7b9e7f2f5f56019a05a09e0f15ab00e49026fe29bd09"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/jaxsuitribbit/crouch.png",
+      "sha256": "e1c91767578431812cbcade9eba732e8b04806f40593cfcb7a07444b0fe816a6"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/jaxsuitribbit/victory.png",
+      "sha256": "338bfe7c63943e51e0688a8e1724c9bf498ebbc97f4c568a52b13fce67abd103"
+    },
+    {
+      "build": "dist-combat",
+      "file": "assets/encore/poses/jaxsuitribbit/defeat.png",
+      "sha256": "7b4249e4e8f2e9bf94617e4c9e44028c9f9baf28f20c87421b41dddd08f415df"
+    }
+  ],
+  "sources": {
+    "combat/data.mjs": "6910aaddf46645f98520f4cc6fb468c2bc43b6dd017d9237266a90f6c1bf892b",
+    "combat/costume-additions.mjs": "0e4bf0e6d1d7a926c8f373c5d388179f5813116f5d9c1db1fb76a00329e216f2",
+    "combat/costume-ribbit-20261120.mjs": "c8ecfaae5894a5f6b0f96a6ac8038dd38a6ce57cc2e22ea51bca5aaa6a495b91",
+    "combat/illustrations.mjs": "26aca8338be81bedbbbc1bb4bc59dd0aae8b7b7ef4d785cbbf353ac109c53b99",
+    "combat/render.mjs": "91cdc8a8a4b5298644809714aa7e53219e1266e2ffc95478194a699a7bc1212f",
+    "combat/render-poses.mjs": "21e3afba8c19723ffdcb383402cc6339b63cb58df5d4323fda2ebde093ce0b29",
+    "combat/offline-manifest.mjs": "99a4bef5ac846f0518feb3f2062c48c23965c60ac4e5044dc221321fa0f211e1"
+  }
+}

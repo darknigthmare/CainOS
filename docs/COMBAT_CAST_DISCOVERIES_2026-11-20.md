@@ -1,5 +1,9 @@
 # Encore — dix apparences complétées et intégrées, 20 novembre 2026
 
+> Checkpoint historique. Le lot de 110 PNG a ensuite été publié dans la PR #7.
+> La [suite Ribbit et la réconciliation du suivi](COMBAT_RIBBIT_CONTINUATION_2026-11-20.md)
+> décrivent l’état courant ; les résultats et compteurs ci-dessous restent ceux de cette passe.
+
 **Les dix familles de cette passe disposent de leurs onze dessins individuels et sont intégrées au catalogue partagé par CainOS et le jeu autonome.** Le lot représente **110 PNG natifs distincts, soit 130 610 966 octets** : dix portraits de sélection, dix gardes et quatre-vingt-dix actions. Le [manifeste de complétion](art-generation/cast-next-20261120/generation-completion.json) relie chaque fichier actif à son original, à son reçu et à son empreinte.
 
 La reprise part du commit `6ea3e8041f71789f858ed724ceeb49a3e5efacff`, qui contenait déjà les 63 poses terminées de la passe précédente. Les chiffres ci-dessous décrivent les vérifications locales de ce nouveau lot destiné à la [PR #7](https://github.com/darknigthmare/CainOS/pull/7). La publication et les résultats de CI de la nouvelle révision doivent être attestés séparément.

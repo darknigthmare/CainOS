@@ -1,0 +1,45 @@
+{"output":"/workspace/scratch/f726dc7a5ad2/CainOS/docs/art-generation/cast-ribbit-20261120/review/animeribbit","appearances":1,"expectedActions":9,"actions":0,"stances":0,"drawChecks":0,"archiveEntries":0,"portraits":0,"expectedPortraits":1,"missing":11,"complete":false}
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Every declared static character slot must be published
++ actual - expected
+
++ [
++   'animeribbit/stance',
++   'animeribbit/intro',
++   'animeribbit/attack',
++   'animeribbit/hit',
++   'animeribbit/walk',
++   'animeribbit/jump',
++   'animeribbit/crouch',
++   'animeribbit/victory',
++   'animeribbit/defeat',
++   'animeribbit/heavy',
++   'animeribbit/selection'
++ ]
+- []
+
+    at file:///workspace/scratch/f726dc7a5ad2/CainOS/scripts/render-combat-character-review.mjs:194:22 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: [
+    'animeribbit/stance',
+    'animeribbit/intro',
+    'animeribbit/attack',
+    'animeribbit/hit',
+    'animeribbit/walk',
+    'animeribbit/jump',
+    'animeribbit/crouch',
+    'animeribbit/victory',
+    'animeribbit/defeat',
+    'animeribbit/heavy',
+    'animeribbit/selection'
+  ],
+  expected: [],
+  operator: 'deepStrictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.22.3

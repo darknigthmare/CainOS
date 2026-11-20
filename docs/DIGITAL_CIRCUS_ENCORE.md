@@ -1,12 +1,13 @@
 # Digital Circus — Encore · Le Grand Duel
 
 Version jouable : **0.7.0** — sortie initiale le 24 octobre 2026 ; catalogue et
-dessins individuels réunis le **19 novembre 2026**.
+dessins individuels réunis le **19 novembre 2026**, puis complétés le
+**20 novembre 2026**.
 
 Encore partage son moteur entre l’application CainOS et le jeu autonome :
-**54 combattants, 540 techniques, 22 arènes partagées, 9 modes, 437 costumes et 179 archives**.
-La réunion du 19 novembre 2026 conserve les 54 arrangements de scènes dédiées,
-les escales GLITCH, les 51 costumes d’archive, huit variantes supplémentaires et les 378 costumes crossover des
+**54 combattants, 540 techniques, 22 arènes partagées, 9 modes, 464 costumes et 179 archives**.
+Le catalogue conserve les 54 arrangements de scènes dédiées,
+les escales GLITCH, les 51 costumes d’archive, 35 variantes supplémentaires et les 378 costumes crossover des
 quatorze combattants d’origine. Les costumes crossover des 40 PNJ promus restent
 à produire ; aucun choix ne pointe vers un dessin absent.
 L’extension PNJ promue porte le roster à 54 combattants et **162 finales de spectacle** ;
@@ -32,6 +33,27 @@ et identité. Elle est consignée dans
 d’épisode contradictoires avec la route générée. Les dessins individuels du
 19 novembre remplacent ces cadrages dans la présentation courante ; cette
 réparation technique ne clôt pas leur comparaison avec les plans officiels.
+
+## Dernière suite — Anime Ribbit et Jax-Suit Ribbit, 20 novembre
+
+Les deux nouvelles apparences disposent chacune d’un portrait, d’une garde et de
+neuf actions distinctes : **22 PNG natifs ajoutés**, portant les variantes Circus
+supplémentaires à **35 apparences et 385 dessins**. Elles réutilisent le kit de
+Ribbit et les mêmes règles de profil, de campagne et de replay. Les références
+officielles archivées documentent les costumes de produits dérivés ; les poses
+de combat sont des adaptations originales.
+
+Le [rapport de cette suite](COMBAT_RIBBIT_CONTINUATION_2026-11-20.md) rassemble
+les galeries, les reçus natifs et les résultats : **405 tests Node, deux builds
+et 40 contrôles Canvas réussis**. La tentative Chromium locale est bloquée avant
+navigation. Le [registre courant](art-generation/cast-ribbit-20261120/remaining-work.md)
+conserve notamment Maid Ribbit en attente de vues du bas de sa tenue. Aucun
+nouveau décor n’a été ajouté dans ce lot ; les 22 arènes existantes sont conservées.
+
+Les rapports des [dix apparences précédentes](COMBAT_CAST_DISCOVERIES_2026-11-20.md),
+des [neuf familles reprises](COMBAT_CAST_RESUMPTION_2026-11-20.md) et des
+[six premiers ajouts du 20 novembre](COMBAT_CAST_CONTINUATION_2026-11-20.md)
+conservent leurs compteurs et vérifications historiques.
 
 ## Huit variantes supplémentaires — suite du 19 novembre
 

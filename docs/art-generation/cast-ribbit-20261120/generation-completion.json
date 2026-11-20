@@ -1,0 +1,910 @@
+{
+  "schema": "encore-ribbit-completion/v1",
+  "status": "complete_active",
+  "createdAt": "2026-11-20T12:38:41.575443+00:00",
+  "baseCommit": "f7b3b9a",
+  "baseTree": "a2d454210d0659d8f93c144112fe9d3cb6193ad0",
+  "publishedParent": "a5341b8cf1ceecc22ccca13ba6b20a9f710bddb0",
+  "order": [
+    "animeribbit",
+    "jaxsuitribbit"
+  ],
+  "slots": [
+    "selection",
+    "stance",
+    "intro",
+    "attack",
+    "heavy",
+    "hit",
+    "walk",
+    "jump",
+    "crouch",
+    "victory",
+    "defeat"
+  ],
+  "appearances": [
+    {
+      "id": "animeribbit",
+      "name": "Ribbit — Anime",
+      "fighterId": "ribbit",
+      "files": [
+        {
+          "appearanceId": "animeribbit",
+          "slot": "selection",
+          "file": "assets/encore/selection/animeribbit.png",
+          "archiveFile": "docs/art-generation/cast-ribbit-20261120/generated/animeribbit/selection.png",
+          "receiptFile": "docs/art-generation/cast-ribbit-20261120/generated/animeribbit/selection.json",
+          "sha256": "8f89fb6ab3112c0ac72973f86c0973a2a89e106b50ffdc6e991eefe911618b77",
+          "bytes": 1485567,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            127,
+            44,
+            945,
+            1521
+          ],
+          "nativeFacing": "right",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/cast-ribbit-20261120/generated/animeribbit/attempts/selection-01.png",
+              "sha256": "aad919e0c3a33a486d592716d4eab208065d736dfc31879aa9d9b57a4ea27e7d",
+              "bytes": 1487203
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/ribbit-candidates-20261120/references/official-anime-ribbit.png",
+              "sha256": "02b2d7fccc04eb304961f381918888022363f0fda06c34a1e3b5b629de858ecf",
+              "bytes": 1130253
+            }
+          ]
+        },
+        {
+          "appearanceId": "animeribbit",
+          "slot": "stance",
+          "file": "assets/encore/stance/animeribbit.png",
+          "archiveFile": "docs/art-generation/cast-ribbit-20261120/generated/animeribbit/stance.png",
+          "receiptFile": "docs/art-generation/cast-ribbit-20261120/generated/animeribbit/stance.json",
+          "sha256": "b07128898ea0589bf5a0f0c1f40e14fba63dc5565a03573418cc57bb70b31ebb",
+          "bytes": 1509969,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            109,
+            63,
+            891,
+            1487
+          ],
+          "nativeFacing": "right",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/cast-ribbit-20261120/generated/animeribbit/selection.png",
+              "sha256": "8f89fb6ab3112c0ac72973f86c0973a2a89e106b50ffdc6e991eefe911618b77",
+              "bytes": 1485567
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/ribbit-candidates-20261120/references/official-anime-ribbit.png",
+              "sha256": "02b2d7fccc04eb304961f381918888022363f0fda06c34a1e3b5b629de858ecf",
+              "bytes": 1130253
+            }
+          ]
+        },
+        {
+          "appearanceId": "animeribbit",
+          "slot": "intro",
+          "file": "assets/encore/poses/animeribbit/intro.png",
+          "archiveFile": "docs/art-generation/cast-ribbit-20261120/generated/animeribbit/intro.png",
+          "receiptFile": "docs/art-generation/cast-ribbit-20261120/generated/animeribbit/intro.json",
+          "sha256": "5473e5b3ce48ede923143919bd300e655018d33f090989af5017e7880d8b8925",
+          "bytes": 1519134,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            80,
+            35,
+            944,
+            1520
+          ],
+          "nativeFacing": "right",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/cast-ribbit-20261120/generated/animeribbit/selection.png",
+              "sha256": "8f89fb6ab3112c0ac72973f86c0973a2a89e106b50ffdc6e991eefe911618b77",
+              "bytes": 1485567
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/ribbit-candidates-20261120/references/official-anime-ribbit.png",
+              "sha256": "02b2d7fccc04eb304961f381918888022363f0fda06c34a1e3b5b629de858ecf",
+              "bytes": 1130253
+            }
+          ]
+        },
+        {
+          "appearanceId": "animeribbit",
+          "slot": "attack",
+          "file": "assets/encore/poses/animeribbit/attack.png",
+          "archiveFile": "docs/art-generation/cast-ribbit-20261120/generated/animeribbit/attack.png",
+          "receiptFile": "docs/art-generation/cast-ribbit-20261120/generated/animeribbit/attack.json",
+          "sha256": "ce1592e6dc31cf4c1be648abceefd7a0c69511b0a5217c3a2ff66b6d8e4b4b79",
+          "bytes": 788362,
+          "dimensions": [
+            1240,
+            1268
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            62,
+            49,
+            1195,
+            1237
+          ],
+          "nativeFacing": "right",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/cast-ribbit-20261120/generated/animeribbit/selection.png",
+              "sha256": "8f89fb6ab3112c0ac72973f86c0973a2a89e106b50ffdc6e991eefe911618b77",
+              "bytes": 1485567
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/ribbit-candidates-20261120/references/official-anime-ribbit.png",
+              "sha256": "02b2d7fccc04eb304961f381918888022363f0fda06c34a1e3b5b629de858ecf",
+              "bytes": 1130253
+            }
+          ]
+        },
+        {
+          "appearanceId": "animeribbit",
+          "slot": "heavy",
+          "file": "assets/encore/poses/animeribbit/heavy.png",
+          "archiveFile": "docs/art-generation/cast-ribbit-20261120/generated/animeribbit/heavy.png",
+          "receiptFile": "docs/art-generation/cast-ribbit-20261120/generated/animeribbit/heavy.json",
+          "sha256": "aa3822f21395352d822981196cfcc182cf531cde85e8c161b0a8d3bdbbc4cda2",
+          "bytes": 750779,
+          "dimensions": [
+            1218,
+            1291
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            43,
+            12,
+            1187,
+            1281
+          ],
+          "nativeFacing": "right",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/cast-ribbit-20261120/generated/animeribbit/selection.png",
+              "sha256": "8f89fb6ab3112c0ac72973f86c0973a2a89e106b50ffdc6e991eefe911618b77",
+              "bytes": 1485567
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/ribbit-candidates-20261120/references/official-anime-ribbit.png",
+              "sha256": "02b2d7fccc04eb304961f381918888022363f0fda06c34a1e3b5b629de858ecf",
+              "bytes": 1130253
+            }
+          ]
+        },
+        {
+          "appearanceId": "animeribbit",
+          "slot": "hit",
+          "file": "assets/encore/poses/animeribbit/hit.png",
+          "archiveFile": "docs/art-generation/cast-ribbit-20261120/generated/animeribbit/hit.png",
+          "receiptFile": "docs/art-generation/cast-ribbit-20261120/generated/animeribbit/hit.json",
+          "sha256": "052ee16785dd5cb460ec41a78a97a6fe09a01c22ba649c84f3bce34070ef9c20",
+          "bytes": 1560711,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            112,
+            79,
+            860,
+            1499
+          ],
+          "nativeFacing": "right",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/cast-ribbit-20261120/generated/animeribbit/selection.png",
+              "sha256": "8f89fb6ab3112c0ac72973f86c0973a2a89e106b50ffdc6e991eefe911618b77",
+              "bytes": 1485567
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/ribbit-candidates-20261120/references/official-anime-ribbit.png",
+              "sha256": "02b2d7fccc04eb304961f381918888022363f0fda06c34a1e3b5b629de858ecf",
+              "bytes": 1130253
+            }
+          ]
+        },
+        {
+          "appearanceId": "animeribbit",
+          "slot": "walk",
+          "file": "assets/encore/poses/animeribbit/walk.png",
+          "archiveFile": "docs/art-generation/cast-ribbit-20261120/generated/animeribbit/walk.png",
+          "receiptFile": "docs/art-generation/cast-ribbit-20261120/generated/animeribbit/walk.json",
+          "sha256": "be0ebcbad138c4d480b987a67634703632d1db4a57317b70700af6102a14d68b",
+          "bytes": 1534169,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            80,
+            48,
+            954,
+            1470
+          ],
+          "nativeFacing": "right",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/cast-ribbit-20261120/generated/animeribbit/selection.png",
+              "sha256": "8f89fb6ab3112c0ac72973f86c0973a2a89e106b50ffdc6e991eefe911618b77",
+              "bytes": 1485567
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/ribbit-candidates-20261120/references/official-anime-ribbit.png",
+              "sha256": "02b2d7fccc04eb304961f381918888022363f0fda06c34a1e3b5b629de858ecf",
+              "bytes": 1130253
+            }
+          ]
+        },
+        {
+          "appearanceId": "animeribbit",
+          "slot": "jump",
+          "file": "assets/encore/poses/animeribbit/jump.png",
+          "archiveFile": "docs/art-generation/cast-ribbit-20261120/generated/animeribbit/jump.png",
+          "receiptFile": "docs/art-generation/cast-ribbit-20261120/generated/animeribbit/jump.json",
+          "sha256": "d2d149c623cd723eb4620a3e45a7692b35903a1f8bba269d64518a064a09aa8c",
+          "bytes": 919953,
+          "dimensions": [
+            1209,
+            1301
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            69,
+            48,
+            1183,
+            1225
+          ],
+          "nativeFacing": "right",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/cast-ribbit-20261120/generated/animeribbit/selection.png",
+              "sha256": "8f89fb6ab3112c0ac72973f86c0973a2a89e106b50ffdc6e991eefe911618b77",
+              "bytes": 1485567
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/ribbit-candidates-20261120/references/official-anime-ribbit.png",
+              "sha256": "02b2d7fccc04eb304961f381918888022363f0fda06c34a1e3b5b629de858ecf",
+              "bytes": 1130253
+            }
+          ]
+        },
+        {
+          "appearanceId": "animeribbit",
+          "slot": "crouch",
+          "file": "assets/encore/poses/animeribbit/crouch.png",
+          "archiveFile": "docs/art-generation/cast-ribbit-20261120/generated/animeribbit/crouch.png",
+          "receiptFile": "docs/art-generation/cast-ribbit-20261120/generated/animeribbit/crouch.json",
+          "sha256": "6e5c11213995d375b01cc67b899527226da8af0a8b5d869576c8dfb388d2834a",
+          "bytes": 884028,
+          "dimensions": [
+            1330,
+            1182
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            168,
+            82,
+            1194,
+            1136
+          ],
+          "nativeFacing": "right",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/cast-ribbit-20261120/generated/animeribbit/selection.png",
+              "sha256": "8f89fb6ab3112c0ac72973f86c0973a2a89e106b50ffdc6e991eefe911618b77",
+              "bytes": 1485567
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/ribbit-candidates-20261120/references/official-anime-ribbit.png",
+              "sha256": "02b2d7fccc04eb304961f381918888022363f0fda06c34a1e3b5b629de858ecf",
+              "bytes": 1130253
+            }
+          ]
+        },
+        {
+          "appearanceId": "animeribbit",
+          "slot": "victory",
+          "file": "assets/encore/poses/animeribbit/victory.png",
+          "archiveFile": "docs/art-generation/cast-ribbit-20261120/generated/animeribbit/victory.png",
+          "receiptFile": "docs/art-generation/cast-ribbit-20261120/generated/animeribbit/victory.json",
+          "sha256": "224473d7a719e09cf6337b0b02541b81776586ad380b69186637d3b5ad750e0e",
+          "bytes": 1487950,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            177,
+            42,
+            878,
+            1516
+          ],
+          "nativeFacing": "right",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/cast-ribbit-20261120/generated/animeribbit/selection.png",
+              "sha256": "8f89fb6ab3112c0ac72973f86c0973a2a89e106b50ffdc6e991eefe911618b77",
+              "bytes": 1485567
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/ribbit-candidates-20261120/references/official-anime-ribbit.png",
+              "sha256": "02b2d7fccc04eb304961f381918888022363f0fda06c34a1e3b5b629de858ecf",
+              "bytes": 1130253
+            }
+          ]
+        },
+        {
+          "appearanceId": "animeribbit",
+          "slot": "defeat",
+          "file": "assets/encore/poses/animeribbit/defeat.png",
+          "archiveFile": "docs/art-generation/cast-ribbit-20261120/generated/animeribbit/defeat.png",
+          "receiptFile": "docs/art-generation/cast-ribbit-20261120/generated/animeribbit/defeat.json",
+          "sha256": "6dcdc4a7983aca02ee5e688427f784832f4fa3f8e981bd14f71ef9411863d598",
+          "bytes": 871745,
+          "dimensions": [
+            1219,
+            1290
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            199,
+            92,
+            1036,
+            1227
+          ],
+          "nativeFacing": "right",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/cast-ribbit-20261120/generated/animeribbit/selection.png",
+              "sha256": "8f89fb6ab3112c0ac72973f86c0973a2a89e106b50ffdc6e991eefe911618b77",
+              "bytes": 1485567
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/ribbit-candidates-20261120/references/official-anime-ribbit.png",
+              "sha256": "02b2d7fccc04eb304961f381918888022363f0fda06c34a1e3b5b629de858ecf",
+              "bytes": 1130253
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jaxsuitribbit",
+      "name": "Ribbit — combinaison Jax",
+      "fighterId": "ribbit",
+      "files": [
+        {
+          "appearanceId": "jaxsuitribbit",
+          "slot": "selection",
+          "file": "assets/encore/selection/jaxsuitribbit.png",
+          "archiveFile": "docs/art-generation/cast-ribbit-20261120/generated/jaxsuitribbit/selection.png",
+          "receiptFile": "docs/art-generation/cast-ribbit-20261120/generated/jaxsuitribbit/selection.json",
+          "sha256": "4dc2162fa6c5e02fddfff06104ed7fd77751f0be2152c7c53ff66cde467d3460",
+          "bytes": 1485535,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            151,
+            50,
+            816,
+            1506
+          ],
+          "nativeFacing": "right",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/ribbit-candidates-20261120/references/official-jax-suit-ribbit.png",
+              "sha256": "a832fc71c7f8d0d647e9aec73baf7c21f29dd2663e6aae7699cab03504d3bfdc",
+              "bytes": 1467375
+            },
+            {
+              "position": 2,
+              "file": "assets/encore/selection/ribbit.png",
+              "sha256": "a88927f18865fb289f4d9e045fd1a75f91363f5d9b535859efbebfd4e8bf566f",
+              "bytes": 1352678
+            }
+          ]
+        },
+        {
+          "appearanceId": "jaxsuitribbit",
+          "slot": "stance",
+          "file": "assets/encore/stance/jaxsuitribbit.png",
+          "archiveFile": "docs/art-generation/cast-ribbit-20261120/generated/jaxsuitribbit/stance.png",
+          "receiptFile": "docs/art-generation/cast-ribbit-20261120/generated/jaxsuitribbit/stance.json",
+          "sha256": "90c39f39629cdf4fe037cf97ca66cce3e189c91c1e879e02661955cba65bc0ff",
+          "bytes": 720809,
+          "dimensions": [
+            1157,
+            1360
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            190,
+            37,
+            940,
+            1320
+          ],
+          "nativeFacing": "right",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/cast-ribbit-20261120/generated/jaxsuitribbit/selection.png",
+              "sha256": "4dc2162fa6c5e02fddfff06104ed7fd77751f0be2152c7c53ff66cde467d3460",
+              "bytes": 1485535
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/ribbit-candidates-20261120/references/official-jax-suit-ribbit.png",
+              "sha256": "a832fc71c7f8d0d647e9aec73baf7c21f29dd2663e6aae7699cab03504d3bfdc",
+              "bytes": 1467375
+            }
+          ]
+        },
+        {
+          "appearanceId": "jaxsuitribbit",
+          "slot": "intro",
+          "file": "assets/encore/poses/jaxsuitribbit/intro.png",
+          "archiveFile": "docs/art-generation/cast-ribbit-20261120/generated/jaxsuitribbit/intro.png",
+          "receiptFile": "docs/art-generation/cast-ribbit-20261120/generated/jaxsuitribbit/intro.json",
+          "sha256": "53d6d7de00d4dc280b114994c92416c32865b3cee57795b31cb33009dbe8c2d6",
+          "bytes": 1527810,
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            116,
+            33,
+            923,
+            1510
+          ],
+          "nativeFacing": "right",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/cast-ribbit-20261120/generated/jaxsuitribbit/selection.png",
+              "sha256": "4dc2162fa6c5e02fddfff06104ed7fd77751f0be2152c7c53ff66cde467d3460",
+              "bytes": 1485535
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/ribbit-candidates-20261120/references/official-jax-suit-ribbit.png",
+              "sha256": "a832fc71c7f8d0d647e9aec73baf7c21f29dd2663e6aae7699cab03504d3bfdc",
+              "bytes": 1467375
+            }
+          ]
+        },
+        {
+          "appearanceId": "jaxsuitribbit",
+          "slot": "attack",
+          "file": "assets/encore/poses/jaxsuitribbit/attack.png",
+          "archiveFile": "docs/art-generation/cast-ribbit-20261120/generated/jaxsuitribbit/attack.png",
+          "receiptFile": "docs/art-generation/cast-ribbit-20261120/generated/jaxsuitribbit/attack.json",
+          "sha256": "cbb158de826e07c094cfaa0b10d62e36cdbc72789a3a2efabd2651f599c2faef",
+          "bytes": 1313447,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            345,
+            22,
+            1188,
+            1010
+          ],
+          "nativeFacing": "right",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/cast-ribbit-20261120/generated/jaxsuitribbit/selection.png",
+              "sha256": "4dc2162fa6c5e02fddfff06104ed7fd77751f0be2152c7c53ff66cde467d3460",
+              "bytes": 1485535
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/ribbit-candidates-20261120/references/official-jax-suit-ribbit.png",
+              "sha256": "a832fc71c7f8d0d647e9aec73baf7c21f29dd2663e6aae7699cab03504d3bfdc",
+              "bytes": 1467375
+            }
+          ]
+        },
+        {
+          "appearanceId": "jaxsuitribbit",
+          "slot": "heavy",
+          "file": "assets/encore/poses/jaxsuitribbit/heavy.png",
+          "archiveFile": "docs/art-generation/cast-ribbit-20261120/generated/jaxsuitribbit/heavy.png",
+          "receiptFile": "docs/art-generation/cast-ribbit-20261120/generated/jaxsuitribbit/heavy.json",
+          "sha256": "c9163abcd105483c0a3dd6a5b6956375548d2fd98372260fe7fe9961e802dd72",
+          "bytes": 1457490,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            254
+          ],
+          "alpha12Bounds": [
+            88,
+            20,
+            1361,
+            1011
+          ],
+          "nativeFacing": "right",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/cast-ribbit-20261120/generated/jaxsuitribbit/selection.png",
+              "sha256": "4dc2162fa6c5e02fddfff06104ed7fd77751f0be2152c7c53ff66cde467d3460",
+              "bytes": 1485535
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/ribbit-candidates-20261120/references/official-jax-suit-ribbit.png",
+              "sha256": "a832fc71c7f8d0d647e9aec73baf7c21f29dd2663e6aae7699cab03504d3bfdc",
+              "bytes": 1467375
+            }
+          ]
+        },
+        {
+          "appearanceId": "jaxsuitribbit",
+          "slot": "hit",
+          "file": "assets/encore/poses/jaxsuitribbit/hit.png",
+          "archiveFile": "docs/art-generation/cast-ribbit-20261120/generated/jaxsuitribbit/hit.png",
+          "receiptFile": "docs/art-generation/cast-ribbit-20261120/generated/jaxsuitribbit/hit.json",
+          "sha256": "000e8a444c8410990062be8ab55592fd96014e2b8fca98020e003d7cde2bcf6b",
+          "bytes": 757260,
+          "dimensions": [
+            1139,
+            1381
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            188,
+            60,
+            962,
+            1346
+          ],
+          "nativeFacing": "right",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/cast-ribbit-20261120/generated/jaxsuitribbit/selection.png",
+              "sha256": "4dc2162fa6c5e02fddfff06104ed7fd77751f0be2152c7c53ff66cde467d3460",
+              "bytes": 1485535
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/ribbit-candidates-20261120/references/official-jax-suit-ribbit.png",
+              "sha256": "a832fc71c7f8d0d647e9aec73baf7c21f29dd2663e6aae7699cab03504d3bfdc",
+              "bytes": 1467375
+            }
+          ]
+        },
+        {
+          "appearanceId": "jaxsuitribbit",
+          "slot": "walk",
+          "file": "assets/encore/poses/jaxsuitribbit/walk.png",
+          "archiveFile": "docs/art-generation/cast-ribbit-20261120/generated/jaxsuitribbit/walk.png",
+          "receiptFile": "docs/art-generation/cast-ribbit-20261120/generated/jaxsuitribbit/walk.json",
+          "sha256": "39a95be67a703a669314975d707b8dcfb4de7f5a95df66fe2ad783d5809974e6",
+          "bytes": 755965,
+          "dimensions": [
+            1199,
+            1312
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            211,
+            34,
+            1005,
+            1281
+          ],
+          "nativeFacing": "right",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/cast-ribbit-20261120/generated/jaxsuitribbit/selection.png",
+              "sha256": "4dc2162fa6c5e02fddfff06104ed7fd77751f0be2152c7c53ff66cde467d3460",
+              "bytes": 1485535
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/ribbit-candidates-20261120/references/official-jax-suit-ribbit.png",
+              "sha256": "a832fc71c7f8d0d647e9aec73baf7c21f29dd2663e6aae7699cab03504d3bfdc",
+              "bytes": 1467375
+            }
+          ]
+        },
+        {
+          "appearanceId": "jaxsuitribbit",
+          "slot": "jump",
+          "file": "assets/encore/poses/jaxsuitribbit/jump.png",
+          "archiveFile": "docs/art-generation/cast-ribbit-20261120/generated/jaxsuitribbit/jump.png",
+          "receiptFile": "docs/art-generation/cast-ribbit-20261120/generated/jaxsuitribbit/jump.json",
+          "sha256": "64bada3b7a3bd9cc242b7b9e7f2f5f56019a05a09e0f15ab00e49026fe29bd09",
+          "bytes": 762207,
+          "dimensions": [
+            1199,
+            1312
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            125,
+            25,
+            1049,
+            1292
+          ],
+          "nativeFacing": "right",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/cast-ribbit-20261120/generated/jaxsuitribbit/selection.png",
+              "sha256": "4dc2162fa6c5e02fddfff06104ed7fd77751f0be2152c7c53ff66cde467d3460",
+              "bytes": 1485535
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/ribbit-candidates-20261120/references/official-jax-suit-ribbit.png",
+              "sha256": "a832fc71c7f8d0d647e9aec73baf7c21f29dd2663e6aae7699cab03504d3bfdc",
+              "bytes": 1467375
+            }
+          ]
+        },
+        {
+          "appearanceId": "jaxsuitribbit",
+          "slot": "crouch",
+          "file": "assets/encore/poses/jaxsuitribbit/crouch.png",
+          "archiveFile": "docs/art-generation/cast-ribbit-20261120/generated/jaxsuitribbit/crouch.png",
+          "receiptFile": "docs/art-generation/cast-ribbit-20261120/generated/jaxsuitribbit/crouch.json",
+          "sha256": "e1c91767578431812cbcade9eba732e8b04806f40593cfcb7a07444b0fe816a6",
+          "bytes": 916157,
+          "dimensions": [
+            1223,
+            1286
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            150,
+            56,
+            1051,
+            1243
+          ],
+          "nativeFacing": "right",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/cast-ribbit-20261120/generated/jaxsuitribbit/selection.png",
+              "sha256": "4dc2162fa6c5e02fddfff06104ed7fd77751f0be2152c7c53ff66cde467d3460",
+              "bytes": 1485535
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/ribbit-candidates-20261120/references/official-jax-suit-ribbit.png",
+              "sha256": "a832fc71c7f8d0d647e9aec73baf7c21f29dd2663e6aae7699cab03504d3bfdc",
+              "bytes": 1467375
+            }
+          ]
+        },
+        {
+          "appearanceId": "jaxsuitribbit",
+          "slot": "victory",
+          "file": "assets/encore/poses/jaxsuitribbit/victory.png",
+          "archiveFile": "docs/art-generation/cast-ribbit-20261120/generated/jaxsuitribbit/victory.png",
+          "receiptFile": "docs/art-generation/cast-ribbit-20261120/generated/jaxsuitribbit/victory.json",
+          "sha256": "338bfe7c63943e51e0688a8e1724c9bf498ebbc97f4c568a52b13fce67abd103",
+          "bytes": 778772,
+          "dimensions": [
+            1148,
+            1370
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            208,
+            14,
+            958,
+            1357
+          ],
+          "nativeFacing": "right",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/cast-ribbit-20261120/generated/jaxsuitribbit/selection.png",
+              "sha256": "4dc2162fa6c5e02fddfff06104ed7fd77751f0be2152c7c53ff66cde467d3460",
+              "bytes": 1485535
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/ribbit-candidates-20261120/references/official-jax-suit-ribbit.png",
+              "sha256": "a832fc71c7f8d0d647e9aec73baf7c21f29dd2663e6aae7699cab03504d3bfdc",
+              "bytes": 1467375
+            }
+          ]
+        },
+        {
+          "appearanceId": "jaxsuitribbit",
+          "slot": "defeat",
+          "file": "assets/encore/poses/jaxsuitribbit/defeat.png",
+          "archiveFile": "docs/art-generation/cast-ribbit-20261120/generated/jaxsuitribbit/defeat.png",
+          "receiptFile": "docs/art-generation/cast-ribbit-20261120/generated/jaxsuitribbit/defeat.json",
+          "sha256": "7b4249e4e8f2e9bf94617e4c9e44028c9f9baf28f20c87421b41dddd08f415df",
+          "bytes": 843919,
+          "dimensions": [
+            1225,
+            1284
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "alpha12Bounds": [
+            173,
+            63,
+            1021,
+            1235
+          ],
+          "nativeFacing": "right",
+          "references": [
+            {
+              "position": 1,
+              "file": "docs/art-generation/cast-ribbit-20261120/generated/jaxsuitribbit/selection.png",
+              "sha256": "4dc2162fa6c5e02fddfff06104ed7fd77751f0be2152c7c53ff66cde467d3460",
+              "bytes": 1485535
+            },
+            {
+              "position": 2,
+              "file": "docs/art-generation/ribbit-candidates-20261120/references/official-jax-suit-ribbit.png",
+              "sha256": "a832fc71c7f8d0d647e9aec73baf7c21f29dd2663e6aae7699cab03504d3bfdc",
+              "bytes": 1467375
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "completeAppearances": 2,
+    "nativePngs": 22,
+    "newNativePngs": 22,
+    "bytes": 24631738
+  },
+  "limitations": [
+    "Official merchandise appearance references do not certify an episode appearance.",
+    "Eleven separate static drawings per appearance are not full animation cycles.",
+    "Maid Ribbit remains unproduced because the examined references conceal the feet."
+  ]
+}

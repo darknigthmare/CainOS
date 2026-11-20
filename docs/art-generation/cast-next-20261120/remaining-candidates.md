@@ -1,5 +1,8 @@
 # Apparences restant à qualifier après cette passe
 
+> Registre historique : Anime Ribbit et Jax-Suit Ribbit ont ensuite été qualifiés
+> et intégrés. Consulter le [registre courant](../cast-ribbit-20261120/remaining-work.md).
+
 Ce registre distingue les dessins à produire des références encore insuffisantes.
 Il a été reconstitué après le remplacement de l’environnement de travail le
 20 novembre 2026. Les conclusions de recherche conservées dans la conversation

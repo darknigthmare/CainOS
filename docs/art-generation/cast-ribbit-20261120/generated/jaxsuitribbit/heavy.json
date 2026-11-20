@@ -1,0 +1,69 @@
+{
+  "schema": "encore-native-art-discovery/v1",
+  "appearanceId": "jaxsuitribbit",
+  "fighterId": "ribbit",
+  "slot": "heavy",
+  "status": "accepted_native",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "prompt": "Use case: identity-preserve. Asset type: ONE complete full-body static pose for a 2D fighting game.\nREFERENCE 1 is the accepted character design, proportions and crisp dark-outline CEL-SHADED art style. REFERENCE 2 is the official costume/colour authority. Preserve the exact same RIBBIT in a JAX-SUIT: GREEN frog face with pale mint muzzle and pink round cheeks, dark violet half-closed upper eyelids on two enormous raised oval eyes, white rectangular grinning teeth. Lavender suit and hood with exactly TWO rabbit ears, hot pink bow on the ANATOMICAL LEFT ear, coral pink short overalls with exactly TWO yellow buttons and one FRONT pocket, two yellow gloves, two slender lavender-covered legs and two rounded LAVENDER covered feet. Head stays frog-shaped, not Jax or a human. Keep palette, head size and lanky limb proportions consistent with reference 1. The costume contains no tail, exposed green limbs, neck bow, weapon, extra eye motifs or accessories.\nOnly the POSE described below changes. Exactly one frog head, two arms with two yellow hands, two legs with two lavender feet. BOTH ear tips, all fingers and BOTH soles fully inside generous empty safety margins. Native facing SCREEN-RIGHT in a 2D side-view fighting camera with mild three-quarter visibility; keep anatomical bow side consistent, not mirrored. Crisp clean cel-shaded 2D cartoon, no plush texture, not 3D, not realistic. True transparent RGBA background, zero-alpha empty space outside silhouette. NO glow, aura, haze, floor, floor shadow, motion trails, text, ring, strap, props or extra characters. One character and one pose per image.\nPOSE: Heavy forward lunging palm strike toward screen-right. A yellow open palm thrust far to the RIGHT at upper-chest height, rear yellow hand curled near hip, torso leaning into the strike, wide grounded staggered legs. Show a strong different silhouette from a jab. Entire hand and both feet stay in frame.",
+  "referencePaths": [
+    "docs/art-generation/cast-ribbit-20261120/generated/jaxsuitribbit/selection.png",
+    "docs/art-generation/ribbit-candidates-20261120/references/official-jax-suit-ribbit.png"
+  ],
+  "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-e6b25801-4de4-401a-91af-231be24ec84f.png",
+  "sourceGenerationId": "exec-e6b25801-4de4-401a-91af-231be24ec84f",
+  "file": "docs/art-generation/cast-ribbit-20261120/generated/jaxsuitribbit/heavy.png",
+  "targetFile": "assets/encore/poses/jaxsuitribbit/heavy.png",
+  "nativeFacing": "right",
+  "sourceURLs": [
+    "https://glitchproductions.store/products/ribbit-pendantz-blindbox",
+    "https://glitchproductions.store/cdn/shop/files/JaxSuit_1.png?v=1785347149&width=1600"
+  ],
+  "sourceKind": "Produit dérivé officiel",
+  "episodeFidelityClaim": false,
+  "visualReview": {
+    "status": "accepted",
+    "reviewer": "ribbit_references",
+    "observations": [
+      "Frappe lourde paume ouverte vers la droite, fente ample et silhouette distincte du jab.",
+      "Deux mains jaunes, deux pieds lavande, deux oreilles et nœud conservés, aucun membre coupé."
+    ],
+    "scope": "Official merchandise costume; original static game pose, no canonical episode certification."
+  },
+  "sha256": "c9163abcd105483c0a3dd6a5b6956375548d2fd98372260fe7fe9961e802dd72",
+  "bytes": 1457490,
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "fullyTransparentPixels": 1131631,
+  "alpha12Bounds": [
+    88,
+    20,
+    1361,
+    1011
+  ],
+  "alpha12BoundsThreshold": "alpha > 12",
+  "nativeCopyVerified": true,
+  "createdAt": "2026-11-20T12:29:59.946762+00:00",
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/cast-ribbit-20261120/generated/jaxsuitribbit/selection.png",
+      "sha256": "4dc2162fa6c5e02fddfff06104ed7fd77751f0be2152c7c53ff66cde467d3460",
+      "bytes": 1485535
+    },
+    {
+      "position": 2,
+      "file": "docs/art-generation/ribbit-candidates-20261120/references/official-jax-suit-ribbit.png",
+      "sha256": "a832fc71c7f8d0d647e9aec73baf7c21f29dd2663e6aae7699cab03504d3bfdc",
+      "bytes": 1467375
+    }
+  ]
+}
