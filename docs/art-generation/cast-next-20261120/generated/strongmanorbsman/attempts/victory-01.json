@@ -1,0 +1,51 @@
+{
+  "schema": "encore-native-art-discovery/v1",
+  "appearanceId": "strongmanorbsman",
+  "slot": "victory",
+  "status": "rejected_visual",
+  "file": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/attempts/victory-01.png",
+  "nativeSourceFile": "/workspace/scratch/5f5114b49696/generated_images/exec-fc9e5c8e-42d0-4da8-b60b-53913ed1c1a1.png",
+  "sourceGenerationId": "exec-fc9e5c8e-42d0-4da8-b60b-53913ed1c1a1",
+  "prompt": "Use case: stylized-concept. Asset type: ONE individual full-body transparent 2D fighting-game sprite for Encore. Crisp dark outlines, polished restrained cel shading, saturated local colours, clear silhouette at small game scale, consistent light from upper left. Match the named official merchandise identity; this is an original game-pose adaptation, not a claim about an episode. Keep the complete single character and every carried prop inside generous clear transparent margins on ALL sides. True transparent RGBA background. No scenery, curtains, floor, cast shadow, aura, glow, particles, text, watermark, panel, inset, duplicated character or cropped extremity. Input image 1 is the accepted game selection and the strict design lock for proportions, shape, colours, shading and every prop. Input image 2 is the official source to preserve identity details, excluding its scene. Generate a genuinely new action, not a crop or mirror. DESIGN LOCK: STRONGMAN ORBSMAN from the official Side Show merchandise. One blue-violet character made entirely of connected polished rounded spheres: large head, smaller round torso and pelvis, two arms of spheres ending in two spherical hands without fingers, two legs of spheres ending in rounded feet. Two huge white eyes with black pupils, thick black eyebrows and small mint sweat drops. No mouth, clothing or human musculature. Preserve the official ball topology. One single silver barbell with exactly TWO big red spherical weights, one at each end, carried by the two round hands. Keep the entire bar and both red weights inside the frame. POSE: VICTORY: proud triumphant weightlifting finish, both hands hold the same single barbell high above the head and legs stand tall, eyes looking screen RIGHT.",
+  "referencePaths": [
+    "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/selection.png",
+    "docs/art-generation/cast-next-20261120/research/merch/official-strongman-orbsman.png"
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_strongmanOrbsman.png?v=1773977710"
+  ],
+  "sha256": "826d82efe07d7555154235bdca6299f3b37a054f18980ae74b74952ab8abf342",
+  "bytes": 1489539,
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "alpha12Bounds": [
+    13,
+    124,
+    1008,
+    1426
+  ],
+  "nativeCopyVerified": true,
+  "nativeFacing": "right",
+  "rejectionReason": "Victory lengthens each arm into about six spheres rather than the four including the spherical hand in the accepted selection, and collapses the two-sphere torso/pelvis read. Do not integrate this anatomy drift.",
+  "createdAt": "2026-11-20T09:39:28.740128+00:00",
+  "portableReferences": [
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/strongmanorbsman/selection.png",
+      "sha256": "ede51b07225e79c80eefdf12cd862e6b9d166211bb452ab16bebff59760e460c",
+      "bytes": 1518337
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/research/merch/official-strongman-orbsman.png",
+      "sha256": "47e8c316870904730493cf87cbbf8af0c94e93f9c0b49aacf821102612edc7ca",
+      "bytes": 602038
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "schema": "encore-native-art-discovery/v1",
+  "appearanceId": "ringmastercaine",
+  "slot": "heavy",
+  "status": "accepted_native",
+  "createdAt": "2026-11-20T09:50:21.796652+00:00",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "prompt": "Create ONE individual complete-character 2D fighting-game sprite, polished cel shading with crisp dark contours, coherent with Digital Circus Encore. Keep all hat/bow tips, every hand, ornament, cane and the entire base/feet inside CLEAR TRANSPARENT MARGINS on ALL FOUR SIDES. True transparent RGBA. No scenery, floor, cast shadow, aura, external glow, particles, text, logo, watermark, inset or duplicate. One original static game adaptation; do not copy the product scene or its squat toy proportions. Reference 1 is the APPROVED SELECTION SEED: strictly preserve its identity, proportions, colors, exact anatomy and polished 2D style. Reference 2 supplies the official product details only. Make a genuinely different pose, never a mirrored or cropped copy of selection. DESIGN LOCK: ONE entire Ringmaster Caine wearing his BLACK outfit from the official Side Show product: RED denture head with white teeth and exactly two protruding round eyes with BLUE and GREEN irises, BLACK TOP HAT with RED band, BLACK GLITTER-FABRIC TUXEDO/TAILCOAT with thin pale trim, WHITE SHIRT FRONT with BLACK BUTTONS, small RED BOW TIE, WHITE GLOVES, BLACK TROUSERS and BLACK SHOES. Exactly TWO normal arms and TWO legs. One DARK CANE with a GOLD BALL KNOB. Keep the subtle glitter as small fabric highlights only, no external sparks or particles. Preserve the black tailcoat instead of the ordinary red Caine coat. No podium or round red/cream display plinth. POSE: HEAVY ATTACK toward screen RIGHT: wide grounded stance, black-coated torso twists, single cane sweeping strongly downward and forward, other glove counterbalances. Both legs and shoes complete, no duplicated cane or particles.",
+  "referencePaths": [
+    "docs/art-generation/cast-next-20261120/generated/ringmastercaine/selection.png",
+    "docs/art-generation/cast-next-20261120/research/merch/official-ringmaster-caine.png"
+  ],
+  "portableReferences": [
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/selection.png",
+      "sha256": "b95d9ff79564bb0ae0b536ef4b3cf48b1cc43af6f046fa687355ea753fc4d5fb",
+      "bytes": 1539137
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/research/merch/official-ringmaster-caine.png",
+      "sha256": "810e37a66b662ae00c610167fbd11b0e754b39c7eb0b70fa61ac0cd157e6b493",
+      "bytes": 6486644
+    }
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_ringmasterCaine.png?v=1773977710"
+  ],
+  "sourceKind": "Produit dérivé officiel",
+  "episodeFidelityClaim": false,
+  "sourceGenerationId": "exec-55afc71a-1011-4fd4-9544-460a79dbafe5",
+  "nativeSourceFile": "/workspace/scratch/5f5114b49696/generated_images/exec-55afc71a-1011-4fd4-9544-460a79dbafe5.png",
+  "file": "docs/art-generation/cast-next-20261120/generated/ringmastercaine/heavy.png",
+  "targetFile": "assets/encore/poses/ringmastercaine/heavy.png",
+  "sha256": "cb1a9347e8f0c0251631ad833131a016957eced406403874973089b018ea0293",
+  "bytes": 1448200,
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "fullyTransparentPixels": 1147836,
+  "alpha12Bounds": [
+    176,
+    13,
+    1338,
+    1013
+  ],
+  "alpha12BoundsThreshold": "alpha >= 12",
+  "nativeCopyVerified": true,
+  "nativeFacing": "right",
+  "visualReview": {
+    "reviewer": "root",
+    "status": "accepted",
+    "observations": [
+      "Strong downward cane sweep toward screen-right, wide grounded lunge and opposite open glove behind the torso.",
+      "One cane, one denture head and two arms/legs remain complete; both eyes, black glitter outfit, red bow tie and hat retained."
+    ],
+    "scope": "Approved merchandise identity and game presentation; original static game pose, no canonical episode certification."
+  }
+}

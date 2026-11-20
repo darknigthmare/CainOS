@@ -1,0 +1,65 @@
+{
+  "schema": "encore-native-art-discovery/v1",
+  "appearanceId": "stagehandbubble",
+  "slot": "stance",
+  "status": "accepted_native",
+  "createdAt": "2026-11-20T09:47:30.922032+00:00",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "prompt": "Use case: stylized-concept. Asset type: ONE individual full-body transparent 2D fighting-game sprite for Encore. Crisp dark outlines, polished restrained cel shading, saturated local colours, clear silhouette at small game scale, consistent light from upper left. Match the named official merchandise identity; this is an original game-pose adaptation, not a claim about an episode. Keep the complete single character and every carried prop inside generous clear transparent margins on ALL sides. True transparent RGBA background. No scenery, curtains, floor, cast shadow, aura, glow, particles, text, watermark, panel, inset, duplicated character or cropped extremity. Input image 1 is the accepted game selection and the strict design lock for proportions, shape, colours, shading and every prop. Input image 2 is the official source to preserve identity details, excluding its scene. Generate a genuinely new action, not a crop or mirror. DESIGN LOCK: STAGEHAND BUBBLE from the official Side Show merchandise. One pale translucent cyan spherical Bubble with two small black eyes, white triangular teeth and a very long broad red tongue. A black top hat with one red hatband sits immediately beneath/behind the sphere. One large grey vintage movie camera is mounted above the sphere, with the same black circular lens turret, projecting dark lens barrels, a small red top indicator and two grey supports visible behind Bubble as in the official reference. Preserve this Bubble-camera-hat assembly. No arms, hands, legs, feet, torso or additional face; the camera is a prop, not a second creature. No tiny camera lettering. The whole tongue, hat, camera, indicator, supports and sphere must remain fully visible. POSE: STANCE: whole floating assembly tips slightly forward toward screen RIGHT, long red tongue curves forward under the mouth, camera and hat stay attached in their reference relationship.",
+  "referencePaths": [
+    "docs/art-generation/cast-next-20261120/generated/stagehandbubble/selection.png",
+    "docs/art-generation/cast-next-20261120/research/merch/official-stagehand-bubble.png"
+  ],
+  "portableReferences": [
+    {
+      "file": "docs/art-generation/cast-next-20261120/generated/stagehandbubble/selection.png",
+      "sha256": "463f70055d4c9ed064016b6f3744ebfecc3c3dbd58efd9282b824ced2af1c0fa",
+      "bytes": 820851
+    },
+    {
+      "file": "docs/art-generation/cast-next-20261120/research/merch/official-stagehand-bubble.png",
+      "sha256": "c79461ad400eba410644a9a087dd3d0b70ef7b68a7dc9f1c423e60f55c9201d2",
+      "bytes": 583218
+    }
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_stagehandBubble.png?v=1773977710"
+  ],
+  "sourceKind": "Produit dérivé officiel",
+  "episodeFidelityClaim": false,
+  "sourceGenerationId": "exec-f387421a-d817-477b-9beb-632301e16732",
+  "nativeSourceFile": "/workspace/scratch/5f5114b49696/generated_images/exec-f387421a-d817-477b-9beb-632301e16732.png",
+  "file": "docs/art-generation/cast-next-20261120/generated/stagehandbubble/stance.png",
+  "targetFile": "assets/encore/stance/stagehandbubble.png",
+  "sha256": "2767a833a73e5224d3ee9296c429fd1b2e54783cac760dba4d7331dd8932a1c5",
+  "bytes": 894538,
+  "dimensions": [
+    1312,
+    1199
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "fullyTransparentPixels": 1010545,
+  "alpha12Bounds": [
+    220,
+    68,
+    1093,
+    1162
+  ],
+  "alpha12BoundsThreshold": "alpha >= 12",
+  "nativeCopyVerified": true,
+  "nativeFacing": "right",
+  "visualReview": {
+    "reviewer": "generate_gangle_zooble",
+    "status": "accepted",
+    "observations": [
+      "Forward-tipped right-facing stance with the long tongue curling ahead. Camera, red indicator, two grey supports and black/red hat keep the accepted assembly. No added anatomy or extra face. The tongue and all camera corners remain inside transparent margins."
+    ],
+    "scope": "Approved merchandise identity and game presentation; original static game pose, no canonical episode certification."
+  }
+}

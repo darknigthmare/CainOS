@@ -1,0 +1,72 @@
+{
+  "id": "noirribbit:attack",
+  "appearanceId": "noirribbit",
+  "fighterId": "ribbit",
+  "slot": "attack",
+  "status": "accepted_native",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "file": "docs/art-generation/cast-next-20261120/generated/noirribbit/attack.png",
+  "targetFile": "assets/encore/poses/noirribbit/attack.png",
+  "referencePaths": [
+    "docs/art-generation/cast-next-20261120/generated/noirribbit/selection.png",
+    "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-noir.png"
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/ribbit-pendantz-blindbox",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Noir.png?v=1785768060"
+  ],
+  "sourceKind": "Produit dérivé officiel",
+  "episodeFidelityClaim": false,
+  "desiredNativeFacing": "right",
+  "prompt": "Use case: identity-preserve. Reference 1 is the APPROVED GAME DESIGN: preserve its exact face, anatomy, clothing, colours, details, proportions and drawing style, changing only the pose described below. Reference 2 confirms the official merchandise costume details. Do not copy the pose, photo background or toy proportions from reference 2.\n\nRIBBIT in the official NOIR merchandise costume. One slim anthropomorphic frog: one grey frog head with two large raised oval eyes, black pupils with white highlights, very dark violet half-lids, a light-grey muzzle and small weary downturned mouth. Grey skin, no green and no pink cheeks. Grey trench coat with lapels, overlapping front, waist belt and square buckle, white shirt collar, small black neck bow. Two grey frog hands at the ends of the coat sleeves; two long slim legs ending in black rounded frog feet. Keep the established game's slender Ribbit proportions and bold clean cel shading. Preserve this complete grey outfit and subdued expression. No hat, cigarette, weapon, keyring, tag, strap or lettering.\n\nLight attack: face SCREEN-RIGHT and extend the forward arm into one straight punch toward SCREEN-RIGHT, other hand near the torso. Slight forward lunge with both feet visible. No opponent, no impact cloud, no trails.\n\nRender ONE complete polished hand-drawn 2D cel-shaded fighting-game sprite with clean dark outlines and clear flat colour regions. Entire figure including every eye, hat tip, feather tip, finger and both feet is fully inside generous transparent safety margins. True transparent RGBA background. No floor, cast shadow, glow, background, frame, text, watermark, duplicate body, speed lines or motion blur. Anatomical consistency is mandatory: one head, two arms, two hands, two legs and two feet. Native facing must be SCREEN-RIGHT; do not mirror anatomical costume details.",
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/cast-next-20261120/generated/noirribbit/selection.png",
+      "sha256": "7e0856ee931693f817f7206945d38b178c3e79007a68c77d6c908c066972b78d",
+      "bytes": 1279270
+    },
+    {
+      "position": 2,
+      "file": "docs/art-generation/cast-next-20261120/research/merch/official-ribbit-noir.png",
+      "sha256": "fa7196988e32f61446b691b0b956abc103e9761827d9a19dbaae5e1292d8c31c",
+      "bytes": 1555468
+    }
+  ],
+  "schema": "encore-native-art-discovery/v1",
+  "includedInRuntime": false,
+  "nativeSourceFile": "/workspace/scratch/5f5114b49696/generated_images/exec-ba474cd3-78bf-4a59-a209-bbc91a78631b.png",
+  "sourceGenerationId": "exec-ba474cd3-78bf-4a59-a209-bbc91a78631b",
+  "nativeFacing": "right",
+  "visualReview": {
+    "reviewer": "generate_pomni_kinger",
+    "status": "accepted",
+    "observations": [
+      "Coup léger : bras avant tendu à droite, autre poing près du torse et fente lisible ; le personnage conserve deux bras et deux jambes.",
+      "Identité grise et trench de la sélection conservés, main attaquante et deux pieds intégralement dans le cadre."
+    ],
+    "scope": "Official merchandise costume and approved game design preserved; original game pose, no canonical episode certification."
+  },
+  "dimensions": [
+    1190,
+    1322
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "alpha12Bounds": [
+    54,
+    80,
+    1135,
+    1273
+  ],
+  "alpha12BoundsThreshold": "alpha > 12",
+  "fullyTransparentPixels": 1197926,
+  "sha256": "bd9405b71dadee65c634d56763f9b123cdccfc4ab8ed9960045945e34fa8bc2d",
+  "bytes": 634539,
+  "nativeCopyVerified": true,
+  "createdAt": "2026-11-20T09:33:44.921185+00:00"
+}
