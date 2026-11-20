@@ -320,6 +320,8 @@ try {
   assert.deepEqual(await program(), lossFixture.program);
   assert.deepEqual((await profile()).stats, lostProfile.stats);
   assert.deepEqual((await snapshot()).fighters.map(fighter => fighter.hp), [10000, 10000]);
+  await enterTournament();
+  assert.deepEqual((await profile()).stats, lostProfile.stats, 'continuing the retry introduction preserves the recorded loss');
   checked('Tournament loss eliminates without a medal; replay starts a fresh bracket attempt', 'The real CPU wins; remaining results are simulated and retry resets index/results while preserving the recorded loss');
 
   // Reuse an actually earned checkpoint from the first story duel, not a
