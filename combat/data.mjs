@@ -241,6 +241,7 @@ export const STAGES = [
   ...CROSSOVER_STAGES.map(({ id, series, name, description, palette, sourceId }) =>
     stage(id, name, description, palette, sourceId, { series, provenance: 'Arène crossover adaptée pour Encore' })),
   stage('falseexit', 'La fausse sortie', 'Une porte rouge au fond des bureaux gris du pilote.', { sky: '#434844', back: '#727a71', accent: '#d44d4c', floor: '#574c4c', grid: '#665954' }, 'ep1'),
+  stage('undermap', 'Sous la carte', 'La salle quadrillée bleue sous Candy Canyon, au sol réfléchissant.', { sky: '#020321', back: '#050837', accent: '#315bff', floor: '#040525', grid: '#1d26cc' }, 'ep2'),
 ];
 
 // One dedicated arrangement per playable artist, next to the shared

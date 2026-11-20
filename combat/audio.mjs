@@ -30,6 +30,7 @@ export const AUDIO_THEMES = Object.freeze({
   littledaisy: theme('littledaisy', 'Après la fermeture', 104, 60, minor, [0, null, 2, 4, null, 5, 3, 1, 4, null, 2, 6, null, 3, 1, 0], [0, 3, 4, 5], 'triangle', .17),
   showgrounds: theme('showgrounds', 'La grande roue', 120, 62, major, [0, 4, 3, null, 5, 4, 1, 3, null, 6, 4, 2, 3, null, 1, 0], [0, 4, 3, 1], 'triangle', .09),
   simpleflipisland: theme('simpleflipisland', 'Pas de coco', 126, 67, major, [0, 3, 2, null, 4, 5, 2, 0, 1, null, 4, 6, 3, 2, null, 0], [0, 3, 4, 2], 'sine', .08),
+  undermap: theme('undermap', 'Hors de la carte', 78, 47, minor, [0, null, 4, null, 2, null, 1, 3, null, 5, null, 2, 4, null, 1, null], [0, 5, 2, 4], 'sine'),
 });
 
 // [frequency, end frequency, seconds, delay, waveform, amplitude].

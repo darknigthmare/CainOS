@@ -7,6 +7,7 @@ import { COSTUME_CONTINUATION_DEFINITIONS } from './costume-continuation-2026112
 import { COSTUME_RESUMPTION_DEFINITIONS, getCostumeNativeFacing } from './costume-resumption-20261120.mjs';
 import { COSTUME_DISCOVERY_DEFINITIONS } from './costume-discoveries-20261120.mjs';
 import { COSTUME_RIBBIT_DEFINITIONS } from './costume-ribbit-20261120.mjs';
+import { COSTUME_NEXT_MISSING_DEFINITIONS } from './costume-next-missing-20261120.mjs';
 const costumePage = 'https://glitchproductions.store/products/digital-circus-animiniz-costume-adventure-series';
 const beachPage = 'https://glitchproductions.store/products/digital-circus-animiniz-beach-vacation-series';
 const defs = [
@@ -81,6 +82,7 @@ const defs = [
   ...COSTUME_RESUMPTION_DEFINITIONS,
   ...COSTUME_DISCOVERY_DEFINITIONS,
   ...COSTUME_RIBBIT_DEFINITIONS,
+  ...COSTUME_NEXT_MISSING_DEFINITIONS,
 ];
 export const COSTUME_ADDITION_SOURCES = Object.freeze(defs.map(def => Object.freeze({
   id: def.sourceId, title: def.sourceTitle, url: def.sourceUrl,

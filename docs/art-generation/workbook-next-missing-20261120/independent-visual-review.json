@@ -1,0 +1,676 @@
+{
+  "schema": "encore-tracker-independent-visual-review/v1",
+  "status": "passed",
+  "reviewedAt": "2026-11-20T14:09:31.885144+00:00",
+  "reviewer": "/root/ribbit_references",
+  "independence": "Independent of workbook authoring, export and rendering. The reviewer previously produced Watermelon Gangle and Aqua Blaster Pomni artwork; this review concerns the workbook views and evidence wording.",
+  "workbook": {
+    "file": "DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx",
+    "sha256": "048d758f614daf1ad388a12fed5955b853734c2c1c47d92fb7a6e493512eea12",
+    "bytes": 725856,
+    "hashIndependentlyRead": true,
+    "modifiedByThisReview": false
+  },
+  "method": "Each of the 36 final PNG renders was opened with view_image and visually inspected after the author signalled the final export. Three baseline renders were also opened to compare the yellow note-column presentation. No workbook edit, recalculation, export or new runtime test was performed.",
+  "finalRenderCount": 36,
+  "finalViews": [
+    {
+      "file": "summary-top.png",
+      "sha256": "df90c0035b44cbfe036bd3c95362c097a0e163ce0fa4117720bb61716460b1d5",
+      "bytes": 125111,
+      "dimensions": [
+        1890,
+        667
+      ],
+      "visualInspectionPerformed": true,
+      "role": "final",
+      "result": "no_concrete_visual_defect_observed"
+    },
+    {
+      "file": "summary-bottom.png",
+      "sha256": "7dc7cc83af3daa3025df49b01771806ef2b43318ffda3e05b949c5235dacf253",
+      "bytes": 128308,
+      "dimensions": [
+        1890,
+        639
+      ],
+      "visualInspectionPerformed": true,
+      "role": "final",
+      "result": "no_concrete_visual_defect_observed"
+    },
+    {
+      "file": "stage-left.png",
+      "sha256": "1518e4e20cf7acc9d0113f8f6e657ada93ed5adab3791f3b06987d8a08640514",
+      "bytes": 14335,
+      "dimensions": [
+        2380,
+        103
+      ],
+      "visualInspectionPerformed": true,
+      "role": "final",
+      "result": "no_concrete_visual_defect_observed"
+    },
+    {
+      "file": "stage-right.png",
+      "sha256": "64fd233c4ccb8908e265d3d5fea21e373a6466293f6cfc83d12e2e67846446ca",
+      "bytes": 70274,
+      "dimensions": [
+        5980,
+        103
+      ],
+      "visualInspectionPerformed": true,
+      "role": "final",
+      "result": "no_concrete_visual_defect_observed"
+    },
+    {
+      "file": "australian-reference.png",
+      "sha256": "385827c0f57cdd075dafa7c42686d9a92414fe454c4568c68dea9f2553eec36a",
+      "bytes": 60426,
+      "dimensions": [
+        4020,
+        103
+      ],
+      "visualInspectionPerformed": true,
+      "role": "final",
+      "result": "no_concrete_visual_defect_observed"
+    },
+    {
+      "file": "production-1.png",
+      "sha256": "e1df3446eb6aff77e74352b18fc41d94a3924339d90ff87ec6dffd736c942d37",
+      "bytes": 316506,
+      "dimensions": [
+        4020,
+        593
+      ],
+      "visualInspectionPerformed": true,
+      "role": "final",
+      "result": "no_concrete_visual_defect_observed"
+    },
+    {
+      "file": "production-2.png",
+      "sha256": "961355909124da0dda64c9f42f0801405523b014d0aca85bbbcafc4229ebf492",
+      "bytes": 252466,
+      "dimensions": [
+        4020,
+        767
+      ],
+      "visualInspectionPerformed": true,
+      "role": "final",
+      "result": "no_concrete_visual_defect_observed"
+    },
+    {
+      "file": "production-3.png",
+      "sha256": "30d45585f8a4044909fb00478366144c5f0f7336b1286415e81d0cb6a8d41b7f",
+      "bytes": 250010,
+      "dimensions": [
+        4020,
+        767
+      ],
+      "visualInspectionPerformed": true,
+      "role": "final",
+      "result": "no_concrete_visual_defect_observed"
+    },
+    {
+      "file": "production-4.png",
+      "sha256": "2819e3f29cccdee2a603378f792456a8a25f4bf5c4cf2a6b7103d4567679bba2",
+      "bytes": 249322,
+      "dimensions": [
+        4020,
+        767
+      ],
+      "visualInspectionPerformed": true,
+      "role": "final",
+      "result": "no_concrete_visual_defect_observed"
+    },
+    {
+      "file": "production-5.png",
+      "sha256": "184808344e96327e8e283af1a0aa3d5d47de546a81986a0415e139bc3d1f8222",
+      "bytes": 251343,
+      "dimensions": [
+        4020,
+        767
+      ],
+      "visualInspectionPerformed": true,
+      "role": "final",
+      "result": "no_concrete_visual_defect_observed"
+    },
+    {
+      "file": "production-6.png",
+      "sha256": "649cbe585910b8d873c77e663e261245b77dd56abe4df32f3756aa82e4265d5d",
+      "bytes": 248489,
+      "dimensions": [
+        4020,
+        767
+      ],
+      "visualInspectionPerformed": true,
+      "role": "final",
+      "result": "no_concrete_visual_defect_observed"
+    },
+    {
+      "file": "production-7.png",
+      "sha256": "3841407a8cae42d59c93f388f27a8e9232dd98473446365508dfd38b543f0dbe",
+      "bytes": 249040,
+      "dimensions": [
+        4020,
+        767
+      ],
+      "visualInspectionPerformed": true,
+      "role": "final",
+      "result": "no_concrete_visual_defect_observed"
+    },
+    {
+      "file": "production-8.png",
+      "sha256": "f584181f259634345dd20d9ca6dab4d732d95aff35312b36ac382648d11d1f97",
+      "bytes": 245907,
+      "dimensions": [
+        4020,
+        767
+      ],
+      "visualInspectionPerformed": true,
+      "role": "final",
+      "result": "no_concrete_visual_defect_observed"
+    },
+    {
+      "file": "production-9.png",
+      "sha256": "f9fd42f5dab6f061e1cd2f66861dab49ad65674e9e29fa3ffc48ea2f140f6b1e",
+      "bytes": 247147,
+      "dimensions": [
+        4020,
+        767
+      ],
+      "visualInspectionPerformed": true,
+      "role": "final",
+      "result": "no_concrete_visual_defect_observed"
+    },
+    {
+      "file": "production-10.png",
+      "sha256": "2c59405dcc3072f6c0fda4e6f88608ad27a98e0d09140ed2f33a1109409b3185",
+      "bytes": 245901,
+      "dimensions": [
+        4020,
+        767
+      ],
+      "visualInspectionPerformed": true,
+      "role": "final",
+      "result": "no_concrete_visual_defect_observed"
+    },
+    {
+      "file": "production-11.png",
+      "sha256": "d152c0e227ea4e0b4a2a1833e7e0ebba9c8cfc7d85f00fbc8e07b19b07727acc",
+      "bytes": 245450,
+      "dimensions": [
+        4020,
+        767
+      ],
+      "visualInspectionPerformed": true,
+      "role": "final",
+      "result": "no_concrete_visual_defect_observed"
+    },
+    {
+      "file": "production-12.png",
+      "sha256": "09c51c3f6c0328ec1f6f0fa848c27ab771e17d363dc294efec612f0116afc9d1",
+      "bytes": 240683,
+      "dimensions": [
+        4020,
+        767
+      ],
+      "visualInspectionPerformed": true,
+      "role": "final",
+      "result": "no_concrete_visual_defect_observed"
+    },
+    {
+      "file": "production-13.png",
+      "sha256": "33e76e0f44016475f6f9079f9705a668a8da109967e03248b0246cfbbf3b0da9",
+      "bytes": 129380,
+      "dimensions": [
+        4020,
+        307
+      ],
+      "visualInspectionPerformed": true,
+      "role": "final",
+      "result": "no_concrete_visual_defect_observed"
+    },
+    {
+      "file": "production-14.png",
+      "sha256": "788856732b2656835c1ad6beae9a393dc9fb4a5d8dc72f10ec6e163462356688",
+      "bytes": 52754,
+      "dimensions": [
+        4020,
+        151
+      ],
+      "visualInspectionPerformed": true,
+      "role": "final",
+      "result": "no_concrete_visual_defect_observed"
+    },
+    {
+      "file": "qa-1.png",
+      "sha256": "e3e2fcf7c901f122299c95b4478e8bc8ed8f494f32312d7ee90de53b17f1aaa2",
+      "bytes": 202769,
+      "dimensions": [
+        4980,
+        351
+      ],
+      "visualInspectionPerformed": true,
+      "role": "final",
+      "result": "no_concrete_visual_defect_observed"
+    },
+    {
+      "file": "qa-2.png",
+      "sha256": "576bf5ff60445726669830c2f4caabdf09ab78f4915131db52c17fcf21c44b48",
+      "bytes": 204011,
+      "dimensions": [
+        4980,
+        351
+      ],
+      "visualInspectionPerformed": true,
+      "role": "final",
+      "result": "no_concrete_visual_defect_observed"
+    },
+    {
+      "file": "qa-3.png",
+      "sha256": "1b6724bbaa0f9ec3329175e79657c06853a8a246403f280feb8a04878487374e",
+      "bytes": 206000,
+      "dimensions": [
+        4980,
+        351
+      ],
+      "visualInspectionPerformed": true,
+      "role": "final",
+      "result": "no_concrete_visual_defect_observed"
+    },
+    {
+      "file": "qa-4.png",
+      "sha256": "ab8298d16851c9fc430f1b3c1c257d40d00427779cd25851cffcbdd25957ece7",
+      "bytes": 202649,
+      "dimensions": [
+        4980,
+        351
+      ],
+      "visualInspectionPerformed": true,
+      "role": "final",
+      "result": "no_concrete_visual_defect_observed"
+    },
+    {
+      "file": "qa-5.png",
+      "sha256": "ea9a871aff22e20f7f17d47deb48f256c6d51d6e1d0757da97344ddde49b7723",
+      "bytes": 203714,
+      "dimensions": [
+        4980,
+        351
+      ],
+      "visualInspectionPerformed": true,
+      "role": "final",
+      "result": "no_concrete_visual_defect_observed"
+    },
+    {
+      "file": "qa-6.png",
+      "sha256": "f002c119d9c3a37d2b5f9704758e8e4c3fc3cd1d9d732ce6150caa664beeeea0",
+      "bytes": 202475,
+      "dimensions": [
+        4980,
+        351
+      ],
+      "visualInspectionPerformed": true,
+      "role": "final",
+      "result": "no_concrete_visual_defect_observed"
+    },
+    {
+      "file": "qa-7.png",
+      "sha256": "3dc228172ef5021dcd2e02d38485f4e58775fba396fa6af58d1984c9138bef2a",
+      "bytes": 199850,
+      "dimensions": [
+        4980,
+        351
+      ],
+      "visualInspectionPerformed": true,
+      "role": "final",
+      "result": "no_concrete_visual_defect_observed"
+    },
+    {
+      "file": "qa-8.png",
+      "sha256": "5e115d44bd61aa5c1a221f95f980591a16be27c4fa72f6f89ffac189261527dc",
+      "bytes": 201864,
+      "dimensions": [
+        4980,
+        351
+      ],
+      "visualInspectionPerformed": true,
+      "role": "final",
+      "result": "no_concrete_visual_defect_observed"
+    },
+    {
+      "file": "qa-9.png",
+      "sha256": "821ed3094d65954f3870785ca28555e9929f2ad004e9f649b03fbff931f6995b",
+      "bytes": 201124,
+      "dimensions": [
+        4980,
+        351
+      ],
+      "visualInspectionPerformed": true,
+      "role": "final",
+      "result": "no_concrete_visual_defect_observed"
+    },
+    {
+      "file": "qa-10.png",
+      "sha256": "1067287ab2c33ee29a5494aaba516d633e42d263c248c531ac74cb90423e3ee9",
+      "bytes": 201880,
+      "dimensions": [
+        4980,
+        351
+      ],
+      "visualInspectionPerformed": true,
+      "role": "final",
+      "result": "no_concrete_visual_defect_observed"
+    },
+    {
+      "file": "qa-11.png",
+      "sha256": "b9538d74c0273aba7c97dc87719fb964b61bde12397d3bd79f61e7e5c6e2cf22",
+      "bytes": 202097,
+      "dimensions": [
+        4980,
+        351
+      ],
+      "visualInspectionPerformed": true,
+      "role": "final",
+      "result": "no_concrete_visual_defect_observed"
+    },
+    {
+      "file": "qa-12.png",
+      "sha256": "2bbb25fbf86635d1d4645568ff54d57b272af8e40c65e9564393a2d895807eb6",
+      "bytes": 171608,
+      "dimensions": [
+        4980,
+        272
+      ],
+      "visualInspectionPerformed": true,
+      "role": "final",
+      "result": "no_concrete_visual_defect_observed"
+    },
+    {
+      "file": "qa-13.png",
+      "sha256": "0cedaf10810afaebfdd4273c6d6229a81fe93203a0e0db61edc1936f61c0e50b",
+      "bytes": 99308,
+      "dimensions": [
+        4980,
+        244
+      ],
+      "visualInspectionPerformed": true,
+      "role": "final",
+      "result": "no_concrete_visual_defect_observed"
+    },
+    {
+      "file": "qa-14.png",
+      "sha256": "b012d071594e2a58b313cc8aaa196a413ae2e7bb9e55a287a817bf5f63918bb7",
+      "bytes": 78921,
+      "dimensions": [
+        4980,
+        151
+      ],
+      "visualInspectionPerformed": true,
+      "role": "final",
+      "result": "no_concrete_visual_defect_observed"
+    },
+    {
+      "file": "references-new.png",
+      "sha256": "0169693b9a9fc818018856587791367d91624688249eaa33b913699d329b01a6",
+      "bytes": 244074,
+      "dimensions": [
+        3240,
+        524
+      ],
+      "visualInspectionPerformed": true,
+      "role": "final",
+      "result": "no_concrete_visual_defect_observed"
+    },
+    {
+      "file": "references-offline.png",
+      "sha256": "6830169e2c53d4f55dbe4863b6bc0f85c399c66d0ce5b8103a7f081e56631c01",
+      "bytes": 18608,
+      "dimensions": [
+        3240,
+        59
+      ],
+      "visualInspectionPerformed": true,
+      "role": "final",
+      "result": "no_concrete_visual_defect_observed"
+    },
+    {
+      "file": "references-footer.png",
+      "sha256": "034491e64e34f2803b3529b5bf1c1ac9ef2423bda7930419b7bfcdc6d9a39c0c",
+      "bytes": 96100,
+      "dimensions": [
+        3240,
+        401
+      ],
+      "visualInspectionPerformed": true,
+      "role": "final",
+      "result": "no_concrete_visual_defect_observed"
+    }
+  ],
+  "baselineComparisonViews": [
+    {
+      "file": "baseline-production.png",
+      "sha256": "2b6ffeab2757631cbe4a4df81223b755bf802ca5b5132e459bc7086c414053f5",
+      "bytes": 114391,
+      "dimensions": [
+        4020,
+        285
+      ],
+      "visualInspectionPerformed": true,
+      "role": "baseline_comparison_only",
+      "result": "no_concrete_visual_defect_observed"
+    },
+    {
+      "file": "baseline-qa.png",
+      "sha256": "8ff1fff327b42f6cbc3e60dd70d57162c5ed669fc2c1d8f31ddaa1fd3a48e705",
+      "bytes": 79494,
+      "dimensions": [
+        4980,
+        188
+      ],
+      "visualInspectionPerformed": true,
+      "role": "baseline_comparison_only",
+      "result": "no_concrete_visual_defect_observed"
+    },
+    {
+      "file": "baseline-stage-right.png",
+      "sha256": "fc98af1f4806f6c6c1ebbb76413f8c44ca0b37ddccec0b6e527d29c1ca8bde2e",
+      "bytes": 47988,
+      "dimensions": [
+        5980,
+        113
+      ],
+      "visualInspectionPerformed": true,
+      "role": "baseline_comparison_only",
+      "result": "no_concrete_visual_defect_observed"
+    }
+  ],
+  "finalRenderManifest": {
+    "file": "final-render-hashes.json",
+    "sha256": "7506835cebba6b54325294dcd9aee77339522b3a9862efae785c838fd1c7793c",
+    "allInspectedFinalImageHashesMatch": true
+  },
+  "findings": [
+    {
+      "area": "Summary",
+      "files": [
+        "summary-top.png",
+        "summary-bottom.png"
+      ],
+      "result": "passed",
+      "observation": "23 common arenas, 468 costumes, 3188 Production entries and 2335 QA entries are legible. The summary distinguishes content counts from commercial completion and displays 4 outfits, 44 drawings and one three-plane arena."
+    },
+    {
+      "area": "Corrected Production rows",
+      "files": [
+        "production-2.png",
+        "production-3.png",
+        "production-4.png",
+        "production-5.png",
+        "production-6.png",
+        "production-7.png",
+        "production-8.png",
+        "production-9.png",
+        "production-10.png",
+        "production-11.png",
+        "production-12.png"
+      ],
+      "result": "passed",
+      "observation": "All 44 new individual drawing rows are visible. Dimensions, byte counts, wrapped SHA-256 values and receipt paths fit vertically; no remaining height clipping was observed after the 140-point minimum row-height correction. Long paths wrap within their cells."
+    },
+    {
+      "area": "Family order and coverage",
+      "files": [
+        "production-1.png",
+        "production-2.png",
+        "production-3.png",
+        "production-4.png",
+        "production-5.png",
+        "production-6.png",
+        "production-7.png",
+        "production-8.png",
+        "production-9.png",
+        "production-10.png",
+        "production-11.png",
+        "production-12.png",
+        "qa-1.png",
+        "qa-2.png",
+        "qa-3.png",
+        "qa-4.png",
+        "qa-5.png",
+        "qa-6.png",
+        "qa-7.png",
+        "qa-8.png",
+        "qa-9.png",
+        "qa-10.png",
+        "qa-11.png",
+        "references-new.png"
+      ],
+      "result": "passed",
+      "observation": "Watermelon Gangle, Aqua Blaster Pomni, PTO Caine and Freak Jax appear in that order. Each family has selection, stance and nine named action slots. Scope notes retain the distinction between original static game poses and episode or animation certification."
+    },
+    {
+      "area": "Arena",
+      "files": [
+        "stage-left.png",
+        "stage-right.png",
+        "production-13.png",
+        "production-14.png",
+        "qa-12.png",
+        "qa-13.png"
+      ],
+      "result": "passed",
+      "observation": "Sous la carte is one shared arena. Three native 1672 x 941 images, original game music/ambience, an adapted logical floor and explicit reference limits are readable. The QA wording does not claim a delivered 4K image or exact canonical geometry."
+    },
+    {
+      "area": "QA scope and browser status",
+      "files": [
+        "qa-13.png",
+        "qa-14.png",
+        "summary-bottom.png"
+      ],
+      "result": "passed",
+      "observation": "NEXT29-browser is explicitly Non exécuté, with no successful local browser verification attributed to this revision. Canvas, Node tests, build/integrity evidence and tracker export are separate rows. The 411/411 Node result is dated; DOM, audio and physical-device interaction remain outside the Canvas evidence."
+    },
+    {
+      "area": "Australian Jax",
+      "files": [
+        "australian-reference.png"
+      ],
+      "result": "passed",
+      "observation": "The row remains À vérifier. Kaki shorts and visible purple lower legs are documented; no long pants are asserted. Feet remain outside the frame or hidden, and a complete reference is required before generation. No new complete family is counted."
+    },
+    {
+      "area": "Yellow notes",
+      "files": [
+        "stage-right.png",
+        "australian-reference.png",
+        "production-1.png",
+        "production-2.png",
+        "production-3.png",
+        "production-4.png",
+        "production-5.png",
+        "production-6.png",
+        "production-7.png",
+        "production-8.png",
+        "production-9.png",
+        "production-10.png",
+        "production-11.png",
+        "production-12.png",
+        "production-13.png",
+        "production-14.png",
+        "qa-1.png",
+        "qa-2.png",
+        "qa-3.png",
+        "qa-4.png",
+        "qa-5.png",
+        "qa-6.png",
+        "qa-7.png",
+        "qa-8.png",
+        "qa-9.png",
+        "qa-10.png",
+        "qa-11.png",
+        "qa-12.png",
+        "qa-13.png",
+        "qa-14.png"
+      ],
+      "result": "passed_in_viewed_ranges",
+      "observation": "Yellow user-note columns are present, unobscured and blank in the viewed new ranges. Their visual treatment matches the three inspected baseline views. This visual check does not independently establish preservation of every historical note outside the shown ranges."
+    },
+    {
+      "area": "References and definitions",
+      "files": [
+        "references-new.png",
+        "references-offline.png",
+        "references-footer.png"
+      ],
+      "result": "passed",
+      "observation": "Four appended official merchandise references and their fidelity limits are legible. Offline totals are 5769 images and 3059080660 bytes. The footer retains the definitions of statuses, lore scope, note preservation and QA limits. The reference table ends at row 158; 153 data rows are confirmed from the supplied tracker JSON and reimport table extent A5:E158."
+    }
+  ],
+  "countCrossCheck": {
+    "stages": 23,
+    "costumes": 468,
+    "production": 3188,
+    "qa": 2335,
+    "references": 153,
+    "basis": "First four are visible in the summary; reference count checked against the read-only supplied tracker JSON and reimport snapshot table extent. This review did not regenerate the counts.",
+    "trackerDataFile": "combat-tracker-data.json",
+    "trackerDataSha256": "868975a52cb6e4f28adbf4bb98e957f142deef7a240472c4879c7c2c148feb56"
+  },
+  "supportingEvidenceRead": [
+    {
+      "file": "native-comparison.json",
+      "sha256": "d1204253891a4e5f85f29f296262b76e4638c25abf3198ff8b241c38e0b007ee",
+      "reportedStatus": "passed",
+      "reportedCellsChecked": 80346,
+      "reportedDifferenceCount": 0,
+      "independentlyReexecuted": false
+    },
+    {
+      "file": "reimport-result.json",
+      "sha256": "9ab80a74b787e674971736cbc82cb045fff156c7650e8588afb49488e5df3edc",
+      "reportedStatus": "passed",
+      "reportedFormulas": 42,
+      "reportedSheets": 11,
+      "reportedNativeTables": 10,
+      "independentlyReexecuted": false
+    },
+    {
+      "file": "native-reimport/sheet-11.json",
+      "sha256": "f3e49d4fdff4ee15902dae8704c84b911b28036b000cbde1bd382677737e4f65",
+      "referenceTableExtent": "A5:E158"
+    }
+  ],
+  "concreteDefects": [],
+  "limitations": [
+    "Visual scope is exactly the listed 36 final renders and three baseline comparison images; it is not a visual inspection of all historical workbook cells.",
+    "All final images were reviewed as supplied PNG renders, not in an interactive Excel desktop session.",
+    "The native reimport/comparison reports were read as supporting evidence, not rerun by this reviewer. SHA values in artwork rows were checked for readable layout, not manually transcribed and compared character by character.",
+    "No new browser, Canvas, gameplay, audio, controller, touch-device or runtime test is claimed by this workbook review.",
+    "No assertion of complete canonical fidelity or full animation-cycle completion is made."
+  ],
+  "filesWrittenByThisReview": [
+    "independent-visual-review.json"
+  ]
+}

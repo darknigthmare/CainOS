@@ -87,5 +87,8 @@ export const AUDIO_AMBIENCES = freeze({
   simpleflipisland: ambience('simpleflipisland', 'Feuilles de cocotier', 'Les palmes bruissent au-dessus de la plage.', 7.8, [
     air(1160, 610, 1.4, 0, 'bandpass', .017, .5), air(745, 1120, 1.2, 2.9, 'bandpass', .014, .5),
   ]),
+  undermap: ambience('undermap', 'Résonance sous la carte', 'Deux oscillations faibles traversent la salle quadrillée ; création sonore du jeu.', 11.7, [
+    tone(66, 64, 2.7, 0, 'sine', .010), tone(440, 435, 1.5, 5.4, 'sine', .006),
+  ]),
 });
 export const AMBIENCE_STAGE_IDS = Object.freeze(Object.keys(AUDIO_AMBIENCES));

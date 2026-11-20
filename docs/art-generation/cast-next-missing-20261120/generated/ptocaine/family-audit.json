@@ -1,0 +1,184 @@
+{
+  "status": "all_eleven_reviewed_native",
+  "files": [
+    {
+      "slot": "selection",
+      "sha256": "f913f4f7c6e2cede6e37171f0b0bfbdddfc81d5343708798f2d533e3aae16c09",
+      "bytes": 910063,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "alpha12Bounds": [
+        151,
+        15,
+        1028,
+        1435
+      ],
+      "nativeFacing": "right"
+    },
+    {
+      "slot": "stance",
+      "sha256": "ef1c3b99c218dfdd0c28142968fa0914962ad1c2ea9067b2dd4ec93a30e63d74",
+      "bytes": 943984,
+      "dimensions": [
+        1151,
+        1367
+      ],
+      "alpha12Bounds": [
+        113,
+        10,
+        979,
+        1358
+      ],
+      "nativeFacing": "right"
+    },
+    {
+      "slot": "intro",
+      "sha256": "ce2935908062b673beefd4905d4a857ffebb69b472f5f12c95d8784039a88c2a",
+      "bytes": 931163,
+      "dimensions": [
+        1214,
+        1295
+      ],
+      "alpha12Bounds": [
+        32,
+        10,
+        1182,
+        1283
+      ],
+      "nativeFacing": "right"
+    },
+    {
+      "slot": "attack",
+      "sha256": "338bc7a5cba5403afef518f0db5ba8ad01eb52c7f62e92a379af93e828dec298",
+      "bytes": 1341582,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha12Bounds": [
+        195,
+        8,
+        1321,
+        1015
+      ],
+      "nativeFacing": "right"
+    },
+    {
+      "slot": "heavy",
+      "sha256": "550d1676e632feb1a7bfa472c7c949515072c6a3cf7f558ae5d61a498d484da3",
+      "bytes": 936106,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "alpha12Bounds": [
+        64,
+        8,
+        1385,
+        1073
+      ],
+      "nativeFacing": "right"
+    },
+    {
+      "slot": "hit",
+      "sha256": "38a8763400c8da23935231b6e3ac25519a6215cb83182d4cbbf36921349e0272",
+      "bytes": 1043937,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "alpha12Bounds": [
+        45,
+        27,
+        950,
+        1439
+      ],
+      "nativeFacing": "right"
+    },
+    {
+      "slot": "walk",
+      "sha256": "adbb121d8c51c73ba02e146934c8fe92894047e582bfc83959f93da7e306c8cf",
+      "bytes": 980030,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "alpha12Bounds": [
+        155,
+        11,
+        934,
+        1438
+      ],
+      "nativeFacing": "right"
+    },
+    {
+      "slot": "jump",
+      "sha256": "9a95cfbc28f76220256ab38d57e97524c0ade3d37ef7de0363353ba323de3189",
+      "bytes": 1037616,
+      "dimensions": [
+        1158,
+        1358
+      ],
+      "alpha12Bounds": [
+        25,
+        11,
+        1128,
+        1260
+      ],
+      "nativeFacing": "right"
+    },
+    {
+      "slot": "crouch",
+      "sha256": "8c9936d52d890726a61906594e31cf0bb1a34ea815f1cf186b08ca14e491a96a",
+      "bytes": 1013805,
+      "dimensions": [
+        1216,
+        1293
+      ],
+      "alpha12Bounds": [
+        96,
+        12,
+        1035,
+        1282
+      ],
+      "nativeFacing": "right"
+    },
+    {
+      "slot": "victory",
+      "sha256": "fa5c30cb10bdae0ab90a29f4527f56d791fc73c7dc376e9ff786cf3e438bd58a",
+      "bytes": 931407,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "alpha12Bounds": [
+        142,
+        9,
+        965,
+        1436
+      ],
+      "nativeFacing": "right"
+    },
+    {
+      "slot": "defeat",
+      "sha256": "9a4481e9db3550e62753fa9ca4ce5b9ab0ddcb3b2799ef5ad24fa16343597d6a",
+      "bytes": 933698,
+      "dimensions": [
+        1240,
+        1268
+      ],
+      "alpha12Bounds": [
+        137,
+        10,
+        1073,
+        1246
+      ],
+      "nativeFacing": "right"
+    }
+  ],
+  "bytes": 11003391,
+  "postProcessing": "none; review composite only",
+  "note": "Composite uses native alpha. Transparent RGB pixels do not establish a visible halo."
+}

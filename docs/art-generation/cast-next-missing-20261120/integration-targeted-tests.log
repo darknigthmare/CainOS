@@ -1,0 +1,11 @@
+✔ additional outfits retain their owner, authored kit and saved appearance through replay and campaign round trips (21.743252ms)
+✔ resumed appearances append the frozen checkpoint definitions without changing the first fourteen entries (3.945695ms)
+✔ new catalogue drawings match reviewed native directions and exact archived PNGs (2106.798531ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2327.035118

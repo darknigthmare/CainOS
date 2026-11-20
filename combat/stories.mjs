@@ -1,6 +1,16 @@
 import { FIGHTERS, STAGES } from './data.mjs';
 import { EXPANSION_DEFS, EXPANSION_RIVALS } from './roster-expansion.mjs';
 
+// These forty routes were authored against the published 22-arena catalog.
+// Adding a selectable arena must not rewrite chapters, panels or saved routes.
+const EXPANSION_STAGE_IDS = Object.freeze([
+  'bigtop', 'candy', 'manor', 'spudsy', 'cellar', 'void', 'lake', 'training',
+  'gloink', 'kingdom', 'grounds', 'backstage', 'coppernine', 'silicacity',
+  'portaurora', 'gaslightwharf', 'parkplanet', 'gameoverse', 'littledaisy',
+  'showgrounds', 'simpleflipisland', 'falseexit',
+]);
+const EXPANSION_STAGES = Object.freeze(EXPANSION_STAGE_IDS.map(id => STAGES.find(stage => stage.id === id)));
+
 /**
  * Original Encore fan-fiction. These routes are game scenarios, not episodes,
  * recovered memories or claims about canonical events in The Amazing Digital Circus.
@@ -286,7 +296,7 @@ function expansionRoute(def, index) {
   const opponentIds = [pick(index), pick(index * 3 + 5), def.rivalId, pick(index * 7 + 11)];
   const chapters = opponentIds.map((opponentId, sceneIndex) => {
     const opponentName = FIGHTERS.find(fighter => fighter.id === opponentId)?.name || opponentId;
-    const stage = STAGES[(index * 2 + sceneIndex) % STAGES.length];
+    const stage = EXPANSION_STAGES[(index * 2 + sceneIndex) % EXPANSION_STAGES.length];
     return {
       title: `${def.name} · ${['Premier', 'Deuxième', 'Troisième', 'Dernier'][sceneIndex]} passage`,
       opponentId, stageId: stage.id,
@@ -301,7 +311,7 @@ function expansionRoute(def, index) {
   const ending = `${def.name} termine son parcours de ${def.title.toLowerCase()}. La dernière scène se referme sur ${rivalName} et sur un choix modeste : rester, ranger le décor et revenir pour un autre numéro. Cette conclusion est une création d’Encore, sans événement canonique ajouté.`;
   const compositions = ['solo', 'focus-left', 'focus-right', 'ensemble', 'wide', 'duet'];
   const prologue = Array.from({ length: 3 }, (_, panelIndex) => {
-    const stage = STAGES[(index + panelIndex) % STAGES.length];
+    const stage = EXPANSION_STAGES[(index + panelIndex) % EXPANSION_STAGES.length];
     const cast = panelIndex === 0 ? [def.id] : [def.id, def.rivalId];
     return expansionPanel(def.id, 'prologue', panelIndex, stage.id, compositions[panelIndex], cast,
       `${def.name} découvre le programme de ${stage.name} et prépare son entrée. ${def.title} sert de repère à ce prologue original d’Encore.`,
@@ -309,7 +319,7 @@ function expansionRoute(def, index) {
       `${rivalName} est annoncé plus loin ; la route peut commencer.`);
   });
   const epilogue = Array.from({ length: 3 }, (_, panelIndex) => {
-    const stage = STAGES[(index + 3 + panelIndex) % STAGES.length];
+    const stage = EXPANSION_STAGES[(index + 3 + panelIndex) % EXPANSION_STAGES.length];
     const other = opponentIds[panelIndex % 3];
     const cast = panelIndex === 0 ? [def.id, def.rivalId] : panelIndex === 1 ? [def.id] : [def.id, def.rivalId, other];
     return expansionPanel(def.id, 'epilogue', panelIndex, stage.id, compositions[3 + panelIndex], cast,

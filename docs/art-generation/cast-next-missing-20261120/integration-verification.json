@@ -1,0 +1,49 @@
+{
+  "schema": "encore-next-missing-integration-verification-v1",
+  "createdAt": "2026-11-20T13:46:03.115892+00:00",
+  "status": "complete_active_awaiting_global_qa",
+  "counts": {
+    "completeAppearances": 4,
+    "nativePngs": 44,
+    "newNativePngs": 44,
+    "bytes": 41910315,
+    "cumulativeAppearances": 39,
+    "cumulativeAppearancePngs": 429,
+    "equipableCostumes": 468
+  },
+  "order": [
+    "watermelongangle",
+    "aquablasterpomni",
+    "ptocaine",
+    "freakjax"
+  ],
+  "prefixPreservation": {
+    "manifest": "docs/art-generation/cast-next-missing-20261120/integration-baseline.json",
+    "sha256": "88da0348cde24375ded30c72ea3a1636896fc77097ad6bcb78550d2c7481d379",
+    "appearancesPreserved": 35,
+    "costumesPreserved": 464,
+    "definitionsAndOrderPreserved": true
+  },
+  "sources": {
+    "scripts/integrate-combat-next-missing-20261120.py": "24af5df4376145c38929fc01907a6f6352c53838e64dc7418416650b5e135987",
+    "combat/costume-next-missing-20261120.mjs": "2ba4dbc117c128245422a7f595d91d0b172bfc91dc3e55a7d4b70424e86bd901",
+    "combat/costume-additions.mjs": "d1d9c194b316efca6db2f1833c94d820dfdf0b1f028ede091a40a411a6a0619f",
+    "tests/combat-costume-additions.test.mjs": "bf8d6242f857217aa46d24a90b0fd22fe33525d29b29e85cd6f788855dca098b",
+    "scripts/render-combat-character-review.mjs": "c862d5d36aa0ce9b9cce4b3ad1bf722aa6a4bd0a5f19beaca699f6f4a7ef0468"
+  },
+  "acceptedReceipts": 44,
+  "uniqueNativeSHA256": 44,
+  "uniqueGenerationIDs": 44,
+  "referenceChecks": 88,
+  "nativeCopiesExact": true,
+  "targetedTests": {
+    "command": "node --test --test-name-pattern='additional outfits retain|resumed appearances append|new catalogue drawings' tests/combat-costume-additions.test.mjs",
+    "tests": 3,
+    "pass": 3,
+    "fail": 0,
+    "log": "integration-targeted-tests.log",
+    "sha256": "46bafe6882b1dacab21acbc1aac1c7440de749e3ba91d24186bf68a2375ad3c4"
+  },
+  "globalChecks": "Offline manifest, complete QA, two builds and full Canvas reviews are owned by root and were not run in this integration step.",
+  "modifiedPreviousDefinitionModules": false
+}

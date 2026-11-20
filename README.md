@@ -15,13 +15,47 @@ The playable game version is **0.7.0**. The GLITCH wardrobe was updated on **18 
 - Controls, architecture, references and remaining work: **[Digital Circus — Encore](docs/DIGITAL_CIRCUS_ENCORE.md)**.
 - To equip a crossover, open the fighter or opponent’s wardrobe and select **Filtrer les tenues**. Choose the series and **Fusion originale** to see the character’s redesigned body. [Compare the fusion portraits and combat stances](docs/COMBAT_GALERIE_FUSIONS.md) or [browse the GLITCH wardrobe and arena gallery](docs/COMBAT_CROSSOVERS_GLITCH.md).
 
-The game combines **54 fighters, 540 techniques, 22 shared arenas, 464 selectable costumes and 179 searchable archive entries**. Fourteen fighters have individually authored kits; 40 promoted archive NPCs use the extension kits described below. The 54 dedicated stage arrangements reuse shared scenery and are counted separately. Its nine standard modes are joined by nine illustrated crossover visits under **Escales GLITCH**. The wardrobe contains 51 archive costumes, 35 additional illustrated Circus appearances, 252 tributes and residents, and 126 original fusions for the original fourteen fighters. Crossovers for the forty promoted NPCs remain to be produced. The combat techniques and stories are original fan-game adaptations.
+The game combines **54 fighters, 540 techniques, 23 shared arenas, 468 selectable costumes and 179 searchable archive entries**. Fourteen fighters have individually authored kits; 40 promoted archive NPCs use the extension kits described below. The 54 dedicated stage arrangements reuse shared scenery and are counted separately. Its nine standard modes are joined by nine illustrated crossover visits under **Escales GLITCH**. The wardrobe contains 51 archive costumes, 39 additional illustrated Circus appearances, 252 tributes and residents, and 126 original fusions for the original fourteen fighters. Crossovers for the forty promoted NPCs remain to be produced. The combat techniques and stories are original fan-game adaptations.
 
-### Anime Ribbit and Jax-Suit Ribbit — latest 20 November continuation
+### Four appearances and Undermap — latest 20 November continuation
+
+**Watermelon Gangle, Aqua Blaster Pomni, PTO Caine and Freak Jax** add four complete
+appearance families and **44 individual native PNGs**. Each has a selection
+portrait, a stance and nine action drawings. The cumulative Circus additions
+now contain **39 appearances / 429 PNGs**. Their distinct references and adaptations
+are documented in the [continuation report](docs/COMBAT_NEXT_MISSING_2026-11-20.md)
+and [four production-render galleries](docs/art-generation/cast-next-missing-20261120/README.md).
+
+**Undermap — Sous la carte** adds the indigo grid room beneath Candy Canyon as
+the 23rd shared arena, with three native planes, original audio and restrained
+ambient movement. Its [stage report](docs/art-generation/stage-next-missing-20261120/README.md)
+records the actual 1672 × 941 output size and the three-camera review. Existing
+story routes keep their original 22-stage catalogue; imported programmes retain
+their original seeded draw. Independently captured fixtures preserve **54 stories,
+270 programme checkpoints and 14 historical replays / 3,682 frames**.
+
+**411 Node tests, both builds and 80 costume Canvas drawing checks passed**.
+The 47 new PNGs are copied unchanged into both distributions, and all **5,678**
+earlier Encore asset files remain byte-identical. The offline pack contains
+**5,769 images**. The earlier local Chromium startup failure is historical;
+no successful local browser execution of this batch is claimed.
+
+The [current remaining-work register](docs/art-generation/cast-next-missing-20261120/remaining-work.md)
+removes the four completed candidates and the new arena. It retains obscured
+costume references, full animation cycles, forty NPC crossover families and
+physical-device checks as open work. The [new workbook evidence](docs/art-generation/workbook-next-missing-20261120/README.md)
+continues from the reconciled XLSX without replacing historical IDs or notes.
+The tracker now contains **3,188 Production rows, 2,335 QA rows and 153 sources**.
+Its final export matches **80,346 cells with zero differences**; **42 formulas**,
+eleven sheets and ten tables survive recalculation and reimport. All 36 final
+review views are checked, including the 44 new drawing rows with their native
+dimensions, hashes and receipt links.
+
+### Anime Ribbit and Jax-Suit Ribbit — previous 20 November continuation
 
 **Two more appearances and 22 separate native PNGs** complete Anime Ribbit and
 Jax-Suit Ribbit. Each has a selection portrait, a stance and nine action drawings.
-The cumulative Circus additions now contain **35 appearances / 385 PNGs**. Both
+At this checkpoint the Circus additions contained **35 appearances / 385 PNGs**. Both
 costumes use Ribbit's existing kit. The official product photos were inspected
 and archived before generation; Maid Ribbit remains awaiting a usable view of
 the lower costume and feet.
@@ -30,19 +64,19 @@ The [Ribbit continuation report](docs/COMBAT_RIBBIT_CONTINUATION_2026-11-20.md)
 links the two galleries, native-file receipts and final verification. **405 Node
 tests, both builds and 40 production Canvas drawing checks passed**. The 22 images
 are copied unchanged into both distributions, and all 5,656 earlier Encore files
-remain byte-identical. The offline pack now contains **5,722 images**. Local
+remained byte-identical. The offline pack then contained **5,722 images**. Local
 Chromium stopped before navigation, so no successful local browser run is claimed.
 
 The recovered ten-appearance batch immediately below is already published in
 [PR #7](https://github.com/darknigthmare/CainOS/pull/7) as
 [`a5341b8c`](https://github.com/darknigthmare/CainOS/commit/a5341b8cf1ceecc22ccca13ba6b20a9f710bddb0).
-The [current remaining-work register](docs/art-generation/cast-ribbit-20261120/remaining-work.md)
+The [remaining-work register at that checkpoint](docs/art-generation/cast-ribbit-20261120/remaining-work.md)
 supersedes the two Ribbit candidates from its historical register. Static
 merchandise-inspired poses remain distinct from complete animation cycles and
 episode-by-episode canonical comparison.
 
-The workbook export blocker is resolved. The installed
-[production tracker](docs/DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx) now reconciles the
+The workbook export blocker was resolved in this checkpoint. The
+[production tracker](docs/DIGITAL_CIRCUS_COMBAT_TRACKER.xlsx) then reconciled the
 six props and all completed appearance waves: **3,134 Production rows, 2,281 QA
 rows and 149 sources**. The saved XLSX passed a **79,280-cell comparison with zero
 differences**, reimport and recalculation of **42 formulas**, and visual review

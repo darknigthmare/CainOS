@@ -23,6 +23,9 @@ const programContexts = new WeakMap();
 const ORIGINAL_FIGHTER_IDS = new Set(['pomni','jax','ragatha','gangle','zooble','kinger','caine','bubble','gummigoo','loolilalu','gloinkqueen','fudge','abstractedkaufmo','baronmildenhall']);
 const ORIGINAL_STAGE_IDS = new Set(['bigtop','candy','manor','spudsy','cellar','void','lake','training','gloink','kingdom','grounds','backstage']);
 const CROSSOVER_STAGE_IDS = new Set(['silicacity','portaurora','coppernine','gaslightwharf','parkplanet','gameoverse','littledaisy','showgrounds','simpleflipisland']);
+// The 22-arena release precedes undermap. Its seeded shuffle remains valid
+// when an imported programme is continued or retried with the larger catalog.
+const ILLUSTRATED_STAGE_IDS = new Set([...ORIGINAL_STAGE_IDS, ...CROSSOVER_STAGE_IDS, 'falseexit']);
 const BOSS_IDS = ['gloinkqueen', 'fudge', 'abstractedkaufmo', 'caine'];
 const TOURNAMENT_ROUNDS = [
   ['quarterfinal', 'Quarts de finale', 4],
@@ -324,9 +327,11 @@ export function validateProgram(value, roster = FIGHTERS, stages = STAGES, varia
     const originalRoster = FIGHTERS.filter(fighter => ORIGINAL_FIGHTER_IDS.has(fighter.id));
     const originalStages = STAGES.filter(stage => ORIGINAL_STAGE_IDS.has(stage.id));
     const crossoverStages = STAGES.filter(stage => ORIGINAL_STAGE_IDS.has(stage.id) || CROSSOVER_STAGE_IDS.has(stage.id));
+    const illustratedStages = STAGES.filter(stage => ILLUSTRATED_STAGE_IDS.has(stage.id));
     // These are release catalogs, never an arbitrary subset supplied by a save.
     contexts.push({ roster: FIGHTERS, stages: originalStages, legacyTournament: false });
-    for (const previousStages of [STAGES, crossoverStages, originalStages]) {
+    contexts.push({ roster: FIGHTERS, stages: illustratedStages, legacyTournament: false });
+    for (const previousStages of [STAGES, illustratedStages, crossoverStages, originalStages]) {
       contexts.push({ roster: originalRoster, stages: previousStages, legacyTournament: value.mode === 'tournament' });
     }
   }

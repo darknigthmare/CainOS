@@ -1,0 +1,66 @@
+{
+  "appearanceId": "ptocaine",
+  "slot": "walk",
+  "prompt": "Use case: stylized-concept. Produce ONE new, separate full-body PNG action drawing of PTO Caine for the existing Encore 2D fighting game, with a genuinely transparent background. Reference 1 is the accepted selection illustration: keep its exact identity, standing-game proportions, palette, mint-green sunglasses with yellow translucent lenses, two eye colors under the tint, red denture with white teeth, black top hat and red band, red tailcoat and dark lapels, white shirt front with dark buttons, black bow tie, white cuffed gloves, black trousers and shoes. Reference 2 is the official PTO Caine product, authoritative for the mint/yellow glasses and worn costume only. Use the same crisp dark outlines and polished cel shading as reference 1. Do not copy the original selection pose. ACTION: WALK: face RIGHT in a clean single walking-stride key pose. One foot stepping forward right and the other behind left, natural counter-swing of the gloved hands, tailcoat swinging modestly. Both soles and hat fully visible. No ghost limbs, repeated figures or motion blur. Frame the entire single character with clear transparent margins on every side. No chair, glass, cane, beach, ground shadow, oval platform, background, checkerboard, caption, text, watermark, sticker border, duplicate body parts or extra characters. Preserve all native transparency; no glow around the character.",
+  "referencePaths": [
+    "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/selection.png",
+    "docs/art-generation/cast-next-missing-20261120/references/beach-review-root/Beach_Series_Render_06.png"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "root",
+  "schema": "encore-native-next-missing-art/v1",
+  "id": "ptocaine:walk",
+  "status": "accepted_native",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "file": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/walk.png",
+  "targetFile": "assets/encore/poses/ptocaine/walk.png",
+  "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-ee63bb2b-10b3-42ec-bbba-c8400f6e1c96.png",
+  "sourceGenerationId": "exec-ee63bb2b-10b3-42ec-bbba-c8400f6e1c96",
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/selection.png",
+      "sha256": "f913f4f7c6e2cede6e37171f0b0bfbdddfc81d5343708798f2d533e3aae16c09",
+      "bytes": 910063
+    },
+    {
+      "position": 2,
+      "file": "docs/art-generation/cast-next-missing-20261120/references/beach-review-root/Beach_Series_Render_06.png",
+      "sha256": "0c16aaf75be90c3062167708507c6e386f1d93e807f4aba8871a5190bec51675",
+      "bytes": 2507585
+    }
+  ],
+  "dimensions": [
+    1086,
+    1448
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "alpha12Bounds": [
+    155,
+    11,
+    934,
+    1438
+  ],
+  "alpha12BoundsThreshold": "alpha > 12",
+  "fullyTransparentPixels": 983481,
+  "sha256": "adbb121d8c51c73ba02e146934c8fe92894047e582bfc83959f93da7e306c8cf",
+  "bytes": 980030,
+  "nativeCopyVerified": true,
+  "sourceKind": "Produit dérivé officiel",
+  "episodeFidelityClaim": false,
+  "includedInRuntime": false,
+  "createdAt": "2026-11-20T13:32:13.395795+00:00",
+  "visualReview": {
+    "status": "accepted",
+    "reviewer": "root",
+    "observations": [
+      "Marche vers la droite en grande enjambée, bras en opposition ; haut-de-forme, deux gants et deux chaussures entièrement visibles. Lunettes menthe à verres jaunes et queue-de-pie rouge cohérentes avec la sélection."
+    ],
+    "scope": "Official costume comparison and original game pose; no episode or complete animation certification."
+  }
+}

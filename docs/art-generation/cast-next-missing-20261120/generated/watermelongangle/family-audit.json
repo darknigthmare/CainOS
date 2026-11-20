@@ -1,0 +1,49 @@
+{
+  "schema": "encore-native-family-audit/v1",
+  "appearanceId": "watermelongangle",
+  "slots": [
+    "selection",
+    "stance",
+    "intro",
+    "attack",
+    "heavy",
+    "hit",
+    "walk",
+    "jump",
+    "crouch",
+    "victory",
+    "defeat"
+  ],
+  "count": 11,
+  "acceptedNativeCount": 11,
+  "uniqueSha256Count": 11,
+  "bytes": 7277249,
+  "method": "image_gen.imagegen",
+  "nativeFacing": "right",
+  "nativeBytesVerified": true,
+  "minimumDimension": 1024,
+  "allAlpha12BoundsInternal": true,
+  "allVisuallyReviewed": true,
+  "generationCalls": 11,
+  "correctionCalls": 0,
+  "notes": [
+    "Chaque PNG a été inspecté individuellement et sur un composite alpha.",
+    "La sélection a une marge basse native de 8 px ; aucun élément n’est coupé. Les dix autres poses ont des marges plus larges.",
+    "Seuls les JPEG de revue sont composés/redimensionnés ; les PNG actifs sont des copies exactes de sortie image_gen.",
+    "Adaptations de marchandise officielle pour le jeu ; aucune certification canonique 1:1."
+  ],
+  "createdAt": "2026-11-20T13:29:48.523279+00:00",
+  "receipts": [
+    "selection.json",
+    "stance.json",
+    "intro.json",
+    "attack.json",
+    "heavy.json",
+    "hit.json",
+    "walk.json",
+    "jump.json",
+    "crouch.json",
+    "victory.json",
+    "defeat.json"
+  ]
+}

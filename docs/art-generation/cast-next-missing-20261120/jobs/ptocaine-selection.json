@@ -1,0 +1,11 @@
+{
+  "appearanceId": "ptocaine",
+  "slot": "selection",
+  "prompt": "Use case: stylized-concept. Asset: a single full-body 2D fighting-game selection illustration on a genuinely transparent canvas. Subject: Caine from The Amazing Digital Circus in his official PTO Caine appearance, adapted to the existing Encore game body and clean cel-shaded illustration style. Reference image 1 is the official product and is authoritative for the large mint-green sunglasses with transparent yellow lenses, red gums, white teeth, black top hat with red band, red suit and black shoes. Reference image 2 is the existing game illustration and is authoritative for the standing full-body proportions, outlined cel shading and established base costume beneath the sunglasses. Draw ONLY one entire Caine, standing in a relaxed confident selection pose, body in three-quarter side view facing RIGHT, one white-gloved palm open casually, other hand by his hip. Head is a red denture with two distinct eyeballs inside the mouth, one blue iris and one green iris visible behind yellow-tinted lenses; the large mint glasses are unmistakable. Red tailcoat with dark lapels, white shirt front with dark buttons, black bow tie, slim black trousers, polished black shoes, white cuffed gloves, black top hat with red band. Preserve the existing long game proportions and oversized denture head. Both shoes and top of hat fully visible with generous transparent margins. Crisp dark contours, carefully controlled flat cel shading, high-resolution professional game illustration. Exclude the product's lounge chair, drinking glass, beach, water, display stand, cane, extra people, scenery, captions, logos, labels and any ground shadow. No checkerboard or opaque background. Do not make a sticker border, duplicate figure or sprite sheet. All visible pixels belong to the one character and his worn clothes and glasses.",
+  "referencePaths": [
+    "docs/art-generation/cast-next-missing-20261120/references/beach-review-root/Beach_Series_Render_06.png",
+    "assets/encore/selection/caine.webp"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "root"
+}

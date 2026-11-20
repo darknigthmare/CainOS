@@ -307,6 +307,10 @@ function commonFloor(ctx, stage, theme) {
     rect(ctx, 0, FLOOR, 1280, 152, '#da6689');
     for (const y of [600, 650]) line(ctx, [[0, y], [1280, y]], '#b9436c', 2);
     for (let x = -560; x < 1880; x += 200) line(ctx, [[640 + (x - 640) * 0.6, FLOOR], [x, 720]], '#ed87a0', 2);
+  } else if (theme === 'undermap') {
+    rect(ctx, 0, FLOOR, 1280, 152, '#040525');
+    for (const y of [568, 584, 613, 657, 719]) line(ctx, [[0, y], [1280, y]], '#1726b0', 1.5);
+    for (let x = -640; x <= 1920; x += 256) line(ctx, [[640 + (x - 640) * .12, FLOOR], [x, 720]], '#1d29be', 1.5);
   } else if (theme === 'candy') floorTiles(ctx, '#9c5666', '#bc6e78', '#ffdeab');
   else if (theme === 'spudsy') floorTiles(ctx, '#b8a18b', '#cfbca0', '#f0debd');
   else floorTiles(ctx, stage.palette?.floor || '#21192f', theme === 'manor' ? '#362638' : '#302244', stage.palette?.accent || '#8b66ac');
@@ -501,7 +505,14 @@ function grounds(ctx) {
   for (let x = 70; x < 1280; x += 180) { rect(ctx, x, 491, 13, 77, '#c3ad94'); line(ctx, [[x, 508], [x + 180, 508]], '#c9b69e', 4); }
 }
 
-const scenes = { bigtop: circus, circus, candy, manor, cellar, void: voidStage, lake, training, gloink, grounds };
+function undermap(ctx) {
+  // Minimal reference-based fallback while the three native planes load.
+  gradient(ctx, '#020321', '#050837', FLOOR);
+  for (let x = -32; x <= 1280; x += 96) line(ctx, [[x, 0], [x, FLOOR]], '#1722a5', 1.5);
+  for (let y = 8; y < FLOOR; y += 80) line(ctx, [[0, y], [1280, y]], '#1722a5', 1.5);
+}
+
+const scenes = { bigtop: circus, circus, candy, manor, cellar, void: voidStage, lake, training, gloink, grounds, undermap };
 
 // A light native painting remains available while the illustrated planes load.
 function crossoverScenery(ctx, stage) {

@@ -1,0 +1,1762 @@
+[
+  {
+    "appearanceId": "watermelongangle",
+    "slot": "selection",
+    "file": "assets/encore/selection/watermelongangle.png",
+    "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/selection.png",
+    "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/selection.json",
+    "sha256": "35b49ea9a786736b9ce39852ad8e8c7d0919de2d9ac972d37424a028e0029d65",
+    "bytes": 1527470,
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "alpha12Bounds": [
+      76,
+      16,
+      945,
+      1528
+    ],
+    "nativeFacing": "right",
+    "sourceGenerationId": "exec-ae052927-f7e0-4fbd-a42e-b57b9af3cfb0",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-missing-20261120/references/watermelongangle/official-watermelon-gangle.png",
+        "sha256": "129a776c77d71a9d8ebe1dedb2499a4a1413fa96806ae997836acb6045a335cb",
+        "bytes": 2188514
+      },
+      {
+        "position": 2,
+        "file": "assets/encore/selection/gangle.webp",
+        "sha256": "0efb8aaf407420a9e7243377be42f0b603aab216f04c3e24453b2e221499b19f",
+        "bytes": 214892
+      }
+    ]
+  },
+  {
+    "appearanceId": "watermelongangle",
+    "slot": "stance",
+    "file": "assets/encore/stance/watermelongangle.png",
+    "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/stance.png",
+    "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/stance.json",
+    "sha256": "7a1e29f4c0cc21f560ec9234b4de37540782b80a868e425b29cb9ccaad9f311a",
+    "bytes": 610564,
+    "dimensions": [
+      1199,
+      1312
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      236,
+      168,
+      1000,
+      1183
+    ],
+    "nativeFacing": "right",
+    "sourceGenerationId": "exec-8204a090-7e62-4bc6-866f-81ab9e3b594b",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/selection.png",
+        "sha256": "35b49ea9a786736b9ce39852ad8e8c7d0919de2d9ac972d37424a028e0029d65",
+        "bytes": 1527470
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-missing-20261120/references/watermelongangle/official-watermelon-gangle.png",
+        "sha256": "129a776c77d71a9d8ebe1dedb2499a4a1413fa96806ae997836acb6045a335cb",
+        "bytes": 2188514
+      }
+    ]
+  },
+  {
+    "appearanceId": "watermelongangle",
+    "slot": "intro",
+    "file": "assets/encore/poses/watermelongangle/intro.png",
+    "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/intro.png",
+    "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/intro.json",
+    "sha256": "0867094ac29df1cbacdce6752ae82f34dd9b64f8fefa58fc63e6941114b90b62",
+    "bytes": 495465,
+    "dimensions": [
+      1312,
+      1199
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      355,
+      162,
+      977,
+      1062
+    ],
+    "nativeFacing": "right",
+    "sourceGenerationId": "exec-504769e0-e2a7-4c6f-a07c-fc0b58034f55",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/selection.png",
+        "sha256": "35b49ea9a786736b9ce39852ad8e8c7d0919de2d9ac972d37424a028e0029d65",
+        "bytes": 1527470
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-missing-20261120/references/watermelongangle/official-watermelon-gangle.png",
+        "sha256": "129a776c77d71a9d8ebe1dedb2499a4a1413fa96806ae997836acb6045a335cb",
+        "bytes": 2188514
+      }
+    ]
+  },
+  {
+    "appearanceId": "watermelongangle",
+    "slot": "attack",
+    "file": "assets/encore/poses/watermelongangle/attack.png",
+    "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/attack.png",
+    "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/attack.json",
+    "sha256": "79ee1961a5d0285ed540cfc6b8b8d0cedb90d92e6794a357fd36fb61fe122d11",
+    "bytes": 554595,
+    "dimensions": [
+      1312,
+      1199
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      133,
+      185,
+      1210,
+      1040
+    ],
+    "nativeFacing": "right",
+    "sourceGenerationId": "exec-badcf9e7-e4cf-46da-9983-57cdda5fd3bd",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/selection.png",
+        "sha256": "35b49ea9a786736b9ce39852ad8e8c7d0919de2d9ac972d37424a028e0029d65",
+        "bytes": 1527470
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-missing-20261120/references/watermelongangle/official-watermelon-gangle.png",
+        "sha256": "129a776c77d71a9d8ebe1dedb2499a4a1413fa96806ae997836acb6045a335cb",
+        "bytes": 2188514
+      }
+    ]
+  },
+  {
+    "appearanceId": "watermelongangle",
+    "slot": "heavy",
+    "file": "assets/encore/poses/watermelongangle/heavy.png",
+    "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/heavy.png",
+    "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/heavy.json",
+    "sha256": "fc0987cad03482b06e5e4a3a48e95d41b100740e6cd114c6649b312103e80fc2",
+    "bytes": 542307,
+    "dimensions": [
+      1199,
+      1312
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      318,
+      134,
+      928,
+      1201
+    ],
+    "nativeFacing": "right",
+    "sourceGenerationId": "exec-d9ed8943-c389-481f-9c0b-23fb48938551",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/selection.png",
+        "sha256": "35b49ea9a786736b9ce39852ad8e8c7d0919de2d9ac972d37424a028e0029d65",
+        "bytes": 1527470
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-missing-20261120/references/watermelongangle/official-watermelon-gangle.png",
+        "sha256": "129a776c77d71a9d8ebe1dedb2499a4a1413fa96806ae997836acb6045a335cb",
+        "bytes": 2188514
+      }
+    ]
+  },
+  {
+    "appearanceId": "watermelongangle",
+    "slot": "hit",
+    "file": "assets/encore/poses/watermelongangle/hit.png",
+    "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/hit.png",
+    "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/hit.json",
+    "sha256": "e9ff8240b557ddf0fb527090711e5b2a6f0cd6a10098fe86c8ca15e3328e6648",
+    "bytes": 544695,
+    "dimensions": [
+      1199,
+      1312
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      185,
+      223,
+      837,
+      1163
+    ],
+    "nativeFacing": "right",
+    "sourceGenerationId": "exec-bbb0538b-dad7-4a1a-866e-c5667dbb9bd3",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/selection.png",
+        "sha256": "35b49ea9a786736b9ce39852ad8e8c7d0919de2d9ac972d37424a028e0029d65",
+        "bytes": 1527470
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-missing-20261120/references/watermelongangle/official-watermelon-gangle.png",
+        "sha256": "129a776c77d71a9d8ebe1dedb2499a4a1413fa96806ae997836acb6045a335cb",
+        "bytes": 2188514
+      }
+    ]
+  },
+  {
+    "appearanceId": "watermelongangle",
+    "slot": "walk",
+    "file": "assets/encore/poses/watermelongangle/walk.png",
+    "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/walk.png",
+    "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/walk.json",
+    "sha256": "05ac74df9d231f1bfa045513abeee5c8f9a7afb3d6bb053a79bbd20a6a55e035",
+    "bytes": 586881,
+    "dimensions": [
+      1199,
+      1312
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      238,
+      153,
+      917,
+      1168
+    ],
+    "nativeFacing": "right",
+    "sourceGenerationId": "exec-8ae15c24-451a-43a0-be06-bdcf1acbef37",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/selection.png",
+        "sha256": "35b49ea9a786736b9ce39852ad8e8c7d0919de2d9ac972d37424a028e0029d65",
+        "bytes": 1527470
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-missing-20261120/references/watermelongangle/official-watermelon-gangle.png",
+        "sha256": "129a776c77d71a9d8ebe1dedb2499a4a1413fa96806ae997836acb6045a335cb",
+        "bytes": 2188514
+      }
+    ]
+  },
+  {
+    "appearanceId": "watermelongangle",
+    "slot": "jump",
+    "file": "assets/encore/poses/watermelongangle/jump.png",
+    "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/jump.png",
+    "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/jump.json",
+    "sha256": "830577977bf8be9383870d3264b3ec155376fd7bbae908a637b359ea70f991e9",
+    "bytes": 627177,
+    "dimensions": [
+      1199,
+      1312
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      210,
+      139,
+      984,
+      1113
+    ],
+    "nativeFacing": "right",
+    "sourceGenerationId": "exec-ed6d18c2-6227-431a-8ce5-685af50e1b9d",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/selection.png",
+        "sha256": "35b49ea9a786736b9ce39852ad8e8c7d0919de2d9ac972d37424a028e0029d65",
+        "bytes": 1527470
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-missing-20261120/references/watermelongangle/official-watermelon-gangle.png",
+        "sha256": "129a776c77d71a9d8ebe1dedb2499a4a1413fa96806ae997836acb6045a335cb",
+        "bytes": 2188514
+      }
+    ]
+  },
+  {
+    "appearanceId": "watermelongangle",
+    "slot": "crouch",
+    "file": "assets/encore/poses/watermelongangle/crouch.png",
+    "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/crouch.png",
+    "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/crouch.json",
+    "sha256": "06e009c6ee6227a068ae39ee920bfb973d47904bb4591e72ffd93fc3de6d5b23",
+    "bytes": 554025,
+    "dimensions": [
+      1312,
+      1199
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      304,
+      295,
+      1025,
+      1062
+    ],
+    "nativeFacing": "right",
+    "sourceGenerationId": "exec-c0a8b859-a17a-43cd-9f5a-b91004116670",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/selection.png",
+        "sha256": "35b49ea9a786736b9ce39852ad8e8c7d0919de2d9ac972d37424a028e0029d65",
+        "bytes": 1527470
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-missing-20261120/references/watermelongangle/official-watermelon-gangle.png",
+        "sha256": "129a776c77d71a9d8ebe1dedb2499a4a1413fa96806ae997836acb6045a335cb",
+        "bytes": 2188514
+      }
+    ]
+  },
+  {
+    "appearanceId": "watermelongangle",
+    "slot": "victory",
+    "file": "assets/encore/poses/watermelongangle/victory.png",
+    "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/victory.png",
+    "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/victory.json",
+    "sha256": "08465899e55f5602a125b166f75c39d38ea6c82193503e41b05e734330c8584d",
+    "bytes": 545167,
+    "dimensions": [
+      1199,
+      1312
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      191,
+      138,
+      976,
+      1203
+    ],
+    "nativeFacing": "right",
+    "sourceGenerationId": "exec-5d4e4898-2bdd-4ab6-af91-953b8dab7e9d",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/selection.png",
+        "sha256": "35b49ea9a786736b9ce39852ad8e8c7d0919de2d9ac972d37424a028e0029d65",
+        "bytes": 1527470
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-missing-20261120/references/watermelongangle/official-watermelon-gangle.png",
+        "sha256": "129a776c77d71a9d8ebe1dedb2499a4a1413fa96806ae997836acb6045a335cb",
+        "bytes": 2188514
+      }
+    ]
+  },
+  {
+    "appearanceId": "watermelongangle",
+    "slot": "defeat",
+    "file": "assets/encore/poses/watermelongangle/defeat.png",
+    "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/defeat.png",
+    "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/defeat.json",
+    "sha256": "67c8813222047c3bb8cb5430d034775dd2999b76041b07780654127ee0eff3ee",
+    "bytes": 688903,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      184,
+      185,
+      1039,
+      1154
+    ],
+    "nativeFacing": "right",
+    "sourceGenerationId": "exec-8afc702c-0a84-46b7-961b-835102243f98",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/selection.png",
+        "sha256": "35b49ea9a786736b9ce39852ad8e8c7d0919de2d9ac972d37424a028e0029d65",
+        "bytes": 1527470
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-missing-20261120/references/watermelongangle/official-watermelon-gangle.png",
+        "sha256": "129a776c77d71a9d8ebe1dedb2499a4a1413fa96806ae997836acb6045a335cb",
+        "bytes": 2188514
+      }
+    ]
+  },
+  {
+    "appearanceId": "aquablasterpomni",
+    "slot": "selection",
+    "file": "assets/encore/selection/aquablasterpomni.png",
+    "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/selection.png",
+    "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/selection.json",
+    "sha256": "c7024d22cd9d61d360c99761a63132b9c2fc06fc338df17eff10d2211fd56925",
+    "bytes": 1514241,
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "alpha12Bounds": [
+      117,
+      64,
+      897,
+      1486
+    ],
+    "nativeFacing": "right",
+    "sourceGenerationId": "exec-69d0a0fc-6fd2-45a6-9450-60bb70d7b1cf",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-missing-20261120/references/aquablasterpomni/official-aqua-blaster-pomni.png",
+        "sha256": "caab4b821c015e627a62e5a3fae1d207197da15b63c07c402a55568ef0301e64",
+        "bytes": 2582811
+      },
+      {
+        "position": 2,
+        "file": "assets/encore/selection/beachpomni.png",
+        "sha256": "4f104be35c2d1fb5494b7b0ddfb616ceb288edb795ec1a8094ff58e7996f674e",
+        "bytes": 1055943
+      }
+    ]
+  },
+  {
+    "appearanceId": "aquablasterpomni",
+    "slot": "stance",
+    "file": "assets/encore/stance/aquablasterpomni.png",
+    "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/stance.png",
+    "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/stance.json",
+    "sha256": "4bed9241895059ba2b8217082ed01e6b52ccbbb6404084a5fdd834381c8f3595",
+    "bytes": 761461,
+    "dimensions": [
+      1199,
+      1312
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      184,
+      80,
+      970,
+      1256
+    ],
+    "nativeFacing": "right",
+    "sourceGenerationId": "exec-a8c34a26-f7fa-47f8-ae45-5237f84b689c",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/selection.png",
+        "sha256": "c7024d22cd9d61d360c99761a63132b9c2fc06fc338df17eff10d2211fd56925",
+        "bytes": 1514241
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-missing-20261120/references/aquablasterpomni/official-aqua-blaster-pomni.png",
+        "sha256": "caab4b821c015e627a62e5a3fae1d207197da15b63c07c402a55568ef0301e64",
+        "bytes": 2582811
+      }
+    ]
+  },
+  {
+    "appearanceId": "aquablasterpomni",
+    "slot": "intro",
+    "file": "assets/encore/poses/aquablasterpomni/intro.png",
+    "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/intro.png",
+    "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/intro.json",
+    "sha256": "c895c1b8c015702b4f029939f8bdfa54beba5ab949ef28e6ce82b4ae36294160",
+    "bytes": 1544535,
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "alpha12Bounds": [
+      118,
+      63,
+      900,
+      1462
+    ],
+    "nativeFacing": "right",
+    "sourceGenerationId": "exec-71b32d08-aa67-44a8-96df-459dac9f1439",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/selection.png",
+        "sha256": "c7024d22cd9d61d360c99761a63132b9c2fc06fc338df17eff10d2211fd56925",
+        "bytes": 1514241
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-missing-20261120/references/aquablasterpomni/official-aqua-blaster-pomni.png",
+        "sha256": "caab4b821c015e627a62e5a3fae1d207197da15b63c07c402a55568ef0301e64",
+        "bytes": 2582811
+      }
+    ]
+  },
+  {
+    "appearanceId": "aquablasterpomni",
+    "slot": "attack",
+    "file": "assets/encore/poses/aquablasterpomni/attack.png",
+    "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/attack.png",
+    "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/attack.json",
+    "sha256": "2ab997db41dcf6da3ed4cb8ada90bdb0b5a6b4e52cbdca5de265e1cf127f31e9",
+    "bytes": 772786,
+    "dimensions": [
+      1312,
+      1199
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      155,
+      75,
+      1158,
+      1142
+    ],
+    "nativeFacing": "right",
+    "sourceGenerationId": "exec-d0396e63-1d39-4eda-bb2b-fff8721ad11b",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/selection.png",
+        "sha256": "c7024d22cd9d61d360c99761a63132b9c2fc06fc338df17eff10d2211fd56925",
+        "bytes": 1514241
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-missing-20261120/references/aquablasterpomni/official-aqua-blaster-pomni.png",
+        "sha256": "caab4b821c015e627a62e5a3fae1d207197da15b63c07c402a55568ef0301e64",
+        "bytes": 2582811
+      }
+    ]
+  },
+  {
+    "appearanceId": "aquablasterpomni",
+    "slot": "heavy",
+    "file": "assets/encore/poses/aquablasterpomni/heavy.png",
+    "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/heavy.png",
+    "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/heavy.json",
+    "sha256": "0e00d02285632ebfbdc3cb3ba3523b43dcdc351c7632928f71c3e33acd671a6b",
+    "bytes": 851157,
+    "dimensions": [
+      1199,
+      1312
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      128,
+      104,
+      1021,
+      1260
+    ],
+    "nativeFacing": "right",
+    "sourceGenerationId": "exec-59d6c86c-b1c8-46f6-bf6c-40ced4b2aec7",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/selection.png",
+        "sha256": "c7024d22cd9d61d360c99761a63132b9c2fc06fc338df17eff10d2211fd56925",
+        "bytes": 1514241
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-missing-20261120/references/aquablasterpomni/official-aqua-blaster-pomni.png",
+        "sha256": "caab4b821c015e627a62e5a3fae1d207197da15b63c07c402a55568ef0301e64",
+        "bytes": 2582811
+      }
+    ]
+  },
+  {
+    "appearanceId": "aquablasterpomni",
+    "slot": "hit",
+    "file": "assets/encore/poses/aquablasterpomni/hit.png",
+    "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/hit.png",
+    "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/hit.json",
+    "sha256": "85a385d520b69aab8a62aff8f384f711bb1205ae1948c2238d8b96a41565d32f",
+    "bytes": 1512821,
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "alpha12Bounds": [
+      69,
+      133,
+      876,
+      1449
+    ],
+    "nativeFacing": "right",
+    "sourceGenerationId": "exec-b4f09c83-302f-4ecf-8c2c-dd9b3dde276d",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/selection.png",
+        "sha256": "c7024d22cd9d61d360c99761a63132b9c2fc06fc338df17eff10d2211fd56925",
+        "bytes": 1514241
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-missing-20261120/references/aquablasterpomni/official-aqua-blaster-pomni.png",
+        "sha256": "caab4b821c015e627a62e5a3fae1d207197da15b63c07c402a55568ef0301e64",
+        "bytes": 2582811
+      }
+    ]
+  },
+  {
+    "appearanceId": "aquablasterpomni",
+    "slot": "walk",
+    "file": "assets/encore/poses/aquablasterpomni/walk.png",
+    "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/walk.png",
+    "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/walk.json",
+    "sha256": "a6bdc6e9fee8ea12f5d9c18ac0149ab2b68ce7845bc594647132f8496a66bb22",
+    "bytes": 718965,
+    "dimensions": [
+      1199,
+      1312
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      259,
+      70,
+      963,
+      1252
+    ],
+    "nativeFacing": "right",
+    "sourceGenerationId": "exec-7b1d284c-eb02-4b29-914d-1067a1f44fab",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/selection.png",
+        "sha256": "c7024d22cd9d61d360c99761a63132b9c2fc06fc338df17eff10d2211fd56925",
+        "bytes": 1514241
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-missing-20261120/references/aquablasterpomni/official-aqua-blaster-pomni.png",
+        "sha256": "caab4b821c015e627a62e5a3fae1d207197da15b63c07c402a55568ef0301e64",
+        "bytes": 2582811
+      }
+    ]
+  },
+  {
+    "appearanceId": "aquablasterpomni",
+    "slot": "jump",
+    "file": "assets/encore/poses/aquablasterpomni/jump.png",
+    "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/jump.png",
+    "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/jump.json",
+    "sha256": "59d9faa8b998e23fce65c9450b088ec9c77f3082ef08ce2a1dc8c7512eb1873d",
+    "bytes": 1469970,
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "alpha12Bounds": [
+      119,
+      111,
+      902,
+      1321
+    ],
+    "nativeFacing": "right",
+    "sourceGenerationId": "exec-2d8ec04b-e109-4a78-8070-2eb11d5e6552",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/selection.png",
+        "sha256": "c7024d22cd9d61d360c99761a63132b9c2fc06fc338df17eff10d2211fd56925",
+        "bytes": 1514241
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-missing-20261120/references/aquablasterpomni/official-aqua-blaster-pomni.png",
+        "sha256": "caab4b821c015e627a62e5a3fae1d207197da15b63c07c402a55568ef0301e64",
+        "bytes": 2582811
+      }
+    ]
+  },
+  {
+    "appearanceId": "aquablasterpomni",
+    "slot": "crouch",
+    "file": "assets/encore/poses/aquablasterpomni/crouch.png",
+    "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/crouch.png",
+    "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/crouch.json",
+    "sha256": "e70c8d6e853e0146d4efc3d7380f1bc1de48abf37fc845d3bc324f3d19179beb",
+    "bytes": 905643,
+    "dimensions": [
+      1199,
+      1312
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      153,
+      126,
+      1050,
+      1250
+    ],
+    "nativeFacing": "right",
+    "sourceGenerationId": "exec-c95f76c4-bea8-4138-a094-9af2fcdb65f0",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/selection.png",
+        "sha256": "c7024d22cd9d61d360c99761a63132b9c2fc06fc338df17eff10d2211fd56925",
+        "bytes": 1514241
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-missing-20261120/references/aquablasterpomni/official-aqua-blaster-pomni.png",
+        "sha256": "caab4b821c015e627a62e5a3fae1d207197da15b63c07c402a55568ef0301e64",
+        "bytes": 2582811
+      }
+    ]
+  },
+  {
+    "appearanceId": "aquablasterpomni",
+    "slot": "victory",
+    "file": "assets/encore/poses/aquablasterpomni/victory.png",
+    "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/victory.png",
+    "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/victory.json",
+    "sha256": "9893d8465d97699a02d7dc3045a8b0b0a98dff699c3dae5947cb13c7d6920a39",
+    "bytes": 1512530,
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "alpha12Bounds": [
+      88,
+      98,
+      972,
+      1486
+    ],
+    "nativeFacing": "right",
+    "sourceGenerationId": "exec-11ed10bf-1bed-4306-9db4-404c7a23c3ad",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/selection.png",
+        "sha256": "c7024d22cd9d61d360c99761a63132b9c2fc06fc338df17eff10d2211fd56925",
+        "bytes": 1514241
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-missing-20261120/references/aquablasterpomni/official-aqua-blaster-pomni.png",
+        "sha256": "caab4b821c015e627a62e5a3fae1d207197da15b63c07c402a55568ef0301e64",
+        "bytes": 2582811
+      }
+    ]
+  },
+  {
+    "appearanceId": "aquablasterpomni",
+    "slot": "defeat",
+    "file": "assets/encore/poses/aquablasterpomni/defeat.png",
+    "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/defeat.png",
+    "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/defeat.json",
+    "sha256": "e2bbd7813ef5c838e636fb3e70d800ec7555a752fa22abd000ed388a43fc485d",
+    "bytes": 875406,
+    "dimensions": [
+      1199,
+      1312
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      142,
+      129,
+      1048,
+      1258
+    ],
+    "nativeFacing": "right",
+    "sourceGenerationId": "exec-e9a66126-d734-4aed-b794-b3833fea0be9",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/selection.png",
+        "sha256": "c7024d22cd9d61d360c99761a63132b9c2fc06fc338df17eff10d2211fd56925",
+        "bytes": 1514241
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-missing-20261120/references/aquablasterpomni/official-aqua-blaster-pomni.png",
+        "sha256": "caab4b821c015e627a62e5a3fae1d207197da15b63c07c402a55568ef0301e64",
+        "bytes": 2582811
+      }
+    ]
+  },
+  {
+    "appearanceId": "ptocaine",
+    "slot": "selection",
+    "file": "assets/encore/selection/ptocaine.png",
+    "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/selection.png",
+    "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/selection.json",
+    "sha256": "f913f4f7c6e2cede6e37171f0b0bfbdddfc81d5343708798f2d533e3aae16c09",
+    "bytes": 910063,
+    "dimensions": [
+      1086,
+      1448
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      151,
+      15,
+      1028,
+      1435
+    ],
+    "nativeFacing": "right",
+    "sourceGenerationId": "exec-361bcf2e-6850-4400-889f-ce7a1f369b33",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-missing-20261120/references/beach-review-root/Beach_Series_Render_06.png",
+        "sha256": "0c16aaf75be90c3062167708507c6e386f1d93e807f4aba8871a5190bec51675",
+        "bytes": 2507585
+      },
+      {
+        "position": 2,
+        "file": "assets/encore/selection/caine.webp",
+        "sha256": "9d2e8a00ffa0f1f55b5aecec59da05a4be6edfea355c6df34aea4bfec9f044e7",
+        "bytes": 278502
+      }
+    ]
+  },
+  {
+    "appearanceId": "ptocaine",
+    "slot": "stance",
+    "file": "assets/encore/stance/ptocaine.png",
+    "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/stance.png",
+    "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/stance.json",
+    "sha256": "ef1c3b99c218dfdd0c28142968fa0914962ad1c2ea9067b2dd4ec93a30e63d74",
+    "bytes": 943984,
+    "dimensions": [
+      1151,
+      1367
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      113,
+      10,
+      979,
+      1358
+    ],
+    "nativeFacing": "right",
+    "sourceGenerationId": "exec-071bf255-54a3-4632-949b-95c0c57917d3",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/selection.png",
+        "sha256": "f913f4f7c6e2cede6e37171f0b0bfbdddfc81d5343708798f2d533e3aae16c09",
+        "bytes": 910063
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-missing-20261120/references/beach-review-root/Beach_Series_Render_06.png",
+        "sha256": "0c16aaf75be90c3062167708507c6e386f1d93e807f4aba8871a5190bec51675",
+        "bytes": 2507585
+      }
+    ]
+  },
+  {
+    "appearanceId": "ptocaine",
+    "slot": "intro",
+    "file": "assets/encore/poses/ptocaine/intro.png",
+    "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/intro.png",
+    "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/intro.json",
+    "sha256": "ce2935908062b673beefd4905d4a857ffebb69b472f5f12c95d8784039a88c2a",
+    "bytes": 931163,
+    "dimensions": [
+      1214,
+      1295
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      32,
+      10,
+      1182,
+      1283
+    ],
+    "nativeFacing": "right",
+    "sourceGenerationId": "exec-9d6d6e3c-fbdc-4614-99fd-67e6dff59ee6",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/selection.png",
+        "sha256": "f913f4f7c6e2cede6e37171f0b0bfbdddfc81d5343708798f2d533e3aae16c09",
+        "bytes": 910063
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-missing-20261120/references/beach-review-root/Beach_Series_Render_06.png",
+        "sha256": "0c16aaf75be90c3062167708507c6e386f1d93e807f4aba8871a5190bec51675",
+        "bytes": 2507585
+      }
+    ]
+  },
+  {
+    "appearanceId": "ptocaine",
+    "slot": "attack",
+    "file": "assets/encore/poses/ptocaine/attack.png",
+    "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/attack.png",
+    "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/attack.json",
+    "sha256": "338bc7a5cba5403afef518f0db5ba8ad01eb52c7f62e92a379af93e828dec298",
+    "bytes": 1341582,
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "alpha12Bounds": [
+      195,
+      8,
+      1321,
+      1015
+    ],
+    "nativeFacing": "right",
+    "sourceGenerationId": "exec-14058552-d9c9-4cce-b2c4-bb01a1b33703",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/selection.png",
+        "sha256": "f913f4f7c6e2cede6e37171f0b0bfbdddfc81d5343708798f2d533e3aae16c09",
+        "bytes": 910063
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-missing-20261120/references/beach-review-root/Beach_Series_Render_06.png",
+        "sha256": "0c16aaf75be90c3062167708507c6e386f1d93e807f4aba8871a5190bec51675",
+        "bytes": 2507585
+      }
+    ]
+  },
+  {
+    "appearanceId": "ptocaine",
+    "slot": "heavy",
+    "file": "assets/encore/poses/ptocaine/heavy.png",
+    "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/heavy.png",
+    "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/heavy.json",
+    "sha256": "550d1676e632feb1a7bfa472c7c949515072c6a3cf7f558ae5d61a498d484da3",
+    "bytes": 936106,
+    "dimensions": [
+      1448,
+      1086
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      64,
+      8,
+      1385,
+      1073
+    ],
+    "nativeFacing": "right",
+    "sourceGenerationId": "exec-91fed91b-673a-41ca-8a99-395862931d10",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/selection.png",
+        "sha256": "f913f4f7c6e2cede6e37171f0b0bfbdddfc81d5343708798f2d533e3aae16c09",
+        "bytes": 910063
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-missing-20261120/references/beach-review-root/Beach_Series_Render_06.png",
+        "sha256": "0c16aaf75be90c3062167708507c6e386f1d93e807f4aba8871a5190bec51675",
+        "bytes": 2507585
+      }
+    ]
+  },
+  {
+    "appearanceId": "ptocaine",
+    "slot": "hit",
+    "file": "assets/encore/poses/ptocaine/hit.png",
+    "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/hit.png",
+    "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/hit.json",
+    "sha256": "38a8763400c8da23935231b6e3ac25519a6215cb83182d4cbbf36921349e0272",
+    "bytes": 1043937,
+    "dimensions": [
+      1086,
+      1448
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      45,
+      27,
+      950,
+      1439
+    ],
+    "nativeFacing": "right",
+    "sourceGenerationId": "exec-0f193e70-ab8c-48e6-90db-a7524e701213",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/selection.png",
+        "sha256": "f913f4f7c6e2cede6e37171f0b0bfbdddfc81d5343708798f2d533e3aae16c09",
+        "bytes": 910063
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-missing-20261120/references/beach-review-root/Beach_Series_Render_06.png",
+        "sha256": "0c16aaf75be90c3062167708507c6e386f1d93e807f4aba8871a5190bec51675",
+        "bytes": 2507585
+      }
+    ]
+  },
+  {
+    "appearanceId": "ptocaine",
+    "slot": "walk",
+    "file": "assets/encore/poses/ptocaine/walk.png",
+    "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/walk.png",
+    "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/walk.json",
+    "sha256": "adbb121d8c51c73ba02e146934c8fe92894047e582bfc83959f93da7e306c8cf",
+    "bytes": 980030,
+    "dimensions": [
+      1086,
+      1448
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      155,
+      11,
+      934,
+      1438
+    ],
+    "nativeFacing": "right",
+    "sourceGenerationId": "exec-ee63bb2b-10b3-42ec-bbba-c8400f6e1c96",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/selection.png",
+        "sha256": "f913f4f7c6e2cede6e37171f0b0bfbdddfc81d5343708798f2d533e3aae16c09",
+        "bytes": 910063
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-missing-20261120/references/beach-review-root/Beach_Series_Render_06.png",
+        "sha256": "0c16aaf75be90c3062167708507c6e386f1d93e807f4aba8871a5190bec51675",
+        "bytes": 2507585
+      }
+    ]
+  },
+  {
+    "appearanceId": "ptocaine",
+    "slot": "jump",
+    "file": "assets/encore/poses/ptocaine/jump.png",
+    "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/jump.png",
+    "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/jump.json",
+    "sha256": "9a95cfbc28f76220256ab38d57e97524c0ade3d37ef7de0363353ba323de3189",
+    "bytes": 1037616,
+    "dimensions": [
+      1158,
+      1358
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      25,
+      11,
+      1128,
+      1260
+    ],
+    "nativeFacing": "right",
+    "sourceGenerationId": "exec-2ddc5e5c-0336-4fb6-b0ad-6c6e1d6d1310",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/selection.png",
+        "sha256": "f913f4f7c6e2cede6e37171f0b0bfbdddfc81d5343708798f2d533e3aae16c09",
+        "bytes": 910063
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-missing-20261120/references/beach-review-root/Beach_Series_Render_06.png",
+        "sha256": "0c16aaf75be90c3062167708507c6e386f1d93e807f4aba8871a5190bec51675",
+        "bytes": 2507585
+      }
+    ]
+  },
+  {
+    "appearanceId": "ptocaine",
+    "slot": "crouch",
+    "file": "assets/encore/poses/ptocaine/crouch.png",
+    "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/crouch.png",
+    "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/crouch.json",
+    "sha256": "8c9936d52d890726a61906594e31cf0bb1a34ea815f1cf186b08ca14e491a96a",
+    "bytes": 1013805,
+    "dimensions": [
+      1216,
+      1293
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      96,
+      12,
+      1035,
+      1282
+    ],
+    "nativeFacing": "right",
+    "sourceGenerationId": "exec-e6331e97-b68c-48d1-8fa5-0e6f1b9a0b26",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/selection.png",
+        "sha256": "f913f4f7c6e2cede6e37171f0b0bfbdddfc81d5343708798f2d533e3aae16c09",
+        "bytes": 910063
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-missing-20261120/references/beach-review-root/Beach_Series_Render_06.png",
+        "sha256": "0c16aaf75be90c3062167708507c6e386f1d93e807f4aba8871a5190bec51675",
+        "bytes": 2507585
+      }
+    ]
+  },
+  {
+    "appearanceId": "ptocaine",
+    "slot": "victory",
+    "file": "assets/encore/poses/ptocaine/victory.png",
+    "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/victory.png",
+    "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/victory.json",
+    "sha256": "fa5c30cb10bdae0ab90a29f4527f56d791fc73c7dc376e9ff786cf3e438bd58a",
+    "bytes": 931407,
+    "dimensions": [
+      1086,
+      1448
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      142,
+      9,
+      965,
+      1436
+    ],
+    "nativeFacing": "right",
+    "sourceGenerationId": "exec-017bd349-6e54-4c31-92ce-eea78207bca7",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/selection.png",
+        "sha256": "f913f4f7c6e2cede6e37171f0b0bfbdddfc81d5343708798f2d533e3aae16c09",
+        "bytes": 910063
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-missing-20261120/references/beach-review-root/Beach_Series_Render_06.png",
+        "sha256": "0c16aaf75be90c3062167708507c6e386f1d93e807f4aba8871a5190bec51675",
+        "bytes": 2507585
+      }
+    ]
+  },
+  {
+    "appearanceId": "ptocaine",
+    "slot": "defeat",
+    "file": "assets/encore/poses/ptocaine/defeat.png",
+    "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/defeat.png",
+    "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/defeat.json",
+    "sha256": "9a4481e9db3550e62753fa9ca4ce5b9ab0ddcb3b2799ef5ad24fa16343597d6a",
+    "bytes": 933698,
+    "dimensions": [
+      1240,
+      1268
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      137,
+      10,
+      1073,
+      1246
+    ],
+    "nativeFacing": "right",
+    "sourceGenerationId": "exec-e580dd4e-abe0-4a36-b844-f9763b75ed94",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/selection.png",
+        "sha256": "f913f4f7c6e2cede6e37171f0b0bfbdddfc81d5343708798f2d533e3aae16c09",
+        "bytes": 910063
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-missing-20261120/references/beach-review-root/Beach_Series_Render_06.png",
+        "sha256": "0c16aaf75be90c3062167708507c6e386f1d93e807f4aba8871a5190bec51675",
+        "bytes": 2507585
+      }
+    ]
+  },
+  {
+    "appearanceId": "freakjax",
+    "slot": "selection",
+    "file": "assets/encore/selection/freakjax.png",
+    "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/selection.png",
+    "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/selection.json",
+    "sha256": "22ea8b9c34b9acd5b8b3889129d0436542d586ee716b73e6cff061af469a1010",
+    "bytes": 916364,
+    "dimensions": [
+      1199,
+      1312
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      135,
+      57,
+      951,
+      1280
+    ],
+    "nativeFacing": "right",
+    "sourceGenerationId": "exec-321ef802-06df-4d07-99e0-e60ff463342a",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-missing-20261120/references/freakjax/Animiniz_SideShow_freakJax.png",
+        "sha256": "a5b25381cb9f25a235aaf00c7b27b36823910c5c7a211dbc658ae5e7f2f63a80",
+        "bytes": 578459
+      },
+      {
+        "position": 2,
+        "file": "assets/encore/selection/animeribbit.png",
+        "sha256": "8f89fb6ab3112c0ac72973f86c0973a2a89e106b50ffdc6e991eefe911618b77",
+        "bytes": 1485567
+      }
+    ]
+  },
+  {
+    "appearanceId": "freakjax",
+    "slot": "stance",
+    "file": "assets/encore/stance/freakjax.png",
+    "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/stance.png",
+    "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/stance.json",
+    "sha256": "23370947efcde758da86eeb156fd5faac85fcd12e5c2f64896c6ca2d409dabcf",
+    "bytes": 1007652,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      73,
+      56,
+      1011,
+      1233
+    ],
+    "nativeFacing": "right",
+    "sourceGenerationId": "exec-566098d4-0b6a-4c05-9529-e0b026848a2c",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/selection.png",
+        "sha256": "22ea8b9c34b9acd5b8b3889129d0436542d586ee716b73e6cff061af469a1010",
+        "bytes": 916364
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-missing-20261120/references/freakjax/Animiniz_SideShow_freakJax.png",
+        "sha256": "a5b25381cb9f25a235aaf00c7b27b36823910c5c7a211dbc658ae5e7f2f63a80",
+        "bytes": 578459
+      }
+    ]
+  },
+  {
+    "appearanceId": "freakjax",
+    "slot": "intro",
+    "file": "assets/encore/poses/freakjax/intro.png",
+    "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/intro.png",
+    "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/intro.json",
+    "sha256": "dc0d51b4ccf80b08393febc52b6bd119d944830d86aa0dae268adbcffdbc92ba",
+    "bytes": 916361,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      144,
+      52,
+      1112,
+      1231
+    ],
+    "nativeFacing": "right",
+    "sourceGenerationId": "exec-6fb296a2-7f15-4d50-a444-28fafbe645c2",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/selection.png",
+        "sha256": "22ea8b9c34b9acd5b8b3889129d0436542d586ee716b73e6cff061af469a1010",
+        "bytes": 916364
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-missing-20261120/references/freakjax/Animiniz_SideShow_freakJax.png",
+        "sha256": "a5b25381cb9f25a235aaf00c7b27b36823910c5c7a211dbc658ae5e7f2f63a80",
+        "bytes": 578459
+      }
+    ]
+  },
+  {
+    "appearanceId": "freakjax",
+    "slot": "attack",
+    "file": "assets/encore/poses/freakjax/attack.png",
+    "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/attack.png",
+    "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/attack.json",
+    "sha256": "964542fc4390a89fa175bf7e1347e8440902bead46b0f55d8dbc9499f28f8bf1",
+    "bytes": 948653,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      88,
+      61,
+      1136,
+      1205
+    ],
+    "nativeFacing": "right",
+    "sourceGenerationId": "exec-fc32c983-1550-4f40-a150-f4eb3e5bb8ec",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/selection.png",
+        "sha256": "22ea8b9c34b9acd5b8b3889129d0436542d586ee716b73e6cff061af469a1010",
+        "bytes": 916364
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-missing-20261120/references/freakjax/Animiniz_SideShow_freakJax.png",
+        "sha256": "a5b25381cb9f25a235aaf00c7b27b36823910c5c7a211dbc658ae5e7f2f63a80",
+        "bytes": 578459
+      }
+    ]
+  },
+  {
+    "appearanceId": "freakjax",
+    "slot": "heavy",
+    "file": "assets/encore/poses/freakjax/heavy.png",
+    "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/heavy.png",
+    "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/heavy.json",
+    "sha256": "4ecfd357f19c28a44432cc3006fa334c89b58cab3eefe92476b52ef8d1cdb969",
+    "bytes": 1110718,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      81,
+      24,
+      1177,
+      1240
+    ],
+    "nativeFacing": "right",
+    "sourceGenerationId": "exec-5891ca3d-128b-4815-9bb9-05f1da37f273",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/selection.png",
+        "sha256": "22ea8b9c34b9acd5b8b3889129d0436542d586ee716b73e6cff061af469a1010",
+        "bytes": 916364
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-missing-20261120/references/freakjax/Animiniz_SideShow_freakJax.png",
+        "sha256": "a5b25381cb9f25a235aaf00c7b27b36823910c5c7a211dbc658ae5e7f2f63a80",
+        "bytes": 578459
+      }
+    ]
+  },
+  {
+    "appearanceId": "freakjax",
+    "slot": "hit",
+    "file": "assets/encore/poses/freakjax/hit.png",
+    "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/hit.png",
+    "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/hit.json",
+    "sha256": "42ad80824a7b8cd62225a01d9c59294a2fccd3875b04b08f1cbf00715b48dc20",
+    "bytes": 1090665,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      88,
+      51,
+      1057,
+      1223
+    ],
+    "nativeFacing": "right",
+    "sourceGenerationId": "exec-40320e14-7f66-45da-a2e8-9090bd12f984",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/selection.png",
+        "sha256": "22ea8b9c34b9acd5b8b3889129d0436542d586ee716b73e6cff061af469a1010",
+        "bytes": 916364
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-missing-20261120/references/freakjax/Animiniz_SideShow_freakJax.png",
+        "sha256": "a5b25381cb9f25a235aaf00c7b27b36823910c5c7a211dbc658ae5e7f2f63a80",
+        "bytes": 578459
+      }
+    ]
+  },
+  {
+    "appearanceId": "freakjax",
+    "slot": "walk",
+    "file": "assets/encore/poses/freakjax/walk.png",
+    "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/walk.png",
+    "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/walk.json",
+    "sha256": "fc03f7b81940e8b0f6dff8c8c5562b2dfa8b8488193b38b427381e69b6b6edbe",
+    "bytes": 996758,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      65,
+      39,
+      1049,
+      1225
+    ],
+    "nativeFacing": "right",
+    "sourceGenerationId": "exec-4c37c9bd-1a4d-4ab2-a823-94f62ef13fde",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/selection.png",
+        "sha256": "22ea8b9c34b9acd5b8b3889129d0436542d586ee716b73e6cff061af469a1010",
+        "bytes": 916364
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-missing-20261120/references/freakjax/Animiniz_SideShow_freakJax.png",
+        "sha256": "a5b25381cb9f25a235aaf00c7b27b36823910c5c7a211dbc658ae5e7f2f63a80",
+        "bytes": 578459
+      }
+    ]
+  },
+  {
+    "appearanceId": "freakjax",
+    "slot": "jump",
+    "file": "assets/encore/poses/freakjax/jump.png",
+    "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/jump.png",
+    "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/jump.json",
+    "sha256": "4eefed9da6d3387c8e232010bfa1eb690348c5314f1bdff5f3f1cf192cb5ffcf",
+    "bytes": 1101865,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      48,
+      61,
+      1200,
+      1210
+    ],
+    "nativeFacing": "right",
+    "sourceGenerationId": "exec-c00f68f1-b5bc-4f2a-ad49-f9b30a9bbe59",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/selection.png",
+        "sha256": "22ea8b9c34b9acd5b8b3889129d0436542d586ee716b73e6cff061af469a1010",
+        "bytes": 916364
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-missing-20261120/references/freakjax/Animiniz_SideShow_freakJax.png",
+        "sha256": "a5b25381cb9f25a235aaf00c7b27b36823910c5c7a211dbc658ae5e7f2f63a80",
+        "bytes": 578459
+      }
+    ]
+  },
+  {
+    "appearanceId": "freakjax",
+    "slot": "crouch",
+    "file": "assets/encore/poses/freakjax/crouch.png",
+    "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/crouch.png",
+    "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/crouch.json",
+    "sha256": "18c3e7f0a56e976ceb55fbbd03eb99595f9391c56593b604affb287432443477",
+    "bytes": 993734,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      90,
+      77,
+      1160,
+      1206
+    ],
+    "nativeFacing": "right",
+    "sourceGenerationId": "exec-20881a2f-c184-439e-a680-c13614eee2ca",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/selection.png",
+        "sha256": "22ea8b9c34b9acd5b8b3889129d0436542d586ee716b73e6cff061af469a1010",
+        "bytes": 916364
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-missing-20261120/references/freakjax/Animiniz_SideShow_freakJax.png",
+        "sha256": "a5b25381cb9f25a235aaf00c7b27b36823910c5c7a211dbc658ae5e7f2f63a80",
+        "bytes": 578459
+      }
+    ]
+  },
+  {
+    "appearanceId": "freakjax",
+    "slot": "victory",
+    "file": "assets/encore/poses/freakjax/victory.png",
+    "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/victory.png",
+    "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/victory.json",
+    "sha256": "cd5728d606d259f0a9693a89e7ccbd9a0de0ea66590b49a87f91ee5eaddbe25e",
+    "bytes": 1008406,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      118,
+      61,
+      1088,
+      1235
+    ],
+    "nativeFacing": "right",
+    "sourceGenerationId": "exec-5db3829b-6646-4fde-9d02-81d6fb985688",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/selection.png",
+        "sha256": "22ea8b9c34b9acd5b8b3889129d0436542d586ee716b73e6cff061af469a1010",
+        "bytes": 916364
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-missing-20261120/references/freakjax/Animiniz_SideShow_freakJax.png",
+        "sha256": "a5b25381cb9f25a235aaf00c7b27b36823910c5c7a211dbc658ae5e7f2f63a80",
+        "bytes": 578459
+      }
+    ]
+  },
+  {
+    "appearanceId": "freakjax",
+    "slot": "defeat",
+    "file": "assets/encore/poses/freakjax/defeat.png",
+    "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/defeat.png",
+    "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/defeat.json",
+    "sha256": "92b0196076e4d114dd1ba5ce29dc3f99e61a12e1b68f11e224cf615269e5f401",
+    "bytes": 1098984,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alpha12Bounds": [
+      81,
+      55,
+      1117,
+      1230
+    ],
+    "nativeFacing": "right",
+    "sourceGenerationId": "exec-7eb42f81-c2d0-45c2-b043-fe6bdd2dbf1c",
+    "references": [
+      {
+        "position": 1,
+        "file": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/selection.png",
+        "sha256": "22ea8b9c34b9acd5b8b3889129d0436542d586ee716b73e6cff061af469a1010",
+        "bytes": 916364
+      },
+      {
+        "position": 2,
+        "file": "docs/art-generation/cast-next-missing-20261120/references/freakjax/Animiniz_SideShow_freakJax.png",
+        "sha256": "a5b25381cb9f25a235aaf00c7b27b36823910c5c7a211dbc658ae5e7f2f63a80",
+        "bytes": 578459
+      }
+    ]
+  }
+]

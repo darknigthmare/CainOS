@@ -1,0 +1,66 @@
+{
+  "appearanceId": "ptocaine",
+  "slot": "intro",
+  "prompt": "Use case: stylized-concept. Produce ONE new, separate full-body PNG action drawing of PTO Caine for the existing Encore 2D fighting game, with a genuinely transparent background. Reference 1 is the accepted selection illustration: keep its exact identity, standing-game proportions, palette, mint-green sunglasses with yellow translucent lenses, two eye colors under the tint, red denture with white teeth, black top hat and red band, red tailcoat and dark lapels, white shirt front with dark buttons, black bow tie, white cuffed gloves, black trousers and shoes. Reference 2 is the official PTO Caine product, authoritative for the mint/yellow glasses and worn costume only. Use the same crisp dark outlines and polished cel shading as reference 1. Do not copy the original selection pose. ACTION: INTRODUCTION: face RIGHT and make a theatrical bow while one gloved hand lightly tips the brim of the hat, the other opens outward toward the opponent. Both legs and both shoes visible. The top hat stays against the top of the head, not floating separately. Frame the entire single character with clear transparent margins on every side. No chair, glass, cane, beach, ground shadow, oval platform, background, checkerboard, caption, text, watermark, sticker border, duplicate body parts or extra characters. Preserve all native transparency; no glow around the character.",
+  "referencePaths": [
+    "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/selection.png",
+    "docs/art-generation/cast-next-missing-20261120/references/beach-review-root/Beach_Series_Render_06.png"
+  ],
+  "nativeFacing": "right",
+  "reviewer": "root",
+  "schema": "encore-native-next-missing-art/v1",
+  "id": "ptocaine:intro",
+  "status": "accepted_native",
+  "method": "image_gen.imagegen",
+  "transparent_background": true,
+  "file": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/intro.png",
+  "targetFile": "assets/encore/poses/ptocaine/intro.png",
+  "nativeSourceFile": "/workspace/scratch/f726dc7a5ad2/generated_images/exec-9d6d6e3c-fbdc-4614-99fd-67e6dff59ee6.png",
+  "sourceGenerationId": "exec-9d6d6e3c-fbdc-4614-99fd-67e6dff59ee6",
+  "portableReferences": [
+    {
+      "position": 1,
+      "file": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/selection.png",
+      "sha256": "f913f4f7c6e2cede6e37171f0b0bfbdddfc81d5343708798f2d533e3aae16c09",
+      "bytes": 910063
+    },
+    {
+      "position": 2,
+      "file": "docs/art-generation/cast-next-missing-20261120/references/beach-review-root/Beach_Series_Render_06.png",
+      "sha256": "0c16aaf75be90c3062167708507c6e386f1d93e807f4aba8871a5190bec51675",
+      "bytes": 2507585
+    }
+  ],
+  "dimensions": [
+    1214,
+    1295
+  ],
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "alpha12Bounds": [
+    32,
+    10,
+    1182,
+    1283
+  ],
+  "alpha12BoundsThreshold": "alpha > 12",
+  "fullyTransparentPixels": 1011847,
+  "sha256": "ce2935908062b673beefd4905d4a857ffebb69b472f5f12c95d8784039a88c2a",
+  "bytes": 931163,
+  "nativeCopyVerified": true,
+  "sourceKind": "Produit dérivé officiel",
+  "episodeFidelityClaim": false,
+  "includedInRuntime": false,
+  "createdAt": "2026-11-20T13:23:33.092197+00:00",
+  "visualReview": {
+    "status": "accepted",
+    "reviewer": "root",
+    "observations": [
+      "Complete bow and hat-tip pose, facing right; one glove touches the brim and the other is open, with two intact legs and both shoes. Mint glasses and the costume match the accepted selection."
+    ],
+    "scope": "Official costume comparison and original game pose; no episode or complete animation certification."
+  }
+}

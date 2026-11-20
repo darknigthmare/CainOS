@@ -18,11 +18,12 @@ const appearanceWaves = {
     'abstractingzooble', 'abstractingqueenie', 'zoobleep5',
     'jaxsuitpomni', 'noirribbit', 'kaufmosuitribbit', 'intermissioncaine',
     'showtimepomni', 'bowlingpinragatha', 'ringmastercaine', 'strongmanorbsman',
-    'stagehandbubble', 'bugtamerkinger', 'animeribbit', 'jaxsuitribbit'],
+    'stagehandbubble', 'bugtamerkinger', 'animeribbit', 'jaxsuitribbit',
+    'watermelongangle', 'aquablasterpomni', 'ptocaine', 'freakjax'],
 };
 
 test('additional outfits retain their owner, authored kit and saved appearance through replay and campaign round trips', () => {
-  assert.equal(COSTUME_ADDITIONS.length, 35);
+  assert.equal(COSTUME_ADDITIONS.length, 39);
   assert.equal(VARIANTS.length, 51, 'historical atlas remains stable');
   for (const [date, ids] of Object.entries(appearanceWaves)) {
     assert.deepEqual(COSTUME_ADDITIONS.filter(outfit => outfit.introducedOn === date).map(outfit => outfit.id), ids,
@@ -84,7 +85,7 @@ test('each additional outfit ships all eleven independent native-alpha PNG drawi
       signatures.add(createHash('sha256').update(bytes).digest('hex'));
     }
   }
-  assert.equal(signatures.size, 385, 'all 35 appearances have eleven independent drawings');
+  assert.equal(signatures.size, 429, 'all 39 appearances have eleven independent drawings');
 });
 
 test('resumed appearances append the frozen checkpoint definitions without changing the first fourteen entries', () => {
@@ -134,11 +135,29 @@ test('new catalogue drawings match reviewed native directions and exact archived
   assert.equal(new Set(files.map(file => file.appearanceId + '/' + file.slot)).size, 110);
   const ribbit = JSON.parse(readFileSync(new URL('../docs/art-generation/cast-ribbit-20261120/generation-completion.json', import.meta.url)));
   assert.equal(ribbit.status, 'complete_active');
-  assert.deepEqual(COSTUME_ADDITIONS.slice(33).map(entry => entry.id), ribbit.order);
+  assert.deepEqual(COSTUME_ADDITIONS.slice(33, 35).map(entry => entry.id), ribbit.order);
   const ribbitFiles = ribbit.appearances.flatMap(appearance => appearance.files);
   assert.equal(ribbitFiles.length, 22);
   assert.equal(new Set(ribbitFiles.map(file => file.appearanceId + '/' + file.slot)).size, 22);
   files.push(...ribbitFiles);
+  const baselineBytes = readFileSync(new URL('../docs/art-generation/cast-next-missing-20261120/integration-baseline.json', import.meta.url));
+  assert.equal(createHash('sha256').update(baselineBytes).digest('hex'), '88da0348cde24375ded30c72ea3a1636896fc77097ad6bcb78550d2c7481d379', 'Preserve the independently captured pre-addition catalogue');
+  const baseline = JSON.parse(baselineBytes);
+  assert.deepEqual(COSTUME_ADDITIONS.slice(0, 35).map(entry => entry.id), baseline.appearanceIds);
+  assert.deepEqual(COSTUMES.slice(0, 464).map(entry => entry.id), baseline.costumeIds);
+  assert.equal(createHash('sha256').update(JSON.stringify(COSTUMES.slice(0, 464))).digest('hex'), baseline.costumesSHA256);
+  for (const outfit of COSTUME_ADDITIONS.slice(0, 35)) {
+    assert.equal(createHash('sha256').update(JSON.stringify(outfit)).digest('hex'), baseline.appearanceHashes[outfit.id], outfit.id + ': historical definition unchanged');
+  }
+  const next = JSON.parse(readFileSync(new URL('../docs/art-generation/cast-next-missing-20261120/generation-completion.json', import.meta.url)));
+  assert.equal(next.status, 'complete_active');
+  assert.deepEqual(next.order, ['watermelongangle', 'aquablasterpomni', 'ptocaine', 'freakjax']);
+  assert.deepEqual(COSTUME_ADDITIONS.slice(35, 39).map(entry => entry.id), next.order);
+  const nextFiles = next.appearances.flatMap(appearance => appearance.files);
+  assert.equal(nextFiles.length, 44);
+  assert.equal(new Set(nextFiles.map(file => file.appearanceId + '/' + file.slot)).size, 44);
+  assert.equal(new Set(nextFiles.map(file => file.sha256)).size, 44);
+  files.push(...nextFiles);
   // The independently reviewed records protect mixed source directions, including
   // Ragatha's left-facing portrait beside her right-facing combat drawings.
   for (const file of files) {

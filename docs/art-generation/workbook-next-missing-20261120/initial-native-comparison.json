@@ -1,0 +1,1081 @@
+{
+  "schema": "encore-native-workbook-comparison/v1",
+  "status": "failed",
+  "cellsChecked": 80346,
+  "expectedSHA256": null,
+  "actualSHA256": "e4ad5e1a2c6cf0de83b7abc7d615c59dd57d070b6cac6aee42f634291f5f1872",
+  "expectedSnapshotHashes": {
+    "manifest.json": "781c0447b580ab60d0d69a43d419b01f4d52fd76fe0e8bddf487f781b30153ae",
+    "sheet-1.json": "d2c7348717c7b1c8ffafe0b3837714990e858c50c9d12c1efe4e5f7f27d9afb1",
+    "sheet-2.json": "dfc99df85e81fed8ba4c4f48372dbf48f8c8fb8dd142c049aab63736b3bb3e41",
+    "sheet-3.json": "cb190954c7f66477b74cd2eda7f63d354c9f9a814ee2f878d18ce1a39365bce8",
+    "sheet-4.json": "8cbea3eb38e6d8e57df000807619bfaa0a5f72e7b49c04d19f9f77e7d1ba43f3",
+    "sheet-5.json": "9fbe20d3eb646b6d740201d7e8c9f338f9170b997294cd671e303f0464a9c472",
+    "sheet-6.json": "e1b73192e588b2a3669df523d86b1609bd002cdcdaa1014a778825b33cd28409",
+    "sheet-7.json": "eb48f11ba17852fd744b328091a44d3136de0257e20dacb8dfb208eab741fd62",
+    "sheet-8.json": "7c8457e3e6e5875b2d87e48803a1c52648f4e842b661650ad8f4e5e5c3cdb3d5",
+    "sheet-9.json": "5bd283aa6342e65f1311d468f2a2a434c63abfe6adc788d1cd8bbf99d49011f9",
+    "sheet-10.json": "af89759b46c43794d5efd8be835d9fe5dc079971e9b56f601d8bd03208ddb353",
+    "sheet-11.json": "b55eea3401b786fbb8ff9de3decdaef96f14bbfca284234aa73409dd11edd229"
+  },
+  "differences": [
+    {
+      "at": "Arènes/validations",
+      "expected": [
+        {
+          "range": "C6:C17",
+          "values": [
+            "Implémenté",
+            "Partiel",
+            "Prévu",
+            "À vérifier",
+            "Hors périmètre"
+          ]
+        },
+        {
+          "range": "D6:D17",
+          "values": [
+            "Implémenté",
+            "Partiel",
+            "Prévu",
+            "À vérifier",
+            "Hors périmètre"
+          ]
+        },
+        {
+          "range": "K6:K17",
+          "values": [
+            "Implémenté",
+            "Partiel",
+            "Prévu",
+            "À vérifier",
+            "Hors périmètre"
+          ]
+        },
+        {
+          "range": "C28:C28",
+          "values": [
+            "Implémenté",
+            "Partiel",
+            "Prévu",
+            "À vérifier",
+            "Hors périmètre"
+          ]
+        },
+        {
+          "range": "D28:D28",
+          "values": [
+            "Implémenté",
+            "Partiel",
+            "Prévu",
+            "À vérifier",
+            "Hors périmètre"
+          ]
+        },
+        {
+          "range": "K28:K28",
+          "values": [
+            "Implémenté",
+            "Partiel",
+            "Prévu",
+            "À vérifier",
+            "Hors périmètre"
+          ]
+        }
+      ],
+      "actual": [
+        {
+          "range": "C6:C17",
+          "values": [
+            "Implémenté",
+            "Partiel",
+            "Prévu",
+            "À vérifier",
+            "Hors périmètre"
+          ]
+        },
+        {
+          "range": "D6:D17",
+          "values": [
+            "Implémenté",
+            "Partiel",
+            "Prévu",
+            "À vérifier",
+            "Hors périmètre"
+          ]
+        },
+        {
+          "range": "K6:K17",
+          "values": [
+            "Implémenté",
+            "Partiel",
+            "Prévu",
+            "À vérifier",
+            "Hors périmètre"
+          ]
+        },
+        {
+          "range": "C28",
+          "values": [
+            "Implémenté",
+            "Partiel",
+            "Prévu",
+            "À vérifier",
+            "Hors périmètre"
+          ]
+        },
+        {
+          "range": "D28",
+          "values": [
+            "Implémenté",
+            "Partiel",
+            "Prévu",
+            "À vérifier",
+            "Hors périmètre"
+          ]
+        },
+        {
+          "range": "K28",
+          "values": [
+            "Implémenté",
+            "Partiel",
+            "Prévu",
+            "À vérifier",
+            "Hors périmètre"
+          ]
+        }
+      ]
+    },
+    {
+      "at": "Arènes/rules",
+      "expected": [
+        {
+          "range": "C6:C17",
+          "text": "Implémenté",
+          "format": {
+            "font": {
+              "color": "#23513D"
+            },
+            "fill": "#E4F1E9"
+          },
+          "priority": 1
+        },
+        {
+          "range": "C6:C17",
+          "text": "Partiel",
+          "format": {
+            "font": {
+              "color": "#79501D"
+            },
+            "fill": "#FCEED8"
+          },
+          "priority": 2
+        },
+        {
+          "range": "C6:C17",
+          "text": "Prévu",
+          "format": {
+            "font": {
+              "color": "#56496D"
+            },
+            "fill": "#EAE7F1"
+          },
+          "priority": 3
+        },
+        {
+          "range": "C6:C17",
+          "text": "À vérifier",
+          "format": {
+            "font": {
+              "color": "#805B00"
+            },
+            "fill": "#FFF1C9"
+          },
+          "priority": 4
+        },
+        {
+          "range": "C6:C17",
+          "text": "Réussi",
+          "format": {
+            "font": {
+              "color": "#23513D"
+            },
+            "fill": "#E4F1E9"
+          },
+          "priority": 5
+        },
+        {
+          "range": "C6:C17",
+          "text": "Échec",
+          "format": {
+            "font": {
+              "color": "#A12A2A"
+            },
+            "fill": "#FBE0E0"
+          },
+          "priority": 6
+        },
+        {
+          "range": "C6:C17",
+          "text": "Non exécuté",
+          "format": {
+            "font": {
+              "color": "#56496D"
+            },
+            "fill": "#EAE7F1"
+          },
+          "priority": 7
+        },
+        {
+          "range": "D6:D17",
+          "text": "Implémenté",
+          "format": {
+            "font": {
+              "color": "#23513D"
+            },
+            "fill": "#E4F1E9"
+          },
+          "priority": 8
+        },
+        {
+          "range": "D6:D17",
+          "text": "Partiel",
+          "format": {
+            "font": {
+              "color": "#79501D"
+            },
+            "fill": "#FCEED8"
+          },
+          "priority": 9
+        },
+        {
+          "range": "D6:D17",
+          "text": "Prévu",
+          "format": {
+            "font": {
+              "color": "#56496D"
+            },
+            "fill": "#EAE7F1"
+          },
+          "priority": 10
+        },
+        {
+          "range": "D6:D17",
+          "text": "À vérifier",
+          "format": {
+            "font": {
+              "color": "#805B00"
+            },
+            "fill": "#FFF1C9"
+          },
+          "priority": 11
+        },
+        {
+          "range": "D6:D17",
+          "text": "Réussi",
+          "format": {
+            "font": {
+              "color": "#23513D"
+            },
+            "fill": "#E4F1E9"
+          },
+          "priority": 12
+        },
+        {
+          "range": "D6:D17",
+          "text": "Échec",
+          "format": {
+            "font": {
+              "color": "#A12A2A"
+            },
+            "fill": "#FBE0E0"
+          },
+          "priority": 13
+        },
+        {
+          "range": "D6:D17",
+          "text": "Non exécuté",
+          "format": {
+            "font": {
+              "color": "#56496D"
+            },
+            "fill": "#EAE7F1"
+          },
+          "priority": 14
+        },
+        {
+          "range": "K6:K17",
+          "text": "Implémenté",
+          "format": {
+            "font": {
+              "color": "#23513D"
+            },
+            "fill": "#E4F1E9"
+          },
+          "priority": 15
+        },
+        {
+          "range": "K6:K17",
+          "text": "Partiel",
+          "format": {
+            "font": {
+              "color": "#79501D"
+            },
+            "fill": "#FCEED8"
+          },
+          "priority": 16
+        },
+        {
+          "range": "K6:K17",
+          "text": "Prévu",
+          "format": {
+            "font": {
+              "color": "#56496D"
+            },
+            "fill": "#EAE7F1"
+          },
+          "priority": 17
+        },
+        {
+          "range": "K6:K17",
+          "text": "À vérifier",
+          "format": {
+            "font": {
+              "color": "#805B00"
+            },
+            "fill": "#FFF1C9"
+          },
+          "priority": 18
+        },
+        {
+          "range": "K6:K17",
+          "text": "Réussi",
+          "format": {
+            "font": {
+              "color": "#23513D"
+            },
+            "fill": "#E4F1E9"
+          },
+          "priority": 19
+        },
+        {
+          "range": "K6:K17",
+          "text": "Échec",
+          "format": {
+            "font": {
+              "color": "#A12A2A"
+            },
+            "fill": "#FBE0E0"
+          },
+          "priority": 20
+        },
+        {
+          "range": "K6:K17",
+          "text": "Non exécuté",
+          "format": {
+            "font": {
+              "color": "#56496D"
+            },
+            "fill": "#EAE7F1"
+          },
+          "priority": 21
+        },
+        {
+          "range": "C28:C28",
+          "text": "Implémenté",
+          "format": {
+            "font": {
+              "color": "#23513D"
+            },
+            "fill": "#E4F1E9"
+          },
+          "priority": 22
+        },
+        {
+          "range": "C28:C28",
+          "text": "Partiel",
+          "format": {
+            "font": {
+              "color": "#79501D"
+            },
+            "fill": "#FCEED8"
+          },
+          "priority": 23
+        },
+        {
+          "range": "C28:C28",
+          "text": "Prévu",
+          "format": {
+            "font": {
+              "color": "#56496D"
+            },
+            "fill": "#EAE7F1"
+          },
+          "priority": 24
+        },
+        {
+          "range": "C28:C28",
+          "text": "À vérifier",
+          "format": {
+            "font": {
+              "color": "#805B00"
+            },
+            "fill": "#FFF1C9"
+          },
+          "priority": 25
+        },
+        {
+          "range": "C28:C28",
+          "text": "Réussi",
+          "format": {
+            "font": {
+              "color": "#23513D"
+            },
+            "fill": "#E4F1E9"
+          },
+          "priority": 26
+        },
+        {
+          "range": "C28:C28",
+          "text": "Échec",
+          "format": {
+            "font": {
+              "color": "#A12A2A"
+            },
+            "fill": "#FBE0E0"
+          },
+          "priority": 27
+        },
+        {
+          "range": "C28:C28",
+          "text": "Non exécuté",
+          "format": {
+            "font": {
+              "color": "#56496D"
+            },
+            "fill": "#EAE7F1"
+          },
+          "priority": 28
+        },
+        {
+          "range": "D28:D28",
+          "text": "Implémenté",
+          "format": {
+            "font": {
+              "color": "#23513D"
+            },
+            "fill": "#E4F1E9"
+          },
+          "priority": 29
+        },
+        {
+          "range": "D28:D28",
+          "text": "Partiel",
+          "format": {
+            "font": {
+              "color": "#79501D"
+            },
+            "fill": "#FCEED8"
+          },
+          "priority": 30
+        },
+        {
+          "range": "D28:D28",
+          "text": "Prévu",
+          "format": {
+            "font": {
+              "color": "#56496D"
+            },
+            "fill": "#EAE7F1"
+          },
+          "priority": 31
+        },
+        {
+          "range": "D28:D28",
+          "text": "À vérifier",
+          "format": {
+            "font": {
+              "color": "#805B00"
+            },
+            "fill": "#FFF1C9"
+          },
+          "priority": 32
+        },
+        {
+          "range": "D28:D28",
+          "text": "Réussi",
+          "format": {
+            "font": {
+              "color": "#23513D"
+            },
+            "fill": "#E4F1E9"
+          },
+          "priority": 33
+        },
+        {
+          "range": "D28:D28",
+          "text": "Échec",
+          "format": {
+            "font": {
+              "color": "#A12A2A"
+            },
+            "fill": "#FBE0E0"
+          },
+          "priority": 34
+        },
+        {
+          "range": "D28:D28",
+          "text": "Non exécuté",
+          "format": {
+            "font": {
+              "color": "#56496D"
+            },
+            "fill": "#EAE7F1"
+          },
+          "priority": 35
+        },
+        {
+          "range": "K28:K28",
+          "text": "Implémenté",
+          "format": {
+            "font": {
+              "color": "#23513D"
+            },
+            "fill": "#E4F1E9"
+          },
+          "priority": 36
+        },
+        {
+          "range": "K28:K28",
+          "text": "Partiel",
+          "format": {
+            "font": {
+              "color": "#79501D"
+            },
+            "fill": "#FCEED8"
+          },
+          "priority": 37
+        },
+        {
+          "range": "K28:K28",
+          "text": "Prévu",
+          "format": {
+            "font": {
+              "color": "#56496D"
+            },
+            "fill": "#EAE7F1"
+          },
+          "priority": 38
+        },
+        {
+          "range": "K28:K28",
+          "text": "À vérifier",
+          "format": {
+            "font": {
+              "color": "#805B00"
+            },
+            "fill": "#FFF1C9"
+          },
+          "priority": 39
+        },
+        {
+          "range": "K28:K28",
+          "text": "Réussi",
+          "format": {
+            "font": {
+              "color": "#23513D"
+            },
+            "fill": "#E4F1E9"
+          },
+          "priority": 40
+        },
+        {
+          "range": "K28:K28",
+          "text": "Échec",
+          "format": {
+            "font": {
+              "color": "#A12A2A"
+            },
+            "fill": "#FBE0E0"
+          },
+          "priority": 41
+        },
+        {
+          "range": "K28:K28",
+          "text": "Non exécuté",
+          "format": {
+            "font": {
+              "color": "#56496D"
+            },
+            "fill": "#EAE7F1"
+          },
+          "priority": 42
+        }
+      ],
+      "actual": [
+        {
+          "range": "C6:C17",
+          "text": "Implémenté",
+          "format": {
+            "font": {
+              "color": "#23513D"
+            },
+            "fill": "#E4F1E9"
+          },
+          "priority": 1
+        },
+        {
+          "range": "C6:C17",
+          "text": "Partiel",
+          "format": {
+            "font": {
+              "color": "#79501D"
+            },
+            "fill": "#FCEED8"
+          },
+          "priority": 2
+        },
+        {
+          "range": "C6:C17",
+          "text": "Prévu",
+          "format": {
+            "font": {
+              "color": "#56496D"
+            },
+            "fill": "#EAE7F1"
+          },
+          "priority": 3
+        },
+        {
+          "range": "C6:C17",
+          "text": "À vérifier",
+          "format": {
+            "font": {
+              "color": "#805B00"
+            },
+            "fill": "#FFF1C9"
+          },
+          "priority": 4
+        },
+        {
+          "range": "C6:C17",
+          "text": "Réussi",
+          "format": {
+            "font": {
+              "color": "#23513D"
+            },
+            "fill": "#E4F1E9"
+          },
+          "priority": 5
+        },
+        {
+          "range": "C6:C17",
+          "text": "Échec",
+          "format": {
+            "font": {
+              "color": "#A12A2A"
+            },
+            "fill": "#FBE0E0"
+          },
+          "priority": 6
+        },
+        {
+          "range": "C6:C17",
+          "text": "Non exécuté",
+          "format": {
+            "font": {
+              "color": "#56496D"
+            },
+            "fill": "#EAE7F1"
+          },
+          "priority": 7
+        },
+        {
+          "range": "D6:D17",
+          "text": "Implémenté",
+          "format": {
+            "font": {
+              "color": "#23513D"
+            },
+            "fill": "#E4F1E9"
+          },
+          "priority": 8
+        },
+        {
+          "range": "D6:D17",
+          "text": "Partiel",
+          "format": {
+            "font": {
+              "color": "#79501D"
+            },
+            "fill": "#FCEED8"
+          },
+          "priority": 9
+        },
+        {
+          "range": "D6:D17",
+          "text": "Prévu",
+          "format": {
+            "font": {
+              "color": "#56496D"
+            },
+            "fill": "#EAE7F1"
+          },
+          "priority": 10
+        },
+        {
+          "range": "D6:D17",
+          "text": "À vérifier",
+          "format": {
+            "font": {
+              "color": "#805B00"
+            },
+            "fill": "#FFF1C9"
+          },
+          "priority": 11
+        },
+        {
+          "range": "D6:D17",
+          "text": "Réussi",
+          "format": {
+            "font": {
+              "color": "#23513D"
+            },
+            "fill": "#E4F1E9"
+          },
+          "priority": 12
+        },
+        {
+          "range": "D6:D17",
+          "text": "Échec",
+          "format": {
+            "font": {
+              "color": "#A12A2A"
+            },
+            "fill": "#FBE0E0"
+          },
+          "priority": 13
+        },
+        {
+          "range": "D6:D17",
+          "text": "Non exécuté",
+          "format": {
+            "font": {
+              "color": "#56496D"
+            },
+            "fill": "#EAE7F1"
+          },
+          "priority": 14
+        },
+        {
+          "range": "K6:K17",
+          "text": "Implémenté",
+          "format": {
+            "font": {
+              "color": "#23513D"
+            },
+            "fill": "#E4F1E9"
+          },
+          "priority": 15
+        },
+        {
+          "range": "K6:K17",
+          "text": "Partiel",
+          "format": {
+            "font": {
+              "color": "#79501D"
+            },
+            "fill": "#FCEED8"
+          },
+          "priority": 16
+        },
+        {
+          "range": "K6:K17",
+          "text": "Prévu",
+          "format": {
+            "font": {
+              "color": "#56496D"
+            },
+            "fill": "#EAE7F1"
+          },
+          "priority": 17
+        },
+        {
+          "range": "K6:K17",
+          "text": "À vérifier",
+          "format": {
+            "font": {
+              "color": "#805B00"
+            },
+            "fill": "#FFF1C9"
+          },
+          "priority": 18
+        },
+        {
+          "range": "K6:K17",
+          "text": "Réussi",
+          "format": {
+            "font": {
+              "color": "#23513D"
+            },
+            "fill": "#E4F1E9"
+          },
+          "priority": 19
+        },
+        {
+          "range": "K6:K17",
+          "text": "Échec",
+          "format": {
+            "font": {
+              "color": "#A12A2A"
+            },
+            "fill": "#FBE0E0"
+          },
+          "priority": 20
+        },
+        {
+          "range": "K6:K17",
+          "text": "Non exécuté",
+          "format": {
+            "font": {
+              "color": "#56496D"
+            },
+            "fill": "#EAE7F1"
+          },
+          "priority": 21
+        },
+        {
+          "range": "C28",
+          "text": "Implémenté",
+          "format": {
+            "font": {
+              "color": "#23513D"
+            },
+            "fill": "#E4F1E9"
+          },
+          "priority": 22
+        },
+        {
+          "range": "C28",
+          "text": "Partiel",
+          "format": {
+            "font": {
+              "color": "#79501D"
+            },
+            "fill": "#FCEED8"
+          },
+          "priority": 23
+        },
+        {
+          "range": "C28",
+          "text": "Prévu",
+          "format": {
+            "font": {
+              "color": "#56496D"
+            },
+            "fill": "#EAE7F1"
+          },
+          "priority": 24
+        },
+        {
+          "range": "C28",
+          "text": "À vérifier",
+          "format": {
+            "font": {
+              "color": "#805B00"
+            },
+            "fill": "#FFF1C9"
+          },
+          "priority": 25
+        },
+        {
+          "range": "C28",
+          "text": "Réussi",
+          "format": {
+            "font": {
+              "color": "#23513D"
+            },
+            "fill": "#E4F1E9"
+          },
+          "priority": 26
+        },
+        {
+          "range": "C28",
+          "text": "Échec",
+          "format": {
+            "font": {
+              "color": "#A12A2A"
+            },
+            "fill": "#FBE0E0"
+          },
+          "priority": 27
+        },
+        {
+          "range": "C28",
+          "text": "Non exécuté",
+          "format": {
+            "font": {
+              "color": "#56496D"
+            },
+            "fill": "#EAE7F1"
+          },
+          "priority": 28
+        },
+        {
+          "range": "D28",
+          "text": "Implémenté",
+          "format": {
+            "font": {
+              "color": "#23513D"
+            },
+            "fill": "#E4F1E9"
+          },
+          "priority": 29
+        },
+        {
+          "range": "D28",
+          "text": "Partiel",
+          "format": {
+            "font": {
+              "color": "#79501D"
+            },
+            "fill": "#FCEED8"
+          },
+          "priority": 30
+        },
+        {
+          "range": "D28",
+          "text": "Prévu",
+          "format": {
+            "font": {
+              "color": "#56496D"
+            },
+            "fill": "#EAE7F1"
+          },
+          "priority": 31
+        },
+        {
+          "range": "D28",
+          "text": "À vérifier",
+          "format": {
+            "font": {
+              "color": "#805B00"
+            },
+            "fill": "#FFF1C9"
+          },
+          "priority": 32
+        },
+        {
+          "range": "D28",
+          "text": "Réussi",
+          "format": {
+            "font": {
+              "color": "#23513D"
+            },
+            "fill": "#E4F1E9"
+          },
+          "priority": 33
+        },
+        {
+          "range": "D28",
+          "text": "Échec",
+          "format": {
+            "font": {
+              "color": "#A12A2A"
+            },
+            "fill": "#FBE0E0"
+          },
+          "priority": 34
+        },
+        {
+          "range": "D28",
+          "text": "Non exécuté",
+          "format": {
+            "font": {
+              "color": "#56496D"
+            },
+            "fill": "#EAE7F1"
+          },
+          "priority": 35
+        },
+        {
+          "range": "K28",
+          "text": "Implémenté",
+          "format": {
+            "font": {
+              "color": "#23513D"
+            },
+            "fill": "#E4F1E9"
+          },
+          "priority": 36
+        },
+        {
+          "range": "K28",
+          "text": "Partiel",
+          "format": {
+            "font": {
+              "color": "#79501D"
+            },
+            "fill": "#FCEED8"
+          },
+          "priority": 37
+        },
+        {
+          "range": "K28",
+          "text": "Prévu",
+          "format": {
+            "font": {
+              "color": "#56496D"
+            },
+            "fill": "#EAE7F1"
+          },
+          "priority": 38
+        },
+        {
+          "range": "K28",
+          "text": "À vérifier",
+          "format": {
+            "font": {
+              "color": "#805B00"
+            },
+            "fill": "#FFF1C9"
+          },
+          "priority": 39
+        },
+        {
+          "range": "K28",
+          "text": "Réussi",
+          "format": {
+            "font": {
+              "color": "#23513D"
+            },
+            "fill": "#E4F1E9"
+          },
+          "priority": 40
+        },
+        {
+          "range": "K28",
+          "text": "Échec",
+          "format": {
+            "font": {
+              "color": "#A12A2A"
+            },
+            "fill": "#FBE0E0"
+          },
+          "priority": 41
+        },
+        {
+          "range": "K28",
+          "text": "Non exécuté",
+          "format": {
+            "font": {
+              "color": "#56496D"
+            },
+            "fill": "#EAE7F1"
+          },
+          "priority": 42
+        }
+      ]
+    }
+  ]
+}

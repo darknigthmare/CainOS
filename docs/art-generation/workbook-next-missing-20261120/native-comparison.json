@@ -1,0 +1,22 @@
+{
+  "schema": "encore-native-workbook-comparison/v1",
+  "status": "passed",
+  "cellsChecked": 80346,
+  "expectedSHA256": null,
+  "actualSHA256": "048d758f614daf1ad388a12fed5955b853734c2c1c47d92fb7a6e493512eea12",
+  "expectedSnapshotHashes": {
+    "manifest.json": "781c0447b580ab60d0d69a43d419b01f4d52fd76fe0e8bddf487f781b30153ae",
+    "sheet-1.json": "d2c7348717c7b1c8ffafe0b3837714990e858c50c9d12c1efe4e5f7f27d9afb1",
+    "sheet-2.json": "dfc99df85e81fed8ba4c4f48372dbf48f8c8fb8dd142c049aab63736b3bb3e41",
+    "sheet-3.json": "cb190954c7f66477b74cd2eda7f63d354c9f9a814ee2f878d18ce1a39365bce8",
+    "sheet-4.json": "8cbea3eb38e6d8e57df000807619bfaa0a5f72e7b49c04d19f9f77e7d1ba43f3",
+    "sheet-5.json": "66b9a0a1daa15459e2d6c387822b1f24cd42cdf054071b57bda631aefeb201fe",
+    "sheet-6.json": "e1b73192e588b2a3669df523d86b1609bd002cdcdaa1014a778825b33cd28409",
+    "sheet-7.json": "a29c7f08494c3dff8670a69d1a722d2f493afbcfda7e58f3ca2dc58b8d7f93b6",
+    "sheet-8.json": "7c8457e3e6e5875b2d87e48803a1c52648f4e842b661650ad8f4e5e5c3cdb3d5",
+    "sheet-9.json": "5bd283aa6342e65f1311d468f2a2a434c63abfe6adc788d1cd8bbf99d49011f9",
+    "sheet-10.json": "af89759b46c43794d5efd8be835d9fe5dc079971e9b56f601d8bd03208ddb353",
+    "sheet-11.json": "b55eea3401b786fbb8ff9de3decdaef96f14bbfca284234aa73409dd11edd229"
+  },
+  "differences": []
+}

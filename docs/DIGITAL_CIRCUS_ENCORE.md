@@ -5,9 +5,9 @@ dessins individuels réunis le **19 novembre 2026**, puis complétés le
 **20 novembre 2026**.
 
 Encore partage son moteur entre l’application CainOS et le jeu autonome :
-**54 combattants, 540 techniques, 22 arènes partagées, 9 modes, 464 costumes et 179 archives**.
+**54 combattants, 540 techniques, 23 arènes partagées, 9 modes, 468 costumes et 179 archives**.
 Le catalogue conserve les 54 arrangements de scènes dédiées,
-les escales GLITCH, les 51 costumes d’archive, 35 variantes supplémentaires et les 378 costumes crossover des
+les escales GLITCH, les 51 costumes d’archive, 39 variantes supplémentaires et les 378 costumes crossover des
 quatorze combattants d’origine. Les costumes crossover des 40 PNJ promus restent
 à produire ; aucun choix ne pointe vers un dessin absent.
 L’extension PNJ promue porte le roster à 54 combattants et **162 finales de spectacle** ;
@@ -34,7 +34,32 @@ d’épisode contradictoires avec la route générée. Les dessins individuels d
 19 novembre remplacent ces cadrages dans la présentation courante ; cette
 réparation technique ne clôt pas leur comparaison avec les plans officiels.
 
-## Dernière suite — Anime Ribbit et Jax-Suit Ribbit, 20 novembre
+## Dernière suite — quatre apparences et Sous la carte, 20 novembre
+
+Watermelon Gangle, Aqua Blaster Pomni, PTO Caine et Freak Jax disposent chacun
+de onze dessins individuels : **44 PNG natifs supplémentaires**, portant la
+collection Circus à **39 apparences / 429 PNG**. Les propriétaires et kits sont
+conservés, ainsi que les données et l’ordre des 35 apparences précédentes.
+Les différences avec les costumes déjà présents et les limites des références
+sont détaillées dans le [bilan du lot](COMBAT_NEXT_MISSING_2026-11-20.md).
+
+La nouvelle arène **Sous la carte** (`undermap`) ajoute trois plans natifs à la
+salle indigo quadrillée de l’épisode 2. Le catalogue compte désormais 23 arènes
+partagées et 69 plans ; les 54 arrangements dédiés restent distincts de ce compte.
+Ses dimensions, sa piste, sa musique et son ambiance sont des adaptations du jeu
+documentées dans le [dossier du décor](art-generation/stage-next-missing-20261120/README.md).
+
+La QA du lot réussit **411 tests et les deux builds**. Les fixtures indépendantes
+préservent 54 récits, 270 checkpoints de programmes et 14 replays historiques.
+Le paquet hors ligne contient **5 769 images**. Les revues Canvas, l’intégrité
+des copies et la réconciliation du classeur sont liées dans le bilan ; la
+validation navigateur du commit publié reste distinguée des preuves locales.
+
+Le [registre courant](art-generation/cast-next-missing-20261120/remaining-work.md)
+conserve les références encore masquées, les cycles d’animation complets, les
+crossovers des quarante PNJ et les essais matériels comme travaux ouverts.
+
+## Suite précédente — Anime Ribbit et Jax-Suit Ribbit, 20 novembre
 
 Les deux nouvelles apparences disposent chacune d’un portrait, d’une garde et de
 neuf actions distinctes : **22 PNG natifs ajoutés**, portant les variantes Circus
@@ -46,7 +71,7 @@ de combat sont des adaptations originales.
 Le [rapport de cette suite](COMBAT_RIBBIT_CONTINUATION_2026-11-20.md) rassemble
 les galeries, les reçus natifs et les résultats : **405 tests Node, deux builds
 et 40 contrôles Canvas réussis**. La tentative Chromium locale est bloquée avant
-navigation. Le [registre courant](art-generation/cast-ribbit-20261120/remaining-work.md)
+navigation. Le [registre de ce point d’étape](art-generation/cast-ribbit-20261120/remaining-work.md)
 conserve notamment Maid Ribbit en attente de vues du bas de sa tenue. Aucun
 nouveau décor n’a été ajouté dans ce lot ; les 22 arènes existantes sont conservées.
 
@@ -687,9 +712,9 @@ anciens libellés en faits canoniques.
 
 Le registre [`combat/fidelity.mjs`](../combat/fidelity.mjs) et les fiches
 [`combat/costume-fidelity.mjs`](../combat/costume-fidelity.mjs) réunissent
-**667 entrées** : 54 personnages, 540 techniques, 22 arènes partagées et 51 costumes d’archive.
-La suite illustrée ajoute huit fiches de costume distinctes dans
-`combat/costume-additions.mjs`, portant ce total à **675**.
+**668 entrées** : 54 personnages, 540 techniques, 23 arènes partagées et 51 costumes d’archive.
+Les suites illustrées ajoutent 39 fiches de costume distinctes dans
+`combat/costume-additions.mjs`, portant ce total documenté à **707**.
 Le jeu et le classeur lisent les mêmes sources, observations, adaptations et
 périmètres de revue. Un lien d'épisode ou un ancien nom d'archive ne valide pas
 une apparence à lui seul.

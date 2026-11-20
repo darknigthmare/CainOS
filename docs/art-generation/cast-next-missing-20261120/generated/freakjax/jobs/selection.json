@@ -1,0 +1,16 @@
+{
+  "appearanceId": "freakjax",
+  "fighterId": "jax",
+  "slot": "selection",
+  "nativeFacing": "right",
+  "prompt": "Use case: stylized-concept. Create ONE full-body 2D fighting-game selection sprite of FREAK JAX, based faithfully on reference image 1, the official GLITCH Side Show figurine. Reference image 2 is ONLY the clean cel-shaded linework style of an existing game sprite; do not copy its frog identity, clothing, eyes, anatomy or palette.\nSubject: the exact unusual Jax variant from image 1. Round smooth golden-yellow head with NO ears on the head, NO nose, TWO solid black rounded-square eyes, and exactly FIVE small dark ochre short marks arranged across the low face. No white eyeballs, no pupils, no teeth, no big mouth. Lavender-purple arms and feet. Yellow cartoon gloves, coral/salmon intact bib overalls with pale pink rectangular front pocket and pale pink rolled cuffs. Behind the shoulders is the same large folded lavender rabbit hood/skin-like draped volume with two long flattened ear-shaped lobes descending beside/behind the body; reproduce its visible silhouette, never turn it into a new animal tail or erect ears. The head remains bare and spherical. Two hands and two broad lavender three-toed feet.\nPose: selection artwork, relaxed confident front three-quarter view turned slightly toward SCREEN-RIGHT, feet apart, arms lightly folded near the upper chest as in the official figurine. Entire head, draped purple volume, both hands and both feet clearly inside the canvas. Preserve the stocky cute proportions of this particular figure, with enough leg length for readable game actions; no emaciated yellow rabbit anatomy, no torn clothes.\nRendering: polished hand-drawn 2D cartoon sprite, strong clean dark outline, flat saturated colors and restrained two-tone cel shading, crisp readable silhouette. No photorealism, no 3D plastic texture. Transparent RGBA background, zero-alpha outside the figure, opaque character interior. No colored glow, halo, shadows, vignette, floor, smoke, background, words, frame, collage, alternate poses, multiple characters or detached parts. Portrait canvas, comfortable transparent padding of at least 5 percent on all four sides. Single complete character only. This is original fan-game pose art based on the merchandise, not a film still.",
+  "referencePaths": [
+    "docs/art-generation/cast-next-missing-20261120/references/freakjax/Animiniz_SideShow_freakJax.png",
+    "assets/encore/selection/animeribbit.png"
+  ],
+  "sourceURLs": [
+    "https://glitchproductions.store/products/digital-circus-animiniz-side-show-series",
+    "https://cdn.shopify.com/s/files/1/0786/4903/3026/files/Animiniz_SideShow_freakJax.png?v=1773977710"
+  ],
+  "reviewer": "tracker_recovery"
+}

@@ -5,6 +5,7 @@ export const AMBIENT_FLOOR = 568;
 export const STAGE_AMBIENCES = Object.freeze({
   ...Object.fromEntries(CROSSOVER_STAGES.map(stage => [stage.id, stage.ambience])),
   falseexit: 'Poussière sous les tubes fluorescents',
+  undermap: 'Pulsations bleues sous la carte',
   bigtop: 'Lueurs de piste', candy: 'Poussière de sucre', manor: 'Bougies du manoir', spudsy: 'Vapeur du comptoir',
   cellar: 'Présences du cellier', void: 'Reflets irisés', lake: 'Ondes du lac', training: 'Balayage de calibration',
   gloink: 'Formes du nid', kingdom: 'Scintillements de sucre', grounds: 'Nuages des terrains', backstage: 'Veilleuses du couloir',
@@ -79,6 +80,10 @@ export function stageMotion(stage, frame = 0, reducedMotion = false, painted = f
     const y = 125 + (t * 24 % 390);
     shapes.push(stroke([[80, y], [1200, y]], '#a7ffdf', 0.16, 2));
     for (let i = 0; i < 9; i++) shapes.push(circle(180 + i * 115, 120, 2, 2, '#bdffef', 0.25 + (wave(0.9, i) + 1) * 0.15));
+  } else if (id === 'undermap') {
+    // Quiet reflected light, not episode animation or a simulation effect.
+    for (let i = 0; i < 3; i++) shapes.push(circle(170 + i * 470, 320 + i % 2 * 74,
+      26 + wave(.22, i) * 4, 42 + wave(.19, i) * 5, '#243dcb', .025 + (wave(.31, i * 1.7) + 1) * .012));
   } else if (id === 'gloink') {
     for (let i = 0; i < 7; i++) {
       const x = 80 + i * 185, y = 170 + (i * 87 % 265), angle = t * (i % 2 ? -0.12 : 0.12) + i, radius = 9 + i % 3 * 3;

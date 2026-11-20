@@ -1,0 +1,1084 @@
+{
+  "schema": "encore-tracker-asset-slots/v1",
+  "status": "passed",
+  "verifiedSlots": 44,
+  "order": [
+    "watermelongangle",
+    "aquablasterpomni",
+    "ptocaine",
+    "freakjax"
+  ],
+  "slots": [
+    "selection",
+    "stance",
+    "intro",
+    "attack",
+    "heavy",
+    "hit",
+    "walk",
+    "jump",
+    "crouch",
+    "victory",
+    "defeat"
+  ],
+  "checks": [
+    {
+      "appearanceId": "watermelongangle",
+      "slot": "selection",
+      "file": "assets/encore/selection/watermelongangle.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/selection.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/selection.json",
+      "sha256": "35b49ea9a786736b9ce39852ad8e8c7d0919de2d9ac972d37424a028e0029d65",
+      "bytes": 1527470,
+      "productionId": "NEXT29-watermelongangle-selection",
+      "qaId": "NEXT29-asset-watermelongangle-selection",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        76,
+        16,
+        945,
+        1528
+      ]
+    },
+    {
+      "appearanceId": "watermelongangle",
+      "slot": "stance",
+      "file": "assets/encore/stance/watermelongangle.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/stance.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/stance.json",
+      "sha256": "7a1e29f4c0cc21f560ec9234b4de37540782b80a868e425b29cb9ccaad9f311a",
+      "bytes": 610564,
+      "productionId": "NEXT29-watermelongangle-stance",
+      "qaId": "NEXT29-asset-watermelongangle-stance",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        236,
+        168,
+        1000,
+        1183
+      ]
+    },
+    {
+      "appearanceId": "watermelongangle",
+      "slot": "intro",
+      "file": "assets/encore/poses/watermelongangle/intro.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/intro.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/intro.json",
+      "sha256": "0867094ac29df1cbacdce6752ae82f34dd9b64f8fefa58fc63e6941114b90b62",
+      "bytes": 495465,
+      "productionId": "NEXT29-watermelongangle-intro",
+      "qaId": "NEXT29-asset-watermelongangle-intro",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1312,
+        1199
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        355,
+        162,
+        977,
+        1062
+      ]
+    },
+    {
+      "appearanceId": "watermelongangle",
+      "slot": "attack",
+      "file": "assets/encore/poses/watermelongangle/attack.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/attack.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/attack.json",
+      "sha256": "79ee1961a5d0285ed540cfc6b8b8d0cedb90d92e6794a357fd36fb61fe122d11",
+      "bytes": 554595,
+      "productionId": "NEXT29-watermelongangle-attack",
+      "qaId": "NEXT29-asset-watermelongangle-attack",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1312,
+        1199
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        133,
+        185,
+        1210,
+        1040
+      ]
+    },
+    {
+      "appearanceId": "watermelongangle",
+      "slot": "heavy",
+      "file": "assets/encore/poses/watermelongangle/heavy.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/heavy.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/heavy.json",
+      "sha256": "fc0987cad03482b06e5e4a3a48e95d41b100740e6cd114c6649b312103e80fc2",
+      "bytes": 542307,
+      "productionId": "NEXT29-watermelongangle-heavy",
+      "qaId": "NEXT29-asset-watermelongangle-heavy",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        318,
+        134,
+        928,
+        1201
+      ]
+    },
+    {
+      "appearanceId": "watermelongangle",
+      "slot": "hit",
+      "file": "assets/encore/poses/watermelongangle/hit.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/hit.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/hit.json",
+      "sha256": "e9ff8240b557ddf0fb527090711e5b2a6f0cd6a10098fe86c8ca15e3328e6648",
+      "bytes": 544695,
+      "productionId": "NEXT29-watermelongangle-hit",
+      "qaId": "NEXT29-asset-watermelongangle-hit",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        185,
+        223,
+        837,
+        1163
+      ]
+    },
+    {
+      "appearanceId": "watermelongangle",
+      "slot": "walk",
+      "file": "assets/encore/poses/watermelongangle/walk.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/walk.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/walk.json",
+      "sha256": "05ac74df9d231f1bfa045513abeee5c8f9a7afb3d6bb053a79bbd20a6a55e035",
+      "bytes": 586881,
+      "productionId": "NEXT29-watermelongangle-walk",
+      "qaId": "NEXT29-asset-watermelongangle-walk",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        238,
+        153,
+        917,
+        1168
+      ]
+    },
+    {
+      "appearanceId": "watermelongangle",
+      "slot": "jump",
+      "file": "assets/encore/poses/watermelongangle/jump.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/jump.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/jump.json",
+      "sha256": "830577977bf8be9383870d3264b3ec155376fd7bbae908a637b359ea70f991e9",
+      "bytes": 627177,
+      "productionId": "NEXT29-watermelongangle-jump",
+      "qaId": "NEXT29-asset-watermelongangle-jump",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        210,
+        139,
+        984,
+        1113
+      ]
+    },
+    {
+      "appearanceId": "watermelongangle",
+      "slot": "crouch",
+      "file": "assets/encore/poses/watermelongangle/crouch.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/crouch.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/crouch.json",
+      "sha256": "06e009c6ee6227a068ae39ee920bfb973d47904bb4591e72ffd93fc3de6d5b23",
+      "bytes": 554025,
+      "productionId": "NEXT29-watermelongangle-crouch",
+      "qaId": "NEXT29-asset-watermelongangle-crouch",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1312,
+        1199
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        304,
+        295,
+        1025,
+        1062
+      ]
+    },
+    {
+      "appearanceId": "watermelongangle",
+      "slot": "victory",
+      "file": "assets/encore/poses/watermelongangle/victory.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/victory.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/victory.json",
+      "sha256": "08465899e55f5602a125b166f75c39d38ea6c82193503e41b05e734330c8584d",
+      "bytes": 545167,
+      "productionId": "NEXT29-watermelongangle-victory",
+      "qaId": "NEXT29-asset-watermelongangle-victory",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        191,
+        138,
+        976,
+        1203
+      ]
+    },
+    {
+      "appearanceId": "watermelongangle",
+      "slot": "defeat",
+      "file": "assets/encore/poses/watermelongangle/defeat.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/defeat.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/watermelongangle/defeat.json",
+      "sha256": "67c8813222047c3bb8cb5430d034775dd2999b76041b07780654127ee0eff3ee",
+      "bytes": 688903,
+      "productionId": "NEXT29-watermelongangle-defeat",
+      "qaId": "NEXT29-asset-watermelongangle-defeat",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        184,
+        185,
+        1039,
+        1154
+      ]
+    },
+    {
+      "appearanceId": "aquablasterpomni",
+      "slot": "selection",
+      "file": "assets/encore/selection/aquablasterpomni.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/selection.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/selection.json",
+      "sha256": "c7024d22cd9d61d360c99761a63132b9c2fc06fc338df17eff10d2211fd56925",
+      "bytes": 1514241,
+      "productionId": "NEXT29-aquablasterpomni-selection",
+      "qaId": "NEXT29-asset-aquablasterpomni-selection",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        117,
+        64,
+        897,
+        1486
+      ]
+    },
+    {
+      "appearanceId": "aquablasterpomni",
+      "slot": "stance",
+      "file": "assets/encore/stance/aquablasterpomni.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/stance.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/stance.json",
+      "sha256": "4bed9241895059ba2b8217082ed01e6b52ccbbb6404084a5fdd834381c8f3595",
+      "bytes": 761461,
+      "productionId": "NEXT29-aquablasterpomni-stance",
+      "qaId": "NEXT29-asset-aquablasterpomni-stance",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        184,
+        80,
+        970,
+        1256
+      ]
+    },
+    {
+      "appearanceId": "aquablasterpomni",
+      "slot": "intro",
+      "file": "assets/encore/poses/aquablasterpomni/intro.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/intro.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/intro.json",
+      "sha256": "c895c1b8c015702b4f029939f8bdfa54beba5ab949ef28e6ce82b4ae36294160",
+      "bytes": 1544535,
+      "productionId": "NEXT29-aquablasterpomni-intro",
+      "qaId": "NEXT29-asset-aquablasterpomni-intro",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        118,
+        63,
+        900,
+        1462
+      ]
+    },
+    {
+      "appearanceId": "aquablasterpomni",
+      "slot": "attack",
+      "file": "assets/encore/poses/aquablasterpomni/attack.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/attack.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/attack.json",
+      "sha256": "2ab997db41dcf6da3ed4cb8ada90bdb0b5a6b4e52cbdca5de265e1cf127f31e9",
+      "bytes": 772786,
+      "productionId": "NEXT29-aquablasterpomni-attack",
+      "qaId": "NEXT29-asset-aquablasterpomni-attack",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1312,
+        1199
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        155,
+        75,
+        1158,
+        1142
+      ]
+    },
+    {
+      "appearanceId": "aquablasterpomni",
+      "slot": "heavy",
+      "file": "assets/encore/poses/aquablasterpomni/heavy.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/heavy.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/heavy.json",
+      "sha256": "0e00d02285632ebfbdc3cb3ba3523b43dcdc351c7632928f71c3e33acd671a6b",
+      "bytes": 851157,
+      "productionId": "NEXT29-aquablasterpomni-heavy",
+      "qaId": "NEXT29-asset-aquablasterpomni-heavy",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        128,
+        104,
+        1021,
+        1260
+      ]
+    },
+    {
+      "appearanceId": "aquablasterpomni",
+      "slot": "hit",
+      "file": "assets/encore/poses/aquablasterpomni/hit.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/hit.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/hit.json",
+      "sha256": "85a385d520b69aab8a62aff8f384f711bb1205ae1948c2238d8b96a41565d32f",
+      "bytes": 1512821,
+      "productionId": "NEXT29-aquablasterpomni-hit",
+      "qaId": "NEXT29-asset-aquablasterpomni-hit",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        69,
+        133,
+        876,
+        1449
+      ]
+    },
+    {
+      "appearanceId": "aquablasterpomni",
+      "slot": "walk",
+      "file": "assets/encore/poses/aquablasterpomni/walk.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/walk.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/walk.json",
+      "sha256": "a6bdc6e9fee8ea12f5d9c18ac0149ab2b68ce7845bc594647132f8496a66bb22",
+      "bytes": 718965,
+      "productionId": "NEXT29-aquablasterpomni-walk",
+      "qaId": "NEXT29-asset-aquablasterpomni-walk",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        259,
+        70,
+        963,
+        1252
+      ]
+    },
+    {
+      "appearanceId": "aquablasterpomni",
+      "slot": "jump",
+      "file": "assets/encore/poses/aquablasterpomni/jump.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/jump.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/jump.json",
+      "sha256": "59d9faa8b998e23fce65c9450b088ec9c77f3082ef08ce2a1dc8c7512eb1873d",
+      "bytes": 1469970,
+      "productionId": "NEXT29-aquablasterpomni-jump",
+      "qaId": "NEXT29-asset-aquablasterpomni-jump",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        119,
+        111,
+        902,
+        1321
+      ]
+    },
+    {
+      "appearanceId": "aquablasterpomni",
+      "slot": "crouch",
+      "file": "assets/encore/poses/aquablasterpomni/crouch.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/crouch.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/crouch.json",
+      "sha256": "e70c8d6e853e0146d4efc3d7380f1bc1de48abf37fc845d3bc324f3d19179beb",
+      "bytes": 905643,
+      "productionId": "NEXT29-aquablasterpomni-crouch",
+      "qaId": "NEXT29-asset-aquablasterpomni-crouch",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        153,
+        126,
+        1050,
+        1250
+      ]
+    },
+    {
+      "appearanceId": "aquablasterpomni",
+      "slot": "victory",
+      "file": "assets/encore/poses/aquablasterpomni/victory.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/victory.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/victory.json",
+      "sha256": "9893d8465d97699a02d7dc3045a8b0b0a98dff699c3dae5947cb13c7d6920a39",
+      "bytes": 1512530,
+      "productionId": "NEXT29-aquablasterpomni-victory",
+      "qaId": "NEXT29-asset-aquablasterpomni-victory",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        88,
+        98,
+        972,
+        1486
+      ]
+    },
+    {
+      "appearanceId": "aquablasterpomni",
+      "slot": "defeat",
+      "file": "assets/encore/poses/aquablasterpomni/defeat.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/defeat.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/aquablasterpomni/defeat.json",
+      "sha256": "e2bbd7813ef5c838e636fb3e70d800ec7555a752fa22abd000ed388a43fc485d",
+      "bytes": 875406,
+      "productionId": "NEXT29-aquablasterpomni-defeat",
+      "qaId": "NEXT29-asset-aquablasterpomni-defeat",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        142,
+        129,
+        1048,
+        1258
+      ]
+    },
+    {
+      "appearanceId": "ptocaine",
+      "slot": "selection",
+      "file": "assets/encore/selection/ptocaine.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/selection.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/selection.json",
+      "sha256": "f913f4f7c6e2cede6e37171f0b0bfbdddfc81d5343708798f2d533e3aae16c09",
+      "bytes": 910063,
+      "productionId": "NEXT29-ptocaine-selection",
+      "qaId": "NEXT29-asset-ptocaine-selection",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        151,
+        15,
+        1028,
+        1435
+      ]
+    },
+    {
+      "appearanceId": "ptocaine",
+      "slot": "stance",
+      "file": "assets/encore/stance/ptocaine.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/stance.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/stance.json",
+      "sha256": "ef1c3b99c218dfdd0c28142968fa0914962ad1c2ea9067b2dd4ec93a30e63d74",
+      "bytes": 943984,
+      "productionId": "NEXT29-ptocaine-stance",
+      "qaId": "NEXT29-asset-ptocaine-stance",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1151,
+        1367
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        113,
+        10,
+        979,
+        1358
+      ]
+    },
+    {
+      "appearanceId": "ptocaine",
+      "slot": "intro",
+      "file": "assets/encore/poses/ptocaine/intro.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/intro.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/intro.json",
+      "sha256": "ce2935908062b673beefd4905d4a857ffebb69b472f5f12c95d8784039a88c2a",
+      "bytes": 931163,
+      "productionId": "NEXT29-ptocaine-intro",
+      "qaId": "NEXT29-asset-ptocaine-intro",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1214,
+        1295
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        32,
+        10,
+        1182,
+        1283
+      ]
+    },
+    {
+      "appearanceId": "ptocaine",
+      "slot": "attack",
+      "file": "assets/encore/poses/ptocaine/attack.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/attack.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/attack.json",
+      "sha256": "338bc7a5cba5403afef518f0db5ba8ad01eb52c7f62e92a379af93e828dec298",
+      "bytes": 1341582,
+      "productionId": "NEXT29-ptocaine-attack",
+      "qaId": "NEXT29-asset-ptocaine-attack",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        195,
+        8,
+        1321,
+        1015
+      ]
+    },
+    {
+      "appearanceId": "ptocaine",
+      "slot": "heavy",
+      "file": "assets/encore/poses/ptocaine/heavy.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/heavy.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/heavy.json",
+      "sha256": "550d1676e632feb1a7bfa472c7c949515072c6a3cf7f558ae5d61a498d484da3",
+      "bytes": 936106,
+      "productionId": "NEXT29-ptocaine-heavy",
+      "qaId": "NEXT29-asset-ptocaine-heavy",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        64,
+        8,
+        1385,
+        1073
+      ]
+    },
+    {
+      "appearanceId": "ptocaine",
+      "slot": "hit",
+      "file": "assets/encore/poses/ptocaine/hit.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/hit.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/hit.json",
+      "sha256": "38a8763400c8da23935231b6e3ac25519a6215cb83182d4cbbf36921349e0272",
+      "bytes": 1043937,
+      "productionId": "NEXT29-ptocaine-hit",
+      "qaId": "NEXT29-asset-ptocaine-hit",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        45,
+        27,
+        950,
+        1439
+      ]
+    },
+    {
+      "appearanceId": "ptocaine",
+      "slot": "walk",
+      "file": "assets/encore/poses/ptocaine/walk.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/walk.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/walk.json",
+      "sha256": "adbb121d8c51c73ba02e146934c8fe92894047e582bfc83959f93da7e306c8cf",
+      "bytes": 980030,
+      "productionId": "NEXT29-ptocaine-walk",
+      "qaId": "NEXT29-asset-ptocaine-walk",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        155,
+        11,
+        934,
+        1438
+      ]
+    },
+    {
+      "appearanceId": "ptocaine",
+      "slot": "jump",
+      "file": "assets/encore/poses/ptocaine/jump.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/jump.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/jump.json",
+      "sha256": "9a95cfbc28f76220256ab38d57e97524c0ade3d37ef7de0363353ba323de3189",
+      "bytes": 1037616,
+      "productionId": "NEXT29-ptocaine-jump",
+      "qaId": "NEXT29-asset-ptocaine-jump",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1158,
+        1358
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        25,
+        11,
+        1128,
+        1260
+      ]
+    },
+    {
+      "appearanceId": "ptocaine",
+      "slot": "crouch",
+      "file": "assets/encore/poses/ptocaine/crouch.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/crouch.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/crouch.json",
+      "sha256": "8c9936d52d890726a61906594e31cf0bb1a34ea815f1cf186b08ca14e491a96a",
+      "bytes": 1013805,
+      "productionId": "NEXT29-ptocaine-crouch",
+      "qaId": "NEXT29-asset-ptocaine-crouch",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1216,
+        1293
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        96,
+        12,
+        1035,
+        1282
+      ]
+    },
+    {
+      "appearanceId": "ptocaine",
+      "slot": "victory",
+      "file": "assets/encore/poses/ptocaine/victory.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/victory.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/victory.json",
+      "sha256": "fa5c30cb10bdae0ab90a29f4527f56d791fc73c7dc376e9ff786cf3e438bd58a",
+      "bytes": 931407,
+      "productionId": "NEXT29-ptocaine-victory",
+      "qaId": "NEXT29-asset-ptocaine-victory",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        142,
+        9,
+        965,
+        1436
+      ]
+    },
+    {
+      "appearanceId": "ptocaine",
+      "slot": "defeat",
+      "file": "assets/encore/poses/ptocaine/defeat.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/defeat.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/ptocaine/defeat.json",
+      "sha256": "9a4481e9db3550e62753fa9ca4ce5b9ab0ddcb3b2799ef5ad24fa16343597d6a",
+      "bytes": 933698,
+      "productionId": "NEXT29-ptocaine-defeat",
+      "qaId": "NEXT29-asset-ptocaine-defeat",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1240,
+        1268
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        137,
+        10,
+        1073,
+        1246
+      ]
+    },
+    {
+      "appearanceId": "freakjax",
+      "slot": "selection",
+      "file": "assets/encore/selection/freakjax.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/selection.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/selection.json",
+      "sha256": "22ea8b9c34b9acd5b8b3889129d0436542d586ee716b73e6cff061af469a1010",
+      "bytes": 916364,
+      "productionId": "NEXT29-freakjax-selection",
+      "qaId": "NEXT29-asset-freakjax-selection",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        135,
+        57,
+        951,
+        1280
+      ]
+    },
+    {
+      "appearanceId": "freakjax",
+      "slot": "stance",
+      "file": "assets/encore/stance/freakjax.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/stance.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/stance.json",
+      "sha256": "23370947efcde758da86eeb156fd5faac85fcd12e5c2f64896c6ca2d409dabcf",
+      "bytes": 1007652,
+      "productionId": "NEXT29-freakjax-stance",
+      "qaId": "NEXT29-asset-freakjax-stance",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        73,
+        56,
+        1011,
+        1233
+      ]
+    },
+    {
+      "appearanceId": "freakjax",
+      "slot": "intro",
+      "file": "assets/encore/poses/freakjax/intro.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/intro.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/intro.json",
+      "sha256": "dc0d51b4ccf80b08393febc52b6bd119d944830d86aa0dae268adbcffdbc92ba",
+      "bytes": 916361,
+      "productionId": "NEXT29-freakjax-intro",
+      "qaId": "NEXT29-asset-freakjax-intro",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        144,
+        52,
+        1112,
+        1231
+      ]
+    },
+    {
+      "appearanceId": "freakjax",
+      "slot": "attack",
+      "file": "assets/encore/poses/freakjax/attack.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/attack.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/attack.json",
+      "sha256": "964542fc4390a89fa175bf7e1347e8440902bead46b0f55d8dbc9499f28f8bf1",
+      "bytes": 948653,
+      "productionId": "NEXT29-freakjax-attack",
+      "qaId": "NEXT29-asset-freakjax-attack",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        88,
+        61,
+        1136,
+        1205
+      ]
+    },
+    {
+      "appearanceId": "freakjax",
+      "slot": "heavy",
+      "file": "assets/encore/poses/freakjax/heavy.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/heavy.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/heavy.json",
+      "sha256": "4ecfd357f19c28a44432cc3006fa334c89b58cab3eefe92476b52ef8d1cdb969",
+      "bytes": 1110718,
+      "productionId": "NEXT29-freakjax-heavy",
+      "qaId": "NEXT29-asset-freakjax-heavy",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        81,
+        24,
+        1177,
+        1240
+      ]
+    },
+    {
+      "appearanceId": "freakjax",
+      "slot": "hit",
+      "file": "assets/encore/poses/freakjax/hit.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/hit.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/hit.json",
+      "sha256": "42ad80824a7b8cd62225a01d9c59294a2fccd3875b04b08f1cbf00715b48dc20",
+      "bytes": 1090665,
+      "productionId": "NEXT29-freakjax-hit",
+      "qaId": "NEXT29-asset-freakjax-hit",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        88,
+        51,
+        1057,
+        1223
+      ]
+    },
+    {
+      "appearanceId": "freakjax",
+      "slot": "walk",
+      "file": "assets/encore/poses/freakjax/walk.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/walk.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/walk.json",
+      "sha256": "fc03f7b81940e8b0f6dff8c8c5562b2dfa8b8488193b38b427381e69b6b6edbe",
+      "bytes": 996758,
+      "productionId": "NEXT29-freakjax-walk",
+      "qaId": "NEXT29-asset-freakjax-walk",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        65,
+        39,
+        1049,
+        1225
+      ]
+    },
+    {
+      "appearanceId": "freakjax",
+      "slot": "jump",
+      "file": "assets/encore/poses/freakjax/jump.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/jump.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/jump.json",
+      "sha256": "4eefed9da6d3387c8e232010bfa1eb690348c5314f1bdff5f3f1cf192cb5ffcf",
+      "bytes": 1101865,
+      "productionId": "NEXT29-freakjax-jump",
+      "qaId": "NEXT29-asset-freakjax-jump",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        48,
+        61,
+        1200,
+        1210
+      ]
+    },
+    {
+      "appearanceId": "freakjax",
+      "slot": "crouch",
+      "file": "assets/encore/poses/freakjax/crouch.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/crouch.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/crouch.json",
+      "sha256": "18c3e7f0a56e976ceb55fbbd03eb99595f9391c56593b604affb287432443477",
+      "bytes": 993734,
+      "productionId": "NEXT29-freakjax-crouch",
+      "qaId": "NEXT29-asset-freakjax-crouch",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        90,
+        77,
+        1160,
+        1206
+      ]
+    },
+    {
+      "appearanceId": "freakjax",
+      "slot": "victory",
+      "file": "assets/encore/poses/freakjax/victory.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/victory.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/victory.json",
+      "sha256": "cd5728d606d259f0a9693a89e7ccbd9a0de0ea66590b49a87f91ee5eaddbe25e",
+      "bytes": 1008406,
+      "productionId": "NEXT29-freakjax-victory",
+      "qaId": "NEXT29-asset-freakjax-victory",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        118,
+        61,
+        1088,
+        1235
+      ]
+    },
+    {
+      "appearanceId": "freakjax",
+      "slot": "defeat",
+      "file": "assets/encore/poses/freakjax/defeat.png",
+      "archiveFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/defeat.png",
+      "receiptFile": "docs/art-generation/cast-next-missing-20261120/generated/freakjax/defeat.json",
+      "sha256": "92b0196076e4d114dd1ba5ce29dc3f99e61a12e1b68f11e224cf615269e5f401",
+      "bytes": 1098984,
+      "productionId": "NEXT29-freakjax-defeat",
+      "qaId": "NEXT29-asset-freakjax-defeat",
+      "nativeCopyVerified": true,
+      "offline": true,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha12Bounds": [
+        81,
+        55,
+        1117,
+        1230
+      ]
+    }
+  ],
+  "productionRowCount": 44,
+  "qaRowCount": 44
+}
